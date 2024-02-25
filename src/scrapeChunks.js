@@ -23,7 +23,7 @@ import fs from "fs/promises";
 (async () => {
   try {
     await fs.mkdir("./chunks")
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: false,   args: ['--no-sandbox', '--disable-setuid-sandbox'],});
     const page = await browser.newPage();
     await page.goto('https://canary.discord.com/login');
     await page.setViewport({ width: 1080, height: 1024 });
