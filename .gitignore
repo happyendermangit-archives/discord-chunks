@@ -1,0 +1,3 @@
+# Ignore generated node modules folder
+node_modules
+
