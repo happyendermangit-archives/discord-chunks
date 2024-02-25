@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "default": {
+            "dateRange": "e=>\"\".concat(e.startDate,\" a \").concat(e.endDate)",
+            "dateSelected": "e=>\"\".concat(e.date,\" selecionado\")",
+            "finishRangeSelectionPrompt": "Clique para terminar de selecionar o intervalo de datas",
+            "maximumDate": "Última data disponível",
+            "minimumDate": "Primeira data disponível",
+            "next": "Próximo",
+            "previous": "Anterior",
+            "selectedDateDescription": "e=>\"Data selecionada: \".concat(e.date)",
+            "selectedRangeDescription": "e=>\"Intervalo selecionado: \".concat(e.dateRange)",
+            "startRangeSelectionPrompt": "Clique para começar a selecionar o intervalo de datas",
+            "todayDate": "e=>\"Hoje, \".concat(e.date)",
+            "todayDateSelected": "e=>\"Hoje, \".concat(e.date,\" selecionado\")"
+        }
+    }
+}

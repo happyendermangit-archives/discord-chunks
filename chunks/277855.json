@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useSoundmojiExperiment": "function a(e){let{enabled:t}=i.useExperiment({location:e},{autoTrackExposure:!0});return t}"
+    }
+}

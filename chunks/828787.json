@@ -1,0 +1,35 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "VOICE_CHANNEL_SHOW_FEEDBACK": "e=>this.handleVoiceChannelFeedback(e)",
+                "STREAM_CLOSE": "e=>this.handleStreamClose(e)",
+                "VIDEO_BACKGROUND_SHOW_FEEDBACK": "e=>this.handleVideoBackgroundShowFeedback(e)",
+                "EMBEDDED_ACTIVITY_CLOSE": "e=>this.handleActivityClose(e)",
+                "IN_APP_REPORTS_SHOW_FEEDBACK": "e=>this.handleInAppReportsFeedback(e)"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "feedbackTypeToShow": null,
+            "showFeedbackModalDebounced": "function v(){var e,n=od(),a=y(n);if(o=arguments,i=this,c=n,a){if(r===l){;return d=e=c,l=aT(_,t),f?m(e):u}if(p)return rY(l),l=aT(_,t),m(c)}return r===l&&(l=aT(_,t)),u}",
+            "handleVoiceChannelFeedback": "e=>{let{analyticsData:_}=e;this.possiblyShowFeedbackModal(R.FeedbackType.VOICE,()=>{(0,o.openModalLazy)(async()=>{let{default:e}=await E.el(\"464667\").then(E.bind(E,\"464667\"));return E=>(0,t.jsx)(e,{...E,analyticsData:_})})})}",
+            "handleStreamClose": "e=>{var _;let{streamKey:n,canShowFeedback:a}=e,I=(0,r.decodeStreamKey)(n),T=(0,i.getStreamerApplication)(I,S.default),N=null!==(_=O.default.getVideoStats(n))&&void 0!==_?_:{},A={media_session_id:O.default.getMediaSessionId(n),rtc_connection_id:O.default.getRtcConnectionId(n),stream_region:O.default.getRegion(n),max_viewers:O.default.getMaxViewers(n),...N};a&&this.possiblyShowFeedbackModal(R.FeedbackType.STREAM,()=>{(0,o.openModalLazy)(async()=>{let{default:e}=await E.el(\"363787\").then(E.bind(E,\"363787\"));return _=>(0,t.jsx)(e,{stream:I,streamApplication:T,isStreamer:I.ownerId===s.default.getId(),..._,analyticsData:A})})})}",
+            "handleVideoBackgroundShowFeedback": "e=>{let{analyticsData:_}=e;this.possiblyShowFeedbackModal(R.FeedbackType.VIDEO_BACKGROUND,()=>{(0,o.openModalLazy)(async()=>{let{default:e}=await E.el(\"496088\").then(E.bind(E,\"496088\"));return E=>(0,t.jsx)(e,{...E,analyticsData:_})})})}",
+            "handleActivityClose": "e=>{let{applicationId:_,channelId:r,showFeedback:i}=e,a=n.default.getApplication(_),s=T.default.getChannel(r),S={rtc_connection_id:N.default.getRTCConnectionId(),media_session_id:N.default.getMediaSessionId()},O=I.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT),A=O?o.POPOUT_MODAL_CONTEXT:o.DEFAULT_MODAL_CONTEXT;null!=a&&null!=s&&i&&this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY,()=>{(0,o.openModalLazy)(async()=>{let{default:e}=await E.el(\"959350\").then(E.bind(E,\"959350\"));return _=>(0,t.jsx)(e,{..._,activityApplication:a,channel:s,analyticsData:S})},{contextKey:A})})}",
+            "handleInAppReportsFeedback": "e=>{let{reportId:_,reportType:n}=e;this.possiblyShowFeedbackModal(R.FeedbackType.IN_APP_REPORTS,()=>{(0,o.openModalLazy)(async()=>{let{default:e}=await E.el(\"114306\").then(E.bind(E,\"114306\"));return E=>(0,t.jsx)(e,{...E,reportId:_,reportType:n})})})}",
+            "_initialize": "_initialize(){a.default.init()}"
+        }
+    }
+}

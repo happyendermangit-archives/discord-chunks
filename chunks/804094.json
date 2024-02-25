@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "reflectionScalarDefault": "function i(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:r.LongType.STRING;switch(e){case r.ScalarType.BOOL:return!1;case r.ScalarType.UINT64:case r.ScalarType.FIXED64:return(0,a.reflectionLongConvert)(o.PbULong.ZERO,t);case r.ScalarType.INT64:case r.ScalarType.SFIXED64:case r.ScalarType.SINT64:return(0,a.reflectionLongConvert)(o.PbLong.ZERO,t);case r.ScalarType.DOUBLE:case r.ScalarType.FLOAT:return 0;case r.ScalarType.BYTES:return new Uint8Array(0);case r.ScalarType.STRING:return\"\";default:return 0}}"
+    }
+}

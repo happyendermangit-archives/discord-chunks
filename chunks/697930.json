@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "_private": {
+            "Modules": {
+                "chat": {
+                    "RESIZE_HANDLE_WIDTH": 8
+                }
+            }
+        }
+    }
+}

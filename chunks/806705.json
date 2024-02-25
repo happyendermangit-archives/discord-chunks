@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "makeRequestCallFromTimer": "function i(e){return function(){let t=setTimeout(r,0),n=setInterval(r,50);function r(){clearTimeout(t),clearInterval(n),e()}}}",
+        "makeRequestCall": "function(e){let t=1,n=new a(e),r=document.createTextNode(\"\");return n.observe(r,{characterData:!0}),function(){t=-t,r.data=t}}"
+    }
+}

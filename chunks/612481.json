@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){try{return i.from(JSON.stringify(e)).toString(\"base64\")}catch(e){return null}}"
+    }
+}

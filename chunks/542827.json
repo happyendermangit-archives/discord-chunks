@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function g(e,t,n){let a=i.flatMap(e,e=>{let t=u.default.getSelectableChannelIds(e),n=u.default.getVocalChannelIds(e),a=[...t,...n],i=d.default.getActiveJoinedThreadsForGuild(e);for(let e of t){var l;let t=null!==(l=i[e])&&void 0!==l?l:{};for(let e in t)a.push(e)}return a}).map(e=>({channelId:e,readStateType:f.ReadStateTypes.CHANNEL,messageId:s.default.lastMessageId(e)}));return e.forEach(e=>{a.push({channelId:e,readStateType:f.ReadStateTypes.GUILD_EVENT,messageId:s.default.lastMessageId(e,f.ReadStateTypes.GUILD_EVENT)}),a.push({channelId:e,readStateType:f.ReadStateTypes.GUILD_ONBOARDING_QUESTION,messageId:r.default.ackIdForGuild(e)})}),o.default.track(c.AnalyticEvents.MARK_AS_READ,{source:t,type:\"guild\"}),(0,l.bulkAck)(a,n)}"
+    }
+}

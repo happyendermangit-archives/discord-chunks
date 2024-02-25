@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useConnectDropTarget": "function a(e){return(0,r.useMemo)(function(){return e.hooks.dropTarget()},[e])}"
+    }
+}

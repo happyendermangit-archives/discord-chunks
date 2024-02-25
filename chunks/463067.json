@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){var e=this;if(\"Object\"!==i(e))throw TypeError(\"`this` value must be an object\");return u(e,c(n(t),function(t){var s=r(e,t);try{return s.then(function(t){return{status:\"fulfilled\",value:t}},function(t){return{status:\"rejected\",reason:t}})}catch(t){return a(e,t)}}))}"
+}

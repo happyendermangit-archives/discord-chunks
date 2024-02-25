@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "useVoiceActivityNotificationSettingsExperiment": "function d(e){var t;let{voiceChannelActivityNotifsEnabled:n}=r.useExperiment({location:\"useVoiceActivityNotificationSettingsExperiment\",guildId:null!==(t=null==e?void 0:e.getGuildId())&&void 0!==t?t:i.EMPTY_STRING_GUILD_ID},{disable:(null==e?void 0:e.type)!==i.ChannelTypes.GUILD_VOICE,autoTrackExposure:!1}),{enabled:a}=l.useExperiment({location:\"useVoiceActivityNotificationSettingsExperiment\"},{disable:(null==e?void 0:e.type)!==i.ChannelTypes.GUILD_VOICE||!n,autoTrackExposure:!0});return(null==e?void 0:e.type)===i.ChannelTypes.GUILD_VOICE&&n&&a}",
+        "hasVoiceChannelActivityNotifsEnabled": "function u(e){var t;let{voiceChannelActivityNotifsEnabled:n}=r.getCurrentConfig({guildId:null!==(t=null==e?void 0:e.getGuildId())&&void 0!==t?t:i.EMPTY_STRING_GUILD_ID,location:\"hasVoiceChannelActivityNotifsEnabled\"});return n}"
+    }
+}

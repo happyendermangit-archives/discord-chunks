@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "ReactionTypes": {
+            "0": "NORMAL",
+            "1": "BURST",
+            "2": "VOTE",
+            "NORMAL": 0,
+            "BURST": 1,
+            "VOTE": 2
+        }
+    }
+}

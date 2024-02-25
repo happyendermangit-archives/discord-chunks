@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "buildPlatformedThemedEmojiColorPalette": "e=>{let{colors:t,saturationFactor:n=1,shouldProcessMobileColors:s=!1}=e,i=a({colors:t,saturationFactor:n});return r.default.applyPlatformToThemedEmojiColorPalette({palette:i,shouldProcessMobileColors:s})}",
+        "buildEmojiColorPalette": "(e,t,n)=>{var s;if(null==e||e.length<1)return null;let i=o({colors:e,saturationFactor:t}),r=n?null==i?void 0:i.DARK:null==i?void 0:i.LIGHT;return{backgroundColor:null==r?void 0:r.backgroundColor,accentColor:null==r?void 0:r.accentColor,highlightColor:null==r?void 0:r.highlightColor,opacity:null!==(s=null==r?void 0:r.opacity)&&void 0!==s?s:.15}}"
+    }
+}

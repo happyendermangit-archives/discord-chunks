@@ -1,0 +1,23 @@
+{
+    "exports": {
+        "HIGH_FIVE_EMOJIS": {
+            "toJSON": "function(){return Array.from(this)}",
+            "has": "function has() { [native code] }",
+            "add": "function add() { [native code] }",
+            "delete": "function delete() { [native code] }",
+            "clear": "function clear() { [native code] }",
+            "entries": "function entries() { [native code] }",
+            "forEach": "function forEach() { [native code] }",
+            "size": 2,
+            "values": "function values() { [native code] }",
+            "keys": "function values() { [native code] }",
+            "union": "function union() { [native code] }",
+            "intersection": "function intersection() { [native code] }",
+            "difference": "function difference() { [native code] }",
+            "symmetricDifference": "function symmetricDifference() { [native code] }",
+            "isSubsetOf": "function isSubsetOf() { [native code] }",
+            "isSupersetOf": "function isSupersetOf() { [native code] }",
+            "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+        }
+    }
+}

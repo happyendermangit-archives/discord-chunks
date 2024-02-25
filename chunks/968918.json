@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function p(e){let{channel:t,applications:n}=e,a=n.slice(0,50),r=i.useMemo(()=>a.map(e=>(0,l.jsx)(m,{channel:t,applicationSection:e},e.id)),[t,a]);return 0===a.length?null:(0,l.jsxs)(\"div\",{children:[(0,l.jsx)(s.Text,{className:f.listHeading,variant:\"text-sm/semibold\",children:\"Server Apps\"}),(0,l.jsx)(\"ul\",{className:f.applicationList,children:r})]})}"
+    }
+}

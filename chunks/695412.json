@@ -1,0 +1,20 @@
+{
+    "exports": {
+        "DiscordCanvasExporterOutputFormats": {
+            "0": "Base64",
+            "1": "Blob",
+            "2": "File",
+            "Base64": 0,
+            "Blob": 1,
+            "File": 2
+        },
+        "DrawResultStatus": {
+            "0": "Success",
+            "1": "Failure",
+            "2": "ImageNotLoaded",
+            "Success": 0,
+            "Failure": 1,
+            "ImageNotLoaded": 2
+        }
+    }
+}

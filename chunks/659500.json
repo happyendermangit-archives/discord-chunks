@@ -1,0 +1,43 @@
+{
+    "exports": {
+        "ComponentDispatcher": "class n{safeDispatch(e){for(var _,E=arguments.length,t=Array(E>1?E-1:0),o=1;o<E;o++)t[o-1]=arguments[o];if(!this.hasSubscribers(e)){let[E]=t,o=this._savedDispatches[e]=null!==(_=this._savedDispatches[e])&&void 0!==_?_:[];return o.push(E),this}return this.dispatch(e,...t)}dispatch(e,_){return Date.now(),this.emitter.emit(e,_),this}dispatchToLastSubscribed(e,_){Date.now();{let E=this.emitter.listeners(e);return E.length>0&&E[E.length-1](_),this}}hasSubscribers(e){return this.emitter.listenerCount(e)>0}_checkSavedDispatches(e){let _=this._savedDispatches[e];null!=_&&(_.forEach(_=>{this.dispatch(e,_)}),this._savedDispatches[e]=void 0)}subscribe(e,_){let E=this.emitter.listeners(e);return E.indexOf(_)>=0?(new(0,o.default)(\"ComponentDispatchUtils\").warn(\"ComponentDispatch.subscribe: Attempting to add a duplicate listener\",e),this):(this.emitter.on(e,_),this._checkSavedDispatches(e),this)}subscribeOnce(e,_){return this.emitter.once(e,_),this._checkSavedDispatches(e),this}resubscribe(e,_){let E=this.emitter.listeners(e);if(!E.includes(_))return new(0,o.default)(\"ComponentDispatchUtils\").warn(\"ComponentDispatch.resubscribe: Resubscribe without existing subscription\",e),this;this.emitter.off(e,_),this.emitter.on(e,_)}unsubscribe(e,_){return this.emitter.removeListener(e,_),this}reset(){return this.emitter.removeAllListeners(),this}dispatchKeyed(e,_){for(var E=arguments.length,t=Array(E>2?E-2:0),o=2;o<E;o++)t[o-2]=arguments[o];return this.dispatch(\"\".concat(e,\"_\").concat(_),...t)}subscribeKeyed(e,_,E){return this.subscribe(\"\".concat(e,\"_\").concat(_),E)}unsubscribeKeyed(e,_,E){return this.unsubscribe(\"\".concat(e,\"_\").concat(_),E)}constructor(){this.emitter=new t.EventEmitter,this._savedDispatches={},this.emitter.setMaxListeners(100)}}",
+        "ComponentDispatch": {
+            "emitter": {
+                "_events": {
+                    "CONTEXT_MENU_CLOSE": "function o(e){{let{flushSync:t}=n(\"817736\");t(()=>{i.default.wait(()=>{i.default.dispatch({type:\"CONTEXT_MENU_CLOSE\"}).finally(e)})})}}"
+                },
+                "_eventsCount": 1,
+                "_maxListeners": 100,
+                "setMaxListeners": "function(e){if(\"number\"!=typeof e||e<0||i(e))throw RangeError('The value of \"n\" is out of range. It must be a non-negative number. Received '+e+\".\");return this._maxListeners=e,this}",
+                "getMaxListeners": "function(){return c(this)}",
+                "emit": "function(e){for(var t=[],n=1;n<arguments.length;n++)t.push(arguments[n]);var r=\"error\"===e,a=this._events;if(void 0!==a)r=r&&void 0===a.error;else if(!r)return!1;if(r){if(t.length>0&&(i=t[0]),i instanceof Error)throw i;var i,s=Error(\"Unhandled error.\"+(i?\" (\"+i.message+\")\":\"\"));throw s.context=i,s}var u=a[e];if(void 0===u)return!1;if(\"function\"==typeof u)o(u,this,t);else{for(var l=u.length,c=y(u,l),n=0;n<l;++n)o(c[n],this,t)}return!0}",
+                "addListener": "function(e,t){return d(this,e,t,!1)}",
+                "on": "function(e,t){return d(this,e,t,!1)}",
+                "prependListener": "function(e,t){return d(this,e,t,!0)}",
+                "once": "function(e,t){return l(t),this.on(e,p(this,e,t)),this}",
+                "prependOnceListener": "function(e,t){return l(t),this.prependListener(e,p(this,e,t)),this}",
+                "removeListener": "function(e,t){var n,r,a,o,i;if(l(t),void 0===(r=this._events)||void 0===(n=r[e]))return this;if(n===t||n.listener===t)0==--this._eventsCount?this._events=Object.create(null):(delete r[e],r.removeListener&&this.emit(\"removeListener\",e,n.listener||t));else if(\"function\"!=typeof n){for(a=-1,o=n.length-1;o>=0;o--)if(n[o]===t||n[o].listener===t){i=n[o].listener,a=o;break}if(a<0)return this;0===a?n.shift():function(e,t){for(;t+1<e.length;t++)e[t]=e[t+1];e.pop()}(n,a),1===n.length&&(r[e]=n[0]),void 0!==r.removeListener&&this.emit(\"removeListener\",e,i||t)}return this}",
+                "off": "function(e,t){var n,r,a,o,i;if(l(t),void 0===(r=this._events)||void 0===(n=r[e]))return this;if(n===t||n.listener===t)0==--this._eventsCount?this._events=Object.create(null):(delete r[e],r.removeListener&&this.emit(\"removeListener\",e,n.listener||t));else if(\"function\"!=typeof n){for(a=-1,o=n.length-1;o>=0;o--)if(n[o]===t||n[o].listener===t){i=n[o].listener,a=o;break}if(a<0)return this;0===a?n.shift():function(e,t){for(;t+1<e.length;t++)e[t]=e[t+1];e.pop()}(n,a),1===n.length&&(r[e]=n[0]),void 0!==r.removeListener&&this.emit(\"removeListener\",e,i||t)}return this}",
+                "removeAllListeners": "function(e){var t,n,r;if(void 0===(n=this._events))return this;if(void 0===n.removeListener)return 0==arguments.length?(this._events=Object.create(null),this._eventsCount=0):void 0!==n[e]&&(0==--this._eventsCount?this._events=Object.create(null):delete n[e]),this;if(0==arguments.length){var a,o=Object.keys(n);for(r=0;r<o.length;++r)\"removeListener\"!==(a=o[r])&&this.removeAllListeners(a);return this.removeAllListeners(\"removeListener\"),this._events=Object.create(null),this._eventsCount=0,this}if(\"function\"==typeof(t=n[e]))this.removeListener(e,t);else if(void 0!==t)for(r=t.length-1;r>=0;r--)this.removeListener(e,t[r]);return this}",
+                "listeners": "function(e){return h(this,e,!0)}",
+                "rawListeners": "function(e){return h(this,e,!1)}",
+                "listenerCount": "function m(e){var t=this._events;if(void 0!==t){var n=t[e];if(\"function\"==typeof n)return 1;if(void 0!==n)return n.length}return 0}",
+                "eventNames": "function(){return this._eventsCount>0?r(this._events):[]}"
+            },
+            "_savedDispatches": {},
+            "safeDispatch": "safeDispatch(e){for(var _,E=arguments.length,t=Array(E>1?E-1:0),o=1;o<E;o++)t[o-1]=arguments[o];if(!this.hasSubscribers(e)){let[E]=t,o=this._savedDispatches[e]=null!==(_=this._savedDispatches[e])&&void 0!==_?_:[];return o.push(E),this}return this.dispatch(e,...t)}",
+            "dispatch": "dispatch(e,_){return Date.now(),this.emitter.emit(e,_),this}",
+            "dispatchToLastSubscribed": "dispatchToLastSubscribed(e,_){Date.now();{let E=this.emitter.listeners(e);return E.length>0&&E[E.length-1](_),this}}",
+            "hasSubscribers": "hasSubscribers(e){return this.emitter.listenerCount(e)>0}",
+            "_checkSavedDispatches": "_checkSavedDispatches(e){let _=this._savedDispatches[e];null!=_&&(_.forEach(_=>{this.dispatch(e,_)}),this._savedDispatches[e]=void 0)}",
+            "subscribe": "subscribe(e,_){let E=this.emitter.listeners(e);return E.indexOf(_)>=0?(new(0,o.default)(\"ComponentDispatchUtils\").warn(\"ComponentDispatch.subscribe: Attempting to add a duplicate listener\",e),this):(this.emitter.on(e,_),this._checkSavedDispatches(e),this)}",
+            "subscribeOnce": "subscribeOnce(e,_){return this.emitter.once(e,_),this._checkSavedDispatches(e),this}",
+            "resubscribe": "resubscribe(e,_){let E=this.emitter.listeners(e);if(!E.includes(_))return new(0,o.default)(\"ComponentDispatchUtils\").warn(\"ComponentDispatch.resubscribe: Resubscribe without existing subscription\",e),this;this.emitter.off(e,_),this.emitter.on(e,_)}",
+            "unsubscribe": "unsubscribe(e,_){return this.emitter.removeListener(e,_),this}",
+            "reset": "reset(){return this.emitter.removeAllListeners(),this}",
+            "dispatchKeyed": "dispatchKeyed(e,_){for(var E=arguments.length,t=Array(E>2?E-2:0),o=2;o<E;o++)t[o-2]=arguments[o];return this.dispatch(\"\".concat(e,\"_\").concat(_),...t)}",
+            "subscribeKeyed": "subscribeKeyed(e,_,E){return this.subscribe(\"\".concat(e,\"_\").concat(_),E)}",
+            "unsubscribeKeyed": "unsubscribeKeyed(e,_,E){return this.unsubscribe(\"\".concat(e,\"_\").concat(_),E)}"
+        }
+    }
+}

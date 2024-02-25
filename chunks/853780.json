@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function c(e){let{applicationId:t,channelId:n}=e,{installedIntegrations:c,fetched:f}=(0,s.usePrivateChannelIntegrationState)({channelId:n}),m=f&&void 0!==c.find(e=>e.application.id===t);return m?(0,l.jsxs)(r.default,{children:[(0,l.jsx)(i.Heading,{variant:\"eyebrow\",className:d.title,children:o.default.Messages.BOT_PROFILE_MANAGE_PRIVATE_CHANNEL_INTEGRATION}),(0,l.jsx)(i.Button,{onClick:()=>(0,a.deletePrivateChannelIntegration)(n,t),size:i.Button.Sizes.ICON,color:i.Button.Colors.RED,look:i.Button.Looks.LINK,className:u.button,children:o.default.Messages.BOT_PROFILE_REMOVE_PRIVATE_CHANNEL_INTEGRATION})]}):null}"
+    }
+}

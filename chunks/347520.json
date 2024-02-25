@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "default": {
+            "buttonLabel": "Mostrar sugestões",
+            "countAnnouncement": "(e,t)=>\"\".concat(t.plural(e.optionCount,{one:()=>\"\".concat(t.number(e.optionCount),\" op\\xe7\\xe3o\"),other:()=>\"\".concat(t.number(e.optionCount),\" op\\xe7\\xf5es\")}),\" dispon\\xedvel.\")",
+            "focusAnnouncement": "(e,t)=>\"\".concat(t.select({true:()=>\"Grupo inserido \".concat(e.groupTitle,\", com \").concat(t.plural(e.groupCount,{one:()=>\"\".concat(t.number(e.groupCount),\" op\\xe7\\xe3o\"),other:()=>\"\".concat(t.number(e.groupCount),\" op\\xe7\\xf5es\")}),\". \"),other:\"\"},e.isGroupChange)).concat(e.optionText).concat(t.select({true:\", selecionado\",other:\"\"},e.isSelected))",
+            "listboxLabel": "Sugestões",
+            "selectedAnnouncement": "e=>\"\".concat(e.optionText,\", selecionado\")"
+        }
+    }
+}

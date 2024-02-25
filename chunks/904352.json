@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "ResizeObserverEntry": "function(t){var e=(0,r.calculateBoxSizes)(t);this.target=t,this.contentRect=e.contentRect,this.borderBoxSize=[e.borderBoxSize],this.contentBoxSize=[e.contentBoxSize],this.devicePixelContentBoxSize=[e.devicePixelContentBoxSize]}"
+    }
+}

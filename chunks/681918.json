@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "EnterLeaveCounter": "function o(e){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,o),i(this,\"entered\",[]),i(this,\"isNodeInDocument\",void 0),this.isNodeInDocument=e}"
+    }
+}

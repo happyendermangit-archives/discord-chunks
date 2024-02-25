@@ -1,0 +1,76 @@
+{
+    "exports": {
+        "OVERLAY_SUPPORTED": false,
+        "OverlayNudgeTypes": {
+            "0": "WELCOME",
+            "1": "NEWS",
+            "2": "GO_LIVE_VOICE",
+            "3": "GO_LIVE_NON_VOICE",
+            "4": "BROADCAST",
+            "5": "KEYBIND_INDICATORS",
+            "WELCOME": 0,
+            "NEWS": 1,
+            "GO_LIVE_VOICE": 2,
+            "GO_LIVE_NON_VOICE": 3,
+            "BROADCAST": 4,
+            "KEYBIND_INDICATORS": 5
+        },
+        "getOverlayNotificationGroup": "function S(e){switch(e){case\"News Nudge\":case\"Welcome Nudge\":case\"Go Live Nudge\":case\"Go Live Non Voice Nudge\":case\"Start Broadcast Notification\":return 0;case\"Text Chat\":return 1;case\"Activity User Join\":case\"Activity Invite\":return 3;case\"Incoming Call\":return 2;case\"Clips Reminder Notification\":case\"Clips Notification\":return 4;default:return 5}}",
+        "OverlayNotificationGroup": {
+            "0": "Nudge",
+            "1": "TextChat",
+            "2": "VoiceCall",
+            "3": "Activity",
+            "4": "Clips",
+            "5": "Other",
+            "Nudge": 0,
+            "TextChat": 1,
+            "VoiceCall": 2,
+            "Activity": 3,
+            "Clips": 4,
+            "Other": 5
+        },
+        "OverlayNotificationType": {
+            "NewsNudge": "News Nudge",
+            "WelcomeNudge": "Welcome Nudge",
+            "TextChat": "Text Chat",
+            "ActivityUserJoin": "Activity User Join",
+            "ActivityInvite": "Activity Invite",
+            "IncomingCall": "Incoming Call",
+            "GoLiveNudge": "Go Live Nudge",
+            "GoLiveNonVoiceNudge": "Go Live Non Voice Nudge",
+            "OverlayCrashed": "Overlay Crashed",
+            "StartBroadcastNotification": "Start Broadcast Notification",
+            "ClipsReminderNotification": "Clips Reminder Notification",
+            "ClipsNotification": "Clips Notification",
+            "KeybindIndicatorsNotification": "Keybind Indicators Notification"
+        },
+        "OverlayNotificationAction": {
+            "0": "Viewed",
+            "1": "Clicked",
+            "Viewed": 0,
+            "Clicked": 1
+        },
+        "BackgroundOpacityClasses": {
+            "LOW": "background-opacity-low",
+            "MEDIUM": "background-opacity-medium",
+            "HIGH": "background-opacity-high",
+            "FULL": "background-opacity-full",
+            "DISABLED": null
+        },
+        "OverlayMethod": {
+            "0": "Disabled",
+            "1": "Hook",
+            "2": "OutOfProcess",
+            "Disabled": 0,
+            "Hook": 1,
+            "OutOfProcess": 2
+        },
+        "OpacityBounds": {
+            "BOTTOM": 0,
+            "LOWER": 0.25,
+            "UPPER": 0.75,
+            "TOP": 1
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "ReactionPicker": "function s(e){let{channel:t,closePopout:n,analyticsOverride:s,onSelectEmoji:r,messageId:o}=e;return(0,l.jsx)(i.default,{closePopout:n,channel:t,onSelectEmoji:r,pickerIntention:a.EmojiIntention.REACTION,analyticsOverride:s,messageId:o})}"
+    }
+}

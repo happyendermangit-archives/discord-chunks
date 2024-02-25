@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function E(e){return(0,l.jsx)(d.default,{confettiLocation:f.ConfettiLocation.CHAT_INPUT,children:(0,l.jsx)(h,{...e})})}"
+    }
+}

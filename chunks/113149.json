@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "TEXT_TRUNCATION_PADDING_PX": 12
+    }
+}

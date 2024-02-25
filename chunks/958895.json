@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "default": {
+            "deselectedItem": "e=>\"\".concat(e.item,\" se\\xe7ilmedi.\")",
+            "longPressToSelect": "Seçim moduna girmek için uzun basın.",
+            "select": "Seç",
+            "selectedAll": "Tüm ögeler seçildi.",
+            "selectedCount": "(e,t)=>\"\".concat(t.plural(e.count,{\"=0\":\"Hi\\xe7bir \\xf6ge se\\xe7ilmedi\",one:()=>\"\".concat(t.number(e.count),\" \\xf6ge se\\xe7ildi\"),other:()=>\"\".concat(t.number(e.count),\" \\xf6ge se\\xe7ildi\")}),\".\")",
+            "selectedItem": "e=>\"\".concat(e.item,\" se\\xe7ildi.\")"
+        }
+    }
+}

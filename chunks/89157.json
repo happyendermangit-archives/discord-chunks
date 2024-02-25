@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,e,r){t&&!r&&(t=t.prototype),t&&!o(t,i)&&n(t,i,{configurable:!0,value:e})}"
+}

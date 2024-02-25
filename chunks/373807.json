@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "OverlayGameStatusSource": {
+            "LAUNCHER": "LAUNCHER",
+            "LIBRARY_APPLICATION": "LIBRARY_APPLICATION",
+            "USER_OVERRIDE": "USER_OVERRIDE",
+            "DATABASE": "DATABASE",
+            "DEFAULT": "DEFAULT"
+        }
+    }
+}

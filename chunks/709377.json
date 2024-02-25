@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "ContentInventoryFeedKey": {
+            "GLOBAL_FEED": "global feed"
+        }
+    }
+}

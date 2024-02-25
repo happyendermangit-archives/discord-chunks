@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "snapVolumeToDefault": "function o(e,t){let n=t===i.MediaEngineContextTypes.STREAM?s.AudioSettingsDefaultVolumes.STREAM:s.AudioSettingsDefaultVolumes.USER;return 1>Math.abs((0,r.amplitudeToPerceptual)(n)-(0,r.amplitudeToPerceptual)(e))?n:e}",
+        "coerceAudioContextForProto": "function d(e){switch(e){case i.MediaEngineContextTypes.DEFAULT:return a.ProtoAudioSettingsContextTypes.USER;case i.MediaEngineContextTypes.STREAM:return a.ProtoAudioSettingsContextTypes.STREAM;default:return}}"
+    }
+}

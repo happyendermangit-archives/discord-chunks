@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){for(var r=o(t),n=r.length;n--;){var i=r[n],u=t[i];r[n]=[i,u,e(u)]}return r}"
+}

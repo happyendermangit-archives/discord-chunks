@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"V\\xe4henn\\xe4 \".concat(e.fieldLabel)",
+            "increase": "e=>\"Lis\\xe4\\xe4 \".concat(e.fieldLabel)",
+            "numberField": "Numerokenttä"
+        }
+    }
+}

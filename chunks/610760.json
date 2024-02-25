@@ -1,0 +1,3 @@
+{
+    "exports": "function t(e){if(\"String\"!==g(e))throw new c(\"Assertion failed: `argument` is not a String\");if(d(e))return i(o(a(e,2),2));if(p(e))return i(o(a(e,2),8));if(h(e)||b(e))return NaN;var s=l(e);return s!==e?t(s):i(e)}"
+}

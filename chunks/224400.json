@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "getPurchaseToken": "function o(){let e=i.default.get(u);if(null!=e&&e.expires>=Date.now())return e.purchaseToken;let t=(0,r.v4)();return i.default.set(u,{purchaseToken:t,expires:Date.now()+a}),t}",
+        "getPurchaseTokenHash": "async function s(){let e=new Uint8Array(o().split(\"\").map(e=>e.charCodeAt(0))),t=await window.crypto.subtle.digest({name:\"SHA-256\"},e);return btoa(String.fromCharCode(...new Uint8Array(t)))}"
+    }
+}

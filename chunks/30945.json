@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "ConsoleCommands": {
+            "CONNECT_VOICE": "connect_voice"
+        }
+    }
+}

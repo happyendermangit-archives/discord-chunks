@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "DOMRectReadOnly": "function DOMRectReadOnly(t,e,n,r){return this.x=t,this.y=e,this.width=n,this.height=r,this.top=this.y,this.left=this.x,this.bottom=this.top+this.height,this.right=this.left+this.width,Object.freeze(this)}"
+    }
+}

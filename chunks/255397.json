@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "default": {
+            "rebuildRTCActiveChannels": "rebuildRTCActiveChannels(){s.default.dispatch({type:\"CHANNEL_RTC_ACTIVE_CHANNELS\"})}",
+            "selectParticipant": "selectParticipant(e,t){s.default.dispatch({type:\"CHANNEL_RTC_SELECT_PARTICIPANT\",channelId:e,id:t})}",
+            "updateLayout": "updateLayout(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:o.AppContext.APP;r.default.track(o.AnalyticEvents.VIDEO_LAYOUT_TOGGLED,{video_layout:t,...(0,i.collectVoiceAnalyticsMetadata)(e)}),s.default.dispatch({type:\"CHANNEL_RTC_UPDATE_LAYOUT\",channelId:e,layout:t,appContext:n})}",
+            "toggleParticipants": "toggleParticipants(e,t){s.default.dispatch({type:\"CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN\",channelId:e,participantsOpen:t})}",
+            "toggleVoiceParticipantsHidden": "toggleVoiceParticipantsHidden(e,t){s.default.dispatch({type:\"CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN\",channelId:e,voiceParticipantsHidden:t})}",
+            "updateStageStreamSize": "updateStageStreamSize(e,t){s.default.dispatch({type:\"CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE\",channelId:e,large:t})}",
+            "updateStageVideoLimitBoostUpsellDismissed": "updateStageVideoLimitBoostUpsellDismissed(e,t){s.default.dispatch({type:\"CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED\",channelId:e,dismissed:t})}",
+            "updateChatOpen": "updateChatOpen(e,t){s.default.dispatch({type:\"CHANNEL_RTC_UPDATE_CHAT_OPEN\",channelId:e,chatOpen:t}),t?setTimeout(()=>{a.ComponentDispatch.dispatch(o.ComponentActions.FOCUS_CHANNEL_TEXT_AREA,{channelId:e})},0):a.ComponentDispatch.dispatch(o.ComponentActions.FOCUS_CHAT_BUTTON)}"
+        }
+    }
+}

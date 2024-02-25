@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "ApplicationBenefitsModalIcon": "e=>{let{application:t,asset:n,className:i,...a}=e;return(0,l.jsx)(r.default,{application:t,size:r.ApplicationIconSize.MEDIUM,asset:n,className:i,...a})}",
+        "ApplicationBenefitsModalHeading": "e=>{let{children:t,className:n,id:i,...r}=e;return(0,l.jsx)(s.Heading,{className:a(u.header,n),variant:\"heading-xl/extrabold\",id:i,...r,children:t})}",
+        "ApplicationBenefitsModalDivider": "function f(){return(0,l.jsx)(\"hr\",{className:u.divider})}",
+        "ApplicationBenefitsModalDescription": "e=>{let{className:t,title:n,description:i,...a}=e;return(0,l.jsxs)(\"div\",{className:t,...a,children:[(0,l.jsx)(s.Heading,{variant:\"heading-md/bold\",color:\"header-primary\",children:n}),(0,l.jsx)(s.Heading,{variant:\"heading-sm/normal\",color:\"header-secondary\",children:i})]})}",
+        "ApplicationBenefitsModalBenefits": "e=>{let{applicationId:t,storeListingBenefits:n,skuBenefits:i,className:s,...r}=e;return(0,l.jsx)(\"div\",{className:a(u.benefitsContainer,s),...r,children:(0,l.jsx)(o.SubscriptionListingBenefits,{applicationId:t,storeListingBenefits:n,skuBenefits:i,className:u.benefit})})}",
+        "ApplicationBenefitsModalContent": "e=>{let{children:t,className:n,...i}=e;return(0,l.jsx)(\"div\",{className:a(u.container,n),...i,children:t})}"
+    }
+}

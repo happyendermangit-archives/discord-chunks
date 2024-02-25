@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{children:t,shouldAnimate:n}=e;return n?(0,a.jsx)(\"div\",{className:r.outerContainer,children:(0,a.jsx)(\"div\",{className:r.innerContainer,children:t})}):t}"
+    }
+}

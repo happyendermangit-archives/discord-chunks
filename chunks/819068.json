@@ -1,0 +1,22 @@
+{
+    "exports": {
+        "OVERLAY_VERSION": 2,
+        "OVERLAY_DEFAULT_RESOLUTION": {
+            "width": 3840,
+            "height": 2160
+        },
+        "OVERLAY_MIN_RESOLUTION": {
+            "width": 768,
+            "height": 432
+        },
+        "OVERLAY_LAYOUT_ID": "overlay_default",
+        "DEV_PID": -2,
+        "getPID": "function f(){var e;if(void 0!==i)return i;let t=new URLSearchParams(window.location.search),n=null!==(e=t.get(\"pid\"))&&void 0!==e?e:\"\",r=parseInt(n,10);return isNaN(r)&&(r=-1),i=r}",
+        "setPID": "function E(e){m()&&(i=e)}",
+        "getRPCAuthToken": "function p(){let e=new URLSearchParams(window.location.search);return e.get(\"rpc_auth_token\")}",
+        "validResolution": "function h(e){return!s.isPlatformEmbedded||e.width>=l.width&&e.height>=l.height}",
+        "setOutOfProcessSupport": "function _(e){d=e}",
+        "supportsOutOfProcess": "function S(){return d}",
+        "isOutOfProcess": "function m(){var e;if(void 0!==r)return r;let t=new URLSearchParams(window.location.search);return r=(null!==(e=t.get(\"oop\"))&&void 0!==e?e:\"\")===\"true\"}"
+    }
+}

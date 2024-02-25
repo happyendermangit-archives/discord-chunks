@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){return(!r||!e||\"object\"!=typeof e||!(Symbol.toStringTag in e))&&\"[object Arguments]\"===a(e)}"
+}

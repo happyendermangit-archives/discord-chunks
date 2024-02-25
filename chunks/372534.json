@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "BaseSpeedTesterEvent": {
+            "Destroy": "destroy",
+            "ConnectionStateChange": "connectionstatechange",
+            "Error": "error",
+            "Connected": "connected",
+            "Ping": "ping",
+            "PingTimeout": "pingtimeout"
+        }
+    }
+}

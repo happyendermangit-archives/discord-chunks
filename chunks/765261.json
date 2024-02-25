@@ -1,0 +1,3 @@
+{
+    "exports": "function o(t){n.call(this,\"mont\",t),this.a=new r(t.a,16).toRed(this.red),this.b=new r(t.b,16).toRed(this.red),this.i4=new r(4).toRed(this.red).redInvm(),this.two=new r(2).toRed(this.red),this.a24=this.i4.redMul(this.a.redAdd(this.two))}"
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let{attributes:t,children:n,leaf:i,text:r}=e;if(i.commandName){let e=a(s.commandName,{[s.emptyText]:\"\"===r.text});return(0,l.jsx)(\"span\",{...t,className:e,spellCheck:!1,children:n})}return null}"
+    }
+}

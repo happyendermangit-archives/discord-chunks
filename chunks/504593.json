@@ -1,0 +1,62 @@
+{
+    "exports": {
+        "DrawerTabTypes": {
+            "CHAT": "CHAT",
+            "FRIENDS": "FRIENDS",
+            "QUICKSWITCHER": "QUICKSWITCHER",
+            "NOTIFICATIONS": "NOTIFICATIONS",
+            "MENTIONS_AND_QUICKSWITCHER": "MENTIONS_AND_QUICKSWITCHER",
+            "USER_SETTINGS": "USER_SETTINGS",
+            "STAGE_DISCOVERY": "STAGE_DISCOVERY",
+            "SERVER_DISCOVERY": "SERVER_DISCOVERY",
+            "PENDING_INCOMING_FRIEND_REQUESTS": "PENDING_INCOMING_FRIEND_REQUESTS"
+        },
+        "AppStates": {
+            "INACTIVE": "inactive",
+            "BACKGROUND": "background",
+            "ACTIVE": "active"
+        },
+        "CACHE_STORE_LAZY_KEY": "CacheStoreLazy",
+        "CACHE_STORE_CHANNELS_LAZY_KEY": "CacheStoreChannelsLazy",
+        "CACHE_STORE_KEY": "CacheStore",
+        "ModalAnimation": {
+            "NONE": "none",
+            "SLIDE_UP": "slide-up",
+            "SLIDE_IN": "slide-in",
+            "SLIDE_OUT": "slide-out",
+            "SLIDE_IN_OUT": "slide-in-out",
+            "SLIDE_IN_OUT_REVERSE": "slide-in-out-reverse",
+            "FADE": "fade"
+        },
+        "Gradients": {
+            "PREMIUM_TIER_0": [
+                "#5865f2",
+                "#007cc2"
+            ],
+            "PREMIUM_TIER_1": [
+                "#3442d9",
+                "#5865f2"
+            ],
+            "PREMIUM_TIER_2": [
+                "#8547c6",
+                "#ab5d8a"
+            ],
+            "PREMIUM_TIER_2_TRI_COLOR": [
+                "#8547c6",
+                "#b845c1",
+                "#ab5d8a"
+            ],
+            "PREMIUM_GUILD": [
+                "#3442d9",
+                "#9b44f7"
+            ],
+            "PREMIUM_TIER_0_PERK_CARD": [
+                "#3736BB",
+                "#4670E8",
+                "#8377EB",
+                "#E782F1",
+                "#DF90AF"
+            ]
+        }
+    }
+}

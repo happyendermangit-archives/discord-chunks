@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "setUseSystemTheme": "function a(e){i.default.dispatch({type:\"UNSYNCED_USER_SETTINGS_UPDATE\",settings:{useSystemTheme:e}})}"
+    }
+}

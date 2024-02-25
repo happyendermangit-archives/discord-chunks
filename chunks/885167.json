@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "GuildFeedPreferenceOptions": {
+            "1": "HIDDEN",
+            "2": "DEMOTED",
+            "HIDDEN": 1,
+            "DEMOTED": 2
+        }
+    }
+}

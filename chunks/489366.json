@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "default": {
+            "dateRange": "e=>\"\".concat(e.startDate,\" kuni \").concat(e.endDate)",
+            "dateSelected": "e=>\"\".concat(e.date,\" valitud\")",
+            "finishRangeSelectionPrompt": "Klõpsake kuupäevavahemiku valimise lõpetamiseks",
+            "maximumDate": "Viimane saadaolev kuupäev",
+            "minimumDate": "Esimene saadaolev kuupäev",
+            "next": "Järgmine",
+            "previous": "Eelmine",
+            "selectedDateDescription": "e=>\"Valitud kuup\\xe4ev: \".concat(e.date)",
+            "selectedRangeDescription": "e=>\"Valitud vahemik: \".concat(e.dateRange)",
+            "startRangeSelectionPrompt": "Klõpsake kuupäevavahemiku valimiseks",
+            "todayDate": "e=>\"T\\xe4na, \".concat(e.date)",
+            "todayDateSelected": "e=>\"T\\xe4na, \".concat(e.date,\" valitud\")"
+        }
+    }
+}

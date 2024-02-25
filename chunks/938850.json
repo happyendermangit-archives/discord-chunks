@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "AudioSettingsDefaultVolumes": {
+            "18": "STREAM",
+            "100": "USER",
+            "USER": 100,
+            "STREAM": 18
+        }
+    }
+}

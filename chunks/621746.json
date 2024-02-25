@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(){let[t,e]=u.useState(void 0),[n,l]=u.useState(void 0),a=(0,i.useStateFromStores)([r.default],()=>null!=n?r.default.get(n):null);return{selectedSkuId:t,selectedPlan:a,setSelectedSkuId:e,setSelectedPlanId:l}}"
+    }
+}

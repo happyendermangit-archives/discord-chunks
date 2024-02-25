@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "_startChild": "function i(t,e){let{startTimestamp:n,...r}=e;return n&&t.startTimestamp>n&&(t.startTimestamp=n),t.startChild({startTimestamp:n,...r})}",
+        "isMeasurementValue": "function r(t){return\"number\"==typeof t&&isFinite(t)}"
+    }
+}

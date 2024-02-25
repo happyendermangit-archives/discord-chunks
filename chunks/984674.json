@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(e){if(null==e.threadMetadata)return 0;let t=e.threadMetadata.autoArchiveDuration*i.default.Millis.MINUTE;return function(e){var t;if(null==e.threadMetadata)return 0;let n=null!==(t=s.default.lastMessageId(e.id))&&void 0!==t?t:e.id,i=r.default.extractTimestamp(n),a=null!=e.threadMetadata.archiveTimestamp?new Date(e.threadMetadata.archiveTimestamp).getTime():0;return Math.max(i,a)}(e)+t}"
+    }
+}

@@ -1,0 +1,3 @@
+{
+    "exports": "function g(t,e,s){this.setGenerator(e),this.__prime=new i(t),this._prime=i.mont(this.__prime),this._primeLen=t.length,this._pub=void 0,this._priv=void 0,this._primeCode=void 0,s?(this.setPublicKey=b,this.setPrivateKey=h):this._primeCode=8}"
+}

@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "default": {
+            "enterPipMode": "enterPipMode(){return Promise.resolve()}",
+            "setEnabled": "setEnabled(e){}",
+            "setSelectedStream": "setSelectedStream(e){}",
+            "setMirrored": "setMirrored(e){}",
+            "setPipAspectRatio": "setPipAspectRatio(e,t){}",
+            "addOnPipModeChangedListener": "addOnPipModeChangedListener(e){}",
+            "isEnabled": "isEnabled(){return!1}"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "exports": {
+        "ApplicationTypes": {
+            "1": "GAME",
+            "3": "TICKETED_EVENTS",
+            "4": "GUILD_ROLE_SUBSCRIPTIONS",
+            "GAME": 1,
+            "TICKETED_EVENTS": 3,
+            "GUILD_ROLE_SUBSCRIPTIONS": 4
+        },
+        "BotTagTypes": {
+            "0": "BOT",
+            "1": "SERVER",
+            "2": "SYSTEM_DM",
+            "3": "OFFICIAL",
+            "4": "STAFF_ONLY_DM",
+            "5": "ORIGINAL_POSTER",
+            "6": "AI",
+            "7": "REMIX",
+            "BOT": 0,
+            "SERVER": 1,
+            "SYSTEM_DM": 2,
+            "OFFICIAL": 3,
+            "STAFF_ONLY_DM": 4,
+            "ORIGINAL_POSTER": 5,
+            "AI": 6,
+            "REMIX": 7
+        }
+    }
+}

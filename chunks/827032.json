@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "addGlobalTag": "function r(e,t){i[e]=t}",
+        "getGlobalTagsArray": "function s(){return Object.keys(i).map(e=>\"\".concat(e,\":\").concat(i[e]))}"
+    }
+}

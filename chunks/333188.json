@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "VoiceCallBackgroundTypes": {
+            "0": "EMPTY",
+            "1": "GRADIENT",
+            "EMPTY": 0,
+            "GRADIENT": 1
+        }
+    }
+}

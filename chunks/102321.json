@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){return null!==e&&\"object\"===r(e)}"
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getSystemAnalyticsInfo": "function g(){return c.info()}"
+    }
+}

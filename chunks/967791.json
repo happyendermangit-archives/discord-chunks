@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "longPressMessage": "Drücken Sie lange oder drücken Sie Alt + Nach-unten, um das Menü zu öffnen"
+        }
+    }
+}

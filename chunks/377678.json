@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "add": "function o(e){for(t.push(e);t.length>10;)t.shift()}",
+        "serialize": "function n(){return t.join(\" -> \")}"
+    }
+}

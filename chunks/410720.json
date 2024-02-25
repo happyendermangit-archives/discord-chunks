@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "encrypt": "function(t,e){return t._cipher.encryptBlock(e)}",
+        "decrypt": "function(t,e){return t._cipher.decryptBlock(e)}"
+    }
+}

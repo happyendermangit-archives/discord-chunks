@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useBreadcrumbs": "function V(e){var t;let{\"aria-label\":n,...r}=e;let a=(0,K.useLocalizedStringFormatter)((t=_)&&t.__esModule?t.default:t,\"@react-aria/breadcrumbs\");return{navProps:{...(0,j.filterDOMProps)(r,{labelable:!0}),\"aria-label\":n||a.format(\"breadcrumbs\")}}}"
+    }
+}

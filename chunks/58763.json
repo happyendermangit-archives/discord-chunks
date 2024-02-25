@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){return(0,s.useStateFromStores)([i.default],()=>i.default.isLive(e),[e])}"
+    }
+}

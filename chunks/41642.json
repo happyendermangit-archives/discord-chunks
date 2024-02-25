@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "default": {
+            "CLOSED": "CLOSED",
+            "WILL_RECONNECT": "WILL_RECONNECT",
+            "CONNECTING": "CONNECTING",
+            "IDENTIFYING": "IDENTIFYING",
+            "RESUMING": "RESUMING",
+            "SESSION_ESTABLISHED": "SESSION_ESTABLISHED"
+        }
+    }
+}

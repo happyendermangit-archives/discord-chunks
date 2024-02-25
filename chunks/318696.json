@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "setLocale": "function G(I){T=e.default.loadPromise,O&&O.setLocale(I),e.default.setLocale(I),R(I)}",
+        "updateLocaleLoadingStatus": "function R(I){let N=arguments.length>1&&void 0!==arguments[1]&&arguments[1];if(V&&e.default.loadPromise===T)return;V=!0,N?(0,E.setLocaleHack)(I):_.default.dispatch({type:\"I18N_LOAD_START\",locale:I});let A=[e.default.loadPromise];O&&A.push(O.loadPromise);let G=Promise.all(A);setImmediate(()=>{G.then(()=>{_.default.dispatch({type:\"I18N_LOAD_SUCCESS\",locale:I})}).catch(N=>{_.default.dispatch({type:\"I18N_LOAD_ERROR\",error:N,locale:I})})})}"
+    }
+}

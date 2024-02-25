@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "default": {
+            "ascending": "تصاعدي",
+            "ascendingSort": "e=>\"ترتيب حسب العمود \".concat(e.columnName,\" بترتيب تصاعدي\")",
+            "columnSize": "e=>\"\".concat(e.value,\" بالبكسل\")",
+            "descending": "تنازلي",
+            "descendingSort": "e=>\"ترتيب حسب العمود \".concat(e.columnName,\" بترتيب تنازلي\")",
+            "resizerDescription": "اضغط على مفتاح Enter لبدء تغيير الحجم",
+            "select": "تحديد",
+            "selectAll": "تحديد الكل",
+            "sortable": "عمود قابل للترتيب"
+        }
+    }
+}

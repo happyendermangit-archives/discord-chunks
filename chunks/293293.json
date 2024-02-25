@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "scheduler": {
+            "stopped": true,
+            "listener": "function(){return e.schedule()}",
+            "run": "function(e){var t=this;if(void 0===e&&(e=250),!c){c=!0;var n=l(e);(0,o.queueResizeObserver)(function(){var a=!1;try{a=(0,r.process)()}finally{if(c=!1,e=n-l(),!i)return;a?t.run(1e3):e>0?t.run(e):t.start()}})}}",
+            "schedule": "function(){this.stop(),this.run()}",
+            "observe": "function(){var e=this,t=function(){return e.observer&&e.observer.observe(document.body,s)};document.body?t():a.global.addEventListener(\"DOMContentLoaded\",t)}",
+            "start": "function(){var e=this;this.stopped&&(this.stopped=!1,this.observer=new MutationObserver(this.listener),this.observe(),u.forEach(function(t){return a.global.addEventListener(t,e.listener,!0)}))}",
+            "stop": "function(){var e=this;!this.stopped&&(this.observer&&this.observer.disconnect(),u.forEach(function(t){return a.global.removeEventListener(t,e.listener,!0)}),this.stopped=!0)}"
+        },
+        "updateCount": "function(e){!i&&e>0&&d.start(),(i+=e)||d.stop()}"
+    }
+}

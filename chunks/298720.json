@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){return{scrollLeft:e.scrollLeft,scrollTop:e.scrollTop}}"
+    }
+}

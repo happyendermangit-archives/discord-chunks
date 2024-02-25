@@ -1,0 +1,59 @@
+{
+    "exports": {
+        "top": "top",
+        "bottom": "bottom",
+        "right": "right",
+        "left": "left",
+        "auto": "auto",
+        "basePlacements": [
+            "top",
+            "bottom",
+            "right",
+            "left"
+        ],
+        "start": "start",
+        "end": "end",
+        "clippingParents": "clippingParents",
+        "viewport": "viewport",
+        "popper": "popper",
+        "reference": "reference",
+        "variationPlacements": [
+            "top-start",
+            "top-end",
+            "bottom-start",
+            "bottom-end",
+            "right-start",
+            "right-end",
+            "left-start",
+            "left-end"
+        ],
+        "placements": [
+            "top",
+            "top-start",
+            "top-end",
+            "bottom",
+            "bottom-start",
+            "bottom-end",
+            "right",
+            "right-start",
+            "right-end",
+            "left",
+            "left-start",
+            "left-end",
+            "auto",
+            "auto-start",
+            "auto-end"
+        ],
+        "modifierPhases": [
+            "beforeRead",
+            "read",
+            "afterRead",
+            "beforeMain",
+            "main",
+            "afterMain",
+            "beforeWrite",
+            "write",
+            "afterWrite"
+        ]
+    }
+}

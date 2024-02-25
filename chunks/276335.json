@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "PopoutCSSAnimator": "function p(e){let{position:t,type:n,children:i}=e,{reducedMotion:r}=a.useContext(c.AccessibilityPreferencesContext),o=r.enabled?3:n,[p,h]=a.useState(null!=t),[_]=a.useState(()=>new u.Timeout);return a.useEffect(()=>()=>_.stop(),[_]),a.useEffect(()=>{null!=t&&_.start(10,()=>h(!0))},[t,_]),(0,s.jsx)(\"div\",{className:l(null!=t?E[t]:null,{[f[o]]:null!=t,[d.didRender]:p}),children:i})}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "hasActiveObservations": "function(){return r.resizeObservers.some(function(t){return t.activeTargets.length>0})}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "i=>{let{hideDiscriminator:x=!1,user:t,nick:a,forceUsername:o,showAccountIdentifier:d,overrideDiscriminator:r,forcePomelo:n,...m}=i,f=(0,y.useStateFromStores)([k.default],()=>k.default.hidePersonalInformation),_=f||x||t.isNonUserBot(),u=t.toString(),h=p.default.getName(t),I=o?u:null!=a?a:h,b=t.isPomelo()||n;if(b||I!==u){let i=I===u&&b&&o?p.default.getUserTag(t,{forcePomelo:n}):I,x=d&&i!==\"@\".concat(u)?p.default.getUserTag(t):void 0;return(0,s.jsx)(l,{primary:i,secondary:x,botVerified:t.isVerifiedBot(),botType:c(t),showStreamerModeTooltip:f&&i!==h,...m})}return(0,s.jsx)(e.default,{name:I,botType:c(t),botVerified:t.isVerifiedBot(),discriminator:_||I!==u?null:null!=r?r:t.discriminator,...m})}"
+    }
+}

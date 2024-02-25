@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{partySize:t,members:n,minAvatarsShown:i=1,maxAvatarsShown:s=2,guildId:r}=e,{totalSize:c,knownSize:f}=t;if(c<i)return null;let m=a(n).filter(o.isNotNullish).take(s).map(e=>(0,l.jsx)(d,{member:e,guildId:r},e.id)).value(),p=c-f;for(let e=0;e<p&&m.length<s;e++)m.push((0,l.jsx)(d,{empty:!0,guildId:r},\"empty-member-\".concat(e)));let h=Math.max(Math.min(c-m.length,99),0);if(1===h){let e=n[s];m.push((0,l.jsx)(d,{member:e,guildId:r},e.id))}return(0,l.jsx)(\"div\",{className:u.wrapper,children:(0,l.jsxs)(\"div\",{className:u.partyMembers,children:[m,h>1?(0,l.jsxs)(\"div\",{className:u.partyMemberOverflow,children:[\"+\",h]}):null]})})}"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "trustDomain": "function i(e){s.default.dispatch({type:\"MASKED_LINK_ADD_TRUSTED_DOMAIN\",url:e})}",
+        "trustProtocol": "function r(e){s.default.dispatch({type:\"MASKED_LINK_ADD_TRUSTED_PROTOCOL\",url:e})}"
+    }
+}

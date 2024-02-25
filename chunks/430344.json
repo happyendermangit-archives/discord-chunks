@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){return arguments.length>1?r(t,arguments[1]):r(t)}"
+}

@@ -1,0 +1,27 @@
+{
+    "exports": {
+        "InvalidKeywordError": "class r extends Error{}",
+        "InvalidRegexPatternError": "class d extends Error{}",
+        "AUTOMOD_ERROR_CODES": {
+            "toJSON": "function(){return Array.from(this)}",
+            "has": "function has() { [native code] }",
+            "add": "function add() { [native code] }",
+            "delete": "function delete() { [native code] }",
+            "clear": "function clear() { [native code] }",
+            "entries": "function entries() { [native code] }",
+            "forEach": "function forEach() { [native code] }",
+            "size": 3,
+            "values": "function values() { [native code] }",
+            "keys": "function values() { [native code] }",
+            "union": "function union() { [native code] }",
+            "intersection": "function intersection() { [native code] }",
+            "difference": "function difference() { [native code] }",
+            "symmetricDifference": "function symmetricDifference() { [native code] }",
+            "isSubsetOf": "function isSubsetOf() { [native code] }",
+            "isSupersetOf": "function isSupersetOf() { [native code] }",
+            "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+        },
+        "getAutomodErrorMessageFromErrorResponse": "function o(e,t){if(null==e)return null;let{code:n,message:a}=e;if(!u.has(n))return null;if(null!=a)return a;if(null==t)return null;let r=l.default.getChannel(t);return(null==r?void 0:r.isThread())?i.default.Messages.THREAD_AUTOMOD_ERROR:((null==r?void 0:r.isForumPost())||(null==r?void 0:r.isForumLikeChannel()))&&(n===s.AbortCodes.AUTOMOD_TITLE_BLOCKED||n===s.AbortCodes.AUTOMOD_MESSAGE_BLOCKED)?i.default.Messages.FORUM_POST_AUTOMOD_ERROR:null}",
+        "getAutomodErrorMessage": "function c(e,t){let n=o(t);return null!=n?n:null==e?i.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE:function(e){let t=l.default.getChannel(e.message.channelId);return(0,a.isMessageDataEdit)(e)?i.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_NOTICE:(null==t?void 0:t.isThread())?i.default.Messages.THREAD_AUTOMOD_ERROR:(null==t?void 0:t.isForumPost())||(null==t?void 0:t.isForumLikeChannel())?i.default.Messages.FORUM_POST_AUTOMOD_ERROR:i.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE}(e)}"
+    }
+}

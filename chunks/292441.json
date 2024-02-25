@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "severityLevelFromString": "function i(t){return\"warn\"===t?\"warning\":r.includes(t)?t:\"log\"}"
+    }
+}

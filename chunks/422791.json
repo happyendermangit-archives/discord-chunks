@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "RTCConnectionEvent": {
+            "State": "state",
+            "Speaking": "speaking",
+            "VideoSourceQualityChanged": "video-source-quality-changed",
+            "Video": "video",
+            "Flags": "flags",
+            "Platform": "platform",
+            "Ping": "ping",
+            "OutboundLossRate": "outboundlossrate"
+        }
+    }
+}

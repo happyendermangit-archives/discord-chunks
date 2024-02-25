@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(e,t){(0,i.default)(2,arguments);var n=(0,a.default)(e),s=(0,r.default)(t),u=(0,o.default)(n)-s;return n.setUTCDate(n.getUTCDate()-7*u),n}"
+    }
+}

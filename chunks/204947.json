@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function i(e){return null!=e&&\"\"!==e?e:l.default.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY}"
+    }
+}

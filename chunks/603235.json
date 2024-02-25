@@ -1,0 +1,3 @@
+{
+    "exports": "function e(t){!function(t,e){if(!(t instanceof e))throw TypeError(\"Cannot call a class as a function\")}(this,e);var n=function(t,e){if(!t)throw ReferenceError(\"this hasn't been initialised - super() hasn't been called\");return e&&(\"object\"==typeof e||\"function\"==typeof e)?e:t}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this));return n._toValue=t.toValue,n._easing=void 0!==t.easing?t.easing:u,n._duration=void 0!==t.duration?t.duration:500,n._delay=void 0!==t.delay?t.delay:0,n.__isInteraction=void 0===t.isInteraction||t.isInteraction,n}"
+}

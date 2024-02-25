@@ -1,0 +1,31 @@
+{
+    "exports": {
+        "TIMESTAMP_FORMATS": {
+            "t": "e=>(0,a.dateFormat)(e,\"LT\")",
+            "T": "e=>(0,a.dateFormat)(e,\"LTS\")",
+            "d": "e=>(0,a.dateFormat)(e,\"L\")",
+            "D": "e=>(0,a.dateFormat)(e,\"LL\")",
+            "f": "e=>(0,a.dateFormat)(e,\"LLL\")",
+            "F": "e=>(0,a.dateFormat)(e,\"LLLL\")",
+            "R": "e=>{let t=r.relativeTimeThreshold(\"s\");r.relativeTimeThreshold(\"s\",60);let n=r.relativeTimeThreshold(\"ss\");r.relativeTimeThreshold(\"ss\",-1);let l=r.relativeTimeThreshold(\"m\");r.relativeTimeThreshold(\"m\",60);let a=null;try{a=r(e.toDate()).fromNow()}catch(e){}return r.relativeTimeThreshold(\"s\",t),r.relativeTimeThreshold(\"ss\",n),r.relativeTimeThreshold(\"m\",l),null!=a?a:r(e.toDate()).fromNow()}"
+        },
+        "DEFAULT_TIMESTAMP_FORMAT": "f",
+        "TIMESTAMP_REGEX": {
+            "exec": "function exec() { [native code] }",
+            "dotAll": false,
+            "flags": "",
+            "global": false,
+            "hasIndices": false,
+            "ignoreCase": false,
+            "multiline": false,
+            "source": "^<t:(-?\\d{1,17})(?::(t|T|d|D|f|F|R))?>",
+            "sticky": false,
+            "unicode": false,
+            "compile": "function compile() { [native code] }",
+            "test": "function test() { [native code] }",
+            "unicodeSets": false
+        },
+        "parseTimestamp": "function d(e,t){let n=r(Number(e)*i.default.Millis.SECOND);if(!n.isValid())return null;let l=null!=t?u[t]:void 0;return null==l&&(l=u[o]),{timestamp:e,format:t,parsed:n,full:u.F(n),formatted:l(n)}}",
+        "unparseTimestamp": "function f(e,t){return null!=t?\"<t:\".concat(e,\":\").concat(t,\">\"):\"<t:\".concat(e,\">\")}"
+    }
+}

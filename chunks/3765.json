@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "InteractionState": {
+            "0": "QUEUED",
+            "1": "CREATED",
+            "2": "FAILED",
+            "QUEUED": 0,
+            "CREATED": 1,
+            "FAILED": 2
+        }
+    }
+}

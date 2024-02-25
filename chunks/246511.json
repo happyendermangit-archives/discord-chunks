@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "InspectedExpressionChangeSource": {
+            "0": "GRID_NAVIGATOR_EVENT",
+            "1": "MOUSE_EVENT",
+            "GRID_NAVIGATOR_EVENT": 0,
+            "MOUSE_EVENT": 1
+        },
+        "PickerContextMenuDataTypes": {
+            "EMOJI": "emoji",
+            "STICKER": "sticker",
+            "PACK_ICON": "pack-icon"
+        }
+    }
+}

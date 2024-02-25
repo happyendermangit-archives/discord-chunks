@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "dynamicRequire": "function s(t,e){return t.require(e)}",
+        "isNodeEnv": "function a(){return!(0,r.isBrowserBundle)()&&\"[object process]\"===Object.prototype.toString.call(void 0!==i?i:0)}"
+    }
+}

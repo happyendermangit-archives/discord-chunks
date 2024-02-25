@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "markAnalyticsFeedItemSeen": "function n(e,t,s){i.default.dispatch({type:\"ANALYTICS_FEED_ITEM_SEEN\",id:e,feedItemId:t,timestampMillis:s})}",
+        "markAnalyticsFeedItemUnseen": "function a(e,t,s){i.default.dispatch({type:\"ANALYTICS_FEED_ITEM_UNSEEN\",id:e,feedItemId:t,timestampMillis:s})}",
+        "flushAnalyticsFeedItems": "function d(e,t){i.default.dispatch({type:\"ANALYTICS_FEED_FLUSH\",id:e,force:t})}"
+    }
+}

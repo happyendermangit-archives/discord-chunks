@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getCurrentHub": "function u(){var e=c();return((!_(e)||p(e).isOlderThan(3))&&h(e,new s),(0,i.isNodeEnv)())?function(e){try{var n=(0,i.dynamicRequire)(t,\"domain\").active;if(!n)return p(e);if(!_(n)||p(n).isOlderThan(3)){var r=p(e).getStackTop();h(n,new s(r.client,o.Scope.clone(r.scope)))}return p(n)}catch(t){return p(e)}}(e):p(e)}"
+    }
+}

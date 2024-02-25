@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let t=i.default.getLocale().toLowerCase();return t in e?e[t]:e.default}"
+    }
+}

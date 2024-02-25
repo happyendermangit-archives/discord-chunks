@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "parse": "parse(e,t){var n,l,r;let a=arguments.length>2&&void 0!==arguments[2]?arguments[2]:void 0,i=null!=a?a:K(e),u={content:t,tts:!1,invalidEmojis:[],validNonShortcutEmojis:[]};return u.content=(n=u.content,l=i,r=(t,n)=>{T.default.isEmojiPremiumLocked({emoji:t,channel:e,intention:v.EmojiIntention.CHAT})?u.invalidEmojis.push(t):!n&&u.validNonShortcutEmojis.push(t)},V(B(n,l),l,s.default.translateInlineEmojiToSurrogates,r)),u}",
+            "parsePreprocessor": "parsePreprocessor(e,t){let n=K(e);return B(t,n)}",
+            "unparse": "unparse(e,t,n){let l=m.default.getChannel(t),a=null!=l?l.getGuildId():null,u=null!=a?C.default.getGuild(a):null,o=n?q:r.omit(q,[\"spoiler\",\"timestamp\"]),c=n?Y:s.default.translateSurrogatesToInlineEmoji,d=i.parserFor(o),f={inline:!0,guild:u,isNotification:n};return V(d(e,f),f,c)}"
+        }
+    }
+}

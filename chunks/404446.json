@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){if(\"Function\"===e(t))return o(t)}"
+}

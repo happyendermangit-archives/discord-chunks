@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "ForumLayout": {
+            "0": "DEFAULT",
+            "1": "LIST",
+            "2": "GRID",
+            "DEFAULT": 0,
+            "LIST": 1,
+            "GRID": 2
+        }
+    }
+}

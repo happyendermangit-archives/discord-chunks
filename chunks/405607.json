@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(e){let{categoryListRef:t,expressionsListRef:n,categories:a,store:u,children:f,className:m,listPadding:p,rowCount:h,getScrollOffsetForIndex:E,categoryHeight:g,onScroll:S,renderCategoryListItem:C,rowCountBySection:T,renderSection:v}=e,I=u.useStore(e=>e.activeCategoryIndex);c({activeIndex:I,categoryListRef:t,getScrollOffsetForIndex:E});let _=i.useCallback(e=>{let{searchQuery:t}=o.useExpressionPickerStore.getState();if(u.setActiveCategoryIndex(e),\"\"!==t)(0,o.setSearchQuery)(\"\");else{var l;null===(l=n.current)||void 0===l||l.scrollToSectionTop(e)}},[n,u]),N=i.useCallback(e=>C(a[e],e,()=>_(e),I===e),[I,a,_,C]),A=i.useMemo(()=>\"function\"==typeof g?e=>g(a[e],e):g,[a,g]);return(0,l.jsxs)(\"div\",{className:s(d.wrapper,m),children:[(0,l.jsx)(r.default,{listPadding:p,onScroll:S,ref:t,renderRow:N,rowCount:h,rowHeight:A,hideScrollbar:!0,rowCountBySection:T,renderSection:v}),null==f?void 0:f(_)]})}"
+    }
+}

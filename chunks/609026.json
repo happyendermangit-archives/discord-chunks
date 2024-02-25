@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "MenuSearchControl": {
+            "render": "function(e,t){var n,s,p;let{query:h,onChange:_,loading:S=!1,disabled:m=!1,placeholder:T=f.default.Messages.SEARCH,\"aria-label\":g}=e,I=r.useRef(null),C=r.useRef(null);r.useImperativeHandle(t,()=>({focus:()=>{var e;return null===(e=C.current)||void 0===e?void 0:e.focus()},blur:()=>{var e;return null===(e=C.current)||void 0===e?void 0:e.blur()},activate:()=>!1}),[]);let v=(n=h,s=S,p=_,s?(0,i.jsx)(\"div\",{className:E.iconContainer,children:(0,i.jsx)(u.Spinner,{type:u.Spinner.Type.SPINNING_CIRCLE,className:a(E.icon)})}):n.length>0?(0,i.jsx)(o.Clickable,{\"aria-label\":f.default.Messages.SEARCH_CLEAR,className:a(E.iconContainer,E.iconClickable),onClick:e=>{e.stopPropagation(),p(\"\")},onMouseDown:e=>{e.preventDefault(),e.stopPropagation()},focusProps:{offset:{top:-3,right:-3,bottom:-3,left:-3}},children:(0,i.jsx)(c.default,{width:18,height:18,className:E.icon,\"aria-label\":f.default.Messages.CLOSE})}):(0,i.jsx)(\"div\",{className:E.iconContainer,children:(0,i.jsx)(d.default,{width:18,height:18,className:E.icon,\"aria-label\":f.default.Messages.SEARCH})}));return(0,i.jsx)(l.FocusRing,{focusTarget:C,ringTarget:I,offset:{top:2,bottom:2,left:4,right:4},children:(0,i.jsxs)(\"div\",{className:E.container,ref:I,children:[(0,i.jsx)(\"input\",{role:\"searchbox\",\"aria-busy\":S,ref:C,className:E.input,value:h,onChange:e=>_(e.currentTarget.value),\"aria-label\":g,placeholder:T,disabled:m}),v]})})}"
+        }
+    }
+}

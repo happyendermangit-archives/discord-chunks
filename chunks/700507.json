@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "disconnectRemote": "async function p(){let e=g.default.getAwaitingRemoteSessionInfo(),t=null==e?void 0:e.nonce;a.default.dispatch({type:\"REMOTE_SESSION_DISCONNECT\"});let n=[];((null==e?void 0:e.type)===h.PlatformTypes.PLAYSTATION||(null==e?void 0:e.type)===h.PlatformTypes.PLAYSTATION_STAGING)&&(null==e?void 0:e.commandId)!=null&&(null==e?void 0:e.deviceId)!=null&&n.push(O(e.type,e.deviceId,e.commandId)),null!=t&&n.push(function(e){return r.default.delete({url:h.Endpoints.CONNECT_REQUEST(e)})}(t));try{await Promise.all(n)}catch(e){o.default.show({title:v.default.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,body:v.default.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY})}}",
+        "connectToRemote": "function y(e){a.default.dispatch({type:\"REMOTE_SESSION_CONNECT\",sessionId:e})}",
+        "remoteVoiceStateUpdate": "function T(e,t){let{selfMute:n,selfDeaf:s}=t;a.default.dispatch({type:\"REMOTE_COMMAND\",sessionId:e,payload:{type:\"VOICE_STATE_UPDATE\",self_mute:n,self_deaf:s}}),E(\"VOICE_STATE_UPDATE\",e)}",
+        "remoteDisconnect": "function C(e){a.default.dispatch({type:\"REMOTE_COMMAND\",sessionId:e,payload:{type:\"DISCONNECT\"}}),E(\"DISCONNECT\",e),p()}",
+        "remoteAudioSettingsUpdate": "function I(e,t,n,s){let i=(0,d.coerceAudioContextForProto)(n);null!=i&&(a.default.dispatch({type:\"REMOTE_COMMAND\",sessionId:e,payload:{type:\"AUDIO_SETTINGS_UPDATE\",context:i,id:t,...s}}),E(\"AUDIO_SETTINGS_UPDATE\",e))}",
+        "fetchDevices": "async function A(e){let t;a.default.dispatch({type:\"GAME_CONSOLE_FETCH_DEVICES_START\",platform:e});try{t=await r.default.get({url:h.Endpoints.CONSOLES_DEVICES(e)})}catch(t){throw a.default.dispatch({type:\"GAME_CONSOLE_FETCH_DEVICES_FAIL\",platform:e,error:t}),t}let n=t.body.devices;return a.default.dispatch({type:\"GAME_CONSOLE_FETCH_DEVICES_SUCCESS\",platform:e,devices:n}),n}",
+        "persistSelectedDeviceId": "function D(e,t){a.default.dispatch({type:\"GAME_CONSOLE_SELECT_DEVICE\",platform:e,deviceId:t})}",
+        "transferToPlayStation": "async function P(e,t,n){await c.default.maybeShowPTTAlert(e),await p();let s=await S();await N(e,t,n,s),(0,m.default)(n.id,e)}"
+    }
+}

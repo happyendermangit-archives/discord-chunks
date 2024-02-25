@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "MultiBackend": "(e,t,n)=>new r.MultiBackendImpl(e,t,n)",
+        "createTransition": "(e,t)=>({event:e,check:t})"
+    }
+}

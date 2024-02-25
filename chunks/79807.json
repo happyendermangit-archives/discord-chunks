@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,r){if(t<r)throw e(\"Not enough arguments\");return t}"
+}

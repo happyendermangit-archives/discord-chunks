@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "showPendingNotification": "function T(e){s(e,I.default.Messages.NOTIFICATION_PENDING_FRIEND_REQUEST,()=>{{let{openUserProfileModal:_}=E(\"401642\");_({userId:e.id})}(0,r.transitionTo)(a.Routes.FRIENDS),o.default.setSection(a.FriendsSections.PENDING)})}",
+        "showAcceptedNotification": "function S(e){s(e,I.default.Messages.NOTIFICATION_ACCEPTED_FRIEND_REQUEST,()=>{t.default.openPrivateChannel(e.id)})}"
+    }
+}

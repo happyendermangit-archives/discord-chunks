@@ -1,0 +1,25 @@
+{
+    "exports": {
+        "CHANGELOG_MODAL_KEY": "CHANGELOG_MODAL",
+        "ChangelogPlatforms": {
+            "0": "DESKTOP",
+            "1": "MOBILE",
+            "DESKTOP": 0,
+            "MOBILE": 1
+        },
+        "AssetType": {
+            "0": "YOUTUBE_VIDEO_ID",
+            "1": "IMAGE",
+            "YOUTUBE_VIDEO_ID": 0,
+            "IMAGE": 1
+        },
+        "ChangelogLoadState": {
+            "0": "NOT_LOADED",
+            "1": "LOADED_SUCCESS",
+            "2": "LOADED_FAILURE",
+            "NOT_LOADED": 0,
+            "LOADED_SUCCESS": 1,
+            "LOADED_FAILURE": 2
+        }
+    }
+}

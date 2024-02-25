@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "useManageResourcePermissions": "e=>{let[t,n]=e instanceof l.default?[c.Permissions.CREATE_EVENTS,c.Permissions.MANAGE_EVENTS]:h(e),[r,u,E,p]=(0,s.useStateFromStoresArray)([a.default],()=>[a.default.can(c.Permissions.CREATE_GUILD_EXPRESSIONS,e),a.default.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS,e),a.default.can(t,e),a.default.can(n,e)]),C=(0,s.useStateFromStores)([o.default],()=>o.default.getCurrentUser()),v=i.useCallback(e=>f(e,C,u,r),[r,u,C]),_=i.useCallback(e=>f(e,C,p,E),[p,E,C]);return null==e?d:{canCreateExpressions:r,canCreateGuildEvent:E,canManageAllExpressions:u,canManageAllEvents:p,canManageGuildExpression:v,canManageGuildEvent:_}}",
+        "getManageResourcePermissions": "function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:a.default,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:o.default,[i,r]=e instanceof l.default?[c.Permissions.CREATE_EVENTS,c.Permissions.MANAGE_EVENTS]:h(e),s=t.can(c.Permissions.CREATE_GUILD_EXPRESSIONS,e),u=t.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS,e),E=t.can(i,e),p=t.can(r,e),C=n.getCurrentUser();return null==e?d:{canCreateExpressions:s,canCreateGuildEvent:E,canManageAllExpressions:u,canManageAllEvents:p,canManageGuildExpression:e=>f(e,C,u,s),canManageGuildEvent:e=>f(e,C,p,E)}}"
+    }
+}

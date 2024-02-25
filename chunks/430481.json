@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "createImageFromUint8Array": "async function i(e){if(null==e)return\"\";let t=new Blob([e],{type:\"image/jpeg\"}),n=await new Promise(e=>{let n=new FileReader;n.onloadend=()=>{e(n.result)},n.readAsDataURL(t)});if(\"string\"!=typeof n)throw Error(\"Image creation failed\");return n}",
+        "createImageFromImageData": "function l(e){let t=document.createElement(\"canvas\");t.width=e.width,t.height=e.height;let n=t.getContext(\"2d\");if(null==n)throw Error(\"Could not create canvas context\");return n.putImageData(new ImageData(e.data,e.width,e.height),0,0),t.toDataURL(\"image/jpeg\",.9)}",
+        "createThumbnailFromVideo": "async function r(e,t){let n=document.createElement(\"video\");n.muted=!0,n.src=e,n.currentTime=t,await n.play(),n.pause();let i=a.CLIPS_THUMBNAIL_MAX_WIDTH/n.videoWidth,l=a.CLIPS_THUMBNAIL_MAX_HEIGHT/n.videoHeight,r=Math.min(i,l),d=n.videoWidth*r,u=n.videoHeight*r,s=document.createElement(\"canvas\");s.width=d,s.height=u;let o=s.getContext(\"2d\");if(null==o)throw Error(\"Could not create canvas context\");return o.drawImage(n,0,0,n.videoWidth,n.videoHeight,0,0,d,u),s.toDataURL(\"image/jpeg\",.9)}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "ProcessUtils": "class i{getCPUCoreCount(){return this.cpuCoreCount}}"
+    }
+}

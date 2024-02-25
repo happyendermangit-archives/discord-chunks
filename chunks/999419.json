@@ -1,0 +1,3 @@
+{
+    "exports": "function f(t,e){this.eddsa=t,\"object\"!=typeof e&&(e=o(e)),Array.isArray(e)&&(e={R:e.slice(0,t.encodingLength),S:e.slice(t.encodingLength)}),n(e.R&&e.S,\"Signature without R or S\"),t.isPoint(e.R)&&(this._R=e.R),e.S instanceof r&&(this._S=e.S),this._Rencoded=Array.isArray(e.R)?e.R:e.Rencoded,this._Sencoded=Array.isArray(e.S)?e.S:e.Sencoded}"
+}

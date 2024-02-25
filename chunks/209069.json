@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let{stickerPack:t,sourceSticker:r,analyticsLocations:o,analyticsLocation:u}=e;return a.default.track(s.AnalyticEvents.STICKER_PACK_VIEW_ALL,{sticker_id:null==r?void 0:r.id,sticker_pack_id:t.id,location:u,location_stack:o}),a.default.track(s.AnalyticEvents.OPEN_MODAL,{type:s.AnalyticsSections.STICKER_PACK_VIEW_ALL,location:u}),(0,i.openModalLazy)(async()=>{let{default:e}=await n.el(\"656137\").then(n.bind(n,\"656137\"));return n=>(0,l.jsx)(e,{stickerPack:t,...n})})}"
+    }
+}

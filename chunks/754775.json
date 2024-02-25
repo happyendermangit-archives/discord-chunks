@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(e){let{style:t,src:n,backgroundSrc:E,userId:C,pulseSpeakingIndicator:p=!1,speaking:m=!1,...S}=e,g=null!=E?E:n,_=(0,l.default)(g,s.default.unsafe_rawColors.PRIMARY_800.css),T=(0,u.useCallBannerBackgroundExperiment)(!0,\"VideoBackground-web\").enabled,v=(0,c.default)(null!=C?C:\"\"),I=null==v?void 0:v.getBannerURL({size:1024,canAnimate:f.GifAutoPlay.getSetting()});if(r.useEffect(()=>{null!=C&&T&&(0,d.default)(C,void 0,{dispatchWait:!0})},[T,C]),null==n)return null;let A=(0,a.jsx)(i.Avatar,{className:h.avatarWrapper,src:n,...S}),M={...t,backgroundColor:_};return null!=I&&m&&T&&(M.backgroundImage=\"url(\".concat(I,\")\"),M.backgroundSize=\"cover\"),(0,a.jsx)(\"div\",{style:M,className:h.background,children:p?(0,a.jsx)(o.default,{shouldAnimate:m,children:A}):A})}"
+    }
+}

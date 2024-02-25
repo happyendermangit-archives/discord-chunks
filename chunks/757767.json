@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "RecurrenceOptions": {
+            "0": "NONE",
+            "1": "WEEKLY",
+            "2": "MONTHLY",
+            "3": "YEARLY",
+            "4": "WEEKDAY_ONLY",
+            "5": "BIWEEKLY",
+            "NONE": 0,
+            "WEEKLY": 1,
+            "MONTHLY": 2,
+            "YEARLY": 3,
+            "WEEKDAY_ONLY": 4,
+            "BIWEEKLY": 5
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(){return!/^((?!chrome|android).)*safari/i.test((0,r.default)())}"
+    }
+}

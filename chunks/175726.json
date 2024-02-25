@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"Zmniejsz \".concat(e.fieldLabel)",
+            "increase": "e=>\"Zwiększ \".concat(e.fieldLabel)",
+            "numberField": "Pole numeru"
+        }
+    }
+}

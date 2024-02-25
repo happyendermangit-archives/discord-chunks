@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "announce": "function i(t){let e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:\"assertive\",n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:7e3;!r&&(r=new u),r.announce(t,e,n)}",
+        "clearAnnouncer": "function o(t){r&&r.clear(t)}",
+        "destroyAnnouncer": "function a(){r&&(r.destroy(),r=null)}"
+    }
+}

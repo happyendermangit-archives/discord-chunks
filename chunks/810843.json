@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getVisibilityWatcher": "()=>(a<0&&(a=s(),o()),{get firstHiddenTime(){return a}})"
+    }
+}

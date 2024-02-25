@@ -1,0 +1,16 @@
+{
+    "exports": {
+        "VADAggressiveness": {
+            "0": "NORMAL",
+            "1": "LOW_BIRTATE",
+            "2": "AGGRESSIVE",
+            "3": "VERY_AGGRESSIVE",
+            "DISABLED": -1,
+            "-1": "DISABLED",
+            "NORMAL": 0,
+            "LOW_BIRTATE": 1,
+            "AGGRESSIVE": 2,
+            "VERY_AGGRESSIVE": 3
+        }
+    }
+}

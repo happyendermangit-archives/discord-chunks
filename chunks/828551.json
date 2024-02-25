@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "useVisuallyHidden": "function s(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},{style:t,isFocusable:n}=e,[r,s]=(0,a.useState)(!1),{focusWithinProps:c}=(0,i.useFocusWithin)({isDisabled:!n,onFocusWithinChange:e=>s(e)}),l=(0,a.useMemo)(()=>r?t:t?{...o,...t}:o,[r]);return{visuallyHiddenProps:{...c,style:l}}}",
+        "VisuallyHidden": "function c(e){let{children:t,elementType:Element=\"div\",isFocusable:n,style:i,...o}=e,{visuallyHiddenProps:c}=s(e);return a.createElement(Element,(0,r.mergeProps)(o,c),t)}"
+    }
+}

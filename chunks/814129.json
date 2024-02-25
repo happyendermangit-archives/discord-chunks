@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"\".concat(e.fieldLabel,\" 감소\")",
+            "increase": "e=>\"\".concat(e.fieldLabel,\" 증가\")",
+            "numberField": "번호 필드"
+        }
+    }
+}

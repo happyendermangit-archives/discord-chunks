@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "GuildFeedItemTypes": {
+            "MESSAGE": "message",
+            "FORUM_POST": "forum_post",
+            "MESSAGE_BUNDLE": "message_bundle",
+            "CONVERSATION": "conversation"
+        }
+    }
+}

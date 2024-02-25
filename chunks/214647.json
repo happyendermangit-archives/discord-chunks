@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "GET_THERMAL_STATE_NOT_IMPLEMENTED_ERROR_MESSAGE": "getThermalState not implemented for this client platform"
+    }
+}

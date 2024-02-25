@@ -1,0 +1,64 @@
+{
+    "exports": {
+        "dirtyChars": {
+            "exec": "function exec() { [native code] }",
+            "dotAll": false,
+            "flags": "g",
+            "global": true,
+            "hasIndices": false,
+            "ignoreCase": false,
+            "multiline": false,
+            "source": "([^A-Za-z0-9_.]+)",
+            "sticky": false,
+            "unicode": false,
+            "compile": "function compile() { [native code] }",
+            "test": "function test() { [native code] }",
+            "unicodeSets": false
+        },
+        "coalescePeriods": {
+            "exec": "function exec() { [native code] }",
+            "dotAll": false,
+            "flags": "g",
+            "global": true,
+            "hasIndices": false,
+            "ignoreCase": false,
+            "multiline": false,
+            "source": "\\.+",
+            "sticky": false,
+            "unicode": false,
+            "compile": "function compile() { [native code] }",
+            "test": "function test() { [native code] }",
+            "unicodeSets": false
+        },
+        "EditState": {
+            "NONE": "none",
+            "EDIT_DISPLAY_NAME": "display-name",
+            "EDIT_USERNAME": "username",
+            "PREVIEW": "preview",
+            "SUGGESTION": "suggestion"
+        },
+        "PomeloEntrypoints": {
+            "APP_START": "app start",
+            "NOTICE": "notice",
+            "USER_SETTINGS": "user settings",
+            "USER_SETTINGS_EDIT": "user settings edit",
+            "YOU_TAB": "you tab"
+        },
+        "MAX_DISPLAY_NAME_LENGTH": 32,
+        "POMELO_KEYWORD": "pomelo",
+        "CONTROL_CHARACTERS_CODE": [
+            1564,
+            917505,
+            12644,
+            65279,
+            173,
+            6068,
+            10240,
+            4447,
+            847,
+            4448,
+            65440
+        ],
+        "TIMEOUT_TIME": 2000
+    }
+}

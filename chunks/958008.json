@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"Zn\\xedžiť \".concat(e.fieldLabel)",
+            "increase": "e=>\"Zv\\xfdšiť \".concat(e.fieldLabel)",
+            "numberField": "Číselné pole"
+        }
+    }
+}

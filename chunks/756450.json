@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function i(e){var t,n;if((0,a.default)(1,arguments),e&&\"function\"==typeof e.forEach)t=e;else{if(\"object\"!==o(e)||null===e)return new Date(NaN);t=Array.prototype.slice.call(e)}return t.forEach(function(e){var t=(0,r.default)(e);(void 0===n||n>t||isNaN(t.getDate()))&&(n=t)}),n||new Date(NaN)}"
+    }
+}

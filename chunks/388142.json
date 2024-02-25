@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "initiateChannelPrompts": "function E(e){s.default.post({url:c.Endpoints.INITIATE_CHANNEL_PROMPTS,body:{guild_ids:e}})}",
+        "forcePrompt": "function S(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:c.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT;s.default.post({url:c.Endpoints.FORCE_SEND_PROMPT(e),body:{prompt_type:t}})}",
+        "sendGamingStatsMessage": "async function _(e,t,n){await s.default.post({url:c.Endpoints.SEND_GAMING_STATS(t),body:{message_reference:{guild_id:e,channel_id:t,message_id:n}}}),T(t)}",
+        "updateGamingStats": "async function f(e){let t=await s.default.patch({url:c.Endpoints.UPDATE_GAMING_STATS(e.channel_id,e.id)});if(null!=t.text&&\"\"!==t.text){let n=l.default.getChannel(e.channel_id);null!=n&&((0,a.createPendingReply)({channel:n,message:e,shouldMention:!1,showMentionToggle:!1}),T(n.id)),i.default.saveDraft(e.channel_id,t.text,u.DraftType.ChannelMessage)}}"
+    }
+}

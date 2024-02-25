@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "createTransition": "(e,t)=>({event:e,check:t})"
+    }
+}

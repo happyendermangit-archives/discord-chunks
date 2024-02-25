@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "Clear search": "검색 지우기"
+        }
+    }
+}

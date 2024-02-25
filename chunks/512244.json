@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(){var e;let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:s.default;return(e=t).supports(i.Features.MEDIAPIPE)&&Object.values(e.getVideoDevices()).length>0}"
+    }
+}

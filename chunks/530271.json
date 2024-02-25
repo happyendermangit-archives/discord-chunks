@@ -1,0 +1,47 @@
+{
+    "exports": {
+        "BrowserTracing": "class d{__init(){this.name=\"BrowserTracing\"}__init2(){this._hasSetTracePropagationTargets=!1}setupOnce(t,e){this._getCurrentHub=e;let n=e(),r=n.getClient(),s=r&&r.getOptions(),{routingInstrumentation:c,startTransactionOnLocationChange:l,startTransactionOnPageLoad:u,markBackgroundTransactions:d,traceFetch:h,traceXHR:f,shouldCreateSpanForRequest:p,enableHTTPTimings:_,_experiments:g}=this.options,m=s&&s.tracePropagationTargets,y=m||this.options.tracePropagationTargets;(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&this._hasSetTracePropagationTargets&&m&&i.logger.warn(\"[Tracing] The `tracePropagationTargets` option was set in the BrowserTracing integration and top level `Sentry.init`. The top level `Sentry.init` value is being used.\"),c(t=>{let n=this._createRouteTransaction(t);return this.options._experiments.onStartRouteTransaction&&this.options._experiments.onStartRouteTransaction(n,t,e),n},u,l),d&&(0,a.registerBackgroundTabDetection)(),g.enableInteractions&&this._registerInteractionListener(),(0,o.instrumentOutgoingRequests)({traceFetch:h,traceXHR:f,tracePropagationTargets:y,shouldCreateSpanForRequest:p,enableHTTPTimings:_})}_createRouteTransaction(t){if(!this._getCurrentHub){(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&i.logger.warn(\"[Tracing] Did not create \".concat(t.op,\" transaction because _getCurrentHub is invalid.\"));return}let e=this._getCurrentHub(),{beforeNavigate:n,idleTimeout:a,finalTimeout:o,heartbeatInterval:c}=this.options,u=\"pageload\"===t.op,d=u?h(\"sentry-trace\"):\"\",f=u?h(\"baggage\"):\"\",{traceparentData:p,dynamicSamplingContext:_,propagationContext:g}=(0,i.tracingContextFromHeaders)(d,f),m={...t,...p,metadata:{...t.metadata,dynamicSamplingContext:p&&!_?{}:_},trimEnd:!0},y=\"function\"==typeof n?n(m):m,v=void 0===y?{...m,sampled:!1}:y;v.metadata=v.name!==m.name?{...v.metadata,source:\"custom\"}:v.metadata,this._latestRouteName=v.name,this._latestRouteSource=v.metadata&&v.metadata.source,!1===v.sampled&&(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&i.logger.log(\"[Tracing] Will not send \".concat(v.op,\" transaction because of beforeNavigate.\")),(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&i.logger.log(\"[Tracing] Starting \".concat(v.op,\" transaction on scope\"));let{location:E}=l.WINDOW,b=(0,r.startIdleTransaction)(e,v,a,o,!0,{location:E},c),S=e.getScope();return u&&p?S.setPropagationContext(g):S.setPropagationContext({traceId:b.traceId,spanId:b.spanId,parentSpanId:b.parentSpanId,sampled:!!b.sampled}),b.registerBeforeFinishCallback(t=>{this._collectWebVitals(),(0,s.addPerformanceEntries)(t)}),b}_registerInteractionListener(){let t;let e=()=>{let{idleTimeout:e,finalTimeout:n,heartbeatInterval:a}=this.options,s=\"ui.action.click\",o=(0,r.getActiveTransaction)();if(o&&o.op&&[\"navigation\",\"pageload\"].includes(o.op)){(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&i.logger.warn(\"[Tracing] Did not create \".concat(s,\" transaction because a pageload or navigation transaction is in progress.\"));return}if(t&&(t.setFinishReason(\"interactionInterrupted\"),t.finish(),t=void 0),!this._getCurrentHub){(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&i.logger.warn(\"[Tracing] Did not create \".concat(s,\" transaction because _getCurrentHub is invalid.\"));return}if(!this._latestRouteName){(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&i.logger.warn(\"[Tracing] Did not create \".concat(s,\" transaction because _latestRouteName is missing.\"));return}let c=this._getCurrentHub(),{location:u}=l.WINDOW,d={name:this._latestRouteName,op:s,trimEnd:!0,metadata:{source:this._latestRouteSource||\"url\"}};t=(0,r.startIdleTransaction)(c,d,e,n,!0,{location:u},a)};[\"click\"].forEach(t=>{addEventListener(t,e,{once:!1,capture:!0})})}constructor(t){d.prototype.__init.call(this),d.prototype.__init2.call(this),(0,r.addTracingExtensions)(),(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&(this._hasSetTracePropagationTargets=!!(t&&(t.tracePropagationTargets||t.tracingOrigins))),this.options={...u,...t},void 0!==this.options._experiments.enableLongTask&&(this.options.enableLongTask=this.options._experiments.enableLongTask),t&&!t.tracePropagationTargets&&t.tracingOrigins&&(this.options.tracePropagationTargets=t.tracingOrigins),this._collectWebVitals=(0,s.startTrackingWebVitals)(),this.options.enableLongTask&&(0,s.startTrackingLongTasks)(),this.options._experiments.enableInteractions&&(0,s.startTrackingInteractions)()}}",
+        "defaultRequestInstrumentationOptions": {
+            "traceFetch": true,
+            "traceXHR": true,
+            "enableHTTPTimings": true,
+            "tracingOrigins": [
+                "localhost",
+                {
+                    "exec": "function exec() { [native code] }",
+                    "dotAll": false,
+                    "flags": "",
+                    "global": false,
+                    "hasIndices": false,
+                    "ignoreCase": false,
+                    "multiline": false,
+                    "source": "^\\/(?!\\/)",
+                    "sticky": false,
+                    "unicode": false,
+                    "compile": "function compile() { [native code] }",
+                    "test": "function test() { [native code] }",
+                    "unicodeSets": false
+                }
+            ],
+            "tracePropagationTargets": [
+                "localhost",
+                {
+                    "exec": "function exec() { [native code] }",
+                    "dotAll": false,
+                    "flags": "",
+                    "global": false,
+                    "hasIndices": false,
+                    "ignoreCase": false,
+                    "multiline": false,
+                    "source": "^\\/(?!\\/)",
+                    "sticky": false,
+                    "unicode": false,
+                    "compile": "function compile() { [native code] }",
+                    "test": "function test() { [native code] }",
+                    "unicodeSets": false
+                }
+            ]
+        },
+        "instrumentOutgoingRequests": "function o(t){let{traceFetch:e,traceXHR:n,tracePropagationTargets:o,tracingOrigins:l,shouldCreateSpanForRequest:d,enableHTTPTimings:h}={traceFetch:s.traceFetch,traceXHR:s.traceXHR,...t},f=\"function\"==typeof d?d:t=>!0,p=t=>(function(t,e){return(0,i.stringMatchesSomePattern)(t,e||a)})(t,o||l),_={};e&&(0,i.addInstrumentationHandler)(\"fetch\",t=>{let e=function(t,e,n,a){if(!(0,r.hasTracingEnabled)()||!t.fetchData)return;let s=e(t.fetchData.url);if(t.endTimestamp&&s){let e=t.fetchData.__span;if(!e)return;let n=a[e];if(n){if(t.response){n.setHttpStatus(t.response.status);let e=t.response&&t.response.headers&&t.response.headers.get(\"content-length\"),r=parseInt(e);r>0&&n.setData(\"http.response_content_length\",r)}else t.error&&n.setStatus(\"internal_error\");n.finish(),delete a[e]}return}let o=(0,r.getCurrentHub)(),c=o.getScope(),l=o.getClient(),u=c.getSpan(),{method:d,url:h}=t.fetchData,f=s&&u?u.startChild({data:{url:h,type:\"fetch\",\"http.method\":d},description:\"\".concat(d,\" \").concat(h),op:\"http.client\"}):void 0;if(f&&(t.fetchData.__span=f.spanId,a[f.spanId]=f),n(t.fetchData.url)&&l){let e=t.args[0];t.args[1]=t.args[1]||{};let n=t.args[1];n.headers=function(t,e,n,a){let s=n.getSpan(),o=s&&s.transaction,{traceId:c,sampled:l,dsc:u}=n.getPropagationContext(),d=s?s.toTraceparent():(0,i.generateSentryTraceHeader)(c,void 0,l),h=o?o.getDynamicSamplingContext():u||(0,r.getDynamicSamplingContextFromClient)(c,e,n),f=(0,i.dynamicSamplingContextToSentryBaggageHeader)(h),p=\"undefined\"!=typeof Request&&(0,i.isInstanceOf)(t,Request)?t.headers:a.headers;if(!p)return{\"sentry-trace\":d,baggage:f};if(\"undefined\"!=typeof Headers&&(0,i.isInstanceOf)(p,Headers)){let t=new Headers(p);return t.append(\"sentry-trace\",d),f&&t.append(i.BAGGAGE_HEADER_NAME,f),t}if(Array.isArray(p)){let t=[...p,[\"sentry-trace\",d]];return f&&t.push([i.BAGGAGE_HEADER_NAME,f]),t}else{let t=\"baggage\"in p?p.baggage:void 0,e=[];return Array.isArray(t)?e.push(...t):t&&e.push(t),f&&e.push(f),{...p,\"sentry-trace\":d,baggage:e.length>0?e.join(\",\"):void 0}}}(e,l,c,n)}return f}(t,f,p,_);h&&e&&c(e)}),n&&(0,i.addInstrumentationHandler)(\"xhr\",t=>{let e=function(t,e,n,a){let s=t.xhr,o=s&&s[i.SENTRY_XHR_DATA_KEY];if(!(0,r.hasTracingEnabled)()||s&&s.__sentry_own_request__||!s||!o)return;let c=e(o.url);if(t.endTimestamp&&c){let t=s.__sentry_xhr_span_id__;if(!t)return;let e=a[t];e&&(e.setHttpStatus(o.status_code),e.finish(),delete a[t]);return}let l=(0,r.getCurrentHub)(),d=l.getScope(),h=d.getSpan(),f=c&&h?h.startChild({data:{...o.data,type:\"xhr\",\"http.method\":o.method,url:o.url},description:\"\".concat(o.method,\" \").concat(o.url),op:\"http.client\"}):void 0;if(f&&(s.__sentry_xhr_span_id__=f.spanId,a[s.__sentry_xhr_span_id__]=f),s.setRequestHeader&&n(o.url)){if(f){let t=f&&f.transaction,e=t&&t.getDynamicSamplingContext(),n=(0,i.dynamicSamplingContextToSentryBaggageHeader)(e);u(s,f.toTraceparent(),n)}else{let t=l.getClient(),{traceId:e,sampled:n,dsc:a}=d.getPropagationContext(),o=(0,i.generateSentryTraceHeader)(e,void 0,n),c=a||(t?(0,r.getDynamicSamplingContextFromClient)(e,t,d):void 0),h=(0,i.dynamicSamplingContextToSentryBaggageHeader)(c);u(s,o,h)}}return f}(t,f,p,_);h&&e&&c(e)})}"
+    }
+}

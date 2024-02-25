@@ -1,0 +1,5 @@
+{
+    "exports": "function r(e){if(e)return function(e){for(var t in r.prototype)e[t]=r.prototype[t];return e}(e)}",
+    "paths": [],
+    "children": []
+}

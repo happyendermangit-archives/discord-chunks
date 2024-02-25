@@ -1,0 +1,3 @@
+{
+    "exports": "function s(){s.init.call(this)}"
+}

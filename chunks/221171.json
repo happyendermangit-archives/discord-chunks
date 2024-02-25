@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "isThenable": "function r(t){return!!(t&&t.then&&\"function\"==typeof t.then)}"
+    }
+}

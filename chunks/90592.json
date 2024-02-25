@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "getApplicationSubscriptionPlanId": "function a(t){let e=t.items;return i(1===e.length,\"more than 1 subscription item for application subscription\"),e[0].planId}",
+        "hasPayableSubscriptionPlan": "function o(t){return null!=s(t)}",
+        "getPayableSubscriptionListing": "function s(t){var e;return null===(e=t.subscription_listings)||void 0===e?void 0:e.find(t=>t.published&&(c(t.sku_flags)||S(t.sku_flags))&&t.subscription_plans[0].price>0)}",
+        "isApplicationGuildSubscription": "function c(t){return(0,r.hasFlag)(t,l.SKUFlags.APPLICATION_GUILD_SUBSCRIPTION)}",
+        "isApplicationUserSubscription": "function S(t){return(0,r.hasFlag)(t,l.SKUFlags.APPLICATION_USER_SUBSCRIPTION)}",
+        "isListingActiveInGuild": "function d(t,e,n){return t.subscription_plans[0].sku_id===e.skuId&&(c(t.sku_flags)?null!=n&&e.guildId===n&&n!==l.ME:!!S(t.sku_flags)&&null==e.guildId)}"
+    }
+}

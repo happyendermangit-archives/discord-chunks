@@ -1,0 +1,37 @@
+{
+    "exports": {
+        "MESSAGE_SCAN_TIMEOUT": 3000,
+        "MAX_TIMEOUT_FOR_JITTER": 800,
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "LOAD_MESSAGES_SUCCESS": "function B(e){let{channelId:t,messages:n}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||null==t||null==n)return!1;let s=m.default.getChannelId(),i=_.default.getCurrentSidebarChannelId(s),r=t===s||t===i;return!!r&&G(n)}",
+                "LOAD_FORUM_POSTS": "function Y(e){let{guildId:t,threads:n}=e;if(null==n||!(0,p.isEligibleForExplicitMediaRedaction)())return!1;let s=h.default.getGuildId()===t;if(!s)return!1;let i=v.default.keys(n).map(e=>n[e].first_message);return G(i)}",
+                "LOAD_THREADS_SUCCESS": "function j(e){let{guildId:t,firstMessages:n}=e;if(null==n||!(0,p.isEligibleForExplicitMediaRedaction)())return!1;let s=h.default.getGuildId()===t;return!!s&&G(n,{forceBatchScan:!0})}",
+                "LOAD_ARCHIVED_THREADS_SUCCESS": "function j(e){let{guildId:t,firstMessages:n}=e;if(null==n||!(0,p.isEligibleForExplicitMediaRedaction)())return!1;let s=h.default.getGuildId()===t;return!!s&&G(n,{forceBatchScan:!0})}",
+                "MESSAGE_CREATE": "function H(e){var t,n;let{channelId:s,message:i,optimistic:r,isPushNotification:a}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||r||a||null==s||(null===(t=i.author)||void 0===t?void 0:t.id)===f.default.getId())return!1;let o=m.default.getChannelId(),d=_.default.getCurrentSidebarChannelId(o),u=s===o||s===d,l=c.default.getChannel(s);if(!u)return!1;let g=null===(n=null==l?void 0:l.isPrivate())||void 0===n||n,h=(null==l?void 0:l.memberCount)==null||(null==l?void 0:l.memberCount)>100;return G([i],{jitter:g&&h})}",
+                "MESSAGE_UPDATE": "function F(e){var t,n,s,i;let{message:r}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||null==r.channel_id||null==r.id||(null===(t=r.author)||void 0===t?void 0:t.id)===f.default.getId()||null==r.embeds&&null==r.attachments)return!1;if(!M(r)){let e=null!==(i=null!==(s=g.default.getMessage(r.channel_id,r.id))&&void 0!==s?s:T.default.getMessage(r.id,r.channel_id))&&void 0!==i?i:null===(n=l.default.getMessage(r.channel_id,r.id))||void 0===n?void 0:n.message;null!=e&&!M((0,u.updateMessageRecord)(e,r))&&P(e,y.TimeoutCancelSource.UPDATE)}let a=m.default.getChannelId(),o=_.default.getCurrentSidebarChannelId(a),d=r.channel_id===a||r.channel_id===o;if(!d)return!1;let c=g.default.getMessage(r.channel_id,r.id);return null!=c&&G([c])}",
+                "LOGOUT": "function O(){Object.values(D).forEach(e=>{let{timeout:t}=e;clearTimeout(t)}),D={}}",
+                "SEARCH_FINISH": "function x(e){let{messages:t}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||null==t)return!1;let n=i(t),s=a(n,(e,t)=>e.id===t.id&&e.channel_id===t.channel_id);return G(s)}",
+                "MOD_VIEW_SEARCH_FINISH": "function x(e){let{messages:t}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||null==t)return!1;let n=i(t),s=a(n,(e,t)=>e.id===t.id&&e.channel_id===t.channel_id);return G(s)}",
+                "CHANNEL_SELECT": "function K(e){let{channelId:t}=e;if(null==t||!(0,p.isEligibleForExplicitMediaRedaction)())return!1;let n=t===m.default.getChannelId();return!!n&&q(t)}",
+                "LOAD_PINNED_MESSAGES_SUCCESS": "function x(e){let{messages:t}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||null==t)return!1;let n=i(t),s=a(n,(e,t)=>e.id===t.id&&e.channel_id===t.channel_id);return G(s)}",
+                "USER_SETTINGS_PROTO_UPDATE": "function W(e){let{settings:t,local:n}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||!n||t.type!==I.UserSettingsTypes.PRELOADED_USER_SETTINGS)return!1;let s=m.default.getChannelId();return null!=s&&q(s)}",
+                "CHANNEL_RTC_UPDATE_CHAT_OPEN": "function z(e){let{channelId:t,chatOpen:n}=e;return!!(0,p.isEligibleForExplicitMediaRedaction)()&&!!n&&q(t)}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            }
+        }
+    }
+}

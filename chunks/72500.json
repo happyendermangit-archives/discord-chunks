@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e,t){(0,a.default)(2,arguments);var n=(0,r.default)(e),o=(0,r.default)(t);return n.getFullYear()===o.getFullYear()}"
+    }
+}

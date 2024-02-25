@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "HTML5Backend": "function(e,t,n){return new r.HTML5BackendImpl(e,t,n)}"
+    }
+}

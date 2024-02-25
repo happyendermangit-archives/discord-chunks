@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){return!i(f,t)&&(f[t]=c&&i(Symbol,t)?Symbol[t]:a(\"Symbol.\"+t)),f[t]}"
+}

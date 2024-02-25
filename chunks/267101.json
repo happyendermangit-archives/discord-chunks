@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "logger": {
+            "enable": "()=>{t=!0}",
+            "disable": "()=>{t=!1}",
+            "debug": "function(){for(var e=arguments.length,r=Array(e),a=0;a<e;a++)r[a]=arguments[a];t&&s(()=>{i.GLOBAL_OBJ.console[n](\"\".concat(\"Sentry Logger \",\"[\").concat(n,\"]:\"),...r)})}",
+            "info": "function(){for(var e=arguments.length,r=Array(e),a=0;a<e;a++)r[a]=arguments[a];t&&s(()=>{i.GLOBAL_OBJ.console[n](\"\".concat(\"Sentry Logger \",\"[\").concat(n,\"]:\"),...r)})}",
+            "warn": "function(){for(var e=arguments.length,r=Array(e),a=0;a<e;a++)r[a]=arguments[a];t&&s(()=>{i.GLOBAL_OBJ.console[n](\"\".concat(\"Sentry Logger \",\"[\").concat(n,\"]:\"),...r)})}",
+            "error": "function(){for(var e=arguments.length,r=Array(e),a=0;a<e;a++)r[a]=arguments[a];t&&s(()=>{i.GLOBAL_OBJ.console[n](\"\".concat(\"Sentry Logger \",\"[\").concat(n,\"]:\"),...r)})}",
+            "log": "function(){for(var e=arguments.length,r=Array(e),a=0;a<e;a++)r[a]=arguments[a];t&&s(()=>{i.GLOBAL_OBJ.console[n](\"\".concat(\"Sentry Logger \",\"[\").concat(n,\"]:\"),...r)})}",
+            "assert": "function(){for(var e=arguments.length,r=Array(e),a=0;a<e;a++)r[a]=arguments[a];t&&s(()=>{i.GLOBAL_OBJ.console[n](\"\".concat(\"Sentry Logger \",\"[\").concat(n,\"]:\"),...r)})}",
+            "trace": "function(){for(var e=arguments.length,r=Array(e),a=0;a<e;a++)r[a]=arguments[a];t&&s(()=>{i.GLOBAL_OBJ.console[n](\"\".concat(\"Sentry Logger \",\"[\").concat(n,\"]:\"),...r)})}"
+        }
+    }
+}

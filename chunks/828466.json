@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e){let{allowPopups:t}=e,n=a;return t&&(n=[...a,\"allow-popups\",\"allow-popups-to-escape-sandbox\"]),n.join(\" \")}"
+    }
+}

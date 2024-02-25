@@ -1,0 +1,42 @@
+{
+    "exports": {
+        "nativeTypesConfig": {
+            "__NATIVE_FILE__": {
+                "exposeProperties": {
+                    "files": "function(e){return Array.prototype.slice.call(e.files)}",
+                    "items": "function(e){return e.items}"
+                },
+                "matchesTypes": [
+                    "Files"
+                ]
+            },
+            "__NATIVE_HTML__": {
+                "exposeProperties": {
+                    "html": "function(e,t){return(0,i.getDataFromDataTransfer)(e,t,\"\")}"
+                },
+                "matchesTypes": [
+                    "Html",
+                    "text/html"
+                ]
+            },
+            "__NATIVE_URL__": {
+                "exposeProperties": {
+                    "urls": "function(e,t){return(0,i.getDataFromDataTransfer)(e,t,\"\").split(\"\\n\")}"
+                },
+                "matchesTypes": [
+                    "Url",
+                    "text/uri-list"
+                ]
+            },
+            "__NATIVE_TEXT__": {
+                "exposeProperties": {
+                    "text": "function(e,t){return(0,i.getDataFromDataTransfer)(e,t,\"\")}"
+                },
+                "matchesTypes": [
+                    "Text",
+                    "text/plain"
+                ]
+            }
+        }
+    }
+}

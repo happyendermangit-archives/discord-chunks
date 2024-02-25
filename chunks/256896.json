@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "isEligibleForMidjourneyOnboarding": "function i(e){let{enabled:t}=s.MidjourneyOnboardingExperiment.getCurrentConfig({location:e});return t}"
+    }
+}

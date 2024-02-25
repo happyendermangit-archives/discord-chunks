@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "renderSubnode": "function i(e,t){return\"function\"==typeof e?e(t):e}"
+    }
+}

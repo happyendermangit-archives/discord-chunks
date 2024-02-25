@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getSystemVersion": "function s(){return null}"
+    }
+}

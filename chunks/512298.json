@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "createDangerousStringForStyles": "function(t){}",
+        "setValueForStyles": "function(t,e,n){var r=t.style;for(var i in e)if(e.hasOwnProperty(i)){var a,u,c,l=0===i.indexOf(\"--\");var h=(a=i,u=e[i],c=l,null==u||\"boolean\"==typeof u||\"\"===u?\"\":c||\"number\"!=typeof u||0===u||s.hasOwnProperty(a)&&s[a]?(\"\"+u).trim():u+\"px\");if(\"float\"===i&&(i=\"cssFloat\"),l)r.setProperty(i,h);else if(h)r[i]=h;else{var p=f&&o.shorthandPropertyExpansions[i];if(p)for(var d in p)r[d]=\"\";else r[i]=\"\"}}}"
+    }
+}

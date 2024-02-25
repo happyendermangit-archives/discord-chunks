@@ -1,0 +1,237 @@
+{
+    "exports": {
+        "CUSTOM_BASE_SIZE": 60,
+        "ICONS": [
+            {
+                "id": "AppIcon",
+                "iconSource": "/assets/e8a673421a7098cdcdeb.webp",
+                "name": "Blurple (Default)",
+                "isPremium": false
+            },
+            {
+                "id": "BrandDarkIcon",
+                "iconSource": "/assets/e3fc64532265764e1d67.webp",
+                "name": "Goth",
+                "isPremium": true
+            },
+            {
+                "id": "MangaIcon",
+                "iconSource": "/assets/003c16533dc9327b66d8.webp",
+                "isPremium": true,
+                "name": "WHAM"
+            },
+            {
+                "id": "MatteDarkIcon",
+                "iconSource": "/assets/b9ba392d5652d7047b69.webp",
+                "isPremium": true,
+                "name": "Charcoal"
+            },
+            {
+                "id": "MatteLightIcon",
+                "iconSource": "/assets/c53596a8aabec268677f.webp",
+                "name": "Ceramic",
+                "isPremium": true
+            },
+            {
+                "id": "PastelIcon",
+                "iconSource": "/assets/364d22ce868c406cf13a.webp",
+                "isPremium": true,
+                "name": "Pastel"
+            },
+            {
+                "id": "PirateIcon",
+                "iconSource": "/assets/7fdb7c4b9dac8c9db942.webp",
+                "isPremium": true,
+                "name": "Matey"
+            },
+            {
+                "id": "CamoIcon",
+                "iconSource": "/assets/2f906bd6a510974effa3.webp",
+                "isPremium": true,
+                "name": "Tactical"
+            },
+            {
+                "id": "SunsetIcon",
+                "iconSource": "/assets/9bcd500d06a4e99eef38.webp",
+                "isPremium": true,
+                "name": "Sunset Ave"
+            },
+            {
+                "id": "GalaxyIcon",
+                "iconSource": "/assets/a28b009dcc138c849209.webp",
+                "isPremium": true,
+                "name": "Galactic Chrome"
+            },
+            {
+                "id": "Y2KIcon",
+                "iconSource": "/assets/1779971f835dfdb63d9f.webp",
+                "isPremium": true,
+                "name": "Holo"
+            },
+            {
+                "id": "CherryBlossomIcon",
+                "iconSource": "/assets/3ea3e47f993b5620ea25.webp",
+                "isPremium": true,
+                "name": "Sakura"
+            },
+            {
+                "id": "BeanieIcon",
+                "iconSource": "/assets/15fa601cc9c87bee2e26.webp",
+                "isPremium": true,
+                "name": "Sherbet Dreamsicle"
+            },
+            {
+                "id": "GamingIcon",
+                "iconSource": "/assets/31efa1913785fddb04d9.webp",
+                "isPremium": true,
+                "name": "Gaming"
+            },
+            {
+                "id": "CircuitIcon",
+                "iconSource": "/assets/a0e8219e310053130cba.webp",
+                "isPremium": true,
+                "name": "Mainframe"
+            },
+            {
+                "id": "HoloWavesIcon",
+                "iconSource": "/assets/720b20f6ecb7b2995714.webp",
+                "isPremium": true,
+                "name": "Prismatic Waves"
+            },
+            {
+                "id": "BlushIcon",
+                "iconSource": "/assets/e0fe5bc7745f71705066.webp",
+                "isPremium": true,
+                "name": "uwu~"
+            },
+            {
+                "id": "AngryIcon",
+                "iconSource": "/assets/2a9096474ecb8192b3ce.webp",
+                "isPremium": true,
+                "name": "Fuming"
+            },
+            {
+                "id": "ControllerIcon",
+                "iconSource": "/assets/1d8770de85cb6d5284a5.webp",
+                "isPremium": true,
+                "name": "D64"
+            }
+        ],
+        "ICONS_BY_ID": {
+            "AppIcon": {
+                "id": "AppIcon",
+                "iconSource": "/assets/e8a673421a7098cdcdeb.webp",
+                "name": "Blurple (Default)",
+                "isPremium": false
+            },
+            "BrandDarkIcon": {
+                "id": "BrandDarkIcon",
+                "iconSource": "/assets/e3fc64532265764e1d67.webp",
+                "name": "Goth",
+                "isPremium": true
+            },
+            "MangaIcon": {
+                "id": "MangaIcon",
+                "iconSource": "/assets/003c16533dc9327b66d8.webp",
+                "isPremium": true,
+                "name": "WHAM"
+            },
+            "MatteDarkIcon": {
+                "id": "MatteDarkIcon",
+                "iconSource": "/assets/b9ba392d5652d7047b69.webp",
+                "isPremium": true,
+                "name": "Charcoal"
+            },
+            "MatteLightIcon": {
+                "id": "MatteLightIcon",
+                "iconSource": "/assets/c53596a8aabec268677f.webp",
+                "name": "Ceramic",
+                "isPremium": true
+            },
+            "PastelIcon": {
+                "id": "PastelIcon",
+                "iconSource": "/assets/364d22ce868c406cf13a.webp",
+                "isPremium": true,
+                "name": "Pastel"
+            },
+            "PirateIcon": {
+                "id": "PirateIcon",
+                "iconSource": "/assets/7fdb7c4b9dac8c9db942.webp",
+                "isPremium": true,
+                "name": "Matey"
+            },
+            "CamoIcon": {
+                "id": "CamoIcon",
+                "iconSource": "/assets/2f906bd6a510974effa3.webp",
+                "isPremium": true,
+                "name": "Tactical"
+            },
+            "SunsetIcon": {
+                "id": "SunsetIcon",
+                "iconSource": "/assets/9bcd500d06a4e99eef38.webp",
+                "isPremium": true,
+                "name": "Sunset Ave"
+            },
+            "GalaxyIcon": {
+                "id": "GalaxyIcon",
+                "iconSource": "/assets/a28b009dcc138c849209.webp",
+                "isPremium": true,
+                "name": "Galactic Chrome"
+            },
+            "Y2KIcon": {
+                "id": "Y2KIcon",
+                "iconSource": "/assets/1779971f835dfdb63d9f.webp",
+                "isPremium": true,
+                "name": "Holo"
+            },
+            "CherryBlossomIcon": {
+                "id": "CherryBlossomIcon",
+                "iconSource": "/assets/3ea3e47f993b5620ea25.webp",
+                "isPremium": true,
+                "name": "Sakura"
+            },
+            "BeanieIcon": {
+                "id": "BeanieIcon",
+                "iconSource": "/assets/15fa601cc9c87bee2e26.webp",
+                "isPremium": true,
+                "name": "Sherbet Dreamsicle"
+            },
+            "GamingIcon": {
+                "id": "GamingIcon",
+                "iconSource": "/assets/31efa1913785fddb04d9.webp",
+                "isPremium": true,
+                "name": "Gaming"
+            },
+            "CircuitIcon": {
+                "id": "CircuitIcon",
+                "iconSource": "/assets/a0e8219e310053130cba.webp",
+                "isPremium": true,
+                "name": "Mainframe"
+            },
+            "HoloWavesIcon": {
+                "id": "HoloWavesIcon",
+                "iconSource": "/assets/720b20f6ecb7b2995714.webp",
+                "isPremium": true,
+                "name": "Prismatic Waves"
+            },
+            "BlushIcon": {
+                "id": "BlushIcon",
+                "iconSource": "/assets/e0fe5bc7745f71705066.webp",
+                "isPremium": true,
+                "name": "uwu~"
+            },
+            "AngryIcon": {
+                "id": "AngryIcon",
+                "iconSource": "/assets/2a9096474ecb8192b3ce.webp",
+                "isPremium": true,
+                "name": "Fuming"
+            },
+            "ControllerIcon": {
+                "id": "ControllerIcon",
+                "iconSource": "/assets/1d8770de85cb6d5284a5.webp",
+                "isPremium": true,
+                "name": "D64"
+            }
+        }
+    }
+}

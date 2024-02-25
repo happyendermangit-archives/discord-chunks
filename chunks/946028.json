@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "createPrivateChannelIntegration": "function r(e){return{...e,application:i.default.createFromServer(e.application)}}"
+    }
+}

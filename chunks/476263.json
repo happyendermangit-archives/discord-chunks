@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class R extends r.PureComponent{render(){return(0,n.jsx)(M,{...this.props})}}"
+    }
+}

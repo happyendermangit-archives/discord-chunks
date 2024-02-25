@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "default": {
+            "get": "function(e){return d(n.default.get,e,\"get\")}",
+            "post": "function(e){return d(n.default.post,e,\"post\")}",
+            "put": "function(e){return d(n.default.put,e,\"put\")}",
+            "patch": "function(e){return d(n.default.patch,e,\"patch\")}",
+            "delete": "function(e){return d(n.default.delete,e,\"del\")}"
+        }
+    }
+}

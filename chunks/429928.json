@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(e){return null!=e&&e.type===i.ActivityTypes.LISTENING&&e.name===s.default.get(i.PlatformTypes.SPOTIFY).name&&null!=e.party&&null!=e.party.id&&(0,r.isSpotifyParty)(e.party.id)}"
+    }
+}

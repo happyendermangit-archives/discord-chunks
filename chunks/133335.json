@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "ReadStateTypes": {
+            "0": "CHANNEL",
+            "1": "GUILD_EVENT",
+            "2": "NOTIFICATION_CENTER",
+            "3": "GUILD_HOME",
+            "4": "GUILD_ONBOARDING_QUESTION",
+            "CHANNEL": 0,
+            "GUILD_EVENT": 1,
+            "NOTIFICATION_CENTER": 2,
+            "GUILD_HOME": 3,
+            "GUILD_ONBOARDING_QUESTION": 4
+        },
+        "UnreadSetting": {
+            "0": "UNSET",
+            "1": "ALL_MESSAGES",
+            "2": "ONLY_MENTIONS",
+            "UNSET": 0,
+            "ALL_MESSAGES": 1,
+            "ONLY_MENTIONS": 2
+        }
+    }
+}

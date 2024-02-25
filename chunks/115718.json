@@ -1,0 +1,29 @@
+{
+    "exports": {
+        "JumpTypes": {
+            "ANIMATED": "ANIMATED",
+            "INSTANT": "INSTANT"
+        },
+        "RunningProcessFullscreenType": {
+            "0": "UNKNOWN",
+            "1": "WINDOWED",
+            "2": "MAXIMIZED",
+            "3": "BORDERLESS_FULLSCREEN",
+            "4": "FULLSCREEN",
+            "5": "MINIMIZED",
+            "UNKNOWN": 0,
+            "WINDOWED": 1,
+            "MAXIMIZED": 2,
+            "BORDERLESS_FULLSCREEN": 3,
+            "FULLSCREEN": 4,
+            "MINIMIZED": 5
+        },
+        "DEFAULT_OVERLAY_OPTIONS": {
+            "compatibilityHook": false,
+            "warn": false,
+            "enabled": false,
+            "allowHook": true,
+            "supportsOutOfProcessOverlay": false
+        }
+    }
+}

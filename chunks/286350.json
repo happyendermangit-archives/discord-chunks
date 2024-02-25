@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "PurchaseState": {
+            "WAITING": "WAITING",
+            "PURCHASING": "PURCHASING",
+            "FAIL": "FAIL",
+            "COMPLETED": "COMPLETED"
+        }
+    }
+}

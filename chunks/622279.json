@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,r){var n=t.exec;if(u(n)){var s=e(n,t,r);return null!==s&&i(s),s}if(\"RegExp\"===o(t))return e(c,t,r);throw a(\"RegExp#exec called on incompatible receiver\")}"
+}

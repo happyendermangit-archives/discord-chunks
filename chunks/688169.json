@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "INCREASED_ACTIVITY_LIST_FORUM_LAYOUT": 3,
+        "useForumActivityExperiment": "function r(e){let t=a.default.useExperiment({guildId:null!=e?e:l.EMPTY_STRING_GUILD_ID,location:\"9a247a_1\"}),n=i.default.useExperiment({location:\"9a247a_2\"});return!!(t.enabled||n.enabled)}"
+    }
+}

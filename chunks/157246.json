@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "Soundpacks": {
+            "CLASSIC": "classic",
+            "DETUNE": "detune"
+        },
+        "getSoundpackOptionsAprilFools2023": "function i(){return[{value:\"classic\",label:a.default.Messages.SOUNDPACK_CLASSIC_LABEL},{value:\"detune\",label:a.default.Messages.SOUNDPACK_DETUNE_LABEL}]}"
+    }
+}

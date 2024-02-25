@@ -1,0 +1,41 @@
+{
+    "exports": {
+        "MESSAGE_GROUP_SPACING": [
+            0,
+            4,
+            8,
+            16,
+            24
+        ],
+        "DEFAULT_COZY_SPACING": 16,
+        "DEFAULT_COMPACT_SPACING": 0,
+        "DEFAULT_POPOUTS": {
+            "referencedAvatarProfile": false,
+            "referencedUsernameProfile": false,
+            "interactionAvatarProfile": false,
+            "interactionUsernameProfile": false,
+            "interactionData": false,
+            "avatarProfile": false,
+            "usernameProfile": false,
+            "emojiPicker": false,
+            "emojiBurstPicker": false,
+            "moreUtilities": false,
+            "contextMenu": false
+        },
+        "MESSAGE_PADDING": 16,
+        "PLACEHOLDER_BUFFER": 16,
+        "NEW_MESSAGE_BAR_BUFFER": 32,
+        "NEW_MESSAGE_BAR_BUFFER_LARGE": 64,
+        "NEW_MESSAGE_BAR_ID": "---new-messages-bar",
+        "SPOILER_ATTACHMENT_PREFIX": "SPOILER_",
+        "FileUploadErrorTypes": {
+            "ERROR_SOURCE_UNKNOWN": "ERROR_SOURCE_UNKNOWN",
+            "PRECOMPRESSION_SUM_TOO_LARGE": "PRECOMPRESSION_SUM_TOO_LARGE",
+            "PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE": "PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE",
+            "POSTCOMPRESSION_SUM_TOO_LARGE": "POSTCOMPRESSION_SUM_TOO_LARGE",
+            "POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE": "POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE",
+            "UPLOAD_ATTACHMENT_MAX_SIZE_ERROR": "UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR"
+        },
+        "DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE": 209715200
+    }
+}

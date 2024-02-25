@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function U(e){return M[e]}"
+    }
+}

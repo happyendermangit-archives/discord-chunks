@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "longPressMessage": "Menüü avamiseks vajutage pikalt või vajutage klahve Alt + allanool"
+        }
+    }
+}

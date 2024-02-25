@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "isRoleSubscriptionEmoji": "function i(e,t){if((null==e?void 0:e.roles)==null||0===e.roles.length||null==t)return!1;let n=s.default.getSubscriptionRoles(t);return e.roles.some(e=>n.has(e))}",
+        "isPurchasableRoleSubscriptionEmoji": "function r(e){if((null==e?void 0:e.roles)==null||0===e.roles.length||null==e.guildId)return!1;let t=s.default.getPurchasableSubscriptionRoles(e.guildId);return e.roles.some(e=>t.has(e))}",
+        "isUnusableRoleSubscriptionEmoji": "function a(e,t){if((null==e?void 0:e.roles)==null||0===e.roles.length||null==e.guildId)return!1;if(r(e)){let n=s.default.getUserSubscriptionRoles(e.guildId),i=e.roles.some(e=>n.has(e)),r=t===e.guildId,a=r&&s.default.getUserIsAdmin(e.guildId);if(!(i||a))return!0}return!1}"
+    }
+}

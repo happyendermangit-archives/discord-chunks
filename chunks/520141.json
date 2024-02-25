@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "useIsMemberVerificationManualApproval": "function r(e){i.trackExposure({guildId:e,location:\"bda51f_1\"});let t=i.useExperiment({guildId:e,location:\"bda51f_2\"},{autoTrackExposure:!1});return t.manualApprovalEnabled}",
+        "isMemberVerificationManualApproval": "function a(e){let t=i.getCurrentConfig({guildId:e,location:\"bda51f_3\"},{autoTrackExposure:!1});return t.manualApprovalEnabled}"
+    }
+}

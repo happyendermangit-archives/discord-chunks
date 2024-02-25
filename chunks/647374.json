@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "punycodeLink": "function C(e){try{var t;let n=new URL(e),s=null!==(t=n.protocol)&&void 0!==t?t:\"\";if(!m.includes(s.toLowerCase()))throw Error(\"Provided protocol is not allowed: \"+s);if((\"http:\"===s||\"https:\"===s)&&(null==n.hostname||0===n.hostname.length))throw Error(\"no hostname\");let i=(0,_.safelyMakeUrlHumanReadable)(n);n.username=\"\",n.password=\"\";let r=(0,_.safelyMakeUrlHumanReadable)(n);return{target:i,displayTarget:r}}catch(e){return null}}",
+        "default": {
+            "order": 17,
+            "requiredFirstCharacters": [
+                "["
+            ],
+            "match": "(e,t,n)=>t.allowLinks?d.defaultRules.link.match(e,t,n):null",
+            "parse": "parse(e,t,n){let[s,r,a,o]=e,_=()=>({type:f.AST_KEY.TEXT,content:s}),c=g(a),m=g(r),I=g(null!=o?o:\"\"),S=c.whitespaceSanitized,A=m.fullySanitized,D=I.fullySanitized,N=A.trim(),O=S.trim();if(0===O.length||0===N.length)return _();let P=d.unescapeUrl(a),b=C(P),V=(0,u.default)(r).length>0||(0,u.default)(o).length>0;if(null==b||V)return _();let R={...n,allowEscape:!1,parseInlineCodeChildContent:!0},k=n.allowEmojiLinks?v:h,M=[...k,...E],w=[...p,...y],L=t(A,R),U=T(L,M,[f.AST_KEY.EMOJI]),G=t(D,R),F=T(G,w);if(null==U||null==F)return _();let H=function e(t){let n=\"\";for(let s of t)switch(s.type){case f.AST_KEY.TEXT:case f.AST_KEY.INLINE_CODE:n+=s.content;break;case f.AST_KEY.CUSTOM_EMOJI:n+=s.name;break;case f.AST_KEY.EMOJI:n+=s.surrogate;break;case f.AST_KEY.LINE_BREAK:n+=\"\\n\";break;case f.AST_KEY.STRONG:case f.AST_KEY.ITALICS:case f.AST_KEY.UNDERLINE:case f.AST_KEY.STRIKETHROUGH:case f.AST_KEY.SPOILER:n+=e(s.content);break;case f.AST_KEY.TIMESTAMP:n+=\"<timestamp>\";break;case f.AST_KEY.BLOCK_QUOTE:case f.AST_KEY.LIST:case f.AST_KEY.HEADING:n+=\"<\".concat(s.type,\"Content>\");break;default:(0,l.assertNever)(s.type)}return n}(U),B=0===H.trim().length;if(B)return _();let x=i.pick(t.rules,k),Y=d.parserFor(x),j=Y(m.whitespaceSanitized,R),K=I.whitespaceSanitized,{target:W}=b;return{content:j,target:W,title:K}}",
+            "react": "function(e,t,n){return g(\"a\",n.key,{href:M(e.target),title:e.title,children:t(e.content,n)})}",
+            "html": "function(e,t,n){var r={href:M(e.target),title:e.title};return v(\"a\",t(e.content,n),r)}"
+        }
+    }
+}

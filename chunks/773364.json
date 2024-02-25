@@ -1,0 +1,86 @@
+{
+    "exports": {
+        "BaseConnectionEvent": {
+            "Destroy": "destroy",
+            "LocalVideoDisabled": "local-video-disabled",
+            "ActiveSinksChange": "active-sinks-change",
+            "ExperimentFlag": "experiment-flag",
+            "ConnectionStateChange": "connectionstatechange",
+            "Error": "error",
+            "Connected": "connected",
+            "VideoHookStart": "videohook-start",
+            "VideoHookStop": "videohook-stop",
+            "VideoHookInitialize": "videohook-initialize",
+            "ScreenshareFinish": "screenshare-finish",
+            "VideoState": "video-state",
+            "SoundshareTrace": "soundsharetrace",
+            "SoundshareSpeaking": "soundsharespeaking",
+            "SoundshareAttached": "soundshareattached",
+            "SoundshareFailed": "soundsharefailed",
+            "Speaking": "speaking",
+            "SpeakingWhileMuted": "speakingwhilemuted",
+            "Mute": "mute",
+            "LocalMute": "local-mute",
+            "NoiseLevel": "noiselevel",
+            "Video": "video",
+            "Ping": "ping",
+            "PingTimeout": "pingtimeout",
+            "Silence": "silence",
+            "DesktopSourceEnd": "desktopsourceend",
+            "OutboundLossRate": "outboundlossrate",
+            "NoiseCancellationError": "noisecancellererror",
+            "VoiceActivityDetectorError": "voiceactivitydetectorerror",
+            "InteractionRequired": "interactionrequired",
+            "AudioPermission": "audio-permission",
+            "VideoPermission": "video-permission",
+            "Stats": "stats",
+            "FirstFrame": "first-frame",
+            "VideoEncoderFallback": "video-encoder-fallback",
+            "RemoteStreamsReady": "remote-streams-ready"
+        },
+        "BaseSpeedTesterEvent": {
+            "Destroy": "destroy",
+            "ConnectionStateChange": "connectionstatechange",
+            "Error": "error",
+            "Connected": "connected",
+            "Ping": "ping",
+            "PingTimeout": "pingtimeout"
+        },
+        "MediaEngineEvent": {
+            "Destroy": "destroy",
+            "Silence": "silence",
+            "Connection": "connection",
+            "DeviceChange": "devicechange",
+            "VolumeChange": "volumechange",
+            "VoiceActivity": "voiceactivity",
+            "WatchdogTimeout": "watchdogtimeout",
+            "AudioPermission": "audio-permission",
+            "VideoPermission": "video-permission",
+            "DesktopSourceEnd": "desktopsourceend",
+            "ConnectionStats": "connection-stats",
+            "VideoInputInitialized": "video-input-initialized",
+            "ClipsRecordingRestartNeeded": "clips-recording-restart-needed",
+            "ClipsInitFailure": "clips-init-failure",
+            "ClipsRecordingEnded": "clips-recording-ended"
+        },
+        "MediaEngineContextTypes": {
+            "DEFAULT": "default",
+            "STREAM": "stream"
+        },
+        "FilterTargetType": {
+            "INPUT_DEVICE": "input_device",
+            "STREAM": "stream"
+        },
+        "FilterSettingsGraph": {
+            "NONE": "",
+            "BACKGROUND_BLUR": "background_blur",
+            "BACKGROUND_REPLACEMENT": "background_replacement"
+        },
+        "FilterSettingsKey": {
+            "CAMERA_BACKGROUND_PREVIEW": "cameraBackgroundPreview",
+            "CAMERA_BACKGROUND_LIVE": "cameraBackgroundLive"
+        },
+        "determineMediaEngine": "function p(){var e;return null!==(e=[f.MediaEngineImplementations.NATIVE,f.MediaEngineImplementations.WEBRTC].find(e=>E(e).supported()))&&void 0!==e?e:f.MediaEngineImplementations.DUMMY}",
+        "initializeMediaEngine": "function h(e){let t=E(e);return new t}"
+    }
+}

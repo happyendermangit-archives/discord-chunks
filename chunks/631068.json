@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(e){return[\"table\",\"td\",\"th\"].indexOf((0,r.default)(e))>=0}"
+    }
+}

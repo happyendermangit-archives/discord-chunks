@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "ChannelListLayoutTypes": {
+            "COZY": "cozy",
+            "COZY_DRAWER": "cozy-drawer",
+            "COMPACT": "compact",
+            "MINIMAL": "minimal"
+        },
+        "MessagePreviewTypes": {
+            "ALL": "all",
+            "UNREADS": "unreads",
+            "NONE": "none"
+        }
+    }
+}

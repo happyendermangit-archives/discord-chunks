@@ -1,0 +1,45 @@
+{
+    "exports": {
+        "MAX_SUBSCRIPTION_TIERS": 3,
+        "RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY": "(max-width: 485px)",
+        "RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY": "(max-height: 450px)",
+        "GuildRoleSubscriptionBenefitTypes": {
+            "1": "CHANNEL",
+            "2": "INTANGIBLE",
+            "CHANNEL": 1,
+            "INTANGIBLE": 2
+        },
+        "GuildRoleSubscriptionFormat": {
+            "0": "SOME_CHANNELS",
+            "1": "ALL_CHANNELS",
+            "SOME_CHANNELS": 0,
+            "ALL_CHANNELS": 1
+        },
+        "TIER_TRIAL_INTERVALS": [
+            {
+                "interval": 3,
+                "interval_count": 1
+            },
+            {
+                "interval": 3,
+                "interval_count": 7
+            }
+        ],
+        "UserGuildRoleSubscriptionRelationship": {
+            "0": "NONE",
+            "1": "IN_SUBSCRIPTION_SERVER",
+            "2": "SUBSCRIBED",
+            "NONE": 0,
+            "IN_SUBSCRIPTION_SERVER": 1,
+            "SUBSCRIBED": 2
+        },
+        "CREATOR_REVENUE_PORTAL_URL": "https://discord.com/creators",
+        "CREATOR_REVENUE_SHARE_PERCENTAGE": 90,
+        "SERVER_SUBSCRIPTIONS_PREMIUM_CHECKLIST_EDUCATIONAL_URLS": {
+            "PROMO_PAGE_GUIDE": "https://discord.com/creators/say-hello-to-promo-pages-our-new-server-subscriptions-feature",
+            "CASE_STUDIES": "https://discord.com/creator-portal/learn-from-creators?tab=creator-case-studies",
+            "SUBSCRIPTION_OFFERING_GUIDE": "https://discord.com/creators/offering-inspiration-",
+            "TIER_STRUCTURE_GUIDE": "https://discord.com/creators/server-subs-102-to-tier-or-not-to-tier"
+        }
+    }
+}

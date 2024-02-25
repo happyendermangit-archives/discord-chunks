@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useDrop": "function l(e,t){var n=(0,a.useOptionalFactory)(e,t),l=(0,i.useDropTargetMonitor)(),u=(0,o.useDropTargetConnector)(n.options);return(0,r.useRegisteredDropTarget)(n,l,u),[(0,s.useCollectedProps)(n.collect,l,u),(0,c.useConnectDropTarget)(u)]}"
+    }
+}

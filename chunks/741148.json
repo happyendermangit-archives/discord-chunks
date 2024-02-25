@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "focus": "function o(e,t){i.default.dispatch({type:\"WINDOW_FOCUS\",windowId:(0,a.getWindowId)(e),focused:t})}",
+        "hidden": "function d(e){i.default.dispatch({type:\"WINDOW_HIDDEN\",windowId:(0,a.getWindowId)(e)})}",
+        "resized": "function l(e){let t=(0,a.getWindowId)(e),n=u(t);n(e.innerWidth,e.innerHeight)}",
+        "fullscreenChange": "function f(e){let t=(0,a.getWindowId)(e);i.default.dispatch({type:\"WINDOW_FULLSCREEN_CHANGE\",windowId:t,isElementFullscreen:(0,r.isFullScreen)(null,e.document)})}",
+        "visibilityChange": "function _(e){let t=(0,a.getWindowId)(e);i.default.dispatch({type:\"WINDOW_VISIBILITY_CHANGE\",windowId:t,visible:\"visible\"===e.document.visibilityState})}",
+        "init": "function c(e){let t=(0,a.getWindowId)(e),n=e.document;i.default.dispatch({type:\"WINDOW_INIT\",windowId:t,isElementFullscreen:(0,r.isFullScreen)(null,n),focused:n.hasFocus(),width:e.innerWidth,height:e.innerHeight,visible:\"visible\"===n.visibilityState})}",
+        "unload": "function g(e){i.default.dispatch({type:\"WINDOW_UNLOAD\",windowId:(0,a.getWindowId)(e)})}"
+    }
+}

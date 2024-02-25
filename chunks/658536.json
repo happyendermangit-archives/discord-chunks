@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {},
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "clearGuildMemberTimeout": "(e,t)=>{var n,a,r,s,o,f;let c=i.default.getMember(e,t),E=u.default.getUser(t);if(null==c||null==E||(0,d.isMemberCommunicationDisabled)(c))return;let C={...c,guildId:e,nick:null!==(n=c.nick)&&void 0!==n?n:E.username,avatar:null!==(a=c.avatar)&&void 0!==a?a:void 0,avatarDecoration:null!=c.avatarDecoration?{...c.avatarDecoration}:void 0,premiumSince:null!==(r=c.premiumSince)&&void 0!==r?r:void 0,isPending:null!==(s=c.isPending)&&void 0!==s&&s,user:{...E,email:null!==(o=E.email)&&void 0!==o?o:void 0,phone:null!==(f=E.phone)&&void 0!==f?f:void 0},communicationDisabledUntil:null};l.default.dispatch({type:\"GUILD_MEMBER_UPDATE\",...C})}",
+            "_initialize": "_initialize(){r=setInterval(()=>s(),1e4)}",
+            "_terminate": "_terminate(){clearInterval(r)}"
+        }
+    }
+}

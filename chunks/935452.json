@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "createPublishDragSource": "function a(e){return function(){if(e.getMonitor().isDragging())return{type:r.PUBLISH_DRAG_SOURCE}}}"
+    }
+}

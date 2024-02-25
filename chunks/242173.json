@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "current": "function(t){return n.g.cancelAnimationFrame(t)}",
+        "inject": "function(t){r.current=t}"
+    }
+}

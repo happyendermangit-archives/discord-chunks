@@ -1,0 +1,27 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "()=>{this.maybeFetchSubscriptions(),this.maybeFetchCountryCode(),this.maybeFetchMostRecentSubscription()}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "maybeFetchSubscriptions": "async()=>{let e=r.default.getCurrentUser();if(T.default.isPremium(e)){!a.default.hasFetchedSubscriptions()&&await (0,t.fetchSubscriptions)();let e=a.default.getPremiumSubscription();(null==e?void 0:e.paymentSourceId)==null&&!I.default.applicationIdsFetched.has(S.PREMIUM_SUBSCRIPTION_APPLICATION)&&await (0,o.fetchUserEntitlementsForApplication)(S.PREMIUM_SUBSCRIPTION_APPLICATION)}}",
+            "maybeFetchMostRecentSubscription": "()=>{let e=r.default.getCurrentUser();null!=e&&!T.default.isPremium(e)&&null!=e.purchasedFlags&&((0,s.hasFlag)(e.purchasedFlags,S.PurchasedFlags.PREMIUM_TIER_1)||(0,s.hasFlag)(e.purchasedFlags,S.PurchasedFlags.PREMIUM_TIER_2))&&(0,t.fetchMostRecentSubscription)()}",
+            "maybeFetchCountryCode": "async()=>{let e=r.default.getCurrentUser();T.default.isPremium(e)&&!i.default.ipCountryCodeLoaded&&await this.fetchCountryCode()}",
+            "fetchCountryCode": "async()=>{await (0,t.fetchIpCountryCode)();let e=i.default.ipCountryCode;null!=e&&await (0,t.fetchPaymentSources)()}"
+        }
+    }
+}

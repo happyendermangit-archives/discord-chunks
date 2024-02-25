@@ -1,0 +1,21 @@
+{
+    "exports": {
+        "MAX_FORUM_TAGS": 20,
+        "MAX_FORUM_POST_TAGS": 5,
+        "MAX_FORUM_TEMPLATE_LENGTH": 256,
+        "ForumOnboardingCTAs": {
+            "PERMISSIONS": "Permissions",
+            "GUIDELINES": "Guidelines",
+            "TAGS": "Tags",
+            "DEFAULT_REACTION": "Default Reaction",
+            "CREATE_POST": "Create Post"
+        },
+        "COMMUNITY_PORTAL_FORUM_PAGE": "https://discord.com/community/creating-value-with-conversation",
+        "ForumTimestampFormats": {
+            "0": "DURATION_AGO",
+            "1": "POSTED_DURATION_AGO",
+            "DURATION_AGO": 0,
+            "POSTED_DURATION_AGO": 1
+        }
+    }
+}

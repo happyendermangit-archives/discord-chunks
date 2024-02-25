@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "DragSourceMonitorImpl": "function c(e){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,c),i(this,\"internalMonitor\",void 0),i(this,\"sourceId\",null),this.internalMonitor=e.getMonitor()}"
+    }
+}

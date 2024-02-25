@@ -1,0 +1,3 @@
+{
+    "exports": "function(e,t){return e+r(a()*(t-e+1))}"
+}

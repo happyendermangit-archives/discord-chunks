@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function i(){s.default.dispatch({type:\"ACTIVITY_SYNC_STOP\"})}"
+    }
+}

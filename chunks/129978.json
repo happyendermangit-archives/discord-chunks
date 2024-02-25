@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "SelfDismissibleAlertBody": "function d(e){let{body:t,dismissCallback:n,errorCodeMessage:d}=e,u=(0,r.useStateFromStores)([a.default],()=>a.default.getRemoteSessionId());return(i.useEffect(()=>{null!=u&&n()},[u,n]),null==d)?(0,s.jsx)(s.Fragment,{children:t}):(0,s.jsxs)(s.Fragment,{children:[t,(0,s.jsx)(\"div\",{className:o.errorCodeMessage,children:d})]})}"
+    }
+}

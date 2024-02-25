@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "useStageBlockedUsersCount": "function a(e){return(0,s.useStateFromStores)([i.default],()=>null!=e?i.default.getParticipantCount(e,r.StageChannelParticipantNamedIndex.BLOCKED):0,[e])}",
+        "getStageBlockedUsersCount": "function o(e){var t;return null!==(t=i.default.getParticipantCount(e,r.StageChannelParticipantNamedIndex.BLOCKED))&&void 0!==t?t:0}",
+        "useStageBlockedUsers": "function d(e){return(0,s.useStateFromStores)([i.default],()=>i.default.getMutableParticipants(e,r.StageChannelParticipantNamedIndex.BLOCKED),[e])}"
+    }
+}

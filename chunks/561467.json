@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "Notifications": {
+            "50": "StreamNotificationsGuildMaxSize",
+            "StreamNotificationsGuildMaxSize": 50
+        }
+    }
+}

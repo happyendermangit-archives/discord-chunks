@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "onHidden": "(t,e)=>{let n=i=>{(\"pagehide\"===i.type||\"hidden\"===r.WINDOW.document.visibilityState)&&(t(i),e&&(removeEventListener(\"visibilitychange\",n,!0),removeEventListener(\"pagehide\",n,!0)))};addEventListener(\"visibilitychange\",n,!0),addEventListener(\"pagehide\",n,!0)}"
+    }
+}

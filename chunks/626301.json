@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "navigateToPremiumMarketingPage": "function(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];r.default.open(i.UserSettingsSections.PREMIUM,null,{openWithoutBackstack:e})}"
+    }
+}

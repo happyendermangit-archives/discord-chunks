@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "useIsEligibleForGuildShopStorefront": "function r(){let{enabled:e}=i.GuildShopStorefrontExperiment.useExperiment({location:\"adf3ea_1\"});return e}",
+        "isEligibleForGuildShopStorefront": "function a(){let{enabled:e}=i.GuildShopStorefrontExperiment.getCurrentConfig({location:\"adf3ea_2\"});return e}",
+        "useIsEligibleForSubscriptionsInGuildShop": "function o(e,t){let{enabled:n}=i.ShowGuildRoleSubInGuildShopExperiment.useExperiment({location:t}),r=(0,s.useGuildEligibleForGuildProducts)(e,t);return n&&r}",
+        "isEligibleForSubscriptionsInGuildShop": "function d(e,t){let{enabled:n}=i.ShowGuildRoleSubInGuildShopExperiment.getCurrentConfig({location:t}),r=(0,s.isGuildEligibleForGuildProducts)(e,t);return n&&r}",
+        "useIsEligibleForGuildShopPreview": "function u(e){let{enabled:t}=i.GuildShopPreviewExperiment.useExperiment({location:e});return t}"
+    }
+}

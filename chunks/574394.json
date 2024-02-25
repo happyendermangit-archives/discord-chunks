@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "initState": "function(e){return e[i]={},function(e){return e[i]}(e)}",
+        "getState": "function r(e){return e[i]}",
+        "cleanState": "function(e){delete e[i]}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "PopoutList": "class E extends r.PureComponent{render(){let{className:e,children:t}=this.props;return(0,i.jsx)(o.Dialog,{className:a(d.popoutList,e),\"aria-label\":this.props[\"aria-label\"],children:t})}}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "EmbedIFrameWithLoadingBackground": "function S(e){let{onLoad:t}=e,[n,i]=l.useState(!1),r=l.useCallback(e=>{i(!0),null==t||t(e)},[t]);return(0,a.jsxs)(\"div\",{className:P.fillParent,children:[!n&&(0,a.jsx)(\"div\",{className:o(P.fillParent,P.iframePlaceholder)}),(0,a.jsx)(\"div\",{className:o(P.fillParent,n?void 0:P.hiddenIframeContainer),children:(0,a.jsx)(C,{...e,onLoad:r})})]})}"
+    }
+}

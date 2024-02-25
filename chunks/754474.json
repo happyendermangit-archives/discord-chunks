@@ -1,0 +1,23 @@
+{
+    "exports": {
+        "BotTypes": {
+            "0": "BOT",
+            "1": "SERVER",
+            "2": "SYSTEM_DM",
+            "3": "OFFICIAL",
+            "4": "STAFF_ONLY_DM",
+            "5": "ORIGINAL_POSTER",
+            "6": "AI",
+            "7": "REMIX",
+            "BOT": 0,
+            "SERVER": 1,
+            "SYSTEM_DM": 2,
+            "OFFICIAL": 3,
+            "STAFF_ONLY_DM": 4,
+            "ORIGINAL_POSTER": 5,
+            "AI": 6,
+            "REMIX": 7
+        },
+        "default": "i=>{let{name:x,discriminator:t,invertBotTagColor:a,nameColor:d,className:r,botType:e,usernameClass:p,discriminatorClass:n,botClass:m,botVerified:c=!1,style:l,useRemSizes:f=!1,usernameIcon:_}=i;return(0,s.jsxs)(\"div\",{className:o(r,k.nameTag),style:l,children:[(0,s.jsxs)(\"span\",{className:o(k.username,p),style:null!=d?{color:d}:void 0,children:[_,x]}),null!=t?(0,s.jsxs)(\"span\",{className:null!=n?n:void 0,children:[\"#\",t]}):null,null!=e?(0,s.jsx)(y.default,{type:e,invertColor:a,className:o(m,k.bot),verified:c,useRemSizes:f}):null]})}"
+    }
+}

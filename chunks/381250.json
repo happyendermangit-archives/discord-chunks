@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "Array Iterator": "function(){return this}",
+        "Array": "function values() { [native code] }",
+        "Arguments": "function values() { [native code] }",
+        "String Iterator": "function(){return this}",
+        "String": "function [Symbol.iterator]() { [native code] }",
+        "Iterator Iterator": "function(){return this}"
+    }
+}

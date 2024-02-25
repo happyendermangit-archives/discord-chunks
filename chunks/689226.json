@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "getRoleIconData": "(e,_)=>{if(null==e)return null;let E=null!=e.unicodeEmoji?t.default.getByName(t.default.convertSurrogateToName(e.unicodeEmoji,!1)):void 0;return{customIconSrc:N(e,_),unicodeEmoji:null!=E?E:void 0}}",
+        "replaceRoleIconSourceSize": "(e,_)=>e.replace(/size=[0-9]+/g,\"size=\".concat((0,o.getBestMediaProxySize)(_*(0,o.getDevicePixelRatio)())))",
+        "isRoleIconAssetUrl": "e=>e.startsWith(a)||e.startsWith(\"\".concat(I,\"/roles\"))&&e.includes(\"/icons/\")",
+        "canGuildUseRoleIcons": "(e,_)=>{var E;let t=(null==_?void 0:null===(E=_.tags)||void 0===E?void 0:E.subscription_listing_id)!=null;return t||e.features.has(i.GuildFeatures.ROLE_ICONS)}"
+    }
+}

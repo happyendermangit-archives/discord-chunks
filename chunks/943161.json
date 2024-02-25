@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function c(e){let{section:t,className:n,width:l,height:o,padding:r,isSelected:s,selectable:c=!1,...p}=e,f=d(t);return(0,i.jsx)(\"div\",{className:a(u.wrapper,n,{[u.selectable]:c,[u.selected]:c&&s}),style:{width:l,height:o,padding:null!=r?r:0},children:null!=f?(0,i.jsx)(f,{className:u.icon,width:l,height:o,...p}):null})}"
+    }
+}

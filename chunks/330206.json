@@ -1,0 +1,3 @@
+{
+    "exports": "function Symbol() { [native code] }"
+}

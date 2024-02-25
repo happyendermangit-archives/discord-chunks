@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "default": {
+            "buttonLabel": "Visa förslag",
+            "countAnnouncement": "(e,t)=>\"\".concat(t.plural(e.optionCount,{one:()=>\"\".concat(t.number(e.optionCount),\" alternativ\"),other:()=>\"\".concat(t.number(e.optionCount),\" alternativ\")}),\" tillg\\xe4ngliga.\")",
+            "focusAnnouncement": "(e,t)=>\"\".concat(t.select({true:()=>\"Ingick i gruppen \".concat(e.groupTitle,\" med \").concat(t.plural(e.groupCount,{one:()=>\"\".concat(t.number(e.groupCount),\" alternativ\"),other:()=>\"\".concat(t.number(e.groupCount),\" alternativ\")}),\". \"),other:\"\"},e.isGroupChange)).concat(e.optionText).concat(t.select({true:\", valda\",other:\"\"},e.isSelected))",
+            "listboxLabel": "Förslag",
+            "selectedAnnouncement": "e=>\"\".concat(e.optionText,\", valda\")"
+        }
+    }
+}

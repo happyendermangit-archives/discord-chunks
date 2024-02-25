@@ -1,0 +1,21 @@
+{
+    "exports": {
+        "V6OrEarlierAPIError": "class extends o.default.V6OrEarlierAPIError{constructor(e,_){super(e,_,null!=_?r.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({statusPageURL:n.Links.STATUS,details:\"\".concat(_)}):r.default.Messages.FORM_ERROR_GENERIC.format({statusPageURL:n.Links.STATUS}))}}",
+        "APIError": "class extends i.default.V8APIError{constructor(e,t){super(e,t,null!=t?u.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({statusPageURL:l.Links.STATUS,details:\"\".concat(t)}):u.default.Messages.FORM_ERROR_GENERIC.format({statusPageURL:l.Links.STATUS}))}}",
+        "BillingError": "class C extends I.default{_isInFieldSet(e){for(let t in this.fields)if(e.has(t))return!0}hasCardError(){return 2===(0,c.reducedPaymentInfoExperiment)().bucket?this._isInFieldSet(N):this._isInFieldSet(p)}hasAddressError(){return this._isInFieldSet(R)}constructor(e,t){for(let n in super(e,t),this.paymentId=null,100027===this.code?this.message=S.default.Messages.BILLING_ERROR_NEGATIVE_INVOICE_AMOUNT:50048===this.code?this.message=S.default.Messages.BILLING_PAYMENT_SOURCE_INVALID:100002===this.code?this.message=S.default.Messages.BILLING_ERROR_UNKNOWN_PAYMENT_SOURCE:100042===this.code?this.message=S.default.Messages.BILLING_ERROR_PENDING_PAYMENT:100078===this.code?this.message=S.default.Messages.BILLING_TRIAL_REDEMPTION_DISABLED:429===this.status?this.message=S.default.Messages.BILLING_ERROR_RATE_LIMIT:0===this.code?this.message=S.default.Messages.BILLING_ERROR_GENERIC:400===this.status&&null!=this.fields.captcha_key&&(this.message=S.default.Messages.BILLING_ERROR_INVALID_CAPTCHA_RESPONSE),this.fields){let e=T[n]||f[n];if(null!=e){let t=this.fields[n];delete this.fields[n],this.fields[e]=t}}null!=e.body&&\"string\"==typeof e.body.payment_id&&(this.paymentId=e.body.payment_id)}}",
+        "AppliedGuildBoostError": "class a extends l.default{_getMessageFromRateLimit(e){let t=e.body.retry_after,n=(0,r.diffAsUnits)(0,t*i.default.Millis.SECOND);return(0,r.unitsAsStrings)(n,{days:u.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_DAYS,hours:u.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_HOURS,minutes:u.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_MINUTES})}constructor(e,t){super(e,t),429===this.status&&(this.message=this._getMessageFromRateLimit(e))}}",
+        "UploadVoiceDebugLogsError": "class e{get displayMessage(){switch(this.code){case 1:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_NO_FILE;case 2:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_PROGRESS;case 3:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_UPLOAD;case 4:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_READ;default:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE}}constructor(e){this.code=e}}",
+        "UploadErrorCodes": {
+            "0": "GENERAL",
+            "1": "NO_FILE",
+            "2": "PROGRESS",
+            "3": "UPLOAD",
+            "4": "READ",
+            "GENERAL": 0,
+            "NO_FILE": 1,
+            "PROGRESS": 2,
+            "UPLOAD": 3,
+            "READ": 4
+        }
+    }
+}

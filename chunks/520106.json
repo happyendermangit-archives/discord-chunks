@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"Scădere \".concat(e.fieldLabel)",
+            "increase": "e=>\"Creștere \".concat(e.fieldLabel)",
+            "numberField": "Câmp numeric"
+        }
+    }
+}

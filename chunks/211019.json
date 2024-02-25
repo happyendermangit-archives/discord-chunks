@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function m(e){let{participant:t,width:n,noArt:r=!1,selected:m=!1}=e,S=n<195,g=(0,i.useStateFromStores)([o.default,d.default],()=>o.default.getAllActiveStreams().some(e=>{let{ownerId:t}=e;return t!==d.default.getId()}));return(0,a.jsx)(\"div\",{className:s(C.content,C.streamHidden,{[C.small]:S}),children:(0,a.jsx)(h.default,{className:C.streamHiddenEmptyState,artURL:p,noArt:r,selected:m,size:(0,h.getSizeForWidth)(n),header:S?null:E.default.Messages.STREAM_HIDDEN,description:m?null:(0,a.jsxs)(\"div\",{className:s(C.streamHiddenCTA,{[C.largePaddingTop]:!S}),children:[(0,a.jsx)(f.CallTileCTA,{isSmall:S,children:(0,a.jsx)(l.Text,{variant:S?\"text-sm/semibold\":\"text-md/semibold\",color:\"none\",children:n<175?E.default.Messages.WATCH:E.default.Messages.WATCH_STREAM})}),g?(0,a.jsx)(f.CallTileCTA,{className:C.addCTA,tooltip:E.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,onClick:e=>{e.stopPropagation(),(0,u.watchStream)(t.stream,{forceMultiple:!0})},isSmall:S,children:(0,a.jsx)(c.default,{className:C.addStreamIcon})}):null]})})})}"
+    }
+}

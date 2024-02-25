@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "VOICE_CHANNEL_SELECT": "handleVoiceChannelSelect(e){let{channelId:_,guildId:E}=e;if(null==_||null==E)return;let t=r.default.getChannel(_);if(null!=t&&(0,n.hasVoiceChannelActivityNotifsEnabled)(t)&&t.isGuildVoice()){let e=o.default.getParticipants(_).length,E=i.default.isInChannel(_),t=e===(E?1:0);t?a.sendVoiceChannelActivityNotification(_,t):e===(E?2:1)&&a.sendVoiceChannelActivityNotification(_,t)}}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleVoiceChannelSelect": "handleVoiceChannelSelect(e){let{channelId:_,guildId:E}=e;if(null==_||null==E)return;let t=r.default.getChannel(_);if(null!=t&&(0,n.hasVoiceChannelActivityNotifsEnabled)(t)&&t.isGuildVoice()){let e=o.default.getParticipants(_).length,E=i.default.isInChannel(_),t=e===(E?1:0);t?a.sendVoiceChannelActivityNotification(_,t):e===(E?2:1)&&a.sendVoiceChannelActivityNotification(_,t)}}"
+        }
+    }
+}

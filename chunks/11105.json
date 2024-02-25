@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "createSourceFactory": "function u(e){return Object.keys(e).forEach(function(t){(0,r.invariant)(s.indexOf(t)>-1,'Expected the drag source specification to only have some of the following keys: %s. Instead received a specification with an unexpected \"%s\" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source',s.join(\", \"),t),(0,r.invariant)(\"function\"==typeof e[t],\"Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source\",t,t,e[t])}),c.forEach(function(t){(0,r.invariant)(\"function\"==typeof e[t],\"Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source\",t,t,e[t])}),function(t,n){return new l(e,t,n)}}"
+    }
+}

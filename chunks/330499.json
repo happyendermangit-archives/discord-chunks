@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(){let[,e]=(0,i.useState)(0);return(0,i.useCallback)(()=>(0,r.flushSync)(()=>e(e=>e+1)),[])}"
+    }
+}

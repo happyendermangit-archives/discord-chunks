@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){return{...e,expiry:i(e.expiry)}}"
+    }
+}

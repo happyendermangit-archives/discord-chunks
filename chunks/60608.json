@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e){let{children:a}=e;return d.useEffect(()=>(c.default.initialize(),()=>c.default.cleanup()),[]),(0,s.jsx)(n.HelmetProvider,{children:(0,s.jsx)(i.Router,{history:(0,r.getHistory)(),children:a})})}"
+    }
+}

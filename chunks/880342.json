@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "recentlyHeardExperiment": "function a(e){let{location:t,autoTrackExposure:n}=e;return i.getCurrentConfig({location:t},{autoTrackExposure:n})}",
+        "useRecentlyHeardExperiment": "function s(e){let{autoTrackExposure:t,location:n}=e;return i.useExperiment({location:n},{autoTrackExposure:t})}"
+    }
+}

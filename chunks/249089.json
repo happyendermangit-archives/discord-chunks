@@ -1,0 +1,3 @@
+{
+    "exports": "function i(t){this.options=t,this.type=this.options.type,this.blockSize=8,this._init(),this.buffer=Array(this.blockSize),this.bufferOff=0,this.padding=!1!==t.padding}"
+}

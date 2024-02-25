@@ -1,0 +1,19 @@
+{
+    "exports": {
+        "CodedLinkType": {
+            "INVITE": "INVITE",
+            "TEMPLATE": "TEMPLATE",
+            "BUILD_OVERRIDE": "BUILD_OVERRIDE",
+            "MANUAL_BUILD_OVERRIDE": "MANUAL_BUILD_OVERRIDE",
+            "EVENT": "EVENT",
+            "CHANNEL_LINK": "CHANNEL_LINK",
+            "APP_DIRECTORY_PROFILE": "APP_DIRECTORY_PROFILE",
+            "ACTIVITY_BOOKMARK": "ACTIVITY_BOOKMARK",
+            "EMBEDDED_ACTIVITY_INVITE": "EMBEDDED_ACTIVITY_INVITE",
+            "GUILD_PRODUCT": "GUILD_PRODUCT",
+            "SERVER_SHOP": "SERVER_SHOP",
+            "CLYDE_PROFILE": "CLYDE_PROFILE",
+            "QUESTS_EMBED": "QUESTS_EMBED"
+        }
+    }
+}

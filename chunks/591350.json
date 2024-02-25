@@ -1,0 +1,5 @@
+{
+    "exports": "function(){return!1}",
+    "paths": [],
+    "children": []
+}

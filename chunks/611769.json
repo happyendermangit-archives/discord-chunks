@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "EXISTS": true,
+        "PROPER": false,
+        "CONFIGURABLE": true
+    }
+}

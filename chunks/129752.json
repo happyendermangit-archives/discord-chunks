@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "codes": {
+            "ERR_INVALID_OPT_VALUE": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_INVALID_ARG_TYPE": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_STREAM_PUSH_AFTER_EOF": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_METHOD_NOT_IMPLEMENTED": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_STREAM_PREMATURE_CLOSE": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_STREAM_DESTROYED": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_MULTIPLE_CALLBACK": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_STREAM_CANNOT_PIPE": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_STREAM_WRITE_AFTER_END": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_STREAM_NULL_VALUES": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_UNKNOWN_ENCODING": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}",
+            "ERR_STREAM_UNSHIFT_AFTER_END_EVENT": "function i(s,r,i){var n,c,o;return t.call(this,(n=s,c=r,o=i,\"string\"==typeof e?e:e(n,c,o)))||this}"
+        }
+    }
+}

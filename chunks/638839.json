@@ -1,0 +1,3 @@
+{
+    "exports": "function(){if(r)try{return r({},\"a\",{value:1}),!0}catch(e){}return!1}"
+}

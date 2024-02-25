@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "formats": {
+            "default": "RFC3986",
+            "formatters": {
+                "RFC1738": "function(e){return r.call(e,a,\"+\")}",
+                "RFC3986": "function(e){return String(e)}"
+            },
+            "RFC1738": "RFC1738",
+            "RFC3986": "RFC3986"
+        },
+        "parse": "function(e,t){var n=d(t);if(\"\"===e||null==e)return n.plainObjects?Object.create(null):{};for(var a=\"string\"==typeof e?u(e,n):e,o=n.plainObjects?Object.create(null):{},i=Object.keys(a),s=0;s<i.length;++s){var l=i[s],f=c(l,a[l],n,\"string\"==typeof e);o=r.merge(o,f,n)}return!0===n.allowSparse?o:r.compact(o)}",
+        "stringify": "function(e,t){var n,a,o,i=e,l=y(t);\"function\"==typeof l.filter?i=(a=l.filter)(\"\",i):u(l.filter)&&(n=a=l.filter);var d=[];if(\"object\"!=typeof i||null===i)return\"\";o=t&&t.arrayFormat in s?t.arrayFormat:t&&\"indices\"in t?t.indices?\"indices\":\"repeat\":\"indices\";var f=s[o];if(t&&\"commaRoundTrip\"in t&&\"boolean\"!=typeof t.commaRoundTrip)throw TypeError(\"`commaRoundTrip` must be a boolean, or absent\");var p=\"comma\"===f&&t&&t.commaRoundTrip;!n&&(n=Object.keys(i)),l.sort&&n.sort(l.sort);for(var h=r(),_=0;_<n.length;++_){var g=n[_];(!l.skipNulls||null!==i[g])&&c(d,m(i[g],g,f,p,l.strictNullHandling,l.skipNulls,l.encode?l.encoder:null,l.filter,l.sort,l.allowDots,l.serializeDate,l.format,l.formatter,l.encodeValuesOnly,l.charset,h))}var v=d.join(l.delimiter),b=!0===l.addQueryPrefix?\"?\":\"\";return l.charsetSentinel&&(\"iso-8859-1\"===l.charset?b+=\"utf8=%26%2310003%3B&\":b+=\"utf8=%E2%9C%93&\"),v.length>0?b+v:\"\"}"
+    }
+}

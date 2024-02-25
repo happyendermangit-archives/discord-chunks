@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getRootNavigationRef": "function i(){}"
+    }
+}

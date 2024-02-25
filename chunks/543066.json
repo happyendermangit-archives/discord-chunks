@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){return\"symbol\"==typeof e||u(e)&&\"[object Symbol]\"==n(e)}"
+}

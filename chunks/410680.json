@@ -1,0 +1,3 @@
+{
+    "exports": "function n(t,e){this.ec=t,this.priv=null,this.pub=null,e.priv&&this._importPrivate(e.priv,e.privEnc),e.pub&&this._importPublic(e.pub,e.pubEnc)}"
+}

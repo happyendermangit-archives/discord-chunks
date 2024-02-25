@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "VOICE_RECORDING_MIN_DURATION_MILLIS": 500,
+        "WAVEFORM_WAVE_MAX_VALUE": 255
+    }
+}

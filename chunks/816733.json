@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "lowerCamelCase": "function r(e){let t=!1,n=[];for(let r=0;r<e.length;r++){let a=e.charAt(r);\"_\"==a?t=!0:/\\d/.test(a)?(n.push(a),t=!0):t?(n.push(a.toUpperCase()),t=!1):0==r?n.push(a.toLowerCase()):n.push(a)}return n.join(\"\")}"
+    }
+}

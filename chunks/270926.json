@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "default": {
+            "order": 0,
+            "match": "(e,t,n)=>t.allowHeading?null==n||\"\"===n||null!=n.match(a)?(0,l.anyScopeRegex)(/^ *(#{1,3})(?:\\s+)((?![#]+)[^\\n]+?)#*\\s*(?:\\n|$)/)(e,t,n):null:null",
+            "parse": "function(e,t,n){return{level:e[1].length,content:S(t,e[2].trim(),n)}}",
+            "react": "function(e,t,n){return g(\"h\"+e.level,n.key,{children:t(e.content,n)})}",
+            "html": "function(e,t,n){return v(\"h\"+e.level,t(e.content,n))}",
+            "requiredFirstCharacters": [
+                " ",
+                "#"
+            ]
+        }
+    }
+}

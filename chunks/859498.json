@@ -1,0 +1,16 @@
+{
+    "exports": {
+        "RestartMethod": {
+            "FromLoop": "fromLoop",
+            "FromStart": "fromStart"
+        },
+        "AnimationTypes": {
+            "0": "UNSPECIFIED",
+            "1": "PERSISTENT",
+            "2": "INTERMITTENT",
+            "UNSPECIFIED": 0,
+            "PERSISTENT": 1,
+            "INTERMITTENT": 2
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {},
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "_currentUserSpeaking": false,
+            "_anyoneElseSpeaking": false,
+            "_handleRTCConnectionStoreChanged": "()=>{let e=I.default.getChannelId();if(this._voiceChannelId!==e){if(this._voiceChannelId=e,null==e){this._reset();return}null==this._reportInterval&&(this._reportInterval=new t.Interval,this._reportInterval.start(R,()=>{this._trackStartSpeaking(),this._trackStartListening()}))}}",
+            "_handleSpeakingStoreChanged": "()=>{let e=T.default.isCurrentUserSpeaking();this._currentUserSpeaking!==e&&(this._currentUserSpeaking=e,this._trackStartSpeaking());let _=T.default.isAnyoneElseSpeaking();this._anyoneElseSpeaking!==_&&(this._anyoneElseSpeaking=_,this._trackStartListening())}",
+            "_initialize": "_initialize(){__OVERLAY__?this.stores=new Map:(this.stores=new Map().set(T.default,()=>this._handleSpeakingStoreChanged()).set(I.default,()=>this._handleRTCConnectionStoreChanged()),this._reset())}",
+            "_reset": "_reset(){this._currentUserSpeaking=!1,this._anyoneElseSpeaking=!1,null!=this._reportInterval&&(this._reportInterval.stop(),this._reportInterval=null)}",
+            "_trackStartSpeaking": "_trackStartSpeaking(){if(this._currentUserSpeaking){let e=I.default.getChannelId(),_=I.default.getGuildId(),E=i.default.getChannel(e),t=null==E?void 0:E.isBroadcastChannel();(0,O.trackWithMetadata)(A.AnalyticEvents.START_SPEAKING,{mode:a.default.getMode(),priority:T.default.isCurrentUserPrioritySpeaking(),channel:e,server:_,channel_id:e,guild_id:_,is_broadcast:t,rtc_connection_id:I.default.getRTCConnectionId(),media_session_id:I.default.getMediaSessionId(),voice_state_count:S.default.countVoiceStatesForChannel(this._voiceChannelId),...this.getGameMetadata(),...I.default.getPacketStats()})}}",
+            "_trackStartListening": "_trackStartListening(){if(a.default.isDeaf()||!this._anyoneElseSpeaking)return;let e=I.default.getChannelId(),_=I.default.getGuildId(),E=i.default.getChannel(e),t=null==E?void 0:E.isBroadcastChannel();(0,O.trackWithMetadata)(A.AnalyticEvents.START_LISTENING,{mute:a.default.isMute(),anyone_priority:T.default.isAnyonePrioritySpeaking(),channel:e,server:_,channel_id:e,guild_id:_,is_broadcast:t,rtc_connection_id:I.default.getRTCConnectionId(),media_session_id:I.default.getMediaSessionId(),voice_state_count:S.default.countVoiceStatesForChannel(this._voiceChannelId),...this.getGameMetadata()})}",
+            "_terminate": "_terminate(){this._reset(),T.default.removeChangeListener(this._handleSpeakingStoreChanged),I.default.removeChangeListener(this._handleRTCConnectionStoreChanged)}",
+            "getGameMetadata": "getGameMetadata(){let e=s.default.findActivity(e=>e.type===A.ActivityTypes.PLAYING),_=r.default.getCurrentGameForAnalytics();return{game_platform:(0,n.default)(e),game_name:null!=e?e.name:null,game_exe_name:null!=_?_.exeName:null,game_id:null!=e?e.application_id:null}}"
+        }
+    }
+}

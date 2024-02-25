@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "ResizeObservation": "function e(e,t){this.target=e,this.observedBox=t||n.ResizeObserverBoxOptions.CONTENT_BOX,this.lastReportedSize={inlineSize:0,blockSize:0}}"
+    }
+}

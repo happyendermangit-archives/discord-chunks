@@ -1,0 +1,3 @@
+{
+    "exports": "function a(t){var r=-1,n=null==t?0:t.length;for(this.clear();++r<n;){var e=t[r];this.set(e[0],e[1])}}"
+}

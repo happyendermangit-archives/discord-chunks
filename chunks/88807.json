@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "AppCrashedReasons": {
+            "UNHANDLED_NATIVE_ERROR": "unhandled_native_error",
+            "UNHANDLED_JS_ERROR": "unhandled_js_error",
+            "SOCKET_CRASHED": "socket_crashed"
+        }
+    }
+}

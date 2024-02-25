@@ -1,0 +1,3 @@
+{
+    "exports": "function(){return!(0,i.isSafari)()&&!(0,i.isMobile)()}"
+}

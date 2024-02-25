@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "makeMemoizer": "function(e){let t=new Map;return n=>{let s=t.get(n);return void 0===s&&(s=e(n),t.set(n,s)),s}}"
+        }
+    }
+}

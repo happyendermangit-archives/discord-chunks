@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "MENTION_SENTINEL": "@",
+        "CHANNEL_SENTINEL": "#",
+        "EMOJI_SENTINEL": ":",
+        "REACTION_START_SENTINEL": "+:",
+        "REACTION_END_SENTINEL": ":",
+        "COMMAND_SENTINEL": "/"
+    }
+}

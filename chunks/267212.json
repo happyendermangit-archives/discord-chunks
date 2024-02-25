@@ -1,0 +1,22 @@
+{
+    "exports": {
+        "default": {
+            "calendar": "Kalender",
+            "day": "päev",
+            "dayPeriod": "enne/pärast lõunat",
+            "endDate": "Lõppkuupäev",
+            "era": "ajastu",
+            "hour": "tund",
+            "minute": "minut",
+            "month": "kuu",
+            "second": "sekund",
+            "selectedDateDescription": "e=>\"Valitud kuup\\xe4ev: \".concat(e.date)",
+            "selectedRangeDescription": "e=>\"Valitud vahemik: \".concat(e.startDate,\" kuni \").concat(e.endDate)",
+            "selectedTimeDescription": "e=>\"Valitud aeg: \".concat(e.time)",
+            "startDate": "Alguskuupäev",
+            "timeZoneName": "ajavöönd",
+            "weekday": "nädalapäev",
+            "year": "aasta"
+        }
+    }
+}

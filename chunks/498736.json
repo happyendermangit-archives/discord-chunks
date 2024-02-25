@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "browserPerformanceTimeOrigin": 1708893426545,
+        "dateTimestampInSeconds": "function () { [native code] }",
+        "timestampInSeconds": "function () { [native code] }"
+    }
+}

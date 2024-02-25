@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function c(e){let{onSelect:t,onClose:n,guild:s}=e,c=(0,a.default)({guild:s,analyticsLocation:u}),f=(0,a.default)({analyticsLocation:d});return(0,l.jsxs)(i.Menu,{className:o.popoutMenu,onSelect:t,navId:\"edit-profile-popout\",onClose:n,\"aria-label\":r.default.Messages.PROFILE_ACTIONS_MENU_LABEL,children:[(0,l.jsx)(i.MenuItem,{id:\"edit-server-profile\",label:r.default.Messages.CHANGE_IDENTITY,subtext:r.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,action:()=>c()}),(0,l.jsx)(i.MenuItem,{id:\"edit-default-profile\",label:r.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,subtext:r.default.Messages.USER_PROFILE_MENU_HELP,action:()=>f()})]})}"
+    }
+}

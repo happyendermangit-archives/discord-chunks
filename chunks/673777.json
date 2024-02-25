@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "open": "function s(e){i.default.dispatch({type:\"RTC_DEBUG_MODAL_OPEN\",section:e}),i.default.dispatch({type:\"RTC_DEBUG_POPOUT_WINDOW_OPEN\"})}",
+        "close": "function a(){i.default.dispatch({type:\"RTC_DEBUG_MODAL_CLOSE\"})}",
+        "openReplay": "function o(){i.default.dispatch({type:\"RTC_DEBUG_MODAL_OPEN_REPLAY\"})}",
+        "setSection": "function l(e){i.default.dispatch({type:\"RTC_DEBUG_MODAL_SET_SECTION\",section:e})}",
+        "setShouldRecordNextConnection": "function u(e){i.default.dispatch({type:\"RTC_DEBUG_SET_RECORDING_FLAG\",value:e})}",
+        "chooseReplayPath": "function c(){r.default.fileManager.showOpenDialog({filters:[{name:\"All Files\",extensions:[\"*\"]}]}).then(e=>{let t=0===e.length?\"\":e[0];i.default.dispatch({type:\"RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH\",path:t})})}"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "ApplicationDirectoryProfileSections": {
+            "GENERAL": "GENERAL",
+            "IMAGES": "IMAGES",
+            "PREMIUM": "PREMIUM",
+            "PRIVACY": "PRIVACY"
+        }
+    }
+}

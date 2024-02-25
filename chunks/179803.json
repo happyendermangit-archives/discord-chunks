@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "shouldShowGuildOnboardingUpsell": "function p(e,t){var n;let s=d.default.getGuilds(),r=c.default.entries(s).some(e=>{let[t,n]=e,s=(0,S.isGuildOnboardingSettingsAvailable)(t),i=n.hasFeature(_.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);return s&&i});if(r||!(0,S.isGuildOnboardingSettingsAvailable)(e))return!1;let u=null===(n=o.default.settings.userContent)||void 0===n?void 0:n.guildOnboardingUpsellDismissedAt,f=null!=u?a.Timestamp.toDate(u):void 0,p=null!=f?i().diff(f,\"days\"):null,A=T.indexOf(t);if(-1===A)return!1;let g=null==p||p>C[A];if(!g)return!1;let I=T.find(e=>!(0,l.isDismissibleContentDismissed)(e))===t;if(!I)return!1;let{showLifecycleUpsells:h}=E.default.getCurrentConfig({guildId:e,location:\"7f5b67_1\"},{disable:r||!(0,S.isGuildOnboardingSettingsAvailable)(e),autoTrackExposure:!0});return h}",
+        "dismissedGuildOnboardingUpsell": "function A(e,t){let n=a.Timestamp.now();u.PreloadedUserSettingsActionCreators.updateAsync(\"userContent\",e=>{e.guildOnboardingUpsellDismissedAt=n},u.UserSettingsDelay.INFREQUENT_USER_ACTION),null!=t&&(0,l.markDismissibleContentAsDismissed)(t,{forceTrack:!0,dismissAction:f.ContentDismissActionType.AUTO,guildId:e})}"
+    }
+}

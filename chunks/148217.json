@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function d(){let[e,t]=(0,i.useStateFromStoresArray)([o.default],()=>[o.default.isAuthenticated(),null!=o.default.getAnalyticsToken()]),n=(0,a.default)(e);s.useEffect(()=>{!n&&e&&!t&&r.fetchCurrentUser({withAnalyticsToken:!0})},[n,e,t])}"
+    }
+}

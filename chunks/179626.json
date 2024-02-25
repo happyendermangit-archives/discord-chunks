@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "longPressMessage": "Menüyü açmak için uzun basın veya Alt + Aşağı Ok tuşuna basın"
+        }
+    }
+}

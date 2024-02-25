@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "createNonce": "function o(){return d.default.fromTimestamp(Date.now())}",
+        "userRecordToServer": "function c(e){let{id:t,username:n,avatar:a,discriminator:l,bot:s,globalName:i}=e;return{id:t,username:n,avatar:a,discriminator:l,bot:s,global_name:i}}",
+        "default": "function E(e){let{channelId:t,content:n,tts:a=!1,type:d=u.MessageTypes.DEFAULT,messageReference:E,allowedMentions:f,author:_,flags:g,nonce:h,poll:m}=e,S=[];if(d===u.MessageTypes.REPLY&&(l(null!=E,\"Replies must have a message reference\"),null==f||f.replied_user)){let e=s.default.getMessageByReference(E);(null==e?void 0:e.state)===s.ReferencedMessageState.LOADED&&S.push(c(e.message.author))}return null==_&&(_=r.default.getCurrentUser()),_ instanceof i.default&&(_=c(_)),l(null!=_,\"createMessage: author cannot be undefined\"),{id:null!=h?h:o(),type:d,content:n,channel_id:t,author:_,attachments:[],embeds:[],pinned:!1,mentions:S,mention_channels:[],mention_roles:[],mention_everyone:!1,timestamp:new Date().toISOString(),state:u.MessageStates.SENDING,tts:a,message_reference:E,flags:g,nonce:h,poll:m}}",
+        "createBotMessage": "function f(e){let{messageId:t,channelId:n,content:a,embeds:l,loggingName:s}=e;return{id:null!=t?t:o(),type:u.MessageTypes.DEFAULT,flags:u.MessageFlags.EPHEMERAL,content:a,channel_id:n,author:{id:u.LOCAL_BOT_ID,username:\"Clyde\",discriminator:u.NON_USER_BOT_DISCRIMINATOR,avatar:\"clyde\",bot:!0},attachments:[],embeds:null!=l?l:[],pinned:!1,mentions:[],mention_channels:[],mention_roles:[],mention_everyone:!1,timestamp:new Date().toISOString(),state:u.MessageStates.SENT,tts:!1,loggingName:s}}"
+    }
+}

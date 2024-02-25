@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e){let t=(0,r.useRef)(o);return t.current===o&&(t.current=e()),t.current}"
+    }
+}

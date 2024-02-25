@@ -1,0 +1,23 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {},
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 5,
+                "values": "function values() { [native code] }"
+            },
+            "handleSoundpackUpdate": "handleSoundpackUpdate(){T.stop(),T=(0,s.createSoundForPack)(\"call_calling\",o.default.getSoundpack())}",
+            "handleRingUpdate": "handleRingUpdate(){let e=n.default.getCalls().filter(e=>e.ringing.length>0&&a.default.getCurrentClientVoiceChannelId(null)===e.channelId),_=a.default.getCurrentClientVoiceChannelId(null),E=null!=_&&I.default.countVoiceStatesForChannel(_)>=2;E||!(e.length>0)||r.default.isSoundDisabled(\"call_calling\")||i.default.disableSounds?T.stop():T.loop()}"
+        }
+    }
+}

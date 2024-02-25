@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "hasUserTrialOfferExpired": "function f(e){return null!=e&&null!=e.expires_at&&Date.now()>Date.parse(e.expires_at)}",
+        "useTrialOffer": "function o(e){let t=(0,i.useStateFromStores)([s.default],()=>s.default.getUserTrialOffer(e)),[r,o]=n.useState(f(t)),E=(0,i.useStateFromStores)([u.default],()=>(0,a.isPremium)(u.default.getCurrentUser()));return n.useEffect(()=>{if(null!=t&&null!=t.expires_at){let e=new l.Timeout,n=()=>{let i=null!=t.expires_at?Date.parse(t.expires_at)-Date.now():0;null==e||e.start(i,()=>{!r&&f(t)?o(!0):n()})};return n(),()=>e.stop()}},[r,t]),r||E?null:t}"
+    }
+}

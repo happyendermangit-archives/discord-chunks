@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "ConsoleHandoffType": {
+            "TRANSFER_EXISTING_CALL": "TRANSFER_EXISTING_CALL",
+            "CREATE_NEW_CALL": "CREATE_NEW_CALL"
+        }
+    }
+}

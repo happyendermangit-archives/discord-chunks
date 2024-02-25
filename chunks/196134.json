@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "deliverResizeLoopError": "function(){var e;\"function\"==typeof ErrorEvent?e=new ErrorEvent(\"error\",{message:n}):((e=document.createEvent(\"Event\")).initEvent(\"error\",!1,!1),e.message=n),window.dispatchEvent(e)}"
+    }
+}

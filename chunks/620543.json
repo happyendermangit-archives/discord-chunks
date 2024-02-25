@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "Scope": "function t(){this._notifyingListeners=!1,this._scopeListeners=[],this._eventProcessors=[],this._breadcrumbs=[],this._user={},this._tags={},this._extra={},this._context={}}"
+    }
+}

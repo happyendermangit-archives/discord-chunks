@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function t(t,e){this.minDate=null,this.maxDate=null,this._result=[],this.total=0,this.method=t,this.args=e,\"between\"===t?(this.maxDate=e.inc?e.before:new Date(e.before.getTime()-1),this.minDate=e.inc?e.after:new Date(e.after.getTime()+1)):\"before\"===t?this.maxDate=e.inc?e.dt:new Date(e.dt.getTime()-1):\"after\"===t&&(this.minDate=e.inc?e.dt:new Date(e.dt.getTime()+1))}"
+    }
+}

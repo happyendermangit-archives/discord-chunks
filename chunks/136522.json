@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "ResizeObserverDetail": "function(t,e){this.activeTargets=[],this.skippedTargets=[],this.observationTargets=[],this.observer=t,this.callback=e}"
+    }
+}

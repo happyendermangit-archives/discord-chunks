@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){return\"symbol\"==typeof t?\"Symbol\":\"bigint\"==typeof t?\"BigInt\":r(t)}"
+}

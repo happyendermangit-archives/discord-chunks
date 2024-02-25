@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getNavigationEntry": "()=>r.WINDOW.__WEB_VITALS_POLYFILL__?r.WINDOW.performance&&(performance.getEntriesByType&&performance.getEntriesByType(\"navigation\")[0]||i()):r.WINDOW.performance&&performance.getEntriesByType&&performance.getEntriesByType(\"navigation\")[0]"
+    }
+}

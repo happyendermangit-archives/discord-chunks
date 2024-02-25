@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "init": "init(){}",
+            "donateSentMessage": "donateSentMessage(e,t){}",
+            "deleteAllInteractions": "deleteAllInteractions(){}"
+        }
+    }
+}

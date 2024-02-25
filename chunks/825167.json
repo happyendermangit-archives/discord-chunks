@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "isDOMError": "function o(t){return a(t,\"DOMError\")}",
+        "isDOMException": "function c(t){return a(t,\"DOMException\")}",
+        "isElement": "function f(t){return\"undefined\"!=typeof Element&&y(t,Element)}",
+        "isError": "function i(t){switch(r.call(t)){case\"[object Error]\":case\"[object Exception]\":case\"[object DOMException]\":return!0;default:return y(t,Error)}}",
+        "isErrorEvent": "function s(t){return a(t,\"ErrorEvent\")}",
+        "isEvent": "function h(t){return\"undefined\"!=typeof Event&&y(t,Event)}",
+        "isInstanceOf": "function y(t,e){try{return t instanceof e}catch(t){return!1}}",
+        "isNaN": "function m(t){return\"number\"==typeof t&&t!=t}",
+        "isPlainObject": "function d(t){return a(t,\"Object\")}",
+        "isPrimitive": "function u(t){return null===t||\"object\"!=typeof t&&\"function\"!=typeof t}",
+        "isRegExp": "function p(t){return a(t,\"RegExp\")}",
+        "isString": "function l(t){return a(t,\"String\")}",
+        "isSyntheticEvent": "function g(t){return d(t)&&\"nativeEvent\"in t&&\"preventDefault\"in t&&\"stopPropagation\"in t}",
+        "isThenable": "function _(t){return!!(t&&t.then&&\"function\"==typeof t.then)}"
+    }
+}

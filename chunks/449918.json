@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "getColor": "function f(e){return l.default.unsafe_rawColors[d(e)].css}",
+        "useColorValue": "function E(e){return null!=e?a.ColorDetails[e]:null}",
+        "useDesaturatedColorString": "function p(e){let t=(0,o.default)([c.default],()=>c.default.saturation);return i.useMemo(()=>{if(null==e)return null;if(\"currentColor\"===e||e.startsWith(\"var(\"))return e;let n=s(e),i=n.set(\"hsl.s\",n.get(\"hsl.s\")*t);return i.hex()},[e,t])}",
+        "useThemedColorValue": "function h(e,t){let n=(0,u.useTheme)(),r=(0,o.default)([c.default],()=>c.default.saturation),s=i.useMemo(()=>{if(null==e)return null;let i=l.default.colors[d(e)].resolve({theme:null!=t?t:n,saturation:r}),s=i.hex();return{hex:s}},[e,r,n,t]);return s}"
+    }
+}

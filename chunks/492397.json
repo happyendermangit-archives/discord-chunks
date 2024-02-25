@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "CONFERENCE_MODE_ENABLED": false,
+        "DEFAULT_INVITE_CODE": null
+    }
+}

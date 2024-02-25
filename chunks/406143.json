@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "default": {
+            "ascending": "artan sırada",
+            "ascendingSort": "e=>\"\".concat(e.columnName,\" s\\xfctuna g\\xf6re artan d\\xfczende sırala\")",
+            "columnSize": "e=>\"\".concat(e.value,\" piksel\")",
+            "descending": "azalan sırada",
+            "descendingSort": "e=>\"\".concat(e.columnName,\" s\\xfctuna g\\xf6re azalan d\\xfczende sırala\")",
+            "resizerDescription": "Yeniden boyutlandırmak için Enter'a basın",
+            "select": "Seç",
+            "selectAll": "Tümünü Seç",
+            "sortable": "Sıralanabilir sütun"
+        }
+    }
+}

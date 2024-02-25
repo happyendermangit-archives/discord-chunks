@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "CommandListSortOrder": {
+            "0": "POPULAR",
+            "1": "ALPHABETICAL",
+            "POPULAR": 0,
+            "ALPHABETICAL": 1
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "GuildFeedPreferenceEntityTypes": {
+            "MESSAGE": "message",
+            "CHANNEL": "channel",
+            "USER": "user"
+        }
+    }
+}

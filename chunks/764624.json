@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "UnknownFieldHandler": {
+            "onRead": "(n,r,a,o,i)=>{(t(r)?r[e.symbol]:r[e.symbol]=[]).push({no:a,wireType:o,data:i})}",
+            "onWrite": "(t,n,r)=>{for(let{no:t,wireType:a,data:o}of e.list(n))r.tag(t,a).raw(o)}",
+            "list": "(n,r)=>{if(t(n)){let t=n[e.symbol];return r?t.filter(e=>e.no==r):t}return[]}",
+            "last": "(t,n)=>e.list(t,n).slice(-1)[0]"
+        },
+        "WireType": {
+            "0": "Varint",
+            "1": "Bit64",
+            "2": "LengthDelimited",
+            "3": "StartGroup",
+            "4": "EndGroup",
+            "5": "Bit32",
+            "Varint": 0,
+            "Bit64": 1,
+            "LengthDelimited": 2,
+            "StartGroup": 3,
+            "EndGroup": 4,
+            "Bit32": 5
+        }
+    }
+}

@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,r){if(e(r,t))return t;throw o(\"Incorrect invocation\")}"
+}

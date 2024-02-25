@@ -1,0 +1,26 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "function D(){(0,O.shouldReadWriteAudioSettings)()&&!function(){let e=i.default.get(L(S.default.getId()));!e&&l.PreloadedUserSettingsActionCreators.updateAsync(\"audioContextSettings\",e=>{let _=!1;for(let[E,t]of Object.entries(N.default.getState().settingsByContext)){let o=(0,R.coerceAudioContextForProto)(E);if(null==o)continue;let n=e[o],r=String(Date.now()),i={};for(let[e,_]of Object.entries(t.localMutes))i[e]={muted:_,volume:C(E),modifiedAt:r,soundboardMuted:!1};for(let[e,_]of Object.entries(t.localVolumes))i[e]={muted:!1,modifiedAt:r,...i[e],volume:(0,R.snapVolumeToDefault)(_,E)};let a=Object.keys(n).length;for(let[e,[E,t]]of Object.entries(i).entries()){let o=300-a-(e+1)<=0;if(o)break;null==n[E]&&(_=!0,n[E]=t)}}return i.default.set(L(S.default.getId()),!0),_},l.UserSettingsDelay.AUTOMATED)}()}",
+                "AUDIO_SET_LOCAL_VOLUME": "function M(e){var _,E,t;let{context:o,userId:n,volume:r}=e;if(n===S.default.getId()||!(0,O.shouldReadWriteAudioSettings)())return;let i=s.default.getRemoteSessionId();null!=i&&d(i,n,o,{muted:N.default.isLocalMute(n,o),volume:r}),_=o,E=n,t=r,(0,A.updatePendingSettings)(_,E,{volume:t}),c()}",
+                "AUDIO_TOGGLE_LOCAL_MUTE": "function h(e){let{context:_,userId:E}=e;if(E!==S.default.getId()){if((0,O.shouldReadWriteAudioSettings)()){var t,o,n;t=_,o=E,n=N.default.isLocalMute(E,_),(0,A.updatePendingSettings)(t,o,{muted:n}),c.cancel(),U()}}}",
+                "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE": "function P(e){let{context:_,userId:E}=e;if(E!==S.default.getId()){if((0,O.shouldReadWriteAudioSettings)()){var t,o,n;t=_,o=E,n=T.default.isLocalSoundboardMuted(E),(0,A.updatePendingSettings)(t,o,{soundboardMuted:n}),c.cancel(),U()}}}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            }
+        }
+    }
+}

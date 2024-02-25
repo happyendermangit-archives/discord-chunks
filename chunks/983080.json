@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "dismiss": "무시"
+        }
+    }
+}

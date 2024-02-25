@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "OAuth2Page": "function v(e){let{children:t,wrapperClassName:n,embedded:r}=e,[o,v]=i.useState(g.WaveStates.INITIAL),E=i.useCallback(e=>{v(t=>Math.max(t,e))},[]);return(0,u.usePageTitle)({location:m.default.Messages.OAUTH2_TITLE}),(0,s.jsx)(d.ThemeContextProvider,{theme:c.ThemeTypes.DARK,children:(0,s.jsx)(l.default,{embedded:r,className:a((0,_.getThemeClass)(c.ThemeTypes.DARK),h.wave),splash:(0,f.getArtForPath)(),waveState:o,showLogo:!0,updateWaveState:E,children:(0,s.jsx)(\"div\",{className:a(h.oauth2Wrapper,n),children:t})})})}",
+        "OAuth2Modal": "function E(e){let{children:t,transitionState:n,...i}=e;return(0,s.jsx)(o.ModalRoot,{size:o.ModalSize.DYNAMIC,transitionState:n,className:h.oauth2Wrapper,...i,children:t})}"
+    }
+}

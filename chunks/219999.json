@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "isFirefox": "function(){return null==t&&(t=e()),t}",
+        "isSafari": "function(){return null==t&&(t=e()),t}"
+    }
+}

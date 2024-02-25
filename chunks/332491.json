@@ -1,0 +1,41 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "e=>this.handlePostConnectionOpen()",
+                "RTC_CONNECTION_FLAGS": "e=>this.handleRTCConnectionFlags(e)",
+                "RTC_CONNECTION_USER_CREATE": "e=>this.handleRTCUserCreate(e)",
+                "CLIPS_INIT_FAILURE": "e=>this.handleClipsInitFailure(e)",
+                "CLIPS_SETTINGS_UPDATE": "e=>this.applyNativeClipsSettings(e)",
+                "STREAM_START": "()=>this.applyNativeClipsSettings()",
+                "RUNNING_GAME_TOGGLE_DETECTION": "e=>this.handleClipsInitOnToggleDetection(e)",
+                "RUNNING_GAMES_CHANGE": "e=>this.handleClipsInitOnGamesChange(e)",
+                "CLIPS_RESTART": "()=>this.fireClipsInitEvent()",
+                "RTC_CONNECTION_VIDEO": "e=>this.handleRTCConnectionVideo(e)",
+                "RTC_CONNECTION_STATE": "e=>this.handleRTCConnectionState(e)",
+                "MEDIA_ENGINE_SET_HARDWARE_H264": "e=>this.handleMediaEngineSetHardwareH264(e)"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "showClipsToast": "showClipsToast(){(0,t.showToast)({id:\"CLIPS_IN_CALL_WARNING\",message:O.default.Messages.CLIPS_IN_CALL_WARNING,type:t.ToastType.CLIP,options:{duration:N.CLIPS_TOAST_DURATION}})}",
+            "applyNativeClipsSettings": "applyNativeClipsSettings(e){if(!(0,T.default)(i.default))return;let _=(0,a.areClipsEnabled)(),E=s.default.getSettings(),t=(E.clipsEnabled||E.decoupledClipsEnabled)&&_,o=i.default.getMediaEngine();if(o.setClipBufferLength(t?E.clipsLength/1e3:0),(null==e?void 0:e.settings.decoupledClipsEnabled)===!0&&this.fireClipsInitEvent(),null==e||(null==e?void 0:e.settings.clipsQuality)!=null){let{frameRate:_,resolution:t}=E.clipsQuality;!o.setClipsQualitySettings(t<=480?t/3*4:t/9*16,t,_)&&null!=e&&this.fireClipsInitEvent()}}",
+            "handleClipsInitOnToggleDetection": "handleClipsInitOnToggleDetection(e){let _=n.default.getVisibleGame();null!=_&&_.id===e.game.id&&this.fireClipsInitEvent()}",
+            "handleClipsInitOnGamesChange": "handleClipsInitOnGamesChange(e){let _=n.default.getVisibleGame();if(null==_)return;let E=!!e.added.find(e=>e.pid===_.pid);E?setTimeout(()=>this.fireClipsInitEvent(),N.CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY):this.fireClipsInitEvent()}",
+            "fireClipsInitEvent": "fireClipsInitEvent(){if(!(0,T.default)(i.default))return;let e=(0,a.areClipsEnabled)(),_=s.default.getSettings(),E=_.clipsEnabled&&e;if(!E||null!=r.default.getCurrentUserActiveStream())return;let t=n.default.getVisibleGame();(null==t?void 0:t.pid)!=null&&(null==t?void 0:t.windowHandle)!=null&&null!=t.name&&\"\"!==t.name&&o.default.dispatch({type:\"CLIPS_INIT\",sourceId:\"window:\".concat(null==t?void 0:t.windowHandle),applicationName:t.name,quality:_.clipsQuality})}",
+            "handleMediaEngineSetHardwareH264": "handleMediaEngineSetHardwareH264(e){let{enabled:_}=e;if(!_){let{clipsEnabled:e}=s.default.getSettings();e&&S.updateClipsEnabled({clipsEnabled:!1})}}",
+            "disableClips": "disableClips(){S.updateClipsEnabled({clipsEnabled:!1,trackAnalytics:!1})}"
+        }
+    }
+}

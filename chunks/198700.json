@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "type": "function(e){let{url:t}=e,r=(0,i.useStateFromStoresObject)([s.default],()=>s.default.getCurrentBuildOverride()),a=(0,i.useStateFromStores)([s.default],()=>s.default.getBuildOverride(t)),{payload:f,validatedURL:v}=a,g=r.state===s.State.Resolving||a.state===s.State.Resolving,h=l.useCallback(()=>null==f?Promise.reject(Error(\"Invalid override payload\")):((0,d.addRecentBuildOverride)(a.override,f),o(f)),[f,a]);return null!=v?(0,n.jsx)(u.default,{loading:g,linkMeta:a.override,currentOverrides:r.overrides,applyBuildOverride:h,clearBuildOverride:c,url:v}):null}",
+            "compare": null
+        }
+    }
+}

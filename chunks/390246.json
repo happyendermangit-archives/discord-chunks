@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "longPressMessage": "לחץ לחיצה ארוכה או הקש Alt + ArrowDown כדי לפתוח את התפריט"
+        }
+    }
+}

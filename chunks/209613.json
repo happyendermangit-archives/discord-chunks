@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "LOW_SATURATION_THRESHOLD": 0.4
+    }
+}

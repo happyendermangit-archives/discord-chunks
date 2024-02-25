@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(e,t,n){var a,o=r[e];if(a=\"string\"==typeof o?o:1===t?o.one:o.other.replace(\"{{count}}\",t.toString()),null!=n&&n.addSuffix)return n.comparison&&n.comparison>0?\"in \"+a:a+\" ago\";return a}"
+    }
+}

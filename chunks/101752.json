@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "HandlerRole": {
+            "SOURCE": "SOURCE",
+            "TARGET": "TARGET"
+        }
+    }
+}

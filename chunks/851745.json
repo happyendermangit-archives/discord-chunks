@@ -1,0 +1,91 @@
+{
+    "exports": {
+        "MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS": 3,
+        "MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY": 7,
+        "MAX_COMMAND_AUTOCOMPLETE_RESULTS": 20,
+        "GlobalMentionMode": {
+            "0": "DENY",
+            "1": "ALLOW_EVERYONE",
+            "2": "ALLOW_EVERYONE_OR_HERE",
+            "DENY": 0,
+            "ALLOW_EVERYONE": 1,
+            "ALLOW_EVERYONE_OR_HERE": 2
+        },
+        "UserMentionMode": {
+            "0": "DENY",
+            "1": "ALLOW_CHANNEL",
+            "2": "ALLOW_GUILD",
+            "DENY": 0,
+            "ALLOW_CHANNEL": 1,
+            "ALLOW_GUILD": 2
+        },
+        "RoleMentionMode": {
+            "0": "DENY",
+            "1": "ALLOW_MENTIONABLE",
+            "2": "ALLOW_ALL",
+            "DENY": 0,
+            "ALLOW_MENTIONABLE": 1,
+            "ALLOW_ALL": 2
+        },
+        "ChannelMentionMode": {
+            "0": "DENY",
+            "1": "ALLOW_SELECTABLE",
+            "DENY": 0,
+            "ALLOW_SELECTABLE": 1
+        },
+        "ClydeMentionMode": {
+            "0": "DENY",
+            "1": "ALLOW",
+            "DENY": 0,
+            "ALLOW": 1
+        },
+        "CommandMode": {
+            "0": "DISABLED",
+            "1": "OLD_BUILT_INS",
+            "2": "NEW_TEXT_ONLY",
+            "3": "NEW",
+            "DISABLED": 0,
+            "OLD_BUILT_INS": 1,
+            "NEW_TEXT_ONLY": 2,
+            "NEW": 3
+        },
+        "SelectType": {
+            "0": "INSERT",
+            "1": "SEND",
+            "INSERT": 0,
+            "SEND": 1
+        },
+        "AutocompleteOptionTypes": {
+            "MENTIONS": "MENTIONS",
+            "CHANNELS": "CHANNELS",
+            "EMOJIS_AND_STICKERS": "EMOJIS_AND_STICKERS",
+            "REACTIONS": "REACTIONS",
+            "GIFS": "GIFS",
+            "LEGACY_COMMANDS": "LEGACY_COMMANDS",
+            "COMMANDS": "COMMANDS",
+            "COMMAND_OPTIONS": "COMMAND_OPTIONS",
+            "CHOICES": "CHOICES"
+        },
+        "AutocompleteSelectionTypes": {
+            "MENTION": "MENTION",
+            "CHANNEL": "CHANNEL",
+            "EMOJI": "EMOJI",
+            "STICKER": "STICKER",
+            "REACTION": "REACTION",
+            "GIF": "GIF",
+            "COMMAND": "COMMAND",
+            "COMMAND_OPTION": "COMMAND_OPTION",
+            "COMMAND_SUGGESTION": "COMMAND_SUGGESTION",
+            "CHOICE": "CHOICE",
+            "EMOJI_UPSELL": "EMOJI_UPSELL"
+        },
+        "FocusMode": {
+            "0": "AUTO",
+            "1": "AUTO_WHEN_FILTERED",
+            "2": "MANUAL",
+            "AUTO": 0,
+            "AUTO_WHEN_FILTERED": 1,
+            "MANUAL": 2
+        }
+    }
+}

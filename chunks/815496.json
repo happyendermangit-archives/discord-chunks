@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "trackQuestEvent": "function d(e,t,n){let a=i.default.quests.get(e);if(null!=a&&!a.preview){var r;s.default.track(t,{quest_id:(r=a).id,game_id:r.config.applicationId,game_name:r.config.applicationName,...n})}}",
+        "QuestContentCTA": {
+            "OPEN_CONTEXT_MENU": "OPEN_CONTEXT_MENU",
+            "CONTEXT_MENU_COPY_LINK": "CONTEXT_MENU.COPY_LINK",
+            "CONTEXT_MENU_HIDE_CONTENT": "CONTEXT_MENU.HIDE_CONTENT",
+            "CONTEXT_MENU_OPEN_DISCLOSURE": "CONTEXT_MENU.OPEN_DISCLOSURE",
+            "CONTEXT_MENU_OPEN_GAME_LINK": "CONTEXT_MENU.OPEN_GAME_LINK"
+        },
+        "trackQuestContentClicked": "function c(e,t,n){var a,r;d(e,u.AnalyticEvents.QUEST_CONTENT_CLICKED,{content_id:a=t,content_name:null!==(r=o.find(e=>l.QuestContent[e]===a))&&void 0!==r?r:\"\",cta_name:n})}"
+    }
+}

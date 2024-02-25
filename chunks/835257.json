@@ -1,0 +1,25 @@
+{
+    "exports": {
+        "registerFetchedSupplementals": "function I(e,t){t.forEach(t=>(function(e,t,n){R[e+t]=3})(e,t,3))}",
+        "JoinSourceType": {
+            "0": "UNSPECIFIED",
+            "1": "BOT",
+            "2": "INTEGRATION",
+            "3": "DISCOVERY",
+            "4": "HUB",
+            "5": "INVITE",
+            "6": "VANITY_URL",
+            "UNSPECIFIED": 0,
+            "BOT": 1,
+            "INTEGRATION": 2,
+            "DISCOVERY": 3,
+            "HUB": 4,
+            "INVITE": 5,
+            "VANITY_URL": 6
+        },
+        "getJoinSourceTypeLabel": "function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:void 0;switch(e){case 1:return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;case 2:return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;case 3:return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY;case 4:return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_HUB;case 5:return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;case 6:if(null!=t)return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({vanityUrl:t});return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;default:return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN}}",
+        "getIntegrationLabel": "e=>{switch(e){case\"twitch\":return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;case\"youtube\":return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_YOUTUBE;default:return d.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION}}",
+        "useGetIntegrationIconString": "e=>{let t=T.default.get((0,_.useLegacyPlatformType)(e)),n=(0,c.default)();return null!=t&&[\"twitch\",\"youtube\"].includes(e)?\"url('\".concat((0,i.isThemeDark)(n)?t.icon.darkSVG:t.icon.lightSVG,\"')\"):null}",
+        "fetchMemberSupplemental": "async function F(e,t){let n=h(e,t),a=n.filter(e=>R[e]<=1).map(p);if(0===a.length)return[];A(n,2);try{let t=await E.default.post({url:f.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),body:{user_ids:a}});if(!Array.isArray(t.body))return A(n,0),[];let r=t.body.map(M),s=[];r.forEach(e=>{let{userId:t}=e;return s.push(t)});let l=h(e,s),u=a.filter(e=>!s.includes(e)),o=h(e,u);return A(l,3),A(o,0),r}catch(e){A(n,0)}return[]}"
+    }
+}

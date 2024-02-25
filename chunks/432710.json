@@ -1,0 +1,29 @@
+{
+    "exports": {
+        "MetricEvents": {
+            "APP_CRASHED": "app_crashed",
+            "SOCKET_CRASHED": "socket_crashed",
+            "MESSAGE_REQUEST_VIEW": "message_request_view",
+            "SPAM_MESSAGE_REQUEST_VIEW": "spam_message_request_view",
+            "SPAM_MESSAGE_REQUEST_ERROR_VIEW": "spam_message_request_error_view",
+            "FAMILY_CENTER_VIEW": "family_center_view",
+            "SAFETY_HUB_VIEW": "safety_hub_view",
+            "APPEAL_INGESTION_VIEW": "appeal_ingestion_view",
+            "MESSAGE_REQUEST_COUNT_DRIFT": "message_request_count_drift",
+            "FORUM_CHANNEL_GRID_AUTO_ENABLED": "forum_channel_grid_auto_enabled",
+            "REMIX_FONT_LOADING_ERROR": "remix_font_loading_error",
+            "AFK_NOT_IDLE": "afk_not_idle",
+            "CAPTCHA_EVENT": "captcha_event",
+            "SAFETY_WARNING_VIEW": "safety_warning_view",
+            "SAFETY_WARNING_MODAL_VIEW": "safety_warning_modal_view",
+            "EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT": "explicit_media_scan_client_timed_out",
+            "EXPLICIT_MEDIA_SCAN_CLIENT_TIMING": "explicit_media_scan_client_timing",
+            "EXPLICIT_MEDIA_SENDER_FP_BUTTON_VIEW": "explicit_media_sender_fp_button_view",
+            "OTA_CHECK_ATTEMPT": "OtaCheckAttempt",
+            "OTA_ASSET_DOWNLOAD_ATTEMPT": "OtaAssetDownloadAttempt",
+            "OTA_UPDATE_CHECK": "ota_update_check",
+            "OTA_ASSET_DOWNLOAD": "ota_asset_download",
+            "DEBUG_OTA_200_TIMEOUT": "debug_ota_200_timeout"
+        }
+    }
+}

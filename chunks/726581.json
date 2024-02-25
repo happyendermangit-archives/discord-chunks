@@ -1,0 +1,3 @@
+{
+    "exports": "function(e,n){return\"function\"==typeof n?new t.Request(\"GET\",e).end(n):1==arguments.length?new t.Request(\"GET\",e):new t.Request(e,n)}"
+}
