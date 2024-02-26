@@ -109,7 +109,6 @@
             "canUseClientThemes": "function(e){return(0,f.canUserUse)(f.CLIENT_THEMES,e)}",
             "canStreamQuality": "function(e,t){return\"high\"===e?(0,f.canUserUse)(f.STREAM_HIGH_QUALITY,t):\"mid\"===e&&(0,f.canUserUse)(f.STREAM_MID_QUALITY,t)}",
             "hasFreeBoosts": "function(e){return(0,f.canUserUse)(f.FREE_BOOSTS,e)}",
-            "canUsePremiumActivities": "function(e){return(0,f.canUserUse)(f.HOST_PREMIUM_ACTIVITIES,e)}",
             "canUseCustomStickersEverywhere": "function(e){return(0,f.canUserUse)(f.STICKERS_EVERYWHERE,e)}",
             "canUseCustomBackgrounds": "function(e){return(0,f.canUserUse)(f.VIDEO_FILTER_ASSETS,e)}",
             "canUseCollectibles": "function(e){return(0,f.canUserUse)(f.COLLECTIBLES,e)}",

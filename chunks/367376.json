@@ -2,7 +2,7 @@
     "exports": {
         "default": {
             "combineAndInjectMentionRule": "function d(e,t){let n={};return null!=e.mention&&null!=u&&(n={mention:u}),(0,o.default)([e,...t,n])}",
-            "createReactRules": "function w(e){return{...k,link:(0,M.default)(e),emoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,i,a){let{key:s}=a;return e.src?(0,l.jsx)(f.MessageStandardEmoji,{node:e,tooltipPosition:t,enableClick:n},s):(0,l.jsx)(\"span\",{children:e.surrogate},s)}}}(e),customEmoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,i,a){let{key:s,guildId:r,isInteracting:o}=a,u=c.default.getDisambiguatedEmojiContext(r).getById(e.emojiId);if(null!=u){let t=u.require_colons;e={...e,name:t?\":\".concat(u.name,\":\"):u.name}}return(0,l.jsx)(f.MessageCustomEmoji,{isInteracting:o,node:e,tooltipPosition:t,enableClick:n},s)}}}(e),channelMention:(0,O.default)(e),commandMention:(0,R.default)(e),attachmentLink:(0,x.default)(e)}}",
+            "createReactRules": "function w(e){return{...k,link:(0,M.default)(e),emoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,i,a){let{key:s}=a;return e.src?(0,l.jsx)(f.MessageStandardEmoji,{node:e,tooltipPosition:t,enableClick:n},s):(0,l.jsx)(\"span\",{children:e.surrogate},s)}}}(e),customEmoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,i,a){let{key:s,guildId:r,isInteracting:o}=a,u=c.default.getDisambiguatedEmojiContext(r).getById(e.emojiId);if(null!=u){let t=u.require_colons;e={...e,name:t?\":\".concat(u.name,\":\"):u.name}}return(0,l.jsx)(f.MessageCustomEmoji,{isInteracting:o,node:e,tooltipPosition:t,enableClick:n},s)}}}(e),channelMention:(0,O.default)(e),commandMention:(0,R.default)(e),attachmentLink:(0,y.default)(e)}}",
             "defaultReactRuleOptions": {
                 "enableBuildOverrides": false,
                 "enableEmojiClick": true
@@ -247,7 +247,7 @@
                     ],
                     "match": "e=>S.TIMESTAMP_REGEX.exec(e)",
                     "parse": "parse(e){let[t,n,l]=e,r=(0,S.parseTimestamp)(n,l);return null==r?{type:\"text\",content:t}:r}",
-                    "react": "(e,t,n)=>(0,l.jsx)(y.default,{node:e},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(x.default,{node:e},n.key)"
                 },
                 "s": {
                     "order": 21,
@@ -542,7 +542,7 @@
                     ],
                     "match": "e=>S.TIMESTAMP_REGEX.exec(e)",
                     "parse": "parse(e){let[t,n,l]=e,r=(0,S.parseTimestamp)(n,l);return null==r?{type:\"text\",content:t}:r}",
-                    "react": "(e,t,n)=>(0,l.jsx)(y.default,{node:e},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(x.default,{node:e},n.key)"
                 },
                 "s": {
                     "order": 21,
@@ -784,7 +784,7 @@
                     ],
                     "match": "e=>S.TIMESTAMP_REGEX.exec(e)",
                     "parse": "parse(e){let[t,n,l]=e,r=(0,S.parseTimestamp)(n,l);return null==r?{type:\"text\",content:t}:r}",
-                    "react": "(e,t,n)=>(0,l.jsx)(y.default,{node:e},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(x.default,{node:e},n.key)"
                 },
                 "s": {
                     "order": 21,

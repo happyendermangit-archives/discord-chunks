@@ -63,12 +63,6 @@
             "DESKTOP": "desktop",
             "MOBILE": "mobile"
         },
-        "ActivityAccessStatus": {
-            "0": "UNLOCKED",
-            "1": "NEEDS_NITRO",
-            "UNLOCKED": 0,
-            "NEEDS_NITRO": 1
-        },
         "EmbeddedActivityUpdateCodes": {
             "0": "NO_UPDATE",
             "1": "ACTIVITY_STATE_UPDATE",

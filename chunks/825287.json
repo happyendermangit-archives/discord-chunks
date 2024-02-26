@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function o(){return{logsUploaded:new Date().toISOString(),releaseChannel:window.GLOBAL_ENV.RELEASE_CHANNEL,buildNumber:\"269031\",versionHash:\"1a52bf9afa332523a0c7fe011e03e09fda870e6e\"}}"
+        "default": "function o(){return{logsUploaded:new Date().toISOString(),releaseChannel:window.GLOBAL_ENV.RELEASE_CHANNEL,buildNumber:\"269052\",versionHash:\"050bea69188e2163f9bf4323cecd4d0d7232af38\"}}"
     }
 }
