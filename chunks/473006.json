@@ -1,5 +1,5 @@
 {
     "exports": {
-        "getClientVersionForChangelog": "function o(){var e;let _=parseInt((e=\"268998\",\"268998\"));return Number.isNaN(_)&&(t.default.captureMessage(\"Trying to open a changelog for an invalid build number \".concat(\"268998\")),_=0),_}"
+        "getClientVersionForChangelog": "function o(){var e;let _=parseInt((e=\"269012\",\"269012\"));return Number.isNaN(_)&&(t.default.captureMessage(\"Trying to open a changelog for an invalid build number \".concat(\"269012\")),_=0),_}"
     }
 }

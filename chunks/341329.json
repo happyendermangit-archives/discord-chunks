@@ -14,7 +14,7 @@
                 "THREAD_CREATE_LOCAL": "function W(e){let{channelId:t}=e;s.default.fetchMessages({channelId:t,limit:v.MAX_MESSAGES_PER_CHANNEL})}",
                 "GUILD_CREATE": "()=>y()",
                 "MESSAGE_END_EDIT": "function x(e){let{response:t}=e;if(null==t||null==t.body)return null;if(t.body.code===v.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED){let e=t.body.retry_after;null!=e&&r.default.show({title:M.default.Messages.RATE_LIMITED,body:M.default.Messages.ANNOUNCEMENT_EDIT_RATE_LIMIT.format({retryAfterMinutes:Math.ceil(e/60)})})}}",
-                "LOAD_MESSAGES_SUCCESS": "function j(e){var t;let{channelId:n,jump:l,isStale:a,isPreview:i=!1}=e;if(i)return;let u=null!==(t=F[n])&&void 0!==t?t:0;if(Date.now()-u<10*I.default.Millis.SECOND)return;F[n]=Date.now();let d=A.default.getChannelId(),r=p.default.getCurrentSidebarChannelId(d),o=n===d||n===r;a&&E.default.isConnected()&&o&&s.default.fetchMessages({channelId:n,limit:v.MAX_MESSAGES_PER_CHANNEL,jump:l})}",
+                "LOAD_MESSAGES_SUCCESS": "function j(e){var t;let{channelId:n,jump:l,isStale:a,isPreview:i=!1}=e;if(i)return;let u=null!==(t=F[n])&&void 0!==t?t:0;if(Date.now()-u<10*m.default.Millis.SECOND)return;F[n]=Date.now();let d=A.default.getChannelId(),r=p.default.getCurrentSidebarChannelId(d),o=n===d||n===r;a&&E.default.isConnected()&&o&&s.default.fetchMessages({channelId:n,limit:v.MAX_MESSAGES_PER_CHANNEL,jump:l})}",
                 "UPLOAD_FAIL": "function X(e){let{channelId:t,messageRecord:n}=e;null!=n&&d.default.dispatch({type:\"MESSAGE_SEND_FAILED\",channelId:t,messageId:n.id})}",
                 "CHANNEL_DELETE": "()=>y()",
                 "THREAD_DELETE": "()=>y()"
