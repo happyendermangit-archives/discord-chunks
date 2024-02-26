@@ -7831,7 +7831,7 @@
             "isSpeaker": "isSpeaker(e,t){return this.getPermissionsForUser(e,t).speaker}",
             "isModerator": "isModerator(e,t){var n;return null!==(n=this.getPermissionsForUser(e,t,!0).moderator)&&void 0!==n&&n}",
             "isAudienceMember": "isAudienceMember(e,t){let n=this.getPermissionsForUser(e,t);return!n.speaker&&!n.moderator}",
-            "getPermissionsForUser": "getPermissionsForUser(e,t){var n;let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(null==e||null==t)return N;let i=null===(n=p[t])||void 0===n?void 0:n[e];if(null!=i)return r&&null==i.moderator?R(e,t,!0):i;return R(e,t,r)}"
+            "getPermissionsForUser": "getPermissionsForUser(e,t){var n;let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(null==e||null==t)return N;let i=null===(n=p[t])||void 0===n?void 0:n[e];if(null!=i)return r&&null==i.moderator?A(e,t,!0):i;return A(e,t,r)}"
         }
     }
 }

@@ -7827,7 +7827,7 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_116",
-            "initialize": "initialize(){this.waitFor(E.default,p.default,c.default,f.default,N.default,S.default,R.default,I.default,C.default,T.default,L.default,_.default)}",
+            "initialize": "initialize(){this.waitFor(E.default,p.default,c.default,f.default,N.default,S.default,A.default,I.default,C.default,T.default,L.default,_.default)}",
             "getParticipantsVersion": "getParticipantsVersion(e){var t,n;return null==e?-1:null!==(n=null===(t=y(e))||void 0===t?void 0:t.version)&&void 0!==n?n:-1}",
             "getMutableParticipants": "getMutableParticipants(e,t){var n,r;return null==e?k:null!==(r=null===(n=y(e))||void 0===n?void 0:n.toArray(t))&&void 0!==r?r:k}",
             "getMutableRequestToSpeakParticipants": "getMutableRequestToSpeakParticipants(e){var t,n;return null!==(n=null===(t=y(e))||void 0===t?void 0:t.getRequestToSpeakParticipants())&&void 0!==n?n:k}",
