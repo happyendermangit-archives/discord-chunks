@@ -1097,8 +1097,7 @@
             "MODAL_CAROUSEL_NEXT": "MODAL_CAROUSEL_NEXT",
             "MODAL_CAROUSEL_PREV": "MODAL_CAROUSEL_PREV",
             "OPEN_APP_DIRECTORY": "OPEN_APP_DIRECTORY",
-            "BROWSER_DEVTOOLS": "BROWSER_DEVTOOLS",
-            "VIBE_WITH_WUMPUS": "VIBE_WITH_WUMPUS"
+            "BROWSER_DEVTOOLS": "BROWSER_DEVTOOLS"
         },
         "GlobalKeybindActions": {
             "UNASSIGNED": "UNASSIGNED",
