@@ -27,6 +27,7 @@ jobs:
           npm ci
       - name: Run script
         run: |
+          rm -r ./chunks
           node ./src/scrapeChunks.js
 
       - name: set email
