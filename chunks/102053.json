@@ -2,20 +2,36 @@
     "exports": {
         "default": {
             "isTracing_": true,
-            "endTime_": 1708968701210,
+            "endTime_": 1708970888733,
             "lastImportDuration": 0,
             "logGroups": [
                 {
                     "index": 0,
-                    "timestamp": 1708968686210,
-                    "logs": [],
+                    "timestamp": 1708970873733,
+                    "logs": [
+                        {
+                            "emoji": "🦥",
+                            "prefix": "",
+                            "log": "LocalActivityStore",
+                            "delta": 36.19999999998254,
+                            "timestamp": 1708970874416
+                        }
+                    ],
                     "nativeLogs": []
                 }
             ],
-            "logs": [],
+            "logs": [
+                {
+                    "emoji": "🦥",
+                    "prefix": "",
+                    "log": "LocalActivityStore",
+                    "delta": 36.19999999998254,
+                    "timestamp": 1708970874416
+                }
+            ],
             "prefix": "",
             "isTracing": true,
-            "endTime": 1708968701210,
+            "endTime": 1708970888733,
             "resumeTracing": "resumeTracing(){!this.isTracing&&(this.logGroups.unshift({index:this.logGroups.length,timestamp:Date.now(),logs:[],nativeLogs:[]}),this.logs=this.logGroups[0].logs),this.endTime=Date.now()+1e4}",
             "mark": "mark(e,_,E){this.isTracing&&(this.logs.push({emoji:e,prefix:\"\".concat(this.prefix),log:_,delta:E,timestamp:Date.now()}),this.addImportLogDetail())}",
             "markAndLog": "markAndLog(e,_,E,t){e.log(E),this.isTracing&&(this.logs.push({emoji:_,prefix:this.prefix,log:E,delta:t,timestamp:Date.now()}),this.addImportLogDetail())}",

@@ -2,9 +2,9 @@
     "exports": {
         "DISCORD_EPOCH": 1420070400000,
         "default": {
-            "age": "function(e){return Date.now()-a(e)}",
-            "extractTimestamp": "function a(e){return Math.floor(Number(e)/4194304)+s}",
-            "compare": "function(e,t){return e===t?0:null==t?1:null==e?-1:e.length>t.length?1:e.length<t.length?-1:e>t?1:-1}",
+            "age": "function(e){return s.default.age(e)}",
+            "extractTimestamp": "function(e){return s.default.extractTimestamp(e)}",
+            "compare": "function(e,t){return s.default.compare(e,t)}",
             "atPreviousMillisecond": "function(e){return s.default.atPreviousMillisecond(e)}",
             "fromTimestamp": "function(e){return s.default.fromTimestamp(e)}",
             "keys": "function(e){return Object.keys(e)}",

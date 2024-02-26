@@ -7828,12 +7828,12 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_172",
-            "initialize": "initialize(){this.waitFor(f.default,g.default,h.default)}",
+            "initialize": "initialize(){this.waitFor(_.default,g.default,f.default)}",
             "canLoadMore": false,
             "nextOffset": 0,
             "isInitialLoad": true,
-            "isLoading": "isLoading(e,t,n){return M===e&&N===t&&(0,E.areSetsEqual)(i,n)?A:(O(),!1)}",
-            "getThreads": "getThreads(e,t,n){return M===e&&N===t&&(0,E.areSetsEqual)(i,n)?v:D}"
+            "isLoading": "isLoading(e,t,n){return M===e&&N===t&&(0,h.areSetsEqual)(i,n)?A:(O(),!1)}",
+            "getThreads": "getThreads(e,t,n){return M===e&&N===t&&(0,h.areSetsEqual)(i,n)?v:D}"
         }
     }
 }

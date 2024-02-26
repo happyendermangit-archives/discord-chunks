@@ -1,6 +1,6 @@
 {
     "exports": {
-        "computeThreadIdsSnapshot": "function b(e){let t=f.default.getChannel(e);return null==t?[]:Object.values(d.default.getThreadsForParent(t.guild_id,t.id)).map(e=>{let{id:t}=e;return t}).sort(P(g))}",
+        "computeThreadIdsSnapshot": "function b(e){let t=p.default.getChannel(e);return null==t?[]:Object.values(u.default.getThreadsForParent(t.guild_id,t.id)).map(e=>{let{id:t}=e;return t}).sort(P(g))}",
         "default": {
             "_changeCallbacks": {
                 "listeners": {
@@ -7828,10 +7828,10 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_188",
-            "initialize": "initialize(){this.waitFor(f.default,d.default,_.default,m.default)}",
+            "initialize": "initialize(){this.waitFor(p.default,u.default,m.default,f.default)}",
             "getNewThreadCount": "getNewThreadCount(){return h}",
             "getCanAckThreads": "getCanAckThreads(){return O}",
-            "getThreadIds": "getThreadIds(e,t,n){let i=e!==E,l=!(0,I.areSetsEqual)(n,N),a=t!==g;return E=e,N=n,g=t,i?H({refreshThreadIds:!0}):a?H({sortThreadIds:!0}):l&&H(),S}",
+            "getThreadIds": "getThreadIds(e,t,n){let i=e!==E,l=!(0,_.areSetsEqual)(n,N),a=t!==g;return E=e,N=n,g=t,i?H({refreshThreadIds:!0}):a?H({sortThreadIds:!0}):l&&H(),S}",
             "getCurrentThreadIds": "getCurrentThreadIds(){return S}",
             "getAndDeleteMostRecentUserCreatedThreadId": "getAndDeleteMostRecentUserCreatedThreadId(){let e=A;return A=null,e}",
             "getFirstNoReplyThreadId": "getFirstNoReplyThreadId(){return i}"
