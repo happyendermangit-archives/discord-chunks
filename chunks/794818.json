@@ -18,6 +18,6 @@
         "trackTagSearchStarted": "function _(e,t,n,l){m.default.track(p.AnalyticEvents.SEARCH_STARTED,{search_type:p.SearchTypes.GUILD_DISCOVERY_TAG,load_id:e,location:{page:p.AnalyticsPages.GUILD_DISCOVERY,section:n},category_id:t,guild_id:l})}",
         "trackSearchResultsViewed": "function N(e){let{loadId:t,searchId:n,query:l,guildResults:i,analyticsContext:a,categoryId:s,isTagSearch:r}=e;m.default.track(p.AnalyticEvents.SEARCH_RESULT_VIEWED,{search_type:r?p.SearchTypes.GUILD_DISCOVERY_TAG:p.SearchTypes.GUILD_DISCOVERY,load_id:t,search_id:n,total_results:void 0!==i?i.length:null,guild_ids:void 0!==i?i.map(e=>e.id):null,query:l,location:a.location,category_id:s})}",
         "trackGuildJoinClicked": "function A(e){let t=o.default.getLoadId(e);m.default.track(p.AnalyticEvents.GUILD_DISCOVERY_GUILD_JOIN_CLICKED,{guild_id:e,load_id:t,guild_size:c.default.getMemberCount(e)})}",
-        "getDiscoverableGuild": "async function x(e){try{var t,n;let l=await s.default.get({url:p.Endpoints.GUILD_DISCOVERY,query:a.stringify({guild_ids:e}),oldFormErrors:!0}),i=null===(n=l.body)||void 0===n?void 0:null===(t=n.guilds)||void 0===t?void 0:t[0];if(null==i)return i;return S(i)}catch(e){return null}}"
+        "getDiscoverableGuild": "async function y(e){try{var t,n;let l=await s.default.get({url:p.Endpoints.GUILD_DISCOVERY,query:a.stringify({guild_ids:e}),oldFormErrors:!0}),i=null===(n=l.body)||void 0===n?void 0:null===(t=n.guilds)||void 0===t?void 0:t[0];if(null==i)return i;return S(i)}catch(e){return null}}"
     }
 }

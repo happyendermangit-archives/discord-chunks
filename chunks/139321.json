@@ -7830,11 +7830,11 @@
             "_version": 1,
             "callback": "_=>{let{persistKey:E}=this.getClass();this.persist(),e._writePromises.delete(E),e._writeResolvers.delete(E),_()}",
             "throttledCallback": "function m(){var t,n=ov(),i=d(n);if(o=arguments,u=this,s=n,i){if(e===c){;return l=t=s,c=iI(y,r),h?g(t):f}if(p)return eI(c),c=iI(y,r),g(s)}return e===c&&(c=iI(y,r)),f}",
-            "initialize": "initialize(e){null!=e&&(Array.isArray(e.hiddenHotspots)&&(s=new Set(e.hiddenHotspots)),null!=e.hotspotOverrides&&(l=e.hotspotOverrides))}",
-            "hasHotspot": "hasHotspot(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],i=!t&&l[e];return!(o.CONFERENCE_MODE_ENABLED||u.ProcessArgs.isDisallowPopupsSet())&&(i||!s.has(e))}",
-            "hasHiddenHotspot": "hasHiddenHotspot(e){return s.has(e)}",
-            "getHotspotOverride": "getHotspotOverride(e){return l[e]}",
-            "getState": "getState(){return{hiddenHotspots:s,hotspotOverrides:l}}"
+            "initialize": "initialize(e){null!=e&&(Array.isArray(e.hiddenHotspots)&&(r=new Set(e.hiddenHotspots)),null!=e.hotspotOverrides&&(o=e.hotspotOverrides))}",
+            "hasHotspot": "hasHotspot(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=!t&&o[e];return!(s.CONFERENCE_MODE_ENABLED||a.ProcessArgs.isDisallowPopupsSet())&&(n||!r.has(e))}",
+            "hasHiddenHotspot": "hasHiddenHotspot(e){return r.has(e)}",
+            "getHotspotOverride": "getHotspotOverride(e){return o[e]}",
+            "getState": "getState(){return{hiddenHotspots:r,hotspotOverrides:o}}"
         },
         "HotspotLocations": {
             "REPORT_PROBLEM_POST_STREAM": "REPORT_PROBLEM_POST_STREAM",
@@ -7878,8 +7878,8 @@
             "IN_APP_REPORTS_FEEDBACK": "IN_APP_REPORTS_FEEDBACK",
             "CLIPS_CHANNEL_ATTACH_REMINDER": "CLIPS_CHANNEL_ATTACH_REMINDER"
         },
-        "hideHotspot": "function o(e){n.default.track(u.AnalyticEvents.HOTSPOT_HIDDEN,{hotspot_location:e}),r.default.wait(()=>{r.default.dispatch({type:\"HOTSPOT_HIDE\",location:e})})}",
-        "setHotspotOverride": "function s(e,t){r.default.dispatch({type:\"HOTSPOT_OVERRIDE_SET\",location:e,enabled:t})}",
-        "clearHotspotOverride": "function l(e){r.default.dispatch({type:\"HOTSPOT_OVERRIDE_CLEAR\",location:e})}"
+        "hideHotspot": "function s(e){i.default.track(a.AnalyticEvents.HOTSPOT_HIDDEN,{hotspot_location:e}),l.default.wait(()=>{l.default.dispatch({type:\"HOTSPOT_HIDE\",location:e})})}",
+        "setHotspotOverride": "function r(e,t){l.default.dispatch({type:\"HOTSPOT_OVERRIDE_SET\",location:e,enabled:t})}",
+        "clearHotspotOverride": "function o(e){l.default.dispatch({type:\"HOTSPOT_OVERRIDE_CLEAR\",location:e})}"
     }
 }

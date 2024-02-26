@@ -2,7 +2,7 @@
     "exports": {
         "default": {
             "type": {
-                "render": "function(e,t){return(0,l.jsx)(g.default,{contentTypes:x,children:n=>{let{visibleContent:i,markAsDismissed:a}=n;return(0,l.jsx)(A,{...e,innerRef:t,visibleContent:i,markAsDismissed:()=>a(v.ContentDismissActionType.UNKNOWN)})}})}"
+                "render": "function(e,t){return(0,l.jsx)(g.default,{contentTypes:y,children:n=>{let{visibleContent:i,markAsDismissed:a}=n;return(0,l.jsx)(A,{...e,innerRef:t,visibleContent:i,markAsDismissed:()=>a(v.ContentDismissActionType.UNKNOWN)})}})}"
             },
             "compare": null
         }
