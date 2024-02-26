@@ -7839,7 +7839,7 @@
             "getMutableGuildChannelsForGuild": "getMutableGuildChannelsForGuild(e){var t;return B(e,1,\"getMutableGuildChannelsForGuild\"),null!==(t=N[e])&&void 0!==t?t:A}",
             "getSortedPrivateChannels": "getSortedPrivateChannels(){return r(O).values().sort((e,t)=>m.default.compare(e.lastMessageId,t.lastMessageId)).reverse().value()}",
             "getDMFromUserId": "getDMFromUserId(e){if(null!=e)return P[e]}",
-            "getDMUserIds": "getDMUserIds(){return Object.keys(P)}",
+            "getDMUserIds": "getDMUserIds(){return m.default.keys(P)}",
             "getPrivateChannelsVersion": "getPrivateChannelsVersion(){return L}",
             "getGuildChannelsVersion": "getGuildChannelsVersion(e){var t;return null!==(t=b[e])&&void 0!==t?t:0}",
             "getAllThreadsForParent": "getAllThreadsForParent(e){return r.values(y).filter(t=>t.parent_id===e)}",

@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function l(e){let{text:a=r.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,className:t}=e;return(0,s.jsx)(i.Tooltip,{text:a,children:e=>(0,s.jsx)(i.Clickable,{...e,children:(0,s.jsx)(c.default,{className:n(o.nitroWheel,t)})})})}"
+        "default": "function f(e){let{text:a=r.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,className:t}=e;return(0,s.jsx)(i.Tooltip,{text:a,children:e=>(0,s.jsx)(i.Clickable,{...e,children:(0,s.jsx)(c.default,{className:n(o.nitroWheel,t)})})})}"
     }
 }

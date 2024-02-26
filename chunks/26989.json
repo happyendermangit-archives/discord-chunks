@@ -1,7 +1,7 @@
 {
     "exports": {
-        "getUserIdFromCommunicationDisabledUserKey": "function G(e){return e.split(\"-\")[1]}",
-        "getGuildIdFromCommunicationDisabledUserKey": "function w(e){return e.split(\"-\")[0]}",
+        "getUserIdFromCommunicationDisabledUserKey": "function w(e){return e.split(\"-\")[1]}",
+        "getGuildIdFromCommunicationDisabledUserKey": "function k(e){return e.split(\"-\")[0]}",
         "default": {
             "_changeCallbacks": {
                 "listeners": {
@@ -7829,25 +7829,25 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_28",
-            "initialize": "initialize(){this.waitFor(m.default,_.default,E.default)}",
-            "getMutableAllGuildsAndMembers": "getMutableAllGuildsAndMembers(){return I}",
-            "memberOf": "memberOf(e){return a(I).toPairs().filter(t=>{let[n,i]=t;return null!=i[e]}).map(e=>{let[t]=e;return t}).value()}",
-            "getNicknameGuildsMapping": "getNicknameGuildsMapping(e){let t={};for(let i in I){var n;let r=I[i],s=null===(n=r[e])||void 0===n?void 0:n.nick;null!=s&&(!Object.prototype.hasOwnProperty.call(t,s)&&(t[s]=[]),t[s].push(i))}return t}",
+            "initialize": "initialize(){this.waitFor(T.default,S.default,E.default)}",
+            "getMutableAllGuildsAndMembers": "getMutableAllGuildsAndMembers(){return C}",
+            "memberOf": "memberOf(e){return a(C).toPairs().filter(t=>{let[n,i]=t;return null!=i[e]}).map(e=>{let[t]=e;return t}).value()}",
+            "getNicknameGuildsMapping": "getNicknameGuildsMapping(e){let t={};for(let i in C){var n;let r=C[i],s=null===(n=r[e])||void 0===n?void 0:n.nick;null!=s&&(!Object.prototype.hasOwnProperty.call(t,s)&&(t[s]=[]),t[s].push(i))}return t}",
             "getNicknames": "getNicknames(e){return Object.keys(this.getNicknameGuildsMapping(e))}",
-            "isMember": "isMember(e,t){if(null==e||null==t)return!1;let n=I[e];return null!=n&&null!=n[t]}",
-            "isGuestOrLurker": "isGuestOrLurker(e,t){var n;if(null==e||null==t)return!1;let i=I[e];return null!=i&&(null===(n=i[t])||void 0===n?void 0:n.joinedAt)==null}",
-            "isCurrentUserGuest": "isCurrentUserGuest(e){if(null==e)return!1;let t=_.default.getId(),n=I[e];if(null==n||null==n[t])return!1;let i=n[t].flags;return null!=i&&(0,p.hasFlag)(i,T.GuildMemberFlags.IS_GUEST)}",
-            "getMemberIds": "getMemberIds(e){if(null==e)return[];let t=I[e];return null==t?[]:Object.keys(t)}",
-            "getMembers": "getMembers(e){if(null==e)return[];let t=I[e];return null==t?[]:Object.values(t)}",
-            "getTrueMember": "getTrueMember(e,t){let n=I[e];return null!=n?n[t]:null}",
-            "getMember": "getMember(e,t){let n=this.getTrueMember(e,t);if(null!=n&&t===_.default.getId()&&(E.default.isViewingRoles(e)||E.default.isFullServerPreview(e))){var i;return null!==(i=C[e])&&void 0!==i?i:n}return n}",
-            "getSelfMember": "getSelfMember(e){return this.getMember(e,_.default.getId())}",
+            "isMember": "isMember(e,t){if(null==e||null==t)return!1;let n=C[e];return null!=n&&null!=n[t]}",
+            "isGuestOrLurker": "isGuestOrLurker(e,t){var n;if(null==e||null==t)return!1;let i=C[e];return null!=i&&(null===(n=i[t])||void 0===n?void 0:n.joinedAt)==null}",
+            "isCurrentUserGuest": "isCurrentUserGuest(e){if(null==e)return!1;let t=S.default.getId(),n=C[e];if(null==n||null==n[t])return!1;let i=n[t].flags;return null!=i&&(0,p.hasFlag)(i,g.GuildMemberFlags.IS_GUEST)}",
+            "getMemberIds": "getMemberIds(e){if(null==e)return[];let t=C[e];return null==t?[]:_.default.keys(t)}",
+            "getMembers": "getMembers(e){if(null==e)return[];let t=C[e];return null==t?[]:Object.values(t)}",
+            "getTrueMember": "getTrueMember(e,t){let n=C[e];return null!=n?n[t]:null}",
+            "getMember": "getMember(e,t){let n=this.getTrueMember(e,t);if(null!=n&&t===S.default.getId()&&(E.default.isViewingRoles(e)||E.default.isFullServerPreview(e))){var i;return null!==(i=v[e])&&void 0!==i?i:n}return n}",
+            "getSelfMember": "getSelfMember(e){return this.getMember(e,S.default.getId())}",
             "getNick": "getNick(e,t){if(null==e||null==t)return null;let n=this.getMember(e,t);return null!=n?n.nick:null}",
-            "getCommunicationDisabledUserMap": "getCommunicationDisabledUserMap(){return v}",
-            "getCommunicationDisabledVersion": "getCommunicationDisabledVersion(){return R}",
-            "getPendingRoleUpdates": "getPendingRoleUpdates(e){var t;return null!==(t=D[e])&&void 0!==t?t:y}",
-            "getMemberRoleWithPendingUpdates": "getMemberRoleWithPendingUpdates(e,t){var n,i;let r=null!==(i=null===(n=this.getMember(e,t))||void 0===n?void 0:n.roles)&&void 0!==i?i:[],s=D[e];return null==s?r:a.difference(a.union(r,s.added),s.removed)}",
-            "getMemberVersion": "getMemberVersion(){return N}"
+            "getCommunicationDisabledUserMap": "getCommunicationDisabledUserMap(){return A}",
+            "getCommunicationDisabledVersion": "getCommunicationDisabledVersion(){return N}",
+            "getPendingRoleUpdates": "getPendingRoleUpdates(e){var t;return null!==(t=y[e])&&void 0!==t?t:P}",
+            "getMemberRoleWithPendingUpdates": "getMemberRoleWithPendingUpdates(e,t){var n,i;let r=null!==(i=null===(n=this.getMember(e,t))||void 0===n?void 0:n.roles)&&void 0!==i?i:[],s=y[e];return null==s?r:a.difference(a.union(r,s.added),s.removed)}",
+            "getMemberVersion": "getMemberVersion(){return O}"
         }
     }
 }

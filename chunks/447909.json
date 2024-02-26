@@ -37,7 +37,7 @@
             "_handleLogout": "()=>{this.rebootWebworker()}",
             "_handleConnectionOpen": "()=>{setTimeout(()=>{let e=p.default.getCurrentUser();if(null==e)return;let t=y(e),s={[t.id]:t};Object.values(p.default.getUsers()).forEach(e=>{s[e.id]=y(e)});let l=d.default.getMutableAllGuildsAndMembers();for(let e in l)for(let t in l[e]){var u,i;let n=s[t],r=null!==(i=null===(u=l[e][t])||void 0===u?void 0:u.nick)&&void 0!==i?i:R.default.getGlobalName(n);null!=n&&(n[e]=null!=r&&\"\"!==r?r:null)}this.updateUsers(Object.values(s))},3e3)}",
             "_handleConnectionOpenSupplemental": "e=>{let{guilds:t}=e;setTimeout(()=>{let e=n.flatMap(t,e=>g(e.members,e.id));this.updateUsers(e)},3e3)}",
-            "_handleOverlayInitialize": "e=>{let{users:t,guildMembers:s}=e,l=new Map;for(let e of t)l.set(e.id,y(e));let u=f.default.keys(s);for(let e of u){let t=s[e];if(null==t)continue;let u=Object.keys(t);for(let s of u){let u=l.get(s),i=t[s];null!=u&&null!=i&&null!=i.nick&&(E(u,e,i.nick),l.set(s,u))}}this.updateUsers(Array.from(l.values())),l.clear()}",
+            "_handleOverlayInitialize": "e=>{let{users:t,guildMembers:s}=e,l=new Map;for(let e of t)l.set(e.id,y(e));let u=f.default.keys(s);for(let e of u){let t=s[e];if(null==t)continue;let u=f.default.keys(t);for(let s of u){let u=l.get(s),i=t[s];null!=u&&null!=i&&null!=i.nick&&(E(u,e,i.nick),l.set(s,u))}}this.updateUsers(Array.from(l.values())),l.clear()}",
             "_handleCurrentUserUpdate": "e=>{let{user:t}=e,s=y(t);null!=s&&this.updateUsers([s])}",
             "_handleGuildCreate": "e=>{let{guild:t}=e,{members:s}=t;this.updateUsers(g(s,t.id))}",
             "_handleGuildMembersChunk": "e=>{let{members:t,guildId:s}=e;this.updateUsers(g(t,s))}",

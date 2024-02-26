@@ -106,6 +106,7 @@
             "isLurker": "isLurker(){return null==this.joinedAt}",
             "hasFeature": "hasFeature(e){return this.features.has(e)}",
             "getRole": "getRole(e){return this.roles[e]}",
+            "getEveryoneRoleId": "getEveryoneRoleId(){return o.default.castGuildIdAsEveryoneGuildRoleId(this.id)}",
             "getMaxEmojiSlots": "getMaxEmojiSlots(){return Math.max(this.hasFeature(u.GuildFeatures.MORE_EMOJI)?200:c.EMOJI_MAX_SLOTS,d.BoostedGuildFeatures[this.premiumTier].limits.emoji)}",
             "getMaxRoleSubscriptionEmojiSlots": "getMaxRoleSubscriptionEmojiSlots(){return 25}",
             "getMaxSoundboardSlots": "getMaxSoundboardSlots(){return d.BoostedGuildFeatures[this.premiumTier].limits.soundboardSounds}",

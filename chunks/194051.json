@@ -7827,11 +7827,11 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_242",
-            "getBroadcasts": "getBroadcasts(){return S.values(m.BROADCASTS_BY_VALIDITY(2))}",
-            "getBroadcastsToValidateChannels": "getBroadcastsToValidateChannels(){return S.values(m.BROADCASTS_BY_VALIDITY(1))}",
-            "getBroadcastByChannel": "getBroadcastByChannel(e){return S.values(m.BROADCASTS_BY_CHANNEL_ID(e))[0]}",
-            "getBroadcastByUser": "getBroadcastByUser(e){return S.get(e)}",
-            "getUserIdsToValidate": "getUserIdsToValidate(){return p}"
+            "getBroadcasts": "getBroadcasts(){return g.values(S.BROADCASTS_BY_VALIDITY(2))}",
+            "getBroadcastsToValidateChannels": "getBroadcastsToValidateChannels(){return g.values(S.BROADCASTS_BY_VALIDITY(1))}",
+            "getBroadcastByChannel": "getBroadcastByChannel(e){return g.values(S.BROADCASTS_BY_CHANNEL_ID(e))[0]}",
+            "getBroadcastByUser": "getBroadcastByUser(e){return g.get(e)}",
+            "getUserIdsToValidate": "getUserIdsToValidate(){return m}"
         }
     }
 }

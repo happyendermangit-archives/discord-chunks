@@ -7827,19 +7827,19 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_81",
-            "initialize": "initialize(){this.waitFor(f.default,l.default)}",
-            "setCurrentUserOnConnectionOpen": "setCurrentUserOnConnectionOpen(e,t){h[f.default.getId()]=e,v[f.default.getId()]=t}",
-            "getStatus": "getStatus(e){var t,n;let s=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:c.StatusTypes.OFFLINE,r=_.default.getUser(e);if(null!=r&&r.hasFlag(c.UserFlags.BOT_HTTP_INTERACTIONS)&&(i=c.StatusTypes.UNKNOWN),null==r?void 0:r.isClyde())return c.StatusTypes.ONLINE;if(null==s)return null!==(t=h[e])&&void 0!==t?t:i;let a=y(e,s);return null!==(n=null==a?void 0:a.status)&&void 0!==n?n:i}",
-            "getActivities": "getActivities(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;if(null==t){var n;return null!==(n=v[e])&&void 0!==n?n:g}let s=y(e,t);return null==s||null==s.activities?g:s.activities}",
-            "getPrimaryActivity": "getPrimaryActivity(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,n=this.getActivities(e,t).filter(e=>e.type!==c.ActivityTypes.HANG_STATUS);return n[0]}",
-            "getAllApplicationActivities": "getAllApplicationActivities(e){let t=[];for(let n of Object.keys(v)){let s=v[n];for(let i of s)i.application_id===e&&t.push({userId:n,activity:i})}return t}",
+            "initialize": "initialize(){this.waitFor(_.default,l.default)}",
+            "setCurrentUserOnConnectionOpen": "setCurrentUserOnConnectionOpen(e,t){v[_.default.getId()]=e,E[_.default.getId()]=t}",
+            "getStatus": "getStatus(e){var t,n;let s=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:g.StatusTypes.OFFLINE,r=c.default.getUser(e);if(null!=r&&r.hasFlag(g.UserFlags.BOT_HTTP_INTERACTIONS)&&(i=g.StatusTypes.UNKNOWN),null==r?void 0:r.isClyde())return g.StatusTypes.ONLINE;if(null==s)return null!==(t=v[e])&&void 0!==t?t:i;let a=T(e,s);return null!==(n=null==a?void 0:a.status)&&void 0!==n?n:i}",
+            "getActivities": "getActivities(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;if(null==t){var n;return null!==(n=E[e])&&void 0!==n?n:m}let s=T(e,t);return null==s||null==s.activities?m:s.activities}",
+            "getPrimaryActivity": "getPrimaryActivity(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,n=this.getActivities(e,t).filter(e=>e.type!==g.ActivityTypes.HANG_STATUS);return n[0]}",
+            "getAllApplicationActivities": "getAllApplicationActivities(e){let t=[];for(let n of f.default.keys(E)){let s=E[n];for(let i of s)i.application_id===e&&t.push({userId:n,activity:i})}return t}",
             "getApplicationActivity": "getApplicationActivity(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;return this.findActivity(e,e=>e.application_id===t,n)}",
             "findActivity": "findActivity(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;return this.getActivities(e,n).find(t)}",
-            "getActivityMetadata": "getActivityMetadata(e){return p[e]}",
-            "getUserIds": "getUserIds(){return Object.keys(v)}",
-            "isMobileOnline": "isMobileOnline(e){let t=E[e];return null!=t&&t[c.ClientTypes.MOBILE]===c.StatusTypes.ONLINE&&t[c.ClientTypes.DESKTOP]!==c.StatusTypes.ONLINE}",
-            "getClientStatus": "getClientStatus(e){return E[e]}",
-            "getState": "getState(){return{presencesForGuilds:m,statuses:h,activities:v,activityMetadata:p,clientStatuses:E}}"
+            "getActivityMetadata": "getActivityMetadata(e){return y[e]}",
+            "getUserIds": "getUserIds(){return f.default.keys(E)}",
+            "isMobileOnline": "isMobileOnline(e){let t=p[e];return null!=t&&t[g.ClientTypes.MOBILE]===g.StatusTypes.ONLINE&&t[g.ClientTypes.DESKTOP]!==g.StatusTypes.ONLINE}",
+            "getClientStatus": "getClientStatus(e){return p[e]}",
+            "getState": "getState(){return{presencesForGuilds:h,statuses:v,activities:E,activityMetadata:y,clientStatuses:p}}"
         }
     }
 }

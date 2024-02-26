@@ -7827,19 +7827,19 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_37",
-            "initialize": "initialize(){this.waitFor(o.default)}",
-            "isFriend": "isFriend(e){return u[e]===l.RelationshipTypes.FRIEND}",
-            "isBlocked": "isBlocked(e){return u[e]===l.RelationshipTypes.BLOCKED}",
-            "getPendingCount": "getPendingCount(){return f}",
-            "getOutgoingCount": "getOutgoingCount(){return E}",
-            "getFriendCount": "getFriendCount(){return p}",
-            "getRelationshipCount": "getRelationshipCount(){return h}",
-            "getRelationships": "getRelationships(){return u}",
-            "getRelationshipType": "getRelationshipType(e){let t=u[e];return null!=t?t:l.RelationshipTypes.NONE}",
-            "getNickname": "getNickname(e){let t=c[e];return t}",
-            "getSince": "getSince(e){return d[e]}",
-            "getSinces": "getSinces(){return d}",
-            "getFriendIDs": "getFriendIDs(){return Object.keys(u).filter(e=>u[e]===l.RelationshipTypes.FRIEND)}"
+            "initialize": "initialize(){this.waitFor(l.default)}",
+            "isFriend": "isFriend(e){return c[e]===u.RelationshipTypes.FRIEND}",
+            "isBlocked": "isBlocked(e){return c[e]===u.RelationshipTypes.BLOCKED}",
+            "getPendingCount": "getPendingCount(){return E}",
+            "getOutgoingCount": "getOutgoingCount(){return p}",
+            "getFriendCount": "getFriendCount(){return h}",
+            "getRelationshipCount": "getRelationshipCount(){return _}",
+            "getRelationships": "getRelationships(){return c}",
+            "getRelationshipType": "getRelationshipType(e){let t=c[e];return null!=t?t:u.RelationshipTypes.NONE}",
+            "getNickname": "getNickname(e){let t=d[e];return t}",
+            "getSince": "getSince(e){return f[e]}",
+            "getSinces": "getSinces(){return f}",
+            "getFriendIDs": "getFriendIDs(){return o.default.keys(c).filter(e=>c[e]===u.RelationshipTypes.FRIEND)}"
         }
     }
 }
