@@ -18,6 +18,7 @@
         "calculatePercentComplete": "function R(e){if(null==e.userStatus)return 0;let{streamProgressSeconds:t,completedAt:n}=e.userStatus;if(null!=n)return 1;let{streamDurationRequirementMinutes:s}=e.config;return Math.min(t/60/s,1)}",
         "getContextualEntrypointHeading": "function U(e){var t,n;if((null===(t=e.userStatus)||void 0===t?void 0:t.completedAt)!=null)return a.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;if((null===(n=e.userStatus)||void 0===n?void 0:n.enrolledAt)!=null){let t=R(e);return t>=.75?a.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE:t>=.45&&t<=.55?a.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY:t>0?a.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED:a.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED}return a.default.Messages.QUESTS_TITLE.format({questName:e.config.messages.questName})}",
         "isDismissible": "function h(e){return e in r.DismissibleQuestContentFlags}",
-        "isDismissed": "function m(e,t){return(0,s.hasFlag)(e.dismissedQuestContent,r.DismissibleQuestContentFlags[t])}"
+        "isDismissed": "function m(e,t){return(0,s.hasFlag)(e.dismissedQuestContent,r.DismissibleQuestContentFlags[t])}",
+        "includesTarget": "function O(e,t){return e.targetedContent.includes(t)}"
     }
 }
