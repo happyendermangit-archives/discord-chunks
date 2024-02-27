@@ -8,7 +8,9 @@
             "TRACK": "track",
             "ARTIST": "artist",
             "ALBUM": "album",
-            "PLAYLIST": "playlist"
+            "PLAYLIST": "playlist",
+            "EPISODE": "episode",
+            "SHOW": "show"
         },
         "SpotifyActionTypes": {
             "USER_ACTIVITY_PLAY": "user_activity_play",
@@ -34,6 +36,7 @@
             "INSTALL_ATTRIBUTION": "e=>\"https://app.adjust.com/bdyga9?campaign=\".concat(e)",
             "APP_STORE": "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
             "IOS_APP_STORE": "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
-        }
+        },
+        "getSpotifyResourceType": "function E(e){if(\"string\"!=typeof e)return null;switch(e){case\"track\":return\"track\";case\"artist\":return\"artist\";case\"album\":return\"album\";case\"playlist\":return\"playlist\";case\"episode\":return\"episode\";case\"show\":return\"show\";default:return null}}"
     }
 }

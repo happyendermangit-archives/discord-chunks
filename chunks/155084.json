@@ -4,7 +4,7 @@
             "_metrics": [],
             "_intervalId": 2,
             "increment": "increment(e){let _=arguments.length>1&&void 0!==arguments[1]&&arguments[1],{name:E,tags:o}=e,i={name:E,tags:(0,r.getGlobalTagsArray)()};null!=o&&o.forEach(e=>{i.tags.push(e)});let I=function(){if((0,n.isWeb)())return\"web\";{let e=(0,n.getPlatformName)();return a.has(e)?e:null}}();null!=I&&i.tags.push(\"platform:\".concat(I));let s=function(){let e=\"{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}\";return t.ReleaseChannelsSets.ALL.has(e)?e:null}();null!=s&&i.tags.push(\"release_channel:\".concat(s)),this._metrics.push(i),(_||this._metrics.length>=100)&&this._flush()}",
-            "_flush": "_flush(){if(this._metrics.length>0){let e=[...this._metrics];o.default.post({url:i.Endpoints.METRICS,body:{metrics:e,client_info:{built_at:\"1709062040269\",build_number:\"269325\"}},retries:1}).catch(_=>{this._metrics.length+e.length<100&&(this._metrics=[...this._metrics,...e])})}this._metrics=[]}"
+            "_flush": "_flush(){if(this._metrics.length>0){let e=[...this._metrics];o.default.post({url:i.Endpoints.METRICS,body:{metrics:e,client_info:{built_at:\"1709063213403\",build_number:\"269334\"}},retries:1}).catch(_=>{this._metrics.length+e.length<100&&(this._metrics=[...this._metrics,...e])})}this._metrics=[]}"
         }
     }
 }
