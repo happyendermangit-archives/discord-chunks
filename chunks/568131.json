@@ -1,7 +1,7 @@
 {
     "exports": {
-        "fetchLibrary": "async function u(){try{let e=await (0,a.httpGetWithCountryCodeQuery)({url:l.Endpoints.LIBRARY,oldFormErrors:!0},!1);i.default.dispatch({type:\"LIBRARY_FETCH_SUCCESS\",libraryApplications:e.body})}catch(e){i.default.dispatch({type:\"LIBRARY_FETCH_FAIL\",error:e})}}",
-        "createTestModeLibraryApplications": "async function o(e){let t=e.primarySkuId;if(null==t)return;let n=await s.default.get({url:l.Endpoints.APPLICATION_BRANCH_LIST(e.id),oldFormErrors:!0}).then(e=>e.body),a=n.map(n=>r.default.createForTestMode({id:e.id,skuId:t,branch:n}));i.default.dispatch({type:\"LIBRARY_APPLICATIONS_TEST_MODE_ENABLED\",libraryApplications:a})}",
+        "fetchLibrary": "async function l(){try{let e=await (0,a.httpGetWithCountryCodeQuery)({url:u.Endpoints.LIBRARY,oldFormErrors:!0},!1);i.default.dispatch({type:\"LIBRARY_FETCH_SUCCESS\",libraryApplications:e.body})}catch(e){i.default.dispatch({type:\"LIBRARY_FETCH_FAIL\",error:e})}}",
+        "createTestModeLibraryApplications": "async function o(e){let t=e.primarySkuId;if(null==t)return;let n=await s.default.get({url:u.Endpoints.APPLICATION_BRANCH_LIST(e.id),oldFormErrors:!0}).then(e=>e.body),a=n.map(n=>r.default.createForTestMode({id:e.id,skuId:t,branch:n}));i.default.dispatch({type:\"LIBRARY_APPLICATIONS_TEST_MODE_ENABLED\",libraryApplications:a})}",
         "setActiveLaunchOptionId": "function d(e,t,n){i.default.dispatch({type:\"LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE\",applicationId:e,branchId:t,launchOptionId:n})}"
     }
 }

@@ -4490,7 +4490,8 @@
                                     "QUESTS_DISMISS_CONTENT_SUCCESS": "e=>t(e)",
                                     "QUESTS_DISMISS_CONTENT_FAILURE": "e=>t(e)",
                                     "STREAM_CLOSE": "e=>t(e)",
-                                    "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE": "e=>t(e)"
+                                    "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE": "e=>t(e)",
+                                    "QUESTS_PREVIEW_UPDATE_SUCCESS": "e=>t(e)"
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
