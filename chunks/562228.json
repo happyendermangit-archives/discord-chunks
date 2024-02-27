@@ -7,6 +7,7 @@
         "useCanPostImagePolls": "function f(){return!1}",
         "isAnswerFilled": "function _(e,t){return t===l.PollLayoutTypes.IMAGE_ONLY_ANSWERS?null!=e.image:null!=e.text&&e.text.length>0}",
         "isIncompleteAnswer": "function g(e,t){return t===l.PollLayoutTypes.DEFAULT&&null!=e.image&&(null==e.text||0===e.text.length)}",
-        "createPollServerDataFromCreateRequest": "function h(e){var t,n;if(null==e)return;let a=null==e?void 0:null===(t=e.answers)||void 0===t?void 0:t.map((e,t)=>{var n,a,l;let s=null===(n=e.poll_media)||void 0===n?void 0:n.emoji,i={...e.poll_media,emoji:null!=s?{id:null!==(a=s.id)&&void 0!==a?a:null,name:null!==(l=s.name)&&void 0!==l?l:\"\"}:void 0};return{...e,answer_id:t+1,poll_media:i}});let l=(null==e?void 0:e.duration)!=null?(n=e.duration,new Date(Date.now()+n*i.default.Millis.HOUR).toISOString()):\"0\";return{...e,expiry:l,answers:a}}"
+        "createPollServerDataFromCreateRequest": "function h(e){var t,n;if(null==e)return;let a=null==e?void 0:null===(t=e.answers)||void 0===t?void 0:t.map((e,t)=>{var n,a,l;let s=null===(n=e.poll_media)||void 0===n?void 0:n.emoji,i={...e.poll_media,emoji:null!=s?{id:null!==(a=s.id)&&void 0!==a?a:null,name:null!==(l=s.name)&&void 0!==l?l:\"\"}:void 0};return{...e,answer_id:t+1,poll_media:i}});let l=(null==e?void 0:e.duration)!=null?(n=e.duration,new Date(Date.now()+n*i.default.Millis.HOUR).toISOString()):\"0\";return{...e,expiry:l,answers:a}}",
+        "getTotalVotes": "function m(e){return e.reduce((e,t)=>{var n,a;return e+(null!==(a=null===(n=t.count_details)||void 0===n?void 0:n.vote)&&void 0!==a?a:0)},0)}"
     }
 }
