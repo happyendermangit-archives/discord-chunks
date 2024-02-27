@@ -8,7 +8,7 @@
             "CUSTOM_STYLE": 1,
             "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD": 2
         },
-        "getGiftExperience": "e=>a.isMobile||a.isTablet?0:null!=e?2:1",
+        "getGiftExperience": "(e,t)=>a.isMobile||a.isTablet?0:null!=e||t?2:1",
         "shouldShowCustomGiftExperience": "e=>0!==M(e)",
         "makeComboId": "function L(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,n=arguments.length>2?arguments[2]:void 0;return\"\".concat(e,\":\").concat(null!=t?t:\"\",\":\").concat(null!=n?n:\"\")}",
         "parseComboId": "function U(e){let[t,n,s]=e.split(\":\");return{skuId:t,subscriptionPlanId:\"\"===n?null:n,giftStyle:\"\"!==s&&null!=s?Number.parseInt(s):void 0}}",
