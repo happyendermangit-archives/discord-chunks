@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "confirmNoSharedServerSubscribeWarningModal": "function a(e){let{application:t,onConfirm:a,onCancel:s}=e;return(0,i.openModalLazy)(async()=>{let{ConfirmNoSharedServerSubscribeWarningModal:e}=await n.el(\"754768\").then(n.bind(n,\"754768\"));return n=>(0,l.jsx)(e,{...n,application:t,onConfirm:a,onCancel:s})},{modalKey:\"application-user-subscribe-no-shared-server-warning\"}),Promise.resolve()}"
+    }
+}

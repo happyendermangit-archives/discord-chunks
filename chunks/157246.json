@@ -4,6 +4,6 @@
             "CLASSIC": "classic",
             "DETUNE": "detune"
         },
-        "getSoundpackOptionsAprilFools2023": "function i(){return[{value:\"classic\",label:a.default.Messages.SOUNDPACK_CLASSIC_LABEL},{value:\"detune\",label:a.default.Messages.SOUNDPACK_DETUNE_LABEL}]}"
+        "getSoundpackOptionsAprilFools2023": "function a(){return[{value:\"classic\",label:u.default.Messages.SOUNDPACK_CLASSIC_LABEL},{value:\"detune\",label:u.default.Messages.SOUNDPACK_DETUNE_LABEL}]}"
     }
 }

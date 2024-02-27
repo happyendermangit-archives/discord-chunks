@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getOrCreateAudioContext": "function i(){return null==s&&(s=new AudioContext),s}"
+    }
+}
