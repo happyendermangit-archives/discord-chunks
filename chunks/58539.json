@@ -2026,7 +2026,7 @@
                 "CARD_PRIMARY_BG": {
                     "category": "background",
                     "dark": {
-                        "raw": "PRIMARY_560",
+                        "raw": "PRIMARY_600",
                         "opacity": 1
                     },
                     "light": {
@@ -2084,7 +2084,7 @@
                 "CARD_SECONDARY_BG": {
                     "category": "background",
                     "dark": {
-                        "raw": "PRIMARY_560",
+                        "raw": "PRIMARY_630",
                         "opacity": 1
                     },
                     "light": {

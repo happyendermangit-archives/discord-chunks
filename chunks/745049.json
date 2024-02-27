@@ -1,5 +1,6 @@
 {
     "exports": {
+        "GUILD_EVENT_MAX_NAME_LENGTH": 100,
         "GUILD_EVENT_MAX_DESCRIPTION_LENGTH": 1000,
         "MAX_EVENT_LOCATION_LENGTH": 100,
         "ANALYTICS_GUILD_EVENTS_MODAL_NAME": "Guild Events Modal",

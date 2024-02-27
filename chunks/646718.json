@@ -741,6 +741,7 @@
             1,
             2,
             3
-        ]
+        ],
+        "CUSTOM_GIFT_MESSAGE_MAX_LENGTH": 190
     }
 }
