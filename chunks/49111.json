@@ -4672,6 +4672,8 @@
             "CHANNEL_ATTACH_MENU_USE_APPS_CLICKED": "channel_attach_menu_use_apps_clicked",
             "CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED": "channel_attach_menu_start_activity_clicked",
             "APP_LAUNCHER_SEARCH_QUERY_TYPED": "app_launcher_search_query_typed",
+            "APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED": "app_launcher_empty_state_encountered",
+            "APP_LAUNCHER_CLOSED": "app_launcher_closed",
             "COMMANDS_MIGRATION_TOOLTIP_DISMISSED": "commands_migration_tooltip_dismissed",
             "COMMANDS_MIGRATION_TOOLTIP_VIEWED": "commands_migration_tooltip_viewed",
             "POPULAR_APPLICATION_COMMAND_CLICKED": "popular_application_command_clicked",

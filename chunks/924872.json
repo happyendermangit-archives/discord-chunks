@@ -5,12 +5,12 @@
         "default": {
             "initializedCount": 0,
             "actions": {
-                "VOICE_CHANNEL_SELECT": "handleVoiceChannelSelect(e){let{channelId:t}=e;if(null!=t){let e=s.default.getChannel(t);(null==e?void 0:e.isGuildStageVoice())?S():(m.stop(),p=!1)}else m.stop(),p=!1}",
-                "LOGOUT": "handleLogout(){m.stop(),p=!1}",
-                "STAGE_MUSIC_MUTE": "handleMute(e){let{muted:t}=e;t?(m.pause(),p=!1):S()}",
-                "STAGE_MUSIC_PLAY": "handlePlay(e){let{play:t}=e;t?S():(m.pause(),p=!1)}",
+                "VOICE_CHANNEL_SELECT": "handleVoiceChannelSelect(e){let{channelId:t}=e;if(null!=t){let e=s.default.getChannel(t);(null==e?void 0:e.isGuildStageVoice())?S():(m.stop(),C=!1)}else m.stop(),C=!1}",
+                "LOGOUT": "handleLogout(){m.stop(),C=!1}",
+                "STAGE_MUSIC_MUTE": "handleMute(e){let{muted:t}=e;t?(m.pause(),C=!1):S()}",
+                "STAGE_MUSIC_PLAY": "handlePlay(e){let{play:t}=e;t?S():(m.pause(),C=!1)}",
                 "VOICE_STATE_UPDATES": "handleVoiceStateUpdates(){S()}",
-                "AUDIO_SET_OUTPUT_VOLUME": "handleSetOutputVolume(e){let{volume:t}=e;m.volume=C(t)}",
+                "AUDIO_SET_OUTPUT_VOLUME": "handleSetOutputVolume(e){let{volume:t}=e;m.volume=E(t)}",
                 "AUDIO_TOGGLE_SELF_DEAF": "handleToggleSelfDeaf(){S()}"
             },
             "stores": {
@@ -26,12 +26,12 @@
                 "size": 0,
                 "values": "function values() { [native code] }"
             },
-            "handleVoiceChannelSelect": "handleVoiceChannelSelect(e){let{channelId:t}=e;if(null!=t){let e=s.default.getChannel(t);(null==e?void 0:e.isGuildStageVoice())?S():(m.stop(),p=!1)}else m.stop(),p=!1}",
-            "handleLogout": "handleLogout(){m.stop(),p=!1}",
-            "handlePlay": "handlePlay(e){let{play:t}=e;t?S():(m.pause(),p=!1)}",
-            "handleMute": "handleMute(e){let{muted:t}=e;t?(m.pause(),p=!1):S()}",
+            "handleVoiceChannelSelect": "handleVoiceChannelSelect(e){let{channelId:t}=e;if(null!=t){let e=s.default.getChannel(t);(null==e?void 0:e.isGuildStageVoice())?S():(m.stop(),C=!1)}else m.stop(),C=!1}",
+            "handleLogout": "handleLogout(){m.stop(),C=!1}",
+            "handlePlay": "handlePlay(e){let{play:t}=e;t?S():(m.pause(),C=!1)}",
+            "handleMute": "handleMute(e){let{muted:t}=e;t?(m.pause(),C=!1):S()}",
             "handleVoiceStateUpdates": "handleVoiceStateUpdates(){S()}",
-            "handleSetOutputVolume": "handleSetOutputVolume(e){let{volume:t}=e;m.volume=C(t)}",
+            "handleSetOutputVolume": "handleSetOutputVolume(e){let{volume:t}=e;m.volume=E(t)}",
             "handleToggleSelfDeaf": "handleToggleSelfDeaf(){S()}"
         }
     }
