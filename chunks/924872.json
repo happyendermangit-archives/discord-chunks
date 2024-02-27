@@ -10,7 +10,7 @@
                 "STAGE_MUSIC_MUTE": "handleMute(e){let{muted:t}=e;t?(m.pause(),C=!1):S()}",
                 "STAGE_MUSIC_PLAY": "handlePlay(e){let{play:t}=e;t?S():(m.pause(),C=!1)}",
                 "VOICE_STATE_UPDATES": "handleVoiceStateUpdates(){S()}",
-                "AUDIO_SET_OUTPUT_VOLUME": "handleSetOutputVolume(e){let{volume:t}=e;m.volume=E(t)}",
+                "AUDIO_SET_OUTPUT_VOLUME": "handleSetOutputVolume(e){let{volume:t}=e;m.volume=p(t)}",
                 "AUDIO_TOGGLE_SELF_DEAF": "handleToggleSelfDeaf(){S()}"
             },
             "stores": {
@@ -31,7 +31,7 @@
             "handlePlay": "handlePlay(e){let{play:t}=e;t?S():(m.pause(),C=!1)}",
             "handleMute": "handleMute(e){let{muted:t}=e;t?(m.pause(),C=!1):S()}",
             "handleVoiceStateUpdates": "handleVoiceStateUpdates(){S()}",
-            "handleSetOutputVolume": "handleSetOutputVolume(e){let{volume:t}=e;m.volume=E(t)}",
+            "handleSetOutputVolume": "handleSetOutputVolume(e){let{volume:t}=e;m.volume=p(t)}",
             "handleToggleSelfDeaf": "handleToggleSelfDeaf(){S()}"
         }
     }

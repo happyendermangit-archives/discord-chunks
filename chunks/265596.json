@@ -7828,7 +7828,7 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_261",
-            "getFeed": "getFeed(e){return n.get(e)}"
+            "getFeed": "getFeed(e){return s.get(e)}"
         }
     }
 }

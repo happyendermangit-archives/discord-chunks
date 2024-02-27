@@ -4,7 +4,9 @@
         "EVERYONE_CHANNEL_ID": 0,
         "MemberListRowTypes": {
             "GROUP": "GROUP",
-            "MEMBER": "MEMBER"
+            "MEMBER": "MEMBER",
+            "CONTENT_INVENTORY": "CONTENT_INVENTORY",
+            "CONTENT_INVENTORY_GROUP": "CONTENT_INVENTORY_GROUP"
         },
         "default": {
             "_changeCallbacks": {
