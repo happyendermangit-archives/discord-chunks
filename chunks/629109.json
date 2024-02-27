@@ -37,8 +37,7 @@
             "setAV1Enabled": "setAV1Enabled(e){!g()&&s.default.dispatch({type:\"MEDIA_ENGINE_SET_AV1\",enabled:e})}",
             "setH265Enabled": "setH265Enabled(e){!g()&&s.default.dispatch({type:\"MEDIA_ENGINE_SET_H265\",enabled:e})}",
             "setAecDump": "setAecDump(e){!g()&&s.default.dispatch({type:\"MEDIA_ENGINE_SET_AEC_DUMP\",enabled:e})}",
-            "interact": "interact(){!g()&&s.default.dispatch({type:\"MEDIA_ENGINE_INTERACTION_REQUIRED\",required:!1})}",
-            "enableSoundshare": "enableSoundshare(){!g()&&s.default.dispatch({type:\"MEDIA_ENGINE_ENABLE_SOUNDSHARE\"})}"
+            "interact": "interact(){!g()&&s.default.dispatch({type:\"MEDIA_ENGINE_INTERACTION_REQUIRED\",required:!1})}"
         }
     }
 }

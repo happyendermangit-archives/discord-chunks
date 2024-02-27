@@ -6518,16 +6518,6 @@
             "AUTO": 1,
             "FULL": 2
         },
-        "SoundshareEnableState": {
-            "0": "NOT_ENABLED",
-            "1": "ENABLING",
-            "2": "ENABLED",
-            "3": "FAILED_TO_ENABLE",
-            "NOT_ENABLED": 0,
-            "ENABLING": 1,
-            "ENABLED": 2,
-            "FAILED_TO_ENABLE": 3
-        },
         "DEFAULT_NUM_REACTION_USERS": 100,
         "TOKEN_REGEX": {
             "exec": "function exec() { [native code] }",

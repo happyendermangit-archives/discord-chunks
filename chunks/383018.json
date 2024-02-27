@@ -1555,7 +1555,6 @@
                                     "MEDIA_ENGINE_SET_AEC_DUMP": "e=>t(e)",
                                     "CHANNEL_DELETE": "e=>t(e)",
                                     "MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET": "e=>t(e)",
-                                    "MEDIA_ENGINE_ENABLE_SOUNDSHARE": "e=>t(e)",
                                     "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS": "e=>t(e)",
                                     "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START": "e=>t(e)",
                                     "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR": "e=>t(e)",
