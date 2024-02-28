@@ -43,7 +43,7 @@
                     "isSupersetOf": "function isSupersetOf() { [native code] }",
                     "isDisjointFrom": "function isDisjointFrom() { [native code] }"
                 },
-                "changeSentinel": 21,
+                "changeSentinel": 13,
                 "isBatchEmitting": false,
                 "isDispatching": false,
                 "isPaused": false,
