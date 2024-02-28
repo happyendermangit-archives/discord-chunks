@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "formatUsername": "async function a(e){try{return await s.default.getSetting(\"USERNAME_PREFIX\",\"\")+e}catch(e){}return e}"
+    }
+}

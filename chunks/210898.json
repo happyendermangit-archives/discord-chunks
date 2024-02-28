@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getPomeloAttempt": "()=>a.getCurrentConfig({location:\"c22166_1\"},{autoTrackExposure:!1}).enabled"
+    }
+}

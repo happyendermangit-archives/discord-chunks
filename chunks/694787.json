@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "validateMultiAccountTokens": "function f(){let e=o.default.getId(),t=u.default.getUsers();t.forEach(async t=>{let n,{id:l}=t,i=s.default.getToken(l);if(null==i||\"\"===i){r.default.dispatch({type:\"MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE\",userId:l});return}r.default.dispatch({type:\"MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST\",userId:l});try{n=await a.default.get({url:d.Endpoints.ME,headers:{authorization:i},retries:3})}catch(t){let e=(null==t?void 0:t.status)===401||(null==t?void 0:t.status)===403;r.default.dispatch({type:e?\"MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE\":\"MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS\",userId:l});return}r.default.dispatch({type:e===l?\"CURRENT_USER_UPDATE\":\"USER_UPDATE\",user:n.body}),r.default.dispatch({type:\"MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS\",userId:l})})}",
+        "switchAccount": "function E(e,t){c.log(\"Switching account to \".concat(e),{switchSynchronously:t});let n=s.default.getToken(e);return null==n?(c.log(\"Switching accounts failed because there was no token\"),r.default.dispatch({type:\"MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE\",userId:e}),Promise.resolve()):l.default.switchAccountToken(n,t)}",
+        "removeAccount": "function h(e){r.default.dispatch({type:\"MULTI_ACCOUNT_REMOVE_ACCOUNT\",userId:e})}"
+    }
+}

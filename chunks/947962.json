@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "usePomeloDebounceDelay": "()=>a.useExperiment({location:\"52560d_1\"},{autoTrackExposure:!1}).delay"
+    }
+}

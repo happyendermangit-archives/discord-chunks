@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "createEventLocationClickHandler": "(e,l)=>{switch(null==e?void 0:e.entity_type){case D.GuildScheduledEventEntityTypes.STAGE_INSTANCE:return A(e,l);case D.GuildScheduledEventEntityTypes.VOICE:return G(e,l)}return()=>{}}",
+        "default": {
+            "type": "function(e){var l;let{guildScheduledEvent:n,guild:a,channel:u,isMember:r,recurrenceId:d,onAcceptInstantInvite:c,onTransitionToInviteChannel:m}=e,v=null!=d?d:null!=n?(0,j.getNextRecurrenceIdInEvent)(n):null,p=(null==n?void 0:n.recurrence_rule)==null||null==v||(0,j.isValidRecurrence)((0,S.recurrenceRuleFromServer)(null==n?void 0:n.recurrence_rule),v),E=(0,x.default)(n),h=s.useCallback(()=>{r&&null!=n&&(0,g.openGuildEventDetails)({eventId:n.id,recurrenceId:v})},[r,n,v]);if(null==n||!p)return null;let C=(0,f.isGuildScheduledEventActive)(n),I=(0,f.isGuildEventEnded)(n),_=n.entity_type===D.GuildScheduledEventEntityTypes.EXTERNAL;return(0,t.jsx)(N.default,{className:i({[y.clickable]:r}),children:(0,t.jsxs)(o.Clickable,{onClick:h,children:[null!=n.image&&(0,t.jsx)(R.default,{source:(0,L.default)(n),className:y.banner}),(0,t.jsx)(T.default,{name:n.name,description:null!==(l=n.description)&&void 0!==l?l:void 0,descriptionClassName:y.eventDescription,guildId:n.guild_id,creator:E,guildEventId:n.id,eventPreview:n,recurrenceId:v}),(0,t.jsxs)(\"div\",{className:y.footerContainer,children:[(0,t.jsx)(w,{guild:a,channel:u,guildScheduledEvent:n,isMember:r}),(0,t.jsx)(P,{isActive:C,isEnded:I,isMember:r,guildId:n.guild_id,guildScheduledEventId:n.id,recurrenceId:v,onAcceptInstantInvite:c,onTransitionToInviteChannel:m,isExternal:_})]})]})})}",
+            "compare": null
+        }
+    }
+}

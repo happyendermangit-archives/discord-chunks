@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{node:{children:t},onSelectChild:n}=e;if(null==t||0===t.length)return null;let l=t.map(e=>{let[t,l]=e;return(0,a.jsx)(i,{child:e,onClick:n},\"\".concat(t,\"+\").concat(l))});return(0,a.jsx)(\"div\",{className:s.childrenContainer,children:l})}"
+    }
+}

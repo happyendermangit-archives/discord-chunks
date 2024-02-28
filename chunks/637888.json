@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{var t;let{loop:n=!0,autoPlay:l=!0,setRef:u,className:o,onReady:c}=e,{theme:p}=(0,i.useThemeContext)(),{reducedMotion:m}=r.useContext(i.AccessibilityPreferencesContext),g=N;null!=T&&(g=T);let _=(0,a.isThemeDark)(p)?f.ThemeTypes.DARK:f.ThemeTypes.LIGHT,b=null!==(t=g[_])&&void 0!==t?t:g[f.ThemeTypes.DARK];return(0,s.jsx)(d.default,{ref:u,onLoadedData:c,className:o,loop:!m.enabled&&n,autoPlay:!m.enabled&&l,playsInline:!0,\"data-testid\":\"app-spinner\",children:b},p)}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "isInPomeloSuggestionsExperiment": "()=>a.getCurrentConfig({location:\"1907ae_1\"},{autoTrackExposure:!1}).enabled"
+    }
+}

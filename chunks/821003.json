@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "REMEDIATION_ELEMENT_TYPES": [
+            "block_users",
+            "leave_guild",
+            "delete_message"
+        ]
+    }
+}

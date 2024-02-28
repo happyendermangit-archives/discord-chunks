@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "NewUserTypes": {
+            "0": "MARKETING_UNCLAIMED",
+            "1": "INVITE_UNCLAIMED",
+            "2": "ORGANIC_REGISTERED",
+            "3": "ORGANIC_REGISTERED_GUILD_TEMPLATE",
+            "MARKETING_UNCLAIMED": 0,
+            "INVITE_UNCLAIMED": 1,
+            "ORGANIC_REGISTERED": 2,
+            "ORGANIC_REGISTERED_GUILD_TEMPLATE": 3
+        }
+    }
+}

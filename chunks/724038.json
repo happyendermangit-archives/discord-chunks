@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "async function _(e){let t=await g(e),n=(0,i.parseDynamicLink)(t);null!=n&&f.default.track(m.AnalyticEvents.DEEP_LINK_CLICKED,{fingerprint:(0,l.maybeExtractId)(n.fingerprint),attempt_id:n.attemptId,source:n.utmSource}),p.default.launch(t,e=>{!e&&(0,o.replaceWith)(d.default.fallbackRoute)})}"
+    }
+}

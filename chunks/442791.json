@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "LinkMarkupRule": {
+            "order": 17,
+            "requiredFirstCharacters": [
+                "["
+            ],
+            "match": "function(t,n){return n.inline?e.exec(t):null}",
+            "parse": "function(e,t,n){return{content:t(e[1],n),target:T(e[2]),title:e[3]}}",
+            "react": "function(e,t,n){return(0,a.jsx)(s.Anchor,{href:e.target,target:\"_blank\",children:t(e.content,n)})}",
+            "html": "function(e,t,n){var r={href:M(e.target),title:e.title};return v(\"a\",t(e.content,n),r)}"
+        }
+    }
+}

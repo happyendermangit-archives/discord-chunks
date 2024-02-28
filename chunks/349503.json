@@ -309,7 +309,7 @@
                 "_actionHandlers": {
                     "_orderedActionHandlers": {},
                     "_orderedCallbackTokens": null,
-                    "_lastID": 270,
+                    "_lastID": 276,
                     "_dependencyGraph": {
                         "nodes": {
                             "ID_1": {
@@ -4519,6 +4519,29 @@
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
                             "ID_251": {
+                                "name": "PomeloStore",
+                                "band": 2,
+                                "actionHandler": {
+                                    "POMELO_ATTEMPT_SUCCESS": "e=>t(e)",
+                                    "POMELO_ATTEMPT_FAILURE": "e=>t(e)",
+                                    "POMELO_SUGGESTIONS_RESET": "e=>t(e)",
+                                    "POMELO_SUGGESTIONS_SUCCESS": "e=>t(e)",
+                                    "POMELO_SUGGESTIONS_FETCH": "e=>t(e)",
+                                    "POMELO_REGISTRATION_SUGGESTIONS_SUCCESS": "e=>t(e)"
+                                },
+                                "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
+                            },
+                            "ID_252": {
+                                "name": "PhoneStore",
+                                "band": 2,
+                                "actionHandler": {
+                                    "PHONE_SET_COUNTRY_CODE": "e=>t(e)",
+                                    "CONNECTION_OPEN": "e=>t(e)",
+                                    "SET_LOCATION_METADATA": "e=>t(e)"
+                                },
+                                "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
+                            },
+                            "ID_253": {
                                 "name": "ChangelogStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4532,7 +4555,40 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_252": {
+                            "ID_254": {
+                                "name": "GiftCodeStore",
+                                "band": 2,
+                                "actionHandler": {
+                                    "CONNECTION_OPEN": "e=>t(e)",
+                                    "CHANNEL_SELECT": "e=>t(e)",
+                                    "GIFT_CODE_RESOLVE": "e=>t(e)",
+                                    "GIFT_CODE_RESOLVE_SUCCESS": "e=>t(e)",
+                                    "GIFT_CODE_RESOLVE_FAILURE": "e=>t(e)",
+                                    "GIFT_CODE_REDEEM": "e=>t(e)",
+                                    "GIFT_CODE_REDEEM_SUCCESS": "e=>t(e)",
+                                    "GIFT_CODE_REDEEM_FAILURE": "e=>t(e)",
+                                    "GIFT_CODE_REVOKE_SUCCESS": "e=>t(e)",
+                                    "GIFT_CODE_CREATE_SUCCESS": "e=>t(e)",
+                                    "GIFT_CODES_FETCH": "e=>t(e)",
+                                    "GIFT_CODES_FETCH_SUCCESS": "e=>t(e)",
+                                    "GIFT_CODES_FETCH_FAILURE": "e=>t(e)",
+                                    "MESSAGE_CREATE": "e=>t(e)",
+                                    "MESSAGE_UPDATE": "e=>t(e)",
+                                    "LOCAL_MESSAGES_LOADED": "e=>t(e)",
+                                    "LOAD_MESSAGES_SUCCESS": "e=>t(e)",
+                                    "LOAD_MESSAGES_AROUND_SUCCESS": "e=>t(e)",
+                                    "LOAD_RECENT_MENTIONS_SUCCESS": "e=>t(e)",
+                                    "LOAD_PINNED_MESSAGES_SUCCESS": "e=>t(e)",
+                                    "SEARCH_FINISH": "e=>t(e)",
+                                    "GIFT_CODE_UPDATE": "e=>t(e)",
+                                    "GUILD_FEED_FETCH_SUCCESS": "e=>t(e)",
+                                    "LOAD_THREADS_SUCCESS": "e=>t(e)",
+                                    "LOAD_ARCHIVED_THREADS_SUCCESS": "e=>t(e)",
+                                    "LOAD_FORUM_POSTS": "e=>t(e)"
+                                },
+                                "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
+                            },
+                            "ID_255": {
                                 "name": "LoginRequiredActionStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4545,7 +4601,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_253": {
+                            "ID_256": {
                                 "name": "ForumPostRecentMessageStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4559,7 +4615,15 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_254": {
+                            "ID_257": {
+                                "name": "GuildRoleConnectionEligibilityStore",
+                                "band": 2,
+                                "actionHandler": {
+                                    "GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS": "e=>t(e)"
+                                },
+                                "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
+                            },
+                            "ID_258": {
                                 "name": "MultiAccountStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4577,7 +4641,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_255": {
+                            "ID_259": {
                                 "name": "GuildHomeStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4592,7 +4656,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_256": {
+                            "ID_260": {
                                 "name": "GuildFeedSeenStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4600,7 +4664,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_257": {
+                            "ID_261": {
                                 "name": "GuildFeedStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4632,7 +4696,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_258": {
+                            "ID_262": {
                                 "name": "ActiveChannelsStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4648,7 +4712,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_259": {
+                            "ID_263": {
                                 "name": "o",
                                 "band": 2,
                                 "actionHandler": {
@@ -4660,7 +4724,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_260": {
+                            "ID_264": {
                                 "name": "MemberSafetyStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4696,7 +4760,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_261": {
+                            "ID_265": {
                                 "name": "MessageRemindersStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4706,7 +4770,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_262": {
+                            "ID_266": {
                                 "name": "ContentInventoryStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4715,7 +4779,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_263": {
+                            "ID_267": {
                                 "name": "StageMusicStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4725,7 +4789,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_264": {
+                            "ID_268": {
                                 "name": "GuildOnboardingMemberActionStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4738,7 +4802,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_265": {
+                            "ID_269": {
                                 "name": "NotificationSettingsStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4753,7 +4817,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_266": {
+                            "ID_270": {
                                 "name": "NativePermissionStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4761,7 +4825,16 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_267": {
+                            "ID_271": {
+                                "name": "DefaultRouteStore",
+                                "band": 2,
+                                "actionHandler": {
+                                    "SAVE_LAST_ROUTE": "e=>t(e)",
+                                    "SAVE_LAST_NON_VOICE_ROUTE": "e=>t(e)"
+                                },
+                                "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
+                            },
+                            "ID_272": {
                                 "name": "CategoryCollapseStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -4775,7 +4848,7 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_268": {
+                            "ID_273": {
                                 "name": "_",
                                 "band": 2,
                                 "actionHandler": {
@@ -4791,7 +4864,16 @@
                                 },
                                 "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
                             },
-                            "ID_269": {
+                            "ID_274": {
+                                "name": "AgeGateStore",
+                                "band": 2,
+                                "actionHandler": {
+                                    "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION": "e=>t(e)",
+                                    "LOGIN_SUCCESS": "e=>t(e)"
+                                },
+                                "storeDidChange": "e=>{(this._changeCallbacks.hasAny()||this._reactChangeCallbacks.hasAny())&&(s.default.markChanged(this),s.default.getIsPaused()&&null!=this._mustEmitChanges&&this._mustEmitChanges(e)&&s.default.resume(!1))}"
+                            },
+                            "ID_275": {
                                 "name": "GuildReadStateStore",
                                 "band": 2,
                                 "actionHandler": {
@@ -5118,7 +5200,13 @@
                                 "ID_266",
                                 "ID_267",
                                 "ID_268",
-                                "ID_269"
+                                "ID_269",
+                                "ID_270",
+                                "ID_271",
+                                "ID_272",
+                                "ID_273",
+                                "ID_274",
+                                "ID_275"
                             ],
                             "band.1": [
                                 "band.0"
@@ -6225,16 +6313,14 @@
                                 "band.1"
                             ],
                             "ID_251": [
-                                "band.1",
-                                "ID_19"
+                                "band.1"
                             ],
                             "ID_252": [
                                 "band.1"
                             ],
                             "ID_253": [
                                 "band.1",
-                                "ID_26",
-                                "ID_16"
+                                "ID_19"
                             ],
                             "ID_254": [
                                 "band.1"
@@ -6243,7 +6329,9 @@
                                 "band.1"
                             ],
                             "ID_256": [
-                                "band.1"
+                                "band.1",
+                                "ID_26",
+                                "ID_16"
                             ],
                             "ID_257": [
                                 "band.1"
@@ -6255,10 +6343,7 @@
                                 "band.1"
                             ],
                             "ID_260": [
-                                "band.1",
-                                "ID_7",
-                                "ID_28",
-                                "ID_16"
+                                "band.1"
                             ],
                             "ID_261": [
                                 "band.1"
@@ -6270,7 +6355,10 @@
                                 "band.1"
                             ],
                             "ID_264": [
-                                "band.1"
+                                "band.1",
+                                "ID_7",
+                                "ID_28",
+                                "ID_16"
                             ],
                             "ID_265": [
                                 "band.1"
@@ -6279,15 +6367,33 @@
                                 "band.1"
                             ],
                             "ID_267": [
+                                "band.1"
+                            ],
+                            "ID_268": [
+                                "band.1"
+                            ],
+                            "ID_269": [
+                                "band.1"
+                            ],
+                            "ID_270": [
+                                "band.1"
+                            ],
+                            "ID_271": [
+                                "band.1"
+                            ],
+                            "ID_272": [
                                 "band.1",
                                 "ID_26",
                                 "ID_73"
                             ],
-                            "ID_268": [
+                            "ID_273": [
                                 "band.1",
                                 "ID_26"
                             ],
-                            "ID_269": [
+                            "ID_274": [
+                                "band.1"
+                            ],
+                            "ID_275": [
                                 "band.1",
                                 "ID_26",
                                 "ID_72",
@@ -6572,7 +6678,13 @@
                                 "ID_266",
                                 "ID_267",
                                 "ID_268",
-                                "ID_269"
+                                "ID_269",
+                                "ID_270",
+                                "ID_271",
+                                "ID_272",
+                                "ID_273",
+                                "ID_274",
+                                "ID_275"
                             ],
                             "band.0": [
                                 "band.1"
@@ -6647,8 +6759,8 @@
                                 "ID_173",
                                 "ID_198",
                                 "ID_245",
-                                "ID_260",
-                                "ID_269"
+                                "ID_264",
+                                "ID_275"
                             ],
                             "ID_8": [
                                 "band.2"
@@ -6739,9 +6851,9 @@
                                 "ID_207",
                                 "ID_227",
                                 "ID_248",
-                                "ID_253",
-                                "ID_260",
-                                "ID_269"
+                                "ID_256",
+                                "ID_264",
+                                "ID_275"
                             ],
                             "ID_17": [
                                 "band.2"
@@ -6759,7 +6871,7 @@
                                 "ID_194",
                                 "ID_204",
                                 "ID_233",
-                                "ID_251"
+                                "ID_253"
                             ],
                             "ID_20": [
                                 "band.2",
@@ -6827,10 +6939,10 @@
                                 "ID_191",
                                 "ID_198",
                                 "ID_202",
-                                "ID_253",
-                                "ID_267",
-                                "ID_268",
-                                "ID_269"
+                                "ID_256",
+                                "ID_272",
+                                "ID_273",
+                                "ID_275"
                             ],
                             "ID_27": [
                                 "band.2",
@@ -6852,7 +6964,7 @@
                                 "ID_134",
                                 "ID_158",
                                 "ID_172",
-                                "ID_260"
+                                "ID_264"
                             ],
                             "ID_29": [
                                 "band.2",
@@ -6865,7 +6977,7 @@
                                 "ID_120",
                                 "ID_154",
                                 "ID_176",
-                                "ID_269"
+                                "ID_275"
                             ],
                             "ID_31": [
                                 "band.2",
@@ -6885,7 +6997,7 @@
                                 "ID_196",
                                 "ID_223",
                                 "ID_247",
-                                "ID_269"
+                                "ID_275"
                             ],
                             "ID_34": [
                                 "band.2",
@@ -7081,20 +7193,20 @@
                                 "ID_173",
                                 "ID_191",
                                 "ID_202",
-                                "ID_269"
+                                "ID_275"
                             ],
                             "ID_73": [
                                 "band.2",
                                 "ID_75",
                                 "ID_96",
                                 "ID_120",
-                                "ID_267"
+                                "ID_272"
                             ],
                             "ID_74": [
                                 "band.2",
                                 "ID_75",
                                 "ID_120",
-                                "ID_269"
+                                "ID_275"
                             ],
                             "ID_75": [
                                 "band.2",
@@ -7282,7 +7394,7 @@
                                 "ID_154",
                                 "ID_176",
                                 "ID_191",
-                                "ID_269"
+                                "ID_275"
                             ],
                             "ID_121": [
                                 "band.2"
@@ -7398,7 +7510,7 @@
                             ],
                             "ID_154": [
                                 "band.2",
-                                "ID_269"
+                                "ID_275"
                             ],
                             "ID_155": [
                                 "band.2",
@@ -7752,6 +7864,24 @@
                             ],
                             "ID_269": [
                                 "band.2"
+                            ],
+                            "ID_270": [
+                                "band.2"
+                            ],
+                            "ID_271": [
+                                "band.2"
+                            ],
+                            "ID_272": [
+                                "band.2"
+                            ],
+                            "ID_273": [
+                                "band.2"
+                            ],
+                            "ID_274": [
+                                "band.2"
+                            ],
+                            "ID_275": [
+                                "band.2"
                             ]
                         },
                         "size": "function(){return Object.keys(this.nodes).length}",
@@ -7791,8 +7921,7 @@
                     "I18N_LOAD_SUCCESS": "e=>this._dispatchWithDevtools(e)",
                     "FINGERPRINT": "e=>this._dispatchWithDevtools(e)",
                     "TRACK": "e=>this._dispatchWithDevtools(e)",
-                    "EXPERIMENTS_FETCH_SUCCESS": "e=>this._dispatchWithDevtools(e)",
-                    "MEDIA_ENGINE_DEVICES": "e=>this._dispatchWithDevtools(e)"
+                    "EXPERIMENTS_FETCH_SUCCESS": "e=>this._dispatchWithDevtools(e)"
                 },
                 "_defaultBand": 2,
                 "actionLogger": {

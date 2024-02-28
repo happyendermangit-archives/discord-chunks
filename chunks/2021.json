@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(e){var n=e.wrappedComponentRef,r=(0,d.default)(e,[\"wrappedComponentRef\"]);return u.createElement(g.Consumer,null,function(e){return e||(0,l.default)(!1),u.createElement(t,(0,f.default)({},r,e,{ref:n}))})}"
+    }
+}

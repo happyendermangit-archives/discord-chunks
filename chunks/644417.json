@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "NameValidationState": {
+            "AVAILABLE": "AVAILABLE",
+            "ERROR": "ERROR",
+            "RATE_LIMIT": "RATE_LIMIT",
+            "INTERNAL_ERROR": "INTERNAL_ERROR"
+        }
+    }
+}

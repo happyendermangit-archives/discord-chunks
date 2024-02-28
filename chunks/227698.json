@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function n(t){return{content:(0,l.jsx)(r.default,{message:t}),hasSpoilerEmbeds:!1}}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "LoginSpinner": "function Y(){return(0,s.jsx)(x.default,{children:(0,s.jsx)(d.Spinner,{})})}"
+    }
+}

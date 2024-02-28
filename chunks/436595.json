@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(){return(0,l.jsx)(r.Tooltip,{text:a.default.Messages.SUPPRESS_NOTIFICATIONS_TOOLTIP,children:t=>(0,l.jsx)(\"div\",{className:s.badge,...t,children:(0,l.jsx)(n.default,{width:\"1rem\",height:\"1rem\"})})})}"
+    }
+}
