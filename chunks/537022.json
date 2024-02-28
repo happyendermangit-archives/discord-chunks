@@ -7831,7 +7831,7 @@
             "_version": 1,
             "callback": "e=>{let{persistKey:t}=this.getClass();this.persist(),l._writePromises.delete(t),l._writeResolvers.delete(t),e()}",
             "throttledCallback": "function _(){var t,n=ux(),o=d(n);if(u=arguments,i=this,l=n,o){if(e===c){;return s=t=l,c=oD(y,r),p?g(t):f}if(h)return eU(c),c=oD(y,r),g(l)}return e===c&&(c=oD(y,r)),f}",
-            "initialize": "initialize(e){c=e??f,this.waitFor(l.default),this.syncWith([l.default],_),this.syncWith([s.default],o)}",
+            "initialize": "initialize(e){c=e??f,this.waitFor(l.default),this.syncWith([l.default],E),this.syncWith([s.default],o)}",
             "getUserTrialOffer": "getUserTrialOffer(e){if(null!==e)return c.userTrialOffers[e]}",
             "getUserDiscountOffer": "getUserDiscountOffer(e){if(null!==e)return c.userDiscountOffers[e]}",
             "getAnyOfUserTrialOfferId": "getAnyOfUserTrialOfferId(e){for(let t of e)if(null!=c.userTrialOffers[t])return t;return null}",
@@ -7843,7 +7843,7 @@
             "getUnacknowledgedOffers": "getUnacknowledgedOffers(e){let t=l.default.getCurrentUser();return(0,u.isPremium)(t)?[]:Object.values(c.userTrialOffers).filter(t=>e.includes(t.trial_id)&&null==t.expires_at)}",
             "hasAnyUnexpiredOffer": "hasAnyUnexpiredOffer(){return Object.values(c.userTrialOffers).some(e=>null==e.expires_at||Date.parse(e.expires_at)>Date.now())}",
             "getState": "getState(){return c}",
-            "forceReset": "forceReset(){E()}"
+            "forceReset": "forceReset(){_()}"
         }
     }
 }

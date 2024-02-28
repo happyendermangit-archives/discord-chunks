@@ -7831,10 +7831,10 @@
             "initialize": "initialize(){this.waitFor(u.default),this.syncWith([u.default],O)}",
             "checkAndFetchReferralsRemaining": "checkAndFetchReferralsRemaining(){null==f&&!o&&L<5&&(null==S||S<Date.now())&&(0,s.fetchReferralsRemaining)()}",
             "getReferralsRemaining": "getReferralsRemaining(){return this.checkAndFetchReferralsRemaining(),f}",
-            "getSentUserIds": "getSentUserIds(){return this.checkAndFetchReferralsRemaining(),null==E?[]:E}",
+            "getSentUserIds": "getSentUserIds(){return this.checkAndFetchReferralsRemaining(),null==_?[]:_}",
             "isFetchingReferralsRemaining": "isFetchingReferralsRemaining(){return o}",
-            "isFetchingRecipientEligibility": "isFetchingRecipientEligibility(e){return _.has(e)}",
-            "getRecipientEligibility": "getRecipientEligibility(e){return void 0===c[e]&&!_.has(e)&&(0,s.checkRecipientEligibility)(e),c[e]}",
+            "isFetchingRecipientEligibility": "isFetchingRecipientEligibility(e){return E.has(e)}",
+            "getRecipientEligibility": "getRecipientEligibility(e){return void 0===c[e]&&!E.has(e)&&(0,s.checkRecipientEligibility)(e),c[e]}",
             "getRelevantUserTrialOffer": "getRelevantUserTrialOffer(e){return I[e]}",
             "isResolving": "isResolving(e){return d.has(e)}"
         }

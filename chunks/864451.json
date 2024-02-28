@@ -1,6 +1,6 @@
 {
     "exports": {
         "hasUserTrialOfferExpired": "function f(e){return null!=e&&null!=e.expires_at&&Date.now()>Date.parse(e.expires_at)}",
-        "useTrialOffer": "function c(e){let t=(0,n.useStateFromStores)([s.default],()=>s.default.getUserTrialOffer(e)),[r,c]=i.useState(f(t)),E=(0,n.useStateFromStores)([u.default],()=>(0,a.isPremium)(u.default.getCurrentUser()));return i.useEffect(()=>{if(null!=t&&null!=t.expires_at){let e=new l.Timeout,i=()=>{let n=null!=t.expires_at?Date.parse(t.expires_at)-Date.now():0;e?.start(n,()=>{!r&&f(t)?c(!0):i()})};return i(),()=>e.stop()}},[r,t]),r||E?null:t}"
+        "useTrialOffer": "function c(e){let t=(0,n.useStateFromStores)([s.default],()=>s.default.getUserTrialOffer(e)),[r,c]=i.useState(f(t)),_=(0,n.useStateFromStores)([u.default],()=>(0,a.isPremium)(u.default.getCurrentUser()));return i.useEffect(()=>{if(null!=t&&null!=t.expires_at){let e=new l.Timeout,i=()=>{let n=null!=t.expires_at?Date.parse(t.expires_at)-Date.now():0;e?.start(n,()=>{!r&&f(t)?c(!0):i()})};return i(),()=>e.stop()}},[r,t]),r||_?null:t}"
     }
 }
