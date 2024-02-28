@@ -7842,6 +7842,7 @@
             "lastFetched": null,
             "getGameByExecutable": "getGameByExecutable(e){return T[e]}",
             "getGameByGameData": "getGameByGameData(e){let t;if(null==e.exePath)return null;let n=e.exePath.split(\"/\").pop(),i=e.exePath.split(\"/\").slice(-2).join(\"/\");if(null!=e.name){if(null!=(t=this.getGameByName(e.name))&&null!=t.executables){let e=t.executables.map(e=>e.name);if(e.includes(n)||e.includes(i))return t}else if(null!=t)return null}return this.getGameByExecutable(n)??this.getGameByExecutable(i)??t}",
+            "getGameById": "getGameById(e){return u[e]}",
             "shouldReport": "shouldReport(e){let t=null!=this.getGameByName(e),n=null!=c[e];return s.ShowCurrentGame.getSetting()&&!i&&!(t||n)}",
             "markGameReported": "markGameReported(e){c[e]=!0,o.default.set(l,c)}"
         }
