@@ -1,6 +1,6 @@
 {
     "exports": {
-        "CommandClickable": "function A(e){let{commandId:t,commandName:n,commandDescription:i,onClick:r}=e,o=(0,a.useStateFromStores)([h.default],()=>h.default.getChannelId()),d=e=>{null==e||e.stopPropagation(),_(o,n,t,u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS),null==r||r(t)};return(0,l.jsx)(s.Tooltip,{text:i,position:\"top\",tooltipContentClassName:I.tooltip,children:e=>{let{onMouseEnter:t,onMouseLeave:i}=e;return(0,l.jsxs)(s.Button,{color:s.ButtonColors.PRIMARY,size:s.ButtonSizes.ICON,onClick:d,onMouseEnter:t,onMouseLeave:i,children:[\"/\",n]})}})}",
-        "default": "function y(e){return{react:(e,t,n)=>(0,l.jsx)(N,{node:e,output:t,state:n})}}"
+        "CommandClickable": "function A(e){let{commandId:t,commandName:n,commandDescription:i,onClick:r}=e,o=(0,a.useStateFromStores)([h.default],()=>h.default.getChannelId()),d=e=>{null==e||e.stopPropagation(),_(o,n,t,u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS),null==r||r(t)};return(0,l.jsx)(s.Tooltip,{text:i,position:\"top\",tooltipContentClassName:v.tooltip,children:e=>{let{onMouseEnter:t,onMouseLeave:i}=e;return(0,l.jsxs)(s.Button,{color:s.ButtonColors.PRIMARY,size:s.ButtonSizes.ICON,onClick:d,onMouseEnter:t,onMouseLeave:i,children:[\"/\",n]})}})}",
+        "default": "function x(e){return{react:(e,t,n)=>(0,l.jsx)(N,{node:e,output:t,state:n})}}"
     }
 }

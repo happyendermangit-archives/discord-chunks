@@ -21,7 +21,7 @@
             "CUSTOM": "custom"
         },
         "soundboardSoundFromAPI": "function g(e,t){let{sound_id:n,emoji_id:l,emoji_name:i,user_id:a,available:s,...r}=e;return{...r,soundId:n,guildId:t,emojiId:l,emojiName:i,userId:a,available:null==s||s}}",
-        "soundboardSoundToAPI": "function S(e){let{soundId:t,guildId:n,emojiId:l,emojiName:i,userId:a,...s}=e;return{...s,sound_id:t,guild_id:n,emoji_id:l,emoji_name:i,user_id:a}}",
+        "soundboardSoundToAPI": "function C(e){let{soundId:t,guildId:n,emojiId:l,emojiName:i,userId:a,...s}=e;return{...s,sound_id:t,guild_id:n,emoji_id:l,emoji_name:i,user_id:a}}",
         "SoundboardSoundGridSectionType": {
             "0": "FAVORITES",
             "1": "RECENTLY_HEARD",

@@ -1,7 +1,7 @@
 {
     "exports": {
         "default": {
-            "type": "function(e){let{categoryId:t,...n}=e,i=S(t);return null==i?null:(0,l.jsx)(i,{...n})}",
+            "type": "function(e){let{categoryId:t,...n}=e,i=C(t);return null==i?null:(0,l.jsx)(i,{...n})}",
             "compare": null
         }
     }

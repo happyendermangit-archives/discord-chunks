@@ -2,7 +2,7 @@
     "exports": {
         "default": {
             "combineAndInjectMentionRule": "function d(e,t){let n={};return null!=e.mention&&null!=u&&(n={mention:u}),(0,o.default)([e,...t,n])}",
-            "createReactRules": "function w(e){return{...k,link:(0,M.default)(e),emoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,i,a){let{key:s}=a;return e.src?(0,l.jsx)(f.MessageStandardEmoji,{node:e,tooltipPosition:t,enableClick:n},s):(0,l.jsx)(\"span\",{children:e.surrogate},s)}}}(e),customEmoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,i,a){let{key:s,guildId:r,isInteracting:o}=a,u=c.default.getDisambiguatedEmojiContext(r).getById(e.emojiId);if(null!=u){let t=u.require_colons;e={...e,name:t?\":\".concat(u.name,\":\"):u.name}}return(0,l.jsx)(f.MessageCustomEmoji,{isInteracting:o,node:e,tooltipPosition:t,enableClick:n},s)}}}(e),channelMention:(0,O.default)(e),commandMention:(0,R.default)(e),attachmentLink:(0,x.default)(e)}}",
+            "createReactRules": "function w(e){return{...k,link:(0,M.default)(e),emoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,i,a){let{key:s}=a;return e.src?(0,l.jsx)(f.MessageStandardEmoji,{node:e,tooltipPosition:t,enableClick:n},s):(0,l.jsx)(\"span\",{children:e.surrogate},s)}}}(e),customEmoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,i,a){let{key:s,guildId:r,isInteracting:o}=a,u=c.default.getDisambiguatedEmojiContext(r).getById(e.emojiId);if(null!=u){let t=u.require_colons;e={...e,name:t?\":\".concat(u.name,\":\"):u.name}}return(0,l.jsx)(f.MessageCustomEmoji,{isInteracting:o,node:e,tooltipPosition:t,enableClick:n},s)}}}(e),channelMention:(0,O.default)(e),commandMention:(0,R.default)(e),attachmentLink:(0,y.default)(e)}}",
             "defaultReactRuleOptions": {
                 "enableBuildOverrides": false,
                 "enableEmojiClick": true
@@ -177,7 +177,7 @@
                     ],
                     "match": "e=>/^<#(\\d+)>/.exec(e)",
                     "parse": "parse(e,t,n){let l=e[1];if(n.returnMentionIds)return{type:\"channelMention\",id:l};let r=I(l,n.mentionChannels);return null==r?R(null,l,null,A(n.channelId)):b(r,null,A(n.channelId))}",
-                    "react": "react(t,s,r){let o=c.default.getChannel(t.channelId),u=r.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&(null==n||n.stopPropagation()),S(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,i.closeAllModals)()},d=r.noStyleAndInteraction||null==t.channelId||null==o&&null==t.originalLink?g.NOOP:e=>{(0,a.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"454000\").then(n.bind(n,\"454000\"));return n=>{var i;return(0,l.jsx)(e,{...n,channel:o,channelId:null!==(i=null==o?void 0:o.id)&&void 0!==i?i:t.channelId,originalLink:t.originalLink,messageId:t.messageId})}})};return(0,l.jsxs)(m.default,{role:\"link\",onClick:u,onContextMenu:d,className:\"channelMention\",children:[null!=t.inContent?s(t.inContent,r):null,null!=t.inContent?(0,l.jsx)(p.default,{}):null,(0,E.smartOutput)(t,s,r)]},r.key)}"
+                    "react": "react(t,s,r){let o=c.default.getChannel(t.channelId),u=r.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&(null==n||n.stopPropagation()),C(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,i.closeAllModals)()},d=r.noStyleAndInteraction||null==t.channelId||null==o&&null==t.originalLink?g.NOOP:e=>{(0,a.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"454000\").then(n.bind(n,\"454000\"));return n=>{var i;return(0,l.jsx)(e,{...n,channel:o,channelId:null!==(i=null==o?void 0:o.id)&&void 0!==i?i:t.channelId,originalLink:t.originalLink,messageId:t.messageId})}})};return(0,l.jsxs)(m.default,{role:\"link\",onClick:u,onContextMenu:d,className:\"channelMention\",children:[null!=t.inContent?s(t.inContent,r):null,null!=t.inContent?(0,l.jsx)(p.default,{}):null,(0,E.smartOutput)(t,s,r)]},r.key)}"
                 },
                 "channelOrMessageUrl": {
                     "order": 15.5,
@@ -202,7 +202,7 @@
                     ],
                     "match": "match(e){let t=i.exec(e);if(null!==t){let{enabled:e}=u.getCurrentConfig({location:\"markup\"});if(!e)return null}return t}",
                     "parse": "parse(e,t,n){var l;let r=e[0],a=e[1];return{type:\"attachmentLink\",content:[{type:\"text\",content:l=a}],attachmentUrl:r,attachmentName:l}}",
-                    "react": "react(t,i,g){let S=g.noStyleAndInteraction?void 0:async n=>{let l=await (0,c.maybeRefreshAttachmentUrl)(t.attachmentUrl);e.shouldStopPropagation&&(null==n||n.stopPropagation()),d.default.trackLinkClicked(l),e.shouldCloseDefaultModals&&(0,r.closeAllModals)(),(0,u.default)(l)},C=g.noStyleAndInteraction?p.NOOP:e=>{(0,o.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"136394\").then(n.bind(n,\"136394\"));return n=>(0,l.jsx)(e,{...n,attachmentUrl:t.attachmentUrl,attachmentName:t.attachmentName})})};return(0,l.jsxs)(f.default,{role:\"link\",href:t.attachmentUrl,onClick:S,onContextMenu:C,className:\"attachmentLink\",children:[(0,l.jsx)(s.AttachmentIcon,{className:a(E.icon,h.icon),color:r.tokens.colors.MENTION_FOREGROUND,width:16,height:16}),(0,m.smartOutput)(t,i,g)]},g.key)}"
+                    "react": "react(t,i,g){let C=g.noStyleAndInteraction?void 0:async n=>{let l=await (0,c.maybeRefreshAttachmentUrl)(t.attachmentUrl);e.shouldStopPropagation&&(null==n||n.stopPropagation()),d.default.trackLinkClicked(l),e.shouldCloseDefaultModals&&(0,r.closeAllModals)(),(0,u.default)(l)},S=g.noStyleAndInteraction?p.NOOP:e=>{(0,o.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"136394\").then(n.bind(n,\"136394\"));return n=>(0,l.jsx)(e,{...n,attachmentUrl:t.attachmentUrl,attachmentName:t.attachmentName})})};return(0,l.jsxs)(f.default,{role:\"link\",href:t.attachmentUrl,onClick:C,onContextMenu:S,className:\"attachmentLink\",children:[(0,l.jsx)(s.AttachmentIcon,{className:a(E.icon,h.icon),color:r.tokens.colors.MENTION_FOREGROUND,width:16,height:16}),(0,m.smartOutput)(t,i,g)]},g.key)}"
                 },
                 "commandMention": {
                     "order": 25,
@@ -229,7 +229,7 @@
                     ],
                     "match": "e=>/^<sound:(\\d+)>/.exec(e)",
                     "parse": "parse(e,t,n){var l;let r=e[1],a=s.default.getSoundById(r),i=null!==(l=null==a?void 0:a.name)&&void 0!==l?l:r;return{type:\"soundboard\",id:r,soundId:r,channelId:n.channelId,content:i}}",
-                    "react": "e=>(0,l.jsx)(I.default,{channelId:e.channelId,soundId:e.soundId,jumbo:e.jumboable})"
+                    "react": "e=>(0,l.jsx)(v.default,{channelId:e.channelId,soundId:e.soundId,jumbo:e.jumboable})"
                 },
                 "customEmoji": {
                     "order": 4,
@@ -247,7 +247,7 @@
                     ],
                     "match": "e=>S.TIMESTAMP_REGEX.exec(e)",
                     "parse": "parse(e){let[t,n,l]=e,r=(0,S.parseTimestamp)(n,l);return null==r?{type:\"text\",content:t}:r}",
-                    "react": "(e,t,n)=>(0,l.jsx)(y.default,{node:e},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(x.default,{node:e},n.key)"
                 },
                 "s": {
                     "order": 21,
@@ -326,10 +326,10 @@
                     "react": "(e,t,n)=>{let i=p.default.getGuild(e.guildId);return(0,l.jsx)(T.default,{guild:i,children:(0,A.smartOutput)(e,t,n)},n.key)}"
                 },
                 "channel": {
-                    "react": "(e,t,n)=>(0,l.jsx)(C.default,{iconType:e.iconType,children:(0,A.smartOutput)(e,t,n)},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(S.default,{iconType:e.iconType,children:(0,A.smartOutput)(e,t,n)},n.key)"
                 },
                 "message": {
-                    "react": "(e,t,n)=>(0,l.jsx)(v.default,{},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(I.default,{},n.key)"
                 }
             },
             "guildEventRules": {
@@ -472,7 +472,7 @@
                     ],
                     "match": "e=>/^<#(\\d+)>/.exec(e)",
                     "parse": "parse(e,t,n){let l=e[1];if(n.returnMentionIds)return{type:\"channelMention\",id:l};let r=I(l,n.mentionChannels);return null==r?R(null,l,null,A(n.channelId)):b(r,null,A(n.channelId))}",
-                    "react": "react(t,s,r){let o=c.default.getChannel(t.channelId),u=r.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&(null==n||n.stopPropagation()),S(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,i.closeAllModals)()},d=r.noStyleAndInteraction||null==t.channelId||null==o&&null==t.originalLink?g.NOOP:e=>{(0,a.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"454000\").then(n.bind(n,\"454000\"));return n=>{var i;return(0,l.jsx)(e,{...n,channel:o,channelId:null!==(i=null==o?void 0:o.id)&&void 0!==i?i:t.channelId,originalLink:t.originalLink,messageId:t.messageId})}})};return(0,l.jsxs)(m.default,{role:\"link\",onClick:u,onContextMenu:d,className:\"channelMention\",children:[null!=t.inContent?s(t.inContent,r):null,null!=t.inContent?(0,l.jsx)(p.default,{}):null,(0,E.smartOutput)(t,s,r)]},r.key)}"
+                    "react": "react(t,s,r){let o=c.default.getChannel(t.channelId),u=r.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&(null==n||n.stopPropagation()),C(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,i.closeAllModals)()},d=r.noStyleAndInteraction||null==t.channelId||null==o&&null==t.originalLink?g.NOOP:e=>{(0,a.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"454000\").then(n.bind(n,\"454000\"));return n=>{var i;return(0,l.jsx)(e,{...n,channel:o,channelId:null!==(i=null==o?void 0:o.id)&&void 0!==i?i:t.channelId,originalLink:t.originalLink,messageId:t.messageId})}})};return(0,l.jsxs)(m.default,{role:\"link\",onClick:u,onContextMenu:d,className:\"channelMention\",children:[null!=t.inContent?s(t.inContent,r):null,null!=t.inContent?(0,l.jsx)(p.default,{}):null,(0,E.smartOutput)(t,s,r)]},r.key)}"
                 },
                 "channelOrMessageUrl": {
                     "order": 15.5,
@@ -497,7 +497,7 @@
                     ],
                     "match": "match(e){let t=i.exec(e);if(null!==t){let{enabled:e}=u.getCurrentConfig({location:\"markup\"});if(!e)return null}return t}",
                     "parse": "parse(e,t,n){var l;let r=e[0],a=e[1];return{type:\"attachmentLink\",content:[{type:\"text\",content:l=a}],attachmentUrl:r,attachmentName:l}}",
-                    "react": "react(t,i,g){let S=g.noStyleAndInteraction?void 0:async n=>{let l=await (0,c.maybeRefreshAttachmentUrl)(t.attachmentUrl);e.shouldStopPropagation&&(null==n||n.stopPropagation()),d.default.trackLinkClicked(l),e.shouldCloseDefaultModals&&(0,r.closeAllModals)(),(0,u.default)(l)},C=g.noStyleAndInteraction?p.NOOP:e=>{(0,o.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"136394\").then(n.bind(n,\"136394\"));return n=>(0,l.jsx)(e,{...n,attachmentUrl:t.attachmentUrl,attachmentName:t.attachmentName})})};return(0,l.jsxs)(f.default,{role:\"link\",href:t.attachmentUrl,onClick:S,onContextMenu:C,className:\"attachmentLink\",children:[(0,l.jsx)(s.AttachmentIcon,{className:a(E.icon,h.icon),color:r.tokens.colors.MENTION_FOREGROUND,width:16,height:16}),(0,m.smartOutput)(t,i,g)]},g.key)}"
+                    "react": "react(t,i,g){let C=g.noStyleAndInteraction?void 0:async n=>{let l=await (0,c.maybeRefreshAttachmentUrl)(t.attachmentUrl);e.shouldStopPropagation&&(null==n||n.stopPropagation()),d.default.trackLinkClicked(l),e.shouldCloseDefaultModals&&(0,r.closeAllModals)(),(0,u.default)(l)},S=g.noStyleAndInteraction?p.NOOP:e=>{(0,o.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"136394\").then(n.bind(n,\"136394\"));return n=>(0,l.jsx)(e,{...n,attachmentUrl:t.attachmentUrl,attachmentName:t.attachmentName})})};return(0,l.jsxs)(f.default,{role:\"link\",href:t.attachmentUrl,onClick:C,onContextMenu:S,className:\"attachmentLink\",children:[(0,l.jsx)(s.AttachmentIcon,{className:a(E.icon,h.icon),color:r.tokens.colors.MENTION_FOREGROUND,width:16,height:16}),(0,m.smartOutput)(t,i,g)]},g.key)}"
                 },
                 "commandMention": {
                     "order": 25,
@@ -524,7 +524,7 @@
                     ],
                     "match": "e=>/^<sound:(\\d+)>/.exec(e)",
                     "parse": "parse(e,t,n){var l;let r=e[1],a=s.default.getSoundById(r),i=null!==(l=null==a?void 0:a.name)&&void 0!==l?l:r;return{type:\"soundboard\",id:r,soundId:r,channelId:n.channelId,content:i}}",
-                    "react": "e=>(0,l.jsx)(I.default,{channelId:e.channelId,soundId:e.soundId,jumbo:e.jumboable})"
+                    "react": "e=>(0,l.jsx)(v.default,{channelId:e.channelId,soundId:e.soundId,jumbo:e.jumboable})"
                 },
                 "customEmoji": {
                     "order": 4,
@@ -542,7 +542,7 @@
                     ],
                     "match": "e=>S.TIMESTAMP_REGEX.exec(e)",
                     "parse": "parse(e){let[t,n,l]=e,r=(0,S.parseTimestamp)(n,l);return null==r?{type:\"text\",content:t}:r}",
-                    "react": "(e,t,n)=>(0,l.jsx)(y.default,{node:e},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(x.default,{node:e},n.key)"
                 },
                 "s": {
                     "order": 21,
@@ -627,10 +627,10 @@
                     "react": "(e,t,n)=>{let i=p.default.getGuild(e.guildId);return(0,l.jsx)(T.default,{guild:i,children:(0,A.smartOutput)(e,t,n)},n.key)}"
                 },
                 "channel": {
-                    "react": "(e,t,n)=>(0,l.jsx)(C.default,{iconType:e.iconType,children:(0,A.smartOutput)(e,t,n)},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(S.default,{iconType:e.iconType,children:(0,A.smartOutput)(e,t,n)},n.key)"
                 },
                 "message": {
-                    "react": "(e,t,n)=>(0,l.jsx)(v.default,{},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(I.default,{},n.key)"
                 }
             },
             "notifCenterV2MessagePreviewRules": {
@@ -714,7 +714,7 @@
                     ],
                     "match": "e=>/^<#(\\d+)>/.exec(e)",
                     "parse": "parse(e,t,n){let l=e[1];if(n.returnMentionIds)return{type:\"channelMention\",id:l};let r=I(l,n.mentionChannels);return null==r?R(null,l,null,A(n.channelId)):b(r,null,A(n.channelId))}",
-                    "react": "react(t,s,r){let o=c.default.getChannel(t.channelId),u=r.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&(null==n||n.stopPropagation()),S(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,i.closeAllModals)()},d=r.noStyleAndInteraction||null==t.channelId||null==o&&null==t.originalLink?g.NOOP:e=>{(0,a.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"454000\").then(n.bind(n,\"454000\"));return n=>{var i;return(0,l.jsx)(e,{...n,channel:o,channelId:null!==(i=null==o?void 0:o.id)&&void 0!==i?i:t.channelId,originalLink:t.originalLink,messageId:t.messageId})}})};return(0,l.jsxs)(m.default,{role:\"link\",onClick:u,onContextMenu:d,className:\"channelMention\",children:[null!=t.inContent?s(t.inContent,r):null,null!=t.inContent?(0,l.jsx)(p.default,{}):null,(0,E.smartOutput)(t,s,r)]},r.key)}"
+                    "react": "react(t,s,r){let o=c.default.getChannel(t.channelId),u=r.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&(null==n||n.stopPropagation()),C(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,i.closeAllModals)()},d=r.noStyleAndInteraction||null==t.channelId||null==o&&null==t.originalLink?g.NOOP:e=>{(0,a.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"454000\").then(n.bind(n,\"454000\"));return n=>{var i;return(0,l.jsx)(e,{...n,channel:o,channelId:null!==(i=null==o?void 0:o.id)&&void 0!==i?i:t.channelId,originalLink:t.originalLink,messageId:t.messageId})}})};return(0,l.jsxs)(m.default,{role:\"link\",onClick:u,onContextMenu:d,className:\"channelMention\",children:[null!=t.inContent?s(t.inContent,r):null,null!=t.inContent?(0,l.jsx)(p.default,{}):null,(0,E.smartOutput)(t,s,r)]},r.key)}"
                 },
                 "channelOrMessageUrl": {
                     "order": 15.5,
@@ -739,7 +739,7 @@
                     ],
                     "match": "match(e){let t=i.exec(e);if(null!==t){let{enabled:e}=u.getCurrentConfig({location:\"markup\"});if(!e)return null}return t}",
                     "parse": "parse(e,t,n){var l;let r=e[0],a=e[1];return{type:\"attachmentLink\",content:[{type:\"text\",content:l=a}],attachmentUrl:r,attachmentName:l}}",
-                    "react": "react(t,i,g){let S=g.noStyleAndInteraction?void 0:async n=>{let l=await (0,c.maybeRefreshAttachmentUrl)(t.attachmentUrl);e.shouldStopPropagation&&(null==n||n.stopPropagation()),d.default.trackLinkClicked(l),e.shouldCloseDefaultModals&&(0,r.closeAllModals)(),(0,u.default)(l)},C=g.noStyleAndInteraction?p.NOOP:e=>{(0,o.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"136394\").then(n.bind(n,\"136394\"));return n=>(0,l.jsx)(e,{...n,attachmentUrl:t.attachmentUrl,attachmentName:t.attachmentName})})};return(0,l.jsxs)(f.default,{role:\"link\",href:t.attachmentUrl,onClick:S,onContextMenu:C,className:\"attachmentLink\",children:[(0,l.jsx)(s.AttachmentIcon,{className:a(E.icon,h.icon),color:r.tokens.colors.MENTION_FOREGROUND,width:16,height:16}),(0,m.smartOutput)(t,i,g)]},g.key)}"
+                    "react": "react(t,i,g){let C=g.noStyleAndInteraction?void 0:async n=>{let l=await (0,c.maybeRefreshAttachmentUrl)(t.attachmentUrl);e.shouldStopPropagation&&(null==n||n.stopPropagation()),d.default.trackLinkClicked(l),e.shouldCloseDefaultModals&&(0,r.closeAllModals)(),(0,u.default)(l)},S=g.noStyleAndInteraction?p.NOOP:e=>{(0,o.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"136394\").then(n.bind(n,\"136394\"));return n=>(0,l.jsx)(e,{...n,attachmentUrl:t.attachmentUrl,attachmentName:t.attachmentName})})};return(0,l.jsxs)(f.default,{role:\"link\",href:t.attachmentUrl,onClick:C,onContextMenu:S,className:\"attachmentLink\",children:[(0,l.jsx)(s.AttachmentIcon,{className:a(E.icon,h.icon),color:r.tokens.colors.MENTION_FOREGROUND,width:16,height:16}),(0,m.smartOutput)(t,i,g)]},g.key)}"
                 },
                 "commandMention": {
                     "order": 25,
@@ -766,7 +766,7 @@
                     ],
                     "match": "e=>/^<sound:(\\d+)>/.exec(e)",
                     "parse": "parse(e,t,n){var l;let r=e[1],a=s.default.getSoundById(r),i=null!==(l=null==a?void 0:a.name)&&void 0!==l?l:r;return{type:\"soundboard\",id:r,soundId:r,channelId:n.channelId,content:i}}",
-                    "react": "e=>(0,l.jsx)(I.default,{channelId:e.channelId,soundId:e.soundId,jumbo:e.jumboable})"
+                    "react": "e=>(0,l.jsx)(v.default,{channelId:e.channelId,soundId:e.soundId,jumbo:e.jumboable})"
                 },
                 "customEmoji": {
                     "order": 4,
@@ -784,7 +784,7 @@
                     ],
                     "match": "e=>S.TIMESTAMP_REGEX.exec(e)",
                     "parse": "parse(e){let[t,n,l]=e,r=(0,S.parseTimestamp)(n,l);return null==r?{type:\"text\",content:t}:r}",
-                    "react": "(e,t,n)=>(0,l.jsx)(y.default,{node:e},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(x.default,{node:e},n.key)"
                 },
                 "s": {
                     "order": 21,
@@ -830,10 +830,10 @@
                     "react": "(e,t,n)=>{let i=p.default.getGuild(e.guildId);return(0,l.jsx)(T.default,{guild:i,children:(0,A.smartOutput)(e,t,n)},n.key)}"
                 },
                 "channel": {
-                    "react": "(e,t,n)=>(0,l.jsx)(C.default,{iconType:e.iconType,children:(0,A.smartOutput)(e,t,n)},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(S.default,{iconType:e.iconType,children:(0,A.smartOutput)(e,t,n)},n.key)"
                 },
                 "message": {
-                    "react": "(e,t,n)=>(0,l.jsx)(v.default,{},n.key)"
+                    "react": "(e,t,n)=>(0,l.jsx)(I.default,{},n.key)"
                 }
             },
             "lockscreenWidgetMessageRules": {

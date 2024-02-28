@@ -219,7 +219,7 @@
         "DOMUtils": {
             "getLineStart": "getLineStart(e,t,n){let l;let i=d.getParentElement(e,t);if(null==i)return null;let a=d.previous(e,{at:t,match:t=>d.isInline(e,t)&&!d.isVoid(e,t)&&t!==i[0]});null!=a&&(l=d.after(e,a[1])),null==l&&(l=d.start(e,i[1]));let s={anchor:l,focus:t},r=Array.from(d.positions(e,{at:s})),o=T(e,t,r,!0);if(n&&h.equals(t,o)&&!h.isAtEnd(t,i)){let n=d.after(e,t);if(null==n)return o;o=T(e,n,r,!0)}return o}",
             "getLineEnd": "getLineEnd(e,t,n){let l;let i=d.getParentElement(e,t);if(null==i)return null;let a=d.next(e,{at:t,match:t=>d.isInline(e,t)&&!d.isVoid(e,t)&&t!==i[0]});null!=a&&(l=d.before(e,a[1])),null==l&&(l=d.end(e,i[1]));let s={anchor:t,focus:l},r=Array.from(d.positions(e,{at:s})),o=T(e,t,r,!1);if(n&&h.equals(t,o)&&!h.isAtEnd(t,i)){let n=d.after(e,t);if(null==n)return o;o=T(e,n,r,!1)}return o}",
-            "getLineActionRange": "getLineActionRange(e,t){let n=E.toPoint(e.selection);if(null==n)return null;if(t){let t=v.getLineStart(e,n,!1);return null==t?null:{anchor:t,focus:n}}{let t=v.getLineEnd(e,n,!0);return null==t?null:{anchor:n,focus:t}}}"
+            "getLineActionRange": "getLineActionRange(e,t){let n=E.toPoint(e.selection);if(null==n)return null;if(t){let t=I.getLineStart(e,n,!1);return null==t?null:{anchor:t,focus:n}}{let t=I.getLineEnd(e,n,!0);return null==t?null:{anchor:n,focus:t}}}"
         }
     }
 }

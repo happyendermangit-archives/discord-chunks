@@ -7,7 +7,7 @@
         "matureAgree": "function h(){i.default.dispatch({type:\"APPLICATION_STORE_MATURE_AGREE\"})}",
         "matureDisagree": "function E(){(0,s.transitionTo)(d.Routes.APPLICATION_STORE)}",
         "joinPublishedStoreListingSkuGuild": "function g(e){return l.default.post({url:d.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),oldFormErrors:!0})}",
-        "goToSKUStoreListing": "function S(e,t){let{pathname:n,...l}=(0,u.getStoreListingLocation)(e,t);(0,s.transitionTo)(n,l)}",
-        "goToApplicationStoreListing": "function C(e,t){let{pathname:n,...l}=(0,u.getApplicationStoreListingLocation)(e,t);(0,s.transitionTo)(n,l)}"
+        "goToSKUStoreListing": "function C(e,t){let{pathname:n,...l}=(0,u.getStoreListingLocation)(e,t);(0,s.transitionTo)(n,l)}",
+        "goToApplicationStoreListing": "function S(e,t){let{pathname:n,...l}=(0,u.getApplicationStoreListingLocation)(e,t);(0,s.transitionTo)(n,l)}"
     }
 }
