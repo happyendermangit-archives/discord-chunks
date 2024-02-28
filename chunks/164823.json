@@ -1,0 +1,3 @@
+{
+    "exports": "function(e,t){e.classList?e.classList.remove(t):\"string\"==typeof e.className?e.className=o(e.className,t):e.setAttribute(\"class\",o(e.className&&e.className.baseVal||\"\",t))}"
+}
