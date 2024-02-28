@@ -1,6 +1,7 @@
 {
     "exports": {
         "default": {
+            "lastMemoryUsageKB": 0,
             "setupReportingTimer": "setupReportingTimer(){let e=r.default?.processUtils?.setMemoryInformation;if(null==e){s.log(\"setMemoryInformation not available.\");return}performance.memory?.usedJSHeapSize==null&&s.error(\"usedJSHeapSize is not available.\");setInterval(()=>{let t=performance.memory?.usedJSHeapSize??0;e({memoryUsageKB:this.lastMemoryUsageKB??0,usedJSHeapSizeKB:Math.ceil(t/1024)})},1e4)}",
             "getProcessUptime": "getProcessUptime(){return r.default?.processUtils?.getProcessUptime?.()}",
             "getCurrentCPUUsagePercent": "getCurrentCPUUsagePercent(){return r.default?.processUtils?.getCurrentCPUUsagePercent?.()}",
