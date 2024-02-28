@@ -1,8 +1,9 @@
 {
     "exports": {
-        "useIsInPremiumOfferExperience": "function _(){let e=(0,f.usePremiumTrialOffer)(),t=(0,u.useHasActiveTrial)(),n=(0,d.usePremiumDiscountOffer)(),r=E();return null!=e||t||null!=n||r}",
+        "useIsInPremiumOfferExperience": "function E(){let e=(0,f.usePremiumTrialOffer)(),t=(0,u.useHasActiveTrial)(),n=(0,d.usePremiumDiscountOffer)(),r=T();return null!=e||t||null!=n||r}",
         "useHasDiscountApplied": "()=>{var e;let t=(0,a.useStateFromStores)([o.default],()=>o.default.getPremiumTypeSubscription()),n=null==t?void 0:null===(e=t.metadata)||void 0===e?void 0:e.active_discount_expires_at;return null!=n&&l(Date.now())<=l(n)}",
-        "useFetchChurnUserDiscountOffer": "e=>{let[t,n]=r.useState(!1),[i,l]=r.useState(!1),[a,s]=r.useState(null);if(e)return{churnUserDiscountOffer:a,isFetchingChurnDiscountOffer:i};let o=()=>{n(!0),l(!1)};return!i&&!t&&(l(!0),T().then(e=>{s(e),o()}).catch(e=>{o()})),{churnUserDiscountOffer:a,isFetchingChurnDiscountOffer:i}}",
-        "useShouldFetchChurnOffer": "()=>{let{enabled:e}=c.default.useExperiment({location:\"useShouldFetchChurnOffer\"},{autoTrackExposure:!1}),t=(0,a.useStateFromStores)([o.default],()=>o.default.getPremiumTypeSubscription()),n=E(),r=null!==t&&t.hasPremiumNitroMonthly,i=null!=t&&null!=t.trialId;return e&&r&&!i&&!n}"
+        "useActiveDiscountDuration": "()=>{var e;let t=(0,a.useStateFromStores)([o.default],()=>o.default.getPremiumTypeSubscription()),n=null==t?void 0:null===(e=t.metadata)||void 0===e?void 0:e.active_discount_id;switch(n){case m.PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID:return 1;case m.PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID:case m.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID:case m.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID:return 3;default:return}}",
+        "useFetchChurnUserDiscountOffer": "e=>{let[t,n]=r.useState(!1),[i,l]=r.useState(!1),[a,s]=r.useState(null);if(e)return{churnUserDiscountOffer:a,isFetchingChurnDiscountOffer:i};let o=()=>{n(!0),l(!1)};return!i&&!t&&(l(!0),C().then(e=>{s(e),o()}).catch(e=>{o()})),{churnUserDiscountOffer:a,isFetchingChurnDiscountOffer:i}}",
+        "useShouldFetchChurnOffer": "()=>{let{enabled:e}=c.default.useExperiment({location:\"useShouldFetchChurnOffer\"},{autoTrackExposure:!1}),t=(0,a.useStateFromStores)([o.default],()=>o.default.getPremiumTypeSubscription()),n=T(),r=null!==t&&t.hasPremiumNitroMonthly,i=null!=t&&null!=t.trialId;return e&&r&&!i&&!n}"
     }
 }
