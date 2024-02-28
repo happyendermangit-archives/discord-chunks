@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(){let e=(0,l.useStateFromStores)([i.default],()=>a.default.canUseIncreasedMessageLength(i.default.getCurrentUser()));return e?s.MAX_MESSAGE_LENGTH_PREMIUM:s.MAX_MESSAGE_LENGTH}"
-    }
-}

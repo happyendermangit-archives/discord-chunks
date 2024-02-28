@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "fetchActiveChannels": "async function s(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:10;r.default.dispatch({type:\"ACTIVE_CHANNELS_FETCH_START\",guildId:e});try{let n=await i.default.get({url:a.Endpoints.ACTIVE_CHANNELS(e),query:{channel_limit:t}}),o=n.body?.channels??[];return r.default.dispatch({type:\"ACTIVE_CHANNELS_FETCH_SUCCESS\",guildId:e,channels:o}),n}catch(t){throw r.default.dispatch({type:\"ACTIVE_CHANNELS_FETCH_FAILURE\",guildId:e,error:new o.default(t)}),t}}"
+    }
+}

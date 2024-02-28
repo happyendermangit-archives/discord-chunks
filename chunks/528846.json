@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "buildPermissionContext": "function E(e,t){let n;let i=S(n=e instanceof u.ChannelRecordBase&&e.isThread()?c.default.getChannel(e.parent_id)??e:e),a=o.ViewNsfwCommands.getSetting(),s=d.default.getId(),l=m.default.getCurrentUser()?.nsfwAllowed??!1,p=null!=i?f.default.getMember(i,s)?.roles??[]:[],h=r.default.isViewingRoles(i),{computedPermissions:E,hasBaseAccessPermissions:_}=C(n);return{context:n,userId:s,roleIds:p,isImpersonating:h,commandType:t,computedPermissions:E,hasBaseAccessPermissions:_,allowNsfw:I(n,l,a)}}",
+        "computeCommandContextType": "function y(e,t){return e instanceof u.ChannelRecordBase&&null==e.guild_id?e.type===h.ChannelTypes.DM&&e.getRecipientId()===t?l.InteractionContextType.BOT_DM:l.InteractionContextType.PRIVATE_CHANNEL:l.InteractionContextType.GUILD}",
+        "getContextGuildId": "function S(e){return e instanceof u.ChannelRecordBase?e.guild_id:e.id}",
+        "usePermissionContext": "function _(e,t){let n=i.useMemo(()=>e instanceof u.ChannelRecordBase&&e.isThread()?c.default.getChannel(e.parent_id)??e:e,[e]),a=S(n),l=o.ViewNsfwCommands.useSetting(),p=(0,s.useStateFromStores)([d.default],()=>d.default.getId()),h=(0,s.useStateFromStores)([m.default],()=>m.default.getCurrentUser()?.nsfwAllowed??!1),E=(0,s.useStateFromStoresArray)([f.default],()=>null!=a?f.default.getMember(a,p)?.roles??[]:[]),_=(0,s.useStateFromStores)([r.default],()=>r.default.isViewingRoles(a));return i.useMemo(()=>{let{computedPermissions:e,hasBaseAccessPermissions:i}=C(n);return{context:n,userId:p,roleIds:E,commandType:t,isImpersonating:_,computedPermissions:e,hasBaseAccessPermissions:i,allowNsfw:I(n,h,l)}},[t,n,_,E,p,h,l])}"
+    }
+}

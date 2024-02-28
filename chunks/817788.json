@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "async function _(e,t,_){let c=(0,d.tryParseChannelPath)(e);if(null!=c&&!await (0,l.default)(c)){(0,i.openModalLazy)(async()=>{let{default:e}=await n.el(\"817788@1392:1436\").then(n.bind(n,\"862157\"));return t=>(0,s.jsx)(e,{...t})});return}if(null==c){(0,a.transitionTo)(e);return}let g=function(e){if(null==e.channelId)return e;let t=u.default.getChannel(e.channelId);if(null==t)return e;let n=(0,r.getGuildIdForGenericRedirect)(t);return{...e,guildId:n??f.ME}}(c);if(null==g.channelId){(0,o.transitionToGuild)(g.guildId);return}null!=g.threadId?(0,a.transitionTo)(f.Routes.CHANNEL_THREAD_VIEW(g.guildId,g.channelId,g.threadId,g.messageId),t,_):(0,a.transitionTo)(f.Routes.CHANNEL(g.guildId,g.channelId,g.messageId),t,_)}"
+    }
+}

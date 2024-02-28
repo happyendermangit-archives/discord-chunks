@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "CONSTRUCTOR": false,
-        "REJECTION_EVENT": true,
-        "SUBCLASSING": false
-    }
-}

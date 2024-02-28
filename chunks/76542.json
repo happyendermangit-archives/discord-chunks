@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){return\"BigInt\"===r(t)?t:n(t)}"
+}

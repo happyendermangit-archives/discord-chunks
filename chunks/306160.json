@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "SUPPORTS_COPY": true,
-        "copy": "function i(e){return!!r&&(o.isPlatformEmbedded?(n.default.copy(e),!0):t.copy(e))}"
-    }
-}

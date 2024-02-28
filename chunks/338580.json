@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getErlpackEncoding": "function a(){if(i.isPlatformEmbedded){let e;try{e=r.default.requireModule(\"discord_erlpack\")}catch(t){try{e=r.default.requireModule(\"erlpack\")}catch(e){}}if(null!=e)return class{static canUse(){return null!=e}pack(t){return e.pack(t).buffer}unpack(t){t instanceof ArrayBuffer&&(t=new Uint8Array(t));try{return e.unpack(t)}catch(e){throw new(0,s.default)(\"GatewayEncodingErlpackEncoding\").error(\"Error unpacking\",{erlpackUnpackError:e,erlpackDataPreview:null!=t?Array.from(t.slice(0,32)):null,erlpackDataLength:null!=t?t.length:null}),e}}getName(){return\"etf\"}wantsString(){return!1}}}}"
-    }
-}

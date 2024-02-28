@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useMultiAccountUsers": "function o(){let e=(0,a.useStateFromStoresObject)([i.default],()=>({isLoading:i.default.getIsValidatingUsers(),multiAccountUsers:i.default.getUsers()}));return s.useEffect(()=>{r.default.wait(()=>{l.validateMultiAccountTokens()})},[]),e}"
-    }
-}

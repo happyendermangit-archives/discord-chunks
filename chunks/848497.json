@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "createScroller": "function E(e,t){let n=(0,_.getScrollbarSpecs)(e);return r.forwardRef(function(o,E){let{children:l,className:u,dir:I=\"ltr\",orientation:T=\"vertical\",paddingFix:c=!0,fade:d=!1,onScroll:S,style:A,...N}=o,O=r.useRef(null),R=(0,_.usePaddingFixes)({paddingFix:c,orientation:T,dir:I,className:u,scrollerRef:O,specs:n});return(0,i.jsx)(\"div\",{ref:e=>{\"function\"==typeof E?E(e):null!=E&&(E.current=e),O.current=e},className:a()(u,{[e]:!0,[t]:d}),style:(0,_.getMergedOrientationStyles)(A,T),dir:I,...N,children:(0,i.jsxs)(s.FocusRingScope,{containerRef:O,children:[l,R]})})})}"
+    }
+}

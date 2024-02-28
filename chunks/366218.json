@@ -1,0 +1,47 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "handleConnectionOpen(){E.clear()}",
+                "MESSAGE_CREATE": {
+                    "callback": "handleMessage(e){let{message:t}=e;return l(t,!0)}",
+                    "autoSubscribe": false
+                },
+                "MESSAGE_UPDATE": "handleMessage(e){let{message:t}=e;return l(t,!0)}",
+                "LOAD_MESSAGES_SUCCESS": "handleLoadMessages(e){let{channelId:t,messages:n}=e;E.add(t),n.forEach(e=>l(e,!0))}",
+                "LOAD_MESSAGES_AROUND_SUCCESS": "handleLoadMessages(e){let{channelId:t,messages:n}=e;E.add(t),n.forEach(e=>l(e,!0))}",
+                "LOAD_RECENT_MENTIONS_SUCCESS": "handleLoadRecentMentions(e){let{messages:t}=e;t.forEach(e=>l(e))}",
+                "LOAD_PINNED_MESSAGES_SUCCESS": "handleLoadPinnedMessages(e){let{messages:t}=e;t.forEach(e=>l(e))}",
+                "SEARCH_FINISH": "handleSearchFinish(e){e.messages.forEach(e=>{e.forEach(e=>l(e))})}",
+                "MOD_VIEW_SEARCH_FINISH": "handleSearchFinish(e){e.messages.forEach(e=>{e.forEach(e=>l(e))})}",
+                "GUILD_FEED_FETCH_SUCCESS": "handleGuildFeedFetchSuccess(e){let{data:t}=e;(0,r.getMessagesFromGuildFeedFetch)(t).forEach(e=>l(e))}",
+                "CHANNEL_SELECT": {
+                    "callback": "handleChannelSelect(e){let{channelId:t}=e;null!=t&&E.add(t)}",
+                    "autoSubscribe": false
+                }
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleConnectionOpen": "handleConnectionOpen(){E.clear()}",
+            "handleChannelSelect": "handleChannelSelect(e){let{channelId:t}=e;null!=t&&E.add(t)}",
+            "handleMessage": "handleMessage(e){let{message:t}=e;return l(t,!0)}",
+            "handleLoadMessages": "handleLoadMessages(e){let{channelId:t,messages:n}=e;E.add(t),n.forEach(e=>l(e,!0))}",
+            "handleLoadRecentMentions": "handleLoadRecentMentions(e){let{messages:t}=e;t.forEach(e=>l(e))}",
+            "handleLoadPinnedMessages": "handleLoadPinnedMessages(e){let{messages:t}=e;t.forEach(e=>l(e))}",
+            "handleSearchFinish": "handleSearchFinish(e){e.messages.forEach(e=>{e.forEach(e=>l(e))})}",
+            "handleGuildFeedFetchSuccess": "handleGuildFeedFetchSuccess(e){let{data:t}=e;(0,r.getMessagesFromGuildFeedFetch)(t).forEach(e=>l(e))}"
+        }
+    }
+}

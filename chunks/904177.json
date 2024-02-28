@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "LazyLibrary": "function u(e){let{createPromise:t,webpackId:n,render:o,renderFallback:a}=e,[s,_]=r.useState(null);return r.useEffect(()=>{E({createPromise:t,webpackId:n}).then(e=>{let{default:t}=e;return _(t)})},[]),(0,i.jsx)(i.Fragment,{children:null==s?a():o(s)})}",
+        "importWithRetry": "async function E(e){let{createPromise:t,webpackId:i}=e,r=500,o=0;for(;;)try{return await t()}catch(e){if(console.log(e),i in n.c)throw console.log(\"Module was found in webpack cache so it has loaded from the network and webpack will not retry\"),e;if(o>=50)throw e;await _(r),await a(),r=Math.min(5e3,2*r),o++}}",
+        "makeLazy": "function l(e){let{createPromise:t,webpackId:n,renderLoader:a,name:s,memo:_=!1}=e,l=r.lazy(()=>E({createPromise:t,webpackId:n})),u=e=>(0,i.jsx)(r.Suspense,{fallback:null!=a?a():o()(),children:(0,i.jsx)(l,{...e})});return _&&(u=r.memo(u)),u.displayName=`Suspense(${s||\"Unknown\"})`,u}",
+        "setAwaitOnline": "function s(e){a=e}"
+    }
+}

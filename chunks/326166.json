@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": "function(){let e,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t.getState,o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:Object.is,[,i]=(0,r.useReducer)(e=>e+1,0),u=t.getState(),s=(0,r.useRef)(u),l=(0,r.useRef)(n),c=(0,r.useRef)(o),d=(0,r.useRef)(!1),f=(0,r.useRef)();void 0===f.current&&(f.current=n(u));let p=!1;(s.current!==u||l.current!==n||c.current!==o||d.current)&&(e=n(u),p=!o(f.current,e)),a(()=>{p&&(f.current=e),s.current=u,l.current=n,c.current=o,d.current=!1});let h=(0,r.useRef)(u);a(()=>{let e=()=>{try{let e=t.getState(),n=l.current(e);!c.current(f.current,n)&&(s.current=e,f.current=n,i())}catch(e){d.current=!0,i()}},n=t.subscribe(e);return t.getState()!==h.current&&e(),n},[]);let m=p?e:f.current;return(0,r.useDebugValue)(m),m}",
+        "setIsOnStartStageScreen": "function _(e){l.setState({isOnStartStageScreen:e})}",
+        "useUpdateIsOnStartStageScreenEffect": "function c(e){let t=(0,r.useStateFromStores)([o.default],()=>o.default.getVoiceChannelId()===e.id),n=(0,r.useStateFromStores)([a.default],()=>a.default.can(u.MODERATE_STAGE_CHANNEL_PERMISSIONS,e),[e]),i=(0,d.default)(e.id),l=n&&!i;s.useEffect(()=>{t?!l&&_(!1):_(l)},[t,l])}"
+    }
+}

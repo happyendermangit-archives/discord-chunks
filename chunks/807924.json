@@ -1,0 +1,17 @@
+{
+    "exports": {
+        "default": {
+            "name": "arrow",
+            "enabled": true,
+            "phase": "main",
+            "fn": "function(e){var t,n=e.state,o=e.name,f=e.options,p=n.elements.arrow,h=n.modifiersData.popperOffsets,m=(0,r.default)(n.placement),y=(0,u.default)(m),v=[(0,d.left),(0,d.right)].indexOf(m)>=0?\"height\":\"width\";if(p&&h){var g,b,_=(g=f.padding,b=n,g=\"function\"==typeof g?g(Object.assign({},b.rects,{placement:b.placement})):g,(0,l.default)(\"number\"!=typeof g?g:(0,c.default)(g,d.basePlacements))),w=(0,a.default)(p),x=\"y\"===y?d.top:d.left,D=\"y\"===y?d.bottom:d.right,k=n.rects.reference[v]+n.rects.reference[y]-h[y]-n.rects.popper[v],M=h[y]-n.rects.reference[y],S=(0,i.default)(p),T=S?\"y\"===y?S.clientHeight||0:S.clientWidth||0:0,E=_[x],L=T-w[v]-_[D],C=T/2-w[v]/2+(k/2-M/2),P=(0,s.within)(E,C,L);n.modifiersData[o]=((t={})[y]=P,t.centerOffset=P-C,t)}}",
+            "effect": "function(e){var t=e.state,n=e.options.element,r=void 0===n?\"[data-popper-arrow]\":n;if(null!=r&&(\"string\"!=typeof r||!!(r=t.elements.popper.querySelector(r))))(0,o.default)(t.elements.popper,r)&&(t.elements.arrow=r)}",
+            "requires": [
+                "popperOffsets"
+            ],
+            "requiresIfExists": [
+                "preventOverflow"
+            ]
+        }
+    }
+}

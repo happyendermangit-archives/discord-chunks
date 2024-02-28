@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let t=(0,r.useStateFromStores)([o.default],()=>o.default.desaturateUserColors?o.default.saturation:1);return(0,i.useMemo)(()=>{let{h:n,s:i,l:a}=s()((0,l.int2hex)(e)).toHsl(),r=s()({h:n,s:i*t,l:a});return{hex:r.toHexString(),hsl:r.toHslString()}},[e,t])}"
+    }
+}

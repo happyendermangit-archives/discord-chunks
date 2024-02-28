@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "Table": "function c(e){let{title:t,header:n,footer:s,...E}=e,l=r.useId();return(0,i.jsxs)(\"div\",{className:_.container,children:[(0,i.jsxs)(\"div\",{className:_.toolbar,children:[(0,i.jsx)(a.Heading,{className:_.title,variant:\"heading-md/semibold\",id:l,children:t}),(0,i.jsx)(\"div\",{children:n})]}),(0,i.jsx)(o.Table,{...E,\"aria-labelledby\":l,className:_.table}),null!=s&&(0,i.jsx)(\"div\",{className:_.footer,children:s})]})}",
+        "TableBody": "function I(e){return(0,i.jsx)(o.TableBody,{...e,className:_.body})}",
+        "TableCell": "function E(e){return(0,i.jsx)(o.Cell,{...e,className:_.cell})}",
+        "TableColumn": "function l(e){let{children:t,...n}=e;return(0,i.jsx)(o.Column,{...n,className:_.column,children:(0,i.jsx)(s.Text,{variant:\"eyebrow\",className:_.columnText,children:t})})}",
+        "TableHeader": "function T(e){return(0,i.jsx)(o.TableHeader,{...e,className:_.header})}",
+        "TableRow": "function u(e){return(0,i.jsx)(o.Row,{...e,className:_.row})}"
+    }
+}

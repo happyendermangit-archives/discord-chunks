@@ -1,3 +1,7 @@
 {
-    "exports": "/assets/0cf4961ba30032532786.svg"
+    "exports": {
+        "default": {
+            "longPressMessage": "Dlouhým stiskem nebo stisknutím kláves Alt + šipka dolů otevřete nabídku"
+        }
+    }
 }

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function _(e){return(0,i.jsx)(o.ModalRoot,{...e,\"aria-label\":a.default.Messages.LOADING,size:o.ModalSize.SMALL,children:(0,i.jsx)(\"div\",{className:s.spinnerContainer,children:(0,i.jsx)(r.Spinner,{})})})}"
+    }
+}

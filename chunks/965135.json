@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useEmbeddedActivityLifecycle": "e=>{let{userActivity:t,inActivity:n}=(0,i.default)(e.id),s=r.default;return(0,o.default)({channel:e,userActivity:t,inActivity:n,embeddedActivitiesManager:s}),a.useEffect(()=>()=>{(null==t?void 0:t.applicationId)!=null&&(0,l.disconnectEmbeddedActivity)(e.id,null==t?void 0:t.applicationId)},[e.id,null==t?void 0:t.applicationId]),{isLoading:!n}}"
-    }
-}

@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "transformColorContrast": "function i(_,E,I,e){switch(E){case\"background\":case\"border\":return R()(_).set(\"hsl.l\",`*${A(a,\"light\"===I?r:T,e)}`).hex();case\"text\":return R()(_).set(\"hsl.l\",`*${A(a,\"light\"===I?N:t,e)}`).hex();default:return _}}",
+        "transformColorForReducedSaturation": "function o(_,E,I){let e=R()(_);if(\"background\"!==E)return e.set(\"hsl.s\",`*${I}`).hex();{let _=function(_,E,I){let[e,R]=_,[A,a]=E;return A+(I-e)/(R-e)*(a-A)}([0,1],[.25,1],I);return e.set(\"hsl.s\",`*${_}`).hex()}}"
+    }
+}

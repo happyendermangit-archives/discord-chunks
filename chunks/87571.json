@@ -1,0 +1,29 @@
+{
+    "exports": {
+        "NEW_MEMBER_ACTION_MAX": 5,
+        "NEW_MEMBER_ACTION_TITLE_MAX_LENGTH": 60,
+        "NEW_MEMBER_ACTION_TITLE_MIN_LENGTH": 7,
+        "NewMemberActionTypes": {
+            "0": "VIEW",
+            "1": "CHAT",
+            "VIEW": 0,
+            "CHAT": 1
+        },
+        "RESOURCE_CHANNEL_DESCRIPTION_MAX_LENGTH": 200,
+        "RESOURCE_CHANNEL_MAX": 7,
+        "RESOURCE_CHANNEL_TITLE_MAX_LENGTH": 30,
+        "RESOURCE_CHANNEL_TITLE_MIN_LENGTH": 1,
+        "WELCOME_MESSAGE_MAX_LENGTH": 300,
+        "WELCOME_MESSAGE_MIN_LENGTH": 7,
+        "actionsFromServer": "e=>{if(null==e)return null;let t={};for(let r in e.channel_actions)t[r]=e.channel_actions[r].completed;return t}",
+        "isChannelValidForNewMemberAction": "function D(e){switch(e.type){case l.ChannelTypes.GUILD_TEXT:case l.ChannelTypes.GUILD_ANNOUNCEMENT:case l.ChannelTypes.GUILD_FORUM:case l.ChannelTypes.GUILD_MEDIA:return s.default.canEveryoneRole(l.Permissions.VIEW_CHANNEL,e);default:return!1}}",
+        "isChannelValidForResourceChannel": "function A(e){return e.type===l.ChannelTypes.GUILD_TEXT&&!s.default.canEveryoneRole(l.Permissions.SEND_MESSAGES,e)&&s.default.canEveryoneRole(l.Permissions.VIEW_CHANNEL,e)}",
+        "isSettingsEmpty": "function C(e){return null==e||!!T(e.welcomeMessage)&&(null==e.newMemberActions||!(e.newMemberActions.length>0))&&(null==e.resourceChannels||!(e.resourceChannels.length>0))&&!0}",
+        "isSettingsValid": "function R(e){return null!=e&&(!!C(e)||e.welcomeMessage?.message!=null&&!(e.welcomeMessage.message.length<o)&&e.welcomeMessage?.authorIds!=null&&0!==e.welcomeMessage.authorIds.length&&null!=e.newMemberActions&&!(e.newMemberActions.length<3)&&!0)}",
+        "isWelcomeMessageEmpty": "function T(e){return null==e||(null==e.message||!(e.message.length>0))&&(null==e.authorIds||!(e.authorIds.length>0))&&!0}",
+        "newMemberActionFromServer": "function M(e){return{channelId:e.channel_id,actionType:e.action_type,title:e.title,description:e.description,emoji:null==e.emoji?null:{id:e.emoji.id,name:e.emoji.name,animated:e.emoji.animated},icon:e.icon??null}}",
+        "resourceChannelFromServer": "function I(e){return{channelId:e.channel_id,title:e.title,description:e.description??\"\",emoji:null==e.emoji?null:{id:e.emoji.id,name:e.emoji.name,animated:e.emoji.animated},icon:e.icon??null}}",
+        "settingsFromServer": "function g(e){if(null==e)return null;let{welcome_message:t,new_member_actions:r,resource_channels:n,enabled:i}=e,s={authorIds:t.author_ids,message:t.message},l=r.filter(e=>(0,u.isNotNullish)(a.default.getChannel(e.channel_id))).map(M);return{welcomeMessage:s,newMemberActions:l,resourceChannels:n.filter(e=>(0,u.isNotNullish)(a.default.getChannel(e.channel_id))).map(I),enabled:i}}",
+        "settingsToServer": "function p(e,t){if(null==t)return null;let{welcomeMessage:r,newMemberActions:n,resourceChannels:i,enabled:s}=t,l={author_ids:r?.authorIds??[],message:r?.message??\"\"},o=(n??[]).filter(e=>(0,u.isNotNullish)(a.default.getChannel(e.channelId))).map(e=>({channel_id:e.channelId,action_type:e.actionType,title:e.title,description:e.description,emoji:{id:e.emoji?.id??void 0,name:e.emoji?.name??void 0,animated:e.emoji?.animated??void 0},icon:e.icon??void 0}));return{guild_id:e,welcome_message:l,new_member_actions:o,resource_channels:(i??[]).filter(e=>(0,u.isNotNullish)(a.default.getChannel(e.channelId))).map(e=>({channel_id:e.channelId,title:e.title,description:e.description,emoji:{id:e.emoji?.id??void 0,name:e.emoji?.name??void 0,animated:e.emoji?.animated??void 0},icon:e.icon??void 0})),enabled:s}}"
+    }
+}

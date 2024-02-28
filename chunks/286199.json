@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "PinToBottomScrollerAuto": {
+            "render": "function(t,l){let{children:u,className:I,onResize:T,contentClassName:c,onScroll:d,dir:S=\"ltr\",fade:A=!1,customTheme:N=!1,style:O,...R}=t,C=r.useRef(null),h=r.useRef(null),[L,D]=r.useState(!1),{scrollerRef:m,getScrollerState:p}=(0,_.useUncachedScrollerState)(),f=(0,_.useScrollSpring)(m);r.useImperativeHandle(l,()=>({getScrollerNode:()=>m.current,isScrolling:()=>null!=C.current,getScrollerState:p,...(0,_.getAnimatedScrollHelpers)(m,p,f)}),[m,p,f]);let P=r.useCallback(e=>{null==C.current?D(!0):clearTimeout(C.current),C.current=setTimeout(()=>{C.current=null,D(!1)},200),null!=d&&d(e)},[d]);return r.useEffect(()=>()=>clearTimeout(C.current),[]),(0,_.useResizeObserverSubscription)({ref:m,key:\"container\",onUpdate:T,resizeObserver:o,listenerMap:n}),(0,_.useResizeObserverSubscription)({ref:h,key:\"content\",onUpdate:T,resizeObserver:o,listenerMap:n}),(0,i.jsx)(\"div\",{ref:m,className:a()(I,{[E.fade]:A,[E.customTheme]:N,[e]:!0,[E.managedReactiveScroller]:!0,[E.scrolling]:L&&A}),style:O,dir:S,onScroll:P,...R,children:(0,i.jsx)(s.FocusRingScope,{containerRef:h,children:(0,i.jsxs)(\"div\",{ref:h,className:a()(c,E.content),children:[u,L&&(0,i.jsx)(\"div\",{className:E.pointerCover})]})})})}"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`${e.fieldLabel} verringern`",
+            "increase": "e=>`${e.fieldLabel} erh\\xf6hen`",
+            "numberField": "Nummernfeld"
+        }
+    }
+}

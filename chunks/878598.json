@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class o extends r.default{constructor(e,t){super(e,t),429===this.status&&(this.message=this._getMessageFromRateLimit(e))}_getMessageFromRateLimit(e){let t=e.body.retry_after,n=(0,s.diffAsUnits)(0,t*i.default.Millis.SECOND);return(0,s.unitsAsStrings)(n,{days:a.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_DAYS,hours:a.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_HOURS,minutes:a.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_MINUTES})}}"
+    }
+}

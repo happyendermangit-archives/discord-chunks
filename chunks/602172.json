@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "areThemesEqualForGradientThemes": "function a(e,t){return e===t||e===r.ThemeTypes.DARK&&t===r.ThemeTypes.DARKER||e===r.ThemeTypes.DARKER&&t===r.ThemeTypes.DARK||!1}",
+        "getLinearGradientForBackgroundGradient": "function o(e){let{angle:t,colors:n}=e;return`linear-gradient(${t}deg, ${n.map(e=>{let{token:t,stop:n}=e;return`${(0,i.getColor)(t)} ${n}%`}).join(\", \")})`}"
+    }
+}

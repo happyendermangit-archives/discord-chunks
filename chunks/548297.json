@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(e,t,n){let s;let i=[],r=function(){for(var a=arguments.length,o=Array(a),u=0;u<a;u++)o[u]=arguments[u];let d=Date.now();for(null!=s&&(clearTimeout(s),s=null);i.length>0&&i[0]<=d;)i.shift();i.length<e?(i.push(d+t),n(...o)):s=setTimeout(()=>r(...o),i[0]-d)};return r}"
+    }
+}

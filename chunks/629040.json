@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "FormText": "function l(e){let{type:t=_.DEFAULT,className:n,disabled:r,selectable:l,children:u,style:I,...T}=e,c=E.DEFAULT;return r?c=E.DISABLED:l&&(c=E.SELECTABLE),(0,i.jsx)(a.default,{className:o()(s[t],n,s[c]),style:I,...T,children:u})}",
+        "FormTextTypes": {
+            "DEFAULT": "default",
+            "INPUT_PLACEHOLDER": "placeholder",
+            "DESCRIPTION": "description",
+            "LABEL_BOLD": "labelBold",
+            "LABEL_SELECTED": "labelSelected",
+            "LABEL_DESCRIPTOR": "labelDescriptor",
+            "ERROR": "error",
+            "SUCCESS": "success"
+        }
+    }
+}

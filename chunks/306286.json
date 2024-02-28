@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "BadgeSizes": {
+            "0": "SIZE_24",
+            "1": "SIZE_22",
+            "2": "SIZE_18",
+            "SIZE_24": 0,
+            "SIZE_22": 1,
+            "SIZE_18": 2
+        },
+        "default": "function C(e){let{user:t,guildId:n,className:i,shrinkAtCount:a,shrinkToSize:l,isTryItOutFlow:C,size:y=0}=e,S=(0,p.default)(t.id,n),g=(0,f.default)(S).map(e=>({...e,src:(0,m.getBadgeAsset)(e.icon)})),x=(0,d.useWindowDispatch)();if(t.isClyde())return(0,s.jsx)(\"div\",{className:r()(i,_.container,_.clydeBadgeList),\"aria-label\":E.default.Messages.PROFILE_USER_BADGES,role:\"group\",children:(0,s.jsx)(c.default,{})});C&&null==g.find(e=>\"premium\"===e.id)&&g.push({id:\"premium\",icon:I,src:I,description:E.default.Messages.PREMIUM_BADGE_TOOLTIP.format({date:new Date})});let T=null!=a&&null!=l&&g.length>a?l:y;return(0,s.jsx)(\"div\",{className:r()(i,g.length>0?_.containerWithContent:_.container),\"aria-label\":E.default.Messages.PROFILE_USER_BADGES,role:\"group\",children:g.map(e=>(0,s.jsx)(o.Tooltip,{position:\"top\",text:e.description,spacing:12,children:t=>(0,s.jsx)(o.Anchor,{...t,onClick:n=>{t.onClick?.();let i=null!=e.link?(0,u.default)(e.link):null;if(null!=i)return x.dispatch(h.ComponentActions.POPOUT_CLOSE),i(n)},href:e.link,children:(0,s.jsx)(\"img\",{alt:\" \",\"aria-hidden\":!0,src:e.src,className:r()({[_.profileBadge24]:0===T,[_.profileBadge22]:1===T,[_.profileBadge18]:2===T})})})},e.id))})}"
+    }
+}

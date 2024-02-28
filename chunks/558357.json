@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "commandName": "function i(e,t){return e===s.ApplicationCommandType.CHAT?\"/\"+t:t}",
+        "keyPermissions": "function a(e){return Object.fromEntries(e.map(e=>[r(e.id,e.type),e]))}",
+        "toPermissionKey": "function r(e,t){return`${e}:${t}`}"
+    }
+}

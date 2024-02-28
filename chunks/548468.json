@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "constantTimeCompare": "function i(e,t){let n=0,i=Math.min(e.length,t.length);for(let a=0;a<i;a++)n|=e.charCodeAt(a)^t.charCodeAt(a);return 0===n&&e.length===t.length}"
+    }
+}

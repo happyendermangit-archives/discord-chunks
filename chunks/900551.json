@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "confirmActivityLaunchChecks": "async function s(t){let e=await r(t);if(!e)return!1;let i=await d(t);return!!i||!1}"
-    }
-}

@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": "function _(e,t,n){let s=arguments.length>3&&void 0!==arguments[3]?arguments[3]:a,{current:_}=(0,i.useRef)({stores:e,areStatesEqual:s,getStateFromStores:t,prevDeps:void 0,state:void 0}),E=_.state;if(null==n||!(0,r.areArraysShallowEqual)(n,_.prevDeps)){let e=t();(null==E||!s(E,e))&&(E=e)}(0,i.useLayoutEffect)(()=>{_.getStateFromStores=t,_.prevDeps=n,_.state=E});let[,l]=(0,i.useState)(null);return(0,i.useLayoutEffect)(()=>{let t=()=>{let e=_.getStateFromStores();!s(_.state,e)&&(_.state=e,l({}))};t();let n=new o.default(e,t);return n.attach(\"useStateFromStores\"),()=>n.detach()},[]),E}",
+        "statesWillNeverBeEqual": "function s(e,t){return!1}",
+        "useStateFromStoresArray": "function l(e,t,n){return _(e,t,n,r.areArraysShallowEqual)}",
+        "useStateFromStoresObject": "function E(e,t,n){return _(e,t,n,r.default)}"
+    }
+}

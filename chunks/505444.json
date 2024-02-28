@@ -1,13 +1,6 @@
 {
     "exports": {
-        "animatorBottom": "animatorBottom_b2d32e",
-        "animatorCenter": "animatorCenter_ad2ea2",
-        "animatorLeft": "animatorLeft_b2289c",
-        "animatorRight": "animatorRight__5895e",
-        "animatorTop": "animatorTop__609e7",
-        "didRender": "didRender_f1da13",
-        "fade": "fade_d2e09a",
-        "scale": "scale__72882",
-        "translate": "translate_c2f6c4"
+        "createDangerousStringForStyles": "function(e){}",
+        "setValueForStyles": "function(e,t,n){var r=e.style;for(var a in t)if(t.hasOwnProperty(a)){var i,u,l,c=0===a.indexOf(\"--\");var f=(i=a,u=t[a],l=c,null==u||\"boolean\"==typeof u||\"\"===u?\"\":l||\"number\"!=typeof u||0===u||s.hasOwnProperty(i)&&s[i]?(\"\"+u).trim():u+\"px\");if(\"float\"===a&&(a=\"cssFloat\"),c)r.setProperty(a,f);else if(f)r[a]=f;else{var p=d&&o.shorthandPropertyExpansions[a];if(p)for(var h in p)r[h]=\"\";else r[a]=\"\"}}}"
     }
 }

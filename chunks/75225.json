@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(e){let{id:t,width:n=r.CUSTOM_BASE_SIZE}=e,a=r.ICONS_BY_ID[t];return null==a?null:(0,i.jsx)(\"img\",{src:a.iconSource,width:n,alt:o.default.Messages.SETTINGS_CUSTOM_APP_ICONS,draggable:!1})}"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "calculateProgress": "function r(e,t){return 0===t?0:Math.min(Math.floor(e/t*100),100)}",
+        "doesImageMatchUpload": "function i(e,t){if(t.id===e.uri||null!=t.id&&t.id===e.id)return!0;if(t.item.platform===s.UploadPlatform.REACT_NATIVE){let{item:n}=t,{filename:s}=e;if(n.originalUri===e.uri||null!=s&&n.originalUri?.includes(s))return!0}return!1}"
+    }
+}

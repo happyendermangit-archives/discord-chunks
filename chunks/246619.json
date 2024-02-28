@@ -1,0 +1,16 @@
+{
+    "exports": {
+        "handleProfileAccessibilityTooltipViewed": "function E(){i.default.dispatch({type:\"USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED\"})}",
+        "resetPendingProfileChanges": "function T(){i.default.dispatch({type:\"USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES\"})}",
+        "saveProfileChanges": "async function f(e,t){let n=u.default.getCurrentUser()?.id;if(null==n)return;let l=o.UseLegacyChatInput.getSetting();null!=e.bio&&l&&(e.bio=s.default.parse(void 0,e.bio).content);try{i.default.dispatch({type:\"USER_PROFILE_UPDATE_START\",userId:n});let s=await r.default.patch({url:null!=t?c.Endpoints.GUILD_PROFILE(t,c.ME):c.Endpoints.USER_PROFILE(c.ME),body:e});if(s.ok){let e=s.body.profile_effect?.id;i.default.dispatch({type:\"USER_PROFILE_UPDATE_SUCCESS\",userId:n,profileEffectId:e,...s.body})}else{let e=new a.APIError(s);i.default.dispatch({type:\"USER_PROFILE_UPDATE_FAILURE\",errors:s.body,apiError:e})}return s}catch(t){let e=new a.APIError(t);i.default.dispatch({type:\"USER_PROFILE_UPDATE_FAILURE\",errors:{},apiError:e})}}",
+        "setPendingAccentColor": "function C(e){i.default.dispatch({type:\"USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR\",color:e})}",
+        "setPendingBanner": "function I(e){i.default.dispatch({type:\"USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER\",banner:e})}",
+        "setPendingBio": "function m(e){i.default.dispatch({type:\"USER_SETTINGS_ACCOUNT_SET_PENDING_BIO\",bio:e})}",
+        "setPendingPronouns": "function S(e){i.default.dispatch({type:\"USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS\",pronouns:e})}",
+        "setPendingThemeColors": "function p(e){i.default.dispatch({type:\"USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS\",themeColors:e})}",
+        "setTryItOutAvatar": "function P(e){i.default.dispatch({type:\"USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR\",avatar:e}),_(d.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)}",
+        "setTryItOutAvatarDecoration": "function R(e){i.default.dispatch({type:\"USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION\",avatarDecoration:e}),_(d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)}",
+        "setTryItOutBanner": "function O(e){i.default.dispatch({type:\"USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER\",banner:e}),_(d.AnalyticsPremiumFeatureNames.PROFILE_BANNER)}",
+        "setTryItOutThemeColors": "function N(e){i.default.dispatch({type:\"USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS\",themeColors:e}),_(d.AnalyticsPremiumFeatureNames.PROFILE_THEME_COLOR)}"
+    }
+}

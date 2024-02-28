@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "createHeaderResult": "function i(e){return{type:l.AutocompleterResultTypes.HEADER,record:new l.HeaderRecord(e),score:0}}"
+    }
+}

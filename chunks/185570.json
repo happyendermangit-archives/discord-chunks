@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "getLoginPath": "function e(_){let E=!(arguments.length>1)||void 0===arguments[1]||arguments[1],I=arguments.length>2&&void 0!==arguments[2]?arguments[2]:\"\",e=null!=window.GLOBAL_ENV.WEBAPP_ENDPOINT?window.GLOBAL_ENV.WEBAPP_ENDPOINT:\"\",R=null!=_?`?redirect_to=${encodeURIComponent(_)}`:\"\";return 0!==I.length&&(I=0===R.length?`?${I}`:`&${I}`),`${E?e:\"\"}/login${R}${I}`}",
+        "wrapPaths": "function R(_,E){let I={};for(let e of Object.keys(_)){let R=_[e];if(\"function\"!=typeof R){I[e]=R;continue}I[e]=function(){for(var _=arguments.length,I=Array(_),e=0;e<_;e++)I[e]=arguments[e];return R(...function(_,E){return _.map(_=>null==_?_:null==E?encodeURIComponent(_):String(_).split(\"\").map(_=>null!=E&&E.includes(_)?_:encodeURIComponent(_)).join(\"\"))}(I,E))}}return I}"
+    }
+}

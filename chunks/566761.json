@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "canLurkerListen": "function E(e){return!!(null!=e&&e.isGuildStageVoice()&&r.default.isLurking(e.guild_id)&&f.default.isPublic(e.id))&&u.default.can(l.JOIN_VOCAL_CHANNEL_PERMISSIONS,e)}",
+        "isEmptyOverwrite": "function g(e){let{allow:t,deny:n}=e;return s.default.equals(t,d.default.NONE)&&s.default.equals(n,d.default.NONE)}",
+        "removeModeratorOverwrite": "function c(e,t,n){let i=n?.permissionOverwrites[e];return{id:e,type:t,deny:i?.deny??d.default.NONE,allow:s.default.remove(i?.allow??d.default.NONE,l.MODERATE_STAGE_CHANNEL_PERMISSIONS)}}",
+        "useCanModerateRequestToSpeak": "function h(e){return(0,i.useStateFromStores)([a.default,u.default],()=>null!=e&&u.default.can(_.Permissions.MUTE_MEMBERS,a.default.getChannel(e)),[e])}",
+        "useCanUpdateStageChannelModerators": "function m(e){return(0,i.useStateFromStores)([u.default,o.default,a.default],()=>{let t=a.default.getChannel(e),n=o.default.getGuild(t?.getGuildId());return!!(u.default.can(_.Permissions.ADMINISTRATOR,n)||u.default.can(_.Permissions.MANAGE_ROLES,t,void 0,void 0,!0)||u.default.can(l.UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS,t))||!1},[e])}"
+    }
+}

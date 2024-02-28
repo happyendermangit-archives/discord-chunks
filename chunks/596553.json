@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`${e.fieldLabel} azalt`",
+            "increase": "e=>`${e.fieldLabel} artt\\u{131}r`",
+            "numberField": "Sayı alanı"
+        }
+    }
+}

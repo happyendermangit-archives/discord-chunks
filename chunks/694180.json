@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "calculateButtonColor": "function(){var r=arguments,a=t?t.apply(this,r):r[0],o=n.cache;if(o.has(a))return o.get(a);var i=e.apply(this,r);return n.cache=o.set(a,i)||o,i}",
+        "getProfileTheme": "function m(e){return null==e?null:(0,s.getDarkness)(e)>.5?f.ThemeTypes.DARK:f.ThemeTypes.LIGHT}",
+        "getValueInColorGradientByPercentage": "function h(e,t,n){let i=n/100,a=1-i;return[Math.round(e[0]*a+t[0]*i),Math.round(e[1]*a+t[1]*i),Math.round(e[2]*a+t[2]*i)]}",
+        "useAvatarBorderColor": "function _(e,t,n){let i=p(e);return null==i||null==t?null:E(t,n?i.overlaySyncedWithUserTheme:i.overlay)}",
+        "useDividerColor": "function y(e,t){let n=(0,d.useColorValue)(f.Color.WHITE_500).hex;return(0,o.isThemeDark)(e)?(0,s.hex2int)(n):null!=t?I(t):null}",
+        "useMessageInputBorderColor": "function C(e,t){let n=p(e);return null!=n&&null!=t?E(t,n?.messageInputBorder):null}",
+        "useProfileThemeValues": "function p(e){let t=(0,l.default)([u.default],()=>u.default.saturation);return(0,i.useMemo)(()=>null==e?null:{overlaySyncedWithUserTheme:r.default.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({theme:e,saturation:t}).hsl(),overlay:r.default.colors.PROFILE_GRADIENT_OVERLAY.resolve({theme:e,saturation:t}).hsl(),sectionBox:r.default.colors.PROFILE_GRADIENT_SECTION_BOX.resolve({theme:e,saturation:t}).hsl(),messageInputBorder:r.default.colors.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER.resolve({theme:e,saturation:t}).hsl(),dividerOpacity:e===r.default.themes.DARK?.24:.12,noteBackgroundColor:r.default.colors.PROFILE_GRADIENT_NOTE_BACKGROUND.resolve({theme:e,saturation:t}).hsl(),profileBodyBackgroundHover:r.default.colors.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER.resolve({theme:e,saturation:t}).hsl(),rolePillBackgroundColor:r.default.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve({theme:e,saturation:t}).hsl(),rolePillBorderColor:r.default.colors.PROFILE_GRADIENT_ROLE_PILL_BORDER.resolve({theme:e,saturation:t}).hsl(),icon:r.default.colors.INTERACTIVE_NORMAL.resolve({theme:e,saturation:t}).hsl()},[e,t])}"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "closeAllModals": "function h(){let e=T.getState();for(let t in e)for(let n of e[t])S(n.key,t)}",
+        "closeModal": "function S(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:u(),n=T.getState()[t],i=null!=n?n.find(t=>{let{key:n}=t;return n===e}):null;T.setState(n=>void 0===n[t]?n:{...n,[t]:n[t].filter(t=>{let{key:n}=t;return n!==e})}),null!=i&&null!=i.onCloseCallback&&i.onCloseCallback()}",
+        "getInteractingModalContext": "function u(){let e=(0,a.getCurrentlyInteractingAppContext)();return null!=e?I(e):s.DEFAULT_MODAL_CONTEXT}",
+        "hasAnyModalOpen": "function O(){return N(T.getState())}",
+        "hasAnyModalOpenSelector": "function N(e){for(let t of l){let n=e[t];if(null!=n&&n.length>0)return!0}return!1}",
+        "hasModalOpen": "function D(e,t){return L(T.getState(),e,t)}",
+        "hasModalOpenSelector": "function L(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:s.DEFAULT_MODAL_CONTEXT,i=e[n];return null!=i&&i.some(e=>e.key===t)}",
+        "modalContextFromAppContext": "function I(e){return e===_.AppContext.POPOUT?s.POPOUT_MODAL_CONTEXT:s.DEFAULT_MODAL_CONTEXT}",
+        "openModal": "function d(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:Object.freeze({}),n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:u(),{modalKey:i,instant:o,Layer:a,onCloseRequest:s,onCloseCallback:_,backdropStyle:E}=t,l=null!=i?i:r()();return T.setState(t=>{let i=t[n];return void 0!==i&&i.some(e=>{let{key:t}=e;return t===l})?t:{...t,[n]:[...i,{key:l,Layer:a,render:e,onCloseRequest:s??(()=>S(l,n)),onCloseCallback:_,instant:o,backdropStyle:E}]}}),l}",
+        "openModalLazy": "async function c(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},{contextKey:n=u(),...i}=t,o=null!=t.modalKey?t.modalKey:r()(),a=!1,s=setTimeout(()=>{a=!0,d(E,{...i,modalKey:o},n)},300),_=await e();return clearTimeout(s),a?D(o,n)&&A(o,_,i.onCloseRequest,i.onCloseCallback,n):d(_,{...i,modalKey:o},n),o}",
+        "updateModal": "function A(e,t,n,i){let r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:u();T.setState(o=>void 0===o[r]?o:{...o,[r]:o[r].map(o=>o.key===e?{...o,render:t,onCloseRequest:null==n?()=>S(e,r):n,onCloseCallback:i}:o)})}",
+        "useHasAnyModalOpen": "function R(){return N(T())}",
+        "useIsModalAtTop": "function C(e){let{default:t,popout:n}=T();return n.length>0?n.at(-1)?.key===e:t.at(-1)?.key===e}",
+        "useModalsStore": "function(){let e,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t.getState,o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:Object.is,[,i]=(0,r.useReducer)(e=>e+1,0),u=t.getState(),s=(0,r.useRef)(u),l=(0,r.useRef)(n),c=(0,r.useRef)(o),d=(0,r.useRef)(!1),f=(0,r.useRef)();void 0===f.current&&(f.current=n(u));let p=!1;(s.current!==u||l.current!==n||c.current!==o||d.current)&&(e=n(u),p=!o(f.current,e)),a(()=>{p&&(f.current=e),s.current=u,l.current=n,c.current=o,d.current=!1});let h=(0,r.useRef)(u);a(()=>{let e=()=>{try{let e=t.getState(),n=l.current(e);!c.current(f.current,n)&&(s.current=e,f.current=n,i())}catch(e){d.current=!0,i()}},n=t.subscribe(e);return t.getState()!==h.current&&e(),n},[]);let m=p?e:f.current;return(0,r.useDebugValue)(m),m}"
+    }
+}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "isDragTrigger": "function u(e){var t;let n=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return!!n&&!1===e.isTrusted||(null===(t=e.key)||void 0===t?void 0:t.toLowerCase())===\"d\"&&(e.metaKey||e.ctrlKey)&&!e.altKey}",
-        "default": "(e,t,n)=>new c(e,t,n)"
-    }
-}

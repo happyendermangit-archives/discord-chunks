@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "stopLurkingAll": "async function i(e){let t=a.default.lurkingGuildIds(),l=t.filter(t=>!e.includes(t));0!==l.length&&(r.default.dispatch({type:\"GUILD_STOP_LURKING\",ignoredGuildIds:e}),await Promise.all(l.map(async e=>{let t=a.default.getLurkingSource();try{await n.default.delete({url:u.Endpoints.GUILD_LEAVE(e),body:{lurking:!0},oldFormErrors:!0})}catch(l){r.default.dispatch({type:\"GUILD_STOP_LURKING_FAILURE\",lurkingGuildId:e,lurkingSource:t})}})))}",
-        "stopLurking": "async function s(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,t=a.default.lurkingGuildIds();if(0===t.length)return;let l=null==e||!t.includes(e);if(!l)return;let n=d.default.getGuildId(),r=[e,n].filter(o.isNotNullish);await i(r)}"
-    }
-}

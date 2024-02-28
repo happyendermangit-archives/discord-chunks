@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "attachToProcess": "function O(e,t){return N().then(n=>{let i=_.default.getGameForPID(e)?.name,r=E.default.getGameByName(i),l=null;return new Promise(E=>{let I=(e,n)=>{u.default.track(d.AnalyticEvents.HOOK_RESULT,{game_name:i,game_id:null==r?null:r.id,success:n,error:e,...t}),null!=l&&(clearTimeout(l),l=null),n?E():E(e=e??\"Unknown hook error\")},T=_.default.getOverlayOptionsForPID(e),c={...s.DEFAULT_OVERLAY_OPTIONS,...T,elevate:_.default.shouldElevateProcessForPID(e)};null==c.allowHook||c.allowHook?(l=setTimeout(()=>{n.cancelAttachToProcess(e),I(\"Timed out waiting for hook response\",!1)},12e4),n.attachToProcess(e,c,I),o.default.wait(()=>a.default.clearElevatedProcess())):E(\"Hook is disabled for this game\")})})}",
+        "cancelAttachToProcess": "function R(e){return N().then(t=>{t.cancelAttachToProcess(e)})}",
+        "isHookModuleTooOld": "function A(){return!T.default?.isModuleVersionAtLeast?.(\"discord_hook\",S)}"
+    }
+}

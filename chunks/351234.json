@@ -1,0 +1,20 @@
+{
+    "exports": {
+        "DATE_CONFIG": {
+            "month": "numeric",
+            "day": "numeric",
+            "hour": "numeric",
+            "minute": "2-digit"
+        },
+        "getDisabledInterventions": "function m(e,t){let n=[];return!e&&n.push(s.GuildIncidentActionTypes.INVITES_DISABLED),!t&&n.push(s.GuildIncidentActionTypes.DMS_DISABLED),n}",
+        "getEnabledInterventions": "function p(e,t){let n=[];return e&&n.push(s.GuildIncidentActionTypes.INVITES_DISABLED),t&&n.push(s.GuildIncidentActionTypes.DMS_DISABLED),n}",
+        "getIncidentAlertType": "function f(e){return null==e?void 0:d(e)?s.GuildIncidentAlertTypes.JOIN_RAID:s.GuildIncidentAlertTypes.DM_RAID}",
+        "getSecurityActionDetailsString": "function I(e,t){let n=e.dmsDisabledUntil??e.invitesDisabledUntil;if(null==n)return\"\";let i=null!=e.dmsDisabledUntil,a=null!=e.invitesDisabledUntil;switch(!0){case i&&a:return r.default.Messages.GUILD_ANTIRAID_PAUSE_DMS_AND_JOINS_NAGBAR_MESSAGE_NEW.format({guildName:t,time:new Date(n).toLocaleString(r.default.getLocale(),o)});case i:return r.default.Messages.GUILD_ANTIRAID_PAUSE_DMS_NAGBAR_MESSAGE_NEW.format({guildName:t,time:new Date(n).toLocaleString(r.default.getLocale(),o)});case a:return r.default.Messages.GUILD_ANTIRAID_PAUSE_JOINS_NAGBAR_MESSAGE_NEW.format({guildName:t,time:new Date(n).toLocaleString(r.default.getLocale(),o)});default:return\"\"}}",
+        "hasDMsDisabled": "function E(e){return e?.dmsDisabledUntil!=null&&new Date(e.dmsDisabledUntil)>new Date}",
+        "hasDetectedActivity": "function u(e){return null!=e.dmSpamDetectedAt&&a()(e.dmSpamDetectedAt).add(l.NAGBAR_DISPLAY_MAX_HOURS,\"hours\")>a()()||null!=e.raidDetectedAt&&a()(e.raidDetectedAt).add(l.NAGBAR_DISPLAY_MAX_HOURS,\"hours\")>a()()}",
+        "hasDetectedDMRaid": "function c(e){return null!=e.dmSpamDetectedAt&&a()(e.dmSpamDetectedAt).add(l.NAGBAR_DISPLAY_MAX_HOURS,\"hours\")>a()()}",
+        "hasDetectedRaid": "function d(e){return null!=e.raidDetectedAt&&a()(e.raidDetectedAt).add(l.NAGBAR_DISPLAY_MAX_HOURS,\"hours\")>a()()}",
+        "hasInvitesDisabled": "function _(e){return e?.invitesDisabledUntil!=null&&new Date(e.invitesDisabledUntil)>new Date}",
+        "isUnderLockdown": "function h(e){return null!=e.dmsDisabledUntil&&new Date(e.dmsDisabledUntil)>new Date||null!=e.invitesDisabledUntil&&new Date(e.invitesDisabledUntil)>new Date}"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "RedesignIconContextProvider": "function _(e){let{children:t,overwriteValue:n}=e,{enabled:_}=o.default.useExperiment({location:\"web redesign icon context\"}),E=(0,a.default)(\"highlight_redesigned_icons\"),l=r.useMemo(()=>({enabled:_,highlight:E}),[_,E]);return(0,i.jsx)(s.Provider,{value:n??l,children:t})}",
+        "replaceIcon": "function l(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:void 0,r=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{size:24};return function(o){let{enabled:a,highlight:s}=E();if(!a)return(0,i.jsx)(e,{...o});{let e={...o};for(let[t,i]of Object.entries(n={foreground:\"colorClass\",color:\"color\",...n??{}})){let n=o[t];if(null==n&&\"color\"===t&&(n=s?\"yellow\":\"currentColor\"),\"remove\"===i){delete e[t];continue}e[i]=n}return e.width??=r.size,e.height??=r.size,(0,i.jsx)(t,{...e})}}}",
+        "useRedesignIconContext": "function E(){return r.useContext(s)}"
+    }
+}

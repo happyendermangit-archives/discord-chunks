@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "colorToRgba": "function a(e){var t=(0,r.normalizeColor)(e);return null===t?e:\"rgba(\"+((4278190080&(t=t||0))>>>24)+\", \"+((16711680&t)>>>16)+\", \"+((65280&t)>>>8)+\", \"+(255&t)/255+\")\"}"
+    }
+}

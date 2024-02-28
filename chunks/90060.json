@@ -1,0 +1,54 @@
+{
+    "exports": {
+        "AnalyticsChangeType": {
+            "ADDED": "added",
+            "UPDATED": "updated",
+            "REMOVED": "removed"
+        },
+        "AnalyticsSoundSource": {
+            "DEFAULT": "default",
+            "CUSTOM": "custom"
+        },
+        "AnalyticsSoundType": {
+            "ENTRY": "entry_sound",
+            "EXIT": "exit_sound",
+            "DEFAULT": "default"
+        },
+        "LocalSoundTrigger": {
+            "0": "GIFT_CODE",
+            "1": "SOUNDBOARD",
+            "2": "JOINED_VOICE_CHANNEL",
+            "GIFT_CODE": 0,
+            "SOUNDBOARD": 1,
+            "JOINED_VOICE_CHANNEL": 2
+        },
+        "SoundButtonOverlay": {
+            "0": "PLAY",
+            "1": "ADD",
+            "PLAY": 0,
+            "ADD": 1
+        },
+        "SoundboardSoundGridSectionType": {
+            "0": "FAVORITES",
+            "1": "RECENTLY_HEARD",
+            "2": "FREQUENTLY_USED",
+            "3": "GUILD",
+            "4": "DEFAULTS",
+            "5": "SEARCH",
+            "FAVORITES": 0,
+            "RECENTLY_HEARD": 1,
+            "FREQUENTLY_USED": 2,
+            "GUILD": 3,
+            "DEFAULTS": 4,
+            "SEARCH": 5
+        },
+        "SoundboardSoundItemType": {
+            "0": "SOUND",
+            "1": "ADD_SOUND",
+            "SOUND": 0,
+            "ADD_SOUND": 1
+        },
+        "soundboardSoundFromAPI": "function _(e,t){let{sound_id:n,emoji_id:i,emoji_name:a,user_id:s,available:l,...r}=e;return{...r,soundId:n,guildId:t,emojiId:i,emojiName:a,userId:s,available:l??!0}}",
+        "soundboardSoundToAPI": "function I(e){let{soundId:t,guildId:n,emojiId:i,emojiName:a,userId:s,...l}=e;return{...l,sound_id:t,guild_id:n,emoji_id:i,emoji_name:a,user_id:s}}"
+    }
+}

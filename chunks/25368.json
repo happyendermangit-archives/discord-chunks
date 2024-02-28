@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "cleanupTempFiles": "function s(){r.default?.fileManager?.cleanupTempFiles!=null&&setTimeout(()=>void E(),1e4)}"
+    }
+}

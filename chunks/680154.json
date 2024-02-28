@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function T(e){let{streamId:t,paused:n,onReady:o,onResize:s,className:T,...c}=e,d=r.useRef(null),{current:S}=r.useRef(_().uniqueId(\"media-engine-video-\"));return r.useEffect(()=>{let e=d.current;if(!n&&null!=e){let n=!1,i=(t,i)=>{!n&&(o?.(),n=!0),(e.width!==t||e.height!==i)&&(e.width=t,e.height=i,s?.({width:t,height:i}))},r=(0,E.getVoiceEngine)();if(null!=r.addVideoOutputSink)return r.addVideoOutputSink(S,t,i),()=>{r.removeVideoOutputSink(S,t)};{let n=function(e){let t=window?.DiscordNative?.app?.getReleaseChannel?.();return\"canary\"===t||\"development\"===t?(0,u.initRenderingContextWebGL)(e):(0,l.initRenderingContext2D)(e)}(e);if(null==n)return;return I.default.addSink(t,d,e=>{i(e.width,e.height),n.render(e)}),()=>{I.default.removeSink(t,d)}}}},[t,n,s,o,S]),(0,i.jsx)(\"canvas\",{id:S,className:a()(\"media-engine-video\",T),ref:d,...c})}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function c(e,t,n,c){var f,p;let m=a.default.getChannel(l.default.getVoiceChannelId()),h=m?.getGuildId(),E=s.default.getMediaSessionId(),_=s.default.getRTCConnectionId(),I=i.default.getCurrentGameForAnalytics()?.name,C=h!==n.guildId&&n.guildId!==o.DEFAULT_SOUND_GUILD_ID;let y=(f=n,p=C,f.guildId===o.DEFAULT_SOUND_GUILD_ID?\"default\":p?\"custom-external\":\"custom\");r.default.track(u.AnalyticEvents.PREMIUM_FEATURE_USAGE,{feature_name:d.AnalyticsPremiumFeatureNames.SOUNDBOARD_PLAY,feature_tier:C?d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD:d.AnalyticsPremiumFeatureTiers.FREE,guild_id:h,location_stack:e,rtc_connection_id:_,media_session_id:E,in_overlay:t,application_name:I,emoji_count:null!=n.emojiId||null!=n.emojiName?1:0,feature_selection:y,feature_selection_id:n.soundId,sound_type:c,is_broadcast:null!=m&&m.isBroadcastChannel()})}"
+    }
+}

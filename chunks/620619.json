@@ -1,3 +1,5 @@
 {
-    "exports": "/assets/af82db0ddc11d762ba78.svg"
+    "exports": {
+        "isNotAutomodEmbed": "e=>{let{type:t}=e;return t!==s.MessageEmbedTypes.AUTO_MODERATION_MESSAGE&&t!==s.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION}"
+    }
 }

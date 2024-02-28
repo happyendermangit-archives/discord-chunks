@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useSyncExternalStore": "function(e,t,n){return P.current.useSyncExternalStore(e,t,n)}"
-    }
-}

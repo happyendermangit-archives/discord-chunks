@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(e,t){(0,a.default)(1,arguments);var n,s,l,c,d,f,p,h,m=(0,r.default)(e),y=m.getUTCFullYear(),v=(0,u.getDefaultOptions)(),g=(0,i.default)(null!==(n=null!==(s=null!==(l=null!==(c=null==t?void 0:t.firstWeekContainsDate)&&void 0!==c?c:null==t?void 0:null===(d=t.locale)||void 0===d?void 0:null===(f=d.options)||void 0===f?void 0:f.firstWeekContainsDate)&&void 0!==l?l:v.firstWeekContainsDate)&&void 0!==s?s:null===(p=v.locale)||void 0===p?void 0:null===(h=p.options)||void 0===h?void 0:h.firstWeekContainsDate)&&void 0!==n?n:1);if(!(g>=1&&g<=7))throw RangeError(\"firstWeekContainsDate must be between 1 and 7 inclusively\");var b=new Date(0);b.setUTCFullYear(y+1,0,g),b.setUTCHours(0,0,0,0);var _=(0,o.default)(b,t),w=new Date(0);w.setUTCFullYear(y,0,g),w.setUTCHours(0,0,0,0);var x=(0,o.default)(w,t);return m.getTime()>=_.getTime()?y+1:m.getTime()>=x.getTime()?y:y-1}"
+    }
+}

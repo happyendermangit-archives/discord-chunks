@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,e){if(\"Object\"!==i(t))throw new r(\"Assertion failed: `O` must be an Object\");if(!n(e))throw new r(\"Assertion failed: `P` must be a Property Key\");return e in t}"
+}

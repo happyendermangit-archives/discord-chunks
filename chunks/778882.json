@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "FILE": "__NATIVE_FILE__",
+        "HTML": "__NATIVE_HTML__",
+        "TEXT": "__NATIVE_TEXT__",
+        "URL": "__NATIVE_URL__"
+    }
+}

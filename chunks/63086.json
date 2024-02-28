@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "findFirstVisibleItem": "function r(e,t){return new Promise(n=>{let r=new IntersectionObserver(e=>{let t=0,o=null;for(let{isIntersecting:a,intersectionRatio:s,target:_}of e){if(a&&1===s){r.disconnect();let e=_.getAttribute(i.LIST_ITEM_ID_ATTRIBUTE);if(null!=e)return n(e)}s>t&&(t=s,o=_.getAttribute(i.LIST_ITEM_ID_ATTRIBUTE))}r.disconnect(),n(o)},{root:e});for(let e of t)r.observe(e)})}",
+        "findLastVisibleItem": "function o(e,t){return new Promise(n=>{let r=new IntersectionObserver(e=>{let t=0,o=null;for(let a=e.length-1;a>=0;a--){let{isIntersecting:s,intersectionRatio:_,target:E}=e[a];if(s&&1===_){r.disconnect();let e=E.getAttribute(i.LIST_ITEM_ID_ATTRIBUTE);if(null!=e)return n(e)}_>t&&(t=_,o=E.getAttribute(i.LIST_ITEM_ID_ATTRIBUTE))}r.disconnect(),n(o)},{root:e});for(let e of t)r.observe(e)})}",
+        "isItemVisible": "function a(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:.5;return new Promise(i=>{let r=new IntersectionObserver(e=>{let t=e[0];r.disconnect(),i(t.intersectionRatio>=n)},{root:e});r.observe(t)})}"
+    }
+}

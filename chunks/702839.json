@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "combineKey": "function r(e,t){let n=Array.isArray(t)?[...e,...t]:[...e,t];if(n.length>=1&&n.length<=i.MAXIMUM_KEY_BITS)return n;throw Error(`combination results in an invalid key that has ${n.length} elements: ${JSON.stringify(n)}`)}",
+        "combineKeyPrefix": "function o(e,t){let n=Array.isArray(t)?[...e,...t]:[...e,t];if(n.length<=i.MAXIMUM_KEY_BITS)return n;throw Error(`combination results in an invalid prefix key that has ${n.length} elements: ${JSON.stringify(n)}`)}"
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "CHANNEL_SELECT": "()=>this.handleChannelSelect()"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "currentlyVisibleMessageTimers": {},
+            "viewsInCurrentChannel": {
+                "toJSON": "function(){return Array.from(this)}",
+                "has": "function has() { [native code] }",
+                "add": "function add() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }",
+                "keys": "function values() { [native code] }",
+                "union": "function union() { [native code] }",
+                "intersection": "function intersection() { [native code] }",
+                "difference": "function difference() { [native code] }",
+                "symmetricDifference": "function symmetricDifference() { [native code] }",
+                "isSubsetOf": "function isSubsetOf() { [native code] }",
+                "isSupersetOf": "function isSupersetOf() { [native code] }",
+                "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+            },
+            "recentViewTimes": {
+                "max": 500,
+                "allowStale": false,
+                "maxAge": 60000,
+                "lengthCalculator": "function l(){return 1}",
+                "length": 0,
+                "itemCount": 0,
+                "rforEach": "function(e,t){t=t||this;for(var n=s(this,\"lruList\").tail;null!==n;){var r=n.prev;d(this,e,n,t),n=r}}",
+                "forEach": "function(e,t){t=t||this;for(var n=s(this,\"lruList\").head;null!==n;){var r=n.next;d(this,e,n,t),n=r}}",
+                "keys": "function(){return s(this,\"lruList\").toArray().map(function(e){return e.key},this)}",
+                "values": "function(){return s(this,\"lruList\").toArray().map(function(e){return e.value},this)}",
+                "reset": "function(){s(this,\"dispose\")&&s(this,\"lruList\")&&s(this,\"lruList\").length&&s(this,\"lruList\").forEach(function(e){s(this,\"dispose\").call(this,e.key,e.value)},this),s(this,\"cache\",new a),s(this,\"lruList\",new i),s(this,\"length\",0)}",
+                "dump": "function(){return s(this,\"lruList\").map(function(e){if(!p(this,e))return{k:e.key,v:e.value,e:e.now+(e.maxAge||0)}},this).toArray().filter(function(e){return e})}",
+                "dumpLru": "function(){return s(this,\"lruList\")}",
+                "inspect": "function(e,t){var n=\"LRUCache {\",r=!1;s(this,\"allowStale\")&&(n+=\"\\n  allowStale: true\",r=!0);var a=s(this,\"max\");a&&a!==1/0&&(r&&(n+=\",\"),n+=\"\\n  max: \"+o.inspect(a,t),r=!0);var i=s(this,\"maxAge\");i&&(r&&(n+=\",\"),n+=\"\\n  maxAge: \"+o.inspect(i,t),r=!0);var u=s(this,\"lengthCalculator\");u&&u!==l&&(r&&(n+=\",\"),n+=\"\\n  length: \"+o.inspect(s(this,\"length\"),t),r=!0);var c=!1;return s(this,\"lruList\").forEach(function(e){c?n+=\",\\n  \":(r&&(n+=\",\\n\"),c=!0,n+=\"\\n  \");var a=o.inspect(e.key).split(\"\\n\").join(\"\\n  \"),s={value:e.value};e.maxAge!==i&&(s.maxAge=e.maxAge),u!==l&&(s.length=e.length),p(this,e)&&(s.stale=!0),s=o.inspect(s,t).split(\"\\n\").join(\"\\n  \"),n+=a+\" => \"+s}),(c||r)&&(n+=\"\\n\"),n+=\"}\"}",
+                "set": "function(e,t,n){var r=(n=n||s(this,\"maxAge\"))?Date.now():0,a=s(this,\"lengthCalculator\").call(this,t,e);if(s(this,\"cache\").has(e)){if(a>s(this,\"max\"))return m(this,s(this,\"cache\").get(e)),!1;var o=s(this,\"cache\").get(e).value;return s(this,\"dispose\")&&s(this,\"dispose\").call(this,e,o.value),o.now=r,o.maxAge=n,o.value=t,s(this,\"length\",s(this,\"length\")+(a-o.length)),o.length=a,this.get(e),h(this),!0}var i=new y(e,t,a,r,n);return i.length>s(this,\"max\")?(s(this,\"dispose\")&&s(this,\"dispose\").call(this,e,t),!1):(s(this,\"length\",s(this,\"length\")+i.length),s(this,\"lruList\").unshift(i),s(this,\"cache\").set(e,s(this,\"lruList\").head),h(this),!0)}",
+                "has": "function(e){return!(!s(this,\"cache\").has(e)||p(this,s(this,\"cache\").get(e).value))&&!0}",
+                "get": "function(e){return f(this,e,!0)}",
+                "peek": "function(e){return f(this,e,!1)}",
+                "pop": "function(){var e=s(this,\"lruList\").tail;return e?(m(this,e),e.value):null}",
+                "del": "function(e){m(this,s(this,\"cache\").get(e))}",
+                "load": "function(e){this.reset();for(var t=Date.now(),n=e.length-1;n>=0;n--){var r=e[n],a=r.e||0;if(0===a)this.set(r.k,r.v);else{var o=a-t;o>0&&this.set(r.k,r.v,o)}}}",
+                "prune": "function(){var e=this;s(this,\"cache\").forEach(function(t,n){f(e,n,!1)})}"
+            },
+            "batchBuffer": [],
+            "batchTimerId": null,
+            "handleMessageBecameVisible": "handleMessageBecameVisible(e){let{messageId:t}=e;if(null!=this.currentlyVisibleMessageTimers[t]||this.viewsInCurrentChannel.has(t))return;let n=this.recentViewTimes.get(t);if(null!=n&&Date.now()-n<6e4)return;let i=setTimeout(()=>{delete this.currentlyVisibleMessageTimers[t],this.viewsInCurrentChannel.add(t),this.recentViewTimes.set(t,Date.now()),this.bufferViewTrack(e)},1e3);this.currentlyVisibleMessageTimers[t]=i}",
+            "handleMessageLostVisibility": "handleMessageLostVisibility(e){let t=this.currentlyVisibleMessageTimers[e];null!=t&&(clearTimeout(t),delete this.currentlyVisibleMessageTimers[e])}",
+            "handleMessageListVisibilityChange": "handleMessageListVisibilityChange(e){for(let t of e)this.handleMessageBecameVisible(t);let t=new Set(e.map(e=>e.messageId));for(let e of l.default.keys(this.currentlyVisibleMessageTimers))!t.has(e)&&this.handleMessageLostVisibility(e)}",
+            "handleChannelSelect": "handleChannelSelect(){for(let e of Object.values(this.currentlyVisibleMessageTimers))clearTimeout(e);this.currentlyVisibleMessageTimers={},this.viewsInCurrentChannel.clear(),this.drainBuffer()}",
+            "drainBuffer": "drainBuffer(){for(let e of this.batchBuffer)r.default.track(u.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED,{message_id:e.messageId,channel_id:e.channelId,guild_id:e.guildId,source_channel_id:e.sourceChannelId,source_guild_id:e.sourceGuildId});this.batchBuffer=[],null!=this.batchTimerId&&(clearTimeout(this.batchTimerId),this.batchTimerId=null)}",
+            "bufferViewTrack": "bufferViewTrack(e){this.batchBuffer.length>=10&&this.drainBuffer(),this.batchBuffer.push(e),null==this.batchTimerId&&(this.batchTimerId=setTimeout(()=>this.drainBuffer(),2e3))}"
+        }
+    }
+}

@@ -1,3 +1,14 @@
 {
-    "exports": "/assets/b02c644f3c87d8b5aea8.svg"
+    "exports": {
+        "Radius": {
+            "none": 0,
+            "xs": 4,
+            "sm": 8,
+            "md": 12,
+            "lg": 16,
+            "xl": 24,
+            "xxl": 32,
+            "round": 2147483647
+        }
+    }
 }

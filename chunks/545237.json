@@ -1,0 +1,49 @@
+{
+    "exports": {
+        "QUEST_REWARD_CODE_PLATFORMS_SET": {
+            "toJSON": "function(){return Array.from(this)}",
+            "has": "function has() { [native code] }",
+            "add": "function add() { [native code] }",
+            "delete": "function delete() { [native code] }",
+            "clear": "function clear() { [native code] }",
+            "entries": "function entries() { [native code] }",
+            "forEach": "function forEach() { [native code] }",
+            "size": 5,
+            "values": "function values() { [native code] }",
+            "keys": "function values() { [native code] }",
+            "union": "function union() { [native code] }",
+            "intersection": "function intersection() { [native code] }",
+            "difference": "function difference() { [native code] }",
+            "symmetricDifference": "function symmetricDifference() { [native code] }",
+            "isSubsetOf": "function isSubsetOf() { [native code] }",
+            "isSupersetOf": "function isSupersetOf() { [native code] }",
+            "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+        },
+        "QuestContent": {
+            "0": "GIFT_INVENTORY_SETTINGS_BADGE",
+            "1": "QUEST_BAR",
+            "2": "QUEST_INVENTORY_CARD",
+            "3": "QUESTS_EMBED",
+            "4": "ACTIVITY_PANEL",
+            "5": "QUEST_LIVE_STREAM",
+            "GIFT_INVENTORY_SETTINGS_BADGE": 0,
+            "QUEST_BAR": 1,
+            "QUEST_INVENTORY_CARD": 2,
+            "QUESTS_EMBED": 3,
+            "ACTIVITY_PANEL": 4,
+            "QUEST_LIVE_STREAM": 5
+        },
+        "QuestRewardCodePlatforms": {
+            "0": "CROSS_PLATFORM",
+            "1": "XBOX",
+            "2": "PLAYSTATION",
+            "3": "SWITCH",
+            "4": "PC",
+            "CROSS_PLATFORM": 0,
+            "XBOX": 1,
+            "PLAYSTATION": 2,
+            "SWITCH": 3,
+            "PC": 4
+        }
+    }
+}

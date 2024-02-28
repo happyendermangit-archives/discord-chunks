@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r){e(r)&&\"cause\"in r&&i(t,\"cause\",r.cause)}"
-}

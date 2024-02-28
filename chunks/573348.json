@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "platformVersion": "function i(){return\"undefined\"==typeof platform?0:parseInt(platform?.version??\"0\",10)}"
+    }
+}

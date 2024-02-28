@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "EMOJI_BUTTON_SPRING_CONFIG": {
+            "tension": 800,
+            "friction": 24
+        },
+        "default": "function(e){var t;let{tabIndex:n,className:s,renderButtonContents:h,active:E,onClick:_,\"aria-controls\":I,focusProps:C}=e,[y,S]=a.useState(!1),[g,x]=a.useState(50),T=y||E,A=(0,d.getClass)(p,\"emojiButton\",T?\"Hovered\":\"Normal\");let N={\"--custom-emoji-sprite-size\":\"24px\",\"--custom-emoji-sprite-row\":Math.floor((t=g)/20),\"--custom-emoji-sprite-col\":t%20},O=a.useCallback(()=>{if(!T)S(!0),x(Math.floor(77*Math.random())),(0,u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)},[T,S,x]),R=a.useCallback(()=>{S(!1)},[S]),M=a.useCallback(()=>(0,u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonFocused),[]);return(0,i.jsx)(o.Button,{look:o.Button.Looks.BLANK,size:o.Button.Sizes.NONE,tabIndex:n,className:l()(A,s),onMouseEnter:O,onMouseOver:O,onMouseLeave:R,onFocus:M,onClick:_,\"aria-label\":f.default.Messages.SELECT_EMOJI,\"aria-controls\":I,\"aria-expanded\":E,\"aria-haspopup\":\"dialog\",focusProps:C,children:null!=h?h():(0,i.jsx)(r.Spring,{config:m,to:{value:T?1:0},children:e=>{let{value:t}=e;return(0,i.jsxs)(r.animated.div,{className:p.spriteContainer,style:{...N,transform:t.to([0,1],[1,1.14]).to(e=>`scale(${e})`)},children:[(0,i.jsx)(\"div\",{className:l()(p.sprite,p.spriteColored,T?p.active:p.inactive)}),(0,i.jsx)(\"div\",{className:l()(p.sprite,p.spriteGreyscale,T?p.inactive:p.active)})]})}})})}"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "VOICE_STATE_UPDATES": "handleVoiceStateUpdates(e){let{voiceStates:t}=e;t.forEach(e=>{var t;let{userId:n,channelId:i}=e;if(null!=i&&_.default.getId()===n&&null!=u.default.getRTCConnectionId()&&d!==i){if(A(n,i)){d=i,S();return}t=new s.default(e),(0,a.getAudienceRequestToSpeakState)(t)===a.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK&&(d=i,S())}})}",
+                "VOICE_CHANNEL_SELECT": "handleVoiceChannelSelect(e){let{channelId:t}=e;null==t&&(d=null)}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleVoiceChannelSelect": "handleVoiceChannelSelect(e){let{channelId:t}=e;null==t&&(d=null)}",
+            "handleVoiceStateUpdates": "handleVoiceStateUpdates(e){let{voiceStates:t}=e;t.forEach(e=>{var t;let{userId:n,channelId:i}=e;if(null!=i&&_.default.getId()===n&&null!=u.default.getRTCConnectionId()&&d!==i){if(A(n,i)){d=i,S();return}t=new s.default(e),(0,a.getAudienceRequestToSpeakState)(t)===a.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK&&(d=i,S())}})}"
+        },
+        "shouldImmediatelyRequestVoicePermissions": "function A(e,t){return!E.default.getChannel(t)?.isListenModeCapable()||o.default.isSpeaker(e,t)}"
+    }
+}

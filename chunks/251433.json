@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "useField": "function o(e){let{description:t,errorMessage:n,isInvalid:o,validationState:i}=e,{labelProps:u,fieldProps:s}=a(e),l=(0,r.useSlotId)([!!t,!!n,o,i]),c=(0,r.useSlotId)([!!t,!!n,o,i]);return{labelProps:u,fieldProps:s=(0,r.mergeProps)(s,{\"aria-describedby\":[l,c,e[\"aria-describedby\"]].filter(Boolean).join(\" \")||void 0}),descriptionProps:{id:l},errorMessageProps:{id:c}}}",
+        "useLabel": "function a(e){let{id:t,label:n,\"aria-labelledby\":a,\"aria-label\":o,labelElementType:i=\"label\"}=e;t=(0,r.useId)(t);let u=(0,r.useId)(),s={};return n?(a=a?`${u} ${a}`:u,s={id:u,htmlFor:\"label\"===i?t:void 0}):!a&&!o&&console.warn(\"If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility\"),{labelProps:s,fieldProps:(0,r.useLabels)({id:t,\"aria-label\":o,\"aria-labelledby\":a})}}"
+    }
+}

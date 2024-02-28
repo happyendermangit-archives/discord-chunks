@@ -1,0 +1,29 @@
+{
+    "exports": {
+        "altBadge": "altBadge_f5d7b7",
+        "altTextPreview": "altTextPreview__9256f",
+        "answerRow": "answerRow_ededa8",
+        "defaultTextInput": "defaultTextInput__8ea55",
+        "defaultTextInputWrapper": "defaultTextInputWrapper__87159",
+        "emojiDefault": "emojiDefault__15c0e",
+        "emojiJumbo": "emojiJumbo__83e26",
+        "emojiPicker": "emojiPicker__8d019",
+        "expressionPickerButton": "expressionPickerButton_adfc43",
+        "expressionPickerButtonDefault": "expressionPickerButtonDefault__9b0b6 expressionPickerButton_adfc43",
+        "expressionPickerButtonImageOnly": "expressionPickerButtonImageOnly__6ce59 expressionPickerButton_adfc43",
+        "expressionPickerIconDefault": "expressionPickerIconDefault__4651b",
+        "expressionPickerIconImageOnly": "expressionPickerIconImageOnly__46f94",
+        "gif": "gif__0e3fd",
+        "gifDefault": "gifDefault__3090d",
+        "gifJumbo": "gifJumbo__48ed6",
+        "imageOnlyAnswerActionBar": "imageOnlyAnswerActionBar_cb6b09",
+        "imageOnlyContainer": "imageOnlyContainer_e973be",
+        "imagePreviewContainer": "imagePreviewContainer__592f9",
+        "media": "media__8816c",
+        "removeAnswerButtonDefault": "removeAnswerButtonDefault__939a4",
+        "spinnerWrapper": "spinnerWrapper__47b47",
+        "spinnerWrapperDefault": "spinnerWrapperDefault__7e0b0 spinnerWrapper__47b47",
+        "spinnerWrapperImageOnly": "spinnerWrapperImageOnly__8bbed spinnerWrapper__47b47",
+        "trashIcon": "trashIcon_a910be"
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "exports": {
+        "MetaStickerType": {
+            "1": "STANDARD",
+            "2": "GUILD",
+            "STANDARD": 1,
+            "GUILD": 2
+        },
+        "StickerCategoryTypes": {
+            "PACK": "PACK",
+            "FAVORITE": "FAVORITE",
+            "RECENT": "RECENT",
+            "SEARCH_RESULTS": "SEARCH_RESULTS",
+            "SEARCH_SUGGESTIONS": "SEARCH_SUGGESTIONS",
+            "GUILD": "GUILD",
+            "EMPTY_GUILD_UPSELL": "EMPTY_GUILD_UPSELL",
+            "CREATE_STICKER": "CREATE_STICKER"
+        },
+        "StickerExtensions": {
+            "PNG": "png",
+            "APNG": "png",
+            "LOTTIE": "json",
+            "WEBP": "webp",
+            "GIF": "gif"
+        },
+        "StickerFormat": {
+            "1": "PNG",
+            "2": "APNG",
+            "3": "LOTTIE",
+            "4": "GIF",
+            "PNG": 1,
+            "APNG": 2,
+            "LOTTIE": 3,
+            "GIF": 4
+        },
+        "StickerGridItemTypes": {
+            "0": "STICKER",
+            "1": "CREATE_STICKER",
+            "STICKER": 0,
+            "CREATE_STICKER": 1
+        },
+        "StickerMetadataTypes": {
+            "0": "STICKER_NAME",
+            "1": "TAG",
+            "2": "CORRELATED_EMOJI",
+            "3": "GUILD_NAME",
+            "4": "PACK_NAME",
+            "STICKER_NAME": 0,
+            "TAG": 1,
+            "CORRELATED_EMOJI": 2,
+            "GUILD_NAME": 3,
+            "PACK_NAME": 4
+        },
+        "StickerSelectLocation": {
+            "0": "STICKER_PICKER",
+            "1": "EXPRESSION_SUGGESTIONS",
+            "2": "AUTOCOMPLETE",
+            "STICKER_PICKER": 0,
+            "EXPRESSION_SUGGESTIONS": 1,
+            "AUTOCOMPLETE": 2
+        },
+        "isAnimatedSticker": "e=>1!==e",
+        "isCustomSticker": "e=>1!==e"
+    }
+}

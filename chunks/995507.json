@@ -1,0 +1,23 @@
+{
+    "exports": {
+        "unstable_now": "function(){return s.now()}",
+        "unstable_IdlePriority": 5,
+        "unstable_ImmediatePriority": 1,
+        "unstable_LowPriority": 4,
+        "unstable_NormalPriority": 3,
+        "unstable_Profiling": null,
+        "unstable_UserBlockingPriority": 2,
+        "unstable_cancelCallback": "function(e){e.callback=null}",
+        "unstable_continueExecution": "function(){v||y||(v=!0,R(k))}",
+        "unstable_forceFrameRate": "function(e){0>e||125<e?console.error(\"forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported\"):E=0<e?Math.floor(1e3/e):5}",
+        "unstable_getCurrentPriorityLevel": "function(){return m}",
+        "unstable_getFirstCallbackNode": "function(){return a(d)}",
+        "unstable_next": "function(e){switch(m){case 1:case 2:case 3:var t=3;break;default:t=m}var n=m;m=t;try{return e()}finally{m=n}}",
+        "unstable_pauseExecution": "function(){}",
+        "unstable_requestPaint": "function(){}",
+        "unstable_runWithPriority": "function(e,t){switch(e){case 1:case 2:case 3:case 4:case 5:break;default:e=3}var n=m;m=e;try{return t()}finally{m=n}}",
+        "unstable_scheduleCallback": "function(e,n,o){var i=t.unstable_now();switch(o=\"object\"==typeof o&&null!==o?\"number\"==typeof(o=o.delay)&&0<o?i+o:i:i,e){case 1:var u=-1;break;case 2:u=250;break;case 5:u=1073741823;break;case 4:u=1e4;break;default:u=5e3}return u=o+u,e={id:p++,callback:n,priorityLevel:e,startTime:o,expirationTime:u,sortIndex:-1},o>i?(e.sortIndex=o,r(f,e),null===a(d)&&e===a(f)&&(g?(_(T),T=-1):g=!0,I(D,o-i))):(e.sortIndex=u,r(d,e),v||y||(v=!0,R(k))),e}",
+        "unstable_shouldYield": "function C(){return!(t.unstable_now()-L<E)}",
+        "unstable_wrapCallback": "function(e){var t=m;return function(){var n=m;m=t;try{return e.apply(this,arguments)}finally{m=n}}}"
+    }
+}

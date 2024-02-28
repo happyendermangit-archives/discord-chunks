@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function f(e){let{guild:t,focused:n,...a}=e,{canCreateExpressions:f}=(0,r.useManageResourcePermissions)(t);return(0,i.jsx)(l.Tooltip,{text:d.default.Messages.SOUNDBOARD_SOUND_UPLOAD_BUTTON_DISABLED,shouldShow:!f,children:e=>(0,i.jsx)(\"li\",{className:c.soundButtonWrapper,...e,children:(0,i.jsxs)(l.ClickableContainer,{...a,\"aria-label\":d.default.Messages.SOUNDBOARD_UPLOAD_SOUND_FOR_GUILD.format({guildName:t.name}),className:s()(c.soundAddButton,{[c.focused]:n,[c.disabled]:!f}),onClick:()=>(0,u.default)(t.id),children:[(0,i.jsx)(o.default,{className:c.soundAddIcon}),(0,i.jsx)(l.Text,{variant:\"text-xs/normal\",color:f?\"header-primary\":\"text-muted\",children:d.default.Messages.SOUNDBOARD_SOUND_ADD_SOUND})]})})})}"
+    }
+}

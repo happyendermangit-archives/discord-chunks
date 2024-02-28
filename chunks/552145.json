@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useTreeState": "function s(e){let[t,n]=(0,i.useControlledState)(e.expandedKeys?new Set(e.expandedKeys):void 0,e.defaultExpandedKeys?new Set(e.defaultExpandedKeys):new Set,e.onExpandedChange),s=(0,a.useMultipleSelectionState)(e),l=(0,r.useMemo)(()=>e.disabledKeys?new Set(e.disabledKeys):new Set,[e.disabledKeys]),c=(0,o.useCollection)(e,(0,r.useCallback)(e=>new u(e,{expandedKeys:t}),[t]),null);return(0,r.useEffect)(()=>{null!=s.focusedKey&&!c.getItem(s.focusedKey)&&s.setFocusedKey(null)},[c,s.focusedKey]),{collection:c,expandedKeys:t,disabledKeys:l,toggleKey:e=>{n(function(e,t){let n=new Set(e);return n.has(t)?n.delete(t):n.add(t),n}(t,e))},setExpandedKeys:n,selectionManager:new a.SelectionManager(c,s)}}"
+    }
+}

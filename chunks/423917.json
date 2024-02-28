@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": "class d extends a.AnalyticsFeedItemSeenManager{constructor({guildId:e,channelId:t,windowId:n,isPaused:s}){super({windowId:n,isPaused:s,id:u(t)}),this.createFlushSeenItemsFunction=e=>{let t=this.trackedFeedItems,n=this.channelId,s=this.guildId,a={guildId:s,channelId:n,sessionId:this.sessionId,trackedFeedItems:t,isForcedFlush:null!=e};return()=>(function(e){let{guildId:t,channelId:n,sessionId:s,trackedFeedItems:a,isForcedFlush:l}=e,u=[],i=[];for(let e of Object.keys(a)){let t=a[e].computeSeenTimeDestructive(l);t>0&&(u.push(e),i.push(t))}0!==u.length&&(0,r.trackForumChannelSeenBatch)({guildId:t,channelId:n,sessionId:s,postIds:u,additionalTimes:i})})(a)},this.guildId=e,this.channelId=t,this.sessionId=(0,l.getForumChannelSessionId)(t)}}",
+        "getForumPostSeenManagerId": "function u(e){return`${a.AnalyticsFeedTypes.FORUM_CHANNEL}_${e}`}",
+        "markForumPostItemAsSeen": "function i(e,t,n){(0,s.markAnalyticsFeedItemSeen)(u(e),t,n)}",
+        "markForumPostItemAsUnseen": "function o(e,t,n){(0,s.markAnalyticsFeedItemUnseen)(u(e),t,n)}"
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isEligibleForContentInventoryV1": "function n(e){let{enabled:_}=o.getCurrentConfig({location:e},{autoTrackExposure:!0});return _}"
-    }
-}

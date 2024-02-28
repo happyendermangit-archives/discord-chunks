@@ -1,0 +1,31 @@
+{
+    "exports": {
+        "versions": [
+            {
+                "version": "3.32.2",
+                "mode": "global",
+                "copyright": "© 2014-2023 Denis Pushkarev (zloirock.ru)",
+                "license": "https://github.com/zloirock/core-js/blob/v3.32.2/LICENSE",
+                "source": "https://github.com/zloirock/core-js"
+            },
+            {
+                "version": "3.32.2",
+                "mode": "global",
+                "copyright": "© 2014-2023 Denis Pushkarev (zloirock.ru)",
+                "license": "https://github.com/zloirock/core-js/blob/v3.32.2/LICENSE",
+                "source": "https://github.com/zloirock/core-js"
+            }
+        ],
+        "wks": {},
+        "inspectSource": "function(t){return u(t)}",
+        "keys": {
+            "IE_PROTO": "Symbol(IE_PROTO)_1.i0z7c2su76"
+        },
+        "state": {
+            "get": "function get() { [native code] }",
+            "has": "function has() { [native code] }",
+            "set": "function set() { [native code] }",
+            "delete": "function delete() { [native code] }"
+        }
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "createDraft": "function () { [native code] }",
-        "finishDraft": "function () { [native code] }",
-        "isDraft": "function u(e){return!!e&&!!e[q]}",
-        "produce": "function(e,r,u){if(\"function\"==typeof e&&\"function\"!=typeof r){var o,i=r;return r=e,function(e){var n=this;void 0===e&&(e=i);for(var u=arguments.length,a=Array(u>1?u-1:0),o=1;o<u;o++)a[o-1]=arguments[o];return t.produce(e,function(e){var t;return(t=r).call.apply(t,[n,e].concat(a))})}}if(\"function\"!=typeof r&&n(6),void 0!==u&&\"function\"!=typeof u&&n(7),a(e)){var s=A(t),l=S(t,e,void 0),c=!0;try{o=r(l),c=!1}finally{c?E(s):m(s)}return\"undefined\"!=typeof Promise&&o instanceof Promise?o.then(function(e){return B(s,u),b(e,s)},function(e){throw E(s),e}):(B(s,u),b(o,s))}if(!e||\"object\"!=typeof e){if(void 0===(o=r(e))&&(o=e),o===L&&(o=void 0),t.D&&h(o,!0),u){var f=[],d=[];C(\"Patches\").M(e,o,f,d),u(f,d)}return o}n(21,e)}"
-    }
-}

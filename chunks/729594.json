@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "parse": "function v(e,t,n){if(e&&\"object\"==typeof e&&e instanceof a)return e;var r=new a;return r.parse(e,t,n),r}",
+        "resolve": "function(e,t){return v(e,!1,!0).resolve(t)}",
+        "resolveObject": "function(e,t){return e?v(e,!1,!0).resolveObject(t):t}",
+        "format": "function(e){return(\"string\"==typeof e&&(e=v(e)),e instanceof a)?e.format():a.prototype.format.call(e)}",
+        "Url": "function a(){this.protocol=null,this.slashes=null,this.auth=null,this.host=null,this.port=null,this.hostname=null,this.hash=null,this.search=null,this.query=null,this.pathname=null,this.path=null,this.href=null}"
+    }
+}

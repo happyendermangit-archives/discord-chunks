@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){let t=l.useRef(null),n=l.useCallback(n=>{null!=e&&(\"function\"==typeof e?e(n):e.current=n,t.current=n)},[e]);return[t,n]}"
-    }
-}

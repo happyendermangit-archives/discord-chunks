@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isIFrameModalForGuildEnabled": "function l(e){return s.getCurrentConfig({guildId:null!=e?e:r.EMPTY_STRING_GUILD_ID,location:\"2d360b_1\"},{autoTrackExposure:!0}).enabled}"
-    }
-}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function I(e,t,n){let{attributes:a,children:s,element:l}=t;switch(l.type){case\"applicationCommand\":let r=d.default.getActiveCommand(n),o=0,u=0;if(null!=r&&r.id===l.command.id){let t=p.getOptionNames(e);for(let e of r.options??[])t.includes(e.name)?u++:o++}let c={};if(o>0){let e;e=u>0?E.default.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({count:o}):E.default.Messages.COMMANDS_OPTION_COUNT.format({count:o}),c[\"data-trailing-placeholder\"]=e}return(0,i.jsx)(\"div\",{className:_.applicationCommand,...a,...c,children:s});case\"applicationCommandOption\":return(0,i.jsx)(C,{attributes:a,channelId:n,element:l,children:s});default:return null}}"
+    }
+}

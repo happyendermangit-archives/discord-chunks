@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "updateIsInTabsUI": "function E(e){i!==e&&(i=e,r=e,!function(){let e=i?r?o.DesignIds.DESIGN_TABS_IA:o.DesignIds.DESIGN_IA:o.DesignIds.CLASSIC_IA;s.default.extendSuperProperties({design_id:e}),a.addGlobalTag(\"design_id\",e),_.default.setTags({design_id:`${e}`})}())}"
+    }
+}

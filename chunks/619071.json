@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "GUILD_FEED_MESSAGE_ITEM_ID_TEMPLATE": "e=>`${r.GuildFeedItemTypes.MESSAGE}/${e}`",
+        "default": "function l(e){switch(e.type){case r.GuildFeedItemTypes.FORUM_POST:return u(i.default.castMessageIdAsChannelId(e.message.id));case r.GuildFeedItemTypes.MESSAGE:return d(e.message.id);case r.GuildFeedItemTypes.MESSAGE_BUNDLE:case r.GuildFeedItemTypes.CONVERSATION:return e.id;default:(0,s.assertNever)(e)}}",
+        "getFeedItemTypeFromId": "function E(e){return e.split(\"/\")[0]}",
+        "getGuildFeedItemIdFromFeatureableItem": "function a(e){switch(e.entityType){case r.GuildFeedItemTypes.FORUM_POST:return u(e.entity.id);case r.GuildFeedItemTypes.MESSAGE:return d(e.entity.id);default:(0,s.assertNever)(e)}}"
+    }
+}

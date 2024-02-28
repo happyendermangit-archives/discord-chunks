@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "default": "function _(e,t,n){let{featureEnabled:_,windowLength:E,allowedPoorFpsRatio:l,fpsThreshold:u,backoffTimeSec:I}=a.default.getConfig(!1);o.default.track(s.AnalyticEvents.VIDEO_TOGGLED,{video_toggle_reason:t,toggled_user_id:e,rtc_connection_id:i?.(),media_session_id:r?.(),video_health_manager_window_length:_?E:null,video_health_manager_poor_fps_ratio:_?l:null,video_health_manager_fps_threshold:_?u:null,is_video_shown:n,video_health_manager_backoff_time_seconds:_?I:null})}",
+        "setVideoToggleAnalyticsParams": "function E(e,t){i=e,r=t}"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "openEndEventModal": "function l(e,t){(0,i.openModalLazy)(async()=>{let{default:t}=await n.el(\"805426@1390:1419\").then(n.bind(n,\"981418\"));return n=>(0,s.jsx)(t,{...n,channel:e})},{contextKey:t===a.AppContext.POPOUT?o.POPOUT_MODAL_CONTEXT:o.DEFAULT_MODAL_CONTEXT})}",
+        "openGuildEventDetails": "function u(e){let{eventId:t,parentGuildId:r,recurrenceId:a}=e;(0,i.openModalLazy)(async()=>{let{default:e}=await n.el(\"805426@575:615\").then(n.bind(n,\"632542\"));return n=>(0,s.jsx)(e,{guildScheduledEventId:t,parentGuildId:r,initialRecurrenceId:a,...n})})}",
+        "transitionToEventDetailsFromInvite": "async function d(e,t){let{guild_id:n}=e;await r.default.transitionToGuildSync(n,t),u({eventId:e.id,event:e})}"
+    }
+}

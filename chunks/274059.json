@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "DropTargetMonitorImpl": "function u(e){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,u),o(this,\"internalMonitor\",void 0),o(this,\"targetId\",null),this.internalMonitor=e.getMonitor()}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getInappropriateConversationTakeoverForChannel": "function r(e){var t;let n=(t=e,i.default.getChannelSafetyWarnings(t).filter(e=>e.type===i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1||e.type===i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2));if(n.filter(e=>e.type===i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1&&null!=e.dismiss_timestamp).length>0)return null;let r=n.filter(e=>e.type===i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1&&null==e.dismiss_timestamp);return 1===r.length?r[0]:null}"
+    }
+}

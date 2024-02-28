@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "TargetConnector": "function c(e){var t=this;!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,c),s(this,\"hooks\",(0,a.wrapConnectorHooks)({dropTarget:function(e,n){t.clearDropTarget(),t.dropTargetOptions=n,(0,i.isRef)(e)?t.dropTargetRef=e:t.dropTargetNode=e,t.reconnect()}})),s(this,\"handlerId\",null),s(this,\"dropTargetRef\",null),s(this,\"dropTargetNode\",void 0),s(this,\"dropTargetOptionsInternal\",null),s(this,\"unsubscribeDropTarget\",void 0),s(this,\"lastConnectedHandlerId\",null),s(this,\"lastConnectedDropTarget\",null),s(this,\"lastConnectedDropTargetOptions\",null),s(this,\"backend\",void 0),this.backend=e}"
-    }
-}

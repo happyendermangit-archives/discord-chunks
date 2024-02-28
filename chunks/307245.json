@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "useIsMonetizationReapplicationDisabled": "e=>{let{restrictions:t,restrictionsLoading:n}=f((0,i.useStateFromStores)([u.default],()=>u.default.getGuild(e),[e]));return{isMonetizationReapplicationDisabled:(0,d.isRestrictedFromMonetizationReapplication)(t),restrictionsLoading:n}}",
+        "useShouldHideGuildPurchaseEntryPoints": "e=>{let t=(0,i.useStateFromStores)([u.default],()=>u.default.getGuild(e),[e]),{restrictions:n,restrictionsLoading:s}=f(t);return{shouldHideGuildPurchaseEntryPoints:!(t?.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE)||t?.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))||(s?t?.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)??!0:(0,d.isRestrictedFromShowingGuildPurchaseEntryPoints)(n)),restrictionsLoading:s}}",
+        "useShouldRestrictUpdatingCreatorMonetizationSettings": "e=>{let t=(0,i.useStateFromStores)([u.default],()=>u.default.getGuild(e),[e]),{restrictions:n,restrictionsLoading:s}=f(t),r=s?t?.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)??!0:(0,d.isRestrictedFromUpdatingCreatorMonetizationSettings)(n),a=!!t?.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);return{shouldRestrictUpdatingCreatorMonetizationSettings:r||a,allowSelfRemoveMonetization:!r,restrictionsLoading:s}}"
+    }
+}

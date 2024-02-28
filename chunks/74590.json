@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r){var n=t.__data__;return e(r)?n[\"string\"==typeof r?\"string\":\"hash\"]:n.map}"
-}

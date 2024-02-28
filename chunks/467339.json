@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function _(e){let t=(0,c.default)();return e.upload.item.platform!==u.UploadPlatform.WEB?null:(0,l.jsx)(v,{...e,file:e.upload.item.file,messageMaxLength:t})}"
-    }
-}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function g(e){let{user:t,setNote:n,canDM:a,onClose:s}=e;if(t.isNonUserBot()||!a)return null;let l=a&&(0,d.isNewUser)(t)&&!t.bot;return(0,i.jsxs)(c.default,{className:p.section,lastSection:!0,children:[l&&a?(0,i.jsx)(S,{userId:t.id}):null,a?(0,i.jsx)(u.default,{className:p.messageInputContainer,inputClassName:p.messageInput,user:t,onClose:()=>s?.(),autoFocus:!r.isMobile&&!n}):null]})}"
+    }
+}

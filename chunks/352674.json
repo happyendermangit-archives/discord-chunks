@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "startTyping": "startTyping(t){l.default.dispatch({type:\"TYPING_START_LOCAL\",channelId:t})}",
-            "stopTyping": "stopTyping(t){l.default.dispatch({type:\"TYPING_STOP_LOCAL\",channelId:t})}"
-        }
-    }
-}

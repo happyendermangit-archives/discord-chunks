@@ -1,0 +1,37 @@
+{
+    "exports": {
+        "default": {
+            "track": "track(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(!__OVERLAY__)throw Error(\"OverlayActionCreators.track: Must be called within Overlay context\");(0,s.trackWithOverlayMetadata)(e,t,n)}",
+            "overlayReady": "overlayReady(e){a.default.dispatch({type:\"OVERLAY_READY\",pid:e})}",
+            "overlayMounted": "overlayMounted(e){a.default.dispatch({type:\"OVERLAY_MOUNTED\",nudge:e})}",
+            "setFocusedPID": "setFocusedPID(e){a.default.dispatch({type:\"OVERLAY_FOCUSED\",pid:e})}",
+            "setInputLocked": "setInputLocked(e,t){a.default.dispatch({type:\"OVERLAY_SET_INPUT_LOCKED\",locked:e,pid:t})}",
+            "setUILocked": "setUILocked(e,t){a.default.dispatch({type:\"OVERLAY_SET_UI_LOCKED\",locked:e,pid:t})}",
+            "setLocked": "setLocked(e,t){a.default.dispatch({type:\"OVERLAY_SET_INPUT_LOCKED\",locked:e,pid:t}),a.default.dispatch({type:\"OVERLAY_SET_UI_LOCKED\",locked:e,pid:t})}",
+            "setInstanceLocked": "setInstanceLocked(e){if(!__OVERLAY__)throw Error(\"OverlayActionCreators.setInstanceLocked: Must be called within Overlay context\");p.setLocked(e,(0,d.getPID)())}",
+            "setEnabled": "setEnabled(e){a.default.dispatch({type:\"OVERLAY_SET_ENABLED\",enabled:e})}",
+            "selectCall": "selectCall(e){a.default.dispatch({type:\"OVERLAY_SELECT_CALL\",callId:e})}",
+            "setDisplayNameMode": "setDisplayNameMode(e){a.default.dispatch({type:\"OVERLAY_SET_DISPLAY_NAME_MODE\",mode:e})}",
+            "setDisplayUserMode": "setDisplayUserMode(e){a.default.dispatch({type:\"OVERLAY_SET_DISPLAY_USER_MODE\",mode:e})}",
+            "setAvatarSizeMode": "setAvatarSizeMode(e){a.default.dispatch({type:\"OVERLAY_SET_AVATAR_SIZE_MODE\",mode:e})}",
+            "setNotificationPositionMode": "setNotificationPositionMode(e){a.default.dispatch({type:\"OVERLAY_SET_NOTIFICATION_POSITION_MODE\",mode:e})}",
+            "setTextChatNotificationMode": "setTextChatNotificationMode(e){a.default.dispatch({type:\"OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE\",mode:e})}",
+            "setShowKeybindIndicators": "setShowKeybindIndicators(e){a.default.dispatch({type:\"OVERLAY_SET_SHOW_KEYBIND_INDICATORS\",shouldShow:e})}",
+            "callPrivateChannel": "callPrivateChannel(e,t){a.default.dispatch({type:\"OVERLAY_CALL_PRIVATE_CHANNEL\",channelId:e,ring:t})}",
+            "setTextWidgetOpacity": "setTextWidgetOpacity(e){a.default.dispatch({type:\"OVERLAY_SET_TEXT_WIDGET_OPACITY\",opacity:e})}",
+            "disableExternalLinkAlert": "disableExternalLinkAlert(){a.default.dispatch({type:\"OVERLAY_DISABLE_EXTERNAL_LINK_ALERT\"})}",
+            "startSession": "startSession(){if(!__OVERLAY__)throw Error(\"Attempting to start an overlay session outside of the overlay context\");a.default.dispatch({type:\"OVERLAY_START_SESSION\"})}",
+            "activateRegion": "activateRegion(e){a.default.dispatch({type:\"OVERLAY_ACTIVATE_REGION\",region:e})}",
+            "deactivateAllRegions": "deactivateAllRegions(){a.default.dispatch({type:\"OVERLAY_DEACTIVATE_ALL_REGIONS\"})}",
+            "setPreviewInGameMode": "setPreviewInGameMode(e){a.default.dispatch({type:\"OVERLAY_SET_PREVIEW_IN_GAME_MODE\",isPreviewingInGame:e})}",
+            "updateNotificationStatus": "updateNotificationStatus(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:f.OverlayNotificationStatus.DISMISSED;a.default.dispatch({type:\"OVERLAY_UPDATE_NOTIFICATION_STATUS\",notificationId:e,status:t})}",
+            "notificationEvent": "notificationEvent(e,t){let n=r.default.getGame();a.default.dispatch({type:\"OVERLAY_NOTIFICATION_EVENT\",notificationType:e,action:t,gameName:n?.name??null,gameId:n?.id??null})}",
+            "setPinChat": "setPinChat(e){let t=d.OVERLAY_LAYOUT_ID,n=l.default.getWidgetsForLayout(t),a=l.default.getWidgetConfig(f.OverlayWidgets.GUILDS),s=l.default.getWidgetConfig(f.OverlayWidgets.TEXT),r=l.default.getWidgetConfig(f.OverlayWidgets.GUILDS_TEXT);if(0===n.length||null==a||null==s||null==r)return;let p=o.default.windowSize(),m={width:0,height:0},h={top:0,left:0,right:0,bottom:0},E={width:312,height:0},_={top:0,left:0,right:0,bottom:0},I={width:0,height:0};if(n.forEach(e=>{let{type:t,id:n,anchor:i,size:a}=e;switch(t){case f.OverlayWidgets.TEXT:m=(0,u.getSizeFromLayoutSize)(a,p),(0,c.deleteWidget)(n);break;case f.OverlayWidgets.GUILDS:h=(0,u.getFullCoordsFromLayoutSize)(i,a,p),E=(0,u.getSizeFromLayoutSize)(a,p),(0,c.deleteWidget)(n);break;case f.OverlayWidgets.GUILDS_TEXT:_=(0,u.getFullCoordsFromLayoutSize)(i,a,p),I=(0,u.getSizeFromLayoutSize)(a,p),(0,c.deleteWidget)(n)}}),e){let e=\"auto\"===I.width?r.minSize.width:I.width;e-=a.minSize.width;let[n,s]=(0,u.getLeftWidgetSpecs)(_,{...I,width:a.minSize.width},p),[o,d]=(0,u.getRightWidgetSpecs)(_,{...I,width:e},p,{x:10,y:10}),m=l.default.getWidgetDefaultSettings(f.OverlayWidgets.TEXT);if(null==m)throw Error(\"OverlayActionCreators.setPinChat: No config for TEXT exists\");(0,c.createWidget)({...m,type:f.OverlayWidgets.TEXT,id:(0,i.v4)(),size:d,anchor:o,layoutId:t});let h=l.default.getWidgetDefaultSettings(f.OverlayWidgets.GUILDS);if(null==h)throw Error(\"OverlayActionCreators.setPinChat: No config for GUILDS exists\");(0,c.createWidget)({...h,type:f.OverlayWidgets.GUILDS,id:(0,i.v4)(),size:s,anchor:n,layoutId:t})}else{let e=\"auto\"===m.width?s.minSize.width:m.width;e+=a.minSize.width;let[n,r]=(0,u.getLeftWidgetSpecs)(h,{height:E.height,width:e},p),o=l.default.getWidgetDefaultSettings(f.OverlayWidgets.GUILDS_TEXT);if(null==o)throw Error(\"OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists\");(0,c.createWidget)({...o,type:f.OverlayWidgets.GUILDS_TEXT,id:(0,i.v4)(),layoutId:t,anchor:n,size:r})}}",
+            "resetDefaultLayout": "resetDefaultLayout(e){null!=l.default.getLayout(e)&&((0,c.deleteAllWidgets)(e),(0,c.createWidgets)(l.default.getDefaultLayout(e)))}",
+            "setClickZones": "setClickZones(e){a.default.dispatch({type:\"OVERLAY_SET_CLICK_ZONES\",zones:e})}",
+            "relayClickZoneClicked": "relayClickZoneClicked(e,t,n){a.default.dispatch({type:\"OVERLAY_RELAY_CLICK_ZONE_CLICKED\",zoneName:e,normalizedMouseX:t,normalizedMouseY:n})}",
+            "setAssociatedGame": "setAssociatedGame(e,t,n){a.default.dispatch({type:\"OVERLAY_SET_ASSOCIATED_GAME\",previousAssociatedGamePID:e,associatedGamePID:t,associatedGame:n})}",
+            "notifyReadyToShow": "notifyReadyToShow(e){a.default.dispatch({type:\"OVERLAY_NOTIFY_READY_TO_SHOW\",pid:e})}"
+        }
+    }
+}

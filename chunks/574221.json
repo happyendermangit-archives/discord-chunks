@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e,t){let n=(0,a.useStateFromStores)([s.default],()=>s.default.keyboardModeEnabled);return(0,i.default)({id:e,isEnabled:n,orientation:t,setFocus:r,scrollToStart:l,scrollToEnd:l})}"
+    }
+}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useUURegistrationExperiment": "()=>a.useExperiment({location:\"83ca1a_3\"},{autoTrackExposure:!1})",
-        "hasRegistrationUsernameSuggestions": "()=>a.getCurrentConfig({location:\"83ca1a_4\"},{autoTrackExposure:!1}).suggestions"
-    }
-}

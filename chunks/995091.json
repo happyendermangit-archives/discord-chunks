@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function n(e){let t=(0,d.coerceChannelRoute)(e);if(null!=t)return[t.params.guildId,t.params.channelId];let a=(0,d.coerceGuildsRoute)(e);return null!=a?[a.params?.guildId,a.params?.channelId]:[void 0,void 0]}"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "type": "function(e){let{disabled:t,channel:n}=e,{analyticsLocations:a}=(0,r.default)(l.default.GIFT_BUTTON),E=(0,c.useDirectMessageRecipient)(n);if(t)return null;let _=()=>(0,o.default)({isGift:!0,giftRecipient:null===E?void 0:E,initialPlanId:null,subscriptionTier:p.PremiumSubscriptionSKUs.TIER_2,analyticsLocations:a,analyticsObject:{page:n.isPrivate()?f.AnalyticsPages.DM_CHANNEL:f.AnalyticsPages.GUILD_CHANNEL,section:f.AnalyticsSections.CHANNEL_TEXT_AREA,object:f.AnalyticsObjects.BUTTON_ICON,objectType:f.AnalyticsObjectTypes.GIFT}});return(0,i.jsx)(s.Tooltip,{text:m.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,children:e=>(0,i.jsx)(u.default,{...e,innerClassName:h.button,isActive:!1,\"aria-label\":m.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,\"aria-haspopup\":\"dialog\",onClick:_,children:(0,i.jsx)(d.default,{})})})}",
+            "compare": null
+        }
+    }
+}

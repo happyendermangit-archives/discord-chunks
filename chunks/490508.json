@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "PaginationController": "class _ extends o.PureComponent{static #e=this.defaultProps={maxVisiblePages:9,hideMaxPage:!1};getNeighborBounds(){let{totalPageCount:e,maxVisiblePages:t,selectedPage:n}=this.props,i=Math.ceil(t/2),r=Math.floor(t/2),o=[1,e],[a,s]=o=n<=i?[1,t]:n>e-r?[e-t+1,e]:[n-i+1,n+r];return[Math.max(a,1),Math.min(s,e)]}getPageList(){let{totalPageCount:e,selectedPage:t,hideMaxPage:n}=this.props,[i,r]=this.getNeighborBounds(),o={type:\"BACK\",key:\"back\",disabled:1===t,selected:!1,navigateToPage:this.handleBackward},a={type:\"NEXT\",key:\"next\",disabled:t===e,selected:!1,navigateToPage:this.handleForward},_=[],E=[];return i>1&&(_=[{type:\"PAGE\",key:\"page-1\",targetPage:1,navigateToPage:()=>this.handleJump(1)},{type:\"GAP\",key:\"left-gap\"}],i+=2),r<e&&(E=[{type:\"GAP\",key:\"right-gap\"}],!n&&E.push({type:\"PAGE\",key:`page-${e}`,targetPage:e,navigateToPage:()=>this.handleJump(e)}),r-=2),[o,..._,...s().range(i,r+1).map(e=>({type:\"PAGE\",key:`page-${e}`,targetPage:e,selected:e===t,disabled:!1,navigateToPage:()=>this.handleJump(e)})),...E,a]}render(){let{totalPageCount:e,children:t}=this.props;return t({pages:this.getPageList(),hasMultiplePages:e>1})}constructor(...e){super(...e),this.changePageTo=e=>{let{selectedPage:t,onPageChange:n}=this.props;t!==e&&null!=n&&n(e)},this.handleForward=()=>{this.changePageTo(Math.min(this.props.selectedPage+1,this.props.totalPageCount))},this.handleBackward=()=>{this.changePageTo(Math.max(this.props.selectedPage-1,1))},this.handleJump=e=>{this.changePageTo(e)}}}",
+        "PaginationTypes": {
+            "PAGE": "PAGE",
+            "GAP": "GAP",
+            "BACK": "BACK",
+            "NEXT": "NEXT"
+        }
+    }
+}

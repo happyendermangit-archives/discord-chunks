@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){if(!i(t))return o(t,f)||o(t,\"@@iterator\")||u[e(t)]}"
-}

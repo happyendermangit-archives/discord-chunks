@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e,t){let{pendingThemeColors:n,isPreview:r}=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},o=e?.getAvatarURL(t?.guildId,80),u=(0,s.useColorValue)(l.Color.PRIMARY_530).hex,[d,c]=(0,a.useAvatarColors)(o,u,!1);if(!t?.canEditThemes&&!r)return[null,null];let f=t?.getPreviewThemeColors(n),p=f?.[0]??(0,i.hex2int)(d);return[p,f?.[1]??(0,i.hex2int)(c)]}"
+    }
+}

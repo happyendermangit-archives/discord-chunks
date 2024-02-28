@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "getQueriesFromUserInput": "e=>null==e?[]:l(e).trim().split(\" \")",
+        "removePunctuation": "e=>e.replace(u,\"\").replace(d,\" \")",
+        "throttledTrackExpressionSuggestionDisplayed": "function w(){var t,s=n(),r=m(s);if(f=arguments,u=this,b=s,r){if(void 0===p){;return h=t=b,p=setTimeout(y,e),l?x(t):d}if(g)return clearTimeout(p),p=setTimeout(y,e),x(b)}return void 0===p&&(p=setTimeout(y,e)),d}"
+    }
+}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "createPendingReply": "function i(e){let{message:t,channel:n,shouldMention:i,showMentionToggle:r,source:u}=e;l.default.dispatch({type:\"CREATE_PENDING_REPLY\",message:t,channel:n,shouldMention:i,showMentionToggle:r,source:u})}",
-        "setPendingReplyShouldMention": "function r(e,t){l.default.dispatch({type:\"SET_PENDING_REPLY_SHOULD_MENTION\",channelId:e,shouldMention:t})}",
-        "deletePendingReply": "function u(e){l.default.dispatch({type:\"DELETE_PENDING_REPLY\",channelId:e})}"
-    }
-}

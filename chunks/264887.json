@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e){let{text:t=_.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,className:n}=e;return(0,i.jsx)(a.Tooltip,{text:t,children:e=>(0,i.jsx)(a.Clickable,{...e,children:(0,i.jsx)(s.default,{className:o()(E.nitroWheel,n)})})})}"
+    }
+}

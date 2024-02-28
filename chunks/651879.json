@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "getGuildNameSuggestion": "function(e){let t=c.default.getCurrentUser(),n=f.getName(t);return null==n||0===n.length?\"\":p.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({username:(null==e?void 0:e.truncateUsername)?n.slice(0,20):n})}",
-            "requestMembers": "requestMembers(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:10,l=Array.isArray(e),r=[],a=!1;if(l)e.forEach(e=>{let n=g(e,t);null==n&&r.push(e)});else{let n=g(e,t);null==n&&(a=!0)}r.length>0&&l?m(r,t,n):a&&m(e,t,n)}"
-        }
-    }
-}

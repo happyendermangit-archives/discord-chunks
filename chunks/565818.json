@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "CommonConfettiCannonContextProvider": "function E(e){let{children:t}=e,[n,E]=r.useState(null),[l,u]=r.useState(null),I=r.useRef(new Set),[T,c]=r.useState(!1),d=r.useCallback(e=>{I.current.delete(e),c(I.current.size>0)},[]),S=r.useCallback(e=>(I.current.add(e),c(!0),()=>d(e)),[d]),A=r.useCallback((e,t)=>{for(let n of I.current)n(e,t)},[]);return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(a.ConfettiCannonContextProvider,{confettiCanvas:l,spriteCanvas:n,baseConfig:s.COMMON_CONFETTI_BASE_CONFIG,addClickListener:S,removeClickListener:d,children:t}),(0,i.jsx)(o.ConfettiCanvas,{ref:u,className:_.canvas,environment:s.COMMON_CONFETTI_ENVIRONMENT,onClick:T?A:void 0}),(0,i.jsx)(o.SpriteCanvas,{ref:E,colors:s.COMMON_CONFETTI_COLORS,sprites:s.COMMON_CONFETTI_SPRITES,spriteWidth:s.COMMON_CONFETTI_MAX_SPRITE_SIZE,spriteHeight:s.COMMON_CONFETTI_MAX_SPRITE_SIZE})]})}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "Future": "class i{constructor(){this.promise=new Promise((e,t)=>{this.resolve=e,this.reject=t})}}"
+    }
+}

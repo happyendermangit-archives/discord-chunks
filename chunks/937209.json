@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "dismissAppDetail": "function r(){i.default.dispatch({type:\"APP_LAUNCHER_DISMISS_APP_DETAIL\"})}",
+        "dismissAppLauncherPopup": "function s(){i.default.dispatch({type:\"APP_LAUNCHER_DISMISS_POPUP\"})}",
+        "showAppDetail": "function l(e){i.default.dispatch({type:\"APP_LAUNCHER_SHOW_APP_DETAIL\",appDetail:e})}",
+        "showAppLauncherPopup": "function a(){i.default.dispatch({type:\"APP_LAUNCHER_SHOW_POPUP\"})}"
+    }
+}

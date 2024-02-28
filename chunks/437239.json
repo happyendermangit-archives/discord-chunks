@@ -1,0 +1,27 @@
+{
+    "exports": {
+        "JOIN_VOCAL_CHANNEL_PERMISSIONS": "1049600",
+        "LURKER_STAGE_CHANNEL_PERMISSIONS_ALLOWLIST": "4331734016",
+        "MODERATE_STAGE_CHANNEL_PERMISSIONS": "20971536",
+        "STAGE_CHANNEL_DISABLED_PERMISSIONS": {
+            "toJSON": "function(){return Array.from(this)}",
+            "has": "function has() { [native code] }",
+            "add": "function add() { [native code] }",
+            "delete": "function delete() { [native code] }",
+            "clear": "function clear() { [native code] }",
+            "entries": "function entries() { [native code] }",
+            "forEach": "function forEach() { [native code] }",
+            "size": 3,
+            "values": "function values() { [native code] }",
+            "keys": "function values() { [native code] }",
+            "union": "function union() { [native code] }",
+            "intersection": "function intersection() { [native code] }",
+            "difference": "function difference() { [native code] }",
+            "symmetricDifference": "function symmetricDifference() { [native code] }",
+            "isSubsetOf": "function isSubsetOf() { [native code] }",
+            "isSupersetOf": "function isSupersetOf() { [native code] }",
+            "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+        },
+        "UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS": "289406992"
+    }
+}

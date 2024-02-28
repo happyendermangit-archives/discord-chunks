@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){return a(e)&&\"[object Set]\"==r(e)}"
+}

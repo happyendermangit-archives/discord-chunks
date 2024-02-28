@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function d(e,t){let{currentPreviewRef:n}=l.useContext(a.default),d=(0,i.useStateFromStores)([s.default],()=>s.default.isPlayingSound(e.soundId),[e]),c=l.useCallback(l=>{null!=n.current&&n.current.pause(),null!=t&&(0,r.playSound)(e,t,l)},[e,n,t]),f=l.useCallback(()=>{let t=new Audio((0,o.default)(e.soundId));null!=n.current&&n.current.pause(),n.current=t,t.currentTime=0,t.volume=(0,u.default)(e.volume),t.play()},[e,n]);return l.useCallback(()=>()=>{var e;return null===(e=n.current)||void 0===e?void 0:e.pause()},[n]),{playSoundboardSound:c,isPlayingSound:d,previewSound:f}}"
-    }
-}

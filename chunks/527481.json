@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "avatar": "avatar_fc417b",
+        "avatarContainer": "avatarContainer__51a1f",
+        "marketingBadgeTooltip": "marketingBadgeTooltip__14614",
+        "marketingBadgeTooltipContent": "marketingBadgeTooltipContent_e27c6b",
+        "shopMarketingTooltipContent": "shopMarketingTooltipContent__623a9",
+        "shopMarketingTooltipText": "shopMarketingTooltipText__28605"
+    }
+}

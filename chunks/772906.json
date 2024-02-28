@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e){let{className:t,children:i,forceUseColor:n=!1,hideStars:u}=e;return(0,s.jsxs)(\"span\",{className:r()(l.container,t,{[l.containerColored]:n}),children:[i,u?null:(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)(o.default,{foreground:l.sparkleStarTopRight}),(0,s.jsx)(o.default,{foreground:l.sparkleStarRight}),(0,s.jsx)(o.default,{foreground:l.sparkleStarBottomLeft})]})]})}"
+    }
+}

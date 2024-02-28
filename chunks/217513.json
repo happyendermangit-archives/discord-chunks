@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e,t){return(0,n.useStateFromStores)([r.default,o.default],()=>d(e,t,[r.default,o.default]))}",
-        "getDisplayProfile": "function d(e,t){let[i,n]=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[r.default,o.default],l=i.getUser(e),u=n.getUserProfile(e),s=n.getGuildMemberProfile(e,t);return null==l||null==u?null:a(u,s)}"
-    }
-}

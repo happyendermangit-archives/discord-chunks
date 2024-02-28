@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(e){let{type:t,source:n,userId:s,applicationId:l,partyId:r,messageId:o,locationObject:u,analyticsLocations:d}=e;i.default.track(a.AnalyticEvents.APPLICATION_OPENED,{type:t,source:n,application_id:l,party_id:r??void 0,other_user_id:s,message_id:o,location:u,location_stack:d})}"
+    }
+}

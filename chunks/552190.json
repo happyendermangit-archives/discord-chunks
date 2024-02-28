@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{errorMessage:t,onClose:n}=e;return null==t||\"\"===t?null:(0,a.jsxs)(\"div\",{className:i.errorContainer,children:[(0,a.jsx)(r.default,{width:20,height:20,className:i.errorIcon}),(0,a.jsx)(l.Text,{className:i.errorText,variant:\"text-sm/normal\",children:t}),(0,a.jsx)(l.Clickable,{onClick:()=>{n()},\"aria-label\":s.default.Messages.DISMISS,className:i.closeIcon})]})}"
-    }
-}

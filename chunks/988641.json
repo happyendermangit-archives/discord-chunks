@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "memoize": "function r(e){var t=null;return function(){return null==t&&(t=e()),t}}",
-        "without": "function a(e,t){return e.filter(function(e){return e!==t})}",
-        "union": "function i(e,t){var n=new Set,r=function(e){return n.add(e)};e.forEach(r),t.forEach(r);var a=[];return n.forEach(function(e){return a.push(e)}),a}"
-    }
-}

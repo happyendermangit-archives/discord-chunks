@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let{className:t,color:n=a.default.unsafe_rawColors.BRAND_500.css,...r}=e;return(0,i.jsx)(s.TextBadge,{...r,text:l.default.Messages.BETA,color:n,className:t})}"
+    }
+}

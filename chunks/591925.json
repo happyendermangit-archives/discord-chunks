@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "WCAGContrastRatios": {
+            "NonText": 3,
+            "Text": 4.5,
+            "HighContrastText": 7
+        },
+        "getContrastingColor": "function a(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=t.contrastRatio??o.NonText,i=t.tolerance??3,a=r()(t.base??e),s=r()(e),_=a.luminance(),E=s,l=n+i,u=r().contrast(a,s),I=100;for(;I-- >0;){let e=u<n,t=u>l;if(!e&&!t)break;let i=E.luminance()>_;E=t&&i||e&&!i?E.darken():E.brighten(),u=r().contrast(a,E)}return function(e){let[t,n,i,r]=e.rgba();return`rgba(${t}, ${n}, ${i}, ${r})`}(E)}"
+    }
+}

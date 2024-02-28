@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "mentionUser": "function x(t,e){let{id:i}=t,l=\"@\".concat(h.default.getUserTag(t,{decoration:\"never\"}));c.ComponentDispatch.dispatchToLastSubscribed(u.ComponentActions.INSERT_TEXT,{plainText:l,rawText:\"<@\".concat(i,\">\")}),null!=e&&a.default.startTyping(e)}",
-        "default": "function m(t,e,i){let[a,c]=(0,r.useStateFromStoresArray)([d.default,s.default,o.default],()=>{let t=d.default.getChannelId(e),i=s.default.getChannel(t),l=null!=i&&(i.isMultiUserDM()||o.default.can(u.Permissions.SEND_MESSAGES,i));return[t,l]},[e]),h=i===u.AppContext.POPOUT;return!c||h?null:(0,l.jsx)(n.MenuItem,{id:\"mention\",label:f.default.Messages.MENTION,action:function(){x(t,a)}})}"
-    }
-}

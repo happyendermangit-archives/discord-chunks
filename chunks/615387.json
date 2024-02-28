@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getHasImportantUnread": "function n(e){return l.default.hasUnread(e.id)&&u.default.resolveUnreadSetting(e)===i.UnreadSetting.ALL_MESSAGES}"
-    }
-}

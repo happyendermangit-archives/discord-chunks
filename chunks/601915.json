@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getLastUsedVideoBackgroundOption": "function a(e){let t=s.default.settings;return function(e,t){let n=(0,r.getVideoBackgroundOptionFromProto)(e,t.id);return(0,r.isCustomBackgroundOption)(n)&&!i.default.canUseCustomBackgrounds(t)?null:\"number\"!=typeof n||(0,r.isDefaultBackgroundOption)(n)?n:null}(t.voiceAndVideo?.videoBackgroundFilterDesktop,e)}"
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isChannelTypeMentionable": "function r(e){return(0,l.isGuildSelectableChannelType)(e)||(0,l.isGuildVocalChannelType)(e)}"
-    }
-}

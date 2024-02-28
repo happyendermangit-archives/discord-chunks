@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "useSpotifyJoinAction": "function g(e,t,n){let a=C(e,t),{notPlayable:s,syncingWithUser:l,syncingWithParty:r,isCurrentUser:o}=a,{loading:u,startLoading:d,clearLoading:p}=I(a),h=i.useCallback(()=>{d(),(0,m.default)(a,E.SpotifyActionTypes.EMBED_SYNC,n).catch(p)},[a,n,d,p]);return{label:(0,c.default)(a,E.SpotifyActionTypes.EMBED_SYNC),tooltip:(0,f.default)(a,E.SpotifyActionTypes.EMBED_SYNC),disabled:!u&&(o||l||r||s),loading:u,onClick:h,spotifyData:a}}",
+        "useSpotifyPlayAction": "function y(e,t,n){let a=C(e,t),{notPlayable:s,isCurrentUser:l,playingSameTrack:r}=a,{loading:o,startLoading:u,clearLoading:d}=I(a),p=i.useCallback(()=>{u(),(0,h.default)(a,E.SpotifyActionTypes.USER_ACTIVITY_PLAY,n).catch(d)},[a,n,u,d]);return{label:(0,c.default)(a,E.SpotifyActionTypes.USER_ACTIVITY_PLAY),tooltip:(0,f.default)(a,E.SpotifyActionTypes.USER_ACTIVITY_PLAY),disabled:!o&&(l||s||r),loading:o,onClick:p,spotifyData:a}}",
+        "useSpotifySyncAction": "function S(e,t,n,a){let s=a??u.default.getName(t),l=C(e,t),{syncingWithUser:r,syncingWithParty:o,isCurrentUser:d}=l,{loading:p,startLoading:h,clearLoading:_}=I(l),y=i.useCallback(()=>{h(),(0,m.default)(l,E.SpotifyActionTypes.USER_ACTIVITY_SYNC,n).catch(_)},[l,n,h,_]);return{label:(0,c.default)(l,E.SpotifyActionTypes.USER_ACTIVITY_SYNC),tooltip:(0,f.default)(l,E.SpotifyActionTypes.USER_ACTIVITY_SYNC,s),disabled:!p&&(d||r||o),loading:p,onClick:y,spotifyData:l}}"
+    }
+}

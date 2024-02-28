@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class I extends s.default{constructor({onSwitchStart:e,onSwitchSuccess:t,onSwitchError:n,onTokenSet:a}){super(),this.actions={LOGOUT:e=>this.handleLogout(e)},this.handleConnectionOpen=()=>{let e=_.default.getCurrentUser();if(null==e)return;if(null!=r){if(r!==i){let t=l.default.getUsers().map(e=>{let{id:t}=e;return t});E.default.track(u.AnalyticEvents.MULTI_ACCOUNT_SWITCH_SUCCESS,{from_user_id:r,linked_user_ids:t}),this.onSwitchSuccess?.(e)}else E.default.track(u.AnalyticEvents.MULTI_ACCOUNT_SWITCH_FAILURE),this.onSwitchError?.(e);r=null}i=e.id;let t=o.default.getToken();null!=t&&\"\"!==t&&o.default.setToken(t,e.id),this.onTokenSet?.(e)},this.handleLogout=e=>{e.isSwitchingAccount?(r=i,this.onSwitchStart?.()):o.default.removeToken(i),i=null},this.onSwitchStart=e,this.onSwitchSuccess=t,this.onSwitchError=n,this.onTokenSet=a}_initialize(){a.default.subscribe(\"CONNECTION_OPEN\",()=>this.handleConnectionOpen()),this.handleConnectionOpen()}_terminate(){a.default.unsubscribe(\"CONNECTION_OPEN\",()=>this.handleConnectionOpen())}}"
+    }
+}

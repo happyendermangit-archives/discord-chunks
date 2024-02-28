@@ -1,8 +1,7 @@
 {
     "exports": {
-        "CTAMessage": "CTAMessage__4101e",
-        "CTAMessageButton": "CTAMessageButton__9daa8",
-        "CTAMessageButtonOuter": "CTAMessageButtonOuter_bb5ff9",
-        "CTAMessageSticker": "CTAMessageSticker__7b87e"
+        "isPurchasableRoleSubscriptionEmoji": "function r(e){if(e?.roles==null||0===e.roles.length||null==e.guildId)return!1;let t=s.default.getPurchasableSubscriptionRoles(e.guildId);return e.roles.some(e=>t.has(e))}",
+        "isRoleSubscriptionEmoji": "function i(e,t){if(e?.roles==null||0===e.roles.length||null==t)return!1;let n=s.default.getSubscriptionRoles(t);return e.roles.some(e=>n.has(e))}",
+        "isUnusableRoleSubscriptionEmoji": "function a(e,t){if(e?.roles==null||0===e.roles.length||null==e.guildId)return!1;if(r(e)){let n=s.default.getUserSubscriptionRoles(e.guildId),i=e.roles.some(e=>n.has(e)),r=t===e.guildId&&s.default.getUserIsAdmin(e.guildId);if(!(i||r))return!0}return!1}"
     }
 }

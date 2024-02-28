@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(e){let{guild:t,children:n}=e,a=null!=t?(0,i.jsx)(l.default,{guild:t,size:l.default.Sizes.MEDIUM,className:s()(o.icon,null==t.icon?o.textIcon:o.imageIcon),active:!0}):null;return(0,i.jsxs)(\"span\",{children:[(0,i.jsx)(r.default,{children:a}),(0,i.jsx)(\"span\",{className:o.name,children:n})]})}"
+    }
+}

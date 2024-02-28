@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function n(){let[,t]=(0,r.useState)({});return(0,r.useCallback)(()=>t({}),[])}"
+    }
+}

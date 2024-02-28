@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "updateFlags": "function l(e,t,n){return a.default.dispatch({type:\"LIBRARY_APPLICATION_FLAGS_UPDATE_START\",applicationId:e,branchId:t,flags:n}),i.default.patch({url:s.Endpoints.LIBRARY_APPLICATION_BRANCH(e,t),body:{flags:n},oldFormErrors:!0}).then(e=>{a.default.dispatch({type:\"LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS\",libraryApplication:e.body})})}"
+    }
+}

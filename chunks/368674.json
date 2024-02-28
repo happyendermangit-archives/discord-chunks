@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "claimPremiumCollectiblesProduct": "async e=>{u.default.dispatch({type:\"COLLECTIBLES_CLAIM\",skuId:e});try{let t=await s.default.put({url:o.Endpoints.COLLECTIBLES_CLAIM,body:{sku_id:e}});u.default.dispatch({type:\"COLLECTIBLES_CLAIM_SUCCESS\",skuId:e,purchases:t.body?.map(c.default.fromServer)})}catch(t){throw u.default.dispatch({type:\"COLLECTIBLES_CLAIM_FAILURE\",skuId:e,error:t}),new l.APIError(t)}}",
+        "closeCollectiblesShop": "()=>{u.default.dispatch({type:\"COLLECTIBLES_SHOP_CLOSE\"}),(0,i.popLayer)()}",
+        "fetchCollectiblesCategories": "async e=>{u.default.dispatch({type:\"COLLECTIBLES_CATEGORIES_FETCH\"});let t={};null!=e&&(!0===e.noCache&&(t.no_cache=!0),!0===e.includeUnpublished&&(t.include_unpublished=!0),null!=e.countryCode&&(t.countryCode=e.countryCode));try{let e=await s.default.get({url:o.Endpoints.COLLECTIBLES_CATEGORIES,query:t});u.default.dispatch({type:\"COLLECTIBLES_CATEGORIES_FETCH_SUCCESS\",categories:e.body.map(n.default.fromServer)})}catch(e){throw u.default.dispatch({type:\"COLLECTIBLES_CATEGORIES_FETCH_FAILURE\",error:e}),new l.APIError(e)}}",
+        "fetchCollectiblesProduct": "async(e,t)=>{u.default.dispatch({type:\"COLLECTIBLES_PRODUCT_FETCH\"});try{let r=await s.default.get({url:o.Endpoints.COLLECTIBLES_PRODUCTS(e),query:null!=t?{country_code:t}:{}});u.default.dispatch({type:\"COLLECTIBLES_PRODUCT_FETCH_SUCCESS\",product:a.default.fromServer(r.body)})}catch(e){throw u.default.dispatch({type:\"COLLECTIBLES_PRODUCT_FETCH_FAILURE\",error:e}),new l.APIError(e)}}",
+        "fetchCollectiblesPurchases": "async()=>{u.default.dispatch({type:\"COLLECTIBLES_PURCHASES_FETCH\"});try{let e=await s.default.get(o.Endpoints.COLLECTIBLES_PURCHASES);u.default.dispatch({type:\"COLLECTIBLES_PURCHASES_FETCH_SUCCESS\",purchases:e.body.map(c.default.fromServer)})}catch(e){throw u.default.dispatch({type:\"COLLECTIBLES_PURCHASES_FETCH_FAILURE\",error:e}),new l.APIError(e)}}",
+        "openCollectiblesShop": "e=>{let{openInLayer:t=!0,...r}=e;u.default.dispatch({type:\"COLLECTIBLES_SHOP_OPEN\",...r}),t&&(0,i.pushLayer)(o.Layers.COLLECTIBLES_SHOP)}",
+        "productDetailsOpened": "e=>{u.default.dispatch({type:\"COLLECTIBLES_PRODUCT_DETAILS_OPEN\",item:e})}",
+        "setCollectiblesCategoryItemsViewed": "e=>{u.default.dispatch({type:\"COLLECTIBLES_CATEGORY_ITEMS_VIEWED\",...e})}",
+        "validateCollectiblesRecipient": "async(e,t)=>{try{return(await s.default.get({url:o.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,query:{sku_id:t,recipient_id:e}})).body.valid}catch(e){throw new l.APIError(e)}}"
+    }
+}

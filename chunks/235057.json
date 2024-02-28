@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e){let{channelId:t,userId:n,activity:l}=e,r=a.default.getChannel(t);return(l?.session_id==null||null!=r&&(0,i.isTextChannel)(r.type)?t:s.default.getVoiceStateForSession(n,l?.session_id)?.channelId)??void 0}"
+    }
+}

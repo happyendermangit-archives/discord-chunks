@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "fetchMemberCounts": "async function d(e){o.default.shouldFetch(e)&&await u(e)}",
+        "requestMembersForRole": "function T(e,t){let a=!(arguments.length>2)||void 0===arguments[2]||arguments[2],n=`${e}-${t}`;if(!a||null==f.get(n)){var l,r;return f.set(n,!0),l=e,r=t,s.default.get({url:i.Endpoints.GUILD_ROLE_MEMBER_IDS(l,r)}).then(e=>(c.default.requestMembersById(l,e.body,!1),e.body.length))}return Promise.resolve(null)}"
+    }
+}

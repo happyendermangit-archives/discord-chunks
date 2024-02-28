@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function c(e){return(0,l.jsx)(r.default,{confettiLocation:e.confettiLocation,children:(0,l.jsx)(d,{...e})})}"
-    }
-}

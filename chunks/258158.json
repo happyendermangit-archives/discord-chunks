@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function d(){(0,r.openModalLazy)(async()=>{let{default:e}=await l.el(\"826269\").then(l.bind(l,\"826269\"));return t=>(0,n.jsx)(e,{...t})})}"
-    }
-}

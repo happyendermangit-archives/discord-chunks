@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"Reducer \".concat(e.fieldLabel)",
-            "increase": "e=>\"\\xd8g \".concat(e.fieldLabel)",
-            "numberField": "Talfelt"
-        }
-    }
-}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "HandlerRegistryImpl": "function c(e){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,c),this.types=new Map,this.dragSources=new Map,this.dropTargets=new Map,this.pinnedSourceId=null,this.pinnedSource=null,this.store=e}"
+    }
+}

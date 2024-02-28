@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "addQueued": "function r(e,t){let{data:n,messageId:i,onCreate:s,onSuccess:l,onFailure:r}=t;a.default.dispatch({type:\"INTERACTION_QUEUE\",data:n,nonce:e,messageId:i,onCreate:s,onSuccess:l,onFailure:r})}",
+        "fetchMessageInteractionData": "async function u(e,t){let n=await i.default.get({url:s.Endpoints.MESSAGE_INTERACTION_DATA(e,t),oldFormErrors:!0});if(n.ok){let i=n.body;a.default.dispatch({type:\"LOAD_MESSAGE_INTERACTION_DATA_SUCCESS\",channelId:e,messageId:t,interactionData:i})}}",
+        "queueInteractionComponentState": "function l(e,t,n,i){a.default.dispatch({type:\"QUEUE_INTERACTION_COMPONENT_STATE\",messageId:e,nonce:t,state:n,indices:i})}",
+        "setFailed": "function o(e,t,n){a.default.dispatch({type:\"INTERACTION_FAILURE\",nonce:e,errorMessage:n,errorCode:t})}"
+    }
+}

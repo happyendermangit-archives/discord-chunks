@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "assert": "function r(t,e){if(!t)throw Error(e||\"Assertion failed\")}",
+        "toArray": "function(t,e){if(Array.isArray(t))return t.slice();if(!t)return[];var s=[];if(\"string\"!=typeof t){for(var r=0;r<t.length;r++)s[r]=0|t[r];return s}if(\"hex\"===e){(t=t.replace(/[^a-z0-9]+/ig,\"\")).length%2!=0&&(t=\"0\"+t);for(var r=0;r<t.length;r+=2)s.push(parseInt(t[r]+t[r+1],16))}else for(var r=0;r<t.length;r++){var n=t.charCodeAt(r),i=n>>8,c=255&n;i?s.push(i,c):s.push(c)}return s}",
+        "zero2": "function r(t){return 1===t.length?\"0\"+t:t}",
+        "toHex": "function n(t){for(var e=\"\",s=0;s<t.length;s++)e+=r(t[s].toString(16));return e}",
+        "encode": "function(t,e){return\"hex\"===e?n(t):t}",
+        "getNAF": "function(t,e,s){var r=Array(Math.max(t.bitLength(),s)+1);r.fill(0);for(var n=1<<e+1,i=t.clone(),c=0;c<r.length;c++){var o,f=i.andln(n-1);i.isOdd()?(o=f>(n>>1)-1?(n>>1)-f:f,i.isubn(o)):o=0,r[c]=o,i.iushrn(1)}return r}",
+        "getJSF": "function(t,e){var s=[[],[]];t=t.clone(),e=e.clone();for(var r=0,n=0;t.cmpn(-r)>0||e.cmpn(-n)>0;){var i,c,o,f=t.andln(3)+r&3,u=e.andln(3)+n&3;3===f&&(f=-1),3===u&&(u=-1),c=(1&f)==0?0:(3==(i=t.andln(7)+r&7)||5===i)&&2===u?-f:f,s[0].push(c),o=(1&u)==0?0:(3==(i=e.andln(7)+n&7)||5===i)&&2===f?-u:u,s[1].push(o),2*r===c+1&&(r=1-r),2*n===o+1&&(n=1-n),t.iushrn(1),e.iushrn(1)}return s}",
+        "cachedProperty": "function(t,e,s){var r=\"_\"+e;t.prototype[e]=function(){return void 0!==this[r]?this[r]:this[r]=s.call(this)}}",
+        "parseBytes": "function(t){return\"string\"==typeof t?e.toArray(t,\"hex\"):t}",
+        "intFromLE": "function(t){return new r(t,\"hex\",\"le\")}"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "sendReaction": "async e=>{let{file:t,reaction:n,user:i,altText:s,requireConfirmation:l=!1}=e,r=await a.default.openPrivateChannel(i.id,!1,!1);_(t,r,l,s);let o=await E(r);if(null!=o){let e=(0,c.toReactionEmoji)(n);(0,d.addReaction)(r,o.id,e)}}",
+        "sendReply": "async e=>{let{file:t,reply:n,user:i,altText:l,requireConfirmation:r=!1}=e,o=await a.default.openPrivateChannel(i.id,!1,!1);_(t,o,r,l),await E(o);let d=p.default.getChannel(o),c=u.default.parse(d,n);s.default.sendMessage(o,c)}"
+    }
+}

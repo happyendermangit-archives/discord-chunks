@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "updateNote": "updateNote(e,t){i.default.put({url:a.Endpoints.NOTE(e),body:{note:t},oldFormErrors:!0})}"
+        }
+    }
+}

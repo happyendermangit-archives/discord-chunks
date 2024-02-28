@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "ConfirmModal": "function u(e){let t,n,{header:o,children:u,confirmText:I,cancelText:T,className:c,onConfirm:d,onCancel:S,onClose:A,onCloseCallback:N,bodyClassName:O,transitionState:R,loading:C=!1,confirmButtonColor:h=s.Button.Colors.RED,focusCancel:L=!1}=e,D=r.useRef(null);return r.useEffect(()=>{!L&&setTimeout(()=>D.current?.focus(),0)},[L]),r.useLayoutEffect(()=>()=>N?.()),null!=T&&(t=(0,i.jsx)(s.Button,{type:\"button\",look:s.Button.Looks.LINK,color:s.Button.Colors.PRIMARY,disabled:C,onClick:()=>{S?.(),A()},autoFocus:L,children:T})),null!=I&&(n=(0,i.jsx)(s.Button,{buttonRef:D,type:\"submit\",color:h,submitting:C,onClick:async()=>{try{await d?.(),A()}catch(e){throw e}},autoFocus:!L,children:I})),(0,i.jsxs)(E.ModalRoot,{className:c,transitionState:R,children:[null!=o?(0,i.jsx)(E.ModalHeader,{separator:!1,children:(0,i.jsx)(_.Heading,{variant:\"heading-lg/semibold\",children:o})}):null,(0,i.jsx)(E.ModalContent,{className:a()(l.content,O),children:u}),(0,i.jsxs)(E.ModalFooter,{children:[n,t]})]})}",
+        "DeclarativeConfirmModal": "function I(e){return(0,i.jsx)(E.Modal,{onCloseRequest:e.dismissable?e.onCancel:null,renderModal:t=>(0,i.jsx)(u,{...t,...e})})}"
+    }
+}

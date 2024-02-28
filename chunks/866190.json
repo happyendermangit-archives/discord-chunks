@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useIsWindowFocused": "function a(){let{windowId:e}=i.useContext(s.default);return(0,r.useStateFromStores)([l.default],()=>l.default.isFocused(e),[e])}"
-    }
-}

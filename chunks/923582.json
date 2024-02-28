@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "type": "function(e){let{onClick:t,disabled:n=!1}=e;return(0,l.jsx)(\"div\",{className:d.separator,children:(0,l.jsx)(\"div\",{className:d.buttonContainer,children:(0,l.jsx)(r.default,{className:d.button,innerClassName:d.innerButton,childClassName:s(d.buttonChild,{[d.disabled]:n,[d.activeButtonChild]:!n}),onClick:t,disabled:n,isActive:!1,\"aria-label\":u.default.Messages.SEND_MESSAGE,children:(0,l.jsx)(o.default,{className:d.sendIcon})})})})}",
-            "compare": null
-        }
-    }
-}

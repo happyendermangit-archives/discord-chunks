@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function d(e){let{color:t,look:n,platform:d}=e;return(0,a.useStateFromStores)([l.default],()=>l.default.getAccounts().some(e=>e.type===d.type))?null:(0,i.jsx)(r.default,{onClick:()=>(0,s.default)(d.type,\"Activity Action\"),color:t,look:n,fullWidth:!0,children:(0,i.jsxs)(\"div\",{className:u.flex,children:[(0,i.jsx)(\"img\",{alt:\"\",className:u.platformIcon,src:d.icon.whiteSVG}),o.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({platform:d.name})]})},\"connect-platform-activity\")}"
+    }
+}

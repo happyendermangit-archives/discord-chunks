@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "default": "function o(e){return(0,a.useStateFromStoresObject)([i.default,l.default,r.default],()=>d(e,i.default,l.default,r.default),[e])}",
+        "getChannelRoleSubscriptionStatus": "function d(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:i.default,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:l.default,a=arguments.length>3&&void 0!==arguments[3]?arguments[3]:r.default,o=t.getChannel(e);return o?.isRoleSubscriptionTemplatePreviewChannel()?{isSubscriptionGated:!0,needSubscriptionToAccess:!0}:null!=o&&n.isChannelGated(o.guild_id,o.id)?{isSubscriptionGated:!0,needSubscriptionToAccess:o.isGuildVocal()?!a.can(s.Permissions.CONNECT,o):!a.can(s.Permissions.VIEW_CHANNEL,o)}:u}"
+    }
+}

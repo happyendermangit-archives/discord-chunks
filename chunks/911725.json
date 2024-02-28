@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "string2buf": "function(t){var e,s,n,i,c,o=t.length,f=0;for(i=0;i<o;i++)(64512&(s=t.charCodeAt(i)))==55296&&i+1<o&&(64512&(n=t.charCodeAt(i+1)))==56320&&(s=65536+(s-55296<<10)+(n-56320),i++),f+=s<128?1:s<2048?2:s<65536?3:4;for(c=0,e=new r.Buf8(f),i=0;c<f;i++)(64512&(s=t.charCodeAt(i)))==55296&&i+1<o&&(64512&(n=t.charCodeAt(i+1)))==56320&&(s=65536+(s-55296<<10)+(n-56320),i++),s<128?e[c++]=s:(s<2048?e[c++]=192|s>>>6:(s<65536?e[c++]=224|s>>>12:(e[c++]=240|s>>>18,e[c++]=128|s>>>12&63),e[c++]=128|s>>>6&63),e[c++]=128|63&s);return e}",
+        "buf2binstring": "function(t){return f(t,t.length)}",
+        "binstring2buf": "function(t){for(var e=new r.Buf8(t.length),s=0,n=e.length;s<n;s++)e[s]=t.charCodeAt(s);return e}",
+        "buf2string": "function(t,e){var s,r,n,i,o=e||t.length,u=Array(2*o);for(r=0,s=0;s<o;){if((n=t[s++])<128){u[r++]=n;continue}if((i=c[n])>4){u[r++]=65533,s+=i-1;continue}for(n&=2===i?31:3===i?15:7;i>1&&s<o;)n=n<<6|63&t[s++],i--;if(i>1){u[r++]=65533;continue}n<65536?u[r++]=n:(n-=65536,u[r++]=55296|n>>10&1023,u[r++]=56320|1023&n)}return f(u,r)}",
+        "utf8border": "function(t,e){var s;for((e=e||t.length)>t.length&&(e=t.length),s=e-1;s>=0&&(192&t[s])==128;)s--;return s<0||0===s?e:s+c[t[s]]>e?s:e}"
+    }
+}

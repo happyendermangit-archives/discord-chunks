@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class i{constructor(e,t){this.skuId=e,this.skuFeatures=t}}"
+    }
+}

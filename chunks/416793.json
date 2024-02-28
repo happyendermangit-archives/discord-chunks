@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "isCurrentUserTeen": "()=>s.default.getCurrentUser()?.nsfwAllowed===!1"
+    }
+}

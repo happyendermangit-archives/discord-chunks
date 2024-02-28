@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(e,t){void 0===t&&(t=\"\");var n,o=e&&e.split(\"/\")||[],i=t&&t.split(\"/\")||[],u=e&&r(e),s=t&&r(t),l=u||s;if(e&&r(e)?i=o:o.length&&(i.pop(),i=i.concat(o)),!i.length)return\"/\";if(i.length){var c=i[i.length-1];n=\".\"===c||\"..\"===c||\"\"===c}else n=!1;for(var d=0,f=i.length;f>=0;f--){var p=i[f];\".\"===p?a(i,f):\"..\"===p?(a(i,f),d++):d&&(a(i,f),d--)}if(!l)for(;d--;d)i.unshift(\"..\");l&&\"\"!==i[0]&&(!i[0]||!r(i[0]))&&i.unshift(\"\");var h=i.join(\"/\");return n&&\"/\"!==h.substr(-1)&&(h+=\"/\"),h}"
+    }
+}

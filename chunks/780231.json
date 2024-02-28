@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "BaseSpeedTesterEvent": {
+            "Destroy": "destroy",
+            "ConnectionStateChange": "connectionstatechange",
+            "Error": "error",
+            "Connected": "connected",
+            "Ping": "ping",
+            "PingTimeout": "pingtimeout"
+        },
+        "default": "class s extends i.default{constructor(e){super(),this.mediaEngineConnectionId=`WebRTC-${a++}`,this.destroyed=!1,this.audioSSRC=0,this.videoStreamParameters=[],this.connectionState=o.ConnectionStates.CONNECTING,this.ids=e}destroy(){this.destroyed=!0,this.setConnectionState(o.ConnectionStates.DISCONNECTED),this.emit(r.BaseSpeedTesterEvent.Destroy,this),this.removeAllListeners()}setConnectionState(e){this.connectionState=e,this.emit(r.BaseSpeedTesterEvent.ConnectionStateChange,this.connectionState)}initializeStreamParameters(e){this.videoStreamParameters=e.filter(e=>e.type===o.MediaTypes.TEST).map(e=>({type:e.type,active:e.active,rid:e.rid??\"\",ssrc:e.ssrc}))}}"
+    }
+}

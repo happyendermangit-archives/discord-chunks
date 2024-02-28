@@ -1,15 +1,21 @@
 {
     "exports": {
-        "Animated": "function t(){this.payload=void 0,p(this,this)}",
-        "AnimatedArray": "function e(e,n){var r;return(r=t.call(this,null)||this).source=void 0,t.prototype.setValue.call(a(r),r._makeAnimated(e,n)),r}",
-        "AnimatedObject": "function e(e){var n;return void 0===e&&(e=null),(n=t.call(this)||this).source=void 0,n.setValue(e),n}",
-        "AnimatedProps": "function e(e){var n;return(n=t.call(this,null)||this).update=e,n.dirty=!1,n}",
-        "AnimatedString": "function e(e,n){var r;return(r=t.call(this,0)||this)._value=void 0,r._string=null,r._toString=void 0,r._toString=i.createInterpolator({output:[e,n]}),r}",
-        "AnimatedValue": "function e(e){var n;return(n=t.call(this)||this)._value=e,n.done=!0,n.elapsedTime=void 0,n.lastPosition=void 0,n.lastVelocity=void 0,n.v0=void 0,i.is.num(n._value)&&(n.lastPosition=n._value),n}",
-        "createHost": "function(t,e){var n=void 0===e?{}:e,r=n.applyAnimatedValues,o=n.createAnimatedStyle,a=void 0===o?function(t){return new b(t)}:o,u=n.getComponentProps,s={applyAnimatedValues:void 0===r?function(){return!1}:r,createAnimatedStyle:a,getComponentProps:void 0===u?function(t){return t}:u},c=function(t){var e=k(t)||\"Anonymous\";return(t=i.is.str(t)?w(t,s):t[O]||(t[O]=w(t,s))).displayName=\"Animated(\"+e+\")\",t};return i.each(t,function(t,e){!i.is.str(e)&&(e=k(t)),c[e]=c(t)}),{animated:c}}",
-        "getAnimated": "function(t){return t&&t[f]}",
-        "getPayload": "function(t){return t&&t[f]&&t[f].getPayload()}",
-        "isAnimated": "function(t){return!!t&&t[f]===t}",
-        "setAnimated": "function(t,e){return i.defineHidden(t,f,e)}"
+        "ageEligibleForPremiumUpsell": "function N(e){return!A(e,{minDaysOld:0,maxDaysOld:30})}",
+        "default": {
+            "getName": "function T(e){if(null==e)return;let t=r.default.hidePersonalInformation,n=I(e);return t&&n.toLocaleLowerCase()===e.username?.toLocaleLowerCase()&&\"0\"===e.discriminator&&(n=_(n)),n}",
+            "useName": "function c(e){let t=(0,i.useStateFromStores)([r.default],()=>r.default.hidePersonalInformation);if(null==e)return;let n=I(e);return t&&n.toLocaleLowerCase()===e.username?.toLocaleLowerCase()&&\"0\"===e.discriminator&&(n=_(n)),n}",
+            "getUserTag": "function C(e,t){let n={...l,...t},i=\"auto\"!==n.identifiable||r.default.hidePersonalInformation;return R(e,n,i)}",
+            "useUserTag": "function(e,t){let n={...l,...t};return R(e,n,(0,i.useStateFromStores)([r.default],()=>r.default.hidePersonalInformation))}",
+            "getFormattedName": "function(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];if(null==e)return\"???\";let n=d(e),i=t?C(e):e.username??\"???\";return n===i?n:null!=n?`${n} (${i})`:i}",
+            "getGlobalName": "function d(e){if(null!=e){if(u(e.globalName))return e.globalName;else if(u(e.global_name))return e.global_name;else return}}",
+            "humanizeStatus": "function S(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];switch(e){case a.StatusTypes.ONLINE:return t?s.default.Messages.STATUS_ONLINE_MOBILE:s.default.Messages.STATUS_ONLINE;case a.StatusTypes.OFFLINE:return s.default.Messages.STATUS_OFFLINE;case a.StatusTypes.IDLE:return s.default.Messages.STATUS_IDLE;case a.StatusTypes.DND:return s.default.Messages.STATUS_DND;case a.StatusTypes.INVISIBLE:return s.default.Messages.STATUS_INVISIBLE;case a.StatusTypes.STREAMING:return s.default.Messages.STATUS_STREAMING;case a.StatusTypes.UNKNOWN:default:return null}}",
+            "useDirectMessageRecipient": "function h(e){return(0,i.useStateFromStores)([o.default],()=>{if(null!=e)return e.isPrivate()&&e.isDM()?o.default.getUser(e.getRecipientId()):null})}"
+        },
+        "getName": "function T(e){if(null==e)return;let t=r.default.hidePersonalInformation,n=I(e);return t&&n.toLocaleLowerCase()===e.username?.toLocaleLowerCase()&&\"0\"===e.discriminator&&(n=_(n)),n}",
+        "getUserTag": "function C(e,t){let n={...l,...t},i=\"auto\"!==n.identifiable||r.default.hidePersonalInformation;return R(e,n,i)}",
+        "humanizeStatus": "function S(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];switch(e){case a.StatusTypes.ONLINE:return t?s.default.Messages.STATUS_ONLINE_MOBILE:s.default.Messages.STATUS_ONLINE;case a.StatusTypes.OFFLINE:return s.default.Messages.STATUS_OFFLINE;case a.StatusTypes.IDLE:return s.default.Messages.STATUS_IDLE;case a.StatusTypes.DND:return s.default.Messages.STATUS_DND;case a.StatusTypes.INVISIBLE:return s.default.Messages.STATUS_INVISIBLE;case a.StatusTypes.STREAMING:return s.default.Messages.STATUS_STREAMING;case a.StatusTypes.UNKNOWN:default:return null}}",
+        "isNewUser": "function O(e){return A(e,{minDaysOld:0,maxDaysOld:7})}",
+        "useDirectMessageRecipient": "function h(e){return(0,i.useStateFromStores)([o.default],()=>{if(null!=e)return e.isPrivate()&&e.isDM()?o.default.getUser(e.getRecipientId()):null})}",
+        "useName": "function c(e){let t=(0,i.useStateFromStores)([r.default],()=>r.default.hidePersonalInformation);if(null==e)return;let n=I(e);return t&&n.toLocaleLowerCase()===e.username?.toLocaleLowerCase()&&\"0\"===e.discriminator&&(n=_(n)),n}"
     }
 }

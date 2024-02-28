@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "cleanExecutablePath": "function p(e){e=c(e);let t=!1;return(d.forEach(n=>{!t&&e.startsWith(n)&&(e=e.substr(n.length),t=!0)}),t)?e=e.includes(\"dosbox.exe\")?e.split(\"/\").slice(-3).join(\"/\"):e.split(\"/\").slice(-2).join(\"/\"):null}",
+        "default": "async function m(){if(null!=i)return i;try{await u.default.ensureModule(\"discord_game_utils\"),i=await u.default.requireModule(\"discord_game_utils\")}catch(e){new r.default(\"GamesActionCreators\").error(\"could not load discord_game_utils\",e)}if((0,o.isWindows)()){let e=l.default.process.env;f(e.LOCALAPPDATA),f(e[\"PROGRAMFILES(X86)\"]),f(e.PROGRAMFILES),f(e.PROGRAMW6432),f(e.PROGRAMDATA),f(\"/games/\"),f(\"/steamlibrary/steamapps/common/\")}let e=l.default.remoteApp.getPath;return f(await e(\"home\")),f(await e(\"appData\")),f(await e(\"desktop\")),f(await e(\"documents\")),f(await e(\"downloads\")),(d=s().uniq(d)).sort((e,t)=>t.length-e.length),i}"
+    }
+}

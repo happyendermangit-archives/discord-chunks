@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "Anchor": "function T(e){let{href:t,onClick:n,className:o,children:T,rel:c,target:d,useDefaultUnderlineStyles:S=!0,title:A,style:N,focusProps:O,...R}=e;null!=t&&null==n&&(n=l.designConfig.getDefaultLinkInterceptor(t));let C=r.useContext(s.BlockInteractionsContext),h={className:a()(I.anchor,{[I.anchorUnderlineOnHover]:S},o),href:t,onClick:n,rel:null!=c?c:void 0,target:null!=d?d:void 0,title:null!=A?A:void 0,style:null!=N?N:void 0};return(null!=t&&!(0,u.isSafeRedirect)(t)&&(h.rel=\"noreferrer noopener\",h.target=\"_blank\"),C&&delete h.href,null!=n)?(0,i.jsx)(_.Clickable,{tag:\"a\",...R,...h,onClick:n,focusProps:O,children:T}):(0,i.jsx)(E.FocusRing,{...O,children:(0,i.jsx)(\"a\",{...R,...h,children:T})})}"
+    }
+}

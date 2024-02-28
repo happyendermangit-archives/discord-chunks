@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "default": {
+            "updateChannelDimensions": "updateChannelDimensions(e,t,n,a,s){i.default.wait(()=>{i.default.dispatch({type:\"UPDATE_CHANNEL_DIMENSIONS\",channelId:e,scrollTop:t,scrollHeight:n,offsetHeight:a}),null!=s&&s()})}",
+            "updateChannelListScroll": "updateChannelListScroll(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[];i.default.dispatch({type:\"UPDATE_CHANNEL_LIST_DIMENSIONS\",guildId:e,scrollTop:t,channelIds:n})}",
+            "channelListScrollTo": "channelListScrollTo(e,t){i.default.dispatch({type:\"UPDATE_CHANNEL_LIST_DIMENSIONS\",guildId:e,scrollTo:t,channelIds:[]})}",
+            "clearChannelListScrollTo": "clearChannelListScrollTo(e){i.default.dispatch({type:\"UPDATE_CHANNEL_LIST_DIMENSIONS\",guildId:e,scrollTo:null,channelIds:[]})}",
+            "clearChannelDimensions": "clearChannelDimensions(e,t){this.updateChannelDimensions(e,null,null,null,t)}",
+            "updateGuildListScrollTo": "updateGuildListScrollTo(e){i.default.dispatch({type:\"UPDATE_GUILD_LIST_DIMENSIONS\",scrollTop:e})}"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e){return e.setFragmentData=t=>{if(null!=e.selection){let n=(0,i.toTextValue)(s.EditorUtils.richValue(e),{mode:\"plain\",range:e.selection,preventEmojiSurrogates:!0});t.setData(\"text/plain\",n)}},e.insertData=t=>{e.insertTextData(t)},e.insertFragmentData=e=>!1,e.insertTextData=t=>{let n=t.getData(\"text/plain\");return 0!==n.length&&(null!=e.selection&&s.RangeUtils.isExpanded(e.selection)&&a.SlateTransforms.delete(e,{at:e.selection}),e.insertText(n),!0)},e}"
+    }
+}

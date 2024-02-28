@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "HELLO_KEY": "hello",
+        "VERSION_TO_FORCE_RESYNCING_ALL_DATA": "stable-52",
+        "VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY": "force-resync-version",
+        "VERSION_TO_SKIP_READING_THE_DATABASE": 3,
+        "VERSION_TO_SKIP_READING_THE_DATABASE_KEY": "version"
+    }
+}

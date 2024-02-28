@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function c(e){let{user:t,guildId:n}=e,{botUpgraded:c,activeSubscriptionListing:f}=(0,l.default)({user:t,guildId:n}),p=f?.sku_benefits?.benefits;return null!=n&&c&&null!=p&&0!==p.length?(0,i.jsxs)(r.default,{children:[(0,i.jsx)(a.Heading,{variant:\"eyebrow\",className:d.title,children:o.default.Messages.BOT_PROFILE_BENEFITS_HEADING}),(0,i.jsx)(\"div\",{className:u.benefitsContainer,children:p.map((e,t)=>(0,i.jsx)(s.default,{showsDescription:!1,emojiContainerClassName:u.emojiContainer,nameTextVariant:\"text-sm/normal\",nameTextColor:\"text-normal\",benefit:e},`${e.name}${t}`))})]}):null}"
+    }
+}

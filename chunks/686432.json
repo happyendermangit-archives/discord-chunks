@@ -1,0 +1,27 @@
+{
+    "exports": {
+        "INTERACTION_IFRAME_MODAL_ANALYTICS_TYPE": "interaction_iframe_modal",
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "INTERACTION_MODAL_CREATE": "e=>{l(e)}",
+                "INTERACTION_IFRAME_MODAL_CREATE": "e=>{var t;this.iframeModalOpenTimeMs=Date.now(),t=e,(0,s.default)(t),o.default.track(_.AnalyticEvents.OPEN_MODAL,{type:E,application_id:t.application.id})}",
+                "INTERACTION_IFRAME_MODAL_CLOSE": "e=>{!function(e,t){let n=null!=t?Date.now()-t:void 0;o.default.track(_.AnalyticEvents.MODAL_DISMISSED,{type:E,application_id:e.applicationId,duration_open_ms:n})}(e,this.iframeModalOpenTimeMs),this.iframeModalOpenTimeMs=void 0}",
+                "RPC_APP_DISCONNECTED": "e=>{!function(e){let{application:t}=e,n=r.default.getIFrameModalApplicationId(),i=r.default.getIFrameModalKey();t.id===n&&null!=n&&(0,a.default)(n,i)}(e)}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            }
+        }
+    }
+}

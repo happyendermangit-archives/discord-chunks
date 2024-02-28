@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "subscribeChannel": "function u(e,t,n){i.default.dispatch({type:\"GUILD_SUBSCRIPTIONS_CHANNEL\",guildId:e,channelId:t,ranges:n})}",
+        "subscribeChannelDimensions": "function d(e){let{guildId:t,channelId:n,y:i,height:s,rowHeight:l}=e;function r(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0;return Math.max(0,Math.ceil(Math.ceil(e/l))+t)}let o=[];function d(e){let t=e+(a.MINIMUM_RANGE-1);return o.push([e,t]),t+1}let c=r(.5*s),f=r(i,-c),p=r(i+s,c);for(f>0&&(f=Math.max(d(0),f)),f=Math.floor(f/a.MINIMUM_RANGE)*a.MINIMUM_RANGE;f<=p;)f=d(f);u(t,n,o)}",
+        "subscribeMembers": "function s(e,t){i.default.dispatch({type:\"GUILD_SUBSCRIPTIONS_MEMBERS_ADD\",guildId:e,userIds:t})}",
+        "subscribeToMemberUpdates": "function r(e){i.default.dispatch({type:\"GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES\",guildId:e})}",
+        "unsubscribeFromMemberUpdates": "function o(e){i.default.dispatch({type:\"GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES\",guildId:e})}",
+        "unsubscribeMembers": "function l(e,t){i.default.dispatch({type:\"GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE\",guildId:e,userIds:t})}"
+    }
+}

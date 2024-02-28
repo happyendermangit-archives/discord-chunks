@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useChannelAutocompleteLayerPosition": "function l(e){let{editorHeight:t,type:n,state:l,isInPopoutExperiment:r=!1}=e,[o,u]=i.useState(void 0),d=l?.query,c=l?.isVisible,{renderWindow:f}=i.useContext(a.default),p=i.useCallback(()=>{if(null!=l&&(null==d||!c)){u(void 0);return}if(d?.type===s.AutocompleteOptionTypes.GIFS||null!=n&&!r&&!n.autocomplete?.alwaysUseLayer){u(null);return}let e=f.document.getSelection(),t=null!=e&&e.rangeCount>0?e.getRangeAt(0):null;if(null==t)return;let i=t.startContainer,a=t.startOffset;for(;null!=i;){if(i.nodeType!==Node.TEXT_NODE||null==i.nodeValue){u(null);return}if(i.nodeValue?.length===0){i=i.previousSibling,a=i?.nodeValue?.length??0;continue}null!=d&&(a>=d.queryText.length?a-=d.queryText.length:a=0);break}if(null==i)return;let o=f.document.createRange();o.setStart(i,a),o.setEnd(i,a);let p=o.getBoundingClientRect();p?.height!==0&&u(p??null)},[r,f.document,l,c,d,n]);return i.useEffect(()=>(f.document.addEventListener(\"selectionchange\",p),()=>f.document.removeEventListener(\"selectionchange\",p)),[f.document,p]),i.useEffect(()=>{p()},[p,t]),o}"
+    }
+}

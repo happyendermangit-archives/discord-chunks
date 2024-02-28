@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "hasBit": "function i(e,t){if(0===e.length)return!1;let n=e[Math.floor(t/8)];return(n&1<<t%8)!=0}",
-        "addBit": "function r(e,t){let n=Math.floor(t/8);if(e.length<=n){let t=new Uint8Array(n+1);t.set(e,0),e=t}return e[n]|=1<<t%8,e}",
-        "removeBit": "function o(e,t){if(i(e,t)){let n=Math.floor(t/8),i=t%8;e[n]&=~(1<<i)}return e}",
-        "isUint8Array": "function s(e){return e instanceof Uint8Array}",
-        "isSerializedUint8Array": "function l(e){return null!=e&&\"object\"==typeof e&&\"uint8array\"===e.__tag__}"
-    }
-}

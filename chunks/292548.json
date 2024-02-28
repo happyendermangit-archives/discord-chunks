@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){return\"function\"!=typeof e.constructor||i(e)?{}:r(a(e))}"
+}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "sync": "function o(t,e){l.default.dispatch({type:\"ACTIVITY_SYNC\",activity:t,userId:e})}",
-        "play": "function c(t,e){f(t,e).then(i=>l.default.dispatch({type:\"ACTIVITY_PLAY\",activity:t,userId:e,metadata:i})).catch(()=>l.default.dispatch({type:\"ACTIVITY_PLAY\",activity:t,userId:e}))}",
-        "getMetadata": "async function f(t,e){let i=t.metadata;if(null!=i)return s(i);let r=a.default.getActivityMetadata(e);if(null!=r)return s(r);if(null==t.session_id)throw Error(\"null/undefined session_id\");let{body:d}=await n.default.get({url:u.Endpoints.USER_ACTIVITY_METADATA(e,t.session_id,t.application_id),oldFormErrors:!0});return l.default.dispatch({type:\"ACTIVITY_METADATA_UPDATE\",metadata:d,userId:e}),s(d)}"
-    }
-}

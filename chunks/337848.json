@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "confirmActivityAgeGateAlert": "function r(e){let{application:t,onAgree:r,onDisagree:o}=e,u=s.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT)?a.POPOUT_MODAL_CONTEXT:a.DEFAULT_MODAL_CONTEXT;return(0,a.openModalLazy)(async()=>{let{ActivityAgeGateModal:e}=await n.el(\"337848@725:761\").then(n.bind(n,\"74529\"));return n=>(0,i.jsx)(e,{...n,application:t,onAgree:r,onDisagree:o})},{modalKey:\"activity-age-gate\",contextKey:u}),Promise.resolve()}"
+    }
+}

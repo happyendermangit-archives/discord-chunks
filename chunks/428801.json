@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "MenuCheckboxItem": "function a(e){return null}",
+        "MenuControlItem": "function _(e){return null}",
+        "MenuGroup": "function r(e){return null}",
+        "MenuItem": "function o(e){return null}",
+        "MenuRadioItem": "function s(e){return null}",
+        "MenuSeparator": "function i(){return null}"
+    }
+}

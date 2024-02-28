@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){s.default.open(e,l.GuildSettingsSections.SOUNDBOARD),(0,a.openModalLazy)(async()=>{let{default:t}=await n.el(\"260206@535:573\").then(n.bind(n,\"451164\"));return n=>(0,i.jsx)(t,{...n,guildId:e})})}"
+    }
+}

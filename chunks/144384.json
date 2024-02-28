@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function d(e){let{analyticsSection:t,buttonText:n}=e;return(0,i.jsxs)(s.default,{className:u.premiumButton,innerClassName:u.premiumButtonInner,color:a.Button.Colors.GREEN,size:a.Button.Sizes.SMALL,onClick:()=>(0,r.default)({section:t}),children:[(0,i.jsx)(l.default,{className:u.premiumButtonNitroWheel}),n??o.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_CTA]})}"
+    }
+}

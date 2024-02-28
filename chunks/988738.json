@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function _(){let{contextMenu:e,version:t,isOpen:n}=(0,l.useStateFromStoresObject)([h.default],()=>({contextMenu:h.default.getContextMenu(),version:h.default.version,isOpen:h.default.isOpen()})),s=(0,l.useStateFromStores)([f.default],()=>f.default.theme),{appContext:i,renderWindow:u}=r.useContext(d.default);return(0,a.jsx)(g,{appContext:i,renderWindow:u,...e,isOpen:n,theme:s,closeContextMenu:o.closeContextMenu},t)}"
-    }
-}

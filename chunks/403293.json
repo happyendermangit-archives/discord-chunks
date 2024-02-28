@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(){let[t,e]=u.useState(null);return u.useEffect(()=>{(0,r.getStripe)().then(t=>e(t)).catch(t=>{(0,i.captureBillingException)(t)})},[]),t}"
-    }
-}

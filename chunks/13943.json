@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "ComboboxPopout": "function l(e){let{children:t,placeholder:n,value:o,onChange:l,onClose:u,showScrollbar:I,className:T,multiSelect:c,...d}=e,S=r.useCallback(e=>{l(e),!c&&u?.()},[l,u,c]);return(0,i.jsx)(s.Dialog,{className:a()(E.container,T,{[E.scroller]:I}),children:(0,i.jsx)(_.Combobox,{...d,showScrollbar:I,value:o,multiSelect:c,onChange:S,placeholder:n,children:t,listClassName:E.list})})}"
+    }
+}

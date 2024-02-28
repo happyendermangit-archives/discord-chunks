@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "FocusJumpSection": "function u(e){let t=l();return e.children(t)}",
+        "useFocusJumpSection": "function l(){let e=i.useContext(E);return i.useMemo(()=>({[s]:e}),[e])}",
+        "useFocusJumpSectionManager": "function T(e){i.useEffect(()=>{if(e)return window.addEventListener(\"keydown\",I),()=>{window.removeEventListener(\"keydown\",I)}},[e])}"
+    }
+}

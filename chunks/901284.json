@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useCurrentUserGuildBadgeStatus": "function d(e){let t=(0,r.useIsMemberVerificationManualApproval)(e??u.EMPTY_STRING_GUILD_ID),n=(0,i.useStateFromStores)([o.default,s.default,a.default],()=>{let t=o.default.getRequest(e),n=s.default.getCurrentUser();if(null==n||null==t||t.userId!==n.id)return;let i=a.default.getMember(e,t.userId);if(!(null!=i&&!i.isPending)||(0,l.isActionedAndNotAcked)(t))return t.applicationStatus},[e]);return t?n:void 0}"
+    }
+}

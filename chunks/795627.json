@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useKeyboardNavigation": "e=>{let{columnCounts:t,stickersGrid:n,stickersListRef:o,store:u,gridNavigatorId:d,setInspectedStickerPosition:c,onGridItemSelect:f}=e,p=(0,s.useAnalyticsContext)(),m=i.useCallback(e=>{f(e,p)},[f,p]),h=i.useCallback((e,t)=>{c(e,t,l.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)},[c]),{gridDispatch:E,getItemProps:_,getRowProps:I,gridContainerProps:C,handleGridContainerKeyDown:y,isUsingKeyboardNavigation:S}=(0,r.useExpressionPickerGridKeyboardNavigation)({columnCounts:t,gridNavigatorId:d,itemGrid:n,itemList:o,onGridNavigatorItemSelect:m,onGridNavigatorPositionChange:h});return i.useEffect(()=>u.useStore.subscribe(e=>{if(null==e)return;let{columnIndex:t,rowIndex:n,source:i}=e;i!==l.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT&&E({type:a.GridActionType.SET_FOCUSED_POSITION,x:t,y:n})},e=>e.inspectedExpressionPosition),[E,u]),{getItemProps:_,getRowProps:I,gridContainerProps:C,handleGridContainerKeyDown:y,isUsingKeyboardNavigation:S}}"
+    }
+}

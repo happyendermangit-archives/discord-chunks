@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class S extends a.default{possiblyShowFeedbackModal(e,t){(function(e){if(__OVERLAY__)return!1;let t=I[e],n=t.eligibilityChecks??[];return[d,c,T].every(e=>e(t))&&n.every(e=>e(t))})(e)&&(null==this.feedbackTypeToShow||!(l.FeedbackTypePrecedence[this.feedbackTypeToShow]<l.FeedbackTypePrecedence[e]))&&(this.feedbackTypeToShow=e,this.showFeedbackModalDebounced(t))}constructor(...e){super(...e),this.feedbackTypeToShow=null,this.showFeedbackModalDebounced=r().debounce(e=>{null!=this.feedbackTypeToShow&&(!function(e){let t=I[e];null!=t.storageKey&&o.default.set(t.storageKey,Date.now())}(this.feedbackTypeToShow),this.feedbackTypeToShow=null,e())},200)}}"
+    }
+}

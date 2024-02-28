@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "closeUserProfileModal": "function u(){i.default.dispatch({type:\"USER_PROFILE_MODAL_CLOSE\"})}",
+        "openUserProfileModal": "function o(e){let{userId:t,section:n,guildId:o=r.ME,channelId:u,friendToken:d,autoFocusNote:c,analyticsLocation:f}=e,p=s.default.getUser(t),m=o!==r.ME?o:void 0;if(null==p)return(0,a.fetchProfile)(t,{friendToken:d,guildId:m}).then(()=>{i.default.dispatch({type:\"USER_PROFILE_MODAL_OPEN\",userId:t,section:n,guildId:o,channelId:u,friendToken:d,autoFocusNote:c,analyticsLocation:f})});(0,l.default)(t,p.getAvatarURL(void 0,80),{withMutualGuilds:!0,friendToken:d,guildId:m}),i.default.dispatch({type:\"USER_PROFILE_MODAL_OPEN\",userId:t,section:n,guildId:o,channelId:u,friendToken:d,autoFocusNote:c,analyticsLocation:f})}"
+    }
+}

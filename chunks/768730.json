@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "Cipher": "function(t,e){if(i[t=t.toLowerCase()])s=i[t].key,r=i[t].iv;else if(c[t])s=8*c[t].key,r=c[t].iv;else throw TypeError(\"invalid suite type\");var s,r,n=o(e,!1,s,r);return f(t,n.key,n.iv)}",
+        "createCipher": "function(t,e){if(i[t=t.toLowerCase()])s=i[t].key,r=i[t].iv;else if(c[t])s=8*c[t].key,r=c[t].iv;else throw TypeError(\"invalid suite type\");var s,r,n=o(e,!1,s,r);return f(t,n.key,n.iv)}",
+        "Cipheriv": "function f(t,e,s){if(i[t=t.toLowerCase()])return n.createCipheriv(t,e,s);if(c[t])return new r({key:e,iv:s,mode:t});throw TypeError(\"invalid suite type\")}",
+        "createCipheriv": "function f(t,e,s){if(i[t=t.toLowerCase()])return n.createCipheriv(t,e,s);if(c[t])return new r({key:e,iv:s,mode:t});throw TypeError(\"invalid suite type\")}",
+        "Decipher": "function(t,e){if(i[t=t.toLowerCase()])s=i[t].key,r=i[t].iv;else if(c[t])s=8*c[t].key,r=c[t].iv;else throw TypeError(\"invalid suite type\");var s,r,n=o(e,!1,s,r);return u(t,n.key,n.iv)}",
+        "createDecipher": "function(t,e){if(i[t=t.toLowerCase()])s=i[t].key,r=i[t].iv;else if(c[t])s=8*c[t].key,r=c[t].iv;else throw TypeError(\"invalid suite type\");var s,r,n=o(e,!1,s,r);return u(t,n.key,n.iv)}",
+        "Decipheriv": "function u(t,e,s){if(i[t=t.toLowerCase()])return n.createDecipheriv(t,e,s);if(c[t])return new r({key:e,iv:s,mode:t,decrypt:!0});throw TypeError(\"invalid suite type\")}",
+        "createDecipheriv": "function u(t,e,s){if(i[t=t.toLowerCase()])return n.createDecipheriv(t,e,s);if(c[t])return new r({key:e,iv:s,mode:t,decrypt:!0});throw TypeError(\"invalid suite type\")}",
+        "getCiphers": "function(){return Object.keys(c).concat(n.getCiphers())}",
+        "listCiphers": "function(){return Object.keys(c).concat(n.getCiphers())}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e,t){c.AlwaysPreviewVideo.getSetting()?(0,n.openModalLazy)(async()=>{let{default:t}=await a.el(\"685861@763:793\").then(a.bind(a,\"399900\"));return a=>(0,d.jsx)(t,{...a,onEnable:e,videoEnabled:!1})},{modalKey:\"camera-preview\",contextKey:t===i.AppContext.POPOUT?n.POPOUT_MODAL_CONTEXT:n.DEFAULT_MODAL_CONTEXT}):e?.()}"
+    }
+}

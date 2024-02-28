@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "discountOfferHasTier": "function d(e,t){return null!=e&&new Set(e.discount?.plan_ids.map(e=>l.SubscriptionPlanInfo[e].skuId)).has(t)}",
+        "usePremiumDiscountOffer": "function f(){let e=_(l.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID),t=_(l.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID);return e??t}"
+    }
+}

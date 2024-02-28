@@ -1,0 +1,26 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "function m(){L=a.default.get(O)??Date.now(),P(!1)}",
+                "CONNECTION_RESUMED": "function m(){L=a.default.get(O)??Date.now(),P(!1)}",
+                "CONNECTION_CLOSED": "function p(){clearTimeout(h),h=null}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "_initialize": "_initialize(){d.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({hasChanges:()=>!1,processProto:()=>{P(!0)}}),d.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({hasChanges:()=>I.default.hasPendingUsage()&&S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),processProto:e=>{if(!!I.default.hasPendingUsage())S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS)&&(e.stickerFrecency=o.StickerFrecency.create(),e.stickerFrecency.stickers=(0,A.serializeUsageHistory)(I.default.stickerFrecencyWithoutFetchingLatest.usageHistory,100))}}),d.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({hasChanges:()=>l.default.hasPendingUsage()&&S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),processProto:e=>{if(!!l.default.hasPendingUsage())S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS)&&(e.emojiFrecency=o.EmojiFrecency.create(),e.emojiFrecency.emojis=(0,A.serializeUsageHistory)(l.default.emojiFrecencyWithoutFetchingLatest.usageHistory,100))}}),d.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({hasChanges:()=>u.default.hasPendingUsage()&&S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),processProto:e=>{if(!!u.default.hasPendingUsage())S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS)&&!r().isEmpty(u.default.playedSoundHistory)&&(e.playedSoundFrecency=o.PlayedSoundFrecency.create(),e.playedSoundFrecency.playedSounds=(0,A.serializeUsageHistory)(u.default.playedSoundHistory,100))}}),d.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({hasChanges:()=>_.default.hasPendingUsage()&&S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),processProto:e=>{if(!!_.default.hasPendingUsage())S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS)&&(e.applicationCommandFrecency=o.ApplicationCommandFrecency.create(),e.applicationCommandFrecency.applicationCommands=(0,A.serializeUsageHistory)(_.default.getCommandFrecencyWithoutLoadingLatest().usageHistory,500))}}),d.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({hasChanges:()=>E.default.hasPendingUsage()&&S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),processProto:e=>{if(!!E.default.hasPendingUsage())S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS)&&(e.applicationFrecency=o.ApplicationFrecency.create(),e.applicationFrecency.applications=(0,A.serializeUsageHistory)(E.default.getApplicationFrecencyWithoutLoadingLatest().usageHistory,E.FREQUENCY_ITEM_LIMIT))}}),d.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({hasChanges:()=>T.default.hasPendingUsage()&&S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),processProto:e=>{if(!!T.default.hasPendingUsage())S.default.hasLoaded(N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS)&&(e.guildAndChannelFrecency=o.GuildAndChannelFrecency.create(),e.guildAndChannelFrecency.guildAndChannels=(0,A.serializeUsageHistory)(T.default.frecencyWithoutFetchingLatest.usageHistory,T.MAX_NUM_SELECTED_ITEMS))}})}"
+        }
+    }
+}

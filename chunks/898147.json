@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function m(e){let{hideBadges:t=!1,stream:n,...T}=e,c=(0,o.useStateFromStores)([I.default],()=>S.default.isPremium(I.default.getCurrentUser(),R.PremiumTypes.TIER_1)),d=(0,o.useStateFromStores)([u.default],()=>u.default.getChannel(n?.channelId)),h=r.useMemo(()=>null!=n?[n]:[],[n]),m=(0,s.useIsBroadcastingInChannel)(d?.id),p=r.useCallback(()=>{null!=d&&(0,l.default)(d.getGuildId(),d.id,O.AnalyticsSections.STREAM_SETTINGS)},[d]);if(null==n||null==d)return null;let f=L;return!t&&!c&&(f=D),(0,i.jsx)(a.Popout,{position:\"top\",renderPopout:e=>{let{closePopout:t}=e;return(0,i.jsx)(A.default,{children:m?(0,i.jsx)(_.default,{onClose:t}):(0,i.jsx)(E.default,{channel:d,currentUser:I.default.getCurrentUser(),activeStreams:h,onClose:t,showReportOption:!0,handleGoLive:p})})},animation:a.Popout.Animation.FADE,children:e=>(0,i.jsx)(N.default,{...e,label:C.default.Messages.STREAMER_SETTINGS_TITLE,iconComponent:f,...T})})}"
+    }
+}

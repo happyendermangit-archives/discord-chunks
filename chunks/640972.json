@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "canUseWebp": "function I(){return -1!==a||-1!==_||-1!==E||-1!==u}",
+        "getChromeVersion": "function s(){return a}",
+        "getFirefoxVersion": "function l(){return E}",
+        "supportsHEVCAlpha": "function T(){let e=window.navigator,t=e.userAgent.toLowerCase(),n=e.mediaCapabilities?.decodingInfo!=null;return -1!==t.indexOf(\"safari\")&&!(-1!==t.indexOf(\"chrome\"))&&-1!==t.indexOf(\"version/\")&&n}"
+    }
+}

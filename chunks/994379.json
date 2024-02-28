@@ -1,0 +1,26 @@
+{
+    "exports": {
+        "default": {
+            "order": 7,
+            "match": "(e,t)=>{if(!t.allowList||t._listLevel>=11)return null;let n=null==t.prevCapture?\"\":t.prevCapture[0],a=u.exec(n);return null==a||h.test(a[0])?null:_.exec(e)}",
+            "parse": "(e,t,n)=>{let a=e[2],i=a.length>1,r=e[0].replace(s,\"\\n\").match(f);l()(null!=r,\"markup list items can not be parsed.\");let u=!1;return{ordered:i,start:i?Math.min(1e9,Math.max(1,+a)):void 0,items:r.map((e,a)=>{let l;let i=c.exec(e),s=RegExp(\"^ {1,\"+(null!=i?i[0].length:0)+\"}\",\"gm\"),o=e.replace(s,\"\").replace(c,\"\"),d=a===r.length-1,f=-1!==o.indexOf(\"\\n\\n\")||d&&u;u=f;let _=n.inline,h=n._list,S=n._listLevel;n._list=!0,n._listLevel=(S??0)+1,f?(n.inline=!1,l=o.replace(E,\"\\n\\n\")):(n.inline=!0,l=o.replace(E,\"\"));let m=g(t(l,{...n,allowHeading:!1}));return n.inline=_,n._list=h,n._listLevel=S,m})}}",
+            "react": "function(e,t,n){return g(e.ordered?\"ol\":\"ul\",n.key,{start:e.start,children:e.items.map(function(e,r){return g(\"li\",\"\"+r,{children:t(e,n)})})})}",
+            "html": "function(e,t,n){var r=e.items.map(function(e){return b(\"li\",t(e,n))}).join(\"\");return b(e.ordered?\"ol\":\"ul\",r,{start:e.start})}",
+            "requiredFirstCharacters": [
+                " ",
+                "*",
+                "-",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ]
+        }
+    }
+}

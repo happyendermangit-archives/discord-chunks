@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function _(e){let t,{command:n,activeOptionName:s,channel:r,showOptions:u,showImage:d,optionStates:p,onOptionClick:h,section:_,isSelectable:I=!0}=e,C=a.useMemo(()=>n?.options?.find(e=>e.name===s),[s,n]),y=null!=s?p?.[s]:null;t=null!=y&&y.lastValidationResult?.success===!1?y.lastValidationResult.error??\"\":null;let S=d&&null!=_?(0,c.getIconComponent)(_):null;return(0,i.jsxs)(\"div\",{className:l()(m.wrapper,I?null:m.disabled),children:[null!=S?(0,i.jsx)(S,{className:m.image,channel:r,section:_,width:32,height:32}):null,(0,i.jsxs)(\"div\",{className:m.infoWrapper,children:[(0,i.jsxs)(\"div\",{className:m.usageWrapper,children:[(0,i.jsx)(o.AutocompleteRowHeading,{className:m.title,children:f.COMMAND_SENTINEL+n.displayName}),u?(0,i.jsx)(E,{command:n,optionStates:p,onOptionClick:h}):null]}),(0,i.jsx)(o.AutocompleteRowSubheading,{className:l()(m.description,null!=t?m.error:null),children:t??C?.displayDescription??n.displayDescription})]}),(0,i.jsx)(o.AutocompleteRowContentSecondary,{className:m.source,children:_?.name})]})}"
+    }
+}

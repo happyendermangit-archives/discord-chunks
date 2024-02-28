@@ -1,0 +1,16 @@
+{
+    "exports": {
+        "default": {
+            "setDesktopType": "setDesktopType(e){a.default.dispatch({type:\"NOTIFICATIONS_SET_DESKTOP_TYPE\",desktopType:e})}",
+            "setTTSType": "setTTSType(e){a.default.dispatch({type:\"NOTIFICATIONS_SET_TTS_TYPE\",ttsType:e})}",
+            "setDisabledSounds": "setDisabledSounds(e){a.default.dispatch({type:\"NOTIFICATIONS_SET_DISABLED_SOUNDS\",sounds:e})}",
+            "toggleDisableAllSounds": "toggleDisableAllSounds(){a.default.dispatch({type:\"NOTIFICATIONS_TOGGLE_ALL_DISABLED\"})}",
+            "setDisableUnreadBadge": "setDisableUnreadBadge(e){a.default.dispatch({type:\"NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE\",disableUnreadBadge:e})}",
+            "setTaskbarFlash": "setTaskbarFlash(e){a.default.dispatch({type:\"NOTIFICATIONS_SET_TASKBAR_FLASH\",taskbarFlash:e})}",
+            "setNotifyMessagesInSelectedChannel": "setNotifyMessagesInSelectedChannel(e){a.default.dispatch({type:\"NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL\",notify:e})}",
+            "setPermissionsState": "setPermissionsState(e,t){a.default.dispatch({type:\"NOTIFICATIONS_SET_PERMISSION_STATE\",enabled:e,source:t})}",
+            "showNotification": "showNotification(e,t,n,r){let i=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};a.default.dispatch({type:\"NOTIFICATION_CREATE\",icon:e,title:t,body:n,trackingProps:r,options:{...i,onClick(){i.onClick?.(),a.default.dispatch({type:\"NOTIFICATION_CLICK\"})}}})}",
+            "clickedNotification": "clickedNotification(){a.default.dispatch({type:\"NOTIFICATION_CLICK\"})}"
+        }
+    }
+}

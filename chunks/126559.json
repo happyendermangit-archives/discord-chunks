@@ -1,0 +1,17 @@
+{
+    "exports": {
+        "CONSECUTIVE_HEARTBEAT_PERIOD_MS": 120000,
+        "DismissibleQuestContentFlags": {
+            "0": 1,
+            "1": 2,
+            "4": 4,
+            "5": 8
+        },
+        "QuestsExperimentLocations": {
+            "ACTIVITY_PANEL": "quests_bar_activity_panel",
+            "QUESTS_MANAGER": "quests_manager",
+            "USER_SETTINGS_GIFT_INVENTORY": "user_settings_gift_inventory",
+            "USE_QUESTS": "use_quests"
+        }
+    }
+}

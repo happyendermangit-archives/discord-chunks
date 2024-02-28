@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "default": {
+            "type": {
+                "render": "function(e,t){let{emojiListRef:n,gridNavigatorId:s,isFullRow:E,onKeyDown:_,onFocus:I,autoFocus:C,className:y,defaultSearchPlaceholder:S}=e,g=a.useRef(null),x=(0,c.useExpressionPickerStore)(e=>e.searchQuery),[T,A]=d.EmojiPickerStore.useStore(e=>[e.inspectedExpressionPosition,e.searchPlaceholder],r.default),N=a.useCallback(e=>{d.EmojiPickerStore.setActiveCategoryIndex(\"\"===e?0:f.INACTIVE_CATEGORY_INDEX),d.EmojiPickerStore.setInspectedExpressionPosition(0,0),d.EmojiPickerStore.setSearchPlaceholder(null),(0,c.setSearchQuery)(e),n.current?.scrollTo(0)},[n]),O=a.useCallback(()=>{(0,c.setSearchQuery)(\"\")},[]);return a.useImperativeHandle(t,()=>({focus:()=>g.current?.focus()})),(0,i.jsx)(u.default,{autoFocus:C,query:x,ref:g,size:u.default.Sizes.MEDIUM,placeholder:A??S,onClear:O,onKeyDown:e=>{switch(e.keyCode){case p.KeyboardKeys.ARROW_LEFT:case p.KeyboardKeys.ARROW_RIGHT:case p.KeyboardKeys.ARROW_UP:case p.KeyboardKeys.ARROW_DOWN:document.activeElement!==e.target&&e.preventDefault()}_(e)},onFocus:I,onQueryChange:N,className:l()(y,{[h.searchBarFullRow]:E}),preventEscapePropagation:!1,useKeyboardNavigation:!1,inputProps:{\"aria-label\":m.default.Messages.SEARCH_EMOJIS,\"aria-haspopup\":\"grid\",\"aria-controls\":s,\"aria-expanded\":!0,\"aria-activedescendant\":(0,o.makeGridId)(s,T.columnIndex,T.rowIndex)}})}"
+            },
+            "compare": null
+        }
+    }
+}

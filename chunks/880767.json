@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "encrypt": "function(t,e,s){for(var n=e.length,i=r.allocUnsafe(n),c=-1;++c<n;)i[c]=function(t,e,s){for(var n,i,c,o=-1,f=0;++o<8;)n=t._cipher.encryptBlock(t._prev),i=e&1<<7-o?128:0,f+=(128&(c=n[0]^i))>>o%8,t._prev=function(t,e){var s=t.length,n=-1,i=r.allocUnsafe(t.length);for(t=r.concat([t,r.from([e])]);++n<s;)i[n]=t[n]<<1|t[n+1]>>7;return i}(t._prev,s?i:c);return f}(t,e[c],s);return i}"
+    }
+}

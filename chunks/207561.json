@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "useForceUpdate": "function n(){let[,t]=(0,r.useState)({});return(0,r.useCallback)(()=>t({}),[])}",
+        "useLazyValue": "function i(t){let e=(0,r.useRef)(n);return e.current===n&&(e.current=t()),e.current}",
+        "useStableMemo": "function c(t,e){let s=(0,r.useRef)(),c=(0,r.useRef)(i);return c.current===i?(s.current=t(),c.current=e):!(0,n.default)(e,c.current)&&(s.current=t(),c.current=e),s.current}"
+    }
+}

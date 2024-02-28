@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function T(e){let{icon:t,isSelected:n,disabled:a,tabIndex:s,onSelect:l}=e;return(0,i.jsx)(Selection,{onSelect:a?void 0:l,isSelected:n,id:t.id,className:a?_.disabled:void 0,tabIndex:s,children:(0,i.jsx)(f.default,{id:t.id,width:m.CUSTOM_BASE_SIZE})})}"
-    }
-}

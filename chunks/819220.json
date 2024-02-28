@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getVerifiedName": "function l(e){return(0,a.default)(e).author}"
-    }
-}

@@ -1,0 +1,5 @@
+{
+    "exports": "function(e){if(null===e||!o(e))return e;if(\"function\"!=typeof e)throw TypeError(\"Super expression must either be null or a function\");if(void 0!==n){if(n.has(e))return n.get(e);n.set(e,t)}function t(){return i(e,arguments,r(this).constructor)}return t.prototype=Object.create(e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),a(t,e)}",
+    "paths": [],
+    "children": []
+}

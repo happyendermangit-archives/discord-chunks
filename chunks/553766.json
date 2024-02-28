@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "transitionToChannel": "function l(e,t,n){let s=o.default.getChannel(e);if(null==s)return;let i=(0,a.getGuildIdForGenericRedirect)(s);r.default.preload(s.guild_id,s.id),(0,u.transitionTo)(d.Routes.CHANNEL(i,s.id),t,n)}",
+        "transitionToMessage": "function c(e,t,n,s){let i=o.default.getChannel(e);if(null==i)return;let r=(0,a.getGuildIdForGenericRedirect)(i);(0,u.transitionTo)(d.Routes.CHANNEL(r,i.id,t),n,s)}",
+        "transitionToThread": "function f(e,t,n){i()(null!=e.parent_id,\"Thread must have a parent ID.\");let s=(0,a.getGuildIdForGenericRedirect)(e);(0,u.transitionTo)(d.Routes.CHANNEL(s,e.id),n,t)}",
+        "transitionToThreadMessage": "function _(e,t,n,s){i()(null!=e.parent_id,\"Thread must have a parent ID.\");let r=(0,a.getGuildIdForGenericRedirect)(e);(0,u.transitionTo)(d.Routes.CHANNEL(r,e.id,t),s,n)}"
+    }
+}

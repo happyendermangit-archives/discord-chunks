@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useMonitorOutput": "function i(e,t,n){var i,u,s=(u=2,function(e){if(Array.isArray(e))return e}(i=(0,a.useCollector)(e,t,n))||function(e,t){var n,r,a=null==e?null:\"undefined\"!=typeof Symbol&&e[Symbol.iterator]||e[\"@@iterator\"];if(null!=a){var o=[],i=!0,u=!1;try{for(a=a.call(e);!(i=(n=a.next()).done)&&(o.push(n.value),!t||o.length!==t);i=!0);}catch(e){u=!0,r=e}finally{try{!i&&null!=a.return&&a.return()}finally{if(u)throw r}}return o}}(i,u)||function(e,t){if(e){if(\"string\"==typeof e)return o(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);if(\"Object\"===n&&e.constructor&&(n=e.constructor.name),\"Map\"===n||\"Set\"===n)return Array.from(e);if(\"Arguments\"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return o(e,t)}}(i,u)||function(){throw TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\")}()),l=s[0],c=s[1];return(0,r.useIsomorphicLayoutEffect)(function(){var t=e.getHandlerId();if(null!=t)return e.subscribeToStateChange(c,{handlerIds:[t]})},[e,c]),l}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function _(e){return{react(t,a,_){let I=_.noStyleAndInteraction?void 0:async n=>{let i=await (0,c.maybeRefreshAttachmentUrl)(t.attachmentUrl);e.shouldStopPropagation&&n?.stopPropagation(),d.default.trackLinkClicked(i),e.shouldCloseDefaultModals&&(0,r.closeAllModals)(),(0,u.default)(i)},C=_.noStyleAndInteraction?m.NOOP:e=>{(0,o.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"713282@1771:1842\").then(n.bind(n,\"530049\"));return n=>(0,i.jsx)(e,{...n,attachmentUrl:t.attachmentUrl,attachmentName:t.attachmentName})})};return(0,i.jsxs)(f.default,{role:\"link\",href:t.attachmentUrl,onClick:I,onContextMenu:C,className:\"attachmentLink\",children:[(0,i.jsx)(l.AttachmentIcon,{className:s()(E.icon,h.icon),color:r.tokens.colors.MENTION_FOREGROUND,width:16,height:16}),(0,p.smartOutput)(t,a,_)]},_.key)}}}"
+    }
+}

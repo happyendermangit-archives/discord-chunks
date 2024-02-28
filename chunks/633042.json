@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "ApplicationBenefitsModalBenefits": "e=>{let{applicationId:t,storeListingBenefits:n,skuBenefits:a,className:l,...r}=e;return(0,i.jsx)(\"div\",{className:s()(u.benefitsContainer,l),...r,children:(0,i.jsx)(o.SubscriptionListingBenefits,{applicationId:t,storeListingBenefits:n,skuBenefits:a,className:u.benefit})})}",
+        "ApplicationBenefitsModalContent": "e=>{let{children:t,className:n,...a}=e;return(0,i.jsx)(\"div\",{className:s()(u.container,n),...a,children:t})}",
+        "ApplicationBenefitsModalDescription": "e=>{let{className:t,title:n,description:a,...s}=e;return(0,i.jsxs)(\"div\",{className:t,...s,children:[(0,i.jsx)(l.Heading,{variant:\"heading-md/bold\",color:\"header-primary\",children:n}),(0,i.jsx)(l.Heading,{variant:\"heading-sm/normal\",color:\"header-secondary\",children:a})]})}",
+        "ApplicationBenefitsModalDivider": "function f(){return(0,i.jsx)(\"hr\",{className:u.divider})}",
+        "ApplicationBenefitsModalHeading": "e=>{let{children:t,className:n,id:a,...r}=e;return(0,i.jsx)(l.Heading,{className:s()(u.header,n),variant:\"heading-xl/extrabold\",id:a,...r,children:t})}",
+        "ApplicationBenefitsModalIcon": "e=>{let{application:t,asset:n,className:a,...s}=e;return(0,i.jsx)(r.default,{application:t,size:r.ApplicationIconSize.MEDIUM,asset:n,className:a,...s})}"
+    }
+}

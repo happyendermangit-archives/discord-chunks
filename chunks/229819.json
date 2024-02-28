@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "CategoryColumn": "e=>{let{columns:t}=e;return(0,s.jsx)(\"div\",{className:o.column,style:{width:`${100/t}%`},children:[,,,,].fill(null).map((e,t)=>(0,s.jsx)(\"div\",{className:o.categoryLoader},t))})}",
+        "ResultsLoader": "class m extends n.PureComponent{render(){let{columns:e,renderColumn:t}=this.props;return(0,s.jsx)(\"div\",{className:o.container,children:Array(e).fill(null).map((r,s)=>t(e,s))})}}"
+    }
+}

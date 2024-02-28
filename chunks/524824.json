@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "LoginHandoffSource": {
-            "ROLE_SUBSCRIPTION": "role_subscription",
-            "ROLE_SUBSCRIPTION_SETTING": "role_subscription_setting"
-        },
-        "getLoginHandoffSourceFromRedirectTo": "function o(e){let t=decodeURIComponent(e),n=(0,r.tryParseChannelPath)(t);return null!=n&&n.channelId===i.StaticChannelRoute.ROLE_SUBSCRIPTIONS?\"role_subscription\":t===l.Routes.SETTINGS(l.UserSettingsSections.SUBSCRIPTIONS,\"role-subscriptions\")?\"role_subscription_setting\":void 0}"
-    }
-}

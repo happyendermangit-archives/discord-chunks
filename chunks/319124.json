@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "ObjectStorage": "class r{constructor(){this.storage={}}get(e,t){return this.storage.hasOwnProperty(e)?this.storage[e]:t}set(e,t){this.storage[e]=t}remove(e){delete this.storage[e]}clear(){this.storage={}}stringify(){return JSON.stringify(this.storage)}asyncGetRaw(e,t){return Promise.resolve(i.getItem(e))}setRaw(e,t){i.setItem(e,t)}getAfterRefresh(e){return Promise.resolve(this.get(e))}}",
+        "impl": {
+            "get": "get(e,t){let n=i.getItem(e);if(null!=n)try{n=JSON.parse(n)}catch(e){n=t}else n=t;return n}",
+            "set": "set(e,t){i.setItem(e,JSON.stringify(t))}",
+            "remove": "remove(e){i.removeItem(e)}",
+            "clear": "clear(){i.clear()}",
+            "stringify": "stringify(){return JSON.stringify(i||{})}",
+            "asyncGetRaw": "asyncGetRaw(e,t){return Promise.resolve(i.getItem(e))}",
+            "setRaw": "setRaw(e,t){i.setItem(e,t)}",
+            "getAfterRefresh": "getAfterRefresh(e){return Promise.resolve(this.get(e))}"
+        }
+    }
+}

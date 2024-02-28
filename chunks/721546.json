@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "KvMessage": "class r{static fromMessage(e,t,n,a){let[l,i]=r.deriveMemberUsers(e,n);return{id:n.id,channelId:t,message:n,members:l,users:i,connectionId:a}}static deriveMemberUsers(e,t){let n=new Set([t.author?.id,t.interaction?.user.id,...t.mentions?.map(e=>e.id)??[]]),r=[],s=[];for(let t of n){if(null==t)continue;let n=l.default.getUser(t),u=a.default.getTrueMember(e??i.EMPTY_STRING_GUILD_ID,t);null!=n&&s.push(n),null!=u&&r.push(u)}return[r,s]}}"
+    }
+}

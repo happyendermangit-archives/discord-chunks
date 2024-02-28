@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,i,l,g,v){\"function\"==typeof g&&(v=g,g=void 0);var x=d[(g=g||\"sha1\").toLowerCase()];if(!x||\"function\"!=typeof s.g.Promise){b()(function(){var s;try{s=f(t,e,i,l,g)}catch(t){return v(t)}v(null,s)});return}if(c(i,l),t=u(t,o,\"Password\"),e=u(e,o,\"Salt\"),\"function\"!=typeof v)throw Error(\"No callback provided to pbkdf2\");!function(t,e){t.then(function(t){b()(function(){e(null,t)})},function(t){b()(function(){e(t)})})}((function(t){if(s.g.process&&!s.g.process.browser||!a||!a.importKey||!a.deriveBits)return Promise.resolve(!1);if(void 0!==p[t])return p[t];var e=h(r=r||n.alloc(8),r,10,128,t).then(function(){return!0}).catch(function(){return!1});return p[t]=e,e})(x).then(function(s){return s?h(t,e,i,l,x):f(t,e,i,l,g)}),v)}"
-}

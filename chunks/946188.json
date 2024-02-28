@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "default": {
+            "base": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.2/assets/",
+            "ext": ".png",
+            "size": "72x72",
+            "className": "emoji",
+            "convert": {
+                "fromCodePoint": "function(t){var e=\"string\"==typeof t?parseInt(t,16):t;return e<65536?o(e):o(55296+((e-=65536)>>10),56320+(1023&e))}",
+                "toCodePoint": "function h(t,e){for(var s=[],r=0,n=0,i=0;i<t.length;)r=t.charCodeAt(i++),n?(s.push((65536+(n-55296<<10)+(r-56320)).toString(16)),n=0):55296<=r&&r<=56319?n=r:s.push(r.toString(16));return s.join(e||\"-\")}"
+            },
+            "onerror": "function(){this.parentNode&&this.parentNode.replaceChild(f(this.alt,!1),this)}",
+            "parse": "function(e,r){var n;return(!r||\"function\"==typeof r)&&(r={callback:r}),(\"string\"==typeof e?function(t,e){return b(t,function(t){var s,r,n=t,c=a(t),o=e.callback(c,e);if(c&&o){for(r in n=\"<img \".concat('class=\"',e.className,'\" ','draggable=\"false\" ','alt=\"',t,'\"',' src=\"',o,'\"'),s=e.attributes(t,c))if(s.hasOwnProperty(r)&&0!==r.indexOf(\"on\")&&-1===n.indexOf(\" \"+r+\"=\"))n=n.concat(\" \",r,'=\"',s[r].replace(i,d),'\"');n=n.concat(\"/>\")}return n})}:function(t,e){for(var r,n,i,o,u,d,p,b,h,l,g,v,x,m=function t(e,s){for(var r,n,i=e.childNodes,o=i.length;o--;)3===(n=(r=i[o]).nodeType)?s.push(r):1===n&&!(\"ownerSVGElement\"in r)&&!c.test(r.nodeName.toLowerCase())&&t(r,s);return s}(t,[]),y=m.length;y--;){for(i=!1,o=document.createDocumentFragment(),d=(u=m[y]).nodeValue,b=0;p=s.exec(d);){if((h=p.index)!==b&&o.appendChild(f(d.slice(b,h),!0)),v=a(g=p[0]),b=h+g.length,x=e.callback(v,e),v&&x){for(n in(l=new Image).onerror=e.onerror,l.setAttribute(\"draggable\",\"false\"),r=e.attributes(g,v))r.hasOwnProperty(n)&&0!==n.indexOf(\"on\")&&!l.hasAttribute(n)&&l.setAttribute(n,r[n]);l.className=e.className,l.alt=g,l.src=x,i=!0,o.appendChild(l)}!l&&o.appendChild(f(g,!1)),l=null}i&&(b<d.length&&o.appendChild(f(d.slice(b),!0)),u.parentNode.replaceChild(o,u))}return t})(e,{callback:r.callback||u,attributes:\"function\"==typeof r.attributes?r.attributes:p,base:\"string\"==typeof r.base?r.base:t.base,ext:r.ext||t.ext,size:r.folder||(\"number\"==typeof(n=r.size||t.size)?n+\"x\"+n:n),className:r.className||t.className,onerror:r.onerror||t.onerror})}",
+            "replace": "function b(t,e){return String(t).replace(s,e)}",
+            "test": "function(t){s.lastIndex=0;var e=s.test(t);return s.lastIndex=0,e}"
+        }
+    }
+}

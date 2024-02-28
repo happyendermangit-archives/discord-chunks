@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function _(e){let{deviceId:t,width:n,height:_,disabled:E}=e,[l,u]=r.useState();return r.useEffect(()=>{let e=s({deviceId:t,width:n,height:_,disabled:E}).then(e=>{let t=null!=e?(0,o.registerVideoStream)(e):null;return u(t),{stream:e,streamId:t}});return()=>{e.then(e=>{var t;let{stream:n,streamId:i}=e;null!=(t=n)&&t.getTracks().forEach(e=>e.stop()),null!=i&&(0,o.unregisterVideoStream)(i)})}},[t,n,_,E]),null==l?(0,i.jsx)(\"div\",{className:\"media-engine-video\",style:{width:n,height:_}}):(0,i.jsx)(a.default,{streamId:l,style:{width:n,height:_}})}"
+    }
+}

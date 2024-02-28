@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "CHANNEL_PRELOAD": "handleChannelPreload(e){let{channelId:t}=e;if((0,_.isStaticChannelRoute)(t))return;let n=o.default.getChannel(t);null!=n&&n.isForumLikeChannel()&&(function(e){let t=[],n=e.defaultReactionEmoji;return n?.emojiId!=null?t.push(a.default.getEmojiURL({id:n.emojiId,animated:r.default.getUsableCustomEmojiById(n.emojiId)?.animated??!1,size:E.EMOJI_SIZE_MAP.reaction})):n?.emojiName!=null&&t.push(s.default.getURL(n.emojiName)),e.availableTags.forEach(e=>{null!=e.emojiId?t.push(a.default.getEmojiURL({id:e.emojiId,animated:!1,size:E.EMOJI_SIZE_MAP.reaction})):null!=e.emojiName&&t.push(s.default.getURL(e.emojiName))}),t})(n).forEach(e=>{if(null!=e&&0!==e.length){var t;t=e,new Promise(e=>{let n=i=>{let{data:{url:r}}=i;l?.removeEventListener(\"message\",n),t===r&&e()};l?.addEventListener(\"message\",n),l?.postMessage({url:t})})}})}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleChannelPreload": "handleChannelPreload(e){let{channelId:t}=e;if((0,_.isStaticChannelRoute)(t))return;let n=o.default.getChannel(t);null!=n&&n.isForumLikeChannel()&&(function(e){let t=[],n=e.defaultReactionEmoji;return n?.emojiId!=null?t.push(a.default.getEmojiURL({id:n.emojiId,animated:r.default.getUsableCustomEmojiById(n.emojiId)?.animated??!1,size:E.EMOJI_SIZE_MAP.reaction})):n?.emojiName!=null&&t.push(s.default.getURL(n.emojiName)),e.availableTags.forEach(e=>{null!=e.emojiId?t.push(a.default.getEmojiURL({id:e.emojiId,animated:!1,size:E.EMOJI_SIZE_MAP.reaction})):null!=e.emojiName&&t.push(s.default.getURL(e.emojiName))}),t})(n).forEach(e=>{if(null!=e&&0!==e.length){var t;t=e,new Promise(e=>{let n=i=>{let{data:{url:r}}=i;l?.removeEventListener(\"message\",n),t===r&&e()};l?.addEventListener(\"message\",n),l?.postMessage({url:t})})}})}"
+        }
+    }
+}

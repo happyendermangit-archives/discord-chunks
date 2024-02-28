@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "InviteTypes": {
+            "0": "GUILD",
+            "1": "GROUP_DM",
+            "2": "FRIEND",
+            "GUILD": 0,
+            "GROUP_DM": 1,
+            "FRIEND": 2
+        },
+        "getInviteType": "function f(e){var t,n;if(\"number\"==typeof e.type)return e.type;if((t=e).type===r.InviteTypes.GROUP_DM||null!=t.channel&&(0,i.isMultiUserDM)(t.channel.type))return r.InviteTypes.GROUP_DM;return(n=e).type===r.InviteTypes.FRIEND||null==n.guild&&null!=n.inviter?r.InviteTypes.FRIEND:r.InviteTypes.GUILD}",
+        "isEmbeddedApplicationInvite": "function l(e){return e.target_type===r.InviteTargetTypes.EMBEDDED_APPLICATION}",
+        "isGuildScheduledEventInviteEmbed": "function a(e){let t=e.guild_scheduled_event;return null!=t&&(0,s.isEventUpcoming)(t)}",
+        "isRoleSubscriptionInvite": "function o(e){return e.target_type===r.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE}",
+        "isStageInviteEmbed": "function u(e){return null!=e.channel&&null!=e.stage_instance}",
+        "isStreamInvite": "function d(e){return e.target_type===r.InviteTargetTypes.STREAM&&null!=e.target_user}"
+    }
+}

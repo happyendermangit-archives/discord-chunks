@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "MAX_THUMBNAIL_COUNT": 4,
+        "getEmbedPreviewImageUrl": "function r(e){if(null==e)return;let{thumbnail:t,image:n}=e;return null!=t?t.proxy_url??t.url:null!=n?n.proxy_url??n.url:void 0}",
+        "getThumbnailImage": "function a(e){if(null==e)return;let{url:t,proxy_url:n}=e;return null!=t&&null!=n?(0,s.isVideoUrl)(t)?`${n}?format=jpeg`:n:t}"
+    }
+}

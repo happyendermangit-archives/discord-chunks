@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "Spinner": "function I(e){let{type:t=\"wanderingCubes\",animated:n=!0,className:i,itemClassName:r,\"aria-label\":s,...I}=e,{reducedMotion:T}=a.useContext(E.AccessibilityPreferencesContext),c=T.enabled?function(e){switch(e){case\"wanderingCubes\":case\"chasingDots\":return\"lowMotion\";default:return e}}(t):t;if(s=s??l.default.Messages.LOADING,\"spinningCircle\"===c||\"spinningCircleSimple\"===c)return(0,o.jsx)(\"div\",{className:_()(u.spinner,u[c],i,{[u.stopAnimation]:!n}),role:\"img\",\"aria-label\":s,...I,children:(0,o.jsx)(\"div\",{className:u.spinningCircleInner,children:(0,o.jsxs)(\"svg\",{className:u.circular,viewBox:\"25 25 50 50\",children:[\"spinningCircle\"===c&&(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(\"circle\",{className:_()(u.path,u.path3,r),cx:\"50\",cy:\"50\",r:\"20\"}),(0,o.jsx)(\"circle\",{className:_()(u.path,u.path2,r),cx:\"50\",cy:\"50\",r:\"20\"})]}),(0,o.jsx)(\"circle\",{className:_()(u.path,r),cx:\"50\",cy:\"50\",r:\"20\"})]})})});let d=_()(u.item,r);return(0,o.jsx)(\"span\",{className:_()(u.spinner,i,{[u.stopAnimation]:!n}),role:\"img\",\"aria-label\":s,...I,children:(0,o.jsxs)(\"span\",{className:_()(u.inner,u[c]),children:[(0,o.jsx)(\"span\",{className:d}),(0,o.jsx)(\"span\",{className:d}),\"pulsingEllipsis\"===c||\"lowMotion\"===c?(0,o.jsx)(\"span\",{className:d}):null]})})}",
+        "SpinnerTypes": {
+            "WANDERING_CUBES": "wanderingCubes",
+            "CHASING_DOTS": "chasingDots",
+            "PULSING_ELLIPSIS": "pulsingEllipsis",
+            "SPINNING_CIRCLE": "spinningCircle",
+            "SPINNING_CIRCLE_SIMPLE": "spinningCircleSimple",
+            "LOW_MOTION": "lowMotion"
+        }
+    }
+}

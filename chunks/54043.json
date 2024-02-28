@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "OverlayStoredSettings": "class s{static #e=this._loaded=null;constructor(e,t){this.enabled=e,this.methodOverride=t}static get enabled(){return s.load().enabled}static get methodOverride(){return s.load().methodOverride}static update(e){let t=s.load();\"boolean\"==typeof e.enabled&&(t.enabled=e.enabled),\"methodOverride\"in e&&(t.methodOverride=e.methodOverride),t.save()}save(){let e={enabled:this.enabled,methodOverride:this.methodOverride};o.default.set(\"OverlayStore3\",e)}static load(){return null==s._loaded&&(s._loaded=s.loadInternal()),s._loaded}static loadInternal(){let e=void 0,t=o.default.get(\"OverlayStore\");if(null!=t){let n=new s(\"boolean\"==typeof t.enabled?t.enabled:a.OVERLAY_SUPPORTED,e);return n.save(),o.default.remove(\"OverlayStore\"),n}let n=o.default.get(\"overlayEnabled\");if(null!=n){let t=new s(\"boolean\"==typeof n?n:a.OVERLAY_SUPPORTED,e);return t.save(),o.default.remove(\"overlayEnabled\"),t}let i=o.default.get(\"OverlayStore3\");if(null!=i)return new s(i.enabled??a.OVERLAY_SUPPORTED,i.methodOverride??e);let r=new s(a.OVERLAY_SUPPORTED,e);return r.save(),r}}"
+    }
+}

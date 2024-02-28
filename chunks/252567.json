@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "canReviewGuildMemberApplications": "function _(e){let t=r.default.getGuild(e);return null!=t&&(0,d.isMemberVerificationManualApproval)(e)&&a.default.can(f.Permissions.KICK_MEMBERS,t)}",
+        "useCanReviewGuildMemberApplications": "function c(e){let t=(0,d.useIsMemberVerificationManualApproval)(e),n=(0,i.useStateFromStores)([r.default],()=>r.default.getGuild(e)),_=null!=n&&t&&a.default.can(f.Permissions.KICK_MEMBERS,n)&&n.hasVerificationGate(),c=(0,i.useStateFromStores)([u.default],()=>u.default.get(e),[e]);s.useEffect(()=>{_&&o.default.fetchVerificationForm(e)},[_,e]);let g=s.useMemo(()=>(c?.formFields??[]).some(e=>!(0,l.isTermsFormField)(e)),[c?.formFields]);return _&&g}"
+    }
+}

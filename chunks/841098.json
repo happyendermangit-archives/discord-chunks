@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useTheme": "function r(){let{theme:e}=(0,i.useThemeContext)();return e}",
-        "default": "function r(){let{theme:e}=(0,i.useThemeContext)();return e}"
-    }
-}

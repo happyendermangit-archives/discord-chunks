@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "supportsHistory": "function a(){let t=i.chrome,e=t&&t.app&&t.app.runtime,n=\"history\"in i&&!!i.history.pushState&&!!i.history.replaceState;return!e&&n}"
-    }
-}

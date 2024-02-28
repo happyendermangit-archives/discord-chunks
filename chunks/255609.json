@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{emojis:t}=e,{analyticsLocations:n}=(0,s.default)();a.useEffect(()=>{o.default.track(u.AnalyticEvents.PREMIUM_UPSELL_VIEWED,{type:d.PremiumUpsellTypes.EMOJI_AUTOCOMPLETE_INLINE,location_stack:n})},[n]);let p=(0,i.jsx)(\"div\",{className:f.emojis,children:t.slice(0,3).map((e,t)=>{if(\"\"===e.url)return null;let n=(0,i.jsx)(\"div\",{className:f.emojiBackground,children:(0,i.jsx)(\"img\",{alt:e.name,className:f.emoji,src:e.url})},e.id);return 2===t?n:(0,i.jsx)(r.default,{className:f.emojiMask,mask:r.default.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI,children:n},e.id)})});return(0,i.jsxs)(l.AutocompleteRowContent,{className:f.upsell,children:[(0,i.jsx)(l.AutocompleteRowContentPrimary,{children:(0,i.jsx)(l.AutocompleteRowHeading,{children:c.default.Messages.AUTOCOMPLETE_EMOJI_UPSELL.format({count:t.length})})}),(0,i.jsx)(l.AutocompleteRowContentSecondary,{children:p})]})}"
+    }
+}

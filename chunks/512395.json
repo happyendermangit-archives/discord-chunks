@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "useOptInEnabledForGuild": "function u(e){let t=(0,s.useStateFromStores)([a.default],()=>a.default.isOptInEnabled(e)),n=(0,s.useStateFromStores)([i.default],()=>i.default.getGuild(e)),r=(0,s.useStateFromStores)([o.default],()=>o.default.getCurrentUser());return null!=e&&null!=n&&null!=r&&(n.hasFeature(d.GuildFeatures.COMMUNITY)||r.isStaff())&&t}",
-        "isOptInEnabledForGuild": "function l(e){let t=i.default.getGuild(e),n=o.default.getCurrentUser();return null!=e&&null!=t&&null!=n&&(t.hasFeature(d.GuildFeatures.COMMUNITY)||n.isStaff())&&a.default.isOptInEnabled(e)}",
-        "useShouldShowOnboardingAdminUpsellForGuild": "function f(e){let t=(0,s.useStateFromStores)([i.default],()=>i.default.getGuild(e)),{canManageGuild:n,canManageRoles:a}=(0,s.useStateFromStoresObject)([r.default],()=>({canManageGuild:r.default.can(d.Permissions.MANAGE_GUILD,t),canManageRoles:r.default.can(d.Permissions.MANAGE_ROLES,t)}));if(null==t)return!1;let o=t.hasFeature(d.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);return n&&a&&!o}"
-    }
-}

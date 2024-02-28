@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "queue": [],
-            "enqueue": "enqueue(t){this.queue.push(t)}",
-            "flush": "flush(){for(;this.queue.length>0;){var t;null===(t=this.queue.shift())||void 0===t||t()}}"
-        }
-    }
-}

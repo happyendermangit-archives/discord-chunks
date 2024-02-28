@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "getForumChannelSessionId": "getForumChannelSessionId(e){return null==this.session&&(this.session=l(e)),this.session.channelId!==e&&(this.session=l(e)),this.session.sessionId}"
+        }
+    }
+}

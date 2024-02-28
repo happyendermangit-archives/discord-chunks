@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e,t){if(e.score!==t.score)return t.score-e.score;let n=i(e.record),a=i(t.record);if(n!==a)return n-a;let l=e.sortable??e.comparator?.toLocaleLowerCase()??\"\",r=e.sortable??t.comparator?.toLocaleLowerCase()??\"\";return l<r?-1:l>r?1:0}"
+    }
+}

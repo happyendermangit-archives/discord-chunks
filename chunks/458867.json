@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "async function s(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];await (0,a.openModalLazy)(async()=>{let{default:a}=await n.el(\"458867@364:387\").then(n.bind(n,\"727149\"));return n=>(0,i.jsx)(a,{source:e,oneClickFlow:t,...n})})}"
+    }
+}

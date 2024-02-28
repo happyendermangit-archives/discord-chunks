@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e){let{children:t,\"aria-label\":s,className:u,position:o}=e,h=i.useRef(null),d=s??(\"string\"==typeof t&&t);return(0,l.jsx)(r.Tooltip,{position:o??\"top\",delay:500,text:t,\"aria-label\":d,children:s=>{let{onMouseEnter:i,onMouseLeave:r}=s;return(0,l.jsx)(\"div\",{className:n()(u,a.overflow),ref:h,\"aria-hidden\":e[\"aria-hidden\"],onMouseEnter:()=>{let{current:e}=h;null!=e&&e.offsetWidth<e.scrollWidth&&i?.()},onMouseLeave:r,children:t})}})}"
+    }
+}

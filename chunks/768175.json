@@ -1,3 +1,3 @@
 {
-    "exports": "/assets/dc60ba39daf4efb8b0c3.svg"
+    "exports": "function(){if(r)try{return r({},\"a\",{value:1}),!0}catch(e){}return!1}"
 }

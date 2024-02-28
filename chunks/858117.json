@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"Upadati \".concat(e.fieldLabel)",
-            "increase": "e=>\"Povečajte \".concat(e.fieldLabel)",
-            "numberField": "Številčno polje"
-        }
-    }
-}

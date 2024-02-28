@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(){return(0,l.jsxs)(\"div\",{className:o.container,children:[(0,l.jsxs)(\"div\",{className:o.iconContainer,children:[(0,l.jsx)(\"div\",{className:o.icon,children:(0,l.jsx)(s.default,{className:o.iconOffset,width:28,height:28})}),(0,l.jsx)(a.default,{className:o.stars})]}),(0,l.jsx)(i.Heading,{className:o.header,variant:\"heading-xl/semibold\",children:r.default.Messages.SUMMARY_EMPTY_STATE_TITLE}),(0,l.jsx)(i.Text,{className:o.text,color:\"header-secondary\",variant:\"text-md/normal\",children:r.default.Messages.SUMMARY_EMPTY_STATE_TEXT})]})}"
-    }
-}

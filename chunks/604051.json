@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "useResetClientThemePreview": "()=>{let e=(0,r.useStateFromStores)([u.default],()=>u.default.gradientPreset),t=(0,r.useStateFromStores)([s.default],()=>s.default.useSystemTheme===c.SystemThemeState.ON),[n,o]=(0,i.useState)(t);return(0,i.useEffect)(()=>{null==e&&o(t)},[e,t]),(0,i.useCallback)(()=>{if(null!=e)(0,l.resetPreviewClientTheme)(),n&&(0,a.setUseSystemTheme)(c.SystemThemeState.ON)},[e,n])}",
+        "useTrackClientThemePreviewEvent": "()=>{let{previewPaneVariant:e}=(0,r.useStateFromStoresObject)([u.default],()=>({previewPaneVariant:u.default.isPreview?T.AnalyticsPremiumFeatureTiers.FREE:T.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD})),t=(0,r.useStateFromStores)([_.default],()=>{let e=_.default.settings.appearance?.theme;return`default ${e===o.Theme.LIGHT?I.ThemeTypes.LIGHT:I.ThemeTypes.DARK}`});return(0,i.useCallback)(n=>{E.default.track(n,{preview_pane_variant:e,original_theme:t})},[e,t])}"
+    }
+}

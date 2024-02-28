@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "background": "background_d065ef",
+        "blur": "blur__76477",
+        "container": "container__4d1c7",
+        "details": "details__6cccd",
+        "header": "header__6ee97",
+        "image": "image_b1fdf2",
+        "scroll": "scroll_ee1062",
+        "scrollContainer": "scrollContainer__57318",
+        "tag": "tag_ebbf87"
+    }
+}

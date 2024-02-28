@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "FocusBlock": "function s(e){let{children:t,className:n,enabled:o=!0}=e,s=r.useRef(null);return a(s,o),(0,i.jsx)(\"div\",{ref:s,className:n,children:t})}",
+        "useFocusBlock": "function a(e,t){let[n]=r.useState(()=>o++),i=`data-focus-blocked-${n}`;r.useLayoutEffect(()=>{if(t){let t=e.current;if(null!=t){var n;let e=(n=t,document.createTreeWalker(n,NodeFilter.SHOW_ELEMENT,{acceptNode:e=>e.tabIndex>=0&&!e.disabled?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP})),r=e.currentNode;for(;null!==r;){let t=r,n=t.tabIndex;t.tabIndex=-1,t.setAttribute(i,String(n)),r=e.nextNode()}return()=>{t.querySelectorAll(`[${i}]`).forEach(e=>{let t=e.getAttribute(i);if(null!=t){let n=parseInt(t,10);e.tabIndex=n}})}}}},[t])}"
+    }
+}

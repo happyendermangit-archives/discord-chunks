@@ -1,0 +1,30 @@
+{
+    "exports": {
+        "default": {
+            "DEFAULT_AVATARS": [
+                "/assets/5d6a5e9d7d77ac29116e.png",
+                "/assets/1697e65656e69f0dbdbd.png",
+                "/assets/1aba1e971aefb18a265e.png",
+                "/assets/529459de1dc4c2424a03.png",
+                "/assets/edda5bb474d4135b4296.png",
+                "/assets/c722e74f644b4a758b11.png"
+            ],
+            "DEFAULT_GROUP_DM_AVATARS": [
+                "/assets/71ceda6839bdcb3deff6.png",
+                "/assets/68f4ea933bd6e83f5d5a.png",
+                "/assets/118ab41237408c505a1b.png",
+                "/assets/641edf794e368d5e8180.png",
+                "/assets/17cfee7f5b1fe33ae18d.png",
+                "/assets/77db8e6b075e88104713.png",
+                "/assets/4e42f7235fc2b50c0d85.png",
+                "/assets/7b3659653253c3f9fcbd.png"
+            ],
+            "BOT_AVATARS": {
+                "clyde": "/assets/e4f93ded986b1edf0780.png"
+            },
+            "DEFAULT_CHANNEL_ICON": "/assets/2a71729f81632051029f.svg",
+            "canUseWebp": "function(){return i.canUseWebp()}"
+        },
+        "getAutomodAvatarURL": "function h(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];return e?C:r}"
+    }
+}

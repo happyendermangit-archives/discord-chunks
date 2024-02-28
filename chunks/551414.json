@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(t){let{stepConfigs:e,breadcrumbs:n}=t,[u,r]=i.useState(e[0]?.key),l=e.map(t=>t.key).filter(t=>null!=t);return{steps:l,step:u,setStep:r,breadcrumbsData:e.filter(t=>null!=t.key&&t?.options?.useBreadcrumbLabel!=null).map(t=>({id:t.key,useBreadcrumbLabel:t.options.useBreadcrumbLabel})).sort((t,e)=>null!=n?n.indexOf(t.id)-n.indexOf(e.id):0)}}"
+    }
+}

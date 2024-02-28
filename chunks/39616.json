@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "setEmojiLocale": "function(e){i.setParams(e)}",
-            "getTermsForEmoji": "function(e){let t=i.get();return void 0!==t?t[e]:[]}"
-        }
-    }
-}

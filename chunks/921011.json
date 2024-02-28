@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "usePremiumTrialOffer": "function a(e){let t=(0,u.useTrialOffer)(s.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID),r=(0,u.useTrialOffer)(s.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID),a=(0,u.useTrialOffer)(n.default.getAnyOfUserTrialOfferId([s.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID,s.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,s.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID,s.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID])),f=(0,u.useTrialOffer)(s.PREMIUM_TIER_2_AUTH3_TRIAL_ID);return(0,i.default)([l.default],()=>void 0===e?null:l.default.getRelevantUserTrialOffer(e))??t??r??a??f}"
+    }
+}

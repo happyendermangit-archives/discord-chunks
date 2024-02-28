@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){return s[e]}"
-    }
-}

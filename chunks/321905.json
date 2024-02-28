@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "shouldShowNitroBadge": "function n(t,e){let i=r.getCurrentConfig({location:e},{autoTrackExposure:!0});return i.enabled&&(!i.hideNitroBadgeWhenRoleBadgePresent||i.hideNitroBadgeWhenRoleBadgePresent&&!t)}"
-    }
-}

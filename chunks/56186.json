@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(){let e=(0,r.default)([l.default],()=>l.default.useReducedMotion);return(0,i.jsxs)(\"div\",{className:n.wrapper,children:[(0,i.jsx)(a.Heading,{className:n.heading,variant:\"heading-xxl/extrabold\",children:o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HEADING}),(0,i.jsxs)(\"div\",{className:n.topPerksCards,children:[(0,i.jsx)(_,{description:o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_DESCRIPTION,heading:o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_HEADING,imgSrc:c}),(0,i.jsx)(_,{description:o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_DESCRIPTION,heading:o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_HEADING,imgSrc:e?d:u}),(0,i.jsx)(_,{description:o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_DESCRIPTION,heading:o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_HEADING,imgSrc:E})]})]})}"
-    }
-}

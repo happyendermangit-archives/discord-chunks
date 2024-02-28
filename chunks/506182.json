@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "BROWSER_SUPPORTS_CONNECTION_STATE": true,
+        "BROWSER_SUPPORTS_DIAGNOSTICS": true,
+        "BROWSER_SUPPORTS_UNIFIED_PLAN": true,
+        "BROWSER_SUPPORTS_VIDEO": true,
+        "BROWSER_SUPPORTS_VOICE": true,
+        "IS_APP_COMPATIBLE_BROWSER": true
+    }
+}

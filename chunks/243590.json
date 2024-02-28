@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "openBroadcastingPrivacySettingsModal": "function i(e,t,i){(0,r.openModalLazy)(async()=>{let{default:r}=await n.el(\"243590@314:369\").then(n.bind(n,\"985696\"));return n=>(0,a.jsx)(r,{headerText:e,buttonCTA:t,onSave:i,...n})})}"
+    }
+}

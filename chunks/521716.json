@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function p(e){let{children:t}=e,n=(0,s.useStateFromStoresObject)([d.default],()=>({enabled:d.default.useReducedMotion,rawValue:d.default.rawPrefersReducedMotion})),i=(0,s.useStateFromStoresObject)([d.default],()=>({enabled:d.default.useForcedColors,rawValue:d.default.systemForcedColors})),u=(0,s.useStateFromStores)([d.default],()=>d.default.alwaysShowLinkDecorations),o=r.useMemo(()=>({reducedMotion:n,prefersCrossfades:!1,forcedColors:i,alwaysShowLinkDecorations:u}),[n,i,u]);return r.useEffect(()=>((0,c.insertAccessibilityLabelElements)(),window.addEventListener(\"keydown\",h),()=>window.removeEventListener(\"keydown\",h)),[]),(0,a.jsx)(l.AccessibilityPreferencesContext.Provider,{value:o,children:t})}"
+    }
+}

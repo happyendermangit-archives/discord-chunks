@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function h(e){let{channel:t,commands:n,sectionDescriptors:l}=e,r=a.useMemo(()=>n.map(e=>{let n=l.find(t=>t.id===e.applicationId);return null==n?null:(0,i.jsx)(m,{channel:t,command:e,applicationSection:n},e.id)}),[t,n,l]);return 0===n.length?null:(0,i.jsxs)(\"div\",{children:[(0,i.jsxs)(s.Text,{className:p.commandListHeading,variant:\"text-sm/bold\",color:\"text-muted\",children:[(0,i.jsx)(u.default,{className:p.commandListHeadingIcon,height:16,width:16}),\"Recent slash commands\"]}),(0,i.jsx)(\"ul\",{className:p.commandList,children:r})]})}"
+    }
+}

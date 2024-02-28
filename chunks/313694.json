@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "PreviewListImpl": "class u{constructor(){var e,t,n,u,s,l;e=this,n={writable:!0,value:void 0},function(e,t){if(t.has(e))throw TypeError(\"Cannot initialize the same private elements twice on an object\")}(e,t=i),t.set(e,n),r(this,\"register\",e=>{a(this,i).push(e)}),r(this,\"unregister\",e=>{let t;for(;-1!==(t=a(this,i).indexOf(e));)a(this,i).splice(t,1)}),r(this,\"backendChanged\",e=>{for(let t of a(this,i))t.backendChanged(e)}),u=this,s=[],l=o(u,i,\"set\"),function(e,t,n){if(t.set)t.set.call(e,n);else{if(!t.writable)throw TypeError(\"attempted to set read only private field\");t.value=n}}(u,l,s)}}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function d(e){let{centerButton:t=!1,channel:n,onClick:d,...c}=e,f=t?u.CenterControlButton:u.default,h=n.isBroadcastChannel(),p=(0,s.useIsBroadcastingInChannel)(n.id);return(0,a.jsx)(f,{...c,onClick:()=>{p&&(0,i.stopBroadcast)(),r.default.disconnect(),d?.()},iconComponent:l.default,label:p?o.default.Messages.STOP_BROADCASTING:h?o.default.Messages.LEAVE_BROADCAST:o.default.Messages.DISCONNECT_SELF})}"
+    }
+}

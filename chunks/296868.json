@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(e){let t;return t=(0,a.isIOS)()?i.EmbeddedActivitySupportedPlatforms.IOS:(0,a.isAndroid)()?i.EmbeddedActivitySupportedPlatforms.ANDROID:i.EmbeddedActivitySupportedPlatforms.WEB,e?.includes(t)??!1}"
+    }
+}

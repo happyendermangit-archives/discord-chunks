@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "background": "background__6a76b",
+        "blur": "blur_a2ff57",
+        "container": "container_baf207",
+        "content": "content__97b43",
+        "details": "details_d7449a",
+        "header": "header_d24301",
+        "image": "image_f956c5"
+    }
+}

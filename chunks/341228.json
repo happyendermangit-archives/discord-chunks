@@ -1,0 +1,23 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {},
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "_initialize": "_initialize(){setTimeout(()=>i.default.timeAsync(\"\\uD83D\\uDCBE\",\"getBlockedDomainList\",()=>s.default.getBlockedDomainList()),1e3),setTimeout(()=>(0,a.fetchBlockedDomainList)(),10*o.default.Millis.SECOND),this.intervalID=setInterval(a.fetchBlockedDomainList,_)}",
+            "_terminate": "_terminate(){clearInterval(this.intervalID)}"
+        }
+    }
+}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getWindowId": "function o(e){return e.__DISCORD_WINDOW_ID}",
-        "setupWindowId": "function n(e){let _=(0,t.uniqueId)(\"window-\");return e.__DISCORD_WINDOW_ID=_,_}",
-        "getMainWindowId": "function r(){return o(window)}"
-    }
-}

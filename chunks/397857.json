@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e){let{tier:t,...s}=e;switch(t){case n.BoostedGuildTiers.NONE:case n.BoostedGuildTiers.TIER_1:return(0,i.jsx)(r.default,{...s});case n.BoostedGuildTiers.TIER_2:return(0,i.jsx)(a.default,{...s});case n.BoostedGuildTiers.TIER_3:return(0,i.jsx)(l.default,{...s});default:throw Error(\"Not a valid tier type\")}}"
+    }
+}

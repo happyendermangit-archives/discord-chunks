@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "shouldShowFraudMenuVariant": "function r(){let{showFraudMenuVariant:e}=l.getCurrentConfig({location:\"159afe_2\"},{autoTrackExposure:!0});return e}"
-    }
-}

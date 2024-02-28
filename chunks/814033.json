@@ -1,0 +1,5 @@
+{
+    "exports": "function i(t,e,s){if(i.isBN(t))return t;this.negative=0,this.words=null,this.length=0,this.red=null,null!==t&&((\"le\"===e||\"be\"===e)&&(s=e,e=10),this._init(t||0,e||10,s||\"be\"))}",
+    "paths": [],
+    "children": []
+}

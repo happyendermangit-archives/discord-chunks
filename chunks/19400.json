@@ -1,0 +1,28 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "GUILD_CREATE": "handleGuildCreate(e){let{guild:t}=e,n=E.default.getChannelId(u.ME),i=E.default.getVoiceChannelId();t.id===n&&(0,s.transitionToGuild)(t.id),t.id===i&&!1!==t.unavailable&&null==i&&r.default.selectVoiceChannel((0,E.findFirstVoiceChannelId)(t.id))}",
+                "CHANNEL_CREATE": "handleChannelCreate(e){let{channel:t}=e;if(t.type!==u.ChannelTypes.GROUP_DM)return;let n=t.originChannelId,i=E.default.getChannelId(u.NULL_STRING_GUILD_ID);null==l.default.getGuildId()&&null!=n&&n===i&&(0,a.transitionTo)(u.Routes.CHANNEL(u.ME,t.id)),null!=n&&n===E.default.getVoiceChannelId()&&r.default.selectVoiceChannel(t.id,_.default.isVideoEnabled())}",
+                "LOGOUT": "handleLogout(){i.default.dispatch({type:\"VOICE_CHANNEL_SELECT\",channelId:null,guildId:null,video:!1,currentVoiceChannelId:null})}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleGuildCreate": "handleGuildCreate(e){let{guild:t}=e,n=E.default.getChannelId(u.ME),i=E.default.getVoiceChannelId();t.id===n&&(0,s.transitionToGuild)(t.id),t.id===i&&!1!==t.unavailable&&null==i&&r.default.selectVoiceChannel((0,E.findFirstVoiceChannelId)(t.id))}",
+            "handleChannelCreate": "handleChannelCreate(e){let{channel:t}=e;if(t.type!==u.ChannelTypes.GROUP_DM)return;let n=t.originChannelId,i=E.default.getChannelId(u.NULL_STRING_GUILD_ID);null==l.default.getGuildId()&&null!=n&&n===i&&(0,a.transitionTo)(u.Routes.CHANNEL(u.ME,t.id)),null!=n&&n===E.default.getVoiceChannelId()&&r.default.selectVoiceChannel(t.id,_.default.isVideoEnabled())}",
+            "handleLogout": "handleLogout(){i.default.dispatch({type:\"VOICE_CHANNEL_SELECT\",channelId:null,guildId:null,video:!1,currentVoiceChannelId:null})}"
+        }
+    }
+}

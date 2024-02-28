@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "onFID": "t=>{let e;let n=(0,i.getVisibilityWatcher)(),l=(0,a.initMetric)(\"FID\"),u=t=>{t.startTime<n.firstHiddenTime&&(l.value=t.processingStart-t.startTime,l.entries.push(t),e(!0))},c=t=>{t.forEach(u)},d=(0,s.observe)(\"first-input\",c);e=(0,r.bindReporter)(t,l),d&&(0,o.onHidden)(()=>{c(d.takeRecords()),d.disconnect()},!0)}"
+    }
+}

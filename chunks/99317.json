@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getNavYouBarExperiment": "function o(e,t){var n;let i=!(0,s.isInMainTabsExperiment)();return(0,r.getMergedExperimentConfigs)(a.existingUsers,a.newUsers,e,{...t,disable:!!i||(null==t?void 0:t.disable),autoTrackExposure:!i&&(null===(n=null==t?void 0:t.autoTrackExposure)||void 0===n||n)})}"
-    }
-}

@@ -1,5 +1,3 @@
 {
-    "exports": {
-        "default": "e=>{let{className:t,color:n=l.STANDARD,size:r=u.SIZE_14,tag:o=\"div\",selectable:c=!1,strong:d=!1,children:f,style:E,\"aria-label\":p,...h}=e;return(0,i.jsx)(o,{\"aria-label\":p,className:s(n,r,t,{[a.selectable]:c,[a.strong]:d}),style:E,...h,children:f})}"
-    }
+    "exports": "/assets/4f4e2c348c49eb66f0d4.svg"
 }

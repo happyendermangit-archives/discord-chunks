@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(e){let{subscriptionTier:t,interval:n=c.SubscriptionIntervalTypes.MONTH,className:i,isGift:_=!1,variant:f}=e;if(!(0,s.useStateFromStores)([u.default],()=>u.default.isLoadedForPremiumSKUs()))return(0,r.jsx)(o.Spinner,{type:o.Spinner.Type.PULSING_ELLIPSIS,className:d.priceSpinner});let E=u.default.getForSkuAndInterval(t,n),T=null!=E?(0,l.getFormattedPriceForPlan)(E,void 0,!1,_):null;return(0,r.jsxs)(o.Heading,{color:\"always-white\",variant:f??\"heading-md/medium\",className:a()(d.pricePerInterval,i),children:[(0,r.jsx)(\"span\",{className:d.price,children:T}),\" / \",(0,l.getIntervalStringAsNoun)(n)]})}"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "exports": {
+        "UserSettingsManager": "class a extends i.default{maybeShowChangeLanguageToast(){}setVerifyTimezone(){o=!0}ensureTimezoneUpdated(){if(!o)return;o=!1;let e=new Date().getTimezoneOffset();r.TimezoneOffset.getSetting()!==e&&setImmediate(()=>r.TimezoneOffset.updateSetting(e))}constructor(...e){super(...e),this.actions={POST_CONNECTION_OPEN:()=>{this.setVerifyTimezone(),this.maybeShowChangeLanguageToast()},OVERLAY_INITIALIZE:this.setVerifyTimezone,USER_SETTINGS_PROTO_UPDATE:this.ensureTimezoneUpdated}}}",
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "()=>{this.setVerifyTimezone(),this.maybeShowChangeLanguageToast()}",
+                "OVERLAY_INITIALIZE": "setVerifyTimezone(){o=!0}",
+                "USER_SETTINGS_PROTO_UPDATE": "ensureTimezoneUpdated(){if(!o)return;o=!1;let e=new Date().getTimezoneOffset();r.TimezoneOffset.getSetting()!==e&&setImmediate(()=>r.TimezoneOffset.updateSetting(e))}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "maybeShowChangeLanguageToast": "maybeShowChangeLanguageToast(){}",
+            "setVerifyTimezone": "setVerifyTimezone(){o=!0}",
+            "ensureTimezoneUpdated": "ensureTimezoneUpdated(){if(!o)return;o=!1;let e=new Date().getTimezoneOffset();r.TimezoneOffset.getSetting()!==e&&setImmediate(()=>r.TimezoneOffset.updateSetting(e))}"
+        }
+    }
+}

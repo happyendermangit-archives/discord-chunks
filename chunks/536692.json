@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getPendingAudioSettings": "function s(e,t){let n=r(e,t);return i[n]}",
-        "updatePendingSettings": "function a(e,t,n){let s=r(e,t);i[s]={...i[s],...n}}",
-        "drainPendingAudioSettings": "function o(e){for(let t in i){let[n,r]=function(e){let[t,n]=e.split(\":\");return[t,n]}(t);e(n,r,i[t])}i={}}"
-    }
-}

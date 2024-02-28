@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": "function l(e,t){let{utmSource:n,androidFallbackLink:s,iosFallbackLink:r,...u}=t,d=new URL(e);for(let e in u){let t=u[e];null!=t&&d.searchParams.set(e,t)}let l=encodeURIComponent(d.toString()),f=encodeURIComponent((0,a.default)()),_=!function(){let e=RegExp(\"(WebView|(iPhone|iPod|iPad)(?!.*Safari/))\",\"ig\"),t=i()?.ua?.match(e)!=null,n=i()?.name===\"Safari\"&&!t;return i()?.os?.family!==\"iOS\"||n}()?0:1,c=null!=s?encodeURIComponent(s):null,g=null!=r?encodeURIComponent(r):null,m=`${o}/?link=${l}&utm_source=${n}&apn=com.discord&isi=985746746&ibi=com.hammerandchisel.discord&sd=${f}&efr=${_}`;return null!=c&&(m+=`&afl=${c}`),null!=g&&(m+=`&ifl=${g}`),m}",
+        "generateAttemptId": "function u(){return(0,r.v4)()}",
+        "parseDynamicLink": "function d(e){if(!e.startsWith(o))return null;try{let t=new URL(e).searchParams,n=t.get(\"link\");if(null==n)return null;let s=decodeURIComponent(n),i=new URL(s).searchParams,r={utmSource:t.get(\"utm_source\")??void 0};for(let[e,t]of i.entries())r[e]=t;return r}catch{return null}}"
+    }
+}

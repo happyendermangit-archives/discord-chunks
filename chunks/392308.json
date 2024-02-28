@@ -1,3 +1,0 @@
-{
-    "exports": "function o(t,e){this.eddsa=t,this._secret=n(e.secret),t.isPoint(e.pub)?this._pub=e.pub:this._pubBytes=n(e.pub)}"
-}

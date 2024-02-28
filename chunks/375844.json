@@ -1,0 +1,20 @@
+{
+    "exports": {
+        "QuestContentCTA": {
+            "LEARN_MORE": "LEARN_MORE",
+            "SHOW_REWARD": "SHOW_REWARD",
+            "CLAIM_REWARD": "CLAIM_REWARD",
+            "ACCEPT_QUEST": "ACCEPT_QUEST",
+            "COPY_QUEST_URL": "COPY_QUEST_URL",
+            "TRACK_PROGRESS": "TRACK_PROGRESS",
+            "REWARD_LEARN_MORE": "REWARD_LEARN_MORE",
+            "OPEN_CONTEXT_MENU": "OPEN_CONTEXT_MENU",
+            "CONTEXT_MENU_COPY_LINK": "CONTEXT_MENU.COPY_LINK",
+            "CONTEXT_MENU_HIDE_CONTENT": "CONTEXT_MENU.HIDE_CONTENT",
+            "CONTEXT_MENU_OPEN_GAME_LINK": "CONTEXT_MENU.OPEN_GAME_LINK",
+            "CONTEXT_MENU_OPEN_DISCLOSURE": "CONTEXT_MENU.OPEN_DISCLOSURE"
+        },
+        "trackQuestContentClicked": "function c(e,t,n){var a;d(e,u.AnalyticEvents.QUEST_CONTENT_CLICKED,{content_id:a=t,content_name:o.find(e=>s.QuestContent[e]===a)??\"\",cta_name:n})}",
+        "trackQuestEvent": "function d(e,t,n){let a=r.default.quests.get(e);if(null!=a&&!a.preview){var l;i.default.track(t,{quest_id:(l=a).id,game_id:l.config.applicationId,game_name:l.config.applicationName,...n})}}"
+    }
+}

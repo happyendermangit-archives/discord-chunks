@@ -1,0 +1,390 @@
+{
+    "exports": {
+        "default": {
+            "_events": {
+                "newListener": "e=>{if(\"locale\"===e)this.emit(e,this._chosenLocale)}",
+                "locale": "e=>{document.cookie=`locale=${e};path=/`}"
+            },
+            "_eventsCount": 2,
+            "loadPromise": {
+                "then": "function then() { [native code] }",
+                "catch": "function catch() { [native code] }",
+                "finally": "function finally() { [native code] }"
+            },
+            "resolveLanguageLoaded": "function () { [native code] }",
+            "_languages": [
+                {
+                    "name": "English, USA",
+                    "englishName": "English, USA",
+                    "code": "en-US",
+                    "enabled": true
+                },
+                {
+                    "name": "English, GB",
+                    "englishName": "English, GB",
+                    "code": "en-GB",
+                    "enabled": true
+                },
+                {
+                    "name": "中文",
+                    "englishName": "Chinese Simplified",
+                    "code": "zh-CN",
+                    "enabled": true
+                },
+                {
+                    "name": "繁體中文",
+                    "englishName": "Traditional Chinese",
+                    "code": "zh-TW",
+                    "enabled": true
+                },
+                {
+                    "name": "Čeština",
+                    "englishName": "Czech",
+                    "code": "cs",
+                    "enabled": true
+                },
+                {
+                    "name": "Dansk",
+                    "englishName": "Danish",
+                    "code": "da",
+                    "enabled": true
+                },
+                {
+                    "name": "Nederlands",
+                    "englishName": "Dutch",
+                    "code": "nl",
+                    "enabled": true
+                },
+                {
+                    "name": "Français",
+                    "englishName": "French",
+                    "code": "fr",
+                    "enabled": true
+                },
+                {
+                    "name": "Deutsch",
+                    "englishName": "German",
+                    "code": "de",
+                    "enabled": true
+                },
+                {
+                    "name": "Ελληνικά",
+                    "englishName": "Greek",
+                    "code": "el",
+                    "enabled": true
+                },
+                {
+                    "name": "Magyar",
+                    "englishName": "Hungarian",
+                    "code": "hu",
+                    "enabled": true
+                },
+                {
+                    "name": "Italiano",
+                    "englishName": "Italian",
+                    "code": "it",
+                    "enabled": true
+                },
+                {
+                    "name": "日本語",
+                    "englishName": "Japanese",
+                    "code": "ja",
+                    "enabled": true
+                },
+                {
+                    "name": "한국어",
+                    "englishName": "Korean",
+                    "code": "ko",
+                    "enabled": true
+                },
+                {
+                    "name": "Norwegian",
+                    "englishName": "Norwegian",
+                    "code": "no",
+                    "enabled": true
+                },
+                {
+                    "name": "Hrvatski",
+                    "englishName": "Croatian",
+                    "code": "hr",
+                    "enabled": true
+                },
+                {
+                    "name": "Polski",
+                    "englishName": "Polish",
+                    "code": "pl",
+                    "enabled": true
+                },
+                {
+                    "name": "Português",
+                    "englishName": "Portuguese",
+                    "code": "pt-PT",
+                    "enabled": false
+                },
+                {
+                    "name": "Português do Brasil",
+                    "englishName": "Portuguese, Brazilian",
+                    "code": "pt-BR",
+                    "enabled": true
+                },
+                {
+                    "name": "Русский",
+                    "englishName": "Russian",
+                    "code": "ru",
+                    "enabled": true
+                },
+                {
+                    "name": "Slovenčina",
+                    "englishName": "Slovak",
+                    "code": "sk",
+                    "enabled": false
+                },
+                {
+                    "name": "Español",
+                    "englishName": "Spanish",
+                    "code": "es-ES",
+                    "enabled": true
+                },
+                {
+                    "name": "Svenska",
+                    "englishName": "Swedish",
+                    "code": "sv-SE",
+                    "enabled": true
+                },
+                {
+                    "name": "Türkçe",
+                    "englishName": "Turkish",
+                    "code": "tr",
+                    "enabled": true
+                },
+                {
+                    "name": "български",
+                    "englishName": "Bulgarian",
+                    "code": "bg",
+                    "enabled": true
+                },
+                {
+                    "name": "Українська",
+                    "englishName": "Ukrainian",
+                    "code": "uk",
+                    "enabled": true
+                },
+                {
+                    "name": "Suomi",
+                    "englishName": "Finnish",
+                    "code": "fi",
+                    "enabled": true
+                },
+                {
+                    "name": "Română",
+                    "englishName": "Romanian",
+                    "code": "ro",
+                    "enabled": true
+                },
+                {
+                    "name": "Lietuviškai",
+                    "englishName": "Lithuanian",
+                    "code": "lt",
+                    "enabled": true
+                },
+                {
+                    "name": "ไทย",
+                    "englishName": "Thai",
+                    "code": "th",
+                    "enabled": true
+                },
+                {
+                    "name": "Tiếng Việt",
+                    "englishName": "Vietnamese",
+                    "code": "vi",
+                    "enabled": true
+                },
+                {
+                    "name": "हिंदी",
+                    "englishName": "Hindi",
+                    "code": "hi",
+                    "enabled": true
+                }
+            ],
+            "_chosenLocale": "en-US",
+            "_getParsedMessages": "(e,t,n)=>{let{messages:i,defaultMessages:r,locale:o}=e,s=i[t]||r[t];if(\"object\"==typeof s)return n({messages:s,defaultMessages:r[t],locale:o});try{return(0,a.getMessage)(s,o)}catch(e){if(console.warn(`Failed parsing intl key '${String(t)}' in locale '${o}' defaulting to English`,e),\"string\"==typeof(s=r[t]))return(0,a.getMessage)(s,o)}return\"\"}",
+            "_handleNewListener": "e=>{if(\"locale\"===e)this.emit(e,this._chosenLocale)}",
+            "initialLanguageLoad": {
+                "then": "function then() { [native code] }",
+                "catch": "function catch() { [native code] }",
+                "finally": "function finally() { [native code] }"
+            },
+            "_provider": {
+                "_context": {
+                    "messages": {
+                        "Common": {
+                            "OPEN_DISCORD": "Open Discord",
+                            "SIGN_UP_NOW": "Sign Up Now"
+                        },
+                        "Footer": {
+                            "READY_TO_TRY_DISCORD": "Ready to try Discord? It's free!",
+                            "JOIN_OVER_PLAYERS_TODAY": "JOIN OVER {num} MILLION PLAYERS TODAY"
+                        },
+                        "Navigation": {
+                            "HOME": "Home",
+                            "FEATURES": "Features",
+                            "NITRO": "Nitro",
+                            "DOWNLOAD": "Download",
+                            "PARTNERS": "Partners",
+                            "BLOG": "Blog",
+                            "MORE": "More",
+                            "STATUS": "Status",
+                            "FEEDBACK": "Feedback",
+                            "HELP_AND_SUPPORT": "Help & Support",
+                            "GUIDELINES": "Guidelines",
+                            "HYPESQUAD": "HypeSquad",
+                            "STREAMKIT": "StreamKit",
+                            "COMPANY": "Company",
+                            "JOBS": "Jobs",
+                            "SECURITY": "Security",
+                            "DEVELOPERS": "Developers",
+                            "DOCUMENTATION": "Documentation",
+                            "BRANDING": "Branding",
+                            "LOGIN": "Login",
+                            "OPEN": "Open",
+                            "PRODUCT": "Product",
+                            "RESOURCES": "Resources",
+                            "APPLICATIONS": "Applications",
+                            "TERMS": "Terms",
+                            "PRIVACY": "Privacy",
+                            "ABOUT": "About",
+                            "VERIFICATION": "Verification",
+                            "RICH_PRESENCE": "Rich Presence",
+                            "PRESS_INQUIRIES": "Press Inquiries",
+                            "OPEN_SOURCE": "Open Source",
+                            "SUPPORT": "Support",
+                            "DEVELOPER_PORTAL": "Developer Portal",
+                            "COMMUNITY": "Community",
+                            "SAFETY": "Safety",
+                            "SAFETY_CENTER": "Safety Center",
+                            "MOD_ACADEMY": "Mod Academy",
+                            "DISCOVER": "Discover",
+                            "CAREERS": "Careers"
+                        },
+                        "NumberAbbreviations": {
+                            "MILLION": "{num}M",
+                            "THOUSAND": "{num}K"
+                        },
+                        "DynamicLinks": {
+                            "IOS_APP_PREVIEW_DESCRIPTION": "Your place to talk with communities and friends."
+                        },
+                        "Storefront": {
+                            "BENEFITS_TITLE": "Exclusive to this tier",
+                            "PRODUCT_DETAILS": "Product Details",
+                            "SEE_FULL_BENEFITS": "See full benefits",
+                            "SEE_MORE_DETAILS": "See more details",
+                            "SERVER_SUBSCRIPTION": "Server subscription",
+                            "USER_SUBSCRIPTION": "Personal subscription"
+                        }
+                    },
+                    "defaultMessages": {
+                        "Common": {
+                            "OPEN_DISCORD": "Open Discord",
+                            "SIGN_UP_NOW": "Sign Up Now"
+                        },
+                        "Footer": {
+                            "READY_TO_TRY_DISCORD": "Ready to try Discord? It's free!",
+                            "JOIN_OVER_PLAYERS_TODAY": "JOIN OVER {num} MILLION PLAYERS TODAY"
+                        },
+                        "Navigation": {
+                            "HOME": "Home",
+                            "FEATURES": "Features",
+                            "NITRO": "Nitro",
+                            "DOWNLOAD": "Download",
+                            "PARTNERS": "Partners",
+                            "BLOG": "Blog",
+                            "MORE": "More",
+                            "STATUS": "Status",
+                            "FEEDBACK": "Feedback",
+                            "HELP_AND_SUPPORT": "Help & Support",
+                            "GUIDELINES": "Guidelines",
+                            "HYPESQUAD": "HypeSquad",
+                            "STREAMKIT": "StreamKit",
+                            "COMPANY": "Company",
+                            "JOBS": "Jobs",
+                            "SECURITY": "Security",
+                            "DEVELOPERS": "Developers",
+                            "DOCUMENTATION": "Documentation",
+                            "BRANDING": "Branding",
+                            "LOGIN": "Login",
+                            "OPEN": "Open",
+                            "PRODUCT": "Product",
+                            "RESOURCES": "Resources",
+                            "APPLICATIONS": "Applications",
+                            "TERMS": "Terms",
+                            "PRIVACY": "Privacy",
+                            "ABOUT": "About",
+                            "VERIFICATION": "Verification",
+                            "RICH_PRESENCE": "Rich Presence",
+                            "PRESS_INQUIRIES": "Press Inquiries",
+                            "OPEN_SOURCE": "Open Source",
+                            "SUPPORT": "Support",
+                            "DEVELOPER_PORTAL": "Developer Portal",
+                            "COMMUNITY": "Community",
+                            "SAFETY": "Safety",
+                            "SAFETY_CENTER": "Safety Center",
+                            "MOD_ACADEMY": "Mod Academy",
+                            "DISCOVER": "Discover",
+                            "CAREERS": "Careers"
+                        },
+                        "NumberAbbreviations": {
+                            "MILLION": "{num}M",
+                            "THOUSAND": "{num}K"
+                        },
+                        "DynamicLinks": {
+                            "IOS_APP_PREVIEW_DESCRIPTION": "Your place to talk with communities and friends."
+                        },
+                        "Storefront": {
+                            "BENEFITS_TITLE": "Exclusive to this tier",
+                            "PRODUCT_DETAILS": "Product Details",
+                            "SEE_FULL_BENEFITS": "See full benefits",
+                            "SEE_MORE_DETAILS": "See more details",
+                            "SERVER_SUBSCRIPTION": "Server subscription",
+                            "USER_SUBSCRIPTION": "Personal subscription"
+                        }
+                    },
+                    "locale": "en-US"
+                },
+                "_parsedMessages": {},
+                "_getParsedMessages": "(e,t,n)=>{let{messages:i,defaultMessages:r,locale:o}=e,s=i[t]||r[t];if(\"object\"==typeof s)return n({messages:s,defaultMessages:r[t],locale:o});try{return(0,a.getMessage)(s,o)}catch(e){if(console.warn(`Failed parsing intl key '${String(t)}' in locale '${o}' defaulting to English`,e),\"string\"==typeof(s=r[t]))return(0,a.getMessage)(s,o)}return\"\"}",
+                "_createProxy": "function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t._context;return new Proxy({},{get:(n,i)=>n[i]||(n[i]=t._getParsedMessages(e,i,t._createProxy))})}",
+                "refresh": "refresh(e){Object.assign(this._context,e),Object.keys(this._parsedMessages).forEach(e=>{delete this._parsedMessages[e]})}"
+            },
+            "Messages": {},
+            "_getMessages": "e=>n(\"866995\")(`./messages/${e}`.replace(\"./messages/\",\"./\"))",
+            "_requestedLocale": "en-US",
+            "setMaxListeners": "function(e){if(\"number\"!=typeof e||e<0||i(e))throw RangeError('The value of \"n\" is out of range. It must be a non-negative number. Received '+e+\".\");return this._maxListeners=e,this}",
+            "getMaxListeners": "function(){return c(this)}",
+            "emit": "function(e){for(var t=[],n=1;n<arguments.length;n++)t.push(arguments[n]);var r=\"error\"===e,a=this._events;if(void 0!==a)r=r&&void 0===a.error;else if(!r)return!1;if(r){if(t.length>0&&(i=t[0]),i instanceof Error)throw i;var i,u=Error(\"Unhandled error.\"+(i?\" (\"+i.message+\")\":\"\"));throw u.context=i,u}var s=a[e];if(void 0===s)return!1;if(\"function\"==typeof s)o(s,this,t);else{for(var l=s.length,c=y(s,l),n=0;n<l;++n)o(c[n],this,t)}return!0}",
+            "addListener": "function(e,t){return d(this,e,t,!1)}",
+            "on": "function(e,t){return d(this,e,t,!1)}",
+            "prependListener": "function(e,t){return d(this,e,t,!0)}",
+            "once": "function(e,t){return l(t),this.on(e,p(this,e,t)),this}",
+            "prependOnceListener": "function(e,t){return l(t),this.prependListener(e,p(this,e,t)),this}",
+            "removeListener": "function(e,t){var n,r,a,o,i;if(l(t),void 0===(r=this._events)||void 0===(n=r[e]))return this;if(n===t||n.listener===t)0==--this._eventsCount?this._events=Object.create(null):(delete r[e],r.removeListener&&this.emit(\"removeListener\",e,n.listener||t));else if(\"function\"!=typeof n){for(a=-1,o=n.length-1;o>=0;o--)if(n[o]===t||n[o].listener===t){i=n[o].listener,a=o;break}if(a<0)return this;0===a?n.shift():function(e,t){for(;t+1<e.length;t++)e[t]=e[t+1];e.pop()}(n,a),1===n.length&&(r[e]=n[0]),void 0!==r.removeListener&&this.emit(\"removeListener\",e,i||t)}return this}",
+            "off": "function(e,t){var n,r,a,o,i;if(l(t),void 0===(r=this._events)||void 0===(n=r[e]))return this;if(n===t||n.listener===t)0==--this._eventsCount?this._events=Object.create(null):(delete r[e],r.removeListener&&this.emit(\"removeListener\",e,n.listener||t));else if(\"function\"!=typeof n){for(a=-1,o=n.length-1;o>=0;o--)if(n[o]===t||n[o].listener===t){i=n[o].listener,a=o;break}if(a<0)return this;0===a?n.shift():function(e,t){for(;t+1<e.length;t++)e[t]=e[t+1];e.pop()}(n,a),1===n.length&&(r[e]=n[0]),void 0!==r.removeListener&&this.emit(\"removeListener\",e,i||t)}return this}",
+            "removeAllListeners": "function(e){var t,n,r;if(void 0===(n=this._events))return this;if(void 0===n.removeListener)return 0==arguments.length?(this._events=Object.create(null),this._eventsCount=0):void 0!==n[e]&&(0==--this._eventsCount?this._events=Object.create(null):delete n[e]),this;if(0==arguments.length){var a,o=Object.keys(n);for(r=0;r<o.length;++r)\"removeListener\"!==(a=o[r])&&this.removeAllListeners(a);return this.removeAllListeners(\"removeListener\"),this._events=Object.create(null),this._eventsCount=0,this}if(\"function\"==typeof(t=n[e]))this.removeListener(e,t);else if(void 0!==t)for(r=t.length-1;r>=0;r--)this.removeListener(e,t[r]);return this}",
+            "listeners": "function(e){return h(this,e,!0)}",
+            "rawListeners": "function(e){return h(this,e,!1)}",
+            "listenerCount": "function m(e){var t=this._events;if(void 0!==t){var n=t[e];if(\"function\"==typeof n)return 1;if(void 0!==n)return n.length}return 0}",
+            "eventNames": "function(){return this._eventsCount>0?r(this._events):[]}",
+            "updateMessagesForExperiment": "updateMessagesForExperiment(e,t){let n=this._fetchMessages(e);if(n instanceof Promise){n.then(n=>{this._applyMessagesForLocale(t(n),e)});return}this._applyMessagesForLocale(t(n),e)}",
+            "setLocale": "setLocale(e){if(this._chosenLocale===e)return;this._requestedLocale=e;let t=this._chosenLocale;this._chosenLocale=e,this.loadPromise=this._loadMessagesForLocale(e),this.emit(\"locale\",this._chosenLocale,t)}",
+            "setUpdateRules": "setUpdateRules(e){(0,a.setUpdateRules)(e)}",
+            "getLanguages": "getLanguages(){return this._languages}",
+            "getAvailableLocales": "getAvailableLocales(){return this._languages.filter(e=>{let{enabled:t}=e;return t}).map(e=>{let{code:t,name:n}=e;return{value:t,name:n,localizedName:this.Messages[t]??n}}).sort((e,t)=>{let{name:n}=e,{name:i}=t;return n=n.toLowerCase(),n<(i=i.toLowerCase())?-1:n>i?1:0})}",
+            "getLocale": "getLocale(){return this._chosenLocale}",
+            "getLocaleInfo": "getLocaleInfo(){return this._languages.find(e=>e.code===this._chosenLocale)}",
+            "getDefaultLocale": "getDefaultLocale(){let e=_()??s,t=this._languages.filter(e=>{let{enabled:t}=e;return t}).map(e=>{let{code:t}=e;return t});if(t.includes(e))return e;let n=e.split(\"-\");return t.includes(n[0])?n[0]:\"zh\"===n[0]&&n.length>1&&\"Hant\"===n[1]?t.find(e=>\"zh-TW\"===e)??s:t.find(e=>e.split(\"-\")[0]===n[0])??s}",
+            "_loadMessagesForLocale": "_loadMessagesForLocale(e){let t=this._fetchMessages(e);return t instanceof Promise?t.then(t=>this._applyMessagesForLocale(t,e)):(this._applyMessagesForLocale(t,e),Promise.resolve())}",
+            "_applyMessagesForLocale": "_applyMessagesForLocale(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:this._findMessages(s);this._requestedLocale===t&&(this._provider.refresh({messages:e,defaultMessages:n,locale:t}),this.resolveLanguageLoaded())}",
+            "_findMessages": "_findMessages(e){let t=this._fetchMessages(e);if(t instanceof Promise)throw Error(\"Messages are still loading.\");return t}",
+            "_fetchMessages": "_fetchMessages(e){let t=e===s?()=>{throw Error(`Error Loading ${s}`)}:()=>(console.warn(\"Unsupported Locale\",e),-1===e.indexOf(\"-\"))?this._fetchMessages(s):this._fetchMessages(e.split(\"-\")[0]);try{let n=this._getMessages(e);return n instanceof Promise?n.catch(t):n}catch(e){return t()}}"
+        }
+    }
+}

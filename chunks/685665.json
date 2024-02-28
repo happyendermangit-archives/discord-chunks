@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function f(){for(var e,t=arguments.length,n=Array(t),s=0;s<t;s++)n[s]=arguments[s];let[o,l]=r.useState(n),f=r.useContext(u),E=r.useMemo(()=>d(f,o),[o,f]),p=r.useMemo(()=>d(f,o.slice(0,o.length-1)),[o,f]);r.useEffect(()=>{!a(n,o)&&l(n)},[n]);let h=r.useCallback(e=>{let{children:t}=e;return(0,i.jsx)(c,{currentContext:E,children:t})},[E]);return{AnalyticsLocationProvider:h,analyticsLocations:E,sourceAnalyticsLocations:p,newestAnalyticsLocation:null!==(e=E[E.length-1])&&void 0!==e?e:null}}"
-    }
-}

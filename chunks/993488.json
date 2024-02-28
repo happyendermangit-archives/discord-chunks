@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:\"vertical\",[n]=(0,i.useState)(()=>new r.default({tension:200,friction:35,mass:2,clamp:!0,callback:(n,i)=>{let{current:r}=e;if(null==r)return i();\"horizontal\"===t?r.scrollLeft=n:r.scrollTop=n},getNodeWindow:()=>e.current?.ownerDocument?.defaultView??null}));return n}"
+    }
+}

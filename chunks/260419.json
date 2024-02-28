@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let t={};for(let n in e){let r=e[n];if(null==r)continue;if(n===i&&(t._misc=e[n].map(e=>e.message)),Array.isArray(r))continue;let o=r[i];null!=o?t[n]=o.map(e=>e.message):t[n]=[Object.keys(r)[0]]}return t}"
+    }
+}

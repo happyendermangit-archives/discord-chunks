@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "type": "function(e){let{stickersGrid:t}=e,n=r.StickerPickerStore.useStore(e=>e.inspectedExpressionPosition),a=i.useMemo(()=>{var e;let{rowIndex:l,columnIndex:i}=n,a=null===(e=t[l])||void 0===e?void 0:e[i];return(null==a?void 0:a.type)===m.StickerGridItemTypes.CREATE_STICKER?{guild_id:a.guild_id,name:a.name}:(null==a?void 0:a.type)!==m.StickerGridItemTypes.STICKER?null:a.sticker},[t,n]);if(null==a)return null;let{graphic:s,title:u}=T(a),c=(0,p.isStandardSticker)(a)||(0,p.isGuildSticker)(a)?(0,l.jsx)(h.default,{isInteracting:!0,size:C,sticker:a,disableAnimation:!0}):(0,l.jsx)(\"div\",{className:g.iconWrapper,children:(0,l.jsx)(d.default,{className:g.icon})});return(0,l.jsx)(o.default,{graphicPrimary:c,graphicSecondary:s,titlePrimary:a.name,titleSecondary:(0,p.isStandardSticker)(a)||(0,p.isGuildSticker)(a)?u:null})}",
-            "compare": null
-        }
-    }
-}

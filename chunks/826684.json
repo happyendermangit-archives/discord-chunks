@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{className:t,children:n,\"aria-label\":i,id:o}=e;return(0,l.jsx)(s.H,{className:a(t,r.container),\"aria-label\":i,id:o,children:n})}"
-    }
-}

@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "closeEditor": "()=>{r.default.dispatch({type:\"CLIENT_THEMES_EDITOR_CLOSE\"})}",
+        "openEditor": "()=>{r.default.dispatch({type:\"CLIENT_THEMES_EDITOR_OPEN\"})}",
+        "resetBackgroundGradientPreset": "()=>{r.default.dispatch({type:\"UPDATE_BACKGROUND_GRADIENT_PRESET\",presetId:null})}",
+        "resetPreviewClientTheme": "()=>{r.default.dispatch({type:\"RESET_PREVIEW_CLIENT_THEME\"})}",
+        "updateBackgroundGradientPreset": "e=>{r.default.dispatch({type:\"UPDATE_BACKGROUND_GRADIENT_PRESET\",presetId:e})}"
+    }
+}

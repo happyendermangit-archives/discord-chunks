@@ -1,0 +1,19 @@
+{
+    "exports": {
+        "JUMP_TO_GUILD": {
+            "binds": [
+                "mod+1",
+                "mod+2",
+                "mod+3",
+                "mod+4",
+                "mod+5",
+                "mod+6",
+                "mod+7",
+                "mod+8",
+                "mod+9"
+            ],
+            "comboKeysBindGlobal": true,
+            "action": "action(e,t){let n,I=parseInt(t.split(\"+\")[1],10);if(0===I&&(I=10),!isNaN(I)&&0!==I){if(null!=(n=1===I?u.ME:(0,r.isFavoritesGuildVisible)(i.default,s.default,_.default)?2===I?u.FAVORITES:l.default.getFlattenedGuildIds()[I-3]:l.default.getFlattenedGuildIds()[I-2]))return n===u.ME&&null==E.default.getGuildId()?((0,o.transitionTo)(u.Routes.CHANNEL(n)),!1):((0,a.transitionToGuild)(n),!1)}}"
+        }
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "exports": {
+        "ACKED_RECENTLY_WINDOW_DAYS": 4,
+        "ANALYTICS_GUILD_EVENTS_MODAL_NAME": "Guild Events Modal",
+        "ENTITY_TYPES_REQUIRED_CHANNEL_ID": {
+            "toJSON": "function(){return Array.from(this)}",
+            "has": "function has() { [native code] }",
+            "add": "function add() { [native code] }",
+            "delete": "function delete() { [native code] }",
+            "clear": "function clear() { [native code] }",
+            "entries": "function entries() { [native code] }",
+            "forEach": "function forEach() { [native code] }",
+            "size": 2,
+            "values": "function values() { [native code] }",
+            "keys": "function values() { [native code] }",
+            "union": "function union() { [native code] }",
+            "intersection": "function intersection() { [native code] }",
+            "difference": "function difference() { [native code] }",
+            "symmetricDifference": "function symmetricDifference() { [native code] }",
+            "isSubsetOf": "function isSubsetOf() { [native code] }",
+            "isSupersetOf": "function isSupersetOf() { [native code] }",
+            "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+        },
+        "ENTITY_TYPES_REQUIRED_ENTITY_METADATA": {
+            "toJSON": "function(){return Array.from(this)}",
+            "has": "function has() { [native code] }",
+            "add": "function add() { [native code] }",
+            "delete": "function delete() { [native code] }",
+            "clear": "function clear() { [native code] }",
+            "entries": "function entries() { [native code] }",
+            "forEach": "function forEach() { [native code] }",
+            "size": 1,
+            "values": "function values() { [native code] }",
+            "keys": "function values() { [native code] }",
+            "union": "function union() { [native code] }",
+            "intersection": "function intersection() { [native code] }",
+            "difference": "function difference() { [native code] }",
+            "symmetricDifference": "function symmetricDifference() { [native code] }",
+            "isSubsetOf": "function isSubsetOf() { [native code] }",
+            "isSupersetOf": "function isSupersetOf() { [native code] }",
+            "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+        },
+        "EVENT_STARTING_SOON_WINDOW_MILLISECONDS": 43200000,
+        "EntityChannelTypes": {
+            "1": 13,
+            "2": 2
+        },
+        "EventDetailSections": {
+            "0": "EVENT_INFO",
+            "1": "RSVP_LIST",
+            "EVENT_INFO": 0,
+            "RSVP_LIST": 1
+        },
+        "FAKE_EVENT_ID": "-1",
+        "GUILD_EVENT_MAX_DESCRIPTION_LENGTH": 1000,
+        "GUILD_EVENT_MAX_NAME_LENGTH": 100,
+        "GuildScheduledEventEntityTypes": {
+            "0": "NONE",
+            "1": "STAGE_INSTANCE",
+            "2": "VOICE",
+            "3": "EXTERNAL",
+            "NONE": 0,
+            "STAGE_INSTANCE": 1,
+            "VOICE": 2,
+            "EXTERNAL": 3
+        },
+        "GuildScheduledEventNotificationTypes": {
+            "1": "EVENT_START",
+            "EVENT_START": 1
+        },
+        "GuildScheduledEventPrivacyLevel": {
+            "1": "PUBLIC",
+            "2": "GUILD_ONLY",
+            "PUBLIC": 1,
+            "GUILD_ONLY": 2
+        },
+        "GuildScheduledEventStatus": {
+            "1": "SCHEDULED",
+            "2": "ACTIVE",
+            "3": "COMPLETED",
+            "4": "CANCELED",
+            "SCHEDULED": 1,
+            "ACTIVE": 2,
+            "COMPLETED": 3,
+            "CANCELED": 4
+        },
+        "GuildScheduledEventStatusDone": {
+            "toJSON": "function(){return Array.from(this)}",
+            "has": "function has() { [native code] }",
+            "add": "function add() { [native code] }",
+            "delete": "function delete() { [native code] }",
+            "clear": "function clear() { [native code] }",
+            "entries": "function entries() { [native code] }",
+            "forEach": "function forEach() { [native code] }",
+            "size": 2,
+            "values": "function values() { [native code] }",
+            "keys": "function values() { [native code] }",
+            "union": "function union() { [native code] }",
+            "intersection": "function intersection() { [native code] }",
+            "difference": "function difference() { [native code] }",
+            "symmetricDifference": "function symmetricDifference() { [native code] }",
+            "isSubsetOf": "function isSubsetOf() { [native code] }",
+            "isSupersetOf": "function isSupersetOf() { [native code] }",
+            "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+        },
+        "GuildScheduledEventUserResponses": {
+            "0": "UNINTERESTED",
+            "1": "INTERESTED",
+            "UNINTERESTED": 0,
+            "INTERESTED": 1
+        },
+        "MAX_EVENT_LOCATION_LENGTH": 100,
+        "MAX_RSVP_USER_DISPLAY_COUNT": 100,
+        "NEW_EVENT_WINDOW_MILLISECONDS": 172800000,
+        "UpcomingGuildEventNoticeTypes": {
+            "NEW_EVENT": "Upcoming Event Notice",
+            "EVENT_STARTING_SOON": "Event Starting Soon Notice"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class o extends i.EventEmitter{static async get(e,t){let n={...e,frameRate:30};if(navigator.mediaDevices?.getDisplayMedia!=null)return new o(await navigator.mediaDevices.getDisplayMedia({audio:t,video:n}));throw Error(\"UNKNOWN\")}constructor(e){super(),e.getVideoTracks().forEach(e=>{e.onended=()=>{this.emit(\"desktopsourceend\")}}),this.id=e.getVideoTracks()[0].label,this.stream=e,this.streamId=(0,r.registerVideoStream)(e)}destroy(){this.removeAllListeners(),(0,r.unregisterVideoStream)(this.streamId),this.stream.getTracks().forEach(e=>e.stop())}reset(){this.refreshSpeaking()}getStreamId(){return this.streamId}refreshSpeaking(){this.emit(\"speaking\",this.stream.getAudioTracks().some(e=>e.enabled))}}"
+    }
+}

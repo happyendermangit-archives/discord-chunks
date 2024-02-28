@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "getChromeVersion": "function f(){return d}",
-        "getFirefoxVersion": "function h(){return p}",
-        "canUseWebp": "function S(){return -1!==d||-1!==E||-1!==p||-1!==_}",
-        "supportsHEVCAlpha": "function m(){var e;let t=window.navigator,n=t.userAgent.toLowerCase(),i=(null===(e=t.mediaCapabilities)||void 0===e?void 0:e.decodingInfo)!=null,r=-1!==n.indexOf(\"safari\")&&!(-1!==n.indexOf(\"chrome\"))&&-1!==n.indexOf(\"version/\");return r&&i}"
-    }
-}

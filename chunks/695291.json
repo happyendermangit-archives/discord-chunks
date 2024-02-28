@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "initialize": "function r(e){for(let _ in e){let E=e[_];(function(e,_){var E;_.actions})(_,E),function(e){var _;let E=null!==(_=e.actions)&&void 0!==_?_:[];for(let _ of((e.hasStoreChangeListeners||e.loadAfterConnectionOpen)&&(!E.includes(\"POST_CONNECTION_OPEN\")&&(E=[...E,\"POST_CONNECTION_OPEN\"]),!E.includes(\"OVERLAY_INITIALIZE\")&&(E=[...E,\"OVERLAY_INITIALIZE\"])),e.loadRightBeforeConnectionOpen&&(!E.includes(\"CONNECTION_OPEN\")&&(E=[...E,\"CONNECTION_OPEN\"]),!E.includes(\"OVERLAY_INITIALIZE\")&&(E=[...E,\"OVERLAY_INITIALIZE\"])),E))!(_ in o)&&(o[_]=[]),o[_].push(e)}(E)}t.default.addInterceptor(i)}"
-    }
-}

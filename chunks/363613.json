@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "openPomeloModal": "function n(e){let _=arguments.length>1&&void 0!==arguments[1]&&arguments[1],E=!(arguments.length>2)||void 0===arguments[2]||arguments[2];return!(!E&&(0,t.hasAnyModalOpen)())&&((0,o.default)(e,_),!0)}"
-    }
-}

@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "createCalendar": "function ej(e){switch(e){case\"buddhist\":return new en;case\"ethiopic\":return new eA;case\"ethioaa\":return new eR;case\"coptic\":return new eI;case\"hebrew\":return new eE;case\"indian\":return new ec;case\"islamic-civil\":return new eh;case\"islamic-tbla\":return new em;case\"islamic-umalqura\":return new e_;case\"japanese\":return new ee;case\"persian\":return new el;case\"roc\":return new ei;default:return new f}}",
+        "endOfMonth": "function w(e){return e.add({days:e.calendar.getDaysInMonth(e)-e.day})}",
+        "getWeeksInMonth": "function D(e,t){var n,r;let a,o=e.calendar.getDaysInMonth(e);return Math.ceil((n=_(e),r=t,(a=Math.ceil(n.calendar.toJulianDay(n)+1-function(e){return p[function(e){if(Intl.Locale){let t=x.get(e);return!t&&(t=new Intl.Locale(e).maximize().region,x.set(e,t)),t}let t=e.split(\"-\")[1];return\"u\"===t?null:t}(e)]||0}(r))%7)<0&&(a+=7),(a+o)/7))}",
+        "isSameDay": "function h(e,t){return t=P(t,e.calendar),e.era===t.era&&e.year===t.year&&e.month===t.month&&e.day===t.day}",
+        "isSameMonth": "function m(e,t){return t=P(t,e.calendar),e=_(e),t=_(t),e.era===t.era&&e.year===t.year&&e.month===t.month}"
+    }
+}

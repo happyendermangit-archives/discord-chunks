@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e,t){if(l.EditorUtils.areStylesDisabled(e))return[];let[n,i]=t,a=[];if(!l.TextUtils.isText(n))return a;let[s]=l.EditorUtils.node(e,l.PathUtils.parent(i));return l.NodeUtils.isType(s,\"applicationCommand\")?(n===s.children[0]&&a.push({anchor:{path:i,offset:0},focus:{path:i,offset:0+s.command.displayName.length+1},commandName:!0}),a):a}"
-    }
-}

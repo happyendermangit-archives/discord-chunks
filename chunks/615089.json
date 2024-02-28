@@ -1,0 +1,72 @@
+{
+    "exports": {
+        "default": [
+            {
+                "id": "-16",
+                "name": "gif",
+                "displayName": "gif",
+                "type": 1,
+                "inputType": 2,
+                "applicationId": "-1",
+                "description": "Search Animated GIFs on the Web",
+                "displayDescription": "Search Animated GIFs on the Web",
+                "options": [
+                    {
+                        "name": "query",
+                        "displayName": "query",
+                        "type": 3,
+                        "description": "Search for a GIF",
+                        "displayDescription": "Search for a GIF",
+                        "required": true
+                    }
+                ],
+                "integrationType": "GIF",
+                "integrationTitle": "Gif"
+            },
+            {
+                "id": "-9",
+                "name": "tenor",
+                "displayName": "tenor",
+                "type": 1,
+                "inputType": 2,
+                "applicationId": "-1",
+                "description": "Search Animated GIFs on the Web",
+                "displayDescription": "Search Animated GIFs on the Web",
+                "options": [
+                    {
+                        "name": "query",
+                        "displayName": "query",
+                        "type": 3,
+                        "description": "Search for a GIF",
+                        "displayDescription": "Search for a GIF",
+                        "required": true
+                    }
+                ],
+                "integrationType": "GIF",
+                "integrationTitle": "Tenor"
+            },
+            {
+                "id": "-15",
+                "name": "leave",
+                "displayName": "leave",
+                "type": 1,
+                "inputType": 0,
+                "applicationId": "-1",
+                "description": "Leave Group",
+                "displayDescription": "Leave Group",
+                "options": [
+                    {
+                        "name": "silent",
+                        "displayName": "silent",
+                        "type": 5,
+                        "description": "silent",
+                        "displayDescription": "Leave without notifying other members",
+                        "required": false
+                    }
+                ],
+                "predicate": "e=>{let{channel:t}=e;return t.isGroupDM()}",
+                "execute": "(e,t)=>{let{channel:n}=t,a=(0,d.computeChannelName)(n,f.default,c.default),s=E.default.Messages.LEAVE_GROUP_DM_TITLE.format({name:a}),u=E.default.Messages.LEAVE_GROUP_DM_BODY.format({name:a}),p=e.find(e=>\"silent\"===e.name)?.value??!1;async function m(){try{await r.default.closePrivateChannel(n.id,void 0,p)}catch(e){o.default.sendBotMessage(n.id,E.default.Messages.LEAVE_GROUP_DM_ERROR)}}n.isManaged()&&(s=E.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({name:a}),u=E.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({name:a})),(0,l.openModal)(e=>(0,i.jsx)(l.ConfirmModal,{header:s,confirmText:E.default.Messages.LEAVE_GROUP_DM,cancelText:E.default.Messages.CANCEL,onConfirm:m,...e,children:(0,i.jsx)(l.Text,{variant:\"text-md/normal\",children:u})}))}"
+            }
+        ]
+    }
+}

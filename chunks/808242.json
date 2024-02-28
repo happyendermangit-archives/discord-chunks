@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "(e,t)=>function(n,i,r){return new Promise(o=>{e.dispatch({type:t,event:n,properties:i,flush:r?.flush??!1,fingerprint:r?.fingerprint,resolve:o})})}"
+    }
+}

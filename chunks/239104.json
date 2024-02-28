@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "default": {
+            "isInitialized": true,
+            "isEnabled": "isEnabled(){return(0,o.isDesktop)()&&(0,o.isMac)()&&!a.ProcessArgs.isDiscordTestSet()}",
+            "_initialize": "_initialize(){this.isEnabled()&&i.default.subscribe(\"AUDIO_SET_MODE\",this.handleAudioSetMode)}",
+            "_terminate": "_terminate(){this.isEnabled()&&i.default.unsubscribe(\"AUDIO_SET_MODE\",this.handleAudioSetMode)}",
+            "handleAudioSetMode": "handleAudioSetMode(e){let{mode:t}=e;t===_.InputModes.PUSH_TO_TALK&&n(\"812554\").default.requestPermission(s.NativePermissionTypes.INPUT_MONITORING)}"
+        }
+    }
+}

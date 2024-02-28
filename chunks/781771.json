@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "default": {
+            "buttonLabel": "Zobraziť návrhy",
+            "countAnnouncement": "(e,t)=>`${t.plural(e.optionCount,{one:()=>`${t.number(e.optionCount)} mo\\u{17E}nos\\u{165}`,other:()=>`${t.number(e.optionCount)} mo\\u{17E}nosti/-\\xed`})} k dispoz\\xedcii.`",
+            "focusAnnouncement": "(e,t)=>`${t.select({true:()=>`Zadan\\xe1 skupina ${e.groupTitle}, s ${t.plural(e.groupCount,{one:()=>`${t.number(e.groupCount)} mo\\u{17E}nos\\u{165}ou`,other:()=>`${t.number(e.groupCount)} mo\\u{17E}nos\\u{165}ami`})}. `,other:\"\"},e.isGroupChange)}${e.optionText}${t.select({true:`, vybrat\\xe9`,other:\"\"},e.isSelected)}`",
+            "listboxLabel": "Návrhy",
+            "selectedAnnouncement": "e=>`${e.optionText}, vybrat\\xe9`"
+        }
+    }
+}

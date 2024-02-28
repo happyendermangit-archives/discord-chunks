@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "Disposable": "function e(t){a(this,e),s(this,\"isDisposed\",!1),s(this,\"action\",void 0),this.action=(0,r.isFunction)(t)?t:r.noop}",
-        "CompositeDisposable": "function e(){a(this,e),s(this,\"isDisposed\",!1),s(this,\"disposables\",void 0);for(var t=arguments.length,n=Array(t),r=0;r<t;r++)n[r]=arguments[r];this.disposables=n}",
-        "SerialDisposable": "function e(){a(this,e),s(this,\"isDisposed\",!1),s(this,\"current\",void 0)}"
-    }
-}

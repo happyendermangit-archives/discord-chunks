@@ -1,0 +1,42 @@
+{
+    "exports": {
+        "SPOTIFY_APP_PROTOCOL": "spotify",
+        "SPOTIFY_HOSTNAMES": [
+            "open.spotify.com",
+            "www.spotify.com"
+        ],
+        "SPOTIFY_PARTY_PREFIX": "spotify:",
+        "SPOTIFY_PLATFORM_NAME": "Spotify",
+        "SpotifyActionTypes": {
+            "USER_ACTIVITY_PLAY": "user_activity_play",
+            "USER_ACTIVITY_SYNC": "user_activity_sync",
+            "EMBED_SYNC": "embed_sync"
+        },
+        "SpotifyEndpoints": {
+            "PROFILE": "https://api.spotify.com/v1/me",
+            "NOTIFICATIONS_PLAYER": "https://api.spotify.com/v1/me/notifications/player",
+            "PLAYER": "https://api.spotify.com/v1/me/player",
+            "PLAYER_DEVICES": "https://api.spotify.com/v1/me/player/devices",
+            "PLAYER_PLAY": "https://api.spotify.com/v1/me/player/play",
+            "PLAYER_PAUSE": "https://api.spotify.com/v1/me/player/pause",
+            "PLAYER_REPEAT": "https://api.spotify.com/v1/me/player/repeat",
+            "WEB_OPEN": "function(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:\"desktop\";return`https://open.spotify.com/${encodeURIComponent(e)}/${encodeURIComponent(t)}${h(n)}`}",
+            "EMBED": "function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:\"desktop\";return`https://open.spotify.com/embed${e}${h(t)}`}",
+            "PLAYER_OPEN": "function(e,t){let n=!(arguments.length>2)||void 0===arguments[2]||arguments[2],s=arguments.length>3&&void 0!==arguments[3]?arguments[3]:\"desktop\";return`${l}:${encodeURIComponent(e)}:${encodeURIComponent(t)}${n?h(s):\"\"}`}",
+            "PREMIUM_SITE": "https://www.spotify.com/premium/?utm_source=discord&utm_medium=desktop",
+            "INSTALL_ATTRIBUTION": "e=>`https://app.adjust.com/bdyga9?campaign=${e}`",
+            "APP_STORE": "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
+            "IOS_APP_STORE": "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
+        },
+        "SpotifyResourceTypes": {
+            "TRACK": "track",
+            "ARTIST": "artist",
+            "ALBUM": "album",
+            "PLAYLIST": "playlist",
+            "EPISODE": "episode",
+            "SHOW": "show"
+        },
+        "getSpotifyResourceType": "function p(e){if(\"string\"!=typeof e)return null;switch(e){case\"track\":return\"track\";case\"artist\":return\"artist\";case\"album\":return\"album\";case\"playlist\":return\"playlist\";case\"episode\":return\"episode\";case\"show\":return\"show\";default:return null}}",
+        "isSpotifyParty": "function c(e){return null!=e&&e.startsWith(f)}"
+    }
+}

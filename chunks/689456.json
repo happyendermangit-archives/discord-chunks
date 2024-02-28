@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "maybeFetchTopEmojisByGuild": "function a(e){if(null==e||null==i.default.getCurrentUser())return;let t=s.default.getTopEmojisMetadata(e);if(null!=t){let{topEmojisTTL:e}=t;if(null==e||Date.now()<e)return}!r.default.getIsFetching(e)&&(0,u.fetchTopEmojis)(e)}"
+    }
+}

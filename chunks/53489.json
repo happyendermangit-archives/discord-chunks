@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r){if(!delete t[r])throw i(\"Cannot delete property \"+e(r)+\" of \"+e(t))}"
-}

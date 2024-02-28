@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "DayPeriodParser": "function h(){var e;!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,h);for(var t=arguments.length,n=Array(t),r=0;r<t;r++)n[r]=arguments[r];return c(u(e=p.call.apply(p,[this].concat(n))),\"priority\",80),c(u(e),\"incompatibleTokens\",[\"a\",\"b\",\"t\",\"T\"]),e}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function m(e,l,n,s){(0,u.handleRsvp)({eventId:e,recurrenceId:l,guildId:n,updateRsvp:(l,t,s,a)=>i.default.updateRsvp(e,t,n,a),openRsvpPicker:(e,l)=>{(0,a.openModalLazy)(()=>Promise.resolve(a=>(0,t.jsx)(c,{...a,event:e,recurrenceId:l,guildId:n,onRsvp:s})))},onRsvp:s})}"
-    }
-}

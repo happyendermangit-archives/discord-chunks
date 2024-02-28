@@ -1,0 +1,5 @@
+{
+    "exports": "function(e){return function(){var t=this,n=arguments;return new Promise(function(a,o){var i=e.apply(t,n);function u(e){r(i,a,o,u,s,\"next\",e)}function s(e){r(i,a,o,u,s,\"throw\",e)}u(void 0)})}}",
+    "paths": [],
+    "children": []
+}

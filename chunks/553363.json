@@ -1,3 +1,0 @@
-{
-    "exports": "function a(e){if(!(this instanceof a))throw TypeError(\"Constructor PseudoMap requires 'new'\");if(this.clear(),e){if(e instanceof a||\"function\"==typeof Map&&e instanceof Map)e.forEach(function(e,t){this.set(t,e)},this);else if(Array.isArray(e))e.forEach(function(e){this.set(e[0],e[1])},this);else throw TypeError(\"invalid argument\")}}"
-}

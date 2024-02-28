@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useListState": "function u(e){let{filter:t}=e,n=(0,a.useMultipleSelectionState)(e),u=(0,r.useMemo)(()=>e.disabledKeys?new Set(e.disabledKeys):new Set,[e.disabledKeys]),s=(0,r.useCallback)(e=>new i(t?t(e):e),[t]),l=(0,r.useMemo)(()=>({suppressTextValueWarning:e.suppressTextValueWarning}),[e.suppressTextValueWarning]),c=(0,o.useCollection)(e,s,l),d=(0,r.useMemo)(()=>new a.SelectionManager(c,n),[c,n]),f=(0,r.useRef)(null);return(0,r.useEffect)(()=>{if(null!=n.focusedKey&&!c.getItem(n.focusedKey)){let e;let t=f.current.getItem(n.focusedKey),r=[...f.current.getKeys()].map(e=>{let t=f.current.getItem(e);return\"item\"===t.type?t:null}).filter(e=>null!==e),a=[...c.getKeys()].map(e=>{let t=c.getItem(e);return\"item\"===t.type?t:null}).filter(e=>null!==e),o=r.length-a.length,i=Math.min(o>1?Math.max(t.index-o+1,0):t.index,a.length-1);for(;i>=0;){if(!d.isDisabled(a[i].key)){e=a[i];break}i<a.length-1?i++:(i>t.index&&(i=t.index),i--)}n.setFocusedKey(e?e.key:null)}f.current=c},[c,d,n,n.focusedKey]),{collection:c,disabledKeys:u,selectionManager:d}}"
+    }
+}

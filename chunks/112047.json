@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return!(!i(t)||o(t))&&(e(t)?p:c).test(u(t))}"
-}

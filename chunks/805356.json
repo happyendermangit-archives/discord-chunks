@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": "function _(e){let t=c(e);return i()(null!=t,\"Result cannot be null because the message is not null\"),t}",
+        "getMessageAuthor": "function g(e){let t=a.default.getChannel(e.channel_id);return h(e.author,t)}",
+        "getUserAuthor": "function h(e,t){let n=e?.id,s=t?.guild_id,i=u.default.getGuild(s),r=null==s||null==n?null:o.default.getMember(s,n),a=null!=n&&null!=t&&t.isPrivate()?d.default.getNickname(n):null;return E({user:e,channel:t,guild:i,member:r,friendNickname:a})}",
+        "useNullableMessageAuthor": "function c(e){let t=(0,r.useStateFromStores)([a.default],()=>null==e?null:a.default.getChannel(e.channel_id)),n=e?.author?.id,s=t?.guild_id,i=(0,r.useStateFromStores)([o.default],()=>null==s||null==n?null:o.default.getMember(s,n)),_=(0,r.useStateFromStores)([l.default],()=>l.default.getUser(n),[n]),c=f.default.useName(e?.author.bot?e?.author:_),g=(0,r.useStateFromStores)([u.default],()=>u.default.getGuild(s)),m=(0,r.useStateFromStores)([d.default],()=>null!=n&&t?.isPrivate()?d.default.getNickname(n):null);return null==e?null:E({user:e.author,channel:t,guild:g,userName:c,member:i,friendNickname:m})}",
+        "useNullableUserAuthor": "function m(e,t){let n=e?.id,s=t?.guild_id,i=(0,r.useStateFromStores)([o.default],()=>null==s||null==n?null:o.default.getMember(s,n)),a=(0,r.useStateFromStores)([u.default],()=>u.default.getGuild(s)),l=(0,r.useStateFromStores)([d.default],()=>null!=n&&t?.isPrivate()?d.default.getNickname(n):null),_=f.default.useName(e);return E({user:e,channel:t,guild:a,member:i,userName:_,friendNickname:l})}"
+    }
+}

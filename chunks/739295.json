@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "getApplicationSubscriptionGroupListingsForApplication": "async(t,e)=>{let n=await u.default.get({url:l.Endpoints.APPLICATION_SUBSCRIPTION_GROUP_LISTING(t,e)});return n.body}",
-        "getEntitlementsForGuild": "async function(t){let e=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=await u.default.get({url:l.Endpoints.GUILD_ENTITLEMENTS(t),query:{with_sku:!0,with_application:!0,exclude_deleted:e}});return n.body}",
-        "getSubscriptionGroupForSubscriptionPlan": "async t=>{let e=await u.default.get({url:l.Endpoints.SUBSCRIPTION_PLAN_GROUP_LISTING(t)});return e.body}",
-        "fetchApplication": "function c(t){return i.default.dispatch({type:\"APPLICATION_FETCH\",applicationId:t}),u.default.get({url:l.Endpoints.APPLICATION_PUBLIC(t)}).then(t=>(i.default.dispatch({type:\"APPLICATION_FETCH_SUCCESS\",application:t.body}),t.body)).catch(e=>(i.default.dispatch({type:\"APPLICATION_FETCH_FAIL\",applicationId:t}),Promise.reject(new r.default(e))))}",
-        "fetchEligibleApplicationSubscriptionGuilds": "async function S(t){let e=await u.default.get({url:l.Endpoints.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,query:{application_id:t}});return e.body}"
-    }
-}

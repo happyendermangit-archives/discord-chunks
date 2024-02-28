@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "getUploadPayload": "function u(e){let t=e.item.file;return i()(null!=t,\"file data must not be empty\"),{filename:t.name,file_size:t.size,id:a().uniqueId(),is_clip:null!=e.clip,title:e.clip?.name,application_id:e.clip?.applicationId,clip_created_at:null!=e.clip?(0,o.getClipCreatedAt)(e.clip.id):void 0,clip_participant_ids:null!=e.clip?(0,o.getClipParticipantIds)(e.clip.users):void 0}}"
+        },
+        "getUploadPayload": "function u(e){let t=e.item.file;return i()(null!=t,\"file data must not be empty\"),{filename:t.name,file_size:t.size,id:a().uniqueId(),is_clip:null!=e.clip,title:e.clip?.name,application_id:e.clip?.applicationId,clip_created_at:null!=e.clip?(0,o.getClipCreatedAt)(e.clip.id):void 0,clip_participant_ids:null!=e.clip?(0,o.getClipParticipantIds)(e.clip.users):void 0}}"
+    }
+}

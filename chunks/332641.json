@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY": "(max-height: 450px)",
+        "RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY": "(max-width: 485px)"
+    }
+}

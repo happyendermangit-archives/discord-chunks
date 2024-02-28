@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getSourceClientOffset": "function a(e){var t,n,a=e.clientOffset,i=e.initialClientOffset,o=e.initialSourceClientOffset;if(!a||!i||!o)return null;return r((t=a,n=o,{x:t.x+n.x,y:t.y+n.y}),i)}",
-        "getDifferenceFromInitialOffset": "function i(e){var t=e.clientOffset,n=e.initialClientOffset;return t&&n?r(t,n):null}"
-    }
-}

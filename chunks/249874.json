@@ -1,0 +1,35 @@
+{
+    "exports": {
+        "default": {
+            "instance": {
+                "mode": null,
+                "applications": [],
+                "director": {
+                    "callback": "e=>this._onDirectorAction(e)",
+                    "active": false,
+                    "application": null,
+                    "onStreamBegin": "onStreamBegin(e,t){let a=(0,c.getInitialStreamTarget)(e,t);null==a||null==a.windowHandle?this.callback({type:\"stop\"}):this._stream(a)}",
+                    "onStreamKilled": "onStreamKilled(){this._kill()}",
+                    "onStreamEnd": "onStreamEnd(){this._stop()}",
+                    "onDetectionUpdate": "onDetectionUpdate(e){this._update(e)}",
+                    "onCaptureEnd": "onCaptureEnd(e,t){this.application?.windowHandle===t&&this._update(e)}",
+                    "onCaptureLegacyEnd": "onCaptureLegacyEnd(e){return this.application?.windowHandle!=null?this.onCaptureEnd(e,this.application.windowHandle):this._stop()}",
+                    "_update": "_update(e){let t=(0,c.getStreamTarget)(e,this.application);if(null!=t)return null==t.windowHandle?this._pause():this._stream(t);this._stop()}",
+                    "_stream": "_stream(e){let t=this.application?.windowHandle!==e.windowHandle;this.active=!0,this.application=Object.assign({},e),t&&this.callback({type:\"stream\",sourceId:`window:${this.application.windowHandle}`})}",
+                    "_kill": "_kill(){this.active=!1,this.application=null}",
+                    "_stop": "_stop(){this.active&&(this._kill(),this.callback({type:\"stop\"}))}",
+                    "_pause": "_pause(){this.active&&(this.application.windowHandle=null,this.callback({type:\"pause\"}))}"
+                },
+                "_onGameDetectionUpdate": "_onGameDetectionUpdate(e){this.applications=e.map(e=>({applicationId:e.id??null,processId:e.pid,processPath:e.pidPath,windowHandle:e.windowHandle??null,executableName:e.exeName})),\"verbatim-source\"!==this.mode&&this.director.onDetectionUpdate(this.applications)}",
+                "_onStreamApplication": "_onStreamApplication(e,t){this.mode=\"application\",this.streamKey=e,this.director.onStreamBegin(this.applications,t)}",
+                "_onStreamDirectSource": "_onStreamDirectSource(e,t,a,d){this.mode=\"verbatim-source\",this.streamKey=e,this._onDirectorAction({type:o.StreamDirectorActionType.STREAM,sourceId:t,audioSourceId:a,sound:d})}",
+                "_onStreamEnd": "_onStreamEnd(e){if(this.streamKey===e)switch(this.streamKey=null,this.mode){case\"application\":this.director.onStreamEnd();break;case\"verbatim-source\":this._onDirectorAction({type:o.StreamDirectorActionType.STOP});break;default:throw Error(`unknown streaming mode: ${this.mode??\"(none)\"}`)}}",
+                "_onStreamKilled": "_onStreamKilled(e){if(this.streamKey===e)switch(this.streamKey=null,this.mode){case\"application\":this.director.onStreamKilled();break;case\"verbatim-source\":break;default:throw Error(`unknown streaming mode: ${this.mode??\"(none)\"}`)}}",
+                "_onDirectorAction": "_onDirectorAction(e){let t=r.default.getCurrentUserActiveStream(),a=f.default.getState();switch(e.type){case o.StreamDirectorActionType.STREAM:if(null!=t&&(0,c.setStreamPaused)(t,!1),e.sourceId.startsWith(\"camera\")&&null!=e.audioSourceId){let t=e.sourceId.split(\":\")[1];n.default.setGoLiveSource({cameraSettings:{videoDeviceGuid:t,audioDeviceGuid:e.audioSourceId},qualityOptions:{preset:a.preset,resolution:a.resolution,frameRate:a.fps},context:h.MediaEngineContextTypes.STREAM})}else n.default.setGoLiveSource({desktopSettings:{sourceId:e.sourceId,sound:e.sound??!0},qualityOptions:{preset:a.preset,resolution:a.resolution,frameRate:a.fps},context:h.MediaEngineContextTypes.STREAM});break;case o.StreamDirectorActionType.PAUSE:null!=t&&(0,c.setStreamPaused)(t,!0);break;case o.StreamDirectorActionType.STOP:null!=t&&(0,u.default)(t);break;default:throw Error(`unhandled stream action: ${e.type}`)}}",
+                "_onCapturePaused": "_onCapturePaused(e){let t=r.default.getCurrentUserActiveStream();null!=t&&(0,c.setStreamPaused)(t,e)}",
+                "_onCaptureEnded": "_onCaptureEnded(){switch(this.mode){case\"application\":this._onCapturePaused(!0);break;case\"verbatim-source\":null!=this.streamKey&&this._onStreamEnd(this.streamKey);break;default:throw Error(`unknown streaming mode: ${this.mode??\"(none)\"}`)}}"
+            },
+            "init": "init(){null==this.instance&&(this.instance=new p)}"
+        }
+    }
+}

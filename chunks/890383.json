@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "render": "(e,t)=>((0,R.useFetchStickerPacks)(),(0,i.jsx)(\"div\",{className:G.wrapper,id:w.STICKER_PICKER_TAB_PANEL_ID,\"aria-labelledby\":w.STICKER_PICKER_TAB_ID,role:\"tabpanel\",children:e.isLoading?(0,i.jsx)(d.Spinner,{className:G.loadingIndicator}):(0,i.jsx)(Q,{...e,ref:t})}))"
+        }
+    }
+}

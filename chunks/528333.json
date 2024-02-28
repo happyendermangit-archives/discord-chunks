@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "CTAType": {
+            "0": "CONTINUE",
+            "1": "UPGRADE",
+            "2": "PURCHASE",
+            "CONTINUE": 0,
+            "UPGRADE": 1,
+            "PURCHASE": 2
+        },
+        "default": "e=>{let{onBack:t,backText:n,primaryIcon:i,primaryCTA:a,primaryType:f,primaryText:p,primaryTooltip:m,primaryDisabled:h,primarySubmitting:E,onPrimary:_,secondaryText:I,onSecondary:C}=e;return(0,s.jsxs)(l.ModalFooter,{justify:r.default.Justify.BETWEEN,align:r.default.Align.CENTER,children:[(()=>{if(null==a||null==p)return null;let e=2===a?o.default:l.Button,t={innerClassName:c.button,type:f,disabled:h,submitting:E,color:0===a?l.Button.Colors.BRAND:l.Button.Colors.GREEN,onClick:_};return null!=m?(0,s.jsx)(l.Tooltip,{text:m,children:n=>(0,s.jsxs)(e,{...n,...t,children:[null==i?null:(0,s.jsx)(i,{className:c.primaryIcon}),p]})}):(0,s.jsxs)(e,{...t,children:[null==i?null:(0,s.jsx)(i,{className:c.primaryIcon}),p]})})(),null==I?null:(0,s.jsx)(l.Button,{color:l.Button.Colors.PRIMARY,look:l.Button.Looks.LINK,onClick:C,children:I}),(0,s.jsx)(u.default,{}),null==t?null:(0,s.jsx)(l.Button,{className:c.back,color:l.Button.Colors.PRIMARY,look:l.Button.Looks.LINK,onClick:t,children:n??d.default.Messages.BACK})]})}"
+    }
+}

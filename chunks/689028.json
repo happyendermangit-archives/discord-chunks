@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "isVersionEqual": "function n(e,t){let[,r]=e,[,n]=t;return r===n}"
+    }
+}

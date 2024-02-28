@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class a{static getSync(e,t){let n=performance.now(),i=r.default.channels(e).getManySyncUnsafe(t),a=performance.now()-n;return o.log(`synchronously loaded in ${a}ms (guild: ${t}, channels: ${i.length})`),[i,a]}static async getAsync(e,t){let n=performance.now(),i=await r.default.channels(e).getMany(t),a=performance.now()-n;return o.verbose(`loaded in ${a}ms (guild: ${t}, channels: ${i.length})`),i}static async getGuildIds(){try{let e=r.default.channels();if(null==e)return new Set;let t=(await e.getGuildIds()??[]).filter(e=>null!==e&&\"string\"==typeof e);return new Set(t)}catch(e){return o.warn(\"couldn't get guild ids\",e),new Set}}}"
+    }
+}

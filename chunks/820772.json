@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "validateOptionContent": "function o(e){let{option:t,content:n,guildId:o,channelId:u,allowEmptyValues:d,commandOrigin:c=a.CommandOrigin.CHAT}=e,f=null!=n?(0,i.getString)({content:n},\"content\").trim():\"\",p=t.required,m=\"\"===f;if(!(null!=n))return p?{success:!1,error:r.default.Messages.COMMAND_VALIDATION_REQUIRED_ERROR}:{success:!0};if(m)return d?{success:!0}:p?{success:!1,error:r.default.Messages.COMMAND_VALIDATION_REQUIRED_ERROR}:{success:!1,error:(0,l.getValidationErrorText)(t)};let h=n.length>1?{type:\"text\",text:f}:n[0],E=(0,s.default)[t.type](h,t,u,o,c);return!E.success&&null==E.error&&(E.error=(0,l.getValidationErrorText)(t)),E}"
+    }
+}

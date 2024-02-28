@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "makeBrowserOfflineTransport": "function c(t){var e;return e=(0,r.makeOfflineTransport)(t),t=>e({...t,createStore:o})}"
-    }
-}

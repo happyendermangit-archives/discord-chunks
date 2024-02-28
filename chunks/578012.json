@@ -1,0 +1,71 @@
+{
+    "exports": {
+        "BinaryReader": "class s{constructor(e,t){this.varint64=o.varint64read,this.uint32=o.varint32read,this.buf=e,this.len=e.length,this.pos=0,this.view=new DataView(e.buffer,e.byteOffset,e.byteLength),this.textDecoder=null!=t?t:new TextDecoder(\"utf-8\",{fatal:!0,ignoreBOM:!0})}tag(){let e=this.uint32(),t=e>>>3,n=7&e;if(t<=0||n<0||n>5)throw Error(\"illegal tag: field no \"+t+\" wire type \"+n);return[t,n]}skip(e){let t=this.pos;switch(e){case r.WireType.Varint:for(;128&this.buf[this.pos++];);break;case r.WireType.Bit64:this.pos+=4;case r.WireType.Bit32:this.pos+=4;break;case r.WireType.LengthDelimited:let n=this.uint32();this.pos+=n;break;case r.WireType.StartGroup:let a;for(;(a=this.tag()[1])!==r.WireType.EndGroup;)this.skip(a);break;default:throw Error(\"cant skip wire type \"+e)}return this.assertBounds(),this.buf.subarray(t,this.pos)}assertBounds(){if(this.pos>this.len)throw RangeError(\"premature EOF\")}int32(){return 0|this.uint32()}sint32(){let e=this.uint32();return e>>>1^-(1&e)}int64(){return new a.PbLong(...this.varint64())}uint64(){return new a.PbULong(...this.varint64())}sint64(){let[e,t]=this.varint64(),n=-(1&e);return e=(e>>>1|(1&t)<<31)^n,t=t>>>1^n,new a.PbLong(e,t)}bool(){let[e,t]=this.varint64();return 0!==e||0!==t}fixed32(){return this.view.getUint32((this.pos+=4)-4,!0)}sfixed32(){return this.view.getInt32((this.pos+=4)-4,!0)}fixed64(){return new a.PbULong(this.sfixed32(),this.sfixed32())}sfixed64(){return new a.PbLong(this.sfixed32(),this.sfixed32())}float(){return this.view.getFloat32((this.pos+=4)-4,!0)}double(){return this.view.getFloat64((this.pos+=8)-8,!0)}bytes(){let e=this.uint32(),t=this.pos;return this.pos+=e,this.assertBounds(),this.buf.subarray(t,t+e)}string(){return this.textDecoder.decode(this.bytes())}}",
+        "LongType": {
+            "0": "BIGINT",
+            "1": "STRING",
+            "2": "NUMBER",
+            "BIGINT": 0,
+            "STRING": 1,
+            "NUMBER": 2
+        },
+        "MessageType": "class y{constructor(e,t,n){this.defaultCheckDepth=16,this.typeName=e,this.fields=t.map(r.normalizeFieldInfo),this.options=null!=n?n:{},this.refTypeCheck=new a.ReflectionTypeCheck(this),this.refJsonReader=new o.ReflectionJsonReader(this),this.refJsonWriter=new i.ReflectionJsonWriter(this),this.refBinReader=new u.ReflectionBinaryReader(this),this.refBinWriter=new s.ReflectionBinaryWriter(this)}create(e){let t=(0,l.reflectionCreate)(this);return void 0!==e&&(0,c.reflectionMergePartial)(this,t,e),t}clone(e){let t=this.create();return(0,c.reflectionMergePartial)(this,t,e),t}equals(e,t){return(0,p.reflectionEquals)(this,e,t)}is(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:this.defaultCheckDepth;return this.refTypeCheck.is(e,t,!1)}isAssignable(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:this.defaultCheckDepth;return this.refTypeCheck.is(e,t,!0)}mergePartial(e,t){(0,c.reflectionMergePartial)(this,e,t)}fromBinary(e,t){let n=(0,m.binaryReadOptions)(t);return this.internalBinaryRead(n.readerFactory(e),e.byteLength,n)}fromJson(e,t){return this.internalJsonRead(e,(0,f.jsonReadOptions)(t))}fromJsonString(e,t){let n=JSON.parse(e);return this.fromJson(n,t)}toJson(e,t){return this.internalJsonWrite(e,(0,f.jsonWriteOptions)(t))}toJsonString(e,t){var n;return JSON.stringify(this.toJson(e,t),null,null!==(n=null==t?void 0:t.prettySpaces)&&void 0!==n?n:0)}toBinary(e,t){let n=(0,h.binaryWriteOptions)(t);return this.internalBinaryWrite(e,n.writerFactory(),n).finish()}internalJsonRead(e,t,n){if(null!==e&&\"object\"==typeof e&&!Array.isArray(e)){let r=null!=n?n:this.create();return this.refJsonReader.read(e,r,t),r}throw Error(`Unable to parse message ${this.typeName} from JSON ${(0,d.typeofJsonValue)(e)}.`)}internalJsonWrite(e,t){return this.refJsonWriter.write(e,t)}internalBinaryWrite(e,t,n){return this.refBinWriter.write(e,t,n),t}internalBinaryRead(e,t,n,r){let a=null!=r?r:this.create();return this.refBinReader.read(e,a,n,t),a}}",
+        "PbLong": "class l extends u{static from(e){if(a)switch(typeof e){case\"string\":if(\"0\"==e)return this.ZERO;if(\"\"==e)throw Error(\"string is no integer\");e=a.C(e);case\"number\":if(0===e)return this.ZERO;e=a.C(e);case\"bigint\":if(!e)return this.ZERO;if(e<a.MIN)throw Error(\"ulong too small\");if(e>a.MAX)throw Error(\"ulong too large\");return a.V.setBigInt64(0,e,!0),new l(a.V.getInt32(0,!0),a.V.getInt32(4,!0))}else switch(typeof e){case\"string\":if(\"0\"==e)return this.ZERO;if(e=e.trim(),!i.test(e))throw Error(\"string is no integer\");let[t,n,o]=(0,r.int64fromString)(e),u=new l(n,o);return t?u.negate():u;case\"number\":if(0==e)return this.ZERO;if(!Number.isSafeInteger(e))throw Error(\"number is no integer\");return e>0?new l(e,e/4294967296):new l(-e,-e/4294967296).negate()}throw Error(\"unknown value \"+typeof e)}isNegative(){return(2147483648&this.hi)!=0}negate(){let e=~this.hi,t=this.lo;return t?t=~t+1:e+=1,new l(t,e)}toString(){if(a)return this.toBigInt().toString();if(this.isNegative()){let e=this.negate();return\"-\"+(0,r.int64toString)(e.lo,e.hi)}return(0,r.int64toString)(this.lo,this.hi)}toBigInt(){return o(a),a.V.setInt32(0,this.lo,!0),a.V.setInt32(4,this.hi,!0),a.V.getBigInt64(0,!0)}}",
+        "ScalarType": {
+            "1": "DOUBLE",
+            "2": "FLOAT",
+            "3": "INT64",
+            "4": "UINT64",
+            "5": "INT32",
+            "6": "FIXED64",
+            "7": "FIXED32",
+            "8": "BOOL",
+            "9": "STRING",
+            "12": "BYTES",
+            "13": "UINT32",
+            "15": "SFIXED32",
+            "16": "SFIXED64",
+            "17": "SINT32",
+            "18": "SINT64",
+            "DOUBLE": 1,
+            "FLOAT": 2,
+            "INT64": 3,
+            "UINT64": 4,
+            "INT32": 5,
+            "FIXED64": 6,
+            "FIXED32": 7,
+            "BOOL": 8,
+            "STRING": 9,
+            "BYTES": 12,
+            "UINT32": 13,
+            "SFIXED32": 15,
+            "SFIXED64": 16,
+            "SINT32": 17,
+            "SINT64": 18
+        },
+        "UnknownFieldHandler": {
+            "onRead": "(n,r,a,o,i)=>{(t(r)?r[e.symbol]:r[e.symbol]=[]).push({no:a,wireType:o,data:i})}",
+            "onWrite": "(t,n,r)=>{for(let{no:t,wireType:a,data:o}of e.list(n))r.tag(t,a).raw(o)}",
+            "list": "(n,r)=>{if(t(n)){let t=n[e.symbol];return r?t.filter(e=>e.no==r):t}return[]}",
+            "last": "(t,n)=>e.list(t,n).slice(-1)[0]"
+        },
+        "WireType": {
+            "0": "Varint",
+            "1": "Bit64",
+            "2": "LengthDelimited",
+            "3": "StartGroup",
+            "4": "EndGroup",
+            "5": "Bit32",
+            "Varint": 0,
+            "Bit64": 1,
+            "LengthDelimited": 2,
+            "StartGroup": 3,
+            "EndGroup": 4,
+            "Bit32": 5
+        },
+        "base64decode": "function o(e){let t=3*e.length/4;\"=\"==e[e.length-2]?t-=2:\"=\"==e[e.length-1]&&(t-=1);let n=new Uint8Array(t),r=0,o=0,i,u=0;for(let t=0;t<e.length;t++){if(void 0===(i=a[e.charCodeAt(t)]))switch(e[t]){case\"=\":o=0;case\"\\n\":case\"\\r\":case\"\t\":case\" \":continue;default:throw Error(\"invalid base64 string.\")}switch(o){case 0:u=i,o=1;break;case 1:n[r++]=u<<2|(48&i)>>4,u=i,o=2;break;case 2:n[r++]=(15&u)<<4|(60&i)>>2,u=i,o=3;break;case 3:n[r++]=(3&u)<<6|i,o=0}}if(1==o)throw Error(\"invalid base64 string.\");return n.subarray(0,r)}",
+        "base64encode": "function i(e){let t=\"\",n=0,a,o=0;for(let i=0;i<e.length;i++)switch(a=e[i],n){case 0:t+=r[a>>2],o=(3&a)<<4,n=1;break;case 1:t+=r[o|a>>4],o=(15&a)<<2,n=2;break;case 2:t+=r[o|a>>6]+r[63&a],n=0}return n&&(t+=r[o]+\"=\",1==n&&(t+=\"=\")),t}",
+        "reflectionMergePartial": "function r(e,t,n){let r,a;for(let o of e.fields){let e=o.localName;if(o.oneof){let i=n[o.oneof];if((null==i?void 0:i.oneofKind)==void 0)continue;if(r=i[e],(a=t[o.oneof]).oneofKind=i.oneofKind,void 0==r){delete a[e];continue}}else if(r=n[e],a=t,void 0==r)continue;switch(o.repeat&&(a[e].length=r.length),o.kind){case\"scalar\":case\"enum\":if(o.repeat)for(let t=0;t<r.length;t++)a[e][t]=r[t];else a[e]=r;break;case\"message\":let i=o.T();if(o.repeat)for(let t=0;t<r.length;t++)a[e][t]=i.create(r[t]);else void 0===a[e]?a[e]=i.create(r):i.mergePartial(a[e],r);break;case\"map\":switch(o.V.kind){case\"scalar\":case\"enum\":Object.assign(a[e],r);break;case\"message\":let u=o.V.T();for(let t of Object.keys(r))a[e][t]=u.create(r[t])}}}}",
+        "typeofJsonValue": "function r(e){let t=typeof e;if(\"object\"==t){if(Array.isArray(e))return\"array\";if(null===e)return\"null\"}return t}"
+    }
+}

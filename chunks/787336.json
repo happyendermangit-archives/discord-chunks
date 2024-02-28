@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "isAttachmentUrl": "function p(e){return u.has(e.hostname)&&Array.from(d).some(t=>e.pathname.startsWith(t))}",
-        "removeSignedUrlParameters": "function f(e){let t=o.default.toURLSafe(e);if(null==t)return e;for(let e of[\"ex\",\"is\",\"hm\"])t.searchParams.delete(e);return t}",
-        "messageHasExpiredAttachmentUrl": "function T(e){return e.attachments.some(_)||e.embeds.some(C)}",
-        "maybeRefreshAttachmentUrl": "async function E(e){if(!r.AttachmentLinkRefreshExperiment.getCurrentConfig({location:\"link_clicked\"}).enabled)return e;let t=o.default.toURLSafe(e);if(null==t||!m(t))return e;let n=await A(e);return null!=n?n:e}"
-    }
-}

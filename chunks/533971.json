@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e){return i.from(t.toRed(r.mont(e.modulus)).redPow(new r(e.publicExponent)).fromRed().toArray())}"
-}

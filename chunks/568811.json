@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function y(e){let{guildId:t,channel:n,containerWidth:s,onClose:y,onSelect:S,analyticsSource:g,suppressPlaySound:x,shouldShowUpsell:T=!0,gridNotice:A,autoWidth:N=!1,soundButtonOverlay:O,listPadding:R,renderHeader:M,defaultSoundsOnly:v}=e,L=(0,o.useStateFromStores)([_.default],()=>_.default.isFetchingSounds()||_.default.isFetchingDefaultSounds()),P=(0,o.useStateFromStores)([h.default],()=>h.default.getMediaSessionId()),{AnalyticsLocationProvider:b}=(0,c.default)(d.default.SOUNDBOARD_POPOUT);return(0,f.default)({type:r.ImpressionTypes.POPOUT,name:r.ImpressionNames.SOUNDBOARD_POPOUT,properties:{source:g,guild_id:t,media_session_id:P}}),a.useEffect(()=>{E.maybeFetchSoundboardSounds(),m.FrecencyUserSettingsActionCreators.loadIfNecessary(),(0,p.setSearchQuery)(\"\")},[]),(0,i.jsx)(b,{children:(0,i.jsx)(\"div\",{className:l()(C.picker,{[C.fetching]:L,[C.autoWidth]:N}),children:L?(0,i.jsx)(u.Spinner,{}):(0,i.jsx)(I.default,{guildId:t,channel:n,onClose:y,onSelect:S,containerWidth:s,suppressPlaySound:x,shouldShowUpsell:T,gridNotice:A,soundButtonOverlay:O,listPadding:R,renderHeader:M,defaultSoundsOnly:v})})})}"
+    }
+}

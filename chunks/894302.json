@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "emojiEquals": "function l(e,t){if(null!=t.id){let n=null!=e.id?`${e.id}`:e.id;return`${t.id}`===n}return null==e.id&&t.name===e.name}",
+        "getAccessibleEmojiDisplayName": "function u(e,t,n,s){let i;return(i=s?e?a.default.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL:a.default.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL:e?a.default.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL:a.default.Messages.REACT_WITH_COUNT_A11Y_LABEL).format({reactions:t,emojiName:o(n)?.replace(/[:_]/g,\" \")?.trim()??\"\"})}",
+        "getBurstAnalyticsSection": "function f(e){if(e.isThread())return r.AnalyticsSections.THREAD_TEXT_AREA;if(e.isForumPost())return r.AnalyticsSections.FORUM_CHANNEL_TEXT_AREA;if(e.isGuildVocal())return r.AnalyticsSections.TEXT_IN_VOICE;return r.AnalyticsSections.CHANNEL_TEXT_AREA}",
+        "getReactionEmojiName": "function o(e){return null==e.id?s.default.convertSurrogateToName(e.name):`:${e.name}:`}",
+        "shouldApplyReaction": "function _(e){let{userId:t,optimistic:n}=e,s=i.default.getId()===t;return(!n||!!s)&&!0}",
+        "toReactionEmoji": "function d(e){return{id:e.id??null,name:(null!=e.id?e.name:e.optionallyDiverseSequence)??e.name??\"\",animated:!!e.animated}}"
+    }
+}

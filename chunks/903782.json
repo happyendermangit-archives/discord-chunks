@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "hasDomParent": "function a(e,t){if(null==t)return!1;for(;null!=e;){if(e===t)return!0;e=e.parentNode}return!1}",
-        "normalizeDOMPoint": "function s(e,t){let n,[l,i]=e;if(!o(l)||0===l.childNodes.length)return e;for(\"forward\"===t&&i===l.childNodes.length&&(t=\"backward\"),\"backward\"===t&&i--,[l,n]=r(l,i,t),\"forward\"===t&&n<i?t=\"backward\":\"backward\"===t&&n>i&&(t=\"forward\"),i=n;o(l)&&l.childNodes.length>0;){let e=\"backward\"===t?l.childNodes.length-1:0;l=r(l,e,t)[0]}let a=\"backward\"===t&&null!=l.textContent?l.textContent.length:0;return[l,a]}"
-    }
-}

@@ -1,0 +1,3 @@
+{
+    "exports": "function(e,t){return t.length<2?e:r(e,a(t,0,-1))}"
+}

@@ -1,3 +1,0 @@
-{
-    "exports": "function t(e,n,r){if(\"string\"!=typeof n){if(d){var i=p(n);i&&i!==d&&t(e,i,r)}var a=l(n);f&&(a=a.concat(f(n)));for(var u=s(e),v=s(n),y=0;y<a.length;++y){var m=a[y];if(!o[m]&&!(r&&r[m])&&!(v&&v[m])&&!(u&&u[m])){var g=h(n,m);try{c(e,m,g)}catch(t){}}}}return e}"
-}

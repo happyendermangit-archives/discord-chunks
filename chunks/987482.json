@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "millisecondsInMinute": 60000,
-        "millisecondsInHour": 3600000,
-        "millisecondsInSecond": 1000
-    }
-}

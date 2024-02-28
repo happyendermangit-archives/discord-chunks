@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "useFavoriteGIFs": "function u(){let e=(0,i.useFrecencySettings)();return e.favoriteGifs?.gifs??a}",
+        "useIsFavoriteGIF": "function c(e){return null!=u()[e]}",
+        "useSortedFavoriteGIFs": "function o(){let e=u();return s.useMemo(()=>l()(e).map((e,t)=>({...e,url:t})).sortBy(\"order\").reverse().value(),[e])}"
+    }
+}

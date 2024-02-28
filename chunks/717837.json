@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){return(e=String(e||\"\"),a.test(e))?\"rtl\":o.test(e)?\"ltr\":\"neutral\"}"
-}

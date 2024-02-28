@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "applyAggregateErrorsToEvent": "function a(t,e){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:250,a=arguments.length>3?arguments[3]:void 0,l=arguments.length>4?arguments[4]:void 0,u=arguments.length>5?arguments[5]:void 0,c=arguments.length>6?arguments[6]:void 0;if(!u.exception||!u.exception.values||!c||!(0,r.isInstanceOf)(c.originalException,Error))return;let d=u.exception.values.length>0?u.exception.values[u.exception.values.length-1]:void 0;d&&(u.exception.values=function(t,e){return t.map(t=>(t.value&&(t.value=(0,i.truncate)(t.value,e)),t))}(function t(e,n,i,a,l,u,c,d){if(u.length>=i+1)return u;let h=[...u];if((0,r.isInstanceOf)(a[l],Error)){s(c,d);let r=e(n,a[l]),u=h.length;o(r,l,u,d),h=t(e,n,i,a[l],l,[r,...h],r,u)}return Array.isArray(a.errors)&&a.errors.forEach((a,u)=>{if((0,r.isInstanceOf)(a,Error)){s(c,d);let r=e(n,a),f=h.length;o(r,`errors[${u}]`,f,d),h=t(e,n,i,a,l,[r,...h],r,f)}}),h}(t,e,l,c.originalException,a,u.exception.values,d,0),n))}"
+    }
+}

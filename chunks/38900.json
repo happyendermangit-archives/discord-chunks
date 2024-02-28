@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "Progress": "function I(e){let t,{className:n,percent:i,size:r=\"small\",foregroundColor:s=E.default.unsafe_rawColors.BRAND_500.css,backgroundColor:I=\"var(--background-modifier-active)\",foregroundGradientColor:T,animate:c=!0}=e,d=null!=i?i:0;return t=null!=T?{background:`linear-gradient(to right, ${T[0]}, ${T[1]})`}:{backgroundColor:s},(0,o.jsx)(\"div\",{className:_()(n,l.progress,l[r]),style:{backgroundColor:I},children:d!==u&&\"number\"==typeof d?(0,o.jsx)(\"div\",{className:_()(l.progressBar,l[r],{[l.animating]:c}),style:{transform:`translate3d(${Math.min(Math.max(0,d),100)-100}%, 0, 0)`,...t}}):(0,o.jsxs)(a.Fragment,{children:[(0,o.jsx)(\"div\",{className:_()(l.indeterminateBar1,l[r],{[l.animating]:c}),style:t}),(0,o.jsx)(\"div\",{className:_()(l.indeterminateBar2,l[r],{[l.animating]:c}),style:t})]})})}"
+    }
+}

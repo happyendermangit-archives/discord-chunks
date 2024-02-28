@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "ClickableContainer": "function s(e){let{tag:t=\"div\",children:n,className:s,focusProps:_,onClick:E,onDoubleClick:l,onContextMenu:u,onKeyDown:I,onFocus:T,onBlur:c,onMouseOver:d,onMouseDown:S,onMouseLeave:A,buttonProps:N,\"aria-label\":O}=e,R=r.useRef(null);return(0,i.jsxs)(t,{ref:R,className:s,onClick:E,onMouseOver:d,onMouseLeave:A,onDoubleClick:l,onContextMenu:u,children:[(0,i.jsx)(o.Clickable,{...N,focusProps:{ringTarget:R,..._},className:a.focusTarget,\"aria-label\":O,onClick:e=>{e.stopPropagation(),E?.(e)},onKeyDown:I,onFocus:T,onBlur:c,onMouseDown:S}),n]})}"
+    }
+}

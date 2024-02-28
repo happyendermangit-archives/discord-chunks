@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,e){for(var s=-1,r=Array(t);++s<t;)r[s]=e(s);return r}"
+}

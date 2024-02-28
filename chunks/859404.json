@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "createStickerPackCategory": "e=>({type:l.StickerCategoryTypes.PACK,id:e.id,name:e.name,stickers:e.stickers,previewSticker:T(e)})",
+        "getFilenameForSticker": "e=>null==e?null:`${e.name}.${S(e.format_type)}`",
+        "getMessageStickers": "e=>e.stickerItems.length>0?e.stickerItems:e.stickers.length>0?e.stickers:[]",
+        "getStickerAssetUrl": "function(e){let{isPreview:t=!1,size:n=f.DEFAULT_STICKER_DIMENSIONS}=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};if(null==e.format_type)return null;let s=_.Endpoints.STICKER_ASSET(e.id,S(e.format_type));if(\"development\"!==m){if(e.format_type===l.StickerFormat.LOTTIE)return`${location.protocol}${h}${s}`;let r=e.format_type===l.StickerFormat.APNG&&t&&!(0,u.isAndroid)()?\"&passthrough=false\":\"\",a=Math.min(2,(0,i.getDevicePixelRatio)());return`${location.protocol}${g}${s}?size=${(0,i.getBestMediaProxySize)(n*a)}${r}`}return`${location.protocol}${c}${s}`}",
+        "getStickerFormatTypeFromFileType": "e=>{switch(e){case\"application/json\":return l.StickerFormat.LOTTIE;case\"image/apng\":return l.StickerFormat.APNG;case\"image/png\":case\"image/webp\":return l.StickerFormat.PNG;case\"image/gif\":return l.StickerFormat.GIF;default:throw Error(`Unexpected file type: ${e}`)}}",
+        "getStickerPackBannerAssetUrl": "(e,t)=>{let n;let s=e.banner_asset_id;if(null==s)return null;let r=o.SUPPORTS_WEBP?\"webp\":\"png\";return n=null!=E?`${location.protocol}//${E}/app-assets/${f.STICKER_APPLICATION_ID}/store/${s}.${r}`:`${location.protocol}${c}${_.Endpoints.STORE_ASSET(f.STICKER_APPLICATION_ID,s,r)}`,null!=t&&(n+=`?size=${(0,i.getBestMediaProxySize)(t)}`),n}",
+        "getStickerPackPreviewSticker": "e=>{if(null!=e.cover_sticker_id){let t=e.stickers.find(t=>t.id===e.cover_sticker_id);if(null!=t)return t}return e.stickers[0]}",
+        "isAvailableGuildSticker": "e=>{if(null===e)return!1;let t=e.guild_id;return void 0!==r.default.getGuild(t)}",
+        "isGuildSticker": "e=>e.type===l.MetaStickerType.GUILD",
+        "isStandardSticker": "e=>e.type===l.MetaStickerType.STANDARD",
+        "isStickerAssetUrl": "e=>e.match(\"development\"!==m?y:I)",
+        "isStickerPackAnimated": "e=>e.stickers.some(e=>{let{format_type:t}=e;return t===l.StickerFormat.APNG||t===l.StickerFormat.LOTTIE||t===l.StickerFormat.GIF})",
+        "shouldAnimateSticker": "(e,t)=>e===f.StickerAnimationSettings.ANIMATE_ON_INTERACTION?t:e!==f.StickerAnimationSettings.NEVER_ANIMATE",
+        "shouldAttachSticker": "(e,t,n,i)=>{if(a.default.getUploadCount(n,i)>0)return!0;let r=d.default.getStickerPreview(n,i);if(null!=r&&r.length>0)return!0;switch(e){case l.StickerSelectLocation.STICKER_PICKER:return\"\"!==t.trim();case l.StickerSelectLocation.AUTOCOMPLETE:case l.StickerSelectLocation.EXPRESSION_SUGGESTIONS:return(0,s.getQueriesFromUserInput)(t).length>1;default:return!1}}"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "BackdropStyles": {
+            "SUBTLE": "SUBTLE",
+            "DARK": "DARK",
+            "BLUR": "BLUR"
+        },
+        "default": {
+            "render": "function(e,t){let{backdropStyle:n=\"SUBTLE\",backdropInstant:i=!1,zIndexBoost:r=0,LayerComponent:a,isVisible:s,onClose:T}=e,c=function(){let e=(0,l.useToken)(l.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({opacity:.25}),t=(0,l.useToken)(l.tokens.colors.BG_BACKDROP).spring();return{SUBTLE:e,DARK:t,BLUR:t}}()[n],d=(0,l.useToken)(l.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({opacity:0}),S={background:d,backdropFilter:\"blur(0px)\"},A={background:c,backdropFilter:`blur(${\"BLUR\"===n?8:0}px)`},N=(0,u.default)(i),O=(0,E.useTransition)(s,{keys:e=>e?\"backdrop\":\"empty\",config:{duration:i||N?0:300},from:S,enter:A,leave:S});if(null==a){let e={zIndex:1e3+r};return O((t,n)=>n?(0,o.jsx)(E.animated.div,{className:I.backdrop,style:{...t,...e},onClick:T}):null)}return(0,o.jsx)(a,{children:O((e,t)=>t?(0,o.jsx)(E.animated.div,{className:_()(I.backdrop,I.withLayer),style:e,onClick:T}):null)})}"
+        }
+    }
+}

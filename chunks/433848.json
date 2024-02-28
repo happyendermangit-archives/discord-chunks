@@ -1,0 +1,37 @@
+{
+    "exports": {
+        "MAX_TIMEOUT_FOR_JITTER": 800,
+        "MESSAGE_SCAN_TIMEOUT": 3000,
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "LOAD_MESSAGES_SUCCESS": "function H(e){let{channelId:t,messages:n}=e;if(!(0,v.isEligibleForExplicitMediaRedaction)()||null==t||null==n)return!1;let s=m.default.getChannelId(),i=_.default.getCurrentSidebarChannelId(s);return(t===s||t===i)&&G(n)}",
+                "LOAD_FORUM_POSTS": "function Y(e){let{guildId:t,threads:n}=e;return!!(null!=n&&(0,v.isEligibleForExplicitMediaRedaction)())&&h.default.getGuildId()===t&&G(E.default.keys(n).map(e=>n[e].first_message))}",
+                "LOAD_THREADS_SUCCESS": "function j(e){let{guildId:t,firstMessages:n}=e;return!!(null!=n&&(0,v.isEligibleForExplicitMediaRedaction)())&&h.default.getGuildId()===t&&G(n,{forceBatchScan:!0})}",
+                "LOAD_ARCHIVED_THREADS_SUCCESS": "function j(e){let{guildId:t,firstMessages:n}=e;return!!(null!=n&&(0,v.isEligibleForExplicitMediaRedaction)())&&h.default.getGuildId()===t&&G(n,{forceBatchScan:!0})}",
+                "MESSAGE_CREATE": "function B(e){let{channelId:t,message:n,optimistic:s,isPushNotification:i}=e;if(!(0,v.isEligibleForExplicitMediaRedaction)()||s||i||null==t||n.author?.id===f.default.getId())return!1;let r=m.default.getChannelId(),a=_.default.getCurrentSidebarChannelId(r),o=t===r||t===a,u=c.default.getChannel(t);if(!o)return!1;let d=u?.isPrivate()??!0,l=u?.memberCount==null||u?.memberCount>100;return G([n],{jitter:d&&l})}",
+                "MESSAGE_UPDATE": "function F(e){let{message:t}=e;if(!(0,v.isEligibleForExplicitMediaRedaction)()||null==t.channel_id||null==t.id||t.author?.id===f.default.getId()||null==t.embeds&&null==t.attachments)return!1;if(!V(t)){let e=g.default.getMessage(t.channel_id,t.id)??I.default.getMessage(t.id,t.channel_id)??l.default.getMessage(t.channel_id,t.id)?.message;null!=e&&!V((0,d.updateMessageRecord)(e,t))&&R(e,y.TimeoutCancelSource.UPDATE)}let n=m.default.getChannelId(),s=_.default.getCurrentSidebarChannelId(n);if(!(t.channel_id===n||t.channel_id===s))return!1;let i=g.default.getMessage(t.channel_id,t.id);return null!=i&&G([i])}",
+                "LOGOUT": "function O(){Object.values(N).forEach(e=>{let{timeout:t}=e;clearTimeout(t)}),N={}}",
+                "SEARCH_FINISH": "function x(e){let{messages:t}=e;if(!(0,v.isEligibleForExplicitMediaRedaction)()||null==t)return!1;let n=i()(t);return G(a()(n,(e,t)=>e.id===t.id&&e.channel_id===t.channel_id))}",
+                "MOD_VIEW_SEARCH_FINISH": "function x(e){let{messages:t}=e;if(!(0,v.isEligibleForExplicitMediaRedaction)()||null==t)return!1;let n=i()(t);return G(a()(n,(e,t)=>e.id===t.id&&e.channel_id===t.channel_id))}",
+                "CHANNEL_SELECT": "function K(e){let{channelId:t}=e;return!!(null!=t&&(0,v.isEligibleForExplicitMediaRedaction)())&&t===m.default.getChannelId()&&$(t)}",
+                "LOAD_PINNED_MESSAGES_SUCCESS": "function x(e){let{messages:t}=e;if(!(0,v.isEligibleForExplicitMediaRedaction)()||null==t)return!1;let n=i()(t);return G(a()(n,(e,t)=>e.id===t.id&&e.channel_id===t.channel_id))}",
+                "USER_SETTINGS_PROTO_UPDATE": "function W(e){let{settings:t,local:n}=e;if(!(0,v.isEligibleForExplicitMediaRedaction)()||!n||t.type!==S.UserSettingsTypes.PRELOADED_USER_SETTINGS)return!1;let s=m.default.getChannelId();return null!=s&&$(s)}",
+                "CHANNEL_RTC_UPDATE_CHAT_OPEN": "function z(e){let{channelId:t,chatOpen:n}=e;return!!(0,v.isEligibleForExplicitMediaRedaction)()&&!!n&&$(t)}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`\\u{62E}\\u{641}\\u{636} ${e.fieldLabel}`",
+            "increase": "e=>`\\u{632}\\u{64A}\\u{627}\\u{62F}\\u{629} ${e.fieldLabel}`",
+            "numberField": "حقل رقمي"
+        }
+    }
+}

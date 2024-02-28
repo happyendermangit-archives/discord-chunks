@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "createSound": "function d(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1;return new s(e,t,n)}",
+        "createSoundForPack": "function o(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1;return d((0,u.default)(t)[e]??e,e,n)}",
+        "playSound": "function c(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:1,n=arguments.length>2?arguments[2]:void 0;if(a.default.disableSounds)return;let s=d((0,u.default)(i.default.getSoundpack())[e]??e,e,t);return null!=n?s.playWithListener().then(e=>{e&&n()}):s.play(),s}"
+    }
+}

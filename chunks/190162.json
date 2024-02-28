@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "Reference": "function u(e){var t=e.children,n=e.innerRef,a=r.useContext(i.ManagerReferenceNodeSetterContext),u=r.useCallback(function(e){(0,s.setRef)(n,e),(0,s.safeInvoke)(a,e)},[n,a]);return r.useEffect(function(){return function(){return(0,s.setRef)(n,null)}},[]),r.useEffect(function(){o(!!a,\"`Reference` should not be used outside of a `Manager` component.\")},[a]),(0,s.unwrapArray)(t)({ref:u})}"
-    }
-}

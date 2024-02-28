@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "isBlockedByProxyErrorCode": "function r(e){return!e.ok&&e.body?.code===i.AbortCodes.BLOCKED_BY_PROXY}"
+    }
+}

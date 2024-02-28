@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "canSelectedVoiceChannelUseSoundboard": "function r(){let e=s.default.getVoiceChannelId();return o(i.default.getChannel(e))}",
+        "default": "function o(e){if(null==e)return!1;if(l.ChannelTypesSets.CALLABLE.has(e.type))return!0;let t=a.default.can(l.Permissions.USE_SOUNDBOARD,e),n=a.default.can(l.Permissions.SPEAK,e);return e.type===l.ChannelTypes.GUILD_VOICE&&t&&n}"
+    }
+}

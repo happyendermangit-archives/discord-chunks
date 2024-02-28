@@ -1,3 +1,0 @@
-{
-    "exports": "function f(){this.init(),this._w=o,i.call(this,64,56)}"
-}

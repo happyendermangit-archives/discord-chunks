@@ -1,0 +1,38 @@
+{
+    "exports": {
+        "DROPDOWN_MAX_NUM_OPTIONS": 50,
+        "GuildOnboardingMode": {
+            "0": "ONBOARDING_DEFAULT",
+            "1": "ONBOARDING_ADVANCED",
+            "ONBOARDING_DEFAULT": 0,
+            "ONBOARDING_ADVANCED": 1
+        },
+        "GuildOnboardingTab": {
+            "0": "CUSTOMIZE",
+            "1": "BROWSE",
+            "CUSTOMIZE": 0,
+            "BROWSE": 1
+        },
+        "MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING": 4,
+        "MAX_NUM_PROMPTS": 15,
+        "MAX_PROMPT_OPTION_DESCRIPTION_LENGTH": 100,
+        "MAX_PROMPT_OPTION_TITLE_LENGTH": 50,
+        "MAX_PROMPT_TITLE_LENGTH": 100,
+        "MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING": 7,
+        "MULTIPLE_CHOICE_MAX_NUM_OPTIONS": 12,
+        "NUM_DEFAULT_CHATTABLE_CHANNELS_MIN": 5,
+        "ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD": 13,
+        "OnboardingPromptType": {
+            "0": "MULTIPLE_CHOICE",
+            "1": "DROPDOWN",
+            "MULTIPLE_CHOICE": 0,
+            "DROPDOWN": 1
+        },
+        "clientPromptToServerPrompt": "function A(e){return{id:e.id,options:e.options.map(e=>({id:e.id,channel_ids:e.channelIds,role_ids:e.roleIds,emoji:e.emoji,emoji_id:e.emoji?.id,emoji_name:e.emoji?.name,emoji_animated:e.emoji?.animated,title:e.title,description:e.description})),title:e.title,single_select:e.singleSelect,disabled:e.disabled,required:e.required,in_onboarding:e.inOnboarding,type:e.type}}",
+        "getDefaultPrompt": "function T(){return{id:String(Date.now()),title:_.default.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,options:[],singleSelect:!1,required:!1,inOnboarding:!0,type:0}}",
+        "getEmptyPrompt": "function b(e){return{id:String(Date.now()),title:\"\",options:[],singleSelect:!1,required:!1,inOnboarding:e,type:0}}",
+        "isDefaultPrompt": "function I(e){if(e.options.length>0)return!1;let{id:t,...n}=T(),{id:i,...s}=e;return d()(n,s)}",
+        "isEmojiEmpty": "function v(e){return null==e||null==e.id&&null==e.name}",
+        "serverApiResponseToClientState": "function P(e){return{prompts:e.prompts.map(D),defaultChannelIds:e.default_channel_ids,responses:e.responses??[],mode:e.mode,enabled:e.enabled,onboardingPromptsSeen:e.onboarding_prompts_seen??{},onboardingResponsesSeen:e.onboarding_responses_seen??{},belowRequirements:e.below_requirements}}"
+    }
+}

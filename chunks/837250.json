@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "default": {
+            "startPolling": "function(e){O(e,1)-1==0&&(y[e]=setInterval(async()=>{await b.fetchSummaries(e)},I))}",
+            "stopPolling": "function(e){0>=O(e,-1)&&(O(e,0),clearInterval(y[e]))}",
+            "setSummaryFeedback": "function M(e,t){u.default.dispatch({type:\"SET_SUMMARY_FEEDBACK\",summary:e,rating:t})}",
+            "useSummaryPolling": "function R(e){let t=!(arguments.length>1)||void 0===arguments[1]||arguments[1],n=(0,r.default)([m.default],()=>m.default.getChannel(e),[e]),[a,s]=i.useState(null),o=(0,c.useChannelSummariesExperiment)(n)&&!l.isMobile;i.useEffect(()=>{if(o)return s(e),()=>{s(null)}},[e,o]),i.useEffect(()=>{if(a!==e&&null!=a&&b.stopPolling(e),o&&null!=a)return(t||null!=e&&a!==e)&&b.fetchSummaries(e),b.startPolling(e),()=>{null!=a&&b.stopPolling(e)}},[e,t,a,o])}",
+            "updateVisibleMessages": "function N(e,t){u.default.dispatch({type:\"UPDATE_VISIBLE_MESSAGES\",topVisibleMessage:e??null,bottomVisibleMessage:t??null})}",
+            "setSelectedSummary": "function A(e,t){null!=e&&null!=t&&S(e,t),u.default.dispatch({type:\"SET_SELECTED_SUMMARY\",channelId:e,summaryId:t??null})}",
+            "setHighlightedSummary": "function x(e,t){u.default.dispatch({type:\"SET_HIGHLIGHTED_SUMMARY\",channelId:e,summaryId:t??null})}",
+            "fetchSummaries": "async function g(e){let t,n;if(!E.default.shouldFetch(e))return;let i=Date.now();u.default.dispatch({type:\"REQUEST_CHANNEL_SUMMARIES\",channelId:e,requestedAt:i});try{n=await o.default.get(`/channels/${e}/summaries`)}catch(e){t=new d.APIError(e)}let a=n?.body?.summaries instanceof Array?n.body.summaries:n?.body??[];a=s().takeRight(a,75),u.default.dispatch({type:\"RECEIVE_CHANNEL_SUMMARIES\",channelId:e,summaries:a,error:t??void 0,requestedAt:i,receivedAt:Date.now()})}",
+            "fetchSummariesBulk": "async function L(e){let t,n,{useQuickSwitcher:i=!0,useChannelAffinities:a=!0}=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};e=e??[];let s=Date.now();if(0===(e=e.concat(E.default.defaultChannelIds({withQuickSwitcher:i,withChannelAffinities:a})).filter(e=>{let t=m.default.getChannel(e);return(0,c.canSeeChannelSummaries)(t,!1,!0)}).filter(e=>{let t=Date.now(),n=E.default.status(e);if(n?.fetching)return!1;let i=n?.lastReceivedAt;return null==i||t-i>_}).slice(0,50)).length)return Promise.resolve(null);u.default.dispatch({type:\"REQUEST_CHANNEL_SUMMARIES_BULK\",channelIds:e,requestedAt:s});try{n=await o.default.post({url:\"/users/@me/summaries\",body:{channel_ids:e}})}catch(e){t=new d.APIError(e)}let l=n?.body.summaries;u.default.dispatch({type:\"RECEIVE_CHANNEL_SUMMARIES_BULK\",requestedAt:s,receivedAt:Date.now(),summaries:l,requestArgs:{channelIds:e},error:t})}",
+            "useChannelSummaries": "function(e){let{channelIds:t=[]}=e;return!function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],t=i.useMemo(()=>e.join(\",\"),[e]);i.useEffect(()=>{(async function e(){try{await v()}catch(e){}try{p.default.getProps().results?.length===0&&(0,f.search)(p.default.getProps().query??\"\")}catch(e){}await L(t.split(\",\"))})()},[t])}(t),(0,r.useStateFromStoresArray)([E.default],()=>E.default.topSummaries(),[])}",
+            "deleteSummary": "async function P(e){try{await o.default.delete(`/channels/${e.channelId}/summaries/${e.id}`),u.default.dispatch({type:\"DELETE_SUMMARY\",summary:e})}catch(e){throw new d.APIError(e)}}"
+        },
+        "deleteSummary": "async function P(e){try{await o.default.delete(`/channels/${e.channelId}/summaries/${e.id}`),u.default.dispatch({type:\"DELETE_SUMMARY\",summary:e})}catch(e){throw new d.APIError(e)}}",
+        "setHighlightedSummary": "function x(e,t){u.default.dispatch({type:\"SET_HIGHLIGHTED_SUMMARY\",channelId:e,summaryId:t??null})}",
+        "setSelectedSummary": "function A(e,t){null!=e&&null!=t&&S(e,t),u.default.dispatch({type:\"SET_SELECTED_SUMMARY\",channelId:e,summaryId:t??null})}",
+        "setSummaryFeedback": "function M(e,t){u.default.dispatch({type:\"SET_SUMMARY_FEEDBACK\",summary:e,rating:t})}",
+        "toggleTopicsBar": "function T(){u.default.dispatch({type:\"TOGGLE_TOPICS_BAR\"})}",
+        "updateVisibleMessages": "function N(e,t){u.default.dispatch({type:\"UPDATE_VISIBLE_MESSAGES\",topVisibleMessage:e??null,bottomVisibleMessage:t??null})}",
+        "useSummaryPolling": "function R(e){let t=!(arguments.length>1)||void 0===arguments[1]||arguments[1],n=(0,r.default)([m.default],()=>m.default.getChannel(e),[e]),[a,s]=i.useState(null),o=(0,c.useChannelSummariesExperiment)(n)&&!l.isMobile;i.useEffect(()=>{if(o)return s(e),()=>{s(null)}},[e,o]),i.useEffect(()=>{if(a!==e&&null!=a&&b.stopPolling(e),o&&null!=a)return(t||null!=e&&a!==e)&&b.fetchSummaries(e),b.startPolling(e),()=>{null!=a&&b.stopPolling(e)}},[e,t,a,o])}"
+    }
+}

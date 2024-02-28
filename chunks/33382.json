@@ -1,0 +1,3 @@
+{
+    "exports": "function f(e,t,n){var a,i,u;if(!r(t)&&(n=t||n,t=[]),n=n||{},e instanceof RegExp)return function(e,t){var n,r,a=e.source.match(/\\((?!\\?)/g);if(a)for(var o=0;o<a.length;o++)t.push({name:o,prefix:null,delimiter:null,optional:!1,repeat:!1,partial:!1,asterisk:!1,pattern:null});return n=e,r=t,n.keys=r,n}(e,t);if(r(e))return function(e,t,n){for(var r,a,o=[],i=0;i<e.length;i++)o.push(f(e[i],t,n).source);return r=RegExp(\"(?:\"+o.join(\"|\")+\")\",c(n)),a=t,r.keys=a,r}(e,t,n);return a=e,i=t,d(o(a,u=n),i,u)}"
+}

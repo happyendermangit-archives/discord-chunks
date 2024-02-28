@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "handleDCShownToUser": "e=>{i.default.dispatch({type:\"DCF_HANDLE_DC_SHOWN\",dismissibleContent:e})}",
-        "handleDCDismissed": "e=>{i.default.dispatch({type:\"DCF_HANDLE_DC_DISMISSED\",dismissibleContent:e})}",
-        "resetDismissibleContentFrameworkStore": "()=>{i.default.dispatch({type:\"DCF_RESET\"})}",
-        "overrideDismissibleContentFramework": "e=>{i.default.dispatch({type:\"DCF_DAILY_CAP_OVERRIDE\",value:e})}"
-    }
-}

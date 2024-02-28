@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e){let t=(0,r.default)(e);(0,i.useEffect)(()=>{let e=requestAnimationFrame(function n(){t.current?.(),e=requestAnimationFrame(n)});return()=>cancelAnimationFrame(e)},[])}"
+    }
+}

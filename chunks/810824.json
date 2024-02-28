@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "default": "function o(e,t){return(0,i.useStateFromStoresObject)([s.default],()=>a({emojiStoreInstance:s.default,guildId:e,pickerIntention:t}),[e,t])}",
+        "getTopAndNewlyAddedEmojis": "function a(e){let{emojiStoreInstance:t=s.default,guildId:n,pickerIntention:i}=e;return{topEmojis:i!==r.EmojiIntention.REACTION?t.getTopEmoji(n):u,newlyAddedEmojis:i!==r.EmojiIntention.REACTION?t.getNewlyAddedEmoji(n):u}}"
+    }
+}

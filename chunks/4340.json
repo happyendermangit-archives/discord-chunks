@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,r,n){return n.get&&e(n.get,r,{getter:!0}),n.set&&e(n.set,r,{setter:!0}),o.f(t,r,n)}"
+}

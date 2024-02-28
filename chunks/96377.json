@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "default": {
+            "name": "preventOverflow",
+            "enabled": true,
+            "phase": "main",
+            "fn": "function(e){var t=e.state,n=e.options,h=e.name,m=n.mainAxis,y=n.altAxis,v=n.boundary,g=n.rootBoundary,b=n.altBoundary,_=n.padding,w=n.tether,x=void 0===w||w,D=n.tetherOffset,k=void 0===D?0:D,M=(0,c.default)(t,{boundary:v,rootBoundary:g,padding:_,altBoundary:b}),S=(0,a.default)(t.placement),T=(0,d.default)(t.placement),E=!T,L=(0,o.default)(S),C=(0,i.default)(L),P=t.modifiersData.popperOffsets,O=t.rects.reference,A=t.rects.popper,R=\"function\"==typeof k?k(Object.assign({},t.rects,{placement:t.placement})):k,I=\"number\"==typeof R?{mainAxis:R,altAxis:R}:Object.assign({mainAxis:0,altAxis:0},R),j=t.modifiersData.offset?t.modifiersData.offset[t.placement]:null,F={x:0,y:0};if(P){if(void 0===m||m){var Y,N=\"y\"===L?r.top:r.left,B=\"y\"===L?r.bottom:r.right,H=\"y\"===L?\"height\":\"width\",z=P[L],$=z+M[N],K=z-M[B],V=x?-A[H]/2:0,U=T===r.start?O[H]:A[H],W=T===r.start?-A[H]:-O[H],G=t.elements.arrow,q=x&&G?(0,s.default)(G):{width:0,height:0},J=t.modifiersData[\"arrow#persistent\"]?t.modifiersData[\"arrow#persistent\"].padding:(0,f.default)(),Z=J[N],X=J[B],Q=(0,u.within)(0,O[H],q[H]),ee=E?O[H]/2-V-Q-Z-I.mainAxis:U-Q-Z-I.mainAxis,et=E?-O[H]/2+V+Q+X+I.mainAxis:W+Q+X+I.mainAxis,en=t.elements.arrow&&(0,l.default)(t.elements.arrow),er=en?\"y\"===L?en.clientTop||0:en.clientLeft||0:0,ea=null!=(Y=null==j?void 0:j[L])?Y:0,eo=(0,u.within)(x?(0,p.min)($,z+ee-ea-er):$,z,x?(0,p.max)(K,z+et-ea):K);P[L]=eo,F[L]=eo-z}if(void 0!==y&&y){var ei,eu=\"x\"===L?r.top:r.left,es=\"x\"===L?r.bottom:r.right,el=P[C],ec=\"y\"===C?\"height\":\"width\",ed=el+M[eu],ef=el-M[es],ep=-1!==[(0,r.top),(0,r.left)].indexOf(S),eh=null!=(ei=null==j?void 0:j[C])?ei:0,em=ep?ed:el-O[ec]-A[ec]-eh+I.altAxis,ey=ep?el+O[ec]+A[ec]-eh-I.altAxis:ef,ev=x&&ep?(0,u.withinMaxClamp)(em,el,ey):(0,u.within)(x?em:ed,el,x?ey:ef);P[C]=ev,F[C]=ev-el}t.modifiersData[h]=F}}",
+            "requiresIfExists": [
+                "offset"
+            ]
+        }
+    }
+}

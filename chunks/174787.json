@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useIsomorphicLayoutEffect": "function(e,t){return O.current.useLayoutEffect(e,t)}"
+    }
+}

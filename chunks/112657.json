@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e,t,n){i.useEffect(()=>{let i=a.ReactEditor.findDocumentOrShadowRoot(e).defaultView;if(i?.ResizeObserver==null)return;let l=s.EditorUtils.toDOMNode(e,e),r=l.offsetHeight,o=new i.ResizeObserver(()=>{let i=s.EditorUtils.toDOMNode(e,e).offsetHeight;r!==i&&(null!=t.current&&(t.current.style.height=`${i}px`),r=i,n?.(i))});return o.observe(l),()=>o.disconnect()},[t,e,n])}"
+    }
+}

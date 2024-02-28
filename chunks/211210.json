@@ -1,0 +1,60 @@
+{
+    "exports": {
+        "default": {
+            "changedStores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "has": "function has() { [native code] }",
+                "add": "function add() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }",
+                "keys": "function values() { [native code] }",
+                "union": "function union() { [native code] }",
+                "intersection": "function intersection() { [native code] }",
+                "difference": "function difference() { [native code] }",
+                "symmetricDifference": "function symmetricDifference() { [native code] }",
+                "isSubsetOf": "function isSubsetOf() { [native code] }",
+                "isSupersetOf": "function isSupersetOf() { [native code] }",
+                "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+            },
+            "reactChangedStores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "has": "function has() { [native code] }",
+                "add": "function add() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }",
+                "keys": "function values() { [native code] }",
+                "union": "function union() { [native code] }",
+                "intersection": "function intersection() { [native code] }",
+                "difference": "function difference() { [native code] }",
+                "symmetricDifference": "function symmetricDifference() { [native code] }",
+                "isSubsetOf": "function isSubsetOf() { [native code] }",
+                "isSupersetOf": "function isSupersetOf() { [native code] }",
+                "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+            },
+            "changeSentinel": 21,
+            "isBatchEmitting": false,
+            "isDispatching": false,
+            "isPaused": false,
+            "pauseTimer": null,
+            "destroy": "destroy(){this.changedStores.clear(),this.reactChangedStores.clear(),a=e=>e()}",
+            "injectBatchEmitChanges": "injectBatchEmitChanges(e){a=e}",
+            "pause": "pause(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null;this.isPaused=!0,null!==this.pauseTimer&&clearTimeout(this.pauseTimer),null!==e&&(this.pauseTimer=setTimeout(()=>{this.pauseTimer=null,this.resume()},e))}",
+            "resume": "resume(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];clearTimeout(this.pauseTimer),this.pauseTimer=null,this.isPaused&&(this.isPaused=!1,e&&this.changedStores.size>0&&setImmediate(()=>this.emit()))}",
+            "batched": "batched(e){if(this.isPaused)return e();try{return this.isPaused=!0,e()}finally{this.resume(!1),this.emit()}}",
+            "emit": "emit(){!this.isBatchEmitting&&!this.isPaused&&a(()=>{try{this.isBatchEmitting=!0,this.changeSentinel++;let e=0;for(;this.changedStores.size>0;){if(++e>100)throw o.error(\"LastFewActions\",r.serialize()),Error(\"change emit loop detected, aborting\");this.emitNonReactOnce()}for(;this.reactChangedStores.size>0;){if(++e>100)throw o.error(\"LastFewActions\",r.serialize()),Error(\"react change emit loop detected, aborting\");this.emitReactOnce()}}finally{this.isBatchEmitting=!1}})}",
+            "getChangeSentinel": "getChangeSentinel(){return this.changeSentinel}",
+            "getIsPaused": "getIsPaused(){return this.isPaused}",
+            "markChanged": "markChanged(e){e._changeCallbacks.hasAny()&&this.changedStores.add(e),e._reactChangeCallbacks.hasAny()&&this.reactChangedStores.add(e),!this.isBatchEmitting&&!this.isDispatching&&!this.isPaused&&this.emit()}",
+            "emitNonReactOnce": "emitNonReactOnce(){let e=Date.now(),t=this.changedStores;this.changedStores=new Set,t.forEach(e=>{e._changeCallbacks.invokeAll(),this.changedStores.delete(e)});let n=Date.now();n-e>100&&o.verbose(`Slow batch emitChanges took ${n-e}ms recentActions:`,r.serialize())}",
+            "emitReactOnce": "emitReactOnce(){let e=Date.now(),t=this.reactChangedStores;this.reactChangedStores=new Set,t.forEach(e=>{e._reactChangeCallbacks.invokeAll(),this.reactChangedStores.delete(e)});let n=Date.now();n-e>100&&o.verbose(`Slow batch emitReactChanges took ${n-e}ms recentActions:`,r.serialize())}"
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "completeRTCLatencyTest": "function a(e,t){r.default.dispatch({type:\"RTC_LATENCY_TEST_COMPLETE\",latencyRankedRegions:e,geoRankedRegions:t})}",
+        "fetchRTCLatencyTestRegions": "function o(){return i.default.get(`https:${window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT}`)}"
+    }
+}

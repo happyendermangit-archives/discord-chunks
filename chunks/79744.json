@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getApplicationInstallURL": "function s(e){if(null!=e.custom_install_url)return e.custom_install_url;let t={};t.client_id=e.id,e.install_params?.permissions!=null&&(t.permissions=e.install_params.permissions),e.install_params?.scopes!=null&&(t.scope=e.install_params.scopes.join(\" \"));let n=Object.entries(t).map(e=>{let[t,n]=e;return`${t}=${encodeURIComponent(n)}`}).join(\"&\");return`${i.default.getAPIBaseURL(!1)}${a.Endpoints.OAUTH2_AUTHORIZE}?${n}`}"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "useActiveDiscountDuration": "()=>{let e=(0,s.useStateFromStores)([u.default],()=>u.default.getPremiumTypeSubscription());switch(e?.metadata?.active_discount_id){case f.PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID:return 1;case f.PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID:case f.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID:case f.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID:return 3;default:return}}",
+        "useFetchChurnUserDiscountOffer": "e=>{let[t,n]=r.useState(!1),[i,a]=r.useState(!1),[s,o]=r.useState(null);if(e)return{churnUserDiscountOffer:s,isFetchingChurnDiscountOffer:i};let u=()=>{n(!0),a(!1)};return!i&&!t&&(a(!0),S().then(e=>{o(e),u()}).catch(e=>{u()})),{churnUserDiscountOffer:s,isFetchingChurnDiscountOffer:i}}",
+        "useHasDiscountApplied": "()=>{let e=(0,s.useStateFromStores)([u.default],()=>u.default.getPremiumTypeSubscription()),t=e?.metadata?.active_discount_expires_at;return null!=t&&a()(Date.now())<=a()(t)}",
+        "useIsInPremiumOfferExperience": "function T(){let e=(0,_.usePremiumTrialOffer)(),t=(0,l.useHasActiveTrial)(),n=(0,d.usePremiumDiscountOffer)(),r=I();return null!=e||t||null!=n||r}",
+        "useShouldFetchChurnOffer": "()=>{let{enabled:e}=c.default.useExperiment({location:\"useShouldFetchChurnOffer\"},{autoTrackExposure:!1}),t=(0,s.useStateFromStores)([u.default],()=>u.default.getPremiumTypeSubscription()),n=I(),r=null!==t&&t.hasPremiumNitroMonthly,i=null!=t&&null!=t.trialId;return e&&r&&!i&&!n}"
+    }
+}

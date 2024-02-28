@@ -1,0 +1,19 @@
+{
+    "exports": {
+        "isAsyncMode": "function(e){return D(e)||x(e)===d}",
+        "isConcurrentMode": "function D(e){return x(e)===f}",
+        "isContextConsumer": "function(e){return x(e)===c}",
+        "isContextProvider": "function(e){return x(e)===l}",
+        "isElement": "function(e){return\"object\"==typeof e&&null!==e&&e.$$typeof===a}",
+        "isForwardRef": "function(e){return x(e)===p}",
+        "isFragment": "function(e){return x(e)===i}",
+        "isLazy": "function(e){return x(e)===v}",
+        "isMemo": "function(e){return x(e)===y}",
+        "isPortal": "function(e){return x(e)===o}",
+        "isProfiler": "function(e){return x(e)===s}",
+        "isStrictMode": "function(e){return x(e)===u}",
+        "isSuspense": "function(e){return x(e)===h}",
+        "isValidElementType": "function(e){return\"string\"==typeof e||\"function\"==typeof e||e===i||e===f||e===s||e===u||e===h||e===m||\"object\"==typeof e&&null!==e&&(e.$$typeof===v||e.$$typeof===y||e.$$typeof===l||e.$$typeof===c||e.$$typeof===p||e.$$typeof===b||e.$$typeof===_||e.$$typeof===w||e.$$typeof===g)}",
+        "typeOf": "function x(e){if(\"object\"==typeof e&&null!==e){var t=e.$$typeof;switch(t){case a:switch(e=e.type){case d:case f:case i:case s:case u:case h:return e;default:switch(e=e&&e.$$typeof){case c:case p:case v:case y:case l:return e;default:return t}}case o:return t}}}"
+    }
+}

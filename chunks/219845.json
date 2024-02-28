@@ -1,0 +1,19 @@
+{
+    "exports": {
+        "cache": {
+            "toJSON": "function(){return Array.from(this)}",
+            "get": "function get() { [native code] }",
+            "set": "function set() { [native code] }",
+            "has": "function has() { [native code] }",
+            "delete": "function delete() { [native code] }",
+            "clear": "function clear() { [native code] }",
+            "entries": "function entries() { [native code] }",
+            "forEach": "function forEach() { [native code] }",
+            "keys": "function keys() { [native code] }",
+            "size": 0,
+            "values": "function values() { [native code] }"
+        },
+        "calculateBoxSize": "function(e,t){var n=h(e),a=n.borderBoxSize,o=n.contentBoxSize,i=n.devicePixelContentBoxSize;switch(t){case r.ResizeObserverBoxOptions.DEVICE_PIXEL_CONTENT_BOX:return i;case r.ResizeObserverBoxOptions.BORDER_BOX:return a;default:return o}}",
+        "calculateBoxSizes": "function(e){if(u.has(e))return u.get(e);if((0,o.isHidden)(e))return u.set(e,p),p;var t=getComputedStyle(e),n=(0,o.isSVG)(e)&&e.ownerSVGElement&&e.getBBox(),r=!c&&\"border-box\"===t.boxSizing,i=l.test(t.writingMode||\"\"),h=!n&&s.test(t.overflowY||\"\"),m=!n&&s.test(t.overflowX||\"\"),y=n?0:d(t.paddingTop),v=n?0:d(t.paddingRight),g=n?0:d(t.paddingBottom),b=n?0:d(t.paddingLeft),_=n?0:d(t.borderTopWidth),w=n?0:d(t.borderRightWidth),x=n?0:d(t.borderBottomWidth),D=n?0:d(t.borderLeftWidth),k=b+v,M=y+g,S=D+w,T=_+x,E=m?e.offsetHeight-T-e.clientHeight:0,L=h?e.offsetWidth-S-e.clientWidth:0,C=n?n.width:d(t.width)-(r?k+S:0)-L,P=n?n.height:d(t.height)-(r?M+T:0)-E,O=C+k+L+S,A=P+M+E+T,R=Object.freeze({devicePixelContentBoxSize:f(Math.round(C*devicePixelRatio),Math.round(P*devicePixelRatio),i),borderBoxSize:f(O,A,i),contentBoxSize:f(C,P,i),contentRect:new a.DOMRectReadOnly(b,y,C,P)});return u.set(e,R),R}"
+    }
+}

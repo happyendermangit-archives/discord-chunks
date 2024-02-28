@@ -1,0 +1,17 @@
+{
+    "exports": {
+        "default": {
+            "sendRequest": "sendRequest(e){let{discordTag:t,context:n,captchaPayload:s,errorUxConfig:i=0}=e,[a,o]=t.split(\"#\");return r.default.post({url:E.Endpoints.USER_RELATIONSHIPS(),body:{username:a,discriminator:parseInt(o),...s},context:n,oldFormErrors:!0}).catch(e=>{y(e,i,t)})}",
+            "addRelationship": "addRelationship(e,t){let{userId:n,context:s,type:i,friendToken:a,fromFriendSuggestion:o,captchaPayload:u}=e,d=arguments.length>2&&void 0!==arguments[2]?arguments[2]:0,l=_.default.getUser(n);return r.default.put({url:E.Endpoints.USER_RELATIONSHIP(n),body:{type:i,friend_token:a,from_friend_suggestion:o,...u},context:s,oldFormErrors:!0}).then(()=>{t?.()}).catch(e=>{y(e,d,g.default.getUserTag(l))})}",
+            "acceptFriendRequest": "e=>I.addRelationship(e,function(){a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST)})",
+            "cancelFriendRequest": "(e,t)=>I.removeRelationship(e,t,function(){a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST)})",
+            "removeFriend": "removeFriend(e,t){I.removeRelationship(e,t,function(){a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED)})}",
+            "unblockUser": "unblockUser(e,t){I.removeRelationship(e,t,function(){a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED)})}",
+            "removeRelationship": "(e,t,n)=>r.default.delete({url:E.Endpoints.USER_RELATIONSHIP(e),context:t,oldFormErrors:!0}).then(()=>{n?.()}).catch(()=>{a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)})",
+            "updateRelationship": "(e,t)=>r.default.patch({url:E.Endpoints.USER_RELATIONSHIP(e),body:{nickname:t}})",
+            "fetchRelationships": "fetchRelationships(){r.default.get({url:E.Endpoints.USER_RELATIONSHIPS(),oldFormErrors:!0}).then(e=>o.default.dispatch({type:\"LOAD_RELATIONSHIPS_SUCCESS\",relationships:e.body}),()=>o.default.dispatch({type:\"LOAD_RELATIONSHIPS_FAILURE\"}))}",
+            "confirmClearPendingRelationships": "confirmClearPendingRelationships(e){(0,d.default)(e)}",
+            "clearPendingRelationships": "()=>r.default.delete({url:E.Endpoints.USER_RELATIONSHIPS(),query:{relationship_type:E.RelationshipTypes.PENDING_INCOMING}}).then(()=>{o.default.dispatch({type:\"RELATIONSHIP_PENDING_INCOMING_REMOVED\"})}).catch(()=>{a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)})"
+        }
+    }
+}

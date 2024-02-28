@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "getBlindIds": "async function m(e,t,n){let a=new r.BlindID(n),i=await a.blind(e);return{blindChannelId:i,blindUserId:await a.blind(t)}}",
+        "uploadCallscopeLogFiles": "async function _(e,t){try{if(0===t.length){g.error(\"uploadCallscopeLogFiles: No files found.\");return}for(let n of t.map(e=>u.transformNativeFile(e,\"application/octet-stream\"))){g.log(`uploadCallscopeLogFiles: Uploading ${n.name}`);let t=C.getChannelId(n.name);try{let r=await a.default.post({url:p.Endpoints.CALLSCOPE_LOGS(t,e,C.getTrimmedFilename(n.name)),headers:{\"Content-Type\":\"application/octet-stream\"},body:n});!(r.status>=200&&r.status<=299)&&g.error(`uploadCallscopeLogFiles: Failed to upload ${n.name} with status ${r.status}, ${r.text}`)}catch(e){g.error(`uploadCallscopeLogFiles: Error uploading file ${n.name} ${e?.text}`,e)}}}catch(e){g.error(`uploadCallscopeLogFiles: Error uploading logs ${e?.text}`,e)}}",
+        "uploadCallscopeLogs": "async function S(e,t,n,a){if(!__OVERLAY__){if(i.default?.fileManager?.getCallscopeLogFiles==null){g.error(\"uploadCallscopeLogs: Upload RTC logs failed because native is out of date (getCallscopeLogFiles).\");return}if(!(\"crypto\"in window)){g.error(\"uploadCallscopeLogs: Upload RTC logs failed because crypto is not supported.\");return}try{let{blindChannelId:r,blindUserId:s}=await m(e,t,n),l=`channel blind(${e}): ${r}, user blind(${t}): ${s}`;g.info(`uploadCallscopeLogs: Uploading callscope logs for context: ${a}, ${l}`);let u=await i.default.fileManager.getCallscopeLogFiles(r);await _(s,u)}catch(e){g.error(`uploadCallscopeLogs: Error uploading logs ${e?.text}`,e)}}}",
+        "uploadDebugLogFiles": "async function E(e,t){await T(e),await (0,s.uploadRtcLogFiles)(3670016,t)}"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "exports": {
+        "default": {
+            "useExperiment": "function(t){let n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{autoTrackExposure:!0},o=n.disable??!1,a=!1!==n.autoTrackExposure,s=E(e.kind,e.id,t),I=null==n.trackExposureOptions?void 0:(0,r.default)(n.trackExposureOptions??{}),c=s?.triggerDebuggingEnabled??!1,[[d,A,N],O]=(0,i.useState)(()=>{let t=null==s||o?_.ExperimentBuckets.NOT_ELIGIBLE:s.bucket;return[l(e,t,u,s),t,null==s?-1:s.revision]}),R=(0,r.default)(t);return(0,i.useEffect)(()=>{if(!o&&(!!a||!!c))T(R,I,!1===a)},[o,a,R,I,A,N,c]),(0,i.useEffect)(()=>S(R,(e,t,n)=>{O(i=>i[0]===e&&i[1]===t&&i[2]===n?i:[e,t,n])},{disable:o}),[o,R]),d}",
+            "subscribe": "function S(t,n){let i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},r=null!=i.disable&&i.disable,o=E(e.kind,e.id,t),a=null==o||r?_.ExperimentBuckets.NOT_ELIGIBLE:o.bucket,I=null==o?-1:o.revision;function T(){let i=E(e.kind,e.id,t),o=null==i||r?_.ExperimentBuckets.NOT_ELIGIBLE:i.bucket,s=null==i?-1:i.revision;(o!==a||I!==s)&&(n(l(e,o,u,i),o,s),a=o,I=s)}return n(l(e,a,u,o),a,I),s.default.addReactChangeListener(T),()=>{s.default.removeReactChangeListener(T)}}",
+            "trackExposure": "function c(t){let n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{excluded:!1,exposureType:_.ExposureTypes.MANUAL},i=E(e.kind,I.id,t);null!=i&&d(t,n,i)}",
+            "getCurrentConfig": "function(t){let n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{autoTrackExposure:!0},i=E(e.kind,e.id,t);if(null==i||n.disable)return l(e,_.ExperimentBuckets.NOT_ELIGIBLE,u,i);if(!1!==n.autoTrackExposure||i.triggerDebuggingEnabled){let e=!1===n.autoTrackExposure;T(t,n.trackExposureOptions,e,i)}return l(e,i.bucket,u,i)}",
+            "definition": {
+                "kind": "user",
+                "id": "2021-07_popout_autocomplete",
+                "label": "Popout Autocomplete experiment",
+                "defaultConfig": {
+                    "usePopoutAutocomplete": false
+                },
+                "treatments": [
+                    {
+                        "id": 1,
+                        "label": "New autocomplete style",
+                        "config": {
+                            "usePopoutAutocomplete": true
+                        }
+                    }
+                ]
+            },
+            "isAAMode": "function(t){let n=E(e.kind,e.id,t);return!!n?.aaMode}"
+        }
+    }
+}

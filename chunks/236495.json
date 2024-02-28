@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "createNativeDragSource": "function i(e,t){var n=new a.NativeDragSource(r.nativeTypesConfig[e]);return n.loadDataTransfer(t),n}",
-        "matchNativeItemType": "function o(e){if(!e)return null;var t=Array.prototype.slice.call(e.types||[]);return Object.keys(r.nativeTypesConfig).filter(function(e){return r.nativeTypesConfig[e].matchesTypes.some(function(e){return t.indexOf(e)>-1})})[0]||null}"
-    }
-}

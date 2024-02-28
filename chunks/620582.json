@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "connectAndOpen": "function v(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],s=arguments.length>3&&void 0!==arguments[3]&&arguments[3],i=_.default.getVoiceChannelId();if(!(!s&&i!==e.id&&(0,a.shouldShowVoiceChannelChangeConfirmation)(e)&&c.showChannelChangeConfirmationAlert(e,()=>v(e,t,n,!0))))p(e,t)&&y(e,i,n)}",
+        "connectOrLurkStage": "function E(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];return new Promise(async i=>{let r=d.default.getChannel(t);if(null!=r)return p(r,n),i(r);await (0,o.stopLurkingAll)([e]),await s.default.joinGuild(e,{lurker:!0}),l.default.addConditionalChangeListener(()=>{let e=d.default.getChannel(t);return null==e||(p(e),h.default.initialize(),i(e),!1)})})}",
+        "connectToStage": "function p(e){var t,n;let s=arguments.length>1&&void 0!==arguments[1]&&arguments[1],a=_.default.getVoiceChannelId();if(!s&&(t=e,n=a,!f.default.can(m.JOIN_VOCAL_CHANNEL_PERMISSIONS,t)||c.shouldShowBlockedUsers(t.id)&&n!==t.id&&(c.openStageBlockedUsersSheet(t,()=>v(t,!0)),1)))return!1;if(g.default.initialize(),i.default.selectVoiceChannel(e.id),(a=_.default.getVoiceChannelId())!==e.id)return!1;let o=u.default.getAllApplicationStreamsForChannel(e.id);return o.length>0&&(0,r.watchStream)(o[0],{noFocus:!1}),!0}",
+        "navigateToStage": "function y(e,t){let n=!(arguments.length>2)||void 0===arguments[2]||arguments[2];c.navigateToStage(e,t,n)}"
+    }
+}

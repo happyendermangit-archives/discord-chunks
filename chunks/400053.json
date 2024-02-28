@@ -1,0 +1,3 @@
+{
+    "exports": "function u(e,t,n){var r=\"string\"==typeof e?u.__parse(e):e;if(!(r&&\"messageFormatPattern\"===r.type))throw TypeError(\"A message must be provided as a String or AST.\");n=this._mergeFormats(u.formats,n),a.defineProperty(this,\"_locale\",{value:this._resolveLocale(t)});var o=this._findPluralRuleFunction(this._locale),i=this._compilePattern(r,t,n,o),s=this;this.format=function(e){return s._format(i,e)}}"
+}

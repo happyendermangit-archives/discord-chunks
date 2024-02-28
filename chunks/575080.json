@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e){let{disabled:t,deviceId:n,width:o,height:a}=e;return t?(0,i.jsx)(\"div\",{className:\"media-engine-video\",style:{width:o,height:a}}):(0,i.jsx)(r.default,{streamId:n,style:{width:o,height:a}})}"
+    }
+}

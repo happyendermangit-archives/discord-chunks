@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "DEFAULT_LOCKDOWN_DURATION": 2,
+        "IncidentAlertModeratorPermissions": "1099511627822",
+        "NAGBAR_DISPLAY_MAX_HOURS": 2,
+        "getTimeframes": "()=>[{value:1,label:s.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_1_HOUR},{value:2,label:s.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_2_HOURS},{value:4,label:s.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_4_HOURS},{value:6,label:s.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_6_HOURS},{value:12,label:s.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_12_HOURS},{value:24,label:s.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS}]"
+    }
+}

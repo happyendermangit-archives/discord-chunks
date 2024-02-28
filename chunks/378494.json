@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "default": "function l(e){let t=(0,i.useStateFromStores)([o.default],()=>o.default.getSelfMember(e));return E(t,(0,i.useStateFromStores)([r.default],()=>r.default.isFullServerPreview(e)))}",
+        "getIsNewMember": "function E(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=e?.joinedAt==null?null:new Date(e.joinedAt),i=new Date;return!!t||null!=n&&i.getTime()-n.getTime()<a.default.Millis.WEEK&&!(0,s.hasFlag)(e?.flags??0,_.GuildMemberFlags.COMPLETED_HOME_ACTIONS)}"
+    }
+}

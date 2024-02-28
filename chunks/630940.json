@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e){return(0,i.useStateFromStores)([r.default],()=>r.default.get(e),[e])}"
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "waitForOnboardingCompletion": "function s(e){return new Promise(t=>{a.default.addConditionalChangeListener(()=>{var n;let s=a.default.getSelfMember(e);return!(0,l.hasFlag)(null!==(n=null==s?void 0:s.flags)&&void 0!==n?n:0,d.GuildMemberFlags.COMPLETED_ONBOARDING)||(i.default.finishOnboarding(e),t(),!1)})})}"
-    }
-}

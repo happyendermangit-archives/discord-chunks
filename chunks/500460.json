@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useEmojiAndSourceGuild": "e=>{let{emojiId:t,refreshPositionKey:n}=e,{joinedEmojiSourceGuildRecord:r,emoji:c}=(0,i.useStateFromStoresObject)([s.default,a.default],()=>d(s.default,a.default,t)),f=null!=r,m=null!=r&&r.hasFeature(u.GuildFeatures.DISCOVERABLE),p=(!f||m)&&null!=t,[h,E]=l.useState(p),g=null!=r?o.default.createFromGuildRecord(r):null,[C,S]=l.useState(g);return l.useEffect(()=>{null==n||n();let e=async()=>{let e=null!=t?await o.default.getGuildFromEmojiId(t):null;S(e),E(!1),null==n||n()};if(p){e();return}null==n||n()},[t,p]),{expressionSourceGuild:C,joinedEmojiSourceGuildRecord:r,hasJoinedEmojiSourceGuild:f,emoji:c,isFetching:h}}"
-    }
-}

@@ -1,0 +1,17 @@
+{
+    "exports": {
+        "FormNotice": "function T(e){let t,n,{type:r=a.Card.Types.DANGER,imageData:u,button:T,className:c,iconClassName:d,title:S,body:A,style:N,align:O=s.default.Align.START}=e,R=s.default.Direction.HORIZONTAL;if(null!=u){let{position:e,...n}=u;t=(0,i.jsx)(s.default.Child,{grow:0,shrink:0,children:(0,i.jsx)(\"img\",{alt:\"\",className:o()(l.icon,d),...n})}),e===I.RIGHT&&(R=s.default.Direction.HORIZONTAL_REVERSE)}else null!=T&&(n=T);let C=!0;return r===a.Card.Types.PRIMARY&&(C=!1),(0,i.jsx)(a.Card,{className:o()(l.formNotice,c),type:r,style:N,children:(0,i.jsxs)(s.default,{direction:R,align:O,children:[t,(0,i.jsxs)(s.default.Child,{children:[null!=S&&\"\"!==S?(0,i.jsx)(E.FormTitle,{tag:E.FormTitleTags.H5,className:o()(l.formNoticeTitle,{[l.whiteText]:C}),faded:!0,children:S}):null,(0,i.jsx)(_.FormText,{className:o()(l.formNoticeBody,{[l.whiteText]:C}),children:A}),n]})]})})}",
+        "FormNoticeImagePositions": {
+            "LEFT": "left",
+            "RIGHT": "right"
+        },
+        "FormNoticeTypes": {
+            "PRIMARY": "cardPrimary__1ee6a card__4dc22",
+            "DANGER": "cardDanger__33082 card__4dc22",
+            "WARNING": "cardWarning__3ca18 card__4dc22",
+            "SUCCESS": "cardSuccess__2b010 card__4dc22",
+            "BRAND": "cardBrand__2496e card__4dc22",
+            "CUSTOM": "card__4dc22"
+        }
+    }
+}

@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "current": {
-            "createInteractionHandle": "function(){}",
-            "clearInteractionHandle": "function(){}"
-        },
-        "inject": "function(t){r.current=t}"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useCommunicationDisabledNoticeStore": "function c(e){let[t,n]=u(e=>[e.notificationDismissedInGuilds,e.dismissNotification],r.default);return[!t.has(e),n]}",
-        "clearCommunicationDisabledNotice": "function d(e){return l.getState().resetNotification(e)}"
-    }
-}

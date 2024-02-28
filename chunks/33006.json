@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e,t){let[n,l]=(0,i.useState)(e),r=(0,a.useLazyValue)(()=>new s.Timeout);return(0,i.useEffect)(()=>()=>r.stop(),[r]),[n,(0,i.useCallback)(n=>{l(n),n!==e&&r.start(t,()=>l(e))},[t,e,r])]}"
+    }
+}

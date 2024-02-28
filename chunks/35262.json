@@ -1,0 +1,3 @@
+{
+    "exports": "function a(e){return\"[object Arguments]\"==Object.prototype.toString.call(e)}"
+}

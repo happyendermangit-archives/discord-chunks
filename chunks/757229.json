@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useSearchField": "function z(e,t,n){var r;let a=(0,K.useLocalizedStringFormatter)((r=V)&&r.__esModule?r.default:r,\"@react-aria/searchfield\"),{isDisabled:i,isReadOnly:o,onSubmit:s=()=>{},onClear:c,type:l=\"search\"}=e,{labelProps:u,inputProps:d,descriptionProps:p,errorMessageProps:f,...m}=(0,_.useTextField)({...e,value:t.value,onChange:t.setValue,onKeyDown:o?e.onKeyDown:(0,j.chain)(e=>{let n=e.key;\"Enter\"===n&&e.preventDefault(),!i&&!o&&(\"Enter\"===n&&s(t.value),\"Escape\"===n&&(\"\"===t.value?e.continuePropagation():(t.setValue(\"\"),c&&c())))},e.onKeyDown),type:l},n);return{labelProps:u,inputProps:{...d,defaultValue:void 0},clearButtonProps:{\"aria-label\":a.format(\"Clear search\"),excludeFromTabOrder:!0,preventFocusOnPress:!0,isDisabled:i||o,onPress:()=>{t.setValue(\"\"),c&&c()},onPressStart:()=>{var e;null===(e=n.current)||void 0===e||e.focus()}},descriptionProps:p,errorMessageProps:f,...m}}"
-    }
-}

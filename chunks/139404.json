@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useMobileRedesignDisabled": "function i(){return!1}",
-        "isMobileRedesignDisabled": "function r(){return!1}"
-    }
-}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "async function _(e){let t=a.default.getChannel(e.channelId),_=t?.guild_id;if((0,s.default)(_)){let t=await (0,r.openModalLazy)(async()=>{let{default:t}=await n.el(\"82432@613:651\").then(n.bind(n,\"233237\"));return n=>(0,i.jsx)(t,{...n,...e})},{onCloseCallback:()=>{o.default.dispatch({type:\"INTERACTION_IFRAME_MODAL_CLOSE\",applicationId:e.application.id})}});o.default.dispatch({type:\"INTERACTION_IFRAME_MODAL_KEY_CREATE\",modalKey:t})}}"
+    }
+}

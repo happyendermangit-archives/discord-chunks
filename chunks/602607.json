@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "useCollator": "function M(e){let{locale:t}=v(),n=t+(e?Object.entries(e).sort((e,t)=>e[0]<t[0]?-1:1).join():\"\");if(k.has(n))return k.get(n);let r=new Intl.Collator(t,e);return k.set(n,r),r}",
+        "useDateFormatter": "function w(e){e=(0,u.useDeepMemo)(null!=e?e:{},x);let{locale:t}=v();return(0,r.useMemo)(()=>new i.DateFormatter(t,e),[t,e])}",
+        "useFilter": "function S(e){let t=M({usage:\"search\",...e}),n=(0,r.useCallback)((e,n)=>0===n.length||(e=e.normalize(\"NFC\"),n=n.normalize(\"NFC\"),0===t.compare(e.slice(0,n.length),n)),[t]),a=(0,r.useCallback)((e,n)=>0===n.length||(e=e.normalize(\"NFC\"),n=n.normalize(\"NFC\"),0===t.compare(e.slice(-n.length),n)),[t]),o=(0,r.useCallback)((e,n)=>{if(0===n.length)return!0;e=e.normalize(\"NFC\"),n=n.normalize(\"NFC\");let r=0,a=n.length;for(;r+a<=e.length;r++){let o=e.slice(r,r+a);if(0===t.compare(n,o))return!0}return!1},[t]);return(0,r.useMemo)(()=>({startsWith:n,endsWith:a,contains:o}),[n,a,o])}",
+        "useLocale": "function v(){let e=function(){let e=(0,a.useIsSSR)(),[t,n]=(0,r.useState)(p);return((0,r.useEffect)(()=>(0===h.size&&window.addEventListener(\"languagechange\",m),h.add(n),()=>{h.delete(n),0===h.size&&window.removeEventListener(\"languagechange\",m)}),[]),e)?{locale:\"en-US\",direction:\"ltr\"}:t}();return(0,r.useContext)(y)||e}",
+        "useLocalizedStringDictionary": "function b(e,t){var n;let r;return t&&o.LocalizedStringDictionary.getGlobalDictionaryForPackage(t)||(n=e,!(r=g.get(n))&&(r=new o.LocalizedStringDictionary(n),g.set(n,r)),r)}",
+        "useLocalizedStringFormatter": "function _(e,t){let{locale:n}=v(),a=b(e,t);return(0,r.useMemo)(()=>new o.LocalizedStringFormatter(n,a),[n,a])}",
+        "useNumberFormatter": "function D(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},{locale:t}=v();return(0,r.useMemo)(()=>new s.NumberFormatter(t,e),[t,e])}"
+    }
+}

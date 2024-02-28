@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "render": "(t,n)=>(0,i.jsx)(s.AnalyticsContext.Consumer,{children:a=>(0,i.jsx)(e,{...t,ref:n,analyticsContext:a})})",
+            "displayName": "withAnalyticsContext()"
+        }
+    }
+}

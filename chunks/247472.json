@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "__assign": "function assign() { [native code] }",
-        "__spread": "function i(){for(var t=[],e=0;e<arguments.length;e++)t=t.concat(function(t,e){var n=\"function\"==typeof Symbol&&t[Symbol.iterator];if(!n)return t;var r,i,o=n.call(t),a=[];try{for(;(void 0===e||e-- >0)&&!(r=o.next()).done;)a.push(r.value)}catch(t){i={error:t}}finally{try{r&&!r.done&&(n=o.return)&&n.call(o)}finally{if(i)throw i.error}}return a}(arguments[e]));return t}"
-    }
-}

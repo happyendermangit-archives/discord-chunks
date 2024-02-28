@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "BINARY_READ_OPTIONS": {
+            "readerFactory": "e=>new i.BinaryReader(e,new TextDecoder(\"utf-8\"))"
+        },
+        "b64ToPreloadedUserSettingsProto": "function d(e){return c(s.PreloadedUserSettings,e)}",
+        "b64ToProto": "function c(e,t){if(null==t)return null;let n=(0,i.base64decode)(t);try{return e.fromBinary(n,u)}catch(e){throw Error(`Settings proto failed to deserialize (potentially corrupt): ${e}`)}}",
+        "b64ToProtoWithType": "function T(e,t){return null!=t&&e in I?c(I[e],t):null}",
+        "mergeTopLevelFields": "function N(e,t,n){for(let e in t={...t},n)delete t[e];return e.mergePartial(t,n),t}",
+        "mutateUserChannelSettings": "function R(e,t,n,i){var r,o,a;return r=e,o=t,a=e=>C(e,n,i),null==r.guilds&&(r.guilds=s.AllGuildSettings.create()),O(r.guilds,o,a)}",
+        "mutateUserChannelSettingsInternal": "function C(e,t,n){return!(t in e.channels)&&(e.channels[t]=s.ChannelSettings.create()),n(e.channels[t])}",
+        "mutateUserGuildSettingsInternal": "function O(e,t,n){return(null==t||\"null\"===t)&&(t=l.ZERO_STRING_GUILD_ID),!(t in e.guilds)&&(e.guilds[t]=s.GuildSettings.create()),n(e.guilds[t])}",
+        "protoToB64": "function A(e,t){return(0,i.base64encode)(e.toBinary(t))}",
+        "protoToB64WithType": "function S(e,t){return A(I[e],t)}",
+        "runMigrations": "function h(e,t){null==e.versions&&(e.versions=_.Versions.create());let n=0;for(let e of t){if(e.version<=n)throw Error(\"Migrations are out of order or there is a duplicate version\");n=e.version}let i=.1>Math.random(),r=!1,o=[];for(let n of t){if(n.version<=e.versions.clientVersion){i&&n.cleanup?.();continue}let t=n.run(e);if(e.versions.clientVersion=n.version,!1===t){n.cleanup?.();continue}r=!0,null!=n.cleanup&&o.push(n.cleanup)}return{proto:e,isDirty:r,cleanupFuncs:o}}",
+        "serializeUsageHistory": "function L(e,t){let n=Object.entries(e);if(n.length>t)for(n=o().sortBy(n,e=>{let[t,n]=e;return n.recentUses[n.recentUses.length-1]}).reverse();n.length>t;)n.pop();let i={};for(let[e,t]of n){let n=a.FrecencyItem.create();n.frecency=t.frecency,n.recentUses=t.recentUses.filter(e=>null!=e&&e>0).map(String),n.score=Math.round(t.score),n.totalUses=t.totalUses,i[e]=n}return i}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class i extends r.default{constructor(e){super(),this.id=e.id,this.skuId=e.skuId}static fromServer(e){let{sku_id:t,...n}=e;return new i({...n,skuId:t})}}"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "type": "function(e){let{onClick:t,trusted:n,title:s,href:c,children:f,messageId:p,channelId:m,...h}=e,{analyticsLocations:E}=(0,u.default)(o.default.MASKED_LINK),_=a.useCallback(t=>(0,d.handleClick)(e,t,E),[E,e]),I=a.useCallback(e=>{1===e.button&&_(e)},[_]),C=l().sanitizeUrl(c);return(0,i.jsx)(r.Anchor,{...h,title:s,target:\"_blank\",rel:\"noreferrer noopener\",href:C,onClick:_,onAuxClick:I,children:f??s})}",
+            "compare": null
+        }
+    }
+}

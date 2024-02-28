@@ -1,0 +1,53 @@
+{
+    "exports": {
+        "LongType": {
+            "0": "BIGINT",
+            "1": "STRING",
+            "2": "NUMBER",
+            "BIGINT": 0,
+            "STRING": 1,
+            "NUMBER": 2
+        },
+        "RepeatType": {
+            "0": "NO",
+            "1": "PACKED",
+            "2": "UNPACKED",
+            "NO": 0,
+            "PACKED": 1,
+            "UNPACKED": 2
+        },
+        "ScalarType": {
+            "1": "DOUBLE",
+            "2": "FLOAT",
+            "3": "INT64",
+            "4": "UINT64",
+            "5": "INT32",
+            "6": "FIXED64",
+            "7": "FIXED32",
+            "8": "BOOL",
+            "9": "STRING",
+            "12": "BYTES",
+            "13": "UINT32",
+            "15": "SFIXED32",
+            "16": "SFIXED64",
+            "17": "SINT32",
+            "18": "SINT64",
+            "DOUBLE": 1,
+            "FLOAT": 2,
+            "INT64": 3,
+            "UINT64": 4,
+            "INT32": 5,
+            "FIXED64": 6,
+            "FIXED32": 7,
+            "BOOL": 8,
+            "STRING": 9,
+            "BYTES": 12,
+            "UINT32": 13,
+            "SFIXED32": 15,
+            "SFIXED64": 16,
+            "SINT32": 17,
+            "SINT64": 18
+        },
+        "normalizeFieldInfo": "function c(e){var t,n,r,a;return e.localName=null!==(t=e.localName)&&void 0!==t?t:(0,l.lowerCamelCase)(e.name),e.jsonName=null!==(n=e.jsonName)&&void 0!==n?n:(0,l.lowerCamelCase)(e.name),e.repeat=null!==(r=e.repeat)&&void 0!==r?r:s.NO,e.opt=null!==(a=e.opt)&&void 0!==a?a:!e.repeat&&!e.oneof&&\"message\"==e.kind,e}"
+    }
+}

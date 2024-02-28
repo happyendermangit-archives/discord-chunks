@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "default": {
+            "hasPermission": "function h(){return null!=C&&\"granted\"===C.permission}",
+            "requestPermission": "function(e){null!=C&&C.requestPermission(()=>{null!=e&&e(h())})}",
+            "showNotification": "function(e,t,n,i,o){let a;if(D(o)){null!=o.sound&&!1!==o.playSoundIfDisabled&&L(o.sound,o.volume??1);return}null!=o.sound&&L(o.sound,o.volume??1);let s=o?.tag??null;(0,u.isLinux)()&&(n=r().escape(n));let E={icon:e,body:n,tag:s,silent:!0};d&&_.default.taskbarFlash&&T.default.flashFrame(!0);try{a=new C(t,E)}catch(e){return null}return(o.onShown?.(),!o.omitViewTracking&&l.default.track(c.AnalyticEvents.NOTIFICATION_VIEWED,i),a.onclick=()=>{u.isPlatformEmbedded?T.default.focus():(window.focus(),a.close()),!o.omitClickTracking&&l.default.track(c.AnalyticEvents.NOTIFICATION_CLICKED,i),o.onClick?.()},N&&setTimeout(()=>a.close(),5e3),A)?a:{close(){a?.onclose?.()}}}",
+            "disabled": "function D(e){return E.default.disableNotifications&&null==e.overrideStreamerMode||!h()||u.isPlatformEmbedded&&!T.default.shouldDisplayNotifications()}"
+        }
+    }
+}

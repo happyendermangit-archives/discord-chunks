@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){let{children:t,className:n,...a}=e,o=t();return(0,s.jsx)(l.default,{...a,className:r(n,i.container),contentClassName:i.content,children:o.map((e,t)=>(0,s.jsx)(\"div\",{className:i.column,style:{flexBasis:\"\".concat(100/o.length,\"%\")},children:e},t))})}"
-    }
-}

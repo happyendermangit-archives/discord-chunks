@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e,t){let n=(0,i.useStateFromStores)([l.default],()=>l.default.getId()===e),u=(0,i.useStateFromStores)([a.default],()=>null!=t&&a.default.isLurking(t)),d=s.RestrictedGuildIds.useSetting();return(0,i.useStateFromStores)([o.default,r.default],()=>!n&&!u&&(o.default.isFriend(e)||null!=r.default.memberOf(e).find(e=>!d.includes(e))))}"
+    }
+}

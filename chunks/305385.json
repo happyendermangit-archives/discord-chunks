@@ -1,3 +1,6 @@
 {
-    "exports": "/assets/dd096a00caf8939a3e59.svg"
+    "exports": {
+        "card": "card__28b25",
+        "modal": "modal__8a0f3"
+    }
 }

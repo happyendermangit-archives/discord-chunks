@@ -1,0 +1,20 @@
+{
+    "exports": {
+        "StageChannelParticipantNamedIndex": {
+            "SPEAKER": "SPEAKER",
+            "AUDIENCE": "AUDIENCE",
+            "NO_ROLE": "NO_ROLE",
+            "ALL_REQUESTED_TO_SPEAK": "ALL_REQUESTED_TO_SPEAK",
+            "REQUESTED_TO_SPEAK_ONLY": "REQUESTED_TO_SPEAK_ONLY",
+            "BLOCKED": "BLOCKED",
+            "FRIEND": "FRIEND",
+            "SELECTED": "SELECTED",
+            "MEDIA": "MEDIA"
+        },
+        "StageChannelParticipantTypes": {
+            "VOICE": "VOICE",
+            "STREAM": "STREAM"
+        },
+        "default": "class D{constructor(e){this.participants={},this._participantsIndex=new o.default(N,S),this._requestToSpeakIndex=new o.default(()=>[],C),this.channelId=e,this.guildId=f.default.getChannel(e)?.getGuildId()}_getParticipantsForUser(e,t){let n;let s=[],i=h.default.getVoiceStateForChannel(this.channelId,e);if(null==i)return s;let r=m.default.getUser(e);if(null==r)return null!=this.guildId&&v.default.isPublic(this.channelId)&&_.default.requestMember(this.guildId,e),s;let a=null!=t?t[0]:null,o={user:r,userNick:E.default.getName(this.guildId,this.channelId,r),voiceState:i,role:(0,I.getHighestHoistedRole)(this.guildId,e),speaker:p.default.isSpeaker(e,this.channelId),member:null!=this.guildId?c.default.getMember(this.guildId,e):null,blocked:g.default.getRelationships()[r.id]===T.RelationshipTypes.BLOCKED,isFriend:g.default.isFriend(r.id),connectedOn:a?.connectedOn??Date.now()},u={...o,type:\"VOICE\",id:r.id,rtsState:(0,y.getAudienceRequestToSpeakState)(i)};s.push(u);let f=l.default.getStreamForUser(e,this.guildId)??l.default.getActiveStreamForUser(e,this.guildId);if(null!=f&&f.channelId===this.channelId){let e=(0,d.encodeStreamKey)(f);n={...o,id:e,type:\"STREAM\",rtsState:y.RequestToSpeakStates.NONE},s.push(n)}return s}updateParticipant(e){let t=this.participants[e],n=this._getParticipantsForUser(e,t);return(null!=t||0!==n.length)&&(t?.forEach(e=>{this._participantsIndex.delete(e.id),this._requestToSpeakIndex.delete(e.id)}),n.forEach(t=>{this._participantsIndex.set(t.id,t),t.id===e&&A(t.rtsState)?this._requestToSpeakIndex.set(e,t):this._requestToSpeakIndex.delete(e)}),this.participants[e]=n,!0)}rebuild(){let e=f.default.getChannel(this.channelId);if(null==e||!e.isGuildStageVoice())return!1;let t=new Set(Object.keys(h.default.getVoiceStatesForChannel(e.id)));return this._participantsIndex.clear(),this._requestToSpeakIndex.clear(),this.participants={},t.forEach(e=>this.updateParticipant(e)),!0}get version(){return this._participantsIndex.version}size(e){return this._participantsIndex.size(e)}toArray(e){return this._participantsIndex.values(e,!0)}getParticipant(e){return this._participantsIndex.get(e)??null}get requestToSpeakVersion(){return this._requestToSpeakIndex.version}getRequestToSpeakParticipants(){return this._requestToSpeakIndex.values(void 0,!0)}}"
+    }
+}

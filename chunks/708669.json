@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "MenuImageUploadControl": {
+            "render": "function(e,t){let s=r.useRef(null);return r.useImperativeHandle(t,()=>({focus:()=>null,activate:()=>(s.current?.activateUploadDialogue(),!1)}),[]),(0,i.jsx)(\"div\",{style:{position:\"relative\"},children:(0,i.jsx)(a.default,{...e,ref:s,onChange:function(t,r){(0,o.openModalLazy)(async()=>{let{default:o}=await n.el(\"708669@989:1049\").then(n.bind(n,\"790008\"));return n=>(0,i.jsx)(o,{imgURI:t,file:r,onCrop:e.onChange,...n})})}})})}"
+        }
+    }
+}

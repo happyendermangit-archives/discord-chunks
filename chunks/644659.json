@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "set": "function(t,r){if(g.has(t))throw h(y);return r.facade=t,g.set(t,r),r}",
+        "get": "function(t){return g.get(t)||{}}",
+        "has": "function(t){return g.has(t)}",
+        "enforce": "function(t){return i(t)?o(t):e(t,{})}",
+        "getterFor": "function(t){return function(r){var n;if(!s(r)||(n=o(r)).type!==t)throw h(\"Incompatible receiver, \"+t+\" required\");return n}}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "setupWindow": "function l(e){let t=e.document,n=(0,i.setupWindowId)(e);function l(){(0,s.setCurrentlyInteractingWindowId)(n)}function u(){setTimeout(()=>{(0,s.clearCurrentlyInteractingWindowId)(n)},0)}for(let n of(e.addEventListener(\"resize\",function(){(0,a.resized)(e)}),e.addEventListener(\"focus\",function(){(0,a.focus)(e,!0)}),e.addEventListener(\"blur\",function(){!e.document.hasFocus()&&(0,a.focus)(e,!1)}),e.addEventListener(\"unload\",function(){(0,a.unload)(e)}),e.addEventListener(\"visibilitychange\",function(){(0,a.visibilityChange)(e)}),s.INTERACTION_EVENTS))t.addEventListener(n,l,!0),t.addEventListener(n,u,!1);(0,r.subscribeDocumentToFullScreenChange)(t,function(){(0,a.fullscreenChange)(e)}),(0,a.init)(e)}"
+    }
+}

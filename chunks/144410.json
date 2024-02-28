@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e){let{user:t,nickname:n}=e,l=null!=n;return(0,i.jsx)(a.Avatar,{src:t.getAvatarURL(void 0,l?16:24),size:l?a.AvatarSizes.SIZE_16:a.AvatarSizes.SIZE_24,className:l?s.miniAvatar:s.largeAvatar,\"aria-hidden\":!0})}"
+    }
+}

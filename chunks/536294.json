@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "VoiceChannelEffectSentLocation": {
+            "EMOJI_PICKER": "emoji_picker",
+            "EFFECT_BAR": "effect_bar"
+        },
+        "sendVoiceChannelCustomCallSoundEffect": "function x(e,t,n){let{abortController:i,onRequestProgress:a}=g(e),s=E.default.getState().animationType??C.VoiceChannelEffectAnimationType.BASIC,r={animation_type:s,animation_id:(0,I.sampleAnimationId)(s,I.CUSTOM_CALL_SOUND_ANIMATION_RANGE)};l.default.post({url:y.Endpoints.CUSTOM_CALL_SOUNDS(e),body:r,signal:i.signal,onRequestProgress:a}).then(y.NOOP_NULL,()=>{if(i.signal.aborted)return}),(0,f.default)([o.default.CHANNEL_CALL],n,t,c.AnalyticsSoundType.ENTRY)}",
+        "sendVoiceChannelEffect": "async e=>{let{channel:t,emoji:n,location:i,animationType:a,animationId:s,isPremium:o}=e;if(null==n||_.default.isOnCooldown)return;let u=o&&null!=a?a:C.VoiceChannelEffectAnimationType.BASIC;try{let e=null!=n.id?{emoji_id:n.id,emoji_name:n.name,animation_type:u,animation_id:s}:{emoji_id:null,emoji_name:n.optionallyDiverseSequence,animation_type:u,animation_id:s};await l.default.post({url:y.Endpoints.VOICE_CHANNEL_EFFECTS(t.id),body:e}),O(t,n,i,u),r.default.dispatch({type:\"VOICE_CHANNEL_EFFECT_SENT_LOCAL\"})}catch(e){if(429===e.status&&null!=e.body.retry_after){let t=e.body.retry_after*m.default.Millis.SECOND;r.default.dispatch({type:\"VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP\",cooldownEndsAtMs:t})}}}",
+        "sendVoiceChannelSoundboardEffect": "function T(e,t,n,i){let a=d.default.getCustomEmojiById(t.emojiId??\"\"),{abortController:s,onRequestProgress:r}=g(e),o={sound_id:t.soundId,emoji_id:t.emojiId,emoji_name:t.emojiName??a?.name};t.guildId!==S.DEFAULT_SOUND_GUILD_ID&&(o.source_guild_id=t.guildId),l.default.post({url:y.Endpoints.SEND_SOUNDBOARD_SOUND(e),body:o,signal:s.signal,onRequestProgress:r}).then(y.NOOP_NULL,()=>{if(s.signal.aborted)return}),(0,f.default)(i??[],n,t,c.AnalyticsSoundType.DEFAULT)}"
+    }
+}

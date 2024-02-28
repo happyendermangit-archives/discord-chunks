@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "GridActionType": {
+            "UPDATE_COLUMN_COUNTS": "UPDATE_COLUMN_COUNTS",
+            "SET_FOCUSED_POSITION": "SET_FOCUSED_POSITION"
+        },
+        "default": "function _(e,t){var n,i,r,_;switch(t.type){case o.ActionType.NAVIGATE_UP:return function(e,t){let n=a(0,e.focusedY-1);return{...e,focusedX:s(e.columnCounts[n]-1,e.focusedX),focusedY:n}}(e,0);case o.ActionType.NAVIGATE_DOWN:return function(e,t){let n=s(e.focusedY+1,e.columnCounts.length-1);return{...e,focusedX:s(e.columnCounts[n]-1,e.focusedX),focusedY:n}}(e,0);case o.ActionType.NAVIGATE_RIGHT:return function(e,t){let n=e.focusedY!==e.columnCounts.length-1&&e.focusedX+1===e.columnCounts[e.focusedY],i=n?0:s(e.focusedX+1,e.columnCounts[e.focusedY]-1),r=n?e.focusedY+1:e.focusedY;return{...e,focusedX:i,focusedY:r}}(e,0);case o.ActionType.NAVIGATE_LEFT:return function(e,t){let n=0!==e.focusedY&&0===e.focusedX,i=n?e.focusedY-1:e.focusedY,r=n?e.columnCounts[i]-1:a(0,e.focusedX-1);return{...e,focusedX:r,focusedY:i}}(e,0);case o.ActionType.NAVIGATE_INLINE_START:;return n=0,{...e,focusedX:0};case o.ActionType.NAVIGATE_INLINE_END:;return r=0,{...i=e,focusedX:i.columnCounts[i.focusedY]-1};case o.ActionType.NAVIGATE_START:;return _=0,{...e,focusedX:0,focusedY:0};case o.ActionType.NAVIGATE_END:return function(e,t){let n=e.columnCounts.length-1;return{...e,focusedX:e.columnCounts[n]-1,focusedY:n}}(e,0);case\"UPDATE_COLUMN_COUNTS\":return function(e,t){let{columnCounts:n}=t,i=s(a(0,n.length-1),e.focusedY);return{...e,columnCounts:n,focusedX:s(null==n[i]?0:n[i]-1,e.focusedX),focusedY:i}}(e,t);case\"SET_FOCUSED_POSITION\":return function(e,t){let{x:n,y:i}=t,r=a(0,s(i,e.columnCounts.length-1));return{...e,focusedX:a(0,s(n,e.columnCounts[r]-1)),focusedY:r}}(e,t);case o.ActionType.SELECT_FOCUSED_ITEM:break;default:console.warn(`Grid navigator was given an unhandled action ${t.type}`)}return e}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "MenuGroup": "function _(e){let{contents:t,label:n,className:r,color:_=\"default\"}=e;return 0===t.length?null:(0,i.jsxs)(\"div\",{\"aria-label\":n,role:\"group\",className:r,children:[null!=n?(0,i.jsx)(\"div\",{className:o()(s.groupLabel,a.MENU_ITEM_COLORS[_]),children:n}):null,t]})}"
+    }
+}

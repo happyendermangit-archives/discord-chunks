@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "MAX_STAGE_TOPIC_LENGTH": 240,
+        "RequestToSpeakPermissionStates": {
+            "1": "EVERYONE",
+            "2": "NO_ONE",
+            "3": "ROLES",
+            "EVERYONE": 1,
+            "NO_ONE": 2,
+            "ROLES": 3
+        },
+        "STAGE_APPLICATION_ID": "834488117758001152",
+        "STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY": "stage-channel-audience-notice-shown",
+        "STAGE_INVITE_STATE_KEY": "stage-invite",
+        "StartStageSteps": {
+            "0": "GUILD_SELECTION",
+            "1": "STAGE_CHANNEL_SETTINGS",
+            "2": "PUBLIC_STAGE_PREVIEW",
+            "GUILD_SELECTION": 0,
+            "STAGE_CHANNEL_SETTINGS": 1,
+            "PUBLIC_STAGE_PREVIEW": 2
+        }
+    }
+}

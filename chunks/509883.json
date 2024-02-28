@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "createDrop": "function s(e){return function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},n=e.getMonitor(),i=e.getRegistry();(function(e){(0,r.invariant)(e.isDragging(),\"Cannot call drop while not dragging.\"),(0,r.invariant)(!e.didDrop(),\"Cannot call drop twice during one drag operation.\")})(n),(function(e){var t=e.getTargetIds().filter(e.canDropOnTarget,e);return t.reverse(),t})(n).forEach(function(s,l){var c=function(e,t,n,a){var i=n.getTarget(e),u=i?i.drop(a,e):void 0;return function(e){(0,r.invariant)(void 0===e||(0,o.isObject)(e),\"Drop result must either be an object or undefined.\")}(u),void 0===u&&(u=0===t?{}:a.getDropResult()),u}(s,l,i,n),d={type:a.DROP,payload:{dropResult:u(u({},t),c)}};e.dispatch(d)})}}"
+    }
+}

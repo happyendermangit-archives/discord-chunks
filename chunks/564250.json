@@ -1,0 +1,3 @@
+{
+    "exports": "function(e,t){var n=d(t);if(\"\"===e||null==e)return n.plainObjects?Object.create(null):{};for(var a=\"string\"==typeof e?s(e,n):e,o=n.plainObjects?Object.create(null):{},i=Object.keys(a),u=0;u<i.length;++u){var l=i[u],f=c(l,a[l],n,\"string\"==typeof e);o=r.merge(o,f,n)}return!0===n.allowSparse?o:r.compact(o)}"
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function A(e){let{hideBadges:t=!1,stream:n,...f}=e,m=(0,i.useStateFromStores)([p.default],()=>v.default.isPremium(p.default.getCurrentUser(),S.PremiumTypes.TIER_1)),h=(0,i.useStateFromStores)([c.default],()=>c.default.getChannel(null==n?void 0:n.channelId)),y=l.useMemo(()=>null!=n?[n]:[],[n]),A=(0,r.useIsBroadcastingInChannel)(null==h?void 0:h.id),x=l.useCallback(()=>{null!=h&&(0,u.default)(h.getGuildId(),h.id,C.AnalyticsSections.STREAM_SETTINGS)},[h]);if(null==n||null==h)return null;let N=E;return!t&&!m&&(N=T),(0,a.jsx)(o.Popout,{position:\"top\",renderPopout:e=>{let{closePopout:t}=e;return(0,a.jsx)(I.default,{children:A?(0,a.jsx)(s.default,{onClose:t}):(0,a.jsx)(d.default,{channel:h,currentUser:p.default.getCurrentUser(),activeStreams:y,onClose:t,showReportOption:!0,handleGoLive:x})})},animation:o.Popout.Animation.FADE,children:e=>(0,a.jsx)(P.default,{...e,label:g.default.Messages.STREAMER_SETTINGS_TITLE,iconComponent:N,...f})})}"
-    }
-}

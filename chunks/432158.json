@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "getSubscriptionPlansLoaded": "function S(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[...o.ACTIVE_PREMIUM_SKUS],[e,n,i]=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[r.default,l.default,a.default],u=e.paymentSourceIds,c=e.defaultPaymentSourceId,S=n.isLoadedForSKUs(t),E=i.getPremiumTypeSubscription()?.paymentSourceId;if(null!=E&&!n.hasPaymentSourceForSKUIds(E,t))return s(`subscription payment source ${E} not loaded for ${t}`),!1;if(null!=c&&!n.hasPaymentSourceForSKUIds(c,t))return s(`default payment source ${c} not loaded for ${t}`),!1;for(let e of u)if(!n.hasPaymentSourceForSKUIds(e,t))return s(`payment source ${e} not loaded for ${t}`),!1;return s(`isLoadedForSKUs ${S}`),S}",
+        "useSubscriptionPlansLoaded": "function c(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[...o.ACTIVE_PREMIUM_SKUS];return(0,i.useStateFromStores)([r.default,l.default,a.default],()=>S(t,[r.default,l.default,a.default]),[t])}"
+    }
+}

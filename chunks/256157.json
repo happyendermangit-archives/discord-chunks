@@ -1,0 +1,16 @@
+{
+    "exports": {
+        "RequestToSpeakStates": {
+            "0": "NONE",
+            "1": "REQUESTED_TO_SPEAK",
+            "2": "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK",
+            "3": "ON_STAGE",
+            "NONE": 0,
+            "REQUESTED_TO_SPEAK": 1,
+            "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK": 2,
+            "ON_STAGE": 3
+        },
+        "default": "function u(e,t){return(0,r.useStateFromStores)([a.default],()=>null==e||null==t?0:o(a.default.getVoiceStateForChannel(t,e)),[e,t])}",
+        "getAudienceRequestToSpeakState": "function o(e){if(null==e)return 0;if(e.suppress&&null!=e.requestToSpeakTimestamp)return 1;if(!e.suppress&&null!=e.requestToSpeakTimestamp)return 2;if(!e.suppress&&null==e.requestToSpeakTimestamp)return 3;return 0}"
+    }
+}

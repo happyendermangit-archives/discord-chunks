@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getDefaultLibraryApplicationAction": "function i(e,t,n){let i=t.getState(e.id,e.branchId),r=n.getQueuePosition(e.id,e.branchId),s=n.paused;if(null!=i){if(null==r||-1===r)switch(i.type){case l.LocalDispatchApplicationStates.INSTALLING:return l.LibraryApplicationActions.INSTALL;case l.LocalDispatchApplicationStates.UPDATING:case l.LocalDispatchApplicationStates.UPDATE_REQUIRED:return l.LibraryApplicationActions.UPDATE}switch(i.type){case l.LocalDispatchApplicationStates.INSTALLING:case l.LocalDispatchApplicationStates.UPDATING:case l.LocalDispatchApplicationStates.UPDATE_REQUIRED:case l.LocalDispatchApplicationStates.REPAIRING:if(r>0)return l.LibraryApplicationActions.MOVE_UP;if(s)return l.LibraryApplicationActions.RESUME;return l.LibraryApplicationActions.PAUSE;case l.LocalDispatchApplicationStates.UP_TO_DATE:return l.LibraryApplicationActions.PLAY;case l.LocalDispatchApplicationStates.UNINSTALLING:return null}}return null!=r&&r>0?l.LibraryApplicationActions.MOVE_UP:(0,a.isSupportedPlatform)()?l.LibraryApplicationActions.INSTALL:null}"
+    }
+}

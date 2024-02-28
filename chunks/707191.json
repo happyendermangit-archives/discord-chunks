@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "install": "async function N(){var e;let t=new S((await c.getAvailableDictionaries()??[]).map(d).filter(l.isNotNullish));return e=t,null!=document.body&&document.body.addEventListener(\"beforeinput\",t=>A(e,t.target),!0),t}"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "IMAGE_OPEN_DIALOG_DESCRIPTION": "uid_4",
+        "MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID": "uid_1",
+        "MESSAGE_PRE_TIMESTAMP_PAUSE_LABEL_SEGMENT_ID": "uid_2",
+        "MESSAGE_REACTIONS_LABEL_SEGMENT_ID": "uid_3",
+        "insertAccessibilityLabelElements": "function l(){[{id:a,text:\",\"},{id:s,text:\",\"},{id:o,text:i.default.Messages.REACTIONS},{id:u,text:i.default.Messages.OPEN_ORIGIANL_IMAGE_BUTTON_A11Y_DESCRIPTION}].forEach(e=>{let{id:t,text:n}=e,r=document.getElementById(t);null==r&&((r=document.createElement(\"div\")).setAttribute(\"id\",t),r.innerText=n,r.style.display=\"none\",document.body.appendChild(r))})}"
+    }
+}

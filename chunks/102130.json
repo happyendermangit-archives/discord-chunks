@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "default": "function T(){let{canShow:e,isFavoritesPerk:t}=(0,l.useFavoritesServerExperiment)(\"7993a7_2\"),n=(0,o.useStateFromStores)([E.default,a.default,s.default],()=>e&&I(E.default,a.default,s.default));return!!t||n}",
+        "isFavoritesGuildVisible": "function I(e,t,n){let{canShow:i,isFavoritesPerk:o}=l.default.getCurrentConfig({location:\"7993a7_1\"},{autoTrackExposure:!1});if(o)return!0;if(!i)return!1;let a=e.getFavoriteChannels();if(r().isEmpty(a))return!1;let s=_.default.keys(a).filter(e=>{let i=t.getChannel(e);return null!=i&&(!!i.isPrivate()||n.can(u.Permissions.VIEW_CHANNEL,i))});return!r().isEmpty(s)&&!0}"
+    }
+}

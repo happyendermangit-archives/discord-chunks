@@ -1,0 +1,22 @@
+{
+    "exports": {
+        "clearErrors": "function O(){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS\"})}",
+        "closeGuildIdentitySettings": "function c(){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_CLOSE\"}),(0,a.popLayer)()}",
+        "initGuildIdentitySettings": "function l(e,t){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_INIT\",guild:e,analyticsLocations:t})}",
+        "resetAllPending": "function R(){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING\"})}",
+        "resetAndCloseGuildIdentityForm": "function d(){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM\"})}",
+        "resetPendingMemberChanges": "function p(){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES\"})}",
+        "resetPendingProfileChanges": "function P(){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES\"})}",
+        "saveGuildIdentityChanges": "async function o(e,t){let{nick:n,avatar:a,avatarDecoration:o}=t;if(null==e)throw Error(\"Need guildId\");i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SUBMIT\"});let u={nick:n,avatar:a,avatar_decoration_id:null===o?null:o?.id,avatar_decoration_sku_id:null===o?null:o?.skuId};try{let t=await r.default.patch({url:s.Endpoints.SET_GUILD_MEMBER(e),body:u,oldFormErrors:!0});return i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS\"}),i.default.dispatch({type:\"GUILD_MEMBER_PROFILE_UPDATE\",guildMember:t.body,guildId:e}),t}catch(t){let e=t.body;e?.username!=null&&(e.nick=e.username,delete e.username),i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE\",errors:t.body})}}",
+        "setCurrentGuild": "function u(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_GUILD\",guild:e})}",
+        "setDisableSubmit": "function N(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT\",disable:e})}",
+        "setPendingAvatar": "function _(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR\",avatar:e})}",
+        "setPendingAvatarDecoration": "function f(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION\",avatarDecoration:e})}",
+        "setPendingBanner": "function T(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER\",banner:e})}",
+        "setPendingBio": "function I(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO\",bio:e})}",
+        "setPendingNickname": "function S(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME\",nickname:e})}",
+        "setPendingProfileEffectId": "function E(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID\",profileEffectId:e})}",
+        "setPendingPronouns": "function m(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS\",pronouns:e})}",
+        "setPendingThemeColors": "function C(e){i.default.dispatch({type:\"GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS\",themeColors:e})}"
+    }
+}

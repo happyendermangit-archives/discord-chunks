@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "MENTION_EVERYONE": "()=>({test:\"everyone\",text:\"@everyone\",description:l.default.Messages.MENTION_EVERYONE_AUTOCOMPLETE_DESCRIPTION})",
+            "MENTION_HERE": "()=>({test:\"here\",text:\"@here\",description:l.default.Messages.MENTION_HERE_AUTOCOMPLETE_DESCRIPTION})",
+            "LAUNCHABLE_APPLICATIONS": "()=>a.default.launchableApplicationViewItems"
+        }
+    }
+}

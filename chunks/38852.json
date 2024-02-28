@@ -1,0 +1,16 @@
+{
+    "exports": {
+        "CHAT_INPUT_BUTTON_CLASSNAME": "expression-picker-chat-input-button",
+        "ExpressionPickerViewType": {
+            "EMOJI": "emoji",
+            "GIF": "gif",
+            "STICKER": "sticker",
+            "SOUNDBOARD": "soundboard"
+        },
+        "ExpressionPickerWidths": {
+            "MIN": "min",
+            "MAX": "max"
+        },
+        "MIN_EXPRESSION_PICKER_WIDTH": 498
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getOpenAppFromEmailDestinations": "e=>{let t=(0,d.parse)(e);return{desktop:c(t.desktop_link),mobile:c(t.mobile_link)}}"
+    }
+}

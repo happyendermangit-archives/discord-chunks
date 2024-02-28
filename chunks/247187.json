@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "default": "function l(e,t,n){t&&!(\"byKey\"in t)&&(n=t,t=null),!Array.isArray(e)&&(e=[e]);var r=e.map(function(e){return c(e,t)}),a=function(e){return r.some(function(t){return _(t,e)})};return null==n?a:a(n)}",
+        "isHotkey": "function l(e,t,n){t&&!(\"byKey\"in t)&&(n=t,t=null),!Array.isArray(e)&&(e=[e]);var r=e.map(function(e){return c(e,t)}),a=function(e){return r.some(function(t){return _(t,e)})};return null==n?a:a(n)}",
+        "isCodeHotkey": "function(e,t){return l(e,t)}",
+        "isKeyHotkey": "function(e,t){return l(e,{byKey:!0},t)}",
+        "parseHotkey": "function c(e,t){var n=t&&t.byKey,r={},i=(e=e.replace(\"++\",\"+add\")).split(\"+\"),o=i.length;for(var s in a)r[a[s]]=!1;var l=!0,c=!1,_=void 0;try{for(var p,m=i[Symbol.iterator]();!(l=(p=m.next()).done);l=!0){var g=p.value,E=g.endsWith(\"?\")&&g.length>1;E&&(g=g.slice(0,-1));var S=u(g),f=a[S];(1===o||!f)&&(n?r.key=S:r.which=d(g)),f&&(r[f]=!E||null)}}catch(e){c=!0,_=e}finally{try{!l&&m.return&&m.return()}finally{if(c)throw _}}return r}",
+        "compareHotkey": "function _(e,t){for(var n in e){var r=e[n],a=void 0;if(null!=r){if((null!=(a=\"key\"===n&&null!=t.key?t.key.toLowerCase():\"which\"===n?91===r&&93===t.which?91:t.which:t[n])||!1!==r)&&a!==r)return!1}}return!0}",
+        "toKeyCode": "function d(e){return o[e=u(e)]||e.toUpperCase().charCodeAt(0)}",
+        "toKeyName": "function u(e){return e=i[e=e.toLowerCase()]||e}"
+    }
+}

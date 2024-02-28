@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "default": {
+            "name": "offset",
+            "enabled": true,
+            "phase": "main",
+            "requires": [
+                "popperOffsets"
+            ],
+            "fn": "function(e){var t=e.state,n=e.options,o=e.name,i=n.offset,u=void 0===i?[0,0]:i,s=a.placements.reduce(function(e,n){var o,i,s,l,c,d,f,p;return e[n]=(o=n,i=t.rects,s=u,l=(0,r.default)(o),c=[(0,a.left),(0,a.top)].indexOf(l)>=0?-1:1,f=(d=\"function\"==typeof s?s(Object.assign({},i,{placement:o})):s)[0],p=d[1],f=f||0,p=(p||0)*c,[(0,a.left),(0,a.right)].indexOf(l)>=0?{x:p,y:f}:{x:f,y:p}),e},{}),l=s[t.placement],c=l.x,d=l.y;null!=t.modifiersData.popperOffsets&&(t.modifiersData.popperOffsets.x+=c,t.modifiersData.popperOffsets.y+=d),t.modifiersData[o]=s}"
+        }
+    }
+}

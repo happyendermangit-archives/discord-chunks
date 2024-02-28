@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function c(e){let t,s,c,{className:f,activeCommand:p,activeOption:m,optionStates:h}=e,E=a.useCallback(e=>{let t=p?.rootCommand?.id;if(null==t){e.preventDefault();return}(0,r.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"94016@849:924\").then(n.bind(n,\"786892\"));return n=>(0,i.jsx)(e,{...n,id:t,label:u.default.Messages.COPY_ID_COMMAND})})},[p?.rootCommand?.id]);if(null==p)return null;if(null!=m){let e=h[m.name].lastValidationResult;t=m.displayName,s=m.displayDescription,c=e?.success?null:e?.error}else t=`${o.COMMAND_SENTINEL}${p.displayName}`,s=p.displayDescription,c=null;return(0,i.jsxs)(\"div\",{className:l()(f,d.bar),onContextMenu:E,children:[(0,i.jsx)(\"span\",{className:d.name,children:t}),null!=c?(0,i.jsx)(\"span\",{className:d.error,children:c}):(0,i.jsx)(\"span\",{className:d.description,children:s})]})}"
+    }
+}

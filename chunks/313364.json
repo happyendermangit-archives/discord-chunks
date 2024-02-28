@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let t=(0,a.default)(e)??\"\";switch(t){case s.ActivityGamePlatforms.PS4:case s.ActivityGamePlatforms.PS5:return l.default.Messages.USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM.format({platform:t.toUpperCase()});case s.ActivityGamePlatforms.XBOX:case s.ActivityGamePlatforms.SAMSUNG:return l.default.Messages.USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM.format({platform:i.default.get(t).name});default:return l.default.Messages.USER_ACTIVITY_HEADER_PLAYING}}"
+    }
+}

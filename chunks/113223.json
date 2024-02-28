@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "KeyCombo": "function l(e){let{shortcut:t,dim:n=!1,className:r,keyClassName:a}=e,_=Array.isArray(t)?t:t.split(\"+\");return(0,i.jsx)(\"div\",{className:o()(s.combo,r,{[s.dim]:n}),children:_.map(e=>null!=E[e]?E[e]():e).map((e,t)=>(0,i.jsx)(\"span\",{className:o()(s.key,a),children:e},t))})}",
+        "PRETTY_KEYS": {
+            "mod": "()=>a.default.modKey",
+            "alt": "()=>a.default.altKey",
+            "up": "()=>(0,i.jsx)(_,{direction:\"up\"})",
+            "down": "()=>(0,i.jsx)(_,{direction:\"down\"})",
+            "left": "()=>(0,i.jsx)(_,{direction:\"left\"})",
+            "right": "()=>(0,i.jsx)(_,{direction:\"right\"})",
+            "pageup": "()=>\"page up\"",
+            "pagedown": "()=>\"page down\"",
+            "any-character": "()=>\"any key\"",
+            "plus": "()=>\"+\"",
+            "return": "()=>a.default.returnKey"
+        }
+    }
+}

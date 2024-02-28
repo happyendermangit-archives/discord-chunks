@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "selectVoiceChannelAdditional": "function(e,t){let h=arguments.length>2&&void 0!==arguments[2]&&arguments[2],E=arguments.length>3&&void 0!==arguments[3]&&arguments[3],p=l.default.getChannel(e),v=g.default.getCurrentClientVoiceChannelId(t??null)===e,y=null!=p?_.default.getCheck(p.guild_id):null;if(!(null!=t&&(0,r.shouldShowMembershipVerificationGate)(t))){if(null==y||y.canChat||(0,a.canLurkerListen)(p)){if(null!=p&&!v){let e=(0,m.isChannelFull)(p,g.default,f.default);if(e&&p.isGuildStageVoice()&&(0,o.getStageHasMedia)(p.id)){(0,s.openModalLazy)(async()=>{let{default:e}=await n.el(\"360266@2091:2151\").then(n.bind(n,\"456254\"));return t=>e({channel:p,...t})});return}if(e){(0,s.openModalLazy)(async()=>{let{default:e}=await n.el(\"360266@2459:2508\").then(n.bind(n,\"629783\"));return t=>e(t)});return}}h&&(0,u.applyInitialVideoBackgroundOption)(),(0,d.default)(function(){i.default.dispatch({type:\"VOICE_CHANNEL_SELECT\",guildId:t,channelId:e,currentVoiceChannelId:c.default.getVoiceChannelId(),video:h,stream:E})},e,E,h)}}}"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "ForumPostMediaTypes": {
+            "EMBED": "embed",
+            "ATTACHMENT": "attachment"
+        },
+        "getEmbedColor": "function _(e,t){if(null==e||null==e.embeds[0])return;let{color:n}=e.embeds[0];return null!=n&&\"#ffffff\"===n.toLowerCase()||t?void 0:n}",
+        "messageContainsGifOrVideo": "function R(e){return e.reduce((e,t)=>({containsVideo:e.containsVideo||t.isVideo,containsGif:e.containsGif||(0,l.isAnimatedImageUrl)(t.src)}),{containsVideo:!1,containsGif:!1})}",
+        "shouldShowAddMediaToOriginalPostModal": "function O(e,t){let n=u.default.getChannel(t);if(null==n)return!1;let i=d.default.getMessage(n.id,m.default.castChannelIdAsMessageId(n.id));return null!=i&&e.length>0&&null!=e.find(e=>e.isImage||e.isVideo)&&n.isForumPost()&&n.ownerId===c.default.getCurrentUser()?.id&&0===r.default.getCount(n.id)&&(0===i.attachments.length||null==i.attachments.find(e=>I(e)||C(e)))}",
+        "useFindFirstMediaProperties": "function A(e,t){let n=S(e),i=g(e,t);return n[0]??i[0]??null}",
+        "useFirstMediaIsEmbed": "function N(e,t){let n=S(e),i=g(e,t);return null==n[0]&&null!=i[0]}",
+        "useForumPostMediaProperties": "function T(e,t){let n=S(e);return[...n,...g(e,t)]}",
+        "useForumPostMediaThumbnail": "function x(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],i=T(e,n);return s.useMemo(()=>{if(null==t)return[];if(!t.isMediaChannel())return i;{let e=i.find(e=>e.isThumbnail);return null!=e?[e]:i}},[t,i])}"
+    }
+}

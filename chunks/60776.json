@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`Upadati ${e.fieldLabel}`",
+            "increase": "e=>`Pove\\u{10D}ajte ${e.fieldLabel}`",
+            "numberField": "Številčno polje"
+        }
+    }
+}

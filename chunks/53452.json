@@ -1,10 +1,12 @@
 {
     "exports": {
-        "IS_APP_COMPATIBLE_BROWSER": true,
-        "BROWSER_SUPPORTS_VOICE": true,
-        "BROWSER_SUPPORTS_VIDEO": true,
-        "BROWSER_SUPPORTS_UNIFIED_PLAN": true,
-        "BROWSER_SUPPORTS_DIAGNOSTICS": true,
-        "BROWSER_SUPPORTS_CONNECTION_STATE": true
+        "CollectiblesItemType": {
+            "0": "AVATAR_DECORATION",
+            "1": "PROFILE_EFFECT",
+            "100": "NONE",
+            "NONE": 100,
+            "AVATAR_DECORATION": 0,
+            "PROFILE_EFFECT": 1
+        }
     }
 }

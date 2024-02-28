@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "UploadIcon": "e=>{let{width:t=24,height:i=24,color:o=n.default.colors.INTERACTIVE_NORMAL,colorClass:l=\"\",...u}=e;return(0,s.jsx)(\"svg\",{...(0,r.default)(u),xmlns:\"http://www.w3.org/2000/svg\",width:t,height:i,fill:\"none\",viewBox:\"0 0 24 24\",children:(0,s.jsx)(\"path\",{fill:\"string\"==typeof o?o:o.css,d:\"M13 16V5.41l3.3 3.3a1 1 0 1 0 1.4-1.42l-5-5a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.42L11 5.4V16a1 1 0 1 0 2 0ZM3 20a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2H3Z\",className:l})})}"
+    }
+}

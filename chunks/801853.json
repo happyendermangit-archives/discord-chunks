@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getNavYouBarExperiment": "function s(e,t){let n=!(0,o.isInMainTabsExperiment)();return(0,r.getMergedExperimentConfigs)(a.existingUsers,a.newUsers,e,{...t,disable:!!n||t?.disable,autoTrackExposure:!n&&(t?.autoTrackExposure??!0)})}"
+    }
+}

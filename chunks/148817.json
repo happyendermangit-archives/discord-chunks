@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "getDarkness": "function O(_){return 1-(.299*(_>>16&255)+.587*(_>>8&255)+.114*(255&_))/255}",
+        "hex2int": "function o(_){return R()(_).num()}",
+        "hex2rgb": "function t(_){let E=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;if(!R().valid(_))return null;let I=R()(_);return I.alpha(E??I.alpha()).css()}",
+        "int2hex": "function T(_){return _<=16777215?`#${a((_>>16&255).toString(16))}${a((_>>8&255).toString(16))}${a((255&_).toString(16))}`:`#${a((_>>24&255).toString(16))}${a((_>>16&255).toString(16))}${a((_>>8&255).toString(16))}`}",
+        "int2hsl": "function r(_){let E=arguments.length>1&&void 0!==arguments[1]&&arguments[1],I=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null,e=arguments.length>3&&void 0!==arguments[3]?arguments[3]:1,R=_>>16&255,A=_>>8&255,a=255&_,o=Math.min(R/=255,A/=255,a/=255),T=Math.max(R,A,a),r=T-o,t=0,N=0,i=0;return((t=Math.round(60*(t=0===r?0:T===R?(A-a)/r%6:T===A?(a-R)/r+2:(R-A)/r+4)))<0&&(t+=360),i=(T+o)/2,N=+(100*(N=0===r?0:r/(1-Math.abs(2*i-1)))).toFixed(1),i=+(100*i).toFixed(1),E)?`hsla(${t}, calc(var(--saturation-factor, 1) * ${N}%), ${i}%, ${e})`:null!=I?`hsla(${t}, ${I*N}%, ${i}%, ${e})`:`hsla(${t}, ${N}%, ${i}%, ${e})`}",
+        "int2rgbArray": "function D(_){return[_>>16&255,_>>8&255,255&_]}",
+        "int2rgba": "function N(_,E){return null==E&&(E=(_>>24&255)/255),`rgba(${_>>16&255}, ${_>>8&255}, ${255&_}, ${E})`}",
+        "isValidHex": "function L(_){return R().valid(_)}",
+        "rgb2int": "function i(_){let E=_.match(A),I=null!=E?{red:parseInt(E[1]),green:parseInt(E[2]),blue:parseInt(E[3])}:{red:0,green:0,blue:0};return(I.red<<16)+(I.green<<8)+I.blue}"
+    }
+}

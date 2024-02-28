@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function E(e){let{sourceName:t,sourceApplicationId:n}=function(e){if(null!=e){let{ownerId:t}=a.decodeStreamKey(e);if(t!==r.default.getId()){let e=l.default.getActivities(t).find(e=>e.type===f.ActivityTypes.PLAYING);return{sourceName:e?.name,sourceApplicationId:e?.application_id}}}let t=s.default.getStreamerActiveStreamMetadata(),n=t?.pid,u=null!=t?null!=n?i.default.getGameForPID(n):null:i.default.getVisibleGame();return{sourceName:t?.sourceName??u?.name,sourceApplicationId:t?.id??u?.id}}(e),E=u.default.getChannelId(),p=[r.default.getId()];return null!=E&&(p=Object.keys(d.default.getVoiceStatesForChannel(E))),{id:o.default.fromTimestamp(Date.now()),version:c.CURRENT_CLIP_METADATA_VERSION,applicationName:t??_.default.Messages.CLIPS_UNKNOWN_SOURCE,applicationId:n,users:p,clipMethod:\"manual\",length:0,thumbnail:\"\"}}"
+    }
+}

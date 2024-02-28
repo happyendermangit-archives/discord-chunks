@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "anyFileTooLarge": "function C(e,t){let n=R(t);return Array.from(e).some(e=>e.size>n)}",
+        "classifyFile": "function A(e){return N(e.name,e.type)}",
+        "classifyFileName": "function N(e,t){e=e?.toLowerCase()??\"\";let n=a().find(S,n=>null!=n.reType&&null!=t?n.reType.test(t):null!=n.reName&&\"\"!==e&&n.reName.test(e));return null!=n?n.klass:\"unknown\"}",
+        "getMaxRequestSize": "function L(){let e=l.default.getCurrentUser();return null!=e&&e.isStaff()?524288e3:524288e3}",
+        "makeFile": "function d(e,t,i){let r=n(\"643907\");if(null==t&&(t=\"unknown\",\"type\"in e)){let n=r.extension(e.type);n&&(t+=`.${n}`)}return null==i&&(\"type\"in e&&(i=e.type),i=i??r.lookup(t)),new File([e],t,{type:i})}",
+        "maxFileSize": "function R(e){let t=l.default.getCurrentUser();s.default.trackExposure({location:\"de18ec_1\"}),_.default.trackExposure({location:\"de18ec_2\"});let n=u.default.getUserMaxFileSize(t);if(null==e)return n;let i=E.default.getGuild(e);return Math.max(null!=i?T.BoostedGuildFeatures[i.premiumTier].limits.fileSize:I.MAX_ATTACHMENT_SIZE,n)}",
+        "sizeString": "function O(e){return r().filesize(e)}",
+        "transformNativeFile": "function c(e,t){return e instanceof File?e:d(e.data,e.filename,t)}",
+        "uploadSumTooLarge": "function h(e){return function(e){let t=0;for(let n of e)t+=n.size;return t}(e)>L()}"
+    }
+}

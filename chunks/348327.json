@@ -1,0 +1,3 @@
+{
+    "exports": "function(e,t,n){if(!n&&(n={}),e===t)return!0;if(e instanceof Date&&t instanceof Date)return e.getTime()===t.getTime();if(!e||!t||\"object\"!=typeof e&&\"object\"!=typeof t)return n.strict?e===t:e==t;else return function(e,t,n){if(null==(c=e)||null==(d=t)||e.prototype!==t.prototype)return!1;if(o(e))return!!o(t)&&(e=r.call(e),i(e,t=r.call(t),n));if(s(e)){if(!s(t)||e.length!==t.length)return!1;for(u=0;u<e.length;u++)if(e[u]!==t[u])return!1;return!0}try{var u,l,c,d,f=a(e),p=a(t)}catch(e){return!1}if(f.length!=p.length)return!1;for(f.sort(),p.sort(),u=f.length-1;u>=0;u--)if(f[u]!=p[u])return!1;for(u=f.length-1;u>=0;u--)if(!i(e[l=f[u]],t[l],n))return!1;return typeof e==typeof t}(e,t,n)}"
+}

@@ -1,0 +1,33 @@
+{
+    "exports": {
+        "DesktopSources": {
+            "WINDOW": "window",
+            "SCREEN": "screen",
+            "CAMERA": "camera"
+        },
+        "JSExceptionLocation": {
+            "0": "RendererProcessDelayed",
+            "1": "RendererProcess",
+            "2": "MainProcess",
+            "RendererProcessDelayed": 0,
+            "RendererProcess": 1,
+            "MainProcess": 2
+        },
+        "StoredCrashInformation": {
+            "0": "HasRTCConnection",
+            "1": "IsSendingVideo",
+            "2": "IsSendingStream",
+            "3": "IsReceivingVideo",
+            "4": "IsReceivingStream",
+            "5": "VideoMediaSessionId",
+            "6": "StreamMediaSessionId",
+            "HasRTCConnection": 0,
+            "IsSendingVideo": 1,
+            "IsSendingStream": 2,
+            "IsReceivingVideo": 3,
+            "IsReceivingStream": 4,
+            "VideoMediaSessionId": 5,
+            "StreamMediaSessionId": 6
+        }
+    }
+}

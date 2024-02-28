@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class i{static #e=this.batchers=[];static flush(e,t){for(let n of i.batchers)null!=n.action&&(null==e||n.shouldFlush(e,t))&&n.flush()}constructor(e,t,n){this.socket=e,this.action=null,this.shouldFlush=n,this.add=e=>{this.action=t(this.action,e)},i.batchers.push(this)}flush(){let{action:e}=this;this.action=null,null!=e&&s.default.dispatch(e).catch(t=>this.socket.resetSocketOnError({error:t,action:e.type}))}}"
+    }
+}

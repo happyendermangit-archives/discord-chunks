@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e){let{children:t,confettiLocation:n}=e;return(0,a.default)([s.default],()=>s.default.isEnabled({confettiLocation:n}))?(0,i.jsx)(i.Fragment,{children:t}):null}"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "LOGOUT": "e=>this.handleLogout(e)"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleConnectionOpen": "()=>{let e=_.default.getCurrentUser();if(null==e)return;if(null!=r){if(r!==i){let t=l.default.getUsers().map(e=>{let{id:t}=e;return t});E.default.track(u.AnalyticEvents.MULTI_ACCOUNT_SWITCH_SUCCESS,{from_user_id:r,linked_user_ids:t}),this.onSwitchSuccess?.(e)}else E.default.track(u.AnalyticEvents.MULTI_ACCOUNT_SWITCH_FAILURE),this.onSwitchError?.(e);r=null}i=e.id;let t=o.default.getToken();null!=t&&\"\"!==t&&o.default.setToken(t,e.id),this.onTokenSet?.(e)}",
+            "handleLogout": "e=>{e.isSwitchingAccount?(r=i,this.onSwitchStart?.()):o.default.removeToken(i),i=null}",
+            "onSwitchSuccess": "onSwitchSuccess(e){setTimeout(()=>{(0,i.showToast)((0,i.createToast)(s.default.Messages.SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS.format({username:e.username}),i.ToastType.SUCCESS))},100)}",
+            "onSwitchError": "onSwitchError(){(0,i.showToast)((0,i.createToast)(r.SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR,i.ToastType.FAILURE))}",
+            "onTokenSet": "onTokenSet(){(0,i.closeModal)(a.SWITCH_ACCOUNTS_MODAL_KEY)}",
+            "_initialize": "_initialize(){a.default.subscribe(\"CONNECTION_OPEN\",()=>this.handleConnectionOpen()),this.handleConnectionOpen()}",
+            "_terminate": "_terminate(){a.default.unsubscribe(\"CONNECTION_OPEN\",()=>this.handleConnectionOpen())}"
+        }
+    }
+}

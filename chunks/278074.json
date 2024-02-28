@@ -1,0 +1,104 @@
+{
+    "exports": {
+        "P": {
+            "optional": "function p(t){return d({[r]:()=>({match:e=>{let s={},r=(t,e)=>{s[t]=e};return void 0===e?(u(t).forEach(t=>r(t,void 0)),{matched:!0,selections:s}):{matched:f(t,e,r),selections:s}},getSelectionKeys:()=>u(t),matcherType:\"optional\"})})}",
+            "array": "function(){for(var t=arguments.length,e=Array(t),s=0;s<t;s++)e[s]=arguments[s];return function t(e){var s;return Object.assign(Object.assign(s=e,{*[Symbol.iterator](){yield Object.assign(s,{[n]:!0})}}),{optional:()=>t(p(e)),select:s=>t(void 0===s?x(e):x(s,e))})}({[r]:()=>({match:t=>{if(!Array.isArray(t))return{matched:!1};if(0===e.length)return{matched:!0};let s=e[0],r={};if(0===t.length)return u(s).forEach(t=>{r[t]=[]}),{matched:!0,selections:r};let n=(t,e)=>{r[t]=(r[t]||[]).concat([e])};return{matched:t.every(t=>f(s,t,n)),selections:r}},getSelectionKeys:()=>0===e.length?[]:u(e[0])})})}",
+            "set": "function(){for(var t=arguments.length,e=Array(t),s=0;s<t;s++)e[s]=arguments[s];return d({[r]:()=>({match:t=>{if(!(t instanceof Set))return{matched:!1};let s={};if(0===t.size)return{matched:!0,selections:s};if(0===e.length)return{matched:!0};let r=(t,e)=>{s[t]=(s[t]||[]).concat([e])},n=e[0];return{matched:b(t,t=>f(n,t,r)),selections:s}},getSelectionKeys:()=>0===e.length?[]:u(e[0])})})}",
+            "map": "function(){for(var t=arguments.length,e=Array(t),s=0;s<t;s++)e[s]=arguments[s];return d({[r]:()=>({match:t=>{var s;if(!(t instanceof Map))return{matched:!1};let r={};if(0===t.size)return{matched:!0,selections:r};let n=(t,e)=>{r[t]=(r[t]||[]).concat([e])};if(0===e.length)return{matched:!0};if(1===e.length)throw Error(`\\`P.map\\` wasn't given enough arguments. Expected (key, value), received ${null==(s=e[0])?void 0:s.toString()}`);let[i,c]=e;return{matched:h(t,(t,e)=>{let s=f(i,e,n),r=f(c,t,n);return s&&r}),selections:r}},getSelectionKeys:()=>0===e.length?[]:[...u(e[0]),...u(e[1])]})})}",
+            "intersection": "function l(){for(var t=arguments.length,e=Array(t),s=0;s<t;s++)e[s]=arguments[s];return d({[r]:()=>({match:t=>{let s={},r=(t,e)=>{s[t]=e};return{matched:e.every(e=>f(e,t,r)),selections:s}},getSelectionKeys:()=>a(e,u),matcherType:\"and\"})})}",
+            "union": "function g(){for(var t=arguments.length,e=Array(t),s=0;s<t;s++)e[s]=arguments[s];return d({[r]:()=>({match:t=>{let s={},r=(t,e)=>{s[t]=e};return a(e,u).forEach(t=>r(t,void 0)),{matched:e.some(e=>f(e,t,r)),selections:s}},getSelectionKeys:()=>a(e,u),matcherType:\"or\"})})}",
+            "not": "function(t){return d({[r]:()=>({match:e=>({matched:!f(t,e,()=>{})}),getSelectionKeys:()=>[],matcherType:\"not\"})})}",
+            "when": "function v(t){return{[r]:()=>({match:e=>({matched:!!t(e)})})}}",
+            "select": "function x(){for(var t=arguments.length,e=Array(t),s=0;s<t;s++)e[s]=arguments[s];let n=\"string\"==typeof e[0]?e[0]:void 0,c=2===e.length?e[1]:\"string\"==typeof e[0]?void 0:e[0];return d({[r]:()=>({match:t=>{let e={[null!=n?n:i]:t};return{matched:void 0===c||f(c,t,(t,s)=>{e[t]=s}),selections:e}},getSelectionKeys:()=>[null!=n?n:i].concat(void 0===c?[]:u(c))})})}",
+            "any": {
+                "optional": "()=>p(t)",
+                "and": "e=>l(t,e)",
+                "or": "e=>g(t,e)",
+                "select": "e=>void 0===e?x(t):x(e,t)"
+            },
+            "_": {
+                "optional": "()=>p(t)",
+                "and": "e=>l(t,e)",
+                "or": "e=>g(t,e)",
+                "select": "e=>void 0===e?x(t):x(e,t)"
+            },
+            "string": {
+                "optional": "()=>p(t)",
+                "and": "e=>l(t,e)",
+                "or": "e=>g(t,e)",
+                "select": "e=>void 0===e?x(t):x(e,t)",
+                "startsWith": "e=>M(l(t,v(t=>y(t)&&t.startsWith(e))))",
+                "endsWith": "e=>M(l(t,v(t=>y(t)&&t.endsWith(e))))",
+                "minLength": "e=>{var s;return M(l(t,(s=e,v(t=>y(t)&&t.length>=s))))}",
+                "maxLength": "e=>{var s;return M(l(t,(s=e,v(t=>y(t)&&t.length<=s))))}",
+                "includes": "e=>M(l(t,v(t=>y(t)&&t.includes(e))))",
+                "regex": "e=>M(l(t,v(t=>y(t)&&!!t.match(e))))"
+            },
+            "between": "(t,e)=>v(s=>m(s)&&t<=s&&e>=s)",
+            "lt": "t=>v(e=>m(e)&&e<t)",
+            "gt": "t=>v(e=>m(e)&&e>t)",
+            "lte": "t=>v(e=>m(e)&&e<=t)",
+            "gte": "t=>v(e=>m(e)&&e>=t)",
+            "int": "()=>v(t=>m(t)&&Number.isInteger(t))",
+            "finite": "()=>v(t=>m(t)&&Number.isFinite(t))",
+            "positive": "()=>v(t=>m(t)&&t>0)",
+            "negative": "()=>v(t=>m(t)&&t<0)",
+            "number": {
+                "optional": "()=>p(t)",
+                "and": "e=>l(t,e)",
+                "or": "e=>g(t,e)",
+                "select": "e=>void 0===e?x(t):x(e,t)",
+                "between": "(e,s)=>C(l(t,k(e,s)))",
+                "lt": "e=>C(l(t,E(e)))",
+                "gt": "e=>C(l(t,A(e)))",
+                "lte": "e=>C(l(t,B(e)))",
+                "gte": "e=>C(l(t,I(e)))",
+                "int": "()=>C(l(t,j()))",
+                "finite": "()=>C(l(t,R()))",
+                "positive": "()=>C(l(t,O()))",
+                "negative": "()=>C(l(t,P()))"
+            },
+            "betweenBigInt": "(t,e)=>v(s=>_(s)&&t<=s&&e>=s)",
+            "ltBigInt": "t=>v(e=>_(e)&&e<t)",
+            "gtBigInt": "t=>v(e=>_(e)&&e>t)",
+            "lteBigInt": "t=>v(e=>_(e)&&e<=t)",
+            "gteBigInt": "t=>v(e=>_(e)&&e>=t)",
+            "positiveBigInt": "()=>v(t=>_(t)&&t>0)",
+            "negativeBigInt": "()=>v(t=>_(t)&&t<0)",
+            "bigint": {
+                "optional": "()=>p(t)",
+                "and": "e=>l(t,e)",
+                "or": "e=>g(t,e)",
+                "select": "e=>void 0===e?x(t):x(e,t)",
+                "between": "(e,s)=>K(l(t,z(e,s)))",
+                "lt": "e=>K(l(t,D(e)))",
+                "gt": "e=>K(l(t,N(e)))",
+                "lte": "e=>K(l(t,L(e)))",
+                "gte": "e=>K(l(t,U(e)))",
+                "positive": "()=>K(l(t,q()))",
+                "negative": "()=>K(l(t,F()))"
+            },
+            "boolean": {
+                "optional": "()=>p(t)",
+                "and": "e=>l(t,e)",
+                "or": "e=>g(t,e)",
+                "select": "e=>void 0===e?x(t):x(e,t)"
+            },
+            "symbol": {
+                "optional": "()=>p(t)",
+                "and": "e=>l(t,e)",
+                "or": "e=>g(t,e)",
+                "select": "e=>void 0===e?x(t):x(e,t)"
+            },
+            "nullish": {
+                "optional": "()=>p(t)",
+                "and": "e=>l(t,e)",
+                "or": "e=>g(t,e)",
+                "select": "e=>void 0===e?x(t):x(e,t)"
+            },
+            "instanceOf": "function(t){var e;return d(v((e=t,t=>t instanceof e)))}",
+            "shape": "function(t){return d(v(function(){for(var t=arguments.length,e=Array(t),s=0;s<t;s++)e[s]=arguments[s];if(1===e.length){let[t]=e;return e=>f(t,e,()=>{})}if(2===e.length){let[t,s]=e;return f(t,s,()=>{})}throw Error(`isMatching wasn't given the right number of arguments: expected 1 or 2, received ${e.length}.`)}(t)))}"
+        },
+        "match": "function X(t){return new Y(t,$)}"
+    }
+}

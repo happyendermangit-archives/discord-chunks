@@ -1,0 +1,325 @@
+{
+    "exports": {
+        "ActivityJoiningRestrictedGuilds": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ActivityRestrictedGuilds": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "AfkTimeout": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "AllowActivityPartyPrivacyFriends": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "AllowActivityPartyPrivacyVoiceChannel": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "AlwaysPreviewVideo": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "AnimateEmoji": {
+            "getSetting": "()=>n()??e.getSetting()",
+            "useSetting": "()=>{let t=e.useSetting();return i()??t}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "AnimateStickers": {
+            "getSetting": "()=>n()??e.getSetting()",
+            "useSetting": "()=>{let t=e.useSetting();return i()??t}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "BroadcastAllowFriends": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "BroadcastAllowedGuildIds": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "BroadcastAllowedUserIds": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "BroadcastAutoBroadcast": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ClientThemeSettings": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ClipsAllowVoiceRecording": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ConvertEmoticons": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "CustomStatusSetting": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "DefaultGuildsActivityRestricted": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "DefaultGuildsRestricted": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "DeveloperMode": {
+            "getSetting": "()=>{let i=o.default.getState()[t];return i?.settings[n]??e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting();return(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return e?.settings[n]})??r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "DisableGamesTab": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "DisableHomeAutoNav": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "DmSpamFilterV2": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "DropsOptedOut": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "EmojiPickerCollapsedSections": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "EnableTTSCommand": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ExplicitContentFilter": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ExplicitContentSettings": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ExpressionSuggestionsEnabled": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "FamilyCenterEnabled": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "FriendSourceFlagsSetting": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "GifAutoPlay": {
+            "getSetting": "()=>n()??e.getSetting()",
+            "useSetting": "()=>{let t=e.useSetting();return i()??t}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "IncludeStickersInAutocomplete": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "InlineAttachmentMedia": {
+            "getSetting": "()=>{let i=o.default.getState()[t];return i?.settings[n]??e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting();return(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return e?.settings[n]})??r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "InlineEmbedMedia": {
+            "getSetting": "()=>{let i=o.default.getState()[t];return i?.settings[n]??e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting();return(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return e?.settings[n]})??r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "InstallShortcutDesktop": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "InstallShortcutStartMenu": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "LegacyUsernameDisabled": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "MessageDisplayCompact": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "MessageRequestRestrictedDefault": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "MessageRequestRestrictedGuildIds": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET": "0",
+        "NativePhoneIntegrationEnabled": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "NonSpamRetrainingOptIn": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "NotificationCenterAckedBeforeId": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "NotifyFriendsOnGoLive": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "QuietMode": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "RenderEmbeds": {
+            "getSetting": "()=>{let i=o.default.getState()[t];return i?.settings[n]??e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting();return(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return e?.settings[n]})??r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "RenderReactions": {
+            "getSetting": "()=>{let i=o.default.getState()[t];return i?.settings[n]??e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting();return(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return e?.settings[n]})??r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "RenderSpoilers": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "RestrictedGuildIds": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "RtcPanelShowVoiceStates": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ShowCommandSuggestions": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ShowCurrentGame": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "SoundboardPickerCollapsedSections": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "SoundboardSettings": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "StatusExpiresAtSetting": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "StatusSetting": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "StickerPickerCollapsedSections": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "TimezoneOffset": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "UseLegacyChatInput": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "UseRichChatInput": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "UseThreadSidebar": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ViewImageDescriptions": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ViewNsfwCommands": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        },
+        "ViewNsfwGuilds": {
+            "getSetting": "()=>n(s.default.settings[e]?.[t])",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([s.default],o)"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class o extends n.default{constructor(e){super(e),this.summary=e.summary,this.type=e.type,this.premiumType=e.premiumType,this.items=e.items,this.categorySkuId=e.categorySkuId,this.prices=e.prices}static fromServer(e){var t;let{type:r,premium_type:n,category_sku_id:d,prices:C,...E}=e;return new o({...super.fromServer(E),type:r,premiumType:n===c.PREMIUM_TYPE_NONE?null:n,categorySkuId:d,prices:null==(t=C)?{}:Object.keys(t).reduce((e,r)=>{if(null==t)return e;let s=t[r];return e[r]={countryPrices:{countryCode:s.country_prices.country_code,prices:s.country_prices.prices.map(e=>(0,i.getPriceFromServer)(e,!0))},paymentSourcePrices:{}},e},{}),items:E.items.reduce((e,t)=>(0,s.match)(t).with({type:u.CollectiblesItemType.AVATAR_DECORATION},t=>(e.push(l.default.fromServer(t)),e)).with({type:u.CollectiblesItemType.PROFILE_EFFECT},t=>(e.push(a.default.fromServer(t)),e)).otherwise(()=>e),[])})}}"
+    }
+}

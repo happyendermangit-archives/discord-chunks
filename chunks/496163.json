@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let{customStatusActivity:t,className:n,animate:r}=e;return null==t?null:(0,i.jsx)(s.default,{className:n,children:(0,i.jsx)(a.default,{activity:t,className:l.customStatus,animate:r,emojiClassName:l.customStatusEmoji,soloEmojiClassName:l.customStatusSoloEmoji,textClassName:l.customStatusText})})}"
+    }
+}

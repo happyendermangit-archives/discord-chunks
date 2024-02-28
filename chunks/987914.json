@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "loadThread": "function g(e){if(null==e||e===f.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID||(0,f.isStaticChannelRoute)(e)||null!=u.default.getChannel(e))return Promise.resolve();if(c||(c=!0,r.default.subscribe(\"CONNECTION_OPEN\",()=>{_={};let e=d.default.getChannelId(),t=u.default.getChannel(e);null!=e&&null==t&&g(e)})),!a.default.isConnected())return Promise.resolve();let t=_[e];if(null!=t)return\"LOADING\"===t.type?t.promise:Promise.resolve();let n=(0,s.matchPath)(location.pathname,{path:l.Routes.CHANNEL(\":guildId\",\":channelId\",\":messageId\"),exact:!0}),m=i.default.get(l.Endpoints.CHANNEL(e)).then(t=>{let{body:s}=t;_[e]={type:\"LOADED\"},o.THREAD_CHANNEL_TYPES.has(s.type)&&r.default.dispatch({type:\"THREAD_CREATE\",channel:(0,o.createChannelRecordFromServer)(s),messageId:n?.params?.messageId})}).catch(()=>{_[e]={type:\"NOT_FOUND\"},r.default.dispatch({type:\"CHANNEL_DELETE\",channel:{id:e,guild_id:n?.params?.guildId,parent_id:void 0}})});return _[e]={type:\"LOADING\",promise:m},m}"
+        }
+    }
+}

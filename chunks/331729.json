@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "VideoButtonWrapper": "function f(e){let t=(0,l.getVideoButtonLabel)(e),{enabled:n,cameraUnavailable:r,onChange:i,onCameraUnavailable:d,hasPermission:c,children:f,channelLimitReached:h=!1,join:p}=e,g=(0,s.useAppContext)(),E=r?()=>d():()=>i(!e.enabled,g);return(0,a.jsx)(a.Fragment,{children:f({onClick:E,active:n,disabled:!n&&(!c||h),iconComponent:p||n?u.default:o.default,label:t,unavailable:r})})}",
+        "default": "function h(e){let{enabled:t,join:n,channel:r,onChange:s,onCameraUnavailable:l,cameraUnavailable:u,hasPermission:o,className:h,channelLimitReached:p,channelLimit:g,centerButton:E=!1,onPopoutClick:C,...m}=e,S=E?d.CenterControlButton:d.default;return(0,a.jsx)(f,{enabled:t,join:n,channel:r,onChange:s,onCameraUnavailable:l,cameraUnavailable:u,hasPermission:o,channelLimitReached:p,channelLimit:g,children:e=>{let{unavailable:n,...r}=e;return(0,a.jsx)(S,{...r,...m,isActive:t,className:i()(h,{[c.fauxDisabled]:n}),onPopoutClick:C})}})}"
+    }
+}

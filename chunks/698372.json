@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(){let t=(0,l.default)(),[e]=(0,n.default)(null==t?[]:[t.applicationId]);return null!=e?e:void 0}"
-    }
-}

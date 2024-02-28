@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){if(e!==i.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID)return null;let t=l.default.getChannel(e);return null==t?null:a.default.ensurePrivateChannel(t.recipients)}"
+    }
+}

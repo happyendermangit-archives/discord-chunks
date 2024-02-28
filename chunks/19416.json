@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function i(e,t){if(e.length<2)return[];let n=[],i=e[0];for(let r=1;r<e.length;r++){let o=e[r];n.push(t(i,o)),i=o}return n}"
+    }
+}

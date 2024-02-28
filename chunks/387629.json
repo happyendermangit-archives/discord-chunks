@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "type": "function(e){let{disabled:t,referralsRemaining:n,channel:y,isResending:S}=e,{enabled:g}=c.default.useExperiment({location:\"ec41f5_1\"},{autoTrackExposure:!0}),x=g?I.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format():S?I.default.Messages.SHARE_NITRO_RESEND_TOOLTIP:I.default.Messages.SHARE_NITRO_TOOLTIP,T=g?I.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED:null,[A,N]=a.useState(!1),[O,R]=a.useState(!1),M=(0,r.default)(null,()=>R(!1)),{analyticsLocations:v}=(0,d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON),L=y.isDM()&&void 0!==y.recipients?y.recipients[0]:null,P=(0,o.default)();return t?null:(0,i.jsxs)(\"div\",{ref:M,className:C.buttonContainer,children:[(0,i.jsx)(f.default,{shouldShowPopout:O,referralsRemaining:n,channel:y,onClose:()=>R(!1),isResending:S}),(0,i.jsx)(s.Tooltip,{text:x,shouldShow:!O,\"aria-label\":T??x,children:e=>(0,i.jsx)(\"div\",{onMouseEnter:()=>{!O&&!A&&(N(!0),h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS,{location_stack:v,step:_.ReferralTrialsAnalyticSteps.BADGE_TOOLTIP_VIEWED,other_user_id:Number(L)}))},onMouseLeave:()=>{N(!1)},children:(0,i.jsx)(p.default,{...e,innerClassName:C.button,isActive:O,\"aria-label\":T??x,\"aria-haspopup\":\"dialog\",onClick:()=>{R(e=>!e),h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS,{location_stack:v,step:_.ReferralTrialsAnalyticSteps.BADGE_CLICKED,other_user_id:Number(L)})},children:(0,i.jsx)(m.default,{referralsRemaining:n,hovered:A,isResending:S,shouldShowBirthdayUX:g,isLightTheme:(0,l.isThemeLight)(P)})})})})]})}",
+            "compare": null
+        }
+    }
+}

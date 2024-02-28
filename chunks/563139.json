@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(e,t){if(\"undefined\"==typeof Image)return;let n=(0,a.getDisplayProfile)(e.user.id,t);if(null==n)return;let s=i.GifAutoPlay.getSetting(),l=n.getBannerURL({canAnimate:s,size:480});if(null!=l)new Image().src=l}"
+    }
+}

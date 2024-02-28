@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useFocusInside": "function a(e,t){let[n,a]=(0,i.useState)(!1),s=(0,i.useCallback)(t=>{(t.target===t.currentTarget||t.currentTarget.contains(document.activeElement))&&a(!0),null!=e&&e(t)},[e]);return{handleFocus:s,handleBlur:(0,i.useCallback)(e=>{(e.target===e.currentTarget||!e.currentTarget.contains(document.activeElement))&&a(!1),null!=t&&t(e)},[t]),isFocused:n}}"
+    }
+}

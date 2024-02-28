@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "fetchAssetIds": "async function A(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1;a.default.dispatch({type:\"APPLICATION_ASSETS_FETCH\",applicationId:e});let s=[],i=t.filter(e=>e?.startsWith(\"http:\")||e?.startsWith(\"https:\"));return(i.length>0&&await T(e,i),S(t,s))?(a.default.dispatch({type:\"APPLICATION_ASSETS_FETCH_SUCCESS\",applicationId:e}),s):C(t,s,await I(e),n)?p(e).then(()=>A(e,t,n-1)):(a.default.dispatch({type:\"APPLICATION_ASSETS_FETCH_SUCCESS\",applicationId:e}),s)}",
+        "getAssetFromImageURL": "function v(e,t){let n=h[e].serialize(t);return n?`${e}:${n.toString()}`:null}",
+        "getAssetIds": "function N(e,t){let n=[];if(S(t,n))return n;let s=o.default.getApplicationAssets(e);return null==s?n:(C(t,n,s),n)}",
+        "getAssetImage": "function y(e,t,n){if(null!=t&&t.includes(\":\")){let[e,s]=t.split(\":\");if(e===l.PlatformTypes.TWITCH){if(null==n||\"number\"==typeof n){new u.default(\"ApplicationAssetUtils\").warn(\"getAssetImage: size must === [number, number] for Twitch\");return}return h[l.PlatformTypes.TWITCH].deserialize(s,n)}return Object.prototype.hasOwnProperty.call(h,e)?h[e].deserialize(s):void 0}if(null==e||null==t)return;let s=\"number\"==typeof n?`?size=${(0,d.getBestMediaProxySize)(n)}`:\"\";return null!=window.GLOBAL_ENV.CDN_HOST?`${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/app-assets/${e}/${t}.png${s}`:`${r.default.getAPIBaseURL()}/applications/${e}/app-assets/${t}.png${s}`}",
+        "getAssets": "async function I(e){let t=await function(e){var t;let n=o.default.getApplicationAssets(e);return null==n||(t=n.lastUpdated,Date.now()-t>36e5)?p(e):Promise.resolve(n)}(e);return t?.assets}"
+    }
+}

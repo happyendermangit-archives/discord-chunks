@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getSortValueForMember": "function a(e,t){let r=(0,n.getJoinedAtTimestamp)(e.joinedAt);switch(t){case i.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC:return r;case i.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC:return-r;case i.OrderBy.ORDER_BY_USER_ID_ASC:return parseInt(e.userId);case i.OrderBy.ORDER_BY_USER_ID_DESC:return-parseInt(e.userId);default:return-r}}"
+    }
+}

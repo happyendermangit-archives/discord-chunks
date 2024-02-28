@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "ProcessArgs": "class r{static get(){if(null==r.cached){let e=i.default?.processUtils?.getMainArgvSync?.();null!=e&&e.length>1&&e.shift(),r.cached=e??[]}return r.cached}static contains(e){return r.get().includes(e)}static isEnvVariableTrue(e){if(void 0===i.default)return!1;switch(i.default?.process?.env?.[e]){case\"1\":case\"true\":return!0}return!1}static isDisallowPopupsSet(){return r.contains(\"--disallow-popups\")||r.isEnvVariableTrue(\"DISCORD_DISALLOW_POPUPS\")}static isDiscordTestSet(){return r.isEnvVariableTrue(\"DISCORD_TEST\")}static isDiscordGatewayPlaintextSet(){return!1}}"
+    }
+}

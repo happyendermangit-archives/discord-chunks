@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function v(e){let{shouldShowPopout:t,referralsRemaining:n,channel:a,onClose:s,isResending:l}=e;return t?(0,i.jsx)(\"div\",{onMouseDown:e=>e.stopPropagation(),children:(0,i.jsx)(u.Popout,{shouldShow:!0,position:\"top\",align:\"center\",renderPopout:e=>(0,i.jsx)(M,{...e,referralsRemaining:n,channel:a,onClose:s,isResending:l}),onRequestClose:()=>void 0,closeOnScroll:!1,ignoreModalClicks:!0,children:()=>(0,i.jsx)(\"div\",{className:g.popoutTarget})})}):null}"
+    }
+}

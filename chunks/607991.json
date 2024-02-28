@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "default": {
+            "isInitialized": false,
+            "handleVoiceChannelSelect": "e=>{let{channelId:t,guildId:n}=e;if(null!=t){let e=a.default.getChannel(t);if(null==e||e.isGuildStageVoice())return}this.terminate();this.handleDisconnectFromStageChannel(null==t?null:n??null)}",
+            "handleDisconnectFromStageChannel": "e=>{let t=o.default.getGuildId();(0,r.stopLurkingAll)([t,e].filter(u.isNotNullish))}",
+            "handleLogout": "()=>{this.terminate(),this.handleDisconnectFromStageChannel(null)}",
+            "_initialize": "_initialize(){s.default.subscribe(\"VOICE_CHANNEL_SELECT\",this.handleVoiceChannelSelect),s.default.subscribe(\"LOGOUT\",this.handleLogout)}",
+            "_terminate": "_terminate(){s.default.unsubscribe(\"VOICE_CHANNEL_SELECT\",this.handleVoiceChannelSelect),s.default.unsubscribe(\"LOGOUT\",this.handleLogout)}"
+        }
+    }
+}

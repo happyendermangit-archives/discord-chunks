@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "reducedPaymentInfoExperiment": "function i(){let{autoTrackExposure:e}=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{autoTrackExposure:!0};return s.getCurrentConfig({location:\"2b69fe_1\"},{autoTrackExposure:e})}"
+    }
+}

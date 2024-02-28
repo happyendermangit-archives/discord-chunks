@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "bannerBackground": "bannerBackground_d9ef30",
+        "bannerBackgroundWrapper": "bannerBackgroundWrapper__21b66",
+        "bannerForeground": "bannerForeground__758a3",
+        "bannerHand": "bannerHand_af1cc2",
+        "bannerTitle": "bannerTitle__20f63",
+        "heroBanner": "heroBanner__398fc",
+        "heroDescription": "heroDescription_ce82b1",
+        "heroDescriptionWithSidebar": "heroDescriptionWithSidebar__6ca92",
+        "heroSubtitle": "heroSubtitle_a195e1",
+        "largeLeftSparkle": "largeLeftSparkle__1141d",
+        "largeRightSparkle": "largeRightSparkle_cb2e50",
+        "largeSparkle": "largeSparkle__69c14",
+        "largeTopSparkle": "largeTopSparkle__13f0a",
+        "premiumBadge": "premiumBadge__1d278",
+        "premiumBadgeText": "premiumBadgeText__14516",
+        "premiumBadgeWrapper": "premiumBadgeWrapper__08ded",
+        "smallLeftSparkle": "smallLeftSparkle__53d37",
+        "smallRightSparkle": "smallRightSparkle__262cd",
+        "smallSparkle": "smallSparkle__49678",
+        "smallTopSparkle": "smallTopSparkle__11bc6"
+    }
+}

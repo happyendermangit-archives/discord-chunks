@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useSortApplicationsViaFrecency": "function r(e){i.useEffect(()=>{s.FrecencyUserSettingsActionCreators.loadIfNecessary()},[]);let t=(0,a.useStateFromStores)([l.default],()=>l.default.getApplicationFrecencyWithoutLoadingLatest());return i.useMemo(()=>{let n=[...e];return n.sort((e,n)=>{let i=(t.getScore(n.id)??0)-(t.getScore(e.id)??0);return 0!==i?i:e.name.localeCompare(n.name)}),n},[e,t])}"
+    }
+}

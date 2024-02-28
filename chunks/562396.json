@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class u extends s.default{constructor(e){super(e),this.purchasedAt=e.purchasedAt,this.purchaseType=e.purchaseType}static fromServer(e){let{purchased_at:t,purchase_type:r,...s}=e;return new u({...super.fromServer(s),purchaseType:r,purchasedAt:null!=t?new Date(t):t})}}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useAccept": "function o(e){var t=e.accept;return(0,a.useMemo)(function(){return(0,r.invariant)(null!=e.accept,\"accept must be defined\"),Array.isArray(t)?t:[t]},[t])}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useIsVisible": "function _(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:1,n=!(arguments.length>2)||void 0===arguments[2]||arguments[2],_=(0,r.default)(t=>{e(t.isIntersecting)}),E=(0,i.useMemo)(()=>{var e;let n;return e=t,null!=(n=s.get(e))?n:(n={threshold:e},s.set(e,n),n)},[t]);return function(e,t){let n=!(arguments.length>2)||void 0===arguments[2]||arguments[2],s=(0,i.useRef)(null),_=(0,r.default)(t??a),E=(0,i.useRef)(null);return(0,i.useLayoutEffect)(()=>{if(!n)return;null==E.current&&(E.current=(0,o.getIntersectionObserver)(_.current));let t=s.current,i=E.current;null!=t&&null!=i&&(0,o.watch)(i,t,e)},[n,e]),(0,i.useEffect)(()=>{if(!n)return;let e=s.current,t=E.current;if(null!=e&&null!=t)return()=>{(0,o.unwatch)(t,e)}},[n,t]),s}(_.current,E,n)}"
+    }
+}

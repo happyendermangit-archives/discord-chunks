@@ -1,0 +1,26 @@
+{
+    "exports": {
+        "ACCOUNT_AGE_DATE_TOOLTIP_CONFIG": {
+            "month": "short",
+            "day": "numeric",
+            "year": "numeric",
+            "hour": "numeric",
+            "minute": "2-digit"
+        },
+        "MEMBER_JOIN_DATE_TOOLTIP_CONFIG": {
+            "month": "short",
+            "day": "numeric",
+            "year": "numeric",
+            "hour": "numeric",
+            "minute": "2-digit"
+        },
+        "MembersTableDateFormats": {
+            "0": "JOINED_AT",
+            "1": "ACCOUNT_AGE",
+            "JOINED_AT": 0,
+            "ACCOUNT_AGE": 1
+        },
+        "formatDateRelativeTime": "(e,t)=>{var r;let n=0===(r=t)?o:1===r?d:void 0;return(0,a.default)(e,n,!1)}",
+        "getJoinedAtTimestamp": "e=>(null!=e?new Date(e):new Date).getTime()"
+    }
+}

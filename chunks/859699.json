@@ -1,0 +1,25 @@
+{
+    "exports": {
+        "InstantInviteModalPages": {
+            "MAIN": "main",
+            "SETTINGS": "settings",
+            "GUEST": "guest"
+        },
+        "InviteTargetTypes": {
+            "1": "STREAM",
+            "2": "EMBEDDED_APPLICATION",
+            "3": "ROLE_SUBSCRIPTIONS_PURCHASE",
+            "STREAM": 1,
+            "EMBEDDED_APPLICATION": 2,
+            "ROLE_SUBSCRIPTIONS_PURCHASE": 3
+        },
+        "InviteTypes": {
+            "0": "GUILD",
+            "1": "GROUP_DM",
+            "2": "FRIEND",
+            "GUILD": 0,
+            "GROUP_DM": 1,
+            "FRIEND": 2
+        }
+    }
+}

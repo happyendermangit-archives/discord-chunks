@@ -1,0 +1,30 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "RTC_CONNECTION_STATE": "e=>{let{state:t,channelId:n}=e,i=t===s.RTCConnectionStates.RTC_CONNECTED,r=i&&!this.prevConnected,_=o.default.getChannel(n),E=_?.getGuildId(),l=this.tempMutedChannel===n;r&&null!=E&&(l?this.tempMutedChannel=null:(0,a.maybePlayCustomJoinSound)(E)),this.prevConnected=i}",
+                "SOUNDBOARD_MUTE_JOIN_SOUND": "e=>{let{channelId:t}=e;this.tempMutedChannel=t}",
+                "VOICE_STATE_UPDATES": "e=>{let{voiceStates:t}=e,n=r.default.getId(),i=r.default.getSessionId();t.forEach(e=>{let{userId:t,channelId:r,sessionId:o}=e;t===n&&o!==i&&null!=r&&(this.tempMutedChannel=r)})}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "prevConnected": false,
+            "tempMutedChannel": null,
+            "handleRTCConnectionState": "e=>{let{state:t,channelId:n}=e,i=t===s.RTCConnectionStates.RTC_CONNECTED,r=i&&!this.prevConnected,_=o.default.getChannel(n),E=_?.getGuildId(),l=this.tempMutedChannel===n;r&&null!=E&&(l?this.tempMutedChannel=null:(0,a.maybePlayCustomJoinSound)(E)),this.prevConnected=i}",
+            "handleMute": "e=>{let{channelId:t}=e;this.tempMutedChannel=t}",
+            "handleVoiceStateUpdates": "e=>{let{voiceStates:t}=e,n=r.default.getId(),i=r.default.getSessionId();t.forEach(e=>{let{userId:t,channelId:r,sessionId:o}=e;t===n&&o!==i&&null!=r&&(this.tempMutedChannel=r)})}"
+        }
+    }
+}

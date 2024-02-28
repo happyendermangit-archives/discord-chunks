@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "isStageActivity": "function _(e){return e?.application_id===o.STAGE_APPLICATION_ID}",
+        "packStageChannelPartyId": "function l(e,t){let n=0,i=s.default.getId();a.default.isSpeaker(i,e.id)&&(n|=1);let o=r.default.getGuild(e.getGuildId());null!=o&&(o.hasFeature(u.GuildFeatures.PARTNERED)&&(n|=2),o.hasFeature(u.GuildFeatures.VERIFIED)&&(n|=4));let l=n.toString(16);return`${d}${e.guild_id}:${e.id}:${l}:${t.id}`}",
+        "shouldShowActivity": "function c(e){let t=f(e);if(null==t)return!1;let{channelId:n}=t;return null!=i.default.getChannel(n)}",
+        "unpackStageChannelParty": "function f(e){if(null==e||null==e.party)return;let{id:t,size:n}=e.party;try{if(null==t||!t.startsWith(d))return;let[,e,s,i,r]=t.split(\":\"),a=parseInt(i,16);return{guildId:e,channelId:s,size:n,userIsSpeaker:(1&a)!=0,guildIsPartnered:(2&a)!=0,guildIsVerified:(4&a)!=0,stageInstanceId:r}}catch(e){return null}}"
+    }
+}

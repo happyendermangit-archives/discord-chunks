@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{markAsDismissed:t}=e;return(0,l.jsxs)(\"div\",{className:u.wrapper,children:[(0,l.jsx)(s.default,{className:u.icon}),(0,l.jsx)(\"div\",{className:u.content,children:(0,l.jsx)(i.Text,{variant:\"text-xs/normal\",children:o.default.Messages.EMOJI_PICKER_FAVORITES_TIP})}),(0,l.jsx)(i.Clickable,{onClick:()=>t(r.ContentDismissActionType.UNKNOWN),children:(0,l.jsx)(a.default,{className:u.close})})]})}"
-    }
-}

@@ -1,0 +1,25 @@
+{
+    "exports": {
+        "JoinSourceType": {
+            "0": "UNSPECIFIED",
+            "1": "BOT",
+            "2": "INTEGRATION",
+            "3": "DISCOVERY",
+            "4": "HUB",
+            "5": "INVITE",
+            "6": "VANITY_URL",
+            "UNSPECIFIED": 0,
+            "BOT": 1,
+            "INTEGRATION": 2,
+            "DISCOVERY": 3,
+            "HUB": 4,
+            "INVITE": 5,
+            "VANITY_URL": 6
+        },
+        "fetchMemberSupplemental": "async function M(e,t){let n=S(e,t),s=n.filter(e=>f[e]<=1).map(R);if(0===s.length)return[];p(n,2);try{let t=await o.default.post({url:T.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),body:{user_ids:s}});if(!Array.isArray(t.body))return p(n,0),[];let a=t.body.map(N),r=[];a.forEach(e=>{let{userId:t}=e;return r.push(t)});let l=S(e,r),u=s.filter(e=>!r.includes(e)),i=S(e,u);return p(l,3),p(i,0),a}catch(e){p(n,0)}return[]}",
+        "getIntegrationLabel": "e=>{switch(e){case\"twitch\":return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;case\"youtube\":return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_YOUTUBE;default:return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION}}",
+        "getJoinSourceTypeLabel": "function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:void 0;switch(e){case 1:return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;case 2:return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;case 3:return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY;case 4:return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_HUB;case 5:return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;case 6:if(null!=t)return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({vanityUrl:t});return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;default:return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN}}",
+        "registerFetchedSupplementals": "function A(e,t){t.forEach(t=>(function(e,t,n){f[e+t]=3})(e,t,3))}",
+        "useGetIntegrationIconString": "e=>{let t=E.default.get((0,_.useLegacyPlatformType)(e)),n=(0,c.default)();return null!=t&&[\"twitch\",\"youtube\"].includes(e)?`url('${(0,d.isThemeDark)(n)?t.icon.darkSVG:t.icon.lightSVG}')`:null}"
+    }
+}

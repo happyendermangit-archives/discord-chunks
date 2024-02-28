@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){var e=++i;return r(t)+e}"
-}

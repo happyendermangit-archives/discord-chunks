@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){if(f(e))return!0;if(!e||\"function\"!=typeof e&&\"object\"!=typeof e)return!1;try{o(e,null,r)}catch(e){if(e!==a)return!1}return!c(e)&&l(e)}"
-}

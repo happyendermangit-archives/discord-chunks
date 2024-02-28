@@ -1,3 +1,0 @@
-{
-    "exports": "function e(t,n,r,i,o){!function(t,e){if(!(t instanceof e))throw TypeError(\"Cannot call a class as a function\")}(this,e);var a=function(t,e){if(!t)throw ReferenceError(\"this hasn't been initialised - super() hasn't been called\");return e&&(\"object\"==typeof e||\"function\"==typeof e)?e:t}(this,(e.__proto__||Object.getPrototypeOf(e)).call(this));return a._value=t,a._parent=n,a._animationClass=r,a._animationConfig=i,a._callback=o,a.__attach(),a}"
-}

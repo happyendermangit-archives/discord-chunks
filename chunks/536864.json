@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "MenuSeparator": "function s(){return(0,i.jsx)(\"div\",{role:\"separator\",className:r.separator})}"
-    }
-}

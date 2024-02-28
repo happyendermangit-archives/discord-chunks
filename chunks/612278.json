@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "useFirstForumPostMessage": "function v(e){var t,n;let{loaded:a,firstMessage:i}=(0,l.useStateFromStoresObject)([f.default],()=>f.default.getMessage(e.id)),d=(0,l.useStateFromStores)([u.default],()=>u.default.getChannel(e.parent_id));if(null!=d&&(t=a,n=i,!t&&null==n))A(d,e.id);return{loaded:a,firstMessage:i}}",
-        "useMostRecentForumMessage": "function I(e,t){let{loaded:n,message:a}=(0,l.useStateFromStoresObject)([g.default],()=>g.default.getMessageState(t.id));return null!=e&&h(t.guild_id,t.id)&&A(e,t.id),{loaded:n,mostRecentMessage:a}}",
-        "preloadForumThreads": "function C(e){y(e,(0,o.computeThreadIdsSnapshot)(e.id).slice(0,10))}"
-    }
-}

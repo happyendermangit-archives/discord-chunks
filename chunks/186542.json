@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class E extends i.default.DeviceSettingsStore{static #e=this.displayName=\"NativePermissionStore\";static #t=this.persistKey=\"NativePermissionsStore\";constructor(){super(r.default,{SET_NATIVE_PERMISSION:e=>this.handleSetNativePermission(e)})}initialize(e){_=e??_}getUserAgnosticState(){return _}hasPermission(e){let t=_.permissionStates[e];return null!=t&&t===a.NativePermissionStates.ACCEPTED}handleSetNativePermission(e){let{state:t,permissionType:n}=e,i=_.permissionStates,r=i[n];i[n]=t,r!==t&&o.default.track(s.AnalyticEvents.PERMISSIONS_ACKED,{type:n,action:t,previous_action:r??a.NativePermissionStates.NONE})}}"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "default": {
+            "filterTagIds": null,
+            "sortOrder": null,
+            "layout": null,
+            "setFilterTagIds": "e=>{this.filterTagIds=e}",
+            "setSortOrder": "e=>{this.sortOrder=e}",
+            "setLayout": "e=>{this.layout=e}",
+            "getFilterTagIdsAnalytics": "()=>null!=this.filterTagIds?Array.from(this.filterTagIds):[]",
+            "getSortOrderAnalytics": "e=>this.sortOrder??l.default.getChannel(e)?.getDefaultSortOrder()",
+            "getLayoutAnalytics": "e=>{let t=l.default.getChannel(e),n=this.layout??t?.getDefaultLayout();return(0,i.isForumActivityExperimentEnabled)(t?.guild_id)&&n===a.ForumLayout.LIST?r.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT:n}"
+        }
+    }
+}

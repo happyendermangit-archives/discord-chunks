@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "makeOfflineTransport": "function a(t){return e=>{let n;let a=t(e),s=e.createStore?e.createStore(e):void 0,o=5e3;function l(t){s&&(n&&clearTimeout(n),\"number\"!=typeof(n=setTimeout(async()=>{n=void 0;let t=await s.pop();t&&(i(\"Attempting to send previously queued event\"),c(t).catch(t=>{i(\"Failed to retry sending\",t)}))},t))&&n.unref&&n.unref())}function u(){!n&&(l(o),o=Math.min(2*o,36e5))}async function c(t){try{let e=await a.send(t),n=100;if(e){if(e.headers&&e.headers[\"retry-after\"])n=(0,r.parseRetryAfterHeader)(e.headers[\"retry-after\"]);else if((e.statusCode||0)>=400)return e}return l(n),o=5e3,e}catch(a){var n,c,d;if(s&&await (n=t,c=a,d=o,!(0,r.envelopeContainsItemType)(n,[\"replay_event\",\"replay_recording\",\"client_report\"])&&(!e.shouldStore||e.shouldStore(n,c,d))))return await s.insert(t),u(),i(\"Error sending. Event queued\",a),{};throw a}}return e.flushAtStartup&&u(),{send:c,flush:t=>a.flush(t)}}}"
+    }
+}

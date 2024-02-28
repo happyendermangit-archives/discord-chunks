@@ -1,0 +1,20 @@
+{
+    "exports": {
+        "default": {
+            "isInitialized": true,
+            "callbackActions": {
+                "VIDEO": "()=>{m.default.isVideoEnabled()?f.default.setVideoEnabled(!1):(0,h.default)(()=>f.default.setVideoEnabled(!0),I.AppContext.APP)}",
+                "MUTE": "()=>f.default.toggleSelfMute()",
+                "DEAFEN": "()=>f.default.toggleSelfDeaf()",
+                "DISCONNECT": "()=>r.default.disconnect()"
+            },
+            "isSupported": false,
+            "prevButtons": [],
+            "buttonClicked": "e=>{if(!(e.buttonName in this.callbackActions)){console.error(`ThumbarButtonsManager: Unknown callback eventName: \"${e.buttonName}\"`,e);return}this.callbackActions[e.buttonName]()}",
+            "handleViewUpdate": "function b(){var e,n=oD(),a=y(n);if(o=arguments,i=this,c=n,a){if(r===l){;return d=e=c,l=aY(v,t),f?m(e):s}if(p)return rB(l),l=aY(v,t),m(c)}return r===l&&(l=aY(v,t)),s}",
+            "_initialize": "_initialize(){this.isSupported&&(o.default.subscribe(\"AUDIO_SET_MODE\",this.handleViewUpdate),o.default.subscribe(\"VOICE_CHANNEL_SELECT\",this.handleViewUpdate),o.default.subscribe(\"START_SESSION\",this.handleViewUpdate),o.default.subscribe(\"CONNECTION_OPEN\",this.handleViewUpdate),o.default.subscribe(\"CONNECTION_CLOSED\",this.handleViewUpdate),o.default.subscribe(\"CALL_CREATE\",this.handleViewUpdate),o.default.subscribe(\"CALL_UPDATE\",this.handleViewUpdate),o.default.subscribe(\"CALL_DELETE\",this.handleViewUpdate),o.default.subscribe(\"CHANNEL_DELETE\",this.handleViewUpdate),o.default.subscribe(\"VOICE_STATE_UPDATES\",this.handleViewUpdate),o.default.subscribe(\"AUDIO_TOGGLE_SELF_MUTE\",this.handleViewUpdate),o.default.subscribe(\"AUDIO_TOGGLE_SELF_DEAF\",this.handleViewUpdate),o.default.subscribe(\"AUDIO_TOGGLE_LOCAL_MUTE\",this.handleViewUpdate),o.default.subscribe(\"AUDIO_SET_LOCAL_VIDEO_DISABLED\",this.handleViewUpdate),g.default.on(\"THUMBAR_BUTTONS_CLICKED\",(e,t)=>this.buttonClicked(t)))}",
+            "_terminate": "_terminate(){this.isSupported&&(o.default.unsubscribe(\"AUDIO_SET_MODE\",this.handleViewUpdate),o.default.unsubscribe(\"VOICE_CHANNEL_SELECT\",this.handleViewUpdate),o.default.unsubscribe(\"START_SESSION\",this.handleViewUpdate),o.default.unsubscribe(\"CONNECTION_OPEN\",this.handleViewUpdate),o.default.unsubscribe(\"CONNECTION_CLOSED\",this.handleViewUpdate),o.default.unsubscribe(\"CALL_CREATE\",this.handleViewUpdate),o.default.unsubscribe(\"CALL_UPDATE\",this.handleViewUpdate),o.default.unsubscribe(\"CALL_DELETE\",this.handleViewUpdate),o.default.unsubscribe(\"CHANNEL_DELETE\",this.handleViewUpdate),o.default.unsubscribe(\"VOICE_STATE_UPDATES\",this.handleViewUpdate),o.default.unsubscribe(\"AUDIO_TOGGLE_SELF_MUTE\",this.handleViewUpdate),o.default.unsubscribe(\"AUDIO_TOGGLE_SELF_DEAF\",this.handleViewUpdate),o.default.unsubscribe(\"AUDIO_TOGGLE_LOCAL_MUTE\",this.handleViewUpdate),o.default.unsubscribe(\"AUDIO_SET_LOCAL_VIDEO_DISABLED\",this.handleViewUpdate))}",
+            "setThumbarButtons": "setThumbarButtons(e){!n()(this.prevButtons,e)&&(this.prevButtons=e,g.default.setThumbarButtons(e))}"
+        }
+    }
+}

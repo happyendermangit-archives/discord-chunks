@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "background": "background__1d8f0",
+        "dot": "dot__3e6f0 desaturateUserColors_eb6bd2",
+        "dotBorderBase": "dotBorderBase_bfd7ce",
+        "dotBorderColor": "dotBorderColor__73b9c desaturateUserColors_eb6bd2",
+        "roleCircle": "roleCircle__61ad8 desaturateUserColors_eb6bd2",
+        "svg": "svg__90e76"
+    }
+}

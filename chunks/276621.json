@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,e){return function(s,n){if(null==s)return s;if(!r(s))return t(s,n);for(var i=s.length,c=e?i:-1,o=Object(s);(e?c--:++c<i)&&!1!==n(o[c],c,o););return s}}"
+}

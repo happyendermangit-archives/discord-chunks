@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "failMigration": "function c(){d.default.dispatch({type:\"DOMAIN_MIGRATION_FAILURE\"})}",
+        "finishMigration": "function i(){window.location.reload()}",
+        "migrate": "function n(){d.default.wait(()=>d.default.dispatch({type:\"DOMAIN_MIGRATION_START\"}))}"
+    }
+}

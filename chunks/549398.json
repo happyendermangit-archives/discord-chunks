@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "CHANNEL_CREATE": "async handleChannelCreate(e){let{channel:t}=e;(0,o.isEligibleForMidjourneyRedirect)(t)&&(await (0,o.hasRedirectedToGuild)(a.MIDJOURNEY_GUILD_ID),(0,r.default)(s.Routes.CHANNEL(null,t.id)))}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleChannelCreate": "async handleChannelCreate(e){let{channel:t}=e;(0,o.isEligibleForMidjourneyRedirect)(t)&&(await (0,o.hasRedirectedToGuild)(a.MIDJOURNEY_GUILD_ID),(0,r.default)(s.Routes.CHANNEL(null,t.id)))}"
+        }
+    }
+}

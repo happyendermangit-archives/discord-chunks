@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"Sumažinti \".concat(e.fieldLabel)",
-            "increase": "e=>\"Padidinti \".concat(e.fieldLabel)",
-            "numberField": "Numerio laukas"
-        }
-    }
-}

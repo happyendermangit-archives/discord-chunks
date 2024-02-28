@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(t){let[e,n]=u.useState(r.PurchaseState.WAITING);return u.useEffect(()=>{null!=t&&t!==i.Step.REVIEW&&e!==r.PurchaseState.WAITING&&e!==r.PurchaseState.COMPLETED&&n(r.PurchaseState.WAITING)},[t,e,n]),[e,n]}"
-    }
-}

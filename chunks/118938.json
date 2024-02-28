@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "connect": "function E(){i.default.connect()}",
+        "disconnect": "function l(){i.default.disconnect()}",
+        "send": "function T(e){__OVERLAY__?i.default.request(s.RPCCommands.OVERLAY,(0,a.serializeObject)(e)):o.default.dispatchToSubscriptions(s.RPCEvents.OVERLAY,{},(0,a.serializeObject)(e))}",
+        "setReceiveCommandHandler": "function I(e,t){if(__OVERLAY__)throw new r.default({errorCode:s.RPCErrors.UNKNOWN_ERROR},\"called from wrong app context\");o.default.setCommandHandler(s.RPCCommands.OVERLAY,{scope:_.RPC_PRIVATE_SCOPE,handler(n){let{args:i}=n;if(!t(i.token))throw new r.default({errorCode:s.RPCErrors.INVALID_TOKEN},\"Invalid RPC auth token provided\");e((0,a.deserializeObject)(i))}}),o.default.setEventHandler(s.RPCEvents.OVERLAY,{scope:_.RPC_PRIVATE_SCOPE,handler(e){let{args:n}=e;if(!t(n.token))throw new r.default({errorCode:s.RPCErrors.INVALID_TOKEN},\"Invalid RPC auth token provided\")}})}",
+        "setReceiveEventHandler": "function u(e,t){if(!__OVERLAY__)throw new r.default({errorCode:s.RPCErrors.UNKNOWN_ERROR},\"called from wrong app context\");i.default.subscribe(s.RPCEvents.OVERLAY,{token:t},t=>e((0,a.deserializeObject)(t)))}"
+    }
+}

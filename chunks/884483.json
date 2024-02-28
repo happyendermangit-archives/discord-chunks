@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(t){let{applicationId:e,skuIDs:n,currentPaymentSourceId:s,isGift:c}=t,S=i.useMemo(()=>n.filter(t=>!o.ACTIVE_PREMIUM_SKUS.includes(t)),[JSON.stringify(n)]),E=(0,u.default)([a.default],()=>S.every(t=>!a.default.isFetching(t)&&null!=a.default.get(t))),d=(0,u.useStateFromStoresObject)([a.default],()=>{let t={};for(let e of S)t[e]=a.default.get(e)??void 0;return t},[S]);i.useEffect(()=>{for(let t of S)!a.default.isFetching(t)&&null==a.default.get(t)&&(0,r.fetchSKU)(e,t)},[e,S]);let f=(0,u.useStateFromStoresObject)([l.default],()=>{let t={};for(let e of S)t[e]=l.default.getPricesForSku(e)??void 0;return t},[S]);return i.useEffect(()=>{for(let t of S)!l.default.isFetchingSKU(t)&&(0,r.fetchPurchasePreview)(e,t,s,{isGift:c})},[e,S,s,c]),{hasFetchedSkus:E,skusById:d,skuPricePreviewsById:f}}"
+    }
+}

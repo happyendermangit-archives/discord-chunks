@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "getConfig": "(e,t,n)=>e?s.getCurrentConfig({location:t},{autoTrackExposure:n}):s.definition.defaultConfig"
-        }
-    }
-}

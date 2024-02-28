@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "EmojiPopoutType": {
+            "GET_PREMIUM": "GET_PREMIUM",
+            "JOIN_GUILD": "JOIN_GUILD",
+            "UNAVAILABLE": "UNAVAILABLE"
+        },
+        "getEmojiPopoutData": "e=>{let t=d(e),n=u(e);return{...c(e),emojiDescription:t,analyticsType:n}}"
+    }
+}

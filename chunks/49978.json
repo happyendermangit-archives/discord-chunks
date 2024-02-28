@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class{reset(){this._guildStates={},this._flush.cancel()}request(e,t){!1!==this._getGuildState(e).request(t)&&this._flush.delay(!1)}acknowledge(e,t){this._getGuildState(e).acknowledge(t)}flushRequests(){l.forEach(this._guildStates,e=>e.flushRequests(this._onChange))}requestUnacknowledged(){let e=l.reduce(this._guildStates,(e,t)=>!1!==t.requestUnacknowledged()||t,!1);e&&this._flush.delay()}_getGuildState(e){let t=this._guildStates[e];return null==t&&(t=this._guildStates[e]=new a(e,this._guildMemberExists)),t}constructor(e,t){this._guildStates={},this._flush=new u.DelayedCall(0,()=>this.flushRequests()),this._guildMemberExists=e,this._onChange=t}}"
-    }
-}

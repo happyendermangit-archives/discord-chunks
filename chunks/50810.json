@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e){let t=a.LegacyUsernameDisabled.useSetting(),n=(0,i.default)([l.default],()=>l.default.getCurrentUser()),u=(0,i.default)([s.default],()=>s.default.hidePersonalInformation);if(null==e)return[];let d=e?.getBadges()??[];return null!=n&&n.id===e.userId&&t&&(d=d.filter(e=>e.id!==o)),u&&(d=d.map(e=>({...e,description:e.id===o?r.default.Messages.STREAMER_MODE_ENABLED:e.description}))),d}"
+    }
+}

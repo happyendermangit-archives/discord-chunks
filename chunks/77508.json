@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class i extends u.default{constructor(e){super(e),this.products=e.products,this.logo=e.logo}static fromServer(e){let{products:t,logo:r,...u}=e;return new i({...super.fromServer(u),products:t.reduce((e,t)=>{let r=s.default.fromServer(t);return 0===r.items.length?e:(e.push(r),e)},[]),logo:r})}}"
+    }
+}

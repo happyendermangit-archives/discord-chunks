@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useSoundButtonContextMenu": "function u(e,t){return a.useCallback(a=>{a.stopPropagation();let u=l.default.getGuild(e.guildId),d=r.default.getCurrentUser();(null!=u||o.default.canUseCustomCallSounds(d))&&!function(e,t,a,l){let u=r.default.getCurrentUser();(null!=t||o.default.canUseCustomCallSounds(u))&&(0,s.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"381452@639:673\").then(n.bind(n,\"349171\"));return n=>(0,i.jsx)(e,{...n,soundGuild:t,activeCallGuildId:l,sound:a})})}(a,u,e,t)},[e,t])}"
+    }
+}

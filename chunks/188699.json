@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "canStreamInChannel": "function h(e,t,n){let s=!(arguments.length>3)||void 0===arguments[3]||arguments[3];if(e.isPrivate())return!0;let i=t.getGuild(e.getGuildId()),r=i?.maxStageVideoChannelUsers??0;return(!e.isGuildStageVoice()||!(r<=0))&&(!s||!!m(e,n))&&!!n.can(c.Permissions.STREAM,e)&&null!=i&&i.afkChannelId!==e.id&&!0}",
+        "canWatchStream": "function p(e,t,n,s,i){let r;if(null==e)return[!1,2];let a=t.isInChannel(e.id),u=e instanceof o.ChannelRecordBase&&(0,_.isChannelFull)(e,t,n),d=m(e,s),l=null!=i.getAwaitingRemoteSessionInfo()||null!=i.getRemoteSessionId();return l?r=0:d||a?u&&!a&&(r=1):r=2,[!__OVERLAY__&&!l&&(a||d&&!u),r]}",
+        "getStreamCTAString": "function E(e){switch(e){case 0:return g.default.Messages.CONSOLE_STREAM_UNAVAILABLE;case 1:return g.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL_MODAL_HEADER;case 2:return g.default.Messages.STREAM_NO_PERMISSION_CTA;default:return g.default.Messages.WATCH_STREAM}}",
+        "getStreamEligibleChannels": "function y(e,t,n){let s=[];for(let{channel:i}of e[u.GUILD_VOCAL_CHANNELS_KEY])h(i,t,n)&&s.push(i);return s}",
+        "useCanWatchStream": "function v(e){return(0,r.useStateFromStoresArray)([f.default,d.default,l.default,a.default],()=>p(e,f.default,d.default,l.default,a.default))}"
+    }
+}

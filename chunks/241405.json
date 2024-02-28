@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "Inflate": "function d(t){if(!(this instanceof d))return new d(t);this.options=n.assign({chunkSize:16384,windowBits:0,to:\"\"},t||{});var e=this.options;e.raw&&e.windowBits>=0&&e.windowBits<16&&(e.windowBits=-e.windowBits,0===e.windowBits&&(e.windowBits=-15)),e.windowBits>=0&&e.windowBits<16&&!(t&&t.windowBits)&&(e.windowBits+=32),e.windowBits>15&&e.windowBits<48&&(15&e.windowBits)==0&&(e.windowBits|=15),this.err=0,this.msg=\"\",this.ended=!1,this.chunks=[],this.strm=new f,this.strm.avail_out=0;var s=r.inflateInit2(this.strm,e.windowBits);if(s!==c.Z_OK)throw Error(o[s]);this.header=new u,r.inflateGetHeader(this.strm,this.header)}",
+        "inflate": "function p(t,e){var s=new d(e);if(s.push(t,!0),s.err)throw s.msg||o[s.err];return s.result}",
+        "inflateRaw": "function(t,e){return(e=e||{}).raw=!0,p(t,e)}",
+        "ungzip": "function p(t,e){var s=new d(e);if(s.push(t,!0),s.err)throw s.msg||o[s.err];return s.result}"
+    }
+}

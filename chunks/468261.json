@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "IteratorPrototype": {},
-        "BUGGY_SAFARI_ITERATORS": false
-    }
-}

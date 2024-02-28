@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "AttachmentListItemSizes": {
+            "0": "SMALL",
+            "1": "MEDIUM",
+            "2": "CLIP",
+            "SMALL": 0,
+            "MEDIUM": 1,
+            "CLIP": 2
+        },
+        "default": {
+            "render": "function(e,t){let{id:n,channelId:i,className:a,children:l,actions:r,handleEditModal:C,keyboardModeEnabled:y,onKeyDown:S,draftType:g,size:x=1}=e,{onFocus:T,...A}=(0,u.useListItem)(n),{handleFocus:N,handleBlur:O}=(0,m.useFocusInside)(T),R=0===x,M=null!=r;return(0,s.jsx)(d.FocusRing,{children:(0,s.jsx)(\"li\",{...A,onFocus:N,onBlur:O,onKeyDown:e=>{if(y){switch(e.which){case h.KeyboardKeys.D:e.preventDefault(),c.default.remove(i,n,g);return;case h.KeyboardKeys.E:null!=C&&(e.preventDefault(),C(e));return;case h.KeyboardKeys.BACKSPACE:e.ctrlKey?(e.preventDefault(),c.default.clearAll(i,g)):(e.preventDefault(),c.default.remove(i,n,g));return;case h.KeyboardKeys.ARROW_UP:if(e.shiftKey||e.altKey||e.ctrlKey||e.metaKey)return;e.preventDefault(),p.ComponentDispatch.dispatchToLastSubscribed(h.ComponentActions.FOCUS_MESSAGES,{atEnd:!0})}S?.(e)}},className:o()(_.upload,a,{[_.sizeClip]:2===x}),ref:t,children:(0,s.jsxs)(\"div\",{className:_.uploadContainer,children:[l,M?(0,s.jsx)(\"div\",{className:_.actionBarContainer,children:(0,s.jsx)(\"div\",{className:o()(_.actionBar,{[_.smallActionBar]:R}),onContextMenu:I,\"aria-label\":E.default.Messages.ATTACHMENT_UTILITIES,children:(0,s.jsx)(f.default,{className:o()({[_.miniPopover]:R}),children:r})})}):null]})})})}"
+        }
+    }
+}

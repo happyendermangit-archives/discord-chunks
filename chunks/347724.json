@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "gatherActiveObservationsAtDepth": "function(t){o.cache.clear(),r.resizeObservers.forEach(function(e){e.activeTargets.splice(0,e.activeTargets.length),e.skippedTargets.splice(0,e.skippedTargets.length),e.observationTargets.forEach(function(n){n.isActive()&&((0,i.calculateDepthForNode)(n.target)>t?e.activeTargets.push(n):e.skippedTargets.push(n))})})}"
-    }
-}

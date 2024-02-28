@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useInDesktopNotificationCenterExperiment": "()=>{let{enabled:e}=r.useExperiment({location:\"b8976e_1\"},{autoTrackExposure:!1});return s.useEffect(()=>{r.trackExposure({location:\"b8976e_2\"})},[]),e}",
-        "inDesktopNotificationCenterExperiment": "()=>{let{enabled:e}=r.getCurrentConfig({location:\"b8976e_3\"},{autoTrackExposure:!1});return e}"
-    }
-}

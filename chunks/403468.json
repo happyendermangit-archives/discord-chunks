@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function e(t,n){void 0===n&&(n=[]);var s,u=(0,r.default)(t),l=u===(null==(s=t.ownerDocument)?void 0:s.body),c=(0,o.default)(u),d=l?[c].concat(c.visualViewport||[],(0,i.default)(u)?u:[]):u,f=n.concat(d);return l?f:f.concat(e((0,a.default)(d)))}"
-    }
-}

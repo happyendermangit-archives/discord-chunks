@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(e){if(null==e)return!1;let t=(0,o.getGuildTraits)(e),r=(0,s.getBadgeCategory)(t);return l.has(r)}"
+    }
+}

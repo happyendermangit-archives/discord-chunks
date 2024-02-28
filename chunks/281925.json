@@ -1,0 +1,17 @@
+{
+    "exports": {
+        "DSN": "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
+        "default": {
+            "setUser": "setUser(e,t,n,i){let r={id:e,username:t,email:n,staff:i};null!=window.DiscordSentry&&window.DiscordSentry.configureScope(e=>{e.setUser(r)}),_(r)}",
+            "clearUser": "clearUser(){null!=window.DiscordSentry&&window.DiscordSentry.configureScope(e=>{e.setUser(null)}),_()}",
+            "setTags": "setTags(e){null!=window.DiscordSentry&&window.DiscordSentry.configureScope(t=>{t.setTags(e)})}",
+            "setExtra": "setExtra(e){null!=window.DiscordSentry&&window.DiscordSentry.configureScope(t=>{t.setExtras(e)})}",
+            "captureException": "captureException(e,t){let n=(0,r.getUpdatedOptions)(t);null!=window.DiscordSentry&&window.DiscordSentry.withScope(t=>{null!=n.tags&&t.setTags(n.tags),t.setExtras(n.extra),window.DiscordSentry.captureException(e)})}",
+            "captureCrash": "captureCrash(e,t){let n;let i=(0,r.getUpdatedOptions)(t);return null!=window.DiscordSentry&&window.DiscordSentry.withScope(t=>{t.setExtras(i.extra),t.setTag(\"crash\",\"true\"),t.setLevel(\"fatal\"),t.addEventProcessor(e=>{let t=e.exception?.values?.[0];return null!=t&&(t.mechanism={...t.mechanism,handled:!1}),e}),n=window.DiscordSentry.captureException(e)}),n}",
+            "captureMessage": "captureMessage(e,t){let n=(0,r.getUpdatedOptions)(t);null!=window.DiscordSentry&&window.DiscordSentry.withScope(t=>{null!=n.tags&&t.setTags(n.tags),t.setExtras(n.extra),window.DiscordSentry.captureMessage(e)})}",
+            "addBreadcrumb": "addBreadcrumb(e){(0,i.default)(e)}",
+            "profiledRootComponent": "e=>e",
+            "crash": "crash(){throw Error(\"crash\")}"
+        }
+    }
+}

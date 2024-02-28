@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "defineProtoSetting": "function E(e,t,n,r){let o=()=>n(s.default.settings[e]?.[t]);return{getSetting:o,updateSetting:I(o,n=>a.PreloadedUserSettingsActionCreators.updateAsync(e,e=>{e[t]=r(n,e[t])},_.UserSettingsDelay.INFREQUENT_USER_ACTION)),useSetting:()=>(0,i.useStateFromStores)([s.default],o)}}",
+        "wrapSettingWithOverride": "function u(e,t,n,i){let o=()=>n()??e.getSetting();return{getSetting:o,useSetting:()=>{let t=e.useSetting();return i()??t},updateSetting:I(o,n=>(r.default.dispatch({type:\"USER_SETTINGS_OVERRIDE_CLEAR\",settings:[t]}),e.updateSetting(n)))}}",
+        "wrapSettingWithSelectiveSyncing": "function l(e,t,n){let a=()=>{let i=o.default.getState()[t];return i?.settings[n]??e.getSetting()};return{getSetting:a,useSetting:()=>{let r=e.useSetting();return(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return e?.settings[n]})??r},updateSetting:I(a,i=>o.default.shouldSync(t)?e.updateSetting(i):(r.default.dispatch({type:\"SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE\",changes:{[t]:{settings:{[n]:i}}}}),Promise.resolve()))}}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e,t){(0,i.default)(1,arguments);var n=(0,r.default)(e);return Math.round(((0,a.default)(n,t).getTime()-(0,o.default)(n,t).getTime())/6048e5)+1}"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "default": {
+            "buttonLabel": "Önerileri göster",
+            "countAnnouncement": "(e,t)=>`${t.plural(e.optionCount,{one:()=>`${t.number(e.optionCount)} se\\xe7enek`,other:()=>`${t.number(e.optionCount)} se\\xe7enekler`})} kullan\\u{131}labilir.`",
+            "focusAnnouncement": "(e,t)=>`${t.select({true:()=>`Girilen grup ${e.groupTitle}, ile ${t.plural(e.groupCount,{one:()=>`${t.number(e.groupCount)} se\\xe7enek`,other:()=>`${t.number(e.groupCount)} se\\xe7enekler`})}. `,other:\"\"},e.isGroupChange)}${e.optionText}${t.select({true:`, se\\xe7ildi`,other:\"\"},e.isSelected)}`",
+            "listboxLabel": "Öneriler",
+            "selectedAnnouncement": "e=>`${e.optionText}, se\\xe7ildi`"
+        }
+    }
+}

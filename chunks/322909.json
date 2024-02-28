@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,e,s){for(var n=-1,i=t.criteria,c=e.criteria,o=i.length,f=s.length;++n<o;){var u=r(i[n],c[n]);if(u){if(n>=f)return u;return u*(\"desc\"==s[n]?-1:1)}}return t.index-e.index}"
+}

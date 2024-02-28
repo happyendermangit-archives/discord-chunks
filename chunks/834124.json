@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "usePreview": "()=>{let e=(0,r.useRef)(null),t=(0,a.useDragLayer)(t=>({currentOffset:(0,i.calculatePointerPosition)(t,e),isDragging:t.isDragging(),itemType:t.getItemType(),item:t.getItem(),monitor:t}));return t.isDragging&&null!==t.currentOffset?{display:!0,itemType:t.itemType,item:t.item,style:o(t.currentOffset),monitor:t.monitor,ref:e}:{display:!1}}"
-    }
-}

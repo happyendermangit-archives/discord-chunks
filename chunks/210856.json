@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "encrypt": "function(t,e,s){for(var n=e.length,i=r.allocUnsafe(n),c=-1;++c<n;)i[c]=function(t,e,s){var n=t._cipher.encryptBlock(t._prev)[0]^e;return t._prev=r.concat([t._prev.slice(1),r.from([s?e:n])]),n}(t,e[c],s);return i}"
+    }
+}

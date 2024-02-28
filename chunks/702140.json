@@ -1,3 +1,7 @@
 {
-    "exports": "/assets/81e00ae3bc00cc120481.svg"
+    "exports": {
+        "default": {
+            "breadcrumbs": "Chemin de navigation"
+        }
+    }
 }

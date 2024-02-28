@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "UserActivityTypes": {
+            "USER_POPOUT": "UserPopout",
+            "USER_POPOUT_V2": "UserPopoutV2",
+            "ACTIVITY_FEED": "ActivityFeed",
+            "PROFILE": "Profile",
+            "PROFILE_V2": "ProfileV2",
+            "STREAM_PREVIEW": "StreamPreview",
+            "VOICE_CHANNEL": "VoiceChannel"
+        },
+        "default": "function(e){let{activity:t,user:n,useStoreStream:s=!0,showActions:o=!0,hideHeader:d=!1,analyticsParams:c,...R}=e,b=(0,r.useStateFromStores)([A.default,g.default],()=>g.default.getChannel(A.default.getVoiceStateForUser(n.id)?.channelId)),{enableHangStatus:k}=C.HangStatusExperiment.useExperiment({guildId:b?.guild_id,location:\"UserActivityContainer\"},{autoTrackExposure:!1}),D=(0,r.useStateFromStores)([S.default],()=>s?S.default.getAnyStreamForUser(n.id):null),U=k&&T.default.can(M.Permissions.CONNECT,b),j=t?.type===M.ActivityTypes.HANG_STATUS&&U?b:null,w=(0,r.useStateFromStores)([x.default,A.default,g.default],()=>(0,u.default)(t,M.ActivityFlags.EMBEDDED)?x.default.getGuild(g.default.getChannel(A.default.getVoiceStateForSession(n.id,t?.session_id)?.channelId)?.getGuildId()):null!=j?x.default.getGuild(j.getGuildId()):null),F=(0,r.useStateFromStores)([x.default],()=>null!=D?x.default.getGuild(D.guildId):null),G=(0,r.useStateFromStores)([f.default],()=>{if(null!=t)return null!=t.application_id?f.default.getApplication(t.application_id):f.default.getApplicationByName(t.name);return null}),H=(0,p.default)(),B=(0,I.default)(n),V=H&&null!=t&&B;return(a.useEffect(()=>{t?.type===M.ActivityTypes.HANG_STATUS&&U&&O.default.track(M.AnalyticEvents.VIEW_HANG_STATUS,{source:\"UserProfilePopout\",guild_id:j?.guild_id,channel_id:j?.id})},[t?.type,U,j]),t?.type!==M.ActivityTypes.HANG_STATUS||U)?(0,i.jsx)(N.default,{...R,activity:t,user:n,application:G,hideHeader:d,activityGuild:w??F,showReactions:V,renderActions:o?()=>(0,i.jsxs)(\"div\",{className:l()(V&&L.actionsWrapper),children:[(0,i.jsx)(P,{...R,applicationStream:D,activity:t,user:n}),V&&(0,i.jsx)(m.default,{showReact:!0,showReply:!0,replyHeaderText:v.default.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({activity:t.name}),replyPlaceholder:v.default.Messages.TEXTAREA_PLACEHOLDER.format({channel:`@${n.globalName}`}),onInteraction:e=>{let{interactionType:i,emoji:a,reply:s}=e;O.default.track(M.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED,{application_id:t.application_id,interaction_type:i,...c}),i===h.AtomicReactorInteractionTypes.ReactSubmit&&null!=a&&(0,E.sendReactionToActivity)({reaction:a,user:n,activity:t,application:G,altText:(0,_.getActivityAltText)(n,t),stream:D}),i===h.AtomicReactorInteractionTypes.ReplySubmit&&null!=s&&(0,E.sendReplyToActivity)({reply:s,user:n,activity:t,application:G,altText:(0,_.getActivityAltText)(n,t),stream:D})}})]}):null,onOpenSpotifyTrack:y.openTrack,onOpenSpotifyArtist:y.openArtist,onOpenSpotifyAlbum:y.openAlbum}):null}"
+    }
+}

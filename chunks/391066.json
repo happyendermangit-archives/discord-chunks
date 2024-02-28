@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){return u(e)&&\"[object Map]\"==n(e)}"
-}

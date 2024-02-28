@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){if(!r(t))return{};if(a)return a(t);e.prototype=t;var n=new e;return e.prototype=void 0,n}"
+}

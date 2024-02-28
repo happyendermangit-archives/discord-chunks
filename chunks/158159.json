@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "getHangStatusDetails": "e=>{if(e?.type!==i.ActivityTypes.HANG_STATUS||e?.state==null)return null;let t=e.state;return t===i.HangStatusTypes.CUSTOM?null:f()[t]}",
+        "getHangStatusOptions": "()=>({[i.HangStatusTypes.CHILLING]:{title:a.default.Messages.STATUS_CHILLING,icon:l,color:\"#567C7E\"},[i.HangStatusTypes.GAMING]:{title:a.default.Messages.STATUS_GAMING,icon:r,color:\"#685F8C\"},[i.HangStatusTypes.FOCUSING]:{title:a.default.Messages.STATUS_FOCUSING,icon:u,color:\"#7F6956\"},[i.HangStatusTypes.BRB]:{title:a.default.Messages.STATUS_BRB,icon:s,color:\"#76567E\"},[i.HangStatusTypes.EATING]:{title:a.default.Messages.STATUS_EATING,icon:o,color:\"#717B54\"},[i.HangStatusTypes.IN_TRANSIT]:{title:a.default.Messages.STATUS_IN_TRANSIT,icon:d,color:\"#56697F\"},[i.HangStatusTypes.WATCHING]:{title:a.default.Messages.STATUS_WATCHING,icon:c,color:\"#7C5571\"}})",
+        "getHangStatusText": "e=>(e?.state!=null?e.state:null)===i.HangStatusTypes.CUSTOM?e?.details:p(e)?.title"
+    }
+}

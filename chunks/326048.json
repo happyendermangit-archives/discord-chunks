@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){return i?Object(i.call(e)):{}}"
+}

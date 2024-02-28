@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "initRenderingContextWebGL": "function s(e){let t=e.getContext(\"webgl2\");return null==t?null:a.create(t)}"
+    }
+}

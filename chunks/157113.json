@@ -1,0 +1,30 @@
+{
+    "exports": {
+        "ConflictOptions": {
+            "0": "Skip",
+            "1": "Replace",
+            "Skip": 0,
+            "Replace": 1
+        },
+        "DatabaseState": {
+            "0": "Closed",
+            "1": "Open",
+            "2": "Disabled",
+            "Closed": 0,
+            "Open": 1,
+            "Disabled": 2
+        },
+        "MAXIMUM_KEY_BITS": 5,
+        "Ordering": {
+            "0": "Ascending",
+            "1": "Descending",
+            "Ascending": 0,
+            "Descending": 1
+        },
+        "TableId": {
+            "Kv": "kv",
+            "KvCache": "kv_cache",
+            "Messages": "messages"
+        }
+    }
+}

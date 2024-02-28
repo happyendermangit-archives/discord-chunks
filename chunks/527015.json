@@ -1,5 +1,11 @@
 {
     "exports": {
-        "setDeveloperOptionSettings": "function r(e){i.default.dispatch({type:\"DEVELOPER_OPTIONS_UPDATE_SETTINGS\",settings:e})}"
+        "default": {
+            "sentinel": "#",
+            "matches": "(e,t,n,i,a)=>a.mentions.channel!==c.ChannelMentionMode.DENY&&!e.isPrivate()",
+            "queryResults": "queryResults(e,t,n,i,s){let l,o,d=r.GUILD_SELECTABLE_CHANNELS_KEY;return n.charAt(0)===a.AutocompleterQuerySymbols.VOICE_CHANNEL&&(d=r.GUILD_VOCAL_CHANNELS_KEY,n=n.substring(1)),i.forNonStringCommandOption?l=u.default.queryApplicationCommandChannelResults({query:n,channel:e,channelTypes:i.allowedChannelTypes}):(l=u.default.queryChannelResults({query:n,channel:e,type:d}),null!=t&&(o=u.default.queryStaticRouteChannels({query:n,guild:t}),l.channels.unshift(...o))),{results:l,staticRouteChannels:o}}",
+            "renderResults": "renderResults(e){let t,n,{results:{channels:i},selectedIndex:s,query:r,options:u,onHover:c,onClick:p}=e,h=r.charAt(0)===a.AutocompleterQuerySymbols.VOICE_CHANNEL;return h?(t=m.default.Messages.VOICE_CHANNELS_MATCHING,n=m.default.Messages.VOICE_CHANNELS,r=r.substring(1)):u.forNonStringCommandOption?(t=m.default.Messages.CHANNELS_MATCHING,n=m.default.Messages.CHANNELS):(t=m.default.Messages.TEXT_CHANNELS_MATCHING,n=m.default.Messages.TEXT_CHANNELS),(0,d.renderAutocompleteGroup)({query:r,selectedIndex:s,autocompletes:i,onHover:c,onClick:p,titleWithQuery:t,titleWithoutQuery:n,Component:o.default.Channel,getProps:e=>({channel:e,key:e.id,category:l.default.getChannel(e.parent_id)}),getQuery:e=>h?`${f.CHANNEL_SENTINEL}${a.AutocompleterQuerySymbols.VOICE_CHANNEL}${e}`:`${f.CHANNEL_SENTINEL}${e}`,key:\"channels\"})}",
+            "onSelect": "onSelect(e){let{results:{channels:t},index:n,options:a}=e,l=t[n];return a.insertText(function(e){switch(e.type){case i.ChannelTypes.PUBLIC_THREAD:case i.ChannelTypes.PRIVATE_THREAD:case i.ChannelTypes.ANNOUNCEMENT_THREAD:case i.ChannelTypes.GUILD_VOICE:case i.ChannelTypes.GUILD_STAGE_VOICE:case i.ChannelTypes.GUILD_CATEGORY:return`#\"${(0,s.escapeChannelName)(e.name)}\"`;default:let t=r.default.getTextChannelNameDisambiguations(e.guild_id)[e.id];return`#${null!=t?t.name:e.name}`}}(l),function(e){return p.StaticChannelIds.has(e.id)?`<id:${e.id}>`:`<#${e.id}>`}(l)),{type:c.AutocompleteSelectionTypes.CHANNEL}}"
+        }
     }
 }

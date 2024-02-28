@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function p(e){let{userId:t,headingClassName:n,textClassName:p,guild:m,guildMember:h}=e,E=(0,a.default)([r.default],()=>r.default.locale),_=null!=m&&null!=h;return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(s.Heading,{variant:\"eyebrow\",className:n,children:_?c.default.Messages.USER_PROFILE_MEMBER_SINCE:c.default.Messages.USER_PROFILE_DISCORD_MEMBER_SINCE}),(0,i.jsxs)(\"div\",{className:f.memberSinceContainer,children:[_&&(0,i.jsx)(s.Tooltip,{text:c.default.Messages.DISCORD_NAME,children:e=>(0,i.jsx)(u.default,{...e,className:f.discordIcon})}),(0,i.jsx)(s.Text,{className:p,variant:\"text-sm/normal\",children:(0,l.getCreatedAtDate)(d.default.extractTimestamp(t),E)}),null!=m&&null!=h&&(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(\"div\",{className:f.divider}),(0,i.jsx)(s.Tooltip,{text:m.name,children:e=>(0,i.jsx)(o.default,{...e,guild:m,size:o.default.Sizes.SMOL})}),(0,i.jsx)(s.Text,{className:p,variant:\"text-sm/normal\",children:(0,l.getCreatedAtDate)(h.joinedAt,E)})]})]})]})}"
+    }
+}

@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,e){if(t!==e){var s=void 0!==t,n=null===t,i=t==t,c=r(t),o=void 0!==e,f=null===e,u=e==e,a=r(e);if(!f&&!a&&!c&&t>e||c&&o&&u&&!f&&!a||n&&o&&u||!s&&u||!i)return 1;if(!n&&!c&&!a&&t<e||a&&s&&i&&!n&&!c||f&&s&&i||!o&&i||!u)return -1}return 0}"
+}

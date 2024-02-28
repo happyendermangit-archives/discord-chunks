@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "default": "e=>{let{isInteracting:t=!1,disableAnimation:n=!1,enlargeOnInteraction:s=!1,enlargeWithName:l=!0,enlargeScaleFactor:r=1.55,maskAsset:o=!1,size:u,sticker:d,className:c,withLoadingIndicator:f,assetData:p,fileUri:m,onError:h}=e,E=(0,_.useIsWindowFocused)(),y=(0,I.useShouldAnimateSticker)(t)&&!n,S=a.useRef(null);if(null==d)return null;let g=d.format_type===C.StickerFormat.LOTTIE?M:v;return(0,i.jsxs)(a.Fragment,{children:[(0,i.jsx)(g,{shouldAnimate:y,isFocused:E,size:u,sticker:d,className:c,maskAsset:o,positionRef:S,withLoadingIndicator:f,assetData:p,fileUri:m,onError:h}),s&&(0,i.jsx)(L,{disableAnimation:n,enlargeScaleFactor:r,enlargeWithName:l,isInteracting:t,positionRef:S,size:u,sticker:d})]},`${d.id},${u}`)}",
+        "getStickerAltText": "function O(e){let t=\"description\"in e&&null!=e.description?`${e.name}, ${e.description}`:e.name;return S.default.Messages.STICKER_A11Y_LABEL.format({stickerName:t})}"
+    }
+}

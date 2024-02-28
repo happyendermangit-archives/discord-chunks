@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "getMetadata": "async function f(e,t){let n=e.metadata;if(null!=n)return u(n);let r=s.default.getActivityMetadata(t);if(null!=r)return u(r);if(null==e.session_id)throw Error(\"null/undefined session_id\");let{body:o}=await i.default.get({url:l.Endpoints.USER_ACTIVITY_METADATA(t,e.session_id,e.application_id),oldFormErrors:!0});return a.default.dispatch({type:\"ACTIVITY_METADATA_UPDATE\",metadata:o,userId:t}),u(o)}",
+        "play": "function c(e,t){f(e,t).then(n=>a.default.dispatch({type:\"ACTIVITY_PLAY\",activity:e,userId:t,metadata:n})).catch(()=>a.default.dispatch({type:\"ACTIVITY_PLAY\",activity:e,userId:t}))}",
+        "sync": "function d(e,t){a.default.dispatch({type:\"ACTIVITY_SYNC\",activity:e,userId:t})}"
+    }
+}

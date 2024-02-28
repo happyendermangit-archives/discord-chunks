@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "fetchLiveBuild": "async function S(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],l=s.default.locale;return a.default.dispatch({type:\"APPLICATION_BUILD_FETCH_START\",applicationId:e,branchId:t,locale:l}),n&&await (0,r.sleep)(Math.random()*c),i.default.get({url:u.Endpoints.APPLICATION_LIVE_BUILD(e,t),query:{platform:(0,E.getBuildPlatform)(),locale:l},oldFormErrors:!0}).then(n=>{let i=n.body;if(0===i.manifests.length){a.default.dispatch({type:\"APPLICATION_BUILD_NOT_FOUND\",applicationId:e,branchId:t});return}a.default.dispatch({type:\"APPLICATION_BUILD_FETCH_SUCCESS\",applicationId:e,branchId:t,locale:l,build:i})},n=>{let{status:i}=n;if(404===i)a.default.dispatch({type:\"APPLICATION_BUILD_NOT_FOUND\",applicationId:e,branchId:t});else{var r,s;r=e,null==d[s=t]&&(d[s]=new o.Timeout),d[s].start(I+Math.random()*T,()=>{null!=_.default.getLibraryApplication(r,s)&&S(r,s)})}})}"
+    }
+}

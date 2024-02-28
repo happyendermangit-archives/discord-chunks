@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "isTabsUIEnabledManually": "function r(){return!1}",
+        "useIsTabsUIEnabledManually": "function i(){return!1}"
+    }
+}

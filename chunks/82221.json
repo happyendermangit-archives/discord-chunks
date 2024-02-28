@@ -1,3 +1,0 @@
-{
-    "exports": "function c(t){i.call(this),this._block=r.allocUnsafe(t),this._blockSize=t,this._blockOffset=0,this._length=[0,0,0,0],this._finalized=!1}"
-}

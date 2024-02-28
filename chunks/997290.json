@@ -1,0 +1,3 @@
+{
+    "exports": "function o(t,e){i.call(this,\"digest\"),\"string\"==typeof e&&(e=n.from(e)),this._alg=t,this._key=e,e.length>64?e=t(e):e.length<64&&(e=n.concat([e,c],64));for(var s=this._ipad=n.allocUnsafe(64),r=this._opad=n.allocUnsafe(64),o=0;o<64;o++)s[o]=54^e[o],r[o]=92^e[o];this._hash=[s]}"
+}

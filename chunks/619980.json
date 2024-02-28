@@ -1,0 +1,30 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "MEDIA_ENGINE_NOISE_CANCELLATION_ERROR": "()=>this.handleNoiseCancellationError()"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "clearErrorTimeout": {
+                "start": "start(e,t){let n=!(arguments.length>2)||void 0===arguments[2]||arguments[2];(!this.isStarted()||n)&&(this.stop(),this._ref=window.setTimeout(()=>{this._ref=null,t()},e))}",
+                "stop": "stop(){null!=this._ref&&(clearTimeout(this._ref),this._ref=null)}",
+                "isStarted": "isStarted(){return null!=this._ref}"
+            },
+            "handleNoiseCancellationError": "()=>{this.clearErrorTimeout.start(3e3,()=>r.default.dispatch({type:\"MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET\"}))}",
+            "_terminate": "_terminate(){this.clearErrorTimeout.stop()}"
+        }
+    }
+}

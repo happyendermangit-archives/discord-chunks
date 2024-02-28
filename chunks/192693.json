@@ -1,5 +1,3 @@
 {
-    "exports": {
-        "default": "function r(e,t){return t.reduce(function(t,n){return t[n]=e,t},{})}"
-    }
+    "exports": "/assets/80b04934274a1d198741.svg"
 }

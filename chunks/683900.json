@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "Dedupe": "class i{constructor(){i.prototype.__init.call(this)}static __initStatic(){this.id=\"Dedupe\"}__init(){this.name=i.id}setupOnce(t,e){let n=t=>{if(t.type)return t;let n=e().getIntegration(i);if(n){try{if(function(t,e){return!!e&&(!!(function(t,e){let n=t.message,r=e.message;return!!((n||r)&&(!n||r)&&(n||!r)&&n===r&&s(t,e)&&a(t,e))||!1}(t,e)||function(t,e){let n=o(e),r=o(t);return!!(n&&r&&n.type===r.type&&n.value===r.value&&s(t,e)&&a(t,e))||!1}(t,e))||!1)}(t,n._previousEvent))return(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&r.logger.warn(\"Event dropped due to being a duplicate of previously captured event.\"),null}catch(t){}return n._previousEvent=t}return t};n.id=this.name,t(n)}}"
+    }
+}

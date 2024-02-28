@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(){let e=(0,o.useModalsStore)(e=>!Object.entries(e).every(e=>{let[t,n]=e;return 0===n.length})),t=(0,r.useStateFromStores)([_.default],()=>_.default.isOpen()),n=(0,r.useStateFromStores)([s.default],()=>s.default.hasLayers()),[l,u]=i.useState(!1),I=(0,a.useWindowDispatch)();return i.useEffect(()=>{function e(){u(!0)}function t(){u(!1)}return I.subscribe(E.ComponentActions.POPOUT_SHOW,e),I.subscribe(E.ComponentActions.POPOUT_HIDE,t),()=>{I.unsubscribe(E.ComponentActions.POPOUT_SHOW,e),I.unsubscribe(E.ComponentActions.POPOUT_HIDE,t)}},[I]),e||t||l||n}"
+    }
+}

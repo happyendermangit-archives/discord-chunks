@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{onTooltipClose:t}=e,{profileType:n}=a.useContext(m.UserProfileContext),s=n===h.UserProfileTypes.POPOUT,l=_(),[r,u]=a.useState(!s&&l);return(0,d.default)(()=>u(l),s?300:null),(0,i.jsx)(o.Popout,{shouldShow:r,position:\"left\",align:\"center\",spacing:32,ignoreModalClicks:!0,onRequestClose:()=>{!s&&u(!1)},renderPopout:e=>{let{position:n}=e;return(0,i.jsx)(p.default,{position:n??\"left\",onClose:t})},children:()=>(0,i.jsx)(\"span\",{className:E.hidden})})}"
+    }
+}

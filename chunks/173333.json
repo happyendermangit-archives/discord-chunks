@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "checkDefaultChannelThresholdMetAfterChannelPermissionDeny": "async function h(e,t,n){let r=e.getGuildId();if(null==r)return!0;null!=n&&(t=a.default.filter(t,a.default.invert(n)));let s=e.permissionOverwrites[r],u=null!=s?a.default.filter(s.deny,a.default.invert(s.allow)):a.default.deserialize(0),o={removingView:a.default.has(t,c.Permissions.VIEW_CHANNEL)&&!a.default.has(u,c.Permissions.VIEW_CHANNEL),removingChat:!1};return e.isForumLikeChannel()?o.removingChat=a.default.has(t,c.Permissions.SEND_MESSAGES_IN_THREADS)&&!a.default.has(u,c.Permissions.SEND_MESSAGES_IN_THREADS):o.removingChat=a.default.has(t,c.Permissions.SEND_MESSAGES)&&!a.default.has(u,c.Permissions.SEND_MESSAGES),!o.removingChat&&!o.removingView||!!await _(r,e.id,o)||(l.default.show({title:f.default.Messages.CANNOT_CHANGE_CHANNEL_PERMS,body:f.default.Messages.ONBOARDING_CHANNEL_THRESHOLD_WARNING.format({onClick:()=>{l.default.close(),i.default.open(r,c.GuildSettingsSections.ONBOARDING)}})}),!1)}",
+        "isDefaultChannelThresholdMetAfterDelete": "async function E(e,t){return null==e||await _(e,t,{removingView:!0,removingChat:!0})}"
+    }
+}

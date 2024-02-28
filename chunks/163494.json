@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){return\"string\"==typeof t||\"object\"==typeof t&&(c?n(t):\"[object String]\"===i.call(t))}"
+}

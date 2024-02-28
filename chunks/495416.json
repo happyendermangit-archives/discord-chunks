@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function f(e){let{section:t,isSelected:n,width:s,height:f,className:p,selectable:m=!1,onFocus:h,onBlur:E,onMouseOver:_,onMouseLeave:I,...C}=e,[y,S]=a.useState(!1),g=a.useCallback(()=>{S(!0),h?.()},[h]),x=a.useCallback(()=>{S(!1),E?.()},[E]),T=a.useCallback(()=>{S(!0),_?.()},[_]),A=a.useCallback(()=>{S(!1),I?.()},[I]),N=a.useMemo(()=>{if(t.type===u.ApplicationCommandSectionType.APPLICATION)return o.default.getApplicationIconURL({id:t.id,icon:t.icon,bot:t.application?.bot,botIconFirst:!0,size:s});return c},[t,s]);return(0,i.jsx)(\"div\",{...C,className:l()(d.wrapper,p,{[d.selectable]:m,[d.selected]:m&&n}),onFocus:g,onBlur:x,onMouseOver:T,onMouseLeave:A,children:(0,i.jsx)(r.default,{className:d.mask,mask:m&&(n||y)?r.MaskIDs.SQUIRCLE:r.MaskIDs.AVATAR_DEFAULT,width:s,height:f,children:(0,i.jsx)(\"img\",{alt:\"\",className:d.icon,style:{width:s,height:f},src:N})})})}"
+    }
+}

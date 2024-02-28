@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(t){if(null!=t&&null!=t.url&&n.validStreamURL.test(t.url))return t.url}"
-    }
-}

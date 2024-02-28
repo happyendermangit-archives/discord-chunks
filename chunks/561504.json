@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "deserializeObject": "function _(e){return r().cloneDeepWith(e,e=>null!=e&&\"object\"==typeof e&&\"__tag__\"in e&&\"bigflag\"===e.__tag__?o.default.deserialize(e.data):(0,a.isSerializedUint8Array)(e)?new Uint8Array(e.data):void 0)}",
+        "serializeObject": "function s(e){return r().cloneDeepWith(e,e=>(0,o.isBigFlag)(e)?{__tag__:\"bigflag\",data:e.toJSON()}:(0,a.isUint8Array)(e)?{__tag__:\"uint8array\",data:Array.from(e)}:void 0)}"
+    }
+}

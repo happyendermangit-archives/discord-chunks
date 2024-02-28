@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function d(e){return function(e){let t=(0,i.useStateFromStoresArray)([a.default],()=>e.map(e=>a.default.getChannel(e)).filter(l.isNotNullish),[e]);return(0,i.useStateFromStoresArray)([s.default],()=>t.filter(e=>s.default.can(o.JOIN_VOCAL_CHANNEL_PERMISSIONS,e)),[t])}((0,i.useStateFromStoresArray)([u.default],()=>r.default.keys(u.default.getStageInstancesByGuild(e)),[e]))}"
+    }
+}

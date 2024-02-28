@@ -1,0 +1,22 @@
+{
+    "exports": {
+        "Cell": {
+            "render": "function(e,t){return o.createElement(\"cell\",{ref:M(e,t,e.children)})}"
+        },
+        "Column": {
+            "render": "function(e,t){var n;let r=(0,o.useContext)(E),a=\"function\"==typeof r?r:e.children,i=w({children:e.title||e.childColumns?a:null,items:e.childColumns});return o.createElement(\"column\",{ref:M(e,t,null!==(n=e.title)&&void 0!==n?n:e.children)},i)}"
+        },
+        "Row": {
+            "render": "function(e,t){let n=w({children:e.children,items:e.columns,idScope:e.id}),r=(0,o.useMemo)(()=>({idScope:e.id}),[e.id]);return o.createElement(\"item\",{ref:M(e,t)},o.createElement(T.Provider,{value:r},n))}"
+        },
+        "Table": {
+            "render": "function(e,t){let n,i,u;[e,t]=A(e,t,e6);let{portal:s,collection:l}=D(e,(0,o.useMemo)(()=>new e5,[])),d=(0,c.useTableState)({...e,collection:l,children:void 0}),{gridProps:f}=(0,r.useTable)(e,d,t),{dragAndDropHooks:p}=e,h=d.selectionManager,m=!!(null==p?void 0:p.useDraggableCollectionState),y=!!(null==p?void 0:p.useDroppableCollectionState),v=(0,o.useRef)(m),g=(0,o.useRef)(y);v.current!==m&&console.warn(\"Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.\"),g.current!==y&&console.warn(\"Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.\");let b=!1,_=null,w=(0,o.useRef)(null);if(m&&p){n=p.useDraggableCollectionState({collection:l,selectionManager:h,preview:p.renderDragPreview?w:void 0}),p.useDraggableCollection({},n,t);let e=p.DragPreview;_=p.renderDragPreview?o.createElement(e,{ref:w},p.renderDragPreview):null}if(y&&p){i=p.useDroppableCollectionState({collection:l,selectionManager:h});let e=new r.ListKeyboardDelegate(l,\"selection\"===h.disabledBehavior?new Set:h.disabledKeys,t),n=p.dropTargetDelegate||new p.ListDropTargetDelegate(l,t);u=p.useDroppableCollection({keyboardDelegate:e,dropTargetDelegate:n},i,t),b=i.isDropTarget({type:\"root\"})}let{focusProps:x,isFocused:k,isFocusVisible:M}=(0,r.useFocusRing)(),S=O({className:e.className,style:e.style,defaultClassName:\"react-aria-Table\",values:{isDropTarget:b,isFocused:k,isFocusVisible:M}}),{selectionBehavior:T,selectionMode:E,disallowEmptySelection:L}=d.selectionManager,C=(0,o.useMemo)(()=>({selectionBehavior:\"none\"===E?null:T,selectionMode:E,disallowEmptySelection:L,allowsDragging:m}),[T,E,L,m]);return o.createElement(o.Fragment,null,o.createElement(P,{values:[[e7,{state:d,dragAndDropHooks:p,dragState:n,dropState:i}],[ea,{render:td}]]},o.createElement(r.FocusScope,null,o.createElement(\"table\",{...(0,a.filterDOMProps)(e),...S,...(0,r.mergeProps)(f,x,null==u?void 0:u.collectionProps),ref:t,slot:e.slot,\"data-drop-target\":b||void 0,\"data-focused\":k||void 0,\"data-focus-visible\":M||void 0},o.createElement(to,{collection:l}),o.createElement(ti,{collection:l,isDroppable:y}))),_),o.createElement(e8.Provider,{value:C},s))}"
+        },
+        "TableBody": {
+            "render": "function(e,t){let n=w(e);return o.createElement(\"tablebody\",{ref:M(e,t)},n)}"
+        },
+        "TableHeader": {
+            "render": "function(e,t){let n=w({children:e.children,items:e.columns}),r=\"function\"==typeof e.children?e.children:null;return o.createElement(E.Provider,{value:r},o.createElement(\"tableheader\",{ref:M(e,t)},n))}"
+        }
+    }
+}

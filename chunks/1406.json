@@ -1,0 +1,3 @@
+{
+    "exports": "function f(t){this.twisted=(0|t.a)!=1,this.mOneA=this.twisted&&(0|t.a)==-1,this.extended=this.mOneA,c.call(this,\"edwards\",t),this.a=new n(t.a,16).umod(this.red.m),this.a=this.a.toRed(this.red),this.c=new n(t.c,16).toRed(this.red),this.c2=this.c.redSqr(),this.d=new n(t.d,16).toRed(this.red),this.dd=this.d.redAdd(this.d),o(!this.twisted||0===this.c.fromRed().cmpn(1)),this.oneC=(0|t.c)==1}"
+}

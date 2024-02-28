@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "isRestrictedFromMonetizationReapplication": "function u(e){return null!=e&&e.includes(o.CreatorMonetizationRestrictions.REAPPLICATION_DISABLED)}",
+        "isRestrictedFromShowingGuildPurchaseEntryPoints": "function s(e){return null!=e&&e.includes(o.CreatorMonetizationRestrictions.NEW_PURCHASES_DISABLED)}",
+        "isRestrictedFromUpdatingCreatorMonetizationSettings": "function E(e){return null!=e&&e.includes(o.CreatorMonetizationRestrictions.SETTINGS_READ_ONLY)}",
+        "shouldHideGuildPurchaseEntryPoints": "function _(e){if(null==e)return!1;let t=i.default.getMonetizationRestrictionsFetchState(e),n=i.default.getMonetizationRestrictions(e),o=r.default.getGuild(e);return t===i.FetchState.FETCHED?s(n):o?.hasFeature(a.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)??!0}",
+        "shouldRestrictUpdatingCreatorMonetizationSettings": "function l(e){if(null==e)return!1;let t=i.default.getMonetizationRestrictionsFetchState(e),n=i.default.getMonetizationRestrictions(e),o=r.default.getGuild(e);return t===i.FetchState.FETCHED?E(n):o?.hasFeature(a.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)??!0}"
+    }
+}

@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){return u?Object(u.call(e)):{}}"
-}

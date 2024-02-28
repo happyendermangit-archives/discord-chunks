@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "searchGuildMembers": "async function a(e,t,r){let a=await (0,u.searchAllGuildMembers)(e,t,r);if(a.type===l.GuildMemberSearchResponseType.ERROR)throw a.body;let{body:i}=a;n.default.dispatch({type:\"MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS\",guildId:e,members:i.members,page_result_count:i.page_result_count,total_result_count:i.total_result_count})}"
-    }
-}

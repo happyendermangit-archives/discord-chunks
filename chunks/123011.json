@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "BackgroundTransition": "class c extends r.PureComponent{constructor(e){super(e),this.state={animation:new s.default.Value(0)}}componentDidAppear(){this.state.animation.setValue(1)}componentWillEnter(e){let{animation:t}=this.state;t.setValue(0),s.default.spring(t,{toValue:1,overshootClamping:!0}).start(e)}componentWillLeave(e){s.default.spring(this.state.animation,{toValue:0,overshootClamping:!0}).start(e)}render(){return(0,i.jsx)(s.default.div,{className:a()(I.videoBackgroundTransition,this.props.className),style:{opacity:this.state.animation},children:this.props.children})}}"
+    }
+}

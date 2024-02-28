@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`Reducer ${e.fieldLabel}`",
+            "increase": "e=>`\\xd8g ${e.fieldLabel}`",
+            "numberField": "Talfelt"
+        }
+    }
+}

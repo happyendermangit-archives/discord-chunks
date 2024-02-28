@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class a extends s.default.V8APIError{constructor(e,t){super(e,t,null!=t?r.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({statusPageURL:i.Links.STATUS,details:`${t}`}):r.default.Messages.FORM_ERROR_GENERIC.format({statusPageURL:i.Links.STATUS}))}}"
+    }
+}

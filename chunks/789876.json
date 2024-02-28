@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "request": "function k(e){return h++,s.push(e),x(),h}",
+        "cancel": "function M(e){var t=e-1-y;s[t]&&(s[t]=null)}"
+    },
+    "paths": [],
+    "children": []
+}

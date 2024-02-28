@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{isStacked:t,ctaButton:n,isGift:c,trialOfferTier:d,discountOffer:_}=e,f=!c&&(d===u.PremiumSubscriptionSKUs.TIER_2||null!=_),E=(0,s.default)(),T=(0,a.isThemeLight)(E)&&t?void 0:i.default.colors.WHITE.css;return t?c||d!==u.PremiumSubscriptionSKUs.TIER_2&&null==_?(0,r.jsx)(r.Fragment,{children:n}):(0,r.jsxs)(\"div\",{className:l.sparklesAndButton,children:[(0,r.jsx)(o.SparkleGroupLeft,{color:T,wrapperStyle:l.leftSparkle}),(0,r.jsx)(\"div\",{className:l.ctaFullWidth,children:n}),(0,r.jsx)(o.SparkleGroupRight,{color:T,wrapperStyle:l.rightSparkle})]}):(0,r.jsxs)(r.Fragment,{children:[n,f&&(0,r.jsx)(o.ButtonSparkleGroup,{tier:u.PremiumTypes.TIER_2})]})}"
+    }
+}

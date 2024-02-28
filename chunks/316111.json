@@ -1,0 +1,23 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "INVITE_ACCEPT_SUCCESS": "function s(e){let{guild:t}=e.invite;if(null!=t&&t?.features?.includes(a.GuildFeatures.HUB)){r.default.onOpenHubInvite(e.invite);return}null!=t&&t?.features?.includes(a.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)&&!t?.features?.includes(a.GuildFeatures.PREVIEW_ENABLED)&&(0,o.transitionTo)(a.Routes.GUILD_MEMBER_VERIFICATION(t.id,e.invite.code))}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "buildEmojiColorPalette": "(e,t,n)=>{if(null==e||e.length<1)return null;let s=o({colors:e,saturationFactor:t}),i=n?s?.DARK:s?.LIGHT;return{backgroundColor:i?.backgroundColor,accentColor:i?.accentColor,highlightColor:i?.highlightColor,opacity:i?.opacity??.15}}",
+        "buildPlatformedThemedEmojiColorPalette": "e=>{let{colors:t,saturationFactor:n=1,shouldProcessMobileColors:s=!1}=e,i=a({colors:t,saturationFactor:n});return r.default.applyPlatformToThemedEmojiColorPalette({palette:i,shouldProcessMobileColors:s})}"
+    }
+}

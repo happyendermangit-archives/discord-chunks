@@ -1,0 +1,536 @@
+{
+    "exports": {
+        "ALLOWED_SOCIAL_LINKS_DOMAINS": {
+            "facebook": {
+                "presentation": "Facebook",
+                "baseUrl": "https://facebook.com"
+            },
+            "instagram": {
+                "presentation": "Instagram",
+                "baseUrl": "https://instagram.com"
+            },
+            "twitter": {
+                "presentation": "Twitter",
+                "baseUrl": "https://twitter.com"
+            },
+            "tiktok": {
+                "presentation": "TikTok",
+                "baseUrl": "https://tiktok.com"
+            },
+            "twitch": {
+                "presentation": "Twitch",
+                "baseUrl": "https://twitch.tv"
+            },
+            "patreon": {
+                "presentation": "Patreon",
+                "baseUrl": "https://patreon.com"
+            },
+            "reddit": {
+                "presentation": "Reddit",
+                "baseUrl": "https://reddit.com/r/"
+            },
+            "youtube": {
+                "presentation": "YouTube",
+                "baseUrl": "https://youtube.com"
+            },
+            "steamcommunity": {
+                "presentation": "Steam",
+                "baseUrl": "https://steamcommunity.com"
+            },
+            "soundcloud": {
+                "presentation": "SoundCloud",
+                "baseUrl": "https://soundcloud.com"
+            },
+            "bandcamp": {
+                "presentation": "Bandcamp",
+                "baseUrl": "https://bandcamp.com"
+            },
+            "github": {
+                "presentation": "GitHub",
+                "baseUrl": "https://github.com"
+            },
+            "etsy": {
+                "presentation": "Etsy",
+                "baseUrl": "https://etsy.com"
+            }
+        },
+        "CategoryIcons": {
+            "0": "Activity",
+            "1": "Discover",
+            "2": "Education",
+            "3": "Music",
+            "4": "Science",
+            "5": "Stage",
+            "6": "Television",
+            "Activity": 0,
+            "Discover": 1,
+            "Education": 2,
+            "Music": 3,
+            "Science": 4,
+            "Stage": 5,
+            "Television": 6
+        },
+        "DEFAULT_DISCOVERY_CATEGORY_ID": 0,
+        "DEFAULT_EMOJI_DISCOVERABILITY_SETTING": true,
+        "DISCORD_HUB_ID": -2,
+        "DISCOVERY_ALL_CATEGORIES_ID": -1,
+        "DISCOVERY_COMMUNICATOR_REQUIREMENT": 20,
+        "DISCOVERY_PARTICIPATOR_REQUIREMENT": 40,
+        "DISCOVERY_SIDEBAR_CATEGORIES": [
+            {
+                "categoryId": -1,
+                "icon": "Discover"
+            },
+            {
+                "categoryId": 1,
+                "icon": "Activity"
+            },
+            {
+                "categoryId": 2,
+                "icon": "Music"
+            },
+            {
+                "categoryId": 6,
+                "icon": "Education"
+            },
+            {
+                "categoryId": 5,
+                "icon": "Science"
+            },
+            {
+                "categoryId": 3,
+                "icon": "Television"
+            }
+        ],
+        "LANGUAGE_OPTIONS": [
+            {
+                "name": "English",
+                "englishName": "English, US",
+                "code": "en-US",
+                "postgresLang": "english",
+                "enabled": true
+            },
+            {
+                "name": "中文",
+                "englishName": "Chinese Simplified",
+                "code": "zh-CN",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "繁體中文",
+                "englishName": "Traditional Chinese",
+                "code": "zh-TW",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "Čeština",
+                "englishName": "Czech",
+                "code": "cs",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "Dansk",
+                "englishName": "Danish",
+                "code": "da",
+                "postgresLang": "danish",
+                "enabled": true
+            },
+            {
+                "name": "Nederlands",
+                "englishName": "Dutch",
+                "code": "nl",
+                "postgresLang": "dutch",
+                "enabled": true
+            },
+            {
+                "name": "Français",
+                "englishName": "French",
+                "code": "fr",
+                "postgresLang": "french",
+                "enabled": true
+            },
+            {
+                "name": "Deutsch",
+                "englishName": "German",
+                "code": "de",
+                "postgresLang": "german",
+                "enabled": true
+            },
+            {
+                "name": "Ελληνικά",
+                "englishName": "Greek",
+                "code": "el",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "Magyar",
+                "englishName": "Hungarian",
+                "code": "hu",
+                "postgresLang": "hungarian",
+                "enabled": true
+            },
+            {
+                "name": "Italiano",
+                "englishName": "Italian",
+                "code": "it",
+                "postgresLang": "italian",
+                "enabled": true
+            },
+            {
+                "name": "日本語",
+                "englishName": "Japanese",
+                "code": "ja",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "한국어",
+                "englishName": "Korean",
+                "code": "ko",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "Polski",
+                "englishName": "Polish",
+                "code": "pl",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "Português",
+                "englishName": "Portuguese",
+                "code": "pt-PT",
+                "postgresLang": "portuguese",
+                "enabled": false
+            },
+            {
+                "name": "Português do Brasil",
+                "englishName": "Portuguese, Brazilian",
+                "code": "pt-BR",
+                "postgresLang": "portuguese",
+                "enabled": true
+            },
+            {
+                "name": "Русский",
+                "englishName": "Russian",
+                "code": "ru",
+                "postgresLang": "russian",
+                "enabled": true
+            },
+            {
+                "name": "Slovenčina",
+                "englishName": "Slovak",
+                "code": "sk",
+                "postgresLang": "simple",
+                "enabled": false
+            },
+            {
+                "name": "Español",
+                "englishName": "Spanish",
+                "code": "es-ES",
+                "postgresLang": "spanish",
+                "enabled": true
+            },
+            {
+                "name": "Español, LATAM",
+                "englishName": "Spanish, LATAM",
+                "code": "es-419",
+                "postgresLang": "spanish",
+                "enabled": true
+            },
+            {
+                "name": "Svenska",
+                "englishName": "Swedish",
+                "code": "sv-SE",
+                "postgresLang": "swedish",
+                "enabled": true
+            },
+            {
+                "name": "Türkçe",
+                "englishName": "Turkish",
+                "code": "tr",
+                "postgresLang": "turkish",
+                "enabled": true
+            },
+            {
+                "name": "български",
+                "englishName": "Bulgarian",
+                "code": "bg",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "Українська",
+                "englishName": "Ukrainian",
+                "code": "uk",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "Suomi",
+                "englishName": "Finnish",
+                "code": "fi",
+                "postgresLang": "finnish",
+                "enabled": true
+            },
+            {
+                "name": "Norsk",
+                "englishName": "Norwegian",
+                "code": "no",
+                "postgresLang": "norwegian",
+                "enabled": true
+            },
+            {
+                "name": "Hrvatski",
+                "englishName": "Croatian",
+                "code": "hr",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "Română",
+                "englishName": "Romanian",
+                "code": "ro",
+                "postgresLang": "romanian",
+                "enabled": true
+            },
+            {
+                "name": "Lietuviškai",
+                "englishName": "Lithuanian",
+                "code": "lt",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "ไทย",
+                "englishName": "Thai",
+                "code": "th",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "Tiếng Việt",
+                "englishName": "Vietnamese",
+                "code": "vi",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "हिंदी",
+                "englishName": "Hindi",
+                "code": "hi",
+                "postgresLang": "simple",
+                "enabled": true
+            },
+            {
+                "name": "עִברִית",
+                "englishName": "Hebrew",
+                "code": "he",
+                "postgresLang": "simple",
+                "enabled": false,
+                "enabledAPI": true
+            },
+            {
+                "name": "العربية",
+                "englishName": "Arabic",
+                "code": "ar",
+                "postgresLang": "simple",
+                "enabled": false,
+                "enabledAPI": true
+            },
+            {
+                "name": "Bahasa Indonesia",
+                "englishName": "Indonesian",
+                "code": "id",
+                "postgresLang": "simple",
+                "enabled": false,
+                "enabledAPI": true
+            }
+        ],
+        "MAX_ALGOLIA_PAGINATOR_RESULTS": 1000,
+        "OTHER_DISCOVERY_CATEGORY_ID": 13,
+        "SUGGESTED_TAGS_FOR_CATEGORIES": {
+            "1": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ESPORTS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_VALORANT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEAGUEOFLEGENDS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FIVEM"
+            ],
+            "2": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDM",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RAP",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_KPOP",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MUSIC_PRODUCTION",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HIPHOP",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SINGING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BTS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_METAL"
+            ],
+            "3": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MANGA",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCIAL",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_REDDIT"
+            ],
+            "4": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DESIGN",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIMATION",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_3D",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NFT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MANGA",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DRAWING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PHOTOGRAPHY"
+            ],
+            "5": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PROGRAMMING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TECH",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CODING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GITHUB",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_OPENSOURCE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_JAVASCRIPT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CRYPTOCURRENCY",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HARDWARE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOFTWARE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LINUX"
+            ],
+            "6": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STUDY",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LANGUAGE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SCHOOL",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ENGLISH",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEARNING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HOMEWORK",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PROGRAMMING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COLLEGE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STOCKS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE"
+            ],
+            "7": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FOOTBALL",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NBA",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NFL",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCCER",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BASKETBALL",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORMULA1",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_PREMIER_LEAGUE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RACING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_REDDIT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FANTASY_FOOTBALL"
+            ],
+            "8": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FASHION",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREETWEAR",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SNEAKERS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CLOTHING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_REDDIT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YEEZY",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPREME",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HYPEBEAST",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STYLE"
+            ],
+            "9": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LGBTQ",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCIAL",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FRIENDS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY"
+            ],
+            "10": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FOOD",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISNEY",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BEVERAGE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SNACKS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TRAVEL",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISNEYWORLD"
+            ],
+            "11": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GYM",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BODYBUILDING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EXERCISE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CALISTHENICS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MENTAL_HEALTH",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SELF_IMPROVEMENT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDUCATION",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CROSSFIT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NUTRITION",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SPORTS"
+            ],
+            "12": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STOCKS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TRADING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_INVESTING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BITCOIN",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CRYPTOCURRENCY",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ETHEREUM",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_OPTIONS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DEFI",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FOREX"
+            ],
+            "13": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EVENTS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SOCIAL",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES"
+            ],
+            "14": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY"
+            ],
+            "43": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOJI",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOTES",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NITRO",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CUTE",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_AESTHETIC",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES"
+            ],
+            "49": [
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_APPS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BOTS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISCORD_BOT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPPORT",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FUN",
+                "()=>E.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES"
+            ]
+        },
+        "calculateLocaleOptions": "function O(){return E.default.getAvailableLocales().map(e=>{let t;let{value:i,name:r}=e;try{t=n(\"15238\")(`@discordapp/common/images/flags/${e.value}.png`.replace(\"@discordapp/common/images/flags/\",\"./\"))}catch(e){t=n(\"1474\")}return\"en-US\"===i?{value:i,label:E.default.Messages.ENGLISH_LANGUAGE,image:t}:{value:i,label:r,image:t}}).filter(e=>!N.includes(e.value))}"
+    }
+}

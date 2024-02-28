@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "getProfilePreviewField": "function p(e,t,n){let r=arguments.length>3&&void 0!==arguments[3]&&arguments[3];if(null!=e)return\"\"===e?{value:r?n:null,isUsingGuildValue:!1}:{value:e,isUsingGuildValue:r};return null!=t&&\"\"!==t?{value:t,isUsingGuildValue:!0}:{value:n,isUsingGuildValue:!1}}",
+        "setNewPendingAvatar": "function m(e,t){(0,a.setPendingAvatar)(e===t?void 0:e)}",
+        "setNewPendingAvatarDecoration": "function S(e,t){(null!=e?s.setPendingAvatarDecoration:a.setPendingAvatarDecoration)(t)}",
+        "setNewPendingProfileEffectId": "function C(e,t,n){if(e===t){null==n?(0,a.setPendingProfileEffectId)(void 0):(0,s.setPendingProfileEffectId)(void 0);return}null==n?(0,a.setPendingProfileEffectId)(e):(0,s.setPendingProfileEffectId)(e)}",
+        "setNewPendingUserBio": "function I(e,t){(0,u.setPendingBio)(e===t?void 0:e)}",
+        "showRemoveAvatar": "function P(e,t){return void 0===e?null!=t:null!=e}",
+        "showRemoveBanner": "function R(e,t){return void 0===e?null!=t:null!=e}",
+        "useAvatarsWithGuilds": "function _(e){return r.useMemo(()=>{let t=c.default.getMutableAllGuildsAndMembers(),n={};for(let r in t){let i=t[r],a=i[e]?.avatar;null!=a&&(null==n[a]&&(n[a]=[]),n[a].push(r))}return null!=n?Object.entries(n).map(e=>e[1][0]):[]},[e])}",
+        "useGlobalOrGuildIdentityPendingProfileEffect": "function T(e){return(0,i.useStateFromStoresObject)([d.default,o.default],()=>null==e?{pendingProfileEffectId:d.default.getPendingProfileEffectId(),errors:d.default.getErrors().profileEffect}:{pendingProfileEffectId:o.default.getPendingProfileEffectId(),errors:o.default.getErrors().profileEffect},[e])}",
+        "useGlobalOrGuildIdentityProfileEffect": "function E(e,t){return(0,i.useStateFromStores)([l.default],()=>null==t?l.default.getUserProfile(e.id)?.profileEffectId:l.default.getGuildMemberProfile(e.id,t.id)?.profileEffectId,[e,t])}",
+        "useGuildMemberAndUserPendingAvatarDecoration": "function f(e,t){let n=(0,i.useStateFromStores)([c.default],()=>void 0===t?null:c.default.getMember(t.id,e.id)),{pendingUserAvatarDecoration:r,userErrors:a}=(0,i.useStateFromStoresObject)([d.default],()=>({pendingUserAvatarDecoration:d.default.getPendingAvatarDecoration(),userErrors:d.default.getErrors().avatarDecoration})),{pendingGuildAvatarDecoration:s,guildErrors:u}=(0,i.useStateFromStoresObject)([o.default],()=>({pendingGuildAvatarDecoration:o.default.getPendingAvatarDecoration(),guildErrors:o.default.getErrors().avatarDecoration}));return{userAvatarDecoration:e.avatarDecoration,guildAvatarDecoration:n?.avatarDecoration,pendingAvatarDecoration:null!=t?s:r,pendingErrors:null!=t?u:a}}"
+    }
+}

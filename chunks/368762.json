@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "EraParser": "function p(){var e;!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,p);for(var t=arguments.length,n=Array(t),r=0;r<t;r++)n[r]=arguments[r];return l(u(e=f.call.apply(f,[this].concat(n))),\"priority\",140),l(u(e),\"incompatibleTokens\",[\"R\",\"u\",\"t\",\"T\"]),e}"
+    }
+}

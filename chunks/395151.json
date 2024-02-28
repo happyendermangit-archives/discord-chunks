@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(e,t,n,s){i.default.show({title:a.default.Messages.EMBEDDED_ACTIVITY_CHANGE_CONFIRM_TITLE,cancelText:a.default.Messages.CANCEL,confirmText:a.default.Messages.CONFIRM,onConfirm:n,onCancel:s,body:a.default.Messages.EMBEDDED_ACTIVITY_CHANGE_ACTIVITY_CONFIRM_BODY.format({currentApplicationName:e?.name??a.default.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_DEFAULT,currentApplicationChannelName:t?.name??a.default.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_CHANNEL_DEFAULT})})}"
+    }
+}

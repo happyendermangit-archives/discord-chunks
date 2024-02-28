@@ -1,0 +1,38 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "RUNNING_GAMES_CHANGE": "handleRunningGamesChange(){let e=l.default.getVisibleGame();if(null==e)return;let{canBroadcast:t}=O.default.getCurrentConfig({location:\"handle_running_games_change\"},{autoTrackExposure:!1}),n=A.default.getBroadcast(),i=(0,N.getGameName)(e),r=null!=d.default.getGameByName(i),o=(0,C.getIsBroadcastingToAnyone)();if(!t||null!=n||!I.BroadcastAutoBroadcast.getSetting()||!r||!o||null!=L.find(t=>t.pid===e.pid))return;if(L=l.default.getRunningGames(),!(0,R.getCanStartBroadcast)())return;let a=S.default.getVoiceChannelId();(0,_.createBroadcastChannelOrStartStream)({pid:e.pid,channelId:a})}",
+                "STREAM_CREATE": "handleStreamCreate(e){let{streamKey:t}=e;(0,N.startBroadcastForStream)(t,i)}",
+                "STREAM_STOP": "handleStreamStop(e){let{streamKey:t}=e;if(null==i)return;let{ownerId:n,channelId:a}=(0,u.decodeStreamKey)(t);if(null==n||null==a||n!==T.default.getId())return;let s=c.default.getChannel(a),_=null!=s&&s.isBroadcastChannel();null!=s&&n===s.ownerId&&_&&(i=null,r=null,o=null,(0,N.stopBroadcast)())}",
+                "START_BROADCAST_STREAM": "handleStartBroadcastStream(e){let{options:t}=e;i=t.pid,r=t.sourceId,o=t.sourceName}",
+                "CALL_CREATE": "handleCallCreate(e){let{channelId:t}=e;if(null==t||null==i&&null==r&&null==o)return;let n=T.default.getId(),a=c.default.getChannel(t);null!=a&&n===a.ownerId&&a.isBroadcastChannel()&&(0,_.startStream)(null,t,{pid:i,sourceId:r,sourceName:o})}",
+                "RTC_CONNECTION_STATE": "handleRTCConnectionState(e){let{channelId:t,state:n}=e;if(n!==h.RTCConnectionStates.DISCONNECTED)return;let i=S.default.getChannelId(),r=c.default.getChannel(t);if(null==r||!r.isBroadcastChannel())return;a.default.closePrivateChannel(t,i===t,!0);let o=A.default.getBroadcast();null!=o&&r.id===o.channelId&&(0,N.stopBroadcast)()}",
+                "CHANNEL_DELETE": "handleChannelDelete(e){let{channel:t}=e,n=A.default.getBroadcast();null!=n&&t.id===n.channelId&&(0,N.stopBroadcast)()}",
+                "MESSAGE_CREATE": "handleMessageCreate(e){let{channelId:t,guildId:n}=e;if(null!=n)return;let i=c.default.getChannel(t);if(null!=i&&!!i.isBroadcastChannel())S.default.getVoiceChannelId()!==i.id&&(0,s.localAck)(t)}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleRunningGamesChange": "handleRunningGamesChange(){let e=l.default.getVisibleGame();if(null==e)return;let{canBroadcast:t}=O.default.getCurrentConfig({location:\"handle_running_games_change\"},{autoTrackExposure:!1}),n=A.default.getBroadcast(),i=(0,N.getGameName)(e),r=null!=d.default.getGameByName(i),o=(0,C.getIsBroadcastingToAnyone)();if(!t||null!=n||!I.BroadcastAutoBroadcast.getSetting()||!r||!o||null!=L.find(t=>t.pid===e.pid))return;if(L=l.default.getRunningGames(),!(0,R.getCanStartBroadcast)())return;let a=S.default.getVoiceChannelId();(0,_.createBroadcastChannelOrStartStream)({pid:e.pid,channelId:a})}",
+            "handleStreamCreate": "handleStreamCreate(e){let{streamKey:t}=e;(0,N.startBroadcastForStream)(t,i)}",
+            "handleStreamStop": "handleStreamStop(e){let{streamKey:t}=e;if(null==i)return;let{ownerId:n,channelId:a}=(0,u.decodeStreamKey)(t);if(null==n||null==a||n!==T.default.getId())return;let s=c.default.getChannel(a),_=null!=s&&s.isBroadcastChannel();null!=s&&n===s.ownerId&&_&&(i=null,r=null,o=null,(0,N.stopBroadcast)())}",
+            "handleStartBroadcastStream": "handleStartBroadcastStream(e){let{options:t}=e;i=t.pid,r=t.sourceId,o=t.sourceName}",
+            "handleCallCreate": "handleCallCreate(e){let{channelId:t}=e;if(null==t||null==i&&null==r&&null==o)return;let n=T.default.getId(),a=c.default.getChannel(t);null!=a&&n===a.ownerId&&a.isBroadcastChannel()&&(0,_.startStream)(null,t,{pid:i,sourceId:r,sourceName:o})}",
+            "handleRTCConnectionState": "handleRTCConnectionState(e){let{channelId:t,state:n}=e;if(n!==h.RTCConnectionStates.DISCONNECTED)return;let i=S.default.getChannelId(),r=c.default.getChannel(t);if(null==r||!r.isBroadcastChannel())return;a.default.closePrivateChannel(t,i===t,!0);let o=A.default.getBroadcast();null!=o&&r.id===o.channelId&&(0,N.stopBroadcast)()}",
+            "handleChannelDelete": "handleChannelDelete(e){let{channel:t}=e,n=A.default.getBroadcast();null!=n&&t.id===n.channelId&&(0,N.stopBroadcast)()}",
+            "handleMessageCreate": "handleMessageCreate(e){let{channelId:t,guildId:n}=e;if(null!=n)return;let i=c.default.getChannel(t);if(null!=i&&!!i.isBroadcastChannel())S.default.getVoiceChannelId()!==i.id&&(0,s.localAck)(t)}"
+        }
+    }
+}

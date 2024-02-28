@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "BuiltInCommandFilter": {
+            "ALLOW": "allow",
+            "ONLY_TEXT": "only_text",
+            "DENY": "deny"
+        },
+        "ScoreMethod": {
+            "NONE": "none",
+            "APPLICATION_ONLY": "application_only",
+            "COMMAND_ONLY": "command_only",
+            "COMMAND_OR_APPLICATION": "command_or_application"
+        }
+    }
+}

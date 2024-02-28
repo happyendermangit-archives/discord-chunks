@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){let{headerId:t,guildTemplate:s}=e,i=s.code,_=d[i];if(null!=_){var L;let{header:e,description:d,author:c}=(0,n.default)(i);return(0,a.jsxs)(\"div\",{children:[(0,a.jsx)(\"img\",{className:E.image,src:_,alt:\"\"}),(0,a.jsx)(l.Title,{className:E.header,id:t,children:e}),(0,a.jsx)(l.SubTitle,{children:d}),s.state===u.GuildTemplateStates.RESOLVED?(0,a.jsx)(r.UsagePill,{className:E.usagePill,count:null!==(L=s.usageCount)&&void 0!==L?L:0,verifiedName:c}):null]})}return(0,a.jsx)(r.default,{pillClassName:E.usagePill,guildTemplate:s,tall:!0})}"
-    }
-}

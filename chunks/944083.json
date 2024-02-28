@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "getCommandQuery": "function u(e,t){let n=t,i=!1,a=t.indexOf(\":\");if(a>=0){let e=t.lastIndexOf(\" \",a);e>=0?(t=t.substring(0,e),i=!0):t=t.substring(0,a)}else t=t.substring(0,t.length);let s=t.split(\" \",l.MAX_SUBCOMMAND_LEVEL+1);return s.length>l.MAX_SUBCOMMAND_LEVEL&&(i=!0,s.pop()),t=s.join(\" \"),(n.length>t.length||t.endsWith(\" \"))&&(i=!0,t=t.trimEnd()),{text:t,parts:s,hasSpaceTerminator:i}}",
+        "getIconComponent": "e=>e.type===i.ApplicationCommandSectionType.BUILT_IN?s.default:a.default",
+        "pxToRem": "function o(e){return`${e/16}rem`}"
+    }
+}

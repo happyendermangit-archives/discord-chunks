@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`${e.fieldLabel} \\u{AC10}\\u{C18C}`",
+            "increase": "e=>`${e.fieldLabel} \\u{C99D}\\u{AC00}`",
+            "numberField": "번호 필드"
+        }
+    }
+}

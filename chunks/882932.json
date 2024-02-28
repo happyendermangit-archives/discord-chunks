@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "clamp": "function o(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:-1/0,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1/0;return Math.min(Math.max(e,t),n)}",
+        "snapValueToStep": "function i(e,t,n,r){t=Number(t),n=Number(n);let a=(e-(isNaN(t)?0:t))%r,o=2*Math.abs(a)>=r?e+Math.sign(a)*(r-Math.abs(a)):e-a;isNaN(t)?!isNaN(n)&&o>n&&(o=Math.floor(n/r)*r):o<t?o=t:!isNaN(n)&&o>n&&(o=t+Math.floor((n-t)/r)*r);let i=r.toString(),u=i.indexOf(\".\"),s=u>=0?i.length-u:0;if(s>0){let e=Math.pow(10,s);o=Math.round(o*e)/e}return o}",
+        "useControlledState": "function a(e,t,n){let[a,o]=(0,r.useState)(e||t),i=(0,r.useRef)(void 0!==e),u=void 0!==e;(0,r.useEffect)(()=>{let e=i.current;e!==u&&console.warn(`WARN: A component changed from ${e?\"controlled\":\"uncontrolled\"} to ${u?\"controlled\":\"uncontrolled\"}.`),i.current=u},[u]);let s=u?e:a,l=(0,r.useCallback)(function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),a=1;a<t;a++)r[a-1]=arguments[a];let i=function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),a=1;a<t;a++)r[a-1]=arguments[a];n&&!Object.is(s,e)&&n(e,...r),!u&&(s=e)};if(\"function\"==typeof e){console.warn(\"We can not support a function callback. See Github Issues for details https://github.com/adobe/react-spectrum/issues/2320\");o(function(t){for(var n=arguments.length,a=Array(n>1?n-1:0),o=1;o<n;o++)a[o-1]=arguments[o];let l=e(u?s:t,...a);return(i(l,...r),u)?t:l})}else!u&&o(e),i(e,...r)},[u,s,n]);return[s,l]}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "sync": "async function u(e,t){let n,a=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;i.default.dispatch({type:\"GAME_CLOUD_SYNC_START\",applicationId:e,branchId:t});try{if((n=await s.syncApplication(e,t,a)).type===l.CloudSyncResultTypes.CONFLICT)throw i.default.dispatch({type:\"GAME_CLOUD_SYNC_CONFLICT\",applicationId:e,branchId:t,next:n.next,remote:n.remote}),new o(\"Conflict in cloud sync.\");(n.type===l.CloudSyncResultTypes.PULL||n.type===l.CloudSyncResultTypes.PUSH)&&r.info(\"Sync complete\",n)}catch(n){if(n instanceof o)throw n;throw i.default.dispatch({type:\"GAME_CLOUD_SYNC_ERROR\",applicationId:e,branchId:t}),r.error(\"Failed to cloud sync:\",n),Error(\"Failed to cloud sync.\")}return i.default.dispatch({type:\"GAME_CLOUD_SYNC_COMPLETE\",applicationId:e,branchId:t}),n}"
+    }
+}

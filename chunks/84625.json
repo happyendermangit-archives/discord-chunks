@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function c(e,t,c){let f=(0,l.useGetStreamApplication)(e),h=(0,r.useStateFromStores)([u.default],()=>u.default.getId()),p=null!=e?(0,s.encodeStreamKey)(e):o.default.getActiveStreamKey(),g=o.default.getVideoStats(p)??{},E={media_session_id:o.default.getMediaSessionId(p),rtc_connection_id:o.default.getRtcConnectionId(p),stream_region:o.default.getRegion(p),max_viewers:o.default.getMaxViewers(p),...g};return null==e?null:(0,a.jsx)(i.MenuItem,{id:\"report-stream-problem\",label:d.default.Messages.STREAM_REPORT_PROBLEM_MENU_ITEM,action:()=>{c?.(),null!=e&&(0,i.openModalLazy)(async()=>{let{default:t}=await n.el(\"84625@1524:1581\").then(n.bind(n,\"64172\"));return n=>(0,a.jsx)(t,{stream:e,streamApplication:f,isStreamer:h===e?.ownerId,analyticsData:E,...n})})}})}"
+    }
+}

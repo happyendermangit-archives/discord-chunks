@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{className:t,guild:n,isSelected:s=!0,width:d=32,height:c=32,shouldAnimate:f=!0,isLocked:p=!1}=e,[m,h]=a.useState(!1),E=n.getIconURL(32,f&&s),_=()=>h(!0),I=()=>h(!1);return(0,i.jsxs)(\"div\",{onFocus:_,onBlur:I,onMouseOver:_,onMouseLeave:I,children:[(0,i.jsx)(o.default,{className:l()(u.mask,t),mask:s||m?o.MaskIDs.SQUIRCLE:o.MaskIDs.AVATAR_DEFAULT,width:d,height:c,children:null==E?(0,i.jsx)(\"div\",{className:l()(u.guildIcon,u.guildIconWithoutImage),children:(0,i.jsx)(\"div\",{className:u.guildAcronym,children:n.acronym})}):(0,i.jsx)(\"img\",{alt:n.toString(),src:E,className:u.guildIcon})}),p?(0,i.jsx)(\"div\",{className:u.categoryItemLockIconContainer,children:(0,i.jsx)(r.default,{width:10,height:10,className:u.categoryItemLockIcon})}):null]})}"
+    }
+}

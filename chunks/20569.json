@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(){return{logsUploaded:new Date().toISOString(),releaseChannel:window.GLOBAL_ENV.RELEASE_CHANNEL,buildNumber:\"269674\",versionHash:\"e0fd22e3d596c2ba3d2826bcc7d31f910873166b\"}}"
+    }
+}

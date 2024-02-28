@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "playApplication": "async function S(t,e,l){let a=d.default.getApplication(t);if(null==a)return;let{cloudSync:i=!0,cloudSyncForceHash:s=null,analyticsParams:o}=l;if(i&&null!=e){let t=e.branchId;try{await c.sync(e.id,t,s)}catch(l){(0,u.openModal)(l=>(0,n.jsx)(E,{libraryApplication:e,analyticsParams:o,branchId:t,...l}));return}}return C.default.track(h.AnalyticEvents.APPLICATION_OPENED,{application_id:a.id,application_name:a.name,type:h.AnalyticsGameOpenTypes.LAUNCH,distributor:null!=e?e.getDistributor():null,...o}),r.default.launch(a.id,null==e?void 0:e.branchId)}"
-    }
-}

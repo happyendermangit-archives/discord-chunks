@@ -1,0 +1,17 @@
+{
+    "exports": {
+        "extractPriceByPurchaseTypes": "(e,t)=>{let n=e.prices[t]??null;return null==n?null:n.countryPrices?.prices?.[0]}",
+        "getAvatarDecorations": "(e,t)=>(0,r.uniqBy)([...S(e),...C(t)],\"id\")",
+        "getCollectiblesAssetURL": "(e,t)=>{let{CDN_HOST:n,API_ENDPOINT:r}=window.GLOBAL_ENV,i=(0,a.getBestMediaProxySize)(t.size*(0,a.getDevicePixelRatio)()),s=t?.format??\"png\";if(null!=n)return`${location.protocol}//${n}/app-assets/${l.COLLECTIBLES_APPLICATION_ID}/${e}.${s}?size=${i}`;let o=l.Endpoints.APPLICATION_ASSET(l.COLLECTIBLES_APPLICATION_ID,e,s);return`${location.protocol}${r}${o}?size=${i}`}",
+        "getFormattedPriceForCollectiblesProduct": "(e,t)=>{let n=f(e,t?l.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2:l.PriceSetAssignmentPurchaseTypes.DEFAULT);return null==n?\"\":(0,s.formatPrice)(n?.amount,n?.currency)}",
+        "getLogoSize": "e=>3.8*e",
+        "getProductsFromCategories": "e=>{let t=(0,r.flatMap)([...e.values()],\"products\");return(0,r.uniqBy)(t,\"storeListingId\")}",
+        "getProfileEffectsFromCategories": "e=>m(e,i.CollectiblesItemType.PROFILE_EFFECT)",
+        "getProfileEffectsFromPurchases": "e=>I(e,i.CollectiblesItemType.PROFILE_EFFECT)",
+        "groupProfileEffects": "(e,t)=>{let n=R(t),r=O(e).filter(e=>{let{id:t}=e;return!n.some(e=>e.id===t)});return{purchased:n,shopPreviews:r}}",
+        "isCollectiblesGiftCode": "e=>e.applicationId===l.COLLECTIBLES_APPLICATION_ID",
+        "isFreeCollectiblesProduct": "e=>f(e,l.PriceSetAssignmentPurchaseTypes.DEFAULT)?.amount===0",
+        "isPremiumCollectiblesProduct": "e=>e?.premiumType!=null",
+        "isPremiumCollectiblesPurchase": "e=>e?.purchaseType===l.EntitlementTypes.PREMIUM_PURCHASE"
+    }
+}

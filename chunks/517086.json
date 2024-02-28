@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "StreamDirector": "class i{constructor(e){this.callback=e,this.active=!1,this.application=null}onStreamBegin(e,t){let a=(0,c.getInitialStreamTarget)(e,t);null==a||null==a.windowHandle?this.callback({type:\"stop\"}):this._stream(a)}onStreamKilled(){this._kill()}onStreamEnd(){this._stop()}onDetectionUpdate(e){this._update(e)}onCaptureEnd(e,t){this.application?.windowHandle===t&&this._update(e)}onCaptureLegacyEnd(e){return this.application?.windowHandle!=null?this.onCaptureEnd(e,this.application.windowHandle):this._stop()}_update(e){let t=(0,c.getStreamTarget)(e,this.application);if(null!=t)return null==t.windowHandle?this._pause():this._stream(t);this._stop()}_stream(e){let t=this.application?.windowHandle!==e.windowHandle;this.active=!0,this.application=Object.assign({},e),t&&this.callback({type:\"stream\",sourceId:`window:${this.application.windowHandle}`})}_kill(){this.active=!1,this.application=null}_stop(){this.active&&(this._kill(),this.callback({type:\"stop\"}))}_pause(){this.active&&(this.application.windowHandle=null,this.callback({type:\"pause\"}))}}",
+        "StreamDirectorActionType": {
+            "STREAM": "stream",
+            "PAUSE": "pause",
+            "STOP": "stop"
+        }
+    }
+}

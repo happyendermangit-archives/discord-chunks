@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{children:l,className:n,containerRef:s}=e;return(0,t.jsx)(\"div\",{ref:s,className:i(g.wrapper,n),children:l})}"
-    }
-}

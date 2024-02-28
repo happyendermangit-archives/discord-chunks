@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "NameWithRoleAnchor": "function f(e){let{name:t,color:n,roleName:r,dotAlignment:s,className:u,...c}=e,f=(0,a.useStateFromStores)([l.default],()=>l.default.roleStyle),E=\"username\"===f,p=(0,i.jsx)(d,{roleStyle:f,name:t,color:n,roleName:r,dotAlignment:s,className:u}),h=E?{color:n}:void 0;return(0,i.jsx)(o.Anchor,{...c,children:p,style:h})}",
-        "NameWithRole": "function E(e){let t=(0,a.useStateFromStores)([l.default],()=>l.default.roleStyle);return(0,i.jsx)(d,{...e,roleStyle:t})}"
-    }
-}

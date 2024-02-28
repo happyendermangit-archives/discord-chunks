@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(){let[t,e]=u.useState(!1),[n,a]=u.useState(!1),o=(0,r.useStateFromStores)([l.default],()=>i.CountryCodesSets.EEA_COUNTRIES.has(l.default.ipCountryCodeWithFallback));return{hasViewedPurchaseTerms:t,setHasViewedPurchaseTerms:e,showWithdrawalWaiver:o,hasAcceptedWithdrawalWaiver:!o||n,setHasAcceptedWithdrawalWaiver:a}}"
-    }
-}

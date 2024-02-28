@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){return e.replace(/[\\s-~]+/g,\"-\").replace(/^-+/,\"\").replace(/[\\\\'!\"#$%&()*+,./:;<=>?@[\\]^`{|}~]/g,\"\").toLowerCase()}"
-    }
-}

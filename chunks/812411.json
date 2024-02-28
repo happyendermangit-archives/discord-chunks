@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r){if(e(t))return!1;var n=typeof t;return!!(\"number\"==n||\"symbol\"==n||\"boolean\"==n||null==t||o(t))||u.test(t)||!i.test(t)||null!=r&&t in Object(r)}"
-}

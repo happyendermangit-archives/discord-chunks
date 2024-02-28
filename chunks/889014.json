@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function n(){return(0,t.useStateFromStores)([o.default],()=>null!=o.default.getRemoteSessionId()||null!=o.default.getAwaitingRemoteSessionInfo())}"
-    }
-}

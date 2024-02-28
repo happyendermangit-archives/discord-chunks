@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "confirmActivityLaunchChecks": "async function u(e){return!!(await r(e)&&await o(e))||!1}"
+    }
+}

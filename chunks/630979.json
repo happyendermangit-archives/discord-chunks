@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "parse": "function(e){var t={},n=[],r=t;return e.split(/(\\r\\n|\\r|\\n)/).filter(u).forEach(function(e){var t=e[0],a=e.slice(2);\"m\"===t&&(n.push({rtp:[],fmtp:[]}),r=n[n.length-1]);for(var u=0;u<(i[t]||[]).length;u+=1){var s=i[t][u];if(s.reg.test(a))return o(s,r,a)}}),t.media=n,t}",
+        "parseParams": "function(e){return e.split(/\\;\\s?/).reduce(s,{})}",
+        "parseFmtpConfig": "function(e){return e.split(/\\;\\s?/).reduce(s,{})}",
+        "parsePayloads": "function(e){return e.split(\" \").map(Number)}",
+        "parseRemoteCandidates": "function(e){for(var t=[],n=e.split(\" \").map(r),a=0;a<n.length;a+=3)t.push({component:n[a],ip:n[a+1],port:n[a+2]});return t}",
+        "parseImageAttributes": "function(e){return e.split(\" \").map(function(e){return e.substring(1,e.length-1).split(\",\").reduce(s,{})})}",
+        "parseSimulcastStreamList": "function(e){return e.split(\";\").map(function(e){return e.split(\",\").map(function(e){var t,n=!1;return\"~\"!==e[0]?t=r(e):(t=r(e.substring(1,e.length)),n=!0),{scid:t,paused:n}})})}"
+    }
+}

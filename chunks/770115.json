@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "splitQuery": "function n(e){let t=e.split(\",\").map(e=>e.trim()),r=[],n=[];return t.forEach(e=>{(0,i.isSnowflake)(e)?r.push(e):n.push(e)}),[n,r]}"
-    }
-}

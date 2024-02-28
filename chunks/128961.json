@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "p": "function(e,t){switch(e){case\"p\":return t.time({width:\"short\"});case\"pp\":return t.time({width:\"medium\"});case\"ppp\":return t.time({width:\"long\"});default:return t.time({width:\"full\"})}}",
+            "P": "function(e,t){var n,o=e.match(/(P+)(p+)?/)||[],i=o[1],u=o[2];if(!u)return r(e,t);switch(i){case\"P\":n=t.dateTime({width:\"short\"});break;case\"PP\":n=t.dateTime({width:\"medium\"});break;case\"PPP\":n=t.dateTime({width:\"long\"});break;default:n=t.dateTime({width:\"full\"})}return n.replace(\"{{date}}\",r(i,t)).replace(\"{{time}}\",a(u,t))}"
+        }
+    }
+}

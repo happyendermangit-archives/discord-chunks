@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "default": {
+            "isInitialized": false,
+            "handleVoiceStateUpdates": "e=>{let{voiceStates:t}=e;t.forEach(e=>{if(null==e.channelId||e.userId!==a.default.getId())return;if(this.terminate(),s.default.get(l.STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY,!1))return;let t=o.default.getVoiceChannelId();if(null!=t)e.channelId===t&&d.default.isAudienceMember(e.userId,t)&&(s.default.set(l.STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY,!0),u.openStageChannelAudienceNoticeModal(t))})}",
+            "_initialize": "_initialize(){i.default.subscribe(\"VOICE_STATE_UPDATES\",this.handleVoiceStateUpdates)}",
+            "_terminate": "_terminate(){i.default.unsubscribe(\"VOICE_STATE_UPDATES\",this.handleVoiceStateUpdates)}"
+        }
+    }
+}

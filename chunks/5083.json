@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{guildId:t,channelId:n,color:a,look:f,isProfile:p}=e,m=(0,l.useStateFromStores)([o.default],()=>o.default.isInChannel(n),[n]);return(0,i.jsx)(u.default,{className:s()(c.button,{[c.popout]:!p}),color:a,look:f,disabled:m,onClick:()=>r.connectOrLurkStage(t,n),fullWidth:!0,children:d.default.Messages.STAGE_CHANNEL_JOIN_BUTTON},\"stage\")}"
+    }
+}

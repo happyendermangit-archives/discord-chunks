@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "MenuCompositeControlItem": "function l(e){let{color:t=\"default\",disabled:n,isFocused:o,showDefaultFocus:l=!1,menuItemProps:u,children:I}=e,T=r.useRef(null);return r.useLayoutEffect(()=>{if(!o)return;let e=T.current;if(null==e)return;(0,s.ensureItemVisible)(T);let t=e.querySelector('[tabindex=\"0\"]');t?.focus()},[o]),(0,i.jsx)(\"div\",{ref:T,className:a()(E.item,_.MENU_ITEM_COLORS[t],{[E.disabled]:n,[E.focused]:l&&o,[E.hideInteraction]:!l}),\"aria-disabled\":n,...u,children:I})}"
+    }
+}

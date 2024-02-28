@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "isSlowNetwork": "function s(){return!1}",
-        "getSignalStrength": "function i(){return null}"
-    }
-}

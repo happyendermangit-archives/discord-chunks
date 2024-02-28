@@ -1,16 +1,3 @@
 {
-    "exports": {
-        "closeContainer": "closeContainer_d8f8bb",
-        "inactiveContainer": "inactiveContainer_d23a27",
-        "invalidContainer": "invalidContainer__172d6",
-        "layoutLocked": "layoutLocked__6b74e",
-        "layoutUnlocked": "layoutUnlocked__7c3c9 layoutLocked__6b74e",
-        "overlay": "overlay__9173b",
-        "overlayActive": "overlayActive_b354aa",
-        "overlayBackground": "overlayBackground__42ea5",
-        "overlayLocked": "overlayLocked_e0a3ee",
-        "previewMode": "previewMode__36588",
-        "previewingInGameHeader": "previewingInGameHeader_c3412b",
-        "videoDev": "videoDev_ab6f27"
-    }
+    "exports": "function(e){let t={keyword:\"if then not for in while do return else elseif break continue switch and or unless when class extends super local import export from using\",literal:\"true false nil\",built_in:\"_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load loadfile loadstring module next pairs pcall print rawequal rawget rawset require select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug io math os package string table\"},n=\"[A-Za-z$_][0-9A-Za-z$_]*\",r={className:\"subst\",begin:/#\\{/,end:/\\}/,keywords:t},a=[e.inherit(e.C_NUMBER_MODE,{starts:{end:\"(\\\\s*/)?\",relevance:0}}),{className:\"string\",variants:[{begin:/'/,end:/'/,contains:[e.BACKSLASH_ESCAPE]},{begin:/\"/,end:/\"/,contains:[e.BACKSLASH_ESCAPE,r]}]},{className:\"built_in\",begin:\"@__\"+e.IDENT_RE},{begin:\"@\"+e.IDENT_RE},{begin:e.IDENT_RE+\"\\\\\\\\\"+e.IDENT_RE}];r.contains=a;let i=e.inherit(e.TITLE_MODE,{begin:n}),o=\"(\\\\(.*\\\\)\\\\s*)?\\\\B[-=]>\",s={className:\"params\",begin:\"\\\\([^\\\\(]\",returnBegin:!0,contains:[{begin:/\\(/,end:/\\)/,keywords:t,contains:[\"self\"].concat(a)}]};return{name:\"MoonScript\",aliases:[\"moon\"],keywords:t,illegal:/\\/\\*/,contains:a.concat([e.COMMENT(\"--\",\"$\"),{className:\"function\",begin:\"^\\\\s*\"+n+\"\\\\s*=\\\\s*\"+o,end:\"[-=]>\",returnBegin:!0,contains:[i,s]},{begin:/[\\(,:=]\\s*/,relevance:0,contains:[{className:\"function\",begin:o,end:\"[-=]>\",returnBegin:!0,contains:[s]}]},{className:\"class\",beginKeywords:\"class\",end:\"$\",illegal:/[:=\"\\[\\]]/,contains:[{beginKeywords:\"extends\",endsWithParent:!0,illegal:/[:=\"\\[\\]]/,contains:[i]},i]},{className:\"name\",begin:n+\":\",end:\":\",returnBegin:!0,returnEnd:!0,relevance:0}])}}"
 }

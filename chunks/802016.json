@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e){return e!==(0,a.default)(e)&&(0,o.isHTMLElement)(e)?(0,i.default)(e):(0,r.default)(e)}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(t){let e=(0,l.useStateFromStores)([r.default],()=>r.default.getNote(t));return n.useEffect(()=>{null==e&&o(t)},[e,t]),null!=e?e:{loading:!0,note:null}}"
-    }
-}

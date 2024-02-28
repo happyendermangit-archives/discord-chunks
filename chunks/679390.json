@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "searchAllStickers": "e=>i.default.queryStickers([e],!0).map(e=>{let{sticker:t}=e;return t})"
+    }
+}

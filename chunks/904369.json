@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "()=>{let e=r.useRef(null);function t(){null!==e.current&&((0,a.closeModal)(e.current),e.current=null)}let[s,c]=(0,o.useStateFromStoresArray)([l.default],()=>[l.default.shouldShowWarning(),l.default.isAFKChannel()],[]),d=r.useCallback(()=>{let t=\"\",n=\"\";c?(t=u.default.Messages.SUPPRESSED_AFK_TITLE,n=u.default.Messages.SUPPRESSED_AFK_BODY):(t=u.default.Messages.SUPPRESSED,n=u.default.Messages.SUPPRESSED_PERMISSION_BODY),e.current=(0,a.openModal)(e=>(0,i.jsx)(_.default,{title:t,body:n,onConfirm:I,confirmText:u.default.Messages.OKAY,secondaryConfirmText:u.default.Messages.DONT_SHOW_AGAIN,onConfirmSecondary:T,...e}))},[c]),S=r.useCallback(()=>{(0,a.openModalLazy)(async()=>{let{default:e}=await n.el(\"904369@2080:2148\").then(n.bind(n,\"478275\"));return t=>(0,i.jsx)(e,{...t,showHideSuppressWarning:!0})}).then(t=>{null!=t&&(e.current=t)})},[]);return r.useEffect(()=>(s&&(0,E.isRTCConnectedInHub)()?S():s?d():t(),()=>{t()}),[s,d,S]),null}"
+    }
+}

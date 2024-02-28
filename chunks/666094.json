@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function S(e){let{user:t,guildId:n}=e,s=(0,a.useStateFromStores)([m.default],()=>m.default.getUserProfile(t.id)?.application),l=null!=s&&(0,p.canInstallApplication)(s.id,s.customInstallUrl,s.installParams),{botUpgradeable:o,subscriptionGroupListing:u}=(0,h.default)({user:t,guildId:n}),{enabled:d}=r.appStorefrontExperiment.useExperiment({location:\"BotButtonsSection\"});return l||o?(0,i.jsx)(_.default,{children:(0,i.jsxs)(\"div\",{className:y.buttonsContainer,children:[(0,i.jsx)(E.default,{application:s,className:y.button}),o&&(d?(0,i.jsx)(x,{app:s,listing:u,guildId:n}):(0,i.jsx)(g,{guildId:n,listing:u}))]})}):null}"
+    }
+}

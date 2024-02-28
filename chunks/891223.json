@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e){let{width:t=20,height:n=20,className:r}=e;return(0,i.jsxs)(\"div\",{className:o()(E.icon,r),children:[(0,i.jsx)(_.default,{mask:_.default.Masks.STATUS_SCREENSHARE,width:t,height:n,children:(0,i.jsx)(s.default,{width:t,height:n})}),(0,i.jsx)(a.default,{className:E.badge})]})}"
+    }
+}

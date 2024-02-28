@@ -1,0 +1,16 @@
+{
+    "exports": {
+        "INTERACTION_EVENTS": [
+            "click",
+            "mousedown",
+            "mouseup",
+            "keydown",
+            "keyup",
+            "keypress",
+            "contextmenu"
+        ],
+        "clearCurrentlyInteractingWindowId": "function s(e){r===e&&(r=null)}",
+        "getCurrentlyInteractingWindowId": "function o(){return r}",
+        "setCurrentlyInteractingWindowId": "function a(e){r=e}"
+    }
+}

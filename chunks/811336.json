@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "Collapsible": "function I(e){let{children:t,className:n,collapsibleContent:o,isExpanded:I}=e,[T,c]=r.useState(!1),d=(0,_.useStateFromStores)([l.default],()=>l.default.useReducedMotion),[S,A]=r.useState(!0),[N,O]=r.useState(!1),R=I??T,{ref:C,height:h=0}=(0,E.default)(),{ref:L,height:D=0}=(0,E.default)(),m=(0,s.useSpring)({height:R?h+D:D,immediate:S||d,config:s.config.stiff,onRest:()=>O(!0)}),p=r.useCallback(()=>{c(!T)},[T,c]);return r.useLayoutEffect(()=>{let e=setTimeout(()=>{A(!1)},100);return()=>clearTimeout(e)},[]),(0,i.jsx)(\"div\",{className:a()(u.collapseable,{[u.toggled]:R},n),children:(0,i.jsxs)(s.animated.div,{className:a()(u.contentExpandContainer,{[u.showOverflow]:R&&N}),style:m,children:[(0,i.jsx)(\"div\",{ref:L,className:a()(u.header,{[u.toggled]:R}),children:t({onClick:p})}),(0,i.jsx)(\"div\",{ref:C,children:o})]})})}"
+    }
+}

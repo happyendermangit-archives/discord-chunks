@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "default": {
+            "order": 17,
+            "requiredFirstCharacters": [
+                "["
+            ],
+            "match": "(e,t,n)=>t.allowLinks?u().defaultRules.link.match(e,t,n):null",
+            "parse": "parse(e,t,n){let[s,r,a,o]=e,_=()=>({type:f.AST_KEY.TEXT,content:s}),c=g(a),m=g(r),S=g(null!=o?o:\"\"),C=c.whitespaceSanitized,A=m.fullySanitized,N=S.fullySanitized,D=A.trim();if(0===C.trim().length||0===D.length)return _();let O=T(u().unescapeUrl(a)),R=(0,d.default)(r).length>0||(0,d.default)(o).length>0;if(null==O||R)return _();let P={...n,allowEscape:!1,parseInlineCodeChildContent:!0},b=n.allowEmojiLinks?E:h,M=[...b,...p],L=[...v,...y],V=I(t(A,P),M,[f.AST_KEY.EMOJI]),k=I(t(N,P),L);if(null==V||null==k||0===(function e(t){let n=\"\";for(let s of t)switch(s.type){case f.AST_KEY.TEXT:case f.AST_KEY.INLINE_CODE:n+=s.content;break;case f.AST_KEY.CUSTOM_EMOJI:n+=s.name;break;case f.AST_KEY.EMOJI:n+=s.surrogate;break;case f.AST_KEY.LINE_BREAK:n+=\"\\n\";break;case f.AST_KEY.STRONG:case f.AST_KEY.ITALICS:case f.AST_KEY.UNDERLINE:case f.AST_KEY.STRIKETHROUGH:case f.AST_KEY.SPOILER:n+=e(s.content);break;case f.AST_KEY.TIMESTAMP:n+=\"<timestamp>\";break;case f.AST_KEY.BLOCK_QUOTE:case f.AST_KEY.LIST:case f.AST_KEY.HEADING:n+=`<${s.type}Content>`;break;default:(0,l.assertNever)(s.type)}return n})(V).trim().length)return _();let w=i().pick(t.rules,b),U=u().parserFor(w)(m.whitespaceSanitized,P),G=S.whitespaceSanitized,{target:F}=O;return{content:U,target:F,title:G}}",
+            "react": "function(e,t,n){return g(\"a\",n.key,{href:w(e.target),title:e.title,children:t(e.content,n)})}",
+            "html": "function(e,t,n){var r={href:w(e.target),title:e.title};return b(\"a\",t(e.content,n),r)}"
+        },
+        "punycodeLink": "function T(e){try{let t=new URL(e),n=t.protocol??\"\";if(!m.includes(n.toLowerCase()))throw Error(\"Provided protocol is not allowed: \"+n);if((\"http:\"===n||\"https:\"===n)&&(null==t.hostname||0===t.hostname.length))throw Error(\"no hostname\");let s=(0,_.safelyMakeUrlHumanReadable)(t);t.username=\"\",t.password=\"\";let i=(0,_.safelyMakeUrlHumanReadable)(t);return{target:s,displayTarget:i}}catch(e){return null}}"
+    }
+}

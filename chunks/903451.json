@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`Smanji ${e.fieldLabel}`",
+            "increase": "e=>`Pove\\u{107}aj ${e.fieldLabel}`",
+            "numberField": "Polje broja"
+        }
+    }
+}

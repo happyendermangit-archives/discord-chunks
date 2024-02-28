@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "type": "function(e){let{channelId:t,chatInputType:n}=e,[m,h]=a.useState(null),E=(0,s.useStateFromStores)([r.default],()=>r.default.getStickerPreview(t,n.drafts.type));return n.stickers?.allowSending&&null!=E&&0!==E.length?(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(\"div\",{className:p.stickerPreviews,children:E.map(e=>(0,i.jsxs)(\"div\",{className:p.stickerPreviewContainer,children:[(0,i.jsx)(l.Clickable,{onFocus:()=>h(e.id),onBlur:()=>h(null),className:p.closeButton,\"aria-label\":f.default.Messages.GUILD_STICKER_A11Y_REMOVE_STICKER.format({name:e.name}),onClick:()=>(0,o.clearStickerPreview)(t,n.drafts.type),children:(0,i.jsx)(\"div\",{className:p.closeIconContainer,children:(0,i.jsx)(d.default,{className:p.closeIcon})})}),(0,i.jsx)(u.default,{isInteracting:m===e.id,className:p.stickerPreview,size:48,sticker:e})]},e.id))}),(0,i.jsx)(c.default,{className:p.stickerPreviewDivider})]}):null}",
+            "compare": null
+        }
+    }
+}

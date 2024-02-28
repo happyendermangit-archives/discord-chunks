@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "makeConnection": "function S(e,t,n,r){let o=\"\".concat(null!=s.name&&\"\"!==s.name?s.name:\"unknown\",\" \").concat(null!=s.version&&\"\"!==s.version?s.version:\"unknown\"),l=new a.default(\"Connection(\".concat(e,\")\"));return h.BROWSER_SUPPORTS_UNIFIED_PLAN?(l.info(\"Using Unified Plan (\".concat(o,\")\")),new E.default(e,t,n,r)):(l.info(\"Using Plan B (\".concat(o,\")\")),new i(e,t,n,r))}"
-    }
-}

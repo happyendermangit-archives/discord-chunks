@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useToggle": "function i(e,t,n){let{isDisabled:i=!1,isReadOnly:u=!1,value:s,name:l,children:c,\"aria-label\":d,\"aria-labelledby\":f,validationState:p=\"valid\",isInvalid:h}=e;!(null!=c)&&!(null!=d||null!=f)&&console.warn(\"If you do not provide children, you must specify an aria-label for accessibility\");let{pressProps:m,isPressed:y}=(0,o.usePress)({isDisabled:i}),{pressProps:v,isPressed:g}=(0,o.usePress)({isDisabled:i||u,onPress(){t.toggle()}}),{focusableProps:b}=(0,a.useFocusable)(e,n),_=(0,r.mergeProps)(m,b),w=(0,r.filterDOMProps)(e,{labelable:!0});return(0,r.useFormReset)(n,t.isSelected,t.setSelected),{labelProps:(0,r.mergeProps)(v,{onClick:e=>e.preventDefault()}),inputProps:(0,r.mergeProps)(w,{\"aria-invalid\":h||\"invalid\"===p||void 0,\"aria-errormessage\":e[\"aria-errormessage\"],\"aria-controls\":e[\"aria-controls\"],\"aria-readonly\":u||void 0,onChange:e=>{e.stopPropagation(),t.setSelected(e.target.checked)},disabled:i,...null==s?{}:{value:s},name:l,type:\"checkbox\",..._}),isSelected:t.isSelected,isPressed:y||g,isDisabled:i,isReadOnly:u,isInvalid:h||\"invalid\"===p}}"
+    }
+}

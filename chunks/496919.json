@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(e){let{impressionName:t,impressionProperties:n,disableTrack:s,..._}=e,E=n;return\"function\"==typeof E&&(E=E(_)),(0,a.default)({type:o.ImpressionTypes.PAGE,name:t,properties:E},{disableTrack:s},[_.location?.pathname]),(0,i.jsx)(r.Route,{..._})}"
+    }
+}

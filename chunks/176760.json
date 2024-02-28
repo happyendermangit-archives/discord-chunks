@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e,t){i.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT)?(0,a.default)(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT):(0,s.transitionTo)(l.Routes.CHANNEL(e,t))}"
+    }
+}

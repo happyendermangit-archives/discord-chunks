@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useFrecencySettings": "function a(){return s.useEffect(()=>{l.FrecencyUserSettingsActionCreators.loadIfNecessary()},[]),(0,n.useStateFromStores)([i.default],()=>i.default.frecencyWithoutFetchingLatest)}"
+    }
+}

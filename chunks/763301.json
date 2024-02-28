@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "default": {
+            "get": "e=>E[e]??null",
+            "getByUrl": "getByUrl(e){let t=a.default.toURLSafe(e);if(null==t)return;let n=t.hostname;return l[n.startsWith(\"www.\")?n.slice(4):n]}",
+            "isSupported": "e=>Object.prototype.hasOwnProperty.call(E,e)",
+            "map": "e=>_.map(e)",
+            "filter": "filter(e){let t=_.filter(e);return t.sort((e,t)=>{let{name:n}=e,{name:i}=t;return n.localeCompare(i)}),t}",
+            "find": "e=>_.find(e)"
+        }
+    }
+}

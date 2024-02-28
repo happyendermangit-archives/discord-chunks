@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "getChildMapping": "function r(t,e){var n=Object.create(null);return t&&i.Children.map(t,function(t){return t}).forEach(function(t){var r;n[t.key]=(r=t,e&&(0,i.isValidElement)(r)?e(r):r)}),n}",
+        "getInitialChildMapping": "function a(t,e){return r(t.children,function(n){return(0,i.cloneElement)(n,{onExited:e.bind(null,n),in:!0,appear:o(n,\"appear\",t),enter:o(n,\"enter\",t),exit:o(n,\"exit\",t)})})}",
+        "getNextChildMapping": "function s(t,e,n){var a=r(t.children),s=function(t,e){function n(n){return n in e?e[n]:t[n]}t=t||{},e=e||{};var i,r=Object.create(null),o=[];for(var a in t)a in e?o.length&&(r[a]=o,o=[]):o.push(a);var s={};for(var u in e){if(r[u])for(i=0;i<r[u].length;i++){var c=r[u][i];s[r[u][i]]=n(c)}s[u]=n(u)}for(i=0;i<o.length;i++)s[o[i]]=n(o[i]);return s}(e,a);return Object.keys(s).forEach(function(r){var u=s[r];if((0,i.isValidElement)(u)){var c=r in e,l=r in a,d=e[r],p=(0,i.isValidElement)(d)&&!d.props.in;l&&(!c||p)?s[r]=(0,i.cloneElement)(u,{onExited:n.bind(null,u),in:!0,exit:o(u,\"exit\",t),enter:o(u,\"enter\",t)}):l||!c||p?l&&c&&(0,i.isValidElement)(d)&&(s[r]=(0,i.cloneElement)(u,{onExited:n.bind(null,u),in:d.props.in,exit:o(u,\"exit\",t),enter:o(u,\"enter\",t)})):s[r]=(0,i.cloneElement)(u,{in:!1})}}),s}"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "formatPercent": "function E(e,t){return Intl.NumberFormat(e,{style:\"percent\",minimumFractionDigits:0}).format(t)}",
+        "formatPrice": "function s(e,t,n){let o=n?.localeOverride??r.default.locale;return(0,i.formatPrice)(e,t,o,n)}",
+        "formatRate": "function _(e,t,n){if(t===o.SubscriptionIntervalTypes.YEAR)return a.default.Messages.BILLING_PRICE_PER_YEAR.format({price:e});if(t===o.SubscriptionIntervalTypes.MONTH&&1===n)return a.default.Messages.BILLING_PRICE_PER_MONTH.format({price:e});if(t===o.SubscriptionIntervalTypes.MONTH&&n>1)return a.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({price:e,intervalCount:n});throw Error(`Unsupported interval type: ${t}, and interval count: ${n}`)}"
+    }
+}

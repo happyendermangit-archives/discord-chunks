@@ -1,0 +1,27 @@
+{
+    "exports": {
+        "AutocompleterQuerySymbols": {
+            "USER": "@",
+            "TEXT_CHANNEL": "#",
+            "VOICE_CHANNEL": "!",
+            "GUILD": "*",
+            "APPLICATION": "$"
+        },
+        "AutocompleterResultTypes": {
+            "GUILD": "GUILD",
+            "TEXT_CHANNEL": "TEXT_CHANNEL",
+            "GROUP_DM": "GROUP_DM",
+            "VOICE_CHANNEL": "VOICE_CHANNEL",
+            "USER": "USER",
+            "HEADER": "HEADER",
+            "APPLICATION": "APPLICATION",
+            "SKU": "SKU",
+            "LINK": "LINK"
+        },
+        "FindResultDirections": {
+            "UP": "UP",
+            "DOWN": "DOWN"
+        },
+        "HeaderRecord": "class o{constructor(e){this.id=e,this.text=e}}"
+    }
+}

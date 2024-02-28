@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "captureBillingException": "function _(e,t){r.default.captureException(e,{...t,tags:{...t?.tags,app_context:\"billing\"}})}",
+        "captureBillingMessage": "function E(e,t){r.default.captureMessage(e,{...t,tags:{...t?.tags,app_context:\"billing\"}})}",
+        "createGatewayCheckoutContext": "async function s(e){let t=null;if(null!=e&&e.paymentGateway===o.PaymentGateways.BRAINTREE){let e=await (0,i.collectDeviceData)();null!=e&&(t={braintree_device_data:e})}return t}",
+        "getLocalizedDisplayMonth": "function a(e,t){let n=new Date;return n.setMonth(e-1),n.toLocaleString(t,{month:\"short\"})}"
+    }
+}

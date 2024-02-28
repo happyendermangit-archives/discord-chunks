@@ -1,0 +1,3 @@
+{
+    "exports": "function(s){return t(e(s))}"
+}

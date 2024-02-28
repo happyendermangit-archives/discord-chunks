@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,e,s){for(var r=s-1,n=t.length;++r<n;)if(t[r]===e)return r;return -1}"
+}

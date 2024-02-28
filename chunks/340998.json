@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`Zmniejsz ${e.fieldLabel}`",
+            "increase": "e=>`Zwi\\u{119}ksz ${e.fieldLabel}`",
+            "numberField": "Pole numeru"
+        }
+    }
+}

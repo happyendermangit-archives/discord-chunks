@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(){return(0,n.useStateFromStores)([l.default],()=>l.default.getCurrentEmbeddedActivity())}"
-    }
-}

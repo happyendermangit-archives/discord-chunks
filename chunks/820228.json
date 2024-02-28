@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "default": {
+            "selectChannel": "selectChannel(e){let{guildId:t,channelId:n,messageId:i,jumpType:r,preserveDrawerState:a,source:o}=e;s.default.dispatch({type:\"CHANNEL_SELECT\",guildId:t===E.ME?null:t,channelId:n,messageId:i,jumpType:r,preserveDrawerState:a,source:o})}",
+            "selectPrivateChannel": "selectPrivateChannel(e){(0,o.transitionTo)(E.Routes.CHANNEL(E.ME,e))}",
+            "selectVoiceChannel": "selectVoiceChannel(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],s=d.default.getChannel(e),i=s?.getGuildId();if(s?.isGuildVocal()&&s?.isNSFW()&&(!g.default.getCurrentUser()?.nsfwAllowed||!l.default.didAgree(i))){(0,o.transitionTo)(E.Routes.CHANNEL(i,e));return}f.default.isSupported()&&(null!=e&&f.default.getMediaEngine().interact(),(0,h.selectVoiceChannelAdditional)(e,i,t,n))}",
+            "disconnect": "disconnect(){let e=r.default.getRemoteSessionId();if(null!=e&&i.remoteDisconnect(e),(0,u.isOldVoiceUIEnabled)()){let e=d.default.getChannel(_.default.getChannelId()),t=_.default.getChannelId()===_.default.getVoiceChannelId()&&e?.isThread()===!0;if(this.selectVoiceChannel(null),a.close(E.PopoutWindowKeys.CHANNEL_CALL_POPOUT),t){let e=c.default.getGuildId();null!=e&&(0,o.transitionTo)((0,m.previousTextChannelRouteForGuild)(e))}}else this.selectVoiceChannel(null)}"
+        }
+    }
+}

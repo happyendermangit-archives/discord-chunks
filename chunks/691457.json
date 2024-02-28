@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "default": {
+            "init": "init(){if(d)return;r=o.default.get(a.TOKEN_KEY),T=o.default.get(a.TOKENS_KEY)||{};let{decryptedToken:e,wasEncrypted:t}=A(r);u=t,i=e,I=_(Object.entries(T).map(e=>{let[t,n]=e,{decryptedToken:i,wasEncrypted:r}=A(n);return u=r||u,[t,i]}).filter(e=>{let[t,n]=e;return null!=n})),d=!0}",
+            "getToken": "getToken(e){return(this.init(),null!=e)?I[e]:i}",
+            "setToken": "setToken(e,t){if(null==e){this.removeToken(t);return}i=e,null!=t&&(I[t]=e),u?this.encryptAndStoreTokens():(r=i,T=I,S())}",
+            "hideToken": "hideToken(){!c&&(c=!0,S())}",
+            "showToken": "showToken(){c&&(c=!1,S())}",
+            "removeToken": "removeToken(e){let t=i;null!=e&&(t=I[e],delete I[e],delete T[e]),t===i&&(i=null,r=null),S()}",
+            "encryptAndStoreTokens": "encryptAndStoreTokens(){E?.isEncryptionAvailable()?(null!=i&&(r=N(i)),T=_(Object.entries(I).map(e=>{let[t,n]=e;return[t,N(n)]})),u=!0):(r=i,T=I),S()}"
+        }
+    }
+}

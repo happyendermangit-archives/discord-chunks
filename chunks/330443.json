@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "TimeInput": "function _(e){let{value:t,onChange:n,hideValue:_,disabled:E=!1}=e,l=r.useRef(null),u=r.useMemo(()=>new a.TimeOptions,[]),[I,T]=r.useState(\"\");function c(e){null!=t&&n((0,a.timeAtSpecificDay)(t,u.selectValue(e)))}return(0,i.jsx)(o.SearchableSelect,{ref:l,className:s.select,options:u.getOptions(I),value:_?void 0:u.lookupByValue(t),onChange:c,isDisabled:E,onSearchChange:T,onKeyDown:function(e){if(\"Enter\"===e.key){let e=(0,a.convertToTimeOfADay)(t,I);null!=e&&(c(e),l.current?.close())}}})}"
+    }
+}

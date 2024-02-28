@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function f(){let e=(0,o.useStateFromStores)([c.default],()=>c.default.affinities.slice(0,3)),t=e[0],{avatarSrc:n,eventHandlers:a}=(0,l.default)({user:t,size:u.AvatarSizes.SIZE_24,animateOnHover:!0}),f=e=>null!=e.globalName?e.globalName:e.username,E=i.useMemo(()=>e.length>=2?d.default.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({username:f(e[0])}):1===e.length?d.default.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({username:f(e[0])}):\"\",[e]);return 0===e.length?null:(0,r.jsxs)(\"div\",{className:_.container,children:[(0,r.jsx)(u.Avatar,{className:_.icon,src:n,\"aria-label\":t.username,size:u.AvatarSizes.SIZE_24,...a}),(0,r.jsx)(u.Text,{className:s()(_.text),variant:\"text-sm/normal\",color:\"always-white\",children:E})]})}"
+    }
+}

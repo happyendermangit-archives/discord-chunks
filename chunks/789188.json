@@ -1,0 +1,3 @@
+{
+    "exports": "function c(t){if(!(this instanceof c))return new c(t);this.hash=t.hash,this.predResist=!!t.predResist,this.outLen=this.hash.outSize,this.minEntropy=t.minEntropy||this.hash.hmacStrength,this._reseed=null,this.reseedInterval=null,this.K=null,this.V=null;var e=n.toArray(t.entropy,t.entropyEnc||\"hex\"),s=n.toArray(t.nonce,t.nonceEnc||\"hex\"),r=n.toArray(t.pers,t.persEnc||\"hex\");i(e.length>=this.minEntropy/8,\"Not enough entropy. Minimum is: \"+this.minEntropy+\" bits\"),this._init(e,s,r)}"
+}

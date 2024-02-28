@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e){let{isSelfStream:t,centerButton:n=!1,...u}=e,o=n?i.CenterControlButton:i.default;return(0,a.jsx)(o,{label:t?l.default.Messages.STOP_STREAMING:l.default.Messages.STOP_WATCHING,iconComponent:t?r.default:s.default,isActive:!0,...u})}"
-    }
-}

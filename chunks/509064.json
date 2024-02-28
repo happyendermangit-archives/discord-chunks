@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function f(e){let{user:t,guild:n,guildMember:a,showBorder:f}=e;return null==n||null==a?null:(0,i.jsxs)(o.default,{children:[(0,i.jsx)(l.Heading,{variant:\"eyebrow\",className:c.title,children:u.default.Messages.ROLES_LIST.format({numRoles:a.roles.length})}),(0,i.jsx)(r.default,{roleClassName:s()(d.rolePill,{[d.rolePillBorder]:f}),className:d.roles,guild:n,user:t,userRoles:a.roles,disableBorderColor:!0},\"roles\")]})}"
+    }
+}

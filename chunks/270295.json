@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function d(e){let{children:t,className:n,size:i=s.Button.Sizes.MEDIUM,onlyShineOnHover:d=!1,...c}=e;return(0,l.jsx)(r.default,{...c,color:s.Button.Colors.CUSTOM,size:i,className:a(u.button,n),onlyShineOnHover:d,children:(0,l.jsxs)(\"div\",{className:u.buttonContents,children:[(0,l.jsx)(o.default,{className:u.icon}),t]})})}"
-    }
-}

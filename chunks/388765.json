@@ -1,3 +1,0 @@
-{
-    "exports": "function a(t){if(!(this instanceof a))return new a(t);n.call(this,t),c.call(this,t),this.allowHalfOpen=!0,t&&(!1===t.readable&&(this.readable=!1),!1===t.writable&&(this.writable=!1),!1===t.allowHalfOpen&&(this.allowHalfOpen=!1,this.once(\"end\",d)))}"
-}

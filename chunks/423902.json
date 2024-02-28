@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useRadioGroupState": "function u(e){let t=(0,a.useMemo)(()=>e.name||`radio-group-${o}-${++i}`,[e.name]),[n,u]=(0,r.useControlledState)(e.value,e.defaultValue,e.onChange),[s,l]=(0,a.useState)(null);return{name:t,selectedValue:n,setSelectedValue:t=>{!e.isReadOnly&&!e.isDisabled&&u(t)},lastFocusedValue:s,setLastFocusedValue:l,isDisabled:e.isDisabled||!1,isReadOnly:e.isReadOnly||!1,isRequired:e.isRequired||!1,validationState:e.validationState||null,isInvalid:e.isInvalid||\"invalid\"===e.validationState}}"
+    }
+}

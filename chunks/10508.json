@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "canEnableForcedColors": "function S(){return\"windows\"===(0,u.getOS)()}",
+        "default": {
+            "initBasic": "initBasic(){f.addListener(this.handleSystemPrefersReducedMotionChanged),this.handleSystemPrefersReducedMotionChanged(f),g.addListener(this.handleSystemColorPreferencesChanged),E.addListener(this.handleSystemColorPreferencesChanged),C.addListener(this.handleSystemColorPreferencesChanged),this.handleSystemColorPreferencesChanged(),h.addListener(this.handleSystemPrefersContrastChanged),p.addListener(this.handleSystemPrefersContrastChanged),this.handleSystemPrefersContrastChanged()}",
+            "init": "init(){this.initBasic(),i.default.subscribe(\"ACCESSIBILITY_COLORBLIND_TOGGLE\",()=>{l.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED,{colorblind_enabled:d.default.colorblindMode})}),i.default.subscribe(\"ACCESSIBILITY_SET_SATURATION\",e=>{l.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED,{saturation_level:e.saturation})})}",
+            "maybeShowKeyboardNavigationExplainerModal": "maybeShowKeyboardNavigationExplainerModal(){m=Math.max(m-1,0),!function(){let e=s.default.getCurrentUser();return null==e||Date.now()-+e.createdAt<864e5}()&&!d.default.keyboardNavigationExplainerModalSeen&&0===m&&(0,r.openModalLazy)(async()=>{let{default:e}=await n.el(\"10508@4127:4173\").then(n.bind(n,\"679763\"));return t=>(0,a.jsx)(e,{...t})})}",
+            "handleSystemPrefersReducedMotionChanged": "handleSystemPrefersReducedMotionChanged(e){i.default.wait(()=>{o.systemPrefersReducedMotionChanged(e.matches?\"reduce\":\"no-preference\")})}",
+            "handleSystemColorPreferencesChanged": "handleSystemColorPreferencesChanged(){let e;g.matches?e=c.ThemeTypes.DARK:E.matches&&(e=c.ThemeTypes.LIGHT);let t=(!u.isPlatformEmbedded||S())&&C.matches?\"active\":\"none\";i.default.wait(()=>{o.systemColorPreferencesChanged(e,t)})}",
+            "handleSystemPrefersContrastChanged": "handleSystemPrefersContrastChanged(){let e=\"no-preference\";h.matches?e=\"more\":p.matches&&(e=\"less\"),i.default.wait(()=>{o.systemPrefersContrastChanged(e)})}"
+        }
+    }
+}

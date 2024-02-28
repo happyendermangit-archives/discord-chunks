@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class extends i.default{possiblyShowFeedbackModal(e,_){(function(e){var _;if(__OVERLAY__)return!1;let E=N[e],t=null!==(_=E.eligibilityChecks)&&void 0!==_?_:[];return[R,A,O].every(e=>e(E))&&t.every(e=>e(E))})(e)&&(null==this.feedbackTypeToShow||!(T.FeedbackTypePrecedence[this.feedbackTypeToShow]<T.FeedbackTypePrecedence[e]))&&(this.feedbackTypeToShow=e,this.showFeedbackModalDebounced(_))}constructor(...e){super(...e),this.feedbackTypeToShow=null,this.showFeedbackModalDebounced=n.debounce(e=>{null!=this.feedbackTypeToShow&&(!function(e){let _=N[e];null!=_.storageKey&&r.default.set(_.storageKey,Date.now())}(this.feedbackTypeToShow),this.feedbackTypeToShow=null,e())},200)}}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class m extends s.Component{render(){let{type:e,avatarSize:t,className:n}=this.props;return\"2\"===e?(0,a.jsxs)(\"div\",{className:o(c.multiplePlaceholder,n),children:[(0,a.jsxs)(d.default,{children:[(0,a.jsx)(\"div\",{className:o(c.placeholderAvatar,f[t],c.avatarMasked)}),(0,a.jsx)(\"div\",{className:o(c.placeholderAvatar,f[t],c.avatarMasked)}),(0,a.jsx)(\"div\",{className:o(c.placeholderAvatar,f[t])})]}),(0,a.jsx)(d.default,{grow:1,className:c.mulitplePlaceholderUsername,style:{maxWidth:this.placeholderMaxWidth}})]}):(0,a.jsxs)(d.default,{className:o(c.placeholder,n),children:[(0,a.jsx)(\"div\",{className:o(c.placeholderAvatar,f[t])}),(0,a.jsx)(d.default,{grow:1,className:c.placeholderUsername,style:{maxWidth:this.placeholderMaxWidth}})]})}constructor(...e){super(...e),this.placeholderMaxWidth=\"\".concat(Math.floor(40*Math.random())+40,\"%\")}}"
-    }
-}

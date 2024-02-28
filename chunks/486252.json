@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function c(e){let{value:t,onChange:n,subText:a,muted:c,marginTopStyle:f}=e;return(0,s.jsx)(i.default,{className:null!=f?f:d.marginTop20,align:i.default.Align.CENTER,children:(0,s.jsx)(l.Checkbox,{value:t,type:l.Checkbox.Types.INVERTED,onChange:(e,t)=>n(t),className:u.checkbox,children:(0,s.jsx)(o.SubText,{className:r({[u.subText]:!c}),children:a})})})}"
-    }
-}

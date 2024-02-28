@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "migrate": "function d(){s.default.wait(()=>s.default.dispatch({type:\"DOMAIN_MIGRATION_START\"}))}",
-        "failMigration": "function n(){s.default.dispatch({type:\"DOMAIN_MIGRATION_FAILURE\"})}",
-        "finishMigration": "function c(){window.location.reload()}"
-    }
-}

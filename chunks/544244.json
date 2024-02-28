@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "addStickerPreview": "function N(e,t,n){l.default.dispatch({type:\"ADD_STICKER_PREVIEW\",channelId:e,sticker:t,draftType:n})}",
+        "clearStickerPreview": "function O(e,t){l.default.dispatch({type:\"CLEAR_STICKER_PREVIEW\",channelId:e,draftType:t})}",
+        "createGuildSticker": "async(e,t)=>{let n=await s.default.post({url:E.Endpoints.GUILD_STICKER_PACKS(e),body:t});return l.default.dispatch({type:\"GUILD_STICKERS_CREATE_SUCCESS\",guildId:e,sticker:{...n.body,user:p.default.getCurrentUser()}}),n.body}",
+        "deleteGuildSticker": "async e=>{await s.default.delete({url:E.Endpoints.GUILD_STICKER(e.guild_id,e.id)})}",
+        "favoriteSticker": "function M(e){d.FrecencyUserSettingsActionCreators.updateAsync(\"favoriteStickers\",t=>(t.stickerIds=R(t.stickerIds),a().size(t.stickerIds)>=_.MAX_FAVORITES)?(r.default.show({title:I.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,body:I.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({count:_.MAX_FAVORITES})}),!1):!t.stickerIds.includes(e)&&void t.stickerIds.push(e),_.UserSettingsDelay.INFREQUENT_USER_ACTION)}",
+        "fetchGuildStickers": "async e=>{let{body:t}=await s.default.get({url:E.Endpoints.GUILD_STICKER_PACKS(e)});l.default.dispatch({type:\"GUILD_STICKERS_FETCH_SUCCESS\",guildId:e,stickers:t.map(e=>null!=e.user?{...e,user:new c.default(e.user)}:e)})}",
+        "fetchSticker": "async e=>{let{body:t}=await s.default.get({url:E.Endpoints.STICKER(e)});l.default.dispatch({type:\"STICKER_FETCH_SUCCESS\",sticker:t})}",
+        "fetchStickerPack": "async(e,t)=>{let{body:n}=await (0,m.httpGetWithCountryCodeQuery)(E.Endpoints.STICKER_PACK(e));return l.default.dispatch({type:\"STICKER_PACK_FETCH_SUCCESS\",packId:e,pack:n,ingestStickers:t}),n}",
+        "fetchStickerPacks": "async function(){let{locale:e=u.default.locale}=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(h.default.isFetchingStickerPacks||h.default.hasLoadedStickerPacks)return;l.default.wait(()=>{l.default.dispatch({type:\"STICKER_PACKS_FETCH_START\"})});let{body:{sticker_packs:t}}=await s.default.get({url:E.Endpoints.STICKER_PACKS,query:{locale:e}});l.default.dispatch({type:\"STICKER_PACKS_FETCH_SUCCESS\",packs:t})}",
+        "unfavoriteSticker": "function v(e){d.FrecencyUserSettingsActionCreators.updateAsync(\"favoriteStickers\",t=>{t.stickerIds=t.stickerIds.filter(t=>t!==e),t.stickerIds=R(t.stickerIds)},_.UserSettingsDelay.INFREQUENT_USER_ACTION)}",
+        "updateGuildSticker": "async(e,t,n)=>(await s.default.patch({url:E.Endpoints.GUILD_STICKER(e,t),body:n})).body"
+    }
+}

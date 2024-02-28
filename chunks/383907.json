@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "acceptWhitelist": "function u(e){return r.default.post({url:o.Endpoints.OAUTH2_WHITELIST_ACCEPT,query:{token:e},oldFormErrors:!0})}",
+        "authorize": "async function d(e){let{authorize:t,clientId:n,scopes:i,responseType:a,redirectUri:u,codeChallenge:d,codeChallengeMethod:l,state:f,permissions:_,guildId:c,channelId:g,userInstall:m}=e;return(await r.default.post({url:o.Endpoints.OAUTH2_AUTHORIZE,query:{client_id:n,response_type:a,redirect_uri:u,code_challenge:d,code_challenge_method:l,scope:i.join(\" \"),state:f},body:{guild_id:c,webhook_channel_id:null!=c&&null!=g?g:void 0,channel_id:null==c&&null!=g?g:void 0,permissions:_,authorize:t,integration_type:m?s.ApplicationIntegrationType.USER_INSTALL:s.ApplicationIntegrationType.GUILD_INSTALL},oldFormErrors:!0})).body}",
+        "fetchAuthorization": "async function l(e){let{clientId:t,scopes:n,responseType:i,redirectUri:a,codeChallenge:u,codeChallengeMethod:d,state:l,userInstall:f}=e;return(await r.default.get({url:o.Endpoints.OAUTH2_AUTHORIZE,query:{client_id:t,response_type:i,redirect_uri:a,code_challenge:u,code_challenge_method:d,scope:n.join(\" \"),state:l,integration_type:f?s.ApplicationIntegrationType.USER_INSTALL:s.ApplicationIntegrationType.GUILD_INSTALL},retries:3,oldFormErrors:!0})).body}",
+        "fetchChannels": "async function f(e){let{body:t}=await r.default.get({url:o.Endpoints.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,query:{guild_id:e},oldFormErrors:!0});return t}",
+        "finishUserCode": "async function g(e,t){return await r.default.post({url:o.Endpoints.OAUTH2_DEVICE_FINISH,body:{user_code:e,result:t}})}",
+        "finishUserCodeTwoWayLinkError": "async function m(e,t,n){return await r.default.post({url:o.Endpoints.OAUTH2_DEVICE_FINISH,body:{user_code:e,result:\"two_way_link_error\",error_code:t,error_source:n}})}",
+        "logoutWithRedirect": "function _(e){a.default.logout((0,i.getLoginPath)(e.pathname+e.search,!1))}",
+        "verifyUserCode": "async function c(e){return await r.default.post({url:o.Endpoints.OAUTH2_DEVICE_VERIFY,body:{user_code:e}})}"
+    }
+}

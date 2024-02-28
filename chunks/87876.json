@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "default": {
+            "type": {
+                "render": "function(e,t){let{disabled:n,type:s}=e,[f,p,m]=(0,o.useExpressionPickerStore)(e=>[e.activeView,e.activeViewType,e.pickerId],r.default),h=a.useCallback(()=>{(0,o.toggleExpressionPicker)(d.ExpressionPickerViewType.EMOJI,s)},[s]);return n?null:(0,i.jsx)(\"div\",{className:l()(d.CHAT_INPUT_BUTTON_CLASSNAME,c.buttonContainer),ref:t,children:(0,i.jsx)(u.default,{className:c.emojiButton,onClick:h,active:f===d.ExpressionPickerViewType.EMOJI&&p===s,\"aria-controls\":m,tabIndex:0,focusProps:{offset:{top:4,bottom:4,left:-4,right:-4}}})})}"
+            },
+            "compare": null
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "useChurnDiscountedPrice": "(e,t,n)=>{let{paymentSourceId:l}=(0,a.default)({isGift:!1,activeSubscription:null}),d=c.SubscriptionPlanInfo[t].skuId,{priceOptions:_}=(0,i.default)({activeSubscription:null,skuIDs:[d],paymentSourceId:l,isGift:!1}),[f,E]=(0,u.useSubscriptionInvoicePreview)({subscriptionId:e.id,items:[{planId:t,quantity:1}],renewal:!0,preventFetch:!(null!=n),paymentSourceId:l,currency:_.currency,userDiscountOfferId:n?.id}),T=f?.invoiceItems?.find(e=>e.subscriptionPlanId===t)?.discounts?.find(e=>e.type===r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)?.amount,I=(0,s.getPrice)(t,!1,!1,_);return(0,o.formatPrice)(I.amount-(T??0),I.currency)}",
+        "useDiscountedPrice": "e=>{let{paymentSourceId:t}=(0,a.default)({isGift:!1,activeSubscription:null}),n=c.SubscriptionPlanInfo[e].skuId,{priceOptions:d}=(0,i.default)({activeSubscription:null,skuIDs:[n],paymentSourceId:t,isGift:!1}),_=(0,l.usePremiumDiscountOffer)(),[f,E]=(0,u.useSubscriptionInvoicePreview)({items:[{planId:e,quantity:1}],renewal:!0,preventFetch:!(null!=_),paymentSourceId:t,currency:d.currency}),T=f?.invoiceItems?.find(t=>t.subscriptionPlanId===e)?.discounts?.find(e=>e.type===r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)?.amount,I=(0,s.getPrice)(e,!1,!1,d);return(0,o.formatPrice)(I.amount-(T??0),I.currency)}"
+    }
+}

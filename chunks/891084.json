@@ -1,0 +1,26 @@
+{
+    "exports": {
+        "DEFAULT_STICKER_DIMENSIONS": 160,
+        "EMPTY_STATE_STICKERS": [
+            "781323769960202280",
+            "809209266556764241",
+            "818597810047680532",
+            "819129296374595614"
+        ],
+        "GRID_NAVIGATOR_ID": "sticker-picker-grid",
+        "INACTIVE_CATEGORY_INDEX": -1,
+        "MAX_STICKER_FILE_SIZE": 524288,
+        "STAFF_MAX_STICKER_FILE_SIZE": 1572864,
+        "STICKER_APPLICATION_ID": "710982414301790216",
+        "STICKER_PICKER_TAB_ID": "sticker-picker-tab",
+        "STICKER_PICKER_TAB_PANEL_ID": "sticker-picker-tab-panel",
+        "StickerAnimationSettings": {
+            "0": "ALWAYS_ANIMATE",
+            "1": "ANIMATE_ON_INTERACTION",
+            "2": "NEVER_ANIMATE",
+            "ALWAYS_ANIMATE": 0,
+            "ANIMATE_ON_INTERACTION": 1,
+            "NEVER_ANIMATE": 2
+        }
+    }
+}

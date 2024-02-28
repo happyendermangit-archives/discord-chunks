@@ -1,0 +1,23 @@
+{
+    "exports": {
+        "FocusGuard": {
+            "type": "function(){var e,t=(0,r.useState)(!1),n=t[0];return e=t[1],(0,r.useEffect)(function(){return i.subscribe(e)},[e]),(0,r.createElement)(\"div\",{tabIndex:n?0:void 0,style:{position:\"fixed\",opacity:0,pointerEvents:\"none\"}})}",
+            "compare": null
+        },
+        "LOCK_STACK": {
+            "locks": [],
+            "listeners": [
+                "function () { [native code] }",
+                "function () { [native code] }"
+            ],
+            "add": "function(e,t){var n={uid:e,setEnabled:t,enabled:!1};this.toggleLayer(this.current(),!1),this.locks.push(n),this.toggleLayer(n,!0),this.emit()}",
+            "remove": "function(e){var t=this.locks.find(function(t){return t.uid===e});this.toggleLayer(t,!1);var n=this.current(),r=null!=n&&n.uid===e;this.locks=this.locks.filter(function(t){return t.uid!==e}),r&&this.toggleLayer(this.current(),!0),this.emit()}",
+            "current": "function(){return this.locks[this.locks.length-1]}",
+            "isActive": "function(){var e=this.current();return null!=e&&e.enabled}",
+            "toggleLayer": "function(e,t){null!=e&&(e.setEnabled(t),e.enabled=t)}",
+            "subscribe": "function(e){var t=this;return this.listeners.push(e),e(this.isActive(),this.locks),function(){return t.listeners=t.listeners.filter(function(t){return t!==e})}}",
+            "emit": "function(){var e=this,t=this.isActive();this.listeners.forEach(function(n){return n(t,e.locks)})}"
+        },
+        "default": "function l(e,t){void 0===t&&(t={});var n,a,s,l,c,d=t.disableReturnRef,f=t.attachTo;void 0===f&&(f=document);var p=t.disable,h=(a=(0,r.useState)(function(){return\"lock-\"+u++})[0],s=(0,r.useRef)(!1),(0,r.useLayoutEffect)(function(){return i.add(a,function(e){return s.current=e}),function(){return i.remove(a)}},[a]),s);(0,r.useEffect)(function(){p&&(h.current=!1)},[p]),(0,r.useLayoutEffect)(function(){var t=e.current;function n(t){if(h.current){var n=e.current;if(null!=n){var r=t.target||document.body;n.contains(r)||(t.preventDefault(),t.stopImmediatePropagation(),o(n,r))}}}function r(t){if(h.current){var n=e.current;if(null!=n){null!=t.relatedTarget&&t.relatedTarget!==document.body||(t.preventDefault(),n.focus());var r=t.target||document.body;n.contains(r)||o(n,r)}}}return null==t||null==document.activeElement||t.contains(document.activeElement)||null!=t.querySelector(\"[autofocus]\")||o(t,document.activeElement,!0),f.addEventListener(\"focusin\",n,{capture:!0}),f.addEventListener(\"focusout\",r,{capture:!0}),function(){f.removeEventListener(\"focusin\",n,{capture:!0}),f.removeEventListener(\"focusout\",r,{capture:!0})}},[e]),l=d,c=(0,r.useState)(function(){return document.activeElement})[0],(0,r.useLayoutEffect)(function(){return function(){null!=l&&l.current||requestAnimationFrame(function(){null!=c&&c.focus()})}},[])}"
+    }
+}

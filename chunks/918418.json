@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{elements:t,onChange:n,state:l}=e,r=t.map(e=>{var t;let r=e.name;return(0,a.jsx)(c,{data:e.data,onChange:e=>n(r,e.value,e.isValid),initialText:null!==(t=null==l?void 0:l[r])&&void 0!==t?t:void 0,isRequired:e.should_submit_data},r)});return(0,a.jsx)(\"div\",{children:r})}"
-    }
-}

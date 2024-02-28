@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function i(){return window.devicePixelRatio??1}"
+    }
+}

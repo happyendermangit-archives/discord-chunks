@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "default": {
+            "streams": {},
+            "addSink": "addSink(e,t,n){let r=this.streams,o=r[e];if(null==o&&(o=r[e]=new Map),0===o.size){let t=(0,i.getVoiceEngine)();t.setVideoOutputSink(e,this.handleImageData.bind(this,t.signalVideoOutputSinkReady.bind(t,e),o),!0)}o.set(t,n)}",
+            "removeSink": "removeSink(e,t){let n=this.streams,r=n[e];null!=r&&(r.delete(t),0===r.size&&(delete n[e],(0,i.getVoiceEngine)().setVideoOutputSink(e)))}",
+            "handleImageData": "handleImageData(e,t,n){for(let e of t.values())e(n);e()}"
+        }
+    }
+}

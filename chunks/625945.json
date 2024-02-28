@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class r extends s.default{static createFromServer(e){return new r({...e,user:new i.default(e.user)})}constructor(e){super(),this.id=e.id,this.name=e.name,this.type=e.type,this.user=e.user,this.displayName=e.name_localized??e.name}}"
+    }
+}

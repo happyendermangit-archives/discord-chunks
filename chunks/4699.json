@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let t=i.default.getState();return t.useActivityUrlOverride&&null!=t.activityUrlOverride&&\"\"!==t.activityUrlOverride?t.activityUrlOverride:s.default.inTestModeForEmbeddedApplication(e)?s.default.testModeOriginURL:function(e){let t=window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;return null==t?null:`https://${e}.${t}`}(e)}"
+    }
+}

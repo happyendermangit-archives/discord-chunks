@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function ei(e){let t=(0,d.useStateFromStoresObject)([k.default,j.default,h.default,x.default,L.default],()=>({consentRequired:k.default.getAuthenticationConsentRequired(),registering:j.default.getRegisterStatus()===Q.RegistrationStates.REGISTERING,apiErrors:j.default.getErrors(),authenticated:j.default.isAuthenticated(),isUnderage:h.default.isUnderageAnonymous(),country:x.default.getCountryCode(),hasLoggedInAccounts:L.default.getHasLoggedInAccounts()})),n=(0,b.useUURegistrationExperiment)(),r=(0,d.useStateFromStores)([D.default],()=>D.default.registrationUsernameSuggestion()),[l,i]=a.useState(X.RegistrationSteps.FULL);return(0,m.default)({type:u.ImpressionTypes.VIEW,name:u.ImpressionNames.USER_REGISTRATION,properties:{impression_group:u.ImpressionGroups.USER_REGISTRATION_FLOW,step:l}},{},[l]),(0,s.jsx)(el,{onChangeStep:e=>i(e),registrationCopyExperimentConfig:I.default.getCurrentConfig({location:\"0ba758_2\"},{autoTrackExposure:!1}),uniqueUsernameRegistrationConfig:n,usernameSuggestion:r,...e,...t})}"
-    }
-}

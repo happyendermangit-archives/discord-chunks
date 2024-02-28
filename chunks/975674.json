@@ -1,0 +1,43 @@
+{
+    "exports": {
+        "BaseConnectionEvent": {
+            "Destroy": "destroy",
+            "LocalVideoDisabled": "local-video-disabled",
+            "ActiveSinksChange": "active-sinks-change",
+            "ExperimentFlag": "experiment-flag",
+            "ConnectionStateChange": "connectionstatechange",
+            "Error": "error",
+            "Connected": "connected",
+            "VideoHookStart": "videohook-start",
+            "VideoHookStop": "videohook-stop",
+            "VideoHookInitialize": "videohook-initialize",
+            "ScreenshareFinish": "screenshare-finish",
+            "VideoState": "video-state",
+            "SoundshareTrace": "soundsharetrace",
+            "SoundshareSpeaking": "soundsharespeaking",
+            "SoundshareAttached": "soundshareattached",
+            "SoundshareFailed": "soundsharefailed",
+            "Speaking": "speaking",
+            "SpeakingWhileMuted": "speakingwhilemuted",
+            "Mute": "mute",
+            "LocalMute": "local-mute",
+            "NoiseLevel": "noiselevel",
+            "Video": "video",
+            "Ping": "ping",
+            "PingTimeout": "pingtimeout",
+            "Silence": "silence",
+            "DesktopSourceEnd": "desktopsourceend",
+            "OutboundLossRate": "outboundlossrate",
+            "NoiseCancellationError": "noisecancellererror",
+            "VoiceActivityDetectorError": "voiceactivitydetectorerror",
+            "InteractionRequired": "interactionrequired",
+            "AudioPermission": "audio-permission",
+            "VideoPermission": "video-permission",
+            "Stats": "stats",
+            "FirstFrame": "first-frame",
+            "VideoEncoderFallback": "video-encoder-fallback",
+            "RemoteStreamsReady": "remote-streams-ready"
+        },
+        "default": "class l extends o.default{constructor(e,t){super(),this.mediaEngineConnectionId=`WebRTC-${E++}`,this.destroyed=!1,this.audioSSRC=0,this.selfDeaf=!1,this.localMutes={},this.disabledLocalVideos={},this.localVolumes={},this.isActiveOutputSinksEnabled=!1,this.activeOutputSinks={},this.videoSupported=!1,this.useElectronVideo=!1,this.voiceBitrate=_.DEFAULT_VOICE_BITRATE,this.remoteSinkWantsMaxFramerate=_.VIDEO_QUALITY_FRAMERATE,this.wantsPriority=new Set,this.localSpeakingFlags={},this.videoReady=!1,this.videoStreamParameters=[],this.remoteVideoSinkWants={any:100},this.localVideoSinkWants={any:100},this.connectionState=_.ConnectionStates.CONNECTING,this.experimentFlags=new Set,this.context=e,this.ids=t,this.videoQualityManager=new s.VideoQualityManager(e,this);let i=n(\"559637\").default;this.framerateReducer=new i(this,this.videoQualityManager)}destroy(){this.destroyed=!0,this.framerateReducer.destroy(),this.setConnectionState(_.ConnectionStates.DISCONNECTED),this.emit(a.BaseConnectionEvent.Destroy,this),this.removeAllListeners()}getLocalMute(e){return this.localMutes[e]||!1}getLocalVideoDisabled(e){return this.disabledLocalVideos[e]??!1}setLocalVideoDisabled(e,t){this.disabledLocalVideos[e]=t,this.emit(a.BaseConnectionEvent.LocalVideoDisabled,e,t)}getHasActiveVideoOutputSink(e){return this.activeOutputSinks[e]??!1}setHasActiveVideoOutputSink(e,t){this.isActiveOutputSinksEnabled=!0,this.activeOutputSinks[e]=t,this.emit(a.BaseConnectionEvent.ActiveSinksChange,e,t)}getActiveOutputSinkTrackingEnabled(){return this.isActiveOutputSinksEnabled}setUseElectronVideo(e){this.useElectronVideo=e}setClipRecordUser(e,t,n){}setViewerSideClip(e){}setClipsKeyFrameInterval(e){}setQualityDecoupling(e){}getStreamParameters(){return r().cloneDeep(this.videoStreamParameters)}setExperimentFlag(e,t){t?this.experimentFlags.add(e):this.experimentFlags.delete(e)}setConnectionState(e){this.logger.info(`Connection state change: ${this.connectionState} => ${e}`),this.connectionState=e,this.emit(a.BaseConnectionEvent.ConnectionStateChange,this.connectionState)}updateVideoQuality(e){let{quality:t,constraints:n}=this.applyQualityConstraints({},this.videoStreamParameters[0].ssrc),i=r().cloneDeep(this.videoStreamParameters);null!=t&&(i[0].maxBitrate=t.bitrateMax,null!=t.encode&&(i[0].maxPixelCount=t.encode.pixelCount,i[0].maxFrameRate=t.encode.framerate)),this.videoStreamParameters=i;for(let e=1;e<this.videoStreamParameters.length;e++){let{quality:i,constraints:r}=this.applyQualityConstraints({},this.videoStreamParameters[e].ssrc);null!=i&&(this.videoStreamParameters[e].maxBitrate=i.bitrateMax,null!=i.encode&&(this.videoStreamParameters[e].maxPixelCount=i.encode.pixelCount,this.videoStreamParameters[e].maxFrameRate=i.encode.framerate)),100===this.videoStreamParameters[e].quality&&(n=r,t=i)}n.streamParameters=r().cloneDeep(this.videoStreamParameters),n.remoteSinkWantsPixelCount=Math.max(...this.videoStreamParameters.map(e=>e.maxPixelCount??0));let o=this.pickProperties(n,e);this.logger.info(`updateVideoQuality: ${JSON.stringify(o,void 0,4)}`),this.updateVideoQualityCore(o,t)}applyVideoQualityMode(e){if(this.context!==_.MediaEngineContextTypes.DEFAULT)return;let t=s.VIDEO_QUALITY_MODES_TO_OVERWRITES[e];this.videoQualityManager.setQuality(t),this.updateVideoQuality()}overwriteQualityForTesting(e){this.videoQualityManager.setQuality(e),this.updateVideoQuality()}applyQualityConstraints(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=arguments.length>1?arguments[1]:void 0;return this.videoQualityManager.applyQualityConstraints(e,t)}pickProperties(e,t){if(null==t||null==e)return e;let n={};for(let i of t)n[i]=e[i];return n}initializeStreamParameters(e){let t=this.videoQualityManager.getQuality();this.videoStreamParameters=e.filter(e=>(e.type===_.MediaTypes.VIDEO||e.type===_.MediaTypes.SCREEN)&&\"string\"==typeof e.rid).map(e=>({type:e.type,active:e.active,rid:e.rid,ssrc:e.ssrc,rtxSsrc:e.rtxSsrc,quality:e.quality,maxBitrate:(e.quality??100)<100?t.bitrateMax/4:t.bitrateMax,maxFrameRate:t.capture?.framerate,maxResolution:{type:_.ResolutionTypes.FIXED,width:t.capture?.width,height:t.capture?.height},profile:e.profile}))}getLocalWant(e){let t=this.remoteVideoSinkWants[e??this.videoStreamParameters[0]?.ssrc??0];if(null!=t&&t>0)return t;let n=this.remoteVideoSinkWants.any;return null!=n&&n>0?n:100}async emitStats(){let e=await this.getStats();return null!=e&&this.emit(a.BaseConnectionEvent.Stats,e),e}}"
+    }
+}

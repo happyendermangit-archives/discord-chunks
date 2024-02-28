@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(){let e=(0,i.useRef)(null),t=(0,i.useRef)(r),n=(0,i.useCallback)(()=>{let{current:n}=e,{dirty:i}=t.current;if(null==n||0===i)return t.current;if(1===i){let{scrollTop:e,scrollLeft:i}=n;t.current={...t.current,scrollTop:e,scrollLeft:i,dirty:0}}else{let{scrollTop:e,scrollLeft:i,scrollHeight:r,scrollWidth:o,offsetHeight:a,offsetWidth:s}=n;t.current={scrollTop:e,scrollLeft:i,scrollHeight:r,scrollWidth:o,offsetHeight:a,offsetWidth:s,dirty:0}}return t.current},[]);return{scrollerRef:e,scrollerState:t,getScrollerState:n}}"
+    }
+}

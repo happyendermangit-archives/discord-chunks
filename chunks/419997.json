@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "canToggleCommunicationDisableOnUser": "function u(e,t){let[n,i,u]=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[l.default,a.default,s.default],d=i.getGuild(e),c=n.getUser(t);return!(null==d||null==c||c.isNonUserBot()||d.isOwner(c)||r.default.can({permission:o.Permissions.ADMINISTRATOR,user:c,context:d}))&&u.canManageUser(o.Permissions.MODERATE_MEMBERS,c,d)}",
+        "default": "function d(e,t){return(0,i.useStateFromStores)([l.default,a.default,s.default],()=>u(e,t,[l.default,a.default,s.default]),[e,t])}"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "exports": {
+        "LOGIN_REQUIRED_ACTIONS_MODAL_KEY": "LOGIN_REQUIRED_ACTIONS_MODAL_KEY",
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "handleConnectionOpen(){let e=s.default.getCurrentUser();if(null==e||E.ProcessArgs.isDisallowPopupsSet())return;let t=l.default.requiredActionsIncludes(e.id,[u.LoginRequiredActions.UPDATE_PASSWORD]);l.default.wasLoginAttemptedInSession(e.id)&&t?(0,r.openModalLazy)(async()=>{let{default:e}=await n.el(\"341267@1968:2054\").then(n.bind(n,\"429994\"));return function(t){return(0,i.jsx)(e,{...t,onSuccess:()=>{_.default.track(u.AnalyticEvents.FORCED_UPDATE_PASSWORD_SUCCEEDED),t.onClose()},onClose:()=>{t.onClose(),o.default.logout(u.Routes.LOGIN)},requirementsUpdated:!0})}},{modalKey:T,onCloseRequest:I.NOOP_NULL,instant:!0}):t&&o.default.logout(u.Routes.LOGIN)}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleConnectionOpen": "handleConnectionOpen(){let e=s.default.getCurrentUser();if(null==e||E.ProcessArgs.isDisallowPopupsSet())return;let t=l.default.requiredActionsIncludes(e.id,[u.LoginRequiredActions.UPDATE_PASSWORD]);l.default.wasLoginAttemptedInSession(e.id)&&t?(0,r.openModalLazy)(async()=>{let{default:e}=await n.el(\"341267@1968:2054\").then(n.bind(n,\"429994\"));return function(t){return(0,i.jsx)(e,{...t,onSuccess:()=>{_.default.track(u.AnalyticEvents.FORCED_UPDATE_PASSWORD_SUCCEEDED),t.onClose()},onClose:()=>{t.onClose(),o.default.logout(u.Routes.LOGIN)},requirementsUpdated:!0})}},{modalKey:T,onCloseRequest:I.NOOP_NULL,instant:!0}):t&&o.default.logout(u.Routes.LOGIN)}"
+        }
+    }
+}

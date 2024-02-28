@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(){return d.useEffect(()=>{window.location.origin===window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN&&!0!==c.default.get(n.DOMAIN_MIGRATION_SUCCESS_KEY)&&f.default.supportsFeature(s.NativeFeatures.USER_DATA_CACHE)&&(r.migrate(),i.default.userDataCache.getCached().then(e=>{if(null==e){r.failMigration(),o.default.track(s.AnalyticEvents.DOMAIN_MIGRATED,{success:!1,has_data:!1},{flush:!0});return}let t=Object.keys(e),a=0!==t.length,d=null!=e.token,f=null==e.RTCRegionStore?null:JSON.parse(e.RTCRegionStore),u=null==f||null==l(f)||l(f)<=l(c.default.get(\"RTCRegionStore\"));a&&d&&!u&&(c.default.clear(),t.forEach(t=>{let a=e[t];try{c.default.set(t,JSON.parse(a))}catch(e){}})),o.default.track(s.AnalyticEvents.DOMAIN_MIGRATED,{success:!0,current_is_newer:u,has_data:a},{flush:!0}),c.default.set(n.DOMAIN_MIGRATION_SUCCESS_KEY,!0),i.default.userDataCache.deleteCache(),r.finishMigration()}))},[]),null}"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "deleteEmoji": "function S(e,t){return r.default.dispatch({type:\"EMOJI_DELETE\",guildId:e,emojiId:t}),s.default.delete({url:h.Endpoints.GUILD_EMOJI(e,t),oldFormErrors:!0})}",
+        "favoriteEmoji": "function T(e){(function(e){null!=e&&f.FrecencyUserSettingsActionCreators.updateAsync(\"favoriteEmojis\",t=>(t.emojis=x(t.emojis),a().size(t.emojis)>=E.MAX_FAVORITES)?(m.default.show({title:_.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,body:_.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({count:E.MAX_FAVORITES})}),!1):!t.emojis.includes(e)&&void t.emojis.push(e),E.UserSettingsDelay.INFREQUENT_USER_ACTION)})(e.id??e.name)}",
+        "fetchEmoji": "function C(e){r.default.dispatch({type:\"EMOJI_FETCH\",guildId:e}),s.default.get({url:h.Endpoints.GUILD_EMOJIS(e),oldFormErrors:!0}).then(t=>r.default.dispatch({type:\"EMOJI_FETCH_SUCCESS\",guildId:e,emojis:t.body}),()=>r.default.dispatch({type:\"EMOJI_FETCH_FAILURE\",guildId:e}))}",
+        "setDiversityColor": "function I(e){f.PreloadedUserSettingsActionCreators.updateAsync(\"textAndImages\",t=>{t.diversitySurrogate=l.StringValue.create(),t.diversitySurrogate.value=e},E.UserSettingsDelay.FREQUENT_USER_ACTION)}",
+        "unfavoriteEmoji": "function A(e){(function(e){null!=e&&f.FrecencyUserSettingsActionCreators.updateAsync(\"favoriteEmojis\",t=>{if(!t.emojis.includes(e))return!1;t.emojis=t.emojis.filter(t=>e!==t),t.emojis=x(t.emojis)},E.UserSettingsDelay.INFREQUENT_USER_ACTION)})(e.id??e.name)}",
+        "updateEmoji": "async function g(e){let{guildId:t,emojiId:n,name:i,roles:a}=e;try{return await s.default.patch({url:h.Endpoints.GUILD_EMOJI(t,n),body:{name:i,roles:a},oldFormErrors:!0})}catch(e){throw new o.default(e)}}",
+        "uploadEmoji": "function y(e){let{guildId:t,image:n,name:i,roles:a}=e;return r.default.dispatch({type:\"EMOJI_UPLOAD_START\",guildId:t}),s.default.post({url:h.Endpoints.GUILD_EMOJIS(t),body:{image:n,name:i,roles:a},oldFormErrors:!0}).then(()=>r.default.dispatch({type:\"EMOJI_UPLOAD_STOP\",guildId:t}),e=>(r.default.dispatch({type:\"EMOJI_UPLOAD_STOP\",guildId:t}),Promise.reject(e)))}"
+    }
+}

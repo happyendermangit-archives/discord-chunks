@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "default": {
+            "actions": {
+                "CONNECTION_OPEN": "(e,t)=>this.handleConnectionOpen(e,t)",
+                "BACKGROUND_SYNC": "(e,t)=>this.handleConnectionOpen(e,t)"
+            },
+            "getCommittedVersions": "async getCommittedVersions(){try{let e=d.default.nonGuildVersions();if(null==e)return{};let t=(await e.getMany()).map(e=>[e.id,\"version\"in e?e.version:e.versionString]);return Object.fromEntries(t??[])}catch(e){return l.warn(\"couldn't load guild versions\",e),{}}}",
+            "handleConnectionOpen": "handleConnectionOpen(e,t){null!=e.apiCodeVersion&&d.default.nonGuildVersionsTransaction(t).put({id:\"api_code_version\",version:e.apiCodeVersion})}",
+            "resetInMemoryState": "resetInMemoryState(){}"
+        }
+    }
+}

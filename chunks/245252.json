@@ -1,0 +1,3 @@
+{
+    "exports": "function(t,e){if(!c)throw SyntaxError(\"This environment does not support Promises.\");return c(t,e)}"
+}

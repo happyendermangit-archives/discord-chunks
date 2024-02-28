@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "Layer": "e=>{let{layerContext:t,children:n}=e;return(0,i.jsx)(t.Consumer,{children:e=>(function(e,t){let[n]=e;return null==n?null:l().createPortal(r.Children.only(t),n)})(e,n)})}",
+        "LayerClassName": "layerContainer_a2fcaa",
+        "LayerContainer": "e=>{let{layerContext:t,className:n}=e,[,o]=r.useContext(t);return(0,i.jsx)(\"div\",{className:a()(c,n),ref:o})}",
+        "LayerProvider": "class d extends r.Component{componentWillUnmount(){this.state.layerContainerElement=null}render(){let{layerContext:e,children:t}=this.props,{layerContainerElement:n}=this.state;return(0,i.jsx)(e.Provider,{value:this.getContextValue(n),children:t})}constructor(...e){super(...e),this.state={layerContainerElement:null},this.setLayerContainerElement=e=>{this.setState({layerContainerElement:e})},this.getContextValue=(0,u.cachedFunction)(e=>[e,this.setLayerContainerElement])}}",
+        "createLayer": "function O(e){let t=r.createContext([null,()=>{}]),n={LayerProvider:e=>(0,i.jsx)(d,{layerContext:t,...e}),LayerContainer:e=>(0,i.jsx)(S,{layerContext:t,...e}),Layer:e=>(0,i.jsx)(N,{layerContext:t,...e}),layerContext:t};return n.LayerProvider.displayName=`${e}LayerProvider`,n.LayerContainer.displayName=`${e}LayerContainer`,n.Layer.displayName=`${e}Layer`,n}",
+        "getParentLayerContainer": "function A(e){let t=(0,I.default)(e,T.layerContainer);return _()(null!=t,\"Unexpected missing parent container\"),t}"
+    }
+}

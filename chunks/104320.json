@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "installApplication": "function f(e,t,n){let i=s.default.getApplication(e);if(null==i)return;let a=l.default.getTargetBuildId(i.id,t),r=l.default.getTargetManifests(i.id,t);null!=a&&null!=r&&null!=d.installApplication&&(0,d.installApplication)(i,t,a,r,n)}",
+        "performDefaultLibraryApplicationAction": "function h(e,t){let n=(0,r.getDefaultLibraryApplicationAction)(e,o.default,u.default),{analyticsParams:i}=t;switch(n){case c.LibraryApplicationActions.PLAY:return(0,a.playApplication)(e.id,e,{analyticsParams:i});case c.LibraryApplicationActions.INSTALL:return f(e.id,e.branchId,i.source);case c.LibraryApplicationActions.UPDATE:return p(e.id,e.branchId)}}",
+        "playApplication": "async function S(e,t,n){let a=c.default.getApplication(e);if(null==a)return;let{cloudSync:s=!0,cloudSyncForceHash:l=null,analyticsParams:r}=n;if(s&&null!=t){let e=t.branchId;try{await u.sync(t.id,e,l)}catch(n){(0,o.openModal)(n=>(0,i.jsx)(y,{libraryApplication:t,analyticsParams:r,branchId:e,...n}));return}}return m.default.track(h.AnalyticEvents.APPLICATION_OPENED,{application_id:a.id,application_name:a.name,type:h.AnalyticsGameOpenTypes.LAUNCH,distributor:null!=t?t.getDistributor():null,...r}),d.default.launch(a.id,t?.branchId)}",
+        "repairApplication": "function m(e,t,n){let a=s.default.getApplication(e);if(null!=a)return i.repairApplication(a,t,n)}",
+        "updateApplication": "function p(e,t){let n=s.default.getApplication(e);if(null!=n)return i.updateApplication(n,t,l.default.getTargetBuildId(n.id,t),l.default.getTargetManifests(n.id,t))}"
+    }
+}

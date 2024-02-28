@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){return(e={$$typeof:l,_currentValue:e,_currentValue2:e,_threadCount:0,Provider:null,Consumer:null,_defaultValue:null,_globalName:null}).Provider={$$typeof:u,_context:e},e.Consumer=e}"
-    }
-}

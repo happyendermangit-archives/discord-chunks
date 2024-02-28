@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(e){let{applicationId:t,activityConfigs:n,applications:a}=e,s=a?.find(e=>e.id===t)??i.default.getApplication(t),l=n.find(e=>e.application_id===t);return null==l||null==s?null:{activity:l,application:s}}"
+    }
+}

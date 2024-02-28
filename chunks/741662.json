@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "HiddenVisually": "function o(e){let{id:t,tag:n=\"span\",showOnFocus:r,children:o}=e;return(0,i.jsx)(n,{id:t,className:s({[a.hiddenVisually]:!r,[a.showOnFocus]:r}),children:o})}"
-    }
-}

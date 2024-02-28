@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getHighWaterMark": "function(t,e,s,n){var i,c,o,f=(i=e,c=n,o=s,null!=i.highWaterMark?i.highWaterMark:c?i[o]:null);if(null!=f){if(!(isFinite(f)&&Math.floor(f)===f)||f<0)throw new r(n?s:\"highWaterMark\",f);return Math.floor(f)}return t.objectMode?16:16384}"
+    }
+}

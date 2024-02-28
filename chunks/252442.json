@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function T(e){let t=(0,a.useStateFromStores)([f.default],()=>f.default.getTrendingCategories()),r=(0,I.useFavoriteGIFs)(),n=(0,E.useElementPools)();return(0,s.jsx)(v,{...e,...n,trendingCategories:t,favorites:r})}"
+    }
+}

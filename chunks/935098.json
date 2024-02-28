@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "sendReactionToActivity": "async e=>{let{reaction:t,altText:n,...i}=e,a=await I(i);(0,d.sendReaction)({file:a,altText:n,user:i.user,reaction:t})}",
+        "sendReplyToActivity": "async e=>{let{reply:t,altText:n,...i}=e,a=await I(i);(0,d.sendReply)({file:a,altText:n,user:i.user,reply:t})}"
+    }
+}

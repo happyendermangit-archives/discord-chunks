@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function d(e){let{popoutOpen:t,onClosePopout:n,onOpenPopout:r,...d}=e,c=t?u.default.Messages.POPOUT_RETURN:u.default.Messages.POPOUT_PLAYER;return(0,a.jsx)(l.default,{label:c,onClick:t?n:r,iconComponent:i.default,iconClassName:s({[o.popIn]:t}),...d})}"
-    }
-}

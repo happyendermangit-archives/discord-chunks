@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function i(e,t){return null!=t&&e.startsWith(`window:${t}`)}"
+    }
+}

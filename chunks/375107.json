@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e,t,n){if(null==e||null==t)return{valid:!1,reason:o.default.Messages.BUILD_OVERRIDE_INVALID};let{releaseChannel:i,expiresAt:u,validForUserIds:d,allowedVersions:c,targetBuildOverride:f}=e,p=Object.keys(f);if(0===a().intersection(p,t).length)return{valid:!1,reason:o.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_TARGETS.format({requestedTargets:p.map(e=>l.BUILD_OVERRIDE_TARGET_NAMES[e]??\"unknown\").join(\", \")})};if(null!=i&&i!==window.GLOBAL_ENV.RELEASE_CHANNEL){let e=i===r.PublicReleaseChannels.PTB?i.toUpperCase():`${i.charAt(0).toUpperCase()}${i.slice(1)}`;return{valid:!1,reason:o.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({releaseChannel:e})}}if(null!=c&&(null==n||!c.includes(n)))return{valid:!1,reason:o.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({releaseChannel:c.join(\", \")})};let m=null!=u?new Date(u).getTime():null;return null!=m&&m<Date.now()?{valid:!1,reason:o.default.Messages.BUILD_OVERRIDE_EXPIRED}:d.length>0&&!d.includes(s.default.getId())?{valid:!1,reason:o.default.Messages.BUILD_OVERRIDE_INVALID_USER}:{valid:!0}}"
+    }
+}

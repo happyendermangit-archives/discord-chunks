@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`Decrease ${e.fieldLabel}`",
+            "increase": "e=>`Increase ${e.fieldLabel}`",
+            "numberField": "Number field"
+        }
+    }
+}

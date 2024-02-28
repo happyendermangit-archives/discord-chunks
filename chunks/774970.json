@@ -1,0 +1,27 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "()=>{this.maybeFetchSubscriptions(),this.maybeFetchCountryCode(),this.maybeFetchMostRecentSubscription()}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "maybeFetchSubscriptions": "async()=>{let e=a.default.getCurrentUser();if(u.default.isPremium(e)){!_.default.hasFetchedSubscriptions()&&await (0,i.fetchSubscriptions)();let e=_.default.getPremiumSubscription();e?.paymentSourceId==null&&!E.default.applicationIdsFetched.has(I.PREMIUM_SUBSCRIPTION_APPLICATION)&&await (0,r.fetchUserEntitlementsForApplication)(I.PREMIUM_SUBSCRIPTION_APPLICATION)}}",
+            "maybeFetchMostRecentSubscription": "()=>{let e=a.default.getCurrentUser();null!=e&&!u.default.isPremium(e)&&null!=e.purchasedFlags&&((0,l.hasFlag)(e.purchasedFlags,I.PurchasedFlags.PREMIUM_TIER_1)||(0,l.hasFlag)(e.purchasedFlags,I.PurchasedFlags.PREMIUM_TIER_2))&&(0,i.fetchMostRecentSubscription)()}",
+            "maybeFetchCountryCode": "async()=>{let e=a.default.getCurrentUser();u.default.isPremium(e)&&!s.default.ipCountryCodeLoaded&&await this.fetchCountryCode()}",
+            "fetchCountryCode": "async()=>{await (0,i.fetchIpCountryCode)(),null!=s.default.ipCountryCode&&await (0,i.fetchPaymentSources)()}"
+        }
+    }
+}

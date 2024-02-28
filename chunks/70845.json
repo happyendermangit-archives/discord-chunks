@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e,t){switch(e){case l.SpoilerRenderSetting.ALWAYS:return!0;case l.SpoilerRenderSetting.IF_MODERATOR:return t;case l.SpoilerRenderSetting.ON_CLICK:default:return!1}}"
-    }
-}

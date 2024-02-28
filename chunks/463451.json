@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{isTryItOut:t,analyticsLocations:n,guildId:_}=e,f=(0,i.default)([c.default],()=>c.default.getCurrentUser()),E=(0,i.default)([u.default],()=>null!=_&&null!=f?u.default.getMember(_,f.id):null),T=null!=E?E.avatarDecoration:f?.avatarDecoration,I=(0,a.default)(n),{pendingAvatar:m,pendingAvatarDecoration:S,pendingErrors:C}=(0,i.useStateFromStoresObject)([l.default,s.default],()=>({pendingAvatar:t?l.default.getTryItOutAvatar():null!=_?s.default.getPendingAvatar():l.default.getPendingAvatar(),pendingAvatarDecoration:t?l.default.getTryItOutAvatarDecoration():null!=_?s.default.getPendingAvatarDecoration():l.default.getPendingAvatarDecoration(),pendingErrors:null!=_?s.default.getErrors().avatarDecoration:l.default.getErrors().avatarDecoration})),p=(0,r.useCallback)(e=>(0,o.setNewPendingAvatar)(e,f?.avatar),[f?.avatar]),P=(0,r.useCallback)(e=>{(0,o.setNewPendingAvatarDecoration)(_,e),null!=e&&I(e)},[I,_]);return{pendingAvatar:m,pendingAvatarDecoration:S,setPendingAvatar:t?d.setTryItOutAvatar:p,setPendingAvatarDecoration:t?d.setTryItOutAvatarDecoration:P,savedAvatarDecoration:T,pendingErrors:C}}"
+    }
+}

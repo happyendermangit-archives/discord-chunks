@@ -1,0 +1,41 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "APP_STATE_UPDATE": "function Y(e){let{state:t}=e;if(\"active\"!==t)return!1;let n=_.default.getChannelId();if(null==n)return!1;o.default.fetchNewLocalMessages(n,N.MAX_MESSAGES_PER_CHANNEL)}",
+                "OVERLAY_INITIALIZE": "function b(){let e=_.default.getChannelId();if(null!=e){let t=C.default.getChannel(e);if(null!=t){let e=(0,r.matchPath)(location.pathname,{path:N.Routes.CHANNEL(\":guild\",\":channel\",\":message\"),exact:!0});R({guildId:t.getGuildId(),channelId:t.id,messageId:e?.params?.message}),B(t.getGuildId(),t.id)}}}",
+                "CHANNEL_SELECT": "function P(e){let{guildId:t,channelId:n,messageId:a,jumpType:r}=e;R({guildId:t,channelId:n,messageId:a,jumpType:r}),B(t,n)}",
+                "VOICE_CHANNEL_SELECT": "function w(e){let{guildId:t,channelId:n}=e;R({guildId:t,channelId:n})}",
+                "THREAD_CREATE": "function V(e){let{channel:t,messageId:n}=e,a=t.guild_id;null!=a&&_.default.getChannelId(a)===t.id&&R({guildId:a,channelId:t.id,messageId:n})}",
+                "THREAD_LIST_SYNC": "()=>D()",
+                "CHANNEL_CREATE": "function V(e){let{channel:t,messageId:n}=e,a=t.guild_id;null!=a&&_.default.getChannelId(a)===t.id&&R({guildId:a,channelId:t.id,messageId:n})}",
+                "CHANNEL_PRELOAD": "function j(e){let{guildId:t,channelId:n,context:a}=e;a===N.CURRENT_APP_CONTEXT&&(R({guildId:t,channelId:n}),B(t,n))}",
+                "THREAD_CREATE_LOCAL": "function F(e){let{channelId:t}=e;o.default.fetchMessages({channelId:t,limit:N.MAX_MESSAGES_PER_CHANNEL})}",
+                "GUILD_CREATE": "()=>D()",
+                "MESSAGE_END_EDIT": "function H(e){let{response:t}=e;if(null==t||null==t.body)return null;if(t.body.code===N.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED){let e=t.body.retry_after;null!=e&&u.default.show({title:M.default.Messages.RATE_LIMITED,body:M.default.Messages.ANNOUNCEMENT_EDIT_RATE_LIMIT.format({retryAfterMinutes:Math.ceil(e/60)})})}}",
+                "LOAD_MESSAGES_SUCCESS": "function k(e){let{channelId:t,jump:n,isStale:a,isPreview:r=!1}=e;if(r)return;let i=G[t]??0;if(Date.now()-i<10*I.default.Millis.SECOND)return;G[t]=Date.now();let s=_.default.getChannelId(),l=E.default.getCurrentSidebarChannelId(s),u=t===s||t===l;a&&h.default.isConnected()&&u&&o.default.fetchMessages({channelId:t,limit:N.MAX_MESSAGES_PER_CHANNEL,jump:n})}",
+                "UPLOAD_FAIL": "function W(e){let{channelId:t,messageRecord:n}=e;null!=n&&l.default.dispatch({type:\"MESSAGE_SEND_FAILED\",channelId:t,messageId:n.id})}",
+                "CHANNEL_DELETE": "()=>D()",
+                "THREAD_DELETE": "()=>D()"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 1,
+                "values": "function values() { [native code] }"
+            },
+            "fetchMessages": "function R(e){let{guildId:t,channelId:n,messageId:r,forceFetch:i,isPreload:l,jumpType:u,skipLocalFetch:c,logFailures:p}=e;if(null==n){p&&y.log(\"Skipping fetch because channelId is null\");return}if((0,L.isStaticChannelRoute)(n)){p&&y.log(\"Skipping fetch because channelId is a static route\");return}let g=C.default.getChannel(n);if(g?.type===N.ChannelTypes.GUILD_STORE||g?.type!=null&&N.ChannelTypesSets.GUILD_THREADS_ONLY.has(g.type)){p&&y.log(\"Skipping fetch because channel is a forum/store\");return}let E=f.default.getOrCreate(n);A.AttachmentLinkRefreshExperiment.getCurrentConfig({location:\"fetch_messages\"}).enabled&&E.some(v.messageHasExpiredAttachmentUrl)&&(y.log(\"Found expired attachment link, clearing messages\"),f.default.clear(n),E=f.default.getOrCreate(n)),null!=E.jumpTargetId&&null==r&&(E=E.mutate({jumpTargetId:null,jumped:!1,jumpType:d.JumpTypes.ANIMATED}),f.default.commit(E)),null!=E.focusTargetId&&null==r&&(E=E.mutate({focusTargetId:null}),f.default.commit(E));let _=i;if(!l||h.default.isConnected()||E.loadingMore?E.loadingMore||E.ready&&!E.cached?null!=r?_=!0:p&&y.log(\"Skipping fetch because no other conditions matched\"):null==t||null!=m.default.getGuild(t)?_=!0:p&&y.log(\"Skipping fetch we are connected and have loaded messages\"):_=!0,_){if(f.default.commit(E.mutate({loadingMore:!0})),null!=r)o.default.jumpToMessage({channelId:n,messageId:r,flash:!0,isPreload:l,skipLocalFetch:c,jumpType:u});else if(g?.isThread()&&function(e){if(S.default.hasOpenedThread(e))return!1;if(null==a&&(a=s.default.get(x,{})??{}),e in a)return!1;a[e]=Date.now();let t=Date.now()-O;for(let e in a)a[e]<t&&delete a[e];return s.default.set(x,a),!0}(n))y.log(`Jumping to start of thread ${g.id}`),o.default.fetchMessages({channelId:n,limit:N.MAX_MESSAGES_PER_CHANNEL,jump:{messageId:n,flash:!1},isPreload:l,skipLocalFetch:c});else if(g?.isThread()&&S.default.hasTrackedUnread(g.id)&&!E.ready){let e=S.default.getTrackedAckMessageId(g.id);y.log(`Jumping to most recent message in thread ${g.id} - ${e}`),o.default.fetchMessages({channelId:n,limit:N.MAX_MESSAGES_PER_CHANNEL,jump:{messageId:e,flash:!1,offset:1},isPreload:l,skipLocalFetch:c})}else o.default.fetchMessages({channelId:n,limit:N.MAX_MESSAGES_PER_CHANNEL,isPreload:l,skipLocalFetch:c,jump:{jumpType:d.JumpTypes.ANIMATED}})}}",
+            "loadSelectedChannelIfNecessary": "function D(){let{isPreload:e,skipLocalFetch:t,logFailures:n}=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},a=_.default.getChannelId();if(null!=a){let r=C.default.getChannel(a);null!=r?((0,g.isTextChannel)(r.type)?R({guildId:r.getGuildId(),channelId:r.id,isPreload:e,skipLocalFetch:t,logFailures:n}):n&&y.log(\"Skipping fetch because the selected channel is not a text channel\"),B(r.getGuildId(),r.id)):n&&y.log(\"Skipping fetch because channel is null\")}else n&&y.log(\"Skipping fetch because there is no selected channel\")}",
+            "_initialize": "_initialize(){l.default.subscribe(\"CONNECTION_OPEN\",b)}",
+            "_terminate": "_terminate(){l.default.unsubscribe(\"CONNECTION_OPEN\",b)}"
+        }
+    }
+}

@@ -1,3 +1,0 @@
-{
-    "exports": "function r(e){if(e&&\"object\"==typeof e){var t=e.which||e.keyCode||e.charCode;t&&(e=t)}if(\"number\"==typeof e)return s[e];var n=String(e),r=a[n.toLowerCase()];if(r)return r;var r=i[n.toLowerCase()];return r?r:1===n.length?n.charCodeAt(0):void 0}"
-}

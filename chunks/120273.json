@@ -1,24 +1,3 @@
 {
-    "exports": {
-        "default": {
-            "initializedCount": 0,
-            "actions": {
-                "EMOJI_INTERACTION_INITIATED": "handleInteraction(e){let{interaction:_}=e;if([r.EmojiInteractionPoint.EmojiButtonMouseEntered].includes(_)){let e=o.default.getGuildId();(0,n.maybeFetchTopEmojisByGuild)(e)}}"
-            },
-            "stores": {
-                "toJSON": "function(){return Array.from(this)}",
-                "get": "function get() { [native code] }",
-                "set": "function set() { [native code] }",
-                "has": "function has() { [native code] }",
-                "delete": "function delete() { [native code] }",
-                "clear": "function clear() { [native code] }",
-                "entries": "function entries() { [native code] }",
-                "forEach": "function forEach() { [native code] }",
-                "keys": "function keys() { [native code] }",
-                "size": 0,
-                "values": "function values() { [native code] }"
-            },
-            "handleInteraction": "handleInteraction(e){let{interaction:_}=e;if([r.EmojiInteractionPoint.EmojiButtonMouseEntered].includes(_)){let e=o.default.getGuildId();(0,n.maybeFetchTopEmojisByGuild)(e)}}"
-        }
-    }
+    "exports": "/assets/49a46c6c4e39c0f2980c.png"
 }

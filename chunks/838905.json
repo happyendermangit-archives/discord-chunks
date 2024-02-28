@@ -1,0 +1,48 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "WAIT_FOR_REMOTE_SESSION": "()=>this.handleWaitForRemoteSession()",
+                "POST_CONNECTION_OPEN": "()=>this.handleSessionsChanged()",
+                "SESSIONS_REPLACE": "()=>this.handleSessionsChanged()",
+                "AUDIO_TOGGLE_SELF_DEAF": "e=>this.handleAudioStateToggle(e)",
+                "AUDIO_TOGGLE_SELF_MUTE": "e=>this.handleAudioStateToggle(e)",
+                "VOICE_STATE_UPDATES": "e=>this.handleVoiceStateUpdates(e)",
+                "CONSOLE_COMMAND_UPDATE": "e=>this.handleConsoleCommandUpdate(e)",
+                "PASSIVE_UPDATE_V1": "e=>this.handleVoiceStateUpdates(e)",
+                "REMOTE_SESSION_DISCONNECT": "()=>this.handleRemoteSessionDisconnect()"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "rollbackCommandTimeout": {
+                "start": "start(e,t){let n=!(arguments.length>2)||void 0===arguments[2]||arguments[2];(!this.isStarted()||n)&&(this.stop(),this._ref=window.setTimeout(()=>{this._ref=null,t()},e))}",
+                "stop": "stop(){null!=this._ref&&(clearTimeout(this._ref),this._ref=null)}",
+                "isStarted": "isStarted(){return null!=this._ref}"
+            },
+            "awaitRemoteTimeout": {
+                "start": "start(e,t){let n=!(arguments.length>2)||void 0===arguments[2]||arguments[2];(!this.isStarted()||n)&&(this.stop(),this._ref=window.setTimeout(()=>{this._ref=null,t()},e))}",
+                "stop": "stop(){null!=this._ref&&(clearTimeout(this._ref),this._ref=null)}",
+                "isStarted": "isStarted(){return null!=this._ref}"
+            },
+            "maybeConnect": "e=>{let t=function(e){let t=N.default.getAwaitingRemoteSessionInfo();return e.find(e=>{let n=C.GAME_CONSOLE_SESSIONS.has(e.clientInfo.os),i=null!=c.default.getVoiceStateForSession(l.default.getId(),e.sessionId),r=null==t||(0,O.coercePlatformTypeToConsoleType)(t.type)===e.clientInfo.os;return n&&r&&i})}(e);if(null==t)return null;this.awaitRemoteTimeout.stop(),(0,S.connectToRemote)(t.sessionId);let n=c.default.getVoiceStateForSession(l.default.getId(),t.sessionId);null!=n&&m(n)}",
+            "handleAudioStateToggle": "e=>{let{syncRemote:t,context:n}=e;if(!t||n!==h.MediaEngineContextTypes.DEFAULT)return;let i=u.default.isSelfDeaf(),r=u.default.isSelfMute(),o=l.default.getId(),a=N.default.getRemoteSessionId();if(null==a)return;let s=c.default.getVoiceStateForSession(o,a);if(null!=s)(s.selfDeaf!==i||s.selfMute!==r)&&((0,S.remoteVoiceStateUpdate)(a,{selfDeaf:i,selfMute:r}),this.rollbackCommandTimeout.start(3e3,()=>{m(s)}))}",
+            "handleVoiceStateUpdates": "e=>{let t=e.voiceStates??[],n=N.default.getRemoteSessionId();if(null==n){let e=t.map(e=>{let{sessionId:t}=e;return null!=t?T.default.getSessionById(t):null}).filter(d.isNotNullish);return this.maybeConnect(e)}let i=t.find(e=>{let{sessionId:t}=e;return t===n});null!=i&&(this.rollbackCommandTimeout.stop(),m(i))}",
+            "handleSessionsChanged": "()=>{let e=N.default.getRemoteSessionId();null!=e&&null==T.default.getSessionById(e)&&(0,S.disconnectRemote)(),null==e&&this.maybeConnect(Object.values(T.default.getSessions()))}",
+            "handleWaitForRemoteSession": "()=>{this.awaitRemoteTimeout.start(6e4,()=>{(0,S.disconnectRemote)(),a.default.show({title:L.default.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_TITLE,body:L.default.Messages.GAME_CONSOLE_TRANSFER_TIMEOUT_BODY})})}",
+            "handleConsoleCommandUpdate": "e=>{let{id:t,result:n,error:i}=e;if(\"failed\"!==n&&\"n/a\"!==n||null==i)return;D.info(\"Console command Error result:\",n,i);let r=N.default.getAwaitingRemoteSessionInfo();if(r?.commandId!==t)return;let o=N.default.getDevice(r.type,r.deviceId??\"\"),a=(0,R.default)(o??{id:\"id\",platform:L.default.Messages.STATUS_UNKNOWN,name:L.default.Messages.STATUS_UNKNOWN},n,i);null!=a&&A.default.showSelfDismissableAlert({title:a.title,body:a.body,errorCodeMessage:a.errorCodeMessage,reconnectPlatformType:a.isAccountLinkError?r.type:void 0}),C.USER_ACTION_REQUIRED_ERROR_CODES.has(i.code)&&this.awaitRemoteTimeout.isStarted()?this.awaitRemoteTimeout.start(18e4,()=>(0,S.disconnectRemote)(),!0):\"failed\"===n&&(0,S.disconnectRemote)()}",
+            "handleRemoteSessionDisconnect": "()=>{this.awaitRemoteTimeout.stop()}"
+        }
+    }
+}

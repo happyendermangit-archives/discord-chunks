@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "type": "function(e){let{channelId:t,type:n,canAttachFiles:a}=e;return a?(0,i.jsx)(N,{channelId:t,type:n}):null}",
+            "compare": null
+        }
+    }
+}

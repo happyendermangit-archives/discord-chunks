@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class i extends l.default{static fromPath(e){return new i({id:e,path:e})}constructor(e){super(),this.id=e.id,this.path=e.path}}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "ToastContainer": "function c(){let e=(0,E.useToastStore)(e=>e.currentToast),t=r.useRef(e?.options?.position??l.TOAST_DEFAULT_OPTIONS.position),n=r.useRef(e?.options?.duration??l.TOAST_DEFAULT_OPTIONS.duration),u=(0,a.useStateFromStores)([s.default],()=>s.default.useReducedMotion);r.useEffect(()=>{null!=e&&(t.current=e.options?.position??l.TOAST_DEFAULT_OPTIONS.position,n.current=e.options?.duration??l.TOAST_DEFAULT_OPTIONS.duration)},[e]);let I=r.useMemo(()=>T[e?.options?.position??t.current],[e]),c=(0,o.useTransition)(e,{keys:e=>e?.id??\"\",immediate:u,...I.transition});return r.useEffect(()=>{null!=e&&setTimeout(()=>{(0,E.popToast)()},n.current)},[e]),(0,i.jsx)(\"div\",{className:I.styles,children:c((e,t)=>null===t?null:(0,i.jsx)(o.animated.div,{style:e,children:(0,i.jsx)(_.Toast,{...t})},t.id))})}"
+    }
+}

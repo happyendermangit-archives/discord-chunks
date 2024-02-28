@@ -1,0 +1,29 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "VOICE_CHANNEL_SELECT": "e=>this.handleVoiceChannelSelect(e)",
+                "GUILD_MEMBER_UPDATE": "e=>this.handleGuildMemberUpdate(e)",
+                "LOGOUT": "()=>this.handleLogout()"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleVoiceChannelSelect": "e=>{let{channelId:t,guildId:n}=e,{enableHangStatus:i,setDefaultStatus:r}=E.HangStatusExperiment.getCurrentConfig({guildId:n??u.EMPTY_STRING_GUILD_ID,location:\"HangStatusManager\"},{autoTrackExposure:!0});if(null==n&&null==t){this.handleDisconnectFromVoiceChannel(),this.previousVoiceChannelId=t;return}if(!i||t===this.previousVoiceChannelId)return;if(this.previousVoiceChannelId=t,null==n||null==t)return;let s=o.default.getChannel(t);if(null==s||s.type!==u.ChannelTypes.GUILD_VOICE||!a.default.can(u.Permissions.SET_VOICE_CHANNEL_STATUS,s)||null!=l.default.getCurrentHangStatus())return;let I=l.default.getCurrentDefaultStatus();if(I?.expiresAt!=null&&I?.expiresAt>=Date.now()){if(I.status===u.HangStatusTypes.CUSTOM&&null!=I.customHangStatus){let{status:e,emoji:t}=I.customHangStatus;(0,_.updateCustomHangStatus)(e,t);return}if(null==I.status)return;else{(0,_.updateHangStatus)(I.status);return}}r&&(0,_.updateHangStatus)(u.HangStatusTypes.CHILLING)}",
+            "handleGuildMemberUpdate": "e=>{let{user:t,guildId:n}=e;if(t.id!==r.default.getId())return;let i=s.default.getCurrentClientVoiceChannelId(n);if(null==i||null==l.default.getCurrentHangStatus())return;let E=o.default.getChannel(i);!a.default.can(u.Permissions.SET_VOICE_CHANNEL_STATUS,E)&&(0,_.clearHangStatus)()}",
+            "handleDisconnectFromVoiceChannel": "()=>{(0,_.clearHangStatus)()}",
+            "handleLogout": "()=>{this.handleDisconnectFromVoiceChannel()}"
+        }
+    }
+}

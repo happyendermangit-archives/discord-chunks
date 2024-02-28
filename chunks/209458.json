@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "default": "function r(e){return(0,a.useStateFromStores)([l.default],()=>{if(e?.id==null)return!1;let t=l.default.isFullServerPreview(e.id),n=l.default.isOnboardingEnabled(e.id);return t&&n})||e?.hasFeature(i.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS)}",
+        "isGuildOnboardingAvailable": "function s(e){if(null==e)return!1;let t=l.default.isFullServerPreview(e.id),n=l.default.isOnboardingEnabled(e.id);return t&&n||e.hasFeature(i.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS)}"
+    }
+}

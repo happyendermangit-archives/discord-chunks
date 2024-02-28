@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e,t,n){(0,a.default)(2,arguments);var u,s,l,c,d,f,p,h,m=(0,i.getDefaultOptions)(),y=(0,o.default)(null!==(u=null!==(s=null!==(l=null!==(c=null==n?void 0:n.weekStartsOn)&&void 0!==c?c:null==n?void 0:null===(d=n.locale)||void 0===d?void 0:null===(f=d.options)||void 0===f?void 0:f.weekStartsOn)&&void 0!==l?l:m.weekStartsOn)&&void 0!==s?s:null===(p=m.locale)||void 0===p?void 0:null===(h=p.options)||void 0===h?void 0:h.weekStartsOn)&&void 0!==u?u:0);if(!(y>=0&&y<=6))throw RangeError(\"weekStartsOn must be between 0 and 6 inclusively\");var v=(0,r.default)(e),g=(0,o.default)(t),b=v.getUTCDay();return v.setUTCDate(v.getUTCDate()+(((g%7+7)%7<y?7:0)+g-b)),v}"
+    }
+}

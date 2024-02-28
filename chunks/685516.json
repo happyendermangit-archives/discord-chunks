@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function g(e,t,n,r){var a,o,s,d=[].concat(\"clippingParents\"===t?(a=e,o=(0,i.default)((0,f.default)(a)),s=[\"absolute\",\"fixed\"].indexOf((0,l.default)(a).position)>=0&&(0,c.isHTMLElement)(a)?(0,u.default)(a):a,(0,c.isElement)(s)?o.filter(function(e){return(0,c.isElement)(e)&&(0,p.default)(e,s)&&\"body\"!==(0,h.default)(e)}):[]):[].concat(t),[n]),m=d[0],g=d.reduce(function(t,n){var a=v(e,n,r);return t.top=(0,y.max)(a.top,t.top),t.right=(0,y.min)(a.right,t.right),t.bottom=(0,y.min)(a.bottom,t.bottom),t.left=(0,y.max)(a.left,t.left),t},v(e,m,r));return g.width=g.right-g.left,g.height=g.bottom-g.top,g.x=g.left,g.y=g.top,g}"
+    }
+}

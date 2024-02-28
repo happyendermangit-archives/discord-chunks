@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useDragSourceMonitor": "function i(){var e=(0,o.useDragDropManager)();return(0,r.useMemo)(function(){return new a.DragSourceMonitorImpl(e)},[e])}"
+    }
+}

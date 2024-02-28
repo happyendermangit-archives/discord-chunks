@@ -1,0 +1,34 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "OVERLAY_FOCUSED": "function G(e){if(h.verbose(\"OVERLAY_FOCUSED\",e),f.gameSetAllUnfocused(),null==e.pid)return;let t=f.getByPid(e.pid);if(null==t){h.error(\"OVERLAY_FOCUSED: Game not found\",e,f.debug);return}t.gameSetFocused(!0)}",
+                "OVERLAY_NOTIFICATION_EVENT": "function U(e){h.verbose(\"OVERLAY_NOTIFICATION_EVENT\",e);let t=f.getByName(e.gameName??e.gameId);if(null==t){h.error(\"OVERLAY_NOTIFICATION_EVENT: Game not found.\",e,f.debug);return}t.notificationAnalytics.increment(e.notificationType,e.action)}",
+                "OVERLAY_SET_UI_LOCKED": "function M(e){let t=f.getByPid(e.pid);if(h.verbose(\"OVERLAY_SET_UI_LOCKED\",t),null==t){h.error(\"OVERLAY_SET_UI_LOCKED: Unable to find game\",e,f.debug);return}t.setLocked(e.locked)}",
+                "OVERLAY_WIDGET_CHANGED": "function g(e){h.verbose(\"OVERLAY_WIDGET_CHANGED\",e);let t=f.getByName(e.gameName??e.gameId);if(null==t){h.error(\"OVERLAY_WIDGET_CHANGED: Game not found\",e,f.debug);return}let n=t.widgetAnalytics.getByWidget(e.widgetType);null!=n&&(!n.initialized&&(n.initialized=!0,n.pinned=e.pinned),n.pinned!==e.pinned&&++n.pinnedToggledCount,n.pinned=e.pinned,n.visibleDuration.toggle(e.visible))}",
+                "OVERLAY_MESSAGE_EVENT_ACTION": "function v(e){h.verbose(\"OVERLAY_MESSAGE_EVENT_ACTION\",e);let t=f.getByName(e.gameName??e.gameId);if(null==t){h.error(\"OVERLAY_MESSAGE_EVENT_ACTION: Game not found\",e,f.debug);return}switch(e.eventType){case\"ack\":++t.overlayMessageAckCount;break;case\"create\":++t.overlayMessageCreateCount}}",
+                "RUNNING_GAMES_CHANGE": "function P(e){for(let t of(h.verbose(\"handleRunningGamesChange\",e),e.added)){f.incrementConcurrentGameCount();let e=f.create(t);h.verbose(\"handleRunningGamesChange added\",t,e)}for(let t of e.removed)f.destroy(t),h.verbose(\"handleRunningGamesChange removed\",t)}",
+                "SOUNDBOARD_SET_OVERLAY_ENABLED": "function y(e){h.verbose(\"SOUNDBOARD_SET_OVERLAY_ENABLED\",e);let t=f.getByPid(e.pid);if(null==t){h.error(\"SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found\",e,f.debug);return}t.setSoundboardShown(e.enabled,!!e.enabled&&(e.keepOpen??!1))}",
+                "MESSAGE_ACKED": "function b(e){h.verbose(\"MESSAGE_ACKED\",e),f.desktopMessageEvent(\"ack\")}",
+                "MESSAGE_CREATE": "function B(e){e.message.state===R.MessageStates.SENDING&&f.desktopMessageEvent(\"created\")}",
+                "WINDOW_FOCUS": "function H(e){h.verbose(\"WINDOW_FOCUS\",e);let t=(0,A.getMainWindowId)();if(e.windowId!==t){h.verbose(\"WINDOW_FOCUS: Not main window\",{action:e,mainWindowId:t});return}f.desktopSetFocused(e.focused)}",
+                "RTC_CONNECTION_STATE": "handleRTCConnectionState(e){let t=(e.channelId??\"unknown\")+e.context;switch(e.state){case R.RTCConnectionStates.RTC_CONNECTED:F.connections.add(t);break;case R.RTCConnectionStates.DISCONNECTED:F.connections.delete(t)}let n=F.hasConnection();F.previousHasConnection!==n&&(f.toggleRtcConnection(n),F.previousHasConnection=n)}",
+                "AUDIO_TOGGLE_SELF_MUTE": "function w(e){null!=(0,N.default)()&&(h.verbose(\"AUDIO_TOGGLE_SELF_MUTE\",e),f.handleMuteToggled())}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            }
+        }
+    }
+}

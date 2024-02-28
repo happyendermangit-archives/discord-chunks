@@ -1,0 +1,25 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "VOICE_CHANNEL_EFFECT_SEND": "function L(e){let{emoji:t,channelId:n,userId:i}=e,a=s.default.getId(),_=u.default.getEnabled();if(null!=t){if(_&&(0,I.default)(t.name))return function(e,t,n){let i=A(t,n);if(null!=u.default.getWaitingHighFive(n,t))return;let[r,a]=Object.entries(R).find(e=>{let[t]=e;return t!==i})??[];if(null!=r&&null!=a)a.cancel(),h.play(),delete R[r],(0,l.completeHighFive)(r.split(\":\")[0],t,n,e);else{(0,l.queueHighFive)(e,t,n),C.play();let i=new o.DelayedCall(c,()=>{delete R[t],(0,l.removeHighFive)(t,n)});R[t]=i,i.delay()}}(t.name,i,n);i===a&&(O=[...O,t.name].slice(-1*S),r().isEqual(O,d)?(C.play(),N.stop(),O=[],(0,l.setHighFiveEnabled)(!_)):N.start(T,()=>O=[]))}}",
+                "HIGH_FIVE_COMPLETE": "function D(e){let{completingUserId:t,waitingUserId:n,channelId:i}=e,r=A(t+n,i,!0);R[r]=new o.DelayedCall(550,()=>{delete R[r],(0,l.clearCompletedHighFive)(t,n,i)}),R[r].delay()}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "_terminate": "_terminate(){Object.values(R).forEach(e=>e.cancel()),R={}}"
+        }
+    }
+}

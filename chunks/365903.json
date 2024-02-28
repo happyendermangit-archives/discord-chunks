@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "applyPublicBuildOverride": "async function d(e){try{let t=await a.default.put({url:(0,r.getAPIEndpoint)(\"/__development/link\"),body:{payload:e,token:s.default.getToken(),version:r.APP_VERSION},oldFormErrors:!0});return await i(t),t}catch(e){return e}}",
+        "applyStaffBuildOverride": "async function u(e){try{let t=await a.default.put({url:(0,r.getAPIEndpoint)(o),body:{overrides:e,version:r.APP_VERSION},headers:{Authorization:s.default.getToken()??\"\"},oldFormErrors:!0});return await i(t),t}catch(e){return e}}",
+        "clearBuildOverride": "async function c(){let e=await a.default.delete({url:(0,r.getAPIEndpoint)(o),oldFormErrors:!0});return await i(e),e}",
+        "getPublicBuildOverrideLink": "function f(e){return a.default.post({url:(0,r.getAPIEndpoint)(\"/__development/create_build_override_link\"),body:e,headers:{Authorization:s.default.getToken()??\"\"},oldFormErrors:!0}).then(e=>({url:e.body.url,error:!1}),e=>400===e.status?{url:!1,error:e.body}:{url:!1,error:`Error making API request (${e.status})`})}"
+    }
+}

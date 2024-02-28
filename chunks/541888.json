@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "getCommandContext": "function s(e){return{channel:e,guild:null!=e.guild_id?a.default.getGuild(e.guild_id):null}}",
+        "useCommandContext": "function l(e){return i.useMemo(()=>s(e),[e])}"
+    }
+}

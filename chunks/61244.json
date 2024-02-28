@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class d extends i.PureComponent{static #e=this.defaultProps={width:0,height:0,alt:\"\"};constructor(e){super(e),this.unmounting=!1,this.state={loaded:!1},this.initialize()}componentDidUpdate(e){e.src!==this.props.src&&this.setState({loaded:!1},()=>this.initialize())}initialize(){u(this.props.src).then(()=>{!this.unmounting&&this.setState({loaded:!0})})}componentWillUnmount(){this.unmounting=!0}render(){let{className:e,src:t,alt:n,width:i,height:r,onLoad:u,style:d,imageClassName:l}=this.props,{loaded:f}=this.state;return(0,s.jsx)(\"div\",{className:e,style:{...d,width:i,height:r},children:(0,s.jsx)(\"img\",{className:a()(o.image,l,{[o.loaded]:f}),width:i,height:r,src:t,alt:n,onLoad:u})})}}"
+    }
+}

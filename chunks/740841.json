@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "updateGuildSelfMember": "function r(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d.default.isFullServerPreview(e)){(0,l.updateImpersonatedData)(e,{memberOptions:t});return}return i.default.dispatch({type:\"GUILD_MEMBER_UPDATE_LOCAL\",guildId:e,roles:t.roles,flags:t.flags}),a.default.patch({url:s.Endpoints.SET_GUILD_MEMBER(e),body:t,oldFormErrors:!!n||void 0})}"
+    }
+}

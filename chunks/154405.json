@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getDynamicSamplingContextFromClient": "function a(t,e,n){let a=e.getOptions(),{publicKey:s}=e.getDsn()||{},{segment:o}=n&&n.getUser()||{},l=(0,r.dropUndefinedKeys)({environment:a.environment||i.DEFAULT_ENVIRONMENT,release:a.release,user_segment:o,public_key:s,trace_id:t});return e.emit&&e.emit(\"createDsc\",l),l}"
+    }
+}

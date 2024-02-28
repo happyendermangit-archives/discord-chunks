@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "shouldDisableUserPresenceInChannel": "function i(e,t){let n=l.default.getChannel(t);return null!=n&&e.bot&&n.isPrivate()&&null==n.rawRecipients.find(t=>t.id===e.id)}"
-    }
-}

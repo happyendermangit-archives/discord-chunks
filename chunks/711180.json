@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "dismissApplicationSubscriptionExpirationNotice": "function o(t){i.default.dispatch({type:\"APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED\",guildId:t})}",
+        "fetchAllSubscriptionListingsDataForApplication": "async function l(t,e){i.default.dispatch({type:\"APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS\",applicationId:t});try{let n=await r.getApplicationSubscriptionGroupListingsForApplication(t,e);return i.default.dispatch({type:\"APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS\",applicationId:t,groupListing:n}),n}catch(e){i.default.dispatch({type:\"APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE\",applicationId:t})}}",
+        "fetchEntitlementsForGuild": "async function a(t){i.default.dispatch({type:\"APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS\",guildId:t});try{let e=await r.getEntitlementsForGuild(t);i.default.dispatch({type:\"APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS\",guildId:t,entitlements:e})}catch(e){i.default.dispatch({type:\"APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE\",guildId:t})}}",
+        "fetchSubscriptionListingForPlan": "async function s(t){i.default.dispatch({type:\"APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN\",planId:t});try{let e=await r.getSubscriptionGroupForSubscriptionPlan(t);for(let n of(i.default.dispatch({type:\"APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS\",groupListing:e}),e.subscription_listings??[]))n.subscription_plans[0].id===t&&await u.fetchSubscriptionPlansForSKU(n.id,void 0,void 0,!0)}catch(t){}}"
+    }
+}

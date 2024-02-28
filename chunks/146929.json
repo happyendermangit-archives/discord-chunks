@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>`${e.fieldLabel}\\u{3092}\\u{7E2E}\\u{5C0F}`",
+            "increase": "e=>`${e.fieldLabel}\\u{3092}\\u{62E1}\\u{5927}`",
+            "numberField": "数値フィールド"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "openMemberVerificationModal": "openMemberVerificationModal(e,t){f(e);let r=async t=>{await a.default.submitVerificationForm(e,t)};(0,i.openModalLazy)(async()=>{let{default:t}=await n.el(\"34162@1241:1287\").then(n.bind(n,\"51687\"));return n=>(0,s.jsx)(t,{...n,guildId:e,onComplete:r,onClose:function(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(!e){if(o.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges){(0,o.setShowWarning)(!0);return}l()}n.onClose()}})},{modalKey:u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY,onCloseRequest:()=>{l(),o.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges?(0,o.setShowWarning)(!0):(0,i.closeModal)(u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)},onCloseCallback:t})}"
+    }
+}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "initialize": "initialize(){(0,n.isDesktop)()&&(c.default.on(\"NAVIGATE_BACK\",(e,a)=>{r(a,i.MouseKeyCodes.Back)&&(0,s.back)()}),c.default.on(\"NAVIGATE_FORWARD\",(e,a)=>{r(a,i.MouseKeyCodes.Forward)&&(0,s.forward)()}))}"
-        }
-    }
-}

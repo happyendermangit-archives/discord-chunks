@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(){for(var e=arguments.length,t=Array(e),n=0;n<e;n++)t[n]=arguments[n];let[r,o]=i.useState(void 0),[a,s]=i.useState(void 0),_=i.useRef(null);return i.useLayoutEffect(()=>{let e=_.current,t=e?.ownerDocument.defaultView;if(null!=e&&null!=t){let n=new t.ResizeObserver(e=>{let t=e[0],n=t?.borderBoxSize?.[0]?.inlineSize,i=t?.borderBoxSize?.[0]?.blockSize;if(null==n||null==i){let e=_.current;if(null!=e){let t=window.getComputedStyle(e);null==n&&(n=parseFloat(t.width??\"0\")),null==i&&(i=parseFloat(t.height??\"0\"))}}o(n),s(i)});return n.observe(e),()=>n.disconnect()}},[_.current,...t]),{ref:_,width:r,height:a}}"
+    }
+}

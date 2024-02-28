@@ -1,0 +1,3 @@
+{
+    "exports": "function(e,t,n,r,a){this.directMap[e+\":\"+n]=t;var o,i=(e=e.replace(/\\s+/g,\" \")).split(\" \");if(i.length>1){this.bindSequence(e,i,t,n);return}o=this.getKeyInfo(e,n),this.callbacks[o.key]=this.callbacks[o.key]||[],this.getMatches(o.key,o.modifiers,{type:o.action},r,e,a),this.callbacks[o.key][r?\"unshift\":\"push\"]({callback:t,modifiers:o.modifiers,action:o.action,seq:r,level:a,combo:e})}"
+}

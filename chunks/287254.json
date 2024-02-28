@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "container": "container__65984",
+        "header": "header_bcce9e",
+        "mainTableContainer": "mainTableContainer_d09fd4",
+        "movedTable": "movedTable_dbcb19",
+        "noResultsContainer": "noResultsContainer__0e8be",
+        "page": "page_f75c12",
+        "settingsColumn": "settingsColumn_da74b9 customColumn__0b6a6",
+        "settingsContainer": "settingsContainer__22cc5 customContainer__64260",
+        "settingsContent": "settingsContent_c69252 contentColumnDefault__78de3 settingsColumn_da74b9 customColumn__0b6a6",
+        "settingsScroller": "settingsScroller_c8351a customScroller_b96e1e contentRegionScroller__9ae20",
+        "tableContainer": "tableContainer__9ea2d"
+    }
+}

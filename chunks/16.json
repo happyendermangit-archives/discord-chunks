@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "MENU_ITEM_COLORS": {
+            "default": "colorDefault_e361cf",
+            "brand": "colorBrand__9bb0f colorDefault_e361cf",
+            "danger": "colorDanger__08c25 colorDefault_e361cf",
+            "premium": "colorPremium__54bff colorDefault_e361cf",
+            "premium-gradient": "colorPremiumGradient__92279 colorDefault_e361cf",
+            "success": "colorSuccess__83966 colorDefault_e361cf"
+        }
+    }
+}

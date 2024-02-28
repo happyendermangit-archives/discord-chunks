@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "handleVoiceConnect": "async handleVoiceConnect(t){let{channel:e,connected:I,needSubscriptionToAccess:A,locked:T=!1,routeDirectlyToChannel:C=!1,bypassChangeModal:v,bypassGuildIdCheck:S=!1}=t;e.isThread()&&(await s.default.unarchiveThreadIfNecessary(e.id),!d.default.hasJoined(e.id)&&await s.default.joinThread(e,\"Join Voice\"));let N=u.default.getRemoteSessionId(),p=f.default.getVoiceStateForSession(o.default.getId(),N),y=(null==p?void 0:p.channelId)===e.id,h=y||c.default.getChannelId()===f.default.getCurrentClientVoiceChannelId(e.guild_id);return!v&&!T&&(0,_.shouldShowVoiceChannelChangeConfirmation)(e)?new Promise(t=>{(0,l.openModalLazy)(async()=>{let{default:l}=await i.el(\"371895\").then(i.bind(i,\"371895\"));return i=>(0,n.jsx)(l,{channel:e,onConfirm:()=>t(this.handleVoiceConnect({channel:e,connected:I,needSubscriptionToAccess:A,routeDirectlyToChannel:C,locked:T,bypassChangeModal:!0})),...i})})}):(!T&&!I&&a.default.selectVoiceChannel(e.id),!__OVERLAY__&&(I||h||A||C)&&!function(t){let e=arguments.length>1&&void 0!==arguments[1]&&arguments[1],i=t.getGuildId();if(null==i&&!e)throw Error(\"VoiceChannel, transitionTo: Channel does not have a guildId\");(0,r.transitionTo)(E.Routes.CHANNEL(i,t.id))}(e,S),!0)}"
-        }
-    }
-}

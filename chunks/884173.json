@@ -1,0 +1,22 @@
+{
+    "exports": {
+        "DEV_PID": -2,
+        "OVERLAY_DEFAULT_RESOLUTION": {
+            "width": 3840,
+            "height": 2160
+        },
+        "OVERLAY_LAYOUT_ID": "overlay_default",
+        "OVERLAY_MIN_RESOLUTION": {
+            "width": 768,
+            "height": 432
+        },
+        "OVERLAY_VERSION": 2,
+        "getPID": "function I(){if(void 0!==i)return i;let e=parseInt(new URLSearchParams(window.location.search).get(\"pid\")??\"\",10);return isNaN(e)&&(e=-1),i=e}",
+        "getRPCAuthToken": "function c(){return new URLSearchParams(window.location.search).get(\"rpc_auth_token\")}",
+        "isOutOfProcess": "function N(){return void 0!==r?r:r=(new URLSearchParams(window.location.search).get(\"oop\")??\"\")===\"true\"}",
+        "setOutOfProcessSupport": "function S(e){u=e}",
+        "setPID": "function T(e){N()&&(i=e)}",
+        "supportsOutOfProcess": "function A(){return u}",
+        "validResolution": "function d(e){return!o.isPlatformEmbedded||e.width>=_.width&&e.height>=_.height}"
+    }
+}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "MODAL_KEY": "guild-connection-roles",
-        "openGuildRoleConnectionsModal": "function d(t){(0,r.openModalLazy)(async()=>{let{default:e}=await i.el(\"918771\").then(i.bind(i,\"918771\"));return i=>(0,l.jsx)(e,{...i,guildId:t})},{modalKey:o,contextKey:r.DEFAULT_MODAL_CONTEXT,onCloseRequest:()=>{(0,r.closeModal)(o,r.DEFAULT_MODAL_CONTEXT)}})}",
-        "default": "function c(t){let e=(0,a.isVerifiedRolesChannelVisible)(t);return e?(0,l.jsx)(r.MenuItem,{id:\"guild-connection-roles\",label:s.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,icon:n.default,action:()=>d(t.id)}):null}"
-    }
-}

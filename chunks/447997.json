@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){let{show:t,children:n,top:a=0,bottom:l=0}=e,{ref:o,height:u}=i(),d=(0,r.useSpring)({from:{height:0,paddingBottom:\"0px\",marginTop:\"0px\"},to:{height:t?u:0,paddingBottom:t?\"\".concat(l,\"px\"):\"0px\",marginTop:t?\"\".concat(a,\"px\"):\"0px\"},config:{tension:170,friction:26}}),c=(0,r.useSpring)({from:{opacity:0},to:{opacity:t?1:0},config:{duration:200,easing:t?e=>e**4:e=>e*(2-e)}});return(0,s.jsx)(r.animated.div,{style:{overflow:\"hidden\",height:d.height,paddingBottom:d.paddingBottom,marginTop:d.marginTop},children:(0,s.jsx)(r.animated.div,{style:{opacity:c.opacity},ref:o,children:n})})}"
-    }
-}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(e){let{ref:t,onUpdate:n,resizeObserver:a,listenerMap:s,key:_}=e;(0,i.useLayoutEffect)(()=>{let{current:e}=t;return null!=e&&(s.set(e,e=>{(0,r.flushSync)(()=>{n(e,_)})}),a.observe(e,o)),()=>{null!=e&&(a.unobserve(e),s.delete(e))}},[n,a,t,s,_])}"
+    }
+}

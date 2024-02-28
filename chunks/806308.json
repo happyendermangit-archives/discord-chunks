@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useHereMentionCallback": "function f(e,t,n){let a=(0,o.default)(),[f,p]=i.useState(!1),m=i.useMemo(()=>s().debounce(e=>{var i,s,o,f;if(i=e,s=a,o=t,f=n,c(u.default.getProps(o,f).groups)||!(i.length<d.length)&&!(i.length>s)&&-1!==i.indexOf(d)&&((0,l.subscribeChannel)(o,f,r.DEFAULT_RANGES),1))p(!0)},200,{maxWait:500}),[a,t,n]);i.useEffect(()=>{let i=u.default.getProps(t,n).groups;if(null!=t&&!c(i)&&!f)return e.addListener(\"text-changed\",m),()=>{e.removeListener(\"text-changed\",m),m.cancel()}},[f,m,e,t,n])}"
+    }
+}

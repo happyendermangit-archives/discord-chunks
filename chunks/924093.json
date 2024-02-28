@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "logMessageSendFailure": "function i(e){let t=null!=e.fileItems?function(e){return e.map(e=>e.mimeType??\"unknown\")}(e.fileItems):[],n=e.errorMessage??void 0,i=e.failureCode??void 0;(0,a.trackWithMetadata)(l.AnalyticEvents.SEND_MESSAGE_FAILURE,{failure_code:i,error_message:n,attachment_mimetypes:t})}"
+    }
+}

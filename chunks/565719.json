@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useSortedGuildIdsForSoundboard": "function c(e,t){let n=(0,a.default)([r.default],()=>r.default.getCurrentUser()),c=e?.guild_id??u.EMPTY_STRING_GUILD_ID,f=(0,a.default)([l.default],()=>l.default.getFlattenedGuildIds()),p=(0,a.default)([s.default],()=>null==e||null==e.guild_id||s.default.can(d.Permissions.USE_EXTERNAL_SOUNDS,e));return i.useMemo(()=>{if((o.default.canUseSoundboardEverywhere(n)||!t)&&p){let e=\"\"!==c,t=e?f.filter(e=>e!==c):f;return e&&t.unshift(c),t}return[c]},[n,t,c,f,p])}"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function c(){let t=(0,u.useStateFromStores)([s.default],()=>s.default.getDefaultBillingCountryCode()),e=(0,u.useStateFromStores)([o.default],()=>o.default.ipCountryCode),n=(0,u.useStateFromStores)([a.default],()=>a.default.isAuthenticated());return i.useEffect(()=>{r.default.wait(()=>{n&&!o.default.isPaymentSourceFetching&&!s.default.hasFetchedPaymentSources&&l.fetchPaymentSources()})},[n]),i.useEffect(()=>{n&&!o.default.ipCountryCodeLoaded&&l.fetchIpCountryCode()},[e,n]),{defaultBillingCountryCode:t,ipCountryCode:e}}"
+    }
+}

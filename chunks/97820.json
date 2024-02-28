@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "reduce": "function s(){arguments.length>0&&void 0!==arguments[0]?arguments[0]:i.NONE;var e=arguments.length>1?arguments[1]:void 0;switch(e.type){case r.HOVER:break;case a.ADD_SOURCE:case a.ADD_TARGET:case a.REMOVE_TARGET:case a.REMOVE_SOURCE:return i.NONE;case r.BEGIN_DRAG:case r.PUBLISH_DRAG_SOURCE:case r.END_DRAG:case r.DROP:default:return i.ALL}var t=e.payload,n=t.targetIds,s=void 0===n?[]:n,l=t.prevTargetIds,c=void 0===l?[]:l,d=(0,u.xor)(s,c);if(!(d.length>0||!(0,o.areArraysEqual)(s,c)))return i.NONE;var f=c[c.length-1],p=s[s.length-1];return f!==p&&(f&&d.push(f),p&&d.push(p)),d}"
+    }
+}

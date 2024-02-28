@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function d(e,t,n){void 0===n&&(n=!1);var d,f,p,h,m=(0,i.isHTMLElement)(t);var y=(0,i.isHTMLElement)(t)&&(f=(d=t).getBoundingClientRect(),p=(0,c.round)(f.width)/d.offsetWidth||1,h=(0,c.round)(f.height)/d.offsetHeight||1,1!==p||1!==h),v=(0,s.default)(t),g=(0,r.default)(e,y,n),b={scrollLeft:0,scrollTop:0},_={x:0,y:0};return(m||!m&&!n)&&((\"body\"!==(0,o.default)(t)||(0,l.default)(v))&&(b=(0,a.default)(t)),(0,i.isHTMLElement)(t)?(_=(0,r.default)(t,!0),_.x+=t.clientLeft,_.y+=t.clientTop):v&&(_.x=(0,u.default)(v))),{x:g.left+b.scrollLeft-_.x,y:g.top+b.scrollTop-_.y,width:g.width,height:g.height}}"
+    }
+}

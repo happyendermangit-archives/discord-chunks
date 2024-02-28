@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "DisableCustomTheme": "function T(e){let t=c(),n=a.useMemo(()=>E({...t,primaryColor:null,secondaryColor:null}),[t]);return(0,o.jsx)(l.Provider,{value:n,children:e.children})}",
+        "RootThemeContextProvider": "function u(e){let{children:t,theme:n=s.ThemeTypes.DARK,primaryColor:i=null,secondaryColor:r=null,gradient:_=null,flags:u=0,contrast:I=1,saturation:T=1}=e,c=a.useMemo(()=>E({theme:n,primaryColor:i,secondaryColor:r,gradient:_,flags:u,contrast:I,saturation:T}),[n,i,r,_,u,I,T]);return(0,o.jsx)(l.Provider,{value:c,children:t})}",
+        "ThemeContextFlags": {
+            "2": "MOBILE_REDESIGN_ENABLED",
+            "4": "MOBILE_DARK_GRADIENT_THEME_ENABLED",
+            "8": "MOBILE_LIGHT_GRADIENT_THEME_ENABLED",
+            "16": "REDUCED_CONTRAST_ENABLED",
+            "32": "INCREASED_CONTRAST_ENABLED",
+            "64": "REDUCE_SATURATION_ENABLED",
+            "MOBILE_REDESIGN_ENABLED": 2,
+            "MOBILE_DARK_GRADIENT_THEME_ENABLED": 4,
+            "MOBILE_LIGHT_GRADIENT_THEME_ENABLED": 8,
+            "REDUCED_CONTRAST_ENABLED": 16,
+            "INCREASED_CONTRAST_ENABLED": 32,
+            "REDUCE_SATURATION_ENABLED": 64
+        },
+        "ThemeContextProvider": "function I(e){let{children:t,theme:n,primaryColor:i,secondaryColor:r,gradient:s,flags:_,contrast:u,saturation:I}=e,T=a.useContext(l),c=a.useMemo(()=>E({theme:n??T.theme,primaryColor:i??T.primaryColor,secondaryColor:r??T.secondaryColor,gradient:s??T.gradient,flags:_??T.flags,contrast:u??T.contrast,saturation:I??T.saturation}),[n,T.theme,T.primaryColor,T.secondaryColor,T.gradient,T.flags,T.contrast,T.saturation,i,r,s,_,u,I]);return(0,o.jsx)(l.Provider,{value:c,children:t})}",
+        "UseThemeContext": "function d(e){let{children:t}=e,n=c();return(0,o.jsx)(o.Fragment,{children:t(n)})}",
+        "setThemeFlag": "function _(e,t){return e|t}",
+        "useThemeContext": "function c(){let e=a.useContext(l);if(null==e)throw Error(\"useThemeContext must be used within a ThemeContext.Provider\");return e}"
+    }
+}

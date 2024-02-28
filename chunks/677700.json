@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "default": "function o(e){let t=(0,s.useStateFromStores)([i.default],()=>i.default.getGuildId());return null!=t?t:e.getGuildId()}",
+        "getGuildIdForGenericRedirect": "function u(e){return i.default.getGuildId()!==a.FAVORITES?e.getGuildId():r.default.isFavorite(e.id)||e.isThread()&&r.default.isFavorite(e.parent_id)?a.FAVORITES:e.getGuildId()}"
+    }
+}

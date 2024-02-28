@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "async function c(e){let{channelId:t,timeoutMs:n=1e4,bypassChangeModal:c=!1}=e,f=l.default.getChannel(t);if(null==f||!await a.default.handleVoiceConnect({bypassGuildIdCheck:!0,bypassChangeModal:c,channel:f,connected:u.default.isInChannel(t),needSubscriptionToAccess:(0,s.getChannelRoleSubscriptionStatus)(t,l.default,i.default,r.default).needSubscriptionToAccess}))return!1;let p=new Promise((e,i)=>{let a=setTimeout(()=>{i(new d(\"Joining voice channel has timed out.\"))},n);o.default.addConditionalChangeListener(()=>o.default.getVoiceChannelId()!==t||(clearTimeout(a),e(),!1))});try{await p}catch(e){if(e instanceof d)return!1;throw e}return!0}"
+    }
+}

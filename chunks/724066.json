@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let t=(0,r.useStateFromStores)([u.default],()=>u.default.isFocused()),n=(0,r.useStateFromStores)([o.default],()=>o.default.useReducedMotion),[s,l]=a.useState(!1),{preset:d}=(0,E.default)(e.profileEffectId,()=>l(!1));return null!=d&&(t||e.shopPreview||d.config.animationType!==c.AnimationTypes.INTERMITTENT)?!t&&e.shopPreview||!t&&d.config.animationType===c.AnimationTypes.PERSISTENT||n||!1===e.autoPlay&&!1===e.isHovering?(0,i.jsx)(C,{useThumbnail:e.useThumbnail,config:d.config,bannerAdjustment:e.bannerAdjustment,noBorderRadius:e.noBorderRadius,isHovering:e.isHovering,useOpacityOnHover:e.useOpacityOnHover}):s?(0,i.jsx)(I,{profileEffectConfig:d.config,...e}):(0,i.jsx)(m.default,{profileEffectConfig:d.config,onReady:()=>{l(!0)}}):null}"
+    }
+}
