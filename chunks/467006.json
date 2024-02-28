@@ -1061,6 +1061,7 @@
             "CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED": "cancellation_flow_discount_offer_prompt_viewed",
             "ATTACHMENT_UPLOAD_STARTED": "attachment_upload_started",
             "ATTACHMENT_UPLOAD_FINISHED": "attachment_upload_finished",
+            "IMAGE_LOADING_COMPLETED": "image_loading_completed",
             "MESSAGE_SENT_WITH_ATTACHMENTS": "message_sent_with_attachments",
             "MESSAGE_LINK_COPIED": "message_link_copied",
             "MESSAGE_SWIPE_ACTION_SENT": "message_swipe_action_sent",

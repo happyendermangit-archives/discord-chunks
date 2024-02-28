@@ -1,3 +1,0 @@
-{
-    "exports": "function n(t,e){this.totalCount=t,this.dataCount=e}"
-}

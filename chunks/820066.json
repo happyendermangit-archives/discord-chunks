@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function d(e,t,n){let l=(0,r.useStateFromStores)([a.default],()=>a.default.getGuildScheduledEvent(e))??n;return u()(null!=l,\"Event must be defined\"),t=t??(0,i.getNextRecurrenceIdInEvent)(l),o(l,(0,s.default)(t,e),t)}",
-        "getEventSchedule": "function c(e,t){let n=(0,s.getEventException)(t,e.id);return o(e,n,t)}"
-    }
-}

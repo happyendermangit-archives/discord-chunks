@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e,t){return s((0,l.useStateFromStoresArray)([u.default],()=>u.default.getGuildScheduledEvent(t)?.guild_scheduled_event_exceptions??[]),e)}",
-        "getEventException": "function a(e,t){return s(u.default.getGuildScheduledEvent(t)?.guild_scheduled_event_exceptions??[],e)}"
-    }
-}
