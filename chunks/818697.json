@@ -1,6 +1,6 @@
 {
     "exports": {
-        "isReadableChannel": "function d(e){return null!=e&&(e.type===i.ChannelTypes.DM||e.type===i.ChannelTypes.GROUP_DM||(0,a.isTextChannel)(e.type)&&s.default.canBasicChannel(r,e))}",
-        "isReadableChannelId": "function u(e){return null!=e&&d(l.default.getBasicChannel(e))}"
+        "isReadableChannel": "function u(e){return null!=e&&(e.type===i.ChannelTypes.DM||e.type===i.ChannelTypes.GROUP_DM||(0,a.isTextChannel)(e.type)&&s.default.canBasicChannel(r,e))}",
+        "isReadableChannelId": "function d(e){return null!=e&&u(l.default.getBasicChannel(e))}"
     }
 }
