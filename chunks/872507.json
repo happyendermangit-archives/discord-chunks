@@ -1,7 +1,6 @@
 {
     "exports": {
         "default": {
-            "lastMemoryUsageKB": 0,
             "setupReportingTimer": "setupReportingTimer(){var e,t;let n=null===r.default||void 0===r.default?void 0:null===(e=r.default.processUtils)||void 0===e?void 0:e.setMemoryInformation;if(null==n){o.log(\"setMemoryInformation not available.\");return}(null===(t=performance.memory)||void 0===t?void 0:t.usedJSHeapSize)==null&&o.error(\"usedJSHeapSize is not available.\");setInterval(()=>{var e,t,i;let r=null!==(t=null===(e=performance.memory)||void 0===e?void 0:e.usedJSHeapSize)&&void 0!==t?t:0;n({memoryUsageKB:null!==(i=this.lastMemoryUsageKB)&&void 0!==i?i:0,usedJSHeapSizeKB:Math.ceil(r/1024)})},1e4)}",
             "getProcessUptime": "getProcessUptime(){var e,t;return null===r.default||void 0===r.default?void 0:null===(t=r.default.processUtils)||void 0===t?void 0:null===(e=t.getProcessUptime)||void 0===e?void 0:e.call(t)}",
             "getCurrentCPUUsagePercent": "getCurrentCPUUsagePercent(){var e,t;return null===r.default||void 0===r.default?void 0:null===(t=r.default.processUtils)||void 0===t?void 0:null===(e=t.getCurrentCPUUsagePercent)||void 0===e?void 0:e.call(t)}",
