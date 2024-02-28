@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function c(e){let{description:t,className:n,guildId:r,truncate:c=!0}=e,o=u.useMemo(()=>(0,s.guildEventDetailsParser)(t,!0,{guildId:r,allowLinks:!0,allowHeading:!0,allowList:!0}),[t,r]);return(0,l.jsx)(\"div\",{className:a()(i.descriptionText,n,d.markup,{[i.truncate]:c}),children:o})}"
+    }
+}
