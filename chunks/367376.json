@@ -166,7 +166,7 @@
                         "@"
                     ],
                     "match": "match(e,t){let n=/^<@!?(\\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);return null!=n&&(\"@Clyde\"!==n[0]||(0,u.getClydeEnabled)(D(t),c.default.getChannel(t.channelId)))?n:null}",
-                    "parse": "parse(e,t,n){let l,r;if(n.returnMentionIds)return null==e[1]?{type:\"mention\",text:e[0]}:{type:\"mention\",id:e[1]};let a=f.default.getUser(e[1]),i=c.default.getChannel(n.channelId);if(null!=a&&(r=a.id,l=a.toString(),null!=i)){var o;l=null!==(o=p.default.getNickname(i.getGuildId(),n.channelId,a))&&void 0!==o?o:h.default.getName(a)}null==a&&\"@Clyde\"===e[0]&&(0,u.getClydeEnabled)(D(n),i)&&(r=N.CLYDE_AI_USER_ID);let s=e[1],d=null!=s&&T.ID_REGEX.test(s.trim()),m=d&&n.unknownUserMentionPlaceholder?\"@\".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER):e[0];return{userId:r,channelId:n.channelId,guildId:null==i?void 0:i.getGuildId(),roleName:e[2],content:[{type:\"text\",content:null!=l?\"@\".concat(l):m}]}}",
+                    "parse": "parse(e,t,n){let l,r;if(n.returnMentionIds)return null==e[1]?{type:\"mention\",text:e[0]}:{type:\"mention\",id:e[1]};let a=f.default.getUser(e[1]),i=c.default.getChannel(n.channelId);if(null!=a&&(r=a.id,l=a.toString(),null!=i)){var o;l=null!==(o=p.default.getNickname(i.getGuildId(),n.channelId,a))&&void 0!==o?o:h.default.getName(a)}null==a&&\"@Clyde\"===e[0]&&(0,u.getClydeEnabled)(D(n),i)&&(r=N.CLYDE_AI_USER_ID);let s=e[1],d=null!=s&&I.ID_REGEX.test(s.trim()),m=d&&n.unknownUserMentionPlaceholder?\"@\".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER):e[0];return{userId:r,channelId:n.channelId,guildId:null==i?void 0:i.getGuildId(),roleName:e[2],content:[{type:\"text\",content:null!=l?\"@\".concat(l):m}]}}",
                     "handleUserContextMenu": "handleUserContextMenu(e,t,a,s){let o=r.default.getChannel(t);null!=o&&(0,i.openContextMenuLazy)(s,async()=>{let{default:t}=await n.el(\"834247\").then(n.bind(n,\"834247\"));return n=>(0,l.jsx)(t,{...n,user:e,channel:o,guildId:a})})}",
                     "react": "react(e,t,n){let{userId:i,channelId:r}=e;return null==i?(0,l.jsx)(a.default,{inlinePreview:n.formatInline,...e,children:t(e.content,n)},n.key):(0,l.jsx)(s.default,{className:\"mention\",userId:i,channelId:r,inlinePreview:n.noStyleAndInteraction},n.key)}"
                 },
@@ -176,7 +176,7 @@
                         "<"
                     ],
                     "match": "e=>/^<#(\\d+)>/.exec(e)",
-                    "parse": "parse(e,t,n){let l=e[1];if(n.returnMentionIds)return{type:\"channelMention\",id:l};let r=I(l,n.mentionChannels);return null==r?R(null,l,null,A(n.channelId)):b(r,null,A(n.channelId))}",
+                    "parse": "parse(e,t,n){let l=e[1];if(n.returnMentionIds)return{type:\"channelMention\",id:l};let r=T(l,n.mentionChannels);return null==r?R(null,l,null,A(n.channelId)):b(r,null,A(n.channelId))}",
                     "react": "react(t,s,r){let o=c.default.getChannel(t.channelId),u=r.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&(null==n||n.stopPropagation()),C(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,i.closeAllModals)()},d=r.noStyleAndInteraction||null==t.channelId||null==o&&null==t.originalLink?g.NOOP:e=>{(0,a.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"454000\").then(n.bind(n,\"454000\"));return n=>{var i;return(0,l.jsx)(e,{...n,channel:o,channelId:null!==(i=null==o?void 0:o.id)&&void 0!==i?i:t.channelId,originalLink:t.originalLink,messageId:t.messageId})}})};return(0,l.jsxs)(m.default,{role:\"link\",onClick:u,onContextMenu:d,className:\"channelMention\",children:[null!=t.inContent?s(t.inContent,r):null,null!=t.inContent?(0,l.jsx)(p.default,{}):null,(0,E.smartOutput)(t,s,r)]},r.key)}"
                 },
                 "channelOrMessageUrl": {
@@ -185,7 +185,7 @@
                         "h"
                     ],
                     "match": "match(e){let t=o.CHANNEL_OR_MESSAGES_URL_RE.exec(e);return null!=t&&(null!=t[2]&&/\\D/.test(t[2])||null!=t[3]&&/\\D/.test(t[3]))?null:t}",
-                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3];if(null==a)return N(l);let u=I(a,null);return null==u?R(r,a,i,A(n.channelId),l):b(u,i,A(n.channelId),l)}"
+                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3];if(null==a)return N(l);let u=T(a,null);return null==u?R(r,a,i,A(n.channelId),l):b(u,i,A(n.channelId),l)}"
                 },
                 "mediaPostLink": {
                     "order": 15.5,
@@ -193,7 +193,7 @@
                         "h"
                     ],
                     "match": "e=>o.MEDIA_POST_URL_RE.exec(e)",
-                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3],u=e[4];if(null==a||null==i)return N(l);let o=I(i,null);if(null!=o)return b(o,u,A(n.channelId),l);let s=I(a,null);return null!=s?b(s,u,A(n.channelId),l):R(r,a,u,A(n.channelId),l)}"
+                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3],u=e[4];if(null==a||null==i)return N(l);let o=T(i,null);if(null!=o)return b(o,u,A(n.channelId),l);let s=T(a,null);return null!=s?b(s,u,A(n.channelId),l):R(r,a,u,A(n.channelId),l)}"
                 },
                 "attachmentLink": {
                     "order": 15.5,
@@ -210,7 +210,7 @@
                         "<"
                     ],
                     "match": "e=>/^<\\/((?:[-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?):(\\d+)>/u.exec(e)",
-                    "parse": "parse(e,t,n){if(n.returnMentionIds)return{type:\"commandMention\",id:e[2]};let[,...l]=e[1].split(\" \"),r=\"\".concat(e[2]).concat([...l].map(e=>\"\".concat(I.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(\"\"));return{channelId:n.channelId,commandId:e[2],commandName:e[1],commandKey:r,content:[{type:\"text\",content:\"\".concat(e[1])}]}}",
+                    "parse": "parse(e,t,n){if(n.returnMentionIds)return{type:\"commandMention\",id:e[2]};let[,...l]=e[1].split(\" \"),r=\"\".concat(e[2]).concat([...l].map(e=>\"\".concat(T.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(\"\"));return{channelId:n.channelId,commandId:e[2],commandName:e[1],commandKey:r,content:[{type:\"text\",content:\"\".concat(e[1])}]}}",
                     "react": "(e,t,n)=>(0,l.jsx)(N,{node:e,output:t,state:n})"
                 },
                 "emoji": {
@@ -263,7 +263,7 @@
                     "requiredFirstCharacters": [
                         "|"
                     ],
-                    "match": "e=>T.MARKDOWN_SPOILER_REGEXP.exec(e)",
+                    "match": "e=>I.MARKDOWN_SPOILER_REGEXP.exec(e)",
                     "parse": "(e,t,n)=>({content:t(e[1],n),channelId:n.channelId})",
                     "react": "(e,t,n)=>(0,l.jsx)(E.default,{type:E.default.Types.TEXT,inline:n.formatInline,renderTextElement:(e,t)=>null==e||e.type!==u.default||t?e:i.cloneElement(e,{tabIndex:-1}),children:()=>t(e.content,n)},n.key)"
                 },
@@ -272,7 +272,7 @@
                     "requiredFirstCharacters": [
                         "<"
                     ],
-                    "match": "e=>T.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e)",
+                    "match": "e=>I.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e)",
                     "parse": "parse(e,t,n){let l={home:v.default.Messages.SERVER_GUIDE,guide:v.default.Messages.SERVER_GUIDE,browse:v.default.Messages.CHANNEL_BROWSER_TITLE,customize:v.default.Messages.CHANNELS_AND_ROLES};return{content:[{type:\"text\",content:l[e[1]]}],channelId:e[1],guildId:O(n.channelId),id:e[1]}}",
                     "react": "react(e,t,n){let i=()=>{!function(e,t){let n=p.default.getGuild(e);if(null==e||null==n||!n.hasFeature(L.GuildFeatures.COMMUNITY))return;let l={home:P.StaticChannelRoute.GUILD_HOME,browse:P.StaticChannelRoute.CHANNEL_BROWSER,customize:P.StaticChannelRoute.CUSTOMIZE_COMMUNITY,guide:P.StaticChannelRoute.GUILD_HOME},i=l[t],a=p.default.getGuild(e);if((null==a?void 0:a.joinedAt)==null){N.startLurking(e,{},{channelId:i});return}(0,m.transitionTo)(L.Routes.CHANNEL(e,i))}(e.guildId,e.channelId)};if(!(0,A.isStaticRouteIconType)(e.channelId))return null;let a=\"\".concat(e.channelId);switch(e.channelId){case P.StaticChannelId.GUILD_HOME:case P.StaticChannelId.SERVER_GUIDE:a=b.default.Messages.SERVER_GUIDE;break;case P.StaticChannelId.CHANNEL_BROWSER:a=b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;break;case P.StaticChannelId.CUSTOMIZE_COMMUNITY:a=b.default.Messages.CHANNELS_AND_ROLES}return(0,l.jsx)(o.Tooltip,{text:a,position:\"top\",children:a=>{let{onMouseEnter:s,onMouseLeave:r}=a;return(0,l.jsx)(h.default,{role:\"link\",onClick:i,onMouseEnter:s,onMouseLeave:r,className:\"channelMention\",iconType:e.channelId,children:t(e.content,n)},n.key)}},n.key)}"
                 },
@@ -461,7 +461,7 @@
                         "@"
                     ],
                     "match": "match(e,t){let n=/^<@!?(\\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);return null!=n&&(\"@Clyde\"!==n[0]||(0,u.getClydeEnabled)(D(t),c.default.getChannel(t.channelId)))?n:null}",
-                    "parse": "parse(e,t,n){let l,r;if(n.returnMentionIds)return null==e[1]?{type:\"mention\",text:e[0]}:{type:\"mention\",id:e[1]};let a=f.default.getUser(e[1]),i=c.default.getChannel(n.channelId);if(null!=a&&(r=a.id,l=a.toString(),null!=i)){var o;l=null!==(o=p.default.getNickname(i.getGuildId(),n.channelId,a))&&void 0!==o?o:h.default.getName(a)}null==a&&\"@Clyde\"===e[0]&&(0,u.getClydeEnabled)(D(n),i)&&(r=N.CLYDE_AI_USER_ID);let s=e[1],d=null!=s&&T.ID_REGEX.test(s.trim()),m=d&&n.unknownUserMentionPlaceholder?\"@\".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER):e[0];return{userId:r,channelId:n.channelId,guildId:null==i?void 0:i.getGuildId(),roleName:e[2],content:[{type:\"text\",content:null!=l?\"@\".concat(l):m}]}}",
+                    "parse": "parse(e,t,n){let l,r;if(n.returnMentionIds)return null==e[1]?{type:\"mention\",text:e[0]}:{type:\"mention\",id:e[1]};let a=f.default.getUser(e[1]),i=c.default.getChannel(n.channelId);if(null!=a&&(r=a.id,l=a.toString(),null!=i)){var o;l=null!==(o=p.default.getNickname(i.getGuildId(),n.channelId,a))&&void 0!==o?o:h.default.getName(a)}null==a&&\"@Clyde\"===e[0]&&(0,u.getClydeEnabled)(D(n),i)&&(r=N.CLYDE_AI_USER_ID);let s=e[1],d=null!=s&&I.ID_REGEX.test(s.trim()),m=d&&n.unknownUserMentionPlaceholder?\"@\".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER):e[0];return{userId:r,channelId:n.channelId,guildId:null==i?void 0:i.getGuildId(),roleName:e[2],content:[{type:\"text\",content:null!=l?\"@\".concat(l):m}]}}",
                     "handleUserContextMenu": "handleUserContextMenu(e,t,a,s){let o=r.default.getChannel(t);null!=o&&(0,i.openContextMenuLazy)(s,async()=>{let{default:t}=await n.el(\"834247\").then(n.bind(n,\"834247\"));return n=>(0,l.jsx)(t,{...n,user:e,channel:o,guildId:a})})}",
                     "react": "react(e,t,n){let{userId:i,channelId:r}=e;return null==i?(0,l.jsx)(a.default,{inlinePreview:n.formatInline,...e,children:t(e.content,n)},n.key):(0,l.jsx)(s.default,{className:\"mention\",userId:i,channelId:r,inlinePreview:n.noStyleAndInteraction},n.key)}"
                 },
@@ -471,7 +471,7 @@
                         "<"
                     ],
                     "match": "e=>/^<#(\\d+)>/.exec(e)",
-                    "parse": "parse(e,t,n){let l=e[1];if(n.returnMentionIds)return{type:\"channelMention\",id:l};let r=I(l,n.mentionChannels);return null==r?R(null,l,null,A(n.channelId)):b(r,null,A(n.channelId))}",
+                    "parse": "parse(e,t,n){let l=e[1];if(n.returnMentionIds)return{type:\"channelMention\",id:l};let r=T(l,n.mentionChannels);return null==r?R(null,l,null,A(n.channelId)):b(r,null,A(n.channelId))}",
                     "react": "react(t,s,r){let o=c.default.getChannel(t.channelId),u=r.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&(null==n||n.stopPropagation()),C(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,i.closeAllModals)()},d=r.noStyleAndInteraction||null==t.channelId||null==o&&null==t.originalLink?g.NOOP:e=>{(0,a.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"454000\").then(n.bind(n,\"454000\"));return n=>{var i;return(0,l.jsx)(e,{...n,channel:o,channelId:null!==(i=null==o?void 0:o.id)&&void 0!==i?i:t.channelId,originalLink:t.originalLink,messageId:t.messageId})}})};return(0,l.jsxs)(m.default,{role:\"link\",onClick:u,onContextMenu:d,className:\"channelMention\",children:[null!=t.inContent?s(t.inContent,r):null,null!=t.inContent?(0,l.jsx)(p.default,{}):null,(0,E.smartOutput)(t,s,r)]},r.key)}"
                 },
                 "channelOrMessageUrl": {
@@ -480,7 +480,7 @@
                         "h"
                     ],
                     "match": "match(e){let t=o.CHANNEL_OR_MESSAGES_URL_RE.exec(e);return null!=t&&(null!=t[2]&&/\\D/.test(t[2])||null!=t[3]&&/\\D/.test(t[3]))?null:t}",
-                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3];if(null==a)return N(l);let u=I(a,null);return null==u?R(r,a,i,A(n.channelId),l):b(u,i,A(n.channelId),l)}"
+                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3];if(null==a)return N(l);let u=T(a,null);return null==u?R(r,a,i,A(n.channelId),l):b(u,i,A(n.channelId),l)}"
                 },
                 "mediaPostLink": {
                     "order": 15.5,
@@ -488,7 +488,7 @@
                         "h"
                     ],
                     "match": "e=>o.MEDIA_POST_URL_RE.exec(e)",
-                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3],u=e[4];if(null==a||null==i)return N(l);let o=I(i,null);if(null!=o)return b(o,u,A(n.channelId),l);let s=I(a,null);return null!=s?b(s,u,A(n.channelId),l):R(r,a,u,A(n.channelId),l)}"
+                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3],u=e[4];if(null==a||null==i)return N(l);let o=T(i,null);if(null!=o)return b(o,u,A(n.channelId),l);let s=T(a,null);return null!=s?b(s,u,A(n.channelId),l):R(r,a,u,A(n.channelId),l)}"
                 },
                 "attachmentLink": {
                     "order": 15.5,
@@ -505,7 +505,7 @@
                         "<"
                     ],
                     "match": "e=>/^<\\/((?:[-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?):(\\d+)>/u.exec(e)",
-                    "parse": "parse(e,t,n){if(n.returnMentionIds)return{type:\"commandMention\",id:e[2]};let[,...l]=e[1].split(\" \"),r=\"\".concat(e[2]).concat([...l].map(e=>\"\".concat(I.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(\"\"));return{channelId:n.channelId,commandId:e[2],commandName:e[1],commandKey:r,content:[{type:\"text\",content:\"\".concat(e[1])}]}}",
+                    "parse": "parse(e,t,n){if(n.returnMentionIds)return{type:\"commandMention\",id:e[2]};let[,...l]=e[1].split(\" \"),r=\"\".concat(e[2]).concat([...l].map(e=>\"\".concat(T.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(\"\"));return{channelId:n.channelId,commandId:e[2],commandName:e[1],commandKey:r,content:[{type:\"text\",content:\"\".concat(e[1])}]}}",
                     "react": "(e,t,n)=>(0,l.jsx)(N,{node:e,output:t,state:n})"
                 },
                 "emoji": {
@@ -558,7 +558,7 @@
                     "requiredFirstCharacters": [
                         "|"
                     ],
-                    "match": "e=>T.MARKDOWN_SPOILER_REGEXP.exec(e)",
+                    "match": "e=>I.MARKDOWN_SPOILER_REGEXP.exec(e)",
                     "parse": "(e,t,n)=>({content:t(e[1],n),channelId:n.channelId})",
                     "react": "(e,t,n)=>(0,l.jsx)(E.default,{type:E.default.Types.TEXT,inline:n.formatInline,renderTextElement:(e,t)=>null==e||e.type!==u.default||t?e:i.cloneElement(e,{tabIndex:-1}),children:()=>t(e.content,n)},n.key)"
                 },
@@ -567,7 +567,7 @@
                     "requiredFirstCharacters": [
                         "<"
                     ],
-                    "match": "e=>T.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e)",
+                    "match": "e=>I.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e)",
                     "parse": "parse(e,t,n){let l={home:v.default.Messages.SERVER_GUIDE,guide:v.default.Messages.SERVER_GUIDE,browse:v.default.Messages.CHANNEL_BROWSER_TITLE,customize:v.default.Messages.CHANNELS_AND_ROLES};return{content:[{type:\"text\",content:l[e[1]]}],channelId:e[1],guildId:O(n.channelId),id:e[1]}}",
                     "react": "react(e,t,n){let i=()=>{!function(e,t){let n=p.default.getGuild(e);if(null==e||null==n||!n.hasFeature(L.GuildFeatures.COMMUNITY))return;let l={home:P.StaticChannelRoute.GUILD_HOME,browse:P.StaticChannelRoute.CHANNEL_BROWSER,customize:P.StaticChannelRoute.CUSTOMIZE_COMMUNITY,guide:P.StaticChannelRoute.GUILD_HOME},i=l[t],a=p.default.getGuild(e);if((null==a?void 0:a.joinedAt)==null){N.startLurking(e,{},{channelId:i});return}(0,m.transitionTo)(L.Routes.CHANNEL(e,i))}(e.guildId,e.channelId)};if(!(0,A.isStaticRouteIconType)(e.channelId))return null;let a=\"\".concat(e.channelId);switch(e.channelId){case P.StaticChannelId.GUILD_HOME:case P.StaticChannelId.SERVER_GUIDE:a=b.default.Messages.SERVER_GUIDE;break;case P.StaticChannelId.CHANNEL_BROWSER:a=b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;break;case P.StaticChannelId.CUSTOMIZE_COMMUNITY:a=b.default.Messages.CHANNELS_AND_ROLES}return(0,l.jsx)(o.Tooltip,{text:a,position:\"top\",children:a=>{let{onMouseEnter:s,onMouseLeave:r}=a;return(0,l.jsx)(h.default,{role:\"link\",onClick:i,onMouseEnter:s,onMouseLeave:r,className:\"channelMention\",iconType:e.channelId,children:t(e.content,n)},n.key)}},n.key)}"
                 },
@@ -703,7 +703,7 @@
                         "@"
                     ],
                     "match": "match(e,t){let n=/^<@!?(\\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);return null!=n&&(\"@Clyde\"!==n[0]||(0,u.getClydeEnabled)(D(t),c.default.getChannel(t.channelId)))?n:null}",
-                    "parse": "parse(e,t,n){let l,r;if(n.returnMentionIds)return null==e[1]?{type:\"mention\",text:e[0]}:{type:\"mention\",id:e[1]};let a=f.default.getUser(e[1]),i=c.default.getChannel(n.channelId);if(null!=a&&(r=a.id,l=a.toString(),null!=i)){var o;l=null!==(o=p.default.getNickname(i.getGuildId(),n.channelId,a))&&void 0!==o?o:h.default.getName(a)}null==a&&\"@Clyde\"===e[0]&&(0,u.getClydeEnabled)(D(n),i)&&(r=N.CLYDE_AI_USER_ID);let s=e[1],d=null!=s&&T.ID_REGEX.test(s.trim()),m=d&&n.unknownUserMentionPlaceholder?\"@\".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER):e[0];return{userId:r,channelId:n.channelId,guildId:null==i?void 0:i.getGuildId(),roleName:e[2],content:[{type:\"text\",content:null!=l?\"@\".concat(l):m}]}}",
+                    "parse": "parse(e,t,n){let l,r;if(n.returnMentionIds)return null==e[1]?{type:\"mention\",text:e[0]}:{type:\"mention\",id:e[1]};let a=f.default.getUser(e[1]),i=c.default.getChannel(n.channelId);if(null!=a&&(r=a.id,l=a.toString(),null!=i)){var o;l=null!==(o=p.default.getNickname(i.getGuildId(),n.channelId,a))&&void 0!==o?o:h.default.getName(a)}null==a&&\"@Clyde\"===e[0]&&(0,u.getClydeEnabled)(D(n),i)&&(r=N.CLYDE_AI_USER_ID);let s=e[1],d=null!=s&&I.ID_REGEX.test(s.trim()),m=d&&n.unknownUserMentionPlaceholder?\"@\".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER):e[0];return{userId:r,channelId:n.channelId,guildId:null==i?void 0:i.getGuildId(),roleName:e[2],content:[{type:\"text\",content:null!=l?\"@\".concat(l):m}]}}",
                     "handleUserContextMenu": "handleUserContextMenu(e,t,a,s){let o=r.default.getChannel(t);null!=o&&(0,i.openContextMenuLazy)(s,async()=>{let{default:t}=await n.el(\"834247\").then(n.bind(n,\"834247\"));return n=>(0,l.jsx)(t,{...n,user:e,channel:o,guildId:a})})}",
                     "react": "react(e,t,n){let{userId:i,channelId:r}=e;return null==i?(0,l.jsx)(a.default,{inlinePreview:n.formatInline,...e,children:t(e.content,n)},n.key):(0,l.jsx)(s.default,{className:\"mention\",userId:i,channelId:r,inlinePreview:n.noStyleAndInteraction},n.key)}"
                 },
@@ -713,7 +713,7 @@
                         "<"
                     ],
                     "match": "e=>/^<#(\\d+)>/.exec(e)",
-                    "parse": "parse(e,t,n){let l=e[1];if(n.returnMentionIds)return{type:\"channelMention\",id:l};let r=I(l,n.mentionChannels);return null==r?R(null,l,null,A(n.channelId)):b(r,null,A(n.channelId))}",
+                    "parse": "parse(e,t,n){let l=e[1];if(n.returnMentionIds)return{type:\"channelMention\",id:l};let r=T(l,n.mentionChannels);return null==r?R(null,l,null,A(n.channelId)):b(r,null,A(n.channelId))}",
                     "react": "react(t,s,r){let o=c.default.getChannel(t.channelId),u=r.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&(null==n||n.stopPropagation()),C(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,i.closeAllModals)()},d=r.noStyleAndInteraction||null==t.channelId||null==o&&null==t.originalLink?g.NOOP:e=>{(0,a.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"454000\").then(n.bind(n,\"454000\"));return n=>{var i;return(0,l.jsx)(e,{...n,channel:o,channelId:null!==(i=null==o?void 0:o.id)&&void 0!==i?i:t.channelId,originalLink:t.originalLink,messageId:t.messageId})}})};return(0,l.jsxs)(m.default,{role:\"link\",onClick:u,onContextMenu:d,className:\"channelMention\",children:[null!=t.inContent?s(t.inContent,r):null,null!=t.inContent?(0,l.jsx)(p.default,{}):null,(0,E.smartOutput)(t,s,r)]},r.key)}"
                 },
                 "channelOrMessageUrl": {
@@ -722,7 +722,7 @@
                         "h"
                     ],
                     "match": "match(e){let t=o.CHANNEL_OR_MESSAGES_URL_RE.exec(e);return null!=t&&(null!=t[2]&&/\\D/.test(t[2])||null!=t[3]&&/\\D/.test(t[3]))?null:t}",
-                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3];if(null==a)return N(l);let u=I(a,null);return null==u?R(r,a,i,A(n.channelId),l):b(u,i,A(n.channelId),l)}"
+                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3];if(null==a)return N(l);let u=T(a,null);return null==u?R(r,a,i,A(n.channelId),l):b(u,i,A(n.channelId),l)}"
                 },
                 "mediaPostLink": {
                     "order": 15.5,
@@ -730,7 +730,7 @@
                         "h"
                     ],
                     "match": "e=>o.MEDIA_POST_URL_RE.exec(e)",
-                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3],u=e[4];if(null==a||null==i)return N(l);let o=I(i,null);if(null!=o)return b(o,u,A(n.channelId),l);let s=I(a,null);return null!=s?b(s,u,A(n.channelId),l):R(r,a,u,A(n.channelId),l)}"
+                    "parse": "parse(e,t,n){let l=e[0],r=e[1],a=e[2],i=e[3],u=e[4];if(null==a||null==i)return N(l);let o=T(i,null);if(null!=o)return b(o,u,A(n.channelId),l);let s=T(a,null);return null!=s?b(s,u,A(n.channelId),l):R(r,a,u,A(n.channelId),l)}"
                 },
                 "attachmentLink": {
                     "order": 15.5,
@@ -747,7 +747,7 @@
                         "<"
                     ],
                     "match": "e=>/^<\\/((?:[-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?):(\\d+)>/u.exec(e)",
-                    "parse": "parse(e,t,n){if(n.returnMentionIds)return{type:\"commandMention\",id:e[2]};let[,...l]=e[1].split(\" \"),r=\"\".concat(e[2]).concat([...l].map(e=>\"\".concat(I.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(\"\"));return{channelId:n.channelId,commandId:e[2],commandName:e[1],commandKey:r,content:[{type:\"text\",content:\"\".concat(e[1])}]}}",
+                    "parse": "parse(e,t,n){if(n.returnMentionIds)return{type:\"commandMention\",id:e[2]};let[,...l]=e[1].split(\" \"),r=\"\".concat(e[2]).concat([...l].map(e=>\"\".concat(T.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(\"\"));return{channelId:n.channelId,commandId:e[2],commandName:e[1],commandKey:r,content:[{type:\"text\",content:\"\".concat(e[1])}]}}",
                     "react": "(e,t,n)=>(0,l.jsx)(N,{node:e,output:t,state:n})"
                 },
                 "emoji": {
@@ -800,7 +800,7 @@
                     "requiredFirstCharacters": [
                         "|"
                     ],
-                    "match": "e=>T.MARKDOWN_SPOILER_REGEXP.exec(e)",
+                    "match": "e=>I.MARKDOWN_SPOILER_REGEXP.exec(e)",
                     "parse": "(e,t,n)=>({content:t(e[1],n),channelId:n.channelId})",
                     "react": "(e,t,n)=>(0,l.jsx)(E.default,{type:E.default.Types.TEXT,inline:n.formatInline,renderTextElement:(e,t)=>null==e||e.type!==u.default||t?e:i.cloneElement(e,{tabIndex:-1}),children:()=>t(e.content,n)},n.key)"
                 },
@@ -809,7 +809,7 @@
                     "requiredFirstCharacters": [
                         "<"
                     ],
-                    "match": "e=>T.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e)",
+                    "match": "e=>I.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e)",
                     "parse": "parse(e,t,n){let l={home:v.default.Messages.SERVER_GUIDE,guide:v.default.Messages.SERVER_GUIDE,browse:v.default.Messages.CHANNEL_BROWSER_TITLE,customize:v.default.Messages.CHANNELS_AND_ROLES};return{content:[{type:\"text\",content:l[e[1]]}],channelId:e[1],guildId:O(n.channelId),id:e[1]}}",
                     "react": "react(e,t,n){let i=()=>{!function(e,t){let n=p.default.getGuild(e);if(null==e||null==n||!n.hasFeature(L.GuildFeatures.COMMUNITY))return;let l={home:P.StaticChannelRoute.GUILD_HOME,browse:P.StaticChannelRoute.CHANNEL_BROWSER,customize:P.StaticChannelRoute.CUSTOMIZE_COMMUNITY,guide:P.StaticChannelRoute.GUILD_HOME},i=l[t],a=p.default.getGuild(e);if((null==a?void 0:a.joinedAt)==null){N.startLurking(e,{},{channelId:i});return}(0,m.transitionTo)(L.Routes.CHANNEL(e,i))}(e.guildId,e.channelId)};if(!(0,A.isStaticRouteIconType)(e.channelId))return null;let a=\"\".concat(e.channelId);switch(e.channelId){case P.StaticChannelId.GUILD_HOME:case P.StaticChannelId.SERVER_GUIDE:a=b.default.Messages.SERVER_GUIDE;break;case P.StaticChannelId.CHANNEL_BROWSER:a=b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;break;case P.StaticChannelId.CUSTOMIZE_COMMUNITY:a=b.default.Messages.CHANNELS_AND_ROLES}return(0,l.jsx)(o.Tooltip,{text:a,position:\"top\",children:a=>{let{onMouseEnter:s,onMouseLeave:r}=a;return(0,l.jsx)(h.default,{role:\"link\",onClick:i,onMouseEnter:s,onMouseLeave:r,className:\"channelMention\",iconType:e.channelId,children:t(e.content,n)},n.key)}},n.key)}"
                 },

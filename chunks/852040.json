@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "getTextInVoiceSendMessageChannelPermissionText": "function(E){return E?R.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({warningHook:T}):R.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_TEXT}",
+            "getTextInVoiceReadMessageHistoryChannelPermissionText": "function(E){return E?R.default.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({warningHook:T}):R.default.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_TEXT}"
+        }
+    }
+}

@@ -13,7 +13,9 @@
             "entries": "function(e){return Object.entries(e)}",
             "castChannelIdAsMessageId": "function(e){return e}",
             "castMessageIdAsChannelId": "function(e){return e}",
-            "castGuildIdAsEveryoneGuildRoleId": "function(e){return e}"
+            "castGuildIdAsEveryoneGuildRoleId": "function(e){return e}",
+            "castGuildIdAsReadStateChannelId": "function(e){return e}",
+            "castUserIdAsReadStateChannelId": "function(e){return e}"
         }
     }
 }

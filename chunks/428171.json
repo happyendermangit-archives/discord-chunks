@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "default": {
+            "getForumChannelPermissionText": "function(){return R.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT_DISABLED.format({warningHook:T})}"
+        }
+    }
+}
