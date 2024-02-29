@@ -7843,9 +7843,9 @@
             },
             "_dispatchToken": "ID_260",
             "initialize": "initialize(){this.waitFor(o.default)}",
-            "getChannelSafetyWarning": "getChannelSafetyWarning(e,t){return c[e]?.find(e=>e.id===t)}",
-            "getChannelSafetyWarnings": "getChannelSafetyWarnings(e){return c[e]??d}",
-            "hasShownInitialTooltipForChannel": "hasShownInitialTooltipForChannel(e){return f.has(e)}"
+            "getChannelSafetyWarning": "getChannelSafetyWarning(e,t){return f[e]?.find(e=>e.id===t)}",
+            "getChannelSafetyWarnings": "getChannelSafetyWarnings(e){return f[e]??c}",
+            "hasShownInitialTooltipForChannel": "hasShownInitialTooltipForChannel(e){return h.has(e)}"
         }
     }
 }
