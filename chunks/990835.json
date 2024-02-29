@@ -2,12 +2,12 @@
     "exports": {
         "default": {
             "isTracing_": true,
-            "endTime_": 1709222840009,
+            "endTime_": 1709224384523,
             "lastImportDuration": 0,
             "logGroups": [
                 {
                     "index": 0,
-                    "timestamp": 1709222825009,
+                    "timestamp": 1709224369523,
                     "logs": [],
                     "nativeLogs": []
                 }
@@ -15,7 +15,7 @@
             "logs": [],
             "prefix": "",
             "isTracing": false,
-            "endTime": 1709222840009,
+            "endTime": 1709224384523,
             "resumeTracing": "resumeTracing(){!this.isTracing&&(this.logGroups.unshift({index:this.logGroups.length,timestamp:Date.now(),logs:[],nativeLogs:[]}),this.logs=this.logGroups[0].logs),this.endTime=Date.now()+1e4}",
             "mark": "mark(e,t,n){this.isTracing&&(this.logs.push({emoji:e,prefix:`${this.prefix}`,log:t,delta:n,timestamp:Date.now()}),this.addImportLogDetail())}",
             "markAndLog": "markAndLog(e,t,n,i){e.log(n),this.isTracing&&(this.logs.push({emoji:t,prefix:this.prefix,log:n,delta:i,timestamp:Date.now()}),this.addImportLogDetail())}",
