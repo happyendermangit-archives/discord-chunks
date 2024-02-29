@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "createRoot": "function(e,t){if(!so(e))throw Error(d(299));var n=!1,r=\"\",a=sn;return null!=t&&(!0===t.unstable_strictMode&&(n=!0),void 0!==t.identifierPrefix&&(r=t.identifierPrefix),void 0!==t.onRecoverableError&&(a=t.onRecoverableError)),t=u5(e,1,!1,null,null,n,!1,r,a),e[rP]=t.current,ro(8===e.nodeType?e.parentNode:e),new sr(t)}",
-        "hydrateRoot": "function(e,t,n){if(!so(e))throw Error(d(405));var r=null!=n&&n.hydratedSources||null,a=!1,o=\"\",i=sn;if(null!=n&&(!0===n.unstable_strictMode&&(a=!0),void 0!==n.identifierPrefix&&(o=n.identifierPrefix),void 0!==n.onRecoverableError&&(i=n.onRecoverableError)),t=u7(t,null,e,1,null!=n?n:null,a,!1,o,i),e[rP]=t.current,ro(e),r)for(e=0;e<r.length;e++)a=(a=(n=r[e])._getVersion)(n._source),null==t.mutableSourceEagerHydrationData?t.mutableSourceEagerHydrationData=[n,a]:t.mutableSourceEagerHydrationData.push(n,a);return new sa(t)}"
-    }
-}

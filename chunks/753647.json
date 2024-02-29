@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "normalizeColor": "function o(e){var t;return\"number\"==typeof e?e>>>0===e&&e>=0&&e<=4294967295?e:null:(t=r.hex6.exec(e))?parseInt(t[1]+\"ff\",16)>>>0:a.colorNames&&void 0!==a.colorNames[e]?a.colorNames[e]:(t=r.rgb.exec(e))?(u(t[1])<<24|u(t[2])<<16|u(t[3])<<8|255)>>>0:(t=r.rgba.exec(e))?(u(t[1])<<24|u(t[2])<<16|u(t[3])<<8|l(t[4]))>>>0:(t=r.hex3.exec(e))?parseInt(t[1]+t[1]+t[2]+t[2]+t[3]+t[3]+\"ff\",16)>>>0:(t=r.hex8.exec(e))?parseInt(t[1],16)>>>0:(t=r.hex4.exec(e))?parseInt(t[1]+t[1]+t[2]+t[2]+t[3]+t[3]+t[4]+t[4],16)>>>0:(t=r.hsl.exec(e))?(255|i(s(t[1]),c(t[2]),c(t[3])))>>>0:(t=r.hsla.exec(e))?(i(s(t[1]),c(t[2]),c(t[3]))|l(t[4]))>>>0:null}"
-    }
-}

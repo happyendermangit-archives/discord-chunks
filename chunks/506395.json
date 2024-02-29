@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "SegmentedControl": "function d(e){let{options:t,value:n,onChange:s,look:o=\"tab\",className:l,optionClassName:d,selectedOptionClassName:f}=e,E=r.useCallback(e=>{var t;let r=n===e.value;return(0,i.jsx)(c,{selected:r,option:e,look:o,onClick:s,className:d,selectedClassName:f},null!==(t=e.key)&&void 0!==t?t:String(e.value))},[n,o,s,d,f]);return(0,i.jsx)(\"div\",{className:a(function(e){switch(e){case\"tab\":default:return u.tabContainer;case\"pill\":return u.pillContainer}}(o),l),children:t.map(E)})}"
+    }
+}

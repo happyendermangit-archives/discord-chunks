@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getEnvelopeEndpointWithUrlEncodedAuth": "function a(t){var e,n,a;let s=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},o=\"string\"==typeof s?s:s.tunnel,l=\"string\"!=typeof s&&s._metadata?s._metadata.sdk:void 0;return o||`${e=t,`${i(e)}${e.projectId}/envelope/`}?${n=t,a=l,(0,r.urlEncode)({sentry_key:n.publicKey,sentry_version:\"7\",...a&&{sentry_client:`${a.name}/${a.version}`}})}`}",
-        "getReportDialogEndpoint": "function s(t,e){let n=(0,r.makeDsn)(t);if(!n)return\"\";let a=`${i(n)}embed/error-page/`,s=`dsn=${(0,r.dsnToString)(n)}`;for(let t in e)if(\"dsn\"!==t){if(\"user\"===t){let t=e.user;if(!t)continue;t.name&&(s+=`&name=${encodeURIComponent(t.name)}`),t.email&&(s+=`&email=${encodeURIComponent(t.email)}`)}else s+=`&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`}return`${a}?${s}`}"
-    }
-}

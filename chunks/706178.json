@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e){if(t>4294967295)throw RangeError(\"requested too many random bytes\");var s=n.allocUnsafe(t);if(t>0){if(t>65536)for(var c=0;c<t;c+=65536)i.getRandomValues(s.slice(c,c+65536));else i.getRandomValues(s)}return\"function\"==typeof e?r.nextTick(function(){e(null,s)}):s}"
-}

@@ -1,0 +1,48 @@
+{
+    "exports": {
+        "VideoFilterType": {
+            "0": "BACKGROUND",
+            "BACKGROUND": 0
+        },
+        "DefaultVideoBackground": {
+            "0": "OPTION_1",
+            "1": "OPTION_2",
+            "2": "OPTION_3",
+            "3": "OPTION_4",
+            "7": "OPTION_7",
+            "8": "OPTION_8",
+            "9": "OPTION_9",
+            "10": "OPTION_10",
+            "OPTION_1": 0,
+            "OPTION_2": 1,
+            "OPTION_3": 2,
+            "OPTION_4": 3,
+            "OPTION_7": 7,
+            "OPTION_8": 8,
+            "OPTION_9": 9,
+            "OPTION_10": 10
+        },
+        "ANIMATED_DEFAULT_VIDEO_BACKGROUNDS": [
+            7,
+            8,
+            9,
+            10
+        ],
+        "DEFAULT_VIDEO_BACKGROUND_SORT": {
+            "0": 4,
+            "1": 5,
+            "2": 6,
+            "3": 7,
+            "7": 0,
+            "8": 1,
+            "9": 2,
+            "10": 3
+        },
+        "BLUR_BACKGROUND_OPTION": "blur",
+        "BACKGROUND_REPLACEMENT_SIZE": {
+            "width": 1280,
+            "height": 720
+        },
+        "MAX_BACKGROUND_IMAGE_UPLOAD_FILESIZE_BYTES": 10485760
+    }
+}

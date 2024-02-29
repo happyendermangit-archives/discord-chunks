@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e){let{name:t,className:n,state:a,isInline:u,onClick:d}=e,c=null,f=r.default.Colors.HEADER_PRIMARY;a?.isActive&&!u?c=o.active:a?.lastValidationResult?.success===!1?c=o.error:a?.hasValue&&!u&&(c=o.set);let p=(0,i.jsx)(r.default,{size:u?r.default.Sizes.SIZE_16:r.default.Sizes.SIZE_14,color:f,className:s()(o.option,{[o.inline]:u},c,n),children:t+(u?\":\":\"\")});return null==d?p:(0,i.jsx)(l.Clickable,{className:o.clickable,onClick:()=>d(t),children:p})}"
-    }
-}

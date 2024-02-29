@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "updateDevToolsSettings": "function l(e){a.default.dispatch({type:\"DEV_TOOLS_SETTINGS_UPDATE\",settings:e})}",
+        "toggleDisplayDevTools": "function d(){l({displayTools:!i.default.displayTools})}",
+        "clearAnalyticsLog": "function r(){a.default.dispatch({type:\"ANALYTICS_LOG_CLEAR\"})}"
+    }
+}

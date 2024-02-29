@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "init": "init(){document.addEventListener(\"paste\",e=>{!(0,c.default)((0,n.eventOwnerDocument)(e))&&d.ComponentDispatch.dispatchToLastSubscribed(i.ComponentActions.GLOBAL_CLIPBOARD_PASTE,{event:e})})}"
-        }
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e,t){let[n,s]=i.useState();return i.useEffect(()=>{if(null==e||null!=t){s(void 0);return}(0,a.default)().then(t=>{null!=t&&t.identifyGame(e,(e,t)=>{0===e&&null!=t.icon&&\"\"!==t.icon&&null!=t.name&&\"\"!==t.name&&s(`data:image/png;base64,${t.icon}`)})})},[e,t]),t??n}"
-    }
-}

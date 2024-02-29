@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "queueHighFive": "function o(e,_,E){t.default.dispatch({type:\"HIGH_FIVE_QUEUE\",userId:_,channelId:E,emoji:e})}",
+        "removeHighFive": "function n(e,_){t.default.dispatch({type:\"HIGH_FIVE_REMOVE\",channelId:_,userId:e})}",
+        "setHighFiveEnabled": "function r(e){t.default.dispatch({type:\"HIGH_FIVE_SET_ENABLED\",enabled:e})}",
+        "completeHighFive": "function i(e,_,E,o){t.default.dispatch({type:\"HIGH_FIVE_COMPLETE\",waitingUserId:e,completingUserId:_,channelId:E,completingEmoji:o})}",
+        "clearCompletedHighFive": "function a(e,_,E){t.default.dispatch({type:\"HIGH_FIVE_COMPLETE_CLEAR\",firstUserId:e,secondUserId:_,channelId:E})}"
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useOverlayTriggerState": "function o(e){let[t,n]=(0,a.useControlledState)(e.isOpen,e.defaultOpen||!1,e.onOpenChange),o=(0,r.useCallback)(()=>{n(!0)},[n]),i=(0,r.useCallback)(()=>{n(!1)},[n]),u=(0,r.useCallback)(()=>{n(!t)},[n,t]);return{isOpen:t,setOpen:n,open:o,close:i,toggle:u}}"
-    }
-}

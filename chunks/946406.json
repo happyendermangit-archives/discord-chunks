@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e,t,n){let s=i.useCallback(e=>{if(t)return!0;if(!0===e.defaultPrevented)return!1;let i=n(e);return i&&(e.preventDefault(),e.stopPropagation()),i},[t,n]),l=i.useCallback(t=>{let{event:n}=t;!s(n)&&(n.preventDefault(),n.stopPropagation(),null!=n.clipboardData&&(e.insertData(n.clipboardData),a.EditorUtils.focus(e)))},[e,s]);return{handlePaste:s,handleGlobalPaste:l}}"
-    }
-}

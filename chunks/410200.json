@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t,n,i){var o=!n;n||(n={});for(var s=-1,l=t.length;++s<l;){var c=t[s],_=i?i(n[c],e[c],c,n,e):void 0;void 0===_&&(_=e[c]),o?a(n,c,_):r(n,c,_)}return n}"
-}

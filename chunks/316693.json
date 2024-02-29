@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "isBigFlag": "function(_){return\"bigint\"==typeof _}",
+        "default": {
+            "asUintN": "function(_,E){return Number(BigInt.asUintN(_,E))}",
+            "combine": "function(){for(var _=arguments.length,E=Array(_),I=0;I<_;I++)E[I]=arguments[I];let e=E[0];for(let _=1;_<E.length;_++)e=O(e,E[_]);return e}",
+            "add": "function(_,E){return E===i?_:O(_,E)}",
+            "remove": "function(_,E){return E===i?_:n(_,c(_,E))}",
+            "filter": "function(){let _=arguments.length>0&&void 0!==arguments[0]?arguments[0]:i,E=arguments.length>1&&void 0!==arguments[1]?arguments[1]:i;return _&E}",
+            "invert": "function(){let _=arguments.length>0&&void 0!==arguments[0]?arguments[0]:i;return~_}",
+            "has": "function(_,E){return D(c(_,E),E)}",
+            "hasAny": "function(_,E){return!D(c(_,E),i)}",
+            "equals": "function(_,E){return _===E}",
+            "deserialize": "function(_){return BigInt(_)}",
+            "getFlag": "function(_){return BigInt(1)<<BigInt(_)}"
+        }
+    }
+}

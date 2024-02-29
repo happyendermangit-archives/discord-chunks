@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "createEndDrag": "function o(e){return function(){var t=e.getMonitor(),n=e.getRegistry();(function(e){(0,r.invariant)(e.isDragging(),\"Cannot call endDrag while not dragging.\")})(t);var o=t.getSourceId();return null!=o&&(n.getSource(o,!0).endDrag(t,o),n.unpinSource()),{type:a.END_DRAG}}}"
-    }
-}

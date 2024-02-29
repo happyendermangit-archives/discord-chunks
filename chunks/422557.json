@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getRootNavigationRefIfInExperiment": "function S(){return A()?(0,_.getRootNavigationRef)():void 0}",
-        "isInMainTabsExperiment": "function A(){return d()}",
-        "useInMainTabsExperiment": "function N(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],t=(0,E.useMobileRedesignDisabled)(),n=c(e=>e.getExperimentEnabled()),i=(0,u.useIsTabsUIEnabledManually)();return d(t,e,n,i,(0,s.useRedesignToggleIgnored)())}"
-    }
-}

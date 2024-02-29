@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function E(e){let{channel:t,isAppDetailPresent:n}=e,[s,E]=a.useState(\"\"),_=a.useCallback(()=>E(\"\"),[E]),{commandsByActiveSection:I,sectionDescriptors:C,filterSection:y}=u.useDiscovery(t,{commandType:o.ApplicationCommandType.CHAT},{placeholderCount:0,limit:m.DISCOVERY_COMMANDS_QUERY_LIMIT,includeFrecency:!0});a.useEffect(()=>{y(m.BuiltInSectionId.FRECENCY)},[y]);let S=I[0]?.data??[],g=C.filter(e=>e.id!==m.BuiltInSectionId.FRECENCY&&e.id!==m.BuiltInSectionId.BUILT_IN),x=(0,d.useSortApplicationsViaFrecency)(g);return(0,i.jsxs)(\"div\",{className:l()(h.container,{[h.appDetailVisible]:n}),children:[(0,i.jsx)(\"div\",{className:h.searchBarContainer,children:(0,i.jsx)(c.default,{placeholder:\"Search Apps & Commands\",onChange:E,query:s,onClear:_,size:c.default.Sizes.MEDIUM})}),(0,i.jsxs)(r.Scroller,{className:h.scrollableContent,fade:!0,children:[(0,i.jsx)(f.default,{channel:t,commands:S,sectionDescriptors:C}),(0,i.jsx)(p.default,{channel:t,applications:x})]})]})}"
-    }
-}

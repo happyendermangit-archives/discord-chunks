@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isIFrameModalForGuildEnabled": "function l(e){return r.getCurrentConfig({guildId:e??a.EMPTY_STRING_SNOWFLAKE_ID,location:\"2d360b_1\"},{autoTrackExposure:!0}).enabled}"
-    }
-}

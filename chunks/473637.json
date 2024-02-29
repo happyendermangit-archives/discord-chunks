@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,i.getRootNavigationRef)();return e?.isReady()===!0?e?.getCurrentRoute():void 0}"
-    }
-}

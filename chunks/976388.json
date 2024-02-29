@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "Popper": "function c(e){var t=e.placement,n=void 0===t?\"bottom\":t,c=e.strategy,d=void 0===c?\"absolute\":c,f=e.modifiers,p=void 0===f?l:f,h=e.referenceElement,m=e.onFirstUpdate,y=e.innerRef,v=e.children,g=r.useContext(a.ManagerReferenceNodeContext),b=r.useState(null),_=b[0],w=b[1],x=r.useState(null),D=x[0],k=x[1];r.useEffect(function(){(0,o.setRef)(y,_)},[y,_]);var M=r.useMemo(function(){return{placement:n,strategy:d,onFirstUpdate:m,modifiers:[].concat(p,[{name:\"arrow\",enabled:null!=D,options:{element:D}}])}},[n,d,m,p,D]),S=(0,i.usePopper)(h||g,_,M),T=S.state,E=S.styles,L=S.forceUpdate,C=S.update,P=r.useMemo(function(){return{ref:w,style:E.popper,placement:T?T.placement:n,hasPopperEscaped:T&&T.modifiersData.hide?T.modifiersData.hide.hasPopperEscaped:null,isReferenceHidden:T&&T.modifiersData.hide?T.modifiersData.hide.isReferenceHidden:null,arrowProps:{style:E.arrow,ref:k},forceUpdate:L||u,update:C||s}},[w,k,n,T,E,C,L]);return(0,o.unwrapArray)(v)(P)}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function d(e){let{user:t,setNote:n,autoFocus:d,lastSection:c,hideNote:f}=e;return f?null:(0,i.jsxs)(l.default,{lastSection:c,children:[(0,i.jsx)(a.Heading,{variant:\"eyebrow\",className:u.title,children:r.default.Messages.NOTE}),(0,i.jsx)(s.default,{userId:t.id,autoFocus:n||d,className:o.note},\"note\")]})}"
-    }
-}

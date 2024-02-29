@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:()=>{},n=()=>{i.default.updatedUnsyncedSettings({disableEmbeddedActivityPopOutAlert:!0}),e()};l.default.disableEmbeddedActivityPopOutAlert?e():(0,r.openModal)(r=>(0,a.jsx)(s.default,{confirmText:u.default.Messages.EMBEDDED_ACTIVITIES_YEP,secondaryConfirmText:u.default.Messages.DONT_ASK_AGAIN,title:u.default.Messages.EMBEDDED_ACTIVITIES_CAREFUL,cancelText:u.default.Messages.EMBEDDED_ACTIVITIES_NVM,onConfirm:e,onConfirmSecondary:n,onCancel:t,body:u.default.Messages.EMBEDDED_ACTIVITIES_POP_OUT_WARNING,...r}))}"
-    }
-}

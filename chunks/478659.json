@@ -1,0 +1,507 @@
+{
+    "exports": {
+        "parsers": {
+            "G": {
+                "priority": 140,
+                "incompatibleTokens": [
+                    "R",
+                    "u",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"G\":case\"GG\":case\"GGG\":return n.era(e,{width:\"abbreviated\"})||n.era(e,{width:\"narrow\"});case\"GGGGG\":return n.era(e,{width:\"narrow\"});default:return n.era(e,{width:\"wide\"})||n.era(e,{width:\"abbreviated\"})||n.era(e,{width:\"narrow\"})}}",
+                "set": "function(e,t,n){return t.era=n,e.setUTCFullYear(n,0,1),e.setUTCHours(0,0,0,0),e}"
+            },
+            "y": {
+                "priority": 130,
+                "incompatibleTokens": [
+                    "Y",
+                    "R",
+                    "u",
+                    "w",
+                    "I",
+                    "i",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){var r=function(e){return{year:e,isTwoDigitYear:\"yy\"===t}};switch(t){case\"y\":return(0,a.mapValue)((0,a.parseNDigits)(4,e),r);case\"yo\":return(0,a.mapValue)(n.ordinalNumber(e,{unit:\"year\"}),r);default:return(0,a.mapValue)((0,a.parseNDigits)(t.length,e),r)}}",
+                "validate": "function(e,t){return t.isTwoDigitYear||t.year>0}",
+                "set": "function(e,t,n){var r=e.getUTCFullYear();if(n.isTwoDigitYear){var o=(0,a.normalizeTwoDigitYear)(n.year,r);return e.setUTCFullYear(o,0,1),e.setUTCHours(0,0,0,0),e}var i=\"era\"in t&&1!==t.era?1-n.year:n.year;return e.setUTCFullYear(i,0,1),e.setUTCHours(0,0,0,0),e}"
+            },
+            "Y": {
+                "priority": 130,
+                "incompatibleTokens": [
+                    "y",
+                    "R",
+                    "u",
+                    "Q",
+                    "q",
+                    "M",
+                    "L",
+                    "I",
+                    "d",
+                    "D",
+                    "i",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){var r=function(e){return{year:e,isTwoDigitYear:\"YY\"===t}};switch(t){case\"Y\":return(0,a.mapValue)((0,a.parseNDigits)(4,e),r);case\"Yo\":return(0,a.mapValue)(n.ordinalNumber(e,{unit:\"year\"}),r);default:return(0,a.mapValue)((0,a.parseNDigits)(t.length,e),r)}}",
+                "validate": "function(e,t){return t.isTwoDigitYear||t.year>0}",
+                "set": "function(e,t,n,r){var s=(0,o.default)(e,r);if(n.isTwoDigitYear){var u=(0,a.normalizeTwoDigitYear)(n.year,s);return e.setUTCFullYear(u,0,r.firstWeekContainsDate),e.setUTCHours(0,0,0,0),(0,i.default)(e,r)}var l=\"era\"in t&&1!==t.era?1-n.year:n.year;return e.setUTCFullYear(l,0,r.firstWeekContainsDate),e.setUTCHours(0,0,0,0),(0,i.default)(e,r)}"
+            },
+            "R": {
+                "priority": 130,
+                "incompatibleTokens": [
+                    "G",
+                    "y",
+                    "Y",
+                    "u",
+                    "Q",
+                    "q",
+                    "M",
+                    "L",
+                    "w",
+                    "d",
+                    "D",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t){return\"R\"===t?(0,a.parseNDigitsSigned)(4,e):(0,a.parseNDigitsSigned)(t.length,e)}",
+                "set": "function(e,t,n){var r=new Date(0);return r.setUTCFullYear(n,0,4),r.setUTCHours(0,0,0,0),(0,o.default)(r)}"
+            },
+            "u": {
+                "priority": 130,
+                "incompatibleTokens": [
+                    "G",
+                    "y",
+                    "Y",
+                    "R",
+                    "w",
+                    "I",
+                    "i",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t){return\"u\"===t?(0,a.parseNDigitsSigned)(4,e):(0,a.parseNDigitsSigned)(t.length,e)}",
+                "set": "function(e,t,n){return e.setUTCFullYear(n,0,1),e.setUTCHours(0,0,0,0),e}"
+            },
+            "Q": {
+                "priority": 120,
+                "incompatibleTokens": [
+                    "Y",
+                    "R",
+                    "q",
+                    "M",
+                    "L",
+                    "w",
+                    "I",
+                    "d",
+                    "D",
+                    "i",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"Q\":case\"QQ\":return(0,a.parseNDigits)(t.length,e);case\"Qo\":return n.ordinalNumber(e,{unit:\"quarter\"});case\"QQQ\":return n.quarter(e,{width:\"abbreviated\",context:\"formatting\"})||n.quarter(e,{width:\"narrow\",context:\"formatting\"});case\"QQQQQ\":return n.quarter(e,{width:\"narrow\",context:\"formatting\"});default:return n.quarter(e,{width:\"wide\",context:\"formatting\"})||n.quarter(e,{width:\"abbreviated\",context:\"formatting\"})||n.quarter(e,{width:\"narrow\",context:\"formatting\"})}}",
+                "validate": "function(e,t){return t>=1&&t<=4}",
+                "set": "function(e,t,n){return e.setUTCMonth((n-1)*3,1),e.setUTCHours(0,0,0,0),e}"
+            },
+            "q": {
+                "priority": 120,
+                "incompatibleTokens": [
+                    "Y",
+                    "R",
+                    "Q",
+                    "M",
+                    "L",
+                    "w",
+                    "I",
+                    "d",
+                    "D",
+                    "i",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"q\":case\"qq\":return(0,a.parseNDigits)(t.length,e);case\"qo\":return n.ordinalNumber(e,{unit:\"quarter\"});case\"qqq\":return n.quarter(e,{width:\"abbreviated\",context:\"standalone\"})||n.quarter(e,{width:\"narrow\",context:\"standalone\"});case\"qqqqq\":return n.quarter(e,{width:\"narrow\",context:\"standalone\"});default:return n.quarter(e,{width:\"wide\",context:\"standalone\"})||n.quarter(e,{width:\"abbreviated\",context:\"standalone\"})||n.quarter(e,{width:\"narrow\",context:\"standalone\"})}}",
+                "validate": "function(e,t){return t>=1&&t<=4}",
+                "set": "function(e,t,n){return e.setUTCMonth((n-1)*3,1),e.setUTCHours(0,0,0,0),e}"
+            },
+            "M": {
+                "incompatibleTokens": [
+                    "Y",
+                    "R",
+                    "q",
+                    "Q",
+                    "L",
+                    "w",
+                    "I",
+                    "D",
+                    "i",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "priority": 110,
+                "parse": "function(e,t,n){var a=function(e){return e-1};switch(t){case\"M\":return(0,r.mapValue)((0,r.parseNumericPattern)(o.numericPatterns.month,e),a);case\"MM\":return(0,r.mapValue)((0,r.parseNDigits)(2,e),a);case\"Mo\":return(0,r.mapValue)(n.ordinalNumber(e,{unit:\"month\"}),a);case\"MMM\":return n.month(e,{width:\"abbreviated\",context:\"formatting\"})||n.month(e,{width:\"narrow\",context:\"formatting\"});case\"MMMMM\":return n.month(e,{width:\"narrow\",context:\"formatting\"});default:return n.month(e,{width:\"wide\",context:\"formatting\"})||n.month(e,{width:\"abbreviated\",context:\"formatting\"})||n.month(e,{width:\"narrow\",context:\"formatting\"})}}",
+                "validate": "function(e,t){return t>=0&&t<=11}",
+                "set": "function(e,t,n){return e.setUTCMonth(n,1),e.setUTCHours(0,0,0,0),e}"
+            },
+            "L": {
+                "priority": 110,
+                "incompatibleTokens": [
+                    "Y",
+                    "R",
+                    "q",
+                    "Q",
+                    "M",
+                    "w",
+                    "I",
+                    "D",
+                    "i",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){var r=function(e){return e-1};switch(t){case\"L\":return(0,o.mapValue)((0,o.parseNumericPattern)(a.numericPatterns.month,e),r);case\"LL\":return(0,o.mapValue)((0,o.parseNDigits)(2,e),r);case\"Lo\":return(0,o.mapValue)(n.ordinalNumber(e,{unit:\"month\"}),r);case\"LLL\":return n.month(e,{width:\"abbreviated\",context:\"standalone\"})||n.month(e,{width:\"narrow\",context:\"standalone\"});case\"LLLLL\":return n.month(e,{width:\"narrow\",context:\"standalone\"});default:return n.month(e,{width:\"wide\",context:\"standalone\"})||n.month(e,{width:\"abbreviated\",context:\"standalone\"})||n.month(e,{width:\"narrow\",context:\"standalone\"})}}",
+                "validate": "function(e,t){return t>=0&&t<=11}",
+                "set": "function(e,t,n){return e.setUTCMonth(n,1),e.setUTCHours(0,0,0,0),e}"
+            },
+            "w": {
+                "priority": 100,
+                "incompatibleTokens": [
+                    "y",
+                    "R",
+                    "u",
+                    "q",
+                    "Q",
+                    "M",
+                    "L",
+                    "I",
+                    "d",
+                    "D",
+                    "i",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"w\":return(0,o.parseNumericPattern)(a.numericPatterns.week,e);case\"wo\":return n.ordinalNumber(e,{unit:\"week\"});default:return(0,o.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){return t>=1&&t<=53}",
+                "set": "function(e,t,n,r){return(0,s.default)((0,i.default)(e,n,r),r)}"
+            },
+            "I": {
+                "priority": 100,
+                "incompatibleTokens": [
+                    "y",
+                    "Y",
+                    "u",
+                    "q",
+                    "Q",
+                    "M",
+                    "L",
+                    "w",
+                    "d",
+                    "D",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"I\":return(0,o.parseNumericPattern)(a.numericPatterns.week,e);case\"Io\":return n.ordinalNumber(e,{unit:\"week\"});default:return(0,o.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){return t>=1&&t<=53}",
+                "set": "function(e,t,n){return(0,s.default)((0,i.default)(e,n))}"
+            },
+            "d": {
+                "priority": 90,
+                "subPriority": 1,
+                "incompatibleTokens": [
+                    "Y",
+                    "R",
+                    "q",
+                    "Q",
+                    "w",
+                    "I",
+                    "D",
+                    "i",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"d\":return(0,r.parseNumericPattern)(o.numericPatterns.date,e);case\"do\":return n.ordinalNumber(e,{unit:\"date\"});default:return(0,r.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){var n=e.getUTCFullYear(),a=(0,r.isLeapYearIndex)(n),o=e.getUTCMonth();return a?t>=1&&t<=p[o]:t>=1&&t<=f[o]}",
+                "set": "function(e,t,n){return e.setUTCDate(n),e.setUTCHours(0,0,0,0),e}"
+            },
+            "D": {
+                "priority": 90,
+                "subpriority": 1,
+                "incompatibleTokens": [
+                    "Y",
+                    "R",
+                    "q",
+                    "Q",
+                    "M",
+                    "L",
+                    "w",
+                    "I",
+                    "d",
+                    "E",
+                    "i",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"D\":case\"DD\":return(0,o.parseNumericPattern)(a.numericPatterns.dayOfYear,e);case\"Do\":return n.ordinalNumber(e,{unit:\"date\"});default:return(0,o.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){var n=e.getUTCFullYear();return(0,o.isLeapYearIndex)(n)?t>=1&&t<=366:t>=1&&t<=365}",
+                "set": "function(e,t,n){return e.setUTCMonth(0,n),e.setUTCHours(0,0,0,0),e}"
+            },
+            "E": {
+                "priority": 90,
+                "incompatibleTokens": [
+                    "D",
+                    "i",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"E\":case\"EE\":case\"EEE\":return n.day(e,{width:\"abbreviated\",context:\"formatting\"})||n.day(e,{width:\"short\",context:\"formatting\"})||n.day(e,{width:\"narrow\",context:\"formatting\"});case\"EEEEE\":return n.day(e,{width:\"narrow\",context:\"formatting\"});case\"EEEEEE\":return n.day(e,{width:\"short\",context:\"formatting\"})||n.day(e,{width:\"narrow\",context:\"formatting\"});default:return n.day(e,{width:\"wide\",context:\"formatting\"})||n.day(e,{width:\"abbreviated\",context:\"formatting\"})||n.day(e,{width:\"short\",context:\"formatting\"})||n.day(e,{width:\"narrow\",context:\"formatting\"})}}",
+                "validate": "function(e,t){return t>=0&&t<=6}",
+                "set": "function(e,t,n,r){return(e=(0,a.default)(e,n,r)).setUTCHours(0,0,0,0),e}"
+            },
+            "e": {
+                "priority": 90,
+                "incompatibleTokens": [
+                    "y",
+                    "R",
+                    "u",
+                    "q",
+                    "Q",
+                    "M",
+                    "L",
+                    "I",
+                    "d",
+                    "D",
+                    "E",
+                    "i",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n,r){var o=function(e){return(e+r.weekStartsOn+6)%7+7*Math.floor((e-1)/7)};switch(t){case\"e\":case\"ee\":return(0,a.mapValue)((0,a.parseNDigits)(t.length,e),o);case\"eo\":return(0,a.mapValue)(n.ordinalNumber(e,{unit:\"day\"}),o);case\"eee\":return n.day(e,{width:\"abbreviated\",context:\"formatting\"})||n.day(e,{width:\"short\",context:\"formatting\"})||n.day(e,{width:\"narrow\",context:\"formatting\"});case\"eeeee\":return n.day(e,{width:\"narrow\",context:\"formatting\"});case\"eeeeee\":return n.day(e,{width:\"short\",context:\"formatting\"})||n.day(e,{width:\"narrow\",context:\"formatting\"});default:return n.day(e,{width:\"wide\",context:\"formatting\"})||n.day(e,{width:\"abbreviated\",context:\"formatting\"})||n.day(e,{width:\"short\",context:\"formatting\"})||n.day(e,{width:\"narrow\",context:\"formatting\"})}}",
+                "validate": "function(e,t){return t>=0&&t<=6}",
+                "set": "function(e,t,n,r){return(e=(0,o.default)(e,n,r)).setUTCHours(0,0,0,0),e}"
+            },
+            "c": {
+                "priority": 90,
+                "incompatibleTokens": [
+                    "y",
+                    "R",
+                    "u",
+                    "q",
+                    "Q",
+                    "M",
+                    "L",
+                    "I",
+                    "d",
+                    "D",
+                    "E",
+                    "i",
+                    "e",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n,r){var o=function(e){return(e+r.weekStartsOn+6)%7+7*Math.floor((e-1)/7)};switch(t){case\"c\":case\"cc\":return(0,a.mapValue)((0,a.parseNDigits)(t.length,e),o);case\"co\":return(0,a.mapValue)(n.ordinalNumber(e,{unit:\"day\"}),o);case\"ccc\":return n.day(e,{width:\"abbreviated\",context:\"standalone\"})||n.day(e,{width:\"short\",context:\"standalone\"})||n.day(e,{width:\"narrow\",context:\"standalone\"});case\"ccccc\":return n.day(e,{width:\"narrow\",context:\"standalone\"});case\"cccccc\":return n.day(e,{width:\"short\",context:\"standalone\"})||n.day(e,{width:\"narrow\",context:\"standalone\"});default:return n.day(e,{width:\"wide\",context:\"standalone\"})||n.day(e,{width:\"abbreviated\",context:\"standalone\"})||n.day(e,{width:\"short\",context:\"standalone\"})||n.day(e,{width:\"narrow\",context:\"standalone\"})}}",
+                "validate": "function(e,t){return t>=0&&t<=6}",
+                "set": "function(e,t,n,r){return(e=(0,o.default)(e,n,r)).setUTCHours(0,0,0,0),e}"
+            },
+            "i": {
+                "priority": 90,
+                "incompatibleTokens": [
+                    "y",
+                    "Y",
+                    "u",
+                    "q",
+                    "Q",
+                    "M",
+                    "L",
+                    "w",
+                    "d",
+                    "D",
+                    "E",
+                    "e",
+                    "c",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){var r=function(e){return 0===e?7:e};switch(t){case\"i\":case\"ii\":return(0,a.parseNDigits)(t.length,e);case\"io\":return n.ordinalNumber(e,{unit:\"day\"});case\"iii\":return(0,a.mapValue)(n.day(e,{width:\"abbreviated\",context:\"formatting\"})||n.day(e,{width:\"short\",context:\"formatting\"})||n.day(e,{width:\"narrow\",context:\"formatting\"}),r);case\"iiiii\":return(0,a.mapValue)(n.day(e,{width:\"narrow\",context:\"formatting\"}),r);case\"iiiiii\":return(0,a.mapValue)(n.day(e,{width:\"short\",context:\"formatting\"})||n.day(e,{width:\"narrow\",context:\"formatting\"}),r);default:return(0,a.mapValue)(n.day(e,{width:\"wide\",context:\"formatting\"})||n.day(e,{width:\"abbreviated\",context:\"formatting\"})||n.day(e,{width:\"short\",context:\"formatting\"})||n.day(e,{width:\"narrow\",context:\"formatting\"}),r)}}",
+                "validate": "function(e,t){return t>=1&&t<=7}",
+                "set": "function(e,t,n){return(e=(0,o.default)(e,n)).setUTCHours(0,0,0,0),e}"
+            },
+            "a": {
+                "priority": 80,
+                "incompatibleTokens": [
+                    "b",
+                    "B",
+                    "H",
+                    "k",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"a\":case\"aa\":case\"aaa\":return n.dayPeriod(e,{width:\"abbreviated\",context:\"formatting\"})||n.dayPeriod(e,{width:\"narrow\",context:\"formatting\"});case\"aaaaa\":return n.dayPeriod(e,{width:\"narrow\",context:\"formatting\"});default:return n.dayPeriod(e,{width:\"wide\",context:\"formatting\"})||n.dayPeriod(e,{width:\"abbreviated\",context:\"formatting\"})||n.dayPeriod(e,{width:\"narrow\",context:\"formatting\"})}}",
+                "set": "function(e,t,n){return e.setUTCHours((0,a.dayPeriodEnumToHours)(n),0,0,0),e}"
+            },
+            "b": {
+                "priority": 80,
+                "incompatibleTokens": [
+                    "a",
+                    "B",
+                    "H",
+                    "k",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"b\":case\"bb\":case\"bbb\":return n.dayPeriod(e,{width:\"abbreviated\",context:\"formatting\"})||n.dayPeriod(e,{width:\"narrow\",context:\"formatting\"});case\"bbbbb\":return n.dayPeriod(e,{width:\"narrow\",context:\"formatting\"});default:return n.dayPeriod(e,{width:\"wide\",context:\"formatting\"})||n.dayPeriod(e,{width:\"abbreviated\",context:\"formatting\"})||n.dayPeriod(e,{width:\"narrow\",context:\"formatting\"})}}",
+                "set": "function(e,t,n){return e.setUTCHours((0,a.dayPeriodEnumToHours)(n),0,0,0),e}"
+            },
+            "B": {
+                "priority": 80,
+                "incompatibleTokens": [
+                    "a",
+                    "b",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"B\":case\"BB\":case\"BBB\":return n.dayPeriod(e,{width:\"abbreviated\",context:\"formatting\"})||n.dayPeriod(e,{width:\"narrow\",context:\"formatting\"});case\"BBBBB\":return n.dayPeriod(e,{width:\"narrow\",context:\"formatting\"});default:return n.dayPeriod(e,{width:\"wide\",context:\"formatting\"})||n.dayPeriod(e,{width:\"abbreviated\",context:\"formatting\"})||n.dayPeriod(e,{width:\"narrow\",context:\"formatting\"})}}",
+                "set": "function(e,t,n){return e.setUTCHours((0,a.dayPeriodEnumToHours)(n),0,0,0),e}"
+            },
+            "h": {
+                "priority": 70,
+                "incompatibleTokens": [
+                    "H",
+                    "K",
+                    "k",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"h\":return(0,o.parseNumericPattern)(a.numericPatterns.hour12h,e);case\"ho\":return n.ordinalNumber(e,{unit:\"hour\"});default:return(0,o.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){return t>=1&&t<=12}",
+                "set": "function(e,t,n){var r=e.getUTCHours()>=12;return r&&n<12?e.setUTCHours(n+12,0,0,0):r||12!==n?e.setUTCHours(n,0,0,0):e.setUTCHours(0,0,0,0),e}"
+            },
+            "H": {
+                "priority": 70,
+                "incompatibleTokens": [
+                    "a",
+                    "b",
+                    "h",
+                    "K",
+                    "k",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"H\":return(0,o.parseNumericPattern)(a.numericPatterns.hour23h,e);case\"Ho\":return n.ordinalNumber(e,{unit:\"hour\"});default:return(0,o.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){return t>=0&&t<=23}",
+                "set": "function(e,t,n){return e.setUTCHours(n,0,0,0),e}"
+            },
+            "K": {
+                "priority": 70,
+                "incompatibleTokens": [
+                    "h",
+                    "H",
+                    "k",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"K\":return(0,o.parseNumericPattern)(a.numericPatterns.hour11h,e);case\"Ko\":return n.ordinalNumber(e,{unit:\"hour\"});default:return(0,o.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){return t>=0&&t<=11}",
+                "set": "function(e,t,n){return e.getUTCHours()>=12&&n<12?e.setUTCHours(n+12,0,0,0):e.setUTCHours(n,0,0,0),e}"
+            },
+            "k": {
+                "priority": 70,
+                "incompatibleTokens": [
+                    "a",
+                    "b",
+                    "h",
+                    "H",
+                    "K",
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"k\":return(0,o.parseNumericPattern)(a.numericPatterns.hour24h,e);case\"ko\":return n.ordinalNumber(e,{unit:\"hour\"});default:return(0,o.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){return t>=1&&t<=24}",
+                "set": "function(e,t,n){return e.setUTCHours(n<=24?n%24:n,0,0,0),e}"
+            },
+            "m": {
+                "priority": 60,
+                "incompatibleTokens": [
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"m\":return(0,o.parseNumericPattern)(a.numericPatterns.minute,e);case\"mo\":return n.ordinalNumber(e,{unit:\"minute\"});default:return(0,o.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){return t>=0&&t<=59}",
+                "set": "function(e,t,n){return e.setUTCMinutes(n,0,0),e}"
+            },
+            "s": {
+                "priority": 50,
+                "incompatibleTokens": [
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t,n){switch(t){case\"s\":return(0,o.parseNumericPattern)(a.numericPatterns.second,e);case\"so\":return n.ordinalNumber(e,{unit:\"second\"});default:return(0,o.parseNDigits)(t.length,e)}}",
+                "validate": "function(e,t){return t>=0&&t<=59}",
+                "set": "function(e,t,n){return e.setUTCSeconds(n,0),e}"
+            },
+            "S": {
+                "priority": 30,
+                "incompatibleTokens": [
+                    "t",
+                    "T"
+                ],
+                "parse": "function(e,t){return(0,a.mapValue)((0,a.parseNDigits)(t.length,e),function(e){return Math.floor(e*Math.pow(10,-t.length+3))})}",
+                "set": "function(e,t,n){return e.setUTCMilliseconds(n),e}"
+            },
+            "X": {
+                "priority": 10,
+                "incompatibleTokens": [
+                    "t",
+                    "T",
+                    "x"
+                ],
+                "parse": "function(e,t){switch(t){case\"X\":return(0,o.parseTimezonePattern)(a.timezonePatterns.basicOptionalMinutes,e);case\"XX\":return(0,o.parseTimezonePattern)(a.timezonePatterns.basic,e);case\"XXXX\":return(0,o.parseTimezonePattern)(a.timezonePatterns.basicOptionalSeconds,e);case\"XXXXX\":return(0,o.parseTimezonePattern)(a.timezonePatterns.extendedOptionalSeconds,e);default:return(0,o.parseTimezonePattern)(a.timezonePatterns.extended,e)}}",
+                "set": "function(e,t,n){return t.timestampIsSet?e:new Date(e.getTime()-n)}"
+            },
+            "x": {
+                "priority": 10,
+                "incompatibleTokens": [
+                    "t",
+                    "T",
+                    "X"
+                ],
+                "parse": "function(e,t){switch(t){case\"x\":return(0,o.parseTimezonePattern)(a.timezonePatterns.basicOptionalMinutes,e);case\"xx\":return(0,o.parseTimezonePattern)(a.timezonePatterns.basic,e);case\"xxxx\":return(0,o.parseTimezonePattern)(a.timezonePatterns.basicOptionalSeconds,e);case\"xxxxx\":return(0,o.parseTimezonePattern)(a.timezonePatterns.extendedOptionalSeconds,e);default:return(0,o.parseTimezonePattern)(a.timezonePatterns.extended,e)}}",
+                "set": "function(e,t,n){return t.timestampIsSet?e:new Date(e.getTime()-n)}"
+            },
+            "t": {
+                "priority": 40,
+                "incompatibleTokens": "*",
+                "parse": "function(e){return(0,a.parseAnyDigitsSigned)(e)}",
+                "set": "function(e,t,n){return[new Date(1e3*n),{timestampIsSet:!0}]}"
+            },
+            "T": {
+                "priority": 20,
+                "incompatibleTokens": "*",
+                "parse": "function(e){return(0,a.parseAnyDigitsSigned)(e)}",
+                "set": "function(e,t,n){return[new Date(n),{timestampIsSet:!0}]}"
+            }
+        }
+    }
+}

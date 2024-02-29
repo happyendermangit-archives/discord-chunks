@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "getAssetFromImageURL": "function p(e,t){let n=h[e].serialize(t);return n?\"\".concat(e,\":\").concat(n.toString()):null}",
+        "getAssetImage": "function y(e,t,n){if(null!=t&&t.includes(\":\")){let[e,s]=t.split(\":\");if(e===l.PlatformTypes.TWITCH){if(null==n||\"number\"==typeof n){new(0,d.default)(\"ApplicationAssetUtils\").warn(\"getAssetImage: size must === [number, number] for Twitch\");return}return h[l.PlatformTypes.TWITCH].deserialize(s,n)}return Object.prototype.hasOwnProperty.call(h,e)?h[e].deserialize(s):void 0}if(null==e||null==t)return;let s=\"number\"==typeof n?\"?size=\".concat((0,u.getBestMediaProxySize)(n)):\"\";return null!=window.GLOBAL_ENV.CDN_HOST?\"\".concat(location.protocol,\"//\").concat(window.GLOBAL_ENV.CDN_HOST,\"/app-assets/\").concat(e,\"/\").concat(t,\".png\").concat(s):\"\".concat(r.default.getAPIBaseURL(),\"/applications/\").concat(e,\"/app-assets/\").concat(t,\".png\").concat(s)}",
+        "getAssets": "async function T(e){let t=await function(e){var t;let n=o.default.getApplicationAssets(e);return null==n||(t=n.lastUpdated,Date.now()-t>36e5)?E(e):Promise.resolve(n)}(e);return null==t?void 0:t.assets}",
+        "fetchAssetIds": "async function A(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1;a.default.dispatch({type:\"APPLICATION_ASSETS_FETCH\",applicationId:e});let s=[],i=t.filter(e=>(null==e?void 0:e.startsWith(\"http:\"))||(null==e?void 0:e.startsWith(\"https:\")));i.length>0&&await C(e,i);let r=S(t,s);if(r)return a.default.dispatch({type:\"APPLICATION_ASSETS_FETCH_SUCCESS\",applicationId:e}),s;let o=await T(e),d=I(t,s,o,n);return d?E(e).then(()=>A(e,t,n-1)):(a.default.dispatch({type:\"APPLICATION_ASSETS_FETCH_SUCCESS\",applicationId:e}),s)}",
+        "getAssetIds": "function D(e,t){let n=[],s=S(t,n);if(s)return n;let i=o.default.getApplicationAssets(e);return null==i?n:(I(t,n,i),n)}"
+    }
+}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "VerificationLayerContainer": "e=>(0,i.jsx)(S,{layerContext:t,...e})",
-        "VerificationLayerProvider": "e=>(0,i.jsx)(d,{layerContext:t,...e})",
-        "default": "e=>(0,i.jsx)(N,{layerContext:t,...e})"
-    }
-}

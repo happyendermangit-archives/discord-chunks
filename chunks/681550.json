@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "DateParser": "function v(){var e;!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,v);for(var t=arguments.length,n=Array(t),r=0;r<t;r++)n[r]=arguments[r];return d(l(e=y.call.apply(y,[this].concat(n))),\"priority\",90),d(l(e),\"subPriority\",1),d(l(e),\"incompatibleTokens\",[\"Y\",\"R\",\"q\",\"Q\",\"w\",\"I\",\"D\",\"i\",\"e\",\"c\",\"t\",\"T\"]),e}"
-    }
-}

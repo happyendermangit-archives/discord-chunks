@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t,n,o){if(!(0<=e&&e<=1&&0<=n&&n<=1))throw Error(\"bezier x values must be in [0, 1] range\");var i=a?new Float32Array(11):Array(11);if(e!==t||n!==o)for(var u=0;u<11;++u)i[u]=s(u*r,e,n);return function(a){return e===t&&n===o?a:0===a?0:1===a?1:s(function(t){for(var a=0,o=1,u=10;o!==u&&i[o]<=t;++o)a+=r;var c=a+(t-i[--o])/(i[o+1]-i[o])*r,d=l(c,e,n);return d>=.001?function(e,t,n,r){for(var a=0;a<4;++a){var o=l(t,n,r);if(0===o)break;var i=s(t,n,r)-e;t-=i/o}return t}(t,c,e,n):0===d?c:function(e,t,n,r,a){var o,i,u=0;do(o=s(i=t+(n-t)/2,r,a)-e)>0?n=i:t=i;while(Math.abs(o)>1e-7&&++u<10);return i}(t,a,a+r,e,n)}(a),t,o)}}"
-}

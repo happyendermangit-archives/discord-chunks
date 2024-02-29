@@ -1,3 +1,0 @@
-{
-    "exports": "function v(t,e){var s,h;if(t<16)return 2===e||5===e?new n([140,123]):new n([140,39]);for(e=new n(e);;){for(s=new n(r(Math.ceil(t/8)));s.bitLength()>t;)s.ishrn(1);if(s.isEven()&&s.iadd(o),!s.testn(1)&&s.iadd(f),e.cmp(f)){if(!e.cmp(u))for(;s.mod(a).cmp(d);)s.iadd(b)}else for(;s.mod(i).cmp(p);)s.iadd(b);if(l(h=s.shrn(1))&&l(s)&&g(h)&&g(s)&&c.test(h)&&c.test(s))return s}}"
-}

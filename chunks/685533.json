@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "FormSwitch": "function T(e){let{value:t,disabled:n=!1,hideBorder:o=!1,tooltipNote:T,onChange:c,className:d,style:S,note:A,children:N}=e,O=r.useRef(null),R=r.useRef(null),C=r.useId(),h=(0,i.jsx)(_.Switch,{id:C,checked:t,onChange:c,disabled:n,focusProps:{enabled:!1},innerRef:O});return(0,i.jsxs)(\"div\",{style:S,className:a()(I.container,d,{[I.disabled]:n}),children:[(0,i.jsx)(s.FocusRing,{within:!0,offset:-4,focusTarget:O,ringTarget:R,children:(0,i.jsxs)(\"div\",{className:I.labelRow,ref:R,children:[(0,i.jsx)(\"label\",{htmlFor:C,className:I.title,children:N}),(0,i.jsx)(\"div\",{className:I.control,children:null!=T?(0,i.jsx)(E.TooltipContainer,{text:T,children:h}):h})]})}),null!=A&&(0,i.jsx)(\"div\",{className:I.note,children:(0,i.jsx)(u.FormText,{disabled:n,type:u.FormTextTypes.DESCRIPTION,children:A})}),!o&&(0,i.jsx)(l.FormDivider,{className:I.dividerDefault})]})}"
-    }
-}

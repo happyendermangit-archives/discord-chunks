@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,s){if(\"Object\"!==p(t))throw new r(\"Assertion failed: Type(O) is not Object\");if(!u(e))throw new r(\"Assertion failed: IsPropertyKey(P) is not true\");var b=n({Type:p,IsDataDescriptor:f,IsAccessorDescriptor:o},s)?s:d(s);if(!n({Type:p,IsDataDescriptor:f,IsAccessorDescriptor:o},b))throw new r(\"Assertion failed: Desc is not a valid Property Descriptor\");return i(f,a,c,t,e,b)}"
-}

@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "fetchSubscriptionPlansOnNewPaymentSource": "function d(t){let e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[...E.ACTIVE_PREMIUM_SKUS];return null==t||s.default.hasPaymentSourceForSKUIds(t,e)?Promise.resolve():new Promise(t=>{l.default.wait(async()=>{await (0,a.fetchSubscriptionPlansBySKUs)(e),t()})})}",
-        "getCurrencies": "function f(t,e,n){let i,u=[],l=[],a={purchaseType:n?S.PriceSetAssignmentPurchaseTypes.GIFT:S.PriceSetAssignmentPurchaseTypes.DEFAULT};return i=\"string\"==typeof t?s.default.get(t):t,r()(i,\"subscription plan not loaded\"),null!=e&&s.default.hasPaymentSourceForSKUId(e,i.skuId)&&(a.paymentSourceId=e),(u=(l=(0,c.experimentalGetPrices)(i.id,a)).map(t=>t.currency)).length<1&&(u=[S.CurrencyCodes.USD]),u}",
-        "planHasCurrency": "function _(t,e,n){let i=s.default.get(t);return r()(null!=i,\"plan is undefined\"),f(i,n,!1).includes(e)}",
-        "useCurrencyWithPaymentSourceChange": "function T(t,e,n,u,r){let[l,a]=i.useReducer((t,e)=>({...t,...e}),null!=n?{paymentSourceId:n,currency:t,loaded:!1}:{currency:t,loaded:!1}),c=(0,o.useSubscriptionPlansLoaded)(r);i.useEffect(()=>{(async()=>{await d(n,r);let t=[];null!=e&&null!=s.default.get(e)&&(t=f(e,n,u)),t.length>0?a({paymentSourceId:n,currency:t[0],loaded:!0}):a({paymentSourceId:n,loaded:!1})})()},[n,JSON.stringify(r),e,u,c]);let S=l.paymentSourceId!==n||null==e||!c||!0!==l.loaded;return{hasFetchedSubscriptionPlans:c,priceOptions:l,setCurrency:t=>{a({currency:t})},currencyLoading:S}}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e){return null==e||null==e.type||e.type!==a.ActivityTypes.PLAYING?null:(0,i.default)(e)?a.ActivityGamePlatforms.XBOX:null!=e.platform?e.platform:a.ActivityGamePlatforms.DESKTOP}"
-    }
-}

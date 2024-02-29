@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "openChangelog": "function a(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];!(!e&&(0,r.hasAnyModalOpen)())&&(0,r.openModalLazy)(async()=>{let{default:e}=await n.el(\"322825@596:638\").then(n.bind(n,\"862283\"));return t=>(0,i.jsx)(e,{...t})},{modalKey:o.CHANGELOG_MODAL_KEY})}"
-    }
-}

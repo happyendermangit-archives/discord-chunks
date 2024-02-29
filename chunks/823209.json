@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "registerSource": "function a(e,t,n){var r=n.getRegistry(),a=r.addSource(e,t);return[a,function(){return r.removeSource(a)}]}",
-        "registerTarget": "function r(e,t,n){var r=n.getRegistry(),a=r.addTarget(e,t);return[a,function(){return r.removeTarget(a)}]}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "sendVoiceChannelActivityNotification": "function o(e,t){i.default.post({url:r.Endpoints.VOICE_CHANNEL_NOTIFICATIONS(e),query:{first_user:t}})}"
-    }
-}

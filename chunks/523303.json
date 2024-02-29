@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function g(e){let{className:t,userId:a,channelId:g,inlinePreview:x=!1}=e,T=(0,r.useStateFromStores)([_.default],()=>_.default.getUser(a)),A=(0,r.useStateFromStores)([p.default],()=>p.default.getChannel(g)),N=null!=A?A.getGuildId():null,O=x||null==T||null==N||null==g?void 0:e=>{null!=A&&(0,u.openContextMenuLazy)(e,async()=>{let{default:e}=await n.el(\"523303@1772:1844\").then(n.bind(n,\"694143\"));return t=>(0,i.jsx)(e,{...t,user:T,channel:A,guildId:N})})},R=y.default.useName(T),M=(0,r.useStateFromStores)([p.default,m.default,E.default],()=>C.default.getNickname(N,g,T)),v=h.default.getGuild(N),L=(0,d.useClydeEnabled)(v,A)&&a===S.CLYDE_AI_USER_ID?S.CLYDE_AI_MENTION_COLOR:null,P=e=>(0,i.jsx)(I.default,{className:t,onContextMenu:O,color:L,...e,children:`@${M??R}`});return x?P():(0,i.jsx)(o.Popout,{preload:null==T?void 0:()=>(0,c.default)(T.id,T.getAvatarURL(N,80),{guildId:N??void 0,channelId:g??void 0}),renderPopout:e=>(s()(null!=T,\"Unexpected missing user\"),(0,i.jsx)(f.default,{userId:T.id,guildId:N??void 0,channelId:g,...e})),position:l.isMobile?\"top\":\"right\",children:e=>P(e)})}"
-    }
-}

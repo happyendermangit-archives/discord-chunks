@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "IGNORE_ANALYTICS_BREADCRUMB_EVENTS": [
+            "start_speaking",
+            "start_listening",
+            "app_opened",
+            "notification_clicked",
+            "experiment_user_triggered",
+            "experiment_dm_triggered",
+            "experiment_guild_triggered"
+        ],
+        "filterThrottle": "function s(e){let{maxBudgetMinute:t,maxBudgetHour:n}=e,i={minute:{slot:0,budgetUsed:0},hour:{slot:0,budgetUsed:0}};return()=>{let e=Date.now(),r=Math.round(e/1e3/60),s=Math.round(e/1e3/60/60);return i.minute.slot!==r&&(i.minute.slot=r,i.minute.budgetUsed=0),i.hour.slot!==s&&(i.hour.slot=s,i.hour.budgetUsed=0),!!(i.minute.budgetUsed<t)&&(i.minute.budgetUsed++,!!(i.hour.budgetUsed<n))&&(i.hour.budgetUsed++,!0)}}"
+    }
+}

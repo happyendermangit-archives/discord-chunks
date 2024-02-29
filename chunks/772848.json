@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e,t,n){if(r.default.randomUUID&&!t&&!e)return r.default.randomUUID();let i=(e=e||{}).random||(e.rng||(0,a.default))();if(i[6]=15&i[6]|64,i[8]=63&i[8]|128,t){n=n||0;for(let e=0;e<16;++e)t[n+e]=i[e];return t}return(0,o.unsafeStringify)(i)}"
-    }
-}

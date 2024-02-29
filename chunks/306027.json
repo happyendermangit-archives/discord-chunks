@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function E(e){let{applicationId:t,commandIds:n,channel:E,guildId:_,onClick:I}=e;(0,u.usePrivateChannelIntegrationState)({channelId:E.id});let{commands:C}=r.useCommandsForApplication(E,t,n),y=a.useMemo(()=>C?.filter(e=>!0!==e.nsfw),[C]),S=a.useCallback(e=>{I?.(),d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED,{application_id:t,command_id:e,guild_id:_,...(0,l.collectChannelAnalyticsMetadataFromId)(E.id)})},[t,E.id,_,I]);return null==y||0===y.length?null:(0,i.jsxs)(c.default,{children:[(0,i.jsx)(s.Heading,{variant:\"eyebrow\",className:h.title,children:p.default.Messages.BOT_PROFILE_SLASH_COMMANDS}),(0,i.jsx)(\"ul\",{className:m.popularApplicationCommandsList,children:y.map(e=>(0,i.jsx)(\"li\",{children:(0,i.jsx)(o.CommandClickable,{commandId:e.id,commandName:e.displayName,commandDescription:e.displayDescription,onClick:S,guildId:_,channelId:E.id})},e.id))})]})}"
-    }
-}

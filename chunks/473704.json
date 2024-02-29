@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "makeConnection": "function A(e,t,n,i){let a=`${null!=r().name&&\"\"!==r().name?r().name:\"unknown\"} ${null!=r().version&&\"\"!==r().version?r().version:\"unknown\"}`,s=new o.default(`Connection(${e})`);return c.BROWSER_SUPPORTS_UNIFIED_PLAN?(s.info(`Using Unified Plan (${a})`),new I.default(e,t,n,i)):(s.info(`Using Plan B (${a})`),new S(e,t,n,i))}"
-    }
-}

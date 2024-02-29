@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(){let e=[...u(\"foreground\",a,[\"38\",\"39\"],!0),...u(\"background\",s,[\"48\",\"49\"],!0),...u(\"style\",i,[],!1),{className:\"ansi-control-sequence\",begin:l,starts:{end:r,endsParent:!0}}];return function(e){for(let t=0;t<e.length;t++)e[t].contains=e.slice(t+1)}(e),{contains:[{begin:r,contains:e}]}}"
-    }
-}

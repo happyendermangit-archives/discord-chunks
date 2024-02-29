@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "DecoderBuffer": "function c(t,e){if(n.call(this,e),!i.isBuffer(t)){this.error(\"Input not Buffer\");return}this.base=t,this.offset=0,this.length=t.length}",
-        "EncoderBuffer": "function o(t,e){if(Array.isArray(t))this.length=0,this.value=t.map(function(t){return!o.isEncoderBuffer(t)&&(t=new o(t,e)),this.length+=t.length,t},this);else if(\"number\"==typeof t){if(!(0<=t&&t<=255))return e.error(\"non-byte EncoderBuffer value\");this.value=t,this.length=1}else if(\"string\"==typeof t)this.value=t,this.length=i.byteLength(t);else{if(!i.isBuffer(t))return e.error(\"Unsupported type: \"+typeof t);this.value=t,this.length=t.length}}"
-    }
-}

@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){if(null===t||!o(t))return t;if(\"function\"!=typeof t)throw TypeError(\"Super expression must either be null or a function\");if(void 0!==n){if(n.has(t))return n.get(t);n.set(t,e)}function e(){return a(t,arguments,r(this).constructor)}return e.prototype=Object.create(t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),i(e,t)}"
+}

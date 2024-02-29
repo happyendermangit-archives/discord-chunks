@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e,t){var n=e.isConnected||e.ownerDocument.documentElement.contains(e);if(a(t)&&\"function\"==typeof t.behavior)return t.behavior(n?(0,r.default)(e,t):[]);if(n){var i,o=!1===(i=t)?{block:\"end\",inline:\"nearest\"}:a(i)?i:{block:\"start\",inline:\"nearest\"};return function(e,t){void 0===t&&(t=\"auto\");var n=\"scrollBehavior\"in document.body.style;e.forEach(function(e){var r=e.el,a=e.top,i=e.left;r.scroll&&n?r.scroll({top:a,left:i,behavior:t}):(r.scrollTop=a,r.scrollLeft=i)})}((0,r.default)(e,o),o.behavior)}}"
-    }
-}

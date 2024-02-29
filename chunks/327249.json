@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let t=(0,d.useToken)(o.default.unsafe_rawColors.PRIMARY_630).hex();return(0,s.jsx)(y,{canvasFillStyle:t,...e})}"
-    }
-}

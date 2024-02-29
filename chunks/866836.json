@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function f(e){let{editorRef:t,options:n,channel:f}=e,p=t.current?.getSlateEditor(),m=a.useCallback((e,n)=>{let i=t.current;null!=e&&null!=i&&i.insertEmoji(e,n,!1),n&&(0,r.closeExpressionPicker)()},[t]);return null==p?null:(0,i.jsxs)(\"div\",{id:\"slate-toolbar\",className:c.staticToolbar,children:[(0,i.jsx)(\"div\",{className:c.staticButtons,children:(0,i.jsx)(u.ToolbarButtons,{editorRef:t,options:n,iconClassName:c.staticIcon,dividerClassName:c.staticDivider})}),(0,i.jsx)(s.Popout,{renderPopout:e=>{let{closePopout:t}=e;return(0,i.jsx)(l.default,{persistSearch:!0,channel:f,closePopout:t,onSelectEmoji:(e,n)=>{m(e,n),n&&t()},pickerIntention:d.EmojiIntention.COMMUNITY_CONTENT})},position:\"bottom\",animation:s.Popout.Animation.NONE,align:\"left\",children:(e,t)=>{let{isShown:n}=t;return(0,i.jsx)(o.default,{...e,active:n,className:c.emojiButton,tabIndex:0})}})]})}"
-    }
-}

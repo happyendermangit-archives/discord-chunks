@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "class e extends E.default{static fromServer(t){let{store_listing_id:r,sku_id:u,unpublished_at:n,styles:i,...s}=t,E=null!=n?new Date(n):null;return new e({...s,storeListingId:r,skuId:u,unpublishedAt:E,styles:l(i)})}constructor(e){super(),this.storeListingId=e.storeListingId,this.skuId=e.skuId,this.name=e.name,this.summary=e.summary,this.banner=e.banner,this.unpublishedAt=e.unpublishedAt,this.styles=e.styles}}"
+    }
+}

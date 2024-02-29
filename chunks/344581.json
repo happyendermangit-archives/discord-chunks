@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "reduce": "function c(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:s,t=arguments.length>1?arguments[1]:void 0,n=t.payload;switch(t.type){case r.INIT_COORDS:case r.BEGIN_DRAG:return{initialSourceClientOffset:n.sourceClientOffset,initialClientOffset:n.clientOffset,clientOffset:n.clientOffset};case r.HOVER:if((0,a.areCoordsEqual)(e.clientOffset,n.clientOffset))return e;return o(o({},e),{},{clientOffset:n.clientOffset});case r.END_DRAG:case r.DROP:return s;default:return e}}"
+    }
+}

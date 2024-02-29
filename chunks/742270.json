@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "getInviteDynamicLinkTemplate": "function s(e){return\"\".concat(location.protocol,\"//\").concat(window.GLOBAL_ENV.INVITE_HOST,\"/\").concat(e)}",
+        "getGuildTemplateDynamicLinkTemplate": "function i(e){return\"\".concat(location.protocol,\"//\").concat(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST,\"/\").concat(e)}",
+        "getDefaultDynamicLinkTemplate": "function r(){return\"\".concat(location.protocol,\"//\").concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT,\"/channels/@me\")}"
+    }
+}

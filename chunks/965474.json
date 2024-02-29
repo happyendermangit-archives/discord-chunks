@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function w(e){return{...j,link:(0,v.default)(e),emoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,a,s){let{key:l}=s;return e.src?(0,i.jsx)(f.MessageStandardEmoji,{node:e,tooltipPosition:t,enableClick:n},l):(0,i.jsx)(\"span\",{children:e.surrogate},l)}}}(e),customEmoji:function(e){let{emojiTooltipPosition:t=\"top\",enableEmojiClick:n=!0}=e;return{react(e,a,s){let{key:l,guildId:r,isInteracting:o}=s,u=c.default.getDisambiguatedEmojiContext(r).getById(e.emojiId);if(null!=u){let t=u.require_colons;e={...e,name:t?`:${u.name}:`:u.name}}return(0,i.jsx)(f.MessageCustomEmoji,{isInteracting:o,node:e,tooltipPosition:t,enableClick:n},l)}}}(e),channelMention:(0,R.default)(e),commandMention:(0,M.default)(e),attachmentLink:(0,O.default)(e)}}"
-    }
-}

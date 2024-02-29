@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function g(e){let{channelId:t,className:n,isParticipantsOpen:i,isVertical:u=!1,hideTooltip:o=!1}=e,g=r.useCallback(e=>{let{className:t}=e;return i?(0,a.jsx)(p,{className:t,isVertical:u}):(0,a.jsx)(h,{className:t,isVertical:u})},[i,u]);return(0,a.jsx)(d.default,{label:i?c.default.Messages.VIDEO_CALL_HIDE_MEMBERS:c.default.Messages.VIDEO_CALL_SHOW_MEMBERS,className:s()(f.participantsButton,n),onClick:function(){l.default.toggleParticipants(t,!i)},iconComponent:g,shouldShowTooltip:!o})}"
-    }
-}

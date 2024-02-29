@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useShouldShowUserPopoutCollectiblesUpsell": "e=>{let{popoutUser:t,source:n,guildId:a}=e,E=\"useShouldShowUserPopoutCollectiblesUpsell\";(0,u.useTriggerDebuggingAA)({location:E+\"auto on\",autoTrackExposure:!0}),(0,u.useTriggerDebuggingAA)({location:E+\"auto off\",autoTrackExposure:!1});let _=(0,c.default)(E),{upsellSource:I}=(0,h.useUserPopoutCollectiblesUpsellStore)(),C=(0,l.default)([p.default],()=>p.default.getCurrentUser());s()(null!=C,\"currentUser should not be null\");let y=(0,d.useBlockedPaymentsConfig)(),S=(0,m.default)(C.id,a),g=(0,m.default)(t.id,a);i.useEffect(()=>{null==S&&(0,o.fetchProfile)(C.id)},[S,C]);let x=_!==c.CollectiblesShopMarketingVariants.DEFAULT&&C?.id!==t.id&&!y&&!(null!=I&&I!==n),T=x&&C?.avatarDecoration==null&&t?.avatarDecoration!=null,A=x&&null!=S&&null==S.profileEffectId&&g?.profileEffectId!=null,[N,O]=(0,f.useSelectedDismissibleContent)((T,[]),void 0,!0);return{shouldShow:N===r.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL,canShowAvatarDecorationUpsell:T,canShowProfileEffectUpsell:A,onDismiss:O}}"
-    }
-}

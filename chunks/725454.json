@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){return e.replace(o,function(e){return r[e]})}"
-}

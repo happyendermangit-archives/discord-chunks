@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){let{createdAt:t,participantIds:n,applicationId:a,title:l,guildId:_,className:I}=e,C=(0,d.useGetOrFetchApplication)(a),y=(0,o.useStateFromStoresArray)([f.default],()=>n.map(e=>f.default.getUser(e)).filter(m.isNotNullish)??[]),S=C?.name,g=r()(t).fromNow();return null==t?null:(0,i.jsxs)(\"div\",{className:s()(I,E.container),children:[(0,i.jsx)(p.default,{game:C}),(0,i.jsxs)(\"div\",{className:E.textSection,children:[null!=l&&\"\"!==l?(0,i.jsx)(u.Text,{variant:\"text-md/semibold\",color:\"interactive-active\",children:l}):(0,i.jsx)(u.Text,{variant:\"text-md/semibold\",color:\"text-muted\",children:h.default.Messages.CLIPS_UNTITLED}),(0,i.jsxs)(u.Text,{variant:\"text-xs/medium\",color:\"text-muted\",className:E.subtitle,children:[null!=S?`${S} • `:null,g]}),(0,i.jsx)(u.Text,{variant:\"text-xs/medium\",color:\"text-muted\",className:E.subtitle})]}),null!=y&&y.length>0&&(0,i.jsx)(c.default,{maxUsers:4,users:y,className:E.facePile,guildId:_})]})}"
-    }
-}

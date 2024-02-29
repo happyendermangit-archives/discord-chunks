@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){var t=o.call(e,u),n=e[u];try{e[u]=void 0;var r=!0}catch(e){}var a=i.call(e);return r&&(t?e[u]=n:delete e[u]),a}"
-}

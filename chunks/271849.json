@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"Diminuer \".concat(e.fieldLabel)",
+            "increase": "e=>\"Augmenter \".concat(e.fieldLabel)",
+            "numberField": "Champ de nombre"
+        }
+    }
+}

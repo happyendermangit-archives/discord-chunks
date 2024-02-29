@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "createDecipher": "function(t,e){var s=i[t.toLowerCase()];if(!s)throw TypeError(\"invalid suite type\");var r=u(e,!1,s.key,s.iv);return p(t,r.key,r.iv)}",
-        "createDecipheriv": "function p(t,e,s){var o=i[t.toLowerCase()];if(!o)throw TypeError(\"invalid suite type\");if(\"string\"==typeof s&&(s=n.from(s)),\"GCM\"!==o.mode&&s.length!==o.iv)throw TypeError(\"invalid iv length \"+s.length);if(\"string\"==typeof e&&(e=n.from(e)),e.length!==o.key/8)throw TypeError(\"invalid key length \"+e.length);return\"stream\"===o.type?new c(o.module,e,s,!0):\"auth\"===o.type?new r(o.module,e,s,!0):new a(o.module,e,s)}"
-    }
-}

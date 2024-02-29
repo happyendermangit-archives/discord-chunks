@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class u extends r.Component{constructor(e){super(e),this._ref=r.createRef(),this.setRef=this.setRef.bind(this)}activateUploadDialogue(){if(null!=this._ref)return this._ref.activateUploadDialogue()}setRef(e){this._ref=e}render(){return(0,i.jsx)(o.default,{ref:this.setRef,handleNativeClick:l,embedded:(0,_.isDesktop)(),...this.props})}}"
-    }
-}

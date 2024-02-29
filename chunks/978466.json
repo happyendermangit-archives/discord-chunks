@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "renderAutocompleteGroup": "function r(e){let{query:t,selectedIndex:n,autocompletes:s,onHover:r,onClick:o,titleWithQuery:u,titleWithoutQuery:d,Component:c,getProps:f,getQuery:p,key:m,indexOffset:h=0,headerClassName:E,headerTrailingContent:_,footer:I}=e;if(null==I&&(null==s||0===s.length))return null;let C=s?.map((e,t)=>{let i=t+h,s=f(e,i);return a.createElement(c,{onClick:o,onHover:r,selected:n===i,index:i,...s,key:s.key})});return(0,i.jsxs)(a.Fragment,{children:[null!=u&&null!=d?l({titleWithQuery:u,titleWithoutQuery:d,query:t,getQuery:p,headerClassName:E,headerTrailingContent:_}):null,C,I]},m)}",
-        "renderHeader": "function l(e){let{titleWithQuery:t,titleWithoutQuery:n,query:a,getQuery:l,headerClassName:r,headerTrailingContent:o}=e,u=a.length>0?t.format({prefix:l(a)}):n;return(0,i.jsx)(s.default.Title,{className:r,title:u,children:o},`autocomplete-title-${u}`)}"
-    }
-}

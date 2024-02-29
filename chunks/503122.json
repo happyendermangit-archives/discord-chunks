@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e){i.default.supports(s.Features.VIDEO)?(0,r.openModalLazy)(async()=>{let{default:t}=await n.el(\"503122@516:552\").then(n.bind(n,\"312533\"));return n=>(0,a.jsx)(t,{...n,header:l.default.Messages.CAMERA_UNAVAILABLE,body:l.default.Messages.CAMERA_NO_DEVICE,confirmText:l.default.Messages.OKAY,onConfirm:e})}):(0,r.openModalLazy)(async()=>{let{default:t}=await n.el(\"503122@954:990\").then(n.bind(n,\"312533\"));return i=>(0,a.jsx)(t,{...i,header:l.default.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,body:l.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,confirmText:l.default.Messages.DOWNLOAD_APP,onConfirm:()=>{e?.(),(0,r.openModalLazy)(async()=>{let{default:e}=await n.el(\"503122@1454:1518\").then(n.bind(n,\"984952\"));return t=>(0,a.jsx)(e,{source:\"Video unsupported browser\",...t})})}})})}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "Histogram": "class r{addSample(e){this.digest.push(e)}getReport(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[25,50,75,90,95],t={};for(let n of e)t[n]=this.digest.percentile(n/100)??0;return{min:this.digest.percentile(0)??0,max:this.digest.percentile(1)??0,count:this.digest.size()??0,percentiles:t}}constructor(){this.digest=new i.Digest}}"
-    }
-}

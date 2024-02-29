@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{href:t,className:n,iconClassName:c,rel:f,target:p,mimeType:m,fileName:h,focusProps:E,onClick:_,...I}=e,C=a.useMemo(()=>s.designConfig.getDefaultLinkInterceptor(t),[t]),y=a.useCallback(e=>{r.default.track(u.AnalyticEvents.MEDIA_DOWNLOAD_BUTTON_TAPPED,{attachment_type:m?.[0],attachment_subtype:m?.[1]}),_?.(),C?.(e)},[C,m,_]);return null!=h?(0,i.jsx)(l.Anchor,{href:t,onClick:y,target:p,rel:f,className:n,\"aria-label\":d.default.Messages.DOWNLOAD,focusProps:E,...I,children:h}):(0,i.jsx)(l.Anchor,{href:t,onClick:y,target:p,rel:f,className:n,\"aria-label\":d.default.Messages.DOWNLOAD,focusProps:E,...I,children:(0,i.jsx)(o.default,{className:c})})}"
-    }
-}

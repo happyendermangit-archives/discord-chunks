@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "default": {
+            "get": "get(e){var t;return null!==(t=u[e])&&void 0!==t?t:null}",
+            "getByUrl": "getByUrl(e){let t=a.default.toURLSafe(e);if(null==t)return;let n=t.hostname,i=n.startsWith(\"www.\")?n.slice(4):n;return c[i]}",
+            "isSupported": "e=>Object.prototype.hasOwnProperty.call(u,e)",
+            "map": "e=>l.map(e)",
+            "filter": "filter(e){let t=l.filter(e);return t.sort((e,t)=>{let{name:n}=e,{name:i}=t;return n.localeCompare(i)}),t}",
+            "find": "e=>l.find(e)"
+        }
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "overrideBucket": "function E(e,t){i.default.dispatch({type:\"EXPERIMENT_OVERRIDE_BUCKET\",experimentId:e,experimentBucket:t})}",
-        "registerGuildExperiment": "function _(e){let{id:t,title:n,description:i,buckets:a}=e;return(0,r.registerExperiment)({experimentId:t,experimentType:o.ExperimentTypes.GUILD,title:n,description:i,buckets:a}),{id:t}}",
-        "registerUserExperiment": "function s(e){let{id:t,title:n,description:i,buckets:a}=e;return(0,r.registerExperiment)({experimentId:t,experimentType:o.ExperimentTypes.USER,title:n,description:i,buckets:a}),{id:t}}",
-        "trackExposureToExperiment": "function a(e,t,n){r.default.trackExposure({experimentId:e,descriptor:t,location:n?.location,location_stack:n?.analyticsLocations,fingerprint:n?.fingerprint,excluded:n?.excluded,exposureType:n?.exposureType})}"
-    }
-}

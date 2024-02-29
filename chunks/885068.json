@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "async function p(e){let{guildId:t,channelId:n}=e,p=c.default.getGuild(t);if(null==p&&t!==h.ME)return!1;if(null==n)return!0;if((0,E.isStaticChannelRoute)(n))switch(n){case E.StaticChannelRoute.ROLE_SUBSCRIPTIONS:return(0,l.areRoleSubscriptionsVisibleInGuild)(t);case E.StaticChannelRoute.GUILD_SHOP:return(0,i.isGuildShopVisibleInGuild)(p);case E.StaticChannelRoute.MEMBER_APPLICATIONS:return(0,a.canReviewGuildMemberApplications)(t);case E.StaticChannelRoute.GUILD_HOME:return(0,r.canSeeGuildHome)(t)||(0,d.canSeeOnboardingHome)(t);case E.StaticChannelRoute.CHANNEL_BROWSER:return null!=p&&p.hasFeature(h.GuildFeatures.COMMUNITY);case E.StaticChannelRoute.GUILD_ONBOARDING:return u.default.shouldShowOnboarding(t);case E.StaticChannelRoute.CUSTOMIZE_COMMUNITY:return null!=p&&p.hasFeature(h.GuildFeatures.COMMUNITY);case E.StaticChannelRoute.MEMBER_SAFETY:return(0,o.canAccessMemberSafetyPage)(t);default:(0,g.assertNever)(n)}let v=_.default.getChannel(n);return(null!=v||(await f.default.loadThread(n),null!=(v=_.default.getChannel(n))))&&((0,m.canViewChannel)(v)||s.default.isChannelGatedAndVisible(t,n))}"
-    }
-}

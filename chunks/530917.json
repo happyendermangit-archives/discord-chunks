@@ -1,3 +1,0 @@
-{
-    "exports": "function o(t,e){var s,i,o={blinder:(i=c(s=e)).toRed(n.mont(s.modulus)).redPow(new n(s.publicExponent)).fromRed(),unblinder:i.invm(s.modulus)},f=e.modulus.byteLength(),u=new n(t).mul(o.blinder).umod(e.modulus),a=u.toRed(n.mont(e.prime1)),d=u.toRed(n.mont(e.prime2)),p=e.coefficient,b=e.prime1,h=e.prime2,l=a.redPow(e.exponent1).fromRed(),g=d.redPow(e.exponent2).fromRed(),v=l.isub(g).imul(p).umod(b).imul(h);return g.iadd(v).imul(o.unblinder).umod(e.modulus).toArrayLike(r,\"be\",f)}"
-}

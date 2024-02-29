@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e){var s=arguments.length>2?arguments[2]:{},i=r(e);n&&(i=c.call(i,Object.getOwnPropertySymbols(e)));for(var o=0;o<i.length;o+=1)u(t,i[o],e[i[o]],s[i[o]])}"
-}

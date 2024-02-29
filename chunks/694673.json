@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useSubscribeGuildMembers": "function r(e){i.useEffect(()=>(s().forEach(e,(e,t)=>(0,l.subscribeMembers)(t,e)),()=>{s().forEach(e,(e,t)=>(0,l.unsubscribeMembers)(t,e))}),[e])}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class i extends s.default{constructor(e){super(),this.id=e.id||\"\",this.widgets=e.widgets||[]}}"
-    }
-}

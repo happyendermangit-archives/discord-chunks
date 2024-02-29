@@ -1,5 +1,23 @@
 {
     "exports": {
-        "default": "function c(e){let t=(0,l.useForceUpdate)();return(i.useEffect(()=>{if(\"R\"!==e.format)return;let n=1e3*d,i=Math.abs(e.parsed.diff(s()()));for(let[e,t]of u)if(i<1e3*e){n=1e3*t;break}let a=setInterval(()=>{t()},n);return()=>clearInterval(a)},[t,e.format,e.parsed]),\"R\"===e.format)?o.TIMESTAMP_FORMATS.R(e.parsed):e.formatted}"
+        "CONTENT_TYPES_WITH_BYPASS_HOLDOUT": {
+            "toJSON": "function(){return Array.from(this)}",
+            "has": "function has() { [native code] }",
+            "add": "function add() { [native code] }",
+            "delete": "function delete() { [native code] }",
+            "clear": "function clear() { [native code] }",
+            "entries": "function entries() { [native code] }",
+            "forEach": "function forEach() { [native code] }",
+            "size": 6,
+            "values": "function values() { [native code] }",
+            "keys": "function values() { [native code] }",
+            "union": "function union() { [native code] }",
+            "intersection": "function intersection() { [native code] }",
+            "difference": "function difference() { [native code] }",
+            "symmetricDifference": "function symmetricDifference() { [native code] }",
+            "isSubsetOf": "function isSubsetOf() { [native code] }",
+            "isSupersetOf": "function isSupersetOf() { [native code] }",
+            "isDisjointFrom": "function isDisjointFrom() { [native code] }"
+        }
     }
 }

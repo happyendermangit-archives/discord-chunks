@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "CollectiblesItemType": {
+            "0": "AVATAR_DECORATION",
+            "1": "PROFILE_EFFECT",
+            "100": "NONE",
+            "NONE": 100,
+            "AVATAR_DECORATION": 0,
+            "PROFILE_EFFECT": 1
+        }
+    }
+}

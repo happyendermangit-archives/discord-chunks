@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "render": "function(e,t){let{onKeyDown:n,stickersListRef:m,channel:h}=e,E=(0,d.useHasSendableSticker)(h),_=a.useRef(null),{searchQuery:I,isSearchSuggestion:C}=(0,u.useExpressionPickerStore)(e=>({searchQuery:e.searchQuery,isSearchSuggestion:e.isSearchSuggestion}),s.default),y=o.StickerPickerStore.useStore(e=>e.searchPlaceholder),S=o.StickerPickerStore.useStore(e=>e.inspectedExpressionPosition,s.default),g=a.useCallback(e=>{o.StickerPickerStore.setActiveCategoryIndex(\"\"===e?0:c.INACTIVE_CATEGORY_INDEX),o.StickerPickerStore.setInspectedExpressionPosition(0,0),o.StickerPickerStore.setSearchPlaceholder(null),(0,u.setSearchQuery)(e),m.current?.scrollTo(0)},[m]),x=a.useCallback(()=>{(0,u.setSearchQuery)(\"\")},[]);return a.useImperativeHandle(t,()=>({focus:()=>_.current?.focus()})),a.useLayoutEffect(()=>{C&&_.current?.focus()},[C]),(0,i.jsx)(\"div\",{className:p.wrapper,children:(0,i.jsx)(r.default,{autoFocus:E,disabled:!E,query:I,ref:_,size:r.default.Sizes.MEDIUM,placeholder:y??(E?f.default.Messages.SEARCH_FOR_STICKERS:f.default.Messages.NO_STICKERS_TO_SEARCH_THROUGH),onClear:x,onKeyDown:n,onQueryChange:g,className:p.searchBar,preventEscapePropagation:!1,useKeyboardNavigation:!1,inputProps:{\"aria-haspopup\":\"grid\",\"aria-controls\":c.GRID_NAVIGATOR_ID,\"aria-expanded\":!0,\"aria-activedescendant\":(0,l.makeGridId)(c.GRID_NAVIGATOR_ID,S.columnIndex,S.rowIndex)}})})}"
-        }
-    }
-}

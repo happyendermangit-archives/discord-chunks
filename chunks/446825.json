@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "Buffer": "function s(e,t,n){if(\"number\"==typeof e){if(\"string\"==typeof t)throw TypeError('The \"string\" argument must be of type string. Received type number');return c(e)}return u(e,t,n)}",
+        "SlowBuffer": "function(e){return+e!=e&&(e=0),s.alloc(+e)}",
+        "INSPECT_MAX_BYTES": 50,
+        "kMaxLength": 2147483647
+    }
+}

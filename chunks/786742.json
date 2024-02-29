@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "getForumPostReadStates": "function o(e,t){let[n]=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[s.default];return{isNew:!e.isArchivedThread()&&n.isNewForumThread(e.id,e.parent_id,t),hasUnreads:!e.isArchivedThread()&&n.isForumPostUnread(e.id)}}",
+        "getForumPostReadStatesById": "function c(e){let[t,n,i]=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[a.default,l.default,s.default],r=t.getChannel(e);if(null==r)return null;let u=n.getGuild(r.guild_id);return null==u?null:o(r,u,[i])}",
+        "getForumTimestampFormatter": "function f(e,t){if(t===r.ForumTimestampFormats.POSTED_DURATION_AGO&&e===i.ThreadSortOrder.CREATION_DATE)return _}",
+        "canDisplayPostUnreadMessageCount": "function h(e,t){let[n]=t,i=n.hasTrackedUnread(e),a=n.hasOpenedThread(e),l=null!=n.getTrackedAckMessageId(e);return i&&a&&l}",
+        "isForumPostPinned": "function E(e){var t;return(null===(t=a.default.getChannel(e))||void 0===t?void 0:t.hasFlag(u.ChannelFlags.PINNED))===!0}"
+    }
+}

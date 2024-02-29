@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "()=>{let[e,t]=(0,o.useStateFromStoresArray)([E.default],()=>[E.default.canShowAdminWarning,E.default.getVisibleGame()],[]),n=(0,o.useStateFromStores)([u.default],()=>u.default.isConnected(),[]),d=(0,o.useStateFromStores)([l.default],()=>l.default.getMode()===T.InputModes.PUSH_TO_TALK,[]),S=null!=t&&t.elevated&&n&&d&&e,A=r.useRef(null);function N(){null!==A.current&&((0,a.closeModal)(A.current),A.current=null)}return r.useEffect(()=>(S?A.current=(0,a.openModal)(e=>(0,i.jsx)(_.default,{title:c.default.Messages.PTT_PERMISSION_TITLE,body:c.default.Messages.PTT_PERMISSION_BODY.format({game:t?.name}),secondaryConfirmText:c.default.Messages.DONT_SHOW_AGAIN,onConfirmSecondary:()=>s.default.clearPTTAdminWarning(),onConfirm:()=>window.open(I.default.getArticleURL(T.HelpdeskArticles.PUSH_TO_TALK_ADMINISTRATOR_MODE),\"_blank\"),confirmText:c.default.Messages.HELP_DESK,...e})):N(),()=>{N()}),[t,S]),null}"
-    }
-}

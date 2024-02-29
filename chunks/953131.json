@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "fetchOnboardingPrompts": "function m(e){return s.default.dispatch({type:\"GUILD_ONBOARDING_PROMPTS_FETCH_START\",guildId:e}),i.default.get({url:f.Endpoints.GUILD_ONBOARDING(e)}).then(t=>{let{body:n}=t,i=(0,c.serverApiResponseToClientState)(n);return s.default.dispatch({type:\"GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS\",guildId:e,...i}).then(()=>i.prompts)},t=>(s.default.dispatch({type:\"GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE\",guildId:e}),t))}",
-        "loadOnboardingPrompts": "function p(e){a.default.track(f.AnalyticEvents.GUILD_ONBOARDING_LOADED,{...(0,l.collectGuildAnalyticsMetadata)(e),has_new_prompts:!1,number_of_prompts:0})}",
-        "maybeFetchOnboardingPrompts": "async function O(e){let t=o.default.getId(),n=(0,d.hasFlag)(u.default.getMember(e,t)?.flags??0,g.GuildMemberFlags.COMPLETED_ONBOARDING),i=r.default.getGuild(e);if(null==i||!i.hasFeature(f.GuildFeatures.GUILD_ONBOARDING))return Promise.resolve();let s=_.default.shouldFetchPrompts(e),l=_.default.getOnboardingPrompts(e);if(!s&&l.length>0)return l.every(e=>!e.inOnboarding)?(N(e),Promise.resolve()):(!n&&h(e),Promise.resolve());let a=await m(e);return Array.isArray(a)&&a.every(e=>!e.inOnboarding)?(N(e),Promise.resolve()):(!n&&h(e),a)}",
-        "startOnboarding": "function h(e){s.default.dispatch({type:\"GUILD_ONBOARDING_START\",guildId:e})}"
-    }
-}

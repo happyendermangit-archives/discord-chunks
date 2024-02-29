@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e){let t=!(arguments.length>1)||void 0===arguments[1]||arguments[1];if(null==e)return;let{streamType:n,guildId:l,channelId:u,ownerId:o}=e,d=(0,i.encodeStreamKey)({streamType:n,guildId:l,channelId:u,ownerId:o});o===s.default.getId()&&a.default.setGoLiveSource(null),r.stopStream(d,t)}"
+    }
+}

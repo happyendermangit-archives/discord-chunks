@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isSuspiciousDownload": "function o(e){let{pathname:t,hostname:n}=s.parse(e);if(null==n)return null;let i=a[n];if(null!=i&&null!=t&&!i.test(t)||null==t)return null;let o=t;try{o=decodeURIComponent(t)}catch(e){}let u=o.split(\"/\"),d=null,l=0;for(let e=u.length-1;e>=0;e--){let t=u[e];if(\"\"!==t&&\".\"!==t){if(\"..\"===t){l++;continue}if(l>e)break;d=u[e-l];break}}if(null==d)return null;let f=d.split(\".\");if(f.length<2)return null;let _=f.pop()?.toLowerCase();return null!=_&&r.has(_)?_:null}"
-    }
-}

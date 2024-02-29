@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e,t,n){let r=arguments.length>3&&void 0!==arguments[3]?arguments[3]:null;return{key:t.key??r??\"modal\",modal:e,animation:t.animation??(s.default.useReducedMotion?i.ModalAnimation.FADE:i.ModalAnimation.SLIDE_UP),shouldPersistUnderModals:t.shouldPersistUnderModals??!1,props:n,backdropStyle:t.backdropStyle??null,backdropInstant:t.backdropInstant??!1,disableAnimation:t.disableAnimation??!1,closable:\"boolean\"!=typeof t.closable||t.closable,label:t.label??\"\",callbacks:{}}}"
-    }
-}

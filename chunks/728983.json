@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function i(t,e){t.prototype=Object.create(e.prototype),t.prototype.constructor=t,(0,r.default)(t,e)}"
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "showTakeoverModal": "function s(e){(0,a.isEligibleForInappropriateConversationWarning)({location:\"takeover-modal\"})&&(0,r.openModalLazy)(async()=>{let{default:t}=await n.el(\"724802@558:605\").then(n.bind(n,\"922435\"));return n=>(0,i.jsx)(t,{...e,modalProps:n})},{backdropStyle:o.BackdropStyles.BLUR})}"
-    }
-}

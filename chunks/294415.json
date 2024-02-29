@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e){return\"rmd160\"===(t=t.toLowerCase())||\"ripemd160\"===t?new d(\"rmd160\",e):\"md5\"===t?new n(o,e):new d(t,e)}"
-}

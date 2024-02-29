@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){return!i&&(i=new r(null)),i.generate(t)}"
+}

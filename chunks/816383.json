@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "MonotonicInterpolant": "function o(e,t){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,o),a(this,\"xs\",void 0),a(this,\"ys\",void 0),a(this,\"c1s\",void 0),a(this,\"c2s\",void 0),a(this,\"c3s\",void 0);for(var n,r,i,u=e.length,s=[],l=0;l<u;l++)s.push(l);s.sort(function(t,n){return e[t]<e[n]?-1:1});for(var c=[],d=[],f=[],p=0;p<u-1;p++)n=e[p+1]-e[p],r=t[p+1]-t[p],d.push(n),c.push(r),f.push(r/n);for(var h=[f[0]],m=0;m<d.length-1;m++){var y=f[m],v=f[m+1];if(y*v<=0)h.push(0);else{n=d[m];var g=d[m+1],b=n+g;h.push(3*b/((b+g)/y+(b+n)/v))}}h.push(f[f.length-1]);for(var _=[],w=[],x=0;x<h.length-1;x++){i=f[x];var D=h[x],k=1/d[x],M=D+h[x+1]-i-i;_.push((i-D-M)*k),w.push(M*k*k)}this.xs=e,this.ys=t,this.c1s=h,this.c2s=_,this.c3s=w}"
-    }
-}

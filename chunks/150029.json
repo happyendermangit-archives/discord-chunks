@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "filterBroadcastingGDMs": "function _(e){return e.filter(e=>!s(e))}",
-        "getIsBroadcastingGDM": "function s(e){let{canViewBroadcasts:t}=o.default.getCurrentConfig({location:\"get_is_broadcasting_gdm\"},{autoTrackExposure:!1});if(!t)return!1;let n=r.default.getChannel(e);return!!n?.isBroadcastChannel()}",
-        "useIsBroadcastingGDM": "function a(e){let{canViewBroadcasts:t}=o.default.useExperiment({location:\"use_is_broadcasting_gdm\"},{autoTrackExposure:!1}),n=(0,i.useStateFromStores)([r.default],()=>r.default.getChannel(e));return!!t&&!!n?.isBroadcastChannel()}"
-    }
-}

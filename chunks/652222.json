@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useProgressBar": "function i(e){let{value:t=0,minValue:n=0,maxValue:i=100,valueLabel:u,isIndeterminate:s,formatOptions:l={style:\"percent\"}}=e,c=(0,r.filterDOMProps)(e,{labelable:!0}),{labelProps:d,fieldProps:f}=(0,a.useLabel)({...e,labelElementType:\"span\"}),p=((t=(0,r.clamp)(t,n,i))-n)/(i-n),h=(0,o.useNumberFormatter)(l);if(!s&&!u){let e=\"percent\"===l.style?p:t;u=h.format(e)}return{progressBarProps:(0,r.mergeProps)(c,{...f,\"aria-valuenow\":s?void 0:t,\"aria-valuemin\":n,\"aria-valuemax\":i,\"aria-valuetext\":s?void 0:u,role:\"progressbar\"}),labelProps:d}}"
-    }
-}

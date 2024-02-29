@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "ensureSpotifyPlayable": "function p(){let e=o.default.getActiveSocketAndDevice();if(null!=e)return Promise.resolve(e);if(!r.default.isProtocolRegistered())return Promise.reject(Error(\"protocol is not registered\"));let t=o.default.getPlayableComputerDevices();if(a.default.isObservedAppRunning(i.default.get(d.PlatformTypes.SPOTIFY).name)&&t.length>0){let{socket:e,device:n}=t[0];return(0,l.setActiveDevice)(e.accountId,n.id),Promise.resolve({socket:e,device:n})}return new Promise((e,n)=>{let i=setTimeout(()=>{o.default.removeChangeListener(a),n(Error(\"timeout launching spotify\"))},c),a=()=>{for(let{socket:n,device:s}of o.default.getPlayableComputerDevices())null==t.find(e=>e.device.id===s.id)&&(clearTimeout(i),o.default.removeChangeListener(a),setImmediate(()=>{(0,l.setActiveDevice)(n.accountId,s.id),e({socket:n,device:s})}))};o.default.addChangeListener(a),window.open(`${u.SPOTIFY_APP_PROTOCOL}:`)})}",
-        "ensureSpotifyPremium": "function h(){let e=o.default.getActiveSocketAndDevice();if(null==e)return Promise.reject(Error(\"no active profile\"));let{socket:t}=e;return t.isPremium?Promise.resolve():(0,l.getProfile)(t.accountId,t.accessToken).then(()=>{if(!t.isPremium)return Promise.reject(Error(\"spotify account is not premium\"))})}",
-        "isSpotifyPlayable": "function f(e){return null!=e.getActiveSocketAndDevice()||r.default.isProtocolRegistered()}",
-        "isSpotifyPremium": "function m(){let e=o.default.getActiveSocketAndDevice();if(null==e)return null;let{socket:t}=e;return t.isPremium}"
-    }
-}

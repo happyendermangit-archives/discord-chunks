@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "TransitionStates": {
+            "0": "MOUNTED",
+            "1": "ENTERED",
+            "2": "YEETED",
+            "MOUNTED": 0,
+            "ENTERED": 1,
+            "YEETED": 2
+        },
+        "TransitionGroup": "function u(e){let{items:t,renderItem:n,getItemKey:i,wrapChildren:r=l,lazyCleanUpDelay:u}=e,c=a.useRef(-1);a.useLayoutEffect(()=>()=>clearTimeout(c.current));let[,d]=a.useState(o),f=a.useRef(null),E=a.useMemo(()=>{var e;let r=new Set(null===(e=f.current)||void 0===e?void 0:e.keys()),s=new Map(f.current);for(let e of t){let t=i(e),a=s.get(t);if(null==a){let i=null!=f.current?1:0,r=()=>{var e,n;let i=null===(e=f.current)||void 0===e?void 0:e.get(t);null==i||(2===i.state?(null===(n=f.current)||void 0===n||n.delete(t),null!=u?(clearTimeout(c.current),c.current=setTimeout(()=>d({}),u)):d({})):__DEV__&&console.warn(\"SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: \".concat(t)))},s=n(t,e,i,r);a={item:e,children:s,state:i,cleanUp:r,renderItem:n}}else if(a.item!==e||a.renderItem!==n||2===a.state){let{cleanUp:i}=a,r=2===a.state?1:a.state,s=n(t,e,r,a.cleanUp);a={item:e,children:s,state:r,cleanUp:i,renderItem:n}}s.set(t,a),r.delete(t)}for(let e of r){let t=s.get(e);if(null!=t){if(2!==t.state||t.renderItem!==n){let{item:i,cleanUp:r}=t,a=n(e,t.item,2,t.cleanUp);null!=(t={item:i,children:a,state:2,cleanUp:r,renderItem:n}).children?s.set(e,t):s.delete(e)}else s.set(e,t)}}return s},[t,i,n,u]);a.useInsertionEffect(()=>(f.current=E,()=>{var e;return null===(e=f.current)||void 0===e?void 0:e.clear()}),[E]);let p=[];for(let[,e]of E)p.push(e.children);return(0,s.jsx)(s.Fragment,{children:p.length>0?r(p):null})}"
+    }
+}

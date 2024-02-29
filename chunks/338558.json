@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>`\\u{7E2E}\\u{5C0F} ${e.fieldLabel}`",
-            "increase": "e=>`\\u{653E}\\u{5927} ${e.fieldLabel}`",
-            "numberField": "數字欄位"
-        }
-    }
-}

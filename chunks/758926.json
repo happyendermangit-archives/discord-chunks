@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "isLinkTrusted": "function i(e){return null!=e.target&&(0,l.isLinkTrusted)(e.target,null!=e.title&&\"\"!==e.title?e.title:(0,n.astToString)(e.content))}"
+    }
+}

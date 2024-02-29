@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){let{className:t,guild:n,roleStyle:a,roleFilter:l,onSelect:p,onClose:m}=e,h=e=>r()(n.roles).filter(l).filter(t=>s()(e.toLowerCase(),t.name.toLowerCase())).value();return(0,i.jsx)(u.ComboboxPopout,{className:t,value:new Set,onChange:p,placeholder:c.default.Messages.ADD_ROLE_PLACEHOLDER,\"aria-label\":c.default.Messages.ADD_ROLE_A11Y_LABEL,onClose:m,children:e=>h(e).map(e=>(0,i.jsxs)(u.ComboboxItem,{value:e.id,children:[\"dot\"===a?(0,i.jsx)(u.RoleDot,{className:f.popoutRoleDot,color:e.colorString??(0,o.int2hex)(d.DEFAULT_ROLE_COLOR),background:!1,tooltip:!1}):(0,i.jsx)(u.RoleCircle,{className:f.popoutRoleCircle,color:e.colorString??(0,o.int2hex)(d.DEFAULT_ROLE_COLOR)}),(0,i.jsx)(u.ComboboxItem.Label,{children:e.name})]},e.id))})}"
-    }
-}

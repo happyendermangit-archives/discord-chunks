@@ -1,0 +1,3 @@
+{
+    "exports": "function a(t){if(c(\"ed25519\"===t,\"only tested with ed25519 so far\"),!(this instanceof a))return new a(t);t=i[t].curve,this.curve=t,this.g=t.g,this.g.precompute(t.n.bitLength()+1),this.pointClass=t.point().constructor,this.encodingLength=Math.ceil(t.n.bitLength()/8),this.hash=r.sha512}"
+}

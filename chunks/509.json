@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "isCommunicationDisabled": "function i(e){return null!=e&&new Date(e)>new Date}",
+        "isMemberCommunicationDisabled": "function r(e){return i(null==e?void 0:e.communicationDisabledUntil)}"
+    }
+}

@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){if(\"number\"!=typeof t&&\"bigint\"!=typeof t)throw new i(\"argument must be a Number or a BigInt\");var e=t<0?-n(-t):n(t);return 0===e?0:e}"
-}

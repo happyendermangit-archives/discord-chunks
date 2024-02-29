@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "getDevicePixelRatio": "function i(){var e;return null!==(e=window.devicePixelRatio)&&void 0!==e?e:1}",
+        "isImageLoaded": "function _(e){let t=E.get(e);return null!=t&&t.loaded}",
+        "loadImage": "function S(e,t){let n=E.get(e);if(null!=n&&n.loaded)return null!=t&&u.default.awaitOnline().then(()=>{null!=n&&null!=n.callbacks&&n.callbacks.forEach(t=>{null!=n?t(!1,n):t(!0,{url:e,loaded:!0})})}),d.NOOP;{let i;return null==n&&(n={url:e,loaded:!1},E.set(e,n),p(n)),null!=t&&(i=t.bind(null),null==n.callbacks&&(n.callbacks=new Set),n.callbacks.add(i)),()=>{null!=i&&null!=n&&(null!=n.callbacks&&n.callbacks.delete(i),null!=n.backoff&&n.backoff.cancel())}}}",
+        "getBestMediaProxySize": "function m(e){var t;return null!==(t=f.find(t=>e<=t))&&void 0!==t?t:f[f.length-1]}",
+        "getImageSrc": "function T(e){let{src:t,width:n,height:i,maxWidth:s,maxHeight:a,ratio:l=1,format:u=null,quality:d=null}=e,f=n,E=i;l<1&&(f=Math.round(n*l),E=Math.round(i*l)),null!=s&&(f=Math.min(f,s)),null!=a&&(E=Math.min(E,a));let p=(0,c.default)();return f*=p,function(e){let{src:t,sourceWidth:n,sourceHeight:i,targetWidth:s,targetHeight:a,format:l=null,quality:u=null}=e,[c,d]=function(e){let[t,n]=e.split(\"?\");return[t,o.parse(n)]}(t);return null!=l&&(d.format=l),null!=u&&(d.quality=u),(s!==n||a!==i)&&(d.width=0|s,d.height=0|a),!r.isEmpty(d)&&(c+=\"?\"+o.stringify(d)),c}({src:t,sourceWidth:n,sourceHeight:i,targetWidth:f,targetHeight:E*=p,format:u,quality:d})}"
+    }
+}

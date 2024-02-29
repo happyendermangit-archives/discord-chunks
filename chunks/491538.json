@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isForumActivityExperimentEnabled": "function r(e){let t=l.default.getCurrentConfig({guildId:e??i.EMPTY_STRING_SNOWFLAKE_ID,location:\"3fde52_1\"}),n=a.default.getCurrentConfig({location:\"3fde52_2\"});return!!(t.enabled||n.enabled)}"
-    }
-}

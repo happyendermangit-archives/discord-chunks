@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getIsEligibleForQuests": "e=>{let{location:t,autoTrackExposure:n}=e,s=a.getCurrentConfig({location:t},{autoTrackExposure:n}),r=i.default.getCurrentConfig({location:t},{autoTrackExposure:n});return s.enabled&&!r.paymentsBlocked}",
-        "useIsEligibleForQuests": "e=>{let{location:t,autoTrackExposure:n}=e,s=a.useExperiment({location:t},{autoTrackExposure:n}),r=i.default.useExperiment({location:t},{autoTrackExposure:n});return s.enabled&&!r.paymentsBlocked}"
-    }
-}

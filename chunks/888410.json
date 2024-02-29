@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class o extends i.default{static createFromServer(e){return new o({id:e.id,liveBuildId:e.live_build_id,name:e.name})}constructor(e){super(),this.id=e.id,this.liveBuildId=e.liveBuildId,this.name=e.name}getName(e){return null!=this.name?this.name:this.id===e?r.default.Messages.APPLICATION_BRANCH_NAME_MASTER:r.default.Messages.APPLICATION_BRANCH_NAME_UNKNOWN}}"
-    }
-}

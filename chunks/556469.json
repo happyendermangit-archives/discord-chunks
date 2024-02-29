@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "clearHangStatus": "function c(e){a.default.dispatch({type:\"CLEAR_HANG_STATUS\",saveAsDefault:e}),l.default.track(u.AnalyticEvents.CLEAR_HANG_STATUS,{channel_id:s.default.getVoiceChannelId(),guild_id:r.default.getChannel(s.default.getVoiceChannelId())?.guild_id,media_session_id:i.default.getMediaSessionId()})}",
-        "updateCustomHangStatus": "function d(e,t,n){if(\"\"===e){c(n);return}a.default.dispatch({type:\"UPDATE_HANG_STATUS_CUSTOM\",emoji:t,status:e,saveAsDefault:n}),l.default.track(u.AnalyticEvents.SET_HANG_STATUS,{status_type:e,channel_id:s.default.getVoiceChannelId(),guild_id:r.default.getChannel(s.default.getVoiceChannelId())?.guild_id,media_session_id:i.default.getMediaSessionId()})}",
-        "updateHangStatus": "function o(e,t){if(null==e){c(t);return}a.default.dispatch({type:\"UPDATE_HANG_STATUS\",status:e,saveAsDefault:t}),l.default.track(u.AnalyticEvents.SET_HANG_STATUS,{status_type:e,channel_id:s.default.getVoiceChannelId(),guild_id:r.default.getChannel(s.default.getVoiceChannelId())?.guild_id,media_session_id:i.default.getMediaSessionId()})}"
-    }
-}

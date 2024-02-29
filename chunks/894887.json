@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "isMidjourneyOnboardingFlow": "function o(e){let{guildStore:t}=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=null!=t?t:s.default,i=n.getGuild(a.MIDJOURNEY_GUILD_ID),o=(null==i?void 0:i.joinedAt)instanceof Date&&Date.now()-i.joinedAt.getTime()<=36e5;return 1===n.getGuildCount()&&o&&(0,r.isEligibleForMidjourneyOnboarding)(e)}",
+        "isEligibleForMidjourneyRedirect": "function d(e){return e.isDM()&&1===e.rawRecipients.length&&e.rawRecipients[0].id===a.MIDJOURNEY_BOT_ID&&o(\"app\")}",
+        "hasRedirectedToGuild": "function u(e){return new Promise((t,n)=>{if(i.default.getGuildId()===e){t();return}let s=setTimeout(()=>{a(),n()},3e3),r=()=>{i.default.getGuildId()===e&&(a(),t())},a=()=>{i.default.removeChangeListener(r),clearTimeout(s)};i.default.addChangeListener(r)})}"
+    }
+}

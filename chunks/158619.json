@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "formatKbSize": "function a(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:r,n=t.useKibibytes?1024:1e3,a=t.useKibibytes?1024:1e3,s=e/n;return s/a>=1?o(s,t):t.useSpace?i.default.Messages.FILE_SIZE_KB.format({size:Math.ceil(s)}):i.default.Messages.FILE_SIZE_KB_NO_SPACE.format({size:Math.ceil(s)})}",
-        "formatSize": "function o(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:r,n=t.useKibibytes?1024:1e3,o=t.useKibibytes?1024:1e3,a=Math.ceil(e/n);if(a<o)return t.useSpace?i.default.Messages.FILE_SIZE_MB.format({size:a}):i.default.Messages.FILE_SIZE_MB_NO_SPACE.format({size:a});let s=a/o;return s=t.showDecimalForGB?Math.round(10*s)/10:Math.round(s),t.useSpace?i.default.Messages.FILE_SIZE_GB.format({size:s}):i.default.Messages.FILE_SIZE_GB_NO_SPACE.format({size:s})}"
-    }
-}

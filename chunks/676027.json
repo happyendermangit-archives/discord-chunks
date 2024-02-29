@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function I(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:window,r=(0,o.useStateFromStores)([_.default],()=>_.default.keyboardModeEnabled),I=(0,a.default)(),[T,c]=i.useState(!1),d=(0,s.useWindowDispatch)();return i.useEffect(()=>{if(t)return n.addEventListener(\"blur\",e),()=>n.removeEventListener(\"blur\",e);function e(){I&&(d.dispatch(l.ComponentActions.POPOUT_CLOSE),E.ComponentDispatch.dispatch(l.ComponentActions.CONTEXT_MENU_CLOSE))}},[n,I,t,d]),i.useEffect(()=>{if(r||!T||!t)return;let i=I;function o(t){let n=t.relatedTarget;setTimeout(()=>{(null==n||\"BUTTON\"===n.tagName)&&!i&&u(e)},100)}return e.current?.addEventListener(\"focusout\",o),n.document.activeElement?.tagName!==\"IFRAME\"&&!i&&e.current?.focus(),()=>{e.current?.removeEventListener(\"focusout\",o),i=!0}},[t,T,r,e,n,I]),c}"
-    }
-}

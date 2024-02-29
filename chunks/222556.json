@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "shouldShowMembershipVerificationGate": "function u(e){let[t,n,s,u]=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[r.default,a.default,o.default,i.default];if(null==e)return!1;let d=t.getGuild(e),{notClaimed:l}=n.getCheck(e),f=s.getCurrentUser(),_=!1;return null!=f&&(_=u.getMember(e,f.id)?.isPending??!1),(_||l)&&!!d?.hasVerificationGate()}",
-        "useShowMemberVerificationGate": "function d(e){return(0,s.useStateFromStores)([r.default,a.default,o.default,i.default],()=>null!=e&&u(e,[r.default,a.default,o.default,i.default]),[e])}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){let{navId:t,scrollerRef:n,state:o,onFocus:u}=e,{renderWindow:d}=i.useContext(l.default),c=(e,t)=>{if(n.current?.scrollToTop(),e&&null!=o.query){let e=o.query.typeInfo.focusMode,n=!(e===r.FocusMode.MANUAL||e===r.FocusMode.AUTO_WHEN_FILTERED&&0===o.query.queryText.length);o.isVisible&&(!0!==t||!1!==n)?(p.setFocus(\"0\"),u?.(0)):(p.setFocus(null),u?.(null))}},f=e=>{if(n.current?.scrollToBottom(),e&&null!=o.query&&o.query.resultCount>0){let e=o.query.resultCount-1;p.setFocus(e.toString()),u?.(e)}},p=(0,a.default)({id:t,isEnabled:o.isVisible,orientation:s.Orientations.VERTICAL,useVirtualFocus:!0,setFocus:(e,t)=>{let i=d.document.querySelector(e);null!=i&&n.current?.scrollIntoViewNode({node:i}),u?.(+t)},onNavigateNextAtEnd:()=>c(!0),onNavigatePreviousAtStart:()=>f(!0),scrollToStart:()=>(c(!1,!1),Promise.resolve()),scrollToEnd:()=>(f(!1),Promise.resolve())});return i.useEffect(()=>{c(!0,!0)},[o.query?.type,o.query?.queryText,o.query?.isLoading,o.isVisible]),p}"
-    }
-}

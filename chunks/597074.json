@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e,t,n,r){let o=(0,i.default)(e,t,r),a=(e,t)=>n.computeScrollPosition(e,t);return{...o,getScrollPosition:a,isItemVisible(e,n){let i=arguments.length>2&&void 0!==arguments[2]&&arguments[2],[r,o]=a(e,n),s=t();return i?r>=s.scrollTop&&r+o<=s.scrollTop+s.offsetHeight:r+o>=s.scrollTop&&r<=s.scrollTop+s.offsetHeight},scrollToIndex(e){let{section:t,row:n,animate:i,callback:r,padding:s=0}=e,[_,E]=a(t,n);o.scrollIntoViewRect({start:_,end:_+E,padding:s,animate:i,callback:r})}}}"
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "type": "function(e){let{width:t,height:r,src:l,url:I,format:g,className:_}=e,[E,R]=n.useState(!1),S=(0,o.useIsFavoriteGIF)(I),y=S?m.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES:m.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,F=S?d.default:c.default;n.useEffect(()=>{if(!E)return;let e=setTimeout(()=>{R(!1)},500);return()=>clearTimeout(e)},[E]);let v=e=>{e.preventDefault(),e.stopPropagation(),R(!0),S?(0,u.removeFavoriteGIF)(I):((0,u.addFavoriteGIF)({url:I,src:l,width:t,height:r,format:g}),h.ComponentDispatch.dispatch(f.ComponentActions.FAVORITE_GIF))};return(0,s.jsx)(a.Tooltip,{text:y,children:e=>(0,s.jsx)(a.Clickable,{...e,className:i()(_,p.size,p.gifFavoriteButton,{[p.selected]:S,[p.showPulse]:E}),onMouseDown:e=>e.preventDefault(),onClick:v,onDoubleClick:e=>e.preventDefault(),children:(0,s.jsx)(F,{className:p.icon})})})}",
-            "compare": null
-        }
-    }
-}

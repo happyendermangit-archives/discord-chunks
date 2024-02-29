@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getActiveTransaction": "function i(t){let e=t||(0,r.getCurrentHub)(),n=e.getScope();return n.getTransaction()}"
+    }
+}

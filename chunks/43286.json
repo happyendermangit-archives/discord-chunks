@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "render": "function(e,t){let{children:n,className:r,style:i,noBorder:u=!1,participantUserId:o}=e;return(0,a.jsx)(\"div\",{className:s()(r,l.tile,{[l.noBorder]:u}),style:i,ref:t,\"data-selenium-video-tile\":o,children:n})}"
-        }
-    }
-}

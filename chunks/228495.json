@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "e=>this.handleConnectionOpen(e)"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleConnectionOpen": "async e=>{let _=await o.default.fetchChangelogConfig(),E=_.body,n=(0,I.getClientVersionForChangelog)(),T=function(e,_){let E=0,t=null;for(var[o,{min_version:n}]of Object.entries(e))n<=_&&n>E&&(E=n,t=o);return t}(E,n);if(t.default.dispatch({type:\"CHANGE_LOG_SET_CONFIG\",config:_.body,latestChangelogId:T}),null==T||!0!==E[T].show_on_startup)return;let S=a.default.lastSeenChangelogId(),N=a.default.lastSeenChangelogDate();if(null!=S&&0>=i.default.compare(T,S))return;let O=await o.default.fetchChangelog(T,r.default.locale);if(null!=O){if(null==N||null==a.default.lastSeenChangelogDate()){o.default.markChangelogAsSeen(T,O.date);return}!a.default.isLocked()&&new Date(O.date)>new Date(N)&&(0,s.openChangelog)()}}"
+        }
+    }
+}

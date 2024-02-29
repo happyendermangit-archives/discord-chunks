@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){var e=n(t);return 1==e.length&&e[0][2]?i(e[0][0],e[0][1]):function(s){return s===t||r(s,t,e)}}"
-}

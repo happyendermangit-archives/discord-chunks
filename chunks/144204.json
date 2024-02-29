@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function d(e){let{onClick:t,children:n,tooltip:s,dangerous:d=!1,className:c,\"aria-label\":f}=e;return(0,i.jsx)(r.Tooltip,{text:s,hideOnClick:!0,children:e=>{let{onMouseEnter:r,onMouseLeave:p,onClick:m}=e;return(0,i.jsx)(o.Button,{onMouseEnter:r,onMouseLeave:p,onClick:e=>{e.stopPropagation(),m?.(),t(e)},dangerous:d,\"aria-label\":f??s,className:c,children:a.Children.map(n,e=>a.isValidElement(e)?a.cloneElement(e,{className:l()(e.props.className,u.actionBarIcon)}):e)})}})}"
-    }
-}

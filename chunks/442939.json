@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "default": "function d(t){let e=n.useRef([]);return n.useEffect(()=>{!(0,a.areArraysShallowEqual)(t,e.current)&&(u.default.fetchApplications(t,!1),e.current=t)},[t]),(0,l.useStateFromStoresArray)([r.default],()=>t.map(t=>r.default.getApplication(t)))}",
+        "useGetOrFetchApplication": "function s(t){return d(null!=t?[t]:[])[0]}"
+    }
+}

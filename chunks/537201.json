@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "isRedesignToggleIgnored": "()=>r.getCurrentConfig({location:\"x\"},{autoTrackExposure:!1}).ignore",
-        "useRedesignToggleIgnored": "()=>r.useExperiment({location:\"x\"},{autoTrackExposure:!1}).ignore"
-    }
-}

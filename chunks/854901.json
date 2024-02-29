@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"Уменьшение \".concat(e.fieldLabel)",
+            "increase": "e=>\"Увеличение \".concat(e.fieldLabel)",
+            "numberField": "Числовое поле"
+        }
+    }
+}

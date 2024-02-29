@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,s){return e=n(void 0===e?t.length-1:e,0),function(){for(var i=arguments,c=-1,o=n(i.length-e,0),f=Array(o);++c<o;)f[c]=i[e+c];c=-1;for(var u=Array(e+1);++c<e;)u[c]=i[c];return u[e]=s(f),r(t,this,u)}}"
-}

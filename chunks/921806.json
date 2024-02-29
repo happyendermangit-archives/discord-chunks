@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "Reporter": "function n(t){this._reporterState={obj:null,path:[],options:t||{},errors:[]}}",
-        "DecoderBuffer": "function c(t,e){if(n.call(this,e),!i.isBuffer(t)){this.error(\"Input not Buffer\");return}this.base=t,this.offset=0,this.length=t.length}",
-        "EncoderBuffer": "function o(t,e){if(Array.isArray(t))this.length=0,this.value=t.map(function(t){return!o.isEncoderBuffer(t)&&(t=new o(t,e)),this.length+=t.length,t},this);else if(\"number\"==typeof t){if(!(0<=t&&t<=255))return e.error(\"non-byte EncoderBuffer value\");this.value=t,this.length=1}else if(\"string\"==typeof t)this.value=t,this.length=i.byteLength(t);else{if(!i.isBuffer(t))return e.error(\"Unsupported type: \"+typeof t);this.value=t,this.length=t.length}}",
-        "Node": "function u(t,e,s){let r={};this._baseState=r,r.name=s,r.enc=t,r.parent=e||null,r.children=null,r.tag=null,r.args=null,r.reverseArgs=null,r.choice=null,r.optional=!1,r.any=!1,r.obj=!1,r.use=null,r.useDecoder=null,r.key=null,r.default=null,r.explicit=null,r.implicit=null,r.contains=null,!r.parent&&(r.children=[],this._wrap())}"
-    }
-}

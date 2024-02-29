@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "CHANNEL_SELECT": "function I(e){let{channelId:_}=e;if(null==_||!(0,i.isEligibleForInappropriateConversationWarning)({location:\"channel_select\"}))return!1;let E=o.default.getChannel(_);if(null==E||!E.isDM())return!1;let t=(0,r.getInappropriateConversationTakeoverForChannel)(_);return null!=t&&((0,a.showTakeoverModal)({warningId:t.id,warningType:t.type,senderId:E.getRecipientId(),channelId:_}),!0)}",
+                "CHANNEL_UPDATES": "function s(e){let{channels:_}=e;if(!(0,i.isEligibleForInappropriateConversationWarning)({location:\"channel_updates\"}))return!1;let E=n.default.getCurrentlySelectedChannelId();if(null==E)return!1;let t=_.find(e=>e.id===E);if(null==t)return!1;let o=(0,r.getInappropriateConversationTakeoverForChannel)(t.id);return!!(null!=o&&t.isDM())&&((0,a.showTakeoverModal)({warningId:o.id,warningType:o.type,senderId:t.getRecipientId(),channelId:t.id}),!0)}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            }
+        }
+    }
+}

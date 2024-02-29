@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useDragSourceConnector": "function u(e,t){var n=(0,o.useDragDropManager)(),u=(0,r.useMemo)(function(){return new a.SourceConnector(n.getBackend())},[n]);return(0,i.useIsomorphicLayoutEffect)(function(){return u.dragSourceOptions=e||null,u.reconnect(),function(){return u.disconnectDragSource()}},[u,e]),(0,i.useIsomorphicLayoutEffect)(function(){return u.dragPreviewOptions=t||null,u.reconnect(),function(){return u.disconnectDragPreview()}},[u,t]),u}"
-    }
-}

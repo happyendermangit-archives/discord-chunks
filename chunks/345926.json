@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useMenuTriggerState": "function o(e){let t=(0,r.useOverlayTriggerState)(e),[n,o]=(0,a.useState)(null),[i,u]=(0,a.useState)([]),s=()=>{u([]),t.close()};return{focusStrategy:n,...t,open(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null;o(e),t.open()},toggle(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null;o(e),t.toggle()},close(){s()},UNSTABLE_expandedKeysStack:i,UNSTABLE_openSubmenu:(e,t)=>{u(n=>t>n.length?n:[...n.slice(0,t),e])},UNSTABLE_closeSubmenu:(e,t)=>{u(n=>n[t]===e?n.slice(0,t):n)}}}"
-    }
-}

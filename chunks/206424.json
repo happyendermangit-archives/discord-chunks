@@ -1,3 +1,0 @@
-{
-    "exports": "function u(t,e,s){let r={};this._baseState=r,r.name=s,r.enc=t,r.parent=e||null,r.children=null,r.tag=null,r.args=null,r.reverseArgs=null,r.choice=null,r.optional=!1,r.any=!1,r.obj=!1,r.use=null,r.useDecoder=null,r.key=null,r.default=null,r.explicit=null,r.implicit=null,r.contains=null,!r.parent&&(r.children=[],this._wrap())}"
-}

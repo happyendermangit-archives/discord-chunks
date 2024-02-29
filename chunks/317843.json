@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class a extends s.default{constructor(e){super(),this.socket=e,this._hadLobbyVoiceStates=!1}getInitialState(){return this.getNextState()}getNextState(){let e=i.default.getLobbiesWithVoice();return e.length>0&&(this._hadLobbyVoiceStates=!0),{lobbies:e.map(e=>({lobbyId:e.id,selfMute:r.default.isSelfMute(e.application_id),selfDeaf:r.default.isSelfDeaf(e.application_id)}))}}shouldCommit(){return this._hadLobbyVoiceStates&&this.socket.isSessionEstablished()}didCommit(e){let{lobbies:t}=e;this.socket.lobbyVoiceStatesUpdate(t)}forceUpdate(){this._hadLobbyVoiceStates&&super.forceUpdate()}}"
-    }
-}

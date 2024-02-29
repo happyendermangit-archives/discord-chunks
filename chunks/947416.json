@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "INCREASED_ACTIVITY_LIST_FORUM_LAYOUT": 3,
-        "useForumActivityExperiment": "function s(e){let t=l.default.useExperiment({guildId:e??i.EMPTY_STRING_SNOWFLAKE_ID,location:\"9a247a_1\"}),n=a.default.useExperiment({location:\"9a247a_2\"});return!!(t.enabled||n.enabled)}"
-    }
-}

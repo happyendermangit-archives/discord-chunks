@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "registerActiveSink": "function o(e){let t=i[e]??0;0===t&&r?.(e,!0),i[e]=t+1}",
-        "setActiveSinksChangeCallback": "function s(e){r=e??null}",
-        "unregisterActiveSink": "function a(e){i[e]--,0===i[e]&&r?.(e,!1)}"
-    }
-}

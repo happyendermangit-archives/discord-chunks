@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>`${e.fieldLabel} verlagen`",
-            "increase": "e=>`${e.fieldLabel} verhogen`",
-            "numberField": "Getalveld"
-        }
-    }
-}

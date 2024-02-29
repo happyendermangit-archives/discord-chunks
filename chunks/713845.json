@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "loadStripe": "function(){for(var t,e=arguments.length,s=Array(e),r=0;r<e;r++)s[r]=arguments[r];h=!0;var i=Date.now();return(t=n,null!==d?d:d=new Promise(function(e,s){if(\"undefined\"==typeof window||\"undefined\"==typeof document){e(null);return}if(window.Stripe&&t&&console.warn(o),window.Stripe){e(window.Stripe);return}try{var r=f();r&&t?console.warn(o):!r&&(r=u(t)),r.addEventListener(\"load\",function(){window.Stripe?e(window.Stripe):s(Error(\"Stripe.js not available\"))}),r.addEventListener(\"error\",function(){s(Error(\"Failed to load Stripe.js\"))})}catch(t){s(t);return}})).then(function(t){return p(t,s,i)})}"
-    }
-}

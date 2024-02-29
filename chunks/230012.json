@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useIsSSR": "function p(){return\"function\"==typeof r.useSyncExternalStore?r.useSyncExternalStore(f,c,d):(0,r.useContext)(i)}",
-        "useSSRSafeId": "function(e){let t=r.useId(),[n]=(0,r.useState)(p()),o=n?\"react-aria\":`react-aria${a.prefix}`;return e||`${o}-${t}`}"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "render": "function(e,t){let{className:n,contentClassName:a,isUnread:s,children:d,id:c,role:f,\"aria-label\":p}=e;return(0,i.jsxs)(\"div\",{className:l()(n,{[u.divider]:!0,[u.isUnread]:s,[u.hasContent]:null!=d}),ref:t,id:c,role:f,\"aria-label\":p,children:[null!=d?(0,i.jsx)(\"span\",{className:l()(u.content,a),children:d}):null,s?(0,i.jsxs)(\"span\",{className:u.unreadPill,children:[(0,i.jsx)(r.default,{foreground:u.unreadPillCapStroke,className:u.unreadPillCap}),o.default.Messages.NEW]}):null]})}"
-        }
-    }
-}

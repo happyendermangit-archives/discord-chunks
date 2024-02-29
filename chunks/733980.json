@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getStageHasMedia": "function d(e){return function(e){return null!=a.default.getMutableParticipants(e,o.StageChannelParticipantNamedIndex.SPEAKER).find(e=>e.type===o.StageChannelParticipantTypes.STREAM)}(e)||r.default.hasVideo(e)}",
-        "isStageVideoEnabled": "function l(e){let t=i.default.getGuild(e);return null!=t&&(t?.maxStageVideoChannelUsers??0)>0}",
-        "useStageHasMedia": "function u(e){let t=function(e){return(0,s.useStateFromStores)([a.default],()=>null!=a.default.getMutableParticipants(e,o.StageChannelParticipantNamedIndex.SPEAKER).find(e=>e.type===o.StageChannelParticipantTypes.STREAM),[e])}(e);return(0,s.useStateFromStores)([r.default],()=>r.default.hasVideo(e),[e])||t}"
-    }
-}

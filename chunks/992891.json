@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){return o.useDirectVideo?(0,r.default)(e):(0,i.default)(e)}"
-    }
-}

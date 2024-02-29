@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "async function u(e,t,u){let{hasSpotifyAccount:d,activity:c,user:f}=e;(0,o.default)(d)&&null!=c&&null!=c.sync_id&&(await (0,l.ensureSpotifyPlayable)(),await (0,l.ensureSpotifyPremium)().catch(e=>((0,a.openModalLazy)(async()=>{let{default:e}=await n.el(\"739528@842:880\").then(n.bind(n,\"680339\"));return t=>(0,i.jsx)(e,{...t})}),Promise.reject(e))),s.sync(c,f.id),(0,r.default)(t,f,c,u))}"
-    }
-}

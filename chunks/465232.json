@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t){var r,a,o,i,u,s,l=[];for(o=0,r=n(\"727729\")(e),i=n(\"862546\"),u=n(\"861391\"),s=n(\"64000\");o<r.length;++o)i[a=r[o]]&&(a=i[a]),t&&\"keypress\"!==t&&u[a]&&(a=u[a],l.push(\"shift\")),s(a)&&l.push(a);return t=this.pickBestAction(a,l,t),{key:a,modifiers:l,action:t}}"
-}

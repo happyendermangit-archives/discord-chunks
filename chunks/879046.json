@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e){let{user:t,guildId:n,size:u,showPending:l=!1,showTryItOut:c=!1,animateOnHover:d=!1,avatarDecorationOverride:_,avatarOverride:f}=e,{avatarSrc:E,isAvatarAnimating:T,eventHandlers:I}=(0,o.useAnimatedAvatarSrc)({user:t,guildId:n,size:(0,i.getAvatarSize)(u),showPending:l,animateOnHover:d,avatarOverride:f}),{avatarPlaceholderSrc:m,avatarDecorationSrc:S,eventHandlers:C}=(0,s.default)({user:t,guildId:null!=n?n:void 0,size:(0,a.getDecorationSizeForAvatarSize)(u),showPending:l,animateOnHover:d,avatarDecorationOverride:_,showTryItOut:c}),p=r.useCallback(()=>{I.onMouseEnter(),C.onMouseEnter()},[I,C]);return{avatarPlaceholderSrc:m,avatarDecorationSrc:S,avatarSrc:E,isAnimating:T,eventHandlers:{onMouseEnter:p,onMouseLeave:r.useCallback(()=>{I.onMouseLeave(),C.onMouseLeave()},[I,C])}}}"
-    }
-}

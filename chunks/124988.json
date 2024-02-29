@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){let{channel:t,guildId:o,locationObject:u,openInPopout:d,initialSelectedApplicationId:c,initialSlide:f=l.ActivityShelfSlides.DIRECTORY,enableSelectedTextChannelInvite:p=!1,analyticsLocations:m}=e;d&&(0,s.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);let h=d?a.POPOUT_MODAL_CONTEXT:a.DEFAULT_MODAL_CONTEXT;return(0,a.openModalLazy)(async()=>{let{default:e}=await n.el(\"124988@882:912\").then(n.bind(n,\"8086\"));return n=>(0,i.jsx)(e,{...n,channel:t,guildId:o,locationObject:u,initialSlide:f,initialSelectedApplicationId:c,enableSelectedTextChannelInvite:p,analyticsLocations:m})},{modalKey:l.ACTIVITY_SHELF_WEB_MODAL_KEY,contextKey:h})}"
-    }
-}

@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,s,r,n){o(s,r),t=u(t,f,\"Password\"),e=u(e,f,\"Salt\");var i=new p(n=n||\"sha1\",t,e.length),a=c.allocUnsafe(r),b=c.allocUnsafe(e.length+4);e.copy(b,0,0,e.length);for(var h=0,l=d[n],g=Math.ceil(r/l),v=1;v<=g;v++){b.writeUInt32BE(v,e.length);for(var x=i.run(b,i.ipad1),m=x,y=1;y<s;y++){m=i.run(m,i.ipad2);for(var _=0;_<l;_++)x[_]^=m[_]}x.copy(a,h),h+=l}return a}"
-}

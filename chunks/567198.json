@@ -1,5 +1,0 @@
-{
-    "exports": "function o(e){if(!(this instanceof o))return new o(e);if(this.constructor=o,e instanceof o){this.s=e.s,this.e=e.e,this.d=(e=e.d)?e.slice():e;return}if(\"number\"==typeof e){if(0*e!=0)throw Error(i+e);if(e>0)this.s=1;else if(e<0)e=-e,this.s=-1;else{this.s=0,this.e=0,this.d=[0];return}if(e===~~e&&e<1e7){this.e=0,this.d=[e];return}return x(this,e.toString())}if(\"string\"!=typeof e)throw Error(i+e);if(45===e.charCodeAt(0)?(e=e.slice(1),this.s=-1):this.s=1,c.test(e))x(this,e);else throw Error(i+e)}",
-    "paths": [],
-    "children": []
-}

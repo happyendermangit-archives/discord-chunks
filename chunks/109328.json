@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t,r,a,o,i){var u,s,l,c,d=[],f=r.type;if(\"keypress\"===f&&!(r.code&&\"Arrow\"===r.code.slice(0,5))&&(this.callbacks[\"any-character\"]||[]).forEach(function(e){d.push(e)}),!this.callbacks[e])return d;for(l=n(\"64000\"),\"keyup\"===f&&l(e)&&(t=[e]),u=0;u<this.callbacks[e].length;++u){if(s=this.callbacks[e][u],!!a||!s.seq||this.sequenceLevels[s.seq]===s.level){if(f===s.action&&(c=n(\"758686\"),\"keypress\"===f&&!r.metaKey&&!r.ctrlKey||c(t,s.modifiers))){var p=!a&&s.combo===o,h=a&&s.seq===a&&s.level===i;(p||h)&&this.callbacks[e].splice(u,1),d.push(s)}}}return d}"
-}

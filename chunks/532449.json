@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"\".concat(e.fieldLabel,\" verringern\")",
+            "increase": "e=>\"\".concat(e.fieldLabel,\" erh\\xf6hen\")",
+            "numberField": "Nummernfeld"
+        }
+    }
+}

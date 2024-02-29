@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "(e,t,n)=>new l(e,t,n)",
-        "isDragTrigger": "function E(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return!!t&&!1===e.isTrusted||e.key?.toLowerCase()===\"d\"&&(e.metaKey||e.ctrlKey)&&!e.altKey}"
-    }
-}

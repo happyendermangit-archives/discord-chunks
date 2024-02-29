@@ -1,0 +1,23 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "INVITE_ACCEPT_SUCCESS": "function i(e){var _,E,t;let{guild:i}=e.invite;if(null!=i&&(null==i?void 0:null===(_=i.features)||void 0===_?void 0:_.includes(r.GuildFeatures.HUB))){o.default.onOpenHubInvite(e.invite);return}null!=i&&(null==i?void 0:null===(E=i.features)||void 0===E?void 0:E.includes(r.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED))&&!(null==i?void 0:null===(t=i.features)||void 0===t?void 0:t.includes(r.GuildFeatures.PREVIEW_ENABLED))&&(0,n.transitionTo)(r.Routes.GUILD_MEMBER_VERIFICATION(i.id,e.invite.code))}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            }
+        }
+    }
+}

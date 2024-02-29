@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "applyBackgroundOptionLive": "async function v(e,t){let{track:n=!0,location:s}=t;await p(r.FilterSettingsKey.CAMERA_BACKGROUND_LIVE,{type:r.FilterTargetType.INPUT_DEVICE},e),n&&(0,f.trackBackgroundOptionUpdated)(e,s,\"Enabled\")}",
-        "applyBackgroundOptionPreview": "async function y(e,t,n){let{track:s=!0,location:i}=n;(0,d.startApplyMediaFilterSettings)(),await p(r.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW,{type:r.FilterTargetType.STREAM,streamId:t},e),s&&(0,f.trackBackgroundOptionUpdated)(e,i,\"Preview\")}",
-        "applyInitialVideoBackgroundOption": "function I(){let e=a.default.getCurrentUser();if(null==e)return;let t=(0,u.getLastUsedVideoBackgroundOption)(e);(0,c.default)()&&!l.default.hasBeenApplied&&null!=t&&v(t,{track:!1}).catch(m.NOOP)}"
-    }
-}

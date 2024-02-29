@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getDecorationSizeForAvatarSize": "function u(e){return\"number\"!=typeof e?(0,i.getAvatarSize)(e)*s.DECORATION_TO_AVATAR_RATIO:e*s.DECORATION_TO_AVATAR_RATIO}",
-        "openAvatarDecorationModal": "e=>{let{analyticsLocations:t,initialSelectedDecoration:s,isTryItOutFlow:u,guild:l}=e;(0,i.openModalLazy)(async()=>{(0,a.getHistory)().location.pathname===o.Routes.COLLECTIBLES_SHOP_FULLSCREEN&&(0,a.transitionTo)(o.Routes.APP);let{default:e}=await n.el(\"796538@1309:1342\").then(n.bind(n,\"314945\"));return n=>(0,r.jsx)(e,{...n,analyticsLocations:t,initialSelectedDecoration:s,isTryItOutFlow:u,guild:l})},{})}"
-    }
-}

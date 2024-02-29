@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "toArray": "function(t,e){if(Array.isArray(t))return t.slice();if(!t)return[];var s=[];if(\"string\"!=typeof t){for(var r=0;r<t.length;r++)s[r]=0|t[r];return s}if(\"hex\"===e){(t=t.replace(/[^a-z0-9]+/ig,\"\")).length%2!=0&&(t=\"0\"+t);for(var r=0;r<t.length;r+=2)s.push(parseInt(t[r]+t[r+1],16))}else for(var r=0;r<t.length;r++){var n=t.charCodeAt(r),i=n>>8,c=255&n;i?s.push(i,c):s.push(c)}return s}",
-        "zero2": "function r(t){return 1===t.length?\"0\"+t:t}",
-        "toHex": "function n(t){for(var e=\"\",s=0;s<t.length;s++)e+=r(t[s].toString(16));return e}",
-        "encode": "function(t,e){return\"hex\"===e?n(t):t}"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "isEligibleForInappropriateConversationWarning": "function s(e){let{location:t,autoTrackExposure:n=!1}=e,{enabled:a}=r.getCurrentConfig({location:t},{autoTrackExposure:n}),{enabled:s}=i.getCurrentConfig({location:t},{autoTrackExposure:n});return a||s}",
-        "useIsEligibleForInappropriateConversationWarning": "function l(e){let{location:t,autoTrackExposure:n=!1}=e,{enabled:a}=r.useExperiment({location:t},{autoTrackExposure:n}),{enabled:s}=i.useExperiment({location:t},{autoTrackExposure:n});return a||s}"
-    }
-}

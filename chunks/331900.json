@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "areArraysShallowEqual": "function r(e,t){return null!=t&&e.length===t.length&&!e.some((e,n)=>t[n]!==e)}",
-        "default": "function i(e,t,n,i){if(e===t)return!0;let r=Object.keys(e),o=Object.keys(t);if(r.length!==o.length)return null!=i&&i(`shallowEqual: unequal key lengths ${r.length} !=== ${o.length}`),!1;let a=[];for(let o=0;o<r.length;o++){let s=r[o];if(e[s]!==t[s]&&(null==n||!n.includes(s))){if(null==i)return!1;a.push(s)}}return null!=i&&a.length>0&&i(`shallowEqual: unequal keys: ${a.join(\", \")}`),0===a.length}"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "addReactionPickerAnimation": "function a(e,t,n,a){i.default.dispatch({type:\"BURST_REACTION_PICKER_ANIMATION_ADD\",messageId:e,emojiName:t,emojiId:n,startPosition:a})}",
-        "clearReactionPickerAnimation": "function s(e,t,n){i.default.dispatch({type:\"BURST_REACTION_PICKER_ANIMATION_CLEAR\",messageId:e,emojiName:t,emojiId:n})}"
-    }
-}

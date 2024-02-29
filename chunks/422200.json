@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "values": "function values() { [native code] }",
+        "keys": "function keys() { [native code] }",
+        "entries": "function entries() { [native code] }"
+    }
+}

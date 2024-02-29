@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useConnectDragPreview": "function o(e){return(0,r.useMemo)(function(){return e.hooks.dragPreview()},[e])}",
-        "useConnectDragSource": "function a(e){return(0,r.useMemo)(function(){return e.hooks.dragSource()},[e])}"
-    }
-}

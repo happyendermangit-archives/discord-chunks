@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "type": "function(e){var t,a,c,o;let{user:i,size:u=s.AvatarSizes.SIZE_32,animate:d=!1,\"aria-hidden\":f=!1,...T}=e,E=l.useContext(r.default);return(0,n.jsx)(s.Avatar,{src:(t=i,a=(0,s.getAvatarSize)(u),c=d,o=E,t.getAvatarURL(o,a,c)),size:u,\"aria-label\":f?void 0:i.username,\"aria-hidden\":f,...T})}",
-            "compare": null
-        }
-    }
-}

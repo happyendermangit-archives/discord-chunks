@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>`\\u{39C}\\u{3B5}\\u{3AF}\\u{3C9}\\u{3C3}\\u{3B7} ${e.fieldLabel}`",
-            "increase": "e=>`\\u{391}\\u{3CD}\\u{3BE}\\u{3B7}\\u{3C3}\\u{3B7} ${e.fieldLabel}`",
-            "numberField": "Πεδίο αριθμού"
-        }
-    }
-}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function l(e,t){var n,s;let{checkEnabled:i=null!==(s=null===(n=r.default.getCurrentUser())||void 0===n?void 0:n.mfaEnabled)&&void 0!==s&&s,...o}=null!=t?t:{};return new Promise((t,n)=>{((0,a.resolveThunk)(i)?d:u)({promiseFn:e,resolve:t,reject:n,...o})})}"
+    }
+}

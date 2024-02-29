@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class d extends a.Component{render(){let{src:e,fileSize:t,className:n,mediaPlayerClassName:a,poster:d,fileName:c,naturalWidth:f,naturalHeight:p,playable:m,downloadable:h=!0,volume:E,autoPlay:_,autoMute:I,responsive:C,mediaLayoutType:y,mimeType:S,renderOverlayContent:g,renderLinkComponent:x,onClick:T,onPlay:A,onEnded:N,onVolumeChange:O,onMute:R,alt:M=u.default.Messages.VIDEO,...v}=this.props;return(0,i.jsx)(l.default,{alt:M,className:n,src:d,...v,minWidth:r.default.minWidth,minHeight:r.default.minHeight,shouldLink:!1,shouldAnimate:!1,mediaLayoutType:y,responsive:C,children:n=>{let{src:l,size:{width:u,height:d}}=n,M=!(f<=o.MAX_VIDEO_WIDTH&&p<=o.MAX_VIDEO_HEIGHT||f<=o.MAX_VIDEO_HEIGHT&&p<=o.MAX_VIDEO_WIDTH);return(0,i.jsx)(r.default,{className:a,forceExternal:M,src:e,poster:l,width:u,height:d,responsive:C,volume:E,autoPlay:_??!1,autoMute:I??!1,type:r.default.Types.VIDEO,mediaLayoutType:y,fileName:c,fileSize:null==t?void 0:(0,s.sizeString)(t),playable:m,renderLinkComponent:x,renderOverlayContent:g,onClick:T,onPlay:A,onEnded:N,onVolumeChange:O,onMute:R,mimeType:S,downloadable:h})}})}}"
-    }
-}

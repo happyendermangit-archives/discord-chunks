@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class s extends n.Component{render(){return(0,d.jsx)(\"div\",{className:i()(f.app,r.vertical),children:(0,d.jsx)(o.default,{})})}}"
-    }
-}

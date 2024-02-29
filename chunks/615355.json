@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function _(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{disableTrack:!1,trackOnInitialLoad:!1},n=arguments.length>2?arguments[2]:void 0,a=i.useRef(),l=i.useRef();i.useEffect(()=>{let i=!s()(a.current,e);i&&(a.current=e);let u=!s()(l.current,n);if(u&&(l.current=n),!i&&!u)return;let _={...e,sequenceId:r()(\"impression_\")};return!function(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],{name:n,type:i,properties:a}=e;if(e.type===o.ImpressionTypes.MODAL&&null==e.name&&(0,h.getImpressionStack)().some(e=>e._stackContext?.isSlide))return;(0,h.setCurrentImpression)(e);let s=a?.guild_id??f.default.getGuildId(),l=a?.channel_id??c.default.getChannelId(s),r=(0,p.expandEventProperties)({impression_type:i,location:(0,h.getLocation)(),...(0,m.collectGuildAnalyticsMetadata)(s),...(0,m.collectChannelAnalyticsMetadata)(d.default.getChannel(l)),...a});if(t){(0,h.setDebugTrackedData)(null,null);return}null!=n&&null!=i&&((0,p.debugLogEvent)(n,r),E(n,r)),(0,h.setDebugTrackedData)(n,r)}(_,t.disableTrack),()=>{null!=_&&(0,h.cleanupImpression)(_)}},t.trackOnInitialLoad?[]:void 0)}"
-    }
-}

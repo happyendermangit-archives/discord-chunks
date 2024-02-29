@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "CommandClickable": "function A(e){let{commandId:t,commandName:n,commandDescription:a,onClick:r}=e,o=(0,s.useStateFromStores)([h.default],()=>h.default.getChannelId()),d=e=>{e?.stopPropagation(),x(o,n,t,u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS),r?.(t)};return(0,i.jsx)(l.Tooltip,{text:a,position:\"top\",tooltipContentClassName:g.tooltip,children:e=>{let{onMouseEnter:t,onMouseLeave:a}=e;return(0,i.jsxs)(l.Button,{color:l.ButtonColors.PRIMARY,size:l.ButtonSizes.ICON,onClick:d,onMouseEnter:t,onMouseLeave:a,children:[\"/\",n]})}})}",
-        "default": "function N(e){return{react:(e,t,n)=>(0,i.jsx)(T,{node:e,output:t,state:n})}}"
-    }
-}

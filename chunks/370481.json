@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "sortEffectLayers": "e=>e.sort((e,t)=>(e.zIndex??0)-(t.zIndex??0))"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function E(e){let{streamId:t,paused:n,onReady:o,onResize:E,className:l,...u}=e,I=r.useRef(null),T=r.useRef({width:0,height:0});r.useLayoutEffect(()=>{let e=I.current;if(null!=e)return(0,s.registerActiveSink)(t),e.srcObject=(0,_.getVideoStream)(t),()=>{(0,s.unregisterActiveSink)(t),e.srcObject=null,e.load()}},[t]),r.useEffect(()=>(n?(I.current?.pause(),(0,s.unregisterActiveSink)(t)):I.current?.play().catch(()=>{}),()=>{n&&(0,s.registerActiveSink)(t)}),[n]);let c=r.useCallback(()=>{let{width:e,height:t}=T.current,n=I.current?.videoWidth??0,i=I.current?.videoHeight??0;if(e!==n||t!==i){let e={width:n,height:i};E?.(e),T.current=e}},[E]);r.useLayoutEffect(()=>{let e=I.current;if(null!=e)return e.addEventListener(\"resize\",c),()=>e.removeEventListener(\"resize\",c)},[c]);let d=r.useCallback(()=>{o?.()},[o]),S=r.useCallback(e=>{!n&&e.currentTarget.play()},[n]);return(0,i.jsx)(\"video\",{className:a()(\"media-engine-video\",l),ref:I,autoPlay:!0,onPause:S,onCanPlayThrough:d,muted:!0,...u})}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){let{activity:t,color:n,user:o,look:u}=e;if(t?.buttons==null||t.buttons.length<1)return null;async function d(e,t,n){try{let i=await (0,a.getMetadata)(e,t);if(i.button_urls.length<=n)return;let r=i.button_urls[n];if(\"string\"!=typeof r)return;let o=l.default.safeParseWithQuery(r);if(null==o||null==o.protocol||null==o.hostname)return;(0,s.handleClick)({href:l.default.format(o),trusted:!1})}catch(e){}}return(0,i.jsx)(i.Fragment,{children:t.buttons.map((e,a)=>(0,i.jsx)(r.default,{color:n,look:u,onClick:()=>d(t,o.id,a),children:e},`customButton-${a}`))})}"
-    }
-}

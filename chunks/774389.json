@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(e){let{apply:t,onChange:n}=e;return e.apply=n=>{t(n),a.SelectionUtils.isValid(e,e.selection)&&(e.lastGoodSelection=e.selection)},e.onChange=()=>{if(!a.SelectionUtils.isValid(e,e.selection)&&(e.selection=function(e){let t;if(a.SelectionUtils.isValid(e,e.lastGoodSelection))t=e.lastGoodSelection;else{let n=a.EditorUtils.end(e,[]);t={anchor:n,focus:n}}return t}(e)),null!=e.selection){let t,n,[l,r]=a.RangeUtils.edges(e.selection),o=!1;for(;null!=l&&null!=(t=a.EditorUtils.getParentVoid(e,l))&&!s.SELECTABLE_VOIDS.includes(t[0].type);)l=a.EditorUtils.before(e,l,{unit:\"offset\"}),o=!0;for(;null!=r&&null!=(n=a.EditorUtils.getParentVoid(e,r))&&!s.SELECTABLE_VOIDS.includes(n[0].type);)r=a.EditorUtils.after(e,r,{unit:\"offset\"}),o=!0;o&&null!=l&&null!=r&&(a.RangeUtils.isForward(e.selection)?i.SlateTransforms.select(e,{anchor:l,focus:r}):i.SlateTransforms.select(e,{anchor:r,focus:l}))}n()},e}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(e){let t=a.forwardRef((t,n)=>(0,i.jsx)(s.AnalyticsContext.Consumer,{children:a=>(0,i.jsx)(e,{...t,ref:n,analyticsContext:a})}));return t.displayName=`withAnalyticsContext(${e.displayName??e.name})`,t}"
-    }
-}

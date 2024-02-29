@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "GlobalHandlers": "class o{static __initStatic(){this.id=\"GlobalHandlers\"}__init(){this.name=o.id}__init2(){this._installFunc={onerror:l,onunhandledrejection:u}}constructor(t){o.prototype.__init.call(this),o.prototype.__init2.call(this),this._options={onerror:!0,onunhandledrejection:!0,...t}}setupOnce(){Error.stackTraceLimit=50;let t=this._options;for(let e in t){let n=this._installFunc[e];n&&t[e]&&(function(t){(\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&i.logger.log(`Global Handler attached: ${t}`)}(e),n(),this._installFunc[e]=void 0)}}}"
-    }
-}

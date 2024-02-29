@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function E(e){let t=(0,r.useAppContext)(),n=(0,c.useIsWindowFocused)();return(0,i.jsx)(h,{...e,isWindowFocused:n,appContext:t})}"
-    }
-}

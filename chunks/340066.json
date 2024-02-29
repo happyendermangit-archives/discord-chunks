@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "(e,t)=>{let n=(0,l.useRef)(e);(0,l.useEffect)(()=>{n.current=e},[e]),(0,l.useEffect)(()=>{if(null===t)return;let e=setTimeout(()=>n.current(),t);return()=>clearTimeout(e)},[t,n])}"
+    }
+}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "areRoleSubscriptionsVisibleInGuild": "function _(e){return!!f(e)||(0,d.computeHasRoleSubscriptionsInGuild)(e)}",
-        "useRoleSubscriptionsVisibleInGuild": "function c(e){let t=(0,d.default)(e),n=(0,s.useStateFromStores)([u.default,o.default],()=>f(e,[u.default,o.default]),[e]),{shouldHideGuildPurchaseEntryPoints:i}=(0,a.useShouldHideGuildPurchaseEntryPoints)(e);return!i&&(n||t)}",
-        "useShowRoleSubscriptionsInChannelList": "function g(e){let t=c(e),n=(0,i.useIsEligibleForSubscriptionsInGuildShop)(e,\"useShowRoleSubscriptionsInChannelList\");return t&&!n}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getBuildPlatform": "function s(){switch((0,o.getPlatform)()){case o.PlatformTypes.WINDOWS:let e=\"x86\";if(null!=window.DiscordNative&&(e=window.DiscordNative.os.arch),\"x86\"===e||\"ia32\"===e)return a.BuildPlatformTypes.WIN32;return a.BuildPlatformTypes.WIN64;case o.PlatformTypes.OSX:return a.BuildPlatformTypes.MACOS;case o.PlatformTypes.LINUX:return a.BuildPlatformTypes.LINUX;default:throw Error(\"Unsupported build type\")}}"
-    }
-}

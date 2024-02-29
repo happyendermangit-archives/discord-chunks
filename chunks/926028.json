@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "NativeDragSource": "function o(e){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,o),a(this,\"item\",void 0),a(this,\"config\",void 0),this.config=e,this.item={},this.initializeExposedProperties()}"
-    }
-}

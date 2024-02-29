@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "(e,t)=>{let[r,u]=n.useState(-1),o=n.useRef(-1);return n.useEffect(()=>{let t=e.reduce((e,t)=>(!e.includes(t.src)&&e.push(t.src),e),[]);u(t.length),o.current=t.length},[e,o,u]),n.useEffect(()=>{0===r&&t()},[r,t]),{pending:r,pendingRef:o,setPending:u}}"
+    }
+}

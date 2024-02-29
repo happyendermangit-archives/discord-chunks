@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "canInstallApplication": "function u(e,t,n){return null!=t||null!=n}",
-        "installApplication": "function d(e){let{applicationId:t,customInstallUrl:n,installParams:u,guildId:d,channelId:c,disableGuildSelect:f,source:p}=e;if(null!=n)return l.default.track(o.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED,{application_id:t,guild_id:d,auth_type:\"custom_url\",source:p,device_platform:i.isMobile?\"mobile_web\":\"desktop_web\"}),(0,r.handleClick)({href:n});null!=u&&(l.default.track(o.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED,{application_id:t,guild_id:d,auth_type:\"in_app\",source:p,device_platform:i.isMobile?\"mobile_web\":\"desktop_web\"}),(0,s.openOAuth2Modal)({guildId:d,clientId:t,scopes:u.scopes,channelId:c,disableGuildSelect:f,permissions:null!=u.permissions?a.default.deserialize(u.permissions):void 0}))}"
-    }
-}

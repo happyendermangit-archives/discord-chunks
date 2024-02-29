@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){let{message:t,userId:n,suppressEveryone:s=!1,suppressRoles:i=!1}=e;return u({userId:n,channelId:t.channel_id,mentionEveryone:t.mentionEveryone,mentionUsers:t.mentions,mentionRoles:t.mentionRoles,suppressEveryone:s,suppressRoles:i})}",
-        "isMentioned": "function u(e){let{userId:t,channelId:n,mentionEveryone:a,mentionUsers:o,mentionRoles:u,suppressEveryone:d=!1,suppressRoles:l=!1}=e;if(a&&!d||o.includes(t))return!0;if(l||null==u||0===u.length)return!1;let f=s.default.getChannel(n);if(null==f)return!1;let _=f.getGuildId();if(null==_||null==r.default.getGuild(_))return!1;let c=i.default.getMember(_,t);return null!=c&&u.some(e=>c.roles.includes(e))}",
-        "isRawMessageMentioned": "function o(e){let{rawMessage:t,userId:n,suppressEveryone:s=!1,suppressRoles:i=!1}=e;return u({userId:n,channelId:t.channel_id,mentionEveryone:t.mention_everyone??!1,mentionUsers:t.mentions?.map(e=>e.id)??[],mentionRoles:t.mention_roles??[],suppressEveryone:s,suppressRoles:i})}"
-    }
-}

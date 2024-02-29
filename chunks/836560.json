@@ -1,3 +1,0 @@
-{
-    "exports": "function u(){u.init.call(this)}"
-}

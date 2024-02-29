@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "type": "function(e){let{children:t,className:n,icon:a,isCollapsed:s,onClick:d,\"aria-label\":c}=e;return(0,i.jsx)(\"div\",{className:l()(u.wrapper,n),children:(0,i.jsxs)(r.Clickable,{onClick:d,onKeyDown:e=>e.stopPropagation(),className:l()(u.header,{[u.interactive]:null!=s}),\"aria-expanded\":null!=s?!s:void 0,\"aria-label\":c,children:[null!=a&&(0,i.jsx)(\"div\",{\"aria-hidden\":!0,className:u.headerIcon,children:a}),(0,i.jsx)(\"span\",{className:u.headerLabel,children:t}),null!=s?(0,i.jsx)(o.default,{className:l()(u.headerCollapseIcon,{[u.headerCollapseIconCollapsed]:s}),height:16,width:16}):null]})})}",
-            "compare": null
-        }
-    }
-}

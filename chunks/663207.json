@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "default": {
+            "deselectedItem": "e=>\"\".concat(e.item,\" nicht ausgew\\xe4hlt.\")",
+            "longPressToSelect": "Gedrückt halten, um Auswahlmodus zu öffnen.",
+            "select": "Auswählen",
+            "selectedAll": "Alle Elemente ausgewählt.",
+            "selectedCount": "(e,t)=>\"\".concat(t.plural(e.count,{\"=0\":\"Keine Elemente ausgew\\xe4hlt\",one:()=>\"\".concat(t.number(e.count),\" Element ausgew\\xe4hlt\"),other:()=>\"\".concat(t.number(e.count),\" Elemente ausgew\\xe4hlt\")}),\".\")",
+            "selectedItem": "e=>\"\".concat(e.item,\" ausgew\\xe4hlt.\")"
+        }
+    }
+}

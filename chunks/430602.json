@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "()=>{let e=(0,o.useStateFromStores)([E.default],()=>E.default.isInteractionRequired(),[]),t=r.useRef(null);function n(){null!==t.current&&((0,a.closeModal)(t.current),t.current=null)}function u(){s.default.interact()}return r.useEffect(()=>(e?t.current=(0,a.openModal)(e=>(0,i.jsx)(_.default,{title:l.default.Messages.INTERACTION_REQUIRED_TITLE,body:l.default.Messages.INTERACTION_REQUIRED_BODY,onConfirm:u,confirmText:l.default.Messages.OKAY,...e})):n(),()=>{n()}),[e]),null}"
-    }
-}

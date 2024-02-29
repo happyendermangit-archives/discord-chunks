@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e,t){let n=!(arguments.length>2)||void 0===arguments[2]||arguments[2],a=l()().diff(l()(e),\"s\"),i=null!=t?t():void 0,c=d(),E=(e,t)=>{let a=f(e,i,n?c:void 0);return null==a?null:\"string\"==typeof a?a:a.format({count:t})};if(a<60){let e=i?.seconds!=null?E(\"seconds\",a):E(\"minutes\",1);if(null!=e)return e}if(a<r){let e=E(\"minutes\",Math.floor(a/60));if(null!=e)return e}if(a<s){let e=E(\"hours\",Math.floor(a/r));if(null!=e)return e}if(a<u){let e=E(\"days\",Math.floor(a/s));if(null!=e)return e}if(a<o){let e=E(\"months\",Math.floor(a/u));if(null!=e)return e}if(a>=o&&i?.years!=null){let e=E(\"years\",Math.floor(a/o));if(null!=e)return e}return l()(e).format(\"LL\")}"
-    }
-}

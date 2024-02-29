@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "DragSourceImpl": "function i(e,t,n){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,i),o(this,\"spec\",void 0),o(this,\"monitor\",void 0),o(this,\"connector\",void 0),this.spec=e,this.monitor=t,this.connector=n}"
-    }
-}

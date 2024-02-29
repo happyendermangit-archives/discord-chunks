@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "PrivateThreadMode": {
+            "1": "Disabled",
+            "2": "Enabled",
+            "3": "PrivateOnly",
+            "Disabled": 1,
+            "Enabled": 2,
+            "PrivateOnly": 3
+        },
+        "usePrivateThreadMode": "function D(e){let t=(0,S.useCanStartPublicThread)(e),n=(0,S.useCanStartPrivateThread)(e);return n?t?2:3:1}",
+        "getIsPrivate": "function R(e,t){var n;if(3===t)return!0;return null!==(n=e.isPrivate)&&void 0!==n&&n}",
+        "getDefaultThreadName": "function L(e,t){var n,i,l,a;let o=null==t?null:T.default.getMessage(e.id,t),r=null!==(l=null==o?void 0:null===(i=o.embeds)||void 0===i?void 0:null===(n=i[0])||void 0===n?void 0:n.rawTitle)&&void 0!==l?l:\"\";if(\"\"!==r)return r.length>40?r.substring(0,40)+\"...\":r;{let t=m.default.unparse(null!==(a=null==o?void 0:o.content)&&void 0!==a?a:\"\",e.id,!0),n=(0,O.default)(t.split(\"\\n\")[0],!0);n=n.replace(/^[ #-]+/,\"\");let i=[];for(;;){let e=n.match(/(?:\\s|[!@#$%^&*()_\\-+={}[\\]:\";'<>?,./])+/);if(null==e||null==e.index){i.push(n);break}i.push(n.substring(0,e.index)),i.push(e[0]),n=n.substring(e.index+e[0].length)}let l=i[0];for(let e=1;e<i.length;e++){let t=l+i[e];if(t.length>40)break;l=t}return l.length>40&&(l=l.substring(0,40)+\"...\"),l}}",
+        "useCreateThreadCommon": "function P(e){let{parentChannel:t,parentMessageId:n,threadSettings:i,privateThreadMode:l,location:r,onThreadCreated:s,useDefaultThreadName:p,uploadHandler:f}=e;return a.useCallback(async(e,a,_)=>{var T;let A=null==n,E=R(i,l),N=null!==(T=i.name)&&void 0!==T?T:\"\";if(\"\"===N&&p){let e=L(t,n);N=\"\"!==e?e:y.default.Messages.THREAD}let S=(0,h.getAutoArchiveDuration)(t),O=I.default.getChannel(g.default.castMessageIdAsChannelId(n)),M=await b(t,()=>{let e=null!=n?v.Endpoints.CHANNEL_MESSAGE_THREADS(t.id,n):v.Endpoints.CHANNEL_THREADS(t.id);return o.default.post({url:e,body:{name:N,type:E?v.ChannelTypes.PRIVATE_THREAD:t.type===v.ChannelTypes.GUILD_ANNOUNCEMENT?v.ChannelTypes.ANNOUNCEMENT_THREAD:v.ChannelTypes.PUBLIC_THREAD,auto_archive_duration:S,location:r}})});M!==O&&(u.default.clearDraft(t.id,C.DraftType.ThreadSettings),u.default.clearDraft(t.id,C.DraftType.FirstThreadMessage),null==s||s(M),(A||e.length>0||null!=a&&a.length>0||null!=_&&_.length>0)&&function(e,t,n,i,l){if(null!=l&&null!=i&&i.length>0)l(e,i,t,n);else if(null!=n&&n.length>0)d.default.sendStickers(e.id,n,t);else d.default.sendMessage(e.id,m.default.parse(e,t))}(M,e,a,_,f)),c.default.clearAll(t.id,C.DraftType.FirstThreadMessage)},[t,n,i,s,l,r,p,f])}",
+        "createThread": "function U(e,t,n,i,l){return b(e,()=>o.default.post({url:v.Endpoints.CHANNEL_THREADS(e.id),body:{name:t,type:n,auto_archive_duration:i,location:l}}))}",
+        "useCreateForumPostCommon": "function F(e){let{parentChannel:t,name:n,appliedTags:i,onThreadCreated:l,upload:r}=e;return a.useCallback(async(e,a,s)=>{let d=0,[p,m]=(0,_.default)(e);p&&(e=m,d=(0,N.addFlag)(d,v.MessageFlags.SUPPRESS_NOTIFICATIONS));let I=(0,h.getAutoArchiveDuration)(t,null),T=v.Endpoints.CHANNEL_THREADS(t.id)+\"?use_nested_fields=true\",A={name:n,auto_archive_duration:I,applied_tags:i,message:{content:e,sticker_ids:a,flags:0!==d?d:void 0}},E=await b(t,()=>null!=s&&s.length>0?r(T,A,s):o.default.post({url:T,body:A}));return u.default.clearDraft(t.id,C.DraftType.ThreadSettings),u.default.clearDraft(t.id,C.DraftType.FirstThreadMessage),c.default.clearAll(t.id,C.DraftType.FirstThreadMessage),(0,f.trackForumPostCreated)({guildId:t.guild_id,channelId:t.id,postId:E.id}),null==l||l(E),E},[t,n,l,i,r])}"
+    }
+}

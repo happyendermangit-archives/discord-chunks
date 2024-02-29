@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "show": "show(e){(0,r.openModalLazy)(async()=>{let{default:t}=await n.el(\"926210@353:398\").then(n.bind(n,\"690286\"));return n=>(0,s.jsx)(t,{...n,url:e})})}",
-            "getBlockedDomains": "getBlockedDomains(){if((0,a.isDesktop)()){let e=i.default.get(\"BlockedDomainsV2\");return Promise.resolve(null==e?[]:e.split(\"\\n\"))}return Promise.resolve([])}",
-            "saveBlockedDomains": "saveBlockedDomains(e){(0,a.isDesktop)()&&i.default.set(\"BlockedDomainsV2\",e.join(\"\\n\"))}"
-        }
-    }
-}

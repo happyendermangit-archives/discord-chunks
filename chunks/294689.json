@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){let{channel:t,userActivity:n,inActivity:o,embeddedActivitiesManager:a}=e;i.useEffect(()=>{!o&&(0,r.launchEmbeddedActivity)(t.id)},[n?.applicationId,t.id,o,a])}"
-    }
-}

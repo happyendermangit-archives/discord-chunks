@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(t){let{activeSubscription:e,skuIDs:n,paymentSourceId:o,isGift:s}=t;n=n.filter(t=>t!==l.PremiumSubscriptionSKUs.NONE);let c=(0,i.useStateFromStores)([u.default],()=>{let t=u.default.getPlanIdsForSkus(n).filter(t=>!s||l.PREMIUM_PLANS.has(t));return t.length>0?u.default.get(t[0]):null}),S=null==c?[]:(0,r.getCurrencies)(c.id,o,s),E=S.find(t=>t===e?.currency)??S[0]??a.CurrencyCodes.USD;return{...(0,r.useCurrencyWithPaymentSourceChange)(E,c?.id,o,s,n),currencies:S}}"
-    }
-}

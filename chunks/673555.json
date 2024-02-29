@@ -1,3 +1,0 @@
-{
-    "exports": "function(){var t=Array.prototype.map;return r(t)?t:n}"
-}

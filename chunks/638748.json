@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getMediaPerformanceClass": "function r(){return null}",
-        "hasPerformanceForKrispFullband": "function i(){let e=r();return null===e||!!(e>=31)||!1}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "StackedProgress": "function I(e){let{className:t,percents:n,size:i=\"small\",foregroundColors:r=[l.default.unsafe_rawColors.BRAND_500.css],backgroundColor:a=\"var(--background-modifier-active)\",animate:_=!0}=e,I=E().zip(n,r).map((e,t)=>{let n,[r,a]=e;return n=Array.isArray(a)?{background:`linear-gradient(to right, ${a[0]}, ${a[1]})`}:{backgroundColor:a},(0,o.jsx)(\"div\",{className:s()(u.progressBar,u[i],{[u.animating]:_}),style:{transform:`translate3d(${Math.min(Math.max(0,r),100)-100}%, 0, 0)`,...n}},t)}).reverse();return(0,o.jsx)(\"div\",{className:s()(t,u.progress,u[i]),style:{backgroundColor:a},children:I})}"
-    }
-}

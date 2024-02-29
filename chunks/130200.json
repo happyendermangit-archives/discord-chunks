@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "shouldShowVoiceChannelChangeConfirmation": "function u(e){if(i.default.disableVoiceChannelChangeAlert)return!1;let t=s.default.getRemoteSessionId();if(null!=o.default.getVoiceStateForSession(r.default.getId(),t)||!o.default.isCurrentClientInVoiceChannel()||o.default.isInChannel(e.id))return!1;let n=a.default.getGuild(e.getGuildId());return!(n?.afkChannelId!=null&&o.default.isInChannel(n.afkChannelId))&&!0}"
-    }
-}

@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,s,r,n,u){if(!i){if(!t(u)||!u[\"[[Configurable]]\"]||!u[\"[[Writable]]\"]||n in r&&f(r,n)!==!!u[\"[[Enumerable]]\"])return!1;var a=u[\"[[Value]]\"];return r[n]=a,e(r[n],a)}return c&&\"length\"===n&&\"[[Value]]\"in u&&o(r)&&r.length!==u[\"[[Value]]\"]?(r.length=u[\"[[Value]]\"],r.length===u[\"[[Value]]\"]):(i(r,n,s(u)),!0)}"
-}

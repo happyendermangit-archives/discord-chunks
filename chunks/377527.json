@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getBenefitIcon": "function r(e,t){if(null!=t)switch(t.type){case i.IconType.STORE_ASSET:let n=(0,s.getAssetURL)(e,t.store_asset_id);return(0,l.jsx)(\"img\",{src:n,alt:\"\",className:\"emoji\"});case i.IconType.EMOJI:return(0,l.jsx)(a.default,{emojiName:t.emoji})}}"
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function c(e){return{react(t,n,c){if(e.enableBuildOverrides&&(0,r.isBuildOverrideLink)(t.target))return(0,i.jsx)(a.Fragment,{children:(0,i.jsx)(o.default,{url:t.target},t.target)},c.key);let f=n(t.content,c),p=\"string\"==typeof t.title&&0!==t.title.length?t.title:(0,s.astToString)(t.content),m=e?.mustConfirmExternalLink?e=>(e?.stopPropagation(),e?.preventDefault(),(0,u.handleClick)({href:t.target,shouldConfirm:!0,messageId:c.messageId,channelId:c.channelId}),null):void 0;if(c.previewLinkTarget&&!(0,d.isLinkTrusted)(t)){let e=`\n\n(${t.target})`;p.length+e.length>1024&&(e=\"...\"+e,p=(p=p.substr(0,1024-e.length)).trimEnd()),p+=e}return c.noStyleAndInteraction?(0,i.jsx)(\"span\",{title:p,children:f},c.key):(0,i.jsx)(l.default,{title:p,href:t.target,trusted:()=>(0,d.isLinkTrusted)(t),onClick:m,messageId:c.messageId,channelId:c.channelId,children:f},c.key)}}}"
-    }
-}

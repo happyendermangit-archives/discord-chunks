@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){let{muteConfig:t,className:n}=e,s=l(t);return null!=s?(0,i.jsx)(a.Text,{variant:\"text-xs/normal\",color:\"text-muted\",className:n,children:s}):null}",
-        "useMutedUntilText": "function l(e){return null==e||null==e.end_time?null:s.default.Messages.MUTED_UNTIL_TIME.format({endTime:new Date(e.end_time).toLocaleString(s.default.getLocale(),{month:\"numeric\",day:\"numeric\",hour:\"numeric\",minute:\"2-digit\"})})}"
-    }
-}

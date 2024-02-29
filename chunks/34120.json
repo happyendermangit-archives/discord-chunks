@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "LocalWeekParser": "function v(){var e;!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,v);for(var t=arguments.length,n=Array(t),r=0;r<t;r++)n[r]=arguments[r];return p(d(e=y.call.apply(y,[this].concat(n))),\"priority\",100),p(d(e),\"incompatibleTokens\",[\"y\",\"R\",\"u\",\"q\",\"Q\",\"M\",\"L\",\"I\",\"d\",\"D\",\"i\",\"t\",\"T\"]),e}"
-    }
-}

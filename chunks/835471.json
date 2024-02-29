@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){let t=e?.getBoundingClientRect(),n=t?.left,a=t?.top;return(0,i.useMemo)(()=>null!=n&&null!=a?{x:n,y:a}:null,[n,a])}"
-    }
-}

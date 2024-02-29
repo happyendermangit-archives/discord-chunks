@@ -1,3 +1,0 @@
-{
-    "exports": "function e(t){if(\"string\"==typeof t)return t;if(o(t))return a(t,e)+\"\";if(i(t))return l?l.call(t):\"\";var n=t+\"\";return\"0\"==n&&1/t==-u?\"-0\":n}"
-}

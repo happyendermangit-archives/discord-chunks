@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "init": "init(){d.default.init(),a.default.subscribe(\"MEDIA_ENGINE_VIDEO_STATE_CHANGED\",e=>{let{videoState:t}=e,n=l.default.getCurrentUserActiveStream();if(null!=n){let e=t===O.MediaEngineVideoStates.PAUSED;(0,_.setStreamPaused)(n,e)}}),a.default.subscribe(\"STREAM_DELETE\",e=>{e.reason===O.ApplicationStreamDeleteReasons.STREAM_FULL&&((0,_.closeStream)(e.streamKey,!1),(0,o.openModalLazy)(async()=>{let{default:e}=await n.el(\"172301@2038:2065\").then(n.bind(n,\"171540\"));return t=>(0,i.jsx)(e,{...t})}))}),a.default.subscribe(\"STREAM_WATCH\",e=>{let{streamKey:t,allowMultiple:n}=e;if(n)return;let i=(0,S.decodeStreamKey)(t);l.default.getAllActiveStreams().forEach(e=>{if(e.ownerId!==i.ownerId)e.ownerId!==u.default.getId()&&(e.ownerId===u.default.getId()&&s.default.setGoLiveSource(null),(0,_.closeStream)((0,S.encodeStreamKey)(e),!1))})}),a.default.subscribe(\"VOICE_STATE_UPDATES\",e=>{let{voiceStates:t}=e;t.forEach(e=>{let{userId:t}=e;if(t!==u.default.getId())return;let n=l.default.getAllActiveStreams(),i=T.default.getChannelId();n.forEach(e=>{e.channelId!==i&&(0,A.default)(e,!1)})})}),a.default.subscribe(\"STREAM_CREATE\",e=>{let{streamKey:t}=e,{ownerId:n,guildId:i}=(0,S.decodeStreamKey)(t);if(null==i||null==n||n!==c.default.getCurrentUser()?.id)return;let r=I.default.getMemberCount(i);null!=r&&!(r<2)&&!(r>N.STREAM_NOTIFY_GUILD_MAX_SIZE)&&E.NotifyFriendsOnGoLive.getSetting()&&R(t)})}"
-        }
-    }
-}

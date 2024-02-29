@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "isOnNewPanels": "function o(){return(0,i.isInMainTabsExperiment)()}",
+        "isSplitMessagesTab": "function l(){return(0,i.isInMainTabsExperiment)()&&!(0,r.getNavYouBarExperiment)({location:\"isSplitMessagesTab\"}).showYouBar}",
+        "isSplitMessagesTabAndOnMessagesTab": "function u(){if(!l())return!1;let e=(0,s.default)();return(null==e?void 0:e.name)===\"messages\"}",
+        "shouldHandleNewPanelsRoute": "function c(e){return!!o()&&(!l()||null!=e&&e!==a.ME)}"
+    }
+}

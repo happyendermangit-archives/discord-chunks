@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "base": "function f(t,e){this.type=t,this.p=new r(e.p,16),this.red=e.prime?r.red(e.prime):r.mont(this.p),this.zero=new r(0).toRed(this.red),this.one=new r(1).toRed(this.red),this.two=new r(2).toRed(this.red),this.n=e.n&&new r(e.n,16),this.g=e.g&&this.pointFromJSON(e.g,e.gRed),this._wnafT1=[,,,,],this._wnafT2=[,,,,],this._wnafT3=[,,,,],this._wnafT4=[,,,,],this._bitLength=this.n?this.n.bitLength():0;var s=this.n&&this.p.div(this.n);!s||s.cmpn(100)>0?this.redN=null:(this._maxwellTrick=!0,this.redN=this.n.toRed(this.red))}",
-        "short": "function f(t){c.call(this,\"short\",t),this.a=new n(t.a,16).toRed(this.red),this.b=new n(t.b,16).toRed(this.red),this.tinv=this.two.redInvm(),this.zeroA=0===this.a.fromRed().cmpn(0),this.threeA=0===this.a.fromRed().sub(this.p).cmpn(-3),this.endo=this._getEndomorphism(t),this._endoWnafT1=[,,,,],this._endoWnafT2=[,,,,]}",
-        "mont": "function o(t){i.call(this,\"mont\",t),this.a=new r(t.a,16).toRed(this.red),this.b=new r(t.b,16).toRed(this.red),this.i4=new r(4).toRed(this.red).redInvm(),this.two=new r(2).toRed(this.red),this.a24=this.i4.redMul(this.a.redAdd(this.two))}",
-        "edwards": "function f(t){this.twisted=(0|t.a)!=1,this.mOneA=this.twisted&&(0|t.a)==-1,this.extended=this.mOneA,c.call(this,\"edwards\",t),this.a=new n(t.a,16).umod(this.red.m),this.a=this.a.toRed(this.red),this.c=new n(t.c,16).toRed(this.red),this.c2=this.c.redSqr(),this.d=new n(t.d,16).toRed(this.red),this.dd=this.d.redAdd(this.d),o(!this.twisted||0===this.c.fromRed().cmpn(1)),this.oneC=(0|t.c)==1}"
-    }
-}

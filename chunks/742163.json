@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function f(e){let{stream:t,width:n,noArt:f=!1,selected:h=!1}=e,p=(0,i.useStateFromStores)([u.default],()=>u.default.getChannel(t.channelId));return r.useEffect(()=>{p?.isGuildStageVoice()&&(0,s.closeStream)((0,l.encodeStreamKey)(t),!1)},[]),(0,a.jsx)(o.default,{artURL:c,noArt:f,selected:h,size:(0,o.getSizeForWidth)(n),header:d.default.Messages.STREAM_ENDED,onCTAClick:()=>(0,s.closeStream)((0,l.encodeStreamKey)(t)),callToAction:d.default.Messages.CLOSE_STREAM})}"
-    }
-}

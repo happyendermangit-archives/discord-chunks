@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "DnDProvider": "function f(e){let{children:t}=e;return(0,i.jsx)(s.DndProvider,{options:d,children:t})}"
+    }
+}

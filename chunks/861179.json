@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "default": {
+            "dateRange": "e=>\"\".concat(e.startDate,\" \\xe0 \").concat(e.endDate)",
+            "dateSelected": "e=>\"\".concat(e.date,\" s\\xe9lectionn\\xe9\")",
+            "finishRangeSelectionPrompt": "Cliquer pour finir de sélectionner la plage de dates",
+            "maximumDate": "Dernière date disponible",
+            "minimumDate": "Première date disponible",
+            "next": "Suivant",
+            "previous": "Précédent",
+            "selectedDateDescription": "e=>\"Date s\\xe9lectionn\\xe9e\\xa0: \".concat(e.date)",
+            "selectedRangeDescription": "e=>\"Plage s\\xe9lectionn\\xe9e\\xa0: \".concat(e.dateRange)",
+            "startRangeSelectionPrompt": "Cliquer pour commencer à sélectionner la plage de dates",
+            "todayDate": "e=>\"Aujourd'hui, \".concat(e.date)",
+            "todayDateSelected": "e=>\"Aujourd’hui, \".concat(e.date,\" s\\xe9lectionn\\xe9\")"
+        }
+    }
+}

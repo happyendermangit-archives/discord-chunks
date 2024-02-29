@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{profileEffectConfig:t,onReady:n}=e,{pendingRef:s,setPending:l}=(0,a.default)(t.effects,n);return(0,i.jsx)(\"div\",{children:t.effects.map(e=>(0,i.jsx)(\"img\",{src:e.src,alt:\"Preload Profile Effect Asset\",\"aria-hidden\":!0,style:{opacity:0,position:\"absolute\"},onLoad:()=>{l(s.current-1),s.current=s.current-1}},e.src))})}"
-    }
-}

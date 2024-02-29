@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "getAPIEndpoint": "function d(e){return\"\".concat(location.protocol,\"//\").concat(location.host).concat(e)}",
+        "getBuildOverride": "function f(){let e=o.default.safeParseWithQuery(d(\"/__development/build_overrides\"));return null==e?Promise.resolve(null):(e.search=null,c&&(e.query.version=c),s.default.get({url:r.format(e),oldFormErrors:!0}).then(e=>e.body||null,()=>null))}",
+        "getBuildOverrideMeta": "function E(e){if(T(e))return Promise.resolve(function(e){let t=e.match(m);if(null==t||2!==t.length)return null;let n=(0,a.getNativePlatform)(),i=t[1];return{targetBuildOverride:{[\"discord_\".concat(n)]:{type:\"branch\",id:i}},validForUserIds:[],expiresAt:\"Mon, 1 Jan 2038 00:00:00 GMT\"}}(e));let t=o.default.safeParseWithQuery(e);return null==t?Promise.resolve(null):(t.search=null,t.query.meta=\"true\",c&&(t.query.version=c),t.host=window.location.host,s.default.get({url:r.format(t),oldFormErrors:!0}).then(e=>e.body||null,()=>null))}",
+        "probablyHasBuildOverride": "function p(){return -1!==window.document.cookie.indexOf(\"\".concat(l.BUILD_OVERRIDE_COOKIE_NAME,\"=\"))}",
+        "getBuildOverrideExperiments": "function h(){try{var e;let t=i.parse(window.document.cookie)[l.BUILD_OVERRIDE_COOKIE_NAME];if(null==t)return{};let n=JSON.parse(atob(t.substring(t.indexOf(\".\")+1)));return null!==(e=n.$meta.experiments)&&void 0!==e?e:{}}catch(e){return{}}}",
+        "isBuildOverrideLink": "function S(e){return null!=e&&_.test(e)}",
+        "validateURL": "function C(e){if(T(e))return{payload:null,url:e};let t=o.default.safeParseWithQuery(e);if(null==t||!g.has(t.hostname)||!(\"s\"in t.query)||!I.has(t.pathname))return null;for(let e in t.query)\"s\"!==e&&delete t.query[e];return{payload:t.query.s,url:r.format(t)}}"
+    }
+}

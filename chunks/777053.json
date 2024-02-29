@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function o(e){let{children:t,className:n,size:i=s.Button.Sizes.SMALL,...o}=e;return(0,l.jsx)(s.Button,{...o,size:i,className:a(r.button,n),children:t})}"
+    }
+}

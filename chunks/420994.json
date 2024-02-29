@@ -1,6 +1,3 @@
 {
-    "exports": {
-        "timeout": "function(e,t){var n,a=new r;return Promise.race([e,new Promise(function(e,r){n=setTimeout(function(){r(a)},t)})]).then(function(e){return clearTimeout(n),e},function(e){throw clearTimeout(n),e})}",
-        "TimeoutError": "function(){Error.call(this),this.stack=Error().stack,this.message=\"Timeout\"}"
-    }
+    "exports": "/assets/6c01d8cfd736881a5925.svg"
 }

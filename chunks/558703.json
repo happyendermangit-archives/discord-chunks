@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "TryCatch": "class s{static __initStatic(){this.id=\"TryCatch\"}__init(){this.name=s.id}setupOnce(){this._options.setTimeout&&(0,r.fill)(i.WINDOW,\"setTimeout\",o),this._options.setInterval&&(0,r.fill)(i.WINDOW,\"setInterval\",o),this._options.requestAnimationFrame&&(0,r.fill)(i.WINDOW,\"requestAnimationFrame\",c),this._options.XMLHttpRequest&&\"XMLHttpRequest\"in i.WINDOW&&(0,r.fill)(XMLHttpRequest.prototype,\"send\",l);let t=this._options.eventTarget;if(t){let e=Array.isArray(t)?t:a;e.forEach(u)}}constructor(t){s.prototype.__init.call(this),this._options={XMLHttpRequest:!0,eventTarget:!0,requestAnimationFrame:!0,setInterval:!0,setTimeout:!0,...t}}}"
+    }
+}

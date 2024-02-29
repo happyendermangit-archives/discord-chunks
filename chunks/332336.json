@@ -1,0 +1,32 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "INITIALIZE_MEMBER_SAFETY_STORE": "()=>this.handleInitialize()",
+                "GUILD_MEMBER_ADD": "e=>this.handleGuildMemberUpdate(e.guildId,e.user.id)",
+                "GUILD_MEMBER_UPDATE": "e=>this.handleGuildMemberUpdate(e.guildId,e.user.id)",
+                "GUILD_MEMBER_REMOVE": "e=>this.handleGuildMemberRemove(e.guildId,e.user.id)",
+                "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS": "e=>this.handleGuildMemberSearchSuccess(e)"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleInitialize": "handleInitialize(){null==s&&null==s&&(s=setInterval(()=>{r.default.forEachKey(a,e=>{N(e)&&S(e)})},1e4))}",
+            "handleGuildMemberUpdate": "handleGuildMemberUpdate(e,_){let E=i.default.isInitialized(e);if(E)return T(e,_)}",
+            "handleGuildMemberRemove": "handleGuildMemberRemove(e,_){let E=i.default.isInitialized(e);if(E)return T(e,_)}",
+            "handleGuildDelete": "handleGuildDelete(e){let _=e.guild.id,E=i.default.isInitialized(_);E&&O(_)}",
+            "handleGuildMemberSearchSuccess": "handleGuildMemberSearchSuccess(e){let{guildId:_}=e,E=i.default.isInitialized(_);E&&O(_)}"
+        }
+    }
+}

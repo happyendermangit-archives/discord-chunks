@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{size:t}=e;return(0,i.jsx)(\"div\",{className:s.unownedStickerLockContainer,style:{width:t,height:t},children:(0,i.jsx)(a.default,{width:12,height:12,className:s.unownedStickerLockIcon})})}"
-    }
-}

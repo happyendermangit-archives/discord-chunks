@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "useForceUpdate": "function(){var e=(0,r.useState)(0)[1],t=(0,r.useRef)(!1);return a(function(){return function(){t.current=!0}}),function(){!t.current&&e({})}}",
-        "useOnce": "function(e){return(0,r.useEffect)(e,[])}",
-        "usePrev": "function i(e){var t=(0,r.useRef)(void 0);return(0,r.useEffect)(function(){t.current=e}),t.current}"
-    }
-}

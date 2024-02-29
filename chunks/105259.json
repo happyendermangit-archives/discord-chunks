@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getPushNotificationLogs": "async function l(){let e=r.default.getId();return null!=void 0?await null.getPushNotificationLogs(e).then(e=>JSON.parse(e).pushNotifications??[]):[]}",
-        "serializePushNotificationLogs": "function s(e,t){if(0===e.length)return\"No logs\";let n=a.default.get(i.DEVICE_TOKEN),r=a.default.get(i.DEVICE_VOIP_TOKEN),s=null!=n?`Device Token: ${n}`:\"\",l=null!=r?`Device Voip Token: ${r}`:\"\",u=e.map(e=>{let n=e.silent?\"Silent\":\"Displayed\",a=t?`${e.channelId} - ${e.messageId}`:`${e.title} - ${e.content}`;return`${new Date(e.receivedTimestamp).toISOString()} [${e.type}] ${n} - ${a}`}).join(\"\\n\");return`${s}\n${l}\n\n${u}`}"
-    }
-}

@@ -1,0 +1,29 @@
+{
+    "exports": {
+        "FeedbackRating": {
+            "BAD": "bad",
+            "NEUTRAL": "neutral",
+            "GOOD": "good"
+        },
+        "FEEDBACK_FREEFORM_LENGTH": 1024,
+        "FeedbackType": {
+            "0": "VOICE",
+            "1": "STREAM",
+            "2": "VIDEO_BACKGROUND",
+            "3": "ACTIVITY",
+            "4": "IN_APP_REPORTS",
+            "VOICE": 0,
+            "STREAM": 1,
+            "VIDEO_BACKGROUND": 2,
+            "ACTIVITY": 3,
+            "IN_APP_REPORTS": 4
+        },
+        "FeedbackTypePrecedence": {
+            "0": 3,
+            "1": 1,
+            "2": 0,
+            "3": 2,
+            "4": 4
+        }
+    }
+}

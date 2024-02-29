@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function c(e){let{activity:t,user:n,channelId:a,guildId:c,source:f,size:p,className:m,...h}=e,{tooltip:E,loading:_,disabled:I,onClick:C}=(0,u.useSpotifySyncAction)(t,n,f,o.default.getNickname(c,a,n));return(0,i.jsx)(l.Tooltip,{text:E,children:e=>{let{onMouseEnter:n,onMouseLeave:a}=e;return(0,i.jsx)(l.Button,{...h,size:s()(p,d.iconButtonSize),className:s()(m,d.iconButton),onClick:C,onMouseEnter:n,onMouseLeave:a,disabled:I,submitting:_,\"aria-label\":E??t.name,children:(0,i.jsx)(r.default,{className:d.listenAlongIcon})})}})}"
-    }
-}

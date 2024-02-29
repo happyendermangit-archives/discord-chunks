@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getSession": "function u(){return _=_.then(async()=>{let e=await I();if(null==e||function(e){return 18e5+e.lastUsed-Date.now()<=0}(e)){if(!E)return null;let t={uuid:(0,i.v4)(),initialized:Date.now(),lastUsed:Date.now()};r.default.set(a,t.uuid),r.default.set(s,t.initialized.toString()),r.default.set(o,Date.now().toString()),e=t}else E&&r.default.set(o,Date.now().toString());return e})}",
-        "setSessionExtendingEnabled": "function l(e){E=e}",
-        "timestampOrZero": "function T(e){return null!=e?Number(e):0}"
-    }
-}

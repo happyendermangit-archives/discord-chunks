@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(e){let{className:t}=e,r=(0,a.default)([s.default],()=>s.default.useReducedMotion);async function l(){let{default:e}=await n.el(\"501814@645:683\").then(n.t.bind(n,\"475429\",19));return e}return(0,i.jsx)(_.default,{importData:l,shouldAnimate:!r,className:o()(E.sparkles,t)})}"
-    }
-}

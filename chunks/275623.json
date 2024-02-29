@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let{className:t,...n}=e;return(0,l.jsx)(\"div\",{className:a(s.gifTag,t),...n})}"
+    }
+}

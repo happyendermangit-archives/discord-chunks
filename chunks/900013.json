@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t,n){if(!i(n))return!1;var u=typeof t;return(\"number\"==u?!!(a(n)&&o(t,n.length)):\"string\"==u&&t in n)&&r(n[t],e)}"
-}

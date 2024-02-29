@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function c(e){let{contentTypes:t,children:n,groupName:a,bypassAutoDismiss:s}=e,[l,r]=d(t,a,s);return(0,i.jsx)(i.Fragment,{children:n({visibleContent:l,markAsDismissed:r})})}",
-        "useSelectedDismissibleContent": "function d(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],i=(0,s.default)([l.default],()=>!!__OVERLAY__&&l.default.isInstanceUILocked()),[d,c]=(0,o.useGetDismissibleContent)(e,t,i),f=!n&&null!=d&&!r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(d);return a.useEffect(()=>()=>{f&&c(u.ContentDismissActionType.AUTO_DISMISS)},[f,c]),[d,c]}"
-    }
-}

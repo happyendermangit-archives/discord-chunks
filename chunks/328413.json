@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function a(e){let{children:t}=e;return(0,l.jsxs)(\"span\",{className:i.nowrap,children:[t,\"⁠\"]})}"
+    }
+}

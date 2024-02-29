@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "isIOSWeb": false,
-        "isMobile": false,
-        "isTablet": false
-    }
-}

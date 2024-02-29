@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(){return(0,i.default)([u.default],()=>u.default.isAuthenticated())}"
-    }
-}

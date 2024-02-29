@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isLimitedAccessErrorCode": "function r(e,t){return 403===e&&null!=t&&t>=i.AbortCodes.GUILD_LIMITED_ACCESS_DEFAULT&&t<=i.AbortCodes.GUILD_LIMITED_ACCESS_MAX}"
-    }
-}

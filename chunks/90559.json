@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){let{ignorePlatformRestriction:t}=r.ClipsExperiment.getCurrentConfig({location:\"isClipsClientCapable\"},{autoTrackExposure:!1});return t||i.isDesktop()&&e.getMediaEngine().supports(o.Features.CLIPS)}"
-    }
-}

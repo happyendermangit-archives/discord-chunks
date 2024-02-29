@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "backgroundImagePreloader": "function o(e){class t extends n.Component{constructor(e){super(e),this.cachedURLs=[],this.canceller=null;let{style:t}=e,l=null!=t?u(t.backgroundImage):null;this.cachedURLs=[l],this.state={cached:l,loaded:!0}}componentDidUpdate(e,t){if(t===this.state)return;let{cached:l,loaded:r}=this.state,{style:n}=this.props,s=null!=n?u(n.backgroundImage):null;null==s&&s!==l?this.setState({loaded:!0,cached:s}):this.cachedURLs.indexOf(s)>=0?this.setState({loaded:!0,cached:s}):null!=s&&s!==l&&!0===r&&this.setState({loaded:!1},()=>this.preloadURL(s))}preloadURL(e){this.canceller&&this.canceller(),this.canceller=(0,i.loadImage)(e,t=>{this.canceller&&(this.canceller=null),!t&&(this.cachedURLs.push(e),this.setState({cached:e,loaded:!0}));let{onBackgroundImageLoad:l}=this.props;l&&l(t,e)})}componentWillUnmount(){this.canceller&&this.canceller(),this.cachedURLs.length=0}render(){let{style:t,onBackgroundImageLoad:l,...n}=this.props,{loaded:s,cached:a}=this.state;if(!s&&null!=t){var i;t={...t,backgroundImage:null==(i=a)||\"\"===i||\"none\"===i?\"none\":`url(${i})`}}return(0,r.jsx)(e,{style:t,...n})}}return a()(t,e),t}"
-    }
-}

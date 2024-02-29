@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "useDragType": "function i(e){return(0,a.useMemo)(function(){var t=e.type;return(0,r.invariant)(null!=t,\"spec.type must be defined\"),t},[e])}"
+    }
+}

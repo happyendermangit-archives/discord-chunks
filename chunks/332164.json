@@ -1,5 +1,0 @@
-{
-    "exports": "function o(t,n,i){return a()?e.exports=o=Reflect.construct.bind():e.exports=o=function(e,t,n){var a=[null];a.push.apply(a,t);var o=new(Function.bind.apply(e,a));return n&&r(o,n.prototype),o},e.exports.__esModule=!0,e.exports.default=e.exports,o.apply(null,arguments)}",
-    "paths": [],
-    "children": []
-}

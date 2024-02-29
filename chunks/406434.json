@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e){var t,n=e.reference,u=e.element,s=e.placement,l=s?(0,r.default)(s):null,c=s?(0,a.default)(s):null,d=n.x+n.width/2-u.width/2,f=n.y+n.height/2-u.height/2;switch(l){case i.top:t={x:d,y:n.y-u.height};break;case i.bottom:t={x:d,y:n.y+n.height};break;case i.right:t={x:n.x+n.width,y:f};break;case i.left:t={x:n.x-u.width,y:f};break;default:t={x:n.x,y:n.y}}var p=l?(0,o.default)(l):null;if(null!=p){var h=\"y\"===p?\"height\":\"width\";switch(c){case i.start:t[p]=t[p]-(n[h]/2-u[h]/2);break;case i.end:t[p]=t[p]+(n[h]/2-u[h]/2)}}return t}"
-    }
-}

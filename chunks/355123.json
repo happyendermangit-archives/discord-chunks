@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class i{constructor(e,t,n=\"An unexpected error occurred.\"){let{message:i,code:r,retryAfter:o,fields:a,status:s}=function(e,t){if(\"string\"==typeof e)return{message:e,code:t};if(null!=e.body){if(null!=e.body.message&&!Array.isArray(e.body.message)&&(null==e.body.code||!Array.isArray(e.body.code)))return{message:e.body.message,code:e.body.code,retryAfter:e.body.retry_after,status:e.status};{let t=e.body,n=null!=t?Object.values(t)[0]:null;return{message:null!=n?n[0]:void 0,fields:t,status:e.status}}}return{}}(e,t);this.message=i||n,this.retryAfter=o,this.code=r||-1,this.fields=a||{},this.status=s,this.error=Error(i)}getFieldMessage(e){return null!=this.fields[e]?this.fields[e][0]:null}}"
-    }
-}

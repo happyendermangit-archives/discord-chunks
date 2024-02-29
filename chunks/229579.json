@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "calculateBoxSize": "function(e,t,n){var a=h(e,n),o=a.borderBoxSize,i=a.contentBoxSize,u=a.devicePixelContentBoxSize;switch(t){case r.ResizeObserverBoxOptions.DEVICE_PIXEL_CONTENT_BOX:return u;case r.ResizeObserverBoxOptions.BORDER_BOX:return o;default:return i}}",
-        "calculateBoxSizes": "function(e,t){if(void 0===t&&(t=!1),u.has(e)&&!t)return u.get(e);if((0,o.isHidden)(e))return u.set(e,p),p;var n=getComputedStyle(e),r=(0,o.isSVG)(e)&&e.ownerSVGElement&&e.getBBox(),i=!c&&\"border-box\"===n.boxSizing,h=l.test(n.writingMode||\"\"),m=!r&&s.test(n.overflowY||\"\"),y=!r&&s.test(n.overflowX||\"\"),v=r?0:d(n.paddingTop),g=r?0:d(n.paddingRight),b=r?0:d(n.paddingBottom),_=r?0:d(n.paddingLeft),w=r?0:d(n.borderTopWidth),x=r?0:d(n.borderRightWidth),D=r?0:d(n.borderBottomWidth),k=r?0:d(n.borderLeftWidth),M=_+g,S=v+b,T=k+x,E=w+D,L=y?e.offsetHeight-E-e.clientHeight:0,C=m?e.offsetWidth-T-e.clientWidth:0,P=r?r.width:d(n.width)-(i?M+T:0)-C,O=r?r.height:d(n.height)-(i?S+E:0)-L,A=P+M+C+T,R=O+S+L+E,I=Object.freeze({devicePixelContentBoxSize:f(Math.round(P*devicePixelRatio),Math.round(O*devicePixelRatio),h),borderBoxSize:f(A,R,h),contentBoxSize:f(P,O,h),contentRect:new a.DOMRectReadOnly(_,v,P,O)});return u.set(e,I),I}"
-    }
-}

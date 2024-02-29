@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function T(){let e=(0,o.useStateFromStores)([l.default],()=>l.default.shouldShowWarning(),[]),t=r.useRef(null);function n(){null!==t.current&&((0,a.closeModal)(t.current),t.current=null)}function T(){_.default.clearVADWarning()}return r.useEffect(()=>(e?t.current=(0,a.openModal)(e=>(0,i.jsx)(E.default,{title:I.default.Messages.VAD_PERMISSION_TITLE,body:I.default.Messages.VAD_PERMISSION_BODY,onCancel:T,cancelText:I.default.Messages.VAD_PERMISSION_OKAY,confirmText:I.default.Messages.VAD_PERMISSION_ENABLE_PTT,onConfirm:()=>{s.default.setMode(u.InputModes.PUSH_TO_TALK),T()},...e})):n(),()=>{n()}),[e]),null}"
-    }
-}

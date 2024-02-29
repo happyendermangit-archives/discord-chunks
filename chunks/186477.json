@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e,t,n,s){if(e.state===r.ApplicationStreamStates.RECONNECTING)return{mainText:i.default.Messages.STREAM_RECONNECTING_ERROR,supportingText:i.default.Messages.STREAM_RECONNECTING_ERROR_SUBTEXT};if(e.state===r.ApplicationStreamStates.PAUSED)return n?{mainText:i.default.Messages.STREAM_CAPTURE_PAUSED,supportingText:i.default.Messages.STREAM_CAPTURE_PAUSED_DETAILS}:{mainText:i.default.Messages.STREAM_CAPTURE_PAUSED,supportingText:i.default.Messages.STREAM_CAPTURE_PAUSED_DETAILS_VIEWER.format({username:a.default.getName(e.guildId,e.channelId,t)})};return s?{mainText:i.default.Messages.STREAM_PREVIEW_PAUSED,supportingText:i.default.Messages.STREAM_PREVIEW_PAUSED_SUBTEXT}:null}"
-    }
-}

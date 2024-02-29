@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(){return(0,l.jsx)(i.default,{className:s.icon,\"aria-label\":a.default.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION})}"
+    }
+}

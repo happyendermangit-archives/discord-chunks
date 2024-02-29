@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getMyContentInventory": "async()=>{try{return(await i.default.get({url:o.Endpoints.MY_CONTENT_INVENTORY})).body}catch(e){throw new r.APIError(e)}}"
-    }
-}

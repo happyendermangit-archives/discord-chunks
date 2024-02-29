@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "ensureItemVisible": "function r(e){i.default.keyboardModeEnabled&&e.current?.scrollIntoView({block:\"nearest\"})}"
-    }
-}

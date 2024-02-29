@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "default": {
+            "dateRange": "e=>\"\".concat(e.startDate,\" - \").concat(e.endDate)",
+            "dateSelected": "e=>\"\".concat(e.date,\" se\\xe7ildi\")",
+            "finishRangeSelectionPrompt": "Tarih aralığı seçimini tamamlamak için tıklayın",
+            "maximumDate": "Son müsait tarih",
+            "minimumDate": "İlk müsait tarih",
+            "next": "Sonraki",
+            "previous": "Önceki",
+            "selectedDateDescription": "e=>\"Se\\xe7ilen Tarih: \".concat(e.date)",
+            "selectedRangeDescription": "e=>\"Se\\xe7ilen Aralık: \".concat(e.dateRange)",
+            "startRangeSelectionPrompt": "Tarih aralığı seçimini başlatmak için tıklayın",
+            "todayDate": "e=>\"Bug\\xfcn, \".concat(e.date)",
+            "todayDateSelected": "e=>\"Bug\\xfcn, \".concat(e.date,\" se\\xe7ildi\")"
+        }
+    }
+}

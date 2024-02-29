@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "DateTime": "function e(e,r,n,i,a,o,s){var u=t.call(this,i,a,o,s)||this;return u.year=e,u.month=r,u.day=n,u}",
-        "Time": "function t(t,e,r,n){this.hour=t,this.minute=e,this.second=r,this.millisecond=n||0}"
-    }
-}

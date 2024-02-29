@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "closeContextMenu": "function E(e){{let{flushSync:t}=n(\"699581\");t(()=>{i.default.wait(()=>{i.default.dispatch({type:\"CONTEXT_MENU_CLOSE\"}).finally(e)})})}}",
-        "openContextMenu": "function l(e,t,n,i){if(e.stopPropagation(),null!=e.currentTarget.contains&&!e.currentTarget.contains(e.target))return;let E=0,l=0;if(\"pageX\"in e&&(E=e.pageX,l=e.pageY),0===E&&0===l){let{left:t=0,top:n=0,width:i=0,height:r=0}=e.target?.getBoundingClientRect()??{};E=t+i/2,l=n+r/2}let u={render:t,renderLazy:i,target:e.target??e.currentTarget,rect:new DOMRect(E,l,0,0),config:{context:__OVERLAY__?s.AppContext.OVERLAY:(0,r.getCurrentlyInteractingAppContext)()??s.AppContext.APP,...n}};if(n?.enableSpellCheck&&(0,o.isDesktop)()){let e=(0,a.addResultListener)(()=>{e(),_(u)})}else e.preventDefault(),_(u)}",
-        "openContextMenuLazy": "function u(e,t,n){l(e,void 0,n,t)}"
-    }
-}

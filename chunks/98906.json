@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function b(){var e,n=oD(),a=y(n);if(o=arguments,i=this,c=n,a){if(r===l){;return d=e=c,l=aY(v,t),f?m(e):s}if(p)return rB(l),l=aY(v,t),m(c)}return r===l&&(l=aY(v,t)),s}"
-    }
-}

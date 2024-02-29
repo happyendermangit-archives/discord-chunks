@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:a,n=i.useRef(0),s=i.useRef(),l=i.useRef(!0),r=i.useCallback(()=>{l.current=!1,cancelAnimationFrame(n.current)},[]),o=i.useCallback(i=>{null==s.current&&(s.current=i);let a=i-s.current;a>=t&&(s.current=i,e(a)),l.current&&(n.current=requestAnimationFrame(o))},[e,t]),u=i.useCallback(()=>{l.current=!0,s.current=void 0,n.current=requestAnimationFrame(o)},[o]);return i.useEffect(()=>(n.current=requestAnimationFrame(o),()=>cancelAnimationFrame(n.current)),[]),{stop:r,reset:u,ticking:l}}"
-    }
-}

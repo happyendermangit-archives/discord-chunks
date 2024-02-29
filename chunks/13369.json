@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "openAlbum": "function d(e,t){r(e,t,t=>{let{album_id:n}=t;return{resourceType:(0,l.getSpotifyResourceType)(e.metadata?.type)===l.SpotifyResourceTypes.EPISODE?l.SpotifyResourceTypes.SHOW:l.SpotifyResourceTypes.ALBUM,resourceId:n}})}",
-        "openArtist": "function c(e,t,n){r(e,t,e=>{let{artist_ids:t}=e;if(null==t)throw Error(\"no artist ids in metadata\");let i=t[n];if(null==i)throw Error(\"invalid artist index\");return{resourceType:l.SpotifyResourceTypes.ARTIST,resourceId:i}})}",
-        "openPremiumSite": "function o(){window.open(l.SpotifyEndpoints.PREMIUM_SITE)}",
-        "openTrack": "function u(e){let{sync_id:t,metadata:n}=e;if(null==t)return;let i=(0,l.getSpotifyResourceType)(n?.type);if(null==i)return;let a=s.default.isProtocolRegistered()?l.SpotifyEndpoints.PLAYER_OPEN(i,t):l.SpotifyEndpoints.WEB_OPEN(i,t);window.open(a)}"
-    }
-}

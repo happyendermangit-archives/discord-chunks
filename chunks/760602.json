@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "render": "function(e,t){let{avatar:n,name:a,children:s,subText:d,decorators:c,onClick:f,selected:p,muted:m,to:h,avatarClassName:E,selectedClassName:_,innerClassName:I,wrapContent:C,highlighted:y,focusProps:S,...g}=e;g.className=l()(g.className,u.container,{[u.selected]:p,[u.highlighted]:y,[_??\"\"]:p,[u.clickable]:!p&&(null!=h||null!=f)}),g[\"aria-selected\"]=g[\"aria-selected\"]??p;let x=(0,i.jsxs)(\"div\",{className:l()(I,u.layout,{[u.muted]:!p&&m,[u.wrappedLayout]:C}),children:[(0,i.jsx)(\"div\",{className:l()(u.avatar,E),children:n}),(0,i.jsxs)(\"div\",{className:u.content,children:[(0,i.jsxs)(\"div\",{className:u.nameAndDecorators,children:[(0,i.jsx)(\"div\",{className:l()(u.name,{[u.wrappedName]:C}),children:a}),c]}),null!=d?(0,i.jsx)(\"div\",{className:u.subText,children:d}):null]}),null!=s?(0,i.jsx)(\"div\",{className:u.children,children:s}):null]});return null!=h?(0,i.jsx)(o.FocusRing,{...S,children:(0,i.jsx)(r.Link,{to:h,onClick:f,...g,role:\"listitem\",ref:t,children:x})}):null!=f?(0,i.jsx)(o.Clickable,{onClick:f,focusProps:S,...g,role:\"listitem\",innerRef:t,children:x}):(0,i.jsx)(o.FocusRing,{...S,children:(0,i.jsx)(\"div\",{...g,role:\"listitem\",ref:t,children:x})})}"
-        }
-    }
-}

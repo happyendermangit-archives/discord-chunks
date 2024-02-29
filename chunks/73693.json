@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function _(e){let{guildId:t,highlightedItemData:n}=e,{loading:_,error:E}=(0,r.useStateFromStores)([a.default],()=>a.default.getFetchStatus(t),[t]),l=i.useCallback(e=>{let{force:i,flushSeenItems:r}=e;async function a(){try{await (0,o.fetchGuildFeed)({guildId:t,flushSeenItems:r,refresh:!0,highlightedItemData:n})}catch(e){console.error(e)}}s(t,i??!1)&&a()},[t,n]),u=i.useCallback(()=>{s(t,!0)&&e();async function e(){try{await (0,o.fetchGuildFeed)({guildId:t,refresh:!1})}catch(e){console.error(e)}}},[t]);return i.useEffect(()=>{l({force:null!=n})},[l,n]),{fetchFresh:l,fetchPage:u,loading:_,error:E}}",
-        "shouldFetchGuildFeed": "function s(e,t){let n=a.default.getLastFetchedMillis(e);if(!t&&null!=n&&Date.now()-n<72e5)return!1;let{loading:i}=a.default.getFetchStatus(e);return i===a.LoadingStatus.NONE&&!0}"
-    }
-}

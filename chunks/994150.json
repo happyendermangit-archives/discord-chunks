@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){let t,{className:a,src:l,unicodeEmoji:i,name:u,size:d=20,enableTooltip:f=!0,enableHeight:T=!0,onClick:E}=e;if(null==l&&null==i)return null;return(0,n.jsx)(r.TooltipContainer,{text:u,\"aria-label\":!1,shouldShow:f,element:\"span\",children:(t=(0,n.jsx)(\"img\",{alt:\"\",\"aria-label\":c.default.Messages.ROLE_ICON_ALT_TEXT.format({name:u}),className:s()(o.roleIcon,a,{[o.clickable]:null!=E}),height:T?d:void 0,src:l,width:d}),(null!=i&&(t=(0,n.jsx)(\"img\",{alt:\"\",\"aria-label\":i.allNamesString,className:s()(o.roleIcon,a,{[o.clickable]:null!=E}),height:T?d:void 0,src:i.url,width:d})),null==E)?(0,n.jsx)(r.FocusRing,{offset:{left:5},children:t}):(0,n.jsx)(r.Clickable,{onClick:E,tag:\"span\",focusProps:{offset:{left:5}},children:t}))})}"
-    }
-}

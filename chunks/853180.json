@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){let{CDN_HOST:t,PROJECT_ENV:n}=window.GLOBAL_ENV;return\"development\"!==n?`${location.protocol}//${t}${i.Endpoints.SOUNDBOARD_SOUND(e)}`:`${location.protocol}${window.GLOBAL_ENV.API_ENDPOINT}${i.Endpoints.SOUNDBOARD_SOUND(e)}`}"
-    }
-}

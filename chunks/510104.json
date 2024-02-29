@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function f(e,t){void 0===t&&(t={});var n=t,f=n.placement,p=void 0===f?e.placement:f,h=n.strategy,m=void 0===h?e.strategy:h,y=n.boundary,v=void 0===y?s.clippingParents:y,g=n.rootBoundary,b=void 0===g?s.viewport:g,_=n.elementContext,w=void 0===_?s.popper:_,x=n.altBoundary,D=n.padding,k=void 0===D?0:D,M=(0,c.default)(\"number\"!=typeof k?k:(0,d.default)(k,s.basePlacements)),S=w===s.popper?s.reference:s.popper,T=e.rects.popper,E=e.elements[void 0!==x&&x?S:w],L=(0,r.default)((0,l.isElement)(E)?E:E.contextElement||(0,a.default)(e.elements.popper),v,b,m),C=(0,o.default)(e.elements.reference),P=(0,i.default)({reference:C,element:T,strategy:\"absolute\",placement:p}),O=(0,u.default)(Object.assign({},T,P)),A=w===s.popper?O:C,R={top:L.top-A.top+M.top,bottom:A.bottom-L.bottom+M.bottom,left:L.left-A.left+M.left,right:A.right-L.right+M.right},I=e.modifiersData.offset;if(w===s.popper&&I){var j=I[p];Object.keys(R).forEach(function(e){var t=[(0,s.right),(0,s.bottom)].indexOf(e)>=0?1:-1,n=[(0,s.top),(0,s.bottom)].indexOf(e)>=0?\"y\":\"x\";R[e]+=j[n]*t})}return R}"
-    }
-}

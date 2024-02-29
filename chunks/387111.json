@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "getNickname": "function s(e,t,n){if(null==n)return null;if(null!=e)return l.default.getNick(e,n.id);if(null!=t){let e=i.default.getChannel(t);if(null==e?void 0:e.isPrivate())return u.default.getNickname(n.id)}return null}",
+        "useName": "function E(e,t,n){return(0,r.useStateFromStores)([l.default,i.default,u.default],()=>d(e,t,n))}",
+        "default": {
+            "getNickname": "function s(e,t,n){if(null==n)return null;if(null!=e)return l.default.getNick(e,n.id);if(null!=t){let e=i.default.getChannel(t);if(null==e?void 0:e.isPrivate())return u.default.getNickname(n.id)}return null}",
+            "getName": "function d(e,t,n){var r;return null==n?o.default.Messages.UNKNOWN_USER:null!==(r=s(e,t,n))&&void 0!==r?r:a.default.getName(n)}",
+            "useName": "function E(e,t,n){return(0,r.useStateFromStores)([l.default,i.default,u.default],()=>d(e,t,n))}"
+        }
+    }
+}

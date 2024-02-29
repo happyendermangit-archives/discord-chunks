@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "maybeShowPTTAlert": "maybeShowPTTAlert(e){if(d.default.getMode()!==c.InputModes.PUSH_TO_TALK||(0,u.isDismissibleContentDismissed)(i.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT))return Promise.resolve();let t={[c.PlatformTypes.XBOX]:g.default.Messages.PTT_NOT_SUPPORTED_XBOX,[c.PlatformTypes.PLAYSTATION]:g.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION,[c.PlatformTypes.PLAYSTATION_STAGING]:g.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION}[e];return null==t?Promise.resolve():new Promise(e=>{let n=()=>{(0,u.markDismissibleContentAsDismissed)(i.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT),e()},o=e=>(0,s.jsx)(a.default,{...e,title:t,body:g.default.Messages.PTT_NOT_SUPPORTED_ALERT_BODY,onConfirm:n,titleClassName:m.title});(0,r.hasModalOpen)(E)?(0,r.updateModal)(E,o):(0,r.openModal)(o,{modalKey:E})})}",
-            "showSelfDismissableAlert": "showSelfDismissableAlert(e){let{title:t,body:n,errorCodeMessage:i,reconnectPlatformType:u}=e,d=(0,s.jsx)(f.SelfDismissibleAlertBody,{body:n,errorCodeMessage:i,dismissCallback:()=>(0,r.closeModal)(h)});function g(){null!=u&&((0,o.default)(u),l.default.track(c.AnalyticEvents.ACCOUNT_LINK_STEP,{previous_step:_.GAME_CONSOLE_ALERT_MODAL_LOCATION,current_step:\"desktop oauth\",platform_type:u}))}let m=e=>(0,s.jsx)(a.default,{...e,title:t,body:d,onConfirm:g});(0,r.hasModalOpen)(h)?(0,r.updateModal)(h,m):(0,r.openModal)(m,{modalKey:h})}"
-        }
-    }
-}

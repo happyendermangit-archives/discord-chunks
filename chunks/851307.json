@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "getComboPercentage": "e=>i(e,[u,o],1)",
-        "getComboScore": "function f(e){return e.value*(e.multiplier??1)}",
-        "getComboShakeIntensity": "function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:a.ShakeLevel.LEVEL_3;return i(e,[a.SHAKE_STEPS[t],a.SHAKE_STEP_DIVIDER[t]],1e5)}",
-        "getComboStyles": "e=>1===e?{color:l.Color.BRAND_500}:2===e||3===e?{color:l.Color.GREEN_360}:4===e||5===e?{color:l.Color.YELLOW_300,square:!0}:6===e?{color:l.Color.RED_400,square:!0}:{color:l.Color.ORANGE_345,flair:!0}"
-    }
-}

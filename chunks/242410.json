@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{width:t=24,height:a=24,color:n=\"currentColor\",direction:l,foreground:r,className:u,title:d,...f}=e;return(0,s.jsxs)(\"svg\",{...(0,o.default)(f),width:t,height:a,className:c()(u,function(e){switch(e){case\"LEFT\":return i.left;case\"RIGHT\":return i.right;case\"UP\":return null;case\"DOWN\":return i.down;case\"UP_LEFT\":return i.upLeft;case\"DOWN_RIGHT\":return i.downRight;default:throw Error(`Invalid Direction ${e}`)}}(l)),viewBox:\"0 0 24 24\",children:[null!=d?(0,s.jsx)(\"title\",{children:d}):null,(0,s.jsx)(\"polygon\",{className:r,fill:n,fillRule:\"nonzero\",points:\"13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8\"})]})}"
-    }
-}

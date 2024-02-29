@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){let{channel:t,commands:n,limit:r=n.length}=e,o=(0,l.useCommandContext)(t),u=(0,a.useTopCommands)(o),d=i.useMemo(()=>n.reduce((e,t)=>(e[t.id]=t,e),{}),[n]);return i.useMemo(()=>u.map(e=>d[e]).filter(e=>null!=e).sort((e,t)=>{let n=s.default.getScoreWithoutLoadingLatest(o,e);return s.default.getScoreWithoutLoadingLatest(o,t)-n}).slice(0,r),[u,d,o,r])}"
-    }
-}

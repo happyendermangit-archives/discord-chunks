@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){let{closeLayer:t,guild:s,isVisible:E}=e,_=(0,a.default)([n.default],()=>n.default.useReducedMotion),T=(0,r.useSpring)({transform:E?\"translateY(-100%)\":\"translateY(0%)\",opacity:E?1:0,config:{tension:120,friction:12},immediate:_});return(0,i.jsx)(r.animated.div,{className:c.wrapper,style:T,children:(0,i.jsxs)(\"div\",{className:c.innerWrapper,children:[(0,i.jsxs)(\"div\",{className:c.guildInfo,children:[(0,i.jsx)(o.default,{className:c.guildIcon,guild:s,size:o.default.Sizes.LARGER}),(0,i.jsx)(l.Heading,{className:c.guildName,variant:\"text-lg/bold\",children:s.name})]}),(0,i.jsx)(u.default,{className:c.ctaButton,guild:s,analyticsLocation:{page:d.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,section:d.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,object:d.AnalyticsObjects.BUTTON_CTA,objectType:d.AnalyticsObjectTypes.BUY},closeLayer:t,pauseAnimation:!E,size:l.Button.Sizes.LARGE})]})})}"
-    }
-}

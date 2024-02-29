@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function d(){let e,t,n,r,a;let o=i.default.getGoLiveSource();if(null!=o&&(e=o.quality.resolution,t=o.quality.frameRate,null!=o.desktopSource)){n=o.desktopSource.soundshareSession;let e=null!=o.desktopSource.sourcePid?s.default.getGameForPID(o.desktopSource.sourcePid):null;r=e?.name??null,a=e?.id??null}return{video_input_resolution:e,video_input_frame_rate:t,soundshare_session:n,share_game_name:r,share_game_id:a}}"
-    }
-}

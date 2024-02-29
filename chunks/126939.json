@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "useIsActivitiesEnabledForCurrentPlatform": "function a(t){return l()}",
+        "getIsActivitiesEnabledForCurrentPlatform": "function u(t){return l()}"
+    }
+}

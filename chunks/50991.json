@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){let{insertBreak:t,insertText:n}=e;return e.insertBreak=()=>{o(e)&&t()},e.insertSoftBreak=()=>{e.insertBreak()},e.insertText=t=>{if(0>t.indexOf(\"\\r\")&&0>t.indexOf(\"\\n\")){n(t);return}let s=t.split(/\\r\\n|\\r|\\n/);if(!o(e)){n(s.join(\" \"));return}i.HistoryUtils.withSingleEntry(e,()=>{let t=!1;for(let i of s)t&&a.SlateTransforms.splitNodes(e,{always:!0}),n(i),t=!0})},e}"
-    }
-}

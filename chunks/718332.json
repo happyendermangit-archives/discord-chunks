@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,s,c,o,f){var u=1&s,a=t.length,d=e.length;if(a!=d&&!(u&&d>a))return!1;var p=f.get(t);if(p&&f.get(e))return p==e;var b=-1,h=!0,l=2&s?new r:void 0;for(f.set(t,e),f.set(e,t);++b<a;){var g=t[b],v=e[b];if(c)var x=u?c(v,g,b,e,t,f):c(g,v,b,t,e,f);if(void 0!==x){if(x)continue;h=!1;break}if(l){if(!n(e,function(t,e){if(!i(l,e)&&(g===t||o(g,t,s,c,f)))return l.push(e)})){h=!1;break}}else if(!(g===v||o(g,v,s,c,f))){h=!1;break}}return f.delete(t),f.delete(e),h}"
-}

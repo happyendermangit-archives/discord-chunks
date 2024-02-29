@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "search": "search(e,t){null==s.default.getResults(e,t)&&(a.default.dispatch({type:\"INTEGRATION_QUERY\",integration:e,query:t}),i.default.get({url:l.Endpoints.INTEGRATION_SEARCH(\"tenor\"),query:{q:t},oldFormErrors:!0}).then(n=>{a.default.dispatch({type:\"INTEGRATION_QUERY_SUCCESS\",integration:e,query:t,results:n.body})},()=>a.default.dispatch({type:\"INTEGRATION_QUERY_FAILURE\",integration:e,query:t})))}"
-        }
-    }
-}

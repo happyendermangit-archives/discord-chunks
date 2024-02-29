@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "canAccessMemberSafetyPage": "function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[r.default,o.default],n=f(e,t);if(null==n)return!1;let i=s.default.hasAny(d.default.computePermissions({user:n.user,context:n.guild,checkElevated:!1}),u.MemberSafetyPagePermissions);return i}",
+        "useCanAccessMemberSafetyPage": "function g(e){let t=(0,i.useStateFromStores)([r.default,o.default],()=>_(e,[r.default,o.default]),[e]);return t}",
+        "useCanAccessBulkBanningFeature": "function m(e){let t=g(e),n=(0,i.useStateFromStores)([r.default,o.default],()=>c(e,[r.default,o.default]),[e]);return t&&n}",
+        "useCanAccessInviteCodeFeature": "function h(e){return(0,i.useStateFromStores)([r.default,a.default],()=>{let t=r.default.getGuild(e);return null!=t&&a.default.can(l.Permissions.MANAGE_GUILD,t)},[e])}",
+        "useCanBulkBanUser": "function v(e,t,n){return(0,i.useStateFromStores)([a.default,r.default],()=>{let s=r.default.getGuild(e);return null!=s&&t&&a.default.canManageUser(l.Permissions.BAN_MEMBERS,n,s)},[t,e,n])}",
+        "canBulkBanUser": "function E(e,t,n){let s=r.default.getGuild(e);return null!=s&&t&&a.default.canManageUser(l.Permissions.BAN_MEMBERS,n,s)}"
+    }
+}

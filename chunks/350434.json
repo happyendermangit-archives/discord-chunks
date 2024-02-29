@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){if(\"function\"!=typeof e)return!1;if(i.test(o.call(e)))return!0;if(!u)return\"[object GeneratorFunction]\"===a.call(e);if(!s)return!1;if(void 0===r){var t=l();r=!!t&&s(t)}return s(e)===r}"
-}

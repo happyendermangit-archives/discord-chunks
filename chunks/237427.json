@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "isActivitiesInTextEnabled": "function f(e,t){if(null==e)return!1;let n=d(e.type);return e?.guild_id!=null?u.getCurrentConfig({guildId:e.guild_id,location:t},{autoTrackExposure:!0}).enabled&&n:o.getCurrentConfig({location:t},{autoTrackExposure:!0}).enabled&&n}",
-        "isActivityInTextSupportedForChannelType": "function d(e){return[s.ChannelTypes.GUILD_TEXT,s.ChannelTypes.GROUP_DM,s.ChannelTypes.DM].includes(e)}",
-        "useActivitiesInTextButtonVisibility": "function c(e,t){let n=(0,i.useStateFromStores)([a.default],()=>a.default.getChannel(e)),s=l(n),r=(n?.guild_id!=null?u:o).useExperiment({guildId:n?.guild_id,location:t},{autoTrackExposure:!0});return r.enabled&&s?{showInOmniButtonMenu:r.showInOmniButtonMenu,showChatInputButton:r.showChatInputButton}:null}",
-        "useIsActivitiesInTextEnabled": "function _(e,t){let n=(0,i.useStateFromStores)([a.default],()=>a.default.getChannel(e)),s=l(n);return(n?.guild_id!=null?u:o).useExperiment({guildId:n?.guild_id,location:t},{autoTrackExposure:!0}).enabled&&s}"
-    }
-}

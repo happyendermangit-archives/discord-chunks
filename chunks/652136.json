@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function I(e){let{value:t=a()().local(),minDate:n,maxDate:o,onSelect:s,calendarClassName:I,autoFocus:T,onClickOutside:c}=e,d=r.useCallback((e,t)=>{s?.(a()(e),t)},[s]),S=r.useMemo(()=>t.toDate(),[t]),A=r.useMemo(()=>o?.toDate(),[o]),N=r.useMemo(()=>n?.toDate(),[n]),O=(0,E.useStateFromStores)([l.default],()=>l.default.locale),R=r.useRef(null),C=r.useCallback(e=>{let t=e.currentTarget;t.classList.contains(\"react-datepicker__day\")&&setTimeout(()=>{if(R.current?.contains(t))return;let e=R.current?.querySelector('.react-datepicker__day[tabindex=\"0\"]');null!=e&&e.focus()},100)},[]);return(0,i.jsx)(\"div\",{ref:R,className:u.calendarPicker,children:(0,i.jsx)(_(),{calendarClassName:I,selected:S,onChange:d,autoFocus:T,fixedHeight:!0,inline:!0,locale:O,maxDate:A,minDate:N,onKeyDown:C,onClickOutside:c})})}"
-    }
-}

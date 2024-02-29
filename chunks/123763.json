@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t,n){var i=!0,o=!0;if(\"function\"!=typeof e)throw TypeError(\"Expected a function\");return a(n)&&(i=\"leading\"in n?!!n.leading:i,o=\"trailing\"in n?!!n.trailing:o),r(e,t,{leading:i,maxWait:t,trailing:o})}"
-}

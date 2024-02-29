@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "playApplication": "async function S(t,e,l){let a=d.default.getApplication(t);if(null==a)return;let{cloudSync:i=!0,cloudSyncForceHash:s=null,analyticsParams:o}=l;if(i&&null!=e){let t=e.branchId;try{await c.sync(e.id,t,s)}catch(l){(0,u.openModal)(l=>(0,n.jsx)(E,{libraryApplication:e,analyticsParams:o,branchId:t,...l}));return}}return C.default.track(h.AnalyticEvents.APPLICATION_OPENED,{application_id:a.id,application_name:a.name,type:h.AnalyticsGameOpenTypes.LAUNCH,distributor:null!=e?e.getDistributor():null,...o}),r.default.launch(a.id,null==e?void 0:e.branchId)}",
+        "installApplication": "function p(t,e,l){let n=i.default.getApplication(t);if(null==n)return;let a=s.default.getTargetBuildId(n.id,e),o=s.default.getTargetManifests(n.id,e);null!=a&&null!=o&&null!=r.installApplication&&(0,r.installApplication)(n,e,a,o,l)}",
+        "updateApplication": "function f(t,e){let l=i.default.getApplication(t);if(null!=l)return n.updateApplication(l,e,s.default.getTargetBuildId(l.id,e),s.default.getTargetManifests(l.id,e))}",
+        "repairApplication": "function C(t,e,l){let a=i.default.getApplication(t);if(null!=a)return n.repairApplication(a,e,l)}",
+        "performDefaultLibraryApplicationAction": "function h(t,e){let l=(0,o.getDefaultLibraryApplicationAction)(t,u.default,c.default),{analyticsParams:n}=e;switch(l){case d.LibraryApplicationActions.PLAY:return(0,a.playApplication)(t.id,t,{analyticsParams:n});case d.LibraryApplicationActions.INSTALL:return p(t.id,t.branchId,n.source);case d.LibraryApplicationActions.UPDATE:return f(t.id,t.branchId)}}"
+    }
+}

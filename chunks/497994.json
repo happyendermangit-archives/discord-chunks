@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getChannelIdForGuildTransition": "function T(e){let t=E.default.getChannelId(e),n=_.default.getDefaultChannel(e)?.id;if(t===I.StaticChannelRoute.GUILD_ONBOARDING&&!i.default.shouldShowOnboarding(e)||t===I.StaticChannelRoute.GUILD_HOME&&!(0,r.canSeeOnboardingHome)(e))return n;let o=s.default.getChannel(t);return null==o||o.isGuildVocal()?n:t}",
-        "transitionToGuild": "function c(e,t){let n=!(0,o.isInMainTabsExperiment)()||(0,a.shouldHandleNewPanelsRoute)(e)?T(e):void 0;(0,l.transitionTo)(u.Routes.CHANNEL(e,n),{navigationReplace:(0,a.shouldHandleNewPanelsRoute)(e),...t})}"
-    }
-}

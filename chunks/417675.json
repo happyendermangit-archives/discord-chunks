@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{n.useEffect(()=>{u(e)},[e])}"
+    }
+}

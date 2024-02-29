@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "process": "function(){var t=0;for((0,u.gatherActiveObservationsAtDepth)(t);(0,r.hasActiveObservations)();)t=(0,a.broadcastActiveObservations)(),(0,u.gatherActiveObservationsAtDepth)(t);return(0,i.hasSkippedObservations)()&&(0,o.deliverResizeLoopError)(),t>0}"
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){return(0,s.isIFrameModalUserEnabled)()||(0,a.isIFrameModalForGuildEnabled)(e)}"
-    }
-}

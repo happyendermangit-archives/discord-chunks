@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "getPremiumTypeFromRawValue": "function I(e){return void 0!==e?e===s.PREMIUM_TYPE_NONE?null:e:e}",
-        "isStaffEnv": "function l(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:void 0;return E(t)===a.Environments.DEVELOPMENT||window.GLOBAL_ENV.RELEASE_CHANNEL===a.Environments.STAGING||null!=e&&(e.isStaff()||e.isStaffPersonal())}",
-        "isStaffEnvRawData": "function u(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:void 0;return E(t)===a.Environments.DEVELOPMENT||window.GLOBAL_ENV.RELEASE_CHANNEL===a.Environments.STAGING||null!=e&&(!!(null!=e.flags&&(0,o.hasFlag)(e.flags,s.UserFlags.STAFF))||null!=e.personal_connection_id)}",
-        "validatePremiumType": "function _(e,t,n){!e&&void 0!==t&&r()(n===t,\"Premium type should not change for non-staff users\")}"
-    }
-}

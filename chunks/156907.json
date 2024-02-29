@@ -1,5 +1,10 @@
 {
     "exports": {
-        "default": "function o(e){let{activity:t,color:n,look:o}=e;return(0,s.default)(t)?(0,i.jsx)(l.default,{onClick:()=>{let e=(0,a.default)(t);return window.open(null!=e?e:void 0)},color:n,look:o,fullWidth:!0,children:r.default.Messages.WATCH},\"play-activity\"):null}"
+        "button": "button__65e60",
+        "closeButton": "closeButton__81784",
+        "content": "content__5c548",
+        "image": "image__195cc",
+        "subtitle": "subtitle_e45cbd",
+        "title": "title__53028"
     }
 }

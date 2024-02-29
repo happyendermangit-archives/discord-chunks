@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "useGuildIdsToFetchSoundsFor": "function u(){let e=(0,i.default)([a.default],()=>a.default.getGuilds()),t=(0,i.default)([r.default],()=>r.default.getSounds());return(0,l.useMemo)(()=>o(e,t),[e,t])}",
+        "getGuildIdsToFetchSoundsFor": "function d(){let e=a.default.getGuilds(),t=r.default.getSounds();return o(e,t)}"
+    }
+}

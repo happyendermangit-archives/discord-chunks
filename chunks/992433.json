@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "render": "(e,t)=>{!e.persistSearch&&(0,d.setSearchQuery)(\"\");let{query:r,resultQuery:n,resultItems:l,suggestions:i}=(0,a.useStateFromStoresObject)([h.default],()=>({query:h.default.getQuery(),resultQuery:h.default.getResultQuery(),resultItems:h.default.getResultItems(),suggestions:h.default.getSuggestions()})),u=(0,d.useExpressionPickerStore)(e=>e.searchQuery),o=(0,I.useSortedFavoriteGIFs)();return(0,s.jsx)(v,{...e,forwardedRef:t,query:null!=u&&\"\"!==u?u:r,resultQuery:n,resultItems:l,suggestions:i,favorites:o,searchOffset:0,searchTotalResults:h.default.getResultItems().length,searchLimit:null})}"
-        }
-    }
-}

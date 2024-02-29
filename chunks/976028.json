@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "CallTileCTA": "function u(e){let{children:t,onClick:n,className:r,tooltip:u}=e;return(0,a.jsx)(s.Tooltip,{text:u,children:e=>{let{onClick:u,...o}=e;return(0,a.jsx)(s.Button,{...o,onClick:e=>{n?.(e),u?.()},innerClassName:l.buttonReset,color:i()(l.cta,r),size:s.Button.Sizes.MIN,children:t})}})}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "asap": "function u(e){o.enqueueTask(i.create(e))}"
-    }
-}

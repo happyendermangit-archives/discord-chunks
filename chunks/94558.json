@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "FormattedMessage": "class u{constructor(e,t,n){this.message=n?e:e.replace(l.UNSAFE_RE_ALL,\"\"),this.hasMarkdown=n,this.intlMessage=new(a())(this.message,t)}format(e){if(!this.hasMarkdown)return this.intlMessage.format(e);let[t,n]=this.getContext(e);return i(this.intlMessage.format(t),t,n)}astFormat(e){let[t,n]=this.getContext(e);return r(this.intlMessage.format(t),t,n)}plainFormat(e){return this.intlMessage.format(e)}getContext(e){let t=l.UNSAFE_RE.test(this.message),n={};if(t){let t=0;for(let[i,r]of Object.entries(e))this.message.includes(`!!{${i}}!!`)&&(n[++t]=r,e[i]=t)}return[e,n]}}",
-        "getMessage": "function T(e,t){if(null==e)return\"\";null==i&&I(n(\"758628\").default),e=e.replace(/^\\n+|\\n+$/g,\"\");let r=l.FORMAT_RE.test(e),o=l.MARKDOWN_RE.test(e);return r||o?new u(e,t,o):e}",
-        "setUpdateRules": "function I(e){i=function(e,t){let n=_().parserFor(t(e)),i=_().reactFor(_().ruleOutput(e,\"react\"));return(e,t,r)=>{let o=!e.includes(\"\\n\\n\");return!o&&(e+=\"\\n\\n\"),i(n(e,{inline:o,context:t,unsafeContext:r}))}}(E.default,e),r=function(e){let t=_().parserFor(e);return(e,n,i)=>t(e+\"\\n\\n\",{inline:!1,context:n,unsafeContext:i})}(E.default)}"
-    }
-}

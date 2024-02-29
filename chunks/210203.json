@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "dismissedGuildOnboardingUpsell": "function T(e,t){let n=r.Timestamp.now();u.PreloadedUserSettingsActionCreators.updateAsync(\"userContent\",e=>{e.guildOnboardingUpsellDismissedAt=n},u.UserSettingsDelay.INFREQUENT_USER_ACTION),null!=t&&(0,l.markDismissibleContentAsDismissed)(t,{forceTrack:!0,dismissAction:p.ContentDismissActionType.AUTO,guildId:e})}",
-        "shouldShowGuildOnboardingUpsell": "function m(e,t){let n=o.default.getGuilds(),i=c.default.entries(n).some(e=>{let[t,n]=e,i=(0,_.isGuildOnboardingSettingsAvailable)(t),a=n.hasFeature(E.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);return i&&a});if(i||!(0,_.isGuildOnboardingSettingsAvailable)(e))return!1;let s=d.default.settings.userContent?.guildOnboardingUpsellDismissedAt,u=null!=s?r.Timestamp.toDate(s):void 0,p=null!=u?a()().diff(u,\"days\"):null,m=S.indexOf(t);if(-1===m||!(null==p||p>g[m])||S.find(e=>!(0,l.isDismissibleContentDismissed)(e))!==t)return!1;let{showLifecycleUpsells:T}=f.default.getCurrentConfig({guildId:e,location:\"7f5b67_1\"},{disable:i||!(0,_.isGuildOnboardingSettingsAvailable)(e),autoTrackExposure:!0});return T}"
-    }
-}

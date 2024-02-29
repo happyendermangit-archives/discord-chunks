@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){let t=(0,i.default)({...e,id:`${e.id}_existing_users`,label:`${e.label} - Existing Users`});return{existingUsers:t,newUsers:(0,i.default)({...e,id:`${e.id}_new_users`,label:`${e.label} - New Users`})}}"
-    }
-}

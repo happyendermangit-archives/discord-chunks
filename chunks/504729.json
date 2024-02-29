@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "DragDropMonitorImpl": "function c(e,t){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,c),this.store=e,this.registry=t}"
+    }
+}

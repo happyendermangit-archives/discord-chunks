@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getClass": "function n(e,t){for(var l=arguments.length,n=Array(l>2?l-2:0),s=2;s<l;s++)n[s-2]=arguments[s];let a=n.reduce((e,t)=>e+(0,r.upperCaseFirstChar)(t),\"\"),i=e[`${t}${a}`];if(null!=i)return i}"
-    }
-}

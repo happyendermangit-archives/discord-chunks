@@ -1,3 +1,0 @@
-{
-    "exports": "function r(e){var t;if(\"number\"==typeof e)return e>>>0===e&&e>=0&&e<=4294967295?e:null;return(t=l.hex6.exec(e))?parseInt(t[1]+\"ff\",16)>>>0:h.hasOwnProperty(e)?h[e]:(t=l.rgb.exec(e))?(c(t[1])<<24|c(t[2])<<16|c(t[3])<<8|255)>>>0:(t=l.rgba.exec(e))?(c(t[1])<<24|c(t[2])<<16|c(t[3])<<8|f(t[4]))>>>0:(t=l.hex3.exec(e))?parseInt(t[1]+t[1]+t[2]+t[2]+t[3]+t[3]+\"ff\",16)>>>0:(t=l.hex8.exec(e))?parseInt(t[1],16)>>>0:(t=l.hex4.exec(e))?parseInt(t[1]+t[1]+t[2]+t[2]+t[3]+t[3]+t[4]+t[4],16)>>>0:(t=l.hsl.exec(e))?(255|o(d(t[1]),p(t[2]),p(t[3])))>>>0:(t=l.hsla.exec(e))?(o(d(t[1]),p(t[2]),p(t[3]))|f(t[4]))>>>0:null}"
-}

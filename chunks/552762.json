@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "AccessibilityAnnouncer": {
-            "announce": "function a(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:\"assertive\",n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:7e3;!r&&(r=new u),r.announce(e,t,n)}",
-            "clearAnnouncements": "function o(e){r&&r.clear(e)}"
-        }
-    }
-}

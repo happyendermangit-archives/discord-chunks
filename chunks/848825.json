@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(){return(0,l.jsx)(i.default,{className:a.icon})}"
+    }
+}

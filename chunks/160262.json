@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useTopCommands": "function r(e){i.useEffect(()=>{s.FrecencyUserSettingsActionCreators.loadIfNecessary()},[]);let t=(0,a.useStateFromStores)([l.default],()=>l.default.getTopCommandsWithoutLoadingLatest());return i.useMemo(()=>(0,l.getFilteredTopCommands)(t,e),[t,e])}",
-        "useTopRealCommands": "function o(e){i.useEffect(()=>{s.FrecencyUserSettingsActionCreators.loadIfNecessary()},[]);let t=(0,a.useStateFromStores)([l.default],()=>l.default.getTopCommandsWithoutLoadingLatest());return i.useMemo(()=>{let n=(0,l.getFilteredTopCommands)(t,e);return(0,l.getTopRealCommands)(n)},[t,e])}"
-    }
-}

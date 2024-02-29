@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{direction:t=T.DOWN,width:a=24,height:l=24,color:E=\"currentColor\",transition:_=f.transition,className:m,foreground:N,expanded:I,...h}=e,{enabled:O}=(0,u.useRedesignIconContext)(),C=t;if(!0===I?C=T.DOWN:!1===I&&(C=T.RIGHT),O){let e={[T.UP]:i.ChevronSmallUpIcon,[T.DOWN]:r.ChevronSmallDownIcon,[T.LEFT]:c.ChevronSmallLeftIcon,[T.RIGHT]:o.ChevronSmallRightIcon}[C];return(0,n.jsx)(e,{...h,className:m,width:a,height:l,color:E,colorClass:N})}return(0,n.jsx)(\"svg\",{className:s()(m,_,C),width:a,height:l,viewBox:\"0 0 24 24\",...(0,d.default)(h),children:(0,n.jsx)(\"path\",{className:N,fill:\"none\",stroke:E,strokeWidth:\"2\",strokeLinecap:\"round\",strokeLinejoin:\"round\",d:\"M7 10L12 15 17 10\",\"aria-hidden\":!0})})}"
-    }
-}

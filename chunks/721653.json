@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,s,i){var c=s.length,o=c,f=!i;if(null==t)return!o;for(t=Object(t);c--;){var u=s[c];if(f&&u[2]?u[1]!==t[u[0]]:!(u[0]in t))return!1}for(;++c<o;){var a=(u=s[c])[0],d=t[a],p=u[1];if(f&&u[2]){if(void 0===d&&!(a in t))return!1}else{var b=new r;if(i)var h=i(d,p,a,t,e,b);if(!(void 0===h?n(p,d,3,i,b):h))return!1}}return!0}"
-}

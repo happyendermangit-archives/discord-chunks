@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "FormItem": {
-            "render": "function(e,t){let{children:n,disabled:s=!1,className:_,titleClassName:E,tag:l=\"h5\",required:u=!1,style:I,title:T,error:c,...d}=e,S=r.useId(),A=r.useId(),N=d.titleId??S,O=null!=c?d.errorId??A:void 0;return(0,i.jsxs)(\"div\",{ref:t,className:_??void 0,style:I??void 0,children:[null!=T||null!=c?(0,i.jsx)(a.FormTitle,{tag:l,disabled:s,required:u,error:c,className:E,id:N,errorId:O,...d,children:T}):null,(0,i.jsx)(o.FormContextProvider,{titleId:N,errorId:O,error:c??void 0,children:n})]})}"
-        }
-    }
-}

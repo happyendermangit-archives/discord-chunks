@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "(e,t,n)=>{if(null!=n&&\"0.0.0\"===n.remoteApp.getVersion())return;let a=new i.default;if(null!=n){if(null!=n.window.setDevtoolsCallbacks)n.window.setDevtoolsCallbacks(()=>{t.hideToken(),o(e)},()=>{t.showToken()});else{let i=n.window.webContents;i.removeAllListeners(\"devtools-opened\"),i.on(\"devtools-opened\",()=>{t.hideToken(),o(e)}),i.on(\"devtools-closed\",t.showToken)}}else!r.isMobile&&!r.isTablet&&a.on(\"changed\",n=>{let{open:i}=n;i?(t.hideToken(),o(e)):t.showToken()});window.addEventListener(\"beforeunload\",e=>{e.isTrusted&&t.showToken()})}"
-    }
-}

@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "addCandidateContent": "e=>{let t=r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e.content);l.setState(n=>{let i=u(n);return t?d(i,e):m(f(i,e))})}",
+        "removeCandidateContent": "(e,t)=>{l.setState(n=>{let i=u(n);return t?m(c(E(i,e),e)):c(E(i,e),e)})}",
+        "isContentShown": "e=>l.getState().currentlyShown.has(e)",
+        "useIsContentShown": "e=>l(t=>t.currentlyShown.has(e))",
+        "useIsAnyContentShown": "e=>l(t=>e.some(e=>t.currentlyShown.has(e)))",
+        "getCurrentlyShownCounts": "()=>{let e=[...l.getState().currentlyShown].filter(e=>!r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e)).length,t=l.getState().currentlyShown.size;return[t,e]}",
+        "reset": "()=>{l.setState(o),a.unschedule()}",
+        "default": "function N(e){return l(e)}"
+    }
+}

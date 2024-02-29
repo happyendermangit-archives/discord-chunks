@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "queueResizeObserver": "function(t){(0,r.queueMicroTask)(function(){requestAnimationFrame(t)})}"
+    }
+}

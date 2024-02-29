@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "cancelGetAttachmentFile": "async function u(e){}",
-        "getAttachmentFile": "function o(e,t){i()(e.item.platform===r.UploadPlatform.WEB,\"Upload must be in the Web format\");let n=(0,a.getAttachmentPayload)(e,t);return Promise.resolve({file:e.item.file,name:n.filename??\"\"})}"
-    }
-}

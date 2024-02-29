@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e){let{ref:t,onDrag:n,onDragStart:s,onDragEnd:l}=e,[r,o]=i.useState(!1);return i.useEffect(()=>{if(r)return window.addEventListener(\"mouseup\",e),window.addEventListener(\"mousemove\",i),()=>{window.removeEventListener(\"mouseup\",e),window.removeEventListener(\"mousemove\",i)};function e(){l?.(),o(!1)}function i(e){let i=t.current;null!=i&&n?.(a(i,e))}},[t,r,l,n]),[r,i.useCallback(e=>{e.preventDefault();let i=t.current;null!=i&&(o(!0),s?.(),n?.(a(i,e)))},[t,s,n])]}"
-    }
-}

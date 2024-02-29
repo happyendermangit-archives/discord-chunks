@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "createObservableLock": "function i(e){let t=Promise.resolve(null),n=[],i=!1,{onContention:a,onContentionResolved:s,onTimeout:l,timeoutMs:r}=e,o=function(e,o){n.length>0?(a(o,n),i=!0):i&&(s(),i=!1),n.push(o);let u=null==r||null==l?null:setTimeout(()=>l(o,n),r);return new Promise((i,a)=>{t=t.then(e).then(i,a).then(()=>n.splice(0,1)),null!=u&&(t=t.then(()=>clearTimeout(u)))})};return o.isMutexHeld=()=>n.length>0,o.getLockHolders=()=>n,o}"
-    }
-}

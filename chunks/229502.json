@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "VoiceChannelEffectSentLocation": {
+            "EMOJI_PICKER": "emoji_picker",
+            "EFFECT_BAR": "effect_bar"
+        },
+        "sendVoiceChannelCustomCallSoundEffect": "function _(e,t,n){var l;let{abortController:i,onRequestProgress:a}=I(e),r=null!==(l=E.default.getState().animationType)&&void 0!==l?l:S.VoiceChannelEffectAnimationType.BASIC,u={animation_type:r,animation_id:(0,C.sampleAnimationId)(r,C.CUSTOM_CALL_SOUND_ANIMATION_RANGE)};s.default.post({url:T.Endpoints.CUSTOM_CALL_SOUNDS(e),body:u,signal:i.signal,onRequestProgress:a}).then(T.NOOP_NULL,()=>{if(i.signal.aborted)return}),(0,f.default)([o.default.CHANNEL_CALL],n,t,c.AnalyticsSoundType.ENTRY)}",
+        "sendVoiceChannelSoundboardEffect": "function N(e,t,n,l){var i,a;let r=d.default.getCustomEmojiById(null!==(i=t.emojiId)&&void 0!==i?i:\"\"),{abortController:o,onRequestProgress:u}=I(e),m={sound_id:t.soundId,emoji_id:t.emojiId,emoji_name:null!==(a=t.emojiName)&&void 0!==a?a:null==r?void 0:r.name};t.guildId!==v.DEFAULT_SOUND_GUILD_ID&&(m.source_guild_id=t.guildId),s.default.post({url:T.Endpoints.SEND_SOUNDBOARD_SOUND(e),body:m,signal:o.signal,onRequestProgress:u}).then(T.NOOP_NULL,()=>{if(o.signal.aborted)return}),(0,f.default)(null!=l?l:[],n,t,c.AnalyticsSoundType.DEFAULT)}",
+        "sendVoiceChannelEffect": "async e=>{let{channel:t,emoji:n,location:l,animationType:i,animationId:a,isPremium:o}=e;if(null==n||g.default.isOnCooldown)return;let u=o&&null!=i?i:S.VoiceChannelEffectAnimationType.BASIC;try{let e=null!=n.id?{emoji_id:n.id,emoji_name:n.name,animation_type:u,animation_id:a}:{emoji_id:null,emoji_name:n.optionallyDiverseSequence,animation_type:u,animation_id:a};await s.default.post({url:T.Endpoints.VOICE_CHANNEL_EFFECTS(t.id),body:e}),y(t,n,l,u),r.default.dispatch({type:\"VOICE_CHANNEL_EFFECT_SENT_LOCAL\"})}catch(e){if(429===e.status&&null!=e.body.retry_after){let t=e.body.retry_after*p.default.Millis.SECOND;r.default.dispatch({type:\"VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP\",cooldownEndsAtMs:t})}}}"
+    }
+}

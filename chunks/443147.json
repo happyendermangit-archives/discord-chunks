@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "getAudioInputDevices": "function _(){return new Promise(e=>{(0,o.getVoiceEngine)().getInputDevices(t=>e(s(a.DeviceTypes.AUDIO_INPUT,t)))})}",
-        "getAudioOutputDevices": "function E(){return new Promise(e=>{(0,o.getVoiceEngine)().getOutputDevices(t=>e(s(a.DeviceTypes.AUDIO_OUTPUT,t)))})}",
-        "getVideoInputDevices": "function l(){return new Promise(e=>{(0,o.getVoiceEngine)().getVideoInputDevices(t=>e(s(a.DeviceTypes.VIDEO_INPUT,t)))})}",
-        "sanitizeDevices": "function s(e,t){let n=!1,i=t.map((t,i)=>{let{guid:r,guid:o,name:s,name:_,index:E}=t;return/^default/.test(s)?(n=!0,r=a.DEFAULT_DEVICE_ID,s=s.replace(\"default\",\"Default\")):r=null!=r&&\"\"!==r?r:s,null!=E&&(i=E),{id:r,type:e,index:i,name:s,originalName:_,originalId:o}});return e!==a.DeviceTypes.VIDEO_INPUT&&!n&&r()?.os?.family!=null&&/^win/i.test(r().os.family)&&i.unshift({id:a.DEFAULT_DEVICE_ID,type:e,index:-1,name:\"Default\"}),i}"
-    }
-}

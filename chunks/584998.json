@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function A(e){let{summaries:t,summariesMembers:n,channel:s,selectTopic:r,setOpen:o}=e,u=(0,a.useStateFromStores)([c.default],()=>c.default.getOldestUnreadMessageId(s.id)),d=i.useCallback(e=>{r(e),o(!1)},[r,o]);return t.length<1?(0,l.jsx)(T.default,{}):(0,l.jsx)(l.Fragment,{children:t.map((e,t)=>{var i;let a=null!==(i=n[t])&&void 0!==i?i:[];return(0,l.jsx)(N,{summary:e,channel:s,members:a,guildId:s.guild_id,unread:null!=u&&E.default.compare(e.endId,u)>0,onClick:()=>d(t)},t)})})}"
+    }
+}

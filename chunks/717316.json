@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "MenuCustomItem": "function u(e){let{children:t,color:n=\"default\",isFocused:o=!1,disabled:u=!1,keepItemStyles:I=!1,menuItemProps:T,action:c,dontCloseOnActionIfHoldingShiftKey:d,onClose:S}=e,A=r.useRef(null);r.useEffect(()=>{o&&(0,_.ensureItemVisible)(A)},[o]);let N=r.useCallback(e=>{if(null==c)return!1;!(e.shiftKey&&d)&&S(),e.persist(),requestAnimationFrame(()=>c(e))},[c,S,d]),O=I?a()(l.item,E.MENU_ITEM_COLORS[n],{[l.focused]:o}):l.customItem;return(0,i.jsx)(s.Clickable,{innerRef:A,className:O,onClick:u?void 0:N,\"aria-disabled\":u,...T,children:t({color:n,disabled:u,isFocused:o})})}"
-    }
-}

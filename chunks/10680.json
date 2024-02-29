@@ -1,0 +1,21 @@
+{
+    "exports": {
+        "caseInsensitiveLangRegex": {
+            "exec": "function exec() { [native code] }",
+            "dotAll": false,
+            "flags": "i",
+            "global": false,
+            "hasIndices": false,
+            "ignoreCase": true,
+            "multiline": false,
+            "source": "^[a-z0-9_+\\-.#]+$",
+            "sticky": false,
+            "unicode": false,
+            "compile": "function compile() { [native code] }",
+            "test": "function test() { [native code] }",
+            "unicodeSets": false
+        },
+        "isKnownLang": "function o(e){return e.toLowerCase() in a}",
+        "findBackticks": "function u(e){let t;let n=[],l=/\\\\|```/g;for(;null!=(t=l.exec(e));){if(\"\\\\\"===t[0]){l.lastIndex+=1;continue}n.push(t.index)}return n}"
+    }
+}

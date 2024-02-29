@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "checkGuildTemplateDirty": "async checkGuildTemplateDirty(e){if(!i.default.canWithPartialContext(a.Permissions.MANAGE_GUILD,{guildId:e}))return;let t=await r.default.loadTemplatesForGuild(e);t.body.length>0&&s.default.dispatch({type:\"GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH\",guildTemplate:t.body[0]})}",
-            "hideGuildTemplateDirtyTooltip": "hideGuildTemplateDirtyTooltip(e){s.default.dispatch({type:\"GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE\",guildId:e})}",
-            "hideGuildTemplatePromotionTooltip": "hideGuildTemplatePromotionTooltip(){s.default.dispatch({type:\"GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE\"})}"
-        }
-    }
-}

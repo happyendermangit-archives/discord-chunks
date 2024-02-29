@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "MenuControlItem": "function l(e){let{color:t=\"default\",label:n,control:o,disabled:l,isFocused:u,showDefaultFocus:I=!1,menuItemProps:T,onClose:c}=e,d=r.useRef(null),S=r.useRef(null);r.useLayoutEffect(()=>{u?((0,s.ensureItemVisible)(d),S.current?.focus()):S.current?.blur?.()},[u]);let A=r.useCallback(()=>{S.current?.activate?.()&&c()},[c]),N=o({onClose:c,disabled:l,isFocused:u},S);return(0,i.jsxs)(\"div\",{onClick:A,className:a()(E.item,_.MENU_ITEM_COLORS[t],{[E.disabled]:l,[E.focused]:I&&u,[E.hideInteraction]:!I}),\"aria-disabled\":l,...T,children:[null!=n?(0,i.jsx)(\"div\",{className:E.labelContainer,children:(0,i.jsx)(\"div\",{className:E.label,children:n})}):null,N]})}"
-    }
-}

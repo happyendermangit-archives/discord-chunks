@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "getSeasonalGiftingBody": "function m(e){return e||!(a.isMobile||a.isTablet)?c.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY:c.default.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP}",
+        "default": "function h(e){let{onComplete:t,onDMCheckItOutClick:n,markAsDismissed:i,isDM:a}=e;return(0,l.jsx)(s.Popout,{spacing:0,shouldShow:!0,position:\"top\",align:\"center\",renderPopout:e=>(0,l.jsx)(p,{...e,onComplete:()=>{t(),i(d.ContentDismissActionType.USER_DISMISS)},onDMCheckItOutClick:()=>{n(),t(),i(d.ContentDismissActionType.TAKE_ACTION)},isDM:a}),onRequestClose:()=>void 0,closeOnScroll:!1,ignoreModalClicks:!0,children:()=>(0,l.jsx)(\"div\",{className:f.popoutTarget})})}"
+    }
+}

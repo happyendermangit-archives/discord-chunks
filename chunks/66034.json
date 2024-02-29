@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){if(!f(t)||t<0)throw new o(\"Assertion failed: `length` must be an integer Number >= 0\");if(t>u)throw new i(\"length is greater than (2**32 - 1)\");var e=arguments.length>1?arguments[1]:n,s=[];if(e!==n){if(!d)throw new c(\"ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]\");d(s,e)}return 0!==t&&(s.length=t),s}"
-}

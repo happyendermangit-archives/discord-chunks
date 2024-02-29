@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useCurrentPremiumTrialTier": "function o(){let e=(0,r.useStateFromStores)([a.default],()=>a.default.getPremiumTypeSubscription()),t=(0,r.useStateFromStores)([i.default],()=>i.default.getCurrentUser());return e?.trialId!=null?t?.premiumType:null}",
-        "useHasActiveTrial": "()=>{let e=(0,r.useStateFromStores)([a.default],()=>a.default.getPremiumTypeSubscription());return e?.trialId!=null}"
-    }
-}

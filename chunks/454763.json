@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "MenuInteractiveCompositeControl": {
-            "render": "function(e,t){let{className:n,children:o}=e,a=r.useRef(null),s=r.useRef(null);return r.useImperativeHandle(t,()=>({focus:()=>{let e=a.current;null!=e&&(null==s.current&&(s.current=e.querySelector('[tabindex=\"0\"]')),s.current?.focus())},blur:()=>s.current?.blur(),activate:()=>!1}),[]),r.useLayoutEffect(()=>{let e=a.current;if(null!=e)return e.addEventListener(\"focusin\",t),()=>{e.removeEventListener(\"focusin\",t)};function t(e){s.current=e.target}},[]),(0,i.jsx)(\"div\",{ref:a,className:n,style:{position:\"relative\"},children:o})}"
-        }
-    }
-}

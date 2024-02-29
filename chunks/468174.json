@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "trace": "function s(t,e){let n,s=arguments.length>2&&void 0!==arguments[2]?arguments[2]:()=>{},o={...t};void 0!==o.name&&void 0===o.description&&(o.description=o.name);let l=(0,i.getCurrentHub)(),u=l.getScope(),c=u.getSpan(),d=function(){if((0,a.hasTracingEnabled)())return c?c.startChild(o):l.startTransaction(o)}();function h(){d&&d.finish(),l.getScope().setSpan(c)}u.setSpan(d);try{n=e(d)}catch(t){throw d&&d.setStatus(\"internal_error\"),s(t),h(),t}return(0,r.isThenable)(n)?Promise.resolve(n).then(()=>{h()},t=>{d&&d.setStatus(\"internal_error\"),s(t),h()}):h(),n}"
-    }
-}

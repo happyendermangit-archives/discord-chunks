@@ -1,0 +1,17 @@
+{
+    "exports": {
+        "BUILT_IN_SECTIONS": {
+            "-1": {
+                "id": "-1",
+                "type": 0,
+                "name": "Built-In"
+            },
+            "-2": {
+                "id": "-2",
+                "type": 0,
+                "name": "Frequently Used"
+            }
+        },
+        "getBuiltInCommands": "(e,t,n)=>{let i=t?P:F;return i=i.filter(t=>t.type===e&&(!n||t.inputType===S.ApplicationCommandInputType.BUILT_IN_TEXT||t.inputType===S.ApplicationCommandInputType.BUILT_IN_INTEGRATION))}"
+    }
+}

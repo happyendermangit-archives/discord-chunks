@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "H": "function a(e){let t=_(),n=`h${Math.min(t,6)}`;return(0,i.jsx)(n,{...t>6?{\"data-excessive-heading-level\":t}:{},...e})}",
-        "HeadingLevel": "function o(e){let{component:t,children:n,forceLevel:o}=e,a=r.useContext(s),[_,E]=r.useState(null!=t),l=1,u=1;null!=o?null!=t?(l=o,u=o+1):u=o:null!=t?(l=a.level,u=a.level+1):u=a.level+(_?1:0);let I=r.useCallback(()=>(E(!0),l),[l]),T=r.useCallback(()=>(E(!0),u),[u]);return(0,i.jsxs)(i.Fragment,{children:[null!=t?(0,i.jsx)(s.Provider,{value:{level:l,getLevelAndMarkUsed:I},children:t}):null,(0,i.jsx)(s.Provider,{value:{level:u,getLevelAndMarkUsed:T},children:n})]})}",
-        "usePrivateHeadingLevel": "function _(){let{getLevelAndMarkUsed:e}=r.useContext(s);return e()}"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "Button": "function u(e){let{onClick:t,onContextMenu:n,className:a,selected:o=!1,children:u,disabled:d=!1,dangerous:c,...f}=e;return(0,i.jsx)(l.Clickable,{onClick:d?void 0:t,onContextMenu:d?void 0:n,className:s()(a,{[r.button]:!0,[r.selected]:o,[r.disabled]:d,[r.dangerous]:c}),...f,children:u})}",
-        "Separator": "function o(e){let{className:t}=e;return(0,i.jsx)(\"div\",{className:s()(t,r.separator)})}",
-        "default": "function(e){let{className:t,children:n}=e;return(0,i.jsx)(\"div\",{className:s()(t,r.wrapper),children:n})}"
-    }
-}

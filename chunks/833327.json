@@ -1,3 +1,0 @@
-{
-    "exports": "function k(t){var e=this instanceof(r=r||s(\"827664\"));if(!e&&!n.call(k,this))return new k(t);this._writableState=new S(t,this,e),this.writable=!0,t&&(\"function\"==typeof t.write&&(this._write=t.write),\"function\"==typeof t.writev&&(this._writev=t.writev),\"function\"==typeof t.destroy&&(this._destroy=t.destroy),\"function\"==typeof t.final&&(this._final=t.final)),f.call(this)}"
-}

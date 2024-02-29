@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){let{style:t,src:n,backgroundSrc:g,userId:E,pulseSpeakingIndicator:C=!1,speaking:m=!1,...S}=e,_=g??n,T=(0,l.default)(_,i.default.unsafe_rawColors.PRIMARY_800.css),I=(0,u.useCallBannerBackgroundExperiment)(!0,\"VideoBackground-web\").enabled,A=(0,c.default)(E??h.EMPTY_STRING_SNOWFLAKE_ID),v=A?.getBannerURL({size:1024,canAnimate:f.GifAutoPlay.getSetting()});if(r.useEffect(()=>{null!=E&&I&&(0,d.default)(E,void 0,{dispatchWait:!0})},[I,E]),null==n)return null;let N=(0,a.jsx)(s.Avatar,{className:p.avatarWrapper,src:n,...S}),L={...t,backgroundColor:T};return null!=v&&m&&I&&(L.backgroundImage=`url(${v})`,L.backgroundSize=\"cover\"),(0,a.jsx)(\"div\",{style:L,className:p.background,children:C?(0,a.jsx)(o.default,{shouldAnimate:m,children:N}):N})}"
-    }
-}

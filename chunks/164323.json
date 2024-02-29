@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{children:t,className:n,direction:r=E.HORIZONTAL,justify:o=l.START,align:_=u.STRETCH,wrap:T=I.NO_WRAP,shrink:c,grow:d,basis:S,style:A,...N}=e;return(0,i.jsx)(\"div\",{style:{flexShrink:c,flexGrow:d,flexBasis:S,...A},className:a()(s.flex,r,o,_,T,n),...N,children:t})}"
-    }
-}

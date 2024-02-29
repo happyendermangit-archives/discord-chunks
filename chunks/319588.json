@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class l extends r.Component{static #e=this.displayName=s;componentDidMount(){this.listener.attach(s)}componentWillUnmount(){this.listener.detach(),this.memoizedGetStateFromStores.clear()}render(){let e=this.memoizedGetStateFromStores(this.props);return(0,i.jsx)(n,{...this.props,...e})}constructor(...n){super(...n),this.memoizedGetStateFromStores=E(t),this.listener=new a.default(e,()=>{let e=this.memoizedGetStateFromStores.getCachedResult(this.props);if(!(null!=e&&(this.memoizedGetStateFromStores.clear(),(0,o.default)(this.memoizedGetStateFromStores(this.props),e))))this.forceUpdate()})}}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "async function r(e,t,n){let{hasSpotifyAccount:r,activity:o,user:u}=e;(0,l.default)(r)&&null!=o&&null!=o.sync_id&&(await (0,a.ensureSpotifyPlayable)(),i.play(o,u.id),(0,s.default)(t,u,o,n))}"
-    }
-}

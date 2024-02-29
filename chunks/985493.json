@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "getDiffieHellman": "function(t){return new c(new r(i[t].prime,\"hex\"),new r(i[t].gen,\"hex\"))}",
-        "createDiffieHellmanGroup": "function(t){return new c(new r(i[t].prime,\"hex\"),new r(i[t].gen,\"hex\"))}",
-        "DiffieHellmanGroup": "function(t){return new c(new r(i[t].prime,\"hex\"),new r(i[t].gen,\"hex\"))}",
-        "DiffieHellman": "function t(e,s,i,f){return r.isBuffer(s)||void 0===o[s]?t(e,\"binary\",s,i):(s=s||\"binary\",f=f||\"binary\",i=i||new r([2]),!r.isBuffer(i)&&(i=new r(i,f)),\"number\"==typeof e)?new c(n(e,i),i,!0):(!r.isBuffer(e)&&(e=new r(e,s)),new c(e,i,!0))}",
-        "createDiffieHellman": "function t(e,s,i,f){return r.isBuffer(s)||void 0===o[s]?t(e,\"binary\",s,i):(s=s||\"binary\",f=f||\"binary\",i=i||new r([2]),!r.isBuffer(i)&&(i=new r(i,f)),\"number\"==typeof e)?new c(n(e,i),i,!0):(!r.isBuffer(e)&&(e=new r(e,s)),new c(e,i,!0))}"
-    }
-}

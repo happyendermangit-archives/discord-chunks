@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "Host": "class o{static open(e,t){return r.Runtime.executeAsync(\"database_open\",n=>i.KV_RAW.databaseOpen(n,{database:e,invalidateDisabledHandles:t?.invalidateDisabledHandles??!1}))}static openSyncUnsafe(e,t){return i.KV_RAW.databaseOpen(null,{database:e,invalidateDisabledHandles:t?.invalidateDisabledHandles??!1},{synchronous:!0})}static delete(e){return r.Runtime.executeAsync(\"database_delete\",t=>i.KV_RAW.databaseDelete(t,{database:e}))}static async list(){return(await r.Runtime.executeAsync(\"database_list\",e=>i.KV_RAW.databaseList(e))).map(e=>e.data)}static optimize(e){return r.Runtime.executeAsync(\"database_optimize\",t=>i.KV_RAW.databaseOptimize(t,{aggressive:e}))}static raise(e){i.KV_RAW.raise(e)}}"
-    }
-}

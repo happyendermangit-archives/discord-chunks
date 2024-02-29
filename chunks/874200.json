@@ -1,0 +1,25 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "VIBING_WUMPUS_PLAY_MUSIC": "function N(){null!=s&&clearInterval(s),i.loop(),I=.5;let e=R();s=setInterval(()=>T(e),100)}",
+                "VIBING_WUMPUS_STOP_MUSIC": "function A(){S(i.stop.bind(i))}",
+                "VIBING_WUMPUS_PAUSE_MUSIC": "function O(){S(i.pause.bind(i))}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            }
+        }
+    }
+}

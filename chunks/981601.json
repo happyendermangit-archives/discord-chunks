@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "type": "function(e){let{userId:t,user:n,...i}=e,a=(0,r.useStateFromStores)([N.default],()=>N.default.getUser(t),[t]),o=null!=n?n:a;return s(null!=o,\"Unexpected missing user\"),(0,l.jsx)(B,{user:o,...i})}",
+            "compare": null
+        }
+    }
+}

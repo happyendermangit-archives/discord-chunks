@@ -1,0 +1,12 @@
+{
+    "exports": {
+        "FocusRing": "function F(t){let{within:e=!1,enabled:n=!0,focused:r,offset:i=0,focusTarget:o,ringTarget:a,ringClassName:s,focusClassName:c,focusWithinClassName:l,children:f}=t;null!=o&&p(null!=a,\"FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.\"),null!=r&&p(null!=a,\"FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.\");let d=u.useRef(!1),[v,y]=u.useState(!1),m=u.useContext(x),g=u.Children.only(f),{onBlur:b,onFocus:_,...w}=g.props,O=u.useMemo(()=>({className:s,offset:i}),[s,i]);V(()=>{n&&m.invalidate()}),u.useEffect(()=>{n||m.hide()},[n,m]),u.useEffect(()=>()=>{d.current&&m.hide()},[m]),u.useEffect(()=>{let t=null==a?void 0:a.current;null==r||null==t||(d.current=r,r?m.showElement(t,O):!1===r&&m.hide())},[r,O,m,a]),V(()=>{if(null!=r)return;let t=null==o?void 0:o.current,n=null==a?void 0:a.current;if(null!=t&&null!=n)return t.addEventListener(\"focusin\",i,!0),t.addEventListener(\"focusout\",u,!0),()=>{t.removeEventListener(\"focusin\",i,!0),t.removeEventListener(\"focusout\",u,!0)};function i(t){if(null!=n){if(t.currentTarget===t.target){d.current=!0,m.showElement(n,O);return}y(!0),e&&m.showElement(n,O)}}function u(){m.hide(),d.current=!1,y(!1)}},[e,O,r,m,o,a]);let k=u.useCallback(t=>{m.hide(),d.current=!1,y(!1),null==b||b(t)},[b,m]),S=u.useCallback(t=>{let n=null==a?void 0:a.current;t.currentTarget===t.target?(d.current=!0,m.showElement(null!=n?n:t.currentTarget,O)):(y(!0),e&&m.showElement(null!=n?n:t.currentTarget,O)),null==_||_(t)},[a,e,_,m,O]);return n&&null==o&&null==r?u.cloneElement(g,{...w,className:h(w.className,d.current?c:void 0,v?l:void 0),onBlur:k,onFocus:S}):g}",
+        "FocusRingManager": {
+            "ringsEnabled": false,
+            "setRingsEnabled": "setRingsEnabled(t){P=t,null==r||r.invalidate()}",
+            "enableAnimationTracking": "enableAnimationTracking(){O=!0,k=requestAnimationFrame(E)}",
+            "disableAnimationTracking": "disableAnimationTracking(){O=!1,null!=k&&cancelAnimationFrame(k)}"
+        },
+        "FocusRingScope": "function M(t){let{containerRef:e,children:n,themeOptions:r}=t,i=u.useRef(new b);return u.useEffect(()=>{i.current.setContainer(e.current),i.current.setThemeOptions(r)},[e.current]),T(x.Provider,{value:i.current,children:[n,R(L,{})]})}"
+    }
+}

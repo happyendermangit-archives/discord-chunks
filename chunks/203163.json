@@ -1,3 +1,0 @@
-{
-    "exports": "function n(t){if(!(this instanceof n))return new n(t);r.call(this,t)}"
-}

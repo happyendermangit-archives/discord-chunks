@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "show": "show(t,e,n,i,l){a.default.dispatch({type:\"NOTICE_SHOW\",notice:{id:l,type:t,message:e,buttonText:n,callback:i}})}",
+            "dismiss": "dismiss(t){a.default.dispatch({type:\"NOTICE_DISMISS\",...t})}"
+        }
+    }
+}

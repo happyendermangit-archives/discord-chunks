@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "wrapConnectorHooks": "function o(e){var t={};return Object.keys(e).forEach(function(n){var o=e[n];if(n.endsWith(\"Ref\"))t[n]=e[n];else{var u,s=(u=o,function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return(0,a.isValidElement)(e)?(!function(e){if(\"string\"!=typeof e.type){var t=e.type.displayName||e.type.name||\"the component\";throw Error(\"Only native element nodes can now be passed to React DnD connectors.\"+\"You can either wrap \".concat(t,\" into a <div>, or turn it into a \")+\"drag source or a drop target itself.\")}}(e),function(e,t){var n=e.ref;return((0,r.invariant)(\"string\"!=typeof n,\"Cannot connect React DnD to an element with an existing string ref. Please convert it to use a callback ref instead, or wrap it into a <span> or <div>. Read more: https://reactjs.org/docs/refs-and-the-dom.html#callback-refs\"),n)?(0,a.cloneElement)(e,{ref:function(e){i(n,e),i(t,e)}}):(0,a.cloneElement)(e,{ref:t})}(e,t?function(e){return u(e,t)}:u)):(u(e,t),e)});t[n]=function(){return s}}}),t}"
-    }
-}

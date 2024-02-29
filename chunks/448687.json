@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "PaymentPortalBody": "function h(e){let{children:t}=e,{bodyNode:n}=(0,f.usePaymentContext)();return null==n?null:d().createPortal(t,n)}",
-        "PaymentPortalFooter": "function E(e){let{children:t}=e,{footerNode:n}=(0,f.usePaymentContext)();return null==n?null:d().createPortal(t,n)}",
-        "default": "function m(e){let{header:t,isLargeModal:n,stepProps:s}=function(e){let{header:t,isLargeModal:n,...i}=e;return{header:t,isLargeModal:n,stepProps:i}}(e),{step:r,stepConfigs:u,setBodyNode:d,setFooterNode:m,setModalOverlayNode:h,setReadySlideId:E}=(0,f.usePaymentContext)(),_=u.find(e=>e.key===r);a.useEffect(()=>{h(null)},[r,h]),o()(null!=_,\"Unknown step for current payment flow.\");let I=_?.options?.hideSlider??!1,C=_?.options?.bodyClassName,y=void 0!==n&&n?p.sliderBodyLarge:_?.options?.sliderBodyClassName;return(0,i.jsxs)(i.Fragment,{children:[_?.options?.renderHeader??!0?t:null,_.renderStep(s),null==r||I?null:(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(c.ModalContent,{className:l()(p.body,C),children:(0,i.jsx)(c.Slides,{activeSlide:r,centered:!1,onSlideReady:e=>E(e),children:u.filter(e=>null!=e.key).map(e=>(0,i.jsx)(c.Slide,{id:e.key,children:(0,i.jsx)(\"form\",{className:l()(p.sliderBody,y),ref:e=>d(e),onSubmit:e=>e.preventDefault()})},e.key))})}),(0,i.jsx)(\"div\",{ref:e=>m(e)}),(0,i.jsx)(\"div\",{ref:e=>h(e)})]})]})}"
-    }
-}

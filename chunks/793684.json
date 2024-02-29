@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e,t,n){if(a.EditorUtils.areStylesDisabled(e))return[];let[r,o]=t;if(1!==o.length||!a.NodeUtils.isInTypes(r,s))return l;let{entries:u,serializedChildren:d}=a.ElementUtils.markdown(r,n,!0),c=[];for(let t=0;t<u.length;t++){let n=u[t];if(n.attributes.length>0&&n.text.length>0){let s=u[t-1],l=u[t+1],r=(0,i.getPointFromPosition)(e,o,d,n.start),f={anchor:r,focus:(0,i.getPointFromPosition)(e,o,d,n.start+n.text.length)},p=a.EditorUtils.nodes(e,{at:f,mode:\"lowest\",voids:!1}),m={};for(let e of n.attributes)if(m[e]=!0,\"syntaxBefore\"===e&&null!=l)for(let e of l.attributes)m[`before_${e}`]=!0;else if(\"syntaxAfter\"===e&&null!=s)for(let e of s.attributes)m[`after_${e}`]=!0;for(let[t,n]of p){if(a.EditorUtils.isVoid(e,t))continue;let i={anchor:a.EditorUtils.start(e,n),focus:a.EditorUtils.end(e,n)};a.PointUtils.isBefore(i.anchor,f.anchor)&&(i.anchor=f.anchor),a.PointUtils.isAfter(i.focus,f.focus)&&(i.focus=f.focus),c.push({...m,...i})}}}return c}"
-    }
-}

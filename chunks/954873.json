@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){var t=new e.constructor(e.byteLength);return new Uint8Array(t).set(new Uint8Array(e)),t}"
+}

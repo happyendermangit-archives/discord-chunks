@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "UNUSUAL_DM_COMPARISON_DELTA": 172800000,
+        "createMemberSearchCursor": "function a(e){let{joinedAt:t,userId:r}=e;if(null==t)return null;let i=new Date(t).getTime();return{guild_joined_at:i,user_id:r}}",
+        "OrderBy": {
+            "0": "ORDER_BY_UNSPECIFIED",
+            "1": "ORDER_BY_GUILD_JOINED_AT_DESC",
+            "2": "ORDER_BY_GUILD_JOINED_AT_ASC",
+            "3": "ORDER_BY_USER_ID_DESC",
+            "4": "ORDER_BY_USER_ID_ASC",
+            "ORDER_BY_UNSPECIFIED": 0,
+            "ORDER_BY_GUILD_JOINED_AT_DESC": 1,
+            "ORDER_BY_GUILD_JOINED_AT_ASC": 2,
+            "ORDER_BY_USER_ID_DESC": 3,
+            "ORDER_BY_USER_ID_ASC": 4
+        }
+    }
+}

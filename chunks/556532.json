@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "createHover": "function i(e){return function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},i=n.clientOffset;(function(e){(0,r.invariant)(Array.isArray(e),\"Expected targetIds to be an array.\")})(t);var u=t.slice(0),s=e.getMonitor(),l=e.getRegistry();return function(e,t,n){(0,r.invariant)(t.isDragging(),\"Cannot call hover while not dragging.\"),(0,r.invariant)(!t.didDrop(),\"Cannot call hover after drop.\");for(var a=0;a<e.length;a++){var o=e[a];(0,r.invariant)(e.lastIndexOf(o)===a,\"Expected targetIds to be unique in the passed array.\");var i=n.getTarget(o);(0,r.invariant)(i,\"Expected targetIds to be registered.\")}}(u,s,l),function(e,t,n){for(var r=e.length-1;r>=0;r--){var o=e[r],i=t.getTargetType(o);!(0,a.matchesType)(i,n)&&e.splice(r,1)}}(u,l,s.getItemType()),function(e,t,n){e.forEach(function(e){n.getTarget(e).hover(t,e)})}(u,s,l),{type:o.HOVER,payload:{targetIds:u,clientOffset:i||null}}}}"
-    }
-}

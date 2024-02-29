@@ -1,0 +1,20 @@
+{
+    "exports": {
+        "GuildIncidentActionSources": {
+            "MESSAGE": "message",
+            "NAGBAR": "nagbar",
+            "GUILD_SETTINGS": "guild_settings",
+            "CONTEXT_MENU": "context_menu",
+            "GUILD_PROFILE": "guild_profile",
+            "MEMBER_SAFETY_PAGE": "member_safety_page"
+        },
+        "GuildIncidentAlertTypes": {
+            "JOIN_RAID": "join_raid",
+            "DM_RAID": "dm_raid"
+        },
+        "GuildIncidentActionTypes": {
+            "INVITES_DISABLED": "invites_disabled",
+            "DMS_DISABLED": "dms_disabled"
+        }
+    }
+}

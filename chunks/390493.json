@@ -1,0 +1,25 @@
+{
+    "exports": {
+        "nextTick": "function(t){var e=Array(arguments.length-1);if(arguments.length>1)for(var n=1;n<arguments.length;n++)e[n-1]=arguments[n];l.push(new v(t,e)),1===l.length&&!f&&c(d)}",
+        "title": "browser",
+        "browser": true,
+        "env": {},
+        "argv": [],
+        "version": "",
+        "versions": {},
+        "on": "function y(){}",
+        "addListener": "function y(){}",
+        "once": "function y(){}",
+        "off": "function y(){}",
+        "removeListener": "function y(){}",
+        "removeAllListeners": "function y(){}",
+        "emit": "function y(){}",
+        "prependListener": "function y(){}",
+        "prependOnceListener": "function y(){}",
+        "listeners": "function(t){return[]}",
+        "binding": "function(t){throw Error(\"process.binding is not supported\")}",
+        "cwd": "function(){return\"/\"}",
+        "chdir": "function(t){throw Error(\"process.chdir is not supported\")}",
+        "umask": "function(){return 0}"
+    }
+}

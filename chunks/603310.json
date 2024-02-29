@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "computeHasRoleSubscriptionsInGuild": "function u(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null==e?null:r.default.getMember(e,i.default.getId()),[n]=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[a.default],s=n.getGuild(e);if(null==s||null==t||!s.hasFeature(o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED))return!1;for(let e of t.roles){let t=s.getRole(e);if(t?.tags?.subscription_listing_id!=null)return!0}return!1}",
-        "default": "function d(e){let t=(0,s.useStateFromStores)([i.default,r.default],()=>null==e?null:r.default.getMember(e,i.default.getId()));return(0,s.useStateFromStores)([a.default],()=>u(e,t,[a.default]),[e,t])}"
-    }
-}

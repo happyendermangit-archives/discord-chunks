@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{message:t,className:r,noResultsImageURL:n,forceLightTheme:a,suggestions:u}=e,o=null!=n?{backgroundImage:`url(${n})`}:{};return(0,s.jsx)(\"div\",{className:l()({[i.forceLightTheme]:a},r),children:(0,s.jsxs)(\"div\",{className:i.wrapper,children:[(0,s.jsx)(\"div\",{className:i.sadImage,style:o}),(0,s.jsx)(\"div\",{children:t}),u]})})}"
-    }
-}

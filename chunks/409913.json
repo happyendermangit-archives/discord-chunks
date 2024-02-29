@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "isAttachmentUrl": "function d(e){return u.has(e.hostname)&&Array.from(o).some(t=>e.pathname.startsWith(t))}",
-        "maybeRefreshAttachmentUrl": "async function E(e){if(!i.AttachmentLinkRefreshExperiment.getCurrentConfig({location:\"link_clicked\"}).enabled)return e;let t=l.default.toURLSafe(e);return null!=t&&f(t)?await _(e)??e:e}",
-        "messageHasExpiredAttachmentUrl": "function g(e){return e.attachments.some(m)||e.embeds.some(I)}",
-        "removeSignedUrlParameters": "function h(e){let t=l.default.toURLSafe(e);if(null==t)return e;for(let e of[\"ex\",\"is\",\"hm\"])t.searchParams.delete(e);return t}"
-    }
-}

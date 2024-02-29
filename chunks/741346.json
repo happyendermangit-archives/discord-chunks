@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,s){var a=-1;return e=r(e.length?e:[u],o(n)),c(i(t,function(t,s,n){return{criteria:r(e,function(e){return e(t)}),index:++a,value:t}}),function(t,e){return f(t,e,s)})}"
-}

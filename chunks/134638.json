@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "calculatePointerPosition": "(e,t)=>{let n=e.getClientOffset();if(null===n)return null;if(!t.current||!t.current.getBoundingClientRect)return r(n,a(e));let o=t.current.getBoundingClientRect();return r(n,{x:o.width/2,y:o.height/2})}"
-    }
-}

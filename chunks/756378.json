@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "hasSkippedObservations": "function(){return r.resizeObservers.some(function(t){return t.skippedTargets.length>0})}"
+    }
+}

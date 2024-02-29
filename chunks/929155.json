@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "installApplication": "function o(e,t,o,u,d){let c=r.default.getInstallationPath(e.id,t),f=null!=e.eulaId&&!l.default.hasAcceptedEULA(e.eulaId);null==c||f?(0,a.openModalLazy)(async()=>{let{default:a}=await n.el(\"929155@911:984\").then(n.bind(n,\"410495\"));return n=>(0,i.jsx)(a,{...n,applicationId:e.id,branchId:t,analyticsLocation:d})}):(0,s.installApplication)({application:e,branchId:t,buildId:o,manifestIds:u,installationPath:c,analyticsLocation:d})}"
-    }
-}

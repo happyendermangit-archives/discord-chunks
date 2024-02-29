@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){var e,s=a(this),p=u((l&&b(s)?g(s,\"\"):s).length);if(!f(t))throw TypeError(\"Array.prototype.map callback must be a function\");arguments.length>1&&(e=arguments[1]);for(var h=r(s,p),v=0;v<p;){var x=d(v);if(o(s,x)){var m=n(t,e,[c(s,x),v,s]);i(h,x,m)}v+=1}return h}"
-}

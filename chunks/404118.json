@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "show": "show(e){let{title:t,body:n,confirmColor:a,confirmText:o,cancelText:l,onConfirm:u,onCancel:c,onCloseCallback:d,secondaryConfirmText:f,onConfirmSecondary:E,className:p,titleClassName:h}=e;(0,r.openModal)(e=>(0,i.jsx)(s.default,{...e,title:t,body:n,confirmColor:a,confirmText:o,cancelText:l,onConfirm:u,onCancel:c,secondaryConfirmText:f,onConfirmSecondary:E,className:p,titleClassName:h}),{onCloseCallback:d})}",
+            "close": "close(){}",
+            "confirm": "confirm(e){return new Promise(t=>{this.show({onConfirm(){t(!0)},cancelText:a.default.Messages.CANCEL,onCancel(){t(!1)},...e})})}"
+        }
+    }
+}

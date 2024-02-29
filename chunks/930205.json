@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class i{has(e){return this.listeners.has(e)}hasAny(){return this.listeners.size>0}invokeAll(){this.listeners.forEach(e=>e())}constructor(){var e=this;this.listeners=new Set,this.add=e=>{this.listeners.add(e)},this.remove=e=>{this.listeners.delete(e)},this.addConditional=function(t){let n=!(arguments.length>1)||void 0===arguments[1]||arguments[1];if(n&&!1===t())return;let i=()=>{!1===t()&&e.remove(i)};e.add(i)}}}"
-    }
-}

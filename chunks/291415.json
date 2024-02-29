@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{onPlay:t,externalURL:n,className:a,renderLinkComponent:f,inactive:p,messageId:m,channelId:h}=e;return(0,i.jsx)(r.MessagesInteractionContext.Consumer,{children:e=>(0,i.jsxs)(\"div\",{className:s()(a,c.wrapper,{[c.disableInteractions]:e.disableInteractions}),children:[p&&null==t?(0,i.jsx)(\"div\",{className:c.iconWrapper,children:(0,i.jsx)(u.default,{className:c.iconPlay})}):null,null!=t?(0,i.jsx)(l.Clickable,{onClick:t,className:s()(c.iconWrapperActive),tabIndex:p?-1:0,\"aria-label\":d.default.Messages.PLAY,children:(0,i.jsx)(u.default,{className:c.iconPlay})}):null,null!=n?f({href:n,target:\"_blank\",rel:\"noreferrer noopener\",className:c.iconWrapperActive,children:(0,i.jsx)(o.default,{\"aria-label\":d.default.Messages.OPEN_LINK,className:null!=t?c.iconExternalMargins:c.iconExternal}),messageId:m,channelId:h}):null]})})}"
-    }
-}

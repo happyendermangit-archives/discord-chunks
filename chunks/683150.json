@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "Heading": "e=>{let{variant:t,className:n,...r}=e,E=(0,s.usePrivateHeadingLevel)(),l=`h${Math.min(E,6)}`;return(0,i.jsx)(a.Text,{variant:t,tag:l,className:o()(_.defaultColor,n),...E>6?{\"data-excessive-heading-level\":E}:{},...r})}"
-    }
-}

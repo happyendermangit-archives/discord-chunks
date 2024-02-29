@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){let{className:t}=e,[s,a]=r.useState(null);return(0,i.jsxs)(\"div\",{className:l()(_.wrapper,t),children:[(0,i.jsx)(n.Heading,{className:_.heading,variant:\"heading-xxl/bold\",children:E.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_HEADING}),(0,i.jsx)(\"ul\",{className:_.list,children:T.map((e,t)=>{let r=s===t;return(0,i.jsxs)(\"div\",{className:_.listItem,children:[(0,i.jsxs)(n.Clickable,{className:l()(_.questionWrapper,{[_.questionWrapperExpanded]:r}),onClick:()=>a(e=>e===t?null:t),tag:\"li\",children:[(0,i.jsx)(n.Text,{className:_.question,variant:\"text-lg/normal\",children:e.getQuestion()}),r?(0,i.jsx)(u.default,{className:_.questionIcon}):(0,i.jsx)(o.default,{className:_.questionIcon})]}),r&&(0,i.jsx)(n.Text,{className:_.answer,color:\"text-normal\",variant:\"text-md/normal\",children:e.getAnswer()})]},t)})})]})}"
-    }
-}

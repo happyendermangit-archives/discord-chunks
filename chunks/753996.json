@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){let{children:t,className:n}=e,{onForceIdle:r,onActive:o}=a.useContext(s.IdleHandlerContext),{preventIdle:u,allowIdle:d}=l(\"interact\");a.useEffect(()=>()=>d(),[d]);let c=a.useCallback(e=>{let t=e.target.ownerDocument??document;!e.currentTarget.contains(t.activeElement)&&r()},[r]);return(0,i.jsx)(\"div\",{className:n,onMouseEnter:u,onMouseLeave:d,onFocus:o,onBlur:c,children:t})}",
-        "usePreventIdle": "function l(e){let{onPreventIdle:t,onAllowIdle:n,onActive:i}=a.useContext(s.IdleHandlerContext),l=a.useCallback(()=>{t(e)},[e,t]);return{preventIdle:l,allowIdle:a.useCallback(()=>{n(e)},[e,n]),onActive:i}}"
-    }
-}

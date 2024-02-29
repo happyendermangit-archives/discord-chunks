@@ -1,6 +1,3 @@
 {
-    "exports": {
-        "default": "function o(e,t){return(0,i.useStateFromStores)([a.default,r.default],()=>d(e,t,[a.default,r.default]))}",
-        "getDisplayProfile": "function d(e,t){let[n,i]=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[a.default,r.default],s=n.getUser(e),l=i.getUserProfile(e),o=i.getGuildMemberProfile(e,t);return null==s||null==l?null:u(l,o)}"
-    }
+    "exports": "/assets/33c15f610f6071641c26.svg"
 }

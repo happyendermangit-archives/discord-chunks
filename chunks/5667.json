@@ -1,0 +1,21 @@
+{
+    "exports": {
+        "CaretPosition": {
+            "TOP_CENTER": "caretTopCenter",
+            "TOP_RIGHT": "caretTopRight",
+            "TOP_LEFT": "caretTopLeft",
+            "BOTTOM_CENTER": "caretBottomCenter",
+            "BOTTOM_LEFT": "caretBottomLeft",
+            "LEFT_CENTER": "caretLeftCenter",
+            "LEFT_TOP": "caretLeftTop",
+            "RIGHT_CENTER": "caretRightCenter"
+        },
+        "ButtonLayout": {
+            "0": "ADJACENT",
+            "1": "STACKED",
+            "ADJACENT": 0,
+            "STACKED": 1
+        },
+        "default": "function p(e){let{className:t,header:n,headerClassName:l,content:i,contentClassName:a,buttonCTA:s,secondaryButtonCTA:u,onClick:p,onSecondaryClick:h,onComponentMount:E,asset:g,markAsDismissed:C,caretPosition:S=\"caretTopCenter\",buttonLayout:T=0}=e;o.useEffect(()=>{null==E||E()},[]);let v=null!=u;return(0,r.jsxs)(\"div\",{className:d(t,m.upsellTooltipWrapper,m[S]),children:[g,null==n?null:(0,r.jsx)(c.Heading,{className:d(l,m.upsellTooltipHeader),variant:\"heading-md/semibold\",children:n}),(0,r.jsx)(c.Text,{color:\"always-white\",className:d(a,m.content),variant:\"text-sm/normal\",children:i}),null!=s||v?(0,r.jsxs)(\"div\",{className:d(m.upsellButtonsContainer,{[m.upsellButtonsAdjacent]:0===T,[m.upsellButtonsStacked]:1===T}),children:[v?(0,r.jsx)(c.Button,{color:c.Button.Colors.BRAND,onClick:()=>{null==h||h(),null==C||C(f.ContentDismissActionType.SECONDARY)},children:u}):null,null==s?null:(0,r.jsx)(c.Button,{className:d({[m.fullWidth]:!v}),color:c.Button.Colors.BRAND,look:c.Button.Looks.INVERTED,onClick:e=>{p(e),null==C||C(f.ContentDismissActionType.PRIMARY)},children:s})]}):null]})}"
+    }
+}

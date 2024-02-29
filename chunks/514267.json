@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getDesktopSourceMetadata": "function d(){let e,t,n,r,a;let o=i.default.getGoLiveSource();if(null!=o&&(e=o.quality.resolution,t=o.quality.frameRate,null!=o.desktopSource)){n=o.desktopSource.soundshareSession;let e=null!=o.desktopSource.sourcePid?s.default.getGameForPID(o.desktopSource.sourcePid):null;r=e?.name??null,a=e?.id??null}return{video_input_resolution:e,video_input_frame_rate:t,soundshare_session:n,share_game_name:r,share_game_id:a}}",
-        "trackWithOverlayMetadata": "function l(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],s=r.default.getGame();switch(t={...t,overlay_game_name:null!=s?s.name:\"Unknown Game\",overlay_app_id:null!=s?s.id:null},e){case u.AnalyticEvents.VOICE_CHANNEL_SELECTED:case u.AnalyticEvents.SETTINGS_PANE_VIEWED:case u.AnalyticEvents.GUILD_VIEWED:case u.AnalyticEvents.CHANNEL_OPENED:return(0,o.trackWithMetadata)(e,t,n);default:return a.default.track(e,t,{flush:n})}}"
-    }
-}

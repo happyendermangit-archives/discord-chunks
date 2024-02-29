@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "StaffPTOBar": "()=>(0,i.jsxs)(\"div\",{className:p.bar,children:[f.default.Messages.STAFF_PTO_NOTICE,(0,i.jsx)(s.Clickable,{className:p.closeButton,onClick:()=>{let e=u.default.getChannelId();if(null==e)return;let t=r.default.getChannel(e);null!=t&&t.isPrivate()&&!m.has(t.getRecipientId())&&(m.add(t.getRecipientId()),E.emitChange())},children:(0,i.jsx)(c.default,{className:p.closeIcon})})]})",
-        "useShouldShowPTONotice": "e=>(0,a.useStateFromStores)([o.default,d.default,E],()=>{let t=d.default.getCurrentUser();if(null==t||!t.isStaff()||!e.isDM())return!1;let n=d.default.getUser(e.getRecipientId());if(!n?.isStaff())return!1;let i=o.default.getNicknames(n.id).some(e=>e.endsWith(\"[PTO]\")||e.endsWith(\"[OOO]\"));return i?!E.hasId(n.id)&&i:(m.delete(n.id)&&E.emitChange(),!1)})"
-    }
-}

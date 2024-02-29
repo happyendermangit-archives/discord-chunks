@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "parseDtstart": "function d(t){var e={},r=/DTSTART(?:;TZID=([^:=]+?))?(?::|=)([^;\\s]+)/i.exec(t);if(!r)return e;var n=r[1],i=r[2];return n&&(e.tzid=n),e.dtstart=(0,o.untilStringToDate)(i),e}",
-        "parseString": "function u(t){var e=t.split(\"\\n\").map(y).filter(function(t){return null!==t});return(0,n.__assign)((0,n.__assign)({},e[0]),e[1])}"
-    }
-}

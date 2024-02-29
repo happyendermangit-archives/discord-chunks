@@ -1,0 +1,14 @@
+{
+    "exports": {
+        "default": {
+            "attachmentLink": {
+                "order": 15.5,
+                "requiredFirstCharacters": [
+                    "h"
+                ],
+                "match": "match(e){let t=i.exec(e);if(null!==t){let{enabled:e}=u.getCurrentConfig({location:\"markup\"});if(!e)return null}return t}",
+                "parse": "parse(e,t,n){var l;let r=e[0],a=e[1];return{type:\"attachmentLink\",content:[{type:\"text\",content:l=a}],attachmentUrl:r,attachmentName:l}}"
+            }
+        }
+    }
+}

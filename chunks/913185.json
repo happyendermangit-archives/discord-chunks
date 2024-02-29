@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class x extends n.PureComponent{static #e=this.Sizes=R;static #t=this.defaultProps={size:R.LARGE,textScale:1,showBadge:!1,showTooltip:!1,active:!1,tooltipPosition:\"top\",badgeStrokeColor:u.default.unsafe_rawColors.WHITE_500.css,animate:!1};render(){return(0,r.jsx)(v,{...this.props})}}"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "class s extends i.default{constructor(e){super(e),this.type=r.CollectiblesItemType.PROFILE_EFFECT}static fromServer(e){return new s({...super.fromServer(e),...e})}}",
-        "isProfileEffectRecord": "e=>e instanceof s"
-    }
-}

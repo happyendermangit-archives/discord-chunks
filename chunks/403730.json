@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){s.default.track(l.AnalyticEvents.OPEN_MODAL,{type:l.AnalyticsSections.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,location:e}),(0,a.openModalLazy)(async()=>{let{default:e}=await n.el(\"403730@595:636\").then(n.bind(n,\"193669\"));return t=>(0,i.jsx)(e,{...t})})}"
-    }
-}

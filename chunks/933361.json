@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function h(e){let{onComplete:t,onDMCheckItOutClick:n,markAsDismissed:a,isDM:s}=e;return(0,i.jsx)(l.Popout,{spacing:0,shouldShow:!0,position:\"top\",align:\"center\",renderPopout:e=>(0,i.jsx)(m,{...e,onComplete:()=>{t(),a(d.ContentDismissActionType.USER_DISMISS)},onDMCheckItOutClick:()=>{n(),t(),a(d.ContentDismissActionType.TAKE_ACTION)},isDM:s}),onRequestClose:()=>void 0,closeOnScroll:!1,ignoreModalClicks:!0,children:()=>(0,i.jsx)(\"div\",{className:f.popoutTarget})})}",
-        "getSeasonalGiftingBody": "function p(e){return e||!(s.isMobile||s.isTablet)?c.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY:c.default.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){return null!=e&&e.type===i.ActivityTypes.PLAYING}"
-    }
-}

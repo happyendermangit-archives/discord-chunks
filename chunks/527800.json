@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t,r,a){var o=this;o.sequenceLevels[e]=0;function i(t){var i;o.fireCallback(r,t,e),\"keyup\"!==a&&(i=n(\"619820\"),o.ignoreNextKeyup=i(t)),setTimeout(function(){o.resetSequences()},10)}for(var u=0;u<t.length;++u){var s=u+1===t.length?i:function(t){return function(){o.nextExpectedAction=t,++o.sequenceLevels[e],o.resetSequenceTimer()}}(a||o.getKeyInfo(t[u+1]).action);o.bindSingle(t[u],s,a,e,u)}}"
-}

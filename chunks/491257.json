@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t,n,r){t=t||\"&\",n=n||\"=\";var a={};if(\"string\"!=typeof e||0===e.length)return a;var o=/\\+/g;e=e.split(t);var i=1e3;r&&\"number\"==typeof r.maxKeys&&(i=r.maxKeys);var u=e.length;i>0&&u>i&&(u=i);for(var s=0;s<u;++s){var l,c,d,f,p,h,m=e[s].replace(o,\"%20\"),y=m.indexOf(n);if(y>=0?(d=m.substr(0,y),f=m.substr(y+1)):(d=m,f=\"\"),p=decodeURIComponent(d),h=decodeURIComponent(f),l=a,c=p,Object.prototype.hasOwnProperty.call(l,c))Array.isArray(a[p])?a[p].push(h):a[p]=[a[p],h];else a[p]=h}return a}"
-}

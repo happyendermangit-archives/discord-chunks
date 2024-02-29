@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useExplicitContentSettingOrDefault": "()=>{let e=(0,i.useStateFromStoresObject)([s.default],()=>s.default.settings.textAndImages?.explicitContentSettings??(0,l.getExplicitContentSettingOrDefault)());return{explicitContentGuilds:e?.explicitContentGuilds===void 0||e?.explicitContentGuilds===a.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION?(0,l.resolveDefaultSetting)():e.explicitContentGuilds,explicitContentNonFriendDm:e?.explicitContentNonFriendDm===void 0||e?.explicitContentNonFriendDm===a.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION?(0,l.resolveDefaultSetting)(!0):e.explicitContentNonFriendDm,explicitContentFriendDm:e?.explicitContentFriendDm===void 0||e?.explicitContentFriendDm===a.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION?(0,l.resolveDefaultSetting)(!0,!0):e.explicitContentFriendDm}}"
-    }
-}

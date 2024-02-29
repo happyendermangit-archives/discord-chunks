@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function f(e){let{onPlay:t,className:n,inactive:s}=e,f=a.useRef(null),p=(0,i.jsx)(\"div\",{className:c.iconWrapper,ref:f,children:(0,i.jsx)(u.default,{className:l()(c.icon)})});return(0,i.jsx)(o.MessagesInteractionContext.Consumer,{children:e=>s||null==t?(0,i.jsx)(\"div\",{className:c.cover,children:p}):(0,i.jsx)(r.Clickable,{className:l()(n,c.cover,{[c.active]:!e.disableInteractions}),onClick:t,tabIndex:0,\"aria-label\":d.default.Messages.PLAY,focusProps:{ringTarget:f},children:p})})}"
-    }
-}

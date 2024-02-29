@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "fetchBlockedDomainList": "function S(){return t.default.timeAsync(\"\\uD83D\\uDCBE\",\"fetchBlockedDomainList\",N)}"
+    }
+}

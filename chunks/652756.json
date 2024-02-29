@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getDragPreviewOffset": "function u(e,t,n,i,u){var s,l,c,d,f,p,h,m,y,v=\"IMG\"===(s=t).nodeName&&((0,r.isFirefox)()||!(null!==(l=document.documentElement)&&void 0!==l&&l.contains(s))),g=o(v?e:t),b={x:n.x-g.x,y:n.y-g.y},_=e.offsetWidth,w=e.offsetHeight,x=i.anchorX,D=i.anchorY;var k=(c=v,d=t,f=_,p=w,h=c?d.width:f,m=c?d.height:p,(0,r.isSafari)()&&c&&(m/=window.devicePixelRatio,h/=window.devicePixelRatio),{dragPreviewWidth:h,dragPreviewHeight:m}),M=k.dragPreviewWidth,S=k.dragPreviewHeight,T=u.offsetX,E=u.offsetY;return{x:0===T||T?T:new a.MonotonicInterpolant([0,.5,1],[b.x,b.x/_*M,b.x+M-_]).interpolate(x),y:0===E||E?E:(y=new a.MonotonicInterpolant([0,.5,1],[b.y,b.y/w*S,b.y+S-w]).interpolate(D),(0,r.isSafari)()&&v&&(y+=(window.devicePixelRatio-1)*S),y)}}",
-        "getEventClientOffset": "function i(e){return{x:e.clientX,y:e.clientY}}",
-        "getNodeClientOffset": "function o(e){var t=1===e.nodeType?e:e.parentElement;if(!t)return null;var n=t.getBoundingClientRect(),r=n.top;return{x:n.left,y:r}}"
-    }
-}

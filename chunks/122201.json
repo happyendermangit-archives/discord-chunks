@@ -1,5 +1,7 @@
 {
     "exports": {
-        "setDeveloperOptionSettings": "function r(e){i.default.dispatch({type:\"DEVELOPER_OPTIONS_UPDATE_SETTINGS\",settings:e})}"
+        "default": {
+            "longPressMessage": "Druk lang op Alt + pijl-omlaag of druk op Alt om het menu te openen"
+        }
     }
 }

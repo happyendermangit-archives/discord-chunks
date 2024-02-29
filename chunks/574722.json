@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function T(e){let t,{color:a,size:l,forcedIconColor:T,className:E,iconClassName:_}=e,[m,N]=(0,c.useStateFromStoresArray)([u.default],()=>[u.default.desaturateUserColors,u.default.saturation]),I=(0,i.useToken)(o.default.unsafe_rawColors.PRIMARY_300).hex(),h=(0,r.hex2int)(a??I),O=(0,r.int2hsl)(h,!1,m?N:null);t=null!=T?T:.3>(0,r.getDarkness)(h)?o.default.unsafe_rawColors.PRIMARY_630.css:o.default.unsafe_rawColors.WHITE_500.css;let C=l/8;return(0,n.jsx)(\"div\",{style:{background:O,width:l,height:l,borderRadius:l,lineHeight:`${l}px`},className:E,children:(0,n.jsx)(d.default,{color:t,className:s()(f.linkIcon,_),width:l-2*C,height:l-2*C,style:{margin:C}})})}"
-    }
-}

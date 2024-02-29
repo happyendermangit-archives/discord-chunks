@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "StringDecoder": "function n(t){var e;switch(this.encoding=function(t){var e=function(t){var e;if(!t)return\"utf8\";for(;;)switch(t){case\"utf8\":case\"utf-8\":return\"utf8\";case\"ucs2\":case\"ucs-2\":case\"utf16le\":case\"utf-16le\":return\"utf16le\";case\"latin1\":case\"binary\":return\"latin1\";case\"base64\":case\"ascii\":case\"hex\":return t;default:if(e)return;t=(\"\"+t).toLowerCase(),e=!0}}(t);if(\"string\"!=typeof e&&(r.isEncoding===i||!i(t)))throw Error(\"Unknown encoding: \"+t);return e||t}(t),this.encoding){case\"utf16le\":this.text=f,this.end=u,e=4;break;case\"utf8\":this.fillLast=o,e=4;break;case\"base64\":this.text=a,this.end=d,e=3;break;default:this.write=p,this.end=b;return}this.lastNeed=0,this.lastTotal=0,this.lastChar=r.allocUnsafe(e)}"
+    }
+}

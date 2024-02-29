@@ -1,0 +1,383 @@
+{
+    "exports": {
+        "SlateToolbarTypes": {
+            "0": "TOOLTIP",
+            "1": "STATIC",
+            "TOOLTIP": 0,
+            "STATIC": 1
+        },
+        "ChatInputTypes": {
+            "NORMAL": {
+                "analyticsName": "normal",
+                "attachments": true,
+                "autocomplete": {
+                    "addReactionShortcut": true,
+                    "forceChatLayer": true,
+                    "reactions": true
+                },
+                "commands": {
+                    "enabled": true
+                },
+                "drafts": {
+                    "type": 0,
+                    "commandType": 5,
+                    "autoSave": true
+                },
+                "emojis": {
+                    "button": true
+                },
+                "gifs": {
+                    "button": true,
+                    "allowSending": true
+                },
+                "gifts": {
+                    "button": true
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "showThreadPromptOnReply": true,
+                "stickers": {
+                    "button": true,
+                    "allowSending": true,
+                    "autoSuggest": true
+                },
+                "users": {
+                    "allowMentioning": true
+                },
+                "submit": {
+                    "button": true,
+                    "ignorePreference": false,
+                    "disableEnterToSubmit": false,
+                    "clearOnSubmit": true,
+                    "useDisabledStylesOnSubmit": true
+                },
+                "uploadLongMessages": true,
+                "upsellLongMessages": {
+                    "iconOnly": false
+                },
+                "showCharacterCount": true,
+                "sedReplace": true
+            },
+            "OVERLAY": {
+                "analyticsName": "overlay",
+                "autocomplete": {
+                    "addReactionShortcut": true,
+                    "forceChatLayer": true
+                },
+                "drafts": {
+                    "type": 0,
+                    "autoSave": true
+                },
+                "emojis": {
+                    "button": true
+                },
+                "gifs": {
+                    "button": true
+                },
+                "gifts": {
+                    "button": true
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "showThreadPromptOnReply": true,
+                "stickers": {
+                    "button": true,
+                    "allowSending": true
+                },
+                "users": {
+                    "allowMentioning": true
+                },
+                "submit": {
+                    "button": true,
+                    "ignorePreference": false,
+                    "disableEnterToSubmit": false,
+                    "clearOnSubmit": true,
+                    "useDisabledStylesOnSubmit": true
+                },
+                "upsellLongMessages": {
+                    "iconOnly": false
+                },
+                "showCharacterCount": true
+            },
+            "SIDEBAR": {
+                "analyticsName": "sidebar",
+                "attachments": true,
+                "autocomplete": {
+                    "addReactionShortcut": true
+                },
+                "commands": {
+                    "enabled": true
+                },
+                "disableAutoFocus": true,
+                "drafts": {
+                    "type": 0,
+                    "commandType": 5
+                },
+                "emojis": {
+                    "button": true
+                },
+                "gifs": {
+                    "allowSending": true
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "stickers": {
+                    "allowSending": true,
+                    "autoSuggest": true
+                },
+                "users": {
+                    "allowMentioning": true
+                },
+                "submit": {
+                    "button": true,
+                    "ignorePreference": false,
+                    "disableEnterToSubmit": false,
+                    "clearOnSubmit": true,
+                    "useDisabledStylesOnSubmit": true
+                },
+                "uploadLongMessages": true,
+                "showCharacterCount": true,
+                "upsellLongMessages": {
+                    "iconOnly": true
+                }
+            },
+            "EDIT": {
+                "analyticsName": "edit",
+                "drafts": {
+                    "type": 0
+                },
+                "emojis": {
+                    "button": true
+                },
+                "users": {
+                    "allowMentioning": true
+                },
+                "expressionPicker": {
+                    "onlyEmojis": true
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true
+                },
+                "showCharacterCount": true
+            },
+            "FORM": {
+                "analyticsName": "forum",
+                "drafts": {
+                    "type": 0
+                },
+                "emojis": {
+                    "button": true
+                },
+                "gifs": {
+                    "allowSending": true
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true,
+                    "allowEmptyMessage": true
+                },
+                "autocomplete": {
+                    "alwaysUseLayer": true,
+                    "small": true
+                },
+                "showCharacterCount": true
+            },
+            "VOICE_CHANNEL_STATUS": {
+                "analyticsName": "voice_channel_status",
+                "drafts": {
+                    "type": 0
+                },
+                "emojis": {
+                    "button": true
+                },
+                "expressionPicker": {
+                    "onlyEmojis": true
+                },
+                "permissions": {
+                    "requireSendMessages": false
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true,
+                    "allowEmptyMessage": true
+                },
+                "autocomplete": {
+                    "alwaysUseLayer": true,
+                    "small": true
+                },
+                "markdown": {
+                    "disableCodeBlocks": true,
+                    "disableBlockQuotes": true
+                },
+                "showCharacterCount": true
+            },
+            "THREAD_CREATION": {
+                "analyticsName": "thread_creation",
+                "attachments": true,
+                "drafts": {
+                    "type": 2
+                },
+                "emojis": {
+                    "button": true
+                },
+                "gifs": {
+                    "allowSending": true
+                },
+                "stickers": {
+                    "allowSending": true
+                },
+                "users": {
+                    "allowMentioning": true
+                },
+                "permissions": {
+                    "requireCreateTherads": true
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true,
+                    "button": true
+                },
+                "disableAutoFocus": true,
+                "showCharacterCount": true,
+                "hideAttachmentArea": true,
+                "upsellLongMessages": {
+                    "iconOnly": true
+                }
+            },
+            "PROFILE_BIO_INPUT": {
+                "analyticsName": "profile_bio_input",
+                "drafts": {
+                    "type": 0
+                },
+                "emojis": {
+                    "button": true
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true,
+                    "disableEnterToSubmit": true
+                },
+                "disableAutoFocus": true,
+                "showCharacterCount": true
+            },
+            "CUSTOM_GIFT": {
+                "analyticsName": "custom_gift_type",
+                "drafts": {
+                    "type": 0
+                },
+                "emojis": {},
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true,
+                    "disableEnterToSubmit": true
+                },
+                "disableAutoFocus": true,
+                "showCharacterCount": true
+            },
+            "RULES_INPUT": {
+                "analyticsName": "rules_input",
+                "drafts": {
+                    "type": 0
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "autocomplete": {
+                    "alwaysUseLayer": true,
+                    "small": true
+                },
+                "showCharacterCount": true
+            },
+            "CREATE_FORUM_POST": {
+                "analyticsName": "create_forum_post",
+                "attachments": true,
+                "drafts": {
+                    "type": 2
+                },
+                "gifs": {
+                    "allowSending": true
+                },
+                "stickers": {
+                    "allowSending": true
+                },
+                "users": {
+                    "allowMentioning": true
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true,
+                    "disableEnterToSubmit": true
+                },
+                "disableAutoFocus": true,
+                "hideAttachmentArea": true,
+                "uploadLongMessages": true
+            },
+            "CREATE_POLL": {
+                "analyticsName": "create_poll",
+                "attachments": true,
+                "drafts": {
+                    "type": 0
+                },
+                "emojis": {
+                    "button": true
+                },
+                "gifs": {
+                    "allowSending": true
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true,
+                    "disableEnterToSubmit": true
+                }
+            },
+            "FORUM_CHANNEL_GUIDELINES": {
+                "analyticsName": "forum_channel_guidelines",
+                "drafts": {
+                    "type": 0
+                },
+                "permissions": {
+                    "requireSendMessages": false
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true,
+                    "disableEnterToSubmit": true
+                },
+                "autocomplete": {
+                    "alwaysUseLayer": true,
+                    "small": true
+                },
+                "showCharacterCount": true,
+                "toolbarType": 1
+            },
+            "ATOMIC_REACTOR_REPLY_INPUT": {
+                "analyticsName": "atomic_reator_reply_input",
+                "drafts": {
+                    "type": 0
+                },
+                "permissions": {
+                    "requireSendMessages": true
+                },
+                "submit": {
+                    "useDisabledStylesOnSubmit": true,
+                    "disableEnterToSubmit": true
+                },
+                "disableAutoFocus": true,
+                "showCharacterCount": true
+            }
+        }
+    }
+}

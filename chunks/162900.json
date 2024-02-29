@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function e(t,s,i,u){let{length:n}=i,r=u,a=s;if(0===n)return 0;if(null==r)r=a;else if(r===a)return a;return(a+=t===l.FindResultDirections.UP?-1:1)<0||a>=n?e(t,a<0?n:-1,i,r):i[a].type===l.AutocompleterResultTypes.HEADER?e(t,a,i,r):a}"
-    }
-}

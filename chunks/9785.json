@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"\".concat(e.fieldLabel,\" verlagen\")",
+            "increase": "e=>\"\".concat(e.fieldLabel,\" verhogen\")",
+            "numberField": "Getalveld"
+        }
+    }
+}

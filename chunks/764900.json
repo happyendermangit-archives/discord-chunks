@@ -1,3 +1,0 @@
-{
-    "exports": "function c(t){n.call(this),this.hashMode=\"string\"==typeof t,this.hashMode?this[t]=this._finalOrDigest:this.final=this._finalOrDigest,this._final&&(this.__final=this._final,this._final=null),this._decoder=null,this._encoding=null}"
-}

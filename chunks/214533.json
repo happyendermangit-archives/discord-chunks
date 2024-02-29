@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){return e.replaceAll(i,\"\").trim().replaceAll(\" \",\"_\")}"
-    }
-}

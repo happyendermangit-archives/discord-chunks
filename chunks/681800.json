@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "clearCompletedHighFive": "function _(e,t,n){i.default.dispatch({type:\"HIGH_FIVE_COMPLETE_CLEAR\",firstUserId:e,secondUserId:t,channelId:n})}",
-        "completeHighFive": "function s(e,t,n,r){i.default.dispatch({type:\"HIGH_FIVE_COMPLETE\",waitingUserId:e,completingUserId:t,channelId:n,completingEmoji:r})}",
-        "queueHighFive": "function r(e,t,n){i.default.dispatch({type:\"HIGH_FIVE_QUEUE\",userId:t,channelId:n,emoji:e})}",
-        "removeHighFive": "function o(e,t){i.default.dispatch({type:\"HIGH_FIVE_REMOVE\",channelId:t,userId:e})}",
-        "setHighFiveEnabled": "function a(e){i.default.dispatch({type:\"HIGH_FIVE_SET_ENABLED\",enabled:e})}"
-    }
-}

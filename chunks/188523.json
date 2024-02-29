@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "NATIVE_ARRAY_BUFFER_VIEWS": true,
+        "TYPED_ARRAY_TAG": false,
+        "aTypedArray": "function(t){if(P(t))return t;throw TypeError(\"Target is not a typed array\")}",
+        "aTypedArrayConstructor": "function(t){if(a(t)&&(!w||l(F,t)))return t;throw TypeError(p(t)+\" is not a typed array constructor\")}",
+        "exportTypedArrayMethod": "function(t,r,n,e){if(f){if(n)for(var o in V){var i=c[o];if(i&&y(i.prototype,t))try{delete i.prototype[t]}catch(n){try{i.prototype[t]=r}catch(t){}}}(!M[t]||n)&&d(M,t,n?r:O&&R[t]||r,e)}}",
+        "exportTypedArrayStaticMethod": "function(t,r,n){var e,o;if(f){if(w){if(n){for(e in V)if((o=c[e])&&y(o,t))try{delete o[t]}catch(t){}}if(F[t]&&!n)return;try{return d(F,t,n?r:O&&F[t]||r)}catch(t){}}for(e in V)(o=c[e])&&(!o[t]||n)&&d(o,t,r)}}",
+        "getTypedArrayConstructor": "function(t){var r=A(t);if(s(r)){var n=E(r);return n&&y(n,B)?n[B]:W(r)}}",
+        "isView": "function(t){if(!s(t))return!1;var r=h(t);return\"DataView\"===r||y(V,r)||y(N,r)}",
+        "isTypedArray": "function(t){if(!s(t))return!1;var r=h(t);return y(V,r)||y(N,r)}",
+        "TypedArray": "function TypedArray() { [native code] }",
+        "TypedArrayPrototype": {}
+    }
+}

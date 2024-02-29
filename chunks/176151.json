@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "MAX_ACCOUNTS": 5,
-        "MULTIACCOUNT_TOOLTIP_SEEN_KEY": "multiaccount_cta_tooltip_seen",
-        "SWITCH_ACCOUNTS_MODAL_KEY": "switch-accounts-modal"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "async function l(e){let t;let n=r().createFile(!1),i=new Promise(e=>{n.onReady=e}),s=await e.arrayBuffer();for(let e of(s.fileStart=0,n.appendBuffer(s),n.flush(),await i,a()(null!=n.boxes,\"mp4boxInputFile.boxes should not be null after parsing\"),n.boxes))\"uuid\"===e.type&&(t=e.start);let l=e.slice(0,t,e.type),u=e.slice(t+4,t+8+16,e.type);return new Blob([l,new Uint8Array([0,0,0,24]),u],{type:e.type})}"
-    }
-}

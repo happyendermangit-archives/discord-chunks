@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function(s){let{enabled:a,highlight:o}=u();if(!a)return(0,i.jsx)(e,{...s});{var l,c;let e={...s};for(let[t,i]of Object.entries(n={foreground:\"colorClass\",color:\"color\",...null!=n?n:{}})){let n=s[t];if(null==n&&\"color\"===t&&(n=o?\"yellow\":\"currentColor\"),\"remove\"===i){delete e[t];continue}e[i]=n}return null!==(l=e.width)&&void 0!==l||(e.width=r.size),null!==(c=e.height)&&void 0!==c||(e.height=r.size),(0,i.jsx)(t,{...e})}}"
+    }
+}

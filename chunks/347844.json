@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function c(e){let{tabIndex:t,className:n,onClick:s,\"aria-expanded\":c,\"aria-controls\":f,focusProps:p}=e,[m,h]=a.useState(!1);function E(){h(!0)}function _(){h(!1)}return(0,i.jsx)(r.Button,{look:r.Button.Looks.BLANK,size:r.Button.Sizes.NONE,tabIndex:t,className:l()(d.activityButton,n),onClick:s,onMouseEnter:E,onMouseOver:E,onMouseLeave:_,onFocus:E,onBlur:_,\"aria-label\":u.default.Messages.SELECT_ACTIVITY,\"aria-expanded\":c,\"aria-controls\":f,focusProps:p,children:(0,i.jsx)(o.default,{className:l()(d.rocket,m?d.rocketHovered:d.rocketUnhovered)})})}"
-    }
-}

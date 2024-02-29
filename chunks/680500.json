@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r,n){try{return e(o(Object.getOwnPropertyDescriptor(t,r)[n]))}catch(t){}}"
-}

@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let t=(0,l.useStateFromStores)([a.default],()=>a.default.getCurrentUser()),n=(0,l.useStateFromStores)([i.default],()=>i.default.getRelationshipType(e.id)),r=e.isNonUserBot();return e.id!==(null==t?void 0:t.id)&&n!==s.RelationshipTypes.BLOCKED&&!r}"
+    }
+}

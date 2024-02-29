@@ -1,3 +1,5 @@
 {
-    "exports": "/assets/479c603f4fbbd6c780b0.svg"
+    "exports": {
+        "searchAllStickers": "e=>l.default.queryStickers([e],!0).map(e=>{let{sticker:t}=e;return t})"
+    }
 }

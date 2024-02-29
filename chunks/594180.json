@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(){let t=(0,u.useStateFromStores)([l.default],()=>l.default.hasFetchedSubscriptions());return i.useEffect(()=>{!t&&(0,r.fetchSubscriptions)()},[t]),t}"
-    }
-}

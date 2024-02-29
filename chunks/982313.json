@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getCountryCodeByAlpha2": "function o(e){let t=r.default.find(t=>t.alpha2===e);if(null!=t)return{name:t.name,code:t.phoneCountryCode,alpha2:t.alpha2}}",
-        "getDefaultCountryCode": "function u(){let e=function(e){let t=r.default.find(t=>t.name===e);if(null!=t)return{name:t.name,code:t.phoneCountryCode,alpha2:t.alpha2}}(\"United States\");return i()(e,\"Default country code cannot be missing.\"),e}",
-        "getI18NCountryName": "function l(e){return d[e]()}"
-    }
-}

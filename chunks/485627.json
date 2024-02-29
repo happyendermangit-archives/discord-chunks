@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "POST_CONNECTION_OPEN": "()=>this.onPostConnectionOpen()"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "onPostConnectionOpen": "()=>{if(function(){let e=r.experiment.getCurrentConfig({location:\"b9eb97_1\"},{autoTrackExposure:!1}).enabled;if(!e)return!1;let _=n.default.getCurrentUser();if(null==_||_.isPomelo()||!_.hasVerifiedEmailOrPhone())return!1;let E=(0,a.getForceMigration)(),o=t.default.get(E?\"lastSawPomeloMigration\":T);return!(null!=o&&Date.now()-o<6048e5)&&!0}()){let e=I.UUOneClickExperiment.getCurrentConfig({location:\"uu_one_click\"},{autoTrackExposure:!1}).enabled,_=(0,i.openPomeloModal)(s.PomeloEntrypoints.APP_START,e,!1);_&&t.default.set(T,Date.now())}}"
+        }
+    }
+}

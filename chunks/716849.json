@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "NON_SUBSCRIBER_SENTINEL": "nonSubscriber",
+        "maybeFetchPremiumLikelihood": "function E(e){let{enabled:t,useExpectedValue:i}=e.getCurrentConfig({location:\"443cca_1\"},{autoTrackExposure:!1}),r=o.default.shouldFetchPremiumLikelihood(),n=u.default.getCurrentUser();I(n,r,t,i)}",
+        "useMaybeFetchPremiumLikelihood": "function p(e){let{enabled:t,useExpectedValue:i}=e.useExperiment({location:\"443cca_2\"},{autoTrackExposure:!1}),s=(0,n.default)([o.default],()=>o.default.shouldFetchPremiumLikelihood()),l=(0,n.default)([u.default],()=>u.default.getCurrentUser());r.useEffect(()=>{I(l,s,t,i)},[l,s,t,i])}"
+    }
+}

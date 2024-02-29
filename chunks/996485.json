@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useDragDropManager": "function i(){var e=(0,r.useContext)(o.DndContext).dragDropManager;return(0,a.invariant)(null!=e,\"Expected drag drop context\"),e}"
-    }
-}

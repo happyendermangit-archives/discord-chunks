@@ -1,5 +1,0 @@
-{
-    "exports": "function(e,t){if(\"object\"!==r(e)||null===e)return e;var n=e[Symbol.toPrimitive];if(void 0!==n){var a=n.call(e,t||\"default\");if(\"object\"!==r(a))return a;throw TypeError(\"@@toPrimitive must return a primitive value.\")}return(\"string\"===t?String:Number)(e)}",
-    "paths": [],
-    "children": []
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getInitialStreamTarget": "function n(e,t){let a=e.find(e=>e.processId===t);return null==a?null:i(e,a)}",
-        "getStreamTarget": "function i(e,t){if(null==t)return null;if(t.applicationId===c)return function(e,t){let a=t.processPath.length>1?t.processPath[t.processPath.length-2]:0,d=e.filter(e=>e.applicationId===c&&e.processPath.includes(a)),n=d.find(e=>\"league of legends.exe\"===e.executableName);return void 0!==n?n:d.length>0?d[0]:null}(e,t);let a=new Map(e.map(e=>[e.processId,e])),n=t.processPath.map(e=>a.get(e)).find(e=>null!=e);if(null==n)return null;let i=e.map(e=>{let t=e.processPath.findIndex(e=>a.has(e));return -1===t?null:{application:e,rootedPath:e.processPath.slice(t)}}).filter(d.isNotNullish).filter(e=>e.rootedPath[0]===n.processId);i.sort((e,t)=>{let d=e.rootedPath.map(e=>a.get(e)).filter(e=>null!=e&&null!=e.windowHandle),n=o(t.rootedPath.map(e=>a.get(e)).filter(e=>null!=e&&null!=e.windowHandle),d);return 0!==n?n:o(t.rootedPath,e.rootedPath)});let f=i.find(e=>null!=e.application.windowHandle)??i[0];return null==f?null:f.application}"
-    }
-}

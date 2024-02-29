@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "MenuActionType": {
-            "UPDATE_ITEMS": "UPDATE_ITEMS",
-            "SET_FOCUS_PATH": "SET_FOCUS_PATH"
-        },
-        "default": "function u(e,t){switch(t.type){case o.ActionType.NAVIGATE_UP:return function(e,t){let n=s(e),i=_(e);if(null==i)return e;let r=(a(i,n)-1)%i.length;if(r<0&&(r=i.length-1),null==i[r])return e;let o={...e,focusPath:[...e.focusPath.slice(0,-1),i[r].key]};return{...o,focusIndex:l(o)}}(e,0);case o.ActionType.NAVIGATE_DOWN:return function(e,t){let n=s(e),i=_(e);if(null==i)return e;let r=(a(i,n)+1)%i.length;if(null==i[r])return e;let o={...e,focusPath:[...e.focusPath.slice(0,-1),i[r].key]};return{...o,focusIndex:l(o)}}(e,0);case o.ActionType.NAVIGATE_IN:return function(e,t){let n=s(e),i=_(e);if(null==i)return e;let r=i[a(i,n)],o=r?.children?.[0];if(null==o)return e;let E={...e,focusPath:[...e.focusPath,o.key]};return{...E,focusIndex:l(E)}}(e,0);case o.ActionType.NAVIGATE_OUT:return function(e,t){if(e.focusPath.length<=1)return e;let n={...e,focusPath:e.focusPath.slice(0,-1)};return{...n,focusIndex:l(n)}}(e,0);case\"UPDATE_ITEMS\":return function(e,t){let{items:n}=t,i={...e,items:n,focusPath:E(n,e.focusPath)};return{...i,focusIndex:l(i)}}(e,t);case\"SET_FOCUS_PATH\":return function(e,t){let{path:n}=t,i={...e,focusPath:E(e.items,n)};return{...i,focusIndex:l(i)}}(e,t);case o.ActionType.SELECT_FOCUSED_ITEM:break;default:throw Error(`Menu navigator was given an unhandled action ${t.type}`)}return e}"
-    }
-}

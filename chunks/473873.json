@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useButton": "function i(e,t){let n,{elementType:i=\"button\",isDisabled:u,onPress:s,onPressStart:l,onPressEnd:c,onPressUp:d,onPressChange:f,preventFocusOnPress:p,allowFocusWhenDisabled:h,onClick:m,href:y,target:v,rel:g,type:b=\"button\"}=e;n=\"button\"===i?{type:b,disabled:u}:{role:\"button\",tabIndex:u?void 0:0,href:\"a\"===i&&u?void 0:y,target:\"a\"===i?v:void 0,type:\"input\"===i?b:void 0,disabled:\"input\"===i?u:void 0,\"aria-disabled\":u&&\"input\"!==i?u:void 0,rel:\"a\"===i?g:void 0};let{pressProps:_,isPressed:w}=(0,o.usePress)({onPressStart:l,onPressEnd:c,onPressChange:f,onPress:s,onPressUp:d,isDisabled:u,preventFocusOnPress:p,ref:t}),{focusableProps:x}=(0,a.useFocusable)(e,t);h&&(x.tabIndex=u?-1:x.tabIndex);let D=(0,r.mergeProps)(x,_,(0,r.filterDOMProps)(e,{labelable:!0}));return{isPressed:w,buttonProps:(0,r.mergeProps)(n,D,{\"aria-haspopup\":e[\"aria-haspopup\"],\"aria-expanded\":e[\"aria-expanded\"],\"aria-controls\":e[\"aria-controls\"],\"aria-pressed\":e[\"aria-pressed\"],onClick:e=>{m&&(m(e),console.warn(\"onClick is deprecated, please use onPress\"))}})}}",
-        "useToggleButton": "function u(e,t,n){let{isSelected:a}=t,{isPressed:o,buttonProps:u}=i({...e,onPress:(0,r.chain)(t.toggle,e.onPress)},n);return{isPressed:o,buttonProps:(0,r.mergeProps)(u,{\"aria-pressed\":a})}}"
-    }
-}

@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "default": {
+            "filterTagIds": null,
+            "sortOrder": null,
+            "layout": null,
+            "setFilterTagIds": "e=>{this.filterTagIds=e}",
+            "setSortOrder": "e=>{this.sortOrder=e}",
+            "setLayout": "e=>{this.layout=e}",
+            "getFilterTagIdsAnalytics": "()=>null!=this.filterTagIds?Array.from(this.filterTagIds):[]",
+            "getSortOrderAnalytics": "e=>{var t,n;return null!==(n=this.sortOrder)&&void 0!==n?n:null===(t=a.default.getChannel(e))||void 0===t?void 0:t.getDefaultSortOrder()}",
+            "getLayoutAnalytics": "e=>{var t;let n=a.default.getChannel(e),r=null!==(t=this.layout)&&void 0!==t?t:null==n?void 0:n.getDefaultLayout(),u=(0,l.isForumActivityExperimentEnabled)(null==n?void 0:n.guild_id),d=u&&r===i.ForumLayout.LIST?s.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT:r;return d}"
+        }
+    }
+}

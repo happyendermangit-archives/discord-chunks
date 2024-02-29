@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "useActualStageSpeakerCount": "function d(e){return(0,a.useStateFromStores)([i.default],()=>i.default.getMutableParticipants(e,s.StageChannelParticipantNamedIndex.SPEAKER).filter(e=>e.type===s.StageChannelParticipantTypes.VOICE).length,[e])}",
-        "useSortedRequestToSpeakParticipants": "function o(e){let[t]=(0,a.useStateFromStores)([i.default],()=>[i.default.getMutableRequestToSpeakParticipants(e),i.default.getRequestToSpeakParticipantsVersion(e)],[e],r.isVersionEqual);return t}",
-        "useStageParticipants": "function l(e,t){let[n]=(0,a.useStateFromStores)([i.default],()=>[i.default.getMutableParticipants(e,t),i.default.getParticipantsVersion(e)],[e,t],r.isVersionEqual);return n}",
-        "useStageParticipantsCount": "function u(e,t){return(0,a.useStateFromStores)([i.default],()=>i.default.getParticipantCount(e,t),[e,t])}"
-    }
-}

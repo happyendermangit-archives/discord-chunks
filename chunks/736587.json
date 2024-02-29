@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "UPLOAD_ERROR_MODAL_KEY": "UPLOAD_ERROR_MODAL_KEY",
-        "default": "function f(e){let{title:t,help:n,showPremiumUpsell:i,transitionState:s,icons:f,fileSize:E,onClose:T}=e,I=(0,l.useUID)(),m=f??d.DEFAULT_FILE_UPLOAD_ICONS;return i?(0,r.jsx)(u.default,{transitionState:s,onClose:T,fileSize:E}):(0,r.jsx)(o.ModalRoot,{size:o.ModalSize.DYNAMIC,\"aria-labelledby\":I,transitionState:s,children:(0,r.jsx)(\"div\",{className:a()(_.uploadDropModal,_.error),children:(0,r.jsxs)(\"div\",{className:_.inner,children:[(0,r.jsx)(c.default,{icons:m}),(0,r.jsx)(\"div\",{id:I,className:_.title,children:t}),(0,r.jsx)(\"div\",{className:_.instructions,children:n})]})})})}",
-        "openUploadError": "function T(e){(0,s.openModal)(t=>(0,r.jsx)(f,{...t,...e}),{modalKey:E})}"
-    }
-}

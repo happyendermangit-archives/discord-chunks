@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getEmojiCaptionsForUser": "async function l(){a.default.dispatch({type:\"EMOJI_CAPTIONS_FETCH\"});try{let{body:e}=await i.default.get({url:s.Endpoints.EMOJI_CAPTIONS_GET}),t={};for(let n of e.items)t[n.emoji_id]=n.emoji_captions;a.default.dispatch({type:\"EMOJI_CAPTIONS_FETCH_SUCCESS\",emojiCaptions:t})}catch(t){var e;a.default.dispatch({type:\"EMOJI_CAPTIONS_FETCH_ERROR\",is4XXError:(e=t.body,e?.status>=400&&e?.status<=499)})}}",
-        "initiateEmojiInteraction": "function r(e){a.default.dispatch({type:\"EMOJI_INTERACTION_INITIATED\",interaction:e})}"
-    }
-}

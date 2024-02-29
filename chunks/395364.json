@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e,t){if(!(\"type\"in e))return null;if(\"timestamp\"===e.type)return(0,l.jsx)(o,{...t,timestamp:e.parsed});return null}"
+    }
+}

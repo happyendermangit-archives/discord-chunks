@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "BlindID": "class s{constructor(e){let t=r.from(e,\"hex\");this.key=crypto.subtle.importKey(\"raw\",t,{name:\"HMAC\",hash:\"SHA-512\"},!1,[\"sign\"])}async blind(e){let t=await this.key,n=new BigUint64Array([BigInt(e)]),a=await crypto.subtle.sign(\"HMAC\",t,n.buffer);return s.truncate(a).toString()}static truncate(e){let t=new Uint8Array(e);return t.length<8?(i.error(`Unexpected byte length ${t.length}`),BigInt(0)):BigInt(t[0])|BigInt(t[1])<<BigInt(8)|BigInt(t[2])<<BigInt(16)|BigInt(t[3])<<BigInt(24)|BigInt(t[4])<<BigInt(32)|BigInt(t[5])<<BigInt(40)|BigInt(t[6])<<BigInt(48)|BigInt(t[7])<<BigInt(56)}}"
-    }
-}

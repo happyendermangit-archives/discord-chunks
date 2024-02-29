@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "type": "function(e){let{attachment:t,className:n,onClick:s,onContextMenu:r}=e,[o,u]=a.useState(!1),[d,f]=a.useState(t.filename.split(\".\").slice(-1)[0]),{fileContents:p,bytesLeft:m,hadError:h}=function(e,t){let[n,i]=a.useState(!1),[s,l]=a.useState(null),[r,o]=a.useState(1);return a.useEffect(()=>{(async function n(){try{let n=await fetch(e,{headers:{Range:\"bytes=0-50000\",Accept:\"text/plain\"}}),a=(function(e){let t=\"utf-8\",n=e?.split(\"charset=\").slice(-1)[0]??t;try{return new TextDecoder(n)}catch(i){if(e?.startsWith(\"text\")||n.toLowerCase().includes(\"utf\"))return new TextDecoder(t);throw i}})(t).decode(await n.arrayBuffer()),s=n.headers.get(\"content-range\")??\"0\",r=n.headers.get(\"content-length\")??\"1\",u=parseInt(s.split(\"/\")[1])-parseInt(r);l(0===u?a:a.slice(0,-1)),o(u),i(!1)}catch(e){o(0),i(!0)}})()},[e,t]),{fileContents:s,bytesLeft:r,hadError:n}}(t.url,t.content_type);return h?(0,i.jsx)(c.default,{url:t.url,filename:t.filename,size:t.size,onClick:s,onContextMenu:r,className:n}):(0,i.jsx)(T,{attachment:t,fileContents:p,bytesLeft:m,expanded:o,setExpanded:u,language:d,setLanguage:f,className:l()(_.newMosaicStyle,n)})}",
-            "compare": "(e,t)=>e.attachment.id===t.attachment.id&&e.className===t.className"
-        }
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function u(){let e=(0,a.useStateFromStores)([r.default],()=>r.default.getId()),t=(0,a.useStateFromStores)([s.default],()=>s.default.getVoiceChannelId()),n=(0,a.useStateFromStores)([i.default],()=>i.default.getChannel(t),[t]),u=(0,a.useStateFromStores)([l.default],()=>null!=l.default.getBroadcast()),o=n?.isOwner(e)&&n?.isBroadcastChannel()||null==t;return!u&&o}",
-        "getCanStartBroadcast": "function o(){if(null!=l.default.getBroadcast())return!1;let e=s.default.getVoiceChannelId();if(null==e)return!0;let t=r.default.getId(),n=i.default.getChannel(e);return n?.isOwner(t)&&n?.isBroadcastChannel()}"
-    }
-}

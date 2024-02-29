@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{user:t,guildId:n,size:_,animateOnHover:f=!1,showPending:E=!1,showTryItOut:T=!1,avatarDecorationOverride:I}=e,[m,S]=r.useState(!1),C=(0,i.useStateFromStores)([a.default],()=>a.default.useReducedMotion),p=(0,i.useStateFromStores)([l.default],()=>l.default.isFocused()),P=(0,i.useStateFromStores)([o.default],()=>null!=n&&null!=t?o.default.getMember(n,t.id):null),[R,O]=(0,i.useStateFromStoresArray)([u.default],()=>[u.default.getCurrentUser()?.id,u.default.getUser(t?.id)]),N=null==P?O?.avatarDecoration:null===P.avatarDecoration?null:P.avatarDecoration??O?.avatarDecoration,{pendingAvatarDecoration:L}=(0,s.default)({isTryItOut:T,guildId:n}),g=p&&(m||!C&&!f),A=E&&void 0!==L&&void 0!==R&&R===t?.id,U=null!=n&&null===L,h=A?U?t?.avatarDecoration:L??N:N??t?.avatarDecoration,M=r.useMemo(()=>(0,c.getAvatarDecorationURL)({avatarDecoration:void 0!==I?I:h,canAnimate:g,size:_}),[h,g,_,I]),D=r.useCallback(()=>S(!0),[]);return{avatarPlaceholderSrc:d,avatarDecorationSrc:M,isAvatarDecorationAnimating:g,eventHandlers:{onMouseEnter:D,onMouseLeave:r.useCallback(()=>S(!1),[])}}}"
-    }
-}

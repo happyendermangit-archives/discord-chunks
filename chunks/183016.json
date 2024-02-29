@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class e{constructor(e,t){this.color=\"black\",this.font={style:\"normal\",weight:300,size:24,family:\"serif\",truncate:!1},this.canvas=e,this.assetMap=t}getCanvas(){return this.canvas}setColor(e){this.color=e}setFont(e){this.font.style=e.style??this.font.style,this.font.size=e.size??this.font.size,this.font.weight=e.weight??this.font.weight,this.font.family=e.family??this.font.family,this.font.truncate=e.truncate??this.font.truncate}getLoadedImage(e){a()(null!=this.assetMap,\"DiscordCanvas: An AssetStore has not been initialized.\");let t=this.assetMap.get(e);if(void 0===t){console.error(`DiscordCanvas: AssetMap hasn't loaded ${e}.  Make sure to load it before trying to render.`);return}return t}}"
-    }
-}

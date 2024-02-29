@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e){let{guild:t,scrollPosition:n,analyticsLocation:u,analyticsLocations:d,openWithoutBackstack:c=!1}=e,{analyticsLocations:f}=(0,s.default)();return(0,i.useCallback)(()=>{null!=t&&(0,l.initGuildIdentitySettings)(t,d??f),a.default.open(r.UserSettingsSections.PROFILE_CUSTOMIZATION,null!=t?o.ProfileCustomizationSubsection.GUILD:o.ProfileCustomizationSubsection.USER_PROFILE,{scrollPosition:n,analyticsLocation:u,analyticsLocations:d,openWithoutBackstack:c})},[t,n,u,d,c,f])}"
-    }
-}

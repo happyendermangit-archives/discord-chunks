@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "DragDropManagerImpl": "function o(e,t){var n=this;!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,o),this.isSetUp=!1,this.handleRefCountChange=function(){var e=n.store.getState().refCount>0;n.backend&&(e&&!n.isSetUp?(n.backend.setup(),n.isSetUp=!0):!e&&n.isSetUp&&(n.backend.teardown(),n.isSetUp=!1))},this.store=e,this.monitor=t,e.subscribe(this.handleRefCountChange)}"
-    }
-}

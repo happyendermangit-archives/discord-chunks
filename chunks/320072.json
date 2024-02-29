@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useGuildShopPreviewVisible": "function l(e,t){let n=(0,u.useIsEligibleForGuildShopPreview)(t),l=(0,r.useIsDismissibleContentDismissed)(i.DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW),f=(0,s.default)([o.default],()=>null!=e&&o.default.can(d.Permissions.ADMINISTRATOR,e)),_=e?.hasFeature(d.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)??!1,c=(0,a.useGuildEligibleForGuildProducts)(e?.id,\"useGuildShopPreviewVisible\"),g=[d.GuildFeatures.CREATOR_MONETIZABLE,d.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL,d.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED].some(t=>e?.hasFeature(t)===!0);return null!=e&&f&&!_&&g&&n&&c&&!l}"
-    }
-}

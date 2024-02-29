@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useTrackOpenPopout": "e=>{let{emojiId:t,currentGuildId:n,popoutData:c,nonce:f,demoMode:p}=e,{current:m}=i.useRef({guild_id:n,emoji_id:t,...(0,a.collectChannelAnalyticsMetadata)(s.default.getChannel(l.default.getChannelId(n)))});return i.useEffect(()=>{(0,o.initiateEmojiInteraction)(u.EmojiInteractionPoint.TrackOpenPopoutUsed),!p&&r.default.track(d.AnalyticEvents.OPEN_POPOUT,{type:c?.analyticsType??\"Standard Emoji Popout\",nonce:f,...m})},[]),m}"
-    }
-}

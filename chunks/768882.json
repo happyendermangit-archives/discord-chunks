@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "Preview": "e=>{let t;let n=(0,o.usePreview)();if(!n.display)return null;let{display:r,...u}=n;return t=\"children\"in e?\"function\"==typeof e.children?e.children(u):e.children:e.generator(u),a().createElement(i.Context.Provider,{value:u},t)}"
-    }
-}

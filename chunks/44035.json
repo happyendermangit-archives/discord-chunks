@@ -1,5 +1,0 @@
-{
-    "exports": "function(e,t){e.prototype=Object.create(t.prototype),e.prototype.constructor=e,r(e,t)}",
-    "paths": [],
-    "children": []
-}

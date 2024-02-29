@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "current": "function(e,t,n){if(e.setNativeProps)e.setNativeProps(t);else{if(!e.nodeType||void 0===e.setAttribute)return!1;var i;u.setValueForStyles(e,((i=t.style)&&(i.transform&&(i.transform=i.WebkitTransform=i.MozTransform=i.transform.map(c).join(\" \")),i.color&&(i.color=_(i.color)),i.backgroundColor&&(i.backgroundColor=_(i.backgroundColor))),i),n._reactInternalInstance)}}",
+        "transformStyles": "e=>e",
+        "inject": "function(t,e){r.current=t,r.transformStyles=e}"
+    }
+}

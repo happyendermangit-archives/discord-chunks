@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function r(e){let{node:t}=e,n=(0,a.default)(t);return(0,l.jsx)(i.Tooltip,{text:t.full,tooltipClassName:s.timestampTooltip,children:e=>(0,l.jsx)(\"span\",{...e,className:s.timestamp,children:n})})}"
+    }
+}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "popAllLayers": "function a(){s.default.dispatch({type:\"LAYER_POP_ALL\"})}",
-        "popLayer": "function r(){s.default.dispatch({type:\"LAYER_POP\"})}",
-        "pushLayer": "function i(e){s.default.dispatch({type:\"LAYER_PUSH\",component:e})}"
-    }
-}

@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "isFeatureSupportedOnPlatform": "()=>!1",
+            "getConfig": "getConfig(e){let t=r.getCurrentConfig({location:\"508d6c_1\"},{autoTrackExposure:e});return!this.isFeatureSupportedOnPlatform()&&(t.featureEnabled=!1),t}"
+        }
+    }
+}

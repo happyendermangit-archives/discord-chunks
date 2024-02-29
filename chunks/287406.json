@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "Deflate": "function u(t){if(!(this instanceof u))return new u(t);this.options=n.assign({level:-1,method:8,chunkSize:16384,windowBits:15,memLevel:8,strategy:0,to:\"\"},t||{});var e,s=this.options;s.raw&&s.windowBits>0?s.windowBits=-s.windowBits:s.gzip&&s.windowBits>0&&s.windowBits<16&&(s.windowBits+=16),this.err=0,this.msg=\"\",this.ended=!1,this.chunks=[],this.strm=new o,this.strm.avail_out=0;var a=r.deflateInit2(this.strm,s.level,s.method,s.windowBits,s.memLevel,s.strategy);if(0!==a)throw Error(c[a]);if(s.header&&r.deflateSetHeader(this.strm,s.header),s.dictionary){if(e=\"string\"==typeof s.dictionary?i.string2buf(s.dictionary):\"[object ArrayBuffer]\"===f.call(s.dictionary)?new Uint8Array(s.dictionary):s.dictionary,0!==(a=r.deflateSetDictionary(this.strm,e)))throw Error(c[a]);this._dict_set=!0}}",
-        "deflate": "function a(t,e){var s=new u(e);if(s.push(t,!0),s.err)throw s.msg||c[s.err];return s.result}",
-        "deflateRaw": "function(t,e){return(e=e||{}).raw=!0,a(t,e)}",
-        "gzip": "function(t,e){return(e=e||{}).gzip=!0,a(t,e)}"
-    }
-}

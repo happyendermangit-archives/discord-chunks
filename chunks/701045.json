@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "MenuCheckboxItem": "function c(e){let{color:t=\"default\",label:n,checked:o,subtext:c,disabled:d,isFocused:S,menuItemProps:A,action:N,className:O,focusedClassName:R}=e,C=r.useRef(null);return r.useEffect(()=>{S&&(0,E.ensureItemVisible)(C)},[S]),(0,i.jsxs)(s.Clickable,{innerRef:C,className:a()(T.item,T.labelContainer,I.MENU_ITEM_COLORS[t],O,{[T.disabled]:d,[T.focused]:S,[R??\"\"]:S}),onClick:d?void 0:N,...A,\"aria-checked\":o,\"aria-disabled\":d,children:[(0,i.jsxs)(\"div\",{className:T.label,children:[(0,_.renderSubnode)(n,e),null!=c&&(0,i.jsx)(\"div\",{className:T.subtext,children:c})]}),(0,i.jsx)(\"div\",{className:T.iconContainer,children:o?(0,i.jsx)(u.default,{className:T.icon,background:T.checkbox,foreground:T.check}):(0,i.jsx)(l.default,{className:T.icon,foreground:T.checkboxEmpty})})]})}"
-    }
-}

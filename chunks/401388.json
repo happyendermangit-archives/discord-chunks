@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "close": "function o(e){return s.default.dispatch({type:\"POPOUT_WINDOW_CLOSE\",key:e})}",
-        "open": "function r(e,t,n){return s.default.dispatch({type:\"POPOUT_WINDOW_OPEN\",key:e,features:{...i,...n},render:t})}",
-        "openChannelCallPopout": "function a(e){return s.default.dispatch({type:\"CHANNEL_CALL_POPOUT_WINDOW_OPEN\",channel:e})}",
-        "setAlwaysOnTop": "function u(e,t){return s.default.dispatch({type:\"POPOUT_WINDOW_SET_ALWAYS_ON_TOP\",alwaysOnTop:t,key:e})}"
-    }
-}

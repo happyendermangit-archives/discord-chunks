@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{channel:t,...n}=e,{isLoading:r}=(0,p.useEmbeddedActivityLifecycle)(t);return(0,i.jsx)(v,{channel:t,isLoading:r,...n})}"
-    }
-}

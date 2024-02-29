@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class o extends r.default.V8APIError{constructor(e,t){super(e,t,a.default.Messages.VIDEO_BACKGROUND_ERROR_UPLOAD);let n=this.getFieldErrors(\"asset\");null!=n&&n[0]?.code===\"BINARY_TYPE_MAX_SIZE\"&&(this.message=a.default.Messages.VIDEO_BACKGROUND_ERROR_UPLOAD_FILE_SIZE)}}"
-    }
-}

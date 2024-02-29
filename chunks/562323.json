@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{className:t,graphicPrimary:n,graphicSecondary:i,titlePrimary:r,titleSecondary:o,isFavorite:p=!1,emojiSubCategory:h=d.EmojiSubCategory.NONE}=e;return(0,l.jsxs)(\"div\",{className:a(f.inspector,t),children:[(0,l.jsx)(\"div\",{className:f.graphicPrimary,\"aria-hidden\":!0,children:n}),(0,l.jsxs)(\"div\",{className:f.textWrapper,children:[(0,l.jsxs)(s.Text,{className:f.titlePrimary,variant:\"text-md/semibold\",children:[p?(0,l.jsx)(u.default,{\"aria-label\":p?c.default.Messages.EMOJI_IS_FAVORITE_ARIA_LABEL.format({names:r}):void 0,width:15,height:15,className:f.favorite}):null,r]}),null!=o&&(0,l.jsx)(s.Text,{className:f.titleSecondary,variant:\"text-xs/normal\",children:o})]}),h===d.EmojiSubCategory.NONE?null!=i&&(0,l.jsx)(\"div\",{className:f.graphicSecondary,\"aria-hidden\":!0,children:i}):(0,l.jsx)(m,{emojiSubCategory:h})]})}"
+    }
+}

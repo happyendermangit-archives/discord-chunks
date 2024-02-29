@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){if(!r(e))return i(e);var t=a(e),n=[];for(var s in e)!(\"constructor\"==s&&(t||!o.call(e,s)))&&n.push(s);return n}"
-}

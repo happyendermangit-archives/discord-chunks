@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"Smanji \".concat(e.fieldLabel)",
+            "increase": "e=>\"Povećaj \".concat(e.fieldLabel)",
+            "numberField": "Polje broja"
+        }
+    }
+}

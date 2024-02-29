@@ -1,0 +1,214 @@
+{
+    "exports": {
+        "DesktopSources": {
+            "WINDOW": "window",
+            "SCREEN": "screen",
+            "CAMERA": "camera"
+        },
+        "MediaEngineContextTypes": {
+            "DEFAULT": "default",
+            "STREAM": "stream"
+        },
+        "DeviceTypes": {
+            "AUDIO_INPUT": "audioinput",
+            "AUDIO_OUTPUT": "audiooutput",
+            "VIDEO_INPUT": "videoinput"
+        },
+        "InputModes": {
+            "PUSH_TO_TALK": "PUSH_TO_TALK",
+            "VOICE_ACTIVITY": "VOICE_ACTIVITY"
+        },
+        "ConnectionStates": {
+            "DISCONNECTED": "DISCONNECTED",
+            "CONNECTING": "CONNECTING",
+            "CONNECTED": "CONNECTED",
+            "NO_ROUTE": "NO_ROUTE",
+            "ICE_CHECKING": "ICE_CHECKING",
+            "DTLS_CONNECTING": "DTLS_CONNECTING"
+        },
+        "StatsFilter": {
+            "1": "TRANSPORT",
+            "2": "OUTBOUND",
+            "4": "INBOUND",
+            "7": "ALL",
+            "TRANSPORT": 1,
+            "OUTBOUND": 2,
+            "INBOUND": 4,
+            "ALL": 7
+        },
+        "VideoToggleReason": {
+            "MANUAL_DISABLE": "video_manual_disable",
+            "MANUAL_ENABLE": "video_manual_enable",
+            "MANUAL_REENABLE": "video_manual_reenable",
+            "AUTO_DISABLE": "video_auto_disable",
+            "AUTO_ENABLE": "video_auto_enable",
+            "AUTO_DOWNGRADE": "video_auto_downgrade",
+            "AUTO_UPGRADE": "video_auto_upgrade,"
+        },
+        "DEFAULT_VOLUME": 100,
+        "DEFAULT_STREAM_VOLUME": 18,
+        "DEFAULT_VOICE_BITRATE": 64000,
+        "DEFAULT_SOUNDSHARE_VOICE_BITRATE": 128000,
+        "DEFAULT_DEVICE_ID": "default",
+        "DISABLED_DEVICE_ID": "disabled",
+        "DEFAULT_PRIORITY_SPEAKER_DUCKING": 0.1,
+        "DEFAULT_CALL_BITRATE": 600000,
+        "DEFAULT_CALL_MIN_BITRATE": 150000,
+        "DEFAULT_CALL_MAX_BITRATE": 10000000,
+        "PING_INTERVAL": 5000,
+        "VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT": 15000,
+        "VIDEO_QUALITY_FRAMERATE": 30,
+        "VIDEO_QUALITY_FRAMERATE_MUTED": 20,
+        "VIDEO_QUALITY_FRAMERATE_MUTED_2": 12,
+        "DESKTOP_BITRATE": 4000000,
+        "DESKTOP_BITRATE_ENHANCED": 8000000,
+        "MEDIA_SINK_WANTS_PROPERTIES": [
+            "remoteSinkWantsPixelCount",
+            "remoteSinkWantsMaxFramerate",
+            "encodingVideoMinBitRate",
+            "encodingVideoMaxBitRate",
+            "encodingVideoBitRate",
+            "streamParameters"
+        ],
+        "defaultVideoQualityOptions": {
+            "videoBudget": {
+                "width": 1280,
+                "height": 720,
+                "framerate": 30
+            },
+            "videoCapture": {
+                "width": 1280,
+                "height": 720,
+                "framerate": 30
+            },
+            "videoBitrate": {
+                "min": 150000,
+                "max": 2500000
+            },
+            "desktopBitrate": {
+                "min": 500000,
+                "max": 4000000,
+                "target": 600000
+            },
+            "videoBitrateFloor": 150000
+        },
+        "VIEWERSIDE_CLIP_KFI_MS": 60000,
+        "Features": {
+            "AUTO_ENABLE": "AUTO_ENABLE",
+            "ATTENUATION": "ATTENUATION",
+            "AUDIO_INPUT_DEVICE": "AUDIO_INPUT_DEVICE",
+            "AUDIO_OUTPUT_DEVICE": "AUDIO_OUTPUT_DEVICE",
+            "VOICE_PROCESSING": "VOICE_PROCESSING",
+            "QOS": "QOS",
+            "NATIVE_PING": "NATIVE_PING",
+            "LEGACY_AUDIO_SUBSYSTEM": "LEGACY_AUDIO_SUBSYSTEM",
+            "EXPERIMENTAL_AUDIO_SUBSYSTEM": "EXPERIMENTAL_AUDIO_SUBSYSTEM",
+            "DEBUG_LOGGING": "DEBUG_LOGGING",
+            "AUTOMATIC_VAD": "AUTOMATIC_VAD",
+            "VOICE_PANNING": "VOICE_PANNING",
+            "DIAGNOSTICS": "DIAGNOSTICS",
+            "VIDEO": "VIDEO",
+            "DESKTOP_CAPTURE": "DESKTOP_CAPTURE",
+            "DESKTOP_CAPTURE_FORMAT": "DESKTOP_CAPTURE_FORMAT",
+            "DESKTOP_CAPTURE_APPLICATIONS": "DESKTOP_CAPTURE_APPLICATIONS",
+            "SOUNDSHARE": "SOUNDSHARE",
+            "LOOPBACK": "LOOPBACK",
+            "VIDEO_HOOK": "VIDEO_HOOK",
+            "EXPERIMENTAL_SOUNDSHARE": "EXPERIMENTAL_SOUNDSHARE",
+            "WUMPUS_VIDEO": "WUMPUS_VIDEO",
+            "ELEVATED_HOOK": "ELEVATED_HOOK",
+            "HYBRID_VIDEO": "HYBRID_VIDEO",
+            "OPEN_H264": "OPEN_H264",
+            "EXPERIMENTAL_ENCODERS": "EXPERIMENTAL_ENCODERS",
+            "REMOTE_LOCUS_NETWORK_CONTROL": "REMOTE_LOCUS_NETWORK_CONTROL",
+            "SCREEN_PREVIEWS": "SCREEN_PREVIEWS",
+            "WINDOW_PREVIEWS": "WINDOW_PREVIEWS",
+            "AUDIO_DEBUG_STATE": "AUDIO_DEBUG_STATE",
+            "AEC_DUMP": "AEC_DUMP",
+            "DISABLE_VIDEO": "DISABLE_VIDEO",
+            "CONNECTION_REPLAY": "CONNECTION_REPLAY",
+            "SIMULCAST": "SIMULCAST",
+            "RTC_REGION_RANKING": "RTC_REGION_RANKING",
+            "DIRECT_VIDEO": "DIRECT_VIDEO",
+            "ELECTRON_VIDEO": "ELECTRON_VIDEO",
+            "MEDIAPIPE": "MEDIAPIPE",
+            "FIXED_KEYFRAME_INTERVAL": "FIXED_KEYFRAME_INTERVAL",
+            "SAMPLE_PLAYBACK": "SAMPLE_PLAYBACK",
+            "FIRST_FRAME_CALLBACK": "FIRST_FRAME_CALLBACK",
+            "REMOTE_USER_MULTI_STREAM": "REMOTE_USER_MULTI_STREAM",
+            "NOISE_SUPPRESSION": "NOISE_SUPPRESSION",
+            "NOISE_CANCELLATION": "NOISE_CANCELLATION",
+            "AUTOMATIC_GAIN_CONTROL": "AUTOMATIC_GAIN_CONTROL",
+            "CLIPS": "CLIPS",
+            "SPEED_TEST": "SPEED_TEST",
+            "IMAGE_QUALITY_MEASUREMENT": "IMAGE_QUALITY_MEASUREMENT",
+            "AMD_EXPERIMENTAL_RATE_CONTROL": "AMD_EXPERIMENTAL_RATE_CONTROL",
+            "GO_LIVE_HARDWARE": "GO_LIVE_HARDWARE",
+            "SCREEN_CAPTURE_KIT": "SCREEN_CAPTURE_KIT",
+            "CAPTURE_TIMEOUT_EXPERIMENTS": "CAPTURE_TIMEOUT_EXPERIMENTS",
+            "SCREEN_SOUNDSHARE": "SCREEN_SOUNDSHARE"
+        },
+        "MediaEngineImplementations": {
+            "NATIVE": "NATIVE",
+            "WEBRTC": "WEBRTC",
+            "DUMMY": "DUMMY"
+        },
+        "AudioSubsystems": {
+            "LEGACY": "legacy",
+            "STANDARD": "standard",
+            "EXPERIMENTAL": "experimental"
+        },
+        "Codecs": {
+            "OPUS": "opus",
+            "VP8": "VP8",
+            "VP9": "VP9",
+            "H264": "H264",
+            "RTX": "rtx",
+            "TEST": "TEST"
+        },
+        "SpeakingFlags": {
+            "0": "NONE",
+            "1": "VOICE",
+            "2": "SOUNDSHARE",
+            "4": "PRIORITY",
+            "NONE": 0,
+            "VOICE": 1,
+            "SOUNDSHARE": 2,
+            "PRIORITY": 4
+        },
+        "MediaTypes": {
+            "AUDIO": "audio",
+            "VIDEO": "video",
+            "SCREEN": "screen",
+            "TEST": "test"
+        },
+        "ResolutionTypes": {
+            "FIXED": "fixed",
+            "SOURCE": "source"
+        },
+        "ExperimentFlags": {
+            "VIDEOTOOLBOX_RATE_CONTROL": "videotoolbox_rate_control",
+            "SIGNAL_H265_SUPPORT": "signal_h265_support",
+            "SIGNAL_H265_DECODE_SUPPORT": "signal_h265_decode_support",
+            "SIGNAL_AV1_SUPPORT": "signal_av1_support",
+            "STREAMER_CLIP": "streamer_clip",
+            "VIEWER_CLIP": "viewer_clip"
+        },
+        "VideoQualityMode": {
+            "1": "AUTO",
+            "2": "FULL",
+            "AUTO": 1,
+            "FULL": 2
+        },
+        "NoiseCancellerError": {
+            "1": "CPU_OVERUSE",
+            "2": "FAILED",
+            "3": "VAD_CPU_OVERUSE",
+            "4": "INITIALIZED",
+            "CPU_OVERUSE": 1,
+            "FAILED": 2,
+            "VAD_CPU_OVERUSE": 3,
+            "INITIALIZED": 4
+        }
+    }
+}

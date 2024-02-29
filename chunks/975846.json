@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useAnimatedAvatarSrc": "function c(e){let{user:t,guildId:n,size:c,showPending:d=!1,animateOnHover:_=!1,avatarOverride:f}=e,[E,T]=r.useState(!1),I=(0,i.useStateFromStores)([a.default],()=>a.default.useReducedMotion),m=(0,i.useStateFromStores)([u.default],()=>u.default.isFocused())&&(E||!I&&!_),{pendingAvatar:S}=(0,l.default)({}),C=(0,i.useStateFromStores)([o.default],()=>null!=n&&null!=t?o.default.getMember(n,t.id):null),p=r.useMemo(()=>null!=t?(0,s.getPreviewAvatar)(d?f??S:void 0,C,t,{canAnimate:m,size:c}):void 0,[d,S,C,t,m,c,f]),P=r.useCallback(()=>T(!0),[]);return{avatarSrc:p,isAvatarAnimating:m,eventHandlers:{onMouseEnter:P,onMouseLeave:r.useCallback(()=>T(!1),[])}}}"
-    }
-}

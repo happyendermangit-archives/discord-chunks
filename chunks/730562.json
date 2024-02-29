@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "deletePrivateChannelIntegration": "function d(e,t){return a.default.delete(r.Endpoints.CHANNEL_INTEGRATION(e,t)).then(e=>{if(e.body?.message)throw Error(e.body.message)})}",
-        "fetchApplicationsShelf": "function o(){l.default.getApplicationsShelfFetchState()===l.FetchState.NOT_FETCHED&&(s.default.dispatch({type:\"APPLICATIONS_SHELF_FETCH_START\"}),a.default.get(r.Endpoints.APPLICATIONS_SHELF).then(e=>s.default.dispatch({type:\"APPLICATIONS_SHELF_FETCH_SUCCESS\",applications:e.body.applications})).catch(e=>s.default.dispatch({type:\"APPLICATIONS_SHELF_FETCH_FAIL\"})))}",
-        "fetchPrivateChannelIntegrations": "function u(e){let t=new i.default(1e3,5e3);s.default.dispatch({type:\"FETCH_PRIVATE_CHANNEL_INTEGRATIONS_START\",channelId:e}),a.default.get({url:r.Endpoints.CHANNEL_INTEGRATIONS(e),backoff:t,retries:10}).then(t=>{s.default.dispatch({type:\"FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS\",channelId:e,integrations:t.body})}).catch(()=>{s.default.dispatch({type:\"FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL\",channelId:e})})}"
-    }
-}

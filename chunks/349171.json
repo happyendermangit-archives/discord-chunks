@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(e){a.isPlatformEmbedded?r.default.focus(e):window.focus()}"
+    }
+}

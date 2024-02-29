@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],i=arguments.length>3?arguments[3]:void 0;if(Array.isArray(e)){let a=e;null!=t&&(a=[...a,null]);let s=null;for(let e of a){let a=d(e,t,n,i);if(null!=a)return{activity:e,activityText:a};e?.type===r.ActivityTypes.CUSTOM_STATUS&&null!=e.emoji&&(s=e)}return s?.emoji!=null?{activity:s,activityText:null}:null}return d(e,t,n,i)}"
-    }
-}

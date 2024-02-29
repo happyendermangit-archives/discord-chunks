@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t,n){var o;if(!r(t))throw TypeError(\"iterator must be a function\");arguments.length>=3&&(o=n),\"[object Array]\"===a.call(e)?i(e,t,o):\"string\"==typeof e?u(e,t,o):s(e,t,o)}"
-}

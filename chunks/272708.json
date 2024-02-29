@@ -1,0 +1,22 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {},
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 1,
+                "values": "function values() { [native code] }"
+            },
+            "handleFocusParticipant": "handleFocusParticipant(){let e=o.default.getChannelId();if(null!=e){var _,E;let t=n.default.getSelectedParticipantId(e),r=n.default.getVideoParticipants(e);null===(E=o.default.getRTCConnection())||void 0===E||E.setSelectedParticipant(null===(_=r.find(e=>e.id===t&&!e.localVideoDisabled))||void 0===_?void 0:_.id)}}"
+        }
+    }
+}

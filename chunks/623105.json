@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){var t=e.flags;return void 0===t&&!(\"flags\"in s)&&!a(e,\"flags\")&&i(s,e)?r(o,e):t}"
+}

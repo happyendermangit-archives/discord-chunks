@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{className:t,hangStatusActivity:n,animate:r=!0}=e;if(n?.state===l.HangStatusTypes.CUSTOM)return null!=n.emoji?(0,i.jsx)(a.ActivityEmoji,{emoji:n.emoji,className:t,hideTooltip:!0,animate:r}):null;let o=s.getHangStatusDetails(n)?.icon;return null!=o?(0,i.jsx)(\"img\",{src:o,alt:\"\",className:t??void 0}):null}"
-    }
-}

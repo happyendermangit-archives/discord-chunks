@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e,t){void 0===t&&(t=o());var n=(0,r.useRef)(i),a=n.current;return(0,r.useEffect)(function(){n.current=a}),n.current!==i&&t(e,n.current)||(a=e),a}"
-    }
-}

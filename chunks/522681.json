@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "fromSerializedGuildRole": "function a(e){e.permissions=i.default.deserialize(e.permissions)}",
-        "fromServerRole": "function s(e){return{id:e.id,name:e.name,permissions:i.default.deserialize(e.permissions),mentionable:e.mentionable,position:e.position,originalPosition:e.position,color:e.color,colorString:null!=e.color&&0!==e.color?(0,r.int2hex)(e.color):null,hoist:e.hoist,managed:e.managed,tags:e.tags,icon:e.icon,unicodeEmoji:e.unicode_emoji,flags:e.flags??0}}",
-        "sortClientRoles": "function _(e,t){if(null==t)return{};let n=t.length-1,i={};return t.sort((t,n)=>{let i=e===t.id?1/0:-(t.originalPosition??t.position),r=e===n.id?1/0:-(n.originalPosition??n.position);return i===r?o.default.compare(t.id,n.id):i<r?-1:i===r?0:1}).forEach((e,t)=>{e.position=n-t,i[e.id]=e}),i}",
-        "sortServerRoles": "function E(e,t){return null==t?{}:_(e,t.map(s))}"
-    }
-}

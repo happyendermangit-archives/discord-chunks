@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e){return null!=e&&(e.application_id===i.XBOX_ACTIVITY_APPLICATION_ID||e.platform===a.ActivityGamePlatforms.XBOX)}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(){let[t,e]=i.useState(null),n=i.useRef(null);return i.useEffect(()=>{null!=t&&null!=n.current&&n.current.scrollIntoView({behavior:\"smooth\"})},[t]),{purchaseError:t,setPurchaseError:e,purchaseErrorBlockRef:n}}"
-    }
-}

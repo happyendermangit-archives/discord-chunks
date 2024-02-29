@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "getMuted": "function r(){let{muted:e}=i.default.get(a)??{};return\"boolean\"!=typeof e&&(e=!1),e}",
-        "getVolume": "function s(){let{volume:e}=i.default.get(a)??{};return\"number\"!=typeof e&&(e=1),e=Math.min(1,Math.max(0,e))}",
-        "setMuted": "function o(e){i.default.set(a,{volume:s(),muted:e})}",
-        "setVolume": "function l(e){i.default.set(a,{volume:e,muted:r()})}"
-    }
-}

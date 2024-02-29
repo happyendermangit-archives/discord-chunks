@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){return a.HIGH_FIVE_EMOJIS.has(e.replace(r,\"\"))}"
-    }
-}

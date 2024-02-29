@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e,t){let n=(0,l.useStateFromStores)([r.default],()=>r.default.getVoiceChannelId()),u=(0,l.useStateFromStores)([s.default],()=>null!=n?s.default.getMode(n):null),d=(0,a.default)();return null!=e?e:u===o.ChannelModes.VOICE&&(0,i.isThemeLight)(d)?t?\"activeLight\":\"primaryLight\":t?\"white\":\"primaryDark\"}"
+    }
+}

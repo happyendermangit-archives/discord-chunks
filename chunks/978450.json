@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function u(e){let{channelId:t,applicationId:n,centerButton:u=!1,...o}=e,d=u?s.CenterControlButton:s.default;return(0,a.jsx)(d,{...o,onClick:()=>{(0,r.stopEmbeddedActivity)({channelId:t,applicationId:n})},iconComponent:i.default,label:l.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY})}"
+        "menu": "menu__8b01f"
     }
 }

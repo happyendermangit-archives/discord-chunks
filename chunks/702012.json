@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "fetchBroadcasterBuckets": "async function m(){let e=f.default.getUserIdsToValidate();try{let t=await a.default.get({url:h.Endpoints.USER_BROADCASTS,query:{user_ids:e}});if(t.ok&&null!=t.body){let n={};e.forEach(e=>{n[e]=t.body[e]??-1}),r.default.dispatch({type:\"BROADCASTER_BUCKETS_RECEIVED\",data:n})}else C(e)}catch(t){C(e)}}",
-        "getGameName": "function p(e){let t=e?.gameName??e?.name;return null!=t?t.trim():null}",
-        "maybeFetchBroadcastChannels": "async function S(){let e=f.default.getBroadcastsToValidateChannels().filter(e=>null==e.viewers).map(e=>e.channelId);if(0!==e.length)try{let t=await a.default.get({url:h.Endpoints.BROADCAST_CHANNELS,query:{channel_ids:e}});if(t.ok&&null!=t.body){let e=t.body,n={};e.forEach(e=>{let t=f.default.getBroadcastByChannel(e.id).userId,a=e.recipients??[];n[t]=a.map(e=>new l.default(e)).filter(e=>e.id!==t)}),r.default.dispatch({type:\"BROADCAST_VIEWERS_UPDATE\",viewers:n})}}catch(e){}}",
-        "startBroadcastForStream": "function g(e,t){if(null==t)return;let{canBroadcast:n}=c.default.getCurrentConfig({location:\"start_broadcast_for_stream\"},{autoTrackExposure:!1});if(!n)return;let{ownerId:a,channelId:l}=(0,s.decodeStreamKey)(e);if(null==a||null==l)return;let f=u.default.getId();if(a!==f)return;let h=u.default.getSessionId();if(null==h)return;let g=o.default.getChannel(l),E=null!=g&&g.isBroadcastChannel();if(null==g||a!==g.ownerId||!E)return;let C=function(e){let t=p(i.default.getGameForPID(e)),n=d.default.getGameByName(t);return n?.id??\"0\"}(t);null!=C&&!function(e){let t=u.default.getId(),n=u.default.getSessionId();null!=t&&null!=n&&r.default.dispatch({type:\"BROADCAST_START\",broadcast:e})}({sessionId:h,userId:f,applicationId:C,channelId:g.id,streamKey:e})}",
-        "stopBroadcast": "function E(){r.default.dispatch({type:\"BROADCAST_STOP\"})}"
-    }
-}

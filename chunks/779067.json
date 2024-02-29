@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function y(e){let{isCoachmark:t,markAsDismissed:n}=e,{analyticsLocations:o,AnalyticsLocationProvider:E}=(0,c.default)(T.default.APP_ICON_EDITOR),l=(0,s.useStateFromStores)([N.default],()=>N.default.getCurrentUser()),{isUpsellPreview:d,isEditorOpen:S,shouldEditorAnimate:A}=(0,s.useStateFromStoresObject)([h.default,I.default],()=>({isUpsellPreview:h.default.isUpsellPreview,isEditorOpen:h.default.isEditorOpen,shouldEditorAnimate:t&&!I.default.useReducedMotion}));r.useEffect(()=>{d&&R.default.track(D.AnalyticEvents.PREMIUM_UPSELL_VIEWED,{type:p.PremiumUpsellTypes.APP_ICON_UPSELL,location_stack:o})},[d,o]);let O=(0,u.default)(null,d?M:D.NOOP);return(r.useEffect(()=>{if(d&&!S)return M},[d,S]),null==l)?null:(0,i.jsx)(E,{children:(0,i.jsx)(\"div\",{ref:O,className:a()(P.editor,A?P.editorAnimate:null),children:(0,i.jsxs)(_.HeadingLevel,{children:[(0,i.jsx)(g,{markAsDismissed:n}),(0,i.jsx)(_.Scroller,{className:P.editorBody,children:(0,i.jsx)(L.default,{className:P.selectionGroup})}),(0,i.jsx)(G,{markAsDismissed:n,isCoachmark:t})]})})})}"
-    }
-}

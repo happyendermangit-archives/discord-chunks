@@ -1,3 +1,0 @@
-{
-    "exports": "function k(t){if(r=r||s(\"827664\"),!(this instanceof k))return new k(t);var e=this instanceof r;this._readableState=new S(t,this,e),this.readable=!0,t&&(\"function\"==typeof t.read&&(this._read=t.read),\"function\"==typeof t.destroy&&(this._destroy=t.destroy)),a.call(this)}"
-}

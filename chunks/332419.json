@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){let{user:t,guildId:n}=e,o=(0,i.useStateFromStores)([l.default],()=>l.default.getUserProfile(t.id)?.application,[t]),{applicationSubscriptionListingsShown:u}=(0,a.default)({applicationId:o?.id,groupListingId:o?.primarySkuId,guildId:n}),{activeSubscriptionListing:d,activeEntitlement:c,subscriptionGroupListing:f}=(0,a.useActiveSubscriptionListingForApplication)(o?.id,n),p=f?.sku_flags??0,m=(0,s.isApplicationUserSubscription)(p)||null!=n&&n!==r.ME&&(0,s.isApplicationGuildSubscription)(p),h=null!=c;return u?{botUpgraded:h,botUpgradeable:!h&&u&&m,activeSubscriptionListing:d,subscriptionGroupListing:f}:{botUpgraded:!1,botUpgradeable:!1,activeSubscriptionListing:null,subscriptionGroupListing:null}}"
-    }
-}

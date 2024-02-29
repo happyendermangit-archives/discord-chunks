@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){var e=-1,s=Array(t.size);return t.forEach(function(t,r){s[++e]=[r,t]}),s}"
-}

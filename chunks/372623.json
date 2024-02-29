@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>`Minska ${e.fieldLabel}`",
-            "increase": "e=>`\\xd6ka ${e.fieldLabel}`",
-            "numberField": "Nummerfält"
-        }
-    }
-}

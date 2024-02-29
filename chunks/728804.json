@@ -1,3 +1,0 @@
-{
-    "exports": "function(){var e,t,n,r={assert:function(e){if(!r.has(e))throw new i(\"Side channel does not contain \"+o(e))},get:function(r){if(u&&r&&(\"object\"==typeof r||\"function\"==typeof r)){if(e)return l(e,r)}else if(s){if(t)return f(t,r)}else if(n)return y(n,r)},has:function(r){if(u&&r&&(\"object\"==typeof r||\"function\"==typeof r)){if(e)return d(e,r)}else if(s){if(t)return h(t,r)}else if(n)return!!m(n,r);return!1},set:function(r,a){u&&r&&(\"object\"==typeof r||\"function\"==typeof r)?(!e&&(e=new u),c(e,r,a)):s?(!t&&(t=new s),p(t,r,a)):(!n&&(n={key:{},next:null}),v(n,r,a))}};return r}"
-}

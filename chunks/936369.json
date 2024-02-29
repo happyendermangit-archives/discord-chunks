@@ -1,3 +1,8 @@
 {
-    "exports": "/assets/1aaaef80c880671bacc6.svg"
+    "exports": {
+        "iconOnly": "iconOnly__84b06",
+        "premium": "premium__296ca",
+        "root": "root__03160",
+        "text": "text__003cc"
+    }
 }

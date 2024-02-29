@@ -1,0 +1,15 @@
+{
+    "exports": {
+        "default": {
+            "ascending": "vzestupně",
+            "ascendingSort": "e=>\"řazeno vzestupně podle sloupce \".concat(e.columnName)",
+            "columnSize": "e=>\"\".concat(e.value,\" pixelů\")",
+            "descending": "sestupně",
+            "descendingSort": "e=>\"řazeno sestupně podle sloupce \".concat(e.columnName)",
+            "resizerDescription": "Stisknutím klávesy Enter začnete měnit velikost",
+            "select": "Vybrat",
+            "selectAll": "Vybrat vše",
+            "sortable": "sloupec s možností řazení"
+        }
+    }
+}

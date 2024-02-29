@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "createMouseEvent": "function a(e,t,n){return new MouseEvent(e,{screenX:t,screenY:n,clientX:t,clientY:n,bubbles:!0,view:window})}",
+        "dispatchEventToPoint": "function l(e,t,n){let a=document.elementFromPoint(t,n);if(null==a)throw Error();a.dispatchEvent(e)}"
+    }
+}

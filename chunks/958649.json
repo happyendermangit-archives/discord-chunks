@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "ImageLoadingOverlay": "function E(e){let{readyState:t,aspectRatio:n,placeholder:E,placeholderVersion:T,placeholderStyle:I,children:m}=e,S=t===l.ImageReadyStates.LOADING,[C]=i.useState(()=>Date.now()),[p]=i.useState(S),[P,R]=i.useState(!1),O=i.useMemo(()=>{if(p&&1===T&&null!=E){let e=Uint8Array.from(atob(E),e=>e.charCodeAt(0)),t=(0,u.thumbHashToRGBA)(e,{detail:1,pop:1.1});return(0,s.rgbaToDataURL)(t.w,t.h,t.rgba)}},[p,E,T]);i.useEffect(()=>{let e=setTimeout(()=>{R(!0)},2e3);return()=>{clearTimeout(e)}},[p]);let N=t===l.ImageReadyStates.READY&&Date.now()-C<200,L=(0,a.useTransition)(S&&null!=O,N?_:d),g=(0,a.useTransition)(S&&P,f);return(0,r.jsxs)(\"div\",{className:c.loadingOverlay,style:{aspectRatio:n},children:[m,L((e,t)=>t&&(0,r.jsx)(a.animated.img,{style:{...I,...e},className:c.imagePlaceholder,src:O,alt:\"\"})),g((e,t)=>t&&(0,r.jsx)(a.animated.div,{style:e,className:c.imageLoadingOverlay,children:(0,r.jsx)(o.Spinner,{type:o.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,className:c.cornerLoadingSpinner})}))]})}"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "class s extends i.default{constructor(e){super(e),this.type=r.CollectiblesItemType.AVATAR_DECORATION,this.asset=e.asset,this.label=e.label}static fromServer(e){return new s({...super.fromServer(e),...e})}}",
-        "isAvatarDecorationRecord": "e=>e instanceof s"
-    }
-}

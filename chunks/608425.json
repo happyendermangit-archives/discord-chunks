@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "createBotMessage": "function E(e){let{messageId:t,channelId:n,content:a,embeds:l,loggingName:i}=e;return{id:t??d(),type:o.MessageTypes.DEFAULT,flags:o.MessageFlags.EPHEMERAL,content:a,channel_id:n,author:{id:o.LOCAL_BOT_ID,username:\"Clyde\",discriminator:o.NON_USER_BOT_DISCRIMINATOR,avatar:\"clyde\",bot:!0},attachments:[],embeds:l??[],pinned:!1,mentions:[],mention_channels:[],mention_roles:[],mention_everyone:!1,timestamp:new Date().toISOString(),state:o.MessageStates.SENT,tts:!1,loggingName:i}}",
-        "createNonce": "function d(){return u.default.fromTimestamp(Date.now())}",
-        "default": "function f(e){let{channelId:t,content:n,tts:a=!1,type:u=o.MessageTypes.DEFAULT,messageReference:f,allowedMentions:E,author:_,flags:h,nonce:g,poll:S}=e,m=[];if(u===o.MessageTypes.REPLY&&(l()(null!=f,\"Replies must have a message reference\"),null==E||E.replied_user)){let e=i.default.getMessageByReference(f);e?.state===i.ReferencedMessageState.LOADED&&m.push(c(e.message.author))}return null==_&&(_=s.default.getCurrentUser()),_ instanceof r.default&&(_=c(_)),l()(null!=_,\"createMessage: author cannot be undefined\"),{id:g??d(),type:u,content:n,channel_id:t,author:_,attachments:[],embeds:[],pinned:!1,mentions:m,mention_channels:[],mention_roles:[],mention_everyone:!1,timestamp:new Date().toISOString(),state:o.MessageStates.SENDING,tts:a,message_reference:f,flags:h,nonce:g,poll:S}}",
-        "userRecordToServer": "function c(e){let{id:t,username:n,avatar:a,discriminator:l,bot:i,globalName:r}=e;return{id:t,username:n,avatar:a,discriminator:l,bot:i,global_name:r}}"
-    }
-}

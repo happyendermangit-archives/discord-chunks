@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){let{animationData:t,className:n}=e,[o,u]=(0,a.useState)(0),d=(0,s.useStateFromStores)([l.default],()=>l.default.useReducedMotion);return(0,a.useEffect)(()=>{let e=o+1;e<t.length&&t[e]()},[o,t]),(0,i.jsx)(r.default,{importData:t[o],className:n,shouldAnimate:!d,versionKey:o,onComplete:()=>{o<t.length-1&&u(o+1)},loop:o===t.length-1})}"
-    }
-}

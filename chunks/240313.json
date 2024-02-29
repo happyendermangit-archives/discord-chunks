@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){let[t,n]=(0,i.useState)(()=>window.matchMedia(e).matches);return(0,i.useEffect)(()=>{let t=window.matchMedia(e),i=e=>{n(e?.matches)};return i(t),t.addListener(i),()=>t.removeListener(i)},[e]),t}"
-    }
-}

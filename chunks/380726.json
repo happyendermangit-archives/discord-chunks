@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "generateImageFromCanvas": "async function s(e){let{assetsToLoad:t,drawImage:s,exportConfigs:l}=e,r=await (0,i.loadAssetMap)(t),o=n(\"457738\").default,u=n(\"367562\").default,d=document.createElement(\"canvas\"),c=new o(d,r),f=new u,p=new a.default(c,f);s(p.canvas);let m=await p.export(l);return d.remove(),m}"
-    }
-}

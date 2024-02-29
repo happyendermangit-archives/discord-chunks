@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getPointFromPosition": "function a(e,t,n,a){let s=0;for(let l=0;l<n.length;l++){let r=n[l];if(null==r)continue;let o=s+r.length;if(a<=o){let n=i.PathUtils.child(t,l),r=i.EditorUtils.node(e,n)[0];if(i.TextUtils.isText(r))return{path:n,offset:Math.min(Math.max(a-s,0),r.text.length)}}s=o}let l=n.length-1;return{path:i.PathUtils.child(t,l),offset:n[l]?.length??0}}"
-    }
-}

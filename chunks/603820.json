@@ -1,0 +1,9 @@
+{
+    "exports": {
+        "default": {
+            "decrease": "e=>\"Diminuir \".concat(e.fieldLabel)",
+            "increase": "e=>\"Aumentar \".concat(e.fieldLabel)",
+            "numberField": "Campo de número"
+        }
+    }
+}

@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>`Sc\\u{103}dere ${e.fieldLabel}`",
-            "increase": "e=>`Cre\\u{219}tere ${e.fieldLabel}`",
-            "numberField": "Câmp numeric"
-        }
-    }
-}

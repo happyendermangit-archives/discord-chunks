@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "changeNickname": "(e,t,n,r)=>i.default.patch({url:s.Endpoints.GUILD_MEMBER_NICK(e,n),body:{nick:r},oldFormErrors:!0}).then(e=>{r=e.body.nick,a.default.sendBotMessage(t,null!=r&&\"\"!==r?l.default.Messages.COMMAND_NICK_SUCCESS.plainFormat({nick:r}):l.default.Messages.COMMAND_NICK_RESET)},e=>{403===e.status?a.default.sendBotMessage(t,l.default.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()):a.default.sendBotMessage(t,l.default.Messages.COMMAND_NICK_FAILURE)})"
-        }
-    }
-}

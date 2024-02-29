@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let t=a.default.profileEffects,[n,s]=i.useState(e),[l,r]=i.useState(a.default.getProfileEffectById(e)),o=t.reduce((t,n,i)=>(n.id===e&&(t=i),t),0),[,u]=i.useState(o),d=i.useRef(o);return i.useEffect(()=>{s(e),r(a.default.getProfileEffectById(e))},[e,t]),{increment:()=>{let e=(d.current+1)%t.length;d.current=e,u(e),s(t[e].id),r(t[e])},decrement:()=>{let e=0===d.current?t.length-1:d.current-1;d.current=e,u(e),s(t[e].id),r(t[e])},id:n,preset:l}}"
-    }
-}

@@ -1,0 +1,18 @@
+{
+    "exports": {
+        "default": {
+            "dateRange": "e=>\"\".concat(e.startDate,\" till \").concat(e.endDate)",
+            "dateSelected": "e=>\"\".concat(e.date,\" har valts\")",
+            "finishRangeSelectionPrompt": "Klicka för att avsluta val av datumintervall",
+            "maximumDate": "Sista tillgängliga datum",
+            "minimumDate": "Första tillgängliga datum",
+            "next": "Nästa",
+            "previous": "Föregående",
+            "selectedDateDescription": "e=>\"Valt datum: \".concat(e.date)",
+            "selectedRangeDescription": "e=>\"Valt intervall: \".concat(e.dateRange)",
+            "startRangeSelectionPrompt": "Klicka för att välja datumintervall",
+            "todayDate": "e=>\"Idag, \".concat(e.date)",
+            "todayDateSelected": "e=>\"Idag, \".concat(e.date,\" har valts\")"
+        }
+    }
+}

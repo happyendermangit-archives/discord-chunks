@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r,n,u){var a=e(t),c=o(n),f=c<0?a+c:c;if(f>=a||f<0)throw i(\"Incorrect index\");for(var p=new r(a),s=0;s<a;s++)p[s]=s===f?u:t[s];return p}"
-}

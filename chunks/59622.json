@@ -1,8 +1,3 @@
 {
-    "exports": {
-        "default": {
-            "isFeatureSupportedOnPlatform": "()=>!1",
-            "getConfig": "getConfig(e){let t=i.getCurrentConfig({location:\"508d6c_1\"},{autoTrackExposure:e});return!this.isFeatureSupportedOnPlatform()&&(t.featureEnabled=!1),t}"
-        }
-    }
+    "exports": "/assets/5613eabe065ea3096e84.svg"
 }

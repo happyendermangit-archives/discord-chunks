@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getHighestHoistedRole": "function(e,t){let[n,a]=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[i.default,s.default];if(null==e||null==t)return null;let o=n.getGuild(e);if(null==o)return null;let u=a.getMember(o.id,t);return null==u?null:r.default.getHighestHoistedRole(o,u)}"
-    }
-}

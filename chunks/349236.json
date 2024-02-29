@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "bottomBar": "bottomBar__1c464",
-        "container": "container__0bd59",
-        "prompt": "prompt__75afd",
-        "secondaryAction": "secondaryAction_ee4c30",
-        "textButton": "textButton_e53e02"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "dangerouslyCast": "function o(e,t){return Object.setPrototypeOf(e,t.prototype)}",
-        "exact": "function i(e){return e}",
-        "hasOwnProperty": "function r(e,t){return e.hasOwnProperty(t)}"
-    }
-}

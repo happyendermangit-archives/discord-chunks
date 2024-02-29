@@ -1,0 +1,24 @@
+{
+    "exports": {
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "CHANNEL_PRELOAD": "handleChannelPreload(e){let{channelId:_}=e;if((0,a.isStaticChannelRoute)(_))return;let E=n.default.getChannel(_);if(null!=E&&E.isForumLikeChannel()){let e=function(e){let _=[],E=e.defaultReactionEmoji;if((null==E?void 0:E.emojiId)!=null){var t,n;_.push(r.default.getEmojiURL({id:E.emojiId,animated:null!==(n=null===(t=o.default.getUsableCustomEmojiById(E.emojiId))||void 0===t?void 0:t.animated)&&void 0!==n&&n,size:I.EMOJI_SIZE_MAP.reaction}))}else(null==E?void 0:E.emojiName)!=null&&_.push(i.default.getURL(E.emojiName));return e.availableTags.forEach(e=>{null!=e.emojiId?_.push(r.default.getEmojiURL({id:e.emojiId,animated:!1,size:I.EMOJI_SIZE_MAP.reaction})):null!=e.emojiName&&_.push(i.default.getURL(e.emojiName))}),_}(E);e.forEach(e=>{if(null!=e&&0!==e.length){var _;_=e,new Promise(e=>{let E=t=>{let{data:{url:o}}=t;null==s||s.removeEventListener(\"message\",E),_===o&&e()};null==s||s.addEventListener(\"message\",E),null==s||s.postMessage({url:_})})}})}}"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleChannelPreload": "handleChannelPreload(e){let{channelId:_}=e;if((0,a.isStaticChannelRoute)(_))return;let E=n.default.getChannel(_);if(null!=E&&E.isForumLikeChannel()){let e=function(e){let _=[],E=e.defaultReactionEmoji;if((null==E?void 0:E.emojiId)!=null){var t,n;_.push(r.default.getEmojiURL({id:E.emojiId,animated:null!==(n=null===(t=o.default.getUsableCustomEmojiById(E.emojiId))||void 0===t?void 0:t.animated)&&void 0!==n&&n,size:I.EMOJI_SIZE_MAP.reaction}))}else(null==E?void 0:E.emojiName)!=null&&_.push(i.default.getURL(E.emojiName));return e.availableTags.forEach(e=>{null!=e.emojiId?_.push(r.default.getEmojiURL({id:e.emojiId,animated:!1,size:I.EMOJI_SIZE_MAP.reaction})):null!=e.emojiName&&_.push(i.default.getURL(e.emojiName))}),_}(E);e.forEach(e=>{if(null!=e&&0!==e.length){var _;_=e,new Promise(e=>{let E=t=>{let{data:{url:o}}=t;null==s||s.removeEventListener(\"message\",E),_===o&&e()};null==s||s.addEventListener(\"message\",E),null==s||s.postMessage({url:_})})}})}}"
+        }
+    }
+}

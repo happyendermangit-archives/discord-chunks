@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "isImageFile": "e=>null!=e&&n.test(e)",
+        "isAnimatedImageUrl": "e=>o(e,i)",
+        "isVideoUrl": "e=>o(e,I)",
+        "isVideoFile": "e=>null!=e&&I.test(e)"
+    }
+}

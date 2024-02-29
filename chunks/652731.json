@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){if(null==e.threadMetadata)return 0;let t=e.threadMetadata.autoArchiveDuration*i.default.Millis.MINUTE;return function(e){if(null==e.threadMetadata)return 0;let t=s.default.lastMessageId(e.id)??e.id,n=r.default.extractTimestamp(t);return Math.max(n,null!=e.threadMetadata.archiveTimestamp?new Date(e.threadMetadata.archiveTimestamp).getTime():0)}(e)+t}"
-    }
-}

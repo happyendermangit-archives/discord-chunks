@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "YearParser": "function h(){var e;!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,h);for(var t=arguments.length,n=Array(t),r=0;r<t;r++)n[r]=arguments[r];return c(s(e=p.call.apply(p,[this].concat(n))),\"priority\",130),c(s(e),\"incompatibleTokens\",[\"Y\",\"R\",\"u\",\"w\",\"I\",\"i\",\"e\",\"c\",\"t\",\"T\"]),e}"
-    }
-}

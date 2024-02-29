@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "loadAssetMap": "async function l(e){let t=new i,n=[];for(let l of Object.keys(e))n.push(t.loadRemoteImage(l,e[l]));return await Promise.all(n),t}"
+    }
+}

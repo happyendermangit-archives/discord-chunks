@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){if(n(t))return t;var e,s=\"default\";if(arguments.length>1&&(arguments[1]===String?s=\"string\":arguments[1]===Number&&(s=\"number\")),r&&(Symbol.toPrimitive?e=u(t,Symbol.toPrimitive):o(t)&&(e=Symbol.prototype.valueOf)),void 0!==e){var i=e.call(t,s);if(n(i))return i;throw TypeError(\"unable to convert exotic object to primitive\")}return\"default\"===s&&(c(t)||o(t))&&(s=\"string\"),f(t,\"default\"===s?\"number\":s)}"
-}

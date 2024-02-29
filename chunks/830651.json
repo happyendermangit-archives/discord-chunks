@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "reduce": "function l(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:s,t=arguments.length>1?arguments[1]:void 0,n=t.payload;switch(t.type){case r.BEGIN_DRAG:return u(u({},e),{},{itemType:n.itemType,item:n.item,sourceId:n.sourceId,isSourcePublic:n.isSourcePublic,dropResult:null,didDrop:!1});case r.PUBLISH_DRAG_SOURCE:return u(u({},e),{},{isSourcePublic:!0});case r.HOVER:return u(u({},e),{},{targetIds:n.targetIds});case a.REMOVE_TARGET:if(-1===e.targetIds.indexOf(n.targetId))return e;return u(u({},e),{},{targetIds:(0,o.without)(e.targetIds,n.targetId)});case r.DROP:return u(u({},e),{},{dropResult:n.dropResult,didDrop:!0,targetIds:[]});case r.END_DRAG:return u(u({},e),{},{itemType:null,item:null,sourceId:null,dropResult:null,didDrop:!1,isSourcePublic:null,targetIds:[]});default:return e}}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getUserMaxFileSize": "function s(e){if(null==e)return o.MAX_ATTACHMENT_SIZE;let t=i.default.getPremiumTypeOverride();return e.isStaff()&&t===a.UNSELECTED_PREMIUM_TYPE_OVERRIDE?o.MAX_STAFF_ATTACHMENT_SIZE:null!=e.premiumType&&(0,r.isPremium)(e)?a.PremiumUserLimits[e.premiumType].fileSize:o.MAX_ATTACHMENT_SIZE}"
-    }
-}

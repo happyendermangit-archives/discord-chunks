@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function d(t,e,i,a){n.default.track(u.AnalyticEvents.SPOTIFY_BUTTON_CLICKED,{type:t,source:a,is_premium:(0,l.isSpotifyPremium)(),party_id:r.includes(t)&&(null==i?void 0:i.party)!=null?i.party.id:null,other_user_id:e.id})}"
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(e,t){let{checkEnabled:n=r.default.getCurrentUser()?.mfaEnabled??!1,...s}=t??{};return new Promise((t,i)=>{((0,a.resolveThunk)(n)?u:d)({promiseFn:e,resolve:t,reject:i,...s})})}"
-    }
-}

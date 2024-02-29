@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "DnDKeyboardHelpBar": "function T(){let e=[{keybinds:[\"Spacebar\",\"Enter\"],name:u.default.Messages.DND_OPERATION_LABEL_DROP},{keybinds:[\"up\",\"down\"],name:u.default.Messages.DND_OPERATION_LABEL_MOVE},{keybinds:[\"ESC\"],name:u.default.Messages.DND_OPERATION_LABEL_CANCEL}],t=(0,a.useStateFromStores)([E.default],()=>E.default.useReducedMotion),n=(0,l.useDndMode)();return(0,o.useTransition)(n,{enter:{from:{opacity:0,y:t?0:80},to:{opacity:1,y:0}},leave:{opacity:0,y:t?0:80},config:o.config.stiff})((t,n)=>n?(0,i.jsx)(\"div\",{className:I.positioner,children:(0,i.jsx)(o.animated.div,{className:I.container,style:t,children:e.map((t,n)=>{let{keybinds:o,name:a}=t;return(0,i.jsxs)(r.Fragment,{children:[(0,i.jsx)(_.Text,{variant:\"text-md/semibold\",className:I.bindName,children:a}),o.map(e=>(0,i.jsx)(s.KeyCombo,{shortcut:e,className:I.shortcut},e)),n<e.length-1?(0,i.jsx)(\"span\",{className:I.separator}):null]},a)})})}):null)}"
-    }
-}

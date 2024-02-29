@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){return n.forwardRef(function(t,r){let i=n.useRef();return n.useImperativeHandle(r,()=>({triggerResize:()=>{i.current?.onResize()}})),(0,s.jsx)(l.default,{ref:i,children:r=>{let{width:n,height:l}=r;return(0,s.jsx)(e,{...t,width:n,height:l})}})})}"
-    }
-}

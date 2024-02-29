@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{showImage:t}=e,{usageWidth:n,descriptionWidth:s,sourceWidth:u}=a.useMemo(()=>({usageWidth:l().random(60,120),descriptionWidth:l().random(200,600),sourceWidth:l().random(45,90)}),[]);return(0,i.jsxs)(\"div\",{className:o.wrapper,children:[t?(0,i.jsx)(\"div\",{className:o.image}):null,(0,i.jsxs)(\"div\",{className:o.infoWrapper,children:[(0,i.jsx)(\"div\",{style:{maxWidth:(0,r.pxToRem)(n)},className:o.usageWrapper}),(0,i.jsx)(\"div\",{style:{maxWidth:(0,r.pxToRem)(s)},className:o.description})]}),(0,i.jsx)(\"div\",{style:{width:(0,r.pxToRem)(u)},className:o.source})]})}"
-    }
-}

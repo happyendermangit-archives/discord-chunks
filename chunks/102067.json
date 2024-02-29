@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function S(e){let t=f.AnimateEmoji.useSetting(),n={autoplay:null==e.autoplay?t:e.autoplay,allowAnimatedEmoji:t},a=__OVERLAY__?(0,d.useStateFromStores)([p.default],()=>p.default.isInstanceFocused()):(0,_.useIsWindowFocused)();return(0,i.jsx)(y,{...e,...n,isFocused:a})}"
-    }
-}

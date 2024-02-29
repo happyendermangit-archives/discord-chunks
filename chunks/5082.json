@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "getItemUnitPriceWithDiscount": "function L(e){let t=e.subscriptionPlanPrice;return e.discounts.forEach(r=>{let i=r.amount/e.quantity;t-=i}),t}",
-        "updateSubscriptionInvoicePreview": "async function E(e){let{subscriptionId:t,items:r,paymentSourceId:i,renewal:n,currency:a,applyEntitlements:_=!1,analyticsLocations:E,analyticsLocation:o,userDiscountOfferId:d}=e;null!=r&&(r=(0,f.coerceExistingItemsToNewItemInterval)(r));let R={items:r?.map(e=>{let{planId:t,...r}=e;return{...r,plan_id:t}}),payment_source_id:i,renewal:n,apply_entitlements:_,currency:a,user_discount_offer_id:d};try{let e=await l.default.patch({url:c.Endpoints.BILLING_SUBSCRIPTION_PREVIEW(t),query:{location:o,location_stack:E},body:R,oldFormErrors:!0});return s.default.createInvoiceFromServer(e.body)}catch(e){throw new u.BillingError(e)}}",
-        "useGetSubscriptionInvoice": "function I(e){let t=(0,i.useCallback)(()=>o(e),[JSON.stringify(e)]);return d(e,t)}",
-        "useSubscriptionInvoicePreview": "function R(e){if(\"subscriptionId\"in e&&null==e.subscriptionId){let{subscriptionId:t,...r}=e;e=r}let t=(0,i.useCallback)(()=>\"subscriptionId\"in e?E(e):\"items\"in e?_(e):null,[JSON.stringify(e)]);return d(e,t)}"
-    }
-}

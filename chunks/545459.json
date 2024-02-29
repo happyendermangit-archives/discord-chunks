@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "BAGGAGE_HEADER_NAME": "baggage",
-        "baggageHeaderToDynamicSamplingContext": "function l(t){if(!(0,r.isString)(t)&&!Array.isArray(t))return;let e={};if(Array.isArray(t))e=t.reduce((t,e)=>{let n=c(e);return{...t,...n}},{});else{if(!t)return;e=c(t)}let n=Object.entries(e).reduce((t,e)=>{let[n,r]=e;return n.match(o)&&(t[n.slice(s.length)]=r),t},{});return Object.keys(n).length>0?n:void 0}",
-        "dynamicSamplingContextToSentryBaggageHeader": "function u(t){if(!!t)return function(t){if(0!==Object.keys(t).length)return Object.entries(t).reduce((t,e,n)=>{let[r,a]=e,s=`${encodeURIComponent(r)}=${encodeURIComponent(a)}`,o=0===n?s:`${t},${s}`;return o.length>8192?((\"undefined\"==typeof __SENTRY_DEBUG__||__SENTRY_DEBUG__)&&i.logger.warn(`Not adding key: ${r} with val: ${a} to baggage header due to exceeding baggage size limits.`),t):o},\"\")}(Object.entries(t).reduce((t,e)=>{let[n,r]=e;return r&&(t[`${s}${n}`]=r),t},{}))}"
-    }
-}

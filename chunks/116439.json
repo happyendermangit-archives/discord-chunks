@@ -1,21 +1,6 @@
 {
     "exports": {
-        "ButtonLayout": {
-            "0": "ADJACENT",
-            "1": "STACKED",
-            "ADJACENT": 0,
-            "STACKED": 1
-        },
-        "CaretPosition": {
-            "TOP_CENTER": "caretTopCenter",
-            "TOP_RIGHT": "caretTopRight",
-            "TOP_LEFT": "caretTopLeft",
-            "BOTTOM_CENTER": "caretBottomCenter",
-            "BOTTOM_LEFT": "caretBottomLeft",
-            "LEFT_CENTER": "caretLeftCenter",
-            "LEFT_TOP": "caretLeftTop",
-            "RIGHT_CENTER": "caretRightCenter"
-        },
-        "default": "function m(e){let{className:t,header:n,headerClassName:i,content:a,contentClassName:s,buttonCTA:l,secondaryButtonCTA:u,onClick:m,onSecondaryClick:h,onComponentMount:E,asset:_,markAsDismissed:I,caretPosition:C=\"caretTopCenter\",buttonLayout:y=0}=e;o.useEffect(()=>{E?.()},[]);let S=null!=u;return(0,r.jsxs)(\"div\",{className:d()(t,p.upsellTooltipWrapper,p[C]),children:[_,null==n?null:(0,r.jsx)(c.Heading,{className:d()(i,p.upsellTooltipHeader),variant:\"heading-md/semibold\",children:n}),(0,r.jsx)(c.Text,{color:\"always-white\",className:d()(s,p.content),variant:\"text-sm/normal\",children:a}),null!=l||S?(0,r.jsxs)(\"div\",{className:d()(p.upsellButtonsContainer,{[p.upsellButtonsAdjacent]:0===y,[p.upsellButtonsStacked]:1===y}),children:[S?(0,r.jsx)(c.Button,{color:c.Button.Colors.BRAND,onClick:()=>{h?.(),I?.(f.ContentDismissActionType.SECONDARY)},children:u}):null,null==l?null:(0,r.jsx)(c.Button,{className:d()({[p.fullWidth]:!S}),color:c.Button.Colors.BRAND,look:c.Button.Looks.INVERTED,onClick:e=>{m(e),I?.(f.ContentDismissActionType.PRIMARY)},children:l})]}):null]})}"
+        "VideoButtonWrapper": "function f(e){let t=(0,l.getVideoButtonLabel)(e),{enabled:n,cameraUnavailable:r,onChange:s,onCameraUnavailable:d,hasPermission:c,children:f,channelLimitReached:h=!1,join:E}=e,p=(0,i.useAppContext)(),C=r?()=>d():()=>s(!e.enabled,p);return(0,a.jsx)(a.Fragment,{children:f({onClick:C,active:n,disabled:!n&&(!c||h),iconComponent:E||n?u.default:o.default,label:t,unavailable:r})})}",
+        "default": "function h(e){let{enabled:t,join:n,channel:r,onChange:i,onCameraUnavailable:l,cameraUnavailable:u,hasPermission:o,className:h,channelLimitReached:E,channelLimit:p,centerButton:C=!1,onPopoutClick:m,...S}=e,g=C?d.CenterControlButton:d.default;return(0,a.jsx)(f,{enabled:t,join:n,channel:r,onChange:i,onCameraUnavailable:l,cameraUnavailable:u,hasPermission:o,channelLimitReached:E,channelLimit:p,children:e=>{let{unavailable:n,...r}=e;return(0,a.jsx)(g,{...r,...S,isActive:t,className:s(h,{[c.fauxDisabled]:n}),onPopoutClick:m})}})}"
     }
 }

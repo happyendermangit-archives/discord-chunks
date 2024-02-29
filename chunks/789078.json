@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){return\"function\"!=typeof e.constructor||a(e)?{}:n(u(e))}"
+}

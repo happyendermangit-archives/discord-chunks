@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "FormLabel": "function l(e){let{children:t,className:n,disabled:r,required:l=!1,...u}=e;return(0,i.jsxs)(s.default,{tag:\"label\",color:s.default.Colors.HEADER_SECONDARY,className:o()(E.label,n,{[E.defaultMargin]:null==n,[E.disabled]:r}),...u,children:[t,l&&(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(\"span\",{className:E.required,\"aria-hidden\":!0,children:\"*\"}),(0,i.jsx)(a.HiddenVisually,{children:_.default.Messages.REQUIRED})]})]})}"
-    }
-}

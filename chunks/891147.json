@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class r{constructor(e,t){this.handleStoreChange=()=>{let e=i.default.getChangeSentinel();this.storeVersionHandled!==e&&(this.changeCallback(),this.storeVersionHandled=e)},this.stores=e,this.changeCallback=t}attach(e){let{stores:t}=this;t.forEach((t,n)=>{if(null==t)throw Error(`${e} tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded ${n} stores before error.`);t.addReactChangeListener(this.handleStoreChange)})}detach(){let{stores:e}=this;e.forEach(e=>e.removeReactChangeListener(this.handleStoreChange))}}"
-    }
-}

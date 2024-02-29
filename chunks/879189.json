@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "FocusLock": "function E(e){return _(e.containerRef),e.children}",
-        "useFocusLock": "function _(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=(0,o.useStateFromStores)([a.default],()=>a.default.keyboardModeEnabled),_=i.useRef(!1);return _.current=!n,(0,r.default)(e,{...t,disableReturnRef:_,attachTo:t.attachTo??s,returnRef:t.returnRef})}"
-    }
-}

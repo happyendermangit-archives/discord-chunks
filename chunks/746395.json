@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "OptionsReader": "function i(e,t){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,i),a(this,\"ownerDocument\",null),a(this,\"globalContext\",void 0),a(this,\"optionsArgs\",void 0),this.globalContext=e,this.optionsArgs=t}"
+    }
+}

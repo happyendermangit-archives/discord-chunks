@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e,t,n){void 0===t&&(t=!1),void 0===n&&(n=!1);var u=e.getBoundingClientRect(),s=1,l=1;t&&(0,r.isHTMLElement)(e)&&(s=e.offsetWidth>0&&(0,a.round)(u.width)/e.offsetWidth||1,l=e.offsetHeight>0&&(0,a.round)(u.height)/e.offsetHeight||1);var c=((0,r.isElement)(e)?(0,o.default)(e):window).visualViewport,d=!(0,i.default)()&&n,f=(u.left+(d&&c?c.offsetLeft:0))/s,p=(u.top+(d&&c?c.offsetTop:0))/l,h=u.width/s,m=u.height/l;return{width:h,height:m,top:p,right:f+h,bottom:p+m,left:f,x:f,y:p}}"
-    }
-}

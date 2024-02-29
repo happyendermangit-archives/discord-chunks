@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>{let{searchBarRef:t,selectedSurrogate:n,className:a,hasTabWrapper:s}=e,r=S.default.getURL(A+n),[o,u]=i.useState(!1),d=(0,h.default)(null,()=>u(!1)),c=i.useRef(null);return(0,l.jsxs)(\"div\",{ref:d,className:a,children:[(0,l.jsx)(m.Clickable,{innerRef:c,className:_.diversitySelectorButton,onClick:()=>{u(!0)},\"aria-label\":I.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,\"aria-haspopup\":!0,\"aria-expanded\":o,\"aria-controls\":N,tabIndex:o?-1:0,children:(0,l.jsx)(\"div\",{className:_.diversityEmojiItemImage,style:{backgroundImage:'url(\"'.concat(r,'\")')}})}),o?(0,l.jsx)(\"div\",{onKeyDown:e=>{e.keyCode===v.KeyboardKeys.ESCAPE&&(e.stopPropagation(),u(!1),null!=c.current&&c.current.focus())},children:(0,l.jsx)(R,{id:N,hasTabWrapper:s,selectedSurrogate:n,onClick:e=>{var n;(0,p.setDiversityColor)(e),u(!1),null===(n=t.current)||void 0===n||n.focus()}})}):null]})}"
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(e){let t=function(){let e=i.SoundboardSettings.getSetting();return(0,s.amplitudeToPerceptual)(e?.volume??100)/100}();return Math.min(e*t*Math.min(a.default.getOutputVolume()/100,1),1)}"
-    }
-}

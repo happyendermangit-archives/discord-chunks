@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class r{static #e=this.cache={};static has(e,t){return(e&t)!=0}static asBasicFlag(e){return i.default.asUintN(20,e)}static asBigFlag(e){return!Object.hasOwn(this.cache,e)&&(this.cache[e]=i.default.deserialize(e)),this.cache[e]}}"
-    }
-}

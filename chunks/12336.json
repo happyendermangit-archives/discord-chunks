@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){let t;let n=new Set,r=(e,r)=>{let a=\"function\"==typeof e?e(t):e;if(a!==t){let e=t;t=r?a:Object.assign({},t,a),n.forEach(n=>n(t,e))}},a=()=>t,o=function(e){let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:a,o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:Object.is;console.warn(\"[DEPRECATED] Please use `subscribeWithSelector` middleware\");let i=r(t);function u(){let n=r(t);if(!o(i,n)){let t=i;e(i=n,t)}}return n.add(u),()=>n.delete(u)},i={setState:r,getState:a,subscribe:(e,t,r)=>t||r?o(e,t,r):(n.add(e),()=>n.delete(e)),destroy:()=>n.clear()};return t=e(r,a,i),i}"
-    }
-}

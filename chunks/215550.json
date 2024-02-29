@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "default": {
+            "type": "function(e){let{emoji:t,size:n,surrogateCodePoint:a,allowAnimatedEmoji:r,\"aria-label\":o,isLocked:d}=e,p=(()=>{if(!t.useSpriteSheet){var e;let i=null==t.id?t.url:m.default.getEmojiURL({id:t.id,animated:r&&t.animated,size:48});return null!=i?(0,l.jsx)(c.default,{className:h.lockedEmoji,\"aria-label\":o,src:i,size:n,alt:null!==(e=t.allNamesString)&&void 0!==e?e:\"\"}):null}return(0,l.jsx)(\"div\",{className:s(h.emojiSpriteImage,{[h.lockedEmoji]:d}),style:C(t,a,n),children:(0,l.jsx)(u.HiddenVisually,{children:o})})})();return(0,l.jsxs)(i.Fragment,{children:[p,d?(0,l.jsx)(\"div\",{className:h.emojiLockIconContainer,children:(0,l.jsx)(f.default,{width:16,height:16,className:h.emojiLockIcon})}):null]})}",
+            "compare": null
+        }
+    }
+}

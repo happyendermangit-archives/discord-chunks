@@ -1,0 +1,325 @@
+{
+    "exports": {
+        "UseLegacyChatInput": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "UseRichChatInput": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ExpressionSuggestionsEnabled": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "IncludeStickersInAutocomplete": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "RenderSpoilers": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "UseThreadSidebar": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "QuietMode": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "EmojiPickerCollapsedSections": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "StickerPickerCollapsedSections": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "SoundboardPickerCollapsedSections": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ViewImageDescriptions": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ShowCommandSuggestions": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "AlwaysPreviewVideo": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "NotifyFriendsOnGoLive": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET": "0",
+        "NotificationCenterAckedBeforeId": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "InstallShortcutDesktop": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "InstallShortcutStartMenu": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "AllowActivityPartyPrivacyFriends": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "AllowActivityPartyPrivacyVoiceChannel": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "MessageRequestRestrictedGuildIds": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "MessageRequestRestrictedDefault": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "NonSpamRetrainingOptIn": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "DefaultGuildsRestricted": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "RestrictedGuildIds": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "FriendSourceFlagsSetting": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "RtcPanelShowVoiceStates": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ConvertEmoticons": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "MessageDisplayCompact": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "SoundboardSettings": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "DropsOptedOut": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "NativePhoneIntegrationEnabled": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "AfkTimeout": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ViewNsfwGuilds": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ViewNsfwCommands": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "DisableGamesTab": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "EnableTTSCommand": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ExplicitContentFilter": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "DmSpamFilterV2": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ShowCurrentGame": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "StatusSetting": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "StatusExpiresAtSetting": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "CustomStatusSetting": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "BroadcastAllowFriends": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "BroadcastAllowedGuildIds": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "BroadcastAllowedUserIds": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "BroadcastAutoBroadcast": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ClipsAllowVoiceRecording": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "InlineAttachmentMedia": {
+            "getSetting": "()=>{var i;let r=o.default.getState()[t];return null!==(i=null==r?void 0:r.settings[n])&&void 0!==i?i:e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting(),s=(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return null==e?void 0:e.settings[n]});return null!=s?s:r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "InlineEmbedMedia": {
+            "getSetting": "()=>{var i;let r=o.default.getState()[t];return null!==(i=null==r?void 0:r.settings[n])&&void 0!==i?i:e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting(),s=(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return null==e?void 0:e.settings[n]});return null!=s?s:r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "RenderEmbeds": {
+            "getSetting": "()=>{var i;let r=o.default.getState()[t];return null!==(i=null==r?void 0:r.settings[n])&&void 0!==i?i:e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting(),s=(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return null==e?void 0:e.settings[n]});return null!=s?s:r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "RenderReactions": {
+            "getSetting": "()=>{var i;let r=o.default.getState()[t];return null!==(i=null==r?void 0:r.settings[n])&&void 0!==i?i:e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting(),s=(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return null==e?void 0:e.settings[n]});return null!=s?s:r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "TimezoneOffset": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "DeveloperMode": {
+            "getSetting": "()=>{var i;let r=o.default.getState()[t];return null!==(i=null==r?void 0:r.settings[n])&&void 0!==i?i:e.getSetting()}",
+            "useSetting": "()=>{let r=e.useSetting(),s=(0,i.useStateFromStores)([o.default],()=>{let e=o.default.getState()[t];return null==e?void 0:e.settings[n]});return null!=s?s:r}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "ClientThemeSettings": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "GifAutoPlay": {
+            "getSetting": "()=>{var t;return null!==(t=n())&&void 0!==t?t:e.getSetting()}",
+            "useSetting": "()=>{let t=e.useSetting(),n=i();return null!=n?n:t}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "AnimateEmoji": {
+            "getSetting": "()=>{var t;return null!==(t=n())&&void 0!==t?t:e.getSetting()}",
+            "useSetting": "()=>{let t=e.useSetting(),n=i();return null!=n?n:t}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "AnimateStickers": {
+            "getSetting": "()=>{var t;return null!==(t=n())&&void 0!==t?t:e.getSetting()}",
+            "useSetting": "()=>{let t=e.useSetting(),n=i();return null!=n?n:t}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}"
+        },
+        "ActivityRestrictedGuilds": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ActivityJoiningRestrictedGuilds": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "DefaultGuildsActivityRestricted": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "DisableHomeAutoNav": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "FamilyCenterEnabled": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "LegacyUsernameDisabled": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        },
+        "ExplicitContentSettings": {
+            "getSetting": "()=>{var i;return n(null===(i=l.default.settings[e])||void 0===i?void 0:i[t])}",
+            "updateSetting": "function(n){return\"function\"==typeof n?t(n(e())):t(n)}",
+            "useSetting": "()=>(0,i.useStateFromStores)([l.default],o)"
+        }
+    }
+}

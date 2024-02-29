@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{children:t,className:n,color:s,iconType:c,onMouseEnter:f,onMouseLeave:p,...m}=e,[h,E]=a.useState(!1),_=a.useCallback(e=>{E(!0),f?.(e)},[E,f]),I=a.useCallback(e=>{E(!1),p?.(e)},[E,p]),C={};return null!=s&&(C={color:(0,r.int2hex)(s),backgroundColor:h?(0,r.int2rgba)(s,.3):(0,r.int2rgba)(s,.1)}),(0,i.jsx)(o.Clickable,{...m,tag:\"span\",className:l()(n,{[d.wrapper]:!0,interactive:m.onClick}),onMouseEnter:_,onMouseLeave:I,style:C,tabIndex:null!=m.onClick?0:-1,children:null!=c?(0,i.jsx)(u.default,{iconType:c,children:t}):t})}"
-    }
-}

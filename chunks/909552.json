@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "fromOrigamiTensionAndFriction": "function(e,t){return{tension:r(e),friction:(t-8)*3+25}}",
-        "fromBouncinessAndSpeed": "function(e,t){function n(e,t,n){return(e-t)/(n-t)}function a(e,t,n){return t+e*(n-t)}var o,i,u,s,l,c,d,f,p=(e/1.7-(o=0))/(20-o);var h=(s=.5)+(t/1.7-(u=0))/(20-u)*(200-s);var m=(l=p=(i=0)+p*(.8-i),c=function(e){var t,n,r;if(e<=18){;return 7e-4*Math.pow(t=e,3)-.031*Math.pow(t,2)+.64*t+1.28}if(e>18&&e<=44){;return 44e-6*Math.pow(n=e,3)-.006*Math.pow(n,2)+.36*n+2}return 45e-8*Math.pow(r=e,3)-332e-6*Math.pow(r,2)+.1078*r+5.84}(h),d=.01,.01*(f=2*l-l*l)+(1-f)*c);return{tension:r(h),friction:(m-8)*3+25}}"
-    }
-}

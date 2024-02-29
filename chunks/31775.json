@@ -1,3 +1,0 @@
-{
-    "exports": "function c(e){if(!(this instanceof c))return new c(e);\"number\"==typeof e&&(e={max:e}),!e&&(e={});var t=s(this,\"max\",e.max);(!t||\"number\"!=typeof t||t<=0)&&s(this,\"max\",1/0);var n=e.length||l;\"function\"!=typeof n&&(n=l),s(this,\"lengthCalculator\",n),s(this,\"allowStale\",e.stale||!1),s(this,\"maxAge\",e.maxAge||0),s(this,\"dispose\",e.dispose),this.reset()}"
-}

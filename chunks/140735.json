@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "LinkedErrors": "class a{static __initStatic(){this.id=\"LinkedErrors\"}__init(){this.name=a.id}constructor(t={}){a.prototype.__init.call(this),this._key=t.key||\"cause\",this._limit=t.limit||5}setupOnce(t,e){t((t,n)=>{let s=e(),o=s.getClient(),l=s.getIntegration(a);if(!o||!l)return t;let u=o.getOptions();return(0,r.applyAggregateErrorsToEvent)(i.exceptionFromError,u.stackParser,u.maxValueLength,l._key,l._limit,t,n),t})}}"
-    }
-}

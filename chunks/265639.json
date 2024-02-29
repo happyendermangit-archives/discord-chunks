@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){let{chunkSize:t,getScrollerState:n,forceUpdate:a}=e,{dirty:s,scrollTop:_,offsetHeight:E}=n();(0,i.useLayoutEffect)(()=>{s>0&&a()},[s,a]);let l=(0,i.useRef)(o);l.current=r(_,E,t);let[u,I]=l.current;return{forceUpdateOnChunkChange:(0,i.useCallback)(e=>{let{dirty:i,scrollTop:o,offsetHeight:s}=n();if(i>0)return;let[_,E]=r(o,s,t);_!==l.current[0]?a():2===e&&E!==l.current[1]&&a()},[a,t,n]),chunkStart:u,chunkEnd:I,dirty:s}}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "async function c(e,t){let n,{withMutualGuilds:c=!1,withMutualFriendsCount:f=!1,friendToken:p,preloadUserBanner:m=!0,dispatchWait:h=!1,guildId:E,channelId:_}=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};if(\"\"===e)return;null!=t&&(0,s.maybeFetchColors)(t),null!=E&&!c&&(c=!0),null!=E&&(n=l.getVisibleConnectionsRole({guildMember:o.default.getMember(E,e),channel:r.default.getChannel(_)})?.id??void 0);let I=u.default.getUserProfile(e),C=u.default.getMutualGuilds(e),y=u.default.getMutualFriendsCount(e),S=u.default.isFetchingProfile(e),g=I?.profileFetchFailed||!S&&(!Array.isArray(C)&&c||null==y&&f),x=m?d.default:void 0,T=!1;null!=E&&(T=null==u.default.getGuildMemberProfile(e,E)),!(!g&&!T&&(S||Date.now()-(I?.lastFetched??0)<6e4))&&(h?await i.default.wait(()=>(0,a.fetchProfile)(e,{withMutualGuilds:c,withMutualFriendsCount:f,friendToken:p,guildId:E,connectionsRoleId:n},x)):await (0,a.fetchProfile)(e,{withMutualGuilds:c,withMutualFriendsCount:f,friendToken:p,guildId:E,connectionsRoleId:n},x))}"
-    }
-}

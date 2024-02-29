@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "createStringInterpolator": "function(t){!r&&(r=s.colorNames?RegExp(\"(\"+Object.keys(s.colorNames).join(\"|\")+\")\",\"g\"):/^\\b$/);var e=t.output.map(function(t){return(0,o.getFluidValue)(t).replace(l,u.colorToRgba).replace(r,u.colorToRgba)}),n=e.map(function(t){return t.match(c).map(Number)}),p=n[0].map(function(t,e){return n.map(function(t){if(!(e in t))throw Error('The arity of each \"output\" value must be equal');return t[e]})}).map(function(e){return(0,a.createInterpolator)((0,i.__assign)((0,i.__assign)({},t),{output:e}))});return function(t){var n=0;return e[0].replace(c,function(){return String(p[n++](t))}).replace(f,h)}}"
+    }
+}

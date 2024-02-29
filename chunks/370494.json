@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e,t){let a=arguments.length>2&&void 0!==arguments[2]?arguments[2]:new i.default;return n.el(\"370494@216:261\").then(n.bind(n,\"40521\")).then(n=>{let{default:i}=n;return i(e,t,a)})}"
-    }
-}

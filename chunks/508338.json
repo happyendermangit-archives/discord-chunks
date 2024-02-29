@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "UID": "e=>{let{children:t}=e;return t(o())}",
-        "uid": "function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:\"uid_\";return i()(e)}",
-        "useUID": "()=>(0,a.useLazyValue)(()=>s())"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e){let t=(0,i.default)([a.default],()=>a.default.getChannel(e));return t?.isPrivate()??!1}",
-        "isPrivateChannelWithEnabledActivities": "function l(e){if(null==e)return!1;let t=a.default.getChannel(e);return t?.isPrivate()??!1}"
-    }
-}

@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "MEDIA_MOSAIC_MAX_WIDTH": 550,
+        "MEDIA_MOSAIC_MAX_HEIGHT": 350,
+        "MINIMUM_MEDIA_MOSAIC_DIM": 40,
+        "MediaLayoutType": {
+            "STATIC": "STATIC",
+            "RESPONSIVE": "RESPONSIVE",
+            "MOSAIC": "MOSAIC"
+        },
+        "SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE": 20
+    }
+}

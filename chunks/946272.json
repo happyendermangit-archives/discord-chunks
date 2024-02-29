@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getMergedExperimentConfigs": "function r(e,t,n,r){var o,a;let s=e.getCurrentConfig(n,r),_=t.getCurrentConfig(n,r);return o=s,a=_,(0,i.mergeWith)({},o,a,(e,t)=>e||t)}"
-    }
-}

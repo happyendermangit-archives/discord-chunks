@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useDropTarget": "function o(e,t){var n=(0,r.useMemo)(function(){return new a.DropTargetImpl(e,t)},[t]);return(0,r.useEffect)(function(){n.spec=e},[e]),n}"
-    }
-}

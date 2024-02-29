@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function _(e){let{sections:t,columns:n,getItemKey:_,getItemHeight:E,getSectionHeight:l,chunkSize:u=250,getScrollerState:I,itemGutter:T,removeEdgeItemGutters:c,sectionGutter:d,padding:S,paddingVertical:A,paddingHorizontal:N,dir:O}=e,R=(0,o.default)(),C=(0,i.useRef)(s),[h]=(0,i.useState)(()=>new r.default),{offsetWidth:L}=I(),{dirty:D,chunkStart:m,chunkEnd:p,forceUpdateOnChunkChange:f}=(0,a.default)({chunkSize:u,getScrollerState:I,forceUpdate:R});return C.current=(0,i.useMemo)(()=>D>0?C.current:(h.mergeProps({sections:t,columns:n,getItemKey:_,getItemHeight:E,getSectionHeight:l,bufferWidth:L,itemGutter:T,removeEdgeItemGutters:c,sectionGutter:d,padding:S,paddingVertical:A,paddingHorizontal:N,dir:O}),h.computeVisibleSections(Math.max(0,m*u),p*u),h.getState()),[D,h,t,n,_,E,l,m,p,u,T,c,d,S,A,N,L,O]),{...C.current,masonryComputer:h,forceUpdateOnChunkChange:f,forceUpdate:R}}"
-    }
-}

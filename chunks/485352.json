@@ -1,5 +1,0 @@
-{
-    "exports": "function(e,t,n){return t&&a(e.prototype,t),n&&a(e,n),Object.defineProperty(e,\"prototype\",{writable:!1}),e}",
-    "paths": [],
-    "children": []
-}

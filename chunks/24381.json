@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "SegmentedControl": "function u(e){let{options:t,value:n,onChange:o,look:s=\"tab\",className:_,optionClassName:u,selectedOptionClassName:I}=e,T=r.useCallback(e=>{let t=n===e.value;return(0,i.jsx)(l,{selected:t,option:e,look:s,onClick:o,className:u,selectedClassName:I},e.key??String(e.value))},[n,s,o,u,I]);return(0,i.jsx)(\"div\",{className:a()(function(e){switch(e){case\"tab\":default:return E.tabContainer;case\"pill\":return E.pillContainer}}(s),_),children:t.map(T)})}"
-    }
-}

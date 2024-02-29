@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "updatePoggermodeSettings": "function u(e){a.default.dispatch({type:\"POGGERMODE_SETTINGS_UPDATE\",settings:e});let t={...s.default.getState(),...e};(0,r.default)(t)}",
+        "updateCombo": "function d(e){a.default.dispatch({type:\"POGGERMODE_UPDATE_COMBO\",...e})}",
+        "clearMessageCombo": "function o(e){a.default.dispatch({type:\"POGGERMODE_UPDATE_MESSAGE_COMBO\",comboMessage:{...e,displayed:!0}})}",
+        "updateComboOnMessageSend": "function c(e,t){var n;let s=l.default.getId(),r=i.default.getUserCombo(s,e);null!=r&&a.default.dispatch({type:\"POGGERMODE_UPDATE_MESSAGE_COMBO\",comboMessage:{combo:r,channelId:e,messageId:t,displayed:!1}});let u=null!=r&&(null==r?void 0:r.value)>0?(null!==(n=null==r?void 0:r.multiplier)&&void 0!==n?n:0)+1:1;a.default.dispatch({type:\"POGGERMODE_UPDATE_COMBO\",channelId:e,userId:s,multiplier:u,value:0})}"
+    }
+}

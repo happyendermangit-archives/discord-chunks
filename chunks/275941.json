@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "codecNameToPayloadName": "function E(e){return\"AV1\"===e?\"AV1X\":e}",
-        "filterVideoCodecs": "function s(e,t){return\"string\"==typeof e?o(JSON.parse(e).map(e=>({codec:_(e.codec),encode:e.encode,decode:e.decode})),t):o(e.map(e=>({codec:_(e),encode:!0,decode:!0})),t)}",
-        "getExperimentCodecs": "function a(e,t){let n=[];return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT)?t===i.MediaEngineContextTypes.STREAM&&n.unshift({name:\"H265\",encode:!0,decode:!0}):e.has(i.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT)&&t===i.MediaEngineContextTypes.STREAM&&n.unshift({name:\"H265\",encode:!1,decode:!0}),e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT)&&n.unshift({name:\"AV1\",encode:!0,decode:!0}),n}"
-    }
-}

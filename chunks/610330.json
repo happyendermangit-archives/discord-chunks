@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){if(\"number\"!=typeof t||c(t)||!o(t))return!1;var e=i(t);return n(e)===e}"
+}

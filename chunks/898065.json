@@ -1,0 +1,8 @@
+{
+    "exports": {
+        "toggleUseActivityUrlOverride": "function l(){n.default.dispatch({type:\"DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE\"})}",
+        "setActivityUrlOverride": "function a(t){n.default.dispatch({type:\"DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE\",activityUrlOverride:t})}",
+        "markActivityUsed": "function u(t){n.default.dispatch({type:\"DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED\",applicationId:t,timestamp:new Date().getTime()})}",
+        "updateFilter": "function r(t){n.default.dispatch({type:\"DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER\",filter:t})}"
+    }
+}

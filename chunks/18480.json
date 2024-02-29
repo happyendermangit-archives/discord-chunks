@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){return e.supportsInApp(s.Features.VIDEO)}"
-    }
-}

@@ -1,0 +1,22 @@
+{
+    "exports": {
+        "default": {
+            "calendar": "Kalenteri",
+            "day": "päivä",
+            "dayPeriod": "vuorokaudenaika",
+            "endDate": "Päättymispäivä",
+            "era": "aikakausi",
+            "hour": "tunti",
+            "minute": "minuutti",
+            "month": "kuukausi",
+            "second": "sekunti",
+            "selectedDateDescription": "e=>\"Valittu p\\xe4iv\\xe4m\\xe4\\xe4r\\xe4: \".concat(e.date)",
+            "selectedRangeDescription": "e=>\"Valittu aikav\\xe4li: \".concat(e.startDate,\" – \").concat(e.endDate)",
+            "selectedTimeDescription": "e=>\"Valittu aika: \".concat(e.time)",
+            "startDate": "Alkamispäivä",
+            "timeZoneName": "aikavyöhyke",
+            "weekday": "viikonpäivä",
+            "year": "vuosi"
+        }
+    }
+}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "maybeGetEmojiCaptionsForUser": "async function s(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:\"unknown\";if(null==i.default.getCurrentUser())return;let{isEmojiCaptionsEnabled:t}=a.default.getCurrentConfig({location:e});if(!t){o.default.hasPersistedState()&&o.default.clear();return}if(o.default.getIsFetching())return;let n=o.default.getEmojiCaptionsTTL();!(null!=n&&Date.now()<n)&&await (0,r.getEmojiCaptionsForUser)()}"
-    }
-}

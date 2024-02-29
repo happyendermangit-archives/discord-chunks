@@ -1,0 +1,3 @@
+{
+    "exports": "function(){r();var t=i();return n(Promise,{allSettled:t},{allSettled:function(){return Promise.allSettled!==t}}),t}"
+}

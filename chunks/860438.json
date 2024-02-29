@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return void 0!==t&&(i(n,\"Property Descriptor\",\"Desc\",t),!!(r(t,\"[[Value]]\")||r(t,\"[[Writable]]\"))||!1)}"
-}

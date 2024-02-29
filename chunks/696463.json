@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e,t,n,a){let s=e.hasConnectedAccount(),l=(0,i.isSpotifyPlayable)(e),r=e.getTrack(),o=e.getSyncingWith(),u=e.getActivity(),d=r?.id??u?.sync_id??e.getLastPlayedTrackId();return{user:n,activity:a,hasSpotifyAccount:s,canPlaySpotify:l,notPlayable:s&&!l,syncingWithParty:u?.party!=null&&a?.party?.id===u.party.id,syncingWithUser:o?.userId!=null&&o?.userId===n.id,isCurrentUser:n.id===t.getId(),currentUserTrackId:d,playingSameTrack:null!=d&&d===a?.sync_id}}"
-    }
-}

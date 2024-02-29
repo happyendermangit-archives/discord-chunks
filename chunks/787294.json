@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){let{id:t,username:n,discriminator:i,globalName:r,avatar:o,avatarDecoration:a,bot:s,flags:_,premiumType:E}=e;return{id:t,username:n,discriminator:i,global_name:r,avatar:o,avatar_decoration_data:null!=a?{asset:a.asset,sku_id:a.skuId}:null,bot:s,flags:_,premium_type:E??0}}"
-    }
-}

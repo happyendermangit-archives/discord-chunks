@@ -1,0 +1,10 @@
+{
+    "exports": {
+        "CAN_SET_DEVICES": true,
+        "CAN_SET_OUTPUT_DEVICES": true,
+        "getAudioInputDevices": "async function c(){let e=await u();return l(e,i.DeviceTypes.AUDIO_INPUT)}",
+        "getAudioOutputDevices": "async function d(){let e=await u();return l(e,i.DeviceTypes.AUDIO_OUTPUT)}",
+        "getVideoInputDevices": "async function f(){let e=await u();return l(e,i.DeviceTypes.VIDEO_INPUT)}",
+        "getDevices": "async function E(){let e=await u();return[l(e,i.DeviceTypes.AUDIO_INPUT),l(e,i.DeviceTypes.AUDIO_OUTPUT),l(e,i.DeviceTypes.VIDEO_INPUT)]}"
+    }
+}

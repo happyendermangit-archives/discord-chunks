@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function s(){let e=a.default.getVoiceStateForSession(l.default.getId(),l.default.getSessionId()),t=null==e?void 0:e.channelId;return i.default.getChannel(t)}"
+    }
+}

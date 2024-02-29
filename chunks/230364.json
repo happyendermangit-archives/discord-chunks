@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r,n){\"Symbol(\"===h(v(r),0,7)&&(r=\"[\"+b(v(r),/^Symbol\\(([^)]*)\\)/,\"$1\")+\"]\"),n&&n.getter&&(r=\"get \"+r),n&&n.setter&&(r=\"set \"+r),(!u(t,\"name\")||s&&t.name!==r)&&(c?y(t,\"name\",{value:r,configurable:!0}):t.name=r),x&&n&&u(n,\"arity\")&&t.length!==n.arity&&y(t,\"length\",{value:n.arity});try{n&&u(n,\"constructor\")&&n.constructor?c&&y(t,\"prototype\",{writable:!1}):t.prototype&&(t.prototype=void 0)}catch(t){}var e=p(t);return!u(e,\"source\")&&(e.source=g(d,\"string\"==typeof r?r:\"\")),t}"
-}

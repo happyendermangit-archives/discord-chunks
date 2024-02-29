@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "openClaimAccountModal": "function u(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],t=arguments.length>1?arguments[1]:void 0;(0,i.openModalLazy)(async()=>{let{default:t}=await n.el(\"297932@989:1033\").then(n.bind(n,\"574501\"));return n=>(0,s.jsx)(t,{claimRequired:e,...n})},{onCloseRequest:e?a.NOOP:null,onCloseCallback:t})}",
-        "openNewUserAgeGateModal": "function o(e){(0,i.openModalLazy)(async()=>{let{default:e}=await n.el(\"297932@434:484\").then(n.bind(n,\"257312\"));return t=>(0,s.jsx)(e,{...t})},{modalKey:r.NEW_USER_AGE_GATE_MODAL_KEY,onCloseRequest:a.NOOP,onCloseCallback:e})}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class _ extends o.default.Store{static #e=this.allStores=[];static clearAll(){_.allStores.forEach(e=>e.clear())}constructor(e){super(s.default,{...e,CLEAR_CACHES:()=>this.clear(),WRITE_CACHES:()=>this.save()}),r()(null!=this.getClass().displayName,\"Snapshot stores need a display name\"),r()(!(\"CLEAR_CACHES\"in e),\"SnapshotStores cannot use the 'CLEAR_CACHES' action\"),r()(!(\"WRITE_CACHES\"in e),\"SnapshotStores cannot use the 'WRITE_CACHES' action\"),_.allStores.push(this)}get persistKey(){return`${this.getClass().displayName}-snapshot`}clear(){a.default.remove(this.persistKey)}save(){a.default.set(this.persistKey,this.takeSnapshot())}readSnapshot(e){let t=a.default.get(this.persistKey);return null==t||t.version!==e?null:t.data}getClass(){return this.constructor}}"
-    }
-}

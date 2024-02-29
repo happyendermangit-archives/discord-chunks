@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function i(t,e){if(!t){var n;throw Error(r)}}"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "current": "function(t){return n.g.requestAnimationFrame(t)}",
+        "inject": "function(t){r.current=t}"
+    }
+}

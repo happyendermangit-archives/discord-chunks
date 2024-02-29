@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(t){let e=arguments.length>1&&void 0!==arguments[1]&&arguments[1],i=a.default.getWindow(t);null!=i&&!i.closed&&(n.isPlatformEmbedded?l.default.focus(t,e):i.focus())}"
+    }
+}

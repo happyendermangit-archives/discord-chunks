@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "isGuildShopVisibleInGuild": "function d(e){let t=(0,r.isEligibleForGuildShopStorefront)(),n=(0,r.isEligibleForSubscriptionsInGuildShop)(e?.id,\"channel_list\"),s=(0,i.areRoleSubscriptionsVisibleInGuild)(e?.id);return!!t&&null!=e&&(e.hasFeature(o.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)||n&&s)}",
-        "useGuildShopVisibleInGuild": "function u(e){let t=(0,r.useIsEligibleForGuildShopStorefront)(),n=(0,r.useIsEligibleForSubscriptionsInGuildShop)(e?.id,\"channel_list\"),u=(0,i.useRoleSubscriptionsVisibleInGuild)(e?.id),d=(0,a.useGuildShopPreviewVisible)(e,\"channel_list\"),{shouldHideGuildPurchaseEntryPoints:l}=(0,s.useShouldHideGuildPurchaseEntryPoints)(e?.id);return!!t&&null!=e&&!l&&(e.hasFeature(o.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)||n&&u||d)}"
-    }
-}

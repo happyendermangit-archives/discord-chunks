@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "showActivitiesInvalidPermissionsAlert": "()=>{n.default.show({title:l.default.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_TITLE,body:l.default.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_BODY,hideActionSheet:!1})}"
+    }
+}

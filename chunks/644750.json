@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "Overlay": "e=>(0,i.jsx)(r.Suspense,{fallback:null!=a?a():o()(),children:(0,i.jsx)(l,{...e})})",
-        "default": {
-            "render": "(e,t)=>(0,i.jsx)(l,{childProps:e,forwardedConnectStoresRef:t})",
-            "displayName": "ForwardRef(FluxContainer())"
-        }
-    }
-}

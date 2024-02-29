@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "filterScopes": "function f(e){let t=e.filter(e=>!d.RemovedScopes.includes(e));return t.includes(l.OAuth2Scopes.BOT)&&!t.includes(l.OAuth2Scopes.APPLICATIONS_COMMANDS)&&t.push(l.OAuth2Scopes.APPLICATIONS_COMMANDS),t}",
-        "parseOAuth2AuthorizeProps": "function _(e){let t=(0,s.parse)(e,{arrayFormat:\"bracket\"}),n=u.default.NONE;try{n=r.default.deserialize(null!=t.permissions&&\"\"!==t.permissions?t.permissions:\"0\")}catch(e){}let d=t.channel_id,l=t.guild_id??a.default.getChannel(d)?.guild_id??o.default.getGuildId()??void 0;return{clientId:t.client_id??\"\",scopes:(t.scope??\"\").split(\" \").filter(e=>e.length>0),responseType:t.response_type,redirectUri:t.redirect_uri,codeChallenge:t.code_challenge,codeChallengeMethod:t.code_challenge_method,state:t.state,permissions:n,channelId:d,guildId:l,prompt:t.prompt,disableGuildSelect:\"true\"===t.disable_guild_select,userInstall:t.integration_type===i.ApplicationIntegrationType.USER_INSTALL.toString()}}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(e){return null!=e&&(Array.isArray(e)?e.some(s):s(e))}"
-    }
-}

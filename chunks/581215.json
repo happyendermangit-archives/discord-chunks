@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "Interactive": "function _(e){let{as:t,muted:n=!1,selected:r=!1,className:_,...E}=e,l=t??a.Clickable;return(0,i.jsx)(l,{...E,className:o()(s.interactive,_,{[s.muted]:n,[s.selected]:r})})}"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getStreamerActivity": "function u(e,t){var n;return null!=e?(n=e.ownerId,t.findActivity(n,o)):null}",
-        "getStreamerApplication": "function d(e,t){if(null==e)return null;let n=u(e,t);return null==n?null:{id:n.application_id,name:n.name}}",
-        "useGetStreamApplication": "function f(e){return(0,s.useStateFromStores)([r.default],()=>d(e,r.default),[e],l)}"
-    }
-}

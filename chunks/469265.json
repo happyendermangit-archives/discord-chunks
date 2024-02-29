@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "canUseCustomClydeProfiles": "function _(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return h(e,t)===i.ClydeExperimentState.ClydeProfiles}",
-        "getClydeEnabled": "function f(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],a=e?.id??r.EMPTY_STRING_SNOWFLAKE_ID;return c(i.default.getCurrentConfig({guildId:a,location:\"1e9ccc_2\"},{autoTrackExposure:n}).experimentState,e,t)}",
-        "getClydeExperimentEnabled": "function E(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return h(e,t)!==i.ClydeExperimentState.None}",
-        "useClydeEnabled": "function d(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];return c(u(e,n),e,t)}",
-        "useClydeProfilesEnabled": "function o(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2?arguments[2]:void 0;return u(e,t,n)===i.ClydeExperimentState.ClydeProfiles}"
-    }
-}

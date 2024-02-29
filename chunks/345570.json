@@ -1,0 +1,3 @@
+{
+    "exports": "function(t){return(null==t?0:t.length)?r(t,1):[]}"
+}

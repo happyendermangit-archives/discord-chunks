@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(){let{createMultipleConfettiAt:e}=i.useContext(s.ConfettiCannonContext),t=(0,a.default)([l.default],()=>l.default.getState()),n=i.useCallback(e=>({size:{type:\"static-random\",minValue:e.confettiSize-7,maxValue:e.confettiSize+7}}),[]);return i.useMemo(()=>({fire:(i,a,s)=>{let l=s?.settings!=null?{...t,...s.settings}:t;e(i,a,n(l),(s?.count??l.confettiCount)*(s?.countMultiplier??1),{sprite:s?.sprite})}}),[e,n,t])}"
-    }
-}

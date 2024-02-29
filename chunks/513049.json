@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "Toast": {
-            "type": "function(e){let{message:t,type:n,id:r,options:{component:o=u.TOAST_DEFAULT_OPTIONS.component}=u.TOAST_DEFAULT_OPTIONS}=e;return null!=o?(0,i.jsx)(i.Fragment,{children:o}):(0,i.jsxs)(\"div\",{id:r,className:I.toast,children:[function(e){switch(e){case u.ToastType.SUCCESS:return(0,i.jsx)(l.default,{className:I.icon,color:s.tokens.colors.STATUS_POSITIVE.css});case u.ToastType.FAILURE:return(0,i.jsx)(E.default,{className:I.icon,color:s.tokens.colors.STATUS_DANGER.css});case u.ToastType.CLIP:return(0,i.jsx)(_.default,{className:I.clipIcon,color:s.tokens.colors.HEADER_PRIMARY.css});default:return null}}(n),(0,i.jsx)(a.Text,{className:I.content,color:\"header-primary\",variant:\"text-md/normal\",children:t})]})}",
-            "compare": null
-        },
-        "createToast": "function T(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:u.TOAST_DEFAULT_OPTIONS,{position:i=u.TOAST_DEFAULT_OPTIONS.position,component:r=u.TOAST_DEFAULT_OPTIONS.component,duration:a=u.TOAST_DEFAULT_OPTIONS.duration}=n;return{message:e,id:(0,o.v4)(),type:t,options:{position:i,component:r,duration:a}}}"
-    }
-}

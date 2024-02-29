@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isLimitedChannel": "function i(e){let t=a.default.getMemberCount(e?.guild_id)??0;return null!=e&&e.type!==l.ChannelTypes.DM&&e.type!==l.ChannelTypes.GROUP_DM&&t>=1e4}"
-    }
-}

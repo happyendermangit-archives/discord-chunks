@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e,t,n){a.default.track(o.AnalyticEvents.VOICE_CALL_TRANSFER,{source_platform:null!=n?r.default.getSessionById(n)?.clientInfo.os:\"discord_client\",guild_id:s.default.getChannel(e)?.guild_id,channel_id:e,rtc_connection_id:i.default.getRTCConnectionId(),target_platform:t})}"
-    }
-}

@@ -1,6 +1,12 @@
 {
     "exports": {
-        "guessGuildModeWithLocalData": "function T(e,t){let n=t.filter(t=>t.guild_id===e.id)[0]??{},i=_.default.getMemberCount(e.id)??0,r=Date.now()-E.default.Millis.DAYS_30,a=s.default.getFrequentlyWithoutFetchingLatest().filter(t=>t instanceof o.ChannelRecordBase&&t.guild_id===e.id),u=a.filter(e=>{let t=s.default.frecencyWithoutFetchingLatest.usageHistory[e.id]?.recentUses??[];return 0!==t.length&&t[t.length-1]>=r}),I=u.length>=5,T=a.reduce((e,t)=>e+(s.default.frecencyWithoutFetchingLatest.usageHistory[t.id]?.totalUses??0),0),c=`\n- **Local**:\n    - Guild Visits: ${T}\n    - Channels: ${a.length}\n    - Recent Channels: ${u.length}\n`;return n.messages===l.PainLevel.High||i>1e3?[l.Mode.UseGreyDot,I,\"SuggestGreyDot\"+c]:[l.Mode.KeepAsIs,I,\"KeepAsIs\"+c]}",
-        "guessGuildModeWithRemoteData": "function u(e,t,n,i,r){let o=a.default.getMutableGuildChannelsForGuild(e.id),s=i.filter(e=>e.channel_id in o),E=n.filter(t=>t.guild_id===e.id)[0]??{},u=_.default.getMemberCount(e.id),T=I(\"year\",i,s,e=>Number(e.num_year_opens??0)),c=I(\"one month\",i,s,e=>Number(e.num_month_opens??0)),d=I(\"three month\",i,s,e=>Number(e.num_three_month_opens??0)),S=[c,d,I(\"six month\",i,s,e=>Number(e.num_six_month_opens??0)),T],A=0,N=0;s.forEach(e=>{A++,N+=Number(e.num_messages)??0});let O=`\n**Pain**:\n- Everyones: ${l.PainLevel[E.everyones??0]}\n- Messages: ${l.PainLevel[E.messages??0]}\n- Size: ${u}\n**Remote**:\n- Channels: ${A}\n- AllVisits: ${S.map(e=>e.totalOpensAcrossAllServers).join(\" / \")}\n- GuildVisits: ${S.map(e=>e.guildOpens).join(\" / \")}\n- Biggest Channel (abs): ${S.map(e=>e.biggestChannel).join(\" / \")}\n- Biggest Channel (%): ${S.map(e=>e.biggestChannelFormatted).join(\" / \")}\n- Sent Msgs: ${N}\n`,R=d.guildOpens>=.02*d.totalOpensAcrossAllServers,C=(T.guildOpens??0)>0;if(E.messages===l.PainLevel.High){if(!r)return[l.Mode.UseGreyDot,R,\"UseGreyDot\"+O];if(!R&&C)return[l.Mode.UseGreyDot,R,\"UseGreyDot\"+O]}return[l.Mode.KeepAsIs,R,\"KeepAsIs\"+O]}"
+        "button": "button_bb1081",
+        "cardHeaderImg": "cardHeaderImg_f6c932",
+        "cardPrice": "cardPrice__92dbb",
+        "cta": "cta__19506",
+        "description": "description_f818e8",
+        "details": "details_f03d10",
+        "footer": "footer__13718",
+        "productCard": "productCard_a1742a"
     }
 }

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function g(e,t,g){let E=u.default.getWindowOpen(h.PopoutWindowKeys.CHANNEL_CALL_POPOUT)?h.PopoutWindowKeys.CHANNEL_CALL_POPOUT:null;if((0,l.default)(E),f.isPlatformEmbedded)(0,r.openModalLazy)(async()=>{let{default:t}=await n.el(\"158057@1203:1255\").then(n.bind(n,\"77577\"));return n=>(0,a.jsx)(t,{...n,guildId:e,analyticsLocation:g})});else{let n=(0,s.default)(p.ApplicationStreamPresets.PRESET_CUSTOM,p.ApplicationStreamResolutions.RESOLUTION_1080,p.ApplicationStreamFPS.FPS_30,c.default.getCurrentUser(),o.default.getGuild(e)?.premiumTier)?{width:1920,height:1080}:{width:1280,height:720};d.default.getMediaEngine().getDesktopSource(n,!0).then(n=>{(0,i.startStream)(e,t,{pid:null,sourceId:n,sourceName:null})})}}"
-    }
-}

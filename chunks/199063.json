@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "collectThreadMetadata": "function d(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return null!=e&&r.THREAD_CHANNEL_TYPES.has(e.type)?{location:t?(0,a.getLastRouteChangeSource)():void 0,thread_approximate_member_count:l.default.getMemberCount(e.id),thread_approximate_message_count:i.default.getCount(e.id),thread_archived:e.threadMetadata?.archived===!0,thread_locked:e.threadMetadata?.locked??!1,thread_auto_archive_duration_minutes:e.threadMetadata?.autoArchiveDuration??0,thread_approximate_creation_date:u.default.extractTimestamp(e.id),can_send_message:s.default.can(o.Permissions.SEND_MESSAGES,e),parent_channel_type:e.parentChannelThreadType}:null}"
-    }
-}

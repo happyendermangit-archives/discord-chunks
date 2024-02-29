@@ -1,3 +1,0 @@
-{
-    "exports": "function a(t,e,s,c){i.call(this);var f=n.alloc(4,0);this._cipher=new r.AES(e);var a=this._cipher.encryptBlock(f);this._ghash=new o(a),s=function(t,e,s){if(12===e.length)return t._finID=n.concat([e,n.from([0,0,0,1])]),n.concat([e,n.from([0,0,0,2])]);var r=new o(s),i=e.length,c=i%16;r.update(e),c&&(c=16-c,r.update(n.alloc(c,0))),r.update(n.alloc(8,0));var f=n.alloc(8);f.writeUIntBE(8*i,0,8),r.update(f),t._finID=r.state;var a=n.from(t._finID);return u(a),a}(this,s,a),this._prev=n.from(s),this._cache=n.allocUnsafe(0),this._secCache=n.allocUnsafe(0),this._decrypt=c,this._alen=0,this._len=0,this._mode=t,this._authTag=null,this._called=!1}"
-}

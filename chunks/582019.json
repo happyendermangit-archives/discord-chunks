@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function x(e){let{user:t,autoFocus:n=!1,onClose:s,className:r,inputClassName:x}=e,T=a.useRef(null),A=(0,u.useStateFromStores)([_.default],()=>_.default.isBlocked(t.id)),N=a.useCallback(e=>{if(\"Enter\"===e.key){e.preventDefault(),o()(null!=T.current,\"Keypress on Input when not mounted\");let n=T.current.value.trim();return(0,C.applyChatRestrictions)({type:m.ChatInputTypes.NORMAL,content:n,channel:null}).then(e=>{let{valid:i}=e;i&&(c.default.openPrivateChannel(t.id,!1,!1,\"Quick Message Input\").then(e=>{let t=E.default.getChannel(e);o()(null!=t,\"Newly created PrivateChannel is null\"),p.default.sendMessage(t.id,h.default.parse(t,n)),(0,f.popLayer)()}),s?.())}),!0}e.which===y.KeyboardKeys.SPACE&&e.stopPropagation()},[s,t]),O=A?S.default.Messages.QUICK_DM_BLOCKED:S.default.Messages.QUICK_DM_USER.format({name:I.default.getName(t)});return(0,i.jsx)(d.TextInput,{className:r,inputClassName:l()(x,g.input),inputRef:T,autoFocus:n,placeholder:O,\"aria-label\":O,onKeyPress:N,disabled:A})}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(){function e(){(0,r.openModalLazy)(async()=>{let{default:e}=await n.el(\"410571@344:408\").then(n.bind(n,\"984952\"));return t=>(0,a.jsx)(e,{source:\"Screenshare Unavailable\",...t})})}(0,r.openModalLazy)(async()=>{let{default:t}=await n.el(\"410571@676:712\").then(n.bind(n,\"312533\"));return n=>(0,a.jsx)(t,{...n,header:i.default.Messages.SCREENSHARE_UNAVAILABLE,body:i.default.Messages.SCREENSHARE_UNAVAILABLE_DOWNLOAD_APP,confirmText:i.default.Messages.DOWNLOAD_APP,onConfirm:e})})}"
-    }
-}

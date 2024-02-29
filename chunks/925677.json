@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function d(e){var t,n,u;let{userId:d,checkSoundSharing:l=!1,checkSoundboardSounds:f=!0,checkIsMuted:_=!1,context:c}=e,g=(0,s.useStateFromStores)([o.default,r.default],()=>{let e=r.default.getVoiceChannelId();return null!=e?o.default.getVoiceStateForChannel(e,d):null}),m=_&&(g?.mute||g?.selfMute),h=(0,s.useStateFromStores)([a.default],()=>a.default.isSpeaking(d,c)&&!m),E=(0,s.useStateFromStores)([a.default],()=>a.default.isSoundSharing(d)&&l),p=(0,s.useStateFromStores)([i.default],()=>i.default.isUserPlayingSounds(d)&&f);return t=h,n=p,u=E,t||n||u}",
-        "getIsSpeaking": "function l(e){var t,n,s;let{userId:u,checkSoundSharing:d=!1,checkSoundboardSounds:l=!0,checkIsMuted:f=!1,context:_}=e,c=r.default.getVoiceChannelId(),g=null!=c?o.default.getVoiceStateForChannel(c,u):null,m=f&&(g?.mute||g?.selfMute),h=a.default.isSpeaking(u,_)&&!m,E=a.default.isSoundSharing(u)&&d,p=i.default.isUserPlayingSounds(u)&&l;return t=h,n=p,s=E,t||n||s}"
-    }
-}

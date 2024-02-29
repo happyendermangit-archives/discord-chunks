@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e){let{summary:t,channel:a,rating:r}=e;null!=t&&(r===s.FeedbackRating.BAD?(0,i.openModalLazy)(async()=>{let{default:e}=await n.el(\"747194\").then(n.bind(n,\"747194\"));return n=>(0,l.jsx)(e,{...n,onSubmit:e=>o(t,a,e),startRating:r})}):o(t,a,{rating:r,problem:null,feedback:\"\",dontShowAgain:!1}))}"
+    }
+}

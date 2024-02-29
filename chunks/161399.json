@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){let t=r.default.getId(),{userActivity:n,inActivity:a}=(0,i.useStateFromStoresObject)([o.default],()=>{let n=o.default.getSelfEmbeddedActivityForChannel(e),i=o.default.getEmbeddedActivitiesForChannel(e),r=i.find(e=>e.applicationId===n?.applicationId)?.userIds;return{userActivity:n,inActivity:r?.has(t)??!1}});return{userActivity:n,inActivity:a}}"
-    }
-}

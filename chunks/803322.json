@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function(o){let{enabled:a,highlight:s}=E();if(!a)return(0,i.jsx)(e,{...o});{let e={...o};for(let[t,i]of Object.entries(n={foreground:\"colorClass\",color:\"color\",...n??{}})){let n=o[t];if(null==n&&\"color\"===t&&(n=s?\"yellow\":\"currentColor\"),\"remove\"===i){delete e[t];continue}e[i]=n}return e.width??=r.size,e.height??=r.size,(0,i.jsx)(t,{...e})}}"
+        "default": "function a(e,t,n){let a=l.useCallback(e=>{if(t)return!0;if(!0===e.defaultPrevented)return!1;let l=n(e);return l&&(e.preventDefault(),e.stopPropagation()),l},[t,n]),s=l.useCallback(t=>{let{event:n}=t,l=a(n);!l&&(n.preventDefault(),n.stopPropagation(),null!=n.clipboardData&&(e.insertData(n.clipboardData),i.EditorUtils.focus(e)))},[e,a]);return{handlePaste:a,handleGlobalPaste:s}}"
     }
 }

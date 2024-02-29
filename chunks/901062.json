@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){return((e.flags??0)&i.UserFlags.STAFF)===i.UserFlags.STAFF||e?.personal_connection_id!=null}"
-    }
-}

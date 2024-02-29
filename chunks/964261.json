@@ -1,0 +1,13 @@
+{
+    "exports": {
+        "MAX_CHAR_COUNT": 200,
+        "AtomicReactorInteractionTypes": {
+            "ReactBegin": "React Begin",
+            "ReplyBegin": "Reply Begin",
+            "ReactSubmit": "React Submit",
+            "ReplySubmit": "Reply Submit",
+            "ReactSend": "React Send",
+            "ReplySend": "Reply Send"
+        }
+    }
+}

@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "backupSettings": "async function u(e){if(e.length>0){let t=r().sum(e.map(e=>e.length)),n=r().max(e.map(e=>e.length))??0;if(e.length>=5||t+n>1e6){let t=r().sortBy(e,e=>new Date(e.recorded_at).getTime());await l(t[0].id)}}return _(`Backup from ${new Date().toLocaleDateString()}`)}",
-        "listSnapshots": "async function s(){return(await o.default.get(a.Endpoints.NOTIFICATION_SNAPSHOTS)).body}",
-        "restoreSnapshot": "async function E(e){return(await o.default.post(a.Endpoints.RESTORE_NOTIFICATION_SNAPSHOT(e))).body}",
-        "takeSnapshot": "async function _(e){return(await o.default.post({url:a.Endpoints.NOTIFICATION_SNAPSHOTS,body:{label:e}})).body}"
-    }
-}

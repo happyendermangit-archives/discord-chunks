@@ -1,0 +1,41 @@
+{
+    "exports": {
+        "useMembersSearchRecordStore": "function(){let t,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:e.getState,i=arguments.length>1&&void 0!==arguments[1]?arguments[1]:Object.is,[,a]=(0,r.useReducer)(t=>t+1,0),u=e.getState(),s=(0,r.useRef)(u),c=(0,r.useRef)(n),l=(0,r.useRef)(i),f=(0,r.useRef)(!1),h=(0,r.useRef)();void 0===h.current&&(h.current=n(u));let p=!1;(s.current!==u||c.current!==n||l.current!==i||f.current)&&(t=n(u),p=!i(h.current,t)),o(()=>{p&&(h.current=t),s.current=u,c.current=n,l.current=i,f.current=!1});let d=(0,r.useRef)(u);o(()=>{let t=()=>{try{let t=e.getState(),n=c.current(t);!l.current(h.current,n)&&(s.current=t,h.current=n,a())}catch(t){f.current=!0,a()}},n=e.subscribe(t);return e.getState()!==d.current&&t(),n},[]);let v=p?t:h.current;return(0,r.useDebugValue)(v),v}",
+        "getChunkIndex": "function T(e,t){return Math.floor(Math.max(e-1,0)/t)}",
+        "getChunkNumbers": "function A(e){let t=(0,h.getSearchChunkLimit)(e),r=e.pageSize*(e.currentPage-1),n=e.pageSize*e.currentPage,u=e.pageSize*(e.currentPage+1);return{previousPageChunkNumber:T(r,t),currentPageChunkNumber:T(n,t),nextPageChunkNumber:T(u,t)}}",
+        "useIsMakingRequest": "function w(e){return p(t=>{var r;let n=I(e);return(null===(r=t[n])||void 0===r?void 0:r.requestState)===2})}",
+        "useIsStillIndexing": "function P(e){return p(t=>{var r;let n=I(e);return(null===(r=t[n])||void 0===r?void 0:r.requestState)===4})}",
+        "default": {
+            "initializedCount": 0,
+            "actions": {
+                "INITIALIZE_MEMBER_SAFETY_STORE": "e=>this.handleInitialize(e)",
+                "GUILD_DELETE": "e=>this.handleGuildDelete(e)",
+                "MEMBER_SAFETY_SEARCH_STATE_UPDATE": "e=>this.handleSearchStateUpdate(e)",
+                "MEMBER_SAFETY_PAGINATION_UPDATE": "e=>this.handlePaginationUpdate(e)",
+                "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS": "e=>this.handleGuildMemberSearchSuccess(e)",
+                "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_STILL_INDEXING": "e=>this.handleGuildMemberSearchStillIndexing(e)",
+                "MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH": "e=>this.handleNewMemberTimestampRefresh(e)"
+            },
+            "stores": {
+                "toJSON": "function(){return Array.from(this)}",
+                "get": "function get() { [native code] }",
+                "set": "function set() { [native code] }",
+                "has": "function has() { [native code] }",
+                "delete": "function delete() { [native code] }",
+                "clear": "function clear() { [native code] }",
+                "entries": "function entries() { [native code] }",
+                "forEach": "function forEach() { [native code] }",
+                "keys": "function keys() { [native code] }",
+                "size": 0,
+                "values": "function values() { [native code] }"
+            },
+            "handleInitialize": "handleInitialize(e){let{guildId:t}=e;return N(t),G(t)}",
+            "handleGuildDelete": "handleGuildDelete(e){let{guild:t}=e;return N(t.id)}",
+            "handleSearchStateUpdate": "handleSearchStateUpdate(e){let{guildId:t}=e;return G(t)}",
+            "handlePaginationUpdate": "handlePaginationUpdate(e){let{guildId:t}=e;return G(t)}",
+            "handleGuildMemberSearchSuccess": "handleGuildMemberSearchSuccess(e){let{guildId:t}=e,r=I(t);return U(r)}",
+            "handleGuildMemberSearchStillIndexing": "handleGuildMemberSearchStillIndexing(e){let{guildId:t}=e,r=I(t);v(r,{requestState:4,abortController:null,lastUpdated:Date.now()})}",
+            "handleNewMemberTimestampRefresh": "handleNewMemberTimestampRefresh(e){let{guildId:t}=e;return G(t)}"
+        }
+    }
+}

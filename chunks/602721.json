@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getRoleIconProps": "function c(e,t){let{customIconSrc:a,unicodeEmoji:n}=(0,r.getRoleIconData)(e,t)??{};if(null!=a||null!=n)return{src:a,name:e.name,roleId:e.id,size:t,unicodeEmoji:n}}",
-        "useRoleIcon": "e=>{let{guildId:t,roleId:a,size:o=20}=e,i=(0,l.useStateFromStores)([s.default],()=>s.default.getGuild(t));return n.useMemo(()=>{if(null==i||null==a)return;let e=i.roles[a];if((0,r.canGuildUseRoleIcons)(i,e))return c(e,o)},[i,a,o])}",
-        "useRoleIconForPreview": "(e,t)=>{let a=(0,l.useStateFromStores)([s.default],()=>s.default.getGuild(e));if(null!=a&&(0,r.canGuildUseRoleIcons)(a,t))return c(t)}"
-    }
-}

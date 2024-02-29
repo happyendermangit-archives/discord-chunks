@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "Modals": "function L(){let e=C(),t=(0,d.useModalsStore)(t=>void 0!==t[e]?t[e]:h),n=r.useRef();r.useLayoutEffect(()=>{n.current=t[t.length-1]},[t]);let o=t.length>0;r.useLayoutEffect(()=>{if(!o)return;let e=()=>{let e=n.current;null!=e&&null!=e.onCloseRequest&&e.onCloseRequest()};return c.ComponentDispatch.subscribe(A.ComponentActions.MODAL_CLOSE,e),()=>{c.ComponentDispatch.unsubscribe(A.ComponentActions.MODAL_CLOSE,e)}},[o]);let a=r.useCallback(()=>{let e=n.current;null!=e&&null!=e.onCloseRequest&&e.onCloseRequest()},[]),s=r.useCallback(t=>{(0,d.closeModal)(t,e)},[e]),l=O.map(e=>t.some(t=>t.Layer===e||null==t.Layer&&e===I.default));return(0,i.jsxs)(E.default,{component:r.Fragment,children:[O.map((e,n)=>{let r=_().findLast(t,t=>t.Layer===e||null==t.Layer&&e===I.default);return(0,i.jsx)(u.default,{isVisible:l[n],backdropStyle:r?.backdropStyle??u.BackdropStyles.DARK,onClose:a,LayerComponent:e,backdropInstant:r?.instant},`layer-${n}`)}),t.map((e,n)=>{let{key:r,Layer:o,render:a,instant:_}=e;return(0,i.jsx)(R,{modalKey:r,LayerComponent:o??I.default,isTopModal:n===t.length-1,render:a,closeModal:s,instant:_},r)})]})}",
-        "useModalContext": "function C(){return(0,d.modalContextFromAppContext)((0,l.useAppContext)())}"
-    }
-}

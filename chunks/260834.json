@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e,t){if(a.EditorUtils.areStylesDisabled(e))return[];let[n,s]=t,l=[];if(!a.NodeUtils.isType(n,\"line\")||null==n.codeBlockState)return l;let{hljsTypes:r,isStyledCodeBlockLine:o}=n.codeBlockState;if(null==r||0===r.length||!o)return[];for(let t of r){let r=n.children.map(e=>a.TextUtils.isText(e)?e.text:null);l.push({hljsTypes:t.types,anchor:(0,i.getPointFromPosition)(e,s,r,t.start),focus:(0,i.getPointFromPosition)(e,s,r,t.end)})}return l}"
-    }
-}

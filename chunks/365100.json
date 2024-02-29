@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e,t){var n=(0,r.default)(e),u=(0,a.default)(e),s=n.visualViewport,l=u.clientWidth,c=u.clientHeight,d=0,f=0;if(s){l=s.width,c=s.height;var p=(0,i.default)();(p||!p&&\"fixed\"===t)&&(d=s.offsetLeft,f=s.offsetTop)}return{width:l,height:c,x:d+(0,o.default)(e),y:f}}"
-    }
-}

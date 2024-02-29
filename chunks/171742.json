@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "binaryWriteOptions": "function s(e){return e?Object.assign(Object.assign({},i),e):i}"
+    }
+}

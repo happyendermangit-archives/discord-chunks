@@ -1,3 +1,7 @@
 {
-    "exports": "/assets/4dd44f1f2d9d4be0cc63.png"
+    "exports": {
+        "leftPanel": "leftPanel_e31826",
+        "sectionSubtitle": "sectionSubtitle__84686",
+        "sectionTitle": "sectionTitle__42603"
+    }
 }

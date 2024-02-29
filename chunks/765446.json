@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function C(e,t,n){let{attributes:i,children:a,element:s}=t;switch(s.type){case\"applicationCommand\":let r=d.default.getActiveCommand(n),o=0,u=0;if(null!=r&&r.id===s.command.id){var c;let t=m.getOptionNames(e);for(let e of null!==(c=r.options)&&void 0!==c?c:[])t.includes(e.name)?u++:o++}let f={};if(o>0){let e;e=u>0?E.default.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({count:o}):E.default.Messages.COMMANDS_OPTION_COUNT.format({count:o}),f[\"data-trailing-placeholder\"]=e}return(0,l.jsx)(\"div\",{className:g.applicationCommand,...i,...f,children:a});case\"applicationCommandOption\":return(0,l.jsx)(S,{attributes:i,channelId:n,element:s,children:a});default:return null}}"
+    }
+}

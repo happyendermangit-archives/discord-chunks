@@ -1,0 +1,3 @@
+{
+    "exports": "function(e){var t,n=this;if(\"function\"!=typeof n||\"[object Function]\"!==r.apply(n))throw TypeError(\"Function.prototype.bind called on incompatible \"+n);for(var u=i(arguments,1),l=a(0,n.length-u.length),c=[],d=0;d<l;d++)c[d]=\"$\"+d;if(t=Function(\"binder\",\"return function (\"+s(c,\",\")+\"){ return binder.apply(this,arguments); }\")(function(){if(this instanceof t){var r=n.apply(this,o(u,arguments));return Object(r)===r?r:this}return n.apply(e,o(u,arguments))}),n.prototype){var f=function(){};f.prototype=n.prototype,t.prototype=new f,f.prototype=null}return t}"
+}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "trackGuildInviteNotificationAction": "function s(){i.default.trackWithMetadata(r.AnalyticEvents.NOTIFICATION_CTA_CLICKED,{notification_type:\"Reminder Notification\",action:\"Guild Invite\",dismissed:!1})}",
-        "trackGuildInviteNotificationDismissed": "function u(){i.default.trackWithMetadata(r.AnalyticEvents.NOTIFICATION_CTA_CLICKED,{notification_type:\"Reminder Notification\",action:\"Guild Invite\",dismissed:!0})}"
-    }
-}

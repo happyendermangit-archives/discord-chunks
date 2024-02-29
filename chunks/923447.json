@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class N extends r.PureComponent{render(){let e;let{selected:t,color:n,className:r,children:o}=this.props,s=A(n);return t?e={color:s,background:n??l.default.unsafe_rawColors.BRAND_500.css}:null!=n&&(e={color:n}),(0,i.jsx)(u.FocusRing,{offset:{left:4},children:(0,i.jsxs)(I.default,{className:a()(d.selectableItem,r,{[d.selected]:t}),onClick:this.handleClick,onKeyUp:this.handleKeyUp,align:I.default.Align.CENTER,style:{...e,...this.props.style},role:\"button\",tabIndex:0,children:[(0,i.jsx)(I.default,{align:I.default.Align.CENTER,className:d.selectableItemLabel,shrink:1,children:o}),t&&(0,i.jsx)(I.default,{wrap:I.default.Wrap.WRAP,className:S.marginReset,grow:0,shrink:0,children:(0,i.jsx)(T.default,{color:s})})]})})}constructor(...e){super(...e),this.state={color:A(this.props.color)},this.handleKeyUp=e=>{if(e.which===c.KeyboardKeys.ENTER||e.which===c.KeyboardKeys.SPACE){let{onClick:e,...t}=this.props;e(t)}},this.handleClick=()=>{let{onClick:e,...t}=this.props;e(t)}}}"
-    }
-}

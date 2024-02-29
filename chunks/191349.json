@@ -1,0 +1,6 @@
+{
+    "exports": {
+        "DEVICE_PUSH_VOIP_PROVIDER": null,
+        "getDevicePushProvider": "function i(){return(0,r.isAndroid)(),null}"
+    }
+}

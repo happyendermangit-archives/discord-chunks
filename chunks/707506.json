@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "createInterpolator": "function(e,t,n){if(a.is.fun(e))return e;if(a.is.arr(e))return o({range:e,output:t,extrapolate:n});if(a.is.str(e.output[0]))return r.createStringInterpolator(e);var i=e.output,u=e.range||[0,1],s=e.extrapolateLeft||e.extrapolate||\"extend\",l=e.extrapolateRight||e.extrapolate||\"extend\",c=e.easing||function(e){return e};return function(t){var n=function(e,t){for(var n=1;n<t.length-1&&!(t[n]>=e);++n);return n-1}(t,u);return function(e,t,n,r,a,o,i,u,s){var l=s?s(e):e;if(l<t){if(\"identity\"===i)return l;\"clamp\"===i&&(l=t)}if(l>n){if(\"identity\"===u)return l;\"clamp\"===u&&(l=n)}return r===a?r:t===n?e<=t?r:a:(t===-1/0?l=-l:n===1/0?l-=t:l=(l-t)/(n-t),l=o(l),r===-1/0?l=-l:a===1/0?l+=r:l=l*(a-r)+r,l)}(t,u[n],u[n+1],i[n],i[n+1],c,s,l,e.map)}}"
-    }
-}

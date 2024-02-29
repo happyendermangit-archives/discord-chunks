@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "isReadableChannel": "function u(e){return null!=e&&(e.type===r.ChannelTypes.DM||e.type===r.ChannelTypes.GROUP_DM||(0,a.isTextChannel)(e.type)&&i.default.canBasicChannel(s,e))}",
-        "isReadableChannelId": "function o(e){return null!=e&&u(l.default.getBasicChannel(e))}"
-    }
-}

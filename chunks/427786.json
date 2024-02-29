@@ -1,3 +1,0 @@
-{
-    "exports": "function r(t){if(this._capacity=c(t),this._length=0,this._front=0,this._makeCapacity(),n(t)){for(var e=t.length,s=0;s<e;++s)this[s]=t[s];this._length=e}}"
-}

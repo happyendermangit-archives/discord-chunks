@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "openCreateGuildModal": "e=>{n.el(\"581431@61:107\").then(n.bind(n,\"559406\")).then(t=>{let{openCreateGuildModal:n}=t;return n(e)})}",
-            "updateCreateGuildModal": "e=>{n.el(\"581431@286:332\").then(n.bind(n,\"559406\")).then(t=>{let{updateCreateGuildModal:n}=t;return n(e)})}"
-        }
-    }
-}

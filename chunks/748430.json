@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function f(e){let{className:t,color:n,look:f,hangStatusChannel:p}=e,m=(0,a.useStateFromStores)([r.default],()=>r.default.getChannelId()===p.id);return(0,i.jsx)(i.Fragment,{children:(0,i.jsx)(u.default,{className:t,disabled:m,onClick:()=>{l.default.can(d.Permissions.CONNECT,p),s.default.selectVoiceChannel(p.id),o.default.track(d.AnalyticEvents.HANG_STATUS_CTA_CLICKED,{source:\"UserProfilePopout\",guild_id:p.guild_id,channel_id:p.id})},color:n,look:f,fullWidth:!0,children:c.default.Messages.PROFILE_JOIN_VOICE_CHANNEL},\"join-hang\")})}"
-    }
-}

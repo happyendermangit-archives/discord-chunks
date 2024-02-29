@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(t,e){if(t.length!==e.length)return!1;for(let s=0;s<e.length&&s<t.length;s++)if(!Object.is(t[s],e[s]))return!1;return!0}"
-    }
-}

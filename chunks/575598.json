@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function f(e){let t,{color:a,size:f,forcedIconColor:T,className:E,iconClassName:_,tooltipText:m}=e,[N,I]=(0,s.useStateFromStoresArray)([o.default],()=>[o.default.desaturateUserColors,o.default.saturation]),h=(0,c.useToken)(r.default.unsafe_rawColors.PRIMARY_300).hex(),O=(0,l.hex2int)(a??h),C=(0,l.int2hsl)(O,!1,N?I:null);return t=null!=T?T:.3>(0,l.getDarkness)(O)?r.default.unsafe_rawColors.PRIMARY_630.css:r.default.unsafe_rawColors.WHITE_500.css,(0,n.jsx)(c.Tooltip,{text:null!=m?m:d.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,children:e=>(0,n.jsx)(i.default,{...e,className:E,color:C,size:f,children:(0,n.jsx)(u.default,{color:t,height:f,width:f,className:_})})})}"
-    }
-}

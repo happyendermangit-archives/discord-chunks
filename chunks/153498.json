@@ -1,0 +1,16 @@
+{
+    "exports": {
+        "navigateToChannel": "function n(e){let{}=e;return!1}",
+        "navigateToMemberVerification": "function r(e,t){return!1}",
+        "navigateToRootTab": "function d(e){return!1}",
+        "resetToAuthRoute": "function o(){return!1}",
+        "resetToPanelsUI": "function a(){return!1}",
+        "pushModal": "function u(e){let{}=e;return!1}",
+        "popModal": "function i(e,t){return!1}",
+        "popAllModals": "function s(){return!1}",
+        "coerceChannelRoute": "function E(e){}",
+        "coerceGuildsRoute": "function c(e){}",
+        "coerceModalRoute": "function _(e){}",
+        "useIsModalOpen": "function p(e){return!1}"
+    }
+}

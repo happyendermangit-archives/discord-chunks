@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function g(e){let{soundboardListRef:t,categories:n,listPadding:s=C}=e,l=a.useRef(null);return(0,i.jsx)(c.default,{className:I.categoryList,categoryListRef:l,expressionsListRef:t,store:d.SoundboardPickerStore,categories:n,listPadding:s,renderCategoryListItem:S,rowCount:n.length,categoryHeight:40})}"
-    }
-}

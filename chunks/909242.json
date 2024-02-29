@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "instantiate": "function(t){function e(e){t.call(this,e),this._cbcInit()}n(e,t);for(var s=Object.keys(i),r=0;r<s.length;r++){var c=s[r];e.prototype[c]=i[c]}return e.create=function(t){return new e(t)},e}"
-    }
-}

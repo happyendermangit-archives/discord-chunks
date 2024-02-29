@@ -1,5 +1,0 @@
-{
-    "exports": "function(){for(var t=[],r=arguments.length;r--;)t[r]=arguments[r];return new(Function.prototype.bind.apply(h.Color,[null].concat(t)))}",
-    "paths": [],
-    "children": []
-}

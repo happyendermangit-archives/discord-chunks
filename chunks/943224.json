@@ -1,0 +1,3 @@
+{
+    "exports": "e=>e&&e.exact?new RegExp(\"(?:^\".concat(o,\"$)|(?:^\").concat(s,\"$)\")):RegExp(\"(?:\".concat(a(e)).concat(o).concat(a(e),\")|(?:\").concat(a(e)).concat(s).concat(a(e),\")\"),\"g\")"
+}

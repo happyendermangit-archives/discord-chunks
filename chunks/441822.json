@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "registerVideoStream": "function a(e){let t=r.uniqueId(\"VideoStream\");return s[t]=e,t}",
+        "unregisterVideoStream": "function o(e){delete s[e]}",
+        "getVideoStream": "function l(e){return s[e]}"
+    }
+}

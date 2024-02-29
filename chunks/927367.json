@@ -1,0 +1,17 @@
+{
+    "exports": {
+        "UploadErrorCodes": {
+            "0": "GENERAL",
+            "1": "NO_FILE",
+            "2": "PROGRESS",
+            "3": "UPLOAD",
+            "4": "READ",
+            "GENERAL": 0,
+            "NO_FILE": 1,
+            "PROGRESS": 2,
+            "UPLOAD": 3,
+            "READ": 4
+        },
+        "default": "class e{get displayMessage(){switch(this.code){case 1:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_NO_FILE;case 2:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_PROGRESS;case 3:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_UPLOAD;case 4:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_READ;default:return l.default.Messages.UPLOAD_DEBUG_LOG_FAILURE}}constructor(e){this.code=e}}"
+    }
+}

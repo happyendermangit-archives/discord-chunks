@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function I(e){let{mobile:t}=e,n=(0,a.useStateFromStores)([s.default],()=>s.default.isDeveloper),o=(0,a.useStateFromStores)([l.default],()=>l.default.displayTools),I=r.useCallback(e=>{((0,_.isMac)()?e.metaKey:e.ctrlKey)&&e.altKey&&\"KeyO\"===e.code&&(0,E.toggleDisplayDevTools)()},[]);return(r.useLayoutEffect(()=>(window.addEventListener(\"keydown\",I),()=>{window.removeEventListener(\"keydown\",I)}),[I]),t?n:o)?(0,i.jsx)(u,{mobile:t}):null}"
-    }
-}

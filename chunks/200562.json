@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function l(e){let{mainText:t,supportingText:n,children:l,size:u}=e;return(0,a.jsxs)(i.default,{className:s.root,justify:i.default.Justify.CENTER,align:i.default.Align.CENTER,direction:i.default.Direction.VERTICAL,children:[(0,a.jsx)(r.default,{header:t,description:n,size:u}),l]})}"
-    }
-}

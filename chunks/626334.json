@@ -1,0 +1,11 @@
+{
+    "exports": {
+        "VoiceChannelEffectAnimationType": {
+            "0": "PREMIUM",
+            "1": "BASIC",
+            "PREMIUM": 0,
+            "BASIC": 1
+        },
+        "EMOJI_SIZE": 32
+    }
+}

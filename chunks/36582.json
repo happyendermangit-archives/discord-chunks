@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{className:t,color:n=_.STANDARD,size:r=E.SIZE_14,tag:s=\"div\",selectable:l=!1,strong:u=!1,children:I,style:T,\"aria-label\":c,...d}=e;return(0,i.jsx)(s,{\"aria-label\":c,className:o()(n,r,t,{[a.selectable]:l,[a.strong]:u}),style:T,...d,children:I})}"
-    }
-}

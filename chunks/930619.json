@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "MenuSliderControl": {
-            "render": "function(e,t){let{value:n,minValue:_=0,maxValue:E=100,onChange:l,renderValue:u=s,\"aria-label\":I}=e,T=r.useRef(null);return r.useImperativeHandle(t,()=>({focus:()=>T.current?.focus(),blur:()=>T.current?.blur(),activate:()=>!1}),[]),(0,i.jsx)(\"div\",{className:a.sliderContainer,children:(0,i.jsx)(o.Slider,{ref:T,mini:!0,handleSize:16,className:a.slider,initialValue:n,minValue:_,maxValue:E,onValueChange:l,asValueChanges:l,onValueRender:u,orientation:\"horizontal\",\"aria-label\":I})})}"
-        }
-    }
-}
