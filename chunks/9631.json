@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "async function f(e,t,a,f){null==t&&(t=i.default.getStatus()),await c.PreloadedUserSettingsActionCreators.updateAsync(\"status\",t=>{t.status=d.StringValue.create({value:e}),t.statusExpiresAtMs=null!=f?`${Date.now()+f}`:\"0\"},c.UserSettingsDelay.INFREQUENT_USER_ACTION);let s={next_status:e,prev_status:t,...n.default.getGlobalStats()};null!=a&&(s={...s,...a,expire_duration_minutes:null!=f?f/1e3:null}),o.default.track(r.AnalyticEvents.USER_STATUS_UPDATED,s)}"
+        "default": "async function r(e,t,a,r){null==t&&(t=i.default.getStatus()),await c.PreloadedUserSettingsActionCreators.updateAsync(\"status\",t=>{t.status=d.StringValue.create({value:e}),t.statusExpiresAtMs=null!=r?`${Date.now()+r}`:\"0\"},c.UserSettingsDelay.INFREQUENT_USER_ACTION);let s={next_status:e,prev_status:t,...n.default.getGlobalStats()};null!=a&&(s={...s,...a,expire_duration_minutes:null!=r?r/1e3:null}),o.default.track(f.AnalyticEvents.USER_STATUS_UPDATED,s)}"
     }
 }

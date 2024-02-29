@@ -1,6 +1,6 @@
 {
     "exports": {
         "default": "function o(e){return(0,d.useStateFromStoresObject)([c.default,n.default],()=>{let t=c.default.countVoiceStatesForChannel(e.id),a=n.default.getGuild(e.getGuildId());return null==a?{reachedLimit:!1,limit:-1}:e.type===i.ChannelTypes.GUILD_STAGE_VOICE?{reachedLimit:t>a.maxStageVideoChannelUsers,limit:a.maxStageVideoChannelUsers}:{reachedLimit:a.maxVideoChannelUsers>0&&t>a.maxVideoChannelUsers,limit:a.maxVideoChannelUsers}},[e])}",
-        "getChannelVideoLimit": "function r(e){let t=c.default.countVoiceStatesForChannel(e.id),a=n.default.getGuild(e.getGuildId());return null==a?{reachedLimit:!1,limit:-1}:e.type===i.ChannelTypes.GUILD_STAGE_VOICE?{reachedLimit:t>a.maxStageVideoChannelUsers,limit:a.maxStageVideoChannelUsers}:{reachedLimit:a.maxVideoChannelUsers>0&&t>a.maxVideoChannelUsers,limit:a.maxVideoChannelUsers}}"
+        "getChannelVideoLimit": "function f(e){let t=c.default.countVoiceStatesForChannel(e.id),a=n.default.getGuild(e.getGuildId());return null==a?{reachedLimit:!1,limit:-1}:e.type===i.ChannelTypes.GUILD_STAGE_VOICE?{reachedLimit:t>a.maxStageVideoChannelUsers,limit:a.maxStageVideoChannelUsers}:{reachedLimit:a.maxVideoChannelUsers>0&&t>a.maxVideoChannelUsers,limit:a.maxVideoChannelUsers}}"
     }
 }
