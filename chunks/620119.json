@@ -2,7 +2,7 @@
     "exports": {
         "default": {
             "isInitialized": true,
-            "handlePermission": "e=>{let{kind:t,granted:a}=e,n=\"Firefox\"===c().name?l.HelpdeskArticles.ENABLE_MIC_FIREFOX:l.HelpdeskArticles.ENABLE_MIC_CHROME;if(!a){let e=\"audio\"!==t;(0,i.openModal)(t=>(0,d.jsx)(f.default,{title:e?u.default.Messages.NO_CAMERA_TITLE:u.default.Messages.NO_MIC_TITLE,body:e?u.default.Messages.NO_CAMERA_BODY:u.default.Messages.NO_MIC_BODY,onConfirm:()=>window.open(s.default.getArticleURL(n),\"_blank\"),confirmText:u.default.Messages.HELP_DESK,...t}))}}",
+            "handlePermission": "e=>{let{kind:t,granted:a}=e,n=\"Firefox\"===c().name?l.HelpdeskArticles.ENABLE_MIC_FIREFOX:l.HelpdeskArticles.ENABLE_MIC_CHROME;if(!a){let e=\"audio\"!==t;(0,i.openModal)(t=>(0,d.jsx)(r.default,{title:e?u.default.Messages.NO_CAMERA_TITLE:u.default.Messages.NO_MIC_TITLE,body:e?u.default.Messages.NO_CAMERA_BODY:u.default.Messages.NO_MIC_BODY,onConfirm:()=>window.open(s.default.getArticleURL(n),\"_blank\"),confirmText:u.default.Messages.HELP_DESK,...t}))}}",
             "_initialize": "_initialize(){o.default.subscribe(\"MEDIA_ENGINE_PERMISSION\",this.handlePermission)}",
             "_terminate": "_terminate(){o.default.unsubscribe(\"MEDIA_ENGINE_PERMISSION\",this.handlePermission)}"
         }

@@ -1,8 +1,8 @@
 {
     "exports": {
-        "getCurrentPlatformDownloadURL": "function u(){let e=s();return r(e,!1,e===f?\"tar.gz\":null)}",
+        "getCurrentPlatformDownloadURL": "function u(){let e=s();return f(e,!1,e===r?\"tar.gz\":null)}",
         "getMobileDownloadLink": "function b(e,t,a){let d=null!=a?a.toString():null;switch(t){case\"iOS\":return(0,c.default)(d??\"https://itunes.apple.com/us/app/discord-chat-for-games/id985746746\",{utmSource:e,fingerprint:i.default.getFingerprint(),attemptId:(0,c.generateAttemptId)()});case\"Android\":return(0,c.default)(d??\"https://play.google.com/store/apps/details\",{utmSource:e,id:\"com.discord\",fingerprint:i.default.getFingerprint(),attemptId:(0,c.generateAttemptId)()});default:return d??\"https://www.discord.com\"}}",
-        "getPlatformReadableName": "function l(e){return({win:\"Windows\",osx:\"Mac\",[f]:\"Linux\"})[s(e)]}",
-        "makeDesktopDownloadURL": "function r(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],a=arguments.length>2?arguments[2]:void 0,d=null!=a?`&format=${a}`:\"\";return`${o.DownloadLinks.DESKTOP}${t?\"/ptb\":\"\"}?platform=${e}${d}`}"
+        "getPlatformReadableName": "function l(e){return({win:\"Windows\",osx:\"Mac\",[r]:\"Linux\"})[s(e)]}",
+        "makeDesktopDownloadURL": "function f(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],a=arguments.length>2?arguments[2]:void 0,d=null!=a?`&format=${a}`:\"\";return`${o.DownloadLinks.DESKTOP}${t?\"/ptb\":\"\"}?platform=${e}${d}`}"
     }
 }

@@ -3,10 +3,10 @@
         "default": {
             "isInitialized": true,
             "callbackActions": {
-                "VIDEO": "()=>{m.default.isVideoEnabled()?f.default.setVideoEnabled(!1):(0,h.default)(()=>f.default.setVideoEnabled(!0),I.AppContext.APP)}",
-                "MUTE": "()=>f.default.toggleSelfMute()",
-                "DEAFEN": "()=>f.default.toggleSelfDeaf()",
-                "DISCONNECT": "()=>r.default.disconnect()"
+                "VIDEO": "()=>{m.default.isVideoEnabled()?r.default.setVideoEnabled(!1):(0,h.default)(()=>r.default.setVideoEnabled(!0),I.AppContext.APP)}",
+                "MUTE": "()=>r.default.toggleSelfMute()",
+                "DEAFEN": "()=>r.default.toggleSelfDeaf()",
+                "DISCONNECT": "()=>f.default.disconnect()"
             },
             "isSupported": false,
             "prevButtons": [],
