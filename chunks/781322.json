@@ -1,8 +1,8 @@
 {
     "exports": {
-        "navigationStart": 1709226240202,
+        "navigationStart": 1709227890242,
         "performance": {
-            "timeOrigin": 1709226240202,
+            "timeOrigin": 1709227890242.1,
             "onresourcetimingbufferfull": null,
             "clearMarks": "function clearMarks() { [native code] }",
             "clearMeasures": "function clearMeasures() { [native code] }",
@@ -16,27 +16,27 @@
             "setResourceTimingBufferSize": "function setResourceTimingBufferSize() { [native code] }",
             "toJSON": "function toJSON() { [native code] }",
             "timing": {
-                "navigationStart": 1709226240202,
+                "navigationStart": 1709227890242,
                 "unloadEventStart": 0,
                 "unloadEventEnd": 0,
                 "redirectStart": 0,
                 "redirectEnd": 0,
-                "fetchStart": 1709226240203,
-                "domainLookupStart": 1709226240211,
-                "domainLookupEnd": 1709226240211,
-                "connectStart": 1709226240211,
-                "connectEnd": 1709226240294,
-                "secureConnectionStart": 1709226240213,
-                "requestStart": 1709226240294,
-                "responseStart": 1709226240327,
-                "responseEnd": 1709226240329,
-                "domLoading": 1709226240337,
-                "domInteractive": 1709226240628,
-                "domContentLoadedEventStart": 1709226241252,
-                "domContentLoadedEventEnd": 1709226241253,
-                "domComplete": 1709226241255,
-                "loadEventStart": 1709226241255,
-                "loadEventEnd": 1709226241255,
+                "fetchStart": 1709227890243,
+                "domainLookupStart": 1709227890244,
+                "domainLookupEnd": 1709227890253,
+                "connectStart": 1709227890253,
+                "connectEnd": 1709227890267,
+                "secureConnectionStart": 1709227890253,
+                "requestStart": 1709227890267,
+                "responseStart": 1709227890357,
+                "responseEnd": 1709227890359,
+                "domLoading": 1709227890366,
+                "domInteractive": 1709227890588,
+                "domContentLoadedEventStart": 1709227891241,
+                "domContentLoadedEventEnd": 1709227891242,
+                "domComplete": 1709227891244,
+                "loadEventStart": 1709227891244,
+                "loadEventEnd": 1709227891244,
                 "toJSON": "function toJSON() { [native code] }"
             },
             "navigation": {
@@ -49,8 +49,8 @@
                 "toJSON": "function toJSON() { [native code] }"
             },
             "memory": {
-                "totalJSHeapSize": 753253136,
-                "usedJSHeapSize": 713267516,
+                "totalJSHeapSize": 754563581,
+                "usedJSHeapSize": 713350741,
                 "jsHeapSizeLimit": 4294705152
             },
             "eventCounts": {
@@ -66,6 +66,6 @@
             "dispatchEvent": "function dispatchEvent() { [native code] }",
             "removeEventListener": "function(e,n,r){try{let i=n&&n.__sentry_wrapped__;i&&t.call(this,e,i,r)}catch(t){}return t.call(this,e,n,r)}"
         },
-        "timeOrigin": 1709226240202
+        "timeOrigin": 1709227890242.1
     }
 }
