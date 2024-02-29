@@ -1,6 +1,6 @@
 {
     "exports": {
-        "default": "class z extends a.PureComponent{static #e=this.Generic=k;static #t=this.Loading=D;static #n=this.Title=U;static #i=this.Divider=j;static #a=this.User=w;static #s=this.Role=F;static #l=this.Channel=G;static #r=this.Command=H;static #o=this.NewCommand=B;static #u=this.Emoji=V;static #d=this.GIFIntegration=K;static #c=this.Sticker=Y;static #f=this.EmojiUpsell=W;render(){let{children:e,className:t,innerClassName:n,id:s,...r}=this.props;return a.Children.count(e)>0?(0,i.jsx)(P.Provider,{value:{id:s??\"\"},children:(0,i.jsx)(\"div\",{className:l()(M.autocomplete,t),children:(0,i.jsx)(\"div\",{className:l()(M.autocompleteInner,n),...r,children:e})})}):null}}",
+        "default": "class z extends a.PureComponent{static #e=this.Generic=k;static #t=this.Loading=D;static #n=this.Title=U;static #i=this.Divider=j;static #a=this.User=w;static #s=this.Role=F;static #l=this.Channel=G;static #r=this.Command=B;static #o=this.NewCommand=H;static #u=this.Emoji=V;static #d=this.GIFIntegration=K;static #c=this.Sticker=Y;static #f=this.EmojiUpsell=W;render(){let{children:e,className:t,innerClassName:n,id:s,...r}=this.props;return a.Children.count(e)>0?(0,i.jsx)(P.Provider,{value:{id:s??\"\"},children:(0,i.jsx)(\"div\",{className:l()(M.autocomplete,t),children:(0,i.jsx)(\"div\",{className:l()(M.autocompleteInner,n),...r,children:e})})}):null}}",
         "getAutocompleteRowId": "function v(e){return null!=e?`autocomplete-${e}`:null}",
         "getAutocompleteTitleId": "function L(e){return`autocomplete-${e}-title`}"
     }

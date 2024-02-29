@@ -3,7 +3,7 @@
         "default": {
             "initializedCount": 0,
             "actions": {
-                "APP_STATE_UPDATE": "function Y(e){let{state:t}=e;if(\"active\"!==t)return!1;let n=_.default.getChannelId();if(null==n)return!1;o.default.fetchNewLocalMessages(n,N.MAX_MESSAGES_PER_CHANNEL)}",
+                "APP_STATE_UPDATE": "function K(e){let{state:t}=e;if(\"active\"!==t)return!1;let n=_.default.getChannelId();if(null==n)return!1;o.default.fetchNewLocalMessages(n,N.MAX_MESSAGES_PER_CHANNEL)}",
                 "OVERLAY_INITIALIZE": "function b(){let e=_.default.getChannelId();if(null!=e){let t=C.default.getChannel(e);if(null!=t){let e=(0,r.matchPath)(location.pathname,{path:N.Routes.CHANNEL(\":guild\",\":channel\",\":message\"),exact:!0});R({guildId:t.getGuildId(),channelId:t.id,messageId:e?.params?.message}),B(t.getGuildId(),t.id)}}}",
                 "CHANNEL_SELECT": "function P(e){let{guildId:t,channelId:n,messageId:a,jumpType:r}=e;R({guildId:t,channelId:n,messageId:a,jumpType:r}),B(t,n)}",
                 "VOICE_CHANNEL_SELECT": "function w(e){let{guildId:t,channelId:n}=e;R({guildId:t,channelId:n})}",

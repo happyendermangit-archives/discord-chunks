@@ -7841,9 +7841,9 @@
             "getEmbeddedActivitiesByChannel": "getEmbeddedActivitiesByChannel(){return T}",
             "getEmbeddedActivityDurationMs": "getEmbeddedActivityDurationMs(e,t){var n,s;let i=b.get((n=e,s=t,`${n}:${s}`));return null==i?null:Date.now()-i}",
             "isLaunchingActivity": "isLaunchingActivity(){return C}",
-            "getShelfActivities": "getShelfActivities(e){let t=V(e);return A.get(t)??[]}",
-            "getShelfFetchStatus": "getShelfFetchStatus(e){let t=V(e);return N.get(t)}",
-            "shouldFetchShelf": "shouldFetchShelf(e){let t=V(e),n=N.get(t)??{isFetching:!1},s=Date.now()-(n?.lastFetchTimestampMs??0)>216e5;return!n?.isFetching&&s}",
+            "getShelfActivities": "getShelfActivities(e){let t=L(e);return A.get(t)??[]}",
+            "getShelfFetchStatus": "getShelfFetchStatus(e){let t=L(e);return N.get(t)}",
+            "shouldFetchShelf": "shouldFetchShelf(e){let t=L(e),n=N.get(t)??{isFetching:!1},s=Date.now()-(n?.lastFetchTimestampMs??0)>216e5;return!n?.isFetching&&s}",
             "getOrientationLockStateForApp": "getOrientationLockStateForApp(e){return D.get(e)??null}",
             "getPipOrientationLockStateForApp": "getPipOrientationLockStateForApp(e){return O.get(e)??this.getOrientationLockStateForApp(e)}",
             "getGridOrientationLockStateForApp": "getGridOrientationLockStateForApp(e){return R.get(e)??O.get(e)??this.getOrientationLockStateForApp(e)}",
@@ -7851,7 +7851,7 @@
             "getUsersHavePlayedByApp": "getUsersHavePlayedByApp(e){return[...p.usersHavePlayedByApp.get(e)??[]]}",
             "getConnectedActivityChannelId": "getConnectedActivityChannelId(){return s}",
             "getActivityPanelMode": "getActivityPanelMode(){return M}",
-            "getFocusedLayout": "getFocusedLayout(){return L}",
+            "getFocusedLayout": "getFocusedLayout(){return V}",
             "getCurrentEmbeddedActivity": "getCurrentEmbeddedActivity(){let e=this.getConnectedActivityChannelId();if(null!=e)return this.getSelfEmbeddedActivityForChannel(e)??void 0}",
             "getEmbeddedActivityForUserId": "getEmbeddedActivityForUserId(e,t){let n;if(void 0!==t){e:for(let[s,i]of T)for(let s of i)if(s.applicationId===t&&s.userIds.has(e)){n=s;break e}return n}}"
         }

@@ -7833,7 +7833,7 @@
             "isSupported": "isSupported(){return b.OVERLAY_SUPPORTED}",
             "isMethodSupported": "isMethodSupported(e){return b.OVERLAY_SUPPORTED&&w.has(e)}",
             "enabled": false,
-            "getFocusedPID": "getFocusedPID(){return H}",
+            "getFocusedPID": "getFocusedPID(){return B}",
             "isReady": "isReady(e){return\"READY\"===D.get(e)}",
             "isCrashed": "isCrashed(e){return\"CRASHED\"===D.get(e)}"
         },

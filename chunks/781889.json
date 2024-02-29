@@ -110,7 +110,7 @@
             "getMaxRoleSubscriptionEmojiSlots": "getMaxRoleSubscriptionEmojiSlots(){return 25}",
             "getMaxSoundboardSlots": "getMaxSoundboardSlots(){return l.BoostedGuildFeatures[this.premiumTier].limits.soundboardSounds}",
             "isCommunity": "isCommunity(){return this.hasFeature(_.GuildFeatures.COMMUNITY)}",
-            "hasVerificationGate": "hasVerificationGate(){return this.hasFeature(_.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)&&this.hasFeature(_.GuildFeatures.COMMUNITY)}",
+            "hasVerificationGate": "hasVerificationGate(){return this.hasFeature(_.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)&&(this.hasFeature(_.GuildFeatures.COMMUNITY)||this.hasFeature(_.GuildFeatures.CLAN))}",
             "hasCommunityInfoSubheader": "hasCommunityInfoSubheader(){return this.hasFeature(_.GuildFeatures.COMMUNITY)&&this.hasFeature(_.GuildFeatures.DISCOVERABLE)}",
             "canHaveRaidActivityAlerts": "canHaveRaidActivityAlerts(){return!this.hasFeature(_.GuildFeatures.COMMUNITY)&&this.hasFeature(_.GuildFeatures.NON_COMMUNITY_RAID_ALERTS)||this.hasFeature(_.GuildFeatures.COMMUNITY)&&!this.hasFeature(_.GuildFeatures.RAID_ALERTS_DISABLED)}",
             "upsertRole": "upsertRole(e){return this.update(\"roles\",t=>(t[e.id]=e,(0,o.sortClientRoles)(this.id,Object.values(t))))}",

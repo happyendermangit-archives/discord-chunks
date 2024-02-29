@@ -1,6 +1,6 @@
 {
     "exports": {
-        "hasVoiceChannelActivityNotifsEnabled": "function u(e){let{voiceChannelActivityNotifsEnabled:t}=r.getCurrentConfig({guildId:e?.getGuildId()??a.EMPTY_STRING_GUILD_ID,location:\"hasVoiceChannelActivityNotifsEnabled\"});return t}",
-        "useVoiceActivityNotificationSettingsExperiment": "function l(e){let{voiceChannelActivityNotifsEnabled:t}=r.useExperiment({location:\"useVoiceActivityNotificationSettingsExperiment\",guildId:e?.getGuildId()??a.EMPTY_STRING_GUILD_ID},{disable:e?.type!==a.ChannelTypes.GUILD_VOICE,autoTrackExposure:!1}),{enabled:n}=s.useExperiment({location:\"useVoiceActivityNotificationSettingsExperiment\"},{disable:e?.type!==a.ChannelTypes.GUILD_VOICE||!t,autoTrackExposure:!0});return e?.type===a.ChannelTypes.GUILD_VOICE&&t&&n}"
+        "hasVoiceChannelActivityNotifsEnabled": "function u(e){let{voiceChannelActivityNotifsEnabled:t}=r.getCurrentConfig({guildId:e?.getGuildId()??a.EMPTY_STRING_SNOWFLAKE_ID,location:\"hasVoiceChannelActivityNotifsEnabled\"});return t}",
+        "useVoiceActivityNotificationSettingsExperiment": "function l(e){let{voiceChannelActivityNotifsEnabled:t}=r.useExperiment({location:\"useVoiceActivityNotificationSettingsExperiment\",guildId:e?.getGuildId()??a.EMPTY_STRING_SNOWFLAKE_ID},{disable:e?.type!==a.ChannelTypes.GUILD_VOICE,autoTrackExposure:!1}),{enabled:n}=s.useExperiment({location:\"useVoiceActivityNotificationSettingsExperiment\"},{disable:e?.type!==a.ChannelTypes.GUILD_VOICE||!t,autoTrackExposure:!0});return e?.type===a.ChannelTypes.GUILD_VOICE&&t&&n}"
     }
 }

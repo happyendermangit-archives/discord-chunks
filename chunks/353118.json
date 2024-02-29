@@ -7854,7 +7854,7 @@
                 "computeBonus": "()=>100",
                 "computeWeight": "e=>{let t=0;return e<=3?t=100:e<=15?t=70:e<=30?t=50:e<=45?t=30:e<=80&&(t=10),t}",
                 "afterCompute": "()=>{ee.resetFrequentlyUsed(),W=B.slice(0),!i().some(z,e=>e.usableEmojis.length>0)&&W.splice(B.indexOf(G.EmojiCategories.CUSTOM),1)}",
-                "lookupKey": "e=>L.default.getByName(e)??Q(e)",
+                "lookupKey": "e=>V.default.getByName(e)??Q(e)",
                 "usageHistory": {},
                 "_frequently": [],
                 "maxSamples": 10,

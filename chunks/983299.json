@@ -24,16 +24,16 @@
                 "size": 0,
                 "values": "function values() { [native code] }"
             },
-            "handleInitialize": "handleInitialize(e){let{guildId:t}=e;return N(t),L(t)}",
+            "handleInitialize": "handleInitialize(e){let{guildId:t}=e;return N(t),P(t)}",
             "handleGuildDelete": "handleGuildDelete(e){let{guild:t}=e;return N(t.id)}",
-            "handleSearchStateUpdate": "handleSearchStateUpdate(e){let{guildId:t}=e;return L(t)}",
-            "handlePaginationUpdate": "handlePaginationUpdate(e){let{guildId:t}=e;return L(t)}",
+            "handleSearchStateUpdate": "handleSearchStateUpdate(e){let{guildId:t}=e;return P(t)}",
+            "handlePaginationUpdate": "handlePaginationUpdate(e){let{guildId:t}=e;return P(t)}",
             "handleGuildMemberSearchSuccess": "handleGuildMemberSearchSuccess(e){let{guildId:t}=e;return y(b(t))}",
             "handleGuildMemberSearchStillIndexing": "handleGuildMemberSearchStillIndexing(e){let{guildId:t}=e;R(b(t),{requestState:4,abortController:null,lastUpdated:Date.now()})}",
-            "handleNewMemberTimestampRefresh": "handleNewMemberTimestampRefresh(e){let{guildId:t}=e;return L(t)}"
+            "handleNewMemberTimestampRefresh": "handleNewMemberTimestampRefresh(e){let{guildId:t}=e;return P(t)}"
         },
         "getChunkIndex": "function U(e,t){return Math.floor(Math.max(e-1,0)/t)}",
-        "getChunkNumbers": "function P(e){let t=(0,S.getSearchChunkLimit)(e),r=e.pageSize*(e.currentPage-1),n=e.pageSize*e.currentPage,i=e.pageSize*(e.currentPage+1);return{previousPageChunkNumber:U(r,t),currentPageChunkNumber:U(n,t),nextPageChunkNumber:U(i,t)}}",
+        "getChunkNumbers": "function L(e){let t=(0,S.getSearchChunkLimit)(e),r=e.pageSize*(e.currentPage-1),n=e.pageSize*e.currentPage,i=e.pageSize*(e.currentPage+1);return{previousPageChunkNumber:U(r,t),currentPageChunkNumber:U(n,t),nextPageChunkNumber:U(i,t)}}",
         "useIsMakingRequest": "function v(e){return C(t=>{let r=b(e);return t[r]?.requestState===2})}",
         "useIsStillIndexing": "function B(e){return C(t=>{let r=b(e);return t[r]?.requestState===4})}",
         "useMembersSearchRecordStore": "function(){let e,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:t.getState,o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:Object.is,[,i]=(0,r.useReducer)(e=>e+1,0),u=t.getState(),s=(0,r.useRef)(u),l=(0,r.useRef)(n),c=(0,r.useRef)(o),d=(0,r.useRef)(!1),f=(0,r.useRef)();void 0===f.current&&(f.current=n(u));let p=!1;(s.current!==u||l.current!==n||c.current!==o||d.current)&&(e=n(u),p=!o(f.current,e)),a(()=>{p&&(f.current=e),s.current=u,l.current=n,c.current=o,d.current=!1});let h=(0,r.useRef)(u);a(()=>{let e=()=>{try{let e=t.getState(),n=l.current(e);!c.current(f.current,n)&&(s.current=e,f.current=n,i())}catch(e){d.current=!0,i()}},n=t.subscribe(e);return t.getState()!==h.current&&e(),n},[]);let m=p?e:f.current;return(0,r.useDebugValue)(m),m}"

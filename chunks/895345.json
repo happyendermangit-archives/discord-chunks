@@ -1,6 +1,6 @@
 {
     "exports": {
-        "isGuildEligibleForGuildProducts": "function a(e,t){let{enabled:n}=s.GuildProductsExperiment.getCurrentConfig({guildId:e??i.EMPTY_STRING_GUILD_ID,location:t});return n}",
-        "useGuildEligibleForGuildProducts": "function r(e,t){let{enabled:n}=s.GuildProductsExperiment.useExperiment({guildId:e??i.EMPTY_STRING_GUILD_ID,location:t});return n}"
+        "isGuildEligibleForGuildProducts": "function a(e,t){let{enabled:n}=s.GuildProductsExperiment.getCurrentConfig({guildId:e??i.EMPTY_STRING_SNOWFLAKE_ID,location:t});return n}",
+        "useGuildEligibleForGuildProducts": "function r(e,t){let{enabled:n}=s.GuildProductsExperiment.useExperiment({guildId:e??i.EMPTY_STRING_SNOWFLAKE_ID,location:t});return n}"
     }
 }

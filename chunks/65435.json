@@ -7834,7 +7834,7 @@
             "getMutableRequestToSpeakParticipants": "getMutableRequestToSpeakParticipants(e){return P(e)?.getRequestToSpeakParticipants()??x}",
             "getRequestToSpeakParticipantsVersion": "getRequestToSpeakParticipantsVersion(e){return P(e)?.requestToSpeakVersion??-1}",
             "getParticipantCount": "getParticipantCount(e,t){return P(e)?.size(t)??0}",
-            "getChannels": "getChannels(e){return R(e??C.NO_GUILD_STRING_GUILD_ID),A.values(e??C.NO_GUILD_STRING_GUILD_ID)}",
+            "getChannels": "getChannels(e){return R(e??C),A.values(e??C)}",
             "getChannelsVersion": "getChannelsVersion(){return A.version}",
             "getParticipant": "getParticipant(e,t){return P(e)?.getParticipant(t)??null}"
         }

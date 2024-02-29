@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function U(e){return V[e]}"
+        "default": "function U(e){return L[e]}"
     }
 }

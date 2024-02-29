@@ -7831,8 +7831,8 @@
             "initialize": "initialize(){this.waitFor(y.default,m.default,T.default,C.default,I.default,v.default),this.syncWith([T.default],U)}",
             "getLocalPresence": "getLocalPresence(){return{status:D,since:R,activities:P,afk:b,broadcast:i}}",
             "getStatus": "getStatus(){return D}",
-            "getActivities": "getActivities(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];return e?V:P}",
-            "getPrimaryActivity": "getPrimaryActivity(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];return e?V[0]:P[0]}",
+            "getActivities": "getActivities(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];return e?L:P}",
+            "getPrimaryActivity": "getPrimaryActivity(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];return e?L[0]:P[0]}",
             "getApplicationActivity": "getApplicationActivity(e){let t=!(arguments.length>1)||void 0===arguments[1]||arguments[1];return this.findActivity(t=>t.application_id===e,t)}",
             "findActivity": "findActivity(e){let t=!(arguments.length>1)||void 0===arguments[1]||arguments[1];return this.getActivities(t).find(e)}",
             "getBroadcast": "getBroadcast(){return s}"

@@ -3321,12 +3321,7 @@
             "IOS": "https://itunes.apple.com/app/discord/id985746746",
             "ANDROID": "https://play.google.com/store/apps/details?id=com.discord"
         },
-        "EMPTY_STRING_CHANNEL_ID": "",
-        "EMPTY_STRING_CLASSIFICATION_ID": "",
-        "EMPTY_STRING_GUILD_ID": "",
-        "EMPTY_STRING_GUILD_ROLE_ID": "",
-        "EMPTY_STRING_MESSAGE_ID": "",
-        "EMPTY_STRING_USER_ID": "",
+        "EMPTY_STRING_SNOWFLAKE_ID": "",
         "Endpoints": {
             "USER": "function(){for(var _=arguments.length,I=Array(_),e=0;e<_;e++)I[e]=arguments[e];return R(...function(_,E){return _.map(_=>null==_?_:null==E?encodeURIComponent(_):String(_).split(\"\").map(_=>null!=E&&E.includes(_)?_:encodeURIComponent(_)).join(\"\"))}(I,E))}",
             "USER_RELATIONSHIPS": "function(){for(var _=arguments.length,I=Array(_),e=0;e<_;e++)I[e]=arguments[e];return R(...function(_,E){return _.map(_=>null==_?_:null==E?encodeURIComponent(_):String(_).split(\"\").map(_=>null!=E&&E.includes(_)?_:encodeURIComponent(_)).join(\"\"))}(I,E))}",
@@ -5528,7 +5523,6 @@
         "NEW_GROUP_DM_POPOUT_ID": "PrivateChannelRecipientsInvitePopout",
         "NON_USER_BOT_DISCRIMINATOR": "0000",
         "NOTE_MAX_LENGTH": 256,
-        "NO_GUILD_STRING_GUILD_ID": "NO_GUILD",
         "NULL_STRING_CHANNEL_ID": "null",
         "NULL_STRING_GUILD_ID": "null",
         "NativeAppStates": {
@@ -5634,7 +5628,6 @@
             "BLOCKED": "BLOCKED"
         },
         "OFF_PLATFORM_PREMIUM_PERKS": [],
-        "ONE_STRING_CHANNEL_ID": "1",
         "OperatingSystems": {
             "WINDOWS": "1",
             "MACOS": "2",

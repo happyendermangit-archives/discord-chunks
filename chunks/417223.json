@@ -7849,7 +7849,7 @@
             "isEstimated": "isEstimated(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:er.ReadStateTypes.CHANNEL;return eO.getValue(e,t,e=>e.estimated,!1)}",
             "hasOpenedThread": "hasOpenedThread(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:er.ReadStateTypes.CHANNEL;return eO.getValue(e,t,e=>e._persisted,!1)}",
             "hasUnreadPins": "hasUnreadPins(e){return eO.getValue(e,er.ReadStateTypes.CHANNEL,e=>e.canBeUnread()&&e.lastPinTimestamp>e.ackPinTimestamp,!1)}",
-            "isNewForumThread": "isNewForumThread(e,t,n){let s=eO.get(t);if(!0===eO.get(e)._persisted||null==s.ackMessageIdAtChannelSelect||0>=F.default.compare(e,s.ackMessageIdAtChannelSelect))return!1;let i=eL(n);return F.default.extractTimestamp(e)>i}",
+            "isNewForumThread": "isNewForumThread(e,t,n){let s=eO.get(t);if(!0===eO.get(e)._persisted||null==s.ackMessageIdAtChannelSelect||0>=F.default.compare(e,s.ackMessageIdAtChannelSelect))return!1;let i=eV(n);return F.default.extractTimestamp(e)>i}",
             "getAllReadStates": "getAllReadStates(e){let t=[];return eO.forEach(n=>{switch(n.type){case er.ReadStateTypes.GUILD_HOME:case er.ReadStateTypes.GUILD_EVENT:case er.ReadStateTypes.GUILD_ONBOARDING_QUESTION:null!=W.default.getGuild(n.channelId)&&t.push(n.serialize(e));break;case er.ReadStateTypes.NOTIFICATION_CENTER:F.default.castUserIdAsReadStateChannelId(J.default.getCurrentUser()?.id)===n.channelId&&t.push(n.serialize(e));break;default:t.push(n.serialize(e))}}),t}",
             "getGuildUnreadsSentinel": "getGuildUnreadsSentinel(e){return eO.getGuildSentinels(e).unreadsSentinel}",
             "getMentionChannelIds": "getMentionChannelIds(){return eO.getMentionChannelIds()}",
