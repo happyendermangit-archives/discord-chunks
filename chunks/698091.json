@@ -165,8 +165,8 @@
                 "_requestAnimationFrame": "e=>requestAnimationFrame(e)",
                 "_cancelAnimationFrame": "e=>cancelAnimationFrame(e)",
                 "writing": false,
-                "id": 4,
-                "lastTime": 1495.1999999999825,
+                "id": 5,
+                "lastTime": 1001.3000000000029,
                 "animations": [
                     {
                         "id": 1,
@@ -195,13 +195,13 @@
                             "changed": true,
                             "values": [
                                 {
-                                    "_value": 0.17733333333327514,
+                                    "_value": 0.1929999999999806,
                                     "done": false,
-                                    "elapsedTime": 53.19999999998254,
-                                    "lastPosition": 0.17733333333327514,
-                                    "lastVelocity": 0.0033333333333333344,
+                                    "elapsedTime": 57.89999999999418,
+                                    "lastPosition": 0.1929999999999806,
+                                    "lastVelocity": 0.003333333333333335,
                                     "v0": 0,
-                                    "_string": "rgba(0, 0, 0, 0.12448104575159313)",
+                                    "_string": "rgba(0, 0, 0, 0.1354784313725354)",
                                     "_toString": "function(e){var n=0;return t[0].replace(l,function(){return String(p[n++](e))}).replace(d,f)}",
                                     "constructor": "function t(t,n){var r;return(r=e.call(this,0)||this)._value=void 0,r._string=null,r._toString=void 0,r._toString=a.createInterpolator({output:[t,n]}),r}",
                                     "getValue": "function(){var e=this._string;return null==e?this._string=this._toString(this._value):e}",
@@ -313,7 +313,7 @@
                         "_emit": "function(e){o.each(Array.from(this._children),function(t){t.onParentChange(e)})}",
                         "idle": false,
                         "goal": "#000000b3",
-                        "velocity": 0.0033333333333333344
+                        "velocity": 0.003333333333333335
                     },
                     {
                         "id": 3,
@@ -342,13 +342,13 @@
                             "changed": true,
                             "values": [
                                 {
-                                    "_value": 0.17733333333327514,
+                                    "_value": 0.1929999999999806,
                                     "done": false,
-                                    "elapsedTime": 53.19999999998254,
-                                    "lastPosition": 0.17733333333327514,
-                                    "lastVelocity": 0.0033333333333333344,
+                                    "elapsedTime": 57.89999999999418,
+                                    "lastPosition": 0.1929999999999806,
+                                    "lastVelocity": 0.003333333333333335,
                                     "v0": 0,
-                                    "_string": "rgba(0, 0, 0, 0.12448104575159313)",
+                                    "_string": "rgba(0, 0, 0, 0.1354784313725354)",
                                     "_toString": "function(e){var n=0;return t[0].replace(l,function(){return String(p[n++](e))}).replace(d,f)}",
                                     "constructor": "function t(t,n){var r;return(r=e.call(this,0)||this)._value=void 0,r._string=null,r._toString=void 0,r._toString=a.createInterpolator({output:[t,n]}),r}",
                                     "getValue": "function(){var e=this._string;return null==e?this._string=this._toString(this._value):e}",
@@ -460,7 +460,7 @@
                         "_emit": "function(e){o.each(Array.from(this._children),function(t){t.onParentChange(e)})}",
                         "idle": false,
                         "goal": "#000000b3",
-                        "velocity": 0.0033333333333333344
+                        "velocity": 0.003333333333333335
                     },
                     {
                         "id": 5,
@@ -489,13 +489,13 @@
                             "changed": true,
                             "values": [
                                 {
-                                    "_value": 0.17733333333327514,
+                                    "_value": 0.1929999999999806,
                                     "done": false,
-                                    "elapsedTime": 53.19999999998254,
-                                    "lastPosition": 0.17733333333327514,
-                                    "lastVelocity": 0.0033333333333333344,
+                                    "elapsedTime": 57.89999999999418,
+                                    "lastPosition": 0.1929999999999806,
+                                    "lastVelocity": 0.003333333333333335,
                                     "v0": 0,
-                                    "_string": "translate3d(0, -82.26666666667248%, 0)",
+                                    "_string": "translate3d(0, -80.70000000000194%, 0)",
                                     "_toString": "function(e){var n=0;return t[0].replace(l,function(){return String(p[n++](e))}).replace(d,f)}",
                                     "constructor": "function t(t,n){var r;return(r=e.call(this,0)||this)._value=void 0,r._string=null,r._toString=void 0,r._toString=a.createInterpolator({output:[t,n]}),r}",
                                     "getValue": "function(){var e=this._string;return null==e?this._string=this._toString(this._value):e}",
@@ -607,7 +607,7 @@
                         "_emit": "function(e){o.each(Array.from(this._children),function(t){t.onParentChange(e)})}",
                         "idle": false,
                         "goal": "translate3d(0, -0px, 0)",
-                        "velocity": 0.0033333333333333344
+                        "velocity": 0.003333333333333335
                     },
                     {
                         "id": 6,
@@ -636,11 +636,11 @@
                             "changed": true,
                             "values": [
                                 {
-                                    "_value": 0.17733333333327514,
+                                    "_value": 0.1929999999999806,
                                     "done": false,
-                                    "elapsedTime": 53.19999999998254,
-                                    "lastPosition": 0.17733333333327514,
-                                    "lastVelocity": 0.0033333333333333344,
+                                    "elapsedTime": 57.89999999999418,
+                                    "lastPosition": 0.1929999999999806,
+                                    "lastVelocity": 0.003333333333333335,
                                     "v0": 0,
                                     "constructor": "function t(t){var n;return(n=e.call(this)||this)._value=t,n.done=!0,n.elapsedTime=void 0,n.lastPosition=void 0,n.lastVelocity=void 0,n.v0=void 0,a.is.num(n._value)&&(n.lastPosition=n._value),n}",
                                     "getPayload": "function(){return[this]}",
@@ -752,7 +752,7 @@
                         "_emit": "function(e){o.each(Array.from(this._children),function(t){t.onParentChange(e)})}",
                         "idle": false,
                         "goal": 1,
-                        "velocity": 0.0033333333333333344
+                        "velocity": 0.003333333333333335
                     }
                 ],
                 "priority": 0,
