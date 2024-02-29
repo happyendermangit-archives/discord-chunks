@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "css": "function(){var e=A.apply(this,arguments),t=l+\"-\"+r;return void 0===g.registered[t]&&(g.registered[t]=u),S(\".\"+t,e),t}",
-        "injectGlobal": "function(){var e=A.apply(this,arguments);S(\"\",e)}"
-    }
-}

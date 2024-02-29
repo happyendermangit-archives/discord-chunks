@@ -7782,10 +7782,10 @@
                     "STREAMING_UPDATE": "e=>this._dispatchWithDevtools(e)",
                     "WINDOW_INIT": "e=>this._dispatchWithDevtools(e)",
                     "I18N_LOAD_SUCCESS": "e=>this._dispatchWithDevtools(e)",
+                    "MEDIA_ENGINE_DEVICES": "e=>this._dispatchWithDevtools(e)",
                     "FINGERPRINT": "e=>this._dispatchWithDevtools(e)",
                     "TRACK": "e=>this._dispatchWithDevtools(e)",
-                    "EXPERIMENTS_FETCH_SUCCESS": "e=>this._dispatchWithDevtools(e)",
-                    "MEDIA_ENGINE_DEVICES": "e=>this._dispatchWithDevtools(e)"
+                    "EXPERIMENTS_FETCH_SUCCESS": "e=>this._dispatchWithDevtools(e)"
                 },
                 "_defaultBand": 2,
                 "actionLogger": {
@@ -7840,6 +7840,7 @@
             "getMutableGuildChannelsForGuild": "getMutableGuildChannelsForGuild(e){return k(e,1,\"getMutableGuildChannelsForGuild\"),p[e]??D}",
             "getSortedPrivateChannels": "getSortedPrivateChannels(){return r()(f).values().sort((e,t)=>N.default.compare(e.lastMessageId,t.lastMessageId)).reverse().value()}",
             "getDMFromUserId": "getDMFromUserId(e){if(null!=e)return U[e]}",
+            "getMutableDMsByUserIds": "getMutableDMsByUserIds(){return U}",
             "getDMUserIds": "getDMUserIds(){return N.default.keys(U)}",
             "getPrivateChannelsVersion": "getPrivateChannelsVersion(){return g}",
             "getGuildChannelsVersion": "getGuildChannelsVersion(e){return G[e]??0}",
