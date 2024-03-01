@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function i(e,a){n.AlwaysPreviewVideo.getSetting()?(0,d.openModalLazy)(async()=>{let{default:a}=await t.el(\"381736\").then(t.bind(t,\"381736\"));return t=>(0,s.jsx)(a,{...t,onEnable:e,videoEnabled:!1})},{modalKey:\"camera-preview\",contextKey:a===c.AppContext.POPOUT?d.POPOUT_MODAL_CONTEXT:d.DEFAULT_MODAL_CONTEXT}):null==e||e()}"
+        "default": "function c(e,a){n.AlwaysPreviewVideo.getSetting()?(0,d.openModalLazy)(async()=>{let{default:a}=await t.el(\"381736\").then(t.bind(t,\"381736\"));return t=>(0,s.jsx)(a,{...t,onEnable:e,videoEnabled:!1})},{modalKey:\"camera-preview\",contextKey:a===i.AppContext.POPOUT?d.POPOUT_MODAL_CONTEXT:d.DEFAULT_MODAL_CONTEXT}):null==e||e()}"
     }
 }
