@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function t(e){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,t);var n=function(e,t){if(!e)throw ReferenceError(\"this hasn't been initialised - super() hasn't been called\");return t&&(\"object\"==typeof t||\"function\"==typeof t)?t:e}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));return n.inputRef=function(e){n.input=e,\"function\"==typeof n.props.inputRef&&n.props.inputRef(e)},n.placeHolderSizerRef=function(e){n.placeHolderSizer=e},n.sizerRef=function(e){n.sizer=e},n.state={inputWidth:e.minWidth,inputId:e.id||f()},n}"
+    }
+}
