@@ -189,6 +189,7 @@
             0,
             1,
             3
-        ]
+        ],
+        "PRIVATE_APPS_HELP_ARTICLE": "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
     }
 }

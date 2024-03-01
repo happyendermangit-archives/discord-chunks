@@ -5125,6 +5125,7 @@
             "17592186044416": "QUARANTINED"
         },
         "ApplicationFlags": {
+            "2": "EMBEDDED_RELEASED",
             "8": "EMBEDDED_IAP",
             "64": "APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE",
             "4096": "GATEWAY_PRESENCE",
@@ -5136,6 +5137,7 @@
             "524288": "GATEWAY_MESSAGE_CONTENT_LIMITED",
             "1048576": "EMBEDDED_FIRST_PARTY",
             "8388608": "APPLICATION_COMMAND_BADGE",
+            "EMBEDDED_RELEASED": 2,
             "EMBEDDED_IAP": 8,
             "APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE": 64,
             "GATEWAY_PRESENCE": 4096,

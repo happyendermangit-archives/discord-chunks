@@ -1,3 +1,0 @@
-{
-    "exports": "function t(t,n){var o,r=(o=e.call(this,t,n)||this).handleExited.bind(l(l(o)));return o.state={handleExited:r,firstRender:!0},o}"
-}

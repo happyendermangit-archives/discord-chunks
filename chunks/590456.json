@@ -17,6 +17,6 @@
             "POMELO_POPOUT": "POMELO_POPOUT",
             "CANCEL_MODAL": "CANCEL_MODAL"
         },
-        "getBadgeAsset": "function d(t){let{API_ENDPOINT:e,CDN_HOST:i}=window.GLOBAL_ENV;return null!=i?\"\".concat(location.protocol,\"//\").concat(i,\"/badge-icons/\").concat(t,\".png\"):\"\".concat(location.protocol).concat(e).concat(r.Endpoints.BADGE_ICON(t))}"
+        "getBadgeAsset": "function d(e){let{API_ENDPOINT:t,CDN_HOST:i}=window.GLOBAL_ENV;return null!=i?\"\".concat(location.protocol,\"//\").concat(i,\"/badge-icons/\").concat(e,\".png\"):\"\".concat(location.protocol).concat(t).concat(r.Endpoints.BADGE_ICON(e))}"
     }
 }

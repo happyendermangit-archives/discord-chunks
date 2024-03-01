@@ -7829,10 +7829,10 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_84",
-            "_version": 5,
+            "_version": 6,
             "callback": "_=>{let{persistKey:E}=this.getClass();this.persist(),e._writePromises.delete(E),e._writeResolvers.delete(E),_()}",
             "throttledCallback": "function m(){var t,n=ov(),i=d(n);if(o=arguments,u=this,s=n,i){if(e===c){;return l=t=s,c=iI(y,r),h?g(t):f}if(p)return eI(c),c=iI(y,r),g(s)}return e===c&&(c=iI(y,r)),f}",
-            "initialize": "initialize(e){var t;let n=new Map;Array.isArray(null==e?void 0:e.usersHavePlayedByApp)&&(null==e||e.usersHavePlayedByApp.forEach(e=>{if(Array.isArray(e)){let[t,s]=e;\"string\"==typeof t&&Array.isArray(s)&&n.set(t,new Set(s))}}));let s=new Set(null!==(t=null==e?void 0:e.seenActivities)&&void 0!==t?t:[]);null!=e&&(E={...e,seenActivities:s,usersHavePlayedByApp:n})}",
+            "initialize": "initialize(e){var t,n;let s=new Map;Array.isArray(null==e?void 0:e.usersHavePlayedByApp)&&(null==e||e.usersHavePlayedByApp.forEach(e=>{if(Array.isArray(e)){let[t,n]=e;\"string\"==typeof t&&Array.isArray(n)&&s.set(t,new Set(n))}}));let i=new Set(null!==(t=null==e?void 0:e.seenActivities)&&void 0!==t?t:[]),r=new Set(null!==(n=null==e?void 0:e.everLaunchedActivities)&&void 0!==n?n:[]);null!=e&&(E={...e,seenActivities:i,everLaunchedActivities:r,usersHavePlayedByApp:s})}",
             "getState": "getState(){return E}",
             "getSelfEmbeddedActivityForChannel": "getSelfEmbeddedActivityForChannel(e){var t;return null!==(t=Array.from(y.values()).find(t=>{let{channelId:n}=t;return e===n}))&&void 0!==t?t:null}",
             "getSelfEmbeddedActivities": "getSelfEmbeddedActivities(){return y}",
@@ -7853,7 +7853,8 @@
             "getActivityPanelMode": "getActivityPanelMode(){return R}",
             "getFocusedLayout": "getFocusedLayout(){return k}",
             "getCurrentEmbeddedActivity": "getCurrentEmbeddedActivity(){var e;let t=this.getConnectedActivityChannelId();if(null!=t)return null!==(e=this.getSelfEmbeddedActivityForChannel(t))&&void 0!==e?e:void 0}",
-            "getEmbeddedActivityForUserId": "getEmbeddedActivityForUserId(e,t){let n;if(void 0!==t){e:for(let[s,i]of C)for(let s of i)if(s.applicationId===t&&s.userIds.has(e)){n=s;break e}return n}}"
+            "getEmbeddedActivityForUserId": "getEmbeddedActivityForUserId(e,t){let n;if(void 0!==t){e:for(let[s,i]of C)for(let s of i)if(s.applicationId===t&&s.userIds.has(e)){n=s;break e}return n}}",
+            "hasActivityEverBeenLaunched": "hasActivityEverBeenLaunched(e){return E.everLaunchedActivities.has(e)}"
         }
     }
 }

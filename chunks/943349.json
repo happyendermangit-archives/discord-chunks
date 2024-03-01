@@ -16,8 +16,8 @@
             "IS_AFK_CHANNEL": 5,
             "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS": 6
         },
-        "getEmbeddedActivityLaunchability": "function _(t){let{channelId:e,ChannelStore:i,GuildStore:n,PermissionStore:l}=t,a=i.getChannel(e);if(null==a)return 3;if(!(0,s.getIsActivitiesEnabledForCurrentPlatform)(a))return 6;if(!(0,o.isPrivateChannelWithEnabledActivities)(a.id)){let t=a.getGuildId();if(null==t)return 4;let e=n.getGuild(t);if((null==e?void 0:e.afkChannelId)===a.id)return 5;let i=l.can(c.Permissions.CONNECT,a);if(!i)return 2;let u=l.can(c.Permissions.USE_EMBEDDED_ACTIVITIES,a);if(!u)return 1}return 0}",
-        "useEmbeddedActivityLaunchability": "function E(t){let e=(0,a.useStateFromStores)([u.default,r.default,d.default],()=>_({channelId:t,ChannelStore:u.default,GuildStore:r.default,PermissionStore:d.default}),[t]);return e}",
-        "getEmbeddedActivityLaunchabilityLabel": "function I(t){switch(t){case 0:return f.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY;case 1:return f.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;default:return f.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL}}"
+        "getEmbeddedActivityLaunchability": "function _(e){let{channelId:t,ChannelStore:i,GuildStore:n,PermissionStore:l}=e,a=i.getChannel(t);if(null==a)return 3;if(!(0,s.getIsActivitiesEnabledForCurrentPlatform)(a))return 6;if(!(0,o.isPrivateChannelWithEnabledActivities)(a.id)){let e=a.getGuildId();if(null==e)return 4;let t=n.getGuild(e);if((null==t?void 0:t.afkChannelId)===a.id)return 5;let i=l.can(c.Permissions.CONNECT,a);if(!i)return 2;let u=l.can(c.Permissions.USE_EMBEDDED_ACTIVITIES,a);if(!u)return 1}return 0}",
+        "useEmbeddedActivityLaunchability": "function E(e){let t=(0,a.useStateFromStores)([u.default,r.default,d.default],()=>_({channelId:e,ChannelStore:u.default,GuildStore:r.default,PermissionStore:d.default}),[e]);return t}",
+        "getEmbeddedActivityLaunchabilityLabel": "function I(e){switch(e){case 0:return f.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY;case 1:return f.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;default:return f.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL}}"
     }
 }

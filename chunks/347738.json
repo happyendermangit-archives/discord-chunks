@@ -7832,7 +7832,7 @@
             "callback": "_=>{let{persistKey:E}=this.getClass();this.persist(),e._writePromises.delete(E),e._writeResolvers.delete(E),_()}",
             "throttledCallback": "function m(){var t,n=ov(),i=d(n);if(o=arguments,u=this,s=n,i){if(e===c){;return l=t=s,c=iI(y,r),h?g(t):f}if(p)return eI(c),c=iI(y,r),g(s)}return e===c&&(c=iI(y,r)),f}",
             "getState": "getState(){return{shouldShowTopicsBar:l}}",
-            "initialize": "initialize(e){var t;l=null===(t=null==e?void 0:e.shouldShowTopicsBar)||void 0===t||t,this.waitFor(g.default,I.default,T.default,C.default,h.default),this.syncWith([E.default],j)}",
+            "initialize": "initialize(e){var t;l=null===(t=null==e?void 0:e.shouldShowTopicsBar)||void 0===t||t,this.waitFor(g.default,v.default,T.default,C.default,h.default),this.syncWith([E.default],j)}",
             "allSummaries": "allSummaries(){return x}",
             "topSummaries": "topSummaries(){let e=Object.values(x).flat().filter(e=>e.people.length>1&&N.default.extractTimestamp(e.endId)>new Date().getTime()-5*_.default.Millis.HOUR).sort((e,t)=>N.default.extractTimestamp(t.endId)-N.default.extractTimestamp(e.endId));return e}",
             "summaries": "summaries(e){var t;return null!==(t=x[e])&&void 0!==t?t:b}",
@@ -7847,7 +7847,7 @@
             "channelAffinitiesById": "channelAffinitiesById(e){return null==e?M:M[e]}",
             "channelAffinitiesStatus": "channelAffinitiesStatus(){return L}",
             "shouldFetchChannelAffinities": "shouldFetchChannelAffinities(){return!(\"fetching\"===L.status||null!=L.lastResponse&&Date.now()-L.lastResponse<30*_.default.Millis.SECOND)&&!0}",
-            "defaultChannelIds": "defaultChannelIds(e){let{withQuickSwitcher:t,withChannelAffinities:n,withUnreads:l,numChannels:i=25}=e,a=[];return t&&(a=a.concat(P)),n&&(a=a.concat(R.map(e=>e.channel_id))),l&&(a=a.filter(e=>{let t=g.default.getChannel(e);return null!=t&&!v.default.isChannelMuted(t.guild_id,e)&&S.default.hasUnread(e)})),(a=a.filter(e=>{let t=g.default.getChannel(e);return(0,m.canSeeChannelSummaries)(t,!1,!1)})).slice(0,i)}",
+            "defaultChannelIds": "defaultChannelIds(e){let{withQuickSwitcher:t,withChannelAffinities:n,withUnreads:l,numChannels:i=25}=e,a=[];return t&&(a=a.concat(P)),n&&(a=a.concat(R.map(e=>e.channel_id))),l&&(a=a.filter(e=>{let t=g.default.getChannel(e);return null!=t&&!I.default.isChannelMuted(t.guild_id,e)&&S.default.hasUnread(e)})),(a=a.filter(e=>{let t=g.default.getChannel(e);return(0,m.canSeeChannelSummaries)(t,!1,!1)})).slice(0,i)}",
             "visibleSummaryIndex": "visibleSummaryIndex(){return a}"
         }
     }

@@ -7828,12 +7828,12 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_10",
-            "getGuild": "getGuild(e){if(null!=e)return e===E.FAVORITES?p.FAVORITES_GUILD_RECORD:h[e]}",
-            "getGuilds": "getGuilds(){return h}",
-            "getGuildIds": "getGuildIds(){return d.default.keys(h)}",
+            "getGuild": "getGuild(e){if(null!=e)return e===p.FAVORITES?h.FAVORITES_GUILD_RECORD:_[e]}",
+            "getGuilds": "getGuilds(){return _}",
+            "getGuildIds": "getGuildIds(){return f.default.keys(_)}",
             "getGuildCount": "getGuildCount(){return i}",
-            "isLoaded": "isLoaded(){return _}",
-            "getGeoRestrictedGuilds": "getGeoRestrictedGuilds(){return S}"
+            "isLoaded": "isLoaded(){return S}",
+            "getGeoRestrictedGuilds": "getGeoRestrictedGuilds(){return m}"
         }
     }
 }

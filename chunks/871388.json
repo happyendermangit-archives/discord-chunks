@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function l(t,e){return e!==n.ActivityFlags.INSTANCE&&null!=t&&null!=t.flags&&!!(t.flags&e)}"
+        "default": "function l(e,t){return t!==n.ActivityFlags.INSTANCE&&null!=e&&null!=e.flags&&!!(e.flags&t)}"
     }
 }

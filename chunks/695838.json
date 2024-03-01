@@ -95,6 +95,7 @@
             "maxMembers": 500000,
             "nsfwLevel": 0,
             "latestOnboardingQuestionId": null,
+            "merge": "merge(e){let{features:t}=e;if(null!=t){let n=new Set(t);if(n.size===this.features.size){let t=!1;for(let e of n)if(!this.features.has(e)){t=!0;break}!t&&(e.features=this.features)}}return super.merge.call(this,e)}",
             "getSafetyAlertsChannelId": "getSafetyAlertsChannelId(){var e;return null!==(e=this.safetyAlertsChannelId)&&void 0!==e?e:this.publicUpdatesChannelId}",
             "getIconURL": "getIconURL(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return s.default.getGuildIconURL({id:this.id,size:e,icon:this.icon,canAnimate:t})}",
             "getIconSource": "getIconSource(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return s.default.getAnimatableSourceWithFallback(t,t=>s.default.getGuildIconSource({id:this.id,size:e,icon:this.icon,canAnimate:t}))}",

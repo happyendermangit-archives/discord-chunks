@@ -1,7 +1,7 @@
 {
     "exports": {
         "maybeFetchSoundboardSounds": "()=>__OVERLAY__?(s.default.dispatch({type:\"OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST\"}),Promise.all([])):Promise.all([S(),T()])",
-        "uploadSound": "async function I(e){let{guildId:t,name:n,sound:l,volume:i,emojiId:s,emojiName:r}=e,o=await a.default.post({url:p.Endpoints.GUILD_SOUNDBOARD_SOUNDS(t),body:{name:n,sound:l,volume:i,emoji_id:s,emoji_name:r}}),u=(0,c.soundboardSoundFromAPI)(o.body,t);return u}",
+        "uploadSound": "async function v(e){let{guildId:t,name:n,sound:l,volume:i,emojiId:s,emojiName:r}=e,o=await a.default.post({url:p.Endpoints.GUILD_SOUNDBOARD_SOUNDS(t),body:{name:n,sound:l,volume:i,emoji_id:s,emoji_name:r}}),u=(0,c.soundboardSoundFromAPI)(o.body,t);return u}",
         "updateSound": "async function _(e){let{guildId:t,soundId:n,name:l,volume:i,emojiId:s,emojiName:r}=e,o=await a.default.patch({url:p.Endpoints.GUILD_SOUNDBOARD_SOUND(t,n),body:{name:l,volume:i,emoji_id:s,emoji_name:r}}),u=(0,c.soundboardSoundFromAPI)(o.body,t);return u}",
         "deleteSound": "async function N(e,t){await a.default.delete({url:p.Endpoints.GUILD_SOUNDBOARD_SOUND(e,t),oldFormErrors:!0})}",
         "addFavoriteSound": "function A(e){u.FrecencyUserSettingsActionCreators.updateAsync(\"favoriteSoundboardSounds\",t=>i.size(t.soundIds)>=h.MAX_FAVORITES?(r.default.show({title:E.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,body:E.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({count:h.MAX_FAVORITES})}),!1):!t.soundIds.includes(e)&&void t.soundIds.push(e),h.UserSettingsDelay.INFREQUENT_USER_ACTION)}",

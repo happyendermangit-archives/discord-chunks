@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function _(e){let{user:t,setNote:n,canDM:i,onClose:a}=e;if(t.isNonUserBot()||!i)return null;let s=i&&(0,d.isNewUser)(t)&&!t.bot;return(0,l.jsxs)(c.default,{className:m.section,lastSection:!0,children:[s&&i?(0,l.jsx)(I,{userId:t.id}):null,i?(0,l.jsx)(u.default,{className:m.messageInputContainer,inputClassName:m.messageInput,user:t,onClose:()=>null==a?void 0:a(),autoFocus:!r.isMobile&&!n}):null]})}"
+        "default": "function _(e){let{user:t,setNote:n,canDM:i,onClose:a}=e;if(t.isNonUserBot()||!i)return null;let s=i&&(0,d.isNewUser)(t)&&!t.bot;return(0,l.jsxs)(c.default,{className:m.section,lastSection:!0,children:[s&&i?(0,l.jsx)(v,{userId:t.id}):null,i?(0,l.jsx)(u.default,{className:m.messageInputContainer,inputClassName:m.messageInput,user:t,onClose:()=>null==a?void 0:a(),autoFocus:!r.isMobile&&!n}):null]})}"
     }
 }
