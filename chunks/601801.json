@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "a": "class{setState(e){this._prevState=this._state.value,this._state.value=e}subscribe(e){return this._state.subscribe(t=>e(t,this._prevState))}constructor(e){(0,n._)(this,\"_state\",void 0),(0,n._)(this,\"_prevState\",void 0),this._prevState=e,this._state=new f(e)}}"
+    }
+}

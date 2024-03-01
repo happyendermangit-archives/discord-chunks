@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function M(e){let{shouldShowPopout:t,referralsRemaining:n,channel:i,onClose:a,isResending:s}=e;return t?(0,l.jsx)(\"div\",{onMouseDown:e=>e.stopPropagation(),children:(0,l.jsx)(u.Popout,{shouldShow:!0,position:\"top\",align:\"center\",renderPopout:e=>(0,l.jsx)(R,{...e,referralsRemaining:n,channel:i,onClose:a,isResending:s}),onRequestClose:()=>void 0,closeOnScroll:!1,ignoreModalClicks:!0,children:()=>(0,l.jsx)(\"div\",{className:v.popoutTarget})})}):null}"
+        "default": "function M(e){let{shouldShowPopout:t,referralsRemaining:n,channel:i,onClose:a,isResending:s}=e;return t?(0,l.jsx)(\"div\",{onMouseDown:e=>e.stopPropagation(),children:(0,l.jsx)(u.Popout,{shouldShow:!0,position:\"top\",align:\"center\",renderPopout:e=>(0,l.jsx)(R,{...e,referralsRemaining:n,channel:i,onClose:a,isResending:s}),onRequestClose:()=>void 0,closeOnScroll:!1,ignoreModalClicks:!0,children:()=>(0,l.jsx)(\"div\",{className:I.popoutTarget})})}):null}"
     }
 }

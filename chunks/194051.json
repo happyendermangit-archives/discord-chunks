@@ -7832,7 +7832,7 @@
             "getBroadcastsToValidateChannels": "getBroadcastsToValidateChannels(){return g.values(S.BROADCASTS_BY_VALIDITY(1))}",
             "getBroadcastByChannel": "getBroadcastByChannel(e){return g.values(S.BROADCASTS_BY_CHANNEL_ID(e))[0]}",
             "getBroadcastByUser": "getBroadcastByUser(e){return g.get(e)}",
-            "getUserIdsToValidate": "getUserIdsToValidate(){return m}"
+            "getUserIdsToValidate": "getUserIdsToValidate(){return C}"
         }
     }
 }

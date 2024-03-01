@@ -7843,10 +7843,10 @@
             "getAllPending": "getAllPending(){return{pendingAvatar:i,pendingBanner:_,pendingBio:l,pendingPronouns:E,pendingAccentColor:T,pendingThemeColors:d,pendingAvatarDecoration:u,pendingProfileEffectId:o,pendingGlobalName:r}}",
             "getTryItOutThemeColors": "getTryItOutThemeColors(){return a}",
             "getTryItOutAvatar": "getTryItOutAvatar(){return S}",
-            "getTryItOutAvatarDecoration": "getTryItOutAvatarDecoration(){return I}",
-            "getTryItOutProfileEffectId": "getTryItOutProfileEffectId(){return c}",
+            "getTryItOutAvatarDecoration": "getTryItOutAvatarDecoration(){return c}",
+            "getTryItOutProfileEffectId": "getTryItOutProfileEffectId(){return I}",
             "getTryItOutBanner": "getTryItOutBanner(){return s}",
-            "getAllTryItOut": "getAllTryItOut(){return{tryItOutThemeColors:a,tryItOutAvatar:S,tryItOutAvatarDecoration:I,tryItOutProfileEffectId:c,tryItOutBanner:s}}",
+            "getAllTryItOut": "getAllTryItOut(){return{tryItOutThemeColors:a,tryItOutAvatar:S,tryItOutAvatarDecoration:c,tryItOutProfileEffectId:I,tryItOutBanner:s}}",
             "getIsDisableSubmit": "getIsDisableSubmit(){return D}"
         }
     }

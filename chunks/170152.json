@@ -7832,8 +7832,8 @@
             "callback": "_=>{let{persistKey:E}=this.getClass();this.persist(),e._writePromises.delete(E),e._writeResolvers.delete(E),_()}",
             "throttledCallback": "function m(){var t,n=ov(),i=d(n);if(o=arguments,u=this,s=n,i){if(e===c){;return l=t=s,c=iI(y,r),h?g(t):f}if(p)return eI(c),c=iI(y,r),g(s)}return e===c&&(c=iI(y,r)),f}",
             "initialize": "initialize(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:s;u=e.enabled}",
-            "getWaitingHighFive": "getWaitingHighFive(e,t){var n;return null===(n=i[e])||void 0===n?void 0:n[t]}",
-            "getCompletedHighFive": "getCompletedHighFive(e,t){var n;return null===(n=l[e])||void 0===n?void 0:n[t]}",
+            "getWaitingHighFive": "getWaitingHighFive(e,t){var n;return null===(n=l[e])||void 0===n?void 0:n[t]}",
+            "getCompletedHighFive": "getCompletedHighFive(e,t){var n;return null===(n=i[e])||void 0===n?void 0:n[t]}",
             "getEnabled": "getEnabled(){return u}",
             "getUserAgnosticState": "getUserAgnosticState(){return{enabled:u}}"
         }

@@ -7833,7 +7833,7 @@
             "throttledCallback": "function m(){var t,n=ov(),i=d(n);if(o=arguments,u=this,s=n,i){if(e===c){;return l=t=s,c=iI(y,r),h?g(t):f}if(p)return eI(c),c=iI(y,r),g(s)}return e===c&&(c=iI(y,r)),f}",
             "initialize": "initialize(e){null!=e&&(s=e)}",
             "isMuted": "isMuted(){return s}",
-            "shouldPlay": "shouldPlay(){return i}",
+            "shouldPlay": "shouldPlay(){return l}",
             "getUserAgnosticState": "getUserAgnosticState(){return s}"
         }
     }

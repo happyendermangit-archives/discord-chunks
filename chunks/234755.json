@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function E(e){let{onClose:t}=e,n=(0,i.useAppContext)(),E=(0,r.useStateFromStores)([u.default],()=>u.default.getCurrentUserActiveStream()),p=(0,l.default)(E,n);return(0,a.jsxs)(s.Menu,{onSelect:f.NOOP_NULL,navId:\"manage-broadcast\",onClose:t,\"aria-label\":h.default.Messages.SETTINGS,children:[d.isPlatformEmbedded&&null!=E?(0,a.jsx)(s.MenuItem,{id:\"stream-settings\",label:h.default.Messages.SCREENSHARE_STREAM_QUALITY,children:p}):null,(0,a.jsx)(s.MenuItem,{id:\"broadcast-settings\",label:h.default.Messages.BROADCAST_SETTINGS,icon:o.default,action:()=>(0,c.openBroadcastingPrivacySettingsModal)()})]})}"
+        "default": "function E(e){let{onClose:t}=e,n=(0,l.useAppContext)(),E=(0,r.useStateFromStores)([u.default],()=>u.default.getCurrentUserActiveStream()),p=(0,i.default)(E,n);return(0,a.jsxs)(s.Menu,{onSelect:f.NOOP_NULL,navId:\"manage-broadcast\",onClose:t,\"aria-label\":h.default.Messages.SETTINGS,children:[d.isPlatformEmbedded&&null!=E?(0,a.jsx)(s.MenuItem,{id:\"stream-settings\",label:h.default.Messages.SCREENSHARE_STREAM_QUALITY,children:p}):null,(0,a.jsx)(s.MenuItem,{id:\"broadcast-settings\",label:h.default.Messages.BROADCAST_SETTINGS,icon:o.default,action:()=>(0,c.openBroadcastingPrivacySettingsModal)()})]})}"
     }
 }

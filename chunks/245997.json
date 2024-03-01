@@ -7828,8 +7828,8 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_198",
-            "initialize": "initialize(){this.waitFor(s.default,o.default,a.default,d.default,u.default),this.syncWith([u.default],S)}",
-            "getCategories": "getCategories(e){return null!=e?function(e){let t=_[e];return null!=t?t:I(e)}(e):h}"
+            "initialize": "initialize(){this.waitFor(o.default,s.default,a.default,d.default,u.default),this.syncWith([u.default],N)}",
+            "getCategories": "getCategories(e){return null!=e?function(e){let t=_[e];return null!=t?t:L(e)}(e):h}"
         }
     }
 }

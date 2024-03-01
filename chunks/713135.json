@@ -7828,18 +7828,18 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_184",
-            "loadCache": "()=>{let e=this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);null!=e&&e.forEach(e=>{let{userId:t,profile:n}=e;c[t]=n})}",
+            "loadCache": "()=>{let e=this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);null!=e&&e.forEach(e=>{let{userId:t,profile:n}=e;I[t]=n})}",
             "initialize": "initialize(){this.waitFor(a.default),this.syncWith([o.default],b)}",
             "isFetchingProfile": "isFetchingProfile(e){return S.has(e)}",
-            "isFetchingFriends": "isFetchingFriends(e){return I.has(e)}",
+            "isFetchingFriends": "isFetchingFriends(e){return c.has(e)}",
             "isSubmitting": false,
-            "getUserProfile": "getUserProfile(e){return c[e]}",
+            "getUserProfile": "getUserProfile(e){return I[e]}",
             "getGuildMemberProfile": "getGuildMemberProfile(e,t){var n;return null==t?null:null===(n=s[e])||void 0===n?void 0:n[t]}",
             "getMutualFriends": "getMutualFriends(e){return f[e]}",
             "getMutualFriendsCount": "getMutualFriendsCount(e){return N[e]}",
             "getMutualGuilds": "getMutualGuilds(e){return A[e]}",
             "getIsAccessibilityTooltipViewed": "getIsAccessibilityTooltipViewed(){return p}",
-            "takeSnapshot": "takeSnapshot(){let e=l.default.getId();return{version:B.LATEST_SNAPSHOT_VERSION,data:[{userId:e,profile:c[e]}]}}"
+            "takeSnapshot": "takeSnapshot(){let e=l.default.getId();return{version:B.LATEST_SNAPSHOT_VERSION,data:[{userId:e,profile:I[e]}]}}"
         }
     }
 }

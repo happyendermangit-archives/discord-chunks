@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "getIconSize": "function i(e){if(\"custom\"===e)return null;let t=l.ICON_SIZE[e];return{width:t,height:t}}"
+    }
+}

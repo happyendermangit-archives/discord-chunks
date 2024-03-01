@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function u(e){let{isSelfStream:t,centerButton:n=!1,...u}=e,o=n?i.CenterControlButton:i.default;return(0,a.jsx)(o,{label:t?l.default.Messages.STOP_STREAMING:l.default.Messages.STOP_WATCHING,iconComponent:t?r.default:s.default,isActive:!0,...u})}"
+        "default": "function r(e){let{isSelfStream:t,centerButton:n=!1,onMouseEnter:r,onMouseLeave:s,...d}=e,u=n?i.CenterControlButton:i.default,{Component:c,events:p}=(0,l.useScreenshareLottie)(\"off\");return(0,a.jsx)(u,{label:t?o.default.Messages.STOP_STREAMING:o.default.Messages.STOP_WATCHING,iconComponent:c,isActive:!0,onMouseEnter:e=>{null==r||r(e),p.onMouseEnter()},onMouseLeave:e=>{null==s||s(e),p.onMouseLeave()},...d})}"
     }
 }

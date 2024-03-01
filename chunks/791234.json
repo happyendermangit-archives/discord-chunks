@@ -6,9 +6,9 @@
             "ATTACHMENT": "attachment"
         },
         "useForumPostMediaThumbnail": "function _(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],l=N(e,n);return a.useMemo(()=>{if(null==t)return[];if(!t.isMediaChannel())return l;{let e=l.find(e=>e.isThumbnail);return null!=e?[e]:l}},[t,l])}",
-        "useForumPostMediaProperties": "function N(e,t){let n=I(e),l=v(e,t);return[...n,...l]}",
-        "useFindFirstMediaProperties": "function A(e,t){var n,l;let i=I(e),a=v(e,t);return null!==(l=null!==(n=i[0])&&void 0!==n?n:a[0])&&void 0!==l?l:null}",
-        "useFirstMediaIsEmbed": "function x(e,t){let n=I(e),l=v(e,t);return null==n[0]&&null!=l[0]}",
+        "useForumPostMediaProperties": "function N(e,t){let n=v(e),l=I(e,t);return[...n,...l]}",
+        "useFindFirstMediaProperties": "function A(e,t){var n,l;let i=v(e),a=I(e,t);return null!==(l=null!==(n=i[0])&&void 0!==n?n:a[0])&&void 0!==l?l:null}",
+        "useFirstMediaIsEmbed": "function x(e,t){let n=v(e),l=I(e,t);return null==n[0]&&null!=l[0]}",
         "shouldShowAddMediaToOriginalPostModal": "function y(e,t){var n;let l=u.default.getChannel(t);if(null==l)return!1;let i=d.default.getMessage(l.id,p.default.castChannelIdAsMessageId(l.id));return null!=i&&e.length>0&&null!=e.find(e=>e.isImage||e.isVideo)&&l.isForumPost()&&l.ownerId===(null===(n=c.default.getCurrentUser())||void 0===n?void 0:n.id)&&0===r.default.getCount(l.id)&&(0===i.attachments.length||null==i.attachments.find(e=>C(e)||S(e)))}",
         "messageContainsGifOrVideo": "function O(e){return e.reduce((e,t)=>({containsVideo:e.containsVideo||t.isVideo,containsGif:e.containsGif||(0,s.isAnimatedImageUrl)(t.src)}),{containsVideo:!1,containsGif:!1})}"
     }

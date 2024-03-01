@@ -1,5 +1,5 @@
 {
     "exports": {
-        "isPlainObject": "function u(e){var t,r;return!1!==n(e)&&(void 0===(t=e.constructor)||!1!==n(r=t.prototype)&&!1!==r.hasOwnProperty(\"isPrototypeOf\")&&!0)}"
+        "isPlainObject": "function i(e){var t,r;return!1!==n(e)&&(void 0===(t=e.constructor)||!1!==n(r=t.prototype)&&!1!==r.hasOwnProperty(\"isPrototypeOf\")&&!0)}"
     }
 }

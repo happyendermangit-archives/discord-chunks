@@ -1,5 +1,5 @@
 {
     "exports": {
-        "default": "function u(e){let{channelId:t,applicationId:n,centerButton:u=!1,...o}=e,d=u?i.CenterControlButton:i.default;return(0,a.jsx)(d,{...o,onClick:()=>{(0,r.stopEmbeddedActivity)({channelId:t,applicationId:n})},iconComponent:s.default,label:l.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY})}"
+        "default": "function u(e){let{channelId:t,applicationId:n,centerButton:u=!1,...o}=e,d=u?l.CenterControlButton:l.default;return(0,a.jsx)(d,{...o,onClick:()=>{(0,r.stopEmbeddedActivity)({channelId:t,applicationId:n})},iconComponent:s.default,label:i.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY})}"
     }
 }
