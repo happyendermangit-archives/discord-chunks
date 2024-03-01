@@ -1,6 +1,6 @@
 /**
-  * Taken from: https://github.com/happyendermangit/discord-compiler/  
-  *  discord-chunks - best discord compiler, makes discord snippet's doesn't require findbyprops
+  * Taken from: https://github.com/happyendermangit/discord-compiler/
+  *  discord-chunks - ...
   *  Copyright (C) 2023 Happy enderman
 
   *  This program is free software: you can redistribute it and/or modify
@@ -12,13 +12,14 @@
   *  but WITHOUT ANY WARRANTY; without even the implied warranty of
   *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   *  GNU General Public License for more details.
- 
+
   *  You should have received a copy of the GNU General Public License
   *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
   * **/
 
 import puppeteer from 'puppeteer';
 import fs from "fs/promises";
+import js from "js-beautify/js/index.js"
 
 (async () => {
   try {
@@ -52,7 +53,7 @@ import fs from "fs/promises";
 
     console.log(Object.keys(result).length)
     for (let key in result) {
-      await fs.writeFile(`./chunks/${key}.js`, JSON.stringify(result[key], null, 4), { encoding: "utf-8" });
+      await fs.writeFile(`./chunks/${key}.js`, js.js_beautify(result[key]), { encoding: "utf-8" });
       console.log(`${key} saved.`);
     }
     console.log("Done! Scraped all chunks");
