@@ -7781,9 +7781,6 @@
                     "STREAMING_UPDATE": "e=>this._dispatchWithDevtools(e)",
                     "WINDOW_INIT": "e=>this._dispatchWithDevtools(e)",
                     "I18N_LOAD_SUCCESS": "e=>this._dispatchWithDevtools(e)",
-                    "FINGERPRINT": "e=>this._dispatchWithDevtools(e)",
-                    "TRACK": "e=>this._dispatchWithDevtools(e)",
-                    "EXPERIMENTS_FETCH_SUCCESS": "e=>this._dispatchWithDevtools(e)",
                     "MEDIA_ENGINE_DEVICES": "e=>this._dispatchWithDevtools(e)"
                 },
                 "_defaultBand": 2,
@@ -7829,7 +7826,7 @@
             },
             "_dispatchToken": "ID_12",
             "initialize": "initialize(){this.waitFor(s.default)}",
-            "hasLoadedExperiments": true,
+            "hasLoadedExperiments": false,
             "getExperimentBucket": "getExperimentBucket(e){return s.default.getUserExperimentBucket(e)}",
             "getEligibleExperiment": "getEligibleExperiment(e){return s.default.getUserExperimentDescriptor(e)}",
             "getEligibleExperiments": "getEligibleExperiments(){return s.default.getAllUserExperimentDescriptors()}",
