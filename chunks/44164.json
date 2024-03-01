@@ -1,6 +1,6 @@
 {
     "exports": {
         "CASH_APP_PAY_CONTAINER": "cash-app-pay-container",
-        "default": "function c(){return(0,s.jsx)(s.Fragment,{children:(0,s.jsx)(n,{})})}"
+        "default": "function i(){return(0,s.jsx)(s.Fragment,{children:(0,s.jsx)(n,{})})}"
     }
 }
