@@ -7828,7 +7828,8 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_262",
-            "getFeed": "getFeed(e){return s.get(e)}"
+            "getFeed": "getFeed(e){return s.get(e)}",
+            "getFeedRequestId": "getFeedRequestId(e){var t;return null===(t=this.getFeed(e))||void 0===t?void 0:t.request_id}"
         }
     }
 }
