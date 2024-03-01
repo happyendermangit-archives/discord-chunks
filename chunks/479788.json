@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){return e.supportsInApp(a.Features.VIDEO)&&e.supportsInApp(a.Features.DESKTOP_CAPTURE)}"
-    }
-}

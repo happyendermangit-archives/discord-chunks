@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "randomFill": "function(t,e,r,i){if(!o.isBuffer(t)&&!(t instanceof s.g.Uint8Array))throw TypeError('\"buf\" argument must be a Buffer or Uint8Array');if(\"function\"==typeof e)i=e,e=0,r=t.length;else if(\"function\"==typeof r)i=r,r=t.length-e;else if(\"function\"!=typeof i)throw TypeError('\"cb\" argument must be a function');return d(e,t.length),p(r,e,t.length),b(t,e,r,i)}",
-        "randomFillSync": "function(t,e,r){if(void 0===e&&(e=0),!o.isBuffer(t)&&!(t instanceof s.g.Uint8Array))throw TypeError('\"buf\" argument must be a Buffer or Uint8Array');return d(e,t.length),void 0===r&&(r=t.length-e),p(r,e,t.length),b(t,e,r)}"
-    }
-}

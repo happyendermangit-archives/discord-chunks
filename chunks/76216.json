@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "sanitizeWhitespace": "function i(e){return e.replace(s,\"\")}",
-        "sanitizeUnicodeConfusables": "function o(e){let t=e;return r.forEach(e=>{t=t.replace(e.matcher,e.character)}),t}",
-        "safelyMakeUrlHumanReadable": "function u(e){let t=function(e){let t=\"null\"===e.origin,n=t&&e.pathname.startsWith(\"//\");if(n)return e.protocol;let s=\"\";return\"\"!==e.username&&(s+=e.username),\"\"!==e.password&&(s+=\":\"+e.password),\"\"!==s&&(s+=\"@\"),\"\".concat(e.protocol,\"//\").concat(s).concat(e.host)}(e);return t+=l(e.pathname)+l(e.search)+l(e.hash)}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useToken": "function a(e,t){let n=(0,r.default)(),a=(0,i.default)([s.default],()=>s.default.saturation);return e.resolve({theme:null!=t?t:n,saturation:a})}"
-    }
-}

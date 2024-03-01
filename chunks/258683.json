@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"Reduser \".concat(e.fieldLabel)",
-            "increase": "e=>\"\\xd8k \".concat(e.fieldLabel)",
-            "numberField": "Tallfelt"
-        }
-    }
-}

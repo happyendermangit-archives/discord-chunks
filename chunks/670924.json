@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "showModal": "function o(e,t,n){return(0,i.openModal)(a(e,t,n),{onCloseCallback:t})}",
-        "updateModalProps": "function d(e,t,n,s){return(0,i.updateModal)(e,a(t,n,s))}"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "addTracingExtensions": "function f(){let t=(0,i.getMainCarrier)();t.__SENTRY__&&(t.__SENTRY__.extensions=t.__SENTRY__.extensions||{},!t.__SENTRY__.extensions.startTransaction&&(t.__SENTRY__.extensions.startTransaction=d),!t.__SENTRY__.extensions.traceHeaders&&(t.__SENTRY__.extensions.traceHeaders=l),(0,s.registerErrorInstrumentation)())}",
-        "startIdleTransaction": "function h(t,e,n,r,i,a,s){let c=t.getClient(),l=c&&c.getOptions()||{},d=new o.IdleTransaction(e,t,n,r,s,i);return(d=u(d,l,{parentSampled:e.parentSampled,transactionContext:e,...a})).sampled&&d.initSpanRecorder(l._experiments&&l._experiments.maxSpans),c&&c.emit&&c.emit(\"startTransaction\",d),d}"
-    }
-}

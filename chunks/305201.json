@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "SyncPromise": "function t(t){var e=this;this._state=r.PENDING,this._handlers=[],this._resolve=function(t){e._setResult(r.RESOLVED,t)},this._reject=function(t){e._setResult(r.REJECTED,t)},this._setResult=function(t,n){if(e._state===r.PENDING){if((0,o.isThenable)(n)){n.then(e._resolve,e._reject);return}e._state=t,e._value=n,e._executeHandlers()}},this._attachHandler=function(t){e._handlers=e._handlers.concat(t),e._executeHandlers()},this._executeHandlers=function(){e._state!==r.PENDING&&(e._state===r.REJECTED?e._handlers.forEach(function(t){t.onrejected&&t.onrejected(e._value)}):e._handlers.forEach(function(t){t.onfulfilled&&t.onfulfilled(e._value)}),e._handlers=[])};try{t(this._resolve,this._reject)}catch(t){this._reject(t)}}"
-    }
-}

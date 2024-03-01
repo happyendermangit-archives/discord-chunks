@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function e(e,n){i=t.call(this,e,n)||this;var i,r,a=n&&!n.isMounting?e.enter:e.appear;return i.appearStatus=null,e.in?a?(r=d,i.appearStatus=f):r=h:r=e.unmountOnExit||e.mountOnEnter?p:d,i.state={status:r},i.nextCallback=null,i}"
-    }
-}

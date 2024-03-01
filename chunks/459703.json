@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "defineProperty": "function defineProperty() { [native code] }",
-        "objCreate": "function create() { [native code] }"
-    }
-}

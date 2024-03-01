@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "addPostConnectionCallback": "function o(e){i.default.isConnectedOrOverlay()?a(e):r.push(e)}"
-    }
-}

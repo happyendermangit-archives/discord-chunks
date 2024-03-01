@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"Samazināšana \".concat(e.fieldLabel)",
-            "increase": "e=>\"Palielināšana \".concat(e.fieldLabel)",
-            "numberField": "Skaitļu lauks"
-        }
-    }
-}

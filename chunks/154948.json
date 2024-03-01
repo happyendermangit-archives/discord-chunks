@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){return i(e)&&\"[object Set]\"==n(e)}"
-}

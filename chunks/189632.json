@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useCollectedProps": "function a(e,t,n){return(0,r.useMonitorOutput)(t,e||function(){return{}},function(){return n.reconnect()})}"
-    }
-}

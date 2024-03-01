@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "findLast": "function(n,f,c){for(var a,s=i(n),y=o(s),h=e(f,c),p=u(y);p-- >0;)if(h(a=y[p],p,s))switch(t){case 0:return a;case 1:return p}return r?-1:void 0}",
-        "findLastIndex": "function(n,f,c){for(var a,s=i(n),y=o(s),h=e(f,c),p=u(y);p-- >0;)if(h(a=y[p],p,s))switch(t){case 0:return a;case 1:return p}return r?-1:void 0}"
-    }
-}

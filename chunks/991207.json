@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "FileTypes": {
-            "MP4": "video/mp4"
-        }
-    }
-}

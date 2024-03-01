@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){return(0,r.default)(1,arguments),e instanceof Date||\"object\"===a(e)&&\"[object Date]\"===Object.prototype.toString.call(e)}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){(0,s.transitionToChannel)(e.channelId)}"
-    }
-}

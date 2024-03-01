@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "openGuildBoostingMarketingModal": "function T(e){let{guildId:t,location:s}=e;(0,c.openFullScreenLayer)(e=>{let{closeLayer:r}=e;return(0,i.jsx)(_,{close:r,guildId:t,location:s})},{layerKey:\"BoostedGuildPerksModalConnected\"})}"
-    }
-}

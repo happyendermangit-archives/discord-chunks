@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){var e,s=Object.create(x,(n(e={},b,{value:t,writable:!0}),n(e,o,{value:null,writable:!0}),n(e,f,{value:null,writable:!0}),n(e,u,{value:null,writable:!0}),n(e,a,{value:t._readableState.endEmitted,writable:!0}),n(e,p,{value:function(t,e){var r=s[b].read();r?(s[d]=null,s[o]=null,s[f]=null,t(h(r,!1))):(s[o]=t,s[f]=e)},writable:!0}),e));return s[d]=null,c(t,function(t){if(t&&\"ERR_STREAM_PREMATURE_CLOSE\"!==t.code){var e=s[f];null!==e&&(s[d]=null,s[o]=null,s[f]=null,e(t)),s[u]=t;return}var r=s[o];null!==r&&(s[d]=null,s[o]=null,s[f]=null,r(h(void 0,!0))),s[a]=!0}),t.on(\"readable\",g.bind(null,s)),s}"
-}

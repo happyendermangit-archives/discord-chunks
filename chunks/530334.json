@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(){return s.default.Messages.DynamicLinks.IOS_APP_PREVIEW_DESCRIPTION}"
-    }
-}

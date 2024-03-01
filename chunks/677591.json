@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){let{cardClassName:t}=e;return(0,i.jsxs)(\"div\",{className:c.wrapper,children:[(0,i.jsxs)(\"div\",{className:c.content,children:[(0,i.jsx)(l.Heading,{className:c.heading,color:\"always-white\",variant:\"heading-xxl/bold\",children:d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_HEADING}),(0,i.jsxs)(\"ul\",{className:c.cards,children:[(0,i.jsx)(_,{className:t,icon:o.default,children:d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_MEMBER_LIST_ICON}),(0,i.jsx)(_,{className:t,icon:e=>(0,i.jsx)(\"img\",{className:a(e.className,c.iconImage),src:E,alt:\"\"}),children:d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_PROFILE_BADGE}),(0,i.jsx)(_,{className:t,icon:u.default,children:d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_BOOSTER_ROLE}),(0,i.jsx)(_,{className:t,icon:n.default,children:d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_COMMUNITY_SUPPORT})]})]}),(0,i.jsx)(\"div\",{className:c.backgroundImages})]})}"
-    }
-}

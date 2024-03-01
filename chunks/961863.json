@@ -1,3 +1,0 @@
-{
-    "exports": "function f(t){r.call(this);var e,s=t.mode.toLowerCase(),i=o[s];e=t.decrypt?\"decrypt\":\"encrypt\";var n=t.key;!c.isBuffer(n)&&(n=c.from(n)),(\"des-ede\"===s||\"des-ede-cbc\"===s)&&(n=c.concat([n,n.slice(0,8)]));var f=t.iv;!c.isBuffer(f)&&(f=c.from(f)),this._des=i.create({key:n,iv:f,type:e})}"
-}

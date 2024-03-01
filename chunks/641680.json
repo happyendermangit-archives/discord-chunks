@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getFilteredStickers": "(e,t,n)=>{if(\"\"===e)return null;let a=[],s=[];return(0,i.searchAllStickers)(e).forEach(e=>{let i=(0,l.getStickerSendability)(e,t,n);i===l.StickerSendability.SENDABLE?a.push(e):i===l.StickerSendability.SENDABLE_WITH_PREMIUM&&s.push(e)}),{sendable:a,sendableWithPremium:s}}"
-    }
-}

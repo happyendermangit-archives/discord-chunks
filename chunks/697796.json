@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "handoffBegin": "function r(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1e4;i.default.dispatch({type:\"BROWSER_HANDOFF_BEGIN\",timeout:e})}",
-        "handoffEnd": "function s(e,t){i.default.dispatch({type:\"BROWSER_HANDOFF_END\",handoffToken:e,fingerprint:t})}",
-        "handoffFromApp": "function a(e){let{handoffKey:t,handoffToken:n,handoffSource:r,timeout:s=1e4}=e;i.default.dispatch({type:\"BROWSER_HANDOFF_FROM_APP\",handoffKey:t,handoffToken:n,handoffSource:r,timeout:s})}",
-        "handoffUnavailable": "function o(){i.default.dispatch({type:\"BROWSER_HANDOFF_UNAVAILABLE\"})}",
-        "handoffSetUser": "function l(e){i.default.dispatch({type:\"BROWSER_HANDOFF_SET_USER\",user:e})}"
-    }
-}

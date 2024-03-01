@@ -1,3 +1,0 @@
-{
-    "exports": "function(){return r()&&!!Symbol.toStringTag}"
-}

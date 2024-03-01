@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "shouldShowLinkNotDiscordWarning": "function s(e){return!1}"
-    }
-}

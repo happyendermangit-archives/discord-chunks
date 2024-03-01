@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function c(){return(0,l.jsxs)(\"div\",{className:a(u.paymentModalLockIcon,d.flex,d.alignCenter),children:[(0,l.jsx)(r.default,{className:u.lockIcon,width:18,height:18}),(0,l.jsx)(s.Text,{variant:\"text-sm/medium\",children:o.default.Messages.BILLING_SECURE})]})}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useSearchFieldState": "function a(e){let[t,n]=(0,r.useControlledState)(i(e.value),i(e.defaultValue)||\"\",e.onChange);return{value:t,setValue:n}}"
-    }
-}

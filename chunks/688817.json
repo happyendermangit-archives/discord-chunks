@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "FocusRingManager": {
-            "init": "init(){r.default.addChangeListener(()=>{r.default.keyboardModeEnabled?(i.FocusRingManager.setRingsEnabled(!0),i.FocusRingManager.enableAnimationTracking()):(i.FocusRingManager.setRingsEnabled(!1),i.FocusRingManager.disableAnimationTracking())})}"
-        }
-    }
-}

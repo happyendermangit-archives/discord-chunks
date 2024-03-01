@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "ChatLayerContainer": "e=>(0,i.jsx)(_,{layerContext:t,...e})",
-        "ChatLayerProvider": "e=>(0,i.jsx)(h,{layerContext:t,...e})",
-        "default": "e=>(0,i.jsx)(m,{layerContext:t,...e})"
-    }
-}

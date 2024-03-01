@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "TDigest": "function a(e,t,n){this.discrete=!1===e,this.delta=e||.01,this.K=void 0===t?25:t,this.CX=void 0===n?1.1:n,this.centroids=new r(i),this.nreset=0,this.reset()}",
-        "Digest": "function s(e){this.config=e||{},this.mode=this.config.mode||\"auto\",a.call(this,\"cont\"===this.mode&&e.delta),this.digest_ratio=this.config.ratio||.9,this.digest_thresh=this.config.thresh||1e3,this.n_unique=0}"
-    }
-}

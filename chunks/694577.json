@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e){return i(t,\"toString\",{configurable:!0,enumerable:!1,value:r(e),writable:!0})}"
-}

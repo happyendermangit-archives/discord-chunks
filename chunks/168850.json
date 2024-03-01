@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t){return t=n(t,e),null==(e=o(e,t))||delete e[a(i(t))]}"
-}

@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "ImpersonateType": {
-            "ROLES": "ROLES",
-            "NEW_MEMBER": "NEW_MEMBER",
-            "SERVER_SHOP": "SERVER_SHOP"
-        }
-    }
-}

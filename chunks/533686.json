@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function n(e,_){null!=_&&(0,t.closeModal)(_),o.default.dispatch({type:\"INTERACTION_IFRAME_MODAL_CLOSE\",applicationId:e})}"
-    }
-}

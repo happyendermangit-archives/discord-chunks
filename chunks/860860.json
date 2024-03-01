@@ -1,3 +1,0 @@
-{
-    "exports": "function r(e){var t=this;if(!(t instanceof r)&&(t=new r),t.tail=null,t.head=null,t.length=0,e&&\"function\"==typeof e.forEach)e.forEach(function(e){t.push(e)});else if(arguments.length>0)for(var n=0,a=arguments.length;n<a;n++)t.push(arguments[n]);return t}"
-}

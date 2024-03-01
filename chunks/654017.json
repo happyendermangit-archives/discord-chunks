@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "isSpamSupported": "function s(e){return void 0!==e&&e.type!==r.ChannelTypes.DM}",
-        "isSpammer": "function l(e){var t,n;return null!==(n=null===(t=a.default.getUser(e))||void 0===t?void 0:t.hasFlag(r.UserFlags.SPAMMER))&&void 0!==n&&n}",
-        "isSpam": "function u(e){return l(e.author.id)}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "withReact": "(e,t)=>{let{addMark:n,removeMark:s,deleteBackward:r,deleteForward:o,setFragmentData:u,insertData:d,insertFragmentData:c,insertTextData:f}=e;return(e=(0,l.withReact)(e)).addMark=n,e.removeMark=s,e.setFragmentData=u,e.insertData=d,e.insertFragmentData=c,e.insertTextData=f,e.deleteBackward=n=>{if(\"line\"!==n||t)r(n);else{let t=a.DOMUtils.getLineActionRange(e,!0);null!=t&&i.SlateTransforms.delete(e,{at:t})}},e.deleteForward=n=>{if(\"line\"!==n||t)o(n);else{let t=a.DOMUtils.getLineActionRange(e,!1);null!=t&&i.SlateTransforms.delete(e,{at:t})}},e}"
-    }
-}

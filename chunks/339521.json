@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class m extends i.PureComponent{componentDidMount(){this.timer.start(500,()=>{this.setState({now:Date.now()})})}componentWillUnmount(){this.timer.stop()}render(){let{start:e,end:t,className:n,themed:i,singleLine:a=!1}=this.props,{now:r}=this.state,c=(t-e)/1e3,m=Math.max(Math.min((r-e)/1e3,c),0);return a?(0,l.jsxs)(\"div\",{className:s(n,{[u.themed]:i},u.singleLineContainer),children:[(0,l.jsx)(\"div\",{className:u.textLeftInSingleLine,children:f({time:m,padLargestUnit:!0})}),(0,l.jsx)(\"div\",{className:u.barInSingleLine,children:(0,l.jsx)(d,{percentage:m/c,isSingleLine:!0})}),(0,l.jsx)(\"div\",{className:u.textRight,children:f({time:c,padLargestUnit:!0})})]}):(0,l.jsxs)(\"div\",{className:s(n,{[u.themed]:i}),children:[(0,l.jsx)(d,{percentage:m/c,isSingleLine:!1}),(0,l.jsxs)(o.default,{children:[(0,l.jsx)(o.default.Child,{grow:1,className:u.textLeft,children:f({time:m,padLargestUnit:!1})}),(0,l.jsx)(o.default.Child,{grow:0,className:u.textRight,children:f({time:c,padLargestUnit:!1})})]})]})}constructor(...e){super(...e),this.timer=new r.Interval,this.state={now:Date.now()}}}"
-    }
-}

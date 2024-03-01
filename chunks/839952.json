@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "type": "function(e){let{attachment:t,className:n,onClick:a,onContextMenu:r}=e,[o,u]=i.useState(!1),[d,f]=i.useState(t.filename.split(\".\").slice(-1)[0]),{fileContents:m,bytesLeft:p,hadError:h}=function(e,t){let[n,l]=i.useState(!1),[a,s]=i.useState(null),[r,o]=i.useState(1);return i.useEffect(()=>{(async function n(){try{var n,i;let a=await fetch(e,{headers:{Range:\"bytes=0-\".concat(5e4),Accept:\"text/plain\"}}),r=function(e){var t;let n=\"utf-8\",l=null!==(t=null==e?void 0:e.split(\"charset=\").slice(-1)[0])&&void 0!==t?t:n;try{return new TextDecoder(l)}catch(t){if((null==e?void 0:e.startsWith(\"text\"))||l.toLowerCase().includes(\"utf\"))return new TextDecoder(n);throw t}}(t),u=r.decode(await a.arrayBuffer()),d=null!==(n=a.headers.get(\"content-range\"))&&void 0!==n?n:\"0\",c=null!==(i=a.headers.get(\"content-length\"))&&void 0!==i?i:\"1\",f=parseInt(d.split(\"/\")[1]),m=f-parseInt(c);s(0===m?u:u.slice(0,-1)),o(m),l(!1)}catch(e){o(0),l(!0)}})()},[e,t]),{fileContents:a,bytesLeft:r,hadError:n}}(t.url,t.content_type);return h?(0,l.jsx)(c.default,{url:t.url,filename:t.filename,size:t.size,onClick:a,onContextMenu:r,className:n}):(0,l.jsx)(N,{attachment:t,fileContents:m,bytesLeft:p,expanded:o,setExpanded:u,language:d,setLanguage:f,className:s(g.newMosaicStyle,n)})}",
-            "compare": "(e,t)=>e.attachment.id===t.attachment.id&&e.className===t.className"
-        }
-    }
-}

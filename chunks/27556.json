@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return\"symbol\"==typeof t||i(t)&&\"[object Symbol]\"==r(t)}"
-}

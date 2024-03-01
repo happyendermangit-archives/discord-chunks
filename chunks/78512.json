@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "howLong": "e=>{let t=m(e);return t.hours>0?\"\".concat(t.hours,\" hours\"):t.minutes>0?\"\".concat(t.minutes,\" minutes\"):\"\".concat(t.seconds,\" seconds\")}",
-        "getActivityPlatform": "e=>(0,a.default)(e)?i.default.get(d.PlatformTypes.SPOTIFY):(0,s.default)(e)?i.default.get(d.PlatformTypes.XBOX):null!=e.platform&&[d.ActivityGamePlatforms.PS4,d.ActivityGamePlatforms.PS5].includes(e.platform)?i.default.get(d.PlatformTypes.PLAYSTATION):e.name===i.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name?i.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS):void(e.type,d.ActivityTypes.PLAYING)",
-        "getProfileInfo": "(e,t)=>{var n;let i=u.default.getUserProfile(e.id),[a,s]=null!==(n=null==i?void 0:i.themeColors)&&void 0!==n?n:[],r=(0,o.getProfileTheme)(a),d=null!=s?(0,l.int2hex)(s):t;return{color:d,theme:d===t?\"dark\":r}}",
-        "getActivityAltText": "(e,t)=>(0,a.default)(t)?c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({username:e.username,song:t.details,artist:t.state}):t.type===d.ActivityTypes.PLAYING?c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({username:e.username,activity:t.name}):t.type===d.ActivityTypes.WATCHING?c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({username:e.username,activity:t.name}):t.type===d.ActivityTypes.LISTENING?c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({username:e.username,activity:t.name}):(0,r.default)(t)||t.type===d.ActivityTypes.STREAMING?c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({username:e.username,activity:t.name}):c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE.format({username:e.username,activity:t.name})"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e,t,n){this.locales=e,this.formats=t,this.pluralFn=n}"
-    }
-}

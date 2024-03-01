@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e){let{size:t,horizontal:n=!1}=e,s=n?t:1,r=n?1:t;return(0,i.jsx)(\"span\",{style:{display:\"block\",width:s,minWidth:s,height:r,minHeight:r}})}"
-    }
-}

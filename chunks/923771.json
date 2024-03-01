@@ -1,3 +1,0 @@
-{
-    "exports": "function(){return\"function\"==typeof r&&\"function\"==typeof Symbol&&\"symbol\"==typeof r(\"foo\")&&\"symbol\"==typeof Symbol(\"bar\")&&a()}"
-}

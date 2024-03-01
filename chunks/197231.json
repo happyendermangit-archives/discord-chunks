@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "makeAnalyticsID": "function r(){return(0,i.v4)().replace(/-/g,\"\")}"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "ArrayBuffer": "function ArrayBuffer() { [native code] }",
-        "DataView": "function DataView() { [native code] }"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function e(e,r,n){var i=t.call(this,e,r)||this;return i.iterator=n,i}"
-    }
-}

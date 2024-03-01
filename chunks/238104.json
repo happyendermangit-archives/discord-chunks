@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){var t;return r(e)&&(void 0!==(t=e[i])?!!t:\"RegExp\"===a(e))}"
-}

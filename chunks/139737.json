@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "SubscriptionListingBenefits": "function d(e){let t,{applicationId:n,storeListingBenefits:i,skuBenefits:s,className:r}=e;return null!=i?t=i.map(e=>(0,l.jsx)(f,{applicationId:n,benefit:e,className:a(u.benefit,r)},e.id)):null!=s&&(t=s.map((e,t)=>(0,l.jsx)(c,{benefit:e,className:a(u.benefit,r)},t))),(0,l.jsx)(l.Fragment,{children:t})}",
-        "default": "function c(e){let{benefit:t,className:n,emojiContainerClassName:i,showsDescription:o=!0,nameTextVariant:d=\"text-md/medium\",nameTextColor:c=\"header-primary\"}=e;return(0,l.jsxs)(\"div\",{className:a(u.container,n),children:[null!=t.emoji&&(0,l.jsx)(\"div\",{className:a(u.emojiContainer,i),children:(0,l.jsx)(r.default,{emojiId:t.emoji.id,emojiName:t.emoji.name,animated:t.emoji.animated})}),(0,l.jsxs)(\"div\",{className:u.infoContainer,children:[(0,l.jsx)(s.Text,{variant:d,color:c,className:u.name,children:t.name}),o&&(0,l.jsx)(s.Text,{color:\"interactive-normal\",variant:\"text-sm/normal\",children:t.description})]})]})}"
-    }
-}

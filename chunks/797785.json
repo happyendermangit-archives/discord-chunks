@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(e,t){return new WebSocket(e,t)}"
-    }
-}

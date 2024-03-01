@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){let{icons:t,className:n}=e;return(0,r.jsxs)(\"div\",{className:l(s.icons,n),children:[(0,r.jsx)(\"div\",{className:s.wrapOne,children:(0,r.jsx)(\"div\",{className:l(s.icon,s.one,a.FileUploadIconClassNames[t[0]])})}),(0,r.jsx)(\"div\",{className:s.wrapThree,children:(0,r.jsx)(\"div\",{className:l(s.icon,s.three,a.FileUploadIconClassNames[t[2]])})}),(0,r.jsx)(\"div\",{className:s.wrapTwo,children:(0,r.jsx)(\"div\",{className:l(s.icon,s.two,a.FileUploadIconClassNames[t[1]])})})]})}"
-    }
-}

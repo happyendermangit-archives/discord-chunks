@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class extends o.default.V6OrEarlierAPIError{constructor(e,_){super(e,_,null!=_?r.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({statusPageURL:n.Links.STATUS,details:\"\".concat(_)}):r.default.Messages.FORM_ERROR_GENERIC.format({statusPageURL:n.Links.STATUS}))}}"
-    }
-}

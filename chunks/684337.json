@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isCurrentUserTeen": "()=>{var e;return(null===(e=s.default.getCurrentUser())||void 0===e?void 0:e.nsfwAllowed)===!1}"
-    }
-}

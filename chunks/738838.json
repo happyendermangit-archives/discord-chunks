@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e){return i(t),f.apply(t,a(arguments,1))}"
-}

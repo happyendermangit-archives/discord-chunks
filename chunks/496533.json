@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getUserId": "function i(){return null}",
-        "setUserId": "function r(e){}"
-    }
-}

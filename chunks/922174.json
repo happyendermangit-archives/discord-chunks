@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){return!!e||((0,n.default)(l.PlatformTypes.SPOTIFY,\"Spotify Button\"),!1)}"
-    }
-}

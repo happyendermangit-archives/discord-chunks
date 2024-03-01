@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "within": "function a(e,t,n){return(0,r.max)(e,(0,r.min)(t,n))}",
-        "withinMaxClamp": "function o(e,t,n){var r=a(e,t,n);return r>n?n:r}"
-    }
-}

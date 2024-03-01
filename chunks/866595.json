@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "isAllChannelsRole": "function s(e){return i.default.has(e.permissions,r.Permissions.VIEW_CHANNEL)}",
-        "isChannelAccessDeniedBy": "function a(e,t){return null!=t&&(!!i.default.has(t.deny,r.Permissions.VIEW_CHANNEL)||e.isGuildVocal()&&i.default.has(t.deny,r.Permissions.CONNECT))}",
-        "isChannelAccessGrantedBy": "function o(e,t){return!(null==t||a(e,t))&&!!i.default.has(t.allow,r.Permissions.VIEW_CHANNEL)&&(!e.isGuildVocal()||i.default.has(t.allow,r.Permissions.CONNECT))}"
-    }
-}

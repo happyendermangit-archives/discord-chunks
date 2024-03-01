@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "RRule": "function t(t,e){void 0===t&&(t={}),void 0===e&&(e=!1),this._cache=e?null:new c.Cache,this.origOptions=(0,u.initializeOptions)(t);var r=(0,u.parseOptions)(t).parsedOptions;this.options=r}",
-        "Weekday": "function t(t,e){if(0===e)throw Error(\"Can't create weekday with n == 0\");this.weekday=t,this.n=e}"
-    }
-}

@@ -1,3 +1,0 @@
-{
-    "exports": "function o(e){if(e)return function(e){for(var t in o.prototype)Object.prototype.hasOwnProperty.call(o.prototype,t)&&(e[t]=o.prototype[t]);return e}(e)}"
-}

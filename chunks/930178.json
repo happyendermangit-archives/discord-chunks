@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "define": "function(t,e){return new c(t,e)}"
-    }
-}

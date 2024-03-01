@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){let{width:t=24,height:n=24,color:a=\"currentColor\",...s}=e;return(0,l.jsx)(\"svg\",{...(0,i.default)(s),width:t,height:n,viewBox:\"0 0 4 4\",children:(0,l.jsx)(\"circle\",{cx:\"2\",cy:\"2\",r:\"2\",fill:a})})}"
-    }
-}

@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return\"function\"==typeof t?t:null==t?i:\"object\"==typeof t?u(t)?o(t[0],t[1]):e(t):c(t)}"
-}

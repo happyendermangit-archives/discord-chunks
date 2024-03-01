@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "TOOLTIP_SPRING_CONFIG": {
-            "tension": 2400,
-            "friction": 52
-        }
-    }
-}

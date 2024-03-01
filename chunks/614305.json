@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function s(){return!1}"
-    }
-}

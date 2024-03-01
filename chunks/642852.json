@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return u(void 0===this?Promise:this,t)}"
-}

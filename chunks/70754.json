@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isCacheEnabled": "function s(){return!1}"
-    }
-}

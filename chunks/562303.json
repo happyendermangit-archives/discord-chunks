@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return i(t)&&\"[object Arguments]\"==r(t)}"
-}

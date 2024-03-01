@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,s,i){var n=i+s;t^=-1;for(var c=i;c<n;c++)t=t>>>8^r[(t^e[c])&255];return -1^t}"
-}

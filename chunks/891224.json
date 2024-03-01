@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"降低 \".concat(e.fieldLabel)",
-            "increase": "e=>\"提高 \".concat(e.fieldLabel)",
-            "numberField": "数字字段"
-        }
-    }
-}

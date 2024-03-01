@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "render": "(e,t)=>(0,l.jsx)(u,{...e,externalRef:t})"
-        }
-    }
-}

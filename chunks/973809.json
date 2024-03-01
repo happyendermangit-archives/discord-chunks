@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "option": "alt",
-        "command": "meta",
-        "return": "enter",
-        "escape": "esc",
-        "mod": "ctrl"
-    }
-}

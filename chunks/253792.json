@@ -1,3 +1,0 @@
-{
-    "exports": "function(e,t,r){var a=e[t];(!(o.call(e,t)&&i(a,r))||void 0===r&&!(t in e))&&n(e,t,r)}"
-}

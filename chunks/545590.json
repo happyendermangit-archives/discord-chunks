@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function v(e){let{user:t,guildId:n}=e,a=(0,i.useStateFromStores)([p.default],()=>{var e;return null===(e=p.default.getUserProfile(t.id))||void 0===e?void 0:e.application}),s=null!=a&&(0,m.canInstallApplication)({customInstallUrl:a.customInstallUrl,installParams:a.installParams,integrationTypesConfig:a.integrationTypesConfig}),{botUpgradeable:o,subscriptionGroupListing:u}=(0,h.default)({user:t,guildId:n}),{enabled:d}=r.appStorefrontExperiment.useExperiment({location:\"BotButtonsSection\"});return s||o?(0,l.jsx)(g.default,{children:(0,l.jsxs)(\"div\",{className:T.buttonsContainer,children:[(0,l.jsx)(E.default,{application:a,className:T.button}),o&&(d?(0,l.jsx)(_,{app:a,listing:u,guildId:n}):(0,l.jsx)(I,{guildId:n,listing:u}))]})}):null}"
-    }
-}

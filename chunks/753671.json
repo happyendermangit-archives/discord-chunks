@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "isElement": "function a(e){var t=(0,r.default)(e).Element;return e instanceof t||e instanceof Element}",
-        "isHTMLElement": "function o(e){var t=(0,r.default)(e).HTMLElement;return e instanceof t||e instanceof HTMLElement}",
-        "isShadowRoot": "function i(e){if(\"undefined\"==typeof ShadowRoot)return!1;var t=(0,r.default)(e).ShadowRoot;return e instanceof t||e instanceof ShadowRoot}"
-    }
-}

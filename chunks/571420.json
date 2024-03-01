@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getIsPaused": "function i(){return s}",
-        "setIsPaused": "function r(e){s=e}"
-    }
-}

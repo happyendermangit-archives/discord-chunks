@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "Sign": "function p(t){return new a(t)}",
-        "Verify": "function b(t){return new d(t)}",
-        "createSign": "function p(t){return new a(t)}",
-        "createVerify": "function b(t){return new d(t)}"
-    }
-}

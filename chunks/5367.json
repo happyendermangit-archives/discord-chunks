@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useCurrentUserGuildBadgeStatus": "function d(e){let t=(0,r.useIsMemberVerificationManualApproval)(null!=e?e:u.EMPTY_STRING_SNOWFLAKE_ID),n=(0,l.useStateFromStores)([o.default,a.default,i.default],()=>{let t=o.default.getRequest(e),n=a.default.getCurrentUser();if(null==n||null==t||t.userId!==n.id)return;let l=i.default.getMember(e,t.userId),r=null!=l&&!l.isPending;if(!r||(0,s.isActionedAndNotAcked)(t))return t.applicationStatus},[e]);return t?n:void 0}"
-    }
-}

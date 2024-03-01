@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>(0,i.jsx)(r.Suspense,{fallback:null!=a?a():s()(),children:(0,i.jsx)(c,{...e})})"
-    }
-}

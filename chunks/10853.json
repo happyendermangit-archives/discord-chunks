@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isNotAutomodEmbed": "e=>{let{type:t}=e;return t!==s.MessageEmbedTypes.AUTO_MODERATION_MESSAGE&&t!==s.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION}"
-    }
-}

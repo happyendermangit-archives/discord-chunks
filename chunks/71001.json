@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e,s){if(\"Object\"!==c(t))throw new r(\"Assertion failed: Type(O) is not Object\");if(!i(e))throw new r(\"Assertion failed: IsPropertyKey(P) is not true\");return n(t,e,{\"[[Configurable]]\":!0,\"[[Enumerable]]\":!0,\"[[Value]]\":s,\"[[Writable]]\":!0})}"
-}

@@ -1,3 +1,0 @@
-{
-    "exports": "function(){var e=arguments,o=r?r.apply(this,e):e[0],i=n.cache;if(i.has(o))return i.get(o);var u=t.apply(this,e);return n.cache=i.set(o,u)||i,u}"
-}

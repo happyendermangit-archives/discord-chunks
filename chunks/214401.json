@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){if(\"function\"!=typeof e)throw new i(\"a function is required\");var t=l(r,u,arguments);return o(t,1+d(0,e.length-(arguments.length-1)),!0)}"
-}

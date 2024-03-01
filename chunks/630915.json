@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isOOPExperimentEnabled": "function s(){let e=r.getCurrentConfig({location:\"isOOPExperimentEnabled\"},{autoTrackExposure:!0});return null!=e&&e.useGlobalOverlay}"
-    }
-}

@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return\"BigInt\"===r(t)?t:i(t)}"
-}

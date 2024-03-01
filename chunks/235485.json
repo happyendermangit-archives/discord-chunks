@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "setClientOffset": "function a(e,t){return{type:r.INIT_COORDS,payload:{sourceClientOffset:t||null,clientOffset:e||null}}}"
-    }
-}

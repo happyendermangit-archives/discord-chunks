@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "longPressMessage": "Premere a lungo o premere Alt + Freccia giù per aprire il menu"
-        }
-    }
-}

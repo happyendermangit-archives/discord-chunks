@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useDropTargetConnector": "function s(e){var t=(0,i.useDragDropManager)(),n=(0,r.useMemo)(function(){return new a.TargetConnector(t.getBackend())},[t]);return(0,o.useIsomorphicLayoutEffect)(function(){return n.dropTargetOptions=e||null,n.reconnect(),function(){return n.disconnectDropTarget()}},[e]),n}"
-    }
-}

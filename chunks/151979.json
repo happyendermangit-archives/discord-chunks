@@ -1,3 +1,0 @@
-{
-    "exports": "function d(t){if(!(this instanceof d))return new d(t);\"string\"==typeof t&&(f(Object.prototype.hasOwnProperty.call(c,t),\"Unknown curve \"+t),t=c[t]),t instanceof c.PresetCurve&&(t={curve:t}),this.curve=t.curve.curve,this.n=this.curve.n,this.nh=this.n.ushrn(1),this.g=this.curve.g,this.g=t.curve.g,this.g.precompute(t.curve.n.bitLength()+1),this.hash=t.hash||t.curve.hash}"
-}

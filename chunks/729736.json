@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useSwitch": "function a(e,t,n){let{labelProps:a,inputProps:i,isSelected:o,isPressed:s,isDisabled:c,isReadOnly:l}=(0,r.useToggle)(e,t,n);return{labelProps:a,inputProps:{...i,role:\"switch\",checked:o},isSelected:o,isPressed:s,isDisabled:c,isReadOnly:l}}"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"V\\xe4henda \".concat(e.fieldLabel)",
-            "increase": "e=>\"Suurenda \".concat(e.fieldLabel)",
-            "numberField": "Numbri väli"
-        }
-    }
-}

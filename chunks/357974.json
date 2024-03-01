@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "OAuth2Prompts": {
-            "NONE": "none",
-            "CONSENT": "consent"
-        }
-    }
-}

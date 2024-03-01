@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return function(){var e=this,n=arguments;return new Promise(function(i,o){var a=t.apply(e,n);function u(t){r(a,i,o,u,s,\"next\",t)}function s(t){r(a,i,o,u,s,\"throw\",t)}u(void 0)})}}"
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getThemeClass": "function r(e){if(null==e)return;let t=i.ThemeExtends.get(e);return null!=t?\"theme-\".concat(t,\" theme-\").concat(e):\"theme-\".concat(e)}"
-    }
-}

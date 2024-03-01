@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "codeAt": "function(r,n){var e,f,l=u(o(r)),p=i(n),v=l.length;return p<0||p>=v?t?\"\":void 0:(e=a(l,p))<55296||e>56319||p+1===v||(f=a(l,p+1))<56320||f>57343?t?c(l,p):e:t?s(l,p,p+2):(e-55296<<10)+(f-56320)+65536}",
-        "charAt": "function(r,n){var e,f,l=u(o(r)),p=i(n),v=l.length;return p<0||p>=v?t?\"\":void 0:(e=a(l,p))<55296||e>56319||p+1===v||(f=a(l,p+1))<56320||f>57343?t?c(l,p):e:t?s(l,p,p+2):(e-55296<<10)+(f-56320)+65536}"
-    }
-}

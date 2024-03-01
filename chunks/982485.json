@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r){var n,e=i(t),f=0,a=[];for(n in e)!o(c,n)&&o(e,n)&&s(a,n);for(;r.length>f;)o(e,n=r[f++])&&(~u(a,n)||s(a,n));return a}"
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "set": "function setImmediate() { [native code] }",
-        "clear": "function clearImmediate() { [native code] }"
-    }
-}

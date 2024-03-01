@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){var _;let{impressionName:E,impressionProperties:i,disableTrack:a,...I}=e,s=i;return\"function\"==typeof s&&(s=s(I)),(0,r.default)({type:n.ImpressionTypes.PAGE,name:E,properties:s},{disableTrack:a},[null===(_=I.location)||void 0===_?void 0:_.pathname]),(0,t.jsx)(o.Route,{...I})}"
-    }
-}

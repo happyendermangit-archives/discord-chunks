@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){return(0,r.default)(e).getComputedStyle(e)}"
-    }
-}

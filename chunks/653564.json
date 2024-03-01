@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useEndCallLottie": "()=>{let e=r.useRef(null),t=r.useCallback(()=>{null!=e.current&&e.current.play(\"all\")},[]),l=r.useCallback(()=>{null!=e.current&&e.current.play(\"hover\")},[]),i=r.useCallback(()=>{null!=e.current&&e.current.stopIfPlaying(\"hover\")},[]),u=r.useCallback(t=>(0,a.jsx)(s.LottieIcon,{...t,src:n(\"122863\"),ref:e}),[]);return{events:{onMouseEnter:l,onMouseLeave:i},play:t,Component:u}}"
-    }
-}

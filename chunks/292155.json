@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "randomUUID": "function () { [native code] }"
-        }
-    }
-}

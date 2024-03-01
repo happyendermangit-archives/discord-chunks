@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "DropTargetImpl": "function i(e,t){!function(e,t){if(!(e instanceof t))throw TypeError(\"Cannot call a class as a function\")}(this,i),a(this,\"spec\",void 0),a(this,\"monitor\",void 0),this.spec=e,this.monitor=t}"
-    }
-}

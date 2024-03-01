@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "size": "function i(){return s.size}"
-    }
-}

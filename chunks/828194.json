@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){var e=r(t);if(!e)throw new i(\"non-iterable value provided\");return arguments.length>1?n(e,arguments[1]):n(e)}"
-}

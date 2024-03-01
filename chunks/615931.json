@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "resolveThunk": "e=>\"function\"==typeof e?e():e"
-    }
-}

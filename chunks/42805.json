@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e,t){(0,o.default)(2,arguments);var n=(0,r.default)(t);return(0,a.default)(e,12*n)}"
-    }
-}

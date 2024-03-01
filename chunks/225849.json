@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "(e,t)=>{let n=(0,a.useStateFromStores)([l.default],()=>l.default.useReducedMotion),o=(0,a.useStateFromStores)([r.default],()=>r.default.getScrollPosition());(0,i.useEffect)(()=>{let i=e.current;if(null==i||t!==o)return;let a=requestAnimationFrame(()=>{i.scrollIntoView({behavior:n?\"auto\":\"smooth\"}),s.default.clearScrollPosition(d[t])});return()=>cancelAnimationFrame(a)},[e,t,o,n])}"
-    }
-}

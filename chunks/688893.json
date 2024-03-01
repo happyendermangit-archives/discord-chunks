@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function g(e,t,n,i){l.useImperativeHandle(e,()=>p(t,n,i),[t,n,i])}"
-    }
-}

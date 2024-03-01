@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "openStageChannelAudienceNoticeModal": "function i(e){s.openStageChannelAudienceNoticeModal(e)}"
-    }
-}

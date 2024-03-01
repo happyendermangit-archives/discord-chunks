@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"خفض \".concat(e.fieldLabel)",
-            "increase": "e=>\"زيادة \".concat(e.fieldLabel)",
-            "numberField": "حقل رقمي"
-        }
-    }
-}

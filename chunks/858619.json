@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "EmojiTypes": {
-            "UNICODE": "UNICODE",
-            "GUILD": "GUILD_EMOJI"
-        }
-    }
-}

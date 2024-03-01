@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e){var t;let n=i.LegacyUsernameDisabled.useSetting(),u=(0,l.default)([s.default],()=>s.default.getCurrentUser()),d=(0,l.default)([a.default],()=>a.default.hidePersonalInformation);if(null==e)return[];let c=null!==(t=null==e?void 0:e.getBadges())&&void 0!==t?t:[];return null!=u&&u.id===e.userId&&n&&(c=c.filter(e=>e.id!==o)),d&&(c=c.map(e=>({...e,description:e.id===o?r.default.Messages.STREAMER_MODE_ENABLED:e.description}))),c}"
-    }
-}

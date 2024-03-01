@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "playGiftSound": "function r(e,t){let n=new Audio((0,a.default)(e));n.volume=(0,i.default)(t),n.play()}",
-        "WebAudioSound": "class f{get volume(){return this._volume}set volume(e){this._volume=e,this._ensureAudio().then(t=>t.volume=e)}loop(){this._ensureAudio().then(e=>{e.loop=!0,e.play()})}play(){this._ensureAudio().then(e=>{e.loop=!1,e.play()})}pause(){null!=this._audio&&this._audio.then(e=>e.pause())}stop(){this._destroyAudio()}playWithListener(){return new Promise((e,t)=>{this._ensureAudio().then(n=>{(null==n.duration||0===n.duration)&&t(\"sound has no duration\"),n.play(),setTimeout(()=>{e(!0)},n.duration)})})}_destroyAudio(){null!=this._audio&&(this._audio.then(e=>{e.pause(),e.src=\"\"}),this._audio=null)}_ensureAudio(){var e;return this._audio=null!==(e=this._audio)&&void 0!==e?e:new Promise((e,t)=>{let s=new Audio;s.src=n(\"89400\")(\"../../sounds/\".concat(this.name,\".mp3\").replace(\"../../sounds/\",\"./\")),s.onloadeddata=()=>{s.volume=Math.min(o.default.getOutputVolume()/100*this._volume,1),d.isPlatformEmbedded&&s.setSinkId(p),e(s)},s.onerror=()=>t(Error(\"could not play audio\")),s.onended=()=>this._destroyAudio(),s.load()}),this._audio}constructor(e,t,n){this.name=e,this._volume=n}}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let{id:t,muted:n=!1,className:i=u.wrapper,size:s=o.SIZE_14,selectable:c=!1,children:d,color:f,onClick:E,onContextMenu:_,style:I,title:T,uppercase:M}=e;return(0,r.jsx)(a.H,{role:null!=E?\"button\":void 0,onClick:E,onContextMenu:_,id:t,className:l(i,{[u.base]:!0,[s]:!0,[u.selectable]:c,[u.muted]:n,[u.uppercase]:M}),title:T,style:null!=f?{...I,color:f}:I,children:d})}"
-    }
-}

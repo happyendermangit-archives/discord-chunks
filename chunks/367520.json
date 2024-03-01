@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "longPressMessage": "Håll nedtryckt eller tryck på Alt + pil nedåt för att öppna menyn"
-        }
-    }
-}

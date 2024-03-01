@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useDragSource": "function i(e,t,n){var i=(0,r.useMemo)(function(){return new a.DragSourceImpl(e,t,n)},[t,n]);return(0,r.useEffect)(function(){i.spec=e},[e]),i}"
-    }
-}

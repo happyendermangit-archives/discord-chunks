@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "CLIENT_THEMES_DATA_ATTRIBUTE": "data-client-themes",
-        "default": "()=>{let e=u();return null===e?{clientThemesCSS:\"\",clientThemesClassName:\"\"}:{clientThemesCSS:e,clientThemesClassName:i}}"
-    }
-}

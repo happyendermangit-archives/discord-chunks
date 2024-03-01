@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "isSupportedPlatform": "function s(){return(0,r.isWindows)()||(0,r.isMac)()}",
-        "isLaunchable": "function a(e){let{LibraryApplicationStore:t,LaunchableGameStore:n,DispatchApplicationStore:r,ConnectedAppsStore:s,applicationId:a,branchId:o}=e;if(s.isConnected(a))return!0;if(null==o&&(o=a),r.isLaunchable(a,o))return!0;let l=t.getLibraryApplication(a,o);return!(null!=l&&(0,i.isUserEntitledToLibraryApplication)(l))&&n.isLaunchable(a)}"
-    }
-}

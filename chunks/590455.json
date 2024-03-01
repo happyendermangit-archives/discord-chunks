@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){if(e(t))throw o(\"Can't call method on \"+t);return t}"
-}

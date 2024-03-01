@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useAnalyticsContext": "()=>r.useContext(n.AnalyticsContext)"
-    }
-}

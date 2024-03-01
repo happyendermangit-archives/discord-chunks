@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "batchUpdates": "function o(e){(0,t.unstable_batchedUpdates)(e)}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(){let e=s.default.getFocusedPID();return null!=e&&(s.default.isReady(e)||s.default.isCrashed(e))?e:null}"
-    }
-}

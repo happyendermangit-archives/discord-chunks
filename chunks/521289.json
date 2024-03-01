@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){return e.replace(/start|end/g,function(e){return r[e]})}"
-    }
-}

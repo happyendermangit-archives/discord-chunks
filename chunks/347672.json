@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "getThermalState": "()=>Promise.reject(Error(i.GET_THERMAL_STATE_NOT_IMPLEMENTED_ERROR_MESSAGE))"
-        }
-    }
-}

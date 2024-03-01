@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){return\"function\"!=typeof e.constructor||o(e)?{}:n(i(e))}"
-}

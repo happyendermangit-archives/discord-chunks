@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function t(t){this.options=t}"
-    }
-}

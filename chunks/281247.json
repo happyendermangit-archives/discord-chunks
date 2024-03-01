@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(t,e){t.classList?t.classList.remove(e):\"string\"==typeof t.className?t.className=i(t.className,e):t.setAttribute(\"class\",i(t.className&&t.className.baseVal||\"\",e))}"
-    }
-}

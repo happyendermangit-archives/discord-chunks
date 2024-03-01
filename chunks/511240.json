@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "RRuleSet": "function e(e){void 0===e&&(e=!1);var r=t.call(this,{},e)||this;return r.dtstart=y.apply(r,[\"dtstart\"]),r.tzid=y.apply(r,[\"tzid\"]),r._rrule=[],r._rdate=[],r._exrule=[],r._exdate=[],r}"
-    }
-}

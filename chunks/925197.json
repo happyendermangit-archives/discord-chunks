@@ -1,3 +1,0 @@
-{
-    "exports": "function n(t){this.rand=t||new i.Rand}"
-}

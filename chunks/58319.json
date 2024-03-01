@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "Cache": "function Cache(){this.all=!1,this.before=[],this.after=[],this.between=[]}"
-    }
-}

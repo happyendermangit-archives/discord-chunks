@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "packStageChannelPartyId": "function l(e,t){let n=0,i=s.default.getId(),o=a.default.isSpeaker(i,e.id);o&&(n|=1);let l=r.default.getGuild(e.getGuildId());null!=l&&(l.hasFeature(d.GuildFeatures.PARTNERED)&&(n|=2),l.hasFeature(d.GuildFeatures.VERIFIED)&&(n|=4));let f=n.toString(16);return\"\".concat(u).concat(e.guild_id,\":\").concat(e.id,\":\").concat(f,\":\").concat(t.id)}",
-        "unpackStageChannelParty": "function f(e){if(null==e||null==e.party)return;let{id:t,size:n}=e.party;try{if(null==t||!t.startsWith(u))return;let[,e,s,i,r]=t.split(\":\"),a=parseInt(i,16);return{guildId:e,channelId:s,size:n,userIsSpeaker:(1&a)!=0,guildIsPartnered:(2&a)!=0,guildIsVerified:(4&a)!=0,stageInstanceId:r}}catch(e){return null}}",
-        "isStageActivity": "function _(e){return(null==e?void 0:e.application_id)===o.STAGE_APPLICATION_ID}",
-        "shouldShowActivity": "function c(e){let t=f(e);if(null==t)return!1;let{channelId:n}=t,s=i.default.getChannel(n);return null!=s}"
-    }
-}

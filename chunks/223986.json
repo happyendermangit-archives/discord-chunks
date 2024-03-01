@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useToggleState": "function a(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},{isReadOnly:t}=e,[n,a]=(0,r.useControlledState)(e.isSelected,e.defaultSelected||!1,e.onChange);return{isSelected:n,setSelected:function(e){!t&&a(e)},toggle:function(){!t&&a(!n)}}}"
-    }
-}

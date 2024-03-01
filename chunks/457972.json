@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"\".concat(e.fieldLabel,\" cs\\xf6kkent\\xe9se\")",
-            "increase": "e=>\"\".concat(e.fieldLabel,\" n\\xf6vel\\xe9se\")",
-            "numberField": "Számmező"
-        }
-    }
-}

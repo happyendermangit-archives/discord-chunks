@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function r(e){let{userId:t,guild:n,guildMember:r}=e;return(0,l.jsx)(a.default,{children:(0,l.jsx)(i.default,{userId:t,guild:n,guildMember:r,headingClassName:s.title,textClassName:s.body})})}"
-    }
-}

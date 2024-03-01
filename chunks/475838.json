@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "chain": "function l(){for(var e=arguments.length,t=Array(e),n=0;n<e;n++)t[n]=arguments[n];return new a(t)}"
-    }
-}

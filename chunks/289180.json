@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){let t=(0,a.useStateFromStores)([s.default,l.default],()=>e.isPrivate()||(0,r.canStreamInChannel)(e,s.default,l.default,!1),[e]);return t}",
-        "getVideoPermission": "function u(e){return e.isPrivate()||(0,r.canStreamInChannel)(e,s.default,l.default,!1)}"
-    }
-}

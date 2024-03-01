@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){var r=e(t);u&&r&&!r[f]&&o(r,f,{configurable:!0,get:function(){return this}})}"
-}

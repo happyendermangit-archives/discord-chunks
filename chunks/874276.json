@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "getVolume": "function a(){var e;let{volume:t}=null!==(e=l.default.get(i))&&void 0!==e?e:{};return\"number\"!=typeof t&&(t=1),t=Math.min(1,Math.max(0,t))}",
-        "setVolume": "function s(e){l.default.set(i,{volume:e,muted:r()})}",
-        "getMuted": "function r(){var e;let{muted:t}=null!==(e=l.default.get(i))&&void 0!==e?e:{};return\"boolean\"!=typeof t&&(t=!1),t}",
-        "setMuted": "function o(e){l.default.set(i,{volume:a(),muted:e})}"
-    }
-}

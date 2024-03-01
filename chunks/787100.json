@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "tableNestedRows": "function r(){return!1}"
-    }
-}

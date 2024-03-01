@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "extractId": "function i(e){return e.split(\".\")[0]}",
-        "maybeExtractId": "function r(e){return null==e?null:i(e)}"
-    }
-}

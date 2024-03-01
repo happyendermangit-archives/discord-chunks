@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "max": "function max() { [native code] }",
-        "min": "function min() { [native code] }",
-        "round": "function round() { [native code] }"
-    }
-}

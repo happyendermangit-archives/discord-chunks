@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function R(e){let{focused:t,type:n,windowKey:r,macOSFrame:s=!1,themeOverride:i}=e,o=(0,d.useAppContext)(),f=(0,l.useStateFromStores)([c.default],()=>c.default.isFullscreenInContext(o)),h=(0,u.default)();if(f)return null;switch(n){case g.PlatformTypes.WINDOWS:return(0,a.jsx)(y,{windowKey:r,themeOverride:i,hasOpenLayer:h});case g.PlatformTypes.OSX:return(0,a.jsx)(N,{focused:t,windowKey:r,frame:s,themeOverride:i,hasOpenLayer:h});default:return null}}"
-    }
-}

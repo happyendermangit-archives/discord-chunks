@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r){var n=t.length,c=o(n/2);return n<8?u(t,r):f(t,i(e(t,0,c),r),i(e(t,c),r),r)}"
-}

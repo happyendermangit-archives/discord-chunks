@@ -1,0 +1,1 @@
+"function(t,e,n){\"use strict\";function o(){return{logsUploaded:new Date().toISOString(),releaseChannel:window.GLOBAL_ENV.RELEASE_CHANNEL,buildNumber:\"271652\",versionHash:\"cd7a5208bfdbd60c463dde16b35e7b3ca93e9097\"}}n.r(e),n.d(e,{default:function(){return o}})}"

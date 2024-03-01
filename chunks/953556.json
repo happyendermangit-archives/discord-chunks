@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getActivationStart": "()=>{let t=(0,r.getNavigationEntry)();return t&&t.activationStart||0}"
-    }
-}

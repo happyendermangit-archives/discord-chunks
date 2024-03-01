@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getToken": "function r(){return i.default.getToken()}",
-        "isAuthenticated": "function s(){return null!=r()}",
-        "getArtForPath": "e=>null!=e&&/^\\/developers/.test(e)?n(\"501617\"):null"
-    }
-}

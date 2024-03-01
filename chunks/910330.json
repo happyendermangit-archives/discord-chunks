@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function E(e){let t=(0,r.useStateFromStores)([c.default],()=>c.default.hidePersonalInformation),n=(0,d.default)(e.userId);return(0,l.jsx)(h,{...e,...n,hideNote:t})}"
-    }
-}

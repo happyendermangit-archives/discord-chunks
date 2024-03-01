@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){var t=(0,r.default)(e),n=t.overflow,a=t.overflowX,o=t.overflowY;return/auto|scroll|overlay|hidden/.test(n+o+a)}"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"\".concat(e.fieldLabel,\" azalt\")",
-            "increase": "e=>\"\".concat(e.fieldLabel,\" arttır\")",
-            "numberField": "Sayı alanı"
-        }
-    }
-}

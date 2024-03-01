@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "randomNumber": "function s(e,t){return Math.floor(Math.random()*(t-e+1)+e)}",
-        "applySpringForce": "function i(e,t,n,s){return s.tension*(e-t)-s.friction*n}"
-    }
-}

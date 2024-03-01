@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useMeter": "function a(e){let{progressBarProps:t,labelProps:n}=(0,r.useProgressBar)(e);return{meterProps:{...t,role:\"meter progressbar\"},labelProps:n}}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function m(e,t,n,i){let r=f.default.getVoiceChannelId(),o=d.default.getChannel(r);if(null==t&&null!=r&&null!=o){let t=c(o,i);if(e(),a.default.hasUsedBackgroundInCall){let e={...t,...g()};s.default.dispatch({type:\"VIDEO_BACKGROUND_SHOW_FEEDBACK\",analyticsData:e})}else s.default.dispatch({type:\"VOICE_CHANNEL_SHOW_FEEDBACK\",analyticsData:t})}else e()}"
-    }
-}

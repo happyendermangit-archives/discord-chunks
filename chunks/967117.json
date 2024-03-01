@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getBraintreeSDK": "function a(){return(0,i.importWithRetry)({createPromise:()=>n.el(\"725271\").then(n.t.bind(n,\"725271\",23)),webpackId:\"725271\"}).then(e=>{let{default:t}=e;return t})}",
-        "collectDeviceData": "function o(){let e=r.default.getClient();return null==e?a().then(e=>e.client.create({authorization:s.PaymentSettings.BRAINTREE.KEY}).then(e=>l(e)).catch(()=>null)):l(e)}"
-    }
-}

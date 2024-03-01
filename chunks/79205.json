@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "longPressMessage": "長按或按 Alt+向下鍵以開啟功能表"
-        }
-    }
-}

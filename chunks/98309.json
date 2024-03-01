@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function d(e){if(null==e||!a.includes(e.type))return[];let t=i.default.getGuild(e.guild_id);return null==t?[]:Object.values(e.permissionOverwrites).filter(e=>{var n,i;return 0===e.type&&(null===(i=t.roles[e.id])||void 0===i?void 0:null===(n=i.tags)||void 0===n?void 0:n.guild_connections)===null&&!s.default.hasAny(e.deny,o)}).map(e=>t.roles[e.id]).filter(e=>null!=e)}"
-    }
-}

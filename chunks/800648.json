@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){var t=this.constructor;return this.callbacks={},this.directMap={},this.sequenceLevels={},this.resetTimer,this.ignoreNextKeyup=!1,this.ignoreNextKeypress=!1,this.nextExpectedAction=!1,this.element=e,this.addEvents(),t.instances.push(this),this}"
-}

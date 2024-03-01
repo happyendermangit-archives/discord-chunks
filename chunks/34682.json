@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "initMetric": "(t,e)=>{let n=(0,s.getNavigationEntry)(),o=\"navigate\";return n&&(o=r.WINDOW.document.prerendering||(0,a.getActivationStart)()>0?\"prerender\":n.type.replace(/_/g,\"-\")),{name:t,value:void 0===e?-1:e,rating:\"good\",delta:0,entries:[],id:(0,i.generateUniqueID)(),navigationType:o}}"
-    }
-}

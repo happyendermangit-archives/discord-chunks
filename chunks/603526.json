@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"הקטן \".concat(e.fieldLabel)",
-            "increase": "e=>\"הגדל \".concat(e.fieldLabel)",
-            "numberField": "שדה מספר"
-        }
-    }
-}

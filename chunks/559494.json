@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){if(!a(e))return!1;var t=r(e);return\"[object Function]\"==t||\"[object GeneratorFunction]\"==t||\"[object AsyncFunction]\"==t||\"[object Proxy]\"==t}"
-}

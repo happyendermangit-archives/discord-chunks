@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getEmojiHotrail": "function o(e){let{topEmojis:t,newlyAddedEmojis:i,rowSize:n=r.EMOJI_ROW_SIZE}=e,o=t.slice(0,n-i.length);return{visibleTopEmojis:o,visibleNewlyAddedEmojis:i,allEmojis:o.concat(i)}}",
-        "default": "function u(e){return n.useMemo(()=>o(e),[e])}"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "mark": "function o(e){}",
-        "measure": "function n(e,_){}"
-    }
-}

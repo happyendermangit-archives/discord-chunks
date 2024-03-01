@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){switch(e){case\"android\":return s.EmbeddedActivitySupportedPlatforms.ANDROID;case\"ios\":return s.EmbeddedActivitySupportedPlatforms.IOS;default:return s.EmbeddedActivitySupportedPlatforms.WEB}}"
-    }
-}

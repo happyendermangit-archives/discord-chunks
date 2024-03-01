@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isOldVoiceUIEnabled": "function s(e){return!1}"
-    }
-}

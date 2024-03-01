@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "BROKEN_CARET": false,
-        "MISSED_STICKY": false,
-        "UNSUPPORTED_Y": false
-    }
-}

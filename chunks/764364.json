@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "isPremiumAtLeast": "function r(e,t){return null==t||null!=e&&i.PremiumTypeOrder[e]>=i.PremiumTypeOrder[t]}",
-        "isPremium": "function s(e,t){return null!=e&&null!=e.premiumType&&r(e.premiumType,t)}",
-        "isPremiumExactly": "function a(e,t){return null!=e&&e.premiumType===t}"
-    }
-}

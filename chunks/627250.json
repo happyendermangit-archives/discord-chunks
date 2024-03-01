@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "ResizeObserver": "function ResizeObserver () { [polyfill code] }"
-    }
-}

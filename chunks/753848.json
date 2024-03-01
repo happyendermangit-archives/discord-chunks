@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isPrivateChannel": "function a(e){return null==e.guild_id}"
-    }
-}

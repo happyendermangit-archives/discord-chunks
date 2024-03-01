@@ -1,3 +1,0 @@
-{
-    "exports": "function a(t){if(!(this instanceof a))return new a(t);f.call(this,t),this._transformState={afterTransform:u.bind(this),needTransform:!1,transforming:!1,writecb:null,writechunk:null,writeencoding:null},this._readableState.needReadable=!0,this._readableState.sync=!1,t&&(\"function\"==typeof t.transform&&(this._transform=t.transform),\"function\"==typeof t.flush&&(this._flush=t.flush)),this.on(\"prefinish\",d)}"
-}

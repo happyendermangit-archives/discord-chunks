@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){return n(e)?void 0:e}"
-}

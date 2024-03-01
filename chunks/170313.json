@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "e=>{let t=(0,i.default)([o.default],()=>o.default.products);return(0,a.useCallback)(r=>{let{type:a,skuId:i}=r,o=t.get(i);u.default.track(c.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT,{feature_name:(0,l.match)(a).with(n.CollectiblesItemType.AVATAR_DECORATION,()=>d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION).with(n.CollectiblesItemType.PROFILE_EFFECT,()=>d.AnalyticsPremiumFeatureNames.PROFILE_EFFECT).otherwise(()=>void 0),feature_tier:(0,s.isPremiumCollectiblesProduct)(o)?d.AnalyticsPremiumFeatureTiers.FREE:d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD,feature_selection:null==o?void 0:o.name,location_stack:e})},[t,e])}"
-    }
-}

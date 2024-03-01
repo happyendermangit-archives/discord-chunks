@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "setDeveloperOptionSettings": "function r(e){i.default.dispatch({type:\"DEVELOPER_OPTIONS_UPDATE_SETTINGS\",settings:e})}"
-    }
-}

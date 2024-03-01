@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getSDKSource": "function i(){return\"npm\"}",
-        "isBrowserBundle": "function r(){return\"undefined\"!=typeof __SENTRY_BROWSER_BUNDLE__&&!!__SENTRY_BROWSER_BUNDLE__}"
-    }
-}

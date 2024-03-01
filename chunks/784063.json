@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "inject": "function a(e){i=e}",
-        "supported": "function o(){return s(),i.supported()}",
-        "supportsFeature": "function l(e){return s(),i.supportsFeature(e)}",
-        "setProcessPriority": "function u(e){s(),i.setProcessPriority(e)}",
-        "getVoiceEngine": "function c(){return s(),null!=r?r:r=i.getVoiceEngine()}"
-    }
-}

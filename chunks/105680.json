@@ -1,8 +1,0 @@
-{
-    "exports": {
-        "settingsColumn": "settingsColumn__6383c customColumn_e22a6e",
-        "settingsContainer": "settingsContainer_d55069 customContainer__93c7c",
-        "settingsContent": "settingsContent__75a7e contentColumnDefault_c66386 settingsColumn__6383c customColumn_e22a6e",
-        "settingsScroller": "settingsScroller__0ef6e customScroller_f72801 contentRegionScroller__86c79"
-    }
-}

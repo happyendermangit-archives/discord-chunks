@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "get": "function a(e,t,n){return t.split(\".\").reduce(function(e,t){return e&&e[t]?e[t]:n||null},e)}",
-        "without": "function i(e,t){return e.filter(function(e){return e!==t})}",
-        "isObject": "function o(e){return\"object\"===r(e)}",
-        "xor": "function s(e,t){var n=new Map,r=function(e){n.set(e,n.has(e)?n.get(e)+1:1)};e.forEach(r),t.forEach(r);var a=[];return n.forEach(function(e,t){1===e&&a.push(t)}),a}",
-        "intersection": "function c(e,t){return e.filter(function(e){return t.indexOf(e)>-1})}"
-    }
-}

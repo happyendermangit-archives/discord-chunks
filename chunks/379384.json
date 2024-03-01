@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(){if(!r&&!(r=\"undefined\"!=typeof crypto&&crypto.getRandomValues&&crypto.getRandomValues.bind(crypto)))throw Error(\"crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported\");return r(i)}"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "longPressMessage": "Prima continuamente ou prima Alt + Seta Para Baixo para abrir o menu"
-        }
-    }
-}

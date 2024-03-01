@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "formatSinkWantStat": "function i(e,t,n){let i=e[t];return null==i?n?\"\".concat(e.any,\" (any)\"):\"100\":i.toString()}",
-        "formatSinkWantAsInt": "function r(e,t){let n=e[t];return null==n?e.any:n}"
-    }
-}

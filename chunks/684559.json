@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "class extends n.default{constructor(e){super(),this.handleShowUrgentMessageAlert=e,this.actions={POST_CONNECTION_OPEN:()=>S(this.handleShowUrgentMessageAlert),MESSAGE_CREATE:()=>S(this.handleShowUrgentMessageAlert),CHANNEL_SELECT:N}}}"
-    }
-}

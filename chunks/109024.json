@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,e){return t.length=e}"
-}

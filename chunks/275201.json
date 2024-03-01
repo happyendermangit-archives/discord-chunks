@@ -1,3 +1,0 @@
-{
-    "exports": "function f(t,e){this.type=t,this.p=new r(e.p,16),this.red=e.prime?r.red(e.prime):r.mont(this.p),this.zero=new r(0).toRed(this.red),this.one=new r(1).toRed(this.red),this.two=new r(2).toRed(this.red),this.n=e.n&&new r(e.n,16),this.g=e.g&&this.pointFromJSON(e.g,e.gRed),this._wnafT1=[,,,,],this._wnafT2=[,,,,],this._wnafT3=[,,,,],this._wnafT4=[,,,,],this._bitLength=this.n?this.n.bitLength():0;var s=this.n&&this.p.div(this.n);!s||s.cmpn(100)>0?this.redN=null:(this._maxwellTrick=!0,this.redN=this.n.toRed(this.red))}"
-}

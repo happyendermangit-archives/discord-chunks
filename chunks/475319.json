@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "getDefaultOptions": "function a(){return r}"
-    }
-}

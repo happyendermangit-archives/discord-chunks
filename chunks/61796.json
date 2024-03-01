@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isMainTabsExperimentPlatformSupported": "function i(){return!1}"
-    }
-}

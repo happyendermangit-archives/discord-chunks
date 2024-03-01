@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "canChannelBeDefault": "function o(e,t){return i.default.isChannelGated(e,t)||s.default.canEveryoneRole(a.Permissions.VIEW_CHANNEL,r.default.getChannel(t))}"
-    }
-}

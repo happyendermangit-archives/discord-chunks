@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){return(0,o.default)(1,arguments),(!!(0,r.default)(e)||\"number\"==typeof e)&&!isNaN(Number((0,a.default)(e)))}"
-    }
-}

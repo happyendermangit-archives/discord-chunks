@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){return(0,a.default)(1,arguments),(0,r.default)(e).getDate()}"
-    }
-}

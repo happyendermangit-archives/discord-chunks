@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "getClipCreatedAt": "function s(e){return new Date(i.default.extractTimestamp(e)).toISOString()}",
-        "getClipParticipantIds": "function a(e){return e.slice(0,r.CLIPS_MAX_PARTICIPANTS)}"
-    }
-}

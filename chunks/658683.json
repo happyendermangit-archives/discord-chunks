@@ -1,3 +1,0 @@
-{
-    "exports": "function(){return r(),\"function\"==typeof Promise.allSettled?Promise.allSettled:i}"
-}

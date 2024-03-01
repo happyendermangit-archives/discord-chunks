@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "requireSortedDescending": "function a(e){i(e.length<=2||r.default.compare(e[0].id,e[e.length-1].id)>=0,\"messages must be sorted in descending order.\")}"
-    }
-}

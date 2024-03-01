@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "Text": "e=>{let t,{variant:n,tag:r=\"div\",selectable:a=!1,className:o,lineClamp:f,color:E,tabularNumbers:p=!1,scaleFontToUserSetting:h=!1,..._}=e,S=\"\",m={};if(null!=f&&(1===f?S=u.lineClamp1:(S=u.lineClamp2Plus,m={lineClamp:f,WebkitLineClamp:f})),void 0!==E)switch(E){case\"none\":t=void 0;break;case\"always-white\":t=\"white\";break;default:var T;t=null===(T=l.default.colors[d[E]])||void 0===T?void 0:T.css}let g={color:t,...m,..._.style};return(0,i.jsx)(r,{className:s({[u.defaultColor]:void 0===E,[u.selectable]:a,[u.tabularNumbers]:p,[c.fontScaling]:h},S,c[n],o),..._,style:Object.values(g).filter(Boolean).length>0?g:void 0,\"data-text-variant\":n})}"
-    }
-}

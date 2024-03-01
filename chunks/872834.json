@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "useCollection": "function s(e,t,n){let i=(0,r.useMemo)(()=>new a,[]),{children:o,items:s,collection:c}=e;return(0,r.useMemo)(()=>c?c:t(i.build({children:o,items:s},n)),[i,o,s,c,n,t])}",
-        "getFirstItem": "function c(e){return function(e,t){if(t<0)return;let n=0;for(let r of e){if(n===t)return r;n++}}(e,0)}",
-        "getLastItem": "function l(e){let t;for(let n of e)t=n;return t}"
-    }
-}

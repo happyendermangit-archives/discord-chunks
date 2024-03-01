@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isRef": "function a(e){return null!==e&&\"object\"===r(e)&&Object.prototype.hasOwnProperty.call(e,\"current\")}"
-    }
-}

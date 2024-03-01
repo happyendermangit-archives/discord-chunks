@@ -1,3 +1,0 @@
-{
-    "exports": "function c(t,e,s,c){n.call(this),this._cipher=new r.AES(e),this._prev=i.from(s),this._cache=i.allocUnsafe(0),this._secCache=i.allocUnsafe(0),this._decrypt=c,this._mode=t}"
-}

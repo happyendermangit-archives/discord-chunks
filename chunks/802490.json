@@ -1,3 +1,0 @@
-{
-    "exports": "function(t,r,n,d){var g=\"stackTraceLimit\",y=d?2:1,E=t.split(\".\"),b=E[E.length-1],I=e.apply(null,E);if(I){var R=I.prototype;if(!h&&i(R,\"cause\")&&delete R.cause,!n)return I;var k=e(\"Error\"),m=r(function(t,r){var n=l(d?r:t,void 0),e=d?new I(t):new I;return void 0!==n&&u(e,\"message\",n),v(e,m,e.stack,2),this&&o(R,this)&&f(e,this,m),arguments.length>y&&p(e,arguments[y]),e});if(m.prototype=R,\"Error\"!==b?c?c(m,k):a(m,k,{name:!0}):x&&g in I&&(s(m,I,g),s(m,I,\"prepareStackTrace\")),a(m,I),!h)try{R.name!==b&&u(R,\"name\",b),R.constructor=m}catch(t){}return m}}"
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function c(e){let{children:t,size:n=16,className:r,flowerStarClassName:c,...d}=e,f=s.Children.only(t),h=(0,o.useRedesignIconContext)().enabled;return(0,i.jsxs)(\"div\",{className:l(u.flowerStarContainer,r),style:{width:n,height:n},children:[(0,i.jsx)(a.default,{...d,className:l(c,u.flowerStar)}),(0,i.jsx)(\"div\",{className:l(u.childContainer,{[u.redesignIconChildContainer]:h}),children:f})]})}"
-    }
-}

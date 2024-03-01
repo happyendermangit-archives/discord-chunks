@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "registerErrorInstrumentation": "function s(){!a&&(a=!0,(0,r.addInstrumentationHandler)(\"error\",o),(0,r.addInstrumentationHandler)(\"unhandledrejection\",o))}"
-    }
-}

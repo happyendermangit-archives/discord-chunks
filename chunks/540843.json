@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function a(e){let{channel:t,commands:n}=e,a=(0,i.default)({channel:t,commands:n,limit:5});return 0===a.length?null:(0,l.jsx)(\"li\",{})}"
-    }
-}

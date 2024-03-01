@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "URLSearchParams": "function(){g(this,tc);var t=arguments.length>0?arguments[0]:void 0,r=j(this,new ta(t));!a&&(this.size=r.entries.length)}",
-        "getState": "function(r){var n;if(!s(r)||(n=o(r)).type!==t)throw TypeError(\"Incompatible receiver, \"+t+\" required\");return n}"
-    }
-}

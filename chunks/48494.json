@@ -1,3 +1,0 @@
-{
-    "exports": "function(e){if(!e||\"object\"!=typeof e)return!1;if(!l){var t=p(c(e),8,-1);return m(d,t)>-1?t:\"Object\"===t&&g(e)}return s?v(e):null}"
-}

@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return\"object\"==typeof t&&null!==t&&(c?i(t):\"[object Date]\"===n.call(t))}"
-}

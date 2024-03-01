@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "decrease": "e=>\"Μείωση \".concat(e.fieldLabel)",
-            "increase": "e=>\"Αύξηση \".concat(e.fieldLabel)",
-            "numberField": "Πεδίο αριθμού"
-        }
-    }
-}

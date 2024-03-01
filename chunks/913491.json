@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){return!s.MessageTypesSets.USER_MESSAGE.has(e.type)}"
-    }
-}

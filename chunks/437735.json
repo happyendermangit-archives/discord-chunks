@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "useLayoutEffect": "function(e,t){return P.current.useLayoutEffect(e,t)}"
-    }
-}

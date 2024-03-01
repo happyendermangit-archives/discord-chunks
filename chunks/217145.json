@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "isIFrameModalUserEnabled": "function l(){return i.getCurrentConfig({location:\"5c0a70_1\"},{autoTrackExposure:!0}).enabled}"
-    }
-}

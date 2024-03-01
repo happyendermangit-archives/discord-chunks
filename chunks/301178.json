@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function(e){let{voiceChannelId:t,idle:n}=e,r=(0,l.useStateFromStores)([f.default],()=>f.default.pipWindows),s=Array.from(r.values()),d=(0,l.useStateFromStoresArray)([p.default],()=>p.default.getAllActiveStreamsForChannel(t)),u=d.filter(e=>{var n;return e.ownerId!==(null===(n=m.default.getCurrentUser())||void 0===n?void 0:n.id)&&e.channelId===t}),c=1===s.length&&s[0].component===v.PictureInPictureComponents.EMBED_IFRAME||0===u.length,I=1===s.length&&u.length<=1;return c||I?null:(0,a.jsx)(o.Popout,{position:\"bottom\",renderPopout:e=>(0,a.jsx)(S,{voiceChannelId:t,pipWindows:s,idle:n,...e}),children:e=>(0,a.jsx)(o.Clickable,{className:C.menuIcon,...e,children:(0,a.jsx)(h.default,{color:i.default.unsafe_rawColors.WHITE_500.css})})})}"
-    }
-}

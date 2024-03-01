@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "getAutomodQuarantinedProfileFlags": "function a(e){if(null==e)return new Set;let t=new Set(s.reduce((t,n)=>((0,i.hasFlag)(null!=e?e:0,n)&&t.push(n),t),[]));return t}",
-        "getAutomodQuarantinedGuildMemberFlags": "function o(e){return null==e?new Set:a(e.flags)}",
-        "hasAutomodQuarantinedProfile": "function l(e){return null!=e&&null!=e.flags&&s.some(t=>{var n;return(0,i.hasFlag)(null!==(n=e.flags)&&void 0!==n?n:0,t)})}"
-    }
-}

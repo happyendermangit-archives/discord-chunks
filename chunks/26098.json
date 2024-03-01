@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "freeze": "function(e){return Object.freeze(e)}"
-    }
-}

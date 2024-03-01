@@ -1,3 +1,0 @@
-{
-    "exports": "function r(t,e){if(!t)throw Error(e||\"Assertion failed\")}"
-}

@@ -1,3 +1,0 @@
-{
-    "exports": "function i(t,e){this._block=r.alloc(t),this._finalSize=e,this._blockSize=t,this._len=0}"
-}

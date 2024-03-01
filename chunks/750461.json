@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function o(e){(0,a.default)(1,arguments);var t=(0,r.default)(e),n=t.getMonth();return t.setMonth(n-n%3,1),t.setHours(0,0,0,0),t}"
-    }
-}

@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "MAX_IMAGE_UPLOAD_FILESIZE_BYTES": 10485760
-    }
-}

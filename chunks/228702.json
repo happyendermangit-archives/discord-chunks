@@ -1,3 +1,0 @@
-{
-    "exports": "function(t){return void 0!==t&&(r(c,\"Property Descriptor\",\"Desc\",t),!(i(t)||n(t))&&!0)}"
-}

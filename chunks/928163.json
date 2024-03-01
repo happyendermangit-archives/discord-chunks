@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "jsonReadOptions": "function o(e){return e?Object.assign(Object.assign({},a),e):a}",
-        "jsonWriteOptions": "function i(e){return e?Object.assign(Object.assign({},r),e):r}"
-    }
-}

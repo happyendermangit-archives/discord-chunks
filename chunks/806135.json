@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "default": {
-            "render": "function(e,t){let{muted:n,volume:s,playing:r,...o}=e,[u,d]=(0,a.default)(t);return i.useEffect(()=>{let e=u.current;if(null!=e)void 0!==n&&(e.muted=n)},[u,n]),i.useEffect(()=>{let e=u.current;if(null!=e)void 0!==s&&(e.volume=s)},[u,s]),i.useEffect(()=>{let e=u.current;if(null!=e)void 0!==r&&(r?e.play():e.pause())},[u,r]),(0,l.jsx)(\"audio\",{ref:d,...o})}"
-        }
-    }
-}
