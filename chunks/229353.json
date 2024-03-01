@@ -16812,6 +16812,13 @@
         "ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING": "An activity card showing @{username} watching {activity}",
         "ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING": "An activity card showing @{username} listening to {activity}",
         "ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY": "An activity card showing @{username} listening to {song} by {artist}",
-        "ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING": "An activity card showing @{username} streaming {activity}"
+        "ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING": "An activity card showing @{username} streaming {activity}",
+        "MEMBER_LIST_CONTENT_FEED_PLAYING_GAME": "Playing **{gameName}**",
+        "MEMBER_LIST_CONTENT_FEED_PLAYED_GAME": "Played **{gameName}**",
+        "MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO": "{count}w ago",
+        "MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO": "{count}d ago",
+        "MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO": "{count}h ago",
+        "MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO": "{count}m ago",
+        "MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO": "{count}s ago"
     }
 }
