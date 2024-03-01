@@ -16,7 +16,7 @@
                 "MOD_VIEW_SEARCH_FINISH": "function x(e){let{messages:t}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||null==t)return!1;let n=i(t),s=a(n,(e,t)=>e.id===t.id&&e.channel_id===t.channel_id);return G(s)}",
                 "CHANNEL_SELECT": "function K(e){let{channelId:t}=e;if(null==t||!(0,p.isEligibleForExplicitMediaRedaction)())return!1;let n=t===m.default.getChannelId();return!!n&&q(t)}",
                 "LOAD_PINNED_MESSAGES_SUCCESS": "function x(e){let{messages:t}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||null==t)return!1;let n=i(t),s=a(n,(e,t)=>e.id===t.id&&e.channel_id===t.channel_id);return G(s)}",
-                "USER_SETTINGS_PROTO_UPDATE": "function W(e){let{settings:t,local:n}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||!n||t.type!==S.UserSettingsTypes.PRELOADED_USER_SETTINGS)return!1;let s=m.default.getChannelId();return null!=s&&q(s)}",
+                "USER_SETTINGS_PROTO_UPDATE": "function W(e){let{settings:t,local:n}=e;if(!(0,p.isEligibleForExplicitMediaRedaction)()||!n||t.type!==I.UserSettingsTypes.PRELOADED_USER_SETTINGS)return!1;let s=m.default.getChannelId();return null!=s&&q(s)}",
                 "CHANNEL_RTC_UPDATE_CHAT_OPEN": "function z(e){let{channelId:t,chatOpen:n}=e;return!!(0,p.isEligibleForExplicitMediaRedaction)()&&!!n&&q(t)}"
             },
             "stores": {

@@ -7833,13 +7833,13 @@
             "_version": 0,
             "callback": "_=>{let{persistKey:E}=this.getClass();this.persist(),e._writePromises.delete(E),e._writeResolvers.delete(E),_()}",
             "throttledCallback": "function m(){var t,n=ov(),i=d(n);if(o=arguments,u=this,s=n,i){if(e===c){;return l=t=s,c=iI(y,r),h?g(t):f}if(p)return eI(c),c=iI(y,r),g(s)}return e===c&&(c=iI(y,r)),f}",
-            "initialize": "initialize(e){if(null!=e){var t,n,s,i,r;p=null!==(t=e.isMembersOpen)&&void 0!==t&&t,y=null!==(n=e.isSummariesOpen)&&void 0!==n&&n,T=null===(s=e.isProfileOpen)||void 0===s||s,S=null!==(i=e.sidebars)&&void 0!==i?i:{},I=null!==(r=e.guildSidebars)&&void 0!==r?r:{}}this.syncWith([f.default],P),this.syncWith([l.default],O)}",
-            "getState": "getState(){return{isMembersOpen:p,isSummariesOpen:y,isProfileOpen:T,sidebars:S,guildSidebars:I}}",
-            "getSection": "getSection(e,t){if(C)return m.ChannelSections.SEARCH;let n=A(e);return null!=n&&null!=S[n]?m.ChannelSections.SIDEBAR_CHAT:t&&T?m.ChannelSections.PROFILE:y?m.ChannelSections.SUMMARIES:p?m.ChannelSections.MEMBERS:m.ChannelSections.NONE}",
-            "getSidebarState": "getSidebarState(e){let t=A(e);return null==t?void 0:S[t]}",
-            "getGuildSidebarState": "getGuildSidebarState(e){return null==e?void 0:I[e]}",
-            "getCurrentSidebarChannelId": "getCurrentSidebarChannelId(e){let t=A(e);if(null==t||C)return null;let n=S[t];return null==n?null:n.type===a.SidebarType.VIEW_THREAD||n.type===a.SidebarType.VIEW_CHANNEL?n.channelId:null}",
-            "getCurrentSidebarMessageId": "getCurrentSidebarMessageId(e){var t;let n=A(e);if(null==n||C)return null;let s=S[n];return null==s?null:s.type===a.SidebarType.VIEW_THREAD||s.type===a.SidebarType.VIEW_CHANNEL?null===(t=s.details)||void 0===t?void 0:t.initialMessageId:null}"
+            "initialize": "initialize(e){if(null!=e){var t,n,s,i,r;p=null!==(t=e.isMembersOpen)&&void 0!==t&&t,y=null!==(n=e.isSummariesOpen)&&void 0!==n&&n,T=null===(s=e.isProfileOpen)||void 0===s||s,I=null!==(i=e.sidebars)&&void 0!==i?i:{},S=null!==(r=e.guildSidebars)&&void 0!==r?r:{}}this.syncWith([f.default],P),this.syncWith([l.default],O)}",
+            "getState": "getState(){return{isMembersOpen:p,isSummariesOpen:y,isProfileOpen:T,sidebars:I,guildSidebars:S}}",
+            "getSection": "getSection(e,t){if(C)return m.ChannelSections.SEARCH;let n=A(e);return null!=n&&null!=I[n]?m.ChannelSections.SIDEBAR_CHAT:t&&T?m.ChannelSections.PROFILE:y?m.ChannelSections.SUMMARIES:p?m.ChannelSections.MEMBERS:m.ChannelSections.NONE}",
+            "getSidebarState": "getSidebarState(e){let t=A(e);return null==t?void 0:I[t]}",
+            "getGuildSidebarState": "getGuildSidebarState(e){return null==e?void 0:S[e]}",
+            "getCurrentSidebarChannelId": "getCurrentSidebarChannelId(e){let t=A(e);if(null==t||C)return null;let n=I[t];return null==n?null:n.type===a.SidebarType.VIEW_THREAD||n.type===a.SidebarType.VIEW_CHANNEL?n.channelId:null}",
+            "getCurrentSidebarMessageId": "getCurrentSidebarMessageId(e){var t;let n=A(e);if(null==n||C)return null;let s=I[n];return null==s?null:s.type===a.SidebarType.VIEW_THREAD||s.type===a.SidebarType.VIEW_CHANNEL?null===(t=s.details)||void 0===t?void 0:t.initialMessageId:null}"
         }
     }
 }

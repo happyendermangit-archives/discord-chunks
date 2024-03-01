@@ -7828,7 +7828,7 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_139",
-            "initialize": "initialize(){this.waitFor(y.default,m.default,C.default,I.default,T.default,p.default),this.syncWith([C.default],U)}",
+            "initialize": "initialize(){this.waitFor(y.default,m.default,C.default,S.default,T.default,p.default),this.syncWith([C.default],U)}",
             "getLocalPresence": "getLocalPresence(){return{status:N,since:P,activities:b,afk:V,broadcast:i}}",
             "getStatus": "getStatus(){return N}",
             "getActivities": "getActivities(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];return e?M:b}",

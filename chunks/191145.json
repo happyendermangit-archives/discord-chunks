@@ -7840,13 +7840,13 @@
             "getUserParticipantCount": "getUserParticipantCount(e){let t=G(e);return t.size()-t.size(C.ChannelRTCParticipantsIndexes.STREAM)-t.size(C.ChannelRTCParticipantsIndexes.ACTIVITY)}",
             "getParticipantsOpen": "getParticipantsOpen(e){var t;return null===(t=k[e])||void 0===t||t}",
             "getVoiceParticipantsHidden": "getVoiceParticipantsHidden(e){var t;return null!==(t=M[e])&&void 0!==t&&t}",
-            "getSelectedParticipantId": "getSelectedParticipantId(e){let[t,n]=B(e);return t===S.ParticipantSelectionTypes.NONE?null:t!==S.ParticipantSelectionTypes.AUTO?t:n===S.ParticipantSelectionTypes.NONE||n===S.ParticipantSelectionTypes.AUTO?null:n}",
+            "getSelectedParticipantId": "getSelectedParticipantId(e){let[t,n]=B(e);return t===I.ParticipantSelectionTypes.NONE?null:t!==I.ParticipantSelectionTypes.AUTO?t:n===I.ParticipantSelectionTypes.NONE||n===I.ParticipantSelectionTypes.AUTO?null:n}",
             "getSelectedParticipant": "getSelectedParticipant(e){let t=this.getSelectedParticipantId(e);return null==t?null:G(e).getParticipant(t)}",
             "getSelectedParticipantStats": "getSelectedParticipantStats(e){let t=b[e];return null==t?{}:{view_mode_grid_duration_ms:Math.floor(t.gridDurationMs),view_mode_focus_duration_ms:Math.floor(t.focusDurationMs),view_mode_toggle_count:t.toggleCount}}",
-            "getMode": "getMode(e){var t;return null!==(t=V[e])&&void 0!==t?t:ee(e)?I.ChannelModes.VIDEO:I.ChannelModes.VOICE}",
-            "getLayout": "getLayout(e){var t,n;let s=arguments.length>1&&void 0!==arguments[1]?arguments[1]:I.AppContext.APP;if(__OVERLAY__)return I.ChannelLayouts.NORMAL;let i=h.default.getChannel(e),r=ee(e)||(null==i?void 0:i.isBroadcastChannel());return null!==(n=null===(t=R[e])||void 0===t?void 0:t[s])&&void 0!==n?n:r?I.ChannelLayouts.NO_CHAT:I.ChannelLayouts.NORMAL}",
+            "getMode": "getMode(e){var t;return null!==(t=V[e])&&void 0!==t?t:ee(e)?S.ChannelModes.VIDEO:S.ChannelModes.VOICE}",
+            "getLayout": "getLayout(e){var t,n;let s=arguments.length>1&&void 0!==arguments[1]?arguments[1]:S.AppContext.APP;if(__OVERLAY__)return S.ChannelLayouts.NORMAL;let i=h.default.getChannel(e),r=ee(e)||(null==i?void 0:i.isBroadcastChannel());return null!==(n=null===(t=R[e])||void 0===t?void 0:t[s])&&void 0!==n?n:r?S.ChannelLayouts.NO_CHAT:S.ChannelLayouts.NORMAL}",
             "getChatOpen": "getChatOpen(e){var t;return null!==(t=w[e])&&void 0!==t&&t}",
-            "isFullscreenInContext": "isFullscreenInContext(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:I.AppContext.APP;return Object.values(R).some(t=>t[e]===I.ChannelLayouts.FULL_SCREEN)}",
+            "isFullscreenInContext": "isFullscreenInContext(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:S.AppContext.APP;return Object.values(R).some(t=>t[e]===S.ChannelLayouts.FULL_SCREEN)}",
             "getStageStreamSize": "getStageStreamSize(e){return L[e]}",
             "getStageVideoLimitBoostUpsellDismissed": "getStageVideoLimitBoostUpsellDismissed(e){return U[e]}"
         }

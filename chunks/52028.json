@@ -7828,13 +7828,13 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_138",
-            "initialize": "initialize(){this.waitFor(_.default,u.default,p.default,E.default,m.default,v.default,c.default),this.syncWith([g.default,c.default],()=>I())}",
+            "initialize": "initialize(){this.waitFor(_.default,u.default,p.default,E.default,m.default,v.default,c.default),this.syncWith([g.default,c.default],()=>S())}",
             "getActivities": "getActivities(){return C}",
             "getPrimaryActivity": "getPrimaryActivity(){return C[0]}",
             "getApplicationActivity": "getApplicationActivity(e){return this.findActivity(t=>t.application_id===e)}",
             "getCustomStatusActivity": "getCustomStatusActivity(){return this.findActivity(e=>e.type===y.ActivityTypes.CUSTOM_STATUS)}",
             "findActivity": "findActivity(e){return C.find(e)}",
-            "getApplicationActivities": "getApplicationActivities(){return S}"
+            "getApplicationActivities": "getApplicationActivities(){return I}"
         }
     }
 }

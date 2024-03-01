@@ -7840,7 +7840,7 @@
             "getEmbeddedActivitiesForChannel": "getEmbeddedActivitiesForChannel(e){var t;return null!==(t=C.get(e))&&void 0!==t?t:p}",
             "getEmbeddedActivitiesByChannel": "getEmbeddedActivitiesByChannel(){return C}",
             "getEmbeddedActivityDurationMs": "getEmbeddedActivityDurationMs(e,t){let n=V.get(G(e,t));return null==n?null:Date.now()-n}",
-            "isLaunchingActivity": "isLaunchingActivity(){return I}",
+            "isLaunchingActivity": "isLaunchingActivity(){return S}",
             "getShelfActivities": "getShelfActivities(e){var t;let n=M(e);return null!==(t=A.get(n))&&void 0!==t?t:[]}",
             "getShelfFetchStatus": "getShelfFetchStatus(e){let t=M(e);return D.get(t)}",
             "shouldFetchShelf": "shouldFetchShelf(e){var t,n;let s=M(e),i=null!==(t=D.get(s))&&void 0!==t?t:{isFetching:!1},r=Date.now(),a=r-(null!==(n=null==i?void 0:i.lastFetchTimestampMs)&&void 0!==n?n:0)>216e5;return!(null==i?void 0:i.isFetching)&&a}",

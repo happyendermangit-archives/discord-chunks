@@ -7850,10 +7850,10 @@
             "getStickerPack": "getStickerPack(e){return E.get(e)}",
             "getPremiumPacks": "getPremiumPacks(){return T}",
             "isPremiumPack": "isPremiumPack(e){return T.some(t=>t.id===e)}",
-            "getRawStickersByGuild": "getRawStickersByGuild(){return I}",
+            "getRawStickersByGuild": "getRawStickersByGuild(){return S}",
             "getAllStickersIterator": "getAllStickersIterator(){return N(),p.values()}",
-            "getAllGuildStickers": "getAllGuildStickers(){return N(),I}",
-            "getStickersByGuildId": "getStickersByGuildId(e){return N(),I.get(e)}"
+            "getAllGuildStickers": "getAllGuildStickers(){return N(),S}",
+            "getStickersByGuildId": "getStickersByGuildId(e){return N(),S.get(e)}"
         }
     }
 }

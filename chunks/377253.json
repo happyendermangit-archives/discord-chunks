@@ -7828,7 +7828,7 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_111",
-            "initialize": "initialize(){this.waitFor(P.default,y.default,T.default,S.default,h.default,N.default,O.default,I.default,D.default,C.default),this.syncWith([_.default],()=>{})}",
+            "initialize": "initialize(){this.waitFor(P.default,y.default,T.default,I.default,h.default,N.default,O.default,S.default,D.default,C.default),this.syncWith([_.default],()=>{})}",
             "getMessages": "getMessages(e){if(_.default.hasViewingRoles()){let t=y.default.getChannel(e),n=null==t?void 0:t.getGuildId();if(_.default.isViewingRoles(n)&&!A.default.can(b.Permissions.VIEW_CHANNEL,t))return new o.default(e)}return o.default.getOrCreate(e)}",
             "getMessage": "getMessage(e,t){return o.default.getOrCreate(e).get(t)}",
             "getLastEditableMessage": "getLastEditableMessage(e){let t=P.default.getCurrentUser();return i(this.getMessages(e).toArray()).reverse().find(e=>(0,g.default)(e,null==t?void 0:t.id))}",

@@ -7828,7 +7828,7 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_131",
-            "initialize": "initialize(){this.waitFor(T.default,I.default),this.syncWith([S.default],()=>(function(){if(null==i)return!1;let e=ee();if(null==e)return!1;let{userId:t}=i,n=en(t);if(null==n)return W.start(L,()=>{null!=i&&i.userId===t&&(0,v.default)()}),!1;W.stop();let{sync_id:s,timestamps:r,party:a}=n,o=null!=s&&i.trackId!==s,d=null!=r&&i.startTime!==r.start;return o||d?ed(t,n,!1):null!=a&&a.id!==i.partyId&&(i.partyId=a.id,!0)})()),(0,P.fetchIsSpotifyProtocolRegistered)()}",
+            "initialize": "initialize(){this.waitFor(T.default,S.default),this.syncWith([I.default],()=>(function(){if(null==i)return!1;let e=ee();if(null==e)return!1;let{userId:t}=i,n=en(t);if(null==n)return W.start(L,()=>{null!=i&&i.userId===t&&(0,v.default)()}),!1;W.stop();let{sync_id:s,timestamps:r,party:a}=n,o=null!=s&&i.trackId!==s,d=null!=r&&i.startTime!==r.start;return o||d?ed(t,n,!1):null!=a&&a.id!==i.partyId&&(i.partyId=a.id,!0)})()),(0,P.fetchIsSpotifyProtocolRegistered)()}",
             "hasConnectedAccount": "hasConnectedAccount(){return Object.keys(X).length>0}",
             "getActiveSocketAndDevice": "getActiveSocketAndDevice(){return ee()}",
             "getPlayableComputerDevices": "getPlayableComputerDevices(){let e=[];for(let t in X){let n=X[t];if(!n.connected||null==Q[t])continue;let s=Q[t].find(e=>!e.is_restricted&&\"Computer\"===e.type);null!=s&&e.push({socket:n,device:s})}return e}",

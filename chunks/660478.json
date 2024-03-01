@@ -1,6 +1,6 @@
 {
     "exports": {
-        "shouldBadgeMessage": "function eS(e,t){let n=x.default.getChannel(e.channel_id);return!(null==n||Q.default.isBlocked(e.author.id))&&(!!((0,I.default)({message:e,userId:t.id,suppressEveryone:J.default.isSuppressEveryoneEnabled(n.guild_id),suppressRoles:J.default.isSuppressRolesEnabled(n.guild_id)})||eI(n))||!1)}",
+        "shouldBadgeMessage": "function eI(e,t){let n=x.default.getChannel(e.channel_id);return!(null==n||Q.default.isBlocked(e.author.id))&&(!!((0,S.default)({message:e,userId:t.id,suppressEveryone:J.default.isSuppressEveryoneEnabled(n.guild_id),suppressRoles:J.default.isSuppressRolesEnabled(n.guild_id)})||eS(n))||!1)}",
         "default": {
             "_changeCallbacks": {
                 "listeners": {
@@ -7829,7 +7829,7 @@
                 "addDependencies": "addDependencies(e,_){this._actionHandlers.addDependencies(e,_)}"
             },
             "_dispatchToken": "ID_120",
-            "initialize": "initialize(){this.waitFor(Y.default,$.default,W.default,K.default,x.default,Z.default,q.default,X.default,h.default,P.default,b.default,B.default,p.default,j.default,v.default,J.default,ee.default,A.default,T.default,R.default,S.default),this.syncWith([B.default],eY)}",
+            "initialize": "initialize(){this.waitFor(Y.default,$.default,W.default,K.default,x.default,Z.default,q.default,X.default,h.default,P.default,b.default,B.default,p.default,j.default,v.default,J.default,ee.default,A.default,T.default,R.default,I.default),this.syncWith([B.default],eY)}",
             "getReadStatesByChannel": "getReadStatesByChannel(){var e;return null!==(e=eO._readStates[er.ReadStateTypes.CHANNEL])&&void 0!==e?e:{}}",
             "getForDebugging": "getForDebugging(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:er.ReadStateTypes.CHANNEL;return eO.getIfExists(e,t)}",
             "getNotifCenterReadState": "getNotifCenterReadState(e){var t;return null===(t=eO._readStates[er.ReadStateTypes.NOTIFICATION_CENTER])||void 0===t?void 0:t[e]}",

@@ -16,7 +16,7 @@
             "isFileTooBig": "e=>e.size>2097152",
             "isDataTooBig": "e=>(0,f.dataUriFileSize)(e)>g.EMOJI_MAX_FILESIZE"
         },
-        "getEmojiColors": "async function S(e){return await l.default.getEmojiColors(e)}",
-        "getEmojiUrl": "function I(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:32,{id:n,name:s,animated:i}=e;return null!=n?u.default.getEmojiURL({id:n,size:t,animated:null!=i&&i}):l.default.getURL(s)}"
+        "getEmojiColors": "async function I(e){return await l.default.getEmojiColors(e)}",
+        "getEmojiUrl": "function S(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:32,{id:n,name:s,animated:i}=e;return null!=n?u.default.getEmojiURL({id:n,size:t,animated:null!=i&&i}):l.default.getURL(s)}"
     }
 }
