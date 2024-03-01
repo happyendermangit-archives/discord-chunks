@@ -1,1 +1,8 @@
-"function(e,t,n){\"use strict\";e.exports={buttonContainer:\"buttonContainer__0dac8\",description:\"description_ef8749\",disableButton:\"disableButton__61514\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        buttonContainer: "buttonContainer__0dac8",
+        description: "description_ef8749",
+        disableButton: "disableButton__61514"
+    }
+}

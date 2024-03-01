@@ -1,1 +1,9 @@
-"function(e,t,n){\"use strict\";e.exports={closeIcon:\"closeIcon__638e2\",errorContainer:\"errorContainer_b41667\",errorIcon:\"errorIcon__6935f\",errorText:\"errorText__465e3\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        closeIcon: "closeIcon__638e2",
+        errorContainer: "errorContainer_b41667",
+        errorIcon: "errorIcon__6935f",
+        errorText: "errorText__465e3"
+    }
+}

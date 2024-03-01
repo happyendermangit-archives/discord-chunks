@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={topMargin:\"topMargin__036a0\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        topMargin: "topMargin__036a0"
+    }
+}

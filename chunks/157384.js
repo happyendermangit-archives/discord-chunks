@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={emoji:\"emoji__6100d\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        emoji: "emoji__6100d"
+    }
+}

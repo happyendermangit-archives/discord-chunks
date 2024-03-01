@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={title:\"title__11402\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        title: "title__11402"
+    }
+}

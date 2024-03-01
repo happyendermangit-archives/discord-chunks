@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={divider:\"divider__09722\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        divider: "divider__09722"
+    }
+}

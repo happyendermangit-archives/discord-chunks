@@ -1,1 +1,8 @@
-"function(e,t,n){\"use strict\";e.exports={cannon:\"cannon__2bab2\",emoji:\"emoji_f07937\",emojiContainer:\"emojiContainer_dd230a\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        cannon: "cannon__2bab2",
+        emoji: "emoji_f07937",
+        emojiContainer: "emojiContainer_dd230a"
+    }
+}

@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={carouselModal:\"carouselModal_c0d5b7\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        carouselModal: "carouselModal_c0d5b7"
+    }
+}

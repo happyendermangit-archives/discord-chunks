@@ -1,1 +1,9 @@
-"function(e,t,n){\"use strict\";e.exports={appDetailVisible:\"appDetailVisible_a479fb\",container:\"container__07c69\",scrollableContent:\"scrollableContent_fc6d9c\",searchBarContainer:\"searchBarContainer__05dce\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        appDetailVisible: "appDetailVisible_a479fb",
+        container: "container__07c69",
+        scrollableContent: "scrollableContent_fc6d9c",
+        searchBarContainer: "searchBarContainer__05dce"
+    }
+}

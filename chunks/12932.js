@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={spacing:\"spacing__68053\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        spacing: "spacing__68053"
+    }
+}

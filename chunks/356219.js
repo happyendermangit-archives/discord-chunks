@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={button:\"button_ac10c8\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        button: "button_ac10c8"
+    }
+}

@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={avatarDecorationPreview:\"avatarDecorationPreview__2f195\",profileEffectPreview:\"profileEffectPreview__7a288\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        avatarDecorationPreview: "avatarDecorationPreview__2f195",
+        profileEffectPreview: "profileEffectPreview__7a288"
+    }
+}

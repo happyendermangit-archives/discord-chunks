@@ -1,1 +1,1 @@
-"function(e,_,E){}"
+function(e, _, E) {}

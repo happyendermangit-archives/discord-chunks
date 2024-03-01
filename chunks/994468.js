@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={lastSection:\"lastSection__37b97\",section:\"section__6f61e\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        lastSection: "lastSection__37b97",
+        section: "section__6f61e"
+    }
+}

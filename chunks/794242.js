@@ -1,1 +1,12 @@
-"function(e,t,n){\"use strict\";n.r(t),n.d(t,{default:function(){return r}});var r={};r={\"Clear search\":\"清除搜尋條件\"}}"
+function(e, t, n) {
+    "use strict";
+    n.r(t), n.d(t, {
+        default: function() {
+            return r
+        }
+    });
+    var r = {};
+    r = {
+        "Clear search": "清除搜尋條件"
+    }
+}

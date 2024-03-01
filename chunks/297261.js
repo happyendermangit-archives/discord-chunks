@@ -1,1 +1,8 @@
-"function(e,t,n){\"use strict\";e.exports={questRewardTile:\"questRewardTile__6041a\",questRewardTileAsset:\"questRewardTileAsset_d342cd\",questRewardTileDetailsLearnMore:\"questRewardTileDetailsLearnMore_d0aa75\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        questRewardTile: "questRewardTile__6041a",
+        questRewardTileAsset: "questRewardTileAsset_d342cd",
+        questRewardTileDetailsLearnMore: "questRewardTileDetailsLearnMore_d0aa75"
+    }
+}

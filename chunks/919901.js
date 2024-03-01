@@ -1,1 +1,11 @@
-"function(t,e,n){\"use strict\";n.r(e),n.d(e,{default:function(){return i}});var i={disabled:!1}}"
+function(t, e, n) {
+    "use strict";
+    n.r(e), n.d(e, {
+        default: function() {
+            return i
+        }
+    });
+    var i = {
+        disabled: !1
+    }
+}

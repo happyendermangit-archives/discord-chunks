@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={header:\"header__2cd0f\",video:\"video_e0bf60\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        header: "header__2cd0f",
+        video: "video_e0bf60"
+    }
+}

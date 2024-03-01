@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={art:\"art_ba4492\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        art: "art_ba4492"
+    }
+}

@@ -1,1 +1,35 @@
-"function(e,t,n){\"use strict\";e.exports={avatar:\"avatar_f6650d\",avatarContainer:\"avatarContainer_f8f7ab\",avatarPurchased:\"avatarPurchased_eeb4c2\",buttonsContainer:\"buttonsContainer_d7f186\",cardBackground:\"cardBackground_af6852\",cardLowOpacity:\"cardLowOpacity_f1be3f\",cardText:\"cardText_e9b824\",cardTextBlur:\"cardTextBlur_e2acf1\",checkmark:\"checkmark__2ccd6\",checkmarkWrapper:\"checkmarkWrapper_f2dab8\",darkCardBackground:\"darkCardBackground__82a32\",description:\"description__92b55\",detailsWrapper:\"detailsWrapper_b31a7f\",hoverUpsellContainer:\"hoverUpsellContainer__425f0\",innerBlur:\"innerBlur_ed9e8f\",innerHover:\"innerHover__54e25\",innerMask:\"innerMask__720e6\",lightCardBackground:\"lightCardBackground_da94ab\",limitedTimeBadge:\"limitedTimeBadge__19a7e\",newBadge:\"newBadge_b2f114\",premiumWheel:\"premiumWheel__02495\",premiumWheelBadge:\"premiumWheelBadge__2c9f2\",premiumWheelTooltipContent:\"premiumWheelTooltipContent__189f4\",previewButton:\"previewButton_c4b5ef\",previewButtonInner:\"previewButtonInner_f775c4\",priceTag:\"priceTag__76b4b\",productName:\"productName_ece1e1\",profileEffectShopPreview:\"profileEffectShopPreview_b8d693\",purchaseButton:\"purchaseButton__63193\",shopCard:\"shopCard_f7822b\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        avatar: "avatar_f6650d",
+        avatarContainer: "avatarContainer_f8f7ab",
+        avatarPurchased: "avatarPurchased_eeb4c2",
+        buttonsContainer: "buttonsContainer_d7f186",
+        cardBackground: "cardBackground_af6852",
+        cardLowOpacity: "cardLowOpacity_f1be3f",
+        cardText: "cardText_e9b824",
+        cardTextBlur: "cardTextBlur_e2acf1",
+        checkmark: "checkmark__2ccd6",
+        checkmarkWrapper: "checkmarkWrapper_f2dab8",
+        darkCardBackground: "darkCardBackground__82a32",
+        description: "description__92b55",
+        detailsWrapper: "detailsWrapper_b31a7f",
+        hoverUpsellContainer: "hoverUpsellContainer__425f0",
+        innerBlur: "innerBlur_ed9e8f",
+        innerHover: "innerHover__54e25",
+        innerMask: "innerMask__720e6",
+        lightCardBackground: "lightCardBackground_da94ab",
+        limitedTimeBadge: "limitedTimeBadge__19a7e",
+        newBadge: "newBadge_b2f114",
+        premiumWheel: "premiumWheel__02495",
+        premiumWheelBadge: "premiumWheelBadge__2c9f2",
+        premiumWheelTooltipContent: "premiumWheelTooltipContent__189f4",
+        previewButton: "previewButton_c4b5ef",
+        previewButtonInner: "previewButtonInner_f775c4",
+        priceTag: "priceTag__76b4b",
+        productName: "productName_ece1e1",
+        profileEffectShopPreview: "profileEffectShopPreview_b8d693",
+        purchaseButton: "purchaseButton__63193",
+        shopCard: "shopCard_f7822b"
+    }
+}

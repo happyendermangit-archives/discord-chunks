@@ -1,1 +1,10 @@
-"function(t,r,n){\"use strict\";t.exports=function(t){try{return!!t()}catch(t){return!0}}}"
+function(t, r, n) {
+    "use strict";
+    t.exports = function(t) {
+        try {
+            return !!t()
+        } catch (t) {
+            return !0
+        }
+    }
+}

@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={checkboxRow:\"checkboxRow__7a5f2\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        checkboxRow: "checkboxRow__7a5f2"
+    }
+}

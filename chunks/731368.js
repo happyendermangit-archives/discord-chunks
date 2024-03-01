@@ -1,1 +1,4 @@
-"function(e,t,n){\"use strict\";e.exports=n.p+\"32bba0abbf7d086814d2.png\"}"
+function(e, t, n) {
+    "use strict";
+    e.exports = n.p + "32bba0abbf7d086814d2.png"
+}

@@ -1,1 +1,6 @@
-"function(t,e,s){\"use strict\";t.exports=function(t){return null===t||\"function\"!=typeof t&&\"object\"!=typeof t}}"
+function(t, e, s) {
+    "use strict";
+    t.exports = function(t) {
+        return null === t || "function" != typeof t && "object" != typeof t
+    }
+}

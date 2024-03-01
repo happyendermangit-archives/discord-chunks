@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={applicationIcon:\"applicationIcon__6378e\",seasonalIcon:\"seasonalIcon__70f91\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        applicationIcon: "applicationIcon__6378e",
+        seasonalIcon: "seasonalIcon__70f91"
+    }
+}

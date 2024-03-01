@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={cannon:\"cannon__79e16\",heading:\"heading__103e7\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        cannon: "cannon__79e16",
+        heading: "heading__103e7"
+    }
+}

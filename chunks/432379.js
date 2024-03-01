@@ -1,1 +1,8 @@
-"function(e,t,n){\"use strict\";e.exports={badge:\"badge__1a553\",icon:\"icon_c1b424\",wrapper:\"wrapper__2c808\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        badge: "badge__1a553",
+        icon: "icon_c1b424",
+        wrapper: "wrapper__2c808"
+    }
+}

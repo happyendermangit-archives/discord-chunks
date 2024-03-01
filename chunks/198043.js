@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={widget:\"widget__61d47\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        widget: "widget__61d47"
+    }
+}

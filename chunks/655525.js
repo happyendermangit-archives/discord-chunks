@@ -1,1 +1,6 @@
-"function(e,t,a){\"use strict\";e.exports={spinner:\"spinner_caad3a\"}}"
+function(e, t, a) {
+    "use strict";
+    e.exports = {
+        spinner: "spinner_caad3a"
+    }
+}

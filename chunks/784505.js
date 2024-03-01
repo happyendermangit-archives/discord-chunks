@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={container:\"container__0d1a7\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        container: "container__0d1a7"
+    }
+}

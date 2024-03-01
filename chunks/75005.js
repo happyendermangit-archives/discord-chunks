@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={emptyStateContainer:\"emptyStateContainer_ca7267\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        emptyStateContainer: "emptyStateContainer_ca7267"
+    }
+}

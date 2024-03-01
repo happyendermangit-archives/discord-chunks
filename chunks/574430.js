@@ -1,1 +1,5 @@
-"function(t,e,r){\"use strict\";var n=r(\"434978\");t.exports=n(\"document\",\"documentElement\")}"
+function(t, e, r) {
+    "use strict";
+    var n = r("434978");
+    t.exports = n("document", "documentElement")
+}

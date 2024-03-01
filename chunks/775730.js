@@ -1,1 +1,6 @@
-"function(e,t,r){e.exports=function(e){var t=null==e?0:e.length;return t?e[t-1]:void 0}}"
+function(e, t, r) {
+    e.exports = function(e) {
+        var t = null == e ? 0 : e.length;
+        return t ? e[t - 1] : void 0
+    }
+}

@@ -1,1 +1,4 @@
-"function(t,r,n){\"use strict\";t.exports=!1}"
+function(t, r, n) {
+    "use strict";
+    t.exports = !1
+}

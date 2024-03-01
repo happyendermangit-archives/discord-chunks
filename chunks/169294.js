@@ -1,1 +1,14 @@
-"function(e,t,n){\"use strict\";e.exports={authorize:\"authorize__4ddfc\",captcha:\"captcha__94a77\",captchaLabel:\"captchaLabel__3589e\",content:\"content__41823\",footer:\"footer__04ee2\",inApp:\"inApp__944f6\",recaptcha:\"recaptcha__9423c\",sectionGroup:\"sectionGroup__26f8f\",sectionLabel:\"sectionLabel__0ab38\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        authorize: "authorize__4ddfc",
+        captcha: "captcha__94a77",
+        captchaLabel: "captchaLabel__3589e",
+        content: "content__41823",
+        footer: "footer__04ee2",
+        inApp: "inApp__944f6",
+        recaptcha: "recaptcha__9423c",
+        sectionGroup: "sectionGroup__26f8f",
+        sectionLabel: "sectionLabel__0ab38"
+    }
+}

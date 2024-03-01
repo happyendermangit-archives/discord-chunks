@@ -1,1 +1,4 @@
-"function(t,e,s){\"use strict\";e.der=s(\"348793\"),e.pem=s(\"489723\")}"
+function(t, e, s) {
+    "use strict";
+    e.der = s("348793"), e.pem = s("489723")
+}

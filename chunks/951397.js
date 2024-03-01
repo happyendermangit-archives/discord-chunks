@@ -1,1 +1,8 @@
-"function(e,t,n){\"use strict\";e.exports={iconUploaderContainer:\"iconUploaderContainer__261d1\",messageContainer:\"messageContainer_b583b8\",previewContainer:\"previewContainer__042f0\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        iconUploaderContainer: "iconUploaderContainer__261d1",
+        messageContainer: "messageContainer_b583b8",
+        previewContainer: "previewContainer__042f0"
+    }
+}

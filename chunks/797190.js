@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={jumpButton:\"jumpButton_da1ebb\",text:\"text__6b9e7\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        jumpButton: "jumpButton_da1ebb",
+        text: "text__6b9e7"
+    }
+}

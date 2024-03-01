@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={header:\"header_b66164\",text:\"text__240ff\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        header: "header_b66164",
+        text: "text__240ff"
+    }
+}

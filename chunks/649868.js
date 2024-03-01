@@ -1,1 +1,4 @@
-"function(t,e,s){\"use strict\";t.exports=s.p+\"edba22b3cde48496a79d.svg\"}"
+function(t, e, s) {
+    "use strict";
+    t.exports = s.p + "edba22b3cde48496a79d.svg"
+}

@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={premiumChannelIcon:\"premiumChannelIcon__26f40\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        premiumChannelIcon: "premiumChannelIcon__26f40"
+    }
+}

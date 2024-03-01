@@ -1,1 +1,7 @@
-"function(e,t,a){\"use strict\";e.exports={spin:\"spin_f8ae9c\",updateAvailable:\"updateAvailable__3bc37\"}}"
+function(e, t, a) {
+    "use strict";
+    e.exports = {
+        spin: "spin_f8ae9c",
+        updateAvailable: "updateAvailable__3bc37"
+    }
+}

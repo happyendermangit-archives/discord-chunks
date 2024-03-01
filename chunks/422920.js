@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={icon:\"icon_e5875d\",wrapper:\"wrapper__07bba\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        icon: "icon_e5875d",
+        wrapper: "wrapper__07bba"
+    }
+}

@@ -1,1 +1,8 @@
-"function(e,t,n){\"use strict\";e.exports={container:\"container__99df7\",text:\"text__9a30e\",textWithAD:\"textWithAD__170eb\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        container: "container__99df7",
+        text: "text__9a30e",
+        textWithAD: "textWithAD__170eb"
+    }
+}

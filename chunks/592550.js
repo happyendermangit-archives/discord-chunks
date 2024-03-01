@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={resizeHandle:\"resizeHandle__43b10\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        resizeHandle: "resizeHandle__43b10"
+    }
+}

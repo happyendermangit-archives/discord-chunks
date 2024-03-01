@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={note:\"note_ba0c31\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        note: "note_ba0c31"
+    }
+}

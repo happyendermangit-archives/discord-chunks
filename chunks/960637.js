@@ -1,1 +1,6 @@
-"function(e,t,a){\"use strict\";e.exports={operations:\"operations__07224\"}}"
+function(e, t, a) {
+    "use strict";
+    e.exports = {
+        operations: "operations__07224"
+    }
+}

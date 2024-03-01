@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={card:\"card__28b25\",modal:\"modal__8a0f3\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        card: "card__28b25",
+        modal: "modal__8a0f3"
+    }
+}

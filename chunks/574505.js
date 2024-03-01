@@ -1,1 +1,6 @@
-"function(e,t,a){\"use strict\";e.exports={select:\"select__98782\"}}"
+function(e, t, a) {
+    "use strict";
+    e.exports = {
+        select: "select__98782"
+    }
+}

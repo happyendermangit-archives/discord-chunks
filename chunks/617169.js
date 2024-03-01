@@ -1,1 +1,3 @@
-"function(t,e,s){t.exports=s(\"951350\")}"
+function(t, e, s) {
+    t.exports = s("951350")
+}

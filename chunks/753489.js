@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={content:\"content__45a6a\",rating:\"rating__7b4d4\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        content: "content__45a6a",
+        rating: "rating__7b4d4"
+    }
+}

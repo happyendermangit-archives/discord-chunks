@@ -1,1 +1,4 @@
-"function(t,r,n){\"use strict\";n(\"380633\")}"
+function(t, r, n) {
+    "use strict";
+    n("380633")
+}

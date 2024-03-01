@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={spacingTop24:\"spacingTop24__84d45\",videoBackgroundError:\"videoBackgroundError__3afbd\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        spacingTop24: "spacingTop24__84d45",
+        videoBackgroundError: "videoBackgroundError__3afbd"
+    }
+}

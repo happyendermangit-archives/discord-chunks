@@ -1,1 +1,4 @@
-"function(e,t,a){\"use strict\";e.exports={}}"
+function(e, t, a) {
+    "use strict";
+    e.exports = {}
+}

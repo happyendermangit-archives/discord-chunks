@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={participants:\"participants__5d231\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        participants: "participants__5d231"
+    }
+}

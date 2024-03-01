@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={checkboxMargin:\"checkboxMargin__93bc5\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        checkboxMargin: "checkboxMargin__93bc5"
+    }
+}

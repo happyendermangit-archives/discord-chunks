@@ -1,1 +1,4 @@
-"function(e,t,n){\"use strict\";e.exports=n(\"652733\")}"
+function(e, t, n) {
+    "use strict";
+    e.exports = n("652733")
+}

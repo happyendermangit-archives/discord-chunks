@@ -1,1 +1,4 @@
-"function(t,r,n){\"use strict\";r.f=Object.getOwnPropertySymbols}"
+function(t, r, n) {
+    "use strict";
+    r.f = Object.getOwnPropertySymbols
+}

@@ -1,1 +1,6 @@
-"function(e,t,a){\"use strict\";e.exports={defaultColor:\"defaultColor__87d87\"}}"
+function(e, t, a) {
+    "use strict";
+    e.exports = {
+        defaultColor: "defaultColor__87d87"
+    }
+}

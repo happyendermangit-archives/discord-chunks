@@ -1,1 +1,6 @@
-"function(e,t,a){\"use strict\";e.exports={wrapper:\"wrapper_dae547\"}}"
+function(e, t, a) {
+    "use strict";
+    e.exports = {
+        wrapper: "wrapper_dae547"
+    }
+}

@@ -1,1 +1,12 @@
-"function(e,t,n){\"use strict\";n.r(t),n.d(t,{default:function(){return r}});var r={};r={breadcrumbs:\"导航栏\"}}"
+function(e, t, n) {
+    "use strict";
+    n.r(t), n.d(t, {
+        default: function() {
+            return r
+        }
+    });
+    var r = {};
+    r = {
+        breadcrumbs: "导航栏"
+    }
+}

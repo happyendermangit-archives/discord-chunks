@@ -1,1 +1,3 @@
-"function(e,a,t){e.exports=\"#violation-overlay\"}"
+function(e, a, t) {
+    e.exports = "#violation-overlay"
+}

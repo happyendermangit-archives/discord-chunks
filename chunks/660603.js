@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={flex:\"flex__0c649\",platformIcon:\"platformIcon_ac1a41\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        flex: "flex__0c649",
+        platformIcon: "platformIcon_ac1a41"
+    }
+}

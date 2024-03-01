@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={artContainer:\"artContainer__4f224\",video:\"video_bf88b0\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        artContainer: "artContainer__4f224",
+        video: "video_bf88b0"
+    }
+}

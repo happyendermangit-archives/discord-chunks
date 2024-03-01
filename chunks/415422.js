@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={icon:\"icon__1bb97\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        icon: "icon__1bb97"
+    }
+}

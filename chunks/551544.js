@@ -1,1 +1,6 @@
-"function(t,r,n){\"use strict\";t.exports=function(t){return null==t}}"
+function(t, r, n) {
+    "use strict";
+    t.exports = function(t) {
+        return null == t
+    }
+}

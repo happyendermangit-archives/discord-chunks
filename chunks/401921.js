@@ -1,1 +1,7 @@
-"function(e,t,a){\"use strict\";e.exports={btnHamburger:\"btnHamburger_df0060\",btnHamburgerOpen:\"btnHamburgerOpen_cc5782\"}}"
+function(e, t, a) {
+    "use strict";
+    e.exports = {
+        btnHamburger: "btnHamburger_df0060",
+        btnHamburgerOpen: "btnHamburgerOpen_cc5782"
+    }
+}

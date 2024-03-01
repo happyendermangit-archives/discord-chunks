@@ -1,1 +1,1 @@
-"function(t,e,n){}"
+function(t, e, n) {}

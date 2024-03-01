@@ -1,1 +1,7 @@
-"function(e,t,n){\"use strict\";e.exports={container:\"container_efbdfc\",image:\"image__5c991\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        container: "container_efbdfc",
+        image: "image__5c991"
+    }
+}

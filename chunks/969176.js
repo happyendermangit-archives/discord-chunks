@@ -1,1 +1,6 @@
-"function(e,t,n){var r=n(\"354069\");e.exports=function(e,t){return r(e,t)}}"
+function(e, t, n) {
+    var r = n("354069");
+    e.exports = function(e, t) {
+        return r(e, t)
+    }
+}

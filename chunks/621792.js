@@ -1,1 +1,6 @@
-"function(t,e,s){var r={}.toString;t.exports=Array.isArray||function(t){return\"[object Array]\"==r.call(t)}}"
+function(t, e, s) {
+    var r = {}.toString;
+    t.exports = Array.isArray || function(t) {
+        return "[object Array]" == r.call(t)
+    }
+}

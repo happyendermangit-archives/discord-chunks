@@ -1,1 +1,5 @@
-"function(t,e,s){t.exports=function(t){return t!=t}}"
+function(t, e, s) {
+    t.exports = function(t) {
+        return t != t
+    }
+}

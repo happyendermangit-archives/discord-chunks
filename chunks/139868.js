@@ -1,1 +1,10 @@
-"function(e,t,n){\"use strict\";e.exports={button:\"button_f8244b\",buttonsContainer:\"buttonsContainer__96eb6\",container:\"container__7db35\",message:\"message_d8db25\",searchResult:\"searchResult_dcd237\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        button: "button_f8244b",
+        buttonsContainer: "buttonsContainer__96eb6",
+        container: "container__7db35",
+        message: "message_d8db25",
+        searchResult: "searchResult_dcd237"
+    }
+}

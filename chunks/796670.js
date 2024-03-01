@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={marketingUnsubscribeButton:\"marketingUnsubscribeButton__72576\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        marketingUnsubscribeButton: "marketingUnsubscribeButton__72576"
+    }
+}

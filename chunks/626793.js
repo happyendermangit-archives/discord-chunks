@@ -1,1 +1,6 @@
-"function(e,t,n){\"use strict\";e.exports={newMemberBadge:\"newMemberBadge__17bc0\"}}"
+function(e, t, n) {
+    "use strict";
+    e.exports = {
+        newMemberBadge: "newMemberBadge__17bc0"
+    }
+}
