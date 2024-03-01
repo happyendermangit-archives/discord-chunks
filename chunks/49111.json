@@ -4666,6 +4666,7 @@
             "APPLICATION_COMMAND_SEARCH_OPEN_TIMING": "application_command_search_open_timing",
             "APPLICATION_COMMAND_PERFORMANCE": "application_command_performance",
             "APPLICATION_COMMAND_CACHE_FETCH": "application_command_cache_fetch",
+            "APPLICATION_COMMAND_TOP_OF_FUNNEL": "application_command_top_of_funnel",
             "APPLICATION_ADD_TO_SERVER_CLICKED": "application_add_to_server_clicked",
             "PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED": "premium_application_subscription_manage_cta_clicked",
             "CHANNEL_ATTACH_MENU_USE_APPS_CLICKED": "channel_attach_menu_use_apps_clicked",
