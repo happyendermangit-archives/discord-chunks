@@ -10,8 +10,8 @@
             "_requestAnimationFrame": "e=>requestAnimationFrame(e)",
             "_cancelAnimationFrame": "e=>cancelAnimationFrame(e)",
             "writing": false,
-            "id": 5,
-            "lastTime": 1199.4000000000233,
+            "id": 4,
+            "lastTime": 1096.3000000000175,
             "animations": [
                 {
                     "id": 1,
@@ -40,13 +40,13 @@
                         "changed": true,
                         "values": [
                             {
-                                "_value": 0.24633333333341095,
+                                "_value": 0.20366666666668606,
                                 "done": false,
-                                "elapsedTime": 73.90000000002328,
-                                "lastPosition": 0.24633333333341095,
+                                "elapsedTime": 61.10000000000582,
+                                "lastPosition": 0.20366666666668606,
                                 "lastVelocity": 0.0033333333333333335,
                                 "v0": 0,
-                                "_string": "rgba(0, 0, 0, 0.17291633986933552)",
+                                "_string": "rgba(0, 0, 0, 0.14296601307190904)",
                                 "_toString": "function(t){var n=0;return e[0].replace(c,function(){return String(p[n++](t))}).replace(f,h)}",
                                 "constructor": "function e(e,n){var r;return(r=t.call(this,0)||this)._value=void 0,r._string=null,r._toString=void 0,r._toString=i.createInterpolator({output:[e,n]}),r}",
                                 "getValue": "function(){var t=this._string;return null==t?this._string=this._toString(this._value):t}",
@@ -187,13 +187,13 @@
                         "changed": true,
                         "values": [
                             {
-                                "_value": 0.24633333333341095,
+                                "_value": 0.20366666666668606,
                                 "done": false,
-                                "elapsedTime": 73.90000000002328,
-                                "lastPosition": 0.24633333333341095,
+                                "elapsedTime": 61.10000000000582,
+                                "lastPosition": 0.20366666666668606,
                                 "lastVelocity": 0.0033333333333333335,
                                 "v0": 0,
-                                "_string": "rgba(0, 0, 0, 0.17291633986933552)",
+                                "_string": "rgba(0, 0, 0, 0.14296601307190904)",
                                 "_toString": "function(t){var n=0;return e[0].replace(c,function(){return String(p[n++](t))}).replace(f,h)}",
                                 "constructor": "function e(e,n){var r;return(r=t.call(this,0)||this)._value=void 0,r._string=null,r._toString=void 0,r._toString=i.createInterpolator({output:[e,n]}),r}",
                                 "getValue": "function(){var t=this._string;return null==t?this._string=this._toString(this._value):t}",
@@ -334,13 +334,13 @@
                         "changed": true,
                         "values": [
                             {
-                                "_value": 0.24633333333341095,
+                                "_value": 0.20366666666668606,
                                 "done": false,
-                                "elapsedTime": 73.90000000002328,
-                                "lastPosition": 0.24633333333341095,
+                                "elapsedTime": 61.10000000000582,
+                                "lastPosition": 0.20366666666668606,
                                 "lastVelocity": 0.0033333333333333335,
                                 "v0": 0,
-                                "_string": "translate3d(0, -75.3666666666589%, 0)",
+                                "_string": "translate3d(0, -79.6333333333314%, 0)",
                                 "_toString": "function(t){var n=0;return e[0].replace(c,function(){return String(p[n++](t))}).replace(f,h)}",
                                 "constructor": "function e(e,n){var r;return(r=t.call(this,0)||this)._value=void 0,r._string=null,r._toString=void 0,r._toString=i.createInterpolator({output:[e,n]}),r}",
                                 "getValue": "function(){var t=this._string;return null==t?this._string=this._toString(this._value):t}",
@@ -481,10 +481,10 @@
                         "changed": true,
                         "values": [
                             {
-                                "_value": 0.24633333333341095,
+                                "_value": 0.20366666666668606,
                                 "done": false,
-                                "elapsedTime": 73.90000000002328,
-                                "lastPosition": 0.24633333333341095,
+                                "elapsedTime": 61.10000000000582,
+                                "lastPosition": 0.20366666666668606,
                                 "lastVelocity": 0.0033333333333333335,
                                 "v0": 0,
                                 "constructor": "function e(e){var n;return(n=t.call(this)||this)._value=e,n.done=!0,n.elapsedTime=void 0,n.lastPosition=void 0,n.lastVelocity=void 0,n.v0=void 0,i.is.num(n._value)&&(n.lastPosition=n._value),n}",

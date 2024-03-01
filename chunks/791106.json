@@ -1,18 +1,18 @@
 {
     "exports": {
         "Gradients": {
-            "PREMIUM_TIER_0": "97ba7017-dec9-4112-a0e3-473a7fed9698",
-            "PREMIUM_TIER_1": "47214f9b-abfb-4189-bbf1-085434af3699",
-            "PREMIUM_TIER_2": "7e81238a-5612-4b86-8c49-17ef910a170f",
-            "PREMIUM_GUILD": "68b98484-5a09-4d4f-90ec-95ab2375f7c5",
-            "PREMIUM_GUILD_BADGE_V2_BACKGROUND": "74cffa0c-c6ef-463e-b543-ba1ed46f318b"
+            "PREMIUM_TIER_0": "0de0a3b9-6081-42cd-8b3f-1bb4c5666009",
+            "PREMIUM_TIER_1": "c158a438-7a72-439e-8b34-7e20caa79611",
+            "PREMIUM_TIER_2": "94f6162b-50a9-4d87-b4d4-cb7625e27542",
+            "PREMIUM_GUILD": "5dbc2f3d-8a11-4fb0-9790-1e7eb0429215",
+            "PREMIUM_GUILD_BADGE_V2_BACKGROUND": "abef28b2-8bd2-4233-840c-e15c1f295b89"
         },
         "GradientCssUrls": {
-            "PREMIUM_TIER_0": "url(#97ba7017-dec9-4112-a0e3-473a7fed9698)",
-            "PREMIUM_TIER_1": "url(#47214f9b-abfb-4189-bbf1-085434af3699)",
-            "PREMIUM_TIER_2": "url(#7e81238a-5612-4b86-8c49-17ef910a170f)",
-            "PREMIUM_GUILD": "url(#68b98484-5a09-4d4f-90ec-95ab2375f7c5)",
-            "PREMIUM_GUILD_BADGE_V2_BACKGROUND": "url(#74cffa0c-c6ef-463e-b543-ba1ed46f318b)"
+            "PREMIUM_TIER_0": "url(#0de0a3b9-6081-42cd-8b3f-1bb4c5666009)",
+            "PREMIUM_TIER_1": "url(#c158a438-7a72-439e-8b34-7e20caa79611)",
+            "PREMIUM_TIER_2": "url(#94f6162b-50a9-4d87-b4d4-cb7625e27542)",
+            "PREMIUM_GUILD": "url(#5dbc2f3d-8a11-4fb0-9790-1e7eb0429215)",
+            "PREMIUM_GUILD_BADGE_V2_BACKGROUND": "url(#abef28b2-8bd2-4233-840c-e15c1f295b89)"
         },
         "default": {
             "type": "function(){return(0,r.jsxs)(\"svg\",{viewBox:\"0 0 1 1\",style:{position:\"absolute\",pointerEvents:\"none\",top:-1,left:-1,width:1,height:1},\"aria-hidden\":!0,children:[u(),d(),c(),f(),_()]})}",

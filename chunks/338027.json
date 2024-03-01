@@ -2,7 +2,7 @@
     "exports": {
         "default": {
             "isInitialized": true,
-            "handleConnectionOpen": "e=>{((0,i.isWindows)()||(0,i.isMac)())&&s.default.encryptAndStoreTokens()}",
+            "handleConnectionOpen": "e=>{((0,c.isWindows)()||(0,c.isMac)())&&s.default.encryptAndStoreTokens()}",
             "_initialize": "_initialize(){d.default.subscribe(\"CONNECTION_OPEN\",this.handleConnectionOpen)}",
             "_terminate": "_terminate(){d.default.unsubscribe(\"CONNECTION_OPEN\",this.handleConnectionOpen)}"
         }
