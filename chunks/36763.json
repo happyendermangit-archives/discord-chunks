@@ -15,10 +15,10 @@
             "REDUCE_SATURATION_ENABLED": 64
         },
         "setThemeFlag": "function a(e,t){return e|t}",
-        "RootThemeContextProvider": "function d(e){let{children:t,theme:n=l.ThemeTypes.DARK,primaryColor:i=null,secondaryColor:r=null,gradient:a=null,flags:d=0,contrast:_=1,saturation:f=1}=e,S=s.useMemo(()=>u({theme:n,primaryColor:i,secondaryColor:r,gradient:a,flags:d,contrast:_,saturation:f}),[n,i,r,a,d,_,f]);return(0,o.jsx)(c.Provider,{value:S,children:t})}",
-        "ThemeContextProvider": "function _(e){let{children:t,theme:n,primaryColor:i,secondaryColor:r,gradient:l,flags:a,contrast:d,saturation:_}=e,f=s.useContext(c),S=s.useMemo(()=>u({theme:null!=n?n:f.theme,primaryColor:null!=i?i:f.primaryColor,secondaryColor:null!=r?r:f.secondaryColor,gradient:null!=l?l:f.gradient,flags:null!=a?a:f.flags,contrast:null!=d?d:f.contrast,saturation:null!=_?_:f.saturation}),[n,f.theme,f.primaryColor,f.secondaryColor,f.gradient,f.flags,f.contrast,f.saturation,i,r,l,a,d,_]);return(0,o.jsx)(c.Provider,{value:S,children:t})}",
-        "DisableCustomTheme": "function f(e){let t=S(),n=s.useMemo(()=>u({...t,primaryColor:null,secondaryColor:null}),[t]);return(0,o.jsx)(c.Provider,{value:n,children:e.children})}",
-        "useThemeContext": "function S(){let e=s.useContext(c);if(null==e)throw Error(\"useThemeContext must be used within a ThemeContext.Provider\");return e}",
-        "UseThemeContext": "function E(e){let{children:t}=e,n=S();return(0,o.jsx)(o.Fragment,{children:t(n)})}"
+        "RootThemeContextProvider": "function d(e){let{children:t,theme:n=l.ThemeTypes.DARK,primaryColor:i=null,secondaryColor:r=null,gradient:a=null,flags:d=0,contrast:_=1,saturation:f=1}=e,E=s.useMemo(()=>u({theme:n,primaryColor:i,secondaryColor:r,gradient:a,flags:d,contrast:_,saturation:f}),[n,i,r,a,d,_,f]);return(0,o.jsx)(c.Provider,{value:E,children:t})}",
+        "ThemeContextProvider": "function _(e){let{children:t,theme:n,primaryColor:i,secondaryColor:r,gradient:l,flags:a,contrast:d,saturation:_}=e,f=s.useContext(c),E=s.useMemo(()=>u({theme:null!=n?n:f.theme,primaryColor:null!=i?i:f.primaryColor,secondaryColor:null!=r?r:f.secondaryColor,gradient:null!=l?l:f.gradient,flags:null!=a?a:f.flags,contrast:null!=d?d:f.contrast,saturation:null!=_?_:f.saturation}),[n,f.theme,f.primaryColor,f.secondaryColor,f.gradient,f.flags,f.contrast,f.saturation,i,r,l,a,d,_]);return(0,o.jsx)(c.Provider,{value:E,children:t})}",
+        "DisableCustomTheme": "function f(e){let t=E(),n=s.useMemo(()=>u({...t,primaryColor:null,secondaryColor:null}),[t]);return(0,o.jsx)(c.Provider,{value:n,children:e.children})}",
+        "useThemeContext": "function E(){let e=s.useContext(c);if(null==e)throw Error(\"useThemeContext must be used within a ThemeContext.Provider\");return e}",
+        "UseThemeContext": "function S(e){let{children:t}=e,n=E();return(0,o.jsx)(o.Fragment,{children:t(n)})}"
     }
 }

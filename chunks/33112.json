@@ -154,6 +154,7 @@
             "USER_VERIFY_PASSWORD": "impression_user_verify_password",
             "USER_VERIFY_PHONE": "impression_user_verify_phone",
             "USER_WELCOME": "impression_user_welcome",
+            "USER_YOU_SCREEN": "impression_user_you_screen",
             "VIEW_PANEL_DEVTOOLS": "impression_view_panel_devtools"
         },
         "NetworkActionNames": {

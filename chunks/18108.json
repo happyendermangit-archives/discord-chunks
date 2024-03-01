@@ -1,5 +1,5 @@
 {
     "exports": {
-        "updateIsInTabsUI": "function u(e){i!==e&&(i=e,r=e,!function(){let e=i?r?s.DesignIds.DESIGN_TABS_IA:s.DesignIds.DESIGN_IA:s.DesignIds.CLASSIC_IA;o.default.extendSuperProperties({design_id:e}),a.addGlobalTag(\"design_id\",e),l.default.setTags({design_id:\"\".concat(e)})}())}"
+        "updateIsInTabsUI": "function c(e){i!==e&&(i=e,r=e,!function(){let e=s&&i&&r?a.DesignIds.YOU_BAR_IA:i?r?a.DesignIds.DESIGN_TABS_IA:a.DesignIds.DESIGN_IA:a.DesignIds.CLASSIC_IA;l.default.extendSuperProperties({design_id:e}),o.addGlobalTag(\"design_id\",e),u.default.setTags({design_id:\"\".concat(e)})}())}"
     }
 }
