@@ -1,5 +1,5 @@
 {
     "exports": {
-        "getNavYouBarExperiment": "function o(e,t){var n;let i=!(0,s.isInMainTabsExperiment)();return(0,r.getMergedExperimentConfigs)(a.existingUsers,a.newUsers,e,{...t,disable:!!i||(null==t?void 0:t.disable),autoTrackExposure:!i&&(null===(n=null==t?void 0:t.autoTrackExposure)||void 0===n||n)})}"
+        "getNavYouBarExperiment": "function f(e,t){var n,r;let f=!(0,o.isInMainTabsExperiment)(),E=!!f||(null==t?void 0:t.disable);return a.default.hasLoadedExperiments||E?(0,s.getMergedExperimentConfigs)(d.existingUsers,d.newUsers,e,{...t,disable:E,autoTrackExposure:!f&&(null===(r=null==t?void 0:t.autoTrackExposure)||void 0===r||r)}):(!u&&(c=null!==(n=i.default.get(\"--you-bar-experiment-cached-config\"))&&void 0!==n?n:l,u=!0),c)}"
     }
 }
