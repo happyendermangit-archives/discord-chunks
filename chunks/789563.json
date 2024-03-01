@@ -7782,6 +7782,9 @@
                     "STREAMING_UPDATE": "e=>this._dispatchWithDevtools(e)",
                     "WINDOW_INIT": "e=>this._dispatchWithDevtools(e)",
                     "I18N_LOAD_SUCCESS": "e=>this._dispatchWithDevtools(e)",
+                    "FINGERPRINT": "e=>this._dispatchWithDevtools(e)",
+                    "TRACK": "e=>this._dispatchWithDevtools(e)",
+                    "EXPERIMENTS_FETCH_SUCCESS": "e=>this._dispatchWithDevtools(e)",
                     "MEDIA_ENGINE_DEVICES": "e=>this._dispatchWithDevtools(e)"
                 },
                 "_defaultBand": 2,
@@ -7830,7 +7833,7 @@
             "initialize": "initialize(){A=function(){let e=u.default.get(m);if(null==e||1!==e.v)return{};let t=e.e,n=Date.now(),i=!1;for(let e in t)n-t[e].time>6048e5&&(delete t[e],i=!0);return i&&en(t),t}(),!function(){var e,t,n;let i=[null!==(e=u.default.get(T))&&void 0!==e?e:{},null!==(t=u.default.get(g))&&void 0!==t?t:{},null!==(n=u.default.get(I))&&void 0!==n?n:{}];L={},b={};let r=!a.isEmpty(i[0]);for(let e of i)for(let t in e){let n=e[t];null==n||n.type!==_.ExperimentTypes.USER&&n.type!==_.ExperimentTypes.GUILD||null==n.bucket||!0!==n.override||n.fromCookie?(delete e[t],r=!0):n.type===_.ExperimentTypes.USER?L[t]=n:b[t]=n}let s=(0,c.getBuildOverrideExperiments)();for(let e in s)L[e]={type:_.ExperimentTypes.USER,revision:1,population:0,override:!0,fromCookie:!0,bucket:s[e]},b[e]={type:_.ExperimentTypes.GUILD,revision:1,override:!0,fromCookie:!0,bucket:s[e]},r=!0;r&&et()}()}",
             "loadCache": "loadCache(){let e=this.readSnapshot(eo.LATEST_SNAPSHOT_VERSION);null!=e&&(\"loadedUserExperiments\"in e?(D=e.loadedUserExperiments,y=Q(e.loadedGuildExperiments)):q(e.rawUserExperiments,e.rawGuildExperiments))}",
             "takeSnapshot": "takeSnapshot(){return{version:eo.LATEST_SNAPSHOT_VERSION,data:{rawUserExperiments:N,rawGuildExperiments:O}}}",
-            "hasLoadedExperiments": false,
+            "hasLoadedExperiments": true,
             "hasRegisteredExperiment": "hasRegisteredExperiment(e){return null!=R[e]}",
             "getUserExperimentDescriptor": "getUserExperimentDescriptor(e){if(M){let t=L[e];if(null!=t)return t}let t=G(e);return D[\"\".concat(t)]}",
             "getGuildExperimentDescriptor": "getGuildExperimentDescriptor(e,t){let n=null!=t?t:S.EMPTY_STRING_SNOWFLAKE_ID,i=b[e];if(M&&null!=i)return i;let r=\"\".concat(n,\":\").concat(e);if(r in P)return P[r];let s=function e(t,n){var i,r;let s=G(n),a=y[\"\".concat(s)];if(null==a)return null;let{revision:o,aaMode:l}=a,u=a.overrides[t],c=a.triggerDebuggingEnabled;if(null!=u)return u===_.ExperimentBuckets.NOT_ELIGIBLE?null:{type:_.ExperimentTypes.GUILD,guildId:t,revision:o,bucket:u,override:!0,hashResult:-1,triggerDebuggingEnabled:c};let d=\"\".concat(null!==(i=a.hashKey)&&void 0!==i?i:n,\":\").concat(t),f=G(d),E=f%1e4,p=null,h=null!==(r=a.overridesFormatted)&&void 0!==r?r:[];for(let e of h)if(null!==(p=X(t,e,E)))return{type:_.ExperimentTypes.GUILD,guildId:t,revision:a.revision,bucket:p,override:!0,hashResult:E,triggerDebuggingEnabled:c};if(null==(p=X(t,a.populations,E)))return null;if(null!=a.holdoutName&&null!=a.holdoutBucket&&a.holdoutName!==n){let n=e(t,a.holdoutName);if((null==n?void 0:n.bucket)!=null&&(!0!==n.override&&j({experimentId:a.holdoutName,descriptor:n}),(null==n?void 0:n.bucket)===a.holdoutBucket))return null}return{type:_.ExperimentTypes.GUILD,guildId:t,revision:a.revision,bucket:p,hashResult:E,aaMode:l,triggerDebuggingEnabled:c}}(n,e);return P[r]=s,s}",
