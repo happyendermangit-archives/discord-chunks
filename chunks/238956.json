@@ -1,6 +1,0 @@
-{
-    "exports": {
-        "useCanSeeRemixBadge": "function r(){return i.useExperiment({location:\"canSeeRemixBadge\"},{autoTrackExposure:!0}).canSeeRemixBadge}",
-        "useIsRemixANitroPerk": "function s(){return!!i.useExperiment({location:\"isRemixANitroPerkHook\"},{autoTrackExposure:!0}).isNitroPerk}"
-    }
-}

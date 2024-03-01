@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function i(e){return e.type===a.MessageTypes.DEFAULT&&null!=e.messageReference}"
-    }
-}

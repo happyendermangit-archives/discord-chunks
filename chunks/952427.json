@@ -1,3 +1,0 @@
-{
-    "exports": "function o(){this.buffer=[],this.length=0}"
-}

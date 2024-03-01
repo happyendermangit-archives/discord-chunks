@@ -1,3 +1,0 @@
-{
-    "exports": "function s(t,e){this.typeNumber=t,this.errorCorrectLevel=e,this.modules=null,this.moduleCount=0,this.dataCache=null,this.dataList=[]}"
-}

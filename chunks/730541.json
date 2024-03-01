@@ -1,7 +1,0 @@
-{
-    "exports": {
-        "isPublicSystemMessage": "function u(e){return(0,i.default)(e)&&e.messageReference.guild_id===s.PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID||null!=e.author&&e.author.id===s.PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID}",
-        "getPublicSystemMessageAvatar": "function c(){return o}",
-        "trackEnableCommunityFlow": "e=>{r.default.track(l.AnalyticEvents.USER_FLOW_TRANSITION,{flow_type:s.ENABLE_COMMUNITY_FLOW_MODAL_KEY,from_step:e.fromStep,to_step:e.toStep,...(0,a.collectGuildAnalyticsMetadata)(e.guildId)})}"
-    }
-}

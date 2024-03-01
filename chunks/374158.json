@@ -1,9 +1,0 @@
-{
-    "exports": {
-        "SnowflakeSelectDefaultValueTypes": {
-            "USER": "user",
-            "ROLE": "role",
-            "CHANNEL": "channel"
-        }
-    }
-}

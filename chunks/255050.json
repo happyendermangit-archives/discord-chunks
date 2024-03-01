@@ -1,5 +1,0 @@
-{
-    "exports": {
-        "default": "function u(e){let{source:t,className:n}=e;return null==t?null:(0,l.jsx)(\"div\",{className:s(r.container,n),style:{backgroundImage:\"url(\".concat(t,\")\")}})}"
-    }
-}
