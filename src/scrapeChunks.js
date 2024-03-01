@@ -40,54 +40,19 @@ import fs from "fs/promises";
       Object.keys(wreq.m).map(c => { try { wreq(`${c}`); } catch (error) { console.error(error); } });
 
 
-      const loadedModules = wreq.c;
+      const loadedModules = wreq.m;
       const result = {};
 
-      function makesTypes(obj) {
-        if (typeof obj === "function"){
-          return obj.toString();
-        }
-        if (typeof obj !== 'object' || obj === null) {
-          return obj;
-        }
-        if (Array.isArray(obj)) {
-          return obj.map((value, index) => makesTypes(value));
-        }
-
-        const newObj = {};
-        for (const key in obj) {
-          const value = obj[key];
-          newObj[key] = makesTypes(value);
-        }
-        const prototype = Object.getPrototypeOf(obj) ?? {};
-
-        for (const key of Object.getOwnPropertyNames(prototype)) {
-          if (Object.prototype[key] === undefined){
-            const value = obj[key];
-            newObj[key] = makesTypes(value);
-          }
-        }
-        
-        return newObj;
-      }
 
       for (let chunk in loadedModules) {
-        try {
-          let newChunk = loadedModules[chunk];
-          delete newChunk.loaded;
-          delete newChunk.id;
-          let res = makesTypes(newChunk);
-          result[chunk] = res;
-        } catch (e) {
-          console.error(`Error processing chunk ${chunk}: ${e}`);
-        }
+        result[chunk] = loadedModules[chunk].toString()
       }
       return JSON.stringify(result);
     }));
 
     console.log(Object.keys(result).length)
     for (let key in result) {
-      await fs.writeFile(`./chunks/${key}.json`, JSON.stringify(result[key], null, 4), { encoding: "utf-8" });
+      await fs.writeFile(`./chunks/${key}.js`, JSON.stringify(result[key], null, 4), { encoding: "utf-8" });
       console.log(`${key} saved.`);
     }
     console.log("Done! Scraped all chunks");
