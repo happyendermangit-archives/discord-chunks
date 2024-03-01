@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "function u(e,t,n){let u=(0,a.useStateFromStores)([r.default],()=>r.default.getUserCount(t,n));return(0,l.useEffect)(()=>{null!=e&&null!=t&&s.default.getGuildEventUserCounts(e,t,null!=n?[n]:[])},[t,e,n]),u}"
+    }
+}

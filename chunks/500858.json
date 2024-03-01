@@ -1,0 +1,5 @@
+{
+    "exports": {
+        "default": "e=>null!=e&&null!=e.attachments&&!(e.attachments.length<1)&&e.attachments.some(e=>null!=e.flags&&(0,a.hasFlag)(e.flags,i.MessageAttachmentFlags.IS_REMIX))"
+    }
+}

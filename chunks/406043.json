@@ -1,0 +1,7 @@
+{
+    "exports": {
+        "useCurrentUserCommunicationDisabled": "function o(e){let t=(0,l.useStateFromStores)([u.default],()=>u.default.getCurrentUser());return d(null==t?void 0:t.id,e)}",
+        "default": "function d(e,t){let n=(0,l.useStateFromStores)([a.default],()=>s(e,t,a.default),[t,e]);return r(n)}",
+        "userCommunicationDisabled": "function c(e,t){let n=s(e,t,a.default);return r(n)}"
+    }
+}

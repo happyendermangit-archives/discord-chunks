@@ -1,0 +1,21 @@
+{
+    "exports": {
+        "default": {
+            "render": "function(t,e){var r=t.bgColor,n=t.bgD,i=t.fgD,u=t.fgColor,s=t.size,l=t.title,f=t.viewBoxSize,h=function(t,e){var r={};for(var o in t){if(!(e.indexOf(o)>=0))Object.prototype.hasOwnProperty.call(t,o)&&(r[o]=t[o])}return r}(t,[\"bgColor\",\"bgD\",\"fgD\",\"fgColor\",\"size\",\"title\",\"viewBoxSize\"]);return a.default.createElement(\"svg\",o({},h,{height:s,ref:e,viewBox:\"0 0 \"+f+\" \"+f,width:s}),l?a.default.createElement(\"title\",null,l):null,a.default.createElement(\"path\",{d:n,fill:r}),a.default.createElement(\"path\",{d:i,fill:u}))}",
+            "displayName": "QRCodeSvg",
+            "propTypes": {
+                "bgColor": "function t(t,e,r,n,i,a){if(a!==o){var u=Error(\"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw u.name=\"Invariant Violation\",u}}",
+                "bgD": "function t(t,e,r,n,i,a){if(a!==o){var u=Error(\"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw u.name=\"Invariant Violation\",u}}",
+                "fgColor": "function t(t,e,r,n,i,a){if(a!==o){var u=Error(\"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw u.name=\"Invariant Violation\",u}}",
+                "fgD": "function t(t,e,r,n,i,a){if(a!==o){var u=Error(\"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw u.name=\"Invariant Violation\",u}}",
+                "size": "function t(t,e,r,n,i,a){if(a!==o){var u=Error(\"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw u.name=\"Invariant Violation\",u}}",
+                "title": "function t(t,e,r,n,i,a){if(a!==o){var u=Error(\"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw u.name=\"Invariant Violation\",u}}",
+                "viewBoxSize": "function t(t,e,r,n,i,a){if(a!==o){var u=Error(\"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw u.name=\"Invariant Violation\",u}}",
+                "xmlns": "function t(t,e,r,n,i,a){if(a!==o){var u=Error(\"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types\");throw u.name=\"Invariant Violation\",u}}"
+            },
+            "defaultProps": {
+                "xmlns": "http://www.w3.org/2000/svg"
+            }
+        }
+    }
+}
