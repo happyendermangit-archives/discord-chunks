@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("599110"),
         S = n("49111"),
         T = n("646718"),
-        v = n("782340"),
-        I = n("936369");
+        I = n("782340"),
+        v = n("936369");
 
     function _() {
         (0, o.openModalLazy)(async () => {
@@ -65,29 +65,29 @@ function(e, t, n) {
             context: N,
             discountOffer: y,
             trialOffer: O,
-            children: v.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
+            children: I.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
                 onLearnMore: _
             })
         }) : a ? (0, l.jsx)(o.Clickable, {
-            className: I.iconOnly,
+            className: v.iconOnly,
             onClick: () => _(),
             children: (0, l.jsx)(o.Tooltip, {
-                text: v.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
+                text: I.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
                 position: "top",
                 children: e => (0, l.jsx)(g.default, {
-                    className: I.premium,
+                    className: v.premium,
                     ...e
                 })
             })
         }) : (0, l.jsxs)("div", {
-            className: s(I.root, n),
+            className: s(v.root, n),
             children: [(0, l.jsx)(g.default, {
-                className: I.premium,
+                className: v.premium,
                 color: E.GradientCssUrls.PREMIUM_TIER_2
             }), (0, l.jsx)(o.Text, {
-                className: I.text,
+                className: v.text,
                 variant: "text-sm/normal",
-                children: v.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
+                children: I.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
                     onLearnMore: _
                 })
             })]

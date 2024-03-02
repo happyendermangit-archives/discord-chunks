@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("898260"),
         S = n("378765"),
         T = n("393377"),
-        v = n("761354"),
-        I = n("49111"),
+        I = n("761354"),
+        v = n("49111"),
         _ = n("986548"),
         N = n("356410");
     let A = [];
@@ -67,7 +67,7 @@ function(e, t, n) {
             x.focusFirstVisibleItem()
         }, [x]);
         return ((0, S.useComponentAction)({
-            event: I.ComponentActions.FOCUS_ATTACHMENT_AREA,
+            event: v.ComponentActions.FOCUS_ATTACHMENT_AREA,
             handler: j
         }), i.useEffect(() => {
             if (O) {
@@ -95,7 +95,7 @@ function(e, t, n) {
                                 channelId: t,
                                 keyboardModeEnabled: a,
                                 option: e
-                            }, e.name)) : y.map(e => (0, l.jsx)(v.default, {
+                            }, e.name)) : y.map(e => (0, l.jsx)(I.default, {
                                 channelId: t,
                                 draftType: n.drafts.type,
                                 upload: e,

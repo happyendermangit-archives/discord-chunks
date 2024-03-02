@@ -29,7 +29,7 @@ function(e, t, n) {
             channel: C,
             restrictMentions: S = !0,
             respectCooldown: T = !0
-        } = e, v = f.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
+        } = e, I = f.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
         return new Promise(e => (function(e) {
             var t, n, u;
             let {
@@ -40,8 +40,8 @@ function(e, t, n) {
                 uploads: C,
                 channel: S,
                 restrictMentions: T,
-                respectCooldown: v,
-                userCanUsePremiumMessageLength: I,
+                respectCooldown: I,
+                userCanUsePremiumMessageLength: v,
                 resolve: _
             } = e;
             if (0 === E.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == g || 0 === g.length) && (null == C || 0 === C.length)) {
@@ -51,9 +51,9 @@ function(e, t, n) {
                 });
                 return
             }
-            let N = I ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
+            let N = v ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
             if (E.length > N) {
-                if (I || null == S) {
+                if (v || null == S) {
                     ;
                     n = E.length, u = N, (0, i.openModal)(e => (0, l.jsx)(s.default, {
                         title: p.default.Messages.MESSAGE_TOO_LONG_HEADER,
@@ -79,7 +79,7 @@ function(e, t, n) {
                 return
             }
             if (null != S) {
-                if (null != S.getGuildId() && v && o.default.getSlowmodeCooldownGuess(S.id) > 0) {
+                if (null != S.getGuildId() && I && o.default.getSlowmodeCooldownGuess(S.id) > 0) {
                     _({
                         valid: !1,
                         failureReason: m.MessageRestrictionTypes.SLOWMODE_COOLDOWN
@@ -138,7 +138,7 @@ function(e, t, n) {
             channel: C,
             restrictMentions: S,
             respectCooldown: T,
-            userCanUsePremiumMessageLength: v,
+            userCanUsePremiumMessageLength: I,
             resolve: e
         }))
     }

@@ -25,10 +25,10 @@ function(e, t, n) {
             let {
                 disabled: n,
                 type: a
-            } = e, [S, T] = i.useState(!1), v = (0, o.useStateFromStores)([f.default], () => {
+            } = e, [S, T] = i.useState(!1), I = (0, o.useStateFromStores)([f.default], () => {
                 var e, t;
                 return S && Object.values(null !== (t = null === (e = f.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-            }), [I, _, N] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), x = i.useCallback(() => {
+            }), [v, _, N] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), x = i.useCallback(() => {
                 T(!0), clearTimeout(A.current), A.current = setTimeout(() => {
                     T(!1)
                 }, 1500)
@@ -47,9 +47,9 @@ function(e, t, n) {
                     events: R
                 } = (0, u.useGifLottie)();
             if (n) return null;
-            let M = I === E.ExpressionPickerViewType.GIF && _ === a;
+            let M = v === E.ExpressionPickerViewType.GIF && _ === a;
             return (0, l.jsx)(d.Tooltip, {
-                text: v ? g.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
+                text: I ? g.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
                 forceOpen: !0,
                 children: e => (0, l.jsx)("div", {
                     ref: t,

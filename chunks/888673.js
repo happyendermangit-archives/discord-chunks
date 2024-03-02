@@ -30,8 +30,8 @@ function(e, t, n) {
                 autoMute: C,
                 responsive: S,
                 mediaLayoutType: T,
-                mimeType: v,
-                renderOverlayContent: I,
+                mimeType: I,
+                renderOverlayContent: v,
                 renderLinkComponent: _,
                 onClick: N,
                 onPlay: A,
@@ -77,13 +77,13 @@ function(e, t, n) {
                         fileSize: null == t ? void 0 : (0, s.sizeString)(t),
                         playable: p,
                         renderLinkComponent: _,
-                        renderOverlayContent: I,
+                        renderOverlayContent: v,
                         onClick: N,
                         onPlay: A,
                         onEnded: x,
                         onVolumeChange: y,
                         onMute: O,
-                        mimeType: v,
+                        mimeType: I,
                         downloadable: h
                     })
                 }

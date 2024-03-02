@@ -33,14 +33,14 @@ function(e, t, n) {
                 isLoading: !0
             }
         },
-        v = Array.from({
+        I = Array.from({
             length: 5
         }, () => ({
             name: "",
             displayName: "",
             value: ""
         })),
-        I = {
+        v = {
             results: {
                 choices: [],
                 isError: !0
@@ -79,7 +79,7 @@ function(e, t, n) {
                         })
                     }
                     let a = o.default.getLastErrored(e.id);
-                    if (a) return I;
+                    if (a) return v;
                     let r = o.default.getAutocompleteChoices(e.id, s.name, n);
                     return null == r ? T : {
                         results: {
@@ -114,7 +114,7 @@ function(e, t, n) {
                 }) : 0 !== t.length || n ? (0, m.renderAutocompleteGroup)({
                     query: r,
                     selectedIndex: a,
-                    autocompletes: n ? v : t,
+                    autocompletes: n ? I : t,
                     onHover: o,
                     onClick: u,
                     titleWithQuery: E.default.Messages.OPTIONS_MATCHING,

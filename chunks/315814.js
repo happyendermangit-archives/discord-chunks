@@ -27,14 +27,14 @@ function(e, t, n) {
                 disabled: t,
                 referralsRemaining: n,
                 channel: T,
-                isResending: v
+                isResending: I
             } = e, {
-                enabled: I
+                enabled: v
             } = c.default.useExperiment({
                 location: "ec41f5_1"
             }, {
                 autoTrackExposure: !0
-            }), _ = I ? C.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : v ? C.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : C.default.Messages.SHARE_NITRO_TOOLTIP, N = I ? C.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [A, x] = i.useState(!1), [y, O] = i.useState(!1), R = (0, r.default)(null, () => O(!1)), {
+            }), _ = v ? C.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : I ? C.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : C.default.Messages.SHARE_NITRO_TOOLTIP, N = v ? C.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [A, x] = i.useState(!1), [y, O] = i.useState(!1), R = (0, r.default)(null, () => O(!1)), {
                 analyticsLocations: M
             } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), L = T.isDM() && void 0 !== T.recipients ? T.recipients[0] : null, P = (0, o.default)();
             return t ? null : (0, l.jsxs)("div", {
@@ -45,7 +45,7 @@ function(e, t, n) {
                     referralsRemaining: n,
                     channel: T,
                     onClose: () => O(!1),
-                    isResending: v
+                    isResending: I
                 }), (0, l.jsx)(a.Tooltip, {
                     text: _,
                     shouldShow: !y,
@@ -77,8 +77,8 @@ function(e, t, n) {
                             children: (0, l.jsx)(p.default, {
                                 referralsRemaining: n,
                                 hovered: A,
-                                isResending: v,
-                                shouldShowBirthdayUX: I,
+                                isResending: I,
+                                shouldShowBirthdayUX: v,
                                 isLightTheme: (0, s.isThemeLight)(P)
                             })
                         })

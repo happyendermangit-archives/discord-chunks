@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("697218"),
         S = n("719923"),
         T = n("998206"),
-        v = n("35385"),
-        I = n("695369"),
+        I = n("35385"),
+        v = n("695369"),
         _ = n("198"),
         N = n("315814"),
         A = n("108486"),
@@ -126,7 +126,7 @@ function(e, t, n) {
                     disabled: D,
                     channel: k
                 }, "gift"))
-            }(null === (b = U.gifs) || void 0 === b ? void 0 : b.button) != null && null == K && z.push((0, l.jsx)(I.default, {
+            }(null === (b = U.gifs) || void 0 === b ? void 0 : b.button) != null && null == K && z.push((0, l.jsx)(v.default, {
                 disabled: D,
                 type: U
             }, "gif")), (null === (j = U.stickers) || void 0 === j ? void 0 : j.button) != null && null == K && z.push((0, l.jsx)(y.default, {
@@ -134,7 +134,7 @@ function(e, t, n) {
                 type: U
             }, "sticker"))
         }
-        return ((null === (t = U.emojis) || void 0 === t ? void 0 : t.button) != null && (null == K || null != W && W.type !== r.ApplicationCommandOptionType.ATTACHMENT) && z.push((0, l.jsx)(v.default, {
+        return ((null === (t = U.emojis) || void 0 === t ? void 0 : t.button) != null && (null == K || null != W && W.type !== r.ApplicationCommandOptionType.ATTACHMENT) && z.push((0, l.jsx)(I.default, {
             disabled: D,
             type: U
         }, "emoji")), (null === (n = U.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (i = U.submit) || void 0 === i ? void 0 : i.ignorePreference) || G) && z.push((0, l.jsx)(x.default, {

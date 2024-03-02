@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("442939"),
         S = n("373469"),
         T = n("26989"),
-        v = n("305961"),
-        I = n("824563"),
+        I = n("305961"),
+        v = n("824563"),
         _ = n("27618"),
         N = n("697218"),
         A = n("599110"),
@@ -62,29 +62,29 @@ function(e, t, n) {
             return null === (e = x.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
         }), {
             AnalyticsLocationProvider: Z
-        } = (0, E.default)(h.default.PROFILE_POPOUT), J = (0, r.useStateFromStores)([v.default], () => null != n ? v.default.getGuild(n) : null), q = (0, r.useStateFromStores)([T.default], () => null != n ? T.default.getMember(n, t.id) : null), X = t.isNonUserBot(), {
+        } = (0, E.default)(h.default.PROFILE_POPOUT), J = (0, r.useStateFromStores)([I.default], () => null != n ? I.default.getGuild(n) : null), q = (0, r.useStateFromStores)([T.default], () => null != n ? T.default.getMember(n, t.id) : null), X = t.isNonUserBot(), {
             activity: Q,
             customStatusActivity: $,
             status: ee,
             isMobile: et,
             isApplicationStreaming: en
-        } = (0, r.useStateFromStoresObject)([S.default, I.default], () => {
+        } = (0, r.useStateFromStoresObject)([S.default, v.default], () => {
             let e = null != S.default.getAnyStreamForUser(t.id);
             return {
-                activity: I.default.findActivity(t.id, t => {
+                activity: v.default.findActivity(t.id, t => {
                     let {
                         type: n
                     } = t;
                     return e ? n === k.ActivityTypes.PLAYING : n !== k.ActivityTypes.CUSTOM_STATUS
                 }),
-                customStatusActivity: I.default.findActivity(t.id, e => {
+                customStatusActivity: v.default.findActivity(t.id, e => {
                     let {
                         type: t
                     } = e;
                     return t === k.ActivityTypes.CUSTOM_STATUS
                 }),
-                status: X ? null : I.default.getStatus(t.id),
-                isMobile: I.default.isMobileOnline(t.id),
+                status: X ? null : v.default.getStatus(t.id),
+                isMobile: v.default.isMobileOnline(t.id),
                 isApplicationStreaming: e
             }
         }), [el, ei] = i.useState(!1), ea = i.useMemo(() => null != n ? {

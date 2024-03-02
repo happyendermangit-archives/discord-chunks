@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return v
+            return I
         }
     }), n("222007");
     var l = n("37983"),
@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("280214"),
         S = n("497858"),
         T = n("892149"),
-        v = i.forwardRef(function(e, t) {
-            var n, a, v, I, _;
+        I = i.forwardRef(function(e, t) {
+            var n, a, I, v, _;
             let {
                 channel: N,
                 type: A,
@@ -72,7 +72,7 @@ function(e, t, n) {
                     [T.bottom]: null == k && "bottom" === e.position
                 },
                 B = 490;
-            null != k && (B = (null === (v = A.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (I = L.query) || void 0 === I ? void 0 : I.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
+            null != k && (B = (null === (I = A.autocomplete) || void 0 === I ? void 0 : I.small) ? 200 : (null === (v = L.query) || void 0 === v ? void 0 : v.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
             let H = (0, l.jsx)(f.default, {
                 id: O,
                 className: s(T.autocomplete, G),

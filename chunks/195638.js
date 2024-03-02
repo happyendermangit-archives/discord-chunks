@@ -22,7 +22,7 @@ function(e, t, n) {
             expressionsListRef: p,
             defaultSearchPlaceholder: h,
             emptySearchPlaceholder: E
-        } = e, g = i.useRef(null), [C, S] = (0, u.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], a.default), T = n.useStore(e => e.searchPlaceholder), v = n.useStore(e => e.inspectedExpressionPosition, a.default), I = i.useCallback(e => {
+        } = e, g = i.useRef(null), [C, S] = (0, u.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], a.default), T = n.useStore(e => e.searchPlaceholder), I = n.useStore(e => e.inspectedExpressionPosition, a.default), v = i.useCallback(e => {
             var t;
             n.setActiveCategoryIndex("" === e ? 0 : o.INACTIVE_CATEGORY_INDEX), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0)
         }, [p, n]), _ = i.useCallback(() => {
@@ -49,7 +49,7 @@ function(e, t, n) {
                 placeholder: null != T ? T : c || null == E ? h : E,
                 onClear: _,
                 onKeyDown: f,
-                onQueryChange: I,
+                onQueryChange: v,
                 className: d.searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,
@@ -57,7 +57,7 @@ function(e, t, n) {
                     "aria-haspopup": "grid",
                     "aria-controls": m,
                     "aria-expanded": !0,
-                    "aria-activedescendant": (0, s.makeGridId)(m, v.columnIndex, v.rowIndex)
+                    "aria-activedescendant": (0, s.makeGridId)(m, I.columnIndex, I.rowIndex)
                 }
             })
         })

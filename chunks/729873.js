@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("248474"),
         S = n("788506"),
         T = n("352046"),
-        v = n("917764"),
-        I = n("83017"),
+        I = n("917764"),
+        v = n("83017"),
         _ = n("115279"),
         N = n("782340"),
         A = n("981840");
@@ -65,7 +65,7 @@ function(e, t, n) {
                     } = b;
                     return null === (e = O[t]) || void 0 === e ? void 0 : e[n]
                 }, [O, b]),
-                U = (null == j ? void 0 : j.type) === I.EmojiGridItemTypes.EMOJI ? null == j ? void 0 : j.emoji : {
+                U = (null == j ? void 0 : j.type) === v.EmojiGridItemTypes.EMOJI ? null == j ? void 0 : j.emoji : {
                     type: "CREATE_EMOJI",
                     guildId: null == j ? void 0 : j.guildId,
                     allNamesString: null == j ? void 0 : j.name
@@ -79,7 +79,7 @@ function(e, t, n) {
                     newlyAddedEmojis: B
                 } = (0, T.default)(R, M),
                 H = U.id,
-                V = (null == j ? void 0 : j.type) === I.EmojiGridItemTypes.EMOJI ? j.subCategory : _.EmojiSubCategory.NONE;
+                V = (null == j ? void 0 : j.type) === v.EmojiGridItemTypes.EMOJI ? j.subCategory : _.EmojiSubCategory.NONE;
             if (i.useEffect(() => {
                     let e = Date.now();
                     return () => {
@@ -114,7 +114,7 @@ function(e, t, n) {
                 width: 24,
                 height: 24
             });
-            let W = null != D ? (0, l.jsx)(v.default, {
+            let W = null != D ? (0, l.jsx)(I.default, {
                     className: A.guildIcon,
                     guild: D,
                     shouldAnimate: !w && k

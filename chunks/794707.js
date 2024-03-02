@@ -26,10 +26,10 @@ function(e, t, n) {
             rowCountBySection: C,
             rowHeight: S,
             sectionHeaderHeight: T,
-            sectionFooterHeight: v
-        } = e, I = i.useRef(!1), _ = i.useRef(null), N = (0, s.useExpressionPickerStore)(e => e.searchQuery), A = n.useStore(e => e.activeCategoryIndex), x = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
+            sectionFooterHeight: I
+        } = e, v = i.useRef(!1), _ = i.useRef(null), N = (0, s.useExpressionPickerStore)(e => e.searchQuery), A = n.useStore(e => e.activeCategoryIndex), x = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: A,
-            isScrolling: I,
+            isScrolling: v,
             listRef: _,
             onActiveCategoryIndexChange: n.setActiveCategoryIndex,
             scrollOffset: 20,
@@ -89,7 +89,7 @@ function(e, t, n) {
                 rowCountBySection: C,
                 rowHeight: S,
                 sectionHeaderHeight: T,
-                sectionFooterHeight: v,
+                sectionFooterHeight: I,
                 stickyHeaders: !0,
                 ref: _
             }), null == h ? void 0 : h()]

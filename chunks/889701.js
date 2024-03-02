@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("716849"),
         S = n("552917"),
         T = n("917247"),
-        v = n("845579"),
-        I = n("697218"),
+        I = n("845579"),
+        v = n("697218"),
         _ = n("599110"),
         N = n("159885"),
         A = n("570759"),
@@ -87,9 +87,9 @@ function(e, t, n) {
                     listPaddingLeft: H,
                     listScrollbarWidth: 8
                 }),
-                ed = v.StickerPickerCollapsedSections.useSetting(),
+                ed = I.StickerPickerCollapsedSections.useSetting(),
                 ec = i.useMemo(() => new Set(ed), [ed]),
-                ef = (0, o.useStateFromStores)([I.default], () => I.default.getCurrentUser()),
+                ef = (0, o.useStateFromStores)([v.default], () => v.default.getCurrentUser()),
                 em = i.useMemo(() => (0, k.getFilteredStickers)(ei, ef, u), [ei, ef, u]),
                 ep = (0, O.useFavoriteStickers)(),
                 eh = (0, O.useLatestFrecentStickers)(),
@@ -102,9 +102,9 @@ function(e, t, n) {
                 eT = i.useCallback(e => {
                     "" === ei ? (0, y.trackStickerSelect)(e) : (0, y.trackStickerSearchSelect)(e, ei, eS), N(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
                 }, [N, ei, eS]),
-                ev = null != eu && eu > B,
+                eI = null != eu && eu > B,
                 {
-                    rowCount: eI,
+                    rowCount: ev,
                     rowCountBySection: e_,
                     stickersGrid: eN,
                     gutterWidth: eA,
@@ -115,8 +115,8 @@ function(e, t, n) {
                     collapsedStickersCategories: ec,
                     listWidth: eu,
                     listPaddingRight: V,
-                    stickerNodeMargin: ev ? K : W,
-                    stickerNodeWidth: ev ? J : q
+                    stickerNodeMargin: eI ? K : W,
+                    stickerNodeWidth: eI ? J : q
                 }),
                 ey = i.useCallback((e, t) => {
                     let {
@@ -216,7 +216,7 @@ function(e, t, n) {
                             gutterWidth: eA,
                             isUsingKeyboardNavigation: eP,
                             onSelectSticker: eT,
-                            rowCount: eI,
+                            rowCount: ev,
                             rowCountBySection: e_,
                             stickersCategories: er,
                             stickersGrid: eN,

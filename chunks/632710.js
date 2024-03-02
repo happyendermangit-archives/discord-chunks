@@ -24,8 +24,8 @@ function(e, t, n) {
         C = n("313873"),
         S = n("429928"),
         T = n("36539"),
-        v = n("698372"),
-        I = n("770370"),
+        I = n("698372"),
+        v = n("770370"),
         _ = n("667618"),
         N = n("865677"),
         A = n("15874"),
@@ -52,7 +52,7 @@ function(e, t, n) {
                     onAction: G,
                     isEmbedded: B = !1
                 } = e,
-                H = (0, v.default)(),
+                H = (0, I.default)(),
                 V = (0, u.useStateFromStores)([h.default], () => {
                     let e = h.default.getCurrentUser();
                     return r(null != e, "UserActivityActions: currentUser cannot be undefined"), e
@@ -68,12 +68,12 @@ function(e, t, n) {
                     var e;
                     return q ? p.default.getChannel(null === (e = E.default.getVoiceStateForUser(i.id)) || void 0 === e ? void 0 : e.channelId) : null
                 });
-            if ((0, T.default)(n)) t = [(0, l.jsx)(I.default, {
+            if ((0, T.default)(n)) t = [(0, l.jsx)(v.default, {
                 look: w,
                 color: k,
                 platform: f.default.get(P.PlatformTypes.XBOX)
             }, "ConnectPlatformActivityButton")];
-            else if ((null == n ? void 0 : n.platform) != null && [P.ActivityGamePlatforms.PS4, P.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, l.jsx)(I.default, {
+            else if ((null == n ? void 0 : n.platform) != null && [P.ActivityGamePlatforms.PS4, P.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, l.jsx)(v.default, {
                 look: w,
                 color: k,
                 platform: f.default.get(P.PlatformTypes.PLAYSTATION)

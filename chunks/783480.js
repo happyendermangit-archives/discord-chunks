@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("168730"),
         S = n("562228"),
         T = n("529805"),
-        v = n("685841"),
-        I = n("804888"),
+        I = n("685841"),
+        v = n("804888"),
         _ = n("474643"),
         N = n("585722"),
         A = n("568734"),
@@ -52,9 +52,9 @@ function(e, t, n) {
                 poll: null == P ? void 0 : P.poll
             };
         null != L && (D.content = null == L ? void 0 : L.content);
-        let k = v.default.getPendingReply(f);
+        let k = I.default.getPendingReply(f);
         null != k && (D.type = y.MessageTypes.REPLY, D.message_reference = P.messageReference, D.allowed_mentions = P.allowedMentions, (0, T.deletePendingReply)(f));
-        let [w, F] = (0, I.default)(D.content);
+        let [w, F] = (0, v.default)(D.content);
         w && (D.content = F, D.flags = (0, A.addFlag)(null !== (t = D.flags) && void 0 !== t ? t : 0, y.MessageFlags.SUPPRESS_NOTIFICATIONS));
         let G = null !== (n = P.nonce) && void 0 !== n ? n : (0, g.createNonce)(),
             B = (0, g.default)({
@@ -176,7 +176,7 @@ function(e, t, n) {
             };
             if (null != d) {
                 h.content = d.content, h.tts = d.tts, h.channel_id = d.channel_id;
-                let e = v.default.getPendingReply(n);
+                let e = I.default.getPendingReply(n);
                 if (null != e) {
                     let t = s.default.getSendMessageOptionsForReply(e);
                     h.type = y.MessageTypes.REPLY, h.message_reference = t.messageReference, h.allowed_mentions = t.allowedMentions, (0, T.deletePendingReply)(n)

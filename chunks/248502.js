@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         cameraPreviewTitle: "cameraPreviewTitle__0d1bf",

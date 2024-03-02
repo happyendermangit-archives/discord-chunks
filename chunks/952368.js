@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         IMAGE_GIF_RE: function() {
-            return v
+            return I
         },
         default: function() {
             return a
@@ -22,8 +22,8 @@ function(e, t, n) {
         C = n("594098"),
         S = n("719347"),
         T = n("49111");
-    let v = /\.gif($|\?|#)/i,
-        I = /\.png($|\?|#)/i;
+    let I = /\.gif($|\?|#)/i,
+        v = /\.png($|\?|#)/i;
     (s = i || (i = {})).LOAD = "LOAD", s.PRELOAD = "PRELOAD", s.CLICK = "CLICK", (l = class e extends o.Component {
         static isAnimated(e) {
             let {
@@ -31,13 +31,13 @@ function(e, t, n) {
                 original: n,
                 animated: l
             } = e;
-            return l || v.test(null != n && "" !== n ? n : t)
+            return l || I.test(null != n && "" !== n ? n : t)
         }
         static isSrcPNG(e) {
             let {
                 src: t
             } = e;
-            return I.test(t)
+            return v.test(t)
         }
         componentDidMount() {
             let {
@@ -144,8 +144,8 @@ function(e, t, n) {
                 height: E,
                 minWidth: g,
                 minHeight: S,
-                maxWidth: v,
-                maxHeight: I,
+                maxWidth: I,
+                maxHeight: v,
                 onClick: _,
                 renderAccessory: N,
                 tabIndex: A,
@@ -157,7 +157,7 @@ function(e, t, n) {
                 readyState: M,
                 hasMouseOver: L,
                 hasFocus: P
-            } = this.state, b = null != l, j = this.getRatio(), U = (0, u.clamp)(Math.round(h * j), null != g ? g : 0, null != v ? v : 1 / 0), D = (0, u.clamp)(Math.round(E * j), null != S ? S : 0, null != I ? I : 1 / 0), k = {
+            } = this.state, b = null != l, j = this.getRatio(), U = (0, u.clamp)(Math.round(h * j), null != g ? g : 0, null != I ? I : 1 / 0), D = (0, u.clamp)(Math.round(E * j), null != S ? S : 0, null != v ? v : 1 / 0), k = {
                 alt: t,
                 readyState: M,
                 onContextMenu: null != a ? a : void 0,

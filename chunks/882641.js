@@ -33,18 +33,18 @@ function(e, t, n) {
             onClick: g,
             "aria-controls": C,
             focusProps: S
-        } = e, [T, v] = i.useState(!1), [I, _] = i.useState(50), N = T || E, A = (0, d.getClass)(m, "emojiButton", N ? "Hovered" : "Normal");
-        let x = (t = I, {
+        } = e, [T, I] = i.useState(!1), [v, _] = i.useState(50), N = T || E, A = (0, d.getClass)(m, "emojiButton", N ? "Hovered" : "Normal");
+        let x = (t = v, {
                 "--custom-emoji-sprite-size": "".concat(24, "px"),
                 "--custom-emoji-sprite-row": Math.floor(t / 20),
                 "--custom-emoji-sprite-col": t % 20
             }),
             y = i.useCallback(() => {
-                if (!N) v(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
-            }, [N, v, _]),
+                if (!N) I(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
+            }, [N, I, _]),
             O = i.useCallback(() => {
-                v(!1)
-            }, [v]),
+                I(!1)
+            }, [I]),
             R = i.useCallback(() => (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonFocused), []);
         return (0, l.jsx)(o.Button, {
             look: o.Button.Looks.BLANK,

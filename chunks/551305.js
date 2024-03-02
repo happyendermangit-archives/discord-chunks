@@ -55,8 +55,8 @@ function(e, t, n) {
             isActive: C,
             onMouseEnter: S,
             onMouseLeave: T,
-            onFocus: v,
-            onBlur: I,
+            onFocus: I,
+            onBlur: v,
             pulse: _,
             sparkle: N,
             notification: A,
@@ -101,8 +101,8 @@ function(e, t, n) {
             onClick: g,
             onMouseEnter: S,
             onMouseLeave: T,
-            onFocus: v,
-            onBlur: I,
+            onFocus: I,
+            onBlur: v,
             focusProps: {
                 offset: {
                     top: 4,

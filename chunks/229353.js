@@ -16656,6 +16656,8 @@ function(e, _, E) {
         POLL_HIDE_VOTES: "Go back to vote",
         POLL_VOTES_NO_RESULTS_TITLE: "Nothing to see here",
         POLL_VOTES_NO_RESULTS_SUBTITLE: "There are no votes for this answer",
+        POLL_COACHMARK_TITLE: "NEW! Polls are here.",
+        POLL_COACHMARK_SUBTITLE: "Plan events, gather opinions, or drop a silly question in the chat.",
         POLL_NOT_INTERACTIVE: "View original message to interact",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "There are no votes for this answer.",
@@ -16833,10 +16835,15 @@ function(e, _, E) {
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING: "An activity card showing @{username} streaming {activity}",
         MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Playing **{gameName}**",
         MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Played **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME: "{userName} is playing **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME: "{userName} played **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME: "{userName} is playing a new game: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME: "{userName} played a new game: **{gameName}**",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}w ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}d ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}h ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}m ago",
-        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}s ago"
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}s ago",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time"
     })
 }

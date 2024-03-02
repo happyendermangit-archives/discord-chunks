@@ -21,7 +21,7 @@ function(e, t, n) {
             let {
                 disabled: n,
                 type: a
-            } = e, [h, E] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default), g = i.useContext(u.default), [C, S] = i.useState(!1), T = h === f.ExpressionPickerViewType.STICKER, v = i.useCallback(() => {
+            } = e, [h, E] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default), g = i.useContext(u.default), [C, S] = i.useState(!1), T = h === f.ExpressionPickerViewType.STICKER, I = i.useCallback(() => {
                 (0, d.toggleExpressionPicker)(f.ExpressionPickerViewType.STICKER, a)
             }, [a]);
             i.useEffect(() => {
@@ -40,7 +40,7 @@ function(e, t, n) {
                 }
             }, [g]);
             let {
-                Component: I,
+                Component: v,
                 events: _
             } = (0, o.useStickerLottie)();
             return n ? null : (0, l.jsx)("div", {
@@ -51,7 +51,7 @@ function(e, t, n) {
                         [p.stickerButtonTilted]: C && !T
                     }),
                     ..._,
-                    onClick: v,
+                    onClick: I,
                     isActive: T,
                     "aria-label": m.default.Messages.STICKER_BUTTON_LABEL,
                     "aria-expanded": T,
@@ -59,7 +59,7 @@ function(e, t, n) {
                     "aria-controls": E,
                     sparkle: !1,
                     notification: null,
-                    children: (0, l.jsx)(I, {
+                    children: (0, l.jsx)(v, {
                         color: "currentColor"
                     })
                 })

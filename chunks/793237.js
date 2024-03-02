@@ -44,7 +44,7 @@ function(e, t, n) {
         C = 5 * h.default.Millis.SECOND,
         S = {},
         T = {};
-    async function v(e, t) {
+    async function I(e, t) {
         let n, l;
         if (!E.default.shouldFetch(e, t)) return;
         let i = Date.now();
@@ -69,7 +69,7 @@ function(e, t, n) {
             receivedAt: Date.now()
         })
     }
-    async function I(e) {
+    async function v(e) {
         var t, n;
         let l, i;
         if (!E.default.shouldFetch(e)) return;
@@ -110,7 +110,7 @@ function(e, t, n) {
     }
 
     function A(e, t) {
-        null != e && null != t && v(e, t), u.default.dispatch({
+        null != e && null != t && I(e, t), u.default.dispatch({
             type: "SET_SELECTED_SUMMARY",
             channelId: e,
             summaryId: null != t ? t : null
@@ -248,7 +248,7 @@ function(e, t, n) {
         updateVisibleMessages: x,
         setSelectedSummary: A,
         setHighlightedSummary: _,
-        fetchSummaries: I,
+        fetchSummaries: v,
         fetchSummariesBulk: L,
         useChannelSummaries: function(e) {
             let {

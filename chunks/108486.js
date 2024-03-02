@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("778588"),
         S = n("697218"),
         T = n("551305"),
-        v = n("978679"),
-        I = n("953957"),
+        I = n("978679"),
+        v = n("953957"),
         _ = n("762974"),
         N = n("718517"),
         A = n("299039"),
@@ -84,9 +84,9 @@ function(e, t, n) {
         }],
         U = 1 / 300,
         D = N.default.Millis.DAYS_30,
-        k = (0, a.animated)(I.default),
+        k = (0, a.animated)(v.default),
         w = (0, a.animated)(_.default),
-        F = (0, a.animated)(v.default);
+        F = (0, a.animated)(I.default);
 
     function G(e) {
         let {
@@ -137,7 +137,7 @@ function(e, t, n) {
             channel: n
         } = e, {
             analyticsLocations: a
-        } = (0, m.default)(f.default.GIFT_BUTTON), [o, c] = i.useState(!1), v = (0, s.useStateFromStores)([C.default], () => !(null === C.default || void 0 === C.default ? void 0 : C.default.hasLayers())), I = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), _ = null != I ? A.default.age(I.id) : 0, N = !t && v && _ >= D, {
+        } = (0, m.default)(f.default.GIFT_BUTTON), [o, c] = i.useState(!1), I = (0, s.useStateFromStores)([C.default], () => !(null === C.default || void 0 === C.default ? void 0 : C.default.hasLayers())), v = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), _ = null != v ? A.default.age(v.id) : 0, N = !t && I && _ >= D, {
             enabled: b
         } = g.SeasonalGiftingMarketingExperiment.useExperiment({
             location: "ChannelPremiumGiftButton"

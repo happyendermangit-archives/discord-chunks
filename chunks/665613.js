@@ -152,14 +152,14 @@ function(e, t, n) {
             [g, C] = a.RangeUtils.edges(E),
             S = a.EditorUtils.richValue(e),
             T = p ? -1 : 1,
-            v = null !== (l = null === (t = g.path) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : 0,
-            I = null !== (i = null === (n = C.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : S.length - 1,
-            _ = p ? v : I,
-            N = p ? I : v;
+            I = null !== (l = null === (t = g.path) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : 0,
+            v = null !== (i = null === (n = C.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : S.length - 1,
+            _ = p ? I : v,
+            N = p ? v : I;
         for (;;) {
             let t = S[N],
-                n = null !== (u = N === v ? null === (s = g.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
-                l = null !== (d = N === I ? null === (r = C.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
+                n = null !== (u = N === I ? null === (s = g.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
+                l = null !== (d = N === v ? null === (r = C.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
                 i = p ? l : n,
                 f = p ? n : l,
                 m = i;

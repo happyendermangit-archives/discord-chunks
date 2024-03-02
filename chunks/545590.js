@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return v
+            return I
         }
     });
     var l = n("37983");
@@ -25,7 +25,7 @@ function(e, t, n) {
         S = n("782340"),
         T = n("44492");
 
-    function v(e) {
+    function I(e) {
         let {
             user: t,
             guildId: n
@@ -57,7 +57,7 @@ function(e, t, n) {
                     app: a,
                     listing: u,
                     guildId: n
-                }) : (0, l.jsx)(I, {
+                }) : (0, l.jsx)(v, {
                     guildId: n,
                     listing: u
                 }))]
@@ -65,7 +65,7 @@ function(e, t, n) {
         }) : null
     }
 
-    function I(e) {
+    function v(e) {
         let {
             listing: t,
             guildId: n

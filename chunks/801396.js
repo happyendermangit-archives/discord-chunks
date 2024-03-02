@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("595086"),
         S = n("427459"),
         T = n("49111"),
-        v = n("944305"),
-        I = n("782340"),
+        I = n("944305"),
+        v = n("782340"),
         _ = n("754334"),
         N = e => {
             let {
@@ -58,7 +58,7 @@ function(e, t, n) {
                     color: "interactive-normal",
                     className: _.body,
                     variant: "text-sm/normal",
-                    children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
+                    children: v.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
                         count: (0, S.getTotalStickerCountForTier)(T.BoostedGuildTiers.TIER_1)
                     })
                 }), (0, l.jsx)(o.Button, {
@@ -69,10 +69,10 @@ function(e, t, n) {
                             analyticsLocations: y,
                             analyticsSourceLocation: x,
                             guild: O,
-                            perks: (0, v.guildBoostingPerks)()
+                            perks: (0, I.guildBoostingPerks)()
                         })
                     },
-                    children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
+                    children: v.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
                 })]
             }) : (0, l.jsxs)("div", {
                 className: s(_.upsell, t),
@@ -84,14 +84,14 @@ function(e, t, n) {
                     color: "interactive-normal",
                     className: _.body,
                     variant: "text-sm/normal",
-                    children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_DESCRIPTION
+                    children: v.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_DESCRIPTION
                 }), (0, l.jsx)(o.Button, {
                     look: o.Button.Looks.LINK,
                     color: o.Button.Colors.LINK,
                     onClick: () => {
                         (0, f.closeExpressionPicker)(), p.default.open(n, T.GuildSettingsSections.STICKERS, x)
                     },
-                    children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
+                    children: v.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
                 })]
             }) : null
         }

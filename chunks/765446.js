@@ -72,9 +72,9 @@ function(e, t, n) {
             } = e,
             S = (0, r.useSelected)(),
             T = (0, r.useFocused)(),
-            v = (0, r.useSlateStatic)(),
+            I = (0, r.useSlateStatic)(),
             {
-                optionType: I,
+                optionType: v,
                 errored: _
             } = (0, o.useStateFromStoresObject)([d.default], () => {
                 var e, t, l;
@@ -91,9 +91,9 @@ function(e, t, n) {
                 [g.erroredPill]: (!T || !S) && _
             }),
             O = i.useCallback(() => {
-                !h.EditorUtils.isVoid(v, a) && p.SlateTransforms.selectCommandOption(v, a.optionName, !0)
-            }, [v, a]);
-        return t = I === u.ApplicationCommandOptionType.ATTACHMENT ? (null == N ? void 0 : N.filename) != null ? (0, l.jsxs)("span", {
+                !h.EditorUtils.isVoid(I, a) && p.SlateTransforms.selectCommandOption(I, a.optionName, !0)
+            }, [I, a]);
+        return t = v === u.ApplicationCommandOptionType.ATTACHMENT ? (null == N ? void 0 : N.filename) != null ? (0, l.jsxs)("span", {
             className: s(g.optionPillValue, g.attachmentFilename),
             contentEditable: !1,
             children: [N.filename, C]

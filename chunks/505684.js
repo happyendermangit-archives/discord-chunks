@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ObscuredDisplayContext: function() {
-            return I
+            return v
         },
         default: function() {
             return N
@@ -79,7 +79,7 @@ function(e, t, n) {
                     return (0, m.assertNever)(t)
             }
         },
-        v = e => {
+        I = e => {
             let {
                 obscureReason: t,
                 isVisible: n,
@@ -102,7 +102,7 @@ function(e, t, n) {
                 })
             })
         },
-        I = s.createContext(!1);
+        v = s.createContext(!1);
     class _ extends s.PureComponent {
         renderWithTooltip(e) {
             return (0, a.jsx)(c.Tooltip, {
@@ -132,7 +132,7 @@ function(e, t, n) {
                 obscurityControlClassName: u
             } = this.props, {
                 visible: d
-            } = this.state, m = (0, a.jsx)(I.Consumer, {
+            } = this.state, m = (0, a.jsx)(v.Consumer, {
                 children: m => {
                     let p = m || d || !i;
                     return [f.ObscureReason.EXPLICIT_CONTENT, f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(s) && !t ? (0, a.jsxs)("div", {
@@ -152,7 +152,7 @@ function(e, t, n) {
                             "aria-hidden": !p,
                             className: g.spoilerInnerContainer,
                             children: e(!p)
-                        }), (0, a.jsx)(v, {
+                        }), (0, a.jsx)(I, {
                             obscureReason: s,
                             isVisible: d,
                             handleToggleObscurity: this.handleToggleObscurity,
@@ -193,7 +193,7 @@ function(e, t, n) {
             } = this.props, {
                 visible: r
             } = this.state;
-            return (0, a.jsx)(I.Consumer, {
+            return (0, a.jsx)(v.Consumer, {
                 children: u => {
                     let d = u || r;
                     return [f.ObscureReason.EXPLICIT_CONTENT, f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(s) ? (0, a.jsxs)("div", {
@@ -212,7 +212,7 @@ function(e, t, n) {
                             "aria-hidden": !d,
                             className: g.spoilerInnerContainer,
                             children: e(!d)
-                        }), (0, a.jsx)(v, {
+                        }), (0, a.jsx)(I, {
                             obscureReason: s,
                             isVisible: r,
                             handleToggleObscurity: this.handleToggleObscurity,
@@ -246,7 +246,7 @@ function(e, t, n) {
                 className: n
             } = this.props, {
                 visible: l
-            } = this.state, i = (0, a.jsx)(I.Consumer, {
+            } = this.state, i = (0, a.jsx)(v.Consumer, {
                 children: i => {
                     let r = i || l,
                         u = s.Children.toArray(e(r)),

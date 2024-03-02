@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         maybeFetchSoundboardSounds: function() {
-            return v
+            return I
         },
         uploadSound: function() {
-            return I
+            return v
         },
         updateSound: function() {
             return _
@@ -89,10 +89,10 @@ function(e, t, n) {
             type: "REQUEST_SOUNDBOARD_SOUNDS",
             guildIds: e
         }), t
-    }, v = () => __OVERLAY__ ? (s.default.dispatch({
+    }, I = () => __OVERLAY__ ? (s.default.dispatch({
         type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
     }), Promise.all([])) : Promise.all([S(), T()]);
-    async function I(e) {
+    async function v(e) {
         let {
             guildId: t,
             name: n,

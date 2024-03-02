@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("590456"),
         S = n("49111"),
         T = n("782340"),
-        v = n("715392"),
-        I = n("862939");
+        I = n("715392"),
+        v = n("862939");
 
     function _(e) {
         var t, n;
@@ -66,10 +66,10 @@ function(e, t, n) {
         return (w.length > 0 && (a = (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(o.Heading, {
                 variant: "eyebrow",
-                className: I.title,
+                className: v.title,
                 children: T.default.Messages.CONNECTIONS
             }), (0, l.jsxs)("div", {
-                className: s(v.connectionsContainer, R),
+                className: s(I.connectionsContainer, R),
                 children: [w, (0, l.jsxs)(o.Clickable, {
                     onClick: function() {
                         (0, E.openUserProfileModal)({
@@ -82,25 +82,25 @@ function(e, t, n) {
                             }
                         }), null == O || O()
                     },
-                    className: v.connections,
+                    className: I.connections,
                     children: [(0, l.jsx)(o.Text, {
                         variant: "text-md/semibold",
                         color: "interactive-active",
-                        className: v.connectionsText,
+                        className: I.connectionsText,
                         children: T.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
                     }), (0, l.jsx)(m.default, {
                         direction: m.default.Directions.RIGHT,
-                        className: v.connectionsCaret
+                        className: I.connectionsCaret
                     })]
                 })]
             })]
         })), U.length > 0 && (_ = (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(o.Heading, {
                 variant: "eyebrow",
-                className: I.title,
+                className: v.title,
                 children: T.default.Messages.APPS
             }), (0, l.jsx)("div", {
-                className: s(v.connectionsContainer, R),
+                className: s(I.connectionsContainer, R),
                 children: U.map(e => (0, l.jsx)(h.ConnectedApplicationUserRoleAccount, {
                     applicationRoleConnection: e,
                     locale: k

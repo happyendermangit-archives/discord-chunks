@@ -166,8 +166,8 @@ function(e, t, n) {
                 onActivate: g,
                 className: S,
                 inputProps: T,
-                focusAfterReady: v
-            } = this.props, I = null != t && t.length > 0, _ = !1, N = [];
+                focusAfterReady: I
+            } = this.props, v = null != t && t.length > 0, _ = !1, N = [];
             return null != p && p.length > 0 && ("string" == typeof p[0] ? p.forEach((e, t) => N.push((0, a.jsxs)(u.Anchor, {
                 focusProps: {
                     offset: 4
@@ -228,14 +228,14 @@ function(e, t, n) {
                             onFocus: this.handleFocus,
                             disabled: i,
                             "aria-disabled": i,
-                            autoFocus: !v && e,
+                            autoFocus: !I && e,
                             onMouseDown: g,
                             ...this.defaultInputProps,
                             ...T
                         }), null != s ? (0, a.jsx)(C, {
                             size: r,
                             themeOverride: l,
-                            hasContent: I,
+                            hasContent: v,
                             onClear: this.handleClear
                         }) : null]
                     })

@@ -29,8 +29,8 @@ function(e, t, n) {
             channel: n,
             containerWidth: a,
             onClose: T,
-            onSelect: v,
-            analyticsSource: I,
+            onSelect: I,
+            analyticsSource: v,
             suppressPlaySound: _,
             shouldShowUpsell: N = !0,
             gridNotice: A,
@@ -46,7 +46,7 @@ function(e, t, n) {
             type: r.ImpressionTypes.POPOUT,
             name: r.ImpressionNames.SOUNDBOARD_POPOUT,
             properties: {
-                source: I,
+                source: v,
                 guild_id: t,
                 media_session_id: P
             }
@@ -62,7 +62,7 @@ function(e, t, n) {
                     guildId: t,
                     channel: n,
                     onClose: T,
-                    onSelect: v,
+                    onSelect: I,
                     containerWidth: a,
                     suppressPlaySound: _,
                     shouldShowUpsell: N,

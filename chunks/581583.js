@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("206230"),
         S = n("454273"),
         T = n("339023"),
-        v = n("405645"),
-        I = n("592407"),
+        I = n("405645"),
+        v = n("592407"),
         _ = n("26989"),
         N = n("957255"),
         A = n("697218"),
@@ -88,14 +88,14 @@ function(e, t, n) {
             canRemove: E,
             className: g,
             role: S,
-            onRemove: I,
+            onRemove: v,
             guildId: _,
             disableBorderColor: N,
             onMouseDown: A
         } = e, {
             tabIndex: x,
             ...y
-        } = (0, d.useListItem)(S.id), R = (0, v.useRoleIcon)({
+        } = (0, d.useListItem)(S.id), R = (0, I.useRoleIcon)({
             roleId: S.id,
             size: 16,
             guildId: _
@@ -143,7 +143,7 @@ function(e, t, n) {
                 ...y,
                 children: [(0, l.jsxs)(p.Clickable, {
                     className: D.roleRemoveButton,
-                    onClick: E ? I : void 0,
+                    onClick: E ? v : void 0,
                     tabIndex: E ? x : -1,
                     focusProps: {
                         focusClassName: D.roleRemoveIconFocused
@@ -256,18 +256,18 @@ function(e, t, n) {
         } = e, C = i.useRef({}), S = i.useCallback(e => {
             var t;
             let l = r.filter(t => t !== e.id);
-            (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? E.default.unassignGuildRoleConnection(a.id, e.id) : I.default.updateMemberRoles(a.id, n.id, l, [], [e.id])
+            (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? E.default.unassignGuildRoleConnection(a.id, e.id) : v.default.updateMemberRoles(a.id, n.id, l, [], [e.id])
         }, [r, a.id, n.id]), T = i.useCallback(e => {
-            let t = r; - 1 === t.indexOf(e) && (t = t.concat([e])), I.default.updateMemberRoles(a.id, n.id, t, [e], [])
-        }, [r, a.id, n.id]), [v, _] = i.useState(null), x = i.useMemo(() => {
+            let t = r; - 1 === t.indexOf(e) && (t = t.concat([e])), v.default.updateMemberRoles(a.id, n.id, t, [e], [])
+        }, [r, a.id, n.id]), [I, _] = i.useState(null), x = i.useMemo(() => {
             let e = Object.values(a.roles).filter(e => r.includes(e.id)).sort((e, t) => {
                 var n, l;
                 let i = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
                     a = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) !== null;
                 return i && !a ? 1 : !i && a ? -1 : 0
             });
-            return null != v ? e.slice(0, v) : e
-        }, [a.roles, v, r]), y = r.length - x.length;
+            return null != I ? e.slice(0, I) : e
+        }, [a.roles, I, r]), y = r.length - x.length;
         i.useLayoutEffect(() => {
             if (c) return;
             if ("number" != typeof f) throw Error("Unexpected null width");
@@ -311,7 +311,7 @@ function(e, t, n) {
                     disableBorderColor: g
                 }, e.id)
             });
-        return null != v && 0 !== y ? t = (0, l.jsx)(G, {
+        return null != I && 0 !== y ? t = (0, l.jsx)(G, {
             ...e,
             numRolesHidden: y
         }) : R && (t = (0, l.jsx)(B, {

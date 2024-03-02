@@ -30,7 +30,7 @@ function(e, t, n) {
         }
     };
 
-    function v(e, t, n) {
+    function I(e, t, n) {
         var l, i;
         let a;
         return n.commands === h.CommandMode.OLD_BUILT_INS ? (a = t.split(" ")[0].substring(E.COMMAND_SENTINEL.length), t = t.substring((null !== (l = a.length) && void 0 !== l ? l : 0) + E.COMMAND_SENTINEL.length)) : a = null === (i = d.default.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.name, {
@@ -38,7 +38,7 @@ function(e, t, n) {
             query: t.trim()
         }
     }
-    let I = {
+    let v = {
         stores: [d.default, f.default],
         matches(e, t, n, l, i) {
             var a;
@@ -48,7 +48,7 @@ function(e, t, n) {
             let {
                 command: a,
                 query: r
-            } = v(e, n, l);
+            } = I(e, n, l);
             if (null == a) return T;
             let u = s.findKey(g.ChannelTextAreaIntegrations, e => e.command === a);
             i && null != u && r.length > 0 && o.default.search(u, r);
@@ -76,14 +76,14 @@ function(e, t, n) {
             } = e, {
                 command: E,
                 query: T
-            } = v(s, o, u);
+            } = I(s, o, u);
             if (null == E || 0 === T.length) return null;
             if (n) return (0, l.jsx)(r.Spinner, {
                 className: S.spinner,
                 type: r.Spinner.Type.SPINNING_CIRCLE
             });
             if (null != t) {
-                var I, _;
+                var v, _;
                 let e = !1,
                     n = t.map((t, n) => {
                         if (t.type === g.ChannelTextAreaIntegrationTypes.GIF) {
@@ -101,7 +101,7 @@ function(e, t, n) {
                             }, "".concat(t.meta.url).concat(t.meta.src))
                         }
                     }),
-                    r = u.commands === h.CommandMode.OLD_BUILT_INS ? E : null !== (_ = null === (I = d.default.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== _ ? _ : E,
+                    r = u.commands === h.CommandMode.OLD_BUILT_INS ? E : null !== (_ = null === (v = d.default.getActiveCommand(s.id)) || void 0 === v ? void 0 : v.integrationTitle) && void 0 !== _ ? _ : E,
                     o = T.length > 0 && null != r ? C.default.Messages.CONTENT_MATCHING.format({
                         query: T,
                         command: r
@@ -156,5 +156,5 @@ function(e, t, n) {
     function _(e) {
         return e.meta.url
     }
-    var N = I
+    var N = v
 }

@@ -30,7 +30,7 @@ function(e, t, n) {
             S = (0, s.hex2int)(null != n ? n : C),
             T = (0, s.int2hsl)(S, !1, E ? g : null);
         t = null != m ? m : .3 > (0, s.getDarkness)(S) ? o.default.unsafe_rawColors.PRIMARY_630.css : o.default.unsafe_rawColors.WHITE_500.css;
-        let v = i / 8;
+        let I = i / 8;
         return (0, l.jsx)("div", {
             style: {
                 background: T,
@@ -43,10 +43,10 @@ function(e, t, n) {
             children: (0, l.jsx)(c.default, {
                 color: t,
                 className: a(f.linkIcon, h),
-                width: i - 2 * v,
-                height: i - 2 * v,
+                width: i - 2 * I,
+                height: i - 2 * I,
                 style: {
-                    margin: v
+                    margin: I
                 }
             })
         })

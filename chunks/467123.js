@@ -5,7 +5,7 @@ function(e, t, n) {
             return C
         },
         isPointInCodeBlock: function() {
-            return I
+            return v
         },
         hasOpenPlainTextCodeBlock: function() {
             return _
@@ -114,12 +114,12 @@ function(e, t, n) {
                                     if (null != i && null != l.default.getLanguage(i)) {
                                         let n = function(e, t) {
                                             let n = "".concat(e, "-").concat(t),
-                                                l = v.get(n);
+                                                l = I.get(n);
                                             if (null != l) return l;
                                             let i = r.default.highlight(t, e, !1);
                                             if (null == i || i.illegal) return null;
                                             let a = i.value.split("\n");
-                                            return v.set(n, a), a
+                                            return I.set(n, a), a
                                         }(e, i);
                                         if (null != n && n.length === t.length) {
                                             let e = [];
@@ -185,9 +185,9 @@ function(e, t, n) {
             maxAge: 1 * s.default.Millis.MINUTE,
             updateAgeOnGet: !0
         },
-        v = new a(T);
+        I = new a(T);
 
-    function I(e, t) {
+    function v(e, t) {
         let n = 0;
         for (let i of c.EditorUtils.nodes(e, {
                 at: {
@@ -212,6 +212,6 @@ function(e, t, n) {
     function _(e) {
         if (null == e.selection) return !1;
         let t = c.RangeUtils.start(e.selection);
-        return I(e, t)
+        return v(e, t)
     }
 }

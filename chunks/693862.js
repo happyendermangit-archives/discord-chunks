@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         buttonsContainer: "buttonsContainer_ceed29",
@@ -20,7 +20,7 @@ function(e, t, n) {
         roleRow: "roleRow_c357d5",
         roleRowDisableHover: "roleRowDisableHover__9fe35",
         roleRowDragging: "roleRowDragging_c5306c",
-        shield: "shield__29b93 " + n("731652").desaturateUserColors,
+        shield: "shield__29b93 " + o("731652").desaturateUserColors,
         subscriptionRoleIcon: "subscriptionRoleIcon_e50c21",
         tooltip: "tooltip_c7d6e6"
     }

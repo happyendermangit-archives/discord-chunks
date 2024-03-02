@@ -35,8 +35,8 @@ function(e, t, n) {
         C = n("101263"),
         S = n("865453"),
         T = n("153043"),
-        v = n("256941"),
-        I = n("270295"),
+        I = n("256941"),
+        v = n("270295"),
         _ = n("626301"),
         N = n("505233"),
         A = n("635956"),
@@ -269,7 +269,7 @@ function(e, t, n) {
             } : {
                 isRoleSubscriptionEmoji: T.isPurchasableRoleSubscriptionEmoji(b),
                 isUnusableRoleSubscriptionEmoji: T.isUnusableRoleSubscriptionEmoji(b, null != J ? J : void 0),
-                userIsRoleSubscriber: v.default.getUserSubscriptionRoles(b.guildId).size > 0
+                userIsRoleSubscriber: I.default.getUserSubscriptionRoles(b.guildId).size > 0
             }, [b, J]), er = !!ea && (0, E.shouldHideGuildPurchaseEntryPoints)(null == b ? void 0 : b.guildId), {
                 analyticsLocations: eo
             } = (0, p.default)(m.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
@@ -374,7 +374,7 @@ function(e, t, n) {
                             fullWidth: !0,
                             onClick: e,
                             children: ed.text
-                        }) : void 0, ec && (0, l.jsx)(I.default, {
+                        }) : void 0, ec && (0, l.jsx)(v.default, {
                             className: z.ctaButton,
                             size: d.Button.Sizes.SMALL,
                             fullWidth: !0,

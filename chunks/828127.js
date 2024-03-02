@@ -1,7 +1,7 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
-        howItWorksCard: "howItWorksCard__6ff71 " + n("491942").card,
+        howItWorksCard: "howItWorksCard__6ff71 " + o("491942").card,
         howItWorksContainer: "howItWorksContainer_ef4386",
         howItWorksDescription: "howItWorksDescription__89167",
         howItWorksImage: "howItWorksImage__91d14",

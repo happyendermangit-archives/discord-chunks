@@ -23,9 +23,9 @@ function(e, t, n) {
         C = n("49111"),
         S = n("646718"),
         T = n("782340"),
-        v = n("669821");
-    let I = "premiumRetentionEmojiPickerNotice",
-        _ = o.default.get(I);
+        I = n("669821");
+    let v = "premiumRetentionEmojiPickerNotice",
+        _ = o.default.get(v);
     var N = e => {
         let {
             closePopout: t,
@@ -46,12 +46,12 @@ function(e, t, n) {
         if (_ === R) return null;
         let M = E.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_0 ? m.GradientCssUrls.PREMIUM_TIER_0 : E.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_1 ? m.GradientCssUrls.PREMIUM_TIER_1 : m.GradientCssUrls.PREMIUM_TIER_2;
         return (0, l.jsxs)("div", {
-            className: v.premiumRetentionNotice,
+            className: I.premiumRetentionNotice,
             children: [(0, l.jsx)(h.default, {
-                className: v.premiumRetentionNoticeIcon,
+                className: I.premiumRetentionNoticeIcon,
                 color: M
             }), (0, l.jsxs)("div", {
-                className: v.premiumRetentionNoticeContent,
+                className: I.premiumRetentionNoticeContent,
                 children: [(0, l.jsx)(u.Text, {
                     variant: "text-xs/normal",
                     children: T.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
@@ -68,10 +68,10 @@ function(e, t, n) {
                 })]
             }), (0, l.jsx)(u.Clickable, {
                 onClick: () => {
-                    o.default.set(I, R), _ = R, N(!0)
+                    o.default.set(v, R), _ = R, N(!0)
                 },
                 children: (0, l.jsx)(p.default, {
-                    className: v.premiumRetentionNoticeClose
+                    className: I.premiumRetentionNoticeClose
                 })
             })]
         })

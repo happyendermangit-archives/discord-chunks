@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("773336"),
         S = n("429569"),
         T = n("215550"),
-        v = n("782340"),
-        I = n("348473");
+        I = n("782340"),
+        v = n("348473");
     let _ = (e, t) => "".concat(e, ":").concat(t),
         N = i.forwardRef(function(e, t) {
             let n, {
@@ -56,23 +56,23 @@ function(e, t, n) {
             return (0, l.jsx)(o.FocusRing, {
                 children: (0, l.jsx)("button", {
                     ...O,
-                    className: s(I.emojiItem, {
-                        [I.emojiItemLarge]: u,
-                        [I.emojiItemMedium]: d,
-                        [I.emojiItemSelected]: c,
+                    className: s(v.emojiItem, {
+                        [v.emojiItemLarge]: u,
+                        [v.emojiItemMedium]: d,
+                        [v.emojiItemSelected]: c,
                         [null != x ? x : ""]: c,
-                        [I.emojiItemDisabled]: m && !M,
-                        [I.showPulse]: h
+                        [v.emojiItemDisabled]: m && !M,
+                        [v.showPulse]: h
                     }),
                     "data-type": p.PickerContextMenuDataTypes.EMOJI,
                     "data-id": i.id,
                     "data-name": i.name,
                     ref: t,
                     children: (0, l.jsx)(T.default, {
-                        "aria-label": (n = i.allNamesString, ((null == R ? void 0 : R.name) != null && (n = v.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+                        "aria-label": (n = i.allNamesString, ((null == R ? void 0 : R.name) != null && (n = I.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
                             names: n,
                             guildName: R.name
-                        })), a) ? v.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+                        })), a) ? I.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
                             names: n
                         }) : n),
                         columnIndex: E,
@@ -97,7 +97,7 @@ function(e, t, n) {
             onInspect: g,
             onSelect: S,
             isScrolling: T,
-            isUsingKeyboardNavigation: I,
+            isUsingKeyboardNavigation: v,
             showEmojiFavoriteTooltip: A,
             surrogateCodePoint: x,
             selectedItemClassName: y,
@@ -117,14 +117,14 @@ function(e, t, n) {
             isDisabled: W,
             columnIndex: Y
         } = t, z = e => {
-            if (e.stopPropagation(), T.current || I.current) return;
+            if (e.stopPropagation(), T.current || v.current) return;
             let n = e.altKey;
             n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && b(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), S(t, {
                 isFinalSelection: !e.shiftKey,
                 toggleFavorite: n
             })
         }, Z = () => {
-            !T.current && !I.current && g(t)
+            !T.current && !v.current && g(t)
         }, J = e => {
             (0, u.openContextMenuLazy)(e, async () => {
                 let {
@@ -182,7 +182,7 @@ function(e, t, n) {
             }))
         };
         return A ? (0, l.jsx)(o.Tooltip, {
-            text: v.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
+            text: I.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
                 key: (0, C.isMac)() ? "Opt" : "Alt"
             }),
             position: "top",

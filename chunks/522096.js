@@ -28,8 +28,8 @@ function(e, t, n) {
             renderRow: C,
             renderSection: S,
             renderSectionHeader: T,
-            renderSectionFooter: v,
-            renderInspector: I,
+            renderSectionFooter: I,
+            renderInspector: v,
             renderEmptySearchState: _,
             renderCategoryList: N,
             renderHeaderAccessories: A,
@@ -80,10 +80,10 @@ function(e, t, n) {
                 gutterWidth: z,
                 rowIndex: e
             }, t => Z(e, t), t => c.setInspectedExpressionPosition(t, e))
-        }, [V, Z, J, z, Q, C, c]), ee = i.useCallback(e => null == S ? void 0 : S(t[e]), [t, S]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+        }, [V, Z, J, z, Q, C, c]), ee = i.useCallback(e => null == S ? void 0 : S(t[e]), [t, S]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == I ? void 0 : I(t[e]), [t, I]), el = i.useCallback(() => {
             var e;
-            return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
-        }, [V, B.columnIndex, B.rowIndex, I]);
+            return null == v ? void 0 : v(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
+        }, [V, B.columnIndex, B.rowIndex, v]);
         i.useEffect(() => {
             m(G)
         }, [m, G]), i.useEffect(() => c.resetStoreState, [c.resetStoreState]), i.useLayoutEffect(() => {
@@ -123,8 +123,8 @@ function(e, t, n) {
                         renderRow: $,
                         renderSection: null != S ? ee : void 0,
                         renderSectionHeader: null != T ? et : void 0,
-                        renderSectionFooter: null != v ? en : void 0,
-                        renderInspector: null != I ? el : void 0,
+                        renderSectionFooter: null != I ? en : void 0,
+                        renderInspector: null != v ? el : void 0,
                         renderEmptySearchState: _,
                         rowCount: K,
                         rowCountBySection: W,

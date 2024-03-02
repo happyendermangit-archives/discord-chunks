@@ -26,7 +26,7 @@ function(e, t, n) {
             channelId: t,
             option: n,
             keyboardModeEnabled: a
-        } = e, C = i.useRef(null), [S, T] = i.useState(!1), v = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), I = i.useRef(null), _ = i.useCallback(() => {
+        } = e, C = i.useRef(null), [S, T] = i.useState(!1), I = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), v = i.useRef(null), _ = i.useCallback(() => {
             T(!0)
         }, []), N = i.useCallback(() => {
             T(!1)
@@ -46,13 +46,13 @@ function(e, t, n) {
             })
         }, [t, n]);
         return (i.useEffect(() => {
-            let e = I.current;
-            return null == v && (null == e || e.addEventListener("dragover", _, !1), null == e || e.addEventListener("dragleave", N, !1), null == e || e.addEventListener("drop", A, !1)), () => {
+            let e = v.current;
+            return null == I && (null == e || e.addEventListener("dragover", _, !1), null == e || e.addEventListener("dragleave", N, !1), null == e || e.addEventListener("drop", A, !1)), () => {
                 null == e || e.removeEventListener("dragover", _, !1), null == e || e.removeEventListener("dragleave", N, !1), null == e || e.removeEventListener("drop", A, !1)
             }
-        }, [v, _, N, A]), null != v) ? (0, l.jsx)(p.default, {
+        }, [I, _, N, A]), null != I) ? (0, l.jsx)(p.default, {
             channelId: t,
-            upload: v,
+            upload: I,
             keyboardModeEnabled: a,
             draftType: c.DraftType.SlashCommand,
             label: (0, l.jsxs)(i.Fragment, {
@@ -64,7 +64,7 @@ function(e, t, n) {
                     tag: "span",
                     variant: "text-md/normal",
                     color: "text-brand",
-                    children: v.filename
+                    children: I.filename
                 })]
             }),
             canEdit: !1
@@ -82,7 +82,7 @@ function(e, t, n) {
                 [E.emptyOptionActive]: S
             }),
             draftType: c.DraftType.SlashCommand,
-            ref: I,
+            ref: v,
             children: [(0, l.jsx)("span", {
                 className: s(E.optionName, {
                     [E.optionNameActive]: S

@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("476765"),
         S = n("507217"),
         T = n("240249"),
-        v = n("972620"),
-        I = n("524768"),
+        I = n("972620"),
+        v = n("524768"),
         _ = n("389153"),
         N = n("586450"),
         A = n("41884"),
@@ -61,7 +61,7 @@ function(e, t, n) {
             filterSection: J
         } = T.useDiscovery(n, {
             commandType: d.ApplicationCommandType.CHAT,
-            builtIns: a ? v.BuiltInCommandFilter.ONLY_TEXT : v.BuiltInCommandFilter.ALLOW,
+            builtIns: a ? I.BuiltInCommandFilter.ONLY_TEXT : I.BuiltInCommandFilter.ALLOW,
             applicationCommands: !a
         }, {
             placeholderCount: 7,
@@ -113,7 +113,7 @@ function(e, t, n) {
                     channelId: n.id,
                     command: e,
                     section: t,
-                    location: I.ApplicationCommandTriggerLocations.DISCOVERY,
+                    location: v.ApplicationCommandTriggerLocations.DISCOVERY,
                     triggerSection: l
                 })
             }, [n.id]);
@@ -182,7 +182,7 @@ function(e, t, n) {
                 let a = K[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     r = "".concat(a.section.id, ":").concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || a.section.id !== s.applicationId && a.section.id !== y.BuiltInSectionId.FRECENCY || s.inputType === I.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(A.default, {}, r);
+                if (null == s || a.section.id !== s.applicationId && a.section.id !== y.BuiltInSectionId.FRECENCY || s.inputType === v.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(A.default, {}, r);
                 let o = H.find(e => e.id === s.applicationId);
                 return (0, l.jsx)(E.default.NewCommand, {
                     index: e,

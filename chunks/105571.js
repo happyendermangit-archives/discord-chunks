@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("659500"),
         S = n("82372"),
         T = n("476606"),
-        v = n("540843"),
-        I = n("49111"),
+        I = n("540843"),
+        v = n("49111"),
         _ = n("317041"),
         N = n("782340"),
         A = n("23429"),
@@ -41,7 +41,7 @@ function(e, t, n) {
                 command: n,
                 section: a,
                 location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-            }), C.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+            }), C.ComponentDispatch.dispatch(v.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                 channelId: t.id
             })
         }, [t, n, a]);
@@ -74,7 +74,7 @@ function(e, t, n) {
             limit: _.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
         }), {
-            commands: I
+            commands: v
         } = (0, T.default)({
             sectionId: u.id,
             commandsByActiveSection: C
@@ -135,8 +135,8 @@ function(e, t, n) {
                         lineClamp: 3,
                         children: b
                     })]
-                }), (0, l.jsx)(v.default, {
-                    commands: I,
+                }), (0, l.jsx)(I.default, {
+                    commands: v,
                     channel: a
                 }), (0, l.jsxs)("div", {
                     className: A.commandListHeader,
@@ -149,7 +149,7 @@ function(e, t, n) {
                         children: ["Popular", (0, l.jsx)(E.default, {})]
                     })]
                 }), (0, l.jsx)("ul", {
-                    children: I.map(e => (0, l.jsx)(y, {
+                    children: v.map(e => (0, l.jsx)(y, {
                         channel: a,
                         command: e,
                         section: u

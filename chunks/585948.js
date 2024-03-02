@@ -29,7 +29,7 @@ function(e, t, n) {
             getRowProps: C,
             gridContainerProps: S,
             handleGridContainerKeyDown: T,
-            isUsingKeyboardNavigation: v
+            isUsingKeyboardNavigation: I
         } = (0, r.useExpressionPickerGridKeyboardNavigation)({
             columnCounts: t,
             gridNavigatorId: d,
@@ -55,7 +55,7 @@ function(e, t, n) {
             getRowProps: C,
             gridContainerProps: S,
             handleGridContainerKeyDown: T,
-            isUsingKeyboardNavigation: v
+            isUsingKeyboardNavigation: I
         }
     }
 }

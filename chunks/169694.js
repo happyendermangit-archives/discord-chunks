@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("970153"),
         S = n("939563"),
         T = n("385887"),
-        v = n("566819"),
-        I = n("49111"),
+        I = n("566819"),
+        v = n("49111"),
         _ = n("406291");
     let N = new Set(["applicationCommandOption"]),
         A = new Set([l.ApplicationCommandOptionType.ATTACHMENT]),
@@ -38,7 +38,7 @@ function(e, t, n) {
             insertData: m,
             isInline: p,
             isVoid: h,
-            onChange: I,
+            onChange: v,
             deleteBackward: y,
             deleteForward: j,
             deleteFragment: U
@@ -135,9 +135,9 @@ function(e, t, n) {
                                                 h = m.toLocaleLowerCase(),
                                                 g = f.PREFIX_COMMAND_REGEX.exec(h);
                                             null != g && (h = _.COMMAND_SENTINEL + h.substring(g.length));
-                                            let I = "".concat(_.COMMAND_SENTINEL).concat(d.displayName).toLocaleLowerCase(),
+                                            let v = "".concat(_.COMMAND_SENTINEL).concat(d.displayName).toLocaleLowerCase(),
                                                 N = "".concat(_.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
-                                            h.startsWith(I) && h.length > I.length ? p = m.substring(I.length).trim() : h.startsWith(N) && h.length > N.length && (p = m.substring(N.length).trim());
+                                            h.startsWith(v) && h.length > v.length ? p = m.substring(v.length).trim() : h.startsWith(N) && h.length > N.length && (p = m.substring(N.length).trim());
                                             let x = [],
                                                 y = null,
                                                 O = null;
@@ -188,8 +188,8 @@ function(e, t, n) {
                                             };
                                             T.EditorUtils.withoutNormalizing(e, () => {
                                                 for (let [, t] of(S.SlateTransforms.insertNodes(e, [M], {
-                                                        at: v.FIRST_BLOCK_PATH
-                                                    }), T.EditorUtils.blocks(e).reverse())) T.PathUtils.isAfter(t, v.FIRST_BLOCK_PATH) && S.SlateTransforms.removeNodes(e, {
+                                                        at: I.FIRST_BLOCK_PATH
+                                                    }), T.EditorUtils.blocks(e).reverse())) T.PathUtils.isAfter(t, I.FIRST_BLOCK_PATH) && S.SlateTransforms.removeNodes(e, {
                                                     at: t,
                                                     voids: !0
                                                 })
@@ -254,7 +254,7 @@ function(e, t, n) {
                                 }
                             }
                             if (null != g && null != p) {
-                                var I;
+                                var v;
                                 ! function(e, t) {
                                     if (null == t.options || 0 === t.options.length) return !1;
                                     let n = E.findTextOptions(e, t);
@@ -279,11 +279,11 @@ function(e, t, n) {
                                         let l = t.text.trim();
                                         t.text !== l && S.SlateTransforms.textToText(e, l, {
                                             anchor: {
-                                                path: v.FIRST_TEXT_PATH,
+                                                path: I.FIRST_TEXT_PATH,
                                                 offset: 0
                                             },
                                             focus: {
-                                                path: v.FIRST_TEXT_PATH,
+                                                path: I.FIRST_TEXT_PATH,
                                                 offset: t.text.length
                                             }
                                         })
@@ -294,7 +294,7 @@ function(e, t, n) {
                                         match: e => T.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                                         mode: "lowest"
                                     }),
-                                    l = null !== (I = null == n ? void 0 : n[0].optionName) && void 0 !== I ? I : null;
+                                    l = null !== (v = null == n ? void 0 : n[0].optionName) && void 0 !== v ? v : null;
                                 return M({
                                     guildId: a.guild_id,
                                     channelId: a.id,
@@ -327,7 +327,7 @@ function(e, t, n) {
                     D = T.EditorUtils.richValue(e), k = e.selection, w = u.activeCommand, G = h
                 }
             }
-            I()
+            v()
         }, e
     }
 
@@ -341,7 +341,7 @@ function(e, t, n) {
             }]
         })), o = [r.length - 1];
         for (let [, t] of(S.SlateTransforms.insertNodes(e, r, {
-                at: v.FIRST_BLOCK_PATH
+                at: I.FIRST_BLOCK_PATH
             }), T.EditorUtils.blocks(e).reverse())) T.PathUtils.isAfter(t, o) && S.SlateTransforms.removeNodes(e, {
             at: t,
             voids: !0
@@ -361,11 +361,11 @@ function(e, t, n) {
         if (null == l) return !1;
         let i = t.options[0],
             a = {
-                path: v.FIRST_TEXT_PATH,
+                path: I.FIRST_TEXT_PATH,
                 offset: t.displayName.length + 2
             },
             s = {
-                path: v.FIRST_TEXT_PATH,
+                path: I.FIRST_TEXT_PATH,
                 offset: l.text.length
             };
         return !(!l.text.startsWith("".concat(_.COMMAND_SENTINEL).concat(t.displayName, " ").toLocaleLowerCase()) || T.PointUtils.equals(a, s)) && (S.SlateTransforms.textToInline(e, {
@@ -444,7 +444,7 @@ function(e, t, n) {
             commandText: a
         } = L(e);
         !(null == i || null == a || a.endsWith(" ")) && T.PointUtils.equals(l, {
-            path: v.FIRST_TEXT_PATH,
+            path: I.FIRST_TEXT_PATH,
             offset: i.displayName.length + 1
         }) && S.SlateTransforms.insertText(e, " ")
     }
@@ -456,6 +456,6 @@ function(e, t, n) {
         if (null == u || null == d) return null;
         if (null != u.choices) return null === (o = u.choices.find(e => e.value === d.value)) || void 0 === o ? void 0 : o.displayName;
         let c = null === (s = d.value) || void 0 === s ? void 0 : s.toString();
-        return u.type === l.ApplicationCommandOptionType.CHANNEL || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != m.default.getChannel(c) ? "<#".concat(c, ">	") : u.type === l.ApplicationCommandOptionType.USER || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != h.default.getUser(c) ? "<@".concat(c, ">") : u.type === l.ApplicationCommandOptionType.ROLE || u.type === l.ApplicationCommandOptionType.MENTIONABLE && (null === (r = p.default.getGuild(t.guild_id)) || void 0 === r ? void 0 : r.getRole(null != c ? c : I.EMPTY_STRING_SNOWFLAKE_ID)) != null ? "<@&".concat(c, ">") : c
+        return u.type === l.ApplicationCommandOptionType.CHANNEL || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != m.default.getChannel(c) ? "<#".concat(c, ">	") : u.type === l.ApplicationCommandOptionType.USER || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != h.default.getUser(c) ? "<@".concat(c, ">") : u.type === l.ApplicationCommandOptionType.ROLE || u.type === l.ApplicationCommandOptionType.MENTIONABLE && (null === (r = p.default.getGuild(t.guild_id)) || void 0 === r ? void 0 : r.getRole(null != c ? c : v.EMPTY_STRING_SNOWFLAKE_ID)) != null ? "<@&".concat(c, ">") : c
     }
 }

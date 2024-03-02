@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("158998"),
         S = n("718422"),
         T = n("49111"),
-        v = n("782340"),
-        I = n("925063");
+        I = n("782340"),
+        v = n("925063");
 
     function _(e) {
         let {
@@ -52,12 +52,12 @@ function(e, t, n) {
                 }), !0
             }
             e.which === T.KeyboardKeys.SPACE && e.stopPropagation()
-        }, [a, t]), y = A ? v.default.Messages.QUICK_DM_BLOCKED : v.default.Messages.QUICK_DM_USER.format({
+        }, [a, t]), y = A ? I.default.Messages.QUICK_DM_BLOCKED : I.default.Messages.QUICK_DM_USER.format({
             name: C.default.getName(t)
         });
         return (0, l.jsx)(d.TextInput, {
             className: r,
-            inputClassName: s(_, I.input),
+            inputClassName: s(_, v.input),
             inputRef: N,
             autoFocus: n,
             placeholder: y,

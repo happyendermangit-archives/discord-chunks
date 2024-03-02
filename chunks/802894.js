@@ -24,8 +24,8 @@ function(e, t, n) {
         C = n("49111"),
         S = n("724210"),
         T = n("782340"),
-        v = n("560158");
-    let I = () => {
+        I = n("560158");
+    let v = () => {
         let e = (0, o.default)();
         return (0, s.isThemeLight)(e) ? n("602291") : n("609708")
     };
@@ -35,7 +35,7 @@ function(e, t, n) {
             onClose: t,
             guildId: n,
             emojiId: s
-        } = e, o = I(), {
+        } = e, o = v(), {
             analyticsLocations: _
         } = (0, d.default)(u.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
         (0, c.default)({
@@ -54,39 +54,39 @@ function(e, t, n) {
             }),
             y = A ? T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
         return (0, l.jsxs)("div", {
-            className: v.container,
+            className: I.container,
             children: [(0, l.jsx)("div", {
-                className: v.background
+                className: I.background
             }), (0, l.jsxs)("div", {
-                className: v.content,
+                className: I.content,
                 children: [(0, l.jsx)(r.Button, {
                     look: r.Button.Looks.BLANK,
                     size: r.Button.Sizes.ICON,
-                    className: v.closeButton,
+                    className: I.closeButton,
                     onClick: t,
                     children: (0, l.jsx)(h.default, {
                         "aria-label": T.default.Messages.CLOSE,
                         width: 16,
                         height: 16,
-                        className: v.closeButtonIcon
+                        className: I.closeButtonIcon
                     })
                 }), (0, l.jsx)("img", {
                     alt: "",
                     src: o,
-                    className: v.upsellImage
+                    className: I.upsellImage
                 }), (0, l.jsx)(p.default, {
                     size: 22
                 }), (0, l.jsx)(r.Heading, {
                     color: "header-primary",
                     variant: "heading-lg/extrabold",
-                    className: v.header,
+                    className: I.header,
                     children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
                 }), (0, l.jsx)(p.default, {
                     size: 4
                 }), (0, l.jsx)(r.Text, {
                     color: "header-secondary",
                     variant: "text-md/normal",
-                    className: v.description,
+                    className: I.description,
                     children: x
                 }), (0, l.jsx)(p.default, {
                     size: 24

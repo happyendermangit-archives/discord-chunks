@@ -59,7 +59,7 @@ function(e, t, n) {
                     renderLinkComponent: C,
                     isWindowFocused: S,
                     shouldHideMediaOptions: T = !1
-                } = this.props, v = {
+                } = this.props, I = {
                     alt: r,
                     src: o,
                     original: null != d ? d : o,
@@ -80,7 +80,7 @@ function(e, t, n) {
                     size: s.ModalSize.DYNAMIC,
                     "aria-label": f.default.Messages.IMAGE,
                     children: (0, l.jsx)(u.ImageModal, {
-                        ...v,
+                        ...I,
                         className: m.image,
                         shouldAnimate: S,
                         onClose: this.onCloseImage,

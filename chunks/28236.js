@@ -27,16 +27,16 @@ function(e, t, n) {
                 jumbo: n = !1
             } = e, {
                 currentPreviewRef: a
-            } = i.useContext(f.default), S = (0, r.default)([m.default], () => m.default.getSoundById(t)), T = (null == S ? void 0 : S.emojiId) != null || (null == S ? void 0 : S.emojiName) != null, [v, I] = i.useState(!1), _ = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), N = i.useCallback(() => {
+            } = i.useContext(f.default), S = (0, r.default)([m.default], () => m.default.getSoundById(t)), T = (null == S ? void 0 : S.emojiId) != null || (null == S ? void 0 : S.emojiName) != null, [I, v] = i.useState(!1), _ = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), N = i.useCallback(() => {
                 var e;
                 null == S && (0, c.maybeFetchSoundboardSounds)();
                 let n = new Audio((0, p.default)(t));
-                null != a.current && a.current.pause(), a.current = n, n.currentTime = 0, n.volume = (0, h.default)(null !== (e = null == S ? void 0 : S.volume) && void 0 !== e ? e : .5), I(!0), n.play(), n.addEventListener("ended", () => {
-                    I(!1)
+                null != a.current && a.current.pause(), a.current = n, n.currentTime = 0, n.volume = (0, h.default)(null !== (e = null == S ? void 0 : S.volume) && void 0 !== e ? e : .5), v(!0), n.play(), n.addEventListener("ended", () => {
+                    v(!1)
                 }, {
                     once: !0
                 })
-            }, [t, S, a, I]);
+            }, [t, S, a, v]);
             return _ ? null == S ? (0, l.jsxs)(o.Clickable, {
                 title: "Risky Click",
                 tag: "span",
@@ -56,7 +56,7 @@ function(e, t, n) {
                 className: C.jumboContainer,
                 children: [(0, l.jsx)("div", {
                     className: s(C.jumboOverlay, {
-                        [C.playing]: v
+                        [C.playing]: I
                     }),
                     children: (0, l.jsx)(E.default, {
                         className: C.jumboPlayIcon

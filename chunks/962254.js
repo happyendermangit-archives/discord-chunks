@@ -37,8 +37,8 @@ function(e, t, n) {
             emojiIntention: C,
             editorRef: S,
             onSendMessage: T,
-            onSendSticker: v,
-            setValue: I
+            onSendSticker: I,
+            setValue: v
         } = e, _ = {
             mentions: {
                 channel: o.ChannelMentionMode.DENY,
@@ -55,13 +55,13 @@ function(e, t, n) {
             chatInputType: g,
             emojiIntention: C,
             sendMessage: T,
-            sendSticker: v,
+            sendSticker: I,
             insertText: (e, t) => {
                 var n;
                 null === (n = S.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
             },
             replaceText: (e, t) => {
-                I(e, null != t ? t : (0, a.toRichValue)(e))
+                v(e, null != t ? t : (0, a.toRichValue)(e))
             },
             getCommandOptionValues: () => {
                 var e;

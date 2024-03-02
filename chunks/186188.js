@@ -51,8 +51,8 @@ function(e, t, n) {
         C = n("404008"),
         S = n("387111"),
         T = n("158998"),
-        v = n("680894"),
-        I = n("782340"),
+        I = n("680894"),
+        v = n("782340"),
         _ = n("918841"),
         N = n("919163");
 
@@ -95,7 +95,7 @@ function(e, t, n) {
             text: t,
             channelId: n,
             guildId: i
-        } = e, a = p.default.getGuild(i), s = m.default.getChannel(n), r = (0, u.useClydeEnabled)(a, s), o = r && "@Clyde" === t ? v.CLYDE_AI_MENTION_COLOR : null;
+        } = e, a = p.default.getGuild(i), s = m.default.getChannel(n), r = (0, u.useClydeEnabled)(a, s), o = r && "@Clyde" === t ? I.CLYDE_AI_MENTION_COLOR : null;
         return (0, l.jsx)(g.default, {
             color: o,
             children: t
@@ -168,10 +168,10 @@ function(e, t, n) {
     function M(e) {
         let {
             id: t
-        } = e, n = (0, i.useStateFromStores)([m.default], () => m.default.getChannel(t)), a = I.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
+        } = e, n = (0, i.useStateFromStores)([m.default], () => m.default.getChannel(t)), a = v.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
         if (null != n) {
             var o;
-            a = (0, d.canViewChannel)(n) ? n.name : I.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, C.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
+            a = (0, d.canViewChannel)(n) ? n.name : v.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, C.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
         }
         return r ? (0, l.jsx)(g.default, {
             iconType: s,
@@ -195,10 +195,10 @@ function(e, t, n) {
         let {
             id: t
         } = e, n = {
-            home: I.default.Messages.SERVER_GUIDE,
-            guide: I.default.Messages.SERVER_GUIDE,
-            browse: I.default.Messages.CHANNEL_BROWSER_TITLE,
-            customize: I.default.Messages.CHANNELS_AND_ROLES
+            home: v.default.Messages.SERVER_GUIDE,
+            guide: v.default.Messages.SERVER_GUIDE,
+            browse: v.default.Messages.CHANNEL_BROWSER_TITLE,
+            customize: v.default.Messages.CHANNELS_AND_ROLES
         };
         return (0, l.jsx)(g.default, {
             iconType: t,

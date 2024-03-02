@@ -40,8 +40,8 @@ function(e, t, n) {
             application: C,
             showBenefitsFirst: S,
             eligibleApplicationSubscriptionGuilds: T,
-            onComplete: v,
-            forcesTransitionToGuild: I
+            onComplete: I,
+            forcesTransitionToGuild: v
         } = e;
         (0, s.openModalLazy)(async () => {
             let {
@@ -74,8 +74,8 @@ function(e, t, n) {
                         reviewWarningMessage: E,
                         applicationId: C.id,
                         guildId: null != m ? m : void 0,
-                        onComplete: v,
-                        forcesTransitionToGuild: I
+                        onComplete: I,
+                        forcesTransitionToGuild: v
                     })
                 })
             })

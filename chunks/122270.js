@@ -75,7 +75,7 @@ function(e, t, n) {
                     description: E.hideMentionDescription ? null : e.description,
                     "aria-label": e.text
                 }, e.text)),
-                v = o.map((e, t) => (0, l.jsx)(s.default.Role, {
+                I = o.map((e, t) => (0, l.jsx)(s.default.Role, {
                     onClick: C,
                     onHover: g,
                     selected: m === t + a.length + r.length,
@@ -83,14 +83,14 @@ function(e, t, n) {
                     role: e,
                     hideDescription: E.hideMentionDescription
                 }, e.id)),
-                I = E.mentions.user === d.UserMentionMode.DENY;
-            return I ? (t = f.default.Messages.ROLES_MATCHING, n = f.default.Messages.ROLES) : (t = f.default.Messages.MEMBERS_MATCHING, n = f.default.Messages.MEMBERS), (0, l.jsxs)(i.Fragment, {
+                v = E.mentions.user === d.UserMentionMode.DENY;
+            return v ? (t = f.default.Messages.ROLES_MATCHING, n = f.default.Messages.ROLES) : (t = f.default.Messages.MEMBERS_MATCHING, n = f.default.Messages.MEMBERS), (0, l.jsxs)(i.Fragment, {
                 children: [(0, u.renderHeader)({
                     titleWithQuery: t,
                     titleWithoutQuery: n,
                     query: h,
                     getQuery: e => "".concat(c.MENTION_SENTINEL).concat(e)
-                }), S, a.length > 0 && r.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, T, a.length > 0 && o.length > 0 || r.length > 0 && o.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, v]
+                }), S, a.length > 0 && r.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, T, a.length > 0 && o.length > 0 || r.length > 0 && o.length > 0 ? (0, l.jsx)(s.default.Divider, {}) : null, I]
             }, "mentions")
         },
         onSelect(e) {

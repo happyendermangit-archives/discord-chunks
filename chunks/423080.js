@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("319165"),
         S = n("488464"),
         T = n("998716"),
-        v = n("170183"),
-        I = n("689275"),
+        I = n("170183"),
+        v = n("689275"),
         _ = n("373469"),
         N = n("546463"),
         A = n("923959"),
@@ -86,7 +86,7 @@ function(e, t, n) {
         var t, n, a;
         let {
             guild: r
-        } = e, d = r.id, m = (0, u.useStateFromStoresArray)([A.default, I.default], () => {
+        } = e, d = r.id, m = (0, u.useStateFromStoresArray)([A.default, v.default], () => {
             let e = A.default.getChannels(d)[A.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
                     let {
                         channel: t
@@ -98,9 +98,9 @@ function(e, t, n) {
                     } = e;
                     return t.id
                 }),
-                t = Object.values(I.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
+                t = Object.values(v.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
             return [...e, ...t]
-        }, [d]), p = (0, v.default)(d), h = i.useMemo(() => p.map(e => e.id), [p]), E = (0, u.useStateFromStores)([R.default], () => R.default.getVoiceStates(d), [d]), g = o.flatMap(m, e => {
+        }, [d]), p = (0, I.default)(d), h = i.useMemo(() => p.map(e => e.id), [p]), E = (0, u.useStateFromStores)([R.default], () => R.default.getVoiceStates(d), [d]), g = o.flatMap(m, e => {
             var t;
             if (e === r.afkChannelId) return [];
             let n = null !== (t = E[e]) && void 0 !== t ? t : [];

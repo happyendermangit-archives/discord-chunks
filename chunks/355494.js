@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return v
         }
     });
     var l = n("37983"),
@@ -47,7 +47,7 @@ function(e, t, n) {
                 graphic: n
             }
         },
-        v = i.memo(function(e) {
+        I = i.memo(function(e) {
             let {
                 stickersGrid: t
             } = e, n = r.StickerPickerStore.useStore(e => e.inspectedExpressionPosition), a = i.useMemo(() => {
@@ -83,5 +83,5 @@ function(e, t, n) {
                 titleSecondary: (0, p.isStandardSticker)(a) || (0, p.isGuildSticker)(a) ? u : null
             })
         });
-    var I = v
+    var v = I
 }

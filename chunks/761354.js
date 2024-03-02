@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("987772"),
         S = n("228220"),
         T = n("956089"),
-        v = n("58608"),
-        I = n("103603"),
+        I = n("58608"),
+        v = n("103603"),
         _ = n("299039"),
         N = n("9560"),
         A = n("271972"),
@@ -90,7 +90,7 @@ function(e, t, n) {
                 let {
                     width: e,
                     height: t
-                } = (0, I.zoomFit)(n.width, n.height);
+                } = (0, v.zoomFit)(n.width, n.height);
                 m({
                     width: e,
                     height: t
@@ -164,7 +164,7 @@ function(e, t, n) {
                 size: r,
                 alt: n,
                 spoiler: a,
-                renderContent: e => (0, l.jsx)(v.default, {
+                renderContent: e => (0, l.jsx)(I.default, {
                     ref: f,
                     src: d,
                     className: s(y.media, {
@@ -222,13 +222,13 @@ function(e, t, n) {
             upload: a,
             keyboardModeEnabled: c,
             label: h,
-            size: v = A.AttachmentListItemSizes.MEDIUM,
-            canEdit: I = !0,
+            size: I = A.AttachmentListItemSizes.MEDIUM,
+            canEdit: v = !0,
             hideFileName: O = !1,
             clip: R
         } = e, M = null != R;
-        v = M ? A.AttachmentListItemSizes.CLIP : v;
-        let L = v === A.AttachmentListItemSizes.SMALL,
+        I = M ? A.AttachmentListItemSizes.CLIP : I;
+        let L = I === A.AttachmentListItemSizes.SMALL,
             b = (0, r.useStateFromStores)([p.default], () => {
                 var e;
                 return null === (e = p.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
@@ -255,7 +255,7 @@ function(e, t, n) {
             };
         return (0, l.jsxs)(A.default, {
             actions: (0, l.jsxs)(i.Fragment, {
-                children: [I ? (0, l.jsx)(N.default, {
+                children: [v ? (0, l.jsx)(N.default, {
                     className: s({
                         [y.action]: L
                     }),
@@ -272,7 +272,7 @@ function(e, t, n) {
                             [y.actionBarIcon]: L
                         })
                     })
-                }) : null, I && !M ? (0, l.jsx)(N.default, {
+                }) : null, v && !M ? (0, l.jsx)(N.default, {
                     className: s({
                         [y.action]: L
                     }),
@@ -302,13 +302,13 @@ function(e, t, n) {
             channelId: t,
             handleEditModal: j,
             keyboardModeEnabled: c,
-            size: v,
+            size: I,
             className: s({
                 [y.attachmentItemSmall]: L
             }),
             children: [(0, l.jsx)(P, {
                 upload: a,
-                size: v
+                size: I
             }), !O && !M && (0, l.jsx)("div", {
                 className: y.filenameContainer,
                 children: (0, l.jsx)(o.Text, {

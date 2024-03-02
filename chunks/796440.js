@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         applicationInstallButtonContent: "applicationInstallButtonContent__99c0c",
