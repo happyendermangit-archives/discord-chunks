@@ -59,8 +59,8 @@ function(e, t, n) {
         G = n("29479"),
         F = n("357974"),
         H = n("580363"),
-        B = n("613070"),
-        x = n("530487"),
+        x = n("613070"),
+        B = n("530487"),
         Y = n("351205"),
         j = n("223934"),
         K = n("315417"),
@@ -178,32 +178,32 @@ function(e, t, n) {
             eU = a.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new P.default(eC.user) : null, [null == eC ? void 0 : eC.user]),
             eG = a.useMemo(() => null == eb ? void 0 : eb.find(e => e.id === eV), [eb, eV]),
             [eF, eH] = a.useState(null),
-            eB = a.useMemo(() => {
+            ex = a.useMemo(() => {
                 var e;
                 return eT && null == ei && null == eu && (null !== (e = null == er ? void 0 : er.length) && void 0 !== e ? e : 0) === 0 && null == W
             }, [ei, eT, null == er ? void 0 : er.length, W, eu]),
-            ex = (0, A.useGetOrFetchApplication)(eB ? D : null),
+            eB = (0, A.useGetOrFetchApplication)(ex ? D : null),
             eY = a.useMemo(() => {
                 var e, t;
-                return null == eF ? null : null == ex ? void 0 : null === (t = ex.integrationTypesConfig) || void 0 === t ? void 0 : null === (e = t[eF]) || void 0 === e ? void 0 : e.oauth2InstallParams
-            }, [null == ex ? void 0 : ex.integrationTypesConfig, eF]),
+                return null == eF ? null : null == eB ? void 0 : null === (t = eB.integrationTypesConfig) || void 0 === t ? void 0 : null === (e = t[eF]) || void 0 === e ? void 0 : e.oauth2InstallParams
+            }, [null == eB ? void 0 : eB.integrationTypesConfig, eF]),
             {
                 requestedScopes: ej,
                 accountScopes: eK
             } = a.useMemo(() => {
-                let e = eB ? null == eY ? void 0 : eY.scopes : er,
+                let e = ex ? null == eY ? void 0 : eY.scopes : er,
                     t = (0, M.filterScopes)(null != e ? e : []),
                     n = G.OrderedAccountScopes.filter(e => t.includes(e));
                 return {
                     requestedScopes: t,
                     accountScopes: n
                 }
-            }, [null == eY ? void 0 : eY.scopes, er, eB]),
+            }, [null == eY ? void 0 : eY.scopes, er, ex]),
             eW = a.useMemo(() => {
                 var e;
-                let t = eB ? c.default.deserialize(null !== (e = null == eY ? void 0 : eY.permissions) && void 0 !== e ? e : 0) : ea;
+                let t = ex ? c.default.deserialize(null !== (e = null == eY ? void 0 : eY.permissions) && void 0 !== e ? e : 0) : ea;
                 return null != t ? t : R.default.NONE
-            }, [null == eY ? void 0 : eY.permissions, ea, eB]),
+            }, [null == eY ? void 0 : eY.permissions, ea, ex]),
             ez = (0, g.useStateFromStores)([T.default], () => T.default.getCurrentEmbeddedActivity()),
             eq = (0, g.useStateFromStoresObject)([y.default, T.default], () => {
                 let e;
@@ -314,8 +314,8 @@ function(e, t, n) {
             }, [ep, ei, D, ej, N, W, ee, et, en, eF, es, eQ]),
             e$ = a.useMemo(() => {
                 var e;
-                if (null == ex || !eB) return [];
-                let t = Object.entries(null !== (e = ex.integrationTypesConfig) && void 0 !== e ? e : {}).filter(e => {
+                if (null == eB || !ex) return [];
+                let t = Object.entries(null !== (e = eB.integrationTypesConfig) && void 0 !== e ? e : {}).filter(e => {
                     let [t, n] = e;
                     return null != n.oauth2InstallParams
                 }).map(e => {
@@ -323,15 +323,15 @@ function(e, t, n) {
                     return Number(t)
                 });
                 return t
-            }, [ex, eB]);
+            }, [eB, ex]);
         if (a.useEffect(() => {
-                if (null == eS && (!eB || null != ex) && V.default.hasLoadedExperiments) {
+                if (null == eS && (!ex || null != eB) && V.default.hasLoadedExperiments) {
                     if (null != ei) {
                         var e;
                         eH(null !== (e = ei.integration_type) && void 0 !== e ? e : _.ApplicationIntegrationType.GUILD_INSTALL), eA(1)
                     } else e$.length > 1 ? eA(0) : (1 === e$.length ? eH(e$[0]) : eT && null != eu ? eH(eu) : eH(_.ApplicationIntegrationType.GUILD_INSTALL), eA(1))
                 }
-            }, [ei, e$, ex, eT, eB, eu, eS]), a.useEffect(() => {
+            }, [ei, e$, eB, eT, ex, eu, eS]), a.useEffect(() => {
                 if (null == eF || null != eC || null != eD) return;
                 eF === _.ApplicationIntegrationType.USER_INSTALL && (eR(null), eM(null));
                 let e = ej.filter(e => !G.ValidScopes.includes(e));
@@ -351,12 +351,12 @@ function(e, t, n) {
                     body: (0, r.jsx)(E.Spinner, {})
                 };
             case 0:
-                if (null == ex) return {
+                if (null == eB) return {
                     body: (0, r.jsx)(E.Spinner, {})
                 };
                 d = (0, r.jsx)(K.default, {
                     inApp: em,
-                    application: ex,
+                    application: eB,
                     onSelect: e => {
                         eH(e), eI(null), eA(1)
                     }
@@ -371,7 +371,7 @@ function(e, t, n) {
                     e9 = eF === _.ApplicationIntegrationType.GUILD_INSTALL && ej.includes(X.OAuth2Scopes.WEBHOOK_INCOMING),
                     e8 = e9 || eF === _.ApplicationIntegrationType.GUILD_INSTALL && (ej.includes(X.OAuth2Scopes.BOT) || ej.includes(X.OAuth2Scopes.APPLICATIONS_COMMANDS));
                 d = (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(B.default, {
+                    children: [(0, r.jsx)(x.default, {
                         application: eC.application,
                         accountScopes: eK,
                         errors: e4,
@@ -394,7 +394,7 @@ function(e, t, n) {
                 if (null == eC) return {
                     body: (0, r.jsx)(E.Spinner, {})
                 };
-                d = (0, r.jsx)(x.default, {
+                d = (0, r.jsx)(B.default, {
                     application: eC.application,
                     permissions: eW,
                     deniedPermissions: ew,

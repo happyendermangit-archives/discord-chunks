@@ -77,12 +77,12 @@ function(e, t, n) {
                 r = (null == e ? void 0 : e.hasFlag(A.MessageFlags.EPHEMERAL)) === !0;
             M = null != e && !r && (s || i)
         }
-        let B = v.default.getChannel(I.default.getChannelId()),
-            x = E.default.getGuild(null == B ? void 0 : B.getGuildId());
-        if (null != B && null != x && x.hasFeature(A.GuildFeatures.DISCOVERABLE) && S.default.track(A.AnalyticEvents.URL_CLICKED, {
+        let x = v.default.getChannel(I.default.getChannelId()),
+            B = E.default.getGuild(null == x ? void 0 : x.getGuildId());
+        if (null != x && null != B && B.hasFeature(A.GuildFeatures.DISCOVERABLE) && S.default.track(A.AnalyticEvents.URL_CLICKED, {
                 url_domain: (0, y.getHostname)(R),
-                guild_id: x.id,
-                channel_id: B.id
+                guild_id: B.id,
+                channel_id: x.id
             }), _.default.trackLinkClicked(R), null != N) {
             if (N(t)) return
         } else {

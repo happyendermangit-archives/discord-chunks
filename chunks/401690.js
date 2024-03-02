@@ -111,7 +111,7 @@ function(e, t, n) {
                 H(v, s, null, !0), H(E, s, null, !0), H(T, s, null, !0), H(p, s, s, !0), H(y, s, e ? s : null, !0), F(s.id)
             }
             b(e, t)
-        } else B(v, e, t, n), B(T, e, t, n), B(E, e, t, n), B(p, e, t, n), B(y, e, t, n), F(n), b(e, t)
+        } else x(v, e, t, n), x(T, e, t, n), x(E, e, t, n), x(p, e, t, n), x(y, e, t, n), F(n), b(e, t)
     }
 
     function R(e) {
@@ -136,22 +136,22 @@ function(e, t, n) {
                 return !!(Number(null === (n = C[e]) || void 0 === n ? void 0 : n[t.id]) > 0) && (b(e, t.id), !0)
             }
             if (null == s) return !1;
-            if (x(v, t)) {
+            if (B(v, t)) {
                 let {
                     isUnread: n,
                     isRelevant: i,
                     isTimedRelevant: r
                 } = U(t);
                 G(t, r);
-                let a = x(E, t),
-                    o = x(T, t);
+                let a = B(E, t),
+                    o = B(T, t);
                 if (n === a && i === o) return !1;
                 let d = v[e][s][t.id],
                     u = n ? d : null,
                     l = i ? d : null;
                 H(E, t, u, !0), H(T, t, l, !0), b(e, s)
             } else {
-                let e = x(y, t),
+                let e = B(y, t),
                     n = l.default.isForumPostUnread(t.id);
                 if (n === e) return !1;
                 H(y, t, n ? t : null, !0)
@@ -230,7 +230,7 @@ function(e, t, n) {
         }), null === n ? (delete e[r][a][o], i.isEmpty(e[r][a]) && delete e[r][a]) : e[r][a][o] = n)
     }
 
-    function B(e, t, n, s) {
+    function x(e, t, n, s) {
         if (null != t && null != n && null != s) Y(e, t, n, s) && (e[t] = {
             ...e[t],
             [n]: {
@@ -239,7 +239,7 @@ function(e, t, n) {
         }, delete e[t][n][s], i.isEmpty(e[t][n]) && delete e[t][n])
     }
 
-    function x(e, t) {
+    function B(e, t) {
         return Y(e, t.guild_id, t.parent_id, t.id)
     }
 

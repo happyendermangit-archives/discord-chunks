@@ -2,56 +2,54 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     });
-    var s = n("37983"),
-        i = n("884691"),
-        r = n("316693"),
-        a = n("605451"),
-        o = n("774811"),
-        d = n("577776"),
-        u = n("49111"),
-        l = n("782340"),
-        f = n("590732");
+    var s = n("37983");
+    n("884691");
+    var i = n("316693"),
+        r = n("605451"),
+        a = n("577776"),
+        o = n("77078"),
+        d = n("49111"),
+        u = n("782340"),
+        l = n("590732");
 
-    function _(e) {
+    function f(e) {
         let {
             error: t,
             selectedGuildId: n,
-            onGuildChange: _,
-            guilds: c,
-            disabled: g = !1
-        } = e, m = i.useCallback(e => {
-            _(e)
-        }, [_]), h = i.useMemo(() => c.filter(e => r.default.has(e.permissions, u.Permissions.MANAGE_GUILD)).map(e => ({
+            onGuildChange: f,
+            guilds: _,
+            disabled: c = !1
+        } = e, g = _.filter(e => i.default.has(e.permissions, d.Permissions.MANAGE_GUILD)).map(e => ({
             value: e.id,
             label: e.name
-        })), [c]);
+        }));
         return (0, s.jsxs)("div", {
-            className: f.selectorGroup,
-            children: [(0, s.jsx)(a.Heading, {
+            className: l.selectorGroup,
+            children: [(0, s.jsx)(r.Heading, {
                 variant: "heading-deprecated-12/semibold",
-                className: f.sectionLabel,
-                children: l.default.Messages.OAUTH2_ADD_TO_GUILD
-            }), null != t && "" !== t ? (0, s.jsx)(d.Text, {
+                className: l.sectionLabel,
+                children: u.default.Messages.OAUTH2_ADD_TO_GUILD
+            }), null != t && "" !== t ? (0, s.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "text-danger",
                 children: t
-            }) : null, (0, s.jsx)(o.SearchableSelect, {
-                wrapperClassName: f.wrapper,
-                className: f.select,
+            }) : null, (0, s.jsx)(o.Select, {
+                className: l.select,
                 maxVisibleItems: 5,
-                value: n,
-                placeholder: l.default.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
-                options: h,
-                onChange: m,
-                isDisabled: g
-            }), (0, s.jsx)(d.Text, {
+                placeholder: u.default.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
+                options: g,
+                select: f,
+                isDisabled: c,
+                isSelected: e => e === n,
+                serialize: e => e
+            }), (0, s.jsx)(a.Text, {
                 variant: "text-xs/medium",
                 color: "header-secondary",
-                className: f.label,
-                children: l.default.Messages.OAUTH2_ADD_TO_GUILD_DESCRIPTION.format()
+                className: l.label,
+                children: u.default.Messages.OAUTH2_ADD_TO_GUILD_DESCRIPTION.format()
             })]
         })
     }

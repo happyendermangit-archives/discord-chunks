@@ -134,10 +134,10 @@ function(e, t, n) {
                     }
                     return n
                 }(U),
-                B = 0 === H.trim().length;
-            if (B) return _();
-            let x = i.pick(t.rules, k),
-                Y = d.parserFor(x),
+                x = 0 === H.trim().length;
+            if (x) return _();
+            let B = i.pick(t.rules, k),
+                Y = d.parserFor(B),
                 j = Y(m.whitespaceSanitized, R),
                 K = I.whitespaceSanitized,
                 {

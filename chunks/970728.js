@@ -46,8 +46,8 @@ function(e, t, n) {
         G = n("957255"),
         F = n("697218"),
         H = n("599110"),
-        B = n("718517"),
-        x = n("840707"),
+        x = n("718517"),
+        B = n("840707"),
         Y = n("65300"),
         j = n("851387"),
         K = n("990766"),
@@ -219,7 +219,7 @@ function(e, t, n) {
             let n = U.default.getInvite(e.id);
             if (null != n && !n.isExpired()) return n.code;
             let s = {
-                    max_age: B.default.Seconds.DAY
+                    max_age: x.default.Seconds.DAY
                 },
                 i = await this.createInvite(e.id, s, t).catch(() => l.default.dispatch({
                     type: "NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED"
@@ -300,7 +300,7 @@ function(e, t, n) {
                 code: t,
                 channel: n
             } = e;
-            return x.default.delete({
+            return B.default.delete({
                 url: W.Endpoints.INVITE(t),
                 oldFormErrors: !0,
                 trackedActionData: {

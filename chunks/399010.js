@@ -143,7 +143,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e) {
+    function x(e) {
         return e.map(e => ({
             sessionId: e.session_id,
             lastModified: e.last_modified,
@@ -155,7 +155,7 @@ function(e, t, n) {
         }))
     }
 
-    function x() {
+    function B() {
         P.socket.isSessionEstablished() && T.default.getPendingLobbies().forEach(e => {
             P.socket.lobbyConnect(e.id, e.secret)
         })
@@ -318,7 +318,7 @@ function(e, t, n) {
                         guildExperiments: e.guild_experiments,
                         requiredAction: e.required_action,
                         consents: e.consents,
-                        sessions: B(e.sessions || []),
+                        sessions: x(e.sessions || []),
                         pendingPayments: e.pending_payments,
                         countryCode: null !== (n = e.country_code) && void 0 !== n ? n : void 0,
                         guildJoinRequests: e.guild_join_requests || [],
@@ -334,11 +334,11 @@ function(e, t, n) {
                     type: "UPDATE_TOKEN",
                     token: e.auth_token,
                     userId: e.user.id
-                }), P.localPresenceState.update(), P.localVoiceState.update(), P.localLobbyVoiceStates.update(), x()
+                }), P.localPresenceState.update(), P.localVoiceState.update(), P.localLobbyVoiceStates.update(), B()
             })
         })
     }), w(["RESUMED"], () => {
-        P.localPresenceState.forceUpdate(), P.localVoiceState.forceUpdate(), P.localLobbyVoiceStates.forceUpdate(), x(), G({
+        P.localPresenceState.forceUpdate(), P.localVoiceState.forceUpdate(), P.localLobbyVoiceStates.forceUpdate(), B(), G({
             type: "CONNECTION_RESUMED"
         })
     }), w(["TYPING_START"], e => {
@@ -754,7 +754,7 @@ function(e, t, n) {
     }), w(["SESSIONS_REPLACE"], e => {
         G({
             type: "SESSIONS_REPLACE",
-            sessions: B(e)
+            sessions: x(e)
         })
     }), w(["VOICE_STATE_UPDATE"], e => {
         var t;

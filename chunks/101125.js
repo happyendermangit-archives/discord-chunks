@@ -3,7 +3,7 @@ function(e, t, n) {
     let s, i;
     n.r(t), n.d(t, {
         default: function() {
-            return B
+            return x
         }
     }), n("222007");
     var r = n("714617"),
@@ -117,7 +117,7 @@ function(e, t, n) {
         }
     }
     H.displayName = "SelfPresenceStore";
-    var B = new H(l.default, {
+    var x = new H(l.default, {
         START_SESSION: U,
         CONNECTION_OPEN: function() {
             F()

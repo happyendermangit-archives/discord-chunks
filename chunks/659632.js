@@ -23,10 +23,10 @@ function(e, t, n) {
             return H
         },
         getGiftCodeURL: function() {
-            return B
+            return x
         },
         resolveGiftCode: function() {
-            return x
+            return B
         },
         trackGiftCodeCopy: function() {
             return Y
@@ -117,12 +117,12 @@ function(e, t, n) {
             return Array.from(n)
         };
 
-    function B() {
+    function x() {
         let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
             n = window.GLOBAL_ENV.GIFT_CODE_HOST;
         return null == n || (0, g.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
     }
-    async function x(e) {
+    async function B(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         try {
