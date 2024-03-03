@@ -54,7 +54,7 @@ function(e, t, n) {
                 integrationTypesConfig: null != t.integration_types_config ? Object.fromEntries(Object.entries(t.integration_types_config).map(e => {
                     let [t, n] = e;
                     return [t, {
-                        oauth2InstallParams: n.oauth2_install_params
+                        oauth2InstallParams: (null != n ? n : {}).oauth2_install_params
                     }]
                 })) : null
             })
