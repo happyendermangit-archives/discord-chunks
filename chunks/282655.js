@@ -2,48 +2,56 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return R
+            return l
         }
     }), E("222007");
     var t = E("689988"),
         o = E("716241"),
         n = E("651057"),
         r = E("299285"),
-        i = E("271938"),
-        a = E("42203"),
-        I = E("18494"),
-        s = E("101125"),
-        T = E("774539"),
-        S = E("49111");
-    async function N(e) {
+        i = E("699209"),
+        a = E("271938"),
+        I = E("42203"),
+        s = E("18494"),
+        T = E("101125"),
+        S = E("774539"),
+        N = E("49111");
+    async function O(e) {
         await n.default.fetchApplications(e, !1)
     }
-    async function O(e) {
+    async function A(e) {
         if (null == e) return;
-        let _ = a.default.getChannel(e);
-        if (null == _ || !(0, T.isVoiceUserGameActivityEnabled)("running_games_change", !1)) return;
-        let E = s.default.getActivities();
-        if (0 === E.length) return;
-        let t = [...E].filter(e => e.type === S.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id);
-        await N([...t]);
-        let n = r.default.getApplication(t[0]);
-        null != n && o.default.trackWithMetadata(S.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
+        let _ = I.default.getChannel(e),
+            {
+                enableHangStatus: E
+            } = i.HangStatusExperiment.getCurrentConfig({
+                location: "GameActivityManager"
+            }, {
+                autoTrackExposure: !1
+            });
+        if (null == _ || !((0, S.isVoiceUserGameActivityEnabled)("running_games_change", !1) || E)) return;
+        let t = T.default.getActivities();
+        if (0 === t.length) return;
+        let n = [...t].filter(e => e.type === N.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id);
+        await O([...n]);
+        let s = r.default.getApplication(n[0]);
+        null != s && o.default.trackWithMetadata(N.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
             channel_id: e,
             guild_id: _.guild_id,
-            game_name: n.name,
-            user_id: i.default.getId()
+            game_name: s.name,
+            user_id: a.default.getId()
         })
     }
-    class A extends t.default {
+    class R extends t.default {
         handleRunningGamesChange() {
-            let e = I.default.getVoiceChannelId();
-            O(e)
+            let e = s.default.getVoiceChannelId();
+            A(e)
         }
         handleVoiceChannelSelect(e) {
             let {
                 channelId: _
             } = e;
-            O(_)
+            A(_)
         }
         constructor(...e) {
             super(...e), this.actions = {
@@ -52,5 +60,5 @@ function(e, _, E) {
             }
         }
     }
-    var R = new A
+    var l = new R
 }

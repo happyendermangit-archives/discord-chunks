@@ -13,8 +13,8 @@ function(e, a, t) {
         i = t("913144"),
         r = t("135230"),
         o = t("316272"),
-        f = t("701909"),
-        l = t("49111"),
+        l = t("701909"),
+        f = t("49111"),
         u = t("782340");
     class p extends o.default {
         _initialize() {
@@ -28,13 +28,13 @@ function(e, a, t) {
                 let {
                     kind: a,
                     granted: t
-                } = e, d = "Firefox" === n.name ? l.HelpdeskArticles.ENABLE_MIC_FIREFOX : l.HelpdeskArticles.ENABLE_MIC_CHROME;
+                } = e, d = "Firefox" === n.name ? f.HelpdeskArticles.ENABLE_MIC_FIREFOX : f.HelpdeskArticles.ENABLE_MIC_CHROME;
                 if (!t) {
                     let e = "audio" !== a;
                     (0, c.openModal)(a => (0, s.jsx)(r.default, {
                         title: e ? u.default.Messages.NO_CAMERA_TITLE : u.default.Messages.NO_MIC_TITLE,
                         body: e ? u.default.Messages.NO_CAMERA_BODY : u.default.Messages.NO_MIC_BODY,
-                        onConfirm: () => window.open(f.default.getArticleURL(d), "_blank"),
+                        onConfirm: () => window.open(l.default.getArticleURL(d), "_blank"),
                         confirmText: u.default.Messages.HELP_DESK,
                         ...a
                     }))
