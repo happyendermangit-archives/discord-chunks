@@ -1,14 +1,14 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("129752").codes.ERR_INVALID_OPT_VALUE;
-    t.exports = {
-        getHighWaterMark: function(t, e, s, i) {
-            var n, c, o, f = (n = e, c = i, o = s, null != n.highWaterMark ? n.highWaterMark : c ? n[o] : null);
-            if (null != f) {
-                if (!(isFinite(f) && Math.floor(f) === f) || f < 0) throw new r(i ? s : "highWaterMark", f);
-                return Math.floor(f)
+    var r = n("129752").codes.ERR_INVALID_OPT_VALUE;
+    e.exports = {
+        getHighWaterMark: function(e, t, n, i) {
+            var o, s, a, c = (o = t, s = i, a = n, null != o.highWaterMark ? o.highWaterMark : s ? o[a] : null);
+            if (null != c) {
+                if (!(isFinite(c) && Math.floor(c) === c) || c < 0) throw new r(i ? n : "highWaterMark", c);
+                return Math.floor(c)
             }
-            return t.objectMode ? 16 : 16384
+            return e.objectMode ? 16 : 16384
         }
     }
 }

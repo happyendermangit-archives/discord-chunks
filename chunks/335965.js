@@ -1,20 +1,20 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("70102"), s("424973");
+    n("70102"), n("424973");
     var r = Array.prototype.slice,
         i = Object.prototype.toString;
-    t.exports = function(t) {
-        var e, s = this;
-        if ("function" != typeof s || "[object Function]" !== i.call(s)) throw TypeError("Function.prototype.bind called on incompatible " + s);
-        for (var n = r.call(arguments, 1), c = Math.max(0, s.length - n.length), o = [], f = 0; f < c; f++) o.push("$" + f);
-        if (e = Function("binder", "return function (" + o.join(",") + "){ return binder.apply(this,arguments); }")(function() {
-                if (!(this instanceof e)) return s.apply(t, n.concat(r.call(arguments)));
-                var i = s.apply(this, n.concat(r.call(arguments)));
+    e.exports = function(e) {
+        var t, n = this;
+        if ("function" != typeof n || "[object Function]" !== i.call(n)) throw TypeError("Function.prototype.bind called on incompatible " + n);
+        for (var o = r.call(arguments, 1), s = Math.max(0, n.length - o.length), a = [], c = 0; c < s; c++) a.push("$" + c);
+        if (t = Function("binder", "return function (" + a.join(",") + "){ return binder.apply(this,arguments); }")(function() {
+                if (!(this instanceof t)) return n.apply(e, o.concat(r.call(arguments)));
+                var i = n.apply(this, o.concat(r.call(arguments)));
                 return Object(i) === i ? i : this
-            }), s.prototype) {
+            }), n.prototype) {
             var u = function() {};
-            u.prototype = s.prototype, e.prototype = new u, u.prototype = null
+            u.prototype = n.prototype, t.prototype = new u, u.prototype = null
         }
-        return e
+        return t
     }
 }

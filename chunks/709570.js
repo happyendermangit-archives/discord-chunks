@@ -1,3 +1,3 @@
-function(t, e, s) {
-    t.exports = s("44170").EventEmitter
+function(e, t, n) {
+    e.exports = n("44170").EventEmitter
 }

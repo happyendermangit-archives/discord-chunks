@@ -1,23 +1,23 @@
-function(t, e, s) {
-    var r = s("626785"),
-        i = s("698273"),
-        n = s("583048"),
-        c = s("854060"),
-        o = s("492692"),
-        f = s("558304"),
-        u = s("540893");
-    t.exports = function(t, e, s) {
-        var a = -1;
-        return e = r(e.length ? e : [u], o(i)), c(n(t, function(t, s, i) {
+function(e, t, n) {
+    var r = n("626785"),
+        i = n("698273"),
+        o = n("583048"),
+        s = n("854060"),
+        a = n("492692"),
+        c = n("558304"),
+        u = n("540893");
+    e.exports = function(e, t, n) {
+        var d = -1;
+        return t = r(t.length ? t : [u], a(i)), s(o(e, function(e, n, i) {
             return {
-                criteria: r(e, function(e) {
-                    return e(t)
+                criteria: r(t, function(t) {
+                    return t(e)
                 }),
-                index: ++a,
-                value: t
+                index: ++d,
+                value: e
             }
-        }), function(t, e) {
-            return f(t, e, s)
+        }), function(e, t) {
+            return c(e, t, n)
         })
     }
 }

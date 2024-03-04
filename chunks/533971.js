@@ -1,7 +1,7 @@
-function(t, e, s) {
-    var r = s("839309"),
-        i = s("912065").Buffer;
-    t.exports = function(t, e) {
-        return i.from(t.toRed(r.mont(e.modulus)).redPow(new r(e.publicExponent)).fromRed().toArray())
+function(e, t, n) {
+    var r = n("839309"),
+        i = n("912065").Buffer;
+    e.exports = function(e, t) {
+        return i.from(e.toRed(r.mont(t.modulus)).redPow(new r(t.publicExponent)).fromRed().toArray())
     }
 }

@@ -1,50 +1,50 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("781738"), s("70102");
+    n("781738"), n("70102");
     var r = "%[a-f0-9]{2}",
         i = RegExp("(" + r + ")|([^%]+?)", "gi"),
-        n = RegExp("(" + r + ")+", "gi");
-    t.exports = function(t) {
-        if ("string" != typeof t) throw TypeError("Expected `encodedURI` to be of type `string`, got `" + typeof t + "`");
+        o = RegExp("(" + r + ")+", "gi");
+    e.exports = function(e) {
+        if ("string" != typeof e) throw TypeError("Expected `encodedURI` to be of type `string`, got `" + typeof e + "`");
         try {
-            return t = t.replace(/\+/g, " "), decodeURIComponent(t)
-        } catch (e) {
-            return function(t) {
-                for (var e = {
+            return e = e.replace(/\+/g, " "), decodeURIComponent(e)
+        } catch (t) {
+            return function(e) {
+                for (var t = {
                         "%FE%FF": "��",
                         "%FF%FE": "��"
-                    }, s = n.exec(t); s;) {
+                    }, n = o.exec(e); n;) {
                     try {
-                        e[s[0]] = decodeURIComponent(s[0])
-                    } catch (t) {
-                        var r = function(t) {
+                        t[n[0]] = decodeURIComponent(n[0])
+                    } catch (e) {
+                        var r = function(e) {
                             try {
-                                return decodeURIComponent(t)
+                                return decodeURIComponent(e)
                             } catch (r) {
-                                for (var e = t.match(i) || [], s = 1; s < e.length; s++) e = (t = (function t(e, s) {
+                                for (var t = e.match(i) || [], n = 1; n < t.length; n++) t = (e = (function e(t, n) {
                                     try {
-                                        return [decodeURIComponent(e.join(""))]
-                                    } catch (t) {}
-                                    if (1 === e.length) return e;
-                                    s = s || 1;
-                                    var r = e.slice(0, s),
-                                        i = e.slice(s);
-                                    return Array.prototype.concat.call([], t(r), t(i))
-                                })(e, s).join("")).match(i) || [];
-                                return t
+                                        return [decodeURIComponent(t.join(""))]
+                                    } catch (e) {}
+                                    if (1 === t.length) return t;
+                                    n = n || 1;
+                                    var r = t.slice(0, n),
+                                        i = t.slice(n);
+                                    return Array.prototype.concat.call([], e(r), e(i))
+                                })(t, n).join("")).match(i) || [];
+                                return e
                             }
-                        }(s[0]);
-                        r !== s[0] && (e[s[0]] = r)
+                        }(n[0]);
+                        r !== n[0] && (t[n[0]] = r)
                     }
-                    s = n.exec(t)
+                    n = o.exec(e)
                 }
-                e["%C2"] = "�";
-                for (var c = Object.keys(e), o = 0; o < c.length; o++) {
-                    var f = c[o];
-                    t = t.replace(RegExp(f, "g"), e[f])
+                t["%C2"] = "�";
+                for (var s = Object.keys(t), a = 0; a < s.length; a++) {
+                    var c = s[a];
+                    e = e.replace(RegExp(c, "g"), t[c])
                 }
-                return t
-            }(t)
+                return e
+            }(e)
         }
     }
 }

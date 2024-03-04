@@ -1,30 +1,30 @@
-function(e, _, E) {
+function(e, t, n) {
     "use strict";
-    E.r(_), E.d(_, {
+    n.r(t), n.d(t, {
         isImageFile: function() {
-            return r
-        },
-        isAnimatedImageUrl: function() {
             return a
         },
+        isAnimatedImageUrl: function() {
+            return l
+        },
         isVideoUrl: function() {
-            return s
+            return d
         },
         isVideoFile: function() {
-            return T
+            return c
         }
-    }), E("222007");
-    var t = E("773336");
-    let o = (e, _) => {
+    }), n("222007");
+    var i = n("773336");
+    let s = (e, t) => {
             if (null == e) return !1;
-            let [E, t] = e.split(/\?/, 1);
-            return _.test(E)
+            let [n, i] = e.split(/\?/, 1);
+            return t.test(n)
         },
-        n = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
-        r = e => null != e && n.test(e),
-        i = /\.(webp|gif)$/i,
-        a = e => o(e, i),
-        I = (0, t.isIOS)() ? /\.(mp4|mov)$/i : ((0, t.isAndroid)(), /\.(mp4|webm|mov)$/i),
-        s = e => o(e, I),
-        T = e => null != e && I.test(e)
+        r = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
+        a = e => null != e && r.test(e),
+        o = /\.(webp|gif)$/i,
+        l = e => s(e, o),
+        u = (0, i.isIOS)() ? /\.(mp4|mov)$/i : ((0, i.isAndroid)(), /\.(mp4|webm|mov)$/i),
+        d = e => s(e, u),
+        c = e => null != e && u.test(e)
 }

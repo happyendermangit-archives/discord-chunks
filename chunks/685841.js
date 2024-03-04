@@ -2,73 +2,73 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return f
         }
     });
-    var a = n("446674"),
-        l = n("913144"),
-        s = n("377253");
-    let i = {},
-        r = {},
-        u = {};
+    var i = n("446674"),
+        s = n("913144"),
+        r = n("377253");
+    let a = {},
+        o = {},
+        l = {};
 
-    function d(e) {
+    function u(e) {
         if (null == e) return !1;
-        let t = r[e];
+        let t = o[e];
         if (null == t) return !1;
-        let n = s.default.getMessage(e, t.messageId);
+        let n = r.default.getMessage(e, t.messageId);
         if (null == n) return !1;
-        i[e] = {
+        a[e] = {
             channel: t.channel,
             message: n,
             shouldMention: t.shouldMention,
             showMentionToggle: t.showMentionToggle
-        }, delete r[e]
+        }, delete o[e]
     }
 
-    function o() {
-        i = {}, r = {}, u = {}
+    function d() {
+        a = {}, o = {}, l = {}
     }
-    class c extends a.default.Store {
+    class c extends i.default.Store {
         initialize() {
-            this.waitFor(s.default)
+            this.waitFor(r.default)
         }
         getPendingReply(e) {
-            return i[e]
+            return a[e]
         }
         getPendingReplyActionSource(e) {
-            return u[e]
+            return l[e]
         }
     }
     c.displayName = "PendingReplyStore";
-    var E = new c(l.default, {
+    var f = new c(s.default, {
         CREATE_PENDING_REPLY: function(e) {
             let {
                 channel: t,
                 message: n,
-                shouldMention: a = !0,
-                showMentionToggle: l = !0,
-                source: s
+                shouldMention: i = !0,
+                showMentionToggle: s = !0,
+                source: r
             } = e;
-            i[t.id] = {
+            a[t.id] = {
                 channel: t,
                 message: n,
-                shouldMention: a,
-                showMentionToggle: l
-            }, u[t.id] = s
+                shouldMention: i,
+                showMentionToggle: s
+            }, l[t.id] = r
         },
         CREATE_SHALLOW_PENDING_REPLY: function(e) {
             let {
                 channel: t,
                 messageId: n,
-                shouldMention: a = !0,
-                showMentionToggle: l = !0
+                shouldMention: i = !0,
+                showMentionToggle: s = !0
             } = e;
-            r[t.id] = {
+            o[t.id] = {
                 channel: t,
                 messageId: n,
-                shouldMention: a,
-                showMentionToggle: l
+                shouldMention: i,
+                showMentionToggle: s
             }
         },
         SET_PENDING_REPLY_SHOULD_MENTION: function(e) {
@@ -76,11 +76,11 @@ function(e, t, n) {
                 channelId: t,
                 shouldMention: n
             } = e;
-            t in i && (i[t] = {
-                ...i[t],
+            t in a && (a[t] = {
+                ...a[t],
                 shouldMention: n
-            }), t in r && (r[t] = {
-                ...r[t],
+            }), t in o && (o[t] = {
+                ...o[t],
                 shouldMention: n
             })
         },
@@ -88,33 +88,33 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            delete i[t], delete r[t]
+            delete a[t], delete o[t]
         },
-        CONNECTION_OPEN: o,
-        LOGOUT: o,
+        CONNECTION_OPEN: d,
+        LOGOUT: d,
         MESSAGE_DELETE: function(e) {
-            var t, n, a;
+            var t, n, i;
             let {
-                id: l,
-                channelId: s
+                id: s,
+                channelId: r
             } = e;
-            if ((null === (n = i[s]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === l) delete i[s], delete u[s];
+            if ((null === (n = a[r]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === s) delete a[r], delete l[r];
             else {
-                if ((null === (a = r[s]) || void 0 === a ? void 0 : a.messageId) !== l) return !1;
-                delete r[s], delete u[s]
+                if ((null === (i = o[r]) || void 0 === i ? void 0 : i.messageId) !== s) return !1;
+                delete o[r], delete l[r]
             }
         },
         CHANNEL_SELECT: function(e) {
             let {
                 channelId: t
             } = e;
-            d(t)
+            u(t)
         },
         LOAD_MESSAGES_SUCCESS: function(e) {
             let {
                 channelId: t
             } = e;
-            d(t)
+            u(t)
         }
     })
 }

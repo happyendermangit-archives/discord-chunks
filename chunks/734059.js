@@ -36,7 +36,7 @@ function(e, t, n) {
                 }),
                 f = d[0],
                 p = d[1],
-                h = r.useMemo(function() {
+                m = r.useMemo(function() {
                     return {
                         name: "updateState",
                         enabled: !0,
@@ -58,24 +58,24 @@ function(e, t, n) {
                         requires: ["computeStyles"]
                     }
                 }, []),
-                m = r.useMemo(function() {
+                h = r.useMemo(function() {
                     var e = {
                         onFirstUpdate: c.onFirstUpdate,
                         placement: c.placement,
                         strategy: c.strategy,
-                        modifiers: [].concat(c.modifiers, [h, {
+                        modifiers: [].concat(c.modifiers, [m, {
                             name: "applyStyles",
                             enabled: !1
                         }])
                     };
                     return s(i.current, e) ? i.current || e : (i.current = e, e)
-                }, [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, h]),
+                }, [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, m]),
                 y = r.useRef();
             return (0, u.useIsomorphicLayoutEffect)(function() {
-                y.current && y.current.setOptions(m)
-            }, [m]), (0, u.useIsomorphicLayoutEffect)(function() {
+                y.current && y.current.setOptions(h)
+            }, [h]), (0, u.useIsomorphicLayoutEffect)(function() {
                 if (null != e && null != t) {
-                    var r = (n.createPopper || o.createPopper)(e, t, m);
+                    var r = (n.createPopper || o.createPopper)(e, t, h);
                     return y.current = r,
                         function() {
                             r.destroy(), y.current = null

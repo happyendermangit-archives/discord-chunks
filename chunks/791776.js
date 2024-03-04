@@ -2,18 +2,18 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isInputLikeElement: function() {
-            return s
+            return r
         },
         eventOwnerDocument: function() {
             return a
         }
     });
     let i = /input/i,
-        r = /textarea/i;
+        s = /textarea/i;
 
-    function s(e) {
+    function r(e) {
         if (null == e) return !1;
-        if ("true" === e.getAttribute("contenteditable") || r.test(e.tagName)) return !0;
+        if ("true" === e.getAttribute("contenteditable") || s.test(e.tagName)) return !0;
         if (i.test(e.tagName)) {
             var t;
             let n = null !== (t = e.getAttribute("type")) && void 0 !== t ? t : "text";

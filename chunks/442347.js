@@ -1,34 +1,34 @@
-function(t, r, n) {
-    var e = n("904526"),
-        o = Object.prototype.hasOwnProperty;
-    t.exports = function(t, r, n, i, u, c) {
-        var a = 1 & n,
-            f = e(t),
-            s = f.length;
-        if (s != e(r).length && !a) return !1;
-        for (var p = s; p--;) {
-            var v = f[p];
-            if (!(a ? v in r : o.call(r, v))) return !1
+function(e, t, n) {
+    var r = n("904526"),
+        i = Object.prototype.hasOwnProperty;
+    e.exports = function(e, t, n, o, s, a) {
+        var c = 1 & n,
+            u = r(e),
+            d = u.length;
+        if (d != r(t).length && !c) return !1;
+        for (var l = d; l--;) {
+            var f = u[l];
+            if (!(c ? f in t : i.call(t, f))) return !1
         }
-        var l = c.get(t);
-        if (l && c.get(r)) return l == r;
+        var p = a.get(e);
+        if (p && a.get(t)) return p == t;
         var h = !0;
-        c.set(t, r), c.set(r, t);
-        for (var _ = a; ++p < s;) {
-            var y = t[v = f[p]],
-                b = r[v];
-            if (i) var x = a ? i(b, y, v, r, t, c) : i(y, b, v, t, r, c);
-            if (!(void 0 === x ? y === b || u(y, b, n, i, c) : x)) {
+        a.set(e, t), a.set(t, e);
+        for (var v = c; ++l < d;) {
+            var g = e[f = u[l]],
+                b = t[f];
+            if (o) var m = c ? o(b, g, f, t, e, a) : o(g, b, f, e, t, a);
+            if (!(void 0 === m ? g === b || s(g, b, n, o, a) : m)) {
                 h = !1;
                 break
             }
-            _ || (_ = "constructor" == v)
+            v || (v = "constructor" == f)
         }
-        if (h && !_) {
-            var d = t.constructor,
-                j = r.constructor;
-            d != j && "constructor" in t && "constructor" in r && !("function" == typeof d && d instanceof d && "function" == typeof j && j instanceof j) && (h = !1)
+        if (h && !v) {
+            var y = e.constructor,
+                x = t.constructor;
+            y != x && "constructor" in e && "constructor" in t && !("function" == typeof y && y instanceof y && "function" == typeof x && x instanceof x) && (h = !1)
         }
-        return c.delete(t), c.delete(r), h
+        return a.delete(e), a.delete(t), h
     }
 }

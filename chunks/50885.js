@@ -2,17 +2,17 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         NativePermissionRequestType: function() {
-            return i
+            return a
         },
         ThumbarButtonName: function() {
-            return a
+            return i
         },
         default: function() {
             return y
         }
     }), E("222007"), E("70102"), E("424973");
-    var t, o, n, r, i, a, I, s, T = E("627445"),
-        S = E.n(T),
+    var t, o, n, r, a, i, I, T, s = E("627445"),
+        S = E.n(s),
         N = E("817792"),
         O = E("872717"),
         A = E("95410"),
@@ -45,7 +45,7 @@ function(e, _, E) {
     }
 
     function g(e) {
-        var _, E, t, o, n, r, i, a;
+        var _, E, t, o, n, r, a, i;
         return {
             id: h[null !== (_ = e.id) && void 0 !== _ ? _ : ""],
             nativeProcessObserverId: parseInt(null !== (E = e.id) && void 0 !== E ? E : "", 10),
@@ -62,10 +62,10 @@ function(e, _, E) {
             sku: e.sku,
             pid: e.pid,
             pidPath: null !== (r = e.pidPath) && void 0 !== r ? r : [],
-            windowHandle: null !== (i = e.windowHandle) && void 0 !== i ? i : null,
-            fullscreenType: null !== (a = e.fullscreenType) && void 0 !== a ? a : R.RunningProcessFullscreenType.UNKNOWN
+            windowHandle: null !== (a = e.windowHandle) && void 0 !== a ? a : null,
+            fullscreenType: null !== (i = e.fullscreenType) && void 0 !== i ? i : R.RunningProcessFullscreenType.UNKNOWN
         }
-    }(I = i || (i = {}))[I.Camera = 0] = "Camera", I[I.Microphone = 1] = "Microphone", I[I.Photo = 2] = "Photo", I[I.InputMonitoring = 3] = "InputMonitoring", I[I.ScreenRecording = 4] = "ScreenRecording", (s = a || (a = {})).VIDEO = "VIDEO", s.MUTE = "MUTE", s.DEAFEN = "DEAFEN", s.DISCONNECT = "DISCONNECT";
+    }(I = a || (a = {}))[I.Camera = 0] = "Camera", I[I.Microphone = 1] = "Microphone", I[I.Photo = 2] = "Photo", I[I.InputMonitoring = 3] = "InputMonitoring", I[I.ScreenRecording = 4] = "ScreenRecording", (T = i || (i = {})).VIDEO = "VIDEO", T.MUTE = "MUTE", T.DEAFEN = "DEAFEN", T.DISCONNECT = "DISCONNECT";
     var y = {
         requireModule: e => D.nativeModules.requireModule(e),
         ensureModule: e => l.isPlatformEmbedded ? __OVERLAY__ && P.has(e) ? Promise.resolve() : D.nativeModules.ensureModule(e) : Promise.reject(Error("not embedded")),
@@ -382,27 +382,27 @@ function(e, _, E) {
                 method: o,
                 maxBps: n,
                 token: r,
-                chunkInterval: i,
-                contentType: a
+                chunkInterval: a,
+                contentType: i
             } = {
                 maxBps: 8e3,
                 chunkInterval: 50,
                 contentType: "application/json",
                 ...E
             }, I = _;
-            "application/json" === a && (I = JSON.stringify(_));
-            let s = n * (i / 1e3),
-                T = Math.ceil(I.length / s),
-                S = Array(T);
-            for (let e = 0; e < T; e++) {
-                let _ = e * s;
-                S[e] = I.substring(_, _ + s)
+            "application/json" === i && (I = JSON.stringify(_));
+            let T = n * (a / 1e3),
+                s = Math.ceil(I.length / T),
+                S = Array(s);
+            for (let e = 0; e < s; e++) {
+                let _ = e * T;
+                S[e] = I.substring(_, _ + T)
             }
             return new Promise((e, _) => {
                 null != D.http && D.http.makeChunkedRequest(t, S, {
                     method: o,
-                    chunkInterval: i,
-                    contentType: a,
+                    chunkInterval: a,
+                    contentType: i,
                     token: r
                 }, (E, t) => null != E ? _(E) : t.status >= 400 ? _(Error(t.body)) : void e(t))
             })

@@ -5,14 +5,14 @@ function(e, t, n) {
             return i
         }
     }), n("854508"), n("70102"), n("222007");
-    var i, r = n("811022"),
-        s = n("571877"),
+    var i, s = n("811022"),
+        r = n("571877"),
         a = n("773364"),
         o = n("784063"),
         l = n("149416");
-    let u = new r.default("SpeedTester"),
-        c = 0;
-    i = class e extends s.default {
+    let u = new s.default("SpeedTester"),
+        d = 0;
+    i = class e extends r.default {
         static create(t, n) {
             let i = new e(t);
             return u.info("Creating connection to ".concat(n.address, ":").concat(n.port, " with audio ssrc: ").concat(n.ssrc)), i.initialize(n), i
@@ -29,11 +29,11 @@ function(e, t, n) {
                 }
                 if (null == i) throw Error("Invalid transport info");
                 let {
-                    protocol: r,
-                    address: s,
+                    protocol: s,
+                    address: r,
                     port: o
                 } = i;
-                u.info("Connected with local address ".concat(s, ":").concat(o, " and protocol: ").concat(r)), this.codecs = [{
+                u.info("Connected with local address ".concat(r, ":").concat(o, " and protocol: ").concat(s)), this.codecs = [{
                     type: "audio",
                     name: l.Codecs.OPUS,
                     priority: 1,
@@ -44,9 +44,9 @@ function(e, t, n) {
                     priority: 1,
                     payloadType: 127
                 }], t.getEncryptionModes(n => {
-                    var i, c;
-                    u.info("Encryption modes: ".concat(n)), t.setTransportOptions(this.getConnectionTransportOptions()), null === (i = t.setPingInterval) || void 0 === i || i.call(t, this.pingInterval), t.setPingCallback(this.handlePing), null === (c = t.setPingTimeoutCallback) || void 0 === c || c.call(t, this.handlePingTimeout), this.setConnectionState(l.ConnectionStates.CONNECTED), this.emit(a.BaseSpeedTesterEvent.Connected, r, {
-                        address: s,
+                    var i, d;
+                    u.info("Encryption modes: ".concat(n)), t.setTransportOptions(this.getConnectionTransportOptions()), null === (i = t.setPingInterval) || void 0 === i || i.call(t, this.pingInterval), t.setPingCallback(this.handlePing), null === (d = t.setPingTimeoutCallback) || void 0 === d || d.call(t, this.handlePingTimeout), this.setConnectionState(l.ConnectionStates.CONNECTED), this.emit(a.BaseSpeedTesterEvent.Connected, s, {
+                        address: r,
                         port: o,
                         mode: this.chooseEncryptionMode(e.modes, n),
                         codecs: this.codecs
@@ -119,7 +119,7 @@ function(e, t, n) {
             return e
         }
         getCodecOptions(e, t) {
-            var n, i, r, s;
+            var n, i, s, r;
             let a;
             a = this.codecs.find(t => t.name === e);
             let o = {
@@ -141,21 +141,21 @@ function(e, t, n) {
                 }];
             a = this.codecs.find(e => e.name === t);
             let u = {
-                    type: null !== (r = null == a ? void 0 : a.payloadType) && void 0 !== r ? r : 0
-                },
-                c = {
                     type: null !== (s = null == a ? void 0 : a.payloadType) && void 0 !== s ? s : 0
+                },
+                d = {
+                    type: null !== (r = null == a ? void 0 : a.payloadType) && void 0 !== r ? r : 0
                 };
             return {
                 audioEncoder: o,
                 audioDecoders: l,
                 testEncoder: u,
-                testDecoder: c
+                testDecoder: d
             }
         }
         getUserIdBySsrc(e) {}
         constructor(e) {
-            super(e), this.mediaEngineConnectionId = "Native-".concat(c++), this.codecs = [], this.qos = !0, this.reconnectInterval = 6e4, this.pingInterval = l.PING_INTERVAL, this.handlePing = (e, t, n) => {
+            super(e), this.mediaEngineConnectionId = "Native-".concat(d++), this.codecs = [], this.qos = !0, this.reconnectInterval = 6e4, this.pingInterval = l.PING_INTERVAL, this.handlePing = (e, t, n) => {
                 this.emit(a.BaseSpeedTesterEvent.Ping, e)
             }, this.handlePingTimeout = (e, t, n, i) => {
                 this.emit(a.BaseSpeedTesterEvent.PingTimeout, n, i > 0 ? i : 4e3)

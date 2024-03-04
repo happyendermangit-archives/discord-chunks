@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return a
+            return i
         }
     });
     var t = E("872717"),
@@ -10,11 +10,11 @@ function(e, _, E) {
         n = E("34966"),
         r = E("234222");
 
-    function i() {
+    function a() {
         let e = new Date().getMinutes();
         return "x=".concat(Math.floor(e / 5))
     }
-    var a = {
+    var i = {
         lockChangeLog(e) {
             o.default.dispatch({
                 type: "CHANGE_LOG_LOCK",
@@ -43,7 +43,7 @@ function(e, _, E) {
         fetchChangelogConfig() {
             let e = r.ChangelogPlatforms.DESKTOP;
             return t.default.get({
-                url: "https://cdn.discordapp.com/changelogs/config_".concat(e, ".json?").concat(i())
+                url: "https://cdn.discordapp.com/changelogs/config_".concat(e, ".json?").concat(a())
             })
         },
         async fetchChangelog(e, _) {
@@ -51,7 +51,7 @@ function(e, _, E) {
             let E = r.ChangelogPlatforms.DESKTOP;
             try {
                 let n = await t.default.get({
-                    url: "https://cdn.discordapp.com/changelogs/".concat(E, "/").concat(e, "/").concat(_, ".json?").concat(i())
+                    url: "https://cdn.discordapp.com/changelogs/".concat(E, "/").concat(e, "/").concat(_, ".json?").concat(a())
                 });
                 return o.default.dispatch({
                     type: "CHANGE_LOG_FETCH_SUCCESS",

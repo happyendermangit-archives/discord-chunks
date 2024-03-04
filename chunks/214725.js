@@ -20,8 +20,8 @@ function(e, t, n) {
         var n = t,
             f = n.placement,
             p = void 0 === f ? e.placement : f,
-            h = n.strategy,
-            m = void 0 === h ? e.strategy : h,
+            m = n.strategy,
+            h = void 0 === m ? e.strategy : m,
             y = n.boundary,
             _ = void 0 === y ? u.clippingParents : y,
             g = n.rootBoundary,
@@ -35,21 +35,21 @@ function(e, t, n) {
             T = M === u.popper ? u.reference : u.popper,
             S = e.rects.popper,
             Y = e.elements[void 0 !== w && w ? T : M],
-            x = (0, r.default)((0, l.isElement)(Y) ? Y : Y.contextElement || (0, a.default)(e.elements.popper), _, v, m),
-            O = (0, o.default)(e.elements.reference),
+            O = (0, r.default)((0, l.isElement)(Y) ? Y : Y.contextElement || (0, a.default)(e.elements.popper), _, v, h),
+            x = (0, o.default)(e.elements.reference),
             E = (0, i.default)({
-                reference: O,
+                reference: x,
                 element: S,
                 strategy: "absolute",
                 placement: p
             }),
             P = (0, s.default)(Object.assign({}, S, E)),
-            j = M === u.popper ? P : O,
+            j = M === u.popper ? P : x,
             C = {
-                top: x.top - j.top + D.top,
-                bottom: j.bottom - x.bottom + D.bottom,
-                left: x.left - j.left + D.left,
-                right: j.right - x.right + D.right
+                top: O.top - j.top + D.top,
+                bottom: j.bottom - O.bottom + D.bottom,
+                left: O.left - j.left + D.left,
+                right: j.right - O.right + D.right
             },
             H = e.modifiersData.offset;
         if (M === u.popper && H) {

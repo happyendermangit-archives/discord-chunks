@@ -9,9 +9,9 @@ function(e, t, n) {
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("55258");
     let l = {
         PRIMARY: o.cardPrimary,
@@ -21,20 +21,20 @@ function(e, t, n) {
         BRAND: o.cardBrand,
         CUSTOM: o.card
     };
-    class u extends r.PureComponent {
+    class u extends s.PureComponent {
         render() {
             let e;
             let {
                 children: t,
                 editable: n,
-                type: r,
-                className: s,
+                type: s,
+                className: r,
                 outline: u,
-                ...c
+                ...d
             } = this.props;
-            return u ? e = o.outline : r === l.PRIMARY && n && (e = o.editable), (0, i.jsx)("div", {
-                className: a(s, r, e),
-                ...c,
+            return u ? e = o.outline : s === l.PRIMARY && n && (e = o.editable), (0, i.jsx)("div", {
+                className: a(r, s, e),
+                ...d,
                 children: t
             })
         }

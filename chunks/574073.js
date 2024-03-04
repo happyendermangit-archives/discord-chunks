@@ -2,115 +2,115 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         },
         useNullableMessageAuthor: function() {
-            return c
+            return _
         },
         getMessageAuthor: function() {
-            return g
+            return h
         },
         useNullableUserAuthor: function() {
-            return m
+            return E
         },
         getUserAuthor: function() {
-            return h
+            return g
         }
     });
-    var s = n("627445"),
-        i = n.n(s),
+    var i = n("627445"),
+        s = n.n(i),
         r = n("446674"),
         a = n("42203"),
         o = n("26989"),
-        d = n("305961"),
+        l = n("305961"),
         u = n("27618"),
-        l = n("697218"),
-        f = n("158998");
+        d = n("697218"),
+        c = n("158998");
 
-    function _(e) {
-        let t = c(e);
-        return i(null != t, "Result cannot be null because the message is not null"), t
+    function f(e) {
+        let t = _(e);
+        return s(null != t, "Result cannot be null because the message is not null"), t
     }
 
-    function c(e) {
+    function _(e) {
         var t;
         let n = (0, r.useStateFromStores)([a.default], () => null == e ? null : a.default.getChannel(e.channel_id)),
-            s = null == e ? void 0 : null === (t = e.author) || void 0 === t ? void 0 : t.id,
-            i = null == n ? void 0 : n.guild_id,
-            _ = (0, r.useStateFromStores)([o.default], () => null == i || null == s ? null : o.default.getMember(i, s)),
-            c = (0, r.useStateFromStores)([l.default], () => l.default.getUser(s), [s]),
-            g = f.default.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.author : c),
-            m = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(i)),
-            h = (0, r.useStateFromStores)([u.default], () => null != s && (null == n ? void 0 : n.isPrivate()) ? u.default.getNickname(s) : null);
-        return null == e ? null : v({
+            i = null == e ? void 0 : null === (t = e.author) || void 0 === t ? void 0 : t.id,
+            s = null == n ? void 0 : n.guild_id,
+            f = (0, r.useStateFromStores)([o.default], () => null == s || null == i ? null : o.default.getMember(s, i)),
+            _ = (0, r.useStateFromStores)([d.default], () => d.default.getUser(i), [i]),
+            h = c.default.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.author : _),
+            E = (0, r.useStateFromStores)([l.default], () => l.default.getGuild(s)),
+            g = (0, r.useStateFromStores)([u.default], () => null != i && (null == n ? void 0 : n.isPrivate()) ? u.default.getNickname(i) : null);
+        return null == e ? null : m({
             user: e.author,
             channel: n,
-            guild: m,
-            userName: g,
-            member: _,
-            friendNickname: h
+            guild: E,
+            userName: h,
+            member: f,
+            friendNickname: g
         })
     }
 
-    function g(e) {
+    function h(e) {
         let t = a.default.getChannel(e.channel_id);
-        return h(e.author, t)
+        return g(e.author, t)
     }
 
-    function m(e, t) {
+    function E(e, t) {
         let n = null == e ? void 0 : e.id,
-            s = null == t ? void 0 : t.guild_id,
-            i = (0, r.useStateFromStores)([o.default], () => null == s || null == n ? null : o.default.getMember(s, n)),
-            a = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(s)),
-            l = (0, r.useStateFromStores)([u.default], () => null != n && (null == t ? void 0 : t.isPrivate()) ? u.default.getNickname(n) : null),
-            _ = f.default.useName(e);
-        return v({
+            i = null == t ? void 0 : t.guild_id,
+            s = (0, r.useStateFromStores)([o.default], () => null == i || null == n ? null : o.default.getMember(i, n)),
+            a = (0, r.useStateFromStores)([l.default], () => l.default.getGuild(i)),
+            d = (0, r.useStateFromStores)([u.default], () => null != n && (null == t ? void 0 : t.isPrivate()) ? u.default.getNickname(n) : null),
+            f = c.default.useName(e);
+        return m({
             user: e,
             channel: t,
             guild: a,
-            member: i,
-            userName: _,
-            friendNickname: l
+            member: s,
+            userName: f,
+            friendNickname: d
         })
     }
 
-    function h(e, t) {
+    function g(e, t) {
         let n = null == e ? void 0 : e.id,
-            s = null == t ? void 0 : t.guild_id,
-            i = d.default.getGuild(s),
-            r = null == s || null == n ? null : o.default.getMember(s, n),
+            i = null == t ? void 0 : t.guild_id,
+            s = l.default.getGuild(i),
+            r = null == i || null == n ? null : o.default.getMember(i, n),
             a = null != n && null != t && t.isPrivate() ? u.default.getNickname(n) : null;
-        return v({
+        return m({
             user: e,
             channel: t,
-            guild: i,
+            guild: s,
             member: r,
             friendNickname: a
         })
     }
 
-    function v(e) {
-        var t, n, s;
+    function m(e) {
+        var t, n, i;
         let {
-            user: i,
+            user: s,
             channel: r,
             guild: a,
             member: o,
-            userName: d,
+            userName: l,
             friendNickname: u
-        } = e, l = null == i ? "???" : null != d ? d : f.default.getName(i);
-        return (null == i ? void 0 : i.id) == null || null == r ? {
-            nick: l,
+        } = e, d = null == s ? "???" : null != l ? l : c.default.getName(s);
+        return (null == s ? void 0 : s.id) == null || null == r ? {
+            nick: d,
             colorString: void 0
         } : (null == a ? void 0 : a.id) == null ? {
-            nick: null != u ? u : l,
+            nick: null != u ? u : d,
             colorString: void 0
         } : null == o ? {
-            nick: l,
+            nick: d,
             colorString: void 0
         } : {
-            nick: null !== (n = o.nick) && void 0 !== n ? n : l,
-            colorString: null !== (s = o.colorString) && void 0 !== s ? s : void 0,
+            nick: null !== (n = o.nick) && void 0 !== n ? n : d,
+            colorString: null !== (i = o.colorString) && void 0 !== i ? i : void 0,
             colorRoleName: null != o.colorRoleId ? null == a ? void 0 : null === (t = a.roles[o.colorRoleId]) || void 0 === t ? void 0 : t.name : void 0,
             iconRoleId: o.iconRoleId,
             guildMemberAvatar: o.avatar

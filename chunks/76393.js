@@ -2,39 +2,39 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     }), n("222007");
     var i = n("446674"),
-        r = n("913144"),
-        s = n("235660"),
+        s = n("913144"),
+        r = n("235660"),
         a = n("800762");
     let o = null,
         l = null,
         u = new Set,
-        c = {},
         d = {},
+        c = {},
         f = new Set,
-        E = Object.freeze({});
-    class p extends i.default.DeviceSettingsStore {
+        _ = Object.freeze({});
+    class h extends i.default.DeviceSettingsStore {
         initialize(e) {
-            null != e && (d = e.lastSelectedDeviceByPlatform), this.waitFor(s.default, a.default)
+            null != e && (c = e.lastSelectedDeviceByPlatform), this.waitFor(r.default, a.default)
         }
         getUserAgnosticState() {
             return {
-                lastSelectedDeviceByPlatform: d
+                lastSelectedDeviceByPlatform: c
             }
         }
         getDevicesForPlatform(e) {
             var t;
-            return null !== (t = c[e]) && void 0 !== t ? t : E
+            return null !== (t = d[e]) && void 0 !== t ? t : _
         }
         getLastSelectedDeviceByPlatform(e) {
-            return d[e]
+            return c[e]
         }
         getDevice(e, t) {
             var n;
-            return null === (n = c[e]) || void 0 === n ? void 0 : n[t]
+            return null === (n = d[e]) || void 0 === n ? void 0 : n[t]
         }
         getFetchingDevices(e) {
             return f.has(e)
@@ -49,8 +49,8 @@ function(e, t, n) {
             return l
         }
     }
-    p.displayName = "GameConsoleStore", p.persistKey = "GameConsoleStore";
-    var h = new p(r.default, {
+    h.displayName = "GameConsoleStore", h.persistKey = "GameConsoleStore";
+    var E = new h(s.default, {
         REMOTE_SESSION_CONNECT: function(e) {
             let {
                 sessionId: t
@@ -65,16 +65,16 @@ function(e, t, n) {
                 sessionType: t,
                 nonce: n,
                 channelId: i,
-                deviceId: r,
-                commandId: s
+                deviceId: s,
+                commandId: r
             } = e;
             l = {
                 type: t,
                 nonce: n,
                 channelId: i,
                 startedAt: Date.now(),
-                deviceId: r,
-                commandId: s
+                deviceId: s,
+                commandId: r
             }
         },
         GAME_CONSOLE_FETCH_DEVICES_START: function(e) {
@@ -89,10 +89,10 @@ function(e, t, n) {
                 devices: n
             } = e;
             f.delete(t);
-            let i = c[t] = {},
-                r = {};
-            for (let e of n) i[e.id] = e, d[t] === e.id && (r[t] = e.id);
-            d = r
+            let i = d[t] = {},
+                s = {};
+            for (let e of n) i[e.id] = e, c[t] === e.id && (s[t] = e.id);
+            c = s
         },
         GAME_CONSOLE_FETCH_DEVICES_FAIL: function(e) {
             let {
@@ -105,7 +105,7 @@ function(e, t, n) {
                 platform: t,
                 deviceId: n
             } = e;
-            d[t] = n
+            c[t] = n
         }
     })
 }

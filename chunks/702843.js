@@ -5,8 +5,8 @@ function(e, t, n) {
             return a
         }
     }), n("222007"), n("808653"), n("424973");
-    var i, r, s = n("71185");
-    (r = i || (i = {})).UP = "ArrowUp", r.DOWN = "ArrowDown", r.DROP = "Shift", r.CANCEL = "Escape";
+    var i, s, r = n("71185");
+    (s = i || (i = {})).UP = "ArrowUp", s.DOWN = "ArrowDown", s.DROP = "Shift", s.CANCEL = "Escape";
     class a {
         disconnect() {
             window.removeEventListener("keydown", this.handleDraggedElementKeyDown, {
@@ -70,8 +70,8 @@ function(e, t, n) {
                 return this.manager.getMonitor().canDropOnTarget(n) && e.push(i), e
             }, [])
         }
-        constructor(e, t, n, i, r) {
-            this.targetNodes = t, this.manager = n, this.previewer = i, this.announcer = r, this.handleDraggedElementKeyDown = async e => {
+        constructor(e, t, n, i, s) {
+            this.targetNodes = t, this.manager = n, this.previewer = i, this.announcer = s, this.handleDraggedElementKeyDown = async e => {
                 switch (e.key) {
                     case "ArrowUp":
                         e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getPreviousDropTarget());
@@ -79,7 +79,7 @@ function(e, t, n) {
                     case "ArrowDown":
                         e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getNextDropTarget())
                 }
-            }, this.currentHoveredNode = e, this.focusManager = (0, s.createFocusManager)({
+            }, this.currentHoveredNode = e, this.focusManager = (0, r.createFocusManager)({
                 getFocusableElements: () => this.getViableTargets(t),
                 getActiveElement: () => e.ownerDocument.activeElement
             }), this.actions = n.getActions(), this.monitor = n.getMonitor(), window.addEventListener("keydown", this.handleDraggedElementKeyDown, {

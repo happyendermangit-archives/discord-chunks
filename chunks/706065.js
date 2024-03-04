@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return i
+            return a
         }
     }), E("222007");
     var t = E("95410"),
@@ -26,5 +26,5 @@ function(e, _, E) {
             super(...e), this.seenForumGuidelines = new Set
         }
     }
-    var i = new r
+    var a = new r
 }

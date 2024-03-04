@@ -2,43 +2,43 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getAutomodAvatarURL: function() {
-            return C
+            return I
         },
         default: function() {
-            return v
+            return C
         }
     });
     var i = n("560528"),
-        r = n("324241"),
-        s = n("307757"),
+        s = n("324241"),
+        r = n("307757"),
         a = n("548520"),
         o = n("445724"),
         l = n("170382"),
         u = n("593285"),
-        c = n("575603"),
-        d = n("181815"),
+        d = n("575603"),
+        c = n("181815"),
         f = n("521089"),
-        E = n("366942"),
-        p = n("125707"),
-        h = n("785744"),
-        _ = n("297384"),
-        S = n("573220"),
-        m = n("265284"),
-        T = n("320436"),
-        g = n("348044"),
-        I = n("36409");
+        _ = n("366942"),
+        h = n("125707"),
+        E = n("785744"),
+        g = n("297384"),
+        m = n("573220"),
+        p = n("265284"),
+        S = n("320436"),
+        v = n("348044"),
+        T = n("36409");
 
-    function C() {
+    function I() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return e ? I : r
+        return e ? T : s
     }
-    var v = {
-        DEFAULT_AVATARS: [s, a, o, l, u, c],
-        DEFAULT_GROUP_DM_AVATARS: [d, f, E, p, h, _, S, m],
+    var C = {
+        DEFAULT_AVATARS: [r, a, o, l, u, d],
+        DEFAULT_GROUP_DM_AVATARS: [c, f, _, h, E, g, m, p],
         BOT_AVATARS: {
-            clyde: g
+            clyde: v
         },
-        DEFAULT_CHANNEL_ICON: T,
+        DEFAULT_CHANNEL_ICON: S,
         canUseWebp: function() {
             return i.canUseWebp()
         }

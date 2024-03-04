@@ -59,8 +59,8 @@ function(e, t, n) {
                     configurable: !0
                 }
             }), t && u(e, t)
-        }(m, e);
-        var t, n, r, f, p, h = (t = m, n = function() {
+        }(h, e);
+        var t, n, r, f, p, m = (t = h, n = function() {
             if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
             if ("function" == typeof Proxy) return !0;
             try {
@@ -79,15 +79,15 @@ function(e, t, n) {
             }(this, e)
         });
 
-        function m() {
+        function h() {
             var e;
             ! function(e, t) {
                 if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-            }(this, m);
+            }(this, h);
             for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-            return d(l(e = h.call.apply(h, [this].concat(n))), "priority", 10), d(l(e), "incompatibleTokens", ["t", "T", "x"]), e
+            return d(l(e = m.call.apply(m, [this].concat(n))), "priority", 10), d(l(e), "incompatibleTokens", ["t", "T", "x"]), e
         }
-        return r = m, f = [{
+        return r = h, f = [{
             key: "parse",
             value: function(e, t) {
                 switch (t) {
@@ -108,6 +108,6 @@ function(e, t, n) {
             value: function(e, t, n) {
                 return t.timestampIsSet ? e : new Date(e.getTime() - n)
             }
-        }], s(r.prototype, f), p && s(r, p), m
+        }], s(r.prototype, f), p && s(r, p), h
     }(r.Parser)
 }

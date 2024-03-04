@@ -5,30 +5,30 @@ function(e, t, n) {
             return c
         },
         CompositeDisposable: function() {
-            return l
+            return u
         },
         SerialDisposable: function() {
-            return u
+            return d
         }
     }), n("70102"), n("424973");
     var r = n("959708");
 
-    function a(e, t) {
+    function i(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }
 
-    function i(e, t) {
+    function o(e, t) {
         for (var n = 0; n < t.length; n++) {
             var r = t[n];
             r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
         }
     }
 
-    function o(e, t, n) {
-        return t && i(e.prototype, t), n && i(e, n), e
+    function s(e, t, n) {
+        return t && o(e.prototype, t), n && o(e, n), e
     }
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -38,9 +38,9 @@ function(e, t, n) {
     }
     var c = function() {
         function e(t) {
-            a(this, e), s(this, "isDisposed", !1), s(this, "action", void 0), this.action = (0, r.isFunction)(t) ? t : r.noop
+            i(this, e), a(this, "isDisposed", !1), a(this, "action", void 0), this.action = (0, r.isFunction)(t) ? t : r.noop
         }
-        return o(e, [{
+        return s(e, [{
             key: "dispose",
             value: function() {
                 !this.isDisposed && (this.action(), this.isDisposed = !0)
@@ -62,16 +62,16 @@ function(e, t, n) {
             }
         }]), e
     }();
-    s(c, "empty", {
+    a(c, "empty", {
         dispose: r.noop
     });
-    var l = function() {
+    var u = function() {
             function e() {
-                a(this, e), s(this, "isDisposed", !1), s(this, "disposables", void 0);
+                i(this, e), a(this, "isDisposed", !1), a(this, "disposables", void 0);
                 for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
                 this.disposables = n
             }
-            return o(e, [{
+            return s(e, [{
                 key: "add",
                 value: function(e) {
                     this.isDisposed ? e.dispose() : this.disposables.push(e)
@@ -106,11 +106,11 @@ function(e, t, n) {
                 }
             }]), e
         }(),
-        u = function() {
+        d = function() {
             function e() {
-                a(this, e), s(this, "isDisposed", !1), s(this, "current", void 0)
+                i(this, e), a(this, "isDisposed", !1), a(this, "current", void 0)
             }
-            return o(e, [{
+            return s(e, [{
                 key: "getDisposable",
                 value: function() {
                     return this.current

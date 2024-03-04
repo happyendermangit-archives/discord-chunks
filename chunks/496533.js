@@ -5,13 +5,13 @@ function(e, t, n) {
         return null
     }
 
-    function r(e) {}
+    function s(e) {}
     n.r(t), n.d(t, {
         getUserId: function() {
             return i
         },
         setUserId: function() {
-            return r
+            return s
         }
     })
 }

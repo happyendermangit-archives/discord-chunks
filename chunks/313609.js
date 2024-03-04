@@ -2,27 +2,27 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return d
         }
     }), n("70102");
-    var s = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        s = n("884691"),
         r = n("414456"),
         a = n.n(r),
         o = n("897027");
-    let d = e => new Promise((t, n) => {
+    let l = e => new Promise((t, n) => {
         null == e && n(Error("No image src passed"));
-        let s = new Image;
-        s.src = e, s.onload = () => t(s), s.onerror = e => n(e)
+        let i = new Image;
+        i.src = e, i.onload = () => t(i), i.onerror = e => n(e)
     });
-    class u extends i.PureComponent {
+    class u extends s.PureComponent {
         componentDidUpdate(e) {
             e.src !== this.props.src && this.setState({
                 loaded: !1
             }, () => this.initialize())
         }
         initialize() {
-            d(this.props.src).then(() => {
+            l(this.props.src).then(() => {
                 !this.unmounting && this.setState({
                     loaded: !0
                 })
@@ -36,30 +36,30 @@ function(e, t, n) {
                 className: e,
                 src: t,
                 alt: n,
-                width: i,
+                width: s,
                 height: r,
-                onLoad: d,
+                onLoad: l,
                 style: u,
-                imageClassName: l
+                imageClassName: d
             } = this.props, {
-                loaded: f
+                loaded: c
             } = this.state;
-            return (0, s.jsx)("div", {
+            return (0, i.jsx)("div", {
                 className: e,
                 style: {
                     ...u,
-                    width: i,
+                    width: s,
                     height: r
                 },
-                children: (0, s.jsx)("img", {
-                    className: a(o.image, l, {
-                        [o.loaded]: f
+                children: (0, i.jsx)("img", {
+                    className: a(o.image, d, {
+                        [o.loaded]: c
                     }),
-                    width: i,
+                    width: s,
                     height: r,
                     src: t,
                     alt: n,
-                    onLoad: d
+                    onLoad: l
                 })
             })
         }
@@ -74,5 +74,5 @@ function(e, t, n) {
         height: 0,
         alt: ""
     };
-    var l = u
+    var d = u
 }

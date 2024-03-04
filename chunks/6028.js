@@ -6,8 +6,8 @@ function(e, t, n) {
             d = e.dateFormats,
             f = e.medium,
             p = [],
-            h = [],
-            m = [];
+            m = [],
+            h = [];
 
         function y(e, t) {
             var n = Array((e.match(/M/g) || []).length + 1),
@@ -18,13 +18,13 @@ function(e, t, n) {
             for (var t = 0; t < s.length; t += 1)
                 if (e.hasOwnProperty(s[t])) return !1;
             return !0
-        }(r) ? m.push(n) : function(e) {
+        }(r) ? h.push(n) : function(e) {
             for (var t = 0; t < i.length; t += 1)
                 if (e.hasOwnProperty(i[t])) return !1;
             return !0
-        }(r) && h.push(n));
-        for (a = 0; a < h.length; a += 1)
-            for (o = 0; o < m.length; o += 1)(r = u(n = f.replace("{0}", h[a]).replace("{1}", m[o]).replace(/^[,\s]+|[,\s]+$/gi, ""))) && p.push(r);
+        }(r) && m.push(n));
+        for (a = 0; a < m.length; a += 1)
+            for (o = 0; o < h.length; o += 1)(r = u(n = f.replace("{0}", m[a]).replace("{1}", h[o]).replace(/^[,\s]+|[,\s]+$/gi, ""))) && p.push(r);
         for (t in c) c.hasOwnProperty(t) && (r = u(n = y(t, c[t]))) && p.push(r);
         for (t in d) d.hasOwnProperty(t) && (r = u(n = y(t, d[t]))) && p.push(r);
         return p

@@ -1,10 +1,10 @@
-function(t, e, n) {
+function(e, t, n) {
     "use strict";
 
-    function a(t) {}
-    n.r(e), n.d(e, {
+    function i(e) {}
+    n.r(t), n.d(t, {
         default: function() {
-            return a
+            return i
         }
     })
 }

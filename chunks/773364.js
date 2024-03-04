@@ -5,10 +5,10 @@ function(e, t, n) {
             return u.BaseConnectionEvent
         },
         BaseSpeedTesterEvent: function() {
-            return c.BaseSpeedTesterEvent
+            return d.BaseSpeedTesterEvent
         },
         MediaEngineEvent: function() {
-            return d.MediaEngineEvent
+            return c.MediaEngineEvent
         },
         MediaEngineContextTypes: function() {
             return f.MediaEngineContextTypes
@@ -23,18 +23,18 @@ function(e, t, n) {
             return l
         },
         determineMediaEngine: function() {
-            return p
+            return h
         },
         initializeMediaEngine: function() {
-            return h
+            return E
         }
     });
-    var i, r, s, a, o, l, u = n("947279"),
-        c = n("571877"),
-        d = n("775766"),
+    var i, s, r, a, o, l, u = n("947279"),
+        d = n("571877"),
+        c = n("775766"),
         f = n("353927");
 
-    function E(e) {
+    function _(e) {
         switch (e) {
             case f.MediaEngineImplementations.NATIVE:
                 return n("741397").default;
@@ -46,13 +46,13 @@ function(e, t, n) {
         }
     }
 
-    function p() {
+    function h() {
         var e;
-        return null !== (e = [f.MediaEngineImplementations.NATIVE, f.MediaEngineImplementations.WEBRTC].find(e => E(e).supported())) && void 0 !== e ? e : f.MediaEngineImplementations.DUMMY
+        return null !== (e = [f.MediaEngineImplementations.NATIVE, f.MediaEngineImplementations.WEBRTC].find(e => _(e).supported())) && void 0 !== e ? e : f.MediaEngineImplementations.DUMMY
     }
 
-    function h(e) {
-        let t = E(e);
+    function E(e) {
+        let t = _(e);
         return new t
-    }(i = a || (a = {})).INPUT_DEVICE = "input_device", i.STREAM = "stream", (r = o || (o = {})).NONE = "", r.BACKGROUND_BLUR = "background_blur", r.BACKGROUND_REPLACEMENT = "background_replacement", (s = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview", s.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"
+    }(i = a || (a = {})).INPUT_DEVICE = "input_device", i.STREAM = "stream", (s = o || (o = {})).NONE = "", s.BACKGROUND_BLUR = "background_blur", s.BACKGROUND_REPLACEMENT = "background_replacement", (r = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview", r.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"
 }

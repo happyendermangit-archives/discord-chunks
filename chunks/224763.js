@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("37983");
     n("884691");
-    var r = n("414456"),
-        s = n.n(r),
+    var s = n("414456"),
+        r = n.n(s),
         a = n("227645"),
         o = n("272066");
 
@@ -16,15 +16,15 @@ function(e, t, n) {
         let {
             as: t,
             muted: n = !1,
-            selected: r = !1,
+            selected: s = !1,
             className: l,
             ...u
-        } = e, c = null != t ? t : a.Clickable;
-        return (0, i.jsx)(c, {
+        } = e, d = null != t ? t : a.Clickable;
+        return (0, i.jsx)(d, {
             ...u,
-            className: s(o.interactive, l, {
+            className: r(o.interactive, l, {
                 [o.muted]: n,
-                [o.selected]: r
+                [o.selected]: s
             })
         })
     }

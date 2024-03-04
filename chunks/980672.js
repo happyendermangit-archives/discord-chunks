@@ -2,24 +2,24 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Switch: function() {
-            return h
+            return E
         }
     }), n("222007");
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("907002"),
         l = n("669491"),
         u = n("413197"),
-        c = n("718776"),
-        d = n("708253"),
+        d = n("718776"),
+        c = n("708253"),
         f = n("737185");
-    let E = {
+    let _ = {
             mass: 1,
             tension: 250
         },
-        p = {
+        h = {
             X: {
                 TOP: "M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z",
                 BOTTOM: "M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z"
@@ -33,41 +33,41 @@ function(e, t, n) {
                 BOTTOM: "M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z"
             }
         },
-        h = function(e) {
+        E = function(e) {
             let {
                 id: t,
                 onChange: n,
-                checked: s,
-                disabled: h,
-                className: _,
-                focusProps: S,
-                innerRef: m
+                checked: r,
+                disabled: E,
+                className: g,
+                focusProps: m,
+                innerRef: p
             } = e, {
-                reducedMotion: T
-            } = r.useContext(u.AccessibilityPreferencesContext), g = r.useRef(null), [I, C] = r.useState(!1), v = (0, d.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), A = (0, d.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
-                state: R,
+                reducedMotion: S
+            } = s.useContext(u.AccessibilityPreferencesContext), v = s.useRef(null), [T, I] = s.useState(!1), C = (0, c.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), A = (0, c.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
+                state: y,
                 opacity: N
             } = (0, o.useSpring)({
-                config: E,
-                opacity: h ? .3 : 1,
-                state: I ? s ? .7 : .3 : s ? 1 : 0
+                config: _,
+                opacity: E ? .3 : 1,
+                state: T ? r ? .7 : .3 : r ? 1 : 0
             });
-            return (0, i.jsx)(c.FocusRing, {
-                ...S,
+            return (0, i.jsx)(d.FocusRing, {
+                ...m,
                 within: !0,
                 offset: -2,
                 children: (0, i.jsxs)(o.animated.div, {
-                    className: a(f.container, _, {
-                        [f.checked]: s,
-                        [f.disabled]: h
+                    className: a(f.container, g, {
+                        [f.checked]: r,
+                        [f.disabled]: E
                     }),
-                    onMouseDown: () => !h && C(!0),
-                    onMouseUp: () => C(!1),
-                    onMouseLeave: () => C(!1),
+                    onMouseDown: () => !E && I(!0),
+                    onMouseUp: () => I(!1),
+                    onMouseLeave: () => I(!1),
                     style: {
                         opacity: N,
-                        backgroundColor: R.to({
-                            output: [v, A]
+                        backgroundColor: y.to({
+                            output: [C, A]
                         })
                     },
                     children: [(0, i.jsxs)(o.animated.svg, {
@@ -75,7 +75,7 @@ function(e, t, n) {
                         viewBox: "0 0 28 20",
                         preserveAspectRatio: "xMinYMid meet",
                         style: {
-                            left: R.to({
+                            left: y.to({
                                 range: [0, .3, .7, 1],
                                 output: [-3, 1, 8, 12]
                             })
@@ -83,67 +83,67 @@ function(e, t, n) {
                         "aria-hidden": !0,
                         children: [(0, i.jsx)(o.animated.rect, {
                             fill: "white",
-                            x: R.to({
+                            x: y.to({
                                 range: [0, .3, .7, 1],
                                 output: [4, 0, 0, 4]
                             }),
-                            y: R.to({
+                            y: y.to({
                                 range: [0, .3, .7, 1],
                                 output: [0, 1, 1, 0]
                             }),
-                            height: R.to({
+                            height: y.to({
                                 range: [0, .3, .7, 1],
                                 output: [20, 18, 18, 20]
                             }),
-                            width: R.to({
+                            width: y.to({
                                 range: [0, .3, .7, 1],
                                 output: [20, 28, 28, 20]
                             }),
                             rx: "10"
-                        }), function(e, t, n, r) {
-                            let s = e.to({
+                        }), function(e, t, n, s) {
+                            let r = e.to({
                                     output: [t, n]
                                 }),
-                                a = r ? [p.X.TOP, p.X.TOP, p.CHECK.TOP, p.CHECK.TOP] : [p.X.TOP, p.BAR.TOP, p.BAR.TOP, p.CHECK.TOP],
-                                l = r ? [p.X.BOTTOM, p.X.BOTTOM, p.CHECK.BOTTOM, p.CHECK.BOTTOM] : [p.X.BOTTOM, p.BAR.BOTTOM, p.BAR.BOTTOM, p.CHECK.BOTTOM];
+                                a = s ? [h.X.TOP, h.X.TOP, h.CHECK.TOP, h.CHECK.TOP] : [h.X.TOP, h.BAR.TOP, h.BAR.TOP, h.CHECK.TOP],
+                                l = s ? [h.X.BOTTOM, h.X.BOTTOM, h.CHECK.BOTTOM, h.CHECK.BOTTOM] : [h.X.BOTTOM, h.BAR.BOTTOM, h.BAR.BOTTOM, h.CHECK.BOTTOM];
                             return (0, i.jsxs)("svg", {
                                 viewBox: "0 0 20 20",
                                 fill: "none",
                                 children: [(0, i.jsx)(o.animated.path, {
-                                    fill: s,
+                                    fill: r,
                                     d: e.to({
                                         range: [0, .3, .7, 1],
                                         output: a
                                     })
                                 }), (0, i.jsx)(o.animated.path, {
-                                    fill: s,
+                                    fill: r,
                                     d: e.to({
                                         range: [0, .3, .7, 1],
                                         output: l
                                     })
                                 })]
                             })
-                        }(R, v, A, T.enabled)]
+                        }(y, C, A, S.enabled)]
                     }), (0, i.jsx)("input", {
                         id: t,
                         type: "checkbox",
                         ref: e => {
-                            g.current = e, null != m && (m.current = e)
+                            v.current = e, null != p && (p.current = e)
                         },
                         className: f.input,
-                        tabIndex: h ? -1 : 0,
+                        tabIndex: E ? -1 : 0,
                         onKeyDown: function(e) {
-                            if (!h && !e.repeat)(" " === e.key || "Enter" === e.key) && C(!0)
+                            if (!E && !e.repeat)(" " === e.key || "Enter" === e.key) && I(!0)
                         },
                         onKeyUp: function(e) {
                             var t;
-                            if (!h && !!I && !e.repeat) C(!1), "Enter" === e.key && (null === (t = g.current) || void 0 === t || t.click())
+                            if (!E && !!T && !e.repeat) I(!1), "Enter" === e.key && (null === (t = v.current) || void 0 === t || t.click())
                         },
                         onChange: function(e) {
-                            C(!1), null == n || n(e.currentTarget.checked, e)
+                            I(!1), null == n || n(e.currentTarget.checked, e)
                         },
-                        checked: s,
-                        disabled: h
+                        checked: r,
+                        disabled: E
                     })]
                 })
             })

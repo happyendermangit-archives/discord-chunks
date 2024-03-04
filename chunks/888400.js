@@ -2,30 +2,30 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isSameDay: function() {
-            return d
+            return c
         },
         isWithinInterval: function() {
             return f
         },
         dateFormat: function() {
-            return E
+            return _
         },
         calendarFormat: function() {
-            return p
-        },
-        accessibilityLabelCalendarFormat: function() {
             return h
         },
+        accessibilityLabelCalendarFormat: function() {
+            return E
+        },
         diffAsUnits: function() {
-            return S
+            return m
         },
         unitsAsStrings: function() {
-            return m
+            return p
         }
     });
     var i = n("866227"),
-        r = n.n(i),
-        s = n("432959"),
+        s = n.n(i),
+        r = n("432959"),
         a = n("915639");
     let o = 864e5,
         l = Object.create(null);
@@ -36,11 +36,11 @@ function(e, t, n) {
         return !t && (n -= 6e4 * e.getTimezoneOffset()), Math.floor(n / o) * o
     }
 
-    function c(e, t) {
+    function d(e, t) {
         return Math.floor((u(e, !1) - u(t, !1)) / o)
     }
 
-    function d(e, t) {
+    function c(e, t) {
         return Math.abs(+e - +t) <= o && e.getDate() === t.getDate()
     }
 
@@ -48,32 +48,32 @@ function(e, t, n) {
         return Math.abs(e.valueOf() - t.valueOf()) < n
     }
 
-    function E(e, t) {
-        let n = e instanceof Date ? r(e).locale() : e.locale(),
+    function _(e, t) {
+        let n = e instanceof Date ? s(e).locale() : e.locale(),
             i = "".concat(n, ":").concat(t),
             a = l[i];
-        return null == a && (a = l[i] = (0, s.default)(t)), a(e instanceof Date ? e : e.toDate())
-    }
-
-    function p(e) {
-        let t;
-        let n = r.localeData(),
-            i = r(),
-            s = c(e instanceof Date ? e : e.toDate(), i.toDate());
-        return s < -1 ? E(e, "L LT") : (t = s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, e instanceof Date ? r(e) : e, i)))
+        return null == a && (a = l[i] = (0, r.default)(t)), a(e instanceof Date ? e : e.toDate())
     }
 
     function h(e) {
         let t;
-        let n = r.localeData(),
+        let n = s.localeData(),
+            i = s(),
+            r = d(e instanceof Date ? e : e.toDate(), i.toDate());
+        return r < -1 ? _(e, "L LT") : (t = r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse", _(e, n.calendar(t, e instanceof Date ? s(e) : e, i)))
+    }
+
+    function E(e) {
+        let t;
+        let n = s.localeData(),
             i = new Date,
-            s = c(e, i);
-        return "sameElse" == (t = s < -1 ? "sameElse" : s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse") ? E(e, "LLL") : E(e, n.calendar(t, r(e), r(i)))
+            r = d(e, i);
+        return "sameElse" == (t = r < -1 ? "sameElse" : r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse") ? _(e, "LLL") : _(e, n.calendar(t, s(e), s(i)))
     }
     a.default.addChangeListener(() => {
         l = Object.create(null)
     });
-    let _ = [{
+    let g = [{
         key: "days",
         millisecondsInUnit: 864e5
     }, {
@@ -87,7 +87,7 @@ function(e, t, n) {
         millisecondsInUnit: 1e3
     }];
 
-    function S(e, t) {
+    function m(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = {
                 days: 0,
@@ -96,17 +96,17 @@ function(e, t, n) {
                 seconds: n ? 1 : 0
             };
         if (e > t || n && Number(e) + 1200 > Number(t)) return i;
-        let r = Number(t) - Number(e);
-        return _.forEach(e => {
+        let s = Number(t) - Number(e);
+        return g.forEach(e => {
             let {
                 key: t,
                 millisecondsInUnit: n
             } = e;
-            i[t] = Math.floor(r / n), r -= i[t] * n
+            i[t] = Math.floor(s / n), s -= i[t] * n
         }), i
     }
 
-    function m(e, t) {
+    function p(e, t) {
         return e.days > 0 ? t.days.format({
             days: e.days,
             hours: e.hours

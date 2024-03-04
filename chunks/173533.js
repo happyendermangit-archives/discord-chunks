@@ -2,71 +2,71 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DndProvider: function() {
-            return d
+            return l
         }
     }), n("70102"), n("222007"), n("424973");
     var r = n("37983"),
-        a = n("884691"),
-        i = n("515769"),
-        o = n("772110"),
-        s = ["children"];
+        i = n("884691"),
+        o = n("515769"),
+        s = n("772110"),
+        a = ["children"];
 
     function c(e, t) {
         (null == t || t > e.length) && (t = e.length);
         for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
         return r
     }
-    var l = 0,
-        u = Symbol.for("__REACT_DND_CONTEXT_INSTANCE__"),
-        d = (0, a.memo)(function(e) {
-            var t, n, d = e.children;
-            var f = (n = 2, function(e) {
+    var u = 0,
+        d = Symbol.for("__REACT_DND_CONTEXT_INSTANCE__"),
+        l = (0, i.memo)(function(e) {
+            var t, n, l = e.children;
+            var p = (n = 2, function(e) {
                     if (Array.isArray(e)) return e
                 }(t = function(e) {
                     return "manager" in e ? [{
                         dragDropManager: e.manager
                     }, !1] : [function(e) {
-                        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p(),
+                        var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
                             n = arguments.length > 2 ? arguments[2] : void 0,
                             r = arguments.length > 3 ? arguments[3] : void 0;
-                        return !t[u] && (t[u] = {
-                            dragDropManager: (0, i.createDragDropManager)(e, t, n, r)
-                        }), t[u]
+                        return !t[d] && (t[d] = {
+                            dragDropManager: (0, o.createDragDropManager)(e, t, n, r)
+                        }), t[d]
                     }(e.backend, e.context, e.options, e.debugMode), !e.context]
                 }(function(e, t) {
                     if (null == e) return {};
-                    var n, r, a = function(e, t) {
+                    var n, r, i = function(e, t) {
                         if (null == e) return {};
-                        var n, r, a = {},
-                            i = Object.keys(e);
-                        for (r = 0; r < i.length; r++) n = i[r], !(t.indexOf(n) >= 0) && (a[n] = e[n]);
-                        return a
+                        var n, r, i = {},
+                            o = Object.keys(e);
+                        for (r = 0; r < o.length; r++) n = o[r], !(t.indexOf(n) >= 0) && (i[n] = e[n]);
+                        return i
                     }(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var i = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < i.length; r++) {
-                            if (n = i[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n])
+                        var o = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < o.length; r++) {
+                            if (n = o[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n])
                         }
                     }
-                    return a
-                }(e, s))) || function(e, t) {
-                    var n, r, a = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
-                    if (null != a) {
-                        var i = [],
-                            o = !0,
-                            s = !1;
+                    return i
+                }(e, a))) || function(e, t) {
+                    var n, r, i = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
+                    if (null != i) {
+                        var o = [],
+                            s = !0,
+                            a = !1;
                         try {
-                            for (a = a.call(e); !(o = (n = a.next()).done) && (i.push(n.value), !t || i.length !== t); o = !0);
+                            for (i = i.call(e); !(s = (n = i.next()).done) && (o.push(n.value), !t || o.length !== t); s = !0);
                         } catch (e) {
-                            s = !0, r = e
+                            a = !0, r = e
                         } finally {
                             try {
-                                !o && null != a.return && a.return()
+                                !s && null != i.return && i.return()
                             } finally {
-                                if (s) throw r
+                                if (a) throw r
                             }
                         }
-                        return i
+                        return o
                     }
                 }(t, n) || function(e, t) {
                     if (e) {
@@ -78,24 +78,24 @@ function(e, t, n) {
                 }(t, n) || function() {
                     throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()),
-                m = f[0],
-                h = f[1];
-            return (0, a.useEffect)(function() {
-                if (h) {
-                    var e = p();
-                    return ++l,
+                h = p[0],
+                v = p[1];
+            return (0, i.useEffect)(function() {
+                if (v) {
+                    var e = f();
+                    return ++u,
                         function() {
-                            0 == --l && (e[u] = null)
+                            0 == --u && (e[d] = null)
                         }
                 }
-            }, []), (0, r.jsx)(o.DndContext.Provider, Object.assign({
-                value: m
+            }, []), (0, r.jsx)(s.DndContext.Provider, Object.assign({
+                value: h
             }, {
-                children: d
+                children: l
             }), void 0)
         });
 
-    function p() {
+    function f() {
         return void 0 !== n.g ? n.g : window
     }
 }

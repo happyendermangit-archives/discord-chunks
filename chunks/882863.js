@@ -53,8 +53,8 @@ function(e, t, n) {
     var d = [],
         f = [],
         p = 1,
-        h = null,
-        m = 3,
+        m = null,
+        h = 3,
         y = !1,
         _ = !1,
         g = !1,
@@ -83,25 +83,25 @@ function(e, t, n) {
 
     function L(e, n) {
         _ = !1, g && (g = !1, b(S), S = -1), y = !0;
-        var r = m;
+        var r = h;
         try {
-            for (w(n), h = a(d); null !== h && (!(h.expirationTime > n) || e && !O());) {
-                var i = h.callback;
+            for (w(n), m = a(d); null !== m && (!(m.expirationTime > n) || e && !x());) {
+                var i = m.callback;
                 if ("function" == typeof i) {
-                    h.callback = null, m = h.priorityLevel;
-                    var s = i(h.expirationTime <= n);
-                    n = t.unstable_now(), "function" == typeof s ? h.callback = s : h === a(d) && o(d), w(n)
+                    m.callback = null, h = m.priorityLevel;
+                    var s = i(m.expirationTime <= n);
+                    n = t.unstable_now(), "function" == typeof s ? m.callback = s : m === a(d) && o(d), w(n)
                 } else o(d);
-                h = a(d)
+                m = a(d)
             }
-            if (null !== h) var u = !0;
+            if (null !== m) var u = !0;
             else {
                 var l = a(f);
                 null !== l && H(k, l.startTime - n), u = !1
             }
             return u
         } finally {
-            h = null, m = r, y = !1
+            m = null, h = r, y = !1
         }
     }
     "undefined" != typeof navigator && void 0 !== navigator.scheduling && void 0 !== navigator.scheduling.isInputPending && navigator.scheduling.isInputPending.bind(navigator.scheduling);
@@ -109,16 +109,16 @@ function(e, t, n) {
         T = null,
         S = -1,
         Y = 5,
-        x = -1;
+        O = -1;
 
-    function O() {
-        return !(t.unstable_now() - x < Y)
+    function x() {
+        return !(t.unstable_now() - O < Y)
     }
 
     function E() {
         if (null !== T) {
             var e = t.unstable_now();
-            x = e;
+            O = e;
             var n = !0;
             try {
                 n = T(!0, e)
@@ -156,25 +156,25 @@ function(e, t, n) {
     }, t.unstable_forceFrameRate = function(e) {
         0 > e || 125 < e ? console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported") : Y = 0 < e ? Math.floor(1e3 / e) : 5
     }, t.unstable_getCurrentPriorityLevel = function() {
-        return m
+        return h
     }, t.unstable_getFirstCallbackNode = function() {
         return a(d)
     }, t.unstable_next = function(e) {
-        switch (m) {
+        switch (h) {
             case 1:
             case 2:
             case 3:
                 var t = 3;
                 break;
             default:
-                t = m
+                t = h
         }
-        var n = m;
-        m = t;
+        var n = h;
+        h = t;
         try {
             return e()
         } finally {
-            m = n
+            h = n
         }
     }, t.unstable_pauseExecution = function() {}, t.unstable_requestPaint = function() {}, t.unstable_runWithPriority = function(e, t) {
         switch (e) {
@@ -187,12 +187,12 @@ function(e, t, n) {
             default:
                 e = 3
         }
-        var n = m;
-        m = e;
+        var n = h;
+        h = e;
         try {
             return t()
         } finally {
-            m = n
+            h = n
         }
     }, t.unstable_scheduleCallback = function(e, n, o) {
         var i = t.unstable_now();
@@ -220,15 +220,15 @@ function(e, t, n) {
             expirationTime: s,
             sortIndex: -1
         }, o > i ? (e.sortIndex = o, r(f, e), null === a(d) && e === a(f) && (g ? (b(S), S = -1) : g = !0, H(k, o - i))) : (e.sortIndex = s, r(d, e), _ || y || (_ = !0, C(L))), e
-    }, t.unstable_shouldYield = O, t.unstable_wrapCallback = function(e) {
-        var t = m;
+    }, t.unstable_shouldYield = x, t.unstable_wrapCallback = function(e) {
+        var t = h;
         return function() {
-            var n = m;
-            m = t;
+            var n = h;
+            h = t;
             try {
                 return e.apply(this, arguments)
             } finally {
-                m = n
+                h = n
             }
         }
     }

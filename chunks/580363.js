@@ -2,92 +2,92 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return C
+            return I
         }
     }), n("702976"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
-    var s = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        r = n.n(i),
+    var s = n("414456"),
+        r = n.n(s),
         a = n("527073"),
         o = n("577776"),
-        d = n("841811"),
+        l = n("841811"),
         u = n("338835"),
-        l = n("83900"),
-        f = n("45029"),
-        _ = n("71216"),
-        c = n("148337"),
-        g = n("568734"),
-        m = n("299039"),
-        h = n("955145"),
-        v = n("29479"),
-        E = n("49111"),
-        p = n("843455"),
-        y = n("782340"),
+        d = n("83900"),
+        c = n("45029"),
+        f = n("71216"),
+        _ = n("148337"),
+        h = n("568734"),
+        E = n("299039"),
+        g = n("955145"),
+        m = n("29479"),
+        p = n("49111"),
+        S = n("843455"),
+        v = n("782340"),
         T = n("10604");
 
-    function C(e) {
+    function I(e) {
         var t;
         let n, {
-                application: i,
+                application: s,
                 scopes: r,
                 redirectUri: o,
-                approximateGuildCount: C,
-                isEmbeddedFlow: S,
-                embeddedActivityConfig: A
+                approximateGuildCount: I,
+                isEmbeddedFlow: A,
+                embeddedActivityConfig: y
             } = e,
-            D = new Date(m.default.extractTimestamp(i.id)),
-            N = (0, v.getSecurityMessage)(r),
-            O = (0, g.hasFlag)(null !== (t = i.flags) && void 0 !== t ? t : 0, E.ApplicationFlags.EMBEDDED);
-        if (null != o && !O && !S) {
+            N = new Date(E.default.extractTimestamp(s.id)),
+            R = (0, m.getSecurityMessage)(r),
+            O = (0, h.hasFlag)(null !== (t = s.flags) && void 0 !== t ? t : 0, p.ApplicationFlags.EMBEDDED);
+        if (null != o && !O && !A) {
             let e = new URL(o);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href
         }
-        return (0, s.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             className: T.applicationDetails,
-            children: [null != n ? (0, s.jsx)(I, {
+            children: [null != n ? (0, i.jsx)(C, {
                 className: T.redirectWarning,
-                icon: l.default,
-                text: y.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
+                icon: d.default,
+                text: v.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
                     origin: n
                 })
-            }) : null, (0, s.jsx)(I, {
-                icon: f.default,
-                text: (0, h.getApplicationDetailsText)(i)
-            }), (0, s.jsx)(I, {
-                icon: d.default,
-                text: y.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
-                    date: D
-                })
-            }), r.includes(p.OAuth2Scopes.BOT) && null != C ? (0, s.jsx)(I, {
-                icon: _.default,
-                text: y.default.Messages.OAUTH2_DETAILS_GUILDS.format({
-                    guildCount: C
-                })
-            }) : null, (0, s.jsx)(I, {
+            }) : null, (0, i.jsx)(C, {
                 icon: c.default,
-                text: N
-            }), (null == A ? void 0 : A.has_csp_exception) ? (0, s.jsx)(I, {
+                text: (0, g.getApplicationDetailsText)(s)
+            }), (0, i.jsx)(C, {
+                icon: l.default,
+                text: v.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
+                    date: N
+                })
+            }), r.includes(S.OAuth2Scopes.BOT) && null != I ? (0, i.jsx)(C, {
+                icon: f.default,
+                text: v.default.Messages.OAUTH2_DETAILS_GUILDS.format({
+                    guildCount: I
+                })
+            }) : null, (0, i.jsx)(C, {
+                icon: _.default,
+                text: R
+            }), (null == y ? void 0 : y.has_csp_exception) ? (0, i.jsx)(C, {
                 icon: u.default,
-                text: y.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
-            }) : null, (null == A ? void 0 : A.displays_advertisements) ? (0, s.jsx)(I, {
+                text: v.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
+            }) : null, (null == y ? void 0 : y.displays_advertisements) ? (0, i.jsx)(C, {
                 icon: a.EmbedIcon,
-                text: y.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
+                text: v.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
             }) : null]
         })
     }
 
-    function I(e) {
+    function C(e) {
         let {
             icon: t,
             text: n,
-            className: i
+            className: s
         } = e;
-        return (0, s.jsxs)("div", {
-            className: r(T.entry, i),
-            children: [(0, s.jsx)(t, {
+        return (0, i.jsxs)("div", {
+            className: r(T.entry, s),
+            children: [(0, i.jsx)(t, {
                 className: T.entryIcon
-            }), (0, s.jsx)(o.Text, {
+            }), (0, i.jsx)(o.Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
                 className: T.entryInner,

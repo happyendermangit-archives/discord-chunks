@@ -5,11 +5,11 @@ function(e, t, n) {
             return i
         }
     }), n("424973"), n("70102"), n("222007");
-    var i, r = n("44170"),
-        s = n("383536"),
-        a = n.n(s),
+    var i, s = n("44170"),
+        r = n("383536"),
+        a = n.n(r),
         o = n("588446");
-    i = class extends r.EventEmitter {
+    i = class extends s.EventEmitter {
         addStream(e, t, n) {
             let i = !1;
             !this.streams.some(e => e.ssrc === t) && this.streams.push({
@@ -64,9 +64,9 @@ function(e, t, n) {
                 let {
                     cname: n,
                     ssrc: i,
-                    type: r
-                } = e, s = this.activeAudioSSRCs[n], a = this.activeVideoSSRCs[n], l = "".concat(r, "_inbound_").concat(t);
-                return [i, n, r, s === i || a === i ? this.direction : o.Directions.INACTIVE, l]
+                    type: s
+                } = e, r = this.activeAudioSSRCs[n], a = this.activeVideoSSRCs[n], l = "".concat(s, "_inbound_").concat(t);
+                return [i, n, s, r === i || a === i ? this.direction : o.Directions.INACTIVE, l]
             });
             if ("Firefox" !== a.name) return this.connected ? t : [];
             let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, (0, o.getDirection)(e.direction), "".concat(e.type, "_outbound_").concat(t)]);
@@ -75,8 +75,8 @@ function(e, t, n) {
                 let e = n.length - t.length,
                     i = n.slice(0, e).concat(t).slice(0, n.length);
                 return i.map((e, t) => {
-                    let [n, i, r, s, a] = e;
-                    return [n, i, r, (0, o.getDirection)(this.outboundStreams[t].direction), this.outboundStreams[t].mid]
+                    let [n, i, s, r, a] = e;
+                    return [n, i, s, (0, o.getDirection)(this.outboundStreams[t].direction), this.outboundStreams[t].mid]
                 })
             }
         }
@@ -84,10 +84,10 @@ function(e, t, n) {
             let t = this.audioCodec,
                 n = this.audioPayloadType,
                 i = this.videoCodec,
-                r = this.videoPayloadType,
-                s = this.rtxPayloadType,
+                s = this.videoPayloadType,
+                r = this.rtxPayloadType,
                 a = this.sdp;
-            if (null == t || null == n || null == i || null == r || null == s || null == a || null == this.direction) throw Error("Invalid payload: audioCodec: ".concat(t, ", audioPayloadType: ").concat(null == n ? "null" : n, ", videoCodec: ").concat(i, ", videoCodecPayloadType: ").concat(null == r ? "null" : r, ", rtxPayloadType: ").concat(null == s ? "null" : s, ", sdp: ").concat(a));
+            if (null == t || null == n || null == i || null == s || null == r || null == a || null == this.direction) throw Error("Invalid payload: audioCodec: ".concat(t, ", audioPayloadType: ").concat(null == n ? "null" : n, ", videoCodec: ").concat(i, ", videoCodecPayloadType: ").concat(null == s ? "null" : s, ", rtxPayloadType: ").concat(null == r ? "null" : r, ", sdp: ").concat(a));
             let l = (0, o.generateSessionDescription)({
                 type: e,
                 baseSDP: a,
@@ -96,9 +96,9 @@ function(e, t, n) {
                 audioPayloadType: n,
                 audioBitRate: 40,
                 videoCodec: i,
-                videoPayloadType: r,
+                videoPayloadType: s,
                 videoBitRate: 2500,
-                rtxPayloadType: s,
+                rtxPayloadType: r,
                 ssrcs: this.getSSRCs(e),
                 extensions: this.extensions
             });

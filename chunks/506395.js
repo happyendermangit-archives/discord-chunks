@@ -2,26 +2,26 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SegmentedControl: function() {
-            return d
+            return c
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("227645"),
         l = n("577776"),
         u = n("518434");
 
-    function c(e) {
+    function d(e) {
         let {
             option: t,
             selected: n,
-            onClick: s,
-            look: c,
-            className: d,
+            onClick: r,
+            look: d,
+            className: c,
             selectedClassName: f
-        } = e, E = {
+        } = e, _ = {
             [function(e) {
                 switch (e) {
                     case "tab":
@@ -30,10 +30,10 @@ function(e, t, n) {
                     case "pill":
                         return u.pillItemSelected
                 }
-            }(c)]: n
+            }(d)]: n
         };
-        null != f && (E[f] = n);
-        let p = r.useCallback(e => s(t, e), [s, t]);
+        null != f && (_[f] = n);
+        let h = s.useCallback(e => r(t, e), [r, t]);
         return (0, i.jsx)(o.Clickable, {
             className: a(function(e) {
                 switch (e) {
@@ -43,8 +43,8 @@ function(e, t, n) {
                     case "pill":
                         return u.pillItem
                 }
-            }(c), d, E),
-            onClick: p,
+            }(d), c, _),
+            onClick: h,
             children: (0, i.jsx)(l.Text, {
                 variant: "text-sm/medium",
                 color: "none",
@@ -53,27 +53,27 @@ function(e, t, n) {
         })
     }
 
-    function d(e) {
+    function c(e) {
         let {
             options: t,
             value: n,
-            onChange: s,
+            onChange: r,
             look: o = "tab",
             className: l,
-            optionClassName: d,
+            optionClassName: c,
             selectedOptionClassName: f
-        } = e, E = r.useCallback(e => {
+        } = e, _ = s.useCallback(e => {
             var t;
-            let r = n === e.value;
-            return (0, i.jsx)(c, {
-                selected: r,
+            let s = n === e.value;
+            return (0, i.jsx)(d, {
+                selected: s,
                 option: e,
                 look: o,
-                onClick: s,
-                className: d,
+                onClick: r,
+                className: c,
                 selectedClassName: f
             }, null !== (t = e.key) && void 0 !== t ? t : String(e.value))
-        }, [n, o, s, d, f]);
+        }, [n, o, r, c, f]);
         return (0, i.jsx)("div", {
             className: a(function(e) {
                 switch (e) {
@@ -84,7 +84,7 @@ function(e, t, n) {
                         return u.pillContainer
                 }
             }(o), l),
-            children: t.map(E)
+            children: t.map(_)
         })
     }
 }

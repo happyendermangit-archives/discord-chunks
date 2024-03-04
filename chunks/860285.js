@@ -2,56 +2,56 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return c
+            return d
         }
     }), n("222007");
-    var l = n("446674"),
-        r = n("913144");
-    let a = new Set,
-        i = {};
-
-    function u(e) {
-        let {
-            applicationId: t
-        } = e;
-        a.add(t)
-    }
+    var i = n("446674"),
+        s = n("913144");
+    let r = new Set,
+        a = {};
 
     function o(e) {
         let {
             applicationId: t
         } = e;
-        a.delete(t)
+        r.add(t)
     }
-    class s extends l.default.Store {
+
+    function l(e) {
+        let {
+            applicationId: t
+        } = e;
+        r.delete(t)
+    }
+    class u extends i.default.Store {
         get launchingGames() {
-            return a
+            return r
         }
         get launchableGames() {
-            return i
+            return a
         }
         isLaunchable(e) {
-            return null != i[e] ? i[e] : (i[e] = !1, r.default.dispatch({
+            return null != a[e] ? a[e] : (a[e] = !1, s.default.dispatch({
                 type: "CHECK_LAUNCHABLE_GAME",
                 gameId: e
             }), !1)
         }
     }
-    s.displayName = "LaunchableGameStore";
-    var c = new s(r.default, {
+    u.displayName = "LaunchableGameStore";
+    var d = new u(s.default, {
         GAME_LAUNCHABLE_UPDATE: function(e) {
             let {
                 gameId: t,
                 isLaunchable: n
             } = e;
-            i[t] = n
+            a[t] = n
         },
-        GAME_CLOUD_SYNC_START: u,
-        GAME_LAUNCH_START: u,
-        GAME_LAUNCH_SUCCESS: o,
-        GAME_LAUNCH_FAIL: o,
-        GAME_CLOUD_SYNC_CONFLICT: o,
-        GAME_CLOUD_SYNC_ERROR: o,
-        GAME_CLOUD_SYNC_COMPLETE: o
+        GAME_CLOUD_SYNC_START: o,
+        GAME_LAUNCH_START: o,
+        GAME_LAUNCH_SUCCESS: l,
+        GAME_LAUNCH_FAIL: l,
+        GAME_CLOUD_SYNC_CONFLICT: l,
+        GAME_CLOUD_SYNC_ERROR: l,
+        GAME_CLOUD_SYNC_COMPLETE: l
     })
 }

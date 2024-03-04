@@ -1,57 +1,57 @@
 function(e, t, n) {
     "use strict";
     var r = n("520462"),
-        a = n("745378"),
-        i = n("214401"),
-        o = n("314970"),
-        s = n("293471"),
-        c = o("Object.prototype.toString"),
-        l = n("149384")(),
-        u = "undefined" == typeof globalThis ? n.g : globalThis,
-        d = a(),
-        p = o("String.prototype.slice"),
-        f = Object.getPrototypeOf,
-        m = o("Array.prototype.indexOf", !0) || function(e, t) {
+        i = n("745378"),
+        o = n("214401"),
+        s = n("314970"),
+        a = n("293471"),
+        c = s("Object.prototype.toString"),
+        u = n("149384")(),
+        d = "undefined" == typeof globalThis ? n.g : globalThis,
+        l = i(),
+        f = s("String.prototype.slice"),
+        p = Object.getPrototypeOf,
+        h = s("Array.prototype.indexOf", !0) || function(e, t) {
             for (var n = 0; n < e.length; n += 1)
                 if (e[n] === t) return n;
             return -1
         },
-        h = {
+        v = {
             __proto__: null
         };
-    l && s && f ? r(d, function(e) {
-        var t = new u[e];
+    u && a && p ? r(l, function(e) {
+        var t = new d[e];
         if (Symbol.toStringTag in t) {
-            var n = f(t),
-                r = s(n, Symbol.toStringTag);
-            !r && (r = s(f(n), Symbol.toStringTag)), h["$" + e] = i(r.get)
+            var n = p(t),
+                r = a(n, Symbol.toStringTag);
+            !r && (r = a(p(n), Symbol.toStringTag)), v["$" + e] = o(r.get)
         }
-    }) : r(d, function(e) {
-        var t = new u[e];
-        h["$" + e] = i(t.slice)
+    }) : r(l, function(e) {
+        var t = new d[e];
+        v["$" + e] = o(t.slice)
     });
-    var v = function(e) {
+    var g = function(e) {
             var t = !1;
-            return r(h, function(n, r) {
+            return r(v, function(n, r) {
                 if (!t) try {
-                    "$" + n(e) === r && (t = p(r, 1))
+                    "$" + n(e) === r && (t = f(r, 1))
                 } catch (e) {}
             }), t
         },
-        g = function(e) {
+        b = function(e) {
             var t = !1;
-            return r(h, function(n, r) {
+            return r(v, function(n, r) {
                 if (!t) try {
-                    n(e), t = p(r, 1)
+                    n(e), t = f(r, 1)
                 } catch (e) {}
             }), t
         };
     e.exports = function(e) {
         if (!e || "object" != typeof e) return !1;
-        if (!l) {
-            var t = p(c(e), 8, -1);
-            return m(d, t) > -1 ? t : "Object" === t && g(e)
+        if (!u) {
+            var t = f(c(e), 8, -1);
+            return h(l, t) > -1 ? t : "Object" === t && b(e)
         }
-        return s ? v(e) : null
+        return a ? g(e) : null
     }
 }

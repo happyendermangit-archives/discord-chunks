@@ -1,22 +1,22 @@
-function(t, e, s) {
-    s("70102"), s("424973");
-    var r = s("678304"),
-        i = s("678889"),
-        n = s("811527"),
-        c = s("891044"),
-        o = s("560422"),
-        f = s("912065").Buffer;
+function(e, t, n) {
+    n("70102"), n("424973");
+    var r = n("678304"),
+        i = n("678889"),
+        o = n("811527"),
+        s = n("891044"),
+        a = n("560422"),
+        c = n("912065").Buffer;
 
-    function u(t) {
-        "object" == typeof t && !f.isBuffer(t) && (e = t.passphrase, t = t.key), "string" == typeof t && (t = f.from(t));
-        var e, s, u, a = n(t, e),
-            d = a.tag,
-            p = a.data;
-        switch (d) {
+    function u(e) {
+        "object" == typeof e && !c.isBuffer(e) && (t = e.passphrase, e = e.key), "string" == typeof e && (e = c.from(e));
+        var t, n, u, d = o(e, t),
+            l = d.tag,
+            f = d.data;
+        switch (l) {
             case "CERTIFICATE":
-                u = r.certificate.decode(p, "der").tbsCertificate.subjectPublicKeyInfo;
+                u = r.certificate.decode(f, "der").tbsCertificate.subjectPublicKeyInfo;
             case "PUBLIC KEY":
-                switch (!u && (u = r.PublicKey.decode(p, "der")), s = u.algorithm.algorithm.join(".")) {
+                switch (!u && (u = r.PublicKey.decode(f, "der")), n = u.algorithm.algorithm.join(".")) {
                     case "1.2.840.113549.1.1.1":
                         return r.RSAPublicKey.decode(u.subjectPublicKey.data, "der");
                     case "1.2.840.10045.2.1":
@@ -30,23 +30,23 @@ function(t, e, s) {
                             data: u.algorithm.params
                         };
                     default:
-                        throw Error("unknown key id " + s)
+                        throw Error("unknown key id " + n)
                 }
             case "ENCRYPTED PRIVATE KEY":
-                p = function(t, e) {
-                    var s = t.algorithm.decrypt.kde.kdeparams.salt,
-                        r = parseInt(t.algorithm.decrypt.kde.kdeparams.iters.toString(), 10),
-                        n = i[t.algorithm.decrypt.cipher.algo.join(".")],
-                        u = t.algorithm.decrypt.cipher.iv,
-                        a = t.subjectPrivateKey,
-                        d = parseInt(n.split("-")[1], 10) / 8,
-                        p = o.pbkdf2Sync(e, s, r, d, "sha1"),
-                        b = c.createDecipheriv(n, p, u),
+                f = function(e, t) {
+                    var n = e.algorithm.decrypt.kde.kdeparams.salt,
+                        r = parseInt(e.algorithm.decrypt.kde.kdeparams.iters.toString(), 10),
+                        o = i[e.algorithm.decrypt.cipher.algo.join(".")],
+                        u = e.algorithm.decrypt.cipher.iv,
+                        d = e.subjectPrivateKey,
+                        l = parseInt(o.split("-")[1], 10) / 8,
+                        f = a.pbkdf2Sync(t, n, r, l, "sha1"),
+                        p = s.createDecipheriv(o, f, u),
                         h = [];
-                    return h.push(b.update(a)), h.push(b.final()), f.concat(h)
-                }(p = r.EncryptedPrivateKey.decode(p, "der"), e);
+                    return h.push(p.update(d)), h.push(p.final()), c.concat(h)
+                }(f = r.EncryptedPrivateKey.decode(f, "der"), t);
             case "PRIVATE KEY":
-                switch (s = (u = r.PrivateKey.decode(p, "der")).algorithm.algorithm.join(".")) {
+                switch (n = (u = r.PrivateKey.decode(f, "der")).algorithm.algorithm.join(".")) {
                     case "1.2.840.113549.1.1.1":
                         return r.RSAPrivateKey.decode(u.subjectPrivateKey, "der");
                     case "1.2.840.10045.2.1":
@@ -59,23 +59,23 @@ function(t, e, s) {
                             params: u.algorithm.params
                         };
                     default:
-                        throw Error("unknown key id " + s)
+                        throw Error("unknown key id " + n)
                 }
             case "RSA PUBLIC KEY":
-                return r.RSAPublicKey.decode(p, "der");
+                return r.RSAPublicKey.decode(f, "der");
             case "RSA PRIVATE KEY":
-                return r.RSAPrivateKey.decode(p, "der");
+                return r.RSAPrivateKey.decode(f, "der");
             case "DSA PRIVATE KEY":
                 return {
-                    type: "dsa", params: r.DSAPrivateKey.decode(p, "der")
+                    type: "dsa", params: r.DSAPrivateKey.decode(f, "der")
                 };
             case "EC PRIVATE KEY":
                 return {
-                    curve: (p = r.ECPrivateKey.decode(p, "der")).parameters.value, privateKey: p.privateKey
+                    curve: (f = r.ECPrivateKey.decode(f, "der")).parameters.value, privateKey: f.privateKey
                 };
             default:
-                throw Error("unknown key type " + d)
+                throw Error("unknown key type " + l)
         }
     }
-    t.exports = u, u.signature = r.signature
+    e.exports = u, u.signature = r.signature
 }

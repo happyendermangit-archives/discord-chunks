@@ -11,7 +11,7 @@ function(e, t, n) {
 
     function i(e, t) {
         (0, a.default)(1, arguments);
-        var n, i, m, y = (0, o.default)(null !== (n = null == t ? void 0 : t.additionalDigits) && void 0 !== n ? n : 2);
+        var n, i, h, y = (0, o.default)(null !== (n = null == t ? void 0 : t.additionalDigits) && void 0 !== n ? n : 2);
         if (2 !== y && 1 !== y && 0 !== y) throw RangeError("additionalDigits must be 0, 1 or 2");
         if (!("string" == typeof e || "[object String]" === Object.prototype.toString.call(e))) return new Date(NaN);
         var _ = function(e) {
@@ -59,9 +59,9 @@ function(e, t, n) {
                 }(t, s, l);
                 var c = new Date(0);
                 return ! function(e, t, n) {
-                    return t >= 0 && t <= 11 && n >= 1 && n <= (p[t] || (h(e) ? 29 : 28))
+                    return t >= 0 && t <= 11 && n >= 1 && n <= (p[t] || (m(e) ? 29 : 28))
                 }(t, o, i) || ! function(e, t) {
-                    return t >= 1 && t <= (h(e) ? 366 : 365)
+                    return t >= 1 && t <= (m(e) ? 366 : 365)
                 }(t, a) ? new Date(NaN) : (c.setUTCFullYear(t, o, Math.max(a, i)), c)
             }(g.restDateString, g.year)
         }
@@ -79,7 +79,7 @@ function(e, t, n) {
                 }(n, a, o) ? NaN : n * r.millisecondsInHour + a * r.millisecondsInMinute + 1e3 * o
             }(_.time))) return new Date(NaN);
         if (_.timezone) {
-            if (isNaN(m = function(e) {
+            if (isNaN(h = function(e) {
                     if ("Z" === e) return 0;
                     var t = e.match(c);
                     if (!t) return 0;
@@ -95,7 +95,7 @@ function(e, t, n) {
                 w = new Date(0);
             return w.setFullYear(M.getUTCFullYear(), M.getUTCMonth(), M.getUTCDate()), w.setHours(M.getUTCHours(), M.getUTCMinutes(), M.getUTCSeconds(), M.getUTCMilliseconds()), w
         }
-        return new Date(v + b + m)
+        return new Date(v + b + h)
     }
     var s = {
             dateTimeDelimiter: /[T ]/,
@@ -115,7 +115,7 @@ function(e, t, n) {
     }
     var p = [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-    function h(e) {
+    function m(e) {
         return e % 400 == 0 || e % 4 == 0 && e % 100 != 0
     }
 }

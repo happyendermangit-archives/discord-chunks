@@ -1,12 +1,12 @@
-function(t, e, s) {
-    var r = s("446825").Buffer;
-    s("222007");
-    var i = s("814548"),
-        n = s("839309");
-    t.exports = function(t) {
-        return new o(t)
+function(e, t, n) {
+    var r = n("446825").Buffer;
+    n("222007");
+    var i = n("814548"),
+        o = n("839309");
+    e.exports = function(e) {
+        return new a(e)
     };
-    var c = {
+    var s = {
         secp256k1: {
             name: "secp256k1",
             byteLength: 32
@@ -37,35 +37,35 @@ function(t, e, s) {
         }
     };
 
-    function o(t) {
-        this.curveType = c[t], !this.curveType && (this.curveType = {
-            name: t
+    function a(e) {
+        this.curveType = s[e], !this.curveType && (this.curveType = {
+            name: e
         }), this.curve = new i.ec(this.curveType.name), this.keys = void 0
     }
 
-    function f(t, e, s) {
-        !Array.isArray(t) && (t = t.toArray());
-        var i = new r(t);
-        if (s && i.length < s) {
-            var n = new r(s - i.length);
-            n.fill(0), i = r.concat([n, i])
+    function c(e, t, n) {
+        !Array.isArray(e) && (e = e.toArray());
+        var i = new r(e);
+        if (n && i.length < n) {
+            var o = new r(n - i.length);
+            o.fill(0), i = r.concat([o, i])
         }
-        return e ? i.toString(e) : i
+        return t ? i.toString(t) : i
     }
-    c.p224 = c.secp224r1, c.p256 = c.secp256r1 = c.prime256v1, c.p192 = c.secp192r1 = c.prime192v1, c.p384 = c.secp384r1, c.p521 = c.secp521r1, o.prototype.generateKeys = function(t, e) {
-        return this.keys = this.curve.genKeyPair(), this.getPublicKey(t, e)
-    }, o.prototype.computeSecret = function(t, e, s) {
-        return e = e || "utf8", !r.isBuffer(t) && (t = new r(t, e)), f(this.curve.keyFromPublic(t).getPublic().mul(this.keys.getPrivate()).getX(), s, this.curveType.byteLength)
-    }, o.prototype.getPublicKey = function(t, e) {
-        var s = this.keys.getPublic("compressed" === e, !0);
-        return "hybrid" === e && (s[s.length - 1] % 2 ? s[0] = 7 : s[0] = 6), f(s, t)
-    }, o.prototype.getPrivateKey = function(t) {
-        return f(this.keys.getPrivate(), t)
-    }, o.prototype.setPublicKey = function(t, e) {
-        return e = e || "utf8", !r.isBuffer(t) && (t = new r(t, e)), this.keys._importPublic(t), this
-    }, o.prototype.setPrivateKey = function(t, e) {
-        e = e || "utf8", !r.isBuffer(t) && (t = new r(t, e));
-        var s = new n(t);
-        return s = s.toString(16), this.keys = this.curve.genKeyPair(), this.keys._importPrivate(s), this
+    s.p224 = s.secp224r1, s.p256 = s.secp256r1 = s.prime256v1, s.p192 = s.secp192r1 = s.prime192v1, s.p384 = s.secp384r1, s.p521 = s.secp521r1, a.prototype.generateKeys = function(e, t) {
+        return this.keys = this.curve.genKeyPair(), this.getPublicKey(e, t)
+    }, a.prototype.computeSecret = function(e, t, n) {
+        return t = t || "utf8", !r.isBuffer(e) && (e = new r(e, t)), c(this.curve.keyFromPublic(e).getPublic().mul(this.keys.getPrivate()).getX(), n, this.curveType.byteLength)
+    }, a.prototype.getPublicKey = function(e, t) {
+        var n = this.keys.getPublic("compressed" === t, !0);
+        return "hybrid" === t && (n[n.length - 1] % 2 ? n[0] = 7 : n[0] = 6), c(n, e)
+    }, a.prototype.getPrivateKey = function(e) {
+        return c(this.keys.getPrivate(), e)
+    }, a.prototype.setPublicKey = function(e, t) {
+        return t = t || "utf8", !r.isBuffer(e) && (e = new r(e, t)), this.keys._importPublic(e), this
+    }, a.prototype.setPrivateKey = function(e, t) {
+        t = t || "utf8", !r.isBuffer(e) && (e = new r(e, t));
+        var n = new o(e);
+        return n = n.toString(16), this.keys = this.curve.genKeyPair(), this.keys._importPrivate(n), this
     }
 }

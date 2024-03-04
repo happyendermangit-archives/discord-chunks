@@ -1,15 +1,15 @@
-function(t, e, s) {
+function(e, t, n) {
     var r = Date.now;
-    t.exports = function(t) {
-        var e = 0,
-            s = 0;
+    e.exports = function(e) {
+        var t = 0,
+            n = 0;
         return function() {
             var i = r(),
-                n = 16 - (i - s);
-            if (s = i, n > 0) {
-                if (++e >= 800) return arguments[0]
-            } else e = 0;
-            return t.apply(void 0, arguments)
+                o = 16 - (i - n);
+            if (n = i, o > 0) {
+                if (++t >= 800) return arguments[0]
+            } else t = 0;
+            return e.apply(void 0, arguments)
         }
     }
 }

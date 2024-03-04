@@ -59,8 +59,8 @@ function(e, t, n) {
                     configurable: !0
                 }
             }), t && u(e, t)
-        }(m, e);
-        var t, n, a, f, p, h = (t = m, n = function() {
+        }(h, e);
+        var t, n, a, f, p, m = (t = h, n = function() {
             if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
             if ("function" == typeof Proxy) return !0;
             try {
@@ -79,15 +79,15 @@ function(e, t, n) {
             }(this, e)
         });
 
-        function m() {
+        function h() {
             var e;
             ! function(e, t) {
                 if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-            }(this, m);
+            }(this, h);
             for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-            return d(l(e = h.call.apply(h, [this].concat(n))), "incompatibleTokens", ["Y", "R", "q", "Q", "L", "w", "I", "D", "i", "e", "c", "t", "T"]), d(l(e), "priority", 110), e
+            return d(l(e = m.call.apply(m, [this].concat(n))), "incompatibleTokens", ["Y", "R", "q", "Q", "L", "w", "I", "D", "i", "e", "c", "t", "T"]), d(l(e), "priority", 110), e
         }
-        return a = m, f = [{
+        return a = h, f = [{
             key: "parse",
             value: function(e, t, n) {
                 var a = function(e) {
@@ -138,6 +138,6 @@ function(e, t, n) {
             value: function(e, t, n) {
                 return e.setUTCMonth(n, 1), e.setUTCHours(0, 0, 0, 0), e
             }
-        }], s(a.prototype, f), p && s(a, p), m
+        }], s(a.prototype, f), p && s(a, p), h
     }(a.Parser)
 }

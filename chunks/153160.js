@@ -12,24 +12,24 @@ function(e, t, n) {
         }
     }), n("70102");
     var i = n("988025"),
-        r = n("915639"),
-        s = n("646718"),
+        s = n("915639"),
+        r = n("646718"),
         a = n("782340");
 
     function o(e, t, n) {
-        var s;
-        let a = null !== (s = null == n ? void 0 : n.localeOverride) && void 0 !== s ? s : r.default.locale;
+        var r;
+        let a = null !== (r = null == n ? void 0 : n.localeOverride) && void 0 !== r ? r : s.default.locale;
         return (0, i.formatPrice)(e, t, a, n)
     }
 
     function l(e, t, n) {
-        if (t === s.SubscriptionIntervalTypes.YEAR) return a.default.Messages.BILLING_PRICE_PER_YEAR.format({
+        if (t === r.SubscriptionIntervalTypes.YEAR) return a.default.Messages.BILLING_PRICE_PER_YEAR.format({
             price: e
         });
-        if (t === s.SubscriptionIntervalTypes.MONTH && 1 === n) return a.default.Messages.BILLING_PRICE_PER_MONTH.format({
+        if (t === r.SubscriptionIntervalTypes.MONTH && 1 === n) return a.default.Messages.BILLING_PRICE_PER_MONTH.format({
             price: e
         });
-        if (t === s.SubscriptionIntervalTypes.MONTH && n > 1) return a.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
+        if (t === r.SubscriptionIntervalTypes.MONTH && n > 1) return a.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
             price: e,
             intervalCount: n
         });

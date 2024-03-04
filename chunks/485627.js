@@ -9,11 +9,11 @@ function(e, _, E) {
         o = E("689988"),
         n = E("697218"),
         r = E("553257"),
-        i = E("363613"),
-        a = E("42060"),
+        a = E("363613"),
+        i = E("42060"),
         I = E("275803"),
-        s = E("935583");
-    let T = "lastSawPomelo";
+        T = E("935583");
+    let s = "lastSawPomelo";
     class S extends o.default {
         constructor(...e) {
             super(...e), this.actions = {
@@ -28,8 +28,8 @@ function(e, _, E) {
                         if (!e) return !1;
                         let _ = n.default.getCurrentUser();
                         if (null == _ || _.isPomelo() || !_.hasVerifiedEmailOrPhone()) return !1;
-                        let E = (0, a.getForceMigration)(),
-                            o = t.default.get(E ? "lastSawPomeloMigration" : T);
+                        let E = (0, i.getForceMigration)(),
+                            o = t.default.get(E ? "lastSawPomeloMigration" : s);
                         return !(null != o && Date.now() - o < 6048e5) && !0
                     }()) {
                     let e = I.UUOneClickExperiment.getCurrentConfig({
@@ -37,8 +37,8 @@ function(e, _, E) {
                         }, {
                             autoTrackExposure: !1
                         }).enabled,
-                        _ = (0, i.openPomeloModal)(s.PomeloEntrypoints.APP_START, e, !1);
-                    _ && t.default.set(T, Date.now())
+                        _ = (0, a.openPomeloModal)(T.PomeloEntrypoints.APP_START, e, !1);
+                    _ && t.default.set(s, Date.now())
                 }
             }
         }

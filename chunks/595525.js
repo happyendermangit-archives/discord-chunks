@@ -12,13 +12,13 @@ function(e, t, n) {
         }
     });
     var i = n("913144"),
-        r = n("605250");
-    let s = new r.default("TryLoad");
+        s = n("605250");
+    let r = new s.default("TryLoad");
     async function a(e) {
         try {
             return await e()
         } catch (e) {
-            return s.log("database load failed.", e), null
+            return r.log("database load failed.", e), null
         }
     }
 
@@ -26,7 +26,7 @@ function(e, t, n) {
         try {
             return t()
         } catch (t) {
-            return s.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), i.default.dispatch({
+            return r.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), i.default.dispatch({
                 type: "RESET_SOCKET",
                 args: {
                     error: t,
@@ -40,7 +40,7 @@ function(e, t, n) {
         try {
             return await t()
         } catch (t) {
-            return s.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), i.default.dispatch({
+            return r.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), i.default.dispatch({
                 type: "RESET_SOCKET",
                 args: {
                     error: t,

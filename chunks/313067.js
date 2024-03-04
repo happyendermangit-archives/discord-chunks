@@ -1,9 +1,4 @@
 function(e, t, n) {
     "use strict";
-    n.r(t), n.d(t, {
-        default: function() {
-            return r._
-        }
-    });
-    var r = n("193809")
+    e.exports = n.p + "c2c10fc6f56b5e245475.svg"
 }

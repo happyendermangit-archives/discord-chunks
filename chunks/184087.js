@@ -10,18 +10,18 @@ function(e, t, n) {
     }
     n.r(t), n.d(t, {
         DragSourceImpl: function() {
-            return o
+            return s
         }
     }), n("222007"), n("70102");
 
-    function a(e, t) {
+    function i(e, t) {
         for (var n = 0; n < t.length; n++) {
             var r = t[n];
             r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
         }
     }
 
-    function i(e, t, n) {
+    function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -29,21 +29,21 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    var o = function() {
+    var s = function() {
         var e, t, n;
 
-        function o(e, t, n) {
+        function s(e, t, n) {
             ! function(e, t) {
                 if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-            }(this, o), i(this, "spec", void 0), i(this, "monitor", void 0), i(this, "connector", void 0), this.spec = e, this.monitor = t, this.connector = n
+            }(this, s), o(this, "spec", void 0), o(this, "monitor", void 0), o(this, "connector", void 0), this.spec = e, this.monitor = t, this.connector = n
         }
-        return e = o, t = [{
+        return e = s, t = [{
             key: "beginDrag",
             value: function() {
                 var e, t = this.spec,
                     n = this.monitor,
-                    a = null;
-                return null !== (e = a = "object" === r(t.item) ? t.item : "function" == typeof t.item ? t.item(n) : {}) && void 0 !== e ? e : null
+                    i = null;
+                return null !== (e = i = "object" === r(t.item) ? t.item : "function" == typeof t.item ? t.item(n) : {}) && void 0 !== e ? e : null
             }
         }, {
             key: "canDrag",
@@ -57,8 +57,8 @@ function(e, t, n) {
             value: function(e, t) {
                 var n = this.spec,
                     r = this.monitor,
-                    a = n.isDragging;
-                return a ? a(r) : t === e.getSourceId()
+                    i = n.isDragging;
+                return i ? i(r) : t === e.getSourceId()
             }
         }, {
             key: "endDrag",
@@ -69,6 +69,6 @@ function(e, t, n) {
                     r = e.end;
                 r && r(t.getItem(), t), n.reconnect()
             }
-        }], a(e.prototype, t), n && a(e, n), o
+        }], i(e.prototype, t), n && i(e, n), s
     }()
 }

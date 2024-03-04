@@ -1,27 +1,27 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("839309"),
-        i = s("550511").assert;
+    var r = n("839309"),
+        i = n("550511").assert;
 
-    function n(t, e) {
-        this.ec = t, this.priv = null, this.pub = null, e.priv && this._importPrivate(e.priv, e.privEnc), e.pub && this._importPublic(e.pub, e.pubEnc)
+    function o(e, t) {
+        this.ec = e, this.priv = null, this.pub = null, t.priv && this._importPrivate(t.priv, t.privEnc), t.pub && this._importPublic(t.pub, t.pubEnc)
     }
-    t.exports = n, n.fromPublic = function(t, e, s) {
-        return e instanceof n ? e : new n(t, {
-            pub: e,
-            pubEnc: s
+    e.exports = o, o.fromPublic = function(e, t, n) {
+        return t instanceof o ? t : new o(e, {
+            pub: t,
+            pubEnc: n
         })
-    }, n.fromPrivate = function(t, e, s) {
-        return e instanceof n ? e : new n(t, {
-            priv: e,
-            privEnc: s
+    }, o.fromPrivate = function(e, t, n) {
+        return t instanceof o ? t : new o(e, {
+            priv: t,
+            privEnc: n
         })
-    }, n.prototype.validate = function() {
-        var t = this.getPublic();
-        return t.isInfinity() ? {
+    }, o.prototype.validate = function() {
+        var e = this.getPublic();
+        return e.isInfinity() ? {
             result: !1,
             reason: "Invalid public key"
-        } : t.validate() ? t.mul(this.ec.curve.n).isInfinity() ? {
+        } : e.validate() ? e.mul(this.ec.curve.n).isInfinity() ? {
             result: !0,
             reason: null
         } : {
@@ -31,25 +31,25 @@ function(t, e, s) {
             result: !1,
             reason: "Public key is not a point"
         }
-    }, n.prototype.getPublic = function(t, e) {
-        return ("string" == typeof t && (e = t, t = null), !this.pub && (this.pub = this.ec.g.mul(this.priv)), e) ? this.pub.encode(e, t) : this.pub
-    }, n.prototype.getPrivate = function(t) {
-        return "hex" === t ? this.priv.toString(16, 2) : this.priv
-    }, n.prototype._importPrivate = function(t, e) {
-        this.priv = new r(t, e || 16), this.priv = this.priv.umod(this.ec.curve.n)
-    }, n.prototype._importPublic = function(t, e) {
-        if (t.x || t.y) {
-            "mont" === this.ec.curve.type ? i(t.x, "Need x coordinate") : ("short" === this.ec.curve.type || "edwards" === this.ec.curve.type) && i(t.x && t.y, "Need both x and y coordinate"), this.pub = this.ec.curve.point(t.x, t.y);
+    }, o.prototype.getPublic = function(e, t) {
+        return ("string" == typeof e && (t = e, e = null), !this.pub && (this.pub = this.ec.g.mul(this.priv)), t) ? this.pub.encode(t, e) : this.pub
+    }, o.prototype.getPrivate = function(e) {
+        return "hex" === e ? this.priv.toString(16, 2) : this.priv
+    }, o.prototype._importPrivate = function(e, t) {
+        this.priv = new r(e, t || 16), this.priv = this.priv.umod(this.ec.curve.n)
+    }, o.prototype._importPublic = function(e, t) {
+        if (e.x || e.y) {
+            "mont" === this.ec.curve.type ? i(e.x, "Need x coordinate") : ("short" === this.ec.curve.type || "edwards" === this.ec.curve.type) && i(e.x && e.y, "Need both x and y coordinate"), this.pub = this.ec.curve.point(e.x, e.y);
             return
         }
-        this.pub = this.ec.curve.decodePoint(t, e)
-    }, n.prototype.derive = function(t) {
-        return !t.validate() && i(t.validate(), "public point not validated"), t.mul(this.priv).getX()
-    }, n.prototype.sign = function(t, e, s) {
-        return this.ec.sign(t, this, e, s)
-    }, n.prototype.verify = function(t, e) {
-        return this.ec.verify(t, e, this)
-    }, n.prototype.inspect = function() {
+        this.pub = this.ec.curve.decodePoint(e, t)
+    }, o.prototype.derive = function(e) {
+        return !e.validate() && i(e.validate(), "public point not validated"), e.mul(this.priv).getX()
+    }, o.prototype.sign = function(e, t, n) {
+        return this.ec.sign(e, this, t, n)
+    }, o.prototype.verify = function(e, t) {
+        return this.ec.verify(e, t, this)
+    }, o.prototype.inspect = function() {
         return "<Key priv: " + (this.priv && this.priv.toString(16, 2)) + " pub: " + (this.pub && this.pub.inspect()) + " >"
     }
 }

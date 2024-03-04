@@ -1,17 +1,17 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("424973");
-    let r = s("599235"),
-        i = s("246305");
+    n("424973");
+    let r = n("599235"),
+        i = n("246305");
 
-    function n(t) {
-        i.call(this, t), this.enc = "pem"
+    function o(e) {
+        i.call(this, e), this.enc = "pem"
     }
-    r(n, i), t.exports = n, n.prototype.encode = function(t, e) {
-        let s = i.prototype.encode.call(this, t),
-            r = s.toString("base64"),
-            n = ["-----BEGIN " + e.label + "-----"];
-        for (let t = 0; t < r.length; t += 64) n.push(r.slice(t, t + 64));
-        return n.push("-----END " + e.label + "-----"), n.join("\n")
+    r(o, i), e.exports = o, o.prototype.encode = function(e, t) {
+        let n = i.prototype.encode.call(this, e),
+            r = n.toString("base64"),
+            o = ["-----BEGIN " + t.label + "-----"];
+        for (let e = 0; e < r.length; e += 64) o.push(r.slice(e, e + 64));
+        return o.push("-----END " + t.label + "-----"), o.join("\n")
     }
 }

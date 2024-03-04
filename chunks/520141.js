@@ -8,8 +8,8 @@ function(e, t, n) {
             return a
         }
     });
-    var s = n("862205");
-    let i = (0, s.createExperiment)({
+    var i = n("862205");
+    let s = (0, i.createExperiment)({
         kind: "guild",
         id: "2021-11_member_verification_manual_approval",
         label: "Member Verification Manual Approval",
@@ -26,11 +26,11 @@ function(e, t, n) {
     });
 
     function r(e) {
-        i.trackExposure({
+        s.trackExposure({
             guildId: e,
             location: "bda51f_1"
         });
-        let t = i.useExperiment({
+        let t = s.useExperiment({
             guildId: e,
             location: "bda51f_2"
         }, {
@@ -40,7 +40,7 @@ function(e, t, n) {
     }
 
     function a(e) {
-        let t = i.getCurrentConfig({
+        let t = s.getCurrentConfig({
             guildId: e,
             location: "bda51f_3"
         }, {

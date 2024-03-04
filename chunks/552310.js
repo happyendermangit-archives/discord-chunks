@@ -5,13 +5,13 @@ function(e, t, n) {
             return r
         }
     });
-    var s = n("866227"),
-        i = n.n(s);
+    var i = n("866227"),
+        s = n.n(i);
 
     function r(e) {
         return {
             ...e,
-            expiry: i(e.expiry)
+            expiry: s(e.expiry)
         }
     }
 }

@@ -1,98 +1,98 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("390493");
-    s("222007");
-    var i = s("187798"),
-        n = s("885795");
-    if (s("923771")() || s("391938")()) {
-        var c = Symbol.iterator;
-        t.exports = function(t) {
-            return null != t && void 0 !== t[c] ? t[c]() : i(t) ? Array.prototype[c].call(t) : void 0
+    var r = n("390493");
+    n("222007");
+    var i = n("187798"),
+        o = n("885795");
+    if (n("923771")() || n("391938")()) {
+        var s = Symbol.iterator;
+        e.exports = function(e) {
+            return null != e && void 0 !== e[s] ? e[s]() : i(e) ? Array.prototype[s].call(e) : void 0
         }
     } else {
-        var o = s("621792"),
-            f = s("264871"),
-            u = s("911718"),
-            a = u("%Map%", !0),
-            d = u("%Set%", !0),
-            p = s("314970"),
-            b = p("Array.prototype.push"),
-            h = p("String.prototype.charCodeAt"),
-            l = p("String.prototype.slice"),
-            g = function(t, e) {
-                if (e + 1 >= t.length) return e + 1;
-                var s = h(t, e);
-                if (s < 55296 || s > 56319) return e + 1;
-                var r = h(t, e + 1);
-                return r < 56320 || r > 57343 ? e + 1 : e + 2
+        var a = n("621792"),
+            c = n("264871"),
+            u = n("911718"),
+            d = u("%Map%", !0),
+            l = u("%Set%", !0),
+            f = n("314970"),
+            p = f("Array.prototype.push"),
+            h = f("String.prototype.charCodeAt"),
+            v = f("String.prototype.slice"),
+            g = function(e, t) {
+                if (t + 1 >= e.length) return t + 1;
+                var n = h(e, t);
+                if (n < 55296 || n > 56319) return t + 1;
+                var r = h(e, t + 1);
+                return r < 56320 || r > 57343 ? t + 1 : t + 2
             },
-            v = function(t) {
-                var e = 0;
+            b = function(e) {
+                var t = 0;
                 return {
                     next: function() {
-                        var s, r = e >= t.length;
-                        return !r && (s = t[e], e += 1), {
+                        var n, r = t >= e.length;
+                        return !r && (n = e[t], t += 1), {
                             done: r,
-                            value: s
+                            value: n
                         }
                     }
                 }
             },
-            x = function(t, e) {
-                if (o(t) || i(t)) return v(t);
-                if (f(t)) {
-                    var s = 0;
+            m = function(e, t) {
+                if (a(e) || i(e)) return b(e);
+                if (c(e)) {
+                    var n = 0;
                     return {
                         next: function() {
-                            var e = g(t, s),
-                                r = l(t, s, e);
-                            return s = e, {
-                                done: e > t.length,
+                            var t = g(e, n),
+                                r = v(e, n, t);
+                            return n = t, {
+                                done: t > e.length,
                                 value: r
                             }
                         }
                     }
                 }
-                if (e && void 0 !== t["_es6-shim iterator_"]) return t["_es6-shim iterator_"]()
+                if (t && void 0 !== e["_es6-shim iterator_"]) return e["_es6-shim iterator_"]()
             };
-        if (a || d) {
-            var m = s("354970"),
-                y = s("527631"),
-                _ = p("Map.prototype.forEach", !0),
-                w = p("Set.prototype.forEach", !0);
+        if (d || l) {
+            var y = n("354970"),
+                x = n("527631"),
+                w = f("Map.prototype.forEach", !0),
+                S = f("Set.prototype.forEach", !0);
             if (void 0 === r || !r.versions || !r.versions.node) {
-                var M = p("Map.prototype.iterator", !0),
-                    S = p("Set.prototype.iterator", !0)
+                var k = f("Map.prototype.iterator", !0),
+                    E = f("Set.prototype.iterator", !0)
             }
-            var k = p("Map.prototype.@@iterator", !0) || p("Map.prototype._es6-shim iterator_", !0),
-                A = p("Set.prototype.@@iterator", !0) || p("Set.prototype._es6-shim iterator_", !0),
-                E = function(t) {
-                    if (m(t)) {
-                        if (M) return n(M(t));
-                        if (k) return k(t);
-                        if (_) {
-                            var e = [];
-                            return _(t, function(t, s) {
-                                b(e, [s, t])
-                            }), v(e)
+            var _ = f("Map.prototype.@@iterator", !0) || f("Map.prototype._es6-shim iterator_", !0),
+                M = f("Set.prototype.@@iterator", !0) || f("Set.prototype._es6-shim iterator_", !0),
+                D = function(e) {
+                    if (y(e)) {
+                        if (k) return o(k(e));
+                        if (_) return _(e);
+                        if (w) {
+                            var t = [];
+                            return w(e, function(e, n) {
+                                p(t, [n, e])
+                            }), b(t)
                         }
                     }
-                    if (y(t)) {
-                        if (S) return n(S(t));
-                        if (A) return A(t);
-                        if (w) {
-                            var s = [];
-                            return w(t, function(t) {
-                                b(s, t)
-                            }), v(s)
+                    if (x(e)) {
+                        if (E) return o(E(e));
+                        if (M) return M(e);
+                        if (S) {
+                            var n = [];
+                            return S(e, function(e) {
+                                p(n, e)
+                            }), b(n)
                         }
                     }
                 };
-            t.exports = function(t) {
-                return E(t) || x(t)
+            e.exports = function(e) {
+                return D(e) || m(e)
             }
-        } else t.exports = function(t) {
-            if (null != t) return x(t, !0)
+        } else e.exports = function(e) {
+            if (null != e) return m(e, !0)
         }
     }
 }

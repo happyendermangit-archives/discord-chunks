@@ -2,32 +2,32 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return _
         }
     }), n("222007");
     var i = n("446674"),
-        r = n("913144"),
-        s = n("517001"),
+        s = n("913144"),
+        r = n("517001"),
         a = n("305961"),
         o = n("697218"),
         l = n("565034"),
         u = n("963903");
-    let c = "production" === u.Environments.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === u.Environments.STAGING;
+    let d = "production" === u.Environments.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === u.Environments.STAGING;
 
-    function d() {
-        c = (0, s.isStaffEnv)(o.default.getCurrentUser())
+    function c() {
+        d = (0, r.isStaffEnv)(o.default.getCurrentUser())
     }
     class f extends i.default.Store {
         initialize() {
             this.waitFor(o.default, a.default), Object.defineProperties(this, {
                 isDeveloper: {
                     configurable: !1,
-                    get: () => c
+                    get: () => d
                 }
-            }), d(), setTimeout(() => Object.freeze(this))
+            }), c(), setTimeout(() => Object.freeze(this))
         }
         getExperimentDescriptor() {
-            return c ? {
+            return d ? {
                 type: "developer",
                 name: "discord_dev_testing",
                 revision: 1,
@@ -40,9 +40,9 @@ function(e, t, n) {
         }
     }
     f.displayName = "DeveloperExperimentStore";
-    var E = new f(r.default, {
-        CONNECTION_OPEN: d,
-        OVERLAY_INITIALIZE: d,
-        CURRENT_USER_UPDATE: d
+    var _ = new f(s.default, {
+        CONNECTION_OPEN: c,
+        OVERLAY_INITIALIZE: c,
+        CURRENT_USER_UPDATE: c
     })
 }

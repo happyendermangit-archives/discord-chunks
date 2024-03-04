@@ -8,12 +8,12 @@ function(e, t, n) {
             return u
         },
         default: function() {
-            return d
+            return c
         }
     }), n("222007");
     var i = n("37983"),
-        r = n("884691"),
-        s = n("371642"),
+        s = n("884691"),
+        r = n("371642"),
         a = n("991207"),
         o = n("782340");
 
@@ -35,15 +35,15 @@ function(e, t, n) {
             }
         }(e, i => {
             if (e.type === a.FileTypes.MP4) return t(i, e);
-            let r = new Image;
-            r.src = i, r.onload = () => {
+            let s = new Image;
+            s.src = i, s.onload = () => {
                 t(i, e)
-            }, r.onerror = () => {
+            }, s.onerror = () => {
                 n()
             }
         })
     }
-    class c extends r.PureComponent {
+    class d extends s.PureComponent {
         componentDidMount() {
             this._isMounted = !0
         }
@@ -56,35 +56,35 @@ function(e, t, n) {
                 multiple: e,
                 disabled: t,
                 className: n,
-                tabIndex: r,
+                tabIndex: s,
                 "aria-label": a,
                 filters: o
             } = this.props;
-            return (0, i.jsx)(s.default, {
+            return (0, i.jsx)(r.default, {
                 ref: this._ref,
                 onChange: this.handleFileChange,
                 filters: null != o ? o : l(),
                 multiple: e,
                 disabled: t,
                 className: n,
-                tabIndex: r,
+                tabIndex: s,
                 "aria-label": a
             })
         }
         constructor(...e) {
-            super(...e), this._ref = r.createRef(), this._isMounted = !1, this.handleFileChange = e => {
+            super(...e), this._ref = s.createRef(), this._isMounted = !1, this.handleFileChange = e => {
                 let {
                     onFileSizeError: t,
                     maxFileSizeBytes: n
                 } = this.props;
                 if (e.stopPropagation(), e.preventDefault(), null != e.currentTarget.files)
                     for (let i = 0; i < e.currentTarget.files.length; i++) {
-                        let r = e.currentTarget.files[i];
-                        if (r.size > n) {
-                            null == t || t(n, r.size);
+                        let s = e.currentTarget.files[i];
+                        if (s.size > n) {
+                            null == t || t(n, s.size);
                             continue
                         }
-                        u(r, this.handleFileRead, this.handleFileError)
+                        u(s, this.handleFileRead, this.handleFileError)
                     }
             }, this.handleFileRead = (e, t) => {
                 let {
@@ -102,10 +102,10 @@ function(e, t, n) {
             }
         }
     }
-    c.defaultProps = {
+    d.defaultProps = {
         multiple: !0,
         tabIndex: -1,
         maxFileSizeBytes: 1 / 0
     };
-    var d = c
+    var c = d
 }

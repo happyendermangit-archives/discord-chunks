@@ -1,13 +1,13 @@
-function(t, r, n) {
+function(e, t, n) {
     n("424973");
-    var e = n("664007"),
-        o = n("120634"),
-        i = n("741761");
+    var r = n("664007"),
+        i = n("120634"),
+        o = n("741761");
 
-    function u(t) {
-        var r = -1,
-            n = null == t ? 0 : t.length;
-        for (this.__data__ = new e; ++r < n;) this.add(t[r])
+    function s(e) {
+        var t = -1,
+            n = null == e ? 0 : e.length;
+        for (this.__data__ = new r; ++t < n;) this.add(e[t])
     }
-    u.prototype.add = u.prototype.push = o, u.prototype.has = i, t.exports = u
+    s.prototype.add = s.prototype.push = i, s.prototype.has = o, e.exports = s
 }

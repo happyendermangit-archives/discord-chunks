@@ -21,10 +21,10 @@ function(e, t, n) {
             d = c >> 1,
             f = 23 === a ? 5960464477539062e-23 : 0,
             p = r ? 0 : o - 1,
-            h = r ? 1 : -1,
-            m = t < 0 || 0 === t && 1 / t < 0 ? 1 : 0;
-        for (isNaN(t = Math.abs(t)) || t === 1 / 0 ? (s = isNaN(t) ? 1 : 0, i = c) : (i = Math.floor(Math.log(t) / Math.LN2), t * (u = Math.pow(2, -i)) < 1 && (i--, u *= 2), i + d >= 1 ? t += f / u : t += f * Math.pow(2, 1 - d), t * u >= 2 && (i++, u /= 2), i + d >= c ? (s = 0, i = c) : i + d >= 1 ? (s = (t * u - 1) * Math.pow(2, a), i += d) : (s = t * Math.pow(2, d - 1) * Math.pow(2, a), i = 0)); a >= 8; e[n + p] = 255 & s, p += h, s /= 256, a -= 8);
-        for (i = i << a | s, l += a; l > 0; e[n + p] = 255 & i, p += h, i /= 256, l -= 8);
-        e[n + p - h] |= 128 * m
+            m = r ? 1 : -1,
+            h = t < 0 || 0 === t && 1 / t < 0 ? 1 : 0;
+        for (isNaN(t = Math.abs(t)) || t === 1 / 0 ? (s = isNaN(t) ? 1 : 0, i = c) : (i = Math.floor(Math.log(t) / Math.LN2), t * (u = Math.pow(2, -i)) < 1 && (i--, u *= 2), i + d >= 1 ? t += f / u : t += f * Math.pow(2, 1 - d), t * u >= 2 && (i++, u /= 2), i + d >= c ? (s = 0, i = c) : i + d >= 1 ? (s = (t * u - 1) * Math.pow(2, a), i += d) : (s = t * Math.pow(2, d - 1) * Math.pow(2, a), i = 0)); a >= 8; e[n + p] = 255 & s, p += m, s /= 256, a -= 8);
+        for (i = i << a | s, l += a; l > 0; e[n + p] = 255 & i, p += m, i /= 256, l -= 8);
+        e[n + p - m] |= 128 * h
     }
 }

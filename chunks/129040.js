@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         GUEST_INVITE_KEY: function() {
-            return s
+            return T
         },
         default: function() {
             return S
@@ -12,18 +12,18 @@ function(e, _, E) {
         o = E("913144"),
         n = E("970728"),
         r = E("689988"),
-        i = E("271938"),
-        a = E("773336"),
+        a = E("271938"),
+        i = E("773336"),
         I = E("49111");
-    let s = "guestInviteToAccept";
-    class T extends r.default {
+    let T = "guestInviteToAccept";
+    class s extends r.default {
         constructor(...e) {
             super(...e), this.actions = {
                 POST_CONNECTION_OPEN: () => this.handleConnectionOpen()
             }, this.handleConnectionOpen = async () => {
-                if ((0, a.isWeb)()) {
-                    let e = t.default.get(s);
-                    if (null != e && "string" == typeof e && i.default.isAuthenticated()) {
+                if ((0, i.isWeb)()) {
+                    let e = t.default.get(T);
+                    if (null != e && "string" == typeof e && a.default.isAuthenticated()) {
                         let {
                             invite: _
                         } = await n.default.resolveInvite(e, "Desktop Modal");
@@ -32,11 +32,11 @@ function(e, _, E) {
                             invite: _,
                             code: e,
                             context: I.AppContext.APP
-                        }), t.default.remove(s))
+                        }), t.default.remove(T))
                     }
                 }
             }
         }
     }
-    var S = new T
+    var S = new s
 }

@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getStreamerActivity: function() {
-            return d
+            return l
         },
         getStreamerApplication: function() {
             return u
         },
         useGetStreamApplication: function() {
-            return f
+            return c
         }
     });
-    var s = n("446674"),
-        i = n("233736"),
+    var i = n("446674"),
+        s = n("233736"),
         r = n("824563"),
         a = n("49111");
 
@@ -20,25 +20,25 @@ function(e, t, n) {
         return e.type === a.ActivityTypes.PLAYING
     }
 
-    function d(e, t) {
+    function l(e, t) {
         var n;
         return null != e ? (n = e.ownerId, t.findActivity(n, o)) : null
     }
 
     function u(e, t) {
         if (null == e) return null;
-        let n = d(e, t);
+        let n = l(e, t);
         return null == n ? null : {
             id: n.application_id,
             name: n.name
         }
     }
 
-    function l(e, t) {
-        return e === t || null != e && null != t && (0, i.default)(e, t)
+    function d(e, t) {
+        return e === t || null != e && null != t && (0, s.default)(e, t)
     }
 
-    function f(e) {
-        return (0, s.useStateFromStores)([r.default], () => u(e, r.default), [e], l)
+    function c(e) {
+        return (0, i.useStateFromStores)([r.default], () => u(e, r.default), [e], d)
     }
 }

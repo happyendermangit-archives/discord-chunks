@@ -2,15 +2,15 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getChildMapping: function() {
-            return r
+            return s
         },
         mergeChildMappings: function() {
-            return s
+            return r
         }
     }), n("424973");
     var i = n("884691");
 
-    function r(e) {
+    function s(e) {
         let t = {};
         if (e) {
             var n;
@@ -22,26 +22,26 @@ function(e, t, n) {
         return t
     }
 
-    function s() {
+    function r() {
         let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
 
         function i(e) {
             return n.hasOwnProperty(e) ? n[e] : t[e]
         }
-        let r = {},
-            s = [];
-        for (let e in t) n.hasOwnProperty(e) ? s.length && (r[e] = s, s = []) : s.push(e);
+        let s = {},
+            r = [];
+        for (let e in t) n.hasOwnProperty(e) ? r.length && (s[e] = r, r = []) : r.push(e);
         let a = {};
         for (let t in n) {
-            if (r.hasOwnProperty(t))
-                for (e = 0; e < r[t].length; e++) {
-                    let n = r[t][e];
-                    a[r[t][e]] = i(n)
+            if (s.hasOwnProperty(t))
+                for (e = 0; e < s[t].length; e++) {
+                    let n = s[t][e];
+                    a[s[t][e]] = i(n)
                 }
             a[t] = i(t)
         }
-        for (e = 0; e < s.length; e++) a[s[e]] = i(s[e]);
+        for (e = 0; e < r.length; e++) a[r[e]] = i(r[e]);
         return a
     }
 }

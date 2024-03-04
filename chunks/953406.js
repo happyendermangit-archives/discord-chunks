@@ -1,12 +1,12 @@
-function(t, e, s) {
-    var r = s("345238"),
-        i = s("224075"),
-        n = s("616601"),
-        c = s("566040"),
-        o = n(function(t, e) {
-            if (null == t) return [];
-            var s = e.length;
-            return s > 1 && c(t, e[0], e[1]) ? e = [] : s > 2 && c(e[0], e[1], e[2]) && (e = [e[0]]), i(t, r(e, 1), [])
+function(e, t, n) {
+    var r = n("345238"),
+        i = n("224075"),
+        o = n("616601"),
+        s = n("566040"),
+        a = o(function(e, t) {
+            if (null == e) return [];
+            var n = t.length;
+            return n > 1 && s(e, t[0], t[1]) ? t = [] : n > 2 && s(t[0], t[1], t[2]) && (t = [t[0]]), i(e, r(t, 1), [])
         });
-    t.exports = o
+    e.exports = a
 }

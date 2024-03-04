@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     }), n("424973");
     var i = n("49111");
-    let r = [],
-        s = !1;
+    let s = [],
+        r = !1;
 
     function a() {
         let e = window.navigator.connection;
@@ -22,7 +22,7 @@ function(e, t, n) {
 
     function o() {
         let e = a();
-        r.forEach(t => t(e))
+        s.forEach(t => t(e))
     }
     var l = {
         addOnlineCallback(e) {
@@ -39,19 +39,19 @@ function(e, t, n) {
         },
         addChangeCallback(e) {
             var t;
-            t = e, r.push(t),
+            t = e, s.push(t),
                 function() {
-                    if (!0 === s) return;
+                    if (!0 === r) return;
                     let e = window.navigator.connection;
-                    null != e && (s = !0, e.addEventListener("change", o))
+                    null != e && (r = !0, e.addEventListener("change", o))
                 }()
         },
         removeChangeCallback(e) {
             ! function(e) {
-                let t = r.indexOf(e); - 1 !== t && (r.splice(t, 1), ! function() {
-                    if (!1 === s) return;
+                let t = s.indexOf(e); - 1 !== t && (s.splice(t, 1), ! function() {
+                    if (!1 === r) return;
                     let e = window.navigator.connection;
-                    null != e && 0 === r.length && null != e && (e.removeEventListener("change", o), s = !1)
+                    null != e && 0 === s.length && null != e && (e.removeEventListener("change", o), r = !1)
                 }())
             }(e)
         },

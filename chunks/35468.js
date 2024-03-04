@@ -6,17 +6,17 @@ function(e, t, n) {
             return a
         }
     }), n("424973"), i = n("788235").default;
-    let r = [],
-        s = !1;
+    let s = [],
+        r = !1;
     var a = {
         ...i,
         awaitOnline: () => new Promise(e => {
             if (i.isOnline()) return e();
             {
-                if (r.push(e), s) return;
-                s = !0;
+                if (s.push(e), r) return;
+                r = !0;
                 let t = () => {
-                    r.forEach(e => e()), r.length = 0, s = !1, i.removeOnlineCallback(t)
+                    s.forEach(e => e()), s.length = 0, r = !1, i.removeOnlineCallback(t)
                 };
                 i.addOnlineCallback(t)
             }

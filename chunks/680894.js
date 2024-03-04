@@ -5,9 +5,9 @@ function(e, t, n) {
             return i
         },
         CLYDE_AI_MENTION_COLOR: function() {
-            return r
+            return s
         }
     });
     let i = "1081004946872352958",
-        r = 3000177
+        s = 3000177
 }

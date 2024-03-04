@@ -5,8 +5,8 @@ function(e, t, n) {
             return a
         }
     });
-    var s = n("913144"),
-        i = n("54239"),
+    var i = n("913144"),
+        s = n("54239"),
         r = n("49111");
 
     function a() {
@@ -15,11 +15,11 @@ function(e, t, n) {
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
                 openWithoutBackstack: !1
             };
-        s.default.dispatch({
+        i.default.dispatch({
             type: "USER_SETTINGS_MODAL_OPEN",
             section: e,
             subsection: t,
             ...n
-        }), (0, i.pushLayer)(r.Layers.USER_SETTINGS)
+        }), (0, s.pushLayer)(r.Layers.USER_SETTINGS)
     }
 }

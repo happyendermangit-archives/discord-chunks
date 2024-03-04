@@ -6,22 +6,22 @@ function(e, t, n) {
         }
     }), n("70102"), n("424973"), n("222007");
     var i = n("102053"),
-        r = n("400340"),
-        s = n("30773"),
+        s = n("400340"),
+        r = n("30773"),
         a = n("999673");
     class o {
         static async open(e, t) {
-            return new o(await r.Host.open(e, t))
+            return new o(await s.Host.open(e, t))
         }
         static openSyncUnsafe(e, t) {
-            return new o(r.Host.openSyncUnsafe(e, t))
+            return new o(s.Host.openSyncUnsafe(e, t))
         }
         static delete(e) {
-            return r.Host.delete(e)
+            return s.Host.delete(e)
         }
         close() {
             var e;
-            this.lastState = a.DatabaseState.Closed, null === (e = this.raw) || void 0 === e || e.close(), this.raw = null, s.Runtime.removeCompletionCallback(this.databaseStateCallback)
+            this.lastState = a.DatabaseState.Closed, null === (e = this.raw) || void 0 === e || e.close(), this.raw = null, r.Runtime.removeCompletionCallback(this.databaseStateCallback)
         }
         disable(e) {
             return null == this.raw ? Promise.resolve() : (this.lastState = a.DatabaseState.Disabled, this.execute({
@@ -33,13 +33,13 @@ function(e, t, n) {
         execute(e, t) {
             if (null == this.raw) throw Error("database is no longer open (database: ".concat(this));
             let n = "key" in e ? e.key[0] : e.table,
-                r = () => s.Runtime.executeAsync(null != t ? t : e.type, t => {
+                s = () => r.Runtime.executeAsync(null != t ? t : e.type, t => {
                     this.raw.execute(t, {
                         ...e,
                         handle: 0
                     })
                 });
-            return null === t ? r() : i.default.timeAsync("\uD83D\uDCBE", "".concat(null != t ? t : e.type, " ").concat(null != n ? n : ""), r)
+            return null === t ? s() : i.default.timeAsync("\uD83D\uDCBE", "".concat(null != t ? t : e.type, " ").concat(null != n ? n : ""), s)
         }
         executeSync(e) {
             if (null == this.raw) throw Error("database is no longer open (database: ".concat(this));
@@ -96,7 +96,7 @@ function(e, t, n) {
             return "[Database #".concat(this.handle, ": ").concat(this.name, "]")
         }
         constructor(e) {
-            this.raw = e, this.name = e.name, this.lastState = a.DatabaseState.Open, this.handle = e.handle, this.databaseStateCallback = s.Runtime.addDatabaseStateCallback((e, t) => {
+            this.raw = e, this.name = e.name, this.lastState = a.DatabaseState.Open, this.handle = e.handle, this.databaseStateCallback = r.Runtime.addDatabaseStateCallback((e, t) => {
                 this.handle === e && (this.lastState = t)
             })
         }

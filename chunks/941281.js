@@ -2,102 +2,102 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return C
         },
         OAuth2Success: function() {
-            return S
-        },
-        OAuth2AuthorizedSuccess: function() {
             return A
         },
+        OAuth2AuthorizedSuccess: function() {
+            return y
+        },
         OAuth2Error: function() {
-            return D
+            return N
         },
         OAuth2AuthorizedPage: function() {
-            return N
+            return R
         },
         OAuth2ErrorPage: function() {
             return O
         }
     });
-    var s = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        s = n("884691"),
         r = n("414456"),
         a = n.n(r),
         o = n("730290"),
-        d = n("90915"),
+        l = n("90915"),
         u = n("746379"),
-        l = n.n(u),
-        f = n("516256"),
-        _ = n("242670"),
-        c = n("577776"),
-        g = n("77078"),
-        m = n("69927"),
-        h = n("393414"),
-        v = n("239380"),
-        E = n("599110"),
-        p = n("267570"),
-        y = n("49111"),
+        d = n.n(u),
+        c = n("516256"),
+        f = n("242670"),
+        _ = n("577776"),
+        h = n("77078"),
+        E = n("69927"),
+        g = n("393414"),
+        m = n("239380"),
+        p = n("599110"),
+        S = n("267570"),
+        v = n("49111"),
         T = n("782340"),
-        C = n("977396");
+        I = n("977396");
 
-    function I(e) {
+    function C(e) {
         let {
             message: t,
             footer: n,
-            headerClassName: i,
+            headerClassName: s,
             showsCloseWindowText: r,
             spinner: o,
-            onClose: d
+            onClose: l
         } = e;
-        return (0, m.usePageTitle)({
+        return (0, E.usePageTitle)({
             location: T.default.Messages.OAUTH2_TITLE
-        }), (0, s.jsxs)(s.Fragment, {
-            children: [null != d ? (0, s.jsx)(f.ModalCloseButton, {
-                onClick: d,
-                className: C.closeButton
-            }) : null, (0, s.jsxs)("div", {
-                className: C.wrapper,
-                children: [o ? (0, s.jsx)(_.Spinner, {}) : null, (0, s.jsx)("div", {
-                    className: a(C.header, i)
-                }), (0, s.jsx)(c.Text, {
+        }), (0, i.jsxs)(i.Fragment, {
+            children: [null != l ? (0, i.jsx)(c.ModalCloseButton, {
+                onClick: l,
+                className: I.closeButton
+            }) : null, (0, i.jsxs)("div", {
+                className: I.wrapper,
+                children: [o ? (0, i.jsx)(f.Spinner, {}) : null, (0, i.jsx)("div", {
+                    className: a(I.header, s)
+                }), (0, i.jsx)(_.Text, {
                     variant: "text-md/normal",
-                    className: C.text,
+                    className: I.text,
                     children: t
-                }), null != n ? n : null, r ? (0, s.jsx)(c.Text, {
+                }), null != n ? n : null, r ? (0, i.jsx)(_.Text, {
                     variant: "text-xs/normal",
                     color: "text-muted",
-                    className: C.cta,
+                    className: I.cta,
                     children: T.default.Messages.OAUTH2_MESSAGE_CTA
                 }) : null]
             })]
         })
     }
 
-    function S(e) {
-        return (0, s.jsx)(I, {
+    function A(e) {
+        return (0, i.jsx)(C, {
             ...e,
-            headerClassName: C.headerSuccess
+            headerClassName: I.headerSuccess
         })
     }
 
-    function A(e) {
+    function y(e) {
         let {
             guild: t,
             application: n,
             ...r
         } = e, {
             onClose: a
-        } = r, o = T.default.Messages.AUTHORIZED_SUCCESS, d = i.useCallback(() => {
-            (null == t ? void 0 : t.id) != null && ((0, v.transitionToGuild)(null == t ? void 0 : t.id), null == a || a(), E.default.track(y.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+        } = r, o = T.default.Messages.AUTHORIZED_SUCCESS, l = s.useCallback(() => {
+            (null == t ? void 0 : t.id) != null && ((0, m.transitionToGuild)(null == t ? void 0 : t.id), null == a || a(), p.default.track(v.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                 application_id: null == n ? void 0 : n.id,
                 guild_id: null == t ? void 0 : t.id
             }))
-        }, [a, null == n ? void 0 : n.id, null == t ? void 0 : t.id]), u = i.useCallback(() => {
-            null == a || a(), E.default.track(y.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
+        }, [a, null == n ? void 0 : n.id, null == t ? void 0 : t.id]), u = s.useCallback(() => {
+            null == a || a(), p.default.track(v.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
                 application_id: null == n ? void 0 : n.id
             })
-        }, [a, null == n ? void 0 : n.id]), l = i.useMemo(() => {
+        }, [a, null == n ? void 0 : n.id]), d = s.useMemo(() => {
             if (null != n) return null != t ? T.default.Messages.AUTHORIZED_APP_TO_SERVER.format({
                 installedApplicationName: null == n ? void 0 : n.name,
                 guildName: null == t ? void 0 : t.name
@@ -105,56 +105,56 @@ function(e, t, n) {
                 installedApplicationName: null == n ? void 0 : n.name
             });
             return T.default.Messages.AUTHORIZED_GENERIC
-        }, [n, t]), f = (0, s.jsxs)(s.Fragment, {
-            children: [(0, s.jsx)(c.Text, {
+        }, [n, t]), c = (0, i.jsxs)(i.Fragment, {
+            children: [(0, i.jsx)(_.Text, {
                 variant: "text-sm/normal",
-                className: C.authorizedSuccessSubtext,
-                children: l
-            }), (null != t || null != a) && (0, s.jsxs)("div", {
-                className: C.buttonsContainer,
-                children: [null != t && (0, s.jsx)(g.Button, {
+                className: I.authorizedSuccessSubtext,
+                children: d
+            }), (null != t || null != a) && (0, i.jsxs)("div", {
+                className: I.buttonsContainer,
+                children: [null != t && (0, i.jsx)(h.Button, {
                     fullWidth: !0,
-                    color: g.Button.Colors.BRAND,
-                    onClick: d,
-                    className: C.button,
+                    color: h.Button.Colors.BRAND,
+                    onClick: l,
+                    className: I.button,
                     children: (null == t ? void 0 : t.name.length) > 30 ? T.default.Messages.OAUTH2_GO_TO_SERVER_DEFAULT_CTA : T.default.Messages.OAUTH2_GO_TO_SERVER_NAME_CTA.format({
                         guildName: null == t ? void 0 : t.name
                     })
-                }), null != a && (0, s.jsx)(g.Button, {
+                }), null != a && (0, i.jsx)(h.Button, {
                     fullWidth: !0,
-                    color: g.Button.Colors.PRIMARY,
+                    color: h.Button.Colors.PRIMARY,
                     onClick: u,
-                    className: C.button,
+                    className: I.button,
                     children: T.default.Messages.CLOSE
                 })]
             })]
         });
-        return i.useEffect(() => {
-            E.default.track(y.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
+        return s.useEffect(() => {
+            p.default.track(v.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
                 application_id: null == n ? void 0 : n.id
             })
-        }, [null == n ? void 0 : n.id]), (0, s.jsx)("div", {
-            className: C.authorizedSuccessWrapper,
-            children: (0, s.jsx)(S, {
+        }, [null == n ? void 0 : n.id]), (0, i.jsx)("div", {
+            className: I.authorizedSuccessWrapper,
+            children: (0, i.jsx)(A, {
                 message: o,
-                footer: f,
+                footer: c,
                 ...r
             })
         })
     }
 
-    function D(e) {
-        return (0, s.jsx)(I, {
+    function N(e) {
+        return (0, i.jsx)(C, {
             ...e,
-            headerClassName: C.headerFailure
+            headerClassName: I.headerFailure
         })
     }
 
-    function N() {
+    function R() {
         var e, t;
-        let n = (0, d.useLocation)();
-        return (0, s.jsx)(p.OAuth2Page, {
-            children: (0, s.jsx)(A, {
+        let n = (0, l.useLocation)();
+        return (0, i.jsx)(S.OAuth2Page, {
+            children: (0, i.jsx)(y, {
                 guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
                 application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
                 showsCloseWindowText: !0
@@ -167,16 +167,16 @@ function(e, t, n) {
         let {
             location: r
         } = e;
-        i.useEffect(() => {
+        s.useEffect(() => {
             if (null == r) return;
-            let e = null != document.referrer && "" !== document.referrer ? l.parse(document.referrer) : null;
-            (null == e || e.host !== window.location.host || e.pathname !== y.Routes.OAUTH2_AUTHORIZE) && (0, h.transitionTo)(y.Routes.INDEX)
+            let e = null != document.referrer && "" !== document.referrer ? d.parse(document.referrer) : null;
+            (null == e || e.host !== window.location.host || e.pathname !== v.Routes.OAUTH2_AUTHORIZE) && (0, g.transitionTo)(v.Routes.INDEX)
         }, [r]);
         let a = null != r ? (0, o.parse)(r.search) : {},
-            d = null !== (n = null !== (t = a.error_description) && void 0 !== t ? t : a.error) && void 0 !== n ? n : T.default.Messages.OAUTH2_UNKNOWN_ERROR;
-        return (0, s.jsx)(p.OAuth2Page, {
-            children: (0, s.jsx)(D, {
-                message: d,
+            l = null !== (n = null !== (t = a.error_description) && void 0 !== t ? t : a.error) && void 0 !== n ? n : T.default.Messages.OAUTH2_UNKNOWN_ERROR;
+        return (0, i.jsx)(S.OAuth2Page, {
+            children: (0, i.jsx)(N, {
+                message: l,
                 showsCloseWindowText: !0
             })
         })

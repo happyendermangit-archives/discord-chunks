@@ -13,9 +13,9 @@ function(e, t, n) {
     });
     var i = n("228256");
     let {
-        Layer: r,
-        LayerContainer: s,
+        Layer: s,
+        LayerContainer: r,
         LayerProvider: a
-    } = (0, i.createLayer)("Verification"), o = s, l = a;
-    var u = r
+    } = (0, i.createLayer)("Verification"), o = r, l = a;
+    var u = s
 }

@@ -401,15 +401,15 @@ function(e, t, n) {
             Z̧: "Z",
             z̧: "z"
         },
-        a = Object.keys(r).join("|"),
-        i = RegExp(a, "g"),
-        o = RegExp(a, ""),
-        s = function(e) {
-            return e.replace(i, function(e) {
+        i = Object.keys(r).join("|"),
+        o = RegExp(i, "g"),
+        s = RegExp(i, ""),
+        a = function(e) {
+            return e.replace(o, function(e) {
                 return r[e]
             })
         };
-    e.exports = s, e.exports.has = function(e) {
-        return !!e.match(o)
-    }, e.exports.remove = s
+    e.exports = a, e.exports.has = function(e) {
+        return !!e.match(s)
+    }, e.exports.remove = a
 }

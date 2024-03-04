@@ -11,13 +11,13 @@ function(e, t, n) {
         d = n("561051"),
         f = n("571503"),
         p = n("585034"),
-        h = n("391358"),
-        m = n("174669")("toStringTag"),
+        m = n("391358"),
+        h = n("174669")("toStringTag"),
         y = Error,
         _ = [].push,
         g = function(e, t) {
             var n, r = a(v, this);
-            i ? n = i(y(), r ? o(this) : v) : l(n = r ? this : u(v), m, "Error"), void 0 !== t && l(n, "message", h(t)), f(n, g, n.stack, 1), arguments.length > 2 && d(n, arguments[2]);
+            i ? n = i(y(), r ? o(this) : v) : l(n = r ? this : u(v), h, "Error"), void 0 !== t && l(n, "message", m(t)), f(n, g, n.stack, 1), arguments.length > 2 && d(n, arguments[2]);
             var s = [];
             return p(e, _, {
                 that: s

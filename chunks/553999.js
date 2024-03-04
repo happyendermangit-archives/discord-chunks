@@ -1,80 +1,80 @@
-function(t, e, s) {
-    s("70102"), s("424973");
-    var r = s("912065").Buffer,
-        i = s("145755"),
-        n = s("422077"),
-        c = s("814548").ec,
-        o = s("839383"),
-        f = s("596659"),
-        u = s("49873");
+function(e, t, n) {
+    n("70102"), n("424973");
+    var r = n("912065").Buffer,
+        i = n("145755"),
+        o = n("422077"),
+        s = n("814548").ec,
+        a = n("839383"),
+        c = n("596659"),
+        u = n("49873");
 
-    function a(t, e, s, n) {
-        if ((t = r.from(t.toArray())).length < e.byteLength()) {
-            var c = r.alloc(e.byteLength() - t.length);
-            t = r.concat([c, t])
+    function d(e, t, n, o) {
+        if ((e = r.from(e.toArray())).length < t.byteLength()) {
+            var s = r.alloc(t.byteLength() - e.length);
+            e = r.concat([s, e])
         }
-        var o = s.length,
-            f = function(t, e) {
-                t = (t = d(t, e)).mod(e);
-                var s = r.from(t.toArray());
-                if (s.length < e.byteLength()) {
-                    var i = r.alloc(e.byteLength() - s.length);
-                    s = r.concat([i, s])
+        var a = n.length,
+            c = function(e, t) {
+                e = (e = l(e, t)).mod(t);
+                var n = r.from(e.toArray());
+                if (n.length < t.byteLength()) {
+                    var i = r.alloc(t.byteLength() - n.length);
+                    n = r.concat([i, n])
                 }
-                return s
-            }(s, e),
-            u = r.alloc(o);
+                return n
+            }(n, t),
+            u = r.alloc(a);
         u.fill(1);
-        var a = r.alloc(o);
-        return a = i(n, a).update(u).update(r.from([0])).update(t).update(f).digest(), u = i(n, a).update(u).digest(), a = i(n, a).update(u).update(r.from([1])).update(t).update(f).digest(), u = i(n, a).update(u).digest(), {
-            k: a,
+        var d = r.alloc(a);
+        return d = i(o, d).update(u).update(r.from([0])).update(e).update(c).digest(), u = i(o, d).update(u).digest(), d = i(o, d).update(u).update(r.from([1])).update(e).update(c).digest(), u = i(o, d).update(u).digest(), {
+            k: d,
             v: u
         }
     }
 
-    function d(t, e) {
-        var s = new o(t),
-            r = (t.length << 3) - e.bitLength();
-        return r > 0 && s.ishrn(r), s
+    function l(e, t) {
+        var n = new a(e),
+            r = (e.length << 3) - t.bitLength();
+        return r > 0 && n.ishrn(r), n
     }
 
-    function p(t, e, s) {
-        var n, c;
+    function f(e, t, n) {
+        var o, s;
         do {
-            for (n = r.alloc(0); 8 * n.length < t.bitLength();) e.v = i(s, e.k).update(e.v).digest(), n = r.concat([n, e.v]);
-            c = d(n, t), e.k = i(s, e.k).update(e.v).update(r.from([0])).digest(), e.v = i(s, e.k).update(e.v).digest()
-        } while (-1 !== c.cmp(t));
-        return c
+            for (o = r.alloc(0); 8 * o.length < e.bitLength();) t.v = i(n, t.k).update(t.v).digest(), o = r.concat([o, t.v]);
+            s = l(o, e), t.k = i(n, t.k).update(t.v).update(r.from([0])).digest(), t.v = i(n, t.k).update(t.v).digest()
+        } while (-1 !== s.cmp(e));
+        return s
     }
-    t.exports = function(t, e, s, i, b) {
-        var h = f(e);
+    e.exports = function(e, t, n, i, p) {
+        var h = c(t);
         if (h.curve) {
             if ("ecdsa" !== i && "ecdsa/rsa" !== i) throw Error("wrong private key type");
-            return function(t, e) {
-                var s = u[e.curve.join(".")];
-                if (!s) throw Error("unknown curve " + e.curve.join("."));
-                var i = new c(s).keyFromPrivate(e.privateKey).sign(t);
+            return function(e, t) {
+                var n = u[t.curve.join(".")];
+                if (!n) throw Error("unknown curve " + t.curve.join("."));
+                var i = new s(n).keyFromPrivate(t.privateKey).sign(e);
                 return r.from(i.toDER())
-            }(t, h)
+            }(e, h)
         }
         if ("dsa" === h.type) {
             if ("dsa" !== i) throw Error("wrong private key type");
-            return function(t, e, s) {
-                for (var i, n = e.params.priv_key, c = e.params.p, f = e.params.q, u = e.params.g, b = new o(0), h = d(t, f).mod(f), l = !1, g = a(n, f, t, s); !1 === l;) b = function(t, e, s, r) {
-                    return t.toRed(o.mont(s)).redPow(e).fromRed().mod(r)
-                }(u, i = p(f, g, s), c, f), 0 === (l = i.invm(f).imul(h.add(n.mul(b))).mod(f)).cmpn(0) && (l = !1, b = new o(0));
-                return function(t, e) {
-                    t = t.toArray(), e = e.toArray(), 128 & t[0] && (t = [0].concat(t)), 128 & e[0] && (e = [0].concat(e));
-                    var s = [48, t.length + e.length + 4, 2, t.length];
-                    return s = s.concat(t, [2, e.length], e), r.from(s)
-                }(b, l)
-            }(t, h, s)
+            return function(e, t, n) {
+                for (var i, o = t.params.priv_key, s = t.params.p, c = t.params.q, u = t.params.g, p = new a(0), h = l(e, c).mod(c), v = !1, g = d(o, c, e, n); !1 === v;) p = function(e, t, n, r) {
+                    return e.toRed(a.mont(n)).redPow(t).fromRed().mod(r)
+                }(u, i = f(c, g, n), s, c), 0 === (v = i.invm(c).imul(h.add(o.mul(p))).mod(c)).cmpn(0) && (v = !1, p = new a(0));
+                return function(e, t) {
+                    e = e.toArray(), t = t.toArray(), 128 & e[0] && (e = [0].concat(e)), 128 & t[0] && (t = [0].concat(t));
+                    var n = [48, e.length + t.length + 4, 2, e.length];
+                    return n = n.concat(e, [2, t.length], t), r.from(n)
+                }(p, v)
+            }(e, h, n)
         }
         if ("rsa" !== i && "ecdsa/rsa" !== i) throw Error("wrong private key type");
-        t = r.concat([b, t]);
-        for (var l = h.modulus.byteLength(), g = [0, 1]; t.length + g.length + 1 < l;) g.push(255);
+        e = r.concat([p, e]);
+        for (var v = h.modulus.byteLength(), g = [0, 1]; e.length + g.length + 1 < v;) g.push(255);
         g.push(0);
-        for (var v = -1; ++v < t.length;) g.push(t[v]);
-        return n(g, h)
-    }, t.exports.getKey = a, t.exports.makeKey = p
+        for (var b = -1; ++b < e.length;) g.push(e[b]);
+        return o(g, h)
+    }, e.exports.getKey = d, e.exports.makeKey = f
 }

@@ -8,45 +8,45 @@ function(e, t, n) {
             return o
         },
         isMessageRequestOrSpamRequest: function() {
-            return d
+            return l
         },
         shouldShowMessageRequests: function() {
             return u
         }
     }), n("222007"), n("808653");
-    var s = n("299039"),
-        i = n("288518"),
+    var i = n("299039"),
+        s = n("288518"),
         r = n("486503");
 
     function a(e) {
-        let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default, r.default], a = function(e) {
-            return s.default.keys(e).map(t => [t, e[t]])
+        let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, r.default], a = function(e) {
+            return i.default.keys(e).map(t => [t, e[t]])
         }(e), o = a.filter(e => {
-            let [, s] = e;
-            return !t.isMessageRequest(s.id) && !n.isSpam(s.id)
+            let [, i] = e;
+            return !t.isMessageRequest(i.id) && !n.isSpam(i.id)
         });
         return function(e) {
             return Array.from(e).reduce((e, t) => {
-                let [n, s] = t;
+                let [n, i] = t;
                 return Object.assign(e, {
-                    [n]: s
+                    [n]: i
                 })
             }, {})
         }(o)
     }
 
     function o(e) {
-        let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default, r.default];
+        let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, r.default];
         return e.filter(e => !t.isMessageRequest(e) && !n.isSpam(e))
     }
 
-    function d(e) {
-        let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default, r.default];
+    function l(e) {
+        let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, r.default];
         return t.isMessageRequest(e) || n.isSpam(e)
     }
 
     function u() {
-        let [e, t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.default, r.default], n = t.getSpamChannelsCount(), s = e.getMessageRequestsCount();
-        return s > 0 || n > 0
+        let [e, t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [s.default, r.default], n = t.getSpamChannelsCount(), i = e.getMessageRequestsCount();
+        return i > 0 || n > 0
     }
 }

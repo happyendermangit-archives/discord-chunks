@@ -2,45 +2,45 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         updatePoggermodeSettings: function() {
-            return u
+            return l
         },
         updateCombo: function() {
-            return d
+            return u
         },
         clearMessageCombo: function() {
-            return o
+            return d
         },
         updateComboOnMessageSend: function() {
             return c
         }
     });
-    var a = n("913144"),
-        l = n("271938"),
-        s = n("880731"),
-        i = n("943551"),
-        r = n("767189");
+    var i = n("913144"),
+        s = n("271938"),
+        r = n("880731"),
+        a = n("943551"),
+        o = n("767189");
 
-    function u(e) {
-        a.default.dispatch({
+    function l(e) {
+        i.default.dispatch({
             type: "POGGERMODE_SETTINGS_UPDATE",
             settings: e
         });
         let t = {
-            ...s.default.getState(),
+            ...r.default.getState(),
             ...e
         };
-        (0, r.default)(t)
+        (0, o.default)(t)
     }
 
-    function d(e) {
-        a.default.dispatch({
+    function u(e) {
+        i.default.dispatch({
             type: "POGGERMODE_UPDATE_COMBO",
             ...e
         })
     }
 
-    function o(e) {
-        a.default.dispatch({
+    function d(e) {
+        i.default.dispatch({
             type: "POGGERMODE_UPDATE_MESSAGE_COMBO",
             comboMessage: {
                 ...e,
@@ -51,23 +51,23 @@ function(e, t, n) {
 
     function c(e, t) {
         var n;
-        let s = l.default.getId(),
-            r = i.default.getUserCombo(s, e);
-        null != r && a.default.dispatch({
+        let r = s.default.getId(),
+            o = a.default.getUserCombo(r, e);
+        null != o && i.default.dispatch({
             type: "POGGERMODE_UPDATE_MESSAGE_COMBO",
             comboMessage: {
-                combo: r,
+                combo: o,
                 channelId: e,
                 messageId: t,
                 displayed: !1
             }
         });
-        let u = null != r && (null == r ? void 0 : r.value) > 0 ? (null !== (n = null == r ? void 0 : r.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
-        a.default.dispatch({
+        let l = null != o && (null == o ? void 0 : o.value) > 0 ? (null !== (n = null == o ? void 0 : o.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
+        i.default.dispatch({
             type: "POGGERMODE_UPDATE_COMBO",
             channelId: e,
-            userId: s,
-            multiplier: u,
+            userId: r,
+            multiplier: l,
             value: 0
         })
     }

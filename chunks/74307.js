@@ -2,27 +2,27 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         TextArea: function() {
-            return g
+            return v
         }
     }), n("424973");
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("748820"),
         l = n("718776"),
         u = n("516826"),
-        c = n("741662"),
-        d = n("577776"),
+        d = n("741662"),
+        c = n("577776"),
         f = n("324584"),
-        E = n("782340"),
-        p = n("430594"),
-        h = n("182893"),
-        _ = n("356410");
-    let S = (0, o.v4)(),
-        m = (0, o.v4)(),
-        T = (0, o.v4)();
-    class g extends r.Component {
+        _ = n("782340"),
+        h = n("430594"),
+        E = n("182893"),
+        g = n("356410");
+    let m = (0, o.v4)(),
+        p = (0, o.v4)(),
+        S = (0, o.v4)();
+    class v extends s.Component {
         getPaddingRight() {
             let {
                 maxLength: e
@@ -59,8 +59,8 @@ function(e, t, n) {
                     maxLength: n
                 } = this.props;
                 return (0, i.jsxs)("div", {
-                    className: a(p.maxLength, {
-                        [p.errorOverflow]: this.hasError()
+                    className: a(h.maxLength, {
+                        [h.errorOverflow]: this.hasError()
                     }),
                     "aria-hidden": "true",
                     children: [null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0, " ", null != n && "/ ".concat(n)]
@@ -72,8 +72,8 @@ function(e, t, n) {
             if (this.props.showCharacterCount || !1 === this.props.showRemainingCharacterCount) return null;
             let e = this.getCharsLeftLength();
             return null == e ? null : (0, i.jsx)("div", {
-                className: a(p.maxLength, {
-                    [p.errorOverflow]: e < 0
+                className: a(h.maxLength, {
+                    [h.errorOverflow]: e < 0
                 }),
                 "aria-hidden": "true",
                 children: e
@@ -87,20 +87,20 @@ function(e, t, n) {
                 error: e,
                 maxLength: t,
                 minLength: n
-            } = this.props, i = this.getIsOverflowing() ? E.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+            } = this.props, i = this.getIsOverflowing() ? _.default.Messages.MAXIMUM_LENGTH_ERROR.format({
                 maxLength: t
-            }) : null, r = this.getIsUnderflowing() ? E.default.Messages.MINIMUM_LENGTH_ERROR.format({
+            }) : null, s = this.getIsUnderflowing() ? _.default.Messages.MINIMUM_LENGTH_ERROR.format({
                 minLength: n
             }) : null;
-            return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : r
+            return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : s
         }
         renderErrorMessage() {
             let e = this.getErrorMessage();
-            return null == e ? null : (0, i.jsx)(d.Text, {
-                id: S,
+            return null == e ? null : (0, i.jsx)(c.Text, {
+                id: m,
                 variant: "text-xs/normal",
                 color: "text-danger",
-                className: p.errorMessage,
+                className: h.errorMessage,
                 children: e
             })
         }
@@ -108,71 +108,71 @@ function(e, t, n) {
             var e, t;
             let {
                 disabled: n,
-                value: r,
-                placeholder: s,
+                value: s,
+                placeholder: r,
                 autoFocus: o,
                 minLength: u,
-                maxLength: d,
-                allowOverflow: S,
-                spellCheck: g,
-                resizeable: I,
-                className: C,
-                id: v,
+                maxLength: c,
+                allowOverflow: m,
+                spellCheck: v,
+                resizeable: T,
+                className: I,
+                id: C,
                 rows: A,
-                flex: R,
+                flex: y,
                 autosize: N,
-                required: O,
-                onInvalid: D,
-                inputRef: y
-            } = this.props, P = N ? f.TextAreaAutosize : "textarea", L = this.hasError(), b = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, M = this.getAriaDescribedBy();
+                required: R,
+                onInvalid: O,
+                inputRef: D
+            } = this.props, P = N ? f.TextAreaAutosize : "textarea", L = this.hasError(), M = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, b = this.getAriaDescribedBy();
             return (0, i.jsxs)("div", {
-                className: a(h.inputWrapper, {
-                    [p.flex]: R
+                className: a(E.inputWrapper, {
+                    [h.flex]: y
                 }),
                 children: [(0, i.jsxs)("div", {
-                    className: a(p.inputMaxLength, {
-                        [p.flex]: R
+                    className: a(h.inputMaxLength, {
+                        [h.flex]: y
                     }),
                     children: [(0, i.jsx)(l.FocusRing, {
                         children: (0, i.jsx)(P, {
                             type: "text",
-                            className: a(h.inputDefault, p.textArea, _.scrollbarDefault, C, {
-                                [h.error]: L,
-                                [h.disabled]: n,
-                                [p.resizeable]: I
+                            className: a(E.inputDefault, h.textArea, g.scrollbarDefault, I, {
+                                [E.error]: L,
+                                [E.disabled]: n,
+                                [h.resizeable]: T
                             }),
-                            "aria-labelledby": b,
-                            "aria-describedby": M,
+                            "aria-labelledby": M,
+                            "aria-describedby": b,
                             "aria-invalid": L,
                             style: {
                                 paddingRight: this.getPaddingRight()
                             },
-                            id: v,
+                            id: C,
                             disabled: n,
-                            placeholder: s,
-                            value: r,
+                            placeholder: r,
+                            value: s,
                             autoFocus: o,
                             minLength: u,
-                            maxLength: S ? void 0 : d,
-                            spellCheck: g,
-                            required: O,
+                            maxLength: m ? void 0 : c,
+                            spellCheck: v,
+                            required: R,
                             onChange: this.onChange,
                             onBlur: this.onBlur,
                             onFocus: this.onFocus,
                             onKeyDown: this.onKeyDown,
-                            onInvalid: D,
+                            onInvalid: O,
                             rows: A,
-                            ref: y
+                            ref: D
                         })
-                    }), null != u && (0, i.jsx)(c.HiddenVisually, {
-                        id: m,
-                        children: E.default.Messages.MINIMUM_LENGTH.format({
+                    }), null != u && (0, i.jsx)(d.HiddenVisually, {
+                        id: p,
+                        children: _.default.Messages.MINIMUM_LENGTH.format({
                             minLength: u
                         })
-                    }), null != d && (0, i.jsx)(c.HiddenVisually, {
-                        id: T,
-                        children: E.default.Messages.MAXIMUM_LENGTH.format({
-                            maxLength: d
+                    }), null != c && (0, i.jsx)(d.HiddenVisually, {
+                        id: S,
+                        children: _.default.Messages.MAXIMUM_LENGTH.format({
+                            maxLength: c
                         })
                     }), this.renderCharacterCount(), this.renderMaxLength()]
                 }), this.renderErrorMessage()]
@@ -186,8 +186,8 @@ function(e, t, n) {
                     maxLength: t,
                     minLength: n,
                     error: i
-                } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-                return null != s && r.push(s), null != i ? r.push(S) : (null != t && r.push(T), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
+                } = this.props, s = [], r = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
+                return null != r && s.push(r), null != i ? s.push(m) : (null != t && s.push(S), null != n && s.push(p)), s.length > 0 ? s.join(" ") : void 0
             }, this.onChange = e => {
                 let {
                     onChange: t,
@@ -218,7 +218,7 @@ function(e, t, n) {
             }
         }
     }
-    g.contextType = u.FormContext, g.defaultProps = {
+    v.contextType = u.FormContext, v.defaultProps = {
         name: "",
         disabled: !1,
         placeholder: "",

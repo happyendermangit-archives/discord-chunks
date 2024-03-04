@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getIsPaused: function() {
-            return i
+            return s
         },
         setIsPaused: function() {
             return r
         }
     });
-    let s = !1;
+    let i = !1;
 
-    function i() {
-        return s
+    function s() {
+        return i
     }
 
     function r(e) {
-        s = e
+        i = e
     }
 }

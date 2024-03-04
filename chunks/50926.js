@@ -2,25 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return v
+            return m
         }
     });
-    var s = n("872717"),
-        i = n("913144"),
+    var i = n("872717"),
+        s = n("913144"),
         r = n("479756"),
         a = n("38654"),
         o = n("9294"),
-        d = n("26989"),
+        l = n("26989"),
         u = n("337543"),
-        l = n("697218"),
-        f = n("49111");
-    let _ = async (e, t) => {
+        d = n("697218"),
+        c = n("49111");
+    let f = async (e, t) => {
         let n = null != t ? t : u.default.getInviteKeyForGuildId(e),
-            r = l.default.getCurrentUser(),
-            a = !d.default.isMember(e, null == r ? void 0 : r.id);
+            r = d.default.getCurrentUser(),
+            a = !l.default.isMember(e, null == r ? void 0 : r.id);
         try {
-            let t = await s.default.get({
-                url: f.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+            let t = await i.default.get({
+                url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
                 query: {
                     with_guild: a,
                     invite_code: null != n ? (0, o.parseInviteCodeFromInviteKey)(n) : void 0
@@ -31,7 +31,7 @@ function(e, t, n) {
             let {
                 body: r
             } = t;
-            return i.default.dispatch({
+            return s.default.dispatch({
                 type: "MEMBER_VERIFICATION_FORM_UPDATE",
                 guildId: e,
                 form: {
@@ -42,14 +42,14 @@ function(e, t, n) {
                 }
             }), r
         } catch (t) {
-            i.default.dispatch({
+            s.default.dispatch({
                 type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL",
                 guildId: e
             })
         }
-    }, c = async (e, t) => {
-        let n = await s.default.patch({
-                url: f.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+    }, _ = async (e, t) => {
+        let n = await i.default.patch({
+                url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
                 body: {
                     form_fields: t
                 },
@@ -58,7 +58,7 @@ function(e, t, n) {
             {
                 body: r
             } = n;
-        i.default.dispatch({
+        s.default.dispatch({
             type: "MEMBER_VERIFICATION_FORM_UPDATE",
             guildId: e,
             form: {
@@ -67,9 +67,9 @@ function(e, t, n) {
                 formFields: r.form_fields
             }
         })
-    }, g = async (e, t) => {
-        let n = await s.default.patch({
-                url: f.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+    }, h = async (e, t) => {
+        let n = await i.default.patch({
+                url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
                 body: {
                     description: t
                 },
@@ -78,7 +78,7 @@ function(e, t, n) {
             {
                 body: r
             } = n;
-        i.default.dispatch({
+        s.default.dispatch({
             type: "MEMBER_VERIFICATION_FORM_UPDATE",
             guildId: e,
             form: {
@@ -87,15 +87,15 @@ function(e, t, n) {
                 formFields: r.form_fields
             }
         })
-    }, m = async (e, t) => {
-        await s.default.patch({
-            url: f.Endpoints.GUILD_MEMBER_VERIFICATION(e),
+    }, E = async (e, t) => {
+        await i.default.patch({
+            url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
             body: {
                 enabled: t
             },
             oldFormErrors: !0
         })
-    }, h = async (e, t) => {
+    }, g = async (e, t) => {
         if (a.default.isFullServerPreview(e)) {
             (0, r.updateImpersonatedData)(e, {
                 memberOptions: {
@@ -105,8 +105,8 @@ function(e, t, n) {
             return
         }
         try {
-            let n = await s.default.put({
-                    url: f.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
+            let n = await i.default.put({
+                    url: c.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                     body: {
                         version: t.version,
                         form_fields: t.formFields
@@ -115,7 +115,7 @@ function(e, t, n) {
                 {
                     body: r
                 } = n;
-            return i.default.dispatch({
+            return s.default.dispatch({
                 type: "USER_GUILD_JOIN_REQUEST_UPDATE",
                 guildId: e,
                 request: r
@@ -124,11 +124,11 @@ function(e, t, n) {
             throw e
         }
     };
-    var v = {
-        fetchVerificationForm: _,
-        updateVerificationForm: c,
-        updateVerificationFormDescription: g,
-        enableVerificationForm: m,
-        submitVerificationForm: h
+    var m = {
+        fetchVerificationForm: f,
+        updateVerificationForm: _,
+        updateVerificationFormDescription: h,
+        enableVerificationForm: E,
+        submitVerificationForm: g
     }
 }

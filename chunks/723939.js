@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return _
         }
     }), n("222007");
     var i = n("446674"),
-        r = n("705909"),
-        s = n("913144"),
+        s = n("705909"),
+        r = n("913144"),
         a = n("605250"),
         o = n("271938"),
         l = n("496533");
     let u = new a.default("DatabaseManager");
-    class c extends i.Store {
+    class d extends i.Store {
         initialize() {
             this.waitFor(o.default), this.carefullySpeculativelyOpen(l.getUserId()), this.handleAuthenticationStoreChanged(), o.default.addChangeListener(() => this.handleAuthenticationStoreChanged())
         }
         databaseName(e) {
-            return d(e)
+            return c(e)
         }
         database(e) {
             if (null != e) {
@@ -54,7 +54,7 @@ function(e, t, n) {
             let e = o.default.getId(),
                 t = this.databases.get(e),
                 n = null == t ? void 0 : t.state();
-            null == t && n !== r.DatabaseState.Open && this.remove(e), this.carefullyOpenDatabase(e)
+            null == t && n !== s.DatabaseState.Open && this.remove(e), this.carefullyOpenDatabase(e)
         }
         handleAuthenticationStoreChanged() {
             let e = o.default.getId(),
@@ -75,21 +75,21 @@ function(e, t, n) {
             }
         }
         constructor() {
-            super(s.default, {
+            super(r.default, {
                 CLEAR_CACHES: e => this.handleClearCaches(e),
                 CONNECTION_CLOSED: () => this.handleAuthenticationStoreChanged(),
                 CONNECTION_OPEN: () => this.handleConnectionOpen(),
                 LOGOUT: () => this.handleAuthenticationStoreChanged()
-            }, s.DispatchBand.Early), this.databases = new Map, this.activeUserId = null, this.preventWritingCachesAgainThisSession = !1
+            }, r.DispatchBand.Early), this.databases = new Map, this.activeUserId = null, this.preventWritingCachesAgainThisSession = !1
         }
     }
 
-    function d(e) {
+    function c(e) {
         return "@account.".concat(e)
     }
     async function f(e) {
         var t;
         return null
     }
-    var E = new c
+    var _ = new d
 }

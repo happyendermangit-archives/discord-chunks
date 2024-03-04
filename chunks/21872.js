@@ -8,19 +8,19 @@ function(e, t, n) {
             return l
         }
     }), n("222007"), n("424973");
-    var i, r, s = n("884691"),
+    var i, s, r = n("884691"),
         a = n("917351"),
         o = n.n(a);
-    (r = i || (i = {})).PAGE = "PAGE", r.GAP = "GAP", r.BACK = "BACK", r.NEXT = "NEXT";
-    class l extends s.PureComponent {
+    (s = i || (i = {})).PAGE = "PAGE", s.GAP = "GAP", s.BACK = "BACK", s.NEXT = "NEXT";
+    class l extends r.PureComponent {
         getNeighborBounds() {
             let {
                 totalPageCount: e,
                 maxVisiblePages: t,
                 selectedPage: n
-            } = this.props, i = Math.ceil(t / 2), r = Math.floor(t / 2), s = [1, e];
-            s = n <= i ? [1, t] : n > e - r ? [e - t + 1, e] : [n - i + 1, n + r];
-            let [a, o] = s;
+            } = this.props, i = Math.ceil(t / 2), s = Math.floor(t / 2), r = [1, e];
+            r = n <= i ? [1, t] : n > e - s ? [e - t + 1, e] : [n - i + 1, n + s];
+            let [a, o] = r;
             return [Math.max(a, 1), Math.min(o, e)]
         }
         getPageList() {
@@ -28,7 +28,7 @@ function(e, t, n) {
                 totalPageCount: e,
                 selectedPage: t,
                 hideMaxPage: n
-            } = this.props, [i, r] = this.getNeighborBounds(), s = {
+            } = this.props, [i, s] = this.getNeighborBounds(), r = {
                 type: "BACK",
                 key: "back",
                 disabled: 1 === t,
@@ -49,7 +49,7 @@ function(e, t, n) {
             }, {
                 type: "GAP",
                 key: "left-gap"
-            }], i += 2), r < e && (u = [{
+            }], i += 2), s < e && (u = [{
                 type: "GAP",
                 key: "right-gap"
             }], !n && u.push({
@@ -57,8 +57,8 @@ function(e, t, n) {
                 key: "page-".concat(e),
                 targetPage: e,
                 navigateToPage: () => this.handleJump(e)
-            }), r -= 2);
-            let c = o.range(i, r + 1).map(e => ({
+            }), s -= 2);
+            let d = o.range(i, s + 1).map(e => ({
                 type: "PAGE",
                 key: "page-".concat(e),
                 targetPage: e,
@@ -66,7 +66,7 @@ function(e, t, n) {
                 disabled: !1,
                 navigateToPage: () => this.handleJump(e)
             }));
-            return [s, ...l, ...c, ...u, a]
+            return [r, ...l, ...d, ...u, a]
         }
         render() {
             let {

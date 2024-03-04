@@ -2,61 +2,61 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getStoreListingLocation: function() {
-            return S
-        },
-        getApplicationStoreListingLocation: function() {
             return A
         },
+        getApplicationStoreListingLocation: function() {
+            return y
+        },
         getAssetURL: function() {
-            return D
+            return N
         },
         httpGetWithCountryCodeQuery: function() {
-            return N
+            return R
         },
         nativePlatformTypeToSKUOperatingSystem: function() {
             return O
         },
         skuOperatingSystemToText: function() {
-            return P
+            return D
         },
         getPrimarySKUForApplication: function() {
-            return b
+            return P
         },
         getSocialRecommendationReasons: function() {
-            return R
+            return M
         },
         getNonSocialRecommendationReasons: function() {
-            return M
+            return U
         }
     }), n("424973"), n("462568"), n("222007"), n("70102"), n("702976");
-    var s = n("917351"),
-        i = n.n(s),
+    var i = n("917351"),
+        s = n.n(i),
         r = n("866227"),
         a = n.n(r),
         o = n("642852"),
-        d = n.n(o),
+        l = n.n(o),
         u = n("394846"),
-        l = n("872717"),
-        f = n("850068"),
-        _ = n("407063"),
-        c = n("160299"),
-        g = n("357957"),
-        m = n("521012"),
-        h = n("560528"),
-        v = n("568734"),
-        E = n("449008"),
-        p = n("773336"),
-        y = n("299039"),
+        d = n("872717"),
+        c = n("850068"),
+        f = n("407063"),
+        _ = n("160299"),
+        h = n("357957"),
+        E = n("521012"),
+        g = n("560528"),
+        m = n("568734"),
+        p = n("449008"),
+        S = n("773336"),
+        v = n("299039"),
         T = n("49111"),
-        C = n("782340");
-    d.shim();
-    let I = !u.isMobile && !u.isTablet && -1 !== (0, h.getChromeVersion)();
+        I = n("782340");
+    l.shim();
+    let C = !u.isMobile && !u.isTablet && -1 !== (0, g.getChromeVersion)();
 
-    function S(e, t) {
+    function A(e, t) {
         let {
             analyticsSource: n,
-            analyticsProperties: s,
-            storeListingId: i,
+            analyticsProperties: i,
+            storeListingId: s,
             slug: r,
             channelId: a,
             guildId: o
@@ -65,66 +65,66 @@ function(e, t, n) {
             pathname: null != a && null != o ? T.Routes.CHANNEL(o, a, e) : T.Routes.APPLICATION_STORE_LISTING_SKU(e, r),
             state: {
                 analyticsSource: n,
-                analyticsProperties: s
+                analyticsProperties: i
             },
-            search: null != i ? "?store_listing_id=".concat(i) : ""
+            search: null != s ? "?store_listing_id=".concat(s) : ""
         }
     }
 
-    function A(e, t) {
+    function y(e, t) {
         let {
             analyticsSource: n,
-            analyticsProperties: s,
-            slug: i
+            analyticsProperties: i,
+            slug: s
         } = t;
         return {
-            pathname: T.Routes.APPLICATION_STORE_LISTING_APPLICATION(e, i),
+            pathname: T.Routes.APPLICATION_STORE_LISTING_APPLICATION(e, s),
             state: {
                 analyticsSource: n,
-                analyticsProperties: s
+                analyticsProperties: i
             }
         }
     }
 
-    function D(e, t, n, s) {
-        var i;
+    function N(e, t, n, i) {
+        var s;
         let r;
         let a = window.GLOBAL_ENV.CDN_HOST;
-        if (null == s) switch (t.mimeType || t.mime_type) {
+        if (null == i) switch (t.mimeType || t.mime_type) {
             case "video/quicktime":
             case "video/mp4":
-                s = "mp4";
+                i = "mp4";
                 break;
             case "image/gif":
-                s = "gif";
+                i = "gif";
                 break;
             default:
-                s = "webp"
+                i = "webp"
         }
-        "webp" === s && !I && (s = "png");
+        "webp" === i && !C && (i = "png");
         let o = "string" == typeof t ? t : t.id,
-            d = (i = "https:", "https:");
-        return r = null != a ? "".concat(d, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(s) : "".concat(d).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(T.Endpoints.STORE_ASSET(e, o, s)), null != n && (r += "?size=".concat((0, _.getBestMediaProxySize)(n * (0, _.getDevicePixelRatio)()))), r
+            l = (s = "https:", "https:");
+        return r = null != a ? "".concat(l, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(i) : "".concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(T.Endpoints.STORE_ASSET(e, o, i)), null != n && (r += "?size=".concat((0, f.getBestMediaProxySize)(n * (0, f.getDevicePixelRatio)()))), r
     }
-    async function N(e) {
-        var t, n, s, i;
+    async function R(e) {
+        var t, n, i, s;
         let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         if (r) {
             let e = [];
-            !g.default.hasFetchedPaymentSources && e.push(null !== (n = c.default.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, f.fetchPaymentSources)()), !c.default.ipCountryCodeLoaded && e.push((0, f.fetchIpCountryCode)()), e.push(new Promise(async e => {
-                if (m.default.hasFetchedSubscriptions()) e();
-                else if (c.default.isSubscriptionFetching) {
+            !h.default.hasFetchedPaymentSources && e.push(null !== (n = _.default.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, c.fetchPaymentSources)()), !_.default.ipCountryCodeLoaded && e.push((0, c.fetchIpCountryCode)()), e.push(new Promise(async e => {
+                if (E.default.hasFetchedSubscriptions()) e();
+                else if (_.default.isSubscriptionFetching) {
                     let t = () => {
-                        c.default.isSubscriptionFetching ? setTimeout(t, 50) : e()
+                        _.default.isSubscriptionFetching ? setTimeout(t, 50) : e()
                     };
                     t()
-                } else await (0, f.fetchSubscriptions)(), e()
+                } else await (0, c.fetchSubscriptions)(), e()
             })), await Promise.allSettled(e)
         }
-        let a = g.default.getDefaultBillingCountryCode(),
-            o = null !== (s = null === (t = g.default.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== s ? s : null,
-            d = m.default.getPremiumTypeSubscription();
-        null != d && null != d.paymentSourceId && (o = d.paymentSourceId), null === a && (a = null !== (i = c.default.ipCountryCode) && void 0 !== i ? i : null);
+        let a = h.default.getDefaultBillingCountryCode(),
+            o = null !== (i = null === (t = h.default.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : null,
+            l = E.default.getPremiumTypeSubscription();
+        null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === a && (a = null !== (s = _.default.ipCountryCode) && void 0 !== s ? s : null);
         let u = {};
         if (null != a && (u.country_code = a), null != o && (u.payment_source_id = o), null != a || null != o) {
             if ("string" == typeof e) {
@@ -140,112 +140,112 @@ function(e, t, n) {
                 ...e.query
             }
         }
-        return l.default.get(e)
+        return d.default.get(e)
     }
 
     function O(e) {
         switch (e) {
-            case p.PlatformTypes.WINDOWS:
+            case S.PlatformTypes.WINDOWS:
                 return T.OperatingSystems.WINDOWS;
-            case p.PlatformTypes.OSX:
+            case S.PlatformTypes.OSX:
                 return T.OperatingSystems.MACOS;
-            case p.PlatformTypes.LINUX:
+            case S.PlatformTypes.LINUX:
                 return T.OperatingSystems.LINUX;
             default:
                 return null
         }
     }
 
-    function P(e) {
+    function D(e) {
         switch (e) {
             case T.OperatingSystems.WINDOWS:
-                return C.default.Messages.WINDOWS;
+                return I.default.Messages.WINDOWS;
             case T.OperatingSystems.MACOS:
-                return C.default.Messages.MACOS;
+                return I.default.Messages.MACOS;
             case T.OperatingSystems.LINUX:
-                return C.default.Messages.LINUX
+                return I.default.Messages.LINUX
         }
         throw Error("Unknown operating system value: ".concat(e))
     }
 
-    function b(e, t, n) {
-        let s = t.getApplication(e);
-        return null == s || null == s.primarySkuId ? null : n.get(s.primarySkuId)
+    function P(e, t, n) {
+        let i = t.getApplication(e);
+        return null == i || null == i.primarySkuId ? null : n.get(i.primarySkuId)
     }
-    let V = [];
+    let L = [];
 
-    function R(e, t, n, s, r) {
+    function M(e, t, n, i, r) {
         let a = t.get(e);
-        if (null == a) return V;
+        if (null == a) return L;
         let o = a.applicationId,
-            d = [],
+            l = [],
             u = [],
-            l = function(e, t, n) {
-                var s;
-                let i = null !== (s = n.getNowPlaying(e)) && void 0 !== s ? s : {},
-                    r = y.default.keys(i),
+            d = function(e, t, n) {
+                var i;
+                let s = null !== (i = n.getNowPlaying(e)) && void 0 !== i ? i : {},
+                    r = v.default.keys(s),
                     a = r.map(e => {
                         let n = t.getUser(e);
                         return null == n ? null : {
                             user: n,
-                            startTime: i[n.id].startedPlaying
+                            startTime: s[n.id].startedPlaying
                         }
-                    }).filter(E.isNotNullish).sort((e, t) => t.startTime - e.startTime);
+                    }).filter(p.isNotNullish).sort((e, t) => t.startTime - e.startTime);
                 return 0 === a.length ? null : {
                     type: T.StoreRecommendationTypes.NOW_PLAYING,
                     userInfo: a
                 }
-            }(o, n, s);
-        null != l && (d.push(l), u = l.userInfo.map(e => {
+            }(o, n, i);
+        null != d && (l.push(d), u = d.userInfo.map(e => {
             let {
                 user: t
             } = e;
             return t.id
         }));
-        let f = r.getStatisticsForApplication(o);
-        if (null != f) {
-            let e = f.map(e => e.user_id);
-            if (i.difference(e, u).length > 0) {
+        let c = r.getStatisticsForApplication(o);
+        if (null != c) {
+            let e = c.map(e => e.user_id);
+            if (s.difference(e, u).length > 0) {
                 let e = function(e, t, n) {
-                    let s = n.getStatisticsForApplication(e);
-                    if (null == s) return null;
-                    let i = s.map(e => {
+                    let i = n.getStatisticsForApplication(e);
+                    if (null == i) return null;
+                    let s = i.map(e => {
                         let n = t.getUser(e.user_id);
                         return null == n ? null : {
                             user: n,
                             endTime: Date.parse(e.last_played_at)
                         }
-                    }).filter(E.isNotNullish).sort((e, t) => t.endTime - e.endTime);
-                    return 0 === i.length ? null : {
+                    }).filter(p.isNotNullish).sort((e, t) => t.endTime - e.endTime);
+                    return 0 === s.length ? null : {
                         type: T.StoreRecommendationTypes.EVER_PLAYED,
-                        userInfo: i
+                        userInfo: s
                     }
                 }(o, n, r);
-                null != e && d.push(e)
+                null != e && l.push(e)
             }
         }
-        return d
+        return l
     }
-    let k = [];
+    let b = [];
 
-    function M(e, t, n) {
-        let s = t.get(e),
-            i = n.getForSKU(e);
-        if (null == s || null == i) return k;
+    function U(e, t, n) {
+        let i = t.get(e),
+            s = n.getForSKU(e);
+        if (null == i || null == s) return b;
         let r = [];
-        (0, v.hasFlag)(s.flags, T.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && r.push({
+        (0, m.hasFlag)(i.flags, T.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && r.push({
             type: T.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT
         });
-        let o = s.releaseDate;
-        return null != o && 3 > a().diff(o, "months") && (s.accessType === T.SKUAccessTypes.EARLY_ACCESS ? r.push({
+        let o = i.releaseDate;
+        return null != o && 3 > a().diff(o, "months") && (i.accessType === T.SKUAccessTypes.EARLY_ACCESS ? r.push({
             type: T.StoreRecommendationTypes.EARLY_ACCESS,
             releaseDate: o
         }) : r.push({
             type: T.StoreRecommendationTypes.RECENT_RELEASE_DATE,
             releaseDate: o
-        })), null != i.flavorText && r.push({
+        })), null != s.flavorText && r.push({
             type: T.StoreRecommendationTypes.FLAVOR_TEXT,
-            flavorText: i.flavorText
+            flavorText: s.flavorText
         }), r
     }
 }

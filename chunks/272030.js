@@ -1,77 +1,77 @@
-function(e, t, n) {
+function(I, N, A) {
     "use strict";
-    n.r(t), n.d(t, {
+    A.r(N), A.d(N, {
         closeContextMenu: function() {
-            return o
+            return t
         },
         openContextMenu: function() {
-            return c
+            return i
         },
         openContextMenuLazy: function() {
-            return d
+            return n
         }
-    }), n("506083");
-    var i = n("913144"),
-        l = n("244201"),
-        s = n("773336"),
-        a = n("749866"),
-        r = n("49111");
+    }), A("506083");
+    var O = A("913144"),
+        T = A("244201"),
+        _ = A("773336"),
+        e = A("749866"),
+        E = A("49111");
 
-    function u(e) {
-        i.default.dispatch({
+    function V(I) {
+        O.default.dispatch({
             type: "CONTEXT_MENU_OPEN",
-            contextMenu: e
+            contextMenu: I
         })
     }
 
-    function o(e) {
+    function t(I) {
         {
             let {
-                flushSync: t
-            } = n("817736");
-            t(() => {
-                i.default.wait(() => {
-                    i.default.dispatch({
+                flushSync: N
+            } = A("817736");
+            N(() => {
+                O.default.wait(() => {
+                    O.default.dispatch({
                         type: "CONTEXT_MENU_CLOSE"
-                    }).finally(e)
+                    }).finally(I)
                 })
             })
         }
     }
 
-    function c(e, t, n, i) {
-        var o, c, d;
-        if (e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target)) return;
-        let g = 0,
-            h = 0;
-        if ("pageX" in e && (g = e.pageX, h = e.pageY), 0 === g && 0 === h) {
-            let t = null === (o = e.target) || void 0 === o ? void 0 : o.getBoundingClientRect(),
+    function i(I, N, A, O) {
+        var t, i, n;
+        if (I.stopPropagation(), null != I.currentTarget.contains && !I.currentTarget.contains(I.target)) return;
+        let R = 0,
+            G = 0;
+        if ("pageX" in I && (R = I.pageX, G = I.pageY), 0 === R && 0 === G) {
+            let N = null === (t = I.target) || void 0 === t ? void 0 : t.getBoundingClientRect(),
                 {
-                    left: n = 0,
-                    top: i = 0,
-                    width: l = 0,
-                    height: s = 0
-                } = null != t ? t : {};
-            g = n + l / 2, h = i + s / 2
+                    left: A = 0,
+                    top: O = 0,
+                    width: T = 0,
+                    height: _ = 0
+                } = null != N ? N : {};
+            R = A + T / 2, G = O + _ / 2
         }
-        let f = {
-            render: t,
-            renderLazy: i,
-            target: null !== (c = e.target) && void 0 !== c ? c : e.currentTarget,
-            rect: new DOMRect(g, h, 0, 0),
+        let r = {
+            render: N,
+            renderLazy: O,
+            target: null !== (i = I.target) && void 0 !== i ? i : I.currentTarget,
+            rect: new DOMRect(R, G, 0, 0),
             config: {
-                context: __OVERLAY__ ? r.AppContext.OVERLAY : null !== (d = (0, l.getCurrentlyInteractingAppContext)()) && void 0 !== d ? d : r.AppContext.APP,
-                ...n
+                context: __OVERLAY__ ? E.AppContext.OVERLAY : null !== (n = (0, T.getCurrentlyInteractingAppContext)()) && void 0 !== n ? n : E.AppContext.APP,
+                ...A
             }
         };
-        if ((null == n ? void 0 : n.enableSpellCheck) && (0, s.isDesktop)()) {
-            let e = (0, a.addResultListener)(() => {
-                e(), u(f)
+        if ((null == A ? void 0 : A.enableSpellCheck) && (0, _.isDesktop)()) {
+            let I = (0, e.addResultListener)(() => {
+                I(), V(r)
             })
-        } else e.preventDefault(), u(f)
+        } else I.preventDefault(), V(r)
     }
 
-    function d(e, t, n) {
-        c(e, void 0, n, t)
+    function n(I, N, A) {
+        i(I, void 0, A, N)
     }
 }

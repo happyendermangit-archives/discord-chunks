@@ -5,8 +5,8 @@ function(e, t, n) {
             return a
         }
     });
-    var s = n("347219"),
-        i = n("289382");
+    var i = n("347219"),
+        s = n("289382");
     let r = ["#7d8187", "#18191c", "#8fa2df", "#4f545c"];
     var a = class e {
         checkBounds() {
@@ -16,10 +16,10 @@ function(e, t, n) {
             this.checkBounds(), this.y += t * this.positionMultiplier, this.x += e * this.positionMultiplier
         }
         render(e, t) {
-            e.beginPath(), e.globalAlpha = t * this.depth / 4, e.arc(this.x, this.y, this.size, 0, i.TWO_PI, !0), e.fillStyle = this.color, e.fill(), e.globalAlpha = 1
+            e.beginPath(), e.globalAlpha = t * this.depth / 4, e.arc(this.x, this.y, this.size, 0, s.TWO_PI, !0), e.fillStyle = this.color, e.fill(), e.globalAlpha = 1
         }
         constructor() {
-            this.size = (0, s.randomNumber)(2, 3), this.depth = (0, s.randomNumber)(1, 4), this.positionMultiplier = this.depth / 4, this.color = r[4 - this.depth], this.offscreenX = i.MAX_RADIUS + this.size, this.offscreenY = i.MAX_RADIUS + this.size, this.x = (0, s.randomNumber)(-this.size, this.offscreenX), this.y = (0, s.randomNumber)(-this.size, this.offscreenY)
+            this.size = (0, i.randomNumber)(2, 3), this.depth = (0, i.randomNumber)(1, 4), this.positionMultiplier = this.depth / 4, this.color = r[4 - this.depth], this.offscreenX = s.MAX_RADIUS + this.size, this.offscreenY = s.MAX_RADIUS + this.size, this.x = (0, i.randomNumber)(-this.size, this.offscreenX), this.y = (0, i.randomNumber)(-this.size, this.offscreenY)
         }
     }
 }

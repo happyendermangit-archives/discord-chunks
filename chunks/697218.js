@@ -2,112 +2,112 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         users: function() {
-            return _
-        },
-        ASSISTANT_WUMPUS_VOICE_USER: function() {
-            return m
-        },
-        transformUser: function() {
             return g
         },
+        ASSISTANT_WUMPUS_VOICE_USER: function() {
+            return p
+        },
+        transformUser: function() {
+            return v
+        },
         mergeUser: function() {
-            return C
+            return I
         },
         default: function() {
-            return eO
+            return eR
         }
     }), n("222007"), n("702976"), n("808653"), n("581081"), n("424973");
     var i = n("917351"),
-        r = n("234251"),
-        s = n("560208"),
+        s = n("234251"),
+        r = n("560208"),
         a = n("400205"),
         o = n("946028"),
         l = n("517001"),
         u = n("766274"),
-        c = n("568734"),
-        d = n("449008"),
+        d = n("568734"),
+        c = n("449008"),
         f = n("271938"),
-        E = n("455079"),
-        p = n("49111"),
-        h = n("646718");
-    let _ = {},
-        S = 0,
-        m = "47835198259242069";
+        _ = n("455079"),
+        h = n("49111"),
+        E = n("646718");
+    let g = {},
+        m = 0,
+        p = "47835198259242069";
 
-    function T(e, t, n) {
+    function S(e, t, n) {
         let i = e;
-        i = null == n ? e.removeGuildAvatarHash(t) : e.addGuildAvatarHash(t, n), _[e.id] = i;
-        let r = e !== i;
-        return r && S++, r
+        i = null == n ? e.removeGuildAvatarHash(t) : e.addGuildAvatarHash(t, n), g[e.id] = i;
+        let s = e !== i;
+        return s && m++, s
     }
 
-    function g(e) {
+    function v(e) {
         let t = e.mfa_enabled;
         null != t && (e.mfaEnabled = t, delete e.mfa_enabled);
         let n = (0, l.getPremiumTypeFromRawValue)(e.premium_type);
         void 0 !== n && (e.premiumType = n, delete e.premium_type);
         let i = e.nsfw_allowed;
         null != i && (e.nsfwAllowed = i, delete e.nsfw_allowed);
-        let s = e.public_flags;
-        null != s && (e.publicFlags = s, delete e.public_flags);
+        let r = e.public_flags;
+        null != r && (e.publicFlags = r, delete e.public_flags);
         let a = e.purchased_flags;
         void 0 !== a && (e.purchasedFlags = a, delete e.purchased_flags);
         let o = e.premium_usage_flags;
         void 0 !== o && (e.premiumUsageFlags = o, delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
         let u = e.avatar_decoration_data;
-        void 0 !== u && (e.avatarDecorationData = (0, r.parseAvatarDecorationData)(u), delete e.avatar_decoration_data);
-        let c = e.global_name;
-        return void 0 !== c && (e.globalName = c, delete e.global_name), e
+        void 0 !== u && (e.avatarDecorationData = (0, s.parseAvatarDecorationData)(u), delete e.avatar_decoration_data);
+        let d = e.global_name;
+        return void 0 !== d && (e.globalName = d, delete e.global_name), e
     }
 
-    function I(e) {
+    function T(e) {
         return e.id !== f.default.getId()
     }
 
-    function C(e) {
+    function I(e) {
         let t, n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            i = _[e.id],
-            r = void 0 !== e.id && e.id === f.default.getId();
-        if (null == i) void 0 !== (t = (i = new u.default(e)).premiumType) && r && (i.premiumType = v((0, l.isStaffEnv)(i), i.premiumType));
+            i = g[e.id],
+            s = void 0 !== e.id && e.id === f.default.getId();
+        if (null == i) void 0 !== (t = (i = new u.default(e)).premiumType) && s && (i.premiumType = C((0, l.isStaffEnv)(i), i.premiumType));
         else if (n) {
-            var s;
-            let n = g(e);
-            void 0 !== (t = null !== (s = n.premium_type) && void 0 !== s ? s : n.premiumType) && r && (0, l.isStaffEnvRawData)(n) && (n = function(e) {
+            var r;
+            let n = v(e);
+            void 0 !== (t = null !== (r = n.premium_type) && void 0 !== r ? r : n.premiumType) && s && (0, l.isStaffEnvRawData)(n) && (n = function(e) {
                 var t;
                 let n = null !== (t = e.premium_type) && void 0 !== t ? t : e.premiumType,
-                    i = v((0, l.isStaffEnvRawData)(e), n);
+                    i = C((0, l.isStaffEnvRawData)(e), n);
                 return void 0 !== e.premiumType ? e.premiumType = i : void 0 !== e.premium_type && (e.premium_type = i), e
             }(n)), i = i.merge(n)
         }(0, l.validatePremiumType)((0, l.isStaffEnv)(i), t, i.premiumType);
-        let a = _[e.id] !== i;
-        return _[e.id] = i, a && S++, a
+        let a = g[e.id] !== i;
+        return g[e.id] = i, a && m++, a
     }
 
-    function v(e, t) {
+    function C(e, t) {
         if (!e) return t;
         let n = a.default.getPremiumTypeOverride(),
             i = a.default.getPremiumTypeActual();
-        return n === h.UNSELECTED_PREMIUM_TYPE_OVERRIDE ? i : n
+        return n === E.UNSELECTED_PREMIUM_TYPE_OVERRIDE ? i : n
     }
 
     function A(e, t) {
-        var n, i, r, s, a;
-        if (null != e.author && "SENDING" !== e.state && I(e.author) && C(e.author, t), null === (n = e.mentions) || void 0 === n || n.forEach(e => {
-                I(e) && C(e, t)
-            }), (null === (i = e.interaction) || void 0 === i ? void 0 : i.user) != null && I(null === (r = e.interaction) || void 0 === r ? void 0 : r.user) && C(e.interaction.user, t), null === (s = e.attachments) || void 0 === s || s.forEach(e => {
+        var n, i, s, r, a;
+        if (null != e.author && "SENDING" !== e.state && T(e.author) && I(e.author, t), null === (n = e.mentions) || void 0 === n || n.forEach(e => {
+                T(e) && I(e, t)
+            }), (null === (i = e.interaction) || void 0 === i ? void 0 : i.user) != null && T(null === (s = e.interaction) || void 0 === s ? void 0 : s.user) && I(e.interaction.user, t), null === (r = e.attachments) || void 0 === r || r.forEach(e => {
                 var n;
                 null === (n = e.clip_participants) || void 0 === n || n.forEach(e => {
-                    I(e) && C(e, t)
+                    T(e) && I(e, t)
                 })
             }), (null === (a = e.resolved) || void 0 === a ? void 0 : a.users) != null)
             for (let n in e.resolved.users) {
                 let i = e.resolved.users[n];
-                I(i) && C(i, t)
+                T(i) && I(i, t)
             }
     }
 
-    function R(e) {
-        null != e.application.bot && C(e.application.bot)
+    function y(e) {
+        null != e.application.bot && I(e.application.bot)
     }
 
     function N(e) {
@@ -116,17 +116,17 @@ function(e, t, n) {
             users: n,
             guilds: i
         } = e;
-        delete t.premium, delete t.banner_color, C(t), n.forEach(e => {
-            C(e)
+        delete t.premium, delete t.banner_color, I(t), n.forEach(e => {
+            I(e)
         }), i.forEach(e => {
             e.members.forEach(t => {
-                let n = _[t.user.id];
-                null != n && T(n, e.id, t.avatar)
+                let n = g[t.user.id];
+                null != n && S(n, e.id, t.avatar)
             })
         });
-        let r = _[f.default.getId()];
-        null != r && (_[m] = new u.default({
-            id: m,
+        let s = g[f.default.getId()];
+        null != s && (g[p] = new u.default({
+            id: p,
             username: "Wumpus",
             discriminator: "0",
             globalName: "Wumpus",
@@ -134,55 +134,55 @@ function(e, t, n) {
         }))
     }
 
-    function O(e) {
+    function R(e) {
         let {
             guilds: t,
             lazyPrivateChannels: n
         } = e;
         t.forEach(e => {
             e.members.forEach(t => {
-                let n = _[t.user.id];
-                null != n && T(n, e.id, t.avatar)
+                let n = g[t.user.id];
+                null != n && S(n, e.id, t.avatar)
             })
         }), null == n || n.forEach(e => {
             var t;
             null === (t = e.rawRecipients) || void 0 === t || t.forEach(e => {
-                C(e)
+                I(e)
             })
         })
     }
 
-    function D(e) {
+    function O(e) {
         return !("incomplete" in e)
     }
 
-    function y(e) {
+    function D(e) {
         if (null != e.users)
-            for (let t of e.users) !(t.id in _ && D(t)) && (_[t.id] = new u.default(t))
+            for (let t of e.users) !(t.id in g && O(t)) && (g[t.id] = new u.default(t))
     }
 
     function P(e) {
         let {
             user: t
         } = e;
-        t.id !== f.default.getId() && C(t)
+        t.id !== f.default.getId() && I(t)
     }
 
     function L(e) {
         let {
             user: t
         } = e;
-        C(t)
-    }
-
-    function b(e) {
-        let {
-            user: t
-        } = e;
-        C(t)
+        I(t)
     }
 
     function M(e) {
+        let {
+            user: t
+        } = e;
+        I(t)
+    }
+
+    function b(e) {
         let {
             messages: t
         } = e;
@@ -196,31 +196,31 @@ function(e, t, n) {
         return null == t || t.forEach(e => A(e, !1)), !1
     }
 
-    function G(e) {
+    function w(e) {
         let {
             messages: t
         } = e;
-        return t.forEach(e => M({
+        return t.forEach(e => b({
             messages: e
         })), !1
     }
 
-    function w(e) {
+    function k(e) {
         let {
             data: t
         } = e;
-        (0, s.getMessagesFromGuildFeedFetch)(t).forEach(e => A(e, !0))
+        (0, r.getMessagesFromGuildFeedFetch)(t).forEach(e => A(e, !0))
     }
 
-    function k(e) {
+    function V(e) {
         let {
             firstMessages: t,
             owners: n
         } = e;
-        null != t && t.forEach(e => A(e, !0)), null != n && n.forEach(e => C(e.user, !0))
+        null != t && t.forEach(e => A(e, !0)), null != n && n.forEach(e => I(e.user, !0))
     }
 
-    function x(e) {
+    function G(e) {
         let {
             threads: t
         } = e;
@@ -230,7 +230,7 @@ function(e, t, n) {
                 most_recent_message: n,
                 owner: i
             } = e;
-            null != t && A(t, !0), null != n && A(n, !0), null != i && null != i.user && C(i.user, !0)
+            null != t && A(t, !0), null != n && A(n, !0), null != i && null != i.user && I(i.user, !0)
         })
     }
 
@@ -246,7 +246,7 @@ function(e, t, n) {
         })
     }
 
-    function V(e) {
+    function x(e) {
         let {
             guildScheduledEventUsers: t,
             guildId: n
@@ -257,10 +257,10 @@ function(e, t, n) {
                 member: i
             } = e;
             if (null == t) return;
-            C(t);
-            let r = _[t.id],
-                s = null == i ? void 0 : i.avatar;
-            null != r && null != s && T(r, n, s)
+            I(t);
+            let s = g[t.id],
+                r = null == i ? void 0 : i.avatar;
+            null != s && null != r && S(s, n, r)
         })
     }
 
@@ -269,7 +269,7 @@ function(e, t, n) {
             items: t
         } = e;
         t.forEach(e => {
-            null != e.other_user && C(e.other_user)
+            null != e.other_user && I(e.other_user)
         })
     }
 
@@ -277,16 +277,16 @@ function(e, t, n) {
         let {
             item: t
         } = e;
-        null != t.other_user && C(t.other_user)
+        null != t.other_user && I(t.other_user)
     }
 
     function Y(e) {
         let {
             message: t
         } = e;
-        if (A(t, !0), null != t.flags && c.hasFlag(t.flags, p.MessageFlags.URGENT)) {
-            let e = _[f.default.getId()];
-            return null != e && (_[f.default.getId()] = e.set("flags", c.setFlag(e.flags, p.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
+        if (A(t, !0), null != t.flags && d.hasFlag(t.flags, h.MessageFlags.URGENT)) {
+            let e = g[f.default.getId()];
+            return null != e && (g[f.default.getId()] = e.set("flags", d.setFlag(e.flags, h.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
         }
         return !1
     }
@@ -297,7 +297,7 @@ function(e, t, n) {
                 rawRecipients: t
             }
         } = e;
-        return null != t && t.forEach(e => C(e)), !1
+        return null != t && t.forEach(e => I(e)), !1
     }
 
     function W(e) {
@@ -307,7 +307,7 @@ function(e, t, n) {
         for (let {
                 rawRecipients: e
             }
-            of t) null != e && e.forEach(e => C(e));
+            of t) null != e && e.forEach(e => I(e));
         return !1
     }
     let K = ["username", "avatar", "global_name", "discriminator", "bot"];
@@ -317,16 +317,16 @@ function(e, t, n) {
             updates: t
         } = e;
         return t.map(e => {
-            let t = _[e.user.id];
+            let t = g[e.user.id];
             if (null == t) return !1;
-            let n = K.reduce((n, r) => {
-                if (e.user.hasOwnProperty(r)) {
-                    let s = t.set((0, i.camelCase)(r), e.user[r]);
-                    n = n || s !== t, t = s
+            let n = K.reduce((n, s) => {
+                if (e.user.hasOwnProperty(s)) {
+                    let r = t.set((0, i.camelCase)(s), e.user[s]);
+                    n = n || r !== t, t = r
                 }
                 return n
             }, !1);
-            return !!n && (_[t.id] = t, n)
+            return !!n && (g[t.id] = t, n)
         }).some(e => e)
     }
 
@@ -334,33 +334,33 @@ function(e, t, n) {
         let {
             bans: t
         } = e;
-        t.forEach(e => C(e.user))
+        t.forEach(e => I(e.user))
     }
 
     function X(e) {
         let {
             bans: t
         } = e;
-        t.forEach(e => C(e.user))
+        t.forEach(e => I(e.user))
     }
 
     function Q(e) {
-        return C(e.user)
+        return I(e.user)
     }
 
     function Z(e) {
-        return !!e.isMember && C(e.user)
+        return !!e.isMember && I(e.user)
     }
 
     function J(e) {
-        let t = C(e.user),
-            n = _[e.user.id];
+        let t = I(e.user),
+            n = g[e.user.id];
         if (null == n) return t;
         let {
             avatar: i,
-            guildId: r
+            guildId: s
         } = e;
-        return T(n, r, i) || t
+        return S(n, s, i) || t
     }
 
     function $(e) {
@@ -369,27 +369,27 @@ function(e, t, n) {
             guildId: n
         } = e;
         return t.reduce((e, t) => {
-            let i = C(t.user),
-                r = _[t.user.id];
-            if (null == r) return i || e;
+            let i = I(t.user),
+                s = g[t.user.id];
+            if (null == s) return i || e;
             let {
-                avatar: s
+                avatar: r
             } = t;
-            return T(r, n, s) || i || e
+            return S(s, n, r) || i || e
         }, !1)
     }
 
     function ee(e) {
         var t;
         let n = !1;
-        for (let i of null !== (t = e.members) && void 0 !== t ? t : []) C(i.user) && (n = !0), null != _[i.user.id] && T(_[i.user.id], e.guildId, i.avatar) && (n = !0);
+        for (let i of null !== (t = e.members) && void 0 !== t ? t : []) I(i.user) && (n = !0), null != g[i.user.id] && S(g[i.user.id], e.guildId, i.avatar) && (n = !0);
         return n
     }
 
     function et(e) {
         var t;
         let n = !1;
-        for (let i of null !== (t = e.users) && void 0 !== t ? t : []) !Object.hasOwn(_, i.id) && (n = C(i) || n);
+        for (let i of null !== (t = e.users) && void 0 !== t ? t : []) !Object.hasOwn(g, i.id) && (n = I(i) || n);
         return n
     }
 
@@ -398,7 +398,7 @@ function(e, t, n) {
             members: t
         } = e, n = !1;
         return t.forEach(e => {
-            null != e.member && C(e.member.user) && (n = !0), null != e.presence && C(e.presence.user) && (n = !0)
+            null != e.member && I(e.member.user) && (n = !0), null != e.presence && I(e.presence.user) && (n = !0)
         }), n
     }
 
@@ -407,11 +407,11 @@ function(e, t, n) {
             addedMembers: t
         } = e, n = !1;
         return null == t || t.forEach(e => {
-            null != e.member && C(e.member.user) && (n = !0), null != e.presence && C(e.presence.user) && (n = !0)
+            null != e.member && I(e.member.user) && (n = !0), null != e.presence && I(e.presence.user) && (n = !0)
         }), n
     }
 
-    function er(e) {
+    function es(e) {
         let {
             guild: t
         } = e;
@@ -420,44 +420,44 @@ function(e, t, n) {
                 user: {
                     id: n,
                     username: i,
-                    avatar: r,
-                    discriminator: s,
+                    avatar: s,
+                    discriminator: r,
                     bot: a
                 },
                 avatar: o
             } = e;
-            n !== f.default.getId() && C({
+            n !== f.default.getId() && I({
                 id: n,
                 username: i,
-                avatar: r,
-                discriminator: s,
+                avatar: s,
+                discriminator: r,
                 bot: a
             });
-            let l = _[n];
-            null != l && T(l, t.id, o)
+            let l = g[n];
+            null != l && S(l, t.id, o)
         })
     }
 
-    function es(e) {
-        return C(e.relationship.user)
+    function er(e) {
+        return I(e.relationship.user)
     }
 
     function ea(e) {
         let {
             relationships: t
         } = e;
-        return t.reduce((e, t) => C(t.user) || e, !1)
+        return t.reduce((e, t) => I(t.user) || e, !1)
     }
 
     function eo(e) {
-        return C(e.suggestion.suggested_user)
+        return I(e.suggestion.suggested_user)
     }
 
     function el(e) {
         let {
             suggestions: t
         } = e;
-        return t.reduce((e, t) => C(t.suggested_user) || e, !1)
+        return t.reduce((e, t) => I(t.suggested_user) || e, !1)
     }
 
     function eu(e) {
@@ -465,29 +465,29 @@ function(e, t, n) {
             users: t
         } = e;
         t.forEach(e => {
-            null == _[e.id] && (_[e.id] = new u.default(e))
+            null == g[e.id] && (g[e.id] = new u.default(e))
         })
     }
 
-    function ec(e) {
+    function ed(e) {
         let {
             lobby: t
         } = e;
-        return t.members.reduce((e, t) => C(t.user) || e, !1)
+        return t.members.reduce((e, t) => I(t.user) || e, !1)
     }
 
-    function ed(e) {
-        return C(e.member.user)
+    function ec(e) {
+        return I(e.member.user)
     }
 
     function ef(e) {
         let {
             giftCode: t
         } = e;
-        return null != t.user && C(t.user)
+        return null != t.user && I(t.user)
     }
 
-    function eE(e) {
+    function e_(e) {
         let {
             appliedBoosts: t
         } = e;
@@ -495,80 +495,80 @@ function(e, t, n) {
             let {
                 user: t
             } = e;
-            null != t && C(t)
+            null != t && I(t)
         })
     }
 
-    function ep(e) {
+    function eh(e) {
         let {
             request: t
         } = e, {
             user: n,
             actioned_by_user: i
-        } = t, r = !1;
-        return null != n && (r = r || C(n)), null != i && (r = r || C(i)), r
+        } = t, s = !1;
+        return null != n && (s = s || I(n)), null != i && (s = s || I(i)), s
     }
 
-    function eh(e) {
+    function eE(e) {
         let {
             user: t
         } = e;
-        C(t)
+        I(t)
     }
 
-    function e_(e) {
+    function eg(e) {
         let {
             integrations: t
         } = e;
-        t.forEach(e => R((0, o.createPrivateChannelIntegration)(e)))
-    }
-
-    function eS(e) {
-        let {
-            integration: t
-        } = e;
-        R((0, o.createPrivateChannelIntegration)(t))
+        t.forEach(e => y((0, o.createPrivateChannelIntegration)(e)))
     }
 
     function em(e) {
         let {
             integration: t
         } = e;
-        R((0, o.createPrivateChannelIntegration)(t))
+        y((0, o.createPrivateChannelIntegration)(t))
     }
 
-    function eT(e) {
+    function ep(e) {
+        let {
+            integration: t
+        } = e;
+        y((0, o.createPrivateChannelIntegration)(t))
+    }
+
+    function eS(e) {
         let {
             users: t,
             familyCenterTeenActivity: n
         } = e, {
             users: i
-        } = n, r = [...t, ...i];
-        return r.reduce((e, t) => C(t) || e, !1)
+        } = n, s = [...t, ...i];
+        return s.reduce((e, t) => I(t) || e, !1)
     }
 
-    function eg(e) {
+    function ev(e) {
         let {
             users: t
         } = e;
-        return t.reduce((e, t) => C(t) || e, !1)
+        return t.reduce((e, t) => I(t) || e, !1)
+    }
+
+    function eT(e) {
+        let {
+            users: t
+        } = e;
+        return t.reduce((e, t) => I(t) || e, !1)
     }
 
     function eI(e) {
         let {
             users: t
         } = e;
-        return t.reduce((e, t) => C(t) || e, !1)
+        return t.reduce((e, t) => I(t) || e, !1)
     }
 
     function eC(e) {
-        let {
-            users: t
-        } = e;
-        return t.reduce((e, t) => C(t) || e, !1)
-    }
-
-    function ev(e) {
         let {
             familyCenterTeenActivity: t
         } = e;
@@ -576,7 +576,7 @@ function(e, t, n) {
         let {
             users: n
         } = t;
-        return n.reduce((e, t) => C(t) || e, !1)
+        return n.reduce((e, t) => I(t) || e, !1)
     }
 
     function eA(e) {
@@ -585,20 +585,20 @@ function(e, t, n) {
         } = e, {
             users: n
         } = t;
-        return n.reduce((e, t) => C(t) || e, !1)
+        return n.reduce((e, t) => I(t) || e, !1)
     }
 
-    function eR(e) {
+    function ey(e) {
         let {
             members: t
         } = e, n = f.default.getId();
         return t.reduce((e, t) => {
             if (t.member.user.id === n) return e;
-            let i = C(t.member.user);
+            let i = I(t.member.user);
             return i || e
         }, !1)
     }
-    class eN extends E.default {
+    class eN extends _.default {
         initialize() {
             this.waitFor(f.default)
         }
@@ -607,37 +607,37 @@ function(e, t, n) {
             return {
                 version: eN.LATEST_SNAPSHOT_VERSION,
                 data: {
-                    users: [e].filter(d.isNotNullish)
+                    users: [e].filter(c.isNotNullish)
                 }
             }
         }
         handleLoadCache(e) {
             let t = this.readSnapshot(eN.LATEST_SNAPSHOT_VERSION);
             if (null != t)
-                for (let e of t.users) _[e.id] = new u.default(e);
+                for (let e of t.users) g[e.id] = new u.default(e);
             if (null != e.users)
-                for (let t of e.users) !(t.id in _ && D(t)) && (_[t.id] = new u.default(t));
+                for (let t of e.users) !(t.id in g && O(t)) && (g[t.id] = new u.default(t));
             for (let t of e.channels) {
                 var n;
-                null === (n = t.rawRecipients) || void 0 === n || n.forEach(e => C(e, !1))
+                null === (n = t.rawRecipients) || void 0 === n || n.forEach(e => I(e, !1))
             }
         }
         getUserStoreVersion() {
-            return S
+            return m
         }
         getUser(e) {
-            if (null != e) return _[e]
+            if (null != e) return g[e]
         }
         getUsers() {
-            return _
+            return g
         }
         forEach(e) {
-            for (let t in _)
-                if (!1 === e(_[t])) break
+            for (let t in g)
+                if (!1 === e(g[t])) break
         }
         findByTag(e, t) {
-            for (let n in _) {
-                let i = _[n];
+            for (let n in g) {
+                let i = g[n];
                 if (null != t && i.username === e && i.discriminator === t) return i;
                 if (null == t && i.username === e && i.isPomelo()) return i
             }
@@ -645,43 +645,43 @@ function(e, t, n) {
         filter(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = [];
-            for (let t in _) {
-                let i = _[t];
+            for (let t in g) {
+                let i = g[t];
                 e(i) && n.push(i)
             }
             return t && n.sort((e, t) => e.username > t.username ? 1 : e.username < t.username ? -1 : 0), n
         }
         getCurrentUser() {
-            return _[f.default.getId()]
+            return g[f.default.getId()]
         }
         constructor() {
             super({
                 CONNECTION_OPEN: N,
-                CONNECTION_OPEN_SUPPLEMENTAL: O,
-                UPDATE_CLIENT_PREMIUM_TYPE: b,
-                OVERLAY_INITIALIZE: y,
+                CONNECTION_OPEN_SUPPLEMENTAL: R,
+                UPDATE_CLIENT_PREMIUM_TYPE: M,
+                OVERLAY_INITIALIZE: D,
                 CACHE_LOADED: e => this.handleLoadCache(e),
                 USER_UPDATE: P,
                 CURRENT_USER_UPDATE: L,
                 PRESENCE_UPDATES: z,
-                SEARCH_FINISH: G,
-                MOD_VIEW_SEARCH_FINISH: G,
-                LOAD_MESSAGES_SUCCESS: M,
-                LOAD_MESSAGES_AROUND_SUCCESS: M,
-                LOAD_PINNED_MESSAGES_SUCCESS: M,
-                LOAD_RECENT_MENTIONS_SUCCESS: M,
+                SEARCH_FINISH: w,
+                MOD_VIEW_SEARCH_FINISH: w,
+                LOAD_MESSAGES_SUCCESS: b,
+                LOAD_MESSAGES_AROUND_SUCCESS: b,
+                LOAD_PINNED_MESSAGES_SUCCESS: b,
+                LOAD_RECENT_MENTIONS_SUCCESS: b,
                 THREAD_LIST_SYNC: U,
                 MESSAGE_CREATE: Y,
                 MESSAGE_UPDATE: Y,
                 GUILD_SETTINGS_LOADED_BANS: q,
                 GUILD_SETTINGS_LOADED_BANS_BATCH: X,
-                GUILD_CREATE: er,
+                GUILD_CREATE: es,
                 GUILD_BAN_ADD: Q,
                 GUILD_BAN_REMOVE: Q,
                 CHANNEL_RECIPIENT_ADD: Z,
                 CHANNEL_RECIPIENT_REMOVE: Z,
-                GUILD_JOIN_REQUEST_CREATE: ep,
-                GUILD_JOIN_REQUEST_UPDATE: ep,
+                GUILD_JOIN_REQUEST_CREATE: eh,
+                GUILD_JOIN_REQUEST_UPDATE: eh,
                 GUILD_MEMBER_ADD: J,
                 GUILD_MEMBER_UPDATE: J,
                 GUILD_MEMBERS_CHUNK: $,
@@ -689,41 +689,41 @@ function(e, t, n) {
                 THREAD_MEMBERS_UPDATE: ei,
                 CHANNEL_CREATE: j,
                 CHANNEL_UPDATES: W,
-                RELATIONSHIP_ADD: es,
+                RELATIONSHIP_ADD: er,
                 LOAD_RELATIONSHIPS_SUCCESS: ea,
                 FRIEND_SUGGESTION_CREATE: eo,
                 LOAD_FRIEND_SUGGESTIONS_SUCCESS: el,
                 AUDIT_LOG_FETCH_SUCCESS: eu,
                 AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: eu,
-                LOBBY_CREATE: ec,
-                LOBBY_MEMBER_CONNECT: ed,
-                LOBBY_MEMBER_UPDATE: ed,
+                LOBBY_CREATE: ed,
+                LOBBY_MEMBER_CONNECT: ec,
+                LOBBY_MEMBER_UPDATE: ec,
                 GIFT_CODE_RESOLVE_SUCCESS: ef,
-                GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eE,
-                GUILD_FEED_FETCH_SUCCESS: w,
-                LOAD_THREADS_SUCCESS: k,
-                LOAD_ARCHIVED_THREADS_SUCCESS: k,
-                LOAD_FORUM_POSTS: x,
-                GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: V,
+                GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: e_,
+                GUILD_FEED_FETCH_SUCCESS: k,
+                LOAD_THREADS_SUCCESS: V,
+                LOAD_ARCHIVED_THREADS_SUCCESS: V,
+                LOAD_FORUM_POSTS: G,
+                GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: x,
                 LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: B,
                 NOTIFICATION_CENTER_ITEM_CREATE: H,
                 LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: F,
-                STORE_APPLICATION_INTERACTION_FAKE_USER: eh,
+                STORE_APPLICATION_INTERACTION_FAKE_USER: eE,
                 PASSIVE_UPDATE_V1: ee,
                 LOCAL_MESSAGES_LOADED: et,
-                FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: e_,
-                PRIVATE_CHANNEL_INTEGRATION_CREATE: eS,
-                PRIVATE_CHANNEL_INTEGRATION_UPDATE: em,
-                FAMILY_CENTER_INITIAL_LOAD: eT,
-                FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eg,
-                FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: ev,
+                FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eg,
+                PRIVATE_CHANNEL_INTEGRATION_CREATE: em,
+                PRIVATE_CHANNEL_INTEGRATION_UPDATE: ep,
+                FAMILY_CENTER_INITIAL_LOAD: eS,
+                FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: ev,
+                FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eC,
                 FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eA,
-                FAMILY_CENTER_REQUEST_LINK_SUCCESS: eI,
-                FRIEND_FINDER_PYMK_LOADED: eC,
-                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eR
+                FAMILY_CENTER_REQUEST_LINK_SUCCESS: eT,
+                FRIEND_FINDER_PYMK_LOADED: eI,
+                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: ey
             })
         }
     }
     eN.displayName = "UserStore", eN.LATEST_SNAPSHOT_VERSION = 1;
-    var eO = new eN
+    var eR = new eN
 }

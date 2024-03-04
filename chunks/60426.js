@@ -1,15 +1,15 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("366400"),
-        i = s("16662");
-    t.exports = function() {
-        var t = i();
+    var r = n("366400"),
+        i = n("16662");
+    e.exports = function() {
+        var e = i();
         return r(Array.prototype, {
-            map: t
+            map: e
         }, {
             map: function() {
-                return Array.prototype.map !== t
+                return Array.prototype.map !== e
             }
-        }), t
+        }), e
     }
 }

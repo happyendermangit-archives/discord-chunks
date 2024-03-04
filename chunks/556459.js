@@ -1,39 +1,39 @@
-function(t, r, n) {
+function(e, t, n) {
     n("424973");
-    var e = n("488063"),
-        o = n("862167"),
-        i = n("430272");
-    t.exports = function(t, r, n, u, c, a) {
-        var f = 1 & n,
-            s = t.length,
-            p = r.length;
-        if (s != p && !(f && p > s)) return !1;
-        var v = a.get(t);
-        if (v && a.get(r)) return v == r;
-        var l = -1,
+    var r = n("488063"),
+        i = n("862167"),
+        o = n("430272");
+    e.exports = function(e, t, n, s, a, c) {
+        var u = 1 & n,
+            d = e.length,
+            l = t.length;
+        if (d != l && !(u && l > d)) return !1;
+        var f = c.get(e);
+        if (f && c.get(t)) return f == t;
+        var p = -1,
             h = !0,
-            _ = 2 & n ? new e : void 0;
-        for (a.set(t, r), a.set(r, t); ++l < s;) {
-            var y = t[l],
-                b = r[l];
-            if (u) var x = f ? u(b, y, l, r, t, a) : u(y, b, l, t, r, a);
-            if (void 0 !== x) {
-                if (x) continue;
+            v = 2 & n ? new r : void 0;
+        for (c.set(e, t), c.set(t, e); ++p < d;) {
+            var g = e[p],
+                b = t[p];
+            if (s) var m = u ? s(b, g, p, t, e, c) : s(g, b, p, e, t, c);
+            if (void 0 !== m) {
+                if (m) continue;
                 h = !1;
                 break
             }
-            if (_) {
-                if (!o(r, function(t, r) {
-                        if (!i(_, r) && (y === t || c(y, t, n, u, a))) return _.push(r)
+            if (v) {
+                if (!i(t, function(e, t) {
+                        if (!o(v, t) && (g === e || a(g, e, n, s, c))) return v.push(t)
                     })) {
                     h = !1;
                     break
                 }
-            } else if (!(y === b || c(y, b, n, u, a))) {
+            } else if (!(g === b || a(g, b, n, s, c))) {
                 h = !1;
                 break
             }
         }
-        return a.delete(t), a.delete(r), h
+        return c.delete(e), c.delete(t), h
     }
 }

@@ -1,68 +1,68 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("70102"), s("424973");
-    var r = s("839309"),
-        i = s("599235"),
-        n = s("275201"),
-        c = s("550511");
+    n("70102"), n("424973");
+    var r = n("839309"),
+        i = n("599235"),
+        o = n("275201"),
+        s = n("550511");
 
-    function o(t) {
-        n.call(this, "mont", t), this.a = new r(t.a, 16).toRed(this.red), this.b = new r(t.b, 16).toRed(this.red), this.i4 = new r(4).toRed(this.red).redInvm(), this.two = new r(2).toRed(this.red), this.a24 = this.i4.redMul(this.a.redAdd(this.two))
+    function a(e) {
+        o.call(this, "mont", e), this.a = new r(e.a, 16).toRed(this.red), this.b = new r(e.b, 16).toRed(this.red), this.i4 = new r(4).toRed(this.red).redInvm(), this.two = new r(2).toRed(this.red), this.a24 = this.i4.redMul(this.a.redAdd(this.two))
     }
 
-    function f(t, e, s) {
-        n.BasePoint.call(this, t, "projective"), null === e && null === s ? (this.x = this.curve.one, this.z = this.curve.zero) : (this.x = new r(e, 16), this.z = new r(s, 16), !this.x.red && (this.x = this.x.toRed(this.curve.red)), !this.z.red && (this.z = this.z.toRed(this.curve.red)))
+    function c(e, t, n) {
+        o.BasePoint.call(this, e, "projective"), null === t && null === n ? (this.x = this.curve.one, this.z = this.curve.zero) : (this.x = new r(t, 16), this.z = new r(n, 16), !this.x.red && (this.x = this.x.toRed(this.curve.red)), !this.z.red && (this.z = this.z.toRed(this.curve.red)))
     }
-    i(o, n), t.exports = o, o.prototype.validate = function(t) {
-        var e = t.normalize().x,
-            s = e.redSqr(),
-            r = s.redMul(e).redAdd(s.redMul(this.a)).redAdd(e);
+    i(a, o), e.exports = a, a.prototype.validate = function(e) {
+        var t = e.normalize().x,
+            n = t.redSqr(),
+            r = n.redMul(t).redAdd(n.redMul(this.a)).redAdd(t);
         return 0 === r.redSqrt().redSqr().cmp(r)
-    }, i(f, n.BasePoint), o.prototype.decodePoint = function(t, e) {
-        return this.point(c.toArray(t, e), 1)
-    }, o.prototype.point = function(t, e) {
-        return new f(this, t, e)
-    }, o.prototype.pointFromJSON = function(t) {
-        return f.fromJSON(this, t)
-    }, f.prototype.precompute = function() {}, f.prototype._encode = function() {
+    }, i(c, o.BasePoint), a.prototype.decodePoint = function(e, t) {
+        return this.point(s.toArray(e, t), 1)
+    }, a.prototype.point = function(e, t) {
+        return new c(this, e, t)
+    }, a.prototype.pointFromJSON = function(e) {
+        return c.fromJSON(this, e)
+    }, c.prototype.precompute = function() {}, c.prototype._encode = function() {
         return this.getX().toArray("be", this.curve.p.byteLength())
-    }, f.fromJSON = function(t, e) {
-        return new f(t, e[0], e[1] || t.one)
-    }, f.prototype.inspect = function() {
+    }, c.fromJSON = function(e, t) {
+        return new c(e, t[0], t[1] || e.one)
+    }, c.prototype.inspect = function() {
         return this.isInfinity() ? "<EC Point Infinity>" : "<EC Point x: " + this.x.fromRed().toString(16, 2) + " z: " + this.z.fromRed().toString(16, 2) + ">"
-    }, f.prototype.isInfinity = function() {
+    }, c.prototype.isInfinity = function() {
         return 0 === this.z.cmpn(0)
-    }, f.prototype.dbl = function() {
-        var t = this.x.redAdd(this.z).redSqr(),
-            e = this.x.redSub(this.z).redSqr(),
-            s = t.redSub(e),
-            r = t.redMul(e),
-            i = s.redMul(e.redAdd(this.curve.a24.redMul(s)));
+    }, c.prototype.dbl = function() {
+        var e = this.x.redAdd(this.z).redSqr(),
+            t = this.x.redSub(this.z).redSqr(),
+            n = e.redSub(t),
+            r = e.redMul(t),
+            i = n.redMul(t.redAdd(this.curve.a24.redMul(n)));
         return this.curve.point(r, i)
-    }, f.prototype.add = function() {
+    }, c.prototype.add = function() {
         throw Error("Not supported on Montgomery curve")
-    }, f.prototype.diffAdd = function(t, e) {
-        var s = this.x.redAdd(this.z),
+    }, c.prototype.diffAdd = function(e, t) {
+        var n = this.x.redAdd(this.z),
             r = this.x.redSub(this.z),
-            i = t.x.redAdd(t.z),
-            n = t.x.redSub(t.z).redMul(s),
-            c = i.redMul(r),
-            o = e.z.redMul(n.redAdd(c).redSqr()),
-            f = e.x.redMul(n.redISub(c).redSqr());
-        return this.curve.point(o, f)
-    }, f.prototype.mul = function(t) {
-        for (var e = t.clone(), s = this, r = this.curve.point(null, null), i = []; 0 !== e.cmpn(0); e.iushrn(1)) i.push(e.andln(1));
-        for (var n = i.length - 1; n >= 0; n--) 0 === i[n] ? (s = s.diffAdd(r, this), r = r.dbl()) : (r = s.diffAdd(r, this), s = s.dbl());
+            i = e.x.redAdd(e.z),
+            o = e.x.redSub(e.z).redMul(n),
+            s = i.redMul(r),
+            a = t.z.redMul(o.redAdd(s).redSqr()),
+            c = t.x.redMul(o.redISub(s).redSqr());
+        return this.curve.point(a, c)
+    }, c.prototype.mul = function(e) {
+        for (var t = e.clone(), n = this, r = this.curve.point(null, null), i = []; 0 !== t.cmpn(0); t.iushrn(1)) i.push(t.andln(1));
+        for (var o = i.length - 1; o >= 0; o--) 0 === i[o] ? (n = n.diffAdd(r, this), r = r.dbl()) : (r = n.diffAdd(r, this), n = n.dbl());
         return r
-    }, f.prototype.mulAdd = function() {
+    }, c.prototype.mulAdd = function() {
         throw Error("Not supported on Montgomery curve")
-    }, f.prototype.jumlAdd = function() {
+    }, c.prototype.jumlAdd = function() {
         throw Error("Not supported on Montgomery curve")
-    }, f.prototype.eq = function(t) {
-        return 0 === this.getX().cmp(t.getX())
-    }, f.prototype.normalize = function() {
+    }, c.prototype.eq = function(e) {
+        return 0 === this.getX().cmp(e.getX())
+    }, c.prototype.normalize = function() {
         return this.x = this.x.redMul(this.z.redInvm()), this.z = this.curve.one, this
-    }, f.prototype.getX = function() {
+    }, c.prototype.getX = function() {
         return this.normalize(), this.x.fromRed()
     }
 }

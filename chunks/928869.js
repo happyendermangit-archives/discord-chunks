@@ -23,26 +23,26 @@ function(e, t, n) {
                     o = e.name,
                     f = e.options,
                     p = n.elements.arrow,
-                    h = n.modifiersData.popperOffsets,
-                    m = (0, r.default)(n.placement),
-                    y = (0, s.default)(m),
-                    _ = [(0, d.left), (0, d.right)].indexOf(m) >= 0 ? "height" : "width";
-                if (p && h) {
+                    m = n.modifiersData.popperOffsets,
+                    h = (0, r.default)(n.placement),
+                    y = (0, s.default)(h),
+                    _ = [(0, d.left), (0, d.right)].indexOf(h) >= 0 ? "height" : "width";
+                if (p && m) {
                     var g, v, b = (g = f.padding, v = n, g = "function" == typeof g ? g(Object.assign({}, v.rects, {
                             placement: v.placement
                         })) : g, (0, l.default)("number" != typeof g ? g : (0, c.default)(g, d.basePlacements))),
                         M = (0, a.default)(p),
                         w = "y" === y ? d.top : d.left,
                         k = "y" === y ? d.bottom : d.right,
-                        L = n.rects.reference[_] + n.rects.reference[y] - h[y] - n.rects.popper[_],
-                        D = h[y] - n.rects.reference[y],
+                        L = n.rects.reference[_] + n.rects.reference[y] - m[y] - n.rects.popper[_],
+                        D = m[y] - n.rects.reference[y],
                         T = (0, i.default)(p),
                         S = T ? "y" === y ? T.clientHeight || 0 : T.clientWidth || 0 : 0,
                         Y = b[w],
-                        x = S - M[_] - b[k],
-                        O = S / 2 - M[_] / 2 + (L / 2 - D / 2),
-                        E = (0, u.within)(Y, O, x);
-                    n.modifiersData[o] = ((t = {})[y] = E, t.centerOffset = E - O, t)
+                        O = S - M[_] - b[k],
+                        x = S / 2 - M[_] / 2 + (L / 2 - D / 2),
+                        E = (0, u.within)(Y, x, O);
+                    n.modifiersData[o] = ((t = {})[y] = E, t.centerOffset = E - x, t)
                 }
             },
             effect: function(e) {

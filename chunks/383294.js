@@ -11,11 +11,11 @@ function(e, t, n) {
             return o
         },
         setAlwaysOnTop: function() {
-            return d
+            return l
         }
     });
-    var s = n("913144");
-    let i = {
+    var i = n("913144");
+    let s = {
         menubar: !1,
         toolbar: !1,
         location: !1,
@@ -23,11 +23,11 @@ function(e, t, n) {
     };
 
     function r(e, t, n) {
-        return s.default.dispatch({
+        return i.default.dispatch({
             type: "POPOUT_WINDOW_OPEN",
             key: e,
             features: {
-                ...i,
+                ...s,
                 ...n
             },
             render: t
@@ -35,21 +35,21 @@ function(e, t, n) {
     }
 
     function a(e) {
-        return s.default.dispatch({
+        return i.default.dispatch({
             type: "CHANNEL_CALL_POPOUT_WINDOW_OPEN",
             channel: e
         })
     }
 
     function o(e) {
-        return s.default.dispatch({
+        return i.default.dispatch({
             type: "POPOUT_WINDOW_CLOSE",
             key: e
         })
     }
 
-    function d(e, t) {
-        return s.default.dispatch({
+    function l(e, t) {
+        return i.default.dispatch({
             type: "POPOUT_WINDOW_SET_ALWAYS_ON_TOP",
             alwaysOnTop: t,
             key: e

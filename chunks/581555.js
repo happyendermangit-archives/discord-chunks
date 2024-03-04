@@ -2,26 +2,26 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useTableState: function() {
-            return d
+            return l
         },
         buildHeaderRows: function() {
             return c
         }
     }), n("70102"), n("424973"), n("808653"), n("222007"), n("843762");
     var r = n("872834"),
-        a = n("884691"),
-        i = n("626619");
-    let o = "row-header-column-" + Math.random().toString(36).slice(2),
-        s = "row-header-column-" + Math.random().toString(36).slice(2);
-    for (; o === s;) s = "row-header-column-" + Math.random().toString(36).slice(2);
+        i = n("884691"),
+        o = n("626619");
+    let s = "row-header-column-" + Math.random().toString(36).slice(2),
+        a = "row-header-column-" + Math.random().toString(36).slice(2);
+    for (; s === a;) a = "row-header-column-" + Math.random().toString(36).slice(2);
 
     function c(e, t) {
         if (0 === t.length) return [];
         let n = [],
             r = new Map;
-        for (let a of t) {
-            let t = a.parentKey,
-                i = [a];
+        for (let i of t) {
+            let t = i.parentKey,
+                o = [i];
             for (; t;) {
                 let n = e.get(t);
                 if (!n) break;
@@ -31,31 +31,31 @@ function(e, t, n) {
                         column: e,
                         index: t
                     } = r.get(n);
-                    if (t > i.length) break;
-                    for (let n = t; n < i.length; n++) e.splice(n, 0, null);
-                    for (let t = i.length; t < e.length; t++) e[t] && r.has(e[t]) && (r.get(e[t]).index = t)
-                } else n.colspan = 1, i.push(n), r.set(n, {
-                    column: i,
-                    index: i.length - 1
+                    if (t > o.length) break;
+                    for (let n = t; n < o.length; n++) e.splice(n, 0, null);
+                    for (let t = o.length; t < e.length; t++) e[t] && r.has(e[t]) && (r.get(e[t]).index = t)
+                } else n.colspan = 1, o.push(n), r.set(n, {
+                    column: o,
+                    index: o.length - 1
                 });
                 t = n.parentKey
             }
-            n.push(i), a.index = n.length - 1
+            n.push(o), i.index = n.length - 1
         }
-        let a = Math.max(...n.map(e => e.length)),
-            i = Array(a).fill(0).map(() => []),
-            o = 0;
+        let i = Math.max(...n.map(e => e.length)),
+            o = Array(i).fill(0).map(() => []),
+            s = 0;
         for (let e of n) {
-            let t = a - 1;
+            let t = i - 1;
             for (let n of e) {
                 if (n) {
-                    let e = i[t],
+                    let e = o[t],
                         r = e.reduce((e, t) => e + t.colspan, 0);
-                    if (r < o) {
-                        let a = {
+                    if (r < s) {
+                        let i = {
                             type: "placeholder",
                             key: "placeholder-" + n.key,
-                            colspan: o - r,
+                            colspan: s - r,
                             index: r,
                             value: null,
                             rendered: null,
@@ -64,16 +64,16 @@ function(e, t, n) {
                             childNodes: [],
                             textValue: null
                         };
-                        e.length > 0 && (e[e.length - 1].nextKey = a.key, a.prevKey = e[e.length - 1].key), e.push(a)
+                        e.length > 0 && (e[e.length - 1].nextKey = i.key, i.prevKey = e[e.length - 1].key), e.push(i)
                     }
-                    e.length > 0 && (e[e.length - 1].nextKey = n.key, n.prevKey = e[e.length - 1].key), n.level = t, n.colIndex = o, e.push(n)
+                    e.length > 0 && (e[e.length - 1].nextKey = n.key, n.prevKey = e[e.length - 1].key), n.level = t, n.colIndex = s, e.push(n)
                 }
                 t--
             }
-            o++
+            s++
         }
-        let s = 0;
-        for (let e of i) {
+        let a = 0;
+        for (let e of o) {
             let n = e.reduce((e, t) => e + t.colspan, 0);
             if (n < t.length) {
                 let r = {
@@ -83,7 +83,7 @@ function(e, t, n) {
                     index: n,
                     value: null,
                     rendered: null,
-                    level: s,
+                    level: a,
                     hasChildNodes: !1,
                     childNodes: [],
                     textValue: null,
@@ -91,9 +91,9 @@ function(e, t, n) {
                 };
                 e.push(r)
             }
-            s++
+            a++
         }
-        return i.map((e, t) => ({
+        return o.map((e, t) => ({
             type: "headerrow",
             key: "headerrow-" + t,
             index: t,
@@ -105,7 +105,7 @@ function(e, t, n) {
             textValue: null
         }))
     }
-    class l extends i.GridCollection {
+    class u extends o.GridCollection {
         *[Symbol.iterator]() {
             yield* this.body.childNodes
         }
@@ -154,12 +154,12 @@ function(e, t, n) {
             return ""
         }
         constructor(e, t, n) {
-            let r, a = new Set,
-                i = [];
+            let r, i = new Set,
+                o = [];
             if (null == n ? void 0 : n.showSelectionCheckboxes) {
                 let e = {
                     type: "column",
-                    key: o,
+                    key: s,
                     value: null,
                     textValue: "",
                     level: 0,
@@ -171,12 +171,12 @@ function(e, t, n) {
                         isSelectionCell: !0
                     }
                 };
-                i.unshift(e)
+                o.unshift(e)
             }
             if (null == n ? void 0 : n.showDragButtons) {
                 let e = {
                     type: "column",
-                    key: s,
+                    key: a,
                     value: null,
                     textValue: "",
                     level: 0,
@@ -188,82 +188,82 @@ function(e, t, n) {
                         isDragButtonCell: !0
                     }
                 };
-                i.unshift(e)
+                o.unshift(e)
             }
-            let l = [],
-                u = new Map,
-                d = e => {
+            let u = [],
+                d = new Map,
+                l = e => {
                     switch (e.type) {
                         case "body":
                             r = e;
                             break;
                         case "column":
-                            u.set(e.key, e), !e.hasChildNodes && (i.push(e), e.props.isRowHeader && a.add(e.key));
+                            d.set(e.key, e), !e.hasChildNodes && (o.push(e), e.props.isRowHeader && i.add(e.key));
                             break;
                         case "item":
-                            l.push(e);
+                            u.push(e);
                             return
                     }
-                    for (let t of e.childNodes) d(t)
+                    for (let t of e.childNodes) l(t)
                 };
-            for (let t of e) d(t);
-            let p = c(u, i);
-            p.forEach((e, t) => l.splice(t, 0, e)), super({
-                columnCount: i.length,
-                items: l,
-                visitNode: e => (e.column = i[e.index], e)
-            }), this._size = 0, this.columns = i, this.rowHeaderColumnKeys = a, this.body = r, this.headerRows = p, this._size = [...r.childNodes].length, 0 === this.rowHeaderColumnKeys.size && ((null == n ? void 0 : n.showSelectionCheckboxes) ? (null == n ? void 0 : n.showDragButtons) ? this.rowHeaderColumnKeys.add(this.columns[2].key) : this.rowHeaderColumnKeys.add(this.columns[1].key) : this.rowHeaderColumnKeys.add(this.columns[0].key))
+            for (let t of e) l(t);
+            let f = c(d, o);
+            f.forEach((e, t) => u.splice(t, 0, e)), super({
+                columnCount: o.length,
+                items: u,
+                visitNode: e => (e.column = o[e.index], e)
+            }), this._size = 0, this.columns = o, this.rowHeaderColumnKeys = i, this.body = r, this.headerRows = f, this._size = [...r.childNodes].length, 0 === this.rowHeaderColumnKeys.size && ((null == n ? void 0 : n.showSelectionCheckboxes) ? (null == n ? void 0 : n.showDragButtons) ? this.rowHeaderColumnKeys.add(this.columns[2].key) : this.rowHeaderColumnKeys.add(this.columns[1].key) : this.rowHeaderColumnKeys.add(this.columns[0].key))
         }
     }
-    let u = {
+    let d = {
         ascending: "descending",
         descending: "ascending"
     };
 
-    function d(e) {
-        let [t, n] = (0, a.useState)(!1), {
-            selectionMode: o = "none",
-            showSelectionCheckboxes: s,
+    function l(e) {
+        let [t, n] = (0, i.useState)(!1), {
+            selectionMode: s = "none",
+            showSelectionCheckboxes: a,
             showDragButtons: c
-        } = e, d = (0, a.useMemo)(() => ({
-            showSelectionCheckboxes: s && "none" !== o,
+        } = e, l = (0, i.useMemo)(() => ({
+            showSelectionCheckboxes: a && "none" !== s,
             showDragButtons: c,
-            selectionMode: o,
+            selectionMode: s,
             columns: []
-        }), [e.children, s, o, c]), p = (0, r.useCollection)(e, (0, a.useCallback)(e => new l(e, null, d), [d]), d), {
-            disabledKeys: f,
-            selectionManager: m
-        } = (0, i.useGridState)({
+        }), [e.children, a, s, c]), f = (0, r.useCollection)(e, (0, i.useCallback)(e => new u(e, null, l), [l]), l), {
+            disabledKeys: p,
+            selectionManager: h
+        } = (0, o.useGridState)({
             ...e,
-            collection: p,
+            collection: f,
             disabledBehavior: e.disabledBehavior || "selection"
         });
         return {
-            collection: p,
-            disabledKeys: f,
-            selectionManager: m,
+            collection: f,
+            disabledKeys: p,
+            selectionManager: h,
             showSelectionCheckboxes: e.showSelectionCheckboxes || !1,
             sortDescriptor: e.sortDescriptor,
-            isKeyboardNavigationDisabled: 0 === p.size || t,
+            isKeyboardNavigationDisabled: 0 === f.size || t,
             setKeyboardNavigationDisabled: n,
             sort(t, n) {
                 var r;
                 e.onSortChange({
                     column: t,
-                    direction: null != n ? n : (null === (r = e.sortDescriptor) || void 0 === r ? void 0 : r.column) === t ? u[e.sortDescriptor.direction] : "ascending"
+                    direction: null != n ? n : (null === (r = e.sortDescriptor) || void 0 === r ? void 0 : r.column) === t ? d[e.sortDescriptor.direction] : "ascending"
                 })
             }
         }
     }
 
-    function p(e) {
+    function f(e) {
         return null
     }
-    p.getCollectionNode = function*(e, t) {
+    f.getCollectionNode = function*(e, t) {
         let {
             children: n,
             textValue: r,
-            UNSTABLE_childItems: i
+            UNSTABLE_childItems: o
         } = e;
         yield {
             type: "item",
@@ -290,16 +290,16 @@ function(e, t, n) {
                         element: n(e.key),
                         key: e.key
                     };
-                    if (i)
-                        for (let e of i) yield {
+                    if (o)
+                        for (let e of o) yield {
                             type: "item",
                             value: e
                         }
                 } else {
                     let e = [],
                         r = [];
-                    if (a.Children.forEach(n, n => {
-                            if (n.type === p) {
+                    if (i.Children.forEach(n, n => {
+                            if (n.type === f) {
                                 if (e.length < t.columns.length) throw Error("All of a Row's child Cells must be positioned before any child Rows.");
                                 r.push({
                                     type: "item",

@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         GuildSettingsBansNewExperiment: function() {
-            return i
+            return s
         }
     });
-    var l = n("296892");
-    let i = (0, l.default)({
+    var i = n("296892");
+    let s = (0, i.default)({
         kind: "guild",
         id: "2023-08_improved_bans_page",
         label: "Guild Settings Improved Bans Page",

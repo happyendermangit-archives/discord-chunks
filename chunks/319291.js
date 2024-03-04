@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return r
         }
     });
-    var s = n("157246");
-    let u = {
-        [s.Soundpacks.CLASSIC]: {
+    var i = n("157246");
+    let s = {
+        [i.Soundpacks.CLASSIC]: {
             discodo: "discodo",
             message1: "message1",
             deafen: "deafen",
@@ -31,7 +31,7 @@ function(e, t, n) {
             poggermode_achievement_unlock: "poggermode_achievement_unlock",
             stage_waiting: "stage_waiting"
         },
-        [s.Soundpacks.DETUNE]: {
+        [i.Soundpacks.DETUNE]: {
             discodo: "detune_discodo",
             message1: "detune_message1",
             deafen: "detune_deafen",
@@ -53,7 +53,7 @@ function(e, t, n) {
         }
     };
 
-    function a(e) {
-        return u[e]
+    function r(e) {
+        return s[e]
     }
 }

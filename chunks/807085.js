@@ -5,9 +5,9 @@ function(e, t, n) {
             return i
         }
     });
-    var i, r = n("666038"),
-        s = n("782340");
-    i = class e extends r.default {
+    var i, s = n("666038"),
+        r = n("782340");
+    i = class e extends s.default {
         static createFromServer(t) {
             return new e({
                 id: t.id,
@@ -16,7 +16,7 @@ function(e, t, n) {
             })
         }
         getName(e) {
-            return null != this.name ? this.name : this.id === e ? s.default.Messages.APPLICATION_BRANCH_NAME_MASTER : s.default.Messages.APPLICATION_BRANCH_NAME_UNKNOWN
+            return null != this.name ? this.name : this.id === e ? r.default.Messages.APPLICATION_BRANCH_NAME_MASTER : r.default.Messages.APPLICATION_BRANCH_NAME_UNKNOWN
         }
         constructor(e) {
             super(), this.id = e.id, this.liveBuildId = e.liveBuildId, this.name = e.name

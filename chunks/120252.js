@@ -2,52 +2,52 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return m
+            return E
         }
     });
-    var s = n("803182"),
-        i = n("872717"),
+    var i = n("803182"),
+        s = n("872717"),
         r = n("913144"),
         a = n("619443"),
         o = n("233069"),
-        d = n("42203"),
+        l = n("42203"),
         u = n("18494"),
-        l = n("49111"),
-        f = n("724210");
-    let _ = {},
-        c = !1;
+        d = n("49111"),
+        c = n("724210");
+    let f = {},
+        _ = !1;
 
-    function g(e) {
-        if (null == e || e === f.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID || (0, f.isStaticChannelRoute)(e) || null != d.default.getChannel(e)) return Promise.resolve();
-        if (c || (c = !0, r.default.subscribe("CONNECTION_OPEN", () => {
-                _ = {};
+    function h(e) {
+        if (null == e || e === c.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID || (0, c.isStaticChannelRoute)(e) || null != l.default.getChannel(e)) return Promise.resolve();
+        if (_ || (_ = !0, r.default.subscribe("CONNECTION_OPEN", () => {
+                f = {};
                 let e = u.default.getChannelId(),
-                    t = d.default.getChannel(e);
-                null != e && null == t && g(e)
+                    t = l.default.getChannel(e);
+                null != e && null == t && h(e)
             })), !a.default.isConnected()) return Promise.resolve();
-        let t = _[e];
+        let t = f[e];
         if (null != t) return "LOADING" === t.type ? t.promise : Promise.resolve();
-        let n = (0, s.matchPath)(location.pathname, {
-                path: l.Routes.CHANNEL(":guildId", ":channelId", ":messageId"),
+        let n = (0, i.matchPath)(location.pathname, {
+                path: d.Routes.CHANNEL(":guildId", ":channelId", ":messageId"),
                 exact: !0
             }),
-            m = i.default.get(l.Endpoints.CHANNEL(e)).then(t => {
+            E = s.default.get(d.Endpoints.CHANNEL(e)).then(t => {
                 let {
-                    body: s
+                    body: i
                 } = t;
-                if (_[e] = {
+                if (f[e] = {
                         type: "LOADED"
-                    }, o.THREAD_CHANNEL_TYPES.has(s.type)) {
-                    var i;
+                    }, o.THREAD_CHANNEL_TYPES.has(i.type)) {
+                    var s;
                     r.default.dispatch({
                         type: "THREAD_CREATE",
-                        channel: (0, o.createChannelRecordFromServer)(s),
-                        messageId: null == n ? void 0 : null === (i = n.params) || void 0 === i ? void 0 : i.messageId
+                        channel: (0, o.createChannelRecordFromServer)(i),
+                        messageId: null == n ? void 0 : null === (s = n.params) || void 0 === s ? void 0 : s.messageId
                     })
                 }
             }).catch(() => {
                 var t;
-                _[e] = {
+                f[e] = {
                     type: "NOT_FOUND"
                 }, r.default.dispatch({
                     type: "CHANNEL_DELETE",
@@ -58,12 +58,12 @@ function(e, t, n) {
                     }
                 })
             });
-        return _[e] = {
+        return f[e] = {
             type: "LOADING",
-            promise: m
-        }, m
+            promise: E
+        }, E
     }
-    var m = {
-        loadThread: g
+    var E = {
+        loadThread: h
     }
 }

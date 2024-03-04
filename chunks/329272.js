@@ -5,13 +5,13 @@ function(e, t, n) {
             return l
         },
         FormText: function() {
-            return c
+            return d
         }
     });
     var i = n("37983");
     n("884691");
-    var r = n("414456"),
-        s = n.n(r),
+    var s = n("414456"),
+        r = n.n(s),
         a = n("258078"),
         o = n("9336");
     let l = {
@@ -30,22 +30,22 @@ function(e, t, n) {
             SELECTABLE: "modeSelectable"
         };
 
-    function c(e) {
+    function d(e) {
         let {
             type: t = l.DEFAULT,
             className: n,
-            disabled: r,
-            selectable: c,
-            children: d,
+            disabled: s,
+            selectable: d,
+            children: c,
             style: f,
-            ...E
-        } = e, p = u.DEFAULT;
-        return r ? p = u.DISABLED : c && (p = u.SELECTABLE), (0, i.jsx)(a.default, {
-            className: s(o[t], n, o[p]),
+            ..._
+        } = e, h = u.DEFAULT;
+        return s ? h = u.DISABLED : d && (h = u.SELECTABLE), (0, i.jsx)(a.default, {
+            className: r(o[t], n, o[h]),
             style: f,
-            ...E,
-            children: d
+            ..._,
+            children: c
         })
     }
-    c.Types = l
+    d.Types = l
 }

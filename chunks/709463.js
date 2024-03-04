@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return s
         }
     });
-    var s = n("144491");
+    var i = n("144491");
 
-    function i(e) {
-        (0, s.transitionToChannel)(e.channelId)
+    function s(e) {
+        (0, i.transitionToChannel)(e.channelId)
     }
 }

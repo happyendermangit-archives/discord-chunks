@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return r
         }
     });
     var i = n("862205");
-    let r = (0, i.createExperiment)({
+    let s = (0, i.createExperiment)({
         kind: "user",
         id: "2023-08_periodic_voice_stats",
         label: "Periodic Voice Stats",
@@ -51,5 +51,5 @@ function(e, t, n) {
             }
         }]
     });
-    var s = r
+    var r = s
 }

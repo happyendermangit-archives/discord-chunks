@@ -1,12 +1,12 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("70102");
-    var r = s("240973"),
+    n("70102");
+    var r = n("240973"),
         i = TypeError,
-        n = s("326763");
-    t.exports = function(t) {
-        var e = r(t);
-        if (!e) throw new i("non-iterable value provided");
-        return arguments.length > 1 ? n(e, arguments[1]) : n(e)
+        o = n("326763");
+    e.exports = function(e) {
+        var t = r(e);
+        if (!t) throw new i("non-iterable value provided");
+        return arguments.length > 1 ? o(t, arguments[1]) : o(t)
     }
 }

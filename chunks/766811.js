@@ -1,38 +1,38 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("70102");
+    n("70102");
     var r = Object.getOwnPropertySymbols,
         i = Object.prototype.hasOwnProperty,
-        n = Object.prototype.propertyIsEnumerable;
-    t.exports = ! function() {
+        o = Object.prototype.propertyIsEnumerable;
+    e.exports = ! function() {
         try {
             if (!Object.assign) return !1;
-            var t = new String("abc");
-            if (t[5] = "de", "5" === Object.getOwnPropertyNames(t)[0]) return !1;
-            for (var e = {}, s = 0; s < 10; s++) e["_" + String.fromCharCode(s)] = s;
-            var r = Object.getOwnPropertyNames(e).map(function(t) {
-                return e[t]
+            var e = new String("abc");
+            if (e[5] = "de", "5" === Object.getOwnPropertyNames(e)[0]) return !1;
+            for (var t = {}, n = 0; n < 10; n++) t["_" + String.fromCharCode(n)] = n;
+            var r = Object.getOwnPropertyNames(t).map(function(e) {
+                return t[e]
             });
             if ("0123456789" !== r.join("")) return !1;
             var i = {};
-            if ("abcdefghijklmnopqrst".split("").forEach(function(t) {
-                    i[t] = t
+            if ("abcdefghijklmnopqrst".split("").forEach(function(e) {
+                    i[e] = e
                 }), "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, i)).join("")) return !1;
             return !0
-        } catch (t) {
+        } catch (e) {
             return !1
         }
-    }() ? function(t, e) {
-        for (var s, c, o = function(t) {
-                if (null == t) throw TypeError("Object.assign cannot be called with null or undefined");
-                return Object(t)
-            }(t), f = 1; f < arguments.length; f++) {
-            for (var u in s = Object(arguments[f]), s) i.call(s, u) && (o[u] = s[u]);
+    }() ? function(e, t) {
+        for (var n, s, a = function(e) {
+                if (null == e) throw TypeError("Object.assign cannot be called with null or undefined");
+                return Object(e)
+            }(e), c = 1; c < arguments.length; c++) {
+            for (var u in n = Object(arguments[c]), n) i.call(n, u) && (a[u] = n[u]);
             if (r) {
-                c = r(s);
-                for (var a = 0; a < c.length; a++) n.call(s, c[a]) && (o[c[a]] = s[c[a]])
+                s = r(n);
+                for (var d = 0; d < s.length; d++) o.call(n, s[d]) && (a[s[d]] = n[s[d]])
             }
         }
-        return o
+        return a
     } : Object.assign
 }

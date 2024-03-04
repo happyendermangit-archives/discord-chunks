@@ -1,9 +1,9 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("845968"),
-        i = s("331543");
-    t.exports = function() {
-        var t = Array.prototype.map;
-        return r(t) ? t : i
+    var r = n("845968"),
+        i = n("331543");
+    e.exports = function() {
+        var e = Array.prototype.map;
+        return r(e) ? e : i
     }
 }

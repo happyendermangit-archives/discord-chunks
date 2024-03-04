@@ -2,154 +2,154 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return M
+            return b
         }
     }), n("222007"), n("424973");
     var i = n("917351"),
-        r = n.n(i),
-        s = n("446674"),
+        s = n.n(i),
+        r = n("446674"),
         a = n("862337"),
         o = n("913144"),
         l = n("157552"),
         u = n("71313"),
-        c = n("190017"),
-        d = n("299285"),
+        d = n("190017"),
+        c = n("299285"),
         f = n("686470"),
-        E = n("535974"),
-        p = n("98328"),
-        h = n("718517"),
-        _ = n("964889"),
-        S = n("602043");
-    let m = new Set,
+        _ = n("535974"),
+        h = n("98328"),
+        E = n("718517"),
+        g = n("964889"),
+        m = n("602043");
+    let p = new Set,
+        S = {},
+        v = new Set,
         T = {},
-        g = new Set,
-        I = {},
-        C = new Set,
-        v = {},
-        A = 10 * h.default.Millis.MINUTE,
-        R = 6 * h.default.Millis.HOUR,
-        N = 10 * h.default.Millis.MINUTE,
-        O = new a.Timeout;
+        I = new Set,
+        C = {},
+        A = 10 * E.default.Millis.MINUTE,
+        y = 6 * E.default.Millis.HOUR,
+        N = 10 * E.default.Millis.MINUTE,
+        R = new a.Timeout;
 
-    function D(e) {
-        O.start(e + Math.random() * A, l.fetchBranches)
+    function O(e) {
+        R.start(e + Math.random() * A, l.fetchBranches)
     }
 
-    function y() {
-        if (!(0, S.isSupportedPlatform)()) return !1;
+    function D() {
+        if (!(0, m.isSupportedPlatform)()) return !1;
         let e = f.default.entitledBranchIds,
             t = [];
-        for (let n of e) !v.hasOwnProperty(n) && (v[n] = null, t.push(n));
+        for (let n of e) !C.hasOwnProperty(n) && (C[n] = null, t.push(n));
         if (0 === t.length) return !1;
         o.default.wait(() => l.fetchBranches(t))
     }
 
     function P(e, t) {
-        if (null != T[t] && p.default.shouldBeInstalled(e, t)) {
-            let n = T[t],
+        if (null != S[t] && h.default.shouldBeInstalled(e, t)) {
+            let n = S[t],
                 i = n.manifestIds,
-                s = E.default.getState(e, t);
-            null != s && s.shouldPatch && (s.buildId !== n.id || !r.isEqual(s.manifestIds, i)) && o.default.wait(() => {
-                let r = d.default.getApplication(e);
-                null != r ? (C.delete((0, _.getComboId)(e, t)), (0, c.updateApplication)(r, t, n.id, i, !0)) : C.add((0, _.getComboId)(e, t))
+                r = _.default.getState(e, t);
+            null != r && r.shouldPatch && (r.buildId !== n.id || !s.isEqual(r.manifestIds, i)) && o.default.wait(() => {
+                let s = c.default.getApplication(e);
+                null != s ? (I.delete((0, g.getComboId)(e, t)), (0, d.updateApplication)(s, t, n.id, i, !0)) : I.add((0, g.getComboId)(e, t))
             })
         }
     }
 
     function L() {
-        O.stop()
+        R.stop()
     }
-    class b extends s.default.Store {
+    class M extends r.default.Store {
         initialize() {
-            this.syncWith([f.default], y), this.waitFor(E.default, f.default, d.default)
+            this.syncWith([f.default], D), this.waitFor(_.default, f.default, c.default)
         }
         getTargetBuildId(e, t) {
-            return null == T[t] ? null : T[t].id
+            return null == S[t] ? null : S[t].id
         }
         getTargetManifests(e, t) {
-            return null == T[t] ? null : T[t].manifestIds
+            return null == S[t] ? null : S[t].manifestIds
         }
         hasNoBuild(e, t) {
-            return g.has(t)
+            return v.has(t)
         }
         isFetching(e, t) {
-            return m.has(t)
+            return p.has(t)
         }
         needsToFetchBuildSize(e) {
-            return !I.hasOwnProperty(e)
+            return !T.hasOwnProperty(e)
         }
         getBuildSize(e) {
-            return I[e]
+            return T[e]
         }
     }
-    b.displayName = "ApplicationBuildStore";
-    var M = new b(o.default, {
+    M.displayName = "ApplicationBuildStore";
+    var b = new M(o.default, {
         CONNECTION_OPEN: function() {
-            return D(R), y()
+            return O(y), D()
         },
         GAMES_DATABASE_UPDATE: function() {
-            if (!(0, S.isSupportedPlatform)()) return !1;
-            for (let e of C) {
+            if (!(0, m.isSupportedPlatform)()) return !1;
+            for (let e of I) {
                 let {
                     applicationId: t,
                     branchId: n
-                } = (0, _.convertComboId)(e), i = d.default.getApplication(t);
-                null != i && (C.delete(e), P(t, n))
+                } = (0, g.convertComboId)(e), i = c.default.getApplication(t);
+                null != i && (I.delete(e), P(t, n))
             }
         },
         APPLICATION_BUILD_FETCH_START: function(e) {
             let {
                 branchId: t
             } = e;
-            m.add(t)
+            p.add(t)
         },
         APPLICATION_BUILD_FETCH_SUCCESS: function(e) {
             let {
                 applicationId: t,
                 branchId: n,
                 locale: i,
-                build: r
+                build: s
             } = e;
-            m.delete(n);
-            let s = r.manifests.map(e => {
+            p.delete(n);
+            let r = s.manifests.map(e => {
                     let {
                         id: t
                     } = e;
                     return t
                 }),
-                a = r.id;
-            g.delete(n), T[n] = {
+                a = s.id;
+            v.delete(n), S[n] = {
                 id: a,
                 applicationId: t,
                 branchId: n,
                 locale: i,
-                manifestIds: s
+                manifestIds: r
             }, P(t, n)
         },
         APPLICATION_BUILD_NOT_FOUND: function(e) {
             let {
                 branchId: t
             } = e;
-            m.delete(t), g.add(t)
+            p.delete(t), v.add(t)
         },
         APPLICATION_BUILD_SIZE_FETCH_START: function(e) {
             let {
                 buildId: t
             } = e;
-            !I.hasOwnProperty(t) && (I[t] = null)
+            !T.hasOwnProperty(t) && (T[t] = null)
         },
         APPLICATION_BUILD_SIZE_FETCH_SUCCESS: function(e) {
             let {
                 buildId: t,
                 sizeKB: n
             } = e;
-            I[t] = n
+            T[t] = n
         },
         APPLICATION_BUILD_SIZE_FETCH_FAIL: function(e) {
             let {
                 buildId: t
             } = e;
-            null == I[t] && delete I[t]
+            null == T[t] && delete T[t]
         },
         APPLICATION_BRANCHES_FETCH_SUCCESS: function(e) {
             let {
@@ -163,17 +163,17 @@ function(e, t, n) {
                 let {
                     id: t,
                     liveBuildId: i
-                } = e, r = v[t];
-                if (i !== r) {
+                } = e, s = C[t];
+                if (i !== s) {
                     let e = n[t];
                     null != e && o.default.wait(() => u.fetchLiveBuild(e.id, e.branchId, !0))
                 }
-                v[t] = i
+                C[t] = i
             }
-            D(R)
+            O(y)
         },
         APPLICATION_BRANCHES_FETCH_FAIL: function() {
-            D(N)
+            O(N)
         },
         CONNECTION_CLOSED: L,
         LOGOUT: L,
@@ -181,12 +181,12 @@ function(e, t, n) {
             let {
                 entitlements: t
             } = e;
-            if (!(0, S.isSupportedPlatform)()) return !1;
+            if (!(0, m.isSupportedPlatform)()) return !1;
             let n = new Set;
             for (let e of t) n.add(e.application_id);
             for (let e in f.default.libraryApplications) {
                 let t = f.default.libraryApplications[e];
-                n.has(t.id) && (0, _.isUserEntitledToLibraryApplication)(t) && o.default.wait(() => u.fetchLiveBuild(t.id, t.branchId))
+                n.has(t.id) && (0, g.isUserEntitledToLibraryApplication)(t) && o.default.wait(() => u.fetchLiveBuild(t.id, t.branchId))
             }
         }
     })

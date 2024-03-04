@@ -1,20 +1,20 @@
-function(e, _, E) {
+function(e, t, n) {
     "use strict";
-    E.r(_), E.d(_, {
+    n.r(t), n.d(t, {
         default: function() {
-            return t
+            return i
         }
     });
-    var t, o = E("872717"),
-        n = E("49111"),
-        r = E("782340");
-    t = class extends o.default.V6OrEarlierAPIError {
-        constructor(e, _) {
-            super(e, _, null != _ ? r.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
-                statusPageURL: n.Links.STATUS,
-                details: "".concat(_)
-            }) : r.default.Messages.FORM_ERROR_GENERIC.format({
-                statusPageURL: n.Links.STATUS
+    var i, s = n("872717"),
+        r = n("49111"),
+        a = n("782340");
+    i = class extends s.default.V6OrEarlierAPIError {
+        constructor(e, t) {
+            super(e, t, null != t ? a.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
+                statusPageURL: r.Links.STATUS,
+                details: "".concat(t)
+            }) : a.default.Messages.FORM_ERROR_GENERIC.format({
+                statusPageURL: r.Links.STATUS
             }))
         }
     }

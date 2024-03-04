@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Dao: function() {
-            return s
+            return r
         }
     });
     var i = n("999673"),
-        r = n("429231");
-    class s {
+        s = n("429231");
+    class r {
         get prefix() {
             return this.table.prefix
         }
         withoutLogging() {
-            return new s(this.originalPrefix, this.table.tableId, this.table.database, !1)
+            return new r(this.originalPrefix, this.table.tableId, this.table.database, !1)
         }
         get(e) {
             return this.table.get([e])
@@ -59,12 +59,12 @@ function(e, t, n) {
             return this.table.getMapEntriesSyncUnsafe()
         }
         constructor(e, t, n, i = !0) {
-            this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
+            this.originalPrefix = e, this.table = new s.Table([e], t, n, i)
         }
     }
     class a {
         static fromDatabaseTransaction(e, t, n) {
-            return new a(new r.TableTransaction(e, t, n))
+            return new a(new s.TableTransaction(e, t, n))
         }
         put(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.ConflictOptions.Replace;

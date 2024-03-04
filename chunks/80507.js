@@ -5,13 +5,13 @@ function(e, t, n) {
             return o
         }
     }), n("424973"), n("222007");
-    var s = n("917351"),
-        i = n.n(s),
+    var i = n("917351"),
+        s = n.n(i),
         r = n("866227"),
         a = n.n(r),
         o = class e {
             overwriteHistory(e, t) {
-                this.usageHistory = i.mapValues(null != e ? e : {}, e => ({
+                this.usageHistory = s.mapValues(null != e ? e : {}, e => ({
                     ...e,
                     frecency: -1
                 })), null == t || t.forEach(e => {
@@ -57,20 +57,20 @@ function(e, t, n) {
             }
             compute() {
                 let e = a();
-                i.forEach(this.usageHistory, (t, n) => {
+                s.forEach(this.usageHistory, (t, n) => {
                     let {
-                        totalUses: s,
+                        totalUses: i,
                         recentUses: r,
                         frecency: o
                     } = t;
                     if (-1 !== o) return;
-                    let d = this.computeBonus(n) / 100;
-                    t.score = 0, i.forEach(r, (n, s) => {
-                        if (s >= this.maxSamples) return !1;
-                        let i = this.computeWeight(e.diff(a(n), "days"));
-                        t.score += d * i
-                    }), t.score > 0 ? (t.recentUses.length > 0 && (t.frecency = Math.ceil(s * (t.score / r.length))), this.usageHistory[n] = t) : delete this.usageHistory[n]
-                }), this.frequently = i(this.usageHistory).map((e, t) => {
+                    let l = this.computeBonus(n) / 100;
+                    t.score = 0, s.forEach(r, (n, i) => {
+                        if (i >= this.maxSamples) return !1;
+                        let s = this.computeWeight(e.diff(a(n), "days"));
+                        t.score += l * s
+                    }), t.score > 0 ? (t.recentUses.length > 0 && (t.frecency = Math.ceil(i * (t.score / r.length))), this.usageHistory[n] = t) : delete this.usageHistory[n]
+                }), this.frequently = s(this.usageHistory).map((e, t) => {
                     let n = this.lookupKey(t);
                     return null == n ? null : [n, e.frecency]
                 }).filter(e => null !== e).sortBy(e => {
@@ -91,11 +91,11 @@ function(e, t, n) {
                 computeBonus: e,
                 computeWeight: t,
                 lookupKey: n,
-                afterCompute: s,
-                numFrequentlyItems: i = 32,
+                afterCompute: i,
+                numFrequentlyItems: s = 32,
                 maxSamples: r = 10
             }) {
-                this.computeBonus = e, this.computeWeight = t, this.afterCompute = s, this.lookupKey = n, this.usageHistory = {}, this.frequently = [], this.maxSamples = r, this.numFrequentlyItems = i, this.dirty = !1
+                this.computeBonus = e, this.computeWeight = t, this.afterCompute = i, this.lookupKey = n, this.usageHistory = {}, this.frequently = [], this.maxSamples = r, this.numFrequentlyItems = s, this.dirty = !1
             }
         }
 }

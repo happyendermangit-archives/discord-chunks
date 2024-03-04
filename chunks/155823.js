@@ -5,11 +5,11 @@ function(e, t, n) {
         return null
     }
 
-    function r(e) {
+    function s(e) {
         return null
     }
 
-    function s(e) {
+    function r(e) {
         return null
     }
 
@@ -29,10 +29,10 @@ function(e, t, n) {
             return i
         },
         MenuGroup: function() {
-            return r
+            return s
         },
         MenuItem: function() {
-            return s
+            return r
         },
         MenuCheckboxItem: function() {
             return a

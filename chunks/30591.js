@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var i, r;
+    var i, s;
     n.r(t), n.d(t, {
         ClipsHardwareClassification: function() {
             return i
         }
-    }), (r = i || (i = {})).UNKNOWN = "unknown", r.BELOW_MINIMUM = "below_minimum", r.MEETS_MINIMUM = "meets_minimum", r.MEETS_AUTO_ENABLE = "meets_auto_enable"
+    }), (s = i || (i = {})).UNKNOWN = "unknown", s.BELOW_MINIMUM = "below_minimum", s.MEETS_MINIMUM = "meets_minimum", s.MEETS_AUTO_ENABLE = "meets_auto_enable"
 }

@@ -1,11 +1,11 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("911718"),
-        i = s("786413"),
-        n = r("%TypeError%");
-    t.exports = function(t) {
-        if ("number" != typeof t && "bigint" != typeof t) throw new n("argument must be a Number or a BigInt");
-        var e = t < 0 ? -i(-t) : i(t);
-        return 0 === e ? 0 : e
+    var r = n("911718"),
+        i = n("786413"),
+        o = r("%TypeError%");
+    e.exports = function(e) {
+        if ("number" != typeof e && "bigint" != typeof e) throw new o("argument must be a Number or a BigInt");
+        var t = e < 0 ? -i(-e) : i(e);
+        return 0 === t ? 0 : t
     }
 }

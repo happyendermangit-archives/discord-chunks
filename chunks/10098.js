@@ -6,11 +6,11 @@ function(e, t, n) {
         }
     }), n("70102");
     var r = n("900255"),
-        a = n("235485"),
-        i = n("125692"),
-        o = n("897345"),
-        s = {
-            type: o.INIT_COORDS,
+        i = n("235485"),
+        o = n("125692"),
+        s = n("897345"),
+        a = {
+            type: s.INIT_COORDS,
             payload: {
                 clientOffset: null,
                 sourceClientOffset: null
@@ -24,49 +24,49 @@ function(e, t, n) {
                     publishSource: !0
                 },
                 c = n.publishSource,
-                l = n.clientOffset,
-                u = n.getSourceClientOffset,
-                d = e.getMonitor(),
-                p = e.getRegistry();
-            e.dispatch((0, a.setClientOffset)(l)),
+                u = n.clientOffset,
+                d = n.getSourceClientOffset,
+                l = e.getMonitor(),
+                f = e.getRegistry();
+            e.dispatch((0, i.setClientOffset)(u)),
                 function(e, t, n) {
                     (0, r.invariant)(!t.isDragging(), "Cannot call beginDrag while dragging."), e.forEach(function(e) {
                         (0, r.invariant)(n.getSource(e), "Expected sourceIds to be registered.")
                     })
-                }(t, d, p);
-            var f = function(e, t) {
+                }(t, l, f);
+            var p = function(e, t) {
                 for (var n = null, r = e.length - 1; r >= 0; r--)
                     if (t.canDragSource(e[r])) {
                         n = e[r];
                         break
                     } return n
-            }(t, d);
-            if (null === f) {
-                e.dispatch(s);
+            }(t, l);
+            if (null === p) {
+                e.dispatch(a);
                 return
             }
-            var m = null;
-            if (l) {
-                if (!u) throw Error("getSourceClientOffset must be defined");
+            var h = null;
+            if (u) {
+                if (!d) throw Error("getSourceClientOffset must be defined");
                 (function(e) {
                     (0, r.invariant)("function" == typeof e, "When clientOffset is provided, getSourceClientOffset must be a function.")
-                })(u), m = u(f)
+                })(d), h = d(p)
             }
-            e.dispatch((0, a.setClientOffset)(l, m));
-            var h = p.getSource(f).beginDrag(d, f);
-            if (null != h) {
+            e.dispatch((0, i.setClientOffset)(u, h));
+            var v = f.getSource(p).beginDrag(l, p);
+            if (null != v) {
                 (function(e) {
-                    (0, r.invariant)((0, i.isObject)(e), "Item must be an object.")
-                })(h), p.pinSource(f);
-                var v = p.getSourceType(f);
+                    (0, r.invariant)((0, o.isObject)(e), "Item must be an object.")
+                })(v), f.pinSource(p);
+                var g = f.getSourceType(p);
                 return {
-                    type: o.BEGIN_DRAG,
+                    type: s.BEGIN_DRAG,
                     payload: {
-                        itemType: v,
-                        item: h,
-                        sourceId: f,
-                        clientOffset: l || null,
-                        sourceClientOffset: m || null,
+                        itemType: g,
+                        item: v,
+                        sourceId: p,
+                        clientOffset: u || null,
+                        sourceClientOffset: h || null,
                         isSourcePublic: !!(void 0 === c || c)
                     }
                 }

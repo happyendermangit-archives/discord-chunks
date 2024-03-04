@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Rect: function() {
-            return a
+            return i
         }
     }), n("222007"), n("424973"), n("884691");
     class r {
@@ -19,7 +19,7 @@ function(e, t, n) {
             this.x = e, this.y = t
         }
     }
-    class a {
+    class i {
         get maxX() {
             return this.x + this.width
         }
@@ -68,23 +68,23 @@ function(e, t, n) {
             let t = Math.min(this.x, e.x),
                 n = Math.min(this.y, e.y),
                 r = Math.max(this.maxX, e.maxX) - t,
-                i = Math.max(this.maxY, e.maxY) - n;
-            return new a(t, n, r, i)
+                o = Math.max(this.maxY, e.maxY) - n;
+            return new i(t, n, r, o)
         }
         intersection(e) {
-            if (!this.intersects(e)) return new a(0, 0, 0, 0);
+            if (!this.intersects(e)) return new i(0, 0, 0, 0);
             let t = Math.max(this.x, e.x),
                 n = Math.max(this.y, e.y);
-            return new a(t, n, Math.min(this.maxX, e.maxX) - t, Math.min(this.maxY, e.maxY) - n)
+            return new i(t, n, Math.min(this.maxX, e.maxX) - t, Math.min(this.maxY, e.maxY) - n)
         }
         copy() {
-            return new a(this.x, this.y, this.width, this.height)
+            return new i(this.x, this.y, this.width, this.height)
         }
         constructor(e = 0, t = 0, n = 0, r = 0) {
             this.x = e, this.y = t, this.width = n, this.height = r
         }
     }
-    let i = "undefined" != typeof window ? window.performance : null,
-        o = i && (i.now || i.webkitNow || i.msNow || i.mozNow);
-    o && o.bind(i)
+    let o = "undefined" != typeof window ? window.performance : null,
+        s = o && (o.now || o.webkitNow || o.msNow || o.mozNow);
+    s && s.bind(o)
 }

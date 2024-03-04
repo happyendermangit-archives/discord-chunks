@@ -5,10 +5,10 @@ function(e, t, n) {
             return u
         }
     }), n("222007");
-    var i, r, s = n("37983"),
+    var i, s, r = n("37983"),
         a = n("884691"),
         o = n("862337");
-    (r = i || (i = {})).SVG = "svg", r.CANVAS = "canvas", r.HYBRID = "hybrid";
+    (s = i || (i = {})).SVG = "svg", s.CANVAS = "canvas", s.HYBRID = "hybrid";
     class l extends a.Component {
         componentDidMount() {
             (null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation()
@@ -23,7 +23,7 @@ function(e, t, n) {
             null != this.animation && (this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play() : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0)))
         }
         render() {
-            return (0, s.jsx)("div", {
+            return (0, r.jsx)("div", {
                 className: this.props.className,
                 ref: this.animationRef
             })
@@ -34,8 +34,8 @@ function(e, t, n) {
                     importData: e,
                     loop: t,
                     autoplay: i,
-                    delay: r,
-                    renderer: s,
+                    delay: s,
+                    renderer: r,
                     shouldAnimate: a
                 } = this.props;
                 null != this.animation && this.animation.destroy();
@@ -44,11 +44,11 @@ function(e, t, n) {
                 }] = await Promise.all([e(), n.el("865981").then(n.t.bind(n, "865981", 23))]);
                 null != this.animationRef.current && (this.animation = l.loadAnimation({
                     container: this.animationRef.current,
-                    renderer: s,
+                    renderer: r,
                     loop: t,
-                    autoplay: i && null == r && a,
+                    autoplay: i && null == s && a,
                     animationData: o
-                }), null != r ? this.delayTimeout.start(r, () => {
+                }), null != s ? this.delayTimeout.start(s, () => {
                     var e;
                     null === (e = this.animation) || void 0 === e || e.play()
                 }) : this.playOrPauseAnimation(), this.animation.addEventListener("complete", this.handleComplete))

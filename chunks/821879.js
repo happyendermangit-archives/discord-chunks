@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         reducedPaymentInfoExperiment: function() {
-            return l
+            return r
         }
     });
-    var r = n("862205");
-    let i = (0, r.createExperiment)({
+    var i = n("862205");
+    let s = (0, i.createExperiment)({
         id: "2023-06_reduced_payment_method_address_info",
         label: "Reduced Payment Method Address Info",
         kind: "user",
@@ -31,12 +31,12 @@ function(e, t, n) {
         }]
     });
 
-    function l() {
+    function r() {
         let {
             autoTrackExposure: e
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             autoTrackExposure: !0
-        }, t = i.getCurrentConfig({
+        }, t = s.getCurrentConfig({
             location: "2b69fe_1"
         }, {
             autoTrackExposure: e

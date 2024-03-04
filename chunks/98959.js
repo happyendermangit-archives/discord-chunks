@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return m
         }
     });
     var r = n("697309"),
@@ -16,15 +16,15 @@ function(e, t, n) {
         d = n("794230"),
         f = n("576955"),
         p = n("757367"),
-        h = {
+        m = {
             name: "preventOverflow",
             enabled: !0,
             phase: "main",
             fn: function(e) {
                 var t = e.state,
                     n = e.options,
-                    h = e.name,
-                    m = n.mainAxis,
+                    m = e.name,
+                    h = n.mainAxis,
                     y = n.altAxis,
                     _ = n.boundary,
                     g = n.rootBoundary,
@@ -43,8 +43,8 @@ function(e, t, n) {
                     T = (0, a.default)(t.placement),
                     S = (0, d.default)(t.placement),
                     Y = !S,
-                    x = (0, o.default)(T),
-                    O = (0, i.default)(x),
+                    O = (0, o.default)(T),
+                    x = (0, i.default)(O),
                     E = t.modifiersData.popperOffsets,
                     P = t.rects.reference,
                     j = t.rects.popper,
@@ -64,11 +64,11 @@ function(e, t, n) {
                         y: 0
                     };
                 if (E) {
-                    if (void 0 === m || m) {
-                        var I, N = "y" === x ? r.top : r.left,
-                            R = "y" === x ? r.bottom : r.right,
-                            z = "y" === x ? "height" : "width",
-                            W = E[x],
+                    if (void 0 === h || h) {
+                        var I, N = "y" === O ? r.top : r.left,
+                            R = "y" === O ? r.bottom : r.right,
+                            z = "y" === O ? "height" : "width",
+                            W = E[O],
                             B = W + D[N],
                             U = W - D[R],
                             K = w ? -j[z] / 2 : 0,
@@ -86,26 +86,26 @@ function(e, t, n) {
                             ee = Y ? P[z] / 2 - K - Z - Q - H.mainAxis : V - Z - Q - H.mainAxis,
                             et = Y ? -P[z] / 2 + K + Z + X + H.mainAxis : J + Z + X + H.mainAxis,
                             en = t.elements.arrow && (0, l.default)(t.elements.arrow),
-                            er = en ? "y" === x ? en.clientTop || 0 : en.clientLeft || 0 : 0,
-                            ea = null != (I = null == F ? void 0 : F[x]) ? I : 0,
+                            er = en ? "y" === O ? en.clientTop || 0 : en.clientLeft || 0 : 0,
+                            ea = null != (I = null == F ? void 0 : F[O]) ? I : 0,
                             eo = (0, s.within)(w ? (0, p.min)(B, W + ee - ea - er) : B, W, w ? (0, p.max)(U, W + et - ea) : U);
-                        E[x] = eo, A[x] = eo - W
+                        E[O] = eo, A[O] = eo - W
                     }
                     if (void 0 !== y && y) {
-                        var ei, es = "x" === x ? r.top : r.left,
-                            eu = "x" === x ? r.bottom : r.right,
-                            el = E[O],
-                            ec = "y" === O ? "height" : "width",
+                        var ei, es = "x" === O ? r.top : r.left,
+                            eu = "x" === O ? r.bottom : r.right,
+                            el = E[x],
+                            ec = "y" === x ? "height" : "width",
                             ed = el + D[es],
                             ef = el - D[eu],
                             ep = -1 !== [(0, r.top), (0, r.left)].indexOf(T),
-                            eh = null != (ei = null == F ? void 0 : F[O]) ? ei : 0,
-                            em = ep ? ed : el - P[ec] - j[ec] - eh + H.altAxis,
-                            ey = ep ? el + P[ec] + j[ec] - eh - H.altAxis : ef,
-                            e_ = w && ep ? (0, s.withinMaxClamp)(em, el, ey) : (0, s.within)(w ? em : ed, el, w ? ey : ef);
-                        E[O] = e_, A[O] = e_ - el
+                            em = null != (ei = null == F ? void 0 : F[x]) ? ei : 0,
+                            eh = ep ? ed : el - P[ec] - j[ec] - em + H.altAxis,
+                            ey = ep ? el + P[ec] + j[ec] - em - H.altAxis : ef,
+                            e_ = w && ep ? (0, s.withinMaxClamp)(eh, el, ey) : (0, s.within)(w ? eh : ed, el, w ? ey : ef);
+                        E[x] = e_, A[x] = e_ - el
                     }
-                    t.modifiersData[h] = A
+                    t.modifiersData[m] = A
                 }
             },
             requiresIfExists: ["offset"]

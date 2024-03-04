@@ -1,28 +1,28 @@
-function(t, e, s) {
-    var r = s("912065").Buffer,
+function(e, t, n) {
+    var r = n("912065").Buffer,
         i = r.alloc(16, 0);
 
-    function n(t) {
-        var e = r.allocUnsafe(16);
-        return e.writeUInt32BE(t[0] >>> 0, 0), e.writeUInt32BE(t[1] >>> 0, 4), e.writeUInt32BE(t[2] >>> 0, 8), e.writeUInt32BE(t[3] >>> 0, 12), e
+    function o(e) {
+        var t = r.allocUnsafe(16);
+        return t.writeUInt32BE(e[0] >>> 0, 0), t.writeUInt32BE(e[1] >>> 0, 4), t.writeUInt32BE(e[2] >>> 0, 8), t.writeUInt32BE(e[3] >>> 0, 12), t
     }
 
-    function c(t) {
-        this.h = t, this.state = r.alloc(16, 0), this.cache = r.allocUnsafe(0)
+    function s(e) {
+        this.h = e, this.state = r.alloc(16, 0), this.cache = r.allocUnsafe(0)
     }
-    c.prototype.ghash = function(t) {
-        for (var e = -1; ++e < t.length;) this.state[e] ^= t[e];
+    s.prototype.ghash = function(e) {
+        for (var t = -1; ++t < e.length;) this.state[t] ^= e[t];
         this._multiply()
-    }, c.prototype._multiply = function() {
-        for (var t, e, s, r = [(t = this.h).readUInt32BE(0), t.readUInt32BE(4), t.readUInt32BE(8), t.readUInt32BE(12)], i = [0, 0, 0, 0], c = -1; ++c < 128;) {
-            for ((this.state[~~(c / 8)] & 1 << 7 - c % 8) != 0 && (i[0] ^= r[0], i[1] ^= r[1], i[2] ^= r[2], i[3] ^= r[3]), s = (1 & r[3]) != 0, e = 3; e > 0; e--) r[e] = r[e] >>> 1 | (1 & r[e - 1]) << 31;
-            r[0] = r[0] >>> 1, s && (r[0] = -520093696 ^ r[0])
+    }, s.prototype._multiply = function() {
+        for (var e, t, n, r = [(e = this.h).readUInt32BE(0), e.readUInt32BE(4), e.readUInt32BE(8), e.readUInt32BE(12)], i = [0, 0, 0, 0], s = -1; ++s < 128;) {
+            for ((this.state[~~(s / 8)] & 1 << 7 - s % 8) != 0 && (i[0] ^= r[0], i[1] ^= r[1], i[2] ^= r[2], i[3] ^= r[3]), n = (1 & r[3]) != 0, t = 3; t > 0; t--) r[t] = r[t] >>> 1 | (1 & r[t - 1]) << 31;
+            r[0] = r[0] >>> 1, n && (r[0] = -520093696 ^ r[0])
         }
-        this.state = n(i)
-    }, c.prototype.update = function(t) {
-        var e;
-        for (this.cache = r.concat([this.cache, t]); this.cache.length >= 16;) e = this.cache.slice(0, 16), this.cache = this.cache.slice(16), this.ghash(e)
-    }, c.prototype.final = function(t, e) {
-        return this.cache.length && this.ghash(r.concat([this.cache, i], 16)), this.ghash(n([0, t, 0, e])), this.state
-    }, t.exports = c
+        this.state = o(i)
+    }, s.prototype.update = function(e) {
+        var t;
+        for (this.cache = r.concat([this.cache, e]); this.cache.length >= 16;) t = this.cache.slice(0, 16), this.cache = this.cache.slice(16), this.ghash(t)
+    }, s.prototype.final = function(e, t) {
+        return this.cache.length && this.ghash(r.concat([this.cache, i], 16)), this.ghash(o([0, e, 0, t])), this.state
+    }, e.exports = s
 }

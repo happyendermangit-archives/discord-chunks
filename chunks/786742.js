@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getForumPostReadStates: function() {
-            return o
+            return d
         },
         getForumPostReadStatesById: function() {
             return c
         },
         getForumTimestampFormatter: function() {
-            return f
+            return _
         },
         canDisplayPostUnreadMessageCount: function() {
             return h
@@ -18,15 +18,15 @@ function(e, t, n) {
         }
     }), n("222007");
     var i = n("335710"),
-        a = n("42203"),
-        l = n("305961"),
-        s = n("660478"),
-        r = n("953371"),
-        u = n("724210"),
-        d = n("782340");
+        s = n("42203"),
+        r = n("305961"),
+        a = n("660478"),
+        o = n("953371"),
+        l = n("724210"),
+        u = n("782340");
 
-    function o(e, t) {
-        let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.default];
+    function d(e, t) {
+        let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.default];
         return {
             isNew: !e.isArchivedThread() && n.isNewForumThread(e.id, e.parent_id, t),
             hasUnreads: !e.isArchivedThread() && n.isForumPostUnread(e.id)
@@ -34,29 +34,29 @@ function(e, t, n) {
     }
 
     function c(e) {
-        let [t, n, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.default, l.default, s.default], r = t.getChannel(e);
-        if (null == r) return null;
-        let u = n.getGuild(r.guild_id);
-        return null == u ? null : o(r, u, [i])
+        let [t, n, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, r.default, a.default], o = t.getChannel(e);
+        if (null == o) return null;
+        let l = n.getGuild(o.guild_id);
+        return null == l ? null : d(o, l, [i])
     }
-    let _ = () => ({
-        minutes: d.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
-        hours: d.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_HOURS,
-        days: d.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_DAYS,
-        month: d.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MORE_THAN_MONTH
+    let f = () => ({
+        minutes: u.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
+        hours: u.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_HOURS,
+        days: u.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_DAYS,
+        month: u.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MORE_THAN_MONTH
     });
 
-    function f(e, t) {
-        if (t === r.ForumTimestampFormats.POSTED_DURATION_AGO && e === i.ThreadSortOrder.CREATION_DATE) return _
+    function _(e, t) {
+        if (t === o.ForumTimestampFormats.POSTED_DURATION_AGO && e === i.ThreadSortOrder.CREATION_DATE) return f
     }
 
     function h(e, t) {
-        let [n] = t, i = n.hasTrackedUnread(e), a = n.hasOpenedThread(e), l = null != n.getTrackedAckMessageId(e);
-        return i && a && l
+        let [n] = t, i = n.hasTrackedUnread(e), s = n.hasOpenedThread(e), r = null != n.getTrackedAckMessageId(e);
+        return i && s && r
     }
 
     function E(e) {
         var t;
-        return (null === (t = a.default.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(u.ChannelFlags.PINNED)) === !0
+        return (null === (t = s.default.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(l.ChannelFlags.PINNED)) === !0
     }
 }

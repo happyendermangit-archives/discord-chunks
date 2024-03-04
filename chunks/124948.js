@@ -5,93 +5,93 @@ function(e, t, n) {
             return p
         }
     });
-    var r = n("917351"),
-        i = n.n(r),
-        l = n("446674"),
-        u = n("913144"),
-        a = n("49978"),
-        o = n("560208"),
-        s = n("42203"),
+    var i = n("917351"),
+        s = n.n(i),
+        r = n("446674"),
+        a = n("913144"),
+        o = n("49978"),
+        l = n("560208"),
+        u = n("42203"),
         d = n("26989");
-    let E = new a.default(d.default.isMember, (e, t) => {
-        u.default.dispatch({
+    let c = new o.default(d.default.isMember, (e, t) => {
+        a.default.dispatch({
             type: "GUILD_MEMBERS_REQUEST",
             guildIds: [e],
             userIds: t
         })
     });
 
-    function _() {
-        E.reset()
+    function f() {
+        c.reset()
     }
 
-    function c(e, t) {
-        return E.request(e, t), !1
+    function _(e, t) {
+        return c.request(e, t), !1
     }
 
-    function I(e, t) {
+    function h(e, t) {
         return t.forEach(t => {
             let {
                 author: n,
-                mentions: r
+                mentions: i
             } = t;
-            null != n && c(e, n.id), null == r || r.forEach(t => c(e, t.id))
+            null != n && _(e, n.id), null == i || i.forEach(t => _(e, t.id))
         }), !1
     }
 
-    function S(e) {
+    function E(e) {
         let {
             channelId: t,
             messages: n
-        } = e, r = s.default.getChannel(t);
-        return null != r && null != r.guild_id && I(r.guild_id, n)
+        } = e, i = u.default.getChannel(t);
+        return null != i && null != i.guild_id && h(i.guild_id, n)
     }
 
-    function T(e) {
+    function g(e) {
         let {
             guildId: t,
             messages: n
         } = e;
-        return null != t && I(t, i.flatten(n))
+        return null != t && h(t, s.flatten(n))
     }
-    class f extends l.default.Store {
+    class m extends r.default.Store {
         initialize() {
-            this.waitFor(s.default, d.default)
+            this.waitFor(u.default, d.default)
         }
         requestMember(e, t) {
-            c(e, t)
+            _(e, t)
         }
     }
-    f.displayName = "GuildMemberRequesterStore";
-    var p = new f(u.default, {
-        CONNECTION_CLOSED: _,
-        CONNECTION_OPEN: _,
+    m.displayName = "GuildMemberRequesterStore";
+    var p = new m(a.default, {
+        CONNECTION_CLOSED: f,
+        CONNECTION_OPEN: f,
         CONNECTION_RESUMED: function() {
-            return E.requestUnacknowledged(), !1
+            return c.requestUnacknowledged(), !1
         },
         GUILD_MEMBERS_CHUNK: function(e) {
             let {
                 guildId: t,
                 members: n,
-                notFound: r
+                notFound: i
             } = e;
             return n.forEach(e => {
-                E.acknowledge(t, e.user.id)
-            }), null != r && r.forEach(e => E.acknowledge(t, e)), !1
+                c.acknowledge(t, e.user.id)
+            }), null != i && i.forEach(e => c.acknowledge(t, e)), !1
         },
-        SEARCH_FINISH: T,
-        MOD_VIEW_SEARCH_FINISH: T,
-        LOCAL_MESSAGES_LOADED: S,
-        LOAD_MESSAGES_SUCCESS: S,
-        LOAD_MESSAGES_AROUND_SUCCESS: S,
-        LOAD_PINNED_MESSAGES_SUCCESS: S,
-        LOAD_RECENT_MENTIONS_SUCCESS: S,
+        SEARCH_FINISH: g,
+        MOD_VIEW_SEARCH_FINISH: g,
+        LOCAL_MESSAGES_LOADED: E,
+        LOAD_MESSAGES_SUCCESS: E,
+        LOAD_MESSAGES_AROUND_SUCCESS: E,
+        LOAD_PINNED_MESSAGES_SUCCESS: E,
+        LOAD_RECENT_MENTIONS_SUCCESS: E,
         GUILD_FEED_FETCH_SUCCESS: function(e) {
             let {
                 guildId: t,
                 data: n
-            } = e, r = (0, o.getMessagesFromGuildFeedFetch)(n);
-            return I(t, r)
+            } = e, i = (0, l.getMessagesFromGuildFeedFetch)(n);
+            return h(t, i)
         }
     })
 }

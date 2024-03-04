@@ -1,7 +1,7 @@
-function(t, r, n) {
-    var e = n("870811");
-    t.exports = function(t, r) {
+function(e, t, n) {
+    var r = n("870811");
+    e.exports = function(e, t) {
         var n = this.__data__;
-        return this.size += this.has(t) ? 0 : 1, n[t] = e && void 0 === r ? "__lodash_hash_undefined__" : r, this
+        return this.size += this.has(e) ? 0 : 1, n[e] = r && void 0 === t ? "__lodash_hash_undefined__" : t, this
     }
 }

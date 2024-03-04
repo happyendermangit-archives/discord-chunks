@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         AppLauncherDesktopExperiment: function() {
-            return i
+            return s
         },
         AppLauncherOnboardingExperiment: function() {
             return r
         }
     });
-    var s = n("862205");
-    let i = (0, s.createExperiment)({
+    var i = n("862205");
+    let s = (0, i.createExperiment)({
             kind: "user",
             id: "2023-11_app_launcher_desktop",
             label: "App Launcher - Desktop",
@@ -24,7 +24,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        r = (0, s.createExperiment)({
+        r = (0, i.createExperiment)({
             kind: "user",
             id: "2024-01_app_launcher_onboarding",
             label: "App Launcher - Onboarding",

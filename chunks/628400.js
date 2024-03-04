@@ -5,41 +5,41 @@ function(e, t, n) {
             return u
         },
         TableColumn: function() {
-            return c
+            return d
         },
         TableRow: function() {
-            return d
+            return c
         },
         TableBody: function() {
             return f
         },
         TableHeader: function() {
-            return E
+            return _
         },
         Table: function() {
-            return p
+            return h
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("999013"),
+        s = n("884691"),
+        r = n("999013"),
         a = n("605451"),
         o = n("577776"),
         l = n("474496");
 
     function u(e) {
-        return (0, i.jsx)(s.Cell, {
+        return (0, i.jsx)(r.Cell, {
             ...e,
             className: l.cell
         })
     }
 
-    function c(e) {
+    function d(e) {
         let {
             children: t,
             ...n
         } = e;
-        return (0, i.jsx)(s.Column, {
+        return (0, i.jsx)(r.Column, {
             ...n,
             className: l.column,
             children: (0, i.jsx)(o.Text, {
@@ -50,34 +50,34 @@ function(e, t, n) {
         })
     }
 
-    function d(e) {
-        return (0, i.jsx)(s.Row, {
+    function c(e) {
+        return (0, i.jsx)(r.Row, {
             ...e,
             className: l.row
         })
     }
 
     function f(e) {
-        return (0, i.jsx)(s.TableBody, {
+        return (0, i.jsx)(r.TableBody, {
             ...e,
             className: l.body
         })
     }
 
-    function E(e) {
-        return (0, i.jsx)(s.TableHeader, {
+    function _(e) {
+        return (0, i.jsx)(r.TableHeader, {
             ...e,
             className: l.header
         })
     }
 
-    function p(e) {
+    function h(e) {
         let {
             title: t,
             header: n,
             footer: o,
             ...u
-        } = e, c = r.useId();
+        } = e, d = s.useId();
         return (0, i.jsxs)("div", {
             className: l.container,
             children: [(0, i.jsxs)("div", {
@@ -85,14 +85,14 @@ function(e, t, n) {
                 children: [(0, i.jsx)(a.Heading, {
                     className: l.title,
                     variant: "heading-md/semibold",
-                    id: c,
+                    id: d,
                     children: t
                 }), (0, i.jsx)("div", {
                     children: n
                 })]
-            }), (0, i.jsx)(s.Table, {
+            }), (0, i.jsx)(r.Table, {
                 ...u,
-                "aria-labelledby": c,
+                "aria-labelledby": d,
                 className: l.table
             }), null != o && (0, i.jsx)("div", {
                 className: l.footer,

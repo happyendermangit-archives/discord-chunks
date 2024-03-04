@@ -2,18 +2,18 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return s
         }
     }), n("222007");
-    var s, i, r = n("37983"),
+    var i, s, r = n("37983"),
         a = n("884691"),
         o = n("414456"),
-        d = n.n(o),
+        l = n.n(o),
         u = n("458960"),
-        l = n("77078"),
-        f = n("49111"),
-        _ = n("646405");
-    (s = class extends a.Component {
+        d = n("77078"),
+        c = n("49111"),
+        f = n("646405");
+    (i = class extends a.Component {
         componentDidMount() {
             this.props.show && this.animate(1)
         }
@@ -40,10 +40,10 @@ function(e, t, n) {
         }
         render() {
             return (0, r.jsx)(u.default.a, {
-                href: f.Routes.INDEX,
+                href: c.Routes.INDEX,
                 target: "_blank",
                 rel: "noopener",
-                className: d(_.logo, this.props.className),
+                className: l(f.logo, this.props.className),
                 style: this.getAnimatedStyle()
             })
         }
@@ -56,5 +56,5 @@ function(e, t, n) {
                 }).start()
             }
         }
-    }).contextType = l.AccessibilityPreferencesContext, i = s
+    }).contextType = d.AccessibilityPreferencesContext, s = i
 }

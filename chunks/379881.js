@@ -2,21 +2,21 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return _
         }
     });
     var i = n("446674"),
-        r = n("151426"),
-        s = n("913144"),
+        s = n("151426"),
+        r = n("913144"),
         a = n("374363"),
         o = n("233069"),
         l = n("49111");
     let u = {},
-        c = !1;
+        d = !1;
 
-    function d() {
+    function c() {
         var e, t, n;
-        c = null !== (n = null === (e = a.default.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n, u = {};
+        d = null !== (n = null === (e = a.default.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n, u = {};
         let i = null === (t = a.default.settings.favorites) || void 0 === t ? void 0 : t.favoriteChannels;
         if (null == i) return !1;
         for (let e in i) {
@@ -32,13 +32,13 @@ function(e, t, n) {
     }
     class f extends i.default.Store {
         initialize() {
-            this.waitFor(a.default), d(), this.syncWith([a.default], d)
+            this.waitFor(a.default), c(), this.syncWith([a.default], c)
         }
         getFavoriteChannels() {
             return u
         }
         get favoriteServerMuted() {
-            return c
+            return d
         }
         isFavorite(e) {
             return null != e && null != u[e]
@@ -47,7 +47,7 @@ function(e, t, n) {
             if (null != e) return u[e]
         }
         getCategoryRecord(e) {
-            if (e in u && u[e].type === r.FavoriteChannelType.CATEGORY) {
+            if (e in u && u[e].type === s.FavoriteChannelType.CATEGORY) {
                 var t, n;
                 return t = u[e], (0, o.createChannelRecord)({
                     id: t.id,
@@ -66,5 +66,5 @@ function(e, t, n) {
         }
     }
     f.displayName = "FavoriteStore";
-    var E = new f(s.default, {})
+    var _ = new f(r.default, {})
 }

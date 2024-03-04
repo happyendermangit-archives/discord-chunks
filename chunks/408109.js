@@ -1,35 +1,35 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("555671").rotr32;
+    var r = n("555671").rotr32;
 
-    function i(t, e, s) {
-        return t & e ^ ~t & s
+    function i(e, t, n) {
+        return e & t ^ ~e & n
     }
 
-    function n(t, e, s) {
-        return t & e ^ t & s ^ e & s
+    function o(e, t, n) {
+        return e & t ^ e & n ^ t & n
     }
 
-    function c(t, e, s) {
-        return t ^ e ^ s
+    function s(e, t, n) {
+        return e ^ t ^ n
     }
-    e.ft_1 = function(t, e, s, r) {
-        return 0 === t ? function(t, e, s) {
-            return t & e ^ ~t & s
-        }(e, s, r) : 1 === t || 3 === t ? function(t, e, s) {
-            return t ^ e ^ s
-        }(e, s, r) : 2 === t ? n(e, s, r) : void 0
-    }, e.ch32 = i, e.maj32 = n, e.p32 = c;
-    e.s0_256 = function(t) {
-        return r(t, 2) ^ r(t, 13) ^ r(t, 22)
+    t.ft_1 = function(e, t, n, r) {
+        return 0 === e ? function(e, t, n) {
+            return e & t ^ ~e & n
+        }(t, n, r) : 1 === e || 3 === e ? function(e, t, n) {
+            return e ^ t ^ n
+        }(t, n, r) : 2 === e ? o(t, n, r) : void 0
+    }, t.ch32 = i, t.maj32 = o, t.p32 = s;
+    t.s0_256 = function(e) {
+        return r(e, 2) ^ r(e, 13) ^ r(e, 22)
     };
-    e.s1_256 = function(t) {
-        return r(t, 6) ^ r(t, 11) ^ r(t, 25)
+    t.s1_256 = function(e) {
+        return r(e, 6) ^ r(e, 11) ^ r(e, 25)
     };
-    e.g0_256 = function(t) {
-        return r(t, 7) ^ r(t, 18) ^ t >>> 3
+    t.g0_256 = function(e) {
+        return r(e, 7) ^ r(e, 18) ^ e >>> 3
     };
-    e.g1_256 = function(t) {
-        return r(t, 17) ^ r(t, 19) ^ t >>> 10
+    t.g1_256 = function(e) {
+        return r(e, 17) ^ r(e, 19) ^ e >>> 10
     }
 }

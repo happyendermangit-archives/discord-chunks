@@ -5,21 +5,21 @@ function(e, t, n) {
             return u
         },
         disconnect: function() {
-            return c
+            return d
         },
         setReceiveEventHandler: function() {
-            return d
+            return c
         },
         setReceiveCommandHandler: function() {
             return f
         },
         send: function() {
-            return E
+            return _
         }
     });
     var i = n("43982"),
-        r = n("861309"),
-        s = n("261131"),
+        s = n("861309"),
+        r = n("261131"),
         a = n("828777"),
         o = n("49111"),
         l = n("492249");
@@ -28,12 +28,12 @@ function(e, t, n) {
         i.default.connect()
     }
 
-    function c() {
+    function d() {
         i.default.disconnect()
     }
 
-    function d(e, t) {
-        if (!__OVERLAY__) throw new r.default({
+    function c(e, t) {
+        if (!__OVERLAY__) throw new s.default({
             errorCode: o.RPCErrors.UNKNOWN_ERROR
         }, "called from wrong app context");
         i.default.subscribe(o.RPCEvents.OVERLAY, {
@@ -42,34 +42,34 @@ function(e, t, n) {
     }
 
     function f(e, t) {
-        if (__OVERLAY__) throw new r.default({
+        if (__OVERLAY__) throw new s.default({
             errorCode: o.RPCErrors.UNKNOWN_ERROR
         }, "called from wrong app context");
-        s.default.setCommandHandler(o.RPCCommands.OVERLAY, {
+        r.default.setCommandHandler(o.RPCCommands.OVERLAY, {
             scope: l.RPC_PRIVATE_SCOPE,
             handler(n) {
                 let {
                     args: i
                 } = n;
-                if (!t(i.token)) throw new r.default({
+                if (!t(i.token)) throw new s.default({
                     errorCode: o.RPCErrors.INVALID_TOKEN
                 }, "Invalid RPC auth token provided");
                 e((0, a.deserializeObject)(i))
             }
-        }), s.default.setEventHandler(o.RPCEvents.OVERLAY, {
+        }), r.default.setEventHandler(o.RPCEvents.OVERLAY, {
             scope: l.RPC_PRIVATE_SCOPE,
             handler(e) {
                 let {
                     args: n
                 } = e;
-                if (!t(n.token)) throw new r.default({
+                if (!t(n.token)) throw new s.default({
                     errorCode: o.RPCErrors.INVALID_TOKEN
                 }, "Invalid RPC auth token provided")
             }
         })
     }
 
-    function E(e) {
-        __OVERLAY__ ? i.default.request(o.RPCCommands.OVERLAY, (0, a.serializeObject)(e)) : s.default.dispatchToSubscriptions(o.RPCEvents.OVERLAY, {}, (0, a.serializeObject)(e))
+    function _(e) {
+        __OVERLAY__ ? i.default.request(o.RPCCommands.OVERLAY, (0, a.serializeObject)(e)) : r.default.dispatchToSubscriptions(o.RPCEvents.OVERLAY, {}, (0, a.serializeObject)(e))
     }
 }

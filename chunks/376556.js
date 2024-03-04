@@ -2,18 +2,18 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return d
+            return c
         }
     });
     var i = n("917351"),
-        r = n.n(i),
-        s = n("669491"),
+        s = n.n(i),
+        r = n("669491"),
         a = n("253981"),
         o = n("49111");
     let l = [{
             type: o.PlatformTypes.TWITCH,
             name: "Twitch",
-            color: s.default.unsafe_rawColors.TWITCH.css,
+            color: r.default.unsafe_rawColors.TWITCH.css,
             icon: {
                 lightPNG: n("115658"),
                 darkPNG: n("115658"),
@@ -33,7 +33,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.YOUTUBE,
             name: "YouTube",
-            color: s.default.unsafe_rawColors.YOUTUBE.css,
+            color: r.default.unsafe_rawColors.YOUTUBE.css,
             icon: {
                 lightPNG: n("299893"),
                 darkPNG: n("299893"),
@@ -53,7 +53,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.BATTLENET,
             name: "Battle.net",
-            color: s.default.unsafe_rawColors.BATTLENET.css,
+            color: r.default.unsafe_rawColors.BATTLENET.css,
             icon: {
                 lightPNG: n("194175"),
                 darkPNG: n("194175"),
@@ -66,7 +66,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.SKYPE,
             name: "Skype",
-            color: s.default.unsafe_rawColors.SKYPE.css,
+            color: r.default.unsafe_rawColors.SKYPE.css,
             icon: {
                 lightPNG: n("992221"),
                 darkPNG: n("992221"),
@@ -85,7 +85,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.LEAGUE_OF_LEGENDS,
             name: "League of Legends",
-            color: s.default.unsafe_rawColors.LOL.css,
+            color: r.default.unsafe_rawColors.LOL.css,
             icon: {
                 lightPNG: n("530354"),
                 darkPNG: n("530354"),
@@ -98,7 +98,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.STEAM,
             name: "Steam",
-            color: s.default.unsafe_rawColors.STEAM.css,
+            color: r.default.unsafe_rawColors.STEAM.css,
             icon: {
                 lightPNG: n("777626"),
                 darkPNG: n("877414"),
@@ -118,7 +118,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.REDDIT,
             name: "Reddit",
-            color: s.default.unsafe_rawColors.REDDIT.css,
+            color: r.default.unsafe_rawColors.REDDIT.css,
             icon: {
                 lightPNG: n("373338"),
                 darkPNG: n("373338"),
@@ -138,7 +138,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.FACEBOOK,
             name: "Facebook",
-            color: s.default.unsafe_rawColors.FACEBOOK.css,
+            color: r.default.unsafe_rawColors.FACEBOOK.css,
             icon: {
                 lightPNG: n("879157"),
                 darkPNG: n("879157"),
@@ -151,7 +151,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.TWITTER_LEGACY,
             name: "Twitter",
-            color: s.default.unsafe_rawColors.TWITTER.css,
+            color: r.default.unsafe_rawColors.TWITTER.css,
             icon: {
                 lightPNG: n("122630"),
                 darkPNG: n("122630"),
@@ -172,7 +172,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.TWITTER,
             name: "X",
-            color: s.default.unsafe_rawColors.TWITTER.css,
+            color: r.default.unsafe_rawColors.TWITTER.css,
             icon: {
                 lightPNG: n("483819"),
                 darkPNG: n("980576"),
@@ -193,7 +193,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.SPOTIFY,
             name: "Spotify",
-            color: s.default.unsafe_rawColors.SPOTIFY.css,
+            color: r.default.unsafe_rawColors.SPOTIFY.css,
             icon: {
                 lightPNG: n("561050"),
                 darkPNG: n("561050"),
@@ -212,7 +212,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.XBOX,
             name: "Xbox",
-            color: s.default.unsafe_rawColors.XBOX.css,
+            color: r.default.unsafe_rawColors.XBOX.css,
             icon: {
                 lightPNG: n("599004"),
                 darkPNG: n("956204"),
@@ -226,7 +226,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.SAMSUNG,
             name: "Samsung Galaxy",
-            color: s.default.unsafe_rawColors.SAMSUNG.css,
+            color: r.default.unsafe_rawColors.SAMSUNG.css,
             icon: {
                 lightPNG: n("768935"),
                 darkPNG: n("768935"),
@@ -239,7 +239,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.GITHUB,
             name: "GitHub",
-            color: s.default.unsafe_rawColors.GITHUB.css,
+            color: r.default.unsafe_rawColors.GITHUB.css,
             icon: {
                 lightPNG: n("321223"),
                 darkPNG: n("646994"),
@@ -259,7 +259,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.PLAYSTATION,
             name: "PlayStation Network",
-            color: s.default.unsafe_rawColors.PLAYSTATION.css,
+            color: r.default.unsafe_rawColors.PLAYSTATION.css,
             icon: {
                 lightPNG: n("322246"),
                 darkPNG: n("964854"),
@@ -272,7 +272,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.PLAYSTATION_STAGING,
             name: "PlayStation Network (Staging)",
-            color: s.default.unsafe_rawColors.PLAYSTATION.css,
+            color: r.default.unsafe_rawColors.PLAYSTATION.css,
             icon: {
                 lightPNG: n("964854"),
                 darkPNG: n("322246"),
@@ -378,7 +378,7 @@ function(e, t, n) {
         }, {
             type: o.PlatformTypes.CRUNCHYROLL,
             name: "Crunchyroll",
-            color: s.default.unsafe_rawColors.CRUNCHYROLL.css,
+            color: r.default.unsafe_rawColors.CRUNCHYROLL.css,
             icon: {
                 lightPNG: n("211689"),
                 darkPNG: n("211689"),
@@ -407,15 +407,15 @@ function(e, t, n) {
             },
             enabled: !0
         }],
-        u = r.keyBy(l, "type"),
-        c = {};
+        u = s.keyBy(l, "type"),
+        d = {};
     l.forEach(e => {
         var t;
         null === (t = e.domains) || void 0 === t || t.forEach(t => {
-            c[t] = e
+            d[t] = e
         })
     });
-    var d = {
+    var c = {
         get(e) {
             var t;
             return null !== (t = u[e]) && void 0 !== t ? t : null
@@ -425,7 +425,7 @@ function(e, t, n) {
             if (null == t) return;
             let n = t.hostname,
                 i = n.startsWith("www.") ? n.slice(4) : n;
-            return c[i]
+            return d[i]
         },
         isSupported: e => Object.prototype.hasOwnProperty.call(u, e),
         map: e => l.map(e),

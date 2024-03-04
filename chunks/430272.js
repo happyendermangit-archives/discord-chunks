@@ -1,5 +1,5 @@
-function(t, r, n) {
-    t.exports = function(t, r) {
-        return t.has(r)
+function(e, t, n) {
+    e.exports = function(e, t) {
+        return e.has(t)
     }
 }

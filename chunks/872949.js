@@ -1,3 +1,3 @@
-function(t, e, s) {
-    t.exports = function() {}
+function(e, t, n) {
+    e.exports = function() {}
 }

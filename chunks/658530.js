@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
 
-    function a(e, t, n) {
+    function i(e, t, n) {
         return new MouseEvent(e, {
             screenX: t,
             screenY: n,
@@ -12,17 +12,17 @@ function(e, t, n) {
         })
     }
 
-    function l(e, t, n) {
-        let a = document.elementFromPoint(t, n);
-        if (null == a) throw Error();
-        a.dispatchEvent(e)
+    function s(e, t, n) {
+        let i = document.elementFromPoint(t, n);
+        if (null == i) throw Error();
+        i.dispatchEvent(e)
     }
     n.r(t), n.d(t, {
         createMouseEvent: function() {
-            return a
+            return i
         },
         dispatchEventToPoint: function() {
-            return l
+            return s
         }
     }), n("70102")
 }

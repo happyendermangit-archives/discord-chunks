@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         }
     }), n("222007");
-    var i, r = n("44170");
+    var i, s = n("44170");
     i = class {
         on(e, t) {
             this.emitter.on(e, t)
@@ -37,7 +37,7 @@ function(e, t, n) {
             return this.emitter.listenerCount(e)
         }
         constructor() {
-            this.emitter = new r.EventEmitter
+            this.emitter = new s.EventEmitter
         }
     }
 }

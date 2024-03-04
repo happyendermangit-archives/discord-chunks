@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         CreatorMonetizationCountryAllowlistExperiment: function() {
-            return r
+            return s
         },
         CreatorMonetizationRavenOnboardingGuildExperiment: function() {
-            return s
+            return r
         },
         CreatorMonetizationRavenOnboardingUserExperiment: function() {
             return a
@@ -18,7 +18,7 @@ function(e, t, n) {
         }
     });
     var i = n("862205");
-    let r = (0, i.createExperiment)({
+    let s = (0, i.createExperiment)({
             kind: "user",
             id: "2022-04_creator_monetization_country_allowlist",
             label: "Creator Monetization Available in Country",
@@ -33,7 +33,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = (0, i.createExperiment)({
+        r = (0, i.createExperiment)({
             kind: "guild",
             id: "2022-09_creator_monetization_raven",
             label: "Creator Monetization Onboarding v2",

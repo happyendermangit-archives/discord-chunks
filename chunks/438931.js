@@ -1,30 +1,30 @@
-function(t, e, n) {
+function(e, t, n) {
     "use strict";
-    n.r(e), n.d(e, {
+    n.r(t), n.d(t, {
         updateFlags: function() {
-            return r
+            return a
         }
     });
-    var a = n("872717"),
-        i = n("913144"),
-        l = n("49111");
+    var i = n("872717"),
+        s = n("913144"),
+        r = n("49111");
 
-    function r(t, e, n) {
-        return i.default.dispatch({
+    function a(e, t, n) {
+        return s.default.dispatch({
             type: "LIBRARY_APPLICATION_FLAGS_UPDATE_START",
-            applicationId: t,
-            branchId: e,
+            applicationId: e,
+            branchId: t,
             flags: n
-        }), a.default.patch({
-            url: l.Endpoints.LIBRARY_APPLICATION_BRANCH(t, e),
+        }), i.default.patch({
+            url: r.Endpoints.LIBRARY_APPLICATION_BRANCH(e, t),
             body: {
                 flags: n
             },
             oldFormErrors: !0
-        }).then(t => {
-            i.default.dispatch({
+        }).then(e => {
+            s.default.dispatch({
                 type: "LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS",
-                libraryApplication: t.body
+                libraryApplication: e.body
             })
         })
     }

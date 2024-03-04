@@ -71,7 +71,7 @@ function(e, t, n) {
         return a.listener = n, r.wrapFn = a, a
     }
 
-    function h(e, t, n) {
+    function m(e, t, n) {
         var r = e._events;
         if (void 0 === r) return [];
         var a = r[t];
@@ -81,7 +81,7 @@ function(e, t, n) {
         }(a) : y(a, a.length)
     }
 
-    function m(e) {
+    function h(e) {
         var t = this._events;
         if (void 0 !== t) {
             var n = t[e];
@@ -167,12 +167,12 @@ function(e, t, n) {
             for (r = t.length - 1; r >= 0; r--) this.removeListener(e, t[r]);
         return this
     }, s.prototype.listeners = function(e) {
-        return h(this, e, !0)
+        return m(this, e, !0)
     }, s.prototype.rawListeners = function(e) {
-        return h(this, e, !1)
+        return m(this, e, !1)
     }, s.listenerCount = function(e, t) {
-        return "function" == typeof e.listenerCount ? e.listenerCount(t) : m.call(e, t)
-    }, s.prototype.listenerCount = m, s.prototype.eventNames = function() {
+        return "function" == typeof e.listenerCount ? e.listenerCount(t) : h.call(e, t)
+    }, s.prototype.listenerCount = h, s.prototype.eventNames = function() {
         return this._eventsCount > 0 ? r(this._events) : []
     };
 

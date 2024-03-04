@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useDropTargetMonitor: function() {
-            return o
+            return s
         }
     });
     var r = n("884691"),
-        a = n("29150"),
-        i = n("119076");
+        i = n("29150"),
+        o = n("119076");
 
-    function o() {
-        var e = (0, i.useDragDropManager)();
+    function s() {
+        var e = (0, o.useDragDropManager)();
         return (0, r.useMemo)(function() {
-            return new a.DropTargetMonitorImpl(e)
+            return new i.DropTargetMonitorImpl(e)
         }, [e])
     }
 }

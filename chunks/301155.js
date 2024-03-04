@@ -1,15 +1,15 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("911718"),
+    var r = n("911718"),
         i = r("%TypeError%"),
-        n = r("%Number%"),
-        c = s("226797"),
-        o = s("430344"),
-        f = s("610760");
-    t.exports = function(t) {
-        var e = c(t) ? t : o(t, n);
-        if ("symbol" == typeof e) throw new i("Cannot convert a Symbol value to a number");
-        if ("bigint" == typeof e) throw new i("Conversion from 'BigInt' to 'number' is not allowed.");
-        return "string" == typeof e ? f(e) : n(e)
+        o = r("%Number%"),
+        s = n("226797"),
+        a = n("430344"),
+        c = n("610760");
+    e.exports = function(e) {
+        var t = s(e) ? e : a(e, o);
+        if ("symbol" == typeof t) throw new i("Cannot convert a Symbol value to a number");
+        if ("bigint" == typeof t) throw new i("Conversion from 'BigInt' to 'number' is not allowed.");
+        return "string" == typeof t ? c(t) : o(t)
     }
 }

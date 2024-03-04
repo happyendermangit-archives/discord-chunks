@@ -9,11 +9,11 @@ function(e, _, E) {
         o = E("884691"),
         n = E("414456"),
         r = E.n(n),
-        i = E("446674"),
-        a = E("77078"),
+        a = E("446674"),
+        i = E("77078"),
         I = E("913144"),
-        s = E("79112"),
-        T = E("206625"),
+        T = E("79112"),
+        s = E("206625"),
         S = E("206230"),
         N = E("812204"),
         O = E("685665"),
@@ -38,11 +38,11 @@ function(e, _, E) {
         },
         p = () => {
             var e, _, E;
-            let o = (0, i.useStateFromStores)([u.default], () => D.default.isPremium(u.default.getCurrentUser())),
+            let o = (0, a.useStateFromStores)([u.default], () => D.default.isPremium(u.default.getCurrentUser())),
                 n = (0, A.usePremiumTrialOffer)(),
                 r = (null == n ? void 0 : null === (e = n.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === h.PremiumSubscriptionSKUs.TIER_2;
             return (0, t.jsx)(R.default, {
-                size: a.Button.Sizes.MEDIUM,
+                size: i.Button.Sizes.MEDIUM,
                 buttonText: o ? P.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : r ? (0, D.formatTrialCtaIntervalDuration)({
                     intervalType: null == n ? void 0 : null === (_ = n.subscription_trial) || void 0 === _ ? void 0 : _.interval,
                     intervalCount: null == n ? void 0 : null === (E = n.subscription_trial) || void 0 === E ? void 0 : E.interval_count
@@ -58,7 +58,7 @@ function(e, _, E) {
             };
             return (0, t.jsxs)("div", {
                 className: m.editorHeader,
-                children: [(0, t.jsx)(a.Clickable, {
+                children: [(0, t.jsx)(i.Clickable, {
                     className: m.closeCircleButton,
                     onClick: () => E(),
                     children: (0, t.jsx)(L.default, {
@@ -66,7 +66,7 @@ function(e, _, E) {
                     })
                 }), (0, t.jsxs)("div", {
                     className: m.title,
-                    children: [(0, t.jsx)(a.Heading, {
+                    children: [(0, t.jsx)(i.Heading, {
                         variant: "heading-lg/extrabold",
                         children: P.default.Messages.APP_ICON_PREVIEW_TITLE
                     }), (0, t.jsx)(l.default, {
@@ -79,16 +79,16 @@ function(e, _, E) {
             let {
                 isCoachmark: _,
                 markAsDismissed: E
-            } = e, o = (0, i.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
+            } = e, o = (0, a.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
             return (0, t.jsxs)("div", {
                 className: m.editorFooter,
-                children: [o && (0, t.jsx)(p, {}), (0, t.jsx)(a.Button, {
+                children: [o && (0, t.jsx)(p, {}), (0, t.jsx)(i.Button, {
                     className: m.footerButton,
                     onClick: () => {
-                        null == E || E(M.ContentDismissActionType.DISMISS), G(), !_ && s.default.open()
+                        null == E || E(M.ContentDismissActionType.DISMISS), G(), !_ && T.default.open()
                     },
-                    color: a.Button.Colors.PRIMARY,
-                    size: a.Button.Sizes.MEDIUM,
+                    color: i.Button.Colors.PRIMARY,
+                    size: i.Button.Sizes.MEDIUM,
                     children: o || _ ? P.default.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW : P.default.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS
                 })]
             })
@@ -101,11 +101,11 @@ function(e, _, E) {
         } = e, {
             analyticsLocations: n,
             AnalyticsLocationProvider: I
-        } = (0, O.default)(N.default.APP_ICON_EDITOR), s = (0, i.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
+        } = (0, O.default)(N.default.APP_ICON_EDITOR), T = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
             isUpsellPreview: A,
             isEditorOpen: R,
             shouldEditorAnimate: l
-        } = (0, i.useStateFromStoresObject)([c.default, S.default], () => ({
+        } = (0, a.useStateFromStoresObject)([c.default, S.default], () => ({
             isUpsellPreview: c.default.isUpsellPreview,
             isEditorOpen: c.default.isEditorOpen,
             shouldEditorAnimate: _ && !S.default.useReducedMotion
@@ -116,17 +116,17 @@ function(e, _, E) {
                 location_stack: n
             })
         }, [A, n]);
-        let L = (0, T.default)(null, A ? G : U.NOOP);
+        let L = (0, s.default)(null, A ? G : U.NOOP);
         return (o.useEffect(() => {
             if (A && !R) return G
-        }, [A, R]), null == s) ? null : (0, t.jsx)(I, {
+        }, [A, R]), null == T) ? null : (0, t.jsx)(I, {
             children: (0, t.jsx)("div", {
                 ref: L,
                 className: r(m.editor, l ? m.editorAnimate : null),
-                children: (0, t.jsxs)(a.HeadingLevel, {
+                children: (0, t.jsxs)(i.HeadingLevel, {
                     children: [(0, t.jsx)(g, {
                         markAsDismissed: E
-                    }), (0, t.jsx)(a.Scroller, {
+                    }), (0, t.jsx)(i.Scroller, {
                         className: m.editorBody,
                         children: (0, t.jsx)(d.default, {
                             className: m.selectionGroup

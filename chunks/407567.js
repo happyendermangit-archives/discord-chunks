@@ -1,4 +1,4 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = s.p + "4e72139ffa96b12e793d.svg"
+    e.exports = n.p + "4e72139ffa96b12e793d.svg"
 }

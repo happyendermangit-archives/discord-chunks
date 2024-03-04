@@ -8,32 +8,32 @@ function(e, t, n) {
         }
     }
 
-    function a(e, t) {
+    function i(e, t) {
         return e.filter(function(e) {
             return e !== t
         })
     }
 
-    function i(e, t) {
+    function o(e, t) {
         var n = new Set,
             r = function(e) {
                 return n.add(e)
             };
         e.forEach(r), t.forEach(r);
-        var a = [];
+        var i = [];
         return n.forEach(function(e) {
-            return a.push(e)
-        }), a
+            return i.push(e)
+        }), i
     }
     n.r(t), n.d(t, {
         memoize: function() {
             return r
         },
         without: function() {
-            return a
+            return i
         },
         union: function() {
-            return i
+            return o
         }
     }), n("222007"), n("424973")
 }

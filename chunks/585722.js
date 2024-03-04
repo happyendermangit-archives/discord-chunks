@@ -2,157 +2,157 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return S
         }
     }), n("222007"), n("424973");
-    var s = n("917351"),
-        i = n.n(s),
+    var i = n("917351"),
+        s = n.n(i),
         r = n("446674"),
         a = n("913144"),
         o = n("404118"),
-        d = n("282928"),
+        l = n("282928"),
         u = n("402752"),
-        l = n("474643"),
-        f = n("49111"),
-        _ = n("782340");
-    let c = new Map,
-        g = [];
+        d = n("474643"),
+        c = n("49111"),
+        f = n("782340");
+    let _ = new Map,
+        h = [];
 
-    function m(e, t) {
-        var n, s;
-        return null !== (s = null === (n = h(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== s ? s : g
+    function E(e, t) {
+        var n, i;
+        return null !== (i = null === (n = g(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== i ? i : h
     }
 
-    function h(e) {
+    function g(e) {
         var t;
-        return null !== (t = c.get(e)) && void 0 !== t ? t : new Map
+        return null !== (t = _.get(e)) && void 0 !== t ? t : new Map
     }
 
-    function v(e, t, n) {
-        let s = h(e);
-        s.set(t, n), c.set(e, s)
+    function m(e, t, n) {
+        let i = g(e);
+        i.set(t, n), _.set(e, i)
     }
-    class E extends r.default.Store {
+    class p extends r.default.Store {
         getFirstUpload(e, t) {
-            let n = m(e, t);
+            let n = E(e, t);
             return n.length > 0 ? n[0] : null
         }
         hasAdditionalUploads(e, t) {
             var n;
-            return (null !== (n = m(e, t).length) && void 0 !== n ? n : 0) > 1
+            return (null !== (n = E(e, t).length) && void 0 !== n ? n : 0) > 1
         }
         getUploads(e, t) {
-            return m(e, t)
+            return E(e, t)
         }
         getUploadCount(e, t) {
             var n;
-            return null !== (n = m(e, t).length) && void 0 !== n ? n : 0
+            return null !== (n = E(e, t).length) && void 0 !== n ? n : 0
         }
         getUpload(e, t, n) {
-            return m(e, n).find(e => e.id === t)
+            return E(e, n).find(e => e.id === t)
         }
         findUpload(e, t, n) {
-            return m(e, t).find(n)
+            return E(e, t).find(n)
         }
     }
-    E.displayName = "UploadAttachmentStore";
-    var p = new E(a.default, {
+    p.displayName = "UploadAttachmentStore";
+    var S = new p(a.default, {
         UPLOAD_ATTACHMENT_POP_FILE: function(e) {
             let {
                 channelId: t
-            } = e, n = [...m(t, l.DraftType.ChannelMessage)];
-            n.shift(), v(t, l.DraftType.ChannelMessage, n)
+            } = e, n = [...E(t, d.DraftType.ChannelMessage)];
+            n.shift(), m(t, d.DraftType.ChannelMessage, n)
         },
         UPLOAD_ATTACHMENT_ADD_FILES: e => {
             let {
                 files: t,
                 channelId: n,
-                showLargeMessageDialog: s,
+                showLargeMessageDialog: i,
                 draftType: r
-            } = e, a = [...m(n, r)];
-            if (a.length + t.length > f.MAX_UPLOAD_COUNT && r !== l.DraftType.SlashCommand && r !== l.DraftType.ApplicationLauncherCommand) {
+            } = e, a = [...E(n, r)];
+            if (a.length + t.length > c.MAX_UPLOAD_COUNT && r !== d.DraftType.SlashCommand && r !== d.DraftType.ApplicationLauncherCommand) {
                 o.default.show({
-                    title: _.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-                    body: _.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
-                        limit: f.MAX_UPLOAD_COUNT
+                    title: f.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+                    body: f.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+                        limit: c.MAX_UPLOAD_COUNT
                     })
                 });
                 return
             }
-            i.forEach(t, e => {
-                let t = new d.CloudUpload(e, n, s, a.length);
+            s.forEach(t, e => {
+                let t = new l.CloudUpload(e, n, i, a.length);
                 t.upload(), a.push(t)
-            }), v(n, r, a)
+            }), m(n, r, a)
         },
         UPLOAD_ATTACHMENT_UPDATE_FILE: function(e) {
             let {
                 channelId: t,
                 id: n,
-                filename: s,
-                description: i,
+                filename: i,
+                description: s,
                 spoiler: r,
                 thumbnail: a,
                 draftType: o
-            } = e, d = [...m(t, o)], u = d.map(e => (e.id === n && (void 0 !== s && (e.filename = s), void 0 !== r && (e.spoiler = r), void 0 !== i && (e.description = i), void 0 !== a && (e.isThumbnail = a)), e));
-            v(t, o, u)
+            } = e, l = [...E(t, o)], u = l.map(e => (e.id === n && (void 0 !== i && (e.filename = i), void 0 !== r && (e.spoiler = r), void 0 !== s && (e.description = s), void 0 !== a && (e.isThumbnail = a)), e));
+            m(t, o, u)
         },
         UPLOAD_ATTACHMENT_REMOVE_FILE: function(e) {
             let {
                 channelId: t,
                 id: n,
-                draftType: s
-            } = e, i = [...m(t, s)], r = i.findIndex(e => (0, u.doesImageMatchUpload)({
+                draftType: i
+            } = e, s = [...E(t, i)], r = s.findIndex(e => (0, u.doesImageMatchUpload)({
                 uri: n,
                 filename: n
             }, e));
             if (r > -1) {
-                let e = i.splice(r, 1)[0];
-                e.cancel(), v(t, s, i)
+                let e = s.splice(r, 1)[0];
+                e.cancel(), m(t, i, s)
             }
         },
         UPLOAD_ATTACHMENT_REMOVE_FILES: function(e) {
             let {
                 channelId: t,
                 attachmentIds: n,
-                draftType: s
-            } = e, i = [...m(t, s)];
+                draftType: i
+            } = e, s = [...E(t, i)];
             n.forEach(e => {
-                let t = i.findIndex(t => e === t.id);
+                let t = s.findIndex(t => e === t.id);
                 if (t > -1) {
-                    let e = i.splice(t, 1)[0];
+                    let e = s.splice(t, 1)[0];
                     e.cancel()
                 }
-            }), v(t, s, i)
+            }), m(t, i, s)
         },
         UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function(e) {
             let {
                 channelId: t,
                 draftType: n
             } = e;
-            v(t, n, [])
+            m(t, n, [])
         },
         UPLOAD_ATTACHMENT_SET_UPLOADS: function(e) {
             let {
                 channelId: t,
                 uploads: n,
-                draftType: s
+                draftType: i
             } = e;
-            v(t, s, n)
+            m(t, i, n)
         },
         UPLOAD_ATTACHMENT_SET_FILE: function(e) {
             let {
                 channelId: t,
                 id: n,
-                file: s,
-                draftType: i
-            } = e, r = [...m(t, i)], a = r.filter(e => e.id !== n), o = new d.CloudUpload(s, t);
-            o.upload(), a.push(o), v(t, i, a)
+                file: i,
+                draftType: s
+            } = e, r = [...E(t, s)], a = r.filter(e => e.id !== n), o = new l.CloudUpload(i, t);
+            o.upload(), a.push(o), m(t, s, a)
         },
         SIDEBAR_CLOSE: function(e) {
             let {
                 baseChannelId: t
             } = e;
-            v(t, l.DraftType.FirstThreadMessage, [])
+            m(t, d.DraftType.FirstThreadMessage, [])
         }
     })
 }

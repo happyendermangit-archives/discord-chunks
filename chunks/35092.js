@@ -2,14 +2,14 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return i
+            return a
         }
     });
     var t = E("805833"),
         o = E("303365"),
         n = E("75247"),
         r = E("661496"),
-        i = {
+        a = {
             Emitter: t.default,
             Store: n.default,
             PersistedStore: o.default,

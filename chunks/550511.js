@@ -1,42 +1,42 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("424973");
-    var r = s("839309"),
-        i = s("463483"),
-        n = s("789294");
-    e.assert = i, e.toArray = n.toArray, e.zero2 = n.zero2, e.toHex = n.toHex, e.encode = n.encode;
-    e.getNAF = function(t, e, s) {
-        var r = Array(Math.max(t.bitLength(), s) + 1);
+    n("424973");
+    var r = n("839309"),
+        i = n("463483"),
+        o = n("789294");
+    t.assert = i, t.toArray = o.toArray, t.zero2 = o.zero2, t.toHex = o.toHex, t.encode = o.encode;
+    t.getNAF = function(e, t, n) {
+        var r = Array(Math.max(e.bitLength(), n) + 1);
         r.fill(0);
-        for (var i = 1 << e + 1, n = t.clone(), c = 0; c < r.length; c++) {
-            var o, f = n.andln(i - 1);
-            n.isOdd() ? (o = f > (i >> 1) - 1 ? (i >> 1) - f : f, n.isubn(o)) : o = 0, r[c] = o, n.iushrn(1)
+        for (var i = 1 << t + 1, o = e.clone(), s = 0; s < r.length; s++) {
+            var a, c = o.andln(i - 1);
+            o.isOdd() ? (a = c > (i >> 1) - 1 ? (i >> 1) - c : c, o.isubn(a)) : a = 0, r[s] = a, o.iushrn(1)
         }
         return r
     };
-    e.getJSF = function(t, e) {
-        var s = [
+    t.getJSF = function(e, t) {
+        var n = [
             [],
             []
         ];
-        t = t.clone(), e = e.clone();
-        for (var r = 0, i = 0; t.cmpn(-r) > 0 || e.cmpn(-i) > 0;) {
-            var n, c, o, f = t.andln(3) + r & 3,
-                u = e.andln(3) + i & 3;
-            3 === f && (f = -1), 3 === u && (u = -1), c = (1 & f) == 0 ? 0 : (3 == (n = t.andln(7) + r & 7) || 5 === n) && 2 === u ? -f : f, s[0].push(c), o = (1 & u) == 0 ? 0 : (3 == (n = e.andln(7) + i & 7) || 5 === n) && 2 === f ? -u : u, s[1].push(o), 2 * r === c + 1 && (r = 1 - r), 2 * i === o + 1 && (i = 1 - i), t.iushrn(1), e.iushrn(1)
+        e = e.clone(), t = t.clone();
+        for (var r = 0, i = 0; e.cmpn(-r) > 0 || t.cmpn(-i) > 0;) {
+            var o, s, a, c = e.andln(3) + r & 3,
+                u = t.andln(3) + i & 3;
+            3 === c && (c = -1), 3 === u && (u = -1), s = (1 & c) == 0 ? 0 : (3 == (o = e.andln(7) + r & 7) || 5 === o) && 2 === u ? -c : c, n[0].push(s), a = (1 & u) == 0 ? 0 : (3 == (o = t.andln(7) + i & 7) || 5 === o) && 2 === c ? -u : u, n[1].push(a), 2 * r === s + 1 && (r = 1 - r), 2 * i === a + 1 && (i = 1 - i), e.iushrn(1), t.iushrn(1)
         }
-        return s
+        return n
     };
-    e.cachedProperty = function(t, e, s) {
-        var r = "_" + e;
-        t.prototype[e] = function() {
-            return void 0 !== this[r] ? this[r] : this[r] = s.call(this)
+    t.cachedProperty = function(e, t, n) {
+        var r = "_" + t;
+        e.prototype[t] = function() {
+            return void 0 !== this[r] ? this[r] : this[r] = n.call(this)
         }
     };
-    e.parseBytes = function(t) {
-        return "string" == typeof t ? e.toArray(t, "hex") : t
+    t.parseBytes = function(e) {
+        return "string" == typeof e ? t.toArray(e, "hex") : e
     };
-    e.intFromLE = function(t) {
-        return new r(t, "hex", "le")
+    t.intFromLE = function(e) {
+        return new r(e, "hex", "le")
     }
 }

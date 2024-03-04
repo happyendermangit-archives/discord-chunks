@@ -1,30 +1,30 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    let r = s("784014"),
-        i = s("448450"),
-        n = s("599235");
+    let r = n("784014"),
+        i = n("448450"),
+        o = n("599235");
 
-    function c(t, e) {
-        this.name = t, this.body = e, this.decoders = {}, this.encoders = {}
+    function s(e, t) {
+        this.name = e, this.body = t, this.decoders = {}, this.encoders = {}
     }
-    e.define = function(t, e) {
-        return new c(t, e)
-    }, c.prototype._createNamed = function(t) {
-        let e = this.name;
+    t.define = function(e, t) {
+        return new s(e, t)
+    }, s.prototype._createNamed = function(e) {
+        let t = this.name;
 
-        function s(t) {
-            this._initNamed(t, e)
+        function n(e) {
+            this._initNamed(e, t)
         }
-        return n(s, t), s.prototype._initNamed = function(e, s) {
-            t.call(this, e, s)
-        }, new s(this)
-    }, c.prototype._getDecoder = function(t) {
-        return t = t || "der", !this.decoders.hasOwnProperty(t) && (this.decoders[t] = this._createNamed(i[t])), this.decoders[t]
-    }, c.prototype.decode = function(t, e, s) {
-        return this._getDecoder(e).decode(t, s)
-    }, c.prototype._getEncoder = function(t) {
-        return t = t || "der", !this.encoders.hasOwnProperty(t) && (this.encoders[t] = this._createNamed(r[t])), this.encoders[t]
-    }, c.prototype.encode = function(t, e, s) {
-        return this._getEncoder(e).encode(t, s)
+        return o(n, e), n.prototype._initNamed = function(t, n) {
+            e.call(this, t, n)
+        }, new n(this)
+    }, s.prototype._getDecoder = function(e) {
+        return e = e || "der", !this.decoders.hasOwnProperty(e) && (this.decoders[e] = this._createNamed(i[e])), this.decoders[e]
+    }, s.prototype.decode = function(e, t, n) {
+        return this._getDecoder(t).decode(e, n)
+    }, s.prototype._getEncoder = function(e) {
+        return e = e || "der", !this.encoders.hasOwnProperty(e) && (this.encoders[e] = this._createNamed(r[e])), this.encoders[e]
+    }, s.prototype.encode = function(e, t, n) {
+        return this._getEncoder(t).encode(e, n)
     }
 }

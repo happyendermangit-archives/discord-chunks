@@ -1,68 +1,68 @@
 function(e, t, n) {
     "use strict";
-    let s, i, r;
+    let i, s, r;
     n.r(t), n.d(t, {
         default: function() {
-            return g
+            return h
         }
     }), n("222007");
     var a = n("917351"),
         o = n.n(a),
-        d = n("446674"),
+        l = n("446674"),
         u = n("913144"),
-        l = n("49111");
-    let f = _();
+        d = n("49111");
+    let c = f();
 
-    function _() {
+    function f() {
         return {
             recentCustomStatuses: [],
             currentDefaultStatus: null
         }
     }
-    class c extends d.default.PersistedStore {
+    class _ extends l.default.PersistedStore {
         initialize(e) {
-            f = {
-                ..._(),
+            c = {
+                ...f(),
                 ...null != e ? e : {}
             }
         }
         getState() {
-            return f
+            return c
         }
         getCurrentHangStatus() {
-            return s
-        }
-        getCustomHangStatus() {
             return i
         }
+        getCustomHangStatus() {
+            return s
+        }
         getRecentCustomStatuses() {
-            return f.recentCustomStatuses
+            return c.recentCustomStatuses
         }
         getCurrentDefaultStatus() {
-            return f.currentDefaultStatus
+            return c.currentDefaultStatus
         }
         getHangStatusActivity() {
-            return null == s ? null : r
+            return null == i ? null : r
         }
     }
-    c.displayName = "HangStatusStore", c.persistKey = "HangStatusStore";
-    var g = new c(u.default, {
+    _.displayName = "HangStatusStore", _.persistKey = "HangStatusStore";
+    var h = new _(u.default, {
         LOGOUT: function() {
-            f = _()
+            c = f()
         },
         UPDATE_HANG_STATUS: function(e) {
             let {
                 status: t,
                 saveAsDefault: n
             } = e;
-            s = t, i = null, n && (f.currentDefaultStatus = {
+            i = t, s = null, n && (c.currentDefaultStatus = {
                 status: t,
-                customHangStatus: i,
+                customHangStatus: s,
                 expiresAt: Date.now() + 288e5
             }), r = {
-                type: l.ActivityTypes.HANG_STATUS,
+                type: d.ActivityTypes.HANG_STATUS,
                 name: "Hang Status",
-                state: s
+                state: i
             }
         },
         UPDATE_HANG_STATUS_CUSTOM: function(e) {
@@ -71,19 +71,19 @@ function(e, t, n) {
                 emoji: n,
                 saveAsDefault: a
             } = e;
-            s = l.HangStatusTypes.CUSTOM, i = {
+            i = d.HangStatusTypes.CUSTOM, s = {
                 status: t,
                 emoji: n
             };
-            let d = [...f.recentCustomStatuses],
-                u = d.findIndex(e => e.status === t && o.isEqual(e.emoji, n)); - 1 !== u ? d.splice(u, 1) : 7 === d.length && d.splice(6, 1), f.recentCustomStatuses = [i, ...d], a && (f.currentDefaultStatus = {
-                status: s,
-                customHangStatus: i,
+            let l = [...c.recentCustomStatuses],
+                u = l.findIndex(e => e.status === t && o.isEqual(e.emoji, n)); - 1 !== u ? l.splice(u, 1) : 7 === l.length && l.splice(6, 1), c.recentCustomStatuses = [s, ...l], a && (c.currentDefaultStatus = {
+                status: i,
+                customHangStatus: s,
                 expiresAt: Date.now() + 288e5
             }), r = {
-                type: l.ActivityTypes.HANG_STATUS,
+                type: d.ActivityTypes.HANG_STATUS,
                 name: "Hang Status",
-                state: s,
+                state: i,
                 details: t,
                 emoji: n
             }
@@ -92,7 +92,7 @@ function(e, t, n) {
             let {
                 saveAsDefault: t
             } = e;
-            s = null, i = null, t && (f.currentDefaultStatus = {
+            i = null, s = null, t && (c.currentDefaultStatus = {
                 status: null,
                 customHangStatus: null,
                 expiresAt: Date.now() + 288e5

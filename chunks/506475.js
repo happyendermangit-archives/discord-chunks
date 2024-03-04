@@ -1,5 +1,5 @@
-function(t, e, s) {
-    t.exports = function(t) {
-        return t != t
+function(e, t, n) {
+    e.exports = function(e) {
+        return e != e
     }
 }

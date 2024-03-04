@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         commandName: function() {
-            return i
+            return s
         },
         toPermissionKey: function() {
             return r
@@ -11,10 +11,10 @@ function(e, t, n) {
             return a
         }
     }), n("222007");
-    var s = n("798609");
+    var i = n("798609");
 
-    function i(e, t) {
-        return e === s.ApplicationCommandType.CHAT ? "/" + t : t
+    function s(e, t) {
+        return e === i.ApplicationCommandType.CHAT ? "/" + t : t
     }
 
     function r(e, t) {

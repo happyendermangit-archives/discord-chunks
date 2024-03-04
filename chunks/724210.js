@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a;
+    var i, s, r, a;
     n.r(t), n.d(t, {
         StaticChannelRoute: function() {
             return i
@@ -15,27 +15,27 @@ function(e, t, n) {
             return u
         },
         isGuildHomeChannel: function() {
-            return c
+            return d
         },
         ChannelFlags: function() {
-            return d
+            return c
         },
         MAX_CHANNEL_TOPIC_LENGTH: function() {
             return f
         },
         MAX_FORUM_CHANNEL_TOPIC_LENGTH: function() {
-            return E
+            return _
         },
         StaticChannelId: function() {
-            return r
+            return s
         },
         StaticChannelIds: function() {
-            return p
+            return h
         },
         FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID: function() {
-            return h
+            return E
         }
-    }), n("222007"), (s = i || (i = {})).ROLE_SUBSCRIPTIONS = "role-subscriptions", s.GUILD_SHOP = "shop", s.MEMBER_APPLICATIONS = "member-applications", s.GUILD_HOME = "@home", s.CHANNEL_BROWSER = "channel-browser", s.GUILD_ONBOARDING = "onboarding", s.CUSTOMIZE_COMMUNITY = "customize-community", s.MEMBER_SAFETY = "member-safety";
+    }), n("222007"), (r = i || (i = {})).ROLE_SUBSCRIPTIONS = "role-subscriptions", r.GUILD_SHOP = "shop", r.MEMBER_APPLICATIONS = "member-applications", r.GUILD_HOME = "@home", r.CHANNEL_BROWSER = "channel-browser", r.GUILD_ONBOARDING = "onboarding", r.CUSTOMIZE_COMMUNITY = "customize-community", r.MEMBER_SAFETY = "member-safety";
     let o = new Set(Object.values(i));
 
     function l(e) {
@@ -46,10 +46,10 @@ function(e, t, n) {
         return "".concat(e, "-").concat(t)
     }
 
-    function c(e) {
+    function d(e) {
         return !!(null == e ? void 0 : e.includes("@home"))
     }
-    let d = Object.freeze({
+    let c = Object.freeze({
             GUILD_FEED_REMOVED: 1,
             PINNED: 2,
             ACTIVE_CHANNELS_REMOVED: 4,
@@ -65,8 +65,8 @@ function(e, t, n) {
             HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768
         }),
         f = 1024,
-        E = 4096;
-    (a = r || (r = {})).GUILD_HOME = "home", a.SERVER_GUIDE = "guide", a.CHANNEL_BROWSER = "browse", a.CUSTOMIZE_COMMUNITY = "customize";
-    let p = new Set(Object.values(r)),
-        h = "131"
+        _ = 4096;
+    (a = s || (s = {})).GUILD_HOME = "home", a.SERVER_GUIDE = "guide", a.CHANNEL_BROWSER = "browse", a.CUSTOMIZE_COMMUNITY = "customize";
+    let h = new Set(Object.values(s)),
+        E = "131"
 }

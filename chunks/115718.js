@@ -9,10 +9,10 @@ function(e, _, E) {
             return o
         },
         DEFAULT_OVERLAY_OPTIONS: function() {
-            return i
+            return a
         }
     }), (n = t || (t = {})).ANIMATED = "ANIMATED", n.INSTANT = "INSTANT", (r = o || (o = {}))[r.UNKNOWN = 0] = "UNKNOWN", r[r.WINDOWED = 1] = "WINDOWED", r[r.MAXIMIZED = 2] = "MAXIMIZED", r[r.BORDERLESS_FULLSCREEN = 3] = "BORDERLESS_FULLSCREEN", r[r.FULLSCREEN = 4] = "FULLSCREEN", r[r.MINIMIZED = 5] = "MINIMIZED";
-    let i = {
+    let a = {
         compatibilityHook: !1,
         warn: !1,
         enabled: !1,

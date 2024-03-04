@@ -3,7 +3,7 @@ function(e, _, E) {
     let t, o;
     E.r(_), E.d(_, {
         FormattedMessage: function() {
-            return T
+            return s
         },
         setUpdateRules: function() {
             return S
@@ -14,11 +14,11 @@ function(e, _, E) {
     }), E("222007"), E("781738");
     var n = E("860347"),
         r = E.n(n),
-        i = E("404828"),
-        a = E.n(i),
+        a = E("404828"),
+        i = E.n(a),
         I = E("841206"),
-        s = E("853812");
-    class T {
+        T = E("853812");
+    class s {
         format(e) {
             if (!this.hasMarkdown) return this.intlMessage.format(e);
             let [_, E] = this.getContext(e);
@@ -32,7 +32,7 @@ function(e, _, E) {
             return this.intlMessage.format(e)
         }
         getContext(e) {
-            let _ = s.UNSAFE_RE.test(this.message),
+            let _ = T.UNSAFE_RE.test(this.message),
                 E = {};
             if (_) {
                 let _ = 0;
@@ -41,14 +41,14 @@ function(e, _, E) {
             return [e, E]
         }
         constructor(e, _, E) {
-            this.message = E ? e : e.replace(s.UNSAFE_RE_ALL, ""), this.hasMarkdown = E, this.intlMessage = new r(this.message, _)
+            this.message = E ? e : e.replace(T.UNSAFE_RE_ALL, ""), this.hasMarkdown = E, this.intlMessage = new r(this.message, _)
         }
     }
 
     function S(e) {
         t = function(e, _) {
-            let E = a.parserFor(_(e)),
-                t = a.reactFor(a.ruleOutput(e, "react"));
+            let E = i.parserFor(_(e)),
+                t = i.reactFor(i.ruleOutput(e, "react"));
             return (e, _, o) => {
                 let n = !e.includes("\n\n");
                 return !n && (e += "\n\n"), t(E(e, {
@@ -58,7 +58,7 @@ function(e, _, E) {
                 }))
             }
         }(I.default, e), o = function(e) {
-            let _ = a.parserFor(e);
+            let _ = i.parserFor(e);
             return (e, E, t) => _(e + "\n\n", {
                 inline: !1,
                 context: E,
@@ -70,8 +70,8 @@ function(e, _, E) {
     function N(e, _) {
         if (null == e) return "";
         null == t && S(E("186372").default), e = e.replace(/^\n+|\n+$/g, "");
-        let o = s.FORMAT_RE.test(e),
-            n = s.MARKDOWN_RE.test(e);
-        return o || n ? new T(e, _, n) : e
+        let o = T.FORMAT_RE.test(e),
+            n = T.MARKDOWN_RE.test(e);
+        return o || n ? new s(e, _, n) : e
     }
 }

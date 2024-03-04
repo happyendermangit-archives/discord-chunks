@@ -1,9 +1,9 @@
-function(t, e, s) {
-    var r = s("441270"),
-        i = s("944026"),
-        n = s("599235"),
-        c = s("912065").Buffer,
-        o = {
+function(e, t, n) {
+    var r = n("441270"),
+        i = n("944026"),
+        o = n("599235"),
+        s = n("912065").Buffer,
+        a = {
             "des-ede3-cbc": i.CBC.instantiate(i.EDE),
             "des-ede3": i.EDE,
             "des-ede-cbc": i.CBC.instantiate(i.EDE),
@@ -12,23 +12,23 @@ function(t, e, s) {
             "des-ecb": i.DES
         };
 
-    function f(t) {
+    function c(e) {
         r.call(this);
-        var e, s = t.mode.toLowerCase(),
-            i = o[s];
-        e = t.decrypt ? "decrypt" : "encrypt";
-        var n = t.key;
-        !c.isBuffer(n) && (n = c.from(n)), ("des-ede" === s || "des-ede-cbc" === s) && (n = c.concat([n, n.slice(0, 8)]));
-        var f = t.iv;
-        !c.isBuffer(f) && (f = c.from(f)), this._des = i.create({
-            key: n,
-            iv: f,
-            type: e
+        var t, n = e.mode.toLowerCase(),
+            i = a[n];
+        t = e.decrypt ? "decrypt" : "encrypt";
+        var o = e.key;
+        !s.isBuffer(o) && (o = s.from(o)), ("des-ede" === n || "des-ede-cbc" === n) && (o = s.concat([o, o.slice(0, 8)]));
+        var c = e.iv;
+        !s.isBuffer(c) && (c = s.from(c)), this._des = i.create({
+            key: o,
+            iv: c,
+            type: t
         })
     }
-    o.des = o["des-cbc"], o.des3 = o["des-ede3-cbc"], t.exports = f, n(f, r), f.prototype._update = function(t) {
-        return c.from(this._des.update(t))
-    }, f.prototype._final = function() {
-        return c.from(this._des.final())
+    a.des = a["des-cbc"], a.des3 = a["des-ede3-cbc"], e.exports = c, o(c, r), c.prototype._update = function(e) {
+        return s.from(this._des.update(e))
+    }, c.prototype._final = function() {
+        return s.from(this._des.final())
     }
 }

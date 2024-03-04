@@ -4,6 +4,6 @@ function(e, t, n) {
         default: function() {
             return r
         }
-    }), (s = i || (i = {})).CLOSED = "CLOSED", s.WILL_RECONNECT = "WILL_RECONNECT", s.CONNECTING = "CONNECTING", s.IDENTIFYING = "IDENTIFYING", s.RESUMING = "RESUMING", s.SESSION_ESTABLISHED = "SESSION_ESTABLISHED";
-    var s, i, r = i
+    }), (i = s || (s = {})).CLOSED = "CLOSED", i.WILL_RECONNECT = "WILL_RECONNECT", i.CONNECTING = "CONNECTING", i.IDENTIFYING = "IDENTIFYING", i.RESUMING = "RESUMING", i.SESSION_ESTABLISHED = "SESSION_ESTABLISHED";
+    var i, s, r = s
 }

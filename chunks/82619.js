@@ -1,6 +1,6 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = {
+    e.exports = {
         name: "elliptic",
         version: "6.5.4",
         description: "EC cryptography",

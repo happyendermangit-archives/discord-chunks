@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ExtendedMemoryLru: function() {
-            return s
+            return r
         }
     }), n("222007");
-    var a = n("475838"),
-        l = n("185496");
-    class s {
+    var i = n("475838"),
+        s = n("185496");
+    class r {
         get totalLength() {
             return this.primary.length + this.extended.length
         }
@@ -57,16 +57,16 @@ function(e, t, n) {
             return this.primary.values()
         }
         allEntries() {
-            return a.chain(this.extended.entries(), this.primary.entries())
+            return i.chain(this.extended.entries(), this.primary.entries())
         }
         allKeys() {
-            return a.chain(this.extended.keys(), this.primary.keys())
+            return i.chain(this.extended.keys(), this.primary.keys())
         }
         allValues() {
-            return a.chain(this.extended.values(), this.primary.values())
+            return i.chain(this.extended.values(), this.primary.values())
         }
         constructor(e, t) {
-            this.primary = new l.Lru(e), this.extended = new l.Lru(t)
+            this.primary = new s.Lru(e), this.extended = new s.Lru(t)
         }
     }
 }

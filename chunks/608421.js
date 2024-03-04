@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return a
+            return i
         }
     }), E("222007");
     var t = E("913144"),
@@ -10,16 +10,16 @@ function(e, _, E) {
         n = E("101125");
     class r extends o.default {
         constructor(...e) {
-            super(...e), this.stores = new Map().set(n.default, i)
+            super(...e), this.stores = new Map().set(n.default, a)
         }
     }
 
-    function i() {
+    function a() {
         t.default.dispatch({
             type: "SELF_PRESENCE_STORE_UPDATE",
             status: n.default.getStatus(),
             activities: n.default.getActivities()
         })
     }
-    var a = new r
+    var i = new r
 }

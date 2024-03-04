@@ -1,13 +1,13 @@
-function(t, e, s) {
-    var r = s("446825").Buffer;
-    s("854508");
-    var i = s("687185");
-    e.encrypt = function(t, e) {
-        for (; t._cache.length < e.length;) {
-            var s;
-            t._cache = r.concat([t._cache, ((s = t)._prev = s._cipher.encryptBlock(s._prev), s._prev)])
+function(e, t, n) {
+    var r = n("446825").Buffer;
+    n("854508");
+    var i = n("687185");
+    t.encrypt = function(e, t) {
+        for (; e._cache.length < t.length;) {
+            var n;
+            e._cache = r.concat([e._cache, ((n = e)._prev = n._cipher.encryptBlock(n._prev), n._prev)])
         }
-        var n = t._cache.slice(0, e.length);
-        return t._cache = t._cache.slice(e.length), i(e, n)
+        var o = e._cache.slice(0, t.length);
+        return e._cache = e._cache.slice(t.length), i(t, o)
     }
 }

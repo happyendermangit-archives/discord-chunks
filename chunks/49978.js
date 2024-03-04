@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return i
         }
     }), n("424973"), n("222007"), n("808653");
-    var r, i = n("917351"),
-        l = n.n(i),
-        u = n("862337");
-    class a {
+    var i, s = n("917351"),
+        r = n.n(s),
+        a = n("862337");
+    class o {
         acknowledge(e) {
             this._unacknowledgedRequests.delete(e), this._pendingRequests.delete(e)
         }
@@ -32,7 +32,7 @@ function(e, t, n) {
             this._pendingRequests = new Set, this._sentRequests = new Set, this._unacknowledgedRequests = new Set, this._guildId = e, this._guildMemberExists = n => t(e, n)
         }
     }
-    r = class {
+    i = class {
         reset() {
             this._guildStates = {}, this._flush.cancel()
         }
@@ -43,18 +43,18 @@ function(e, t, n) {
             this._getGuildState(e).acknowledge(t)
         }
         flushRequests() {
-            l.forEach(this._guildStates, e => e.flushRequests(this._onChange))
+            r.forEach(this._guildStates, e => e.flushRequests(this._onChange))
         }
         requestUnacknowledged() {
-            let e = l.reduce(this._guildStates, (e, t) => !1 !== t.requestUnacknowledged() || t, !1);
+            let e = r.reduce(this._guildStates, (e, t) => !1 !== t.requestUnacknowledged() || t, !1);
             e && this._flush.delay()
         }
         _getGuildState(e) {
             let t = this._guildStates[e];
-            return null == t && (t = this._guildStates[e] = new a(e, this._guildMemberExists)), t
+            return null == t && (t = this._guildStates[e] = new o(e, this._guildMemberExists)), t
         }
         constructor(e, t) {
-            this._guildStates = {}, this._flush = new u.DelayedCall(0, () => this.flushRequests()), this._guildMemberExists = e, this._onChange = t
+            this._guildStates = {}, this._flush = new a.DelayedCall(0, () => this.flushRequests()), this._guildMemberExists = e, this._onChange = t
         }
     }
 }

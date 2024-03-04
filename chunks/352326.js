@@ -5,41 +5,41 @@ function(e, t, n) {
             return Y
         }
     }), n("222007"), n("70102"), n("424973"), n("843762");
-    var i, r, s, a, o = n("917351"),
+    var i, s, r, a, o = n("917351"),
         l = n.n(o),
         u = n("446674"),
-        c = n("95410"),
-        d = n("913144"),
+        d = n("95410"),
+        c = n("913144"),
         f = n("190017"),
-        E = n("161454"),
-        p = n("271938"),
-        h = n("677225"),
-        _ = n("964889"),
-        S = n("152723"),
-        m = n("773336"),
-        T = n("535974"),
-        g = n("49111"),
-        I = n("492249");
-    (s = i || (i = {})).INSTALL = "Install", s.REPAIR = "Repair", (a = r || (r = {})).PATCH = "Patch", a.REPAIR = "Repair";
-    let C = [I.DispatchErrorCodes.AUTHENTICATION_FAILED, I.DispatchErrorCodes.NOT_ENTITLED],
-        v = "DispatchManagerStore",
+        _ = n("161454"),
+        h = n("271938"),
+        E = n("677225"),
+        g = n("964889"),
+        m = n("152723"),
+        p = n("773336"),
+        S = n("535974"),
+        v = n("49111"),
+        T = n("492249");
+    (r = i || (i = {})).INSTALL = "Install", r.REPAIR = "Repair", (a = s || (s = {})).PATCH = "Patch", a.REPAIR = "Repair";
+    let I = [T.DispatchErrorCodes.AUTHENTICATION_FAILED, T.DispatchErrorCodes.NOT_ENTITLED],
+        C = "DispatchManagerStore",
         A = [],
-        R = [],
+        y = [],
         N = !1,
+        R = null,
         O = null,
-        D = null,
-        y = !1,
+        D = !1,
         P = new Map,
         L = !1,
-        b = null;
+        M = null;
 
-    function M() {
+    function b() {
         let e = {
             queue: A,
             paused: N,
             userActions: Array.from(P)
         };
-        c.default.set(v, e)
+        d.default.set(C, e)
     }
 
     function U() {
@@ -48,72 +48,72 @@ function(e, t, n) {
             var t, n;
             let {
                 comboId: i,
-                action: r
+                action: s
             } = e, {
-                applicationId: s,
+                applicationId: r,
                 branchId: a
-            } = (0, _.convertComboId)(i);
-            if (t = s, n = a, (null == O || O.applicationId !== t || O.branchId !== n) && (null == D || D.applicationId !== t || D.branchId !== n)) {
-                let e = p.default.getToken(),
-                    t = p.default.getId();
+            } = (0, g.convertComboId)(i);
+            if (t = r, n = a, (null == R || R.applicationId !== t || R.branchId !== n) && (null == O || O.applicationId !== t || O.branchId !== n)) {
+                let e = h.default.getToken(),
+                    t = h.default.getId();
                 if (null == e) throw Error("missing user token");
-                L = !S.default.setCurrentTask(s, a, r, t, e)
+                L = !m.default.setCurrentTask(r, a, s, t, e)
             }
         }
     }
 
-    function G(e, t) {
-        let n = (0, _.getComboId)(e, t);
+    function w(e, t) {
+        let n = (0, g.getComboId)(e, t);
         return A.findIndex(e => e.comboId === n)
     }
 
-    function w(e, t, n, i) {
-        let r = (0, _.getComboId)(e, t),
-            s = {
-                comboId: r,
+    function k(e, t, n, i) {
+        let s = (0, g.getComboId)(e, t),
+            r = {
+                comboId: s,
                 action: i
             },
-            a = R.indexOf(r); - 1 !== a && R.splice(a, 1);
-        let o = G(e, t);
-        0 !== o && (n ? -1 === o && (A.push(s), U()) : (o > 0 && A.splice(o, 1), A.unshift(s), U())), !n && N && S.default.resume(), M()
+            a = y.indexOf(s); - 1 !== a && y.splice(a, 1);
+        let o = w(e, t);
+        0 !== o && (n ? -1 === o && (A.push(r), U()) : (o > 0 && A.splice(o, 1), A.unshift(r), U())), !n && N && m.default.resume(), b()
     }
 
-    function k(e, t) {
-        let n = (0, _.getComboId)(e, t),
-            i = R.indexOf(n); - 1 !== i && R.splice(i, 1);
-        let r = G(e, t); - 1 !== r && (A.splice(r, 1), M()), U()
+    function V(e, t) {
+        let n = (0, g.getComboId)(e, t),
+            i = y.indexOf(n); - 1 !== i && y.splice(i, 1);
+        let s = w(e, t); - 1 !== s && (A.splice(s, 1), b()), U()
     }
 
-    function x(e) {
+    function G(e) {
         let {
             applicationId: t,
             branchId: n
         } = e;
-        k(t, n)
+        V(t, n)
     }
 
     function F(e) {
         let {
             applicationId: t,
             branchId: n
-        } = e, i = (0, _.getComboId)(t, n), r = R.indexOf(i); - 1 !== r && R.splice(r, 1)
+        } = e, i = (0, g.getComboId)(t, n), s = y.indexOf(i); - 1 !== s && y.splice(s, 1)
     }
 
-    function V() {
-        let e = p.default.getToken(),
-            t = p.default.getId();
-        null != e && S.default.setCredentials(t, e)
+    function x() {
+        let e = h.default.getToken(),
+            t = h.default.getId();
+        null != e && m.default.setCredentials(t, e)
     }
 
     function B() {
-        for (let e of E.default.getRunningDiscordApplicationIds()) f.cancel(e, e);
-        let e = E.default.getVisibleGame();
-        return !N && null != e && e.pid !== b && f.pause(), b = null == e ? null : e.pid, !1
+        for (let e of _.default.getRunningDiscordApplicationIds()) f.cancel(e, e);
+        let e = _.default.getVisibleGame();
+        return !N && null != e && e.pid !== M && f.pause(), M = null == e ? null : e.pid, !1
     }
     class H extends u.default.Store {
         initialize() {
             var e;
-            let t = null !== (e = c.default.get(v)) && void 0 !== e ? e : {
+            let t = null !== (e = d.default.get(C)) && void 0 !== e ? e : {
                 queue: null,
                 paused: null,
                 userActions: null
@@ -122,37 +122,37 @@ function(e, t, n) {
                 comboId: e,
                 action: "Patch"
             } : e);
-            null != t.paused && (N = t.paused), null != t.userActions && (P = new Map(Array.from(t.userActions))), this.waitFor(T.default, E.default), this.syncWith([E.default], B), this.waitFor(T.default)
+            null != t.paused && (N = t.paused), null != t.userActions && (P = new Map(Array.from(t.userActions))), this.waitFor(S.default, _.default), this.syncWith([_.default], B), this.waitFor(S.default)
         }
         get activeItems() {
             return A.map(e => {
                 let {
                     comboId: t
                 } = e;
-                return (0, _.convertComboId)(t)
+                return (0, g.convertComboId)(t)
             })
         }
         get finishedItems() {
-            return R.map(_.convertComboId)
+            return y.map(g.convertComboId)
         }
         get paused() {
             return N
         }
         getQueuePosition(e, t) {
-            return G(e, t)
+            return w(e, t)
         }
         isCorruptInstallation() {
             return L
         }
     }
     H.displayName = "DispatchManagerStore";
-    var Y = new H(d.default, {
+    var Y = new H(c.default, {
         DISPATCH_APPLICATION_INSTALL: function(e) {
             let {
                 applicationId: t,
                 branchId: n
             } = e;
-            P.set((0, _.getComboId)(t, n), "Install"), w(t, n, !1, "Patch")
+            P.set((0, g.getComboId)(t, n), "Install"), k(t, n, !1, "Patch")
         },
         DISPATCH_APPLICATION_UPDATE: function(e) {
             let {
@@ -160,59 +160,59 @@ function(e, t, n) {
                 branchId: n,
                 automatic: i
             } = e;
-            w(t, n, i, "Patch")
+            k(t, n, i, "Patch")
         },
         DISPATCH_APPLICATION_UNINSTALL: function(e) {
-            x(e), F(e)
+            G(e), F(e)
         },
-        DISPATCH_APPLICATION_CANCEL: x,
+        DISPATCH_APPLICATION_CANCEL: G,
         DISPATCH_APPLICATION_REPAIR: function(e) {
             let {
                 applicationId: t,
                 branchId: n
             } = e;
-            P.set((0, _.getComboId)(t, n), "Repair"), w(t, n, !1, "Repair")
+            P.set((0, g.getComboId)(t, n), "Repair"), k(t, n, !1, "Repair")
         },
         DISPATCH_APPLICATION_MOVE_UP: function(e) {
             let {
                 applicationId: t,
                 branchId: n
-            } = e, i = G(t, n);
+            } = e, i = w(t, n);
             if (i < 1) return !1;
-            A.splice(0, 0, A.splice(i, 1)[0]), U(), N && S.default.resume(), M()
+            A.splice(0, 0, A.splice(i, 1)[0]), U(), N && m.default.resume(), b()
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: F,
         DISPATCH_APPLICATION_STATE_UPDATE: function(e) {
             let {
                 state: t
             } = e;
-            !y && (y = !0, U(), !N && S.default.resume());
+            !D && (D = !0, U(), !N && m.default.resume());
             let n = N;
-            N = t.paused, O = t.currentTask, D = t.nextTask;
+            N = t.paused, R = t.currentTask, O = t.nextTask;
             let i = !1;
             A = A.filter(e => {
                 let {
                     comboId: t
                 } = e, {
                     applicationId: n,
-                    branchId: r
-                } = (0, _.convertComboId)(t), s = T.default.getState(n, r), a = h.default.getTargetBuildId(n, r), o = h.default.getTargetManifests(n, r);
-                if (null != s && s.type === g.LocalDispatchApplicationStates.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === a && l.isEqual(s.manifestIds, s.targetManifestIds) && l.isEqual(s.manifestIds, o)) {
-                    if (R.push(t), P.has(t)) {
+                    branchId: s
+                } = (0, g.convertComboId)(t), r = S.default.getState(n, s), a = E.default.getTargetBuildId(n, s), o = E.default.getTargetManifests(n, s);
+                if (null != r && r.type === v.LocalDispatchApplicationStates.UP_TO_DATE && r.buildId === r.targetBuildId && r.buildId === a && l.isEqual(r.manifestIds, r.targetManifestIds) && l.isEqual(r.manifestIds, o)) {
+                    if (y.push(t), P.has(t)) {
                         let e = P.get(t);
                         switch (e) {
                             case "Install":
-                                f.completeInstall(n, s);
+                                f.completeInstall(n, r);
                                 break;
                             case "Repair":
-                                f.completeRepair(n, s)
+                                f.completeRepair(n, r)
                         }
                         P.delete(t)
                     }
                     return i = !0, !1
                 }
                 return !0
-            }), U(), (i || n !== N) && M()
+            }), U(), (i || n !== N) && b()
         },
         DISPATCH_APPLICATION_ERROR: function(e) {
             let {
@@ -221,8 +221,8 @@ function(e, t, n) {
                 code: n
             } = t;
             if (null != n) {
-                if (C.includes(n)) V();
-                else if (n === I.DispatchErrorCodes.APPLICATION_NOT_FOUND) {
+                if (I.includes(n)) x();
+                else if (n === T.DispatchErrorCodes.APPLICATION_NOT_FOUND) {
                     let {
                         context: e
                     } = t;
@@ -231,16 +231,16 @@ function(e, t, n) {
                             application_id: t,
                             branch_id: n
                         } = e;
-                        k(t, n)
+                        V(t, n)
                     }
                 }
             }
         },
         CONNECTION_OPEN: function() {
-            (0, m.isDesktop)() && V()
+            (0, p.isDesktop)() && x()
         },
         LOGOUT: function() {
-            c.default.remove(v), (0, m.isDesktop)() && S.default.pause()
+            d.default.remove(C), (0, p.isDesktop)() && m.default.pause()
         }
     })
 }

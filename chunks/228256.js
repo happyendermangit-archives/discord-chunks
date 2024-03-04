@@ -2,37 +2,37 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         LayerClassName: function() {
-            return p
-        },
-        LayerProvider: function() {
             return h
         },
+        LayerProvider: function() {
+            return E
+        },
         LayerContainer: function() {
-            return _
+            return g
         },
         getParentLayerContainer: function() {
-            return S
-        },
-        Layer: function() {
             return m
         },
+        Layer: function() {
+            return p
+        },
         createLayer: function() {
-            return T
+            return S
         }
     }), n("222007");
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("627445"),
         l = n.n(o),
         u = n("817736"),
-        c = n.n(u),
-        d = n("117362"),
+        d = n.n(u),
+        c = n("117362"),
         f = n("411093"),
-        E = n("855265");
-    let p = E.layerContainer;
-    class h extends r.Component {
+        _ = n("855265");
+    let h = _.layerContainer;
+    class E extends s.Component {
         componentWillUnmount() {
             this.state.layerContainerElement = null
         }
@@ -55,25 +55,25 @@ function(e, t, n) {
                 this.setState({
                     layerContainerElement: e
                 })
-            }, this.getContextValue = (0, d.cachedFunction)(e => [e, this.setLayerContainerElement])
+            }, this.getContextValue = (0, c.cachedFunction)(e => [e, this.setLayerContainerElement])
         }
     }
-    let _ = e => {
+    let g = e => {
         let {
             layerContext: t,
             className: n
-        } = e, [, s] = r.useContext(t);
+        } = e, [, r] = s.useContext(t);
         return (0, i.jsx)("div", {
-            className: a(p, n),
-            ref: s
+            className: a(h, n),
+            ref: r
         })
     };
 
-    function S(e) {
-        let t = (0, f.default)(e, E.layerContainer);
+    function m(e) {
+        let t = (0, f.default)(e, _.layerContainer);
         return l(null != t, "Unexpected missing parent container"), t
     }
-    let m = e => {
+    let p = e => {
         let {
             layerContext: t,
             children: n
@@ -81,23 +81,23 @@ function(e, t, n) {
         return (0, i.jsx)(t.Consumer, {
             children: e => (function(e, t) {
                 let [n] = e;
-                return null == n ? null : c.createPortal(r.Children.only(t), n)
+                return null == n ? null : d.createPortal(s.Children.only(t), n)
             })(e, n)
         })
     };
 
-    function T(e) {
-        let t = r.createContext([null, () => {}]),
+    function S(e) {
+        let t = s.createContext([null, () => {}]),
             n = {
-                LayerProvider: e => (0, i.jsx)(h, {
+                LayerProvider: e => (0, i.jsx)(E, {
                     layerContext: t,
                     ...e
                 }),
-                LayerContainer: e => (0, i.jsx)(_, {
+                LayerContainer: e => (0, i.jsx)(g, {
                     layerContext: t,
                     ...e
                 }),
-                Layer: e => (0, i.jsx)(m, {
+                Layer: e => (0, i.jsx)(p, {
                     layerContext: t,
                     ...e
                 }),

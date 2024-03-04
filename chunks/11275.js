@@ -2,18 +2,18 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return c
         }
     });
-    var s = n("917351"),
-        i = n.n(s),
+    var i = n("917351"),
+        s = n.n(i),
         r = n("400683"),
         a = n("605250"),
         o = n("162771"),
-        d = n("718517"),
+        l = n("718517"),
         u = n("802493");
-    let l = new a.default("NonGuildVersions");
-    var f = new class e {
+    let d = new a.default("NonGuildVersions");
+    var c = new class e {
         async getCommittedVersions() {
             try {
                 let e = u.default.nonGuildVersions();
@@ -21,7 +21,7 @@ function(e, t, n) {
                 let t = (await e.getMany()).map(e => [e.id, "version" in e ? e.version : e.versionString]);
                 return Object.fromEntries(null != t ? t : [])
             } catch (e) {
-                return l.warn("couldn't load guild versions", e), {}
+                return d.warn("couldn't load guild versions", e), {}
             }
         }
         handleConnectionOpen(e, t) {
@@ -36,7 +36,7 @@ function(e, t, n) {
                     CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
                     BACKGROUND_SYNC: (e, t) => this.handleConnectionOpen(e, t)
                 }, !(0, r.isCacheEnabled)()) return;
-            o.default.addChangeListener(i.throttle(() => {
+            o.default.addChangeListener(s.throttle(() => {
                 var e;
                 null === (e = u.default.database()) || void 0 === e || e.transaction(e => {
                     let t = o.default.getGuildId();
@@ -45,7 +45,7 @@ function(e, t, n) {
                         versionString: t
                     })
                 })
-            }, 10 * d.default.Millis.SECOND))
+            }, 10 * l.default.Millis.SECOND))
         }
     }
 }

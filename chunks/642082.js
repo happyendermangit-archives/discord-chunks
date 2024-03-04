@@ -1,5 +1,5 @@
-function(t, e, s) {
-    t.exports = {
+function(e, t, n) {
+    e.exports = {
         doubles: {
             step: 4,
             points: [

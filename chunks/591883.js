@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return r
         }
     });
     var i = n("913144"),
-        r = n("353927");
+        s = n("353927");
 
-    function s(e, t) {
+    function r(e, t) {
         i.default.wait(() => {
             i.default.dispatch({
                 type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
-                context: r.MediaEngineContextTypes.DEFAULT,
+                context: s.MediaEngineContextTypes.DEFAULT,
                 userId: e,
                 videoToggleState: t,
                 persist: !1,

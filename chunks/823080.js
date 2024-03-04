@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useSelectState: function() {
-            return o
+            return s
         }
     }), n("222007");
     var r = n("356319"),
-        a = n("880523"),
-        i = n("884691");
+        i = n("880523"),
+        o = n("884691");
 
-    function o(e) {
+    function s(e) {
         let t = (0, r.useMenuTriggerState)(e),
-            n = (0, a.useSingleSelectListState)({
+            n = (0, i.useSingleSelectListState)({
                 ...e,
                 onSelectionChange: n => {
                     null != e.onSelectionChange && e.onSelectionChange(n), t.close()
                 }
             }),
-            [o, s] = (0, i.useState)(!1);
+            [s, a] = (0, o.useState)(!1);
         return {
             ...n,
             ...t,
@@ -27,8 +27,8 @@ function(e, t, n) {
             toggle(e) {
                 0 !== n.collection.size && t.toggle(e)
             },
-            isFocused: o,
-            setFocused: s
+            isFocused: s,
+            setFocused: a
         }
     }
 }

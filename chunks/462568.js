@@ -1,11 +1,11 @@
 function(e, t, n) {
     "use strict";
     var r = n("859514"),
-        o = n("868822"),
-        u = n("727204"),
-        c = n("379792"),
+        i = n("868822"),
+        o = n("727204"),
+        s = n("379792"),
         a = n("952643"),
-        i = n("585034");
+        c = n("585034");
     r({
         target: "Promise",
         stat: !0,
@@ -13,31 +13,31 @@ function(e, t, n) {
     }, {
         allSettled: function(e) {
             var t = this,
-                n = c.f(t),
+                n = s.f(t),
                 r = n.resolve,
-                s = n.reject,
-                l = a(function() {
-                    var n = u(t.resolve),
-                        c = [],
+                u = n.reject,
+                d = a(function() {
+                    var n = o(t.resolve),
+                        s = [],
                         a = 0,
-                        s = 1;
-                    i(e, function(e) {
-                        var u = a++,
-                            i = !1;
-                        s++, o(n, t, e).then(function(e) {
-                            !i && (i = !0, c[u] = {
+                        u = 1;
+                    c(e, function(e) {
+                        var o = a++,
+                            c = !1;
+                        u++, i(n, t, e).then(function(e) {
+                            !c && (c = !0, s[o] = {
                                 status: "fulfilled",
                                 value: e
-                            }, --s || r(c))
+                            }, --u || r(s))
                         }, function(e) {
-                            !i && (i = !0, c[u] = {
+                            !c && (c = !0, s[o] = {
                                 status: "rejected",
                                 reason: e
-                            }, --s || r(c))
+                            }, --u || r(s))
                         })
-                    }), --s || r(c)
+                    }), --u || r(s)
                 });
-            return l.error && s(l.value), n.promise
+            return d.error && u(d.value), n.promise
         }
     })
 }

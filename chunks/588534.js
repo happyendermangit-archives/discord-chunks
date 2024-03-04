@@ -1,7 +1,7 @@
-function(t, e, s) {
-    e.publicEncrypt = s("424522"), e.privateDecrypt = s("894881"), e.privateEncrypt = function(t, s) {
-        return e.publicEncrypt(t, s, !0)
-    }, e.publicDecrypt = function(t, s) {
-        return e.privateDecrypt(t, s, !0)
+function(e, t, n) {
+    t.publicEncrypt = n("424522"), t.privateDecrypt = n("894881"), t.privateEncrypt = function(e, n) {
+        return t.publicEncrypt(e, n, !0)
+    }, t.publicDecrypt = function(e, n) {
+        return t.privateDecrypt(e, n, !0)
     }
 }

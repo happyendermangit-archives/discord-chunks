@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MIN_RADIUS: function() {
-            return s
+            return i
         },
         MAX_RADIUS: function() {
-            return i
+            return s
         },
         TWO_PI: function() {
             return r
@@ -17,8 +17,8 @@ function(e, t, n) {
             return o
         }
     });
-    let s = 780,
-        i = 1e3,
+    let i = 780,
+        s = 1e3,
         r = 2 * Math.PI,
         a = 150,
         o = {

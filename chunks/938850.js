@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var s, i;
+    var i, s;
     n.r(t), n.d(t, {
         AudioSettingsDefaultVolumes: function() {
-            return s
+            return i
         }
-    }), (i = s || (s = {}))[i.USER = 100] = "USER", i[i.STREAM = 18] = "STREAM"
+    }), (s = i || (i = {}))[s.USER = 100] = "USER", s[s.STREAM = 18] = "STREAM"
 }

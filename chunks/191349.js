@@ -1,17 +1,17 @@
-function(t, e, o) {
+function(e, t, n) {
     "use strict";
-    o.r(e), o.d(e, {
+    n.r(t), n.d(t, {
         DEVICE_PUSH_VOIP_PROVIDER: function() {
-            return l
+            return a
         },
         getDevicePushProvider: function() {
-            return i
+            return o
         }
     });
-    var n, d, r = o("773336");
-    let l = null;
+    var i, s, r = n("773336");
+    let a = null;
 
-    function i() {
+    function o() {
         return (0, r.isAndroid)(), null
-    }(n = d || (d = {})).REMINDER = "reminder", n.TOP_MESSAGE_PUSH = "top_messages_push", n.TRENDING_CONTENT_PUSH = "trending_content_push"
+    }(i = s || (s = {})).REMINDER = "reminder", i.TOP_MESSAGE_PUSH = "top_messages_push", i.TRENDING_CONTENT_PUSH = "trending_content_push"
 }

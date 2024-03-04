@@ -5,184 +5,184 @@ function(e, t, n) {
             return T
         },
         default: function() {
-            return C
-        },
-        getEmojiColors: function() {
             return I
         },
+        getEmojiColors: function() {
+            return C
+        },
         getEmojiUrl: function() {
-            return S
+            return A
         }
     }), n("222007"), n("781738"), n("808653"), n("424973");
-    var s = n("736271"),
-        i = n("858619"),
+    var i = n("736271"),
+        s = n("858619"),
         r = n("153043"),
         a = n("233069"),
         o = n("957255"),
-        d = n("697218"),
+        l = n("697218"),
         u = n("315102"),
-        l = n("61069"),
-        f = n("103603"),
-        _ = n("719923"),
-        c = n("49111"),
-        g = n("958706");
-    let m = new Set([g.EmojiDisabledReasons.PREMIUM_LOCKED, g.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED]),
-        h = new Set([g.EmojiDisabledReasons.PREMIUM_LOCKED, g.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE, g.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED, g.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE]),
-        v = new Set([g.EmojiDisabledReasons.DISALLOW_EXTERNAL, g.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE, g.EmojiDisabledReasons.ONLY_GUILD_EMOJIS_ALLOWED]);
+        d = n("61069"),
+        c = n("103603"),
+        f = n("719923"),
+        _ = n("49111"),
+        h = n("958706");
+    let E = new Set([h.EmojiDisabledReasons.PREMIUM_LOCKED, h.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED]),
+        g = new Set([h.EmojiDisabledReasons.PREMIUM_LOCKED, h.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE, h.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED, h.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE]),
+        m = new Set([h.EmojiDisabledReasons.DISALLOW_EXTERNAL, h.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE, h.EmojiDisabledReasons.ONLY_GUILD_EMOJIS_ALLOWED]);
 
-    function E(e) {
-        if (e.type === i.EmojiTypes.GUILD) return !0;
+    function p(e) {
+        if (e.type === s.EmojiTypes.GUILD) return !0;
         return null != e.guildId
     }
 
-    function p(e, t) {
-        return null != e && null != t && (!E(e) || t === e.guildId)
+    function S(e, t) {
+        return null != e && null != t && (!p(e) || t === e.guildId)
     }
 
-    function y(e) {
+    function v(e) {
         var t;
         let {
             emoji: n,
-            channel: i,
+            channel: s,
             intention: u,
-            forceIncludeExternalGuilds: l
+            forceIncludeExternalGuilds: d
         } = e;
-        if (u === g.EmojiIntention.COMMUNITY_CONTENT_ONLY && null == n.guildId) return g.EmojiDisabledReasons.ONLY_GUILD_EMOJIS_ALLOWED;
-        if (!E(n)) return null;
-        let f = null !== (t = e.guildId) && void 0 !== t ? t : null == i ? void 0 : i.getGuildId(),
-            m = null != i && (0, a.isGuildTextChannelType)(i.type),
-            h = null != i && (0, a.isGuildVocalChannelType)(i.type),
-            v = p(n, f),
-            y = o.default.can(c.Permissions.USE_EXTERNAL_EMOJIS, i);
-        if (u === g.EmojiIntention.COMMUNITY_CONTENT || u === g.EmojiIntention.COMMUNITY_CONTENT_ONLY) return v && n.available ? null : g.EmojiDisabledReasons.DISALLOW_EXTERNAL;
-        if (!(0, g.isExternalEmojiAllowedForIntention)(u) && !p(n, f) && !l || (m || h) && !v && !y) return g.EmojiDisabledReasons.DISALLOW_EXTERNAL;
-        if (!n.available) return g.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
-        let T = d.default.getCurrentUser();
-        if (!_.default.canUseEmojisEverywhere(T) && !v) {
-            if (u === g.EmojiIntention.STATUS) return g.EmojiDisabledReasons.PREMIUM_LOCKED;
-            if (!n.managed) return g.EmojiDisabledReasons.PREMIUM_LOCKED
+        if (u === h.EmojiIntention.COMMUNITY_CONTENT_ONLY && null == n.guildId) return h.EmojiDisabledReasons.ONLY_GUILD_EMOJIS_ALLOWED;
+        if (!p(n)) return null;
+        let c = null !== (t = e.guildId) && void 0 !== t ? t : null == s ? void 0 : s.getGuildId(),
+            E = null != s && (0, a.isGuildTextChannelType)(s.type),
+            g = null != s && (0, a.isGuildVocalChannelType)(s.type),
+            m = S(n, c),
+            v = o.default.can(_.Permissions.USE_EXTERNAL_EMOJIS, s);
+        if (u === h.EmojiIntention.COMMUNITY_CONTENT || u === h.EmojiIntention.COMMUNITY_CONTENT_ONLY) return m && n.available ? null : h.EmojiDisabledReasons.DISALLOW_EXTERNAL;
+        if (!(0, h.isExternalEmojiAllowedForIntention)(u) && !S(n, c) && !d || (E || g) && !m && !v) return h.EmojiDisabledReasons.DISALLOW_EXTERNAL;
+        if (!n.available) return h.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
+        let T = l.default.getCurrentUser();
+        if (!f.default.canUseEmojisEverywhere(T) && !m) {
+            if (u === h.EmojiIntention.STATUS) return h.EmojiDisabledReasons.PREMIUM_LOCKED;
+            if (!n.managed) return h.EmojiDisabledReasons.PREMIUM_LOCKED
         }
-        if ((0, r.isUnusableRoleSubscriptionEmoji)(n, null != f ? f : void 0)) return (0, s.shouldHideGuildPurchaseEntryPoints)(n.guildId) ? g.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : g.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
-        return !n.animated || _.default.canUseAnimatedEmojis(T) || (0, r.isPurchasableRoleSubscriptionEmoji)(n) ? null : g.EmojiDisabledReasons.PREMIUM_LOCKED
+        if ((0, r.isUnusableRoleSubscriptionEmoji)(n, null != c ? c : void 0)) return (0, i.shouldHideGuildPurchaseEntryPoints)(n.guildId) ? h.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : h.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
+        return !n.animated || f.default.canUseAnimatedEmojis(T) || (0, r.isPurchasableRoleSubscriptionEmoji)(n) ? null : h.EmojiDisabledReasons.PREMIUM_LOCKED
     }
 
     function T(e, t) {
         let n = 0,
-            s = 0,
+            i = 0,
             r = 0,
             a = 0,
             o = 0,
-            d = 0;
+            l = 0;
         return e.forEach(e => {
-            null != e.id ? (e.type === i.EmojiTypes.GUILD && (e.guildId === t ? e.managed ? a++ : s++ : e.managed ? o++ : r++), e.animated && d++) : n++
+            null != e.id ? (e.type === s.EmojiTypes.GUILD && (e.guildId === t ? e.managed ? a++ : i++ : e.managed ? o++ : r++), e.animated && l++) : n++
         }), {
             unicode: n,
-            custom: s,
+            custom: i,
             customExternal: r,
             managed: a,
             managedExternal: o,
-            animated: d
+            animated: l
         }
     }
-    var C = {
+    var I = {
         sanitizeEmojiName(e) {
-            for (e = e.replace(g.EMOJI_RE, "").slice(0, g.EMOJI_MAX_LENGTH); e.length < 2;) e += "_";
+            for (e = e.replace(h.EMOJI_RE, "").slice(0, h.EMOJI_MAX_LENGTH); e.length < 2;) e += "_";
             return e
         },
-        filterUnsupportedEmojis: l.default.filterUnsupportedEmojis,
-        getURL: l.default.getURL,
-        isInternalEmojiForGuildId: p,
-        getEmojiUnavailableReason: y,
-        isCustomEmoji: E,
+        filterUnsupportedEmojis: d.default.filterUnsupportedEmojis,
+        getURL: d.default.getURL,
+        isInternalEmojiForGuildId: S,
+        getEmojiUnavailableReason: v,
+        isCustomEmoji: p,
         isEmojiFiltered(e) {
             let {
                 emoji: t,
                 channel: n,
-                intention: s,
-                guildId: i
-            } = e, r = y({
+                intention: i,
+                guildId: s
+            } = e, r = v({
                 emoji: t,
                 channel: n,
-                intention: s,
-                guildId: i
+                intention: i,
+                guildId: s
             });
-            return v.has(r)
+            return m.has(r)
         },
         isEmojiPremiumLocked(e) {
             let {
                 emoji: t,
                 channel: n,
-                intention: s,
-                guildId: i
-            } = e, r = y({
+                intention: i,
+                guildId: s
+            } = e, r = v({
                 emoji: t,
                 channel: n,
-                guildId: i,
-                intention: s
+                guildId: s,
+                intention: i
             });
-            return m.has(r)
+            return E.has(r)
         },
         isEmojiCategoryNitroLocked(e) {
             let {
                 categoryEmojis: t,
                 channel: n,
-                intention: s
-            } = e, i = t.reduce((e, t) => {
-                let i = y({
+                intention: i
+            } = e, s = t.reduce((e, t) => {
+                let s = v({
                     emoji: t,
                     channel: n,
-                    intention: s
+                    intention: i
                 });
-                return (i === g.EmojiDisabledReasons.PREMIUM_LOCKED || i === g.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE) && e.push(i), e
-            }, []), r = i.some(e => e === g.EmojiDisabledReasons.PREMIUM_LOCKED);
-            return r && i.length === t.length
+                return (s === h.EmojiDisabledReasons.PREMIUM_LOCKED || s === h.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE) && e.push(s), e
+            }, []), r = s.some(e => e === h.EmojiDisabledReasons.PREMIUM_LOCKED);
+            return r && s.length === t.length
         },
         isEmojiFilteredOrLocked(e) {
             let {
                 emoji: t,
                 channel: n,
-                intention: s
+                intention: i
             } = e;
             return this.isEmojiFiltered({
                 emoji: t,
                 channel: n,
-                intention: s
+                intention: i
             }) || this.isEmojiPremiumLocked({
                 emoji: t,
                 channel: n,
-                intention: s
+                intention: i
             })
         },
         isEmojiDisabled(e) {
             let {
                 emoji: t,
                 channel: n,
-                intention: s
-            } = e, i = y({
+                intention: i
+            } = e, s = v({
                 emoji: t,
                 channel: n,
-                intention: s
+                intention: i
             });
-            return h.has(i)
+            return g.has(s)
         },
         isFileTooBig: e => e.size > 2097152,
-        isDataTooBig: e => (0, f.dataUriFileSize)(e) > g.EMOJI_MAX_FILESIZE
+        isDataTooBig: e => (0, c.dataUriFileSize)(e) > h.EMOJI_MAX_FILESIZE
     };
-    async function I(e) {
-        return await l.default.getEmojiColors(e)
+    async function C(e) {
+        return await d.default.getEmojiColors(e)
     }
 
-    function S(e) {
+    function A(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
             {
                 id: n,
-                name: s,
-                animated: i
+                name: i,
+                animated: s
             } = e;
         return null != n ? u.default.getEmojiURL({
             id: n,
             size: t,
-            animated: null != i && i
-        }) : l.default.getURL(s)
+            animated: null != s && s
+        }) : d.default.getURL(i)
     }
 }

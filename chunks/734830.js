@@ -1,45 +1,45 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("463483"),
-        i = s("599235"),
-        n = s("249089"),
-        c = s("487045");
+    var r = n("463483"),
+        i = n("599235"),
+        o = n("249089"),
+        s = n("487045");
 
-    function o(t, e) {
-        r.equal(e.length, 24, "Invalid key length");
-        var s = e.slice(0, 8),
-            i = e.slice(8, 16),
-            n = e.slice(16, 24);
-        "encrypt" === t ? this.ciphers = [c.create({
-            type: "encrypt",
-            key: s
-        }), c.create({
-            type: "decrypt",
-            key: i
-        }), c.create({
+    function a(e, t) {
+        r.equal(t.length, 24, "Invalid key length");
+        var n = t.slice(0, 8),
+            i = t.slice(8, 16),
+            o = t.slice(16, 24);
+        "encrypt" === e ? this.ciphers = [s.create({
             type: "encrypt",
             key: n
-        })] : this.ciphers = [c.create({
+        }), s.create({
             type: "decrypt",
-            key: n
-        }), c.create({
+            key: i
+        }), s.create({
+            type: "encrypt",
+            key: o
+        })] : this.ciphers = [s.create({
+            type: "decrypt",
+            key: o
+        }), s.create({
             type: "encrypt",
             key: i
-        }), c.create({
+        }), s.create({
             type: "decrypt",
-            key: s
+            key: n
         })]
     }
 
-    function f(t) {
-        n.call(this, t);
-        var e = new o(this.type, this.options.key);
-        this._edeState = e
+    function c(e) {
+        o.call(this, e);
+        var t = new a(this.type, this.options.key);
+        this._edeState = t
     }
-    i(f, n), t.exports = f, f.create = function(t) {
-        return new f(t)
-    }, f.prototype._update = function(t, e, s, r) {
+    i(c, o), e.exports = c, c.create = function(e) {
+        return new c(e)
+    }, c.prototype._update = function(e, t, n, r) {
         var i = this._edeState;
-        i.ciphers[0]._update(t, e, s, r), i.ciphers[1]._update(s, r, s, r), i.ciphers[2]._update(s, r, s, r)
-    }, f.prototype._pad = c.prototype._pad, f.prototype._unpad = c.prototype._unpad
+        i.ciphers[0]._update(e, t, n, r), i.ciphers[1]._update(n, r, n, r), i.ciphers[2]._update(n, r, n, r)
+    }, c.prototype._pad = s.prototype._pad, c.prototype._unpad = s.prototype._unpad
 }

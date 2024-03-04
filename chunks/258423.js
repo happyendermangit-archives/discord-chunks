@@ -1,12 +1,12 @@
-function(t, r, n) {
-    var e = n("888633"),
-        o = n("466731");
-    t.exports = function(t) {
-        for (var r = o(t), n = r.length; n--;) {
-            var i = r[n],
-                u = t[i];
-            r[n] = [i, u, e(u)]
+function(e, t, n) {
+    var r = n("888633"),
+        i = n("466731");
+    e.exports = function(e) {
+        for (var t = i(e), n = t.length; n--;) {
+            var o = t[n],
+                s = e[o];
+            t[n] = [o, s, r(s)]
         }
-        return r
+        return t
     }
 }

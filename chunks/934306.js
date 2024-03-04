@@ -11,12 +11,12 @@ function(e, t, n) {
             return u
         },
         shouldHandleNewPanelsRoute: function() {
-            return c
+            return d
         }
     });
     var i = n("21121"),
-        r = n("99317"),
-        s = n("491246"),
+        s = n("99317"),
+        r = n("491246"),
         a = n("49111");
 
     function o() {
@@ -24,18 +24,18 @@ function(e, t, n) {
     }
 
     function l() {
-        return (0, i.isInMainTabsExperiment)() && !(0, r.getNavYouBarExperiment)({
+        return (0, i.isInMainTabsExperiment)() && !(0, s.getNavYouBarExperiment)({
             location: "isSplitMessagesTab"
         }).showYouBar
     }
 
     function u() {
         if (!l()) return !1;
-        let e = (0, s.default)();
+        let e = (0, r.default)();
         return (null == e ? void 0 : e.name) === "messages"
     }
 
-    function c(e) {
+    function d(e) {
         return !!o() && (!l() || null != e && e !== a.ME)
     }
 }

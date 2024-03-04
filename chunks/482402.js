@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var i, r;
+    var i, s;
     n.r(t), n.d(t, {
         ForumLayout: function() {
             return i
         }
-    }), n("222007"), (r = i || (i = {}))[r.DEFAULT = 0] = "DEFAULT", r[r.LIST = 1] = "LIST", r[r.GRID = 2] = "GRID"
+    }), n("222007"), (s = i || (i = {}))[s.DEFAULT = 0] = "DEFAULT", s[s.LIST = 1] = "LIST", s[s.GRID = 2] = "GRID"
 }

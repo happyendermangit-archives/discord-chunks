@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     });
     var i = n("862205"),
-        r = n("718517");
-    let s = (0, i.createExperiment)({
+        s = n("718517");
+    let r = (0, i.createExperiment)({
         kind: "user",
         id: "2023-10_video_hook_stale_frame_timeout",
         label: "Video Hook Stale Frame Timeout",
@@ -18,45 +18,45 @@ function(e, t, n) {
             id: 1,
             label: "1 second",
             config: {
-                videoHookStaleFrameTimeoutMs: 1 * r.default.Millis.SECOND
+                videoHookStaleFrameTimeoutMs: 1 * s.default.Millis.SECOND
             }
         }, {
             id: 2,
             label: "5 seconds",
             config: {
-                videoHookStaleFrameTimeoutMs: 5 * r.default.Millis.SECOND
+                videoHookStaleFrameTimeoutMs: 5 * s.default.Millis.SECOND
             }
         }, {
             id: 3,
             label: "10 seconds",
             config: {
-                videoHookStaleFrameTimeoutMs: 10 * r.default.Millis.SECOND
+                videoHookStaleFrameTimeoutMs: 10 * s.default.Millis.SECOND
             }
         }, {
             id: 4,
             label: "30 seconds",
             config: {
-                videoHookStaleFrameTimeoutMs: 30 * r.default.Millis.SECOND
+                videoHookStaleFrameTimeoutMs: 30 * s.default.Millis.SECOND
             }
         }, {
             id: 5,
             label: "60 seconds",
             config: {
-                videoHookStaleFrameTimeoutMs: 60 * r.default.Millis.SECOND
+                videoHookStaleFrameTimeoutMs: 60 * s.default.Millis.SECOND
             }
         }, {
             id: 5,
             label: "120 seconds",
             config: {
-                videoHookStaleFrameTimeoutMs: 120 * r.default.Millis.SECOND
+                videoHookStaleFrameTimeoutMs: 120 * s.default.Millis.SECOND
             }
         }]
     });
     var a = {
-        getConfig: (e, t, n) => e ? s.getCurrentConfig({
+        getConfig: (e, t, n) => e ? r.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: n
-        }) : s.definition.defaultConfig
+        }) : r.definition.defaultConfig
     }
 }

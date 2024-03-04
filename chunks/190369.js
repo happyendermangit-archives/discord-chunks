@@ -11,49 +11,49 @@ function(e, t, n) {
     n("222007"), n("70102"), n("808653"), Object.defineProperty(t, "__esModule", {
         value: !0
     });
-    var o, u = "https://js.stripe.com/v3",
-        c = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
+    var i, o = "https://js.stripe.com/v3",
+        s = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
         a = "loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used",
-        i = function() {
-            for (var e = document.querySelectorAll('script[src^="'.concat(u, '"]')), t = 0; t < e.length; t++) {
+        c = function() {
+            for (var e = document.querySelectorAll('script[src^="'.concat(o, '"]')), t = 0; t < e.length; t++) {
                 var n = e[t];
-                if (c.test(n.src)) return n
+                if (s.test(n.src)) return n
             }
             return null
         },
-        s = function(e) {
+        u = function(e) {
             var t = e && !e.advancedFraudSignals ? "?advancedFraudSignals=false" : "",
                 n = document.createElement("script");
-            n.src = "".concat(u).concat(t);
+            n.src = "".concat(o).concat(t);
             var r = document.head || document.body;
             if (!r) throw Error("Expected document.body not to be null. Stripe.js requires a <body> element.");
             return r.appendChild(n), n
         },
-        l = function(e, t) {
+        d = function(e, t) {
             e && e._registerWrapper && e._registerWrapper({
                 name: "stripe-js",
                 version: "2.0.0",
                 startTime: t
             })
         },
-        f = null,
-        p = function(e, t, n) {
+        l = null,
+        f = function(e, t, n) {
             if (null === e) return null;
             var r = e.apply(void 0, t);
-            return l(r, n), r
+            return d(r, n), r
         },
-        d = function(e) {
+        p = function(e) {
             var t = "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    ".concat(JSON.stringify(e), "\n");
             if (null === e || "object" !== r(e)) throw Error(t);
             if (1 === Object.keys(e).length && "boolean" == typeof e.advancedFraudSignals) return e;
             throw Error(t)
         },
-        m = !1,
-        y = function() {
+        h = !1,
+        v = function() {
             for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-            m = !0;
-            var u = Date.now();
-            return (e = o, null !== f ? f : f = new Promise(function(t, n) {
+            h = !0;
+            var o = Date.now();
+            return (e = i, null !== l ? l : l = new Promise(function(t, n) {
                 if ("undefined" == typeof window || "undefined" == typeof document) {
                     t(null);
                     return
@@ -63,8 +63,8 @@ function(e, t, n) {
                     return
                 }
                 try {
-                    var r = i();
-                    r && e ? console.warn(a) : !r && (r = s(e)), r.addEventListener("load", function() {
+                    var r = c();
+                    r && e ? console.warn(a) : !r && (r = u(e)), r.addEventListener("load", function() {
                         window.Stripe ? t(window.Stripe) : n(Error("Stripe.js not available"))
                     }), r.addEventListener("error", function() {
                         n(Error("Failed to load Stripe.js"))
@@ -74,16 +74,16 @@ function(e, t, n) {
                     return
                 }
             })).then(function(e) {
-                return p(e, n, u)
+                return f(e, n, o)
             })
         };
-    y.setLoadParameters = function(e) {
-        if (!(m && o && Object.keys(d(e)).reduce(function(t, n) {
+    v.setLoadParameters = function(e) {
+        if (!(h && i && Object.keys(p(e)).reduce(function(t, n) {
                 var r;
-                return t && e[n] === (null === (r = o) || void 0 === r ? void 0 : r[n])
+                return t && e[n] === (null === (r = i) || void 0 === r ? void 0 : r[n])
             }, !0))) {
-            if (m) throw Error("You cannot change load parameters after calling loadStripe");
-            o = d(e)
+            if (h) throw Error("You cannot change load parameters after calling loadStripe");
+            i = p(e)
         }
-    }, t.loadStripe = y
+    }, t.loadStripe = v
 }

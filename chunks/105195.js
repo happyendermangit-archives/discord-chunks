@@ -1,18 +1,18 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
     var r = Array.prototype.slice,
-        i = s("142726"),
-        n = Object.keys,
-        c = n ? function(t) {
-            return n(t)
-        } : s("847480"),
-        o = Object.keys;
-    c.shim = function() {
+        i = n("142726"),
+        o = Object.keys,
+        s = o ? function(e) {
+            return o(e)
+        } : n("847480"),
+        a = Object.keys;
+    s.shim = function() {
         return Object.keys ? ! function() {
-            var t = Object.keys(arguments);
-            return t && t.length === arguments.length
-        }(1, 2) && (Object.keys = function(t) {
-            return i(t) ? o(r.call(t)) : o(t)
-        }) : Object.keys = c, Object.keys || c
-    }, t.exports = c
+            var e = Object.keys(arguments);
+            return e && e.length === arguments.length
+        }(1, 2) && (Object.keys = function(e) {
+            return i(e) ? a(r.call(e)) : a(e)
+        }) : Object.keys = s, Object.keys || s
+    }, e.exports = s
 }

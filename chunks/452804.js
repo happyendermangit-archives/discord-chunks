@@ -2,52 +2,52 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         saveGuildFolders: function() {
-            return E
+            return _
         },
         saveClientTheme: function() {
-            return h
+            return E
         },
         default: function() {
-            return _
+            return g
         }
     });
     var i = n("151426"),
-        r = n("750028"),
-        s = n("819855"),
+        s = n("750028"),
+        r = n("819855"),
         a = n("913144"),
         o = n("714657"),
         l = n("737292"),
         u = n("161778"),
-        c = n("845579"),
-        d = n("872173"),
+        d = n("845579"),
+        c = n("872173"),
         f = n("116319");
 
-    function E(e) {
-        return d.PreloadedUserSettingsActionCreators.updateAsync("guildFolders", t => {
+    function _(e) {
+        return c.PreloadedUserSettingsActionCreators.updateAsync("guildFolders", t => {
             t.folders = e.map(e => {
                 let t = i.GuildFolder.create({
                     guildIds: e.guildIds
                 });
-                return null != e.folderId && (t.id = r.Int64Value.create({
+                return null != e.folderId && (t.id = s.Int64Value.create({
                     value: String(e.folderId)
-                })), null != e.folderColor && (t.color = r.UInt64Value.create({
+                })), null != e.folderColor && (t.color = s.UInt64Value.create({
                     value: String(e.folderColor)
-                })), null != e.folderName && "" !== e.folderName && (t.name = r.StringValue.create({
+                })), null != e.folderName && "" !== e.folderName && (t.name = s.StringValue.create({
                     value: String(e.folderName)
                 })), t
             })
-        }, d.UserSettingsDelay.SLOW_USER_ACTION)
-    }
-
-    function p(e) {
-        return (0, s.isThemeLight)(e) ? i.Theme.LIGHT : i.Theme.DARK
+        }, c.UserSettingsDelay.SLOW_USER_ACTION)
     }
 
     function h(e) {
+        return (0, r.isThemeLight)(e) ? i.Theme.LIGHT : i.Theme.DARK
+    }
+
+    function E(e) {
         let {
             backgroundGradientPresetId: t,
             theme: n
-        } = e, i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.UserSettingsDelay.INFREQUENT_USER_ACTION;
+        } = e, i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.UserSettingsDelay.INFREQUENT_USER_ACTION;
         if (a.default.dispatch({
                 type: "UNSYNCED_USER_SETTINGS_UPDATE",
                 settings: {
@@ -65,18 +65,18 @@ function(e, t, n) {
                         }
                     }
                 }
-            }), l.default.shouldSync("appearance")) return d.PreloadedUserSettingsActionCreators.updateAsync("appearance", e => {
+            }), l.default.shouldSync("appearance")) return c.PreloadedUserSettingsActionCreators.updateAsync("appearance", e => {
             var i;
-            e.theme = p(n), e.clientThemeSettings = {
+            e.theme = h(n), e.clientThemeSettings = {
                 backgroundGradientPresetId: null != (i = {
                     backgroundGradientPresetId: t
-                }).backgroundGradientPresetId ? r.UInt32Value.create({
+                }).backgroundGradientPresetId ? s.UInt32Value.create({
                     value: i.backgroundGradientPresetId
                 }) : void 0
             }
         }, i)
     }
-    var _ = {
+    var g = {
         overrideLocale(e) {
             a.default.dispatch({
                 type: "USER_SETTINGS_LOCALE_OVERRIDE",
@@ -96,13 +96,13 @@ function(e, t, n) {
                     text: {
                         shouldSync: e,
                         settings: e ? {} : {
-                            inlineAttachmentMedia: c.InlineAttachmentMedia.getSetting(),
-                            inlineEmbedMedia: c.InlineEmbedMedia.getSetting(),
-                            renderEmbeds: c.RenderEmbeds.getSetting(),
-                            renderReactions: c.RenderReactions.getSetting(),
-                            animateEmoji: c.AnimateEmoji.getSetting(),
-                            animateStickers: c.AnimateStickers.getSetting(),
-                            gifAutoPlay: c.GifAutoPlay.getSetting()
+                            inlineAttachmentMedia: d.InlineAttachmentMedia.getSetting(),
+                            inlineEmbedMedia: d.InlineEmbedMedia.getSetting(),
+                            renderEmbeds: d.RenderEmbeds.getSetting(),
+                            renderReactions: d.RenderReactions.getSetting(),
+                            animateEmoji: d.AnimateEmoji.getSetting(),
+                            animateStickers: d.AnimateStickers.getSetting(),
+                            gifAutoPlay: d.GifAutoPlay.getSetting()
                         }
                     }
                 }
@@ -120,7 +120,7 @@ function(e, t, n) {
                             clientThemeSettings: {
                                 backgroundGradientPresetId: null === (t = o.default.gradientPreset) || void 0 === t ? void 0 : t.id
                             },
-                            developerMode: c.DeveloperMode.getSetting()
+                            developerMode: d.DeveloperMode.getSetting()
                         }
                     }
                 }
@@ -139,11 +139,11 @@ function(e, t, n) {
                 settings: t
             })
         },
-        updateLocale: e => d.PreloadedUserSettingsActionCreators.updateAsync("localization", t => {
-            t.locale = r.StringValue.create({
+        updateLocale: e => c.PreloadedUserSettingsActionCreators.updateAsync("localization", t => {
+            t.locale = s.StringValue.create({
                 value: e
             })
-        }, d.UserSettingsDelay.INFREQUENT_USER_ACTION),
+        }, c.UserSettingsDelay.INFREQUENT_USER_ACTION),
         updateTheme(e) {
             a.default.dispatch({
                 type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
@@ -154,9 +154,9 @@ function(e, t, n) {
                         }
                     }
                 }
-            }), l.default.shouldSync("appearance") && d.PreloadedUserSettingsActionCreators.updateAsync("appearance", t => {
-                t.theme = p(e)
-            }, d.UserSettingsDelay.INFREQUENT_USER_ACTION)
+            }), l.default.shouldSync("appearance") && c.PreloadedUserSettingsActionCreators.updateAsync("appearance", t => {
+                t.theme = h(e)
+            }, c.UserSettingsDelay.INFREQUENT_USER_ACTION)
         }
     }
 }

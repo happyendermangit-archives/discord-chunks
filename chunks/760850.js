@@ -1,49 +1,49 @@
-function(t, e, n) {
+function(e, t, n) {
     "use strict";
-    let a;
-    n.r(e), n.d(e, {
+    let i;
+    n.r(t), n.d(t, {
         cleanExecutablePath: function() {
-            return p
+            return _
         },
         default: function() {
-            return I
+            return h
         }
     }), n("781738"), n("424973");
-    var i = n("917351"),
-        l = n.n(i),
-        r = n("49671"),
-        u = n("605250"),
-        d = n("773336"),
-        o = n("50885");
-    let c = [];
+    var s = n("917351"),
+        r = n.n(s),
+        a = n("49671"),
+        o = n("605250"),
+        l = n("773336"),
+        u = n("50885");
+    let d = [];
 
-    function s(t) {
-        return t = t.toLowerCase(), (0, d.isWindows)() && (t = (t = t.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), t
+    function c(e) {
+        return e = e.toLowerCase(), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), e
     }
 
-    function E(t) {
-        null != t && "" !== t && (!(t = s(t)).endsWith("/") && (t += "/"), c.push(t))
+    function f(e) {
+        null != e && "" !== e && (!(e = c(e)).endsWith("/") && (e += "/"), d.push(e))
     }
 
-    function p(t) {
-        t = s(t);
-        let e = !1;
-        return (c.forEach(n => {
-            !e && t.startsWith(n) && (t = t.substr(n.length), e = !0)
-        }), e) ? t = t.includes("dosbox.exe") ? t.split("/").slice(-3).join("/") : t.split("/").slice(-2).join("/") : null
+    function _(e) {
+        e = c(e);
+        let t = !1;
+        return (d.forEach(n => {
+            !t && e.startsWith(n) && (e = e.substr(n.length), t = !0)
+        }), t) ? e = e.includes("dosbox.exe") ? e.split("/").slice(-3).join("/") : e.split("/").slice(-2).join("/") : null
     }
-    async function I() {
-        if (null != a) return a;
+    async function h() {
+        if (null != i) return i;
         try {
-            await o.default.ensureModule("discord_game_utils"), a = await o.default.requireModule("discord_game_utils")
-        } catch (t) {
-            new(0, u.default)("GamesActionCreators").error("could not load discord_game_utils", t)
+            await u.default.ensureModule("discord_game_utils"), i = await u.default.requireModule("discord_game_utils")
+        } catch (e) {
+            new(0, o.default)("GamesActionCreators").error("could not load discord_game_utils", e)
         }
-        if ((0, d.isWindows)()) {
-            let t = r.default.process.env;
-            E(t.LOCALAPPDATA), E(t["PROGRAMFILES(X86)"]), E(t.PROGRAMFILES), E(t.PROGRAMW6432), E(t.PROGRAMDATA), E("/games/"), E("/steamlibrary/steamapps/common/")
+        if ((0, l.isWindows)()) {
+            let e = a.default.process.env;
+            f(e.LOCALAPPDATA), f(e["PROGRAMFILES(X86)"]), f(e.PROGRAMFILES), f(e.PROGRAMW6432), f(e.PROGRAMDATA), f("/games/"), f("/steamlibrary/steamapps/common/")
         }
-        let t = r.default.remoteApp.getPath;
-        return E(await t("home")), E(await t("appData")), E(await t("desktop")), E(await t("documents")), E(await t("downloads")), (c = l.uniq(c)).sort((t, e) => e.length - t.length), a
+        let e = a.default.remoteApp.getPath;
+        return f(await e("home")), f(await e("appData")), f(await e("desktop")), f(await e("documents")), f(await e("downloads")), (d = r.uniq(d)).sort((e, t) => t.length - e.length), i
     }
 }

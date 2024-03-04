@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         EntityDao: function() {
-            return s
+            return r
         }
     }), n("686130"), n("781738");
     var i = n("999673"),
-        r = n("429231");
-    class s {
+        s = n("429231");
+    class r {
         get prefix() {
             return this.table.prefix
         }
         withoutLogging() {
-            return new s(this.originalPrefix, this.table.tableId, this.table.database, !1)
+            return new r(this.originalPrefix, this.table.tableId, this.table.database, !1)
         }
         get(e) {
             return this.table.get([e])
@@ -69,20 +69,20 @@ function(e, t, n) {
             }
         }
         constructor(e, t, n, i = !0) {
-            this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
+            this.originalPrefix = e, this.table = new s.Table([e], t, n, i)
         }
     }
     class a {
         static fromDatabaseTransaction(e, t, n) {
-            return new a(new r.TableTransaction(e, t, n))
+            return new a(new s.TableTransaction(e, t, n))
         }
         put(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
-            return this.transaction.put(s.cell(e, null), t)
+            return this.transaction.put(r.cell(e, null), t)
         }
         putAll(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
-            return this.transaction.putAll(e.map(e => s.cell(e, null)), t)
+            return this.transaction.putAll(e.map(e => r.cell(e, null)), t)
         }
         replaceAll(e) {
             this.delete(), this.putAll(e)

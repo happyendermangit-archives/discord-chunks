@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("677935"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("677935"),
+        a = n.n(r),
         o = n("793722"),
         l = n("441822");
 
@@ -16,57 +16,57 @@ function(e, t, n) {
         let {
             streamId: t,
             paused: n,
-            onReady: s,
+            onReady: r,
             onResize: u,
-            className: c,
-            ...d
-        } = e, f = r.useRef(null), E = r.useRef({
+            className: d,
+            ...c
+        } = e, f = s.useRef(null), _ = s.useRef({
             width: 0,
             height: 0
         });
-        r.useLayoutEffect(() => {
+        s.useLayoutEffect(() => {
             let e = f.current;
             if (null != e) return (0, o.registerActiveSink)(t), e.srcObject = (0, l.getVideoStream)(t), () => {
                 (0, o.unregisterActiveSink)(t), e.srcObject = null, e.load()
             }
-        }, [t]), r.useEffect(() => {
+        }, [t]), s.useEffect(() => {
             var e, i;
             return n ? (null === (e = f.current) || void 0 === e || e.pause(), (0, o.unregisterActiveSink)(t)) : null === (i = f.current) || void 0 === i || i.play().catch(() => {}), () => {
                 n && (0, o.registerActiveSink)(t)
             }
         }, [n]);
-        let p = r.useCallback(() => {
+        let h = s.useCallback(() => {
             var e, t, n, i;
             let {
-                width: r,
-                height: s
-            } = E.current, a = null !== (n = null === (e = f.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, o = null !== (i = null === (t = f.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
-            if (r !== a || s !== o) {
+                width: s,
+                height: r
+            } = _.current, a = null !== (n = null === (e = f.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, o = null !== (i = null === (t = f.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
+            if (s !== a || r !== o) {
                 let e = {
                     width: a,
                     height: o
                 };
-                null == u || u(e), E.current = e
+                null == u || u(e), _.current = e
             }
         }, [u]);
-        r.useLayoutEffect(() => {
+        s.useLayoutEffect(() => {
             let e = f.current;
-            if (null != e) return e.addEventListener("resize", p), () => e.removeEventListener("resize", p)
-        }, [p]);
-        let h = r.useCallback(() => {
-                null == s || s()
-            }, [s]),
-            _ = r.useCallback(e => {
+            if (null != e) return e.addEventListener("resize", h), () => e.removeEventListener("resize", h)
+        }, [h]);
+        let E = s.useCallback(() => {
+                null == r || r()
+            }, [r]),
+            g = s.useCallback(e => {
                 !n && e.currentTarget.play()
             }, [n]);
         return (0, i.jsx)("video", {
-            className: a("media-engine-video", c),
+            className: a("media-engine-video", d),
             ref: f,
             autoPlay: !0,
-            onPause: _,
-            onCanPlayThrough: h,
+            onPause: g,
+            onCanPlayThrough: E,
             muted: !0,
-            ...d
+            ...c
         })
     }
     u.defaultProps = {

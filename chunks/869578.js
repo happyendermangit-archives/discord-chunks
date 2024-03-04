@@ -1,20 +1,20 @@
-function(t, e, s) {
-    e["des-ecb"] = {
+function(e, t, n) {
+    t["des-ecb"] = {
         key: 8,
         iv: 0
-    }, e["des-cbc"] = e.des = {
+    }, t["des-cbc"] = t.des = {
         key: 8,
         iv: 8
-    }, e["des-ede3-cbc"] = e.des3 = {
+    }, t["des-ede3-cbc"] = t.des3 = {
         key: 24,
         iv: 8
-    }, e["des-ede3"] = {
+    }, t["des-ede3"] = {
         key: 24,
         iv: 0
-    }, e["des-ede-cbc"] = {
+    }, t["des-ede-cbc"] = {
         key: 16,
         iv: 8
-    }, e["des-ede"] = {
+    }, t["des-ede"] = {
         key: 16,
         iv: 0
     }

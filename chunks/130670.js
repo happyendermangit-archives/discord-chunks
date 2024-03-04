@@ -20,14 +20,14 @@ function(e, t, n) {
             d = !(0, i.default)() && n,
             f = (s.left + (d && c ? c.offsetLeft : 0)) / u,
             p = (s.top + (d && c ? c.offsetTop : 0)) / l,
-            h = s.width / u,
-            m = s.height / l;
+            m = s.width / u,
+            h = s.height / l;
         return {
-            width: h,
-            height: m,
+            width: m,
+            height: h,
             top: p,
-            right: f + h,
-            bottom: p + m,
+            right: f + m,
+            bottom: p + h,
             left: f,
             x: f,
             y: p

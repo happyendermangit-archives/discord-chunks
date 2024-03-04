@@ -1,6 +1,6 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = {
+    e.exports = {
         "2.16.840.1.101.3.4.1.1": "aes-128-ecb",
         "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
         "2.16.840.1.101.3.4.1.3": "aes-128-ofb",

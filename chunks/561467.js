@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var i, r;
+    var i, s;
     n.r(t), n.d(t, {
         Notifications: function() {
             return i
         }
-    }), (r = i || (i = {}))[r.StreamNotificationsGuildMaxSize = 50] = "StreamNotificationsGuildMaxSize"
+    }), (s = i || (i = {}))[s.StreamNotificationsGuildMaxSize = 50] = "StreamNotificationsGuildMaxSize"
 }

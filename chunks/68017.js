@@ -1,11 +1,11 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    e._reverse = function(t) {
-        let e = {};
-        return Object.keys(t).forEach(function(s) {
-            (0 | s) == s && (s |= 0);
-            let r = t[s];
-            e[r] = s
-        }), e
-    }, e.der = s("335036")
+    t._reverse = function(e) {
+        let t = {};
+        return Object.keys(e).forEach(function(n) {
+            (0 | n) == n && (n |= 0);
+            let r = e[n];
+            t[r] = n
+        }), t
+    }, t.der = n("335036")
 }

@@ -1,100 +1,100 @@
 function(e, t, n) {
     "use strict";
-    let i, r, s;
+    let i, s, r;
     n.r(t), n.d(t, {
         transitionTo: function() {
-            return S
-        },
-        transitionToGuild: function() {
             return m
         },
+        transitionToGuild: function() {
+            return p
+        },
         currentRouteHasBackNavigation: function() {
-            return T
+            return S
         },
         replaceWith: function() {
-            return g
+            return v
         },
         getHistory: function() {
-            return I
+            return T
         },
         getLastRouteChangeSource: function() {
-            return C
+            return I
         },
         getLastRouteChangeSourceLocationStack: function() {
-            return v
+            return C
         },
         isValidFingerprintRoute: function() {
             return A
         },
         getFingerprintLocation: function() {
-            return R
+            return y
         },
         hasNavigated: function() {
             return N
         },
         back: function() {
-            return O
+            return R
         },
         forward: function() {
-            return D
+            return O
         }
     }), n("424973"), n("781738");
     var a = n("294094"),
         o = n("605250"),
         l = n("659500"),
         u = n("877275"),
-        c = n("49111");
-    let d = new o.default("Routing/Utils"),
-        f = [c.RelativeMarketingURLs.DEVELOPER_PORTAL];
+        d = n("49111");
+    let c = new o.default("Routing/Utils"),
+        f = [d.RelativeMarketingURLs.DEVELOPER_PORTAL];
     i = __OVERLAY__ ? (0, a.createMemoryHistory)() : (0, a.createBrowserHistory)();
-    let E = !1,
-        p = i.listen((e, t) => {
-            "REPLACE" !== t && (E = !0, p())
+    let _ = !1,
+        h = i.listen((e, t) => {
+            "REPLACE" !== t && (_ = !0, h())
         });
 
-    function h() {
-        return !l.ComponentDispatch.hasSubscribers(c.ComponentActions.MODAL_CLOSE) && (n("144747").default.close(), !0)
+    function E() {
+        return !l.ComponentDispatch.hasSubscribers(d.ComponentActions.MODAL_CLOSE) && (n("144747").default.close(), !0)
     }
 
-    function _(e, t) {
-        return !!("string" == typeof e && f.some(t => e.startsWith(t))) && (d.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
+    function g(e, t) {
+        return !!("string" == typeof e && f.some(t => e.startsWith(t))) && (c.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
     }
 
-    function S(e, t, n, a) {
-        !_(e, "assign") && (d.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
+    function m(e, t, n, a) {
+        !g(e, "assign") && (c.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
             source: n
         } : t.source = n), null == t ? i.push(e) : i.push({
             pathname: e,
             ...t
-        }), r = n, s = a)
+        }), s = n, r = a)
     }
 
-    function m(e, t, n, i, r) {
-        d.log("transitionToGuild - Transitioning to ".concat(JSON.stringify({
+    function p(e, t, n, i, s) {
+        c.log("transitionToGuild - Transitioning to ".concat(JSON.stringify({
             guildId: e,
             channelId: t,
             messageId: n
-        }))), S(c.Routes.CHANNEL(e, t, n), null != r ? r : null, i)
+        }))), m(d.Routes.CHANNEL(e, t, n), null != s ? s : null, i)
+    }
+
+    function S() {
+        return null != s && u.ChannelBackNavigationSources.has(s)
+    }
+
+    function v(e, t, n) {
+        !g(e, "replace") && (c.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), s = n)
     }
 
     function T() {
-        return null != r && u.ChannelBackNavigationSources.has(r)
-    }
-
-    function g(e, t, n) {
-        !_(e, "replace") && (d.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), r = n)
+        return i
     }
 
     function I() {
-        return i
+        return s
     }
 
     function C() {
         return r
-    }
-
-    function v() {
-        return s
     }
 
     function A(e) {
@@ -102,39 +102,39 @@ function(e, t, n) {
             var t;
             e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""
         }
-        return !e.startsWith(c.Routes.HANDOFF) && !0
+        return !e.startsWith(d.Routes.HANDOFF) && !0
     }
 
-    function R(e) {
+    function y(e) {
         if (null == e) {
             var t;
             e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""
         }
-        if (e.startsWith(c.Routes.LOGIN)) return c.PageAnalyticsLocations.LOGIN;
-        if (e.startsWith(c.Routes.REGISTER)) return c.PageAnalyticsLocations.REGISTER;
-        if (e.startsWith(c.Routes.INVITE(""))) return c.PageAnalyticsLocations.INVITE;
-        else if (e.startsWith(c.Routes.VERIFY)) return c.PageAnalyticsLocations.VERIFY;
-        else if (e.startsWith(c.Routes.DISABLE_EMAIL_NOTIFICATIONS)) return c.PageAnalyticsLocations.DISABLE_EMAIL_NOTIFICATIONS;
-        else if (e.startsWith(c.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) return c.PageAnalyticsLocations.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
-        else if (e.startsWith(c.Routes.REJECT_IP)) return c.PageAnalyticsLocations.REJECT_IP;
-        else if (e.startsWith(c.Routes.REJECT_MFA)) return c.PageAnalyticsLocations.REJECT_MFA;
-        else if (e.startsWith(c.Routes.AUTHORIZE_IP)) return c.PageAnalyticsLocations.AUTHORIZE_IP;
-        else if (e.startsWith(c.Routes.AUTHORIZE_PAYMENT)) return c.PageAnalyticsLocations.AUTHORIZE_PAYMENT;
-        else if (e.startsWith(c.Routes.RESET)) return c.PageAnalyticsLocations.RESET;
-        else if (e.startsWith(c.Routes.REPORT)) return c.PageAnalyticsLocations.REPORT;
-        else if (e.startsWith(c.Routes.REPORT_SECOND_LOOK)) return c.PageAnalyticsLocations.REPORT_SECOND_LOOK;
+        if (e.startsWith(d.Routes.LOGIN)) return d.PageAnalyticsLocations.LOGIN;
+        if (e.startsWith(d.Routes.REGISTER)) return d.PageAnalyticsLocations.REGISTER;
+        if (e.startsWith(d.Routes.INVITE(""))) return d.PageAnalyticsLocations.INVITE;
+        else if (e.startsWith(d.Routes.VERIFY)) return d.PageAnalyticsLocations.VERIFY;
+        else if (e.startsWith(d.Routes.DISABLE_EMAIL_NOTIFICATIONS)) return d.PageAnalyticsLocations.DISABLE_EMAIL_NOTIFICATIONS;
+        else if (e.startsWith(d.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) return d.PageAnalyticsLocations.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
+        else if (e.startsWith(d.Routes.REJECT_IP)) return d.PageAnalyticsLocations.REJECT_IP;
+        else if (e.startsWith(d.Routes.REJECT_MFA)) return d.PageAnalyticsLocations.REJECT_MFA;
+        else if (e.startsWith(d.Routes.AUTHORIZE_IP)) return d.PageAnalyticsLocations.AUTHORIZE_IP;
+        else if (e.startsWith(d.Routes.AUTHORIZE_PAYMENT)) return d.PageAnalyticsLocations.AUTHORIZE_PAYMENT;
+        else if (e.startsWith(d.Routes.RESET)) return d.PageAnalyticsLocations.RESET;
+        else if (e.startsWith(d.Routes.REPORT)) return d.PageAnalyticsLocations.REPORT;
+        else if (e.startsWith(d.Routes.REPORT_SECOND_LOOK)) return d.PageAnalyticsLocations.REPORT_SECOND_LOOK;
         return e
     }
 
     function N() {
-        return E
+        return _
+    }
+
+    function R() {
+        E() && (s = null, i.goBack())
     }
 
     function O() {
-        h() && (r = null, i.goBack())
-    }
-
-    function D() {
-        h() && (r = null, i.goForward())
+        E() && (s = null, i.goForward())
     }
 }

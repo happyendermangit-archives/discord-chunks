@@ -11,25 +11,25 @@ function(e, _, E) {
             return t.default
         },
         useStateFromStores: function() {
-            return i.default
+            return a.default
         },
         useStateFromStoresObject: function() {
-            return i.useStateFromStoresObject
+            return a.useStateFromStoresObject
         },
         useStateFromStoresArray: function() {
-            return i.useStateFromStoresArray
+            return a.useStateFromStoresArray
         },
         statesWillNeverBeEqual: function() {
-            return i.statesWillNeverBeEqual
+            return a.statesWillNeverBeEqual
         },
         default: function() {
-            return a
+            return i
         }
     });
     var t = E("995113"),
         o = E("893346"),
         n = E("35092"),
         r = E("75247"),
-        i = E("65597"),
-        a = n.default
+        a = E("65597"),
+        i = n.default
 }

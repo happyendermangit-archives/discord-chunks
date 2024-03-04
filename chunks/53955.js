@@ -2,29 +2,29 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useDragSourceConnector: function() {
-            return s
+            return a
         }
     });
     var r = n("884691"),
-        a = n("29150"),
-        i = n("119076"),
-        o = n("634115");
+        i = n("29150"),
+        o = n("119076"),
+        s = n("634115");
 
-    function s(e, t) {
-        var n = (0, i.useDragDropManager)(),
-            s = (0, r.useMemo)(function() {
-                return new a.SourceConnector(n.getBackend())
+    function a(e, t) {
+        var n = (0, o.useDragDropManager)(),
+            a = (0, r.useMemo)(function() {
+                return new i.SourceConnector(n.getBackend())
             }, [n]);
-        return (0, o.useIsomorphicLayoutEffect)(function() {
-            return s.dragSourceOptions = e || null, s.reconnect(),
+        return (0, s.useIsomorphicLayoutEffect)(function() {
+            return a.dragSourceOptions = e || null, a.reconnect(),
                 function() {
-                    return s.disconnectDragSource()
+                    return a.disconnectDragSource()
                 }
-        }, [s, e]), (0, o.useIsomorphicLayoutEffect)(function() {
-            return s.dragPreviewOptions = t || null, s.reconnect(),
+        }, [a, e]), (0, s.useIsomorphicLayoutEffect)(function() {
+            return a.dragPreviewOptions = t || null, a.reconnect(),
                 function() {
-                    return s.disconnectDragPreview()
+                    return a.disconnectDragPreview()
                 }
-        }, [s, t]), s
+        }, [a, t]), a
     }
 }

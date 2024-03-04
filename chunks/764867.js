@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return i
         }
     });
-    var s, i = n("201876"),
+    var i, s = n("201876"),
         r = n("661736"),
         a = n("101125");
-    s = class extends i.default {
+    i = class extends s.default {
         getInitialState() {
             return a.default.getLocalPresence()
         }
@@ -22,11 +22,11 @@ function(e, t, n) {
             let {
                 status: t,
                 since: n,
-                activities: s,
-                afk: i,
+                activities: i,
+                afk: s,
                 broadcast: r
             } = e;
-            this.socket.presenceUpdate(t, n, s, i, r)
+            this.socket.presenceUpdate(t, n, i, s, r)
         }
         handleConnectionOpen() {
             let e = !this.switchingAccounts;

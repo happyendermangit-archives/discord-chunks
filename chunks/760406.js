@@ -5,11 +5,11 @@ function(e, t, n) {
             return i
         }
     }), n("222007");
-    var i, r = n("614276"),
-        s = n("398183");
+    var i, s = n("614276"),
+        r = n("398183");
     i = class {
         start() {
-            this.listeningUsers.clear(), this.listening.reset(), this.speaking.reset(), this.participation.reset(), this.connected.reset(), this.connected.start(), this.connection.on(r.BaseConnectionEvent.Speaking, (e, t, n) => {
+            this.listeningUsers.clear(), this.listening.reset(), this.speaking.reset(), this.participation.reset(), this.connected.reset(), this.connected.start(), this.connection.on(s.BaseConnectionEvent.Speaking, (e, t, n) => {
                 this.userId === e ? this.onSpeaking(0 !== t) : this.onListening(0 !== t, e)
             })
         }
@@ -30,8 +30,8 @@ function(e, t, n) {
                 duration_connected_ms: this.connected.elapsed().asMilliseconds()
             }
         }
-        constructor(e, t, n = s.TimeStampProducer) {
-            this.userId = e, this.connection = t, this.timestampProducer = n, this.listeningUsers = new Set, this.listening = new s.StopWatch(this.timestampProducer), this.speaking = new s.StopWatch(this.timestampProducer), this.participation = new s.StopWatch(this.timestampProducer), this.connected = new s.StopWatch(this.timestampProducer)
+        constructor(e, t, n = r.TimeStampProducer) {
+            this.userId = e, this.connection = t, this.timestampProducer = n, this.listeningUsers = new Set, this.listening = new r.StopWatch(this.timestampProducer), this.speaking = new r.StopWatch(this.timestampProducer), this.participation = new r.StopWatch(this.timestampProducer), this.connected = new r.StopWatch(this.timestampProducer)
         }
     }
 }

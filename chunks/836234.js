@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MenuInteractiveCompositeControl: function() {
-            return s
+            return r
         }
     });
     var i = n("37983"),
-        r = n("884691");
-    let s = r.forwardRef(function(e, t) {
+        s = n("884691");
+    let r = s.forwardRef(function(e, t) {
         let {
             className: n,
-            children: s
-        } = e, a = r.useRef(null), o = r.useRef(null);
-        return r.useImperativeHandle(t, () => ({
+            children: r
+        } = e, a = s.useRef(null), o = s.useRef(null);
+        return s.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
                 let t = a.current;
@@ -23,7 +23,7 @@ function(e, t, n) {
                 return null === (e = o.current) || void 0 === e ? void 0 : e.blur()
             },
             activate: () => !1
-        }), []), r.useLayoutEffect(() => {
+        }), []), s.useLayoutEffect(() => {
             let e = a.current;
             if (null != e) return e.addEventListener("focusin", t), () => {
                 e.removeEventListener("focusin", t)
@@ -38,7 +38,7 @@ function(e, t, n) {
             style: {
                 position: "relative"
             },
-            children: s
+            children: r
         })
     })
 }

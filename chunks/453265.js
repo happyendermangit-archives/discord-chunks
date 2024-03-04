@@ -2,39 +2,39 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     });
-    var s = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("551042"),
+    var s = n("551042"),
         r = n("599110"),
         a = n("50926"),
         o = n("347977"),
-        d = n("394294"),
+        l = n("394294"),
         u = n("49111");
-    let l = () => {
+    let d = () => {
             r.default.track(u.AnalyticEvents.MODAL_DISMISSED, {
-                type: d.MEMBER_VERIFICATION_TYPE
+                type: l.MEMBER_VERIFICATION_TYPE
             })
         },
-        f = e => {
+        c = e => {
             r.default.track(u.AnalyticEvents.OPEN_MODAL, {
-                type: d.MEMBER_VERIFICATION_TYPE,
+                type: l.MEMBER_VERIFICATION_TYPE,
                 guild_id: e
             })
         };
-    var _ = {
+    var f = {
         openMemberVerificationModal(e, t) {
-            f(e);
+            c(e);
             let r = async t => {
                 await a.default.submitVerificationForm(e, t)
             };
-            (0, i.openModalLazy)(async () => {
+            (0, s.openModalLazy)(async () => {
                 let {
                     default: t
                 } = await n.el("93184").then(n.bind(n, "93184"));
-                return n => (0, s.jsx)(t, {
+                return n => (0, i.jsx)(t, {
                     ...n,
                     guildId: e,
                     onComplete: r,
@@ -45,22 +45,22 @@ function(e, t, n) {
                                 (0, o.setShowWarning)(!0);
                                 return
                             }
-                            l()
+                            d()
                         }
                         n.onClose()
                     }
                 })
             }, {
-                modalKey: d.IN_APP_MEMBER_VERIFICATION_MODAL_KEY,
+                modalKey: l.IN_APP_MEMBER_VERIFICATION_MODAL_KEY,
                 onCloseRequest: () => {
-                    l(), o.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges ? (0, o.setShowWarning)(!0) : (0, i.closeModal)(d.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
+                    d(), o.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges ? (0, o.setShowWarning)(!0) : (0, s.closeModal)(l.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
                 },
                 onCloseCallback: t
             })
         },
         closeMemberVerificationModal() {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            !e && l(), (0, i.closeModal)(d.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
+            !e && d(), (0, s.closeModal)(l.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
         }
     }
 }

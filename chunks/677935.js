@@ -5,19 +5,19 @@ function(e, t, n) {
 
         function n() {
             for (var e = [], r = 0; r < arguments.length; r++) {
-                var a = arguments[r];
-                if (a) {
-                    var i = typeof a;
-                    if ("string" === i || "number" === i) e.push(a);
-                    else if (Array.isArray(a)) {
-                        if (a.length) {
-                            var o = n.apply(null, a);
-                            o && e.push(o)
+                var i = arguments[r];
+                if (i) {
+                    var o = typeof i;
+                    if ("string" === o || "number" === o) e.push(i);
+                    else if (Array.isArray(i)) {
+                        if (i.length) {
+                            var s = n.apply(null, i);
+                            s && e.push(s)
                         }
-                    } else if ("object" === i) {
-                        if (a.toString === Object.prototype.toString)
-                            for (var s in a) t.call(a, s) && a[s] && e.push(s);
-                        else e.push(a.toString())
+                    } else if ("object" === o) {
+                        if (i.toString === Object.prototype.toString)
+                            for (var a in i) t.call(i, a) && i[a] && e.push(a);
+                        else e.push(i.toString())
                     }
                 }
             }

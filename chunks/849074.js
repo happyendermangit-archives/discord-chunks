@@ -1,12 +1,12 @@
 function(e, t, n) {
     "use strict";
-    var i, r;
+    var i, s;
     n.r(t), n.d(t, {
         WebRTCStatsCalculator: function() {
-            return s
+            return r
         }
     }), n("222007");
-    class s {
+    class r {
         update(e) {
             for (let t in e.rtp.inbound) {
                 let n = e.rtp.inbound[t];
@@ -25,26 +25,26 @@ function(e, t, n) {
                 }
         }
         static getCalculatorOrCreate(e, t, n, i) {
-            let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-                s = e[t.ssrc];
-            return null == s && (s = new o(n, i, r), e[t.ssrc] = s), s
+            let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+                r = e[t.ssrc];
+            return null == r && (r = new o(n, i, s), e[t.ssrc] = r), r
         }
         getInboundBytesRecevierCalculator(e) {
-            return s.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3)
+            return r.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3)
         }
         getInboundFrameDecodeRateCalculator(e) {
-            return s.getCalculatorOrCreate(this.inboundDecodeFps, e, "framesDecoded", "timestamp", 5)
+            return r.getCalculatorOrCreate(this.inboundDecodeFps, e, "framesDecoded", "timestamp", 5)
         }
         getOutboundBytesSentCalculator(e) {
-            return s.getCalculatorOrCreate(this.outboundVideoBitrate, e, "bytesSent", "timestamp", 3)
+            return r.getCalculatorOrCreate(this.outboundVideoBitrate, e, "bytesSent", "timestamp", 3)
         }
         getOutboundEncodeRateCalculator(e) {
-            return s.getCalculatorOrCreate(this.outboundEncodeFps, e, "framesEncoded", "timestamp", 5)
+            return r.getCalculatorOrCreate(this.outboundEncodeFps, e, "framesEncoded", "timestamp", 5)
         }
         constructor() {
             this.inboundVideoBitrate = {}, this.inboundDecodeFps = {}, this.outboundVideoBitrate = {}, this.outboundEncodeFps = {}
         }
-    }(r = i || (i = {}))[r.NONE = 0] = "NONE", r[r.MILLISECONDS_FROM_SECONDS = 1] = "MILLISECONDS_FROM_SECONDS", r[r.BYTES_TO_BITS = 2] = "BYTES_TO_BITS", r[r.ROUND = 4] = "ROUND";
+    }(s = i || (i = {}))[s.NONE = 0] = "NONE", s[s.MILLISECONDS_FROM_SECONDS = 1] = "MILLISECONDS_FROM_SECONDS", s[s.BYTES_TO_BITS = 2] = "BYTES_TO_BITS", s[s.ROUND = 4] = "ROUND";
     let a = {
         0: {
             multiplier: 1
@@ -66,19 +66,19 @@ function(e, t, n) {
             let n = e.timestamp - t.timestamp;
             if (n <= 0 || "number" != typeof n) return;
             let i = t[this.accumulativeMetricKey],
-                r = e[this.accumulativeMetricKey];
-            if ("number" != typeof i || "number" != typeof r) return;
-            let s = t[this.samplesMetricKey],
+                s = e[this.accumulativeMetricKey];
+            if ("number" != typeof i || "number" != typeof s) return;
+            let r = t[this.samplesMetricKey],
                 a = e[this.samplesMetricKey];
-            if ("number" != typeof s || "number" != typeof a) return;
-            let o = (r - i) / (a - s) * this.multiplier;
+            if ("number" != typeof r || "number" != typeof a) return;
+            let o = (s - i) / (a - r) * this.multiplier;
             return this.round ? Math.round(o) : o
         }
         constructor(e, t, n = 0) {
             for (let o in this.accumulativeMetricKey = e, this.samplesMetricKey = t, this.multiplier = 1, this.round = !1, i) {
-                var r, s;
+                var s, r;
                 let e = Number(o);
-                !isNaN(e) && (n & e) != 0 && o in a && (this.multiplier *= null !== (s = null === (r = a[o]) || void 0 === r ? void 0 : r.multiplier) && void 0 !== s ? s : 1)
+                !isNaN(e) && (n & e) != 0 && o in a && (this.multiplier *= null !== (r = null === (s = a[o]) || void 0 === s ? void 0 : s.multiplier) && void 0 !== r ? r : 1)
             }
             this.round = (4 & n) != 0
         }

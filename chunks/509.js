@@ -5,7 +5,7 @@ function(e, t, n) {
         return null != e && new Date(e) > new Date
     }
 
-    function r(e) {
+    function s(e) {
         return i(null == e ? void 0 : e.communicationDisabledUntil)
     }
     n.r(t), n.d(t, {
@@ -13,7 +13,7 @@ function(e, t, n) {
             return i
         },
         isMemberCommunicationDisabled: function() {
-            return r
+            return s
         }
     })
 }

@@ -5,14 +5,14 @@ function(e, t, n) {
             return o
         },
         getDefaultCountryCode: function() {
-            return d
+            return l
         },
         getI18NCountryName: function() {
-            return l
+            return d
         }
     });
-    var s = n("627445"),
-        i = n.n(s),
+    var i = n("627445"),
+        s = n.n(i),
         r = n("592861"),
         a = n("782340");
 
@@ -25,7 +25,7 @@ function(e, t, n) {
         }
     }
 
-    function d() {
+    function l() {
         let e = function(e) {
             let t = r.default.find(t => t.name === e);
             if (null != t) return {
@@ -34,7 +34,7 @@ function(e, t, n) {
                 alpha2: t.alpha2
             }
         }("United States");
-        return i(e, "Default country code cannot be missing."), e
+        return s(e, "Default country code cannot be missing."), e
     }
     let u = {
         AF: () => a.default.Messages.COUNTRY_NAME_AF,
@@ -294,7 +294,7 @@ function(e, t, n) {
         ZW: () => a.default.Messages.COUNTRY_NAME_ZW
     };
 
-    function l(e) {
+    function d(e) {
         return u[e]()
     }
 }

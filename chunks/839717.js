@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         PreviewPortalContext: function() {
-            return l
+            return u
         },
         DndProvider: function() {
-            return u
+            return d
         }
     }), n("70102"), n("222007"), n("424973");
     var r = n("884691"),
-        a = n.n(r),
-        i = n("476042"),
-        o = n("688911");
+        i = n.n(r),
+        o = n("476042"),
+        s = n("688911");
 
-    function s() {
-        return (s = Object.assign || function(e) {
+    function a() {
+        return (a = Object.assign || function(e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
                 for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
@@ -28,43 +28,43 @@ function(e, t, n) {
         for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
         return r
     }
-    var l = (0, r.createContext)(null),
-        u = function(e) {
-            var t, n, u = e.portal,
-                d = function(e, t) {
+    var u = (0, r.createContext)(null),
+        d = function(e) {
+            var t, n, d = e.portal,
+                l = function(e, t) {
                     if (null == e) return {};
-                    var n, r, a = function(e, t) {
+                    var n, r, i = function(e, t) {
                         if (null == e) return {};
-                        var n, r, a = {},
-                            i = Object.keys(e);
-                        for (r = 0; r < i.length; r++) n = i[r], !(t.indexOf(n) >= 0) && (a[n] = e[n]);
-                        return a
+                        var n, r, i = {},
+                            o = Object.keys(e);
+                        for (r = 0; r < o.length; r++) n = o[r], !(t.indexOf(n) >= 0) && (i[n] = e[n]);
+                        return i
                     }(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var i = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < i.length; r++) {
-                            if (n = i[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n])
+                        var o = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < o.length; r++) {
+                            if (n = o[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n])
                         }
                     }
-                    return a
+                    return i
                 }(e, ["portal"]);
-            var p = (n = 2, function(e) {
+            var f = (n = 2, function(e) {
                     if (Array.isArray(e)) return e
                 }(t = (0, r.useState)(null)) || function(e, t) {
                     if ("undefined" != typeof Symbol && Symbol.iterator in Object(e)) {
                         var n = [],
                             r = !0,
-                            a = !1,
-                            i = void 0;
+                            i = !1,
+                            o = void 0;
                         try {
-                            for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
+                            for (var s, a = e[Symbol.iterator](); !(r = (s = a.next()).done) && (n.push(s.value), !t || n.length !== t); r = !0);
                         } catch (e) {
-                            a = !0, i = e
+                            i = !0, o = e
                         } finally {
                             try {
-                                !r && null != s.return && s.return()
+                                !r && null != a.return && a.return()
                             } finally {
-                                if (a) throw i
+                                if (i) throw o
                             }
                         }
                         return n
@@ -79,14 +79,14 @@ function(e, t, n) {
                 }(t, n) || function() {
                     throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()),
-                f = p[0],
-                m = p[1];
-            return a.createElement(l.Provider, {
-                value: null != u ? u : f
-            }, a.createElement(i.DndProvider, s({
-                backend: o.MultiBackend
-            }, d)), u ? null : a.createElement("div", {
-                ref: m
+                p = f[0],
+                h = f[1];
+            return i.createElement(u.Provider, {
+                value: null != d ? d : p
+            }, i.createElement(o.DndProvider, a({
+                backend: s.MultiBackend
+            }, l)), d ? null : i.createElement("div", {
+                ref: h
             }))
         }
 }

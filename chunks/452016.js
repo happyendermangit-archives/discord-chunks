@@ -1,6 +1,6 @@
-function(t, e, s) {
-    var r = s("700718");
-    t.exports = function(t, e) {
-        return e = "function" == typeof e ? e : void 0, t && t.length ? r(t, void 0, e) : []
+function(e, t, n) {
+    var r = n("700718");
+    e.exports = function(e, t) {
+        return t = "function" == typeof t ? t : void 0, e && e.length ? r(e, void 0, t) : []
     }
 }

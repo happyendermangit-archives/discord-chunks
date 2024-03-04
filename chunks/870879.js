@@ -2,54 +2,54 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return p
         }
     }), n("808653");
-    var s = n("446674"),
-        i = n("773364"),
+    var i = n("446674"),
+        s = n("773364"),
         r = n("913144"),
         a = n("374363"),
         o = n("42887"),
-        d = n("18494"),
+        l = n("18494"),
         u = n("697218"),
-        l = n("239448");
-    let f = !1,
-        _ = null,
-        c = !1,
-        g = {};
+        d = n("239448");
+    let c = !1,
+        f = null,
+        _ = !1,
+        h = {};
 
-    function m(e) {
+    function E(e) {
         var t;
         let n = u.default.getCurrentUser();
         if (null == n) return !1;
-        let s = null != e ? e : (0, l.getVideoBackgroundOptionFromProto)(null === (t = a.default.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
-        return null != d.default.getVoiceChannelId() && o.default.isVideoEnabled() && null != s
+        let i = null != e ? e : (0, d.getVideoBackgroundOptionFromProto)(null === (t = a.default.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
+        return null != l.default.getVoiceChannelId() && o.default.isVideoEnabled() && null != i
     }
 
-    function h() {
-        _ !== d.default.getVoiceChannelId() && (c = !1), m() && (c = !0), _ = d.default.getVoiceChannelId()
+    function g() {
+        f !== l.default.getVoiceChannelId() && (_ = !1), E() && (_ = !0), f = l.default.getVoiceChannelId()
     }
-    class v extends s.default.Store {
+    class m extends i.default.Store {
         initialize() {
-            this.waitFor(a.default, d.default, o.default), this.syncWith([d.default, o.default], h)
+            this.waitFor(a.default, l.default, o.default), this.syncWith([l.default, o.default], g)
         }
         get videoFilterAssets() {
-            return g
+            return h
         }
         get hasBeenApplied() {
-            return f
-        }
-        get hasUsedBackgroundInCall() {
             return c
         }
+        get hasUsedBackgroundInCall() {
+            return _
+        }
     }
-    v.displayName = "VideoBackgroundStore";
-    var E = new v(r.default, {
+    m.displayName = "VideoBackgroundStore";
+    var p = new m(r.default, {
         VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function(e) {
             let {
                 assets: t
             } = e;
-            g = t.reduce((e, t) => ({
+            h = t.reduce((e, t) => ({
                 ...e,
                 [t.id]: t
             }), {})
@@ -58,8 +58,8 @@ function(e, t, n) {
             let {
                 videoFilterAsset: t
             } = e;
-            g = {
-                ...g,
+            h = {
+                ...h,
                 [t.id]: t
             }
         },
@@ -67,21 +67,21 @@ function(e, t, n) {
             let {
                 videoFilterAsset: t
             } = e;
-            g = {
-                ...g
-            }, delete g[t.id]
+            h = {
+                ...h
+            }, delete h[t.id]
         },
         VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function(e) {
             let {
                 backgroundOption: t
             } = e;
-            m(t) && (c = !0)
+            E(t) && (_ = !0)
         },
         MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(e) {
             let {
                 settings: t
             } = e;
-            i.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in t && (f = !0)
+            s.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in t && (c = !0)
         }
     })
 }

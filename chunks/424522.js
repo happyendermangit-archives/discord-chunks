@@ -1,43 +1,43 @@
-function(t, e, s) {
-    s("70102");
-    var r = s("596659"),
-        i = s("664813"),
-        n = s("488274"),
-        c = s("746067"),
-        o = s("963130"),
-        f = s("839309"),
-        u = s("533971"),
-        a = s("422077"),
-        d = s("912065").Buffer;
-    t.exports = function(t, e, s) {
-        p = t.padding ? t.padding : s ? 1 : 4;
-        var p, b, h = r(t);
-        if (4 === p) b = function(t, e) {
-            var s = t.modulus.byteLength(),
-                r = e.length,
-                u = n("sha1").update(d.alloc(0)).digest(),
-                a = u.length,
-                p = 2 * a;
-            if (r > s - p - 2) throw Error("message too long");
-            var b = d.alloc(s - r - p - 2),
-                h = s - a - 1,
-                l = i(a),
-                g = o(d.concat([u, b, d.alloc(1, 1), e], h), c(l, h)),
-                v = o(l, c(g, a));
-            return new f(d.concat([d.alloc(1), v, g], s))
-        }(h, e);
-        else if (1 === p) b = function(t, e, s) {
-            var r, n = e.length,
-                c = t.modulus.byteLength();
-            if (n > c - 11) throw Error("message too long");
-            return r = s ? d.alloc(c - n - 3, 255) : function(t) {
-                for (var e, s = d.allocUnsafe(t), r = 0, n = i(2 * t), c = 0; r < t;) c === n.length && (n = i(2 * t), c = 0), (e = n[c++]) && (s[r++] = e);
-                return s
-            }(c - n - 3), new f(d.concat([d.from([0, s ? 1 : 2]), r, d.alloc(1), e], c))
-        }(h, e, s);
-        else if (3 === p) {
-            if ((b = new f(e)).cmp(h.modulus) >= 0) throw Error("data too long for modulus")
+function(e, t, n) {
+    n("70102");
+    var r = n("596659"),
+        i = n("664813"),
+        o = n("488274"),
+        s = n("746067"),
+        a = n("963130"),
+        c = n("839309"),
+        u = n("533971"),
+        d = n("422077"),
+        l = n("912065").Buffer;
+    e.exports = function(e, t, n) {
+        f = e.padding ? e.padding : n ? 1 : 4;
+        var f, p, h = r(e);
+        if (4 === f) p = function(e, t) {
+            var n = e.modulus.byteLength(),
+                r = t.length,
+                u = o("sha1").update(l.alloc(0)).digest(),
+                d = u.length,
+                f = 2 * d;
+            if (r > n - f - 2) throw Error("message too long");
+            var p = l.alloc(n - r - f - 2),
+                h = n - d - 1,
+                v = i(d),
+                g = a(l.concat([u, p, l.alloc(1, 1), t], h), s(v, h)),
+                b = a(v, s(g, d));
+            return new c(l.concat([l.alloc(1), b, g], n))
+        }(h, t);
+        else if (1 === f) p = function(e, t, n) {
+            var r, o = t.length,
+                s = e.modulus.byteLength();
+            if (o > s - 11) throw Error("message too long");
+            return r = n ? l.alloc(s - o - 3, 255) : function(e) {
+                for (var t, n = l.allocUnsafe(e), r = 0, o = i(2 * e), s = 0; r < e;) s === o.length && (o = i(2 * e), s = 0), (t = o[s++]) && (n[r++] = t);
+                return n
+            }(s - o - 3), new c(l.concat([l.from([0, n ? 1 : 2]), r, l.alloc(1), t], s))
+        }(h, t, n);
+        else if (3 === f) {
+            if ((p = new c(t)).cmp(h.modulus) >= 0) throw Error("data too long for modulus")
         } else throw Error("unknown padding");
-        return s ? a(b, h) : u(b, h)
+        return n ? d(p, h) : u(p, h)
     }
 }

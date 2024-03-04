@@ -1,8 +1,8 @@
 function(e, t, n) {
     "use strict";
-    let i, r;
+    let i, s;
 
-    function s() {
+    function r() {
         if (null == i) throw Error("Native dependencies have not been injected.")
     }
 
@@ -11,19 +11,19 @@ function(e, t, n) {
     }
 
     function o() {
-        return s(), i.supported()
+        return r(), i.supported()
     }
 
     function l(e) {
-        return s(), i.supportsFeature(e)
+        return r(), i.supportsFeature(e)
     }
 
     function u(e) {
-        s(), i.setProcessPriority(e)
+        r(), i.setProcessPriority(e)
     }
 
-    function c() {
-        return s(), null != r ? r : r = i.getVoiceEngine()
+    function d() {
+        return r(), null != s ? s : s = i.getVoiceEngine()
     }
     n.r(t), n.d(t, {
         inject: function() {
@@ -39,7 +39,7 @@ function(e, t, n) {
             return u
         },
         getVoiceEngine: function() {
-            return c
+            return d
         }
     }), n("70102")
 }

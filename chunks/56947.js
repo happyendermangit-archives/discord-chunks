@@ -2,32 +2,32 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ClipsExperiment: function() {
-            return c
+            return d
         },
         areClipsEnabled: function() {
             return f
         },
         useEnableClips: function() {
-            return E
+            return _
         },
         useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock: function() {
-            return p
-        },
-        useShouldSeeClipsPremiumEarlyAccessAnnouncementCoachmark: function() {
             return h
         },
+        useShouldSeeClipsPremiumEarlyAccessAnnouncementCoachmark: function() {
+            return E
+        },
         isUserPremiumTypeForClipsEarlyAccess: function() {
-            return _
+            return g
         }
     });
     var i = n("862205"),
-        r = n("584687"),
-        s = n("103979"),
+        s = n("584687"),
+        r = n("103979"),
         a = n("42887"),
         o = n("719923"),
         l = n("18346"),
         u = n("646718");
-    let c = (0, i.createExperiment)({
+    let d = (0, i.createExperiment)({
             kind: "user",
             id: "2022-11_clips_experiment",
             label: "Clips Experiment",
@@ -62,7 +62,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        d = (0, i.createExperiment)({
+        c = (0, i.createExperiment)({
             kind: "user",
             id: "2023-09_clips_nitro_early_access",
             label: "Clips (Nitro EA)",
@@ -94,25 +94,25 @@ function(e, t, n) {
         if (!(0, l.default)(a.default)) return !1;
         let {
             enableClips: e
-        } = d.getCurrentConfig({
-            location: "areClipsEnabled"
-        }, {
-            autoTrackExposure: !1
-        }), {
-            enableClips: t
         } = c.getCurrentConfig({
             location: "areClipsEnabled"
         }, {
             autoTrackExposure: !1
         }), {
+            enableClips: t
+        } = d.getCurrentConfig({
+            location: "areClipsEnabled"
+        }, {
+            autoTrackExposure: !1
+        }), {
             enableDecoupledGameClipping: n
-        } = r.default.getCurrentConfig({
+        } = s.default.getCurrentConfig({
             location: "areClipsEnabled"
         }, {
             autoTrackExposure: !1
         }), {
             enableViewerClipping: i
-        } = s.default.getCurrentConfig({
+        } = r.default.getCurrentConfig({
             location: "areClipsEnabled"
         }, {
             autoTrackExposure: !1
@@ -120,56 +120,56 @@ function(e, t, n) {
         return e || t || n || i
     }
 
-    function E() {
+    function _() {
         let e = (0, l.default)(a.default),
             {
                 enableClips: t
-            } = d.useExperiment({
-                location: "useEnableClips"
-            }, {
-                autoTrackExposure: !1
-            }),
-            {
-                enableClips: n
             } = c.useExperiment({
                 location: "useEnableClips"
             }, {
                 autoTrackExposure: !1
             }),
             {
+                enableClips: n
+            } = d.useExperiment({
+                location: "useEnableClips"
+            }, {
+                autoTrackExposure: !1
+            }),
+            {
                 enableDecoupledGameClipping: i
-            } = r.default.useExperiment({
+            } = s.default.useExperiment({
                 location: "useEnableClips"
             }, {
                 autoTrackExposure: !1
             }),
             {
                 enableViewerClipping: o
-            } = s.default.useExperiment({
+            } = r.default.useExperiment({
                 location: "useEnableClips"
             }, {
                 autoTrackExposure: !1
             });
         return (n || t || i || o) && e
     }
-    let p = e => {
+    let h = e => {
             let {
                 autoTrackExposure: t
             } = e, n = (0, l.default)(a.default), {
                 enablePremiumEarlyAccessGoLiveRoadblock: i
-            } = d.useExperiment({
+            } = c.useExperiment({
                 location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"
             }, {
                 autoTrackExposure: t && n
             });
             return !!n && i
         },
-        h = e => {
+        E = e => {
             let {
                 autoTrackExposure: t
             } = e, n = (0, l.default)(a.default), {
                 enablePremiumEarlyAccessAnnouncementCoachmark: i
-            } = d.useExperiment({
+            } = c.useExperiment({
                 location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"
             }, {
                 autoTrackExposure: t && n
@@ -177,7 +177,7 @@ function(e, t, n) {
             return !!n && i
         };
 
-    function _(e) {
+    function g(e) {
         return o.default.isPremiumAtLeast(e.premiumType, u.PremiumTypes.TIER_2)
     }
 }

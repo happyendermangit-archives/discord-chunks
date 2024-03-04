@@ -6,14 +6,14 @@ function(e, t, n) {
         }
     }), n("424973");
     var i = n("379881"),
-        r = n("15131"),
-        s = n("393414"),
+        s = n("15131"),
+        r = n("393414"),
         a = n("239380"),
         o = n("42203"),
         l = n("957255"),
         u = n("162771"),
-        c = n("677099"),
-        d = n("49111");
+        d = n("677099"),
+        c = n("49111");
     let f = {
         binds: (() => {
             let e = [];
@@ -24,7 +24,7 @@ function(e, t, n) {
         action(e, t) {
             let n, f = parseInt(t.split("+")[1], 10);
             if (0 === f && (f = 10), !isNaN(f) && 0 !== f) {
-                if (null != (n = 1 === f ? d.ME : (0, r.isFavoritesGuildVisible)(i.default, o.default, l.default) ? 2 === f ? d.FAVORITES : c.default.getFlattenedGuildIds()[f - 3] : c.default.getFlattenedGuildIds()[f - 2])) return n === d.ME && null == u.default.getGuildId() ? ((0, s.transitionTo)(d.Routes.CHANNEL(n)), !1) : ((0, a.transitionToGuild)(n), !1)
+                if (null != (n = 1 === f ? c.ME : (0, s.isFavoritesGuildVisible)(i.default, o.default, l.default) ? 2 === f ? c.FAVORITES : d.default.getFlattenedGuildIds()[f - 3] : d.default.getFlattenedGuildIds()[f - 2])) return n === c.ME && null == u.default.getGuildId() ? ((0, r.transitionTo)(c.Routes.CHANNEL(n)), !1) : ((0, a.transitionToGuild)(n), !1)
             }
         }
     }

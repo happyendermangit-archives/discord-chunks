@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("424973"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102"), n("222007");
-    var s = n("917351"),
-        i = n.n(s),
+    var i = n("917351"),
+        s = n.n(i),
         r = n("605250"),
         a = n("197881");
     let {
         NativeModules: o
-    } = {}, d = [];
+    } = {}, l = [];
     class u {
         static canUse() {
             return !1
@@ -25,7 +25,7 @@ function(e, t, n) {
             this._onDataReady = null, this._gatewayEncoding = e
         }
     }
-    d.push(class extends u {
+    l.push(class extends u {
         static canUse() {
             return void 0 !== window.Uint8Array
         }
@@ -39,12 +39,12 @@ function(e, t, n) {
             let t = this._pako,
                 n = this._inflate;
             if (null == n) throw Error("Trying to feed to closed compression adapter");
-            let s = this._onDataReady;
-            if (null === s) throw Error("Cannot feed unless a data ready callback is registered.");
+            let i = this._onDataReady;
+            if (null === i) throw Error("Cannot feed unless a data ready callback is registered.");
             if (e instanceof ArrayBuffer) {
-                let s = new DataView(e),
-                    i = s.byteLength >= 4 && 65535 === s.getUint32(s.byteLength - 4, !1);
-                n.push(e, !!i && t.Z_SYNC_FLUSH)
+                let i = new DataView(e),
+                    s = i.byteLength >= 4 && 65535 === i.getUint32(i.byteLength - 4, !1);
+                n.push(e, !!s && t.Z_SYNC_FLUSH)
             } else throw Error("Expected array buffer, but got " + typeof e)
         }
         close() {
@@ -53,39 +53,39 @@ function(e, t, n) {
         handleFlushEnd(e) {
             let t;
             let n = this._pako,
-                s = this._inflate;
-            if (null == s) {
+                i = this._inflate;
+            if (null == i) {
                 new(0, r.default)("GatewayCompressionHandler").error("flush end happened on closed compression adapter");
                 return
             }
-            if (e !== n.Z_OK) throw Error("zlib error, ".concat(e, ", ").concat(s.strm.msg));
+            if (e !== n.Z_OK) throw Error("zlib error, ".concat(e, ", ").concat(i.strm.msg));
             let {
-                chunks: i
-            } = s, a = i.length;
-            if (this._gatewayEncoding.wantsString()) t = a > 1 ? i.join("") : i[0];
+                chunks: s
+            } = i, a = s.length;
+            if (this._gatewayEncoding.wantsString()) t = a > 1 ? s.join("") : s[0];
             else if (a > 1) {
                 let e = 0;
-                for (let t = 0; t < a; t++) e += i[t].length;
+                for (let t = 0; t < a; t++) e += s[t].length;
                 let n = new Uint8Array(e),
-                    s = 0;
+                    i = 0;
                 for (let e = 0; e < a; e++) {
-                    let t = i[e];
-                    n.set(t, s), s += t.length
+                    let t = s[e];
+                    n.set(t, i), i += t.length
                 }
                 t = n
-            } else t = i[0];
-            i.length = 0, null != this._onDataReady && this._onDataReady(t)
+            } else t = s[0];
+            s.length = 0, null != this._onDataReady && this._onDataReady(t)
         }
         constructor(e) {
             super(e), this._pako = n("181905");
             let t = this._pako,
-                s = this._inflate = new t.Inflate({
+                i = this._inflate = new t.Inflate({
                     chunkSize: 65536,
                     to: this._gatewayEncoding.wantsString() ? "string" : ""
                 });
-            s.onEnd = this.handleFlushEnd.bind(this)
+            i.onEnd = this.handleFlushEnd.bind(this)
         }
-    }), d.push(class extends u {
+    }), l.push(class extends u {
         static canUse() {
             return !0
         }
@@ -106,7 +106,7 @@ function(e, t, n) {
         constructor(...e) {
             super(...e), this._pako = n("181905")
         }
-    }), d.push(class extends u {
+    }), l.push(class extends u {
         static canUse() {
             return !1
         }
@@ -131,7 +131,7 @@ function(e, t, n) {
             super(e), this._socketId = null
         }
     });
-    class l extends u {
+    class d extends u {
         static canUse() {
             return !0
         }
@@ -147,8 +147,8 @@ function(e, t, n) {
         }
         close() {}
     }
-    d.push(l);
-    let f = i.find(d, e => e.canUse());
-    a.ProcessArgs.isDiscordGatewayPlaintextSet() && (f = l);
-    var _ = f
+    l.push(d);
+    let c = s.find(l, e => e.canUse());
+    a.ProcessArgs.isDiscordGatewayPlaintextSet() && (c = d);
+    var f = c
 }

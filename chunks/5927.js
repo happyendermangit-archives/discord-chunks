@@ -1,20 +1,20 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
     var r = Object.prototype.toString;
-    if (s("923771")()) {
+    if (n("923771")()) {
         var i = Symbol.prototype.toString,
-            n = /^Symbol\(.*\)$/;
-        t.exports = function(t) {
-            if ("symbol" == typeof t) return !0;
-            if ("[object Symbol]" !== r.call(t)) return !1;
+            o = /^Symbol\(.*\)$/;
+        e.exports = function(e) {
+            if ("symbol" == typeof e) return !0;
+            if ("[object Symbol]" !== r.call(e)) return !1;
             try {
-                var e;
-                return e = t, "symbol" == typeof e.valueOf() && n.test(i.call(e))
-            } catch (t) {
+                var t;
+                return t = e, "symbol" == typeof t.valueOf() && o.test(i.call(t))
+            } catch (e) {
                 return !1
             }
         }
-    } else t.exports = function(t) {
+    } else e.exports = function(e) {
         return !1
     }
 }

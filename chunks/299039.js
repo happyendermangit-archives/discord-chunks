@@ -2,40 +2,40 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DISCORD_EPOCH: function() {
-            return s.DISCORD_EPOCH
+            return r.DISCORD_EPOCH
         },
         default: function() {
             return o
         }
     });
     var i = n("917351"),
-        r = n.n(i),
-        s = n("249654");
+        s = n.n(i),
+        r = n("249654");
 
     function a(e) {
         return e
     }
     var o = {
         age: function(e) {
-            return s.default.age(e)
+            return r.default.age(e)
         },
         extractTimestamp: function(e) {
-            return s.default.extractTimestamp(e)
+            return r.default.extractTimestamp(e)
         },
         compare: function(e, t) {
-            return s.default.compare(e, t)
+            return r.default.compare(e, t)
         },
         atPreviousMillisecond: function(e) {
-            return s.default.atPreviousMillisecond(e)
+            return r.default.atPreviousMillisecond(e)
         },
         fromTimestamp: function(e) {
-            return s.default.fromTimestamp(e)
+            return r.default.fromTimestamp(e)
         },
         keys: function(e) {
             return Object.keys(e)
         },
         forEach: function(e, t) {
-            r.forEach(e, (e, n) => t(e, n))
+            s.forEach(e, (e, n) => t(e, n))
         },
         forEachKey: function(e, t) {
             for (let n in e) t(n)

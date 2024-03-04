@@ -1,29 +1,29 @@
-function(t, e, s) {
-    function r(t) {
-        this.rand = t
+function(e, t, n) {
+    function r(e) {
+        this.rand = e
     }
-    if (s("311790"), s("477657"), s("811875"), s("90301"), s("652153"), s("28797"), s("817884"), s("597349"), s("667536"), s("690341"), s("854508"), s("70102"), t.exports = function(t) {
-            return !i && (i = new r(null)), i.generate(t)
-        }, t.exports.Rand = r, r.prototype.generate = function(t) {
-            return this._rand(t)
-        }, r.prototype._rand = function(t) {
-            if (this.rand.getBytes) return this.rand.getBytes(t);
-            for (var e = new Uint8Array(t), s = 0; s < e.length; s++) e[s] = this.rand.getByte();
-            return e
-        }, "object" == typeof self) self.crypto && self.crypto.getRandomValues ? r.prototype._rand = function(t) {
-        var e = new Uint8Array(t);
-        return self.crypto.getRandomValues(e), e
-    } : self.msCrypto && self.msCrypto.getRandomValues ? r.prototype._rand = function(t) {
-        var e = new Uint8Array(t);
-        return self.msCrypto.getRandomValues(e), e
+    if (n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("854508"), n("70102"), e.exports = function(e) {
+            return !i && (i = new r(null)), i.generate(e)
+        }, e.exports.Rand = r, r.prototype.generate = function(e) {
+            return this._rand(e)
+        }, r.prototype._rand = function(e) {
+            if (this.rand.getBytes) return this.rand.getBytes(e);
+            for (var t = new Uint8Array(e), n = 0; n < t.length; n++) t[n] = this.rand.getByte();
+            return t
+        }, "object" == typeof self) self.crypto && self.crypto.getRandomValues ? r.prototype._rand = function(e) {
+        var t = new Uint8Array(e);
+        return self.crypto.getRandomValues(t), t
+    } : self.msCrypto && self.msCrypto.getRandomValues ? r.prototype._rand = function(e) {
+        var t = new Uint8Array(e);
+        return self.msCrypto.getRandomValues(t), t
     } : "object" == typeof window && (r.prototype._rand = function() {
         throw Error("Not implemented yet")
     });
     else try {
-        var i, n = s("778583");
-        if ("function" != typeof n.randomBytes) throw Error("Not supported");
-        r.prototype._rand = function(t) {
-            return n.randomBytes(t)
+        var i, o = n("778583");
+        if ("function" != typeof o.randomBytes) throw Error("Not supported");
+        r.prototype._rand = function(e) {
+            return o.randomBytes(e)
         }
-    } catch (t) {}
+    } catch (e) {}
 }

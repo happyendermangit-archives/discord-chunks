@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("227645"),
+        s = n("884691"),
+        r = n("227645"),
         a = n("863157");
 
     function o(e) {
@@ -17,40 +17,40 @@ function(e, t, n) {
             className: o,
             focusProps: l,
             onClick: u,
-            onDoubleClick: c,
-            onContextMenu: d,
+            onDoubleClick: d,
+            onContextMenu: c,
             onKeyDown: f,
-            onFocus: E,
-            onBlur: p,
-            onMouseOver: h,
-            onMouseDown: _,
-            onMouseLeave: S,
-            buttonProps: m,
-            "aria-label": T
-        } = e, g = r.useRef(null);
+            onFocus: _,
+            onBlur: h,
+            onMouseOver: E,
+            onMouseDown: g,
+            onMouseLeave: m,
+            buttonProps: p,
+            "aria-label": S
+        } = e, v = s.useRef(null);
         return (0, i.jsxs)(t, {
-            ref: g,
+            ref: v,
             className: o,
             onClick: u,
-            onMouseOver: h,
-            onMouseLeave: S,
-            onDoubleClick: c,
-            onContextMenu: d,
-            children: [(0, i.jsx)(s.Clickable, {
-                ...m,
+            onMouseOver: E,
+            onMouseLeave: m,
+            onDoubleClick: d,
+            onContextMenu: c,
+            children: [(0, i.jsx)(r.Clickable, {
+                ...p,
                 focusProps: {
-                    ringTarget: g,
+                    ringTarget: v,
                     ...l
                 },
                 className: a.focusTarget,
-                "aria-label": T,
+                "aria-label": S,
                 onClick: e => {
                     e.stopPropagation(), null == u || u(e)
                 },
                 onKeyDown: f,
-                onFocus: E,
-                onBlur: p,
-                onMouseDown: _
+                onFocus: _,
+                onBlur: h,
+                onMouseDown: g
             }), n]
         })
     }

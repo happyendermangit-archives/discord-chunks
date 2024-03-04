@@ -1,7 +1,7 @@
-function(t, r, n) {
-    t.exports = function(t) {
-        var r = this.__data__,
-            n = r.delete(t);
-        return this.size = r.size, n
+function(e, t, n) {
+    e.exports = function(e) {
+        var t = this.__data__,
+            n = t.delete(e);
+        return this.size = t.size, n
     }
 }

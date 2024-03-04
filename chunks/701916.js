@@ -2,31 +2,31 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         collectThreadMetadata: function() {
-            return o
+            return d
         }
     });
     var i = n("393414"),
-        a = n("800843"),
-        l = n("610730"),
-        s = n("233069"),
-        r = n("957255"),
-        u = n("299039"),
-        d = n("49111");
+        s = n("800843"),
+        r = n("610730"),
+        a = n("233069"),
+        o = n("957255"),
+        l = n("299039"),
+        u = n("49111");
 
-    function o(e) {
-        var t, n, o, c, _;
-        let f = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (null == e || !s.THREAD_CHANNEL_TYPES.has(e.type)) return null;
-        let h = f ? (0, i.getLastRouteChangeSource)() : void 0;
+    function d(e) {
+        var t, n, d, c, f;
+        let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (null == e || !a.THREAD_CHANNEL_TYPES.has(e.type)) return null;
+        let h = _ ? (0, i.getLastRouteChangeSource)() : void 0;
         return {
             location: h,
-            thread_approximate_member_count: a.default.getMemberCount(e.id),
-            thread_approximate_message_count: l.default.getCount(e.id),
+            thread_approximate_member_count: s.default.getMemberCount(e.id),
+            thread_approximate_message_count: r.default.getCount(e.id),
             thread_archived: (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
             thread_locked: null !== (c = null === (n = e.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== c && c,
-            thread_auto_archive_duration_minutes: null !== (_ = null === (o = e.threadMetadata) || void 0 === o ? void 0 : o.autoArchiveDuration) && void 0 !== _ ? _ : 0,
-            thread_approximate_creation_date: u.default.extractTimestamp(e.id),
-            can_send_message: r.default.can(d.Permissions.SEND_MESSAGES, e),
+            thread_auto_archive_duration_minutes: null !== (f = null === (d = e.threadMetadata) || void 0 === d ? void 0 : d.autoArchiveDuration) && void 0 !== f ? f : 0,
+            thread_approximate_creation_date: l.default.extractTimestamp(e.id),
+            can_send_message: o.default.can(u.Permissions.SEND_MESSAGES, e),
             parent_channel_type: e.parentChannelThreadType
         }
     }

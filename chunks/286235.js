@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         DSN: function() {
-            return i
+            return a
         },
         default: function() {
             return I
@@ -12,20 +12,20 @@ function(e, _, E) {
         o = E("423670"),
         n = E("773336"),
         r = E("50885");
-    let i = "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984";
+    let a = "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984";
 
-    function a() {
-        var e, _, E, t, o, i;
-        let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    function i() {
+        var e, _, E, t, o, a;
+        let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         n.isPlatformEmbedded && r.default.updateCrashReporter({
-            user_id: null !== (e = a.id) && void 0 !== e ? e : "",
-            username: null !== (_ = a.username) && void 0 !== _ ? _ : "",
-            email: null !== (E = a.email) && void 0 !== E ? E : "",
+            user_id: null !== (e = i.id) && void 0 !== e ? e : "",
+            username: null !== (_ = i.username) && void 0 !== _ ? _ : "",
+            email: null !== (E = i.email) && void 0 !== E ? E : "",
             sentry: {
                 user: {
-                    id: null !== (t = a.id) && void 0 !== t ? t : "",
-                    username: null !== (o = a.username) && void 0 !== o ? o : "",
-                    email: null !== (i = a.email) && void 0 !== i ? i : ""
+                    id: null !== (t = i.id) && void 0 !== t ? t : "",
+                    username: null !== (o = i.username) && void 0 !== o ? o : "",
+                    email: null !== (a = i.email) && void 0 !== a ? a : ""
                 }
             }
         })
@@ -40,12 +40,12 @@ function(e, _, E) {
             };
             null != window.DiscordSentry && window.DiscordSentry.configureScope(e => {
                 e.setUser(o)
-            }), a(o)
+            }), i(o)
         },
         clearUser() {
             null != window.DiscordSentry && window.DiscordSentry.configureScope(e => {
                 e.setUser(null)
-            }), a()
+            }), i()
         },
         setTags(e) {
             null != window.DiscordSentry && window.DiscordSentry.configureScope(_ => {

@@ -10,11 +10,11 @@ function(e, _, E) {
     var o = E("77078"),
         n = E("299285"),
         r = E("374014"),
-        i = E("582415"),
-        a = E("643130"),
+        a = E("582415"),
+        i = E("643130"),
         I = E("292687"),
-        s = E("271938"),
-        T = E("42203"),
+        T = E("271938"),
+        s = E("42203"),
         S = E("824563"),
         N = E("945956"),
         O = E("205817"),
@@ -23,7 +23,7 @@ function(e, _, E) {
         l = E("49111");
     class u extends A.default {
         _initialize() {
-            a.default.init()
+            i.default.init()
         }
         constructor(...e) {
             super(...e), this.actions = {
@@ -51,23 +51,23 @@ function(e, _, E) {
                 var _;
                 let {
                     streamKey: n,
-                    canShowFeedback: a
-                } = e, I = (0, r.decodeStreamKey)(n), T = (0, i.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
+                    canShowFeedback: i
+                } = e, I = (0, r.decodeStreamKey)(n), s = (0, a.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
                     media_session_id: O.default.getMediaSessionId(n),
                     rtc_connection_id: O.default.getRtcConnectionId(n),
                     stream_region: O.default.getRegion(n),
                     max_viewers: O.default.getMaxViewers(n),
                     ...N
                 };
-                a && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
+                i && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
                     (0, o.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await E.el("363787").then(E.bind(E, "363787"));
                         return _ => (0, t.jsx)(e, {
                             stream: I,
-                            streamApplication: T,
-                            isStreamer: I.ownerId === s.default.getId(),
+                            streamApplication: s,
+                            isStreamer: I.ownerId === T.default.getId(),
                             ..._,
                             analyticsData: A
                         })
@@ -92,20 +92,20 @@ function(e, _, E) {
                 let {
                     applicationId: _,
                     channelId: r,
-                    showFeedback: i
-                } = e, a = n.default.getApplication(_), s = T.default.getChannel(r), S = {
+                    showFeedback: a
+                } = e, i = n.default.getApplication(_), T = s.default.getChannel(r), S = {
                     rtc_connection_id: N.default.getRTCConnectionId(),
                     media_session_id: N.default.getMediaSessionId()
                 }, O = I.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT), A = O ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT;
-                null != a && null != s && i && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
+                null != i && null != T && a && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
                     (0, o.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await E.el("959350").then(E.bind(E, "959350"));
                         return _ => (0, t.jsx)(e, {
                             ..._,
-                            activityApplication: a,
-                            channel: s,
+                            activityApplication: i,
+                            channel: T,
                             analyticsData: S
                         })
                     }, {

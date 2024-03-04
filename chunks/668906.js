@@ -12,7 +12,7 @@ function(e, t, n) {
         }
     }), n("424973"), n("843762");
     var i = n("353927");
-    let r = [{
+    let s = [{
         name: "H264",
         encode: !0,
         decode: !0
@@ -26,8 +26,8 @@ function(e, t, n) {
         decode: !0
     }];
 
-    function s(e, t) {
-        let n = t.concat(r),
+    function r(e, t) {
+        let n = t.concat(s),
             i = [];
         return n.forEach(t => {
             let n = e.find(e => t.name === e.codec);
@@ -63,14 +63,14 @@ function(e, t, n) {
                 encode: e.encode,
                 decode: e.decode
             }));
-            return s(n, t)
+            return r(n, t)
         } {
             let n = e.map(e => ({
                 codec: l(e),
                 encode: !0,
                 decode: !0
             }));
-            return s(n, t)
+            return r(n, t)
         }
     }
 

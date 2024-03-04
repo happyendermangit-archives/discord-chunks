@@ -2,25 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         removePunctuation: function() {
-            return l
+            return d
         },
         getQueriesFromUserInput: function() {
-            return f
+            return c
         },
         throttledTrackExpressionSuggestionDisplayed: function() {
-            return _
+            return f
         }
     }), n("781738");
-    var s = n("369470"),
-        i = n.n(s),
+    var i = n("369470"),
+        s = n.n(i),
         r = n("599110"),
         a = n("721423"),
         o = n("49111");
-    let d = /(!|\.|;|,|-|—|–|\?|"|')/g,
+    let l = /(!|\.|;|,|-|—|–|\?|"|')/g,
         u = /(\n|\t|\s)/g,
-        l = e => e.replace(d, "").replace(u, " "),
-        f = e => null == e ? [] : l(e).trim().split(" "),
-        _ = i(e => {
+        d = e => e.replace(l, "").replace(u, " "),
+        c = e => null == e ? [] : d(e).trim().split(" "),
+        f = s(e => {
             r.default.track(o.AnalyticEvents.AUTO_SUGGEST_DISPLAYED, {
                 suggestion_trigger: e
             })

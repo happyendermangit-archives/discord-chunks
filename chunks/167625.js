@@ -38,15 +38,15 @@ function(e, t, n) {
                 for (p = 0; p < c.length; ++p) 0 === c[p].indexOf("utf8=") && ("utf8=%E2%9C%93" === c[p] ? f = "utf-8" : "utf8=%26%2310003%3B" === c[p] && (f = "iso-8859-1"), d = p, p = c.length);
             for (p = 0; p < c.length; ++p)
                 if (p !== d) {
-                    var p, h, m, y = c[p],
+                    var p, m, h, y = c[p],
                         _ = y.indexOf("]="),
                         g = -1 === _ ? y.indexOf("=") : _ + 1;
-                    if (-1 === g ? (h = t.decoder(y, i.decoder, f, "key"), m = t.strictNullHandling ? null : "") : (h = t.decoder(y.slice(0, g), i.decoder, f, "key"), m = r.maybeMap(s(y.slice(g + 1), t), function(e) {
+                    if (-1 === g ? (m = t.decoder(y, i.decoder, f, "key"), h = t.strictNullHandling ? null : "") : (m = t.decoder(y.slice(0, g), i.decoder, f, "key"), h = r.maybeMap(s(y.slice(g + 1), t), function(e) {
                             return t.decoder(e, i.decoder, f, "value")
-                        })), m && t.interpretNumericEntities && "iso-8859-1" === f) m = m.replace(/&#(\d+);/g, function(e, t) {
+                        })), h && t.interpretNumericEntities && "iso-8859-1" === f) h = h.replace(/&#(\d+);/g, function(e, t) {
                         return String.fromCharCode(parseInt(t, 10))
                     });
-                    y.indexOf("[]=") > -1 && (m = o(m) ? [m] : m), a.call(n, h) ? n[h] = r.combine(n[h], m) : n[h] = m
+                    y.indexOf("[]=") > -1 && (h = o(h) ? [h] : h), a.call(n, m) ? n[m] = r.combine(n[m], h) : n[m] = h
                 } return n
         },
         l = function(e, t, n, r) {

@@ -2,65 +2,65 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         socket: function() {
-            return m
+            return E
         },
         localPresenceState: function() {
-            return h
+            return g
         },
         localVoiceState: function() {
-            return v
+            return m
         },
         localLobbyVoiceStates: function() {
-            return E
+            return p
         }
     });
-    var s = n("913144"),
-        i = n("49671"),
+    var i = n("913144"),
+        s = n("49671"),
         r = n("605250"),
         a = n("271938"),
         o = n("599110"),
-        d = n("35468"),
+        l = n("35468"),
         u = n("773336"),
-        l = n("447214"),
-        f = n("413196"),
-        _ = n("764867"),
-        c = n("292892");
-    let g = new r.default("ConnectionStore"),
-        m = new l.default,
-        h = new _.default(m),
-        v = new c.default(m),
-        E = new f.default(m);
-    m.handleIdentify = () => {
+        d = n("447214"),
+        c = n("413196"),
+        f = n("764867"),
+        _ = n("292892");
+    let h = new r.default("ConnectionStore"),
+        E = new d.default,
+        g = new f.default(E),
+        m = new _.default(E),
+        p = new c.default(E);
+    E.handleIdentify = () => {
         let e = a.default.getToken();
-        return (g.verbose("handleIdentify called", {
+        return (h.verbose("handleIdentify called", {
             hasToken: null != e
         }), null == e) ? null : {
             token: e,
             properties: o.default.getSuperProperties(),
-            presence: h.getState()
+            presence: g.getState()
         }
-    }, (0, u.isDesktop)() && i.default.remotePowerMonitor.on("resume", () => {
-        m.expeditedHeartbeat(5e3, "power monitor resumed")
-    }), d.default.addOfflineCallback(() => {
-        m.networkStateChange(15e3, "network detected offline.", !1)
-    }), d.default.addOnlineCallback(() => {
-        m.networkStateChange(5e3, "network detected online.")
-    }), m.on("disconnect", e => {
+    }, (0, u.isDesktop)() && s.default.remotePowerMonitor.on("resume", () => {
+        E.expeditedHeartbeat(5e3, "power monitor resumed")
+    }), l.default.addOfflineCallback(() => {
+        E.networkStateChange(15e3, "network detected offline.", !1)
+    }), l.default.addOnlineCallback(() => {
+        E.networkStateChange(5e3, "network detected online.")
+    }), E.on("disconnect", e => {
         let {
             code: t,
             reason: n
         } = e;
-        s.default.dispatch({
+        i.default.dispatch({
             type: "CONNECTION_CLOSED",
             code: t,
             reason: n
         })
-    }), m.on("close", e => {
+    }), E.on("close", e => {
         let {
             code: t,
             reason: n
         } = e;
-        s.default.dispatch({
+        i.default.dispatch({
             type: "CONNECTION_INTERRUPTED",
             code: t,
             reason: n

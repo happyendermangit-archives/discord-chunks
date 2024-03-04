@@ -5,23 +5,23 @@ function(e, t, n) {
             return i
         }
     }), n("70102");
-    var i, r = n("44170"),
-        s = n("441822");
-    i = class e extends r.EventEmitter {
+    var i, s = n("44170"),
+        r = n("441822");
+    i = class e extends s.EventEmitter {
         static async get(t, n) {
             var i;
-            let r = {
+            let s = {
                 ...t,
                 frameRate: 30
             };
             if ((null === (i = navigator.mediaDevices) || void 0 === i ? void 0 : i.getDisplayMedia) != null) return new e(await navigator.mediaDevices.getDisplayMedia({
                 audio: n,
-                video: r
+                video: s
             }));
             throw Error("UNKNOWN")
         }
         destroy() {
-            this.removeAllListeners(), (0, s.unregisterVideoStream)(this.streamId), this.stream.getTracks().forEach(e => e.stop())
+            this.removeAllListeners(), (0, r.unregisterVideoStream)(this.streamId), this.stream.getTracks().forEach(e => e.stop())
         }
         reset() {
             this.refreshSpeaking()
@@ -37,7 +37,7 @@ function(e, t, n) {
                 e.onended = () => {
                     this.emit("desktopsourceend")
                 }
-            }), this.id = e.getVideoTracks()[0].label, this.stream = e, this.streamId = (0, s.registerVideoStream)(e)
+            }), this.id = e.getVideoTracks()[0].label, this.stream = e, this.streamId = (0, r.registerVideoStream)(e)
         }
     }
 }

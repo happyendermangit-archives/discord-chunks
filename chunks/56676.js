@@ -2,16 +2,16 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return T
+            return s
         }
     }), E("808653");
     var t = E("446674"),
         o = E("913144");
     let n = {},
         r = null,
-        i = null;
+        a = null;
 
-    function a(e, _) {
+    function i(e, _) {
         null == _ ? e in n && delete n[e] : null != e && (n[e] = _)
     }
 
@@ -19,9 +19,9 @@ function(e, _, E) {
         let {
             user: _
         } = e;
-        i = _.id
+        a = _.id
     }
-    class s extends t.default.PersistedStore {
+    class T extends t.default.PersistedStore {
         initialize(e) {
             null != e && (n = e)
         }
@@ -40,14 +40,14 @@ function(e, _, E) {
             return n
         }
     }
-    s.displayName = "LoginRequiredActionStore", s.persistKey = "LoginRequiredActionStore";
-    var T = new s(o.default, {
+    T.displayName = "LoginRequiredActionStore", T.persistKey = "LoginRequiredActionStore";
+    var s = new T(o.default, {
         LOGIN_ATTEMPTED: function(e) {
             let {
                 required_actions: _,
                 user_id: E
             } = e;
-            a(r = E, _)
+            i(r = E, _)
         },
         CONNECTION_OPEN: I,
         CURRENT_USER_UPDATE: I,
@@ -55,19 +55,19 @@ function(e, _, E) {
             let {
                 isSwitchingAccount: _
             } = e;
-            !_ && null != i && a(i, null)
+            !_ && null != a && i(a, null)
         },
         PASSWORD_UPDATED: function(e) {
             let {
                 userId: _
             } = e;
-            a(_, null)
+            i(_, null)
         },
         MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
             let {
                 userId: _
             } = e;
-            a(_, null)
+            i(_, null)
         }
     })
 }

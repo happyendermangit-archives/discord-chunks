@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return m
         }
     });
     var r = n("996677"),
@@ -37,7 +37,7 @@ function(e, t, n) {
         var n = Math.abs(e);
         return (e > 0 ? "-" : "+") + (0, u.default)(Math.floor(n / 60), 2) + (t || "") + (0, u.default)(n % 60, 2)
     }
-    var h = {
+    var m = {
         G: function(e, t, n) {
             var r = e.getUTCFullYear() > 0 ? 1 : 0;
             switch (t) {

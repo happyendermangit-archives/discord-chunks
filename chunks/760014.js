@@ -5,11 +5,11 @@ function(e, t, n) {
             return i
         }
     }), n("222007"), n("70102");
-    var i, r = n("44170"),
-        s = n("811022"),
+    var i, s = n("44170"),
+        r = n("811022"),
         a = n("53452");
-    let o = new s.default("PeerConnection");
-    i = class extends r.EventEmitter {
+    let o = new r.default("PeerConnection");
+    i = class extends s.EventEmitter {
         setBitRate(e) {
             this.bitrate !== e && (this.bitrate = e, this.negotiationNeeded())
         }
@@ -35,8 +35,8 @@ function(e, t, n) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = this.pc,
                 i = "closed" === this.iceConnectionState,
-                r = !1;
-            null != this.stream && !i && (this.senders.forEach(e => n.removeTrack(e)), r = !0), this.stream = e, this.senders = [], null != e && !i && (this.senders = [...e.getAudioTracks().map(t => n.addTrack(t, e)), ...e.getVideoTracks().map(t => n.addTrack(t, e))], r = !0), r && !t && this.negotiationNeeded()
+                s = !1;
+            null != this.stream && !i && (this.senders.forEach(e => n.removeTrack(e)), s = !0), this.stream = e, this.senders = [], null != e && !i && (this.senders = [...e.getAudioTracks().map(t => n.addTrack(t, e)), ...e.getVideoTracks().map(t => n.addTrack(t, e))], s = !0), s && !t && this.negotiationNeeded()
         }
         createOffer() {
             let e = this.pc;

@@ -1,11 +1,11 @@
-function(t, r, n) {
-    t.exports = function(t) {
-        return function(r, n, e) {
-            for (var o = -1, i = Object(r), u = e(r), c = u.length; c--;) {
-                var a = u[t ? c : ++o];
-                if (!1 === n(i[a], a, i)) break
+function(e, t, n) {
+    e.exports = function(e) {
+        return function(t, n, r) {
+            for (var i = -1, o = Object(t), s = r(t), a = s.length; a--;) {
+                var c = s[e ? a : ++i];
+                if (!1 === n(o[c], c, o)) break
             }
-            return r
+            return t
         }
     }
 }

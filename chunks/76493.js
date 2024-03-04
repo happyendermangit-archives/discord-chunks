@@ -1,18 +1,18 @@
-function(t, e, o) {
+function(e, t, n) {
     "use strict";
-    o.r(e), o.d(e, {
+    n.r(t), n.d(t, {
         default: function() {
-            return n
+            return i
         }
-    }), o("424973");
-    var n = new class t {
-        enqueue(t) {
-            this.queue.push(t)
+    }), n("424973");
+    var i = new class e {
+        enqueue(e) {
+            this.queue.push(e)
         }
         flush() {
             for (; this.queue.length > 0;) {
-                var t;
-                null === (t = this.queue.shift()) || void 0 === t || t()
+                var e;
+                null === (e = this.queue.shift()) || void 0 === e || e()
             }
         }
         constructor() {

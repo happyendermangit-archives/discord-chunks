@@ -9,16 +9,16 @@ function(e, _, E) {
             return r
         },
         isWindows: function() {
-            return a
+            return i
         },
         isMac: function() {
             return I
         },
         isLinux: function() {
-            return s
+            return T
         },
         isDesktop: function() {
-            return T
+            return s
         },
         isWeb: function() {
             return S
@@ -50,22 +50,22 @@ function(e, _, E) {
     }), (o = t || (t = {})).WINDOWS = "WINDOWS", o.OSX = "OSX", o.LINUX = "LINUX", o.WEB = "WEB";
     let n = window.DiscordNative,
         r = null != n,
-        i = null != n ? n.process.platform : "";
+        a = null != n ? n.process.platform : "";
 
-    function a() {
-        return /^win/.test(i)
+    function i() {
+        return /^win/.test(a)
     }
 
     function I() {
-        return "darwin" === i
-    }
-
-    function s() {
-        return "linux" === i
+        return "darwin" === a
     }
 
     function T() {
-        return a() || I() || s()
+        return "linux" === a
+    }
+
+    function s() {
+        return i() || I() || T()
     }
 
     function S() {
@@ -82,26 +82,26 @@ function(e, _, E) {
     }
 
     function A() {
-        return "android" === i
+        return "android" === a
     }
 
     function R() {
-        return "ios" === i
+        return "ios" === a
     }
 
     function l() {
-        return a() ? "WINDOWS" : I() ? "OSX" : s() ? "LINUX" : "WEB"
+        return i() ? "WINDOWS" : I() ? "OSX" : T() ? "LINUX" : "WEB"
     }
 
     function u() {
-        return i
+        return a
     }
 
     function L() {
-        switch (i) {
+        switch (a) {
             case "ios":
             case "android":
-                return i;
+                return a;
             default:
                 return "web"
         }

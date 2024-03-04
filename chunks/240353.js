@@ -2,29 +2,29 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         InputError: function() {
-            return h
+            return E
         },
         TextInput: function() {
-            return _
+            return g
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("907002"),
         l = n("718776"),
         u = n("516826"),
-        c = n("577776"),
-        d = n("634634"),
+        d = n("577776"),
+        c = n("634634"),
         f = n("782340"),
-        E = n("182893");
-    let p = {
-        DEFAULT: E.inputDefault,
-        MINI: E.inputMini
+        _ = n("182893");
+    let h = {
+        DEFAULT: _.inputDefault,
+        MINI: _.inputMini
     };
 
-    function h(e) {
+    function E(e) {
         let {
             error: t
         } = e, n = (0, o.useTransition)(t, {
@@ -50,12 +50,12 @@ function(e, t, n) {
                 opacity: 0,
                 transform: "translate3d(0, -100%, 0)"
             }
-        }), r = (0, d.default)(t);
+        }), s = (0, c.default)(t);
         return (0, i.jsx)(i.Fragment, {
-            children: n((e, n, s) => {
+            children: n((e, n, r) => {
                 let {
                     key: a
-                } = s, {
+                } = r, {
                     transform: l,
                     ...u
                 } = e;
@@ -68,54 +68,54 @@ function(e, t, n) {
                         style: {
                             transform: l
                         },
-                        children: (0, i.jsx)(c.Text, {
+                        children: (0, i.jsx)(d.Text, {
                             color: "text-danger",
                             variant: "text-xs/normal",
-                            children: null != t && "" !== t ? t : r
+                            children: null != t && "" !== t ? t : s
                         })
                     })
                 }, a) : null
             })
         })
     }
-    class _ extends r.Component {
+    class g extends s.Component {
         render() {
             var e, t;
             let {
                 className: n,
-                inputClassName: r,
-                inputPrefix: s,
+                inputClassName: s,
+                inputPrefix: r,
                 disabled: o,
                 size: u,
-                editable: c,
-                inputRef: d,
+                editable: d,
+                inputRef: c,
                 prefixElement: f,
-                focusProps: p,
-                ..._
-            } = this.props, S = null !== (t = _["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
+                focusProps: h,
+                ...g
+            } = this.props, m = null !== (t = g["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
             return (0, i.jsxs)("div", {
-                className: a(E.inputWrapper, n),
-                children: [null != f && f, null != s ? (0, i.jsx)("span", {
-                    className: E.inputPrefix,
-                    children: s
+                className: a(_.inputWrapper, n),
+                children: [null != f && f, null != r ? (0, i.jsx)("span", {
+                    className: _.inputPrefix,
+                    children: r
                 }) : null, (0, i.jsx)(l.FocusRing, {
-                    ...p,
+                    ...h,
                     children: (0, i.jsx)("input", {
-                        className: a(u, r, {
-                            [E.error]: this.hasError(),
-                            [E.disabled]: o,
-                            [E.editable]: c
+                        className: a(u, s, {
+                            [_.error]: this.hasError(),
+                            [_.disabled]: o,
+                            [_.editable]: d
                         }),
                         disabled: o,
-                        readOnly: !1 === c || void 0,
-                        ..._,
-                        "aria-labelledby": S,
+                        readOnly: !1 === d || void 0,
+                        ...g,
+                        "aria-labelledby": m,
                         onChange: this.onChange,
                         onBlur: this.onBlur,
                         onFocus: this.onFocus,
-                        ref: d
+                        ref: c
                     })
-                }), (0, i.jsx)(h, {
+                }), (0, i.jsx)(E, {
                     error: this.getError()
                 })]
             })
@@ -129,10 +129,10 @@ function(e, t, n) {
                     maxLength: n
                 } = this.props, i = this.getIsUnderFlowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
                     minLength: t
-                }) : null, r = this.getIsOverFlowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+                }) : null, s = this.getIsOverFlowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
                     maxLength: n
                 }) : null;
-                return null != e && e.length < 1 || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != i ? i : r
+                return null != e && e.length < 1 || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != i ? i : s
             }, this.getIsUnderFlowing = () => {
                 var e;
                 let {
@@ -163,9 +163,9 @@ function(e, t, n) {
             }
         }
     }
-    _.Sizes = p, _.contextType = u.FormContext, _.defaultProps = {
+    g.Sizes = h, g.contextType = u.FormContext, g.defaultProps = {
         name: "",
-        size: p.DEFAULT,
+        size: h.DEFAULT,
         disabled: !1,
         type: "text",
         placeholder: "",

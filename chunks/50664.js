@@ -2,64 +2,64 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useTab: function() {
-            return l
+            return u
         },
         useTabList: function() {
-            return d
+            return l
         }
     }), n("222007"), n("781738");
     var r = n("240849"),
-        a = n("932165"),
-        i = n("884691"),
-        o = n("564341");
-    let s = new WeakMap;
+        i = n("932165"),
+        o = n("884691"),
+        s = n("564341");
+    let a = new WeakMap;
 
     function c(e, t, n) {
         "string" == typeof t && (t = t.replace(/\s+/g, ""));
-        let r = s.get(e);
+        let r = a.get(e);
         return "".concat(r, "-").concat(n, "-").concat(t)
     }
 
-    function l(e, t, n) {
-        var i;
+    function u(e, t, n) {
+        var o;
         let {
-            key: o,
-            isDisabled: s,
-            shouldSelectOnPressUp: l
+            key: s,
+            isDisabled: a,
+            shouldSelectOnPressUp: u
         } = e, {
-            selectionManager: u,
-            selectedKey: d
-        } = t, p = o === d, f = s || t.isDisabled || t.disabledKeys.has(o), {
-            itemProps: m,
-            isPressed: h
-        } = (0, a.useSelectableItem)({
-            selectionManager: u,
-            key: o,
+            selectionManager: d,
+            selectedKey: l
+        } = t, f = s === l, p = a || t.isDisabled || t.disabledKeys.has(s), {
+            itemProps: h,
+            isPressed: v
+        } = (0, i.useSelectableItem)({
+            selectionManager: d,
+            key: s,
             ref: n,
-            isDisabled: f,
-            shouldSelectOnPressUp: l,
+            isDisabled: p,
+            shouldSelectOnPressUp: u,
             linkBehavior: "selection"
-        }), v = c(t, o, "tab"), g = c(t, o, "tabpanel"), {
-            tabIndex: y
-        } = m, b = t.collection.getItem(o), x = (0, r.filterDOMProps)(null == b ? void 0 : b.props, {
-            isLink: !!(null == b ? void 0 : null === (i = b.props) || void 0 === i ? void 0 : i.href),
+        }), g = c(t, s, "tab"), b = c(t, s, "tabpanel"), {
+            tabIndex: m
+        } = h, y = t.collection.getItem(s), x = (0, r.filterDOMProps)(null == y ? void 0 : y.props, {
+            isLink: !!(null == y ? void 0 : null === (o = y.props) || void 0 === o ? void 0 : o.href),
             labelable: !0
         });
         return delete x.id, {
-            tabProps: (0, r.mergeProps)(x, m, {
-                id: v,
-                "aria-selected": p,
-                "aria-disabled": f || void 0,
-                "aria-controls": p ? g : void 0,
-                tabIndex: f ? void 0 : y,
+            tabProps: (0, r.mergeProps)(x, h, {
+                id: g,
+                "aria-selected": f,
+                "aria-disabled": p || void 0,
+                "aria-controls": f ? b : void 0,
+                tabIndex: p ? void 0 : m,
                 role: "tab"
             }),
-            isSelected: p,
-            isDisabled: f,
-            isPressed: h
+            isSelected: f,
+            isDisabled: p,
+            isPressed: v
         }
     }
-    class u {
+    class d {
         getKeyLeftOf(e) {
             return this.flipDirection ? this.getNextKey(e) : this.getPreviousKey(e)
         }
@@ -93,35 +93,35 @@ function(e, t, n) {
         }
     }
 
-    function d(e, t, n) {
+    function l(e, t, n) {
         let {
             orientation: c = "horizontal",
-            keyboardActivation: l = "automatic"
+            keyboardActivation: u = "automatic"
         } = e, {
-            collection: d,
-            selectionManager: p,
-            disabledKeys: f
+            collection: l,
+            selectionManager: f,
+            disabledKeys: p
         } = t, {
-            direction: m
-        } = (0, o.useLocale)(), h = (0, i.useMemo)(() => new u(d, m, c, f), [d, f, c, m]), {
-            collectionProps: v
-        } = (0, a.useSelectableCollection)({
+            direction: h
+        } = (0, s.useLocale)(), v = (0, o.useMemo)(() => new d(l, h, c, p), [l, p, c, h]), {
+            collectionProps: g
+        } = (0, i.useSelectableCollection)({
             ref: n,
-            selectionManager: p,
-            keyboardDelegate: h,
-            selectOnFocus: "automatic" === l,
+            selectionManager: f,
+            keyboardDelegate: v,
+            selectOnFocus: "automatic" === u,
             disallowEmptySelection: !0,
             scrollRef: n,
             linkBehavior: "selection"
-        }), g = (0, r.useId)();
-        s.set(t, g);
-        let y = (0, r.useLabels)({
+        }), b = (0, r.useId)();
+        a.set(t, b);
+        let m = (0, r.useLabels)({
             ...e,
-            id: g
+            id: b
         });
         return {
             tabListProps: {
-                ...(0, r.mergeProps)(v, y),
+                ...(0, r.mergeProps)(g, m),
                 role: "tablist",
                 "aria-orientation": c,
                 tabIndex: void 0

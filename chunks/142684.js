@@ -1,13 +1,13 @@
-function(t, r, n) {
+function(e, t, n) {
     n("424973"), n("781738");
-    var e = n("954995"),
-        o = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-        i = /\\(\\)?/g,
-        u = e(function(t) {
-            var r = [];
-            return 46 === t.charCodeAt(0) && r.push(""), t.replace(o, function(t, n, e, o) {
-                r.push(e ? o.replace(i, "$1") : n || t)
-            }), r
+    var r = n("954995"),
+        i = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
+        o = /\\(\\)?/g,
+        s = r(function(e) {
+            var t = [];
+            return 46 === e.charCodeAt(0) && t.push(""), e.replace(i, function(e, n, r, i) {
+                t.push(r ? i.replace(o, "$1") : n || e)
+            }), t
         });
-    t.exports = u
+    e.exports = s
 }

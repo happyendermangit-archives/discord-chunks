@@ -11,7 +11,7 @@ function(e, _, E) {
             return r
         },
         clearCurrentlyInteractingWindowId: function() {
-            return i
+            return a
         }
     });
     let t = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"],
@@ -25,7 +25,7 @@ function(e, _, E) {
         o = e
     }
 
-    function i(e) {
+    function a(e) {
         o === e && (o = null)
     }
 }

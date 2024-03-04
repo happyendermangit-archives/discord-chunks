@@ -2,40 +2,40 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         playGiftSound: function() {
-            return r
+            return c
         },
         WebAudioSound: function() {
-            return f
+            return _
         }
     }), n("70102");
-    var s = n("917351"),
-        u = n.n(s),
-        a = n("520497"),
-        i = n("812809"),
+    var i = n("917351"),
+        s = n.n(i),
+        r = n("520497"),
+        a = n("812809"),
         o = n("42887"),
-        d = n("773336");
-    let c = "default",
-        p = c;
+        l = n("773336");
+    let u = "default",
+        d = u;
 
-    function r(e, t) {
-        let n = new Audio((0, a.default)(e));
-        n.volume = (0, i.default)(t), n.play()
+    function c(e, t) {
+        let n = new Audio((0, r.default)(e));
+        n.volume = (0, a.default)(t), n.play()
     }
 
-    function l() {
+    function f() {
         null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
             let t = o.default.getOutputDevices(),
-                n = u(t).sortBy(e => e.index).findIndex(e => e.id === o.default.getOutputDeviceId()),
-                s = t[o.default.getOutputDeviceId()],
-                a = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
-                i = a[n];
-            null != s && (null == i || i.label !== s.name) && (i = a.find(e => e.label === s.name)), p = null != i ? i.deviceId : c
+                n = s(t).sortBy(e => e.index).findIndex(e => e.id === o.default.getOutputDeviceId()),
+                i = t[o.default.getOutputDeviceId()],
+                r = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
+                a = r[n];
+            null != i && (null == a || a.label !== i.name) && (a = r.find(e => e.label === i.name)), d = null != a ? a.deviceId : u
         }).catch(() => {
-            p = c
+            d = u
         })
     }
-    d.isPlatformEmbedded && (o.default.addChangeListener(l), l());
-    class f {
+    l.isPlatformEmbedded && (o.default.addChangeListener(f), f());
+    class _ {
         get volume() {
             return this._volume
         }
@@ -75,10 +75,10 @@ function(e, t, n) {
         _ensureAudio() {
             var e;
             return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
-                let s = new Audio;
-                s.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), s.onloadeddata = () => {
-                    s.volume = Math.min(o.default.getOutputVolume() / 100 * this._volume, 1), d.isPlatformEmbedded && s.setSinkId(p), e(s)
-                }, s.onerror = () => t(Error("could not play audio")), s.onended = () => this._destroyAudio(), s.load()
+                let i = new Audio;
+                i.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), i.onloadeddata = () => {
+                    i.volume = Math.min(o.default.getOutputVolume() / 100 * this._volume, 1), l.isPlatformEmbedded && i.setSinkId(d), e(i)
+                }, i.onerror = () => t(Error("could not play audio")), i.onended = () => this._destroyAudio(), i.load()
             }), this._audio
         }
         constructor(e, t, n) {

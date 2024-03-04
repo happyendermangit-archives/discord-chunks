@@ -1,20 +1,20 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
 
-    function r(t) {
-        let e = {};
-        return Object.keys(t).forEach(function(s) {
-            (0 | s) == s && (s |= 0);
-            let r = t[s];
-            e[r] = s
-        }), e
+    function r(e) {
+        let t = {};
+        return Object.keys(e).forEach(function(n) {
+            (0 | n) == n && (n |= 0);
+            let r = e[n];
+            t[r] = n
+        }), t
     }
-    e.tagClass = {
+    t.tagClass = {
         0: "universal",
         1: "application",
         2: "context",
         3: "private"
-    }, e.tagClassByName = r(e.tagClass), e.tag = {
+    }, t.tagClassByName = r(t.tagClass), t.tag = {
         0: "end",
         1: "bool",
         2: "int",
@@ -44,5 +44,5 @@ function(t, e, s) {
         28: "unistr",
         29: "charstr",
         30: "bmpstr"
-    }, e.tagByName = r(e.tag)
+    }, t.tagByName = r(t.tag)
 }

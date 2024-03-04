@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ReportRaidExperiment: function() {
-            return i
+            return s
         },
         RaidAlertExperiment: function() {
             return r
         }
     });
-    var l = n("862205");
-    let i = (0, l.createExperiment)({
+    var i = n("862205");
+    let s = (0, i.createExperiment)({
             kind: "guild",
             id: "2022-07_report_raids",
             label: "Report Raids",
@@ -24,7 +24,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        r = (0, l.createExperiment)({
+        r = (0, i.createExperiment)({
             kind: "guild",
             id: "2022-10_guild_raid_messaging",
             label: "Raid Alerts",

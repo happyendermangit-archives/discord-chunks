@@ -11,24 +11,24 @@ function(e, t, n) {
             return u
         },
         calculateProgressPercentage: function() {
-            return c
+            return d
         },
         shouldShowGameInLibrary: function() {
-            return d
+            return c
         },
         convertToTransitionState: function() {
             return f
         },
         getCombinedProgress: function() {
-            return E
+            return _
         },
         isUserEntitledToLibraryApplication: function() {
-            return p
+            return h
         }
     }), n("222007"), n("808653");
     var i = n("845579"),
-        r = n("697218"),
-        s = n("552712"),
+        s = n("697218"),
+        r = n("552712"),
         a = n("49111");
 
     function o(e, t) {
@@ -49,11 +49,11 @@ function(e, t, n) {
         return null == n || !n.hasFlag(a.LibraryApplicationFlags.PRIVATE)
     }
 
-    function c(e, t) {
+    function d(e, t) {
         return 0 === t ? 100 : e / t * 100
     }
 
-    function d(e, t, n) {
+    function c(e, t, n) {
         return !(null == t || n.enabled && t.hasFlag(a.LibraryApplicationFlags.PRIVATE)) && !t.isHidden()
     }
 
@@ -61,7 +61,7 @@ function(e, t, n) {
         return null == e ? null : e.type === a.LocalDispatchApplicationStates.INSTALLING || e.type === a.LocalDispatchApplicationStates.UPDATING || e.type === a.LocalDispatchApplicationStates.UNINSTALLING ? e : null
     }
 
-    function E(e) {
+    function _(e) {
         return e.reduce((e, t) => {
             let n = f(t);
             return null == n || t.type === a.LocalDispatchApplicationStates.UP_TO_DATE ? e : {
@@ -74,7 +74,7 @@ function(e, t, n) {
         })
     }
 
-    function p(e) {
-        return !!e.isDiscordApplication() && e.isEntitled(r.default.getCurrentUser(), s.default)
+    function h(e) {
+        return !!e.isDiscordApplication() && e.isEntitled(s.default.getCurrentUser(), r.default)
     }
 }

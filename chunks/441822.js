@@ -12,19 +12,19 @@ function(e, t, n) {
         }
     });
     var i = n("773179"),
-        r = n.n(i);
-    let s = {};
+        s = n.n(i);
+    let r = {};
 
     function a(e) {
-        let t = r.uniqueId("VideoStream");
-        return s[t] = e, t
+        let t = s.uniqueId("VideoStream");
+        return r[t] = e, t
     }
 
     function o(e) {
-        delete s[e]
+        delete r[e]
     }
 
     function l(e) {
-        return s[e]
+        return r[e]
     }
 }

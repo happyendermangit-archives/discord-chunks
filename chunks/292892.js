@@ -2,24 +2,24 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return i
         }
     }), n("702976");
-    var s, i = n("201876"),
+    var i, s = n("201876"),
         r = n("56947"),
         a = n("386045"),
         o = n("18346"),
-        d = n("161454"),
+        l = n("161454"),
         u = n("584687"),
-        l = n("103979"),
-        f = n("845579"),
-        _ = n("373469"),
-        c = n("42203"),
-        g = n("42887"),
-        m = n("590401"),
-        h = n("568734"),
-        v = n("49111");
-    s = class extends i.default {
+        d = n("103979"),
+        c = n("845579"),
+        f = n("373469"),
+        _ = n("42203"),
+        h = n("42887"),
+        E = n("590401"),
+        g = n("568734"),
+        m = n("49111");
+    i = class extends s.default {
         get guildId() {
             return this.getState().guildId
         }
@@ -28,34 +28,34 @@ function(e, t, n) {
         }
         computeVoiceFlags() {
             var e, t, n;
-            let s = 0,
-                i = f.ClipsAllowVoiceRecording.getSetting();
-            s = (0, h.setFlag)(s, v.VoiceFlags.ALLOW_VOICE_RECORDING, i);
-            let c = (0, o.default)(g.default),
-                m = (0, r.areClipsEnabled)() && a.default.getSettings().clipsEnabled && ((null === (e = _.default.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === v.ApplicationStreamStates.ACTIVE || (null === (t = _.default.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === v.ApplicationStreamStates.PAUSED),
+            let i = 0,
+                s = c.ClipsAllowVoiceRecording.getSetting();
+            i = (0, g.setFlag)(i, m.VoiceFlags.ALLOW_VOICE_RECORDING, s);
+            let _ = (0, o.default)(h.default),
+                E = (0, r.areClipsEnabled)() && a.default.getSettings().clipsEnabled && ((null === (e = f.default.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === m.ApplicationStreamStates.ACTIVE || (null === (t = f.default.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === m.ApplicationStreamStates.PAUSED),
                 {
-                    enableDecoupledGameClipping: E
+                    enableDecoupledGameClipping: p
                 } = u.default.getCurrentConfig({
                     location: "computeVoiceFlags"
                 }),
-                p = c && a.default.getSettings().decoupledClipsEnabled && (null === (n = d.default.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && E;
-            s = (0, h.setFlag)(s, v.VoiceFlags.CLIPS_ENABLED, m || p);
+                S = _ && a.default.getSettings().decoupledClipsEnabled && (null === (n = l.default.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && p;
+            i = (0, g.setFlag)(i, m.VoiceFlags.CLIPS_ENABLED, E || S);
             let {
-                enableViewerClipping: y
-            } = l.default.getCurrentConfig({
+                enableViewerClipping: v
+            } = d.default.getCurrentConfig({
                 location: "computeVoiceFlags"
             }, {
                 autoTrackExposure: !1
-            }), T = y && c && a.default.getSettings().viewerClipsEnabled;
-            return s = (0, h.setFlag)(s, v.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS, T)
+            }), T = v && _ && a.default.getSettings().viewerClipsEnabled;
+            return i = (0, g.setFlag)(i, m.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS, T)
         }
         getInitialState() {
             return {
                 guildId: null,
                 channelId: null,
-                selfMute: g.default.isSelfMute(),
-                selfDeaf: g.default.isSelfDeaf(),
-                selfVideo: g.default.isVideoEnabled(),
+                selfMute: h.default.isSelfMute(),
+                selfDeaf: h.default.isSelfDeaf(),
+                selfVideo: h.default.isVideoEnabled(),
                 preferredRegion: null,
                 videoStreamParameters: null,
                 flags: 0
@@ -69,11 +69,11 @@ function(e, t, n) {
             return {
                 guildId: t,
                 channelId: n,
-                selfMute: g.default.isSelfMute(),
-                selfDeaf: g.default.isSelfDeaf(),
-                selfVideo: g.default.isVideoEnabled(),
-                preferredRegion: m.default.getPreferredRegion(),
-                videoStreamParameters: g.default.getVideoStreamParameters(),
+                selfMute: h.default.isSelfMute(),
+                selfDeaf: h.default.isSelfDeaf(),
+                selfVideo: h.default.isVideoEnabled(),
+                preferredRegion: E.default.getPreferredRegion(),
+                videoStreamParameters: h.default.getVideoStreamParameters(),
                 flags: this.computeVoiceFlags()
             }
         }
@@ -84,27 +84,27 @@ function(e, t, n) {
             var t;
             let {
                 guildId: n,
-                channelId: s,
-                selfMute: i,
+                channelId: i,
+                selfMute: s,
                 selfDeaf: r,
                 selfVideo: a,
                 preferredRegion: o,
-                videoStreamParameters: d,
+                videoStreamParameters: l,
                 flags: u = 0
             } = e;
-            a && (null === (t = c.default.getChannel(s)) || void 0 === t ? void 0 : t.type) === v.ChannelTypes.GUILD_STAGE_VOICE ? this.socket.voiceStateUpdate({
+            a && (null === (t = _.default.getChannel(i)) || void 0 === t ? void 0 : t.type) === m.ChannelTypes.GUILD_STAGE_VOICE ? this.socket.voiceStateUpdate({
                 guildId: n,
-                channelId: s,
-                selfMute: i,
+                channelId: i,
+                selfMute: s,
                 selfDeaf: r,
                 selfVideo: a,
                 preferredRegion: o,
-                videoStreamParameters: d,
+                videoStreamParameters: l,
                 flags: u
             }) : this.socket.voiceStateUpdate({
                 guildId: n,
-                channelId: s,
-                selfMute: i,
+                channelId: i,
+                selfMute: s,
                 selfDeaf: r,
                 selfVideo: a,
                 preferredRegion: o,

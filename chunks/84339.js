@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return s
         }
     });
     var i = n("884691");
 
-    function r(e) {
+    function s(e) {
         let t = (0, i.useRef)();
         return (0, i.useEffect)(() => {
             t.current = e

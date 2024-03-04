@@ -5,8 +5,8 @@ function(e, t, n) {
             return r
         }
     });
-    var s = n("862205");
-    let i = (0, s.createExperiment)({
+    var i = n("862205");
+    let s = (0, i.createExperiment)({
         kind: "user",
         id: "2023-03_store_latest_message_data",
         label: "Store latest message data",
@@ -21,5 +21,5 @@ function(e, t, n) {
             }
         }]
     });
-    var r = i
+    var r = s
 }

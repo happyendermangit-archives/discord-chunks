@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return a
+            return i
         }
     });
     var t, o, n = E("44170");
@@ -11,7 +11,7 @@ function(e, _, E) {
         open: !1,
         orientation: null
     };
-    class i extends n.EventEmitter {
+    class a extends n.EventEmitter {
         get orientations() {
             return Object.values(o)
         }
@@ -52,5 +52,5 @@ function(e, _, E) {
             super(), setInterval(() => this.check(), 500)
         }
     }
-    var a = i
+    var i = a
 }

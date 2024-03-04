@@ -2,38 +2,38 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getDefaultLibraryApplicationAction: function() {
-            return a
+            return r
         }
     });
-    var l = n("602043"),
-        r = n("49111");
+    var i = n("602043"),
+        s = n("49111");
 
-    function a(e, t, n) {
-        let a = t.getState(e.id, e.branchId),
-            i = n.getQueuePosition(e.id, e.branchId),
-            u = n.paused;
-        if (null != a) {
-            if (null == i || -1 === i) switch (a.type) {
-                case r.LocalDispatchApplicationStates.INSTALLING:
-                    return r.LibraryApplicationActions.INSTALL;
-                case r.LocalDispatchApplicationStates.UPDATING:
-                case r.LocalDispatchApplicationStates.UPDATE_REQUIRED:
-                    return r.LibraryApplicationActions.UPDATE
+    function r(e, t, n) {
+        let r = t.getState(e.id, e.branchId),
+            a = n.getQueuePosition(e.id, e.branchId),
+            o = n.paused;
+        if (null != r) {
+            if (null == a || -1 === a) switch (r.type) {
+                case s.LocalDispatchApplicationStates.INSTALLING:
+                    return s.LibraryApplicationActions.INSTALL;
+                case s.LocalDispatchApplicationStates.UPDATING:
+                case s.LocalDispatchApplicationStates.UPDATE_REQUIRED:
+                    return s.LibraryApplicationActions.UPDATE
             }
-            switch (a.type) {
-                case r.LocalDispatchApplicationStates.INSTALLING:
-                case r.LocalDispatchApplicationStates.UPDATING:
-                case r.LocalDispatchApplicationStates.UPDATE_REQUIRED:
-                case r.LocalDispatchApplicationStates.REPAIRING:
-                    if (i > 0) return r.LibraryApplicationActions.MOVE_UP;
-                    if (u) return r.LibraryApplicationActions.RESUME;
-                    return r.LibraryApplicationActions.PAUSE;
-                case r.LocalDispatchApplicationStates.UP_TO_DATE:
-                    return r.LibraryApplicationActions.PLAY;
-                case r.LocalDispatchApplicationStates.UNINSTALLING:
+            switch (r.type) {
+                case s.LocalDispatchApplicationStates.INSTALLING:
+                case s.LocalDispatchApplicationStates.UPDATING:
+                case s.LocalDispatchApplicationStates.UPDATE_REQUIRED:
+                case s.LocalDispatchApplicationStates.REPAIRING:
+                    if (a > 0) return s.LibraryApplicationActions.MOVE_UP;
+                    if (o) return s.LibraryApplicationActions.RESUME;
+                    return s.LibraryApplicationActions.PAUSE;
+                case s.LocalDispatchApplicationStates.UP_TO_DATE:
+                    return s.LibraryApplicationActions.PLAY;
+                case s.LocalDispatchApplicationStates.UNINSTALLING:
                     return null
             }
         }
-        return null != i && i > 0 ? r.LibraryApplicationActions.MOVE_UP : (0, l.isSupportedPlatform)() ? r.LibraryApplicationActions.INSTALL : null
+        return null != a && a > 0 ? s.LibraryApplicationActions.MOVE_UP : (0, i.isSupportedPlatform)() ? s.LibraryApplicationActions.INSTALL : null
     }
 }

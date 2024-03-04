@@ -5,21 +5,21 @@ function(e, t, n) {
             return o
         },
         setHasUnsubmittedChanges: function() {
-            return d
+            return l
         },
         setShowWarning: function() {
             return u
         }
     });
-    var s = n("308503"),
-        i = n("659500"),
+    var i = n("308503"),
+        s = n("659500"),
         r = n("49111");
     let a = Object.freeze({
             hasUnsubmittedChanges: !1,
             shouldShowWarning: !1
         }),
-        o = (0, s.default)(e => a),
-        d = e => {
+        o = (0, i.default)(e => a),
+        l = e => {
             o.setState({
                 hasUnsubmittedChanges: e
             })
@@ -27,6 +27,6 @@ function(e, t, n) {
         u = e => {
             o.setState({
                 shouldShowWarning: e
-            }), e && i.ComponentDispatch.dispatch(r.ComponentActions.EMPHASIZE_NOTICE)
+            }), e && s.ComponentDispatch.dispatch(r.ComponentActions.EMPHASIZE_NOTICE)
         }
 }

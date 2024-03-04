@@ -2,15 +2,15 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     });
-    var s = n("446674"),
-        i = n("233736"),
+    var i = n("446674"),
+        s = n("233736"),
         r = n("913144");
     let a = {},
         o = {},
-        d = {
+        l = {
             scrollTop: 0
         };
 
@@ -22,18 +22,18 @@ function(e, t, n) {
         }
     }
 
-    function l(e) {
+    function d(e) {
         if (null != a[e]) {
             let {
                 scrollTop: t,
                 scrollHeight: n,
-                offsetHeight: s
+                offsetHeight: i
             } = a[e];
-            return t === n - s
+            return t === n - i
         }
         return !0
     }
-    class f extends s.default.Store {
+    class c extends i.default.Store {
         percentageScrolled(e) {
             if (null != a[e]) {
                 let {
@@ -52,32 +52,32 @@ function(e, t, n) {
             return null !== (t = o[e]) && void 0 !== t ? t : u(e)
         }
         getGuildListDimensions() {
-            return d
+            return l
         }
         isAtBottom(e) {
-            return l(e)
+            return d(e)
         }
     }
-    f.displayName = "DimensionStore";
-    var _ = new f(r.default, {
+    c.displayName = "DimensionStore";
+    var f = new c(r.default, {
         UPDATE_CHANNEL_DIMENSIONS: function(e) {
             let {
                 channelId: t,
                 scrollTop: n,
-                scrollHeight: s,
+                scrollHeight: i,
                 offsetHeight: r
             } = e, o = a[t];
-            if (null == n || null == s || null == r) {
+            if (null == n || null == i || null == r) {
                 if (null == o) return !1;
                 delete a[t]
             } else {
                 let e = {
                     channelId: t,
                     scrollTop: n,
-                    scrollHeight: s,
+                    scrollHeight: i,
                     offsetHeight: r
                 };
-                if (null != o && (0, i.default)(o, e)) return !1;
+                if (null != o && (0, s.default)(o, e)) return !1;
                 a[t] = e
             }
         },
@@ -85,23 +85,23 @@ function(e, t, n) {
             let {
                 guildId: t,
                 scrollTop: n,
-                scrollTo: s
+                scrollTo: i
             } = e;
             null == o[t] && (o[t] = u(t)), void 0 !== n && (o[t].scrollTop = n);
-            let i = !1;
-            return void 0 !== s && (i = o[t].scrollTo !== s, o[t].scrollTo = s), null != s || i
+            let s = !1;
+            return void 0 !== i && (s = o[t].scrollTo !== i, o[t].scrollTo = i), null != i || s
         },
         UPDATE_GUILD_LIST_DIMENSIONS: function(e) {
             let {
                 scrollTop: t
             } = e;
-            d.scrollTop = t
+            l.scrollTop = t
         },
         CALL_CREATE: function(e) {
             let {
                 channelId: t
             } = e;
-            l(t) && delete a[t]
+            d(t) && delete a[t]
         }
     })
 }

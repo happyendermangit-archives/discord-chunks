@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return s
         }
     });
     let i = new class e {
@@ -18,5 +18,5 @@ function(e, t, n) {
             return !1
         }
     };
-    var r = i
+    var s = i
 }

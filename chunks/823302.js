@@ -6,7 +6,7 @@ function(e, t, n) {
         return null == i ? n ? "".concat(e.any, " (any)") : "100" : i.toString()
     }
 
-    function r(e, t) {
+    function s(e, t) {
         let n = e[t];
         return null == n ? e.any : n
     }
@@ -15,7 +15,7 @@ function(e, t, n) {
             return i
         },
         formatSinkWantAsInt: function() {
-            return r
+            return s
         }
     })
 }

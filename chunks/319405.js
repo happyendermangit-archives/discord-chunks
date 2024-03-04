@@ -9,27 +9,27 @@ function(e, _, E) {
         o = E("374014"),
         n = E("373469"),
         r = E("271938"),
-        i = E("42203"),
-        a = E("546463"),
+        a = E("42203"),
+        i = E("546463"),
         I = E("945956"),
-        s = E("718517"),
-        T = E("815496"),
+        T = E("718517"),
+        s = E("815496"),
         S = E("448881"),
         N = E("374023"),
         O = E("2973"),
         A = E("227231"),
         R = E("166604"),
         l = E("49111");
-    let u = 5 * s.default.Millis.SECOND,
-        L = 12 * s.default.Millis.HOUR,
-        C = 1 * s.default.Millis.MINUTE,
-        D = 30 * s.default.Millis.SECOND;
+    let u = 5 * T.default.Millis.SECOND,
+        L = 12 * T.default.Millis.HOUR,
+        C = 1 * T.default.Millis.MINUTE,
+        D = 30 * T.default.Millis.SECOND;
 
     function c() {
         var e, _;
         let E = n.default.getStreamerActiveStreamMetadata();
         if ((null == E ? void 0 : E.id) == null) return null;
-        let t = a.default.getGameById(E.id);
+        let t = i.default.getGameById(E.id);
         if ((null == t ? void 0 : t.id) == null) return null;
         let o = (0, A.getQuestByApplicationId)(O.default.quests, t.id);
         return (null == o ? void 0 : null === (e = o.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null || (null == o ? void 0 : null === (_ = o.userStatus) || void 0 === _ ? void 0 : _.completedAt) != null ? null : o
@@ -119,22 +119,22 @@ function(e, _, E) {
                 let {
                     streamType: E,
                     guildId: t,
-                    channelId: a
-                } = e, s = (0, o.encodeStreamKey)({
+                    channelId: i
+                } = e, T = (0, o.encodeStreamKey)({
                     streamType: E,
                     guildId: t,
-                    channelId: a,
+                    channelId: i,
                     ownerId: r.default.getId()
                 }), S = c();
                 if (null == S) {
-                    this.terminateHeartbeat(s);
+                    this.terminateHeartbeat(T);
                     return
-                }(0, T.trackQuestEvent)(S.id, l.AnalyticEvents.QUEST_STREAMING_STARTED, {
+                }(0, s.trackQuestEvent)(S.id, l.AnalyticEvents.QUEST_STREAMING_STARTED, {
                     media_session_id: I.default.getMediaSessionId(),
-                    channel_type: null === (_ = i.default.getChannel(a)) || void 0 === _ ? void 0 : _.type,
+                    channel_type: null === (_ = a.default.getChannel(i)) || void 0 === _ ? void 0 : _.type,
                     guild_id: t
-                }), 0 !== n.default.getViewerIds(s).length && this.initiateHeartbeat({
-                    streamKey: s,
+                }), 0 !== n.default.getViewerIds(T).length && this.initiateHeartbeat({
+                    streamKey: T,
                     applicationId: S.config.applicationId,
                     questId: S.id
                 })

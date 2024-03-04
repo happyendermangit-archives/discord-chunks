@@ -2,97 +2,97 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MenuItem: function() {
-            return h
+            return E
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("227645"),
         l = n("199285"),
         u = n("107728"),
-        c = n("697917"),
-        d = n("886074"),
+        d = n("697917"),
+        c = n("886074"),
         f = n("772280"),
-        E = n("389802"),
-        p = n("639826");
+        _ = n("389802"),
+        h = n("639826");
 
-    function h(e) {
+    function E(e) {
         let {
             color: t = "default",
             label: n,
-            icon: s,
-            showIconFirst: h = !1,
-            imageUrl: _,
-            hint: S,
-            subtext: m,
-            hasSubmenu: T,
-            disabled: g,
-            isFocused: I,
-            menuItemProps: C,
-            action: v,
+            icon: r,
+            showIconFirst: E = !1,
+            imageUrl: g,
+            hint: m,
+            subtext: p,
+            hasSubmenu: S,
+            disabled: v,
+            isFocused: T,
+            menuItemProps: I,
+            action: C,
             onClose: A,
-            onFocus: R,
+            onFocus: y,
             className: N,
-            focusedClassName: O,
-            subMenuIconClassName: D,
-            dontCloseOnActionIfHoldingShiftKey: y,
+            focusedClassName: R,
+            subMenuIconClassName: O,
+            dontCloseOnActionIfHoldingShiftKey: D,
             iconProps: P,
             sparkle: L
-        } = e, b = r.useContext(u.OnMenuSelectContext), M = r.useRef(null), U = r.useCallback(e => {
-            if (null == v) return !1;
-            !(e.shiftKey && y) && A(), e.persist(), null == b || b(), requestAnimationFrame(() => v(e))
-        }, [v, A, b, y]);
-        return r.useEffect(() => {
-            I && ((0, c.ensureItemVisible)(M), null == R || R())
-        }, [I, R]), (0, i.jsxs)(o.Clickable, {
-            innerRef: M,
-            className: a(p.item, p.labelContainer, E.MENU_ITEM_COLORS[t], N, {
-                [p.disabled]: g,
-                [p.focused]: I,
-                [null != O ? O : ""]: I
+        } = e, M = s.useContext(u.OnMenuSelectContext), b = s.useRef(null), U = s.useCallback(e => {
+            if (null == C) return !1;
+            !(e.shiftKey && D) && A(), e.persist(), null == M || M(), requestAnimationFrame(() => C(e))
+        }, [C, A, M, D]);
+        return s.useEffect(() => {
+            T && ((0, d.ensureItemVisible)(b), null == y || y())
+        }, [T, y]), (0, i.jsxs)(o.Clickable, {
+            innerRef: b,
+            className: a(h.item, h.labelContainer, _.MENU_ITEM_COLORS[t], N, {
+                [h.disabled]: v,
+                [h.focused]: T,
+                [null != R ? R : ""]: T
             }),
-            onClick: g ? void 0 : U,
-            "aria-disabled": g,
-            ...C,
+            onClick: v ? void 0 : U,
+            "aria-disabled": v,
+            ...I,
             "data-menu-item": "true",
-            children: [h && null != s && (0, i.jsx)("div", {
-                className: p.iconContainerLeft,
-                children: (0, i.jsx)(s, {
+            children: [E && null != r && (0, i.jsx)("div", {
+                className: h.iconContainerLeft,
+                children: (0, i.jsx)(r, {
                     ...P,
-                    className: a(p.icon, null == P ? void 0 : P.className),
-                    isFocused: I
+                    className: a(h.icon, null == P ? void 0 : P.className),
+                    isFocused: T
                 })
             }), (0, i.jsxs)("div", {
-                className: p.label,
-                children: [(0, l.renderSubnode)(n, e), null != m && (0, i.jsx)("div", {
-                    className: p.subtext,
-                    children: m
+                className: h.label,
+                children: [(0, l.renderSubnode)(n, e), null != p && (0, i.jsx)("div", {
+                    className: h.subtext,
+                    children: p
                 })]
-            }), null != S && (0, i.jsx)("div", {
-                className: p.hintContainer,
-                children: (0, l.renderSubnode)(S, e)
-            }), !h && null != s && (0, i.jsx)("div", {
-                className: p.iconContainer,
-                children: (0, i.jsx)(s, {
+            }), null != m && (0, i.jsx)("div", {
+                className: h.hintContainer,
+                children: (0, l.renderSubnode)(m, e)
+            }), !E && null != r && (0, i.jsx)("div", {
+                className: h.iconContainer,
+                children: (0, i.jsx)(r, {
                     ...P,
-                    className: a(p.icon, null == P ? void 0 : P.className),
-                    isFocused: I
+                    className: a(h.icon, null == P ? void 0 : P.className),
+                    isFocused: T
                 })
-            }), null != _ && (0, i.jsx)("div", {
-                className: p.imageContainer,
+            }), null != g && (0, i.jsx)("div", {
+                className: h.imageContainer,
                 children: (0, i.jsx)("img", {
-                    className: p.image,
-                    src: (0, l.renderSubnode)(_, e),
+                    className: h.image,
+                    src: (0, l.renderSubnode)(g, e),
                     alt: ""
                 })
-            }), T && (0, i.jsxs)("div", {
-                className: p.iconContainer,
+            }), S && (0, i.jsxs)("div", {
+                className: h.iconContainer,
                 children: [(0, i.jsx)(f.default, {
-                    className: a(p.caret, D)
-                }), L && (0, i.jsx)(d.default, {
-                    className: p.sparkles
+                    className: a(h.caret, O)
+                }), L && (0, i.jsx)(c.default, {
+                    className: h.sparkles
                 })]
             })]
         })

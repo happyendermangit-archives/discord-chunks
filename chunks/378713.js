@@ -5,8 +5,8 @@ function(e, t, n) {
             return r
         }
     });
-    var s = n("862205");
-    let i = (0, s.createExperiment)({
+    var i = n("862205");
+    let s = (0, i.createExperiment)({
         kind: "user",
         id: "2024-02_activityiframemountfromgatewayupdate",
         label: "mount activity iframe in response to gateway update",
@@ -23,7 +23,7 @@ function(e, t, n) {
     });
 
     function r(e) {
-        return i.getCurrentConfig({
+        return s.getCurrentConfig({
             location: e
         }).enabled
     }

@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
 
-    function a() {
+    function i() {
         return {
             textValue: "",
             richValue: [{
@@ -13,43 +13,43 @@ function(e, t, n) {
         }
     }
 
-    function l(e) {
+    function s(e) {
         return {
             textValue: e,
-            richValue: i(e)
+            richValue: a(e)
         }
     }
     n.r(t), n.d(t, {
         createEmptyState: function() {
-            return a
-        },
-        createState: function() {
-            return l
-        },
-        toRichValue: function() {
             return i
         },
+        createState: function() {
+            return s
+        },
+        toRichValue: function() {
+            return a
+        },
         voidToOptionValue: function() {
-            return r
+            return o
         }
     }), n("70102");
-    let s = Object.freeze([Object.freeze({
+    let r = Object.freeze([Object.freeze({
         type: "line",
         children: Object.freeze([Object.freeze({
             text: ""
         })])
     })]);
 
-    function i(e) {
+    function a(e) {
         return "" !== e ? e.split("\n").map(e => ({
             type: "line",
             children: [{
                 text: e
             }]
-        })) : s
+        })) : r
     }
 
-    function r(e) {
+    function o(e) {
         switch (e.type) {
             case "userMention":
                 return {

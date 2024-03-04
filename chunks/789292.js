@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useListState: function() {
-            return s
+            return a
         }
     }), n("222007");
     var r = n("884691"),
-        a = n("72634"),
-        i = n("846794");
-    class o {
+        i = n("72634"),
+        o = n("846794");
+    class s {
         *[Symbol.iterator]() {
             yield* this.iterable
         }
@@ -57,40 +57,40 @@ function(e, t, n) {
         }
     }
 
-    function s(e) {
+    function a(e) {
         let {
             filter: t
-        } = e, n = (0, a.useMultipleSelectionState)(e), s = (0, r.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set, [e.disabledKeys]), c = (0, r.useCallback)(e => new o(t ? t(e) : e), [t]), l = (0, r.useMemo)(() => ({
+        } = e, n = (0, i.useMultipleSelectionState)(e), a = (0, r.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set, [e.disabledKeys]), c = (0, r.useCallback)(e => new s(t ? t(e) : e), [t]), u = (0, r.useMemo)(() => ({
             suppressTextValueWarning: e.suppressTextValueWarning
-        }), [e.suppressTextValueWarning]), u = (0, i.useCollection)(e, c, l), d = (0, r.useMemo)(() => new a.SelectionManager(u, n), [u, n]), p = (0, r.useRef)(null);
+        }), [e.suppressTextValueWarning]), d = (0, o.useCollection)(e, c, u), l = (0, r.useMemo)(() => new i.SelectionManager(d, n), [d, n]), f = (0, r.useRef)(null);
         return (0, r.useEffect)(() => {
-            if (null != n.focusedKey && !u.getItem(n.focusedKey)) {
+            if (null != n.focusedKey && !d.getItem(n.focusedKey)) {
                 let e;
-                let t = p.current.getItem(n.focusedKey),
-                    r = [...p.current.getKeys()].map(e => {
-                        let t = p.current.getItem(e);
+                let t = f.current.getItem(n.focusedKey),
+                    r = [...f.current.getKeys()].map(e => {
+                        let t = f.current.getItem(e);
                         return "item" === t.type ? t : null
                     }).filter(e => null !== e),
-                    a = [...u.getKeys()].map(e => {
-                        let t = u.getItem(e);
+                    i = [...d.getKeys()].map(e => {
+                        let t = d.getItem(e);
                         return "item" === t.type ? t : null
                     }).filter(e => null !== e),
-                    i = r.length - a.length,
-                    o = Math.min(i > 1 ? Math.max(t.index - i + 1, 0) : t.index, a.length - 1);
-                for (; o >= 0;) {
-                    if (!d.isDisabled(a[o].key)) {
-                        e = a[o];
+                    o = r.length - i.length,
+                    s = Math.min(o > 1 ? Math.max(t.index - o + 1, 0) : t.index, i.length - 1);
+                for (; s >= 0;) {
+                    if (!l.isDisabled(i[s].key)) {
+                        e = i[s];
                         break
                     }
-                    o < a.length - 1 ? o++ : (o > t.index && (o = t.index), o--)
+                    s < i.length - 1 ? s++ : (s > t.index && (s = t.index), s--)
                 }
                 n.setFocusedKey(e ? e.key : null)
             }
-            p.current = u
-        }, [u, d, n, n.focusedKey]), {
-            collection: u,
-            disabledKeys: s,
-            selectionManager: d
+            f.current = d
+        }, [d, l, n, n.focusedKey]), {
+            collection: d,
+            disabledKeys: a,
+            selectionManager: l
         }
     }
 }

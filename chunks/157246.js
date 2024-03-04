@@ -2,21 +2,21 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Soundpacks: function() {
-            return u
+            return s
         },
         getSoundpackOptionsAprilFools2023: function() {
-            return i
+            return a
         }
     });
-    var s, u, a = n("782340");
+    var i, s, r = n("782340");
 
-    function i() {
+    function a() {
         return [{
             value: "classic",
-            label: a.default.Messages.SOUNDPACK_CLASSIC_LABEL
+            label: r.default.Messages.SOUNDPACK_CLASSIC_LABEL
         }, {
             value: "detune",
-            label: a.default.Messages.SOUNDPACK_DETUNE_LABEL
+            label: r.default.Messages.SOUNDPACK_DETUNE_LABEL
         }]
-    }(s = u || (u = {})).CLASSIC = "classic", s.DETUNE = "detune"
+    }(i = s || (s = {})).CLASSIC = "classic", i.DETUNE = "detune"
 }

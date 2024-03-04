@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return s
         }
     }), n("424973"), n("222007");
-    var i, r, s = n("884691"),
+    var i, s, r = n("884691"),
         a = n("665317");
-    (i = class e extends s.Component {
+    (i = class e extends r.Component {
         static getDerivedStateFromProps(e, t) {
             let {
                 children: n,
                 firstRender: i
-            } = t, r = (0, a.getChildMapping)(e.children);
+            } = t, s = (0, a.getChildMapping)(e.children);
             return {
-                children: i ? r : (0, a.mergeChildMappings)(n, r),
+                children: i ? s : (0, a.mergeChildMappings)(n, s),
                 firstRender: !1
             }
         }
@@ -55,33 +55,33 @@ function(e, t, n) {
         }
         _enqueueTransitions(e, t, n) {
             for (let i in e) {
-                let r = t && t.hasOwnProperty(i);
-                e[i] && !r && !this._currentlyTransitioningKeys.has(i) && n.push(i)
+                let s = t && t.hasOwnProperty(i);
+                e[i] && !s && !this._currentlyTransitioningKeys.has(i) && n.push(i)
             }
         }
         _perform(e, t, n) {
             let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
             this._currentlyTransitioningKeys.add(e);
-            let r = () => this._handleDonePerform(e, n, i),
-                s = this._keyChildMapping[e];
-            null != s && null != s[t] ? s[t](r) : r()
+            let s = () => this._handleDonePerform(e, n, i),
+                r = this._keyChildMapping[e];
+            null != r && null != r[t] ? r[t](s) : s()
         }
         _handleDonePerform(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 i = this._keyChildMapping[e];
             null != i && null != i[t] && i[t](), this._currentlyTransitioningKeys.delete(e);
-            let r = (0, a.getChildMapping)(this.props.children);
-            n ? null != r && r.hasOwnProperty(e) ? this.performEnter(e) : this.setState(t => {
+            let s = (0, a.getChildMapping)(this.props.children);
+            n ? null != s && s.hasOwnProperty(e) ? this.performEnter(e) : this.setState(t => {
                 let {
                     children: n
                 } = t, {
                     [e]: i,
-                    ...r
+                    ...s
                 } = n;
                 return {
-                    children: r
+                    children: s
                 }
-            }) : (null == r || !r.hasOwnProperty(e)) && this.performLeave(e)
+            }) : (null == s || !s.hasOwnProperty(e)) && this.performLeave(e)
         }
         performAppear(e) {
             this._perform(e, "componentWillAppear", "componentDidAppear")
@@ -98,10 +98,10 @@ function(e, t, n) {
                 component: n
             } = this.props, {
                 children: i
-            } = this.state, r = [];
+            } = this.state, s = [];
             for (let e in i) {
                 let n = i[e];
-                null != n && s.isValidElement(n) && r.push(s.cloneElement(null == t ? n : t(n), {
+                null != n && r.isValidElement(n) && s.push(r.cloneElement(null == t ? n : t(n), {
                     ref: t => this.addChildRef(e, t),
                     key: e
                 }))
@@ -109,7 +109,7 @@ function(e, t, n) {
             let a = {
                 ...this.props
             };
-            return Object.keys(e.defaultProps).forEach(e => delete a[e]), s.createElement(n, a, r)
+            return Object.keys(e.defaultProps).forEach(e => delete a[e]), r.createElement(n, a, s)
         }
         constructor(e) {
             super(e), this._keyChildMapping = {}, this.addChildRef = (e, t) => {
@@ -125,5 +125,5 @@ function(e, t, n) {
         transitionLeave: !0,
         transitionEnter: !0,
         childFactory: null
-    }, r = i
+    }, s = i
 }

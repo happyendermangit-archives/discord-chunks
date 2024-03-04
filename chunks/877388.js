@@ -1,92 +1,92 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
 
-    function r(t, e) {
-        var s = Object.keys(t);
+    function r(e, t) {
+        var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-            var r = Object.getOwnPropertySymbols(t);
-            e && (r = r.filter(function(e) {
-                return Object.getOwnPropertyDescriptor(t, e).enumerable
-            })), s.push.apply(s, r)
+            var r = Object.getOwnPropertySymbols(e);
+            t && (r = r.filter(function(t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable
+            })), n.push.apply(n, r)
         }
-        return s
+        return n
     }
 
-    function i(t) {
-        for (var e = 1; e < arguments.length; e++) {
-            var s = null != arguments[e] ? arguments[e] : {};
-            e % 2 ? r(Object(s), !0).forEach(function(e) {
-                (function(t, e, s) {
-                    (e = c(e)) in t ? Object.defineProperty(t, e, {
-                        value: s,
+    function i(e) {
+        for (var t = 1; t < arguments.length; t++) {
+            var n = null != arguments[t] ? arguments[t] : {};
+            t % 2 ? r(Object(n), !0).forEach(function(t) {
+                (function(e, t, n) {
+                    (t = s(t)) in e ? Object.defineProperty(e, t, {
+                        value: n,
                         enumerable: !0,
                         configurable: !0,
                         writable: !0
-                    }) : t[e] = s
-                })(t, e, s[e])
-            }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(s)) : r(Object(s)).forEach(function(e) {
-                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(s, e))
+                    }) : e[t] = n
+                })(e, t, n[t])
+            }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : r(Object(n)).forEach(function(t) {
+                Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
             })
         }
-        return t
+        return e
     }
-    s("424973"), s("70102");
+    n("424973"), n("70102");
 
-    function n(t, e) {
-        for (var s = 0; s < e.length; s++) {
-            var r = e[s];
-            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, c(r.key), r)
+    function o(e, t) {
+        for (var n = 0; n < t.length; n++) {
+            var r = t[n];
+            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, s(r.key), r)
         }
     }
 
-    function c(t) {
-        var e = function(t, e) {
-            if ("object" != typeof t || null === t) return t;
-            var s = t[Symbol.toPrimitive];
-            if (void 0 !== s) {
-                var r = s.call(t, e || "default");
+    function s(e) {
+        var t = function(e, t) {
+            if ("object" != typeof e || null === e) return e;
+            var n = e[Symbol.toPrimitive];
+            if (void 0 !== n) {
+                var r = n.call(e, t || "default");
                 if ("object" != typeof r) return r;
                 throw TypeError("@@toPrimitive must return a primitive value.")
             }
-            return ("string" === e ? String : Number)(t)
-        }(t, "string");
-        return "symbol" == typeof e ? e : String(e)
+            return ("string" === t ? String : Number)(e)
+        }(e, "string");
+        return "symbol" == typeof t ? t : String(t)
     }
-    var o = s("446825").Buffer,
-        f = s("482803").inspect,
-        u = f && f.custom || "inspect";
-    t.exports = function() {
-        var t, e, s;
+    var a = n("446825").Buffer,
+        c = n("482803").inspect,
+        u = c && c.custom || "inspect";
+    e.exports = function() {
+        var e, t, n;
 
         function r() {
-            ! function(t, e) {
-                if (!(t instanceof e)) throw TypeError("Cannot call a class as a function")
+            ! function(e, t) {
+                if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
             }(this, r), this.head = null, this.tail = null, this.length = 0
         }
-        return t = r, e = [{
+        return e = r, t = [{
             key: "push",
-            value: function(t) {
-                var e = {
-                    data: t,
+            value: function(e) {
+                var t = {
+                    data: e,
                     next: null
                 };
-                this.length > 0 ? this.tail.next = e : this.head = e, this.tail = e, ++this.length
+                this.length > 0 ? this.tail.next = t : this.head = t, this.tail = t, ++this.length
             }
         }, {
             key: "unshift",
-            value: function(t) {
-                var e = {
-                    data: t,
+            value: function(e) {
+                var t = {
+                    data: e,
                     next: this.head
                 };
-                0 === this.length && (this.tail = e), this.head = e, ++this.length
+                0 === this.length && (this.tail = t), this.head = t, ++this.length
             }
         }, {
             key: "shift",
             value: function() {
                 if (0 !== this.length) {
-                    var t = this.head.data;
-                    return 1 === this.length ? this.head = this.tail = null : this.head = this.head.next, --this.length, t
+                    var e = this.head.data;
+                    return 1 === this.length ? this.head = this.tail = null : this.head = this.head.next, --this.length, e
                 }
             }
         }, {
@@ -96,26 +96,26 @@ function(t, e, s) {
             }
         }, {
             key: "join",
-            value: function(t) {
+            value: function(e) {
                 if (0 === this.length) return "";
-                for (var e = this.head, s = "" + e.data; e = e.next;) s += t + e.data;
-                return s
+                for (var t = this.head, n = "" + t.data; t = t.next;) n += e + t.data;
+                return n
             }
         }, {
             key: "concat",
-            value: function(t) {
-                if (0 === this.length) return o.alloc(0);
-                for (var e, s, r, i = o.allocUnsafe(t >>> 0), n = this.head, c = 0; n;) {
+            value: function(e) {
+                if (0 === this.length) return a.alloc(0);
+                for (var t, n, r, i = a.allocUnsafe(e >>> 0), o = this.head, s = 0; o;) {
                     ;
-                    e = n.data, s = i, r = c, o.prototype.copy.call(e, s, r), c += n.data.length, n = n.next
+                    t = o.data, n = i, r = s, a.prototype.copy.call(t, n, r), s += o.data.length, o = o.next
                 }
                 return i
             }
         }, {
             key: "consume",
-            value: function(t, e) {
-                var s;
-                return t < this.head.data.length ? (s = this.head.data.slice(0, t), this.head.data = this.head.data.slice(t)) : s = t === this.head.data.length ? this.shift() : e ? this._getString(t) : this._getBuffer(t), s
+            value: function(e, t) {
+                var n;
+                return e < this.head.data.length ? (n = this.head.data.slice(0, e), this.head.data = this.head.data.slice(e)) : n = e === this.head.data.length ? this.shift() : t ? this._getString(e) : this._getBuffer(e), n
             }
         }, {
             key: "first",
@@ -124,45 +124,45 @@ function(t, e, s) {
             }
         }, {
             key: "_getString",
-            value: function(t) {
-                var e = this.head,
-                    s = 1,
-                    r = e.data;
-                for (t -= r.length; e = e.next;) {
-                    var i = e.data,
-                        n = t > i.length ? i.length : t;
-                    if (n === i.length ? r += i : r += i.slice(0, t), 0 == (t -= n)) {
-                        n === i.length ? (++s, e.next ? this.head = e.next : this.head = this.tail = null) : (this.head = e, e.data = i.slice(n));
+            value: function(e) {
+                var t = this.head,
+                    n = 1,
+                    r = t.data;
+                for (e -= r.length; t = t.next;) {
+                    var i = t.data,
+                        o = e > i.length ? i.length : e;
+                    if (o === i.length ? r += i : r += i.slice(0, e), 0 == (e -= o)) {
+                        o === i.length ? (++n, t.next ? this.head = t.next : this.head = this.tail = null) : (this.head = t, t.data = i.slice(o));
                         break
-                    }++s
+                    }++n
                 }
-                return this.length -= s, r
+                return this.length -= n, r
             }
         }, {
             key: "_getBuffer",
-            value: function(t) {
-                var e = o.allocUnsafe(t),
-                    s = this.head,
+            value: function(e) {
+                var t = a.allocUnsafe(e),
+                    n = this.head,
                     r = 1;
-                for (s.data.copy(e), t -= s.data.length; s = s.next;) {
-                    var i = s.data,
-                        n = t > i.length ? i.length : t;
-                    if (i.copy(e, e.length - t, 0, n), 0 == (t -= n)) {
-                        n === i.length ? (++r, s.next ? this.head = s.next : this.head = this.tail = null) : (this.head = s, s.data = i.slice(n));
+                for (n.data.copy(t), e -= n.data.length; n = n.next;) {
+                    var i = n.data,
+                        o = e > i.length ? i.length : e;
+                    if (i.copy(t, t.length - e, 0, o), 0 == (e -= o)) {
+                        o === i.length ? (++r, n.next ? this.head = n.next : this.head = this.tail = null) : (this.head = n, n.data = i.slice(o));
                         break
                     }++r
                 }
-                return this.length -= r, e
+                return this.length -= r, t
             }
         }, {
             key: u,
-            value: function(t, e) {
-                return f(this, i(i({}, e), {}, {
+            value: function(e, t) {
+                return c(this, i(i({}, t), {}, {
                     depth: 0,
                     customInspect: !1
                 }))
             }
-        }], n(t.prototype, e), s && n(t, s), Object.defineProperty(t, "prototype", {
+        }], o(e.prototype, t), n && o(e, n), Object.defineProperty(e, "prototype", {
             writable: !1
         }), r
     }()

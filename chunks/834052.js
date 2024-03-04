@@ -6,20 +6,20 @@ function(e, t, n) {
         }
     });
     var i = n("446674"),
-        r = n("913144"),
-        s = n("745049");
+        s = n("913144"),
+        r = n("745049");
     let a = {},
         o = {};
 
     function l(e, t) {
         var n;
         let i = null !== (n = a[e]) && void 0 !== n ? n : {},
-            r = {
+            s = {
                 ...i
             };
         null == t || t.forEach(e => {
-            o[e.channel_id] = e, r[e.channel_id] = e
-        }), a[e] = r
+            o[e.channel_id] = e, s[e.channel_id] = e
+        }), a[e] = s
     }
 
     function u(e) {
@@ -29,16 +29,16 @@ function(e, t, n) {
         l(t.guild_id, [t])
     }
 
-    function c(e, t) {
+    function d(e, t) {
         var n;
         if (delete o[t], null == e) return;
         let i = null !== (n = a[e]) && void 0 !== n ? n : {},
-            r = {
+            s = {
                 ...i
             };
-        delete r[t], a[e] = r
+        delete s[t], a[e] = s
     }
-    class d extends i.default.Store {
+    class c extends i.default.Store {
         getStageInstanceByChannel(e) {
             if (null != e) return o[e]
         }
@@ -47,7 +47,7 @@ function(e, t, n) {
         }
         isPublic(e) {
             var t;
-            return (null === (t = this.getStageInstanceByChannel(e)) || void 0 === t ? void 0 : t.privacy_level) === s.GuildScheduledEventPrivacyLevel.PUBLIC
+            return (null === (t = this.getStageInstanceByChannel(e)) || void 0 === t ? void 0 : t.privacy_level) === r.GuildScheduledEventPrivacyLevel.PUBLIC
         }
         getStageInstancesByGuild(e) {
             var t;
@@ -57,8 +57,8 @@ function(e, t, n) {
             return Object.values(o)
         }
     }
-    d.displayName = "StageInstanceStore";
-    var f = new d(r.default, {
+    c.displayName = "StageInstanceStore";
+    var f = new c(s.default, {
         CONNECTION_OPEN: function(e) {
             let {
                 guilds: t
@@ -86,13 +86,13 @@ function(e, t, n) {
             let {
                 instance: t
             } = e;
-            c(t.guild_id, t.channel_id)
+            d(t.guild_id, t.channel_id)
         },
         CHANNEL_DELETE: function(e) {
             let {
                 channel: t
             } = e;
-            c(t.guild_id, t.id)
+            d(t.guild_id, t.id)
         },
         LOGOUT: function() {
             o = {}, a = {}

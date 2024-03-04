@@ -1,3 +1,3 @@
-function(t, e, s) {
-    e.utils = s("555671"), e.common = s("256385"), e.sha = s("540826"), e.ripemd = s("211482"), e.hmac = s("397874"), e.sha1 = e.sha.sha1, e.sha256 = e.sha.sha256, e.sha224 = e.sha.sha224, e.sha384 = e.sha.sha384, e.sha512 = e.sha.sha512, e.ripemd160 = e.ripemd.ripemd160
+function(e, t, n) {
+    t.utils = n("555671"), t.common = n("256385"), t.sha = n("540826"), t.ripemd = n("211482"), t.hmac = n("397874"), t.sha1 = t.sha.sha1, t.sha256 = t.sha.sha256, t.sha224 = t.sha.sha224, t.sha384 = t.sha.sha384, t.sha512 = t.sha.sha512, t.ripemd160 = t.ripemd.ripemd160
 }

@@ -2,61 +2,61 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         TIMESTAMP_FORMATS: function() {
-            return u
-        },
-        DEFAULT_TIMESTAMP_FORMAT: function() {
             return o
         },
+        DEFAULT_TIMESTAMP_FORMAT: function() {
+            return l
+        },
         TIMESTAMP_REGEX: function() {
-            return c
+            return d
         },
         parseTimestamp: function() {
-            return d
+            return c
         },
         unparseTimestamp: function() {
             return f
         }
     });
-    var l = n("866227"),
-        r = n.n(l),
-        a = n("888400"),
-        i = n("718517");
-    let u = {
-            t: e => (0, a.dateFormat)(e, "LT"),
-            T: e => (0, a.dateFormat)(e, "LTS"),
-            d: e => (0, a.dateFormat)(e, "L"),
-            D: e => (0, a.dateFormat)(e, "LL"),
-            f: e => (0, a.dateFormat)(e, "LLL"),
-            F: e => (0, a.dateFormat)(e, "LLLL"),
+    var i = n("866227"),
+        s = n.n(i),
+        r = n("888400"),
+        a = n("718517");
+    let o = {
+            t: e => (0, r.dateFormat)(e, "LT"),
+            T: e => (0, r.dateFormat)(e, "LTS"),
+            d: e => (0, r.dateFormat)(e, "L"),
+            D: e => (0, r.dateFormat)(e, "LL"),
+            f: e => (0, r.dateFormat)(e, "LLL"),
+            F: e => (0, r.dateFormat)(e, "LLLL"),
             R: e => {
-                let t = r.relativeTimeThreshold("s");
-                r.relativeTimeThreshold("s", 60);
-                let n = r.relativeTimeThreshold("ss");
-                r.relativeTimeThreshold("ss", -1);
-                let l = r.relativeTimeThreshold("m");
-                r.relativeTimeThreshold("m", 60);
-                let a = null;
+                let t = s.relativeTimeThreshold("s");
+                s.relativeTimeThreshold("s", 60);
+                let n = s.relativeTimeThreshold("ss");
+                s.relativeTimeThreshold("ss", -1);
+                let i = s.relativeTimeThreshold("m");
+                s.relativeTimeThreshold("m", 60);
+                let r = null;
                 try {
-                    a = r(e.toDate()).fromNow()
+                    r = s(e.toDate()).fromNow()
                 } catch (e) {}
-                return r.relativeTimeThreshold("s", t), r.relativeTimeThreshold("ss", n), r.relativeTimeThreshold("m", l), null != a ? a : r(e.toDate()).fromNow()
+                return s.relativeTimeThreshold("s", t), s.relativeTimeThreshold("ss", n), s.relativeTimeThreshold("m", i), null != r ? r : s(e.toDate()).fromNow()
             }
         },
-        o = "f";
-    Object.setPrototypeOf(u, null);
-    let s = Object.keys(u).join("|"),
-        c = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(s, "))?>"));
+        l = "f";
+    Object.setPrototypeOf(o, null);
+    let u = Object.keys(o).join("|"),
+        d = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(u, "))?>"));
 
-    function d(e, t) {
-        let n = r(Number(e) * i.default.Millis.SECOND);
+    function c(e, t) {
+        let n = s(Number(e) * a.default.Millis.SECOND);
         if (!n.isValid()) return null;
-        let l = null != t ? u[t] : void 0;
-        return null == l && (l = u[o]), {
+        let i = null != t ? o[t] : void 0;
+        return null == i && (i = o[l]), {
             timestamp: e,
             format: t,
             parsed: n,
-            full: u.F(n),
-            formatted: l(n)
+            full: o.F(n),
+            formatted: i(n)
         }
     }
 

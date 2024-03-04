@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return o
+            return d
         }
     }), n("222007");
     var i = n("689988"),
-        a = n("689275"),
-        l = n("271938"),
-        s = n("42203"),
-        r = n("299039"),
-        u = n("786742");
-    class d extends i.default {
+        s = n("689275"),
+        r = n("271938"),
+        a = n("42203"),
+        o = n("299039"),
+        l = n("786742");
+    class u extends i.default {
         handleThreadCreate(e) {
             let {
                 channel: t
             } = e;
             if (t.isForumPost()) {
-                let e = t.ownerId === l.default.getId();
+                let e = t.ownerId === r.default.getId();
                 this.readStateSnapshots[t.id] = {
                     isNew: !e,
                     hasUnreads: !e
@@ -33,16 +33,16 @@ function(e, t, n) {
                     channelId: t
                 } = e;
                 if (null == t) return;
-                let n = s.default.getChannel(t);
+                let n = a.default.getChannel(t);
                 null != n && n.isForumLikeChannel() && (this.readStateSnapshots = {}, this.processForumChannel(n.guild_id, t))
             }, this.processForumChannel = (e, t) => {
-                let n = a.default.getThreadsForParent(e, t);
-                r.default.keys(n).forEach(e => {
-                    let t = (0, u.getForumPostReadStatesById)(e);
+                let n = s.default.getThreadsForParent(e, t);
+                o.default.keys(n).forEach(e => {
+                    let t = (0, l.getForumPostReadStatesById)(e);
                     null != t && (this.readStateSnapshots[e] = t)
                 })
             }, this.getReadStateSnapshotAnalytics = e => this.readStateSnapshots[e]
         }
     }
-    var o = new d
+    var d = new u
 }

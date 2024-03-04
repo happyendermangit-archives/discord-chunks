@@ -7,15 +7,15 @@ function(e, t, n) {
     });
     var i = n("37983");
     n("884691");
-    var r = n("469563"),
-        s = n("448052"),
+    var s = n("469563"),
+        r = n("448052"),
         a = n("75196"),
-        o = (0, r.replaceIcon)(function(e) {
+        o = (0, s.replaceIcon)(function(e) {
             let {
                 width: t = 24,
                 height: n = 24,
-                color: r = "currentColor",
-                foreground: s,
+                color: s = "currentColor",
+                foreground: r,
                 ...o
             } = e;
             return (0, i.jsx)("svg", {
@@ -27,8 +27,8 @@ function(e, t, n) {
                     fill: "none",
                     fillRule: "evenodd",
                     children: [(0, i.jsx)("polygon", {
-                        className: s,
-                        fill: r,
+                        className: r,
+                        fill: s,
                         fillRule: "nonzero",
                         points: "18.35 4.35 16 2 6 12 16 22 18.35 19.65 10.717 12"
                     }), (0, i.jsx)("polygon", {
@@ -36,7 +36,7 @@ function(e, t, n) {
                     })]
                 })
             })
-        }, s.ChevronSmallLeftIcon, void 0, {
+        }, r.ChevronSmallLeftIcon, void 0, {
             size: 24
         })
 }

@@ -1,321 +1,321 @@
-function(t, e, n) {
+function(e, t, n) {
     "use strict";
-    n.r(e), n.d(e, {
+    n.r(t), n.d(t, {
         default: function() {
-            return m
+            return y
         }
     }), n("222007"), n("70102");
-    var a = n("522632"),
-        i = n("872717"),
-        l = n("913144"),
-        r = n("550766"),
-        u = n("299285"),
-        d = n("760850"),
-        o = n("915639"),
-        c = n("86878"),
-        s = n("546463"),
-        E = n("686470"),
-        p = n("535974"),
-        I = n("568734"),
-        f = n("269180"),
-        A = n("773336"),
-        _ = n("260365"),
-        T = n("438931"),
-        C = n("215082"),
-        y = n("49111"),
-        h = n("954016"),
-        N = n("782340");
+    var i = n("522632"),
+        s = n("872717"),
+        r = n("913144"),
+        a = n("550766"),
+        o = n("299285"),
+        l = n("760850"),
+        u = n("915639"),
+        d = n("86878"),
+        c = n("546463"),
+        f = n("686470"),
+        _ = n("535974"),
+        h = n("568734"),
+        E = n("269180"),
+        g = n("773336"),
+        m = n("260365"),
+        p = n("438931"),
+        S = n("215082"),
+        v = n("49111"),
+        T = n("954016"),
+        I = n("782340");
 
-    function D(t) {
+    function C(e) {
         let {
-            applicationId: e,
+            applicationId: t,
             secret: n,
-            channelId: a,
-            intent: i = h.ActivityIntent.PLAY,
-            embedded: r = !1,
-            analyticsLocations: u = []
-        } = t;
-        S(e, null, a, r, u).then(() => f.default.waitConnected(e)).then(() => Promise.race([f.default.waitSubscribed(e, y.RPCEvents.ACTIVITY_JOIN)])).then(() => {
-            l.default.dispatch({
+            channelId: i,
+            intent: s = T.ActivityIntent.PLAY,
+            embedded: a = !1,
+            analyticsLocations: o = []
+        } = e;
+        A(t, null, i, a, o).then(() => E.default.waitConnected(t)).then(() => Promise.race([E.default.waitSubscribed(t, v.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+            r.default.dispatch({
                 type: "ACTIVITY_JOIN",
-                applicationId: e,
+                applicationId: t,
                 secret: n,
-                intent: i,
-                embedded: r
+                intent: s,
+                embedded: a
             })
-        }).catch(() => l.default.dispatch({
+        }).catch(() => r.default.dispatch({
             type: "ACTIVITY_JOIN_FAILED",
-            applicationId: e
+            applicationId: t
         }))
     }
 
-    function S(t, e, n) {
-        let d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-        if (d) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, r.startEmbeddedActivity)(n, t, s), Promise.resolve());
-        if (c.default.isConnected(t)) return Promise.resolve();
-        let I = null;
-        if (null == e) {
-            let n = E.default.getActiveLibraryApplication(t);
-            e = null != n ? n.branchId : t
+    function A(e, t, n) {
+        let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            c = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
+        if (l) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, a.startEmbeddedActivity)(n, e, c), Promise.resolve());
+        if (d.default.isConnected(e)) return Promise.resolve();
+        let h = null;
+        if (null == t) {
+            let n = f.default.getActiveLibraryApplication(e);
+            t = null != n ? n.branchId : e
         }
-        if (p.default.isLaunchable(t, e)) {
-            var A;
-            let n = p.default.getState(t, e),
-                l = E.default.getActiveLaunchOptionId(t, e);
+        if (_.default.isLaunchable(e, t)) {
+            var g;
+            let n = _.default.getState(e, t),
+                r = f.default.getActiveLaunchOptionId(e, t);
             if (null == n) throw Error("Missing dispatch game when launching");
-            let r = E.default.getLibraryApplication(t, e);
-            if (null == r) throw Error("Missing library application when launching");
-            I = (A = t, i.default.post({
-                url: y.Endpoints.OAUTH2_AUTHORIZE,
+            let a = f.default.getLibraryApplication(e, t);
+            if (null == a) throw Error("Missing library application when launching");
+            h = (g = e, s.default.post({
+                url: v.Endpoints.OAUTH2_AUTHORIZE,
                 query: {
-                    client_id: A,
+                    client_id: g,
                     response_type: "token",
-                    scope: [y.OAuth2Scopes.IDENTIFY].join(" ")
+                    scope: [v.OAuth2Scopes.IDENTIFY].join(" ")
                 },
                 retries: 3,
                 body: {
                     authorize: !0
                 },
                 oldFormErrors: !0
-            }).then(t => {
-                let e = t.body.location.split(/#|\?/),
-                    n = a.parse(e[e.length - 1]);
+            }).then(e => {
+                let t = e.body.location.split(/#|\?/),
+                    n = i.parse(t[t.length - 1]);
                 if ("invalid_request" === n.error) return null;
                 if (null != n.error) {
-                    var i;
-                    throw Error("OAuth2 Error: ".concat(n.error, ": ").concat(null !== (i = n.error_description) && void 0 !== i ? i : "unknown error"))
+                    var s;
+                    throw Error("OAuth2 Error: ".concat(n.error, ": ").concat(null !== (s = n.error_description) && void 0 !== s ? s : "unknown error"))
                 }
                 return n.access_token
-            }, t => {
-                if (404 === t.status) return null;
-                throw t
-            })).then(t => f.default.launchDispatchApplication(n, t, o.default.locale, r.getBranchName(), l))
+            }, e => {
+                if (404 === e.status) return null;
+                throw e
+            })).then(e => E.default.launchDispatchApplication(n, e, u.default.locale, a.getBranchName(), r))
         } else {
-            let e = u.default.getApplication(t);
-            I = null != e ? f.default.launch(e) : f.default.launchGame(t)
+            let t = o.default.getApplication(e);
+            h = null != t ? E.default.launch(t) : E.default.launchGame(e)
         }
-        let _ = Error("game not found");
-        return null != I ? (l.default.dispatch({
+        let m = Error("game not found");
+        return null != h ? (r.default.dispatch({
             type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
-            applicationId: t,
-            branchId: e
-        }), l.default.dispatch({
+            applicationId: e,
+            branchId: t
+        }), r.default.dispatch({
             type: "GAME_LAUNCH_START",
-            applicationId: t
-        }), I.then(e => {
-            l.default.dispatch({
+            applicationId: e
+        }), h.then(t => {
+            r.default.dispatch({
                 type: "GAME_LAUNCH_SUCCESS",
-                applicationId: t,
-                pids: e
+                applicationId: e,
+                pids: t
             })
-        }).catch(e => {
-            C.default.show(y.NoticeTypes.LAUNCH_GAME_FAILURE, N.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), l.default.dispatch({
+        }).catch(t => {
+            S.default.show(v.NoticeTypes.LAUNCH_GAME_FAILURE, I.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), r.default.dispatch({
                 type: "GAME_LAUNCH_FAIL",
-                applicationId: t,
-                error: _
+                applicationId: e,
+                error: m
             })
-        })) : (l.default.dispatch({
+        })) : (r.default.dispatch({
             type: "GAME_LAUNCH_FAIL",
-            applicationId: t,
-            error: _
-        }), Promise.reject(_))
+            applicationId: e,
+            error: m
+        }), Promise.reject(m))
     }
-    var m = {
-        addGame(t) {
-            l.default.dispatch({
+    var y = {
+        addGame(e) {
+            r.default.dispatch({
                 type: "RUNNING_GAME_ADD_OVERRIDE",
-                pid: t
+                pid: e
             })
         },
-        toggleOverlay(t, e) {
-            let n = s.default.getGameByName(t.name);
+        toggleOverlay(e, t) {
+            let n = c.default.getGameByName(e.name);
             if (null != n) {
-                let t = E.default.getActiveLibraryApplication(n.id);
-                if (null != t) {
-                    let e = I.toggleFlag(t.getFlags(), y.LibraryApplicationFlags.OVERLAY_DISABLED);
-                    T.updateFlags(t.id, t.branchId, e);
+                let e = f.default.getActiveLibraryApplication(n.id);
+                if (null != e) {
+                    let t = h.toggleFlag(e.getFlags(), v.LibraryApplicationFlags.OVERLAY_DISABLED);
+                    p.updateFlags(e.id, e.branchId, t);
                     return
                 }
             }
-            l.default.dispatch({
+            r.default.dispatch({
                 type: "RUNNING_GAME_TOGGLE_OVERLAY",
-                game: t,
-                newEnabledValue: e
+                game: e,
+                newEnabledValue: t
             })
         },
-        toggleDetection(t) {
-            l.default.dispatch({
+        toggleDetection(e) {
+            r.default.dispatch({
                 type: "RUNNING_GAME_TOGGLE_DETECTION",
-                game: t
+                game: e
             })
         },
-        editName(t, e) {
-            l.default.dispatch({
+        editName(e, t) {
+            r.default.dispatch({
                 type: "RUNNING_GAME_EDIT_NAME",
-                game: t,
-                newName: e
+                game: e,
+                newName: t
             })
         },
-        identifyGame: (t, e) => (0, d.default)().then(e => new Promise((n, a) => {
-            if (null == e) {
-                a(Error("Game utils module not loaded"));
+        identifyGame: (e, t) => (0, l.default)().then(t => new Promise((n, i) => {
+            if (null == t) {
+                i(Error("Game utils module not loaded"));
                 return
             }
-            e.identifyGame(t, (e, i) => {
-                if (0 !== e) {
-                    a(Error("Error ".concat(e, " when fetching info on ").concat(t)));
+            t.identifyGame(e, (t, s) => {
+                if (0 !== t) {
+                    i(Error("Error ".concat(t, " when fetching info on ").concat(e)));
                     return
                 }
-                if (null == i.icon || "" === i.icon || null == i.name || "" === i.name) {
-                    a(Error("Did not find data on ".concat(t)));
+                if (null == s.icon || "" === s.icon || null == s.name || "" === s.name) {
+                    i(Error("Did not find data on ".concat(e)));
                     return
                 }
-                l.default.dispatch({
+                r.default.dispatch({
                     type: "GAME_ICON_UPDATE",
-                    gameName: i.name,
-                    icon: "data:image/png;base64,".concat(i.icon)
-                }), n(i)
+                    gameName: s.name,
+                    icon: "data:image/png;base64,".concat(s.icon)
+                }), n(s)
             })
         })),
         getDetectableGames() {
-            !s.default.fetching && null == s.default.lastFetched && l.default.wait(() => {
-                l.default.dispatch({
+            !c.default.fetching && null == c.default.lastFetched && r.default.wait(() => {
+                r.default.dispatch({
                     type: "GAMES_DATABASE_FETCH"
-                }), i.default.get({
-                    url: y.Endpoints.APPLICATIONS_DETECTABLE,
+                }), s.default.get({
+                    url: v.Endpoints.APPLICATIONS_DETECTABLE,
                     headers: {
-                        "If-None-Match": s.default.detectableGamesEtag
+                        "If-None-Match": c.default.detectableGamesEtag
                     },
                     retries: 1,
                     oldFormErrors: !0
-                }).then(t => {
+                }).then(e => {
                     let {
-                        body: e,
+                        body: t,
                         headers: {
                             etag: n
                         }
-                    } = t;
-                    l.default.dispatch({
+                    } = e;
+                    r.default.dispatch({
                         type: "GAMES_DATABASE_UPDATE",
-                        games: e,
+                        games: t,
                         etag: n
                     })
-                }, t => {
+                }, e => {
                     let {
-                        status: e
-                    } = t;
-                    304 === e ? l.default.dispatch({
+                        status: t
+                    } = e;
+                    304 === t ? r.default.dispatch({
                         type: "GAMES_DATABASE_UPDATE",
                         games: [],
-                        etag: s.default.detectableGamesEtag
-                    }) : l.default.dispatch({
+                        etag: c.default.detectableGamesEtag
+                    }) : r.default.dispatch({
                         type: "GAMES_DATABASE_FETCH_FAIL"
                     })
                 })
             })
         },
-        reportUnverifiedGame(t) {
+        reportUnverifiedGame(e) {
             let {
-                name: e,
+                name: t,
                 iconHash: n,
-                publisher: a,
-                distributor: r,
-                sku: u,
-                executableName: o
-            } = t, c = (0, d.cleanExecutablePath)(o);
-            if (null != c) {
-                var s, E;
-                i.default.post({
-                    url: y.Endpoints.UNVERIFIED_APPLICATIONS,
+                publisher: i,
+                distributor: a,
+                sku: o,
+                executableName: u
+            } = e, d = (0, l.cleanExecutablePath)(u);
+            if (null != d) {
+                var c, f;
+                s.default.post({
+                    url: v.Endpoints.UNVERIFIED_APPLICATIONS,
                     body: {
-                        name: e,
-                        os: (0, A.getPlatformName)(),
+                        name: t,
+                        os: (0, g.getPlatformName)(),
                         icon: n,
-                        distributor_application: (s = r, E = u, null == s || "" === s ? null : {
-                            distributor: s,
-                            sku: E
+                        distributor_application: (c = a, f = o, null == c || "" === c ? null : {
+                            distributor: c,
+                            sku: f
                         }),
-                        executable: c,
-                        publisher: a,
+                        executable: d,
+                        publisher: i,
                         report_version: 3
                     },
                     retries: 1,
                     oldFormErrors: !0
-                }).then(t => {
+                }).then(e => {
                     let {
                         body: {
-                            name: e,
+                            name: t,
                             hash: n,
-                            missing_data: a
+                            missing_data: i
                         }
-                    } = t;
-                    l.default.dispatch({
+                    } = e;
+                    r.default.dispatch({
                         type: "UNVERIFIED_GAME_UPDATE",
-                        name: e,
+                        name: t,
                         hash: n,
-                        missingData: a
+                        missingData: i
                     })
                 })
             }
         },
-        uploadIcon(t, e, n) {
-            i.default.post({
-                url: y.Endpoints.UNVERIFIED_APPLICATIONS_ICONS,
+        uploadIcon(e, t, n) {
+            s.default.post({
+                url: v.Endpoints.UNVERIFIED_APPLICATIONS_ICONS,
                 body: {
-                    application_name: t,
-                    application_hash: e,
+                    application_name: e,
+                    application_hash: t,
                     icon: n
                 },
                 retries: 1,
                 oldFormErrors: !0
             })
         },
-        deleteEntry(t) {
-            l.default.dispatch({
+        deleteEntry(e) {
+            r.default.dispatch({
                 type: "RUNNING_GAME_DELETE_ENTRY",
-                game: t
+                game: e
             })
         },
-        launch: S,
-        async join(t) {
+        launch: A,
+        async join(e) {
             let {
-                userId: e,
+                userId: t,
                 sessionId: n,
-                applicationId: a,
-                channelId: i,
-                messageId: r,
-                intent: u = h.ActivityIntent.PLAY,
-                embedded: d = !1
-            } = t;
-            if (__OVERLAY__) return l.default.dispatch({
+                applicationId: i,
+                channelId: s,
+                messageId: a,
+                intent: o = T.ActivityIntent.PLAY,
+                embedded: l = !1
+            } = e;
+            if (__OVERLAY__) return r.default.dispatch({
                 type: "OVERLAY_JOIN_GAME",
-                userId: e,
+                userId: t,
                 sessionId: n,
-                applicationId: a,
-                channelId: i,
-                messageId: r
+                applicationId: i,
+                channelId: s,
+                messageId: a
             }), Promise.resolve(!0);
-            l.default.dispatch({
+            r.default.dispatch({
                 type: "ACTIVITY_JOIN_LOADING",
-                applicationId: a
+                applicationId: i
             });
             try {
-                let t = await _.default.getJoinSecret(e, n, a, i, r);
-                return D({
-                    applicationId: a,
-                    secret: t,
-                    channelId: i,
-                    intent: u,
-                    embedded: d
+                let e = await m.default.getJoinSecret(t, n, i, s, a);
+                return C({
+                    applicationId: i,
+                    secret: e,
+                    channelId: s,
+                    intent: o,
+                    embedded: l
                 }), !0
-            } catch (t) {
-                return l.default.dispatch({
+            } catch (e) {
+                return r.default.dispatch({
                     type: "ACTIVITY_JOIN_FAILED",
-                    applicationId: a
+                    applicationId: i
                 }), !1
             }
         },
-        joinWithSecret: D
+        joinWithSecret: C
     }
 }

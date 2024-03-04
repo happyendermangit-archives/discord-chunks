@@ -2,123 +2,123 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isCustomBackgroundOption: function() {
-            return l
+            return d
         },
         isDefaultBackgroundOption: function() {
-            return f
-        },
-        getEffectAnalyticsType: function() {
             return c
         },
+        getEffectAnalyticsType: function() {
+            return _
+        },
         getEffectDetailAnalyticsName: function() {
-            return g
-        },
-        trackBackgroundOptionUpdated: function() {
-            return m
-        },
-        trackBackgroundOptionAdded: function() {
             return h
         },
-        trackBackgroundOptionDeleted: function() {
-            return v
-        },
-        getVideoBackgroundProtoFromOption: function() {
+        trackBackgroundOptionUpdated: function() {
             return E
         },
-        getVideoBackgroundOptionFromProto: function() {
+        trackBackgroundOptionAdded: function() {
+            return g
+        },
+        trackBackgroundOptionDeleted: function() {
+            return m
+        },
+        getVideoBackgroundProtoFromOption: function() {
             return p
+        },
+        getVideoBackgroundOptionFromProto: function() {
+            return S
         }
     });
-    var s = n("716241"),
-        i = n("42203"),
+    var i = n("716241"),
+        s = n("42203"),
         r = n("945956"),
         a = n("599110"),
         o = n("315102"),
-        d = n("917219"),
+        l = n("917219"),
         u = n("49111");
 
-    function l(e) {
-        return null != e && "object" == typeof e && "id" in e && e.type === d.VideoFilterType.BACKGROUND
-    }
-
-    function f(e) {
-        return "number" == typeof e && e in d.DefaultVideoBackground
-    }
-
-    function _(e) {
-        return f(e) ? d.ANIMATED_DEFAULT_VIDEO_BACKGROUNDS.includes(e) : !!l(e) && ((0, o.isAnimatedIconHash)(e.asset) || (0, o.isVideoAssetHash)(e.asset))
+    function d(e) {
+        return null != e && "object" == typeof e && "id" in e && e.type === l.VideoFilterType.BACKGROUND
     }
 
     function c(e) {
+        return "number" == typeof e && e in l.DefaultVideoBackground
+    }
+
+    function f(e) {
+        return c(e) ? l.ANIMATED_DEFAULT_VIDEO_BACKGROUNDS.includes(e) : !!d(e) && ((0, o.isAnimatedIconHash)(e.asset) || (0, o.isVideoAssetHash)(e.asset))
+    }
+
+    function _(e) {
         return null != e ? "Video Background" : "None"
     }
 
-    function g(e) {
+    function h(e) {
         if (null == e) return "None";
-        if (l(e)) return "Custom";
+        if (d(e)) return "Custom";
         if ("blur" === e) return "Blur";
         else return "Preset - ".concat(function(e) {
             switch (e) {
-                case d.DefaultVideoBackground.OPTION_1:
+                case l.DefaultVideoBackground.OPTION_1:
                     return "Cybercity";
-                case d.DefaultVideoBackground.OPTION_2:
+                case l.DefaultVideoBackground.OPTION_2:
                     return "Discord the Movie";
-                case d.DefaultVideoBackground.OPTION_3:
+                case l.DefaultVideoBackground.OPTION_3:
                     return "Wumpus Vacation";
-                case d.DefaultVideoBackground.OPTION_4:
+                case l.DefaultVideoBackground.OPTION_4:
                     return "Vaporwave";
-                case d.DefaultVideoBackground.OPTION_7:
+                case l.DefaultVideoBackground.OPTION_7:
                     return "Capernite Day";
-                case d.DefaultVideoBackground.OPTION_8:
+                case l.DefaultVideoBackground.OPTION_8:
                     return "Capernite Night";
-                case d.DefaultVideoBackground.OPTION_9:
+                case l.DefaultVideoBackground.OPTION_9:
                     return "Hacker Den";
-                case d.DefaultVideoBackground.OPTION_10:
+                case l.DefaultVideoBackground.OPTION_10:
                     return "Wumpice"
             }
         }(e))
     }
 
-    function m(e, t, n) {
+    function E(e, t, n) {
         let o = r.default.getGuildId(),
-            d = r.default.getChannelId(),
-            l = i.default.getChannel(d),
-            f = (0, s.getVoiceStateMetadata)(o, d, !0);
+            l = r.default.getChannelId(),
+            d = s.default.getChannel(l),
+            c = (0, i.getVoiceStateMetadata)(o, l, !0);
         a.default.track(u.AnalyticEvents.VIDEO_EFFECT_UPDATED, {
             location: t,
-            effect_type: c(e),
-            effect_detail: g(e),
+            effect_type: _(e),
+            effect_detail: h(e),
             effect_state: n,
-            channel_id: d,
-            channel_type: null == l ? void 0 : l.type,
+            channel_id: l,
+            channel_type: null == d ? void 0 : d.type,
             guild_id: o,
-            voice_state_count: f.voice_state_count,
-            video_stream_count: f.video_stream_count,
+            voice_state_count: c.voice_state_count,
+            video_stream_count: c.video_stream_count,
             media_session_id: r.default.getMediaSessionId(),
             rtc_connection_id: r.default.getRTCConnectionId(),
-            is_animated: _(e)
+            is_animated: f(e)
         })
     }
 
-    function h(e, t, n) {
+    function g(e, t, n) {
         a.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_ADDED, {
-            is_animated: _(e),
+            is_animated: f(e),
             is_video: t,
             is_from_tenor: n
         })
     }
 
-    function v(e) {
+    function m(e) {
         a.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_DELETED, {
-            is_animated: _(e)
+            is_animated: f(e)
         })
     }
 
-    function E(e) {
+    function p(e) {
         if (null == e) return {
             oneofKind: void 0
         };
-        if (l(e)) return {
+        if (d(e)) return {
             oneofKind: "customAsset",
             customAsset: {
                 id: e.id,
@@ -137,12 +137,12 @@ function(e, t, n) {
         }
     }
 
-    function p(e, t) {
+    function S(e, t) {
         if (null == e || void 0 === e.oneofKind) return null;
         switch (e.oneofKind) {
             case "customAsset":
                 return {
-                    type: d.VideoFilterType.BACKGROUND, id: e.customAsset.id, user_id: t, asset: e.customAsset.assetHash
+                    type: l.VideoFilterType.BACKGROUND, id: e.customAsset.id, user_id: t, asset: e.customAsset.assetHash
                 };
             case "blur":
                 return e.blur.useBlur ? "blur" : null;

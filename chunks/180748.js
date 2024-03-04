@@ -2,76 +2,76 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         setFontSize: function() {
-            return c
+            return d
         },
         setMessageGroupSpacing: function() {
-            return d
+            return c
         },
         setZoom: function() {
             return f
         },
         enableKeyboardMode: function() {
-            return E
-        },
-        disableKeyboardMode: function() {
-            return p
-        },
-        toggleDesaturateUserColors: function() {
-            return h
-        },
-        toggleDarkSidebar: function() {
             return _
         },
-        keyboardNavigationExplainerModalSeen: function() {
-            return S
+        disableKeyboardMode: function() {
+            return h
         },
-        systemPrefersReducedMotionChanged: function() {
-            return m
+        toggleDesaturateUserColors: function() {
+            return E
         },
-        setSaturation: function() {
-            return T
-        },
-        setPrefersReducedMotion: function() {
+        toggleDarkSidebar: function() {
             return g
         },
+        keyboardNavigationExplainerModalSeen: function() {
+            return m
+        },
+        systemPrefersReducedMotionChanged: function() {
+            return p
+        },
+        setSaturation: function() {
+            return S
+        },
+        setPrefersReducedMotion: function() {
+            return v
+        },
         setSyncForcedColors: function() {
-            return I
+            return T
         },
         systemColorPreferencesChanged: function() {
-            return C
+            return I
         },
         systemPrefersContrastChanged: function() {
-            return v
+            return C
         },
         setAlwaysShowLinkDecorations: function() {
             return A
         },
         setRoleStyle: function() {
-            return R
+            return y
         },
         toggleSubmitButton: function() {
             return N
         },
         toggleSyncProfileThemeWithUserTheme: function() {
-            return O
+            return R
         }
     });
     var i = n("913144"),
-        r = n("452804"),
-        s = n("599110"),
+        s = n("452804"),
+        r = n("599110"),
         a = n("206230"),
         o = n("49111"),
         l = n("468200"),
         u = n("560241");
 
-    function c(e) {
+    function d(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_FONT_SIZE",
             fontSize: e
         })
     }
 
-    function d() {
+    function c() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING",
@@ -86,62 +86,62 @@ function(e, t, n) {
         })
     }
 
-    function E() {
+    function _() {
         i.default.dispatch({
             type: "ACCESSIBILITY_KEYBOARD_MODE_ENABLE"
-        }), s.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
+        }), r.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
             enabled: !0
-        })
-    }
-
-    function p() {
-        i.default.dispatch({
-            type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE"
-        }), s.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
-            enabled: !1
         })
     }
 
     function h() {
         i.default.dispatch({
+            type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE"
+        }), r.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
+            enabled: !1
+        })
+    }
+
+    function E() {
+        i.default.dispatch({
             type: "ACCESSIBILITY_DESATURATE_ROLES_TOGGLE"
         })
     }
 
-    function _() {
+    function g() {
         i.default.dispatch({
             type: "ACCESSIBILITY_DARK_SIDEBAR_TOGGLE"
         })
     }
 
-    function S() {
+    function m() {
         i.default.dispatch({
             type: "KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN"
         })
     }
 
-    function m(e) {
+    function p(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED",
             systemPrefersReducedMotion: e
         })
     }
 
-    function T(e) {
+    function S(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_SATURATION",
             saturation: e
         })
     }
 
-    function g(e) {
+    function v(e) {
         let t = a.default.useReducedMotion;
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
             prefersReducedMotion: e
         });
         let n = a.default.useReducedMotion;
-        !t && n ? r.default.applySettingsOverride({
+        !t && n ? s.default.applySettingsOverride({
             gifAutoPlay: {
                 value: !1,
                 reasonKey: l.SettingsOverrideReasonKeys.REDUCED_MOTION
@@ -154,17 +154,17 @@ function(e, t, n) {
                 value: u.StickerAnimationSettings.ANIMATE_ON_INTERACTION,
                 reasonKey: l.SettingsOverrideReasonKeys.REDUCED_MOTION_STICKERS
             }
-        }) : t && !n && r.default.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers")
+        }) : t && !n && s.default.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers")
     }
 
-    function I(e) {
+    function T(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_SYNC_FORCED_COLORS",
             syncForcedColors: e
         })
     }
 
-    function C(e, t) {
+    function I(e, t) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED",
             systemPrefersColorScheme: e,
@@ -172,7 +172,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e) {
+    function C(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED",
             systemPrefersContrast: e
@@ -186,11 +186,11 @@ function(e, t, n) {
         })
     }
 
-    function R(e) {
+    function y(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_ROLE_STYLE",
             roleStyle: e
-        }), s.default.track(o.AnalyticEvents.ROLE_STYLE_SETTING_UPDATED, {
+        }), r.default.track(o.AnalyticEvents.ROLE_STYLE_SETTING_UPDATED, {
             role_style: e
         })
     }
@@ -201,7 +201,7 @@ function(e, t, n) {
         })
     }
 
-    function O() {
+    function R() {
         i.default.dispatch({
             type: "ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE"
         })

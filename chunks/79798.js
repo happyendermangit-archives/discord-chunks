@@ -2,102 +2,102 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return c
+            return _
         }
     });
-    var s = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        r = n.n(i),
+    var s = n("414456"),
+        r = n.n(s),
         a = n("414055"),
         o = n("996554"),
-        d = n("486952"),
+        l = n("486952"),
         u = n("988268"),
-        l = n("782340"),
-        f = n("639670");
-    let _ = e => {
+        d = n("782340"),
+        c = n("639670");
+    let f = e => {
         let t, {
                 invertColor: n = !1,
-                type: i = u.BotTagTypes.BOT,
-                className: _,
-                verified: c,
-                hideIcon: g = !1,
-                useRemSizes: m = !1,
-                children: h = []
+                type: s = u.BotTagTypes.BOT,
+                className: f,
+                verified: _,
+                hideIcon: h = !1,
+                useRemSizes: E = !1,
+                children: g = []
             } = e,
-            v = null,
-            E = l.default.Messages.VERIFIED_BOT_TOOLTIP,
+            m = null,
+            p = d.default.Messages.VERIFIED_BOT_TOOLTIP,
             {
-                enabled: p
+                enabled: S
             } = o.AppLauncherOnboardingExperiment.useExperiment({
                 location: "Bot Tag"
             }, {
                 autoTrackExposure: !1
             });
-        switch (i) {
+        switch (s) {
             case u.BotTagTypes.SYSTEM_DM:
             case u.BotTagTypes.OFFICIAL:
-                c = !0, E = l.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, v = l.default.Messages.SYSTEM_DM_TAG_SYSTEM;
+                _ = !0, p = d.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, m = d.default.Messages.SYSTEM_DM_TAG_SYSTEM;
                 break;
             case u.BotTagTypes.SERVER:
-                v = l.default.Messages.BOT_TAG_SERVER;
+                m = d.default.Messages.BOT_TAG_SERVER;
                 break;
             case u.BotTagTypes.ORIGINAL_POSTER:
-                v = l.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER;
+                m = d.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER;
                 break;
             case u.BotTagTypes.STAFF_ONLY_DM:
-                v = l.default.Messages.STAFF_BADGE_TOOLTIP;
+                m = d.default.Messages.STAFF_BADGE_TOOLTIP;
                 break;
             case u.BotTagTypes.AI:
-                c = !0, E = l.default.Messages.AI_GENERATED_TOOLTIP, v = l.default.Messages.AI_TAG;
+                _ = !0, p = d.default.Messages.AI_GENERATED_TOOLTIP, m = d.default.Messages.AI_TAG;
                 break;
             case u.BotTagTypes.REMIX:
-                c = !1, v = l.default.Messages.REMIXING_TAG;
+                _ = !1, m = d.default.Messages.REMIXING_TAG;
                 break;
             case u.BotTagTypes.BOT:
             default:
-                v = p ? l.default.Messages.APP_TAG : l.default.Messages.BOT_TAG_BOT
+                m = S ? d.default.Messages.APP_TAG : d.default.Messages.BOT_TAG_BOT
         }
-        let y = i === u.BotTagTypes.ORIGINAL_POSTER,
-            T = i === u.BotTagTypes.REMIX,
-            C = null;
-        c && (C = (0, s.jsx)(a.Tooltip, {
-            text: E,
+        let v = s === u.BotTagTypes.ORIGINAL_POSTER,
+            T = s === u.BotTagTypes.REMIX,
+            I = null;
+        _ && (I = (0, i.jsx)(a.Tooltip, {
+            text: p,
             align: "center",
             position: "top",
-            children: e => (0, s.jsx)(d.default, {
+            children: e => (0, i.jsx)(l.default, {
                 ...e,
-                className: f.botTagVerified
+                className: c.botTagVerified
             })
-        })), t = i === u.BotTagTypes.AI ? f.botTagAI : n ? f.botTagInvert : f.botTagRegular;
-        let I = e => (0, s.jsxs)("span", {
+        })), t = s === u.BotTagTypes.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular;
+        let C = e => (0, i.jsxs)("span", {
             ...e,
-            className: r(_, t, m ? f.rem : f.px, {
-                [f.botTagOP]: y,
-                [f.botTagRemix]: T
+            className: r(f, t, E ? c.rem : c.px, {
+                [c.botTagOP]: v,
+                [c.botTagRemix]: T
             }),
-            children: [g ? null : C, h, (0, s.jsx)("span", {
-                className: f.botText,
-                children: v
+            children: [h ? null : I, g, (0, i.jsx)("span", {
+                className: c.botText,
+                children: m
             })]
         });
-        switch (i) {
+        switch (s) {
             case u.BotTagTypes.REMIX:
-                return (0, s.jsx)(a.Tooltip, {
-                    text: l.default.Messages.REMIXING_DOWNLOAD_APP,
+                return (0, i.jsx)(a.Tooltip, {
+                    text: d.default.Messages.REMIXING_DOWNLOAD_APP,
                     position: "top",
-                    children: e => I(e)
+                    children: e => C(e)
                 });
             case u.BotTagTypes.ORIGINAL_POSTER:
-                return (0, s.jsx)(a.Tooltip, {
-                    text: l.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
+                return (0, i.jsx)(a.Tooltip, {
+                    text: d.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
                     position: "top",
-                    children: e => I(e)
+                    children: e => C(e)
                 });
             default:
-                return I()
+                return C()
         }
     };
-    _.Types = u.BotTagTypes;
-    var c = _
+    f.Types = u.BotTagTypes;
+    var _ = f
 }

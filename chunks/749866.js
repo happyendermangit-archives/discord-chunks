@@ -1,74 +1,74 @@
-function(e, t, n) {
+function(I, N, A) {
     "use strict";
-    n.r(t), n.d(t, {
+    A.r(N), A.d(N, {
         isSupported: function() {
-            return r
+            return E
         },
         setEnabled: function() {
-            return o
+            return t
         },
         setLearnedWords: function() {
-            return c
+            return i
         },
         isMisspelled: function() {
-            return d
+            return n
         },
         getCorrections: function() {
-            return g
+            return R
         },
         replaceWithCorrection: function() {
-            return h
+            return G
         },
         setAppLocale: function() {
-            return f
+            return r
         },
         addResultListener: function() {
-            return p
+            return a
         }
     });
-    var i = n("49671"),
-        l = n("852046"),
-        s = n("773336");
+    var O = A("49671"),
+        T = A("852046"),
+        _ = A("773336");
 
-    function a() {
-        return (null === i.default || void 0 === i.default ? void 0 : i.default.spellCheck) != null
-    }
-
-    function r() {
-        return (0, s.isDesktop)() && a()
-    }
-    let u = r() ? (0, l.install)() : null;
-    async function o(e) {
-        let t = await u;
-        null != t && (t.enabled = e)
-    }
-    async function c(e) {
-        let t = await u;
-        null != t && t.setLearnedWords(e)
-    }
-    async function d(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = await u;
-        return null != n && n.isMisspelled(e, t)
-    }
-    async function g(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
-            i = await u;
-        return null == i ? [] : i.getCorrectionsForMisspelling(e, t).slice(0, n)
-    }
-    async function h(e) {
-        let t = await u;
-        null != t && t.replaceMisspelling(e)
-    }
-    async function f(e) {
-        let t = await u;
-        null != t && t.setAppLocale(e)
+    function e() {
+        return (null === O.default || void 0 === O.default ? void 0 : O.default.spellCheck) != null
     }
 
-    function p(e) {
-        if (!a()) return () => {};
-        let t = i.default.spellCheck.on("spellcheck-result", e);
-        return null != t ? t : () => {}
+    function E() {
+        return (0, _.isDesktop)() && e()
+    }
+    let V = E() ? (0, T.install)() : null;
+    async function t(I) {
+        let N = await V;
+        null != N && (N.enabled = I)
+    }
+    async function i(I) {
+        let N = await V;
+        null != N && N.setLearnedWords(I)
+    }
+    async function n(I) {
+        let N = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            A = await V;
+        return null != A && A.isMisspelled(I, N)
+    }
+    async function R(I) {
+        let N = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            A = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
+            O = await V;
+        return null == O ? [] : O.getCorrectionsForMisspelling(I, N).slice(0, A)
+    }
+    async function G(I) {
+        let N = await V;
+        null != N && N.replaceMisspelling(I)
+    }
+    async function r(I) {
+        let N = await V;
+        null != N && N.setAppLocale(I)
+    }
+
+    function a(I) {
+        if (!e()) return () => {};
+        let N = O.default.spellCheck.on("spellcheck-result", I);
+        return null != N ? N : () => {}
     }
 }

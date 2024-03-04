@@ -1,33 +1,33 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("911718"),
-        i = s("748795"),
-        n = s("890741")(),
-        c = r("%TypeError%"),
-        o = {
-            assert: function(t, e) {
-                if (!t || "object" != typeof t && "function" != typeof t) throw new c("`O` is not an object");
-                if ("string" != typeof e) throw new c("`slot` must be a string");
-                if (n.assert(t), !o.has(t, e)) throw new c("`" + e + "` is not present on `O`")
+    var r = n("911718"),
+        i = n("748795"),
+        o = n("890741")(),
+        s = r("%TypeError%"),
+        a = {
+            assert: function(e, t) {
+                if (!e || "object" != typeof e && "function" != typeof e) throw new s("`O` is not an object");
+                if ("string" != typeof t) throw new s("`slot` must be a string");
+                if (o.assert(e), !a.has(e, t)) throw new s("`" + t + "` is not present on `O`")
             },
-            get: function(t, e) {
-                if (!t || "object" != typeof t && "function" != typeof t) throw new c("`O` is not an object");
-                if ("string" != typeof e) throw new c("`slot` must be a string");
-                var s = n.get(t);
-                return s && s["$" + e]
+            get: function(e, t) {
+                if (!e || "object" != typeof e && "function" != typeof e) throw new s("`O` is not an object");
+                if ("string" != typeof t) throw new s("`slot` must be a string");
+                var n = o.get(e);
+                return n && n["$" + t]
             },
-            has: function(t, e) {
-                if (!t || "object" != typeof t && "function" != typeof t) throw new c("`O` is not an object");
-                if ("string" != typeof e) throw new c("`slot` must be a string");
-                var s = n.get(t);
-                return !!s && i(s, "$" + e)
+            has: function(e, t) {
+                if (!e || "object" != typeof e && "function" != typeof e) throw new s("`O` is not an object");
+                if ("string" != typeof t) throw new s("`slot` must be a string");
+                var n = o.get(e);
+                return !!n && i(n, "$" + t)
             },
-            set: function(t, e, s) {
-                if (!t || "object" != typeof t && "function" != typeof t) throw new c("`O` is not an object");
-                if ("string" != typeof e) throw new c("`slot` must be a string");
-                var r = n.get(t);
-                !r && (r = {}, n.set(t, r)), r["$" + e] = s
+            set: function(e, t, n) {
+                if (!e || "object" != typeof e && "function" != typeof e) throw new s("`O` is not an object");
+                if ("string" != typeof t) throw new s("`slot` must be a string");
+                var r = o.get(e);
+                !r && (r = {}, o.set(e, r)), r["$" + t] = n
             }
         };
-    Object.freeze && Object.freeze(o), t.exports = o
+    Object.freeze && Object.freeze(a), e.exports = a
 }

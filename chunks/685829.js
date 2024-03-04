@@ -1,87 +1,87 @@
-function(n, e, t) {
+function(e, t, n) {
     "use strict";
-    t.r(e), t.d(e, {
+    n.r(t), n.d(t, {
         loadOnboardingPrompts: function() {
-            return f
+            return E
         },
         fetchOnboardingPrompts: function() {
-            return N
-        },
-        maybeFetchOnboardingPrompts: function() {
             return g
         },
+        maybeFetchOnboardingPrompts: function() {
+            return m
+        },
         startOnboarding: function() {
-            return E
+            return p
         }
-    }), t("702976");
-    var i = t("872717"),
-        r = t("913144"),
-        o = t("716241"),
-        l = t("271938"),
-        u = t("26989"),
-        d = t("305961"),
-        s = t("599110"),
-        a = t("568734"),
-        p = t("863636"),
-        O = t("653138"),
-        _ = t("49111"),
-        c = t("657944");
+    }), n("702976");
+    var i = n("872717"),
+        s = n("913144"),
+        r = n("716241"),
+        a = n("271938"),
+        o = n("26989"),
+        l = n("305961"),
+        u = n("599110"),
+        d = n("568734"),
+        c = n("863636"),
+        f = n("653138"),
+        _ = n("49111"),
+        h = n("657944");
 
-    function f(n) {
-        s.default.track(_.AnalyticEvents.GUILD_ONBOARDING_LOADED, {
-            ...(0, o.collectGuildAnalyticsMetadata)(n),
+    function E(e) {
+        u.default.track(_.AnalyticEvents.GUILD_ONBOARDING_LOADED, {
+            ...(0, r.collectGuildAnalyticsMetadata)(e),
             has_new_prompts: !1,
             number_of_prompts: 0
         })
     }
 
-    function N(n) {
-        return r.default.dispatch({
+    function g(e) {
+        return s.default.dispatch({
             type: "GUILD_ONBOARDING_PROMPTS_FETCH_START",
-            guildId: n
+            guildId: e
         }), i.default.get({
-            url: _.Endpoints.GUILD_ONBOARDING(n)
-        }).then(e => {
+            url: _.Endpoints.GUILD_ONBOARDING(e)
+        }).then(t => {
             let {
-                body: t
-            } = e, i = (0, O.serverApiResponseToClientState)(t);
-            return r.default.dispatch({
+                body: n
+            } = t, i = (0, f.serverApiResponseToClientState)(n);
+            return s.default.dispatch({
                 type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS",
-                guildId: n,
+                guildId: e,
                 ...i
             }).then(() => i.prompts)
-        }, e => (r.default.dispatch({
+        }, t => (s.default.dispatch({
             type: "GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE",
-            guildId: n
-        }), e))
+            guildId: e
+        }), t))
     }
-    async function g(n) {
-        var e, t;
-        let i = l.default.getId(),
-            r = (0, a.hasFlag)(null !== (t = null === (e = u.default.getMember(n, i)) || void 0 === e ? void 0 : e.flags) && void 0 !== t ? t : 0, c.GuildMemberFlags.COMPLETED_ONBOARDING),
-            o = d.default.getGuild(n);
-        if (null == o || !o.hasFeature(_.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
-        let s = p.default.shouldFetchPrompts(n),
-            O = p.default.getOnboardingPrompts(n);
-        if (!s && O.length > 0) return O.every(n => !n.inOnboarding) ? (P(n), Promise.resolve()) : (!r && E(n), Promise.resolve());
-        let f = await N(n);
-        return Array.isArray(f) && f.every(n => !n.inOnboarding) ? (P(n), Promise.resolve()) : (!r && E(n), f)
+    async function m(e) {
+        var t, n;
+        let i = a.default.getId(),
+            s = (0, d.hasFlag)(null !== (n = null === (t = o.default.getMember(e, i)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, h.GuildMemberFlags.COMPLETED_ONBOARDING),
+            r = l.default.getGuild(e);
+        if (null == r || !r.hasFeature(_.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
+        let u = c.default.shouldFetchPrompts(e),
+            f = c.default.getOnboardingPrompts(e);
+        if (!u && f.length > 0) return f.every(e => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!s && p(e), Promise.resolve());
+        let E = await g(e);
+        return Array.isArray(E) && E.every(e => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!s && p(e), E)
     }
 
-    function E(n) {
-        r.default.dispatch({
+    function p(e) {
+        s.default.dispatch({
             type: "GUILD_ONBOARDING_START",
-            guildId: n
+            guildId: e
         })
     }
 
-    function P(n) {
-        s.default.track(_.AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, {
-            ...(0, o.collectGuildAnalyticsMetadata)(n),
+    function S(e) {
+        u.default.track(_.AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, {
+            ...(0, r.collectGuildAnalyticsMetadata)(e),
             step: -2,
             required: !0
-        }), s.default.track(_.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
-            ...(0, o.collectGuildAnalyticsMetadata)(n),
+        }), u.default.track(_.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
+            ...(0, r.collectGuildAnalyticsMetadata)(e),
             step: -2,
             skipped: !1,
             is_final_step: !0,

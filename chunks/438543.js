@@ -1,4 +1,4 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    e.base = s("275201"), e.short = s("504136"), e.mont = s("765261"), e.edwards = s("599383")
+    t.base = n("275201"), t.short = n("504136"), t.mont = n("765261"), t.edwards = n("599383")
 }

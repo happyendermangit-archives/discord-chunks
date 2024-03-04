@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return s
         }
     });
     var i = n("782340");
 
-    function r(e) {
+    function s(e) {
         let t = i.default.getLocale().toLowerCase();
         return t in e ? e[t] : e.default
     }

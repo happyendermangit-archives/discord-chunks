@@ -1,11 +1,11 @@
-function(e, t, n) {
+function(I, N, A) {
     "use strict";
-    n.r(t), n.d(t, {
+    A.r(N), A.d(N, {
         default: function() {
-            return i
+            return O
         }
     });
-    var i = {
+    var O = {
         aa: "aa-ET",
         af: "af-ZA",
         ak: "ak-GH",

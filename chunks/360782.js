@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return u
+            return s
         }
     });
-    var s = n("860957");
+    var i = n("860957");
 
-    function u() {
-        let e = s.default.getFocusedPID();
-        return null != e && (s.default.isReady(e) || s.default.isCrashed(e)) ? e : null
+    function s() {
+        let e = i.default.getFocusedPID();
+        return null != e && (i.default.isReady(e) || i.default.isCrashed(e)) ? e : null
     }
 }

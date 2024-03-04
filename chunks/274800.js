@@ -1,72 +1,72 @@
-function(t, e, n) {
+function(e, t, n) {
     "use strict";
-    n.r(e), n.d(e, {
+    n.r(t), n.d(t, {
         queueInteractionComponentState: function() {
-            return r
+            return a
         },
         addQueued: function() {
-            return u
+            return o
         },
         setFailed: function() {
-            return d
+            return l
         },
         fetchMessageInteractionData: function() {
-            return o
+            return u
         }
     });
-    var a = n("872717"),
-        i = n("913144"),
-        l = n("49111");
+    var i = n("872717"),
+        s = n("913144"),
+        r = n("49111");
 
-    function r(t, e, n, a) {
-        i.default.dispatch({
+    function a(e, t, n, i) {
+        s.default.dispatch({
             type: "QUEUE_INTERACTION_COMPONENT_STATE",
-            messageId: t,
-            nonce: e,
+            messageId: e,
+            nonce: t,
             state: n,
-            indices: a
+            indices: i
         })
     }
 
-    function u(t, e) {
+    function o(e, t) {
         let {
             data: n,
-            messageId: a,
-            onCreate: l,
-            onSuccess: r,
-            onFailure: u
-        } = e;
-        i.default.dispatch({
+            messageId: i,
+            onCreate: r,
+            onSuccess: a,
+            onFailure: o
+        } = t;
+        s.default.dispatch({
             type: "INTERACTION_QUEUE",
             data: n,
-            nonce: t,
-            messageId: a,
-            onCreate: l,
-            onSuccess: r,
-            onFailure: u
+            nonce: e,
+            messageId: i,
+            onCreate: r,
+            onSuccess: a,
+            onFailure: o
         })
     }
 
-    function d(t, e, n) {
-        i.default.dispatch({
+    function l(e, t, n) {
+        s.default.dispatch({
             type: "INTERACTION_FAILURE",
-            nonce: t,
+            nonce: e,
             errorMessage: n,
-            errorCode: e
+            errorCode: t
         })
     }
-    async function o(t, e) {
-        let n = await a.default.get({
-            url: l.Endpoints.MESSAGE_INTERACTION_DATA(t, e),
+    async function u(e, t) {
+        let n = await i.default.get({
+            url: r.Endpoints.MESSAGE_INTERACTION_DATA(e, t),
             oldFormErrors: !0
         });
         if (n.ok) {
-            let a = n.body;
-            i.default.dispatch({
+            let i = n.body;
+            s.default.dispatch({
                 type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS",
-                channelId: t,
-                messageId: e,
-                interactionData: a
+                channelId: e,
+                messageId: t,
+                interactionData: i
             })
         }
     }

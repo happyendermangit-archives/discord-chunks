@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         shouldReadWriteAudioSettings: function() {
-            return s
+            return r
         }
     });
     var i = n("862205");
-    let r = (0, i.createExperiment)({
+    let s = (0, i.createExperiment)({
         kind: "user",
         id: "2022-09_remote_audio_settings",
         label: "Remote Audio Settings",
@@ -22,8 +22,8 @@ function(e, t, n) {
         }]
     });
 
-    function s() {
-        return r.getCurrentConfig({
+    function r() {
+        return s.getCurrentConfig({
             location: "da0fa6_1"
         }, {
             autoTrackExposure: !1

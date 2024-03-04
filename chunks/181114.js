@@ -5,7 +5,7 @@ function(e, t, n) {
             return s
         },
         Shine: function() {
-            return C
+            return E
         },
         default: function() {
             return _
@@ -21,15 +21,15 @@ function(e, t, n) {
         f = n("145131"),
         h = n("61435");
     (i = s || (s = {})).DEFAULT = "default", i.SMALL = "small";
-    let E = {
+    let v = {
             default: h.shineDefault,
             small: h.shineSmall
         },
-        v = {
+        C = {
             default: h.shineInnerDefault,
             small: h.shineInnerSmall
         };
-    class C extends l.PureComponent {
+    class E extends l.PureComponent {
         render() {
             let {
                 className: e,
@@ -45,15 +45,15 @@ function(e, t, n) {
                 children: (0, r.jsx)(f.default, {
                     align: f.default.Align.CENTER,
                     justify: f.default.Justify.CENTER,
-                    className: E[t],
+                    className: v[t],
                     children: (0, r.jsx)("div", {
-                        className: v[t]
+                        className: C[t]
                     })
                 })
             })
         }
     }
-    C.defaultProps = {
+    E.defaultProps = {
         shineSize: "default"
     };
     let p = e => {
@@ -65,19 +65,19 @@ function(e, t, n) {
             pauseAnimation: o,
             shineSize: u = "default",
             shinePaused: f,
-            buttonShineClassName: E,
-            onlyShineOnHover: v,
+            buttonShineClassName: v,
+            onlyShineOnHover: C,
             ...p
-        } = e, _ = l.createRef(), S = (0, d.default)(_), I = !i && !s && !0 !== o && (!v || S);
+        } = e, _ = l.createRef(), I = (0, d.default)(_), S = !i && !s && !0 !== o && (!C || I);
         return (0, r.jsxs)(c.Button, {
             buttonRef: _,
             ...p,
             className: a(h.shinyButton, n),
             disabled: i,
             submitting: s,
-            children: [t, I ? (0, r.jsx)(C, {
+            children: [t, S ? (0, r.jsx)(E, {
                 shinePaused: f,
-                className: a(h.buttonShine, v ? h.onlyShineOnHover : void 0, E),
+                className: a(h.buttonShine, C ? h.onlyShineOnHover : void 0, v),
                 shineSize: u
             }) : null]
         })

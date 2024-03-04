@@ -2,74 +2,74 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         FormSwitch: function() {
-            return E
+            return _
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("718776"),
         l = n("980672"),
         u = n("414055"),
-        c = n("370373"),
-        d = n("329272"),
+        d = n("370373"),
+        c = n("329272"),
         f = n("37973");
 
-    function E(e) {
+    function _(e) {
         let {
             value: t,
             disabled: n = !1,
-            hideBorder: s = !1,
-            tooltipNote: E,
-            onChange: p,
-            className: h,
-            style: _,
-            note: S,
-            children: m
-        } = e, T = r.useRef(null), g = r.useRef(null), I = r.useId(), C = (0, i.jsx)(l.Switch, {
-            id: I,
+            hideBorder: r = !1,
+            tooltipNote: _,
+            onChange: h,
+            className: E,
+            style: g,
+            note: m,
+            children: p
+        } = e, S = s.useRef(null), v = s.useRef(null), T = s.useId(), I = (0, i.jsx)(l.Switch, {
+            id: T,
             checked: t,
-            onChange: p,
+            onChange: h,
             disabled: n,
             focusProps: {
                 enabled: !1
             },
-            innerRef: T
+            innerRef: S
         });
         return (0, i.jsxs)("div", {
-            style: _,
-            className: a(f.container, h, {
+            style: g,
+            className: a(f.container, E, {
                 [f.disabled]: n
             }),
             children: [(0, i.jsx)(o.FocusRing, {
                 within: !0,
                 offset: -4,
-                focusTarget: T,
-                ringTarget: g,
+                focusTarget: S,
+                ringTarget: v,
                 children: (0, i.jsxs)("div", {
                     className: f.labelRow,
-                    ref: g,
+                    ref: v,
                     children: [(0, i.jsx)("label", {
-                        htmlFor: I,
+                        htmlFor: T,
                         className: f.title,
-                        children: m
+                        children: p
                     }), (0, i.jsx)("div", {
                         className: f.control,
-                        children: null != E ? (0, i.jsx)(u.TooltipContainer, {
-                            text: E,
-                            children: C
-                        }) : C
+                        children: null != _ ? (0, i.jsx)(u.TooltipContainer, {
+                            text: _,
+                            children: I
+                        }) : I
                     })]
                 })
-            }), null != S && (0, i.jsx)("div", {
+            }), null != m && (0, i.jsx)("div", {
                 className: f.note,
-                children: (0, i.jsx)(d.FormText, {
+                children: (0, i.jsx)(c.FormText, {
                     disabled: n,
-                    type: d.FormTextTypes.DESCRIPTION,
-                    children: S
+                    type: c.FormTextTypes.DESCRIPTION,
+                    children: m
                 })
-            }), !s && (0, i.jsx)(c.FormDivider, {
+            }), !r && (0, i.jsx)(d.FormDivider, {
                 className: f.dividerDefault
             })]
         })

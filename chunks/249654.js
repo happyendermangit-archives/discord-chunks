@@ -2,23 +2,23 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DISCORD_EPOCH: function() {
-            return s
+            return r
         },
         default: function() {
             return l
         }
     });
     var i = n("552442"),
-        r = n.n(i);
-    let s = 14200704e5;
+        s = n.n(i);
+    let r = 14200704e5;
 
     function a(e) {
-        return Math.floor(Number(e) / 4194304) + s
+        return Math.floor(Number(e) / 4194304) + r
     }
 
     function o(e) {
-        let t = e - s;
-        return t <= 0 ? "0" : r(t).shiftLeft(22).toString()
+        let t = e - r;
+        return t <= 0 ? "0" : s(t).shiftLeft(22).toString()
     }
     var l = {
         age: function(e) {

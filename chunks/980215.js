@@ -2,95 +2,95 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useClydeProfilesEnabled: function() {
-            return s
+            return u
         },
         useClydeEnabled: function() {
-            return c
+            return d
         },
         getClydeEnabled: function() {
             return f
         },
         getClydeExperimentEnabled: function() {
-            return p
+            return _
         },
         canUseCustomClydeProfiles: function() {
             return h
         }
     }), n("884691"), n("446674");
-    var l = n("305961"),
-        r = n("957255"),
-        a = n("772051"),
-        i = n("49111"),
-        u = n("724210");
+    var i = n("305961"),
+        s = n("957255"),
+        r = n("772051"),
+        a = n("49111"),
+        o = n("724210");
 
-    function o(e) {
+    function l(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "1e9ccc_1",
-            r = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : i.EMPTY_STRING_SNOWFLAKE_ID,
-            u = a.default.useExperiment({
-                guildId: r,
-                location: l
+            i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "1e9ccc_1",
+            s = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : a.EMPTY_STRING_SNOWFLAKE_ID,
+            o = r.default.useExperiment({
+                guildId: s,
+                location: i
             }, {
                 autoTrackExposure: n
             }).experimentState;
-        return u
+        return o
     }
 
-    function s(e) {
+    function u(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 ? arguments[2] : void 0,
-            l = o(e, t, n);
-        return l === a.ClydeExperimentState.ClydeProfiles
+            i = l(e, t, n);
+        return i === r.ClydeExperimentState.ClydeProfiles
     }
 
-    function c(e, t) {
+    function d(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            l = o(e, n);
-        return d(l, e, t)
+            i = l(e, n);
+        return c(i, e, t)
     }
 
-    function d(e, t, n) {
+    function c(e, t, n) {
         if (null == t) {
             if (null != n && n.isPrivate()) {
-                if (n.hasFlag(u.ChannelFlags.CLYDE_AI)) return !0;
-                let e = l.default.getGuildIds().some(e => p(l.default.getGuild(e)));
+                if (n.hasFlag(o.ChannelFlags.CLYDE_AI)) return !0;
+                let e = i.default.getGuildIds().some(e => _(i.default.getGuild(e)));
                 return e
             }
             return !1
         }
-        return null != e && e !== a.ClydeExperimentState.None && r.default.can(i.Permissions.USE_CLYDE_AI, n)
+        return null != e && e !== r.ClydeExperimentState.None && s.default.can(a.Permissions.USE_CLYDE_AI, n)
     }
 
     function f(e, t) {
         var n;
-        let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : i.EMPTY_STRING_SNOWFLAKE_ID,
-            u = a.default.getCurrentConfig({
-                guildId: r,
+        let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            s = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : a.EMPTY_STRING_SNOWFLAKE_ID,
+            o = r.default.getCurrentConfig({
+                guildId: s,
                 location: "1e9ccc_2"
             }, {
-                autoTrackExposure: l
+                autoTrackExposure: i
             }).experimentState;
-        return d(u, e, t)
+        return c(o, e, t)
     }
 
-    function p(e) {
+    function _(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = m(e, t);
-        return n !== a.ClydeExperimentState.None
+            n = E(e, t);
+        return n !== r.ClydeExperimentState.None
     }
 
     function h(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return m(e, t) === a.ClydeExperimentState.ClydeProfiles
+        return E(e, t) === r.ClydeExperimentState.ClydeProfiles
     }
 
-    function m(e) {
+    function E(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return !1;
         let n = e.id;
-        return a.default.getCurrentConfig({
+        return r.default.getCurrentConfig({
             guildId: n,
             location: "1e9ccc_4"
         }, {

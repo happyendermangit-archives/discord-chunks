@@ -2,28 +2,28 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Clickable: function() {
-            return c
+            return d
         }
     }), n("222007");
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("247716"),
         l = n("718776"),
         u = n("49111");
-    class c extends r.Component {
+    class d extends s.Component {
         renderNonInteractive() {
             let {
                 tag: e,
                 focusProps: t,
                 innerRef: n,
                 onClick: i,
-                role: s,
+                role: r,
                 tabIndex: a,
                 ...o
             } = this.props;
-            return r.createElement(e, {
+            return s.createElement(e, {
                 ref: this.setRef,
                 ...o
             })
@@ -34,15 +34,15 @@ function(e, t, n) {
                 onClick: t,
                 className: n,
                 children: i,
-                focusProps: s,
+                focusProps: r,
                 innerRef: o,
                 ...l
             } = this.props;
-            return null == t ? r.createElement(e, {
+            return null == t ? s.createElement(e, {
                 ref: this.setRef,
                 className: a(n),
                 ...l
-            }, i) : r.createElement(e, {
+            }, i) : s.createElement(e, {
                 onClick: t,
                 ref: this.setRef,
                 onKeyPress: this.handleKeyPress,
@@ -63,9 +63,9 @@ function(e, t, n) {
                     onClick: t,
                     href: n,
                     onKeyPress: i,
-                    ignoreKeyPress: r
+                    ignoreKeyPress: s
                 } = this.props;
-                !e.repeat && (!r && null != t && null != this.ref && (e.charCode === u.KeyboardKeys.SPACE || e.charCode === u.KeyboardKeys.ENTER) && (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != i && i(e))
+                !e.repeat && (!s && null != t && null != this.ref && (e.charCode === u.KeyboardKeys.SPACE || e.charCode === u.KeyboardKeys.ENTER) && (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != i && i(e))
             }, this.setRef = e => {
                 this.ref = e;
                 let {
@@ -75,7 +75,7 @@ function(e, t, n) {
             }
         }
     }
-    c.contextType = o.BlockInteractionsContext, c.defaultProps = {
+    d.contextType = o.BlockInteractionsContext, d.defaultProps = {
         tag: "div",
         role: "button",
         tabIndex: 0

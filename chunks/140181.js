@@ -1,16 +1,16 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
     var r = Date.prototype.getDay,
-        i = function(t) {
+        i = function(e) {
             try {
-                return r.call(t), !0
-            } catch (t) {
+                return r.call(e), !0
+            } catch (e) {
                 return !1
             }
         },
-        n = Object.prototype.toString,
-        c = s("149384")();
-    t.exports = function(t) {
-        return "object" == typeof t && null !== t && (c ? i(t) : "[object Date]" === n.call(t))
+        o = Object.prototype.toString,
+        s = n("149384")();
+    e.exports = function(e) {
+        return "object" == typeof e && null !== e && (s ? i(e) : "[object Date]" === o.call(e))
     }
 }

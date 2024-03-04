@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         CAN_VIEW_BROADCASTS_BUCKETS: function() {
-            return s
+            return r
         },
         default: function() {
             return a
         }
     });
     var i = n("862205");
-    let r = (0, i.createExperiment)({
+    let s = (0, i.createExperiment)({
             kind: "user",
             id: "2023-04_broadcasting",
             label: "Go Live Broadcasting",
@@ -33,6 +33,6 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = r.definition.treatments.filter(e => e.config.canViewBroadcasts).map(e => e.id);
-    var a = r
+        r = s.definition.treatments.filter(e => e.config.canViewBroadcasts).map(e => e.id);
+    var a = s
 }

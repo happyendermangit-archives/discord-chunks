@@ -5,20 +5,20 @@ function(e, t, n) {
             return r
         }
     });
-    var s = n("862205"),
-        i = n("970254"),
-        r = (0, s.createExperiment)({
+    var i = n("862205"),
+        s = n("970254"),
+        r = (0, i.createExperiment)({
             kind: "guild",
             id: "2023-09_user_apps_guild",
             label: "Allow user app commands",
             defaultConfig: {
-                userAppsTreatment: i.UserAppsTreatment.DEFAULT
+                userAppsTreatment: s.UserAppsTreatment.DEFAULT
             },
             treatments: [{
                 id: 1,
                 label: "Allow user app commands",
                 config: {
-                    userAppsTreatment: i.UserAppsTreatment.ALLOWED
+                    userAppsTreatment: s.UserAppsTreatment.ALLOWED
                 }
             }]
         })

@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MenuSeparator: function() {
-            return s
+            return r
         }
     });
     var i = n("37983");
     n("884691");
-    var r = n("639826");
+    var s = n("639826");
 
-    function s() {
+    function r() {
         return (0, i.jsx)("div", {
             role: "separator",
-            className: r.separator
+            className: s.separator
         })
     }
 }

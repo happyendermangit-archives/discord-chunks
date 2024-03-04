@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return i
         }
     });
-    var s, i = n("307785"),
+    var i, s = n("307785"),
         r = n("49111");
-    s = class {
+    i = class {
         getCreateAttachmentURL(e) {
             return r.Endpoints.GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD(e)
         }
@@ -15,13 +15,13 @@ function(e, t, n) {
             return r.Endpoints.MESSAGE_DELETE_UPLOAD(e)
         }
         getMaxFileSize(e) {
-            return i.MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES
+            return s.MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES
         }
         getMaxAttachmentsCount() {
-            return i.MAX_ATTACHMENT_UPLOAD_COUNT
+            return s.MAX_ATTACHMENT_UPLOAD_COUNT
         }
         getMaxTotalAttachmentSize() {
-            return i.MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES
+            return s.MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES
         }
         get shouldReactNativeCompressUploads() {
             return !1

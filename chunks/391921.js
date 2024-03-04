@@ -2,20 +2,20 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useSearchFieldState: function() {
-            return a
+            return i
         }
     }), n("222007");
     var r = n("679750");
 
-    function a(e) {
-        let [t, n] = (0, r.useControlledState)(i(e.value), i(e.defaultValue) || "", e.onChange);
+    function i(e) {
+        let [t, n] = (0, r.useControlledState)(o(e.value), o(e.defaultValue) || "", e.onChange);
         return {
             value: t,
             setValue: n
         }
     }
 
-    function i(e) {
+    function o(e) {
         if (null != e) return e.toString()
     }
 }

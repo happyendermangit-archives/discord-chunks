@@ -1,4 +1,4 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    e.sha1 = s("673298"), e.sha224 = s("459189"), e.sha256 = s("201442"), e.sha384 = s("33005"), e.sha512 = s("943753")
+    t.sha1 = n("673298"), t.sha224 = n("459189"), t.sha256 = n("201442"), t.sha384 = n("33005"), t.sha512 = n("943753")
 }

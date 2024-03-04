@@ -1,4 +1,4 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    e.version = s("82619").version, e.utils = s("550511"), e.rand = s("125807"), e.curve = s("438543"), e.curves = s("346931"), e.ec = s("151979"), e.eddsa = s("178670")
+    t.version = n("82619").version, t.utils = n("550511"), t.rand = n("125807"), t.curve = n("438543"), t.curves = n("346931"), t.ec = n("151979"), t.eddsa = n("178670")
 }

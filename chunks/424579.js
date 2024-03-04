@@ -1,8 +1,8 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = function(t) {
-        if (void 0 === t) return t;
-        var e = {};
-        return "[[Value]]" in t && (e.value = t["[[Value]]"]), "[[Writable]]" in t && (e.writable = !!t["[[Writable]]"]), "[[Get]]" in t && (e.get = t["[[Get]]"]), "[[Set]]" in t && (e.set = t["[[Set]]"]), "[[Enumerable]]" in t && (e.enumerable = !!t["[[Enumerable]]"]), "[[Configurable]]" in t && (e.configurable = !!t["[[Configurable]]"]), e
+    e.exports = function(e) {
+        if (void 0 === e) return e;
+        var t = {};
+        return "[[Value]]" in e && (t.value = e["[[Value]]"]), "[[Writable]]" in e && (t.writable = !!e["[[Writable]]"]), "[[Get]]" in e && (t.get = e["[[Get]]"]), "[[Set]]" in e && (t.set = e["[[Set]]"]), "[[Enumerable]]" in e && (t.enumerable = !!e["[[Enumerable]]"]), "[[Configurable]]" in e && (t.configurable = !!e["[[Configurable]]"]), t
     }
 }

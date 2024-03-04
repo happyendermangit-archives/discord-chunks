@@ -1,5 +1,5 @@
 function(e, t, n) {
-    var s = {
+    var i = {
         "./1f004.svg": "343607",
         "./1f0cf.svg": "487841",
         "./1f170.svg": "887207",
@@ -35,7 +35,7 @@ function(e, t, n) {
         "./1f1e6-1f1fd.svg": "482325",
         "./1f1e6-1f1ff.svg": "648129",
         "./1f1e6.svg": "795420",
-        "./1f1e7-1f1e6.svg": "948467",
+        "./1f1e7-1f1e6.svg": "313067",
         "./1f1e7-1f1e7.svg": "352636",
         "./1f1e7-1f1e9.svg": "953255",
         "./1f1e7-1f1ea.svg": "221535",
@@ -1193,7 +1193,7 @@ function(e, t, n) {
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f469-1f3fe.svg": "301658",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f469-1f3ff.svg": "892267",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f48b-200d-1f468-1f3fb.svg": "323158",
-        "./1f469-1f3fc-200d-2764-fe0f-200d-1f48b-200d-1f468-1f3fc.svg": "925312",
+        "./1f469-1f3fc-200d-2764-fe0f-200d-1f48b-200d-1f468-1f3fc.svg": "289404",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f48b-200d-1f468-1f3fd.svg": "612887",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f48b-200d-1f468-1f3fe.svg": "132294",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f48b-200d-1f468-1f3ff.svg": "123882",
@@ -2914,7 +2914,7 @@ function(e, t, n) {
         "./1f9d1-1f3fc-200d-1f527.svg": "186290",
         "./1f9d1-1f3fc-200d-1f52c.svg": "418898",
         "./1f9d1-1f3fc-200d-1f680.svg": "173243",
-        "./1f9d1-1f3fc-200d-1f692.svg": "433235",
+        "./1f9d1-1f3fc-200d-1f692.svg": "330762",
         "./1f9d1-1f3fc-200d-1f91d-200d-1f9d1-1f3fb.svg": "756561",
         "./1f9d1-1f3fc-200d-1f91d-200d-1f9d1-1f3fc.svg": "104661",
         "./1f9d1-1f3fc-200d-1f91d-200d-1f9d1-1f3fd.svg": "813176",
@@ -3041,7 +3041,7 @@ function(e, t, n) {
         "./1f9d1-1f3ff-200d-1f9b0.svg": "350412",
         "./1f9d1-1f3ff-200d-1f9b1.svg": "689067",
         "./1f9d1-1f3ff-200d-1f9b2.svg": "57574",
-        "./1f9d1-1f3ff-200d-1f9b3.svg": "166875",
+        "./1f9d1-1f3ff-200d-1f9b3.svg": "392098",
         "./1f9d1-1f3ff-200d-1f9bc.svg": "714172",
         "./1f9d1-1f3ff-200d-1f9bd.svg": "172310",
         "./1f9d1-1f3ff-200d-2695-fe0f.svg": "328150",
@@ -3722,18 +3722,18 @@ function(e, t, n) {
         "./e50a.svg": "395968"
     };
 
-    function i(e) {
+    function s(e) {
         return n(r(e))
     }
 
     function r(e) {
-        if (!n.o(s, e)) {
+        if (!n.o(i, e)) {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         }
-        return s[e]
+        return i[e]
     }
-    i.id = '"331246"', i.keys = function() {
-        return Object.keys(s)
-    }, i.resolve = r, e.exports = i
+    s.id = '"331246"', s.keys = function() {
+        return Object.keys(i)
+    }, s.resolve = r, e.exports = s
 }

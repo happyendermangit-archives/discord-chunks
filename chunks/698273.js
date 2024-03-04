@@ -1,10 +1,10 @@
-function(t, r, n) {
-    var e = n("345983"),
-        o = n("392147"),
-        i = n("540893"),
-        u = n("725502"),
-        c = n("451351");
-    t.exports = function(t) {
-        return "function" == typeof t ? t : null == t ? i : "object" == typeof t ? u(t) ? o(t[0], t[1]) : e(t) : c(t)
+function(e, t, n) {
+    var r = n("345983"),
+        i = n("392147"),
+        o = n("540893"),
+        s = n("725502"),
+        a = n("451351");
+    e.exports = function(e) {
+        return "function" == typeof e ? e : null == e ? o : "object" == typeof e ? s(e) ? i(e[0], e[1]) : r(e) : a(e)
     }
 }

@@ -11,10 +11,10 @@ function(e, t, n) {
         d = n("579697"),
         f = n("161323"),
         p = TypeError,
-        h = function(e, t) {
+        m = function(e, t) {
             this.stopped = e, this.result = t
         },
-        m = h.prototype;
+        h = m.prototype;
     e.exports = function(e, t, n) {
         var y, _, g, v, b, M, w, k = n && n.that,
             L = !!(n && n.AS_ENTRIES),
@@ -22,11 +22,11 @@ function(e, t, n) {
             T = !!(n && n.IS_ITERATOR),
             S = !!(n && n.INTERRUPTED),
             Y = r(t, k),
-            x = function(e) {
-                return y && f(y, "normal", e), new h(!0, e)
-            },
             O = function(e) {
-                return L ? (o(e), S ? Y(e[0], e[1], x) : Y(e[0], e[1])) : S ? Y(e, x) : Y(e)
+                return y && f(y, "normal", e), new m(!0, e)
+            },
+            x = function(e) {
+                return L ? (o(e), S ? Y(e[0], e[1], O) : Y(e[0], e[1])) : S ? Y(e, O) : Y(e)
             };
         if (D) y = e.iterator;
         else if (T) y = e;
@@ -34,19 +34,19 @@ function(e, t, n) {
             if (!(_ = d(e))) throw p(i(e) + " is not iterable");
             if (s(_)) {
                 for (g = 0, v = u(e); v > g; g++)
-                    if ((b = O(e[g])) && l(m, b)) return b;
-                return new h(!1)
+                    if ((b = x(e[g])) && l(h, b)) return b;
+                return new m(!1)
             }
             y = c(e, _)
         }
         for (M = D ? e.next : y.next; !(w = a(M, y)).done;) {
             try {
-                b = O(w.value)
+                b = x(w.value)
             } catch (e) {
                 f(y, "throw", e)
             }
-            if ("object" == typeof b && b && l(m, b)) return b
+            if ("object" == typeof b && b && l(h, b)) return b
         }
-        return new h(!1)
+        return new m(!1)
     }
 }

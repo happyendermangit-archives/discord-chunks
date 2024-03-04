@@ -6,43 +6,43 @@ function(e, t, n) {
         }
     }), n("222007");
     var i = n("917351"),
-        r = n.n(i),
-        s = n("316693"),
+        s = n.n(i),
+        r = n("316693"),
         a = n("446674"),
         o = n("913144"),
         l = n("560208"),
         u = n("38654"),
-        c = n("267567"),
-        d = n("834052"),
+        d = n("267567"),
+        c = n("834052"),
         f = n("755624"),
-        E = n("526311"),
-        p = n("233069"),
-        h = n("813006"),
-        _ = n("766274"),
-        S = n("845078"),
-        m = n("991170"),
-        T = n("42203"),
-        g = n("926787"),
-        I = n("26989"),
-        C = n("305961"),
-        v = n("697218"),
+        _ = n("526311"),
+        h = n("233069"),
+        E = n("813006"),
+        g = n("766274"),
+        m = n("845078"),
+        p = n("991170"),
+        S = n("42203"),
+        v = n("926787"),
+        T = n("26989"),
+        I = n("305961"),
+        C = n("697218"),
         A = n("49111"),
-        R = n("562980");
+        y = n("562980");
     let N = {},
+        R = {},
         O = {},
-        D = {},
-        y = 0;
+        D = 0;
 
     function P(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = N[e];
         if (null != n) return n;
-        let i = v.default.getCurrentUser();
-        if (null == i) return m.default.NONE;
-        let r = C.default.getGuild(e);
-        return null == r ? m.default.NONE : N[e] = m.default.computePermissions({
+        let i = C.default.getCurrentUser();
+        if (null == i) return p.default.NONE;
+        let s = I.default.getGuild(e);
+        return null == s ? p.default.NONE : N[e] = p.default.computePermissions({
             user: i,
-            context: r,
+            context: s,
             checkElevated: t
         })
     }
@@ -50,55 +50,55 @@ function(e, t, n) {
     function L(e) {
         var t;
         let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            i = v.default.getCurrentUser();
-        if (null == i) return m.default.NONE;
-        let s = T.default.getChannel(e);
-        if (null == s) return m.default.NONE;
-        let a = s.getGuildId(),
-            o = null != a && (c.default.isLurking(a) || (null === (t = I.default.getMember(a, i.id)) || void 0 === t ? void 0 : t.isPending));
-        return !s.isScheduledForDeletion() && !o && r.isEmpty(s.permissionOverwrites) && null != a ? P(a) : m.default.computePermissions({
+            i = C.default.getCurrentUser();
+        if (null == i) return p.default.NONE;
+        let r = S.default.getChannel(e);
+        if (null == r) return p.default.NONE;
+        let a = r.getGuildId(),
+            o = null != a && (d.default.isLurking(a) || (null === (t = T.default.getMember(a, i.id)) || void 0 === t ? void 0 : t.isPending));
+        return !r.isScheduledForDeletion() && !o && s.isEmpty(r.permissionOverwrites) && null != a ? P(a) : p.default.computePermissions({
             user: i,
-            context: s,
+            context: r,
             checkElevated: n
         })
     }
 
-    function b(e) {
+    function M(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = O[e];
-        return null != n ? n : O[e] = L(e, t)
+            n = R[e];
+        return null != n ? n : R[e] = L(e, t)
     }
 
-    function M(e) {
+    function b(e) {
         if (null != e) {
             var t;
-            D[e] = (null !== (t = D[e]) && void 0 !== t ? t : 0) + 1
+            O[e] = (null !== (t = O[e]) && void 0 !== t ? t : 0) + 1
         }
     }
 
     function U() {
-        for (let e in N = {}, O = {}, D) D[e] += 1;
-        y += 1
-    }
-
-    function G() {
-        U()
+        for (let e in N = {}, R = {}, O) O[e] += 1;
+        D += 1
     }
 
     function w() {
         U()
     }
 
-    function k(e) {
+    function k() {
+        U()
+    }
+
+    function V(e) {
         var t;
         let {
             user: n
         } = e;
-        if (n.id !== (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
+        if (n.id !== (null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
         U()
     }
 
-    function x() {
+    function G() {
         return !0
     }
 
@@ -110,29 +110,29 @@ function(e, t, n) {
         return !!(n.length > 0) || t.some(e => e.some(e => null != e.thread))
     }
 
-    function V(e) {
+    function x(e) {
         let {
             guildId: t
         } = e;
         delete N[t];
-        let n = T.default.getMutableBasicGuildChannelsForGuild(t);
-        r.forEach(n, e => {
-            delete O[e.id]
-        }), y += 1, M(t)
+        let n = S.default.getMutableBasicGuildChannelsForGuild(t);
+        s.forEach(n, e => {
+            delete R[e.id]
+        }), D += 1, b(t)
     }
 
     function B(e) {
         let {
             instance: t
-        } = e, n = T.default.getChannel(t.channel_id);
+        } = e, n = S.default.getChannel(t.channel_id);
         if (null == n) return !1;
-        let i = v.default.getCurrentUser(),
-            r = m.default.computePermissions({
+        let i = C.default.getCurrentUser(),
+            s = p.default.computePermissions({
                 user: i,
                 context: n
             });
-        if (r === O[n.id]) return !1;
-        O[n.id] = r, y += 1
+        if (s === R[n.id]) return !1;
+        R[n.id] = s, D += 1
     }
 
     function H(e) {
@@ -140,42 +140,42 @@ function(e, t, n) {
             guildId: t
         } = e;
         delete N[t];
-        let n = T.default.getMutableBasicGuildChannelsForGuild(t);
-        r.forEach(n, e => {
-            delete O[e.id]
-        }), y += 1, M(t)
+        let n = S.default.getMutableBasicGuildChannelsForGuild(t);
+        s.forEach(n, e => {
+            delete R[e.id]
+        }), D += 1, b(t)
     }
 
     function Y(e, t, n, i) {
-        let r = m.default.NONE;
-        if (e instanceof p.ChannelRecordBase) {
-            if (p.THREAD_CHANNEL_TYPES.has(e.type)) {
-                let r = T.default.getChannel(e.parent_id);
-                return null == r ? m.default.NONE : m.default.applyThreadPermissions(e, Y(r, t, n, i), f.default.hasJoined(e.id))
+        let s = p.default.NONE;
+        if (e instanceof h.ChannelRecordBase) {
+            if (h.THREAD_CHANNEL_TYPES.has(e.type)) {
+                let s = S.default.getChannel(e.parent_id);
+                return null == s ? p.default.NONE : p.default.applyThreadPermissions(e, Y(s, t, n, i), f.default.hasJoined(e.id))
             }
-            r = b(e.id)
-        } else e instanceof h.default && (r = P(e.id));
-        return void 0 !== t || void 0 !== n || void 0 !== i ? m.default.computePermissions({
-            user: v.default.getCurrentUser(),
+            s = M(e.id)
+        } else e instanceof E.default && (s = P(e.id));
+        return void 0 !== t || void 0 !== n || void 0 !== i ? p.default.computePermissions({
+            user: C.default.getCurrentUser(),
             context: e,
             overwrites: t,
             roles: n,
             checkElevated: !0,
             excludeGuildPermissions: i
-        }) : r
+        }) : s
     }
     class j extends a.default.Store {
         initialize() {
-            this.waitFor(v.default, C.default, T.default, I.default, g.default, f.default, d.default, u.default)
+            this.waitFor(C.default, I.default, S.default, T.default, v.default, f.default, c.default, u.default)
         }
         getChannelPermissions(e) {
-            return p.THREAD_CHANNEL_TYPES.has(e.type) ? L(e.id) : b(e.id)
+            return h.THREAD_CHANNEL_TYPES.has(e.type) ? L(e.id) : M(e.id)
         }
         getGuildPermissions(e) {
             return P(e.id)
         }
         getGuildPermissionProps(e) {
-            let t = v.default.getCurrentUser();
+            let t = C.default.getCurrentUser();
             return {
                 canManageGuild: this.can(A.Permissions.MANAGE_GUILD, e),
                 canManageChannels: this.can(A.Permissions.MANAGE_CHANNELS, e),
@@ -195,99 +195,99 @@ function(e, t, n) {
             }
         }
         canAccessMemberSafetyPage(e) {
-            return s.default.hasAny(P(e.id), R.MemberSafetyPagePermissions)
+            return r.default.hasAny(P(e.id), y.MemberSafetyPagePermissions)
         }
         canAccessGuildSettings(e) {
-            return s.default.hasAny(P(e.id), m.default.VIEW_GUILD_SETTINGS)
+            return r.default.hasAny(P(e.id), p.default.VIEW_GUILD_SETTINGS)
         }
         canWithPartialContext(e, t) {
-            return "channelId" in t && "string" == typeof t.channelId ? this.can(e, T.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, C.default.getGuild(t.guildId))
+            return "channelId" in t && "string" == typeof t.channelId ? this.can(e, S.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, I.default.getGuild(t.guildId))
         }
-        can(e, t, n, i, r) {
-            let a = Y(t, n, i, r);
-            return s.default.has(a, e)
+        can(e, t, n, i, s) {
+            let a = Y(t, n, i, s);
+            return r.default.has(a, e)
         }
-        canBasicChannel(e, t, n, i, r) {
-            return "basicPermissions" in t ? S.default.has(t.basicPermissions, e) : s.default.has(Y(t, n, i, r), S.default.asBigFlag(e))
+        canBasicChannel(e, t, n, i, s) {
+            return "basicPermissions" in t ? m.default.has(t.basicPermissions, e) : r.default.has(Y(t, n, i, s), m.default.asBigFlag(e))
         }
         computePermissions(e, t, n, i) {
             return Y(e, t, n, i)
         }
         computeBasicPermissions(e) {
-            return "basicPermissions" in e ? e.basicPermissions : S.default.asBasicFlag(Y(e))
+            return "basicPermissions" in e ? e.basicPermissions : m.default.asBasicFlag(Y(e))
         }
         canManageUser(e, t, n) {
-            let i = t instanceof _.default ? t.id : t;
+            let i = t instanceof g.default ? t.id : t;
             if (n.isOwner(i)) return !1;
-            let r = v.default.getCurrentUser();
+            let s = C.default.getCurrentUser();
             if (!this.can(e, n)) return !1;
-            let s = null != r ? m.default.getHighestRole(n, r.id) : void 0,
-                a = m.default.getHighestRole(n, i);
-            return null != r && m.default.isRoleHigher(n, r.id, s, a)
+            let r = null != s ? p.default.getHighestRole(n, s.id) : void 0,
+                a = p.default.getHighestRole(n, i);
+            return null != s && p.default.isRoleHigher(n, s.id, r, a)
         }
         getHighestRole(e) {
-            let t = v.default.getCurrentUser();
-            return null != t ? m.default.getHighestRole(e, t.id) : null
+            let t = C.default.getCurrentUser();
+            return null != t ? p.default.getHighestRole(e, t.id) : null
         }
         isRoleHigher(e, t, n) {
-            let i = v.default.getCurrentUser(),
-                r = u.default.isViewingRoles(e.id);
-            return m.default.isRoleHigher(e, r ? void 0 : null == i ? void 0 : i.id, t, n)
+            let i = C.default.getCurrentUser(),
+                s = u.default.isViewingRoles(e.id);
+            return p.default.isRoleHigher(e, s ? void 0 : null == i ? void 0 : i.id, t, n)
         }
         canImpersonateRole(e, t) {
             let n = this.getHighestRole(e),
                 i = this.can(A.Permissions.MANAGE_GUILD, e) && this.can(A.Permissions.MANAGE_ROLES, e),
-                r = this.isRoleHigher(e, n, t);
-            return i && (r || t.id === (null == n ? void 0 : n.id))
+                s = this.isRoleHigher(e, n, t);
+            return i && (s || t.id === (null == n ? void 0 : n.id))
         }
         getGuildVersion(e) {
             var t;
-            return null !== (t = D[e]) && void 0 !== t ? t : 0
+            return null !== (t = O[e]) && void 0 !== t ? t : 0
         }
         getChannelsVersion() {
-            return y
+            return D
         }
     }
 
     function W() {
-        O = {}, N = {}, D = {}, y = 0
+        R = {}, N = {}, O = {}, D = 0
     }
     j.displayName = "PermissionStore";
     var K = new j(o.default, {
-        BACKGROUND_SYNC: G,
-        CONNECTION_OPEN: G,
-        OVERLAY_INITIALIZE: G,
-        CACHE_LOADED: G,
-        CACHE_LOADED_LAZY: G,
+        BACKGROUND_SYNC: w,
+        CONNECTION_OPEN: w,
+        OVERLAY_INITIALIZE: w,
+        CACHE_LOADED: w,
+        CACHE_LOADED_LAZY: w,
         CONNECTION_CLOSED: function() {
             W()
         },
-        GUILD_CREATE: w,
-        GUILD_UPDATE: w,
-        GUILD_DELETE: w,
-        GUILD_MEMBER_ADD: k,
-        GUILD_MEMBER_UPDATE: k,
-        CURRENT_USER_UPDATE: k,
+        GUILD_CREATE: k,
+        GUILD_UPDATE: k,
+        GUILD_DELETE: k,
+        GUILD_MEMBER_ADD: V,
+        GUILD_MEMBER_UPDATE: V,
+        CURRENT_USER_UPDATE: V,
         CHANNEL_CREATE: function(e) {
             let {
                 channel: {
                     id: t
                 }
-            } = e, n = T.default.getChannel(t);
+            } = e, n = S.default.getChannel(t);
             if (null == n || n.isPrivate()) return !1;
-            let i = v.default.getCurrentUser(),
-                r = m.default.computePermissions({
+            let i = C.default.getCurrentUser(),
+                s = p.default.computePermissions({
                     user: i,
                     context: n
                 });
-            if (O[n.id] === r) return !1;
-            O[n.id] = r, y += 1, M(n.getGuildId())
+            if (R[n.id] === s) return !1;
+            R[n.id] = s, D += 1, b(n.getGuildId())
         },
-        THREAD_CREATE: x,
-        THREAD_UPDATE: x,
-        THREAD_LIST_SYNC: x,
-        LOAD_THREADS_SUCCESS: x,
-        LOAD_ARCHIVED_THREADS_SUCCESS: x,
+        THREAD_CREATE: G,
+        THREAD_UPDATE: G,
+        THREAD_LIST_SYNC: G,
+        LOAD_THREADS_SUCCESS: G,
+        LOAD_ARCHIVED_THREADS_SUCCESS: G,
         CHANNEL_UPDATES: function(e) {
             let {
                 channels: t
@@ -296,16 +296,16 @@ function(e, t, n) {
                     id: e
                 }
                 of t) {
-                let t = T.default.getChannel(e);
+                let t = S.default.getChannel(e);
                 if (null == t || t.isPrivate()) continue;
-                let i = v.default.getCurrentUser(),
-                    r = m.default.computePermissions({
+                let i = C.default.getCurrentUser(),
+                    s = p.default.computePermissions({
                         user: i,
                         context: t
                     });
-                O[t.id] !== r && (O[t.id] = r, M(t.getGuildId()), n = !0)
+                R[t.id] !== s && (R[t.id] = s, b(t.getGuildId()), n = !0)
             }
-            return !!n && (y += 1, n)
+            return !!n && (D += 1, n)
         },
         LOAD_MESSAGES_SUCCESS: function(e) {
             let {
@@ -323,20 +323,20 @@ function(e, t, n) {
         },
         THREAD_MEMBER_UPDATE: function(e) {
             var t;
-            return (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (M(e.guildId), !0)
+            return (null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (b(e.guildId), !0)
         },
         THREAD_MEMBERS_UPDATE: function(e) {
-            return !!(0, E.doesThreadMembersActionAffectMe)(e) && (M(e.guildId), !0)
+            return !!(0, _.doesThreadMembersActionAffectMe)(e) && (b(e.guildId), !0)
         },
         CHANNEL_DELETE: function(e) {
             let {
                 channel: t
             } = e;
-            return delete O[t.id], y += 1, M(t.guild_id), !1
+            return delete R[t.id], D += 1, b(t.guild_id), !1
         },
-        GUILD_ROLE_CREATE: V,
-        GUILD_ROLE_UPDATE: V,
-        GUILD_ROLE_DELETE: V,
+        GUILD_ROLE_CREATE: x,
+        GUILD_ROLE_UPDATE: x,
+        GUILD_ROLE_DELETE: x,
         LOGOUT: W,
         STAGE_INSTANCE_CREATE: B,
         STAGE_INSTANCE_UPDATE: B,

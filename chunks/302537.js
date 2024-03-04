@@ -9,11 +9,11 @@ function(e, _, E) {
         o = E("884691"),
         n = E("414456"),
         r = E.n(n),
-        i = E("703809"),
-        a = E("90915"),
+        a = E("703809"),
+        i = E("90915"),
         I = E("394846"),
-        s = E("446674"),
-        T = E("825573"),
+        T = E("446674"),
+        s = E("825573"),
         S = E("77078"),
         N = E("206230"),
         O = E("338733"),
@@ -43,17 +43,17 @@ function(e, _, E) {
         } = (0, O.default)(), P = o.createElement("style", {
             [O.CLIENT_THEMES_DATA_ATTRIBUTE]: !0
         }, h);
-        return (0, t.jsxs)(i.Helmet, {
+        return (0, t.jsxs)(a.Helmet, {
             children: [function(e) {
                 let {
                     locale: _,
                     theme: E
-                } = (0, s.useStateFromStoresObject)([l.default, R.default], () => ({
+                } = (0, T.useStateFromStoresObject)([l.default, R.default], () => ({
                     locale: R.default.locale,
                     theme: l.default.theme
-                })), n = (0, s.useStateFromStores)([u.default], () => u.default.isFocused(), []), {
-                    reducedMotion: i,
-                    alwaysShowLinkDecorations: T
+                })), n = (0, T.useStateFromStores)([u.default], () => u.default.isFocused(), []), {
+                    reducedMotion: a,
+                    alwaysShowLinkDecorations: s
                 } = o.useContext(S.AccessibilityPreferencesContext), {
                     fontScale: O,
                     fontScaleClass: D,
@@ -62,7 +62,7 @@ function(e, _, E) {
                     desaturateUserColors: P,
                     useForcedColors: m,
                     systemForcedColors: G
-                } = (0, s.useStateFromStoresObject)([N.default], () => {
+                } = (0, T.useStateFromStoresObject)([N.default], () => {
                     let {
                         fontScale: e,
                         fontScaleClass: _,
@@ -81,10 +81,10 @@ function(e, _, E) {
                         useForcedColors: n,
                         systemForcedColors: r
                     }
-                }), p = (0, a.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
+                }), p = (0, i.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
                 (0, c.default)(window, g);
                 let y = (0, d.default)(window, __OVERLAY__ || n),
-                    B = (0, s.useStateFromStores)([A.default], () => A.default.sidebarWidth),
+                    B = (0, T.useStateFromStores)([A.default], () => A.default.sidebarWidth),
                     f = (0, S.useRedesignIconContext)().enabled;
                 return (0, t.jsx)("html", {
                     lang: _,
@@ -93,12 +93,12 @@ function(e, _, E) {
                         overlay: __OVERLAY__,
                         "mouse-mode": y,
                         "keyboard-mode": U,
-                        "reduce-motion": i.enabled,
-                        "full-motion": !i.enabled,
+                        "reduce-motion": a.enabled,
+                        "full-motion": !a.enabled,
                         "is-mobile": I.isMobile,
                         "app-focused": n,
                         "low-saturation": h <= S.LOW_SATURATION_THRESHOLD,
-                        "decorate-links": T,
+                        "decorate-links": s,
                         "desaturate-user-colors": P,
                         "disable-forced-colors": !m && "active" === G,
                         "enable-forced-colors": m,
@@ -108,7 +108,7 @@ function(e, _, E) {
             }(U), function() {
                 let [e, _] = o.useState([]);
                 return o.useEffect(() => {
-                    Promise.all(T.fontsToPreload.map(e => E("437087")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
+                    Promise.all(s.fontsToPreload.map(e => E("437087")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
                         let {
                             default: _
                         } = e;

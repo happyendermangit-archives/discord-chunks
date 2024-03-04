@@ -1,6 +1,6 @@
-function(t, r, n) {
-    t.exports = function(t, r) {
-        for (var n = -1, e = Array(t); ++n < t;) e[n] = r(n);
-        return e
+function(e, t, n) {
+    e.exports = function(e, t) {
+        for (var n = -1, r = Array(e); ++n < e;) r[n] = t(n);
+        return r
     }
 }

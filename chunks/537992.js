@@ -1,8 +1,8 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("109033");
-    t.exports = function(t, e) {
-        if (t === e) return 0 !== t || 1 / t == 1 / e;
-        return r(t) && r(e)
+    var r = n("109033");
+    e.exports = function(e, t) {
+        if (e === t) return 0 !== e || 1 / e == 1 / t;
+        return r(e) && r(t)
     }
 }

@@ -6,19 +6,19 @@ function(e, t, n) {
         }
     });
     var i = n("446674"),
-        r = n("913144");
-    let s = null,
+        s = n("913144");
+    let r = null,
         a = !1;
     class o extends i.default.Store {
         getLastProgress() {
-            return s
+            return r
         }
         isRunning() {
             return a
         }
     }
     o.displayName = "DispatchApplicationLaunchSetupStore";
-    var l = new o(r.default, {
+    var l = new o(s.default, {
         DISPATCH_APPLICATION_LAUNCH_SETUP_START: function() {
             a = !0
         },
@@ -28,14 +28,14 @@ function(e, t, n) {
                 total: n,
                 name: i
             } = e;
-            s = {
+            r = {
                 progress: t,
                 total: n,
                 name: i
             }
         },
         DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: function() {
-            s = null, a = !1
+            r = null, a = !1
         }
     })
 }

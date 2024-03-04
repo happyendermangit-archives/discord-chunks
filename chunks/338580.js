@@ -5,12 +5,12 @@ function(e, t, n) {
             return a
         }
     }), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
-    var s = n("605250"),
-        i = n("773336"),
+    var i = n("605250"),
+        s = n("773336"),
         r = n("50885");
 
     function a() {
-        if (i.isPlatformEmbedded) {
+        if (s.isPlatformEmbedded) {
             let e;
             try {
                 e = r.default.requireModule("discord_erlpack")
@@ -31,7 +31,7 @@ function(e, t, n) {
                     try {
                         return e.unpack(t)
                     } catch (e) {
-                        throw new(0, s.default)("GatewayEncodingErlpackEncoding").error("Error unpacking", {
+                        throw new(0, i.default)("GatewayEncodingErlpackEncoding").error("Error unpacking", {
                             erlpackUnpackError: e,
                             erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
                             erlpackDataLength: null != t ? t.length : null

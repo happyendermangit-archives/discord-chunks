@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isChannelTypeMentionable: function() {
-            return r
+            return s
         }
     });
-    var l = n("233069");
+    var i = n("233069");
 
-    function r(e) {
-        return (0, l.isGuildSelectableChannelType)(e) || (0, l.isGuildVocalChannelType)(e)
+    function s(e) {
+        return (0, i.isGuildSelectableChannelType)(e) || (0, i.isGuildVocalChannelType)(e)
     }
 }

@@ -2,33 +2,33 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("424973"), n("222007");
-    var s = n("714617"),
-        i = n.n(s),
+    var i = n("714617"),
+        s = n.n(i),
         r = n("446674"),
         a = n("913144"),
         o = n("77173");
-    let d = [o.default],
+    let l = [o.default],
         u = [];
 
-    function l() {
+    function d() {
         let e = [];
-        for (let t of d) {
+        for (let t of l) {
             let n = t.getActivity();
             null != n && e.push(n)
         }
-        return !i(e, u) && (u = e, !0)
+        return !s(e, u) && (u = e, !0)
     }
-    class f extends r.default.Store {
+    class c extends r.default.Store {
         initialize() {
-            this.syncWith(d, l)
+            this.syncWith(l, d)
         }
         getActivities() {
             return u
         }
     }
-    f.displayName = "FirstPartyRichPresenceStore";
-    var _ = new f(a.default)
+    c.displayName = "FirstPartyRichPresenceStore";
+    var f = new c(a.default)
 }

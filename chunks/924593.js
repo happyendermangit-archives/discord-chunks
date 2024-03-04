@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MidjourneyOnboardingExperiment: function() {
-            return i
+            return s
         }
     });
-    var s = n("862205");
-    let i = (0, s.createExperiment)({
+    var i = n("862205");
+    let s = (0, i.createExperiment)({
         kind: "user",
         id: "2023-11_midjourney_onboarding",
         label: "Midjourney Onboarding",

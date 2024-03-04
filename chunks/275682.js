@@ -1,3 +1,3 @@
-function(t, e, s) {
-    (e = t.exports = s("245387")).Stream = e, e.Readable = e, e.Writable = s("769419"), e.Duplex = s("388765"), e.Transform = s("372614"), e.PassThrough = s("19734"), e.finished = s("362796"), e.pipeline = s("907481")
+function(e, t, n) {
+    (t = e.exports = n("245387")).Stream = t, t.Readable = t, t.Writable = n("769419"), t.Duplex = n("388765"), t.Transform = n("372614"), t.PassThrough = n("19734"), t.finished = n("362796"), t.pipeline = n("907481")
 }

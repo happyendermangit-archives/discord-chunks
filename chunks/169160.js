@@ -1,6 +1,6 @@
-function(t, r, n) {
-    t.exports = function(t) {
-        var r = this.has(t) && delete this.__data__[t];
-        return this.size -= r ? 1 : 0, r
+function(e, t, n) {
+    e.exports = function(e) {
+        var t = this.has(e) && delete this.__data__[e];
+        return this.size -= t ? 1 : 0, t
     }
 }

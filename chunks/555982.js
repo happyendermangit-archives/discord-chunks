@@ -1,13 +1,13 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("911718"),
-        i = s("314970"),
-        n = r("%TypeError%"),
-        c = s("477733"),
-        o = r("%Reflect.apply%", !0) || i("Function.prototype.apply");
-    t.exports = function(t, e) {
-        var s = arguments.length > 2 ? arguments[2] : [];
-        if (!c(s)) throw new n("Assertion failed: optional `argumentsList`, if provided, must be a List");
-        return o(t, e, s)
+    var r = n("911718"),
+        i = n("314970"),
+        o = r("%TypeError%"),
+        s = n("477733"),
+        a = r("%Reflect.apply%", !0) || i("Function.prototype.apply");
+    e.exports = function(e, t) {
+        var n = arguments.length > 2 ? arguments[2] : [];
+        if (!s(n)) throw new o("Assertion failed: optional `argumentsList`, if provided, must be a List");
+        return a(e, t, n)
     }
 }

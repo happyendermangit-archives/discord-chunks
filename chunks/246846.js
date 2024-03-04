@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return i
         }
     });
 
-    function r(e, t) {
+    function i(e, t) {
         return "".concat(e.toLowerCase().padEnd(32, "!")).concat(t.id)
     }
 }

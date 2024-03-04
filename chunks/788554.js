@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
 
-    function l(e) {
+    function i(e) {
         let t = {};
         for (let n of e)
             for (let e in n) e in t ? t[e] = {
@@ -14,7 +14,7 @@ function(e, t, n) {
     }
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return i
         }
     }), n("222007")
 }

@@ -8,10 +8,10 @@ function(e, _, E) {
         if (o.length !== n.length) return null != t && t("shallowEqual: unequal key lengths ".concat(o.length, " !=== ").concat(n.length)), !1;
         let r = [];
         for (let n = 0; n < o.length; n++) {
-            let i = o[n];
-            if (e[i] !== _[i] && (null == E || !E.includes(i))) {
+            let a = o[n];
+            if (e[a] !== _[a] && (null == E || !E.includes(a))) {
                 if (null == t) return !1;
-                r.push(i)
+                r.push(a)
             }
         }
         return null != t && r.length > 0 && t("shallowEqual: unequal keys: ".concat(r.join(", "))), 0 === r.length

@@ -2,29 +2,29 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return a
         }
     });
-    var l = n("42203"),
-        r = n("49111");
+    var i = n("42203"),
+        s = n("49111");
 
-    function a(e) {
-        if (null == e.parent_id) return e.type === r.ChannelTypes.GUILD_CATEGORY ? (e.position + 1) * 1e3 : e.position;
+    function r(e) {
+        if (null == e.parent_id) return e.type === s.ChannelTypes.GUILD_CATEGORY ? (e.position + 1) * 1e3 : e.position;
         {
             var t, n;
-            let r = ((null !== (n = null === (t = l.default.getChannel(e.parent_id)) || void 0 === t ? void 0 : t.position) && void 0 !== n ? n : 0) + 1) * 1e3;
-            return e.isGuildVocal() ? r + e.position + 500 : r + e.position
+            let s = ((null !== (n = null === (t = i.default.getChannel(e.parent_id)) || void 0 === t ? void 0 : t.position) && void 0 !== n ? n : 0) + 1) * 1e3;
+            return e.isGuildVocal() ? s + e.position + 500 : s + e.position
         }
     }
 
-    function i(e, t) {
-        var n, l, r, i, u, o;
+    function a(e, t) {
+        var n, i, s, a, o, l;
         if (e.score !== t.score) return t.score - e.score;
-        let s = a(e.record),
-            c = a(t.record);
-        if (s !== c) return s - c;
-        let d = null !== (i = null !== (r = e.sortable) && void 0 !== r ? r : null === (n = e.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== i ? i : "",
-            f = null !== (o = null !== (u = e.sortable) && void 0 !== u ? u : null === (l = t.comparator) || void 0 === l ? void 0 : l.toLocaleLowerCase()) && void 0 !== o ? o : "";
-        return d < f ? -1 : d > f ? 1 : 0
+        let u = r(e.record),
+            d = r(t.record);
+        if (u !== d) return u - d;
+        let c = null !== (a = null !== (s = e.sortable) && void 0 !== s ? s : null === (n = e.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== a ? a : "",
+            f = null !== (l = null !== (o = e.sortable) && void 0 !== o ? o : null === (i = t.comparator) || void 0 === i ? void 0 : i.toLocaleLowerCase()) && void 0 !== l ? l : "";
+        return c < f ? -1 : c > f ? 1 : 0
     }
 }

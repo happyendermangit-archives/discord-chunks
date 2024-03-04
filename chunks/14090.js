@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         UserAppsTreatment: function() {
-            return i
+            return s
         },
         default: function() {
             return a
         }
     });
-    var s, i, r = n("862205");
-    (s = i || (i = {})).ALLOWED = "allowed", s.DEFAULT = "default";
+    var i, s, r = n("862205");
+    (i = s || (s = {})).ALLOWED = "allowed", i.DEFAULT = "default";
     var a = (0, r.createExperiment)({
         kind: "user",
         id: "2023-08_new_app_command_serving",

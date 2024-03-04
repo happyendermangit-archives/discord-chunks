@@ -8,15 +8,15 @@ function(e, t, n) {
             return u
         },
         makeLazy: function() {
-            return c
+            return d
         },
         LazyLibrary: function() {
-            return d
+            return c
         }
     }), n("222007");
     var i = n("37983"),
-        r = n("884691");
-    let s = function() {
+        s = n("884691");
+    let r = function() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "transparent";
             return () => (0, i.jsx)("div", {
                 style: {
@@ -37,43 +37,43 @@ function(e, t, n) {
         let {
             createPromise: t,
             webpackId: i
-        } = e, r = 500, s = 0;
+        } = e, s = 500, r = 0;
         for (;;) try {
             return await t()
         } catch (e) {
             if (console.log(e), i in n.c) throw console.log("Module was found in webpack cache so it has loaded from the network and webpack will not retry"), e;
-            if (s >= 50) throw e;
-            await l(r), await a(), r = Math.min(5e3, 2 * r), s++
+            if (r >= 50) throw e;
+            await l(s), await a(), s = Math.min(5e3, 2 * s), r++
         }
-    }
-
-    function c(e) {
-        let {
-            createPromise: t,
-            webpackId: n,
-            renderLoader: a,
-            name: o,
-            memo: l = !1
-        } = e, c = r.lazy(() => u({
-            createPromise: t,
-            webpackId: n
-        })), d = e => (0, i.jsx)(r.Suspense, {
-            fallback: null != a ? a() : s()(),
-            children: (0, i.jsx)(c, {
-                ...e
-            })
-        });
-        return l && (d = r.memo(d)), d.displayName = "Suspense(".concat(o || "Unknown", ")"), d
     }
 
     function d(e) {
         let {
             createPromise: t,
             webpackId: n,
-            render: s,
+            renderLoader: a,
+            name: o,
+            memo: l = !1
+        } = e, d = s.lazy(() => u({
+            createPromise: t,
+            webpackId: n
+        })), c = e => (0, i.jsx)(s.Suspense, {
+            fallback: null != a ? a() : r()(),
+            children: (0, i.jsx)(d, {
+                ...e
+            })
+        });
+        return l && (c = s.memo(c)), c.displayName = "Suspense(".concat(o || "Unknown", ")"), c
+    }
+
+    function c(e) {
+        let {
+            createPromise: t,
+            webpackId: n,
+            render: r,
             renderFallback: a
-        } = e, [o, l] = r.useState(null);
-        return r.useEffect(() => {
+        } = e, [o, l] = s.useState(null);
+        return s.useEffect(() => {
             u({
                 createPromise: t,
                 webpackId: n
@@ -84,7 +84,7 @@ function(e, t, n) {
                 return l(t)
             })
         }, []), (0, i.jsx)(i.Fragment, {
-            children: null == o ? a() : s(o)
+            children: null == o ? a() : r(o)
         })
     }
 }

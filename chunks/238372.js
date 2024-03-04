@@ -6,17 +6,17 @@ function(e, t, n) {
         }
     }), n("222007");
     var i = n("37983"),
-        r = n("884691"),
-        s = n("441822"),
+        s = n("884691"),
+        r = n("441822"),
         a = n("232125");
     async function o(e) {
         let {
             deviceId: t,
             width: n,
             height: i,
-            disabled: r
+            disabled: s
         } = e;
-        if (r) return null;
+        if (s) return null;
         try {
             let e = await navigator.mediaDevices.getUserMedia({
                 audio: !1,
@@ -39,16 +39,16 @@ function(e, t, n) {
             width: n,
             height: l,
             disabled: u
-        } = e, [c, d] = r.useState();
-        return r.useEffect(() => {
+        } = e, [d, c] = s.useState();
+        return s.useEffect(() => {
             let e = o({
                 deviceId: t,
                 width: n,
                 height: l,
                 disabled: u
             }).then(e => {
-                let t = null != e ? (0, s.registerVideoStream)(e) : null;
-                return d(t), {
+                let t = null != e ? (0, r.registerVideoStream)(e) : null;
+                return c(t), {
                     stream: e,
                     streamId: t
                 }
@@ -60,17 +60,17 @@ function(e, t, n) {
                         stream: n,
                         streamId: i
                     } = e;
-                    null != (t = n) && t.getTracks().forEach(e => e.stop()), null != i && (0, s.unregisterVideoStream)(i)
+                    null != (t = n) && t.getTracks().forEach(e => e.stop()), null != i && (0, r.unregisterVideoStream)(i)
                 })
             }
-        }, [t, n, l, u]), null == c ? (0, i.jsx)("div", {
+        }, [t, n, l, u]), null == d ? (0, i.jsx)("div", {
             className: "media-engine-video",
             style: {
                 width: n,
                 height: l
             }
         }) : (0, i.jsx)(a.default, {
-            streamId: c,
+            streamId: d,
             style: {
                 width: n,
                 height: l

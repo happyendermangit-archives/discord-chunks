@@ -11,50 +11,50 @@ function(e, t, n) {
             return o
         },
         MAX_NUM_RULES: function() {
-            return d
+            return l
         },
         MAX_RULE_LENGTH: function() {
             return u
         },
         MAX_QUESTION_LENGTH: function() {
-            return l
+            return d
         },
         MAX_NUM_CHOICES: function() {
-            return f
-        },
-        MAX_CHOICE_LENGTH: function() {
-            return _
-        },
-        MAX_TEXT_RESPONSE_LENGTH: function() {
             return c
         },
+        MAX_CHOICE_LENGTH: function() {
+            return f
+        },
+        MAX_TEXT_RESPONSE_LENGTH: function() {
+            return _
+        },
         MAX_PARAGRAPH_RESPONSE_LENGTH: function() {
-            return g
-        },
-        MAX_DESCRIPTION_LENGTH: function() {
-            return m
-        },
-        MEMBER_VERIFICATION_TYPE: function() {
             return h
         },
+        MAX_DESCRIPTION_LENGTH: function() {
+            return E
+        },
+        MEMBER_VERIFICATION_TYPE: function() {
+            return g
+        },
         IN_APP_MEMBER_VERIFICATION_MODAL_KEY: function() {
-            return v
+            return m
         }
     }), n("222007");
-    var s, i = n("567054");
-    i.VerificationFormFieldTypes.VERIFICATION;
-    let r = new Set([i.VerificationFormFieldTypes.TERMS]),
-        a = new Set([i.VerificationFormFieldTypes.MULTIPLE_CHOICE, i.VerificationFormFieldTypes.TEXT_INPUT, i.VerificationFormFieldTypes.PARAGRAPH]),
+    var i, s = n("567054");
+    s.VerificationFormFieldTypes.VERIFICATION;
+    let r = new Set([s.VerificationFormFieldTypes.TERMS]),
+        a = new Set([s.VerificationFormFieldTypes.MULTIPLE_CHOICE, s.VerificationFormFieldTypes.TEXT_INPUT, s.VerificationFormFieldTypes.PARAGRAPH]),
         o = 5,
-        d = 16,
+        l = 16,
         u = 300,
-        l = 300,
-        f = 8,
+        d = 300,
+        c = 8,
+        f = 150,
         _ = 150,
-        c = 150,
-        g = 1e3,
-        m = 300,
-        h = "Membership Gating",
-        v = "in-app-member-verification";
-    (s || (s = {})).VERIFICATION_INFO = "VERIFICATION_INFO"
+        h = 1e3,
+        E = 300,
+        g = "Membership Gating",
+        m = "in-app-member-verification";
+    (i || (i = {})).VERIFICATION_INFO = "VERIFICATION_INFO"
 }

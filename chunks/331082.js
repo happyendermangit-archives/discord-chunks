@@ -5,8 +5,8 @@ function(e, t, n) {
             return i
         }
     });
-    var i, r = n("666038");
-    i = class e extends r.default {
+    var i, s = n("666038");
+    i = class e extends s.default {
         static createFromServer(t) {
             return new e(t)
         }

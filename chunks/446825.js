@@ -38,7 +38,7 @@ function(e, t, n) {
     function u(e, t, n) {
         if ("string" == typeof e) return function(e, t) {
             if (("string" != typeof t || "" === t) && (t = "utf8"), !s.isEncoding(t)) throw TypeError("Unknown encoding: " + t);
-            var n = 0 | h(e, t),
+            var n = 0 | m(e, t),
                 r = i(n),
                 a = r.write(e, t);
             return a !== n && (r = r.slice(0, a)), r
@@ -110,7 +110,7 @@ function(e, t, n) {
         return 0 | e
     }
 
-    function h(e, t) {
+    function m(e, t) {
         if (s.isBuffer(e)) return e.length;
         if (ArrayBuffer.isView(e) || E(e, ArrayBuffer)) return e.byteLength;
         if ("string" != typeof e) throw TypeError('The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type ' + typeof e);
@@ -133,14 +133,14 @@ function(e, t, n) {
             case "hex":
                 return n >>> 1;
             case "base64":
-                return x(e).length;
+                return O(e).length;
             default:
                 if (a) return r ? -1 : S(e).length;
                 t = ("" + t).toLowerCase(), a = !0
         }
     }
 
-    function m(e, t, n) {
+    function h(e, t, n) {
         var a = !1;
         if ((void 0 === t || t < 0) && (t = 0), t > this.length) return "";
         if ((void 0 === n || n > this.length) && (n = this.length), n <= 0 || (n >>>= 0) <= (t >>>= 0)) return "";
@@ -280,7 +280,7 @@ function(e, t, n) {
             o.copy(r, a), a += o.length
         }
         return r
-    }, s.byteLength = h, s.prototype._isBuffer = !0, s.prototype.swap16 = function() {
+    }, s.byteLength = m, s.prototype._isBuffer = !0, s.prototype.swap16 = function() {
         var e = this.length;
         if (e % 2 != 0) throw RangeError("Buffer size must be a multiple of 16-bits");
         for (var t = 0; t < e; t += 2) y(this, t, t + 1);
@@ -297,7 +297,7 @@ function(e, t, n) {
         return this
     }, s.prototype.toString = function() {
         var e = this.length;
-        return 0 === e ? "" : 0 == arguments.length ? b(this, 0, e) : m.apply(this, arguments)
+        return 0 === e ? "" : 0 == arguments.length ? b(this, 0, e) : h.apply(this, arguments)
     }, s.prototype.toLocaleString = s.prototype.toString, s.prototype.equals = function(e) {
         if (!s.isBuffer(e)) throw TypeError("Argument must be a Buffer");
         return this === e || 0 === s.compare(this, e)
@@ -326,14 +326,14 @@ function(e, t, n) {
     };
 
     function v(e, t, n, r) {
-        return O(Y(t), e, n, r)
+        return x(Y(t), e, n, r)
     }
     s.prototype.write = function(e, t, n, r) {
         if (void 0 === t) r = "utf8", n = this.length, t = 0;
         else if (void 0 === n && "string" == typeof t) r = t, n = this.length, t = 0;
         else if (isFinite(t)) t >>>= 0, isFinite(n) ? (n >>>= 0, void 0 === r && (r = "utf8")) : (r = n, n = void 0);
         else throw Error("Buffer.write(string, encoding, offset[, length]) is no longer supported");
-        var a, o, i, s, u, l, c, d, f, p, h, m, y, _, g, v, b = this.length - t;
+        var a, o, i, s, u, l, c, d, f, p, m, h, y, _, g, v, b = this.length - t;
         if ((void 0 === n || n > b) && (n = b), e.length > 0 && (n < 0 || t < 0) || t > this.length) throw RangeError("Attempt to write outside buffer bounds");
         !r && (r = "utf8");
         for (var M = !1;;) switch (r) {
@@ -356,25 +356,25 @@ function(e, t, n) {
             case "utf8":
             case "utf-8":
                 ;
-                return a = this, o = e, i = t, s = n, O(S(o, a.length - i), a, i, s);
+                return a = this, o = e, i = t, s = n, x(S(o, a.length - i), a, i, s);
             case "ascii":
                 ;
-                return u = this, l = e, c = t, d = n, O(Y(l), u, c, d);
+                return u = this, l = e, c = t, d = n, x(Y(l), u, c, d);
             case "latin1":
             case "binary":
                 return function(e, t, n, r) {
                     var a, o, i, s;
-                    return a = e, o = t, i = n, s = r, O(Y(o), a, i, s)
+                    return a = e, o = t, i = n, s = r, x(Y(o), a, i, s)
                 }(this, e, t, n);
             case "base64":
                 ;
-                return f = this, p = e, h = t, m = n, O(x(p), f, h, m);
+                return f = this, p = e, m = t, h = n, x(O(p), f, m, h);
             case "ucs2":
             case "ucs-2":
             case "utf16le":
             case "utf-16le":
                 ;
-                return y = this, _ = e, g = t, v = n, O(function(e, t) {
+                return y = this, _ = e, g = t, v = n, x(function(e, t) {
                     for (var n, r, a, o = [], i = 0; i < e.length && !((t -= 2) < 0); ++i) r = (n = e.charCodeAt(i)) >> 8, a = n % 256, o.push(a), o.push(r);
                     return o
                 }(_, y.length - g), y, g, v);
@@ -639,7 +639,7 @@ function(e, t, n) {
         return t
     }
 
-    function x(e) {
+    function O(e) {
         return r.toByteArray(function(e) {
             if ((e = (e = e.split("=")[0]).trim().replace(T, "")).length < 2) return "";
             for (; e.length % 4 != 0;) e += "=";
@@ -647,7 +647,7 @@ function(e, t, n) {
         }(e))
     }
 
-    function O(e, t, n, r) {
+    function x(e, t, n, r) {
         for (var a = 0; a < r && !(a + n >= t.length) && !(a >= e.length); ++a) t[a + n] = e[a];
         return a
     }

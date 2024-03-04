@@ -6,17 +6,17 @@ function(e, t, n) {
         }
     });
     var i = n("773336"),
-        r = n("56947"),
-        s = n("353927");
+        s = n("56947"),
+        r = n("353927");
 
     function a(e) {
         let {
             ignorePlatformRestriction: t
-        } = r.ClipsExperiment.getCurrentConfig({
+        } = s.ClipsExperiment.getCurrentConfig({
             location: "isClipsClientCapable"
         }, {
             autoTrackExposure: !1
         });
-        return t || i.isDesktop() && e.getMediaEngine().supports(s.Features.CLIPS)
+        return t || i.isDesktop() && e.getMediaEngine().supports(r.Features.CLIPS)
     }
 }

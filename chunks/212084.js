@@ -5,15 +5,15 @@ function(e, t, n) {
             return a
         }
     }), n("222007"), n("781738"), n("424973"), n("686130");
-    var s = n("605250"),
-        i = n("802493");
-    let r = new s.default("GuildStickers");
+    var i = n("605250"),
+        s = n("802493");
+    let r = new i.default("GuildStickers");
     var a = new class e {
         async getAsync(e) {
             let t = performance.now(),
-                n = await i.default.stickers(e).getMapEntries(),
-                s = performance.now();
-            return r.log("asynchronously loaded in ".concat(s - t, "ms (guilds: ").concat(n.length, ")")), n
+                n = await s.default.stickers(e).getMapEntries(),
+                i = performance.now();
+            return r.log("asynchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
         }
         handleConnectionOpen(e, t) {
             for (let n of e.guilds) this.handleOneGuildCreate(n, t)
@@ -41,14 +41,14 @@ function(e, t, n) {
         }
         resetInMemoryState() {}
         replace(e, t, n) {
-            i.default.stickersTransaction(n).replaceAll(e, t)
+            s.default.stickersTransaction(n).replaceAll(e, t)
         }
         delete(e, t) {
-            i.default.stickersTransaction(t).delete(e)
+            s.default.stickersTransaction(t).delete(e)
         }
-        update(e, t, n, s) {
-            let r = i.default.stickersTransaction(s);
-            for (let s of (r.putAll(e, t), n)) r.delete(e, s)
+        update(e, t, n, i) {
+            let r = s.default.stickersTransaction(i);
+            for (let i of (r.putAll(e, t), n)) r.delete(e, i)
         }
         constructor() {
             this.actions = {

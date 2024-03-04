@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var s, i;
+    var i, s;
     n.r(t), n.d(t, {
         ApplicationDirectoryProfileSections: function() {
-            return s
+            return i
         }
-    }), (i = s || (s = {})).GENERAL = "GENERAL", i.IMAGES = "IMAGES", i.PREMIUM = "PREMIUM", i.PRIVACY = "PRIVACY"
+    }), (s = i || (i = {})).GENERAL = "GENERAL", s.IMAGES = "IMAGES", s.PREMIUM = "PREMIUM", s.PRIVACY = "PRIVACY"
 }

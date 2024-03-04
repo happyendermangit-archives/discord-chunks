@@ -1,6 +1,6 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = Number.isNaN || function(t) {
-        return t != t
+    e.exports = Number.isNaN || function(e) {
+        return e != e
     }
 }

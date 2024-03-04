@@ -11,17 +11,17 @@ function(e, t, n) {
         d = a("WeakMap.prototype.has", !0),
         f = a("Map.prototype.get", !0),
         p = a("Map.prototype.set", !0),
-        h = a("Map.prototype.has", !0),
-        m = function(e, t) {
+        m = a("Map.prototype.has", !0),
+        h = function(e, t) {
             for (var n, r = e; null !== (n = r.next); r = n)
                 if (n.key === t) return r.next = n.next, n.next = e.next, e.next = n, n
         },
         y = function(e, t) {
-            var n = m(e, t);
+            var n = h(e, t);
             return n && n.value
         },
         _ = function(e, t, n) {
-            var r = m(e, t);
+            var r = h(e, t);
             r ? r.value = n : e.next = {
                 key: t,
                 next: e.next,
@@ -44,8 +44,8 @@ function(e, t, n) {
                 if (s && r && ("object" == typeof r || "function" == typeof r)) {
                     if (e) return d(e, r)
                 } else if (u) {
-                    if (t) return h(t, r)
-                } else if (n) return !!m(n, r);
+                    if (t) return m(t, r)
+                } else if (n) return !!h(n, r);
                 return !1
             },
             set: function(r, a) {

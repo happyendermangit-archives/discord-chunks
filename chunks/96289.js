@@ -1,11 +1,11 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("911718"),
-        i = s("748795"),
-        n = r("%TypeError%");
-    t.exports = function(t, e) {
-        if ("Object" !== t.Type(e)) return !1;
-        var s = {
+    var r = n("911718"),
+        i = n("748795"),
+        o = r("%TypeError%");
+    e.exports = function(e, t) {
+        if ("Object" !== e.Type(t)) return !1;
+        var n = {
             "[[Configurable]]": !0,
             "[[Enumerable]]": !0,
             "[[Get]]": !0,
@@ -13,9 +13,9 @@ function(t, e, s) {
             "[[Value]]": !0,
             "[[Writable]]": !0
         };
-        for (var r in e)
-            if (i(e, r) && !s[r]) return !1;
-        if (t.IsDataDescriptor(e) && t.IsAccessorDescriptor(e)) throw new n("Property Descriptors may not be both accessor and data descriptors");
+        for (var r in t)
+            if (i(t, r) && !n[r]) return !1;
+        if (e.IsDataDescriptor(t) && e.IsAccessorDescriptor(t)) throw new o("Property Descriptors may not be both accessor and data descriptors");
         return !0
     }
 }

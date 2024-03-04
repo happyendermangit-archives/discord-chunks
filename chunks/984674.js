@@ -5,20 +5,20 @@ function(e, t, n) {
             return a
         }
     });
-    var s = n("660478"),
-        i = n("718517"),
+    var i = n("660478"),
+        s = n("718517"),
         r = n("299039");
 
     function a(e) {
         if (null == e.threadMetadata) return 0;
-        let t = e.threadMetadata.autoArchiveDuration * i.default.Millis.MINUTE;
+        let t = e.threadMetadata.autoArchiveDuration * s.default.Millis.MINUTE;
         return function(e) {
             var t;
             if (null == e.threadMetadata) return 0;
-            let n = null !== (t = s.default.lastMessageId(e.id)) && void 0 !== t ? t : e.id,
-                i = r.default.extractTimestamp(n),
+            let n = null !== (t = i.default.lastMessageId(e.id)) && void 0 !== t ? t : e.id,
+                s = r.default.extractTimestamp(n),
                 a = null != e.threadMetadata.archiveTimestamp ? new Date(e.threadMetadata.archiveTimestamp).getTime() : 0;
-            return Math.max(i, a)
+            return Math.max(s, a)
         }(e) + t
     }
 }

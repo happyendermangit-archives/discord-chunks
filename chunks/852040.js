@@ -1,16 +1,16 @@
-function(E, e, s) {
+function(e, t, n) {
     "use strict";
-    s.r(e), s.d(e, {
+    n.r(t), n.d(t, {
         default: function() {
-            return O
+            return l
         }
     });
-    var S = s("37983");
-    s("884691");
-    var _ = s("77078"),
-        I = s("423487"),
-        R = s("782340");
-    let T = (E, e) => (0, S.jsxs)(_.Text, {
+    var i = n("37983");
+    n("884691");
+    var s = n("77078"),
+        r = n("423487"),
+        a = n("782340");
+    let o = (e, t) => (0, i.jsxs)(s.Text, {
         color: "text-danger",
         style: {
             display: "flex",
@@ -19,21 +19,21 @@ function(E, e, s) {
             alignItems: "center"
         },
         variant: "text-sm/normal",
-        children: [(0, S.jsx)(I.default, {
+        children: [(0, i.jsx)(r.default, {
             width: 14,
             height: 14
-        }), E]
-    }, e);
-    var O = {
-        getTextInVoiceSendMessageChannelPermissionText: function(E) {
-            return E ? R.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({
-                warningHook: T
-            }) : R.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_TEXT
+        }), e]
+    }, t);
+    var l = {
+        getTextInVoiceSendMessageChannelPermissionText: function(e) {
+            return e ? a.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({
+                warningHook: o
+            }) : a.default.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_TEXT
         },
-        getTextInVoiceReadMessageHistoryChannelPermissionText: function(E) {
-            return E ? R.default.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({
-                warningHook: T
-            }) : R.default.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_TEXT
+        getTextInVoiceReadMessageHistoryChannelPermissionText: function(e) {
+            return e ? a.default.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({
+                warningHook: o
+            }) : a.default.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_TEXT
         }
     }
 }

@@ -1,72 +1,72 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = function(t, e) {
-        var s, r, i, n, c, o, f, u, a, d, p, b, h, l, g, v, x, m, y, _, w, M, S, k, A;
-        s = t.state, r = t.next_in, k = t.input, i = r + (t.avail_in - 5), n = t.next_out, A = t.output, c = n - (e - t.avail_out), o = n + (t.avail_out - 257), f = s.dmax, u = s.wsize, a = s.whave, d = s.wnext, p = s.window, b = s.hold, h = s.bits, l = s.lencode, g = s.distcode, v = (1 << s.lenbits) - 1, x = (1 << s.distbits) - 1;
-        e: do
-                for (h < 15 && (b += k[r++] << h, h += 8, b += k[r++] << h, h += 8), m = l[b & v];;) {
-                    if (b >>>= y = m >>> 24, h -= y, 0 == (y = m >>> 16 & 255)) A[n++] = 65535 & m;
-                    else if (16 & y)
-                        for (_ = 65535 & m, (y &= 15) && (h < y && (b += k[r++] << h, h += 8), _ += b & (1 << y) - 1, b >>>= y, h -= y), h < 15 && (b += k[r++] << h, h += 8, b += k[r++] << h, h += 8), m = g[b & x];;) {
-                            if (b >>>= y = m >>> 24, h -= y, 16 & (y = m >>> 16 & 255)) {
-                                if (w = 65535 & m, h < (y &= 15) && (b += k[r++] << h, (h += 8) < y && (b += k[r++] << h, h += 8)), (w += b & (1 << y) - 1) > f) {
-                                    t.msg = "invalid distance too far back", s.mode = 30;
-                                    break e
+    e.exports = function(e, t) {
+        var n, r, i, o, s, a, c, u, d, l, f, p, h, v, g, b, m, y, x, w, S, k, E, _, M;
+        n = e.state, r = e.next_in, _ = e.input, i = r + (e.avail_in - 5), o = e.next_out, M = e.output, s = o - (t - e.avail_out), a = o + (e.avail_out - 257), c = n.dmax, u = n.wsize, d = n.whave, l = n.wnext, f = n.window, p = n.hold, h = n.bits, v = n.lencode, g = n.distcode, b = (1 << n.lenbits) - 1, m = (1 << n.distbits) - 1;
+        t: do
+                for (h < 15 && (p += _[r++] << h, h += 8, p += _[r++] << h, h += 8), y = v[p & b];;) {
+                    if (p >>>= x = y >>> 24, h -= x, 0 == (x = y >>> 16 & 255)) M[o++] = 65535 & y;
+                    else if (16 & x)
+                        for (w = 65535 & y, (x &= 15) && (h < x && (p += _[r++] << h, h += 8), w += p & (1 << x) - 1, p >>>= x, h -= x), h < 15 && (p += _[r++] << h, h += 8, p += _[r++] << h, h += 8), y = g[p & m];;) {
+                            if (p >>>= x = y >>> 24, h -= x, 16 & (x = y >>> 16 & 255)) {
+                                if (S = 65535 & y, h < (x &= 15) && (p += _[r++] << h, (h += 8) < x && (p += _[r++] << h, h += 8)), (S += p & (1 << x) - 1) > c) {
+                                    e.msg = "invalid distance too far back", n.mode = 30;
+                                    break t
                                 }
-                                if (b >>>= y, h -= y, w > (y = n - c)) {
-                                    if ((y = w - y) > a && s.sane) {
-                                        t.msg = "invalid distance too far back", s.mode = 30;
-                                        break e
+                                if (p >>>= x, h -= x, S > (x = o - s)) {
+                                    if ((x = S - x) > d && n.sane) {
+                                        e.msg = "invalid distance too far back", n.mode = 30;
+                                        break t
                                     }
-                                    if (M = 0, S = p, 0 === d) {
-                                        if (M += u - y, y < _) {
-                                            _ -= y;
-                                            do A[n++] = p[M++]; while (--y);
-                                            M = n - w, S = A
+                                    if (k = 0, E = f, 0 === l) {
+                                        if (k += u - x, x < w) {
+                                            w -= x;
+                                            do M[o++] = f[k++]; while (--x);
+                                            k = o - S, E = M
                                         }
-                                    } else if (d < y) {
-                                        if (M += u + d - y, (y -= d) < _) {
-                                            _ -= y;
-                                            do A[n++] = p[M++]; while (--y);
-                                            if (M = 0, d < _) {
-                                                _ -= y = d;
-                                                do A[n++] = p[M++]; while (--y);
-                                                M = n - w, S = A
+                                    } else if (l < x) {
+                                        if (k += u + l - x, (x -= l) < w) {
+                                            w -= x;
+                                            do M[o++] = f[k++]; while (--x);
+                                            if (k = 0, l < w) {
+                                                w -= x = l;
+                                                do M[o++] = f[k++]; while (--x);
+                                                k = o - S, E = M
                                             }
                                         }
-                                    } else if (M += d - y, y < _) {
-                                        _ -= y;
-                                        do A[n++] = p[M++]; while (--y);
-                                        M = n - w, S = A
+                                    } else if (k += l - x, x < w) {
+                                        w -= x;
+                                        do M[o++] = f[k++]; while (--x);
+                                        k = o - S, E = M
                                     }
-                                    for (; _ > 2;) A[n++] = S[M++], A[n++] = S[M++], A[n++] = S[M++], _ -= 3;
-                                    _ && (A[n++] = S[M++], _ > 1 && (A[n++] = S[M++]))
+                                    for (; w > 2;) M[o++] = E[k++], M[o++] = E[k++], M[o++] = E[k++], w -= 3;
+                                    w && (M[o++] = E[k++], w > 1 && (M[o++] = E[k++]))
                                 } else {
-                                    M = n - w;
-                                    do A[n++] = A[M++], A[n++] = A[M++], A[n++] = A[M++], _ -= 3; while (_ > 2);
-                                    _ && (A[n++] = A[M++], _ > 1 && (A[n++] = A[M++]))
+                                    k = o - S;
+                                    do M[o++] = M[k++], M[o++] = M[k++], M[o++] = M[k++], w -= 3; while (w > 2);
+                                    w && (M[o++] = M[k++], w > 1 && (M[o++] = M[k++]))
                                 }
-                            } else if ((64 & y) == 0) {
-                                m = g[(65535 & m) + (b & (1 << y) - 1)];
+                            } else if ((64 & x) == 0) {
+                                y = g[(65535 & y) + (p & (1 << x) - 1)];
                                 continue
                             } else {
-                                t.msg = "invalid distance code", s.mode = 30;
-                                break e
+                                e.msg = "invalid distance code", n.mode = 30;
+                                break t
                             }
                             break
-                        } else if ((64 & y) == 0) {
-                            m = l[(65535 & m) + (b & (1 << y) - 1)];
+                        } else if ((64 & x) == 0) {
+                            y = v[(65535 & y) + (p & (1 << x) - 1)];
                             continue
-                        } else if (32 & y) {
-                        s.mode = 12;
-                        break e
+                        } else if (32 & x) {
+                        n.mode = 12;
+                        break t
                     } else {
-                        t.msg = "invalid literal/length code", s.mode = 30;
-                        break e
+                        e.msg = "invalid literal/length code", n.mode = 30;
+                        break t
                     }
                     break
                 }
-            while (r < i && n < o);
-            r -= _ = h >> 3, h -= _ << 3, b &= (1 << h) - 1, t.next_in = r, t.next_out = n, t.avail_in = r < i ? 5 + (i - r) : 5 - (r - i), t.avail_out = n < o ? 257 + (o - n) : 257 - (n - o), s.hold = b, s.bits = h
+            while (r < i && o < a);
+            r -= w = h >> 3, h -= w << 3, p &= (1 << h) - 1, e.next_in = r, e.next_out = o, e.avail_in = r < i ? 5 + (i - r) : 5 - (r - i), e.avail_out = o < a ? 257 + (a - o) : 257 - (o - a), n.hold = p, n.bits = h
     }
 }

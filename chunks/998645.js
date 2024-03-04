@@ -1,14 +1,14 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("314970"),
-        i = s("911718"),
-        n = s("179056"),
-        c = r("RegExp.prototype.exec"),
-        o = i("%TypeError%");
-    t.exports = function(t) {
-        if (!n(t)) throw new o("`regex` must be a RegExp");
-        return function(e) {
-            return null !== c(t, e)
+    var r = n("314970"),
+        i = n("911718"),
+        o = n("179056"),
+        s = r("RegExp.prototype.exec"),
+        a = i("%TypeError%");
+    e.exports = function(e) {
+        if (!o(e)) throw new a("`regex` must be a RegExp");
+        return function(t) {
+            return null !== s(e, t)
         }
     }
 }

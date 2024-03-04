@@ -1,6 +1,6 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = function(t) {
-        return !!t
+    e.exports = function(e) {
+        return !!e
     }
 }

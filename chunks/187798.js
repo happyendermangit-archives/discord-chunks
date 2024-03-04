@@ -1,15 +1,15 @@
 function(e, t, n) {
     "use strict";
     var r = n("149384")(),
-        a = n("314970")("Object.prototype.toString"),
-        i = function(e) {
-            return (!r || !e || "object" != typeof e || !(Symbol.toStringTag in e)) && "[object Arguments]" === a(e)
-        },
+        i = n("314970")("Object.prototype.toString"),
         o = function(e) {
-            return !!i(e) || null !== e && "object" == typeof e && "number" == typeof e.length && e.length >= 0 && "[object Array]" !== a(e) && "[object Function]" === a(e.callee)
+            return (!r || !e || "object" != typeof e || !(Symbol.toStringTag in e)) && "[object Arguments]" === i(e)
         },
-        s = function() {
-            return i(arguments)
+        s = function(e) {
+            return !!o(e) || null !== e && "object" == typeof e && "number" == typeof e.length && e.length >= 0 && "[object Array]" !== i(e) && "[object Function]" === i(e.callee)
+        },
+        a = function() {
+            return o(arguments)
         }();
-    i.isLegacyArguments = o, e.exports = s ? i : o
+    o.isLegacyArguments = s, e.exports = a ? o : s
 }

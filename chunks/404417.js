@@ -6,12 +6,12 @@ function(e, t, n) {
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("551042"),
+        s = n("884691"),
+        r = n("551042"),
         a = n("694187");
-    let o = r.forwardRef(function(e, t) {
-        let o = r.useRef(null);
-        return r.useImperativeHandle(t, () => ({
+    let o = s.forwardRef(function(e, t) {
+        let o = s.useRef(null);
+        return s.useImperativeHandle(t, () => ({
             focus: () => null,
             activate: () => {
                 var e;
@@ -24,14 +24,14 @@ function(e, t, n) {
             children: (0, i.jsx)(a.default, {
                 ...e,
                 ref: o,
-                onChange: function(t, r) {
-                    (0, s.openModalLazy)(async () => {
+                onChange: function(t, s) {
+                    (0, r.openModalLazy)(async () => {
                         let {
-                            default: s
+                            default: r
                         } = await n.el("57015").then(n.bind(n, "57015"));
-                        return n => (0, i.jsx)(s, {
+                        return n => (0, i.jsx)(r, {
                             imgURI: t,
-                            file: r,
+                            file: s,
                             onCrop: e.onChange,
                             ...n
                         })

@@ -5,10 +5,10 @@ function(e, t, n) {
             return o
         }
     }), n("222007");
-    var s = n("605250"),
-        i = n("305961"),
+    var i = n("605250"),
+        s = n("305961"),
         r = n("802493");
-    let a = new s.default("GuildVersions");
+    let a = new i.default("GuildVersions");
     var o = new class e {
         async getCommittedVersions() {
             try {
@@ -24,7 +24,7 @@ function(e, t, n) {
             this.deleteWith(e), this.commit(t)
         }
         handleBackgroundSync(e, t) {
-            for (let n of e.guilds) "unavailable" !== n.data_mode && this.updateWith(n.id, [n]), null == i.default.getGuild(n.id) && this.remove(n.id, t);
+            for (let n of e.guilds) "unavailable" !== n.data_mode && this.updateWith(n.id, [n]), null == s.default.getGuild(n.id) && this.remove(n.id, t);
             this.commit(t)
         }
         handleConnectionOpen(e, t) {
@@ -33,14 +33,14 @@ function(e, t, n) {
         }
         handleGuildCreate(e, t) {
             var n;
-            let s = e.guild,
-                i = e.guild.id;
-            this.updateWith(i, [s]), this.updateWith(i, s.emojis), this.updateWith(i, s.stickers), this.updateWith(i, s.channels), this.updateWith(i, null === (n = s.channelUpdates) || void 0 === n ? void 0 : n.writes), this.updateWith(i, Array.isArray(s.roles) ? s.roles : Object.values(s.roles)), this.commit(t)
+            let i = e.guild,
+                s = e.guild.id;
+            this.updateWith(s, [i]), this.updateWith(s, i.emojis), this.updateWith(s, i.stickers), this.updateWith(s, i.channels), this.updateWith(s, null === (n = i.channelUpdates) || void 0 === n ? void 0 : n.writes), this.updateWith(s, Array.isArray(i.roles) ? i.roles : Object.values(i.roles)), this.commit(t)
         }
         handleGuildUpdate(e, t) {
             let n = e.guild,
-                s = e.guild.id;
-            this.updateWith(s, [n]), this.updateWith(s, n.emojis), this.updateWith(s, n.stickers), this.updateWith(s, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t)
+                i = e.guild.id;
+            this.updateWith(i, [n]), this.updateWith(i, n.emojis), this.updateWith(i, n.stickers), this.updateWith(i, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t)
         }
         handleGuildDelete(e, t) {
             this.deleteWith(e.guild.id), this.commit(t)
@@ -80,17 +80,17 @@ function(e, t, n) {
         }
         updateWith(e, t) {
             if (null != t) {
-                var n, s;
-                let i = Math.max(null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0, null !== (s = this.pending.get(e)) && void 0 !== s ? s : 0),
-                    r = this.computeLatestVersion(i, t);
-                r > i && this.pending.set(e, r)
+                var n, i;
+                let s = Math.max(null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0, null !== (i = this.pending.get(e)) && void 0 !== i ? i : 0),
+                    r = this.computeLatestVersion(s, t);
+                r > s && this.pending.set(e, r)
             }
         }
         computeLatestVersion(e, t) {
             let n = e;
             for (let e of t) {
-                var s;
-                n = Math.max(n, null !== (s = e.version) && void 0 !== s ? s : 0)
+                var i;
+                n = Math.max(n, null !== (i = e.version) && void 0 !== i ? i : 0)
             }
             return n
         }

@@ -10,11 +10,11 @@ function(e, _, E) {
         newline: o,
         paragraph: n,
         url: r,
-        link: i,
-        strong: a,
+        link: a,
+        strong: i,
         u: I,
-        br: s,
-        em: T,
+        br: T,
+        em: s,
         image: S,
         text: N
     } = t.defaultRules;
@@ -23,16 +23,16 @@ function(e, _, E) {
         paragraph: n,
         url: r,
         link: {
-            ...i,
+            ...a,
             parse(e, _, E) {
-                let t = i.parse(e, _, E);
+                let t = a.parse(e, _, E);
                 return t.context = E.context, t
             }
         },
-        strong: a,
+        strong: i,
         u: I,
-        br: s,
-        em: T,
+        br: T,
+        em: s,
         image: S,
         hook: {
             order: N.order,

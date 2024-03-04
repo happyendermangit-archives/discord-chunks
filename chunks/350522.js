@@ -1,54 +1,54 @@
-function(t, e, o) {
+function(e, t, n) {
     "use strict";
-    o.r(e), o.d(e, {
+    n.r(t), n.d(t, {
         default: function() {
-            return u
+            return d
         }
     });
-    var n = o("446674"),
-        d = o("913144");
+    var i = n("446674"),
+        s = n("913144");
     let r = !1,
-        l = !1,
-        i = {},
-        a = null;
-    class s extends n.default.Store {
-        hasConsented(t) {
-            return null != i[t] && i[t].consented
+        a = !1,
+        o = {},
+        l = null;
+    class u extends i.default.Store {
+        hasConsented(e) {
+            return null != o[e] && o[e].consented
         }
         get fetchedConsents() {
             return r
         }
         get receivedConsentsInConnectionOpen() {
-            return l
-        }
-        getAuthenticationConsentRequired() {
             return a
         }
+        getAuthenticationConsentRequired() {
+            return l
+        }
     }
-    s.displayName = "ConsentStore";
-    var u = new s(d.default, {
-        CONNECTION_OPEN: function(t) {
+    u.displayName = "ConsentStore";
+    var d = new u(s.default, {
+        CONNECTION_OPEN: function(e) {
             let {
-                consents: e
-            } = t;
-            null != e && (i = {
-                ...i,
-                ...e
-            }, l = !0)
+                consents: t
+            } = e;
+            null != t && (o = {
+                ...o,
+                ...t
+            }, a = !0)
         },
-        UPDATE_CONSENTS: function(t) {
+        UPDATE_CONSENTS: function(e) {
             let {
-                consents: e
-            } = t;
-            i = {
-                ...e
+                consents: t
+            } = e;
+            o = {
+                ...t
             }, r = !0
         },
-        SET_CONSENT_REQUIRED: function(t) {
-            a = t.consentRequired
+        SET_CONSENT_REQUIRED: function(e) {
+            l = e.consentRequired
         },
         LOGOUT: function() {
-            a = null
+            l = null
         }
     })
 }

@@ -5,50 +5,50 @@ function(I, N, A) {
             return V
         },
         default: function() {
-            return S
+            return n
         }
     });
     var O = A("446674"),
         T = A("913144");
     let _ = !1,
-        E = null,
-        e = null;
+        e = null,
+        E = null;
 
     function V(I) {
-        G({
+        t({
             locale: I
         })
     }
 
-    function G(I) {
+    function t(I) {
         let {
             locale: N
         } = I;
-        _ = !0, E = N
+        _ = !0, e = N
     }
-    class R extends O.default.Store {
+    class i extends O.default.Store {
         isLoading() {
             return _
         }
         getError() {
-            return e
+            return E
         }
     }
-    R.displayName = "I18nLoaderStore";
-    var S = new R(T.default, {
-        I18N_LOAD_START: G,
+    i.displayName = "I18nLoaderStore";
+    var n = new i(T.default, {
+        I18N_LOAD_START: t,
         I18N_LOAD_SUCCESS: function(I) {
             let {
                 locale: N
             } = I;
-            N === E && (_ = !1, e = null, E = null)
+            N === e && (_ = !1, E = null, e = null)
         },
         I18N_LOAD_ERROR: function(I) {
             let {
                 error: N,
                 locale: A
             } = I;
-            A === E && (_ = !1, e = null != N ? N : null, E = null)
+            A === e && (_ = !1, E = null != N ? N : null, e = null)
         }
     })
 }

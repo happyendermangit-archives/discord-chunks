@@ -1,150 +1,150 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("70102"), s("424973");
-    var r = s("839309"),
-        i = s("550511"),
-        n = i.getNAF,
-        c = i.getJSF,
-        o = i.assert;
+    n("70102"), n("424973");
+    var r = n("839309"),
+        i = n("550511"),
+        o = i.getNAF,
+        s = i.getJSF,
+        a = i.assert;
 
-    function f(t, e) {
-        this.type = t, this.p = new r(e.p, 16), this.red = e.prime ? r.red(e.prime) : r.mont(this.p), this.zero = new r(0).toRed(this.red), this.one = new r(1).toRed(this.red), this.two = new r(2).toRed(this.red), this.n = e.n && new r(e.n, 16), this.g = e.g && this.pointFromJSON(e.g, e.gRed), this._wnafT1 = [, , , , ], this._wnafT2 = [, , , , ], this._wnafT3 = [, , , , ], this._wnafT4 = [, , , , ], this._bitLength = this.n ? this.n.bitLength() : 0;
-        var s = this.n && this.p.div(this.n);
-        !s || s.cmpn(100) > 0 ? this.redN = null : (this._maxwellTrick = !0, this.redN = this.n.toRed(this.red))
+    function c(e, t) {
+        this.type = e, this.p = new r(t.p, 16), this.red = t.prime ? r.red(t.prime) : r.mont(this.p), this.zero = new r(0).toRed(this.red), this.one = new r(1).toRed(this.red), this.two = new r(2).toRed(this.red), this.n = t.n && new r(t.n, 16), this.g = t.g && this.pointFromJSON(t.g, t.gRed), this._wnafT1 = [, , , , ], this._wnafT2 = [, , , , ], this._wnafT3 = [, , , , ], this._wnafT4 = [, , , , ], this._bitLength = this.n ? this.n.bitLength() : 0;
+        var n = this.n && this.p.div(this.n);
+        !n || n.cmpn(100) > 0 ? this.redN = null : (this._maxwellTrick = !0, this.redN = this.n.toRed(this.red))
     }
 
-    function u(t, e) {
-        this.curve = t, this.type = e, this.precomputed = null
+    function u(e, t) {
+        this.curve = e, this.type = t, this.precomputed = null
     }
-    t.exports = f, f.prototype.point = function() {
+    e.exports = c, c.prototype.point = function() {
         throw Error("Not implemented")
-    }, f.prototype.validate = function() {
+    }, c.prototype.validate = function() {
         throw Error("Not implemented")
-    }, f.prototype._fixedNafMul = function(t, e) {
-        o(t.precomputed);
-        var s, r, i = t._getDoubles(),
-            c = n(e, 1, this._bitLength),
-            f = (1 << i.step + 1) - (i.step % 2 == 0 ? 2 : 1);
-        f /= 3;
+    }, c.prototype._fixedNafMul = function(e, t) {
+        a(e.precomputed);
+        var n, r, i = e._getDoubles(),
+            s = o(t, 1, this._bitLength),
+            c = (1 << i.step + 1) - (i.step % 2 == 0 ? 2 : 1);
+        c /= 3;
         var u = [];
-        for (s = 0; s < c.length; s += i.step) {
+        for (n = 0; n < s.length; n += i.step) {
             r = 0;
-            for (var a = s + i.step - 1; a >= s; a--) r = (r << 1) + c[a];
+            for (var d = n + i.step - 1; d >= n; d--) r = (r << 1) + s[d];
             u.push(r)
         }
-        for (var d = this.jpoint(null, null, null), p = this.jpoint(null, null, null), b = f; b > 0; b--) {
-            for (s = 0; s < u.length; s++)(r = u[s]) === b ? p = p.mixedAdd(i.points[s]) : r === -b && (p = p.mixedAdd(i.points[s].neg()));
-            d = d.add(p)
+        for (var l = this.jpoint(null, null, null), f = this.jpoint(null, null, null), p = c; p > 0; p--) {
+            for (n = 0; n < u.length; n++)(r = u[n]) === p ? f = f.mixedAdd(i.points[n]) : r === -p && (f = f.mixedAdd(i.points[n].neg()));
+            l = l.add(f)
         }
-        return d.toP()
-    }, f.prototype._wnafMul = function(t, e) {
-        var s = 4,
-            r = t._getNAFPoints(s);
-        s = r.wnd;
-        for (var i = r.points, c = n(e, s, this._bitLength), f = this.jpoint(null, null, null), u = c.length - 1; u >= 0; u--) {
-            for (var a = 0; u >= 0 && 0 === c[u]; u--) a++;
-            if (u >= 0 && a++, f = f.dblp(a), u < 0) break;
-            var d = c[u];
-            o(0 !== d), f = "affine" === t.type ? d > 0 ? f.mixedAdd(i[d - 1 >> 1]) : f.mixedAdd(i[-d - 1 >> 1].neg()) : d > 0 ? f.add(i[d - 1 >> 1]) : f.add(i[-d - 1 >> 1].neg())
+        return l.toP()
+    }, c.prototype._wnafMul = function(e, t) {
+        var n = 4,
+            r = e._getNAFPoints(n);
+        n = r.wnd;
+        for (var i = r.points, s = o(t, n, this._bitLength), c = this.jpoint(null, null, null), u = s.length - 1; u >= 0; u--) {
+            for (var d = 0; u >= 0 && 0 === s[u]; u--) d++;
+            if (u >= 0 && d++, c = c.dblp(d), u < 0) break;
+            var l = s[u];
+            a(0 !== l), c = "affine" === e.type ? l > 0 ? c.mixedAdd(i[l - 1 >> 1]) : c.mixedAdd(i[-l - 1 >> 1].neg()) : l > 0 ? c.add(i[l - 1 >> 1]) : c.add(i[-l - 1 >> 1].neg())
         }
-        return "affine" === t.type ? f.toP() : f
-    }, f.prototype._wnafMulAdd = function(t, e, s, r, i) {
-        var o, f, u, a = this._wnafT1,
-            d = this._wnafT2,
-            p = this._wnafT3,
-            b = 0;
-        for (o = 0; o < r; o++) {
-            var h = (u = e[o])._getNAFPoints(t);
-            a[o] = h.wnd, d[o] = h.points
+        return "affine" === e.type ? c.toP() : c
+    }, c.prototype._wnafMulAdd = function(e, t, n, r, i) {
+        var a, c, u, d = this._wnafT1,
+            l = this._wnafT2,
+            f = this._wnafT3,
+            p = 0;
+        for (a = 0; a < r; a++) {
+            var h = (u = t[a])._getNAFPoints(e);
+            d[a] = h.wnd, l[a] = h.points
         }
-        for (o = r - 1; o >= 1; o -= 2) {
-            var l = o - 1,
-                g = o;
-            if (1 !== a[l] || 1 !== a[g]) {
-                p[l] = n(s[l], a[l], this._bitLength), p[g] = n(s[g], a[g], this._bitLength), b = Math.max(p[l].length, b), b = Math.max(p[g].length, b);
+        for (a = r - 1; a >= 1; a -= 2) {
+            var v = a - 1,
+                g = a;
+            if (1 !== d[v] || 1 !== d[g]) {
+                f[v] = o(n[v], d[v], this._bitLength), f[g] = o(n[g], d[g], this._bitLength), p = Math.max(f[v].length, p), p = Math.max(f[g].length, p);
                 continue
             }
-            var v = [e[l], null, null, e[g]];
-            0 === e[l].y.cmp(e[g].y) ? (v[1] = e[l].add(e[g]), v[2] = e[l].toJ().mixedAdd(e[g].neg())) : 0 === e[l].y.cmp(e[g].y.redNeg()) ? (v[1] = e[l].toJ().mixedAdd(e[g]), v[2] = e[l].add(e[g].neg())) : (v[1] = e[l].toJ().mixedAdd(e[g]), v[2] = e[l].toJ().mixedAdd(e[g].neg()));
-            var x = [-3, -1, -5, -7, 0, 7, 5, 1, 3],
-                m = c(s[l], s[g]);
-            for (f = 0, b = Math.max(m[0].length, b), p[l] = Array(b), p[g] = Array(b); f < b; f++) {
-                var y = 0 | m[0][f],
-                    _ = 0 | m[1][f];
-                p[l][f] = x[(y + 1) * 3 + (_ + 1)], p[g][f] = 0, d[l] = v
+            var b = [t[v], null, null, t[g]];
+            0 === t[v].y.cmp(t[g].y) ? (b[1] = t[v].add(t[g]), b[2] = t[v].toJ().mixedAdd(t[g].neg())) : 0 === t[v].y.cmp(t[g].y.redNeg()) ? (b[1] = t[v].toJ().mixedAdd(t[g]), b[2] = t[v].add(t[g].neg())) : (b[1] = t[v].toJ().mixedAdd(t[g]), b[2] = t[v].toJ().mixedAdd(t[g].neg()));
+            var m = [-3, -1, -5, -7, 0, 7, 5, 1, 3],
+                y = s(n[v], n[g]);
+            for (c = 0, p = Math.max(y[0].length, p), f[v] = Array(p), f[g] = Array(p); c < p; c++) {
+                var x = 0 | y[0][c],
+                    w = 0 | y[1][c];
+                f[v][c] = m[(x + 1) * 3 + (w + 1)], f[g][c] = 0, l[v] = b
             }
         }
-        var w = this.jpoint(null, null, null),
-            M = this._wnafT4;
-        for (o = b; o >= 0; o--) {
-            for (var S = 0; o >= 0;) {
-                var k = !0;
-                for (f = 0; f < r; f++) M[f] = 0 | p[f][o], 0 !== M[f] && (k = !1);
-                if (!k) break;
-                S++, o--
+        var S = this.jpoint(null, null, null),
+            k = this._wnafT4;
+        for (a = p; a >= 0; a--) {
+            for (var E = 0; a >= 0;) {
+                var _ = !0;
+                for (c = 0; c < r; c++) k[c] = 0 | f[c][a], 0 !== k[c] && (_ = !1);
+                if (!_) break;
+                E++, a--
             }
-            if (o >= 0 && S++, w = w.dblp(S), o < 0) break;
-            for (f = 0; f < r; f++) {
-                var A = M[f];
-                if (0 !== A) {
-                    A > 0 ? u = d[f][A - 1 >> 1] : A < 0 && (u = d[f][-A - 1 >> 1].neg());
-                    w = "affine" === u.type ? w.mixedAdd(u) : w.add(u)
+            if (a >= 0 && E++, S = S.dblp(E), a < 0) break;
+            for (c = 0; c < r; c++) {
+                var M = k[c];
+                if (0 !== M) {
+                    M > 0 ? u = l[c][M - 1 >> 1] : M < 0 && (u = l[c][-M - 1 >> 1].neg());
+                    S = "affine" === u.type ? S.mixedAdd(u) : S.add(u)
                 }
             }
         }
-        for (o = 0; o < r; o++) d[o] = null;
-        return i ? w : w.toP()
-    }, f.BasePoint = u, u.prototype.eq = function() {
+        for (a = 0; a < r; a++) l[a] = null;
+        return i ? S : S.toP()
+    }, c.BasePoint = u, u.prototype.eq = function() {
         throw Error("Not implemented")
     }, u.prototype.validate = function() {
         return this.curve.validate(this)
-    }, f.prototype.decodePoint = function(t, e) {
-        t = i.toArray(t, e);
-        var s = this.p.byteLength();
-        if ((4 === t[0] || 6 === t[0] || 7 === t[0]) && t.length - 1 == 2 * s) return 6 === t[0] ? o(t[t.length - 1] % 2 == 0) : 7 === t[0] && o(t[t.length - 1] % 2 == 1), this.point(t.slice(1, 1 + s), t.slice(1 + s, 1 + 2 * s));
-        if ((2 === t[0] || 3 === t[0]) && t.length - 1 === s) return this.pointFromX(t.slice(1, 1 + s), 3 === t[0]);
+    }, c.prototype.decodePoint = function(e, t) {
+        e = i.toArray(e, t);
+        var n = this.p.byteLength();
+        if ((4 === e[0] || 6 === e[0] || 7 === e[0]) && e.length - 1 == 2 * n) return 6 === e[0] ? a(e[e.length - 1] % 2 == 0) : 7 === e[0] && a(e[e.length - 1] % 2 == 1), this.point(e.slice(1, 1 + n), e.slice(1 + n, 1 + 2 * n));
+        if ((2 === e[0] || 3 === e[0]) && e.length - 1 === n) return this.pointFromX(e.slice(1, 1 + n), 3 === e[0]);
         throw Error("Unknown point format")
-    }, u.prototype.encodeCompressed = function(t) {
-        return this.encode(t, !0)
-    }, u.prototype._encode = function(t) {
-        var e = this.curve.p.byteLength(),
-            s = this.getX().toArray("be", e);
-        return t ? [this.getY().isEven() ? 2 : 3].concat(s) : [4].concat(s, this.getY().toArray("be", e))
-    }, u.prototype.encode = function(t, e) {
-        return i.encode(this._encode(e), t)
-    }, u.prototype.precompute = function(t) {
+    }, u.prototype.encodeCompressed = function(e) {
+        return this.encode(e, !0)
+    }, u.prototype._encode = function(e) {
+        var t = this.curve.p.byteLength(),
+            n = this.getX().toArray("be", t);
+        return e ? [this.getY().isEven() ? 2 : 3].concat(n) : [4].concat(n, this.getY().toArray("be", t))
+    }, u.prototype.encode = function(e, t) {
+        return i.encode(this._encode(t), e)
+    }, u.prototype.precompute = function(e) {
         if (this.precomputed) return this;
-        var e = {
+        var t = {
             doubles: null,
             naf: null,
             beta: null
         };
-        return e.naf = this._getNAFPoints(8), e.doubles = this._getDoubles(4, t), e.beta = this._getBeta(), this.precomputed = e, this
-    }, u.prototype._hasDoubles = function(t) {
+        return t.naf = this._getNAFPoints(8), t.doubles = this._getDoubles(4, e), t.beta = this._getBeta(), this.precomputed = t, this
+    }, u.prototype._hasDoubles = function(e) {
         if (!this.precomputed) return !1;
-        var e = this.precomputed.doubles;
-        return !!e && e.points.length >= Math.ceil((t.bitLength() + 1) / e.step)
-    }, u.prototype._getDoubles = function(t, e) {
+        var t = this.precomputed.doubles;
+        return !!t && t.points.length >= Math.ceil((e.bitLength() + 1) / t.step)
+    }, u.prototype._getDoubles = function(e, t) {
         if (this.precomputed && this.precomputed.doubles) return this.precomputed.doubles;
-        for (var s = [this], r = this, i = 0; i < e; i += t) {
-            for (var n = 0; n < t; n++) r = r.dbl();
-            s.push(r)
+        for (var n = [this], r = this, i = 0; i < t; i += e) {
+            for (var o = 0; o < e; o++) r = r.dbl();
+            n.push(r)
         }
         return {
-            step: t,
-            points: s
+            step: e,
+            points: n
         }
-    }, u.prototype._getNAFPoints = function(t) {
+    }, u.prototype._getNAFPoints = function(e) {
         if (this.precomputed && this.precomputed.naf) return this.precomputed.naf;
-        for (var e = [this], s = (1 << t) - 1, r = 1 === s ? null : this.dbl(), i = 1; i < s; i++) e[i] = e[i - 1].add(r);
+        for (var t = [this], n = (1 << e) - 1, r = 1 === n ? null : this.dbl(), i = 1; i < n; i++) t[i] = t[i - 1].add(r);
         return {
-            wnd: t,
-            points: e
+            wnd: e,
+            points: t
         }
     }, u.prototype._getBeta = function() {
         return null
-    }, u.prototype.dblp = function(t) {
-        for (var e = this, s = 0; s < t; s++) e = e.dbl();
-        return e
+    }, u.prototype.dblp = function(e) {
+        for (var t = this, n = 0; n < e; n++) t = t.dbl();
+        return t
     }
 }

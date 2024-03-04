@@ -10,11 +10,11 @@ function(e, _, E) {
     var o = E("77078"),
         n = E("689988"),
         r = E("38654"),
-        i = E("271938"),
-        a = E("42203"),
+        a = E("271938"),
+        i = E("42203"),
         I = E("26989"),
-        s = E("162771"),
-        T = E("568734"),
+        T = E("162771"),
+        s = E("568734"),
         S = E("347895"),
         N = E("698882"),
         O = E("129092"),
@@ -32,7 +32,7 @@ function(e, _, E) {
                 MESSAGE_CREATE: e => this.handleMessageSend(e),
                 THREAD_CREATE: e => this.handleThreadCreate(e)
             }, this.handlePostConnectionOpen = () => {
-                let e = s.default.getGuildId();
+                let e = T.default.getGuildId();
                 null != e && this._getOrLoadOnboardingMemberActions(e)
             }, this.handleGuildMemberUpdate = e => {
                 let {
@@ -40,11 +40,11 @@ function(e, _, E) {
                     user: n,
                     guildId: r
                 } = e;
-                if (n.id === i.default.getId()) {
-                    if (!this.onboardingCompleteGuilds.has(r) && (0, T.hasFlag)(null != _ ? _ : 0, u.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
-                        var a, I;
+                if (n.id === a.default.getId()) {
+                    if (!this.onboardingCompleteGuilds.has(r) && (0, s.hasFlag)(null != _ ? _ : 0, u.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
+                        var i, I;
                         this.onboardingCompleteGuilds.add(r);
-                        let e = null !== (I = null === (a = N.default.getNewMemberActions(r)) || void 0 === a ? void 0 : a.length) && void 0 !== I ? I : 0;
+                        let e = null !== (I = null === (i = N.default.getNewMemberActions(r)) || void 0 === i ? void 0 : i.length) && void 0 !== I ? I : 0;
                         if (0 === e) return;
                         (0, o.openModalLazy)(async () => {
                             let {
@@ -81,8 +81,8 @@ function(e, _, E) {
                     channelId: t,
                     message: o
                 } = e;
-                if (null == E || null == t || (null === (_ = o.author) || void 0 === _ ? void 0 : _.id) !== i.default.getId()) return;
-                let n = a.default.getChannel(t);
+                if (null == E || null == t || (null === (_ = o.author) || void 0 === _ ? void 0 : _.id) !== a.default.getId()) return;
+                let n = i.default.getChannel(t);
                 (null == n ? void 0 : n.isForumPost()) && (null == n ? void 0 : n.parent_id) != null && this._completeChatAction(E, n.parent_id), this._completeChatAction(E, t)
             }, this.handleThreadCreate = e => {
                 var _;
@@ -90,7 +90,7 @@ function(e, _, E) {
                     channel: E,
                     isNewlyCreated: t
                 } = e;
-                if (!!t && null != E.parent_id && !!(null === (_ = a.default.getChannel(E.parent_id)) || void 0 === _ ? void 0 : _.isForumLikeChannel())) E.ownerId === i.default.getId() && this._completeChatAction(E.guild_id, E.parent_id)
+                if (!!t && null != E.parent_id && !!(null === (_ = i.default.getChannel(E.parent_id)) || void 0 === _ ? void 0 : _.isForumLikeChannel())) E.ownerId === a.default.getId() && this._completeChatAction(E.guild_id, E.parent_id)
             }, this._completeChatAction = async (e, _) => {
                 let {
                     memberActions: E,
@@ -122,7 +122,7 @@ function(e, _, E) {
                     completedActions: t,
                     loading: o
                 } = A.default.getState(e);
-                if (!(null == t && !o && (0, T.hasFlag)(null !== (E = _.flags) && void 0 !== E ? E : 0, u.GuildMemberFlags.STARTED_HOME_ACTIONS))) return t;
+                if (!(null == t && !o && (0, s.hasFlag)(null !== (E = _.flags) && void 0 !== E ? E : 0, u.GuildMemberFlags.STARTED_HOME_ACTIONS))) return t;
                 {
                     let _ = await (0, S.fetchNewMemberActions)(e);
                     return _

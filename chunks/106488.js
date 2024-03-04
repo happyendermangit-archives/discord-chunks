@@ -1,13 +1,13 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("911718"),
+    var r = n("911718"),
         i = r("%TypeError%"),
-        n = r("%SyntaxError%"),
-        c = s("748795"),
-        o = s("610330"),
-        f = {
-            "Property Descriptor": function(t) {
-                var e = {
+        o = r("%SyntaxError%"),
+        s = n("748795"),
+        a = n("610330"),
+        c = {
+            "Property Descriptor": function(e) {
+                var t = {
                     "[[Configurable]]": !0,
                     "[[Enumerable]]": !0,
                     "[[Get]]": !0,
@@ -15,31 +15,31 @@ function(t, e, s) {
                     "[[Value]]": !0,
                     "[[Writable]]": !0
                 };
-                if (!t) return !1;
-                for (var s in t)
-                    if (c(t, s) && !e[s]) return !1;
-                var r = c(t, "[[Value]]"),
-                    n = c(t, "[[Get]]") || c(t, "[[Set]]");
-                if (r && n) throw new i("Property Descriptors may not be both accessor and data descriptors");
+                if (!e) return !1;
+                for (var n in e)
+                    if (s(e, n) && !t[n]) return !1;
+                var r = s(e, "[[Value]]"),
+                    o = s(e, "[[Get]]") || s(e, "[[Set]]");
+                if (r && o) throw new i("Property Descriptors may not be both accessor and data descriptors");
                 return !0
             },
-            "Match Record": s("990633"),
-            "Iterator Record": function(t) {
-                return c(t, "[[Iterator]]") && c(t, "[[NextMethod]]") && c(t, "[[Done]]")
+            "Match Record": n("990633"),
+            "Iterator Record": function(e) {
+                return s(e, "[[Iterator]]") && s(e, "[[NextMethod]]") && s(e, "[[Done]]")
             },
-            "PromiseCapability Record": function(t) {
-                return !!t && c(t, "[[Resolve]]") && "function" == typeof t["[[Resolve]]"] && c(t, "[[Reject]]") && "function" == typeof t["[[Reject]]"] && c(t, "[[Promise]]") && t["[[Promise]]"] && "function" == typeof t["[[Promise]]"].then
+            "PromiseCapability Record": function(e) {
+                return !!e && s(e, "[[Resolve]]") && "function" == typeof e["[[Resolve]]"] && s(e, "[[Reject]]") && "function" == typeof e["[[Reject]]"] && s(e, "[[Promise]]") && e["[[Promise]]"] && "function" == typeof e["[[Promise]]"].then
             },
-            "AsyncGeneratorRequest Record": function(t) {
-                return !!t && c(t, "[[Completion]]") && c(t, "[[Capability]]") && f["PromiseCapability Record"](t["[[Capability]]"])
+            "AsyncGeneratorRequest Record": function(e) {
+                return !!e && s(e, "[[Completion]]") && s(e, "[[Capability]]") && c["PromiseCapability Record"](e["[[Capability]]"])
             },
-            "RegExp Record": function(t) {
-                return t && c(t, "[[IgnoreCase]]") && "boolean" == typeof t["[[IgnoreCase]]"] && c(t, "[[Multiline]]") && "boolean" == typeof t["[[Multiline]]"] && c(t, "[[DotAll]]") && "boolean" == typeof t["[[DotAll]]"] && c(t, "[[Unicode]]") && "boolean" == typeof t["[[Unicode]]"] && c(t, "[[CapturingGroupsCount]]") && "number" == typeof t["[[CapturingGroupsCount]]"] && o(t["[[CapturingGroupsCount]]"]) && t["[[CapturingGroupsCount]]"] >= 0
+            "RegExp Record": function(e) {
+                return e && s(e, "[[IgnoreCase]]") && "boolean" == typeof e["[[IgnoreCase]]"] && s(e, "[[Multiline]]") && "boolean" == typeof e["[[Multiline]]"] && s(e, "[[DotAll]]") && "boolean" == typeof e["[[DotAll]]"] && s(e, "[[Unicode]]") && "boolean" == typeof e["[[Unicode]]"] && s(e, "[[CapturingGroupsCount]]") && "number" == typeof e["[[CapturingGroupsCount]]"] && a(e["[[CapturingGroupsCount]]"]) && e["[[CapturingGroupsCount]]"] >= 0
             }
         };
-    t.exports = function(t, e, s, r) {
-        var c = f[e];
-        if ("function" != typeof c) throw new n("unknown record type: " + e);
-        if ("Object" !== t(r) || !c(r)) throw new i(s + " must be a " + e)
+    e.exports = function(e, t, n, r) {
+        var s = c[t];
+        if ("function" != typeof s) throw new o("unknown record type: " + t);
+        if ("Object" !== e(r) || !s(r)) throw new i(n + " must be a " + t)
     }
 }

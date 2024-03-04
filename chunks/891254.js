@@ -2,73 +2,73 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return c
         }
     }), n("222007");
-    var s = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        s = n("884691"),
         r = n("605451"),
         a = n("577776"),
         o = n("77078"),
-        d = n("8222"),
+        l = n("8222"),
         u = n("782340"),
-        l = n("590732");
+        d = n("590732");
 
-    function f(e) {
+    function c(e) {
         var t;
         let {
             selectedGuildId: n,
-            selectedChannelId: f,
-            onChannelChange: _,
-            error: c
-        } = e, [g, m] = i.useState(null), h = i.useRef(!1);
-        if (i.useEffect(() => {
+            selectedChannelId: c,
+            onChannelChange: f,
+            error: _
+        } = e, [h, E] = s.useState(null), g = s.useRef(!1);
+        if (s.useEffect(() => {
                 async function e(e) {
-                    let t = await (0, d.fetchChannels)(e);
-                    n === e && (t.sort((e, t) => e.name.localeCompare(t.name)), m({
+                    let t = await (0, l.fetchChannels)(e);
+                    n === e && (t.sort((e, t) => e.name.localeCompare(t.name)), E({
                         guildId: e,
                         channels: t
-                    }), h.current = !0)
+                    }), g.current = !0)
                 }
-                m(null), null == n ? _(null) : e(n)
-            }, [_, n]), i.useEffect(() => {
-                if (!!h.current) null == g ? null != f && _(null) : !g.channels.some(e => e.id === f) && _(null)
-            }, [g, _, f, n]), null == n) return null;
-        let v = null == g || g.guildId !== n,
-            E = v ? [] : (null !== (t = null == g ? void 0 : g.channels) && void 0 !== t ? t : []).map(e => ({
+                E(null), null == n ? f(null) : e(n)
+            }, [f, n]), s.useEffect(() => {
+                if (!!g.current) null == h ? null != c && f(null) : !h.channels.some(e => e.id === c) && f(null)
+            }, [h, f, c, n]), null == n) return null;
+        let m = null == h || h.guildId !== n,
+            p = m ? [] : (null !== (t = null == h ? void 0 : h.channels) && void 0 !== t ? t : []).map(e => ({
                 value: e.id,
                 label: e.name
             }));
-        return (0, s.jsxs)("div", {
-            className: l.selectorGroup,
-            children: [(0, s.jsx)(r.Heading, {
+        return (0, i.jsxs)("div", {
+            className: d.selectorGroup,
+            children: [(0, i.jsx)(r.Heading, {
                 variant: "heading-deprecated-12/semibold",
-                className: l.sectionLabel,
+                className: d.sectionLabel,
                 children: u.default.Messages.OAUTH2_ADD_WEBHOOK_INCOMING
-            }), null != c && "" !== c ? (0, s.jsx)(a.Text, {
+            }), null != _ && "" !== _ ? (0, i.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "text-danger",
-                children: c
-            }) : null, (0, s.jsx)(o.Select, {
-                className: l.select,
+                children: _
+            }) : null, (0, i.jsx)(o.Select, {
+                className: d.select,
                 maxVisibleItems: 5,
-                select: _,
+                select: f,
                 placeholder: u.default.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
-                options: E,
-                isSelected: e => e === f,
+                options: p,
+                isSelected: e => e === c,
                 serialize: e => e,
-                renderOptionLabel: e => (0, s.jsx)(a.Text, {
+                renderOptionLabel: e => (0, i.jsx)(a.Text, {
                     variant: "text-md/normal",
                     children: e.label
                 }),
-                renderOptionValue: e => (0, s.jsx)(a.Text, {
+                renderOptionValue: e => (0, i.jsx)(a.Text, {
                     variant: "text-md/normal",
                     children: e[0].label
                 })
-            }), (0, s.jsx)(a.Text, {
+            }), (0, i.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                className: l.label,
+                className: d.label,
                 children: u.default.Messages.SCOPE_WEBHOOK_INCOMING_DESCRIPTION
             })]
         })

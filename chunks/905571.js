@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return r
         }
     });
-    var l = n("577427"),
-        r = n("782340"),
-        a = {
+    var i = n("577427"),
+        s = n("782340"),
+        r = {
             MENTION_EVERYONE: () => ({
                 test: "everyone",
                 text: "@everyone",
-                description: r.default.Messages.MENTION_EVERYONE_AUTOCOMPLETE_DESCRIPTION
+                description: s.default.Messages.MENTION_EVERYONE_AUTOCOMPLETE_DESCRIPTION
             }),
             MENTION_HERE: () => ({
                 test: "here",
                 text: "@here",
-                description: r.default.Messages.MENTION_HERE_AUTOCOMPLETE_DESCRIPTION
+                description: s.default.Messages.MENTION_HERE_AUTOCOMPLETE_DESCRIPTION
             }),
-            LAUNCHABLE_APPLICATIONS: () => l.default.launchableApplicationViewItems
+            LAUNCHABLE_APPLICATIONS: () => i.default.launchableApplicationViewItems
         }
 }

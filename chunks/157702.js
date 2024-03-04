@@ -2,102 +2,102 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useSlider: function() {
-            return d
+            return l
         },
         useSliderThumb: function() {
-            return p
+            return f
         }
     }), n("222007"), n("70102");
     var r = n("240849"),
-        a = n("884691"),
-        i = n("388032"),
-        o = n("113581"),
-        s = n("564341"),
+        i = n("884691"),
+        o = n("388032"),
+        s = n("113581"),
+        a = n("564341"),
         c = n("447259");
-    let l = new WeakMap;
+    let u = new WeakMap;
 
-    function u(e, t) {
-        let n = l.get(e);
+    function d(e, t) {
+        let n = u.get(e);
         if (!n) throw Error("Unknown slider state");
         return "".concat(n.id, "-").concat(t)
     }
 
-    function d(e, t, n) {
+    function l(e, t, n) {
         var c;
         let {
-            labelProps: d,
-            fieldProps: p
-        } = (0, o.useLabel)(e), f = "vertical" === e.orientation;
-        l.set(t, {
-            id: null !== (c = d.id) && void 0 !== c ? c : p.id,
+            labelProps: l,
+            fieldProps: f
+        } = (0, s.useLabel)(e), p = "vertical" === e.orientation;
+        u.set(t, {
+            id: null !== (c = l.id) && void 0 !== c ? c : f.id,
             "aria-describedby": e["aria-describedby"],
             "aria-details": e["aria-details"]
         });
         let {
-            direction: m
-        } = (0, s.useLocale)(), {
-            addGlobalListener: h,
-            removeGlobalListener: v
-        } = (0, r.useGlobalListeners)(), g = (0, a.useRef)(null), y = "rtl" === m, b = (0, a.useRef)(null), {
+            direction: h
+        } = (0, a.useLocale)(), {
+            addGlobalListener: v,
+            removeGlobalListener: g
+        } = (0, r.useGlobalListeners)(), b = (0, i.useRef)(null), m = "rtl" === h, y = (0, i.useRef)(null), {
             moveProps: x
-        } = (0, i.useMove)({
+        } = (0, o.useMove)({
             onMoveStart() {
-                b.current = null
+                y.current = null
             },
             onMove(e) {
                 let {
-                    deltaX: a,
-                    deltaY: i
+                    deltaX: i,
+                    deltaY: o
                 } = e, {
-                    height: o,
-                    width: s
-                } = n.current.getBoundingClientRect(), c = f ? o : s;
-                null == b.current && (b.current = t.getThumbPercent(g.current) * c);
-                let l = f ? i : a;
-                if ((f || y) && (l = -l), b.current += l, null != g.current && n.current) {
-                    let e = (0, r.clamp)(b.current / c, 0, 1);
-                    t.setThumbPercent(g.current, e)
+                    height: s,
+                    width: a
+                } = n.current.getBoundingClientRect(), c = p ? s : a;
+                null == y.current && (y.current = t.getThumbPercent(b.current) * c);
+                let u = p ? o : i;
+                if ((p || m) && (u = -u), y.current += u, null != b.current && n.current) {
+                    let e = (0, r.clamp)(y.current / c, 0, 1);
+                    t.setThumbPercent(b.current, e)
                 }
             },
             onMoveEnd() {
-                null != g.current && (t.setThumbDragging(g.current, !1), g.current = null)
+                null != b.current && (t.setThumbDragging(b.current, !1), b.current = null)
             }
-        }), S = (0, a.useRef)(void 0), w = (r, a, i, o) => {
+        }), w = (0, i.useRef)(void 0), S = (r, i, o, s) => {
             if (n.current && !e.isDisabled && t.values.every((e, n) => !t.isThumbDragging(n))) {
                 let e, {
-                        height: s,
+                        height: a,
                         width: c,
-                        top: l,
-                        left: u
+                        top: u,
+                        left: d
                     } = n.current.getBoundingClientRect(),
-                    d = ((f ? o : i) - (f ? l : u)) / (f ? s : c);
-                ("rtl" === m || f) && (d = 1 - d);
-                let p = t.getPercentValue(d),
-                    v = t.values.findIndex(e => p - e < 0);
-                (e = 0 === v ? v : -1 === v ? t.values.length - 1 : Math.abs(t.values[v - 1] - p) < Math.abs(t.values[v] - p) ? v - 1 : v) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), g.current = e, t.setFocusedThumb(e), S.current = a, t.setThumbDragging(g.current, !0), t.setThumbValue(e, p), h(window, "mouseup", D, !1), h(window, "touchend", D, !1), h(window, "pointerup", D, !1)) : g.current = null
+                    l = ((p ? s : o) - (p ? u : d)) / (p ? a : c);
+                ("rtl" === h || p) && (l = 1 - l);
+                let f = t.getPercentValue(l),
+                    g = t.values.findIndex(e => f - e < 0);
+                (e = 0 === g ? g : -1 === g ? t.values.length - 1 : Math.abs(t.values[g - 1] - f) < Math.abs(t.values[g] - f) ? g - 1 : g) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), b.current = e, t.setFocusedThumb(e), w.current = i, t.setThumbDragging(b.current, !0), t.setThumbValue(e, f), v(window, "mouseup", k, !1), v(window, "touchend", k, !1), v(window, "pointerup", k, !1)) : b.current = null
             }
-        }, D = e => {
+        }, k = e => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === S.current && (null != g.current && (t.setThumbDragging(g.current, !1), g.current = null), v(window, "mouseup", D, !1), v(window, "touchend", D, !1), v(window, "pointerup", D, !1))
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === w.current && (null != b.current && (t.setThumbDragging(b.current, !1), b.current = null), g(window, "mouseup", k, !1), g(window, "touchend", k, !1), g(window, "pointerup", k, !1))
         };
-        return "htmlFor" in d && d.htmlFor && (delete d.htmlFor, d.onClick = () => {
+        return "htmlFor" in l && l.htmlFor && (delete l.htmlFor, l.onClick = () => {
             var e;
-            null === (e = document.getElementById(u(t, 0))) || void 0 === e || e.focus(), (0, i.setInteractionModality)("keyboard")
+            null === (e = document.getElementById(d(t, 0))) || void 0 === e || e.focus(), (0, o.setInteractionModality)("keyboard")
         }), {
-            labelProps: d,
+            labelProps: l,
             groupProps: {
                 role: "group",
-                ...p
+                ...f
             },
             trackProps: (0, r.mergeProps)({
                 onMouseDown(e) {
-                    0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && w(e, void 0, e.clientX, e.clientY)
+                    0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && S(e, void 0, e.clientX, e.clientY)
                 },
                 onPointerDown(e) {
-                    ("mouse" !== e.pointerType || 0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey) && w(e, e.pointerId, e.clientX, e.clientY)
+                    ("mouse" !== e.pointerType || 0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey) && S(e, e.pointerId, e.clientX, e.clientY)
                 },
                 onTouchStart(e) {
-                    w(e, e.changedTouches[0].identifier, e.changedTouches[0].clientX, e.changedTouches[0].clientY)
+                    S(e, e.changedTouches[0].identifier, e.changedTouches[0].clientX, e.changedTouches[0].clientY)
                 },
                 style: {
                     position: "relative",
@@ -105,169 +105,169 @@ function(e, t, n) {
                 }
             }, x),
             outputProps: {
-                htmlFor: t.values.map((e, n) => u(t, n)).join(" "),
+                htmlFor: t.values.map((e, n) => d(t, n)).join(" "),
                 "aria-live": "off"
             }
         }
     }
 
-    function p(e, t) {
+    function f(e, t) {
         var n;
         let {
-            index: d = 0,
-            isRequired: p,
-            validationState: f,
-            isInvalid: m,
-            trackRef: h,
-            inputRef: v,
-            orientation: g = t.orientation,
-            name: y
-        } = e, b = e.isDisabled || t.isDisabled, x = "vertical" === g, {
-            direction: S
-        } = (0, s.useLocale)(), {
-            addGlobalListener: w,
-            removeGlobalListener: D
-        } = (0, r.useGlobalListeners)(), C = l.get(t), {
-            labelProps: k,
-            fieldProps: P
-        } = (0, o.useLabel)({
+            index: l = 0,
+            isRequired: f,
+            validationState: p,
+            isInvalid: h,
+            trackRef: v,
+            inputRef: g,
+            orientation: b = t.orientation,
+            name: m
+        } = e, y = e.isDisabled || t.isDisabled, x = "vertical" === b, {
+            direction: w
+        } = (0, a.useLocale)(), {
+            addGlobalListener: S,
+            removeGlobalListener: k
+        } = (0, r.useGlobalListeners)(), E = u.get(t), {
+            labelProps: _,
+            fieldProps: M
+        } = (0, s.useLabel)({
             ...e,
-            id: u(t, d),
-            "aria-labelledby": "".concat(C.id, " ").concat(null !== (n = e["aria-labelledby"]) && void 0 !== n ? n : "").trim()
-        }), E = t.values[d], T = (0, a.useCallback)(() => {
-            v.current && (0, r.focusWithoutScrolling)(v.current)
-        }, [v]), M = t.focusedThumb === d;
-        (0, a.useEffect)(() => {
-            M && T()
-        }, [M, T]);
-        let R = "rtl" === S,
-            I = (0, a.useRef)(null),
+            id: d(t, l),
+            "aria-labelledby": "".concat(E.id, " ").concat(null !== (n = e["aria-labelledby"]) && void 0 !== n ? n : "").trim()
+        }), D = t.values[l], C = (0, i.useCallback)(() => {
+            g.current && (0, r.focusWithoutScrolling)(g.current)
+        }, [g]), P = t.focusedThumb === l;
+        (0, i.useEffect)(() => {
+            P && C()
+        }, [P, C]);
+        let T = "rtl" === w,
+            A = (0, i.useRef)(null),
             {
-                keyboardProps: O
-            } = (0, i.useKeyboard)({
+                keyboardProps: R
+            } = (0, o.useKeyboard)({
                 onKeyDown(e) {
                     let {
                         getThumbMaxValue: n,
                         getThumbMinValue: r,
-                        decrementThumb: a,
-                        incrementThumb: i,
-                        setThumbValue: o,
-                        setThumbDragging: s,
+                        decrementThumb: i,
+                        incrementThumb: o,
+                        setThumbValue: s,
+                        setThumbDragging: a,
                         pageSize: c
                     } = t;
                     if (!/^(PageUp|PageDown|Home|End)$/.test(e.key)) {
                         e.continuePropagation();
                         return
                     }
-                    switch (e.preventDefault(), s(d, !0), e.key) {
+                    switch (e.preventDefault(), a(l, !0), e.key) {
                         case "PageUp":
-                            i(d, c);
+                            o(l, c);
                             break;
                         case "PageDown":
-                            a(d, c);
+                            i(l, c);
                             break;
                         case "Home":
-                            o(d, r(d));
+                            s(l, r(l));
                             break;
                         case "End":
-                            o(d, n(d))
+                            s(l, n(l))
                     }
-                    s(d, !1)
+                    a(l, !1)
                 }
             }),
             {
-                moveProps: A
-            } = (0, i.useMove)({
+                moveProps: I
+            } = (0, o.useMove)({
                 onMoveStart() {
-                    I.current = null, t.setThumbDragging(d, !0)
+                    A.current = null, t.setThumbDragging(l, !0)
                 },
                 onMove(e) {
                     let {
                         deltaX: n,
-                        deltaY: a,
-                        pointerType: i,
-                        shiftKey: o
+                        deltaY: i,
+                        pointerType: o,
+                        shiftKey: s
                     } = e, {
-                        getThumbPercent: s,
+                        getThumbPercent: a,
                         setThumbPercent: c,
-                        decrementThumb: l,
-                        incrementThumb: u,
-                        step: p,
-                        pageSize: f
+                        decrementThumb: u,
+                        incrementThumb: d,
+                        step: f,
+                        pageSize: p
                     } = t, {
-                        width: m,
-                        height: v
-                    } = h.current.getBoundingClientRect(), g = x ? v : m;
-                    if (null == I.current && (I.current = s(d) * g), "keyboard" === i) n > 0 && R || n < 0 && !R || a > 0 ? l(d, o ? f : p) : u(d, o ? f : p);
+                        width: h,
+                        height: g
+                    } = v.current.getBoundingClientRect(), b = x ? g : h;
+                    if (null == A.current && (A.current = a(l) * b), "keyboard" === o) n > 0 && T || n < 0 && !T || i > 0 ? u(l, s ? p : f) : d(l, s ? p : f);
                     else {
-                        let e = x ? a : n;
-                        (x || R) && (e = -e), I.current += e, c(d, (0, r.clamp)(I.current / g, 0, 1))
+                        let e = x ? i : n;
+                        (x || T) && (e = -e), A.current += e, c(l, (0, r.clamp)(A.current / b, 0, 1))
                     }
                 },
                 onMoveEnd() {
-                    t.setThumbDragging(d, !1)
+                    t.setThumbDragging(l, !1)
                 }
             });
-        t.setThumbEditable(d, !b);
+        t.setThumbEditable(l, !y);
         let {
-            focusableProps: L
+            focusableProps: O
         } = (0, c.useFocusable)((0, r.mergeProps)(e, {
-            onFocus: () => t.setFocusedThumb(d),
+            onFocus: () => t.setFocusedThumb(l),
             onBlur: () => t.setFocusedThumb(void 0)
-        }), v), N = (0, a.useRef)(void 0), F = e => {
-            T(), N.current = e, t.setThumbDragging(d, !0), w(window, "mouseup", j, !1), w(window, "touchend", j, !1), w(window, "pointerup", j, !1)
-        }, j = e => {
+        }), g), L = (0, i.useRef)(void 0), j = e => {
+            C(), L.current = e, t.setThumbDragging(l, !0), S(window, "mouseup", N, !1), S(window, "touchend", N, !1), S(window, "pointerup", N, !1)
+        }, N = e => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === N.current && (T(), t.setThumbDragging(d, !1), D(window, "mouseup", j, !1), D(window, "touchend", j, !1), D(window, "pointerup", j, !1))
-        }, K = t.getThumbPercent(d);
-        (x || "rtl" === S) && (K = 1 - K);
-        let _ = b ? {} : (0, r.mergeProps)(O, A, {
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === L.current && (C(), t.setThumbDragging(l, !1), k(window, "mouseup", N, !1), k(window, "touchend", N, !1), k(window, "pointerup", N, !1))
+        }, F = t.getThumbPercent(l);
+        (x || "rtl" === w) && (F = 1 - F);
+        let B = y ? {} : (0, r.mergeProps)(R, I, {
             onMouseDown: e => {
-                0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && F()
+                0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && j()
             },
             onPointerDown: e => {
-                0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && F(e.pointerId)
+                0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && j(e.pointerId)
             },
             onTouchStart: e => {
-                F(e.changedTouches[0].identifier)
+                j(e.changedTouches[0].identifier)
             }
         });
-        return (0, r.useFormReset)(v, E, e => {
-            t.setThumbValue(d, e)
+        return (0, r.useFormReset)(g, D, e => {
+            t.setThumbValue(l, e)
         }), {
-            inputProps: (0, r.mergeProps)(L, P, {
+            inputProps: (0, r.mergeProps)(O, M, {
                 type: "range",
-                tabIndex: b ? void 0 : 0,
-                min: t.getThumbMinValue(d),
-                max: t.getThumbMaxValue(d),
+                tabIndex: y ? void 0 : 0,
+                min: t.getThumbMinValue(l),
+                max: t.getThumbMaxValue(l),
                 step: t.step,
-                value: E,
-                name: y,
-                disabled: b,
-                "aria-orientation": g,
-                "aria-valuetext": t.getThumbValueLabel(d),
-                "aria-required": p || void 0,
-                "aria-invalid": m || "invalid" === f || void 0,
+                value: D,
+                name: m,
+                disabled: y,
+                "aria-orientation": b,
+                "aria-valuetext": t.getThumbValueLabel(l),
+                "aria-required": f || void 0,
+                "aria-invalid": h || "invalid" === p || void 0,
                 "aria-errormessage": e["aria-errormessage"],
-                "aria-describedby": [C["aria-describedby"], e["aria-describedby"]].filter(Boolean).join(" "),
-                "aria-details": [C["aria-details"], e["aria-details"]].filter(Boolean).join(" "),
+                "aria-describedby": [E["aria-describedby"], e["aria-describedby"]].filter(Boolean).join(" "),
+                "aria-details": [E["aria-details"], e["aria-details"]].filter(Boolean).join(" "),
                 onChange: e => {
-                    t.setThumbValue(d, parseFloat(e.target.value))
+                    t.setThumbValue(l, parseFloat(e.target.value))
                 }
             }),
             thumbProps: {
-                ..._,
+                ...B,
                 style: {
                     position: "absolute",
-                    [x ? "top" : "left"]: "".concat(100 * K, "%"),
+                    [x ? "top" : "left"]: "".concat(100 * F, "%"),
                     transform: "translate(-50%, -50%)",
                     touchAction: "none"
                 }
             },
-            labelProps: k,
-            isDragging: t.isThumbDragging(d),
-            isDisabled: b,
-            isFocused: M
+            labelProps: _,
+            isDragging: t.isThumbDragging(l),
+            isDisabled: y,
+            isFocused: P
         }
     }
 }

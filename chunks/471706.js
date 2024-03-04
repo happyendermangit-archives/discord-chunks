@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         GuildOnboardingStatus: function() {
-            return r
+            return s
         },
         isOnboarding: function() {
             return l
@@ -11,16 +11,16 @@ function(e, t, n) {
             return f
         }
     });
-    var i, r, s = n("446674"),
+    var i, s, r = n("446674"),
         a = n("913144"),
         o = n("49111");
 
     function l(e) {
         return null != e && ["started", "ready"].includes(e)
-    }(i = r || (r = {})).STARTED = "started", i.READY = "ready", i.COMPLETED = "completed", i.NOT_APPLICABLE = "not_applicable";
+    }(i = s || (s = {})).STARTED = "started", i.READY = "ready", i.COMPLETED = "completed", i.NOT_APPLICABLE = "not_applicable";
     let u = {},
-        c = {};
-    class d extends s.default.Store {
+        d = {};
+    class c extends r.default.Store {
         shouldShowOnboarding(e) {
             if (e === o.ME || e === o.FAVORITES) return !1;
             let t = u[e];
@@ -30,23 +30,23 @@ function(e, t, n) {
             return u[e]
         }
         resetOnboardingStatus(e) {
-            u[e] = "started", c[e] = "cover"
+            u[e] = "started", d[e] = "cover"
         }
         getCurrentOnboardingStep(e) {
             var t;
-            return null !== (t = c[e]) && void 0 !== t ? t : "cover"
+            return null !== (t = d[e]) && void 0 !== t ? t : "cover"
         }
     }
-    d.displayName = "GuildOnboardingStore";
-    var f = new d(a.default, {
+    c.displayName = "GuildOnboardingStore";
+    var f = new c(a.default, {
         LOGOUT: function() {
-            u = {}, c = {}
+            u = {}, d = {}
         },
         GUILD_DELETE: function(e) {
             let {
                 guild: t
             } = e;
-            delete u[t.id], delete c[t.id]
+            delete u[t.id], delete d[t.id]
         },
         GUILD_ONBOARDING_START: function(e) {
             let {
@@ -79,10 +79,10 @@ function(e, t, n) {
                 guildId: t,
                 step: n
             } = e;
-            c[t] = n
+            d[t] = n
         },
         CONNECTION_OPEN: function() {
-            c = {}
+            d = {}
         }
     })
 }

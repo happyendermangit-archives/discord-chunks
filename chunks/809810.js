@@ -1,144 +1,144 @@
-function(t, e, n) {
+function(e, t, n) {
     "use strict";
-    let a, i;
-    n.r(e), n.d(e, {
+    let i, s;
+    n.r(t), n.d(t, {
         default: function() {
-            return f
+            return E
         }
     }), n("222007");
-    var l = n("446674"),
-        r = n("913144"),
-        u = n("798609"),
-        d = n("42203"),
-        o = n("3765");
-    let c = {},
-        s = {},
-        E = {};
+    var r = n("446674"),
+        a = n("913144"),
+        o = n("798609"),
+        l = n("42203"),
+        u = n("3765");
+    let d = {},
+        c = {},
+        f = {};
 
-    function p(t) {
-        delete c[t];
-        let e = E[t];
-        null != e && delete s[e], delete E[t]
+    function _(e) {
+        delete d[e];
+        let t = f[e];
+        null != t && delete c[t], delete f[e]
     }
-    class I extends l.default.Store {
-        getInteraction(t) {
-            let e = s[t.id];
-            return null != e ? c[e] : null
+    class h extends r.default.Store {
+        getInteraction(e) {
+            let t = c[e.id];
+            return null != t ? d[t] : null
         }
         getMessageInteractionStates() {
-            let t = {};
-            for (let [e, n] of Object.entries(c)) {
-                let a = E[e];
-                null != a && (t[a] = n.state)
+            let e = {};
+            for (let [t, n] of Object.entries(d)) {
+                let i = f[t];
+                null != i && (e[i] = n.state)
             }
-            return t
+            return e
         }
-        canQueueInteraction(t, e) {
-            let n = s[t];
-            return (null == n || null == c[n] || c[n].state === o.InteractionState.FAILED) && (null == c[e] || c[e].state === o.InteractionState.FAILED) && !0
+        canQueueInteraction(e, t) {
+            let n = c[e];
+            return (null == n || null == d[n] || d[n].state === u.InteractionState.FAILED) && (null == d[t] || d[t].state === u.InteractionState.FAILED) && !0
         }
         getIFrameModalApplicationId() {
-            return i
+            return s
         }
         getIFrameModalKey() {
-            return a
+            return i
         }
     }
-    I.displayName = "InteractionStore";
-    var f = new I(r.default, {
+    h.displayName = "InteractionStore";
+    var E = new h(a.default, {
         LOGOUT: function() {
-            c = {}, s = {}, E = {}
+            d = {}, c = {}, f = {}
         },
-        INTERACTION_QUEUE: function(t) {
+        INTERACTION_QUEUE: function(e) {
             let {
-                nonce: e,
+                nonce: t,
                 messageId: n,
-                data: a,
-                onCreate: i,
-                onCancel: l,
-                onSuccess: r,
-                onFailure: u
-            } = t;
-            null != n && (s[n] = e, E[e] = n), c[e] = {
-                state: o.InteractionState.QUEUED,
-                data: a,
-                onCreate: i,
-                onCancel: l,
-                onSuccess: r,
-                onFailure: u
+                data: i,
+                onCreate: s,
+                onCancel: r,
+                onSuccess: a,
+                onFailure: o
+            } = e;
+            null != n && (c[n] = t, f[t] = n), d[t] = {
+                state: u.InteractionState.QUEUED,
+                data: i,
+                onCreate: s,
+                onCancel: r,
+                onSuccess: a,
+                onFailure: o
             }
         },
-        INTERACTION_CREATE: function(t) {
-            var e;
+        INTERACTION_CREATE: function(e) {
+            var t;
             let {
                 nonce: n,
-                interactionId: a
-            } = t;
+                interactionId: i
+            } = e;
             if (null == n) return !1;
-            let i = c[n];
-            if (null == i || i.state !== o.InteractionState.QUEUED) return !1;
-            i.state = o.InteractionState.CREATED, null === (e = i.onCreate) || void 0 === e || e.call(i, a)
+            let s = d[n];
+            if (null == s || s.state !== u.InteractionState.QUEUED) return !1;
+            s.state = u.InteractionState.CREATED, null === (t = s.onCreate) || void 0 === t || t.call(s, i)
         },
-        INTERACTION_SUCCESS: function(t) {
-            var e;
+        INTERACTION_SUCCESS: function(e) {
+            var t;
             let {
                 nonce: n
-            } = t;
+            } = e;
             if (null == n) return !1;
-            let a = c[n];
-            if (null == a) return !1;
-            null === (e = a.onSuccess) || void 0 === e || e.call(a), p(n)
+            let i = d[n];
+            if (null == i) return !1;
+            null === (t = i.onSuccess) || void 0 === t || t.call(i), _(n)
         },
-        INTERACTION_FAILURE: function(t) {
-            var e;
+        INTERACTION_FAILURE: function(e) {
+            var t;
             let {
                 nonce: n,
-                errorCode: a,
-                errorMessage: i
-            } = t;
+                errorCode: i,
+                errorMessage: s
+            } = e;
             if (null == n) return !1;
-            let l = c[n];
-            if (null == l) return !1;
-            null === (e = l.onFailure) || void 0 === e || e.call(l, a, i), l.data.interactionType === u.InteractionTypes.APPLICATION_COMMAND ? p(n) : c[n] = {
-                ...l,
-                state: o.InteractionState.FAILED,
-                errorCode: a,
-                errorMessage: i
+            let r = d[n];
+            if (null == r) return !1;
+            null === (t = r.onFailure) || void 0 === t || t.call(r, i, s), r.data.interactionType === o.InteractionTypes.APPLICATION_COMMAND ? _(n) : d[n] = {
+                ...r,
+                state: u.InteractionState.FAILED,
+                errorCode: i,
+                errorMessage: s
             }
         },
-        MESSAGE_CREATE: function(t) {
+        MESSAGE_CREATE: function(e) {
             let {
-                message: e
-            } = t;
-            if (null == e.nonce) return !1;
+                message: t
+            } = e;
+            if (null == t.nonce) return !1;
             {
                 var n;
-                let t = c[e.nonce];
-                if (null == t) return !1;
-                null === (n = t.onSuccess) || void 0 === n || n.call(t), p(e.nonce)
+                let e = d[t.nonce];
+                if (null == e) return !1;
+                null === (n = e.onSuccess) || void 0 === n || n.call(e), _(t.nonce)
             }
         },
-        CHANNEL_SELECT: function(t) {
+        CHANNEL_SELECT: function(e) {
             let {
-                channelId: e
-            } = t, n = d.default.getChannel(e);
+                channelId: t
+            } = e, n = l.default.getChannel(t);
             if (null == n) return !1;
-            for (let [t, e] of Object.entries(c)) e.state === o.InteractionState.FAILED && p(t)
+            for (let [e, t] of Object.entries(d)) t.state === u.InteractionState.FAILED && _(e)
         },
-        INTERACTION_IFRAME_MODAL_CREATE: function(t) {
+        INTERACTION_IFRAME_MODAL_CREATE: function(e) {
             let {
-                application: e
-            } = t;
-            i = e.id
+                application: t
+            } = e;
+            s = t.id
         },
         INTERACTION_IFRAME_MODAL_CLOSE: function() {
-            a = void 0, i = void 0
+            i = void 0, s = void 0
         },
-        INTERACTION_IFRAME_MODAL_KEY_CREATE: function(t) {
+        INTERACTION_IFRAME_MODAL_KEY_CREATE: function(e) {
             let {
-                modalKey: e
-            } = t;
-            a = e
+                modalKey: t
+            } = e;
+            i = t
         }
     })
 }

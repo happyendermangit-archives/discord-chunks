@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return i
         }
     }), n("702976");
-    var s, i = n("866227"),
-        r = n.n(i),
+    var i, s = n("866227"),
+        r = n.n(s),
         a = n("666038");
-    s = class e extends a.default {
+    i = class e extends a.default {
         static createFromServer(t) {
             var n;
             return new e({

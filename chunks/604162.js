@@ -1,22 +1,22 @@
 function(e, t, n) {
     "use strict";
-    n("854508"), e.exports = function(e, t, r, a) {
-        var i = this;
-        i.sequenceLevels[e] = 0;
+    n("854508"), e.exports = function(e, t, r, i) {
+        var o = this;
+        o.sequenceLevels[e] = 0;
 
-        function o(t) {
-            var o;
-            i.fireCallback(r, t, e), "keyup" !== a && (o = n("791607"), i.ignoreNextKeyup = o(t)), setTimeout(function() {
-                i.resetSequences()
+        function s(t) {
+            var s;
+            o.fireCallback(r, t, e), "keyup" !== i && (s = n("791607"), o.ignoreNextKeyup = s(t)), setTimeout(function() {
+                o.resetSequences()
             }, 10)
         }
-        for (var s = 0; s < t.length; ++s) {
-            var c = s + 1 === t.length ? o : function(t) {
+        for (var a = 0; a < t.length; ++a) {
+            var c = a + 1 === t.length ? s : function(t) {
                 return function() {
-                    i.nextExpectedAction = t, ++i.sequenceLevels[e], i.resetSequenceTimer()
+                    o.nextExpectedAction = t, ++o.sequenceLevels[e], o.resetSequenceTimer()
                 }
-            }(a || i.getKeyInfo(t[s + 1]).action);
-            i.bindSingle(t[s], c, a, e, s)
+            }(i || o.getKeyInfo(t[a + 1]).action);
+            o.bindSingle(t[a], c, i, e, a)
         }
     }
 }

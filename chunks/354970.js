@@ -1,25 +1,25 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("222007");
+    n("222007");
     var r, i = "function" == typeof Map && Map.prototype ? Map : null,
-        n = "function" == typeof Set && Set.prototype ? Set : null;
-    !i && (r = function(t) {
+        o = "function" == typeof Set && Set.prototype ? Set : null;
+    !i && (r = function(e) {
         return !1
     });
-    var c = i ? Map.prototype.has : null,
-        o = n ? Set.prototype.has : null;
-    !r && !c && (r = function(t) {
+    var s = i ? Map.prototype.has : null,
+        a = o ? Set.prototype.has : null;
+    !r && !s && (r = function(e) {
         return !1
-    }), t.exports = r || function(t) {
-        if (!t || "object" != typeof t) return !1;
+    }), e.exports = r || function(e) {
+        if (!e || "object" != typeof e) return !1;
         try {
-            if (c.call(t), o) try {
-                o.call(t)
-            } catch (t) {
+            if (s.call(e), a) try {
+                a.call(e)
+            } catch (e) {
                 return !0
             }
-            return t instanceof i
-        } catch (t) {}
+            return e instanceof i
+        } catch (e) {}
         return !1
     }
 }

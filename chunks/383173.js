@@ -1,55 +1,55 @@
-function(e, t, l) {
+function(e, t, n) {
     "use strict";
-    l.r(t), l.d(t, {
+    n.r(t), n.d(t, {
         default: function() {
-            return u
+            return l
         }
-    }), l("222007");
-    var n = l("446674"),
-        r = l("913144"),
-        d = l("374363");
-    let o = new Set;
-    class a extends n.default.PersistedStore {
+    }), n("222007");
+    var i = n("446674"),
+        s = n("913144"),
+        r = n("374363");
+    let a = new Set;
+    class o extends i.default.PersistedStore {
         initialize(e) {
-            null != e && (o = new Set(e.expandedFolders)), this.waitFor(d.default)
+            null != e && (a = new Set(e.expandedFolders)), this.waitFor(r.default)
         }
         getState() {
             return {
-                expandedFolders: Array.from(o)
+                expandedFolders: Array.from(a)
             }
         }
         getExpandedFolders() {
-            return o
+            return a
         }
         isFolderExpanded(e) {
-            return o.has(e)
+            return a.has(e)
         }
     }
-    a.displayName = "ExpandedGuildFolderStore", a.persistKey = "ExpandedGuildFolderStore";
-    var u = new a(r.default, {
+    o.displayName = "ExpandedGuildFolderStore", o.persistKey = "ExpandedGuildFolderStore";
+    var l = new o(s.default, {
         TOGGLE_GUILD_FOLDER_EXPAND: function(e) {
             let {
                 folderId: t
             } = e;
-            (o = new Set(o)).has(t) ? o.delete(t) : o.add(t)
+            (a = new Set(a)).has(t) ? a.delete(t) : a.add(t)
         },
         SET_GUILD_FOLDER_EXPANDED: function(e) {
             let {
                 folderId: t,
-                expanded: l
+                expanded: n
             } = e;
-            o = new Set(o), l ? o.add(t) : o.has(t) && o.delete(t)
+            a = new Set(a), n ? a.add(t) : a.has(t) && a.delete(t)
         },
         USER_SETTINGS_PROTO_UPDATE: function() {
-            let e = d.default.getGuildFolders();
+            let e = r.default.getGuildFolders();
             if (null == e) return !1;
             let t = !1;
-            for (let l of o) !e.some(e => e.folderId === l) && ((o = new Set(o)).delete(l), t = !0);
+            for (let n of a) !e.some(e => e.folderId === n) && ((a = new Set(a)).delete(n), t = !0);
             return t
         },
         GUILD_FOLDER_COLLAPSE: function() {
-            if (0 === o.size) return !1;
-            o = new Set
+            if (0 === a.size) return !1;
+            a = new Set
         }
     })
 }

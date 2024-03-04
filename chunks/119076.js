@@ -2,15 +2,15 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useDragDropManager: function() {
-            return o
+            return s
         }
     });
     var r = n("884691"),
-        a = n("900255"),
-        i = n("388588");
+        i = n("900255"),
+        o = n("388588");
 
-    function o() {
-        var e = (0, r.useContext)(i.DndContext).dragDropManager;
-        return (0, a.invariant)(null != e, "Expected drag drop context"), e
+    function s() {
+        var e = (0, r.useContext)(o.DndContext).dragDropManager;
+        return (0, i.invariant)(null != e, "Expected drag drop context"), e
     }
 }

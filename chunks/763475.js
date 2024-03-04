@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         GuildEntityDao: function() {
-            return s
+            return r
         }
     }), n("686130"), n("781738");
     var i = n("999673"),
-        r = n("429231");
-    class s {
+        s = n("429231");
+    class r {
         get prefix() {
             return this.table.prefix
         }
         withoutLogging() {
-            return new s(this.originalPrefix, this.table.tableId, this.table.database, !1)
+            return new r(this.originalPrefix, this.table.tableId, this.table.database, !1)
         }
         get(e, t) {
             return this.table.get([e, t])
@@ -75,24 +75,24 @@ function(e, t, n) {
             }
         }
         constructor(e, t, n, i = !0) {
-            this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
+            this.originalPrefix = e, this.table = new s.Table([e], t, n, i)
         }
     }
     class a {
         static fromDatabaseTransaction(e, t, n) {
-            return new a(new r.TableTransaction(e, t, n))
+            return new a(new s.TableTransaction(e, t, n))
         }
         put(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.ConflictOptions.Replace;
             return this.putWithGeneration(e, t, null, n)
         }
         putWithGeneration(e, t, n) {
-            let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
-            return this.transaction.put(s.cell(e, t, n), r)
+            let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
+            return this.transaction.put(r.cell(e, t, n), s)
         }
         putAll(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.ConflictOptions.Replace;
-            return this.transaction.putAll(t.map(t => s.cell(e, t, null)), n)
+            return this.transaction.putAll(t.map(t => r.cell(e, t, null)), n)
         }
         replaceAll(e, t) {
             this.delete(e), this.putAll(e, t)

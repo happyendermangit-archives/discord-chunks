@@ -14,7 +14,7 @@ function(e, _, E) {
     }), E("222007");
     let r = 50035;
 
-    function i(e) {
+    function a(e) {
         return e.map(e => ({
             code: "UNKNOWN",
             message: e
@@ -55,9 +55,9 @@ function(e, _, E) {
                 message: t,
                 code: o,
                 retryAfter: n,
-                errors: a,
+                errors: i,
                 status: I,
-                captchaFields: s
+                captchaFields: T
             } = function(e, _) {
                 if ("string" == typeof e) return {
                     message: e,
@@ -79,11 +79,11 @@ function(e, _, E) {
                         let _ = {};
                         for (let [E, t] of Object.entries(e)) {
                             if ("_misc" === E) {
-                                _._errors = i(t);
+                                _._errors = a(t);
                                 continue
                             }
                             let e = {};
-                            e._errors = i(t), _[E] = e
+                            e._errors = a(t), _[E] = e
                         }
                         return _
                     }(E)
@@ -95,7 +95,7 @@ function(e, _, E) {
                     status: e.status
                 }
             }(e, _);
-            this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = n, this.errors = a, this.status = I, this.captchaFields = null != s ? s : {}
+            this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = n, this.errors = i, this.status = I, this.captchaFields = null != T ? T : {}
         }
     }
 }

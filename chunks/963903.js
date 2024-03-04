@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var i, r;
+    var i, s;
     n.r(t), n.d(t, {
         Environments: function() {
             return i
         }
-    }), (r = i || (i = {})).STAGING = "staging", r.DEVELOPMENT = "development", r.PRODUCTION = "production", r.TEST = "test"
+    }), (s = i || (i = {})).STAGING = "staging", s.DEVELOPMENT = "development", s.PRODUCTION = "production", s.TEST = "test"
 }

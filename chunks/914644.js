@@ -2,69 +2,69 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useToggle: function() {
-            return o
+            return s
         }
     });
     var r = n("240849"),
-        a = n("447259"),
-        i = n("388032");
+        i = n("447259"),
+        o = n("388032");
 
-    function o(e, t, n) {
+    function s(e, t, n) {
         let {
-            isDisabled: o = !1,
-            isReadOnly: s = !1,
+            isDisabled: s = !1,
+            isReadOnly: a = !1,
             value: c,
-            name: l,
-            children: u,
-            "aria-label": d,
-            "aria-labelledby": p,
-            validationState: f = "valid",
-            isInvalid: m
+            name: u,
+            children: d,
+            "aria-label": l,
+            "aria-labelledby": f,
+            validationState: p = "valid",
+            isInvalid: h
         } = e;
-        !(null != u) && !(null != d || null != p) && console.warn("If you do not provide children, you must specify an aria-label for accessibility");
+        !(null != d) && !(null != l || null != f) && console.warn("If you do not provide children, you must specify an aria-label for accessibility");
         let {
-            pressProps: h,
-            isPressed: v
-        } = (0, i.usePress)({
-            isDisabled: o
+            pressProps: v,
+            isPressed: g
+        } = (0, o.usePress)({
+            isDisabled: s
         }), {
-            pressProps: g,
-            isPressed: y
-        } = (0, i.usePress)({
-            isDisabled: o || s,
+            pressProps: b,
+            isPressed: m
+        } = (0, o.usePress)({
+            isDisabled: s || a,
             onPress() {
                 t.toggle()
             }
         }), {
-            focusableProps: b
-        } = (0, a.useFocusable)(e, n), x = (0, r.mergeProps)(h, b), S = (0, r.filterDOMProps)(e, {
+            focusableProps: y
+        } = (0, i.useFocusable)(e, n), x = (0, r.mergeProps)(v, y), w = (0, r.filterDOMProps)(e, {
             labelable: !0
         });
         return (0, r.useFormReset)(n, t.isSelected, t.setSelected), {
-            labelProps: (0, r.mergeProps)(g, {
+            labelProps: (0, r.mergeProps)(b, {
                 onClick: e => e.preventDefault()
             }),
-            inputProps: (0, r.mergeProps)(S, {
-                "aria-invalid": m || "invalid" === f || void 0,
+            inputProps: (0, r.mergeProps)(w, {
+                "aria-invalid": h || "invalid" === p || void 0,
                 "aria-errormessage": e["aria-errormessage"],
                 "aria-controls": e["aria-controls"],
-                "aria-readonly": s || void 0,
+                "aria-readonly": a || void 0,
                 onChange: e => {
                     e.stopPropagation(), t.setSelected(e.target.checked)
                 },
-                disabled: o,
+                disabled: s,
                 ...null == c ? {} : {
                     value: c
                 },
-                name: l,
+                name: u,
                 type: "checkbox",
                 ...x
             }),
             isSelected: t.isSelected,
-            isPressed: v || y,
-            isDisabled: o,
-            isReadOnly: s,
-            isInvalid: m || "invalid" === f
+            isPressed: g || m,
+            isDisabled: s,
+            isReadOnly: a,
+            isInvalid: h || "invalid" === p
         }
     }
 }

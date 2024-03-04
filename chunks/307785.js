@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         GUILD_PRODUCT_EDIT_MODAL_KEY: function() {
-            return s
+            return i
         },
         MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES: function() {
-            return i
+            return s
         },
         MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES: function() {
             return r
@@ -17,8 +17,8 @@ function(e, t, n) {
             return o
         }
     });
-    let s = "guild-product-edit-modal",
-        i = 1073741824,
+    let i = "guild-product-edit-modal",
+        s = 1073741824,
         r = 1073741824,
         a = 10,
         o = 30

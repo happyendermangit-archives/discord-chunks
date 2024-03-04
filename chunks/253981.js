@@ -9,12 +9,12 @@ function(e, _, E) {
         o = E.n(t),
         n = E("917351"),
         r = E.n(n),
-        i = E("746379"),
-        a = E("49111");
+        a = E("746379"),
+        i = E("49111");
     let I = /(?:^|\.)(?:discordapp|discord)\.com$/i,
-        s = o.v4().source,
-        T = "(?:".concat("(?:(?:[a-z]+:)?//)", "|www\\.)").concat("(?:\\S+(?::\\S*)?@)?", "(?:localhost|").concat(s, "|").concat("(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+").concat("(?:(?:[a-z\\u00a1-\\uffff]{2,}))", ")").concat("(?::\\d{2,5})?").concat('(?:[/?#][^\\s"]*)?'),
-        S = RegExp(T, "ig"),
+        T = o.v4().source,
+        s = "(?:".concat("(?:(?:[a-z]+:)?//)", "|www\\.)").concat("(?:\\S+(?::\\S*)?@)?", "(?:localhost|").concat(T, "|").concat("(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+").concat("(?:(?:[a-z\\u00a1-\\uffff]{2,}))", ")").concat("(?::\\d{2,5})?").concat('(?:[/?#][^\\s"]*)?'),
+        S = RegExp(s, "ig"),
         N = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]);
 
     function O(e) {
@@ -30,11 +30,11 @@ function(e, _, E) {
 
     function R(e) {
         let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null != e && O(i.parse(e).hostname, _)
+        return null != e && O(a.parse(e).hostname, _)
     }
 
     function l(e) {
-        return null != e && A(i.parse(e).protocol)
+        return null != e && A(a.parse(e).protocol)
     }
     var u = {
         URL_REGEX: S,
@@ -46,24 +46,24 @@ function(e, _, E) {
         isDiscordUrl: R,
         isDiscordUri: l,
         isDiscordCdnUrl: function(e) {
-            return null != e && i.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST
+            return null != e && a.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST
         },
         isDiscordUrlOrUri: e => R(e) || l(e),
         isAppRoute: e => {
             let _ = e.toLowerCase();
-            return _.startsWith("/channels/") || _.startsWith(a.Routes.APPLICATION_STORE) || _.startsWith(a.Routes.APPLICATION_LIBRARY) || _.startsWith(a.Routes.MESSAGE_REQUESTS) || _.startsWith(a.Routes.ACTIVITIES) || _.startsWith(a.Routes.COLLECTIBLES_SHOP) || _.startsWith(a.Routes.ACTIVITY)
+            return _.startsWith("/channels/") || _.startsWith(i.Routes.APPLICATION_STORE) || _.startsWith(i.Routes.APPLICATION_LIBRARY) || _.startsWith(i.Routes.MESSAGE_REQUESTS) || _.startsWith(i.Routes.ACTIVITIES) || _.startsWith(i.Routes.COLLECTIBLES_SHOP) || _.startsWith(i.Routes.ACTIVITY)
         },
-        format: e => i.format(e),
-        formatPathWithQuery: (e, _) => i.format({
+        format: e => a.format(e),
+        formatPathWithQuery: (e, _) => a.format({
             pathname: e,
             query: r.pickBy(_)
         }),
-        formatSearch: e => i.format({
+        formatSearch: e => a.format({
             query: r.pickBy(e)
         }),
         safeParseWithQuery(e) {
             try {
-                return i.parse(e, !0)
+                return a.parse(e, !0)
             } catch (e) {
                 return null
             }

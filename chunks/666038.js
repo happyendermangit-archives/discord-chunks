@@ -23,8 +23,8 @@ function(e, t, n) {
             for (let n in e) {
                 if (!e.hasOwnProperty(n)) continue;
                 let i = this[n],
-                    r = e[n];
-                (!(r instanceof Date) || !(i instanceof Date) || r.getTime() !== i.getTime()) && i !== r && (null == t && (t = {
+                    s = e[n];
+                (!(s instanceof Date) || !(i instanceof Date) || s.getTime() !== i.getTime()) && i !== s && (null == t && (t = {
                     ...this
                 }), t[n] = e[n])
             }
@@ -32,10 +32,10 @@ function(e, t, n) {
         }
         update(t, n, i) {
             null == i && (i = n, n = void 0);
-            let r = this[t];
-            return r instanceof e || (r instanceof Array ? r = [...r] : r instanceof Object && (r = {
-                ...r
-            })), void 0 === r && (r = n), this.set(t, i(r))
+            let s = this[t];
+            return s instanceof e || (s instanceof Array ? s = [...s] : s instanceof Object && (s = {
+                ...s
+            })), void 0 === s && (s = n), this.set(t, i(s))
         }
     }
 }

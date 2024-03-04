@@ -2,30 +2,30 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return a
         },
         isGuildOnboardingAvailable: function() {
-            return u
+            return o
         }
     });
-    var l = n("446674"),
-        r = n("38654"),
-        a = n("49111");
+    var i = n("446674"),
+        s = n("38654"),
+        r = n("49111");
 
-    function i(e) {
-        let t = (0, l.useStateFromStores)([r.default], () => {
+    function a(e) {
+        let t = (0, i.useStateFromStores)([s.default], () => {
             if ((null == e ? void 0 : e.id) == null) return !1;
-            let t = r.default.isFullServerPreview(e.id),
-                n = r.default.isOnboardingEnabled(e.id);
+            let t = s.default.isFullServerPreview(e.id),
+                n = s.default.isOnboardingEnabled(e.id);
             return t && n
         });
-        return t || (null == e ? void 0 : e.hasFeature(a.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS))
+        return t || (null == e ? void 0 : e.hasFeature(r.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS))
     }
 
-    function u(e) {
+    function o(e) {
         if (null == e) return !1;
-        let t = r.default.isFullServerPreview(e.id),
-            n = r.default.isOnboardingEnabled(e.id);
-        return t && n || e.hasFeature(a.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS)
+        let t = s.default.isFullServerPreview(e.id),
+            n = s.default.isOnboardingEnabled(e.id);
+        return t && n || e.hasFeature(r.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS)
     }
 }

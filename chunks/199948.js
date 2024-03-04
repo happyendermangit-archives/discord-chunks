@@ -5,8 +5,8 @@ function(e, t, n) {
             return i
         }
     }), n("424973"), n("222007");
-    var i, r = n("917351"),
-        s = n.n(r);
+    var i, s = n("917351"),
+        r = n.n(s);
     let a = [];
     i = class e {
         static create() {
@@ -14,7 +14,7 @@ function(e, t, n) {
             return a.push(t), t.record
         }
         getTotalBytes() {
-            return s.sum(Object.values(this.bytes))
+            return r.sum(Object.values(this.bytes))
         }
         constructor() {
             this.bytes = {}, this.record = e => {

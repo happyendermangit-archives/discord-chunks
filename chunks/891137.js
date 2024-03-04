@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var s, i;
+    var i, s;
     n.r(t), n.d(t, {
         AST_KEY: function() {
-            return s
+            return i
         }
-    }), (i = s || (s = {})).TEXT = "text", i.STRIKETHROUGH = "s", i.UNDERLINE = "u", i.STRONG = "strong", i.ITALICS = "em", i.IMAGE = "image", i.EMOJI = "emoji", i.CUSTOM_EMOJI = "customEmoji", i.LINK = "link", i.URL = "url", i.AUTOLINK = "autolink", i.HIGHLIGHT = "highlight", i.PARAGRAPH = "paragraph", i.LINE_BREAK = "br", i.NEWLINE = "newline", i.ESCAPE = "escape", i.SPOILER = "spoiler", i.BLOCK_QUOTE = "blockQuote", i.INLINE_CODE = "inlineCode", i.CODE_BLOCK = "codeBlock", i.MENTION = "mention", i.CHANNEL_MENTION = "channelMention", i.CHANNEL = "channel", i.GUILD = "guild", i.ATTACHMENT_LINK = "attachmentLink", i.SOUNDBOARD = "soundboard", i.STATIC_ROUTE_LINK = "staticRouteLink", i.ROLE_MENTION = "roleMention", i.COMMAND_MENTION = "commandMention", i.TIMESTAMP = "timestamp", i.LIST = "list", i.HEADING = "heading"
+    }), (s = i || (i = {})).TEXT = "text", s.STRIKETHROUGH = "s", s.UNDERLINE = "u", s.STRONG = "strong", s.ITALICS = "em", s.IMAGE = "image", s.EMOJI = "emoji", s.CUSTOM_EMOJI = "customEmoji", s.LINK = "link", s.URL = "url", s.AUTOLINK = "autolink", s.HIGHLIGHT = "highlight", s.PARAGRAPH = "paragraph", s.LINE_BREAK = "br", s.NEWLINE = "newline", s.ESCAPE = "escape", s.SPOILER = "spoiler", s.BLOCK_QUOTE = "blockQuote", s.INLINE_CODE = "inlineCode", s.CODE_BLOCK = "codeBlock", s.MENTION = "mention", s.CHANNEL_MENTION = "channelMention", s.CHANNEL = "channel", s.GUILD = "guild", s.ATTACHMENT_LINK = "attachmentLink", s.SOUNDBOARD = "soundboard", s.STATIC_ROUTE_LINK = "staticRouteLink", s.ROLE_MENTION = "roleMention", s.COMMAND_MENTION = "commandMention", s.TIMESTAMP = "timestamp", s.LIST = "list", s.HEADING = "heading"
 }

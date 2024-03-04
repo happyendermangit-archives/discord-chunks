@@ -9,11 +9,11 @@ function(e, _, E) {
         o = E("305961"),
         n = E("718517"),
         r = E("299039"),
-        i = E("388142"),
-        a = E("711454"),
+        a = E("388142"),
+        i = E("711454"),
         I = E("578899");
-    let s = 0;
-    class T extends t.default {
+    let T = 0;
+    class s extends t.default {
         constructor(...e) {
             super(...e), this.actions = {
                 POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e),
@@ -21,18 +21,18 @@ function(e, _, E) {
             }, this.handleConnectionOpen = e => {
                 this._attemptDeadchatPrompt(), this._triggerGamingStatsSetupExperiment()
             }, this.handleIdleChange = () => {
-                Date.now() - s > n.default.Millis.HOUR && this._attemptDeadchatPrompt()
+                Date.now() - T > n.default.Millis.HOUR && this._attemptDeadchatPrompt()
             }, this._attemptDeadchatPrompt = () => {
                 let e = o.default.getGuilds(),
                     _ = r.default.keys(e).filter(e => I.SimpleDeadchatPromptExperiment.getCurrentConfig({
                         guildId: e,
                         location: "manager"
                     }).triggerDeadchat);
-                _.length > 0 && (s = Date.now(), (0, i.initiateChannelPrompts)(_))
+                _.length > 0 && (T = Date.now(), (0, a.initiateChannelPrompts)(_))
             }, this._triggerGamingStatsSetupExperiment = () => {
                 let e = o.default.getGuilds();
                 r.default.keys(e).forEach(e => {
-                    a.GamingStatsSetupExperiment.trackExposure({
+                    i.GamingStatsSetupExperiment.trackExposure({
                         guildId: e,
                         location: "manager"
                     })
@@ -40,5 +40,5 @@ function(e, _, E) {
             }
         }
     }
-    var S = new T
+    var S = new s
 }

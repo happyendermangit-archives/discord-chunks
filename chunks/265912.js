@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return i
         }
     });
-    var s = 16381
+    var i = 16381
 }

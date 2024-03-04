@@ -12,12 +12,12 @@ function(e, t, n) {
         }
     }), n("222007"), n("808653"), n("424973"), n("702976");
     var i = n("568734"),
-        r = n("657944");
-    let s = [r.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO, r.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME];
+        s = n("657944");
+    let r = [s.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO, s.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME];
 
     function a(e) {
         if (null == e) return new Set;
-        let t = new Set(s.reduce((t, n) => ((0, i.hasFlag)(null != e ? e : 0, n) && t.push(n), t), []));
+        let t = new Set(r.reduce((t, n) => ((0, i.hasFlag)(null != e ? e : 0, n) && t.push(n), t), []));
         return t
     }
 
@@ -26,7 +26,7 @@ function(e, t, n) {
     }
 
     function l(e) {
-        return null != e && null != e.flags && s.some(t => {
+        return null != e && null != e.flags && r.some(t => {
             var n;
             return (0, i.hasFlag)(null !== (n = e.flags) && void 0 !== n ? n : 0, t)
         })

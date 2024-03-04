@@ -2,20 +2,20 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         insert: function() {
-            return s
+            return i
         }
     });
 
-    function s(e, t, n) {
-        let s = function(e, t, n) {
-            let s = 0,
-                i = e.length;
-            for (; s < i;) {
-                let r = s + i >>> 1;
-                0 > n(e[r], t) ? s = r + 1 : i = r
+    function i(e, t, n) {
+        let i = function(e, t, n) {
+            let i = 0,
+                s = e.length;
+            for (; i < s;) {
+                let r = i + s >>> 1;
+                0 > n(e[r], t) ? i = r + 1 : s = r
             }
-            return s
+            return i
         }(e, t, n);
-        e.splice(s, 0, t)
+        e.splice(i, 0, t)
     }
 }

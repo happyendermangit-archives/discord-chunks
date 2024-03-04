@@ -2,320 +2,320 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isAdmin: function() {
-            return S
-        },
-        getRoleRowData: function() {
-            return O
-        },
-        sortRoles: function() {
-            return I
-        },
-        getNoRolesRow: function() {
-            return A
-        },
-        isEveryoneRoleId: function() {
             return p
         },
-        isNotEveryoneRoleId: function() {
-            return h
+        getRoleRowData: function() {
+            return S
         },
-        getRolesRows: function() {
-            return g
-        },
-        getRolesRowsWithPermissionDisabled: function() {
-            return C
-        },
-        getExistingRolesRows: function() {
-            return w
-        },
-        getExistingRolesRowWithPermissionDisabled: function() {
+        sortRoles: function() {
             return v
         },
+        getNoRolesRow: function() {
+            return T
+        },
+        isEveryoneRoleId: function() {
+            return C
+        },
+        isNotEveryoneRoleId: function() {
+            return A
+        },
+        getRolesRows: function() {
+            return N
+        },
+        getRolesRowsWithPermissionDisabled: function() {
+            return R
+        },
+        getExistingRolesRows: function() {
+            return O
+        },
+        getExistingRolesRowWithPermissionDisabled: function() {
+            return D
+        },
         getMembersRows: function() {
-            return G
-        },
-        getExistingMembersRows: function() {
-            return H
-        },
-        getRowTypeLabel: function() {
             return U
         },
-        getRemoveTooltipHint: function() {
-            return B
+        getExistingMembersRows: function() {
+            return w
         },
-        flipEveryonePermission: function() {
-            return b
-        },
-        toggleChannelEveryonePermission: function() {
-            return V
-        },
-        grantUserChannelAccess: function() {
+        getRowTypeLabel: function() {
             return k
         },
-        isPrivateGuildChannel: function() {
-            return W
+        getRemoveTooltipHint: function() {
+            return V
         },
-        hasCustomRoles: function() {
+        flipEveryonePermission: function() {
+            return G
+        },
+        toggleChannelEveryonePermission: function() {
             return F
         },
-        canCreatePrivateChannel: function() {
+        grantUserChannelAccess: function() {
             return x
         },
-        getPrivateChannelHintText: function() {
+        isPrivateGuildChannel: function() {
+            return B
+        },
+        hasCustomRoles: function() {
+            return H
+        },
+        canCreatePrivateChannel: function() {
             return Y
         },
-        extractPermissionOverwrites: function() {
+        getPrivateChannelHintText: function() {
             return j
+        },
+        extractPermissionOverwrites: function() {
+            return W
         }
     }), n("424973");
-    var r = n("316693"),
-        i = n("509043"),
-        s = n("318738"),
-        l = n("798609"),
-        u = n("233069"),
-        a = n("26989"),
-        o = n("697218"),
+    var i = n("316693"),
+        s = n("509043"),
+        r = n("318738"),
+        a = n("798609"),
+        o = n("233069"),
+        l = n("26989"),
+        u = n("697218"),
         d = n("404008"),
-        f = n("449008"),
-        E = n("991170"),
-        c = n("299039"),
-        N = n("158998"),
-        _ = n("606762"),
-        R = n("49111"),
-        T = n("782340");
+        c = n("449008"),
+        f = n("991170"),
+        _ = n("299039"),
+        h = n("158998"),
+        E = n("606762"),
+        g = n("49111"),
+        m = n("782340");
 
-    function S(e) {
-        return r.default.has(e.permissions, R.Permissions.ADMINISTRATOR)
+    function p(e) {
+        return i.default.has(e.permissions, g.Permissions.ADMINISTRATOR)
     }
 
-    function O(e) {
+    function S(e) {
         var t, n;
-        let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        let l = (n = e, r.default.has(n.permissions, R.Permissions.ADMINISTRATOR) ? _.RowType.ADMINISTRATOR : _.RowType.ROLE);
+        let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        let a = (n = e, i.default.has(n.permissions, g.Permissions.ADMINISTRATOR) ? E.RowType.ADMINISTRATOR : E.RowType.ROLE);
         return {
-            rowType: l,
-            colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, i.int2hex)(R.DEFAULT_ROLE_COLOR),
+            rowType: a,
+            colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, s.int2hex)(g.DEFAULT_ROLE_COLOR),
             name: e.name,
             id: e.id,
-            disabled: S(e) || s,
-            key: "".concat(l, ":").concat(e.id),
+            disabled: p(e) || r,
+            key: "".concat(a, ":").concat(e.id),
             tags: e.tags
         }
     }
 
-    function I(e, t) {
-        let n = S(e) ? 0 : 1,
-            r = S(t) ? 0 : 1;
-        return n !== r ? n - r : t.position - e.position
+    function v(e, t) {
+        let n = p(e) ? 0 : 1,
+            i = p(t) ? 0 : 1;
+        return n !== i ? n - i : t.position - e.position
     }
 
-    function A() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
+    function T() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
         return [{
-            rowType: _.RowType.EMPTY_STATE,
-            colorString: (0, i.int2hex)(R.DEFAULT_ROLE_COLOR),
+            rowType: E.RowType.EMPTY_STATE,
+            colorString: (0, s.int2hex)(g.DEFAULT_ROLE_COLOR),
             name: e,
             disabled: !0,
             id: "EMPTY_STATE"
         }]
     }
 
-    function M(e, t, n, i) {
-        let s = o.default.getCurrentUser();
-        if (null == s) return !1;
-        if (null == e) return s.id !== t;
-        let l = e.permissionOverwrites[t];
-        return (null == i ? void 0 : i[t]) != null && (l = i[t]), null == l || !r.default.has(l.allow, n)
+    function I(e, t, n, s) {
+        let r = u.default.getCurrentUser();
+        if (null == r) return !1;
+        if (null == e) return r.id !== t;
+        let a = e.permissionOverwrites[t];
+        return (null == s ? void 0 : s[t]) != null && (a = s[t]), null == a || !i.default.has(a.allow, n)
     }
 
-    function p(e, t) {
-        return c.default.castGuildIdAsEveryoneGuildRoleId(e) === t
+    function C(e, t) {
+        return _.default.castGuildIdAsEveryoneGuildRoleId(e) === t
     }
 
-    function h(e, t) {
-        return !p(e, t)
-    }
-
-    function m(e, t) {
-        return !p(e.id, t.id)
-    }
-
-    function g(e, t, n) {
-        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
-        return null == e.roles ? [] : Object.values(e.roles).filter(i => !S(i) && M(t, i.id, n) && m(e, i) && r(i.name)).sort(I).map(e => O(e))
-    }
-
-    function C(e, t, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
-        return null == e.roles ? [] : Object.values(e.roles).filter(r => !S(r) && M(t, r.id, n) && m(e, r) && i(r.name)).sort(I).map(e => O(e, r.default.has(e.permissions, n)))
-    }
-
-    function w(e, t, n, r) {
-        var i, s, l, u;
-        let a = [];
-        if (null == e.roles) return a;
-        return 0 === (a = (i = e, s = t, l = n, u = r, Object.values(i.roles).filter(e => S(e) || !M(s, e.id, l, u) && m(i, e))).sort(I).map(e => O(e))).length ? A(T.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : a
-    }
-
-    function v(e, t, n, i) {
-        var s, l, u, a;
-        let o = [];
-        if (null == e.roles) return o;
-        return 0 === (o = (s = e, l = t, u = n, a = i, Object.values(s.roles).filter(e => {
-            var t;
-            return S(e) || !M(l, e.id, u, a) && m(s, e) || r.default.has(r.default.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
-        })).sort(I).map(e => O(e, r.default.has(e.permissions, n)))).length ? A(T.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : o
-    }
-
-    function L(e, t) {
-        var n;
-        return null !== (n = a.default.getNick(t.id, e.id)) && void 0 !== n ? n : N.default.getName(e)
-    }
-
-    function D(e, t) {
-        return t.isOwner(e)
+    function A(e, t) {
+        return !C(e, t)
     }
 
     function y(e, t) {
-        var n, r, i;
-        let s = (r = e, t.isOwner(r) ? _.RowType.OWNER : _.RowType.MEMBER);
+        return !C(e.id, t.id)
+    }
+
+    function N(e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
+        return null == e.roles ? [] : Object.values(e.roles).filter(s => !p(s) && I(t, s.id, n) && y(e, s) && i(s.name)).sort(v).map(e => S(e))
+    }
+
+    function R(e, t, n) {
+        let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0;
+        return null == e.roles ? [] : Object.values(e.roles).filter(i => !p(i) && I(t, i.id, n) && y(e, i) && s(i.name)).sort(v).map(e => S(e, i.default.has(e.permissions, n)))
+    }
+
+    function O(e, t, n, i) {
+        var s, r, a, o;
+        let l = [];
+        if (null == e.roles) return l;
+        return 0 === (l = (s = e, r = t, a = n, o = i, Object.values(s.roles).filter(e => p(e) || !I(r, e.id, a, o) && y(s, e))).sort(v).map(e => S(e))).length ? T(m.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : l
+    }
+
+    function D(e, t, n, s) {
+        var r, a, o, l;
+        let u = [];
+        if (null == e.roles) return u;
+        return 0 === (u = (r = e, a = t, o = n, l = s, Object.values(r.roles).filter(e => {
+            var t;
+            return p(e) || !I(a, e.id, o, l) && y(r, e) || i.default.has(i.default.combine(e.permissions, null === (t = a.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), o)
+        })).sort(v).map(e => S(e, i.default.has(e.permissions, n)))).length ? T(m.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : u
+    }
+
+    function P(e, t) {
+        var n;
+        return null !== (n = l.default.getNick(t.id, e.id)) && void 0 !== n ? n : h.default.getName(e)
+    }
+
+    function L(e, t) {
+        return t.isOwner(e)
+    }
+
+    function M(e, t) {
+        var n, i, s;
+        let r = (i = e, t.isOwner(i) ? E.RowType.OWNER : E.RowType.MEMBER);
         return {
-            rowType: s,
-            name: L(e, t),
-            nickname: null !== (n = a.default.getNick(t.id, e.id)) && void 0 !== n ? n : null,
-            username: N.default.getName(e),
+            rowType: r,
+            name: P(e, t),
+            nickname: null !== (n = l.default.getNick(t.id, e.id)) && void 0 !== n ? n : null,
+            username: h.default.getName(e),
             id: e.id,
             avatarURL: e.getAvatarURL(t.id, 24),
             bot: e.bot,
             verifiedBot: e.isVerifiedBot(),
-            disabled: (i = e, t.isOwner(i)),
-            key: "".concat(s, ":").concat(e.id)
+            disabled: (s = e, t.isOwner(s)),
+            key: "".concat(r, ":").concat(e.id)
         }
     }
 
-    function P(e, t) {
+    function b(e, t) {
         return e.rowType !== t.rowType ? e.rowType - t.rowType : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase())
     }
 
-    function G(e, t, n, r) {
-        let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-        return e.map(o.default.getUser).filter(f.isNotNullish).filter(e => !n.isOwner(e) && M(t, e.id, r) && (i(L(e, n)) || i(e.username) || i(e.discriminator))).map(e => y(e, n)).sort(P)
+    function U(e, t, n, i) {
+        let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
+        return e.map(u.default.getUser).filter(c.isNotNullish).filter(e => !n.isOwner(e) && I(t, e.id, i) && (s(P(e, n)) || s(e.username) || s(e.discriminator))).map(e => M(e, n)).sort(b)
     }
 
-    function H(e, t, n, r, i) {
-        var s, l, u, a, d;
-        return (s = e, l = t, u = n, a = r, d = i, s.map(o.default.getUser).filter(f.isNotNullish).filter(e => {
+    function w(e, t, n, i, s) {
+        var r, a, o, l, d;
+        return (r = e, a = t, o = n, l = i, d = s, r.map(u.default.getUser).filter(c.isNotNullish).filter(e => {
             var t;
-            return !M(l, e.id, a, d) || (t = e, u.isOwner(t))
-        })).map(e => y(e, n)).sort(P)
+            return !I(a, e.id, l, d) || (t = e, o.isOwner(t))
+        })).map(e => M(e, n)).sort(b)
     }
 
-    function U(e, t) {
+    function k(e, t) {
         switch (e) {
-            case _.RowType.ROLE:
-                return T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
-            case _.RowType.OWNER:
-                return T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
-            case _.RowType.ADMINISTRATOR:
-                return T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
-            case _.RowType.MEMBER:
-                return t ? T.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
-            case _.RowType.USER:
-                return T.default.Messages.USER;
-            case _.RowType.GUILD:
-                return T.default.Messages.SERVER;
-            case _.RowType.EMPTY_STATE:
+            case E.RowType.ROLE:
+                return m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
+            case E.RowType.OWNER:
+                return m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
+            case E.RowType.ADMINISTRATOR:
+                return m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
+            case E.RowType.MEMBER:
+                return t ? m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
+            case E.RowType.USER:
+                return m.default.Messages.USER;
+            case E.RowType.GUILD:
+                return m.default.Messages.SERVER;
+            case E.RowType.EMPTY_STATE:
                 return null
         }
     }
 
-    function B(e) {
+    function V(e) {
         switch (e) {
-            case _.RowType.ROLE:
-                return T.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
-            case _.RowType.OWNER:
-                return T.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-            case _.RowType.ADMINISTRATOR:
-                return T.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-            case _.RowType.MEMBER:
-                return T.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
-            case _.RowType.EMPTY_STATE:
+            case E.RowType.ROLE:
+                return m.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+            case E.RowType.OWNER:
+                return m.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+            case E.RowType.ADMINISTRATOR:
+                return m.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+            case E.RowType.MEMBER:
+                return m.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+            case E.RowType.EMPTY_STATE:
             default:
                 return null
         }
     }
 
-    function b(e, t, n) {
-        let i = e.permissionOverwrites[e.guild_id];
-        null == i && (i = E.default.makeEveryoneOverwrite(e.guild_id));
-        let s = {
-            ...i
+    function G(e, t, n) {
+        let s = e.permissionOverwrites[e.guild_id];
+        null == s && (s = f.default.makeEveryoneOverwrite(e.guild_id));
+        let r = {
+            ...s
         };
-        return s.deny = r.default.remove(s.deny, t), s.allow = r.default.remove(s.allow, t), !n && (s.deny = r.default.add(s.deny, t)), s
+        return r.deny = i.default.remove(r.deny, t), r.allow = i.default.remove(r.allow, t), !n && (r.deny = i.default.add(r.deny, t)), r
     }
 
-    function V(e, t, n) {
-        let r = b(e, t, n);
-        (0, s.updatePermission)(e, r.id, r.allow, r.deny)
+    function F(e, t, n) {
+        let i = G(e, t, n);
+        (0, r.updatePermission)(e, i.id, i.allow, i.deny)
     }
 
-    function k(e, t) {
-        let n = o.default.getCurrentUser();
+    function x(e, t) {
+        let n = u.default.getCurrentUser();
         if (null == n) return;
-        let i = e.permissionOverwrites[n.id];
-        if (null == i) {
-            let i = {
+        let s = e.permissionOverwrites[n.id];
+        if (null == s) {
+            let s = {
                 id: n.id,
-                type: l.PermissionOverwriteType.MEMBER,
-                allow: r.default.add(E.default.NONE, t),
-                deny: E.default.NONE
+                type: a.PermissionOverwriteType.MEMBER,
+                allow: i.default.add(f.default.NONE, t),
+                deny: f.default.NONE
             };
-            (0, s.savePermissionUpdates)(e.id, [i], !0)
+            (0, r.savePermissionUpdates)(e.id, [s], !0)
         } else {
             let {
                 allow: n,
-                deny: l
-            } = i;
-            n = r.default.add(n, t), (0, s.updatePermission)(e, i.id, n, l)
+                deny: a
+            } = s;
+            n = i.default.add(n, t), (0, r.updatePermission)(e, s.id, n, a)
         }
     }
 
-    function W(e, t) {
+    function B(e, t) {
         if (null == e) return !1;
         let n = e.permissionOverwrites[e.guild_id];
-        return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.default.has(n.deny, e.accessPermissions)
+        return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && i.default.has(n.deny, e.accessPermissions)
     }
 
-    function F(e) {
+    function H(e) {
         let t = Object.keys(e.roles);
         return 0 !== t.length && (1 !== t.length || t[0] !== e.id)
     }
 
-    function x(e, t, n) {
-        return e === R.ChannelTypes.GUILD_TEXT || e === R.ChannelTypes.GUILD_ANNOUNCEMENT ? t : !(0, u.isGuildVocalChannelType)(e) && e !== R.ChannelTypes.GUILD_CATEGORY || t && n
+    function Y(e, t, n) {
+        return e === g.ChannelTypes.GUILD_TEXT || e === g.ChannelTypes.GUILD_ANNOUNCEMENT ? t : !(0, o.isGuildVocalChannelType)(e) && e !== g.ChannelTypes.GUILD_CATEGORY || t && n
     }
 
-    function Y(e) {
+    function j(e) {
         switch (e) {
-            case R.ChannelTypes.GUILD_TEXT:
-            case R.ChannelTypes.GUILD_ANNOUNCEMENT:
-                return T.default.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
-            case R.ChannelTypes.GUILD_VOICE:
-                return T.default.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
-            case R.ChannelTypes.GUILD_CATEGORY:
-                return T.default.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
+            case g.ChannelTypes.GUILD_TEXT:
+            case g.ChannelTypes.GUILD_ANNOUNCEMENT:
+                return m.default.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+            case g.ChannelTypes.GUILD_VOICE:
+                return m.default.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+            case g.ChannelTypes.GUILD_CATEGORY:
+                return m.default.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
             default:
                 return null
         }
     }
 
-    function j(e, t) {
+    function W(e, t) {
         let n = [];
         return Object.values(e).forEach(e => {
             let {
-                row: r
+                row: i
             } = e;
-            null != r.id && "" !== r.id && (r.rowType === _.RowType.ROLE ? n.push((0, d.permissionOverwriteForRole)(r.id, t)) : r.rowType === _.RowType.MEMBER && n.push((0, d.permissionOverwriteForUser)(r.id, t)))
+            null != i.id && "" !== i.id && (i.rowType === E.RowType.ROLE ? n.push((0, d.permissionOverwriteForRole)(i.id, t)) : i.rowType === E.RowType.MEMBER && n.push((0, d.permissionOverwriteForUser)(i.id, t)))
         }), n
     }
 }

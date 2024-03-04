@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return s
         }
     });
     var i = n("913144"),
-        r = class e {
+        s = class e {
             static setPermission(e, t) {
                 i.default.dispatch({
                     type: "SET_NATIVE_PERMISSION",

@@ -9,8 +9,8 @@ function(e, t, n) {
         }
     });
     var i = n("862205"),
-        r = n("49111");
-    let s = new Date(168264e7),
+        s = n("49111");
+    let r = new Date(168264e7),
         a = (0, i.createExperiment)({
             kind: "user",
             id: "2023-02_onboarding_home",
@@ -45,13 +45,13 @@ function(e, t, n) {
 
     function o(e, t) {
         var n;
-        let i = __OVERLAY__ || null == e || e.id === r.ME || e.id === r.FAVORITES || !e.hasFeature(r.GuildFeatures.COMMUNITY) || !e.hasFeature(r.GuildFeatures.GUILD_SERVER_GUIDE) || !e.hasFeature(r.GuildFeatures.GUILD_ONBOARDING),
+        let i = __OVERLAY__ || null == e || e.id === s.ME || e.id === s.FAVORITES || !e.hasFeature(s.GuildFeatures.COMMUNITY) || !e.hasFeature(s.GuildFeatures.GUILD_SERVER_GUIDE) || !e.hasFeature(s.GuildFeatures.GUILD_ONBOARDING),
             o = new Date(null !== (n = null == t ? void 0 : t.joinedAt) && void 0 !== n ? n : 0);
         return a.useExperiment({
             location: "d98574_1"
         }, {
             disable: i,
-            autoTrackExposure: null != t && o >= s
+            autoTrackExposure: null != t && o >= r
         })
     }
     var l = a

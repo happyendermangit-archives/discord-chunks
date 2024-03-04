@@ -2,15 +2,15 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         NO_SETTINGS: function() {
-            return s
+            return r
         },
         default: function() {
-            return E
+            return _
         }
     }), n("222007");
     var i = n("446674"),
-        r = n("913144");
-    let s = {
+        s = n("913144");
+    let r = {
             enabled: !1
         },
         a = [],
@@ -18,27 +18,27 @@ function(e, t, n) {
         l = new Set,
         u = {};
 
-    function c(e) {
+    function d(e) {
         var t;
         let n = null === (t = o[e]) || void 0 === t ? void 0 : t.newMemberActions;
         return null == n ? null : (u[e] = n, u[e])
     }
 
-    function d(e) {
+    function c(e) {
         let {
             homeSettings: t,
             guildId: n
         } = e;
-        null != n && (null == t && (o[n] = s), o[n] = t, c(n), l.delete(n))
+        null != n && (null == t && (o[n] = r), o[n] = t, d(n), l.delete(n))
     }
     class f extends i.default.Store {
         getSettings(e) {
             var t;
-            return null == e ? null : null !== (t = o[e]) && void 0 !== t ? t : s
+            return null == e ? null : null !== (t = o[e]) && void 0 !== t ? t : r
         }
         getNewMemberActions(e) {
             var t;
-            return null == e || (null === (t = this.getSettings(e)) || void 0 === t ? void 0 : t.newMemberActions) == null ? null : null == u[e] ? c(e) : u[e]
+            return null == e || (null === (t = this.getSettings(e)) || void 0 === t ? void 0 : t.newMemberActions) == null ? null : null == u[e] ? d(e) : u[e]
         }
         getActionForChannel(e, t) {
             var n;
@@ -72,26 +72,26 @@ function(e, t, n) {
             return null != e && null !== (n = null === (t = o[e]) || void 0 === t ? void 0 : t.enabled) && void 0 !== n && n
         }
         getNewMemberAction(e, t) {
-            var n, i, r;
-            return null == e || null == t ? null : null !== (r = null === (i = o[e]) || void 0 === i ? void 0 : null === (n = i.newMemberActions) || void 0 === n ? void 0 : n.find(e => e.channelId === t)) && void 0 !== r ? r : null
+            var n, i, s;
+            return null == e || null == t ? null : null !== (s = null === (i = o[e]) || void 0 === i ? void 0 : null === (n = i.newMemberActions) || void 0 === n ? void 0 : n.find(e => e.channelId === t)) && void 0 !== s ? s : null
         }
     }
     f.displayName = "GuildOnboardingHomeSettingsStore";
-    var E = new f(r.default, {
+    var _ = new f(s.default, {
         GUILD_HOME_SETTINGS_FETCH_START: function(e) {
             let {
                 guildId: t
             } = e;
             l.add(t)
         },
-        GUILD_HOME_SETTINGS_FETCH_SUCCESS: d,
+        GUILD_HOME_SETTINGS_FETCH_SUCCESS: c,
         GUILD_HOME_SETTINGS_FETCH_FAIL: function(e) {
             let {
                 guildId: t
             } = e;
             l.delete(t)
         },
-        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: d,
+        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: c,
         GUILD_HOME_SETTINGS_TOGGLE_ENABLED: function(e) {
             let {
                 guildId: t,
@@ -105,11 +105,11 @@ function(e, t, n) {
             let {
                 guildId: n,
                 resourceChannel: i
-            } = e, r = o[n];
-            if (null == r) return !1;
-            r.resourceChannels = null !== (t = r.resourceChannels) && void 0 !== t ? t : [];
-            let s = r.resourceChannels.findIndex(e => e.channelId === i.channelId);
-            return -1 !== s && (r.resourceChannels[s] = {
+            } = e, s = o[n];
+            if (null == s) return !1;
+            s.resourceChannels = null !== (t = s.resourceChannels) && void 0 !== t ? t : [];
+            let r = s.resourceChannels.findIndex(e => e.channelId === i.channelId);
+            return -1 !== r && (s.resourceChannels[r] = {
                 ...i
             }, !0)
         },
@@ -118,11 +118,11 @@ function(e, t, n) {
             let {
                 guildId: n,
                 action: i
-            } = e, r = o[n];
-            if (null == r) return !1;
-            r.newMemberActions = null !== (t = r.newMemberActions) && void 0 !== t ? t : [];
-            let s = r.newMemberActions.findIndex(e => e.channelId === i.channelId);
-            return -1 !== s && (r.newMemberActions[s] = {
+            } = e, s = o[n];
+            if (null == s) return !1;
+            s.newMemberActions = null !== (t = s.newMemberActions) && void 0 !== t ? t : [];
+            let r = s.newMemberActions.findIndex(e => e.channelId === i.channelId);
+            return -1 !== r && (s.newMemberActions[r] = {
                 ...i
             }, !0)
         },

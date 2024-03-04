@@ -6,16 +6,16 @@ function(e, t, n) {
         }
     }), n("222007");
     var i = n("917351"),
-        r = n.n(i),
-        s = n("446674"),
+        s = n.n(i),
+        r = n("446674"),
         a = n("913144");
     let o = {};
-    class l extends s.default.Store {
+    class l extends r.default.Store {
         isConnected(e) {
             return null != o[e]
         }
         get connections() {
-            return r.values(o)
+            return s.values(o)
         }
         getApplication(e) {
             return o[e]

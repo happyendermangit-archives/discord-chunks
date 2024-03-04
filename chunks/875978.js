@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var s, i;
+    var i, s;
     n.r(t), n.d(t, {
         ReactionTypes: function() {
-            return s
+            return i
         }
-    }), (i = s || (s = {}))[i.NORMAL = 0] = "NORMAL", i[i.BURST = 1] = "BURST", i[i.VOTE = 2] = "VOTE"
+    }), (s = i || (i = {}))[s.NORMAL = 0] = "NORMAL", s[s.BURST = 1] = "BURST", s[s.VOTE = 2] = "VOTE"
 }

@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     }), n("424973");
     var i = n("917351"),
-        r = n.n(i),
-        s = n("398183"),
+        s = n.n(i),
+        r = n("398183"),
         a = n("713725"),
         o = n("49111");
     class l {
@@ -17,13 +17,13 @@ function(e, t, n) {
         update(e) {
             this.current !== e && (this.current = e, this.history.push({
                 state: e,
-                startTime: (0, s.now)()
+                startTime: (0, r.now)()
             }))
         }
         getVoiceConnectionSuccessStats() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.now)(),
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, r.now)(),
                 t = this.getStateDurations(e),
-                n = e => r.sumBy(t, t => t.state === e ? t.durationMs : 0);
+                n = e => s.sumBy(t, t => t.state === e ? t.durationMs : 0);
             return {
                 state_awaiting_endpoint_ms: n(o.RTCConnectionStates.AWAITING_ENDPOINT),
                 state_authenticating_ms: n(o.RTCConnectionStates.AUTHENTICATING),
@@ -42,7 +42,7 @@ function(e, t, n) {
                 durationMs: t.startTime - e.startTime
             }));
             return t.push((() => {
-                let t = r.last(this.history);
+                let t = s.last(this.history);
                 return {
                     state: t.state,
                     durationMs: e - t.startTime

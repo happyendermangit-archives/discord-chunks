@@ -2,28 +2,28 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         V6OrEarlierAPIError: function() {
-            return r.default
-        },
-        APIError: function() {
             return i.default
         },
+        APIError: function() {
+            return s.default
+        },
         BillingError: function() {
-            return l.default
+            return r.default
         },
         AppliedGuildBoostError: function() {
-            return u.default
-        },
-        UploadVoiceDebugLogsError: function() {
             return a.default
         },
+        UploadVoiceDebugLogsError: function() {
+            return o.default
+        },
         UploadErrorCodes: function() {
-            return a.UploadErrorCodes
+            return o.UploadErrorCodes
         }
     });
-    var r = n("333805"),
-        i = n("599417"),
-        l = n("736978");
+    var i = n("333805"),
+        s = n("599417"),
+        r = n("736978");
     n("852766"), n("846071");
-    var u = n("54545"),
-        a = n("927367")
+    var a = n("54545"),
+        o = n("927367")
 }

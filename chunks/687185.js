@@ -1,7 +1,7 @@
-function(t, e, s) {
-    var r = s("446825").Buffer;
-    t.exports = function(t, e) {
-        for (var s = Math.min(t.length, e.length), i = new r(s), n = 0; n < s; ++n) i[n] = t[n] ^ e[n];
+function(e, t, n) {
+    var r = n("446825").Buffer;
+    e.exports = function(e, t) {
+        for (var n = Math.min(e.length, t.length), i = new r(n), o = 0; o < n; ++o) i[o] = e[o] ^ t[o];
         return i
     }
 }

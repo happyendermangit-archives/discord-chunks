@@ -1,30 +1,30 @@
-function(t, e, s) {
-    var r = s("446825").Buffer,
-        i = s("839383"),
-        n = s("664813");
+function(e, t, n) {
+    var r = n("446825").Buffer,
+        i = n("839383"),
+        o = n("664813");
 
-    function c(t) {
-        var e, s = t.modulus.byteLength();
-        do e = new i(n(s)); while (e.cmp(t.modulus) >= 0 || !e.umod(t.prime1) || !e.umod(t.prime2));
-        return e
+    function s(e) {
+        var t, n = e.modulus.byteLength();
+        do t = new i(o(n)); while (t.cmp(e.modulus) >= 0 || !t.umod(e.prime1) || !t.umod(e.prime2));
+        return t
     }
 
-    function o(t, e) {
-        var s, n, o = {
-                blinder: (n = c(s = e)).toRed(i.mont(s.modulus)).redPow(new i(s.publicExponent)).fromRed(),
-                unblinder: n.invm(s.modulus)
+    function a(e, t) {
+        var n, o, a = {
+                blinder: (o = s(n = t)).toRed(i.mont(n.modulus)).redPow(new i(n.publicExponent)).fromRed(),
+                unblinder: o.invm(n.modulus)
             },
-            f = e.modulus.byteLength(),
-            u = new i(t).mul(o.blinder).umod(e.modulus),
-            a = u.toRed(i.mont(e.prime1)),
-            d = u.toRed(i.mont(e.prime2)),
-            p = e.coefficient,
-            b = e.prime1,
-            h = e.prime2,
-            l = a.redPow(e.exponent1).fromRed(),
-            g = d.redPow(e.exponent2).fromRed(),
-            v = l.isub(g).imul(p).umod(b).imul(h);
-        return g.iadd(v).imul(o.unblinder).umod(e.modulus).toArrayLike(r, "be", f)
+            c = t.modulus.byteLength(),
+            u = new i(e).mul(a.blinder).umod(t.modulus),
+            d = u.toRed(i.mont(t.prime1)),
+            l = u.toRed(i.mont(t.prime2)),
+            f = t.coefficient,
+            p = t.prime1,
+            h = t.prime2,
+            v = d.redPow(t.exponent1).fromRed(),
+            g = l.redPow(t.exponent2).fromRed(),
+            b = v.isub(g).imul(f).umod(p).imul(h);
+        return g.iadd(b).imul(a.unblinder).umod(t.modulus).toArrayLike(r, "be", c)
     }
-    o.getr = c, t.exports = o
+    a.getr = s, e.exports = a
 }

@@ -5,20 +5,20 @@ function(e, t, n) {
             return i.ActionType
         },
         useGridNavigator: function() {
-            return r.default
+            return s.default
         },
         useListNavigator: function() {
-            return s.default
+            return r.default
         },
         useMenuNavigator: function() {
             return a.default
         }
     });
     var i = n("942367"),
-        r = n("857029");
-    n.es(r, t);
-    var s = n("389752");
+        s = n("857029");
     n.es(s, t);
+    var r = n("389752");
+    n.es(r, t);
     var a = n("881545");
     n.es(a, t)
 }

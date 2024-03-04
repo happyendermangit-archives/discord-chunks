@@ -45,15 +45,15 @@ function(e, t, n) {
                 d = o(l, r),
                 f = o(c, s, u),
                 p = i(d),
-                h = i(f);
+                m = i(f);
             t.modifiersData[n] = {
                 referenceClippingOffsets: d,
                 popperEscapeOffsets: f,
                 isReferenceHidden: p,
-                hasPopperEscaped: h
+                hasPopperEscaped: m
             }, t.attributes.popper = Object.assign({}, t.attributes.popper, {
                 "data-popper-reference-hidden": p,
-                "data-popper-escaped": h
+                "data-popper-escaped": m
             })
         }
     }

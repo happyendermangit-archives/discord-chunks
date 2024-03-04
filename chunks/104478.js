@@ -2,32 +2,32 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return i
         }
     });
-    var s, i = n("398183"),
+    var i, s = n("398183"),
         r = n("862337"),
         a = n("268491"),
         o = n("49111");
 
-    function d(e) {
+    function l(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         return null != e ? Math.round(e) : t
     }
-    s = class {
+    i = class {
         start() {
             let {
                 resolution: e,
                 fps: t
             } = a.default.getState();
-            this._targetResolution = e, this._targetFPS = t, this._statInterval.start(1e3, this._sampleStats), this._lastLayoutChanged = (0, i.now)()
+            this._targetResolution = e, this._targetFPS = t, this._statInterval.start(1e3, this._sampleStats), this._lastLayoutChanged = (0, s.now)()
         }
         stop() {
-            this._statInterval.stop(), this._streamEnd = (0, i.now)(), this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1e3)
+            this._statInterval.stop(), this._streamEnd = (0, s.now)(), this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1e3)
         }
         layoutChange(e) {
             if (e === this._lastLayout || null != this._streamEnd) return;
-            let t = (0, i.now)();
+            let t = (0, s.now)();
             this._incrementLayout(this._lastLayout, (t - this._lastLayoutChanged) / 1e3), this._layoutChanges++, this._lastLayout = e, this._lastLayoutChanged = t
         }
         getLayout() {
@@ -36,13 +36,13 @@ function(e, t, n) {
         getStats() {
             let e = {
                 num_layout_changes: this._layoutChanges,
-                duration_layout_fullscreen: d(this._layoutBuckets[o.StreamLayouts.FULL_SCREEN]),
-                duration_layout_theatre: d(this._layoutBuckets[o.StreamLayouts.THEATRE]),
-                duration_layout_pip: d(this._layoutBuckets[o.StreamLayouts.PIP]),
-                duration_layout_popout: d(this._layoutBuckets[o.StreamLayouts.POPOUT]),
-                duration_layout_portrait: d(this._layoutBuckets[o.StreamLayouts.PORTRAIT]),
-                duration_layout_landscape: d(this._layoutBuckets[o.StreamLayouts.LANDSCAPE]),
-                duration_layout_minimized: d(this._layoutBuckets[o.StreamLayouts.MINIMIZED])
+                duration_layout_fullscreen: l(this._layoutBuckets[o.StreamLayouts.FULL_SCREEN]),
+                duration_layout_theatre: l(this._layoutBuckets[o.StreamLayouts.THEATRE]),
+                duration_layout_pip: l(this._layoutBuckets[o.StreamLayouts.PIP]),
+                duration_layout_popout: l(this._layoutBuckets[o.StreamLayouts.POPOUT]),
+                duration_layout_portrait: l(this._layoutBuckets[o.StreamLayouts.PORTRAIT]),
+                duration_layout_landscape: l(this._layoutBuckets[o.StreamLayouts.LANDSCAPE]),
+                duration_layout_minimized: l(this._layoutBuckets[o.StreamLayouts.MINIMIZED])
             };
             return this._isSender ? {
                 ...e,

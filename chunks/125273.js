@@ -1,12 +1,12 @@
 function(e, t, n) {
     "use strict";
 
-    function a() {
+    function i() {
         return {}
     }
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return i
         }
     })
 }

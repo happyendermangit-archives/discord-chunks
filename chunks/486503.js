@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return g
         }
     }), n("222007");
-    var s = n("42203"),
-        i = n("455079");
+    var i = n("42203"),
+        s = n("455079");
     let r = new Set,
         a = new Set,
         o = !1;
 
-    function d(e) {
+    function l(e) {
         return e.isSpam
     }
 
@@ -23,50 +23,50 @@ function(e, t, n) {
         return t
     }
 
-    function l() {
-        r.clear(), a.clear(), Object.values(s.default.getMutablePrivateChannels()).forEach(e => {
+    function d() {
+        r.clear(), a.clear(), Object.values(i.default.getMutablePrivateChannels()).forEach(e => {
             u(e)
         }), o = !0
     }
 
-    function f(e) {
+    function c(e) {
         let {
             channelId: t
         } = e;
         a.add(t)
     }
 
-    function _(e) {
+    function f(e) {
         let {
             channel: t
         } = e;
         return u(t)
     }
 
-    function c(e) {
+    function _(e) {
         let {
             channels: t
         } = e;
         for (let e of t) u(e)
     }
 
-    function g(e) {
+    function h(e) {
         let {
             channel: t
         } = e, n = !1;
         return r.has(t.id) && (r.delete(t.id), n = !0), n
     }
-    class m extends i.default {
+    class E extends s.default {
         initialize() {
-            this.waitFor(s.default)
+            this.waitFor(i.default)
         }
         loadCache() {
-            let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+            let e = this.readSnapshot(E.LATEST_SNAPSHOT_VERSION);
             null != e && (r = new Set(e))
         }
         takeSnapshot() {
             return {
-                version: m.LATEST_SNAPSHOT_VERSION,
+                version: E.LATEST_SNAPSHOT_VERSION,
                 data: Array.from(r)
             }
         }
@@ -87,16 +87,16 @@ function(e, t, n) {
         }
         constructor() {
             super({
-                CONNECTION_OPEN: l,
-                CONNECTION_OPEN_SUPPLEMENTAL: l,
+                CONNECTION_OPEN: d,
+                CONNECTION_OPEN_SUPPLEMENTAL: d,
                 CACHE_LOADED_LAZY: () => this.loadCache(),
-                CHANNEL_CREATE: _,
-                CHANNEL_UPDATES: c,
-                CHANNEL_DELETE: g,
-                MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
+                CHANNEL_CREATE: f,
+                CHANNEL_UPDATES: _,
+                CHANNEL_DELETE: h,
+                MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: c
             })
         }
     }
-    m.displayName = "SpamMessageRequestStore", m.LATEST_SNAPSHOT_VERSION = 1;
-    var h = new m
+    E.displayName = "SpamMessageRequestStore", E.LATEST_SNAPSHOT_VERSION = 1;
+    var g = new E
 }

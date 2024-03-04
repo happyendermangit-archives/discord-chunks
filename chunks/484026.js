@@ -1,11 +1,11 @@
 function(e, t, n) {
     "use strict";
-    var s;
+    var i;
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return i
         }
-    }), s = class {
+    }), i = class {
         setParams(e) {
             this.param !== e && (this.param = e, this.loading = !1, this.loaded = !1)
         }

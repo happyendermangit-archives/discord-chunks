@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     }), n("370692"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
     var i = n("811022");
-    let r = new i.default("RenderingContextWebGL");
-    class s {
+    let s = new i.default("RenderingContextWebGL");
+    class r {
         static create(e) {
             if (null == e) return null;
             let t = this.createShader(e, e.VERTEX_SHADER, "\nattribute vec4 position;\nattribute vec2 texcoord;\nuniform mat4 transform;\nvarying vec2 out_texcoord;\n\nvoid main() {\n   gl_Position = transform * position;\n   out_texcoord = texcoord;\n}\n"),
@@ -15,34 +15,34 @@ function(e, t, n) {
             if (null == t || null == n) return null;
             let i = this.createProgram(e, t, n);
             if (null == i) return null;
-            let r = e.getAttribLocation(i, "position"),
+            let s = e.getAttribLocation(i, "position"),
                 a = e.getAttribLocation(i, "texcoord");
-            if (-1 === r || -1 === a) return null;
+            if (-1 === s || -1 === a) return null;
             let o = e.getUniformLocation(i, "transform"),
                 l = e.getUniformLocation(i, "texture");
             if (null == o || null == l) return null;
             let u = e.createBuffer();
             if (null == u) return null;
             e.bindBuffer(e.ARRAY_BUFFER, u), e.bufferData(e.ARRAY_BUFFER, new Float32Array([0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1]), e.STATIC_DRAW);
-            let c = e.createTexture();
-            return null == c ? null : new s({
+            let d = e.createTexture();
+            return null == d ? null : new r({
                 gl: e,
                 program: i,
-                positionLoc: r,
+                positionLoc: s,
                 texcoordLoc: a,
                 transformLoc: o,
                 textureLoc: l,
                 vertexBuffer: u,
-                texture: c
+                texture: d
             })
         }
         static createShader(e, t, n) {
             let i = e.createShader(t);
             if (null == i) return null;
             if (e.shaderSource(i, n), e.compileShader(i), !e.getShaderParameter(i, e.COMPILE_STATUS)) {
-                r.warn("Failed to compile shader!");
+                s.warn("Failed to compile shader!");
                 let t = e.getShaderInfoLog(i);
-                return null != t && r.log(t), e.deleteShader(i), null
+                return null != t && s.log(t), e.deleteShader(i), null
             }
             return i
         }
@@ -51,9 +51,9 @@ function(e, t, n) {
             let i = e.createProgram();
             if (null == i) return null;
             if (e.attachShader(i, t), e.attachShader(i, n), e.linkProgram(i), !e.getProgramParameter(i, e.LINK_STATUS)) {
-                r.warn("Failed to link program!");
+                s.warn("Failed to link program!");
                 let t = e.getProgramInfoLog(i);
-                return null != t && r.log(t), e.deleteProgram(i), null
+                return null != t && s.log(t), e.deleteProgram(i), null
             }
             return i
         }
@@ -69,17 +69,17 @@ function(e, t, n) {
             program: t,
             positionLoc: n,
             texcoordLoc: i,
-            transformLoc: r,
-            textureLoc: s,
+            transformLoc: s,
+            textureLoc: r,
             vertexBuffer: a,
             texture: o
         }) {
-            this.transform = new Float32Array([2, 0, 0, 0, 0, -2, 0, 0, 0, 0, 1, 0, -1, 1, 0, 1]), this.gl = e, this.program = t, this.positionLoc = n, this.texcoordLoc = i, this.transformLoc = r, this.textureLoc = s, this.vertexBuffer = a, this.texture = o
+            this.transform = new Float32Array([2, 0, 0, 0, 0, -2, 0, 0, 0, 0, 1, 0, -1, 1, 0, 1]), this.gl = e, this.program = t, this.positionLoc = n, this.texcoordLoc = i, this.transformLoc = s, this.textureLoc = r, this.vertexBuffer = a, this.texture = o
         }
     }
 
     function a(e) {
         let t = e.getContext("webgl2");
-        return null == t ? null : s.create(t)
+        return null == t ? null : r.create(t)
     }
 }

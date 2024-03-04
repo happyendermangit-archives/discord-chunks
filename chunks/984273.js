@@ -5,10 +5,10 @@ function(e, t, n) {
             return i
         }
     });
-    var i, r = n("666038"),
-        s = n("719923"),
+    var i, s = n("666038"),
+        r = n("719923"),
         a = n("49111");
-    i = class e extends r.default {
+    i = class e extends s.default {
         static createFromServer(t) {
             var n, i;
             return new e({
@@ -39,7 +39,7 @@ function(e, t, n) {
             if (this.isGiftable || this.deleted) return !1;
             if (this.type === a.EntitlementTypes.PREMIUM_SUBSCRIPTION) {
                 let n = t.get(this.skuId);
-                if (null != n && !n.premium || !s.default.canInstallPremiumApplications(e)) return !1
+                if (null != n && !n.premium || !r.default.canInstallPremiumApplications(e)) return !1
             }
             let i = new Date;
             if (null != this.startsAt && i < this.startsAt || null != this.endsAt && i >= this.endsAt) return !1;

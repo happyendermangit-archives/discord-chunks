@@ -2,61 +2,61 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         generateInviteKeyFromUrlParams: function() {
-            return u
-        },
-        generateInviteKeyFromExtraData: function() {
             return a
         },
-        parseExtraDataFromInviteKey: function() {
+        generateInviteKeyFromExtraData: function() {
             return o
         },
+        parseExtraDataFromInviteKey: function() {
+            return l
+        },
         parseInviteCodeFromInviteKey: function() {
-            return s
+            return u
         }
     }), n("222007");
-    var r = n("522632"),
-        i = n("833858");
-    let l = "event";
+    var i = n("522632"),
+        s = n("833858");
+    let r = "event";
 
-    function u(e, t) {
+    function a(e, t) {
         if (null == t) return e;
         let n = function(e) {
             let t = "?" === e.charAt(0) ? e.substring(1) : e;
             try {
-                let e = r.parse(t);
-                return (0, i.getFirstQueryStringValue)(e[l])
+                let e = i.parse(t);
+                return (0, s.getFirstQueryStringValue)(e[r])
             } catch (e) {
                 return
             }
         }(t);
-        return a({
+        return o({
             baseCode: e,
             guildScheduledEventId: n
         })
     }
 
-    function a(e) {
+    function o(e) {
         let {
             baseCode: t,
             guildScheduledEventId: n
         } = e;
-        return null == n ? t : "".concat(t, "?").concat(l, "=").concat(n)
+        return null == n ? t : "".concat(t, "?").concat(r, "=").concat(n)
     }
 
-    function o(e) {
+    function l(e) {
         let [t, n] = e.split("?");
         if (null == n) return {
             baseCode: t
         };
-        let u = r.parse(n),
-            a = (0, i.getFirstQueryStringValue)(u[l]);
+        let a = i.parse(n),
+            o = (0, s.getFirstQueryStringValue)(a[r]);
         return {
             baseCode: t,
-            guildScheduledEventId: a
+            guildScheduledEventId: o
         }
     }
 
-    function s(e) {
+    function u(e) {
         let [t] = e.split("?");
         return t
     }

@@ -1,8 +1,8 @@
-function(t, r, n) {
-    var e = n("659382"),
-        o = n("492692"),
-        i = n("276440"),
-        u = i && i.isTypedArray,
-        c = u ? o(u) : e;
-    t.exports = c
+function(e, t, n) {
+    var r = n("659382"),
+        i = n("492692"),
+        o = n("276440"),
+        s = o && o.isTypedArray,
+        a = s ? i(s) : r;
+    e.exports = a
 }

@@ -6,17 +6,17 @@ function(e, t, n) {
         }
     });
     var i = n("446674"),
-        r = n("913144");
-    let s = n("353927").DEFAULT_VOICE_BITRATE;
+        s = n("913144");
+    let r = n("353927").DEFAULT_VOICE_BITRATE;
     class a extends i.default.Store {
         get bitrate() {
-            return s
+            return r
         }
     }
     a.displayName = "BitRateStore";
-    var o = new a(r.default, {
+    var o = new a(s.default, {
         SET_CHANNEL_BITRATE: function(e) {
-            s = e.bitrate
+            r = e.bitrate
         }
     })
 }

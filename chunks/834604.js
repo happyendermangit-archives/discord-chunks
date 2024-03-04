@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return r
         }
     });
     var i = n("862205");
-    let r = (0, i.createExperiment)({
+    let s = (0, i.createExperiment)({
         kind: "user",
         id: "2023-08_video_quality_measurement_v1",
         label: "Video Quality Measurement",
@@ -107,10 +107,10 @@ function(e, t, n) {
             }
         }]
     });
-    var s = {
+    var r = {
         isFeatureSupportedOnPlatform: () => !0,
         getConfig(e) {
-            let t = r.getCurrentConfig({
+            let t = s.getCurrentConfig({
                 location: "e1c55b_1"
             }, {
                 autoTrackExposure: e

@@ -1,13 +1,13 @@
-function(t, e, s) {
-    var r = s("126580");
-    t.exports = function(t, e, s) {
-        for (var i = -1, n = t.criteria, c = e.criteria, o = n.length, f = s.length; ++i < o;) {
-            var u = r(n[i], c[i]);
+function(e, t, n) {
+    var r = n("126580");
+    e.exports = function(e, t, n) {
+        for (var i = -1, o = e.criteria, s = t.criteria, a = o.length, c = n.length; ++i < a;) {
+            var u = r(o[i], s[i]);
             if (u) {
-                if (i >= f) return u;
-                return u * ("desc" == s[i] ? -1 : 1)
+                if (i >= c) return u;
+                return u * ("desc" == n[i] ? -1 : 1)
             }
         }
-        return t.index - e.index
+        return e.index - t.index
     }
 }

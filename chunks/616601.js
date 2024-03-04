@@ -1,8 +1,8 @@
-function(t, e, s) {
-    var r = s("540893"),
-        i = s("21567"),
-        n = s("970371");
-    t.exports = function(t, e) {
-        return n(i(t, e, r), t + "")
+function(e, t, n) {
+    var r = n("540893"),
+        i = n("21567"),
+        o = n("970371");
+    e.exports = function(e, t) {
+        return o(i(e, t, r), e + "")
     }
 }

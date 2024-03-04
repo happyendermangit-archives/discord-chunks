@@ -2,21 +2,21 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return d
         }
     }), n("222007");
-    var s = n("913144"),
-        i = n("316272"),
+    var i = n("913144"),
+        s = n("316272"),
         r = n("248967"),
         a = n("42203"),
         o = n("162771"),
-        d = n("449008");
-    class u extends i.default {
+        l = n("449008");
+    class u extends s.default {
         _initialize() {
-            s.default.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), s.default.subscribe("LOGOUT", this.handleLogout)
+            i.default.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), i.default.subscribe("LOGOUT", this.handleLogout)
         }
         _terminate() {
-            s.default.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), s.default.unsubscribe("LOGOUT", this.handleLogout)
+            i.default.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), i.default.unsubscribe("LOGOUT", this.handleLogout)
         }
         constructor(...e) {
             super(...e), this.handleVoiceChannelSelect = e => {
@@ -33,11 +33,11 @@ function(e, t, n) {
                 this.handleDisconnectFromStageChannel(null == t ? null : null != n ? n : null)
             }, this.handleDisconnectFromStageChannel = e => {
                 let t = o.default.getGuildId();
-                (0, r.stopLurkingAll)([t, e].filter(d.isNotNullish))
+                (0, r.stopLurkingAll)([t, e].filter(l.isNotNullish))
             }, this.handleLogout = () => {
                 this.terminate(), this.handleDisconnectFromStageChannel(null)
             }
         }
     }
-    var l = new u
+    var d = new u
 }

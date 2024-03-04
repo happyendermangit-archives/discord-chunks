@@ -9,11 +9,11 @@ function(e, _, E) {
         o = E("913144"),
         n = E("161454"),
         r = E("373469"),
-        i = E("42887"),
-        a = E("56947"),
+        a = E("42887"),
+        i = E("56947"),
         I = E("111177"),
-        s = E("386045"),
-        T = E("18346"),
+        T = E("386045"),
+        s = E("18346"),
         S = E("803725"),
         N = E("80028"),
         O = E("782340");
@@ -29,11 +29,11 @@ function(e, _, E) {
             })
         }
         applyNativeClipsSettings(e) {
-            if (!(0, T.default)(i.default)) return;
-            let _ = (0, a.areClipsEnabled)(),
-                E = s.default.getSettings(),
+            if (!(0, s.default)(a.default)) return;
+            let _ = (0, i.areClipsEnabled)(),
+                E = T.default.getSettings(),
                 t = (E.clipsEnabled || E.decoupledClipsEnabled) && _,
-                o = i.default.getMediaEngine();
+                o = a.default.getMediaEngine();
             if (o.setClipBufferLength(t ? E.clipsLength / 1e3 : 0), (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(), null == e || (null == e ? void 0 : e.settings.clipsQuality) != null) {
                 let {
                     frameRate: _,
@@ -53,9 +53,9 @@ function(e, _, E) {
             E ? setTimeout(() => this.fireClipsInitEvent(), N.CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY) : this.fireClipsInitEvent()
         }
         fireClipsInitEvent() {
-            if (!(0, T.default)(i.default)) return;
-            let e = (0, a.areClipsEnabled)(),
-                _ = s.default.getSettings(),
+            if (!(0, s.default)(a.default)) return;
+            let e = (0, i.areClipsEnabled)(),
+                _ = T.default.getSettings(),
                 E = _.clipsEnabled && e;
             if (!E || null != r.default.getCurrentUserActiveStream()) return;
             let t = n.default.getVisibleGame();
@@ -73,7 +73,7 @@ function(e, _, E) {
             if (!_) {
                 let {
                     clipsEnabled: e
-                } = s.default.getSettings();
+                } = T.default.getSettings();
                 e && S.updateClipsEnabled({
                     clipsEnabled: !1
                 })

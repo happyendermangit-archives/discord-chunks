@@ -1,5 +1,5 @@
-function(t, e, s) {
-    t.exports = function(t) {
-        return t && t.length ? t[0] : void 0
+function(e, t, n) {
+    e.exports = function(e) {
+        return e && e.length ? e[0] : void 0
     }
 }

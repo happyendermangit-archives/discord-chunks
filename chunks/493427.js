@@ -6,17 +6,17 @@ function(e, t, n) {
         }
     });
     var r = function() {
-        for (var e, t, n = 0, r = "", a = arguments.length; n < a; n++)(e = arguments[n]) && (t = function e(t) {
-            var n, r, a = "";
-            if ("string" == typeof t || "number" == typeof t) a += t;
+        for (var e, t, n = 0, r = "", i = arguments.length; n < i; n++)(e = arguments[n]) && (t = function e(t) {
+            var n, r, i = "";
+            if ("string" == typeof t || "number" == typeof t) i += t;
             else if ("object" == typeof t) {
                 if (Array.isArray(t)) {
-                    var i = t.length;
-                    for (n = 0; n < i; n++) t[n] && (r = e(t[n])) && (a && (a += " "), a += r)
+                    var o = t.length;
+                    for (n = 0; n < o; n++) t[n] && (r = e(t[n])) && (i && (i += " "), i += r)
                 } else
-                    for (r in t) t[r] && (a && (a += " "), a += r)
+                    for (r in t) t[r] && (i && (i += " "), i += r)
             }
-            return a
+            return i
         }(e)) && (r && (r += " "), r += t);
         return r
     }

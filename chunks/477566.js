@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("37983");
     n("884691");
-    var r = n("551042"),
-        s = n("135230"),
+    var s = n("551042"),
+        r = n("135230"),
         a = n("782340"),
         o = {
             show(e) {
@@ -19,14 +19,14 @@ function(e, t, n) {
                     confirmText: o,
                     cancelText: l,
                     onConfirm: u,
-                    onCancel: c,
-                    onCloseCallback: d,
+                    onCancel: d,
+                    onCloseCallback: c,
                     secondaryConfirmText: f,
-                    onConfirmSecondary: E,
-                    className: p,
-                    titleClassName: h
+                    onConfirmSecondary: _,
+                    className: h,
+                    titleClassName: E
                 } = e;
-                (0, r.openModal)(e => (0, i.jsx)(s.default, {
+                (0, s.openModal)(e => (0, i.jsx)(r.default, {
                     ...e,
                     title: t,
                     body: n,
@@ -34,13 +34,13 @@ function(e, t, n) {
                     confirmText: o,
                     cancelText: l,
                     onConfirm: u,
-                    onCancel: c,
+                    onCancel: d,
                     secondaryConfirmText: f,
-                    onConfirmSecondary: E,
-                    className: p,
-                    titleClassName: h
+                    onConfirmSecondary: _,
+                    className: h,
+                    titleClassName: E
                 }), {
-                    onCloseCallback: d
+                    onCloseCallback: c
                 })
             },
             close() {},

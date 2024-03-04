@@ -5,7 +5,7 @@ function(e, _, E) {
             return r
         },
         copy: function() {
-            return i
+            return a
         }
     }), E("70102");
     var t = E("281071"),
@@ -20,7 +20,7 @@ function(e, _, E) {
         }
     })();
 
-    function i(e) {
+    function a(e) {
         return !!r && (o.isPlatformEmbedded ? (n.default.copy(e), !0) : t.copy(e))
     }
 }

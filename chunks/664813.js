@@ -1,21 +1,21 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("390493");
-    s("70102");
-    var i = s("912065").Buffer,
-        n = s.g.crypto || s.g.msCrypto;
-    n && n.getRandomValues ? t.exports = function(t, e) {
-        if (t > 4294967295) throw RangeError("requested too many random bytes");
-        var s = i.allocUnsafe(t);
-        if (t > 0) {
-            if (t > 65536)
-                for (var c = 0; c < t; c += 65536) n.getRandomValues(s.slice(c, c + 65536));
-            else n.getRandomValues(s)
+    var r = n("390493");
+    n("70102");
+    var i = n("912065").Buffer,
+        o = n.g.crypto || n.g.msCrypto;
+    o && o.getRandomValues ? e.exports = function(e, t) {
+        if (e > 4294967295) throw RangeError("requested too many random bytes");
+        var n = i.allocUnsafe(e);
+        if (e > 0) {
+            if (e > 65536)
+                for (var s = 0; s < e; s += 65536) o.getRandomValues(n.slice(s, s + 65536));
+            else o.getRandomValues(n)
         }
-        return "function" == typeof e ? r.nextTick(function() {
-            e(null, s)
-        }) : s
-    } : t.exports = function() {
+        return "function" == typeof t ? r.nextTick(function() {
+            t(null, n)
+        }) : n
+    } : e.exports = function() {
         throw Error("Secure random number generation is not supported by this browser.\nUse Chrome, Firefox or Internet Explorer 11")
     }
 }

@@ -5,45 +5,45 @@ function(e, t, n) {
             return o
         },
         hidden: function() {
-            return d
-        },
-        resized: function() {
             return l
         },
+        resized: function() {
+            return d
+        },
         fullscreenChange: function() {
-            return f
-        },
-        visibilityChange: function() {
-            return _
-        },
-        init: function() {
             return c
         },
+        visibilityChange: function() {
+            return f
+        },
+        init: function() {
+            return _
+        },
         unload: function() {
-            return g
+            return h
         }
     });
-    var s = n("917351"),
-        i = n("913144"),
+    var i = n("917351"),
+        s = n("913144"),
         r = n("563680"),
         a = n("816454");
 
     function o(e, t) {
-        i.default.dispatch({
+        s.default.dispatch({
             type: "WINDOW_FOCUS",
             windowId: (0, a.getWindowId)(e),
             focused: t
         })
     }
 
-    function d(e) {
-        i.default.dispatch({
+    function l(e) {
+        s.default.dispatch({
             type: "WINDOW_HIDDEN",
             windowId: (0, a.getWindowId)(e)
         })
     }
-    let u = (0, s.memoize)(e => (0, s.debounce)((t, n) => {
-        i.default.dispatch({
+    let u = (0, i.memoize)(e => (0, i.debounce)((t, n) => {
+        s.default.dispatch({
             type: "WINDOW_RESIZED",
             windowId: e,
             width: t,
@@ -51,34 +51,34 @@ function(e, t, n) {
         })
     }, 100));
 
-    function l(e) {
+    function d(e) {
         let t = (0, a.getWindowId)(e),
             n = u(t);
         n(e.innerWidth, e.innerHeight)
     }
 
-    function f(e) {
+    function c(e) {
         let t = (0, a.getWindowId)(e);
-        i.default.dispatch({
+        s.default.dispatch({
             type: "WINDOW_FULLSCREEN_CHANGE",
             windowId: t,
             isElementFullscreen: (0, r.isFullScreen)(null, e.document)
         })
     }
 
-    function _(e) {
+    function f(e) {
         let t = (0, a.getWindowId)(e);
-        i.default.dispatch({
+        s.default.dispatch({
             type: "WINDOW_VISIBILITY_CHANGE",
             windowId: t,
             visible: "visible" === e.document.visibilityState
         })
     }
 
-    function c(e) {
+    function _(e) {
         let t = (0, a.getWindowId)(e),
             n = e.document;
-        i.default.dispatch({
+        s.default.dispatch({
             type: "WINDOW_INIT",
             windowId: t,
             isElementFullscreen: (0, r.isFullScreen)(null, n),
@@ -89,8 +89,8 @@ function(e, t, n) {
         })
     }
 
-    function g(e) {
-        i.default.dispatch({
+    function h(e) {
+        s.default.dispatch({
             type: "WINDOW_UNLOAD",
             windowId: (0, a.getWindowId)(e)
         })

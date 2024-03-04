@@ -1,4 +1,4 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    e.der = s("348793"), e.pem = s("489723")
+    t.der = n("348793"), t.pem = n("489723")
 }

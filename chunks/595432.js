@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return r
         }
     });
     var i = n("40217"),
-        r = n("832359");
+        s = n("832359");
 
-    function s(e) {
-        return s.useDirectVideo ? (0, r.default)(e) : (0, i.default)(e)
+    function r(e) {
+        return r.useDirectVideo ? (0, s.default)(e) : (0, i.default)(e)
     }
-    s.defaultProps = i.default.defaultProps, s.useDirectVideo = !1
+    r.defaultProps = i.default.defaultProps, r.useDirectVideo = !1
 }

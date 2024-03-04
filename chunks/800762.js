@@ -1,54 +1,54 @@
 function(e, t, n) {
     "use strict";
-    let i, r;
+    let i, s;
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return R
         }
     }), n("808653"), n("222007");
-    var s = n("917351"),
-        a = n.n(s),
+    var r = n("917351"),
+        a = n.n(r),
         o = n("446674"),
         l = n("913144"),
         u = n("628454"),
-        c = n("299039"),
-        d = n("49111"),
+        d = n("299039"),
+        c = n("49111"),
         f = n("99795");
-    let E = 0,
-        p = 0,
-        h = {},
-        _ = {},
-        S = {},
+    let _ = 0,
+        h = 0,
+        E = {},
+        g = {},
         m = {},
-        T = {};
+        p = {},
+        S = {};
 
-    function g(e, t) {
+    function v(e, t) {
         return "".concat(e, ":").concat(t)
     }
 
-    function I(e, t) {
+    function T(e, t) {
         let n = e[t];
         return null == n && (n = {}, e[t] = n), n
     }
 
-    function C(e) {
+    function I(e) {
         var t;
-        let n = null !== (t = h[d.ME]) && void 0 !== t ? t : {},
+        let n = null !== (t = E[c.ME]) && void 0 !== t ? t : {},
             i = {};
         a.each(n, (t, n) => {
             t.channelId !== e && (i[n] = t)
-        }), h[d.ME] = i
+        }), E[c.ME] = i
     }
 
-    function v(e, t, n) {
-        let i = I(h, null != e ? e : d.ME),
-            r = i[t],
-            s = n(r);
-        return r === s ? [!1, s, r] : (null != r && (delete i[t], null != r.channelId && (delete I(_, r.channelId)[t], delete I(S, r.channelId)[t]), null != r.sessionId && delete I(m, t)[r.sessionId]), null != s && (i[t] = s, null != s.channelId && (I(_, s.channelId)[t] = s, s.selfVideo && (I(S, s.channelId)[t] = s)), null != s.sessionId && (I(m, t)[s.sessionId] = s)), [!0, s, r])
+    function C(e, t, n) {
+        let i = T(E, null != e ? e : c.ME),
+            s = i[t],
+            r = n(s);
+        return s === r ? [!1, r, s] : (null != s && (delete i[t], null != s.channelId && (delete T(g, s.channelId)[t], delete T(m, s.channelId)[t]), null != s.sessionId && delete T(p, t)[s.sessionId]), null != r && (i[t] = r, null != r.channelId && (T(g, r.channelId)[t] = r, r.selfVideo && (T(m, r.channelId)[t] = r)), null != r.sessionId && (T(p, t)[r.sessionId] = r)), [!0, r, s])
     }
 
     function A(e, t) {
-        return v(e, t.userId, e => {
+        return C(e, t.userId, e => {
             if (null == t.channelId) return null;
             {
                 let n = {
@@ -69,29 +69,29 @@ function(e, t, n) {
         })
     }
 
-    function R(e) {
+    function y(e) {
         let {
             guild: t
         } = e;
-        a.forEach(h[t.id], e => {
-            v(t.id, e.userId, () => null)
-        }), delete h[t.id]
+        a.forEach(E[t.id], e => {
+            C(t.id, e.userId, () => null)
+        }), delete E[t.id]
     }
     class N extends o.default.Store {
         getAllVoiceStates() {
-            return h
+            return E
         }
         getVoiceStateVersion() {
-            return p
+            return h
         }
         getVoiceStates(e) {
-            return I(h, null != e ? e : d.ME)
+            return T(E, null != e ? e : c.ME)
         }
         getVoiceStatesForChannel(e) {
-            return I(_, e)
+            return T(g, e)
         }
         getVideoVoiceStatesForChannel(e) {
-            return I(S, e)
+            return T(m, e)
         }
         getVoiceState(e, t) {
             return this.getVoiceStates(e)[t]
@@ -99,14 +99,14 @@ function(e, t, n) {
         getVoiceStateForChannel(e) {
             var t;
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i;
-            return null === (t = I(_, e)) || void 0 === t ? void 0 : t[n]
+            return null === (t = T(g, e)) || void 0 === t ? void 0 : t[n]
         }
         getVoiceStateForUser(e) {
-            return Object.values(I(m, e))[0]
+            return Object.values(T(p, e))[0]
         }
         getVoiceStateForSession(e, t) {
             var n;
-            return null != t ? null === (n = I(m, e)) || void 0 === n ? void 0 : n[t] : null
+            return null != t ? null === (n = T(p, e)) || void 0 === n ? void 0 : n[t] : null
         }
         getUserVoiceChannelId(e, t) {
             var n;
@@ -114,90 +114,90 @@ function(e, t, n) {
         }
         getCurrentClientVoiceChannelId(e) {
             let t = this.getVoiceState(e, i);
-            return null != t && null != r && t.sessionId === r ? t.channelId : null
+            return null != t && null != s && t.sessionId === s ? t.channelId : null
         }
         isCurrentClientInVoiceChannel() {
             var e;
-            return null != r && (null === (e = m[i]) || void 0 === e ? void 0 : e[r]) != null
+            return null != s && (null === (e = p[i]) || void 0 === e ? void 0 : e[s]) != null
         }
         isInChannel(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i;
             if (null == e) return !1;
             let n = this.getVoiceStateForChannel(e, t);
-            return null != n && (t !== i || null != r && n.sessionId === r)
+            return null != n && (t !== i || null != s && n.sessionId === s)
         }
         hasVideo(e) {
-            return Object.values(I(S, e)).length > 0
+            return Object.values(T(m, e)).length > 0
         }
         getVoicePlatformForChannel(e, t) {
-            var n, s;
-            let a = null != r && (null === (s = m[i]) || void 0 === s ? void 0 : null === (n = s[r]) || void 0 === n ? void 0 : n.channelId);
-            return t === i && e === a ? f.VoicePlatforms.DESKTOP : T[g(t, e)]
+            var n, r;
+            let a = null != s && (null === (r = p[i]) || void 0 === r ? void 0 : null === (n = r[s]) || void 0 === n ? void 0 : n.channelId);
+            return t === i && e === a ? f.VoicePlatforms.DESKTOP : S[v(t, e)]
         }
         get userHasBeenMovedVersion() {
-            return E
+            return _
         }
     }
     N.displayName = "VoiceStateStore";
-    var O = new N(l.default, {
+    var R = new N(l.default, {
         CONNECTION_OPEN: function(e) {
             let {
                 user: t,
                 sessionId: n
             } = e;
-            h = {}, _ = {}, m = {}, S = {}, i = t.id, r = n
+            E = {}, g = {}, p = {}, m = {}, i = t.id, s = n
         },
         OVERLAY_INITIALIZE: function(e) {
             let {
                 voiceStates: t,
                 user: n,
-                sessionId: s
+                sessionId: r
             } = e;
-            for (let [e, n] of(h = {}, _ = {}, m = {}, S = {}, Object.entries(t)))
-                for (let [t, i] of Object.entries(n)) v(e, t, () => new u.default(i));
-            i = n.id, r = s
+            for (let [e, n] of(E = {}, g = {}, p = {}, m = {}, Object.entries(t)))
+                for (let [t, i] of Object.entries(n)) C(e, t, () => new u.default(i));
+            i = n.id, s = r
         },
         VOICE_CHANNEL_SELECT: function(e) {
             let {
                 guildId: t,
                 channelId: n
-            } = e, [r] = v(t, i, e => null == e ? void 0 : e.set("channelId", n));
-            return r
+            } = e, [s] = C(t, i, e => null == e ? void 0 : e.set("channelId", n));
+            return s
         },
         VOICE_STATE_UPDATES: function(e) {
             let {
                 voiceStates: t
             } = e;
             return t.reduce((e, t) => {
-                let [n, i, s] = A(t.guildId, t);
-                return n ? (t.sessionId === r && null != i && null != s && s.channelId !== i.channelId && (E += 1), p++, !0) : e
+                let [n, i, r] = A(t.guildId, t);
+                return n ? (t.sessionId === s && null != i && null != r && r.channelId !== i.channelId && (_ += 1), h++, !0) : e
             }, !1)
         },
-        GUILD_DELETE: R,
-        GUILD_CREATE: R,
+        GUILD_DELETE: y,
+        GUILD_CREATE: y,
         CHANNEL_DELETE: function(e) {
             let {
                 channel: t
             } = e;
-            C(t.id)
+            I(t.id)
         },
         CALL_DELETE: function(e) {
             let {
                 channelId: t
             } = e;
-            C(t)
+            I(t)
         },
         PASSIVE_UPDATE_V1: function(e) {
             var t, n;
             let i = !1,
-                r = c.default.keys(null !== (t = h[e.guildId]) && void 0 !== t ? t : {}),
-                s = new Set(r);
+                s = d.default.keys(null !== (t = E[e.guildId]) && void 0 !== t ? t : {}),
+                r = new Set(s);
             for (let t of null !== (n = e.voiceStates) && void 0 !== n ? n : []) {
                 let [n] = A(e.guildId, t);
-                i = i || n, s.delete(t.userId)
+                i = i || n, r.delete(t.userId)
             }
-            for (let t of s) v(e.guildId, t, () => null), i = !0;
-            return i && p++, i
+            for (let t of r) C(e.guildId, t, () => null), i = !0;
+            return i && h++, i
         },
         RTC_CONNECTION_PLATFORM: function(e) {
             let {
@@ -205,7 +205,7 @@ function(e, t, n) {
                 channelId: n,
                 platform: i
             } = e;
-            T[g(t, n)] = i
+            S[v(t, n)] = i
         }
     })
 }

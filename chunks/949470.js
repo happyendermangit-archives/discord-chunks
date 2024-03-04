@@ -1,8 +1,8 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("911718")("%TypeError%");
-    t.exports = function(t, e) {
-        if (null == t) throw new r(e || "Cannot call method on " + t);
-        return t
+    var r = n("911718")("%TypeError%");
+    e.exports = function(e, t) {
+        if (null == e) throw new r(t || "Cannot call method on " + e);
+        return e
     }
 }

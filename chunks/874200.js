@@ -9,42 +9,42 @@ function(e, _, E) {
         o = E.n(t),
         n = E("689988"),
         r = E("709681");
-    let i = (0, r.createSound)("vibing_wumpus", "vibing_wumpus", 0),
-        a = 0,
+    let a = (0, r.createSound)("vibing_wumpus", "vibing_wumpus", 0),
+        i = 0,
         I = 0,
-        s = null;
+        T = null;
 
-    function T(e, _) {
+    function s(e, _) {
         let E = Math.round(100 * e),
             t = Math.round(100 * I),
-            n = Math.round(100 * a);
-        E > 0 && n >= t || E < 0 && n <= t ? (clearInterval(s), 0 === t && null != _ && _()) : (n += E, a = n / 100, i.volume = o(a, 0, .5))
+            n = Math.round(100 * i);
+        E > 0 && n >= t || E < 0 && n <= t ? (clearInterval(T), 0 === t && null != _ && _()) : (n += E, i = n / 100, a.volume = o(i, 0, .5))
     }
 
     function S(e) {
-        null != s && clearInterval(s), I = 0;
+        null != T && clearInterval(T), I = 0;
         let _ = R();
-        s = setInterval(() => {
-            T(_, e)
+        T = setInterval(() => {
+            s(_, e)
         }, 100)
     }
 
     function N() {
-        null != s && clearInterval(s), i.loop(), I = .5;
+        null != T && clearInterval(T), a.loop(), I = .5;
         let e = R();
-        s = setInterval(() => T(e), 100)
+        T = setInterval(() => s(e), 100)
     }
 
     function O() {
-        S(i.pause.bind(i))
+        S(a.pause.bind(a))
     }
 
     function A() {
-        S(i.stop.bind(i))
+        S(a.stop.bind(a))
     }
 
     function R() {
-        return .2 * (I - a)
+        return .2 * (I - i)
     }
     class l extends n.default {
         constructor(...e) {

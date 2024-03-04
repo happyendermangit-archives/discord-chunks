@@ -2,86 +2,86 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         updatePermission: function() {
-            return l
-        },
-        selectPermission: function() {
-            return u
-        },
-        setAdvancedMode: function() {
             return a
         },
-        init: function() {
+        selectPermission: function() {
             return o
+        },
+        setAdvancedMode: function() {
+            return l
+        },
+        init: function() {
+            return u
         },
         savePermissionUpdates: function() {
             return d
         },
         saveAndClearPermissionUpdates: function() {
-            return f
+            return c
         }
     });
-    var r = n("913144"),
-        i = n("929278"),
-        s = n("450911");
-    async function l(e, t, n, s) {
-        let l = e.getGuildId();
-        if (null != l && t === l) {
-            let t = await (0, i.checkDefaultChannelThresholdMetAfterChannelPermissionDeny)(e, s, n);
+    var i = n("913144"),
+        s = n("929278"),
+        r = n("450911");
+    async function a(e, t, n, r) {
+        let a = e.getGuildId();
+        if (null != a && t === a) {
+            let t = await (0, s.checkDefaultChannelThresholdMetAfterChannelPermissionDeny)(e, r, n);
             if (!t) return !1
         }
-        r.default.dispatch({
+        i.default.dispatch({
             type: "CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION",
             id: t,
             allow: n,
-            deny: s
+            deny: r
         })
     }
 
-    function u(e) {
-        r.default.dispatch({
+    function o(e) {
+        i.default.dispatch({
             type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION",
             id: e
         })
     }
 
-    function a(e) {
-        r.default.dispatch({
+    function l(e) {
+        i.default.dispatch({
             type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE",
             advancedMode: e
         })
     }
 
-    function o() {
-        r.default.dispatch({
+    function u() {
+        i.default.dispatch({
             type: "CHANNEL_SETTINGS_PERMISSIONS_INIT"
         })
     }
 
     function d(e, t, n) {
-        return f(e, t, [], n)
+        return c(e, t, [], n)
     }
 
-    function f(e, t, n, i) {
-        return r.default.dispatch({
+    function c(e, t, n, s) {
+        return i.default.dispatch({
             type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING"
-        }), new Promise(r => {
-            let i = () => {
-                if (0 === t.length && 0 === n.length) return r();
+        }), new Promise(i => {
+            let s = () => {
+                if (0 === t.length && 0 === n.length) return i();
                 if (t.length > 0) {
                     let n = t.pop();
-                    if (null == n) return i();
-                    s.default.updatePermissionOverwrite(e, n).then(i, i)
+                    if (null == n) return s();
+                    r.default.updatePermissionOverwrite(e, n).then(s, s)
                 } else {
                     let t = n.pop();
-                    if (null == t) return i();
-                    s.default.clearPermissionOverwrite(e, t).then(i, i)
+                    if (null == t) return s();
+                    r.default.clearPermissionOverwrite(e, t).then(s, s)
                 }
             };
-            i()
+            s()
         }).then(() => {
-            r.default.dispatch({
+            i.default.dispatch({
                 type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS",
-                silent: i
+                silent: s
             })
         })
     }

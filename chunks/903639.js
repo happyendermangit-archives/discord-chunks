@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DisableCommunicationDuration: function() {
-            return r
+            return s
         },
         getFriendlyDurationString: function() {
             return l
@@ -11,22 +11,22 @@ function(e, t, n) {
             return u
         },
         GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: function() {
-            return c
+            return d
         },
         DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY: function() {
-            return d
+            return c
         },
         SET_COMMUNICATION_DISABLED_MODAL_NAME: function() {
             return f
         },
         CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: function() {
-            return E
+            return _
         },
         MAX_REASON_LENGTH: function() {
-            return p
+            return h
         }
     });
-    var i, r, s = n("701909"),
+    var i, s, r = n("701909"),
         a = n("49111"),
         o = n("782340");
 
@@ -59,18 +59,18 @@ function(e, t, n) {
             default:
                 return
         }
-    }(i = r || (r = {}))[i.DURATION_60_SEC = 60] = "DURATION_60_SEC", i[i.DURATION_5_MIN = 300] = "DURATION_5_MIN", i[i.DURATION_10_MIN = 600] = "DURATION_10_MIN", i[i.DURATION_1_HOUR = 3600] = "DURATION_1_HOUR", i[i.DURATION_1_DAY = 86400] = "DURATION_1_DAY", i[i.DURATION_1_WEEK = 604800] = "DURATION_1_WEEK";
-    let u = () => Object.keys(r).filter(e => isNaN(Number(e))).map(e => {
+    }(i = s || (s = {}))[i.DURATION_60_SEC = 60] = "DURATION_60_SEC", i[i.DURATION_5_MIN = 300] = "DURATION_5_MIN", i[i.DURATION_10_MIN = 600] = "DURATION_10_MIN", i[i.DURATION_1_HOUR = 3600] = "DURATION_1_HOUR", i[i.DURATION_1_DAY = 86400] = "DURATION_1_DAY", i[i.DURATION_1_WEEK = 604800] = "DURATION_1_WEEK";
+    let u = () => Object.keys(s).filter(e => isNaN(Number(e))).map(e => {
             var t;
-            let n = null !== (t = l(r[e])) && void 0 !== t ? t : "";
+            let n = null !== (t = l(s[e])) && void 0 !== t ? t : "";
             return {
                 label: n,
-                value: r[e]
+                value: s[e]
             }
         }),
-        c = s.default.getArticleURL(a.HelpdeskArticles.DISABLE_GUILD_COMMUNICATION),
-        d = "GuildCommunicationDisabledDismissedGuilds",
+        d = r.default.getArticleURL(a.HelpdeskArticles.DISABLE_GUILD_COMMUNICATION),
+        c = "GuildCommunicationDisabledDismissedGuilds",
         f = "Set Communication Disabled Modal",
-        E = "Clear Communication Disabled Modal",
-        p = 512
+        _ = "Clear Communication Disabled Modal",
+        h = 512
 }

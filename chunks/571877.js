@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BaseSpeedTesterEvent: function() {
-            return s.BaseSpeedTesterEvent
+            return r.BaseSpeedTesterEvent
         },
         default: function() {
             return i
         }
     });
-    var i, r = n("595275"),
-        s = n("372534"),
+    var i, s = n("595275"),
+        r = n("372534"),
         a = n("353927");
     let o = 0;
-    i = class extends r.default {
+    i = class extends s.default {
         destroy() {
-            this.destroyed = !0, this.setConnectionState(a.ConnectionStates.DISCONNECTED), this.emit(s.BaseSpeedTesterEvent.Destroy, this), this.removeAllListeners()
+            this.destroyed = !0, this.setConnectionState(a.ConnectionStates.DISCONNECTED), this.emit(r.BaseSpeedTesterEvent.Destroy, this), this.removeAllListeners()
         }
         setConnectionState(e) {
-            this.connectionState = e, this.emit(s.BaseSpeedTesterEvent.ConnectionStateChange, this.connectionState)
+            this.connectionState = e, this.emit(r.BaseSpeedTesterEvent.ConnectionStateChange, this.connectionState)
         }
         initializeStreamParameters(e) {
             this.videoStreamParameters = e.filter(e => e.type === a.MediaTypes.TEST).map(e => {

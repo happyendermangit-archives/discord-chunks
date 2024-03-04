@@ -16,10 +16,10 @@ function(e, t, n) {
         d = n("559610"),
         f = n("445969"),
         p = n("478659"),
-        h = n("475319");
+        m = n("475319");
 
-    function m(e) {
-        return (m = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+    function h(e) {
+        return (h = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
             return typeof e
         } : function(e) {
             return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
@@ -96,17 +96,17 @@ function(e, t, n) {
         (0, d.default)(3, arguments);
         var L = String(e),
             D = String(t),
-            T = (0, h.getDefaultOptions)(),
+            T = (0, m.getDefaultOptions)(),
             S = null !== (C = null !== (H = null == _ ? void 0 : _.locale) && void 0 !== H ? H : T.locale) && void 0 !== C ? C : r.default;
         if (!S.match) throw RangeError("locale must contain match property");
         var Y = (0, c.default)(null !== (F = null !== (A = null !== (I = null !== (N = null == _ ? void 0 : _.firstWeekContainsDate) && void 0 !== N ? N : null == _ ? void 0 : null === (R = _.locale) || void 0 === R ? void 0 : null === (z = R.options) || void 0 === z ? void 0 : z.firstWeekContainsDate) && void 0 !== I ? I : T.firstWeekContainsDate) && void 0 !== A ? A : null === (W = T.locale) || void 0 === W ? void 0 : null === (B = W.options) || void 0 === B ? void 0 : B.firstWeekContainsDate) && void 0 !== F ? F : 1);
         if (!(Y >= 1 && Y <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-        var x = (0, c.default)(null !== (U = null !== (K = null !== (V = null !== (J = null == _ ? void 0 : _.weekStartsOn) && void 0 !== J ? J : null == _ ? void 0 : null === (q = _.locale) || void 0 === q ? void 0 : null === (G = q.options) || void 0 === G ? void 0 : G.weekStartsOn) && void 0 !== V ? V : T.weekStartsOn) && void 0 !== K ? K : null === ($ = T.locale) || void 0 === $ ? void 0 : null === (Q = $.options) || void 0 === Q ? void 0 : Q.weekStartsOn) && void 0 !== U ? U : 0);
-        if (!(x >= 0 && x <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
+        var O = (0, c.default)(null !== (U = null !== (K = null !== (V = null !== (J = null == _ ? void 0 : _.weekStartsOn) && void 0 !== J ? J : null == _ ? void 0 : null === (q = _.locale) || void 0 === q ? void 0 : null === (G = q.options) || void 0 === G ? void 0 : G.weekStartsOn) && void 0 !== V ? V : T.weekStartsOn) && void 0 !== K ? K : null === ($ = T.locale) || void 0 === $ ? void 0 : null === (Q = $.options) || void 0 === Q ? void 0 : Q.weekStartsOn) && void 0 !== U ? U : 0);
+        if (!(O >= 0 && O <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
         if ("" === D) return "" === L ? (0, o.default)(n) : new Date(NaN);
-        var O = {
+        var x = {
                 firstWeekContainsDate: Y,
-                weekStartsOn: x,
+                weekStartsOn: O,
                 locale: S
             },
             E = [new f.DateToSystemTimezoneSetter],
@@ -135,7 +135,7 @@ function(e, t, n) {
                             token: n,
                             fullToken: t
                         });
-                        var i = r.run(L, t, S.match, O);
+                        var i = r.run(L, t, S.match, x);
                         if (!i) return {
                             v: new Date(NaN)
                         };
@@ -150,7 +150,7 @@ function(e, t, n) {
                         L = L.slice(t.length)
                     }
                 }();
-                if ("object" === m(ee)) return ee.v
+                if ("object" === h(ee)) return ee.v
             }
         } catch (e) {
             Z.e(e)
@@ -181,8 +181,8 @@ function(e, t, n) {
         try {
             for (ei.s(); !(eo = ei.n()).done;) {
                 var es = eo.value;
-                if (!es.validate(er, O)) return new Date(NaN);
-                var eu = es.set(er, ea, O);
+                if (!es.validate(er, x)) return new Date(NaN);
+                var eu = es.set(er, ea, x);
                 Array.isArray(eu) ? (er = eu[0], (0, i.default)(ea, eu[1])) : er = eu
             }
         } catch (e) {

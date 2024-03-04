@@ -5,25 +5,25 @@ function(e, t, n) {
             return r
         },
         BEGIN_DRAG: function() {
-            return a
-        },
-        PUBLISH_DRAG_SOURCE: function() {
             return i
         },
-        HOVER: function() {
+        PUBLISH_DRAG_SOURCE: function() {
             return o
         },
-        DROP: function() {
+        HOVER: function() {
             return s
+        },
+        DROP: function() {
+            return a
         },
         END_DRAG: function() {
             return c
         }
     });
     var r = "dnd-core/INIT_COORDS",
-        a = "dnd-core/BEGIN_DRAG",
-        i = "dnd-core/PUBLISH_DRAG_SOURCE",
-        o = "dnd-core/HOVER",
-        s = "dnd-core/DROP",
+        i = "dnd-core/BEGIN_DRAG",
+        o = "dnd-core/PUBLISH_DRAG_SOURCE",
+        s = "dnd-core/HOVER",
+        a = "dnd-core/DROP",
         c = "dnd-core/END_DRAG"
 }

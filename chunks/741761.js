@@ -1,5 +1,5 @@
-function(t, r, n) {
-    t.exports = function(t) {
-        return this.__data__.has(t)
+function(e, t, n) {
+    e.exports = function(e) {
+        return this.__data__.has(e)
     }
 }

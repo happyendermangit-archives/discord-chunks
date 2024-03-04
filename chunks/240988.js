@@ -1,6 +1,6 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = function(t) {
-        return null === t || "function" != typeof t && "object" != typeof t
+    e.exports = function(e) {
+        return null === e || "function" != typeof e && "object" != typeof e
     }
 }

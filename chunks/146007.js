@@ -1,14 +1,14 @@
-function(t, r, n) {
-    var e = n("263470"),
-        o = n("533178"),
-        i = n("804128"),
-        u = n("929191"),
-        c = n("636734"),
-        a = n("957810");
+function(e, t, n) {
+    var r = n("263470"),
+        i = n("533178"),
+        o = n("804128"),
+        s = n("929191"),
+        a = n("636734"),
+        c = n("957810");
 
-    function f(t) {
-        var r = this.__data__ = new e(t);
-        this.size = r.size
+    function u(e) {
+        var t = this.__data__ = new r(e);
+        this.size = t.size
     }
-    f.prototype.clear = o, f.prototype.delete = i, f.prototype.get = u, f.prototype.has = c, f.prototype.set = a, t.exports = f
+    u.prototype.clear = i, u.prototype.delete = o, u.prototype.get = s, u.prototype.has = a, u.prototype.set = c, e.exports = u
 }

@@ -1,11 +1,11 @@
 function(e, t, n) {
     "use strict";
     n("424973"), n("854508"), e.exports = function(e, t) {
-        var r, a, i, o, s, c, l = [];
-        for (i = 0, r = n("87552")(e), o = n("973809"), s = n("325688"), c = n("275750"); i < r.length; ++i) o[a = r[i]] && (a = o[a]), t && "keypress" !== t && s[a] && (a = s[a], l.push("shift")), c(a) && l.push(a);
-        return t = this.pickBestAction(a, l, t), {
-            key: a,
-            modifiers: l,
+        var r, i, o, s, a, c, u = [];
+        for (o = 0, r = n("87552")(e), s = n("973809"), a = n("325688"), c = n("275750"); o < r.length; ++o) s[i = r[o]] && (i = s[i]), t && "keypress" !== t && a[i] && (i = a[i], u.push("shift")), c(i) && u.push(i);
+        return t = this.pickBestAction(i, u, t), {
+            key: i,
+            modifiers: u,
             action: t
         }
     }

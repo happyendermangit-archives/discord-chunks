@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         calculateBoxSize: function() {
-            return m
+            return h
         },
         calculateBoxSizes: function() {
-            return h
+            return m
         }
     }), n("222007");
     var r = n("209488"),
@@ -31,14 +31,14 @@ function(e, t, n) {
             contentBoxSize: f(),
             contentRect: new a.DOMRectReadOnly(0, 0, 0, 0)
         }),
-        h = function(e, t) {
+        m = function(e, t) {
             if (void 0 === t && (t = !1), s.has(e) && !t) return s.get(e);
             if ((0, o.isHidden)(e)) return s.set(e, p), p;
             var n = getComputedStyle(e),
                 r = (0, o.isSVG)(e) && e.ownerSVGElement && e.getBBox(),
                 i = !c && "border-box" === n.boxSizing,
-                h = l.test(n.writingMode || ""),
-                m = !r && u.test(n.overflowY || ""),
+                m = l.test(n.writingMode || ""),
+                h = !r && u.test(n.overflowY || ""),
                 y = !r && u.test(n.overflowX || ""),
                 _ = r ? 0 : d(n.paddingTop),
                 g = r ? 0 : d(n.paddingRight),
@@ -52,22 +52,22 @@ function(e, t, n) {
                 T = _ + v,
                 S = L + w,
                 Y = M + k,
-                x = y ? e.offsetHeight - Y - e.clientHeight : 0,
-                O = m ? e.offsetWidth - S - e.clientWidth : 0,
-                E = r ? r.width : d(n.width) - (i ? D + S : 0) - O,
-                P = r ? r.height : d(n.height) - (i ? T + Y : 0) - x,
-                j = E + D + O + S,
-                C = P + T + x + Y,
+                O = y ? e.offsetHeight - Y - e.clientHeight : 0,
+                x = h ? e.offsetWidth - S - e.clientWidth : 0,
+                E = r ? r.width : d(n.width) - (i ? D + S : 0) - x,
+                P = r ? r.height : d(n.height) - (i ? T + Y : 0) - O,
+                j = E + D + x + S,
+                C = P + T + O + Y,
                 H = Object.freeze({
-                    devicePixelContentBoxSize: f(Math.round(E * devicePixelRatio), Math.round(P * devicePixelRatio), h),
-                    borderBoxSize: f(j, C, h),
-                    contentBoxSize: f(E, P, h),
+                    devicePixelContentBoxSize: f(Math.round(E * devicePixelRatio), Math.round(P * devicePixelRatio), m),
+                    borderBoxSize: f(j, C, m),
+                    contentBoxSize: f(E, P, m),
                     contentRect: new a.DOMRectReadOnly(b, _, E, P)
                 });
             return s.set(e, H), H
         },
-        m = function(e, t, n) {
-            var a = h(e, n),
+        h = function(e, t, n) {
+            var a = m(e, n),
                 o = a.borderBoxSize,
                 i = a.contentBoxSize,
                 s = a.devicePixelContentBoxSize;

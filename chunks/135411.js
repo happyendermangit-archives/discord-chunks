@@ -2,83 +2,83 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         FormNoticeTypes: function() {
-            return d
+            return c
         },
         FormNoticeImagePositions: function() {
             return f
         },
         FormNotice: function() {
-            return E
+            return _
         }
     });
     var i = n("37983");
     n("884691");
-    var r = n("414456"),
-        s = n.n(r),
+    var s = n("414456"),
+        r = n.n(s),
         a = n("659397"),
         o = n("145131"),
         l = n("329272"),
         u = n("818810"),
-        c = n("468701");
-    let d = a.Card.Types,
+        d = n("468701");
+    let c = a.Card.Types,
         f = {
             LEFT: "left",
             RIGHT: "right"
         };
 
-    function E(e) {
+    function _(e) {
         let t, n, {
-                type: r = a.Card.Types.DANGER,
-                imageData: d,
-                button: E,
-                className: p,
-                iconClassName: h,
-                title: _,
-                body: S,
-                style: m,
-                align: T = o.default.Align.START
+                type: s = a.Card.Types.DANGER,
+                imageData: c,
+                button: _,
+                className: h,
+                iconClassName: E,
+                title: g,
+                body: m,
+                style: p,
+                align: S = o.default.Align.START
             } = e,
-            g = o.default.Direction.HORIZONTAL;
-        if (null != d) {
+            v = o.default.Direction.HORIZONTAL;
+        if (null != c) {
             let {
                 position: e,
                 ...n
-            } = d;
+            } = c;
             t = (0, i.jsx)(o.default.Child, {
                 grow: 0,
                 shrink: 0,
                 children: (0, i.jsx)("img", {
                     alt: "",
-                    className: s(c.icon, h),
+                    className: r(d.icon, E),
                     ...n
                 })
-            }), e === f.RIGHT && (g = o.default.Direction.HORIZONTAL_REVERSE)
-        } else null != E && (n = E);
-        let I = !0;
-        return r === a.Card.Types.PRIMARY && (I = !1), (0, i.jsx)(a.Card, {
-            className: s(c.formNotice, p),
-            type: r,
-            style: m,
+            }), e === f.RIGHT && (v = o.default.Direction.HORIZONTAL_REVERSE)
+        } else null != _ && (n = _);
+        let T = !0;
+        return s === a.Card.Types.PRIMARY && (T = !1), (0, i.jsx)(a.Card, {
+            className: r(d.formNotice, h),
+            type: s,
+            style: p,
             children: (0, i.jsxs)(o.default, {
-                direction: g,
-                align: T,
+                direction: v,
+                align: S,
                 children: [t, (0, i.jsxs)(o.default.Child, {
-                    children: [null != _ && "" !== _ ? (0, i.jsx)(u.FormTitle, {
+                    children: [null != g && "" !== g ? (0, i.jsx)(u.FormTitle, {
                         tag: u.FormTitleTags.H5,
-                        className: s(c.formNoticeTitle, {
-                            [c.whiteText]: I
+                        className: r(d.formNoticeTitle, {
+                            [d.whiteText]: T
                         }),
                         faded: !0,
-                        children: _
+                        children: g
                     }) : null, (0, i.jsx)(l.FormText, {
-                        className: s(c.formNoticeBody, {
-                            [c.whiteText]: I
+                        className: r(d.formNoticeBody, {
+                            [d.whiteText]: T
                         }),
-                        children: S
+                        children: m
                     }), n]
                 })]
             })
         })
     }
-    E.Types = a.Card.Types
+    _.Types = a.Card.Types
 }

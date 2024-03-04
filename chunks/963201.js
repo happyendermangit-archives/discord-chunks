@@ -1,6 +1,6 @@
-function(t, r, n) {
-    t.exports = function(t) {
-        var r = typeof t;
-        return "string" == r || "number" == r || "symbol" == r || "boolean" == r ? "__proto__" !== t : null === t
+function(e, t, n) {
+    e.exports = function(e) {
+        var t = typeof e;
+        return "string" == t || "number" == t || "symbol" == t || "boolean" == t ? "__proto__" !== e : null === e
     }
 }

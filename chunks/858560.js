@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         GuildRoleSubscriptionsExperiment: function() {
-            return s
+            return r
         },
         GuildRoleSubscriptionUsersExperiment: function() {
             return a
@@ -18,8 +18,8 @@ function(e, t, n) {
         }
     });
     var i = n("862205"),
-        r = n("677795");
-    let s = (0, i.createExperiment)({
+        s = n("677795");
+    let r = (0, i.createExperiment)({
             kind: "guild",
             id: "2021-06_guild_role_subscriptions",
             label: "Guild Role Subscriptions",
@@ -70,7 +70,7 @@ function(e, t, n) {
         label: "Guild Role Subscription Max Tiers",
         defaultConfig: {
             enabled: !1,
-            maxTiers: r.MAX_SUBSCRIPTION_TIERS
+            maxTiers: s.MAX_SUBSCRIPTION_TIERS
         },
         treatments: [4, 5, 6].map(e => ({
             id: e,

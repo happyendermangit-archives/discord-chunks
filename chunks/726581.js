@@ -43,7 +43,7 @@ function(e, t, n) {
         return e.replace(/(^\s*|\s*$)/g, "")
     };
 
-    function h(e) {
+    function m(e) {
         if (!u(e)) return e;
         var t = [];
         for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && function e(t, n, r) {
@@ -63,11 +63,11 @@ function(e, t, n) {
         return t.join("&")
     }
 
-    function m(e) {
+    function h(e) {
         for (var t, n, r = {}, a = e.split("&"), o = 0, i = a.length; o < i; ++o) - 1 === (n = (t = a[o]).indexOf("=")) ? r[decodeURIComponent(t)] = "" : r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1));
         return r
     }
-    f.serializeObject = h, f.parseString = m, f.types = {
+    f.serializeObject = m, f.parseString = h, f.types = {
         html: "text/html",
         json: "application/json",
         xml: "text/xml",
@@ -75,10 +75,10 @@ function(e, t, n) {
         form: "application/x-www-form-urlencoded",
         "form-data": "application/x-www-form-urlencoded"
     }, f.serialize = {
-        "application/x-www-form-urlencoded": h,
+        "application/x-www-form-urlencoded": m,
         "application/json": i
     }, f.parse = {
-        "application/x-www-form-urlencoded": m,
+        "application/x-www-form-urlencoded": h,
         "application/json": JSON.parse
     };
 
@@ -140,7 +140,7 @@ function(e, t, n) {
             throw Error("Cannot use basic auth, btoa is not a function")
         })
     }, Request.prototype.query = function(e) {
-        return "string" != typeof e && (e = h(e)), e && this._query.push(e), this
+        return "string" != typeof e && (e = m(e)), e && this._query.push(e), this
     }, Request.prototype.attach = function(e, t, n) {
         if (t) {
             if (this._data) throw Error("superagent can't mix .send() and .attach()");

@@ -1,69 +1,69 @@
-function(t, e, o) {
+function(e, t, n) {
     "use strict";
-    o.r(e), o.d(e, {
+    n.r(t), n.d(t, {
         default: function() {
-            return E
+            return c
         }
-    }), o("424973");
-    var n = o("995008"),
-        d = o.n(n),
-        r = o("913144"),
-        l = o("693051"),
-        i = o("153498"),
-        a = o("76493"),
-        s = o("91731"),
-        u = o("49111"),
-        E = {
-            push(t, e) {
-                let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d("modal"),
-                    n = arguments.length > 3 ? arguments[3] : void 0,
-                    l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : u.AppContext.APP;
-                return (0, i.pushModal)({
-                    key: o,
-                    modal: (0, s.default)(t, {}, e, o),
-                    ...n
+    }), n("424973");
+    var i = n("995008"),
+        s = n.n(i),
+        r = n("913144"),
+        a = n("693051"),
+        o = n("153498"),
+        l = n("76493"),
+        u = n("91731"),
+        d = n("49111"),
+        c = {
+            push(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s("modal"),
+                    i = arguments.length > 3 ? arguments[3] : void 0,
+                    a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : d.AppContext.APP;
+                return (0, o.pushModal)({
+                    key: n,
+                    modal: (0, u.default)(e, {}, t, n),
+                    ...i
                 }), r.default.dispatch({
                     type: "MODAL_PUSH",
-                    modal: t,
-                    props: e,
-                    key: o,
-                    appContext: l
-                }), o
+                    modal: e,
+                    props: t,
+                    key: n,
+                    appContext: a
+                }), n
             },
-            pushLazy(t, e) {
-                let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d("modal"),
-                    n = arguments.length > 3 ? arguments[3] : void 0,
-                    r = (0, l.getRootNavigationRef)();
-                return null != r && r.isReady() ? (t instanceof Promise ? t.then(t => {
+            pushLazy(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s("modal"),
+                    i = arguments.length > 3 ? arguments[3] : void 0,
+                    r = (0, a.getRootNavigationRef)();
+                return null != r && r.isReady() ? (e instanceof Promise ? e.then(e => {
                     let {
-                        default: e
-                    } = t;
-                    return e
-                }) : t()).then(t => this.push(t, e, o, n)) : new Promise(d => a.default.enqueue(() => d(this.pushLazy(t, e, o, n))))
+                        default: t
+                    } = e;
+                    return t
+                }) : e()).then(e => this.push(e, t, n, i)) : new Promise(s => l.default.enqueue(() => s(this.pushLazy(e, t, n, i))))
             },
-            updateAnimation(t, e) {
+            updateAnimation(e, t) {
                 r.default.dispatch({
                     type: "MODAL_UPDATE",
-                    key: t,
+                    key: e,
                     props: {},
                     partial: !0,
-                    animation: e
+                    animation: t
                 })
             },
             pop() {
-                (0, i.popModal)(), r.default.dispatch({
+                (0, o.popModal)(), r.default.dispatch({
                     type: "MODAL_POP"
                 })
             },
-            popWithKey(t, e) {
-                (0, i.popModal)(t, e), r.default.dispatch({
+            popWithKey(e, t) {
+                (0, o.popModal)(e, t), r.default.dispatch({
                     type: "MODAL_POP",
-                    key: t,
-                    onExited: e
+                    key: e,
+                    onExited: t
                 })
             },
             popAll() {
-                (0, i.popAllModals)(), r.default.dispatch({
+                (0, o.popAllModals)(), r.default.dispatch({
                     type: "MODAL_POP_ALL"
                 }), r.default.dispatch({
                     type: "CHANNEL_SETTINGS_CLOSE"

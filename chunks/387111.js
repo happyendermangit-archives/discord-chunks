@@ -2,43 +2,43 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getNickname: function() {
-            return s
+            return u
         },
         useName: function() {
-            return E
+            return c
         },
         default: function() {
-            return _
+            return f
         }
     });
-    var r = n("446674"),
-        i = n("42203"),
-        l = n("26989"),
-        u = n("27618"),
-        a = n("158998"),
-        o = n("782340");
+    var i = n("446674"),
+        s = n("42203"),
+        r = n("26989"),
+        a = n("27618"),
+        o = n("158998"),
+        l = n("782340");
 
-    function s(e, t, n) {
+    function u(e, t, n) {
         if (null == n) return null;
-        if (null != e) return l.default.getNick(e, n.id);
+        if (null != e) return r.default.getNick(e, n.id);
         if (null != t) {
-            let e = i.default.getChannel(t);
-            if (null == e ? void 0 : e.isPrivate()) return u.default.getNickname(n.id)
+            let e = s.default.getChannel(t);
+            if (null == e ? void 0 : e.isPrivate()) return a.default.getNickname(n.id)
         }
         return null
     }
 
     function d(e, t, n) {
-        var r;
-        return null == n ? o.default.Messages.UNKNOWN_USER : null !== (r = s(e, t, n)) && void 0 !== r ? r : a.default.getName(n)
+        var i;
+        return null == n ? l.default.Messages.UNKNOWN_USER : null !== (i = u(e, t, n)) && void 0 !== i ? i : o.default.getName(n)
     }
 
-    function E(e, t, n) {
-        return (0, r.useStateFromStores)([l.default, i.default, u.default], () => d(e, t, n))
+    function c(e, t, n) {
+        return (0, i.useStateFromStores)([r.default, s.default, a.default], () => d(e, t, n))
     }
-    var _ = {
-        getNickname: s,
+    var f = {
+        getNickname: u,
         getName: d,
-        useName: E
+        useName: c
     }
 }

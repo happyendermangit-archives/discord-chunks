@@ -3,15 +3,15 @@ function(e, t, n) {
     let r;
     n.r(t), n.d(t, {
         LocalizedStringDictionary: function() {
-            return o
+            return s
         },
         LocalizedStringFormatter: function() {
-            return l
+            return u
         }
     }), n("70102"), n("222007");
-    let a = Symbol.for("react-aria.i18n.locale"),
-        i = Symbol.for("react-aria.i18n.strings");
-    class o {
+    let i = Symbol.for("react-aria.i18n.locale"),
+        o = Symbol.for("react-aria.i18n.strings");
+    class s {
         getStringForLocale(e, t) {
             let n = this.getStringsForLocale(t)[e];
             if (!n) throw Error("Could not find intl message ".concat(e, " in ").concat(t, " locale"));
@@ -33,11 +33,11 @@ function(e, t, n) {
         }
         static getGlobalDictionaryForPackage(e) {
             if ("undefined" == typeof window) return null;
-            let t = window[a];
+            let t = window[i];
             if (void 0 === r) {
-                let e = window[i];
+                let e = window[o];
                 if (!e) return null;
-                for (let n in r = {}, e) r[n] = new o({
+                for (let n in r = {}, e) r[n] = new s({
                     [t]: e[n]
                 }, t)
             }
@@ -51,9 +51,9 @@ function(e, t, n) {
             }, this.defaultLocale = t
         }
     }
-    let s = new Map,
+    let a = new Map,
         c = new Map;
-    class l {
+    class u {
         format(e, t) {
             let n = this.strings.getStringForLocale(e, this.locale);
             return "function" == typeof n ? n(t, this) : n
@@ -62,11 +62,11 @@ function(e, t, n) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "cardinal",
                 r = t["=" + e];
             if (r) return "function" == typeof r ? r() : r;
-            let a = this.locale + ":" + n,
-                i = s.get(a);
-            return !i && (i = new Intl.PluralRules(this.locale, {
+            let i = this.locale + ":" + n,
+                o = a.get(i);
+            return !o && (o = new Intl.PluralRules(this.locale, {
                 type: n
-            }), s.set(a, i)), "function" == typeof(r = t[i.select(e)] || t.other) ? r() : r
+            }), a.set(i, o)), "function" == typeof(r = t[o.select(e)] || t.other) ? r() : r
         }
         number(e) {
             let t = c.get(this.locale);

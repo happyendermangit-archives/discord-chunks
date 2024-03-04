@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return a
+            return i
         }
     });
     var t = E("37983");
@@ -10,25 +10,25 @@ function(e, _, E) {
     var o = E("669491"),
         n = E("469563"),
         r = E("163725"),
-        i = E("75196"),
-        a = (0, n.replaceIcon)(function(e) {
+        a = E("75196"),
+        i = (0, n.replaceIcon)(function(e) {
             let {
                 width: _ = 24,
                 height: E = 24,
                 color: n = "currentColor",
                 foregroundColor: r = o.default.unsafe_rawColors.RED_400.css,
-                foreground: a,
+                foreground: i,
                 background: I,
-                ...s
+                ...T
             } = e;
             return (0, t.jsxs)("svg", {
-                ...(0, i.default)(s),
+                ...(0, a.default)(T),
                 width: _,
                 height: E,
                 viewBox: "0 0 24 24",
                 children: [(0, t.jsx)("rect", {
                     fill: r,
-                    className: a,
+                    className: i,
                     x: "2",
                     y: "21.2154",
                     width: "26",

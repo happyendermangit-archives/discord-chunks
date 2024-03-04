@@ -2,26 +2,26 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ToastContainer: function() {
-            return p
+            return h
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("907002"),
+        s = n("884691"),
+        r = n("907002"),
         a = n("446674"),
         o = n("206230"),
         l = n("35672"),
         u = n("325236"),
-        c = n("159350"),
-        d = n("354149");
+        d = n("159350"),
+        c = n("354149");
     let f = {
             duration: 300,
             friction: 24,
             tension: 280
         },
-        E = {
-            [c.ToastPosition.TOP]: {
-                styles: d.containerTop,
+        _ = {
+            [d.ToastPosition.TOP]: {
+                styles: c.containerTop,
                 transition: {
                     trail: 400,
                     from: {
@@ -45,8 +45,8 @@ function(e, t, n) {
                     }
                 }
             },
-            [c.ToastPosition.BOTTOM]: {
-                styles: d.containerBottom,
+            [d.ToastPosition.BOTTOM]: {
+                styles: c.containerBottom,
                 transition: {
                     trail: 400,
                     from: {
@@ -72,37 +72,37 @@ function(e, t, n) {
             }
         };
 
-    function p() {
-        var e, t, n, d;
+    function h() {
+        var e, t, n, c;
         let f = (0, u.useToastStore)(e => e.currentToast),
-            p = r.useRef(null !== (n = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.TOAST_DEFAULT_OPTIONS.position),
-            h = r.useRef(null !== (d = null == f ? void 0 : null === (t = f.options) || void 0 === t ? void 0 : t.duration) && void 0 !== d ? d : c.TOAST_DEFAULT_OPTIONS.duration),
-            _ = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion);
-        r.useEffect(() => {
+            h = s.useRef(null !== (n = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : d.TOAST_DEFAULT_OPTIONS.position),
+            E = s.useRef(null !== (c = null == f ? void 0 : null === (t = f.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : d.TOAST_DEFAULT_OPTIONS.duration),
+            g = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+        s.useEffect(() => {
             if (null != f) {
                 var e, t, n, i;
-                p.current = null !== (n = null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.TOAST_DEFAULT_OPTIONS.position, h.current = null !== (i = null === (t = f.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : c.TOAST_DEFAULT_OPTIONS.duration
+                h.current = null !== (n = null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : d.TOAST_DEFAULT_OPTIONS.position, E.current = null !== (i = null === (t = f.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : d.TOAST_DEFAULT_OPTIONS.duration
             }
         }, [f]);
-        let S = r.useMemo(() => {
+        let m = s.useMemo(() => {
                 var e, t;
-                return E[null !== (t = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : p.current]
+                return _[null !== (t = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : h.current]
             }, [f]),
-            m = (0, s.useTransition)(f, {
+            p = (0, r.useTransition)(f, {
                 keys: e => {
                     var t;
                     return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
                 },
-                immediate: _,
-                ...S.transition
+                immediate: g,
+                ...m.transition
             });
-        return r.useEffect(() => {
+        return s.useEffect(() => {
             null != f && setTimeout(() => {
                 (0, u.popToast)()
-            }, h.current)
+            }, E.current)
         }, [f]), (0, i.jsx)("div", {
-            className: S.styles,
-            children: m((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
+            className: m.styles,
+            children: p((e, t) => null === t ? null : (0, i.jsx)(r.animated.div, {
                 style: e,
                 children: (0, i.jsx)(l.Toast, {
                     ...t

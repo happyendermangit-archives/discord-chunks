@@ -1,20 +1,20 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r, i = s("145095"),
-        n = s("438543"),
-        c = s("550511").assert;
+    var r, i = n("145095"),
+        o = n("438543"),
+        s = n("550511").assert;
 
-    function o(t) {
-        "short" === t.type ? this.curve = new n.short(t) : "edwards" === t.type ? this.curve = new n.edwards(t) : this.curve = new n.mont(t), this.g = this.curve.g, this.n = this.curve.n, this.hash = t.hash, c(this.g.validate(), "Invalid curve"), c(this.g.mul(this.n).isInfinity(), "Invalid curve, G*N != O")
+    function a(e) {
+        "short" === e.type ? this.curve = new o.short(e) : "edwards" === e.type ? this.curve = new o.edwards(e) : this.curve = new o.mont(e), this.g = this.curve.g, this.n = this.curve.n, this.hash = e.hash, s(this.g.validate(), "Invalid curve"), s(this.g.mul(this.n).isInfinity(), "Invalid curve, G*N != O")
     }
 
-    function f(t, s) {
-        Object.defineProperty(e, t, {
+    function c(e, n) {
+        Object.defineProperty(t, e, {
             configurable: !0,
             enumerable: !0,
             get: function() {
-                var r = new o(s);
-                return Object.defineProperty(e, t, {
+                var r = new a(n);
+                return Object.defineProperty(t, e, {
                     configurable: !0,
                     enumerable: !0,
                     value: r
@@ -22,7 +22,7 @@ function(t, e, s) {
             }
         })
     }
-    e.PresetCurve = o, f("p192", {
+    t.PresetCurve = a, c("p192", {
         type: "short",
         prime: "p192",
         p: "ffffffff ffffffff ffffffff fffffffe ffffffff ffffffff",
@@ -32,7 +32,7 @@ function(t, e, s) {
         hash: i.sha256,
         gRed: !1,
         g: ["188da80e b03090f6 7cbf20eb 43a18800 f4ff0afd 82ff1012", "07192b95 ffc8da78 631011ed 6b24cdd5 73f977a1 1e794811"]
-    }), f("p224", {
+    }), c("p224", {
         type: "short",
         prime: "p224",
         p: "ffffffff ffffffff ffffffff ffffffff 00000000 00000000 00000001",
@@ -42,7 +42,7 @@ function(t, e, s) {
         hash: i.sha256,
         gRed: !1,
         g: ["b70e0cbd 6bb4bf7f 321390b9 4a03c1d3 56c21122 343280d6 115c1d21", "bd376388 b5f723fb 4c22dfe6 cd4375a0 5a074764 44d58199 85007e34"]
-    }), f("p256", {
+    }), c("p256", {
         type: "short",
         prime: null,
         p: "ffffffff 00000001 00000000 00000000 00000000 ffffffff ffffffff ffffffff",
@@ -52,7 +52,7 @@ function(t, e, s) {
         hash: i.sha256,
         gRed: !1,
         g: ["6b17d1f2 e12c4247 f8bce6e5 63a440f2 77037d81 2deb33a0 f4a13945 d898c296", "4fe342e2 fe1a7f9b 8ee7eb4a 7c0f9e16 2bce3357 6b315ece cbb64068 37bf51f5"]
-    }), f("p384", {
+    }), c("p384", {
         type: "short",
         prime: null,
         p: "ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff fffffffe ffffffff 00000000 00000000 ffffffff",
@@ -62,7 +62,7 @@ function(t, e, s) {
         hash: i.sha384,
         gRed: !1,
         g: ["aa87ca22 be8b0537 8eb1c71e f320ad74 6e1d3b62 8ba79b98 59f741e0 82542a38 5502f25d bf55296c 3a545e38 72760ab7", "3617de4a 96262c6f 5d9e98bf 9292dc29 f8f41dbd 289a147c e9da3113 b5f0b8c0 0a60b1ce 1d7e819d 7a431d7c 90ea0e5f"]
-    }), f("p521", {
+    }), c("p521", {
         type: "short",
         prime: null,
         p: "000001ff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff",
@@ -72,7 +72,7 @@ function(t, e, s) {
         hash: i.sha512,
         gRed: !1,
         g: ["000000c6 858e06b7 0404e9cd 9e3ecb66 2395b442 9c648139 053fb521 f828af60 6b4d3dba a14b5e77 efe75928 fe1dc127 a2ffa8de 3348b3c1 856a429b f97e7e31 c2e5bd66", "00000118 39296a78 9a3bc004 5c8a5fb4 2c7d1bd9 98f54449 579b4468 17afbd17 273e662c 97ee7299 5ef42640 c550b901 3fad0761 353c7086 a272c240 88be9476 9fd16650"]
-    }), f("curve25519", {
+    }), c("curve25519", {
         type: "mont",
         prime: "p25519",
         p: "7fffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffed",
@@ -82,7 +82,7 @@ function(t, e, s) {
         hash: i.sha256,
         gRed: !1,
         g: ["9"]
-    }), f("ed25519", {
+    }), c("ed25519", {
         type: "edwards",
         prime: "p25519",
         p: "7fffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffed",
@@ -95,11 +95,11 @@ function(t, e, s) {
         g: ["216936d3cd6e53fec0a4e231fdd6dc5c692cc7609525a7b2c9562d608f25d51a", "6666666666666666666666666666666666666666666666666666666666666658"]
     });
     try {
-        r = s("642082")
-    } catch (t) {
+        r = n("642082")
+    } catch (e) {
         r = void 0
     }
-    f("secp256k1", {
+    c("secp256k1", {
         type: "short",
         prime: "k256",
         p: "ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff fffffffe fffffc2f",

@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    let i, r;
+    let i, s;
     n.r(t), n.d(t, {
         OVERLAY_VERSION: function() {
             return a
@@ -15,31 +15,31 @@ function(e, t, n) {
             return u
         },
         DEV_PID: function() {
-            return c
+            return d
         },
         getPID: function() {
             return f
         },
         setPID: function() {
-            return E
-        },
-        getRPCAuthToken: function() {
-            return p
-        },
-        validResolution: function() {
-            return h
-        },
-        setOutOfProcessSupport: function() {
             return _
         },
+        getRPCAuthToken: function() {
+            return h
+        },
+        validResolution: function() {
+            return E
+        },
+        setOutOfProcessSupport: function() {
+            return g
+        },
         supportsOutOfProcess: function() {
-            return S
+            return m
         },
         isOutOfProcess: function() {
-            return m
+            return p
         }
     }), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("121338");
-    var s = n("773336");
+    var r = n("773336");
     n("49111");
     let a = 2,
         o = {
@@ -51,43 +51,43 @@ function(e, t, n) {
             height: 432
         },
         u = "overlay_default",
-        c = -2,
-        d = !1;
+        d = -2,
+        c = !1;
 
     function f() {
         var e;
         if (void 0 !== i) return i;
         let t = new URLSearchParams(window.location.search),
             n = null !== (e = t.get("pid")) && void 0 !== e ? e : "",
-            r = parseInt(n, 10);
-        return isNaN(r) && (r = -1), i = r
+            s = parseInt(n, 10);
+        return isNaN(s) && (s = -1), i = s
     }
 
-    function E(e) {
-        m() && (i = e)
+    function _(e) {
+        p() && (i = e)
     }
 
-    function p() {
+    function h() {
         let e = new URLSearchParams(window.location.search);
         return e.get("rpc_auth_token")
     }
 
-    function h(e) {
-        return !s.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
+    function E(e) {
+        return !r.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
     }
 
-    function _(e) {
-        d = e
-    }
-
-    function S() {
-        return d
+    function g(e) {
+        c = e
     }
 
     function m() {
+        return c
+    }
+
+    function p() {
         var e;
-        if (void 0 !== r) return r;
+        if (void 0 !== s) return s;
         let t = new URLSearchParams(window.location.search);
-        return r = (null !== (e = t.get("oop")) && void 0 !== e ? e : "") === "true"
+        return s = (null !== (e = t.get("oop")) && void 0 !== e ? e : "") === "true"
     }
 }

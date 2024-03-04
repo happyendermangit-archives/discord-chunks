@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return s
         }
     }), n("424973");
-    var i, r, s = n("627445"),
-        a = n.n(s),
+    var i, s, r = n("627445"),
+        a = n.n(r),
         o = n("446674"),
         l = n("95410"),
         u = n("913144");
@@ -37,5 +37,5 @@ function(e, t, n) {
                 WRITE_CACHES: () => this.save()
             }), a(null != this.getClass().displayName, "Snapshot stores need a display name"), a(!("CLEAR_CACHES" in t), "SnapshotStores cannot use the 'CLEAR_CACHES' action"), a(!("WRITE_CACHES" in t), "SnapshotStores cannot use the 'WRITE_CACHES' action"), e.allStores.push(this)
         }
-    }).allStores = [], r = i
+    }).allStores = [], s = i
 }

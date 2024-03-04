@@ -1,13 +1,13 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = i;
-    var r = s("372614");
+    e.exports = i;
+    var r = n("372614");
 
-    function i(t) {
-        if (!(this instanceof i)) return new i(t);
-        r.call(this, t)
+    function i(e) {
+        if (!(this instanceof i)) return new i(e);
+        r.call(this, e)
     }
-    s("599235")(i, r), i.prototype._transform = function(t, e, s) {
-        s(null, t)
+    n("599235")(i, r), i.prototype._transform = function(e, t, n) {
+        n(null, e)
     }
 }

@@ -2,21 +2,21 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SILENT_RE: function() {
-            return a
+            return r
         },
         canSuppressNotifications: function() {
-            return i
+            return a
         },
         default: function() {
-            return u
+            return o
         }
     });
-    var l = n("729912");
-    let r = "@silent",
-        a = new RegExp("^".concat(r, "(\\s|$)"));
+    var i = n("729912");
+    let s = "@silent",
+        r = new RegExp("^".concat(s, "(\\s|$)"));
 
-    function i() {
-        let e = l.SilentMessagesExperiment.getCurrentConfig({
+    function a() {
+        let e = i.SilentMessagesExperiment.getCurrentConfig({
             location: "456bd9_1"
         }, {
             autoTrackExposure: !1
@@ -24,7 +24,7 @@ function(e, t, n) {
         return e.allowSending
     }
 
-    function u(e) {
-        return i() && null != e.match(a) ? [!0, e.substring(r.length).trim()] : [!1, e]
+    function o(e) {
+        return a() && null != e.match(r) ? [!0, e.substring(s.length).trim()] : [!1, e]
     }
 }

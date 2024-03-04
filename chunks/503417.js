@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return s
+            return T
         }
     });
     var t = E("37983");
@@ -10,11 +10,11 @@ function(e, _, E) {
     var o = E("414456"),
         n = E.n(o),
         r = E("945330"),
-        i = E("774223"),
-        a = E("587974"),
+        a = E("774223"),
+        i = E("587974"),
         I = E("457774");
 
-    function s(e) {
+    function T(e) {
         let {
             width: _ = 20,
             height: E = 20,
@@ -22,11 +22,11 @@ function(e, _, E) {
         } = e;
         return (0, t.jsxs)("div", {
             className: n(I.icon, o),
-            children: [(0, t.jsx)(a.default, {
-                mask: a.default.Masks.STATUS_SCREENSHARE,
+            children: [(0, t.jsx)(i.default, {
+                mask: i.default.Masks.STATUS_SCREENSHARE,
                 width: _,
                 height: E,
-                children: (0, t.jsx)(i.default, {
+                children: (0, t.jsx)(a.default, {
                     width: _,
                     height: E
                 })

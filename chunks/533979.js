@@ -5,13 +5,13 @@ function(e, t, n) {
             return u
         },
         KeyCombo: function() {
-            return c
+            return d
         }
     });
     var i = n("37983");
     n("884691");
-    var r = n("414456"),
-        s = n.n(r),
+    var s = n("414456"),
+        r = n.n(s),
         a = n("485328"),
         o = n("192998");
 
@@ -23,7 +23,7 @@ function(e, t, n) {
             width: "10",
             height: "10",
             xmlns: "http://www.w3.org/2000/svg",
-            className: s(o.bindArrow, o[t]),
+            className: r(o.bindArrow, o[t]),
             children: (0, i.jsx)("g", {
                 fill: "#FFFFFF",
                 children: (0, i.jsx)("polygon", {
@@ -55,19 +55,19 @@ function(e, t, n) {
         return: () => a.default.returnKey
     };
 
-    function c(e) {
+    function d(e) {
         let {
             shortcut: t,
             dim: n = !1,
-            className: r,
+            className: s,
             keyClassName: a
         } = e, l = Array.isArray(t) ? t : t.split("+");
         return (0, i.jsx)("div", {
-            className: s(o.combo, r, {
+            className: r(o.combo, s, {
                 [o.dim]: n
             }),
             children: l.map(e => null != u[e] ? u[e]() : e).map((e, t) => (0, i.jsx)("span", {
-                className: s(o.key, a),
+                className: r(o.key, a),
                 children: e
             }, t))
         })

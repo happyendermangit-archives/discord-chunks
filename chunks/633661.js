@@ -9,12 +9,12 @@ function(e, t, n) {
         }
     }), n("222007");
     var i = n("37983"),
-        r = n("884691");
-    let s = 0;
+        s = n("884691");
+    let r = 0;
 
     function a(e, t) {
-        let [n] = r.useState(() => s++), i = "".concat("data-focus-blocked", "-").concat(n);
-        r.useLayoutEffect(() => {
+        let [n] = s.useState(() => r++), i = "".concat("data-focus-blocked", "-").concat(n);
+        s.useLayoutEffect(() => {
             if (t) {
                 let t = e.current;
                 if (null != t) {
@@ -22,11 +22,11 @@ function(e, t, n) {
                     let e = (n = t, document.createTreeWalker(n, NodeFilter.SHOW_ELEMENT, {
                             acceptNode: e => e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
                         })),
-                        r = e.currentNode;
-                    for (; null !== r;) {
-                        let t = r,
+                        s = e.currentNode;
+                    for (; null !== s;) {
+                        let t = s,
                             n = t.tabIndex;
-                        t.tabIndex = -1, t.setAttribute(i, String(n)), r = e.nextNode()
+                        t.tabIndex = -1, t.setAttribute(i, String(n)), s = e.nextNode()
                     }
                     return () => {
                         t.querySelectorAll("[".concat(i, "]")).forEach(e => {
@@ -46,9 +46,9 @@ function(e, t, n) {
         let {
             children: t,
             className: n,
-            enabled: s = !0
-        } = e, o = r.useRef(null);
-        return a(o, s), (0, i.jsx)("div", {
+            enabled: r = !0
+        } = e, o = s.useRef(null);
+        return a(o, r), (0, i.jsx)("div", {
             ref: o,
             className: n,
             children: t

@@ -5,12 +5,12 @@ function(e, t, n) {
             return u
         },
         default: function() {
-            return d
+            return c
         }
     }), n("70102"), n("222007");
     var i = n("263293"),
-        r = n("141094"),
-        s = n("702843");
+        s = n("141094"),
+        r = n("702843");
     let a = {
         DROP: [" ", "Enter"],
         CANCEL_DRAG: ["Escape"]
@@ -29,17 +29,17 @@ function(e, t, n) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return !!n && !1 === e.isTrusted || (null === (t = e.key) || void 0 === t ? void 0 : t.toLowerCase()) === "d" && (e.metaKey || e.ctrlKey) && !e.altKey
     }
-    class c {
+    class d {
         setup() {
             var e;
-            if (c.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
-            c.isSetUp = !0, this._handlingFirstEvent = !0, null === (e = this.context.window) || void 0 === e || e.addEventListener("keydown", this.handleGlobalKeyDown, {
+            if (d.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
+            d.isSetUp = !0, this._handlingFirstEvent = !0, null === (e = this.context.window) || void 0 === e || e.addEventListener("keydown", this.handleGlobalKeyDown, {
                 capture: !0
             })
         }
         teardown() {
             var e;
-            c.isSetUp = !1, null === (e = this.context.window) || void 0 === e || e.removeEventListener("keydown", this.handleGlobalKeyDown, {
+            d.isSetUp = !1, null === (e = this.context.window) || void 0 === e || e.removeEventListener("keydown", this.handleGlobalKeyDown, {
                 capture: !0
             }), this.endDrag()
         }
@@ -105,15 +105,15 @@ function(e, t, n) {
                 }
                 o(t);
                 let i = this.sourceNodes.get(e);
-                null != i && (this._navigator = new s.DropTargetNavigator(i, this.targetNodes, this.manager, this._previewer, this._announcer), this._previewer.createDragPreview(null !== (n = this.sourcePreviewNodes.get(e)) && void 0 !== n ? n : i), this.actions.beginDrag([e], {
+                null != i && (this._navigator = new r.DropTargetNavigator(i, this.targetNodes, this.manager, this._previewer, this._announcer), this._previewer.createDragPreview(null !== (n = this.sourcePreviewNodes.get(e)) && void 0 !== n ? n : i), this.actions.beginDrag([e], {
                     clientOffset: this.getSourceClientOffset(e),
                     getSourceClientOffset: this.getSourceClientOffset,
                     publishSource: !1
                 }), this._previewer.render(this.monitor), this.setDndMode(!0), this._announcer.announceDrag(i, e))
             }, this.handleDrop = e => {
                 l(e, a.DROP) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop())
-            }, this.manager = e, this.actions = e.getActions(), this.monitor = e.getMonitor(), this.context = t, this.options = n, this.sourceNodes = new Map, this.sourcePreviewNodes = new Map, this.sourcePreviewNodeOptions = new Map, this.targetNodes = new Map, this._previewer = new r.default(t.document), this._announcer = new i.default(null == n ? void 0 : n.announcer)
+            }, this.manager = e, this.actions = e.getActions(), this.monitor = e.getMonitor(), this.context = t, this.options = n, this.sourceNodes = new Map, this.sourcePreviewNodes = new Map, this.sourcePreviewNodeOptions = new Map, this.targetNodes = new Map, this._previewer = new s.default(t.document), this._announcer = new i.default(null == n ? void 0 : n.announcer)
         }
     }
-    var d = (e, t, n) => new c(e, t, n)
+    var c = (e, t, n) => new d(e, t, n)
 }

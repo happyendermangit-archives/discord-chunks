@@ -1,6 +1,6 @@
-function(t, e, s) {
-    var r = s("690516");
-    t.exports = function() {
+function(e, t, n) {
+    var r = n("690516");
+    e.exports = function() {
         return r.Date.now()
     }
 }

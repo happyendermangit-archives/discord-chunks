@@ -1,15 +1,15 @@
-function(t, e, s) {
-    s("70102");
-    var r = s("483366"),
-        i = s("285162");
-    t.exports = function(t, e, s) {
-        var n = !0,
-            c = !0;
-        if ("function" != typeof t) throw TypeError("Expected a function");
-        return i(s) && (n = "leading" in s ? !!s.leading : n, c = "trailing" in s ? !!s.trailing : c), r(t, e, {
-            leading: n,
-            maxWait: e,
-            trailing: c
+function(e, t, n) {
+    n("70102");
+    var r = n("483366"),
+        i = n("285162");
+    e.exports = function(e, t, n) {
+        var o = !0,
+            s = !0;
+        if ("function" != typeof e) throw TypeError("Expected a function");
+        return i(n) && (o = "leading" in n ? !!n.leading : o, s = "trailing" in n ? !!n.trailing : s), r(e, t, {
+            leading: o,
+            maxWait: t,
+            trailing: s
         })
     }
 }

@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return a
         }
     });
-    var a = n("450911"),
-        l = n("42203"),
-        s = n("724210");
+    var i = n("450911"),
+        s = n("42203"),
+        r = n("724210");
 
-    function i(e) {
-        if (e !== s.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return null;
-        let t = l.default.getChannel(e);
-        return null == t ? null : a.default.ensurePrivateChannel(t.recipients)
+    function a(e) {
+        if (e !== r.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return null;
+        let t = s.default.getChannel(e);
+        return null == t ? null : i.default.ensurePrivateChannel(t.recipients)
     }
 }

@@ -2,21 +2,21 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return T
+            return s
         }
     });
     var t = E("37983"),
         o = E("884691"),
         n = E("414456"),
         r = E.n(n),
-        i = E("77078"),
-        a = E("98717");
+        a = E("77078"),
+        i = E("98717");
     let I = {
-        SMALL: a.sizeSmall,
-        MEDIUM: a.sizeMedium,
-        LARGE: a.sizeLarge
+        SMALL: i.sizeSmall,
+        MEDIUM: i.sizeMedium,
+        LARGE: i.sizeLarge
     };
-    class s extends o.PureComponent {
+    class T extends o.PureComponent {
         calculateScroll() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._scroller;
             if (null == e) return;
@@ -38,11 +38,11 @@ function(e, _, E) {
             let {
                 hideSeparator: e
             } = this.state;
-            return o.Children.map(this.props.children, _ => o.isValidElement(_) ? _.type === i.ModalContent || _.type === i.ModalListContent ? o.cloneElement(_, {
+            return o.Children.map(this.props.children, _ => o.isValidElement(_) ? _.type === a.ModalContent || _.type === a.ModalListContent ? o.cloneElement(_, {
                 scrollerRef: this.setRef,
                 onScroll: this.handleScroll,
                 onResize: this.handleScroll
-            }) : _.type === i.ModalHeader && e ? o.cloneElement(_, {
+            }) : _.type === a.ModalHeader && e ? o.cloneElement(_, {
                 separator: !1
             }) : _ : _)
         }
@@ -53,13 +53,13 @@ function(e, _, E) {
                 tag: E,
                 size: o,
                 fullscreenOnMobile: n,
-                ...i
+                ...a
             } = this.props;
             return (0, t.jsx)(E, {
-                className: r(a.modal, e, o, {
-                    [a.fullscreenOnMobile]: n
+                className: r(i.modal, e, o, {
+                    [i.fullscreenOnMobile]: n
                 }),
-                ...i,
+                ...a,
                 children: this.renderChildren()
             })
         }
@@ -77,10 +77,10 @@ function(e, _, E) {
             }
         }
     }
-    s.Header = i.ModalHeader, s.Footer = i.ModalFooter, s.Content = i.ModalContent, s.ListContent = i.ModalListContent, s.CloseButton = i.ModalCloseButton, s.Sizes = I, s.defaultProps = {
+    T.Header = a.ModalHeader, T.Footer = a.ModalFooter, T.Content = a.ModalContent, T.ListContent = a.ModalListContent, T.CloseButton = a.ModalCloseButton, T.Sizes = I, T.defaultProps = {
         fullscreenOnMobile: !0,
         size: I.SMALL,
         tag: "div"
     };
-    var T = s
+    var s = T
 }

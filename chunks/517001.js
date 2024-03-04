@@ -5,30 +5,30 @@ function(e, t, n) {
             return l
         },
         isStaffEnv: function() {
-            return c
+            return d
         },
         isStaffEnvRawData: function() {
-            return d
+            return c
         },
         getPremiumTypeFromRawValue: function() {
             return f
         }
     }), n("702976");
     var i = n("627445"),
-        r = n.n(i),
-        s = n("568734"),
+        s = n.n(i),
+        r = n("568734"),
         a = n("963903"),
         o = n("49111");
 
     function l(e, t, n) {
-        !e && void 0 !== t && r(n === t, "Premium type should not change for non-staff users")
+        !e && void 0 !== t && s(n === t, "Premium type should not change for non-staff users")
     }
 
     function u(e) {
         return "production" === a.Environments.TEST && null != e ? e : "production"
     }
 
-    function c(e) {
+    function d(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             n = u(t) === a.Environments.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === a.Environments.STAGING;
         if (n) return !0;
@@ -37,10 +37,10 @@ function(e, t, n) {
         return i
     }
 
-    function d(e) {
+    function c(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             n = u(t) === a.Environments.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === a.Environments.STAGING;
-        return !!n || null != e && (!!(null != e.flags && (0, s.hasFlag)(e.flags, o.UserFlags.STAFF)) || null != e.personal_connection_id)
+        return !!n || null != e && (!!(null != e.flags && (0, r.hasFlag)(e.flags, o.UserFlags.STAFF)) || null != e.personal_connection_id)
     }
 
     function f(e) {

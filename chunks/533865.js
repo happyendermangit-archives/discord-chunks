@@ -1,6 +1,6 @@
-function(t, e, s) {
+function(e, t, n) {
     var r = Array.prototype.reverse;
-    t.exports = function(t) {
-        return null == t ? t : r.call(t)
+    e.exports = function(e) {
+        return null == e ? e : r.call(e)
     }
 }

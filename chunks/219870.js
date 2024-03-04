@@ -2,24 +2,24 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useToggleState: function() {
-            return a
+            return i
         }
     }), n("222007");
     var r = n("679750");
 
-    function a() {
+    function i() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             {
                 isReadOnly: t
             } = e,
-            [n, a] = (0, r.useControlledState)(e.isSelected, e.defaultSelected || !1, e.onChange);
+            [n, i] = (0, r.useControlledState)(e.isSelected, e.defaultSelected || !1, e.onChange);
         return {
             isSelected: n,
             setSelected: function(e) {
-                !t && a(e)
+                !t && i(e)
             },
             toggle: function() {
-                !t && a(!n)
+                !t && i(!n)
             }
         }
     }

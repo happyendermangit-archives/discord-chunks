@@ -1,106 +1,106 @@
 function(e, t, n) {
     "use strict";
-    let s, i, r;
+    let i, s, r;
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return S
         }
     }), n("222007"), n("860677");
     var a = n("446674"),
         o = n("913144"),
-        d = n("737292"),
+        l = n("737292"),
         u = n("845579"),
-        l = n("374363"),
-        f = n("686470");
-    let _ = {
+        d = n("374363"),
+        c = n("686470");
+    let f = {
             applicationId: null,
             originURL: null
         },
-        c = _,
-        g = new Set,
-        m = !1;
+        _ = f,
+        h = new Set,
+        E = !1;
 
-    function h() {
+    function g() {
         r = null
     }
 
-    function v() {
-        s = null, i = null, g = new Set, c.applicationId = null, c.originURL = null, h()
+    function m() {
+        i = null, s = null, h = new Set, _.applicationId = null, _.originURL = null, g()
     }
-    class E extends a.default.PersistedStore {
+    class p extends a.default.PersistedStore {
         initialize(e) {
-            s = (c = {
-                ...null != e ? e : _
-            }).applicationId, i = c.originURL, this.waitFor(l.default, d.default), this.syncWith([l.default, d.default], () => !0), f.default.whenInitialized(() => {
-                m = !0
+            i = (_ = {
+                ...null != e ? e : f
+            }).applicationId, s = _.originURL, this.waitFor(d.default, l.default), this.syncWith([d.default, l.default], () => !0), c.default.whenInitialized(() => {
+                E = !0
             })
         }
         inTestModeForApplication(e) {
-            return s === e
+            return i === e
         }
         inTestModeForEmbeddedApplication(e) {
-            return s === e && null != i
+            return i === e && null != s
         }
         shouldDisplayTestMode(e) {
             return u.DeveloperMode.getSetting() && this.inTestModeForApplication(e)
         }
         getState() {
-            return c
+            return _
         }
         get isTestMode() {
-            return null != s
+            return null != i
         }
         get isFetchingAuthorization() {
-            return g.size > 0
+            return h.size > 0
         }
         get testModeEmbeddedApplicationId() {
-            return null != i ? s : null
+            return null != s ? i : null
         }
         get testModeApplicationId() {
-            return s
+            return i
         }
         get testModeOriginURL() {
-            return i
+            return s
         }
         get error() {
             return r
         }
         whenInitialized(e) {
             this.addConditionalChangeListener(() => {
-                if (m) return setImmediate(e), !1
+                if (E) return setImmediate(e), !1
             })
         }
     }
-    E.displayName = "TestModeStore", E.persistKey = "TestModeStore";
-    var p = new E(o.default, {
+    p.displayName = "TestModeStore", p.persistKey = "TestModeStore";
+    var S = new p(o.default, {
         DEVELOPER_TEST_MODE_AUTHORIZATION_START: function(e) {
             let {
                 applicationId: t
             } = e;
-            g.add(t), r = null
+            h.add(t), r = null
         },
         DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function(e) {
             let {
                 applicationId: t,
                 originURL: n
             } = e;
-            s = t, i = n, g.delete(t), r = null, c.applicationId = t, c.originURL = n
+            i = t, s = n, h.delete(t), r = null, _.applicationId = t, _.originURL = n
         },
         DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function(e) {
             let {
                 applicationId: t,
                 error: n
             } = e;
-            g.delete(t), r = n
+            h.delete(t), r = n
         },
         OVERLAY_INITIALIZE: function(e) {
             let {
                 testModeApplicationId: t
             } = e;
-            s = t
+            i = t
         },
-        DEVELOPER_TEST_MODE_RESET_ERROR: h,
-        LOGOUT: v,
-        DEVELOPER_TEST_MODE_RESET: v
+        DEVELOPER_TEST_MODE_RESET_ERROR: g,
+        LOGOUT: m,
+        DEVELOPER_TEST_MODE_RESET: m
     })
 }

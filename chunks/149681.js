@@ -11,35 +11,35 @@ function(e, _, E) {
         n = E("883069"),
         r = E("569808");
     E("487946"), E("337543");
-    var i = E("139514"),
-        a = E("312016");
+    var a = E("139514"),
+        i = E("312016");
     let I = new Set;
 
-    function s(e) {
+    function T(e) {
         let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (_ && !I.has(e.channel_id)) return;
-        let E = (0, a.default)(e.content);
+        let E = (0, i.default)(e.content);
         null != E && 0 !== E.length && E.forEach(e => {
             let {
                 type: _,
                 code: E
             } = e;
-            if (_ === i.CodedLinkType.INVITE);
-            else if (_ === i.CodedLinkType.TEMPLATE) null == r.default.getGuildTemplate(E) && n.default.resolveGuildTemplate(E);
-            else if (_ === i.CodedLinkType.BUILD_OVERRIDE || _ === i.CodedLinkType.MANUAL_BUILD_OVERRIDE);
-            else if (_ === i.CodedLinkType.EVENT);
-            else if (_ === i.CodedLinkType.CHANNEL_LINK);
-            else if (_ === i.CodedLinkType.APP_DIRECTORY_PROFILE);
-            else if (_ === i.CodedLinkType.ACTIVITY_BOOKMARK);
-            else if (_ === i.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
-            else if (_ === i.CodedLinkType.GUILD_PRODUCT);
-            else if (_ === i.CodedLinkType.SERVER_SHOP);
-            else if (_ === i.CodedLinkType.CLYDE_PROFILE);
-            else if (_ === i.CodedLinkType.QUESTS_EMBED);
+            if (_ === a.CodedLinkType.INVITE);
+            else if (_ === a.CodedLinkType.TEMPLATE) null == r.default.getGuildTemplate(E) && n.default.resolveGuildTemplate(E);
+            else if (_ === a.CodedLinkType.BUILD_OVERRIDE || _ === a.CodedLinkType.MANUAL_BUILD_OVERRIDE);
+            else if (_ === a.CodedLinkType.EVENT);
+            else if (_ === a.CodedLinkType.CHANNEL_LINK);
+            else if (_ === a.CodedLinkType.APP_DIRECTORY_PROFILE);
+            else if (_ === a.CodedLinkType.ACTIVITY_BOOKMARK);
+            else if (_ === a.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
+            else if (_ === a.CodedLinkType.GUILD_PRODUCT);
+            else if (_ === a.CodedLinkType.SERVER_SHOP);
+            else if (_ === a.CodedLinkType.CLYDE_PROFILE);
+            else if (_ === a.CodedLinkType.QUESTS_EMBED);
             else throw Error("Unknown coded link type: ".concat(_))
         })
     }
-    class T extends t.default {
+    class s extends t.default {
         handleConnectionOpen() {
             I.clear()
         }
@@ -53,37 +53,37 @@ function(e, _, E) {
             let {
                 message: _
             } = e;
-            return s(_, !0)
+            return T(_, !0)
         }
         handleLoadMessages(e) {
             let {
                 channelId: _,
                 messages: E
             } = e;
-            I.add(_), E.forEach(e => s(e, !0))
+            I.add(_), E.forEach(e => T(e, !0))
         }
         handleLoadRecentMentions(e) {
             let {
                 messages: _
             } = e;
-            _.forEach(e => s(e))
+            _.forEach(e => T(e))
         }
         handleLoadPinnedMessages(e) {
             let {
                 messages: _
             } = e;
-            _.forEach(e => s(e))
+            _.forEach(e => T(e))
         }
         handleSearchFinish(e) {
             e.messages.forEach(e => {
-                e.forEach(e => s(e))
+                e.forEach(e => T(e))
             })
         }
         handleGuildFeedFetchSuccess(e) {
             let {
                 data: _
             } = e;
-            (0, o.getMessagesFromGuildFeedFetch)(_).forEach(e => s(e))
+            (0, o.getMessagesFromGuildFeedFetch)(_).forEach(e => T(e))
         }
         constructor(...e) {
             super(...e), this.actions = {
@@ -107,5 +107,5 @@ function(e, _, E) {
             }
         }
     }
-    var S = new T
+    var S = new s
 }

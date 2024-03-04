@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isSuspiciousDownload: function() {
-            return d
+            return l
         }
     }), n("222007");
-    var s = n("746379"),
-        i = n.n(s),
+    var i = n("746379"),
+        s = n.n(i),
         r = n("555919");
     let a = new Set(r),
         o = {
@@ -15,38 +15,38 @@ function(e, t, n) {
             "gitlab.com": RegExp("\\/downloads\\S*\\/[^\\/]*")
         };
 
-    function d(e) {
+    function l(e) {
         var t;
         let {
             pathname: n,
-            hostname: s
-        } = i.parse(e);
-        if (null == s) return null;
-        let r = o[s];
+            hostname: i
+        } = s.parse(e);
+        if (null == i) return null;
+        let r = o[i];
         if (null != r && null != n && !r.test(n) || null == n) return null;
-        let d = n;
+        let l = n;
         try {
-            d = decodeURIComponent(n)
+            l = decodeURIComponent(n)
         } catch (e) {}
-        let u = d.split("/"),
-            l = null,
-            f = 0;
+        let u = l.split("/"),
+            d = null,
+            c = 0;
         for (let e = u.length - 1; e >= 0; e--) {
             let t = u[e];
             if ("" !== t && "." !== t) {
                 if (".." === t) {
-                    f++;
+                    c++;
                     continue
                 }
-                if (f > e) break;
-                l = u[e - f];
+                if (c > e) break;
+                d = u[e - c];
                 break
             }
         }
-        if (null == l) return null;
-        let _ = l.split(".");
-        if (_.length < 2) return null;
-        let c = null === (t = _.pop()) || void 0 === t ? void 0 : t.toLowerCase();
-        return null != c && a.has(c) ? c : null
+        if (null == d) return null;
+        let f = d.split(".");
+        if (f.length < 2) return null;
+        let _ = null === (t = f.pop()) || void 0 === t ? void 0 : t.toLowerCase();
+        return null != _ && a.has(_) ? _ : null
     }
 }

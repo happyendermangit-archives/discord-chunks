@@ -1,25 +1,25 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("911718"),
+    var r = n("911718"),
         i = r("%Array.prototype%"),
-        n = r("%RangeError%"),
-        c = r("%SyntaxError%"),
-        o = r("%TypeError%"),
-        f = s("610330"),
+        o = r("%RangeError%"),
+        s = r("%SyntaxError%"),
+        a = r("%TypeError%"),
+        c = n("610330"),
         u = 4294967295,
-        a = s("29364")(),
-        d = r("%Object.setPrototypeOf%", !0) || (a ? function(t, e) {
-            return t.__proto__ = e, t
+        d = n("29364")(),
+        l = r("%Object.setPrototypeOf%", !0) || (d ? function(e, t) {
+            return e.__proto__ = t, e
         } : null);
-    t.exports = function(t) {
-        if (!f(t) || t < 0) throw new o("Assertion failed: `length` must be an integer Number >= 0");
-        if (t > u) throw new n("length is greater than (2**32 - 1)");
-        var e = arguments.length > 1 ? arguments[1] : i,
-            s = [];
-        if (e !== i) {
-            if (!d) throw new c("ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]");
-            d(s, e)
+    e.exports = function(e) {
+        if (!c(e) || e < 0) throw new a("Assertion failed: `length` must be an integer Number >= 0");
+        if (e > u) throw new o("length is greater than (2**32 - 1)");
+        var t = arguments.length > 1 ? arguments[1] : i,
+            n = [];
+        if (t !== i) {
+            if (!l) throw new s("ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]");
+            l(n, t)
         }
-        return 0 !== t && (s.length = t), s
+        return 0 !== e && (n.length = e), n
     }
 }

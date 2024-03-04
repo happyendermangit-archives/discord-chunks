@@ -5,11 +5,11 @@ function(e, t, n) {
         return (e & t) === t
     }
 
-    function r(e, t) {
+    function s(e, t) {
         return e | t
     }
 
-    function s(e, t) {
+    function r(e, t) {
         return e & ~t
     }
 
@@ -32,10 +32,10 @@ function(e, t, n) {
             return i
         },
         addFlag: function() {
-            return r
+            return s
         },
         removeFlag: function() {
-            return s
+            return r
         },
         removeFlags: function() {
             return a

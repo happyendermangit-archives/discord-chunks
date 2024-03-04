@@ -1,20 +1,20 @@
-function(e, t, l) {
+function(e, t, n) {
     "use strict";
-    l.r(t), l.d(t, {
+    n.r(t), n.d(t, {
         default: function() {
-            return d
+            return o
         }
     });
-    var n = l("37983");
-    l("884691");
-    var r = l("551042");
+    var i = n("37983");
+    n("884691");
+    var r = n("551042");
 
-    function d() {
+    function o() {
         (0, r.openModalLazy)(async () => {
             let {
                 default: e
-            } = await l.el("826269").then(l.bind(l, "826269"));
-            return t => (0, n.jsx)(e, {
+            } = await n.el("826269").then(n.bind(n, "826269"));
+            return t => (0, i.jsx)(e, {
                 ...t
             })
         })

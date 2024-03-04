@@ -5,7 +5,7 @@ function(e, t, n) {
             t.push(e)
         });
         else if (arguments.length > 0)
-            for (var n = 0, a = arguments.length; n < a; n++) t.push(arguments[n]);
+            for (var n = 0, i = arguments.length; n < i; n++) t.push(arguments[n]);
         return t
     }
     n("854508"), n("424973"), n("70102"), n("843762"), n("808653"), e.exports = r, r.Node = Node, r.create = r, r.prototype.removeNode = function(e) {
@@ -59,25 +59,25 @@ function(e, t, n) {
         if (t === e && null !== n) return n.value
     }, r.prototype.map = function(e, t) {
         t = t || this;
-        for (var n = new r, a = this.head; null !== a;) n.push(e.call(t, a.value, this)), a = a.next;
+        for (var n = new r, i = this.head; null !== i;) n.push(e.call(t, i.value, this)), i = i.next;
         return n
     }, r.prototype.mapReverse = function(e, t) {
         t = t || this;
-        for (var n = new r, a = this.tail; null !== a;) n.push(e.call(t, a.value, this)), a = a.prev;
+        for (var n = new r, i = this.tail; null !== i;) n.push(e.call(t, i.value, this)), i = i.prev;
         return n
     }, r.prototype.reduce = function(e, t) {
         var n, r = this.head;
         if (arguments.length > 1) n = t;
         else if (this.head) r = this.head.next, n = this.head.value;
         else throw TypeError("Reduce of empty list with no initial value");
-        for (var a = 0; null !== r; a++) n = e(n, r.value, a), r = r.next;
+        for (var i = 0; null !== r; i++) n = e(n, r.value, i), r = r.next;
         return n
     }, r.prototype.reduceReverse = function(e, t) {
         var n, r = this.tail;
         if (arguments.length > 1) n = t;
         else if (this.tail) r = this.tail.prev, n = this.tail.value;
         else throw TypeError("Reduce of empty list with no initial value");
-        for (var a = this.length - 1; null !== r; a--) n = e(n, r.value, a), r = r.prev;
+        for (var i = this.length - 1; null !== r; i--) n = e(n, r.value, i), r = r.prev;
         return n
     }, r.prototype.toArray = function() {
         for (var e = Array(this.length), t = 0, n = this.head; null !== n; t++) e[t] = n.value, n = n.next;
@@ -90,16 +90,16 @@ function(e, t, n) {
         var n = new r;
         if (t < e || t < 0) return n;
         e < 0 && (e = 0), t > this.length && (t = this.length);
-        for (var a = 0, i = this.head; null !== i && a < e; a++) i = i.next;
-        for (; null !== i && a < t; a++, i = i.next) n.push(i.value);
+        for (var i = 0, o = this.head; null !== o && i < e; i++) o = o.next;
+        for (; null !== o && i < t; i++, o = o.next) n.push(o.value);
         return n
     }, r.prototype.sliceReverse = function(e, t) {
         (t = t || this.length) < 0 && (t += this.length), (e = e || 0) < 0 && (e += this.length);
         var n = new r;
         if (t < e || t < 0) return n;
         e < 0 && (e = 0), t > this.length && (t = this.length);
-        for (var a = this.length, i = this.tail; null !== i && a > t; a--) i = i.prev;
-        for (; null !== i && a > e; a--, i = i.prev) n.push(i.value);
+        for (var i = this.length, o = this.tail; null !== o && i > t; i--) o = o.prev;
+        for (; null !== o && i > e; i--, o = o.prev) n.push(o.value);
         return n
     }, r.prototype.reverse = function() {
         for (var e = this.head, t = this.tail, n = e; null !== n; n = n.prev) {

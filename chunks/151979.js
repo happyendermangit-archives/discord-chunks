@@ -1,103 +1,103 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("70102");
-    var r = s("839309"),
-        i = s("840069"),
-        n = s("550511"),
-        c = s("346931"),
-        o = s("125807"),
-        f = n.assert,
-        u = s("410680"),
-        a = s("925572");
+    n("70102");
+    var r = n("839309"),
+        i = n("840069"),
+        o = n("550511"),
+        s = n("346931"),
+        a = n("125807"),
+        c = o.assert,
+        u = n("410680"),
+        d = n("925572");
 
-    function d(t) {
-        if (!(this instanceof d)) return new d(t);
-        "string" == typeof t && (f(Object.prototype.hasOwnProperty.call(c, t), "Unknown curve " + t), t = c[t]), t instanceof c.PresetCurve && (t = {
-            curve: t
-        }), this.curve = t.curve.curve, this.n = this.curve.n, this.nh = this.n.ushrn(1), this.g = this.curve.g, this.g = t.curve.g, this.g.precompute(t.curve.n.bitLength() + 1), this.hash = t.hash || t.curve.hash
+    function l(e) {
+        if (!(this instanceof l)) return new l(e);
+        "string" == typeof e && (c(Object.prototype.hasOwnProperty.call(s, e), "Unknown curve " + e), e = s[e]), e instanceof s.PresetCurve && (e = {
+            curve: e
+        }), this.curve = e.curve.curve, this.n = this.curve.n, this.nh = this.n.ushrn(1), this.g = this.curve.g, this.g = e.curve.g, this.g.precompute(e.curve.n.bitLength() + 1), this.hash = e.hash || e.curve.hash
     }
-    t.exports = d, d.prototype.keyPair = function(t) {
-        return new u(this, t)
-    }, d.prototype.keyFromPrivate = function(t, e) {
-        return u.fromPrivate(this, t, e)
-    }, d.prototype.keyFromPublic = function(t, e) {
-        return u.fromPublic(this, t, e)
-    }, d.prototype.genKeyPair = function(t) {
-        !t && (t = {});
-        for (var e = new i({
+    e.exports = l, l.prototype.keyPair = function(e) {
+        return new u(this, e)
+    }, l.prototype.keyFromPrivate = function(e, t) {
+        return u.fromPrivate(this, e, t)
+    }, l.prototype.keyFromPublic = function(e, t) {
+        return u.fromPublic(this, e, t)
+    }, l.prototype.genKeyPair = function(e) {
+        !e && (e = {});
+        for (var t = new i({
                 hash: this.hash,
-                pers: t.pers,
-                persEnc: t.persEnc || "utf8",
-                entropy: t.entropy || o(this.hash.hmacStrength),
-                entropyEnc: t.entropy && t.entropyEnc || "utf8",
+                pers: e.pers,
+                persEnc: e.persEnc || "utf8",
+                entropy: e.entropy || a(this.hash.hmacStrength),
+                entropyEnc: e.entropy && e.entropyEnc || "utf8",
                 nonce: this.n.toArray()
-            }), s = this.n.byteLength(), n = this.n.sub(new r(2));;) {
-            var c = new r(e.generate(s));
-            if (!(c.cmp(n) > 0)) return c.iaddn(1), this.keyFromPrivate(c)
+            }), n = this.n.byteLength(), o = this.n.sub(new r(2));;) {
+            var s = new r(t.generate(n));
+            if (!(s.cmp(o) > 0)) return s.iaddn(1), this.keyFromPrivate(s)
         }
-    }, d.prototype._truncateToN = function(t, e) {
-        var s = 8 * t.byteLength() - this.n.bitLength();
-        return (s > 0 && (t = t.ushrn(s)), !e && t.cmp(this.n) >= 0) ? t.sub(this.n) : t
-    }, d.prototype.sign = function(t, e, s, n) {
-        "object" == typeof s && (n = s, s = null), !n && (n = {}), e = this.keyFromPrivate(e, s), t = this._truncateToN(new r(t, 16));
-        for (var c = this.n.byteLength(), o = e.getPrivate().toArray("be", c), f = t.toArray("be", c), u = new i({
+    }, l.prototype._truncateToN = function(e, t) {
+        var n = 8 * e.byteLength() - this.n.bitLength();
+        return (n > 0 && (e = e.ushrn(n)), !t && e.cmp(this.n) >= 0) ? e.sub(this.n) : e
+    }, l.prototype.sign = function(e, t, n, o) {
+        "object" == typeof n && (o = n, n = null), !o && (o = {}), t = this.keyFromPrivate(t, n), e = this._truncateToN(new r(e, 16));
+        for (var s = this.n.byteLength(), a = t.getPrivate().toArray("be", s), c = e.toArray("be", s), u = new i({
                 hash: this.hash,
-                entropy: o,
-                nonce: f,
-                pers: n.pers,
-                persEnc: n.persEnc || "utf8"
-            }), d = this.n.sub(new r(1)), p = 0;; p++) {
-            var b = n.k ? n.k(p) : new r(u.generate(this.n.byteLength()));
-            if (0 >= (b = this._truncateToN(b, !0)).cmpn(1) || b.cmp(d) >= 0) continue;
-            var h = this.g.mul(b);
+                entropy: a,
+                nonce: c,
+                pers: o.pers,
+                persEnc: o.persEnc || "utf8"
+            }), l = this.n.sub(new r(1)), f = 0;; f++) {
+            var p = o.k ? o.k(f) : new r(u.generate(this.n.byteLength()));
+            if (0 >= (p = this._truncateToN(p, !0)).cmpn(1) || p.cmp(l) >= 0) continue;
+            var h = this.g.mul(p);
             if (h.isInfinity()) continue;
-            var l = h.getX(),
-                g = l.umod(this.n);
+            var v = h.getX(),
+                g = v.umod(this.n);
             if (0 !== g.cmpn(0)) {
-                var v = b.invm(this.n).mul(g.mul(e.getPrivate()).iadd(t));
-                if (0 !== (v = v.umod(this.n)).cmpn(0)) {
-                    var x = (h.getY().isOdd() ? 1 : 0) | (0 !== l.cmp(g) ? 2 : 0);
-                    return n.canonical && v.cmp(this.nh) > 0 && (v = this.n.sub(v), x ^= 1), new a({
+                var b = p.invm(this.n).mul(g.mul(t.getPrivate()).iadd(e));
+                if (0 !== (b = b.umod(this.n)).cmpn(0)) {
+                    var m = (h.getY().isOdd() ? 1 : 0) | (0 !== v.cmp(g) ? 2 : 0);
+                    return o.canonical && b.cmp(this.nh) > 0 && (b = this.n.sub(b), m ^= 1), new d({
                         r: g,
-                        s: v,
-                        recoveryParam: x
+                        s: b,
+                        recoveryParam: m
                     })
                 }
             }
         }
-    }, d.prototype.verify = function(t, e, s, i) {
-        t = this._truncateToN(new r(t, 16)), s = this.keyFromPublic(s, i);
-        var n, c = (e = new a(e, "hex")).r,
-            o = e.s;
-        if (0 > c.cmpn(1) || c.cmp(this.n) >= 0 || 0 > o.cmpn(1) || o.cmp(this.n) >= 0) return !1;
-        var f = o.invm(this.n),
-            u = f.mul(t).umod(this.n),
-            d = f.mul(c).umod(this.n);
-        if (!this.curve._maxwellTrick) return !(n = this.g.mulAdd(u, s.getPublic(), d)).isInfinity() && 0 === n.getX().umod(this.n).cmp(c);
-        return !(n = this.g.jmulAdd(u, s.getPublic(), d)).isInfinity() && n.eqXToP(c)
-    }, d.prototype.recoverPubKey = function(t, e, s, i) {
-        f((3 & s) === s, "The recovery param is more than two bits"), e = new a(e, i);
-        var n = this.n,
-            c = new r(t),
-            o = e.r,
-            u = e.s,
-            d = 1 & s,
-            p = s >> 1;
-        if (o.cmp(this.curve.p.umod(this.curve.n)) >= 0 && p) throw Error("Unable to find sencond key candinate");
-        o = p ? this.curve.pointFromX(o.add(this.curve.n), d) : this.curve.pointFromX(o, d);
-        var b = e.r.invm(n),
-            h = n.sub(c).mul(b).umod(n),
-            l = u.mul(b).umod(n);
-        return this.g.mulAdd(h, o, l)
-    }, d.prototype.getKeyRecoveryParam = function(t, e, s, r) {
-        if (null !== (e = new a(e, r)).recoveryParam) return e.recoveryParam;
-        for (var i, n = 0; n < 4; n++) {
+    }, l.prototype.verify = function(e, t, n, i) {
+        e = this._truncateToN(new r(e, 16)), n = this.keyFromPublic(n, i);
+        var o, s = (t = new d(t, "hex")).r,
+            a = t.s;
+        if (0 > s.cmpn(1) || s.cmp(this.n) >= 0 || 0 > a.cmpn(1) || a.cmp(this.n) >= 0) return !1;
+        var c = a.invm(this.n),
+            u = c.mul(e).umod(this.n),
+            l = c.mul(s).umod(this.n);
+        if (!this.curve._maxwellTrick) return !(o = this.g.mulAdd(u, n.getPublic(), l)).isInfinity() && 0 === o.getX().umod(this.n).cmp(s);
+        return !(o = this.g.jmulAdd(u, n.getPublic(), l)).isInfinity() && o.eqXToP(s)
+    }, l.prototype.recoverPubKey = function(e, t, n, i) {
+        c((3 & n) === n, "The recovery param is more than two bits"), t = new d(t, i);
+        var o = this.n,
+            s = new r(e),
+            a = t.r,
+            u = t.s,
+            l = 1 & n,
+            f = n >> 1;
+        if (a.cmp(this.curve.p.umod(this.curve.n)) >= 0 && f) throw Error("Unable to find sencond key candinate");
+        a = f ? this.curve.pointFromX(a.add(this.curve.n), l) : this.curve.pointFromX(a, l);
+        var p = t.r.invm(o),
+            h = o.sub(s).mul(p).umod(o),
+            v = u.mul(p).umod(o);
+        return this.g.mulAdd(h, a, v)
+    }, l.prototype.getKeyRecoveryParam = function(e, t, n, r) {
+        if (null !== (t = new d(t, r)).recoveryParam) return t.recoveryParam;
+        for (var i, o = 0; o < 4; o++) {
             try {
-                i = this.recoverPubKey(t, e, n)
-            } catch (t) {
+                i = this.recoverPubKey(e, t, o)
+            } catch (e) {
                 continue
             }
-            if (i.eq(s)) return n
+            if (i.eq(n)) return o
         }
         throw Error("Unable to find valid recovery factor")
     }

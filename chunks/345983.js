@@ -1,11 +1,11 @@
-function(t, r, n) {
-    var e = n("855865"),
-        o = n("258423"),
-        i = n("260739");
-    t.exports = function(t) {
-        var r = o(t);
-        return 1 == r.length && r[0][2] ? i(r[0][0], r[0][1]) : function(n) {
-            return n === t || e(n, t, r)
+function(e, t, n) {
+    var r = n("855865"),
+        i = n("258423"),
+        o = n("260739");
+    e.exports = function(e) {
+        var t = i(e);
+        return 1 == t.length && t[0][2] ? o(t[0][0], t[0][1]) : function(n) {
+            return n === e || r(n, e, t)
         }
     }
 }

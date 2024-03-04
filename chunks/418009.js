@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var a, l;
+    var i, s;
     n.r(t), n.d(t, {
         PollLayoutTypes: function() {
-            return a
+            return i
         }
-    }), (l = a || (a = {}))[l.UNKNOWN = 0] = "UNKNOWN", l[l.DEFAULT = 1] = "DEFAULT", l[l.IMAGE_ONLY_ANSWERS = 2] = "IMAGE_ONLY_ANSWERS"
+    }), (s = i || (i = {}))[s.UNKNOWN = 0] = "UNKNOWN", s[s.DEFAULT = 1] = "DEFAULT", s[s.IMAGE_ONLY_ANSWERS = 2] = "IMAGE_ONLY_ANSWERS"
 }

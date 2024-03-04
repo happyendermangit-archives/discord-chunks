@@ -9,18 +9,18 @@ function(e, _, E) {
         o = E.n(t),
         n = E("429030"),
         r = E("229353"),
-        i = E.n(r),
-        a = E("444051"),
-        I = E.n(a),
-        s = E("657743"),
-        T = E.n(s);
+        a = E.n(r),
+        i = E("444051"),
+        I = E.n(i),
+        T = E("657743"),
+        s = E.n(T);
     let S = e => ({
             ...I,
-            ...T,
+            ...s,
             ...e
         }),
         N = new n.default({
-            getMessages: e => "en-US" === e ? S(i) : E("795529")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
+            getMessages: e => "en-US" === e ? S(a) : E("795529")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
                 let {
                     default: _
                 } = e;

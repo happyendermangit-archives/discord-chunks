@@ -2,25 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         shouldTrackMessage: function() {
-            return m
+            return p
         },
         default: function() {
-            return A
+            return T
         }
     }), n("222007");
-    var a = n("446674"),
-        l = n("407846"),
-        s = n("862337"),
-        i = n("913144"),
-        r = n("271938"),
-        u = n("18494"),
-        d = n("659500"),
-        o = n("880731"),
+    var i = n("446674"),
+        s = n("407846"),
+        r = n("862337"),
+        a = n("913144"),
+        o = n("271938"),
+        l = n("18494"),
+        u = n("659500"),
+        d = n("880731"),
         c = n("119035"),
-        E = n("39141"),
+        f = n("39141"),
         _ = n("49111");
-    let f = new Set,
-        g = new l.default(function(e) {
+    let h = new Set,
+        E = new s.default(function(e) {
             let {
                 userId: t,
                 channelId: n
@@ -33,26 +33,26 @@ function(e, t, n) {
             } = e;
             return "".concat(n, "-").concat(t)
         }),
-        S = new l.default(function(e) {
+        g = new s.default(function(e) {
             let {
                 messageId: t,
                 channelId: n,
                 combo: {
-                    userId: a
+                    userId: i
                 }
             } = e;
-            return [t, n, a]
+            return [t, n, i]
         }, function(e) {
             let {
                 messageId: t,
                 channelId: n,
                 combo: {
-                    userId: a
+                    userId: i
                 }
             } = e;
-            return "".concat(n, "-").concat(a, "-").concat(t)
+            return "".concat(n, "-").concat(i, "-").concat(t)
         }),
-        h = e => {
+        m = e => {
             let {
                 userId: t,
                 channelId: n
@@ -60,81 +60,81 @@ function(e, t, n) {
             return "".concat(t, "-").concat(n)
         };
 
-    function m(e, t, n, a) {
+    function p(e, t, n, i) {
         if (e !== t) return !1;
-        let l = null == n;
-        return !(l || a.has(n)) && (a.add(n), !0)
+        let s = null == n;
+        return !(s || i.has(n)) && (i.add(n), !0)
     }
-    class T extends a.default.Store {
+    class S extends i.default.Store {
         initialize() {
-            this.waitFor(r.default, u.default)
+            this.waitFor(o.default, l.default)
         }
         getComboScore(e, t) {
-            let n = g.get(h({
+            let n = E.get(m({
                 userId: e,
                 channelId: t
             }));
             return null == n ? 0 : (0, c.getComboScore)(n)
         }
         getUserCombo(e, t) {
-            return g.get(h({
+            return E.get(m({
                 userId: e,
                 channelId: t
             }))
         }
         isComboing(e, t) {
             var n;
-            let a = this.getUserCombo(e, t);
-            return null != a && a.value >= o.default.combosRequiredCount && null != (n = a) && (n.value > 0 || (null == n ? void 0 : n.multiplier) > 1)
+            let i = this.getUserCombo(e, t);
+            return null != i && i.value >= d.default.combosRequiredCount && null != (n = i) && (n.value > 0 || (null == n ? void 0 : n.multiplier) > 1)
         }
         getMessageCombo(e) {
             var t;
-            let n = S.get(e);
+            let n = g.get(e);
             return null !== (t = null == n ? void 0 : n.combo) && void 0 !== t ? t : void 0
         }
         getMostRecentMessageCombo(e) {
-            let t = S.values(e);
+            let t = g.values(e);
             return t[t.length - 1]
         }
-        getUserComboShakeIntensity(e, t, n, a) {
-            let l = this.getUserCombo(e, t);
-            return null != l ? (0, c.getComboShakeIntensity)(l, a) * n : 0
+        getUserComboShakeIntensity(e, t, n, i) {
+            let s = this.getUserCombo(e, t);
+            return null != s ? (0, c.getComboShakeIntensity)(s, i) * n : 0
         }
     }
-    T.displayName = "PoggermodeStore";
-    let M = new T(i.default, {
+    S.displayName = "PoggermodeStore";
+    let v = new S(a.default, {
         POGGERMODE_UPDATE_COMBO: function(e) {
             let {
                 type: t,
                 ...n
             } = e;
-            if (!o.default.isEnabled()) return !1;
+            if (!d.default.isEnabled()) return !1;
             ! function e(t) {
-                var n, a, l, i, r, u;
-                let d = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    o = g.get(h(t)),
+                var n, i, s, a, o, l;
+                let u = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                    d = E.get(m(t)),
                     c = {
-                        ...o,
+                        ...d,
                         ...t,
-                        value: null !== (a = null !== (n = t.value) && void 0 !== n ? n : null == o ? void 0 : o.value) && void 0 !== a ? a : 0,
-                        multiplier: Math.min(null !== (i = null !== (l = t.multiplier) && void 0 !== l ? l : null == o ? void 0 : o.multiplier) && void 0 !== i ? i : 1, 7),
-                        decayInterval: null !== (r = null == o ? void 0 : o.decayInterval) && void 0 !== r ? r : new s.Interval
+                        value: null !== (i = null !== (n = t.value) && void 0 !== n ? n : null == d ? void 0 : d.value) && void 0 !== i ? i : 0,
+                        multiplier: Math.min(null !== (a = null !== (s = t.multiplier) && void 0 !== s ? s : null == d ? void 0 : d.multiplier) && void 0 !== a ? a : 1, 7),
+                        decayInterval: null !== (o = null == d ? void 0 : d.decayInterval) && void 0 !== o ? o : new r.Interval
                     };
-                g.set(h(t), c), d && (null === (u = c.decayInterval) || void 0 === u || u.start(1e3, () => {
-                    let t = g.get(h(c));
+                E.set(m(t), c), u && (null === (l = c.decayInterval) || void 0 === l || l.start(1e3, () => {
+                    let t = E.get(m(c));
                     if (null != t) {
-                        let a = c.multiplier !== t.multiplier && c.value !== t.value;
-                        if (t.value <= 0 || a) {
+                        let i = c.multiplier !== t.multiplier && c.value !== t.value;
+                        if (t.value <= 0 || i) {
                             var n;
                             null === (n = t.decayInterval) || void 0 === n || n.stop(), t.value <= 0 && (e({
                                 ...t,
                                 value: 0,
                                 multiplier: 1
-                            }), M.emitChange())
+                            }), v.emitChange())
                         } else e({
                             ...t,
                             value: t.value - 1
-                        }), M.emitChange()
+                        }), v.emitChange()
                     }
                 }))
             }(n)
@@ -144,29 +144,29 @@ function(e, t, n) {
             let {
                 comboMessage: n
             } = e;
-            if (!o.default.isEnabled()) return !1;
-            t = n, S.set(t.messageId, t)
+            if (!d.default.isEnabled()) return !1;
+            t = n, g.set(t.messageId, t)
         },
         MESSAGE_CREATE: function(e) {
             var t, n;
             let {
-                channelId: a,
+                channelId: i,
                 message: {
-                    mentions: l,
-                    author: s,
-                    nonce: i
+                    mentions: s,
+                    author: r,
+                    nonce: a
                 }
             } = e;
-            if (!o.default.isEnabled()) return !1;
-            let u = r.default.getId();
-            if (!m(null == s ? void 0 : s.id, u, i, f)) return !1;
-            let S = g.get(h({
-                userId: null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "???",
-                channelId: a
+            if (!d.default.isEnabled()) return !1;
+            let l = o.default.getId();
+            if (!p(null == r ? void 0 : r.id, l, a, h)) return !1;
+            let g = E.get(m({
+                userId: null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "???",
+                channelId: i
             }));
-            if (o.default.screenshakeEnabled && o.default.screenshakeEnabledLocations[E.ShakeLocation.MENTION] && null != l && null != l.find(e => e.id === u)) {
-                let e = null != S ? null !== (n = (0, c.getComboShakeIntensity)(S, E.ShakeLevel.LEVEL_4)) && void 0 !== n ? n : .001 : 4 * Math.random();
-                return d.ComponentDispatch.dispatch(_.ComponentActions.SHAKE_APP, {
+            if (d.default.screenshakeEnabled && d.default.screenshakeEnabledLocations[f.ShakeLocation.MENTION] && null != s && null != s.find(e => e.id === l)) {
+                let e = null != g ? null !== (n = (0, c.getComboShakeIntensity)(g, f.ShakeLevel.LEVEL_4)) && void 0 !== n ? n : .001 : 4 * Math.random();
+                return u.ComponentDispatch.dispatch(_.ComponentActions.SHAKE_APP, {
                     duration: 1e3,
                     intensity: e
                 }), !0
@@ -174,5 +174,5 @@ function(e, t, n) {
             return !1
         }
     });
-    var A = M
+    var T = v
 }

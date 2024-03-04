@@ -5,7 +5,7 @@ function(e, t, n) {
         return !1
     }
 
-    function r() {
+    function s() {
         return !1
     }
     n.r(t), n.d(t, {
@@ -13,7 +13,7 @@ function(e, t, n) {
             return i
         },
         isMobileRedesignDisabled: function() {
-            return r
+            return s
         }
     })
 }

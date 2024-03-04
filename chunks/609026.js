@@ -2,52 +2,52 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MenuSearchControl: function() {
-            return p
+            return h
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("227645"),
         l = n("718776"),
         u = n("242670"),
-        c = n("945330"),
-        d = n("229915"),
+        d = n("945330"),
+        c = n("229915"),
         f = n("782340"),
-        E = n("523634");
-    let p = r.forwardRef(function(e, t) {
-        var n, s, p;
+        _ = n("523634");
+    let h = s.forwardRef(function(e, t) {
+        var n, r, h;
         let {
-            query: h,
-            onChange: _,
-            loading: S = !1,
-            disabled: m = !1,
-            placeholder: T = f.default.Messages.SEARCH,
-            "aria-label": g
-        } = e, I = r.useRef(null), C = r.useRef(null);
-        r.useImperativeHandle(t, () => ({
+            query: E,
+            onChange: g,
+            loading: m = !1,
+            disabled: p = !1,
+            placeholder: S = f.default.Messages.SEARCH,
+            "aria-label": v
+        } = e, T = s.useRef(null), I = s.useRef(null);
+        s.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
-                return null === (e = C.current) || void 0 === e ? void 0 : e.focus()
+                return null === (e = I.current) || void 0 === e ? void 0 : e.focus()
             },
             blur: () => {
                 var e;
-                return null === (e = C.current) || void 0 === e ? void 0 : e.blur()
+                return null === (e = I.current) || void 0 === e ? void 0 : e.blur()
             },
             activate: () => !1
         }), []);
-        let v = (n = h, s = S, p = _, s ? (0, i.jsx)("div", {
-            className: E.iconContainer,
+        let C = (n = E, r = m, h = g, r ? (0, i.jsx)("div", {
+            className: _.iconContainer,
             children: (0, i.jsx)(u.Spinner, {
                 type: u.Spinner.Type.SPINNING_CIRCLE,
-                className: a(E.icon)
+                className: a(_.icon)
             })
         }) : n.length > 0 ? (0, i.jsx)(o.Clickable, {
             "aria-label": f.default.Messages.SEARCH_CLEAR,
-            className: a(E.iconContainer, E.iconClickable),
+            className: a(_.iconContainer, _.iconClickable),
             onClick: e => {
-                e.stopPropagation(), p("")
+                e.stopPropagation(), h("")
             },
             onMouseDown: e => {
                 e.preventDefault(), e.stopPropagation()
@@ -60,24 +60,24 @@ function(e, t, n) {
                     left: -3
                 }
             },
-            children: (0, i.jsx)(c.default, {
-                width: 18,
-                height: 18,
-                className: E.icon,
-                "aria-label": f.default.Messages.CLOSE
-            })
-        }) : (0, i.jsx)("div", {
-            className: E.iconContainer,
             children: (0, i.jsx)(d.default, {
                 width: 18,
                 height: 18,
-                className: E.icon,
+                className: _.icon,
+                "aria-label": f.default.Messages.CLOSE
+            })
+        }) : (0, i.jsx)("div", {
+            className: _.iconContainer,
+            children: (0, i.jsx)(c.default, {
+                width: 18,
+                height: 18,
+                className: _.icon,
                 "aria-label": f.default.Messages.SEARCH
             })
         }));
         return (0, i.jsx)(l.FocusRing, {
-            focusTarget: C,
-            ringTarget: I,
+            focusTarget: I,
+            ringTarget: T,
             offset: {
                 top: 2,
                 bottom: 2,
@@ -85,19 +85,19 @@ function(e, t, n) {
                 right: 4
             },
             children: (0, i.jsxs)("div", {
-                className: E.container,
-                ref: I,
+                className: _.container,
+                ref: T,
                 children: [(0, i.jsx)("input", {
                     role: "searchbox",
-                    "aria-busy": S,
-                    ref: C,
-                    className: E.input,
-                    value: h,
-                    onChange: e => _(e.currentTarget.value),
-                    "aria-label": g,
-                    placeholder: T,
-                    disabled: m
-                }), v]
+                    "aria-busy": m,
+                    ref: I,
+                    className: _.input,
+                    value: E,
+                    onChange: e => g(e.currentTarget.value),
+                    "aria-label": v,
+                    placeholder: S,
+                    disabled: p
+                }), C]
             })
         })
     })

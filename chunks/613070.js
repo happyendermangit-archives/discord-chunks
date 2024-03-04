@@ -2,79 +2,79 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("222007");
-    var s = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("775560"),
+    var s = n("775560"),
         r = n("605451"),
         a = n("577776"),
         o = n("36694"),
-        d = n("945330"),
+        l = n("945330"),
         u = n("29479"),
-        l = n("782340"),
-        f = n("963355");
+        d = n("782340"),
+        c = n("963355");
 
-    function _(e) {
+    function f(e) {
         var t;
         let {
             application: n,
-            accountScopes: _,
-            errors: c,
-            isTrustedName: g = !1
-        } = e, m = (0, i.useLazyValue)(() => u.FAKE_SCOPES[Math.floor(Math.random() * u.FAKE_SCOPES.length)]);
-        if (0 === _.length) return null;
-        let h = _.map(e => {
+            accountScopes: f,
+            errors: _,
+            isTrustedName: h = !1
+        } = e, E = (0, s.useLazyValue)(() => u.FAKE_SCOPES[Math.floor(Math.random() * u.FAKE_SCOPES.length)]);
+        if (0 === f.length) return null;
+        let g = f.map(e => {
                 var t;
-                let n = (0, u.getScopeName)(e, _),
-                    [i] = null !== (t = null == c ? void 0 : c[e]) && void 0 !== t ? t : [];
-                return (0, s.jsxs)("div", {
-                    className: f.scope,
-                    children: [(0, s.jsx)("div", {
-                        className: f.scopeCheck,
-                        children: (0, s.jsx)(o.default, {
-                            className: f.icon
+                let n = (0, u.getScopeName)(e, f),
+                    [s] = null !== (t = null == _ ? void 0 : _[e]) && void 0 !== t ? t : [];
+                return (0, i.jsxs)("div", {
+                    className: c.scope,
+                    children: [(0, i.jsx)("div", {
+                        className: c.scopeCheck,
+                        children: (0, i.jsx)(o.default, {
+                            className: c.icon
                         })
-                    }), (0, s.jsxs)("div", {
-                        className: f.scopeInner,
-                        children: [(0, s.jsx)(a.Text, {
+                    }), (0, i.jsxs)("div", {
+                        className: c.scopeInner,
+                        children: [(0, i.jsx)(a.Text, {
                             variant: "text-md/medium",
                             children: n
-                        }), null != i ? (0, s.jsx)(a.Text, {
+                        }), null != s ? (0, i.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-danger",
-                            children: i
+                            children: s
                         }) : null]
                     })]
                 }, e)
             }),
-            v = (0, s.jsxs)("div", {
-                className: f.scope,
-                children: [(0, s.jsx)("div", {
-                    className: f.scopeTimes,
-                    children: (0, s.jsx)(d.default, {
-                        className: f.icon
+            m = (0, i.jsxs)("div", {
+                className: c.scope,
+                children: [(0, i.jsx)("div", {
+                    className: c.scopeTimes,
+                    children: (0, i.jsx)(l.default, {
+                        className: c.icon
                     })
-                }), (0, s.jsx)("div", {
-                    className: f.scopeInner,
-                    children: (0, s.jsx)(a.Text, {
+                }), (0, i.jsx)("div", {
+                    className: c.scopeInner,
+                    children: (0, i.jsx)(a.Text, {
                         variant: "text-md/normal",
-                        className: f.scopeName,
-                        children: m()
+                        className: c.scopeName,
+                        children: E()
                     })
                 })]
             }),
-            E = g ? l.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : l.default.Messages.OAUTH2_SCOPES_LABEL;
-        return (0, s.jsxs)("div", {
-            className: f.scopes,
-            children: [(0, s.jsx)(r.Heading, {
+            p = h ? d.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : d.default.Messages.OAUTH2_SCOPES_LABEL;
+        return (0, i.jsxs)("div", {
+            className: c.scopes,
+            children: [(0, i.jsx)(r.Heading, {
                 variant: "heading-deprecated-12/semibold",
-                className: f.sectionLabel,
-                children: E.format({
+                className: c.sectionLabel,
+                children: p.format({
                     application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ""
                 })
-            }), h, v]
+            }), g, m]
         })
     }
 }

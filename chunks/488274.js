@@ -1,19 +1,19 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("599235"),
-        i = s("708893"),
-        n = s("291954"),
-        c = s("622107"),
-        o = s("441270");
+    var r = n("599235"),
+        i = n("708893"),
+        o = n("291954"),
+        s = n("622107"),
+        a = n("441270");
 
-    function f(t) {
-        o.call(this, "digest"), this._hash = t
+    function c(e) {
+        a.call(this, "digest"), this._hash = e
     }
-    r(f, o), f.prototype._update = function(t) {
-        this._hash.update(t)
-    }, f.prototype._final = function() {
+    r(c, a), c.prototype._update = function(e) {
+        this._hash.update(e)
+    }, c.prototype._final = function() {
         return this._hash.digest()
-    }, t.exports = function(t) {
-        return "md5" === (t = t.toLowerCase()) ? new i : "rmd160" === t || "ripemd160" === t ? new n : new f(c(t))
+    }, e.exports = function(e) {
+        return "md5" === (e = e.toLowerCase()) ? new i : "rmd160" === e || "ripemd160" === e ? new o : new c(s(e))
     }
 }

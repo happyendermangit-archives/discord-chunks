@@ -2,29 +2,29 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SelfDismissibleAlertBody: function() {
-            return d
+            return l
         }
     });
-    var s = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        s = n("884691"),
         r = n("446674"),
         a = n("76393"),
         o = n("443725");
 
-    function d(e) {
+    function l(e) {
         let {
             body: t,
             dismissCallback: n,
-            errorCodeMessage: d
+            errorCodeMessage: l
         } = e, u = (0, r.useStateFromStores)([a.default], () => a.default.getRemoteSessionId());
-        return (i.useEffect(() => {
+        return (s.useEffect(() => {
             null != u && n()
-        }, [u, n]), null == d) ? (0, s.jsx)(s.Fragment, {
+        }, [u, n]), null == l) ? (0, i.jsx)(i.Fragment, {
             children: t
-        }) : (0, s.jsxs)(s.Fragment, {
-            children: [t, (0, s.jsx)("div", {
+        }) : (0, i.jsxs)(i.Fragment, {
+            children: [t, (0, i.jsx)("div", {
                 className: o.errorCodeMessage,
-                children: d
+                children: l
             })]
         })
     }

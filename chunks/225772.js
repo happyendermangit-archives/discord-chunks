@@ -5,21 +5,21 @@ function(e, t, n) {
             return a
         }
     });
-    var s = n("385976"),
-        i = n("867805"),
+    var i = n("385976"),
+        s = n("867805"),
         r = n("49111");
 
     function a(e) {
         let t = null;
         if (null != e.emojiId && "0" !== e.emojiId) {
-            let n = s.default.getUsableCustomEmojiById(e.emojiId);
+            let n = i.default.getUsableCustomEmojiById(e.emojiId);
             t = null != n ? {
                 id: n.id,
                 name: n.name,
                 animated: n.animated
             } : null
         } else if (null != e.emojiName && "" !== e.emojiName) {
-            let n = i.default.getByName(i.default.convertSurrogateToName(e.emojiName, !1));
+            let n = s.default.getByName(s.default.convertSurrogateToName(e.emojiName, !1));
             t = null != n ? {
                 id: null,
                 name: n.surrogates,

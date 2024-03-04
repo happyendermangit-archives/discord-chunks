@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     });
     var i = n("862205"),
-        r = n("718517");
-    let s = (0, i.createExperiment)({
+        s = n("718517");
+    let r = (0, i.createExperiment)({
         kind: "user",
         id: "2023-10_wgc_stale_frame_timeout",
         label: "Windows Graphics Capture Stale Frame Timeout",
@@ -18,45 +18,45 @@ function(e, t, n) {
             id: 1,
             label: "1 second",
             config: {
-                graphicsCaptureStaleFrameTimeoutMs: 1 * r.default.Millis.SECOND
+                graphicsCaptureStaleFrameTimeoutMs: 1 * s.default.Millis.SECOND
             }
         }, {
             id: 2,
             label: "5 seconds",
             config: {
-                graphicsCaptureStaleFrameTimeoutMs: 5 * r.default.Millis.SECOND
+                graphicsCaptureStaleFrameTimeoutMs: 5 * s.default.Millis.SECOND
             }
         }, {
             id: 3,
             label: "10 seconds",
             config: {
-                graphicsCaptureStaleFrameTimeoutMs: 10 * r.default.Millis.SECOND
+                graphicsCaptureStaleFrameTimeoutMs: 10 * s.default.Millis.SECOND
             }
         }, {
             id: 4,
             label: "30 seconds",
             config: {
-                graphicsCaptureStaleFrameTimeoutMs: 30 * r.default.Millis.SECOND
+                graphicsCaptureStaleFrameTimeoutMs: 30 * s.default.Millis.SECOND
             }
         }, {
             id: 5,
             label: "60 seconds",
             config: {
-                graphicsCaptureStaleFrameTimeoutMs: 60 * r.default.Millis.SECOND
+                graphicsCaptureStaleFrameTimeoutMs: 60 * s.default.Millis.SECOND
             }
         }, {
             id: 5,
             label: "120 seconds",
             config: {
-                graphicsCaptureStaleFrameTimeoutMs: 120 * r.default.Millis.SECOND
+                graphicsCaptureStaleFrameTimeoutMs: 120 * s.default.Millis.SECOND
             }
         }]
     });
     var a = {
-        getConfig: (e, t, n) => e ? s.getCurrentConfig({
+        getConfig: (e, t, n) => e ? r.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: n
-        }) : s.definition.defaultConfig
+        }) : r.definition.defaultConfig
     }
 }

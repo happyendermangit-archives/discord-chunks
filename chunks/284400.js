@@ -1,18 +1,18 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("462568"), s("222007");
-    var r = s("975169"),
-        i = s("658683"),
-        n = s("366400");
-    t.exports = function() {
+    n("462568"), n("222007");
+    var r = n("975169"),
+        i = n("658683"),
+        o = n("366400");
+    e.exports = function() {
         r();
-        var t = i();
-        return n(Promise, {
-            allSettled: t
+        var e = i();
+        return o(Promise, {
+            allSettled: e
         }, {
             allSettled: function() {
-                return Promise.allSettled !== t
+                return Promise.allSettled !== e
             }
-        }), t
+        }), e
     }
 }

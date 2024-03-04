@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DateParser: function() {
-            return h
+            return m
         }
     }), n("222007"), n("70102"), n("426094"), n("854508");
     var r = n("238418"),
@@ -51,7 +51,7 @@ function(e, t, n) {
     }
     var f = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
         p = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-        h = function(e) {
+        m = function(e) {
             ! function(e, t) {
                 if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
                 e.prototype = Object.create(t && t.prototype, {
@@ -62,7 +62,7 @@ function(e, t, n) {
                     }
                 }), t && u(e, t)
             }(_, e);
-            var t, n, a, h, m, y = (t = _, n = function() {
+            var t, n, a, m, h, y = (t = _, n = function() {
                 if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                 if ("function" == typeof Proxy) return !0;
                 try {
@@ -89,7 +89,7 @@ function(e, t, n) {
                 for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
                 return d(l(e = y.call.apply(y, [this].concat(n))), "priority", 90), d(l(e), "subPriority", 1), d(l(e), "incompatibleTokens", ["Y", "R", "q", "Q", "w", "I", "D", "i", "e", "c", "t", "T"]), e
             }
-            return a = _, h = [{
+            return a = _, m = [{
                 key: "parse",
                 value: function(e, t, n) {
                     switch (t) {
@@ -116,6 +116,6 @@ function(e, t, n) {
                 value: function(e, t, n) {
                     return e.setUTCDate(n), e.setUTCHours(0, 0, 0, 0), e
                 }
-            }], s(a.prototype, h), m && s(a, m), _
+            }], s(a.prototype, m), h && s(a, h), _
         }(a.Parser)
 }

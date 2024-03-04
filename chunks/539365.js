@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("37983");
     n("884691");
-    var r = n("414456"),
-        s = n.n(r),
+    var s = n("414456"),
+        r = n.n(s),
         a = n("389802"),
         o = n("639826");
 
@@ -16,15 +16,15 @@ function(e, t, n) {
         let {
             contents: t,
             label: n,
-            className: r,
+            className: s,
             color: l = "default"
         } = e;
         return 0 === t.length ? null : (0, i.jsxs)("div", {
             "aria-label": n,
             role: "group",
-            className: r,
+            className: s,
             children: [null != n ? (0, i.jsx)("div", {
-                className: s(o.groupLabel, a.MENU_ITEM_COLORS[l]),
+                className: r(o.groupLabel, a.MENU_ITEM_COLORS[l]),
                 children: n
             }) : null, t]
         })

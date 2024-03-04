@@ -9,26 +9,26 @@ function(e, _, E) {
         o = E("884691"),
         n = E("446674"),
         r = E("318696"),
-        i = E("915639"),
-        a = E("787910"),
+        a = E("915639"),
+        i = E("787910"),
         I = E("90404"),
-        s = E("782340"),
-        T = E("386161");
+        T = E("782340"),
+        s = E("386161");
 
     function S(e) {
         let {
             locale: _,
             children: E
-        } = e, [o, r] = (0, n.useStateFromStoresArray)([a.default], () => [a.default.isLoading(), a.default.getError()]);
+        } = e, [o, r] = (0, n.useStateFromStoresArray)([i.default], () => [i.default.isLoading(), i.default.getError()]);
         return null != r ? (0, t.jsx)(I.default, {
-            title: s.default.Messages.I18N_LOCALE_LOADING_ERROR.format({
+            title: T.default.Messages.I18N_LOCALE_LOADING_ERROR.format({
                 locale: _
             }),
             note: (0, t.jsx)("span", {
                 children: r.message
             })
         }) : o ? __OVERLAY__ ? null : (0, t.jsx)("div", {
-            className: T.loading
+            className: s.loading
         }) : E
     }
     class N extends o.Component {
@@ -46,7 +46,7 @@ function(e, _, E) {
             super(e), r.updateLocaleLoadingStatus(e.locale, !0)
         }
     }
-    var O = n.default.connectStores([i.default], () => ({
-        locale: i.default.locale
+    var O = n.default.connectStores([a.default], () => ({
+        locale: a.default.locale
     }))(N)
 }

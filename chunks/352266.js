@@ -1,58 +1,58 @@
 function(e, t, n) {
     "use strict";
-    let s;
+    let i;
     n.r(t), n.d(t, {
         default: function() {
-            return m
+            return E
         }
     }), n("222007");
-    var i = n("446674"),
+    var s = n("446674"),
         r = n("95410"),
         a = n("913144"),
         o = n("48703"),
-        d = n("599110"),
+        l = n("599110"),
         u = n("195052"),
-        l = n("49111");
-    let f = "BlockedDomainStore",
-        _ = "BlockedDomainRevision",
-        c = null;
-    class g extends i.default.Store {
+        d = n("49111");
+    let c = "BlockedDomainStore",
+        f = "BlockedDomainRevision",
+        _ = null;
+    class h extends s.default.Store {
         initialize() {
-            s = null, r.default.get(f) && (r.default.remove(_), r.default.remove(f))
+            i = null, r.default.get(c) && (r.default.remove(f), r.default.remove(c))
         }
         getCurrentRevision() {
-            if (null == s) {
+            if (null == i) {
                 var e;
-                s = null !== (e = r.default.get(_)) && void 0 !== e ? e : null
+                i = null !== (e = r.default.get(f)) && void 0 !== e ? e : null
             }
-            return s
+            return i
         }
         async getBlockedDomainList() {
-            return null == c && (c = new Set(await u.default.getBlockedDomains())), c
+            return null == _ && (_ = new Set(await u.default.getBlockedDomains())), _
         }
         isBlockedDomain(e) {
             let t = n("874749");
-            if (null == c) return this.getBlockedDomainList(), null;
-            let s = (0, o.getHostname)(e),
-                i = new t.hash.sha256,
-                r = t.codec.hex.fromBits(i.update(s).finalize()),
+            if (null == _) return this.getBlockedDomainList(), null;
+            let i = (0, o.getHostname)(e),
+                s = new t.hash.sha256,
+                r = t.codec.hex.fromBits(s.update(i).finalize()),
                 a = "";
-            c.has(r) && (a = s);
-            let u = s.indexOf(".");
-            for (; - 1 !== u && "" === a;) s = s.substring(u + 1), i.reset(), r = t.codec.hex.fromBits(i.update(s).finalize()), c.has(r) && (a = s), u = s.indexOf(".");
-            return "" !== a ? (d.default.track(l.AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, {
+            _.has(r) && (a = i);
+            let u = i.indexOf(".");
+            for (; - 1 !== u && "" === a;) i = i.substring(u + 1), s.reset(), r = t.codec.hex.fromBits(s.update(i).finalize()), _.has(r) && (a = i), u = i.indexOf(".");
+            return "" !== a ? (l.default.track(d.AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, {
                 blocked_domain: a
             }), a) : null
         }
     }
-    g.displayName = "BlockedDomainStore";
-    var m = new g(a.default, {
+    h.displayName = "BlockedDomainStore";
+    var E = new h(a.default, {
         BLOCKED_DOMAIN_LIST_FETCHED: function(e) {
             let {
                 list: t,
                 revision: n
             } = e;
-            c = null, s = null, u.default.saveBlockedDomains(t), r.default.set("BlockedDomainRevision", n)
+            _ = null, i = null, u.default.saveBlockedDomains(t), r.default.set("BlockedDomainRevision", n)
         }
     })
 }

@@ -51,13 +51,13 @@ function(e, t, n) {
         }
         var p = l ? (0, o.default)(l) : null;
         if (null != p) {
-            var h = "y" === p ? "height" : "width";
+            var m = "y" === p ? "height" : "width";
             switch (c) {
                 case i.start:
-                    t[p] = t[p] - (n[h] / 2 - s[h] / 2);
+                    t[p] = t[p] - (n[m] / 2 - s[m] / 2);
                     break;
                 case i.end:
-                    t[p] = t[p] + (n[h] / 2 - s[h] / 2)
+                    t[p] = t[p] + (n[m] / 2 - s[m] / 2)
             }
         }
         return t

@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getNodeClientOffset: function() {
-            return i
-        },
-        getEventClientOffset: function() {
             return o
         },
-        getDragPreviewOffset: function() {
+        getEventClientOffset: function() {
             return s
+        },
+        getDragPreviewOffset: function() {
+            return a
         }
     });
     var r = n("219999"),
-        a = n("908834");
+        i = n("908834");
 
-    function i(e) {
+    function o(e) {
         var t = 1 === e.nodeType ? e : e.parentElement;
         if (!t) return null;
         var n = t.getBoundingClientRect(),
@@ -25,35 +25,35 @@ function(e, t, n) {
         }
     }
 
-    function o(e) {
+    function s(e) {
         return {
             x: e.clientX,
             y: e.clientY
         }
     }
 
-    function s(e, t, n, o, s) {
-        var c, l, u, d, p, f, m, h, v, g = "IMG" === (c = t).nodeName && ((0, r.isFirefox)() || !(null !== (l = document.documentElement) && void 0 !== l && l.contains(c))),
-            y = i(g ? e : t),
-            b = {
-                x: n.x - y.x,
-                y: n.y - y.y
+    function a(e, t, n, s, a) {
+        var c, u, d, l, f, p, h, v, g, b = "IMG" === (c = t).nodeName && ((0, r.isFirefox)() || !(null !== (u = document.documentElement) && void 0 !== u && u.contains(c))),
+            m = o(b ? e : t),
+            y = {
+                x: n.x - m.x,
+                y: n.y - m.y
             },
             x = e.offsetWidth,
-            S = e.offsetHeight,
-            w = o.anchorX,
-            D = o.anchorY;
-        var C = (u = g, d = t, p = x, f = S, m = u ? d.width : p, h = u ? d.height : f, (0, r.isSafari)() && u && (h /= window.devicePixelRatio, m /= window.devicePixelRatio), {
-                dragPreviewWidth: m,
-                dragPreviewHeight: h
+            w = e.offsetHeight,
+            S = s.anchorX,
+            k = s.anchorY;
+        var E = (d = b, l = t, f = x, p = w, h = d ? l.width : f, v = d ? l.height : p, (0, r.isSafari)() && d && (v /= window.devicePixelRatio, h /= window.devicePixelRatio), {
+                dragPreviewWidth: h,
+                dragPreviewHeight: v
             }),
-            k = C.dragPreviewWidth,
-            P = C.dragPreviewHeight,
-            E = s.offsetX,
-            T = s.offsetY;
+            _ = E.dragPreviewWidth,
+            M = E.dragPreviewHeight,
+            D = a.offsetX,
+            C = a.offsetY;
         return {
-            x: 0 === E || E ? E : new a.MonotonicInterpolant([0, .5, 1], [b.x, b.x / x * k, b.x + k - x]).interpolate(w),
-            y: 0 === T || T ? T : (v = new a.MonotonicInterpolant([0, .5, 1], [b.y, b.y / S * P, b.y + P - S]).interpolate(D), (0, r.isSafari)() && g && (v += (window.devicePixelRatio - 1) * P), v)
+            x: 0 === D || D ? D : new i.MonotonicInterpolant([0, .5, 1], [y.x, y.x / x * _, y.x + _ - x]).interpolate(S),
+            y: 0 === C || C ? C : (g = new i.MonotonicInterpolant([0, .5, 1], [y.y, y.y / w * M, y.y + M - w]).interpolate(k), (0, r.isSafari)() && b && (g += (window.devicePixelRatio - 1) * M), g)
         }
     }
 }

@@ -1,11 +1,11 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    t.exports = function(t, e, s, r) {
-        for (var i = 65535 & t | 0, n = t >>> 16 & 65535 | 0, c = 0; 0 !== s;) {
-            c = s > 2e3 ? 2e3 : s, s -= c;
-            do n = n + (i = i + e[r++] | 0) | 0; while (--c);
-            i %= 65521, n %= 65521
+    e.exports = function(e, t, n, r) {
+        for (var i = 65535 & e | 0, o = e >>> 16 & 65535 | 0, s = 0; 0 !== n;) {
+            s = n > 2e3 ? 2e3 : n, n -= s;
+            do o = o + (i = i + t[r++] | 0) | 0; while (--s);
+            i %= 65521, o %= 65521
         }
-        return i | n << 16 | 0
+        return i | o << 16 | 0
     }
 }

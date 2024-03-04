@@ -1,20 +1,20 @@
-function(t, e, s) {
-    t.exports = function(t) {
-        var e = !0,
-            s = !0,
+function(e, t, n) {
+    e.exports = function(e) {
+        var t = !0,
+            n = !0,
             r = !1;
-        if ("function" == typeof t) {
+        if ("function" == typeof e) {
             try {
-                t.call("f", function(t, s, r) {
-                    "object" != typeof r && (e = !1)
-                }), t.call([null], function() {
+                e.call("f", function(e, n, r) {
+                    "object" != typeof r && (t = !1)
+                }), e.call([null], function() {
                     "use strict";
-                    s = "string" == typeof this
+                    n = "string" == typeof this
                 }, "x")
-            } catch (t) {
+            } catch (e) {
                 r = !0
             }
-            return !r && e && s
+            return !r && t && n
         }
         return !1
     }

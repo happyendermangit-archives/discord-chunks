@@ -5,7 +5,7 @@ function(e, t, n) {
             return y
         },
         IGNORE_CLASS_NAME: function() {
-            return h
+            return m
         }
     }), n("854508"), n("70102");
     var r, a, o = n("884691"),
@@ -39,9 +39,9 @@ function(e, t, n) {
         d = {},
         f = {},
         p = ["touchstart", "touchmove"],
-        h = "ignore-react-onclickoutside";
+        m = "ignore-react-onclickoutside";
 
-    function m(e, t) {
+    function h(e, t) {
         var n = {};
         return -1 !== p.indexOf(t) && r && (n.passive = !e.props.preventDefault), n
     }
@@ -85,7 +85,7 @@ function(e, t, n) {
                                 return e
                             })(e.composed && e.composedPath && e.composedPath().shift() || e.target, a.componentNode, a.props.outsideClickIgnoreClass) === document && a.__outsideClickHandler(e)
                         }, e.forEach(function(e) {
-                            document.addEventListener(e, d[a._uid], m(u(a), e))
+                            document.addEventListener(e, d[a._uid], h(u(a), e))
                         })
                     }
                 }, a.disableOnClickOutside = function() {
@@ -94,15 +94,15 @@ function(e, t, n) {
                     if (e && "undefined" != typeof document) {
                         var t = a.props.eventTypes;
                         !t.forEach && (t = [t]), t.forEach(function(t) {
-                            return document.removeEventListener(t, e, m(u(a), t))
+                            return document.removeEventListener(t, e, h(u(a), t))
                         }), delete d[a._uid]
                     }
                 }, a.getRef = function(e) {
                     return a.instanceRef = e
                 }, a._uid = c(), a
             }
-            h = a, y = n, h.prototype = Object.create(y.prototype), h.prototype.constructor = h, s(h, y);
-            var h, y, _ = a.prototype;
+            m = a, y = n, m.prototype = Object.create(y.prototype), m.prototype.constructor = m, s(m, y);
+            var m, y, _ = a.prototype;
             return _.getInstance = function() {
                 if (e.prototype && !e.prototype.isReactComponent) return this;
                 var t = this.instanceRef;
@@ -132,7 +132,7 @@ function(e, t, n) {
         }(o.Component), n.displayName = "OnClickOutside(" + p + ")", n.defaultProps = {
             eventTypes: ["mousedown", "touchstart"],
             excludeScrollbar: t && t.excludeScrollbar || !1,
-            outsideClickIgnoreClass: h,
+            outsideClickIgnoreClass: m,
             preventDefault: !1,
             stopPropagation: !1
         }, n.getClass = function() {

@@ -1,6 +1,6 @@
-function(t, e, s) {
-    var r = s("798439");
-    t.exports = function(t, e) {
-        return !!(null == t ? 0 : t.length) && r(t, e, 0) > -1
+function(e, t, n) {
+    var r = n("798439");
+    e.exports = function(e, t) {
+        return !!(null == e ? 0 : e.length) && r(e, t, 0) > -1
     }
 }

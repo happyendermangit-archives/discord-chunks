@@ -2,138 +2,138 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return R
+            return T
         }
     }), n("222007"), n("702976"), n("808653");
-    var r = n("446674"),
-        i = n("913144"),
-        l = n("991170"),
-        u = n("42203"),
-        a = n("42887"),
-        o = n("945956"),
-        s = n("18494"),
+    var i = n("446674"),
+        s = n("913144"),
+        r = n("991170"),
+        a = n("42203"),
+        o = n("42887"),
+        l = n("945956"),
+        u = n("18494"),
         d = n("49111"),
-        E = n("353927");
-    let _ = new Map,
-        c = null,
-        I = null,
-        S = null;
+        c = n("353927");
+    let f = new Map,
+        _ = null,
+        h = null,
+        E = null;
 
-    function T(e, t) {
-        let n = _.get(e);
+    function g(e, t) {
+        let n = f.get(e);
         if (null == n) return !1;
-        let r = n.delete(t);
-        return 0 === n.size && _.delete(e), r
+        let i = n.delete(t);
+        return 0 === n.size && f.delete(e), i
     }
 
-    function f(e, t, n) {
-        var r, i, l;
-        let u = null !== (l = null === (i = _.get(e)) || void 0 === i ? void 0 : null === (r = i.get(t)) || void 0 === r ? void 0 : r.flags) && void 0 !== l ? l : E.SpeakingFlags.NONE;
-        return (u & n) === n
+    function m(e, t, n) {
+        var i, s, r;
+        let a = null !== (r = null === (s = f.get(e)) || void 0 === s ? void 0 : null === (i = s.get(t)) || void 0 === i ? void 0 : i.flags) && void 0 !== r ? r : c.SpeakingFlags.NONE;
+        return (a & n) === n
     }
 
     function p(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = _.get(e);
-        if (null == r) return !1;
+            i = f.get(e);
+        if (null == i) return !1;
         for (let [e, {
-                flags: i
-            }] of r)
-            if ((!n || e !== c) && (i & t) === t) return !0;
+                flags: s
+            }] of i)
+            if ((!n || e !== _) && (s & t) === t) return !0;
         return !1
     }
 
-    function N(e) {
+    function S(e) {
         let {
             user: t,
             sessionId: n
         } = e;
-        c = t.id, I = n, S = null
+        _ = t.id, h = n, E = null
     }
-    class A extends r.default.Store {
+    class v extends i.default.Store {
         initialize() {
-            this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(o.default)
+            this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(l.default)
         }
         getSpeakingDuration(e, t) {
-            var n, r;
-            let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.MediaEngineContextTypes.DEFAULT,
-                l = null === (r = _.get(i)) || void 0 === r ? void 0 : null === (n = r.get(e)) || void 0 === n ? void 0 : n.since;
-            return null != l ? t - l : 0
+            var n, i;
+            let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.MediaEngineContextTypes.DEFAULT,
+                r = null === (i = f.get(s)) || void 0 === i ? void 0 : null === (n = i.get(e)) || void 0 === n ? void 0 : n.since;
+            return null != r ? t - r : 0
         }
         getSpeakers() {
             var e, t;
-            let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.MediaEngineContextTypes.DEFAULT;
-            return Array.from(null !== (t = null === (e = _.get(n)) || void 0 === e ? void 0 : e.keys()) && void 0 !== t ? t : []).filter(e => f(n, e, E.SpeakingFlags.VOICE))
+            let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
+            return Array.from(null !== (t = null === (e = f.get(n)) || void 0 === e ? void 0 : e.keys()) && void 0 !== t ? t : []).filter(e => m(n, e, c.SpeakingFlags.VOICE))
         }
         isSpeaking(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.MediaEngineContextTypes.DEFAULT;
-            return f(t, e, E.SpeakingFlags.VOICE)
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MediaEngineContextTypes.DEFAULT;
+            return m(t, e, c.SpeakingFlags.VOICE)
         }
         isPrioritySpeaker(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.MediaEngineContextTypes.DEFAULT;
-            return f(t, e, E.SpeakingFlags.PRIORITY)
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MediaEngineContextTypes.DEFAULT;
+            return m(t, e, c.SpeakingFlags.PRIORITY)
         }
         isSoundSharing(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.MediaEngineContextTypes.DEFAULT;
-            return f(t, e, E.SpeakingFlags.SOUNDSHARE)
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MediaEngineContextTypes.DEFAULT;
+            return m(t, e, c.SpeakingFlags.SOUNDSHARE)
         }
         isAnyoneElseSpeaking() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.MediaEngineContextTypes.DEFAULT;
-            return p(e, E.SpeakingFlags.VOICE, !0)
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
+            return p(e, c.SpeakingFlags.VOICE, !0)
         }
         isCurrentUserSpeaking() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.MediaEngineContextTypes.DEFAULT;
-            return null != c && this.isSpeaking(c, e)
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
+            return null != _ && this.isSpeaking(_, e)
         }
         isAnyonePrioritySpeaking() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.MediaEngineContextTypes.DEFAULT;
-            return p(e, E.SpeakingFlags.VOICE | E.SpeakingFlags.PRIORITY)
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
+            return p(e, c.SpeakingFlags.VOICE | c.SpeakingFlags.PRIORITY)
         }
         isCurrentUserPrioritySpeaking() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.MediaEngineContextTypes.DEFAULT;
-            return null != c && this.isPrioritySpeaker(c, e) && this.isSpeaking(c, e)
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
+            return null != _ && this.isPrioritySpeaker(_, e) && this.isSpeaking(_, e)
         }
     }
-    A.displayName = "SpeakingStore";
-    var R = new A(i.default, {
-        CONNECTION_OPEN: N,
-        OVERLAY_INITIALIZE: N,
+    v.displayName = "SpeakingStore";
+    var T = new v(s.default, {
+        CONNECTION_OPEN: S,
+        OVERLAY_INITIALIZE: S,
         SPEAKING: function(e) {
             let {
                 context: t,
                 userId: n,
-                speakingFlags: r
+                speakingFlags: i
             } = e;
-            if ((r & E.SpeakingFlags.PRIORITY) === E.SpeakingFlags.PRIORITY) {
-                let e = u.default.getChannel(s.default.getVoiceChannelId());
-                null != e && l.default.can({
+            if ((i & c.SpeakingFlags.PRIORITY) === c.SpeakingFlags.PRIORITY) {
+                let e = a.default.getChannel(u.default.getVoiceChannelId());
+                null != e && r.default.can({
                     permission: d.Permissions.PRIORITY_SPEAKER,
                     user: n,
                     context: e
-                }) ? a.default.setCanHavePriority(n, !0) : (a.default.setCanHavePriority(n, !1), r &= ~E.SpeakingFlags.PRIORITY)
+                }) ? o.default.setCanHavePriority(n, !0) : (o.default.setCanHavePriority(n, !1), i &= ~c.SpeakingFlags.PRIORITY)
             }
             return function(e, t, n) {
-                var r, i;
-                let l = function() {
-                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.MediaEngineContextTypes.DEFAULT,
-                            t = _.get(e);
-                        return null == t && (t = new Map, _.set(e, t)), t
+                var i, s;
+                let r = function() {
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT,
+                            t = f.get(e);
+                        return null == t && (t = new Map, f.set(e, t)), t
                     }(e),
-                    u = l.get(t),
-                    a = null !== (r = null == u ? void 0 : u.flags) && void 0 !== r ? r : 0;
-                if (0 === a && 0 === n) return !1;
-                if (0 === n) l.delete(t), 0 === l.size && _.delete(e);
+                    a = r.get(t),
+                    o = null !== (i = null == a ? void 0 : a.flags) && void 0 !== i ? i : 0;
+                if (0 === o && 0 === n) return !1;
+                if (0 === n) r.delete(t), 0 === r.size && f.delete(e);
                 else {
-                    let e = null !== (i = null == u ? void 0 : u.since) && void 0 !== i ? i : null,
-                        r = (a & E.SpeakingFlags.VOICE) === E.SpeakingFlags.VOICE,
-                        o = (n & E.SpeakingFlags.VOICE) === E.SpeakingFlags.VOICE;
-                    r !== o && (e = o ? Date.now() : null), l.set(t, {
+                    let e = null !== (s = null == a ? void 0 : a.since) && void 0 !== s ? s : null,
+                        i = (o & c.SpeakingFlags.VOICE) === c.SpeakingFlags.VOICE,
+                        l = (n & c.SpeakingFlags.VOICE) === c.SpeakingFlags.VOICE;
+                    i !== l && (e = l ? Date.now() : null), r.set(t, {
                         flags: n,
                         since: e
                     })
                 }
                 return !0
-            }(t, n, r)
+            }(t, n, i)
         },
         VOICE_STATE_UPDATES: function(e) {
             let {
@@ -142,10 +142,10 @@ function(e, t, n) {
             return t.reduce((e, t) => {
                 let {
                     userId: n,
-                    channelId: r,
-                    sessionId: i
-                } = t, l = !1, u = S;
-                return n === c && i === I && (S = null != r ? r : null), u !== S && (l = _.delete(E.MediaEngineContextTypes.DEFAULT) || l), null == r ? l = n === c && i === I ? _.delete(E.MediaEngineContextTypes.DEFAULT) || l : T(E.MediaEngineContextTypes.DEFAULT, n) || l : n === c && i !== I ? l = _.delete(E.MediaEngineContextTypes.DEFAULT) || l : n !== c && r !== o.default.getChannelId() && (l = T(E.MediaEngineContextTypes.DEFAULT, n) || l), l || e
+                    channelId: i,
+                    sessionId: s
+                } = t, r = !1, a = E;
+                return n === _ && s === h && (E = null != i ? i : null), a !== E && (r = f.delete(c.MediaEngineContextTypes.DEFAULT) || r), null == i ? r = n === _ && s === h ? f.delete(c.MediaEngineContextTypes.DEFAULT) || r : g(c.MediaEngineContextTypes.DEFAULT, n) || r : n === _ && s !== h ? r = f.delete(c.MediaEngineContextTypes.DEFAULT) || r : n !== _ && i !== l.default.getChannelId() && (r = g(c.MediaEngineContextTypes.DEFAULT, n) || r), r || e
             }, !1)
         },
         LOBBY_VOICE_STATE_UPDATE: function(e) {}

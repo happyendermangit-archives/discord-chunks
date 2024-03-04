@@ -5,10 +5,10 @@ function(e, t, n) {
             return i
         },
         BUILD_OVERRIDE_EXPIRATION_OPTIONS: function() {
-            return r
+            return s
         },
         BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS: function() {
-            return s
+            return r
         },
         BUILD_OVERRIDE_COOKIE_NAME: function() {
             return a
@@ -20,7 +20,7 @@ function(e, t, n) {
             discord_ios: "Discord iOS",
             discord_android: "Discord Android"
         },
-        r = [{
+        s = [{
             value: 3600,
             label: "1 Hour"
         }, {
@@ -42,7 +42,7 @@ function(e, t, n) {
             value: 2628e3,
             label: "1 Month"
         }],
-        s = [{
+        r = [{
             value: "all",
             label: "All"
         }, {

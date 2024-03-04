@@ -9,11 +9,11 @@ function(e, _, E) {
         o = E("819689"),
         n = E("689988"),
         r = E("271938"),
-        i = E("42203"),
-        a = E("377253"),
+        a = E("42203"),
+        i = E("377253"),
         I = E("957255"),
-        s = E("18494"),
-        T = E("697218"),
+        T = E("18494"),
+        s = E("697218"),
         S = E("923510"),
         N = E("285857"),
         O = E("49111");
@@ -29,14 +29,14 @@ function(e, _, E) {
                     suppress: n,
                     requestToSpeakTimestamp: A
                 } = e;
-                if (s.default.getVoiceChannelId() !== _ || !n || null == _ || E === r.default.getId()) return;
-                let R = I.default.can(S.MODERATE_STAGE_CHANNEL_PERMISSIONS, i.default.getChannel(_));
+                if (T.default.getVoiceChannelId() !== _ || !n || null == _ || E === r.default.getId()) return;
+                let R = I.default.can(S.MODERATE_STAGE_CHANNEL_PERMISSIONS, a.default.getChannel(_));
                 if (R) {
                     if (null != A) {
-                        let e = T.default.getUser(E);
+                        let e = s.default.getUser(E);
                         null != e && (0, N.sendStageRequestToSpeakEphemeralMessage)(_, e, A)
                     } else {
-                        let e = a.default.getMessages(_),
+                        let e = i.default.getMessages(_),
                             n = e.findNewest(e => e.type === t.MessageTypes.STAGE_RAISE_HAND && e.hasFlag(O.MessageFlags.EPHEMERAL) && e.author.id === E);
                         null != n && o.default.deleteMessage(_, n.id, !0)
                     }

@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         shortenAndLocalizeNumber: function() {
-            return r
+            return s
         },
         parseInteger: function() {
-            return s
+            return r
         },
         formatPercent: function() {
             return a
@@ -13,7 +13,7 @@ function(e, t, n) {
     });
     var i = n("782340");
 
-    function r(e) {
+    function s(e) {
         if (e < 1e6) return i.default.Messages.NUMBER_ABBREVIATION_FULL.format({
             value: e
         });
@@ -23,7 +23,7 @@ function(e, t, n) {
         })
     }
 
-    function s(e) {
+    function r(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NaN;
         if (null == e) return t;
         let n = parseInt(e);

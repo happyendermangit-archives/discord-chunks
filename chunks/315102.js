@@ -3,114 +3,114 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         DEFAULT_AVATARS: function() {
-            return h
+            return E
         },
         SUPPORTS_WEBP: function() {
-            return _
+            return g
         },
         getEmojiURL: function() {
-            return T
+            return S
         },
         getUserAvatarURL: function() {
-            return C
+            return I
         },
         getGuildMemberAvatarURLSimple: function() {
-            return v
+            return C
         },
         getGuildMemberAvatarURL: function() {
             return A
         },
         getUserBannerURL: function() {
-            return R
+            return y
         },
         getAvatarDecorationURL: function() {
             return N
         },
         getGuildMemberBannerURL: function() {
-            return O
+            return R
         },
         getVideoFilterAssetURL: function() {
-            return w
+            return k
         },
         isAnimatedIconHash: function() {
-            return x
+            return G
         },
         isVideoAssetHash: function() {
             return F
         },
         isAnimatedImageURL: function() {
-            return V
+            return x
         },
         default: function() {
             return H
         }
     }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
-    var r = n("552442"),
-        s = n.n(r),
+    var s = n("552442"),
+        r = n.n(s),
         a = n("522632"),
         o = n("234251"),
         l = n("407063"),
         u = n("240481"),
-        c = n("773336"),
-        d = n("299039"),
+        d = n("773336"),
+        c = n("299039"),
         f = n("49111"),
-        E = n("680894"),
-        p = n("363577");
+        _ = n("680894"),
+        h = n("363577");
     i = n("523096").default;
-    let h = i.DEFAULT_AVATARS;
+    let E = i.DEFAULT_AVATARS;
     i.DEFAULT_GROUP_DM_AVATARS;
-    let _ = i.canUseWebp(),
-        S = (0, c.isAndroid)();
+    let g = i.canUseWebp(),
+        m = (0, d.isAndroid)();
 
-    function m(e) {
+    function p(e) {
         let t, {
             endpoint: n,
             path: i,
-            id: r,
-            hash: s,
+            id: s,
+            hash: r,
             size: o,
             canAnimate: u = !1,
-            keepAspectRatio: c,
-            format: d = null
+            keepAspectRatio: d,
+            format: c = null
         } = e;
-        if (null == r || null == s) return;
-        let f = null != d ? d : u && x(s) ? "gif" : "jpg";
-        u && F(s) && (f = "mp4");
-        let E = window.GLOBAL_ENV.CDN_HOST;
-        if (null != E ? ("jpg" === f && (f = _ ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(E, "/").concat(i, "/").concat(r, "/").concat(s, ".").concat(f)) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(r, s, f), "mp4" === f) return t;
-        let p = {};
-        return null != o && (p.size = (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())), null != c && (p.keep_aspect_ratio = c), t + "?".concat(a.stringify(p))
+        if (null == s || null == r) return;
+        let f = null != c ? c : u && G(r) ? "gif" : "jpg";
+        u && F(r) && (f = "mp4");
+        let _ = window.GLOBAL_ENV.CDN_HOST;
+        if (null != _ ? ("jpg" === f && (f = g ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(_, "/").concat(i, "/").concat(s, "/").concat(r, ".").concat(f)) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(s, r, f), "mp4" === f) return t;
+        let h = {};
+        return null != o && (h.size = (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())), null != d && (h.keep_aspect_ratio = d), t + "?".concat(a.stringify(h))
+    }
+
+    function S(e) {
+        let {
+            id: t,
+            animated: n,
+            size: i,
+            forcePNG: s = !1
+        } = e, r = g && !s ? "webp" : "png", a = g && !m ? "&quality=lossless" : "";
+        return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/emojis/").concat(t, ".").concat(n ? "gif" : r, "?size=").concat((0, l.getBestMediaProxySize)(i * (0, l.getDevicePixelRatio)())).concat(a) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.EMOJI(t, n ? "gif" : r)
+    }
+
+    function v(e, t) {
+        if (null == e && null == t) return E[0];
+        let n = (0, u.parseInteger)(t, 0);
+        return n > 0 ? E[n % 5] : null != e ? E[r(e).shiftRight(22).mod(6).toJSNumber()] : E[0]
     }
 
     function T(e) {
         let {
             id: t,
-            animated: n,
-            size: i,
-            forcePNG: r = !1
-        } = e, s = _ && !r ? "webp" : "png", a = _ && !S ? "&quality=lossless" : "";
-        return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/emojis/").concat(t, ".").concat(n ? "gif" : s, "?size=").concat((0, l.getBestMediaProxySize)(i * (0, l.getDevicePixelRatio)())).concat(a) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.EMOJI(t, n ? "gif" : s)
-    }
-
-    function g(e, t) {
-        if (null == e && null == t) return h[0];
-        let n = (0, u.parseInteger)(t, 0);
-        return n > 0 ? h[n % 5] : null != e ? h[s(e).shiftRight(22).mod(6).toJSNumber()] : h[0]
-    }
-
-    function I(e) {
-        let {
-            id: t,
             avatar: n,
-            discriminator: r,
-            bot: s
+            discriminator: s,
+            bot: r
         } = e, a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.AVATAR_SIZE, l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        if (s && t !== E.CLYDE_AI_USER_ID) {
+        if (r && t !== _.CLYDE_AI_USER_ID) {
             let e = i.BOT_AVATARS[n];
             if (e) return e;
-            if (null == n && "0000" === r) return h[0]
+            if (null == n && "0000" === s) return E[0]
         }
-        return m({
+        return p({
             endpoint: f.Endpoints.AVATAR,
             path: "avatars",
             id: t,
@@ -121,27 +121,27 @@ function(e, t, n) {
         })
     }
 
-    function C(e) {
+    function I(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.AVATAR_SIZE,
-            r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        return null !== (t = I(e, n, i, r)) && void 0 !== t ? t : g(e.id, e.discriminator)
+            s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        return null !== (t = T(e, n, i, s)) && void 0 !== t ? t : v(e.id, e.discriminator)
     }
 
-    function v(e) {
+    function C(e) {
         let t, {
                 guildId: n,
                 userId: i,
-                avatar: r,
-                canAnimate: s = !1,
+                avatar: s,
+                canAnimate: r = !1,
                 size: o = f.AVATAR_SIZE
             } = e,
-            u = s && x(r) ? "gif" : "jpg",
+            u = r && G(s) ? "gif" : "jpg",
             {
-                CDN_HOST: c
+                CDN_HOST: d
             } = window.GLOBAL_ENV;
-        return null != c ? ("jpg" === u && (u = _ ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(c).concat(f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, u))) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, u), t + "?".concat(a.stringify({
+        return null != d ? ("jpg" === u && (u = g ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(d).concat(f.Endpoints.GUILD_MEMBER_AVATAR(n, i, s, u))) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_MEMBER_AVATAR(n, i, s, u), t + "?".concat(a.stringify({
             size: (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())
         }))
     }
@@ -151,26 +151,26 @@ function(e, t, n) {
             userId: t,
             avatar: n,
             guildId: i
-        } = e, r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null == n ? null : v({
+        } = e, s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return null == n ? null : C({
             userId: t,
             avatar: n,
             guildId: i,
-            canAnimate: r
+            canAnimate: s
         })
     }
 
-    function R(e) {
+    function y(e) {
         let t, {
             id: n,
             banner: i,
-            canAnimate: r,
-            size: s
+            canAnimate: s,
+            size: r
         } = e;
         if (null == i) return;
         let a = window.GLOBAL_ENV.CDN_HOST,
-            o = r && x(i) ? "gif" : "png";
-        return t = (null != a ? "".concat(location.protocol, "//").concat(a, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.USER_BANNER(n, i, o)) + "?size=".concat((0, l.getBestMediaProxySize)(s * (0, l.getDevicePixelRatio)()))
+            o = s && G(i) ? "gif" : "png";
+        return t = (null != a ? "".concat(location.protocol, "//").concat(a, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.USER_BANNER(n, i, o)) + "?size=".concat((0, l.getBestMediaProxySize)(r * (0, l.getDevicePixelRatio)()))
     }
 
     function N(e) {
@@ -181,51 +181,51 @@ function(e, t, n) {
         } = e;
         if (null == t) return;
         let {
-            CDN_HOST: r,
-            API_ENDPOINT: s
-        } = window.GLOBAL_ENV, a = f.Endpoints.AVATAR_DECORATION_PRESETS(t.asset), u = new URL(null != r ? "".concat(location.protocol, "//").concat(r).concat(a) : "".concat(location.protocol).concat(s).concat(a));
+            CDN_HOST: s,
+            API_ENDPOINT: r
+        } = window.GLOBAL_ENV, a = f.Endpoints.AVATAR_DECORATION_PRESETS(t.asset), u = new URL(null != s ? "".concat(location.protocol, "//").concat(s).concat(a) : "".concat(location.protocol).concat(r).concat(a));
         return u.searchParams.set("size", "".concat((0, l.getBestMediaProxySize)(n * (0, l.getDevicePixelRatio)()))), u.searchParams.set("passthrough", "".concat(i && (0, o.isAnimatedAvatarDecoration)(t.asset))), u.toString()
+    }
+
+    function R(e) {
+        let t, {
+            id: n,
+            guildId: i,
+            banner: s,
+            canAnimate: r,
+            size: a
+        } = e;
+        if (null == s || null == i) return;
+        let o = window.GLOBAL_ENV.CDN_HOST,
+            u = r && G(s) ? "gif" : "png",
+            d = f.Endpoints.GUILD_MEMBER_BANNER(i, n, s, u);
+        return t = (null != o ? "".concat(location.protocol, "//").concat(o).concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d) + "?size=".concat((0, l.getBestMediaProxySize)(a * (0, l.getDevicePixelRatio)()))
     }
 
     function O(e) {
         let t, {
             id: n,
-            guildId: i,
-            banner: r,
-            canAnimate: s,
-            size: a
+            splash: i,
+            size: s
         } = e;
-        if (null == r || null == i) return;
-        let o = window.GLOBAL_ENV.CDN_HOST,
-            u = s && x(r) ? "gif" : "png",
-            c = f.Endpoints.GUILD_MEMBER_BANNER(i, n, r, u);
-        return t = (null != o ? "".concat(location.protocol, "//").concat(o).concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c) + "?size=".concat((0, l.getBestMediaProxySize)(a * (0, l.getDevicePixelRatio)()))
+        if (null == i) return null;
+        null == s && (s = window.screen.width * (0, l.getDevicePixelRatio)()), s = (0, l.getBestMediaProxySize)(s);
+        let r = window.GLOBAL_ENV.CDN_HOST;
+        return t = (null != r ? "".concat(location.protocol, "//").concat(r, "/splashes/").concat(n, "/").concat(i, ".jpg") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_SPLASH(n, i)) + "?size=".concat(s)
     }
 
     function D(e) {
         let t, {
-            id: n,
-            splash: i,
-            size: r
-        } = e;
-        if (null == i) return null;
-        null == r && (r = window.screen.width * (0, l.getDevicePixelRatio)()), r = (0, l.getBestMediaProxySize)(r);
-        let s = window.GLOBAL_ENV.CDN_HOST;
-        return t = (null != s ? "".concat(location.protocol, "//").concat(s, "/splashes/").concat(n, "/").concat(i, ".jpg") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_SPLASH(n, i)) + "?size=".concat(r)
-    }
-
-    function y(e) {
-        let t, {
                 id: n,
                 banner: i
             } = e,
-            r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == i) return null;
-        let s = (0, l.getBestMediaProxySize)(240 * (0, l.getDevicePixelRatio)()),
-            a = _ ? "webp" : "jpg",
-            o = r && x(i) ? "gif" : a,
+        let r = (0, l.getBestMediaProxySize)(240 * (0, l.getDevicePixelRatio)()),
+            a = g ? "webp" : "jpg",
+            o = s && G(i) ? "gif" : a,
             u = window.GLOBAL_ENV.CDN_HOST;
-        return t = (null != u ? "".concat(location.protocol, "//").concat(u, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_BANNER(n, i, o)) + "?size=".concat(s), "jpg" === o && (t += "&quality=lossless"), t
+        return t = (null != u ? "".concat(location.protocol, "//").concat(u, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_BANNER(n, i, o)) + "?size=".concat(r), "jpg" === o && (t += "&quality=lossless"), t
     }
 
     function P(e) {
@@ -234,54 +234,54 @@ function(e, t, n) {
             homeHeader: i
         } = e;
         if (null == i) return null;
-        let r = (0, l.getBestMediaProxySize)(1096 * (0, l.getDevicePixelRatio)()),
-            s = window.GLOBAL_ENV.CDN_HOST;
-        return t = (null != s ? "".concat(location.protocol, "//").concat(s, "/home-headers/").concat(n, "/").concat(i, ".png") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_HOME_HEADER(n, i)) + "?size=".concat(r)
+        let s = (0, l.getBestMediaProxySize)(1096 * (0, l.getDevicePixelRatio)()),
+            r = window.GLOBAL_ENV.CDN_HOST;
+        return t = (null != r ? "".concat(location.protocol, "//").concat(r, "/home-headers/").concat(n, "/").concat(i, ".png") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_HOME_HEADER(n, i)) + "?size=".concat(s)
     }
 
     function L(e) {
         let t, {
             id: n,
             splash: i,
-            size: r
+            size: s
         } = e;
         if (null == i) return null;
-        null == r && (r = window.screen.width * (0, l.getDevicePixelRatio)()), r = (0, l.getBestMediaProxySize)(r);
-        let s = window.GLOBAL_ENV.CDN_HOST;
-        return t = (null != s ? "".concat(location.protocol, "//").concat(s, "/discovery-splashes/").concat(n, "/").concat(i, ".jpg") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_DISCOVERY_SPLASH(n, i)) + "?size=".concat(r)
-    }
-
-    function b(e) {
-        let {
-            id: t,
-            icon: n,
-            size: i,
-            canAnimate: r = !1
-        } = e;
-        return m({
-            endpoint: f.Endpoints.GUILD_ICON,
-            path: "icons",
-            id: t,
-            hash: n,
-            size: i,
-            canAnimate: r
-        })
+        null == s && (s = window.screen.width * (0, l.getDevicePixelRatio)()), s = (0, l.getBestMediaProxySize)(s);
+        let r = window.GLOBAL_ENV.CDN_HOST;
+        return t = (null != r ? "".concat(location.protocol, "//").concat(r, "/discovery-splashes/").concat(n, "/").concat(i, ".jpg") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_DISCOVERY_SPLASH(n, i)) + "?size=".concat(s)
     }
 
     function M(e) {
         let {
             id: t,
             icon: n,
-            size: i = f.AVATAR_SIZE,
-            canAnimate: r = !1
+            size: i,
+            canAnimate: s = !1
         } = e;
-        return m({
+        return p({
+            endpoint: f.Endpoints.GUILD_ICON,
+            path: "icons",
+            id: t,
+            hash: n,
+            size: i,
+            canAnimate: s
+        })
+    }
+
+    function b(e) {
+        let {
+            id: t,
+            icon: n,
+            size: i = f.AVATAR_SIZE,
+            canAnimate: s = !1
+        } = e;
+        return p({
             endpoint: f.Endpoints.GUILD_TEMPLATE_ICON,
             path: "guild-templates",
             id: t,
             hash: n,
             size: i,
-            canAnimate: r
+            canAnimate: s
         })
     }
 
@@ -290,15 +290,15 @@ function(e, t, n) {
             id: t,
             icon: n,
             size: i = f.AVATAR_SIZE,
-            bot: r,
-            botIconFirst: s,
+            bot: s,
+            botIconFirst: r,
             fallbackAvatar: a = !0
         } = e;
-        if (null != r && s) {
-            let e = I(r, !1, i);
+        if (null != s && r) {
+            let e = T(s, !1, i);
             if (null != e) return e
         }
-        if (null != n) return m({
+        if (null != n) return p({
             endpoint: f.Endpoints.APPLICATION_ICON,
             path: "app-icons",
             id: t,
@@ -306,53 +306,53 @@ function(e, t, n) {
             size: i,
             canAnimate: !1
         });
-        if (null != r) {
-            let e = I(r, !1, i);
+        if (null != s) {
+            let e = T(s, !1, i);
             if (null != e) return e
         }
-        if (a) return p
+        if (a) return h
     }
 
-    function G(e) {
+    function w(e) {
         let {
             id: t,
             hash: n,
             size: i = f.AVATAR_SIZE,
-            keepAspectRatio: r = !1
+            keepAspectRatio: s = !1
         } = e;
-        return m({
+        return p({
             endpoint: f.Endpoints.APPLICATION_ICON,
             path: "app-icons",
             id: t,
             hash: n,
             size: i,
             canAnimate: !1,
-            keepAspectRatio: r
-        })
-    }
-
-    function w(e) {
-        let {
-            userId: t,
-            assetId: n,
-            assetHash: i,
-            size: r,
-            canAnimate: s = !0
-        } = e;
-        return m({
-            endpoint: (e, r, s) => f.Endpoints.VIDEO_FILTER_ASSET_STORAGE(t, n, i, s),
-            path: "video-filter-assets/".concat(t),
-            id: n,
-            hash: i,
-            size: r,
-            canAnimate: s
+            keepAspectRatio: s
         })
     }
 
     function k(e) {
-        var t, n, r;
         let {
-            id: s,
+            userId: t,
+            assetId: n,
+            assetHash: i,
+            size: s,
+            canAnimate: r = !0
+        } = e;
+        return p({
+            endpoint: (e, s, r) => f.Endpoints.VIDEO_FILTER_ASSET_STORAGE(t, n, i, r),
+            path: "video-filter-assets/".concat(t),
+            id: n,
+            hash: i,
+            size: s,
+            canAnimate: r
+        })
+    }
+
+    function V(e) {
+        var t, n, s;
+        let {
+            id: r,
             icon: a,
             applicationId: o,
             size: l
@@ -362,17 +362,17 @@ function(e, t, n) {
             icon: a,
             size: l
         })) && void 0 !== t ? t : i.DEFAULT_CHANNEL_ICON;
-        return null !== (n = m({
+        return null !== (n = p({
             endpoint: f.Endpoints.CHANNEL_ICON,
             path: "channel-icons",
-            id: s,
+            id: r,
             hash: a,
             canAnimate: !1,
             size: l
-        })) && void 0 !== n ? n : (r = s, i.DEFAULT_GROUP_DM_AVATARS[d.default.extractTimestamp(r) % i.DEFAULT_GROUP_DM_AVATARS.length])
+        })) && void 0 !== n ? n : (s = r, i.DEFAULT_GROUP_DM_AVATARS[c.default.extractTimestamp(s) % i.DEFAULT_GROUP_DM_AVATARS.length])
     }
 
-    function x(e) {
+    function G(e) {
         return null != e && e.startsWith("a_")
     }
 
@@ -380,8 +380,8 @@ function(e, t, n) {
         return null != e && e.startsWith("v_")
     }
 
-    function V(e) {
-        return null != e && x(function(e) {
+    function x(e) {
+        return null != e && G(function(e) {
             let t;
             try {
                 {
@@ -402,43 +402,43 @@ function(e, t, n) {
         }
     }
     var H = {
-        getUserAvatarURL: C,
-        getDefaultAvatarURL: g,
+        getUserAvatarURL: I,
+        getDefaultAvatarURL: v,
         getGuildMemberAvatarURL: A,
-        getGuildMemberAvatarURLSimple: v,
+        getGuildMemberAvatarURLSimple: C,
         getGuildMemberAvatarSource: function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 i = A(e, n);
             return null != i ? B(i) : t.getAvatarSource(e.guildId, n)
         },
-        getGuildMemberBannerURL: O,
-        getUserBannerURL: R,
+        getGuildMemberBannerURL: R,
+        getUserBannerURL: y,
         getAvatarDecorationURL: N,
         hasAnimatedGuildIcon: function(e) {
-            return x(null == e ? void 0 : e.icon)
+            return G(null == e ? void 0 : e.icon)
         },
-        isAnimatedIconHash: x,
+        isAnimatedIconHash: G,
         getUserAvatarSource(e, t, n) {
-            let i = C(e, t, n);
+            let i = I(e, t, n);
             return B(i)
         },
-        getGuildIconURL: b,
-        getGuildSplashURL: D,
+        getGuildIconURL: M,
+        getGuildSplashURL: O,
         getGuildSplashSource: function(e) {
-            return B(D(e))
+            return B(O(e))
         },
         getGuildDiscoverySplashURL: L,
         getGuildDiscoverySplashSource: function(e) {
             return B(L(e))
         },
-        getGuildBannerURL: y,
+        getGuildBannerURL: D,
         getGuildHomeHeaderURL: P,
         getResourceChannelIconURL: function(e) {
             let {
                 channelId: t,
                 icon: n
             } = e;
-            return null == n ? null : m({
+            return null == n ? null : p({
                 endpoint: f.Endpoints.GUILD_RESOURCE_CHANNELS_ICON,
                 path: "resource-channels",
                 id: t,
@@ -452,7 +452,7 @@ function(e, t, n) {
                 channelId: t,
                 icon: n
             } = e;
-            return null == n ? null : m({
+            return null == n ? null : p({
                 endpoint: f.Endpoints.GUILD_NEW_MEMBER_ACTIONS_ICON,
                 path: "new-member-actions",
                 id: t,
@@ -461,27 +461,27 @@ function(e, t, n) {
                 canAnimate: !0
             })
         },
-        getGuildTemplateIconURL: M,
-        getChannelIconURL: k,
-        getEmojiURL: T,
+        getGuildTemplateIconURL: b,
+        getChannelIconURL: V,
+        getEmojiURL: S,
         getApplicationIconURL: U,
-        getGameAssetURL: G,
-        getVideoFilterAssetURL: w,
+        getGameAssetURL: w,
+        getVideoFilterAssetURL: k,
         getGameAssetSource(e) {
-            let t = G(e);
+            let t = w(e);
             return B(t)
         },
         getGuildIconSource(e) {
-            let t = b(e);
+            let t = M(e);
             return B(t)
         },
         getGuildTemplateIconSource(e) {
-            let t = M(e);
+            let t = b(e);
             return B(t)
         },
         getGuildBannerSource(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = y(e, t);
+                n = D(e, t);
             return B(n)
         },
         getGuildHomeHeaderSource(e) {
@@ -489,7 +489,7 @@ function(e, t, n) {
             return B(t)
         },
         getChannelIconSource(e) {
-            let t = k(e);
+            let t = V(e);
             return B(t)
         },
         getApplicationIconSource(e) {
@@ -499,7 +499,7 @@ function(e, t, n) {
         makeSource: B,
         getAnimatableSourceWithFallback(e, t) {
             let n = t(e);
-            if (!(0, c.isAndroid)() || !e || "number" == typeof n) return n;
+            if (!(0, d.isAndroid)() || !e || "number" == typeof n) return n;
             {
                 let e = t(!1);
                 return "number" != typeof e && e.uri === n.uri ? e : [n, {

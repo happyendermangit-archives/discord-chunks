@@ -12,30 +12,30 @@ function(e, t, n) {
         }
     });
     var i = n("446674"),
-        r = n("42203"),
-        s = n("9759");
+        s = n("42203"),
+        r = n("9759");
 
     function a(e) {
         let {
             canViewBroadcasts: t
-        } = s.default.useExperiment({
+        } = r.default.useExperiment({
             location: "use_is_broadcasting_gdm"
         }, {
             autoTrackExposure: !1
-        }), n = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(e));
+        }), n = (0, i.useStateFromStores)([s.default], () => s.default.getChannel(e));
         return !!t && !!(null == n ? void 0 : n.isBroadcastChannel())
     }
 
     function o(e) {
         let {
             canViewBroadcasts: t
-        } = s.default.getCurrentConfig({
+        } = r.default.getCurrentConfig({
             location: "get_is_broadcasting_gdm"
         }, {
             autoTrackExposure: !1
         });
         if (!t) return !1;
-        let n = r.default.getChannel(e);
+        let n = s.default.getChannel(e);
         return !!(null == n ? void 0 : n.isBroadcastChannel())
     }
 

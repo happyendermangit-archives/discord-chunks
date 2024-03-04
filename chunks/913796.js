@@ -8,9 +8,9 @@ function(e, t, n) {
             return o
         }
     });
-    var s = n("884691"),
-        i = n("862205");
-    let r = (0, i.createExperiment)({
+    var i = n("884691"),
+        s = n("862205");
+    let r = (0, s.createExperiment)({
             kind: "user",
             id: "2022-11_desktop_notification_center",
             label: "Desktop notification center",
@@ -33,7 +33,7 @@ function(e, t, n) {
             }, {
                 autoTrackExposure: !1
             });
-            return s.useEffect(() => {
+            return i.useEffect(() => {
                 r.trackExposure({
                     location: "b8976e_2"
                 })

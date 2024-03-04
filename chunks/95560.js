@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         createPopper: function() {
-            return h
+            return m
         }
     });
     var r = n("798526"),
@@ -16,7 +16,7 @@ function(e, t, n) {
         d = n("928869"),
         f = n("843735"),
         p = [a.default, o.default, i.default, s.default, u.default, l.default, c.default, d.default, f.default],
-        h = (0, r.popperGenerator)({
+        m = (0, r.popperGenerator)({
             defaultModifiers: p
         })
 }

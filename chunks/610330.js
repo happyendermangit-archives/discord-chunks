@@ -1,13 +1,13 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("911718"),
+    var r = n("911718"),
         i = r("%Math.abs%"),
-        n = r("%Math.floor%"),
-        c = s("109033"),
-        o = s("382216");
-    t.exports = function(t) {
-        if ("number" != typeof t || c(t) || !o(t)) return !1;
-        var e = i(t);
-        return n(e) === e
+        o = r("%Math.floor%"),
+        s = n("109033"),
+        a = n("382216");
+    e.exports = function(e) {
+        if ("number" != typeof e || s(e) || !a(e)) return !1;
+        var t = i(e);
+        return o(t) === t
     }
 }

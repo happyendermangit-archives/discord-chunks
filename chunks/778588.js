@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return d
+            return l
         }
     }), n("222007");
-    var s = n("446674"),
-        i = n("913144");
+    var i = n("446674"),
+        s = n("913144");
     let r = [];
 
     function a() {
         r = []
     }
-    class o extends s.default.Store {
+    class o extends i.default.Store {
         hasLayers() {
             return r.length > 0
         }
@@ -21,7 +21,7 @@ function(e, t, n) {
         }
     }
     o.displayName = "LayerStore";
-    var d = new o(i.default, {
+    var l = new o(s.default, {
         LAYER_PUSH: function(e) {
             let {
                 component: t

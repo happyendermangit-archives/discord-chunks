@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return r
         }
     });
     var i = n("426685");
-    class r extends i.NativePermissionBaseUtils {
+    class s extends i.NativePermissionBaseUtils {
         requestPermissionCore(e, t) {
             return Promise.resolve(!0)
         }
@@ -19,5 +19,5 @@ function(e, t, n) {
         }
         openAlertModal(e) {}
     }
-    var s = new r
+    var r = new s
 }

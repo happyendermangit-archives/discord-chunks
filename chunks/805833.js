@@ -2,14 +2,14 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return i
+            return a
         }
     }), E("860677"), E("70102"), E("222007"), E("704744");
     var t = E("811022"),
         o = E("377678");
     let n = new t.default("Flux"),
         r = e => e();
-    var i = new class e {
+    var a = new class e {
         destroy() {
             this.changedStores.clear(), this.reactChangedStores.clear(), r = e => e()
         }

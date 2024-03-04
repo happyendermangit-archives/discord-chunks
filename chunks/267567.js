@@ -2,41 +2,41 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return g
         }
     }), n("222007"), n("808653");
     var i = n("446674"),
-        r = n("913144"),
-        s = n("26989"),
+        s = n("913144"),
+        r = n("26989"),
         a = n("305961"),
         o = n("697218"),
         l = n("49111");
     let u = [],
-        c = {},
-        d = null,
+        d = {},
+        c = null,
         f = null;
 
-    function E(e) {
+    function _(e) {
         let t = u.indexOf(e);
         if (t > -1) {
             let n = [...u];
-            return n.splice(t, 1), u = n, delete c[e], !0
+            return n.splice(t, 1), u = n, delete d[e], !0
         }
         return !1
     }
 
-    function p(e) {
+    function h(e) {
         return !(e === l.ME || u.includes(e)) && (u = [...u, e], !0)
     }
-    class h extends i.default.Store {
+    class E extends i.default.Store {
         initialize() {
             this.waitFor(a.default, o.default)
         }
         setHistorySnapshot(e) {
-            d = e
+            c = e
         }
         getHistorySnapshot() {
-            return d
+            return c
         }
         lurkingGuildIds() {
             return u
@@ -46,7 +46,7 @@ function(e, t, n) {
         }
         isLurking(e) {
             var t;
-            let n = s.default.isCurrentUserGuest(e),
+            let n = r.default.isCurrentUserGuest(e),
                 i = null === (t = a.default.getGuild(e)) || void 0 === t ? void 0 : t.isLurker();
             return !!(!n && i)
         }
@@ -54,11 +54,11 @@ function(e, t, n) {
             return f
         }
         getLoadId(e) {
-            return null != e ? c[e] : null
+            return null != e ? d[e] : null
         }
     }
-    h.displayName = "LurkingStore";
-    var _ = new h(r.default, {
+    E.displayName = "LurkingStore";
+    var g = new E(s.default, {
         CONNECTION_OPEN: function() {
             let e = Object.values(a.default.getGuilds()).reduce((e, t) => {
                 let n = t.isLurker();
@@ -71,12 +71,12 @@ function(e, t, n) {
                 guildId: t,
                 lurker: n,
                 source: i,
-                directoryChannelId: r,
-                loadId: s
+                directoryChannelId: s,
+                loadId: r
             } = e;
             if (n) {
                 var a, o;
-                switch (p(t), a = t, null != (o = s) && (c[a] = o), i) {
+                switch (h(t), a = t, null != (o = r) && (d[a] = o), i) {
                     case l.JoinGuildSources.MOBILE_GUILD_DISCOVERY:
                         f = {
                             type: l.JoinGuildSources.MOBILE_GUILD_DISCOVERY
@@ -85,7 +85,7 @@ function(e, t, n) {
                     case l.JoinGuildSources.DIRECTORY_ENTRY:
                         f = {
                             type: l.JoinGuildSources.DIRECTORY_ENTRY,
-                            directoryChannelId: r
+                            directoryChannelId: s
                         };
                         break;
                     default:
@@ -100,37 +100,37 @@ function(e, t, n) {
                 ignoredGuildIds: t
             } = e, n = function(e) {
                 let t = new Set([...null != e ? e : []]);
-                return [...u].reduce((e, n) => t.has(n) ? e : E(n) || e, !1)
+                return [...u].reduce((e, n) => t.has(n) ? e : _(n) || e, !1)
             }(t);
-            return n && (d = null, f = null), n
+            return n && (c = null, f = null), n
         },
         GUILD_STOP_LURKING_FAILURE: function(e) {
             let {
                 lurkingGuildId: t,
                 lurkingSource: n
             } = e;
-            return p(t), f = n, !0
+            return h(t), f = n, !0
         },
         GUILD_CREATE: function(e) {
             let {
                 guild: t
             } = e, n = null == t.joined_at;
-            return !!(!n && u.includes(t.id)) && (E(t.id), d = null, f = null, !0)
+            return !!(!n && u.includes(t.id)) && (_(t.id), c = null, f = null, !0)
         },
         GUILD_DELETE: function(e) {
             let {
                 guild: t
             } = e;
-            return !!u.includes(t.id) && (E(t.id), d = null, f = null, !0)
+            return !!u.includes(t.id) && (_(t.id), c = null, f = null, !0)
         },
         GUILD_MEMBER_ADD: function(e) {
             var t;
             let {
                 guildId: n,
                 joinedAt: i,
-                user: r
-            } = e, s = r.id === (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
-            return !!(s && null != i && u.includes(n)) && (E(n), d = null, f = null, !0)
+                user: s
+            } = e, r = s.id === (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+            return !!(r && null != i && u.includes(n)) && (_(n), c = null, f = null, !0)
         }
     })
 }

@@ -1,14 +1,14 @@
-function(t, e, s) {
-    var r = s("619127"),
-        i = s("912065").Buffer,
-        n = s("441270");
+function(e, t, n) {
+    var r = n("619127"),
+        i = n("912065").Buffer,
+        o = n("441270");
 
-    function c(t, e, s, c) {
-        n.call(this), this._cipher = new r.AES(e), this._prev = i.from(s), this._cache = i.allocUnsafe(0), this._secCache = i.allocUnsafe(0), this._decrypt = c, this._mode = t
+    function s(e, t, n, s) {
+        o.call(this), this._cipher = new r.AES(t), this._prev = i.from(n), this._cache = i.allocUnsafe(0), this._secCache = i.allocUnsafe(0), this._decrypt = s, this._mode = e
     }
-    s("599235")(c, n), c.prototype._update = function(t) {
-        return this._mode.encrypt(this, t, this._decrypt)
-    }, c.prototype._final = function() {
+    n("599235")(s, o), s.prototype._update = function(e) {
+        return this._mode.encrypt(this, e, this._decrypt)
+    }, s.prototype._final = function() {
         this._cipher.scrub()
-    }, t.exports = c
+    }, e.exports = s
 }

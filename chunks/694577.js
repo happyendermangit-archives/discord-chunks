@@ -1,14 +1,14 @@
-function(t, e, s) {
-    var r = s("442873"),
-        i = s("424498"),
-        n = s("540893"),
-        c = i ? function(t, e) {
-            return i(t, "toString", {
+function(e, t, n) {
+    var r = n("442873"),
+        i = n("424498"),
+        o = n("540893"),
+        s = i ? function(e, t) {
+            return i(e, "toString", {
                 configurable: !0,
                 enumerable: !1,
-                value: r(e),
+                value: r(t),
                 writable: !0
             })
-        } : n;
-    t.exports = c
+        } : o;
+    e.exports = s
 }

@@ -5,12 +5,12 @@ function(e, t, n) {
             return r
         }
     }), n("424973");
-    var s = n("126982"),
-        i = n("940322"),
+    var i = n("126982"),
+        s = n("940322"),
         r = class e {
             initialize() {
                 this.particles = [], this.wind.initialize(), this.loadInTimer = setTimeout(() => {
-                    for (let e = 0; e < 75; e++) this.particles.push(new s.default)
+                    for (let e = 0; e < 75; e++) this.particles.push(new i.default)
                 }, 250)
             }
             terminate() {
@@ -26,7 +26,7 @@ function(e, t, n) {
                 this.isFilled = !0
             }
             constructor() {
-                this.particles = [], this.wind = new i.default, this.alpha = 0, this.isFilled = !1, this.loadInTimer = null
+                this.particles = [], this.wind = new s.default, this.alpha = 0, this.isFilled = !1, this.loadInTimer = null
             }
         }
 }

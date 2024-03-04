@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return r
         }
     });
     var i = n("862205");
-    let r = (0, i.createExperiment)({
+    let s = (0, i.createExperiment)({
         id: "2023-11_adyen_auth_without_capture",
         label: "Adyen auth without capture rollout",
         kind: "user",
@@ -21,5 +21,5 @@ function(e, t, n) {
             }
         }]
     });
-    var s = r
+    var r = s
 }

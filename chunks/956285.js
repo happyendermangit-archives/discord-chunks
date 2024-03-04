@@ -1,9 +1,9 @@
-function(t, r, n) {
+function(e, t, n) {
     n("424973");
-    var e = n("523119");
-    t.exports = function(t, r) {
+    var r = n("523119");
+    e.exports = function(e, t) {
         var n = this.__data__,
-            o = e(n, t);
-        return o < 0 ? (++this.size, n.push([t, r])) : n[o][1] = r, this
+            i = r(n, e);
+        return i < 0 ? (++this.size, n.push([e, t])) : n[i][1] = t, this
     }
 }

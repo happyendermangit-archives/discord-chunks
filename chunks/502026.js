@@ -7,32 +7,32 @@ function(e, t, n) {
     });
     var i = n("37983");
     n("884691");
-    var r = n("414456"),
-        s = n.n(r),
+    var s = n("414456"),
+        r = n.n(s),
         a = n("773179"),
         o = n.n(a),
         l = n("669491"),
         u = n("619974"),
-        c = n("323805");
-    let d = Object.fromEntries(Object.keys(l.default.colors).map(e => [o.kebabCase(e), e])),
+        d = n("323805");
+    let c = Object.fromEntries(Object.keys(l.default.colors).map(e => [o.kebabCase(e), e])),
         Text = e => {
             let t, {
                     variant: n,
-                    tag: r = "div",
+                    tag: s = "div",
                     selectable: a = !1,
                     className: o,
                     lineClamp: f,
-                    color: E,
-                    tabularNumbers: p = !1,
-                    scaleFontToUserSetting: h = !1,
-                    ..._
+                    color: _,
+                    tabularNumbers: h = !1,
+                    scaleFontToUserSetting: E = !1,
+                    ...g
                 } = e,
-                S = "",
-                m = {};
-            if (null != f && (1 === f ? S = u.lineClamp1 : (S = u.lineClamp2Plus, m = {
+                m = "",
+                p = {};
+            if (null != f && (1 === f ? m = u.lineClamp1 : (m = u.lineClamp2Plus, p = {
                     lineClamp: f,
                     WebkitLineClamp: f
-                })), void 0 !== E) switch (E) {
+                })), void 0 !== _) switch (_) {
                 case "none":
                     t = void 0;
                     break;
@@ -40,23 +40,23 @@ function(e, t, n) {
                     t = "white";
                     break;
                 default:
-                    var T;
-                    t = null === (T = l.default.colors[d[E]]) || void 0 === T ? void 0 : T.css
+                    var S;
+                    t = null === (S = l.default.colors[c[_]]) || void 0 === S ? void 0 : S.css
             }
-            let g = {
+            let v = {
                 color: t,
-                ...m,
-                ..._.style
+                ...p,
+                ...g.style
             };
-            return (0, i.jsx)(r, {
-                className: s({
-                    [u.defaultColor]: void 0 === E,
+            return (0, i.jsx)(s, {
+                className: r({
+                    [u.defaultColor]: void 0 === _,
                     [u.selectable]: a,
-                    [u.tabularNumbers]: p,
-                    [c.fontScaling]: h
-                }, S, c[n], o),
-                ..._,
-                style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
+                    [u.tabularNumbers]: h,
+                    [d.fontScaling]: E
+                }, m, d[n], o),
+                ...g,
+                style: Object.values(v).filter(Boolean).length > 0 ? v : void 0,
                 "data-text-variant": n
             })
         }

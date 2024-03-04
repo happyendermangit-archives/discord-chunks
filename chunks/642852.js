@@ -1,19 +1,19 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("648644"),
-        i = s("366400"),
-        n = s("975169"),
-        c = s("463067"),
-        o = s("658683"),
-        f = s("284400");
-    n();
-    var u = r(o()),
-        a = function(t) {
-            return u(void 0 === this ? Promise : this, t)
+    var r = n("648644"),
+        i = n("366400"),
+        o = n("975169"),
+        s = n("463067"),
+        a = n("658683"),
+        c = n("284400");
+    o();
+    var u = r(a()),
+        d = function(e) {
+            return u(void 0 === this ? Promise : this, e)
         };
-    i(a, {
-        getPolyfill: o,
-        implementation: c,
-        shim: f
-    }), t.exports = a
+    i(d, {
+        getPolyfill: a,
+        implementation: s,
+        shim: c
+    }), e.exports = d
 }

@@ -11,9 +11,9 @@ function(e, _, E) {
     var t, o = E("44170"),
         n = E("860347"),
         r = E.n(n),
-        i = E("907407");
+        a = E("907407");
     E.g.IntlMessageFormat = r, E("394069"), E("351752"), E("329547"), E("784943"), E("643072"), E("258947"), E("575137"), E("27213"), E("753950"), E("677642"), E("276542"), E("351643"), E("8575"), E("658724"), E("23647"), E("362209"), E("735062"), E("994548"), E("975990"), E("870043"), E("73319"), E("583263"), E("714405"), E("272318"), E("403290"), E("408237"), E("138432"), E("601337"), delete E.g.IntlMessageFormat, "undefined" == typeof Intl && E("246663");
-    let a = "en-US";
+    let i = "en-US";
 
     function I() {
         let e;
@@ -23,7 +23,7 @@ function(e, _, E) {
         }
         return null != e ? e : ""
     }
-    class s {
+    class T {
         getMessages() {
             return this._parsedMessages
         }
@@ -31,11 +31,11 @@ function(e, _, E) {
             this._context = {
                 messages: {},
                 defaultMessages: {},
-                locale: a
+                locale: i
             }, this._parsedMessages = {}, this._getParsedMessages = e
         }
     }
-    class T extends s {
+    class s extends T {
         refresh(e) {
             this._context = e, this._refresh(e, this._parsedMessages)
         }
@@ -52,7 +52,7 @@ function(e, _, E) {
             }
         }
     }
-    class S extends s {
+    class S extends T {
         refresh(e) {
             Object.assign(this._context, e), Object.keys(this._parsedMessages).forEach(e => {
                 delete this._parsedMessages[e]
@@ -86,7 +86,7 @@ function(e, _, E) {
             this._chosenLocale = e, this.loadPromise = this._loadMessagesForLocale(e), this.emit("locale", this._chosenLocale, _)
         }
         setUpdateRules(e) {
-            (0, i.setUpdateRules)(e)
+            (0, a.setUpdateRules)(e)
         }
         getLanguages() {
             return this._languages
@@ -125,7 +125,7 @@ function(e, _, E) {
         }
         getDefaultLocale() {
             var e, _, E;
-            let t = null !== (e = I()) && void 0 !== e ? e : a,
+            let t = null !== (e = I()) && void 0 !== e ? e : i,
                 o = this._languages.filter(e => {
                     let {
                         enabled: _
@@ -139,14 +139,14 @@ function(e, _, E) {
                 });
             if (o.includes(t)) return t;
             let n = t.split("-");
-            return o.includes(n[0]) ? n[0] : "zh" === n[0] && n.length > 1 && "Hant" === n[1] ? null !== (_ = o.find(e => "zh-TW" === e)) && void 0 !== _ ? _ : a : null !== (E = o.find(e => e.split("-")[0] === n[0])) && void 0 !== E ? E : a
+            return o.includes(n[0]) ? n[0] : "zh" === n[0] && n.length > 1 && "Hant" === n[1] ? null !== (_ = o.find(e => "zh-TW" === e)) && void 0 !== _ ? _ : i : null !== (E = o.find(e => e.split("-")[0] === n[0])) && void 0 !== E ? E : i
         }
         _loadMessagesForLocale(e) {
             let _ = this._fetchMessages(e);
             return _ instanceof Promise ? _.then(_ => this._applyMessagesForLocale(_, e)) : (this._applyMessagesForLocale(_, e), Promise.resolve())
         }
         _applyMessagesForLocale(e, _) {
-            let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this._findMessages(a);
+            let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this._findMessages(i);
             this._requestedLocale === _ && (this._provider.refresh({
                 messages: e,
                 defaultMessages: E,
@@ -159,9 +159,9 @@ function(e, _, E) {
             return _
         }
         _fetchMessages(e) {
-            let _ = e === a ? () => {
-                throw Error("Error Loading ".concat(a))
-            } : () => (console.warn("Unsupported Locale", e), -1 === e.indexOf("-")) ? this._fetchMessages(a) : this._fetchMessages(e.split("-")[0]);
+            let _ = e === i ? () => {
+                throw Error("Error Loading ".concat(i))
+            } : () => (console.warn("Unsupported Locale", e), -1 === e.indexOf("-")) ? this._fetchMessages(i) : this._fetchMessages(e.split("-")[0]);
             try {
                 let E = this._getMessages(e);
                 return E instanceof Promise ? E.catch(_) : E
@@ -186,16 +186,16 @@ function(e, _, E) {
                     locale: n
                 });
                 try {
-                    return (0, i.getMessage)(r, n)
+                    return (0, a.getMessage)(r, n)
                 } catch (e) {
-                    if (console.warn("Failed parsing intl key '".concat(String(_), "' in locale '").concat(n, "' defaulting to English"), e), "string" == typeof(r = o[_])) return (0, i.getMessage)(r, n)
+                    if (console.warn("Failed parsing intl key '".concat(String(_), "' in locale '").concat(n, "' defaulting to English"), e), "string" == typeof(r = o[_])) return (0, a.getMessage)(r, n)
                 }
                 return ""
             }, this._handleNewListener = e => {
                 if ("locale" === e) this.emit(e, this._chosenLocale)
             }, this.initialLanguageLoad = new Promise((e, _) => {
                 this.resolveLanguageLoaded = e
-            }), Intl.__addLocaleData && Intl.__addLocaleData(E("169123")), this._languages = t(), this._provider = null != window.Proxy ? new S(this._getParsedMessages) : new T(this._getParsedMessages), this.Messages = this._provider.getMessages(), this._getMessages = _, this.setLocale(e || this.getDefaultLocale()), this.on("newListener", this._handleNewListener)
+            }), Intl.__addLocaleData && Intl.__addLocaleData(E("169123")), this._languages = t(), this._provider = null != window.Proxy ? new S(this._getParsedMessages) : new s(this._getParsedMessages), this.Messages = this._provider.getMessages(), this._getMessages = _, this.setLocale(e || this.getDefaultLocale()), this.on("newListener", this._handleNewListener)
         }
     }
 }

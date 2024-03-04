@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     });
     var i = n("917351"),
-        r = n.n(i),
-        s = n("446674"),
+        s = n.n(i),
+        r = n("446674"),
         a = n("913144"),
         o = n("718517");
     let l = {
@@ -16,8 +16,8 @@ function(e, t, n) {
             lastGeoRankedOrder: null
         },
         u = l,
-        c = 1 * o.default.Millis.HOUR;
-    class d extends s.default.DeviceSettingsStore {
+        d = 1 * o.default.Millis.HOUR;
+    class c extends r.default.DeviceSettingsStore {
         initialize(e) {
             u = null != e ? e : l
         }
@@ -35,11 +35,11 @@ function(e, t, n) {
         }
         shouldPerformLatencyTest(e) {
             var t, n;
-            return null === u.preferredRegion || !r.isEqual(e, null !== (t = u.lastGeoRankedOrder) && void 0 !== t ? t : []) || Date.now() - (null !== (n = u.lastTestTimestamp) && void 0 !== n ? n : 0) >= c
+            return null === u.preferredRegion || !s.isEqual(e, null !== (t = u.lastGeoRankedOrder) && void 0 !== t ? t : []) || Date.now() - (null !== (n = u.lastTestTimestamp) && void 0 !== n ? n : 0) >= d
         }
     }
-    d.displayName = "RTCRegionStore", d.persistKey = "RTCRegionStore";
-    var f = new d(a.default, {
+    c.displayName = "RTCRegionStore", c.persistKey = "RTCRegionStore";
+    var f = new c(a.default, {
         RTC_LATENCY_TEST_COMPLETE: function(e) {
             e.latencyRankedRegions.length > 0 && (u.lastGeoRankedOrder = e.geoRankedRegions, u.preferredRegion = e.latencyRankedRegions[0]), u.lastTestTimestamp = Date.now()
         }

@@ -9,11 +9,11 @@ function(e, _, E) {
         o = E("913144"),
         n = E("990766"),
         r = E("373469"),
-        i = E("271938"),
-        a = E("42203"),
+        a = E("271938"),
+        i = E("42203"),
         I = E("590401"),
-        s = E("18494"),
-        T = E("205817"),
+        T = E("18494"),
+        s = E("205817"),
         S = E("718517"),
         N = E("374014"),
         O = E("49111");
@@ -24,27 +24,27 @@ function(e, _, E) {
         L = null;
 
     function C(e, _) {
-        if (s.default.getVoiceChannelId() !== e) return !1;
-        let E = a.default.getChannel(e);
+        if (T.default.getVoiceChannelId() !== e) return !1;
+        let E = i.default.getChannel(e);
         if (null == E || !E.isDM() && !E.isGuildStageVoice()) return !1;
         let t = r.default.getActiveStreamForUser(_, E.getGuildId());
         if (null != t) return !1;
         let o = r.default.getStreamForUser(_, E.getGuildId());
         if (null == o) return !1;
-        let i = (0, N.encodeStreamKey)(o);
-        return i !== L && (L = i, (0, n.watchStream)(o, {
+        let a = (0, N.encodeStreamKey)(o);
+        return a !== L && (L = a, (0, n.watchStream)(o, {
             noFocus: !0
         }), !0)
     }
 
     function D(e, _) {
         let E = null != _ ? _ : I.default.getPreferredRegion();
-        null != E && E !== I.default.getRegion(T.default.getHostname(T.default.getActiveStreamKey())) && (0, n.changeStreamRegion)(e, E)
+        null != E && E !== I.default.getRegion(s.default.getHostname(s.default.getActiveStreamKey())) && (0, n.changeStreamRegion)(e, E)
     }
     var c = {
         init() {
             let e = (e, _) => {
-                !T.default.getAllActiveStreamKeys().includes(e) && R.start(_ ? u : l, () => {
+                !s.default.getAllActiveStreamKeys().includes(e) && R.start(_ ? u : l, () => {
                     o.default.dispatch({
                         type: "STREAM_TIMED_OUT",
                         streamKey: e
@@ -56,19 +56,19 @@ function(e, _, E) {
                     streamKey: E
                 } = _, {
                     channelId: t
-                } = (0, N.decodeStreamKey)(E), o = a.default.getChannel(t);
+                } = (0, N.decodeStreamKey)(E), o = i.default.getChannel(t);
                 e(E, null == o ? void 0 : o.isGuildStageVoice())
             }), o.default.subscribe("STREAM_START", _ => {
                 let {
                     streamType: E,
                     guildId: t,
                     channelId: o
-                } = _, n = a.default.getChannel(o);
+                } = _, n = i.default.getChannel(o);
                 e((0, N.encodeStreamKey)({
                     streamType: E,
                     guildId: t,
                     channelId: o,
-                    ownerId: i.default.getId()
+                    ownerId: a.default.getId()
                 }), null == n ? void 0 : n.isGuildStageVoice())
             }), o.default.subscribe("STREAM_CREATE", () => {
                 R.stop()
@@ -88,7 +88,7 @@ function(e, _, E) {
                     let {
                         ownerId: _
                     } = e;
-                    return _ !== i.default.getId()
+                    return _ !== a.default.getId()
                 })[0];
                 null != E && C(_, E.ownerId)
             }), o.default.subscribe("VOICE_STATE_UPDATES", e => {
@@ -102,7 +102,7 @@ function(e, _, E) {
                         guildId: t,
                         selfStream: o
                     } = e;
-                    if (_ !== i.default.getId() && null != E) {
+                    if (_ !== a.default.getId() && null != E) {
                         if (o && C(E, _)) return;
                         let e = r.default.getActiveStreamForUser(_, t);
                         if (null != e && e.channelId === E && (!o && e.state !== O.ApplicationStreamStates.ENDED && A.start(18e4, () => (0, n.closeStream)((0, N.encodeStreamKey)(e), !1)), o && e.state === O.ApplicationStreamStates.ENDED)) {

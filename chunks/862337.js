@@ -5,10 +5,10 @@ function(e, t, n) {
             return i
         },
         DelayedCall: function() {
-            return r
+            return s
         },
         Interval: function() {
-            return s
+            return r
         },
         timeoutPromise: function() {
             return a
@@ -28,7 +28,7 @@ function(e, t, n) {
             return null != this._ref
         }
     }
-    class r {
+    class s {
         set(e) {
             return this._delay = e, this
         }
@@ -46,7 +46,7 @@ function(e, t, n) {
             this._delay = e, this._handler = t, this._timeout = new i
         }
     }
-    class s {
+    class r {
         start(e, t) {
             this.stop(), this._ref = window.setInterval(t, e)
         }

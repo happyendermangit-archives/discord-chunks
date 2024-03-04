@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var i, r;
+    var i, s;
     n.r(t), n.d(t, {
         OverlayGameStatusSource: function() {
             return i
         }
-    }), (r = i || (i = {})).LAUNCHER = "LAUNCHER", r.LIBRARY_APPLICATION = "LIBRARY_APPLICATION", r.USER_OVERRIDE = "USER_OVERRIDE", r.DATABASE = "DATABASE", r.DEFAULT = "DEFAULT"
+    }), (s = i || (i = {})).LAUNCHER = "LAUNCHER", s.LIBRARY_APPLICATION = "LIBRARY_APPLICATION", s.USER_OVERRIDE = "USER_OVERRIDE", s.DATABASE = "DATABASE", s.DEFAULT = "DEFAULT"
 }

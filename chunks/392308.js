@@ -1,46 +1,46 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("550511"),
+    var r = n("550511"),
         i = r.assert,
-        n = r.parseBytes,
-        c = r.cachedProperty;
+        o = r.parseBytes,
+        s = r.cachedProperty;
 
-    function o(t, e) {
-        this.eddsa = t, this._secret = n(e.secret), t.isPoint(e.pub) ? this._pub = e.pub : this._pubBytes = n(e.pub)
+    function a(e, t) {
+        this.eddsa = e, this._secret = o(t.secret), e.isPoint(t.pub) ? this._pub = t.pub : this._pubBytes = o(t.pub)
     }
-    o.fromPublic = function(t, e) {
-        return e instanceof o ? e : new o(t, {
-            pub: e
+    a.fromPublic = function(e, t) {
+        return t instanceof a ? t : new a(e, {
+            pub: t
         })
-    }, o.fromSecret = function(t, e) {
-        return e instanceof o ? e : new o(t, {
-            secret: e
+    }, a.fromSecret = function(e, t) {
+        return t instanceof a ? t : new a(e, {
+            secret: t
         })
-    }, o.prototype.secret = function() {
+    }, a.prototype.secret = function() {
         return this._secret
-    }, c(o, "pubBytes", function() {
+    }, s(a, "pubBytes", function() {
         return this.eddsa.encodePoint(this.pub())
-    }), c(o, "pub", function() {
+    }), s(a, "pub", function() {
         return this._pubBytes ? this.eddsa.decodePoint(this._pubBytes) : this.eddsa.g.mul(this.priv())
-    }), c(o, "privBytes", function() {
-        var t = this.eddsa,
-            e = this.hash(),
-            s = t.encodingLength - 1,
-            r = e.slice(0, t.encodingLength);
-        return r[0] &= 248, r[s] &= 127, r[s] |= 64, r
-    }), c(o, "priv", function() {
+    }), s(a, "privBytes", function() {
+        var e = this.eddsa,
+            t = this.hash(),
+            n = e.encodingLength - 1,
+            r = t.slice(0, e.encodingLength);
+        return r[0] &= 248, r[n] &= 127, r[n] |= 64, r
+    }), s(a, "priv", function() {
         return this.eddsa.decodeInt(this.privBytes())
-    }), c(o, "hash", function() {
+    }), s(a, "hash", function() {
         return this.eddsa.hash().update(this.secret()).digest()
-    }), c(o, "messagePrefix", function() {
+    }), s(a, "messagePrefix", function() {
         return this.hash().slice(this.eddsa.encodingLength)
-    }), o.prototype.sign = function(t) {
-        return i(this._secret, "KeyPair can only verify"), this.eddsa.sign(t, this)
-    }, o.prototype.verify = function(t, e) {
-        return this.eddsa.verify(t, e, this)
-    }, o.prototype.getSecret = function(t) {
-        return i(this._secret, "KeyPair is public only"), r.encode(this.secret(), t)
-    }, o.prototype.getPublic = function(t) {
-        return r.encode(this.pubBytes(), t)
-    }, t.exports = o
+    }), a.prototype.sign = function(e) {
+        return i(this._secret, "KeyPair can only verify"), this.eddsa.sign(e, this)
+    }, a.prototype.verify = function(e, t) {
+        return this.eddsa.verify(e, t, this)
+    }, a.prototype.getSecret = function(e) {
+        return i(this._secret, "KeyPair is public only"), r.encode(this.secret(), e)
+    }, a.prototype.getPublic = function(e) {
+        return r.encode(this.pubBytes(), e)
+    }, e.exports = a
 }

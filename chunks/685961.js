@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         VIDEO_QUALITY_MODES_TO_OVERWRITES: function() {
-            return s
+            return r
         },
         VideoQuality: function() {
             return o
@@ -12,10 +12,10 @@ function(e, t, n) {
         }
     }), n("70102");
     var i = n("582663"),
-        r = n("353927");
-    let s = Object.freeze({
-        [r.VideoQualityMode.AUTO]: {},
-        [r.VideoQualityMode.FULL]: {
+        s = n("353927");
+    let r = Object.freeze({
+        [s.VideoQualityMode.AUTO]: {},
+        [s.VideoQualityMode.FULL]: {
             encode: {
                 width: 1280,
                 height: 720
@@ -33,11 +33,11 @@ function(e, t, n) {
             return null == e && null == t || null != e && null != t && e.width === t.width && e.height === t.height && e.framerate === t.framerate
         }
         static extend(e, t) {
-            var n, i, r;
+            var n, i, s;
             return null == e ? t : null == t ? e : {
                 width: null !== (n = null == t ? void 0 : t.width) && void 0 !== n ? n : null == e ? void 0 : e.width,
                 height: null !== (i = null == t ? void 0 : t.height) && void 0 !== i ? i : null == e ? void 0 : e.height,
-                framerate: null !== (r = null == t ? void 0 : t.framerate) && void 0 !== r ? r : null == e ? void 0 : e.framerate
+                framerate: null !== (s = null == t ? void 0 : t.framerate) && void 0 !== s ? s : null == e ? void 0 : e.framerate
             }
         }
         constructor(e) {
@@ -47,14 +47,14 @@ function(e, t, n) {
     class l {
         getQuality(e) {
             var t, n, i;
-            let r = this.isStreamContext ? this.getDesktopQuality() : this.getVideoQuality(this.connection.getLocalWant(e));
+            let s = this.isStreamContext ? this.getDesktopQuality() : this.getVideoQuality(this.connection.getLocalWant(e));
             return new a({
-                encode: o.extend(r.encode, this.qualityOverwrite.encode),
-                capture: o.extend(r.capture, this.qualityOverwrite.capture),
-                bitrateMin: null !== (t = this.qualityOverwrite.bitrateMin) && void 0 !== t ? t : r.bitrateMin,
-                bitrateMax: null !== (n = this.qualityOverwrite.bitrateMax) && void 0 !== n ? n : r.bitrateMax,
-                bitrateTarget: null !== (i = this.qualityOverwrite.bitrateTarget) && void 0 !== i ? i : r.bitrateTarget,
-                localWant: r.localWant
+                encode: o.extend(s.encode, this.qualityOverwrite.encode),
+                capture: o.extend(s.capture, this.qualityOverwrite.capture),
+                bitrateMin: null !== (t = this.qualityOverwrite.bitrateMin) && void 0 !== t ? t : s.bitrateMin,
+                bitrateMax: null !== (n = this.qualityOverwrite.bitrateMax) && void 0 !== n ? n : s.bitrateMax,
+                bitrateTarget: null !== (i = this.qualityOverwrite.bitrateTarget) && void 0 !== i ? i : s.bitrateTarget,
+                localWant: s.localWant
             })
         }
         applyQualityConstraints(e, t) {
@@ -71,11 +71,11 @@ function(e, t, n) {
             let t = this.ladder.getResolution(e),
                 n = this.options.videoBitrate.min * t.budgetPortion,
                 i = this.options.videoBitrate.max * t.budgetPortion,
-                r = this.isMuted ? t.mutedFramerate : t.framerate;
+                s = this.isMuted ? t.mutedFramerate : t.framerate;
             return new a({
                 encode: {
                     ...t,
-                    framerate: r
+                    framerate: s
                 },
                 capture: {
                     width: this.options.videoCapture.width,
@@ -92,15 +92,15 @@ function(e, t, n) {
                 capture: {
                     width: 1280,
                     height: 720,
-                    framerate: r.VIDEO_QUALITY_FRAMERATE
+                    framerate: s.VIDEO_QUALITY_FRAMERATE
                 },
                 bitrateMin: this.options.desktopBitrate.min,
                 bitrateMax: this.options.desktopBitrate.max,
                 bitrateTarget: this.options.desktopBitrate.target
             })
         }
-        constructor(e, t, n = r.defaultVideoQualityOptions) {
-            this.contextType = e, this.connection = t, this.options = n, this.isMuted = !1, this.qualityOverwrite = {}, this.isStreamContext = this.contextType === r.MediaEngineContextTypes.STREAM, this.ladder = new i.MediaSinkWantsLadder(n)
+        constructor(e, t, n = s.defaultVideoQualityOptions) {
+            this.contextType = e, this.connection = t, this.options = n, this.isMuted = !1, this.qualityOverwrite = {}, this.isStreamContext = this.contextType === s.MediaEngineContextTypes.STREAM, this.ladder = new i.MediaSinkWantsLadder(n)
         }
     }
 }

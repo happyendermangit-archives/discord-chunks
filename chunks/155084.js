@@ -1,58 +1,58 @@
-function(e, _, E) {
+function(e, t, n) {
     "use strict";
-    E.r(_), E.d(_, {
+    n.r(t), n.d(t, {
         default: function() {
-            return I
+            return u
         }
-    }), E("222007"), E("424973");
-    var t = E("615361"),
-        o = E("872717"),
-        n = E("773336"),
-        r = E("827032"),
-        i = E("49111");
-    let a = new Set(["darwin", "linux", "win32", "ios", "android"]);
-    var I = new class e {
+    }), n("222007"), n("424973");
+    var i = n("615361"),
+        s = n("872717"),
+        r = n("773336"),
+        a = n("827032"),
+        o = n("49111");
+    let l = new Set(["darwin", "linux", "win32", "ios", "android"]);
+    var u = new class e {
         increment(e) {
-            let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 {
-                    name: E,
-                    tags: o
+                    name: n,
+                    tags: s
                 } = e,
-                i = {
-                    name: E,
-                    tags: (0, r.getGlobalTagsArray)()
+                o = {
+                    name: n,
+                    tags: (0, a.getGlobalTagsArray)()
                 };
-            null != o && o.forEach(e => {
-                i.tags.push(e)
+            null != s && s.forEach(e => {
+                o.tags.push(e)
             });
-            let I = function() {
-                if ((0, n.isWeb)()) return "web";
+            let u = function() {
+                if ((0, r.isWeb)()) return "web";
                 {
-                    let e = (0, n.getPlatformName)();
-                    return a.has(e) ? e : null
+                    let e = (0, r.getPlatformName)();
+                    return l.has(e) ? e : null
                 }
             }();
-            null != I && i.tags.push("platform:".concat(I));
-            let s = function() {
+            null != u && o.tags.push("platform:".concat(u));
+            let d = function() {
                 let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
-                return t.ReleaseChannelsSets.ALL.has(e) ? e : null
+                return i.ReleaseChannelsSets.ALL.has(e) ? e : null
             }();
-            null != s && i.tags.push("release_channel:".concat(s)), this._metrics.push(i), (_ || this._metrics.length >= 100) && this._flush()
+            null != d && o.tags.push("release_channel:".concat(d)), this._metrics.push(o), (t || this._metrics.length >= 100) && this._flush()
         }
         _flush() {
             if (this._metrics.length > 0) {
                 let e = [...this._metrics];
-                o.default.post({
-                    url: i.Endpoints.METRICS,
+                s.default.post({
+                    url: o.Endpoints.METRICS,
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: "1709581943815",
-                            build_number: "271943"
+                            built_at: "1709583903492",
+                            build_number: "271970"
                         }
                     },
                     retries: 1
-                }).catch(_ => {
+                }).catch(t => {
                     this._metrics.length + e.length < 100 && (this._metrics = [...this._metrics, ...e])
                 })
             }

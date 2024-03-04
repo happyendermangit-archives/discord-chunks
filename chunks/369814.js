@@ -2,20 +2,20 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return r
         }
     });
     var i = n("748820");
 
-    function a(e) {
+    function s(e) {
         return {
             channelId: e,
             sessionId: (0, i.v4)()
         }
     }
-    var l = new class e {
+    var r = new class e {
         getForumChannelSessionId(e) {
-            return null == this.session && (this.session = a(e)), this.session.channelId !== e && (this.session = a(e)), this.session.sessionId
+            return null == this.session && (this.session = s(e)), this.session.channelId !== e && (this.session = s(e)), this.session.sessionId
         }
     }
 }

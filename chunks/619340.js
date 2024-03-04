@@ -2,35 +2,35 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return g
+            return h
         }
     });
-    var s = n("759843"),
-        i = n("382825"),
+    var i = n("759843"),
+        s = n("382825"),
         r = n("872717"),
         a = n("913144"),
         o = n("535013"),
-        d = n("605250"),
+        l = n("605250"),
         u = n("599110"),
-        l = n("840707"),
-        f = n("49111");
-    let _ = new d.default("ConnectedAccounts");
+        d = n("840707"),
+        c = n("49111");
+    let f = new l.default("ConnectedAccounts");
 
-    function c(e, t) {
+    function _(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return r.default.post({
-            url: f.Endpoints.CONNECTIONS_CALLBACK(e),
+            url: c.Endpoints.CONNECTIONS_CALLBACK(e),
             body: {
                 ...t,
                 insecure: n,
-                friend_sync: f.FRIEND_SYNC_PLATFORM_TYPES.has(e)
+                friend_sync: c.FRIEND_SYNC_PLATFORM_TYPES.has(e)
             },
             oldFormErrors: !0
         })
     }
-    var g = {
+    var h = {
         fetch: () => r.default.get({
-            url: f.Endpoints.CONNECTIONS,
+            url: c.Endpoints.CONNECTIONS,
             oldFormErrors: !0
         }).then(e => a.default.dispatch({
             type: "USER_CONNECTIONS_UPDATE",
@@ -44,60 +44,60 @@ function(e, t, n) {
         authorize(e) {
             let t, {
                 location: n,
-                twoWayLinkType: s,
+                twoWayLinkType: i,
                 userCode: a
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            return u.default.track(f.AnalyticEvents.CONNECTED_ACCOUNT_INITIATED, {
+            return u.default.track(c.AnalyticEvents.CONNECTED_ACCOUNT_INITIATED, {
                 platform_type: e,
                 location: n
-            }), t = s === i.TwoWayLinkType.DEVICE_CODE && null != a ? f.Endpoints.CONNECTIONS_AUTHORIZE_LINK_DEVICE(e, a) : null != s ? f.Endpoints.CONNECTIONS_AUTHORIZE_LINK(e, s) : f.Endpoints.CONNECTIONS_AUTHORIZE(e), r.default.get({
+            }), t = i === s.TwoWayLinkType.DEVICE_CODE && null != a ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK_DEVICE(e, a) : null != i ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK(e, i) : c.Endpoints.CONNECTIONS_AUTHORIZE(e), r.default.get({
                 url: t,
                 oldFormErrors: !0
             })
         },
-        callback: c,
-        connect(e, t, n, i, r) {
+        callback: _,
+        connect(e, t, n, s, r) {
             var a;
-            return l.default.put({
-                url: f.Endpoints.CONNECTION(e, t),
+            return d.default.put({
+                url: c.Endpoints.CONNECTION(e, t),
                 body: {
                     name: n,
-                    friend_sync: null !== (a = null == r ? void 0 : r.friend_sync) && void 0 !== a ? a : f.FRIEND_SYNC_PLATFORM_TYPES.has(e)
+                    friend_sync: null !== (a = null == r ? void 0 : r.friend_sync) && void 0 !== a ? a : c.FRIEND_SYNC_PLATFORM_TYPES.has(e)
                 },
                 context: {
-                    location: i
+                    location: s
                 },
                 oldFormErrors: !0,
                 trackedActionData: {
-                    event: s.NetworkActionNames.USER_CONNECTIONS_UPDATE,
+                    event: i.NetworkActionNames.USER_CONNECTIONS_UPDATE,
                     properties: {
                         name: n,
-                        friend_sync: f.FRIEND_SYNC_PLATFORM_TYPES.has(e)
+                        friend_sync: c.FRIEND_SYNC_PLATFORM_TYPES.has(e)
                     }
                 }
             })
         },
         disconnect: (e, t) => r.default.delete({
-            url: f.Endpoints.CONNECTION(e, t),
+            url: c.Endpoints.CONNECTION(e, t),
             oldFormErrors: !0
         }),
         refresh: (e, t) => r.default.post({
-            url: f.Endpoints.CONNECTION_REFRESH(e, t),
+            url: c.Endpoints.CONNECTION_REFRESH(e, t),
             oldFormErrors: !0
         }),
         submitPinCode: (e, t) => r.default.get({
-            url: f.Endpoints.CONNECTIONS_CALLBACK_CONTINUATION(t, e),
+            url: c.Endpoints.CONNECTIONS_CALLBACK_CONTINUATION(t, e),
             oldFormErrors: !0
         }).then(e => {
             let {
                 body: n
             } = e;
-            return u.default.track(f.AnalyticEvents.ACCOUNT_LINK_STEP, {
+            return u.default.track(c.AnalyticEvents.ACCOUNT_LINK_STEP, {
                 previous_step: "PIN code entry",
                 current_step: "PIN success",
                 session_id: n.state,
                 platform_type: t
-            }), c(t, {
+            }), _(t, {
                 ...n,
                 from_continuation: !0
             }, !0)
@@ -122,12 +122,12 @@ function(e, t, n) {
                 show_activity: n
             })
         },
-        update: (e, t, n) => l.default.patch({
-            url: f.Endpoints.CONNECTION(e, t),
+        update: (e, t, n) => d.default.patch({
+            url: c.Endpoints.CONNECTION(e, t),
             body: n,
             oldFormErrors: !0,
             trackedActionData: {
-                event: s.NetworkActionNames.USER_CONNECTIONS_UPDATE,
+                event: i.NetworkActionNames.USER_CONNECTIONS_UPDATE,
                 properties: {
                     ...n
                 }
@@ -139,7 +139,7 @@ function(e, t, n) {
                 integrationId: e,
                 joining: !0
             }), r.default.post({
-                url: f.Endpoints.INTEGRATION_JOIN(e),
+                url: c.Endpoints.INTEGRATION_JOIN(e),
                 oldFormErrors: !0
             }, n => {
                 a.default.dispatch({
@@ -160,7 +160,7 @@ function(e, t, n) {
                         access_token: n
                     }
                 } = await r.default.get({
-                    url: f.Endpoints.CONNECTION_ACCESS_TOKEN(e, t),
+                    url: c.Endpoints.CONNECTION_ACCESS_TOKEN(e, t),
                     oldFormErrors: !0
                 });
                 return a.default.dispatch({
@@ -170,7 +170,7 @@ function(e, t, n) {
                     accessToken: n
                 }), n
             } catch (n) {
-                throw n.body.code === f.AbortCodes.CONNECTION_REVOKED && a.default.dispatch({
+                throw n.body.code === c.AbortCodes.CONNECTION_REVOKED && a.default.dispatch({
                     type: "USER_CONNECTION_UPDATE",
                     platformType: e,
                     id: t,
@@ -179,34 +179,34 @@ function(e, t, n) {
             }
         },
         linkDispatchAuthCallback: (e, t) => r.default.post({
-            url: f.Endpoints.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(e),
+            url: c.Endpoints.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(e),
             body: {
                 ...t
             },
             oldFormErrors: !0
         }),
-        async completeTwoWayLink(e, t, n, s, i) {
+        async completeTwoWayLink(e, t, n, i, s) {
             if (null == t) {
-                _.error("Two-way link: missing authorize location");
+                f.error("Two-way link: missing authorize location");
                 return
             }
             let {
                 code: r,
                 error: a,
-                errorDescription: d
+                errorDescription: l
             } = (0, o.getCallbackParamsFromURL)(t);
             if (null != a) {
-                _.error("Two-way link: missing authorize code", {
+                f.error("Two-way link: missing authorize code", {
                     error: a,
-                    errorDescription: d
+                    errorDescription: l
                 });
                 return
             }
-            return await c(e, {
+            return await _(e, {
                 code: n,
-                state: s,
+                state: i,
                 two_way_link_code: r,
-                token_redirect_uri: i
+                token_redirect_uri: s
             })
         }
     }

@@ -1,44 +1,44 @@
-function(t, e, s) {
-    s("70102");
-    var r = s("961863"),
-        i = s("891044"),
-        n = s("725214"),
-        c = s("869578"),
-        o = s("786561");
+function(e, t, n) {
+    n("70102");
+    var r = n("961863"),
+        i = n("891044"),
+        o = n("725214"),
+        s = n("869578"),
+        a = n("786561");
 
-    function f(t, e, s) {
-        if (n[t = t.toLowerCase()]) return i.createCipheriv(t, e, s);
-        if (c[t]) return new r({
-            key: e,
-            iv: s,
-            mode: t
+    function c(e, t, n) {
+        if (o[e = e.toLowerCase()]) return i.createCipheriv(e, t, n);
+        if (s[e]) return new r({
+            key: t,
+            iv: n,
+            mode: e
         });
         throw TypeError("invalid suite type")
     }
 
-    function u(t, e, s) {
-        if (n[t = t.toLowerCase()]) return i.createDecipheriv(t, e, s);
-        if (c[t]) return new r({
-            key: e,
-            iv: s,
-            mode: t,
+    function u(e, t, n) {
+        if (o[e = e.toLowerCase()]) return i.createDecipheriv(e, t, n);
+        if (s[e]) return new r({
+            key: t,
+            iv: n,
+            mode: e,
             decrypt: !0
         });
         throw TypeError("invalid suite type")
     }
-    e.createCipher = e.Cipher = function(t, e) {
-        if (n[t = t.toLowerCase()]) s = n[t].key, r = n[t].iv;
-        else if (c[t]) s = 8 * c[t].key, r = c[t].iv;
+    t.createCipher = t.Cipher = function(e, t) {
+        if (o[e = e.toLowerCase()]) n = o[e].key, r = o[e].iv;
+        else if (s[e]) n = 8 * s[e].key, r = s[e].iv;
         else throw TypeError("invalid suite type");
-        var s, r, i = o(e, !1, s, r);
-        return f(t, i.key, i.iv)
-    }, e.createCipheriv = e.Cipheriv = f, e.createDecipher = e.Decipher = function(t, e) {
-        if (n[t = t.toLowerCase()]) s = n[t].key, r = n[t].iv;
-        else if (c[t]) s = 8 * c[t].key, r = c[t].iv;
+        var n, r, i = a(t, !1, n, r);
+        return c(e, i.key, i.iv)
+    }, t.createCipheriv = t.Cipheriv = c, t.createDecipher = t.Decipher = function(e, t) {
+        if (o[e = e.toLowerCase()]) n = o[e].key, r = o[e].iv;
+        else if (s[e]) n = 8 * s[e].key, r = s[e].iv;
         else throw TypeError("invalid suite type");
-        var s, r, i = o(e, !1, s, r);
-        return u(t, i.key, i.iv)
-    }, e.createDecipheriv = e.Decipheriv = u, e.listCiphers = e.getCiphers = function() {
-        return Object.keys(c).concat(i.getCiphers())
+        var n, r, i = a(t, !1, n, r);
+        return u(e, i.key, i.iv)
+    }, t.createDecipheriv = t.Decipheriv = u, t.listCiphers = t.getCiphers = function() {
+        return Object.keys(s).concat(i.getCiphers())
     }
 }

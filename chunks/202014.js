@@ -9,15 +9,15 @@ function(e, _, E) {
         o = E("271938"),
         n = E("42203"),
         r = E("78581"),
-        i = E("49111");
-    class a extends t.default {
+        a = E("49111");
+    class i extends t.default {
         constructor(...e) {
             super(...e), this.prevConnected = !1, this.tempMutedChannel = null, this.handleRTCConnectionState = e => {
                 let {
                     state: _,
                     channelId: E
-                } = e, t = _ === i.RTCConnectionStates.RTC_CONNECTED, o = t && !this.prevConnected, a = n.default.getChannel(E), I = null == a ? void 0 : a.getGuildId(), s = this.tempMutedChannel === E;
-                o && null != I && (s ? this.tempMutedChannel = null : (0, r.maybePlayCustomJoinSound)(I)), this.prevConnected = t
+                } = e, t = _ === a.RTCConnectionStates.RTC_CONNECTED, o = t && !this.prevConnected, i = n.default.getChannel(E), I = null == i ? void 0 : i.getGuildId(), T = this.tempMutedChannel === E;
+                o && null != I && (T ? this.tempMutedChannel = null : (0, r.maybePlayCustomJoinSound)(I)), this.prevConnected = t
             }, this.handleMute = e => {
                 let {
                     channelId: _
@@ -42,5 +42,5 @@ function(e, _, E) {
             }
         }
     }
-    var I = new a
+    var I = new i
 }

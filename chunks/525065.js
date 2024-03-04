@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     });
     var i = n("446674"),
-        r = n("913144");
-    let s = {},
+        s = n("913144");
+    let r = {},
         a = {};
 
     function o(e) {
@@ -22,27 +22,27 @@ function(e, t, n) {
     }
     class l extends i.default.Store {
         getMemberCounts() {
-            return s
+            return r
         }
         getMemberCount(e) {
-            return null != e ? s[e] : null
+            return null != e ? r[e] : null
         }
         getOnlineCount(e) {
             return null != e ? a[e] : null
         }
     }
     l.displayName = "GuildMemberCountStore";
-    var u = new l(r.default, {
+    var u = new l(s.default, {
         CONNECTION_OPEN: function(e) {
             let {
                 guilds: t
             } = e;
-            s = {}, t.forEach(e => {
-                s[e.id] = e.member_count
+            r = {}, t.forEach(e => {
+                r[e.id] = e.member_count
             })
         },
         OVERLAY_INITIALIZE: function(e) {
-            s = {
+            r = {
                 ...e.guildMemberCounts
             }
         },
@@ -50,22 +50,22 @@ function(e, t, n) {
             let {
                 guild: t
             } = e;
-            s[t.id] = t.member_count
+            r[t.id] = t.member_count
         },
         GUILD_DELETE: function(e) {
             let {
                 guild: t
             } = e;
-            if (null == s[t.id] && null == a[t.id]) return !1;
-            delete s[t.id], delete a[t.id]
+            if (null == r[t.id] && null == a[t.id]) return !1;
+            delete r[t.id], delete a[t.id]
         },
         GUILD_MEMBER_LIST_UPDATE: function(e) {
             let {
                 guildId: t,
                 memberCount: n,
                 onlineCount: i
-            } = e, r = !1;
-            return s[t] !== n && (s[t] = n, r = !0), a[t] !== i && (a[t] = i, r = !0), r
+            } = e, s = !1;
+            return r[t] !== n && (r[t] = n, s = !0), a[t] !== i && (a[t] = i, s = !0), s
         },
         INVITE_ACCEPT_SUCCESS: o,
         INVITE_RESOLVE_SUCCESS: o,

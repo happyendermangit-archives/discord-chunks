@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return d
+            return c
         }
     });
     var i = n("446674"),
-        r = n("913144"),
-        s = n("659500"),
+        s = n("913144"),
+        r = n("659500"),
         a = n("49111");
     let o = null,
         l = 0;
@@ -15,7 +15,7 @@ function(e, t, n) {
     function u() {
         o = null
     }
-    class c extends i.default.Store {
+    class d extends i.default.Store {
         isOpen() {
             return null != o
         }
@@ -26,11 +26,11 @@ function(e, t, n) {
             return o
         }
         close() {
-            return !!this.isOpen() && (s.ComponentDispatch.dispatch(a.ComponentActions.CONTEXT_MENU_CLOSE), !0)
+            return !!this.isOpen() && (r.ComponentDispatch.dispatch(a.ComponentActions.CONTEXT_MENU_CLOSE), !0)
         }
     }
-    c.displayName = "ContextMenuStore";
-    var d = new c(r.default, {
+    d.displayName = "ContextMenuStore";
+    var c = new d(s.default, {
         CONTEXT_MENU_OPEN: function(e) {
             let {
                 contextMenu: t

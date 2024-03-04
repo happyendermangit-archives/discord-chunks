@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useCollection: function() {
-            return s
+            return a
         },
         getFirstItem: function() {
             return c
         },
         getLastItem: function() {
-            return l
+            return u
         }
     }), n("222007"), n("424973"), n("70102"), n("843762");
     var r = n("884691");
-    class a {
+    class i {
         build(e, t) {
-            return this.context = t, i(() => this.iterateCollection(e))
+            return this.context = t, o(() => this.iterateCollection(e))
         }* iterateCollection(e) {
             let {
                 children: t,
@@ -43,10 +43,10 @@ function(e, t, n) {
         getKey(e, t, n, r) {
             if (null != e.key) return e.key;
             if ("cell" === t.type && null != t.key) return "".concat(r).concat(t.key);
-            let a = t.value;
-            if (null != a) {
-                var i;
-                let e = null !== (i = a.key) && void 0 !== i ? i : a.id;
+            let i = t.value;
+            if (null != i) {
+                var o;
+                let e = null !== (o = i.key) && void 0 !== o ? o : i.id;
                 if (null == e) throw Error("No key found for item");
                 return e
             }
@@ -56,55 +56,55 @@ function(e, t, n) {
             return {
                 renderer: t.renderer || e.renderer
             }
-        }* getFullNode(e, t, n, a) {
-            let s = e.element;
-            if (!s && e.value && t && t.renderer) {
+        }* getFullNode(e, t, n, i) {
+            let a = e.element;
+            if (!a && e.value && t && t.renderer) {
                 let n = this.cache.get(e.value);
                 if (n && (!n.shouldInvalidate || !n.shouldInvalidate(this.context))) {
-                    n.index = e.index, n.parentKey = a ? a.key : null, yield n;
+                    n.index = e.index, n.parentKey = i ? i.key : null, yield n;
                     return
                 }
-                s = t.renderer(e.value)
+                a = t.renderer(e.value)
             }
-            if (r.isValidElement(s)) {
-                let r = s.type;
+            if (r.isValidElement(a)) {
+                let r = a.type;
                 if ("function" != typeof r && "function" != typeof r.getCollectionNode) {
-                    let e = "function" == typeof s.type ? s.type.name : s.type;
+                    let e = "function" == typeof a.type ? a.type.name : a.type;
                     throw Error("Unknown element <".concat(e, "> in collection."))
                 }
-                let i = r.getCollectionNode(s.props, this.context),
+                let o = r.getCollectionNode(a.props, this.context),
                     c = e.index,
-                    l = i.next();
-                for (; !l.done && l.value;) {
-                    let r = l.value;
+                    u = o.next();
+                for (; !u.done && u.value;) {
+                    let r = u.value;
                     e.index = c;
-                    let u = r.key;
-                    !u && (u = r.element ? null : this.getKey(s, e, t, n));
-                    let d = [...this.getFullNode({
+                    let d = r.key;
+                    !d && (d = r.element ? null : this.getKey(a, e, t, n));
+                    let l = [...this.getFullNode({
                         ...r,
-                        key: u,
+                        key: d,
                         index: c,
                         wrapper: function(e, t) {
                             return e && t ? n => e(t(n)) : e ? e : t ? t : void 0
                         }(e.wrapper, r.wrapper)
-                    }, this.getChildState(t, r), n ? "".concat(n).concat(s.key) : s.key, a)];
-                    for (let t of d) {
-                        if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type) throw Error("Unsupported type <".concat(o(t.type), "> in <").concat(o(a.type), ">. Only <").concat(o(e.type), "> is supported."));
+                    }, this.getChildState(t, r), n ? "".concat(n).concat(a.key) : a.key, i)];
+                    for (let t of l) {
+                        if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type) throw Error("Unsupported type <".concat(s(t.type), "> in <").concat(s(i.type), ">. Only <").concat(s(e.type), "> is supported."));
                         c++, yield t
                     }
-                    l = i.next(d)
+                    u = o.next(l)
                 }
                 return
             }
             if (null == e.key) return;
             let c = this,
-                l = {
+                u = {
                     type: e.type,
                     props: e.props,
                     key: e.key,
-                    parentKey: a ? a.key : null,
+                    parentKey: i ? i.key : null,
                     value: e.value,
-                    level: a ? a.level + 1 : 0,
+                    level: i ? i.level + 1 : 0,
                     index: e.index,
                     rendered: e.rendered,
                     textValue: e.textValue,
@@ -112,21 +112,21 @@ function(e, t, n) {
                     wrapper: e.wrapper,
                     shouldInvalidate: e.shouldInvalidate,
                     hasChildNodes: e.hasChildNodes,
-                    childNodes: i(function*() {
+                    childNodes: o(function*() {
                         if (!e.hasChildNodes) return;
                         let n = 0;
                         for (let r of e.childNodes())
-                            for (let e of (null != r.key && (r.key = "".concat(l.key).concat(r.key)), r.index = n, c.getFullNode(r, c.getChildState(t, r), l.key, l))) n++, yield e
+                            for (let e of (null != r.key && (r.key = "".concat(u.key).concat(r.key)), r.index = n, c.getFullNode(r, c.getChildState(t, r), u.key, u))) n++, yield e
                     })
                 };
-            yield l
+            yield u
         }
         constructor() {
             this.cache = new WeakMap
         }
     }
 
-    function i(e) {
+    function o(e) {
         let t = [],
             n = null;
         return {
@@ -137,21 +137,21 @@ function(e, t, n) {
         }
     }
 
-    function o(e) {
+    function s(e) {
         return e[0].toUpperCase() + e.slice(1)
     }
 
-    function s(e, t, n) {
-        let i = (0, r.useMemo)(() => new a, []),
+    function a(e, t, n) {
+        let o = (0, r.useMemo)(() => new i, []),
             {
-                children: o,
-                items: s,
+                children: s,
+                items: a,
                 collection: c
             } = e;
-        return (0, r.useMemo)(() => c ? c : t(i.build({
-            children: o,
-            items: s
-        }, n)), [i, o, s, c, n, t])
+        return (0, r.useMemo)(() => c ? c : t(o.build({
+            children: s,
+            items: a
+        }, n)), [o, s, a, c, n, t])
     }
 
     function c(e) {
@@ -165,7 +165,7 @@ function(e, t, n) {
         }(e, 0)
     }
 
-    function l(e) {
+    function u(e) {
         let t;
         for (let n of e) t = n;
         return t

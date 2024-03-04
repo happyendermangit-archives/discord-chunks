@@ -2,73 +2,73 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("222007"), n("808653");
-    var s = n("446674"),
-        i = n("913144"),
+    var i = n("446674"),
+        s = n("913144"),
         r = n("49111"),
         a = n("353927");
     let o = null,
-        d = null,
+        l = null,
         u = {};
 
-    function l(e, t) {
+    function d(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            s = u[e];
-        if (null == s) return;
-        let i = s[null != t ? t : r.NULL_STRING_GUILD_ID];
-        if (null != i) {
-            for (let e of Object.values(a.MediaEngineContextTypes))(n === e || null == n) && delete i[e];
-            u[e][null != t ? t : r.NULL_STRING_GUILD_ID] = i
+            i = u[e];
+        if (null == i) return;
+        let s = i[null != t ? t : r.NULL_STRING_GUILD_ID];
+        if (null != s) {
+            for (let e of Object.values(a.MediaEngineContextTypes))(n === e || null == n) && delete s[e];
+            u[e][null != t ? t : r.NULL_STRING_GUILD_ID] = s
         }
     }
-    class f extends s.default.Store {
+    class c extends i.default.Store {
         getStreamId(e, t) {
-            var n, s, i;
+            var n, i, s;
             let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.MediaEngineContextTypes.DEFAULT;
-            return null === (i = u[e]) || void 0 === i ? void 0 : null === (s = i[null != t ? t : r.NULL_STRING_GUILD_ID]) || void 0 === s ? void 0 : null === (n = s[o]) || void 0 === n ? void 0 : n.streamId
+            return null === (s = u[e]) || void 0 === s ? void 0 : null === (i = s[null != t ? t : r.NULL_STRING_GUILD_ID]) || void 0 === i ? void 0 : null === (n = i[o]) || void 0 === n ? void 0 : n.streamId
         }
         getUserStreamData(e, t) {
-            var n, s;
-            let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.MediaEngineContextTypes.DEFAULT;
-            return null === (s = u[e]) || void 0 === s ? void 0 : null === (n = s[null != t ? t : r.NULL_STRING_GUILD_ID]) || void 0 === n ? void 0 : n[i]
+            var n, i;
+            let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.MediaEngineContextTypes.DEFAULT;
+            return null === (i = u[e]) || void 0 === i ? void 0 : null === (n = i[null != t ? t : r.NULL_STRING_GUILD_ID]) || void 0 === n ? void 0 : n[s]
         }
     }
-    f.displayName = "VideoStreamStore";
-    var _ = new f(i.default, {
+    c.displayName = "VideoStreamStore";
+    var f = new c(s.default, {
         CONNECTION_OPEN: function(e) {
             let {
                 user: t,
                 sessionId: n
             } = e;
-            o = t.id, d = n
+            o = t.id, l = n
         },
         OVERLAY_INITIALIZE: function(e) {
             let {
                 user: t,
                 sessionId: n
             } = e;
-            o = t.id, d = n
+            o = t.id, l = n
         },
         RTC_CONNECTION_VIDEO: function(e) {
             let {
                 userId: t,
                 guildId: n,
-                streamId: s,
-                context: i
+                streamId: i,
+                context: s
             } = e;
-            null != s ? ! function(e, t, n, s) {
-                var i;
+            null != i ? ! function(e, t, n, i) {
+                var s;
                 !(e in u) && (u[e] = {});
-                let a = null !== (i = u[e][null != t ? t : r.NULL_STRING_GUILD_ID]) && void 0 !== i ? i : {};
+                let a = null !== (s = u[e][null != t ? t : r.NULL_STRING_GUILD_ID]) && void 0 !== s ? s : {};
                 u[e][null != t ? t : r.NULL_STRING_GUILD_ID] = {
                     ...a,
-                    [s]: {
+                    [i]: {
                         streamId: n
                     }
                 }
-            }(t, n, s, i) : l(t, n, i)
+            }(t, n, i, s) : d(t, n, s)
         },
         VOICE_STATE_UPDATES: function(e) {
             let {
@@ -77,17 +77,17 @@ function(e, t, n) {
             return t.reduce((e, t) => {
                 var n;
                 let {
-                    userId: s,
-                    sessionId: i,
+                    userId: i,
+                    sessionId: s,
                     channelId: a,
-                    guildId: f
+                    guildId: c
                 } = t;
-                if (null == a && s === o) {
-                    if (i !== d) return e;
+                if (null == a && i === o) {
+                    if (s !== l) return e;
                     u = {}
                 } else {
-                    if (null != a || (null === (n = u[s]) || void 0 === n ? void 0 : n[null != f ? f : r.NULL_STRING_GUILD_ID]) == null) return e;
-                    l(s, f)
+                    if (null != a || (null === (n = u[i]) || void 0 === n ? void 0 : n[null != c ? c : r.NULL_STRING_GUILD_ID]) == null) return e;
+                    d(i, c)
                 }
                 return !0
             }, !1)

@@ -9,11 +9,11 @@ function(e, _, E) {
         o = E("271938"),
         n = E("42203"),
         r = E("957255"),
-        i = E("800762"),
-        a = E("233965"),
+        a = E("800762"),
+        i = E("233965"),
         I = E("699209"),
-        s = E("32346"),
-        T = E("49111");
+        T = E("32346"),
+        s = E("49111");
     class S extends t.default {
         constructor(...e) {
             super(...e), this.actions = {
@@ -28,7 +28,7 @@ function(e, _, E) {
                     enableHangStatus: t,
                     setDefaultStatus: o
                 } = I.HangStatusExperiment.getCurrentConfig({
-                    guildId: null != E ? E : T.EMPTY_STRING_SNOWFLAKE_ID,
+                    guildId: null != E ? E : s.EMPTY_STRING_SNOWFLAKE_ID,
                     location: "HangStatusManager"
                 }, {
                     autoTrackExposure: !0
@@ -39,41 +39,41 @@ function(e, _, E) {
                 }
                 if (!t || _ === this.previousVoiceChannelId) return;
                 if (this.previousVoiceChannelId = _, null == E || null == _) return;
-                let i = n.default.getChannel(_);
-                if (null == i || i.type !== T.ChannelTypes.GUILD_VOICE || !r.default.can(T.Permissions.SET_VOICE_CHANNEL_STATUS, i)) return;
-                let S = s.default.getCurrentHangStatus();
+                let a = n.default.getChannel(_);
+                if (null == a || a.type !== s.ChannelTypes.GUILD_VOICE || !r.default.can(s.Permissions.SET_VOICE_CHANNEL_STATUS, a)) return;
+                let S = T.default.getCurrentHangStatus();
                 if (null != S) return;
-                let N = s.default.getCurrentDefaultStatus();
+                let N = T.default.getCurrentDefaultStatus();
                 if ((null == N ? void 0 : N.expiresAt) != null && (null == N ? void 0 : N.expiresAt) >= Date.now()) {
-                    if (N.status === T.HangStatusTypes.CUSTOM && null != N.customHangStatus) {
+                    if (N.status === s.HangStatusTypes.CUSTOM && null != N.customHangStatus) {
                         let {
                             status: e,
                             emoji: _
                         } = N.customHangStatus;
-                        (0, a.updateCustomHangStatus)(e, _);
+                        (0, i.updateCustomHangStatus)(e, _);
                         return
                     }
                     if (null == N.status) return;
                     else {
-                        (0, a.updateHangStatus)(N.status);
+                        (0, i.updateHangStatus)(N.status);
                         return
                     }
                 }
-                o && (0, a.updateHangStatus)(T.HangStatusTypes.CHILLING)
+                o && (0, i.updateHangStatus)(s.HangStatusTypes.CHILLING)
             }, this.handleGuildMemberUpdate = e => {
                 let {
                     user: _,
                     guildId: E
                 } = e;
                 if (_.id !== o.default.getId()) return;
-                let t = i.default.getCurrentClientVoiceChannelId(E);
+                let t = a.default.getCurrentClientVoiceChannelId(E);
                 if (null == t) return;
-                let I = s.default.getCurrentHangStatus();
+                let I = T.default.getCurrentHangStatus();
                 if (null == I) return;
                 let S = n.default.getChannel(t);
-                !r.default.can(T.Permissions.SET_VOICE_CHANNEL_STATUS, S) && (0, a.clearHangStatus)()
+                !r.default.can(s.Permissions.SET_VOICE_CHANNEL_STATUS, S) && (0, i.clearHangStatus)()
             }, this.handleDisconnectFromVoiceChannel = () => {
-                (0, a.clearHangStatus)()
+                (0, i.clearHangStatus)()
             }, this.handleLogout = () => {
                 this.handleDisconnectFromVoiceChannel()
             }

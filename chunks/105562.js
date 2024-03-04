@@ -1,12 +1,12 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("70102");
-    var r = s("911718"),
-        i = s("214401"),
-        n = r("%Promise.resolve%", !0),
-        c = n && i(n);
-    t.exports = function(t, e) {
-        if (!c) throw SyntaxError("This environment does not support Promises.");
-        return c(t, e)
+    n("70102");
+    var r = n("911718"),
+        i = n("214401"),
+        o = r("%Promise.resolve%", !0),
+        s = o && i(o);
+    e.exports = function(e, t) {
+        if (!s) throw SyntaxError("This environment does not support Promises.");
+        return s(e, t)
     }
 }

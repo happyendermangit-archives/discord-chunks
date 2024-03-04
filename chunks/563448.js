@@ -1,7 +1,7 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("446183");
-    t.exports = function(t, e) {
-        return r(t, e)
+    var r = n("446183");
+    e.exports = function(e, t) {
+        return r(e, t)
     }
 }

@@ -1,11 +1,11 @@
-function(t, r, n) {
-    var e = n("725502"),
-        o = n("27556"),
-        i = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-        u = /^\w*$/;
-    t.exports = function(t, r) {
-        if (e(t)) return !1;
-        var n = typeof t;
-        return !!("number" == n || "symbol" == n || "boolean" == n || null == t || o(t)) || u.test(t) || !i.test(t) || null != r && t in Object(r)
+function(e, t, n) {
+    var r = n("725502"),
+        i = n("27556"),
+        o = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+        s = /^\w*$/;
+    e.exports = function(e, t) {
+        if (r(e)) return !1;
+        var n = typeof e;
+        return !!("number" == n || "symbol" == n || "boolean" == n || null == e || i(e)) || s.test(e) || !o.test(e) || null != t && e in Object(t)
     }
 }

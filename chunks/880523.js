@@ -5,14 +5,14 @@ function(e, t, n) {
             return c
         },
         ListCollection: function() {
-            return s
+            return a
         }
     }), n("222007");
     var r = n("72634"),
-        a = n("884691"),
-        i = n("846794"),
-        o = n("708966");
-    class s {
+        i = n("884691"),
+        o = n("846794"),
+        s = n("708966");
+    class a {
         *[Symbol.iterator]() {
             yield* this.iterable
         }
@@ -63,64 +63,64 @@ function(e, t, n) {
 
     function c(e) {
         var t;
-        let [n, c] = (0, o.useControlledState)(e.selectedKey, null !== (t = e.defaultSelectedKey) && void 0 !== t ? t : null, e.onSelectionChange), l = (0, a.useMemo)(() => null != n ? [n] : [], [n]), {
-            collection: u,
-            disabledKeys: d,
-            selectionManager: p
+        let [n, c] = (0, s.useControlledState)(e.selectedKey, null !== (t = e.defaultSelectedKey) && void 0 !== t ? t : null, e.onSelectionChange), u = (0, i.useMemo)(() => null != n ? [n] : [], [n]), {
+            collection: d,
+            disabledKeys: l,
+            selectionManager: f
         } = function(e) {
             let {
                 filter: t
-            } = e, n = (0, r.useMultipleSelectionState)(e), o = (0, a.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set, [e.disabledKeys]), c = (0, a.useCallback)(e => new s(t ? t(e) : e), [t]), l = (0, a.useMemo)(() => ({
+            } = e, n = (0, r.useMultipleSelectionState)(e), s = (0, i.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set, [e.disabledKeys]), c = (0, i.useCallback)(e => new a(t ? t(e) : e), [t]), u = (0, i.useMemo)(() => ({
                 suppressTextValueWarning: e.suppressTextValueWarning
-            }), [e.suppressTextValueWarning]), u = (0, i.useCollection)(e, c, l), d = (0, a.useMemo)(() => new r.SelectionManager(u, n), [u, n]), p = (0, a.useRef)(null);
-            return (0, a.useEffect)(() => {
-                if (null != n.focusedKey && !u.getItem(n.focusedKey)) {
+            }), [e.suppressTextValueWarning]), d = (0, o.useCollection)(e, c, u), l = (0, i.useMemo)(() => new r.SelectionManager(d, n), [d, n]), f = (0, i.useRef)(null);
+            return (0, i.useEffect)(() => {
+                if (null != n.focusedKey && !d.getItem(n.focusedKey)) {
                     let e;
-                    let t = p.current.getItem(n.focusedKey),
-                        r = [...p.current.getKeys()].map(e => {
-                            let t = p.current.getItem(e);
+                    let t = f.current.getItem(n.focusedKey),
+                        r = [...f.current.getKeys()].map(e => {
+                            let t = f.current.getItem(e);
                             return "item" === t.type ? t : null
                         }).filter(e => null !== e),
-                        a = [...u.getKeys()].map(e => {
-                            let t = u.getItem(e);
+                        i = [...d.getKeys()].map(e => {
+                            let t = d.getItem(e);
                             return "item" === t.type ? t : null
                         }).filter(e => null !== e),
-                        i = r.length - a.length,
-                        o = Math.min(i > 1 ? Math.max(t.index - i + 1, 0) : t.index, a.length - 1);
-                    for (; o >= 0;) {
-                        if (!d.isDisabled(a[o].key)) {
-                            e = a[o];
+                        o = r.length - i.length,
+                        s = Math.min(o > 1 ? Math.max(t.index - o + 1, 0) : t.index, i.length - 1);
+                    for (; s >= 0;) {
+                        if (!l.isDisabled(i[s].key)) {
+                            e = i[s];
                             break
                         }
-                        o < a.length - 1 ? o++ : (o > t.index && (o = t.index), o--)
+                        s < i.length - 1 ? s++ : (s > t.index && (s = t.index), s--)
                     }
                     n.setFocusedKey(e ? e.key : null)
                 }
-                p.current = u
-            }, [u, d, n, n.focusedKey]), {
-                collection: u,
-                disabledKeys: o,
-                selectionManager: d
+                f.current = d
+            }, [d, l, n, n.focusedKey]), {
+                collection: d,
+                disabledKeys: s,
+                selectionManager: l
             }
         }({
             ...e,
             selectionMode: "single",
             disallowEmptySelection: !0,
             allowDuplicateSelectionEvents: !0,
-            selectedKeys: l,
+            selectedKeys: u,
             onSelectionChange: t => {
                 var r;
-                let a = null !== (r = t.values().next().value) && void 0 !== r ? r : null;
-                a === n && e.onSelectionChange && e.onSelectionChange(a), c(a)
+                let i = null !== (r = t.values().next().value) && void 0 !== r ? r : null;
+                i === n && e.onSelectionChange && e.onSelectionChange(i), c(i)
             }
-        }), f = null != n ? u.getItem(n) : null;
+        }), p = null != n ? d.getItem(n) : null;
         return {
-            collection: u,
-            disabledKeys: d,
-            selectionManager: p,
+            collection: d,
+            disabledKeys: l,
+            selectionManager: f,
             selectedKey: n,
             setSelectedKey: c,
-            selectedItem: f
+            selectedItem: p
         }
     }
 }

@@ -6,10 +6,10 @@ function(e, t, n) {
         }
     }), n("222007");
     var i = n("404118"),
-        r = n("50885"),
-        s = n("426685"),
+        s = n("50885"),
+        r = n("426685"),
         a = n("180524");
-    class o extends s.NativePermissionBaseUtils {
+    class o extends r.NativePermissionBaseUtils {
         requestPermissionCore(e, t) {
             var n;
             return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionRequestAuthorization, e, t)
@@ -35,28 +35,28 @@ function(e, t, n) {
             let {
                 title: t,
                 body: n,
-                onConfirm: r,
-                cancelText: s,
+                onConfirm: s,
+                cancelText: r,
                 confirmText: a
             } = e;
             i.default.show({
                 title: t,
                 body: n,
-                onConfirm: r,
-                cancelText: s,
+                onConfirm: s,
+                cancelText: r,
                 confirmText: a
             })
         }
         constructor(...e) {
-            super(...e), this.nativeUtils = r.default.getDiscordUtils()
+            super(...e), this.nativeUtils = s.default.getDiscordUtils()
         }
     }
     o.requestTypeLookup = {
-        [a.NativePermissionTypes.CAMERA]: r.NativePermissionRequestType.Camera,
-        [a.NativePermissionTypes.AUDIO]: r.NativePermissionRequestType.Microphone,
-        [a.NativePermissionTypes.PHOTOS]: r.NativePermissionRequestType.Photo,
-        [a.NativePermissionTypes.INPUT_MONITORING]: r.NativePermissionRequestType.InputMonitoring,
-        [a.NativePermissionTypes.SCREEN_RECORDING]: r.NativePermissionRequestType.ScreenRecording
+        [a.NativePermissionTypes.CAMERA]: s.NativePermissionRequestType.Camera,
+        [a.NativePermissionTypes.AUDIO]: s.NativePermissionRequestType.Microphone,
+        [a.NativePermissionTypes.PHOTOS]: s.NativePermissionRequestType.Photo,
+        [a.NativePermissionTypes.INPUT_MONITORING]: s.NativePermissionRequestType.InputMonitoring,
+        [a.NativePermissionTypes.SCREEN_RECORDING]: s.NativePermissionRequestType.ScreenRecording
     };
     var l = new o
 }

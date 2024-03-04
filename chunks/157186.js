@@ -2,36 +2,36 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         shouldShowMembershipVerificationGate: function() {
-            return d
+            return l
         },
         useShowMemberVerificationGate: function() {
             return u
         }
     }), n("222007");
-    var s = n("446674"),
-        i = n("26989"),
+    var i = n("446674"),
+        s = n("26989"),
         r = n("305961"),
         a = n("88093"),
         o = n("697218");
 
-    function d(e) {
-        let [t, n, s, d] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, a.default, o.default, i.default];
+    function l(e) {
+        let [t, n, i, l] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, a.default, o.default, s.default];
         if (null == e) return !1;
         let u = t.getGuild(e),
             {
-                notClaimed: l
+                notClaimed: d
             } = n.getCheck(e),
-            f = s.getCurrentUser(),
-            _ = !1;
-        if (null != f) {
-            var c, g;
-            _ = null !== (g = null === (c = d.getMember(e, f.id)) || void 0 === c ? void 0 : c.isPending) && void 0 !== g && g
+            c = i.getCurrentUser(),
+            f = !1;
+        if (null != c) {
+            var _, h;
+            f = null !== (h = null === (_ = l.getMember(e, c.id)) || void 0 === _ ? void 0 : _.isPending) && void 0 !== h && h
         }
-        let m = _ || l;
-        return m && !!(null == u ? void 0 : u.hasVerificationGate())
+        let E = f || d;
+        return E && !!(null == u ? void 0 : u.hasVerificationGate())
     }
 
     function u(e) {
-        return (0, s.useStateFromStores)([r.default, a.default, o.default, i.default], () => null != e && d(e, [r.default, a.default, o.default, i.default]), [e])
+        return (0, i.useStateFromStores)([r.default, a.default, o.default, s.default], () => null != e && l(e, [r.default, a.default, o.default, s.default]), [e])
     }
 }

@@ -1,18 +1,18 @@
-function(t, r, n) {
+function(e, t, n) {
     n("70102");
-    var e = n("664007");
+    var r = n("664007");
 
-    function o(t, r) {
-        if ("function" != typeof t || null != r && "function" != typeof r) throw TypeError("Expected a function");
+    function i(e, t) {
+        if ("function" != typeof e || null != t && "function" != typeof t) throw TypeError("Expected a function");
         var n = function() {
-            var e = arguments,
-                o = r ? r.apply(this, e) : e[0],
-                i = n.cache;
-            if (i.has(o)) return i.get(o);
-            var u = t.apply(this, e);
-            return n.cache = i.set(o, u) || i, u
+            var r = arguments,
+                i = t ? t.apply(this, r) : r[0],
+                o = n.cache;
+            if (o.has(i)) return o.get(i);
+            var s = e.apply(this, r);
+            return n.cache = o.set(i, s) || o, s
         };
-        return n.cache = new(o.Cache || e), n
+        return n.cache = new(i.Cache || r), n
     }
-    o.Cache = e, t.exports = o
+    i.Cache = r, e.exports = i
 }

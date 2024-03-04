@@ -1,9 +1,9 @@
-function(t, e, n) {
+function(e, t, n) {
     "use strict";
-    var a, i;
-    n.r(e), n.d(e, {
+    var i, s;
+    n.r(t), n.d(t, {
         InteractionState: function() {
-            return a
+            return i
         }
-    }), (i = a || (a = {}))[i.QUEUED = 0] = "QUEUED", i[i.CREATED = 1] = "CREATED", i[i.FAILED = 2] = "FAILED"
+    }), (s = i || (i = {}))[s.QUEUED = 0] = "QUEUED", s[s.CREATED = 1] = "CREATED", s[s.FAILED = 2] = "FAILED"
 }

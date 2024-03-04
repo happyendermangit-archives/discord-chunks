@@ -8,39 +8,39 @@ function(e, t, n) {
             return f
         },
         ApplicationStreamFPS: function() {
-            return r
-        },
-        ApplicationStreamPresets: function() {
             return s
         },
+        ApplicationStreamPresets: function() {
+            return r
+        },
         getApplicationFramerate: function() {
-            return E
+            return _
         },
         ApplicationStreamPresetValues: function() {
-            return p
-        },
-        ApplicationStreamSettingRequirements: function() {
             return h
         },
-        ApplicationStreamResolutionButtons: function() {
-            return S
+        ApplicationStreamSettingRequirements: function() {
+            return E
         },
-        GoLiveDeviceResolutionButtons: function() {
+        ApplicationStreamResolutionButtons: function() {
             return m
         },
+        GoLiveDeviceResolutionButtons: function() {
+            return p
+        },
         ApplicationStreamResolutionButtonsWithSuffixLabel: function() {
-            return g
+            return v
         },
         ApplicationStreamFPSButtons: function() {
-            return I
+            return T
         },
         ApplicationStreamFPSButtonsWithSuffixLabel: function() {
-            return C
+            return I
         }
     }), n("70102");
-    var i, r, s, a, o, l, u = n("49111"),
-        c = n("646718"),
-        d = n("782340");
+    var i, s, r, a, o, l, u = n("49111"),
+        d = n("646718"),
+        c = n("782340");
 
     function f(e) {
         switch (e) {
@@ -57,7 +57,7 @@ function(e, t, n) {
         }
     }
 
-    function E(e) {
+    function _(e) {
         switch (e) {
             case 5:
                 return 5;
@@ -70,8 +70,8 @@ function(e, t, n) {
             default:
                 throw Error("Unknown frame rate: ".concat(e))
         }
-    }(a = i || (i = {}))[a.RESOLUTION_480 = 480] = "RESOLUTION_480", a[a.RESOLUTION_720 = 720] = "RESOLUTION_720", a[a.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", a[a.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", a[a.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (o = r || (r = {}))[o.FPS_5 = 5] = "FPS_5", o[o.FPS_15 = 15] = "FPS_15", o[o.FPS_30 = 30] = "FPS_30", o[o.FPS_60 = 60] = "FPS_60", (l = s || (s = {}))[l.PRESET_VIDEO = 1] = "PRESET_VIDEO", l[l.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", l[l.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
-    let p = {
+    }(a = i || (i = {}))[a.RESOLUTION_480 = 480] = "RESOLUTION_480", a[a.RESOLUTION_720 = 720] = "RESOLUTION_720", a[a.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", a[a.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", a[a.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (o = s || (s = {}))[o.FPS_5 = 5] = "FPS_5", o[o.FPS_15 = 15] = "FPS_15", o[o.FPS_30 = 30] = "FPS_30", o[o.FPS_60 = 60] = "FPS_60", (l = r || (r = {}))[l.PRESET_VIDEO = 1] = "PRESET_VIDEO", l[l.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", l[l.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
+    let h = {
             2: [{
                 resolution: 0,
                 fps: 15
@@ -94,18 +94,18 @@ function(e, t, n) {
             }],
             3: []
         },
-        h = [{
+        E = [{
             resolution: 0,
             fps: 60,
-            quality: c.StreamQualities.HIGH_STREAMING_QUALITY
+            quality: d.StreamQualities.HIGH_STREAMING_QUALITY
         }, {
             resolution: 0,
             fps: 30,
-            quality: c.StreamQualities.HIGH_STREAMING_QUALITY
+            quality: d.StreamQualities.HIGH_STREAMING_QUALITY
         }, {
             resolution: 0,
             fps: 15,
-            quality: c.StreamQualities.HIGH_STREAMING_QUALITY
+            quality: d.StreamQualities.HIGH_STREAMING_QUALITY
         }, {
             resolution: 0,
             fps: 5,
@@ -114,37 +114,37 @@ function(e, t, n) {
             resolution: 1440,
             fps: 60,
             guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-            quality: c.StreamQualities.MID_STREAMING_QUALITY
+            quality: d.StreamQualities.MID_STREAMING_QUALITY
         }, {
             resolution: 1440,
             fps: 30,
             guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-            quality: c.StreamQualities.MID_STREAMING_QUALITY
+            quality: d.StreamQualities.MID_STREAMING_QUALITY
         }, {
             resolution: 1440,
             fps: 15,
             guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-            quality: c.StreamQualities.MID_STREAMING_QUALITY
+            quality: d.StreamQualities.MID_STREAMING_QUALITY
         }, {
             resolution: 1080,
             fps: 60,
             guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-            quality: c.StreamQualities.MID_STREAMING_QUALITY
+            quality: d.StreamQualities.MID_STREAMING_QUALITY
         }, {
             resolution: 1080,
             fps: 30,
             guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-            quality: c.StreamQualities.MID_STREAMING_QUALITY
+            quality: d.StreamQualities.MID_STREAMING_QUALITY
         }, {
             resolution: 1080,
             fps: 15,
             guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-            quality: c.StreamQualities.MID_STREAMING_QUALITY
+            quality: d.StreamQualities.MID_STREAMING_QUALITY
         }, {
             resolution: 720,
             fps: 60,
             guildPremiumTier: u.BoostedGuildTiers.TIER_1,
-            quality: c.StreamQualities.MID_STREAMING_QUALITY
+            quality: d.StreamQualities.MID_STREAMING_QUALITY
         }, {
             resolution: 720,
             fps: 30
@@ -158,7 +158,7 @@ function(e, t, n) {
             resolution: 480,
             fps: 60,
             guildPremiumTier: u.BoostedGuildTiers.TIER_1,
-            quality: c.StreamQualities.MID_STREAMING_QUALITY
+            quality: d.StreamQualities.MID_STREAMING_QUALITY
         }, {
             resolution: 480,
             fps: 30
@@ -170,7 +170,7 @@ function(e, t, n) {
             fps: 5
         }];
 
-    function _(e, t) {
+    function g(e, t) {
         return {
             value: e,
             get label() {
@@ -178,16 +178,16 @@ function(e, t, n) {
             }
         }
     }
-    let S = [_(720), _(1080), _(1440), _(0, () => d.default.Messages.SCREENSHARE_SOURCE)],
-        m = [_(720), _(1080), _(1440)],
-        T = e => "".concat(e, "p"),
-        g = [_(480, () => T(480)), _(720, () => T(720)), _(1080, () => T(1080)), _(1440, () => T(1440)), _(0, () => d.default.Messages.SCREENSHARE_SOURCE)],
-        I = [_(15), _(30), _(60)],
-        C = [_(15, () => d.default.Messages.STREAM_FPS_OPTION.format({
+    let m = [g(720), g(1080), g(1440), g(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
+        p = [g(720), g(1080), g(1440)],
+        S = e => "".concat(e, "p"),
+        v = [g(480, () => S(480)), g(720, () => S(720)), g(1080, () => S(1080)), g(1440, () => S(1440)), g(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
+        T = [g(15), g(30), g(60)],
+        I = [g(15, () => c.default.Messages.STREAM_FPS_OPTION.format({
             value: 15
-        })), _(30, () => d.default.Messages.STREAM_FPS_OPTION.format({
+        })), g(30, () => c.default.Messages.STREAM_FPS_OPTION.format({
             value: 30
-        })), _(60, () => d.default.Messages.STREAM_FPS_OPTION.format({
+        })), g(60, () => c.default.Messages.STREAM_FPS_OPTION.format({
             value: 60
         }))]
 }

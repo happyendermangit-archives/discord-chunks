@@ -5,12 +5,12 @@ function(e, t, n) {
             return c
         }
     });
-    var a = n("917351"),
-        l = n("446674"),
-        s = n("913144"),
-        i = n("39141");
-    let r = !1,
-        u = {
+    var i = n("917351"),
+        s = n("446674"),
+        r = n("913144"),
+        a = n("39141");
+    let o = !1,
+        l = {
             settingsVisible: !1,
             enabled: !1,
             combosEnabled: !0,
@@ -18,75 +18,75 @@ function(e, t, n) {
             comboSoundsEnabled: !0,
             screenshakeEnabled: !0,
             screenshakeEnabledLocations: {
-                [i.ShakeLocation.CHAT_INPUT]: !0,
-                [i.ShakeLocation.VOICE_USER]: !1,
-                [i.ShakeLocation.MENTION]: !1
+                [a.ShakeLocation.CHAT_INPUT]: !0,
+                [a.ShakeLocation.VOICE_USER]: !1,
+                [a.ShakeLocation.MENTION]: !1
             },
             shakeIntensity: 1,
             confettiEnabled: !0,
             confettiEnabledLocations: {
-                [i.ConfettiLocation.CHAT_INPUT]: !0,
-                [i.ConfettiLocation.REACTION]: !0,
-                [i.ConfettiLocation.MEMBER_USER]: !0,
-                [i.ConfettiLocation.CALL_TILE]: !0
+                [a.ConfettiLocation.CHAT_INPUT]: !0,
+                [a.ConfettiLocation.REACTION]: !0,
+                [a.ConfettiLocation.MEMBER_USER]: !0,
+                [a.ConfettiLocation.CALL_TILE]: !0
             },
             confettiSize: 16,
             confettiCount: 5,
             warningSeen: !1
         },
-        d = (0, a.cloneDeep)(u);
-    class o extends l.default.DeviceSettingsStore {
+        u = (0, i.cloneDeep)(l);
+    class d extends s.default.DeviceSettingsStore {
         initialize(e) {
-            d = {
-                ...d,
+            u = {
+                ...u,
                 ...e
             }
         }
         getUserAgnosticState() {
-            return d
+            return u
         }
         get settingsVisible() {
-            return d.settingsVisible
+            return u.settingsVisible
         }
         isEnabled() {
             let {
                 confettiLocation: e,
                 shakeLocation: t
-            } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = null == e || d.confettiEnabled && d.confettiEnabledLocations[e], a = null == t || d.screenshakeEnabled && d.screenshakeEnabledLocations[t];
-            return this.settingsVisible && !r && d.enabled && n && a
+            } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = null == e || u.confettiEnabled && u.confettiEnabledLocations[e], i = null == t || u.screenshakeEnabled && u.screenshakeEnabledLocations[t];
+            return this.settingsVisible && !o && u.enabled && n && i
         }
         get shakeIntensity() {
-            return this.isEnabled() ? d.shakeIntensity : 0
+            return this.isEnabled() ? u.shakeIntensity : 0
         }
         get combosRequiredCount() {
-            return this.isEnabled() ? d.combosRequiredCount : 0
+            return this.isEnabled() ? u.combosRequiredCount : 0
         }
         get screenshakeEnabled() {
-            return d.screenshakeEnabled
+            return u.screenshakeEnabled
         }
         get screenshakeEnabledLocations() {
-            return d.screenshakeEnabledLocations
+            return u.screenshakeEnabledLocations
         }
         get combosEnabled() {
-            return d.combosEnabled
+            return u.combosEnabled
         }
         get comboSoundsEnabled() {
-            return d.comboSoundsEnabled
+            return u.comboSoundsEnabled
         }
     }
-    o.displayName = "PoggermodeSettingsStore", o.persistKey = "PoggermodeSettingsStore";
-    var c = new o(s.default, {
+    d.displayName = "PoggermodeSettingsStore", d.persistKey = "PoggermodeSettingsStore";
+    var c = new d(r.default, {
         POGGERMODE_SETTINGS_UPDATE: function(e) {
             let {
                 settings: t
             } = e;
-            d = {
-                ...d,
+            u = {
+                ...u,
                 ...t
             }
         },
         POGGERMODE_TEMPORARILY_DISABLED: function() {
-            r = !0
+            o = !0
         }
     })
 }

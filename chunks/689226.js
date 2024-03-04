@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         getRoleIconData: function() {
-            return T
+            return s
         },
         replaceRoleIconSourceSize: function() {
             return S
@@ -18,11 +18,11 @@ function(e, _, E) {
         o = E("407063"),
         n = E("315102"),
         r = E("773336"),
-        i = E("49111");
-    let a = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/role-icons"),
+        a = E("49111");
+    let i = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/role-icons"),
         I = "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
-        s = (0, r.isAndroid)(),
-        T = (e, _) => {
+        T = (0, r.isAndroid)(),
+        s = (e, _) => {
             if (null == e) return null;
             let E = null != e.unicodeEmoji ? t.default.getByName(t.default.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
             return {
@@ -39,14 +39,14 @@ function(e, _, E) {
             if (null == t) return;
             if (t.startsWith("data:")) return t;
             let r = n.SUPPORTS_WEBP ? "webp" : "png",
-                T = "",
+                s = "",
                 S = "quality=lossless";
-            return (null != _ && (T = "size=" + (0, o.getBestMediaProxySize)(_ * (0, o.getDevicePixelRatio)()), S = s ? "" : "&" + S), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(a, "/").concat(E, "/").concat(t, ".").concat(r, "?").concat(T).concat(S) : "".concat(I).concat(i.Endpoints.ROLE_ICON(E, t), "?").concat(T)
+            return (null != _ && (s = "size=" + (0, o.getBestMediaProxySize)(_ * (0, o.getDevicePixelRatio)()), S = T ? "" : "&" + S), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(i, "/").concat(E, "/").concat(t, ".").concat(r, "?").concat(s).concat(S) : "".concat(I).concat(a.Endpoints.ROLE_ICON(E, t), "?").concat(s)
         },
-        O = e => e.startsWith(a) || e.startsWith("".concat(I, "/roles")) && e.includes("/icons/"),
+        O = e => e.startsWith(i) || e.startsWith("".concat(I, "/roles")) && e.includes("/icons/"),
         A = (e, _) => {
             var E;
             let t = (null == _ ? void 0 : null === (E = _.tags) || void 0 === E ? void 0 : E.subscription_listing_id) != null;
-            return t || e.features.has(i.GuildFeatures.ROLE_ICONS)
+            return t || e.features.has(a.GuildFeatures.ROLE_ICONS)
         }
 }

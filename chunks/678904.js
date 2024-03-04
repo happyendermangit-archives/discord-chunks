@@ -7,15 +7,15 @@ function(e, t, n) {
     });
     var i = n("37983");
     n("884691");
-    var r = n("130969"),
-        s = n("242670"),
+    var s = n("130969"),
+        r = n("242670"),
         a = n("848244");
 
     function o() {
-        return (0, i.jsx)(r.Dialog, {
+        return (0, i.jsx)(s.Dialog, {
             className: a.loadingPopout,
-            children: (0, i.jsx)(s.Spinner, {
-                type: s.SpinnerTypes.SPINNING_CIRCLE
+            children: (0, i.jsx)(r.Spinner, {
+                type: r.SpinnerTypes.SPINNING_CIRCLE
             })
         })
     }

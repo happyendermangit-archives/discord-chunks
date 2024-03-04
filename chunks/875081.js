@@ -2,38 +2,38 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         withFallbacks: function() {
-            return d
+            return u
         }
     }), n("222007");
-    var a = n("42203"),
-        l = n("677099"),
-        s = n("625483"),
-        i = n("689257"),
-        r = n("818697"),
-        u = n("49111");
+    var i = n("42203"),
+        s = n("677099"),
+        r = n("625483"),
+        a = n("689257"),
+        o = n("818697"),
+        l = n("49111");
 
-    function d(e, t) {
+    function u(e, t) {
         if (e.totalLength >= t) return e;
-        let n = new s.ExtendedMemoryLru(e.primaryCapacity, e.extendedCapacity),
-            d = t - e.totalLength;
-        for (let t of l.default.getGuildFolders())
-            for (let l of t.guildIds)
-                for (let t of Object.values(a.default.getMutableBasicGuildChannelsForGuild(l)))
+        let n = new r.ExtendedMemoryLru(e.primaryCapacity, e.extendedCapacity),
+            u = t - e.totalLength;
+        for (let t of s.default.getGuildFolders())
+            for (let s of t.guildIds)
+                for (let t of Object.values(i.default.getMutableBasicGuildChannelsForGuild(s)))
                     if (function(e) {
-                            return e.type === u.ChannelTypes.DM || e.type === u.ChannelTypes.GROUP_DM || e.type === u.ChannelTypes.GUILD_TEXT
-                        }(t) && (0, r.isReadableChannel)(t) && !(0, i.isLimitedChannel)(t) && function(e, t, n) {
+                            return e.type === l.ChannelTypes.DM || e.type === l.ChannelTypes.GROUP_DM || e.type === l.ChannelTypes.GUILD_TEXT
+                        }(t) && (0, o.isReadableChannel)(t) && !(0, a.isLimitedChannel)(t) && function(e, t, n) {
                             !n.hasExtended(t.id) && n.put(t.id, {
                                 guildId: e,
                                 channelId: t.id,
                                 channelType: t.type,
                                 fallback: !0
                             })
-                        }(l, t, n), n.totalLength >= d) return o(n, e);
-        return o(n, e)
+                        }(s, t, n), n.totalLength >= u) return d(n, e);
+        return d(n, e)
     }
 
-    function o(e, t) {
-        for (let [n, a] of t.allEntries()) e.put(n, a);
+    function d(e, t) {
+        for (let [n, i] of t.allEntries()) e.put(n, i);
         return e
     }
 }

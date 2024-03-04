@@ -5,10 +5,10 @@ function(e, t, n) {
             return r
         }
     });
-    var s = n("446674"),
-        i = n("834052");
+    var i = n("446674"),
+        s = n("834052");
 
     function r(e) {
-        return (0, s.useStateFromStores)([i.default], () => i.default.isLive(e), [e])
+        return (0, i.useStateFromStores)([s.default], () => s.default.isLive(e), [e])
     }
 }

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         sanitizeWhitespace: function() {
-            return i
+            return s
         },
         sanitizeUnicodeConfusables: function() {
             return o
@@ -11,10 +11,10 @@ function(e, t, n) {
             return u
         }
     }), n("781738");
-    let s = RegExp("".concat(/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n]|[^\P{Zs} ]/gu.source, "|").concat("͏|឴|឵|ᅠ|ㅤ|ﾠ"), "gu");
+    let i = RegExp("".concat(/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n]|[^\P{Zs} ]/gu.source, "|").concat("͏|឴|឵|ᅠ|ㅤ|ﾠ"), "gu");
 
-    function i(e) {
-        return e.replace(s, "")
+    function s(e) {
+        return e.replace(i, "")
     }
     let r = [{
         character: "h",
@@ -46,20 +46,20 @@ function(e, t, n) {
             t = t.replace(e.matcher, e.character)
         }), t
     }
-    let d = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0];
+    let l = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0];
 
     function u(e) {
         let t = function(e) {
             let t = "null" === e.origin,
                 n = t && e.pathname.startsWith("//");
             if (n) return e.protocol;
-            let s = "";
-            return "" !== e.username && (s += e.username), "" !== e.password && (s += ":" + e.password), "" !== s && (s += "@"), "".concat(e.protocol, "//").concat(s).concat(e.host)
+            let i = "";
+            return "" !== e.username && (i += e.username), "" !== e.password && (i += ":" + e.password), "" !== i && (i += "@"), "".concat(e.protocol, "//").concat(i).concat(e.host)
         }(e);
-        return t += l(e.pathname) + l(e.search) + l(e.hash)
+        return t += d(e.pathname) + d(e.search) + d(e.hash)
     }
 
-    function l(e) {
+    function d(e) {
         let t;
         try {
             t = decodeURIComponent(e)
@@ -67,21 +67,21 @@ function(e, t, n) {
             return e
         }
         let n = "",
-            s = e,
-            i = t;
-        for (; s.length > 0;) {
+            i = e,
+            s = t;
+        for (; i.length > 0;) {
             var r;
-            let e = s.codePointAt(0),
-                t = i.codePointAt(0);
+            let e = i.codePointAt(0),
+                t = s.codePointAt(0);
             if (e === t) {
                 let t = String.fromCodePoint(e);
-                n += t, s = s.substring(t.length), i = i.substring(t.length);
+                n += t, i = i.substring(t.length), s = s.substring(t.length);
                 continue
             }
             let a = String.fromCodePoint(t),
                 o = encodeURIComponent(a),
                 u = o === a ? 3 : o.length;
-            n += ((r = t) >= 0 && r < 128 ? 1 !== d[r] : 8206 === r || 8207 === r || 8234 === r || 8235 === r || 8236 === r || 8237 === r || 8238 === r || 1564 === r || 8294 === r || 8295 === r || 8296 === r || 8297 === r || 128271 === r || 128272 === r || 128274 === r || 128275 === r || 133 === r || 160 === r || 5760 === r || 8192 === r || 8193 === r || 8194 === r || 8195 === r || 8196 === r || 8197 === r || 8198 === r || 8199 === r || 8200 === r || 8201 === r || 8202 === r || 8232 === r || 8233 === r || 8239 === r || 8287 === r || 12288 === r || 10240 === r || 173 === r || 847 === r || r >= 1536 && r <= 1541 || 1757 === r || 1807 === r || 2274 === r || 4447 === r || 4448 === r || 6068 === r || 6069 === r || 6155 === r || 6156 === r || 6157 === r || 6158 === r || 8203 === r || 8204 === r || 8205 === r || 8288 === r || 8289 === r || 8290 === r || 8291 === r || 8292 === r || 8293 === r || r >= 8298 && r <= 8303 || 12644 === r || r >= 65520 && r <= 65528 || r >= 65024 && r <= 65039 || 65279 === r || 65440 === r || 65529 === r || 65530 === r || 65531 === r || 69821 === r || 69837 === r || r >= 78896 && r <= 78904 || r >= 113824 && r <= 113827 || r >= 119155 && r <= 119162 || r >= 917504 && r <= 921599) ? o : a, s = s.substring(u), i = i.substring(a.length)
+            n += ((r = t) >= 0 && r < 128 ? 1 !== l[r] : 8206 === r || 8207 === r || 8234 === r || 8235 === r || 8236 === r || 8237 === r || 8238 === r || 1564 === r || 8294 === r || 8295 === r || 8296 === r || 8297 === r || 128271 === r || 128272 === r || 128274 === r || 128275 === r || 133 === r || 160 === r || 5760 === r || 8192 === r || 8193 === r || 8194 === r || 8195 === r || 8196 === r || 8197 === r || 8198 === r || 8199 === r || 8200 === r || 8201 === r || 8202 === r || 8232 === r || 8233 === r || 8239 === r || 8287 === r || 12288 === r || 10240 === r || 173 === r || 847 === r || r >= 1536 && r <= 1541 || 1757 === r || 1807 === r || 2274 === r || 4447 === r || 4448 === r || 6068 === r || 6069 === r || 6155 === r || 6156 === r || 6157 === r || 6158 === r || 8203 === r || 8204 === r || 8205 === r || 8288 === r || 8289 === r || 8290 === r || 8291 === r || 8292 === r || 8293 === r || r >= 8298 && r <= 8303 || 12644 === r || r >= 65520 && r <= 65528 || r >= 65024 && r <= 65039 || 65279 === r || 65440 === r || 65529 === r || 65530 === r || 65531 === r || 69821 === r || 69837 === r || r >= 78896 && r <= 78904 || r >= 113824 && r <= 113827 || r >= 119155 && r <= 119162 || r >= 917504 && r <= 921599) ? o : a, i = i.substring(u), s = s.substring(a.length)
         }
         return n
     }

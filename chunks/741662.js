@@ -7,22 +7,22 @@ function(e, t, n) {
     });
     var i = n("37983");
     n("884691");
-    var r = n("414456"),
-        s = n.n(r),
+    var s = n("414456"),
+        r = n.n(s),
         a = n("639303");
 
     function o(e) {
         let {
             id: t,
             tag: n = "span",
-            showOnFocus: r,
+            showOnFocus: s,
             children: o
         } = e;
         return (0, i.jsx)(n, {
             id: t,
-            className: s({
-                [a.hiddenVisually]: !r,
-                [a.showOnFocus]: r
+            className: r({
+                [a.hiddenVisually]: !s,
+                [a.showOnFocus]: s
             }),
             children: o
         })

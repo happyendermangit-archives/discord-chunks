@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    let i, r, s;
+    let i, s, r;
     n.r(t), n.d(t, {
         updateIsInTabsUI: function() {
-            return c
+            return d
         }
     });
     var a = n("411916"),
@@ -11,9 +11,9 @@ function(e, t, n) {
         l = n("599110"),
         u = n("286235");
 
-    function c(e) {
-        i !== e && (i = e, r = e, ! function() {
-            let e = s && i && r ? a.DesignIds.YOU_BAR_IA : i ? r ? a.DesignIds.DESIGN_TABS_IA : a.DesignIds.DESIGN_IA : a.DesignIds.CLASSIC_IA;
+    function d(e) {
+        i !== e && (i = e, s = e, ! function() {
+            let e = r && i && s ? a.DesignIds.YOU_BAR_IA : i ? s ? a.DesignIds.DESIGN_TABS_IA : a.DesignIds.DESIGN_IA : a.DesignIds.CLASSIC_IA;
             l.default.extendSuperProperties({
                 design_id: e
             }), o.addGlobalTag("design_id", e), u.default.setTags({

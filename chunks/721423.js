@@ -8,20 +8,20 @@ function(e, t, n) {
             return o
         },
         DELAY_BEFORE_SUGGESTIONS_MS: function() {
-            return d
+            return l
         },
         SUGGESTIONS_SHOWED_INSTRUMENTATION_RATE_LIMIT_MS: function() {
             return u
         },
         REQUEST_THROTTLE_DURATION_MS: function() {
-            return l
+            return d
         }
     });
-    var s, i, r = n("718517");
+    var i, s, r = n("718517");
     let a = 4,
         o = 5,
-        d = 350,
+        l = 350,
         u = r.default.Millis.MINUTE,
-        l = 2 * r.default.Millis.MINUTE;
-    (s = i || (i = {}))[s.STICKER = 0] = "STICKER"
+        d = 2 * r.default.Millis.MINUTE;
+    (i = s || (s = {}))[i.STICKER = 0] = "STICKER"
 }

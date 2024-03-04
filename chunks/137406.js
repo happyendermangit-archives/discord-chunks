@@ -5,16 +5,16 @@ function(e, t, n) {
             return i
         }
     }), n("222007"), n("702976");
-    var i, r = n("866227"),
-        s = n.n(r),
+    var i, s = n("866227"),
+        r = n.n(s),
         a = n("666038"),
         o = n("568734"),
         l = n("653047"),
         u = n("49111");
-    let c = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
+    let d = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
     i = class e extends a.default {
         static createFromServer(t) {
-            var n, i, r, a, o;
+            var n, i, s, a, o;
             let {
                 price: u
             } = t;
@@ -25,8 +25,8 @@ function(e, t, n) {
                 application: null != t.application ? l.default.createFromServer(t.application) : null,
                 productLine: t.product_line,
                 name: null !== (n = t.name) && void 0 !== n ? n : "",
-                releaseDate: null != t.release_date ? s(t.release_date) : null,
-                preorderReleaseAt: null != t.preorder_release_at ? s(t.preorder_release_at) : null,
+                releaseDate: null != t.release_date ? r(t.release_date) : null,
+                preorderReleaseAt: null != t.preorder_release_at ? r(t.preorder_release_at) : null,
                 preorderApproximateReleaseDate: t.preorder_approximate_release_date,
                 summary: t.summary,
                 features: new Set(t.features),
@@ -49,7 +49,7 @@ function(e, t, n) {
                 premium: null !== (i = t.premium) && void 0 !== i && i,
                 showAgeGate: t.show_age_gate || !1,
                 restricted: t.restricted || !1,
-                slug: null !== (r = t.slug) && void 0 !== r ? r : "",
+                slug: null !== (s = t.slug) && void 0 !== s ? s : "",
                 exclusive: t.exclusive || !1,
                 locales: null !== (a = t.locales) && void 0 !== a ? a : ["en-US"],
                 flags: t.flags,
@@ -99,7 +99,7 @@ function(e, t, n) {
             return !this.premium && null != e && e.amount > 0
         }
         get isTheGameAwardsWinner() {
-            return c.includes(this.id)
+            return d.includes(this.id)
         }
         get available() {
             return (0, o.hasFlag)(this.flags, u.SKUFlags.AVAILABLE) || null != this.externalPurchaseUrl

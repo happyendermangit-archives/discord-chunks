@@ -2,67 +2,67 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useFocusJumpSection: function() {
-            return c
-        },
-        FocusJumpSection: function() {
             return d
         },
+        FocusJumpSection: function() {
+            return c
+        },
         useFocusJumpSectionManager: function() {
-            return E
+            return _
         }
     }), n("37983");
     var i = n("884691"),
-        r = n("71185"),
-        s = n("791776"),
+        s = n("71185"),
+        r = n("791776"),
         a = n("894282");
     let o = "data-jump-section",
         l = "global",
         u = i.createContext(l);
 
-    function c() {
+    function d() {
         let e = i.useContext(u);
         return i.useMemo(() => ({
             [o]: e
         }), [e])
     }
 
-    function d(e) {
-        let t = c();
+    function c(e) {
+        let t = d();
         return e.children(t)
     }
     async function f(e) {
         var t, n, i, u;
         if (e.key !== a.FOCUS_SECTION_JUMP_KEY) return;
-        let c = (0, s.eventOwnerDocument)(e);
-        if (null == c) return;
-        let d = null,
+        let d = (0, r.eventOwnerDocument)(e);
+        if (null == d) return;
+        let c = null,
             f = null,
-            E = e.target;
-        for (; null != E;) {
-            if (E.hasAttribute(o)) {
-                d = E.getAttribute(o), f = E;
+            _ = e.target;
+        for (; null != _;) {
+            if (_.hasAttribute(o)) {
+                c = _.getAttribute(o), f = _;
                 break
             }
-            E = E.parentElement
+            _ = _.parentElement
         }
-        let p = (0, r.createFocusManager)({
-            getFocusableElements: () => Array.from(c.querySelectorAll("[".concat(o, '="').concat(null != d ? d : l, '"]'))),
-            getActiveElement: () => c.activeElement
+        let h = (0, s.createFocusManager)({
+            getFocusableElements: () => Array.from(d.querySelectorAll("[".concat(o, '="').concat(null != c ? c : l, '"]'))),
+            getActiveElement: () => d.activeElement
         });
-        if ((null === (t = (0, s.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == f) {
-            null === (n = p.getFirstFocusableElement()) || void 0 === n || n.focus();
+        if ((null === (t = (0, r.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == f) {
+            null === (n = h.getFirstFocusableElement()) || void 0 === n || n.focus();
             return
         }
-        e.getModifierState("Shift") ? null === (i = await p.getPreviousFocusableElement({
+        e.getModifierState("Shift") ? null === (i = await h.getPreviousFocusableElement({
             wrap: !0,
             from: f
-        })) || void 0 === i || i.focus() : null === (u = await p.getNextFocusableElement({
+        })) || void 0 === i || i.focus() : null === (u = await h.getNextFocusableElement({
             wrap: !0,
             from: f
         })) || void 0 === u || u.focus()
     }
 
-    function E(e) {
+    function _(e) {
         i.useEffect(() => {
             if (e) return window.addEventListener("keydown", f), () => {
                 window.removeEventListener("keydown", f)

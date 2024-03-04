@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return d
         }
     });
-    var s = n("597755"),
-        i = n.n(s),
+    var i = n("597755"),
+        s = n.n(i),
         r = n("390493");
 
     function a(e, t) {
@@ -15,43 +15,43 @@ function(e, t, n) {
             body: n
         } = document;
         if (null == n) return r.nextTick(() => t(!1));
-        let s = document.createElement("iframe");
-        n.appendChild(s);
+        let i = document.createElement("iframe");
+        n.appendChild(i);
         try {
-            null != s.contentWindow && (s.contentWindow.location.href = e), r.nextTick(() => t(!0))
+            null != i.contentWindow && (i.contentWindow.location.href = e), r.nextTick(() => t(!0))
         } catch (e) {
             "NS_ERROR_UNKNOWN_PROTOCOL" === e.name && r.nextTick(() => t(!1))
         }
         window.setTimeout(() => {
             var e;
-            (null !== (e = null == s ? void 0 : s.parentElement) && void 0 !== e ? e : null) !== null && n.removeChild(s)
+            (null !== (e = null == i ? void 0 : i.parentElement) && void 0 !== e ? e : null) !== null && n.removeChild(i)
         }, 1e3)
     }
 
     function o(e, t) {
         let n = !1;
 
-        function s() {
+        function i() {
             n = !0
         }
-        window.addEventListener("blur", s), location.href = e, setTimeout(() => {
-            window.removeEventListener("blur", s), t(n)
+        window.addEventListener("blur", i), location.href = e, setTimeout(() => {
+            window.removeEventListener("blur", i), t(n)
         }, 1e3)
     }
 
-    function d(e, t) {
+    function l(e, t) {
         t(!1)
     }
 
     function u(e, t) {
         location.href = e, r.nextTick(() => t(!0))
     }
-    var l = {
+    var d = {
         launch: function() {
             var e, t;
-            if ((null === (e = i.os) || void 0 === e ? void 0 : e.family) === "Android" || (null === (t = i.os) || void 0 === t ? void 0 : t.family) === "iOS") return u;
-            if ("Gecko" === i.layout) return a;
-            if (null != i.ua && -1 !== i.ua.indexOf("Valve Steam GameOverlay")) return d;
+            if ((null === (e = s.os) || void 0 === e ? void 0 : e.family) === "Android" || (null === (t = s.os) || void 0 === t ? void 0 : t.family) === "iOS") return u;
+            if ("Gecko" === s.layout) return a;
+            if (null != s.ua && -1 !== s.ua.indexOf("Valve Steam GameOverlay")) return l;
             return o
         }()
     }

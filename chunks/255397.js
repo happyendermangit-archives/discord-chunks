@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return d
+            return l
         }
     });
-    var s = n("913144"),
-        i = n("716241"),
+    var i = n("913144"),
+        s = n("716241"),
         r = n("599110"),
         a = n("659500"),
         o = n("49111"),
-        d = {
+        l = {
             rebuildRTCActiveChannels() {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "CHANNEL_RTC_ACTIVE_CHANNELS"
                 })
             },
             selectParticipant(e, t) {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "CHANNEL_RTC_SELECT_PARTICIPANT",
                     channelId: e,
                     id: t
@@ -27,8 +27,8 @@ function(e, t, n) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.AppContext.APP;
                 r.default.track(o.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
                     video_layout: t,
-                    ...(0, i.collectVoiceAnalyticsMetadata)(e)
-                }), s.default.dispatch({
+                    ...(0, s.collectVoiceAnalyticsMetadata)(e)
+                }), i.default.dispatch({
                     type: "CHANNEL_RTC_UPDATE_LAYOUT",
                     channelId: e,
                     layout: t,
@@ -36,35 +36,35 @@ function(e, t, n) {
                 })
             },
             toggleParticipants(e, t) {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN",
                     channelId: e,
                     participantsOpen: t
                 })
             },
             toggleVoiceParticipantsHidden(e, t) {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN",
                     channelId: e,
                     voiceParticipantsHidden: t
                 })
             },
             updateStageStreamSize(e, t) {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE",
                     channelId: e,
                     large: t
                 })
             },
             updateStageVideoLimitBoostUpsellDismissed(e, t) {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED",
                     channelId: e,
                     dismissed: t
                 })
             },
             updateChatOpen(e, t) {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "CHANNEL_RTC_UPDATE_CHAT_OPEN",
                     channelId: e,
                     chatOpen: t

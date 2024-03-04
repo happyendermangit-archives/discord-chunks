@@ -1,153 +1,153 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    s("424973");
-    let r = s("599235"),
-        i = s("839309"),
-        n = s("13020").DecoderBuffer,
-        Node = s("747336"),
-        c = s("335036");
+    n("424973");
+    let r = n("599235"),
+        i = n("839309"),
+        o = n("13020").DecoderBuffer,
+        Node = n("747336"),
+        s = n("335036");
 
-    function o(t) {
-        this.enc = "der", this.name = t.name, this.entity = t, this.tree = new f, this.tree._init(t.body)
+    function a(e) {
+        this.enc = "der", this.name = e.name, this.entity = e, this.tree = new c, this.tree._init(e.body)
     }
 
-    function f(t) {
-        Node.call(this, "der", t)
+    function c(e) {
+        Node.call(this, "der", e)
     }
 
-    function u(t, e) {
-        let s = t.readUInt8(e);
-        if (t.isError(s)) return s;
-        let r = c.tagClass[s >> 6],
-            i = (32 & s) == 0;
-        if ((31 & s) == 31) {
-            let r = s;
-            for (s = 0;
+    function u(e, t) {
+        let n = e.readUInt8(t);
+        if (e.isError(n)) return n;
+        let r = s.tagClass[n >> 6],
+            i = (32 & n) == 0;
+        if ((31 & n) == 31) {
+            let r = n;
+            for (n = 0;
                 (128 & r) == 128;) {
-                if (r = t.readUInt8(e), t.isError(r)) return r;
-                s <<= 7, s |= 127 & r
+                if (r = e.readUInt8(t), e.isError(r)) return r;
+                n <<= 7, n |= 127 & r
             }
-        } else s &= 31;
-        let n = c.tag[s];
+        } else n &= 31;
+        let o = s.tag[n];
         return {
             cls: r,
             primitive: i,
-            tag: s,
-            tagStr: n
+            tag: n,
+            tagStr: o
         }
     }
 
-    function a(t, e, s) {
-        let r = t.readUInt8(s);
-        if (t.isError(r)) return r;
-        if (!e && 128 === r) return null;
+    function d(e, t, n) {
+        let r = e.readUInt8(n);
+        if (e.isError(r)) return r;
+        if (!t && 128 === r) return null;
         if ((128 & r) == 0) return r;
         let i = 127 & r;
-        if (i > 4) return t.error("length octect is too long");
+        if (i > 4) return e.error("length octect is too long");
         r = 0;
-        for (let e = 0; e < i; e++) {
+        for (let t = 0; t < i; t++) {
             r <<= 8;
-            let e = t.readUInt8(s);
-            if (t.isError(e)) return e;
-            r |= e
+            let t = e.readUInt8(n);
+            if (e.isError(t)) return t;
+            r |= t
         }
         return r
     }
-    t.exports = o, o.prototype.decode = function(t, e) {
-        return !n.isDecoderBuffer(t) && (t = new n(t, e)), this.tree._decode(t, e)
-    }, r(f, Node), f.prototype._peekTag = function(t, e, s) {
-        if (t.isEmpty()) return !1;
-        let r = t.save(),
-            i = u(t, 'Failed to peek tag: "' + e + '"');
-        return t.isError(i) ? i : (t.restore(r), i.tag === e || i.tagStr === e || i.tagStr + "of" === e || s)
-    }, f.prototype._decodeTag = function(t, e, s) {
-        let r = u(t, 'Failed to decode tag of "' + e + '"');
-        if (t.isError(r)) return r;
-        let i = a(t, r.primitive, 'Failed to get length of "' + e + '"');
-        if (t.isError(i)) return i;
-        if (!s && r.tag !== e && r.tagStr !== e && r.tagStr + "of" !== e) return t.error('Failed to match tag: "' + e + '"');
-        if (r.primitive || null !== i) return t.skip(i, 'Failed to match body of: "' + e + '"');
-        let n = t.save(),
-            c = this._skipUntilEnd(t, 'Failed to skip indefinite length body: "' + this.tag + '"');
-        return t.isError(c) ? c : (i = t.offset - n.offset, t.restore(n), t.skip(i, 'Failed to match body of: "' + e + '"'))
-    }, f.prototype._skipUntilEnd = function(t, e) {
+    e.exports = a, a.prototype.decode = function(e, t) {
+        return !o.isDecoderBuffer(e) && (e = new o(e, t)), this.tree._decode(e, t)
+    }, r(c, Node), c.prototype._peekTag = function(e, t, n) {
+        if (e.isEmpty()) return !1;
+        let r = e.save(),
+            i = u(e, 'Failed to peek tag: "' + t + '"');
+        return e.isError(i) ? i : (e.restore(r), i.tag === t || i.tagStr === t || i.tagStr + "of" === t || n)
+    }, c.prototype._decodeTag = function(e, t, n) {
+        let r = u(e, 'Failed to decode tag of "' + t + '"');
+        if (e.isError(r)) return r;
+        let i = d(e, r.primitive, 'Failed to get length of "' + t + '"');
+        if (e.isError(i)) return i;
+        if (!n && r.tag !== t && r.tagStr !== t && r.tagStr + "of" !== t) return e.error('Failed to match tag: "' + t + '"');
+        if (r.primitive || null !== i) return e.skip(i, 'Failed to match body of: "' + t + '"');
+        let o = e.save(),
+            s = this._skipUntilEnd(e, 'Failed to skip indefinite length body: "' + this.tag + '"');
+        return e.isError(s) ? s : (i = e.offset - o.offset, e.restore(o), e.skip(i, 'Failed to match body of: "' + t + '"'))
+    }, c.prototype._skipUntilEnd = function(e, t) {
         for (;;) {
-            let s;
-            let r = u(t, e);
-            if (t.isError(r)) return r;
-            let i = a(t, r.primitive, e);
-            if (t.isError(i)) return i;
-            if (s = r.primitive || null !== i ? t.skip(i) : this._skipUntilEnd(t, e), t.isError(s)) return s;
+            let n;
+            let r = u(e, t);
+            if (e.isError(r)) return r;
+            let i = d(e, r.primitive, t);
+            if (e.isError(i)) return i;
+            if (n = r.primitive || null !== i ? e.skip(i) : this._skipUntilEnd(e, t), e.isError(n)) return n;
             if ("end" === r.tagStr) break
         }
-    }, f.prototype._decodeList = function(t, e, s, r) {
+    }, c.prototype._decodeList = function(e, t, n, r) {
         let i = [];
-        for (; !t.isEmpty();) {
-            let e = this._peekTag(t, "end");
-            if (t.isError(e)) return e;
-            let n = s.decode(t, "der", r);
-            if (t.isError(n) && e) break;
-            i.push(n)
+        for (; !e.isEmpty();) {
+            let t = this._peekTag(e, "end");
+            if (e.isError(t)) return t;
+            let o = n.decode(e, "der", r);
+            if (e.isError(o) && t) break;
+            i.push(o)
         }
         return i
-    }, f.prototype._decodeStr = function(t, e) {
-        if ("bitstr" === e) {
-            let e = t.readUInt8();
-            return t.isError(e) ? e : {
-                unused: e,
-                data: t.raw()
+    }, c.prototype._decodeStr = function(e, t) {
+        if ("bitstr" === t) {
+            let t = e.readUInt8();
+            return e.isError(t) ? t : {
+                unused: t,
+                data: e.raw()
             }
         }
-        if ("bmpstr" === e) {
-            let e = t.raw();
-            if (e.length % 2 == 1) return t.error("Decoding of string type: bmpstr length mismatch");
-            let s = "";
-            for (let t = 0; t < e.length / 2; t++) s += String.fromCharCode(e.readUInt16BE(2 * t));
-            return s
+        if ("bmpstr" === t) {
+            let t = e.raw();
+            if (t.length % 2 == 1) return e.error("Decoding of string type: bmpstr length mismatch");
+            let n = "";
+            for (let e = 0; e < t.length / 2; e++) n += String.fromCharCode(t.readUInt16BE(2 * e));
+            return n
         }
-        if ("numstr" === e) {
-            let e = t.raw().toString("ascii");
-            return this._isNumstr(e) ? e : t.error("Decoding of string type: numstr unsupported characters")
-        } else if ("octstr" === e) return t.raw();
-        else if ("objDesc" === e) return t.raw();
-        else if ("printstr" === e) {
-            let e = t.raw().toString("ascii");
-            return this._isPrintstr(e) ? e : t.error("Decoding of string type: printstr unsupported characters")
-        } else if (/str$/.test(e)) return t.raw().toString();
-        else return t.error("Decoding of string type: " + e + " unsupported")
-    }, f.prototype._decodeObjid = function(t, e, s) {
+        if ("numstr" === t) {
+            let t = e.raw().toString("ascii");
+            return this._isNumstr(t) ? t : e.error("Decoding of string type: numstr unsupported characters")
+        } else if ("octstr" === t) return e.raw();
+        else if ("objDesc" === t) return e.raw();
+        else if ("printstr" === t) {
+            let t = e.raw().toString("ascii");
+            return this._isPrintstr(t) ? t : e.error("Decoding of string type: printstr unsupported characters")
+        } else if (/str$/.test(t)) return e.raw().toString();
+        else return e.error("Decoding of string type: " + t + " unsupported")
+    }, c.prototype._decodeObjid = function(e, t, n) {
         let r;
         let i = [],
-            n = 0,
-            c = 0;
-        for (; !t.isEmpty();) c = t.readUInt8(), n <<= 7, n |= 127 & c, (128 & c) == 0 && (i.push(n), n = 0);
-        128 & c && i.push(n);
-        let o = i[0] / 40 | 0,
-            f = i[0] % 40;
-        if (r = s ? i : [o, f].concat(i.slice(1)), e) {
-            let t = e[r.join(" ")];
-            void 0 === t && (t = e[r.join(".")]), void 0 !== t && (r = t)
+            o = 0,
+            s = 0;
+        for (; !e.isEmpty();) s = e.readUInt8(), o <<= 7, o |= 127 & s, (128 & s) == 0 && (i.push(o), o = 0);
+        128 & s && i.push(o);
+        let a = i[0] / 40 | 0,
+            c = i[0] % 40;
+        if (r = n ? i : [a, c].concat(i.slice(1)), t) {
+            let e = t[r.join(" ")];
+            void 0 === e && (e = t[r.join(".")]), void 0 !== e && (r = e)
         }
         return r
-    }, f.prototype._decodeTime = function(t, e) {
-        let s, r, i, n, c, o;
-        let f = t.raw().toString();
-        if ("gentime" === e) s = 0 | f.slice(0, 4), r = 0 | f.slice(4, 6), i = 0 | f.slice(6, 8), n = 0 | f.slice(8, 10), c = 0 | f.slice(10, 12), o = 0 | f.slice(12, 14);
+    }, c.prototype._decodeTime = function(e, t) {
+        let n, r, i, o, s, a;
+        let c = e.raw().toString();
+        if ("gentime" === t) n = 0 | c.slice(0, 4), r = 0 | c.slice(4, 6), i = 0 | c.slice(6, 8), o = 0 | c.slice(8, 10), s = 0 | c.slice(10, 12), a = 0 | c.slice(12, 14);
         else {
-            if ("utctime" !== e) return t.error("Decoding " + e + " time is not supported yet");
-            s = 0 | f.slice(0, 2), r = 0 | f.slice(2, 4), i = 0 | f.slice(4, 6), n = 0 | f.slice(6, 8), c = 0 | f.slice(8, 10), o = 0 | f.slice(10, 12), s = s < 70 ? 2e3 + s : 1900 + s
+            if ("utctime" !== t) return e.error("Decoding " + t + " time is not supported yet");
+            n = 0 | c.slice(0, 2), r = 0 | c.slice(2, 4), i = 0 | c.slice(4, 6), o = 0 | c.slice(6, 8), s = 0 | c.slice(8, 10), a = 0 | c.slice(10, 12), n = n < 70 ? 2e3 + n : 1900 + n
         }
-        return Date.UTC(s, r - 1, i, n, c, o, 0)
-    }, f.prototype._decodeNull = function() {
+        return Date.UTC(n, r - 1, i, o, s, a, 0)
+    }, c.prototype._decodeNull = function() {
         return null
-    }, f.prototype._decodeBool = function(t) {
-        let e = t.readUInt8();
-        return t.isError(e) ? e : 0 !== e
-    }, f.prototype._decodeInt = function(t, e) {
-        let s = t.raw(),
-            r = new i(s);
-        return e && (r = e[r.toString(10)] || r), r
-    }, f.prototype._use = function(t, e) {
-        return "function" == typeof t && (t = t(e)), t._getDecoder("der").tree
+    }, c.prototype._decodeBool = function(e) {
+        let t = e.readUInt8();
+        return e.isError(t) ? t : 0 !== t
+    }, c.prototype._decodeInt = function(e, t) {
+        let n = e.raw(),
+            r = new i(n);
+        return t && (r = t[r.toString(10)] || r), r
+    }, c.prototype._use = function(e, t) {
+        return "function" == typeof e && (e = e(t)), e._getDecoder("der").tree
     }
 }

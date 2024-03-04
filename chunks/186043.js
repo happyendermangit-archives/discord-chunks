@@ -1,21 +1,21 @@
-function(t, e, s) {
-    s("854508");
-    var r = s("687185"),
-        i = s("912065").Buffer,
-        n = s("135042");
-    e.encrypt = function(t, e) {
-        var s = Math.ceil(e.length / 16),
-            c = t._cache.length;
-        t._cache = i.concat([t._cache, i.allocUnsafe(16 * s)]);
-        for (var o = 0; o < s; o++) {
-            var f = function(t) {
-                    var e = t._cipher.encryptBlockRaw(t._prev);
-                    return n(t._prev), e
-                }(t),
-                u = c + 16 * o;
-            t._cache.writeUInt32BE(f[0], u + 0), t._cache.writeUInt32BE(f[1], u + 4), t._cache.writeUInt32BE(f[2], u + 8), t._cache.writeUInt32BE(f[3], u + 12)
+function(e, t, n) {
+    n("854508");
+    var r = n("687185"),
+        i = n("912065").Buffer,
+        o = n("135042");
+    t.encrypt = function(e, t) {
+        var n = Math.ceil(t.length / 16),
+            s = e._cache.length;
+        e._cache = i.concat([e._cache, i.allocUnsafe(16 * n)]);
+        for (var a = 0; a < n; a++) {
+            var c = function(e) {
+                    var t = e._cipher.encryptBlockRaw(e._prev);
+                    return o(e._prev), t
+                }(e),
+                u = s + 16 * a;
+            e._cache.writeUInt32BE(c[0], u + 0), e._cache.writeUInt32BE(c[1], u + 4), e._cache.writeUInt32BE(c[2], u + 8), e._cache.writeUInt32BE(c[3], u + 12)
         }
-        var a = t._cache.slice(0, e.length);
-        return t._cache = t._cache.slice(e.length), r(e, a)
+        var d = e._cache.slice(0, t.length);
+        return e._cache = e._cache.slice(t.length), r(t, d)
     }
 }

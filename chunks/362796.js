@@ -1,45 +1,45 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("129752").codes.ERR_STREAM_PREMATURE_CLOSE;
+    var r = n("129752").codes.ERR_STREAM_PREMATURE_CLOSE;
 
     function i() {}
-    t.exports = function t(e, s, n) {
-        if ("function" == typeof s) return t(e, null, s);
-        !s && (s = {}), c = n || i, o = !1, n = function() {
-            if (!o) {
-                o = !0;
-                for (var t = arguments.length, e = Array(t), s = 0; s < t; s++) e[s] = arguments[s];
-                c.apply(this, e)
+    e.exports = function e(t, n, o) {
+        if ("function" == typeof n) return e(t, null, n);
+        !n && (n = {}), s = o || i, a = !1, o = function() {
+            if (!a) {
+                a = !0;
+                for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+                s.apply(this, t)
             }
         };
-        var c, o, f, u = s.readable || !1 !== s.readable && e.readable,
-            a = s.writable || !1 !== s.writable && e.writable,
-            d = function() {
-                !e.writable && b()
-            },
-            p = e._writableState && e._writableState.finished,
-            b = function() {
-                a = !1, p = !0, !u && n.call(e)
-            },
-            h = e._readableState && e._readableState.endEmitted,
+        var s, a, c, u = n.readable || !1 !== n.readable && t.readable,
+            d = n.writable || !1 !== n.writable && t.writable,
             l = function() {
-                u = !1, h = !0, !a && n.call(e)
+                !t.writable && p()
             },
-            g = function(t) {
-                n.call(e, t)
+            f = t._writableState && t._writableState.finished,
+            p = function() {
+                d = !1, f = !0, !u && o.call(t)
             },
+            h = t._readableState && t._readableState.endEmitted,
             v = function() {
-                var t;
-                return u && !h ? ((!e._readableState || !e._readableState.ended) && (t = new r), n.call(e, t)) : a && !p ? ((!e._writableState || !e._writableState.ended) && (t = new r), n.call(e, t)) : void 0
+                u = !1, h = !0, !d && o.call(t)
             },
-            x = function() {
-                e.req.on("finish", b)
+            g = function(e) {
+                o.call(t, e)
+            },
+            b = function() {
+                var e;
+                return u && !h ? ((!t._readableState || !t._readableState.ended) && (e = new r), o.call(t, e)) : d && !f ? ((!t._writableState || !t._writableState.ended) && (e = new r), o.call(t, e)) : void 0
+            },
+            m = function() {
+                t.req.on("finish", p)
             };
-        if ((f = e).setHeader && "function" == typeof f.abort) e.on("complete", b), e.on("abort", v), e.req ? x() : e.on("request", x);
-        else a && !e._writableState && (e.on("end", d), e.on("close", d));
-        return e.on("end", l), e.on("finish", b), !1 !== s.error && e.on("error", g), e.on("close", v),
+        if ((c = t).setHeader && "function" == typeof c.abort) t.on("complete", p), t.on("abort", b), t.req ? m() : t.on("request", m);
+        else d && !t._writableState && (t.on("end", l), t.on("close", l));
+        return t.on("end", v), t.on("finish", p), !1 !== n.error && t.on("error", g), t.on("close", b),
             function() {
-                e.removeListener("complete", b), e.removeListener("abort", v), e.removeListener("request", x), e.req && e.req.removeListener("finish", b), e.removeListener("end", d), e.removeListener("close", d), e.removeListener("finish", b), e.removeListener("end", l), e.removeListener("error", g), e.removeListener("close", v)
+                t.removeListener("complete", p), t.removeListener("abort", b), t.removeListener("request", m), t.req && t.req.removeListener("finish", p), t.removeListener("end", l), t.removeListener("close", l), t.removeListener("finish", p), t.removeListener("end", v), t.removeListener("error", g), t.removeListener("close", b)
             }
     }
 }

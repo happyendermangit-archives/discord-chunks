@@ -5,15 +5,15 @@ function(e, t, n) {
             return i
         }
     }), n("222007");
-    var i, r = n("666038"),
-        s = n("315102"),
+    var i, s = n("666038"),
+        r = n("315102"),
         a = n("605136"),
         o = n("299039"),
         l = n("159885"),
         u = n("49111"),
-        c = n("958706"),
-        d = n("646718");
-    i = class extends r.default {
+        d = n("958706"),
+        c = n("646718");
+    i = class extends s.default {
         merge(e) {
             let {
                 features: t
@@ -37,7 +37,7 @@ function(e, t, n) {
         }
         getIconURL(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return s.default.getGuildIconURL({
+            return r.default.getGuildIconURL({
                 id: this.id,
                 size: e,
                 icon: this.icon,
@@ -46,7 +46,7 @@ function(e, t, n) {
         }
         getIconSource(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return s.default.getAnimatableSourceWithFallback(t, t => s.default.getGuildIconSource({
+            return r.default.getAnimatableSourceWithFallback(t, t => r.default.getGuildIconSource({
                 id: this.id,
                 size: e,
                 icon: this.icon,
@@ -88,13 +88,13 @@ function(e, t, n) {
             return o.default.castGuildIdAsEveryoneGuildRoleId(this.id)
         }
         getMaxEmojiSlots() {
-            return Math.max(this.hasFeature(u.GuildFeatures.MORE_EMOJI) ? 200 : c.EMOJI_MAX_SLOTS, d.BoostedGuildFeatures[this.premiumTier].limits.emoji)
+            return Math.max(this.hasFeature(u.GuildFeatures.MORE_EMOJI) ? 200 : d.EMOJI_MAX_SLOTS, c.BoostedGuildFeatures[this.premiumTier].limits.emoji)
         }
         getMaxRoleSubscriptionEmojiSlots() {
             return 25
         }
         getMaxSoundboardSlots() {
-            return d.BoostedGuildFeatures[this.premiumTier].limits.soundboardSounds
+            return c.BoostedGuildFeatures[this.premiumTier].limits.soundboardSounds
         }
         isCommunity() {
             return this.hasFeature(u.GuildFeatures.COMMUNITY)

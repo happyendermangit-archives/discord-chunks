@@ -2,49 +2,49 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         FormErrorBlockColors: function() {
-            return d
+            return c
         },
         FormErrorBlock: function() {
             return f
         }
     });
     var i = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        a = n.n(s),
+        s = n("884691"),
+        r = n("414456"),
+        a = n.n(r),
         o = n("227645"),
         l = n("945330"),
         u = n("423487"),
-        c = n("62690");
-    let d = {
-            RED: c.backgroundRed,
-            BACKGROUND_TERTIARY: c.backgroundTertiary,
-            BACKGROUND_ACCENT: c.backgroundAccent
+        d = n("62690");
+    let c = {
+            RED: d.backgroundRed,
+            BACKGROUND_TERTIARY: d.backgroundTertiary,
+            BACKGROUND_ACCENT: d.backgroundAccent
         },
-        f = r.forwardRef(function(e, t) {
+        f = s.forwardRef(function(e, t) {
             let {
                 role: n,
-                children: r,
-                className: s,
+                children: s,
+                className: r,
                 onDismiss: f,
-                backgroundColor: E = d.RED,
-                icon: p = u.default,
-                iconClassName: h
+                backgroundColor: _ = c.RED,
+                icon: h = u.default,
+                iconClassName: E
             } = e;
             return (0, i.jsxs)("div", {
-                className: a(c.error, s, E),
+                className: a(d.error, r, _),
                 ref: t,
-                children: [(0, i.jsx)(p, {
-                    className: a(c.icon, h)
+                children: [(0, i.jsx)(h, {
+                    className: a(d.icon, E)
                 }), (0, i.jsx)("div", {
                     role: n,
-                    className: c.text,
-                    children: r
+                    className: d.text,
+                    children: s
                 }), null != f ? (0, i.jsx)(o.Clickable, {
                     onClick: f,
-                    className: c.errorClose,
+                    className: d.errorClose,
                     children: (0, i.jsx)(l.default, {
-                        className: c.errorCloseIcon
+                        className: d.errorCloseIcon
                     })
                 }) : null]
             })

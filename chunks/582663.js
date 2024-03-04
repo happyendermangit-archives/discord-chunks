@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MediaSinkWantsLadder: function() {
-            return r
+            return s
         }
     }), n("70102"), n("222007"), n("424973");
     var i = n("353927");
-    class r {
+    class s {
         getMaxSinkValue(e) {
             if (e < 0) throw Error("getMaxSinkValue: Requested " + e);
             let t = this.orderedLadder[0].wantValue;
@@ -37,41 +37,41 @@ function(e, t, n) {
             let t = new Set([0, 4, 8, 10]),
                 n = [];
             for (let i = 1; i < 4096; ++i) {
-                let r = 16 * i / 9;
-                if (t.has(r % 16) && t.has(i % 16)) {
-                    let t = r * i;
+                let s = 16 * i / 9;
+                if (t.has(s % 16) && t.has(i % 16)) {
+                    let t = s * i;
                     n.push({
                         pixelCount: t,
-                        width: r,
+                        width: s,
                         height: i,
                         budgetPortion: t / e,
                         wantValue: 0
                     })
                 }
             }
-            let s = {},
+            let r = {},
                 a = 0,
                 o = 100;
             for (let t = 1; t <= 25; ++t) {
                 let l = 0,
                     u = 0,
-                    c = 0;
+                    d = 0;
                 for (let i of n) {
                     if (i.pixelCount * t > e) break;
-                    l = i.width, u = i.height, c = i.budgetPortion
+                    l = i.width, u = i.height, d = i.budgetPortion
                 }
                 if (a !== l) {
-                    let e = r.getMutedFramerate(o);
-                    s[o] = {
+                    let e = s.getMutedFramerate(o);
+                    r[o] = {
                         width: l,
                         height: u,
-                        budgetPortion: c,
+                        budgetPortion: d,
                         mutedFramerate: e,
                         framerate: i.VIDEO_QUALITY_FRAMERATE
                     }, o -= 10, a = l
                 }
             }
-            return s
+            return r
         }
         static getMutedFramerate(e) {
             return e <= 20 ? i.VIDEO_QUALITY_FRAMERATE_MUTED_2 : i.VIDEO_QUALITY_FRAMERATE_MUTED
@@ -96,7 +96,7 @@ function(e, t, n) {
                 height: n
             } = e.videoBudget;
             if (t <= 0 || n <= 0) throw Error("Invalid argument");
-            this.pixelBudget = t * n, this.ladder = r.calculateLadder(this.pixelBudget), this.orderedLadder = r.calculateOrderedLadder(this.ladder)
+            this.pixelBudget = t * n, this.ladder = s.calculateLadder(this.pixelBudget), this.orderedLadder = s.calculateOrderedLadder(this.ladder)
         }
     }
 }

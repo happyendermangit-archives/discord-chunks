@@ -1,7 +1,7 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("109033");
-    t.exports = function(t) {
-        return ("number" == typeof t || "bigint" == typeof t) && !r(t) && t !== 1 / 0 && t !== -1 / 0
+    var r = n("109033");
+    e.exports = function(e) {
+        return ("number" == typeof e || "bigint" == typeof e) && !r(e) && e !== 1 / 0 && e !== -1 / 0
     }
 }

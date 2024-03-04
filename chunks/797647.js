@@ -12,8 +12,8 @@ function(e, t, n) {
         }
     }), n("808653"), n("222007"), n("70102");
     var i = n("666038"),
-        r = n("49111"),
-        s = n("646718");
+        s = n("49111"),
+        r = n("646718");
     class a extends i.default {
         static createFromServer(e) {
             let t = {};
@@ -26,8 +26,8 @@ function(e, t, n) {
                         prices: i.country_prices.prices.map(t => o(t, e.tax_inclusive))
                     },
                     paymentSourcePrices: Object.entries(i.payment_source_prices).reduce((t, n) => {
-                        let [i, r] = n;
-                        return t[i] = r.map(t => o(t, e.tax_inclusive)), t
+                        let [i, s] = n;
+                        return t[i] = s.map(t => o(t, e.tax_inclusive)), t
                     }, {})
                 }, t
             }, {}));
@@ -51,19 +51,19 @@ function(e, t, n) {
         }
         get premiumSubscriptionType() {
             switch (this.skuId) {
-                case s.PremiumSubscriptionSKUs.LEGACY:
-                case s.PremiumSubscriptionSKUs.TIER_2:
-                    return s.PremiumTypes.TIER_2;
-                case s.PremiumSubscriptionSKUs.TIER_1:
-                    return s.PremiumTypes.TIER_1;
-                case s.PremiumSubscriptionSKUs.TIER_0:
-                    return s.PremiumTypes.TIER_0;
+                case r.PremiumSubscriptionSKUs.LEGACY:
+                case r.PremiumSubscriptionSKUs.TIER_2:
+                    return r.PremiumTypes.TIER_2;
+                case r.PremiumSubscriptionSKUs.TIER_1:
+                    return r.PremiumTypes.TIER_1;
+                case r.PremiumSubscriptionSKUs.TIER_0:
+                    return r.PremiumTypes.TIER_0;
                 default:
                     return null
             }
         }
         get isGiftableCurrency() {
-            return r.GIFTABLE_CURRENCIES.has(this.currency)
+            return s.GIFTABLE_CURRENCIES.has(this.currency)
         }
         get giftPrice() {
             if (this.isGiftableCurrency) return this.price;
@@ -105,7 +105,7 @@ function(e, t, n) {
     }
 
     function l(e) {
-        return [s.SubscriptionPlans.NONE_MONTH, s.SubscriptionPlans.NONE_3_MONTH, s.SubscriptionPlans.NONE_6_MONTH, s.SubscriptionPlans.NONE_YEAR].includes(e)
+        return [r.SubscriptionPlans.NONE_MONTH, r.SubscriptionPlans.NONE_3_MONTH, r.SubscriptionPlans.NONE_6_MONTH, r.SubscriptionPlans.NONE_YEAR].includes(e)
     }
     var u = a
 }

@@ -1,7 +1,7 @@
-function(t, e, s) {
-    t.exports = function(t) {
+function(e, t, n) {
+    e.exports = function(e) {
         return function() {
-            return t
+            return e
         }
     }
 }

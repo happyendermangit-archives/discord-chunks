@@ -2,24 +2,24 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getUploadPayload: function() {
-            return d
+            return l
         },
         default: function() {
             return u
         }
     });
-    var s = n("627445"),
-        i = n.n(s),
+    var i = n("627445"),
+        s = n.n(i),
         r = n("917351"),
         a = n.n(r),
         o = n("66175");
 
-    function d(e) {
+    function l(e) {
         var t, n;
-        let s = e.item.file;
-        return i(null != s, "file data must not be empty"), {
-            filename: s.name,
-            file_size: s.size,
+        let i = e.item.file;
+        return s(null != i, "file data must not be empty"), {
+            filename: i.name,
+            file_size: i.size,
             id: a.uniqueId(),
             is_clip: null != e.clip,
             title: null === (t = e.clip) || void 0 === t ? void 0 : t.name,
@@ -29,6 +29,6 @@ function(e, t, n) {
         }
     }
     var u = {
-        getUploadPayload: d
+        getUploadPayload: l
     }
 }

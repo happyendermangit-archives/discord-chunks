@@ -5,10 +5,10 @@ function(e, t, n) {
             return i.MenuCheckboxItem
         },
         ControlItem: function() {
-            return r.MenuControlItem
+            return s.MenuControlItem
         },
         CompositeControlItem: function() {
-            return s.MenuCompositeControlItem
+            return r.MenuCompositeControlItem
         },
         CustomItem: function() {
             return a.MenuCustomItem
@@ -23,23 +23,23 @@ function(e, t, n) {
             return u.MenuRadioItem
         },
         Separator: function() {
-            return c.MenuSeparator
+            return d.MenuSeparator
         },
         SubmenuItem: function() {
-            return d.MenuSubmenuItem
+            return c.MenuSubmenuItem
         },
         SubmenuListItem: function() {
             return f.MenuSubmenuListItem
         }
     });
     var i = n("964019"),
-        r = n("412256"),
-        s = n("922260"),
+        s = n("412256"),
+        r = n("922260"),
         a = n("916528"),
         o = n("539365"),
         l = n("426264"),
         u = n("146155"),
-        c = n("536864"),
-        d = n("8022"),
+        d = n("536864"),
+        c = n("8022"),
         f = n("967541")
 }

@@ -1,37 +1,37 @@
-function(e, t, l) {
+function(e, t, n) {
     "use strict";
-    l.r(t), l.d(t, {
+    n.r(t), n.d(t, {
         stopLurkingAll: function() {
-            return i
+            return u
         },
         stopLurking: function() {
-            return s
+            return d
         }
-    }), l("222007");
-    var n = l("872717"),
-        r = l("913144"),
-        d = l("945956"),
-        o = l("449008"),
-        a = l("267567"),
-        u = l("49111");
-    async function i(e) {
-        let t = a.default.lurkingGuildIds(),
-            l = t.filter(t => !e.includes(t));
-        0 !== l.length && (r.default.dispatch({
+    }), n("222007");
+    var i = n("872717"),
+        s = n("913144"),
+        r = n("945956"),
+        a = n("449008"),
+        o = n("267567"),
+        l = n("49111");
+    async function u(e) {
+        let t = o.default.lurkingGuildIds(),
+            n = t.filter(t => !e.includes(t));
+        0 !== n.length && (s.default.dispatch({
             type: "GUILD_STOP_LURKING",
             ignoredGuildIds: e
-        }), await Promise.all(l.map(async e => {
-            let t = a.default.getLurkingSource();
+        }), await Promise.all(n.map(async e => {
+            let t = o.default.getLurkingSource();
             try {
-                await n.default.delete({
-                    url: u.Endpoints.GUILD_LEAVE(e),
+                await i.default.delete({
+                    url: l.Endpoints.GUILD_LEAVE(e),
                     body: {
                         lurking: !0
                     },
                     oldFormErrors: !0
                 })
-            } catch (l) {
-                r.default.dispatch({
+            } catch (n) {
+                s.default.dispatch({
                     type: "GUILD_STOP_LURKING_FAILURE",
                     lurkingGuildId: e,
                     lurkingSource: t
@@ -39,14 +39,14 @@ function(e, t, l) {
             }
         })))
     }
-    async function s() {
+    async function d() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            t = a.default.lurkingGuildIds();
+            t = o.default.lurkingGuildIds();
         if (0 === t.length) return;
-        let l = null == e || !t.includes(e);
-        if (!l) return;
-        let n = d.default.getGuildId(),
-            r = [e, n].filter(o.isNotNullish);
-        await i(r)
+        let n = null == e || !t.includes(e);
+        if (!n) return;
+        let i = r.default.getGuildId(),
+            s = [e, i].filter(a.isNotNullish);
+        await u(s)
     }
 }

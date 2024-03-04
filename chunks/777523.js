@@ -5,19 +5,19 @@ function(e, t, n) {
             return a
         }
     }), n("222007"), n("781738");
-    var s = n("730290"),
-        i = n("49111");
+    var i = n("730290"),
+        s = n("49111");
     let r = /-/g;
 
     function a(e) {
         let [, , t, n] = e.split("/"), a = null == t ? void 0 : t.toUpperCase().replace(r, "_"), o = null == n ? void 0 : n.toUpperCase().replace(r, "_");
-        if (i.UserSettingsSections.hasOwnProperty(a) && (null == o || "" === o || i.UserSettingsSections.hasOwnProperty(o))) {
+        if (s.UserSettingsSections.hasOwnProperty(a) && (null == o || "" === o || s.UserSettingsSections.hasOwnProperty(o))) {
             let {
                 source: e
-            } = (0, s.parse)(location.search);
+            } = (0, i.parse)(location.search);
             return {
                 source: e,
-                section: i.UserSettingsSections[a],
+                section: s.UserSettingsSections[a],
                 subsection: o
             }
         }

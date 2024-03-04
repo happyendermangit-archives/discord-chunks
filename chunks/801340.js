@@ -65,8 +65,8 @@ function(e, _, E) {
                     default:
                         let r = E.readUnknownField;
                         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-                        let i = e.skip(o);
-                        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+                        let a = e.skip(o);
+                        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
                 }
             }
             return n

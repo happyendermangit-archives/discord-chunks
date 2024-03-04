@@ -1,12 +1,12 @@
-function(e, _, E) {
+function(e, t, n) {
     "use strict";
-    var t, o;
-    E.r(_), E.d(_, {
+    var i, s;
+    n.r(t), n.d(t, {
         ReleaseChannelsSets: function() {
-            return n
+            return r
         }
-    }), E("222007"), (o = t || (t = {})).STABLE = "stable", o.BETA = "beta", o.ALPHA = "alpha", o.PTB = "ptb", o.CANARY = "canary", o.STAGING = "staging", o.DEVELOPMENT = "development";
-    let n = {
+    }), n("222007"), (s = i || (i = {})).STABLE = "stable", s.BETA = "beta", s.ALPHA = "alpha", s.PTB = "ptb", s.CANARY = "canary", s.STAGING = "staging", s.DEVELOPMENT = "development";
+    let r = {
         ALL: new Set(["alpha", "beta", "canary", "development", "ptb", "stable", "staging"])
     }
 }

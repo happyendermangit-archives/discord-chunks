@@ -1,9 +1,9 @@
-function(t, e, s) {
+function(e, t, n) {
     "use strict";
-    var r = s("106488"),
-        i = s("424579"),
-        n = s("583608");
-    t.exports = function(t) {
-        return void 0 !== t && r(n, "Property Descriptor", "Desc", t), i(t)
+    var r = n("106488"),
+        i = n("424579"),
+        o = n("583608");
+    e.exports = function(e) {
+        return void 0 !== e && r(o, "Property Descriptor", "Desc", e), i(e)
     }
 }

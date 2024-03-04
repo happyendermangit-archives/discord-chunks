@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
 
-    function r(e) {
+    function i(e) {
         if (null == e) return !1;
         for (var t = 0; t < e.length; t++)
             if (e[t].voiceState.selfStream) return !0;
@@ -9,7 +9,7 @@ function(e, t, n) {
     }
     n.r(t), n.d(t, {
         hasStream: function() {
-            return r
+            return i
         }
     })
 }

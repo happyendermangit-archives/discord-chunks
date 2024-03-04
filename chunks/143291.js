@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         LocalMessageBackgroundSendingExperiment: function() {
-            return l
+            return s
         }
     });
-    var a = n("862205");
-    let l = (0, a.createExperiment)({
+    var i = n("862205");
+    let s = (0, i.createExperiment)({
         kind: "user",
         id: "2023-08_local_message_background_sending",
         label: "Send Messages In The Backgrounded",

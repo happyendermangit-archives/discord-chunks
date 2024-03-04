@@ -4,11 +4,11 @@ function(e, t, n) {
             var t = e.which || e.keyCode || e.charCode;
             t && (e = t)
         }
-        if ("number" == typeof e) return s[e];
+        if ("number" == typeof e) return a[e];
         var n = String(e),
-            r = a[n.toLowerCase()];
+            r = i[n.toLowerCase()];
         if (r) return r;
-        var r = i[n.toLowerCase()];
+        var r = o[n.toLowerCase()];
         return r ? r : 1 === n.length ? n.charCodeAt(0) : void 0
     }
     r.isEventKey = function(e, t) {
@@ -16,15 +16,15 @@ function(e, t, n) {
             var n = e.which || e.keyCode || e.charCode;
             if (null == n) return !1;
             if ("string" == typeof t) {
-                var r = a[t.toLowerCase()];
-                if (r) return r === n;
                 var r = i[t.toLowerCase()];
+                if (r) return r === n;
+                var r = o[t.toLowerCase()];
                 if (r) return r === n
             } else if ("number" == typeof t) return t === n;
             return !1
         }
     };
-    var a = (t = e.exports = r).code = t.codes = {
+    var i = (t = e.exports = r).code = t.codes = {
             backspace: 8,
             tab: 9,
             enter: 13,
@@ -69,7 +69,7 @@ function(e, t, n) {
             "]": 221,
             "'": 222
         },
-        i = t.aliases = {
+        o = t.aliases = {
             windows: 91,
             "⇧": 16,
             "⌥": 18,
@@ -91,11 +91,11 @@ function(e, t, n) {
             del: 46,
             cmd: 91
         };
-    for (o = 97; o < 123; o++) a[String.fromCharCode(o)] = o - 32;
-    for (var o = 48; o < 58; o++) a[o - 48] = o;
-    for (o = 1; o < 13; o++) a["f" + o] = o + 111;
-    for (o = 0; o < 10; o++) a["numpad " + o] = o + 96;
-    var s = t.names = t.title = {};
-    for (o in a) s[a[o]] = o;
-    for (var c in i) a[c] = i[c]
+    for (s = 97; s < 123; s++) i[String.fromCharCode(s)] = s - 32;
+    for (var s = 48; s < 58; s++) i[s - 48] = s;
+    for (s = 1; s < 13; s++) i["f" + s] = s + 111;
+    for (s = 0; s < 10; s++) i["numpad " + s] = s + 96;
+    var a = t.names = t.title = {};
+    for (s in i) a[i[s]] = s;
+    for (var c in o) i[c] = o[c]
 }

@@ -5,16 +5,16 @@ function(e, t, n) {
             return r
         }
     });
-    var s = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("77078");
+    var s = n("77078");
 
     function r(e, t) {
-        (0, i.openModalLazy)(async () => {
+        (0, s.openModalLazy)(async () => {
             let {
-                default: i
+                default: s
             } = await n.el("59833").then(n.bind(n, "59833"));
-            return n => (0, s.jsx)(i, {
+            return n => (0, i.jsx)(s, {
                 analyticsLocation: e,
                 platformType: t,
                 ...n
