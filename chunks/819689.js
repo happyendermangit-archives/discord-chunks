@@ -36,8 +36,8 @@ function(e, t, n) {
         y = n("28007"),
         U = n("880731"),
         b = n("562228"),
-        G = n("793277"),
-        P = n("815496");
+        P = n("793277"),
+        G = n("815496");
     n("685841");
     var w = n("256572"),
         k = n("364685"),
@@ -514,7 +514,7 @@ function(e, t, n) {
                 let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                     l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
                 if (t.reaction) return Promise.resolve();
-                let s = await (0, G.default)(e);
+                let s = await (0, P.default)(e);
                 if (null != s) return eh.sendMessage(s, t, a, l);
                 let i = () => eh._sendMessage(e, t, l),
                     r = C.LocalMessageBackgroundSendingExperiment.getCurrentConfig({
@@ -618,7 +618,7 @@ function(e, t, n) {
             },
             _sendMessage(e, t, n) {
                 var a, s;
-                let i = (0, G.default)(e);
+                let i = (0, P.default)(e);
                 if (null != i) return eE.info("Converting channel to a private channel"), i.then(e => {
                     eE.info("Finished converting channel to a private channel"), eh._sendMessage(e, t, n)
                 });
@@ -758,7 +758,7 @@ function(e, t, n) {
                                 else if (t === f.CodedLinkType.SERVER_SHOP);
                                 else if (t === f.CodedLinkType.QUESTS_EMBED) {
                                     var d;
-                                    (0, P.trackQuestEvent)(u, er.AnalyticEvents.QUEST_LINK_SHARED, {
+                                    (0, G.trackQuestEvent)(u, er.AnalyticEvents.QUEST_LINK_SHARED, {
                                         guild_id: J.default.getGuildId(),
                                         channel_type: null === (d = W.default.getChannel(q.default.getChannelId())) || void 0 === d ? void 0 : d.type
                                     })

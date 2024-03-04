@@ -7,6 +7,8 @@ function(e, t, o) {
         card: "card_e97590",
         cardDescription: "cardDescription__46c9d",
         cardHeading: "cardHeading__2b53d",
+        cardIllustration: "cardIllustration_f54865",
+        cardIllustrationNoHover: "cardIllustrationNoHover_e49efc",
         cardImage: "cardImage__9da5b",
         cardSubtitle: "cardSubtitle__4a267",
         carouselCardImage: "carouselCardImage__4e898",
