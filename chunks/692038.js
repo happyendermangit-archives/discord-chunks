@@ -139,29 +139,28 @@ function(e, t, n) {
     }
 
     function D(e, t) {
-        var n, s;
+        var n;
         if (null == e && (null == t ? void 0 : t.results) == null) return [];
-        let i = null == t ? void 0 : null === (n = t.results) || void 0 === n ? void 0 : n.answer_counts.map(e => {
-            let t = {
-                count_details: {
-                    vote: e.count
-                },
-                me_vote: e.me_voted,
-                emoji: {
-                    id: e.id.toString(),
-                    name: "",
-                    animated: !1
-                },
-                me: !1,
-                me_burst: !1,
-                count: e.count,
-                burst_count: 0
-            };
-            return t
-        });
-        e = null !== (s = null == e ? void 0 : e.filter(e => (null == e ? void 0 : e.me_vote) == null)) && void 0 !== s ? s : [];
-        let r = [...e, ...null != i ? i : []];
-        return r.map(e => {
+        let s = null == t ? void 0 : null === (n = t.results) || void 0 === n ? void 0 : n.answer_counts.map(e => {
+                let t = {
+                    count_details: {
+                        vote: e.count
+                    },
+                    me_vote: e.me_voted,
+                    emoji: {
+                        id: e.id.toString(),
+                        name: "",
+                        animated: !1
+                    },
+                    me: !1,
+                    me_burst: !1,
+                    count: e.count,
+                    burst_count: 0
+                };
+                return t
+            }),
+            i = [...null != e ? e : [], ...null != s ? s : []];
+        return i.map(e => {
             let t = {
                 ...e
             };
