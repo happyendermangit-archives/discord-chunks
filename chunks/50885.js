@@ -75,11 +75,12 @@ function(e, _, E) {
         getCrashReporterMetadata: () => D.crashReporter.getMetadata(),
         getSetting: async (e, _) => await D.settings.get(e, _),
         beforeUnload() {
-            let e;
+            var e, _;
+            let E;
             try {
-                e = this.requireModule("discord_overlay2")
+                E = this.requireModule("discord_overlay2")
             } catch (e) {}
-            e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), D.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== A.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(L.NativeFeatures.USER_DATA_CACHE) && D.userDataCache.cacheUserData(A.default.stringify())
+            E && E.reset && E.reset(), E && E.disconnectAllProcesses && E.destroyHostProcess && (E.disconnectAllProcesses(), E.destroyHostProcess()), D.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== A.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(L.NativeFeatures.USER_DATA_CACHE) && D.userDataCache.cacheUserData(A.default.stringify()), null == D || null === (_ = D.window) || void 0 === _ || _.close(null == D ? void 0 : null === (e = D.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY)
         },
         inputEventRegister(e, _, E, t) {
             !Array.isArray(_) && (_ = _.toJS()), this.getDiscordUtils().inputEventRegister(parseInt(e), _.map(e => {

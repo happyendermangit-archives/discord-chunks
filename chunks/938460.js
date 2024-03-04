@@ -15,8 +15,8 @@ function(e, a, t) {
         l = t("271938"),
         f = t("374014"),
         u = t("16916"),
-        p = t("49111"),
-        b = t("353927");
+        b = t("49111"),
+        p = t("353927");
     class h {
         _onGameDetectionUpdate(e) {
             this.applications = e.map(e => {
@@ -86,7 +86,7 @@ function(e, a, t) {
                                 resolution: t.resolution,
                                 frameRate: t.fps
                             },
-                            context: b.MediaEngineContextTypes.STREAM
+                            context: p.MediaEngineContextTypes.STREAM
                         })
                     } else {
                         var s;
@@ -100,7 +100,7 @@ function(e, a, t) {
                                 resolution: t.resolution,
                                 frameRate: t.fps
                             },
-                            context: b.MediaEngineContextTypes.STREAM
+                            context: p.MediaEngineContextTypes.STREAM
                         })
                     }
                     break;
@@ -168,12 +168,12 @@ function(e, a, t) {
                     videoState: a,
                     context: t
                 } = e;
-                t === b.MediaEngineContextTypes.STREAM && this._onCapturePaused(a === p.MediaEngineVideoStates.PAUSED)
+                t === p.MediaEngineContextTypes.STREAM && this._onCapturePaused(a === b.MediaEngineVideoStates.PAUSED)
             }), s.default.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", e => {
                 let {
                     settings: a
                 } = e;
-                (null == a ? void 0 : a.context) === b.MediaEngineContextTypes.STREAM && (null == a ? void 0 : a.desktopSettings) == null && (null == a ? void 0 : a.cameraSettings) == null && this._onCaptureEnded()
+                (null == a ? void 0 : a.context) === p.MediaEngineContextTypes.STREAM && (null == a ? void 0 : a.desktopSettings) == null && (null == a ? void 0 : a.cameraSettings) == null && this._onCaptureEnded()
             })
         }
     }

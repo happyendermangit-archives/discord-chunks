@@ -233,7 +233,7 @@ function(e, t, n) {
 
     function eo() {
         var e, t;
-        null === E.default || void 0 === E.default || null === (t = E.default.window) || void 0 === t || t.close(null === E.default || void 0 === E.default ? void 0 : null === (e = E.default.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY)
+        null === E.default || void 0 === E.default || null === (t = E.default.window) || void 0 === t || t.close(null === E.default || void 0 === E.default ? void 0 : null === (e = E.default.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), H = null
     }
 
     function el(e) {
@@ -518,7 +518,7 @@ function(e, t, n) {
             } = e, n = crypto.getRandomValues(new Uint8Array(8));
             Y = btoa(String.fromCharCode(...n));
             let s = new URLSearchParams;
-            s.append("build_id", "63531c1ceccf1e657a1f384b644b9a9d9989f6c7"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
+            s.append("build_id", "b78c834a506d56f30b58b2ae629d75e3d5df7c86"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
         },
         OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
             let {
