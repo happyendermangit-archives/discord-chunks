@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("476765"),
         S = n("402671"),
         T = n("159885"),
-        I = n("49111"),
-        v = n("782340"),
+        v = n("49111"),
+        I = n("782340"),
         _ = n("756249");
     let N = (0, C.uid)(),
         A = c.default.convert.fromCodePoint("1f44f"),
@@ -55,17 +55,17 @@ function(e, t, n) {
                         let t = c.default.convert.toCodePoint(e);
                         switch (t) {
                             case "1f3fb":
-                                return v.default.Messages.EMOJI_MODIFIER_LIGHT_SKIN_TONE;
+                                return I.default.Messages.EMOJI_MODIFIER_LIGHT_SKIN_TONE;
                             case "1f3fc":
-                                return v.default.Messages.EMOJI_MODIFIER_MEDIUM_LIGHT_SKIN_TONE;
+                                return I.default.Messages.EMOJI_MODIFIER_MEDIUM_LIGHT_SKIN_TONE;
                             case "1f3fd":
-                                return v.default.Messages.EMOJI_MODIFIER_MEDIUM_SKIN_TONE;
+                                return I.default.Messages.EMOJI_MODIFIER_MEDIUM_SKIN_TONE;
                             case "1f3fe":
-                                return v.default.Messages.EMOJI_MODIFIER_MEDIUM_DARK_SKIN_TONE;
+                                return I.default.Messages.EMOJI_MODIFIER_MEDIUM_DARK_SKIN_TONE;
                             case "1f3ff":
-                                return v.default.Messages.EMOJI_MODIFIER_DARK_SKIN_TONE;
+                                return I.default.Messages.EMOJI_MODIFIER_DARK_SKIN_TONE;
                             default:
-                                return v.default.Messages.EMOJI_MODIFIER_NONE
+                                return I.default.Messages.EMOJI_MODIFIER_NONE
                         }
                     }(n),
                     className: _.diversityEmojiItemImage,
@@ -140,7 +140,7 @@ function(e, t, n) {
                 onClick: () => {
                     u(!0)
                 },
-                "aria-label": v.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
+                "aria-label": I.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
                 "aria-haspopup": !0,
                 "aria-expanded": o,
                 "aria-controls": N,
@@ -153,7 +153,7 @@ function(e, t, n) {
                 })
             }), o ? (0, l.jsx)("div", {
                 onKeyDown: e => {
-                    e.keyCode === I.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
+                    e.keyCode === v.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
                 },
                 children: (0, l.jsx)(R, {
                     id: N,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         openThreadSidebarForViewing: function() {
-            return v
+            return I
         },
         openThreadSidebarForCreating: function() {
             return _
@@ -32,9 +32,9 @@ function(e, t, n) {
         C = n("659500"),
         S = n("648564"),
         T = n("49111"),
-        I = n("724210");
+        v = n("724210");
 
-    function v(e, t, n) {
+    function I(e, t, n) {
         u.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE);
         let l = !s.isEmpty(g.default.getVoiceStatesForChannel(e.id));
         if (t || !p.UseThreadSidebar.getSetting() || __OVERLAY__ || l) {
@@ -46,7 +46,7 @@ function(e, t, n) {
         }
         i(null != e.parent_id, "all threads must have parents");
         let a = E.default.getChannelId();
-        e.parent_id !== a && !(0, I.isGuildHomeChannel)(a) && (0, m.transitionToChannel)(e.parent_id), (0, f.transitionTo)(T.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, I.isGuildHomeChannel)(a) ? I.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? S.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+        e.parent_id !== a && !(0, v.isGuildHomeChannel)(a) && (0, m.transitionToChannel)(e.parent_id), (0, f.transitionTo)(T.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, v.isGuildHomeChannel)(a) ? v.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? S.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
             C.ComponentDispatch.dispatch(T.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                 channelId: e.id
             })
@@ -75,7 +75,7 @@ function(e, t, n) {
     }
 
     function N(e, t) {
-        (0, f.transitionTo)(T.Routes.CHANNEL(e, (0, I.isGuildHomeChannel)(t) ? I.StaticChannelRoute.GUILD_HOME : t)), r.default.dispatch({
+        (0, f.transitionTo)(T.Routes.CHANNEL(e, (0, v.isGuildHomeChannel)(t) ? v.StaticChannelRoute.GUILD_HOME : t)), r.default.dispatch({
             type: "SIDEBAR_CLOSE",
             baseChannelId: t
         })

@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("697218"),
         S = n("800762"),
         T = n("476765"),
-        I = n("461380"),
-        v = n("93393"),
+        v = n("461380"),
+        I = n("93393"),
         _ = n("153769"),
         N = n("671434"),
         A = n("229915"),
@@ -68,7 +68,7 @@ function(e, t, n) {
                             className: G.headerIcon
                         });
                     case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                        return (0, l.jsx)(v.default, {
+                        return (0, l.jsx)(I.default, {
                             className: G.headerIcon
                         });
                     case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
@@ -110,9 +110,9 @@ function(e, t, n) {
                             return F.default.Messages.SEARCH_RESULTS_SECTION_LABEL
                     }
                 }()
-            }), (0, l.jsx)(I.default, {
+            }), (0, l.jsx)(v.default, {
                 className: G.headerIcon,
-                direction: n ? I.default.Directions.RIGHT : I.default.Directions.DOWN
+                direction: n ? v.default.Directions.RIGHT : v.default.Directions.DOWN
             })]
         })
     }
@@ -176,8 +176,8 @@ function(e, t, n) {
             onClose: o,
             onSelect: c,
             suppressPlaySound: m = !1,
-            shouldShowUpsell: I = !0,
-            gridNotice: v,
+            shouldShowUpsell: v = !0,
+            gridNotice: I,
             soundButtonOverlay: _,
             listPadding: N,
             renderHeader: A,
@@ -198,9 +198,9 @@ function(e, t, n) {
                 (0, R.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_SNOWFLAKE_ID, t)
             } else {
                 if ((0, R.canUseSoundboardSound)(Z, e, a)) return;
-                I && z(e)
+                v && z(e)
             }
-        }, [m, Z, a, I]), eu = i.useCallback(e => {
+        }, [m, Z, a, v]), eu = i.useCallback(e => {
             switch (e.item.type) {
                 case O.SoundboardSoundItemType.SOUND:
                     return null == c || c(e.item.sound), eo(e.item.sound, b);
@@ -288,7 +288,7 @@ function(e, t, n) {
                 gridNavigatorId: Q,
                 renderEmptySearchState: K,
                 renderInspector: eE,
-                gridNotice: v,
+                gridNotice: I,
                 renderHeader: A
             })]
         })

@@ -24,6 +24,9 @@ function(e, t, n) {
         },
         SpotifyEndpoints: function() {
             return m
+        },
+        getSpotifyResourceType: function() {
+            return p
         }
     });
     var i, s, r, a, o = n("376556"),
@@ -35,7 +38,7 @@ function(e, t, n) {
 
     function _(e) {
         return null != e && e.startsWith(c)
-    }(i = r || (r = {})).TRACK = "track", i.ARTIST = "artist", i.ALBUM = "album", i.PLAYLIST = "playlist", (s = a || (a = {})).USER_ACTIVITY_PLAY = "user_activity_play", s.USER_ACTIVITY_SYNC = "user_activity_sync", s.EMBED_SYNC = "embed_sync";
+    }(i = r || (r = {})).TRACK = "track", i.ARTIST = "artist", i.ALBUM = "album", i.PLAYLIST = "playlist", i.EPISODE = "episode", i.SHOW = "show", (s = a || (a = {})).USER_ACTIVITY_PLAY = "user_activity_play", s.USER_ACTIVITY_SYNC = "user_activity_sync", s.EMBED_SYNC = "embed_sync";
     let h = ["open.spotify.com", "www.spotify.com"],
         E = "https://api.spotify.com/v1",
         g = e => "?utm_source=discord&utm_medium=".concat(e),
@@ -64,5 +67,25 @@ function(e, t, n) {
             INSTALL_ATTRIBUTION: e => "https://app.adjust.com/bdyga9?campaign=".concat(e),
             APP_STORE: (0, l.isAndroid)() ? "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US" : "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
             IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
-        })
+        });
+
+    function p(e) {
+        if ("string" != typeof e) return null;
+        switch (e) {
+            case "track":
+                return "track";
+            case "artist":
+                return "artist";
+            case "album":
+                return "album";
+            case "playlist":
+                return "playlist";
+            case "episode":
+                return "episode";
+            case "show":
+                return "show";
+            default:
+                return null
+        }
+    }
 }

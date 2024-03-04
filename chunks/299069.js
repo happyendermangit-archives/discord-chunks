@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("553372"),
         S = n("49111"),
         T = n("646718"),
-        I = n("782340"),
-        v = n("163448"),
+        v = n("782340"),
+        I = n("163448"),
         _ = n("187971");
 
     function N(e) {
@@ -66,32 +66,32 @@ function(e, t, n) {
             }), (0, m.navigateToPremiumMarketingPage)(), N()
         }, [N]);
         return (0, l.jsxs)("div", {
-            className: s(_.premiumPromo, v.container),
+            className: s(_.premiumPromo, I.container),
             children: [(0, l.jsx)(o.Clickable, {
                 className: _.premiumPromoClose,
                 onClick: a,
-                children: I.default.Messages.CLOSE
+                children: v.default.Messages.CLOSE
             }), (0, l.jsx)("img", {
                 "aria-hidden": !0,
                 alt: "",
-                className: s(_.premiumPromoImage, _.premiumPromoImageSmaller, v.image),
+                className: s(_.premiumPromoImage, _.premiumPromoImageSmaller, I.image),
                 src: U
             }), (0, l.jsx)(o.Heading, {
                 variant: "heading-lg/normal",
                 color: "header-primary",
                 className: _.premiumPromoTitle,
-                children: I.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
+                children: v.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
             }), (0, l.jsx)(o.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
                 className: _.premiumPromoDescription,
-                children: I.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
+                children: v.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
                     onClick: D
                 })
             }), (0, l.jsxs)("div", {
-                className: v.buttonContainer,
+                className: I.buttonContainer,
                 children: [(0, l.jsx)("div", {
-                    className: v.previewButtonContainer,
+                    className: I.previewButtonContainer,
                     children: j
                 }), (0, l.jsx)(p.default, {
                     subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,

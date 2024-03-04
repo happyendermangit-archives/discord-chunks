@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("468482"),
         S = n("316680"),
         T = n("830837"),
-        I = n("132755"),
-        v = n("73034"),
+        v = n("132755"),
+        I = n("73034"),
         _ = n("58608"),
         N = n("719347"),
         A = n("49111"),
@@ -138,7 +138,7 @@ function(e, t, n) {
                 onClick: a,
                 tabIndex: s ? -1 : 0,
                 "aria-label": x.default.Messages.PLAY_AGAIN,
-                children: (0, l.jsx)(v.default, {
+                children: (0, l.jsx)(I.default, {
                     className: y.controlIcon
                 }, "replay")
             }) : (0, l.jsx)(d.Clickable, {
@@ -146,7 +146,7 @@ function(e, t, n) {
                 onClick: a,
                 tabIndex: s ? -1 : 0,
                 "aria-label": x.default.Messages.PLAY,
-                children: (0, l.jsx)(I.default, {
+                children: (0, l.jsx)(v.default, {
                     className: y.controlIcon
                 }, "play")
             })
@@ -276,7 +276,7 @@ function(e, t, n) {
         render() {
             let {
                 play: e
-            } = this.state, t = e ? I.default : T.default;
+            } = this.state, t = e ? v.default : T.default;
             return (0, l.jsx)(u.default.div, {
                 className: y.playPausePop,
                 style: this.getAnimatedStyle(),
@@ -498,7 +498,7 @@ function(e, t, n) {
                     volume: S,
                     dragging: T
                 }
-            } = this, I = this.getWidth();
+            } = this, v = this.getWidth();
             return d || n || t === L.AUDIO ? (0, l.jsx)(U, {
                 buffers: r,
                 currentTime: o,
@@ -519,7 +519,7 @@ function(e, t, n) {
                 dragging: T,
                 type: t,
                 ref: this.controlsRef,
-                width: C ? window.screen.width : I,
+                width: C ? window.screen.width : v,
                 disabled: !i,
                 children: t === L.VIDEO ? (0, l.jsx)(c.default, {
                     "aria-label": x.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,

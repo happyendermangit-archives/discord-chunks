@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("159885"),
         S = n("158998"),
         T = n("943722"),
-        I = n("49111"),
-        v = n("988268"),
+        v = n("49111"),
+        I = n("988268"),
         _ = n("39141"),
         N = n("782340"),
         A = n("591665");
@@ -96,7 +96,7 @@ function(e, t, n) {
                 })
             })
         }), ed = () => {
-            let e = (null == R ? void 0 : R.isClyde()) ? v.BotTagTypes.AI : v.BotTagTypes.BOT;
+            let e = (null == R ? void 0 : R.isClyde()) ? I.BotTagTypes.AI : I.BotTagTypes.BOT;
             return null != R && R.bot ? (0, l.jsx)(m.default, {
                 className: A.botTag,
                 type: e,
@@ -106,7 +106,7 @@ function(e, t, n) {
             roleName: a,
             color: null != n ? n : void 0,
             name: null != O ? O : $
-        }), ef = b === I.StatusTypes.OFFLINE;
+        }), ef = b === v.StatusTypes.OFFLINE;
         return null == R ? (0, l.jsx)(p.default, {
             avatarSize: o.AvatarSizes.SIZE_32,
             className: A.placeholder
@@ -139,7 +139,7 @@ function(e, t, n) {
             }),
             avatar: ((e, t) => {
                 let n = j ? o.AnimatedAvatar : o.Avatar,
-                    i = (0, u.default)(L) ? I.StatusTypes.STREAMING : b;
+                    i = (0, u.default)(L) ? v.StatusTypes.STREAMING : b;
                 return i = t ? void 0 : i, (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsx)(n, {
                         ...es,
@@ -160,7 +160,7 @@ function(e, t, n) {
                 })
             })(R, ef),
             subText: (() => {
-                let e = null != L ? L.find(e => e.type === I.ActivityTypes.CUSTOM_STATUS) : null,
+                let e = null != L ? L.find(e => e.type === v.ActivityTypes.CUSTOM_STATUS) : null,
                     t = null != e && null != R && (0, d.default)(e, R, k);
                 return (0, l.jsx)(T.default, {
                     className: A.activity,

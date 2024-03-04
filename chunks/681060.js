@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("685665"),
         S = n("996554"),
         T = n("426969"),
-        I = n("847352"),
-        v = n("383018"),
+        v = n("847352"),
+        I = n("383018"),
         _ = n("529190"),
         N = n("829290"),
         A = n("842343"),
@@ -68,8 +68,8 @@ function(e, t, n) {
         eu = i.memo(i.forwardRef(function(e, t) {
             var a, o, eu, ed, ec, ef, em, ep, eh, eE, eg, eC, eS, eT;
             let {
-                textValue: eI,
-                richValue: ev,
+                textValue: ev,
+                richValue: eI,
                 className: e_,
                 innerClassName: eN,
                 editorClassName: eA,
@@ -120,11 +120,11 @@ function(e, t, n) {
             let {
                 activeCommand: tn,
                 activeCommandSection: tl
-            } = (0, m.useStateFromStoresObject)([v.default], () => {
+            } = (0, m.useStateFromStoresObject)([I.default], () => {
                 var e, t;
                 return {
-                    activeCommand: (null === (e = eP.commands) || void 0 === e ? void 0 : e.enabled) ? v.default.getActiveCommand(eL.id) : null,
-                    activeCommandSection: (null === (t = eP.commands) || void 0 === t ? void 0 : t.enabled) ? v.default.getActiveCommandSection(eL.id) : null
+                    activeCommand: (null === (e = eP.commands) || void 0 === e ? void 0 : e.enabled) ? I.default.getActiveCommand(eL.id) : null,
+                    activeCommandSection: (null === (t = eP.commands) || void 0 === t ? void 0 : t.enabled) ? I.default.getActiveCommandSection(eL.id) : null
                 }
             }), {
                 isLurking: ti,
@@ -162,7 +162,7 @@ function(e, t, n) {
                     isPendingMember: s,
                     ...r
                 }
-            }(eL, eP, tn, eO), td = eP.toolbarType === J.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eP.commands) || void 0 === a ? void 0 : a.enabled) || !eb || eI !== es.COMMAND_SENTINEL, tm = (0, P.default)(), {
+            }(eL, eP, tn, eO), td = eP.toolbarType === J.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eP.commands) || void 0 === a ? void 0 : a.enabled) || !eb || ev !== es.COMMAND_SENTINEL, tm = (0, P.default)(), {
                 isSubmitButtonEnabled: tp,
                 fontSize: th
             } = (0, m.useStateFromStoresObject)([E.default], () => ({
@@ -205,10 +205,10 @@ function(e, t, n) {
                         null != e.current && l.emit("selection-changed", t)
                     }
                 }
-            }(e5, eI, ev), {
+            }(e5, ev, eI), {
                 submitting: tS,
                 submit: tT,
-                handleSubmit: tI
+                handleSubmit: tv
             } = function(e, t, a, s) {
                 let [r, o] = i.useState(!1), u = i.useCallback((i, d, c, f, m) => {
                     var E, g, C;
@@ -261,7 +261,7 @@ function(e, t, n) {
                     handleSubmit: d
                 }
             }(eV, eP, e5, eL.id), {
-                autocompleteRef: tv,
+                autocompleteRef: tI,
                 handleMaybeShowAutocomplete: t_,
                 handleHideAutocomplete: tN
             } = function() {
@@ -316,7 +316,7 @@ function(e, t, n) {
                 }({
                     editorRef: e5,
                     disabled: ts,
-                    textValue: eI,
+                    textValue: ev,
                     channelId: eL.id,
                     chatInputType: eP,
                     submit: eV
@@ -363,7 +363,7 @@ function(e, t, n) {
                         handleEnter: a,
                         handleMoveSelection: s
                     }
-                }(tv, e7, tf),
+                }(tI, e7, tf),
                 {
                     expressionPickerView: tU,
                     shouldHideExpressionPicker: tD,
@@ -401,15 +401,15 @@ function(e, t, n) {
                 tV = null,
                 tK = null;
             null != tn ? tV = null == eD ? void 0 : eD(tn, tl, eo.attachButton) : (!ts || to) && (tV = null == ej ? void 0 : ej(tB, eo.attachButton), tF && (tK = null == eU ? void 0 : eU()));
-            let tW = tc && null != ev && !ts && eP.showCharacterCount && null == tn,
-                tY = tc && !__OVERLAY__ && null != ev && null == tn,
+            let tW = tc && null != eI && !ts && eP.showCharacterCount && null == tn,
+                tY = tc && !__OVERLAY__ && null != eI && null == tn,
                 tz = function(e, t, n, l) {
                     var i, a;
                     let s = w.ExpressionSuggestionsEnabled.useSetting(),
                         r = (0, m.useStateFromStores)([j.default], () => j.default.getStickerPreview(e.id, t.drafts.type)),
                         o = null != r && r.length > 0;
                     return s && (null === (i = t.stickers) || void 0 === i ? void 0 : i.autoSuggest) && !o && (null === (a = l.current) || void 0 === a ? void 0 : a.isVisible()) !== !0 && !__OVERLAY__ && null != n
-                }(eL, eP, ev, tv),
+                }(eL, eP, eI, tI),
                 tZ = (0, N.useShouldShowPTONotice)(eL),
                 tJ = null != tn || null != ek || tZ,
                 tq = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
@@ -470,8 +470,8 @@ function(e, t, n) {
                                         id: ex,
                                         focused: eb,
                                         useSlate: tc,
-                                        textValue: eI,
-                                        richValue: ev,
+                                        textValue: ev,
+                                        richValue: eI,
                                         disabled: ts,
                                         placeholder: eR,
                                         required: ey,
@@ -510,8 +510,8 @@ function(e, t, n) {
                                     type: eP,
                                     disabled: ts,
                                     channel: eL,
-                                    handleSubmit: tI,
-                                    isEmpty: 0 === eI.trim().length
+                                    handleSubmit: tv,
+                                    isEmpty: 0 === ev.trim().length
                                 })]
                             })]
                         }), tf ? null : (0, l.jsx)(_.default, {
@@ -519,14 +519,14 @@ function(e, t, n) {
                             channel: eL,
                             canOnlyUseTextCommands: tB
                         }), (0, l.jsx)(A.default, {
-                            ref: tv,
+                            ref: tI,
                             channel: eL,
                             canMentionRoles: eY,
                             canMentionChannels: ez,
                             useNewSlashCommands: tc,
                             canOnlyUseTextCommands: tB,
                             canSendStickers: null === (ed = eP.stickers) || void 0 === ed ? void 0 : ed.allowSending,
-                            textValue: eI,
+                            textValue: ev,
                             focused: eb,
                             expressionPickerView: tU,
                             type: eP,
@@ -538,11 +538,11 @@ function(e, t, n) {
                             setValue: (e, t) => null == ew ? void 0 : ew(null, e, t),
                             position: e1
                         }), (0, l.jsx)(b.default, {
-                            textValue: eI,
+                            textValue: ev,
                             editorHeight: tM
                         }), tW ? (0, l.jsx)(en.default, {
                             type: eP,
-                            textValue: eI,
+                            textValue: ev,
                             className: s(eX, {
                                 [eo.indentCharacterCount]: tq
                             }),
@@ -569,7 +569,7 @@ function(e, t, n) {
                         position: "top",
                         align: "right",
                         positionLayerClassName: eo.expressionPickerPositionLayer
-                    }), tG ? (0, l.jsx)(I.default, {
+                    }), tG ? (0, l.jsx)(v.default, {
                         positionTargetRef: e9,
                         channel: eL,
                         closeOnModalOuterClick: e8,

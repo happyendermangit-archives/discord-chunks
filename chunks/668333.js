@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("515059"),
         S = n("845579"),
         T = n("305961"),
-        I = n("697218"),
-        v = n("124299"),
+        v = n("697218"),
+        I = n("124299"),
         _ = n("841811"),
         N = n("290581"),
         A = n("599110"),
@@ -141,10 +141,10 @@ function(e, t, n) {
                 isUsingKeyboardNavigation: h,
                 stickersGrid: E,
                 stickersCategories: g,
-                filteredStickers: v,
+                filteredStickers: I,
                 ownedStickerPacks: x,
                 channel: y
-            } = e, O = (0, d.useAnalyticsContext)(), j = (0, s.useStateFromStores)([I.default], () => I.default.getCurrentUser()), {
+            } = e, O = (0, d.useAnalyticsContext)(), j = (0, s.useStateFromStores)([v.default], () => v.default.getCurrentUser()), {
                 handleStickerInspect: D,
                 handleSelect: B
             } = eu({
@@ -188,11 +188,11 @@ function(e, t, n) {
                 }), Y(l)
             }, [O, t, Y]), ee = i.useCallback(e => {
                 let n = g[e];
-                if (null != v) {
+                if (null != I) {
                     let {
                         sendable: t,
                         sendableWithPremium: n
-                    } = v;
+                    } = I;
                     if (0 === e && t.length > 0) return null;
                     let i = t.length > 0 && n.length > 0;
                     return (0, l.jsxs)(l.Fragment, {
@@ -274,28 +274,28 @@ function(e, t, n) {
                         }, "h".concat(e.id))
                     }
                 }
-            }, [t, g, $, v]), et = i.useCallback(e => {
-                if (null != v) {
+            }, [t, g, $, I]), et = i.useCallback(e => {
+                if (null != I) {
                     let {
                         sendable: t,
                         sendableWithPremium: n
-                    } = v;
+                    } = I;
                     if (0 === e && t.length > 0) return 0;
                     let l = t.length > 0 && n.length > 0 ? J : 0;
                     return q + l
                 }
                 return q
-            }, [v]), en = i.useCallback(e => {
+            }, [I]), en = i.useCallback(e => {
                 let n = g[e],
                     i = t.has(n.id);
-                return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != v || i ? null : (0, l.jsx)(b.default, {
+                return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != I || i ? null : (0, l.jsx)(b.default, {
                     className: G.emptyGuildUpsell,
                     guildId: n.id,
                     channel: y,
                     shouldTrackUpsellViewed: !K,
                     setTrackedUpsellViewed: W
                 }, "sticker-picker-empty-guild-inline-upsell-".concat(n.id))
-            }, [g, t, v, y, K]), el = i.useCallback(e => {
+            }, [g, t, I, y, K]), el = i.useCallback(e => {
                 let n = g[e],
                     l = t.has(n.id);
                 return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || l ? 0 : es
@@ -320,7 +320,7 @@ function(e, t, n) {
                 isUsingKeyboardNavigation: C,
                 onSelectSticker: S,
                 rowCount: T,
-                rowCountBySection: I,
+                rowCountBySection: v,
                 stickersCategories: _,
                 stickersGrid: N,
                 channel: A
@@ -406,7 +406,7 @@ function(e, t, n) {
                         suggestions: (0, l.jsx)(eo, {
                             onSuggestionClick: e => (0, h.setSearchQuery)(e, !0)
                         })
-                    }) : (0, l.jsx)(v.default, {
+                    }) : (0, l.jsx)(I.default, {
                         role: "none presentation",
                         listPadding: null != o ? ea : ei,
                         onScroll: Y,
@@ -415,7 +415,7 @@ function(e, t, n) {
                         renderSectionHeader: K,
                         renderSectionFooter: w,
                         rowCount: T,
-                        rowCountBySection: I,
+                        rowCountBySection: v,
                         rowHeight: r > H ? en : el,
                         sectionHeaderHeight: W,
                         sectionFooterHeight: V,

@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("49111"),
         S = n("646718"),
         T = n("782340"),
-        I = n("350327"),
-        v = n("481927");
+        v = n("350327"),
+        I = n("481927");
     let _ = () => (0, E.setShowPremiumUpsell)(!1),
         N = e => {
             var t, n, a;
@@ -45,8 +45,8 @@ function(e, t, n) {
                 y = (null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_0,
                 O = null != A || null != x;
             return (0, l.jsxs)("div", {
-                className: s(I.upsellWrapper, {
-                    [I.unifyTrialUpsell]: O
+                className: s(v.upsellWrapper, {
+                    [v.unifyTrialUpsell]: O
                 }),
                 children: [O ? (0, l.jsx)(f.default, {
                     trialOffer: A,
@@ -62,16 +62,16 @@ function(e, t, n) {
                     })
                 }) : (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsx)("img", {
-                        className: I.upsellImage,
-                        src: v,
+                        className: v.upsellImage,
+                        src: I,
                         alt: T.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
                     }), (0, l.jsx)(r.Text, {
-                        className: I.upsellTitle,
+                        className: v.upsellTitle,
                         color: "header-primary",
                         variant: "text-lg/semibold",
                         children: T.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
                     }), (0, l.jsx)(r.Text, {
-                        className: I.upsellDescription,
+                        className: v.upsellDescription,
                         variant: "text-md/normal",
                         children: T.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
                             onClick: E
@@ -81,7 +81,7 @@ function(e, t, n) {
                     analyticsSection: C.AnalyticsSections.EXPRESSION_PICKER,
                     buttonText: O ? y ? T.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : T.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
                 }), (0, l.jsx)(r.Clickable, {
-                    className: I.upsellClose,
+                    className: v.upsellClose,
                     onClick: _,
                     children: (0, l.jsx)(m.default, {})
                 })]

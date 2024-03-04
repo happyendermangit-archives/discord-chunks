@@ -29,8 +29,8 @@ function(e, t, n) {
         C = n("364685"),
         S = n("24373"),
         T = n("305961"),
-        I = n("27618"),
-        v = n("697218"),
+        v = n("27618"),
+        I = n("697218"),
         _ = n("158998"),
         N = n("563911"),
         A = n("346955"),
@@ -274,7 +274,7 @@ function(e, t, n) {
                     })
                 }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
                     children: (0, l.jsx)(N.AutocompleteRowHeading, {
-                        children: (0, h.computeChannelName)(e, v.default, I.default)
+                        children: (0, h.computeChannelName)(e, I.default, v.default)
                     })
                 }), null != t ? (0, l.jsx)(N.AutocompleteRowContentSecondary, {
                     children: t.name

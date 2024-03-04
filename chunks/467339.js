@@ -70,7 +70,7 @@ function(e, t, n) {
             }
         })
     }
-    class I extends i.Component {
+    class v extends i.Component {
         render() {
             var e;
             if (this.props.upload.item.platform !== u.UploadPlatform.WEB) return null;
@@ -84,7 +84,7 @@ function(e, t, n) {
             })
         }
     }
-    class v extends i.Component {
+    class I extends i.Component {
         componentDidMount() {
             var e;
             (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === u.UploadPlatform.WEB && m.default.track(E.AnalyticEvents.OPEN_MODAL, {
@@ -121,7 +121,7 @@ function(e, t, n) {
                         className: s(C.file, {
                             [C.expandable]: e.isImage
                         }),
-                        children: [(0, l.jsx)(I, {
+                        children: [(0, l.jsx)(v, {
                             upload: e
                         }), (0, l.jsxs)("div", {
                             className: C.description,
@@ -247,7 +247,7 @@ function(e, t, n) {
 
     function _(e) {
         let t = (0, c.default)();
-        return e.upload.item.platform !== u.UploadPlatform.WEB ? null : (0, l.jsx)(v, {
+        return e.upload.item.platform !== u.UploadPlatform.WEB ? null : (0, l.jsx)(I, {
             ...e,
             file: e.upload.item.file,
             messageMaxLength: t

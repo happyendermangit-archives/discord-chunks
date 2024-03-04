@@ -33,7 +33,7 @@ function(e, t, n) {
             shrinkToSize: s,
             isTryItOutFlow: S,
             size: T = 0
-        } = e, I = (0, m.default)(t.id, n), v = (0, f.default)(I).map(e => ({
+        } = e, v = (0, m.default)(t.id, n), I = (0, f.default)(v).map(e => ({
             ...e,
             src: (0, p.getBadgeAsset)(e.icon)
         })), _ = (0, d.useWindowDispatch)();
@@ -43,7 +43,7 @@ function(e, t, n) {
             role: "group",
             children: (0, a.jsx)(c.default, {})
         });
-        S && null == v.find(e => "premium" === e.id) && v.push({
+        S && null == I.find(e => "premium" === e.id) && I.push({
             id: "premium",
             icon: C,
             src: C,
@@ -51,12 +51,12 @@ function(e, t, n) {
                 date: new Date
             })
         });
-        let N = null != i && null != s && v.length > i ? s : T;
+        let N = null != i && null != s && I.length > i ? s : T;
         return (0, a.jsx)("div", {
-            className: r(l, v.length > 0 ? g.containerWithContent : g.container),
+            className: r(l, I.length > 0 ? g.containerWithContent : g.container),
             "aria-label": E.default.Messages.PROFILE_USER_BADGES,
             role: "group",
-            children: v.map(e => (0, a.jsx)(o.Tooltip, {
+            children: I.map(e => (0, a.jsx)(o.Tooltip, {
                 position: "top",
                 text: e.description,
                 spacing: 12,

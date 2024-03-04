@@ -5,7 +5,7 @@ function(e, t, n) {
             return C
         },
         default: function() {
-            return I
+            return v
         }
     }), n("424973"), n("222007");
     var l = n("37983"),
@@ -196,5 +196,5 @@ function(e, t, n) {
         showDefaultAvatarsForNullUsers: !1,
         size: C.SIZE_24
     };
-    var I = T
+    var v = T
 }

@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("385887"),
         S = n("755604"),
         T = n("664610"),
-        I = n("688893"),
-        v = n("684607"),
+        v = n("688893"),
+        I = n("684607"),
         _ = n("803322"),
         N = n("127875"),
         A = n("169694"),
@@ -115,7 +115,7 @@ function(e, t, n) {
                 eh.current = !1
             }, []), eT = i.useCallback(() => {
                 eh.current = !0
-            }, []), eI = (0, T.default)({
+            }, []), ev = (0, T.default)({
                 channel: L,
                 chatInputType: a,
                 canUseCommands: $,
@@ -123,29 +123,29 @@ function(e, t, n) {
                 onChangeStart: eS,
                 onChangeEnd: eT,
                 updateState: eC
-            }), ev = i.useCallback((e, t) => {
-                let n = m.getOptionValues(eI, e),
+            }), eI = i.useCallback((e, t) => {
+                let n = m.getOptionValues(ev, e),
                     l = m.validateOptionValues(e, L.guild_id, L.id, n, t);
                 return {
                     values: n,
                     results: l
                 }
-            }, [L.guild_id, L.id, eI]), e_ = i.useCallback(() => {
+            }, [L.guild_id, L.id, ev]), e_ = i.useCallback(() => {
                 let e;
                 let t = $ ? u.default.getActiveCommand(L.id) : null;
                 if (null != t && null != t.options) {
-                    let i = ev(t, !1);
+                    let i = eI(t, !1);
                     e = i.values;
-                    let a = m.getOptionNames(eI),
+                    let a = m.getOptionNames(ev),
                         s = a.filter(e => !i.results[e].success).map(e => {
                             var n;
                             return (null !== (n = t.options) && void 0 !== n ? n : []).find(t => t.name === e)
                         });
-                    for (let e of t.options) e.required && !(e.name in i.values) && (g.SlateTransforms.insertCommandOption(eI, e), s.push(e));
+                    for (let e of t.options) e.required && !(e.name in i.values) && (g.SlateTransforms.insertCommandOption(ev, e), s.push(e));
                     if (s.length > 0) {
                         var n, l;
                         let e = s[0];
-                        g.SlateTransforms.selectCommandOption(eI, e.name), f.ComponentDispatch.dispatch(R.ComponentActions.SHAKE_APP, {
+                        g.SlateTransforms.selectCommandOption(ev, e.name), f.ComponentDispatch.dispatch(R.ComponentActions.SHAKE_APP, {
                             duration: 200,
                             intensity: 2
                         }), (0, o.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
@@ -157,17 +157,17 @@ function(e, t, n) {
                         return
                     }
                 }
-                null == Z || Z((0, E.toTextValue)(C.EditorUtils.richValue(eI), {
+                null == Z || Z((0, E.toTextValue)(C.EditorUtils.richValue(ev), {
                     mode: "raw",
                     ignoreTrailingEmptyNodes: !0
                 }), t, e)
-            }, [L.id, eI, Z, ev, $]);
-            (0, I.default)(t, eI, L, e_), (0, N.default)(eI, em, B);
+            }, [L.id, ev, Z, eI, $]);
+            (0, v.default)(t, ev, L, e_), (0, N.default)(ev, em, B);
             let {
                 handleKeyDown: eN,
                 handleKeyUp: eA
-            } = (0, v.default)({
-                editor: eI,
+            } = (0, I.default)({
+                editor: ev,
                 channel: L,
                 disableEnterToSubmit: en,
                 onKeyDown: K,
@@ -181,7 +181,7 @@ function(e, t, n) {
             }), {
                 handlePaste: ex,
                 handleGlobalPaste: ey
-            } = (0, _.default)(eI, eg, G), eO = i.useCallback(e => {
+            } = (0, _.default)(ev, eg, G), eO = i.useCallback(e => {
                 null == J || J()
             }, [J]), eR = i.useCallback(e => {
                 e !== ep.current ? eE.current && (null == F || F(null, (0, E.toTextValue)(e, {
@@ -189,19 +189,19 @@ function(e, t, n) {
                 }), e)) : eE.current && J()
             }, [J, F]);
             i.useLayoutEffect(() => {
-                eh.current && (ep.current = n, eC(eI, "parent", {
+                eh.current && (ep.current = n, eC(ev, "parent", {
                     value: n
                 }))
-            }, [eI, n, eC]), i.useEffect(() => {
+            }, [ev, n, eC]), i.useEffect(() => {
                 let e = () => {
                     var e;
                     let t = null !== (e = u.default.getActiveCommand(L.id)) && void 0 !== e ? e : null;
-                    null !== t && null != t.options && ev(t, !0)
+                    null !== t && null != t.options && eI(t, !0)
                 };
                 return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
-            }, [L, eI, ev]);
+            }, [L, ev, eI]);
             let eM = i.useCallback((e, t) => (0, S.default)(e, t), []),
-                eL = i.useCallback(e => (0, y.default)(eI, e, L.id), [L.id, eI]),
+                eL = i.useCallback(e => (0, y.default)(ev, e, L.id), [L.id, ev]),
                 eP = i.useCallback(e => (0, O.default)(e), []);
             return (0, l.jsxs)(l.Fragment, {
                 children: [(0, l.jsx)(c.ComponentAction, {
@@ -212,7 +212,7 @@ function(e, t, n) {
                     className: s(P, M.slateContainer),
                     children: (0, l.jsx)(h.default, {
                         id: b,
-                        editor: eI,
+                        editor: ev,
                         channelId: L.id,
                         guildId: L.guild_id,
                         className: s(M.slateTextArea, w),

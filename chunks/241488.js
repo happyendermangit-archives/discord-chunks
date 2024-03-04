@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("716241"),
         S = n("86678"),
         T = n("873622"),
-        I = n("277855"),
-        v = n("191191"),
+        v = n("277855"),
+        I = n("191191"),
         _ = n("256860"),
         N = n("364685"),
         A = n("889701"),
@@ -141,7 +141,7 @@ function(e, t, n) {
         }), ei = (0, M.useExpressionPickerStore)(e => e.activeView), ea = (0, _.useHasSendableSticker)(K), {
             renderWindow: es,
             windowDispatch: er
-        } = i.useContext(g.default), eo = (0, c.useStateFromStores)([N.default], () => !N.default.hasLoadedStickerPacks), eu = (0, I.useSoundmojiExperiment)("expression_picker"), ed = null != q, ec = (0, f.useIsModalAtTop)(null != q ? q : ""), ef = i.useCallback(e => {
+        } = i.useContext(g.default), eo = (0, c.useStateFromStores)([N.default], () => !N.default.hasLoadedStickerPacks), eu = (0, v.useSoundmojiExperiment)("expression_picker"), ed = null != q, ec = (0, f.useIsModalAtTop)(null != q ? q : ""), ef = i.useCallback(e => {
             var t;
             if (!ed && (0, f.hasAnyModalOpen)() || ed && !(ec && J)) return;
             let {
@@ -287,7 +287,7 @@ function(e, t, n) {
                                     }
                                 }) : null, ei === L.ExpressionPickerViewType.SOUNDBOARD ? (0, l.jsx)("div", {
                                     className: k.soundboardContainer,
-                                    children: (0, l.jsx)(v.default, {
+                                    children: (0, l.jsx)(I.default, {
                                         guildId: K.guild_id,
                                         channel: K,
                                         containerWidth: en,

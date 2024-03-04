@@ -14,10 +14,10 @@ function(e, t, n) {
             return T
         },
         useShouldObscure: function() {
-            return I
+            return v
         },
         getObscuredAlt: function() {
-            return v
+            return I
         }
     }), n("702976"), n("794252");
     var l, i, a = n("506838"),
@@ -69,12 +69,12 @@ function(e, t, n) {
         }, n) ? [!0, "explicit_content"] : e.spoiler ? [t, "spoiler"] : [!1, void 0]
     }
 
-    function I(e) {
+    function v(e) {
         let {
             channel: t,
             media: n
         } = e, l = (0, s.default)([m.default], () => null != t && m.default.can(E.Permissions.MANAGE_MESSAGES, t)), i = c.RenderSpoilers.useSetting(), a = (0, u.useShouldRedactExplicitContentForForum)();
         return T(n, !(0, h.default)(i, l), a)
     }
-    let v = e => (0, a.match)(e).with("explicit_content", () => g.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => g.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+    let I = e => (0, a.match)(e).with("explicit_content", () => g.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => g.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
 }

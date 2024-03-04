@@ -29,8 +29,8 @@ function(e, t, n) {
         C = n("132755"),
         S = n("151185"),
         T = n("368121"),
-        I = n("305122"),
-        v = n("235004"),
+        v = n("305122"),
+        I = n("235004"),
         _ = n("389480"),
         N = n("78581"),
         A = n("23106"),
@@ -127,7 +127,7 @@ function(e, t, n) {
             ei = i.useRef(.01),
             ea = i.useRef(new u.Interval),
             es = "1" === P.soundId,
-            er = (0, o.useStateFromStores)([v.default], () => v.default.isFavoriteSound(W), [W]),
+            er = (0, o.useStateFromStores)([I.default], () => I.default.isFavoriteSound(W), [W]),
             eo = "sound-".concat(P.soundId),
             eu = (0, r.useListItem)(eo),
             ed = null != z || null != Z,
@@ -135,7 +135,7 @@ function(e, t, n) {
             ef = D || w && !ec;
 
         function em(e) {
-            e.stopPropagation(), e.currentTarget.blur(), er ? (0, I.removeFavoriteSound)(W) : (0, I.addFavoriteSound)(W)
+            e.stopPropagation(), e.currentTarget.blur(), er ? (0, v.removeFavoriteSound)(W) : (0, v.addFavoriteSound)(W)
         }
 
         function ep() {

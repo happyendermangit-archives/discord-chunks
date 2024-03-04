@@ -26,8 +26,8 @@ function(e, t, n) {
             isAppDetailPresent: E
         } = e, [g, C] = i.useState(""), S = i.useCallback(() => C(""), [C]), {
             commandsByActiveSection: T,
-            sectionDescriptors: I,
-            filterSection: v
+            sectionDescriptors: v,
+            filterSection: I
         } = u.useDiscovery(a, {
             commandType: o.ApplicationCommandType.CHAT
         }, {
@@ -36,10 +36,10 @@ function(e, t, n) {
             includeFrecency: !0
         });
         i.useEffect(() => {
-            v(p.BuiltInSectionId.FRECENCY)
-        }, [v]);
+            I(p.BuiltInSectionId.FRECENCY)
+        }, [I]);
         let _ = null !== (n = null === (t = T[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
-            N = I.filter(e => e.id !== p.BuiltInSectionId.FRECENCY && e.id !== p.BuiltInSectionId.BUILT_IN),
+            N = v.filter(e => e.id !== p.BuiltInSectionId.FRECENCY && e.id !== p.BuiltInSectionId.BUILT_IN),
             A = (0, d.useSortApplicationsViaFrecency)(N);
         return (0, l.jsxs)("div", {
             className: s(h.container, {
@@ -60,7 +60,7 @@ function(e, t, n) {
                 children: [(0, l.jsx)(f.default, {
                     channel: a,
                     commands: _,
-                    sectionDescriptors: I
+                    sectionDescriptors: v
                 }), (0, l.jsx)(m.default, {
                     channel: a,
                     applications: A

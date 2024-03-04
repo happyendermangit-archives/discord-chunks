@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ImageModal: function() {
-            return v
+            return I
         },
         VideoModal: function() {
             return _
@@ -44,7 +44,7 @@ function(e, t, n) {
             })
         })
     }
-    let I = e => {
+    let v = e => {
         let {
             children: t,
             hasMediaControls: n,
@@ -81,7 +81,7 @@ function(e, t, n) {
         })
     };
 
-    function v(e) {
+    function I(e) {
         let {
             src: t,
             original: n,
@@ -93,7 +93,7 @@ function(e, t, n) {
             responsive: m,
             renderLinkComponent: h,
             maxWidth: E,
-            maxHeight: v,
+            maxHeight: I,
             shouldAnimate: _,
             onClose: N,
             shouldHideMediaOptions: A = !1,
@@ -115,7 +115,7 @@ function(e, t, n) {
             className: S.wrapper,
             children: [M ? (0, l.jsx)(T, {
                 onClose: N
-            }) : null, (0, l.jsx)(I, {
+            }) : null, (0, l.jsx)(v, {
                 isObscured: x,
                 src: t,
                 children: e => (0, l.jsx)(p.default, {
@@ -156,14 +156,14 @@ function(e, t, n) {
         } = e, {
             width: p,
             height: E
-        } = (0, f.zoomFit)(n, i), g = r.isMobile && null != a, v = u ? e => {
+        } = (0, f.zoomFit)(n, i), g = r.isMobile && null != a, I = u ? e => {
             e.stopPropagation(), e.preventDefault()
         } : c.onContextMenu;
         return (0, l.jsxs)("div", {
             className: s(S.wrapper, S.videoWrapper),
             children: [g ? (0, l.jsx)(T, {
                 onClose: a
-            }) : null, (0, l.jsx)(I, {
+            }) : null, (0, l.jsx)(v, {
                 hasMediaControls: !0,
                 isObscured: d,
                 src: t,
@@ -179,7 +179,7 @@ function(e, t, n) {
                     onVolumeChange: m.setVolume,
                     onMute: m.setMuted,
                     autoPlay: !e,
-                    onContextMenu: v,
+                    onContextMenu: I,
                     ...c
                 }, t)
             }), !u && o({

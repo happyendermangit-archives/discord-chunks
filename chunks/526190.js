@@ -28,13 +28,13 @@ function(e, t, n) {
             [g, C] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
             S = (0, r.useToken)(s.default.unsafe_rawColors.PRIMARY_300).hex(),
             T = (0, i.hex2int)(null != n ? n : S),
-            I = (0, i.int2hsl)(T, !1, g ? C : null);
+            v = (0, i.int2hsl)(T, !1, g ? C : null);
         return t = null != m ? m : .3 > (0, i.getDarkness)(T) ? s.default.unsafe_rawColors.PRIMARY_630.css : s.default.unsafe_rawColors.WHITE_500.css, (0, l.jsx)(r.Tooltip, {
             text: null != E ? E : c.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
             children: e => (0, l.jsx)(u.default, {
                 ...e,
                 className: p,
-                color: I,
+                color: v,
                 size: f,
                 children: (0, l.jsx)(d.default, {
                     color: t,

@@ -28,8 +28,8 @@ function(e, t, n) {
             onClick: C,
             channel: S,
             selectedIndex: T
-        } = e, I = i.useRef(null), {
-            commands: v,
+        } = e, v = i.useRef(null), {
+            commands: I,
             sections: _,
             scrollDown: N
         } = d.useQuery(S, {
@@ -41,8 +41,8 @@ function(e, t, n) {
             scoreMethod: c.ScoreMethod.COMMAND_OR_APPLICATION
         }), A = i.useCallback(e => {
             var t;
-            if (null == v) return null;
-            let i = v[e],
+            if (null == I) return null;
+            let i = I[e],
                 a = null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : e;
             if (null == i || i.inputType === f.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(p.default, {}, a);
             let s = _.find(e => e.id === i.applicationId);
@@ -57,26 +57,26 @@ function(e, t, n) {
                 onClick: C,
                 onHover: n
             }, a)
-        }, [S, v, _, C, n, T]);
-        return null == v || 0 === v.length ? null : (0, l.jsxs)(l.Fragment, {
+        }, [S, I, _, C, n, T]);
+        return null == I || 0 === I.length ? null : (0, l.jsxs)(l.Fragment, {
             children: [(0, s.renderHeader)({
                 titleWithQuery: E.default.Messages.COMMANDS_MATCHING,
                 titleWithoutQuery: E.default.Messages.COMMANDS,
                 query: t,
                 getQuery: e => "".concat(h.COMMAND_SENTINEL).concat(e)
             }), (0, l.jsx)(u.default, {
-                ref: I,
+                ref: v,
                 role: "listbox",
                 className: g.list,
                 listPadding: [0, 8, 0, 8],
                 onScroll: e => {
-                    if (null == v) return;
-                    let t = v.length * m.ITEM_HEIGHT,
-                        n = I.current.getListDimensions().height;
+                    if (null == I) return;
+                    let t = I.length * m.ITEM_HEIGHT,
+                        n = v.current.getListDimensions().height;
                     t - e - n < 9 * m.ITEM_HEIGHT && N()
                 },
                 renderRow: A,
-                rowCount: v.length,
+                rowCount: I.length,
                 rowHeight: m.ITEM_HEIGHT
             })]
         })

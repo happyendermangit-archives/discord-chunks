@@ -5,27 +5,27 @@ function(e, t, n) {
             return i
         }
     });
-    var l = n("37983");
+    var a = n("37983");
     n("884691");
-    var a = n("75196");
+    var l = n("75196");
 
     function i(e) {
         let {
             width: t = 24,
             height: n = 24,
             color: i = "currentColor",
-            className: u,
-            foreground: d,
-            ...r
+            className: _,
+            foreground: r,
+            ...u
         } = e;
-        return (0, l.jsx)("svg", {
-            ...(0, a.default)(r),
-            className: u,
+        return (0, a.jsx)("svg", {
+            ...(0, l.default)(u),
+            className: _,
             width: t,
             height: n,
             viewBox: "0 0 24 24",
-            children: (0, l.jsx)("path", {
-                className: d,
+            children: (0, a.jsx)("path", {
+                className: r,
                 fill: i,
                 fillRule: "evenodd",
                 clipRule: "evenodd",

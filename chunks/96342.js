@@ -165,10 +165,10 @@ function(e, t, n) {
     for (let e in c.default.RULES) {
         if (!(e in g)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
         let t = g[e];
-        "skip" !== t.type && (S[e] = I(c.default.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (T[e] = I("text" === e ? f.default : c.default.RULES[e]))
+        "skip" !== t.type && (S[e] = v(c.default.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (T[e] = v("text" === e ? f.default : c.default.RULES[e]))
     }
 
-    function I(e) {
+    function v(e) {
         i(null != e.parse, "Slate: rule must have a parse function");
         let t = e.parse;
         return {
@@ -179,7 +179,7 @@ function(e, t, n) {
             }
         }
     }
-    let v = {
+    let I = {
             url: {
                 parse: e => null == (0, d.punycodeLink)(e[1]) ? {
                     type: "text",
@@ -220,8 +220,8 @@ function(e, t, n) {
                 }
             }
         },
-        _ = (0, m.default)([S, v]),
-        N = (0, m.default)([T, v]),
+        _ = (0, m.default)([S, I]),
+        N = (0, m.default)([T, I]),
         A = o.astParserFor(_),
         x = o.astParserFor(N),
         y = {

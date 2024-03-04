@@ -29,8 +29,8 @@ function(e, t, n) {
         C = n("246053"),
         S = n("867544"),
         T = n("128259"),
-        I = n("49111"),
-        v = n("214509"),
+        v = n("49111"),
+        I = n("214509"),
         _ = n("782340"),
         N = n("561372");
 
@@ -47,29 +47,29 @@ function(e, t, n) {
         } = e;
         null == R && (R = !0);
         let L = null !== (n = g.metadata) && void 0 !== n ? n : {},
-            P = R ? (0, p.getCreatedAtDate)(L[v.MetadataFields.CREATED_AT], x) : null,
+            P = R ? (0, p.getCreatedAtDate)(L[I.MetadataFields.CREATED_AT], x) : null,
             b = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
             j = _.default.Messages.CONNECTION_VERIFIED;
         if (R) switch (g.type) {
-            case I.PlatformTypes.REDDIT:
+            case v.PlatformTypes.REDDIT:
                 i = (0, h.generateRedditMetadataItems)(L);
                 break;
-            case I.PlatformTypes.STEAM:
+            case v.PlatformTypes.STEAM:
                 i = (0, h.generateSteamMetadataItems)(L);
                 break;
-            case I.PlatformTypes.TWITTER: {
+            case v.PlatformTypes.TWITTER: {
                 i = (0, h.generateTwitterMetadataItems)(L);
-                let e = "1" === L[v.MetadataFields.TWITTER_VERIFIED];
+                let e = "1" === L[I.MetadataFields.TWITTER_VERIFIED];
                 e && (a = b, j = _.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
                 break
             }
-            case I.PlatformTypes.PAYPAL:
+            case v.PlatformTypes.PAYPAL:
                 i = (0, h.generatePaypalMetadataItems)(L);
                 break;
-            case I.PlatformTypes.EBAY:
+            case v.PlatformTypes.EBAY:
                 i = (0, h.generateEbayMetadataItems)(L);
                 break;
-            case I.PlatformTypes.TIKTOK:
+            case v.PlatformTypes.TIKTOK:
                 i = (0, h.generateTikTokMetadataItems)(L)
         }
         let U = c.default.get((0, m.useLegacyPlatformType)(g.type)),
@@ -81,12 +81,12 @@ function(e, t, n) {
             href: D,
             onClick: e => {
                 var t, n;
-                t = g.type, n = y, (0, f.trackWithMetadata)(I.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
+                t = g.type, n = y, (0, f.trackWithMetadata)(v.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
                     platform_type: t,
                     other_user_id: n
                 }), (0, T.handleClick)({
                     href: D,
-                    trusted: (null == U ? void 0 : U.type) !== I.PlatformTypes.DOMAIN
+                    trusted: (null == U ? void 0 : U.type) !== v.PlatformTypes.DOMAIN
                 }, e)
             },
             children: (0, l.jsx)(C.default, {

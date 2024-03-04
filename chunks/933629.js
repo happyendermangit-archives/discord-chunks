@@ -66,8 +66,8 @@ function(e, t, n) {
         C = n("115718"),
         S = n("84339"),
         T = n("298878"),
-        I = n("793237"),
-        v = n("347738"),
+        v = n("793237"),
+        I = n("347738"),
         _ = n("584998"),
         N = n("845579"),
         A = n("324929"),
@@ -398,9 +398,9 @@ function(e, t, n) {
             scrollManager: u
         } = e, {
             disableInteractions: E
-        } = s.useContext(b.MessagesInteractionContext), [g, N] = s.useState(null), A = s.useRef(null), [x, R] = s.useState(null), M = s.useRef(null), L = (0, f.useStateFromStoresArray)([v.default], () => {
+        } = s.useContext(b.MessagesInteractionContext), [g, N] = s.useState(null), A = s.useRef(null), [x, R] = s.useState(null), M = s.useRef(null), L = (0, f.useStateFromStoresArray)([I.default], () => {
             var e;
-            return null !== (e = v.default.summaries(i.id)) && void 0 !== e ? e : []
+            return null !== (e = I.default.summaries(i.id)) && void 0 !== e ? e : []
         }, [i]), P = (0, S.default)(L);
         s.useEffect(() => {
             !d.isEqual(P, L) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
@@ -424,7 +424,7 @@ function(e, t, n) {
                     }).filter(F.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [L], er),
-            V = null !== (n = (0, f.useStateFromStores)([v.default], () => v.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+            V = null !== (n = (0, f.useStateFromStores)([I.default], () => I.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
             W = null == L ? void 0 : null === (t = L[V]) || void 0 === t ? void 0 : t.topic;
         null == W && null == g && (null == L ? void 0 : L.length) >= 1 && (W = null === (l = L[0]) || void 0 === l ? void 0 : l.topic);
         let Z = s.useMemo(() => d.debounce(e => {
@@ -432,7 +432,7 @@ function(e, t, n) {
                 N(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
             }, 64), [N]),
             J = s.useMemo(() => d.throttle(() => {
-                (0, I.setHighlightedSummary)(null)
+                (0, v.setHighlightedSummary)(null)
             }, 1200, {
                 trailing: !1
             }), []),
@@ -457,7 +457,7 @@ function(e, t, n) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : K.SummariesTopicClickedSource.PILL_DROPDOWN,
                     n = L[e];
                 if (null == n) return;
-                (0, I.setSelectedSummary)(i.id, n.id), (0, I.setHighlightedSummary)(i.id, n.id);
+                (0, v.setSelectedSummary)(i.id, n.id), (0, v.setHighlightedSummary)(i.id, n.id);
                 let l = () => {
                     u.removeScrollCompleteCallback(l), setTimeout(() => {
                         u.addAutomaticAnchorCallback(q, !1)
@@ -508,7 +508,7 @@ function(e, t, n) {
         }, [X, L, i, et]);
         s.useEffect(() => (u.addAutomaticAnchorCallback(q), () => {
             u.removeAutomaticAnchorCallback(q)
-        }), [u, q]), (0, I.useSummaryPolling)(i.id, !0), s.useEffect(() => (document.addEventListener("mousedown", en), () => {
+        }), [u, q]), (0, v.useSummaryPolling)(i.id, !0), s.useEffect(() => (document.addEventListener("mousedown", en), () => {
             document.removeEventListener("mousedown", en)
         }), [en]);
         let el = s.useMemo(() => (0, a.jsx)(_.default, {
@@ -627,9 +627,9 @@ function(e, t, n) {
             scrollManager: r
         } = e, {
             disableInteractions: u
-        } = s.useContext(b.MessagesInteractionContext), [h, E] = s.useState(null), g = s.useRef(null), [N, A] = s.useState(null), x = s.useRef(null), y = (0, f.useStateFromStoresArray)([v.default], () => {
+        } = s.useContext(b.MessagesInteractionContext), [h, E] = s.useState(null), g = s.useRef(null), [N, A] = s.useState(null), x = s.useRef(null), y = (0, f.useStateFromStoresArray)([I.default], () => {
             var e;
-            return null !== (e = v.default.summaries(i.id)) && void 0 !== e ? e : []
+            return null !== (e = I.default.summaries(i.id)) && void 0 !== e ? e : []
         }, [i]), R = (0, S.default)(y);
         s.useEffect(() => {
             !d.isEqual(R, y) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
@@ -653,7 +653,7 @@ function(e, t, n) {
                     }).filter(F.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [y], er),
-            L = null !== (n = (0, f.useStateFromStores)([v.default], () => v.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+            L = null !== (n = (0, f.useStateFromStores)([I.default], () => I.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
             P = null == y ? void 0 : null === (t = y[L]) || void 0 === t ? void 0 : t.topic;
         null == P && null == h && (null == y ? void 0 : y.length) >= 1 && (P = null === (l = y[0]) || void 0 === l ? void 0 : l.topic);
         let U = s.useMemo(() => d.get(y, L - 1), [L, y]),
@@ -663,7 +663,7 @@ function(e, t, n) {
                 E(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
             }, 64), [E]),
             V = s.useMemo(() => d.throttle(() => {
-                (0, I.setHighlightedSummary)(null)
+                (0, v.setHighlightedSummary)(null)
             }, 1200, {
                 trailing: !1
             }), []),
@@ -688,7 +688,7 @@ function(e, t, n) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : K.SummariesTopicClickedSource.PILL_DROPDOWN,
                     n = y[e];
                 if (null == n) return;
-                (0, I.setSelectedSummary)(i.id, n.id), (0, I.setHighlightedSummary)(i.id, n.id);
+                (0, v.setSelectedSummary)(i.id, n.id), (0, v.setHighlightedSummary)(i.id, n.id);
                 let l = () => {
                     r.removeScrollCompleteCallback(l), setTimeout(() => {
                         r.addAutomaticAnchorCallback(W, !1)
@@ -745,7 +745,7 @@ function(e, t, n) {
         }, [Z, y, i, ee]);
         s.useEffect(() => (r.addAutomaticAnchorCallback(W), () => {
             r.removeAutomaticAnchorCallback(W)
-        }), [r, W]), (0, I.useSummaryPolling)(i.id, !0), s.useEffect(() => (document.addEventListener("mousedown", et), () => {
+        }), [r, W]), (0, v.useSummaryPolling)(i.id, !0), s.useEffect(() => (document.addEventListener("mousedown", et), () => {
             document.removeEventListener("mousedown", et)
         }), [et]);
         let en = s.useMemo(() => (0, a.jsx)(_.default, {
@@ -755,7 +755,7 @@ function(e, t, n) {
                 selectTopic: X,
                 setOpen: ee
             }), [y, M, X, ee, i]),
-            el = (0, f.useStateFromStores)([v.default], () => v.default.shouldShowTopicsBar());
+            el = (0, f.useStateFromStores)([I.default], () => I.default.shouldShowTopicsBar());
         if (!el) return null;
         let ei = Y.default.Messages.SUMMARIES_NO_SUMMARIES;
         return y.length > 0 && (ei = "" === P || null == P ? Y.default.Messages.SUMMARIES_VIEW_ALL : P), u ? null : (0, a.jsxs)("div", {

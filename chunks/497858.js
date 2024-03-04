@@ -23,7 +23,7 @@ function(e, t, n) {
         C = n("958706");
 
     function S(e, t, n) {
-        var S, T, I, v, _, N, A;
+        var S, T, v, I, _, N, A;
         let {
             channel: x,
             type: y
@@ -71,7 +71,7 @@ function(e, t, n) {
             currentWord: null !== (N = null == F ? void 0 : F.word) && void 0 !== N ? N : "",
             currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
             optionText: null != k ? (0, s.getString)({
-                [k.name]: null !== (A = null === (I = e.editorRef.current) || void 0 === I ? void 0 : I.getCurrentCommandOptionValue()) && void 0 !== A ? A : []
+                [k.name]: null !== (A = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentCommandOptionValue()) && void 0 !== A ? A : []
             }, k.name) : ""
         }, [B] = l.useState(() => new p.default(G));
         return l.useEffect(() => {
@@ -91,6 +91,6 @@ function(e, t, n) {
                     for (let n of t) n.removeChangeListener(e)
                 }
             }
-        }, [B, null === (v = O.query) || void 0 === v ? void 0 : v.typeInfo]), [O, B, w]
+        }, [B, null === (I = O.query) || void 0 === I ? void 0 : I.typeInfo]), [O, B, w]
     }
 }

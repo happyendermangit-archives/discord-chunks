@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return v
         },
         useSearchCategories: function() {
-            return v
+            return I
         }
     }), n("222007"), n("424973");
     var l = n("884691"),
@@ -77,10 +77,10 @@ function(e, t, n) {
         })
     }
 
-    function I(e) {
+    function v(e) {
         let {
             filterOutEmptyCurrentGuild: t = !1
-        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], c = (0, i.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [g, I, v] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites(), p.default.isFetching()]), _ = (0, E.useSortedGuildIdsForSoundboard)(e, !1), N = (0, i.useStateFromStoresArray)([r.default], () => {
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], c = (0, i.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [g, v, I] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites(), p.default.isFetching()]), _ = (0, E.useSortedGuildIdsForSoundboard)(e, !1), N = (0, i.useStateFromStoresArray)([r.default], () => {
             let e = [];
             return _.forEach(t => {
                 let n = r.default.getGuild(t);
@@ -108,12 +108,12 @@ function(e, t, n) {
             let e = [];
             return n ? (T(e, g), {
                 categories: e,
-                isFetching: v
+                isFetching: I
             }) : (S({
                 sections: e,
                 guildIds: _,
                 allSounds: g,
-                potentialSoundIdsForSection: Array.from(I),
+                potentialSoundIdsForSection: Array.from(v),
                 sectionType: h.SoundboardSoundGridSectionType.FAVORITES,
                 sortById: !0
             }), O && S({
@@ -166,12 +166,12 @@ function(e, t, n) {
                 }
             }(e, N, null == x ? void 0 : x.id, g), A && T(e, g), {
                 categories: e,
-                isFetching: v
+                isFetching: I
             })
-        }, [_, g, I, L, M, R, O, x, y, t, A, N, n, v])
+        }, [_, g, v, L, M, R, O, x, y, t, A, N, n, I])
     }
 
-    function v(e, t, n) {
+    function I(e, t, n) {
         return l.useMemo(() => n.length > 0 ? [{
             key: h.SoundboardSoundGridSectionType.SEARCH,
             categoryInfo: {

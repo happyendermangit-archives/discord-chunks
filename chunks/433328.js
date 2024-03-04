@@ -87,7 +87,7 @@ function(e, t, n) {
             shouldShowBirthdayUX: E,
             isLightTheme: g,
             ...C
-        } = e, [S, T] = i.useState(r), I = null !== (t = o.get(S)) && void 0 !== t ? t : null;
+        } = e, [S, T] = i.useState(r), v = null !== (t = o.get(S)) && void 0 !== t ? t : null;
         return i.useEffect(() => {
             h ? T(e => f(h, E, g, p, e)) : p && T(r)
         }, [h, E, g, p]), (0, l.jsxs)("svg", {
@@ -100,7 +100,7 @@ function(e, t, n) {
             }) : (0, l.jsx)(d, {
                 referralsRemaining: m,
                 fillColor: h ? S : r,
-                secondaryFillColor: h ? I : null
+                secondaryFillColor: h ? v : null
             }), (0, l.jsxs)("defs", {
                 children: [(0, l.jsxs)("linearGradient", {
                     id: "nitro_hover",

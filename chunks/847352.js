@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("105571"),
         S = n("634114"),
         T = n("49111"),
-        I = n("13030"),
-        v = n("942838"),
+        v = n("13030"),
+        I = n("942838"),
         _ = i.memo(function(e) {
             let {
                 positionTargetRef: t,
@@ -42,7 +42,7 @@ function(e, t, n) {
                 let {
                     target: n
                 } = e;
-                if ((0, r.isElement)(n) && null != n.closest("." + I.CHAT_INPUT_BUTTON_CLASSNAME)) return;
+                if ((0, r.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
                 for (;
                     (0, r.isElement)(n);) {
                     if (n === A.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
@@ -63,7 +63,7 @@ function(e, t, n) {
             return (0, l.jsx)(c.default, {
                 section: T.AnalyticsSections.EXPRESSION_PICKER,
                 children: (0, l.jsx)(m.AppReferencePositionLayer, {
-                    className: v.positionLayer,
+                    className: I.positionLayer,
                     reference: t,
                     position: "top",
                     align: "left",
@@ -74,17 +74,17 @@ function(e, t, n) {
                             isPositioned: t
                         } = e;
                         return (0, l.jsx)("section", {
-                            className: s(v.positionContainer),
+                            className: s(I.positionContainer),
                             ref: N,
                             role: "dialog",
                             "aria-label": "Application Launcher",
                             children: t ? (0, l.jsxs)("div", {
-                                className: v.drawerSizingWrapper,
+                                className: I.drawerSizingWrapper,
                                 ref: A,
                                 children: [(0, l.jsx)("div", {
-                                    className: v.resizeHandle
+                                    className: I.resizeHandle
                                 }), (0, l.jsxs)("div", {
-                                    className: v.contentWrapper,
+                                    className: I.contentWrapper,
                                     children: [(0, l.jsx)(S.default, {
                                         channel: n,
                                         isAppDetailPresent: null != b

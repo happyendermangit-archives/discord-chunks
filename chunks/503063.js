@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return v
+            return I
         }
     });
     var l = n("37983"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         S = n("782340"),
         T = n("731851");
 
-    function I(e) {
+    function v(e) {
         let {
             channel: t,
             message: n,
@@ -64,7 +64,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e) {
+    function I(e) {
         let {
             reply: t,
             chatInputType: n
@@ -74,7 +74,7 @@ function(e, t, n) {
             shouldMention: u,
             showMentionToggle: p
         } = t, {
-            nick: v,
+            nick: I,
             colorString: _,
             colorRoleName: N
         } = (0, d.default)(a), A = function(e, t) {
@@ -117,7 +117,7 @@ function(e, t, n) {
                             children: S.default.Messages.REPLYING_TO.format({
                                 userHook: (e, t) => (0, l.jsx)(o.NameWithRole, {
                                     className: T.name,
-                                    name: v,
+                                    name: I,
                                     color: _,
                                     roleName: N
                                 }, t)
@@ -168,7 +168,7 @@ function(e, t, n) {
                             })
                         })]
                     })]
-                }), y && (0, l.jsx)(I, {
+                }), y && (0, l.jsx)(v, {
                     channel: i,
                     message: a,
                     replyChainLength: A

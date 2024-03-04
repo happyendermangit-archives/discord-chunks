@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("128295"),
         S = n("414868"),
         T = n("49111"),
-        I = n("994428"),
-        v = n("13030"),
+        v = n("994428"),
+        I = n("13030"),
         _ = n("782340"),
         N = n("868387");
 
@@ -38,7 +38,7 @@ function(e, t, n) {
         } = e, x = (0, d.useAppContext)(), {
             analyticsLocations: y
         } = (0, E.default)(), O = x === T.AppContext.POPOUT, R = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), L = i.useCallback(() => {
-            a(I.ContentDismissActionType.UNKNOWN), (0, h.default)({
+            a(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
                 channel: M ? n : void 0,
                 guildId: n.guild_id,
                 locationObject: {
@@ -72,7 +72,7 @@ function(e, t, n) {
             text: _.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
             children: e => (0, l.jsxs)("div", {
                 ...e,
-                className: s(v.CHAT_INPUT_BUTTON_CLASSNAME, N.buttonContainer),
+                className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, N.buttonContainer),
                 ref: A,
                 children: [(0, l.jsx)(p.default, {
                     onClick: L,
@@ -102,7 +102,7 @@ function(e, t, n) {
                     ...e,
                     innerRef: t,
                     visibleContent: i,
-                    markAsDismissed: () => a(I.ContentDismissActionType.UNKNOWN)
+                    markAsDismissed: () => a(v.ContentDismissActionType.UNKNOWN)
                 })
             }
         })

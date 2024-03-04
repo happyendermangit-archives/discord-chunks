@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("166960"),
         S = n("646718"),
         T = n("49111"),
-        I = n("782340"),
-        v = n("486433"),
+        v = n("782340"),
+        I = n("486433"),
         _ = n("278410"),
         N = n("410957"),
         A = n("730708"),
@@ -44,38 +44,38 @@ function(e, t, n) {
             shouldShowBirthdayUX: o
         } = e, [u, c] = i.useState(!1), f = n - 1;
         return (0, l.jsxs)("div", {
-            className: v.confirmationContainer,
+            className: I.confirmationContainer,
             children: [(0, l.jsxs)("div", {
                 className: s({
-                    [v.confirmationBody]: !o,
-                    [v.confirmationBirthdayBody]: o
+                    [I.confirmationBody]: !o,
+                    [I.confirmationBirthdayBody]: o
                 }),
                 children: [(0, l.jsx)(d.ModalCloseButton, {
                     onClick: t,
-                    className: v.closeButton
+                    className: I.closeButton
                 }), (0, l.jsx)("img", {
                     alt: "",
                     src: o ? N : A,
-                    className: v.confirmationImage
+                    className: I.confirmationImage
                 }), (0, l.jsx)(d.Heading, {
                     variant: "heading-xl/bold",
                     color: "interactive-active",
-                    className: v.confirmationHeading,
-                    children: I.default.Messages.SAHRE_NITRO_MODAL_CONFIRMATION_HEADER
+                    className: I.confirmationHeading,
+                    children: v.default.Messages.SAHRE_NITRO_MODAL_CONFIRMATION_HEADER
                 }), (0, l.jsx)(d.Text, {
-                    className: v.confirmationBodyCopy,
+                    className: I.confirmationBodyCopy,
                     variant: "text-md/medium",
                     color: "header-primary",
-                    children: f > 0 ? I.default.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({
+                    children: f > 0 ? v.default.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({
                         count: f
-                    }) : I.default.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL_LAST_REFERRAL
+                    }) : v.default.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL_LAST_REFERRAL
                 }), (0, l.jsx)("hr", {
-                    className: v.confirmationBodySeparator
+                    className: I.confirmationBodySeparator
                 })]
             }), (0, l.jsxs)("div", {
-                className: v.confirmationButtonContainer,
+                className: I.confirmationButtonContainer,
                 children: [(0, l.jsx)(d.Button, {
-                    className: v.confirmationShareButton,
+                    className: I.confirmationShareButton,
                     submitting: u,
                     onClick: () => {
                         y(a, t, c), p.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -84,15 +84,15 @@ function(e, t, n) {
                             other_user_id: Number(a)
                         })
                     },
-                    children: I.default.Messages.SHAER_NITRO_CONFIRMATION_BUTTON_TEXT
+                    children: v.default.Messages.SHAER_NITRO_CONFIRMATION_BUTTON_TEXT
                 }), (0, l.jsx)("div", {
-                    className: v.confirmationCancelButtonContainer,
+                    className: I.confirmationCancelButtonContainer,
                     children: (0, l.jsx)(d.Clickable, {
                         onClick: t,
                         children: (0, l.jsx)(d.Text, {
                             variant: "text-sm/medium",
-                            className: v.confirmationCancelCopy,
-                            children: I.default.Messages.CANCEL
+                            className: I.confirmationCancelCopy,
+                            children: v.default.Messages.CANCEL
                         })
                     })
                 })]
@@ -122,38 +122,38 @@ function(e, t, n) {
             analyticsLocations: M,
             shouldShowBirthdayUX: L
         }) : (0, l.jsxs)("div", {
-            className: v.generalContainer,
+            className: I.generalContainer,
             children: [(0, l.jsxs)("div", {
-                className: v.generalBodyContainer,
+                className: I.generalBodyContainer,
                 children: [(0, l.jsx)("img", {
                     alt: "",
                     src: L ? N : x,
-                    className: v.generalBodyImage
+                    className: I.generalBodyImage
                 }), (0, l.jsxs)("div", {
-                    className: v.innerContent,
+                    className: I.innerContent,
                     children: [(0, l.jsx)(d.ModalCloseButton, {
                         onClick: a,
-                        className: v.closeButton
+                        className: I.closeButton
                     }), (0, l.jsx)(d.Heading, {
-                        className: v.generalHeading,
+                        className: I.generalHeading,
                         variant: "heading-xl/bold",
-                        children: r ? I.default.Messages.SHARE_NITRO_RESEND_TRIAL_HEADER : I.default.Messages.SHARE_NITRO_MODAL_HEADER
+                        children: r ? v.default.Messages.SHARE_NITRO_RESEND_TRIAL_HEADER : v.default.Messages.SHARE_NITRO_MODAL_HEADER
                     }), (0, l.jsxs)(d.Text, {
-                        className: v.generalBodyCopy,
+                        className: I.generalBodyCopy,
                         variant: "text-md/normal",
                         children: [(0, l.jsx)(d.Anchor, {
-                            className: s(v.learnMore, {
-                                [v.learnMoreResendUnderlinedText]: r
+                            className: s(I.learnMore, {
+                                [I.learnMoreResendUnderlinedText]: r
                             }),
                             href: E.default.getArticleURL(T.HelpdeskArticles.SHARE_NITRO_FAQ),
-                            children: r ? I.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : I.default.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({
+                            children: r ? v.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : v.default.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({
                                 count: t
                             })
                         }), r ? (0, l.jsx)("div", {
-                            className: v.shareNitroResendCopySuffix,
-                            children: I.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
+                            className: I.shareNitroResendCopySuffix,
+                            children: v.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
                         }) : (0, l.jsx)("div", {
-                            children: I.default.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({
+                            children: v.default.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({
                                 date: (0, h.dateFormat)(o(P), "LL")
                             })
                         })]
@@ -161,12 +161,12 @@ function(e, t, n) {
                 }), L && (0, l.jsx)("img", {
                     alt: "",
                     src: _,
-                    className: v.birthdayBackgroundImage
+                    className: I.birthdayBackgroundImage
                 })]
             }), (0, l.jsx)("div", {
-                className: v.generalButtonContainer,
+                className: I.generalButtonContainer,
                 children: (0, l.jsx)(d.Button, {
-                    className: v.generalShareButton,
+                    className: I.generalShareButton,
                     submitting: g,
                     onClick: () => {
                         r ? y(R, a, A) : (c(!0), p.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -175,7 +175,7 @@ function(e, t, n) {
                             other_user_id: Number(R)
                         }))
                     },
-                    children: r ? I.default.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : I.default.Messages.SHARE_NITRO_BUTTON_TEXT
+                    children: r ? v.default.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : v.default.Messages.SHARE_NITRO_BUTTON_TEXT
                 })
             })]
         })
@@ -206,7 +206,7 @@ function(e, t, n) {
                 closeOnScroll: !1,
                 ignoreModalClicks: !0,
                 children: () => (0, l.jsx)("div", {
-                    className: v.popoutTarget
+                    className: I.popoutTarget
                 })
             })
         }) : null

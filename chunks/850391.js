@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         },
         ChatInputTypes: function() {
-            return I
+            return v
         }
     });
     var l, i, a = n("394846"),
@@ -382,7 +382,7 @@ function(e, t, n) {
             disableAutoFocus: !0,
             showCharacterCount: !0
         },
-        I = {
+        v = {
             NORMAL: r,
             OVERLAY: o,
             SIDEBAR: u,

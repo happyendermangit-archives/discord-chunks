@@ -124,8 +124,8 @@ function(e, t, n) {
             for (let e of Object.values(E)) Array.isArray(e) && (C += e.length);
             let S = !0 === E.isLoading,
                 T = this.shouldShow(C, S, f),
-                I = this.state.selectedIndex;
-            !T || S ? I = null : null != I && I >= C && (I = C - 1), T && !this.state.isVisible && (0, s.trackAutocompleteOpen)(c, this.props.channel, g), this.setState({
+                v = this.state.selectedIndex;
+            !T || S ? v = null : null != v && v >= C && (v = C - 1), T && !this.state.isVisible && (0, s.trackAutocompleteOpen)(c, this.props.channel, g), this.setState({
                 query: {
                     type: c,
                     typeInfo: f,
@@ -136,7 +136,7 @@ function(e, t, n) {
                     isLoading: S
                 },
                 isVisible: T,
-                selectedIndex: I
+                selectedIndex: v
             })
         }
         shouldShow(e, t, n) {

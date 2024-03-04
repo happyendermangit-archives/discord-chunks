@@ -8,7 +8,7 @@ function(e, t, n) {
             return C
         },
         convertRawToInlineVoids: function() {
-            return I
+            return v
         }
     }), n("222007"), n("424973");
     var l = n("627445"),
@@ -64,7 +64,7 @@ function(e, t, n) {
         var a;
         let s = "line" === t[0].type && (null === (a = t[0].codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock) === !0,
             o = f.ElementUtils.markdown(t[0], n);
-        T(e, t, s, o) && (t = f.ElementUtils.updateElement(e, t), o = f.ElementUtils.markdown(t[0], n)), !s && (I(e, t, l, o) && (t = f.ElementUtils.updateElement(e, t), o = f.ElementUtils.markdown(t[0], n)), function(e, t, n, l, a) {
+        T(e, t, s, o) && (t = f.ElementUtils.updateElement(e, t), o = f.ElementUtils.markdown(t[0], n)), !s && (v(e, t, l, o) && (t = f.ElementUtils.updateElement(e, t), o = f.ElementUtils.markdown(t[0], n)), function(e, t, n, l, a) {
             let [s, o] = t, u = !1;
             for (let d = s.children.length - 1; d >= 0; d--) {
                 let p;
@@ -81,7 +81,7 @@ function(e, t, n) {
                         path: E,
                         offset: p.index
                     };
-                    if (v(e, o, i, a)) continue;
+                    if (I(e, o, i, a)) continue;
                     let s = (0, r.resolvePlaintextInlineVoid)(p[0], n, l);
                     null != s && _(l, t[0], s) ? g.push({
                         index: p.index,
@@ -140,7 +140,7 @@ function(e, t, n) {
                         path: f.PathUtils.child(i, 0),
                         offset: 0
                     };
-                (n || null != l && v(e, a, o, l)) && (c.SlateTransforms.voidToText(e, (0, d.serializeDescendant)(r, {
+                (n || null != l && I(e, a, o, l)) && (c.SlateTransforms.voidToText(e, (0, d.serializeDescendant)(r, {
                     mode: "plain",
                     preventEmojiSurrogates: !0
                 }), i), s = !0)
@@ -149,7 +149,7 @@ function(e, t, n) {
         return s
     }
 
-    function I(e, t, n, l) {
+    function v(e, t, n, l) {
         let i = t[1],
             a = !1,
             s = [...l.entries].reverse();
@@ -261,7 +261,7 @@ function(e, t, n) {
         return a
     }
 
-    function v(e, t, n, l) {
+    function I(e, t, n, l) {
         let i = 0;
         for (let [l, a] of f.EditorUtils.nodes(e, {
                 at: {

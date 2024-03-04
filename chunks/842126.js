@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("458604"),
         S = n("115279"),
         T = n("49111"),
-        I = n("782340"),
-        v = n("348473"),
+        v = n("782340"),
+        I = n("348473"),
         _ = e => {
             let {
                 emojiDescriptors: t,
@@ -88,14 +88,14 @@ function(e, t, n) {
                                     key: t
                                 }, (0, l.jsx)(r.FocusRing, {
                                     children: (0, l.jsx)("button", {
-                                        "aria-label": I.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                                        "aria-label": v.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                                         ref: f,
-                                        className: s(v.emojiItem, {
-                                            [v.emojiItemLarge]: W,
-                                            [v.emojiItemMedium]: Y,
-                                            [v.emojiItemSelected]: u,
+                                        className: s(I.emojiItem, {
+                                            [I.emojiItemLarge]: W,
+                                            [I.emojiItemMedium]: Y,
+                                            [I.emojiItemSelected]: u,
                                             [null != j ? j : ""]: u,
-                                            [v.showPulse]: H === t
+                                            [I.showPulse]: H === t
                                         }),
                                         onFocus: null != h ? h : c,
                                         onMouseOver: c,
@@ -104,8 +104,8 @@ function(e, t, n) {
                                         onClick: d,
                                         tabIndex: m,
                                         children: (0, l.jsx)(p.default, {
-                                            className: v.icon,
-                                            foreground: v.icon,
+                                            className: I.icon,
+                                            foreground: I.icon,
                                             width: 24,
                                             height: 24
                                         })
@@ -148,9 +148,9 @@ function(e, t, n) {
                 },
                 Z = e => (0, l.jsx)("ul", {
                     ...x(R),
-                    className: s(v.emojiListRow, {
-                        [v.emojiListRowLargeSize]: W,
-                        [v.emojiListRowMediumSize]: Y
+                    className: s(I.emojiListRow, {
+                        [I.emojiListRowLargeSize]: W,
+                        [I.emojiListRowMediumSize]: Y
                     }),
                     ref: K,
                     children: e.map(z)
@@ -159,32 +159,32 @@ function(e, t, n) {
             let J = t.filter(e => !!w && e.type === g.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === S.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === S.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
                 q = t.filter(e => e.subCategory === S.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
             return 0 === q.length ? Z(t) : (0, l.jsxs)("div", {
-                className: v.topEmojiSectionContainer,
+                className: I.topEmojiSectionContainer,
                 children: [(0, l.jsx)("div", {
-                    className: s(v.topEmojiContainer, {
-                        [v.noEmojis]: 0 === J.length
+                    className: s(I.topEmojiContainer, {
+                        [I.noEmojis]: 0 === J.length
                     }),
                     children: Z(J)
                 }), (0, l.jsxs)("div", {
-                    className: v.newlyAddedHighlightContainer,
+                    className: I.newlyAddedHighlightContainer,
                     children: [(0, l.jsx)("div", {
-                        className: s(v.newlyAddedHighlight, {
-                            [v.oneItem]: 1 === q.length,
-                            [v.alignRight]: J.length > 0
+                        className: s(I.newlyAddedHighlight, {
+                            [I.oneItem]: 1 === q.length,
+                            [I.alignRight]: J.length > 0
                         }),
                         children: Z(q)
                     }), (0, l.jsxs)("div", {
-                        className: s(v.newlyAddedBadge, {
-                            [v.newlyAddedBadgeLarge]: W,
-                            [v.newlyAddedBadgeMedium]: Y,
-                            [v.alignRight]: J.length > 0
+                        className: s(I.newlyAddedBadge, {
+                            [I.newlyAddedBadgeLarge]: W,
+                            [I.newlyAddedBadgeMedium]: Y,
+                            [I.alignRight]: J.length > 0
                         }),
                         children: [(0, l.jsx)(h.default, {
-                            foreground: v.newlyAddedBadgeStar
+                            foreground: I.newlyAddedBadgeStar
                         }), (0, l.jsx)(r.Text, {
                             variant: "text-xs/semibold",
                             color: "always-white",
-                            children: I.default.Messages.NEW
+                            children: v.default.Messages.NEW
                         })]
                     })]
                 })]

@@ -89,7 +89,7 @@ function(e, t, n) {
             assetsToLoad: d,
             drawImage: e => {
                 var s;
-                null != u ? N(e, n, t) : (0, a.default)(n) ? I(e, n, t) : (0, i.default)(n) && n.name === l.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name ? _(e, n, t) : n.type === m.ActivityTypes.HANG_STATUS ? v(e, n, t) : T(e, n, t), (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has("Platform")) && e.drawImage("Platform", {
+                null != u ? N(e, n, t) : (0, a.default)(n) ? v(e, n, t) : (0, i.default)(n) && n.name === l.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name ? _(e, n, t) : n.type === m.ActivityTypes.HANG_STATUS ? I(e, n, t) : T(e, n, t), (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has("Platform")) && e.drawImage("Platform", {
                     x: c.canvasWidth - c.padding - c.platformSize,
                     y: c.padding
                 }, {
@@ -157,7 +157,7 @@ function(e, t, n) {
             x: o,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0))
-    }, I = (e, t, n) => {
+    }, v = (e, t, n) => {
         var l, i;
         e.setSize({
             w: c.canvasWidth,
@@ -199,7 +199,7 @@ function(e, t, n) {
             x: r,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, v = (e, t, l) => {
+    }, I = (e, t, l) => {
         var i, a;
         e.setSize({
             w: c.canvasWidth,

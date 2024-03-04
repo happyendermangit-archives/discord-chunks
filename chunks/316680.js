@@ -46,8 +46,8 @@ function(e, t, n) {
                 onVolumeHide: S
             } = this.props, {
                 hovered: T,
-                focused: I,
-                dragging: v
+                focused: v,
+                dragging: I
             } = this.state, _ = u.default;
             return p || g === h ? _ = d.default : g < E / 2 && (_ = c.default), (0, l.jsxs)("div", {
                 className: s(t, m.container),
@@ -72,7 +72,7 @@ function(e, t, n) {
                 onKeyDown: this.handleKeyDown,
                 children: [(0, l.jsx)("div", {
                     className: s(m.volumeButtonSlider, n, {
-                        [m.sliderVisible]: T || I || v
+                        [m.sliderVisible]: T || v || I
                     }),
                     onMouseEnter: () => {
                         clearTimeout(this._hoverTimeout), this.setState({

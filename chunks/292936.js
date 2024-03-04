@@ -21,8 +21,8 @@ function(e, t, n) {
         C = n("866353"),
         S = n("364685"),
         T = n("161585"),
-        I = n("24373"),
-        v = n("41170"),
+        v = n("24373"),
+        I = n("41170"),
         _ = n("591522"),
         N = n("209069"),
         A = n("845579"),
@@ -72,7 +72,7 @@ function(e, t, n) {
                 children: (0, a.jsx)("div", {
                     className: b.maskBackground
                 })
-            }), (0, a.jsx)(v.default, {
+            }), (0, a.jsx)(I.default, {
                 maskAsset: !0,
                 size: U,
                 sticker: s,
@@ -91,7 +91,7 @@ function(e, t, n) {
             onSelectSticker: r,
             stickerIconVisible: c = !1,
             submitButtonVisible: f = !1
-        } = e, v = s.useContext(E.default), [_, y] = s.useState(null), [j, U] = s.useState(!1), [D, G] = s.useState(null), B = (0, g.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, j, l), {
+        } = e, I = s.useContext(E.default), [_, y] = s.useState(null), [j, U] = s.useState(!1), [D, G] = s.useState(null), B = (0, g.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, j, l), {
             analyticsLocations: Q,
             AnalyticsLocationProvider: $
         } = (0, h.default)(p.default.EXPRESSION_SUGGESTIONS), {
@@ -114,10 +114,10 @@ function(e, t, n) {
                         y(null), null === (l = n.current) || void 0 === l || l.focus()
                     }
                 };
-            return v.addListener("text-changed", ee), v.addListener("autocomplete-visibility-change", e), v.addListener("selection-changed", t), () => {
-                v.removeListener("text-changed", ee), v.removeListener("autocomplete-visibility-change", e), v.removeListener("selection-changed", t)
+            return I.addListener("text-changed", ee), I.addListener("autocomplete-visibility-change", e), I.addListener("selection-changed", t), () => {
+                I.removeListener("text-changed", ee), I.removeListener("autocomplete-visibility-change", e), I.removeListener("selection-changed", t)
             }
-        }, [ee, n, v]), s.useLayoutEffect(() => {
+        }, [ee, n, I]), s.useLayoutEffect(() => {
             null == _ && G(null)
         }, [_]);
         let [en, el] = s.useState(!1);
@@ -193,21 +193,21 @@ function(e, t, n) {
                             sticker_id: e.id,
                             suggestion_trigger: W
                         }), t === C.StickerSendability.SENDABLE) U(!0), r(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
-                    else if ((0, I.isStandardSticker)(e)) {
+                    else if ((0, v.isStandardSticker)(e)) {
                         let t = S.default.getStickerPack(e.pack_id);
                         null != t && (0, N.default)({
                             stickerPack: t,
                             analyticsLocations: Q
                         })
                     }
-                    v.emit("sticker-suggestions-hidden")
+                    I.emit("sticker-suggestions-hidden")
                 }
             },
             eo = s.useRef([]),
             eu = s.useRef(!1);
         s.useEffect(() => {
-            ea && (eo.current = X), ea !== eu.current && (v.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
-        }, [v, ea, X, V]);
+            ea && (eo.current = X), ea !== eu.current && (I.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
+        }, [I, ea, X, V]);
         let ed = !ea,
             ec = ea ? X : eo.current;
         return (0, a.jsx)($, {

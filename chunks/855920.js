@@ -5,7 +5,7 @@ function(e, t, n) {
             return T
         },
         MessageCustomEmoji: function() {
-            return I
+            return v
         }
     }), n("222007");
     var l = n("37983"),
@@ -44,7 +44,7 @@ function(e, t, n) {
                 ...h.EXPRESSION_TOOLTIP_PROPS,
                 position: i,
                 onTooltipShow: () => {
-                    a && v({
+                    a && I({
                         emojiNode: n,
                         isCustomEmoji: !1
                     })
@@ -71,13 +71,13 @@ function(e, t, n) {
                 children: f
             }) : f()
         },
-        I = e => {
+        v = e => {
             let {
                 node: t,
                 isInteracting: n,
                 tooltipPosition: a = h.EXPRESSION_TOOLTIP_PROPS.position,
                 enableClick: d = !0
-            } = e, [C, T] = i.useState(String(Date.now())), [I, _] = i.useState(!1), {
+            } = e, [C, T] = i.useState(String(Date.now())), [v, _] = i.useState(!1), {
                 enabled: N
             } = f.NitroBadgeOnEmojiHoverExperiment.useExperiment({
                 location: "MessageCustomEmoji"
@@ -97,7 +97,7 @@ function(e, t, n) {
                 ...h.EXPRESSION_TOOLTIP_PROPS,
                 position: a,
                 onTooltipShow: () => {
-                    _(!0), d && (v({
+                    _(!0), d && (I({
                         emojiNode: t,
                         isCustomEmoji: !0,
                         nonce: x
@@ -114,7 +114,7 @@ function(e, t, n) {
                         _(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
                     },
                     onMouseLeave: () => {
-                        I && (m.default.track(E.AnalyticEvents.CLOSE_POPOUT, {
+                        v && (m.default.track(E.AnalyticEvents.CLOSE_POPOUT, {
                             nonce: x
                         }), _(!1))
                     },
@@ -146,7 +146,7 @@ function(e, t, n) {
                 children: y
             }) : y()
         },
-        v = e => {
+        I = e => {
             let {
                 emojiNode: t,
                 isCustomEmoji: n,

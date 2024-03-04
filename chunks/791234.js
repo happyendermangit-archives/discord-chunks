@@ -65,7 +65,7 @@ function(e, t, n) {
         return C(e) || S(e)
     }(i = l || (l = {})).EMBED = "embed", i.ATTACHMENT = "attachment";
 
-    function I(e) {
+    function v(e) {
         let t = o.InlineAttachmentMedia.useSetting();
         return function(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.InlineAttachmentMedia.getSetting();
@@ -108,7 +108,7 @@ function(e, t, n) {
         }(e, t)
     }
 
-    function v(e, t) {
+    function I(e, t) {
         let n = o.InlineEmbedMedia.useSetting(),
             l = o.RenderEmbeds.useSetting();
         if (null == e) return [];
@@ -151,21 +151,21 @@ function(e, t, n) {
     }
 
     function N(e, t) {
-        let n = I(e),
-            l = v(e, t);
+        let n = v(e),
+            l = I(e, t);
         return [...n, ...l]
     }
 
     function A(e, t) {
         var n, l;
-        let i = I(e),
-            a = v(e, t);
+        let i = v(e),
+            a = I(e, t);
         return null !== (l = null !== (n = i[0]) && void 0 !== n ? n : a[0]) && void 0 !== l ? l : null
     }
 
     function x(e, t) {
-        let n = I(e),
-            l = v(e, t);
+        let n = v(e),
+            l = I(e, t);
         return null == n[0] && null != l[0]
     }
 

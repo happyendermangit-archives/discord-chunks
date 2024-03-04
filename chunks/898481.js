@@ -29,24 +29,24 @@ function(e, t, n) {
             isCurrentUser: t,
             color: n,
             look: T,
-            applicationStream: I
+            applicationStream: v
         } = e, {
-            activeStream: v,
+            activeStream: I,
             watchingOtherStream: _
         } = (0, i.useStateFromStoresObject)([c.default], () => ({
-            activeStream: c.default.getActiveStreamForApplicationStream(I),
-            watchingOtherStream: null != I && c.default.getAllActiveStreamsForChannel(I.channelId).filter(e => {
+            activeStream: c.default.getActiveStreamForApplicationStream(v),
+            watchingOtherStream: null != v && c.default.getAllActiveStreamsForChannel(v.channelId).filter(e => {
                 let {
                     ownerId: t
                 } = e;
-                return t !== I.ownerId
+                return t !== v.ownerId
             }).length > 0
-        })), N = (0, i.useStateFromStores)([f.default], () => f.default.getChannel(null == I ? void 0 : I.channelId)), [A, x] = (0, d.useCanWatchStream)(N), y = (0, u.useWindowDispatch)(), O = null != v && null != I && v.state !== g.ApplicationStreamStates.ENDED && v.ownerId === I.ownerId, R = e => {
-            null != I && (r.default.selectVoiceChannel(I.channelId), !O && (0, o.watchStreamAndTransitionToStream)(I, {
+        })), N = (0, i.useStateFromStores)([f.default], () => f.default.getChannel(null == v ? void 0 : v.channelId)), [A, x] = (0, d.useCanWatchStream)(N), y = (0, u.useWindowDispatch)(), O = null != I && null != v && I.state !== g.ApplicationStreamStates.ENDED && I.ownerId === v.ownerId, R = e => {
+            null != v && (r.default.selectVoiceChannel(v.channelId), !O && (0, o.watchStreamAndTransitionToStream)(v, {
                 forceMultiple: e
             }), y.dispatch(g.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(g.ComponentActions.MODAL_CLOSE), s.default.popAll())
         };
-        if (null == I) return null;
+        if (null == v) return null;
         let M = (0, d.getStreamCTAString)(x);
         t ? M = C.default.Messages.WATCH_STREAM_STREAMING : O && (M = C.default.Messages.WATCH_STREAM_WATCHING);
         let L = {

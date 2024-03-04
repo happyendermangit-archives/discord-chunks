@@ -23,8 +23,8 @@ function(e, t, n) {
         C = n("685665"),
         S = n("384997"),
         T = n("385976"),
-        I = n("575226"),
-        v = n("305781"),
+        v = n("575226"),
+        I = n("305781"),
         _ = n("986632"),
         N = n("538282"),
         A = n("246511"),
@@ -103,7 +103,7 @@ function(e, t, n) {
                             pickerIntention: n,
                             category: e.category,
                             subCategory: e.subCategory,
-                            newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && I.default.isNewerThanLastSeen(o, e.emoji.id)
+                            newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && v.default.isNewerThanLastSeen(o, e.emoji.id)
                         }), a(e.emoji, !l.shiftKey, c)
                     }
                 }
@@ -113,7 +113,7 @@ function(e, t, n) {
                 getRowProps: g,
                 gridContainerProps: C,
                 handleGridContainerKeyDown: S,
-                isUsingKeyboardNavigation: v
+                isUsingKeyboardNavigation: I
             } = (0, x.useExpressionPickerGridKeyboardNavigation)({
                 columnCounts: l,
                 gridNavigatorId: J.GRID_NAVIGATOR_ID,
@@ -139,7 +139,7 @@ function(e, t, n) {
                 getRowProps: g,
                 gridContainerProps: C,
                 handleGridContainerKeyDown: S,
-                isUsingKeyboardNavigation: v
+                isUsingKeyboardNavigation: I
             }
         },
         ea = (e, t) => {
@@ -189,10 +189,10 @@ function(e, t, n) {
                 shouldHidePickerActions: eC = !1,
                 messageId: eS,
                 renderHeader: eT,
-                listHeaderClassName: eI
+                listHeaderClassName: ev
             } = e,
             {
-                onFocus: ev,
+                onFocus: eI,
                 onKeyDown: e_,
                 autoFocus: eN = !0,
                 accessory: eA
@@ -261,7 +261,7 @@ function(e, t, n) {
         (0, M.useMaybeFetchPremiumLikelihood)(L.default);
         let e3 = i.useCallback(() => {
                 let e = e4.length > 0 ? e4[0].id : null;
-                (0, v.updateNewlyAddedLastSeen)(ej, e), e8()
+                (0, I.updateNewlyAddedLastSeen)(ej, e), e8()
             }, [e8, e4, ej]),
             e6 = (0, K.useEmojiSelectHandler)({
                 pickerIntention: o,
@@ -291,7 +291,7 @@ function(e, t, n) {
                         category: e.category,
                         subCategory: e.subCategory,
                         position: e.columnIndex + 1,
-                        newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && I.default.isNewerThanLastSeen(ej, e.emoji.id),
+                        newlyAddedHighlight: e.subCategory === J.EmojiSubCategory.NEWLY_ADDED_EMOJI && v.default.isNewerThanLastSeen(ej, e.emoji.id),
                         isBurstReaction: eU
                     })
                 },
@@ -367,7 +367,7 @@ function(e, t, n) {
                     null == tt || tt(e), null == e_ || e_(e)
                 },
                 searchBarRef: eb,
-                onFocus: ev,
+                onFocus: eI,
                 autoFocus: eN,
                 accessory: eA,
                 headerClassName: ep,
@@ -436,7 +436,7 @@ function(e, t, n) {
                                 channelGuildId: ej,
                                 messageId: eS,
                                 isBurstReaction: eU,
-                                listHeaderClassName: eI
+                                listHeaderClassName: ev
                             }) : null
                         })]
                     }), (0, l.jsx)(W.EmojiPickerInspector, {

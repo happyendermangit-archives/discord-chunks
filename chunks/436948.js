@@ -15,8 +15,8 @@ function(e, a, t) {
         l = t("625454"),
         f = t("441822"),
         u = t("862337"),
-        b = t("913144"),
-        p = t("605250"),
+        p = t("913144"),
+        b = t("605250"),
         h = t("271938"),
         j = t("773336"),
         m = t("50885"),
@@ -111,7 +111,7 @@ function(e, a, t) {
                 })
             }(t);
             let d = A.toDataURL("image/jpeg");
-            if (b.default.dispatch({
+            if (p.default.dispatch({
                     type: "STREAM_PREVIEW_FETCH_SUCCESS",
                     streamKey: a,
                     previewURL: d
@@ -131,14 +131,14 @@ function(e, a, t) {
                 oldFormErrors: !0
             })
         } catch (a) {
-            new(0, p.default)("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", a), s === e && O.start(6e4, t);
+            new(0, b.default)("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", a), s === e && O.start(6e4, t);
             return
         }
         s === e && (S ? O.start(6e4, t) : O.start(3e5, t))
     }
     var C = {
         init() {
-            b.default.subscribe("CONNECTION_OPEN", w), b.default.subscribe("LOGOUT", w), b.default.subscribe("STREAM_DELETE", w), b.default.subscribe("RTC_CONNECTION_VIDEO", e => {
+            p.default.subscribe("CONNECTION_OPEN", w), p.default.subscribe("LOGOUT", w), p.default.subscribe("STREAM_DELETE", w), p.default.subscribe("RTC_CONNECTION_VIDEO", e => {
                 let {
                     guildId: a,
                     channelId: t,
@@ -147,7 +147,7 @@ function(e, a, t) {
                     context: c
                 } = e;
                 !(null == n || c !== I.MediaEngineContextTypes.STREAM || d !== h.default.getId() || __OVERLAY__) && (w(), s = n, v(n, a, t, d))
-            }), b.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
+            }), p.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
                 let {
                     videoState: a
                 } = e;

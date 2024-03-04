@@ -34,7 +34,7 @@ function(e, t, n) {
             var n;
             if (!t) return 0 === e ? 0 : 8;
             return (null === (n = a[e + 1]) || void 0 === n ? void 0 : n.type) === d.ApplicationCommandSectionType.BUILT_IN ? 0 : 8
-        }, [a]), I = i.useCallback((e, t) => {
+        }, [a]), v = i.useCallback((e, t) => {
             let i = a[t];
             if (null == i) return;
             let s = (0, c.getIconComponent)(i),
@@ -82,7 +82,7 @@ function(e, t, n) {
                 store: o.ApplicationCommandDiscoveryPickerStore,
                 categories: a,
                 className: f.list,
-                renderCategoryListItem: I,
+                renderCategoryListItem: v,
                 rowCount: a.length,
                 categoryHeight: S,
                 listPadding: m,
