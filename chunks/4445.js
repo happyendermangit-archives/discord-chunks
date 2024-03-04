@@ -1,20 +1,20 @@
-function(e, t, s) {
+function(e, t, r) {
     "use strict";
-    s.r(t), s.d(t, {
+    r.r(t), r.d(t, {
         CategoryColumn: function() {
             return f
         },
         ResultsLoader: function() {
-            return p
+            return m
         }
-    }), s("222007"), s("808653");
-    var r = s("37983"),
-        n = s("884691"),
-        l = s("917351"),
-        i = s.n(l),
-        a = s("458960"),
-        o = s("669491"),
-        u = s("982939");
+    }), r("222007"), r("808653");
+    var s = r("37983"),
+        n = r("884691"),
+        l = r("917351"),
+        i = r.n(l),
+        a = r("458960"),
+        o = r("669491"),
+        u = r("982939");
     let c = [o.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, o.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
     class d extends n.PureComponent {
         render() {
@@ -26,7 +26,7 @@ function(e, t, s) {
                     backgroundColor: t
                 }
             } = this;
-            return (0, r.jsx)("div", {
+            return (0, s.jsx)("div", {
                 style: {
                     height: e,
                     backgroundColor: t
@@ -67,12 +67,12 @@ function(e, t, s) {
             let {
                 blocks: e
             } = this.state;
-            return (0, r.jsxs)(a.default.div, {
+            return (0, s.jsxs)(a.default.div, {
                 className: u.column,
                 style: this.getAnimatedStyle(),
-                children: [e.map((e, t) => (0, r.jsx)(d, {
+                children: [e.map((e, t) => (0, s.jsx)(d, {
                     height: e
-                }, t)), e.map((e, t) => (0, r.jsx)(d, {
+                }, t)), e.map((e, t) => (0, s.jsx)(d, {
                     height: e
                 }, "alt".concat(t)))]
             })
@@ -85,11 +85,11 @@ function(e, t, s) {
                     },
                     state: {
                         translateY: t,
-                        height: s
+                        height: r
                     }
                 } = this;
-                t.setValue(e > 0 ? 0 : -s / 2 + 12), a.default.timing(t, {
-                    toValue: e > 0 ? -s / 2 + 12 : 0,
+                t.setValue(e > 0 ? 0 : -r / 2 + 12), a.default.timing(t, {
+                    toValue: e > 0 ? -r / 2 + 12 : 0,
                     duration: 800,
                     easing: a.default.Easing.linear
                 }).start(this.animateSlide)
@@ -109,25 +109,25 @@ function(e, t, s) {
         let {
             columns: t
         } = e;
-        return (0, r.jsx)("div", {
+        return (0, s.jsx)("div", {
             className: u.column,
             style: {
                 width: "".concat(100 / t, "%")
             },
-            children: [, , , , ].fill(null).map((e, t) => (0, r.jsx)("div", {
+            children: [, , , , ].fill(null).map((e, t) => (0, s.jsx)("div", {
                 className: u.categoryLoader
             }, t))
         })
     };
-    class p extends n.PureComponent {
+    class m extends n.PureComponent {
         render() {
             let {
                 columns: e,
                 renderColumn: t
             } = this.props;
-            return (0, r.jsx)("div", {
+            return (0, s.jsx)("div", {
                 className: u.container,
-                children: Array(e).fill(null).map((s, r) => t(e, r))
+                children: Array(e).fill(null).map((r, s) => t(e, s))
             })
         }
     }

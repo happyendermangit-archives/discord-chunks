@@ -1,22 +1,22 @@
-function(e, t, s) {
+function(e, t, r) {
     "use strict";
-    s.r(t), s.d(t, {
+    r.r(t), r.d(t, {
         default: function() {
             return i
         }
-    }), s("222007");
-    var r, n = s("884691");
+    }), r("222007");
+    var s, n = r("884691");
 
-    function l(e, t, s) {
-        return Math.min(Math.max(Math.floor(e / t), 1), s)
+    function l(e, t, r) {
+        return Math.min(Math.max(Math.floor(e / t), 1), r)
     }
-    var i = (0, s("737960").default)(((r = class extends n.Component {
+    var i = (0, r("737960").default)(((s = class extends n.Component {
         static getDerivedStateFromProps(e, t) {
             let {
-                width: s,
-                desiredItemWidth: r,
+                width: r,
+                desiredItemWidth: s,
                 maxColumns: n
-            } = e, i = l(s, r, n);
+            } = e, i = l(r, s, n);
             return i !== t.columns ? {
                 columns: i
             } : null
@@ -25,11 +25,11 @@ function(e, t, s) {
             let {
                 width: e,
                 height: t,
-                children: s
+                children: r
             } = this.props, {
-                columns: r
+                columns: s
             } = this.state;
-            return s(r, e, t)
+            return r(s, e, t)
         }
         constructor(...e) {
             super(...e), this.state = {
@@ -38,5 +38,5 @@ function(e, t, s) {
         }
     }).defaultProps = {
         desiredItemWidth: 200
-    }, r))
+    }, s))
 }

@@ -1,30 +1,30 @@
-function(e, t, s) {
+function(e, t, r) {
     "use strict";
-    s.r(t), s.d(t, {
+    r.r(t), r.d(t, {
         default: function() {
             return i
         }
     });
-    var r = s("37983"),
-        n = s("884691"),
-        l = s("308723");
+    var s = r("37983"),
+        n = r("884691"),
+        l = r("308723");
 
     function i(e) {
-        return n.forwardRef(function(t, s) {
+        return n.forwardRef(function(t, r) {
             let i = n.useRef();
-            return n.useImperativeHandle(s, () => ({
+            return n.useImperativeHandle(r, () => ({
                 triggerResize: () => {
                     var e;
                     null === (e = i.current) || void 0 === e || e.onResize()
                 }
-            })), (0, r.jsx)(l.default, {
+            })), (0, s.jsx)(l.default, {
                 ref: i,
-                children: s => {
+                children: r => {
                     let {
                         width: n,
                         height: l
-                    } = s;
-                    return (0, r.jsx)(e, {
+                    } = r;
+                    return (0, s.jsx)(e, {
                         ...t,
                         width: n,
                         height: l

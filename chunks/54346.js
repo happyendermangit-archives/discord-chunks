@@ -11,8 +11,8 @@ function(e, t, n) {
         u = n("305961"),
         a = n("957255"),
         d = n("607620"),
-        o = n("299039"),
-        s = n("610174"),
+        s = n("299039"),
+        o = n("610174"),
         c = n("311161");
     let f = {},
         _ = {};
@@ -21,8 +21,8 @@ function(e, t, n) {
         var e;
         let t = null !== (e = r.default.getGuildsProto()) && void 0 !== e ? e : {},
             n = u.default.getGuilds(),
-            l = o.default.keys(n);
-        for (let e of (_ = {}, l))(0, s.getGuildAlertModeEnabled)(e).showAlertMode && (_[e] = {
+            l = s.default.keys(n);
+        for (let e of (_ = {}, l))(0, o.getGuildAlertModeEnabled)(e).showAlertMode && (_[e] = {
             guildId: e,
             guildName: n[e].name,
             ...t[e]

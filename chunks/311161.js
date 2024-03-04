@@ -5,10 +5,10 @@ function(e, t, n) {
             return d
         },
         hasDetectedActivity: function() {
-            return o
+            return s
         },
         hasDetectedRaid: function() {
-            return s
+            return o
         },
         hasDetectedDMRaid: function() {
             return c
@@ -32,7 +32,7 @@ function(e, t, n) {
             return v
         },
         getSecurityActionDetailsString: function() {
-            return L
+            return I
         }
     }), n("424973");
     var l = n("866227"),
@@ -47,11 +47,11 @@ function(e, t, n) {
         minute: "2-digit"
     };
 
-    function o(e) {
+    function s(e) {
         return null != e.dmSpamDetectedAt && i(e.dmSpamDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > i() || null != e.raidDetectedAt && i(e.raidDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > i()
     }
 
-    function s(e) {
+    function o(e) {
         return null != e.raidDetectedAt && i(e.raidDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > i()
     }
 
@@ -60,7 +60,7 @@ function(e, t, n) {
     }
 
     function f(e) {
-        return null == e ? void 0 : s(e) ? r.GuildIncidentAlertTypes.JOIN_RAID : r.GuildIncidentAlertTypes.DM_RAID
+        return null == e ? void 0 : o(e) ? r.GuildIncidentAlertTypes.JOIN_RAID : r.GuildIncidentAlertTypes.DM_RAID
     }
 
     function _(e, t) {
@@ -85,7 +85,7 @@ function(e, t, n) {
         return (null == e ? void 0 : e.invitesDisabledUntil) != null && new Date(e.invitesDisabledUntil) > new Date
     }
 
-    function L(e, t) {
+    function I(e, t) {
         var n;
         let l = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
         if (null == l) return "";

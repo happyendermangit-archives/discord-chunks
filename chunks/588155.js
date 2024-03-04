@@ -1,34 +1,34 @@
-function(e, t, s) {
+function(e, t, r) {
     "use strict";
-    s.r(t), s.d(t, {
+    r.r(t), r.d(t, {
         default: function() {
             return T
         }
-    }), s("222007");
-    var r = s("37983"),
-        n = s("884691"),
-        l = s("917351"),
-        i = s.n(l),
-        a = s("446674"),
-        o = s("713349"),
-        u = s("669491"),
-        c = s("77078"),
-        d = s("960476"),
-        h = s("718302"),
-        f = s("510849"),
-        p = s("671434"),
-        m = s("117362"),
-        I = s("140331"),
-        g = s("354553"),
-        _ = s("4445"),
-        E = s("762518"),
-        R = s("49111"),
-        y = s("782340"),
-        S = s("138667");
-    let F = (e, t) => (0, r.jsx)(_.CategoryColumn, {
+    }), r("222007");
+    var s = r("37983"),
+        n = r("884691"),
+        l = r("917351"),
+        i = r.n(l),
+        a = r("446674"),
+        o = r("713349"),
+        u = r("669491"),
+        c = r("77078"),
+        d = r("960476"),
+        h = r("718302"),
+        f = r("510849"),
+        m = r("671434"),
+        p = r("117362"),
+        I = r("140331"),
+        g = r("354553"),
+        _ = r("4445"),
+        E = r("762518"),
+        R = r("49111"),
+        S = r("782340"),
+        y = r("138667");
+    let v = (e, t) => (0, s.jsx)(_.CategoryColumn, {
         columns: e
     }, t);
-    class v extends n.PureComponent {
+    class F extends n.PureComponent {
         componentDidMount() {
             0 === this.props.trendingCategories.length && (0, d.fetchTrending)()
         }
@@ -38,30 +38,30 @@ function(e, t, s) {
         renderCategoryExtras(e) {
             let {
                 name: t,
-                icon: s,
+                icon: r,
                 type: l
             } = e;
-            return (0, r.jsxs)(n.Fragment, {
-                children: [(0, r.jsx)("div", {
-                    className: l === R.GIFPickerResultTypes.FAVORITES ? S.categoryFadeBlurple : S.categoryFade
-                }), (0, r.jsxs)("div", {
-                    className: S.categoryText,
-                    children: [null != s ? (0, r.jsx)(s, {
-                        className: S.categoryIcon
-                    }) : null, (0, r.jsx)("span", {
-                        className: S.categoryName,
+            return (0, s.jsxs)(n.Fragment, {
+                children: [(0, s.jsx)("div", {
+                    className: l === R.GIFPickerResultTypes.FAVORITES ? y.categoryFadeBlurple : y.categoryFade
+                }), (0, s.jsxs)("div", {
+                    className: y.categoryText,
+                    children: [null != r ? (0, s.jsx)(r, {
+                        className: y.categoryIcon
+                    }) : null, (0, s.jsx)("span", {
+                        className: y.categoryName,
                         children: t
                     })]
                 })]
             })
         }
         render() {
-            return (0, r.jsx)(h.default, {
+            return (0, s.jsx)(h.default, {
                 getItemGrid: this.getItemGrid,
                 getCoordsMap: this.getCoordsMap,
                 onFocus: this.handleFocus,
                 onSelect: this.handleSelect,
-                children: (0, r.jsx)(g.default, {
+                children: (0, s.jsx)(g.default, {
                     desiredItemWidth: 200,
                     maxColumns: 6,
                     children: this.renderContent
@@ -72,13 +72,13 @@ function(e, t, s) {
             super(...e), this._masonryRef = n.createRef(), this.state = {
                 favoritesTile: function(e) {
                     var t;
-                    let s = i.sample(i.values(e));
+                    let r = i.sample(i.values(e));
                     return {
                         type: R.GIFPickerResultTypes.FAVORITES,
-                        name: y.default.Messages.CATEGORY_FAVORITE,
-                        icon: p.default,
-                        src: null != s ? s.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
-                        format: null !== (t = null == s ? void 0 : s.format) && void 0 !== t ? t : o.GIFType.IMAGE
+                        name: S.default.Messages.CATEGORY_FAVORITE,
+                        icon: m.default,
+                        src: null != r ? r.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
+                        format: null !== (t = null == r ? void 0 : r.format) && void 0 !== t ? t : o.GIFType.IMAGE
                     }
                 }(this.props.favorites),
                 selectedIndex: {
@@ -91,26 +91,26 @@ function(e, t, s) {
                     current: t
                 } = this._masonryRef;
                 if (null == t) return;
-                let s = t.getCoordsMap()[e];
-                null != s && (t.scrollIntoViewRect({
-                    start: s.top - 10,
-                    end: s.top + s.height + 10
+                let r = t.getCoordsMap()[e];
+                null != r && (t.scrollIntoViewRect({
+                    start: r.top - 10,
+                    end: r.top + r.height + 10
                 }), this.setState({
                     focusedId: e
                 }))
             }, this.handleSelect = e => {
                 let {
                     onSelectItem: t
-                } = this.props, s = this.getData().find(t => t.name === e);
-                null != s && null != t && t(s.type, s.name)
+                } = this.props, r = this.getData().find(t => t.name === e);
+                null != r && null != t && t(r.type, r.name)
             }, this.getItemKey = (e, t) => {
                 if (e > 0) return null;
-                let s = this.getData()[t];
-                return null != s ? s.name : null
-            }, this.memoizedData = (0, m.cachedFunction)(function(e, t) {
-                let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                return s ? [...t] : [e, ...t]
-            }), this.renderItem = (e, t, s, n) => {
+                let r = this.getData()[t];
+                return null != r ? r.name : null
+            }, this.memoizedData = (0, p.cachedFunction)(function(e, t) {
+                let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                return r ? [...t] : [e, ...t]
+            }), this.renderItem = (e, t, r, n) => {
                 if (e > 0) return null;
                 let l = this.getData()[t];
                 if (null == l) return;
@@ -121,31 +121,31 @@ function(e, t, s) {
                 } = this.props, {
                     focusedId: c
                 } = this.state;
-                return (0, r.jsx)(E.GIFPickerSearchItem, {
+                return (0, s.jsx)(E.GIFPickerSearchItem, {
                     format: l.format,
                     color: u.default.unsafe_rawColors.PRIMARY_800.css,
                     src: l.src,
                     item: l,
                     index: t,
-                    coords: s,
+                    coords: r,
                     onClick: () => i(l.type, l.name),
                     renderExtras: this.renderCategoryExtras,
                     focused: l.name === c,
                     imagePool: a,
                     videoPool: o
                 }, n)
-            }, this.renderContent = (e, t, s) => {
+            }, this.renderContent = (e, t, r) => {
                 let {
                     trendingCategories: n
                 } = this.props;
-                return 0 === n.length ? (0, r.jsx)(_.ResultsLoader, {
+                return 0 === n.length ? (0, s.jsx)(_.ResultsLoader, {
                     columns: e,
                     width: t,
-                    renderColumn: F
-                }) : (0, r.jsx)(c.MasonryList, {
+                    renderColumn: v
+                }) : (0, s.jsx)(c.MasonryList, {
                     ref: this._masonryRef,
                     fade: !0,
-                    className: S.container,
+                    className: y.container,
                     itemGutter: 12,
                     getItemKey: this.getItemKey,
                     columns: e,
@@ -170,13 +170,13 @@ function(e, t, s) {
 
     function T(e) {
         let t = (0, a.useStateFromStores)([f.default], () => f.default.getTrendingCategories()),
-            s = (0, I.useFavoriteGIFs)(),
+            r = (0, I.useFavoriteGIFs)(),
             n = (0, E.useElementPools)();
-        return (0, r.jsx)(v, {
+        return (0, s.jsx)(F, {
             ...e,
             ...n,
             trendingCategories: t,
-            favorites: s
+            favorites: r
         })
     }
 }

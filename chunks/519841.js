@@ -1,12 +1,12 @@
-function(e, t, n) {
+function(e, t, r) {
     "use strict";
-    n.r(t), n.d(t, {
+    r.r(t), r.d(t, {
         AttachmentLinkRefreshExperiment: function() {
-            return l
+            return n
         }
     });
-    var i = n("862205");
-    let l = (0, i.createExperiment)({
+    var s = r("862205");
+    let n = (0, s.createExperiment)({
         kind: "user",
         id: "2023-12_attachment_link_refresh",
         label: "Attachment Link Refresh User Experiment",

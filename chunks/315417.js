@@ -11,8 +11,8 @@ function(e, t, n) {
         a = n.n(r),
         o = n("891189"),
         l = n("913365"),
-        u = n("31745"),
-        d = n("542238"),
+        u = n("542238"),
+        d = n("715072"),
         c = n("77078"),
         f = n("772280"),
         _ = n("315102"),
@@ -30,12 +30,12 @@ function(e, t, n) {
             icon: n.icon
         }), [n.icon, n.id]), p = s.useMemo(() => [{
             type: o.ApplicationIntegrationType.USER_INSTALL,
-            icon: (0, u.CirclePlusIcon),
+            icon: (0, d.UserPlusIcon),
             title: E.default.Messages.ADD_TO_USER,
             subtitle: E.default.Messages.ADD_TO_USER_SUBTITLE
         }, {
             type: o.ApplicationIntegrationType.GUILD_INSTALL,
-            icon: (0, d.ServerIcon),
+            icon: (0, u.ServerIcon),
             title: E.default.Messages.ADD_TO_GUILD,
             subtitle: E.default.Messages.ADD_TO_GUILD_SUBTITLE
         }].filter(e => {

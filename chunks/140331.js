@@ -1,6 +1,6 @@
-function(e, t, s) {
+function(e, t, r) {
     "use strict";
-    s.r(t), s.d(t, {
+    r.r(t), r.d(t, {
         useFavoriteGIFs: function() {
             return o
         },
@@ -11,21 +11,21 @@ function(e, t, s) {
             return c
         }
     });
-    var r = s("884691"),
-        n = s("917351"),
-        l = s.n(n),
-        i = s("42507");
+    var s = r("884691"),
+        n = r("917351"),
+        l = r.n(n),
+        i = r("42507");
     let a = {};
 
     function o() {
         var e, t;
-        let s = (0, i.useFrecencySettings)();
-        return null !== (t = null === (e = s.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : a
+        let r = (0, i.useFrecencySettings)();
+        return null !== (t = null === (e = r.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : a
     }
 
     function u() {
         let e = o();
-        return r.useMemo(() => l(e).map((e, t) => ({
+        return s.useMemo(() => l(e).map((e, t) => ({
             ...e,
             url: t
         })).sortBy("order").reverse().value(), [e])

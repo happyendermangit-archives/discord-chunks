@@ -364,7 +364,7 @@ function(e, t, n) {
                 }), e2 = !1, e3 = !1, e4 = eE;
                 break;
             case 1:
-                if (null == eC || null == eG) return {
+                if (null == eC || null == eG || null == ex) return {
                     body: (0, r.jsx)(p.Spinner, {})
                 };
                 let e6 = null == eR || eR instanceof Error ? {} : eR,
@@ -375,6 +375,8 @@ function(e, t, n) {
                     children: [(0, r.jsx)(B.default, {
                         application: eC.application,
                         accountScopes: eK,
+                        requestedScopes: eW,
+                        integrationType: ex,
                         errors: e6,
                         isTrustedName: e_
                     }), e7 ? (0, r.jsx)(Y.default, {
