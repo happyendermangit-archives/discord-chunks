@@ -17,12 +17,12 @@ function(e, t, n) {
         setContextProperties() {
             null != this.context && (this.context.fillStyle = this.color, this.context.strokeStyle = this.color, this.context.font = "".concat(this.font.style, " ").concat(this.font.weight, " ").concat(this.font.size, "px ").concat(this.font.family))
         }
-        setSize(e) {
+        setSize(e, t) {
             let {
-                w: t,
-                h: n
+                w: n,
+                h: l
             } = e;
-            this.canvas.width = t, this.canvas.height = n
+            null != this.context && null != t ? (this.canvas.width = n * t, this.canvas.height = l * t, this.context.scale(t, t)) : (this.canvas.width = n, this.canvas.height = l)
         }
         clearRect(e) {
             if (null == this.context) return;
@@ -134,7 +134,7 @@ function(e, t, n) {
             return null == this.context ? o.DrawResultStatus.Failure : (this.setGradientFillStyle(e, t, n), this.drawRoundedRect(l, i, !0, !1), o.DrawResultStatus.Success)
         }
         constructor(e, t) {
-            super(e, t), this.canvas = e, this.context = this.canvas.getContext("2d")
+            super(e, t), this.canvas = e, this.context = this.canvas.getContext("2d"), null != this.context && (this.context.imageSmoothingQuality = "high")
         }
     }
 }

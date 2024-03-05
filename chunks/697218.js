@@ -14,7 +14,7 @@ function(e, t, n) {
             return I
         },
         default: function() {
-            return eR
+            return eN
         }
     }), n("222007"), n("702976"), n("808653"), n("581081"), n("424973");
     var i = n("917351"),
@@ -511,16 +511,16 @@ function(e, t, n) {
 
     function eE(e) {
         let {
-            user: t
+            integrations: t
         } = e;
-        I(t)
+        t.forEach(e => y((0, o.createPrivateChannelIntegration)(e)))
     }
 
     function eg(e) {
         let {
-            integrations: t
+            integration: t
         } = e;
-        t.forEach(e => y((0, o.createPrivateChannelIntegration)(e)))
+        y((0, o.createPrivateChannelIntegration)(t))
     }
 
     function em(e) {
@@ -532,19 +532,19 @@ function(e, t, n) {
 
     function ep(e) {
         let {
-            integration: t
-        } = e;
-        y((0, o.createPrivateChannelIntegration)(t))
-    }
-
-    function eS(e) {
-        let {
             users: t,
             familyCenterTeenActivity: n
         } = e, {
             users: i
         } = n, s = [...t, ...i];
         return s.reduce((e, t) => I(t) || e, !1)
+    }
+
+    function eS(e) {
+        let {
+            users: t
+        } = e;
+        return t.reduce((e, t) => I(t) || e, !1)
     }
 
     function ev(e) {
@@ -563,13 +563,6 @@ function(e, t, n) {
 
     function eI(e) {
         let {
-            users: t
-        } = e;
-        return t.reduce((e, t) => I(t) || e, !1)
-    }
-
-    function eC(e) {
-        let {
             familyCenterTeenActivity: t
         } = e;
         if (void 0 === t) return;
@@ -579,7 +572,7 @@ function(e, t, n) {
         return n.reduce((e, t) => I(t) || e, !1)
     }
 
-    function eA(e) {
+    function eC(e) {
         let {
             familyCenterTeenActivity: t
         } = e, {
@@ -588,7 +581,7 @@ function(e, t, n) {
         return n.reduce((e, t) => I(t) || e, !1)
     }
 
-    function ey(e) {
+    function eA(e) {
         let {
             members: t
         } = e, n = f.default.getId();
@@ -598,21 +591,21 @@ function(e, t, n) {
             return i || e
         }, !1)
     }
-    class eN extends _.default {
+    class ey extends _.default {
         initialize() {
             this.waitFor(f.default)
         }
         takeSnapshot() {
             let e = this.getCurrentUser();
             return {
-                version: eN.LATEST_SNAPSHOT_VERSION,
+                version: ey.LATEST_SNAPSHOT_VERSION,
                 data: {
                     users: [e].filter(c.isNotNullish)
                 }
             }
         }
         handleLoadCache(e) {
-            let t = this.readSnapshot(eN.LATEST_SNAPSHOT_VERSION);
+            let t = this.readSnapshot(ey.LATEST_SNAPSHOT_VERSION);
             if (null != t)
                 for (let e of t.users) g[e.id] = new u.default(e);
             if (null != e.users)
@@ -708,22 +701,21 @@ function(e, t, n) {
                 LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: B,
                 NOTIFICATION_CENTER_ITEM_CREATE: H,
                 LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: F,
-                STORE_APPLICATION_INTERACTION_FAKE_USER: eE,
                 PASSIVE_UPDATE_V1: ee,
                 LOCAL_MESSAGES_LOADED: et,
-                FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eg,
-                PRIVATE_CHANNEL_INTEGRATION_CREATE: em,
-                PRIVATE_CHANNEL_INTEGRATION_UPDATE: ep,
-                FAMILY_CENTER_INITIAL_LOAD: eS,
-                FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: ev,
-                FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eC,
-                FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eA,
-                FAMILY_CENTER_REQUEST_LINK_SUCCESS: eT,
-                FRIEND_FINDER_PYMK_LOADED: eI,
-                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: ey
+                FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eE,
+                PRIVATE_CHANNEL_INTEGRATION_CREATE: eg,
+                PRIVATE_CHANNEL_INTEGRATION_UPDATE: em,
+                FAMILY_CENTER_INITIAL_LOAD: ep,
+                FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eS,
+                FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eI,
+                FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eC,
+                FAMILY_CENTER_REQUEST_LINK_SUCCESS: ev,
+                FRIEND_FINDER_PYMK_LOADED: eT,
+                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eA
             })
         }
     }
-    eN.displayName = "UserStore", eN.LATEST_SNAPSHOT_VERSION = 1;
-    var eR = new eN
+    ey.displayName = "UserStore", ey.LATEST_SNAPSHOT_VERSION = 1;
+    var eN = new ey
 }

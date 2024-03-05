@@ -346,28 +346,38 @@ function(e, t, n) {
                 }
         },
         GUILD_MEMBERS_CHUNK: function(e) {
-            var t;
             let {
-                guildId: n,
-                members: i
-            } = e, l = G({
-                type: "guild",
-                guildId: n
-            }), a = null === (t = q.indices[l]) || void 0 === t ? void 0 : t.result;
-            if (null == a) return !1;
-            let o = !1;
-            return i.forEach(e => {
-                let t = a.sectionIdsByBotId[e.user.id];
-                if (null != t) {
-                    let n = a.sections[t];
-                    r(null != n, "Bot has no matching index section"), r(null != n.descriptor.application, "Bot's index section has no application info");
-                    let i = n.descriptor.application;
-                    i.bot = e.user, n.descriptor = {
-                        ...n.descriptor,
-                        ...(0, v.getApplicationCommandSection)(i)
-                    }, o = !0
-                }
-            }), o
+                guildId: t,
+                members: n
+            } = e;
+            return function(e, t) {
+                var n;
+                let i = G({
+                        type: "guild",
+                        guildId: e
+                    }),
+                    l = null === (n = q.indices[i]) || void 0 === n ? void 0 : n.result;
+                if (null == l) return !1;
+                let a = !1;
+                return t.forEach(e => {
+                    let {
+                        user: t
+                    } = e;
+                    if (!t.bot) return;
+                    let n = l.sectionIdsByBotId[t.id];
+                    if (null == n) return;
+                    let i = l.sections[n];
+                    r(null != i, "Bot has no matching index section"), r(null != i.descriptor.application, "Bot's index section has no application info");
+                    let o = (0, v.getApplicationCommandSection)({
+                        ...i.descriptor.application,
+                        bot: t
+                    });
+                    i.descriptor = {
+                        ...i.descriptor,
+                        ...o
+                    }, a = !0
+                }), a
+            }(t, n)
         },
         USER_APPLICATION_UPDATE: V,
         USER_APPLICATION_REMOVE: V

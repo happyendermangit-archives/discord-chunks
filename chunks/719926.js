@@ -202,6 +202,9 @@ function(e, t, n) {
         isPoll() {
             return null != this.poll
         }
+        isInteractionPlaceholder() {
+            return null != this.interaction && this.author.isNonUserBot()
+        }
         canDeleteOwnMessage(e) {
             var t, n, s;
             if (this.author.id === e) return !0;
