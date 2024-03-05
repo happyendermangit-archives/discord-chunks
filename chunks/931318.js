@@ -14,7 +14,7 @@ function(e, t, n) {
             return E
         },
         cleanupMessageReminders: function() {
-            return h
+            return S
         },
         fetchAndUpdateSavedMessages: function() {
             return I
@@ -25,8 +25,8 @@ function(e, t, n) {
         l = n("679653"),
         d = n("42203"),
         r = n("305961"),
-        u = n("27618"),
-        s = n("697218"),
+        s = n("27618"),
+        u = n("697218"),
         o = n("599110"),
         c = n("520899"),
         f = n("988864"),
@@ -47,12 +47,12 @@ function(e, t, n) {
                 if (null == t) return null;
                 let n = r.default.getGuild(t.guild_id),
                     a = "",
-                    i = (0, l.computeChannelName)(t, s.default, u.default, !0);
+                    i = (0, l.computeChannelName)(t, u.default, s.default, !0);
                 if (t.isPrivate()) a = i;
                 else if (t.isThread()) {
                     let e = d.default.getChannel(t.parent_id);
                     if (null == e) return null;
-                    let n = (0, l.computeChannelName)(e, s.default, u.default, !0);
+                    let n = (0, l.computeChannelName)(e, u.default, s.default, !0);
                     a = "".concat(n, " > ").concat(i)
                 } else a = i;
                 let o = "".concat(e.content.length > 0 ? e.content : "".concat(e.attachments.length, " attachments"));
@@ -104,7 +104,7 @@ function(e, t, n) {
         v([], t.filter(t => t.messageId === e))
     }
 
-    function h() {
+    function S() {
         o.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
             skipped: !1,
             reason: "clearing",
@@ -114,7 +114,7 @@ function(e, t, n) {
         e.some(e => e.complete) && v([], e.filter(e => e.complete))
     }
 
-    function S(e) {
+    function h(e) {
         o.default.track(g.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
             skipped: !1,
             reason: "updated_from_server",
@@ -133,7 +133,7 @@ function(e, t, n) {
                 removed: t.map(f.savedMessageToServer)
             }
         }).then(e => {
-            S(e.body.saved_messages.map(f.savedMessageToClient))
+            h(e.body.saved_messages.map(f.savedMessageToClient))
         })
     }
 
@@ -143,7 +143,7 @@ function(e, t, n) {
         }).then(e => {
             let t = e.body.saved_messages,
                 n = t.map(f.savedMessageToClient);
-            S(n)
+            h(n)
         })
     }
 }

@@ -18,7 +18,8 @@ function(e, t, n) {
             discord_marketing: "Discord Marketing",
             discord_web: "Discord Web",
             discord_ios: "Discord iOS",
-            discord_android: "Discord Android"
+            discord_android: "Discord Android",
+            discord_developers: "Discord Developers"
         },
         s = [{
             value: 3600,

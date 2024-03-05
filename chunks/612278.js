@@ -8,7 +8,7 @@ function(e, t, n) {
             return I
         },
         preloadForumThreads: function() {
-            return C
+            return y
         }
     }), n("222007");
     var a = n("917351"),
@@ -16,8 +16,8 @@ function(e, t, n) {
         l = n("446674"),
         d = n("872717"),
         r = n("913144"),
-        u = n("42203"),
-        s = n("299039"),
+        s = n("42203"),
+        u = n("299039"),
         o = n("670902"),
         c = n("349778"),
         f = n("430475"),
@@ -34,7 +34,7 @@ function(e, t, n) {
             return !i.isEmpty(this._set)
         }
         next() {
-            return s.default.keys(this._set)[0]
+            return u.default.keys(this._set)[0]
         }
         constructor(e) {
             this._set = {}, this._defaultValueFunc = e
@@ -72,7 +72,7 @@ function(e, t, n) {
         },
         E = null;
 
-    function h(e, t) {
+    function S(e, t) {
         let n = (0, c.isForumActivityExperimentEnabled)(e);
         if (n) {
             let {
@@ -84,7 +84,7 @@ function(e, t, n) {
         return !1
     }
 
-    function S(e, t) {
+    function h(e, t) {
         return !e && null == t
     }
 
@@ -93,7 +93,7 @@ function(e, t, n) {
         let {
             loaded: a,
             firstMessage: i
-        } = (0, l.useStateFromStoresObject)([f.default], () => f.default.getMessage(e.id)), d = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(e.parent_id));
+        } = (0, l.useStateFromStoresObject)([f.default], () => f.default.getMessage(e.id)), d = (0, l.useStateFromStores)([s.default], () => s.default.getChannel(e.parent_id));
         if (null != d && (t = a, n = i, !t && null == n)) A(d, e.id);
         return {
             loaded: a,
@@ -106,13 +106,13 @@ function(e, t, n) {
             loaded: n,
             message: a
         } = (0, l.useStateFromStoresObject)([g.default], () => g.default.getMessageState(t.id));
-        return null != e && h(t.guild_id, t.id) && A(e, t.id), {
+        return null != e && S(t.guild_id, t.id) && A(e, t.id), {
             loaded: n,
             mostRecentMessage: a
         }
     }
 
-    function y(e, t) {
+    function C(e, t) {
         let n = !1;
         t.forEach(t => {
             var a, i;
@@ -120,12 +120,12 @@ function(e, t, n) {
                 loaded: l,
                 firstMessage: d
             } = f.default.getMessage(t);
-            if (a = l, i = d, !a && null == i || h(e.guild_id, t)) m.request(e.id, t), n = !0
+            if (a = l, i = d, !a && null == i || S(e.guild_id, t)) m.request(e.id, t), n = !0
         }), n && null == E && (E = setTimeout(T, 0))
     }
 
-    function C(e) {
-        y(e, (0, o.computeThreadIdsSnapshot)(e.id).slice(0, 10))
+    function y(e) {
+        C(e, (0, o.computeThreadIdsSnapshot)(e.id).slice(0, 10))
     }
 
     function A(e, t) {
@@ -133,7 +133,7 @@ function(e, t, n) {
         let n = (0, o.computeThreadIdsSnapshot)(e.id),
             a = n.findIndex(e => e === t),
             i = n.slice(a, a + 5).filter(t => !m.hasRequested(e.id, t));
-        y(e, i)
+        C(e, i)
     }
     async function T() {
         try {
@@ -147,7 +147,7 @@ function(e, t, n) {
         try {
             var n;
             if (0 === t.length) return;
-            let a = null === (n = u.default.getChannel(e)) || void 0 === n ? void 0 : n.guild_id;
+            let a = null === (n = s.default.getChannel(e)) || void 0 === n ? void 0 : n.guild_id;
             if (null == a) return;
             let {
                 body: {

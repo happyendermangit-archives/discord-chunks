@@ -18,8 +18,8 @@ function(e, t, n) {
             l = await e.arrayBuffer();
         for (let e of (l.fileStart = 0, n.appendBuffer(l), n.flush(), await a, i(null != n.boxes, "mp4boxInputFile.boxes should not be null after parsing"), n.boxes)) "uuid" === e.type && (t = e.start);
         let r = e.slice(0, t, e.type),
-            u = e.slice(t + 4, t + 8 + 16, e.type);
-        return new Blob([r, new Uint8Array([0, 0, 0, 24]), u], {
+            s = e.slice(t + 4, t + 8 + 16, e.type);
+        return new Blob([r, new Uint8Array([0, 0, 0, 24]), s], {
             type: e.type
         })
     }

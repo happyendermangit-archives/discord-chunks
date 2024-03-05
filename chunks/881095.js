@@ -10,8 +10,8 @@ function(e, t, n) {
         l = n("373469"),
         d = n("271938"),
         r = n("824563"),
-        u = n("945956"),
-        s = n("800762"),
+        s = n("945956"),
+        u = n("800762"),
         o = n("299039"),
         c = n("80028"),
         f = n("49111"),
@@ -35,15 +35,15 @@ function(e, t, n) {
                     }
                 }
             }
-            let u = l.default.getStreamerActiveStreamMetadata(),
-                s = null == u ? void 0 : u.pid,
-                o = null != u ? null != s ? a.default.getGameForPID(s) : null : a.default.getVisibleGame();
+            let s = l.default.getStreamerActiveStreamMetadata(),
+                u = null == s ? void 0 : s.pid,
+                o = null != s ? null != u ? a.default.getGameForPID(u) : null : a.default.getVisibleGame();
             return {
-                sourceName: null !== (t = null == u ? void 0 : u.sourceName) && void 0 !== t ? t : null == o ? void 0 : o.name,
-                sourceApplicationId: null !== (n = null == u ? void 0 : u.id) && void 0 !== n ? n : null == o ? void 0 : o.id
+                sourceName: null !== (t = null == s ? void 0 : s.sourceName) && void 0 !== t ? t : null == o ? void 0 : o.name,
+                sourceApplicationId: null !== (n = null == s ? void 0 : s.id) && void 0 !== n ? n : null == o ? void 0 : o.id
             }
-        }(e), p = u.default.getChannelId(), _ = [d.default.getId()];
-        return null != p && (_ = Object.keys(s.default.getVoiceStatesForChannel(p))), {
+        }(e), p = s.default.getChannelId(), _ = [d.default.getId()];
+        return null != p && (_ = Object.keys(u.default.getVoiceStatesForChannel(p))), {
             id: o.default.fromTimestamp(Date.now()),
             version: c.CURRENT_CLIP_METADATA_VERSION,
             applicationName: null != t ? t : g.default.Messages.CLIPS_UNKNOWN_SOURCE,

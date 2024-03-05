@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         hasVoiceChannelActivityNotifsEnabled: function() {
-            return u
+            return s
         }
     });
     var a = n("862205"),
@@ -68,7 +68,7 @@ function(e, t, n) {
         return (null == e ? void 0 : e.type) === i.ChannelTypes.GUILD_VOICE && n && a
     }
 
-    function u(e) {
+    function s(e) {
         var t;
         let {
             voiceChannelActivityNotifsEnabled: n

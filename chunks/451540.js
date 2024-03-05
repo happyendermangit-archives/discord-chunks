@@ -2,9 +2,9 @@ function(e, t, r) {
     "use strict";
     r.r(t), r.d(t, {
         default: function() {
-            return m
+            return _
         }
-    }), r("222007");
+    }), r("222007"), r("424973");
     var n = r("37983"),
         l = r("884691"),
         i = r("414456"),
@@ -17,10 +17,11 @@ function(e, t, r) {
         f = r("626820"),
         v = r("306160"),
         g = r("701909"),
-        h = r("161449"),
-        E = r("49111"),
-        C = r("782340"),
-        I = r("602302");
+        h = r("773336"),
+        E = r("161449"),
+        C = r("49111"),
+        I = r("782340"),
+        p = r("602302");
 
     function R(e) {
         let {
@@ -29,15 +30,15 @@ function(e, t, r) {
             !r && ((0, v.copy)(t) && i(!0), s.current = setTimeout(() => i(!1), 2e3))
         }, [t, r]);
         return l.useEffect(() => () => clearTimeout(s.current), []), v.SUPPORTS_COPY ? (0, n.jsxs)(d.Clickable, {
-            className: a(I.copyLink, r ? I.copied : null),
+            className: a(p.copyLink, r ? p.copied : null),
             onClick: u,
             children: [(0, n.jsx)(c.default, {
-                className: I.copyLinkIcon
-            }), r ? C.default.Messages.BUILD_OVERRIDE_LINK_COPIED : C.default.Messages.BUILD_OVERRIDE_LINK_COPY]
+                className: p.copyLinkIcon
+            }), r ? I.default.Messages.BUILD_OVERRIDE_LINK_COPIED : I.default.Messages.BUILD_OVERRIDE_LINK_COPY]
         }) : null
     }
 
-    function p(e) {
+    function m(e) {
         let {
             subHead: t,
             buildDetails: r,
@@ -49,74 +50,74 @@ function(e, t, r) {
         } = e;
         return (0, n.jsxs)(l.Fragment, {
             children: [(0, n.jsxs)("div", {
-                className: I.buildInfo,
+                className: p.buildInfo,
                 children: [(0, n.jsx)(d.Text, {
                     variant: "text-sm/medium",
-                    className: I.subHead,
+                    className: p.subHead,
                     children: t
                 }), (0, n.jsx)("div", {
-                    className: I.buildDetails,
+                    className: p.buildDetails,
                     children: r
                 })]
             }), (0, n.jsx)(d.Button, {
                 submitting: c,
                 color: i,
                 onClick: s,
-                className: a(I.button, o ? I.disabledButtonOverride : null),
-                size: I.buttonSize,
+                className: a(p.button, o ? p.disabledButtonOverride : null),
+                size: p.buttonSize,
                 disabled: o,
                 children: u
             })]
         })
     }
-    var m = e => {
+    var _ = e => {
         var t, r, i;
         let {
             loading: s = !1,
             currentOverrides: c,
             linkMeta: v,
-            url: m,
+            url: _,
             applyBuildOverride: L,
-            clearBuildOverride: _
-        } = e, [O, B] = l.useState(!1), D = l.useCallback(() => {
-            !O && (B(!0), L().catch(() => B(!1)))
-        }, [L, O]), b = l.useCallback(() => {
-            !O && (B(!0), _().catch(() => B(!1)))
-        }, [_, O]);
+            clearBuildOverride: O
+        } = e, [B, b] = l.useState(!1), D = l.useCallback(() => {
+            !B && (b(!0), L().catch(() => b(!1)))
+        }, [L, B]), x = l.useCallback(() => {
+            !B && (b(!0), O().catch(() => b(!1)))
+        }, [O, B]);
         return (0, n.jsxs)("div", {
-            className: I.wrapper,
-            children: [(t = v, r = m, i = s, (0, n.jsxs)(d.Text, {
+            className: p.wrapper,
+            children: [(t = v, r = _, i = s, (0, n.jsxs)(d.Text, {
                 variant: "text-xs/normal",
-                className: I.titleRegion,
+                className: p.titleRegion,
                 children: [(0, n.jsx)("strong", {
-                    className: I.title,
-                    children: null != t && null != t.releaseChannel ? C.default.Messages.BUILD_OVERRIDE_FOR.format({
+                    className: p.title,
+                    children: null != t && null != t.releaseChannel ? I.default.Messages.BUILD_OVERRIDE_FOR.format({
                         releaseChannel: t.releaseChannel
-                    }) : C.default.Messages.BUILD_OVERRIDE
+                    }) : I.default.Messages.BUILD_OVERRIDE
                 }), (0, n.jsx)(d.Anchor, {
-                    className: I.infoLink,
-                    href: g.default.getArticleURL(E.HelpdeskArticles.BUILD_OVERRIDE_EMBED),
+                    className: p.infoLink,
+                    href: g.default.getArticleURL(C.HelpdeskArticles.BUILD_OVERRIDE_EMBED),
                     target: "_blank",
                     children: (0, n.jsx)(o.default, {
-                        className: I.infoIcon
+                        className: p.infoIcon
                     })
                 }), i ? null : (0, n.jsx)(R, {
                     url: r
                 })]
             })), (0, n.jsxs)("div", {
-                className: I.content,
+                className: p.content,
                 children: [(0, n.jsx)(f.default, {
-                    className: I.icon
+                    className: p.icon
                 }), s ? (0, n.jsxs)(l.Fragment, {
                     children: [(0, n.jsxs)("div", {
-                        className: I.buildInfo,
+                        className: p.buildInfo,
                         children: [(0, n.jsx)("div", {
-                            className: a(I.barLoader, I.barTitle)
+                            className: a(p.barLoader, p.barTitle)
                         }), (0, n.jsx)("div", {
-                            className: I.barLoader
+                            className: p.barLoader
                         })]
                     }), (0, n.jsx)("div", {
-                        className: I.buttonLoader
+                        className: p.buttonLoader
                     })]
                 }) : function(e) {
                     var t, r;
@@ -127,25 +128,27 @@ function(e, t, r) {
                             clearBuildOverride: c,
                             submitting: f
                         } = e,
-                        v = (0, h.default)(s, ["discord_web"]);
-                    if (!v.valid) return function(e) {
-                        return p({
-                            subHead: C.default.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
+                        v = ["discord_web"];
+                    !h.isPlatformEmbedded && v.push("discord_marketing", "discord_developers");
+                    let g = (0, E.default)(s, v);
+                    if (!g.valid) return function(e) {
+                        return m({
+                            subHead: I.default.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
                             buttonColor: d.Button.Colors.TRANSPARENT,
                             buttonText: "Invalid",
                             buildDetails: e,
                             disabled: !0
                         })
-                    }(v.reason);
+                    }(g.reason);
                     u(null != s, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
                     let {
-                        discord_web: g
+                        discord_web: C
                     } = s.targetBuildOverride;
-                    if (u(null != g, "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web should never be null if resolved"), t = g, null == (r = a) || null == r.discord_web ? 1 : t.id !== r.discord_web.id || t.type !== r.discord_web.type) l = C.default.Messages.BUILD_OVERRIDE_APPLY, n = o, i = d.Button.Colors.GREEN;
-                    else l = C.default.Messages.BUILD_OVERRIDE_CLEAR, n = c, i = d.Button.Colors.RED;
-                    return p({
-                        subHead: C.default.Messages.BUILD_OVERRIDE_ID,
-                        buildDetails: g.id,
+                    if (u(null != C, "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web should never be null if resolved"), t = C, null == (r = a) || null == r.discord_web ? 1 : t.id !== r.discord_web.id || t.type !== r.discord_web.type) l = I.default.Messages.BUILD_OVERRIDE_APPLY, n = o, i = d.Button.Colors.GREEN;
+                    else l = I.default.Messages.BUILD_OVERRIDE_CLEAR, n = c, i = d.Button.Colors.RED;
+                    return m({
+                        subHead: I.default.Messages.BUILD_OVERRIDE_ID,
+                        buildDetails: C.id,
                         buttonClick: n,
                         buttonText: l,
                         buttonColor: i,
@@ -155,8 +158,8 @@ function(e, t, r) {
                     currentOverrides: c,
                     linkMeta: v,
                     applyBuildOverride: D,
-                    clearBuildOverride: b,
-                    submitting: O
+                    clearBuildOverride: x,
+                    submitting: B
                 })]
             })]
         })

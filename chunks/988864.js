@@ -11,7 +11,7 @@ function(e, t, n) {
             return r
         },
         MESSAGE_REMINDER_DURATION_ITEMS: function() {
-            return u
+            return s
         }
     });
     var a = n("718517"),
@@ -51,7 +51,7 @@ function(e, t, n) {
     function r(e) {
         return null != e.authorSummary && e.authorSummary.length > 0 && null != e.channelSummary && e.channelSummary.length > 0 && null != e.messageSummary && e.messageSummary.length > 0 && null != e.authorId && e.authorId.length > 0
     }
-    let u = [{
+    let s = [{
         duration: a.default.Millis.HOUR,
         getLabel: () => i.default.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
     }, {
