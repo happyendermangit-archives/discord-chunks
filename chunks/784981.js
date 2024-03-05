@@ -8,8 +8,8 @@ function(e, t, n) {
     var a = n("37983"),
         r = n("884691"),
         s = n("414456"),
-        l = n.n(s),
-        i = n("952990"),
+        i = n.n(s),
+        l = n("952990"),
         u = r.forwardRef(function(e, t) {
             let {
                 children: n,
@@ -19,8 +19,8 @@ function(e, t, n) {
                 participantUserId: o
             } = e;
             return (0, a.jsx)("div", {
-                className: l(r, i.tile, {
-                    [i.noBorder]: u
+                className: i(r, l.tile, {
+                    [l.noBorder]: u
                 }),
                 style: s,
                 ref: t,

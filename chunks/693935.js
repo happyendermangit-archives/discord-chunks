@@ -6,7 +6,7 @@ function(e, t, r) {
         }
     }), r("70102");
     var n = r("994853"),
-        i = r("467980"),
+        u = r("467980"),
         ResizeObserver = function() {
             function ResizeObserver(e) {
                 if (0 == arguments.length) throw TypeError("Failed to construct 'ResizeObserver': 1 argument required, but only 0 present.");
@@ -15,11 +15,11 @@ function(e, t, r) {
             }
             return ResizeObserver.prototype.observe = function(e, t) {
                 if (0 == arguments.length) throw TypeError("Failed to execute 'observe' on 'ResizeObserver': 1 argument required, but only 0 present.");
-                if (!(0, i.isElement)(e)) throw TypeError("Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element");
+                if (!(0, u.isElement)(e)) throw TypeError("Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element");
                 n.ResizeObserverController.observe(this, e, t)
             }, ResizeObserver.prototype.unobserve = function(e) {
                 if (0 == arguments.length) throw TypeError("Failed to execute 'unobserve' on 'ResizeObserver': 1 argument required, but only 0 present.");
-                if (!(0, i.isElement)(e)) throw TypeError("Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element");
+                if (!(0, u.isElement)(e)) throw TypeError("Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element");
                 n.ResizeObserverController.unobserve(this, e)
             }, ResizeObserver.prototype.disconnect = function() {
                 n.ResizeObserverController.disconnect(this)

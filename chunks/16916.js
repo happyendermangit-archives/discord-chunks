@@ -2,25 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return l
         }
     });
     var a = n("629109"),
         r = n("990766"),
         s = n("271938"),
-        l = n("374014");
+        i = n("374014");
 
-    function i(e) {
+    function l(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         if (null == e) return;
         let {
             streamType: n,
-            guildId: i,
+            guildId: l,
             channelId: u,
             ownerId: o
-        } = e, d = (0, l.encodeStreamKey)({
+        } = e, d = (0, i.encodeStreamKey)({
             streamType: n,
-            guildId: i,
+            guildId: l,
             channelId: u,
             ownerId: o
         });

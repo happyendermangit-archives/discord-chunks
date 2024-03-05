@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return N
+            return R
         }
     }), n("222007");
     var a = n("37983"),
         r = n("884691"),
         s = n("917351"),
-        l = n.n(s),
-        i = n("88807"),
+        i = n.n(s),
+        l = n("88807"),
         u = n("558062"),
         o = n("432710"),
         d = n("446674"),
@@ -18,13 +18,13 @@ function(e, t, n) {
         h = n("489740"),
         E = n("355025"),
         p = n("51545"),
-        m = n("155084"),
-        C = n("393414"),
+        C = n("155084"),
+        m = n("393414"),
         S = n("90404"),
         g = n("599110"),
         _ = n("286235"),
-        v = n("50885"),
-        T = n("49111"),
+        T = n("50885"),
+        v = n("49111"),
         I = n("782340"),
         A = n("966585");
 
@@ -49,20 +49,20 @@ function(e, t, n) {
             children: I.default.Messages.CLEAR_BUILD_OVERRIDE
         })
     }
-    let x = l.throttle(() => {
-        m.default.increment({
+    let x = i.throttle(() => {
+        C.default.increment({
             name: o.MetricEvents.APP_CRASHED,
-            tags: ["reason:".concat(i.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
+            tags: ["reason:".concat(l.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
         }, !0)
     }, 100, {
         trailing: !1
     });
-    class y extends r.PureComponent {
+    class N extends r.PureComponent {
         componentDidCatch(e, t) {
             this.triggerSoftCrash(e, t)
         }
         triggerSoftCrash(e, t) {
-            let n = (0, C.getHistory)().location;
+            let n = (0, m.getHistory)().location;
             this.setState({
                 error: e,
                 info: t
@@ -70,14 +70,14 @@ function(e, t, n) {
             let a = _.default.captureCrash(e, {
                 extra: t
             });
-            g.default.track(T.AnalyticEvents.APP_CRASHED, {
+            g.default.track(v.AnalyticEvents.APP_CRASHED, {
                 path: n.pathname,
                 extra: t,
                 error_message: e.message,
                 error_stack: e.stack,
                 sentry_issue_id: a,
                 uses_client_mods: (0, p.usesClientMods)()
-            }), x(), v.default.cleanupDisplaySleep()
+            }), x(), T.default.cleanupDisplaySleep()
         }
         _handleSubmitReport() {
             location.reload(!0)
@@ -129,5 +129,5 @@ function(e, t, n) {
             }, this.discordErrorsSet = !1
         }
     }
-    var N = y
+    var R = N
 }

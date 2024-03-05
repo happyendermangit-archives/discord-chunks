@@ -11,11 +11,11 @@ function(e, t, n) {
         s = n.n(a),
         r = n("16470"),
         o = n("446674"),
-        u = n("876543"),
-        d = n("77078"),
-        c = n("538282"),
-        f = n("374363"),
-        m = n("551305"),
+        u = n("77078"),
+        d = n("538282"),
+        c = n("374363"),
+        f = n("551305"),
+        m = n("110006"),
         p = n("378765"),
         h = n("49111"),
         E = n("13030"),
@@ -25,10 +25,10 @@ function(e, t, n) {
             let {
                 disabled: n,
                 type: a
-            } = e, [S, T] = i.useState(!1), v = (0, o.useStateFromStores)([f.default], () => {
+            } = e, [S, T] = i.useState(!1), v = (0, o.useStateFromStores)([c.default], () => {
                 var e, t;
-                return S && Object.values(null !== (t = null === (e = f.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-            }), [I, _, N] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), x = i.useCallback(() => {
+                return S && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
+            }), [I, _, N] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), x = i.useCallback(() => {
                 T(!0), clearTimeout(A.current), A.current = setTimeout(() => {
                     T(!1)
                 }, 1500)
@@ -40,35 +40,27 @@ function(e, t, n) {
                 handler: x
             });
             let y = i.useCallback(() => {
-                    (0, c.toggleExpressionPicker)(E.ExpressionPickerViewType.GIF, a)
-                }, [a]),
-                {
-                    Component: O,
-                    events: R
-                } = (0, u.useGifLottie)();
+                (0, d.toggleExpressionPicker)(E.ExpressionPickerViewType.GIF, a)
+            }, [a]);
             if (n) return null;
-            let M = I === E.ExpressionPickerViewType.GIF && _ === a;
-            return (0, l.jsx)(d.Tooltip, {
+            let O = I === E.ExpressionPickerViewType.GIF && _ === a;
+            return (0, l.jsx)(u.Tooltip, {
                 text: v ? g.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
                 forceOpen: !0,
                 children: e => (0, l.jsx)("div", {
                     ref: t,
                     className: s(E.CHAT_INPUT_BUTTON_CLASSNAME, C.buttonContainer),
                     ...e,
-                    children: (0, l.jsx)(m.default, {
+                    children: (0, l.jsx)(f.default, {
                         innerClassName: C.button,
-                        onMouseEnter: R.onMouseEnter,
-                        onMouseLeave: R.onMouseLeave,
+                        icon: m.default,
                         onClick: y,
-                        isActive: M,
+                        isActive: O,
                         pulse: S,
                         "aria-label": g.default.Messages.GIF_BUTTON_LABEL,
-                        "aria-expanded": M,
+                        "aria-expanded": O,
                         "aria-haspopup": "dialog",
-                        "aria-controls": N,
-                        children: (0, l.jsx)(O, {
-                            color: "currentColor"
-                        })
+                        "aria-controls": N
                     })
                 })
             })

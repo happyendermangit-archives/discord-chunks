@@ -8,7 +8,7 @@ function(e, t, n) {
             return p
         },
         stopBroadcast: function() {
-            return m
+            return C
         },
         fetchBroadcasterBuckets: function() {
             return S
@@ -20,8 +20,8 @@ function(e, t, n) {
     var a = n("872717"),
         r = n("913144"),
         s = n("161454"),
-        l = n("374014"),
-        i = n("766274"),
+        i = n("374014"),
+        l = n("766274"),
         u = n("271938"),
         o = n("42203"),
         d = n("546463"),
@@ -45,19 +45,19 @@ function(e, t, n) {
             autoTrackExposure: !1
         });
         if (!n) return;
-        let a = (0, l.decodeStreamKey)(e),
+        let a = (0, i.decodeStreamKey)(e),
             {
-                ownerId: i,
+                ownerId: l,
                 channelId: f
             } = a;
-        if (null == i || null == f) return;
+        if (null == l || null == f) return;
         let h = u.default.getId();
-        if (i !== h) return;
+        if (l !== h) return;
         let p = u.default.getSessionId();
         if (null == p) return;
-        let m = o.default.getChannel(f),
-            C = null != m && m.isBroadcastChannel();
-        if (null == m || i !== m.ownerId || !C) return;
+        let C = o.default.getChannel(f),
+            m = null != C && C.isBroadcastChannel();
+        if (null == C || l !== C.ownerId || !m) return;
         let S = function(e) {
             var t;
             let n = s.default.getGameForPID(e),
@@ -76,18 +76,18 @@ function(e, t, n) {
             sessionId: p,
             userId: h,
             applicationId: S,
-            channelId: m.id,
+            channelId: C.id,
             streamKey: e
         })
     }
 
-    function m() {
+    function C() {
         r.default.dispatch({
             type: "BROADCAST_STOP"
         })
     }
 
-    function C(e) {
+    function m(e) {
         let t = {};
         e.forEach(e => {
             t[e] = -1
@@ -114,9 +114,9 @@ function(e, t, n) {
                     type: "BROADCASTER_BUCKETS_RECEIVED",
                     data: n
                 })
-            } else C(e)
+            } else m(e)
         } catch (t) {
-            C(e)
+            m(e)
         }
     }
     async function g() {
@@ -136,7 +136,7 @@ function(e, t, n) {
                     var t;
                     let a = f.default.getBroadcastByChannel(e.id).userId,
                         r = null !== (t = e.recipients) && void 0 !== t ? t : [];
-                    n[a] = r.map(e => new i.default(e)).filter(e => e.id !== a)
+                    n[a] = r.map(e => new l.default(e)).filter(e => e.id !== a)
                 }), r.default.dispatch({
                     type: "BROADCAST_VIEWERS_UPDATE",
                     viewers: n

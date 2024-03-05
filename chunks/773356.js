@@ -8,9 +8,9 @@ function(e, t, n) {
     var a = n("294707"),
         r = n("686298");
 
-    function s(e, t, n, s, l) {
-        for (let i of r.ApplicationStreamSettingRequirements)
-            if ((null == i.preset || e === i.preset) && t === i.resolution && n === i.fps && (0, a.default)(i, s, l)) return !0;
+    function s(e, t, n, s, i) {
+        for (let l of r.ApplicationStreamSettingRequirements)
+            if ((null == l.preset || e === l.preset) && t === l.resolution && n === l.fps && (0, a.default)(l, s, i)) return !0;
         return !1
     }
 }

@@ -2,17 +2,17 @@ function(e, t, r) {
     "use strict";
     r.r(t), r.d(t, {
         scheduler: function() {
-            return d
+            return f
         },
         updateCount: function() {
-            return f
+            return d
         }
     });
     var n = r("812587"),
-        i = r("344502"),
-        o = r("118141"),
-        a = 0,
-        u = {
+        u = r("344502"),
+        a = r("118141"),
+        o = 0,
+        i = {
             attributes: !0,
             characterData: !0,
             childList: !0,
@@ -23,7 +23,7 @@ function(e, t, r) {
             return void 0 === e && (e = 0), Date.now() + e
         },
         c = !1,
-        d = new(function() {
+        f = new(function() {
             function e() {
                 var e = this;
                 this.stopped = !0, this.listener = function() {
@@ -35,13 +35,13 @@ function(e, t, r) {
                 if (void 0 === e && (e = 250), !c) {
                     c = !0;
                     var r = l(e);
-                    (0, o.queueResizeObserver)(function() {
-                        var i = !1;
+                    (0, a.queueResizeObserver)(function() {
+                        var u = !1;
                         try {
-                            i = (0, n.process)()
+                            u = (0, n.process)()
                         } finally {
-                            if (c = !1, e = r - l(), !a) return;
-                            i ? t.run(1e3) : e > 0 ? t.run(e) : t.start()
+                            if (c = !1, e = r - l(), !o) return;
+                            u ? t.run(1e3) : e > 0 ? t.run(e) : t.start()
                         }
                     })
                 }
@@ -50,22 +50,22 @@ function(e, t, r) {
             }, e.prototype.observe = function() {
                 var e = this,
                     t = function() {
-                        return e.observer && e.observer.observe(document.body, u)
+                        return e.observer && e.observer.observe(document.body, i)
                     };
-                document.body ? t() : i.global.addEventListener("DOMContentLoaded", t)
+                document.body ? t() : u.global.addEventListener("DOMContentLoaded", t)
             }, e.prototype.start = function() {
                 var e = this;
                 this.stopped && (this.stopped = !1, this.observer = new MutationObserver(this.listener), this.observe(), s.forEach(function(t) {
-                    return i.global.addEventListener(t, e.listener, !0)
+                    return u.global.addEventListener(t, e.listener, !0)
                 }))
             }, e.prototype.stop = function() {
                 var e = this;
                 !this.stopped && (this.observer && this.observer.disconnect(), s.forEach(function(t) {
-                    return i.global.removeEventListener(t, e.listener, !0)
+                    return u.global.removeEventListener(t, e.listener, !0)
                 }), this.stopped = !0)
             }, e
         }()),
-        f = function(e) {
-            !a && e > 0 && d.start(), (a += e) || d.stop()
+        d = function(e) {
+            !o && e > 0 && f.start(), (o += e) || f.stop()
         }
 }

@@ -9,8 +9,8 @@ function(e, t, n) {
     n("884691");
     var r = n("550766"),
         s = n("893011"),
-        l = n("981913"),
-        i = n("782340");
+        i = n("981913"),
+        l = n("782340");
 
     function u(e) {
         let {
@@ -18,7 +18,7 @@ function(e, t, n) {
             applicationId: n,
             centerButton: u = !1,
             ...o
-        } = e, d = u ? l.CenterControlButton : l.default;
+        } = e, d = u ? i.CenterControlButton : i.default;
         return (0, a.jsx)(d, {
             ...o,
             onClick: () => {
@@ -28,7 +28,7 @@ function(e, t, n) {
                 })
             },
             iconComponent: s.default,
-            label: i.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY
+            label: l.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY
         })
     }
 }

@@ -2,11 +2,11 @@ function(e, t, r) {
     "use strict";
     r.r(t), r.d(t, {
         deliverResizeLoopError: function() {
-            return i
+            return u
         }
     });
     var n = "ResizeObserver loop completed with undelivered notifications.",
-        i = function() {
+        u = function() {
             var e;
             "function" == typeof ErrorEvent ? e = new ErrorEvent("error", {
                 message: n

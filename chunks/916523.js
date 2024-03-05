@@ -14,8 +14,7 @@ function(e, t, n) {
             alt_clips_2: "Use alt clip icon 2",
             profile_effect_debug_controls: "Scrolls through profile effects with arrow up / down. Restart with R",
             shop_disable_cache: "Disable shop cache",
-            shop_include_unpublished: "Show unpublished items in the shop",
-            lottie_hover_multiple_loop: "Lotties - continue playing the hover animation after mouse enter"
+            shop_include_unpublished: "Show unpublished items in the shop"
         },
         a = {};
     class o extends i.default.DeviceSettingsStore {

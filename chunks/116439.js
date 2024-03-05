@@ -8,45 +8,39 @@ function(e, t, n) {
             return h
         }
     });
-    var a = n("37983"),
-        r = n("884691"),
-        s = n("414456"),
-        l = n.n(s),
-        i = n("881913"),
-        u = n("244201"),
-        o = n("289656"),
+    var a = n("37983");
+    n("884691");
+    var r = n("414456"),
+        s = n.n(r),
+        i = n("244201"),
+        l = n("289656"),
+        u = n("437825"),
+        o = n("142303"),
         d = n("981913"),
         c = n("423725");
 
     function f(e) {
-        let t = (0, o.getVideoButtonLabel)(e),
+        let t = (0, l.getVideoButtonLabel)(e),
             {
                 enabled: n,
-                cameraUnavailable: s,
-                onChange: l,
+                cameraUnavailable: r,
+                onChange: s,
                 onCameraUnavailable: d,
                 hasPermission: c,
                 children: f,
                 channelLimitReached: h = !1,
                 join: E
             } = e,
-            p = (0, u.useAppContext)(),
-            m = s ? () => d() : () => l(!e.enabled, p),
-            {
-                Component: C,
-                play: S,
-                events: g
-            } = (0, i.useVideoLottie)(E || n ? "mute" : "unmute");
-        return r.useEffect(() => () => S(), [n, S]), (0, a.jsx)(a.Fragment, {
+            p = (0, i.useAppContext)(),
+            C = r ? () => d() : () => s(!e.enabled, p);
+        return (0, a.jsx)(a.Fragment, {
             children: f({
-                onClick: m,
+                onClick: C,
                 active: n,
                 disabled: !n && (!c || h),
-                iconComponent: C,
+                iconComponent: E || n ? u.default : o.default,
                 label: t,
-                unavailable: s,
-                onMouseEnter: E ? void 0 : g.onMouseEnter,
-                onMouseLeave: E ? void 0 : g.onMouseLeave
+                unavailable: r
             })
         })
     }
@@ -56,23 +50,23 @@ function(e, t, n) {
             enabled: t,
             join: n,
             channel: r,
-            onChange: s,
-            onCameraUnavailable: i,
+            onChange: i,
+            onCameraUnavailable: l,
             cameraUnavailable: u,
             hasPermission: o,
             className: h,
             channelLimitReached: E,
             channelLimit: p,
-            centerButton: m = !1,
-            onPopoutClick: C,
+            centerButton: C = !1,
+            onPopoutClick: m,
             ...S
-        } = e, g = m ? d.CenterControlButton : d.default;
+        } = e, g = C ? d.CenterControlButton : d.default;
         return (0, a.jsx)(f, {
             enabled: t,
             join: n,
             channel: r,
-            onChange: s,
-            onCameraUnavailable: i,
+            onChange: i,
+            onCameraUnavailable: l,
             cameraUnavailable: u,
             hasPermission: o,
             channelLimitReached: E,
@@ -80,26 +74,16 @@ function(e, t, n) {
             children: e => {
                 let {
                     unavailable: n,
-                    onMouseEnter: r,
-                    onMouseLeave: s,
-                    ...i
+                    ...r
                 } = e;
                 return (0, a.jsx)(g, {
-                    ...i,
+                    ...r,
                     ...S,
-                    onMouseEnter: e => {
-                        var t;
-                        null === (t = S.onMouseEnter) || void 0 === t || t.call(S, e), null == r || r()
-                    },
-                    onMouseLeave: e => {
-                        var t;
-                        null === (t = S.onMouseLeave) || void 0 === t || t.call(S, e), null == s || s()
-                    },
                     isActive: t,
-                    className: l(h, {
+                    className: s(h, {
                         [c.fauxDisabled]: n
                     }),
-                    onPopoutClick: C
+                    onPopoutClick: m
                 })
             }
         })

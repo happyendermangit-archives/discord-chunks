@@ -7,8 +7,8 @@ function(e, t, r) {
     }), r("274635");
     var n = r("26098"),
         DOMRectReadOnly = function() {
-            function DOMRectReadOnly(e, t, r, i) {
-                return this.x = e, this.y = t, this.width = r, this.height = i, this.top = this.y, this.left = this.x, this.bottom = this.top + this.height, this.right = this.left + this.width, (0, n.freeze)(this)
+            function DOMRectReadOnly(e, t, r, u) {
+                return this.x = e, this.y = t, this.width = r, this.height = u, this.top = this.y, this.left = this.x, this.bottom = this.top + this.height, this.right = this.left + this.width, (0, n.freeze)(this)
             }
             return DOMRectReadOnly.prototype.toJSON = function() {
                 return {

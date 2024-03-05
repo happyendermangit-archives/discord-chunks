@@ -8,8 +8,8 @@ function(e, t, n) {
     var a = n("37983"),
         r = n("884691"),
         s = n("118810"),
-        l = n("446674"),
-        i = n("77078"),
+        i = n("446674"),
+        l = n("77078"),
         u = n("599110"),
         o = n("791776"),
         d = n("206230"),
@@ -33,19 +33,19 @@ function(e, t, n) {
     function E(e) {
         let {
             children: t
-        } = e, n = (0, l.useStateFromStoresObject)([d.default], () => ({
+        } = e, n = (0, i.useStateFromStoresObject)([d.default], () => ({
             enabled: d.default.useReducedMotion,
             rawValue: d.default.rawPrefersReducedMotion
-        })), s = (0, l.useStateFromStoresObject)([d.default], () => ({
+        })), s = (0, i.useStateFromStoresObject)([d.default], () => ({
             enabled: d.default.useForcedColors,
             rawValue: d.default.systemForcedColors
-        })), u = (0, l.useStateFromStores)([d.default], () => d.default.alwaysShowLinkDecorations), o = r.useMemo(() => ({
+        })), u = (0, i.useStateFromStores)([d.default], () => d.default.alwaysShowLinkDecorations), o = r.useMemo(() => ({
             reducedMotion: n,
             prefersCrossfades: !1,
             forcedColors: s,
             alwaysShowLinkDecorations: u
         }), [n, s, u]);
-        return r.useEffect(() => ((0, c.insertAccessibilityLabelElements)(), window.addEventListener("keydown", h), () => window.removeEventListener("keydown", h)), []), (0, a.jsx)(i.AccessibilityPreferencesContext.Provider, {
+        return r.useEffect(() => ((0, c.insertAccessibilityLabelElements)(), window.addEventListener("keydown", h), () => window.removeEventListener("keydown", h)), []), (0, a.jsx)(l.AccessibilityPreferencesContext.Provider, {
             value: o,
             children: t
         })

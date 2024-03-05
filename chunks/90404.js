@@ -8,8 +8,8 @@ function(e, t, n) {
     var a = n("37983"),
         r = n("884691"),
         s = n("414456"),
-        l = n.n(s),
-        i = n("77078"),
+        i = n.n(s),
+        l = n("77078"),
         u = n("145131"),
         o = n("324127");
     class d extends r.PureComponent {
@@ -21,7 +21,7 @@ function(e, t, n) {
                 className: r
             } = this.props;
             return (0, a.jsx)("div", {
-                className: l(o.wrapper, r),
+                className: i(o.wrapper, r),
                 children: (0, a.jsxs)(u.default, {
                     className: o.flexWrapper,
                     direction: u.default.Direction.VERTICAL,
@@ -33,7 +33,7 @@ function(e, t, n) {
                     }), (0, a.jsxs)(u.default.Child, {
                         grow: 0,
                         className: o.text,
-                        children: [(0, a.jsx)(i.H, {
+                        children: [(0, a.jsx)(l.H, {
                             className: o.title,
                             children: t
                         }), null != e ? (0, a.jsx)("div", {

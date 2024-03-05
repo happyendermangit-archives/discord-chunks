@@ -2,37 +2,27 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return u
         }
     });
     var a = n("37983");
     n("884691");
-    var l = n("607837"),
+    var r = n("985622"),
+        s = n("356553"),
         i = n("981913"),
-        o = n("782340");
+        l = n("782340");
 
-    function r(e) {
+    function u(e) {
         let {
             isSelfStream: t,
             centerButton: n = !1,
-            onMouseEnter: r,
-            onMouseLeave: s,
-            ...d
-        } = e, u = n ? i.CenterControlButton : i.default, {
-            Component: c,
-            events: p
-        } = (0, l.useScreenshareLottie)("off");
-        return (0, a.jsx)(u, {
-            label: t ? o.default.Messages.STOP_STREAMING : o.default.Messages.STOP_WATCHING,
-            iconComponent: c,
+            ...u
+        } = e, o = n ? i.CenterControlButton : i.default;
+        return (0, a.jsx)(o, {
+            label: t ? l.default.Messages.STOP_STREAMING : l.default.Messages.STOP_WATCHING,
+            iconComponent: t ? r.default : s.default,
             isActive: !0,
-            onMouseEnter: e => {
-                null == r || r(e), p.onMouseEnter()
-            },
-            onMouseLeave: e => {
-                null == s || s(e), p.onMouseLeave()
-            },
-            ...d
+            ...u
         })
     }
 }

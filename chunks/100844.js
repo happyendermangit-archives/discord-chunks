@@ -9,8 +9,8 @@ function(e, t, n) {
     n("884691");
     var r = n("414456"),
         s = n.n(r),
-        l = n("77078"),
-        i = n("551694");
+        i = n("77078"),
+        l = n("551694");
 
     function u(e) {
         let {
@@ -19,21 +19,21 @@ function(e, t, n) {
             className: r,
             tooltip: u
         } = e;
-        return (0, a.jsx)(l.Tooltip, {
+        return (0, a.jsx)(i.Tooltip, {
             text: u,
             children: e => {
                 let {
                     onClick: u,
                     ...o
                 } = e;
-                return (0, a.jsx)(l.Button, {
+                return (0, a.jsx)(i.Button, {
                     ...o,
                     onClick: e => {
                         null == n || n(e), null == u || u()
                     },
-                    innerClassName: i.buttonReset,
-                    color: s(i.cta, r),
-                    size: l.Button.Sizes.MIN,
+                    innerClassName: l.buttonReset,
+                    color: s(l.cta, r),
+                    size: i.Button.Sizes.MIN,
                     children: t
                 })
             }

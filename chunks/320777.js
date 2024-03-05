@@ -21,7 +21,7 @@ function(e, _, E) {
         u = E("782340");
     (0, i.setUpdateRules)(T.default), (0, n.default)(u.default, o.default, s.default), a.default.Emitter.injectBatchEmitChanges(r.batchUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
     let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-    new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("272266", ", Version Hash: ").concat("1039e2fd74ebe3d62de86115107cca04ec51913f")), t.default.setTags({
+    new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("272279", ", Version Hash: ").concat("d718539ff24c16ce19348a996bd3b927ae710108")), t.default.setTags({
         appContext: l.CURRENT_APP_CONTEXT
     }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
 }

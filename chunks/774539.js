@@ -5,10 +5,10 @@ function(e, t, n) {
             return s
         },
         isVoiceUserGameActivityEnabled: function() {
-            return l
+            return i
         },
         default: function() {
-            return i
+            return l
         }
     });
     var a = n("862205");
@@ -39,7 +39,7 @@ function(e, t, n) {
         return n
     }
 
-    function l(e, t) {
+    function i(e, t) {
         let {
             showGameIcon: n
         } = r.getCurrentConfig({
@@ -49,5 +49,5 @@ function(e, t, n) {
         });
         return n
     }
-    var i = r
+    var l = r
 }
