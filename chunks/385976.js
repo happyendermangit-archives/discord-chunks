@@ -324,6 +324,7 @@ function(e, t, n) {
     }
 
     function eo(e) {
+        if (null == e) return !1;
         for (let i of e) {
             var t, n;
             let e = null !== (n = null !== (t = i.id) && void 0 !== t ? t : i.uniqueName) && void 0 !== n ? n : i.name;
