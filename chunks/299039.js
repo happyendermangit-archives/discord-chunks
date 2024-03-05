@@ -52,14 +52,6 @@ function(e, t, n) {
         castGuildIdAsEveryoneGuildRoleId: function(e) {
             return e
         },
-        castGuildIdAsReadStateChannelId: function(e) {
-            return e
-        },
-        castUserIdAsReadStateChannelId: function(e) {
-            return e
-        },
-        castSnowflakeAsUserId: function(e) {
-            return e
-        }
+        cast: a
     }
 }

@@ -8,7 +8,7 @@ function(e, t, n) {
             return I
         },
         preloadForumThreads: function() {
-            return y
+            return C
         }
     }), n("222007");
     var a = n("917351"),
@@ -112,7 +112,7 @@ function(e, t, n) {
         }
     }
 
-    function C(e, t) {
+    function y(e, t) {
         let n = !1;
         t.forEach(t => {
             var a, i;
@@ -124,8 +124,8 @@ function(e, t, n) {
         }), n && null == E && (E = setTimeout(T, 0))
     }
 
-    function y(e) {
-        C(e, (0, o.computeThreadIdsSnapshot)(e.id).slice(0, 10))
+    function C(e) {
+        y(e, (0, o.computeThreadIdsSnapshot)(e.id).slice(0, 10))
     }
 
     function A(e, t) {
@@ -133,7 +133,7 @@ function(e, t, n) {
         let n = (0, o.computeThreadIdsSnapshot)(e.id),
             a = n.findIndex(e => e === t),
             i = n.slice(a, a + 5).filter(t => !m.hasRequested(e.id, t));
-        C(e, i)
+        y(e, i)
     }
     async function T() {
         try {

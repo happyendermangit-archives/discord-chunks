@@ -18,8 +18,8 @@ function(e, a, t) {
         l = t("815157"),
         f = t("391679"),
         u = t("446674"),
-        p = t("95410"),
-        b = t("795137"),
+        b = t("95410"),
+        p = t("795137"),
         h = t("837319"),
         j = t("73749"),
         m = t("269936"),
@@ -153,7 +153,7 @@ function(e, a, t) {
                 children: [(0, s.jsx)(i.Route, {
                     exact: !0,
                     path: v.Routes.INDEX,
-                    render: () => (0, s.jsx)(b.default, {})
+                    render: () => (0, s.jsx)(p.default, {})
                 }), (0, s.jsx)(j.default, {
                     exact: !0,
                     path: v.Routes.APPS,
@@ -177,7 +177,7 @@ function(e, a, t) {
                 children: [(0, s.jsx)(j.default, {
                     exact: !0,
                     path: v.Routes.INDEX,
-                    render: () => (0, s.jsx)(b.default, {})
+                    render: () => (0, s.jsx)(p.default, {})
                 }), (0, s.jsx)(i.Route, {
                     path: Q([v.Routes.LOGIN, v.Routes.LOGIN_HANDOFF, v.Routes.REGISTER, v.Routes.BILLING_PREFIX, v.Routes.BILLING_PROMOTION_REDEMPTION(":code"), v.Routes.INVITE(":inviteCode"), v.Routes.INVITE_LOGIN(":inviteCode"), v.Routes.GIFT_CODE(":giftCode"), v.Routes.GIFT_CODE_LOGIN(":giftCode"), v.Routes.GUILD_TEMPLATE(":guildTemplateCode"), v.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), v.Routes.DISABLE_EMAIL_NOTIFICATIONS, v.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, v.Routes.RESET, v.Routes.REPORT, v.Routes.REPORT_SECOND_LOOK], N.CONFERENCE_MODE_ENABLED),
                     component: H
@@ -295,7 +295,7 @@ function(e, a, t) {
                 })
             }), (0, s.jsxs)(_.default, {
                 skipsSettingDefaultPageTitle: d,
-                children: [e, R.isPlatformEmbedded && (t === E.MigrationStatus.NOT_STARTED || t === E.MigrationStatus.IN_PROGRESS) && !0 !== p.default.get(o.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, s.jsx)(g.default, {}) : null]
+                children: [e, R.isPlatformEmbedded && (t === E.MigrationStatus.NOT_STARTED || t === E.MigrationStatus.IN_PROGRESS) && !0 !== b.default.get(o.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, s.jsx)(g.default, {}) : null]
             })
         }
     }
