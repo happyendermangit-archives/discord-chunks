@@ -292,7 +292,12 @@ function(e, t, n) {
                         most_recent_messages: c
                     }
                 } = i;
-                r.default.dispatch({
+                null == s ? r.default.dispatch({
+                    type: "LOAD_ARCHIVED_THREADS_FAIL",
+                    channelId: t,
+                    sortOrder: n,
+                    tagFilter: a
+                }) : r.default.dispatch({
                     type: "LOAD_ARCHIVED_THREADS_SUCCESS",
                     guildId: e,
                     channelId: t,
