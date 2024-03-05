@@ -68,7 +68,7 @@ function(e, t, n) {
                                 t.stopPropagation(), !y.current && !O.current && (a(e, {
                                     isFinalSelection: !0,
                                     toggleFavorite: !1
-                                }), f.default.open(e.guildId, T.GuildSettingsSections.EMOJI))
+                                }), f.default.open(e.guildId, T.GuildSettingsSections.EMOJI, T.AnalyticsSections.EMOJI_PICKER_POPOUT))
                             }, c = () => {
                                 !y.current && !O.current && _(e)
                             };
