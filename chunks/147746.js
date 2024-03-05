@@ -5,10 +5,10 @@ function(t, e, n) {
             return m
         },
         getBlindIds: function() {
-            return L
+            return b
         },
         uploadCallscopeLogs: function() {
-            return b
+            return L
         },
         uploadCallscopeLogFiles: function() {
             return w
@@ -40,7 +40,7 @@ function(t, e, n) {
             return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1]
         }
     }
-    async function L(t, e, n) {
+    async function b(t, e, n) {
         let o = new a.BlindID(n),
             l = await o.blind(t),
             r = await o.blind(e);
@@ -49,7 +49,7 @@ function(t, e, n) {
             blindUserId: r
         }
     }
-    async function b(t, e, n, o) {
+    async function L(t, e, n, o) {
         var a;
         if (!__OVERLAY__) {
             if ((null === l.default || void 0 === l.default ? void 0 : null === (a = l.default.fileManager) || void 0 === a ? void 0 : a.getCallscopeLogFiles) == null) {
@@ -64,7 +64,7 @@ function(t, e, n) {
                 let {
                     blindChannelId: a,
                     blindUserId: r
-                } = await L(t, e, n), i = "channel blind(".concat(t, "): ").concat(a, ", user blind(").concat(e, "): ").concat(r);
+                } = await b(t, e, n), i = "channel blind(".concat(t, "): ").concat(a, ", user blind(").concat(e, "): ").concat(r);
                 h.info("uploadCallscopeLogs: Uploading callscope logs for context: ".concat(o, ", ").concat(i));
                 let c = await l.default.fileManager.getCallscopeLogFiles(a);
                 await w(r, c)
