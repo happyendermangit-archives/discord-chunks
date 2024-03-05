@@ -47,10 +47,11 @@ function(e, t, n) {
             indexOffset: h = 0,
             headerClassName: E,
             headerTrailingContent: g,
-            footer: C
+            footer: C,
+            subHeader: S
         } = e;
         if (null == C && (null == a || 0 === a.length)) return null;
-        let S = null == a ? void 0 : a.map((e, t) => {
+        let T = null == a ? void 0 : a.map((e, t) => {
             let l = t + h,
                 a = f(e, l);
             return (0, i.createElement)(c, {
@@ -70,7 +71,7 @@ function(e, t, n) {
                 getQuery: m,
                 headerClassName: E,
                 headerTrailingContent: g
-            }) : null, S, C]
+            }) : null, S, T, C]
         }, p)
     }
 }

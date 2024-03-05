@@ -17,13 +17,14 @@ function(e, t, n) {
         o = n("49111");
 
     function u(e, t, n) {
-        var l, i;
+        var l, i, s;
         r.default.track(o.AnalyticEvents.CHANNEL_AUTOCOMPLETE_OPEN, {
             ...(0, a.collectChannelAnalyticsMetadata)(t),
             ...(0, a.collectGuildAnalyticsMetadata)(t.guild_id),
             autocomplete_type: e,
             num_emoji_results: null !== (l = null == n ? void 0 : n.numEmojiResults) && void 0 !== l ? l : 0,
-            num_sticker_results: null !== (i = null == n ? void 0 : n.numStickerResults) && void 0 !== i ? i : 0
+            num_locked_emoji_results: null !== (i = null == n ? void 0 : n.numLockedEmojiResults) && void 0 !== i ? i : 0,
+            num_sticker_results: null !== (s = null == n ? void 0 : n.numStickerResults) && void 0 !== s ? s : 0
         })
     }
 
