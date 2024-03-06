@@ -309,7 +309,7 @@ function(e, _, E) {
             neverLoadBeforeConnectionOpen: !0
         },
         QuestsManager: {
-            actions: ["POST_CONNECTION_OPEN", "QUESTS_SEND_HEARTBEAT_SUCCESS", "QUESTS_ENROLL_SUCCESS", "RUNNING_GAMES_CHANGE", "STREAM_START", "STREAM_CLOSE", "STREAM_UPDATE"],
+            actions: ["POST_CONNECTION_OPEN", "QUESTS_SEND_HEARTBEAT_SUCCESS", "QUESTS_ENROLL_SUCCESS", "RUNNING_GAMES_CHANGE", "STREAM_START", "STREAM_CLOSE", "PASSIVE_UPDATE_V1", "VOICE_STATE_UPDATES"],
             inlineRequire: () => E("319405").default,
             neverLoadBeforeConnectionOpen: !0
         },
