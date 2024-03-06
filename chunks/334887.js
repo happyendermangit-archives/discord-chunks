@@ -15,6 +15,8 @@ function(e, t, o) {
         failedPayment: "failedPayment__2e662",
         headerLabel: "headerLabel_aa0e2b",
         image: "image__88ebc",
+        pausePending: "pausePending__2995a",
+        paused: "paused__209f3",
         planInfo: "planInfo_cd8cba",
         planName: "planName__72790",
         tier0: "tier0_a391a7",

@@ -115,41 +115,44 @@ function(e, t, n) {
         changePaymentSource: function() {
             return e_
         },
-        clearUpdatePaymentSourceError: function() {
+        pausePendingSubscription: function() {
             return eh
         },
-        clearRemovePaymentSourceError: function() {
+        clearUpdatePaymentSourceError: function() {
             return eE
         },
-        clearPaymentAuthenticationError: function() {
+        clearRemovePaymentSourceError: function() {
             return eg
         },
-        voidPendingPayment: function() {
+        clearPaymentAuthenticationError: function() {
             return em
         },
-        refundPayment: function() {
+        voidPendingPayment: function() {
             return ep
         },
-        popupBridgeState: function() {
+        refundPayment: function() {
             return eS
         },
-        popupBridgeCallback: function() {
+        popupBridgeState: function() {
             return ev
         },
-        fetchIpCountryCode: function() {
+        popupBridgeCallback: function() {
             return eT
         },
-        fetchLocalizedPromo: function() {
+        fetchIpCountryCode: function() {
             return eI
         },
-        resetPaymentIntentId: function() {
+        fetchLocalizedPromo: function() {
             return eC
         },
-        resetSubscriptionStore: function() {
+        resetPaymentIntentId: function() {
             return eA
         },
-        startBrowserCheckout: function() {
+        resetSubscriptionStore: function() {
             return ey
+        },
+        startBrowserCheckout: function() {
+            return eN
         }
     }), n("70102");
     var i = n("41092"),
@@ -685,7 +688,7 @@ function(e, t, n) {
                 type: v.ADYEN_PAYMENT_SOURCES.get(t),
                 ...null !== (s = null == i ? void 0 : i.paymentMethod) && void 0 !== s ? s : {}
             },
-            c = await eS(t),
+            c = await ev(t),
             f = a.default.getAPIBaseURL() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t, null != c ? c : "", "success");
         try {
             let t = await D(p.PaymentGateways.ADYEN, JSON.stringify(d), e, {
@@ -933,7 +936,7 @@ function(e, t, n) {
         }), t = (0, E.coerceExistingItemsToNewItemInterval)(t);
         let _ = null;
         if (null != n && v.ADYEN_PAYMENT_SOURCES.has(n.type)) {
-            let e = await eS(n.type);
+            let e = await ev(n.type);
             _ = a.default.getAPIBaseURL() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success")
         }
         try {
@@ -984,7 +987,7 @@ function(e, t, n) {
     async function J(e, t, n, i) {
         let s = null;
         if (null != n && v.PREPAID_PAYMENT_SOURCES.has(n.type)) {
-            let e = await eS(n.type);
+            let e = await ev(n.type);
             s = a.default.getAPIBaseURL() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success")
         }
         try {
@@ -1039,7 +1042,7 @@ function(e, t, n) {
         } = await y(e);
         if (null == n) throw P("Stripe cannot be null on a redirect.");
         if (p.REDIRECTED_PAYMENT_SOURCES.has(t.type)) {
-            let e = await eS(t.type);
+            let e = await ev(t.type);
             return es(await ea({
                 stripe: n,
                 paymentSource: t,
@@ -1234,10 +1237,11 @@ function(e, t, n) {
                 payment_source_token: null != t.paymentSource ? await Y(t.paymentSource) : null,
                 currency: t.currency,
                 gateway_checkout_context: await (0, h.createGatewayCheckoutContext)(t.paymentSource),
-                load_id: s
+                load_id: s,
+                pause_duration: t.pauseDuration
             };
             if (null != t.paymentSource && v.ADYEN_PAYMENT_SOURCES.has(t.paymentSource.type)) {
-                let e = await eS(t.paymentSource.type);
+                let e = await ev(t.paymentSource.type);
                 l.return_url = a.default.getAPIBaseURL() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t.paymentSource.type, null != e ? e : "", "success")
             }
             null != t.items && (l.items = (0, E.coerceExistingItemsToNewItemInterval)(t.items).map(e => {
@@ -1306,30 +1310,36 @@ function(e, t, n) {
         }, i, s)
     }
 
-    function eh() {
+    function eh(e, t, n, i) {
+        return eu(e, {
+            pauseDuration: t
+        }, n, i)
+    }
+
+    function eE() {
         o.default.dispatch({
             type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR"
         })
     }
 
-    function eE() {
+    function eg() {
         o.default.dispatch({
             type: "BILLING_PAYMENT_SOURCE_REMOVE_CLEAR_ERROR"
         })
     }
 
-    function eg() {
+    function em() {
         o.default.dispatch({
             type: "PAYMENT_AUTHENTICATION_CLEAR_ERROR"
         })
     }
-    async function em(e) {
+    async function ep(e) {
         await a.default.post({
             url: p.Endpoints.BILLING_PAYMENTS_VOID(e),
             oldFormErrors: !0
         })
     }
-    async function ep(e, t) {
+    async function eS(e, t) {
         await a.default.post({
             url: p.Endpoints.BILLING_PAYMENTS_REFUND(e),
             body: {
@@ -1337,7 +1347,7 @@ function(e, t, n) {
             }
         })
     }
-    async function eS(e) {
+    async function ev(e) {
         let {
             body: {
                 state: t
@@ -1353,7 +1363,7 @@ function(e, t, n) {
         }), t
     }
 
-    function ev(e) {
+    function eT(e) {
         let {
             paymentSourceType: t,
             state: n,
@@ -1378,7 +1388,7 @@ function(e, t, n) {
             paymentSourceType: t
         }), e))
     }
-    async function eT() {
+    async function eI() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!e && null != f.default.ipCountryCodeRequest) return f.default.ipCountryCodeRequest;
         try {
@@ -1401,7 +1411,7 @@ function(e, t, n) {
             }), e
         }
     }
-    async function eI() {
+    async function eC() {
         try {
             let e = await a.default.get({
                 url: p.Endpoints.BILLING_LOCALIZED_PROMO
@@ -1421,19 +1431,19 @@ function(e, t, n) {
         }
     }
 
-    function eC() {
+    function eA() {
         o.default.dispatch({
             type: "RESET_PAYMENT_ID"
         })
     }
 
-    function eA() {
+    function ey() {
         o.default.dispatch({
             type: "BILLING_SUBSCRIPTION_RESET"
         })
     }
 
-    function ey(e) {
+    function eN(e) {
         o.default.dispatch({
             type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED",
             loadId: e
