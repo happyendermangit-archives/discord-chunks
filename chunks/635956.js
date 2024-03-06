@@ -46,8 +46,8 @@ function(e, t, n) {
                 showIcon: j = !0,
                 disableShine: F,
                 applicationId: B,
-                giftMessage: w,
-                overrideDisabledButtonText: k,
+                giftMessage: k,
+                overrideDisabledButtonText: w,
                 shinyButtonClassName: H,
                 ...G
             } = e, K = (0, a.useStateFromStores)([_.default], () => _.default.getCurrentUser()), V = (0, a.useStateFromStores)([T.default], () => T.default.isFocused()), Z = (0, a.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), {
@@ -138,7 +138,7 @@ function(e, t, n) {
                     analyticsLocations: W,
                     premiumModalAnalyticsLocation: y,
                     applicationId: B,
-                    giftMessage: w
+                    giftMessage: k
                 })
             };
             if (N) return (0, r.jsxs)(s.Button, {
@@ -175,7 +175,7 @@ function(e, t, n) {
                 q = i === P.PremiumSubscriptionSKUs.TIER_2 && null != J && [P.PremiumTypes.TIER_0, P.PremiumTypes.TIER_1].includes(J);
             q && (Y = L.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
             let Q = null != Z && Z.status !== R.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, m.isNoneSubscription)(Z.planId) && !q,
-                $ = Q ? null != k ? k : function(e) {
+                $ = Q ? null != w ? w : function(e) {
                     let {
                         ctaSubscriptionSkuId: t,
                         currentPremiumType: n
@@ -184,7 +184,7 @@ function(e, t, n) {
                         disabledButtonText: r,
                         disabledButtonTooltipText: i
                     };
-                    let l = null != t ? P.PremiumSubscriptionSKUToPremiumType[t] : null,
+                    let l = null != t ? P.PremiumSubscriptionSKUToPremiumType[(0, S.castPremiumSubscriptionAsSkuId)(t)] : null,
                         a = null != l ? P.PremiumTypeOrder[l] : null,
                         s = null != n ? P.PremiumTypeOrder[n] : null;
                     return null != s && null != a && a < s ? (r = L.default.Messages.APPLICATION_STORE_GET_PREMIUM, i = L.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null != l && null != n && l === n ? (r = L.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, i = L.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null == l && null != n && n === P.PremiumTypes.TIER_2 && (i = L.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP), {

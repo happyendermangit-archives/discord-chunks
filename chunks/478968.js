@@ -23,7 +23,7 @@ function(e, t, n) {
             } = (0, l.default)({
                 isGift: !1,
                 activeSubscription: null
-            }), _ = c.SubscriptionPlanInfo[e].skuId, {
+            }), _ = (0, a.castPremiumSubscriptionAsSkuId)(c.SubscriptionPlanInfo[e].skuId), {
                 priceOptions: E
             } = (0, i.default)({
                 activeSubscription: null,
@@ -49,7 +49,7 @@ function(e, t, n) {
             } = (0, l.default)({
                 isGift: !1,
                 activeSubscription: null
-            }), E = c.SubscriptionPlanInfo[t].skuId, {
+            }), E = (0, a.castPremiumSubscriptionAsSkuId)(c.SubscriptionPlanInfo[t].skuId), {
                 priceOptions: T
             } = (0, i.default)({
                 activeSubscription: null,

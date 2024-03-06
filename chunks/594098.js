@@ -108,8 +108,8 @@ function(e, t, n) {
                 placeholderStyle: R(F, g),
                 children: e
             });
-            let w = null != U ? U() : null;
-            return w = null != w ? w : x, (0, i.jsx)(u.FocusRing, {
+            let k = null != U ? U() : null;
+            return k = null != k ? k : x, (0, i.jsx)(u.FocusRing, {
                 ringTarget: this._containerRef,
                 focusTarget: this._clickableRef,
                 children: (0, i.jsxs)("div", {
@@ -152,9 +152,9 @@ function(e, t, n) {
                             enabled: !1
                         },
                         children: e
-                    }) : e, null != w ? (0, i.jsx)("div", {
+                    }) : e, null != k ? (0, i.jsx)("div", {
                         className: C.imageAccessory,
-                        children: w
+                        children: k
                     }) : null]
                 })
             })

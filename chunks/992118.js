@@ -27,7 +27,7 @@ function(e, t, n) {
                 type: s.Spinner.Type.PULSING_ELLIPSIS,
                 className: d.priceSpinner
             });
-            let E = o.default.getForSkuAndInterval(t, n),
+            let E = o.default.getForSkuAndInterval((0, u.castPremiumSubscriptionAsSkuId)(t), n),
                 T = null != E ? (0, u.getFormattedPriceForPlan)(E, void 0, !1, f) : null;
             return (0, r.jsxs)(s.Heading, {
                 color: "always-white",

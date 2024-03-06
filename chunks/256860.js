@@ -43,19 +43,19 @@ function(e, t, i) {
         o = i("697218"),
         f = i("427459"),
         S = i("991170"),
-        h = i("866353"),
-        m = i("467094"),
-        E = i("865372"),
-        p = i("364685"),
+        m = i("866353"),
+        h = i("467094"),
+        p = i("865372"),
+        E = i("364685"),
         I = i("161585"),
         k = i("24373"),
         C = i("49111"),
         v = i("782340");
     let g = e => {
             T();
-            let t = (0, n.useStateFromStores)([p.default], () => p.default.hasLoadedStickerPacks);
+            let t = (0, n.useStateFromStores)([E.default], () => E.default.hasLoadedStickerPacks);
             r.useEffect(() => {
-                t && null == p.default.getStickerPack(e) && (0, m.fetchStickerPack)(e)
+                t && null == E.default.getStickerPack(e) && (0, h.fetchStickerPack)(e)
             }, [e, t])
         },
         y = e => {
@@ -76,10 +76,10 @@ function(e, t, i) {
                 let e = Math.floor((l - n + a) / (d + a)),
                     r = Math.floor(Math.max(a, (l - n - d * e) / (e - 1))),
                     S = [],
-                    h = [],
                     m = [],
-                    E = 0,
+                    h = [],
                     p = 0,
+                    E = 0,
                     C = 0;
                 if (0 !== l) {
                     let r = function(t, i) {
@@ -94,7 +94,7 @@ function(e, t, i) {
                             y = t.length;
                         null != n && a === n.id && l && t.length < (0, f.getTotalStickerCountForTier)(n.premiumTier) && y++;
                         let _ = Math.ceil(y / e);
-                        h[p] = r ? 0 : _;
+                        m[E] = r ? 0 : _;
                         for (let s = 0; s < _; s++) {
                             let l = s * e,
                                 a = l + e,
@@ -102,32 +102,32 @@ function(e, t, i) {
                                     type: I.StickerGridItemTypes.STICKER,
                                     sticker: e,
                                     packId: (0, k.isStandardSticker)(e) ? e.pack_id : "TODO - fix",
-                                    gridSectionIndex: p,
-                                    rowIndex: E,
+                                    gridSectionIndex: E,
+                                    rowIndex: p,
                                     columnIndex: t,
                                     visibleRowIndex: C,
                                     category: i
                                 }));
-                            p > g && p > d && null != n && y > t.length && u.push({
+                            E > g && E > d && null != n && y > t.length && u.push({
                                 type: I.StickerGridItemTypes.CREATE_STICKER,
                                 guild_id: n.id,
                                 name: v.default.Messages.STICKER_PICKER_CREATE_STICKER_TITLE,
-                                gridSectionIndex: p,
-                                rowIndex: E,
+                                gridSectionIndex: E,
+                                rowIndex: p,
                                 columnIndex: u.length,
                                 visibleRowIndex: C
-                            }), !r && (C++, m.push(u), S.push(u.length)), E++
+                            }), !r && (C++, h.push(u), S.push(u.length)), p++
                         }
-                        p++
+                        E++
                     };
                     if (null == i)
-                        for (let e of o) e.stickers.length > 0 ? (E++, r(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === I.StickerCategoryTypes.EMPTY_GUILD_UPSELL && (h[p] = 0, p++);
+                        for (let e of o) e.stickers.length > 0 ? (p++, r(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === I.StickerCategoryTypes.EMPTY_GUILD_UPSELL && (m[E] = 0, E++);
                     else i.sendable.length > 0 && r(i.sendable, I.StickerCategoryTypes.SEARCH_RESULTS), i.sendableWithPremium.length > 0 && r(i.sendableWithPremium, I.StickerCategoryTypes.SEARCH_RESULTS)
                 }
                 return {
-                    rowCount: E,
-                    rowCountBySection: h,
-                    stickersGrid: m,
+                    rowCount: p,
+                    rowCountBySection: m,
+                    stickersGrid: h,
                     gutterWidth: r,
                     columnCounts: S
                 }
@@ -135,20 +135,20 @@ function(e, t, i) {
         },
         R = e => {
             let t = (0, n.useStateFromStores)([o.default], () => o.default.getCurrentUser());
-            return (0, n.useStateFromStores)([p.default], () => {
-                let i = p.default.getAllStickersIterator();
+            return (0, n.useStateFromStores)([E.default], () => {
+                let i = E.default.getAllStickersIterator();
                 for (let r of i)
-                    if ((0, h.isSendableSticker)(r, t, e)) return !0;
+                    if ((0, m.isSendableSticker)(r, t, e)) return !0;
                 return !1
             }, [t, e])
         },
         T = () => {
             r.useEffect(() => {
-                (0, m.fetchStickerPacks)()
+                (0, h.fetchStickerPacks)()
             }, [])
         },
         L = e => {
-            let t = (0, n.useStateFromStores)([p.default], () => p.default.getAllGuildStickers()),
+            let t = (0, n.useStateFromStores)([E.default], () => E.default.getAllGuildStickers()),
                 i = (0, n.useStateFromStoresArray)([d.default, u.default], () => {
                     let e = d.default.getFlattenedGuildIds(),
                         t = [];
@@ -203,7 +203,7 @@ function(e, t, i) {
 
     function P() {
         let e = A(),
-            t = (0, n.useStateFromStoresArray)([p.default], () => e.map(e => p.default.getStickerById(e)).filter(e => void 0 !== e), [e]);
+            t = (0, n.useStateFromStoresArray)([E.default], () => e.map(e => E.default.getStickerById(e)).filter(e => void 0 !== e), [e]);
         return t
     }
 
@@ -214,7 +214,7 @@ function(e, t, i) {
                     r = x;
                 return (null == i ? void 0 : null === (e = i.stickerFrecency) || void 0 === e ? void 0 : e.stickers) != null && (r = Object.keys(null == i ? void 0 : null === (t = i.stickerFrecency) || void 0 === t ? void 0 : t.stickers)), r
             }(),
-            t = (0, n.useStateFromStoresArray)([p.default], () => e.map(e => p.default.getStickerById(e)).filter(e => void 0 !== e), [e]);
+            t = (0, n.useStateFromStoresArray)([E.default], () => e.map(e => E.default.getStickerById(e)).filter(e => void 0 !== e), [e]);
         return t
     }
     let U = e => {
@@ -222,9 +222,9 @@ function(e, t, i) {
                 {
                     packs: i,
                     frequentlyUsedStickers: s
-                } = (0, n.useStateFromStoresObject)([p.default, E.default], () => ({
-                    packs: p.default.getPremiumPacks(),
-                    frequentlyUsedStickers: E.default.stickerFrecencyWithoutFetchingLatest.frequently
+                } = (0, n.useStateFromStoresObject)([E.default, p.default], () => ({
+                    packs: E.default.getPremiumPacks(),
+                    frequentlyUsedStickers: p.default.stickerFrecencyWithoutFetchingLatest.frequently
                 }), []),
                 l = (0, n.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
                 a = L(e);
@@ -244,7 +244,7 @@ function(e, t, i) {
                         stickers: null !== (r = null == s ? void 0 : s.filter(t => {
                             if ((0, k.isGuildSticker)(t)) {
                                 var r, n;
-                                return null !== (n = null === (r = p.default.getStickersByGuildId(t.guild_id)) || void 0 === r ? void 0 : r.some(e => e.id === t.id)) && void 0 !== n && n && (0, h.getStickerSendability)(t, l, e) !== h.StickerSendability.NONSENDABLE
+                                return null !== (n = null === (r = E.default.getStickersByGuildId(t.guild_id)) || void 0 === r ? void 0 : r.some(e => e.id === t.id)) && void 0 !== n && n && (0, m.getStickerSendability)(t, l, e) !== m.StickerSendability.NONSENDABLE
                             }
                             if ((0, k.isStandardSticker)(t)) return i.some(e => e.id === t.pack_id)
                         })) && void 0 !== r ? r : []
@@ -254,7 +254,7 @@ function(e, t, i) {
         },
         M = function(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                i = (0, n.useStateFromStores)([p.default], () => p.default.getStickerById(e.id)),
+                i = (0, n.useStateFromStores)([E.default], () => E.default.getStickerById(e.id)),
                 [s, l] = r.useState(!0),
                 [a, u] = r.useState(!1),
                 c = (0, k.isGuildSticker)(e) || (0, k.isStandardSticker)(e);
@@ -263,7 +263,7 @@ function(e, t, i) {
                     if (t && !c && null == i && s && !a) {
                         l(!1);
                         try {
-                            await (0, m.fetchSticker)(e.id)
+                            await (0, h.fetchSticker)(e.id)
                         } catch {}
                         u(!0)
                     }
