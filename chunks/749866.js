@@ -8,10 +8,10 @@ function(I, N, A) {
             return t
         },
         setLearnedWords: function() {
-            return i
+            return n
         },
         isMisspelled: function() {
-            return n
+            return i
         },
         getCorrections: function() {
             return R
@@ -42,11 +42,11 @@ function(I, N, A) {
         let N = await V;
         null != N && (N.enabled = I)
     }
-    async function i(I) {
+    async function n(I) {
         let N = await V;
         null != N && N.setLearnedWords(I)
     }
-    async function n(I) {
+    async function i(I) {
         let N = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             A = await V;
         return null != A && A.isMisspelled(I, N)

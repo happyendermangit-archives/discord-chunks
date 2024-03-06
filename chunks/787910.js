@@ -5,7 +5,7 @@ function(I, N, A) {
             return V
         },
         default: function() {
-            return n
+            return i
         }
     });
     var O = A("446674"),
@@ -26,7 +26,7 @@ function(I, N, A) {
         } = I;
         _ = !0, e = N
     }
-    class i extends O.default.Store {
+    class n extends O.default.Store {
         isLoading() {
             return _
         }
@@ -34,8 +34,8 @@ function(I, N, A) {
             return E
         }
     }
-    i.displayName = "I18nLoaderStore";
-    var n = new i(T.default, {
+    n.displayName = "I18nLoaderStore";
+    var i = new n(T.default, {
         I18N_LOAD_START: t,
         I18N_LOAD_SUCCESS: function(I) {
             let {

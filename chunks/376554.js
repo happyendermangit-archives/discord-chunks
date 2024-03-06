@@ -2,6 +2,7 @@ function(e, t, a) {
     "use strict";
     e.exports = {
         background: "background__73e2a",
+        benefits: "benefits__95d44",
         blur: "blur__76477",
         container: "container__8f6ed",
         details: "details__0fe6e",
