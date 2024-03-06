@@ -15,7 +15,19 @@ function(e, _, E) {
         },
         treatments: [{
             id: 1,
-            label: "Show feed",
+            label: "Staff Test",
+            config: {
+                enabled: !0
+            }
+        }, {
+            id: 2,
+            label: "Show feed by affinity",
+            config: {
+                enabled: !0
+            }
+        }, {
+            id: 3,
+            label: "Show feed by heuristics",
             config: {
                 enabled: !0
             }

@@ -299,6 +299,10 @@ function(e, _, E) {
         PACKAGE_ITEM_7_NAME: "Glitterbomb",
         PACKAGE_ITEM_8_NAME: "Empty Envelope",
         PACKAGE_ITEM_9_NAME: "Birthday Card",
+        PACKAGES_PACKAGES_OPENED: "Your Packages Opened",
+        PACKAGES_UNIQUE_PACKAGES_OPENED: "Packages Received",
+        PACKAGES_GLOBAL_PACKAGES_OPENED: "Total Packages Opened",
+        PACKAGES_OPENED_OUT_OF: "{count, number} / {total, number}",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity"
     })
 }

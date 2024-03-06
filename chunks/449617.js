@@ -11,6 +11,9 @@ function(e, t, o) {
         itemCount: "itemCount_f8376e",
         itemImage: "itemImage__045ef",
         itemImageContainer: "itemImageContainer__3ef41",
-        itemName: "itemName__3d5e7"
+        itemName: "itemName__3d5e7",
+        stat: "stat_b3e061",
+        statText: "statText__18098",
+        stats: "stats__57223"
     }
 }

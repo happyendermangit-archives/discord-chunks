@@ -48,23 +48,17 @@ function(e, t, n) {
             look: s.Button.Looks.FILLED,
             size: s.Button.Sizes.SMALL,
             onContextMenu: E.SUPPORTS_COPY ? e => {
-                var t, i;
-                let a = (0, o.getApplicationInstallURL)({
-                    id: n.id,
-                    custom_install_url: null !== (t = n.customInstallUrl) && void 0 !== t ? t : void 0,
-                    install_params: null !== (i = n.installParams) && void 0 !== i ? i : void 0
-                });
                 (0, r.openContextMenu)(e, e => (0, l.jsx)(s.Menu, {
                     navId: "component-button",
                     onClose: r.closeContextMenu,
-                    "aria-label": T.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS,
+                    "aria-label": T.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
                     onSelect: void 0,
                     ...e,
                     children: (0, l.jsx)(s.MenuGroup, {
                         children: (0, l.jsx)(s.MenuItem, {
                             id: "copy",
-                            label: T.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS_COPY,
-                            action: () => (0, E.copy)(a)
+                            label: T.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
+                            action: () => (0, E.copy)((0, o.getApplicationInstallURL)(n))
                         })
                     })
                 }))
