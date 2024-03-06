@@ -1,299 +1,299 @@
-function(i, x, t) {
+function(e, t, n) {
     "use strict";
-    t.r(x), t.d(x, {
+    n.r(t), n.d(t, {
         ReactionLocations: function() {
-            return a
+            return s
         },
         getReactors: function() {
-            return w
+            return I
         },
         addReaction: function() {
-            return E
+            return C
         },
         playBurstReaction: function() {
-            return g
-        },
-        removeAllReactions: function() {
             return A
         },
+        removeAllReactions: function() {
+            return y
+        },
         removeEmojiReactions: function() {
-            return R
+            return N
         },
         removeReaction: function() {
-            return O
+            return R
         },
         removeReactionWithConfirmation: function() {
-            return T
+            return D
         }
     });
-    var s, a, o = t("872717"),
-        y = t("819855"),
-        d = t("913144"),
-        k = t("404118"),
-        r = t("875978"),
-        e = t("263024"),
-        p = t("271938"),
-        n = t("377253"),
-        m = t("659500"),
-        c = t("718517"),
-        l = t("402671"),
-        f = t("61069"),
-        _ = t("49111"),
-        u = t("782340");
+    var i, s, r = n("872717"),
+        a = n("819855"),
+        o = n("913144"),
+        l = n("404118"),
+        u = n("875978"),
+        d = n("263024"),
+        c = n("271938"),
+        f = n("377253"),
+        _ = n("659500"),
+        h = n("718517"),
+        E = n("402671"),
+        g = n("61069"),
+        m = n("49111"),
+        p = n("782340");
 
-    function h(i, x, t) {
+    function S(e, t, n) {
         let {
-            status: s,
-            body: a
-        } = i;
-        if (429 === s) return setTimeout(x, i.body.retry_after * c.default.Millis.SECOND), !1;
-        if (403 === s) switch (a && a.code) {
-            case _.AbortCodes.TOO_MANY_REACTIONS:
-                k.default.show({
-                    title: u.default.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,
-                    body: u.default.Messages.TOO_MANY_REACTIONS_ALERT_BODY,
-                    confirmText: u.default.Messages.OKAY
+            status: i,
+            body: s
+        } = e;
+        if (429 === i) return setTimeout(t, e.body.retry_after * h.default.Millis.SECOND), !1;
+        if (403 === i) switch (s && s.code) {
+            case m.AbortCodes.TOO_MANY_REACTIONS:
+                l.default.show({
+                    title: p.default.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,
+                    body: p.default.Messages.TOO_MANY_REACTIONS_ALERT_BODY,
+                    confirmText: p.default.Messages.OKAY
                 });
                 break;
-            case _.AbortCodes.REACTION_BLOCKED:
-                m.ComponentDispatch.dispatch(_.ComponentActions.SHAKE_APP, {
+            case m.AbortCodes.REACTION_BLOCKED:
+                _.ComponentDispatch.dispatch(m.ComponentActions.SHAKE_APP, {
                     duration: 200,
                     intensity: 2
                 })
-        } else if (!t.isRetry) return x(), !1;
+        } else if (!n.isRetry) return t(), !1;
         return !0
     }
 
-    function I(i, x, t, s, a) {
-        var o, y;
-        d.default.dispatch({
-            type: i,
-            channelId: x,
-            messageId: t,
-            userId: null !== (o = null == a ? void 0 : a.userId) && void 0 !== o ? o : p.default.getId(),
-            emoji: s,
+    function v(e, t, n, i, s) {
+        var r, a;
+        o.default.dispatch({
+            type: e,
+            channelId: t,
+            messageId: n,
+            userId: null !== (r = null == s ? void 0 : s.userId) && void 0 !== r ? r : c.default.getId(),
+            emoji: i,
             optimistic: !0,
-            colors: null !== (y = null == a ? void 0 : a.colors) && void 0 !== y ? y : [],
-            reactionType: (null == a ? void 0 : a.burst) ? r.ReactionTypes.BURST : r.ReactionTypes.NORMAL
+            colors: null !== (a = null == s ? void 0 : s.colors) && void 0 !== a ? a : [],
+            reactionType: (null == s ? void 0 : s.burst) ? u.ReactionTypes.BURST : u.ReactionTypes.NORMAL
         })
     }
 
-    function b(i) {
+    function T(e) {
         let {
-            channelId: x,
-            messageId: t,
-            emoji: s,
-            userId: a,
-            useTypeEndpoint: o = !1,
-            type: y = r.ReactionTypes.NORMAL
-        } = i, d = null != s.id ? "".concat(s.name, ":").concat(s.id) : s.name;
-        return null == a ? _.Endpoints.REACTIONS(x, t, d) : o ? _.Endpoints.REACTION_WITH_TYPE(x, t, d, a, y) : _.Endpoints.REACTION(x, t, d, a)
-    }(s = a || (a = {})).MESSAGE = "Message", s.FORUM_TOOLBAR = "Forum Toolbar", s.MOBILE_MEDIA_VIEWER = "Mobile Media Viewer";
-    async function w(i) {
+            channelId: t,
+            messageId: n,
+            emoji: i,
+            userId: s,
+            useTypeEndpoint: r = !1,
+            type: a = u.ReactionTypes.NORMAL
+        } = e, o = null != i.id ? "".concat(i.name, ":").concat(i.id) : i.name;
+        return null == s ? m.Endpoints.REACTIONS(t, n, o) : r ? m.Endpoints.REACTION_WITH_TYPE(t, n, o, s, a) : m.Endpoints.REACTION(t, n, o, s)
+    }(i = s || (s = {})).MESSAGE = "Message", i.FORUM_TOOLBAR = "Forum Toolbar", i.MOBILE_MEDIA_VIEWER = "Mobile Media Viewer";
+    async function I(e) {
         let {
-            channelId: x,
-            messageId: t,
-            emoji: s,
-            limit: a,
-            after: y,
-            type: k
-        } = i, e = k === r.ReactionTypes.VOTE ? function(i, x, t) {
-            var s;
-            let a = null !== (s = t.id) && void 0 !== s ? s : t.name;
-            return _.Endpoints.POLL_ANSWER_VOTERS(i, x, a)
-        }(x, t, s) : b({
-            channelId: x,
-            messageId: t,
-            emoji: s
-        }), p = await o.default.get({
-            url: e,
+            channelId: t,
+            messageId: n,
+            emoji: i,
+            limit: s,
+            after: a,
+            type: l
+        } = e, d = l === u.ReactionTypes.VOTE ? function(e, t, n) {
+            var i;
+            let s = null !== (i = n.id) && void 0 !== i ? i : n.name;
+            return m.Endpoints.POLL_ANSWER_VOTERS(e, t, s)
+        }(t, n, i) : T({
+            channelId: t,
+            messageId: n,
+            emoji: i
+        }), c = await r.default.get({
+            url: d,
             query: {
-                limit: a,
-                after: y,
-                type: k
+                limit: s,
+                after: a,
+                type: l
             },
             oldFormErrors: !0
-        }), n = k === r.ReactionTypes.VOTE ? p.body.users : p.body;
-        return d.default.dispatch({
+        }), f = l === u.ReactionTypes.VOTE ? c.body.users : c.body;
+        return o.default.dispatch({
             type: "MESSAGE_REACTION_ADD_USERS",
-            channelId: x,
-            messageId: t,
-            users: n,
-            emoji: s,
-            reactionType: k
-        }), n
+            channelId: t,
+            messageId: n,
+            users: f,
+            emoji: i,
+            reactionType: l
+        }), f
     }
-    async function E(i, x, t) {
-        let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
-            a = arguments.length > 4 ? arguments[4] : void 0,
-            d = null != a && !!a.burst,
-            p = null != a && !!a.isRetry;
-        if (!p && function(i, x, t, s) {
-                let a = n.default.getMessage(i, x);
-                return null != a && a.userHasReactedWithEmoji(t, s)
-            }(i, x, t, d)) {
-            k.default.show({
-                title: u.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
-                body: u.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
-                confirmText: u.default.Messages.GOT_IT
+    async function C(e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
+            s = arguments.length > 4 ? arguments[4] : void 0,
+            o = null != s && !!s.burst,
+            c = null != s && !!s.isRetry;
+        if (!c && function(e, t, n, i) {
+                let s = f.default.getMessage(e, t);
+                return null != s && s.userHasReactedWithEmoji(n, i)
+            }(e, t, n, o)) {
+            l.default.show({
+                title: p.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
+                body: p.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
+                confirmText: p.default.Messages.GOT_IT
             });
             return
         }
-        let m = await v(t, d);
-        I("MESSAGE_REACTION_ADD", i, x, t, {
-            burst: d,
-            colors: m
-        }), await e.default.unarchiveThreadIfNecessary(i), o.default.put({
-            url: b({
-                channelId: i,
-                messageId: x,
-                emoji: t,
+        let _ = await O(n, o);
+        v("MESSAGE_REACTION_ADD", e, t, n, {
+            burst: o,
+            colors: _
+        }), await d.default.unarchiveThreadIfNecessary(e), r.default.put({
+            url: T({
+                channelId: e,
+                messageId: t,
+                emoji: n,
                 userId: "@me"
             }),
             query: {
-                location: s,
-                type: d ? r.ReactionTypes.BURST : r.ReactionTypes.NORMAL
+                location: i,
+                type: o ? u.ReactionTypes.BURST : u.ReactionTypes.NORMAL
             },
             oldFormErrors: !0
         }).then(() => {
-            d ? (y.AccessibilityAnnouncer.announce(u.default.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format({
-                name: t.name
-            })), f.default.triggerFullscreenAnimation({
-                channelId: i,
-                messageId: x,
+            o ? (a.AccessibilityAnnouncer.announce(p.default.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format({
+                name: n.name
+            })), g.default.triggerFullscreenAnimation({
+                channelId: e,
+                messageId: t,
                 emoji: {
-                    ...t,
+                    ...n,
                     animated: !1
                 }
-            })) : y.AccessibilityAnnouncer.announce(u.default.Messages.REACTION_ADD_SUCCESS_A11Y.format({
-                name: t.name
+            })) : a.AccessibilityAnnouncer.announce(p.default.Messages.REACTION_ADD_SUCCESS_A11Y.format({
+                name: n.name
             }))
-        }).catch(a => {
-            h(a, () => E(i, x, t, s, {
-                burst: d,
+        }).catch(s => {
+            S(s, () => C(e, t, n, i, {
+                burst: o,
                 isRetry: !0
             }), {
-                isRetry: p
-            }) && (I("MESSAGE_REACTION_REMOVE", i, x, t, {
-                burst: d
-            }), d ? y.AccessibilityAnnouncer.announce(u.default.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
-                name: t.name
-            })) : y.AccessibilityAnnouncer.announce(u.default.Messages.REACTION_ADD_ERROR_A11Y.format({
-                name: t.name
+                isRetry: c
+            }) && (v("MESSAGE_REACTION_REMOVE", e, t, n, {
+                burst: o
+            }), o ? a.AccessibilityAnnouncer.announce(p.default.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
+                name: n.name
+            })) : a.AccessibilityAnnouncer.announce(p.default.Messages.REACTION_ADD_ERROR_A11Y.format({
+                name: n.name
             })))
         })
     }
 
-    function g(i) {
+    function A(e) {
         let {
-            channelId: x,
-            messageId: t,
-            emoji: s,
-            key: a
-        } = i;
-        d.default.dispatch({
+            channelId: t,
+            messageId: n,
+            emoji: i,
+            key: s
+        } = e;
+        o.default.dispatch({
             type: "BURST_REACTION_EFFECT_PLAY",
-            channelId: x,
-            messageId: t,
-            emoji: s,
-            key: a
+            channelId: t,
+            messageId: n,
+            emoji: i,
+            key: s
         })
     }
-    async function A(i, x, t) {
-        let s = null != t && !!t.isRetry;
-        await e.default.unarchiveThreadIfNecessary(i), o.default.delete({
-            url: _.Endpoints.REMOVE_REACTIONS(i, x),
+    async function y(e, t, n) {
+        let i = null != n && !!n.isRetry;
+        await d.default.unarchiveThreadIfNecessary(e), r.default.delete({
+            url: m.Endpoints.REMOVE_REACTIONS(e, t),
             oldFormErrors: !0
-        }).catch(t => {
-            h(t, () => A(i, x, {
+        }).catch(n => {
+            S(n, () => y(e, t, {
+                isRetry: !0
+            }), {
+                isRetry: i
+            })
+        })
+    }
+    async function N(e, t, n, i) {
+        let s = null != i && !!i.isRetry;
+        await d.default.unarchiveThreadIfNecessary(e);
+        let a = null === n.id ? n.name : "".concat(n.name, ":").concat(n.id);
+        r.default.delete({
+            url: m.Endpoints.REMOVE_EMOJI_REACTIONS(e, t, a),
+            oldFormErrors: !0
+        }).catch(i => {
+            S(i, () => N(e, t, n, {
                 isRetry: !0
             }), {
                 isRetry: s
             })
         })
     }
-    async function R(i, x, t, s) {
-        let a = null != s && !!s.isRetry;
-        await e.default.unarchiveThreadIfNecessary(i);
-        let y = null === t.id ? t.name : "".concat(t.name, ":").concat(t.id);
-        o.default.delete({
-            url: _.Endpoints.REMOVE_EMOJI_REACTIONS(i, x, y),
-            oldFormErrors: !0
-        }).catch(s => {
-            h(s, () => R(i, x, t, {
-                isRetry: !0
-            }), {
-                isRetry: a
-            })
-        })
-    }
-    async function O(i, x, t, s) {
-        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "Message",
-            d = arguments.length > 5 ? arguments[5] : void 0,
-            k = null != d && !!d.burst,
-            p = null != d && !!d.isRetry;
-        I("MESSAGE_REACTION_REMOVE", i, x, t, {
-            userId: s,
-            burst: k
-        }), await e.default.unarchiveThreadIfNecessary(i), o.default.delete({
-            url: b({
-                channelId: i,
-                messageId: x,
-                emoji: t,
-                userId: null != s ? s : "@me",
-                type: k ? r.ReactionTypes.BURST : r.ReactionTypes.NORMAL,
+    async function R(e, t, n, i) {
+        let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "Message",
+            o = arguments.length > 5 ? arguments[5] : void 0,
+            l = null != o && !!o.burst,
+            c = null != o && !!o.isRetry;
+        v("MESSAGE_REACTION_REMOVE", e, t, n, {
+            userId: i,
+            burst: l
+        }), await d.default.unarchiveThreadIfNecessary(e), r.default.delete({
+            url: T({
+                channelId: e,
+                messageId: t,
+                emoji: n,
+                userId: null != i ? i : "@me",
+                type: l ? u.ReactionTypes.BURST : u.ReactionTypes.NORMAL,
                 useTypeEndpoint: !0
             }),
             query: {
-                location: a,
-                burst: k
+                location: s,
+                burst: l
             },
             oldFormErrors: !0
         }).then(() => {
-            (null == d ? void 0 : d.burst) ? y.AccessibilityAnnouncer.announce(u.default.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format({
-                name: t.name
-            })): y.AccessibilityAnnouncer.announce(u.default.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
-                name: t.name
+            (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(p.default.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format({
+                name: n.name
+            })): a.AccessibilityAnnouncer.announce(p.default.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
+                name: n.name
             }))
-        }).catch(async o => {
-            if (h(o, () => O(i, x, t, s, a, {
-                    burst: k,
+        }).catch(async r => {
+            if (S(r, () => R(e, t, n, i, s, {
+                    burst: l,
                     isRetry: !0
                 }), {
-                    isRetry: p
+                    isRetry: c
                 })) {
-                let a = await v(t, k);
-                I("MESSAGE_REACTION_ADD", i, x, t, {
-                    userId: s,
-                    burst: k,
-                    colors: a
-                }), (null == d ? void 0 : d.burst) ? y.AccessibilityAnnouncer.announce(u.default.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format({
-                    name: t.name
-                })) : y.AccessibilityAnnouncer.announce(u.default.Messages.REACTION_REMOVE_ERROR_A11Y.format({
-                    name: t.name
+                let s = await O(n, l);
+                v("MESSAGE_REACTION_ADD", e, t, n, {
+                    userId: i,
+                    burst: l,
+                    colors: s
+                }), (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(p.default.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format({
+                    name: n.name
+                })) : a.AccessibilityAnnouncer.announce(p.default.Messages.REACTION_REMOVE_ERROR_A11Y.format({
+                    name: n.name
                 }))
             }
         })
     }
-    async function v(i, x) {
-        let t = [];
-        if (x) try {
-            t = await (0, l.getEmojiColors)(i)
+    async function O(e, t) {
+        let n = [];
+        if (t) try {
+            n = await (0, E.getEmojiColors)(e)
         } catch {}
-        return t
+        return n
     }
 
-    function T(i) {
+    function D(e) {
         let {
-            channelId: x,
-            messageId: t,
-            emoji: s,
-            reactionType: a,
-            userId: o,
-            location: y
-        } = i, d = a === r.ReactionTypes.BURST;
-        O(x, t, s, o, y, {
-            burst: d
+            channelId: t,
+            messageId: n,
+            emoji: i,
+            reactionType: s,
+            userId: r,
+            location: a
+        } = e, o = s === u.ReactionTypes.BURST;
+        R(t, n, i, r, a, {
+            burst: o
         })
     }
 }
