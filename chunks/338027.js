@@ -8,8 +8,8 @@ function(e, a, t) {
     var s = t("171718"),
         d = t("913144"),
         n = t("316272"),
-        i = t("773336");
-    class c extends n.default {
+        c = t("773336");
+    class i extends n.default {
         _initialize() {
             d.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen)
         }
@@ -18,9 +18,9 @@ function(e, a, t) {
         }
         constructor(...e) {
             super(...e), this.handleConnectionOpen = e => {
-                ((0, i.isWindows)() || (0, i.isMac)()) && s.default.encryptAndStoreTokens()
+                ((0, c.isWindows)() || (0, c.isMac)()) && s.default.encryptAndStoreTokens()
             }
         }
     }
-    var r = new c
+    var r = new i
 }
