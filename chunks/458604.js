@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("139321"),
         E = n("140708"),
         g = n("305961"),
-        C = n("773336"),
-        S = n("429569"),
+        S = n("773336"),
+        C = n("429569"),
         T = n("215550"),
         v = n("782340"),
         I = n("348473");
@@ -36,7 +36,7 @@ function(e, t, n) {
                     isDisabled: m,
                     showPulse: h,
                     columnIndex: E,
-                    rowIndex: C,
+                    rowIndex: S,
                     size: _,
                     surrogateCodePoint: N,
                     allowAnimatedEmoji: A,
@@ -47,7 +47,7 @@ function(e, t, n) {
                 R = (0, r.useStateFromStores)([g.default], () => i.type === f.EmojiTypes.GUILD ? g.default.getGuild(i.guildId) : void 0, [i]),
                 {
                     enabled: M
-                } = S.default.useExperiment({
+                } = C.default.useExperiment({
                     location: "Emoji Picker List"
                 }, {
                     autoTrackExposure: m
@@ -76,7 +76,7 @@ function(e, t, n) {
                             names: n
                         }) : n),
                         columnIndex: E,
-                        rowIndex: C,
+                        rowIndex: S,
                         emoji: i,
                         size: _,
                         surrogateCodePoint: N,
@@ -95,7 +95,7 @@ function(e, t, n) {
             rowIndex: f,
             channelGuildId: p,
             onInspect: g,
-            onSelect: S,
+            onSelect: C,
             isScrolling: T,
             isUsingKeyboardNavigation: I,
             showEmojiFavoriteTooltip: A,
@@ -119,7 +119,7 @@ function(e, t, n) {
         } = t, z = e => {
             if (e.stopPropagation(), T.current || I.current) return;
             let n = e.altKey;
-            n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && b(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), S(t, {
+            n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && b(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), C(t, {
                 isFinalSelection: !e.shiftKey,
                 toggleFavorite: n
             })
@@ -183,7 +183,7 @@ function(e, t, n) {
         };
         return A ? (0, l.jsx)(o.Tooltip, {
             text: v.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
-                key: (0, C.isMac)() ? "Opt" : "Alt"
+                key: (0, S.isMac)() ? "Opt" : "Alt"
             }),
             position: "top",
             delay: 200,

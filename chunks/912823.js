@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("1607"),
         E = n("328511"),
         g = n("585722"),
-        C = n("697218"),
-        S = n("719923"),
+        S = n("697218"),
+        C = n("719923"),
         T = n("998206"),
         v = n("35385"),
         I = n("695369"),
@@ -85,16 +85,16 @@ function(e, t, n) {
             location: "dc120b_4"
         }, {
             autoTrackExposure: !1
-        }), J = C.default.getCurrentUser(), q = null !== (m = (0, s.useStateFromStores)([f.default], () => Z && S.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== m ? m : 0, X = (0, s.useStateFromStores)([f.default], () => {
+        }), J = S.default.getCurrentUser(), q = null !== (m = (0, s.useStateFromStores)([f.default], () => Z && C.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== m ? m : 0, X = (0, s.useStateFromStores)([f.default], () => {
             if (!k.isDM() || void 0 === k.recipients || k.recipients.length > 1 || !Z) return !1;
             let e = k.recipients[0],
                 t = f.default.getSentUserIds();
             return t.includes(e)
-        }), [Q, $] = (0, s.useStateFromStoresArray)([f.default, C.default], () => {
+        }), [Q, $] = (0, s.useStateFromStoresArray)([f.default, S.default], () => {
             let e = [!1, !1];
             if (!k.isDM() || void 0 === k.recipients || k.recipients.length > 1) return e;
             let t = k.recipients[0],
-                n = C.default.getUser(t);
+                n = S.default.getUser(t);
             if (null == n) return e;
             let l = n.bot;
             if (l) return e;
@@ -103,7 +103,7 @@ function(e, t, n) {
             return [Z && i && a, a]
         }), ee = (0, u.useActivitiesInTextButtonVisibility)(k.id, "ChannelTextAreaButtons");
         if (!a.isMobile) {
-            if (k.isDM() && (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (S.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+            if (k.isDM() && (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (C.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
                     location: "dc120b_5"
                 }), Q && z.push((0, l.jsx)(N.default, {
                     disabled: D,

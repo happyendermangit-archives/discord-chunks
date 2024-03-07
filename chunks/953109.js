@@ -30,7 +30,7 @@ function(e, t, n) {
                 className: h,
                 guildClassName: E,
                 size: g = c.MEDIUM,
-                ...C
+                ...S
             } = e;
             if (null != m && (t = function(e) {
                     if (null == e) return null;
@@ -85,7 +85,7 @@ function(e, t, n) {
             return null == t ? (0, l.jsx)(o.default, {
                 className: a(d.gameIcon, g, h)
             }) : (0, l.jsx)("div", {
-                ...C,
+                ...S,
                 className: a(d.gameIcon, g, h),
                 style: {
                     backgroundImage: "url('".concat(t, "')")

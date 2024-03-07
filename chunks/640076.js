@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("96386"),
         E = n("997289"),
         g = n("206230"),
-        C = n("685665"),
-        S = n("986632"),
+        S = n("685665"),
+        C = n("986632"),
         T = n("538282"),
         v = n("246511"),
         I = n("45961"),
@@ -71,7 +71,7 @@ function(e, t, n) {
                 setCollapsedSections: p,
                 getEmojiItemProps: h,
                 getEmojiRowProps: g,
-                isScrolling: C,
+                isScrolling: S,
                 isUsingKeyboardNavigation: T,
                 allowAnimatedEmoji: I,
                 channelGuildId: x,
@@ -107,7 +107,7 @@ function(e, t, n) {
                     visibleRowIndex: n
                 } = e, l = e.type === w.EmojiGridItemTypes.EMOJI ? e.emoji.allNamesString : e.name;
                 K.current !== H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(K.current), K.current = window.requestAnimationFrame(() => {
-                    S.EmojiPickerStore.setInspectedExpressionPosition(t, n, v.InspectedExpressionChangeSource.MOUSE_EVENT), S.EmojiPickerStore.setSearchPlaceholder(l), K.current = H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
+                    C.EmojiPickerStore.setInspectedExpressionPosition(t, n, v.InspectedExpressionChangeSource.MOUSE_EVENT), C.EmojiPickerStore.setSearchPlaceholder(l), K.current = H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
                 })
             }, []), ea = (0, c.useStateFromStores)([N.HotspotStore], () => N.HotspotStore.hasHotspot(N.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), es = i.useMemo(() => o.memoize((e, t) => {
                 let n = a[e],
@@ -120,7 +120,7 @@ function(e, t, n) {
                     onSelect: u,
                     getEmojiItemProps: h,
                     getEmojiRowProps: g,
-                    isScrolling: C,
+                    isScrolling: S,
                     isUsingKeyboardNavigation: T,
                     rowIndex: e,
                     allowAnimatedEmoji: I,
@@ -132,7 +132,7 @@ function(e, t, n) {
                     isBurstReaction: O,
                     inNitroLockedSection: i.isNitroLocked
                 }, e)
-            }), [a, m, r, W, ei, u, h, g, C, T, I, ea, x, y, O]);
+            }), [a, m, r, W, ei, u, h, g, S, T, I, ea, x, y, O]);
             i.useEffect(() => () => {
                 var e, t;
                 return null === (t = es.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -240,11 +240,11 @@ function(e, t, n) {
                 messageId: D,
                 isBurstReaction: k,
                 listHeaderClassName: w
-            } = e, F = i.useRef(!1), G = S.EmojiPickerStore.useStore(e => e.activeCategoryIndex), B = (0, T.useExpressionPickerStore)(e => e.searchQuery), V = y.AnimateEmoji.useSetting(), z = (0, c.useStateFromStores)([O.default], () => O.default.getCurrentUser()), Z = (0, P.isPremium)(z), {
+            } = e, F = i.useRef(!1), G = C.EmojiPickerStore.useStore(e => e.activeCategoryIndex), B = (0, T.useExpressionPickerStore)(e => e.searchQuery), V = y.AnimateEmoji.useSetting(), z = (0, c.useStateFromStores)([O.default], () => O.default.getCurrentUser()), Z = (0, P.isPremium)(z), {
                 location: J
             } = (0, E.useAnalyticsContext)(), {
                 analyticsLocations: q
-            } = (0, C.default)(), [X, Q] = i.useState(0), [$, ee] = i.useState(!1), [et, ei] = i.useState(0), ea = (0, c.useStateFromStores)([g.default], () => g.default.useReducedMotion), es = (0, u.useSpring)({
+            } = (0, S.default)(), [X, Q] = i.useState(0), [$, ee] = i.useState(!1), [et, ei] = i.useState(0), ea = (0, c.useStateFromStores)([g.default], () => g.default.useReducedMotion), es = (0, u.useSpring)({
                 transform: $ ? "translateY(0%)" : "translateY(120%)",
                 opacity: $ ? 1 : 0,
                 config: {
@@ -294,12 +294,12 @@ function(e, t, n) {
                 setShowUpsell: ee,
                 setUpsellGlowOpacity: ei,
                 emojiSectionDescriptors: o
-            }), eC = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
+            }), eS = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
                 activeCategoryIndex: G,
                 isScrolling: F,
                 listRef: a,
                 onActiveCategoryIndexChange: e => {
-                    Q(e), "" === B && S.EmojiPickerStore.setActiveCategoryIndex(e)
+                    Q(e), "" === B && C.EmojiPickerStore.setActiveCategoryIndex(e)
                 },
                 scrollOffset: 0,
                 searchQuery: B,
@@ -310,9 +310,9 @@ function(e, t, n) {
                 activeCategoryIndex: G,
                 listRef: a
             });
-            let eS = i.useCallback(e => {
-                    eo && eg(e), eC(e)
-                }, [eg, eC, eo]),
+            let eC = i.useCallback(e => {
+                    eo && eg(e), eS(e)
+                }, [eg, eS, eo]),
                 eT = o.length > 0;
             return i.useEffect(() => {
                 $ && L.default.track(H.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
@@ -328,7 +328,7 @@ function(e, t, n) {
                     role: "none presentation",
                     className: Y.list,
                     listPadding: eu,
-                    onScroll: eS,
+                    onScroll: eC,
                     renderRow: ed,
                     renderSection: ec,
                     renderSectionHeader: ef,

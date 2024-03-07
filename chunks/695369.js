@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return S
+            return C
         }
     }), n("222007");
     var l = n("37983"),
@@ -20,14 +20,14 @@ function(e, t, n) {
         h = n("49111"),
         E = n("13030"),
         g = n("782340"),
-        C = n("350583"),
-        S = i.memo(i.forwardRef(function(e, t) {
+        S = n("350583"),
+        C = i.memo(i.forwardRef(function(e, t) {
             let {
                 disabled: n,
                 type: a
-            } = e, [S, T] = i.useState(!1), v = (0, o.useStateFromStores)([c.default], () => {
+            } = e, [C, T] = i.useState(!1), v = (0, o.useStateFromStores)([c.default], () => {
                 var e, t;
-                return S && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
+                return C && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
             }), [I, _, N] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), x = i.useCallback(() => {
                 T(!0), clearTimeout(A.current), A.current = setTimeout(() => {
                     T(!1)
@@ -49,14 +49,14 @@ function(e, t, n) {
                 forceOpen: !0,
                 children: e => (0, l.jsx)("div", {
                     ref: t,
-                    className: s(E.CHAT_INPUT_BUTTON_CLASSNAME, C.buttonContainer),
+                    className: s(E.CHAT_INPUT_BUTTON_CLASSNAME, S.buttonContainer),
                     ...e,
                     children: (0, l.jsx)(f.default, {
-                        innerClassName: C.button,
+                        innerClassName: S.button,
                         icon: m.default,
                         onClick: y,
                         isActive: O,
-                        pulse: S,
+                        pulse: C,
                         "aria-label": g.default.Messages.GIF_BUTTON_LABEL,
                         "aria-expanded": O,
                         "aria-haspopup": "dialog",

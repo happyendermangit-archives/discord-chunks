@@ -20,10 +20,10 @@ function(e, t, n) {
         h = n("846325"),
         E = n("397336");
     let g = [],
-        C = new s({
+        S = new s({
             max: h.NUM_RECENTLY_HEARD_SOUNDS
         }),
-        S = new u.default({
+        C = new u.default({
             computeBonus: () => 100,
             computeWeight: e => {
                 let t = 0;
@@ -38,7 +38,7 @@ function(e, t, n) {
         var e, t;
         if (!v()) return;
         let n = null === (e = d.default.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
-        S.overwriteHistory((t = null != n ? n : {}, i.mapValues(t, e => ({
+        C.overwriteHistory((t = null != n ? n : {}, i.mapValues(t, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
         }))), g)
@@ -52,11 +52,11 @@ function(e, t, n) {
     }
     class I extends r.default.PersistedStore {
         initialize(e) {
-            this.waitFor(c.default, m.default), (null == e ? void 0 : e.recentlyHeardCache) != null && C.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (g = e.playedEventsPendingFlush), this.syncWith([d.default], T)
+            this.waitFor(c.default, m.default), (null == e ? void 0 : e.recentlyHeardCache) != null && S.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (g = e.playedEventsPendingFlush), this.syncWith([d.default], T)
         }
         getState() {
             return {
-                recentlyHeardCache: C.dump(),
+                recentlyHeardCache: S.dump(),
                 playedEventsPendingFlush: g
             }
         }
@@ -64,13 +64,13 @@ function(e, t, n) {
             return g.length > 0
         }
         get playedSoundHistory() {
-            return S.usageHistory
+            return C.usageHistory
         }
         get recentlyHeardSoundIds() {
-            return C.values()
+            return S.values()
         }
         get frecentlyPlayedSounds() {
-            return S.frequently
+            return C.frequently
         }
     }
     I.displayName = "SoundboardEventStore", I.persistKey = "SoundboardEventStore";
@@ -83,10 +83,10 @@ function(e, t, n) {
             if (!v()) return;
             let l = t.soundId.toString();
             n === p.LocalSoundTrigger.SOUNDBOARD && function(e) {
-                S.track(e), g.push({
+                C.track(e), g.push({
                     key: e,
                     timestamp: Date.now()
-                }), S.compute()
+                }), C.compute()
             }(l)
         },
         GUILD_SOUNDBOARD_SOUND_PLAY_START: function(e) {
@@ -111,7 +111,7 @@ function(e, t, n) {
                 }
                 return !1
             }(i) && function(e) {
-                C.set(e, e)
+                S.set(e, e)
             }(i)
         },
         USER_SETTINGS_PROTO_UPDATE: function(e) {

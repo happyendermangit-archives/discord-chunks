@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("18494"),
         E = n("791106"),
         g = n("216422"),
-        C = n("599110"),
-        S = n("49111"),
+        S = n("599110"),
+        C = n("49111"),
         T = n("646718"),
         v = n("782340"),
         I = n("936369");
@@ -46,16 +46,16 @@ function(e, t, n) {
             remaining: N
         } = e, A = (0, r.useStateFromStores)([h.default, p.default], () => {
             let e = p.default.getChannel(h.default.getChannelId());
-            return (null == e ? void 0 : e.isPrivate()) ? S.AnalyticsPages.DM_CHANNEL : S.AnalyticsPages.GUILD_CHANNEL
+            return (null == e ? void 0 : e.isPrivate()) ? C.AnalyticsPages.DM_CHANNEL : C.AnalyticsPages.GUILD_CHANNEL
         }), {
             analyticsLocations: x
         } = (0, d.default)(u.default.PREMIUM_UPSELL), y = (0, c.usePremiumDiscountOffer)(), O = (0, f.usePremiumTrialOffer)(), R = (0, c.discountOfferHasTier)(y, T.PremiumSubscriptionSKUs.TIER_2), M = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.PremiumSubscriptionSKUs.TIER_2;
         return (i.useEffect(() => {
-            C.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+            S.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
                 location: {
                     location_page: A,
-                    location_section: S.AnalyticsSections.CHANNEL_TEXT_AREA
+                    location_section: C.AnalyticsSections.CHANNEL_TEXT_AREA
                 },
                 location_stack: x
             })

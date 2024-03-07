@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("812204"),
         E = n("685665"),
         g = n("299285"),
-        C = n("442939"),
-        S = n("373469"),
+        S = n("442939"),
+        C = n("373469"),
         T = n("26989"),
         v = n("305961"),
         I = n("824563"),
@@ -68,8 +68,8 @@ function(e, t, n) {
             status: ee,
             isMobile: et,
             isApplicationStreaming: en
-        } = (0, r.useStateFromStoresObject)([S.default, I.default], () => {
-            let e = null != S.default.getAnyStreamForUser(t.id);
+        } = (0, r.useStateFromStoresObject)([C.default, I.default], () => {
+            let e = null != C.default.getAnyStreamForUser(t.id);
             return {
                 activity: I.default.findActivity(t.id, t => {
                     let {
@@ -99,7 +99,7 @@ function(e, t, n) {
             }),
             [eo, eu] = i.useState(!1);
         (0, c.default)(() => eu(!0), er.shouldShow ? 250 : null);
-        let ed = (0, C.useGetOrFetchApplication)(null == Q ? void 0 : Q.application_id);
+        let ed = (0, S.useGetOrFetchApplication)(null == Q ? void 0 : Q.application_id);
         return i.useEffect(() => {
             null == B || B(null == K ? void 0 : K.current)
         }, [K, B]), i.useEffect(() => {

@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("377253"),
         E = n("116320"),
         g = n("381546"),
-        C = n("49111"),
-        S = n("782340"),
+        S = n("49111"),
+        C = n("782340"),
         T = n("731851");
 
     function v(e) {
@@ -31,7 +31,7 @@ function(e, t, n) {
             replyChainLength: a
         } = e;
         return i.useEffect(() => {
-            (0, u.trackWithMetadata)(C.AnalyticEvents.THREAD_NUDGE_SHOWN, {
+            (0, u.trackWithMetadata)(S.AnalyticEvents.THREAD_NUDGE_SHOWN, {
                 type: "Reply Chain (".concat(3, ")"),
                 reply_chain_length: a + 1,
                 channel_id: t.id,
@@ -52,14 +52,14 @@ function(e, t, n) {
                 color: "header-secondary",
                 className: T.text,
                 variant: "text-sm/normal",
-                children: S.default.Messages.THREAD_REPLY_SUGGESTION.format({
+                children: C.default.Messages.THREAD_REPLY_SUGGESTION.format({
                     count: Math.min(10, a + 1)
                 })
             }), (0, l.jsx)(o.Text, {
                 color: "text-link",
                 className: T.createThreadButton,
                 variant: "text-sm/semibold",
-                children: S.default.Messages.CREATE_THREAD
+                children: C.default.Messages.CREATE_THREAD
             })]
         })
     }
@@ -84,7 +84,7 @@ function(e, t, n) {
                 let e = l;
                 for (let t = 0; t < 10; t++) {
                     let l = h.default.getMessage(n, e);
-                    if ((null == l ? void 0 : l.type) !== C.MessageTypes.REPLY || null == l.messageReference) return t;
+                    if ((null == l ? void 0 : l.type) !== S.MessageTypes.REPLY || null == l.messageReference) return t;
                     e = l.messageReference.message_id
                 }
                 return 10
@@ -101,7 +101,7 @@ function(e, t, n) {
                 children: [(0, l.jsxs)("div", {
                     className: T.replyBar,
                     children: [(0, l.jsx)(o.Clickable, {
-                        onClick: () => (0, f.transitionTo)(C.Routes.CHANNEL(i.getGuildId(), i.id, a.id)),
+                        onClick: () => (0, f.transitionTo)(S.Routes.CHANNEL(i.getGuildId(), i.id, a.id)),
                         focusProps: {
                             offset: {
                                 top: -8,
@@ -114,7 +114,7 @@ function(e, t, n) {
                             color: "header-secondary",
                             className: s(T.text, T.replyLabel),
                             variant: "text-sm/normal",
-                            children: S.default.Messages.REPLYING_TO.format({
+                            children: C.default.Messages.REPLYING_TO.format({
                                 userHook: (e, t) => (0, l.jsx)(o.NameWithRole, {
                                     className: T.name,
                                     name: I,
@@ -127,7 +127,7 @@ function(e, t, n) {
                         className: T.actions,
                         children: [p && (0, l.jsxs)(l.Fragment, {
                             children: [(0, l.jsx)(o.Tooltip, {
-                                text: u ? S.default.Messages.REPLY_MENTION_ON_TOOLTIP : S.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
+                                text: u ? C.default.Messages.REPLY_MENTION_ON_TOOLTIP : C.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
                                 children: e => {
                                     let {
                                         onMouseEnter: t,
@@ -148,9 +148,9 @@ function(e, t, n) {
                                             color: u ? "text-link" : "text-muted",
                                             className: T.mentionButton,
                                             children: [(0, l.jsx)(E.default, {
-                                                "aria-label": S.default.Messages.MENTION,
+                                                "aria-label": C.default.Messages.MENTION,
                                                 className: T.mentionIcon
-                                            }), u ? S.default.Messages.REPLY_MENTION_ON : S.default.Messages.REPLY_MENTION_OFF]
+                                            }), u ? C.default.Messages.REPLY_MENTION_ON : C.default.Messages.REPLY_MENTION_OFF]
                                         })
                                     })
                                 }

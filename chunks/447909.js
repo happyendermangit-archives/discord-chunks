@@ -5,11 +5,11 @@ function(e, t, s) {
             return T
         },
         default: function() {
-            return A
+            return m
         }
     }), s("424973"), s("511434"), s("313619"), s("654714"), s("287168"), s("956660"), s("222007"), s("70102"), s("854508"), s("881410");
-    var l, u, i = s("917351"),
-        n = s.n(i),
+    var l, i, u = s("917351"),
+        n = s.n(u),
         r = s("748820"),
         a = s("689988"),
         o = s("233069"),
@@ -52,7 +52,7 @@ function(e, t, s) {
             let l = y(e.user);
             null != l && (E(l, t, e.nick), s.push(l))
         }), s
-    }(u = l || (l = {})).UPDATE_USERS = "UPDATE_USERS", u.USER_RESULTS = "USER_RESULTS", u.QUERY_SET = "QUERY_SET", u.QUERY_CLEAR = "QUERY_CLEAR";
+    }(i = l || (l = {})).UPDATE_USERS = "UPDATE_USERS", i.USER_RESULTS = "USER_RESULTS", i.QUERY_SET = "QUERY_SET", i.QUERY_CLEAR = "QUERY_CLEAR";
     class T {
         setLimit(e) {
             this._limit = e, null != this._nextQuery && (this._nextQuery.limit = e)
@@ -95,7 +95,7 @@ function(e, t, s) {
             }, this._worker = e, this._uuid = (0, r.v4)(), this._callback = t, this._limit = s, this._currentQuery = null, this._nextQuery = null, this._subscribed = !1, this.subscribe()
         }
     }
-    class m extends a.default {
+    class A extends a.default {
         _initialize() {
             this.rebootWebworker()
         }
@@ -157,9 +157,9 @@ function(e, t, s) {
                     let l = d.default.getMutableAllGuildsAndMembers();
                     for (let e in l)
                         for (let t in l[e]) {
-                            var u, i;
+                            var i, u;
                             let n = s[t],
-                                r = null !== (i = null === (u = l[e][t]) || void 0 === u ? void 0 : u.nick) && void 0 !== i ? i : R.default.getGlobalName(n);
+                                r = null !== (u = null === (i = l[e][t]) || void 0 === i ? void 0 : i.nick) && void 0 !== u ? u : R.default.getGlobalName(n);
                             null != n && (n[e] = null != r && "" !== r ? r : null)
                         }
                     this.updateUsers(Object.values(s))
@@ -178,15 +178,15 @@ function(e, t, s) {
                     guildMembers: s
                 } = e, l = new Map;
                 for (let e of t) l.set(e.id, y(e));
-                let u = f.default.keys(s);
-                for (let e of u) {
+                let i = f.default.keys(s);
+                for (let e of i) {
                     let t = s[e];
                     if (null == t) continue;
-                    let u = f.default.keys(t);
-                    for (let s of u) {
-                        let u = l.get(s),
-                            i = t[s];
-                        null != u && null != i && null != i.nick && (E(u, e, i.nick), l.set(s, u))
+                    let i = f.default.keys(t);
+                    for (let s of i) {
+                        let i = l.get(s),
+                            u = t[s];
+                        null != i && null != u && null != u.nick && (E(i, e, u.nick), l.set(s, i))
                     }
                 }
                 this.updateUsers(Array.from(l.values())), l.clear()
@@ -213,8 +213,8 @@ function(e, t, s) {
                     guildId: t,
                     user: s,
                     nick: l
-                } = e, u = y(s);
-                null != u && (E(u, t, l), this.updateUsers([u]))
+                } = e, i = y(s);
+                null != i && (E(i, t, l), this.updateUsers([i]))
             }, this._handlePassiveUpdateV1 = e => {
                 null != e.members && this.updateUsers(g(e.members, e.guildId))
             }, this._handleRelationshipAdd = e => {
@@ -252,10 +252,10 @@ function(e, t, s) {
                     isMember: l
                 } = e;
                 if (!l) return;
-                let u = y(s);
-                E(u, t), this.updateUsers([u])
+                let i = y(s);
+                E(i, t), this.updateUsers([i])
             }
         }
     }
-    var A = new m
+    var m = new A
 }

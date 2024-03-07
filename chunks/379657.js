@@ -25,21 +25,21 @@ function(e, t, n) {
             commandIds: n,
             channel: E,
             guildId: g,
-            onClick: C
+            onClick: S
         } = e;
         (0, u.usePrivateChannelIntegrationState)({
             channelId: E.id
         });
         let {
-            commands: S
-        } = r.useCommandsForApplication(E, t, n), T = i.useMemo(() => null == S ? void 0 : S.filter(e => !0 !== e.nsfw), [S]), v = i.useCallback(e => {
-            null == C || C(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
+            commands: C
+        } = r.useCommandsForApplication(E, t, n), T = i.useMemo(() => null == C ? void 0 : C.filter(e => !0 !== e.nsfw), [C]), v = i.useCallback(e => {
+            null == S || S(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
                 application_id: t,
                 command_id: e,
                 guild_id: g,
                 ...(0, s.collectChannelAnalyticsMetadataFromId)(E.id)
             })
-        }, [t, E.id, g, C]);
+        }, [t, E.id, g, S]);
         return null == T || 0 === T.length ? null : (0, l.jsxs)(c.default, {
             children: [(0, l.jsx)(a.Heading, {
                 variant: "eyebrow",

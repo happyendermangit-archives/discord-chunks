@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         bodyColumnMiddle: "bodyColumnMiddle_a9a27d",

@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("824140"),
         E = n("401642"),
         g = n("777003"),
-        C = n("590456"),
-        S = n("49111"),
+        S = n("590456"),
+        C = n("49111"),
         T = n("782340"),
         v = n("715392"),
         I = n("862939");
@@ -76,9 +76,9 @@ function(e, t, n) {
                             userId: N,
                             guildId: null == x ? void 0 : x.id,
                             channelId: A,
-                            section: C.UserProfileSections.USER_INFO_CONNECTIONS,
+                            section: S.UserProfileSections.USER_INFO_CONNECTIONS,
                             analyticsLocation: {
-                                section: S.AnalyticsSections.PROFILE_POPOUT
+                                section: C.AnalyticsSections.PROFILE_POPOUT
                             }
                         }), null == O || O()
                     },

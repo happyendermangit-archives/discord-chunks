@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("256860"),
         E = n("364685"),
         g = n("41170"),
-        C = n("281072"),
-        S = n("560241"),
+        S = n("281072"),
+        C = n("560241"),
         T = n("49111"),
         v = n("646718"),
         I = n("782340"),
@@ -36,7 +36,7 @@ function(e, t, n) {
         (0, h.useFetchStickerPacks)();
         let {
             analyticsLocations: x
-        } = (0, d.default)(u.default.EMPTY_STATE), y = (0, r.useStateFromStoresArray)([E.default], () => S.EMPTY_STATE_STICKERS.map(e => E.default.getStickerById(e)));
+        } = (0, d.default)(u.default.EMPTY_STATE), y = (0, r.useStateFromStoresArray)([E.default], () => C.EMPTY_STATE_STICKERS.map(e => E.default.getStickerById(e)));
         i.useEffect(() => {
             p.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: v.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
@@ -79,7 +79,7 @@ function(e, t, n) {
                         size: 80
                     }, null == e ? void 0 : e.id))
                 })]
-            }), !M && (0, l.jsx)(C.default, {
+            }), !M && (0, l.jsx)(S.default, {
                 analyticsSection: T.AnalyticsSections.EXPRESSION_PICKER,
                 buttonText: M ? L ? I.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : I.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
             })]

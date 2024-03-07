@@ -19,8 +19,8 @@ function(e, t, n) {
         h = n("168973"),
         E = n("985365"),
         g = n("599110"),
-        C = n("315102"),
-        S = n("103603"),
+        S = n("315102"),
+        C = n("103603"),
         T = n("275623"),
         v = n("594098"),
         I = n("719347"),
@@ -85,7 +85,7 @@ function(e, t, n) {
             let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 n = null,
                 l = null;
-            return C.SUPPORTS_WEBP && (t || !e.isAnimated(this.props)) ? (n = "webp", e.isSrcPNG(this.props) && (l = "lossless")) : t && (n = "png"), {
+            return S.SUPPORTS_WEBP && (t || !e.isAnimated(this.props)) ? (n = "webp", e.isSrcPNG(this.props) && (l = "lossless")) : t && (n = "png"), {
                 format: n,
                 quality: l
             }
@@ -99,12 +99,12 @@ function(e, t, n) {
                 mediaLayoutType: i,
                 useFullWidth: a
             } = this.props;
-            return i === I.MediaLayoutType.MOSAIC && a ? (0, S.getCoverRatio)({
+            return i === I.MediaLayoutType.MOSAIC && a ? (0, C.getCoverRatio)({
                 width: e,
                 height: t,
                 maxWidth: n,
                 maxHeight: l
-            }) : (0, S.getRatio)({
+            }) : (0, C.getRatio)({
                 width: e,
                 height: t,
                 maxWidth: n,
@@ -146,8 +146,8 @@ function(e, t, n) {
                 width: h,
                 height: E,
                 minWidth: g,
-                minHeight: C,
-                maxWidth: S,
+                minHeight: S,
+                maxWidth: C,
                 maxHeight: T,
                 onClick: I,
                 renderAccessory: N,
@@ -160,7 +160,7 @@ function(e, t, n) {
                 readyState: M,
                 hasMouseOver: L,
                 hasFocus: P
-            } = this.state, b = null != l, j = this.getRatio(), U = (0, u.clamp)(Math.round(h * j), null != g ? g : 0, null != S ? S : 1 / 0), D = (0, u.clamp)(Math.round(E * j), null != C ? C : 0, null != T ? T : 1 / 0), k = {
+            } = this.state, b = null != l, j = this.getRatio(), U = (0, u.clamp)(Math.round(h * j), null != g ? g : 0, null != C ? C : 1 / 0), D = (0, u.clamp)(Math.round(E * j), null != S ? S : 0, null != T ? T : 1 / 0), k = {
                 alt: t,
                 readyState: M,
                 onContextMenu: null != a ? a : void 0,
@@ -168,7 +168,7 @@ function(e, t, n) {
                 className: d,
                 imageClassName: c,
                 minWidth: g,
-                minHeight: C,
+                minHeight: S,
                 mediaLayoutType: this.getType(),
                 limitResponsiveWidth: x,
                 useFullWidth: y,
@@ -284,7 +284,7 @@ function(e, t, n) {
                     width: i,
                     height: a
                 } = this.props;
-                (1 !== i || 1 !== a) && this.loadImage(this.getSrc((0, S.getRatio)({
+                (1 !== i || 1 !== a) && this.loadImage(this.getSrc((0, C.getRatio)({
                     width: i,
                     height: a,
                     maxWidth: n,

@@ -25,10 +25,10 @@ function(e, t, n) {
                 iconClassName: h,
                 tooltipText: E
             } = e,
-            [g, C] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
-            S = (0, r.useToken)(s.default.unsafe_rawColors.PRIMARY_300).hex(),
-            T = (0, i.hex2int)(null != n ? n : S),
-            v = (0, i.int2hsl)(T, !1, g ? C : null);
+            [g, S] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
+            C = (0, r.useToken)(s.default.unsafe_rawColors.PRIMARY_300).hex(),
+            T = (0, i.hex2int)(null != n ? n : C),
+            v = (0, i.int2hsl)(T, !1, g ? S : null);
         return t = null != m ? m : .3 > (0, i.getDarkness)(T) ? s.default.unsafe_rawColors.PRIMARY_630.css : s.default.unsafe_rawColors.WHITE_500.css, (0, l.jsx)(r.Tooltip, {
             text: null != E ? E : c.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
             children: e => (0, l.jsx)(u.default, {

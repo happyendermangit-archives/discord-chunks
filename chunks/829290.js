@@ -5,7 +5,7 @@ function(e, t, n) {
             return g
         },
         StaffPTOBar: function() {
-            return C
+            return S
         }
     }), n("222007");
     var l = n("37983");
@@ -42,7 +42,7 @@ function(e, t, n) {
             let l = o.default.getNicknames(n.id).some(e => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
             return l ? !E.hasId(n.id) && l : (p.delete(n.id) && E.emitChange(), !1)
         }),
-        C = () => (0, l.jsxs)("div", {
+        S = () => (0, l.jsxs)("div", {
             className: m.bar,
             children: [f.default.Messages.STAFF_PTO_NOTICE, (0, l.jsx)(a.Clickable, {
                 className: m.closeButton,

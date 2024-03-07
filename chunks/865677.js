@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("86878"),
         E = n("525065"),
         g = n("305961"),
-        C = n("686470"),
-        S = n("957255"),
+        S = n("686470"),
+        C = n("957255"),
         T = n("27618"),
         v = n("18494"),
         I = n("697218"),
@@ -58,8 +58,8 @@ function(e, t, n) {
             channelId: null == q ? void 0 : q.channelId,
             userId: V.id,
             activity: t
-        }), Q = (0, a.useStateFromStores)([C.default, m.default, A.default, h.default], () => K || (null == t ? void 0 : t.application_id) != null && (0, y.isLaunchable)({
-            LibraryApplicationStore: C.default,
+        }), Q = (0, a.useStateFromStores)([S.default, m.default, A.default, h.default], () => K || (null == t ? void 0 : t.application_id) != null && (0, y.isLaunchable)({
+            LibraryApplicationStore: S.default,
             LaunchableGameStore: m.default,
             DispatchApplicationStore: A.default,
             ConnectedAppsStore: h.default,
@@ -70,7 +70,7 @@ function(e, t, n) {
                 channelId: l
             } = e;
             return n === (null == t ? void 0 : t.application_id) && l === X
-        })), ee = (0, a.useStateFromStores)([N.default], () => null != t && null != t.application_id && N.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([p.default, g.default, E.default, T.default, v.default, _.default, S.default], () => (0, M.default)({
+        })), ee = (0, a.useStateFromStores)([N.default], () => null != t && null != t.application_id && N.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([p.default, g.default, E.default, T.default, v.default, _.default, C.default], () => (0, M.default)({
             user: V,
             activity: t,
             application: et,
@@ -83,7 +83,7 @@ function(e, t, n) {
             RelationshipStore: T.default,
             SelectedChannelStore: v.default,
             VoiceStateStore: _.default,
-            PermissionStore: S.default
+            PermissionStore: C.default
         })), el = (0, d.useAnalyticsContext)(), ei = !x.isPlatformEmbedded, ea = (0, P.default)(t, k.ActivityFlags.JOIN) || K;
         if (null == t || !ea || null == t.application_id) return null;
         let es = !F && (ei || Q) && !Y && !$ && (!K || en),

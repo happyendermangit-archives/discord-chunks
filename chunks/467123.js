@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return C
+            return S
         },
         isPointInCodeBlock: function() {
             return I
@@ -37,7 +37,7 @@ function(e, t, n) {
     for (let e in h)
         if (null == e.match(E)) throw Error("Language name does not match regex: ".concat(e));
 
-    function C(e) {
+    function S(e) {
         let {
             onChange: t
         } = e, n = null;
@@ -86,19 +86,19 @@ function(e, t, n) {
                                     f = n && 0 === s.length,
                                     p = l && 0 === s.length,
                                     E = d ? s.slice(1) : s,
-                                    C = E.length % 2 == 1,
-                                    S = C && (null == u || "" === u || null != u.match(g)),
-                                    T = S && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
+                                    S = E.length % 2 == 1,
+                                    C = S && (null == u || "" === u || null != u.match(g)),
+                                    T = C && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
                                 return {
                                     blockEntry: t,
                                     wasInCodeBlock: n,
                                     isInCodeBlock: f,
                                     isStyledCodeBlockLine: p,
-                                    lang: C || d ? T : i,
+                                    lang: S || d ? T : i,
                                     hljsTypes: null,
                                     closesCodeBlock: d,
-                                    opensCodeBlock: C,
-                                    opensCodeBlockOnOwnLine: S
+                                    opensCodeBlock: S,
+                                    opensCodeBlockOnOwnLine: C
                                 }
                             }(e, l, i, a, s), t.push(n)
                         }
@@ -129,7 +129,7 @@ function(e, t, n) {
                                                     s = [],
                                                     r = 0,
                                                     o = 0;
-                                                for (; null != (i = S.exec(a));) {
+                                                for (; null != (i = C.exec(a));) {
                                                     let t = i.index + i[0].length,
                                                         n = i.index - o;
                                                     i.index > o && (e.length > 0 && s.push({
@@ -179,7 +179,7 @@ function(e, t, n) {
             }), n = c.EditorUtils.richValue(e)), t()
         }, e
     }
-    let S = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+    let C = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
         T = {
             max: 1 / 0,
             maxAge: 1 * s.default.Millis.MINUTE,

@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         dangerFooterContainer: "dangerFooterContainer__1acb5",

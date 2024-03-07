@@ -23,8 +23,8 @@ function(e, t, n) {
         h = n("688318"),
         E = n("21526"),
         g = n("853987"),
-        C = n("491232"),
-        S = n("845962"),
+        S = n("491232"),
+        C = n("845962"),
         T = n("697218"),
         v = n("945330"),
         I = n("719923"),
@@ -104,10 +104,10 @@ function(e, t, n) {
         i.useEffect(() => (B(b), () => {
             H()
         }), [B, b, H]);
-        let V = (0, o.default)([S.default], () => S.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
+        let V = (0, o.default)([C.default], () => C.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
             [K, W] = (0, o.useStateFromStoresArray)([g.default], () => {
                 var e;
-                return [(0, C.isPremiumCollectiblesProduct)(g.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, C.isPremiumCollectiblesProduct)(g.default.getProduct(null == V ? void 0 : V.skuId))]
+                return [(0, S.isPremiumCollectiblesProduct)(g.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, S.isPremiumCollectiblesProduct)(g.default.getProduct(null == V ? void 0 : V.skuId))]
             }),
             Y = i.useCallback(() => {
                 var e, t, l, i;

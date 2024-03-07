@@ -22,7 +22,7 @@ function(e, t, n) {
         E = n("825871"),
         g = n("782340");
 
-    function C(e) {
+    function S(e) {
         let t = m.PREFIX_COMMAND_REGEX.exec(e);
         if (null != t) return {
             type: "prefix",
@@ -40,18 +40,18 @@ function(e, t, n) {
         }
         return null
     }
-    let S = {
+    let C = {
         ...E.default,
         sentinel: void 0,
         focusMode: h.FocusMode.MANUAL,
         matches(e, t, n, l, i) {
             if (i.commands === h.CommandMode.DISABLED || i.commands === h.CommandMode.OLD_BUILT_INS || n.length < 2 || !u.ShowCommandSuggestions.getSetting()) return !1;
-            let a = C(n);
+            let a = S(n);
             return null != a && a.cleanedQuery.length > 0
         },
         queryResults(e, t, n, l, r) {
             if (!u.ShowCommandSuggestions.getSetting()) return E.EMPTY_RESULTS;
-            let d = C(n);
+            let d = S(n);
             if (null == d) return E.EMPTY_RESULTS;
             let c = (0, E.getLimit)("LegacyCommandAutocompletes"),
                 f = (0, o.getCommandQuery)(e, d.cleanedQuery),
@@ -120,7 +120,7 @@ function(e, t, n) {
                     }
                 },
                 getQuery: e => {
-                    let t = C(e);
+                    let t = S(e);
                     if ("mention" !== t.type) return e;
                     let n = f.default.getName(null == i ? void 0 : i.id, a.id, t.user);
                     return e.replace(m.BOT_MENTION_COMMAND_REGEX, "@".concat(n))
@@ -150,5 +150,5 @@ function(e, t, n) {
             }
         }
     };
-    var T = S
+    var T = C
 }

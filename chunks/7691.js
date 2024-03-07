@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         closeIconOnly: "closeIconOnly_a85f5b",

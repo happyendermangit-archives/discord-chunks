@@ -26,8 +26,8 @@ function(e, t, n) {
                 onFocus: h,
                 autoFocus: E,
                 searchBarRef: g,
-                hasTabWrapper: C,
-                diversitySurrogate: S,
+                hasTabWrapper: S,
+                diversitySurrogate: C,
                 isBurstReaction: T,
                 onBurstReactionToggle: v,
                 renderHeader: I
@@ -51,8 +51,8 @@ function(e, t, n) {
                 }) : null, n === c.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, l.jsx)(o.default, {
                     searchBarRef: g,
                     className: f.diversitySelector,
-                    hasTabWrapper: C,
-                    selectedSurrogate: S
+                    hasTabWrapper: S,
+                    selectedSurrogate: C
                 })]
             });
             return (0, l.jsx)("div", {

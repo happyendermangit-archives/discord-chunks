@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("295426"),
         E = n("206230"),
         g = n("812204"),
-        C = n("685665"),
-        S = n("996554"),
+        S = n("685665"),
+        C = n("996554"),
         T = n("426969"),
         v = n("847352"),
         I = n("383018"),
@@ -66,7 +66,7 @@ function(e, t, n) {
         er = n("13030"),
         eo = n("350583"),
         eu = i.memo(i.forwardRef(function(e, t) {
-            var a, o, eu, ed, ec, ef, em, ep, eh, eE, eg, eC, eS, eT;
+            var a, o, eu, ed, ec, ef, em, ep, eh, eE, eg, eS, eC, eT;
             let {
                 textValue: ev,
                 richValue: eI,
@@ -111,7 +111,7 @@ function(e, t, n) {
             u(null != eP, "chat input type must be set");
             let {
                 AnalyticsLocationProvider: e6
-            } = (0, C.default)(g.default.CHANNEL_TEXT_AREA), e9 = function(e) {
+            } = (0, S.default)(g.default.CHANNEL_TEXT_AREA), e9 = function(e) {
                 let t = i.useRef(null);
                 if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
                 return null == e ? t : e
@@ -194,7 +194,7 @@ function(e, t, n) {
             }(eP, ts);
             let {
                 eventEmitter: tg,
-                handleEditorSelectionChanged: tC
+                handleEditorSelectionChanged: tS
             } = function(e, t, n) {
                 let [l] = i.useState(() => new r.EventEmitter);
                 return i.useEffect(() => {
@@ -206,16 +206,16 @@ function(e, t, n) {
                     }
                 }
             }(e5, ev, eI), {
-                submitting: tS,
+                submitting: tC,
                 submit: tT,
                 handleSubmit: tv
             } = function(e, t, a, s) {
                 let [r, o] = i.useState(!1), u = i.useCallback((i, d, c, f, m) => {
-                    var E, g, C;
+                    var E, g, S;
                     if (r) return;
                     o(!0);
-                    let S = null !== (g = null === (E = j.default.getStickerPreview(s, t.drafts.type)) || void 0 === E ? void 0 : E.map(e => e.id)) && void 0 !== g ? g : [],
-                        T = null !== (C = V.default.getUploads(s, t.drafts.type)) && void 0 !== C ? C : [];
+                    let C = null !== (g = null === (E = j.default.getStickerPreview(s, t.drafts.type)) || void 0 === E ? void 0 : E.map(e => e.id)) && void 0 !== g ? g : [],
+                        T = null !== (S = V.default.getUploads(s, t.drafts.type)) && void 0 !== S ? S : [];
                     if (null == d && !f && !m && (0, M.shouldShowAddMediaToOriginalPostModal)(T, s)) {
                         o(!1), (0, p.openModalLazy)(async () => {
                             let {
@@ -233,7 +233,7 @@ function(e, t, n) {
                     e({
                         value: i,
                         uploads: T,
-                        stickers: S,
+                        stickers: C,
                         command: d,
                         commandOptionValues: c,
                         isGif: f
@@ -280,15 +280,15 @@ function(e, t, n) {
                     handleHideAutocomplete: n
                 }
             }();
-            let tA = (eE = tT, eg = eP, eC = e5, i.useCallback(e => {
+            let tA = (eE = tT, eg = eP, eS = e5, i.useCallback(e => {
                 var t, n;
-                eg === J.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eC.current) || void 0 === n || n.insertGIF(e) : eE(e.url, void 0, void 0, !0), (0, y.closeExpressionPicker)(), null === (t = eC.current) || void 0 === t || t.focus()
-            }, [eC, eE, eg]));
-            let tx = (eS = e5, i.useCallback(function(e, t) {
+                eg === J.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eS.current) || void 0 === n || n.insertGIF(e) : eE(e.url, void 0, void 0, !0), (0, y.closeExpressionPicker)(), null === (t = eS.current) || void 0 === t || t.focus()
+            }, [eS, eE, eg]));
+            let tx = (eC = e5, i.useCallback(function(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        l = eS.current;
+                        l = eC.current;
                     null != e && null != l && l.insertEmoji(e, t, n), t && (0, y.closeExpressionPicker)()
-                }, [eS])),
+                }, [eC])),
                 ty = function(e) {
                     let {
                         editorRef: t,
@@ -299,7 +299,7 @@ function(e, t, n) {
                         submit: r
                     } = e, {
                         analyticsLocations: o
-                    } = (0, C.default)();
+                    } = (0, S.default)();
                     return i.useCallback((e, i) => {
                         var u, d;
                         !n && ((0, D.shouldAttachSticker)(i, l, a, s.drafts.type) ? ((0, Q.trackStickerPreviewSelect)({
@@ -389,7 +389,7 @@ function(e, t, n) {
                         handleOuterClick: r
                     }
                 }(eP, tg, e5),
-                tF = S.AppLauncherDesktopExperiment.useExperiment({
+                tF = C.AppLauncherDesktopExperiment.useExperiment({
                     location: "chat_input"
                 }, {
                     autoTrackExposure: !1
@@ -397,7 +397,7 @@ function(e, t, n) {
                 tG = (0, m.useStateFromStores)([T.default], () => T.default.shouldShowPopup(), []);
             (0, Z.useHereMentionCallback)(tg, eL.guild_id, eL.id);
             let tB = null != ek,
-                tH = ts && !((ti || ta) && tu) || tS && (null === (o = eP.submit) || void 0 === o ? void 0 : o.useDisabledStylesOnSubmit),
+                tH = ts && !((ti || ta) && tu) || tC && (null === (o = eP.submit) || void 0 === o ? void 0 : o.useDisabledStylesOnSubmit),
                 tV = null,
                 tK = null;
             null != tn ? tV = null == eD ? void 0 : eD(tn, tl, eo.attachButton) : (!ts || to) && (tV = null == ej ? void 0 : ej(tB, eo.attachButton), tF && (tK = null == eU ? void 0 : eU()));
@@ -493,7 +493,7 @@ function(e, t, n) {
                                         onTab: tP,
                                         onEnter: tb,
                                         onMoveSelection: tj,
-                                        onSelectionChanged: tC,
+                                        onSelectionChanged: tS,
                                         onMaybeShowAutocomplete: t_,
                                         onHideAutocomplete: tN,
                                         promptToUpload: eK,

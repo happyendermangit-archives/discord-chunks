@@ -21,8 +21,8 @@ function(e, t, n) {
         h = n("471671"),
         E = n("945330"),
         g = n("95689"),
-        C = n("423487"),
-        S = n("773336"),
+        S = n("423487"),
+        C = n("773336"),
         T = n("13798"),
         v = n("235004"),
         I = n("49111"),
@@ -61,7 +61,7 @@ function(e, t, n) {
                 })
             },
             b = (0, u.isDismissibleContentDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
-            j = null != L && (0, S.isWindows)() && !b ? _.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
+            j = null != L && (0, C.isWindows)() && !b ? _.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
                 keybind: (0, T.toString)(L.shortcut, !0),
                 openSettingsHook: (e, t) => (0, l.jsx)(s.Anchor, {
                     onClick: P,
@@ -70,7 +70,7 @@ function(e, t, n) {
             }) : null;
         return null == j ? null : (0, l.jsxs)("div", {
             className: N.keybindHint,
-            children: [(0, l.jsx)(C.default, {
+            children: [(0, l.jsx)(S.default, {
                 className: N.warningIcon
             }), (0, l.jsx)(s.Text, {
                 variant: "text-sm/medium",

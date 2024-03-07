@@ -23,10 +23,12 @@ function(e, t, n) {
             maxUsers: a,
             users: r,
             guildId: p,
-            onFocus: h
-        } = e, [E, g] = i.useState(!1);
+            onFocus: h,
+            size: E = u.AvatarSizes.SIZE_24,
+            hideOverflowCount: g = !1
+        } = e, [S, C] = i.useState(!1);
 
-        function C() {
+        function T() {
             return (0, l.jsx)(u.Dialog, {
                 className: m.popoutWrapper,
                 children: (0, l.jsx)(u.Scroller, {
@@ -44,7 +46,7 @@ function(e, t, n) {
                                 user: e
                             })
                         }, {
-                            onClose: () => g(!1)
+                            onClose: () => C(!1)
                         })
                     }, e.id))
                 })
@@ -61,20 +63,20 @@ function(e, t, n) {
                             children: (0, l.jsx)(u.Avatar, {
                                 src: e.getAvatarURL(p, 24),
                                 "aria-label": t,
-                                size: u.AvatarSizes.SIZE_24
+                                size: E
                             })
                         }, e.id)
                     }).value(),
                     t = r.length - a;
-                return t > 0 && (e[e.length - 1] = (0, l.jsx)(u.Popout, {
-                    renderPopout: C,
-                    shouldShow: E,
+                return t > 0 && !g && (e[e.length - 1] = (0, l.jsx)(u.Popout, {
+                    renderPopout: T,
+                    shouldShow: S,
                     position: "bottom",
-                    onRequestClose: () => g(!1),
+                    onRequestClose: () => C(!1),
                     children: () => (0, l.jsxs)(u.Button, {
                         className: s(m.avatar, m.overflow),
                         onFocus: h,
-                        onClick: () => g(!0),
+                        onClick: () => C(!0),
                         look: u.Button.Looks.BLANK,
                         size: u.Button.Sizes.NONE,
                         children: ["+", t + 1]

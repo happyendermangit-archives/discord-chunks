@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("599110"),
         E = n("49111"),
         g = n("646718"),
-        C = n("782340"),
-        S = n("350583"),
+        S = n("782340"),
+        C = n("350583"),
         T = i.memo(function(e) {
             let {
                 disabled: t,
@@ -34,12 +34,12 @@ function(e, t, n) {
                 location: "ec41f5_1"
             }, {
                 autoTrackExposure: !0
-            }), _ = I ? C.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : v ? C.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : C.default.Messages.SHARE_NITRO_TOOLTIP, N = I ? C.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [A, x] = i.useState(!1), [y, O] = i.useState(!1), R = (0, r.default)(null, () => O(!1)), {
+            }), _ = I ? S.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : v ? S.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : S.default.Messages.SHARE_NITRO_TOOLTIP, N = I ? S.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [A, x] = i.useState(!1), [y, O] = i.useState(!1), R = (0, r.default)(null, () => O(!1)), {
                 analyticsLocations: M
             } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), L = T.isDM() && void 0 !== T.recipients ? T.recipients[0] : null, P = (0, o.default)();
             return t ? null : (0, l.jsxs)("div", {
                 ref: R,
-                className: S.buttonContainer,
+                className: C.buttonContainer,
                 children: [(0, l.jsx)(f.default, {
                     shouldShowPopout: y,
                     referralsRemaining: n,
@@ -63,7 +63,7 @@ function(e, t, n) {
                         },
                         children: (0, l.jsx)(m.default, {
                             ...e,
-                            innerClassName: S.button,
+                            innerClassName: C.button,
                             isActive: y,
                             "aria-label": null != N ? N : _,
                             "aria-haspopup": "dialog",

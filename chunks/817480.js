@@ -56,8 +56,8 @@ function(e, t, n) {
                     height: h,
                     animated: E,
                     children: g,
-                    renderLinkComponent: C,
-                    isWindowFocused: S,
+                    renderLinkComponent: S,
+                    isWindowFocused: C,
                     shouldHideMediaOptions: T = !1
                 } = this.props, v = {
                     alt: r,
@@ -68,7 +68,7 @@ function(e, t, n) {
                     animated: E,
                     children: g,
                     zoomThumbnailPlaceholder: n,
-                    renderLinkComponent: C,
+                    renderLinkComponent: S,
                     onContextMenu: T ? e => {
                         e.stopPropagation(), e.preventDefault()
                     } : void 0,
@@ -82,7 +82,7 @@ function(e, t, n) {
                     children: (0, l.jsx)(u.ImageModal, {
                         ...v,
                         className: m.image,
-                        shouldAnimate: S,
+                        shouldAnimate: C,
                         onClose: this.onCloseImage,
                         shouldHideMediaOptions: T
                     })

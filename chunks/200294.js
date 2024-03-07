@@ -47,10 +47,10 @@ function(e, t, n) {
             indexOffset: h = 0,
             headerClassName: E,
             headerTrailingContent: g,
-            footer: C,
-            subHeader: S
+            footer: S,
+            subHeader: C
         } = e;
-        if (null == C && (null == a || 0 === a.length)) return null;
+        if (null == S && (null == a || 0 === a.length)) return null;
         let T = null == a ? void 0 : a.map((e, t) => {
             let l = t + h,
                 a = f(e, l);
@@ -71,7 +71,7 @@ function(e, t, n) {
                 getQuery: m,
                 headerClassName: E,
                 headerTrailingContent: g
-            }) : null, S, T, C]
+            }) : null, C, T, S]
         }, p)
     }
 }

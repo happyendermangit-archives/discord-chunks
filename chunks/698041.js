@@ -3,7 +3,7 @@ function(e, t, n) {
     let l;
     n.r(t), n.d(t, {
         default: function() {
-            return S
+            return C
         }
     }), n("222007"), n("70102");
     var i = n("446674"),
@@ -43,7 +43,7 @@ function(e, t, n) {
         if (l === s.default.locale) return !1;
         E(), l = s.default.locale
     }
-    class C extends i.default.Store {
+    class S extends i.default.Store {
         initialize() {
             this.waitFor(s.default), this.syncWith([s.default], g), l = s.default.locale
         }
@@ -81,8 +81,8 @@ function(e, t, n) {
             return null
         }
     }
-    C.displayName = "StoreListingStore";
-    var S = new C(a.default, {
+    S.displayName = "StoreListingStore";
+    var C = new S(a.default, {
         STORE_LISTINGS_FETCH_SUCCESS: h,
         APPLICATION_STORE_DIRECTORY_FETCH_SUCCESS: h,
         STORE_LISTING_FETCH_SUCCESS: function(e) {

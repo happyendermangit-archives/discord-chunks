@@ -23,8 +23,8 @@ function(e, t, n) {
         h = n("384997"),
         E = n("649844"),
         g = n("53253"),
-        C = n("778588"),
-        S = n("697218"),
+        S = n("778588"),
+        C = n("697218"),
         T = n("551305"),
         v = n("978679"),
         I = n("953957"),
@@ -137,7 +137,7 @@ function(e, t, n) {
             channel: n
         } = e, {
             analyticsLocations: a
-        } = (0, m.default)(f.default.GIFT_BUTTON), [o, c] = i.useState(!1), v = (0, s.useStateFromStores)([C.default], () => !(null === C.default || void 0 === C.default ? void 0 : C.default.hasLayers())), I = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), _ = null != I ? A.default.age(I.id) : 0, N = !t && v && _ >= D, {
+        } = (0, m.default)(f.default.GIFT_BUTTON), [o, c] = i.useState(!1), v = (0, s.useStateFromStores)([S.default], () => !(null === S.default || void 0 === S.default ? void 0 : S.default.hasLayers())), I = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), _ = null != I ? A.default.age(I.id) : 0, N = !t && v && _ >= D, {
             enabled: b
         } = g.SeasonalGiftingMarketingExperiment.useExperiment({
             location: "ChannelPremiumGiftButton"

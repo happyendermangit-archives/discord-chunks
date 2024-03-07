@@ -11,7 +11,7 @@ function(e, t, n) {
             return g
         },
         getActivityAltText: function() {
-            return C
+            return S
         }
     }), n("222007");
     var l = n("509043"),
@@ -56,7 +56,7 @@ function(e, t, n) {
                 theme: d === t ? "dark" : r
             }
         },
-        C = (e, t) => (0, a.default)(t) ? c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
+        S = (e, t) => (0, a.default)(t) ? c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
             username: e.username,
             song: t.details,
             artist: t.state

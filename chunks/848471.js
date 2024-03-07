@@ -23,8 +23,8 @@ function(e, t, n) {
         h = n("140567"),
         E = n("983782"),
         g = n("791776"),
-        C = n("83800"),
-        S = n("916429"),
+        S = n("83800"),
+        C = n("916429"),
         T = n("939563"),
         v = n("385887"),
         I = n("395364"),
@@ -89,12 +89,12 @@ function(e, t, n) {
             options: o
         } = e, d = i.useRef(null), [c, f] = i.useState(!1), m = i.useRef(), p = i.useContext(u.default), h = i.useCallback(() => {
             f(!1), clearTimeout(m.current)
-        }, []), C = i.useCallback(e => {
+        }, []), S = i.useCallback(e => {
             var t;
             let n = p.renderWindow,
                 l = e.target instanceof n.Node && (null === (t = d.current) || void 0 === t ? void 0 : t.contains(e.target));
             !l && h()
-        }, [p, h]), S = i.useCallback(e => {
+        }, [p, h]), C = i.useCallback(e => {
             let t = p.renderWindow;
             if (e.target instanceof t.Element) {
                 if (0 !== e.button) h();
@@ -114,10 +114,10 @@ function(e, t, n) {
             hide: h
         }), [h]), i.useEffect(() => {
             let e = p.renderWindow;
-            return e.document.addEventListener("keydown", h), e.document.addEventListener("mousedown", C), e.document.addEventListener("mouseup", S), e.addEventListener("focus", h), e.addEventListener("blur", h), () => {
-                e.document.removeEventListener("keydown", h), e.document.removeEventListener("mousedown", C), e.document.removeEventListener("mouseup", S), e.removeEventListener("focus", h), e.removeEventListener("blur", h), clearTimeout(m.current)
+            return e.document.addEventListener("keydown", h), e.document.addEventListener("mousedown", S), e.document.addEventListener("mouseup", C), e.addEventListener("focus", h), e.addEventListener("blur", h), () => {
+                e.document.removeEventListener("keydown", h), e.document.removeEventListener("mousedown", S), e.document.removeEventListener("mouseup", C), e.removeEventListener("focus", h), e.removeEventListener("blur", h), clearTimeout(m.current)
             }
-        }, [p, h, C, S]);
+        }, [p, h, S, C]);
         let {
             x: T,
             y: I
@@ -144,12 +144,12 @@ function(e, t, n) {
             h.setStart(u.anchorNode, u.anchorOffset), h.setEnd(u.focusNode, u.focusOffset);
             let E = h.getBoundingClientRect(),
                 g = f.x === p.x,
-                C = g ? E.x : Math.min(f.x, p.x),
-                S = g ? E.x + E.width : Math.max(f.x, p.x),
+                S = g ? E.x : Math.min(f.x, p.x),
+                C = g ? E.x + E.width : Math.max(f.x, p.x),
                 T = null !== (l = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== l ? l : 0,
                 I = Math.max(T, Math.min(p.y, f.y));
             return {
-                x: C + (S - C) / 2,
+                x: S + (C - S) / 2,
                 y: I
             }
         }, [s, c, a]), [A, x] = i.useState(0), [y, R] = i.useState(0);
@@ -192,7 +192,7 @@ function(e, t, n) {
         } = e, a = !1;
         if ((null == t ? void 0 : t.selection) != null) {
             let [e, l] = v.RangeUtils.edges(t.selection);
-            a = null != (0, S.parseSelectedSyntax)(t, e, l).before[n]
+            a = null != (0, C.parseSelectedSyntax)(t, e, l).before[n]
         }
         return (0, l.jsx)(o.Button, {
             className: _.button,
@@ -202,7 +202,7 @@ function(e, t, n) {
             look: o.Button.Looks.FILLED,
             size: o.Button.Sizes.NONE,
             onClick: () => {
-                null != t && C.HistoryUtils.withSingleEntry(t, () => (0, S.toggleMarkdownStyle)(t, n))
+                null != t && S.HistoryUtils.withSingleEntry(t, () => (0, C.toggleMarkdownStyle)(t, n))
             },
             children: i
         })
@@ -222,7 +222,7 @@ function(e, t, n) {
             look: o.Button.Looks.FILLED,
             size: o.Button.Sizes.NONE,
             onClick: () => {
-                null != n && C.HistoryUtils.withSingleEntry(n, () => (0, S.toggleBlockStyle)(n, t))
+                null != n && S.HistoryUtils.withSingleEntry(n, () => (0, C.toggleBlockStyle)(n, t))
             },
             children: i
         })
@@ -235,7 +235,7 @@ function(e, t, n) {
         } = e, [l, a] = null !== (t = v.EditorUtils.getSelectedVoid(n)) && void 0 !== t ? t : [null, null], s = i.useCallback(e => {
             if ((null == n ? void 0 : n.selection) == null || null == a) return;
             let t = n.selection;
-            C.HistoryUtils.withSingleEntry(n, () => {
+            S.HistoryUtils.withSingleEntry(n, () => {
                 T.SlateTransforms.voidToText(n, e, a), T.SlateTransforms.select(n, t)
             })
         }, [n, a]);

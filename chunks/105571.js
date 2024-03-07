@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("945330"),
         E = n("256170"),
         g = n("315102"),
-        C = n("659500"),
-        S = n("82372"),
+        S = n("659500"),
+        C = n("82372"),
         T = n("476606"),
         v = n("540843"),
         I = n("49111"),
@@ -36,12 +36,12 @@ function(e, t, n) {
             command: n,
             section: a
         } = e, s = i.useCallback(() => {
-            S.dismissAppLauncherPopup(), u.setActiveCommand({
+            C.dismissAppLauncherPopup(), u.setActiveCommand({
                 channelId: t.id,
                 command: n,
                 section: a,
                 location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-            }), C.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+            }), S.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                 channelId: t.id
             })
         }, [t, n, a]);
@@ -66,7 +66,7 @@ function(e, t, n) {
             appDetail: u
         } = e, {
             filterSection: c,
-            commandsByActiveSection: C
+            commandsByActiveSection: S
         } = d.useDiscovery(a, {
             commandType: o.ApplicationCommandType.CHAT
         }, {
@@ -77,7 +77,7 @@ function(e, t, n) {
             commands: I
         } = (0, T.default)({
             sectionId: u.id,
-            commandsByActiveSection: C
+            commandsByActiveSection: S
         });
         i.useEffect(() => {
             c(u.id)
@@ -89,7 +89,7 @@ function(e, t, n) {
                 botIconFirst: !0
             }),
             R = i.useCallback(() => {
-                S.dismissAppDetail()
+                C.dismissAppDetail()
             }, []),
             M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
             L = (0, m.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),

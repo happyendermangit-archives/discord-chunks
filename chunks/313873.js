@@ -21,8 +21,8 @@ function(e, t, n) {
         h = n("376556"),
         E = n("609030"),
         g = n("309570"),
-        C = n("985677"),
-        S = n("429928"),
+        S = n("985677"),
+        C = n("429928"),
         T = n("36539"),
         v = n("502651"),
         I = n("419830"),
@@ -71,7 +71,7 @@ function(e, t, n) {
                 activity: n
             } = e,
             l = (0, p.default)();
-        if ((0, S.default)(n) && (t = k.PlatformTypes.SPOTIFY), null != n.platform && [k.ActivityGamePlatforms.PS4, k.ActivityGamePlatforms.PS5].includes(n.platform) && (t = k.PlatformTypes.PLAYSTATION), null == t) return null;
+        if ((0, C.default)(n) && (t = k.PlatformTypes.SPOTIFY), null != n.platform && [k.ActivityGamePlatforms.PS4, k.ActivityGamePlatforms.PS5].includes(n.platform) && (t = k.PlatformTypes.PLAYSTATION), null == t) return null;
         let i = h.default.get(t);
         return (0, a.jsx)("img", {
             alt: "",
@@ -189,7 +189,7 @@ function(e, t, n) {
             } = e;
             if (null == d || null == d.large_image && null == d.small_image) return null;
             (0, v.default)(e) && (i = B[u]);
-            let m = (0, S.default)(e),
+            let m = (0, C.default)(e),
                 p = null != d.large_image ? (0, a.jsx)("img", {
                     alt: null !== (t = d.large_text) && void 0 !== t ? t : "",
                     src: H(c, d.large_image, null != i ? i : [w.ImageSizes.LARGE, w.ImageSizes.LARGE]),
@@ -298,13 +298,13 @@ function(e, t, n) {
                 type: s
             } = e;
             if (s === k.ActivityTypes.CUSTOM_STATUS) return null;
-            let r = (0, C.default)(e),
+            let r = (0, S.default)(e),
                 o = e.name,
                 u = o;
             return (s === k.ActivityTypes.HANG_STATUS ? u = (0, _.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
                 className: G.activityName,
                 children: u
-            }) : !r && (o = i, u = i, (0, S.default)(e) && null != e.sync_id && null != i ? u = (0, a.jsx)(f.Anchor, {
+            }) : !r && (o = i, u = i, (0, C.default)(e) && null != e.sync_id && null != i ? u = (0, a.jsx)(f.Anchor, {
                 className: G.bodyLink,
                 onClick: this.handleOpenSpotifyTrack,
                 children: i
@@ -329,8 +329,8 @@ function(e, t, n) {
             }) : null, t = null != i ? () => {
                 (0, A.transitionToGuild)(i.id)
             } : void 0;
-            else if (!(0, C.default)(e)) {
-                if (r = s = l, (0, S.default)(e) && null != l) s = F.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
+            else if (!(0, S.default)(e)) {
+                if (r = s = l, (0, C.default)(e) && null != l) s = F.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
                     artists: r,
                     artistsHook: (t, n) => (0, a.jsx)(U.default, {
                         artists: l,
@@ -353,7 +353,7 @@ function(e, t, n) {
                 children: s
             }) : (0, a.jsx)("div", {
                 title: null != r ? r : void 0,
-                className: (0, v.default)(e) || (0, S.default)(e) ? G.detailsWrap : G.details,
+                className: (0, v.default)(e) || (0, C.default)(e) ? G.detailsWrap : G.details,
                 children: s
             })
         }
@@ -361,7 +361,7 @@ function(e, t, n) {
             let {
                 activityGuild: t
             } = this.props;
-            if (!(0, C.default)(e) || (0, S.default)(e)) return null;
+            if (!(0, S.default)(e) || (0, C.default)(e)) return null;
             let {
                 timestamps: n
             } = e;
@@ -375,7 +375,7 @@ function(e, t, n) {
             })
         }
         renderTimeBar(e) {
-            if (!(0, S.default)(e)) return null;
+            if (!(0, C.default)(e)) return null;
             let {
                 timestamps: t
             } = e;
@@ -399,7 +399,7 @@ function(e, t, n) {
                 party: r,
                 assets: o
             } = e, u = s, d = u;
-            return (!(0, C.default)(e) && (d = u = null == o ? void 0 : o.large_text, (0, S.default)(e) && null != u && (u = F.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
+            return (!(0, S.default)(e) && (d = u = null == o ? void 0 : o.large_text, (0, C.default)(e) && null != u && (u = F.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
                 album: d,
                 albumHook: (t, n) => null != e.sync_id && null != d ? (0, a.jsx)(f.Anchor, {
                     className: G.bodyLink,
@@ -445,9 +445,9 @@ function(e, t, n) {
                 h = this.renderDetails(r),
                 E = this.renderState(r, i),
                 g = this.renderTimePlayed(r),
-                C = null != n ? n() : null,
-                S = this.renderTimeBar(r),
-                v = ![e, p, h, E, g, S, C].some(e => null != e);
+                S = null != n ? n() : null,
+                C = this.renderTimeBar(r),
+                v = ![e, p, h, E, g, C, S].some(e => null != e);
             return (0, a.jsxs)("div", {
                 className: o(this.getTypeClass("activity"), l),
                 children: [this.renderHeader(v), (0, a.jsxs)("div", {
@@ -456,10 +456,10 @@ function(e, t, n) {
                         className: G.activityDetails,
                         children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(L.default.Child, {
                             className: o((0, R.getClass)(G, "content", m ? "GameImage" : null != e ? "Images" : "NoImages", t)),
-                            children: [p, h, E, g, u || f ? null : S, c ? C : null]
+                            children: [p, h, E, g, u || f ? null : C, c ? S : null]
                         })]
-                    }), d ? C : null]
-                }), u ? S : null, u || f ? C : null, (0, a.jsx)(K, {
+                    }), d ? S : null]
+                }), u ? C : null, u || f ? S : null, (0, a.jsx)(K, {
                     activity: r
                 })]
             })

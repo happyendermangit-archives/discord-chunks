@@ -25,8 +25,8 @@ function(e, t, n) {
             muted: h,
             to: E,
             avatarClassName: g,
-            selectedClassName: C,
-            innerClassName: S,
+            selectedClassName: S,
+            innerClassName: C,
             wrapContent: T,
             highlighted: v,
             focusProps: I,
@@ -35,11 +35,11 @@ function(e, t, n) {
         _.className = s(_.className, u.container, {
             [u.selected]: p,
             [u.highlighted]: v,
-            [null != C ? C : ""]: p,
+            [null != S ? S : ""]: p,
             [u.clickable]: !p && (null != E || null != m)
         }), _["aria-selected"] = null !== (n = _["aria-selected"]) && void 0 !== n ? n : p;
         let N = (0, l.jsxs)("div", {
-            className: s(S, u.layout, {
+            className: s(C, u.layout, {
                 [u.muted]: !p && h,
                 [u.wrappedLayout]: T
             }),

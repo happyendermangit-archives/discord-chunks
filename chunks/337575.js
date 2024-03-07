@@ -5,8 +5,8 @@ function(e, t, s) {
             return l
         }
     }), s("808653"), s("222007"), s("781738"), s("506083"), s("511434"), s("313619"), s("654714"), s("287168"), s("956660"), s("424973");
-    var l, u = s("917351"),
-        i = s.n(u),
+    var l, i = s("917351"),
+        u = s.n(i),
         n = s("404828"),
         r = s.n(n),
         a = s("872173"),
@@ -23,15 +23,15 @@ function(e, t, s) {
         C = s("253981"),
         g = s("447909"),
         T = s("195547"),
-        m = s("375822"),
-        A = s("49111");
+        A = s("375822"),
+        m = s("49111");
     let U = Object.freeze({});
 
-    function I(e, t) {
+    function S(e, t) {
         var s, l;
         if (!t.frecencyBoosters) return {};
-        let u = p.default.getFrequentlyWithoutFetchingLatest(),
-            i = u.reduce((e, t) => {
+        let i = p.default.getFrequentlyWithoutFetchingLatest(),
+            u = i.reduce((e, t) => {
                 let {
                     id: s
                 } = t, l = p.default.getScoreWithoutFetchingLatest(s);
@@ -39,33 +39,33 @@ function(e, t, s) {
             }, 0),
             n = [];
         switch (e) {
-            case m.AutocompleterResultTypes.GUILD:
-                n = u.filter(e => e instanceof h.default);
+            case A.AutocompleterResultTypes.GUILD:
+                n = i.filter(e => e instanceof h.default);
                 break;
-            case m.AutocompleterResultTypes.USER:
-                n = u.filter(e => e instanceof o.ChannelRecordBase && e.type === A.ChannelTypes.DM);
+            case A.AutocompleterResultTypes.USER:
+                n = i.filter(e => e instanceof o.ChannelRecordBase && e.type === m.ChannelTypes.DM);
                 break;
-            case m.AutocompleterResultTypes.GROUP_DM:
-                n = u.filter(e => e instanceof o.ChannelRecordBase && e.isMultiUserDM());
+            case A.AutocompleterResultTypes.GROUP_DM:
+                n = i.filter(e => e instanceof o.ChannelRecordBase && e.isMultiUserDM());
                 break;
-            case m.AutocompleterResultTypes.TEXT_CHANNEL:
-                n = u.filter(e => e instanceof o.ChannelRecordBase && (0, o.isGuildSelectableChannelType)(e.type));
+            case A.AutocompleterResultTypes.TEXT_CHANNEL:
+                n = i.filter(e => e instanceof o.ChannelRecordBase && (0, o.isGuildSelectableChannelType)(e.type));
                 break;
-            case m.AutocompleterResultTypes.VOICE_CHANNEL:
-                n = u.filter(e => e instanceof o.ChannelRecordBase && e.isGuildVocal())
+            case A.AutocompleterResultTypes.VOICE_CHANNEL:
+                n = i.filter(e => e instanceof o.ChannelRecordBase && e.isGuildVocal())
         }
         let r = {};
         for (let t of n) {
             let {
                 id: s
             } = t, l = p.default.getScoreWithoutFetchingLatest(s);
-            if (e === m.AutocompleterResultTypes.USER && t instanceof o.PrivateChannelRecord) {
-                if (t.type === A.ChannelTypes.DM) r[s = t.getRecipientId()] = 1 + l / i;
-                else if (t.type === A.ChannelTypes.GROUP_DM) {
+            if (e === A.AutocompleterResultTypes.USER && t instanceof o.PrivateChannelRecord) {
+                if (t.type === m.ChannelTypes.DM) r[s = t.getRecipientId()] = 1 + l / u;
+                else if (t.type === m.ChannelTypes.GROUP_DM) {
                     let e = t.recipients.length;
-                    for (let s of t.recipients) r[s] = 1 + l / i * (1 / e)
+                    for (let s of t.recipients) r[s] = 1 + l / u * (1 / e)
                 }
-            } else r[s] = 1 + l / i
+            } else r[s] = 1 + l / u
         }
         let a = f.default.getFriendIDs();
         for (let e of a) r[e] = (null !== (s = r[e]) && void 0 !== s ? s : 1) + .2;
@@ -84,13 +84,13 @@ function(e, t, s) {
             this._limit = e, null != t && t.setLimit(e), this._userResults.length > this._limit && (this._userResults.length = this._limit), this._groupDMResults.length > this._limit && (this._groupDMResults.length = this._limit), this._textChannelResults.length > this._limit && (this._textChannelResults.length = this._limit), this._voiceChannelResults.length > this._limit && (this._voiceChannelResults.length = this._limit), this._guildResults.length > this._limit && (this._guildResults.length = this._limit), this._applicationResults.length > this._limit && (this._applicationResults.length = this._limit), this._linkResults.length > this._limit && (this._linkResults.length = this._limit)
         }
         setResultTypes(e) {
-            this.resultTypes = null != e ? new Set(e) : null, this._userResults = this._include(m.AutocompleterResultTypes.USER) ? this._userResults : [], this._groupDMResults = this._include(m.AutocompleterResultTypes.GROUP_DM) ? this._groupDMResults : [], this._textChannelResults = this._include(m.AutocompleterResultTypes.TEXT_CHANNEL) ? this._textChannelResults : [], this._voiceChannelResults = this._include(m.AutocompleterResultTypes.VOICE_CHANNEL) ? this._voiceChannelResults : [], this._guildResults = this._include(m.AutocompleterResultTypes.GUILD) ? this._guildResults : [], this._applicationResults = this._include(m.AutocompleterResultTypes.APPLICATION) ? this._applicationResults : [], this._linkResults = this._include(m.AutocompleterResultTypes.LINK) ? this._linkResults : []
+            this.resultTypes = null != e ? new Set(e) : null, this._userResults = this._include(A.AutocompleterResultTypes.USER) ? this._userResults : [], this._groupDMResults = this._include(A.AutocompleterResultTypes.GROUP_DM) ? this._groupDMResults : [], this._textChannelResults = this._include(A.AutocompleterResultTypes.TEXT_CHANNEL) ? this._textChannelResults : [], this._voiceChannelResults = this._include(A.AutocompleterResultTypes.VOICE_CHANNEL) ? this._voiceChannelResults : [], this._guildResults = this._include(A.AutocompleterResultTypes.GUILD) ? this._guildResults : [], this._applicationResults = this._include(A.AutocompleterResultTypes.APPLICATION) ? this._applicationResults : [], this._linkResults = this._include(A.AutocompleterResultTypes.LINK) ? this._linkResults : []
         }
         _include(e) {
             return null == this.resultTypes || this.resultTypes.has(e)
         }
         _isAsyncSearch() {
-            return this._include(m.AutocompleterResultTypes.USER)
+            return this._include(A.AutocompleterResultTypes.USER)
         }
         setOptions(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -133,8 +133,8 @@ function(e, t, s) {
             null != e && (e.destroy(), this.userSearchContext = null)
         }
         queryTextChannels(e, t) {
-            if (!this._include(m.AutocompleterResultTypes.TEXT_CHANNEL)) return [];
-            let s = I(m.AutocompleterResultTypes.TEXT_CHANNEL, this.options),
+            if (!this._include(A.AutocompleterResultTypes.TEXT_CHANNEL)) return [];
+            let s = S(A.AutocompleterResultTypes.TEXT_CHANNEL, this.options),
                 {
                     blacklist: l
                 } = this.options;
@@ -148,10 +148,10 @@ function(e, t, s) {
             })
         }
         queryVoiceChannels(e, t) {
-            if (!this._include(m.AutocompleterResultTypes.VOICE_CHANNEL)) return [];
+            if (!this._include(A.AutocompleterResultTypes.VOICE_CHANNEL)) return [];
             let {
                 voiceChannelGuildFilter: s
-            } = this.options, l = I(m.AutocompleterResultTypes.VOICE_CHANNEL, this.options);
+            } = this.options, l = S(A.AutocompleterResultTypes.VOICE_CHANNEL, this.options);
             return y.default.queryChannels({
                 query: e,
                 guildId: s,
@@ -162,8 +162,8 @@ function(e, t, s) {
             })
         }
         queryGuilds(e, t) {
-            if (!this._include(m.AutocompleterResultTypes.GUILD)) return [];
-            let s = I(m.AutocompleterResultTypes.GUILD, this.options),
+            if (!this._include(A.AutocompleterResultTypes.GUILD)) return [];
+            let s = S(A.AutocompleterResultTypes.GUILD, this.options),
                 {
                     blacklist: l
                 } = this.options;
@@ -179,17 +179,17 @@ function(e, t, s) {
             let {
                 userSearchContext: l
             } = this;
-            if (null == l || !this._include(m.AutocompleterResultTypes.USER)) return;
+            if (null == l || !this._include(A.AutocompleterResultTypes.USER)) return;
             let {
-                userFilters: u
+                userFilters: i
             } = this.options;
-            void 0 !== t && E.default.requestMembers(t, e, 100), l.setLimit(s), l.setQuery(e, u, this._userBlacklist, I(m.AutocompleterResultTypes.USER, this.options))
+            void 0 !== t && E.default.requestMembers(t, e, 100), l.setLimit(s), l.setQuery(e, i, this._userBlacklist, S(A.AutocompleterResultTypes.USER, this.options))
         }
         queryGroupDMs(e, t) {
-            if (!this._include(m.AutocompleterResultTypes.GROUP_DM)) return [];
+            if (!this._include(A.AutocompleterResultTypes.GROUP_DM)) return [];
             let {
                 blacklist: s
-            } = this.options, l = I(m.AutocompleterResultTypes.GROUP_DM, this.options);
+            } = this.options, l = S(A.AutocompleterResultTypes.GROUP_DM, this.options);
             return y.default.queryGroupDMs({
                 query: e,
                 limit: t,
@@ -199,7 +199,7 @@ function(e, t, s) {
             })
         }
         queryApplications(e, t) {
-            return this._include(m.AutocompleterResultTypes.APPLICATION) ? y.default.queryApplications({
+            return this._include(A.AutocompleterResultTypes.APPLICATION) ? y.default.queryApplications({
                 query: e,
                 limit: t,
                 fuzzy: !0
@@ -207,7 +207,7 @@ function(e, t, s) {
         }
         queryLink(e, t) {
             let s;
-            if (!this._include(m.AutocompleterResultTypes.LINK)) return [];
+            if (!this._include(A.AutocompleterResultTypes.LINK)) return [];
             let l = r.sanitizeUrl(e);
             try {
                 s = new URL(l)
@@ -215,13 +215,13 @@ function(e, t, s) {
                 return []
             }
             let {
-                pathname: u,
-                hostname: i = "",
+                pathname: i,
+                hostname: u = "",
                 host: n
-            } = s, a = C.default.isDiscordHostname(i) || window.location.host === n;
-            return null !== u && a && C.default.isAppRoute(u) ? [{
-                type: m.AutocompleterResultTypes.LINK,
-                record: d.default.fromPath(u),
+            } = s, a = C.default.isDiscordHostname(u) || window.location.host === n;
+            return null !== i && a && C.default.isAppRoute(i) ? [{
+                type: A.AutocompleterResultTypes.LINK,
+                record: d.default.fromPath(i),
                 score: 1
             }] : []
         }
@@ -230,7 +230,7 @@ function(e, t, s) {
                 let {
                     results: t
                 } = e;
-                if (this._include(m.AutocompleterResultTypes.USER)) {
+                if (this._include(A.AutocompleterResultTypes.USER)) {
                     for (let {
                             id: e,
                             score: s,
@@ -239,7 +239,7 @@ function(e, t, s) {
                         of(this._userResults = [], t)) {
                         let t = R.default.getUser(e);
                         null != t && this._userResults.push({
-                            type: m.AutocompleterResultTypes.USER,
+                            type: A.AutocompleterResultTypes.USER,
                             record: t,
                             score: function() {
                                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
@@ -252,7 +252,7 @@ function(e, t, s) {
                     this._userResults.length > this._limit && (this._userResults.length = this._limit), this.updateAllResults()
                 }
             }, this.updateAllResults = () => {
-                clearTimeout(this._asyncTimeout), this.results = i([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults]).uniqBy(e => "".concat(e.type, "-").concat(e.record.id)).sort(T.default).value(), this.onResultsChange(this.results, this.query)
+                clearTimeout(this._asyncTimeout), this.results = u([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults]).uniqBy(e => "".concat(e.type, "-").concat(e.record.id)).sort(T.default).value(), this.onResultsChange(this.results, this.query)
             }, this.onResultsChange = e, this.setOptions(l, !0), this._limit = s, this.createSearchContext(), this.setResultTypes(t)
         }
     }

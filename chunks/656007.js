@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         avatar: "avatar__3547f statusIcon__3e5cd",

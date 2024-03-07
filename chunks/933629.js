@@ -63,8 +63,8 @@ function(e, t, n) {
         h = n("267363"),
         E = n("817480"),
         g = n("340616"),
-        C = n("115718"),
-        S = n("84339"),
+        S = n("115718"),
+        C = n("84339"),
         T = n("298878"),
         v = n("793237"),
         I = n("347738"),
@@ -401,7 +401,7 @@ function(e, t, n) {
         } = s.useContext(b.MessagesInteractionContext), [g, N] = s.useState(null), A = s.useRef(null), [x, R] = s.useState(null), M = s.useRef(null), L = (0, f.useStateFromStoresArray)([I.default], () => {
             var e;
             return null !== (e = I.default.summaries(i.id)) && void 0 !== e ? e : []
-        }, [i]), P = (0, S.default)(L);
+        }, [i]), P = (0, C.default)(L);
         s.useEffect(() => {
             !d.isEqual(P, L) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: L.length,
@@ -474,7 +474,7 @@ function(e, t, n) {
                     messageId: n.startId,
                     flash: !0,
                     offset: 0,
-                    jumpType: C.JumpTypes.ANIMATED,
+                    jumpType: S.JumpTypes.ANIMATED,
                     context: "Summary Jump"
                 })
             }, [L, i, q, u]),
@@ -630,7 +630,7 @@ function(e, t, n) {
         } = s.useContext(b.MessagesInteractionContext), [h, E] = s.useState(null), g = s.useRef(null), [N, A] = s.useState(null), x = s.useRef(null), y = (0, f.useStateFromStoresArray)([I.default], () => {
             var e;
             return null !== (e = I.default.summaries(i.id)) && void 0 !== e ? e : []
-        }, [i]), R = (0, S.default)(y);
+        }, [i]), R = (0, C.default)(y);
         s.useEffect(() => {
             !d.isEqual(R, y) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: y.length,
@@ -705,7 +705,7 @@ function(e, t, n) {
                     messageId: n.startId,
                     flash: !0,
                     offset: 0,
-                    jumpType: C.JumpTypes.ANIMATED,
+                    jumpType: S.JumpTypes.ANIMATED,
                     context: "Summary Jump"
                 })
             }, [y, i, W, r]),

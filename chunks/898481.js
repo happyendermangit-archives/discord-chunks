@@ -21,8 +21,8 @@ function(e, t, n) {
         h = n("659500"),
         E = n("295999"),
         g = n("49111"),
-        C = n("782340"),
-        S = n("570075");
+        S = n("782340"),
+        C = n("570075");
 
     function T(e) {
         let {
@@ -48,7 +48,7 @@ function(e, t, n) {
         };
         if (null == v) return null;
         let M = (0, d.getStreamCTAString)(x);
-        t ? M = C.default.Messages.WATCH_STREAM_STREAMING : O && (M = C.default.Messages.WATCH_STREAM_WATCHING);
+        t ? M = S.default.Messages.WATCH_STREAM_STREAMING : O && (M = S.default.Messages.WATCH_STREAM_WATCHING);
         let L = {
             color: n,
             look: T
@@ -60,10 +60,10 @@ function(e, t, n) {
                 ...L,
                 fullWidth: !0,
                 children: [(0, l.jsx)(p.default, {
-                    className: S.streamIcon
+                    className: C.streamIcon
                 }), M]
             }, "play"), _ && !O ? (0, l.jsx)(a.Tooltip, {
-                text: C.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+                text: S.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                 children: e => (0, l.jsx)(E.default, {
                     ...e,
                     onClick: () => {
@@ -71,10 +71,10 @@ function(e, t, n) {
                         null === (t = e.onClick) || void 0 === t || t.call(e), R(!0)
                     },
                     ...L,
-                    className: S.iconButton,
-                    size: S.iconButtonSize,
+                    className: C.iconButton,
+                    size: C.iconButtonSize,
                     children: (0, l.jsx)(m.default, {
-                        className: S.iconSize
+                        className: C.iconSize
                     })
                 })
             }) : null]

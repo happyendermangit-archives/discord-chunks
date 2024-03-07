@@ -23,8 +23,8 @@ function(e, t, n) {
         h = n("5367"),
         E = n("100835"),
         g = n("38654"),
-        C = n("319165"),
-        S = n("488464"),
+        S = n("319165"),
+        C = n("488464"),
         T = n("998716"),
         v = n("170183"),
         I = n("689275"),
@@ -76,7 +76,7 @@ function(e, t, n) {
             color: "text-muted",
             className: n,
             children: H.default.Messages.FORM_LABEL_MUTED
-        }) : (0, l.jsx)(C.default, {
+        }) : (0, l.jsx)(S.default, {
             muteConfig: t,
             className: n
         })
@@ -110,21 +110,21 @@ function(e, t, n) {
                 } = e;
                 return t
             })
-        }), C = (0, u.useStateFromStoresArray)([S.default], () => o.flatMap(h, e => {
+        }), S = (0, u.useStateFromStoresArray)([C.default], () => o.flatMap(h, e => {
             if (e === r.afkChannelId) return [];
-            let t = S.default.getMutableParticipants(e, T.StageChannelParticipantNamedIndex.SPEAKER);
+            let t = C.default.getMutableParticipants(e, T.StageChannelParticipantNamedIndex.SPEAKER);
             return t.filter(e => e.type === T.StageChannelParticipantTypes.VOICE).map(e => {
                 let {
                     user: t
                 } = e;
                 return t
             })
-        })), M = (0, u.useStateFromStores)([S.default], () => {
+        })), M = (0, u.useStateFromStores)([C.default], () => {
             let e = 0;
-            for (let t of h) e += S.default.getParticipantCount(t, T.StageChannelParticipantNamedIndex.AUDIENCE);
+            for (let t of h) e += C.default.getParticipantCount(t, T.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
         }), L = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([x.default, N.default], () => g.filter(e => x.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != N.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(P.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => L.map(e => O.default.getUser(e)), [L]), X = z(U.default, g.filter(e => !L.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
-        let Q = (t = d, n = C, a = M, 0 === n.length ? null : (0, l.jsxs)("div", {
+        let Q = (t = d, n = S, a = M, 0 === n.length ? null : (0, l.jsxs)("div", {
                 className: V.row,
                 children: [(0, l.jsx)(D.default, {
                     className: V.activityIcon

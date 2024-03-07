@@ -23,22 +23,22 @@ function(e, t, n) {
         h = n("928201"),
         E = n("118503"),
         g = n("11056"),
-        C = n("159885"),
-        S = n("158998"),
+        S = n("159885"),
+        C = n("158998"),
         T = n("943722"),
         v = n("49111"),
         I = n("988268"),
         _ = n("39141"),
         N = n("782340"),
         A = n("591665");
-    let x = (0, C.cssValueToNumber)(r.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+    let x = (0, S.cssValueToNumber)(r.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
     var y = function(e) {
         let {
             selected: t = !1,
             colorString: n,
             colorRoleName: a,
             isOwner: r,
-            ownerTooltipText: C,
+            ownerTooltipText: S,
             lostPermissionTooltipText: x,
             isTyping: y = !1,
             nick: O,
@@ -66,7 +66,7 @@ function(e, t, n) {
             id: q,
             tabIndex: X,
             itemProps: Q
-        } = e, $ = S.default.useName(R), [ee, et] = i.useState(!1), [en, el] = i.useState(null), {
+        } = e, $ = C.default.useName(R), [ee, et] = i.useState(!1), [en, el] = i.useState(null), {
             avatarDecorationSrc: ei,
             avatarSrc: ea,
             eventHandlers: es
@@ -78,7 +78,7 @@ function(e, t, n) {
         }), er = e => {
             el(e)
         }, eo = () => null != r && r && null == x ? (0, l.jsx)(o.Tooltip, {
-            text: null != C ? C : N.default.Messages.GUILD_OWNER,
+            text: null != S ? S : N.default.Messages.GUILD_OWNER,
             children: e => (0, l.jsx)(h.default, {
                 ...e,
                 className: A.ownerIcon

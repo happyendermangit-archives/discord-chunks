@@ -5,7 +5,7 @@ function(e, t, n) {
             return g
         },
         useTextChangeHandler: function() {
-            return C
+            return S
         }
     }), n("222007"), n("424973");
     var l = n("884691"),
@@ -47,7 +47,7 @@ function(e, t, n) {
                 }, [e, n, i, t, a]);
             return o
         },
-        C = e => {
+        S = e => {
             let {
                 setTextInputValue: t,
                 setHasDismissed: n,

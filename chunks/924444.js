@@ -23,15 +23,15 @@ function(e, t, n) {
         h = n("888673"),
         E = n("505684"),
         g = n("49111"),
-        C = n("782340"),
-        S = n("554399");
+        S = n("782340"),
+        C = n("554399");
 
     function T(e) {
         let {
             onClose: t
         } = e, n = i.useRef(null);
         return (0, l.jsx)("div", {
-            className: S.mobileCloseWrapper,
+            className: C.mobileCloseWrapper,
             ref: n,
             children: (0, l.jsx)(o.FocusRingScope, {
                 containerRef: n,
@@ -58,19 +58,19 @@ function(e, t, n) {
             children: (0, l.jsx)(E.default, {
                 type: E.default.Types.ATTACHMENT,
                 reason: d.ObscureReason.EXPLICIT_CONTENT,
-                className: S.obscureContainer,
+                className: C.obscureContainer,
                 obscured: !0,
                 isSingleMosaicItem: !0,
                 obscurityControlClassName: s({
-                    [S.controlsOffset]: n && o
+                    [C.controlsOffset]: n && o
                 }),
                 onToggleObscurity: e => {
                     e.stopPropagation(), e.nativeEvent.stopPropagation(), u(e => !e)
                 },
                 children: e => (0, l.jsx)(l.Fragment, {
                     children: (0, l.jsx)("div", {
-                        className: s(S.obscureWrapper, {
-                            [S.obscure]: e
+                        className: s(C.obscureWrapper, {
+                            [C.obscure]: e
                         }),
                         children: t(e)
                     })
@@ -112,7 +112,7 @@ function(e, t, n) {
             e.stopPropagation(), e.preventDefault()
         } : y.onContextMenu;
         return (0, l.jsxs)("div", {
-            className: S.wrapper,
+            className: C.wrapper,
             children: [M ? (0, l.jsx)(T, {
                 onClose: N
             }) : null, (0, l.jsx)(v, {
@@ -137,8 +137,8 @@ function(e, t, n) {
                 href: n,
                 target: "_blank",
                 rel: "noreferrer noopener",
-                className: S.downloadLink,
-                children: C.default.Messages.OPEN_IN_BROWSER
+                className: C.downloadLink,
+                children: S.default.Messages.OPEN_IN_BROWSER
             })]
         })
     }
@@ -160,7 +160,7 @@ function(e, t, n) {
             e.stopPropagation(), e.preventDefault()
         } : c.onContextMenu;
         return (0, l.jsxs)("div", {
-            className: s(S.wrapper, S.videoWrapper),
+            className: s(C.wrapper, C.videoWrapper),
             children: [g ? (0, l.jsx)(T, {
                 onClose: a
             }) : null, (0, l.jsx)(v, {
@@ -186,8 +186,8 @@ function(e, t, n) {
                 href: t,
                 target: "_blank",
                 rel: "noreferrer noopener",
-                className: S.downloadLink,
-                children: C.default.Messages.OPEN_IN_BROWSER
+                className: C.downloadLink,
+                children: S.default.Messages.OPEN_IN_BROWSER
             })]
         })
     }

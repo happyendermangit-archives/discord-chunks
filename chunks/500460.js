@@ -30,12 +30,12 @@ function(e, t, n) {
             } = e, {
                 joinedEmojiSourceGuildRecord: r,
                 emoji: c
-            } = (0, i.useStateFromStoresObject)([s.default, a.default], () => d(s.default, a.default, t)), f = null != r, m = null != r && r.hasFeature(u.GuildFeatures.DISCOVERABLE), p = (!f || m) && null != t, [h, E] = l.useState(p), g = null != r ? o.default.createFromGuildRecord(r) : null, [C, S] = l.useState(g);
+            } = (0, i.useStateFromStoresObject)([s.default, a.default], () => d(s.default, a.default, t)), f = null != r, m = null != r && r.hasFeature(u.GuildFeatures.DISCOVERABLE), p = (!f || m) && null != t, [h, E] = l.useState(p), g = null != r ? o.default.createFromGuildRecord(r) : null, [S, C] = l.useState(g);
             return l.useEffect(() => {
                 null == n || n();
                 let e = async () => {
                     let e = null != t ? await o.default.getGuildFromEmojiId(t) : null;
-                    S(e), E(!1), null == n || n()
+                    C(e), E(!1), null == n || n()
                 };
                 if (p) {
                     e();
@@ -43,7 +43,7 @@ function(e, t, n) {
                 }
                 null == n || n()
             }, [t, p]), {
-                expressionSourceGuild: C,
+                expressionSourceGuild: S,
                 joinedEmojiSourceGuildRecord: r,
                 hasJoinedEmojiSourceGuild: f,
                 emoji: c,

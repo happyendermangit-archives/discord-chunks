@@ -26,8 +26,8 @@ function(e, t, n) {
         h = n("679653"),
         E = n("419830"),
         g = n("404345"),
-        C = n("364685"),
-        S = n("24373"),
+        S = n("364685"),
+        C = n("24373"),
         T = n("305961"),
         v = n("27618"),
         I = n("697218"),
@@ -382,7 +382,7 @@ function(e, t, n) {
             } = this.props, {
                 hovered: o
             } = this.state;
-            return (0, S.isStandardSticker)(r) ? n = null === (e = C.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, S.isGuildSticker)(r) && (n = null === (t = T.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, l.jsxs)(N.AutocompleteRowContent, {
+            return (0, C.isStandardSticker)(r) ? n = null === (e = S.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, C.isGuildSticker)(r) && (n = null === (t = T.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, l.jsxs)(N.AutocompleteRowContent, {
                 children: [(0, l.jsx)(N.AutocompleteRowIcon, {
                     children: a(r, o || !0 === s)
                 }), (0, l.jsxs)(N.AutocompleteRowContentPrimary, {

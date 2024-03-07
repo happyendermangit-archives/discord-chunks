@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("216422"),
         E = n("719923"),
         g = n("788506"),
-        C = n("49111"),
-        S = n("646718"),
+        S = n("49111"),
+        C = n("646718"),
         T = n("782340"),
         v = n("669821");
     let I = "premiumRetentionEmojiPickerNotice",
@@ -40,11 +40,11 @@ function(e, t, n) {
         if (i.useEffect(() => {
                 !x && (0, d.fetchSubscriptions)()
             }, [x]), null == A || !(0, E.isSubscriptionStatusFailedPayment)(A.status) || a) return null;
-        let y = A.status === C.SubscriptionStatusTypes.PAST_DUE ? (0, E.getBillingGracePeriodDays)(A) : S.MAX_ACCOUNT_HOLD_DAYS,
+        let y = A.status === S.SubscriptionStatusTypes.PAST_DUE ? (0, E.getBillingGracePeriodDays)(A) : C.MAX_ACCOUNT_HOLD_DAYS,
             O = s(A.currentPeriodStart).add(y, "days"),
             R = "".concat(A.id, ":").concat(O.toISOString());
         if (_ === R) return null;
-        let M = E.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_0 ? m.GradientCssUrls.PREMIUM_TIER_0 : E.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_1 ? m.GradientCssUrls.PREMIUM_TIER_1 : m.GradientCssUrls.PREMIUM_TIER_2;
+        let M = E.default.getPremiumType(A.planId) === C.PremiumTypes.TIER_0 ? m.GradientCssUrls.PREMIUM_TIER_0 : E.default.getPremiumType(A.planId) === C.PremiumTypes.TIER_1 ? m.GradientCssUrls.PREMIUM_TIER_1 : m.GradientCssUrls.PREMIUM_TIER_2;
         return (0, l.jsxs)("div", {
             className: v.premiumRetentionNotice,
             children: [(0, l.jsx)(h.default, {
@@ -61,7 +61,7 @@ function(e, t, n) {
                 }), (0, l.jsx)("div", {
                     children: (0, l.jsx)(u.Anchor, {
                         onClick: () => {
-                            (0, g.trackPremiumSettingsPaneOpened)(n), t(), c.default.open(C.UserSettingsSections.PREMIUM)
+                            (0, g.trackPremiumSettingsPaneOpened)(n), t(), c.default.open(S.UserSettingsSections.PREMIUM)
                         },
                         children: T.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
                     })

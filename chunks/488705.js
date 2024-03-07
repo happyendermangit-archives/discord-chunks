@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("888400"),
         E = n("701909"),
         g = n("179935"),
-        C = n("166960"),
-        S = n("646718"),
+        S = n("166960"),
+        C = n("646718"),
         T = n("49111"),
         v = n("782340"),
         I = n("486433"),
@@ -80,7 +80,7 @@ function(e, t, n) {
                     onClick: () => {
                         y(a, t, c), p.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: r,
-                            step: S.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
+                            step: C.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
                             other_user_id: Number(a)
                         })
                     },
@@ -110,7 +110,7 @@ function(e, t, n) {
             analyticsLocations: M
         } = (0, m.default)(f.default.REFERRAL_TRIALS_POPOUT), {
             enabled: L
-        } = C.default.useExperiment({
+        } = S.default.useExperiment({
             location: "200c24_1"
         }, {
             autoTrackExposure: !0
@@ -171,7 +171,7 @@ function(e, t, n) {
                     onClick: () => {
                         r ? y(R, a, A) : (c(!0), p.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: M,
-                            step: S.ReferralTrialsAnalyticSteps.FLOW_STARTED,
+                            step: C.ReferralTrialsAnalyticSteps.FLOW_STARTED,
                             other_user_id: Number(R)
                         }))
                     },

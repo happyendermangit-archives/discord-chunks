@@ -2,13 +2,13 @@ function(e, t, s) {
     "use strict";
     s.r(t), s.d(t, {
         default: function() {
-            return i
+            return u
         }
     });
     var l = s("666038");
-    class u extends l.default {
+    class i extends l.default {
         static fromPath(e) {
-            return new u({
+            return new i({
                 id: e,
                 path: e
             })
@@ -17,5 +17,5 @@ function(e, t, s) {
             super(), this.id = e.id, this.path = e.path
         }
     }
-    var i = u
+    var u = i
 }

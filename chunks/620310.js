@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         appButton: "appButton__3bb32",
@@ -10,6 +10,7 @@ function(e, t, o) {
         mutualFriendsDivider: "mutualFriendsDivider_c21dfe",
         mutualFriendsList: "mutualFriendsList__632b5",
         mutualGuildsList: "mutualGuildsList__6e961",
+        profileMutuals: "profileMutuals_dd092a",
         profilePanel: "profilePanel__12596",
         profilePanelConnections: "profilePanelConnections__3c232"
     }

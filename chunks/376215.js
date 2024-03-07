@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("383018"),
         E = n("474643"),
         g = n("585722"),
-        C = n("898260"),
-        S = n("378765"),
+        S = n("898260"),
+        C = n("378765"),
         T = n("393377"),
         v = n("761354"),
         I = n("49111"),
@@ -66,7 +66,7 @@ function(e, t, n) {
         let j = i.useCallback(() => {
             x.focusFirstVisibleItem()
         }, [x]);
-        return ((0, S.useComponentAction)({
+        return ((0, C.useComponentAction)({
             event: I.ComponentActions.FOCUS_ATTACHMENT_AREA,
             handler: j
         }), i.useEffect(() => {
@@ -105,7 +105,7 @@ function(e, t, n) {
                         })
                     }
                 })
-            }), n.drafts.type === E.DraftType.FirstThreadMessage ? null : (0, l.jsx)(C.default, {})]
+            }), n.drafts.type === E.DraftType.FirstThreadMessage ? null : (0, l.jsx)(S.default, {})]
         })
     }
     var y = i.memo(function(e) {

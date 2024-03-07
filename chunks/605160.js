@@ -5,10 +5,10 @@ function(e, t, n) {
             return l
         },
         getObscureReason: function() {
-            return C
+            return S
         },
         getObscureReasonForEmbed: function() {
-            return S
+            return C
         },
         getForumPostShouldObscure: function() {
             return T
@@ -34,7 +34,7 @@ function(e, t, n) {
         E = n("49111"),
         g = n("782340");
     (i = l || (l = {})).SPOILER = "spoiler", i.EXPLICIT_CONTENT = "explicit_content", i.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
-    let C = (e, t) => {
+    let S = (e, t) => {
             let {
                 spoiler: n,
                 flags: l = 0,
@@ -42,7 +42,7 @@ function(e, t, n) {
             } = e;
             return t && (0, o.isPendingScan)(i) ? "potential_explicit_content" : t && ((0, p.hasFlag)(l, E.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : n || (0, p.hasFlag)(l, E.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
         },
-        S = (e, t, n, l, i) => {
+        C = (e, t, n, l, i) => {
             let {
                 flags: a = 0,
                 contentScanVersion: s

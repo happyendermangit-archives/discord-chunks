@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         addFriendHint: "addFriendHint__6df3d inputText__81d8a",

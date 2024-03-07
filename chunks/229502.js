@@ -27,8 +27,8 @@ function(e, t, n) {
         h = n("402671"),
         E = n("82230"),
         g = n("568088"),
-        C = n("397485"),
-        S = n("626334"),
+        S = n("397485"),
+        C = n("626334"),
         T = n("49111"),
         v = n("846325");
 
@@ -48,9 +48,9 @@ function(e, t, n) {
         let {
             abortController: i,
             onRequestProgress: a
-        } = I(e), r = null !== (l = E.default.getState().animationType) && void 0 !== l ? l : S.VoiceChannelEffectAnimationType.BASIC, u = {
+        } = I(e), r = null !== (l = E.default.getState().animationType) && void 0 !== l ? l : C.VoiceChannelEffectAnimationType.BASIC, u = {
             animation_type: r,
-            animation_id: (0, C.sampleAnimationId)(r, C.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
+            animation_id: (0, S.sampleAnimationId)(r, S.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
         };
         s.default.post({
             url: T.Endpoints.CUSTOM_CALL_SOUNDS(e),
@@ -93,7 +93,7 @@ function(e, t, n) {
             isPremium: o
         } = e;
         if (null == n || g.default.isOnCooldown) return;
-        let u = o && null != i ? i : S.VoiceChannelEffectAnimationType.BASIC;
+        let u = o && null != i ? i : C.VoiceChannelEffectAnimationType.BASIC;
         try {
             let e = null != n.id ? {
                 emoji_id: n.id,
@@ -122,8 +122,8 @@ function(e, t, n) {
             }
         }
     }, x = {
-        [S.VoiceChannelEffectAnimationType.BASIC]: "Basic",
-        [S.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
+        [C.VoiceChannelEffectAnimationType.BASIC]: "Basic",
+        [C.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
     }, y = (e, t, n, l) => {
         let {
             unicode: i,

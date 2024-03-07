@@ -23,8 +23,8 @@ function(e, t, n) {
         h = n("342845"),
         E = n("845579"),
         g = n("271938"),
-        C = n("42203"),
-        S = n("957255"),
+        S = n("42203"),
+        C = n("957255"),
         T = n("824563"),
         v = n("800762"),
         I = n("137783"),
@@ -99,9 +99,9 @@ function(e, t, n) {
             hideTooltip: f = !1,
             hideEmoji: E = !1,
             user: y
-        } = e, O = null != n ? n.find(e => e.type === _.ActivityTypes.CUSTOM_STATUS) : null, R = (0, r.useStateFromStores)([g.default], () => g.default.getId() === (null == y ? void 0 : y.id)), M = (0, r.useStateFromStores)([p.default], () => R ? p.default.getHangStatusActivity() : null != n ? n.find(e => e.type === _.ActivityTypes.HANG_STATUS) : null), L = (0, r.useStateFromStores)([v.default, C.default], () => {
+        } = e, O = null != n ? n.find(e => e.type === _.ActivityTypes.CUSTOM_STATUS) : null, R = (0, r.useStateFromStores)([g.default], () => g.default.getId() === (null == y ? void 0 : y.id)), M = (0, r.useStateFromStores)([p.default], () => R ? p.default.getHangStatusActivity() : null != n ? n.find(e => e.type === _.ActivityTypes.HANG_STATUS) : null), L = (0, r.useStateFromStores)([v.default, S.default], () => {
             var e;
-            return null != M && null != y ? C.default.getChannel(null === (e = v.default.getVoiceStateForUser(y.id)) || void 0 === e ? void 0 : e.channelId) : null
+            return null != M && null != y ? S.default.getChannel(null === (e = v.default.getVoiceStateForUser(y.id)) || void 0 === e ? void 0 : e.channelId) : null
         }), {
             enableHangStatus: P
         } = m.HangStatusExperiment.useExperiment({
@@ -109,7 +109,7 @@ function(e, t, n) {
             location: "ActivityStatus"
         }, {
             autoTrackExposure: !1
-        }), b = null, j = P && null != M && S.default.can(_.Permissions.CONNECT, L);
+        }), b = null, j = P && null != M && C.default.can(_.Permissions.CONNECT, L);
         j ? b = (0, l.jsx)(h.default, {
             className: o,
             hangStatusActivity: M

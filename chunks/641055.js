@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return C
+            return S
         }
     }), n("222007");
     var l = n("37983"),
@@ -29,7 +29,7 @@ function(e, t, n) {
             o = (0, r.isThemeDark)(n) && (0, r.isThemeLight)(l);
         return !e && !t && o
     };
-    var C = e => {
+    var S = e => {
         let {
             onTooltipClose: t
         } = e, {

@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("642032"),
         E = n("248474"),
         g = n("83017"),
-        C = n("458604"),
-        S = n("115279"),
+        S = n("458604"),
+        C = n("115279"),
         T = n("49111"),
         v = n("782340"),
         I = n("348473"),
@@ -55,8 +55,8 @@ function(e, t, n) {
             i.useEffect(() => c.EmojiPickerStore.useStore.subscribe(e => B(e), e => e.inspectedExpressionPosition), []), i.useEffect(() => {
                 m.FrecencyUserSettingsActionCreators.loadIfNecessary()
             }, []);
-            let W = n === S.EmojiSize.LARGE,
-                Y = n === S.EmojiSize.MEDIUM,
+            let W = n === C.EmojiSize.LARGE,
+                Y = n === C.EmojiSize.MEDIUM,
                 z = e => {
                     let t = "".concat(e.rowIndex, "c").concat(e.columnIndex);
                     switch (e.type) {
@@ -119,7 +119,7 @@ function(e, t, n) {
                                 columnIndex: i,
                                 visibleRowIndex: s
                             } = e, r = G.rowIndex === s && G.columnIndex === i;
-                            return (0, l.jsx)(C.default, {
+                            return (0, l.jsx)(S.default, {
                                 rowIndex: R,
                                 descriptor: e,
                                 emojiItemKey: t,
@@ -155,9 +155,9 @@ function(e, t, n) {
                     ref: K,
                     children: e.map(z)
                 });
-            if (b !== S.EmojiCategoryTypes.TOP_GUILD_EMOJI) return Z(t);
-            let J = t.filter(e => !!w && e.type === g.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === S.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === S.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
-                q = t.filter(e => e.subCategory === S.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+            if (b !== C.EmojiCategoryTypes.TOP_GUILD_EMOJI) return Z(t);
+            let J = t.filter(e => !!w && e.type === g.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === C.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === C.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+                q = t.filter(e => e.subCategory === C.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
             return 0 === q.length ? Z(t) : (0, l.jsxs)("div", {
                 className: I.topEmojiSectionContainer,
                 children: [(0, l.jsx)("div", {

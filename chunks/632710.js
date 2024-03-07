@@ -21,8 +21,8 @@ function(e, t, n) {
         h = n("697218"),
         E = n("800762"),
         g = n("145131"),
-        C = n("313873"),
-        S = n("429928"),
+        S = n("313873"),
+        C = n("429928"),
         T = n("36539"),
         v = n("698372"),
         I = n("770370"),
@@ -57,9 +57,9 @@ function(e, t, n) {
                     let e = h.default.getCurrentUser();
                     return r(null != e, "UserActivityActions: currentUser cannot be undefined"), e
                 }),
-                K = F === C.Types.PROFILE || F === C.Types.PROFILE_V2,
-                W = F === C.Types.STREAM_PREVIEW || null != s,
-                Y = (0, S.default)(n),
+                K = F === S.Types.PROFILE || F === S.Types.PROFILE_V2,
+                W = F === S.Types.STREAM_PREVIEW || null != s,
+                Y = (0, C.default)(n),
                 z = (0, m.isStageActivity)(n),
                 Z = K ? g.default.Align.END : g.default.Align.STRETCH,
                 J = Y || W ? g.default.Direction.HORIZONTAL : g.default.Direction.VERTICAL,

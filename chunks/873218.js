@@ -21,8 +21,8 @@ function(e, t, n) {
         h = n("228427"),
         E = n("959097"),
         g = n("328413"),
-        C = n("782340"),
-        S = n("263218"),
+        S = n("782340"),
+        C = n("263218"),
         T = function(e) {
             let {
                 iconType: t,
@@ -31,92 +31,92 @@ function(e, t, n) {
             switch (t) {
                 case "voice":
                     i = (0, l.jsx)(p.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.VOICE_CHANNEL
+                        className: C.icon,
+                        "aria-label": S.default.Messages.VOICE_CHANNEL
                     });
                     break;
                 case "voice-locked":
                     i = (0, l.jsx)(c.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.VOICE_CHANNEL_LOCKED
+                        className: C.icon,
+                        "aria-label": S.default.Messages.VOICE_CHANNEL_LOCKED
                     });
                     break;
                 case "stage":
                     i = (0, l.jsx)(h.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.STAGE_CHANNEL
+                        className: C.icon,
+                        "aria-label": S.default.Messages.STAGE_CHANNEL
                     });
                     break;
                 case "stage-locked":
                     i = (0, l.jsx)(c.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.STAGE_CHANNEL_LOCKED
+                        className: C.icon,
+                        "aria-label": S.default.Messages.STAGE_CHANNEL_LOCKED
                     });
                     break;
                 case "thread":
                     i = (0, l.jsx)(E.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.THREAD
+                        className: C.icon,
+                        "aria-label": S.default.Messages.THREAD
                     });
                     break;
                 case "text":
                     i = (0, l.jsx)(r.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.CHANNEL
+                        className: C.icon,
+                        "aria-label": S.default.Messages.CHANNEL
                     });
                     break;
                 case "forum":
                     i = (0, l.jsx)(u.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.FORUM_CHANNEL
+                        className: C.icon,
+                        "aria-label": S.default.Messages.FORUM_CHANNEL
                     });
                     break;
                 case "post":
                     i = (0, l.jsx)(d.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.FORUM_POST
+                        className: C.icon,
+                        "aria-label": S.default.Messages.FORUM_POST
                     });
                     break;
                 case "home":
                 case "guide":
                     i = (0, l.jsx)(m.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.SERVER_GUIDE
+                        className: C.icon,
+                        "aria-label": S.default.Messages.SERVER_GUIDE
                     });
                     break;
                 case "browse":
                 case "customize":
                     i = (0, l.jsx)(s.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.CHANNEL_BROWSER_TITLE
+                        className: C.icon,
+                        "aria-label": S.default.Messages.CHANNEL_BROWSER_TITLE
                     });
                     break;
                 case "message":
                     i = (0, l.jsx)(o.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION
+                        className: C.icon,
+                        "aria-label": S.default.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION
                     });
                     break;
                 case "locked":
                     i = (0, l.jsx)(c.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.NO_ACCESS
+                        className: C.icon,
+                        "aria-label": S.default.Messages.NO_ACCESS
                     });
                     break;
                 case "media":
                     i = (0, l.jsx)(f.default, {
-                        className: S.icon,
-                        "aria-label": C.default.Messages.MEDIA_CHANNEL
+                        className: C.icon,
+                        "aria-label": S.default.Messages.MEDIA_CHANNEL
                     })
             }
             return (0, l.jsxs)("span", {
                 className: a("channelWithIcon", {
-                    [S.iconMentionText]: "text" === t
+                    [C.iconMentionText]: "text" === t
                 }),
                 children: [(0, l.jsx)(g.default, {
                     children: i
                 }), null != n && "" !== n ? (0, l.jsx)("span", {
-                    className: S.name,
+                    className: C.name,
                     children: n
                 }) : null]
             })

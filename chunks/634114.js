@@ -24,7 +24,7 @@ function(e, t, n) {
         let {
             channel: a,
             isAppDetailPresent: E
-        } = e, [g, C] = i.useState(""), S = i.useCallback(() => C(""), [C]), {
+        } = e, [g, S] = i.useState(""), C = i.useCallback(() => S(""), [S]), {
             commandsByActiveSection: T,
             sectionDescriptors: v,
             filterSection: I
@@ -49,9 +49,9 @@ function(e, t, n) {
                 className: h.searchBarContainer,
                 children: (0, l.jsx)(c.default, {
                     placeholder: "Search Apps & Commands",
-                    onChange: C,
+                    onChange: S,
                     query: g,
-                    onClear: S,
+                    onClear: C,
                     size: c.default.Sizes.MEDIUM
                 })
             }), (0, l.jsxs)(r.Scroller, {

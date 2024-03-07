@@ -33,18 +33,18 @@ function(e, t, n) {
         });
         let g = (0, c.default)(E),
             {
-                upsellSource: C
+                upsellSource: S
             } = (0, h.useUserPopoutCollectiblesUpsellStore)(),
-            S = (0, s.default)([m.default], () => m.default.getCurrentUser());
-        a(null != S, "currentUser should not be null");
+            C = (0, s.default)([m.default], () => m.default.getCurrentUser());
+        a(null != C, "currentUser should not be null");
         let T = (0, d.useBlockedPaymentsConfig)(),
-            v = (0, p.default)(S.id, i),
+            v = (0, p.default)(C.id, i),
             I = (0, p.default)(t.id, i);
         l.useEffect(() => {
-            null == v && (0, o.fetchProfile)(S.id)
-        }, [v, S]);
-        let _ = g !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == S ? void 0 : S.id) !== t.id && !T && !(null != C && C !== n),
-            N = _ && (null == S ? void 0 : S.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
+            null == v && (0, o.fetchProfile)(C.id)
+        }, [v, C]);
+        let _ = g !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == C ? void 0 : C.id) !== t.id && !T && !(null != S && S !== n),
+            N = _ && (null == C ? void 0 : C.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
             A = _ && null != v && null == v.profileEffectId && (null == I ? void 0 : I.profileEffectId) != null,
             [x, y] = (0, f.useSelectedDismissibleContent)((N, []), void 0, !0);
         return {

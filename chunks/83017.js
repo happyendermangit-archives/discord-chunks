@@ -26,8 +26,8 @@ function(e, t, n) {
         h = n("385976"),
         E = n("858619"),
         g = n("867805"),
-        C = n("986632"),
-        S = n("538282"),
+        S = n("986632"),
+        C = n("538282"),
         T = n("817963"),
         v = n("923959"),
         I = n("305961"),
@@ -54,12 +54,12 @@ function(e, t, n) {
             gridWidth: s,
             emojiPaddingHorizontal: r,
             emojiSpriteSize: o
-        } = e, d = (0, m.useStateFromStores)([h.default], () => h.default.categories), p = (0, m.useStateFromStores)([I.default], () => I.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), C = null == t ? null : t.getGuildId(), S = (0, m.useStateFromStores)([h.default], () => h.default.getDisambiguatedEmojiContext(C), [C]), U = (0, R.useFavoriteEmojis)(C), D = (0, R.useFrequentlyUsedEmojis)(C), {
+        } = e, d = (0, m.useStateFromStores)([h.default], () => h.default.categories), p = (0, m.useStateFromStores)([I.default], () => I.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), S = null == t ? null : t.getGuildId(), C = (0, m.useStateFromStores)([h.default], () => h.default.getDisambiguatedEmojiContext(S), [S]), U = (0, R.useFavoriteEmojis)(S), D = (0, R.useFrequentlyUsedEmojis)(S), {
             topEmojis: k,
             newlyAddedEmojis: w
-        } = (0, L.default)(C, i), F = (0, m.useStateFromStoresArray)([N.default], () => N.default.getFlattenedGuildIds(), []), {
+        } = (0, L.default)(S, i), F = (0, m.useStateFromStoresArray)([N.default], () => N.default.getFlattenedGuildIds(), []), {
             canCreateExpressions: G
-        } = (0, T.useManageResourcePermissions)(p), B = (0, m.useStateFromStores)([A.default], () => A.default.getCurrentUser()), H = (0, y.isPremium)(B), V = S.getCustomEmoji(), K = e => {
+        } = (0, T.useManageResourcePermissions)(p), B = (0, m.useStateFromStores)([A.default], () => A.default.getCurrentUser()), H = (0, y.isPremium)(B), V = C.getCustomEmoji(), K = e => {
             if (e.type === E.EmojiTypes.GUILD) return e.guildId
         }, W = u.useMemo(() => c.groupBy(V, K), [V]), {
             enabled: Y,
@@ -76,9 +76,9 @@ function(e, t, n) {
                 m = [],
                 h = [],
                 E = 0,
-                C = 0;
-            if (null != S && null != s) {
-                let S = Math.floor(s / (o + 2 * r)),
+                S = 0;
+            if (null != C && null != s) {
+                let C = Math.floor(s / (o + 2 * r)),
                     T = (a, s) => {
                         let r = new Map,
                             d = n.has(s.sectionId),
@@ -95,18 +95,18 @@ function(e, t, n) {
                             v = _.default.getGuildId(),
                             I = s.sectionId === P.EmojiCategoryTypes.TOP_GUILD_EMOJI,
                             N = !I && null != T && v === T.id && g.length < T.getMaxEmojiSlots(),
-                            A = I && g.length < S && !Y,
+                            A = I && g.length < C && !Y,
                             y = null != T && I && Y && z === O.EmojiPickerUploadTreatment.WITH_TOP_LIST && W[T.id].length < T.getMaxEmojiSlots(),
                             M = l && G && null != T && (N || A || y);
-                        M && y && g.length === S && g.shift();
+                        M && y && g.length === C && g.shift();
                         let L = Y && M && !d,
                             b = M ? g.length + 1 : g.length,
-                            U = Math.ceil(b / S),
+                            U = Math.ceil(b / C),
                             D = [];
                         for (let e = 0; e < U; e++) {
                             let t = 0 === e,
-                                n = e * S - (L && e > 0 ? 1 : 0),
-                                l = n + S - (L && t ? 1 : 0),
+                                n = e * C - (L && e > 0 ? 1 : 0),
+                                l = n + C - (L && t ? 1 : 0),
                                 i = g.slice(n, l).map((e, n) => {
                                     var l, i;
                                     return {
@@ -114,7 +114,7 @@ function(e, t, n) {
                                         emoji: e,
                                         size: o,
                                         isDisabled: r.get(e),
-                                        rowIndex: C,
+                                        rowIndex: S,
                                         columnIndex: L && t ? n + 1 : n,
                                         visibleRowIndex: E,
                                         category: s.type,
@@ -126,7 +126,7 @@ function(e, t, n) {
                                     guildId: T.id,
                                     name: j.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                                     size: o,
-                                    rowIndex: C,
+                                    rowIndex: S,
                                     columnIndex: 0,
                                     visibleRowIndex: E
                                 }, ...i]), D.push(i), !d) {
@@ -144,7 +144,7 @@ function(e, t, n) {
                                 }
                                 h.push(i.length), m.push(i), E++
                             }
-                            C++
+                            S++
                         }
                         let F = {
                             ...s,
@@ -256,7 +256,7 @@ function(e, t, n) {
                 rowCountBySection: e,
                 sectionDescriptors: u
             }
-        }, [S, s, o, r, a, n, t, i, d, p, W, F, w, k, D, U, G, l, H, Y, z])
+        }, [C, s, o, r, a, n, t, i, d, p, W, F, w, k, D, U, G, l, H, Y, z])
     };
     (o = a || (a = {}))[o.PREMIUM = 0] = "PREMIUM", o[o.ROLE_SUBSCRIPTION = 1] = "ROLE_SUBSCRIPTION";
     let D = e => {
@@ -312,12 +312,12 @@ function(e, t, n) {
         k = e => {
             let {
                 emojiListRef: t
-            } = e, n = (0, S.useExpressionPickerStore)(e => e.searchQuery), l = u.useCallback(e => {
+            } = e, n = (0, C.useExpressionPickerStore)(e => e.searchQuery), l = u.useCallback(e => {
                 var n;
                 return null === (n = t.current) || void 0 === n ? void 0 : n.scrollToSectionTop(e)
             }, [t]);
             return u.useCallback(e => {
-                "" !== n ? ((0, S.setSearchQuery)(""), C.EmojiPickerStore.setActiveCategoryIndex(e)) : l(e)
+                "" !== n ? ((0, C.setSearchQuery)(""), S.EmojiPickerStore.setActiveCategoryIndex(e)) : l(e)
             }, [l, n])
         }
 }

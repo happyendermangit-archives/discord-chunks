@@ -5,7 +5,7 @@ function(e, t, n) {
             return g
         },
         run: function() {
-            return C
+            return S
         },
         convertRawToInlineVoids: function() {
             return v
@@ -38,29 +38,29 @@ function(e, t, n) {
         return e.onChange = () => {
             let l = f.EditorUtils.richValue(e);
             (l !== s || e.previewMarkdown !== r) && (o.HistoryUtils.withMergedEntry(e, () => {
-                f.EditorUtils.withoutNormalizing(e, () => C(e, t, n))
+                f.EditorUtils.withoutNormalizing(e, () => S(e, t, n))
             }), s = l, r = e.previewMarkdown), a()
         }, e
     }
 
-    function C(e, t, n) {
+    function S(e, t, n) {
         let l = f.EditorUtils.areStylesDisabled(e),
             i = f.EditorUtils.blocks(e);
         for (let a of i)
-            if (h.has(a[0].type)) l ? T(e, a, !0, null) : S(e, a, t, n);
+            if (h.has(a[0].type)) l ? T(e, a, !0, null) : C(e, a, t, n);
             else {
                 let [i, s] = a;
                 for (let a = i.children.length - 1; a >= 0; a--) {
                     let r = i.children[a];
                     if (E.has(r.type)) {
                         let i = [r, f.PathUtils.child(s, a)];
-                        l ? T(e, i, !0, null) : S(e, i, t, n)
+                        l ? T(e, i, !0, null) : C(e, i, t, n)
                     }
                 }
             }
     }
 
-    function S(e, t, n, l) {
+    function C(e, t, n, l) {
         var a;
         let s = "line" === t[0].type && (null === (a = t[0].codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock) === !0,
             o = f.ElementUtils.markdown(t[0], n);

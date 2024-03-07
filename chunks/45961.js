@@ -17,10 +17,10 @@ function(e, t, n) {
             return g
         },
         useExpressionGrid: function() {
-            return C
+            return S
         },
         useKeyboardNavigation: function() {
-            return S
+            return C
         }
     }), n("222007"), n("424973");
     var l = n("884691"),
@@ -203,8 +203,8 @@ function(e, t, n) {
                 autoFocusElement: !1,
                 useVirtualFocus: !0
             }), {
-                gridContainerProps: C,
-                handleGridContainerKeyDown: S
+                gridContainerProps: S,
+                handleGridContainerKeyDown: C
             } = l.useMemo(() => {
                 let e = g();
                 return {
@@ -221,13 +221,13 @@ function(e, t, n) {
                 gridDispatch: p,
                 getItemProps: h,
                 getRowProps: E,
-                gridContainerProps: C,
-                handleGridContainerKeyDown: S,
+                gridContainerProps: S,
+                handleGridContainerKeyDown: C,
                 isUsingKeyboardNavigation: u
             }
         };
 
-    function C(e) {
+    function S(e) {
         let {
             categories: t,
             collapsedCategories: n,
@@ -281,7 +281,7 @@ function(e, t, n) {
         }, [t, n, i, r, s, a])
     }
 
-    function S(e) {
+    function C(e) {
         let {
             columnCounts: t,
             expressionsGrid: n,

@@ -20,7 +20,7 @@ function(e, t, n) {
         h = n("290581"),
         E = n("742219"),
         g = n("115279");
-    let C = e => {
+    let S = e => {
             switch (e) {
                 case g.EmojiCategories.RECENT:
                     return o.default;
@@ -50,14 +50,14 @@ function(e, t, n) {
                     return
             }
         },
-        S = i.memo(function(e) {
+        C = i.memo(function(e) {
             let {
                 categoryId: t,
                 ...n
-            } = e, i = C(t);
+            } = e, i = S(t);
             return null == i ? null : (0, l.jsx)(i, {
                 ...n
             })
         });
-    var T = S
+    var T = C
 }

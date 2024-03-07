@@ -96,8 +96,8 @@ function(e, t, n) {
                 channel: m,
                 showOptions: h,
                 showImage: g,
-                optionStates: C,
-                onOptionClick: S,
+                optionStates: S,
+                onOptionClick: C,
                 section: T,
                 isSelectable: v = !0
             } = e,
@@ -105,7 +105,7 @@ function(e, t, n) {
                 var e;
                 return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === d)
             }, [d, u]),
-            _ = null != d ? null == C ? void 0 : C[d] : null;
+            _ = null != d ? null == S ? void 0 : S[d] : null;
         r = null != _ && (null === (t = _.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = _.lastValidationResult.error) && void 0 !== n ? n : "" : null;
         let N = g && null != T ? (0, c.getIconComponent)(T) : null;
         return (0, l.jsxs)("div", {
@@ -125,8 +125,8 @@ function(e, t, n) {
                         children: f.COMMAND_SENTINEL + u.displayName
                     }), h ? (0, l.jsx)(E, {
                         command: u,
-                        optionStates: C,
-                        onOptionClick: S
+                        optionStates: S,
+                        onOptionClick: C
                     }) : null]
                 }), (0, l.jsx)(o.AutocompleteRowSubheading, {
                     className: s(p.description, null != r ? p.error : null),

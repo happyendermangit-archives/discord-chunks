@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("776574"),
         E = n("970153"),
         g = n("939563"),
-        C = n("385887"),
-        S = n("755604"),
+        S = n("385887"),
+        C = n("755604"),
         T = n("664610"),
         v = n("688893"),
         I = n("684607"),
@@ -73,12 +73,12 @@ function(e, t, n) {
                 "aria-describedby": ed,
                 "aria-labelledby": ec,
                 "aria-autocomplete": ef
-            } = e, em = i.useRef(null), ep = i.useRef(null), eh = i.useRef(!0), eE = i.useRef(!0), eg = j || U, eC = i.useCallback((e, t, n) => {
+            } = e, em = i.useRef(null), ep = i.useRef(null), eh = i.useRef(!0), eE = i.useRef(!0), eg = j || U, eS = i.useCallback((e, t, n) => {
                 var l;
                 let {
                     value: i,
                     selection: a
-                } = n, s = C.EditorUtils.richValue(e), r = e.selection, o = !1;
+                } = n, s = S.EditorUtils.richValue(e), r = e.selection, o = !1;
                 if (void 0 !== i && i !== s) {
                     if (e.children = i, "parent" === t && !e.previewMarkdown) {
                         try {
@@ -89,14 +89,14 @@ function(e, t, n) {
                     }
                     "undo" !== t && void 0 !== i && i !== s && p.HistoryUtils.insertEntry(e, "other", !1, s, r), o = !0
                 }
-                if (null != a && !C.SelectionUtils.isValid(e, a) && (a = void 0), (o || !C.SelectionUtils.isValid(e, r)) && void 0 === a) {
-                    let t = C.EditorUtils.end(e, []);
+                if (null != a && !S.SelectionUtils.isValid(e, a) && (a = void 0), (o || !S.SelectionUtils.isValid(e, r)) && void 0 === a) {
+                    let t = S.EditorUtils.end(e, []);
                     a = {
                         anchor: t,
                         focus: t
                     }
                 }
-                if (null != a && !C.SelectionUtils.equals(a, r)) {
+                if (null != a && !S.SelectionUtils.equals(a, r)) {
                     e.selection = a;
                     let t = p.HistoryUtils.currentEntry(e);
                     null != t && (t.selection = a), o = !0
@@ -105,13 +105,13 @@ function(e, t, n) {
                 if (null != d && d[0].command.id !== (null === (l = u.default.getActiveCommand(L.id)) || void 0 === l ? void 0 : l.id) && p.HistoryUtils.withMergedEntry(e, () => {
                         (0, A.unsetCommand)(e, L.id, null, !0)
                     }), o) {
-                    if (!et && C.EditorUtils.focus(e), "parent" === t) try {
+                    if (!et && S.EditorUtils.focus(e), "parent" === t) try {
                         eE.current = !1, e.onChange()
                     } finally {
                         eE.current = !0
                     } else e.onChange()
                 }
-            }, [L.id, L.guild_id, et]), eS = i.useCallback(() => {
+            }, [L.id, L.guild_id, et]), eC = i.useCallback(() => {
                 eh.current = !1
             }, []), eT = i.useCallback(() => {
                 eh.current = !0
@@ -120,9 +120,9 @@ function(e, t, n) {
                 chatInputType: a,
                 canUseCommands: $,
                 canOnlyUseTextCommands: ee,
-                onChangeStart: eS,
+                onChangeStart: eC,
                 onChangeEnd: eT,
-                updateState: eC
+                updateState: eS
             }), eI = i.useCallback((e, t) => {
                 let n = m.getOptionValues(ev, e),
                     l = m.validateOptionValues(e, L.guild_id, L.id, n, t);
@@ -157,7 +157,7 @@ function(e, t, n) {
                         return
                     }
                 }
-                null == Z || Z((0, E.toTextValue)(C.EditorUtils.richValue(ev), {
+                null == Z || Z((0, E.toTextValue)(S.EditorUtils.richValue(ev), {
                     mode: "raw",
                     ignoreTrailingEmptyNodes: !0
                 }), t, e)
@@ -189,10 +189,10 @@ function(e, t, n) {
                 }), e)) : eE.current && J()
             }, [J, F]);
             i.useLayoutEffect(() => {
-                eh.current && (ep.current = n, eC(ev, "parent", {
+                eh.current && (ep.current = n, eS(ev, "parent", {
                     value: n
                 }))
-            }, [ev, n, eC]), i.useEffect(() => {
+            }, [ev, n, eS]), i.useEffect(() => {
                 let e = () => {
                     var e;
                     let t = null !== (e = u.default.getActiveCommand(L.id)) && void 0 !== e ? e : null;
@@ -200,7 +200,7 @@ function(e, t, n) {
                 };
                 return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
             }, [L, ev, eI]);
-            let eM = i.useCallback((e, t) => (0, S.default)(e, t), []),
+            let eM = i.useCallback((e, t) => (0, C.default)(e, t), []),
                 eL = i.useCallback(e => (0, y.default)(ev, e, L.id), [L.id, ev]),
                 eP = i.useCallback(e => (0, O.default)(e), []);
             return (0, l.jsxs)(l.Fragment, {

@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("659500"),
         E = n("718517"),
         g = n("829536"),
-        C = n("534107"),
-        S = n("49111"),
+        S = n("534107"),
+        C = n("49111"),
         T = n("782340"),
         v = n("722552");
     let I = i.lazy(() => n.el("403130").then(n.bind(n, "403130")));
@@ -131,10 +131,10 @@ function(e, t, n) {
                 null != e && cancelAnimationFrame(e)
             }
         }, [t, n, a]), c = y, N = W, A = Y, i.useEffect(() => {
-            if (N) return h.ComponentDispatch.dispatch(S.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
+            if (N) return h.ComponentDispatch.dispatch(C.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
                 src: c
-            }), h.ComponentDispatch.subscribe(S.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
-                h.ComponentDispatch.unsubscribe(S.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
+            }), h.ComponentDispatch.subscribe(C.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
+                h.ComponentDispatch.unsubscribe(C.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
             };
 
             function e(e) {
@@ -201,7 +201,7 @@ function(e, t, n) {
                     width: 18,
                     height: 18
                 })
-            }), (0, l.jsx)(C.default, {
+            }), (0, l.jsx)(S.default, {
                 className: v.waveform,
                 waveform: L,
                 currentTime: F,

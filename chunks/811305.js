@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Sizes: function() {
-            return C
+            return S
         },
         default: function() {
             return v
@@ -23,14 +23,14 @@ function(e, t, n) {
         h = n("523096"),
         E = n("587974"),
         g = n("856614");
-    let C = {
+    let S = {
         SIZE_16: 16,
         SIZE_24: 24,
         SIZE_32: 32,
         SIZE_56: 56
     };
 
-    function S(e, t) {
+    function C(e, t) {
         let n = e instanceof f.default ? e : null != e ? e.user : null;
         return null != n ? n.id : "user-".concat(t)
     }
@@ -50,13 +50,13 @@ function(e, t, n) {
                 s.push(t ? (0, l.jsx)("div", {
                     className: g.avatarContainer,
                     children: r
-                }, S(null !== (d = e[u]) && void 0 !== d ? d : null, u)) : (0, l.jsx)(E.default, {
+                }, C(null !== (d = e[u]) && void 0 !== d ? d : null, u)) : (0, l.jsx)(E.default, {
                     className: g.avatarContainerMasked,
                     height: i,
                     width: i,
                     mask: E.default.Masks.VOICE_USER_SUMMARY_ITEM,
                     children: r
-                }, S(e[u], u))), u++
+                }, C(e[u], u))), u++
             }
             return null != a ? s.push(a) : null != o && s.push(o), s
         }
@@ -123,15 +123,15 @@ function(e, t, n) {
                 }),
                 children: n => (0, l.jsxs)("div", {
                     className: s(e, g.container, function() {
-                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : C.SIZE_24;
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.SIZE_24;
                         switch (e) {
-                            case C.SIZE_16:
+                            case S.SIZE_16:
                                 return g.size16;
-                            case C.SIZE_24:
+                            case S.SIZE_24:
                                 return g.size24;
-                            case C.SIZE_32:
+                            case S.SIZE_32:
                                 return g.size32;
-                            case C.SIZE_56:
+                            case S.SIZE_56:
                                 return g.size56;
                             default:
                                 return g.size24
@@ -194,7 +194,7 @@ function(e, t, n) {
         },
         renderIcon: !1,
         showDefaultAvatarsForNullUsers: !1,
-        size: C.SIZE_24
+        size: S.SIZE_24
     };
     var v = T
 }

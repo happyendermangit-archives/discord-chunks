@@ -30,8 +30,8 @@ function(e, t, n) {
         h = n("389153"),
         E = n("396465"),
         g = n("355263"),
-        C = n("957255"),
-        S = n("501536"),
+        S = n("957255"),
+        C = n("501536"),
         T = n("655518"),
         v = n("200294"),
         I = n("851745"),
@@ -67,7 +67,7 @@ function(e, t, n) {
     }
     let L = {
         sentinel: _.COMMAND_SENTINEL,
-        stores: [m.default, f.default, u.default, C.default],
+        stores: [m.default, f.default, u.default, S.default],
         matches: (e, t, n, l, i) => i.commands !== I.CommandMode.DISABLED && null == m.default.getActiveCommand(e.id) && (l || i.commands !== I.CommandMode.OLD_BUILT_INS),
         queryResults(e, t, n, l, i) {
             if (0 === n.length && l.commands !== I.CommandMode.OLD_BUILT_INS) return y;
@@ -149,7 +149,7 @@ function(e, t, n) {
                 titleWithQuery: A.default.Messages.COMMANDS_MATCHING,
                 titleWithoutQuery: A.default.Messages.COMMANDS,
                 getQuery: e => "".concat(_.COMMAND_SENTINEL).concat(e),
-                Component: f ? S.default.Command : S.default.NewCommand,
+                Component: f ? C.default.Command : C.default.NewCommand,
                 getProps: e => {
                     let {
                         command: t,

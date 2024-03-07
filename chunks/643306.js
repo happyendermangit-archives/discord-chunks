@@ -21,8 +21,8 @@ function(e, t, n) {
         h = n("895026"),
         E = n("506885"),
         g = n("981601"),
-        C = n("42203"),
-        S = n("26989"),
+        S = n("42203"),
+        C = n("26989"),
         T = n("305961"),
         v = n("697218"),
         I = n("145131"),
@@ -78,9 +78,9 @@ function(e, t, n) {
                 null != i && await (0, h.requestMembersForRole)(R, i)
             },
             renderPopout: e => {
-                let t = C.default.getChannel(s),
+                let t = S.default.getChannel(s),
                     a = T.default.getGuild(R),
-                    o = S.default.getMembers(a.id),
+                    o = C.default.getMembers(a.id),
                     u = null == i ? a.roles[a.getEveryoneRoleId()] : a.roles[i],
                     m = r(o).filter(e => {
                         if ("@everyone" === p || e.roles.includes(i)) {

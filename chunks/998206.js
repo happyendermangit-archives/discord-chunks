@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("478272"),
         E = n("685665"),
         g = n("384997"),
-        C = n("128295"),
-        S = n("414868"),
+        S = n("128295"),
+        C = n("414868"),
         T = n("49111"),
         v = n("994428"),
         I = n("13030"),
@@ -56,11 +56,11 @@ function(e, t, n) {
         }, [y, n, M, a, O]), P = () => {
             if (g === o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
                 className: N.sparkleContainer,
-                children: [(0, l.jsx)(S.default, {
+                children: [(0, l.jsx)(C.default, {
                     className: s(N.sparkleStar, {
                         [N.noAnimation]: R
                     })
-                }), (0, l.jsx)(C.default, {
+                }), (0, l.jsx)(S.default, {
                     className: s(N.sparklePlus, {
                         [N.noAnimation]: R
                     })

@@ -18,8 +18,8 @@ function(e, t, n) {
         h = n("685665"),
         E = n("200197"),
         g = n("538282"),
-        C = n("866353"),
-        S = n("364685"),
+        S = n("866353"),
+        C = n("364685"),
         T = n("161585"),
         v = n("24373"),
         I = n("41170"),
@@ -77,7 +77,7 @@ function(e, t, n) {
                 size: U,
                 sticker: s,
                 className: b.sticker
-            }), l !== C.StickerSendability.SENDABLE && (0, a.jsx)(_.default, {
+            }), l !== S.StickerSendability.SENDABLE && (0, a.jsx)(_.default, {
                 size: 14
             })]
         })
@@ -192,9 +192,9 @@ function(e, t, n) {
                     if (O.default.track(L.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                             sticker_id: e.id,
                             suggestion_trigger: W
-                        }), t === C.StickerSendability.SENDABLE) U(!0), r(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
+                        }), t === S.StickerSendability.SENDABLE) U(!0), r(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
                     else if ((0, v.isStandardSticker)(e)) {
-                        let t = S.default.getStickerPack(e.pack_id);
+                        let t = C.default.getStickerPack(e.pack_id);
                         null != t && (0, N.default)({
                             stickerPack: t,
                             analyticsLocations: Q

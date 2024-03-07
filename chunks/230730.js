@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         acceptButton: "acceptButton__48576 button_ac0d88",

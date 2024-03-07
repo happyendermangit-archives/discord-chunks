@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("945330"),
         E = n("216422"),
         g = n("599110"),
-        C = n("719923"),
-        S = n("49111"),
+        S = n("719923"),
+        C = n("49111"),
         T = n("646718"),
         v = n("782340"),
         I = n("230537"),
@@ -44,12 +44,12 @@ function(e, t, n) {
                 location: T.PremiumUpsellTypes.EMOJI_PICKER_SEARCH
             }), O = i.useRef(!1), R = i.useCallback(() => {
                 (0, c.default)({
-                    subscriptionTier: C.default.getSkuIdForPremiumType(y),
+                    subscriptionTier: S.default.getSkuIdForPremiumType(y),
                     analyticsLocations: A,
                     analyticsObject: {
                         ...N,
-                        object: S.AnalyticsObjects.BUTTON_CTA,
-                        objectType: S.AnalyticsObjectTypes.TIER_2
+                        object: C.AnalyticsObjects.BUTTON_CTA,
+                        objectType: C.AnalyticsObjectTypes.TIER_2
                     }
                 }), null == _ || _()
             }, [A, N, _, y]), M = y === T.PremiumTypes.TIER_0;
@@ -59,11 +59,11 @@ function(e, t, n) {
                     type: o.SpinnerTypes.PULSING_ELLIPSIS
                 }) : (0, l.jsx)(r.default, {
                     onChange: e => {
-                        e && !O.current && (g.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        e && !O.current && (g.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                             type: T.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
                             location: N,
                             location_stack: A,
-                            sku_id: C.default.getSkuIdForPremiumType(y)
+                            sku_id: S.default.getSkuIdForPremiumType(y)
                         }), O.current = !0)
                     },
                     children: (0, l.jsxs)("div", {
@@ -76,7 +76,7 @@ function(e, t, n) {
                             className: I.body,
                             variant: "text-sm/normal",
                             children: M ? v.default.Messages.EMOJI_PICKER_PREMIUM_TIER_0_UPSELL_BODY.format({
-                                planName: (0, C.getTierDisplayName)(T.SubscriptionPlans.PREMIUM_MONTH_TIER_0)
+                                planName: (0, S.getTierDisplayName)(T.SubscriptionPlans.PREMIUM_MONTH_TIER_0)
                             }) : t
                         }), (0, l.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,

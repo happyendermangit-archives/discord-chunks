@@ -149,17 +149,17 @@ function(e, t, n) {
         }
         if (null == f) return;
         let E = a.EditorUtils.range(e, f),
-            [g, C] = a.RangeUtils.edges(E),
-            S = a.EditorUtils.richValue(e),
+            [g, S] = a.RangeUtils.edges(E),
+            C = a.EditorUtils.richValue(e),
             T = p ? -1 : 1,
             v = null !== (l = null === (t = g.path) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : 0,
-            I = null !== (i = null === (n = C.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : S.length - 1,
+            I = null !== (i = null === (n = S.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : C.length - 1,
             _ = p ? v : I,
             N = p ? I : v;
         for (;;) {
-            let t = S[N],
+            let t = C[N],
                 n = null !== (u = N === v ? null === (s = g.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
-                l = null !== (d = N === I ? null === (r = C.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
+                l = null !== (d = N === I ? null === (r = S.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
                 i = p ? l : n,
                 f = p ? n : l,
                 m = i;
@@ -167,7 +167,7 @@ function(e, t, n) {
                 let n, l;
                 let i = t.children[m],
                     s = [N, m];
-                if (n = a.PathUtils.equals(s, g.path) || a.PathUtils.isAncestor(s, g.path) ? !p && a.EditorUtils.isEnd(e, g, s) ? null : g : a.EditorUtils.start(e, s), l = a.PathUtils.equals(s, C.path) || a.PathUtils.isAncestor(s, C.path) ? p && a.EditorUtils.isStart(e, C, s) ? null : C : a.EditorUtils.end(e, s), null != n && null != l) {
+                if (n = a.PathUtils.equals(s, g.path) || a.PathUtils.isAncestor(s, g.path) ? !p && a.EditorUtils.isEnd(e, g, s) ? null : g : a.EditorUtils.start(e, s), l = a.PathUtils.equals(s, S.path) || a.PathUtils.isAncestor(s, S.path) ? p && a.EditorUtils.isStart(e, S, s) ? null : S : a.EditorUtils.end(e, s), null != n && null != l) {
                     if (a.TextUtils.isText(i) && 0 === i.text.length) {
                         let e = {
                             path: s,

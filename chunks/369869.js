@@ -21,9 +21,9 @@ function(e, t, n) {
         h = n("49111"),
         E = n("782340"),
         g = n("20010"),
-        C = n("862939");
+        S = n("862939");
 
-    function S(e) {
+    function C(e) {
         let {
             guildName: t
         } = e;
@@ -54,14 +54,14 @@ function(e, t, n) {
             lastSection: v,
             children: [(0, l.jsxs)(r.Heading, {
                 variant: "eyebrow",
-                className: C.title,
+                className: S.title,
                 children: [E.default.Messages.USER_POPOUT_ABOUT_ME, null != t && T && (0, l.jsx)(r.Tooltip, {
                     color: r.Tooltip.Colors.CUSTOM,
                     tooltipClassName: g.aboutMeGuildIconTooltip,
                     "aria-label": E.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
                         guildName: t.name
                     }),
-                    text: (0, l.jsx)(S, {
+                    text: (0, l.jsx)(C, {
                         guildName: t.name
                     }),
                     children: e => (0, l.jsx)(d.default, {

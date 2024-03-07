@@ -24,7 +24,7 @@ function(e, t, n) {
         E = n("774473"),
         g = n("846325");
 
-    function C(e) {
+    function S(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = e.map(e => ({
                 type: h.SoundboardSoundItemType.SOUND,
@@ -33,7 +33,7 @@ function(e, t, n) {
         return t ? n.sort((e, t) => c.default.compare(e.sound.soundId, t.sound.soundId)) : n
     }
 
-    function S(e) {
+    function C(e) {
         let {
             sections: t,
             guildIds: n,
@@ -55,7 +55,7 @@ function(e, t, n) {
             let t = r[e];
             null != t && d.push(t)
         }
-        let c = C(d, s);
+        let c = S(d, s);
         c.length > 0 && t.push({
             key: a,
             categoryInfo: {
@@ -73,7 +73,7 @@ function(e, t, n) {
             categoryInfo: {
                 type: h.SoundboardSoundGridSectionType.DEFAULTS
             },
-            items: C(l)
+            items: S(l)
         })
     }
 
@@ -109,21 +109,21 @@ function(e, t, n) {
             return n ? (T(e, g), {
                 categories: e,
                 isFetching: I
-            }) : (S({
+            }) : (C({
                 sections: e,
                 guildIds: _,
                 allSounds: g,
                 potentialSoundIdsForSection: Array.from(v),
                 sectionType: h.SoundboardSoundGridSectionType.FAVORITES,
                 sortById: !0
-            }), O && S({
+            }), O && C({
                 sections: e,
                 guildIds: _,
                 allSounds: g,
                 potentialSoundIdsForSection: L,
                 sectionType: h.SoundboardSoundGridSectionType.RECENTLY_HEARD,
                 sortById: !1
-            }), R && S({
+            }), R && C({
                 sections: e,
                 guildIds: _,
                 allSounds: g,
@@ -134,7 +134,7 @@ function(e, t, n) {
                 var a;
                 if (null == t) return;
                 let s = null !== (a = l.get(t.id)) && void 0 !== a ? a : [],
-                    r = C(s),
+                    r = S(s),
                     o = s.length < t.getMaxSoundboardSlots() && n,
                     u = 0 === r.length;
                 (o || u) && !i && r.push({
@@ -154,7 +154,7 @@ function(e, t, n) {
                     var i;
                     if (a.id === n) continue;
                     let t = null !== (i = l.get(a.id)) && void 0 !== i ? i : [],
-                        s = C(t);
+                        s = S(t);
                     s.length > 0 && e.push({
                         categoryInfo: {
                             type: h.SoundboardSoundGridSectionType.GUILD,
@@ -177,7 +177,7 @@ function(e, t, n) {
             categoryInfo: {
                 type: h.SoundboardSoundGridSectionType.SEARCH
             },
-            items: C(t, !1)
+            items: S(t, !1)
         }] : e, [e, n.length, t])
     }
 }

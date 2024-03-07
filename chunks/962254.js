@@ -34,8 +34,8 @@ function(e, t, n) {
             hideMentionDescription: h,
             hidePersonalInformation: E,
             type: g,
-            emojiIntention: C,
-            editorRef: S,
+            emojiIntention: S,
+            editorRef: C,
             onSendMessage: T,
             onSendSticker: v,
             setValue: I
@@ -53,19 +53,19 @@ function(e, t, n) {
             hideMentionDescription: !0 === h,
             hidePersonalInformation: !0 === E,
             chatInputType: g,
-            emojiIntention: C,
+            emojiIntention: S,
             sendMessage: T,
             sendSticker: v,
             insertText: (e, t) => {
                 var n;
-                null === (n = S.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
+                null === (n = C.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
             },
             replaceText: (e, t) => {
                 I(e, null != t ? t : (0, a.toRichValue)(e))
             },
             getCommandOptionValues: () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
+                return null === (e = C.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
             }
         };
         if (null != n) {
@@ -102,7 +102,7 @@ function(e, t, n) {
             optionText: f
         } = e, m = null;
         for (let e of r.AUTOCOMPLETE_PRIORITY) {
-            var p, h, E, g, C, S;
+            var p, h, E, g, S, C;
             let T = r.AUTOCOMPLETE_OPTIONS[e];
             if (e === o.AutocompleteOptionTypes.GIFS || e === o.AutocompleteOptionTypes.CHOICES) {
                 if (l.commands === o.CommandMode.OLD_BUILT_INS) {
@@ -192,7 +192,7 @@ function(e, t, n) {
                 m = {
                     type: e,
                     typeInfo: T,
-                    query: i.substring(null !== (S = null === (C = T.sentinel) || void 0 === C ? void 0 : C.length) && void 0 !== S ? S : 0)
+                    query: i.substring(null !== (C = null === (S = T.sentinel) || void 0 === S ? void 0 : S.length) && void 0 !== C ? C : 0)
                 };
                 break
             }

@@ -5,7 +5,7 @@ function(e, t, n) {
             return l
         },
         default: function() {
-            return S
+            return C
         }
     }), n("424973");
     var l, i, a = n("37983");
@@ -22,16 +22,16 @@ function(e, t, n) {
         h = n("49111"),
         E = n("782340"),
         g = n("77374"),
-        C = n("696246");
+        S = n("696246");
 
-    function S(e) {
+    function C(e) {
         let {
             user: t,
             guildId: n,
             className: l,
             shrinkAtCount: i,
             shrinkToSize: s,
-            isTryItOutFlow: S,
+            isTryItOutFlow: C,
             size: T = 0
         } = e, v = (0, m.default)(t.id, n), I = (0, f.default)(v).map(e => ({
             ...e,
@@ -43,10 +43,10 @@ function(e, t, n) {
             role: "group",
             children: (0, a.jsx)(c.default, {})
         });
-        S && null == I.find(e => "premium" === e.id) && I.push({
+        C && null == I.find(e => "premium" === e.id) && I.push({
             id: "premium",
-            icon: C,
-            src: C,
+            icon: S,
+            src: S,
             description: E.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
                 date: new Date
             })

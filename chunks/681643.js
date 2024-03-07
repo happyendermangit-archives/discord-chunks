@@ -6,16 +6,16 @@ function(e, t, s) {
         }
     });
     var l = s("679653"),
-        u = s("42203"),
-        i = s("27618"),
+        i = s("42203"),
+        u = s("27618"),
         n = s("697218"),
         r = s("375822"),
         a = s("49111");
 
     function o(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default,
             s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : n.default,
-            o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.default,
+            o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.default,
             h = t.getChannel(e);
         if (null == h) return null;
         let d = (0, l.computeChannelName)(h, s, o);

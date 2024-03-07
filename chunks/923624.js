@@ -1,9 +1,9 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         actions: "actions_f697e6",
         clock: "clock__39b2b",
-        container: "container__5f309 " + o("126343").recentMentionsPopout,
+        container: "container__5f309 " + n("126343").recentMentionsPopout,
         disabledMessage: "disabledMessage__35195",
         from: "from_aabb51",
         guildIcon: "guildIcon__3b8ab",

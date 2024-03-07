@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("659186"),
         E = n("418062"),
         g = n("851745"),
-        C = n("280214"),
-        S = n("497858"),
+        S = n("280214"),
+        C = n("497858"),
         T = n("892149"),
         v = i.forwardRef(function(e, t) {
             var n, a, v, I, _;
@@ -33,7 +33,7 @@ function(e, t, n) {
             } = e, O = (0, m.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
                 var e;
                 return null !== (e = c.default.getGuild(N.guild_id)) && void 0 !== e ? e : null
-            }, [N.guild_id]), M = i.useRef(), [L, P, b] = (0, S.default)({
+            }, [N.guild_id]), M = i.useRef(), [L, P, b] = (0, C.default)({
                 ...e,
                 guild: R
             }, t, M), j = (null === (n = A.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : p.default, U = (0, f.getAutocompleteRowId)(L.selectedIndex);
@@ -46,7 +46,7 @@ function(e, t, n) {
                 location: "6e9811_2"
             }, {
                 autoTrackExposure: !1
-            }), k = (0, C.useChannelAutocompleteLayerPosition)({
+            }), k = (0, S.useChannelAutocompleteLayerPosition)({
                 editorHeight: x,
                 type: A,
                 state: L,

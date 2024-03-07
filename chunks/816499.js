@@ -14,10 +14,10 @@ function(e, t, n) {
             return g
         },
         generateEbayMetadataItems: function() {
-            return C
+            return S
         },
         generateTikTokMetadataItems: function() {
-            return S
+            return C
         },
         generateRoleConnectionMetadataItems: function() {
             return T
@@ -111,7 +111,7 @@ function(e, t, n) {
         }, c.MetadataFields.PAYPAL_VERIFIED)), n
     }
 
-    function C(e) {
+    function S(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             i = [],
@@ -128,7 +128,7 @@ function(e, t, n) {
         }, c.MetadataFields.EBAY_TOP_RATED_SELLER)), i
     }
 
-    function S(e) {
+    function C(e) {
         var t, n, i;
         let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             s = [],

@@ -21,8 +21,8 @@ function(e, t, n) {
         h = n("305961"),
         E = n("27618"),
         g = n("697218"),
-        C = n("666897"),
-        S = n("387111"),
+        S = n("666897"),
+        C = n("387111"),
         T = n("158998"),
         v = n("680894");
 
@@ -44,7 +44,7 @@ function(e, t, n) {
                     guildId: x
                 })
             })
-        }, O = T.default.useName(N), R = (0, r.useStateFromStores)([m.default, p.default, E.default], () => S.default.getNickname(x, I, N)), M = h.default.getGuild(x), L = (0, d.useClydeEnabled)(M, A), P = L && i === v.CLYDE_AI_USER_ID ? v.CLYDE_AI_MENTION_COLOR : null, b = e => (0, l.jsx)(C.default, {
+        }, O = T.default.useName(N), R = (0, r.useStateFromStores)([m.default, p.default, E.default], () => C.default.getNickname(x, I, N)), M = h.default.getGuild(x), L = (0, d.useClydeEnabled)(M, A), P = L && i === v.CLYDE_AI_USER_ID ? v.CLYDE_AI_MENTION_COLOR : null, b = e => (0, l.jsx)(S.default, {
             className: t,
             onContextMenu: y,
             color: P,

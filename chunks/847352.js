@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("791776"),
         E = n("82372"),
         g = n("426969"),
-        C = n("105571"),
-        S = n("634114"),
+        S = n("105571"),
+        C = n("634114"),
         T = n("49111"),
         v = n("13030"),
         I = n("942838"),
@@ -85,10 +85,10 @@ function(e, t, n) {
                                     className: I.resizeHandle
                                 }), (0, l.jsxs)("div", {
                                     className: I.contentWrapper,
-                                    children: [(0, l.jsx)(S.default, {
+                                    children: [(0, l.jsx)(C.default, {
                                         channel: n,
                                         isAppDetailPresent: null != b
-                                    }), null != b ? (0, l.jsx)(C.default, {
+                                    }), null != b ? (0, l.jsx)(S.default, {
                                         channel: n,
                                         appDetail: b
                                     }, b.id) : null]

@@ -26,8 +26,8 @@ function(e, t, n) {
         h = n("305961"),
         E = n("423487"),
         g = n("587974"),
-        C = n("599110"),
-        S = n("719923"),
+        S = n("599110"),
+        C = n("719923"),
         T = n("50885"),
         v = n("713135"),
         I = n("106435"),
@@ -88,7 +88,7 @@ function(e, t, n) {
             hasProfileEffect: _
         } = e, {
             profileTheme: A
-        } = i.useContext(x.UserProfileContext), U = i.useContext(C.AnalyticsContext), k = t.isNonUserBot() && !t.isClyde(), w = S.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, M.PremiumTypes.TIER_2), F = i.useMemo(() => (0, m.shouldDisableUserPresenceInChannel)(t, p), [t, p]), G = E || t.isClyde(), {
+        } = i.useContext(x.UserProfileContext), U = i.useContext(S.AnalyticsContext), k = t.isNonUserBot() && !t.isClyde(), w = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, M.PremiumTypes.TIER_2), F = i.useMemo(() => (0, m.shouldDisableUserPresenceInChannel)(t, p), [t, p]), G = E || t.isClyde(), {
             avatarDecorationSrc: B,
             avatarSrc: H,
             eventHandlers: V

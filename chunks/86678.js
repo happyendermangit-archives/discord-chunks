@@ -20,8 +20,8 @@ function(e, t, n) {
         h = n("901582"),
         E = n("997289"),
         g = n("812204"),
-        C = n("685665"),
-        S = n("384997"),
+        S = n("685665"),
+        C = n("384997"),
         T = n("385976"),
         v = n("575226"),
         I = n("305781"),
@@ -111,8 +111,8 @@ function(e, t, n) {
                 gridDispatch: h,
                 getItemProps: E,
                 getRowProps: g,
-                gridContainerProps: C,
-                handleGridContainerKeyDown: S,
+                gridContainerProps: S,
+                handleGridContainerKeyDown: C,
                 isUsingKeyboardNavigation: I
             } = (0, x.useExpressionPickerGridKeyboardNavigation)({
                 columnCounts: l,
@@ -137,8 +137,8 @@ function(e, t, n) {
             }, e => e.inspectedExpressionPosition), [h]), {
                 getItemProps: E,
                 getRowProps: g,
-                gridContainerProps: C,
-                handleGridContainerKeyDown: S,
+                gridContainerProps: S,
+                handleGridContainerKeyDown: C,
                 isUsingKeyboardNavigation: I
             }
         },
@@ -186,8 +186,8 @@ function(e, t, n) {
                 analyticsOverride: eh = eu,
                 searchProps: eE = {},
                 wrapper: eg,
-                shouldHidePickerActions: eC = !1,
-                messageId: eS,
+                shouldHidePickerActions: eS = !1,
+                messageId: eC,
                 renderHeader: eT,
                 listHeaderClassName: ev
             } = e,
@@ -224,7 +224,7 @@ function(e, t, n) {
             section: null != eB ? eB : q.AnalyticsSections.EMOJI_PICKER_POPOUT
         }), [eF, eB]), {
             AnalyticsLocationProvider: eW
-        } = (0, C.default)(g.default.EMOJI_PICKER), {
+        } = (0, S.default)(g.default.EMOJI_PICKER), {
             diversitySurrogate: eY
         } = (0, d.useStateFromStoresObject)([T.default], () => ({
             diversitySurrogate: T.default.diversitySurrogate
@@ -398,7 +398,7 @@ function(e, t, n) {
                         children: [(0, l.jsx)(z.default, {
                             channel: u,
                             closePopout: p
-                        }), (0, l.jsx)(S.default, {
+                        }), (0, l.jsx)(C.default, {
                             contentTypes: ts,
                             children: e => {
                                 let {
@@ -409,7 +409,7 @@ function(e, t, n) {
                                     markAsDismissed: () => n(X.ContentDismissActionType.UNKNOWN)
                                 })
                             }
-                        }), eC ? null : (0, l.jsx)("div", {
+                        }), eS ? null : (0, l.jsx)("div", {
                             className: $.emojiPickerListWrapper,
                             id: J.GRID_NAVIGATOR_ID,
                             ...te,
@@ -434,7 +434,7 @@ function(e, t, n) {
                                 sectionDescriptors: e0,
                                 setCollapsedSections: eX,
                                 channelGuildId: ej,
-                                messageId: eS,
+                                messageId: eC,
                                 isBurstReaction: eU,
                                 listHeaderClassName: ev
                             }) : null
@@ -446,7 +446,7 @@ function(e, t, n) {
                         pickerIntention: o,
                         channel: u
                     }), r]
-                }), eC ? null : (0, l.jsx)(B.default, {
+                }), eS ? null : (0, l.jsx)(B.default, {
                     className: $.categoryList,
                     emojiListRef: eP,
                     sectionDescriptors: e0,

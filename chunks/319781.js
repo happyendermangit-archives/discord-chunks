@@ -5,12 +5,12 @@ function(e, t, s) {
             return f
         },
         default: function() {
-            return A
+            return m
         }
     }), s("424973");
     var l = s("917351"),
-        u = s.n(l),
-        i = s("446674"),
+        i = s.n(l),
+        u = s("446674"),
         n = s("913144"),
         r = s("80507"),
         a = s("374363"),
@@ -56,7 +56,7 @@ function(e, t, s) {
         var e;
         let t = null === (e = a.default.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
         if (null == t) return !1;
-        R.overwriteHistory(u.mapValues(t, e => ({
+        R.overwriteHistory(i.mapValues(t, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
         })), T.pendingUsages)
@@ -64,7 +64,7 @@ function(e, t, s) {
     let T = {
         pendingUsages: []
     };
-    class m extends i.default.PersistedStore {
+    class A extends u.default.PersistedStore {
         initialize(e) {
             this.waitFor(c.default, d.default), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && p.ID_REGEX.test(e.key)), T = e), this.syncWith([a.default], g)
         }
@@ -95,8 +95,8 @@ function(e, t, s) {
             return 100
         }
     }
-    m.displayName = "FrecencyStore", m.persistKey = "FrecencyStore";
-    var A = new m(n.default, {
+    A.displayName = "FrecencyStore", A.persistKey = "FrecencyStore";
+    var m = new A(n.default, {
         CHANNEL_SELECT: C,
         VOICE_CHANNEL_SELECT: C,
         USER_SETTINGS_PROTO_UPDATE: function(e) {

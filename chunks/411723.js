@@ -27,15 +27,15 @@ function(e, t, n) {
                 applicationId: i,
                 title: s,
                 guildId: g,
-                className: C
-            } = e, S = (0, d.useGetOrFetchApplication)(i), T = (0, o.useStateFromStoresArray)([f.default], () => {
+                className: S
+            } = e, C = (0, d.useGetOrFetchApplication)(i), T = (0, o.useStateFromStoresArray)([f.default], () => {
                 var e;
                 return null !== (e = n.map(e => f.default.getUser(e)).filter(p.isNotNullish)) && void 0 !== e ? e : []
-            }), v = null == S ? void 0 : S.name, I = r(t).fromNow();
+            }), v = null == C ? void 0 : C.name, I = r(t).fromNow();
             return null == t ? null : (0, l.jsxs)("div", {
-                className: a(C, E.container),
+                className: a(S, E.container),
                 children: [(0, l.jsx)(m.default, {
-                    game: S
+                    game: C
                 }), (0, l.jsxs)("div", {
                     className: E.textSection,
                     children: [null != s && "" !== s ? (0, l.jsx)(u.Text, {

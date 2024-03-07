@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return C
+            return S
         }
     }), n("222007"), n("781738");
     var l = n("37983"),
@@ -255,5 +255,5 @@ function(e, t, n) {
             }
         }
     }
-    var C = g
+    var S = g
 }

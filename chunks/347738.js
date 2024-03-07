@@ -15,8 +15,8 @@ function(e, t, n) {
         h = n("789563"),
         E = n("116460"),
         g = n("42203"),
-        C = n("305961"),
-        S = n("660478"),
+        S = n("305961"),
+        C = n("660478"),
         T = n("18494"),
         v = n("282109"),
         I = n("697218"),
@@ -48,7 +48,7 @@ function(e, t, n) {
         }
         initialize(e) {
             var t;
-            l = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(g.default, I.default, T.default, C.default, h.default), this.syncWith([E.default], j)
+            l = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(g.default, I.default, T.default, S.default, h.default), this.syncWith([E.default], j)
         }
         allSummaries() {
             return x
@@ -117,7 +117,7 @@ function(e, t, n) {
             } = e, a = [];
             return t && (a = a.concat(P)), n && (a = a.concat(R.map(e => e.channel_id))), l && (a = a.filter(e => {
                 let t = g.default.getChannel(e);
-                return null != t && !v.default.isChannelMuted(t.guild_id, e) && S.default.hasUnread(e)
+                return null != t && !v.default.isChannelMuted(t.guild_id, e) && C.default.hasUnread(e)
             })), (a = a.filter(e => {
                 let t = g.default.getChannel(e);
                 return (0, m.canSeeChannelSummaries)(t, !1, !1)

@@ -21,8 +21,8 @@ function(e, t, n) {
         h = n("999203"),
         E = n("609734"),
         g = n("777003"),
-        C = n("49111"),
-        S = n("782340"),
+        S = n("49111"),
+        C = n("782340"),
         T = n("44492");
 
     function v(e) {
@@ -76,7 +76,7 @@ function(e, t, n) {
             guildId: n,
             groupListingId: null == t ? void 0 : t.id,
             showBenefitsFirst: !0,
-            analyticsLocation: C.AnalyticsLocations.BOT_PROFILE_POPOUT
+            analyticsLocation: S.AnalyticsLocations.BOT_PROFILE_POPOUT
         });
         return (0, l.jsx)(u.default, {
             onClick: a,
@@ -89,7 +89,7 @@ function(e, t, n) {
                 }), (0, l.jsx)(c.default, {
                     size: 4,
                     horizontal: !0
-                }), S.default.Messages.BOT_PROFILE_UPGRADE_CTA]
+                }), C.default.Messages.BOT_PROFILE_UPGRADE_CTA]
             })
         })
     }
@@ -125,7 +125,7 @@ function(e, t, n) {
                 }), (0, l.jsx)(c.default, {
                     size: 4,
                     horizontal: !0
-                }), S.default.Messages.STOREFRONT]
+                }), C.default.Messages.STOREFRONT]
             })
         })
     }

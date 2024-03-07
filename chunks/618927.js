@@ -25,15 +25,15 @@ function(e, t, n) {
             className: n,
             copyValue: r,
             copyMetaData: g,
-            copyTooltip: C,
-            children: S,
+            copyTooltip: S,
+            children: C,
             disableCopy: T,
             showCopyIcon: v
         } = e, [I, _] = s.useState(0), [N, A] = s.useState(!1), [x, y] = s.useState(!1);
         if (s.useEffect(() => (l = new u.Timeout, i = new u.Timeout, function() {
                 l.stop(), i.stop()
             }), []), !f.SUPPORTS_COPY || T) return (0, a.jsx)(a.Fragment, {
-            children: S
+            children: C
         });
         let O = [h.default.Messages.COPY_SUCCESS_1, h.default.Messages.COPY_SUCCESS_2, h.default.Messages.COPY_SUCCESS_3, h.default.Messages.COPY_SUCCESS_4, h.default.Messages.COPY_SUCCESS_5, h.default.Messages.COPY_SUCCESS_6, h.default.Messages.COPY_SUCCESS_7, h.default.Messages.COPY_SUCCESS_8, h.default.Messages.COPY_SUCCESS_9, h.default.Messages.COPY_SUCCESS_10, h.default.Messages.COPY_SUCCESS_11],
             R = Math.min(Math.max(I - 1, 0), O.length - 1),
@@ -56,11 +56,11 @@ function(e, t, n) {
             text: N ? (0, a.jsx)(d.Shaker, {
                 isShaking: L,
                 children: M
-            }) : C,
+            }) : S,
             onAnimationRest: (e, t) => {
                 !x && N && t.phase === p.SpringTransitionPhases.LEAVE && A(!1)
             },
-            "aria-label": C,
+            "aria-label": S,
             children: e => {
                 let {
                     onClick: t,
@@ -80,7 +80,7 @@ function(e, t, n) {
                         className: o(n, E.copiableWrapper),
                         children: [(0, a.jsx)("div", {
                             className: E.childWrapper,
-                            children: S
+                            children: C
                         }), v ? (0, a.jsx)("div", {
                             className: E.copyIconWrapper,
                             children: (0, a.jsx)(m.default, {
