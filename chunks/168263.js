@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return s
+            return T
         }
     }), E("222007");
     var t = E("689988"),
@@ -12,7 +12,7 @@ function(e, _, E) {
         a = E("558130"),
         i = E("677315"),
         I = E("724210");
-    class T extends t.default {
+    class s extends t.default {
         handleChannelPreload(e) {
             let {
                 guildId: _,
@@ -30,5 +30,5 @@ function(e, _, E) {
             }
         }
     }
-    var s = new T
+    var T = new s
 }

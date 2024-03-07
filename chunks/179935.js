@@ -11,7 +11,7 @@ function(e, t, r) {
             return o
         },
         resolveReferralTrialOffer: function() {
-            return _
+            return c
         }
     });
     var n = r("872717"),
@@ -76,7 +76,7 @@ function(e, t, r) {
             }
         }
     }
-    async function _(e) {
+    async function c(e) {
         try {
             var t;
             let r = await n.default.get({

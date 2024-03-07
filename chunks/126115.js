@@ -16,16 +16,16 @@ function(e, _, E) {
         a = E("697218"),
         i = E("599110"),
         I = E("197881"),
-        T = E("56676"),
-        s = E("49111"),
+        s = E("56676"),
+        T = E("49111"),
         S = E("843455");
     let N = "LOGIN_REQUIRED_ACTIONS_MODAL_KEY";
     class O extends r.default {
         handleConnectionOpen() {
             let e = a.default.getCurrentUser();
             if (null == e || I.ProcessArgs.isDisallowPopupsSet()) return;
-            let _ = T.default.requiredActionsIncludes(e.id, [s.LoginRequiredActions.UPDATE_PASSWORD]),
-                r = T.default.wasLoginAttemptedInSession(e.id);
+            let _ = s.default.requiredActionsIncludes(e.id, [T.LoginRequiredActions.UPDATE_PASSWORD]),
+                r = s.default.wasLoginAttemptedInSession(e.id);
             r && _ ? (0, o.openModalLazy)(async () => {
                 let {
                     default: e
@@ -34,10 +34,10 @@ function(e, _, E) {
                     return (0, t.jsx)(e, {
                         ..._,
                         onSuccess: () => {
-                            i.default.track(s.AnalyticEvents.FORCED_UPDATE_PASSWORD_SUCCEEDED), _.onClose()
+                            i.default.track(T.AnalyticEvents.FORCED_UPDATE_PASSWORD_SUCCEEDED), _.onClose()
                         },
                         onClose: () => {
-                            _.onClose(), n.default.logout(s.Routes.LOGIN)
+                            _.onClose(), n.default.logout(T.Routes.LOGIN)
                         },
                         requirementsUpdated: !0
                     })
@@ -46,7 +46,7 @@ function(e, _, E) {
                 modalKey: N,
                 onCloseRequest: S.NOOP_NULL,
                 instant: !0
-            }) : _ && n.default.logout(s.Routes.LOGIN)
+            }) : _ && n.default.logout(T.Routes.LOGIN)
         }
         constructor(...e) {
             super(...e), this.actions = {

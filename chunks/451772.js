@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("271938"),
         i = E("42203"),
         I = E("590401"),
-        T = E("18494"),
-        s = E("205817"),
+        s = E("18494"),
+        T = E("205817"),
         S = E("718517"),
         N = E("374014"),
         O = E("49111");
@@ -24,7 +24,7 @@ function(e, _, E) {
         L = null;
 
     function C(e, _) {
-        if (T.default.getVoiceChannelId() !== e) return !1;
+        if (s.default.getVoiceChannelId() !== e) return !1;
         let E = i.default.getChannel(e);
         if (null == E || !E.isDM() && !E.isGuildStageVoice()) return !1;
         let t = r.default.getActiveStreamForUser(_, E.getGuildId());
@@ -39,12 +39,12 @@ function(e, _, E) {
 
     function D(e, _) {
         let E = null != _ ? _ : I.default.getPreferredRegion();
-        null != E && E !== I.default.getRegion(s.default.getHostname(s.default.getActiveStreamKey())) && (0, n.changeStreamRegion)(e, E)
+        null != E && E !== I.default.getRegion(T.default.getHostname(T.default.getActiveStreamKey())) && (0, n.changeStreamRegion)(e, E)
     }
     var c = {
         init() {
             let e = (e, _) => {
-                !s.default.getAllActiveStreamKeys().includes(e) && R.start(_ ? u : l, () => {
+                !T.default.getAllActiveStreamKeys().includes(e) && R.start(_ ? u : l, () => {
                     o.default.dispatch({
                         type: "STREAM_TIMED_OUT",
                         streamKey: e

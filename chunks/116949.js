@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         BINARY_READ_OPTIONS: function() {
-            return s
+            return T
         },
         b64ToProtoWithType: function() {
             return N
@@ -45,8 +45,8 @@ function(e, _, E) {
         a = E("151426"),
         i = E("959714"),
         I = E("397336"),
-        T = E("49111");
-    let s = {
+        s = E("49111");
+    let T = {
             readerFactory: e => new t.BinaryReader(e, new TextDecoder("utf-8"))
         },
         S = {
@@ -62,7 +62,7 @@ function(e, _, E) {
         if (null == _) return null;
         let E = (0, t.base64decode)(_);
         try {
-            return e.fromBinary(E, s)
+            return e.fromBinary(E, T)
         } catch (e) {
             throw Error("Settings proto failed to deserialize (potentially corrupt): ".concat(e))
         }
@@ -88,7 +88,7 @@ function(e, _, E) {
     }
 
     function L(e, _, E) {
-        return (null == _ || "null" === _) && (_ = T.ZERO_STRING_GUILD_ID), !(_ in e.guilds) && (e.guilds[_] = a.GuildSettings.create()), E(e.guilds[_])
+        return (null == _ || "null" === _) && (_ = s.ZERO_STRING_GUILD_ID), !(_ in e.guilds) && (e.guilds[_] = a.GuildSettings.create()), E(e.guilds[_])
     }
 
     function C(e, _, E, t) {

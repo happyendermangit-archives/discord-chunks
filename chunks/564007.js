@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("363658"),
         i = E("135230"),
         I = E("723872"),
-        T = E("130473"),
-        s = E("782340");
+        s = E("130473"),
+        T = E("782340");
     let S = () => {
             a.default.clearSuppressWarning()
         },
@@ -26,15 +26,15 @@ function(e, _, E) {
         function _() {
             null !== e.current && ((0, r.closeModal)(e.current), e.current = null)
         }
-        let [a, O] = (0, n.useStateFromStoresArray)([T.default], () => [T.default.shouldShowWarning(), T.default.isAFKChannel()], []), A = o.useCallback(() => {
+        let [a, O] = (0, n.useStateFromStoresArray)([s.default], () => [s.default.shouldShowWarning(), s.default.isAFKChannel()], []), A = o.useCallback(() => {
             let _ = "",
                 E = "";
-            O ? (_ = s.default.Messages.SUPPRESSED_AFK_TITLE, E = s.default.Messages.SUPPRESSED_AFK_BODY) : (_ = s.default.Messages.SUPPRESSED, E = s.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, r.openModal)(e => (0, t.jsx)(i.default, {
+            O ? (_ = T.default.Messages.SUPPRESSED_AFK_TITLE, E = T.default.Messages.SUPPRESSED_AFK_BODY) : (_ = T.default.Messages.SUPPRESSED, E = T.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, r.openModal)(e => (0, t.jsx)(i.default, {
                 title: _,
                 body: E,
                 onConfirm: S,
-                confirmText: s.default.Messages.OKAY,
-                secondaryConfirmText: s.default.Messages.DONT_SHOW_AGAIN,
+                confirmText: T.default.Messages.OKAY,
+                secondaryConfirmText: T.default.Messages.DONT_SHOW_AGAIN,
                 onConfirmSecondary: N,
                 ...e
             }))

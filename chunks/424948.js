@@ -12,8 +12,8 @@ function(e, _, E) {
     let a = r.AccessibilityFeatureFlags.NONE,
         i = window.matchMedia("(prefers-color-scheme: dark)"),
         I = window.matchMedia("(prefers-color-scheme: light)"),
-        T = window.matchMedia("(inverted-colors: inverted)"),
-        s = window.matchMedia("(prefers-contrast: more)"),
+        s = window.matchMedia("(inverted-colors: inverted)"),
+        T = window.matchMedia("(prefers-contrast: more)"),
         S = window.matchMedia("(forced-colors: active)");
 
     function N(e, _) {
@@ -21,7 +21,7 @@ function(e, _, E) {
     }
     var O = {
         init() {
-            n.default.addChangeListener(this.handleAccessibilityStoreChanged), t.default.addChangeListener(this.handleAccessibilityStoreChanged), i.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(i), I.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(I), s.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(s), S.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(S), T.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(T), o.default.setSystemAccessibilityFeatures(this.getActiveFeatures)
+            n.default.addChangeListener(this.handleAccessibilityStoreChanged), t.default.addChangeListener(this.handleAccessibilityStoreChanged), i.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(i), I.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(I), T.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(T), S.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(S), s.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(s), o.default.setSystemAccessibilityFeatures(this.getActiveFeatures)
         },
         getActiveFeatures: () => a,
         handlePrefersColorSchemeDarkChanged(e) {

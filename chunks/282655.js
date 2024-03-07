@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("699209"),
         i = E("271938"),
         I = E("42203"),
-        T = E("18494"),
-        s = E("101125"),
+        s = E("18494"),
+        T = E("101125"),
         S = E("774539"),
         N = E("49111");
     async function O(e) {
@@ -30,21 +30,21 @@ function(e, _, E) {
                 autoTrackExposure: !1
             });
         if (null == _ || !((0, S.isVoiceUserGameActivityEnabled)("running_games_change", !1) || E)) return;
-        let t = s.default.getActivities();
+        let t = T.default.getActivities();
         if (0 === t.length) return;
         let n = [...t].filter(e => e.type === N.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id);
         await O([...n]);
-        let T = r.default.getApplication(n[0]);
-        null != T && o.default.trackWithMetadata(N.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
+        let s = r.default.getApplication(n[0]);
+        null != s && o.default.trackWithMetadata(N.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
             channel_id: e,
             guild_id: _.guild_id,
-            game_name: T.name,
+            game_name: s.name,
             user_id: i.default.getId()
         })
     }
     class R extends t.default {
         handleRunningGamesChange() {
-            let e = T.default.getVoiceChannelId();
+            let e = s.default.getVoiceChannelId();
             A(e)
         }
         handleVoiceChannelSelect(e) {

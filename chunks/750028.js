@@ -8,7 +8,7 @@ function(e, _, E) {
             return I
         },
         Int32Value: function() {
-            return s
+            return T
         },
         UInt32Value: function() {
             return N
@@ -205,7 +205,7 @@ function(e, _, E) {
         }
     }
     let I = new i;
-    class T extends t.MessageType {
+    class s extends t.MessageType {
         internalJsonWrite(e, _) {
             return this.refJsonWriter.scalar(5, e.value, "value", !1, !0)
         }
@@ -250,7 +250,7 @@ function(e, _, E) {
             }])
         }
     }
-    let s = new T;
+    let T = new s;
     class S extends t.MessageType {
         internalJsonWrite(e, _) {
             return this.refJsonWriter.scalar(13, e.value, "value", !1, !0)

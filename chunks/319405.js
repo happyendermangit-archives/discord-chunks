@@ -12,19 +12,19 @@ function(e, _, E) {
         a = E("546463"),
         i = E("945956"),
         I = E("316133"),
-        T = E("718517"),
-        s = E("815496"),
+        s = E("718517"),
+        T = E("815496"),
         S = E("448881"),
         N = E("374023"),
         O = E("2973"),
         A = E("227231"),
         R = E("166604"),
         l = E("49111");
-    let u = 5 * T.default.Millis.SECOND,
-        L = 12 * T.default.Millis.HOUR,
-        C = 1 * T.default.Millis.MINUTE,
-        D = 30 * T.default.Millis.SECOND,
-        c = 1 * T.default.Millis.SECOND;
+    let u = 5 * s.default.Millis.SECOND,
+        L = 12 * s.default.Millis.HOUR,
+        C = 1 * s.default.Millis.MINUTE,
+        D = 30 * s.default.Millis.SECOND,
+        c = 1 * s.default.Millis.SECOND;
 
     function d() {
         var e, _;
@@ -85,7 +85,7 @@ function(e, _, E) {
                         return
                     }
                     let E = _.userStatus,
-                        t = _.config.streamDurationRequirementMinutes * T.default.Seconds.MINUTE,
+                        t = _.config.streamDurationRequirementMinutes * s.default.Seconds.MINUTE,
                         o = this.lastOptimisticallyUpdatedProgressMap.get(e);
                     if (!U(e, _.config.applicationId)) {
                         this.terminateOptimisticProgressUpdateInterval(e);
@@ -94,7 +94,7 @@ function(e, _, E) {
                     if (null == o) this.lastOptimisticallyUpdatedProgressMap.set(e, Date.now());
                     else if (null != E) {
                         let _ = Date.now() - o,
-                            n = _ / T.default.Millis.SECOND,
+                            n = _ / s.default.Millis.SECOND,
                             r = E.streamProgressSeconds,
                             a = r + n;
                         if (a <= t) {
@@ -168,7 +168,7 @@ function(e, _, E) {
                 if (null == a) {
                     this.terminateHeartbeat(E);
                     return
-                }(0, s.trackQuestEvent)(a.id, l.AnalyticEvents.QUEST_STREAMING_STARTED, {
+                }(0, T.trackQuestEvent)(a.id, l.AnalyticEvents.QUEST_STREAMING_STARTED, {
                     media_session_id: i.default.getMediaSessionId(),
                     channel_type: null === (_ = r.default.getChannel(t)) || void 0 === _ ? void 0 : _.type,
                     guild_id: n

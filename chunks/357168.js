@@ -12,19 +12,19 @@ function(e, _, E) {
         a = E("191225"),
         i = E("42203"),
         I = E("101125"),
-        T = E("800762"),
-        s = E("316133"),
+        s = E("800762"),
+        T = E("316133"),
         S = E("782340");
     let N = 18e4;
 
     function O() {
-        let e = T.default.getCurrentClientVoiceChannelId(null);
+        let e = s.default.getCurrentClientVoiceChannelId(null);
         if (null == e) return !1;
         let _ = i.default.getChannel(e);
         if (null == _ || !_.isPrivate()) return !1;
         let E = _.recipients.length;
         if (E > 1) return !1;
-        let t = s.default.countVoiceStatesForChannel(e);
+        let t = T.default.countVoiceStatesForChannel(e);
         if (t > 1) return !1;
         let o = a.default.getSelfEmbeddedActivityForChannel(e);
         if (null != o) return !1;
@@ -34,7 +34,7 @@ function(e, _, E) {
 
     function A() {
         if (!O()) return;
-        let e = T.default.getCurrentClientVoiceChannelId(null);
+        let e = s.default.getCurrentClientVoiceChannelId(null);
         null != e && (o.default.sendBotMessage(e, S.default.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
             number: 3
         })), n.default.selectVoiceChannel(null))

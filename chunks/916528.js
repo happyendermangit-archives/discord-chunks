@@ -24,22 +24,23 @@ function(e, t, n) {
             menuItemProps: _,
             action: h,
             dontCloseOnActionIfHoldingShiftKey: E,
-            onClose: g
-        } = e, m = s.useRef(null);
+            dontCloseOnAction: g,
+            onClose: m
+        } = e, p = s.useRef(null);
         s.useEffect(() => {
-            r && (0, l.ensureItemVisible)(m)
+            r && (0, l.ensureItemVisible)(p)
         }, [r]);
-        let p = s.useCallback(e => {
+        let S = s.useCallback(e => {
                 if (null == h) return !1;
-                !(e.shiftKey && E) && g(), e.persist(), requestAnimationFrame(() => h(e))
-            }, [h, g, E]),
-            S = f ? a(d.item, u.MENU_ITEM_COLORS[n], {
+                !(e.shiftKey && E) && !g && m(), e.persist(), requestAnimationFrame(() => h(e))
+            }, [h, m, E, g]),
+            v = f ? a(d.item, u.MENU_ITEM_COLORS[n], {
                 [d.focused]: r
             }) : d.customItem;
         return (0, i.jsx)(o.Clickable, {
-            innerRef: m,
-            className: S,
-            onClick: c ? void 0 : p,
+            innerRef: p,
+            className: v,
+            onClick: c ? void 0 : S,
             "aria-disabled": c,
             ..._,
             children: t({

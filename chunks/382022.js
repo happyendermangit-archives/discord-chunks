@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("689988"),
         i = E("479732"),
         I = E("605250"),
-        T = E("385976"),
-        s = E("364685"),
+        s = E("385976"),
+        T = E("364685"),
         S = E("42203"),
         N = E("305961"),
         O = E("299039"),
@@ -63,7 +63,7 @@ function(e, _, E) {
                     })
                 })
             }(e.guild_id, new Set(e.roles)), null != e.emojis && function(e, _) {
-                let E = T.default.getGuildEmoji(e),
+                let E = s.default.getGuildEmoji(e),
                     t = E.filter(e => _.has(e.id));
                 E.length !== t.length && r.default.dispatch({
                     type: "GUILD_EMOJIS_UPDATE",
@@ -72,7 +72,7 @@ function(e, _, E) {
                 })
             }(e.guild_id, new Set(e.emojis)), null != e.stickers && function(e, _) {
                 var E;
-                let t = null !== (E = s.default.getStickersByGuildId(e)) && void 0 !== E ? E : [],
+                let t = null !== (E = T.default.getStickersByGuildId(e)) && void 0 !== E ? E : [],
                     o = t.filter(e => _.has(e.id));
                 t.length !== o.length && r.default.dispatch({
                     type: "GUILD_STICKERS_UPDATE",
@@ -103,8 +103,8 @@ function(e, _, E) {
             R.fileOnly("requesting deleted guild entities (id: ".concat(e, ", name: ").concat(r, ")"));
             let a = c(Object.keys(S.default.getMutableBasicGuildChannelsForGuild(e))),
                 i = c(Object.keys(null !== (o = null === (E = N.default.getGuild(e)) || void 0 === E ? void 0 : E.roles) && void 0 !== o ? o : {})),
-                I = c(T.default.getGuildEmoji(e).map(e => e.id)),
-                O = c(null !== (n = null === (t = s.default.getStickersByGuildId(e)) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== n ? n : []);
+                I = c(s.default.getGuildEmoji(e).map(e => e.id)),
+                O = c(null !== (n = null === (t = T.default.getStickersByGuildId(e)) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== n ? n : []);
             A.default.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, i, I, O)
         })(e), Math.ceil(2e3 * Math.random()))
     }

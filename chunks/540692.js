@@ -13,9 +13,9 @@ function(e, t, r) {
         a = r("49111");
     let f = null,
         o = {},
-        _ = [],
-        E = new Set,
-        c = !1,
+        c = [],
+        _ = new Set,
+        E = !1,
         d = new Set,
         R = new Set,
         I = {},
@@ -27,14 +27,14 @@ function(e, t, r) {
         d.add(e)
     }
 
-    function A(e) {
+    function p(e) {
         let {
             messages: t
         } = e;
-        t.forEach(e => p(e))
+        t.forEach(e => A(e))
     }
 
-    function p(e) {
+    function A(e) {
         let t = e.type === n.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
         if (null == t) return !1;
         if (!R.has(t) && !d.has(t)) {
@@ -47,22 +47,22 @@ function(e, t, r) {
             this.waitFor(u.default), this.syncWith([u.default], O)
         }
         checkAndFetchReferralsRemaining() {
-            null == f && !c && L < 5 && (null == S || S < Date.now()) && (0, s.fetchReferralsRemaining)()
+            null == f && !E && L < 5 && (null == S || S < Date.now()) && (0, s.fetchReferralsRemaining)()
         }
         getReferralsRemaining() {
             return this.checkAndFetchReferralsRemaining(), f
         }
         getSentUserIds() {
-            return this.checkAndFetchReferralsRemaining(), null == _ ? [] : _
+            return this.checkAndFetchReferralsRemaining(), null == c ? [] : c
         }
         isFetchingReferralsRemaining() {
-            return c
+            return E
         }
         isFetchingRecipientEligibility(e) {
-            return E.has(e)
+            return _.has(e)
         }
         getRecipientEligibility(e) {
-            return void 0 === o[e] && !E.has(e) && (0, s.checkRecipientEligibility)(e), o[e]
+            return void 0 === o[e] && !_.has(e) && (0, s.checkRecipientEligibility)(e), o[e]
         }
         getRelevantUserTrialOffer(e) {
             return I[e]
@@ -78,50 +78,50 @@ function(e, t, r) {
                 userTrialOfferId: t,
                 recipientId: r
             } = e;
-            if (!c && (0, s.fetchReferralsRemaining)(), !E.has(r) && (0, s.checkRecipientEligibility)(r), !d.has(t)) {
+            if (!E && (0, s.fetchReferralsRemaining)(), !_.has(r) && (0, s.checkRecipientEligibility)(r), !d.has(t)) {
                 var n;
                 n = t, d.add(n), l.default.wait(() => (0, s.resolveReferralTrialOffer)(t).catch(a.NOOP_NULL))
             }
         },
         BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
             let {} = e;
-            c = !0
+            E = !0
         },
         BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function(e) {
             let {
                 referrals_remaining: t,
                 sent_user_ids: r
             } = e;
-            c = !1, f = t, _ = r
+            E = !1, f = t, c = r
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
             let {} = e;
-            c = !1, L += 1, S = Date.now() + 1e3 * Math.pow(2, L)
+            E = !1, L += 1, S = Date.now() + 1e3 * Math.pow(2, L)
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function(e) {
             let {
                 recipientId: t
             } = e;
-            E.add(t)
+            _.add(t)
         },
         BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: function(e) {
             let {
                 recipientId: t,
                 is_eligible: r
             } = e;
-            o[t] = r, E.delete(t)
+            o[t] = r, _.delete(t)
         },
         BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function(e) {
             let {
                 recipientId: t
             } = e;
-            o[t] = !1, E.delete(t)
+            o[t] = !1, _.delete(t)
         },
         BILLING_CREATE_REFERRAL_SUCCESS: function(e) {
             let {
                 userTrialOffer: t
             } = e;
-            (0, s.fetchReferralsRemaining)(), I[t.id] = t, _ = [..._, t.user_id]
+            (0, s.fetchReferralsRemaining)(), I[t.id] = t, c = [...c, t.user_id]
         },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function(e) {
             let {
@@ -135,16 +135,16 @@ function(e, t, r) {
             } = e;
             d.delete(t), R.add(t)
         },
-        LOAD_MESSAGES_SUCCESS: A,
+        LOAD_MESSAGES_SUCCESS: p,
         MESSAGE_CREATE: function(e) {
             let {
                 message: t
             } = e;
-            p(t)
+            A(t)
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: A,
+        LOAD_MESSAGES_AROUND_SUCCESS: p,
         LOGOUT: function() {
-            f = null, o = {}, _ = [], E = new Set, c = !1, d = new Set, R = new Set, I = {}, L = 0, S = null
+            f = null, o = {}, c = [], _ = new Set, E = !1, d = new Set, R = new Set, I = {}, L = 0, S = null
         }
     })
 }

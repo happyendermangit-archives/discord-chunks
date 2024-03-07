@@ -7,12 +7,12 @@ function(e, a, t) {
     }), t("222007");
     var s, d = t("37983"),
         n = t("884691"),
-        i = t("597755"),
-        c = t.n(i),
+        c = t("597755"),
+        i = t.n(c),
         r = t("703809"),
         o = t("446674"),
-        l = t("895547"),
-        f = t("77078"),
+        f = t("895547"),
+        l = t("77078"),
         u = t("430568"),
         p = t("471671"),
         b = t("90404"),
@@ -30,7 +30,7 @@ function(e, a, t) {
     s = class extends n.PureComponent {
         getPlatform() {
             var e;
-            let a = null === (e = c.os) || void 0 === e ? void 0 : e.family;
+            let a = null === (e = i.os) || void 0 === e ? void 0 : e.family;
             return null != a && /^win/i.test(a) ? m.PlatformTypes.WINDOWS : null != a && /darwin|os x/i.test(a) ? m.PlatformTypes.OSX : m.PlatformTypes.LINUX
         }
         componentDidMount() {
@@ -46,14 +46,14 @@ function(e, a, t) {
             let e = (0, d.jsx)("div", {
                     children: (0, d.jsxs)("p", {
                         children: [T.default.Messages.VERY_OUT_OF_DATE_DESCRIPTION, " ", (0, d.jsx)(u.default, {
-                            src: h.default.getURL(l.default.convert.fromCodePoint("1f44c")),
+                            src: h.default.getURL(f.default.convert.fromCodePoint("1f44c")),
                             emojiName: ":ok_hand:",
                             animated: !1
                         })]
                     })
                 }),
-                a = (0, d.jsx)(f.Button, {
-                    size: f.ButtonSizes.LARGE,
+                a = (0, d.jsx)(l.Button, {
+                    size: l.ButtonSizes.LARGE,
                     onClick: this.handleDownload,
                     children: T.default.Messages.DOWNLOAD
                 });

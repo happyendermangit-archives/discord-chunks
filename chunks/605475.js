@@ -18,8 +18,8 @@ function(e, _, E) {
         a = E("766249"),
         i = E("512772"),
         I = E("947146"),
-        T = E("301071"),
-        s = E("162551"),
+        s = E("301071"),
+        T = E("162551"),
         S = E("698060"),
         N = E("541272"),
         O = E("20995"),
@@ -72,7 +72,7 @@ function(e, _, E) {
             name: M.default.Messages.APP_ICON_PIRATE
         }, {
             id: U.PremiumAppIconIds.CAMO,
-            iconSource: T,
+            iconSource: s,
             isPremium: !0,
             name: M.default.Messages.APP_ICON_CAMO
         }, {
@@ -92,7 +92,7 @@ function(e, _, E) {
             name: M.default.Messages.APP_ICON_Y2K
         }, {
             id: U.PremiumAppIconIds.CHERRY_BLOSSOM,
-            iconSource: s,
+            iconSource: T,
             isPremium: !0,
             name: M.default.Messages.APP_ICON_CHERRY_BLOSSOM
         }, {

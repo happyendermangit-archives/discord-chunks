@@ -42,6 +42,11 @@ function(e, _, E) {
             loadRightBeforeConnectionOpen: !0,
             hasStoreChangeListeners: !0
         },
+        CustomStatusManager: {
+            actions: ["USER_SETTINGS_PROTO_UPDATE", "POST_CONNECTION_OPEN"],
+            inlineRequire: () => E("864088").default,
+            loadAfterConnectionOpen: !0
+        },
         DeadchatPromptManager: {
             actions: ["POST_CONNECTION_OPEN", "IDLE"],
             inlineRequire: () => E("111276").default,

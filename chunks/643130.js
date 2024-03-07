@@ -13,8 +13,8 @@ function(e, _, E) {
         a = E("629109"),
         i = E("990766"),
         I = E("845579"),
-        T = E("373469"),
-        s = E("271938"),
+        s = E("373469"),
+        T = E("271938"),
         S = E("525065"),
         N = E("945956"),
         O = E("697218"),
@@ -29,7 +29,7 @@ function(e, _, E) {
             A.default.init(), r.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
                 let {
                     videoState: _
-                } = e, E = T.default.getCurrentUserActiveStream();
+                } = e, E = s.default.getCurrentUserActiveStream();
                 if (null != E) {
                     let e = _ === L.MediaEngineVideoStates.PAUSED;
                     (0, i.setStreamPaused)(E, e)
@@ -50,8 +50,8 @@ function(e, _, E) {
                 } = e;
                 if (E) return;
                 let t = (0, R.decodeStreamKey)(_);
-                T.default.getAllActiveStreams().forEach(e => {
-                    if (e.ownerId !== t.ownerId) e.ownerId !== s.default.getId() && (e.ownerId === s.default.getId() && a.default.setGoLiveSource(null), (0, i.closeStream)((0, R.encodeStreamKey)(e), !1))
+                s.default.getAllActiveStreams().forEach(e => {
+                    if (e.ownerId !== t.ownerId) e.ownerId !== T.default.getId() && (e.ownerId === T.default.getId() && a.default.setGoLiveSource(null), (0, i.closeStream)((0, R.encodeStreamKey)(e), !1))
                 })
             }), r.default.subscribe("VOICE_STATE_UPDATES", e => {
                 let {
@@ -61,8 +61,8 @@ function(e, _, E) {
                     let {
                         userId: _
                     } = e;
-                    if (_ !== s.default.getId()) return;
-                    let E = T.default.getAllActiveStreams(),
+                    if (_ !== T.default.getId()) return;
+                    let E = s.default.getAllActiveStreams(),
                         t = N.default.getChannelId();
                     E.forEach(e => {
                         e.channelId !== t && (0, l.default)(e, !1)

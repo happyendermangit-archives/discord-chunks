@@ -38,30 +38,31 @@ function(e, t, n) {
             focusedClassName: R,
             subMenuIconClassName: O,
             dontCloseOnActionIfHoldingShiftKey: D,
-            iconProps: P,
-            sparkle: L
-        } = e, M = s.useContext(u.OnMenuSelectContext), b = s.useRef(null), U = s.useCallback(e => {
+            dontCloseOnAction: P,
+            iconProps: L,
+            sparkle: M
+        } = e, b = s.useContext(u.OnMenuSelectContext), U = s.useRef(null), w = s.useCallback(e => {
             if (null == C) return !1;
-            !(e.shiftKey && D) && A(), e.persist(), null == M || M(), requestAnimationFrame(() => C(e))
-        }, [C, A, M, D]);
+            !(e.shiftKey && D) && !P && A(), e.persist(), null == b || b(), requestAnimationFrame(() => C(e))
+        }, [C, A, b, D, P]);
         return s.useEffect(() => {
-            T && ((0, d.ensureItemVisible)(b), null == y || y())
+            T && ((0, d.ensureItemVisible)(U), null == y || y())
         }, [T, y]), (0, i.jsxs)(o.Clickable, {
-            innerRef: b,
+            innerRef: U,
             className: a(h.item, h.labelContainer, _.MENU_ITEM_COLORS[t], N, {
                 [h.disabled]: v,
                 [h.focused]: T,
                 [null != R ? R : ""]: T
             }),
-            onClick: v ? void 0 : U,
+            onClick: v ? void 0 : w,
             "aria-disabled": v,
             ...I,
             "data-menu-item": "true",
             children: [E && null != r && (0, i.jsx)("div", {
                 className: h.iconContainerLeft,
                 children: (0, i.jsx)(r, {
-                    ...P,
-                    className: a(h.icon, null == P ? void 0 : P.className),
+                    ...L,
+                    className: a(h.icon, null == L ? void 0 : L.className),
                     isFocused: T
                 })
             }), (0, i.jsxs)("div", {
@@ -76,8 +77,8 @@ function(e, t, n) {
             }), !E && null != r && (0, i.jsx)("div", {
                 className: h.iconContainer,
                 children: (0, i.jsx)(r, {
-                    ...P,
-                    className: a(h.icon, null == P ? void 0 : P.className),
+                    ...L,
+                    className: a(h.icon, null == L ? void 0 : L.className),
                     isFocused: T
                 })
             }), null != g && (0, i.jsx)("div", {
@@ -91,7 +92,7 @@ function(e, t, n) {
                 className: h.iconContainer,
                 children: [(0, i.jsx)(f.default, {
                     className: a(h.caret, O)
-                }), L && (0, i.jsx)(c.default, {
+                }), M && (0, i.jsx)(c.default, {
                     className: h.sparkles
                 })]
             })]

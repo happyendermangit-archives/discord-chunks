@@ -12,27 +12,27 @@ function(e, _, E) {
     let a = (0, r.createSound)("vibing_wumpus", "vibing_wumpus", 0),
         i = 0,
         I = 0,
-        T = null;
+        s = null;
 
-    function s(e, _) {
+    function T(e, _) {
         let E = Math.round(100 * e),
             t = Math.round(100 * I),
             n = Math.round(100 * i);
-        E > 0 && n >= t || E < 0 && n <= t ? (clearInterval(T), 0 === t && null != _ && _()) : (n += E, i = n / 100, a.volume = o(i, 0, .5))
+        E > 0 && n >= t || E < 0 && n <= t ? (clearInterval(s), 0 === t && null != _ && _()) : (n += E, i = n / 100, a.volume = o(i, 0, .5))
     }
 
     function S(e) {
-        null != T && clearInterval(T), I = 0;
+        null != s && clearInterval(s), I = 0;
         let _ = R();
-        T = setInterval(() => {
-            s(_, e)
+        s = setInterval(() => {
+            T(_, e)
         }, 100)
     }
 
     function N() {
-        null != T && clearInterval(T), a.loop(), I = .5;
+        null != s && clearInterval(s), a.loop(), I = .5;
         let e = R();
-        T = setInterval(() => s(e), 100)
+        s = setInterval(() => T(e), 100)
     }
 
     function O() {
