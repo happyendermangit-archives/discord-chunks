@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return R
+            return x
         }
     }), n("70102"), n("222007");
     var a = n("37983"),
@@ -77,7 +77,7 @@ function(e, t, n) {
         })
     }
 
-    function x(e) {
+    function N(e) {
         let {
             users: t,
             guildId: n,
@@ -103,9 +103,9 @@ function(e, t, n) {
             })
         })
     }
-    let N = [];
+    let R = [];
 
-    function R(e) {
+    function x(e) {
         let {
             channelId: t,
             guildId: s,
@@ -114,18 +114,18 @@ function(e, t, n) {
             compact: m = !1,
             disableInteraction: g = !1,
             maxVisibleUsers: v = 3
-        } = e, [A, R] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => R(!1))), O = (0, o.useStateFromStoresArray)([E.default, p.default], () => {
+        } = e, [A, x] = r.useState(!1), y = r.useRef(new d.DelayedCall(150, () => x(!1))), O = (0, o.useStateFromStoresArray)([E.default, p.default], () => {
             if (l.type === _.ParticipantTypes.STREAM) {
                 let e = E.default.getViewerIds(l.id);
-                return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish) : N
+                return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish) : R
             }
-            return l.type === _.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => p.default.getUser(e)).filter(S.isNotNullish) : N : N
-        }, [l]), y = r.useCallback(() => {
-            L.current.cancel(), R(!0)
+            return l.type === _.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => p.default.getUser(e)).filter(S.isNotNullish) : R : R
+        }, [l]), L = r.useCallback(() => {
+            y.current.cancel(), x(!0)
         }, []), P = r.useCallback(() => {
-            L.current.delay()
+            y.current.delay()
         }, []), D = r.useCallback((e, t) => {
-            y(), (0, f.openContextMenuLazy)(e, async () => {
+            L(), (0, f.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
                 } = await n.el("406784").then(n.bind(n, "406784"));
@@ -136,9 +136,9 @@ function(e, t, n) {
             }, {
                 onClose: P
             })
-        }, [P, y]);
+        }, [P, L]);
         if (0 === O.length) return null;
-        if (m) return (0, a.jsx)(x, {
+        if (m) return (0, a.jsx)(N, {
             maxVisibleUsers: v,
             users: O,
             guildId: s,
@@ -158,7 +158,7 @@ function(e, t, n) {
         }, "overflow")), (0, a.jsx)(h.default, {
             section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
             children: (0, a.jsx)("div", {
-                onMouseEnter: y,
+                onMouseEnter: L,
                 onMouseLeave: P,
                 children: (0, a.jsx)(c.Popout, {
                     renderPopout: () => (0, a.jsx)(M, {
