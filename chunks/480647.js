@@ -69,7 +69,44 @@ function(e, t, n) {
                 for (; a.width + r.TEXT_TRUNCATION_PADDING_PX > i;) e = e.slice(0, -4), a = this.context.measureText(e), s = !0;
                 s && (e += "...")
             }
-            n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y)
+            return n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y), {
+                x: t.x,
+                y: t.y,
+                w: a.width,
+                h: a.actualBoundingBoxAscent + a.actualBoundingBoxDescent
+            }
+        }
+        drawFormattedMessage(e, t, n, l) {
+            let i = this.font.weight,
+                a = (e, t, n, l) => {
+                    let a;
+                    if ("strong" === e.type) this.setFont({
+                        weight: 700
+                    });
+                    return Array.isArray(e.content) ? a = s(e.content, t, n, l) : a = this.drawText(e.content, t, n, l), this.setFont({
+                        weight: i
+                    }), a
+                },
+                s = (e, t, n, l) => {
+                    var i;
+                    let s = 0;
+                    return e.forEach(e => {
+                        var i;
+                        let r = {
+                                x: t.x + s,
+                                y: t.y
+                            },
+                            o = (null != l ? l : 0) - s,
+                            u = a(e, r, n, null != l ? o : void 0);
+                        s += null !== (i = null == u ? void 0 : u.w) && void 0 !== i ? i : 0
+                    }), {
+                        x: t.x + s,
+                        y: t.y,
+                        w: s,
+                        h: null !== (i = this.font.size) && void 0 !== i ? i : r.DEFAULT_FONT_SIZE
+                    }
+                };
+            Array.isArray(e) ? s(e, t, n, l) : a(e, t, n, l)
         }
         drawImage(e, t, n) {
             if (a(null != this.assetMap, "DiscordCavas: `drawImage` requires an AssetMap to be initialized."), null == this.context) return o.DrawResultStatus.Failure;

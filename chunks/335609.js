@@ -2,12 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var l = n("627445"),
         i = n.n(l),
-        a = class e {
+        a = n("113149"),
+        s = class e {
             getCanvas() {
                 return this.canvas
             }
@@ -31,7 +32,7 @@ function(e, t, n) {
                 this.color = "black", this.font = {
                     style: "normal",
                     weight: 300,
-                    size: 24,
+                    size: a.DEFAULT_FONT_SIZE,
                     family: "serif",
                     truncate: !1
                 }, this.canvas = e, this.assetMap = t
