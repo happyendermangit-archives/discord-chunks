@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         applicationButtonHack: "applicationButtonHack_d85caa",

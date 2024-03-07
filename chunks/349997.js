@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         channelsTitle: "channelsTitle__4eef3",

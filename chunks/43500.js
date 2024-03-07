@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         active: "active__898cd",
@@ -20,6 +20,6 @@ function(e, t, o) {
         rowLabelSubText: "rowLabelSubText__34980",
         sectionTitle: "sectionTitle__1addc",
         settingCard: "settingCard__00567",
-        shield: "shield__647b6 " + o("731652").desaturateUserColors
+        shield: "shield__647b6 " + n("731652").desaturateUserColors
     }
 }
