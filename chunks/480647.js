@@ -59,54 +59,91 @@ function(e, t, n) {
             } = e;
             l && this.setContextProperties(), this.context.beginPath(), this.context.roundRect(i, a, s, r, t), n ? this.context.fill() : this.context.stroke()
         }
-        drawText(e, t, n, l) {
+        drawText(e, t, n) {
+            var l, i;
             if (null == this.context) return;
             this.setContextProperties();
-            let i = null != l ? l : this.canvas.width - t.x,
-                a = this.context.measureText(e),
-                s = !1;
-            if (this.font.truncate) {
-                for (; a.width + r.TEXT_TRUNCATION_PADDING_PX > i;) e = e.slice(0, -4), a = this.context.measureText(e), s = !0;
-                s && (e += "...")
+            let s = null !== (l = t.w) && void 0 !== l ? l : this.canvas.width - t.x,
+                u = this.context.measureText(e),
+                d = !1,
+                c = this.font.size,
+                f = (e, t) => {
+                    null != this.context && (n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y))
+                },
+                m = e => {
+                    if (null == this.context || u.width <= r.TEXT_TRUNCATION_PADDING_PX) return "";
+                    let t = "".concat(e);
+                    for (; u.width + r.TEXT_TRUNCATION_PADDING_PX > s;) t = t.slice(0, -4), u = this.context.measureText(t), d = !0;
+                    return d && (t += "..."), t
+                };
+            if (this.font.truncate === o.TextTruncationMethod.Truncate && f(e = m(e), t), this.font.truncate === o.TextTruncationMethod.Wrap) {
+                let n = e.split(" "),
+                    l = 1 / 0,
+                    r = "",
+                    o = 0;
+                for (null != t.h && a((l = t.h / c) > 0, "DiscordCavas: boundingBox.h of ".concat(t.h, " results in 0 visible lines with font size of ").concat(c)); n.length > 0;)
+                    if ((u = this.context.measureText(r + " " + n[0])).width > s) {
+                        let e = !1;
+                        if (o + 1 >= l && n.length > 0 && (e = !0), "" !== r) f(e ? m(r + "...") : r, {
+                            x: t.x,
+                            y: t.y + c * o
+                        }), r = "";
+                        else {
+                            let e = m(null !== (i = n.shift()) && void 0 !== i ? i : "");
+                            f(e, {
+                                x: t.x,
+                                y: t.y + c * o
+                            })
+                        }
+                        if (e) break;
+                        o += 1
+                    } else r += " ".concat(n.shift()), 0 === n.length && f(r, {
+                        x: t.x,
+                        y: t.y + c * o
+                    })
             }
-            return n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y), {
+            return {
                 x: t.x,
                 y: t.y,
-                w: a.width,
-                h: a.actualBoundingBoxAscent + a.actualBoundingBoxDescent
+                w: u.width,
+                h: u.actualBoundingBoxAscent + u.actualBoundingBoxDescent
             }
         }
-        drawFormattedMessage(e, t, n, l) {
-            let i = this.font.weight,
-                a = (e, t, n, l) => {
-                    let a;
+        drawFormattedMessage(e, t, n) {
+            this.font.truncate === o.TextTruncationMethod.Wrap && console.warn("DiscordCavas: `drawFormattedMessage` doesn't currently support wrapping formatted text. The results of this draw likely won't match your expectations.");
+            let l = this.font.weight,
+                i = (e, t, n) => {
+                    let i;
                     if ("strong" === e.type) this.setFont({
                         weight: 700
                     });
-                    return Array.isArray(e.content) ? a = s(e.content, t, n, l) : a = this.drawText(e.content, t, n, l), this.setFont({
-                        weight: i
-                    }), a
+                    return Array.isArray(e.content) ? i = a(e.content, t, n) : i = this.drawText(e.content, t, n), this.setFont({
+                        weight: l
+                    }), i
                 },
-                s = (e, t, n, l) => {
-                    var i;
-                    let s = 0;
+                a = (e, t, n) => {
+                    let l = 0;
                     return e.forEach(e => {
-                        var i;
-                        let r = {
-                                x: t.x + s,
-                                y: t.y
-                            },
-                            o = (null != l ? l : 0) - s,
-                            u = a(e, r, n, null != l ? o : void 0);
-                        s += null !== (i = null == u ? void 0 : u.w) && void 0 !== i ? i : 0
+                        let {
+                            x: a,
+                            y: s,
+                            w: r,
+                            h: o
+                        } = t, u = null != r ? r - l : void 0, d = {
+                            x: a + l,
+                            y: s,
+                            w: u,
+                            h: o
+                        }, c = i(e, d, n);
+                        null != c && (l += c.w)
                     }), {
-                        x: t.x + s,
+                        x: t.x + l,
                         y: t.y,
-                        w: s,
-                        h: null !== (i = this.font.size) && void 0 !== i ? i : r.DEFAULT_FONT_SIZE
+                        w: l,
+                        h: this.font.size
                     }
                 };
-            Array.isArray(e) ? s(e, t, n, l) : a(e, t, n, l)
+            Array.isArray(e) ? a(e, t, n) : i(e, t, n)
         }
         drawImage(e, t, n) {
             if (a(null != this.assetMap, "DiscordCavas: `drawImage` requires an AssetMap to be initialized."), null == this.context) return o.DrawResultStatus.Failure;

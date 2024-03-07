@@ -1,12 +1,15 @@
 function(e, t, n) {
     "use strict";
-    var l, i, a, s;
+    var l, i, a, s, r, o;
     n.r(t), n.d(t, {
-        DiscordCanvasExporterOutputFormats: function() {
+        TextTruncationMethod: function() {
             return l
         },
-        DrawResultStatus: function() {
+        DiscordCanvasExporterOutputFormats: function() {
             return i
+        },
+        DrawResultStatus: function() {
+            return a
         }
-    }), (a = l || (l = {}))[a.Base64 = 0] = "Base64", a[a.Blob = 1] = "Blob", a[a.File = 2] = "File", (s = i || (i = {}))[s.Success = 0] = "Success", s[s.Failure = 1] = "Failure", s[s.ImageNotLoaded = 2] = "ImageNotLoaded"
+    }), (s = l || (l = {}))[s.None = 0] = "None", s[s.Truncate = 1] = "Truncate", s[s.Wrap = 2] = "Wrap", (r = i || (i = {}))[r.Base64 = 0] = "Base64", r[r.Blob = 1] = "Blob", r[r.File = 2] = "File", (o = a || (a = {}))[o.Success = 0] = "Success", o[o.Failure = 1] = "Failure", o[o.ImageNotLoaded = 2] = "ImageNotLoaded"
 }

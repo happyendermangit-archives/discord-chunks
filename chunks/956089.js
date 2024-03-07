@@ -1,8 +1,8 @@
-function(r, a, _) {
+function(r, a, e) {
     "use strict";
-    _.r(a), _.d(a, {
+    e.r(a), e.d(a, {
         BadgeShapes: function() {
-            return T
+            return n
         },
         getBadgeWidthForValue: function() {
             return o
@@ -26,18 +26,18 @@ function(r, a, _) {
             return D
         }
     });
-    var e = _("37983");
-    _("884691");
-    var E = _("414456"),
-        t = _.n(E);
-    _("77078");
-    var R = _("20606");
-    _("782340");
-    var n = _("227940");
-    let T = {
-        ROUND: n.baseShapeRound,
-        ROUND_LEFT: n.baseShapeRoundLeft,
-        ROUND_RIGHT: n.baseShapeRoundRight,
+    var _ = e("37983");
+    e("884691");
+    var E = e("414456"),
+        t = e.n(E);
+    e("77078");
+    var R = e("20606");
+    e("782340");
+    var T = e("227940");
+    let n = {
+        ROUND: T.baseShapeRound,
+        ROUND_LEFT: T.baseShapeRoundLeft,
+        ROUND_RIGHT: T.baseShapeRoundRight,
         SQUARE: ""
     };
 
@@ -51,17 +51,17 @@ function(r, a, _) {
     let O = r => {
             let {
                 count: a,
-                color: _ = R.default.STATUS_DANGER,
+                color: e = R.default.STATUS_DANGER,
                 disableColor: E = !1,
-                shape: O = T.ROUND,
+                shape: O = n.ROUND,
                 className: A,
                 style: d,
                 ...i
             } = r;
-            return (0, e.jsx)("div", {
-                className: t(A, n.numberBadge, O),
+            return (0, _.jsx)("div", {
+                className: t(A, T.numberBadge, O),
                 style: {
-                    backgroundColor: E ? void 0 : _,
+                    backgroundColor: E ? void 0 : e,
                     width: o(a),
                     paddingRight: function(r) {
                         switch (r) {
@@ -82,15 +82,15 @@ function(r, a, _) {
         A = r => {
             let {
                 text: a,
-                className: _,
+                className: e,
                 color: E = R.default.STATUS_DANGER,
-                shape: o = T.ROUND,
+                shape: o = n.ROUND,
                 disableColor: N = !1,
                 style: O,
                 ...A
             } = r;
-            return (0, e.jsx)("div", {
-                className: t(_, n.textBadge, o),
+            return (0, _.jsx)("div", {
+                className: t(e, T.textBadge, o),
                 style: {
                     backgroundColor: N ? void 0 : E,
                     ...O
@@ -102,11 +102,11 @@ function(r, a, _) {
         d = r => {
             let {
                 text: a,
-                className: _,
+                className: e,
                 ...E
             } = r;
-            return (0, e.jsx)(A, {
-                className: t(n.premiumBadge, _),
+            return (0, _.jsx)(A, {
+                className: t(T.premiumBadge, e),
                 text: a,
                 ...E
             })
@@ -114,36 +114,36 @@ function(r, a, _) {
         i = r => {
             let {
                 icon: a,
-                className: _,
+                className: e,
                 color: E = R.default.STATUS_DANGER,
-                shape: o = T.ROUND,
+                shape: o = n.ROUND,
                 disableColor: N = !1,
                 style: O
             } = r;
-            return (0, e.jsx)("div", {
-                className: t(_, n.iconBadge, o),
+            return (0, _.jsx)("div", {
+                className: t(e, T.iconBadge, o),
                 style: {
                     backgroundColor: N ? void 0 : E,
                     ...O
                 },
-                children: (0, e.jsx)(a, {
-                    className: n.icon
+                children: (0, _.jsx)(a, {
+                    className: T.icon
                 })
             })
         },
         D = r => {
             let {
                 className: a,
-                color: _ = R.default.INTERACTIVE_ACTIVE,
-                shape: E = T.ROUND,
+                color: e = R.default.INTERACTIVE_ACTIVE,
+                shape: E = n.ROUND,
                 disableColor: o = !1,
                 style: N,
                 ...O
             } = r;
-            return (0, e.jsx)("div", {
-                className: t(a, n.circleBadge, E),
+            return (0, _.jsx)("div", {
+                className: t(a, T.circleBadge, E),
                 style: {
-                    backgroundColor: o ? void 0 : _,
+                    backgroundColor: o ? void 0 : e,
                     ...N
                 },
                 ...O

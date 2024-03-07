@@ -88,8 +88,10 @@ function(e, t, n) {
         return await (0, r.generateImageFromCanvas)({
             assetsToLoad: d,
             drawImage: e => {
-                var s;
-                null != u ? N(e, n, t) : (0, a.default)(n) ? v(e, n, t) : (0, i.default)(n) && n.name === l.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name ? _(e, n, t) : n.type === m.ActivityTypes.HANG_STATUS ? I(e, n, t) : T(e, n, t), (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has("Platform")) && e.drawImage("Platform", {
+                var r;
+                e.setFont({
+                    truncate: s.TextTruncationMethod.Truncate
+                }), null != u ? N(e, n, t) : (0, a.default)(n) ? v(e, n, t) : (0, i.default)(n) && n.name === l.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name ? _(e, n, t) : n.type === m.ActivityTypes.HANG_STATUS ? I(e, n, t) : T(e, n, t), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("Platform")) && e.drawImage("Platform", {
                     x: c.canvasWidth - c.padding - c.platformSize,
                     y: c.padding
                 }, {
@@ -149,8 +151,9 @@ function(e, t, n) {
             weight: 700
         }), e.drawText("".concat(t.name), {
             x: o,
-            y: c.fontPadding + 1 * c.lineHeight
-        }, !0, (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform), null != t.timestamps && (e.setFont({
+            y: c.fontPadding + 1 * c.lineHeight,
+            w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
+        }, !0), null != t.timestamps && (e.setFont({
             size: 14,
             weight: 400
         }), e.drawText("for ".concat((0, f.howLong)(t.timestamps)), {
@@ -191,8 +194,9 @@ function(e, t, n) {
             weight: 700
         }), e.drawText("".concat(t.details), {
             x: r,
-            y: c.fontPadding + 1 * c.lineHeight
-        }, !0, (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform), e.setFont({
+            y: c.fontPadding + 1 * c.lineHeight,
+            w: (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
+        }, !0), e.setFont({
             size: 14,
             weight: 400
         }), e.drawText("by ".concat(t.state), {
@@ -233,8 +237,9 @@ function(e, t, n) {
             weight: 700
         }), e.drawText(p.default.Messages.STATUS_LEAD_IN_JUST, {
             x: o,
-            y: c.fontPadding + 1 * c.lineHeight
-        }, !0, (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform), e.setFont({
+            y: c.fontPadding + 1 * c.lineHeight,
+            w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
+        }, !0), e.setFont({
             size: 14,
             weight: 400
         });
@@ -286,8 +291,9 @@ function(e, t, n) {
             weight: 700
         }), e.drawText("".concat(t.details), {
             x: o,
-            y: c.fontPadding + 1 * c.lineHeight
-        }, !0, (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has("Platform")) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform), e.setFont({
+            y: c.fontPadding + 1 * c.lineHeight,
+            w: (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has("Platform")) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
+        }, !0), e.setFont({
             size: 14,
             weight: 400
         }), e.drawText("".concat(t.state), {
@@ -334,8 +340,9 @@ function(e, t, n) {
             weight: 700
         }), e.drawText("Streaming ".concat(t.name), {
             x: o,
-            y: c.fontPadding + c.lineHeight * (null != t.timestamps ? 1 : 1.5)
-        }, !0, (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform), null != t.timestamps && (e.setFont({
+            y: c.fontPadding + c.lineHeight * (null != t.timestamps ? 1 : 1.5),
+            w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
+        }, !0), null != t.timestamps && (e.setFont({
             size: 14,
             weight: 500
         }), e.drawText("for ".concat((0, f.howLong)(t.timestamps)), {

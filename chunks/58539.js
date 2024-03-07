@@ -4173,6 +4173,63 @@ function(_, E, I) {
                 opacity: 1
             }
         },
+        REDESIGN_BUTTON_ACTIVE_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "GREEN_430",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "GREEN_430",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "GREEN_430",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "GREEN_430",
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_ACTIVE_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "GREEN_460",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "GREEN_460",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "GREEN_460",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "GREEN_460",
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_ACTIVE_TEXT: {
+            category: "text",
+            [a.DARK]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "WHITE_500",
+                opacity: 1
+            }
+        },
         REDESIGN_BUTTON_DANGER_BACKGROUND: {
             category: "generic",
             [a.DARK]: {
@@ -4212,6 +4269,63 @@ function(_, E, I) {
             }
         },
         REDESIGN_BUTTON_DANGER_TEXT: {
+            category: "text",
+            [a.DARK]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "WHITE_500",
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_DESTRUCTIVE_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "RED_430",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "RED_430",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "RED_430",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "RED_430",
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_DESTRUCTIVE_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "RED_460",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "RED_460",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "RED_460",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "RED_460",
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_DESTRUCTIVE_TEXT: {
             category: "text",
             [a.DARK]: {
                 raw: "WHITE_500",
@@ -4317,11 +4431,11 @@ function(_, E, I) {
                 opacity: 1
             },
             [a.MIDNIGHT]: {
-                raw: "PLUM_4",
+                raw: "PRIMARY_230",
                 opacity: 1
             },
             [a.DARKER]: {
-                raw: "PLUM_4",
+                raw: "PRIMARY_230",
                 opacity: 1
             }
         },
@@ -4336,11 +4450,11 @@ function(_, E, I) {
                 opacity: 1
             },
             [a.MIDNIGHT]: {
-                raw: "PLUM_25",
+                raw: "PRIMARY_860",
                 opacity: 1
             },
             [a.DARKER]: {
-                raw: "PLUM_25",
+                raw: "PRIMARY_860",
                 opacity: 1
             }
         },
@@ -4629,44 +4743,6 @@ function(_, E, I) {
                 opacity: 1
             }
         },
-        REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_BACKGROUND: {
-            category: "generic",
-            [a.DARK]: {
-                raw: "WHITE_500",
-                opacity: 1
-            },
-            [a.LIGHT]: {
-                raw: "WHITE_500",
-                opacity: 1
-            },
-            [a.MIDNIGHT]: {
-                raw: "WHITE_500",
-                opacity: 1
-            },
-            [a.DARKER]: {
-                raw: "WHITE_500",
-                opacity: 1
-            }
-        },
-        REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_BACKGROUND: {
-            category: "generic",
-            [a.DARK]: {
-                raw: "BRAND_200",
-                opacity: 1
-            },
-            [a.LIGHT]: {
-                raw: "BRAND_200",
-                opacity: 1
-            },
-            [a.MIDNIGHT]: {
-                raw: "BRAND_200",
-                opacity: 1
-            },
-            [a.DARKER]: {
-                raw: "BRAND_200",
-                opacity: 1
-            }
-        },
         REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT: {
             category: "text",
             [a.DARK]: {
@@ -4686,22 +4762,60 @@ function(_, E, I) {
                 opacity: 1
             }
         },
-        REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_TEXT: {
-            category: "text",
+        REDESIGN_BUTTON_PRIMARY_OVERLAY_BACKGROUND: {
+            category: "generic",
             [a.DARK]: {
-                raw: "BRAND_500",
+                raw: "WHITE_500",
                 opacity: 1
             },
             [a.LIGHT]: {
-                raw: "BRAND_500",
+                raw: "WHITE_500",
                 opacity: 1
             },
             [a.MIDNIGHT]: {
-                raw: "BRAND_500",
+                raw: "WHITE_500",
                 opacity: 1
             },
             [a.DARKER]: {
-                raw: "BRAND_500",
+                raw: "WHITE_500",
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_PRIMARY_OVERLAY_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "PRIMARY_230",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "PRIMARY_230",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "PLUM_4",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "PLUM_4",
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_PRIMARY_OVERLAY_TEXT: {
+            category: "text",
+            [a.DARK]: {
+                raw: "PRIMARY_860",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "PRIMARY_860",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "PLUM_25",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "PLUM_25",
                 opacity: 1
             }
         },
@@ -4756,7 +4870,7 @@ function(_, E, I) {
         REDESIGN_BUTTON_SECONDARY_ALT_BACKGROUND: {
             category: "generic",
             [a.DARK]: {
-                raw: "PRIMARY_660",
+                raw: "PRIMARY_530",
                 opacity: 1
             },
             [a.LIGHT]: {
@@ -4764,12 +4878,12 @@ function(_, E, I) {
                 opacity: .08
             },
             [a.MIDNIGHT]: {
-                raw: "PLUM_23_ALPHA",
-                opacity: .09
+                raw: "PRIMARY_530",
+                opacity: 1
             },
             [a.DARKER]: {
-                raw: "PLUM_11",
-                opacity: .12
+                raw: "PRIMARY_530",
+                opacity: 1
             }
         },
         REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_BACKGROUND: {
@@ -4783,12 +4897,12 @@ function(_, E, I) {
                 opacity: .16
             },
             [a.MIDNIGHT]: {
-                raw: "PLUM_11",
-                opacity: .2
+                raw: "PRIMARY_560",
+                opacity: 1
             },
             [a.DARKER]: {
-                raw: "PLUM_11",
-                opacity: .2
+                raw: "PRIMARY_560",
+                opacity: 1
             }
         },
         REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_TEXT: {
@@ -4875,6 +4989,63 @@ function(_, E, I) {
             [a.DARKER]: {
                 raw: "PLUM_11",
                 opacity: .12
+            }
+        },
+        REDESIGN_BUTTON_SECONDARY_OVERLAY_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "BLACK_500",
+                opacity: .54
+            },
+            [a.LIGHT]: {
+                raw: "BLACK_500",
+                opacity: .54
+            },
+            [a.MIDNIGHT]: {
+                raw: "BLACK_500",
+                opacity: .54
+            },
+            [a.DARKER]: {
+                raw: "BLACK_500",
+                opacity: .54
+            }
+        },
+        REDESIGN_BUTTON_SECONDARY_OVERLAY_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "BLACK_500",
+                opacity: .64
+            },
+            [a.LIGHT]: {
+                raw: "BLACK_500",
+                opacity: .64
+            },
+            [a.MIDNIGHT]: {
+                raw: "BLACK_500",
+                opacity: .64
+            },
+            [a.DARKER]: {
+                raw: "BLACK_500",
+                opacity: .64
+            }
+        },
+        REDESIGN_BUTTON_SECONDARY_OVERLAY_TEXT: {
+            category: "text",
+            [a.DARK]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "WHITE_500",
+                opacity: 1
             }
         },
         REDESIGN_BUTTON_SECONDARY_PRESSED_BACKGROUND: {
@@ -4998,6 +5169,82 @@ function(_, E, I) {
             },
             [a.DARKER]: {
                 raw: "BRAND_500",
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_TERTIARY_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "PRIMARY_660",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "BLACK_500",
+                opacity: .08
+            },
+            [a.MIDNIGHT]: {
+                raw: "PLUM_23_ALPHA",
+                opacity: .09
+            },
+            [a.DARKER]: {
+                raw: "PLUM_11",
+                opacity: .12
+            }
+        },
+        REDESIGN_BUTTON_TERTIARY_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "PRIMARY_560",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "BLACK_500",
+                opacity: .16
+            },
+            [a.MIDNIGHT]: {
+                raw: "PLUM_11",
+                opacity: .2
+            },
+            [a.DARKER]: {
+                raw: "PLUM_11",
+                opacity: .2
+            }
+        },
+        REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT: {
+            category: "text",
+            [a.DARK]: {
+                raw: "PRIMARY_330",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "PRIMARY_500",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "PLUM_6",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "PLUM_5",
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_TERTIARY_TEXT: {
+            category: "text",
+            [a.DARK]: {
+                raw: "PRIMARY_230",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "PRIMARY_600",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "PLUM_4",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "PLUM_6",
                 opacity: 1
             }
         },
