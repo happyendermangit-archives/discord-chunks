@@ -30,21 +30,22 @@ function(e, t, n) {
                 selfDeaf: s = !1,
                 selfVideo: r = !1,
                 preferredRegion: a = null,
-                videoStreamParameters: l = null,
-                flags: u = 0
-            } = e, d = {
+                preferredRegions: l = null,
+                videoStreamParameters: u = null,
+                flags: d = 0
+            } = e, c = {
                 guild_id: t,
                 channel_id: n,
                 self_mute: i,
                 self_deaf: s,
                 self_video: r,
-                flags: u
+                flags: d
             };
-            null != n && o.default.shouldIncludePreferredRegion() && (d.preferred_region = a), null != l && (d.tracks = null == l ? void 0 : l.map(e => ({
+            null != n && o.default.shouldIncludePreferredRegion() && (c.preferred_region = a, c.preferred_regions = l), null != u && (c.tracks = null == u ? void 0 : u.map(e => ({
                 type: e.type,
                 rid: e.rid,
                 quality: e.quality
-            }))), this.send(4, d)
+            }))), this.send(4, c)
         }
         voiceServerPing() {
             this.send(5, null)

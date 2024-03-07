@@ -27,9 +27,9 @@ function(e, _, E) {
                 if (a.default.shouldPerformLatencyTest(_)) {
                     let E = r.default.getMediaEngine();
                     E.rankRtcRegions(e).then(e => {
-                        S.verbose("RTC region latency test completed: ", e), (0, t.completeRTCLatencyTest)(e, _)
+                        S.verbose("RTC region latency test completed, ranked regions are: ", e), (0, t.completeRTCLatencyTest)(e, _)
                     }).catch(e => S.warn(e))
-                } else S.verbose("RTC cached preferred region is ".concat(a.default.getPreferredRegion()))
+                } else S.verbose("RTC cached ranked preferred regions are ".concat(a.default.getPreferredRegions()))
             }, this._fetchAndScheduleRefetch = () => {
                 (0, t.fetchRTCLatencyTestRegions)().then(e => this._handleTestRegionsResponse(e.body)).catch(e => S.warn(e)), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * i.default.Millis.MINUTE)
             }, this._handleConnectionOpen = () => {

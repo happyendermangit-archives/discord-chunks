@@ -57,6 +57,7 @@ function(e, t, n) {
                 selfDeaf: h.default.isSelfDeaf(),
                 selfVideo: h.default.isVideoEnabled(),
                 preferredRegion: null,
+                preferredRegions: null,
                 videoStreamParameters: null,
                 flags: 0
             }
@@ -73,6 +74,7 @@ function(e, t, n) {
                 selfDeaf: h.default.isSelfDeaf(),
                 selfVideo: h.default.isVideoEnabled(),
                 preferredRegion: E.default.getPreferredRegion(),
+                preferredRegions: E.default.getPreferredRegions(),
                 videoStreamParameters: h.default.getVideoStreamParameters(),
                 flags: this.computeVoiceFlags()
             }
@@ -89,8 +91,9 @@ function(e, t, n) {
                 selfDeaf: r,
                 selfVideo: a,
                 preferredRegion: o,
-                videoStreamParameters: l,
-                flags: u = 0
+                preferredRegions: l,
+                videoStreamParameters: u,
+                flags: d = 0
             } = e;
             a && (null === (t = _.default.getChannel(i)) || void 0 === t ? void 0 : t.type) === m.ChannelTypes.GUILD_STAGE_VOICE ? this.socket.voiceStateUpdate({
                 guildId: n,
@@ -99,8 +102,9 @@ function(e, t, n) {
                 selfDeaf: r,
                 selfVideo: a,
                 preferredRegion: o,
-                videoStreamParameters: l,
-                flags: u
+                preferredRegions: l,
+                videoStreamParameters: u,
+                flags: d
             }) : this.socket.voiceStateUpdate({
                 guildId: n,
                 channelId: i,
@@ -108,7 +112,8 @@ function(e, t, n) {
                 selfDeaf: r,
                 selfVideo: a,
                 preferredRegion: o,
-                flags: u
+                preferredRegions: l,
+                flags: d
             })
         }
         constructor(e) {
