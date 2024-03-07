@@ -19,10 +19,10 @@ function(e, _, E) {
                 foregroundColor: r = o.default.unsafe_rawColors.RED_400.css,
                 foreground: i,
                 background: I,
-                ...s
+                ...T
             } = e;
             return (0, t.jsxs)("svg", {
-                ...(0, a.default)(s),
+                ...(0, a.default)(T),
                 width: _,
                 height: E,
                 viewBox: "0 0 24 24",

@@ -36,8 +36,8 @@ function(e, t, n) {
                 size: g,
                 className: h,
                 trialId: x,
-                isTrialCTA: N,
-                buttonText: v,
+                isTrialCTA: v,
+                buttonText: N,
                 buttonTextClassName: A,
                 iconClassName: U,
                 postSuccessGuild: b,
@@ -141,7 +141,7 @@ function(e, t, n) {
                     giftMessage: k
                 })
             };
-            if (N) return (0, r.jsxs)(s.Button, {
+            if (v) return (0, r.jsxs)(s.Button, {
                 size: g,
                 className: h,
                 innerClassName: O.premiumSubscribeButton,
@@ -152,7 +152,7 @@ function(e, t, n) {
                     className: O.premiumIcon
                 }), (0, r.jsx)("span", {
                     className: l(O.buttonText, A),
-                    children: null != v ? v : L.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
+                    children: null != N ? N : L.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
                 })]
             });
             if (t) return (0, r.jsxs)(s.Button, {
@@ -166,7 +166,7 @@ function(e, t, n) {
                     className: O.giftIcon
                 }), (0, r.jsx)("span", {
                     className: l(O.buttonText, A),
-                    children: null != v ? v : L.default.Messages.PREMIUM_GIFTING_BUTTON
+                    children: null != N ? N : L.default.Messages.PREMIUM_GIFTING_BUTTON
                 })]
             });
             let Y = L.default.Messages.APPLICATION_STORE_GET_PREMIUM,
@@ -213,7 +213,7 @@ function(e, t, n) {
                         className: l(O.premiumIcon, U)
                     }), (0, r.jsx)("span", {
                         className: l(O.buttonText, A),
-                        children: null !== (n = null !== (t = null == $ ? void 0 : $.disabledButtonText) && void 0 !== t ? t : v) && void 0 !== n ? n : Y
+                        children: null !== (n = null !== (t = null == $ ? void 0 : $.disabledButtonText) && void 0 !== t ? t : N) && void 0 !== n ? n : Y
                     })]
                 })
             }

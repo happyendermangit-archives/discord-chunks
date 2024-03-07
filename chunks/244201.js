@@ -33,31 +33,31 @@ function(e, _, E) {
         a = E("421804"),
         i = E("49111");
     let I = new n.ComponentDispatcher,
-        s = o.createContext({
+        T = o.createContext({
             appContext: i.AppContext.APP,
             renderWindow: window,
             windowDispatch: I,
             windowId: (0, r.getMainWindowId)()
         }),
-        T = new Map;
+        s = new Map;
 
     function S(e) {
         var _;
         let E = e.ownerDocument.defaultView;
         if (null == E) return;
         let t = (0, r.getWindowId)(E);
-        return null === (_ = T.get(t)) || void 0 === _ ? void 0 : _.windowDispatch
+        return null === (_ = s.get(t)) || void 0 === _ ? void 0 : _.windowDispatch
     }
 
     function N(e) {
-        return T.get(e)
+        return s.get(e)
     }
 
     function O() {
         let e = function() {
             var e;
             let _ = (0, a.getCurrentlyInteractingWindowId)();
-            return null == _ ? null : null !== (e = T.get(_)) && void 0 !== e ? e : null
+            return null == _ ? null : null !== (e = s.get(_)) && void 0 !== e ? e : null
         }();
         return null != e ? e.appContext : null
     }
@@ -69,7 +69,7 @@ function(e, _, E) {
             children: o
         } = e, a = function(e, _) {
             let E = (0, r.getWindowId)(_),
-                t = T.get(E);
+                t = s.get(E);
             if (null == t) {
                 let o = new n.ComponentDispatcher;
                 t = {
@@ -77,24 +77,24 @@ function(e, _, E) {
                     renderWindow: _,
                     windowDispatch: o,
                     windowId: E
-                }, T.set(E, t), _.addEventListener("unload", () => {
-                    T.delete(E)
+                }, s.set(E, t), _.addEventListener("unload", () => {
+                    s.delete(E)
                 })
             }
             return t
         }(_, E);
-        return (0, t.jsx)(s.Provider, {
+        return (0, t.jsx)(T.Provider, {
             value: a,
             children: o
         })
     }
 
     function R() {
-        return o.useContext(s).appContext
+        return o.useContext(T).appContext
     }
 
     function l() {
-        return o.useContext(s).windowDispatch
+        return o.useContext(T).windowDispatch
     }
-    var u = s
+    var u = T
 }

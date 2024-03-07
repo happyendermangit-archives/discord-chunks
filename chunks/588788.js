@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("42203"),
         i = E("42887"),
         I = E("945956"),
-        s = E("101125"),
-        T = E("280168"),
+        T = E("101125"),
+        s = E("280168"),
         S = E("316133"),
         N = E("718517"),
         O = E("716241"),
@@ -21,7 +21,7 @@ function(e, _, E) {
     let R = 1 * N.default.Millis.MINUTE;
     class l extends o.default {
         _initialize() {
-            __OVERLAY__ ? this.stores = new Map : (this.stores = new Map().set(T.default, () => this._handleSpeakingStoreChanged()).set(I.default, () => this._handleRTCConnectionStoreChanged()), this._reset())
+            __OVERLAY__ ? this.stores = new Map : (this.stores = new Map().set(s.default, () => this._handleSpeakingStoreChanged()).set(I.default, () => this._handleRTCConnectionStoreChanged()), this._reset())
         }
         _reset() {
             this._currentUserSpeaking = !1, this._anyoneElseSpeaking = !1, null != this._reportInterval && (this._reportInterval.stop(), this._reportInterval = null)
@@ -34,7 +34,7 @@ function(e, _, E) {
                     t = null == E ? void 0 : E.isBroadcastChannel();
                 (0, O.trackWithMetadata)(A.AnalyticEvents.START_SPEAKING, {
                     mode: i.default.getMode(),
-                    priority: T.default.isCurrentUserPrioritySpeaking(),
+                    priority: s.default.isCurrentUserPrioritySpeaking(),
                     channel: e,
                     server: _,
                     channel_id: e,
@@ -56,7 +56,7 @@ function(e, _, E) {
                 t = null == E ? void 0 : E.isBroadcastChannel();
             (0, O.trackWithMetadata)(A.AnalyticEvents.START_LISTENING, {
                 mute: i.default.isMute(),
-                anyone_priority: T.default.isAnyonePrioritySpeaking(),
+                anyone_priority: s.default.isAnyonePrioritySpeaking(),
                 channel: e,
                 server: _,
                 channel_id: e,
@@ -69,10 +69,10 @@ function(e, _, E) {
             })
         }
         _terminate() {
-            this._reset(), T.default.removeChangeListener(this._handleSpeakingStoreChanged), I.default.removeChangeListener(this._handleRTCConnectionStoreChanged)
+            this._reset(), s.default.removeChangeListener(this._handleSpeakingStoreChanged), I.default.removeChangeListener(this._handleRTCConnectionStoreChanged)
         }
         getGameMetadata() {
-            let e = s.default.findActivity(e => e.type === A.ActivityTypes.PLAYING),
+            let e = T.default.findActivity(e => e.type === A.ActivityTypes.PLAYING),
                 _ = r.default.getCurrentGameForAnalytics();
             return {
                 game_platform: (0, n.default)(e),
@@ -94,9 +94,9 @@ function(e, _, E) {
                     }))
                 }
             }, this._handleSpeakingStoreChanged = () => {
-                let e = T.default.isCurrentUserSpeaking();
+                let e = s.default.isCurrentUserSpeaking();
                 this._currentUserSpeaking !== e && (this._currentUserSpeaking = e, this._trackStartSpeaking());
-                let _ = T.default.isAnyoneElseSpeaking();
+                let _ = s.default.isAnyoneElseSpeaking();
                 this._anyoneElseSpeaking !== _ && (this._anyoneElseSpeaking = _, this._trackStartListening())
             }
         }

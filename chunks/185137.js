@@ -12,13 +12,13 @@ function(e, _, E) {
         a = E("363658"),
         i = E("135230"),
         I = E("161454"),
-        s = E("42887"),
-        T = E("945956"),
+        T = E("42887"),
+        s = E("945956"),
         S = E("701909"),
         N = E("49111"),
         O = E("782340"),
         A = () => {
-            let [e, _] = (0, n.useStateFromStoresArray)([I.default], () => [I.default.canShowAdminWarning, I.default.getVisibleGame()], []), E = (0, n.useStateFromStores)([T.default], () => T.default.isConnected(), []), A = (0, n.useStateFromStores)([s.default], () => s.default.getMode() === N.InputModes.PUSH_TO_TALK, []), R = null != _ && _.elevated && E && A && e, l = o.useRef(null);
+            let [e, _] = (0, n.useStateFromStoresArray)([I.default], () => [I.default.canShowAdminWarning, I.default.getVisibleGame()], []), E = (0, n.useStateFromStores)([s.default], () => s.default.isConnected(), []), A = (0, n.useStateFromStores)([T.default], () => T.default.getMode() === N.InputModes.PUSH_TO_TALK, []), R = null != _ && _.elevated && E && A && e, l = o.useRef(null);
 
             function u() {
                 null !== l.current && ((0, r.closeModal)(l.current), l.current = null)

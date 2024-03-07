@@ -7,7 +7,7 @@ function(e, t, n) {
         useHasDiscountApplied: function() {
             return T
         },
-        useActiveDiscountDuration: function() {
+        useActiveDiscountInfo: function() {
             return I
         },
         useFetchChurnUserDiscountOffer: function() {
@@ -49,11 +49,15 @@ function(e, t, n) {
                 n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id;
             switch (n) {
                 case m.PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID:
-                    return 1;
+                    return {
+                        duration: 1, percentage: 30
+                    };
                 case m.PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID:
                 case m.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID:
                 case m.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID:
-                    return 3;
+                    return {
+                        duration: 3, percentage: 30
+                    };
                 default:
                     return
             }

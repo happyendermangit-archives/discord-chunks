@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return s
+            return T
         }
     }), E("222007");
     var t = E("446674"),
@@ -33,9 +33,9 @@ function(e, _, E) {
                 message: n
             } = e, I = i.default.getChannel(o);
             if ((null === (_ = n.author) || void 0 === _ ? void 0 : _.id) !== a.default.getId() || !(null == I ? void 0 : I.isActiveThread())) return;
-            let s = new Date(null !== (t = null === (E = I.threadMetadata) || void 0 === E ? void 0 : E.archiveTimestamp) && void 0 !== t ? t : 0).getTime(),
-                T = Date.now() - s;
-            T < 5e3 && r.default.resort(I.parent_id)
+            let T = new Date(null !== (t = null === (E = I.threadMetadata) || void 0 === E ? void 0 : E.archiveTimestamp) && void 0 !== t ? t : 0).getTime(),
+                s = Date.now() - T;
+            s < 5e3 && r.default.resort(I.parent_id)
         }
         constructor(...e) {
             super(...e), this.actions = {
@@ -44,5 +44,5 @@ function(e, _, E) {
             }
         }
     }
-    var s = new I
+    var T = new I
 }

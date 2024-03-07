@@ -13,8 +13,8 @@ function(e, _, E) {
         a = E("271938"),
         i = E("42203"),
         I = E("26989"),
-        s = E("162771"),
-        T = E("568734"),
+        T = E("162771"),
+        s = E("568734"),
         S = E("347895"),
         N = E("698882"),
         O = E("129092"),
@@ -32,7 +32,7 @@ function(e, _, E) {
                 MESSAGE_CREATE: e => this.handleMessageSend(e),
                 THREAD_CREATE: e => this.handleThreadCreate(e)
             }, this.handlePostConnectionOpen = () => {
-                let e = s.default.getGuildId();
+                let e = T.default.getGuildId();
                 null != e && this._getOrLoadOnboardingMemberActions(e)
             }, this.handleGuildMemberUpdate = e => {
                 let {
@@ -41,7 +41,7 @@ function(e, _, E) {
                     guildId: r
                 } = e;
                 if (n.id === a.default.getId()) {
-                    if (!this.onboardingCompleteGuilds.has(r) && (0, T.hasFlag)(null != _ ? _ : 0, u.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
+                    if (!this.onboardingCompleteGuilds.has(r) && (0, s.hasFlag)(null != _ ? _ : 0, u.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
                         var i, I;
                         this.onboardingCompleteGuilds.add(r);
                         let e = null !== (I = null === (i = N.default.getNewMemberActions(r)) || void 0 === i ? void 0 : i.length) && void 0 !== I ? I : 0;
@@ -122,7 +122,7 @@ function(e, _, E) {
                     completedActions: t,
                     loading: o
                 } = A.default.getState(e);
-                if (!(null == t && !o && (0, T.hasFlag)(null !== (E = _.flags) && void 0 !== E ? E : 0, u.GuildMemberFlags.STARTED_HOME_ACTIONS))) return t;
+                if (!(null == t && !o && (0, s.hasFlag)(null !== (E = _.flags) && void 0 !== E ? E : 0, u.GuildMemberFlags.STARTED_HOME_ACTIONS))) return t;
                 {
                     let _ = await (0, S.fetchNewMemberActions)(e);
                     return _

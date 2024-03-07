@@ -24,6 +24,7 @@ function(e, t, n) {
         planComparisonTable: "planComparisonTable_f25c4c",
         planComparisonTableContainer: "planComparisonTableContainer__5e152",
         premiumStackedTierCardsContainerFullscreen: "premiumStackedTierCardsContainerFullscreen__36cd5",
+        premiumStackedTierCardsContainerSettings: "premiumStackedTierCardsContainerSettings__03d64",
         premiumTierCardsContainer: "premiumTierCardsContainer_e3c13b",
         premiumTierCardsContainerFullscreen: "premiumTierCardsContainerFullscreen__90547 premiumTierCardsContainer_e3c13b",
         premiumTierCardsContainerSettings: "premiumTierCardsContainerSettings_f346a8 premiumTierCardsContainer_e3c13b",

@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("234222");
     let i = {},
         I = {},
-        s = null,
         T = null,
+        s = null,
         S = null,
         N = "lastChangeLogId",
         O = "lastChangeLogDate",
@@ -36,7 +36,7 @@ function(e, _, E) {
             return null !== (t = null === (E = i[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : null
         }
         latestChangelogId() {
-            return s
+            return T
         }
         getChangelogLoadStatus(e, _) {
             var E, t;
@@ -49,7 +49,7 @@ function(e, _, E) {
             return S
         }
         overrideId() {
-            return T
+            return s
         }
         lastSeenChangelogId() {
             return A
@@ -90,7 +90,7 @@ function(e, _, E) {
                 config: _,
                 latestChangelogId: E
             } = e;
-            s = E, S = _
+            T = E, S = _
         },
         CHANGE_LOG_FETCH_SUCCESS: function(e) {
             let {
@@ -118,7 +118,7 @@ function(e, _, E) {
             let {
                 id: _
             } = e;
-            T = _
+            s = _
         },
         CHANGE_LOG_MARK_SEEN: function(e) {
             let {

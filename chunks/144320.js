@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("402671"),
         i = E("724210"),
         I = E("115279");
-    let s = new Worker(new URL(E.p + E.u("68638"), E.b));
-    class T extends t.default {
+    let T = new Worker(new URL(E.p + E.u("68638"), E.b));
+    class s extends t.default {
         handleChannelPreload(e) {
             let {
                 channelId: _
@@ -50,9 +50,9 @@ function(e, _, E) {
                                         url: o
                                     }
                                 } = t;
-                                null == s || s.removeEventListener("message", E), _ === o && e()
+                                null == T || T.removeEventListener("message", E), _ === o && e()
                             };
-                            null == s || s.addEventListener("message", E), null == s || s.postMessage({
+                            null == T || T.addEventListener("message", E), null == T || T.postMessage({
                                 url: _
                             })
                         })
@@ -66,5 +66,5 @@ function(e, _, E) {
             }
         }
     }
-    var S = new T
+    var S = new s
 }

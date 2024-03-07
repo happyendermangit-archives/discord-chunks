@@ -12,9 +12,9 @@ function(e, _, E) {
     (0, t.setLogFn)(function(e, _, E) {
         for (var t = arguments.length, a = Array(t > 3 ? t - 3 : 0), i = 3; i < t; i++) a[i - 3] = arguments[i];
         let I = Date.now(),
-            s = ((I - n) / 1e3).toFixed(3),
-            T = ((I - r) / 1e3).toFixed(3),
-            S = "Σ:".concat(s, "s, Δ:").concat(T, "s");
+            T = ((I - n) / 1e3).toFixed(3),
+            s = ((I - r) / 1e3).toFixed(3),
+            S = "Σ:".concat(T, "s, Δ:").concat(s, "s");
         r = I, o.report({
             name: e,
             timing: S

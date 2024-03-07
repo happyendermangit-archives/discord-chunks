@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("965955"),
         i = E("803182"),
         I = E("90915"),
-        s = E("394846"),
-        T = E("446674"),
+        T = E("394846"),
+        s = E("446674"),
         S = E("151426"),
         N = E("143435"),
         O = E("77078"),
@@ -74,7 +74,7 @@ function(e, _, E) {
             webpackId: "406915"
         }),
         et = o.memo(function(e) {
-            let _ = (0, T.useStateFromStores)([F.default], () => F.default.isFocused());
+            let _ = (0, s.useStateFromStores)([F.default], () => F.default.isFocused());
             return (0, t.jsx)($.default, {
                 ...e,
                 focused: _
@@ -86,18 +86,18 @@ function(e, _, E) {
             skipsSettingDefaultPageTitle: E
         } = e, {
             pathname: n
-        } = (0, I.useLocation)(), N = (0, j.getPlatform)(), L = s.isMobile || s.isTablet, F = (0, T.useStateFromStores)([v.default], () => v.default.darkSidebar ? Z.ThemeTypes.DARK : void 0), Q = (0, T.useStateFromStores)([D.default], () => D.default.useForcedColors ? "yes" : "no"), [$, eo] = (0, T.useStateFromStoresArray)([m.default], () => [m.default.isEditorOpen, m.default.isCoachmark]), en = (0, T.useStateFromStores)([M.default], () => M.default.isEditorOpen), {
+        } = (0, I.useLocation)(), N = (0, j.getPlatform)(), L = T.isMobile || T.isTablet, F = (0, s.useStateFromStores)([v.default], () => v.default.darkSidebar ? Z.ThemeTypes.DARK : void 0), Q = (0, s.useStateFromStores)([D.default], () => D.default.useForcedColors ? "yes" : "no"), [$, eo] = (0, s.useStateFromStoresArray)([m.default], () => [m.default.isEditorOpen, m.default.isCoachmark]), en = (0, s.useStateFromStores)([M.default], () => M.default.isEditorOpen), {
             enabled: er
         } = f.default.useExperiment({
             location: "client_themes_coachmark_reintro"
         }, {
             autoTrackExposure: !0
-        }), ea = (0, T.useStateFromStores)([b.default], () => b.default.getLayers().includes(Z.Layers.USER_SETTINGS)), ei = (0, T.useStateFromStores)([w.default], () => X.default.canUseClientThemes(w.default.getCurrentUser())), eI = $ && !ea, es = [];
-        eI && eo && er && !ei && es.push(S.DismissibleContent.CLIENT_THEMES_COACHMARK);
-        let [eT, eS] = (0, y.useSelectedDismissibleContent)(es, ee.DismissibleContentGroupName.SIDEBAR, !0);
-        es.push(S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-        let eN = eT === S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-            eO = eT === S.DismissibleContent.CLIENT_THEMES_COACHMARK;
+        }), ea = (0, s.useStateFromStores)([b.default], () => b.default.getLayers().includes(Z.Layers.USER_SETTINGS)), ei = (0, s.useStateFromStores)([w.default], () => X.default.canUseClientThemes(w.default.getCurrentUser())), eI = $ && !ea, eT = [];
+        eI && eo && er && !ei && eT.push(S.DismissibleContent.CLIENT_THEMES_COACHMARK);
+        let [es, eS] = (0, y.useSelectedDismissibleContent)(eT, ee.DismissibleContentGroupName.SIDEBAR, !0);
+        eT.push(S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+        let eN = es === S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+            eO = es === S.DismissibleContent.CLIENT_THEMES_COACHMARK;
         o.useEffect(() => {
             let e = (0, i.matchPath)(n, {
                 path: "invite",
@@ -136,7 +136,7 @@ function(e, _, E) {
                                                         exact: !1,
                                                         strict: !1
                                                     });
-                                                    return (!!s.isMobile || !!s.isTablet) && null != e || !1
+                                                    return (!!T.isMobile || !!T.isTablet) && null != e || !1
                                                 })()
                                             }),
                                             children: [(0, t.jsx)("div", {

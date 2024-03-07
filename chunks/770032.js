@@ -12,8 +12,8 @@ function(e, _, E) {
     var n, r, a = E("171718"),
         i = E("446674"),
         I = E("913144"),
-        s = E("746574"),
-        T = E("995802"),
+        T = E("746574"),
+        s = E("995802"),
         S = E("583374");
     (r = n || (n = {}))[r.INVALID = 0] = "INVALID", r[r.VALIDATING = 1] = "VALIDATING", r[r.VALID = 2] = "VALID";
     let N = [],
@@ -77,7 +77,7 @@ function(e, _, E) {
             })
         }
         get canUseMultiAccountNotifications() {
-            return this.getCanUseMultiAccountMobile() && T.MultiAccountMobileNotificationsExperiment.getCurrentConfig({
+            return this.getCanUseMultiAccountMobile() && s.MultiAccountMobileNotificationsExperiment.getCurrentConfig({
                 location: "09e468_1"
             }, {
                 autoTrackExposure: !1
@@ -147,7 +147,7 @@ function(e, _, E) {
                 from: _,
                 to: E
             } = e;
-            N = (0, s.moveItemFromTo)(N, _, E)
+            N = (0, T.moveItemFromTo)(N, _, E)
         },
         CURRENT_USER_UPDATE: function(e) {
             let {

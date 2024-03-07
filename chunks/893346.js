@@ -13,8 +13,8 @@ function(e, _, E) {
     var a = E("811022"),
         i = E("435660"),
         I = E("805833"),
-        s = E("377678"),
-        T = E("120082");
+        T = E("377678"),
+        s = E("120082");
     let S = new Set(["APP_STATE_UPDATE", "CLEAR_CACHES", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_SOCKET", "SESSION_START", "UPLOAD_FAIL", "WRITE_CACHES"]),
         N = new a.default("Flux");
     class O {
@@ -39,7 +39,7 @@ function(e, _, E) {
                 for (; this._waitQueue.length > 0;) {
                     if (++_ > 100) {
                         var e;
-                        let _ = s.serialize();
+                        let _ = T.serialize();
                         throw N.error("LastFewActions", _), null === (e = this._sentryUtils) || void 0 === e || e.addBreadcrumb({
                             message: "Dispatcher: Dispatch loop detected",
                             data: {
@@ -61,7 +61,7 @@ function(e, _, E) {
             this._dispatchWithLogging(e)
         }
         _dispatchWithLogging(e) {
-            n(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), n(e.type, "Dispatch.dispatch(...) called without an action type"), S.has(e.type) && N.log("Dispatching ".concat(e.type)), (0, i.mark)(e.type), s.add(e.type);
+            n(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), n(e.type, "Dispatch.dispatch(...) called without an action type"), S.has(e.type) && N.log("Dispatching ".concat(e.type)), (0, i.mark)(e.type), T.add(e.type);
             let _ = this.actionLogger.log(e, _ => {
                 try {
                     this._currentDispatchActionType = e.type, this._dispatch(e, _)
@@ -115,7 +115,7 @@ function(e, _, E) {
             this._actionHandlers.addDependencies(e, _)
         }
         constructor(e = 0, _, E) {
-            this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new A, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new T.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
+            this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new A, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new s.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
                 r.default.isTracing && E >= 10 && r.default.mark("\uD83E\uDDA5", _, E)
             })
         }

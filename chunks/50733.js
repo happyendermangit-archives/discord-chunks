@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return T
+            return s
         }
     }), E("222007");
     var t = E("819855"),
@@ -25,7 +25,7 @@ function(e, _, E) {
             username: _.username
         })), n.showAcceptedNotification(_)
     }
-    class s extends o.default {
+    class T extends o.default {
         constructor(...e) {
             super(...e), this.actions = {
                 RELATIONSHIP_ADD: i,
@@ -33,5 +33,5 @@ function(e, _, E) {
             }
         }
     }
-    var T = new s
+    var s = new T
 }

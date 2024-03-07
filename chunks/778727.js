@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return s
+            return T
         }
     }), E("222007");
     var t = E("689988"),
@@ -32,5 +32,5 @@ function(e, _, E) {
             }
         }
     }
-    var s = new I
+    var T = new I
 }

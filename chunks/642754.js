@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         showPendingNotification: function() {
-            return T
+            return s
         },
         showAcceptedNotification: function() {
             return S
@@ -16,7 +16,7 @@ function(e, _, E) {
         i = E("49111"),
         I = E("782340");
 
-    function s(e, _, E) {
+    function T(e, _, E) {
         n.default.showNotification(a.default.getUserAvatarURL(e), e.username, _, {}, {
             omitViewTracking: !0,
             omitClickTracking: !0,
@@ -25,8 +25,8 @@ function(e, _, E) {
         })
     }
 
-    function T(e) {
-        s(e, I.default.Messages.NOTIFICATION_PENDING_FRIEND_REQUEST, () => {
+    function s(e) {
+        T(e, I.default.Messages.NOTIFICATION_PENDING_FRIEND_REQUEST, () => {
             {
                 let {
                     openUserProfileModal: _
@@ -39,7 +39,7 @@ function(e, _, E) {
     }
 
     function S(e) {
-        s(e, I.default.Messages.NOTIFICATION_ACCEPTED_FRIEND_REQUEST, () => {
+        T(e, I.default.Messages.NOTIFICATION_ACCEPTED_FRIEND_REQUEST, () => {
             t.default.openPrivateChannel(e.id)
         })
     }

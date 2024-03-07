@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("446674"),
         i = E("77078"),
         I = E("368694"),
-        s = E("313915"),
-        T = E("578706"),
+        T = E("313915"),
+        s = E("578706"),
         S = E("381546"),
         N = E("655804"),
         O = E("238500"),
@@ -28,7 +28,7 @@ function(e, _, E) {
         } = (0, R.useImpressionStore)(e => ({
             debugTrackedData: e.debugTrackedData,
             impressions: e.impressions
-        })), E = (0, a.useStateFromStores)([s.default], () => s.default.isAnalyticsDebuggerEnabled), n = (0, a.useStateFromStores)([I.default], () => I.default.isDeveloper), [u, L] = o.useState(!1), {
+        })), E = (0, a.useStateFromStores)([T.default], () => T.default.isAnalyticsDebuggerEnabled), n = (0, a.useStateFromStores)([I.default], () => I.default.isDeveloper), [u, L] = o.useState(!1), {
             name: C,
             ...D
         } = null != e ? e : {}, c = null != C;
@@ -53,7 +53,7 @@ function(e, _, E) {
                             [l.notTracked]: !c
                         }),
                         variant: "text-xxs/normal",
-                        children: [c ? (0, t.jsx)(T.default, {
+                        children: [c ? (0, t.jsx)(s.default, {
                             className: l.iconTracked
                         }) : (0, t.jsx)(S.default, {
                             className: l.iconNotTracked

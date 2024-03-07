@@ -15,7 +15,7 @@ function(e, _, E) {
         a = E("62355"),
         i = E("49111");
     let I = "interaction_iframe_modal";
-    async function s(e) {
+    async function T(e) {
         let {
             openInteractionModal: _
         } = await E.el("394816").then(E.bind(E, "394816"));
@@ -24,11 +24,11 @@ function(e, _, E) {
             application_id: e.application.id
         })
     }
-    class T extends t.default {
+    class s extends t.default {
         constructor(...e) {
             super(...e), this.iframeModalOpenTimeMs = void 0, this.actions = {
                 INTERACTION_MODAL_CREATE: e => {
-                    s(e)
+                    T(e)
                 },
                 INTERACTION_IFRAME_MODAL_CREATE: e => {
                     var _;
@@ -58,5 +58,5 @@ function(e, _, E) {
             }
         }
     }
-    var S = new T
+    var S = new s
 }

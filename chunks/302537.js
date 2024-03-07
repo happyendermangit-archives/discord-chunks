@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("703809"),
         i = E("90915"),
         I = E("394846"),
-        s = E("446674"),
-        T = E("825573"),
+        T = E("446674"),
+        s = E("825573"),
         S = E("77078"),
         N = E("206230"),
         O = E("338733"),
@@ -48,12 +48,12 @@ function(e, _, E) {
                 let {
                     locale: _,
                     theme: E
-                } = (0, s.useStateFromStoresObject)([l.default, R.default], () => ({
+                } = (0, T.useStateFromStoresObject)([l.default, R.default], () => ({
                     locale: R.default.locale,
                     theme: l.default.theme
-                })), n = (0, s.useStateFromStores)([u.default], () => u.default.isFocused(), []), {
+                })), n = (0, T.useStateFromStores)([u.default], () => u.default.isFocused(), []), {
                     reducedMotion: a,
-                    alwaysShowLinkDecorations: T
+                    alwaysShowLinkDecorations: s
                 } = o.useContext(S.AccessibilityPreferencesContext), {
                     fontScale: O,
                     fontScaleClass: D,
@@ -62,7 +62,7 @@ function(e, _, E) {
                     desaturateUserColors: P,
                     useForcedColors: m,
                     systemForcedColors: G
-                } = (0, s.useStateFromStoresObject)([N.default], () => {
+                } = (0, T.useStateFromStoresObject)([N.default], () => {
                     let {
                         fontScale: e,
                         fontScaleClass: _,
@@ -84,7 +84,7 @@ function(e, _, E) {
                 }), p = (0, i.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
                 (0, c.default)(window, g);
                 let y = (0, d.default)(window, __OVERLAY__ || n),
-                    B = (0, s.useStateFromStores)([A.default], () => A.default.sidebarWidth),
+                    B = (0, T.useStateFromStores)([A.default], () => A.default.sidebarWidth),
                     f = (0, S.useRedesignIconContext)().enabled;
                 return (0, t.jsx)("html", {
                     lang: _,
@@ -98,7 +98,7 @@ function(e, _, E) {
                         "is-mobile": I.isMobile,
                         "app-focused": n,
                         "low-saturation": h <= S.LOW_SATURATION_THRESHOLD,
-                        "decorate-links": T,
+                        "decorate-links": s,
                         "desaturate-user-colors": P,
                         "disable-forced-colors": !m && "active" === G,
                         "enable-forced-colors": m,
@@ -108,7 +108,7 @@ function(e, _, E) {
             }(U), function() {
                 let [e, _] = o.useState([]);
                 return o.useEffect(() => {
-                    Promise.all(T.fontsToPreload.map(e => E("437087")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
+                    Promise.all(s.fontsToPreload.map(e => E("437087")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
                         let {
                             default: _
                         } = e;

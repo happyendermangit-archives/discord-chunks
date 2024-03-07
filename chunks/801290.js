@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("95410"),
         i = E("689988"),
         I = E("700507"),
-        s = E("76393"),
-        T = E("235004"),
+        T = E("76393"),
+        s = E("235004"),
         S = E("271938"),
         N = E("42887"),
         O = E("299039"),
@@ -72,14 +72,14 @@ function(e, _, E) {
             return (0, R.drainPendingAudioSettings)((E, t, o) => {
                 let n = function(e, _, E, t) {
                     var o, n, a, i, I;
-                    let s = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-                        T = (0, l.coerceAudioContextForProto)(E);
-                    if (null == T) return !1;
-                    let S = e[T];
+                    let T = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
+                        s = (0, l.coerceAudioContextForProto)(E);
+                    if (null == s) return !1;
+                    let S = e[s];
                     if (S[_] = null !== (o = S[_]) && void 0 !== o ? o : (n = E, r.AudioContextSetting.create({
                             muted: !1,
                             volume: D(n)
-                        })), t(S[_]), S[_].modifiedAt = String(Date.now()), s) {
+                        })), t(S[_]), S[_].modifiedAt = String(Date.now()), T) {
                         ;
                         a = S, i = _, I = E, a[i].volume !== D(I) || a[i].muted || a[i].soundboardMuted || delete a[i]
                     }
@@ -117,7 +117,7 @@ function(e, _, E) {
             volume: r
         } = e;
         if (n === S.default.getId() || !(0, A.shouldReadWriteAudioSettings)()) return;
-        let a = s.default.getRemoteSessionId();
+        let a = T.default.getRemoteSessionId();
         null != a && U(a, n, o, {
             muted: N.default.isLocalMute(n, o),
             volume: r
@@ -149,7 +149,7 @@ function(e, _, E) {
         if (E !== S.default.getId()) {
             if ((0, A.shouldReadWriteAudioSettings)()) {
                 var t, o, n;
-                t = _, o = E, n = T.default.isLocalSoundboardMuted(E), (0, R.updatePendingSettings)(t, o, {
+                t = _, o = E, n = s.default.isLocalSoundboardMuted(E), (0, R.updatePendingSettings)(t, o, {
                     soundboardMuted: n
                 }), d.cancel(), M()
             }

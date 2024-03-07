@@ -30,7 +30,7 @@ function(e, _, E) {
         }), !0)
     }
 
-    function s(e) {
+    function T(e) {
         let {
             channels: _
         } = e;
@@ -49,13 +49,13 @@ function(e, _, E) {
             channelId: t.id
         }), !0)
     }
-    class T extends t.default {
+    class s extends t.default {
         constructor(...e) {
             super(...e), this.actions = {
                 CHANNEL_SELECT: I,
-                CHANNEL_UPDATES: s
+                CHANNEL_UPDATES: T
             }
         }
     }
-    var S = new T
+    var S = new s
 }

@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("446674"),
         i = E("713349"),
         I = E("151426"),
-        s = E("801340"),
-        T = E("913144"),
+        T = E("801340"),
+        s = E("913144"),
         S = E("275877"),
         N = E("116949"),
         O = E("397336");
@@ -78,8 +78,8 @@ function(e, _, E) {
             _.proto = i, o("string" != typeof _.proto, "UserSettingsProto cannot be a string");
             let I = null !== (n = null == r ? void 0 : r.protoToSave) && void 0 !== n ? n : null;
             if (null == I || null == r.offlineEditDataVersion) return;
-            let s = (0, N.b64ToProto)(_.ProtoClass, I);
-            null != s && (_.editInfo.protoToSave = s, _.editInfo.offlineEditDataVersion = r.offlineEditDataVersion)
+            let T = (0, N.b64ToProto)(_.ProtoClass, I);
+            null != T && (_.editInfo.protoToSave = T, _.editInfo.offlineEditDataVersion = r.offlineEditDataVersion)
         })
     }
     class U extends a.default.PersistedStore {
@@ -131,7 +131,7 @@ function(e, _, E) {
             var _, E;
             if (null == e) return 0;
             let t = null === (E = this.settings.guilds) || void 0 === E ? void 0 : null === (_ = E.guilds[e]) || void 0 === _ ? void 0 : _.guildRecentsDismissedAt;
-            return null == t ? 0 : s.Timestamp.toDate(t).getTime()
+            return null == t ? 0 : T.Timestamp.toDate(t).getTime()
         }
         getDismissedGuildContent(e) {
             var _, E, t;
@@ -143,7 +143,7 @@ function(e, _, E) {
         }
     }
     U.displayName = "UserSettingsProtoStore", U.persistKey = "UserSettingsProtoStore-Cache";
-    var M = new U(T.default, {
+    var M = new U(s.default, {
         CACHE_LOADED: function(e) {
             let {
                 userSettings: _

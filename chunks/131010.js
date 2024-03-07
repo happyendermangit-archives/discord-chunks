@@ -10,8 +10,8 @@ function(e, _, E) {
         a = E("913144"),
         i = E("689988"),
         I = E("697218"),
-        s = E("599110"),
-        T = E("770032"),
+        T = E("599110"),
+        s = E("770032"),
         S = E("49111");
     n = class extends i.default {
         _initialize() {
@@ -34,18 +34,18 @@ function(e, _, E) {
                 if (null == n) return;
                 if (null != o) {
                     if (o !== t) {
-                        let e = T.default.getUsers(),
+                        let e = s.default.getUsers(),
                             E = e.map(e => {
                                 let {
                                     id: _
                                 } = e;
                                 return _
                             });
-                        s.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_SUCCESS, {
+                        T.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_SUCCESS, {
                             from_user_id: o,
                             linked_user_ids: E
                         }), null === (_ = this.onSwitchSuccess) || void 0 === _ || _.call(this, n)
-                    } else s.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_FAILURE), null === (E = this.onSwitchError) || void 0 === E || E.call(this, n);
+                    } else T.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_FAILURE), null === (E = this.onSwitchError) || void 0 === E || E.call(this, n);
                     o = null
                 }
                 t = n.id;

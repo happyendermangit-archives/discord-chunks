@@ -22,15 +22,15 @@ function(e, t, n) {
             for (let l = 0; l < n; l++)
                 for (let a = l ? 0 : 1; a * n < t * (n - l); a++) i.push(((e[S + (P >> 1)] >> ((1 & P++) << 2) & 15) / 7.5 - 1) * r);
             return i
-        }, L = R(T, I, (u >> 18 & 31) / 31 / 2), O = R(3, 3, (c >> 3 & 63) / 63 * n), M = R(3, 3, (c >> 9 & 63) / 63 * n), g = _ ? R(5, 5, p) : [], h = (0, r.thumbHashToApproximateAspectRatio)(e), x = o(h > 1 ? 32 : 32 * h), N = o(h > 1 ? 32 / h : 32), v = new Uint8Array(x * N * 4), A = [], U = [];
-        for (let e = 0, n = 0; e < N; e++)
+        }, L = R(T, I, (u >> 18 & 31) / 31 / 2), O = R(3, 3, (c >> 3 & 63) / 63 * n), M = R(3, 3, (c >> 9 & 63) / 63 * n), g = _ ? R(5, 5, p) : [], h = (0, r.thumbHashToApproximateAspectRatio)(e), x = o(h > 1 ? 32 : 32 * h), v = o(h > 1 ? 32 / h : 32), N = new Uint8Array(x * v * 4), A = [], U = [];
+        for (let e = 0, n = 0; e < v; e++)
             for (let r = 0; r < x; r++, n += 4) {
                 let o = d,
                     u = f,
                     c = m,
                     E = C;
                 for (let e = 0, t = a(T, _ ? 5 : 3); e < t; e++) A[e] = s(i / x * (r + .5) * e);
-                for (let t = 0, n = a(I, _ ? 5 : 3); t < n; t++) U[t] = s(i / N * (e + .5) * t);
+                for (let t = 0, n = a(I, _ ? 5 : 3); t < n; t++) U[t] = s(i / v * (e + .5) * t);
                 for (let e = 0, n = 0; e < I; e++)
                     for (let r = e ? 0 : 1, i = 2 * U[e]; r * I < T * (I - e); r++, n++) !(r > t) && !(e > t) && (o += L[n] * A[r] * i);
                 for (let e = 0, t = 0; e < 3; e++)
@@ -44,12 +44,12 @@ function(e, t, n) {
                 let p = o - 2 / 3 * u,
                     S = (3 * o - p + c) / 2,
                     P = S - c;
-                v[n] = a(0, 255 * l(1, S)), v[n + 1] = a(0, 255 * l(1, P)), v[n + 2] = a(0, 255 * l(1, p)), v[n + 3] = a(0, 255 * l(1, E))
+                N[n] = a(0, 255 * l(1, S)), N[n + 1] = a(0, 255 * l(1, P)), N[n + 2] = a(0, 255 * l(1, p)), N[n + 3] = a(0, 255 * l(1, E))
             }
         return {
             w: x,
-            h: N,
-            rgba: v
+            h: v,
+            rgba: N
         }
     }
 }

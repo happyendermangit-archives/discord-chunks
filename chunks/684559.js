@@ -11,8 +11,8 @@ function(e, _, E) {
         a = E("18494"),
         i = E("697218"),
         I = E("569363"),
-        s = E("49111");
-    let T = !1;
+        T = E("49111");
+    let s = !1;
 
     function S(e) {
         let _ = i.default.getCurrentUser();
@@ -22,14 +22,14 @@ function(e, _, E) {
         if (!_.hasUrgentMessages() || t === E) return N({
             channelId: E
         });
-        !T && (T = !0, e())
+        !s && (s = !0, e())
     }
 
     function N(e) {
         let {
             channelId: _
         } = e, E = i.default.getCurrentUser(), t = _ === r.default.getDMFromUserId(I.SYSTEM_USER);
-        null != E && E.hasUrgentMessages() && t && (T = !1, o.setFlag(s.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !1))
+        null != E && E.hasUrgentMessages() && t && (s = !1, o.setFlag(T.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !1))
     }
     t = class extends n.default {
         constructor(e) {

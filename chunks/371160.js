@@ -2,10 +2,10 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         setSessionExtendingEnabled: function() {
-            return s
+            return T
         },
         getSession: function() {
-            return T
+            return s
         },
         timestampOrZero: function() {
             return N
@@ -19,11 +19,11 @@ function(e, _, E) {
         i = Promise.resolve(),
         I = !1;
 
-    function s(e) {
+    function T(e) {
         I = e
     }
 
-    function T() {
+    function s() {
         let e = i.then(async () => {
             let e = await S();
             if (null == e || function(e) {

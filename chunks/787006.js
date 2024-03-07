@@ -21,8 +21,8 @@ function(e, _, E) {
         }
         let E = await _(),
             I = o.default.get(i, {}),
-            s = function(e, _) {
-                var E, o, n, r, a, i, I, s, T, S, N, O, A, R, l, u, L, C, D;
+            T = function(e, _) {
+                var E, o, n, r, a, i, I, T, s, S, N, O, A, R, l, u, L, C, D;
                 let c = (null == e ? void 0 : e.lastId) !== (null == _ ? void 0 : _.id) && (null == _ ? void 0 : _.id) != null;
 
                 function d(e) {
@@ -35,7 +35,7 @@ function(e, _, E) {
                 let M = null !== (I = null == _ ? void 0 : _.rendererCrashExitCode) && void 0 !== I ? I : null,
                     h = {
                         did_crash: c || null != M && 0 !== M,
-                        renderer_crash_reason: null !== (s = null == _ ? void 0 : _.rendererCrashReason) && void 0 !== s ? s : null,
+                        renderer_crash_reason: null !== (T = null == _ ? void 0 : _.rendererCrashReason) && void 0 !== T ? T : null,
                         renderer_crash_exit_code: M,
                         had_rtc_connection: d(t.StoredCrashInformation.HasRTCConnection),
                         was_sending_video: d(t.StoredCrashInformation.IsSendingVideo),
@@ -44,7 +44,7 @@ function(e, _, E) {
                         was_receiving_stream: d(t.StoredCrashInformation.IsReceivingStream),
                         video_media_session_id: U(t.StoredCrashInformation.VideoMediaSessionId),
                         stream_media_session_id: U(t.StoredCrashInformation.StreamMediaSessionId),
-                        last_memory_usage_kb: null !== (T = null == _ ? void 0 : null === (E = _.lastMemoryInformation) || void 0 === E ? void 0 : E.memoryUsageKB) && void 0 !== T ? T : null,
+                        last_memory_usage_kb: null !== (s = null == _ ? void 0 : null === (E = _.lastMemoryInformation) || void 0 === E ? void 0 : E.memoryUsageKB) && void 0 !== s ? s : null,
                         last_used_js_heap_size_kb: null !== (S = null == _ ? void 0 : null === (o = _.lastMemoryInformation) || void 0 === o ? void 0 : o.usedJSHeapSizeKB) && void 0 !== S ? S : null,
                         last_memory_usage_uptime: null !== (N = null == _ ? void 0 : null === (n = _.lastMemoryInformation) || void 0 === n ? void 0 : n.uptimeSeconds) && void 0 !== N ? N : null,
                         highest_memory_usage_kb: null !== (O = null == _ ? void 0 : null === (r = _.highestMemoryInformation) || void 0 === r ? void 0 : r.memoryUsageKB) && void 0 !== O ? O : null,
@@ -72,7 +72,7 @@ function(e, _, E) {
                     ...h
                 }
             }(I, E);
-        n.default.track(r.AnalyticEvents.APP_NATIVE_CRASH, s), o.default.set(i, {
+        n.default.track(r.AnalyticEvents.APP_NATIVE_CRASH, T), o.default.set(i, {
             lastId: null == E ? void 0 : E.id
         })
     }

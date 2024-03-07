@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return s
+            return T
         }
     });
     var t = E("102053"),
@@ -19,5 +19,5 @@ function(e, _, E) {
             clearInterval(this.intervalID)
         }
     }
-    var s = new I
+    var T = new I
 }

@@ -11,8 +11,8 @@ function(e, _, E) {
         a = E("49671"),
         i = E("374014"),
         I = E("103979"),
-        s = E("271938"),
-        T = E("42887"),
+        T = E("271938"),
+        s = E("42887"),
         S = E("945956"),
         N = E("205817"),
         O = E("599110"),
@@ -32,7 +32,7 @@ function(e, _, E) {
                 streamKey: t
             } = e;
             if (!(0, R.areClipsEnabled)() || E !== D.RTCConnectionStates.RTC_CONNECTED) return;
-            let n = s.default.getId();
+            let n = T.default.getId();
             if (_ === o.MediaEngineContextTypes.DEFAULT) return this.applyUserVoiceRecording(n);
             if (_ === o.MediaEngineContextTypes.STREAM && null != t) {
                 let {
@@ -78,13 +78,13 @@ function(e, _, E) {
         }
         maybeShowClipsWarning(e) {
             let _ = S.default.getChannelId();
-            if (!(null == _ || l.default.getClipsWarningShown(_)) && e !== s.default.getId()) l.default.isClipsEnabledForUser(e) && (n.default.dispatch({
+            if (!(null == _ || l.default.getClipsWarningShown(_)) && e !== T.default.getId()) l.default.isClipsEnabledForUser(e) && (n.default.dispatch({
                 type: "CLIPS_SHOW_CALL_WARNING",
                 channelId: _
             }), this.showClipsToast())
         }
         handlePostConnectionOpen() {
-            if (!(0, L.default)(T.default)) return;
+            if (!(0, L.default)(s.default)) return;
             this.applyNativeClipsSettings();
             let e = (0, R.areClipsEnabled)();
             if (!e) {
@@ -105,7 +105,7 @@ function(e, _, E) {
                 channelId: t,
                 guildId: n
             } = e;
-            if (E !== o.MediaEngineContextTypes.STREAM || !(0, L.default)(T.default)) return;
+            if (E !== o.MediaEngineContextTypes.STREAM || !(0, L.default)(s.default)) return;
             let r = N.default.getRTCConnection(i.encodeStreamKey({
                 streamType: null != n ? c.StreamTypes.GUILD : c.StreamTypes.CALL,
                 ownerId: _,
@@ -160,10 +160,10 @@ function(e, _, E) {
             return u.ClipsHardwareClassification.UNKNOWN
         }
         applyUserVoiceRecording(e) {
-            if (!(0, L.default)(T.default)) return;
+            if (!(0, L.default)(s.default)) return;
             let _ = S.default.getRTCConnection();
             if (null == _) return;
-            if (e === s.default.getId()) {
+            if (e === T.default.getId()) {
                 _.setClipRecordUser(e, "audio", l.default.getSettings().clipsEnabled);
                 return
             }
@@ -171,8 +171,8 @@ function(e, _, E) {
             _.setClipRecordUser(e, "audio", E)
         }
         applyStreamRecording(e, _) {
-            if (!(0, L.default)(T.default)) return;
-            if (s.default.getId() === e) {
+            if (!(0, L.default)(s.default)) return;
+            if (T.default.getId() === e) {
                 let {
                     clipsEnabled: E
                 } = l.default.getSettings(), t = (0, R.areClipsEnabled)();

@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("719923"),
         i = E("513196"),
         I = E("49111"),
-        s = E("994428"),
-        T = E("646718");
+        T = E("994428"),
+        s = E("646718");
     let S = {
             desktop: i.FreemiumAppIconIds.DEFAULT,
             coachmarkImpressions: 0
@@ -32,7 +32,7 @@ function(e, _, E) {
                 r.default.track(I.AnalyticEvents.APP_ICON_UPDATED, {
                     icon_id: e,
                     user_premium_tier: null === (_ = n.default.getCurrentUser()) || void 0 === _ ? void 0 : _.premiumType,
-                    icon_premium_tier: e !== i.FreemiumAppIconIds.DEFAULT ? T.PremiumTypes.TIER_2 : null
+                    icon_premium_tier: e !== i.FreemiumAppIconIds.DEFAULT ? s.PremiumTypes.TIER_2 : null
                 })
             }
         };
@@ -77,7 +77,7 @@ function(e, _, E) {
             let {
                 markAsDismissed: _
             } = e;
-            N.client.coachmarkImpressions += 1, N.client.coachmarkImpressions >= 2 && (null == _ || _(s.ContentDismissActionType.UNKNOWN), u())
+            N.client.coachmarkImpressions += 1, N.client.coachmarkImpressions >= 2 && (null == _ || _(T.ContentDismissActionType.UNKNOWN), u())
         }
     })
 }

@@ -509,112 +509,112 @@ function(e, t, n) {
     }
 
     function X(e) {
-        var t, n;
+        var t, n, i, s;
         let {
-            subscription: i,
-            planId: s,
-            price: r,
-            includePremiumGuilds: a,
-            hasDiscountApplied: o,
-            activeDiscountDuration: l
-        } = e, u = y.default.formatPriceString(y.default.getDefaultPrice(D.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D.SubscriptionIntervalTypes.MONTH), d = ef(i) || null == i.paymentSourceId && !i.isPurchasedExternally && !(null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), c = null != r, f = i.status === R.SubscriptionStatusTypes.UNPAID && null !== i.latestInvoice && (null === (n = i.latestInvoice) || void 0 === n ? void 0 : n.status) === R.InvoiceStatusTypes.OPEN, _ = d ? R.SubscriptionStatusTypes.CANCELED : f ? R.SubscriptionStatusTypes.UNPAID : i.status, h = D.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (a ? et(i.additionalPlans) : 0);
-        switch (s) {
+            subscription: r,
+            planId: a,
+            price: o,
+            includePremiumGuilds: l,
+            hasDiscountApplied: u,
+            activeDiscountInfo: d
+        } = e, c = y.default.formatPriceString(y.default.getDefaultPrice(D.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D.SubscriptionIntervalTypes.MONTH), f = ef(r) || null == r.paymentSourceId && !r.isPurchasedExternally && !(null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), _ = null != o, h = r.status === R.SubscriptionStatusTypes.UNPAID && null !== r.latestInvoice && (null === (n = r.latestInvoice) || void 0 === n ? void 0 : n.status) === R.InvoiceStatusTypes.OPEN, g = f ? R.SubscriptionStatusTypes.CANCELED : h ? R.SubscriptionStatusTypes.UNPAID : r.status, m = D.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (l ? et(r.additionalPlans) : 0);
+        switch (a) {
             case D.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
             case D.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
-                switch (_) {
+                switch (g) {
                     case R.SubscriptionStatusTypes.CANCELED:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({
-                            price: r
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({
+                            price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE;
                     case R.SubscriptionStatusTypes.ACCOUNT_HOLD:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({
-                            price: r
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({
+                            price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE.format();
                     case R.SubscriptionStatusTypes.UNPAID:
                         return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAYMENT.format();
                     case R.SubscriptionStatusTypes.PAUSE_PENDING:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE.format({
-                            price: r,
-                            pauseDate: i.currentPeriodEnd
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE.format({
+                            price: o,
+                            pauseDate: r.currentPeriodEnd
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE.format({
-                            pauseDate: i.currentPeriodEnd
+                            pauseDate: r.currentPeriodEnd
                         });
                     default:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
-                            price: r
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
+                            price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_NO_PRICE
                 }
             case D.SubscriptionPlans.PREMIUM_MONTH_TIER_1:
             case D.SubscriptionPlans.PREMIUM_YEAR_TIER_1:
-                switch (_) {
+                switch (g) {
                     case R.SubscriptionStatusTypes.CANCELED:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({
-                            price: r
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({
+                            price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE;
                     case R.SubscriptionStatusTypes.ACCOUNT_HOLD:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({
-                            price: r
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({
+                            price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE.format();
                     case R.SubscriptionStatusTypes.UNPAID:
                         return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAYMENT.format();
                     case R.SubscriptionStatusTypes.CANCELED:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE.format({
-                            price: r,
-                            pauseDate: i.currentPeriodEnd
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE.format({
+                            price: o,
+                            pauseDate: r.currentPeriodEnd
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE.format({
-                            pauseDate: i.currentPeriodEnd
+                            pauseDate: r.currentPeriodEnd
                         });
                     default:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
-                            price: r
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
+                            price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_NO_PRICE
                 }
             case D.SubscriptionPlans.PREMIUM_MONTH_TIER_2:
             case D.SubscriptionPlans.PREMIUM_YEAR_TIER_2:
             case D.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2:
             case D.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2:
-                switch (_) {
+                switch (g) {
                     case R.SubscriptionStatusTypes.CANCELED:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
-                            price: r,
-                            num: h
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
+                            price: o,
+                            num: m
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE.format({
-                            num: h
+                            num: m
                         });
                     case R.SubscriptionStatusTypes.ACCOUNT_HOLD:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
-                            price: r,
-                            num: h
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
+                            price: o,
+                            num: m
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE.format({
-                            num: h
+                            num: m
                         });
                     case R.SubscriptionStatusTypes.UNPAID:
                         return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAYMENT.format({
-                            num: h
+                            num: m
                         });
                     case R.SubscriptionStatusTypes.PAUSE_PENDING:
-                        return c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE.format({
-                            price: r,
-                            num: h,
-                            pauseDate: i.currentPeriodEnd
+                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE.format({
+                            price: o,
+                            num: m,
+                            pauseDate: r.currentPeriodEnd
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE.format({
-                            num: h,
-                            pauseDate: i.currentPeriodEnd
+                            num: m,
+                            pauseDate: r.currentPeriodEnd
                         });
                     default:
-                        return o ? L.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-                            percent: 30,
-                            regularPrice: u,
-                            numMonths: null != l ? l : D.DISCOUNT_DURATION_FALLBACK
-                        }) : c ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
-                            price: r,
-                            num: h
+                        return u ? L.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
+                            percent: null !== (i = null == d ? void 0 : d.percentage) && void 0 !== i ? i : D.DISCOUNT_PERCENTAGE_FALLBACK,
+                            regularPrice: c,
+                            numMonths: null !== (s = null == d ? void 0 : d.duration) && void 0 !== s ? s : D.DISCOUNT_DURATION_FALLBACK
+                        }) : _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
+                            price: o,
+                            num: m
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_NO_PRICE.format({
-                            num: h
+                            num: m
                         })
                 }
             default:
-                throw Error("Invalid planId ".concat(s))
+                throw Error("Invalid planId ".concat(a))
         }
     }
 
@@ -625,7 +625,7 @@ function(e, t, n) {
             planId: i,
             includePremiumGuilds: s = !1,
             hasDiscountApplied: r = !1,
-            activeDiscountDuration: a
+            activeDiscountInfo: a
         } = e, o = p.default.get(i);
         return l(null != o, "Missing plan"), X({
             subscription: n,
@@ -645,7 +645,7 @@ function(e, t, n) {
             }(t, n, o),
             includePremiumGuilds: s,
             hasDiscountApplied: r,
-            activeDiscountDuration: a
+            activeDiscountInfo: a
         })
     }
 

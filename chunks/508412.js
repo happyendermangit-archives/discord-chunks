@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("629109"),
         i = E("689988"),
         I = E("605250"),
-        s = E("271938"),
-        T = E("42887"),
+        T = E("271938"),
+        s = E("42887"),
         S = E("945956"),
         N = E("235660"),
         O = E("800762"),
@@ -29,9 +29,9 @@ function(e, _, E) {
     let U = new I.default("GameConsoleManager");
     async function M(e) {
         let _ = S.default.getChannelId();
-        o(null == _, "Syncing to remote while in voice!"), e.selfMute !== T.default.isSelfMute() && await a.default.toggleSelfMute({
+        o(null == _, "Syncing to remote while in voice!"), e.selfMute !== s.default.isSelfMute() && await a.default.toggleSelfMute({
             syncRemote: !1
-        }), e.selfDeaf !== T.default.isSelfDeaf() && a.default.toggleSelfDeaf({
+        }), e.selfDeaf !== s.default.isSelfDeaf() && a.default.toggleSelfDeaf({
             syncRemote: !1
         })
     }
@@ -52,14 +52,14 @@ function(e, _, E) {
                     let _ = u.default.getAwaitingRemoteSessionInfo();
                     return e.find(e => {
                         let E = D.GAME_CONSOLE_SESSIONS.has(e.clientInfo.os),
-                            t = null != O.default.getVoiceStateForSession(s.default.getId(), e.sessionId),
+                            t = null != O.default.getVoiceStateForSession(T.default.getId(), e.sessionId),
                             o = null == _ || (0, L.coercePlatformTypeToConsoleType)(_.type) === e.clientInfo.os;
                         return E && o && t
                     })
                 }(e);
                 if (null == _) return null;
                 this.awaitRemoteTimeout.stop(), (0, R.connectToRemote)(_.sessionId);
-                let E = O.default.getVoiceStateForSession(s.default.getId(), _.sessionId);
+                let E = O.default.getVoiceStateForSession(T.default.getId(), _.sessionId);
                 null != E && M(E)
             }, this.handleAudioStateToggle = e => {
                 let {
@@ -67,9 +67,9 @@ function(e, _, E) {
                     context: E
                 } = e;
                 if (!_ || E !== c.MediaEngineContextTypes.DEFAULT) return;
-                let t = T.default.isSelfDeaf(),
-                    o = T.default.isSelfMute(),
-                    n = s.default.getId(),
+                let t = s.default.isSelfDeaf(),
+                    o = s.default.isSelfMute(),
+                    n = T.default.getId(),
                     r = u.default.getRemoteSessionId();
                 if (null == r) return;
                 let a = O.default.getVoiceStateForSession(n, r);

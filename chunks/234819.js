@@ -13,8 +13,8 @@ function(e, _, E) {
         a = E("603699"),
         i = E("697218"),
         I = E("983782"),
-        s = E("843455"),
-        T = E("619774");
+        T = E("843455"),
+        s = E("619774");
 
     function S() {
         var e;
@@ -27,17 +27,17 @@ function(e, _, E) {
             O = [];
         return !S && !N && O.push("ACTIVE"), S && O.push("IDLE"), N && O.push("AFK"), E && _ ? (0, t.jsx)(I.default, {
             children: (0, t.jsxs)("div", {
-                className: T.container,
+                className: s.container,
                 children: [(0, t.jsxs)("div", {
-                    className: T.status,
+                    className: s.status,
                     children: [(0, t.jsx)(n.Status, {
-                        status: O.includes("ACTIVE") ? s.StatusTypes.ONLINE : s.StatusTypes.IDLE,
-                        className: T.statusIndicator
+                        status: O.includes("ACTIVE") ? T.StatusTypes.ONLINE : T.StatusTypes.IDLE,
+                        className: s.statusIndicator
                     }), (0, t.jsx)(n.Text, {
                         variant: "text-md/normal",
                         children: "IDLE STATUS:"
                     }), (0, t.jsx)("div", {
-                        className: T.statusText,
+                        className: s.statusText,
                         children: (0, t.jsx)(n.Text, {
                             variant: "text-md/bold",
                             children: O.join(" + ")
