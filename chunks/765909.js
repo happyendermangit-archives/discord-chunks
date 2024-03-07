@@ -1,15 +1,15 @@
-function(t, e, n) {
+function(e, t, n) {
     "use strict";
-    n.r(e), n.d(e, {
+    n.r(t), n.d(t, {
         unsafeStringify: function() {
             return i
         }
     }), n("424973"), n("70102");
     let r = [];
-    for (let t = 0; t < 256; ++t) r.push((t + 256).toString(16).slice(1));
+    for (let e = 0; e < 256; ++e) r.push((e + 256).toString(16).slice(1));
 
-    function i(t) {
-        let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return r[t[e + 0]] + r[t[e + 1]] + r[t[e + 2]] + r[t[e + 3]] + "-" + r[t[e + 4]] + r[t[e + 5]] + "-" + r[t[e + 6]] + r[t[e + 7]] + "-" + r[t[e + 8]] + r[t[e + 9]] + "-" + r[t[e + 10]] + r[t[e + 11]] + r[t[e + 12]] + r[t[e + 13]] + r[t[e + 14]] + r[t[e + 15]]
+    function i(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return r[e[t + 0]] + r[e[t + 1]] + r[e[t + 2]] + r[e[t + 3]] + "-" + r[e[t + 4]] + r[e[t + 5]] + "-" + r[e[t + 6]] + r[e[t + 7]] + "-" + r[e[t + 8]] + r[e[t + 9]] + "-" + r[e[t + 10]] + r[e[t + 11]] + r[e[t + 12]] + r[e[t + 13]] + r[e[t + 14]] + r[e[t + 15]]
     }
 }

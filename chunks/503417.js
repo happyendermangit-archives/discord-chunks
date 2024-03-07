@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return T
+            return s
         }
     });
     var t = E("37983");
@@ -14,7 +14,7 @@ function(e, _, E) {
         i = E("587974"),
         I = E("457774");
 
-    function T(e) {
+    function s(e) {
         let {
             width: _ = 20,
             height: E = 20,

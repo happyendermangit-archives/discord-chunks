@@ -16,17 +16,17 @@ function(e, _, E) {
         a = E("102053"),
         i = E("95410"),
         I = E("75247");
-    let T = {
+    let s = {
             _state: void 0,
             _version: void 0
         },
-        s = null;
+        T = null;
     (t = class e extends I.default {
         getClass() {
             return this.constructor
         }
         static clearAll(_) {
-            return s = _, null == e._clearAllPromise && (e._clearAllPromise = new Promise(E => {
+            return T = _, null == e._clearAllPromise && (e._clearAllPromise = new Promise(E => {
                 requestIdleCallback(() => {
                     e.clearPersistQueue(_), e.allPersistKeys.forEach(E => {
                         e.shouldClear(_, E) && i.default.remove(E)
@@ -53,7 +53,7 @@ function(e, _, E) {
                 let _ = {};
                 return e.allPersistKeys.forEach(e => {
                     var E;
-                    _[e] = (null !== (E = i.default.get(e)) && void 0 !== E ? E : T)._state
+                    _[e] = (null !== (E = i.default.get(e)) && void 0 !== E ? E : s)._state
                 }), _
             })
         }
@@ -69,7 +69,7 @@ function(e, _, E) {
             this.initialize(_) && this.asyncPersist(), this._isInitialized ? this.emitChange() : (e.allPersistKeys.add(this.getClass().persistKey), this._isInitialized = !0)
         }
         static destroy() {
-            s = null, I.default.destroy(), e.clearPersistQueue({
+            T = null, I.default.destroy(), e.clearPersistQueue({
                 type: "all"
             }), e.allPersistKeys.clear(), e.userAgnosticPersistKeys.clear()
         }
@@ -87,7 +87,7 @@ function(e, _, E) {
             }
         }
         static migrateAndReadStoreState(_, E) {
-            if (null != s && e.shouldClear(s, _)) return i.default.remove(_), {
+            if (null != T && e.shouldClear(T, _)) return i.default.remove(_), {
                 state: void 0,
                 requiresPersist: !1
             };
@@ -96,7 +96,7 @@ function(e, _, E) {
                     _state: o,
                     _version: n,
                     ...r
-                } = null != t ? t : T,
+                } = null != t ? t : s,
                 a = null == E ? 0 : E.length;
             if (0 !== a && n !== a && null != E) {
                 let e = null != n ? n : 0,

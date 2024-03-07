@@ -11,39 +11,39 @@ function(e, _, E) {
         a = E("689988"),
         i = E("139321"),
         I = E("269596"),
-        T = E("945956"),
-        s = E("200521");
+        s = E("945956"),
+        T = E("200521");
     let S = {
             chance: .2,
             cooldown: 864e5
         },
         N = {
-            [s.FeedbackType.VOICE]: {
+            [T.FeedbackType.VOICE]: {
                 ...S,
                 hotspot: i.HotspotLocations.VOICE_CALL_FEEDBACK,
                 storageKey: "lastVoiceFeedback",
                 eligibilityChecks: [function(e) {
-                    let _ = T.default.getWasEverRtcConnected();
-                    return !_ || T.default.getWasEverMultiParticipant()
+                    let _ = s.default.getWasEverRtcConnected();
+                    return !_ || s.default.getWasEverMultiParticipant()
                 }]
             },
-            [s.FeedbackType.STREAM]: {
+            [T.FeedbackType.STREAM]: {
                 ...S,
                 hotspot: i.HotspotLocations.REPORT_PROBLEM_POST_STREAM,
                 storageKey: "lastStreamFeedback"
             },
-            [s.FeedbackType.VIDEO_BACKGROUND]: {
+            [T.FeedbackType.VIDEO_BACKGROUND]: {
                 ...S,
                 hotspot: i.HotspotLocations.VIDEO_BACKGROUND_FEEDBACK,
                 storageKey: "lastVideoBackgroundFeedback"
             },
-            [s.FeedbackType.ACTIVITY]: {
+            [T.FeedbackType.ACTIVITY]: {
                 cooldown: 0,
                 chance: .5,
                 hotspot: i.HotspotLocations.POST_ACTIVITY_FEEDBACK,
                 storageKey: "lastActivityFeedback"
             },
-            [s.FeedbackType.IN_APP_REPORTS]: {
+            [T.FeedbackType.IN_APP_REPORTS]: {
                 cooldown: 1728e5,
                 chance: .5,
                 hotspot: i.HotspotLocations.IN_APP_REPORTS_FEEDBACK,
@@ -74,7 +74,7 @@ function(e, _, E) {
                 let E = N[e],
                     t = null !== (_ = E.eligibilityChecks) && void 0 !== _ ? _ : [];
                 return [R, A, O].every(e => e(E)) && t.every(e => e(E))
-            })(e) && (null == this.feedbackTypeToShow || !(s.FeedbackTypePrecedence[this.feedbackTypeToShow] < s.FeedbackTypePrecedence[e])) && (this.feedbackTypeToShow = e, this.showFeedbackModalDebounced(_))
+            })(e) && (null == this.feedbackTypeToShow || !(T.FeedbackTypePrecedence[this.feedbackTypeToShow] < T.FeedbackTypePrecedence[e])) && (this.feedbackTypeToShow = e, this.showFeedbackModalDebounced(_))
         }
         constructor(...e) {
             super(...e), this.feedbackTypeToShow = null, this.showFeedbackModalDebounced = n.debounce(e => {

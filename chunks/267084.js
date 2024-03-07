@@ -1,22 +1,22 @@
-function(t, e, n) {
+function(e, t, n) {
     "use strict";
-    n.r(e), n.d(e, {
+    n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var r = n("292155"),
         i = n("379384"),
         o = n("765909"),
-        a = function(t, e, n) {
-            if (r.default.randomUUID && !e && !t) return r.default.randomUUID();
-            t = t || {};
-            let a = t.random || (t.rng || (0, i.default))();
-            if (a[6] = 15 & a[6] | 64, a[8] = 63 & a[8] | 128, e) {
+        s = function(e, t, n) {
+            if (r.default.randomUUID && !t && !e) return r.default.randomUUID();
+            e = e || {};
+            let s = e.random || (e.rng || (0, i.default))();
+            if (s[6] = 15 & s[6] | 64, s[8] = 63 & s[8] | 128, t) {
                 n = n || 0;
-                for (let t = 0; t < 16; ++t) e[n + t] = a[t];
-                return e
+                for (let e = 0; e < 16; ++e) t[n + e] = s[e];
+                return t
             }
-            return (0, o.unsafeStringify)(a)
+            return (0, o.unsafeStringify)(s)
         }
 }

@@ -8,7 +8,7 @@ function(t, e, n) {
             return k
         },
         createMemoryHistory: function() {
-            return E
+            return S
         },
         createLocation: function() {
             return h
@@ -149,13 +149,13 @@ function(t, e, n) {
             return O && (o = c(o, O)), h(o, r, n)
         }
 
-        function S() {
+        function E() {
             return Math.random().toString(36).substr(2, w)
         }
-        var E = d();
+        var S = d();
 
         function P(t) {
-            (0, r.default)(z, t), z.length = n.length, E.notifyListeners(z.location, z.action)
+            (0, r.default)(z, t), z.length = n.length, S.notifyListeners(z.location, z.action)
         }
 
         function C(t) {
@@ -168,7 +168,7 @@ function(t, e, n) {
         var j = !1;
 
         function R(t) {
-            j ? (j = !1, P()) : E.confirmTransitionTo(t, "POP", _, function(e) {
+            j ? (j = !1, P()) : S.confirmTransitionTo(t, "POP", _, function(e) {
                 e ? P({
                     action: "POP",
                     location: t
@@ -204,8 +204,8 @@ function(t, e, n) {
                 createHref: L,
                 push: function(t, e) {
                     var r = "PUSH",
-                        o = h(t, e, S(), z.location);
-                    E.confirmTransitionTo(o, r, _, function(t) {
+                        o = h(t, e, E(), z.location);
+                    S.confirmTransitionTo(o, r, _, function(t) {
                         if (t) {
                             var e = L(o),
                                 a = o.key,
@@ -229,8 +229,8 @@ function(t, e, n) {
                 },
                 replace: function(t, e) {
                     var r = "REPLACE",
-                        o = h(t, e, S(), z.location);
-                    E.confirmTransitionTo(o, r, _, function(t) {
+                        o = h(t, e, E(), z.location);
+                    S.confirmTransitionTo(o, r, _, function(t) {
                         if (t) {
                             var e = L(o),
                                 a = o.key,
@@ -259,14 +259,14 @@ function(t, e, n) {
                 },
                 block: function(t) {
                     void 0 === t && (t = !1);
-                    var e = E.setPrompt(t);
+                    var e = S.setPrompt(t);
                     return !N && (I(1), N = !0),
                         function() {
                             return N && (N = !1, I(-1)), e()
                         }
                 },
                 listen: function(t) {
-                    var e = E.appendListener(t);
+                    var e = S.appendListener(t);
                     return I(1),
                         function() {
                             I(-1), e()
@@ -323,14 +323,14 @@ function(t, e, n) {
             g = m.encodePath,
             k = m.decodePath;
 
-        function S() {
+        function E() {
             var t = k(w());
             return p && (t = c(t, p)), h(t)
         }
-        var E = d();
+        var S = d();
 
         function P(t) {
-            (0, r.default)(z, t), z.length = e.length, E.notifyListeners(z.location, z.action)
+            (0, r.default)(z, t), z.length = e.length, S.notifyListeners(z.location, z.action)
         }
         var C = !1,
             A = null;
@@ -340,12 +340,12 @@ function(t, e, n) {
                 e = g(t);
             if (t !== e) O(e);
             else {
-                var n, r, i = S(),
+                var n, r, i = E(),
                     a = z.location;
                 if (!C && (n = a, r = i, n.pathname === r.pathname && n.search === r.search && n.hash === r.hash) || A === f(i)) return;
                 A = null,
                     function(t) {
-                        C ? (C = !1, P()) : E.confirmTransitionTo(t, "POP", o, function(e) {
+                        C ? (C = !1, P()) : S.confirmTransitionTo(t, "POP", o, function(e) {
                             e ? P({
                                 action: "POP",
                                 location: t
@@ -363,7 +363,7 @@ function(t, e, n) {
         var R = w(),
             T = g(R);
         R !== T && O(T);
-        var M = S(),
+        var M = E(),
             L = [f(M)];
 
         function V(t) {
@@ -387,7 +387,7 @@ function(t, e, n) {
                 push: function(t, e) {
                     var n = "PUSH",
                         r = h(t, void 0, void 0, z.location);
-                    E.confirmTransitionTo(r, n, o, function(t) {
+                    S.confirmTransitionTo(r, n, o, function(t) {
                         if (t) {
                             var e = f(r),
                                 i = g(p + e);
@@ -406,7 +406,7 @@ function(t, e, n) {
                 replace: function(t, e) {
                     var n = "REPLACE",
                         r = h(t, void 0, void 0, z.location);
-                    E.confirmTransitionTo(r, n, o, function(t) {
+                    S.confirmTransitionTo(r, n, o, function(t) {
                         if (t) {
                             var e = f(r),
                                 i = g(p + e);
@@ -427,14 +427,14 @@ function(t, e, n) {
                 },
                 block: function(t) {
                     void 0 === t && (t = !1);
-                    var e = E.setPrompt(t);
+                    var e = S.setPrompt(t);
                     return !N && (I(1), N = !0),
                         function() {
                             return N && (N = !1, I(-1)), e()
                         }
                 },
                 listen: function(t) {
-                    var e = E.appendListener(t);
+                    var e = S.appendListener(t);
                     return I(1),
                         function() {
                             I(-1), e()
@@ -444,11 +444,11 @@ function(t, e, n) {
         return z
     }
 
-    function S(t, e, n) {
+    function E(t, e, n) {
         return Math.min(Math.max(t, e), n)
     }
 
-    function E(t) {
+    function S(t) {
         void 0 === t && (t = {});
         var e = t,
             n = e.getUserConfirmation,
@@ -466,13 +466,13 @@ function(t, e, n) {
         function p() {
             return Math.random().toString(36).substr(2, s)
         }
-        var v = S(void 0 === a ? 0 : a, 0, o.length - 1),
+        var v = E(void 0 === a ? 0 : a, 0, o.length - 1),
             y = o.map(function(t) {
                 return "string" == typeof t ? h(t, void 0, p()) : h(t, void 0, t.key || p())
             });
 
         function m(t) {
-            var e = S(g.index + t, 0, g.entries.length - 1),
+            var e = E(g.index + t, 0, g.entries.length - 1),
                 r = g.entries[e];
             c.confirmTransitionTo(r, "POP", n, function(t) {
                 t ? l({

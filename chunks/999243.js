@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("162771"),
         i = E("718517"),
         I = E("568734"),
-        T = E("685829"),
-        s = E("863636"),
+        s = E("685829"),
+        T = E("863636"),
         S = E("937692"),
         N = E("49111"),
         O = E("724210"),
@@ -37,7 +37,7 @@ function(e, _, E) {
                 if (R === _ && l === E) return;
                 if (R = null != _ ? _ : null, l = null != E ? E : null, null == R || null == l) return;
                 let t = r.default.getGuild(_);
-                null != t && t.hasFeature(N.GuildFeatures.COMMUNITY) && s.default.shouldFetchPrompts(R, 8 * i.default.Millis.HOUR) && (0, T.loadOnboardingPrompts)(R), this._openOnboardingIfIncomplete(R, E)
+                null != t && t.hasFeature(N.GuildFeatures.COMMUNITY) && T.default.shouldFetchPrompts(R, 8 * i.default.Millis.HOUR) && (0, s.loadOnboardingPrompts)(R), this._openOnboardingIfIncomplete(R, E)
             }, this.handleGuildDelete = e => {
                 let {
                     guild: _

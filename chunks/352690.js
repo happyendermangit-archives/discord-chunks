@@ -13,7 +13,7 @@ function(e, _, E) {
         i = E("49111");
     let I = new Set;
 
-    function T(e) {
+    function s(e) {
         switch (e) {
             case o.MediaEngineContextTypes.DEFAULT:
                 return t.StoredCrashInformation.VideoMediaSessionId;
@@ -22,9 +22,9 @@ function(e, _, E) {
         }
     }
 
-    function s(e) {
+    function T(e) {
         var _;
-        a.default.setCrashInformation(T(e.context), null !== (_ = e.mediaSessionId) && void 0 !== _ ? _ : null)
+        a.default.setCrashInformation(s(e.context), null !== (_ = e.mediaSessionId) && void 0 !== _ ? _ : null)
     }
 
     function S(e) {
@@ -35,7 +35,7 @@ function(e, _, E) {
                 I.add(E), a.default.setCrashInformation(t.StoredCrashInformation.HasRTCConnection, 1);
                 break;
             case i.RTCConnectionStates.DISCONNECTED:
-                a.default.setCrashInformation(T(e.context), null), I.delete(E), 0 === I.size && ! function() {
+                a.default.setCrashInformation(s(e.context), null), I.delete(E), 0 === I.size && ! function() {
                     let e = [t.StoredCrashInformation.HasRTCConnection, t.StoredCrashInformation.IsSendingVideo, t.StoredCrashInformation.IsSendingStream, t.StoredCrashInformation.IsReceivingVideo, t.StoredCrashInformation.IsReceivingStream];
                     for (let _ of e) a.default.setCrashInformation(_, 0)
                 }()
@@ -60,7 +60,7 @@ function(e, _, E) {
             super(...e), this.actions = {
                 RTC_CONNECTION_STATE: S,
                 RTC_CONNECTION_VIDEO: N,
-                MEDIA_SESSION_JOINED: s
+                MEDIA_SESSION_JOINED: T
             }
         }
     }

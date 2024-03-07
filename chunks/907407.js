@@ -3,7 +3,7 @@ function(e, _, E) {
     let t, o;
     E.r(_), E.d(_, {
         FormattedMessage: function() {
-            return s
+            return T
         },
         setUpdateRules: function() {
             return S
@@ -17,8 +17,8 @@ function(e, _, E) {
         a = E("404828"),
         i = E.n(a),
         I = E("841206"),
-        T = E("853812");
-    class s {
+        s = E("853812");
+    class T {
         format(e) {
             if (!this.hasMarkdown) return this.intlMessage.format(e);
             let [_, E] = this.getContext(e);
@@ -32,7 +32,7 @@ function(e, _, E) {
             return this.intlMessage.format(e)
         }
         getContext(e) {
-            let _ = T.UNSAFE_RE.test(this.message),
+            let _ = s.UNSAFE_RE.test(this.message),
                 E = {};
             if (_) {
                 let _ = 0;
@@ -41,7 +41,7 @@ function(e, _, E) {
             return [e, E]
         }
         constructor(e, _, E) {
-            this.message = E ? e : e.replace(T.UNSAFE_RE_ALL, ""), this.hasMarkdown = E, this.intlMessage = new r(this.message, _)
+            this.message = E ? e : e.replace(s.UNSAFE_RE_ALL, ""), this.hasMarkdown = E, this.intlMessage = new r(this.message, _)
         }
     }
 
@@ -70,8 +70,8 @@ function(e, _, E) {
     function N(e, _) {
         if (null == e) return "";
         null == t && S(E("186372").default), e = e.replace(/^\n+|\n+$/g, "");
-        let o = T.FORMAT_RE.test(e),
-            n = T.MARKDOWN_RE.test(e);
-        return o || n ? new s(e, _, n) : e
+        let o = s.FORMAT_RE.test(e),
+            n = s.MARKDOWN_RE.test(e);
+        return o || n ? new T(e, _, n) : e
     }
 }

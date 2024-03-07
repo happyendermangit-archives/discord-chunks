@@ -15,26 +15,26 @@ function(e, _, E) {
         a = E("168973"),
         i = E("374363"),
         I = E("599110"),
-        T = E("32531"),
-        s = E("714657"),
+        s = E("32531"),
+        T = E("714657"),
         S = E("49111"),
         N = E("646718"),
         O = E("116319");
     let A = () => {
-            let e = (0, o.useStateFromStores)([s.default], () => s.default.gradientPreset),
+            let e = (0, o.useStateFromStores)([T.default], () => T.default.gradientPreset),
                 _ = (0, o.useStateFromStores)([a.default], () => a.default.useSystemTheme === O.SystemThemeState.ON),
                 [E, n] = (0, t.useState)(_);
             return (0, t.useEffect)(() => {
                 null == e && n(_)
             }, [e, _]), (0, t.useCallback)(() => {
-                if (null != e)(0, T.resetPreviewClientTheme)(), E && (0, r.setUseSystemTheme)(O.SystemThemeState.ON)
+                if (null != e)(0, s.resetPreviewClientTheme)(), E && (0, r.setUseSystemTheme)(O.SystemThemeState.ON)
             }, [e, E])
         },
         R = () => {
             let {
                 previewPaneVariant: e
-            } = (0, o.useStateFromStoresObject)([s.default], () => ({
-                previewPaneVariant: s.default.isPreview ? N.AnalyticsPremiumFeatureTiers.FREE : N.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
+            } = (0, o.useStateFromStoresObject)([T.default], () => ({
+                previewPaneVariant: T.default.isPreview ? N.AnalyticsPremiumFeatureTiers.FREE : N.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
             })), _ = (0, o.useStateFromStores)([i.default], () => {
                 var e;
                 let _ = null === (e = i.default.settings.appearance) || void 0 === e ? void 0 : e.theme;

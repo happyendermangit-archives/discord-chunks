@@ -11,8 +11,8 @@ function(e, _, E) {
         i = E("102053");
     E("704744");
     var I = E("782648"),
-        T = E("805833");
-    let s = [],
+        s = E("805833");
+    let T = [],
         S = !1,
         N = new Promise(e => {
             t = () => {
@@ -21,17 +21,17 @@ function(e, _, E) {
         });
     (o = class {
         static initialize() {
-            S = !0, s.forEach(e => e.initializeIfNeeded()), null != t && t()
+            S = !0, T.forEach(e => e.initializeIfNeeded()), null != t && t()
         }
         static destroy() {
-            s.length = 0, T.default.destroy()
+            T.length = 0, s.default.destroy()
         }
         static getAll() {
-            return s
+            return T
         }
         registerActionHandlers(e, _) {
             this._dispatcher.register(this.getName(), e, e => {
-                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny()) && (T.default.markChanged(this), T.default.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && T.default.resume(!1))
+                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny()) && (s.default.markChanged(this), s.default.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && s.default.resume(!1))
             }, _, this._dispatchToken)
         }
         getName() {
@@ -53,7 +53,7 @@ function(e, _, E) {
             this.waitFor(...e);
             let r = 0,
                 a = () => {
-                    r !== T.default.getChangeSentinel() && (r = T.default.getChangeSentinel(), !1 !== _() && this.emitChange())
+                    r !== s.default.getChangeSentinel() && (r = s.default.getChangeSentinel(), !1 !== _() && this.emitChange())
                 };
             t = null != E ? E : 0, o = a, n = null, a = 0 === t ? function() {
                 clearImmediate(n), n = setImmediate(o)
@@ -73,7 +73,7 @@ function(e, _, E) {
             this._dispatcher.addDependencies(this.getDispatchToken(), t.filter(e => null != e))
         }
         emitChange() {
-            T.default.markChanged(this)
+            s.default.markChanged(this)
         }
         getDispatchToken() {
             return this._dispatchToken
@@ -83,7 +83,7 @@ function(e, _, E) {
             this._mustEmitChanges = e
         }
         constructor(e, _, E) {
-            this._changeCallbacks = new I.default, this._reactChangeCallbacks = new I.default, this._isInitialized = !1, this.addChangeListener = this._changeCallbacks.add, this.addConditionalChangeListener = this._changeCallbacks.addConditional, this.removeChangeListener = this._changeCallbacks.remove, this.addReactChangeListener = this._reactChangeCallbacks.add, this.removeReactChangeListener = this._reactChangeCallbacks.remove, this._dispatcher = e, this._dispatchToken = this._dispatcher.createToken(), this.registerActionHandlers(null != _ ? _ : {}, E), s.push(this), S && this.initializeIfNeeded()
+            this._changeCallbacks = new I.default, this._reactChangeCallbacks = new I.default, this._isInitialized = !1, this.addChangeListener = this._changeCallbacks.add, this.addConditionalChangeListener = this._changeCallbacks.addConditional, this.removeChangeListener = this._changeCallbacks.remove, this.addReactChangeListener = this._reactChangeCallbacks.add, this.removeReactChangeListener = this._reactChangeCallbacks.remove, this._dispatcher = e, this._dispatchToken = this._dispatcher.createToken(), this.registerActionHandlers(null != _ ? _ : {}, E), T.push(this), S && this.initializeIfNeeded()
         }
     }).initialized = N, n = o
 }

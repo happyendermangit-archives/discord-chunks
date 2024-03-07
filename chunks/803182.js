@@ -146,8 +146,8 @@ function(t, e, n) {
             })
         })
     }
-    var S = {},
-        E = 0;
+    var E = {},
+        S = 0;
 
     function P(t, e) {
         void 0 === e && (e = {}), ("string" == typeof e || Array.isArray(e)) && (e = {
@@ -166,14 +166,14 @@ function(t, e, n) {
             if (e) return e;
             var r = function(t, e) {
                     var n = "" + e.end + e.strict + e.sensitive,
-                        r = S[n] || (S[n] = {});
+                        r = E[n] || (E[n] = {});
                     if (r[t]) return r[t];
                     var i = [],
                         o = {
                             regexp: p(t, i, e),
                             keys: i
                         };
-                    return E < 1e4 && (r[t] = o, E++), o
+                    return S < 1e4 && (r[t] = o, S++), o
                 }(n, {
                     end: o,
                     strict: u,

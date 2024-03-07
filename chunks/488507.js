@@ -10,8 +10,8 @@ function(e, _, E) {
         a = E("913144"),
         i = E("115718"),
         I = E("689988"),
-        T = E("49671"),
-        s = E("161454"),
+        s = E("49671"),
+        T = E("161454"),
         S = E("703370"),
         N = E("860957"),
         O = E("901165"),
@@ -281,7 +281,7 @@ function(e, _, E) {
                     setting_notification_position: O.default.getNotificationPositionMode(),
                     setting_chat_notification: O.default.getTextChatNotificationMode()
                 },
-                a = (0, s.getOverlayGameStatus)(this.game),
+                a = (0, T.getOverlayGameStatus)(this.game),
                 i = {
                     event_uuid: this.uuid,
                     overlay_usage_stats_version: 2,
@@ -305,7 +305,7 @@ function(e, _, E) {
                     soundboard_shown_duration: this.soundboardShownTimer.elapsed().asMilliseconds(),
                     soundboard_shown_count: this.soundboardShownCount,
                     soundboard_keep_open_count: this.soundboardKeepOpenCount,
-                    hardware_display_count: null !== (n = await (null === T.default || void 0 === T.default ? void 0 : null === (_ = T.default.hardware) || void 0 === _ ? void 0 : null === (e = _.getDisplayCount) || void 0 === e ? void 0 : e.call(_))) && void 0 !== n ? n : null,
+                    hardware_display_count: null !== (n = await (null === s.default || void 0 === s.default ? void 0 : null === (_ = s.default.hardware) || void 0 === _ ? void 0 : null === (e = _.getDisplayCount) || void 0 === e ? void 0 : e.call(_))) && void 0 !== n ? n : null,
                     message_ack_count: this.overlayMessageAckCount,
                     message_created_count: this.overlayMessageCreateCount,
                     desktop_message_ack_count: this.desktopMessageAckCount,
@@ -357,7 +357,7 @@ function(e, _, E) {
             for (let _ of Object.values(P.gamesByPid)) _.rtcConnectionTimer.toggle(e)
         }
         constructor(e) {
-            this.game = e, this.uuid = crypto.randomUUID(), this.notificationAnalytics = new U, this.widgetAnalytics = new M, this.uiUnlockedCount = 0, this.uiLockedCount = 0, this.gameFocusChangedCount = 0, this.gameConcurrentGameCount = 0, this.overlayMessageAckCount = 0, this.overlayMessageCreateCount = 0, this.gameTimer = r.StopWatch.startNew(), this.gameFocusedTimer = new r.StopWatch, this.unlockedTimer = new r.StopWatch, this.rtcConnectionTimer = new r.StopWatch, this.desktopFocusedTimer = new r.StopWatch, this.desktopFocusChangedCount = 0, this.desktopMessageAckCount = 0, this.desktopMessageCreateCount = 0, this.soundboardShownTimer = new r.StopWatch, this.soundboardShownCount = 0, this.soundboardKeepOpenCount = 0, this.muteToggledCount = 0, this.screenAnalytics = new h(e), this.overlayStatus = s.default.getGameOverlayStatus(e), P.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), F.hasConnection() && this.rtcConnectionTimer.start()
+            this.game = e, this.uuid = crypto.randomUUID(), this.notificationAnalytics = new U, this.widgetAnalytics = new M, this.uiUnlockedCount = 0, this.uiLockedCount = 0, this.gameFocusChangedCount = 0, this.gameConcurrentGameCount = 0, this.overlayMessageAckCount = 0, this.overlayMessageCreateCount = 0, this.gameTimer = r.StopWatch.startNew(), this.gameFocusedTimer = new r.StopWatch, this.unlockedTimer = new r.StopWatch, this.rtcConnectionTimer = new r.StopWatch, this.desktopFocusedTimer = new r.StopWatch, this.desktopFocusChangedCount = 0, this.desktopMessageAckCount = 0, this.desktopMessageCreateCount = 0, this.soundboardShownTimer = new r.StopWatch, this.soundboardShownCount = 0, this.soundboardKeepOpenCount = 0, this.muteToggledCount = 0, this.screenAnalytics = new h(e), this.overlayStatus = T.default.getGameOverlayStatus(e), P.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), F.hasConnection() && this.rtcConnectionTimer.start()
         }
     }
 

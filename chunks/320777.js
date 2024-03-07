@@ -9,8 +9,8 @@ function(e, _, E) {
         a = E("446674"),
         i = E("429030"),
         I = E("688817"),
-        T = E("767251"),
-        s = E("49671"),
+        s = E("767251"),
+        T = E("49671"),
         S = E("951212"),
         N = E("424948");
     E("762017");
@@ -19,9 +19,9 @@ function(e, _, E) {
         R = E("648387"),
         l = E("49111"),
         u = E("782340");
-    (0, i.setUpdateRules)(T.default), (0, n.default)(u.default, o.default, s.default), a.default.Emitter.injectBatchEmitChanges(r.batchUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
+    (0, i.setUpdateRules)(s.default), (0, n.default)(u.default, o.default, T.default), a.default.Emitter.injectBatchEmitChanges(r.batchUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
     let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-    new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("272993", ", Version Hash: ").concat("840c1a2997aff0c569b3e708a205d9b5f805bef2")), t.default.setTags({
+    new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("273026", ", Version Hash: ").concat("536579ceddb63c07ce74c4900e9a821dec049505")), t.default.setTags({
         appContext: l.CURRENT_APP_CONTEXT
     }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
 }

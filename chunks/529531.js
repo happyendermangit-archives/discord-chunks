@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("446674"),
         i = E("77078"),
         I = E("913144"),
-        T = E("79112"),
-        s = E("206625"),
+        s = E("79112"),
+        T = E("206625"),
         S = E("206230"),
         N = E("812204"),
         O = E("685665"),
@@ -85,7 +85,7 @@ function(e, _, E) {
                 children: [o && (0, t.jsx)(p, {}), (0, t.jsx)(i.Button, {
                     className: m.footerButton,
                     onClick: () => {
-                        null == E || E(M.ContentDismissActionType.DISMISS), G(), !_ && T.default.open()
+                        null == E || E(M.ContentDismissActionType.DISMISS), G(), !_ && s.default.open()
                     },
                     color: i.Button.Colors.PRIMARY,
                     size: i.Button.Sizes.MEDIUM,
@@ -101,7 +101,7 @@ function(e, _, E) {
         } = e, {
             analyticsLocations: n,
             AnalyticsLocationProvider: I
-        } = (0, O.default)(N.default.APP_ICON_EDITOR), T = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
+        } = (0, O.default)(N.default.APP_ICON_EDITOR), s = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
             isUpsellPreview: A,
             isEditorOpen: R,
             shouldEditorAnimate: l
@@ -116,10 +116,10 @@ function(e, _, E) {
                 location_stack: n
             })
         }, [A, n]);
-        let L = (0, s.default)(null, A ? G : U.NOOP);
+        let L = (0, T.default)(null, A ? G : U.NOOP);
         return (o.useEffect(() => {
             if (A && !R) return G
-        }, [A, R]), null == T) ? null : (0, t.jsx)(I, {
+        }, [A, R]), null == s) ? null : (0, t.jsx)(I, {
             children: (0, t.jsx)("div", {
                 ref: L,
                 className: r(m.editor, l ? m.editorAnimate : null),

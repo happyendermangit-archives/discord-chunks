@@ -57,8 +57,8 @@ function(e, _, E) {
         a = E("296892"),
         i = E("889014"),
         I = E("913491"),
-        T = E("233069"),
-        s = E("271938"),
+        s = E("233069"),
+        T = E("271938"),
         S = E("42203"),
         N = E("957255"),
         O = E("299039"),
@@ -106,7 +106,7 @@ function(e, _, E) {
     }
 
     function c(e, _, E) {
-        return !(__OVERLAY__ || !e || !T.THREADED_CHANNEL_TYPES.has(_.type) || null != E && (E.hasFlag(R.MessageFlags.HAS_THREAD) || (0, I.default)(E))) && !0
+        return !(__OVERLAY__ || !e || !s.THREADED_CHANNEL_TYPES.has(_.type) || null != E && (E.hasFlag(R.MessageFlags.HAS_THREAD) || (0, I.default)(E))) && !0
     }
 
     function d(e) {
@@ -135,7 +135,7 @@ function(e, _, E) {
     function M(e) {
         let _ = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(null == e ? void 0 : e.parent_id)),
             E = (0, r.useStateFromStores)([N.default], () => null != _ && N.default.can(R.Permissions.MANAGE_THREADS, _), [_]),
-            t = (0, r.useStateFromStores)([s.default], () => s.default.getId());
+            t = (0, r.useStateFromStores)([T.default], () => T.default.getId());
         return !!(null != e && null != _ && e.isThread()) && (!!E || !e.isLockedThread() && (e.ownerId === t || !1))
     }
 

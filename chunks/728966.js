@@ -12,17 +12,17 @@ function(e, _, E) {
         a = E("102985"),
         i = E("800762"),
         I = E("316133"),
-        T = E("709681");
-    let s = (0, T.createSoundForPack)("call_calling", o.default.getSoundpack());
+        s = E("709681");
+    let T = (0, s.createSoundForPack)("call_calling", o.default.getSoundpack());
     class S extends t.default {
         handleSoundpackUpdate() {
-            s.stop(), s = (0, T.createSoundForPack)("call_calling", o.default.getSoundpack())
+            T.stop(), T = (0, s.createSoundForPack)("call_calling", o.default.getSoundpack())
         }
         handleRingUpdate() {
             let e = n.default.getCalls().filter(e => e.ringing.length > 0 && i.default.getCurrentClientVoiceChannelId(null) === e.channelId),
                 _ = i.default.getCurrentClientVoiceChannelId(null),
                 E = null != _ && I.default.countVoiceStatesForChannel(_) >= 2;
-            E || !(e.length > 0) || r.default.isSoundDisabled("call_calling") || a.default.disableSounds ? s.stop() : s.loop()
+            E || !(e.length > 0) || r.default.isSoundDisabled("call_calling") || a.default.disableSounds ? T.stop() : T.loop()
         }
         constructor(...e) {
             super(...e), this.stores = new Map().set(n.default, this.handleRingUpdate).set(r.default, this.handleRingUpdate).set(a.default, this.handleRingUpdate).set(i.default, this.handleRingUpdate).set(o.default, this.handleSoundpackUpdate)

@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("42203"),
         i = E("377253"),
         I = E("957255"),
-        T = E("18494"),
-        s = E("697218"),
+        s = E("18494"),
+        T = E("697218"),
         S = E("923510"),
         N = E("285857"),
         O = E("49111");
@@ -29,11 +29,11 @@ function(e, _, E) {
                     suppress: n,
                     requestToSpeakTimestamp: A
                 } = e;
-                if (T.default.getVoiceChannelId() !== _ || !n || null == _ || E === r.default.getId()) return;
+                if (s.default.getVoiceChannelId() !== _ || !n || null == _ || E === r.default.getId()) return;
                 let R = I.default.can(S.MODERATE_STAGE_CHANNEL_PERMISSIONS, a.default.getChannel(_));
                 if (R) {
                     if (null != A) {
-                        let e = s.default.getUser(E);
+                        let e = T.default.getUser(E);
                         null != e && (0, N.sendStageRequestToSpeakEphemeralMessage)(_, e, A)
                     } else {
                         let e = i.default.getMessages(_),

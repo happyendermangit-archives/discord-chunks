@@ -13,8 +13,8 @@ function(e, _, E) {
         link: a,
         strong: i,
         u: I,
-        br: T,
-        em: s,
+        br: s,
+        em: T,
         image: S,
         text: N
     } = t.defaultRules;
@@ -31,8 +31,8 @@ function(e, _, E) {
         },
         strong: i,
         u: I,
-        br: T,
-        em: s,
+        br: s,
+        em: T,
         image: S,
         hook: {
             order: N.order,

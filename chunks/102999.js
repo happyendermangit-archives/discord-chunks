@@ -12,8 +12,8 @@ function(e, _, E) {
         a = E("915639"),
         i = E("787910"),
         I = E("90404"),
-        T = E("782340"),
-        s = E("386161");
+        s = E("782340"),
+        T = E("386161");
 
     function S(e) {
         let {
@@ -21,14 +21,14 @@ function(e, _, E) {
             children: E
         } = e, [o, r] = (0, n.useStateFromStoresArray)([i.default], () => [i.default.isLoading(), i.default.getError()]);
         return null != r ? (0, t.jsx)(I.default, {
-            title: T.default.Messages.I18N_LOCALE_LOADING_ERROR.format({
+            title: s.default.Messages.I18N_LOCALE_LOADING_ERROR.format({
                 locale: _
             }),
             note: (0, t.jsx)("span", {
                 children: r.message
             })
         }) : o ? __OVERLAY__ ? null : (0, t.jsx)("div", {
-            className: s.loading
+            className: T.loading
         }) : E
     }
     class N extends o.Component {

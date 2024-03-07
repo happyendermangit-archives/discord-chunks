@@ -11,8 +11,8 @@ function(e, _, E) {
             return y
         }
     }), E("222007"), E("70102"), E("424973");
-    var t, o, n, r, a, i, I, T, s = E("627445"),
-        S = E.n(s),
+    var t, o, n, r, a, i, I, s, T = E("627445"),
+        S = E.n(T),
         N = E("817792"),
         O = E("872717"),
         A = E("95410"),
@@ -65,7 +65,7 @@ function(e, _, E) {
             windowHandle: null !== (a = e.windowHandle) && void 0 !== a ? a : null,
             fullscreenType: null !== (i = e.fullscreenType) && void 0 !== i ? i : R.RunningProcessFullscreenType.UNKNOWN
         }
-    }(I = a || (a = {}))[I.Camera = 0] = "Camera", I[I.Microphone = 1] = "Microphone", I[I.Photo = 2] = "Photo", I[I.InputMonitoring = 3] = "InputMonitoring", I[I.ScreenRecording = 4] = "ScreenRecording", (T = i || (i = {})).VIDEO = "VIDEO", T.MUTE = "MUTE", T.DEAFEN = "DEAFEN", T.DISCONNECT = "DISCONNECT";
+    }(I = a || (a = {}))[I.Camera = 0] = "Camera", I[I.Microphone = 1] = "Microphone", I[I.Photo = 2] = "Photo", I[I.InputMonitoring = 3] = "InputMonitoring", I[I.ScreenRecording = 4] = "ScreenRecording", (s = i || (i = {})).VIDEO = "VIDEO", s.MUTE = "MUTE", s.DEAFEN = "DEAFEN", s.DISCONNECT = "DISCONNECT";
     var y = {
         requireModule: e => D.nativeModules.requireModule(e),
         ensureModule: e => l.isPlatformEmbedded ? __OVERLAY__ && P.has(e) ? Promise.resolve() : D.nativeModules.ensureModule(e) : Promise.reject(Error("not embedded")),
@@ -392,12 +392,12 @@ function(e, _, E) {
                 ...E
             }, I = _;
             "application/json" === i && (I = JSON.stringify(_));
-            let T = n * (a / 1e3),
-                s = Math.ceil(I.length / T),
-                S = Array(s);
-            for (let e = 0; e < s; e++) {
-                let _ = e * T;
-                S[e] = I.substring(_, _ + T)
+            let s = n * (a / 1e3),
+                T = Math.ceil(I.length / s),
+                S = Array(T);
+            for (let e = 0; e < T; e++) {
+                let _ = e * s;
+                S[e] = I.substring(_, _ + s)
             }
             return new Promise((e, _) => {
                 null != D.http && D.http.makeChunkedRequest(t, S, {

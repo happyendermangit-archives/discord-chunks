@@ -11,8 +11,8 @@ function(e, _, E) {
         a = E.n(r),
         i = E("49671"),
         I = E("385649"),
-        T = E("102985"),
-        s = E("599110"),
+        s = E("102985"),
+        T = E("599110"),
         S = E("773336"),
         N = E("709681"),
         O = E("50885"),
@@ -70,7 +70,7 @@ function(e, _, E) {
     }
 
     function U(e) {
-        return T.default.disableNotifications && null == e.overrideStreamerMode || !c() || S.isPlatformEmbedded && !O.default.shouldDisplayNotifications()
+        return s.default.disableNotifications && null == e.overrideStreamerMode || !c() || S.isPlatformEmbedded && !O.default.shouldDisplayNotifications()
     }
     var M = {
         hasPermission: c,
@@ -80,14 +80,14 @@ function(e, _, E) {
             })
         },
         showNotification: function(e, _, E, t, o) {
-            var r, a, i, T;
+            var r, a, i, s;
             let N;
             if (U(o)) {
                 null != o.sound && !1 !== o.playSoundIfDisabled && d(o.sound, null !== (a = o.volume) && void 0 !== a ? a : 1);
                 return
             }
             null != o.sound && d(o.sound, null !== (i = o.volume) && void 0 !== i ? i : 1);
-            let l = null !== (T = null == o ? void 0 : o.tag) && void 0 !== T ? T : null;
+            let l = null !== (s = null == o ? void 0 : o.tag) && void 0 !== s ? s : null;
             (0, S.isLinux)() && (E = n.escape(E));
             let C = {
                 icon: e,
@@ -101,9 +101,9 @@ function(e, _, E) {
             } catch (e) {
                 return null
             }
-            return (null === (r = o.onShown) || void 0 === r || r.call(o), !o.omitViewTracking && s.default.track(A.AnalyticEvents.NOTIFICATION_VIEWED, t), N.onclick = () => {
+            return (null === (r = o.onShown) || void 0 === r || r.call(o), !o.omitViewTracking && T.default.track(A.AnalyticEvents.NOTIFICATION_VIEWED, t), N.onclick = () => {
                 var e;
-                S.isPlatformEmbedded ? O.default.focus() : (window.focus(), N.close()), !o.omitClickTracking && s.default.track(A.AnalyticEvents.NOTIFICATION_CLICKED, t), null === (e = o.onClick) || void 0 === e || e.call(o)
+                S.isPlatformEmbedded ? O.default.focus() : (window.focus(), N.close()), !o.omitClickTracking && T.default.track(A.AnalyticEvents.NOTIFICATION_CLICKED, t), null === (e = o.onClick) || void 0 === e || e.call(o)
             }, L && setTimeout(() => N.close(), 5e3), u) ? N : {
                 close() {
                     var e;

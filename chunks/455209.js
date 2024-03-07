@@ -9,11 +9,11 @@ function(e, _, E) {
         i = E("35468");
     E("773336");
     var I = E("286235"),
-        T = E("253981"),
-        s = E("900673"),
+        s = E("253981"),
+        T = E("900673"),
         S = E("49111");
     let N = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"],
-        O = new s.default,
+        O = new T.default,
         A = /\/api(\/v\d+)?\/science/;
     (0, t.setRequestPatch)({
         prepareRequest(e) {
@@ -28,7 +28,7 @@ function(e, _, E) {
             } = E("697218"), {
                 default: i
             } = E("599110"), {
-                isPlatformEmbedded: s
+                isPlatformEmbedded: T
             } = E("773336");
             if ("/" === e.url[0]) {
                 var S, R;
@@ -36,7 +36,7 @@ function(e, _, E) {
                 let E = i.getSuperPropertiesBase64();
                 null != E && e.set("X-Super-Properties", E);
                 let o = _.getFingerprint();
-                if (null != o && "" !== o && e.set("X-Fingerprint", o), s) {
+                if (null != o && "" !== o && e.set("X-Fingerprint", o), T) {
                     let _ = [];
                     null != navigator && (_ = (S = [...navigator.languages], S));
                     let E = function(e) {
@@ -66,7 +66,7 @@ function(e, _, E) {
                             let t = function(e) {
                                 let _ = new URLSearchParams;
                                 _.append("query", '@guid.x-client-trace-id:"'.concat(e, '"')), _.append("showAllSpans", "true");
-                                let E = T.default.toURLSafe("traces?".concat(_.toString()), "https://datadog.discord.tools/apm/");
+                                let E = s.default.toURLSafe("traces?".concat(_.toString()), "https://datadog.discord.tools/apm/");
                                 return null == E ? null : E.toString()
                             }(E);
                             null !== t && console.debug("%c[tracing]%c %s %s\n%s", "font-weight: bold", "", e.method, _, t)
@@ -100,7 +100,7 @@ function(e, _, E) {
             })
         },
         interceptResponse(e, _, t) {
-            var o, i, I, T, s;
+            var o, i, I, s, T;
             return 400 === e.statusCode && (null === (o = e.body) || void 0 === o ? void 0 : o.captcha_key) ? (Promise.all([E.el("417814").then(E.bind(E, "417814")), E.el("507445").then(E.bind(E, "507445"))]).then(_ => {
                 let [{
                     default: E
@@ -121,12 +121,12 @@ function(e, _, E) {
                     openMFAModal: o
                 } = E;
                 o(e.body.mfa, _, t)
-            }).catch(t), !0) : (0, a.isLimitedAccessErrorCode)(e.statusCode, null === (T = e.body) || void 0 === T ? void 0 : T.code) ? (E.el("258158").then(E.bind(E, "258158")).then(e => {
+            }).catch(t), !0) : (0, a.isLimitedAccessErrorCode)(e.statusCode, null === (s = e.body) || void 0 === s ? void 0 : s.code) ? (E.el("258158").then(E.bind(E, "258158")).then(e => {
                 let {
                     default: _
                 } = e;
                 _()
-            }), !1) : (0, n.isLimitedAccessErrorCode)(e.statusCode, null === (s = e.body) || void 0 === s ? void 0 : s.code) ? (E.el("772545").then(E.bind(E, "772545")).then(_ => {
+            }), !1) : (0, n.isLimitedAccessErrorCode)(e.statusCode, null === (T = e.body) || void 0 === T ? void 0 : T.code) ? (E.el("772545").then(E.bind(E, "772545")).then(_ => {
                 var E;
                 let {
                     default: t
