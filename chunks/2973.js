@@ -219,6 +219,14 @@ function(e, t, n) {
             h(t.questId, {
                 userStatus: t
             }), null == t.claimedAt && (f = new Map(f)).delete(t.questId)
+        },
+        QUESTS_OPTIMISTIC_PROGRESS_UPDATE: function(e) {
+            let {
+                userStatus: t
+            } = e;
+            h(t.questId, {
+                userStatus: t
+            })
         }
     })
 }

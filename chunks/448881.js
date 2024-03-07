@@ -30,6 +30,9 @@ function(e, t, n) {
         },
         resetQuestDismissibilityStatus: function() {
             return g
+        },
+        optimisticallyUpdateQuestProgress: function() {
+            return h
         }
     });
     var s = n("872717"),
@@ -262,5 +265,12 @@ function(e, t, n) {
                 questId: e
             })
         }
+    }
+
+    function h(e) {
+        i.default.dispatch({
+            type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
+            userStatus: e
+        })
     }
 }
