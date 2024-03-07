@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         allow: "allow__6f2d0",

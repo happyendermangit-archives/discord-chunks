@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         attachmentImage: "attachmentImage__468d1",

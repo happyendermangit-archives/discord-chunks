@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         addFileButton: "addFileButton_c1f2e9",

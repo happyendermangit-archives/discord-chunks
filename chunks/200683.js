@@ -1,4 +1,4 @@
-function(p, c, s) {
+function(e, _, E) {
     "use strict";
-    p.exports = s.p + "3f46bbecb4287c0a829f.woff2"
+    e.exports = E.p + "3f46bbecb4287c0a829f.woff2"
 }
