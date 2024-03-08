@@ -44,9 +44,9 @@ function(e, t, n) {
         let N, {
                 src: A,
                 volume: O = 1,
-                onVolumeChange: k,
-                onMute: M,
-                waveform: R,
+                onVolumeChange: M,
+                onMute: R,
+                waveform: k,
                 durationSecs: L,
                 onVolumeShow: b,
                 onVolumeHide: P,
@@ -90,11 +90,11 @@ function(e, t, n) {
             }, [D]),
             eo = l.useCallback(e => {
                 let t = (0, E.perceptualToAmplitude)(e, 1);
-                K(0 === t), ee(t), null == k || k(t)
-            }, [k]),
+                K(0 === t), ee(t), null == M || M(t)
+            }, [M]),
             eu = l.useCallback(() => {
-                K(!V), null == M || M(!V)
-            }, [V, M]),
+                K(!V), null == R || R(!V)
+            }, [V, R]),
             ed = l.useCallback(() => {
                 Z(!0)
             }, []),
@@ -203,7 +203,7 @@ function(e, t, n) {
                 })
             }), (0, i.jsx)(y.default, {
                 className: C.waveform,
-                waveform: R,
+                waveform: k,
                 currentTime: F,
                 duration: null != G ? G : 1,
                 playing: W,

@@ -38,14 +38,14 @@ function(e, t, n) {
                 onEnded: N,
                 onVolumeChange: A,
                 onMute: O,
-                alt: k = d.default.Messages.VIDEO,
-                ...M
+                alt: M = d.default.Messages.VIDEO,
+                ...R
             } = this.props;
             return (0, l.jsx)(r.default, {
-                alt: k,
+                alt: M,
                 className: n,
                 src: a,
-                ...M,
+                ...R,
                 minWidth: o.default.minWidth,
                 minHeight: o.default.minHeight,
                 shouldLink: !1,
@@ -59,10 +59,10 @@ function(e, t, n) {
                             width: r,
                             height: d
                         }
-                    } = n, k = !(f <= u.MAX_VIDEO_WIDTH && p <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && p <= u.MAX_VIDEO_WIDTH);
+                    } = n, M = !(f <= u.MAX_VIDEO_WIDTH && p <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && p <= u.MAX_VIDEO_WIDTH);
                     return (0, l.jsx)(o.default, {
                         className: i,
-                        forceExternal: k,
+                        forceExternal: M,
                         src: e,
                         poster: a,
                         width: r,

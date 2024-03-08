@@ -45,9 +45,9 @@ function(e, t, n) {
             let t, {
                     className: n,
                     emojiGrid: O,
-                    guildId: k,
-                    pickerIntention: M,
-                    channel: R
+                    guildId: M,
+                    pickerIntention: R,
+                    channel: k
                 } = e,
                 {
                     enabled: L
@@ -74,10 +74,10 @@ function(e, t, n) {
                 D = (0, a.useStateFromStores)([h.default], () => h.default.isFocused()),
                 w = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
                 F = p.AnimateEmoji.useSetting(),
-                B = (0, g.useIsFavoriteEmoji)(k, N(j) ? j : null),
+                B = (0, g.useIsFavoriteEmoji)(M, N(j) ? j : null),
                 {
                     newlyAddedEmojis: G
-                } = (0, S.default)(k, M),
+                } = (0, S.default)(M, R),
                 H = j.id,
                 V = (null == P ? void 0 : P.type) === I.EmojiGridItemTypes.EMOJI ? P.subCategory : T.EmojiSubCategory.NONE;
             if (l.useEffect(() => {
@@ -88,7 +88,7 @@ function(e, t, n) {
                             emoji: j,
                             subCategory: V,
                             position: P.columnIndex + 1,
-                            newlyAddedHighlight: V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(k, H)
+                            newlyAddedHighlight: V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(M, H)
                         }))
                     }
                 }), null == j) return null;
@@ -122,9 +122,9 @@ function(e, t, n) {
                 Y = L && "CREATE_EMOJI" === j.type ? _.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : j.allNamesString,
                 z = L && "CREATE_EMOJI" === j.type ? _.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : A({
                     inspectedEmoji: j,
-                    channel: R,
-                    guildId: k,
-                    intention: M,
+                    channel: k,
+                    guildId: M,
+                    intention: R,
                     guild: U
                 });
             return (0, i.jsx)(f.default, {

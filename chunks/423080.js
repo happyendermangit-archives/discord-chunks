@@ -34,9 +34,9 @@ function(e, t, n) {
         N = n("824563"),
         A = n("282109"),
         O = n("697218"),
-        k = n("316133"),
-        M = n("580357"),
-        R = n("40469"),
+        M = n("316133"),
+        R = n("580357"),
+        k = n("40469"),
         L = n("351368"),
         b = n("272339"),
         P = n("82636"),
@@ -100,7 +100,7 @@ function(e, t, n) {
                 }),
                 t = Object.values(I.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
             return [...e, ...t]
-        }, [d]), m = (0, C.default)(d), h = l.useMemo(() => m.map(e => e.id), [m]), x = (0, u.useStateFromStores)([k.default], () => k.default.getVoiceStates(d), [d]), E = o.flatMap(p, e => {
+        }, [d]), m = (0, C.default)(d), h = l.useMemo(() => m.map(e => e.id), [m]), x = (0, u.useStateFromStores)([M.default], () => M.default.getVoiceStates(d), [d]), E = o.flatMap(p, e => {
             var t;
             if (e === r.afkChannelId) return [];
             let n = null !== (t = x[e]) && void 0 !== t ? t : [];
@@ -119,12 +119,12 @@ function(e, t, n) {
                 } = e;
                 return t
             })
-        })), M = (0, u.useStateFromStores)([g.default], () => {
+        })), R = (0, u.useStateFromStores)([g.default], () => {
             let e = 0;
             for (let t of h) e += g.default.getParticipantCount(t, S.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
-        }), R = (0, u.useStateFromStoresArray)([T.default], () => T.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, B.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([N.default, _.default], () => E.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != _.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => R.map(e => O.default.getUser(e)), [R]), X = z(j.default, E.filter(e => !R.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
-        let Q = (t = d, n = y, a = M, 0 === n.length ? null : (0, i.jsxs)("div", {
+        }), k = (0, u.useStateFromStoresArray)([T.default], () => T.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, B.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([N.default, _.default], () => E.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != _.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => k.map(e => O.default.getUser(e)), [k]), X = z(j.default, E.filter(e => !k.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
+        let Q = (t = d, n = y, a = R, 0 === n.length ? null : (0, i.jsxs)("div", {
                 className: V.row,
                 children: [(0, i.jsx)(U.default, {
                     className: V.activityIcon
@@ -201,11 +201,11 @@ function(e, t, n) {
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsxs)("div", {
                 className: s(V.row, V.rowGuildName),
-                children: [l ? (0, i.jsx)(R.default, {
+                children: [l ? (0, i.jsx)(k.default, {
                     guild: t,
                     size: Y,
                     className: V.rowIconV2
-                }) : (0, i.jsx)(M.default, {
+                }) : (0, i.jsx)(R.default, {
                     guild: t,
                     size: W,
                     className: V.rowIcon

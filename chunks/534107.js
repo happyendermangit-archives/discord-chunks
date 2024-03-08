@@ -74,12 +74,12 @@ function(e, t, n) {
             onDragEnd: A
         } = e, {
             ref: O,
-            width: k
-        } = (0, u.default)(), M = l.useMemo(() => {
+            width: M
+        } = (0, u.default)(), R = l.useMemo(() => {
             var e;
             let t;
             return Math.floor(((t = (e = c) <= x ? 40 : e >= 45 ? 294 : (Math.min(e, 45) - x) / (45 - x) * 254 + 40) + 4) / E) * E - 4
-        }, [c]), R = l.useRef(), L = function(e, t) {
+        }, [c]), k = l.useRef(), L = function(e, t) {
             let n = l.useMemo(() => (function(e) {
                     let t;
                     if (null == e) return;
@@ -108,7 +108,7 @@ function(e, t, n) {
                     }(null != n ? n : [], i)) && void 0 !== e ? e : g
                 }, [n, i]);
             return a
-        }(n, k), b = l.useRef(y), P = l.useRef(_), j = l.useRef(null), U = window.devicePixelRatio, {
+        }(n, M), b = l.useRef(y), P = l.useRef(_), j = l.useRef(null), U = window.devicePixelRatio, {
             lastBackgroundFillColor: D,
             backgroundFillColor: w,
             lastActiveFillColor: F,
@@ -143,9 +143,9 @@ function(e, t, n) {
                 duration: c,
                 numSegments: L.length
             });
-            R.current = L.map((t, n) => new p.default(n < e ? t : 0))
+            k.current = L.map((t, n) => new p.default(n < e ? t : 0))
         }, [L]), l.useEffect(() => {
-            let e = R.current;
+            let e = k.current;
             if (null == e) return;
             let t = S({
                 showAll: !y,
@@ -166,7 +166,7 @@ function(e, t, n) {
             return e = requestAnimationFrame(function t(n) {
                 let i = O.current,
                     l = null == i ? void 0 : i.getContext("2d"),
-                    a = R.current;
+                    a = k.current;
                 if (null == i || null == l || null == a) return;
                 let s = !1;
                 (b.current !== y || P.current !== _) && (b.current = y, P.current = _, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
@@ -203,7 +203,7 @@ function(e, t, n) {
             }), () => {
                 null != e && cancelAnimationFrame(e)
             }
-        }, [O, U, L, k, a, c, y, _, D, w, F, B, G, H]);
+        }, [O, U, L, M, a, c, y, _, D, w, F, B, G, H]);
         let [, V] = (0, d.default)({
             ref: O,
             onDrag: v,
@@ -214,11 +214,11 @@ function(e, t, n) {
             onMouseDown: V,
             className: s(h.canvas, t),
             style: {
-                width: M
+                width: R
             },
             ref: O,
             height: 32 * window.devicePixelRatio,
-            width: (null != k ? k : 0) * window.devicePixelRatio
+            width: (null != M ? M : 0) * window.devicePixelRatio
         })
     }
 }

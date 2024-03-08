@@ -34,17 +34,17 @@ function(e, t, n) {
                 guild: N,
                 theme: A,
                 onClose: O,
-                className: k
+                className: M
             } = e,
-            M = (0, d.default)(N, _, v),
-            [R, L] = l.useState(new Set),
+            R = (0, d.default)(N, _, v),
+            [k, L] = l.useState(new Set),
             b = (0, r.useStateFromStores)([m.default], () => m.default.getUserProfile(_)),
             P = null !== (t = null == b ? void 0 : b.connectedAccounts) && void 0 !== t ? t : [],
             j = null !== (n = null == b ? void 0 : b.applicationRoleConnections) && void 0 !== n ? n : [],
             U = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation),
             D = (0, r.useStateFromStores)([c.default], () => c.default.locale);
         if (l.useEffect(() => {
-                (null == N ? void 0 : N.id) != null && (null == M ? void 0 : M.id) != null && u.default.fetchGuildRoleConnectionsEligibility(N.id, M.id).then(e => {
+                (null == N ? void 0 : N.id) != null && (null == R ? void 0 : R.id) != null && u.default.fetchGuildRoleConnectionsEligibility(N.id, R.id).then(e => {
                     let t = new Set;
                     for (let n of e)
                         for (let {
@@ -53,8 +53,8 @@ function(e, t, n) {
                             of n) t.add(e);
                     L(t)
                 })
-            }, [null == N ? void 0 : N.id, null == M ? void 0 : M.id]), U || null == M) return null;
-        let w = Array.from(R).map(e => {
+            }, [null == N ? void 0 : N.id, null == R ? void 0 : R.id]), U || null == R) return null;
+        let w = Array.from(k).map(e => {
             let t = P.find(t => t.type === e);
             return null == t ? null : (0, i.jsx)(h.ConnectedUserAccount, {
                 connectedAccount: t,
@@ -69,7 +69,7 @@ function(e, t, n) {
                 className: I.title,
                 children: S.default.Messages.CONNECTIONS
             }), (0, i.jsxs)("div", {
-                className: s(C.connectionsContainer, k),
+                className: s(C.connectionsContainer, M),
                 children: [w, (0, i.jsxs)(o.Clickable, {
                     onClick: function() {
                         (0, x.openUserProfileModal)({
@@ -100,7 +100,7 @@ function(e, t, n) {
                 className: I.title,
                 children: S.default.Messages.APPS
             }), (0, i.jsx)("div", {
-                className: s(C.connectionsContainer, k),
+                className: s(C.connectionsContainer, M),
                 children: j.map(e => (0, i.jsx)(h.ConnectedApplicationUserRoleAccount, {
                     applicationRoleConnection: e,
                     locale: D

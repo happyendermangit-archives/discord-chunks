@@ -44,15 +44,15 @@ function(e, t, n) {
                     inNitroLockedSection: A,
                     ...O
                 } = e,
-                k = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
+                M = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
                 {
-                    enabled: M
+                    enabled: R
                 } = g.default.useExperiment({
                     location: "Emoji Picker List"
                 }, {
                     autoTrackExposure: p
                 }),
-                R = p && M && !A;
+                k = p && R && !A;
             return (0, i.jsx)(o.FocusRing, {
                 children: (0, i.jsx)("button", {
                     ...O,
@@ -61,7 +61,7 @@ function(e, t, n) {
                         [I.emojiItemMedium]: d,
                         [I.emojiItemSelected]: c,
                         [null != N ? N : ""]: c,
-                        [I.emojiItemDisabled]: p && !M,
+                        [I.emojiItemDisabled]: p && !R,
                         [I.showPulse]: h
                     }),
                     "data-type": m.PickerContextMenuDataTypes.EMOJI,
@@ -69,9 +69,9 @@ function(e, t, n) {
                     "data-name": l.name,
                     ref: t,
                     children: (0, i.jsx)(S.default, {
-                        "aria-label": (n = l.allNamesString, ((null == k ? void 0 : k.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+                        "aria-label": (n = l.allNamesString, ((null == M ? void 0 : M.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
                             names: n,
-                            guildName: k.name
+                            guildName: M.name
                         })), a) ? C.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
                             names: n
                         }) : n),
@@ -81,7 +81,7 @@ function(e, t, n) {
                         size: T,
                         surrogateCodePoint: _,
                         allowAnimatedEmoji: v,
-                        isLocked: R
+                        isLocked: k
                     })
                 })
             })
@@ -102,9 +102,9 @@ function(e, t, n) {
             surrogateCodePoint: N,
             selectedItemClassName: A,
             getEmojiItemProps: O,
-            isMediumSize: k,
-            isLargeSize: M,
-            pulseItemKey: R,
+            isMediumSize: M,
+            isLargeSize: R,
+            pulseItemKey: k,
             allowAnimatedEmoji: L,
             setPulseItemKey: b,
             messageId: P,
@@ -153,11 +153,11 @@ function(e, t, n) {
                 ref: r,
                 emoji: V,
                 isFavorite: G.isFavoriteEmojiWithoutFetchingLatest(V),
-                isLargeSize: M,
-                isMediumSize: k,
+                isLargeSize: R,
+                isMediumSize: M,
                 isInspected: s,
                 isDisabled: W,
-                showPulse: R === a,
+                showPulse: k === a,
                 allowAnimatedEmoji: L,
                 onFocus: null != u ? u : Z,
                 onMouseMove: Z,

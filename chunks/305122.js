@@ -26,13 +26,13 @@ function(e, t, n) {
             return O
         },
         reportSoundFinishedPlaying: function() {
-            return k
-        },
-        updateUserSoundboardVolume: function() {
             return M
         },
-        muteCustomJoinSound: function() {
+        updateUserSoundboardVolume: function() {
             return R
+        },
+        muteCustomJoinSound: function() {
+            return k
         }
     }), n("222007"), n("424973");
     var i = n("917351"),
@@ -170,7 +170,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e, t) {
+    function M(e, t) {
         s.default.dispatch({
             type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
             soundId: e,
@@ -178,14 +178,14 @@ function(e, t, n) {
         })
     }
 
-    function M(e) {
+    function R(e) {
         s.default.dispatch({
             type: "USER_SOUNDBOARD_SET_VOLUME",
             volume: e
         })
     }
 
-    function R(e) {
+    function k(e) {
         s.default.dispatch({
             type: "SOUNDBOARD_MUTE_JOIN_SOUND",
             channelId: e

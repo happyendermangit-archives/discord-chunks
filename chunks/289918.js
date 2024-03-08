@@ -29,9 +29,9 @@ function(e, t, n) {
         N = n("471671"),
         A = n("275623"),
         O = n("945330"),
-        k = n("474571"),
-        M = n("216422"),
-        R = n("987772"),
+        M = n("474571"),
+        R = n("216422"),
+        k = n("987772"),
         L = n("956089"),
         b = n("599110"),
         P = n("315102"),
@@ -122,7 +122,7 @@ function(e, t, n) {
                 }),
                 children: (0, a.jsx)(L.TextBadge, {
                     color: "rgba(32, 34, 37, 0.8)",
-                    text: (0, a.jsx)(M.default, {
+                    text: (0, a.jsx)(R.default, {
                         width: 16,
                         height: 16,
                         className: K.premiumIcon
@@ -139,7 +139,7 @@ function(e, t, n) {
             profileLabel: i,
             icon: l,
             ...s
-        } = e, r = W[n], o = "pencil" === l ? R.default : k.default;
+        } = e, r = W[n], o = "pencil" === l ? k.default : M.default;
         return (0, a.jsx)(f.Clickable, {
             ...s,
             "aria-label": i,
@@ -165,14 +165,14 @@ function(e, t, n) {
             onClose: m,
             guildId: h,
             profileType: v = B.UserProfileTypes.POPOUT,
-            isHovering: k,
-            animateOnHover: M,
-            allowEdit: R = !0,
+            isHovering: M,
+            animateOnHover: R,
+            allowEdit: k = !0,
             showPremiumBadgeUpsell: L = !0,
             hasProfileEffect: b = !1
-        } = e, [W, Y] = s.useState((null == r ? void 0 : r.banner) == null ? 2 : 0), J = (0, d.useStateFromStores)([T.default], () => T.default.getGuild(h)), q = (0, d.useStateFromStores)([C.default], () => C.default.getId()), X = q === l.id && R, Q = j.default.isPremiumAtLeast(null == r ? void 0 : r.premiumType, H.PremiumTypes.TIER_2), [$, ee] = s.useState(!1), et = (0, d.useStateFromStores)([N.default], () => N.default.isFocused()), en = S.GifAutoPlay.getSetting(), ei = (0, f.useToken)(c.default.unsafe_rawColors.PRIMARY_800).hex(), el = (0, f.getAvatarSize)(f.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, x.default)(l.getAvatarURL(h, el), ei, !1)), es = (0, E.default)(null !== (t = null == r ? void 0 : r.primaryColor) && void 0 !== t ? t : ea).hsl, er = (0, w.getUserBannerSize)(v), eo = null != p ? p : null == r ? void 0 : r.getBannerURL({
+        } = e, [W, Y] = s.useState((null == r ? void 0 : r.banner) == null ? 2 : 0), J = (0, d.useStateFromStores)([T.default], () => T.default.getGuild(h)), q = (0, d.useStateFromStores)([C.default], () => C.default.getId()), X = q === l.id && k, Q = j.default.isPremiumAtLeast(null == r ? void 0 : r.premiumType, H.PremiumTypes.TIER_2), [$, ee] = s.useState(!1), et = (0, d.useStateFromStores)([N.default], () => N.default.isFocused()), en = S.GifAutoPlay.getSetting(), ei = (0, f.useToken)(c.default.unsafe_rawColors.PRIMARY_800).hex(), el = (0, f.getAvatarSize)(f.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, x.default)(l.getAvatarURL(h, el), ei, !1)), es = (0, E.default)(null !== (t = null == r ? void 0 : r.primaryColor) && void 0 !== t ? t : ea).hsl, er = (0, w.getUserBannerSize)(v), eo = null != p ? p : null == r ? void 0 : r.getBannerURL({
             size: er,
-            canAnimate: M || !en ? $ : et
+            canAnimate: R || !en ? $ : et
         }), eu = null != eo, ed = (0, d.useStateFromStores)([U.default], () => U.default.getUserProfile(l.id)), ec = I.default.getChannel(_.default.getChannelId()), {
             appsInGDMEnabled: ef,
             availableApplications: ep
@@ -225,7 +225,7 @@ function(e, t, n) {
                     backgroundColor: 2 !== W ? c.default.unsafe_rawColors.PRIMARY_800.css : es
                 },
                 children: [X ? null == J ? (0, a.jsx)(Z, {
-                    darkenOnHover: b && k,
+                    darkenOnHover: b && M,
                     profileType: v,
                     profileLabel: V.default.Messages.EDIT_PROFILE,
                     icon: "pencil",
@@ -246,7 +246,7 @@ function(e, t, n) {
                         })
                     },
                     children: e => (0, a.jsx)(Z, {
-                        darkenOnHover: b && k,
+                        darkenOnHover: b && M,
                         profileLabel: V.default.Messages.EDIT_PROFILE,
                         icon: "pencil",
                         ...e,
@@ -256,7 +256,7 @@ function(e, t, n) {
                     let e = L && eu && v !== B.UserProfileTypes.SETTINGS;
                     return e ? (0, a.jsx)(z, {
                         type: v,
-                        shown: void 0 === k ? $ : k,
+                        shown: void 0 === M ? $ : M,
                         onClick: m
                     }) : null
                 })(), eh ? v !== B.UserProfileTypes.MODAL ? null : (0, a.jsx)(f.Clickable, {

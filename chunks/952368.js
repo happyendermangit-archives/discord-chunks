@@ -155,14 +155,14 @@ function(e, t, n) {
                 limitResponsiveWidth: N,
                 useFullWidth: A,
                 placeholder: O,
-                placeholderVersion: k
+                placeholderVersion: M
             } = this.props, {
-                readyState: M,
-                hasMouseOver: R,
+                readyState: R,
+                hasMouseOver: k,
                 hasFocus: L
             } = this.state, b = null != i, P = this.getRatio(), j = (0, u.clamp)(Math.round(h * P), null != E ? E : 0, null != g ? g : 1 / 0), U = (0, u.clamp)(Math.round(x * P), null != y ? y : 0, null != S ? S : 1 / 0), D = {
                 alt: t,
-                readyState: M,
+                readyState: R,
                 onContextMenu: null != a ? a : void 0,
                 zoomable: b,
                 className: d,
@@ -177,7 +177,7 @@ function(e, t, n) {
                 height: U,
                 src: "",
                 placeholder: O,
-                placeholderVersion: k,
+                placeholderVersion: M,
                 children: null != f ? e => {
                     let {
                         src: t,
@@ -197,14 +197,14 @@ function(e, t, n) {
                 onBlur: this.onBlur
             };
             if (1 === D.width && 1 === D.height) return null;
-            switch ((b || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), M) {
+            switch ((b || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), R) {
                 case T.ImageReadyStates.LOADING:
                     null != n && (D.src = n);
                     break;
                 case T.ImageReadyStates.READY:
                     if (e.isAnimated(this.props)) {
                         D.onMouseLeave = this.onMouseLeave;
-                        let t = (s || R || L) && (null == m || m) && e.visibilityObserver.isVisible(this);
+                        let t = (s || k || L) && (null == m || m) && e.visibilityObserver.isVisible(this);
                         t ? (D.src = this.getSrc(P), D.renderAccessory = _) : (D.src = this.getSrc(P, !p || !s), D.renderAccessory = this.renderAccessory), null != f && (D.children = e => {
                             let {
                                 src: n,

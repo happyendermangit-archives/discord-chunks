@@ -31,9 +31,9 @@ function(e, t, n) {
         N = n("866353"),
         A = n("178207"),
         O = n("256860"),
-        k = n("364685"),
-        M = n("161585"),
-        R = n("585948"),
+        M = n("364685"),
+        R = n("161585"),
+        k = n("585948"),
         L = n("234175"),
         b = n("451300"),
         P = n("668333"),
@@ -79,7 +79,7 @@ function(e, t, n) {
                 onPickerOpen: eb
             }));
             let er = (0, O.useFilteredStickerPackCategories)(u),
-                eo = 0 === er.filter(e => e.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
+                eo = 0 === er.filter(e => e.type !== R.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
                 eu = (0, x.useExpressionPickerGridWidth)({
                     gridWrapperRef: ee,
                     containerWidth: s,
@@ -93,14 +93,14 @@ function(e, t, n) {
                 ep = l.useMemo(() => (0, D.getFilteredStickers)(el, ef, u), [el, ef, u]),
                 em = (0, O.useFavoriteStickers)(),
                 eh = (0, O.useLatestFrecentStickers)(),
-                ex = (0, o.useStateFromStoresObject)([k.default], () => k.default.getAllGuildStickers()),
+                ex = (0, o.useStateFromStoresObject)([M.default], () => M.default.getAllGuildStickers()),
                 {
                     sendable: eE = [],
                     sendableWithPremium: ey = []
                 } = null != ep ? ep : {},
                 eg = eE.length + ey.length,
                 eS = l.useCallback(e => {
-                    "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), _(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
+                    "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), _(e.sticker, R.StickerSelectLocation.STICKER_PICKER)
                 }, [_, el, eg]),
                 eC = null != eu && eu > G,
                 {
@@ -123,7 +123,7 @@ function(e, t, n) {
                         location: l
                     } = t;
                     switch (e.type) {
-                        case M.StickerGridItemTypes.CREATE_STICKER:
+                        case R.StickerGridItemTypes.CREATE_STICKER:
                             T.default.track(F.AnalyticEvents.OPEN_MODAL, {
                                 type: F.AnalyticsSections.CREATE_STICKER_MODAL,
                                 location: z
@@ -137,17 +137,17 @@ function(e, t, n) {
                                 })
                             });
                             break;
-                        case M.StickerGridItemTypes.STICKER:
+                        case R.StickerGridItemTypes.STICKER:
                             null != e.sticker && (0, N.isSendableSticker)(e.sticker, ef, u) && eS(e)
                     }
                 }, [z, ef, u, eS]),
                 {
                     getItemProps: eO,
-                    getRowProps: ek,
-                    gridContainerProps: eM,
-                    handleGridContainerKeyDown: eR,
+                    getRowProps: eM,
+                    gridContainerProps: eR,
+                    handleGridContainerKeyDown: ek,
                     isUsingKeyboardNavigation: eL
-                } = (0, R.useKeyboardNavigation)({
+                } = (0, k.useKeyboardNavigation)({
                     columnCounts: eN,
                     stickersListRef: et,
                     stickersGrid: e_,
@@ -162,7 +162,7 @@ function(e, t, n) {
                     t = [];
                 if (null !== e) {
                     var n;
-                    t = null !== (n = k.default.getStickersByGuildId(e)) && void 0 !== n ? n : []
+                    t = null !== (n = M.default.getStickersByGuildId(e)) && void 0 !== n ? n : []
                 }
                 let i = 0;
                 null != ex && [...ex.values()].forEach(e => {
@@ -193,7 +193,7 @@ function(e, t, n) {
                     className: B.header,
                     children: (0, i.jsx)(j.default, {
                         ref: en,
-                        onKeyDown: eR,
+                        onKeyDown: ek,
                         stickersListRef: et,
                         channel: u
                     })
@@ -205,13 +205,13 @@ function(e, t, n) {
                         ref: ee,
                         className: B.listWrapper,
                         id: w.GRID_NAVIGATOR_ID,
-                        ...eM,
+                        ...eR,
                         children: null != eu ? (0, i.jsx)(P.default, {
                             ref: et,
                             collapsedStickersCategories: ec,
                             filteredStickers: ep,
                             getStickerItemProps: eO,
-                            getStickerRowProps: ek,
+                            getStickerRowProps: eM,
                             gridWidth: eu,
                             gutterWidth: ev,
                             isUsingKeyboardNavigation: eL,

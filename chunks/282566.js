@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return M
+            return R
         }
     }), n("222007");
     var i = n("37983"),
@@ -31,18 +31,18 @@ function(e, t, n) {
         N = n("958706"),
         A = n("646718"),
         O = n("782340"),
-        k = n("187971"),
-        M = e => {
-            var t, a, M;
+        M = n("187971"),
+        R = e => {
+            var t, a, R;
             let {
-                onLearnMore: R,
+                onLearnMore: k,
                 onClose: L,
                 channel: b,
                 emojiDescriptor: P,
                 pickerIntention: j,
                 analyticsLocation: U
             } = e, D = (0, u.default)(), [w, F] = l.useState(!1), B = () => {
-                (0, T.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), R()
+                (0, T.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), k()
             }, G = (0, r.isThemeLight)(D) ? n("602291") : n("609708"), H = (0, E.usePremiumTrialOffer)(), V = (0, x.usePremiumDiscountOffer)(), K = null != H || null != V, {
                 isLoading: W,
                 suggestedPremiumType: Y
@@ -72,17 +72,17 @@ function(e, t, n) {
                     })
                 }
             }, [W, Y, P, b, U, Z, j, z]), (0, i.jsxs)("div", {
-                className: s(k.premiumPromo, {
-                    [k.unifyTrialUpsell]: K
+                className: s(M.premiumPromo, {
+                    [M.unifyTrialUpsell]: K
                 }),
                 children: [(0, i.jsx)(o.Clickable, {
-                    className: k.premiumPromoClose,
+                    className: M.premiumPromoClose,
                     onClick: L,
                     children: O.default.Messages.CLOSE
                 }), W ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
                     children: [K ? (0, i.jsx)(y.default, {
                         type: A.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                        subscriptionTier: null !== (M = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : A.PremiumSubscriptionSKUs.TIER_2,
+                        subscriptionTier: null !== (R = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== R ? R : A.PremiumSubscriptionSKUs.TIER_2,
                         onClose: L,
                         trialOffer: H,
                         discountOffer: V,
@@ -95,13 +95,13 @@ function(e, t, n) {
                     }) : (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)("img", {
                             alt: "",
-                            className: k.premiumPromoImage,
+                            className: M.premiumPromoImage,
                             src: G
                         }), (0, i.jsx)("div", {
-                            className: k.premiumPromoTitle,
+                            className: M.premiumPromoTitle,
                             children: O.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
                         }), (0, i.jsx)("div", {
-                            className: k.premiumPromoDescription,
+                            className: M.premiumPromoDescription,
                             children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
                                 planName: (0, I.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                                 onClick: B

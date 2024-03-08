@@ -2,28 +2,28 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         setHighlightedSummary: function() {
-            return T
-        },
-        toggleTopicsBar: function() {
             return _
         },
-        setSelectedSummary: function() {
+        toggleTopicsBar: function() {
             return v
         },
-        updateVisibleMessages: function() {
+        setSelectedSummary: function() {
             return N
         },
+        updateVisibleMessages: function() {
+            return A
+        },
         useSummaryPolling: function() {
-            return O
+            return M
         },
         setSummaryFeedback: function() {
-            return k
+            return R
         },
         deleteSummary: function() {
-            return L
+            return b
         },
         default: function() {
-            return P
+            return j
         }
     }), n("222007");
     var i = n("884691"),
@@ -39,12 +39,13 @@ function(e, t, n) {
         p = n("116460"),
         m = n("42203"),
         h = n("718517"),
-        x = n("347738");
-    let E = 30 * h.default.Millis.SECOND,
-        y = 5 * h.default.Millis.SECOND,
-        g = {},
-        S = {};
-    async function C(e, t) {
+        x = n("347738"),
+        E = n("995307"),
+        y = n("49111");
+    let g = 30 * h.default.Millis.SECOND,
+        S = {},
+        C = {};
+    async function I(e, t) {
         let n, i;
         if (!x.default.shouldFetch(e, t)) return;
         let l = Date.now();
@@ -55,7 +56,7 @@ function(e, t, n) {
             requestedAt: l
         });
         try {
-            let n = await o.default.get("/channels/".concat(e, "/summaries/").concat(t));
+            let n = await o.default.get(y.Routes.CHANNEL_SUMMARY(e, t));
             i = null == n ? void 0 : n.body
         } catch (e) {
             n = new d.APIError(e)
@@ -69,7 +70,7 @@ function(e, t, n) {
             receivedAt: Date.now()
         })
     }
-    async function I(e) {
+    async function T(e) {
         var t, n;
         let i, l;
         if (!x.default.shouldFetch(e)) return;
@@ -80,7 +81,7 @@ function(e, t, n) {
             requestedAt: s
         });
         try {
-            l = await o.default.get("/channels/".concat(e, "/summaries"))
+            l = await o.default.get(y.Routes.CHANNEL_SUMMARIES(e))
         } catch (e) {
             i = new d.APIError(e)
         }
@@ -95,7 +96,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e, t) {
+    function _(e, t) {
         u.default.dispatch({
             type: "SET_HIGHLIGHTED_SUMMARY",
             channelId: e,
@@ -103,21 +104,21 @@ function(e, t, n) {
         })
     }
 
-    function _() {
+    function v() {
         u.default.dispatch({
             type: "TOGGLE_TOPICS_BAR"
         })
     }
 
-    function v(e, t) {
-        null != e && null != t && C(e, t), u.default.dispatch({
+    function N(e, t) {
+        null != e && null != t && I(e, t), u.default.dispatch({
             type: "SET_SELECTED_SUMMARY",
             channelId: e,
             summaryId: null != t ? t : null
         })
     }
 
-    function N(e, t) {
+    function A(e, t) {
         u.default.dispatch({
             type: "UPDATE_VISIBLE_MESSAGES",
             topVisibleMessage: null != e ? e : null,
@@ -125,11 +126,11 @@ function(e, t, n) {
         })
     }
 
-    function A(e, t) {
-        return null == g[e] && (g[e] = 0), null === t ? g[e] = 0 : g[e] += t, g[e]
+    function O(e, t) {
+        return null == S[e] && (S[e] = 0), null === t ? S[e] = 0 : S[e] += t, S[e]
     }
 
-    function O(e) {
+    function M(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = (0, r.default)([m.default], () => m.default.getChannel(e), [e]),
             [l, a] = i.useState(null),
@@ -139,20 +140,20 @@ function(e, t, n) {
                 a(null)
             }
         }, [e, o]), i.useEffect(() => {
-            if (l !== e && null != l && b.stopPolling(e), o && null != l) return (t || null != e && l !== e) && b.fetchSummaries(e), b.startPolling(e), () => {
-                null != l && b.stopPolling(e)
+            if (l !== e && null != l && P.stopPolling(e), o && null != l) return (t || null != e && l !== e) && P.fetchSummaries(e), P.startPolling(e), () => {
+                null != l && P.stopPolling(e)
             }
         }, [e, t, l, o])
     }
 
-    function k(e, t) {
+    function R(e, t) {
         u.default.dispatch({
             type: "SET_SUMMARY_FEEDBACK",
             summary: e,
             rating: t
         })
     }
-    async function M() {
+    async function k() {
         var e;
         let t, n;
         if (!x.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -175,7 +176,7 @@ function(e, t, n) {
             receivedAt: Date.now()
         })
     }
-    async function R(e) {
+    async function L(e) {
         let t, n, {
             useQuickSwitcher: i = !0,
             useChannelAffinities: l = !0
@@ -193,7 +194,7 @@ function(e, t, n) {
                     n = x.default.status(e);
                 if (null == n ? void 0 : n.fetching) return !1;
                 let i = null == n ? void 0 : n.lastReceivedAt;
-                return null == i || t - i > E
+                return null == i || t - i > g
             }).slice(0, 50)).length) return Promise.resolve(null);
         u.default.dispatch({
             type: "REQUEST_CHANNEL_SUMMARIES_BULK",
@@ -202,7 +203,7 @@ function(e, t, n) {
         });
         try {
             n = await o.default.post({
-                url: "/users/@me/summaries",
+                url: y.Routes.USER_SUMMARIES,
                 body: {
                     channel_ids: e
                 }
@@ -222,9 +223,9 @@ function(e, t, n) {
             error: t
         })
     }
-    async function L(e) {
+    async function b(e) {
         try {
-            await o.default.delete("/channels/".concat(e.channelId, "/summaries/").concat(e.id)), u.default.dispatch({
+            await o.default.delete(y.Routes.CHANNEL_SUMMARY(e.channelId, e.id)), u.default.dispatch({
                 type: "DELETE_SUMMARY",
                 summary: e
             })
@@ -232,24 +233,24 @@ function(e, t, n) {
             throw new d.APIError(e)
         }
     }
-    let b = {
+    let P = {
         startPolling: function(e) {
-            let t = A(e, 1);
-            t - 1 == 0 && (S[e] = setInterval(async () => {
-                await b.fetchSummaries(e)
-            }, y))
+            let t = O(e, 1);
+            t - 1 == 0 && (C[e] = setInterval(async () => {
+                await P.fetchSummaries(e)
+            }, E.SUMMARY_POLL_INTERVAL))
         },
         stopPolling: function(e) {
-            let t = A(e, -1);
-            t <= 0 && (A(e, 0), clearInterval(S[e]))
+            let t = O(e, -1);
+            t <= 0 && (O(e, 0), clearInterval(C[e]))
         },
-        setSummaryFeedback: k,
-        useSummaryPolling: O,
-        updateVisibleMessages: N,
-        setSelectedSummary: v,
-        setHighlightedSummary: T,
-        fetchSummaries: I,
-        fetchSummariesBulk: R,
+        setSummaryFeedback: R,
+        useSummaryPolling: M,
+        updateVisibleMessages: A,
+        setSelectedSummary: N,
+        setHighlightedSummary: _,
+        fetchSummaries: T,
+        fetchSummariesBulk: L,
         useChannelSummaries: function(e) {
             let {
                 channelIds: t = []
@@ -260,18 +261,18 @@ function(e, t, n) {
                 i.useEffect(() => {
                     (async function e() {
                         try {
-                            await M()
+                            await k()
                         } catch (e) {}
                         try {
                             var e, n;
                             (null === (e = p.default.getProps().results) || void 0 === e ? void 0 : e.length) === 0 && (0, f.search)(null !== (n = p.default.getProps().query) && void 0 !== n ? n : "")
                         } catch (e) {}
-                        await R(t.split(","))
+                        await L(t.split(","))
                     })()
                 }, [t])
             }(t), (0, r.useStateFromStoresArray)([x.default], () => x.default.topSummaries(), [])
         },
-        deleteSummary: L
+        deleteSummary: b
     };
-    var P = b
+    var j = P
 }

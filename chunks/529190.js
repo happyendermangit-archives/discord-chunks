@@ -34,9 +34,9 @@ function(e, t, n) {
         N = n("355263"),
         A = n("317041"),
         O = n("49111"),
-        k = n("782340"),
-        M = n("847948"),
-        R = n("327769");
+        M = n("782340"),
+        R = n("847948"),
+        k = n("327769");
     let L = 56,
         b = [8, 8, 0, 8],
         P = o.debounce(() => {
@@ -151,7 +151,7 @@ function(e, t, n) {
                         padding: 0
                     });
                 return (0, i.jsx)(h.default, {
-                    className: M.categoryHeader,
+                    className: R.categoryHeader,
                     icon: a,
                     children: t.name
                 }, e)
@@ -165,15 +165,15 @@ function(e, t, n) {
                 return (0, i.jsxs)("ul", {
                     role: "group",
                     "aria-label": l.name,
-                    className: s(M.categorySection, {
-                        [M.categorySectionLast]: n
+                    className: s(R.categorySection, {
+                        [R.categorySectionLast]: n
                     }),
                     children: [t, 0 === a.length && (0, i.jsx)(u.default, {
-                        message: k.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
+                        message: M.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
                             applicationName: l.name
                         }),
-                        noResultsImageURL: R,
-                        className: M.noSearchResults
+                        noResultsImageURL: k,
+                        className: R.noSearchResults
                     })]
                 }, e)
             }, [V, K]),
@@ -188,7 +188,7 @@ function(e, t, n) {
                     index: e,
                     command: s,
                     channel: n,
-                    className: M.itemWrapper,
+                    className: R.itemWrapper,
                     selected: j === e,
                     showImage: a.section.id !== s.applicationId,
                     section: o,
@@ -203,11 +203,11 @@ function(e, t, n) {
             (0, f.dismissChannelEditorPopup)()
         }, []), (0, i.jsxs)(x.default, {
             id: ea,
-            className: M.outerWrapper,
-            innerClassName: M.wrapper,
+            className: R.outerWrapper,
+            innerClassName: R.wrapper,
             onMouseDown: U,
             children: [(0, i.jsx)(_.default, {
-                className: M.rail,
+                className: R.rail,
                 channel: n,
                 sections: H,
                 filteredSectionId: z,
@@ -216,7 +216,7 @@ function(e, t, n) {
                 applicationCommandListRef: w
             }), (0, i.jsx)(E.default, {
                 role: "listbox",
-                className: M.list,
+                className: R.list,
                 listPadding: b,
                 onScroll: X,
                 renderRow: el,

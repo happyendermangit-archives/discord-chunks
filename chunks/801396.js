@@ -38,17 +38,17 @@ function(e, t, n) {
             } = (0, u.useAnalyticsContext)(), {
                 analyticsLocations: A
             } = (0, c.default)(), O = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(n)), {
-                canManageAllExpressions: k
-            } = (0, h.useManageResourcePermissions)(O), M = null != O && 0 === (0, g.getTotalStickerCountForTier)(O.premiumTier) && !O.hasFeature(S.GuildFeatures.MORE_STICKERS);
+                canManageAllExpressions: M
+            } = (0, h.useManageResourcePermissions)(O), R = null != O && 0 === (0, g.getTotalStickerCountForTier)(O.premiumTier) && !O.hasFeature(S.GuildFeatures.MORE_STICKERS);
             return (l.useEffect(() => {
-                k && M && _ && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+                M && R && _ && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                     location: N,
                     guild_id: null == O ? void 0 : O.id,
                     channel_id: null == a ? void 0 : a.id,
                     type: "Expression Picker Inline Sticker Upsell",
                     location_stack: A
                 }), v(!0))
-            }, [M, O, a, N, _, v, A, k]), null != O && k) ? M ? (0, i.jsxs)("div", {
+            }, [R, O, a, N, _, v, A, M]), null != O && M) ? R ? (0, i.jsxs)("div", {
                 className: s(T.upsell, t),
                 children: [(0, i.jsx)(E.default, {
                     className: T.icon,

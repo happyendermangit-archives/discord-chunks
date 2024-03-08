@@ -53,17 +53,17 @@ function(e, t, n) {
                             onChangeStart: N,
                             onChangeEnd: A,
                             updateState: O
-                        } = e, k = a, {
-                            onChange: M
-                        } = k;
-                        k.chatInputType = s, k.windowContext = d, k.previewMarkdown = c, k.composition = null, k.events = new l.EventEmitter, k.isMac = "MacIntel" === navigator.platform, k.onChange = () => {
-                            k.events.emit("onChange"), M()
-                        }, k = (0, C.withReact)(k, !0 === v), k = (0, S.default)(k), k = (0, g.default)(k), (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (k = (0, f.default)(k, r, !0 === o, !0 === u)), k = (0, y.default)(k, r.guild_id, r.id), !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (k = (0, p.default)(k)), !(null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (k = (0, m.default)(k)), v && (k = (0, T.default)(k)), k = (0, E.default)(k), k = (0, h.default)(k), k = (0, I.default)(k), k = (0, _.default)(k, N, A), k = (0, x.default)(k, e => {
+                        } = e, M = a, {
+                            onChange: R
+                        } = M;
+                        M.chatInputType = s, M.windowContext = d, M.previewMarkdown = c, M.composition = null, M.events = new l.EventEmitter, M.isMac = "MacIntel" === navigator.platform, M.onChange = () => {
+                            M.events.emit("onChange"), R()
+                        }, M = (0, C.withReact)(M, !0 === v), M = (0, S.default)(M), M = (0, g.default)(M), (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (M = (0, f.default)(M, r, !0 === o, !0 === u)), M = (0, y.default)(M, r.guild_id, r.id), !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (M = (0, p.default)(M)), !(null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (M = (0, m.default)(M)), v && (M = (0, T.default)(M)), M = (0, E.default)(M), M = (0, h.default)(M), M = (0, I.default)(M), M = (0, _.default)(M, N, A), M = (0, x.default)(M, e => {
                             let {
                                 newValue: t,
                                 newSelection: n
                             } = e;
-                            return O(k, "undo", {
+                            return O(M, "undo", {
                                 value: t,
                                 selection: n
                             })

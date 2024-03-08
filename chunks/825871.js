@@ -8,7 +8,7 @@ function(e, t, n) {
             return O
         },
         getLimit: function() {
-            return M
+            return R
         },
         default: function() {
             return L
@@ -49,7 +49,7 @@ function(e, t, n) {
         return d.useSearchOpenState(), null
     }
 
-    function k() {
+    function M() {
         (0, a.openModalLazy)(async () => {
             let {
                 default: e
@@ -60,18 +60,18 @@ function(e, t, n) {
         })
     }
 
-    function M(e) {
+    function R(e) {
         return d.isInIndexExperiment({
             location: e
         }) ? I.MAX_COMMAND_AUTOCOMPLETE_RESULTS : I.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
     }
-    let R = {
+    let k = {
         sentinel: T.COMMAND_SENTINEL,
         stores: [p.default, f.default, u.default, y.default],
         matches: (e, t, n, i, l) => l.commands !== I.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (i || l.commands !== I.CommandMode.OLD_BUILT_INS),
         queryResults(e, t, n, i, l) {
             if (0 === n.length && i.commands !== I.CommandMode.OLD_BUILT_INS) return A;
-            let a = M("CommandAutocompletes");
+            let a = R("CommandAutocompletes");
             if (i.commands === I.CommandMode.OLD_BUILT_INS) {
                 let i = (0, o.getBuiltInCommands)(s.ApplicationCommandType.CHAT, !1, !1),
                     l = RegExp("^".concat(S.default.escape(n)), "i"),
@@ -171,7 +171,7 @@ function(e, t, n) {
                     look: l.Button.Looks.LINK,
                     color: l.Button.Colors.BRAND,
                     size: l.Button.Sizes.MIN,
-                    onClick: k,
+                    onClick: M,
                     children: v.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
                 }) : null,
                 footer: (0, i.jsx)(O, {})
@@ -211,5 +211,5 @@ function(e, t, n) {
             }
         }
     };
-    var L = R
+    var L = k
 }

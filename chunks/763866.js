@@ -31,9 +31,9 @@ function(e, t, n) {
         N = n("545590"),
         A = n("316095"),
         O = n("802279"),
-        k = n("577172"),
-        M = n("465215"),
-        R = n("301998"),
+        M = n("577172"),
+        R = n("465215"),
+        k = n("301998"),
         L = n("379657"),
         b = n("853780"),
         P = n("574191"),
@@ -144,7 +144,7 @@ function(e, t, n) {
                         bio: null == V ? void 0 : V.bio,
                         guild: K,
                         hidePersonalInformation: $
-                    }), (0, i.jsx)(M.default, {
+                    }), (0, i.jsx)(R.default, {
                         userId: H.id,
                         guild: K,
                         guildMember: W
@@ -183,13 +183,13 @@ function(e, t, n) {
                     }), null != ee && void 0 !== Y && (0, i.jsx)(b.default, {
                         channelId: Y,
                         applicationId: ee.id
-                    }), (0, i.jsx)(R.default, {
+                    }), (0, i.jsx)(k.default, {
                         user: H,
                         setNote: Z,
                         autoFocus: !J,
                         lastSection: !J,
                         hideNote: $ || q
-                    }), (0, i.jsx)(k.default, {
+                    }), (0, i.jsx)(M.default, {
                         user: H,
                         setNote: Z,
                         canDM: J,

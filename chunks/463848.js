@@ -34,9 +34,9 @@ function(e, t, n) {
         N = n("313873"),
         A = n("599110"),
         O = n("474293"),
-        k = n("49111"),
-        M = n("782340"),
-        R = n("970574");
+        M = n("49111"),
+        R = n("782340"),
+        k = n("970574");
 
     function L(e) {
         let {
@@ -52,7 +52,7 @@ function(e, t, n) {
             actionColor: m
         } = e;
         return (0, i.jsx)(c.default, {
-            className: (0, O.getClass)(R, "actions", t),
+            className: (0, O.getClass)(k, "actions", t),
             type: t,
             source: n,
             activity: l,
@@ -86,20 +86,20 @@ function(e, t, n) {
             location: "UserActivityContainer"
         }, {
             autoTrackExposure: !1
-        }), j = (0, r.useStateFromStores)([C.default], () => a ? C.default.getAnyStreamForUser(n.id) : null), U = P && _.default.can(k.Permissions.CONNECT, b), D = (null == t ? void 0 : t.type) === k.ActivityTypes.HANG_STATUS && U ? b : null, w = (0, r.useStateFromStores)([T.default, v.default, I.default], () => {
+        }), j = (0, r.useStateFromStores)([C.default], () => a ? C.default.getAnyStreamForUser(n.id) : null), U = P && _.default.can(M.Permissions.CONNECT, b), D = (null == t ? void 0 : t.type) === M.ActivityTypes.HANG_STATUS && U ? b : null, w = (0, r.useStateFromStores)([T.default, v.default, I.default], () => {
             var e, i;
-            return (0, u.default)(t, k.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = I.default.getChannel(null === (i = v.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? T.default.getGuild(D.getGuildId()) : null
+            return (0, u.default)(t, M.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = I.default.getChannel(null === (i = v.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? T.default.getGuild(D.getGuildId()) : null
         }), F = (0, r.useStateFromStores)([T.default], () => null != j ? T.default.getGuild(j.guildId) : null), B = (0, r.useStateFromStores)([f.default], () => {
             if (null != t) return null != t.application_id ? f.default.getApplication(t.application_id) : f.default.getApplicationByName(t.name);
             return null
         }), G = (0, p.default)(), H = (0, y.default)(n), V = G && null != t && H;
         return (l.useEffect(() => {
-            (null == t ? void 0 : t.type) === k.ActivityTypes.HANG_STATUS && U && A.default.track(k.AnalyticEvents.VIEW_HANG_STATUS, {
+            (null == t ? void 0 : t.type) === M.ActivityTypes.HANG_STATUS && U && A.default.track(M.AnalyticEvents.VIEW_HANG_STATUS, {
                 source: "UserProfilePopout",
                 guild_id: null == D ? void 0 : D.guild_id,
                 channel_id: null == D ? void 0 : D.id
             })
-        }, [null == t ? void 0 : t.type, U, D]), (null == t ? void 0 : t.type) !== k.ActivityTypes.HANG_STATUS || U) ? (0, i.jsx)(N.default, {
+        }, [null == t ? void 0 : t.type, U, D]), (null == t ? void 0 : t.type) !== M.ActivityTypes.HANG_STATUS || U) ? (0, i.jsx)(N.default, {
             ...O,
             activity: t,
             user: n,
@@ -108,7 +108,7 @@ function(e, t, n) {
             activityGuild: null != w ? w : F,
             showReactions: V,
             renderActions: o ? () => (0, i.jsxs)("div", {
-                className: s(V && R.actionsWrapper),
+                className: s(V && k.actionsWrapper),
                 children: [(0, i.jsx)(L, {
                     ...O,
                     applicationStream: j,
@@ -117,10 +117,10 @@ function(e, t, n) {
                 }), V && (0, i.jsx)(m.default, {
                     showReact: !0,
                     showReply: !0,
-                    replyHeaderText: M.default.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({
+                    replyHeaderText: R.default.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({
                         activity: t.name
                     }),
-                    replyPlaceholder: M.default.Messages.TEXTAREA_PLACEHOLDER.format({
+                    replyPlaceholder: R.default.Messages.TEXTAREA_PLACEHOLDER.format({
                         channel: "@".concat(n.globalName)
                     }),
                     onInteraction: e => {
@@ -129,7 +129,7 @@ function(e, t, n) {
                             emoji: l,
                             reply: a
                         } = e;
-                        A.default.track(k.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
+                        A.default.track(M.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
                             application_id: t.application_id,
                             interaction_type: i,
                             ...c

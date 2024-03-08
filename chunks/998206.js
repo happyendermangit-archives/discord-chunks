@@ -37,9 +37,9 @@ function(e, t, n) {
             innerRef: v
         } = e, N = (0, d.useAppContext)(), {
             analyticsLocations: A
-        } = (0, x.default)(), O = N === S.AppContext.POPOUT, k = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), R = l.useCallback(() => {
+        } = (0, x.default)(), O = N === S.AppContext.POPOUT, M = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), R = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), k = l.useCallback(() => {
             a(C.ContentDismissActionType.UNKNOWN), (0, h.default)({
-                channel: M ? n : void 0,
+                channel: R ? n : void 0,
                 guildId: n.guild_id,
                 locationObject: {
                     page: S.AnalyticsPages.GUILD_CHANNEL,
@@ -53,16 +53,16 @@ function(e, t, n) {
             }), (0, p.fetchShelf)({
                 guildId: n.guild_id
             })
-        }, [A, n, M, a, O]), L = () => {
+        }, [A, n, R, a, O]), L = () => {
             if (E === o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, i.jsxs)("div", {
                 className: _.sparkleContainer,
                 children: [(0, i.jsx)(g.default, {
                     className: s(_.sparkleStar, {
-                        [_.noAnimation]: k
+                        [_.noAnimation]: M
                     })
                 }), (0, i.jsx)(y.default, {
                     className: s(_.sparklePlus, {
-                        [_.noAnimation]: k
+                        [_.noAnimation]: M
                     })
                 })]
             });
@@ -75,7 +75,7 @@ function(e, t, n) {
                 className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, _.buttonContainer),
                 ref: v,
                 children: [(0, i.jsx)(m.default, {
-                    onClick: R,
+                    onClick: k,
                     tabIndex: 0,
                     focusProps: {
                         offset: {

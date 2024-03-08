@@ -34,11 +34,11 @@ function(e, t, n) {
             } = e, _ = l.useRef(null), v = l.useRef(null), {
                 renderWindow: N,
                 windowDispatch: A
-            } = l.useContext(f.default), O = null != T, k = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
+            } = l.useContext(f.default), O = null != T, M = (0, u.useIsModalAtTop)(null != T ? T : ""), R = () => {
                 x.dismissAppLauncherPopup()
-            }, R = l.useCallback(e => {
+            }, k = l.useCallback(e => {
                 var t;
-                if (!O && (0, u.hasAnyModalOpen)() || O && !(k && a)) return;
+                if (!O && (0, u.hasAnyModalOpen)() || O && !(M && a)) return;
                 let {
                     target: n
                 } = e;
@@ -48,17 +48,17 @@ function(e, t, n) {
                     if (n === v.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
                     n = n.parentNode
                 }
-                M();
+                R();
                 let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == i || "BODY" === i.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS)
-            }, [a, k, O]), L = l.useCallback(() => {
-                M()
+            }, [a, M, O]), L = l.useCallback(() => {
+                R()
             }, []);
-            l.useLayoutEffect(() => (N.addEventListener("mousedown", R), N.addEventListener("contextmenu", R), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
-                N.removeEventListener("mousedown", R), N.removeEventListener("contextmenu", R), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
-            }), [L, R, N, A]), (0, d.useFocusLock)(_), l.useEffect(() => {
-                (!O && (0, u.hasAnyModalOpen)() || O && !k) && M()
-            }, [k, O]);
+            l.useLayoutEffect(() => (N.addEventListener("mousedown", k), N.addEventListener("contextmenu", k), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
+                N.removeEventListener("mousedown", k), N.removeEventListener("contextmenu", k), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
+            }), [L, k, N, A]), (0, d.useFocusLock)(_), l.useEffect(() => {
+                (!O && (0, u.hasAnyModalOpen)() || O && !M) && R()
+            }, [M, O]);
             let b = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
             return (0, i.jsx)(c.default, {
                 section: S.AnalyticsSections.EXPRESSION_PICKER,

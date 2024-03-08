@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return M
+            return R
         }
     }), n("222007"), n("702976");
     var i = n("77078"),
@@ -31,13 +31,13 @@ function(e, t, n) {
         N = n("305515"),
         A = n("49111"),
         O = n("782340");
-    async function k(e) {
+    async function M(e) {
         var t, n, i;
         let c, {
                 channelId: f,
-                uploads: k,
-                draftType: M,
-                parsedMessage: R,
+                uploads: M,
+                draftType: R,
+                parsedMessage: k,
                 options: L = {},
                 raiseEndpointErrors: b = !1
             } = e,
@@ -51,7 +51,7 @@ function(e, t, n) {
                 sticker_ids: null == L ? void 0 : L.stickerIds,
                 poll: null == L ? void 0 : L.poll
             };
-        null != R && (U.content = null == R ? void 0 : R.content);
+        null != k && (U.content = null == k ? void 0 : k.content);
         let D = C.default.getPendingReply(f);
         null != D && (U.type = A.MessageTypes.REPLY, U.message_reference = L.messageReference, U.allowed_mentions = L.allowedMentions, (0, S.deletePendingReply)(f));
         let [w, F] = (0, I.default)(U.content);
@@ -60,7 +60,7 @@ function(e, t, n) {
             G = (0, E.default)({
                 channelId: f,
                 content: U.content,
-                tts: null !== (i = null == R ? void 0 : R.tts) && void 0 !== i && i,
+                tts: null !== (i = null == k ? void 0 : k.tts) && void 0 !== i && i,
                 type: U.type,
                 messageReference: U.message_reference,
                 flags: U.flags,
@@ -122,10 +122,10 @@ function(e, t, n) {
             }, t)) : (0, o.openUploadError)({
                 title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                 help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-            }), "" !== U.content && "" === T.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === _.default.getUploadCount(f, M) && r.default.setUploads({
+            }), "" !== U.content && "" === T.default.getDraft(f, R) && a.default.saveDraft(f, U.content, R), 0 === _.default.getUploadCount(f, R) && r.default.setUploads({
                 channelId: f,
-                uploads: k,
-                draftType: M
+                uploads: M,
+                draftType: R
             }))
         }), P.on("complete", (e, t) => {
             l.default.dispatch({
@@ -135,9 +135,9 @@ function(e, t, n) {
                 aborted: P._aborted,
                 messageRecord: t
             })
-        }), await P.uploadFiles(k, U), j.resolve(), j.promise
+        }), await P.uploadFiles(M, U), j.resolve(), j.promise
     }
-    var M = {
+    var R = {
         instantBatchUpload: function(e) {
             let {
                 channelId: t,
@@ -154,7 +154,7 @@ function(e, t, n) {
                     ...i
                 }, t)
             });
-            k({
+            M({
                 channelId: t,
                 uploads: s,
                 draftType: i
@@ -228,7 +228,7 @@ function(e, t, n) {
                 })
             }), x.upload(r, h)
         },
-        uploadFiles: k,
+        uploadFiles: M,
         cancel(e) {
             if (l.default.dispatch({
                     type: "UPLOAD_CANCEL_REQUEST",

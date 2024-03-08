@@ -59,10 +59,10 @@ function(e, t, n) {
             checked: t,
             onClick: n,
             id: a = "burst-reaction-toggle-button"
-        } = e, x = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), T = m.default.getCurrentUser(), _ = null != T && !(0, E.isPremium)(T), v = _ ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [N, A] = (0, p.useSelectedDismissibleContent)(v), [O, k] = l.useState(!1), [M, R] = (0, r.useSpring)(() => ({})), L = (0, r.animated)(d.SuperReactionIcon);
+        } = e, x = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), T = m.default.getCurrentUser(), _ = null != T && !(0, E.isPremium)(T), v = _ ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [N, A] = (0, p.useSelectedDismissibleContent)(v), [O, M] = l.useState(!1), [R, k] = (0, r.useSpring)(() => ({})), L = (0, r.animated)(d.SuperReactionIcon);
         l.useEffect(() => {
             let e = N === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-            e && (A(y.ContentDismissActionType.DISMISS), setTimeout(() => k(e), 200))
+            e && (A(y.ContentDismissActionType.DISMISS), setTimeout(() => M(e), 200))
         }, [N, A]);
         let b = O ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? g.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : g.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
             P = O ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
@@ -81,7 +81,7 @@ function(e, t, n) {
                 className: S.visuallyHidden,
                 checked: t,
                 onChange: function() {
-                    R({
+                    k({
                         from: {
                             rotate: t ? "360deg" : "0deg"
                         },
@@ -89,7 +89,7 @@ function(e, t, n) {
                             rotate: t ? "0deg" : "360deg"
                         },
                         config: C
-                    }), null == n || n(), k(!1)
+                    }), null == n || n(), M(!1)
                 },
                 id: a,
                 type: "checkbox"
@@ -102,7 +102,7 @@ function(e, t, n) {
                     className: S.shine,
                     shinePaused: x
                 }) : null, (0, i.jsx)(L, {
-                    style: x ? void 0 : M,
+                    style: x ? void 0 : R,
                     width: 20,
                     height: 20,
                     color: t ? "white" : void 0,
