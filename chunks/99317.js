@@ -2,25 +2,29 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getNavYouBarExperiment: function() {
-            return f
+            return _
+        },
+        daysSinceYouBarFirstSeen: function() {
+            return h
         }
     }), n("884691"), n("233736");
     var i = n("95410"),
         s = n("868493"),
         r = n("133337"),
         a = n("760190"),
-        o = n("21121");
-    let l = {
+        o = n("718517"),
+        l = n("21121");
+    let u = {
             showYouBar: !1,
             showMessagesButton: !1
         },
-        u = !1,
-        d = l,
-        c = (0, s.default)({
+        d = !1,
+        c = u,
+        f = (0, s.default)({
             kind: "user",
             id: "2024-02_navi_bar",
             label: "Mobile Redesign - Nav Experiment: You Bar",
-            defaultConfig: l,
+            defaultConfig: u,
             treatments: [{
                 id: 0,
                 label: "Control",
@@ -45,14 +49,19 @@ function(e, t, n) {
             }]
         });
 
-    function f(e, t) {
+    function _(e, t) {
         var n, s;
-        let f = !(0, o.isInMainTabsExperiment)(),
-            _ = !!f || (null == t ? void 0 : t.disable);
-        return a.default.hasLoadedExperiments || _ ? (0, r.getMergedExperimentConfigs)(c.existingUsers, c.newUsers, e, {
+        let o = !(0, l.isInMainTabsExperiment)(),
+            _ = !!o || (null == t ? void 0 : t.disable);
+        return a.default.hasLoadedExperiments || _ ? (0, r.getMergedExperimentConfigs)(f.existingUsers, f.newUsers, e, {
             ...t,
             disable: _,
-            autoTrackExposure: !f && (null === (s = null == t ? void 0 : t.autoTrackExposure) || void 0 === s || s)
-        }) : (!u && (d = null !== (n = i.default.get("--you-bar-experiment-cached-config")) && void 0 !== n ? n : l, u = !0), d)
+            autoTrackExposure: !o && (null === (s = null == t ? void 0 : t.autoTrackExposure) || void 0 === s || s)
+        }) : (!d && (c = null !== (n = i.default.get("--you-bar-experiment-cached-config")) && void 0 !== n ? n : u, d = !0), c)
+    }
+
+    function h() {
+        let e = i.default.get("--you-bar-experiment-first-seen");
+        return null == e ? -1 : Math.floor((Date.now() - e) / o.default.Millis.DAY)
     }
 }

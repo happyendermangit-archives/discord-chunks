@@ -30,7 +30,7 @@ function(e, t, n) {
     function A() {
         let e = [],
             t = g.CustomStatusSetting.getSetting();
-        null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, c.default)(t));
+        null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, c.getActivityFromCustomStatus)(t));
         let n = h.default.getActivities();
         e.push(...n);
         let i = S.default.getStream();
