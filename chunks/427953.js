@@ -24,6 +24,8 @@ function(e, t, n) {
         id: "2023-08_activities_in_text",
         label: "Activities in Text User",
         defaultConfig: {
+            entryPointEnabled: !1,
+            desktopThrobberEnabled: !1,
             activitiesInTextEnabled: !1,
             showInOmniButtonMenu: !1,
             showChatInputButton: !1
@@ -32,7 +34,9 @@ function(e, t, n) {
             id: 1,
             label: "enable Activities in text channels",
             config: {
+                entryPointEnabled: !0,
                 activitiesInTextEnabled: !0,
+                desktopThrobberEnabled: !1,
                 showInOmniButtonMenu: !0,
                 showChatInputButton: !1
             }
@@ -40,7 +44,9 @@ function(e, t, n) {
             id: 3,
             label: "enable Activities in text with the rocket button in chat input",
             config: {
+                entryPointEnabled: !0,
                 activitiesInTextEnabled: !0,
+                desktopThrobberEnabled: !1,
                 showInOmniButtonMenu: !1,
                 showChatInputButton: !0
             }

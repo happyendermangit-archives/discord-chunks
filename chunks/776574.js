@@ -278,9 +278,10 @@ function(e, t, n) {
         handlePasteCapture(e) {
             let {
                 editor: t,
-                onPaste: n
+                onPaste: n,
+                readOnly: l
             } = this.props;
-            null == n || n(e), !(e.isDefaultPrevented() || e.isPropagationStopped()) && (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation())
+            null == n || n(e), !(e.isDefaultPrevented() || e.isPropagationStopped()) && !l && (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation())
         }
         render() {
             let {
