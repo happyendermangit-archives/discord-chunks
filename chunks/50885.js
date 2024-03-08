@@ -303,6 +303,9 @@ function(e, _, E) {
         setEnableHardwareAcceleration(e) {
             D.gpuSettings.setEnableHardwareAcceleration(e)
         },
+        setChromiumSwitches(e) {
+            D.gpuSettings.setChromiumSwitches(e)
+        },
         getGPUDriverVersions() {
             return (0, l.isWindows)() && null != this.getDiscordUtils().getGPUDriverVersions ? this.getDiscordUtils().getGPUDriverVersions() : Promise.resolve(Object.freeze({}))
         },

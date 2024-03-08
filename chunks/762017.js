@@ -269,6 +269,10 @@ function(e, _, E) {
             actions: ["MEDIA_ENGINE_NOISE_CANCELLATION_ERROR"],
             inlineRequire: () => E("104545").default
         },
+        GPUWorkaroundManager: {
+            actions: ["POST_CONNECTION_OPEN"],
+            inlineRequire: () => E("41377").default
+        },
         HighFiveManager: {
             actions: ["VOICE_CHANNEL_EFFECT_SEND", "HIGH_FIVE_COMPLETE"],
             inlineRequire: () => E("536813").default
