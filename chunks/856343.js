@@ -84,7 +84,7 @@ function(e, t, n) {
                     action: () => M(r, g, t, E.AnalyticsObjectTypes.RESOLUTION)
                 }, "stream-settings-fps-".concat(t))
             }),
-            x = p.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
+            O = p.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
                 let {
                     value: t,
                     label: n
@@ -103,7 +103,7 @@ function(e, t, n) {
                 children: N
             }), (0, a.jsx)(i.MenuGroup, {
                 label: m.default.Messages.STREAM_RESOLUTION,
-                children: x
+                children: O
             })]
         })
     }

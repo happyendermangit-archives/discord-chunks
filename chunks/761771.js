@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isEligibleForInappropriateConversationWarning: function() {
-            return _
+            return r
         },
         useIsEligibleForInappropriateConversationWarning: function() {
-            return r
+            return s
         }
     });
     var a = n("862205");
@@ -40,7 +40,7 @@ function(e, t, n) {
             }]
         });
 
-    function _(e) {
+    function r(e) {
         let {
             location: t,
             autoTrackExposure: n = !1
@@ -51,16 +51,16 @@ function(e, t, n) {
         }, {
             autoTrackExposure: n
         }), {
-            enabled: _
+            enabled: r
         } = i.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: n
         });
-        return a || _
+        return a || r
     }
 
-    function r(e) {
+    function s(e) {
         let {
             location: t,
             autoTrackExposure: n = !1
@@ -71,12 +71,12 @@ function(e, t, n) {
         }, {
             autoTrackExposure: n
         }), {
-            enabled: _
+            enabled: r
         } = i.useExperiment({
             location: t
         }, {
             autoTrackExposure: n
         });
-        return a || _
+        return a || r
     }
 }

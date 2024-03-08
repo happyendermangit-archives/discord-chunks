@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return x
         }
     });
     var a = n("37983");
@@ -66,7 +66,7 @@ function(e, t, n) {
                 })]
             })
         },
-        x = e => {
+        O = e => {
             let {
                 focused: t,
                 windowKey: n,
@@ -118,7 +118,7 @@ function(e, t, n) {
             })
         };
 
-    function O(e) {
+    function x(e) {
         let {
             focused: t,
             type: n,
@@ -135,7 +135,7 @@ function(e, t, n) {
                     hasOpenLayer: h
                 });
             case g.PlatformTypes.OSX:
-                return (0, a.jsx)(x, {
+                return (0, a.jsx)(O, {
                     focused: t,
                     windowKey: r,
                     frame: s,

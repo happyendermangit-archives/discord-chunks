@@ -18,7 +18,7 @@ function(e, _, E) {
         } = e;
         if (null == _ || !(0, a.isEligibleForInappropriateConversationWarning)({
                 location: "channel_select"
-            })) return !1;
+            }) || !(0, r.getSafetyAlertsSettingOrDefault)()) return !1;
         let E = o.default.getChannel(_);
         if (null == E || !E.isDM()) return !1;
         let t = (0, r.getInappropriateConversationTakeoverForChannel)(_);
@@ -36,7 +36,7 @@ function(e, _, E) {
         } = e;
         if (!(0, a.isEligibleForInappropriateConversationWarning)({
                 location: "channel_updates"
-            })) return !1;
+            }) || !(0, r.getSafetyAlertsSettingOrDefault)()) return !1;
         let E = n.default.getCurrentlySelectedChannelId();
         if (null == E) return !1;
         let t = _.find(e => e.id === E);

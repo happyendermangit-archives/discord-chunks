@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return x
+            return O
         }
     }), n("222007");
     var a = n("37983"),
@@ -129,5 +129,5 @@ function(e, t, n) {
             }, this.discordErrorsSet = !1
         }
     }
-    var x = N
+    var O = N
 }
