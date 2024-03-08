@@ -76,7 +76,7 @@ function(e, t, n) {
                     for (; u.width + r.TEXT_TRUNCATION_PADDING_PX > s;) t = t.slice(0, -4), u = this.context.measureText(t), d = !0;
                     return d && (t += "..."), t
                 };
-            if (this.font.truncate === o.TextTruncationMethod.Truncate && f(e = p(e), t), this.font.truncate === o.TextTruncationMethod.Wrap) {
+            if (this.font.truncate === o.TextTruncationMethod.None && f(e, t), this.font.truncate === o.TextTruncationMethod.Truncate && f(e = p(e), t), this.font.truncate === o.TextTruncationMethod.Wrap) {
                 let n = e.split(" "),
                     i = 1 / 0,
                     r = "",

@@ -379,7 +379,8 @@ function(_, E, I) {
             MOD_ACADEMY_EXAM: "https://dis.gd/exam",
             OFFICIAL_3RD_PARTY_MERCH: "https://discordmerch.com/evergreenfooter",
             COMMUNITY: "/community",
-            TWITTER_SUPPORT: "https://twitter.com/discord_support"
+            TWITTER_SUPPORT: "https://twitter.com/discord_support",
+            QUESTS: "/quests"
         },
         _v = Object.freeze({
             TWITTER: Object.freeze({
