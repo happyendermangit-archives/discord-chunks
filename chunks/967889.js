@@ -49,7 +49,7 @@ function(e, t, n) {
             children: I.default.Messages.CLEAR_BUILD_OVERRIDE
         })
     }
-    let N = i.throttle(() => {
+    let R = i.throttle(() => {
         C.default.increment({
             name: o.MetricEvents.APP_CRASHED,
             tags: ["reason:".concat(l.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
@@ -57,7 +57,7 @@ function(e, t, n) {
     }, 100, {
         trailing: !1
     });
-    class R extends r.PureComponent {
+    class N extends r.PureComponent {
         componentDidCatch(e, t) {
             this.triggerSoftCrash(e, t)
         }
@@ -77,7 +77,7 @@ function(e, t, n) {
                 error_stack: e.stack,
                 sentry_issue_id: a,
                 uses_client_mods: (0, p.usesClientMods)()
-            }), N(), T.default.cleanupDisplaySleep()
+            }), R(), T.default.cleanupDisplaySleep()
         }
         _handleSubmitReport() {
             location.reload(!0)
@@ -129,5 +129,5 @@ function(e, t, n) {
             }, this.discordErrorsSet = !1
         }
     }
-    var x = R
+    var x = N
 }

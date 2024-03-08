@@ -77,7 +77,7 @@ function(e, t, n) {
         })
     }
 
-    function N(e) {
+    function R(e) {
         let {
             users: t,
             guildId: n,
@@ -103,7 +103,7 @@ function(e, t, n) {
             })
         })
     }
-    let R = [];
+    let N = [];
 
     function x(e) {
         let {
@@ -114,16 +114,16 @@ function(e, t, n) {
             compact: m = !1,
             disableInteraction: g = !1,
             maxVisibleUsers: v = 3
-        } = e, [A, x] = r.useState(!1), y = r.useRef(new d.DelayedCall(150, () => x(!1))), O = (0, o.useStateFromStoresArray)([E.default, p.default], () => {
+        } = e, [A, x] = r.useState(!1), O = r.useRef(new d.DelayedCall(150, () => x(!1))), y = (0, o.useStateFromStoresArray)([E.default, p.default], () => {
             if (l.type === _.ParticipantTypes.STREAM) {
                 let e = E.default.getViewerIds(l.id);
-                return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish) : R
+                return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish) : N
             }
-            return l.type === _.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => p.default.getUser(e)).filter(S.isNotNullish) : R : R
+            return l.type === _.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => p.default.getUser(e)).filter(S.isNotNullish) : N : N
         }, [l]), L = r.useCallback(() => {
-            y.current.cancel(), x(!0)
+            O.current.cancel(), x(!0)
         }, []), P = r.useCallback(() => {
-            y.current.delay()
+            O.current.delay()
         }, []), D = r.useCallback((e, t) => {
             L(), (0, f.openContextMenuLazy)(e, async () => {
                 let {
@@ -137,24 +137,24 @@ function(e, t, n) {
                 onClose: P
             })
         }, [P, L]);
-        if (0 === O.length) return null;
-        if (m) return (0, a.jsx)(N, {
+        if (0 === y.length) return null;
+        if (m) return (0, a.jsx)(R, {
             maxVisibleUsers: v,
-            users: O,
+            users: y,
             guildId: s,
             channelId: t,
             className: C,
             participantType: l.type
         });
-        let b = u(O).take(v).map(e => (0, a.jsx)(c.Avatar, {
+        let b = u(y).take(v).map(e => (0, a.jsx)(c.Avatar, {
             src: e.getAvatarURL(s, 24),
             "aria-label": e.username,
             size: c.AvatarSizes.SIZE_24,
             className: I.viewer
         }, e.id)).value();
-        return O.length > v && (b[b.length - 1] = (0, a.jsxs)("div", {
+        return y.length > v && (b[b.length - 1] = (0, a.jsxs)("div", {
             className: I.overflow,
-            children: ["+", O.length - v + 1]
+            children: ["+", y.length - v + 1]
         }, "overflow")), (0, a.jsx)(h.default, {
             section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
             children: (0, a.jsx)("div", {
@@ -166,7 +166,7 @@ function(e, t, n) {
                         handleUserContextMenu: D,
                         guildId: s,
                         channelId: t,
-                        users: O,
+                        users: y,
                         disableInteraction: g
                     }),
                     shouldShow: A,

@@ -70,8 +70,8 @@ function(e, t, n) {
             }
         }, [t, A, T]);
         if (null == e) return null;
-        let N = S === p.ApplicationStreamPresets.PRESET_DOCUMENTS ? p.ApplicationStreamFPS.FPS_30 : _,
-            R = p.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
+        let R = S === p.ApplicationStreamPresets.PRESET_DOCUMENTS ? p.ApplicationStreamFPS.FPS_30 : _,
+            N = p.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
                 let {
                     value: t,
                     label: n
@@ -88,19 +88,19 @@ function(e, t, n) {
                 let {
                     value: t,
                     label: n
-                } = e, r = (0, o.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, t, N, v, I);
+                } = e, r = (0, o.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, t, R, v, I);
                 return (0, a.jsx)(i.MenuRadioItem, {
                     group: "stream-settings-resolution",
                     id: "stream-settings-resolution-".concat(t),
                     label: n,
                     checked: t === g,
-                    action: () => M(r, t, N, E.AnalyticsObjectTypes.RESOLUTION)
+                    action: () => M(r, t, R, E.AnalyticsObjectTypes.RESOLUTION)
                 }, "stream-settings-resolution-".concat(t))
             });
         return (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(i.MenuGroup, {
                 label: m.default.Messages.SCREENSHARE_FRAME_RATE,
-                children: R
+                children: N
             }), (0, a.jsx)(i.MenuGroup, {
                 label: m.default.Messages.STREAM_RESOLUTION,
                 children: x

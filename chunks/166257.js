@@ -140,7 +140,7 @@ function(e, t, n) {
             return
         }
         let _ = await O(n, o);
-        v("MESSAGE_REACTION_ADD", e, t, n, {
+        return v("MESSAGE_REACTION_ADD", e, t, n, {
             burst: o,
             colors: _
         }), await d.default.unarchiveThreadIfNecessary(e), r.default.put({

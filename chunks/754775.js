@@ -40,12 +40,12 @@ function(e, t, n) {
                     src: n,
                     ...g
                 }),
-                N = {
+                R = {
                     ...t,
                     backgroundColor: T
                 };
-            return null != A && S && v && (N.backgroundImage = "url(".concat(A, ")"), N.backgroundSize = "cover"), (0, a.jsx)("div", {
-                style: N,
+            return null != A && S && v && (R.backgroundImage = "url(".concat(A, ")"), R.backgroundSize = "cover"), (0, a.jsx)("div", {
+                style: R,
                 className: E.background,
                 children: m ? (0, a.jsx)(o.default, {
                     shouldAnimate: S,
