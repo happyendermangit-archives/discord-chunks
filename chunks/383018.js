@@ -167,22 +167,24 @@ function(e, t, n) {
                 preferredCommandId: n,
                 command: i,
                 section: s,
-                changedOptionStates: r
-            } = e, a = c({
+                location: r,
+                changedOptionStates: a
+            } = e, o = c({
                 type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
                 channelId: t,
                 command: i,
-                section: s
-            }), o = f({
+                section: s,
+                location: r
+            }), l = f({
                 type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
                 channelId: t,
                 commandId: n
-            }), l = _({
+            }), u = _({
                 type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
                 channelId: t,
-                changedOptionStates: r
+                changedOptionStates: a
             });
-            return a || o || l
+            return o || l || u
         }
     });
     var g = E

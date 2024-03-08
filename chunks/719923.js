@@ -539,6 +539,10 @@ function(e, t, n) {
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE.format({
                             pauseDate: r.currentPeriodEnd
                         });
+                    case R.SubscriptionStatusTypes.PAUSED:
+                        return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({
+                            resumeDate: r.pauseEndsAt
+                        });
                     default:
                         return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
                             price: o
@@ -563,6 +567,10 @@ function(e, t, n) {
                             pauseDate: r.currentPeriodEnd
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE.format({
                             pauseDate: r.currentPeriodEnd
+                        });
+                    case R.SubscriptionStatusTypes.PAUSED:
+                        return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({
+                            resumeDate: r.pauseEndsAt
                         });
                     default:
                         return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
@@ -600,6 +608,10 @@ function(e, t, n) {
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE.format({
                             num: m,
                             pauseDate: r.currentPeriodEnd
+                        });
+                    case R.SubscriptionStatusTypes.PAUSED:
+                        return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({
+                            resumeDate: r.pauseEndsAt
                         });
                     default:
                         return u ? L.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({

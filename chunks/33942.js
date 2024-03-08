@@ -477,13 +477,13 @@ function(e, t, n) {
         }));
         else if (a && (null == i ? void 0 : i.startsWith(X.Routes.OAUTH2_ERROR)))(0, g.openModal)(e => {
             let t = s.error_description || s.error || Z.default.Messages.OAUTH2_UNKNOWN_ERROR;
-            return Array.isArray(t) && (t = t[0]), (0, r.jsxs)(K.OAuth2Modal, {
+            return Array.isArray(t) && (t = t[0]), (0, r.jsx)(K.OAuth2Modal, {
                 ...e,
                 "aria-labelledby": $,
-                children: [(0, r.jsx)(z.OAuth2Error, {
+                children: (0, r.jsx)(z.OAuth2Error, {
                     message: t,
                     onClose: e.onClose
-                }), ";"]
+                })
             })
         });
         else {

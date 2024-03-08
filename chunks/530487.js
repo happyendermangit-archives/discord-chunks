@@ -60,18 +60,20 @@ function(e, t, n) {
             });
         return (0, i.jsxs)("div", {
             className: c.botPermissions,
-            children: [m.length > 0 ? (0, i.jsx)(o.Text, {
-                variant: "text-sm/medium",
-                color: "header-secondary",
-                className: c.permissionsLabel,
-                children: d.default.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
-                    applicationName: t.name,
-                    guildName: h.name
-                })
-            }) : null, (0, i.jsx)("ul", {
-                className: c.permissionsList,
-                children: m
-            }), p.length > 0 ? (0, i.jsxs)(i.Fragment, {
+            children: [m.length > 0 ? (0, i.jsxs)(i.Fragment, {
+                children: [(0, i.jsx)(o.Text, {
+                    variant: "text-sm/medium",
+                    color: "header-secondary",
+                    className: c.permissionsLabel,
+                    children: d.default.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
+                        applicationName: t.name,
+                        guildName: h.name
+                    })
+                }), (0, i.jsx)("ul", {
+                    className: c.permissionsList,
+                    children: m
+                })]
+            }) : null, p.length > 0 ? (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(o.Text, {
                     variant: "text-sm/medium",
                     color: "header-secondary",
