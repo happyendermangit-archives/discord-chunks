@@ -3,6 +3,7 @@ function(e, _, E) {
 
     function t(e, _, E, t) {
         if (e === _) return !0;
+        if (void 0 === e || void 0 === _) return e === _;
         let o = Object.keys(e),
             n = Object.keys(_);
         if (o.length !== n.length) return null != t && t("shallowEqual: unequal key lengths ".concat(o.length, " !=== ").concat(n.length)), !1;
