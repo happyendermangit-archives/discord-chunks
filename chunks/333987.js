@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return l
         }
     });
-    var l = n("884691");
+    var i = n("884691");
 
-    function i(e) {
-        let t = l.useRef(null),
-            n = l.useCallback(n => {
+    function l(e) {
+        let t = i.useRef(null),
+            n = i.useCallback(n => {
                 null != e && ("function" == typeof e ? e(n) : e.current = n, t.current = n)
             }, [e]);
         return [t, n]

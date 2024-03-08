@@ -8,8 +8,8 @@ function(e, t, n) {
             return s
         }
     });
-    var l = n("862205");
-    let i = (0, l.createExperiment)({
+    var i = n("862205");
+    let l = (0, i.createExperiment)({
         kind: "user",
         id: "2023-11_soundboard_recently_heard_frequently_played",
         label: "Soundboard Recently Heard & Frequently Played",
@@ -46,7 +46,7 @@ function(e, t, n) {
             location: t,
             autoTrackExposure: n
         } = e;
-        return i.getCurrentConfig({
+        return l.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: n
@@ -58,7 +58,7 @@ function(e, t, n) {
             autoTrackExposure: t,
             location: n
         } = e;
-        return i.useExperiment({
+        return l.useExperiment({
             location: n
         }, {
             autoTrackExposure: t

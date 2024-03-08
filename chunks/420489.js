@@ -5,9 +5,9 @@ function(e, t, n) {
             return d
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("77078"),
+    var l = n("77078"),
         a = n("945330"),
         s = n("51947"),
         r = n("994428"),
@@ -17,19 +17,19 @@ function(e, t, n) {
             let {
                 markAsDismissed: t
             } = e;
-            return (0, l.jsxs)("div", {
+            return (0, i.jsxs)("div", {
                 className: u.wrapper,
-                children: [(0, l.jsx)(s.default, {
+                children: [(0, i.jsx)(s.default, {
                     className: u.icon
-                }), (0, l.jsx)("div", {
+                }), (0, i.jsx)("div", {
                     className: u.content,
-                    children: (0, l.jsx)(i.Text, {
+                    children: (0, i.jsx)(l.Text, {
                         variant: "text-xs/normal",
                         children: o.default.Messages.EMOJI_PICKER_FAVORITES_TIP
                     })
-                }), (0, l.jsx)(i.Clickable, {
+                }), (0, i.jsx)(l.Clickable, {
                     onClick: () => t(r.ContentDismissActionType.UNKNOWN),
-                    children: (0, l.jsx)(a.default, {
+                    children: (0, i.jsx)(a.default, {
                         className: u.close
                     })
                 })]

@@ -5,8 +5,8 @@ function(e, t, n) {
             return O
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("77078"),
@@ -15,43 +15,43 @@ function(e, t, n) {
         d = n("240249"),
         c = n("524768"),
         f = n("355263"),
-        m = n("462274"),
-        p = n("368639"),
+        p = n("462274"),
+        m = n("368639"),
         h = n("945330"),
-        E = n("256170"),
-        g = n("315102"),
-        S = n("659500"),
-        C = n("82372"),
-        T = n("476606"),
-        v = n("540843"),
+        x = n("256170"),
+        E = n("315102"),
+        y = n("659500"),
+        g = n("82372"),
+        S = n("476606"),
+        C = n("540843"),
         I = n("49111"),
-        _ = n("317041"),
-        N = n("782340"),
-        A = n("23429"),
-        x = n("919163");
+        T = n("317041"),
+        _ = n("782340"),
+        v = n("23429"),
+        N = n("919163");
 
-    function y(e) {
+    function A(e) {
         let {
             channel: t,
             command: n,
             section: a
-        } = e, s = i.useCallback(() => {
-            C.dismissAppLauncherPopup(), u.setActiveCommand({
+        } = e, s = l.useCallback(() => {
+            g.dismissAppLauncherPopup(), u.setActiveCommand({
                 channelId: t.id,
                 command: n,
                 section: a,
                 location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-            }), S.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+            }), y.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                 channelId: t.id
             })
         }, [t, n, a]);
-        return (0, l.jsxs)("li", {
-            className: A.command,
+        return (0, i.jsxs)("li", {
+            className: v.command,
             onClick: s,
-            children: [(0, l.jsx)(r.Text, {
+            children: [(0, i.jsx)(r.Text, {
                 variant: "text-sm/semibold",
                 children: n.displayName
-            }), (0, l.jsx)(r.Text, {
+            }), (0, i.jsx)(r.Text, {
                 variant: "text-xs/medium",
                 lineClamp: 1,
                 children: n.displayDescription
@@ -66,90 +66,90 @@ function(e, t, n) {
             appDetail: u
         } = e, {
             filterSection: c,
-            commandsByActiveSection: S
+            commandsByActiveSection: y
         } = d.useDiscovery(a, {
             commandType: o.ApplicationCommandType.CHAT
         }, {
             placeholderCount: 0,
-            limit: _.DISCOVERY_COMMANDS_QUERY_LIMIT,
+            limit: T.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
         }), {
             commands: I
-        } = (0, T.default)({
+        } = (0, S.default)({
             sectionId: u.id,
-            commandsByActiveSection: S
+            commandsByActiveSection: y
         });
-        i.useEffect(() => {
+        l.useEffect(() => {
             c(u.id)
         }, [u.id, c]);
-        let O = g.default.getApplicationIconSource({
+        let O = E.default.getApplicationIconSource({
                 id: u.id,
                 icon: u.icon,
                 bot: null === (t = u.application) || void 0 === t ? void 0 : t.bot,
                 botIconFirst: !0
             }),
-            R = i.useCallback(() => {
-                C.dismissAppDetail()
+            k = l.useCallback(() => {
+                g.dismissAppDetail()
             }, []),
             M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-            L = (0, m.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
-            P = (0, f.getIconComponent)(u),
-            b = i.useMemo(() => {
+            R = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
+            L = (0, f.getIconComponent)(u),
+            b = l.useMemo(() => {
                 var e, t;
-                return (0, p.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
+                return (0, m.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
             }, [null === (n = u.application) || void 0 === n ? void 0 : n.description]);
-        return (0, l.jsxs)(r.ScrollerNone, {
-            className: A.container,
+        return (0, i.jsxs)(r.ScrollerNone, {
+            className: v.container,
             fade: !0,
-            children: [(0, l.jsx)("div", {
-                className: A.headerWhenSideCard,
+            children: [(0, i.jsx)("div", {
+                className: v.headerWhenSideCard,
                 style: {
-                    backgroundColor: L
+                    backgroundColor: R
                 },
-                children: (0, l.jsx)(r.Clickable, {
-                    "aria-label": N.default.Messages.CLOSE,
-                    onClick: R,
-                    className: A.headerCloseButton,
-                    children: (0, l.jsx)(h.default, {})
+                children: (0, i.jsx)(r.Clickable, {
+                    "aria-label": _.default.Messages.CLOSE,
+                    onClick: k,
+                    className: v.headerCloseButton,
+                    children: (0, i.jsx)(h.default, {})
                 })
-            }), (0, l.jsxs)("div", {
-                className: A.contentContainer,
-                children: [(0, l.jsxs)("div", {
-                    className: A.appIcon,
-                    children: [(0, l.jsx)(P, {
+            }), (0, i.jsxs)("div", {
+                className: v.contentContainer,
+                children: [(0, i.jsxs)("div", {
+                    className: v.appIcon,
+                    children: [(0, i.jsx)(L, {
                         channel: a,
                         section: u,
                         width: 72,
                         height: 72
-                    }), (0, l.jsx)("div", {
-                        className: A.appIconBorderThingy
+                    }), (0, i.jsx)("div", {
+                        className: v.appIconBorderThingy
                     })]
-                }), (0, l.jsxs)("section", {
-                    children: [(0, l.jsx)(r.Heading, {
-                        className: A.appName,
+                }), (0, i.jsxs)("section", {
+                    children: [(0, i.jsx)(r.Heading, {
+                        className: v.appName,
                         variant: "heading-lg/bold",
                         children: u.name
-                    }), (0, l.jsx)(r.Text, {
-                        className: s(A.appDescription, x.markup),
+                    }), (0, i.jsx)(r.Text, {
+                        className: s(v.appDescription, N.markup),
                         variant: "text-sm/medium",
                         lineClamp: 3,
                         children: b
                     })]
-                }), (0, l.jsx)(v.default, {
+                }), (0, i.jsx)(C.default, {
                     commands: I,
                     channel: a
-                }), (0, l.jsxs)("div", {
-                    className: A.commandListHeader,
-                    children: [(0, l.jsx)(r.Heading, {
+                }), (0, i.jsxs)("div", {
+                    className: v.commandListHeader,
+                    children: [(0, i.jsx)(r.Heading, {
                         variant: "text-md/medium",
                         children: "All Commands"
-                    }), (0, l.jsxs)(r.Text, {
-                        className: A.sortSelector,
+                    }), (0, i.jsxs)(r.Text, {
+                        className: v.sortSelector,
                         variant: "text-md/medium",
-                        children: ["Popular", (0, l.jsx)(E.default, {})]
+                        children: ["Popular", (0, i.jsx)(x.default, {})]
                     })]
-                }), (0, l.jsx)("ul", {
-                    children: I.map(e => (0, l.jsx)(y, {
+                }), (0, i.jsx)("ul", {
+                    children: I.map(e => (0, i.jsx)(A, {
                         channel: a,
                         command: e,
                         section: u

@@ -5,10 +5,10 @@ function(e, t, n) {
             return s
         }
     });
-    var l = n("884691");
-    let i = {
-            currentPreviewRef: l.createRef()
+    var i = n("884691");
+    let l = {
+            currentPreviewRef: i.createRef()
         },
-        a = l.createContext(i);
+        a = i.createContext(l);
     var s = a
 }

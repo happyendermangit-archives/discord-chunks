@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return S
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("446674"),
         r = n("77078"),
         o = n("997289"),
@@ -16,66 +16,66 @@ function(e, t, n) {
         d = n("476263"),
         c = n("216422"),
         f = n("719923"),
-        m = n("485422"),
-        p = n("777003"),
+        p = n("485422"),
+        m = n("777003"),
         h = n("49111"),
-        E = n("782340"),
-        g = n("20010"),
-        S = n("862939");
+        x = n("782340"),
+        E = n("20010"),
+        y = n("862939");
 
-    function C(e) {
+    function g(e) {
         let {
             guildName: t
         } = e;
-        return (0, l.jsxs)("div", {
-            className: g.guildMemberProfileTooltip,
-            children: [(0, l.jsx)(c.default, {
-                className: g.guildMemberProfileTooltipNitroWheel
-            }), E.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+        return (0, i.jsxs)("div", {
+            className: E.guildMemberProfileTooltip,
+            children: [(0, i.jsx)(c.default, {
+                className: E.guildMemberProfileTooltipNitroWheel
+            }), x.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
                 guildName: t
             })]
         })
     }
 
-    function T(e) {
+    function S(e) {
         let {
             guild: t,
-            bio: i,
+            bio: l,
             hidePersonalInformation: c,
-            isUsingGuildBio: T,
-            lastSection: v = !1,
+            isUsingGuildBio: S,
+            lastSection: C = !1,
             animateOnHover: I = !1,
-            isHovering: _ = !1,
-            lineClamp: N
+            isHovering: T = !1,
+            lineClamp: _
         } = e, {
-            location: A
-        } = (0, o.useAnalyticsContext)(), x = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), y = f.default.canUsePremiumGuildMemberProfile(x);
-        return c || null == i || "" === i ? null : (0, l.jsxs)(p.default, {
-            lastSection: v,
-            children: [(0, l.jsxs)(r.Heading, {
+            location: v
+        } = (0, o.useAnalyticsContext)(), N = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), A = f.default.canUsePremiumGuildMemberProfile(N);
+        return c || null == l || "" === l ? null : (0, i.jsxs)(m.default, {
+            lastSection: C,
+            children: [(0, i.jsxs)(r.Heading, {
                 variant: "eyebrow",
-                className: S.title,
-                children: [E.default.Messages.USER_POPOUT_ABOUT_ME, null != t && T && (0, l.jsx)(r.Tooltip, {
+                className: y.title,
+                children: [x.default.Messages.USER_POPOUT_ABOUT_ME, null != t && S && (0, i.jsx)(r.Tooltip, {
                     color: r.Tooltip.Colors.CUSTOM,
-                    tooltipClassName: g.aboutMeGuildIconTooltip,
-                    "aria-label": E.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+                    tooltipClassName: E.aboutMeGuildIconTooltip,
+                    "aria-label": x.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
                         guildName: t.name
                     }),
-                    text: (0, l.jsx)(C, {
+                    text: (0, i.jsx)(g, {
                         guildName: t.name
                     }),
-                    children: e => (0, l.jsx)(d.default, {
+                    children: e => (0, i.jsx)(d.default, {
                         ...e,
                         onClick: () => {
                             var t;
-                            null == (t = e.onClick) || t(), null != x && !y && (0, r.openModalLazy)(async () => {
+                            null == (t = e.onClick) || t(), null != N && !A && (0, r.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("414242").then(n.bind(n, "414242"));
-                                return t => (0, l.jsx)(e, {
+                                return t => (0, i.jsx)(e, {
                                     ...t,
                                     source: {
-                                        ...A,
+                                        ...v,
                                         object: h.AnalyticsObjects.GUILD_ICON
                                     }
                                 })
@@ -83,16 +83,16 @@ function(e, t, n) {
                         },
                         guild: t,
                         size: d.default.Sizes.SMOL,
-                        className: a(g.aboutMeGuildIcon, {
-                            [g.nonPremiumHoverState]: !y
+                        className: a(E.aboutMeGuildIcon, {
+                            [E.nonPremiumHoverState]: !A
                         })
                     })
                 })]
-            }), (0, l.jsx)(m.default, {
-                userBio: i,
+            }), (0, i.jsx)(p.default, {
+                userBio: l,
                 animateOnHover: I,
-                isHovering: _,
-                lineClamp: N
+                isHovering: T,
+                lineClamp: _
             })]
         })
     }

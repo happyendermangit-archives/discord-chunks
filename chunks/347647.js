@@ -5,11 +5,11 @@ function(e, t, n) {
             return o
         }
     }), n("222007"), n("424973");
-    let l = {
+    let i = {
             1: "bold",
             4: "underline"
         },
-        i = {
+        l = {
             30: "black",
             31: "red",
             32: "green",
@@ -33,7 +33,7 @@ function(e, t, n) {
         r = new RegExp("(?=".concat(s.source, ")"));
 
     function o() {
-        let e = [...u("foreground", i, ["38", "39"], !0), ...u("background", a, ["48", "49"], !0), ...u("style", l, [], !1), {
+        let e = [...u("foreground", l, ["38", "39"], !0), ...u("background", a, ["48", "49"], !0), ...u("style", i, [], !1), {
             className: "ansi-control-sequence",
             begin: s,
             starts: {
@@ -51,13 +51,13 @@ function(e, t, n) {
         }
     }
 
-    function u(e, t, n, l) {
-        let i = ["0", ...n];
-        return l && i.push(...Object.keys(t)), Object.entries(t).map(t => {
-            var n, l, a, s;
+    function u(e, t, n, i) {
+        let l = ["0", ...n];
+        return i && l.push(...Object.keys(t)), Object.entries(t).map(t => {
+            var n, i, a, s;
             let [o, u] = t;
-            return n = e, l = u, a = o, s = i, {
-                className: "ansi-".concat(n, "-").concat(l),
+            return n = e, i = u, a = o, s = l, {
+                className: "ansi-".concat(n, "-").concat(i),
                 endsParent: !0,
                 begin: r,
                 "on:begin": (e, t) => {

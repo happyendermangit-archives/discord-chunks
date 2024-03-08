@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         CollectiblesShopMarketingVariants: function() {
-            return i
+            return l
         },
         default: function() {
             return r
         }
     });
-    var l, i, a = n("862205");
-    (l = i || (i = {}))[l.DEFAULT = 0] = "DEFAULT", l[l.WINTER_2023_DROP = 1] = "WINTER_2023_DROP", l[l.MONSTER_DROP = 2] = "MONSTER_DROP";
+    var i, l, a = n("862205");
+    (i = l || (l = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.WINTER_2023_DROP = 1] = "WINTER_2023_DROP", i[i.MONSTER_DROP = 2] = "MONSTER_DROP";
     let s = (0, a.createExperiment)({
         kind: "user",
         id: "2023-12_collectibles_shop_marketing",

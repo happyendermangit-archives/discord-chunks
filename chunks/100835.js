@@ -14,16 +14,16 @@ function(e, t, n) {
             return f
         },
         useShouldShowInvitesDisabledNotif: function() {
-            return m
+            return p
         }
     }), n("222007");
-    var l = n("446674"),
-        i = n("862205"),
+    var i = n("446674"),
+        l = n("862205"),
         a = n("54346"),
         s = n("957255"),
         r = n("592407"),
         o = n("49111");
-    let u = (0, i.createExperiment)({
+    let u = (0, l.createExperiment)({
         kind: "guild",
         id: "2022-07_invites_disabled",
         label: "Report Raids",
@@ -40,7 +40,7 @@ function(e, t, n) {
     });
 
     function d(e) {
-        return (0, l.useStateFromStores)([s.default], () => null != e && s.default.can(o.Permissions.MANAGE_GUILD, e), [e])
+        return (0, i.useStateFromStores)([s.default], () => null != e && s.default.can(o.Permissions.MANAGE_GUILD, e), [e])
     }
 
     function c(e) {
@@ -61,11 +61,11 @@ function(e, t, n) {
         })
     }
 
-    function m(e) {
+    function p(e) {
         var t;
         let n = d(e),
-            i = (0, l.useStateFromStores)([a.default], () => null != e ? a.default.getGuildIncident(e.id) : null),
-            s = (null == e ? void 0 : null === (t = e.hasFeature) || void 0 === t ? void 0 : t.call(e, o.GuildFeatures.INVITES_DISABLED)) || (null == i ? void 0 : i.invitesDisabledUntil) != null && new Date(i.invitesDisabledUntil) > new Date;
+            l = (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getGuildIncident(e.id) : null),
+            s = (null == e ? void 0 : null === (t = e.hasFeature) || void 0 === t ? void 0 : t.call(e, o.GuildFeatures.INVITES_DISABLED)) || (null == l ? void 0 : l.invitesDisabledUntil) != null && new Date(l.invitesDisabledUntil) > new Date;
         return n && s
     }
 }

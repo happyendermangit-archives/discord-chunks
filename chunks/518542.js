@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
 
-    function l(e) {
+    function i(e) {
         let {
             isInline: t,
             isVoid: n
@@ -10,7 +10,7 @@ function(e, t, n) {
     }
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return i
         }
     })
 }

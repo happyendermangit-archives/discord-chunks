@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return P
+            return L
         }
     }), n("222007"), n("424973");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("394846"),
         s = n("446674"),
         r = n("798609"),
@@ -15,64 +15,64 @@ function(e, t, n) {
         d = n("383018"),
         c = n("619935"),
         f = n("540692"),
-        m = n("53253"),
-        p = n("795696"),
+        p = n("53253"),
+        m = n("795696"),
         h = n("1607"),
-        E = n("328511"),
-        g = n("585722"),
-        S = n("697218"),
-        C = n("719923"),
-        T = n("998206"),
-        v = n("35385"),
+        x = n("328511"),
+        E = n("585722"),
+        y = n("697218"),
+        g = n("719923"),
+        S = n("998206"),
+        C = n("35385"),
         I = n("695369"),
-        _ = n("198"),
-        N = n("315814"),
-        A = n("108486"),
-        x = n("923582"),
-        y = n("80921"),
+        T = n("198"),
+        _ = n("315814"),
+        v = n("108486"),
+        N = n("923582"),
+        A = n("80921"),
         O = n("954016"),
-        R = n("646718"),
+        k = n("646718"),
         M = n("350583");
 
-    function L(e) {
+    function R(e) {
         let {
             disabled: t,
             channel: n
         } = e, {
             enabled: a
-        } = m.default.useExperiment({
+        } = p.default.useExperiment({
             location: "dc120b_1"
         }, {
             autoTrackExposure: !1
-        }), s = (0, m.useIsSeasonalGiftingActive)();
-        i.useEffect(() => {
-            s && m.default.trackExposure({
+        }), s = (0, p.useIsSeasonalGiftingActive)();
+        l.useEffect(() => {
+            s && p.default.trackExposure({
                 location: "dc120b_2"
             })
         }, [s]);
         let r = a && s;
-        return r ? (0, l.jsx)(A.default, {
+        return r ? (0, i.jsx)(v.default, {
             disabled: t,
             channel: n
-        }) : (0, l.jsx)(_.default, {
+        }) : (0, i.jsx)(T.default, {
             disabled: t,
             channel: n
         })
     }
-    var P = i.memo(function(e) {
-        var t, n, i, m, _, A, P, b, j;
+    var L = l.memo(function(e) {
+        var t, n, l, p, T, v, L, b, P;
         let {
-            type: U,
-            disabled: D,
-            channel: k,
+            type: j,
+            disabled: U,
+            channel: D,
             handleSubmit: w,
             isEmpty: F
-        } = e, G = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), B = (0, s.useStateFromStores)([E.default], () => E.default.getStickerPreview(k.id, U.drafts.type)), H = null != B && B.length > 0, V = (0, s.useStateFromStores)([g.default], () => g.default.getUploads(k.id, U.drafts.type)), {
+        } = e, B = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), G = (0, s.useStateFromStores)([x.default], () => x.default.getStickerPreview(D.id, j.drafts.type)), H = null != G && G.length > 0, V = (0, s.useStateFromStores)([E.default], () => E.default.getUploads(D.id, j.drafts.type)), {
             activeCommand: K,
             activeCommandOption: W
         } = (0, s.useStateFromStoresObject)([d.default], () => ({
-            activeCommand: d.default.getActiveCommand(k.id),
-            activeCommandOption: d.default.getActiveOption(k.id)
+            activeCommand: d.default.getActiveCommand(D.id),
+            activeCommandOption: d.default.getActiveOption(D.id)
         })), {
             paymentsBlocked: Y
         } = c.default.useExperiment({
@@ -85,62 +85,62 @@ function(e, t, n) {
             location: "dc120b_4"
         }, {
             autoTrackExposure: !1
-        }), J = S.default.getCurrentUser(), q = null !== (m = (0, s.useStateFromStores)([f.default], () => Z && C.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== m ? m : 0, X = (0, s.useStateFromStores)([f.default], () => {
-            if (!k.isDM() || void 0 === k.recipients || k.recipients.length > 1 || !Z) return !1;
-            let e = k.recipients[0],
+        }), J = y.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => Z && g.default.isPremiumExactly(J, k.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
+            if (!D.isDM() || void 0 === D.recipients || D.recipients.length > 1 || !Z) return !1;
+            let e = D.recipients[0],
                 t = f.default.getSentUserIds();
             return t.includes(e)
-        }), [Q, $] = (0, s.useStateFromStoresArray)([f.default, S.default], () => {
+        }), [Q, $] = (0, s.useStateFromStoresArray)([f.default, y.default], () => {
             let e = [!1, !1];
-            if (!k.isDM() || void 0 === k.recipients || k.recipients.length > 1) return e;
-            let t = k.recipients[0],
-                n = S.default.getUser(t);
+            if (!D.isDM() || void 0 === D.recipients || D.recipients.length > 1) return e;
+            let t = D.recipients[0],
+                n = y.default.getUser(t);
             if (null == n) return e;
-            let l = n.bot;
-            if (l) return e;
-            let i = X || q > 0,
+            let i = n.bot;
+            if (i) return e;
+            let l = X || q > 0,
                 a = f.default.getRecipientEligibility(t);
-            return [Z && i && a, a]
-        }), ee = (0, u.useActivitiesInTextButtonVisibility)(k.id, "ChannelTextAreaButtons");
+            return [Z && l && a, a]
+        }), ee = (0, u.useActivitiesInTextButtonVisibility)(D.id, "ChannelTextAreaButtons");
         if (!a.isMobile) {
-            if (k.isDM() && (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (C.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+            if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, k.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
                     location: "dc120b_5"
-                }), Q && z.push((0, l.jsx)(N.default, {
-                    disabled: D,
+                }), Q && z.push((0, i.jsx)(_.default, {
+                    disabled: U,
                     referralsRemaining: q,
-                    channel: k,
+                    channel: D,
                     isResending: X
-                }, "referral"))), (null == ee ? void 0 : ee.showChatInputButton) && O.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(k.type) && null == K && (null === (A = U.commands) || void 0 === A ? void 0 : A.enabled) && z.push((0, l.jsx)(T.default, {
-                    disabled: D,
-                    channel: k,
-                    type: U
-                }, "activity")), (null === (P = U.gifts) || void 0 === P ? void 0 : P.button) != null && null == K && !Y) {
+                }, "referral"))), (null == ee ? void 0 : ee.showChatInputButton) && O.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(D.type) && null == K && (null === (v = j.commands) || void 0 === v ? void 0 : v.enabled) && z.push((0, i.jsx)(S.default, {
+                    disabled: U,
+                    channel: D,
+                    type: j
+                }, "activity")), (null === (L = j.gifts) || void 0 === L ? void 0 : L.button) != null && null == K && !Y) {
                 let {
                     hideChannelGiftButton: e
-                } = p.default.getCurrentConfig({
+                } = m.default.getCurrentConfig({
                     location: "ChannelTextAreaButtons"
                 }, {
-                    autoTrackExposure: k.isDM()
-                }), t = k.isDM() && e;
-                !t && z.push((0, l.jsx)(L, {
-                    disabled: D,
-                    channel: k
+                    autoTrackExposure: D.isDM()
+                }), t = D.isDM() && e;
+                !t && z.push((0, i.jsx)(R, {
+                    disabled: U,
+                    channel: D
                 }, "gift"))
-            }(null === (b = U.gifs) || void 0 === b ? void 0 : b.button) != null && null == K && z.push((0, l.jsx)(I.default, {
-                disabled: D,
-                type: U
-            }, "gif")), (null === (j = U.stickers) || void 0 === j ? void 0 : j.button) != null && null == K && z.push((0, l.jsx)(y.default, {
-                disabled: D,
-                type: U
+            }(null === (b = j.gifs) || void 0 === b ? void 0 : b.button) != null && null == K && z.push((0, i.jsx)(I.default, {
+                disabled: U,
+                type: j
+            }, "gif")), (null === (P = j.stickers) || void 0 === P ? void 0 : P.button) != null && null == K && z.push((0, i.jsx)(A.default, {
+                disabled: U,
+                type: j
             }, "sticker"))
         }
-        return ((null === (t = U.emojis) || void 0 === t ? void 0 : t.button) != null && (null == K || null != W && W.type !== r.ApplicationCommandOptionType.ATTACHMENT) && z.push((0, l.jsx)(v.default, {
-            disabled: D,
-            type: U
-        }, "emoji")), (null === (n = U.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (i = U.submit) || void 0 === i ? void 0 : i.ignorePreference) || G) && z.push((0, l.jsx)(x.default, {
+        return ((null === (t = j.emojis) || void 0 === t ? void 0 : t.button) != null && (null == K || null != W && W.type !== r.ApplicationCommandOptionType.ATTACHMENT) && z.push((0, i.jsx)(C.default, {
+            disabled: U,
+            type: j
+        }, "emoji")), (null === (n = j.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (l = j.submit) || void 0 === l ? void 0 : l.ignorePreference) || B) && z.push((0, i.jsx)(N.default, {
             onClick: w,
-            disabled: D || 0 === V.length && F && !H
-        }, "submit")), 0 === z.length) ? null : (0, l.jsx)("div", {
+            disabled: U || 0 === V.length && F && !H
+        }, "submit")), 0 === z.length) ? null : (0, i.jsx)("div", {
             className: M.buttons,
             children: z
         })

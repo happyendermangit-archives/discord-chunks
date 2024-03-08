@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return g
+            return E
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("16470"),
@@ -15,62 +15,62 @@ function(e, t, n) {
         d = n("986632"),
         c = n("538282"),
         f = n("115279"),
-        m = n("49111"),
-        p = n("782340"),
+        p = n("49111"),
+        m = n("782340"),
         h = n("296323");
-    let E = i.forwardRef(function(e, t) {
+    let x = l.forwardRef(function(e, t) {
         let {
             emojiListRef: n,
             gridNavigatorId: a,
-            isFullRow: E,
-            onKeyDown: g,
-            onFocus: S,
-            autoFocus: C,
-            className: T,
-            defaultSearchPlaceholder: v
-        } = e, I = i.useRef(null), _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), [N, A] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), x = i.useCallback(e => {
+            isFullRow: x,
+            onKeyDown: E,
+            onFocus: y,
+            autoFocus: g,
+            className: S,
+            defaultSearchPlaceholder: C
+        } = e, I = l.useRef(null), T = (0, c.useExpressionPickerStore)(e => e.searchQuery), [_, v] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), N = l.useCallback(e => {
             var t;
             d.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), d.EmojiPickerStore.setInspectedExpressionPosition(0, 0), d.EmojiPickerStore.setSearchPlaceholder(null), (0, c.setSearchQuery)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
-        }, [n]), y = i.useCallback(() => {
+        }, [n]), A = l.useCallback(() => {
             (0, c.setSearchQuery)("")
         }, []);
-        return i.useImperativeHandle(t, () => ({
+        return l.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
                 return null === (e = I.current) || void 0 === e ? void 0 : e.focus()
             }
-        })), (0, l.jsx)(u.default, {
-            autoFocus: C,
-            query: _,
+        })), (0, i.jsx)(u.default, {
+            autoFocus: g,
+            query: T,
             ref: I,
             size: u.default.Sizes.MEDIUM,
-            placeholder: null != A ? A : v,
-            onClear: y,
+            placeholder: null != v ? v : C,
+            onClear: A,
             onKeyDown: e => {
                 switch (e.keyCode) {
-                    case m.KeyboardKeys.ARROW_LEFT:
-                    case m.KeyboardKeys.ARROW_RIGHT:
-                    case m.KeyboardKeys.ARROW_UP:
-                    case m.KeyboardKeys.ARROW_DOWN:
+                    case p.KeyboardKeys.ARROW_LEFT:
+                    case p.KeyboardKeys.ARROW_RIGHT:
+                    case p.KeyboardKeys.ARROW_UP:
+                    case p.KeyboardKeys.ARROW_DOWN:
                         document.activeElement !== e.target && e.preventDefault()
                 }
-                g(e)
+                E(e)
             },
-            onFocus: S,
-            onQueryChange: x,
-            className: s(T, {
-                [h.searchBarFullRow]: E
+            onFocus: y,
+            onQueryChange: N,
+            className: s(S, {
+                [h.searchBarFullRow]: x
             }),
             preventEscapePropagation: !1,
             useKeyboardNavigation: !1,
             inputProps: {
-                "aria-label": p.default.Messages.SEARCH_EMOJIS,
+                "aria-label": m.default.Messages.SEARCH_EMOJIS,
                 "aria-haspopup": "grid",
                 "aria-controls": a,
                 "aria-expanded": !0,
-                "aria-activedescendant": (0, o.makeGridId)(a, N.columnIndex, N.rowIndex)
+                "aria-activedescendant": (0, o.makeGridId)(a, _.columnIndex, _.rowIndex)
             }
         })
     });
-    var g = i.memo(E)
+    var E = l.memo(x)
 }

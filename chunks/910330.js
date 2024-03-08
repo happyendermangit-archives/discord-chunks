@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return x
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("817736"),
         s = n.n(a),
         r = n("446674"),
@@ -15,9 +15,9 @@ function(e, t, n) {
         d = n("349649"),
         c = n("102985"),
         f = n("49111"),
-        m = n("782340"),
-        p = n("380571");
-    class h extends i.PureComponent {
+        p = n("782340"),
+        m = n("380571");
+    class h extends l.PureComponent {
         componentDidMount() {
             if (this.props.autoFocus && !this.props.hideNote) {
                 let e = s.findDOMNode(this.noteRef.current);
@@ -29,16 +29,16 @@ function(e, t, n) {
                 className: e,
                 loading: t,
                 note: n,
-                hideNote: i
+                hideNote: l
             } = this.props;
-            return i ? null : (0, l.jsx)("div", {
+            return l ? null : (0, i.jsx)("div", {
                 className: e,
-                children: (0, l.jsx)(o.TextAreaAutosize, {
+                children: (0, i.jsx)(o.TextAreaAutosize, {
                     ref: this.noteRef,
-                    className: p.textarea,
+                    className: m.textarea,
                     disabled: t,
-                    placeholder: t ? m.default.Messages.LOADING_NOTE : m.default.Messages.NOTE_PLACEHOLDER,
-                    "aria-label": m.default.Messages.NOTE,
+                    placeholder: t ? p.default.Messages.LOADING_NOTE : p.default.Messages.NOTE_PLACEHOLDER,
+                    "aria-label": p.default.Messages.NOTE,
                     onBlur: this.handleBlur,
                     onKeyPress: this.handleKeyPress,
                     defaultValue: null != n ? n : void 0,
@@ -47,7 +47,7 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), this.noteRef = i.createRef(), this.handleBlur = e => {
+            super(...e), this.noteRef = l.createRef(), this.handleBlur = e => {
                 let t = e.currentTarget.value,
                     {
                         note: n
@@ -64,10 +64,10 @@ function(e, t, n) {
         }
     }
 
-    function E(e) {
+    function x(e) {
         let t = (0, r.useStateFromStores)([c.default], () => c.default.hidePersonalInformation),
             n = (0, d.default)(e.userId);
-        return (0, l.jsx)(h, {
+        return (0, i.jsx)(h, {
             ...e,
             ...n,
             hideNote: t

@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return i
         }
     }), n("222007"), n("424973");
-    var l, i = n("37983"),
+    var i, l = n("37983"),
         a = n("884691"),
         s = n("414456"),
         r = n.n(s),
@@ -14,40 +14,40 @@ function(e, t, n) {
         d = n("87682"),
         c = n.n(d),
         f = n("746379"),
-        m = n.n(f),
-        p = n("394846"),
+        p = n.n(f),
+        m = n("394846"),
         h = n("295426"),
-        E = n("81594"),
-        g = n("798609"),
-        S = n("966724"),
-        C = n("383018"),
-        T = n("605250"),
-        v = n("585722"),
+        x = n("81594"),
+        E = n("798609"),
+        y = n("966724"),
+        g = n("383018"),
+        S = n("605250"),
+        C = n("585722"),
         I = n("378765"),
-        _ = n("254490"),
-        N = n("850391"),
-        A = n("149022"),
-        x = n("296141"),
-        y = n("606013"),
+        T = n("254490"),
+        _ = n("850391"),
+        v = n("149022"),
+        N = n("296141"),
+        A = n("606013"),
         O = n("32647"),
-        R = n("970153"),
+        k = n("970153"),
         M = n("49111"),
-        L = n("782340"),
-        P = n("350583");
-    new T.default("ChannelEditor.tsx");
+        R = n("782340"),
+        L = n("350583");
+    new S.default("ChannelEditor.tsx");
     let b = function() {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
         },
-        j = {
-            12: P.fontSize12Padding,
-            14: P.fontSize14Padding,
-            15: P.fontSize15Padding,
-            16: P.fontSize16Padding,
-            18: P.fontSize18Padding,
-            20: P.fontSize20Padding,
-            24: P.fontSize24Padding
+        P = {
+            12: L.fontSize12Padding,
+            14: L.fontSize14Padding,
+            15: L.fontSize15Padding,
+            16: L.fontSize16Padding,
+            18: L.fontSize18Padding,
+            20: L.fontSize20Padding,
+            24: L.fontSize24Padding
         };
-    l = class extends a.Component {
+    i = class extends a.Component {
         componentDidMount() {
             this.props.focused && requestAnimationFrame(() => this.focus()), document.addEventListener("selectionchange", this.handleSelectionChange), window.addEventListener("beforeunload", this.handleBeforeUnload)
         }
@@ -55,9 +55,9 @@ function(e, t, n) {
             if (this.fixFocus(e), this.props.useSlate !== e.useSlate) {
                 var t, n;
                 let e;
-                e = this.props.useSlate ? this.props.textValue : (0, R.toTextValue)(this.props.richValue, {
+                e = this.props.useSlate ? this.props.textValue : (0, k.toTextValue)(this.props.richValue, {
                     mode: "plain"
-                }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, A.toRichValue)(e))
+                }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, v.toRichValue)(e))
             } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
         }
         componentWillUnmount() {
@@ -75,10 +75,10 @@ function(e, t, n) {
         insertEmoji(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 {
-                    textValue: l
+                    textValue: i
                 } = this.props,
-                i = this.ref.current;
-            null != e && null != i && (n && !l.endsWith(" ") && i.insertText(" ", void 0, !1), i.insertEmoji(e, t), t && this.focus())
+                l = this.ref.current;
+            null != e && null != l && (n && !i.endsWith(" ") && l.insertText(" ", void 0, !1), l.insertEmoji(e, t), t && this.focus())
         }
         insertGIF(e) {
             let {
@@ -114,8 +114,8 @@ function(e, t, n) {
             }
         }
         insertAutocomplete(e, t, n) {
-            let l = this.ref.current;
-            return null == l ? void 0 : l.insertAutocomplete(e, t, n)
+            let i = this.ref.current;
+            return null == i ? void 0 : i.insertAutocomplete(e, t, n)
         }
         getCurrentCommandOption() {
             var e, t;
@@ -147,8 +147,8 @@ function(e, t, n) {
         }
         appendText(e, t) {
             var n;
-            let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-            null === (n = this.ref.current) || void 0 === n || n.insertText(e, t, l)
+            let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+            null === (n = this.ref.current) || void 0 === n || n.insertText(e, t, i)
         }
         getPlaceholder() {
             let {
@@ -156,49 +156,49 @@ function(e, t, n) {
                 placeholder: t,
                 isPreviewing: n
             } = this.props;
-            return e && !n ? L.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
+            return e && !n ? R.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
         }
         render() {
-            var e, t, n, l, a, s;
+            var e, t, n, i, a, s;
             let {
                 textValue: o,
                 richValue: u,
                 disabled: d,
                 onChange: c,
                 onKeyDown: f,
-                onResize: m,
+                onResize: p,
                 onSubmit: h,
-                channel: E,
-                type: g,
-                fontSize: S,
-                useSlate: C,
-                spellcheckEnabled: T,
-                useNewSlashCommands: v,
-                canOnlyUseTextCommands: _,
-                className: x,
-                id: R,
-                required: L,
+                channel: x,
+                type: E,
+                fontSize: y,
+                useSlate: g,
+                spellcheckEnabled: S,
+                useNewSlashCommands: C,
+                canOnlyUseTextCommands: T,
+                className: N,
+                id: k,
+                required: R,
                 maxCharacterCount: b,
-                allowNewLines: U,
-                "aria-describedby": D,
-                "aria-labelledby": k,
+                allowNewLines: j,
+                "aria-describedby": U,
+                "aria-labelledby": D,
                 accessibilityLabel: w
             } = this.props, {
                 submitting: F,
-                popup: G
-            } = this.state, B = {
-                channel: E,
-                className: r(x, P.textArea, {
-                    [P.textAreaSlate]: C,
-                    [P.textAreaDisabled]: d || F
+                popup: B
+            } = this.state, G = {
+                channel: x,
+                className: r(N, L.textArea, {
+                    [L.textAreaSlate]: g,
+                    [L.textAreaDisabled]: d || F
                 }),
-                id: R,
+                id: k,
                 placeholder: this.getPlaceholder(),
-                required: L,
+                required: R,
                 accessibilityLabel: w,
                 disabled: d || !1,
                 submitting: F,
-                isEdit: g === N.ChatInputTypes.EDIT,
+                isEdit: E === _.ChatInputTypes.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -207,45 +207,45 @@ function(e, t, n) {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: U,
+                allowNewLines: j,
                 onChange: c,
-                onResize: m,
+                onResize: p,
                 onKeyDown: f,
                 onSubmit: h,
-                textAreaPaddingClassName: r(j[S], {
-                    [P.textAreaWithoutAttachmentButton]: g !== N.ChatInputTypes.NORMAL && g !== N.ChatInputTypes.OVERLAY && g !== N.ChatInputTypes.THREAD_CREATION && g !== N.ChatInputTypes.SIDEBAR,
-                    [P.textAreaForPostCreation]: g === N.ChatInputTypes.CREATE_FORUM_POST,
-                    [P.textAreaCustomGift]: g === N.ChatInputTypes.CUSTOM_GIFT
+                textAreaPaddingClassName: r(P[y], {
+                    [L.textAreaWithoutAttachmentButton]: E !== _.ChatInputTypes.NORMAL && E !== _.ChatInputTypes.OVERLAY && E !== _.ChatInputTypes.THREAD_CREATION && E !== _.ChatInputTypes.SIDEBAR,
+                    [L.textAreaForPostCreation]: E === _.ChatInputTypes.CREATE_FORUM_POST,
+                    [L.textAreaCustomGift]: E === _.ChatInputTypes.CUSTOM_GIFT
                 }),
-                spellcheckEnabled: T,
-                useNewSlashCommands: v,
-                disableAutoFocus: p.isMobile || null !== (n = g.disableAutoFocus) && void 0 !== n && n,
-                disableEnterToSubmit: null !== (l = null === (e = g.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== l && l,
-                "aria-controls": null !== (a = G.id) && void 0 !== a ? a : void 0,
+                spellcheckEnabled: S,
+                useNewSlashCommands: C,
+                disableAutoFocus: m.isMobile || null !== (n = E.disableAutoFocus) && void 0 !== n && n,
+                disableEnterToSubmit: null !== (i = null === (e = E.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
+                "aria-controls": null !== (a = B.id) && void 0 !== a ? a : void 0,
                 "aria-haspopup": "listbox",
-                "aria-expanded": null !== G.id || void 0,
-                "aria-activedescendant": null !== (s = G.activeDescendant) && void 0 !== s ? s : void 0,
+                "aria-expanded": null !== B.id || void 0,
+                "aria-activedescendant": null !== (s = B.activeDescendant) && void 0 !== s ? s : void 0,
                 "aria-invalid": o.length > b,
-                "aria-describedby": D,
-                "aria-labelledby": k,
+                "aria-describedby": U,
+                "aria-labelledby": D,
                 "aria-autocomplete": "list"
-            }, H = C ? (0, i.jsx)(O.default, {
+            }, H = g ? (0, l.jsx)(O.default, {
                 ref: this.ref,
-                ...B,
-                type: g,
-                value: d ? (0, A.toRichValue)("") : u,
-                canUseCommands: null === (t = g.commands) || void 0 === t ? void 0 : t.enabled,
-                canOnlyUseTextCommands: _
-            }) : (0, i.jsx)(y.default, {
+                ...G,
+                type: E,
+                value: d ? (0, v.toRichValue)("") : u,
+                canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
+                canOnlyUseTextCommands: T
+            }) : (0, l.jsx)(A.default, {
                 ref: this.ref,
-                ...B,
+                ...G,
                 value: d ? "" : o
             });
-            return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(I.ComponentAction, {
+            return (0, l.jsxs)(l.Fragment, {
+                children: [(0, l.jsx)(I.ComponentAction, {
                     event: M.ComponentActions.INSERT_TEXT,
                     handler: this.handleInsertText
-                }), (0, i.jsx)(I.ComponentAction, {
+                }), (0, l.jsx)(I.ComponentAction, {
                     event: M.ComponentActions.CLEAR_TEXT,
                     handler: this.handleClearText
                 }), H]
@@ -272,9 +272,9 @@ function(e, t, n) {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     {
                         type: n,
-                        channel: l
+                        channel: i
                     } = t.props;
-                n.drafts.autoSave && (e && t.saveCurrentTextThrottled.cancel(), t.handleSaveCurrentText(l.id))
+                n.drafts.autoSave && (e && t.saveCurrentTextThrottled.cancel(), t.handleSaveCurrentText(i.id))
             }, this.handleBeforeUnload = () => this.saveCurrentText(), this.saveCurrentTextThrottled = u.throttle(this.saveCurrentText.bind(this, !1), 500), this.handleEnter = e => {
                 var t, n;
                 return null === (t = (n = this.props).onEnter) || void 0 === t ? void 0 : t.call(n, e)
@@ -294,14 +294,14 @@ function(e, t, n) {
                 h.default.saveDraft(e, this.props.textValue, this.props.type.drafts.type)
             }, this.handleClearText = () => {
                 var e, t;
-                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, A.toRichValue)(""))
+                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, v.toRichValue)(""))
             }, this.handleInsertText = e => {
                 let {
                     plainText: t,
                     rawText: n,
-                    addSpace: l = !1
+                    addSpace: i = !1
                 } = e;
-                !this.props.disabled && (this.appendText(t, n, l), this.focus())
+                !this.props.disabled && (this.appendText(t, n, i), this.focus())
             }, this.handleFocus = e => {
                 let {
                     onFocus: t
@@ -324,64 +324,64 @@ function(e, t, n) {
                 let {
                     channel: t,
                     canPasteFiles: n,
-                    uploadPromptCharacterCount: l,
-                    promptToUpload: i,
+                    uploadPromptCharacterCount: i,
+                    promptToUpload: l,
                     maxCharacterCount: a,
                     type: s
                 } = this.props;
-                if (null == i || !t.isPrivate() && !n || t.isPrivate() && t.isManaged()) return !1;
+                if (null == l || !t.isPrivate() && !n || t.isPrivate() && t.isManaged()) return !1;
                 let {
                     files: r
                 } = function(e, t) {
                     let n = [],
-                        l = [],
-                        i = null,
+                        i = [],
+                        l = null,
                         a = null;
                     for (let t of e.items)
                         if ("file" === t.kind) {
                             let e = t.getAsFile();
                             if (null == e) continue;
-                            null != e.path && e.path.length > 0 ? n.push(e) : l.push(e)
-                        } else "string" === t.kind && ("text/plain" === t.type && null == i ? i = t : "text/html" === t.type && null == a && (a = t));
+                            null != e.path && e.path.length > 0 ? n.push(e) : i.push(e)
+                        } else "string" === t.kind && ("text/plain" === t.type && null == l ? l = t : "text/html" === t.type && null == a && (a = t));
                     if (n.length > 0) return {
                         files: n
                     };
-                    if (l.length > 0) {
-                        if (1 === l.length && "image/png" === l[0].type && null != a) {
+                    if (i.length > 0) {
+                        if (1 === i.length && "image/png" === i[0].type && null != a) {
                             var s;
-                            let t = l[0],
+                            let t = i[0],
                                 n = e.getData(a.type),
-                                i = null !== (s = function(e) {
+                                l = null !== (s = function(e) {
                                     let t = new DOMParser,
                                         n = t.parseFromString(e, "text/html"),
-                                        l = n.querySelector("img");
-                                    if (null != l) {
+                                        i = n.querySelector("img");
+                                    if (null != i) {
                                         let e;
                                         try {
                                             let {
                                                 pathname: t
-                                            } = m.parse(l.src);
+                                            } = p.parse(i.src);
                                             null != t && t.length > 0 && (e = c.basename(t).split(".")[0])
                                         } catch (e) {}
                                         if (null != e && e.length > 0) return "".concat(e, ".png")
                                     }
                                 }(n)) && void 0 !== s ? s : t.name;
                             return {
-                                files: [(0, _.makeFile)(t, i, t.type)]
+                                files: [(0, T.makeFile)(t, l, t.type)]
                             }
                         }
                         return {
-                            files: l
+                            files: i
                         }
                     }
-                    if (null != i && null != t) {
-                        let n = e.getData(i.type);
+                    if (null != l && null != t) {
+                        let n = e.getData(l.type);
                         if (n.length > t) {
                             let e = new Blob([n], {
                                 type: "text/plain"
                             });
                             return {
-                                files: [(0, _.makeFile)(e, "message.txt")],
+                                files: [(0, T.makeFile)(e, "message.txt")],
                                 convertedStringToFile: !0
                             }
                         }
@@ -389,7 +389,7 @@ function(e, t, n) {
                     return {
                         files: []
                     }
-                }(e.clipboardData, s.uploadLongMessages ? null != l ? l : a : null);
+                }(e.clipboardData, s.uploadLongMessages ? null != i ? i : a : null);
                 return b("onPaste", [...e.clipboardData.items].map(e => {
                     if ("file" !== e.kind) return {
                         kind: e.kind,
@@ -405,29 +405,29 @@ function(e, t, n) {
                         }
                     }
                 })), 0 !== r.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
-                    var l, a;
-                    let r = C.default.getActiveCommand(t.id);
-                    if (null == r) return i(e, t, s.drafts.type, {
+                    var i, a;
+                    let r = g.default.getActiveCommand(t.id);
+                    if (null == r) return l(e, t, s.drafts.type, {
                         requireConfirm: !0,
                         showLargeMessageDialog: void 0
                     });
-                    let o = null !== (l = s.drafts.commandType) && void 0 !== l ? l : s.drafts.type,
+                    let o = null !== (i = s.drafts.commandType) && void 0 !== i ? i : s.drafts.type,
                         u = null,
-                        d = C.default.getActiveOption(t.id);
-                    null != (u = (null == d ? void 0 : d.type) === g.ApplicationCommandOptionType.ATTACHMENT ? d : null === (a = r.options) || void 0 === a ? void 0 : a.find(e => {
-                        if (e.type === g.ApplicationCommandOptionType.ATTACHMENT) return null == v.default.getUpload(t.id, e.name, o)
-                    })) && E.default.setFile({
+                        d = g.default.getActiveOption(t.id);
+                    null != (u = (null == d ? void 0 : d.type) === E.ApplicationCommandOptionType.ATTACHMENT ? d : null === (a = r.options) || void 0 === a ? void 0 : a.find(e => {
+                        if (e.type === E.ApplicationCommandOptionType.ATTACHMENT) return null == C.default.getUpload(t.id, e.name, o)
+                    })) && x.default.setFile({
                         channelId: t.id,
                         id: u.name,
                         draftType: o,
                         file: {
                             id: u.name,
-                            platform: S.UploadPlatform.WEB,
+                            platform: y.UploadPlatform.WEB,
                             file: e[0]
                         }
                     })
                 })(r), this.focus(), !0)
-            }, this._unsubscribe = x.channelEditorPopupStore.subscribe(e => {
+            }, this._unsubscribe = N.channelEditorPopupStore.subscribe(e => {
                 requestAnimationFrame(() => {
                     this.setState({
                         popup: e
@@ -436,7 +436,7 @@ function(e, t, n) {
             }), this.state = {
                 focused: !1,
                 submitting: !1,
-                popup: x.channelEditorPopupStore.getState()
+                popup: N.channelEditorPopupStore.getState()
             }
         }
     }

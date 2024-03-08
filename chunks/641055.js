@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return S
+            return y
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("446674"),
         s = n("151426"),
         r = n("819855"),
@@ -15,27 +15,27 @@ function(e, t, n) {
         d = n("340066"),
         c = n("206230"),
         f = n("10641"),
-        m = n("874419"),
-        p = n("430312"),
+        p = n("874419"),
+        m = n("430312"),
         h = n("590456"),
-        E = n("779614");
-    let g = () => {
+        x = n("779614");
+    let E = () => {
         let e = (0, f.useIsDismissibleContentDismissed)(s.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP),
             t = (0, a.useStateFromStores)([c.default], () => c.default.syncProfileThemeWithUserTheme),
             n = (0, u.default)(),
             {
-                profileTheme: l
-            } = i.useContext(p.UserProfileContext),
-            o = (0, r.isThemeDark)(n) && (0, r.isThemeLight)(l);
+                profileTheme: i
+            } = l.useContext(m.UserProfileContext),
+            o = (0, r.isThemeDark)(n) && (0, r.isThemeLight)(i);
         return !e && !t && o
     };
-    var S = e => {
+    var y = e => {
         let {
             onTooltipClose: t
         } = e, {
             profileType: n
-        } = i.useContext(p.UserProfileContext), a = n === h.UserProfileTypes.POPOUT, s = g(), [r, u] = i.useState(!a && s);
-        return (0, d.default)(() => u(s), a ? 300 : null), (0, l.jsx)(o.Popout, {
+        } = l.useContext(m.UserProfileContext), a = n === h.UserProfileTypes.POPOUT, s = E(), [r, u] = l.useState(!a && s);
+        return (0, d.default)(() => u(s), a ? 300 : null), (0, i.jsx)(o.Popout, {
             shouldShow: r,
             position: "left",
             align: "center",
@@ -48,13 +48,13 @@ function(e, t, n) {
                 let {
                     position: n
                 } = e;
-                return (0, l.jsx)(m.default, {
+                return (0, i.jsx)(p.default, {
                     position: null != n ? n : "left",
                     onClose: t
                 })
             },
-            children: () => (0, l.jsx)("span", {
-                className: E.hidden
+            children: () => (0, i.jsx)("span", {
+                className: x.hidden
             })
         })
     }

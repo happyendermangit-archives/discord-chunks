@@ -5,8 +5,8 @@ function(e, t, n) {
             return u
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("917351"),
         s = n.n(a),
         r = n("355263"),
@@ -18,29 +18,29 @@ function(e, t, n) {
                 usageWidth: n,
                 descriptionWidth: a,
                 sourceWidth: u
-            } = i.useMemo(() => ({
+            } = l.useMemo(() => ({
                 usageWidth: s.random(60, 120),
                 descriptionWidth: s.random(200, 600),
                 sourceWidth: s.random(45, 90)
             }), []);
-            return (0, l.jsxs)("div", {
+            return (0, i.jsxs)("div", {
                 className: o.wrapper,
-                children: [t ? (0, l.jsx)("div", {
+                children: [t ? (0, i.jsx)("div", {
                     className: o.image
-                }) : null, (0, l.jsxs)("div", {
+                }) : null, (0, i.jsxs)("div", {
                     className: o.infoWrapper,
-                    children: [(0, l.jsx)("div", {
+                    children: [(0, i.jsx)("div", {
                         style: {
                             maxWidth: (0, r.pxToRem)(n)
                         },
                         className: o.usageWrapper
-                    }), (0, l.jsx)("div", {
+                    }), (0, i.jsx)("div", {
                         style: {
                             maxWidth: (0, r.pxToRem)(a)
                         },
                         className: o.description
                     })]
-                }), (0, l.jsx)("div", {
+                }), (0, i.jsx)("div", {
                     style: {
                         width: (0, r.pxToRem)(u)
                     },

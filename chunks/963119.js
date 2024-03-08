@@ -8,8 +8,8 @@ function(e, t, n) {
             return c
         }
     });
-    var l = n("65597"),
-        i = n("42203"),
+    var i = n("65597"),
+        l = n("42203"),
         a = n("27618"),
         s = n("697218"),
         r = n("457971"),
@@ -22,20 +22,20 @@ function(e, t, n) {
                     explicitContentFriendDm: c,
                     explicitContentNonFriendDm: f
                 } = (0, u.useExplicitContentSettingOrDefault)(),
-                m = (0, l.default)([a.default], () => a.default.getFriendIDs().includes(t)),
-                p = (0, l.default)([s.default], () => s.default.getCurrentUser()),
-                h = (0, l.default)([i.default], () => {
-                    let t = i.default.getChannel(e);
+                p = (0, i.default)([a.default], () => a.default.getFriendIDs().includes(t)),
+                m = (0, i.default)([s.default], () => s.default.getCurrentUser()),
+                h = (0, i.default)([l.default], () => {
+                    let t = l.default.getChannel(e);
                     return null != t && t.isPrivate()
                 });
-            return !!n && null != p && p.id !== t && (h && m ? (0, o.getShouldObscureForSetting)(c) : h ? (0, o.getShouldObscureForSetting)(f) : (0, o.getShouldObscureForSetting)(d))
+            return !!n && null != m && m.id !== t && (h && p ? (0, o.getShouldObscureForSetting)(c) : h ? (0, o.getShouldObscureForSetting)(f) : (0, o.getShouldObscureForSetting)(d))
         },
         c = () => {
             let e = (0, r.useIsEligibleForExplicitMediaRedaction)(),
                 {
                     explicitContentGuilds: t
                 } = (0, u.useExplicitContentSettingOrDefault)(),
-                n = (0, l.default)([s.default], () => s.default.getCurrentUser());
+                n = (0, i.default)([s.default], () => s.default.getCurrentUser());
             return !!e && null != n && (0, o.getShouldObscureForSetting)(t)
         }
 }

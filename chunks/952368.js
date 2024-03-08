@@ -2,56 +2,56 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         IMAGE_GIF_RE: function() {
-            return N
+            return _
         },
         default: function() {
             return a
         }
     }), n("222007");
-    var l, i, a, s, r = n("37983"),
+    var i, l, a, s, r = n("37983"),
         o = n("884691"),
         u = n("917351"),
         d = n("432710"),
         c = n("290381"),
         f = n("862205"),
-        m = n("407063"),
-        p = n("155084"),
+        p = n("407063"),
+        m = n("155084"),
         h = n("168973"),
-        E = n("985365"),
-        g = n("599110"),
-        S = n("315102"),
-        C = n("103603"),
-        T = n("275623"),
-        v = n("594098"),
+        x = n("985365"),
+        E = n("599110"),
+        y = n("315102"),
+        g = n("103603"),
+        S = n("275623"),
+        C = n("594098"),
         I = n("719347"),
-        _ = n("49111");
-    let N = /\.gif($|\?|#)/i,
-        A = /\.png($|\?|#)/i;
-    (s = i || (i = {})).LOAD = "LOAD", s.PRELOAD = "PRELOAD", s.CLICK = "CLICK", (l = class e extends o.Component {
+        T = n("49111");
+    let _ = /\.gif($|\?|#)/i,
+        v = /\.png($|\?|#)/i;
+    (s = l || (l = {})).LOAD = "LOAD", s.PRELOAD = "PRELOAD", s.CLICK = "CLICK", (i = class e extends o.Component {
         static isAnimated(e) {
             let {
                 src: t,
                 original: n,
-                animated: l
+                animated: i
             } = e;
-            return l || N.test(null != n && "" !== n ? n : t)
+            return i || _.test(null != n && "" !== n ? n : t)
         }
         static isSrcPNG(e) {
             let {
                 src: t
             } = e;
-            return A.test(t)
+            return v.test(t)
         }
         componentDidMount() {
             let {
                 readyState: t
             } = this.state;
-            t === _.ImageReadyStates.LOADING && this.loadImage(this.getSrc(this.getRatio(), e.isAnimated(this.props)), this.handleImageLoad), e.isAnimated(this.props) && this.observeVisibility()
+            t === T.ImageReadyStates.LOADING && this.loadImage(this.getSrc(this.getRatio(), e.isAnimated(this.props)), this.handleImageLoad), e.isAnimated(this.props) && this.observeVisibility()
         }
         componentDidUpdate(t) {
             let n = e.isAnimated(this.props),
-                l = e.isAnimated(t);
-            l !== n && (n ? this.observeVisibility() : this.unobserveVisibility())
+                i = e.isAnimated(t);
+            i !== n && (n ? this.observeVisibility() : this.unobserveVisibility())
         }
         componentWillUnmount() {
             e.isAnimated(this.props) && this.unobserveVisibility(), this._cancellers.forEach(e => e()), this._cancellers.clear()
@@ -60,8 +60,8 @@ function(e, t, n) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 {
                     src: n,
-                    width: l,
-                    height: i,
+                    width: i,
+                    height: l,
                     maxWidth: a,
                     maxHeight: s,
                     mediaLayoutType: r
@@ -70,10 +70,10 @@ function(e, t, n) {
                     format: o,
                     quality: u
                 } = this.getFormatQuality(t);
-            return (0, m.getImageSrc)({
+            return (0, p.getImageSrc)({
                 src: n,
-                width: l,
-                height: i,
+                width: i,
+                height: l,
                 ratio: e,
                 maxWidth: r === I.MediaLayoutType.MOSAIC ? a : void 0,
                 maxHeight: r === I.MediaLayoutType.MOSAIC ? s : void 0,
@@ -84,10 +84,10 @@ function(e, t, n) {
         getFormatQuality() {
             let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 n = null,
-                l = null;
-            return S.SUPPORTS_WEBP && (t || !e.isAnimated(this.props)) ? (n = "webp", e.isSrcPNG(this.props) && (l = "lossless")) : t && (n = "png"), {
+                i = null;
+            return y.SUPPORTS_WEBP && (t || !e.isAnimated(this.props)) ? (n = "webp", e.isSrcPNG(this.props) && (i = "lossless")) : t && (n = "png"), {
                 format: n,
-                quality: l
+                quality: i
             }
         }
         getRatio() {
@@ -95,20 +95,20 @@ function(e, t, n) {
                 width: e,
                 height: t,
                 maxWidth: n = 400,
-                maxHeight: l = 300,
-                mediaLayoutType: i,
+                maxHeight: i = 300,
+                mediaLayoutType: l,
                 useFullWidth: a
             } = this.props;
-            return i === I.MediaLayoutType.MOSAIC && a ? (0, C.getCoverRatio)({
+            return l === I.MediaLayoutType.MOSAIC && a ? (0, g.getCoverRatio)({
                 width: e,
                 height: t,
                 maxWidth: n,
-                maxHeight: l
-            }) : (0, C.getRatio)({
+                maxHeight: i
+            }) : (0, g.getRatio)({
                 width: e,
                 height: t,
                 maxWidth: n,
-                maxHeight: l
+                maxHeight: i
             })
         }
         getType() {
@@ -121,125 +121,125 @@ function(e, t, n) {
         loadImage(e, t) {
             let {
                 width: n,
-                height: l
+                height: i
             } = this.props;
-            if (this.startLoadingTime = Date.now(), 1 === n && 1 === l) return;
-            let i = (0, m.loadImage)(e, (e, n) => {
-                null != i && this._cancellers.delete(i), null == t || t(e, n)
+            if (this.startLoadingTime = Date.now(), 1 === n && 1 === i) return;
+            let l = (0, p.loadImage)(e, (e, n) => {
+                null != l && this._cancellers.delete(l), null == t || t(e, n)
             });
-            null != i && this._cancellers.add(i)
+            null != l && this._cancellers.add(l)
         }
         render() {
             let {
                 alt: t,
                 zoomThumbnailPlaceholder: n,
-                onZoom: l,
-                shouldLink: i,
+                onZoom: i,
+                shouldLink: l,
                 onContextMenu: a,
                 autoPlay: s,
                 original: o,
                 className: d,
                 imageClassName: c,
                 children: f,
-                animated: m,
-                shouldAnimate: p,
+                animated: p,
+                shouldAnimate: m,
                 width: h,
-                height: E,
-                minWidth: g,
-                minHeight: S,
-                maxWidth: C,
-                maxHeight: T,
+                height: x,
+                minWidth: E,
+                minHeight: y,
+                maxWidth: g,
+                maxHeight: S,
                 onClick: I,
-                renderAccessory: N,
-                tabIndex: A,
-                limitResponsiveWidth: x,
-                useFullWidth: y,
+                renderAccessory: _,
+                tabIndex: v,
+                limitResponsiveWidth: N,
+                useFullWidth: A,
                 placeholder: O,
-                placeholderVersion: R
+                placeholderVersion: k
             } = this.props, {
                 readyState: M,
-                hasMouseOver: L,
-                hasFocus: P
-            } = this.state, b = null != l, j = this.getRatio(), U = (0, u.clamp)(Math.round(h * j), null != g ? g : 0, null != C ? C : 1 / 0), D = (0, u.clamp)(Math.round(E * j), null != S ? S : 0, null != T ? T : 1 / 0), k = {
+                hasMouseOver: R,
+                hasFocus: L
+            } = this.state, b = null != i, P = this.getRatio(), j = (0, u.clamp)(Math.round(h * P), null != E ? E : 0, null != g ? g : 1 / 0), U = (0, u.clamp)(Math.round(x * P), null != y ? y : 0, null != S ? S : 1 / 0), D = {
                 alt: t,
                 readyState: M,
                 onContextMenu: null != a ? a : void 0,
                 zoomable: b,
                 className: d,
                 imageClassName: c,
-                minWidth: g,
-                minHeight: S,
+                minWidth: E,
+                minHeight: y,
                 mediaLayoutType: this.getType(),
-                limitResponsiveWidth: x,
-                useFullWidth: y,
-                tabIndex: A,
-                width: U,
-                height: D,
+                limitResponsiveWidth: N,
+                useFullWidth: A,
+                tabIndex: v,
+                width: j,
+                height: U,
                 src: "",
                 placeholder: O,
-                placeholderVersion: R,
+                placeholderVersion: k,
                 children: null != f ? e => {
                     let {
                         src: t,
                         size: n,
-                        alt: l,
-                        mediaLayoutType: i
+                        alt: i,
+                        mediaLayoutType: l
                     } = e;
                     return f({
                         src: t,
                         size: n,
-                        alt: l,
-                        mediaLayoutType: i
+                        alt: i,
+                        mediaLayoutType: l
                     })
                 } : void 0,
                 onMouseEnter: this.onMouseEnter,
                 onFocus: this.onFocus,
                 onBlur: this.onBlur
             };
-            if (1 === k.width && 1 === k.height) return null;
-            switch ((b || null != I) && (k.onClick = this.onClick), i && (k.original = null != o && "" !== o ? o : k.src), M) {
-                case _.ImageReadyStates.LOADING:
-                    null != n && (k.src = n);
+            if (1 === D.width && 1 === D.height) return null;
+            switch ((b || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), M) {
+                case T.ImageReadyStates.LOADING:
+                    null != n && (D.src = n);
                     break;
-                case _.ImageReadyStates.READY:
+                case T.ImageReadyStates.READY:
                     if (e.isAnimated(this.props)) {
-                        k.onMouseLeave = this.onMouseLeave;
-                        let t = (s || L || P) && (null == p || p) && e.visibilityObserver.isVisible(this);
-                        t ? (k.src = this.getSrc(j), k.renderAccessory = N) : (k.src = this.getSrc(j, !m || !s), k.renderAccessory = this.renderAccessory), null != f && (k.children = e => {
+                        D.onMouseLeave = this.onMouseLeave;
+                        let t = (s || R || L) && (null == m || m) && e.visibilityObserver.isVisible(this);
+                        t ? (D.src = this.getSrc(P), D.renderAccessory = _) : (D.src = this.getSrc(P, !p || !s), D.renderAccessory = this.renderAccessory), null != f && (D.children = e => {
                             let {
                                 src: n,
-                                size: l,
-                                alt: i,
+                                size: i,
+                                alt: l,
                                 mediaLayoutType: a
                             } = e;
                             return f({
                                 src: n,
-                                size: l,
+                                size: i,
                                 animating: t,
-                                alt: i,
+                                alt: l,
                                 mediaLayoutType: a
                             })
                         })
-                    } else k.src = this.getSrc(j)
+                    } else D.src = this.getSrc(P)
             }
-            return (0, r.jsx)(v.default, {
-                ...k
+            return (0, r.jsx)(C.default, {
+                ...D
             })
         }
         async trackLoadingCompleted(e, t, n) {
-            var l;
-            if (e && p.default.increment({
+            var i;
+            if (e && m.default.increment({
                     name: d.MetricEvents.IMAGE_LOAD_ERROR
                 }), !this.imageLoadAnalyticsEnabled) return;
-            let i = await fetch(t.url).catch(() => void 0),
-                a = null == i ? void 0 : null === (l = i.headers) || void 0 === l ? void 0 : l.get("content-length"),
+            let l = await fetch(t.url).catch(() => void 0),
+                a = null == l ? void 0 : null === (i = l.headers) || void 0 === i ? void 0 : i.get("content-length"),
                 s = null != a ? Number(a) : null,
                 r = Date.now() - this.startLoadingTime,
                 {
                     format: o,
                     quality: u
                 } = this.getFormatQuality();
-            g.default.track(_.AnalyticEvents.IMAGE_LOADING_COMPLETED, {
+            E.default.track(T.AnalyticEvents.IMAGE_LOADING_COMPLETED, {
                 duration_ms: r,
                 requested_height: t.height,
                 requested_width: t.width,
@@ -250,19 +250,19 @@ function(e, t, n) {
                 requested_url: t.url,
                 format: o,
                 quality: u,
-                state: e ? _.ImageReadyStates.ERROR : this.state.readyState,
+                state: e ? T.ImageReadyStates.ERROR : this.state.readyState,
                 data_saving_mode: h.default.dataSavingMode,
                 low_quality_image_mode: h.default.lowQualityImageMode,
                 trigger: n,
                 size: s,
-                connection_type: E.default.getType(),
-                effective_connection_speed: E.default.getEffectiveConnectionSpeed(),
-                service_provider: E.default.getServiceProvider()
+                connection_type: x.default.getType(),
+                effective_connection_speed: x.default.getEffectiveConnectionSpeed(),
+                service_provider: x.default.getServiceProvider()
             })
         }
         constructor(t) {
             super(t), this.imageLoadAnalyticsEnabled = !1, this.state = {
-                readyState: _.ImageReadyStates.LOADING,
+                readyState: T.ImageReadyStates.LOADING,
                 hasMouseOver: !1,
                 hasFocus: !1
             }, this.startLoadingTime = Date.now(), this._cancellers = new Set, this.observeVisibility = () => {
@@ -271,7 +271,7 @@ function(e, t, n) {
                 e.visibilityObserver.unobserve(this)
             }, this.handleImageLoad = (e, t) => {
                 this.setState({
-                    readyState: e ? _.ImageReadyStates.ERROR : _.ImageReadyStates.READY
+                    readyState: e ? T.ImageReadyStates.ERROR : T.ImageReadyStates.READY
                 }, () => {
                     var n;
                     return this.trackLoadingCompleted(e, t, null !== (n = this.props.trigger) && void 0 !== n ? n : "LOAD")
@@ -279,16 +279,16 @@ function(e, t, n) {
             }, this.preloadImage = (e, t) => {
                 let {
                     width: n,
-                    height: l
+                    height: i
                 } = e, {
-                    width: i,
+                    width: l,
                     height: a
                 } = this.props;
-                (1 !== i || 1 !== a) && this.loadImage(this.getSrc((0, C.getRatio)({
-                    width: i,
+                (1 !== l || 1 !== a) && this.loadImage(this.getSrc((0, g.getRatio)({
+                    width: l,
                     height: a,
                     maxWidth: n,
-                    maxHeight: l
+                    maxHeight: i
                 })), (e, n) => {
                     this.trackLoadingCompleted(e, n, "PRELOAD"), null == t || t(e, n)
                 })
@@ -330,22 +330,22 @@ function(e, t, n) {
                     hasMouseOver: e,
                     hasFocus: t
                 } = this.state, n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
-                return this.props.shouldRenderAccessory ? e || t ? n : (0, r.jsx)(T.default, {}) : null
-            }, (0, m.isImageLoaded)(this.getSrc(this.getRatio(), e.isAnimated(this.props))) && (this.state.readyState = _.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = x.getCurrentConfig({
+                return this.props.shouldRenderAccessory ? e || t ? n : (0, r.jsx)(S.default, {}) : null
+            }, (0, p.isImageLoaded)(this.getSrc(this.getRatio(), e.isAnimated(this.props))) && (this.state.readyState = T.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = N.getCurrentConfig({
                 location: "lazy_image"
             }).enabled
         }
     }).visibilityObserver = new c.VisibilityObserver({
         threshold: .7
-    }), l.defaultProps = {
+    }), i.defaultProps = {
         shouldLink: !1,
         autoPlay: !1,
         animated: !1,
         minWidth: 0,
         minHeight: 0,
         shouldRenderAccessory: !0
-    }, a = l;
-    let x = (0, f.createExperiment)({
+    }, a = i;
+    let N = (0, f.createExperiment)({
         kind: "user",
         id: "2024-02_image_load_metrics",
         label: "Image load metrics Config User Experiment",

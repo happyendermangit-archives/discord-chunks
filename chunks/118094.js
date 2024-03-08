@@ -5,16 +5,16 @@ function(e, t, n) {
             return u
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("77078"),
+    var l = n("77078"),
         a = n("979975"),
         s = n("200521"),
         r = n("782340");
 
     function o(e, t, n) {
         let {
-            rating: l,
+            rating: i,
             problem: s,
             feedback: o
         } = n;
@@ -25,8 +25,8 @@ function(e, t, n) {
             guildId: t.guild_id,
             channelId: t.id,
             location: "Summary divider",
-            rating: l
-        }), (0, i.showToast)((0, i.createToast)(r.default.Messages.CALL_FEEDBACK_CONFIRMATION, i.ToastType.SUCCESS))
+            rating: i
+        }), (0, l.showToast)((0, l.createToast)(r.default.Messages.CALL_FEEDBACK_CONFIRMATION, l.ToastType.SUCCESS))
     }
 
     function u(e) {
@@ -35,11 +35,11 @@ function(e, t, n) {
             channel: a,
             rating: r
         } = e;
-        null != t && (r === s.FeedbackRating.BAD ? (0, i.openModalLazy)(async () => {
+        null != t && (r === s.FeedbackRating.BAD ? (0, l.openModalLazy)(async () => {
             let {
                 default: e
             } = await n.el("747194").then(n.bind(n, "747194"));
-            return n => (0, l.jsx)(e, {
+            return n => (0, i.jsx)(e, {
                 ...n,
                 onSubmit: e => o(t, a, e),
                 startRating: r

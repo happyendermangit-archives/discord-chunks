@@ -5,22 +5,22 @@ function(e, t, n) {
             return o
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("77078"),
         r = n("593714"),
         o = e => {
             let {
                 className: t,
                 children: n,
-                "aria-label": i,
+                "aria-label": l,
                 id: o
             } = e;
-            return (0, l.jsx)(s.H, {
+            return (0, i.jsx)(s.H, {
                 className: a(t, r.container),
-                "aria-label": i,
+                "aria-label": l,
                 id: o,
                 children: n
             })

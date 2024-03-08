@@ -5,21 +5,21 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("627445"),
-        i = n.n(l);
+    var i = n("627445"),
+        l = n.n(i);
 
     function a(e, t) {
-        if (i(e.length >= t, "Waveform smaller than samples"), e.length === t) return e;
+        if (l(e.length >= t, "Waveform smaller than samples"), e.length === t) return e;
         let n = e.length / t,
-            l = [],
+            i = [],
             a = 0;
-        for (; l.length < t;) {
-            let t = Math.round((l.length + 1) * n),
-                i = 0,
+        for (; i.length < t;) {
+            let t = Math.round((i.length + 1) * n),
+                l = 0,
                 s = 0;
-            for (let n = a; n < t && n < e.length; n++) i += e[n], s++;
-            l[l.length] = i / s, a = t
+            for (let n = a; n < t && n < e.length; n++) l += e[n], s++;
+            i[i.length] = l / s, a = t
         }
-        return l
+        return i
     }
 }

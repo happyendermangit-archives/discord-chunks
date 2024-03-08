@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         FetchState: function() {
-            return i
+            return l
         },
         default: function() {
-            return p
+            return m
         }
     });
-    var l, i, a = n("917351"),
+    var i, l, a = n("917351"),
         s = n.n(a),
         r = n("446674"),
         o = n("913144");
-    (l = i || (i = {}))[l.FETCHING = 0] = "FETCHING", l[l.FETCHED = 1] = "FETCHED", l[l.ERROR = 2] = "ERROR";
+    (i = l || (l = {}))[i.FETCHING = 0] = "FETCHING", i[i.FETCHED = 1] = "FETCHED", i[i.ERROR = 2] = "ERROR";
     let u = {},
         d = {},
         c = {};
@@ -23,7 +23,7 @@ function(e, t, n) {
         } = e;
         return "includes_inactive:".concat(t)
     }
-    class m extends r.default.Store {
+    class p extends r.default.Store {
         getLastFetchTimeMs(e) {
             let {
                 includesInactive: t
@@ -49,7 +49,7 @@ function(e, t, n) {
             })]
         }
     }
-    var p = new m(o.default, {
+    var m = new p(o.default, {
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function(e) {
             let {
                 includesInactive: t
@@ -65,9 +65,9 @@ function(e, t, n) {
             var t;
             let {
                 collections: n,
-                includesInactive: l
-            } = e, i = f({
-                includesInactive: l
+                includesInactive: i
+            } = e, l = f({
+                includesInactive: i
             });
             let a = (t = n.map(e => {
                 var t;
@@ -75,15 +75,15 @@ function(e, t, n) {
             }), s.sortBy(t, ["position", "id"]));
             u = {
                 ...u,
-                [i]: a
+                [l]: a
             }, d = {
                 ...d,
-                [i]: 1
+                [l]: 1
             };
             let r = Date.now();
             c = {
                 ...c,
-                [i]: r
+                [l]: r
             }
         },
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function(e) {

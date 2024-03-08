@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         EmojiPickerUploadTreatment: function() {
-            return i
+            return l
         },
         default: function() {
             return r
         }
     });
-    var l, i, a = n("862205");
-    (l = i || (i = {}))[l.NONE = 0] = "NONE", l[l.WITH_TOP_LIST = 1] = "WITH_TOP_LIST", l[l.WITHOUT_TOP_LIST = 2] = "WITHOUT_TOP_LIST";
+    var i, l, a = n("862205");
+    (i = l || (l = {}))[i.NONE = 0] = "NONE", i[i.WITH_TOP_LIST = 1] = "WITH_TOP_LIST", i[i.WITHOUT_TOP_LIST = 2] = "WITHOUT_TOP_LIST";
     let s = (0, a.createExperiment)({
         kind: "user",
         id: "2024-02_emoji_picker_upload_desktop",

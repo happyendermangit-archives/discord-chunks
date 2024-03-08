@@ -5,8 +5,8 @@ function(e, t, n) {
             return s
         }
     }), n("222007");
-    var l = n("872717"),
-        i = n("389153"),
+    var i = n("872717"),
+        l = n("389153"),
         a = n("49111");
 
     function s(e) {
@@ -19,7 +19,7 @@ function(e, t, n) {
         if (null != n) return n;
         let o = {};
         o.client_id = t;
-        let u = (0, i.isInUserAppExperiment)(null, {
+        let u = (0, l.isInUserAppExperiment)(null, {
                 location: "getApplicationInstallURL"
             }),
             d = u && null != r && Object.values(r).some(e => (null == e ? void 0 : e.oauth2_install_params) != null);
@@ -34,6 +34,6 @@ function(e, t, n) {
             let [t, n] = e;
             return "".concat(t, "=").concat(encodeURIComponent(n))
         }).join("&");
-        return "".concat(l.default.getAPIBaseURL(!1)).concat(a.Endpoints.OAUTH2_AUTHORIZE, "?").concat(c)
+        return "".concat(i.default.getAPIBaseURL(!1)).concat(a.Endpoints.OAUTH2_AUTHORIZE, "?").concat(c)
     }
 }

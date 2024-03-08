@@ -1,13 +1,13 @@
-function(i, x, t) {
+function(e, t, n) {
     "use strict";
-    var s, a;
-    t.r(x), t.d(x, {
+    var i, l;
+    n.r(t), n.d(t, {
         VoiceChannelEffectAnimationType: function() {
-            return s
+            return i
         },
         EMOJI_SIZE: function() {
-            return o
+            return a
         }
-    }), (a = s || (s = {}))[a.PREMIUM = 0] = "PREMIUM", a[a.BASIC = 1] = "BASIC";
-    let o = 32
+    }), (l = i || (i = {}))[l.PREMIUM = 0] = "PREMIUM", l[l.BASIC = 1] = "BASIC";
+    let a = 32
 }

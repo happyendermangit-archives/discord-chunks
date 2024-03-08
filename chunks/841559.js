@@ -5,9 +5,9 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("75196");
+    var l = n("75196");
 
     function a(e) {
         let {
@@ -17,12 +17,12 @@ function(e, t, n) {
             foreground: s,
             ...r
         } = e;
-        return (0, l.jsx)("svg", {
-            ...(0, i.default)(r),
+        return (0, i.jsx)("svg", {
+            ...(0, l.default)(r),
             width: t,
             height: n,
             viewBox: "0 0 8 13",
-            children: (0, l.jsx)("path", {
+            children: (0, i.jsx)("path", {
                 className: null != s ? s : void 0,
                 stroke: a,
                 fill: "transparent",

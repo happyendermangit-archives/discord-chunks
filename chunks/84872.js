@@ -5,8 +5,8 @@ function(e, t, n) {
             return O
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("551042"),
@@ -15,43 +15,43 @@ function(e, t, n) {
         d = n("454655"),
         c = n("866353"),
         f = n("467094"),
-        m = n("364685"),
-        p = n("161585"),
+        p = n("364685"),
+        m = n("161585"),
         h = n("41170"),
-        E = n("305961"),
-        g = n("501536"),
-        S = n("216422"),
-        C = n("25292"),
-        T = n("200294"),
-        v = n("851745"),
+        x = n("305961"),
+        E = n("501536"),
+        y = n("216422"),
+        g = n("25292"),
+        S = n("200294"),
+        C = n("851745"),
         I = n("406291"),
-        _ = n("49111"),
-        N = n("782340"),
-        A = n("522572");
+        T = n("49111"),
+        _ = n("782340"),
+        v = n("522572");
 
-    function x(e, t) {
-        return (0, l.jsx)(h.default, {
+    function N(e, t) {
+        return (0, i.jsx)(h.default, {
             sticker: e,
             isInteracting: t,
             size: 40
         })
     }
-    let y = {
+    let A = {
         sentinel: I.EMOJI_SENTINEL,
-        stores: [m.default],
-        matches: (e, t, n, l, i) => n.length > 1,
-        queryResults(e, t, n, l, i) {
-            let a = l.allowStickers ? 0 : 40,
-                s = _.MAX_AUTOCOMPLETE_RESULTS + a,
+        stores: [p.default],
+        matches: (e, t, n, i, l) => n.length > 1,
+        queryResults(e, t, n, i, l) {
+            let a = i.allowStickers ? 0 : 40,
+                s = T.MAX_AUTOCOMPLETE_RESULTS + a,
                 {
                     emojis: {
                         locked: r,
                         unlocked: o
                     }
-                } = C.default.queryEmojiResults({
+                } = g.default.queryEmojiResults({
                     query: n,
                     channel: e,
-                    intention: l.emojiIntention,
+                    intention: i.emojiIntention,
                     maxCount: s
                 });
             if ("-" === n[0]) {
@@ -62,31 +62,31 @@ function(e, t, n) {
                 r = r.filter(e), o = o.filter(e)
             }
             let d = [];
-            if (l.allowStickers) {
+            if (i.allowStickers) {
                 (0, f.fetchStickerPacks)();
-                let t = C.default.queryStickers([n], !0, [e, (e, t) => t === c.StickerSendability.SENDABLE]),
-                    l = Math.max(4, 8 - o.length);
-                d = t.slice(0, l), "-" === n[0] && (d = t.filter(e => e.sticker.name === n))
+                let t = g.default.queryStickers([n], !0, [e, (e, t) => t === c.StickerSendability.SENDABLE]),
+                    i = Math.max(4, 8 - o.length);
+                d = t.slice(0, i), "-" === n[0] && (d = t.filter(e => e.sticker.name === n))
             }
-            let m = o.slice(0, s - d.length),
-                p = !l.allowStickers && r.length > 0 && m.length < s,
+            let p = o.slice(0, s - d.length),
+                m = !i.allowStickers && r.length > 0 && p.length < s,
                 h = u.default.getCurrentConfig({
                     location: "Emoji Autocomplete"
                 }, {
-                    autoTrackExposure: p,
-                    disable: !p
+                    autoTrackExposure: m,
+                    disable: !m
                 }).enabled,
-                E = p && h ? r.slice(0, s - m.length) : [],
-                g = m.length + E.length;
+                x = m && h ? r.slice(0, s - p.length) : [],
+                E = p.length + x.length;
             return {
                 results: {
-                    emojis: m,
-                    emojisLocked: E,
+                    emojis: p,
+                    emojisLocked: x,
                     stickers: d
                 },
                 metadata: {
-                    numEmojiResults: g,
-                    numLockedEmojiResults: E.length,
+                    numEmojiResults: E,
+                    numLockedEmojiResults: x.length,
                     numStickerResults: d.length
                 }
             }
@@ -100,91 +100,91 @@ function(e, t, n) {
                 },
                 selectedIndex: c,
                 query: f,
-                onHover: m,
-                onClick: p
-            } = e, h = u.length > 0 ? (0, l.jsxs)(i.Fragment, {
-                children: [(0, l.jsx)(d.default, {
+                onHover: p,
+                onClick: m
+            } = e, h = u.length > 0 ? (0, i.jsxs)(l.Fragment, {
+                children: [(0, i.jsx)(d.default, {
                     glowOpacity: 0,
-                    className: A.premiumSectionDivider
-                }), (0, l.jsxs)("div", {
-                    className: s(A.premiumHeader),
-                    children: [(0, l.jsx)(S.default, {
-                        className: A.premiumIcon,
+                    className: v.premiumSectionDivider
+                }), (0, i.jsxs)("div", {
+                    className: s(v.premiumHeader),
+                    children: [(0, i.jsx)(y.default, {
+                        className: v.premiumIcon,
                         width: 20,
                         height: 20
-                    }), (0, l.jsx)(o.Text, {
-                        className: A.premiumText,
+                    }), (0, i.jsx)(o.Text, {
+                        className: v.premiumText,
                         variant: "text-sm/semibold",
-                        children: N.default.Messages.UNLOCK_WITH_NITRO
+                        children: _.default.Messages.UNLOCK_WITH_NITRO
                     })]
                 })]
             }) : null;
-            return (0, l.jsxs)(l.Fragment, {
-                children: [(0, T.renderAutocompleteGroup)({
+            return (0, i.jsxs)(i.Fragment, {
+                children: [(0, S.renderAutocompleteGroup)({
                     query: f,
                     selectedIndex: c,
                     autocompletes: t,
-                    onHover: m,
-                    onClick: p,
-                    titleWithQuery: N.default.Messages.EMOJI_MATCHING,
-                    titleWithoutQuery: N.default.Messages.EMOJI,
-                    Component: g.default.Emoji,
+                    onHover: p,
+                    onClick: m,
+                    titleWithQuery: _.default.Messages.EMOJI_MATCHING,
+                    titleWithoutQuery: _.default.Messages.EMOJI,
+                    Component: E.default.Emoji,
                     getProps: e => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
                         sentinel: I.EMOJI_SENTINEL,
-                        guild: null != e.guildId ? E.default.getGuild(e.guildId) : null,
+                        guild: null != e.guildId ? x.default.getGuild(e.guildId) : null,
                         isLocked: !1
                     }),
                     getQuery: e => "".concat(I.EMOJI_SENTINEL).concat(e),
                     key: "emoji"
-                }), u.length > 0 ? (0, T.renderAutocompleteGroup)({
+                }), u.length > 0 ? (0, S.renderAutocompleteGroup)({
                     query: f,
                     selectedIndex: c,
                     autocompletes: u,
-                    onHover: m,
+                    onHover: p,
                     onClick: () => {
                         (0, r.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("499237").then(n.bind(n, "499237"));
-                            return t => (0, l.jsx)(e, {
+                            return t => (0, i.jsx)(e, {
                                 ...t
                             })
                         })
                     },
-                    titleWithQuery: 0 === t.length ? N.default.Messages.EMOJI_MATCHING : null,
-                    titleWithoutQuery: 0 === t.length ? N.default.Messages.EMOJI : null,
-                    Component: g.default.Emoji,
+                    titleWithQuery: 0 === t.length ? _.default.Messages.EMOJI_MATCHING : null,
+                    titleWithoutQuery: 0 === t.length ? _.default.Messages.EMOJI : null,
+                    Component: E.default.Emoji,
                     getProps: e => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
                         sentinel: I.EMOJI_SENTINEL,
-                        guild: null != e.guildId ? E.default.getGuild(e.guildId) : null,
+                        guild: null != e.guildId ? x.default.getGuild(e.guildId) : null,
                         isLocked: !0
                     }),
                     getQuery: e => "".concat(I.EMOJI_SENTINEL).concat(e),
                     key: "emoji-upsell",
                     indexOffset: t.length,
                     subHeader: h
-                }) : null, (t.length > 0 || u.length > 0) && a.length > 0 && (0, l.jsx)(g.default.Divider, {
-                    className: A.emojiStickersDivider
-                }), (0, T.renderAutocompleteGroup)({
+                }) : null, (t.length > 0 || u.length > 0) && a.length > 0 && (0, i.jsx)(E.default.Divider, {
+                    className: v.emojiStickersDivider
+                }), (0, S.renderAutocompleteGroup)({
                     query: f,
                     selectedIndex: c,
                     autocompletes: a,
-                    onHover: m,
-                    onClick: p,
-                    titleWithQuery: N.default.Messages.STICKERS_MATCHING,
-                    titleWithoutQuery: N.default.Messages.STICKER,
-                    Component: g.default.Sticker,
+                    onHover: p,
+                    onClick: m,
+                    titleWithQuery: _.default.Messages.STICKERS_MATCHING,
+                    titleWithoutQuery: _.default.Messages.STICKER,
+                    Component: E.default.Sticker,
                     getProps: e => {
                         let {
                             comparator: t,
                             sticker: n
                         } = e;
                         return {
-                            renderSticker: x,
+                            renderSticker: N,
                             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                             sticker: n,
                             key: n.id
@@ -193,7 +193,7 @@ function(e, t, n) {
                     getQuery: e => e,
                     key: "stickers",
                     indexOffset: t.length + u.length,
-                    headerClassName: t.length > 0 ? A.stickersHeaderWithEmojiResults : void 0
+                    headerClassName: t.length > 0 ? v.stickersHeaderWithEmojiResults : void 0
                 })]
             })
         },
@@ -202,13 +202,13 @@ function(e, t, n) {
                 results: {
                     emojis: t,
                     emojisLocked: n,
-                    stickers: l
+                    stickers: i
                 },
-                index: i,
+                index: l,
                 options: a
             } = e;
-            if (i < t.length) {
-                let e = t[i],
+            if (l < t.length) {
+                let e = t[l],
                     s = t.length + n.length;
                 return a.insertText(function(e) {
                     return "".concat(I.EMOJI_SENTINEL).concat(e.name).concat(I.EMOJI_SENTINEL)
@@ -217,27 +217,27 @@ function(e, t, n) {
                     let n = e.animated ? "a" : "";
                     return e.managed || null == e.id ? "".concat(I.EMOJI_SENTINEL).concat(e.name).concat(I.EMOJI_SENTINEL) : "<".concat(n, ":").concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ":").concat(e.id, ">")
                 }(e)), {
-                    type: v.AutocompleteSelectionTypes.EMOJI,
+                    type: C.AutocompleteSelectionTypes.EMOJI,
                     metadata: {
                         emojiId: e.id,
                         numEmojiResults: s,
-                        numStickerResults: l.length,
+                        numStickerResults: i.length,
                         expressionName: e.name,
                         isCustom: null != e.id,
                         isAnimated: e.animated
                     }
                 }
             }
-            if ((i -= t.length) < n.length) return {
+            if ((l -= t.length) < n.length) return {
                 type: null
             };
-            if ((i -= n.length) < l.length) {
-                let e = l[i];
-                return a.insertText(""), a.sendSticker(e.sticker, p.StickerSelectLocation.AUTOCOMPLETE), {
-                    type: v.AutocompleteSelectionTypes.STICKER,
+            if ((l -= n.length) < i.length) {
+                let e = i[l];
+                return a.insertText(""), a.sendSticker(e.sticker, m.StickerSelectLocation.AUTOCOMPLETE), {
+                    type: C.AutocompleteSelectionTypes.STICKER,
                     metadata: {
                         numEmojiResults: t.length,
-                        numStickerResults: l.length,
+                        numStickerResults: i.length,
                         stickerId: e.sticker.id
                     }
                 }
@@ -247,5 +247,5 @@ function(e, t, n) {
             }
         }
     };
-    var O = y
+    var O = A
 }

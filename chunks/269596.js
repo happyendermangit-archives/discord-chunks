@@ -5,13 +5,13 @@ function(e, t, n) {
             return d
         }
     }), n("222007");
-    var l = n("446674"),
-        i = n("913144"),
+    var i = n("446674"),
+        l = n("913144"),
         a = n("197881"),
         s = n("492397");
     let r = new Set,
         o = {};
-    class u extends l.default.PersistedStore {
+    class u extends i.default.PersistedStore {
         initialize(e) {
             null != e && (Array.isArray(e.hiddenHotspots) && (r = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (o = e.hotspotOverrides))
         }
@@ -37,7 +37,7 @@ function(e, t, n) {
         hiddenHotspots: null != e ? e : [],
         hotspotOverrides: {}
     })];
-    var d = new u(i.default, {
+    var d = new u(l.default, {
         OVERLAY_INITIALIZE: function(e) {
             let {
                 hiddenHotspots: t

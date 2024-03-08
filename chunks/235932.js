@@ -5,11 +5,11 @@ function(e, t, n) {
             return h
         },
         sendReplyToActivity: function() {
-            return E
+            return x
         }
     });
-    var l = n("376556"),
-        i = n("309570"),
+    var i = n("376556"),
+        l = n("309570"),
         a = n("429928"),
         s = n("695412"),
         r = n("999317"),
@@ -18,69 +18,69 @@ function(e, t, n) {
         d = n("526409"),
         c = n("407462"),
         f = n("78512"),
-        m = n("49111"),
-        p = n("782340");
+        p = n("49111"),
+        m = n("782340");
     let h = async e => {
         let {
             reaction: t,
             altText: n,
-            ...l
-        } = e, i = await S(l);
+            ...i
+        } = e, l = await y(i);
         (0, d.sendReaction)({
-            file: i,
+            file: l,
             altText: n,
-            user: l.user,
+            user: i.user,
             reaction: t
         })
-    }, E = async e => {
+    }, x = async e => {
         let {
             reply: t,
             altText: n,
-            ...l
-        } = e, i = await S(l);
+            ...i
+        } = e, l = await y(i);
         (0, d.sendReply)({
-            file: i,
+            file: l,
             altText: n,
-            user: l.user,
+            user: i.user,
             reply: t
         })
-    }, g = e => {
+    }, E = e => {
         var t;
         let {
-            activity: l,
-            application: i,
+            activity: i,
+            application: l,
             user: a
         } = e, {
             theme: s
-        } = (0, f.getProfileInfo)(a, "black"), r = "dark" === s, d = (0, f.getActivityPlatform)(l), {
+        } = (0, f.getProfileInfo)(a, "black"), r = "dark" === s, d = (0, f.getActivityPlatform)(i), {
             assets: c,
-            application_id: p
-        } = l, h = (0, o.getAssetImage)(p, null == c ? void 0 : c.large_image, 64), E = null == i ? void 0 : i.getIconURL(64), g = null != d ? r ? d.icon.darkPNG : d.icon.lightPNG : l.type === m.ActivityTypes.PLAYING ? r ? n("944857") : n("248073") : null, S = l.type === m.ActivityTypes.HANG_STATUS && (null === (t = l.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
-            id: l.emoji.id,
-            name: l.emoji.name,
+            application_id: m
+        } = i, h = (0, o.getAssetImage)(m, null == c ? void 0 : c.large_image, 64), x = null == l ? void 0 : l.getIconURL(64), E = null != d ? r ? d.icon.darkPNG : d.icon.lightPNG : i.type === p.ActivityTypes.PLAYING ? r ? n("944857") : n("248073") : null, y = i.type === p.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
+            id: i.emoji.id,
+            name: i.emoji.name,
             animated: !1
         }) : null;
         return {
-            ...null != g && {
-                Platform: g
+            ...null != E && {
+                Platform: E
             },
             ...null != h && {
                 AssetImage: h.includes("http") ? h : n(h)
             },
-            ...null != E && {
-                ApplicationImage: E
+            ...null != x && {
+                ApplicationImage: x
             },
-            ...null != S && {
-                HangStatus: S
+            ...null != y && {
+                HangStatus: y
             }
         }
-    }, S = async e => {
+    }, y = async e => {
         let {
             user: t,
             activity: n,
             application: o,
             stream: u
-        } = e, d = g({
+        } = e, d = E({
             activity: n,
             application: o,
             user: t
@@ -91,7 +91,7 @@ function(e, t, n) {
                 var r;
                 e.setFont({
                     truncate: s.TextTruncationMethod.Truncate
-                }), null != u ? N(e, n, t) : (0, a.default)(n) ? v(e, n, t) : (0, i.default)(n) && n.name === l.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name ? _(e, n, t) : n.type === m.ActivityTypes.HANG_STATUS ? I(e, n, t) : T(e, n, t), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("Platform")) && e.drawImage("Platform", {
+                }), null != u ? _(e, n, t) : (0, a.default)(n) ? C(e, n, t) : (0, l.default)(n) && n.name === i.default.get(p.PlatformTypes.LEAGUE_OF_LEGENDS).name ? T(e, n, t) : n.type === p.ActivityTypes.HANG_STATUS ? I(e, n, t) : S(e, n, t), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("Platform")) && e.drawImage("Platform", {
                     x: c.canvasWidth - c.padding - c.platformSize,
                     y: c.padding
                 }, {
@@ -106,13 +106,13 @@ function(e, t, n) {
                 fileType: "png"
             }
         })
-    }, C = (e, t) => {
+    }, g = (e, t) => {
         e.setColor("dark" === t ? "white" : "black"), e.drawPath(c.ACTIVITY_IMAGE_FALLBACK_PATH, {
             x: c.padding,
             y: c.padding
         }, !0, 2 + 2 / 3)
-    }, T = (e, t, n) => {
-        var l, i, a;
+    }, S = (e, t, n) => {
+        var i, l, a;
         e.setSize({
             w: c.canvasWidth,
             h: c.canvasHeight
@@ -131,19 +131,19 @@ function(e, t, n) {
             y: 0,
             h: c.canvasHeight,
             w: c.canvasWidth
-        }, 8, !0), (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has("AssetImage")) ? e.drawRoundedImage("AssetImage", {
+        }, 8, !0), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("AssetImage")) ? e.drawRoundedImage("AssetImage", {
             x: c.padding,
             y: c.padding
         }, {
             w: c.activitySize,
             h: c.activitySize
-        }, 8) : (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("ApplicationImage")) ? e.drawRoundedImage("ApplicationImage", {
+        }, 8) : (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has("ApplicationImage")) ? e.drawRoundedImage("ApplicationImage", {
             x: c.padding,
             y: c.padding
         }, {
             w: c.activitySize,
             h: c.activitySize
-        }, 8) : C(e, r);
+        }, 8) : g(e, r);
         let o = c.activitySize + c.padding + c.imagePadding;
         e.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 16,
@@ -160,8 +160,8 @@ function(e, t, n) {
             x: o,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0))
-    }, v = (e, t, n) => {
-        var l, i;
+    }, C = (e, t, n) => {
+        var i, l;
         e.setSize({
             w: c.canvasWidth,
             h: c.canvasHeight
@@ -180,7 +180,7 @@ function(e, t, n) {
             y: 0,
             h: c.canvasHeight,
             w: c.canvasWidth
-        }, 8, !0), (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has("AssetImage")) && e.drawRoundedImage("AssetImage", {
+        }, 8, !0), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("AssetImage")) && e.drawRoundedImage("AssetImage", {
             x: c.padding,
             y: c.padding
         }, {
@@ -195,7 +195,7 @@ function(e, t, n) {
         }), e.drawText("".concat(t.details), {
             x: r,
             y: c.fontPadding + 1 * c.lineHeight,
-            w: (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
+            w: (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
         }, !0), e.setFont({
             size: 14,
             weight: 400
@@ -203,8 +203,8 @@ function(e, t, n) {
             x: r,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, I = (e, t, l) => {
-        var i, a;
+    }, I = (e, t, i) => {
+        var l, a;
         e.setSize({
             w: c.canvasWidth,
             h: c.canvasHeight
@@ -212,7 +212,7 @@ function(e, t, n) {
         let {
             color: s,
             theme: r
-        } = (0, f.getProfileInfo)(l, "black");
+        } = (0, f.getProfileInfo)(i, "black");
         e.setColor(s), e.drawRoundedRect({
             x: 0,
             y: 0,
@@ -223,19 +223,19 @@ function(e, t, n) {
             y: 0,
             h: c.canvasHeight,
             w: c.canvasWidth
-        }, 8, !0), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("HangStatus")) ? e.drawRoundedImage("HangStatus", {
+        }, 8, !0), (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has("HangStatus")) ? e.drawRoundedImage("HangStatus", {
             x: c.padding,
             y: c.padding
         }, {
             w: c.activitySize,
             h: c.activitySize
-        }, 8) : C(e, r);
+        }, 8) : g(e, r);
         let o = c.activitySize + c.padding + c.imagePadding;
         e.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 14,
             family: '"gg sans", sans-serif',
             weight: 700
-        }), e.drawText(p.default.Messages.STATUS_LEAD_IN_JUST, {
+        }), e.drawText(m.default.Messages.STATUS_LEAD_IN_JUST, {
             x: o,
             y: c.fontPadding + 1 * c.lineHeight,
             w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
@@ -252,17 +252,17 @@ function(e, t, n) {
             x: o,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, _ = (e, t, n) => {
-        var l;
+    }, T = (e, t, n) => {
+        var i;
         e.setSize({
             w: c.canvasWidth,
             h: c.canvasHeight
         });
         let {
-            color: i,
+            color: l,
             theme: a
         } = (0, f.getProfileInfo)(n, "black");
-        e.setColor(i), e.drawRoundedRect({
+        e.setColor(l), e.drawRoundedRect({
             x: 0,
             y: 0,
             h: c.canvasHeight,
@@ -292,7 +292,7 @@ function(e, t, n) {
         }), e.drawText("".concat(t.details), {
             x: o,
             y: c.fontPadding + 1 * c.lineHeight,
-            w: (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has("Platform")) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
+            w: (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
         }, !0), e.setFont({
             size: 14,
             weight: 400
@@ -300,8 +300,8 @@ function(e, t, n) {
             x: o,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, N = (e, t, n) => {
-        var l, i, a;
+    }, _ = (e, t, n) => {
+        var i, l, a;
         e.setSize({
             w: c.canvasWidth,
             h: c.canvasHeight
@@ -320,19 +320,19 @@ function(e, t, n) {
             y: 0,
             h: c.canvasHeight,
             w: c.canvasWidth
-        }, 8, !0), (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has("AssetImage")) ? e.drawRoundedImage("AssetImage", {
+        }, 8, !0), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("AssetImage")) ? e.drawRoundedImage("AssetImage", {
             x: c.padding,
             y: c.padding
         }, {
             w: c.activitySize,
             h: c.activitySize
-        }, 8) : (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("ApplicationImage")) ? e.drawRoundedImage("ApplicationImage", {
+        }, 8) : (null === (l = e.assetMap) || void 0 === l ? void 0 : l.has("ApplicationImage")) ? e.drawRoundedImage("ApplicationImage", {
             x: c.padding,
             y: c.padding
         }, {
             w: c.activitySize,
             h: c.activitySize
-        }, 8) : C(e, r);
+        }, 8) : g(e, r);
         let o = c.activitySize + c.padding + c.imagePadding;
         e.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 16,

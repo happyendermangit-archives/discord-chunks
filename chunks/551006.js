@@ -5,8 +5,8 @@ function(e, t, n) {
             return c
         }
     }), n("222007");
-    var l = n("627445"),
-        i = n.n(l),
+    var i = n("627445"),
+        l = n.n(i),
         a = n("884351"),
         s = n("19766"),
         r = n("957255"),
@@ -16,20 +16,20 @@ function(e, t, n) {
     function d(e, t) {
         let n = 0;
         if (t.isThread()) {
-            var l;
-            return null !== (l = t.memberCount) && void 0 !== l ? l : 0
+            var i;
+            return null !== (i = t.memberCount) && void 0 !== i ? i : 0
         }
-        let i = s.default.getProps(t.getGuildId(), t.id);
-        return i.groups.forEach(t => {
+        let l = s.default.getProps(t.getGuildId(), t.id);
+        return l.groups.forEach(t => {
             ("@everyone" === e || t.id !== o.StatusTypes.OFFLINE) && (n += t.count)
         }), n
     }
     var c = {
         shouldShowEveryoneGuard: function(e, t) {
             let n = t.getGuildId();
-            i(n, "isGuildChannel with null guildId");
-            let l = d(e, t);
-            return l > 30 && r.default.can(o.Permissions.MENTION_EVERYONE, t)
+            l(n, "isGuildChannel with null guildId");
+            let i = d(e, t);
+            return i > 30 && r.default.can(o.Permissions.MENTION_EVERYONE, t)
         },
         everyoneMemberCount: d,
         extractEveryoneRole: function(e, t) {

@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return y
+            return A
         },
         unsetCommand: function() {
             return O
         }
     }), n("222007"), n("424973"), n("781738"), n("843762");
-    var l = n("798609"),
-        i = n("507217"),
+    var i = n("798609"),
+        l = n("507217"),
         a = n("118200"),
         s = n("240249"),
         r = n("383018"),
@@ -18,33 +18,33 @@ function(e, t, n) {
         d = n("343952"),
         c = n("355263"),
         f = n("511104"),
-        m = n("42203"),
-        p = n("305961"),
+        p = n("42203"),
+        m = n("305961"),
         h = n("697218"),
-        E = n("640830"),
-        g = n("83800"),
-        S = n("970153"),
-        C = n("939563"),
-        T = n("385887"),
-        v = n("566819"),
+        x = n("640830"),
+        E = n("83800"),
+        y = n("970153"),
+        g = n("939563"),
+        S = n("385887"),
+        C = n("566819"),
         I = n("49111"),
-        _ = n("406291");
-    let N = new Set(["applicationCommandOption"]),
-        A = new Set([l.ApplicationCommandOptionType.ATTACHMENT]),
-        x = new Set(["line", "applicationCommand"]);
+        T = n("406291");
+    let _ = new Set(["applicationCommandOption"]),
+        v = new Set([i.ApplicationCommandOptionType.ATTACHMENT]),
+        N = new Set(["line", "applicationCommand"]);
 
-    function y(e, t, n, d) {
+    function A(e, t, n, d) {
         let {
-            insertData: m,
-            isInline: p,
+            insertData: p,
+            isInline: m,
             isVoid: h,
             onChange: I,
-            deleteBackward: y,
-            deleteForward: j,
-            deleteFragment: U
+            deleteBackward: A,
+            deleteForward: P,
+            deleteFragment: j
         } = e;
         e.insertData = n => {
-            if (null != t && T.EditorUtils.isEditorEmpty(e) && n.types.includes("application/x-discord-interaction-data")) {
+            if (null != t && S.EditorUtils.isEditorEmpty(e) && n.types.includes("application/x-discord-interaction-data")) {
                 let e = JSON.parse(n.getData("application/x-discord-interaction-data")),
                     {
                         commandKey: d,
@@ -52,48 +52,48 @@ function(e, t, n) {
                     } = (0, u.extractInteractionDataProps)(e),
                     {
                         application: f,
-                        command: m
+                        command: p
                     } = s.getCachedCommand(t, d);
-                if (null != m) {
-                    var l, r;
+                if (null != p) {
+                    var i, r;
                     let e = null != f ? {
                         type: o.ApplicationCommandSectionType.APPLICATION,
                         id: f.id,
                         icon: f.icon,
-                        name: null !== (r = null === (l = f.bot) || void 0 === l ? void 0 : l.username) && void 0 !== r ? r : f.name,
+                        name: null !== (r = null === (i = f.bot) || void 0 === i ? void 0 : i.username) && void 0 !== r ? r : f.name,
                         application: f
                     } : null;
-                    return i.setActiveCommand({
+                    return l.setActiveCommand({
                         channelId: t.id,
-                        command: m,
+                        command: p,
                         section: e,
                         location: o.ApplicationCommandTriggerLocations.PASTE,
-                        initialValues: (0, a.getInitialValuesFromInteractionOptions)(m, null != c ? c : [])
+                        initialValues: (0, a.getInitialValuesFromInteractionOptions)(p, null != c ? c : [])
                     }), null
                 }
             }
-            return m(n)
-        }, e.isInline = e => !!N.has(e.type) || p(e), e.isVoid = e => !!("applicationCommandOption" === e.type && A.has(e.optionType)) || h(e), e.deleteBackward = t => {
-            P(e, () => y(t))
+            return p(n)
+        }, e.isInline = e => !!_.has(e.type) || m(e), e.isVoid = e => !!("applicationCommandOption" === e.type && v.has(e.optionType)) || h(e), e.deleteBackward = t => {
+            L(e, () => A(t))
         }, e.deleteForward = t => {
-            P(e, () => j(t))
+            L(e, () => P(t))
         }, e.deleteFragment = t => {
-            P(e, () => U(t))
+            L(e, () => j(t))
         };
-        let D = null,
-            k = null,
+        let U = null,
+            D = null,
             w = null,
             F = null,
-            G = null;
+            B = null;
         return e.onChange = () => {
             if (null != t) {
                 var a;
                 let u = r.default.getState(t.id),
-                    m = T.EditorUtils.getFirstText(e),
-                    p = (0, c.getCommandQuery)(t, null !== (a = null == m ? void 0 : m.text) && void 0 !== a ? a : ""),
-                    h = s.getChangeKeys(t, l.ApplicationCommandType.CHAT, p.text);
-                if (T.EditorUtils.richValue(e) !== D || !T.SelectionUtils.equals(e.selection, k) || u.activeCommand !== w || null == G || h.some((e, t) => G[t] !== e)) {
-                    let a = g.HistoryUtils.withMergedEntry(e, () => {
+                    p = S.EditorUtils.getFirstText(e),
+                    m = (0, c.getCommandQuery)(t, null !== (a = null == p ? void 0 : p.text) && void 0 !== a ? a : ""),
+                    h = s.getChangeKeys(t, i.ApplicationCommandType.CHAT, m.text);
+                if (S.EditorUtils.richValue(e) !== U || !S.SelectionUtils.equals(e.selection, D) || u.activeCommand !== w || null == B || h.some((e, t) => B[t] !== e)) {
+                    let a = E.HistoryUtils.withMergedEntry(e, () => {
                         var a;
                         return function(e) {
                             let {
@@ -103,136 +103,136 @@ function(e, t, n) {
                                 canUseCommands: r,
                                 canOnlyUseTextCommands: u,
                                 commandChanged: d,
-                                previousOptionValues: m
+                                previousOptionValues: p
                             } = e, {
-                                command: p,
+                                command: m,
                                 commandText: h
-                            } = L(t), g = n.activeCommand;
-                            if (!r || u && (null == g ? void 0 : g.inputType) !== o.ApplicationCommandInputType.BUILT_IN_TEXT && (null == g ? void 0 : g.inputType) !== o.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return null != p && O(t, a.id, g, !0), null;
-                            if (null != p) {
-                                if (T.EditorUtils.isEditorEmpty(t) || null == g) return O(t, a.id, g, !1), null;
-                                let e = "".concat(_.COMMAND_SENTINEL).concat(p.displayName);
-                                if (null == h || !h.startsWith(e) || 0 === E.getOptionNames(t).length && (h.length < e.length + 1 || " " !== h[e.length])) return O(t, a.id, g, !0), null
+                            } = R(t), E = n.activeCommand;
+                            if (!r || u && (null == E ? void 0 : E.inputType) !== o.ApplicationCommandInputType.BUILT_IN_TEXT && (null == E ? void 0 : E.inputType) !== o.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return null != m && O(t, a.id, E, !0), null;
+                            if (null != m) {
+                                if (S.EditorUtils.isEditorEmpty(t) || null == E) return O(t, a.id, E, !1), null;
+                                let e = "".concat(T.COMMAND_SENTINEL).concat(m.displayName);
+                                if (null == h || !h.startsWith(e) || 0 === x.getOptionNames(t).length && (h.length < e.length + 1 || " " !== h[e.length])) return O(t, a.id, E, !0), null
                             } else {
-                                if (null != g && d) {
+                                if (null != E && d) {
                                     let e = function(e, t, n) {
-                                            var l, i, a, s, r;
+                                            var i, l, a, s, r;
                                             let o;
                                             let {
                                                 initialValues: u,
                                                 activeCommand: d
                                             } = n;
                                             if (null == d) return null;
-                                            let c = (null !== (a = null === (l = d.options) || void 0 === l ? void 0 : l.length) && void 0 !== a ? a : 0) > 0 ? E.findTextOptions(e, d) : null,
-                                                m = (0, S.toTextValue)(T.EditorUtils.richValue(e), {
+                                            let c = (null !== (a = null === (i = d.options) || void 0 === i ? void 0 : i.length) && void 0 !== a ? a : 0) > 0 ? x.findTextOptions(e, d) : null,
+                                                p = (0, y.toTextValue)(S.EditorUtils.richValue(e), {
                                                     mode: "raw",
                                                     range: {
-                                                        anchor: T.EditorUtils.start(e, []),
-                                                        focus: null !== (s = null == c ? void 0 : null === (i = c[0]) || void 0 === i ? void 0 : i.keyRange.anchor) && void 0 !== s ? s : T.EditorUtils.end(e, [])
+                                                        anchor: S.EditorUtils.start(e, []),
+                                                        focus: null !== (s = null == c ? void 0 : null === (l = c[0]) || void 0 === l ? void 0 : l.keyRange.anchor) && void 0 !== s ? s : S.EditorUtils.end(e, [])
                                                     }
                                                 }),
-                                                p = "",
-                                                h = m.toLocaleLowerCase(),
-                                                g = f.PREFIX_COMMAND_REGEX.exec(h);
-                                            null != g && (h = _.COMMAND_SENTINEL + h.substring(g.length));
-                                            let I = "".concat(_.COMMAND_SENTINEL).concat(d.displayName).toLocaleLowerCase(),
-                                                N = "".concat(_.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
-                                            h.startsWith(I) && h.length > I.length ? p = m.substring(I.length).trim() : h.startsWith(N) && h.length > N.length && (p = m.substring(N.length).trim());
-                                            let x = [],
-                                                y = null,
+                                                m = "",
+                                                h = p.toLocaleLowerCase(),
+                                                E = f.PREFIX_COMMAND_REGEX.exec(h);
+                                            null != E && (h = T.COMMAND_SENTINEL + h.substring(E.length));
+                                            let I = "".concat(T.COMMAND_SENTINEL).concat(d.displayName).toLocaleLowerCase(),
+                                                _ = "".concat(T.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
+                                            h.startsWith(I) && h.length > I.length ? m = p.substring(I.length).trim() : h.startsWith(_) && h.length > _.length && (m = p.substring(_.length).trim());
+                                            let N = [],
+                                                A = null,
                                                 O = null;
                                             if (null != d.options) {
                                                 let e = new Set;
                                                 if (null != c)
-                                                    for (let l of c) {
-                                                        e.add(l.name);
-                                                        let i = null !== (r = b(n, t, l.name)) && void 0 !== r ? r : l.text,
+                                                    for (let i of c) {
+                                                        e.add(i.name);
+                                                        let l = null !== (r = b(n, t, i.name)) && void 0 !== r ? r : i.text,
                                                             a = {
                                                                 type: "applicationCommandOption",
-                                                                optionName: l.name,
-                                                                optionDisplayName: l.displayName,
-                                                                optionType: l.type,
+                                                                optionName: i.name,
+                                                                optionDisplayName: i.displayName,
+                                                                optionType: i.type,
                                                                 children: [{
-                                                                    text: i
+                                                                    text: l
                                                                 }]
                                                             };
-                                                        x.push(a), 0 === l.text.length && null == y && (y = a)
+                                                        N.push(a), 0 === i.text.length && null == A && (A = a)
                                                     }
-                                                for (let l of d.options)
-                                                    if (!e.has(l.name) && (l.required || null != u[l.name])) {
-                                                        let e, i;
-                                                        p.length > 0 && !A.has(l.type) ? (e = p, p = "") : e = null != (i = b(n, t, l.name)) ? i : "";
+                                                for (let i of d.options)
+                                                    if (!e.has(i.name) && (i.required || null != u[i.name])) {
+                                                        let e, l;
+                                                        m.length > 0 && !v.has(i.type) ? (e = m, m = "") : e = null != (l = b(n, t, i.name)) ? l : "";
                                                         let a = {
                                                             type: "applicationCommandOption",
-                                                            optionName: l.name,
-                                                            optionDisplayName: l.displayName,
-                                                            optionType: l.type,
+                                                            optionName: i.name,
+                                                            optionDisplayName: i.displayName,
+                                                            optionType: i.type,
                                                             children: [{
                                                                 text: e
                                                             }]
                                                         };
-                                                        x.push(a), 0 === e.length && null == y && (y = a), null == i && (O = a)
+                                                        N.push(a), 0 === e.length && null == A && (A = a), null == l && (O = a)
                                                     }
                                             }
-                                            o = p.length > 0 ? "".concat(_.COMMAND_SENTINEL).concat(d.displayName, " ").concat(p.replace(/\r|\n/g, " ")) : 0 === x.length ? "".concat(_.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(_.COMMAND_SENTINEL).concat(d.displayName), x.unshift({
+                                            o = m.length > 0 ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(T.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
                                                 text: o
                                             });
                                             let M = {
                                                 type: "applicationCommand",
-                                                children: x,
+                                                children: N,
                                                 command: {
                                                     id: d.id,
                                                     name: d.name,
                                                     displayName: d.displayName
                                                 }
                                             };
-                                            T.EditorUtils.withoutNormalizing(e, () => {
-                                                for (let [, t] of(C.SlateTransforms.insertNodes(e, [M], {
-                                                        at: v.FIRST_BLOCK_PATH
-                                                    }), T.EditorUtils.blocks(e).reverse())) T.PathUtils.isAfter(t, v.FIRST_BLOCK_PATH) && C.SlateTransforms.removeNodes(e, {
+                                            S.EditorUtils.withoutNormalizing(e, () => {
+                                                for (let [, t] of(g.SlateTransforms.insertNodes(e, [M], {
+                                                        at: C.FIRST_BLOCK_PATH
+                                                    }), S.EditorUtils.blocks(e).reverse())) S.PathUtils.isAfter(t, C.FIRST_BLOCK_PATH) && g.SlateTransforms.removeNodes(e, {
                                                     at: t,
                                                     voids: !0
                                                 })
                                             });
-                                            let L = null;
-                                            return null != y ? (C.SlateTransforms.selectCommandOption(e, y.optionName), L = y.optionName) : null != O ? (C.SlateTransforms.selectCommandOption(e, O.optionName, !1), L = O.optionName) : C.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), L
+                                            let R = null;
+                                            return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), R = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), R = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && k(e, d), R
                                         }(t, a, n),
-                                        l = E.getOptionValues(t, g);
+                                        i = x.getOptionValues(t, E);
                                     return M({
                                         guildId: a.guild_id,
                                         channelId: a.id,
-                                        command: g,
+                                        command: E,
                                         activeOption: e,
-                                        currentOptionValues: l,
+                                        currentOptionValues: i,
                                         previousOptionValues: null,
                                         validateAll: !0,
                                         allowEmpty: !0
                                     }), {
-                                        commandId: g.id,
-                                        optionValues: l
+                                        commandId: E.id,
+                                        optionValues: i
                                     }
                                 }
-                                if (null != g && !d) return i.setActiveCommand({
+                                if (null != E && !d) return l.setActiveCommand({
                                     channelId: a.id,
                                     command: null,
                                     section: null
                                 }), null;
-                                let e = T.EditorUtils.richValue(t),
+                                let e = S.EditorUtils.richValue(t),
                                     r = e[0],
                                     u = r.children[0];
-                                if (x.has(r.type) && T.TextUtils.isText(u)) {
+                                if (N.has(r.type) && S.TextUtils.isText(u)) {
                                     let e = function(e, t) {
                                         if (!e.startsWith("/")) return null;
                                         let n = (0, c.getCommandQuery)(t, e.substring(1));
                                         if (!n.hasSpaceTerminator) return null;
                                         let {
-                                            commands: i,
+                                            commands: l,
                                             sections: a
-                                        } = s.getCachedResults(t, l.ApplicationCommandType.CHAT, n.text);
-                                        if (0 === i.length) return null;
+                                        } = s.getCachedResults(t, i.ApplicationCommandType.CHAT, n.text);
+                                        if (0 === l.length) return null;
                                         let r = n.text.trim(),
                                             u = r + " ",
-                                            d = i.filter(e => e.inputType !== o.ApplicationCommandInputType.PLACEHOLDER && (e.displayName === r || e.displayName.startsWith(u)));
+                                            d = l.filter(e => e.inputType !== o.ApplicationCommandInputType.PLACEHOLDER && (e.displayName === r || e.displayName.startsWith(u)));
                                         if (1 === d.length && d[0].displayName === r) {
                                             let e = d[0],
                                                 t = a.find(t => {
@@ -246,66 +246,66 @@ function(e, t, n) {
                                         }
                                         return null
                                     }(u.text, a);
-                                    if (null != e) return i.setActiveCommand({
+                                    if (null != e) return l.setActiveCommand({
                                         channelId: a.id,
                                         command: e.command,
                                         section: e.section
                                     }), null
                                 }
                             }
-                            if (null != g && null != p) {
+                            if (null != E && null != m) {
                                 var I;
                                 ! function(e, t) {
                                     if (null == t.options || 0 === t.options.length) return !1;
-                                    let n = E.findTextOptions(e, t);
-                                    return 0 !== n.length && (T.EditorUtils.withoutNormalizing(e, () => {
+                                    let n = x.findTextOptions(e, t);
+                                    return 0 !== n.length && (S.EditorUtils.withoutNormalizing(e, () => {
                                         for (let t = n.length - 1; t >= 0; t--) {
-                                            let l = n[t];
-                                            C.SlateTransforms.textToInline(e, {
+                                            let i = n[t];
+                                            g.SlateTransforms.textToInline(e, {
                                                 type: "applicationCommandOption",
-                                                optionName: l.name,
-                                                optionDisplayName: l.displayName,
-                                                optionType: l.type,
+                                                optionName: i.name,
+                                                optionDisplayName: i.displayName,
+                                                optionType: i.type,
                                                 children: [{
-                                                    text: l.text
+                                                    text: i.text
                                                 }]
                                             }, {
-                                                anchor: l.keyRange.anchor,
-                                                focus: l.valueRange.focus
+                                                anchor: i.keyRange.anchor,
+                                                focus: i.valueRange.focus
                                             })
                                         }
-                                        let t = T.EditorUtils.getFirstText(e);
+                                        let t = S.EditorUtils.getFirstText(e);
                                         if (null == t) return !1;
-                                        let l = t.text.trim();
-                                        t.text !== l && C.SlateTransforms.textToText(e, l, {
+                                        let i = t.text.trim();
+                                        t.text !== i && g.SlateTransforms.textToText(e, i, {
                                             anchor: {
-                                                path: v.FIRST_TEXT_PATH,
+                                                path: C.FIRST_TEXT_PATH,
                                                 offset: 0
                                             },
                                             focus: {
-                                                path: v.FIRST_TEXT_PATH,
+                                                path: C.FIRST_TEXT_PATH,
                                                 offset: t.text.length
                                             }
                                         })
                                     }), !0)
-                                }(t, g) && R(t, g);
-                                let e = E.getOptionValues(t, g),
-                                    n = T.EditorUtils.above(t, {
-                                        match: e => T.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
+                                }(t, E) && k(t, E);
+                                let e = x.getOptionValues(t, E),
+                                    n = S.EditorUtils.above(t, {
+                                        match: e => S.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                                         mode: "lowest"
                                     }),
-                                    l = null !== (I = null == n ? void 0 : n[0].optionName) && void 0 !== I ? I : null;
+                                    i = null !== (I = null == n ? void 0 : n[0].optionName) && void 0 !== I ? I : null;
                                 return M({
                                     guildId: a.guild_id,
                                     channelId: a.id,
-                                    command: g,
-                                    activeOption: l,
+                                    command: E,
+                                    activeOption: i,
                                     currentOptionValues: e,
-                                    previousOptionValues: m,
+                                    previousOptionValues: p,
                                     validateAll: !1,
                                     allowEmpty: !1
                                 }), {
-                                    commandId: p.id,
+                                    commandId: m.id,
                                     optionValues: e
                                 }
                             }
@@ -321,18 +321,18 @@ function(e, t, n) {
                         })
                     });
                     if (null != a) {
-                        let t = g.HistoryUtils.currentEntry(e);
+                        let t = E.HistoryUtils.currentEntry(e);
                         null != t && (t.commandId = a.commandId), F = a.optionValues
                     } else F = null;
-                    D = T.EditorUtils.richValue(e), k = e.selection, w = u.activeCommand, G = h
+                    U = S.EditorUtils.richValue(e), D = e.selection, w = u.activeCommand, B = h
                 }
             }
             I()
         }, e
     }
 
-    function O(e, t, n, l) {
-        let [a] = T.EditorUtils.blocks(e)[0], s = l ? (0, S.serializeDescendant)(a, {
+    function O(e, t, n, i) {
+        let [a] = S.EditorUtils.blocks(e)[0], s = i ? (0, y.serializeDescendant)(a, {
             mode: "plain"
         }).trimEnd() : "", r = s.split("\n").map(e => ({
             type: "line",
@@ -340,41 +340,41 @@ function(e, t, n) {
                 text: e
             }]
         })), o = [r.length - 1];
-        for (let [, t] of(C.SlateTransforms.insertNodes(e, r, {
-                at: v.FIRST_BLOCK_PATH
-            }), T.EditorUtils.blocks(e).reverse())) T.PathUtils.isAfter(t, o) && C.SlateTransforms.removeNodes(e, {
+        for (let [, t] of(g.SlateTransforms.insertNodes(e, r, {
+                at: C.FIRST_BLOCK_PATH
+            }), S.EditorUtils.blocks(e).reverse())) S.PathUtils.isAfter(t, o) && g.SlateTransforms.removeNodes(e, {
             at: t,
             voids: !0
         });
-        null != n && i.setActiveCommand({
+        null != n && l.setActiveCommand({
             channelId: t,
             command: null,
             section: null
         })
     }
 
-    function R(e, t) {
-        if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || A.has(t.options[0].type) || E.getOptionNames(e).length > 0) return !1;
-        let n = E.getCommandBlock(e);
+    function k(e, t) {
+        if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || v.has(t.options[0].type) || x.getOptionNames(e).length > 0) return !1;
+        let n = x.getCommandBlock(e);
         if (null == n) return !1;
-        let l = T.EditorUtils.getFirstText(e);
-        if (null == l) return !1;
-        let i = t.options[0],
+        let i = S.EditorUtils.getFirstText(e);
+        if (null == i) return !1;
+        let l = t.options[0],
             a = {
-                path: v.FIRST_TEXT_PATH,
+                path: C.FIRST_TEXT_PATH,
                 offset: t.displayName.length + 2
             },
             s = {
-                path: v.FIRST_TEXT_PATH,
-                offset: l.text.length
+                path: C.FIRST_TEXT_PATH,
+                offset: i.text.length
             };
-        return !(!l.text.startsWith("".concat(_.COMMAND_SENTINEL).concat(t.displayName, " ").toLocaleLowerCase()) || T.PointUtils.equals(a, s)) && (C.SlateTransforms.textToInline(e, {
+        return !(!i.text.startsWith("".concat(T.COMMAND_SENTINEL).concat(t.displayName, " ").toLocaleLowerCase()) || S.PointUtils.equals(a, s)) && (g.SlateTransforms.textToInline(e, {
             type: "applicationCommandOption",
-            optionName: i.name,
-            optionDisplayName: i.displayName,
-            optionType: i.type,
+            optionName: l.name,
+            optionDisplayName: l.displayName,
+            optionType: l.type,
             children: [{
-                text: l.text.substring(t.displayName.length + 2)
+                text: i.text.substring(t.displayName.length + 2)
             }]
         }, {
             anchor: a,
@@ -386,76 +386,76 @@ function(e, t, n) {
         let {
             guildId: t,
             channelId: n,
-            command: l,
+            command: i,
             activeOption: a,
             currentOptionValues: s,
             previousOptionValues: o,
             validateAll: u,
             allowEmpty: c
         } = e;
-        if (null == l.options) return !1;
+        if (null == i.options) return !1;
         let f = u ? null : r.default.getActiveOptionName(n),
-            m = {},
-            p = r.default.getOptionStates(n),
+            p = {},
+            m = r.default.getOptionStates(n),
             h = !1;
-        for (let e of l.options) {
-            var E, g, S;
-            let l = p[e.name],
-                i = u || e.name === f && f !== a || (null == l ? void 0 : null === (E = l.lastValidationResult) || void 0 === E ? void 0 : E.success) === !1 && (null == s ? void 0 : s[e.name]) !== (null == o ? void 0 : o[e.name]),
+        for (let e of i.options) {
+            var x, E, y;
+            let i = m[e.name],
+                l = u || e.name === f && f !== a || (null == i ? void 0 : null === (x = i.lastValidationResult) || void 0 === x ? void 0 : x.success) === !1 && (null == s ? void 0 : s[e.name]) !== (null == o ? void 0 : o[e.name]),
                 r = {
                     hasValue: null != s && e.name in s,
                     isActive: e.name === a,
-                    lastValidationResult: i ? (0, d.validateOptionContent)({
+                    lastValidationResult: l ? (0, d.validateOptionContent)({
                         option: e,
-                        content: null !== (S = null == s ? void 0 : s[e.name]) && void 0 !== S ? S : null,
+                        content: null !== (y = null == s ? void 0 : s[e.name]) && void 0 !== y ? y : null,
                         guildId: t,
                         channelId: n,
                         allowEmptyValues: c
-                    }) : null == l ? void 0 : l.lastValidationResult
+                    }) : null == i ? void 0 : i.lastValidationResult
                 };
-            (null == l || l.hasValue !== r.hasValue || l.isActive !== r.isActive || i && (null === (g = l.lastValidationResult) || void 0 === g ? void 0 : g.success) === !1) && (m[e.name] = r, h = !0)
+            (null == i || i.hasValue !== r.hasValue || i.isActive !== r.isActive || l && (null === (E = i.lastValidationResult) || void 0 === E ? void 0 : E.success) === !1) && (p[e.name] = r, h = !0)
         }
-        h && i.updateOptionStates(n, m)
+        h && l.updateOptionStates(n, p)
     }
 
-    function L(e) {
-        let t = E.getCommandBlock(e);
+    function R(e) {
+        let t = x.getCommandBlock(e);
         if (null == t) return {
             command: null,
             commandText: null
         };
-        let [n] = t, l = n.children[0];
-        return T.TextUtils.isText(l) ? {
+        let [n] = t, i = n.children[0];
+        return S.TextUtils.isText(i) ? {
             command: n.command,
-            commandText: l.text
+            commandText: i.text
         } : {
             command: n.command,
             commandText: null
         }
     }
 
-    function P(e, t) {
-        let n = E.getOptionNames(e)[0];
+    function L(e, t) {
+        let n = x.getOptionNames(e)[0];
         t();
-        let l = T.RangeUtils.toPoint(e.selection);
-        if (null == l || n === E.getOptionNames(e)[0]) return;
+        let i = S.RangeUtils.toPoint(e.selection);
+        if (null == i || n === x.getOptionNames(e)[0]) return;
         let {
-            command: i,
+            command: l,
             commandText: a
-        } = L(e);
-        !(null == i || null == a || a.endsWith(" ")) && T.PointUtils.equals(l, {
-            path: v.FIRST_TEXT_PATH,
-            offset: i.displayName.length + 1
-        }) && C.SlateTransforms.insertText(e, " ")
+        } = R(e);
+        !(null == l || null == a || a.endsWith(" ")) && S.PointUtils.equals(i, {
+            path: C.FIRST_TEXT_PATH,
+            offset: l.displayName.length + 1
+        }) && g.SlateTransforms.insertText(e, " ")
     }
 
     function b(e, t, n) {
-        var i, a, s, r, o;
-        let u = null === (a = e.activeCommand) || void 0 === a ? void 0 : null === (i = a.options) || void 0 === i ? void 0 : i.find(e => e.name === n),
+        var l, a, s, r, o;
+        let u = null === (a = e.activeCommand) || void 0 === a ? void 0 : null === (l = a.options) || void 0 === l ? void 0 : l.find(e => e.name === n),
             d = e.initialValues[n];
         if (null == u || null == d) return null;
         if (null != u.choices) return null === (o = u.choices.find(e => e.value === d.value)) || void 0 === o ? void 0 : o.displayName;
         let c = null === (s = d.value) || void 0 === s ? void 0 : s.toString();
-        return u.type === l.ApplicationCommandOptionType.CHANNEL || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != m.default.getChannel(c) ? "<#".concat(c, ">	") : u.type === l.ApplicationCommandOptionType.USER || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != h.default.getUser(c) ? "<@".concat(c, ">") : u.type === l.ApplicationCommandOptionType.ROLE || u.type === l.ApplicationCommandOptionType.MENTIONABLE && (null === (r = p.default.getGuild(t.guild_id)) || void 0 === r ? void 0 : r.getRole(null != c ? c : I.EMPTY_STRING_SNOWFLAKE_ID)) != null ? "<@&".concat(c, ">") : c
+        return u.type === i.ApplicationCommandOptionType.CHANNEL || u.type === i.ApplicationCommandOptionType.MENTIONABLE && null != p.default.getChannel(c) ? "<#".concat(c, ">	") : u.type === i.ApplicationCommandOptionType.USER || u.type === i.ApplicationCommandOptionType.MENTIONABLE && null != h.default.getUser(c) ? "<@".concat(c, ">") : u.type === i.ApplicationCommandOptionType.ROLE || u.type === i.ApplicationCommandOptionType.MENTIONABLE && (null === (r = m.default.getGuild(t.guild_id)) || void 0 === r ? void 0 : r.getRole(null != c ? c : I.EMPTY_STRING_SNOWFLAKE_ID)) != null ? "<@&".concat(c, ">") : c
     }
 }

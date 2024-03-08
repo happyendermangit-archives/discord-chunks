@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return i
         }
     });
-    var l, i = n("666038"),
+    var i, l = n("666038"),
         a = n("560350"),
         s = n("766274");
-    l = class e extends i.default {
+    i = class e extends l.default {
         static createFromServer(t) {
             let n = t.staff_notes;
             return new e({

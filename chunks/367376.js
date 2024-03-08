@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return N
+            return _
         }
     }), n("222007");
-    var l = n("917351"),
-        i = n.n(l),
+    var i = n("917351"),
+        l = n.n(i),
         a = n("933805"),
         s = n("52140"),
         r = n("888198"),
@@ -27,8 +27,8 @@ function(e, t, n) {
         f = d(r.default.RULES, [(0, s.default)({
             enableBuildOverrides: !0
         })]),
-        m = i.omit(d(r.default.RULES, [(0, s.default)(c)]), "paragraph", "newline"),
-        p = d(r.default.CHANNEL_TOPIC_RULES, [(0, s.default)({
+        p = l.omit(d(r.default.RULES, [(0, s.default)(c)]), "paragraph", "newline"),
+        m = d(r.default.CHANNEL_TOPIC_RULES, [(0, s.default)({
             ...c,
             emojiTooltipPosition: "bottom"
         }), {
@@ -40,11 +40,11 @@ function(e, t, n) {
             ...c,
             enableEmojiClick: !1
         })]),
-        E = d(r.default.EMBED_TITLE_RULES, [(0, s.default)(c)]),
-        g = d(r.default.INLINE_REPLY_RULES, [(0, s.default)(c)]),
-        S = d(r.default.GUILD_VERIFICATION_FORM_RULES, [(0, s.default)(c)]),
-        C = d(r.default.GUILD_EVENT_RULES, [(0, s.default)(c)]),
-        T = d(r.default.INLINE_REPLY_RULES, [(0, s.default)({
+        x = d(r.default.EMBED_TITLE_RULES, [(0, s.default)(c)]),
+        E = d(r.default.INLINE_REPLY_RULES, [(0, s.default)(c)]),
+        y = d(r.default.GUILD_VERIFICATION_FORM_RULES, [(0, s.default)(c)]),
+        g = d(r.default.GUILD_EVENT_RULES, [(0, s.default)(c)]),
+        S = d(r.default.INLINE_REPLY_RULES, [(0, s.default)({
             ...c,
             emoji: {
                 height: 14,
@@ -52,42 +52,42 @@ function(e, t, n) {
                 lineHeight: 18
             }
         })]),
-        v = d(r.default.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.default)(c)]),
-        I = i.omit(d(r.default.RULES, [(0, s.default)({
+        C = d(r.default.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.default)(c)]),
+        I = l.omit(d(r.default.RULES, [(0, s.default)({
             ...c,
             emoji: {
                 height: 14,
                 width: 14
             }
         })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading"),
-        _ = {
+        T = {
             text: r.default.RULES.text
         };
-    var N = {
+    var _ = {
         combineAndInjectMentionRule: d,
         createReactRules: s.default,
         defaultReactRuleOptions: c,
         defaultRules: f,
-        guildEventRules: C,
+        guildEventRules: g,
         notifCenterV2MessagePreviewRules: I,
-        lockscreenWidgetMessageRules: _,
+        lockscreenWidgetMessageRules: T,
         astParserFor: a.astParserFor,
         reactParserFor: a.reactParserFor,
         parse: a.reactParserFor(f),
-        parseTopic: a.reactParserFor(p),
+        parseTopic: a.reactParserFor(m),
         parseVoiceChannelStatus: a.reactParserFor(h),
-        parseEmbedTitle: a.reactParserFor(E),
-        parseInlineReply: a.reactParserFor(g),
-        parseGuildVerificationFormRule: a.reactParserFor(S),
-        parseGuildEventDescription: a.reactParserFor(C),
-        parseAutoModerationSystemMessage: a.reactParserFor(v),
-        parseForumPostGuidelines: a.reactParserFor(m),
-        parseForumPostMostRecentMessage: a.reactParserFor(T),
+        parseEmbedTitle: a.reactParserFor(x),
+        parseInlineReply: a.reactParserFor(E),
+        parseGuildVerificationFormRule: a.reactParserFor(y),
+        parseGuildEventDescription: a.reactParserFor(g),
+        parseAutoModerationSystemMessage: a.reactParserFor(C),
+        parseForumPostGuidelines: a.reactParserFor(p),
+        parseForumPostMostRecentMessage: a.reactParserFor(S),
         parseNotifCenterMessagePreview: a.reactParserFor(I),
         parseToAST: a.astParserFor(f),
-        parseTopicToAST: a.astParserFor(p),
-        parseEmbedTitleToAST: a.astParserFor(E),
-        parseInlineReplyToAST: a.astParserFor(g),
-        parseAutoModerationSystemMessageToAST: a.astParserFor(v)
+        parseTopicToAST: a.astParserFor(m),
+        parseEmbedTitleToAST: a.astParserFor(x),
+        parseInlineReplyToAST: a.astParserFor(E),
+        parseAutoModerationSystemMessageToAST: a.astParserFor(C)
     }
 }

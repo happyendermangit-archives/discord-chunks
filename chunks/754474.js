@@ -1,54 +1,54 @@
-function(i, x, t) {
+function(e, t, n) {
     "use strict";
-    t.r(x), t.d(x, {
+    n.r(t), n.d(t, {
         BotTypes: function() {
-            return k.BotTagTypes
+            return a.BotTagTypes
         },
         default: function() {
-            return p
+            return u
         }
     });
-    var s = t("37983");
-    t("884691");
-    var a = t("414456"),
-        o = t.n(a),
-        y = t("79798"),
-        k = t("988268"),
-        d = t("293005"),
-        p = i => {
+    var i = n("37983");
+    n("884691");
+    var s = n("414456"),
+        r = n.n(s),
+        l = n("79798"),
+        a = n("988268"),
+        o = n("293005"),
+        u = e => {
             let {
-                name: x,
-                discriminator: t,
-                invertBotTagColor: a,
-                nameColor: k,
-                className: p,
-                botType: r,
-                usernameClass: e,
-                discriminatorClass: m,
-                botClass: n,
-                botVerified: c = !1,
-                style: l,
-                useRemSizes: f = !1,
-                usernameIcon: h
-            } = i;
-            return (0, s.jsxs)("div", {
-                className: o(p, d.nameTag),
-                style: l,
-                children: [(0, s.jsxs)("span", {
-                    className: o(d.username, e),
-                    style: null != k ? {
-                        color: k
+                name: t,
+                discriminator: n,
+                invertBotTagColor: s,
+                nameColor: a,
+                className: u,
+                botType: c,
+                usernameClass: d,
+                discriminatorClass: f,
+                botClass: h,
+                botVerified: v = !1,
+                style: E,
+                useRemSizes: C = !1,
+                usernameIcon: p
+            } = e;
+            return (0, i.jsxs)("div", {
+                className: r(u, o.nameTag),
+                style: E,
+                children: [(0, i.jsxs)("span", {
+                    className: r(o.username, d),
+                    style: null != a ? {
+                        color: a
                     } : void 0,
-                    children: [h, x]
-                }), null != t ? (0, s.jsxs)("span", {
-                    className: null != m ? m : void 0,
-                    children: ["#", t]
-                }) : null, null != r ? (0, s.jsx)(y.default, {
-                    type: r,
-                    invertColor: a,
-                    className: o(n, d.bot),
-                    verified: c,
-                    useRemSizes: f
+                    children: [p, t]
+                }), null != n ? (0, i.jsxs)("span", {
+                    className: null != f ? f : void 0,
+                    children: ["#", n]
+                }) : null, null != c ? (0, i.jsx)(l.default, {
+                    type: c,
+                    invertColor: s,
+                    className: r(h, o.bot),
+                    verified: v,
+                    useRemSizes: C
                 }) : null]
             })
         }

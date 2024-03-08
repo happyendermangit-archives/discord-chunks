@@ -5,9 +5,9 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("75196");
+    var l = n("75196");
 
     function a(e) {
         let {
@@ -16,12 +16,12 @@ function(e, t, n) {
             color: a = "currentColor",
             ...s
         } = e;
-        return (0, l.jsx)("svg", {
-            ...(0, i.default)(s),
+        return (0, i.jsx)("svg", {
+            ...(0, l.default)(s),
             width: t,
             height: n,
             viewBox: "0 0 4 4",
-            children: (0, l.jsx)("circle", {
+            children: (0, i.jsx)("circle", {
                 cx: "2",
                 cy: "2",
                 r: "2",

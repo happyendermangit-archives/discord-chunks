@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("446674"),
         s = n("77078"),
         r = n("328511"),
@@ -15,41 +15,41 @@ function(e, t, n) {
         d = n("381546"),
         c = n("898260"),
         f = n("782340"),
-        m = n("308747"),
-        p = i.memo(function(e) {
+        p = n("308747"),
+        m = l.memo(function(e) {
             var t;
             let {
                 channelId: n,
-                chatInputType: p
-            } = e, [h, E] = i.useState(null), g = (0, a.useStateFromStores)([r.default], () => r.default.getStickerPreview(n, p.drafts.type));
-            return (null === (t = p.stickers) || void 0 === t ? void 0 : t.allowSending) && null != g && 0 !== g.length ? (0, l.jsxs)(l.Fragment, {
-                children: [(0, l.jsx)("div", {
-                    className: m.stickerPreviews,
-                    children: g.map(e => (0, l.jsxs)("div", {
-                        className: m.stickerPreviewContainer,
-                        children: [(0, l.jsx)(s.Clickable, {
-                            onFocus: () => E(e.id),
-                            onBlur: () => E(null),
-                            className: m.closeButton,
+                chatInputType: m
+            } = e, [h, x] = l.useState(null), E = (0, a.useStateFromStores)([r.default], () => r.default.getStickerPreview(n, m.drafts.type));
+            return (null === (t = m.stickers) || void 0 === t ? void 0 : t.allowSending) && null != E && 0 !== E.length ? (0, i.jsxs)(i.Fragment, {
+                children: [(0, i.jsx)("div", {
+                    className: p.stickerPreviews,
+                    children: E.map(e => (0, i.jsxs)("div", {
+                        className: p.stickerPreviewContainer,
+                        children: [(0, i.jsx)(s.Clickable, {
+                            onFocus: () => x(e.id),
+                            onBlur: () => x(null),
+                            className: p.closeButton,
                             "aria-label": f.default.Messages.GUILD_STICKER_A11Y_REMOVE_STICKER.format({
                                 name: e.name
                             }),
-                            onClick: () => (0, o.clearStickerPreview)(n, p.drafts.type),
-                            children: (0, l.jsx)("div", {
-                                className: m.closeIconContainer,
-                                children: (0, l.jsx)(d.default, {
-                                    className: m.closeIcon
+                            onClick: () => (0, o.clearStickerPreview)(n, m.drafts.type),
+                            children: (0, i.jsx)("div", {
+                                className: p.closeIconContainer,
+                                children: (0, i.jsx)(d.default, {
+                                    className: p.closeIcon
                                 })
                             })
-                        }), (0, l.jsx)(u.default, {
+                        }), (0, i.jsx)(u.default, {
                             isInteracting: h === e.id,
-                            className: m.stickerPreview,
+                            className: p.stickerPreview,
                             size: 48,
                             sticker: e
                         })]
                     }, e.id))
-                }), (0, l.jsx)(c.default, {
-                    className: m.stickerPreviewDivider
+                }), (0, i.jsx)(c.default, {
+                    className: p.stickerPreviewDivider
                 })]
             }) : null
         })

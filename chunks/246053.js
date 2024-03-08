@@ -5,19 +5,19 @@ function(e, t, n) {
             return c
         }
     }), n("70102");
-    var l, i, a = n("37983");
+    var i, l, a = n("37983");
     n("884691");
     var s = n("414456"),
         r = n.n(s),
         o = n("75196"),
         u = n("774889");
-    (i = l || (l = {})).LEFT = "LEFT", i.RIGHT = "RIGHT", i.UP = "UP", i.DOWN = "DOWN", i.UP_LEFT = "UP_LEFT", i.DOWN_RIGHT = "DOWN_RIGHT";
+    (l = i || (i = {})).LEFT = "LEFT", l.RIGHT = "RIGHT", l.UP = "UP", l.DOWN = "DOWN", l.UP_LEFT = "UP_LEFT", l.DOWN_RIGHT = "DOWN_RIGHT";
     let d = e => {
         let {
             width: t = 24,
             height: n = 24,
-            color: l = "currentColor",
-            direction: i,
+            color: i = "currentColor",
+            direction: l,
             foreground: s,
             className: d,
             title: c,
@@ -44,18 +44,18 @@ function(e, t, n) {
                     default:
                         throw Error("Invalid Direction ".concat(e))
                 }
-            }(i)),
+            }(l)),
             viewBox: "0 0 24 24",
             children: [null != c ? (0, a.jsx)("title", {
                 children: c
             }) : null, (0, a.jsx)("polygon", {
                 className: s,
-                fill: l,
+                fill: i,
                 fillRule: "nonzero",
                 points: "13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"
             })]
         })
     };
-    d.Directions = l;
+    d.Directions = i;
     var c = d
 }

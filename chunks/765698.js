@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         VoiceActivityProfileExperiment: function() {
-            return i
+            return l
         }
     });
-    var l = n("862205");
-    let i = (0, l.createExperiment)({
+    var i = n("862205");
+    let l = (0, i.createExperiment)({
         kind: "user",
         id: "2023-11_voice_activity_in_profile",
         label: "Voice Activity in Profile",

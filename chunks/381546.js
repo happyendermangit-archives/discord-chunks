@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return o
+            return a
         }
     });
     var i = n("37983");
@@ -10,25 +10,25 @@ function(e, t, n) {
     var s = n("469563"),
         r = n("505088"),
         l = n("75196"),
-        o = (0, s.replaceIcon)(function(e) {
+        a = (0, s.replaceIcon)(function(e) {
             let {
                 width: t = 24,
                 height: n = 24,
                 color: s = "currentColor",
                 foreground: r,
-                backgroundColor: o,
-                ...a
+                backgroundColor: a,
+                ...o
             } = e;
             return (0, i.jsxs)("svg", {
-                ...(0, l.default)(a),
+                ...(0, l.default)(o),
                 width: t,
                 height: n,
                 viewBox: "0 0 14 14",
-                children: [null != o ? (0, i.jsx)("circle", {
+                children: [null != a ? (0, i.jsx)("circle", {
                     r: 5,
                     cx: 7,
                     cy: 7,
-                    fill: o
+                    fill: a
                 }) : null, (0, i.jsx)("path", {
                     fill: s,
                     className: r,

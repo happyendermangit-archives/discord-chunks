@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     }), n("424973"), n("222007");
-    var l = n("917351"),
-        i = n.n(l),
+    var i = n("917351"),
+        l = n.n(i),
         a = n("693566"),
         s = n.n(a),
         r = n("446674"),
@@ -15,36 +15,36 @@ function(e, t, n) {
         d = n("374363"),
         c = n("697218"),
         f = n("880342"),
-        m = n("235004"),
-        p = n("389480"),
+        p = n("235004"),
+        m = n("389480"),
         h = n("846325"),
-        E = n("397336");
-    let g = [],
-        S = new s({
+        x = n("397336");
+    let E = [],
+        y = new s({
             max: h.NUM_RECENTLY_HEARD_SOUNDS
         }),
-        C = new u.default({
+        g = new u.default({
             computeBonus: () => 100,
             computeWeight: e => {
                 let t = 0;
                 return e <= 3 ? t = 100 : e <= 15 ? t = 70 : e <= 30 ? t = 50 : e <= 45 ? t = 30 : e <= 80 && (t = 10), t
             },
-            lookupKey: e => m.default.getSoundById(e),
+            lookupKey: e => p.default.getSoundById(e),
             afterCompute: () => {},
             numFrequentlyItems: h.NUM_FREQUENTLY_USED_SOUNDS
         });
 
-    function T() {
+    function S() {
         var e, t;
-        if (!v()) return;
+        if (!C()) return;
         let n = null === (e = d.default.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
-        C.overwriteHistory((t = null != n ? n : {}, i.mapValues(t, e => ({
+        g.overwriteHistory((t = null != n ? n : {}, l.mapValues(t, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
-        }))), g)
+        }))), E)
     }
 
-    function v() {
+    function C() {
         return (0, f.recentlyHeardExperiment)({
             location: "soundboard_event_store",
             autoTrackExposure: !1
@@ -52,48 +52,48 @@ function(e, t, n) {
     }
     class I extends r.default.PersistedStore {
         initialize(e) {
-            this.waitFor(c.default, m.default), (null == e ? void 0 : e.recentlyHeardCache) != null && S.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (g = e.playedEventsPendingFlush), this.syncWith([d.default], T)
+            this.waitFor(c.default, p.default), (null == e ? void 0 : e.recentlyHeardCache) != null && y.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (E = e.playedEventsPendingFlush), this.syncWith([d.default], S)
         }
         getState() {
             return {
-                recentlyHeardCache: S.dump(),
-                playedEventsPendingFlush: g
+                recentlyHeardCache: y.dump(),
+                playedEventsPendingFlush: E
             }
         }
         hasPendingUsage() {
-            return g.length > 0
+            return E.length > 0
         }
         get playedSoundHistory() {
-            return C.usageHistory
+            return g.usageHistory
         }
         get recentlyHeardSoundIds() {
-            return S.values()
+            return y.values()
         }
         get frecentlyPlayedSounds() {
-            return C.frequently
+            return g.frequently
         }
     }
     I.displayName = "SoundboardEventStore", I.persistKey = "SoundboardEventStore";
-    var _ = new I(o.default, {
+    var T = new I(o.default, {
         GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function(e) {
             let {
                 sound: t,
                 trigger: n
             } = e;
-            if (!v()) return;
-            let l = t.soundId.toString();
-            n === p.LocalSoundTrigger.SOUNDBOARD && function(e) {
-                C.track(e), g.push({
+            if (!C()) return;
+            let i = t.soundId.toString();
+            n === m.LocalSoundTrigger.SOUNDBOARD && function(e) {
+                g.track(e), E.push({
                     key: e,
                     timestamp: Date.now()
-                }), C.compute()
-            }(l)
+                }), g.compute()
+            }(i)
         },
         GUILD_SOUNDBOARD_SOUND_PLAY_START: function(e) {
             var t;
             let {
                 soundId: n,
-                userId: l
+                userId: i
             } = e;
             if (! function() {
                     return (0, f.recentlyHeardExperiment)({
@@ -101,18 +101,18 @@ function(e, t, n) {
                         autoTrackExposure: !1
                     }).canSeeRecentlyHeard
                 }()) return;
-            let i = n.toString(),
+            let l = n.toString(),
                 a = null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
-            l !== a && function(e) {
-                let t = m.default.getSounds();
+            i !== a && function(e) {
+                let t = p.default.getSounds();
                 for (let n of t.values()) {
                     let t = n.find(t => t.soundId.toString() === e);
                     if (null != t) return !0
                 }
                 return !1
-            }(i) && function(e) {
-                S.set(e, e)
-            }(i)
+            }(l) && function(e) {
+                y.set(e, e)
+            }(l)
         },
         USER_SETTINGS_PROTO_UPDATE: function(e) {
             let {
@@ -121,7 +121,7 @@ function(e, t, n) {
                 },
                 wasSaved: n
             } = e;
-            v() && t === E.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS && n && (g = [])
+            C() && t === x.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS && n && (E = [])
         }
     })
 }

@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         FetchState: function() {
-            return l
+            return i
         },
         default: function() {
             return c
         }
     }), n("222007");
-    var l, i, a = n("446674"),
+    var i, l, a = n("446674"),
         s = n("913144"),
         r = n("718517");
-    (i = l || (l = {}))[i.NOT_FETCHED = 0] = "NOT_FETCHED", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED", i[i.ERROR = 3] = "ERROR";
+    (l = i || (i = {}))[l.NOT_FETCHED = 0] = "NOT_FETCHED", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED", l[l.ERROR = 3] = "ERROR";
     let o = {
         applicationIdToGuildIds: {},
         lastFetchTimeMs: null,

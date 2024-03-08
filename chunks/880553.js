@@ -5,13 +5,13 @@ function(e, t, n) {
             return s
         }
     });
-    var l = n("271938"),
-        i = n("42203"),
+    var i = n("271938"),
+        l = n("42203"),
         a = n("800762");
 
     function s() {
-        let e = a.default.getVoiceStateForSession(l.default.getId(), l.default.getSessionId()),
+        let e = a.default.getVoiceStateForSession(i.default.getId(), i.default.getSessionId()),
             t = null == e ? void 0 : e.channelId;
-        return i.default.getChannel(t)
+        return l.default.getChannel(t)
     }
 }

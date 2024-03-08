@@ -5,8 +5,8 @@ function(e, t, n) {
             return u
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("77078"),
@@ -18,18 +18,18 @@ function(e, t, n) {
             "aria-label": n,
             className: a,
             position: u
-        } = e, d = i.useRef(null), c = null != n ? n : "string" == typeof t && t;
-        return (0, l.jsx)(r.Tooltip, {
+        } = e, d = l.useRef(null), c = null != n ? n : "string" == typeof t && t;
+        return (0, i.jsx)(r.Tooltip, {
             position: null != u ? u : "top",
             delay: 500,
             text: t,
             "aria-label": c,
             children: n => {
                 let {
-                    onMouseEnter: i,
+                    onMouseEnter: l,
                     onMouseLeave: r
                 } = n;
-                return (0, l.jsx)("div", {
+                return (0, i.jsx)("div", {
                     className: s(a, o.overflow),
                     ref: d,
                     "aria-hidden": e["aria-hidden"],
@@ -37,7 +37,7 @@ function(e, t, n) {
                         let {
                             current: e
                         } = d;
-                        null != e && e.offsetWidth < e.scrollWidth && (null == i || i())
+                        null != e && e.offsetWidth < e.scrollWidth && (null == l || l())
                     },
                     onMouseLeave: r,
                     children: t

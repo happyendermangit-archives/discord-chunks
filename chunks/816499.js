@@ -2,31 +2,31 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         generateRedditMetadataItems: function() {
-            return p
+            return m
         },
         generateTwitterMetadataItems: function() {
             return h
         },
         generateSteamMetadataItems: function() {
-            return E
+            return x
         },
         generatePaypalMetadataItems: function() {
-            return g
+            return E
         },
         generateEbayMetadataItems: function() {
-            return S
+            return y
         },
         generateTikTokMetadataItems: function() {
-            return C
+            return g
         },
         generateRoleConnectionMetadataItems: function() {
-            return T
+            return S
         }
     }), n("424973"), n("222007");
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("917351"),
         r = n.n(s),
         o = n("77078"),
@@ -34,64 +34,64 @@ function(e, t, n) {
         d = n("535013"),
         c = n("214509"),
         f = n("782340"),
-        m = n("483263");
+        p = n("483263");
 
-    function p(e) {
+    function m(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            i = [],
+            l = [],
             a = Number(null !== (t = e[c.MetadataFields.REDDIT_TOTAL_KARMA]) && void 0 !== t ? t : -1),
             s = "1" === e[c.MetadataFields.REDDIT_GOLD],
             r = "1" === e[c.MetadataFields.REDDIT_MOD];
-        return a > -1 && i.push((0, l.jsx)(v, {
+        return a > -1 && l.push((0, i.jsx)(C, {
             className: n,
             count: a,
             label: f.default.Messages.CONNECTIONS_PROFILE_REDDIT_KARMA
-        }, c.MetadataFields.REDDIT_TOTAL_KARMA)), s && i.push((0, l.jsx)(N, {
+        }, c.MetadataFields.REDDIT_TOTAL_KARMA)), s && l.push((0, i.jsx)(_, {
             className: n,
             label: f.default.Messages.CONNECTIONS_REDDIT_GOLD
-        }, c.MetadataFields.REDDIT_GOLD)), r && i.push((0, l.jsx)(N, {
+        }, c.MetadataFields.REDDIT_GOLD)), r && l.push((0, i.jsx)(_, {
             className: n,
             label: f.default.Messages.CONNECTIONS_REDDIT_MOD
-        }, c.MetadataFields.REDDIT_MOD)), i
+        }, c.MetadataFields.REDDIT_MOD)), l
     }
 
     function h(e) {
         var t, n;
-        let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+        let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             a = [],
             s = Number(null !== (t = e[c.MetadataFields.TWITTER_STATUSES_COUNT]) && void 0 !== t ? t : -1),
             r = Number(null !== (n = e[c.MetadataFields.TWITTER_FOLLOWERS_COUNT]) && void 0 !== n ? n : -1);
-        return s > -1 && a.push((0, l.jsx)(v, {
-            className: i,
+        return s > -1 && a.push((0, i.jsx)(C, {
+            className: l,
             count: s,
             label: f.default.Messages.CONNECTIONS_PROFILE_TWITTER_STATUSES
-        }, c.MetadataFields.TWITTER_STATUSES_COUNT)), r > -1 && a.push((0, l.jsx)(v, {
-            className: i,
+        }, c.MetadataFields.TWITTER_STATUSES_COUNT)), r > -1 && a.push((0, i.jsx)(C, {
+            className: l,
             count: r,
             label: f.default.Messages.CONNECTIONS_PROFILE_TWITTER_FOLLOWERS
         }, c.MetadataFields.TWITTER_FOLLOWERS_COUNT)), a
     }
 
-    function E(e) {
-        var t, i, a;
+    function x(e) {
+        var t, l, a;
         let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             r = [],
             o = Number(null !== (t = e[c.MetadataFields.STEAM_GAME_COUNT]) && void 0 !== t ? t : -1),
-            u = Number(null !== (i = e[c.MetadataFields.STEAM_ITEM_COUNT_DOTA2]) && void 0 !== i ? i : -1),
+            u = Number(null !== (l = e[c.MetadataFields.STEAM_ITEM_COUNT_DOTA2]) && void 0 !== l ? l : -1),
             d = Number(null !== (a = e[c.MetadataFields.STEAM_ITEM_COUNT_TF2]) && void 0 !== a ? a : -1);
-        return o > -1 && r.push((0, l.jsx)(v, {
+        return o > -1 && r.push((0, i.jsx)(C, {
             className: s,
             count: o,
             label: f.default.Messages.CONNECTIONS_PROFILE_STEAM_GAMES
-        }, c.MetadataFields.STEAM_GAME_COUNT)), u > -1 && r.push((0, l.jsx)(_, {
+        }, c.MetadataFields.STEAM_GAME_COUNT)), u > -1 && r.push((0, i.jsx)(T, {
             className: s,
             label: f.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: u
             }),
             imageSrc: n("142226"),
             imageAlt: f.default.Messages.CONNECTIONS_STEAM_DOTA2
-        }, c.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && r.push((0, l.jsx)(_, {
+        }, c.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && r.push((0, i.jsx)(T, {
             className: s,
             label: f.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: d
@@ -101,68 +101,68 @@ function(e, t, n) {
         }, c.MetadataFields.STEAM_ITEM_COUNT_TF2)), r
     }
 
-    function g(e) {
+    function E(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             n = [],
-            i = "1" === e[c.MetadataFields.PAYPAL_VERIFIED];
-        return i && n.push((0, l.jsx)(N, {
-            className: a(t, m.paypalVerifiedTag),
+            l = "1" === e[c.MetadataFields.PAYPAL_VERIFIED];
+        return l && n.push((0, i.jsx)(_, {
+            className: a(t, p.paypalVerifiedTag),
             label: f.default.Messages.CONNECTIONS_PAYPAL_VERIFIED
         }, c.MetadataFields.PAYPAL_VERIFIED)), n
     }
 
-    function S(e) {
+    function y(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            i = [],
+            l = [],
             a = Number(null !== (t = e[c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE]) && void 0 !== t ? t : -1),
             s = "1" === e[c.MetadataFields.EBAY_TOP_RATED_SELLER];
-        return a > 0 && i.push((0, l.jsx)(v, {
+        return a > 0 && l.push((0, i.jsx)(C, {
             className: n,
             count: a,
             label: f.default.Messages.CONNECTIONS_PROFILE_EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
             percent: !0
-        }, c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), s && i.push((0, l.jsx)(N, {
+        }, c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), s && l.push((0, i.jsx)(_, {
             className: n,
             label: f.default.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER
-        }, c.MetadataFields.EBAY_TOP_RATED_SELLER)), i
+        }, c.MetadataFields.EBAY_TOP_RATED_SELLER)), l
     }
 
-    function C(e) {
-        var t, n, i;
+    function g(e) {
+        var t, n, l;
         let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             s = [],
             r = "1" === e[c.MetadataFields.TIKTOK_VERIFIED],
             o = Number(null !== (t = e[c.MetadataFields.TIKTOK_FOLLOWER_COUNT]) && void 0 !== t ? t : -1),
             u = Number(null !== (n = e[c.MetadataFields.TIKTOK_FOLLOWING_COUNT]) && void 0 !== n ? n : -1),
-            d = Number(null !== (i = e[c.MetadataFields.TIKTOK_LIKES_COUNT]) && void 0 !== i ? i : -1);
-        return o > -1 && s.push((0, l.jsx)(v, {
+            d = Number(null !== (l = e[c.MetadataFields.TIKTOK_LIKES_COUNT]) && void 0 !== l ? l : -1);
+        return o > -1 && s.push((0, i.jsx)(C, {
             className: a,
             count: o,
             label: f.default.Messages.CONNECTIONS_PROFILE_TIKTOK_FOLLOWERS
-        }, c.MetadataFields.TIKTOK_FOLLOWER_COUNT)), u > -1 && s.push((0, l.jsx)(v, {
+        }, c.MetadataFields.TIKTOK_FOLLOWER_COUNT)), u > -1 && s.push((0, i.jsx)(C, {
             className: a,
             count: u,
             label: f.default.Messages.CONNECTIONS_PROFILE_TIKTOK_FOLLOWING
-        }, c.MetadataFields.TIKTOK_FOLLOWING_COUNT)), d > -1 && s.push((0, l.jsx)(v, {
+        }, c.MetadataFields.TIKTOK_FOLLOWING_COUNT)), d > -1 && s.push((0, i.jsx)(C, {
             className: a,
             count: d,
             label: f.default.Messages.CONNECTIONS_PROFILE_TIKTOK_LIKES
-        }, c.MetadataFields.TIKTOK_LIKES_COUNT)), r && s.push((0, l.jsx)(N, {
+        }, c.MetadataFields.TIKTOK_LIKES_COUNT)), r && s.push((0, i.jsx)(_, {
             className: a,
             label: f.default.Messages.CONNECTIONS_TIKTOK_VERIFIED
         }, c.MetadataFields.TIKTOK_VERIFIED)), s
     }
 
-    function T(e) {
+    function S(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-            i = [],
+            l = [],
             a = Object.keys(e.metadata);
-        if (null == e.application_metadata || 0 === Object.keys(e.application_metadata).length || 0 === a.length) return i;
+        if (null == e.application_metadata || 0 === Object.keys(e.application_metadata).length || 0 === a.length) return l;
         let s = r.sortBy(a, t => {
-            var n, l;
-            return null === (l = e.application_metadata) || void 0 === l ? void 0 : null === (n = l[t]) || void 0 === n ? void 0 : n.name
+            var n, i;
+            return null === (i = e.application_metadata) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.name
         });
         for (let a of s) {
             let s = e.application_metadata[a];
@@ -173,7 +173,7 @@ function(e, t, n) {
                     case c.MetadataItemTypes.BOOLEAN_EQUAL:
                     case c.MetadataItemTypes.BOOLEAN_NOT_EQUAL: {
                         let e = s.type === c.MetadataItemTypes.BOOLEAN_EQUAL && "1" === r || s.type === c.MetadataItemTypes.BOOLEAN_NOT_EQUAL && "1" !== r;
-                        e && i.push((0, l.jsx)(N, {
+                        e && l.push((0, i.jsx)(_, {
                             className: t,
                             label: s.name
                         }, s.key))
@@ -181,7 +181,7 @@ function(e, t, n) {
                     break;
                     case c.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
                     case c.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
-                        i.push((0, l.jsx)(I, {
+                        l.push((0, i.jsx)(I, {
                             className: t,
                             date: r,
                             locale: n,
@@ -192,7 +192,7 @@ function(e, t, n) {
                     case c.MetadataItemTypes.INTEGER_NOT_EQUAL:
                     case c.MetadataItemTypes.INTEGER_GREATER_THAN_EQUAL:
                     case c.MetadataItemTypes.INTEGER_LESS_THAN_EQUAL:
-                        i.push((0, l.jsx)(v, {
+                        l.push((0, i.jsx)(C, {
                             className: t,
                             count: Number(r),
                             label: s.name
@@ -200,24 +200,24 @@ function(e, t, n) {
                 }
             } catch (e) {}
         }
-        return i
+        return l
     }
 
-    function v(e) {
+    function C(e) {
         let t, {
                 count: n,
-                label: i,
+                label: l,
                 className: s,
                 percent: r
             } = e,
             d = (0, u.shortenAndLocalizeNumber)(n) + (r ? "%" : "");
-        return t = "string" == typeof i ? f.default.Messages.CONNECTIONS_PROFILE_GENERIC_VANITY_METRIC.format({
-            name: i,
+        return t = "string" == typeof l ? f.default.Messages.CONNECTIONS_PROFILE_GENERIC_VANITY_METRIC.format({
+            name: l,
             value: d
-        }) : i.format({
+        }) : l.format({
             value: d
-        }), (0, l.jsx)(o.Text, {
-            className: a(m.connectedAccountVanityMetadata, s),
+        }), (0, i.jsx)(o.Text, {
+            className: a(p.connectedAccountVanityMetadata, s),
             variant: "text-xs/normal",
             color: "interactive-active",
             children: t
@@ -228,38 +228,38 @@ function(e, t, n) {
         let {
             date: t,
             locale: n,
-            label: i,
+            label: l,
             className: s
         } = e;
-        return (0, l.jsx)(o.Text, {
-            className: a(m.connectedAccountVanityMetadata, s),
+        return (0, i.jsx)(o.Text, {
+            className: a(p.connectedAccountVanityMetadata, s),
             variant: "text-xs/normal",
             color: "interactive-active",
             children: f.default.Messages.CONNECTIONS_PROFILE_GENERIC_VANITY_METRIC.format({
                 value: (0, d.getCreatedAtDate)(t, n),
-                name: i
+                name: l
             })
         })
     }
 
-    function _(e) {
+    function T(e) {
         let {
             label: t,
             imageSrc: n,
-            imageAlt: i,
+            imageAlt: l,
             className: s
         } = e;
-        return (0, l.jsxs)("div", {
-            className: a(m.connectedAccountVanityMetadata, m.connectedAccountVanityMetadataItem, s),
-            children: [(0, l.jsx)(o.Tooltip, {
-                text: i,
-                children: e => (0, l.jsx)("img", {
+        return (0, i.jsxs)("div", {
+            className: a(p.connectedAccountVanityMetadata, p.connectedAccountVanityMetadataItem, s),
+            children: [(0, i.jsx)(o.Tooltip, {
+                text: l,
+                children: e => (0, i.jsx)("img", {
                     ...e,
                     src: n,
-                    alt: i,
-                    className: m.connectedAccountVanityMetadataItemIcon
+                    alt: l,
+                    className: p.connectedAccountVanityMetadataItemIcon
                 })
-            }), (0, l.jsx)(o.Text, {
+            }), (0, i.jsx)(o.Text, {
                 variant: "text-xs/normal",
                 color: "interactive-active",
                 children: t
@@ -267,15 +267,15 @@ function(e, t, n) {
         })
     }
 
-    function N(e) {
+    function _(e) {
         let {
             label: t,
             className: n
         } = e;
-        return (0, l.jsx)(o.Text, {
+        return (0, i.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "interactive-active",
-            className: a(m.connectedAccountVanityMetadata, m.connectedAccountVanityMetadataTag, n),
+            className: a(p.connectedAccountVanityMetadata, p.connectedAccountVanityMetadataTag, n),
             children: t
         })
     }

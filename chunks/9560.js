@@ -5,8 +5,8 @@ function(e, t, n) {
             return d
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("77078"),
@@ -22,25 +22,25 @@ function(e, t, n) {
             className: c,
             "aria-label": f
         } = e;
-        return (0, l.jsx)(r.Tooltip, {
+        return (0, i.jsx)(r.Tooltip, {
             text: a,
             hideOnClick: !0,
             children: e => {
                 let {
                     onMouseEnter: r,
-                    onMouseLeave: m,
-                    onClick: p
+                    onMouseLeave: p,
+                    onClick: m
                 } = e;
-                return (0, l.jsx)(o.Button, {
+                return (0, i.jsx)(o.Button, {
                     onMouseEnter: r,
-                    onMouseLeave: m,
+                    onMouseLeave: p,
                     onClick: e => {
-                        e.stopPropagation(), null == p || p(), t(e)
+                        e.stopPropagation(), null == m || m(), t(e)
                     },
                     dangerous: d,
                     "aria-label": null != f ? f : a,
                     className: c,
-                    children: i.Children.map(n, e => i.isValidElement(e) ? i.cloneElement(e, {
+                    children: l.Children.map(n, e => l.isValidElement(e) ? l.cloneElement(e, {
                         className: s(e.props.className, u.actionBarIcon)
                     }) : e)
                 })

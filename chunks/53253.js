@@ -8,12 +8,12 @@ function(e, t, n) {
             return f
         },
         default: function() {
-            return m
+            return p
         }
     }), n("222007");
-    var l = n("884691"),
-        i = n("866227"),
-        a = n.n(i),
+    var i = n("884691"),
+        l = n("866227"),
+        a = n.n(l),
         s = n("862337"),
         r = n("296892");
     let o = new Date("2024-01-04T07:59:59.000Z"),
@@ -50,17 +50,17 @@ function(e, t, n) {
         });
 
     function f() {
-        let [e, t] = l.useState(() => u.isAfter(Date.now()));
-        return l.useEffect(() => {
+        let [e, t] = i.useState(() => u.isAfter(Date.now()));
+        return i.useEffect(() => {
             let n = new s.Timeout,
-                l = () => {
+                i = () => {
                     let e = Math.min(u.diff(Date.now(), "millisecond"), 864e5);
                     null == n || n.start(e, () => {
-                        u.isBefore(Date.now()) ? t(!1) : l()
+                        u.isBefore(Date.now()) ? t(!1) : i()
                     })
                 };
-            return e && l(), () => n.stop()
+            return e && i(), () => n.stop()
         }), e
     }
-    var m = d
+    var p = d
 }

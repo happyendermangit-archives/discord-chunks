@@ -5,8 +5,8 @@ function(e, t, n) {
             return s
         }
     });
-    var l = n("599110"),
-        i = n("793237"),
+    var i = n("599110"),
+        l = n("793237"),
         a = n("49111");
 
     function s(e) {
@@ -19,7 +19,7 @@ function(e, t, n) {
             feedback: u = "",
             location: d
         } = e;
-        (0, i.setSummaryFeedback)(t, r), l.default.track(a.AnalyticEvents.SUMMARIES_REPORT_PROBLEM, {
+        (0, l.setSummaryFeedback)(t, r), i.default.track(a.AnalyticEvents.SUMMARIES_REPORT_PROBLEM, {
             reason: o,
             location: d,
             rating: r,

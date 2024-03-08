@@ -711,6 +711,12 @@ function(e, t, n) {
                         }), o.default.dispatch({
                             type: "STICKER_TRACK_USAGE",
                             stickerIds: S
+                        }), o.default.dispatch({
+                            type: "LOCAL_MESSAGE_CREATE",
+                            message: {
+                                channel_id: e,
+                                author: J.default.getCurrentUser()
+                            }
                         }), ! function(e) {
                             let {
                                 content: t,

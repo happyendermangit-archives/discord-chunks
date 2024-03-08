@@ -1,68 +1,68 @@
 function(e, t, n) {
     "use strict";
-    let l, i, a, s;
+    let i, l, a, s;
     n.r(t), n.d(t, {
         default: function() {
-            return k
+            return D
         }
     }), n("834022"), n("222007"), n("424973"), n("808653");
     var r, o, u = n("917351"),
         d = n.n(u),
         c = n("446674"),
         f = n("913144"),
-        m = n("734575"),
-        p = n("123225"),
+        p = n("734575"),
+        m = n("123225"),
         h = n("789563"),
-        E = n("116460"),
-        g = n("42203"),
-        S = n("305961"),
-        C = n("660478"),
-        T = n("18494"),
-        v = n("282109"),
+        x = n("116460"),
+        E = n("42203"),
+        y = n("305961"),
+        g = n("660478"),
+        S = n("18494"),
+        C = n("282109"),
         I = n("697218"),
-        _ = n("718517"),
-        N = n("299039"),
-        A = n("204653");
+        T = n("718517"),
+        _ = n("299039"),
+        v = n("204653");
     (o = r || (r = {})).FETCHING = "fetching", o.OK = "ok", o.ERROR = "error";
-    let x = {},
-        y = {},
+    let N = {},
+        A = {},
         O = {},
-        R = [],
+        k = [],
         M = {},
-        L = {
+        R = {
             status: "ok",
             lastRequest: null,
             lastResponse: null
         },
-        P = [],
+        L = [],
         b = [];
 
-    function j() {
-        P = E.default.getProps().results.filter(e => e.type === p.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
+    function P() {
+        L = x.default.getProps().results.filter(e => e.type === m.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
     }
-    class U extends c.default.PersistedStore {
+    class j extends c.default.PersistedStore {
         getState() {
             return {
-                shouldShowTopicsBar: l
+                shouldShowTopicsBar: i
             }
         }
         initialize(e) {
             var t;
-            l = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(g.default, I.default, T.default, S.default, h.default), this.syncWith([E.default], j)
+            i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(E.default, I.default, S.default, y.default, h.default), this.syncWith([x.default], P)
         }
         allSummaries() {
-            return x
+            return N
         }
         topSummaries() {
-            let e = Object.values(x).flat().filter(e => e.people.length > 1 && N.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * _.default.Millis.HOUR).sort((e, t) => N.default.extractTimestamp(t.endId) - N.default.extractTimestamp(e.endId));
+            let e = Object.values(N).flat().filter(e => e.people.length > 1 && _.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * T.default.Millis.HOUR).sort((e, t) => _.default.extractTimestamp(t.endId) - _.default.extractTimestamp(e.endId));
             return e
         }
         summaries(e) {
             var t;
-            return null !== (t = x[e]) && void 0 !== t ? t : b
+            return null !== (t = N[e]) && void 0 !== t ? t : b
         }
         shouldShowTopicsBar() {
-            return l
+            return i
         }
         findSummary(e, t) {
             var n;
@@ -75,60 +75,60 @@ function(e, t, n) {
             return null == e ? null : O[e.id]
         }
         isFetching(e, t) {
-            var n, l;
-            return null != t ? (null === (l = y[e]) || void 0 === l ? void 0 : l.summaryId) === t : (null === (n = y[e]) || void 0 === n ? void 0 : n.fetching) === !0
+            var n, i;
+            return null != t ? (null === (i = A[e]) || void 0 === i ? void 0 : i.summaryId) === t : (null === (n = A[e]) || void 0 === n ? void 0 : n.fetching) === !0
         }
         status(e) {
-            return y[e]
+            return A[e]
         }
         shouldFetch(e, t) {
-            var n, l, i;
-            let a = x[e],
-                s = y[e],
-                r = g.default.getChannel(e);
-            if (!(0, m.canSeeChannelSummaries)(r)) return !1;
+            var n, i, l;
+            let a = N[e],
+                s = A[e],
+                r = E.default.getChannel(e);
+            if (!(0, p.canSeeChannelSummaries)(r)) return !1;
             if (null != t) {
-                let e = null !== (l = null == s ? void 0 : s.summaryIdLastRequestedAt) && void 0 !== l ? l : 0,
+                let e = null !== (i = null == s ? void 0 : s.summaryIdLastRequestedAt) && void 0 !== i ? i : 0,
                     n = Date.now() - e;
                 return t !== (null == s ? void 0 : s.summaryId) || n > 5e3
             }
-            let o = null !== (i = null == s ? void 0 : s.lastRequestedAt) && void 0 !== i ? i : 0,
+            let o = null !== (l = null == s ? void 0 : s.lastRequestedAt) && void 0 !== l ? l : 0,
                 u = Date.now() - o;
-            return (null === (n = y[e]) || void 0 === n ? void 0 : n.fetching) !== !0 && ((null == a ? void 0 : a.length) < 1 || u >= 5e3)
+            return (null === (n = A[e]) || void 0 === n ? void 0 : n.fetching) !== !0 && ((null == a ? void 0 : a.length) < 1 || u >= 5e3)
         }
         channelAffinities() {
-            return R
+            return k
         }
         channelAffinitiesById(e) {
             return null == e ? M : M[e]
         }
         channelAffinitiesStatus() {
-            return L
+            return R
         }
         shouldFetchChannelAffinities() {
-            return !("fetching" === L.status || null != L.lastResponse && Date.now() - L.lastResponse < 30 * _.default.Millis.SECOND) && !0
+            return !("fetching" === R.status || null != R.lastResponse && Date.now() - R.lastResponse < 30 * T.default.Millis.SECOND) && !0
         }
         defaultChannelIds(e) {
             let {
                 withQuickSwitcher: t,
                 withChannelAffinities: n,
-                withUnreads: l,
-                numChannels: i = 25
+                withUnreads: i,
+                numChannels: l = 25
             } = e, a = [];
-            return t && (a = a.concat(P)), n && (a = a.concat(R.map(e => e.channel_id))), l && (a = a.filter(e => {
-                let t = g.default.getChannel(e);
-                return null != t && !v.default.isChannelMuted(t.guild_id, e) && C.default.hasUnread(e)
+            return t && (a = a.concat(L)), n && (a = a.concat(k.map(e => e.channel_id))), i && (a = a.filter(e => {
+                let t = E.default.getChannel(e);
+                return null != t && !C.default.isChannelMuted(t.guild_id, e) && g.default.hasUnread(e)
             })), (a = a.filter(e => {
-                let t = g.default.getChannel(e);
-                return (0, m.canSeeChannelSummaries)(t, !1, !1)
-            })).slice(0, i)
+                let t = E.default.getChannel(e);
+                return (0, p.canSeeChannelSummaries)(t, !1, !1)
+            })).slice(0, l)
         }
         visibleSummaryIndex() {
             return a
         }
     }
-    U.persistKey = "SummaryStore";
-    let D = new U(f.default, {
+    j.persistKey = "SummaryStore";
+    let U = new j(f.default, {
         CONNECTION_OPEN: () => !1,
         CHANNEL_SELECT(e) {
             let {
@@ -137,99 +137,99 @@ function(e, t, n) {
             (null == s ? void 0 : s.channelId) !== t && (s = null)
         },
         TOGGLE_TOPICS_BAR() {
-            l = !l
+            i = !i
         },
         RECEIVE_CHANNEL_SUMMARY(e) {
             var t, n;
             let {
-                summary: l,
-                channelId: i,
+                summary: i,
+                channelId: l,
                 error: a,
                 receivedAt: s
             } = e;
-            if (null != l && Object.keys(l).length > 0) {
-                let e = (0, A.createSummaryFromServer)(l, i),
-                    n = [...null !== (t = x[i]) && void 0 !== t ? t : []],
+            if (null != i && Object.keys(i).length > 0) {
+                let e = (0, v.createSummaryFromServer)(i, l),
+                    n = [...null !== (t = N[l]) && void 0 !== t ? t : []],
                     a = n.findIndex(t => t.id === (null == e ? void 0 : e.id));
-                a > -1 ? n[a] = e : n.push(e), x[i] = n
+                a > -1 ? n[a] = e : n.push(e), N[l] = n
             }
             let r = {
-                ...null !== (n = y[i]) && void 0 !== n ? n : {
+                ...null !== (n = A[l]) && void 0 !== n ? n : {
                     fetching: !1
                 },
                 summaryId: void 0,
                 summaryIdLastReceivedAt: s,
                 summaryIdError: a
             };
-            y[i] = r
+            A[l] = r
         },
         REQUEST_CHANNEL_SUMMARY(e) {
             var t;
             let {
                 channelId: n,
-                summaryId: l,
-                requestedAt: i
+                summaryId: i,
+                requestedAt: l
             } = e;
-            y[n] = {
-                ...null !== (t = y[n]) && void 0 !== t ? t : {
+            A[n] = {
+                ...null !== (t = A[n]) && void 0 !== t ? t : {
                     fetching: !1
                 },
-                summaryId: l,
-                summaryIdLastRequestedAt: i
+                summaryId: i,
+                summaryIdLastRequestedAt: l
             }
         },
         RECEIVE_CHANNEL_SUMMARIES(e) {
             let {
                 summaries: t,
                 channelId: n,
-                error: l,
-                receivedAt: i
-            } = e, a = t.filter(e => Object.keys(e).length > 0).map(e => (0, A.createSummaryFromServer)(e, n));
+                error: i,
+                receivedAt: l
+            } = e, a = t.filter(e => Object.keys(e).length > 0).map(e => (0, v.createSummaryFromServer)(e, n));
             if (null != s && s.channelId === n && !a.some(e => e.id === (null == s ? void 0 : s.summaryId))) {
                 var r;
-                let e = null !== (r = x[n]) && void 0 !== r ? r : [],
+                let e = null !== (r = N[n]) && void 0 !== r ? r : [],
                     t = e.find(e => e.id === (null == s ? void 0 : s.summaryId));
                 null != t && a.push(t)
             }
-            x[n] = (0, u.sortBy)(a, e => N.default.extractTimestamp(e.startId)).reverse();
+            N[n] = (0, u.sortBy)(a, e => _.default.extractTimestamp(e.startId)).reverse();
             let o = {
-                ...y[n],
+                ...A[n],
                 fetching: !1,
                 error: void 0,
-                lastReceivedAt: i
+                lastReceivedAt: l
             };
-            null != l && (o.error = l), y[n] = o
+            null != i && (o.error = i), A[n] = o
         },
         REQUEST_CHANNEL_SUMMARIES(e) {
             var t;
-            y[e.channelId] = {
-                ...null !== (t = y[e.channelId]) && void 0 !== t ? t : {},
+            A[e.channelId] = {
+                ...null !== (t = A[e.channelId]) && void 0 !== t ? t : {},
                 fetching: !0,
                 lastRequestedAt: e.requestedAt
             }
         },
         SET_HIGHLIGHTED_SUMMARY(e) {
             var t;
-            if (null == i && null == e.channelId || e.channelId === (null == i ? void 0 : i.channelId) && e.summaryId === (null == i ? void 0 : i.summaryId)) return !1;
-            if (null != (i = null != e.channelId ? {
+            if (null == l && null == e.channelId || e.channelId === (null == l ? void 0 : l.channelId) && e.summaryId === (null == l ? void 0 : l.summaryId)) return !1;
+            if (null != (l = null != e.channelId ? {
                     channelId: e.channelId,
                     summaryId: null !== (t = e.summaryId) && void 0 !== t ? t : null
-                } : null) && i.channelId === e.channelId && null != i.summaryId) {
-                let e = x[i.channelId];
-                a = null == e ? void 0 : e.findIndex(e => e.id === (null == i ? void 0 : i.summaryId))
+                } : null) && l.channelId === e.channelId && null != l.summaryId) {
+                let e = N[l.channelId];
+                a = null == e ? void 0 : e.findIndex(e => e.id === (null == l ? void 0 : l.summaryId))
             }
         },
         UPDATE_VISIBLE_MESSAGES(e) {
-            let t = T.default.getChannelId();
+            let t = S.default.getChannelId();
             if (null != t) {
-                if (null != i && i.channelId === t && null != i.summaryId) {
-                    let e = x[i.channelId];
-                    a = null == e ? void 0 : e.findIndex(e => e.id === (null == i ? void 0 : i.summaryId))
+                if (null != l && l.channelId === t && null != l.summaryId) {
+                    let e = N[l.channelId];
+                    a = null == e ? void 0 : e.findIndex(e => e.id === (null == l ? void 0 : l.summaryId))
                 } else {
                     var n;
-                    a = null === (n = x[t]) || void 0 === n ? void 0 : n.findIndex(t => {
-                        var n, l, i, a;
-                        return n = e.topVisibleMessage, l = e.bottomVisibleMessage, i = t.startId, a = t.endId, !(null == n || n > a) && !(null == l || l < i)
+                    a = null === (n = N[t]) || void 0 === n ? void 0 : n.findIndex(t => {
+                        var n, i, l, a;
+                        return n = e.topVisibleMessage, i = e.bottomVisibleMessage, l = t.startId, a = t.endId, !(null == n || n > a) && !(null == i || i < l)
                     })
                 }
             }
@@ -250,8 +250,8 @@ function(e, t, n) {
             null != n ? O[t.id] = n : delete O[t.id]
         },
         REQUEST_CHANNEL_AFFINITIES() {
-            L = {
-                ...L,
+            R = {
+                ...R,
                 status: "fetching",
                 lastRequest: Date.now()
             }
@@ -260,18 +260,18 @@ function(e, t, n) {
             var t;
             let {
                 affinities: n,
-                error: l
+                error: i
             } = e;
-            if (null != l) {
-                R = [], M = {}, L = {
-                    ...L,
+            if (null != i) {
+                k = [], M = {}, R = {
+                    ...R,
                     status: "error",
                     lastResponse: Date.now()
                 };
                 return
             }
-            R = null != n ? n : [], M = null !== (t = null == n ? void 0 : n.reduce((e, t) => (e[t.channel_id] = t.affinity, e), {})) && void 0 !== t ? t : {}, L = {
-                ...L,
+            k = null != n ? n : [], M = null !== (t = null == n ? void 0 : n.reduce((e, t) => (e[t.channel_id] = t.affinity, e), {})) && void 0 !== t ? t : {}, R = {
+                ...R,
                 status: "ok",
                 lastResponse: Date.now()
             }
@@ -280,77 +280,77 @@ function(e, t, n) {
             let {
                 channelIds: t,
                 requestedAt: n
-            } = e, l = t.reduce((e, t) => {
-                var l;
-                let i = null !== (l = y[t]) && void 0 !== l ? l : {};
+            } = e, i = t.reduce((e, t) => {
+                var i;
+                let l = null !== (i = A[t]) && void 0 !== i ? i : {};
                 return e[t] = {
-                    ...i,
+                    ...l,
                     fetching: !0,
                     lastRequestedAt: n,
                     error: void 0
                 }, e
             }, {});
-            y = {
-                ...y,
-                ...l
+            A = {
+                ...A,
+                ...i
             }
         },
         RECEIVE_CHANNEL_SUMMARIES_BULK(e) {
             let {
                 summaries: t,
                 receivedAt: n,
-                error: l,
+                error: i,
                 requestArgs: {
-                    channelIds: i
+                    channelIds: l
                 }
             } = e, a = d.toPairs(t).reduce((e, t) => {
-                let [n, l] = t, i = d.chain(l.map(e => (0, A.createSummaryFromServer)(e, n))).sortBy(e => N.default.extractTimestamp(e.startId)).takeRight(75).reverse().filter(e => Object.keys(e).length > 0).value();
-                return e[n] = i, e
-            }, {}), s = i.reduce((e, t) => {
-                var i;
-                let s = null !== (i = y[t]) && void 0 !== i ? i : {},
+                let [n, i] = t, l = d.chain(i.map(e => (0, v.createSummaryFromServer)(e, n))).sortBy(e => _.default.extractTimestamp(e.startId)).takeRight(75).reverse().filter(e => Object.keys(e).length > 0).value();
+                return e[n] = l, e
+            }, {}), s = l.reduce((e, t) => {
+                var l;
+                let s = null !== (l = A[t]) && void 0 !== l ? l : {},
                     r = a[t];
                 return null != r && (e.summariesByChannel[t] = r), e.summaryFetchStatusByChannel[t] = {
                     ...s,
                     fetching: !1,
-                    error: l,
+                    error: i,
                     lastReceivedAt: n
                 }, e
             }, {
                 summariesByChannel: {},
                 summaryFetchStatusByChannel: {}
             });
-            x = {
-                ...x,
+            N = {
+                ...N,
                 ...s.summariesByChannel
-            }, y = {
-                ...y,
+            }, A = {
+                ...A,
                 ...s.summaryFetchStatusByChannel
             }
         },
         CONVERSATION_SUMMARY_UPDATE(e) {
-            var t, n, l;
+            var t, n, i;
             let {
-                channel_id: i,
+                channel_id: l,
                 summaries: a,
                 guild_id: s
-            } = e, r = Date.now(), o = d.chain(a).sortBy(e => N.default.extractTimestamp(e.start_id)).filter(e => Object.keys(e).length > 0).map(e => (0, A.createSummaryFromServer)(e, i)).reverse().value(), u = null !== (n = x[i]) && void 0 !== n ? n : [], c = d.chain(o).concat(u).sortBy(e => N.default.extractTimestamp(e.startId)).takeRight(75).uniqBy("id").reverse().value();
-            x[i] = c, y[i] = {
-                ...y[i],
+            } = e, r = Date.now(), o = d.chain(a).sortBy(e => _.default.extractTimestamp(e.start_id)).filter(e => Object.keys(e).length > 0).map(e => (0, v.createSummaryFromServer)(e, l)).reverse().value(), u = null !== (n = N[l]) && void 0 !== n ? n : [], c = d.chain(o).concat(u).sortBy(e => _.default.extractTimestamp(e.startId)).takeRight(75).uniqBy("id").reverse().value();
+            N[l] = c, A[l] = {
+                ...A[l],
                 error: void 0,
-                fetching: null !== (l = null === (t = y[i]) || void 0 === t ? void 0 : t.fetching) && void 0 !== l && l,
+                fetching: null !== (i = null === (t = A[l]) || void 0 === t ? void 0 : t.fetching) && void 0 !== i && i,
                 lastReceivedAt: r
             }
         },
         CLEAR_CONVERSATION_SUMMARIES() {
-            x = {}, y = {}
+            N = {}, A = {}
         },
         DELETE_SUMMARY(e) {
             var t;
             let n = e.summary.channelId,
-                l = null !== (t = x[n]) && void 0 !== t ? t : [],
-                i = l.indexOf(e.summary); - 1 !== i && x[n].splice(i, 1)
+                i = null !== (t = N[n]) && void 0 !== t ? t : [],
+                l = i.indexOf(e.summary); - 1 !== l && N[n].splice(l, 1)
         }
     });
-    var k = D
+    var D = U
 }

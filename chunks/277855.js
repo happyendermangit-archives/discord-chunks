@@ -5,8 +5,8 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("862205");
-    let i = (0, l.createExperiment)({
+    var i = n("862205");
+    let l = (0, i.createExperiment)({
         kind: "user",
         id: "2023-09_soundmoji",
         label: "Soundmoji",
@@ -25,7 +25,7 @@ function(e, t, n) {
     function a(e) {
         let {
             enabled: t
-        } = i.useExperiment({
+        } = l.useExperiment({
             location: e
         }, {
             autoTrackExposure: !0

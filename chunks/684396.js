@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return m
+            return p
         }
     });
-    var l = n("957255"),
-        i = n("501536"),
+    var i = n("957255"),
+        l = n("501536"),
         a = n("25292"),
         s = n("200294"),
         r = n("851745"),
@@ -16,11 +16,11 @@ function(e, t, n) {
         c = n("782340");
     let f = {
         sentinel: o.REACTION_START_SENTINEL,
-        matches(e, t, n, i, a) {
+        matches(e, t, n, l, a) {
             var s, r;
-            return i && null !== (r = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) && void 0 !== r && r && (l.default.can(u.Permissions.ADD_REACTIONS, e) || e.isPrivate())
+            return l && null !== (r = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) && void 0 !== r && r && (i.default.can(u.Permissions.ADD_REACTIONS, e) || e.isPrivate())
         },
-        queryResults(e, t, n, l, i) {
+        queryResults(e, t, n, i, l) {
             let {
                 emojis: s
             } = a.default.queryEmojiResults({
@@ -40,19 +40,19 @@ function(e, t, n) {
                     emojis: t
                 },
                 selectedIndex: n,
-                query: l,
+                query: i,
                 onHover: a,
                 onClick: r
             } = e;
             return (0, s.renderAutocompleteGroup)({
-                query: l,
+                query: i,
                 selectedIndex: n,
                 autocompletes: t,
                 onHover: a,
                 onClick: r,
                 titleWithQuery: c.default.Messages.REACTIONS_MATCHING,
                 titleWithoutQuery: c.default.Messages.EMOJI,
-                Component: i.default.Emoji,
+                Component: l.default.Emoji,
                 getProps: e => ({
                     emoji: e,
                     key: e.id || e.uniqueName || e.name,
@@ -69,14 +69,14 @@ function(e, t, n) {
                     emojis: t
                 },
                 index: n,
-                options: l
-            } = e, i = t[n];
-            return l.sendMessage(function(e) {
+                options: i
+            } = e, l = t[n];
+            return i.sendMessage(function(e) {
                 return "".concat(o.REACTION_START_SENTINEL).concat(e.name).concat(o.REACTION_END_SENTINEL)
-            }(i)), {
+            }(l)), {
                 type: r.AutocompleteSelectionTypes.REACTION
             }
         }
     };
-    var m = f
+    var p = f
 }

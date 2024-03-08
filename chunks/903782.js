@@ -8,42 +8,42 @@ function(e, t, n) {
             return s
         }
     }), n("70102"), n("222007");
-    var l = n("371621");
-    let i = !1;
+    var i = n("371621");
+    let l = !1;
     {
-        l.ReactEditor.toSlateRange = (e, t, n) => {
-            let i, a, s, r, o, {
+        i.ReactEditor.toSlateRange = (e, t, n) => {
+            let l, a, s, r, o, {
                 exactMatch: u,
                 suppressThrow: c
             } = n;
             if (function(e) {
                     let t = e && e.anchorNode && d(e.anchorNode);
                     return null != t && e instanceof t.Selection
-                }(t) ? (i = t.anchorNode, a = t.anchorOffset, s = t.focusNode, r = t.focusOffset, o = t.isCollapsed) : (i = t.startContainer, a = t.startOffset, s = t.endContainer, r = t.endOffset, o = t.collapsed), null == i || null == s || null == a || null == r) {
+                }(t) ? (l = t.anchorNode, a = t.anchorOffset, s = t.focusNode, r = t.focusOffset, o = t.isCollapsed) : (l = t.startContainer, a = t.startOffset, s = t.endContainer, r = t.endOffset, o = t.collapsed), null == l || null == s || null == a || null == r) {
                 if (c) return null;
                 throw Error("Cannot resolve a Slate range from DOM range")
             }
-            let f = l.ReactEditor.toSlatePoint(e, [i, a], {
+            let f = i.ReactEditor.toSlatePoint(e, [l, a], {
                     exactMatch: u,
                     suppressThrow: c
                 }),
-                m = o ? f : l.ReactEditor.toSlatePoint(e, [s, r], {
+                p = o ? f : i.ReactEditor.toSlatePoint(e, [s, r], {
                     exactMatch: u,
                     suppressThrow: c
                 });
-            return null != f && null != m ? {
+            return null != f && null != p ? {
                 anchor: f,
-                focus: m
+                focus: p
             } : null
         };
-        let e = l.ReactEditor.toSlatePoint;
-        l.ReactEditor.toSlatePoint = (t, n, l) => {
+        let e = i.ReactEditor.toSlatePoint;
+        i.ReactEditor.toSlatePoint = (t, n, i) => {
             let {
-                exactMatch: i,
+                exactMatch: l,
                 suppressThrow: a,
                 direction: r = "forward"
-            } = l;
-            !i && (n = s(n, r));
+            } = i;
+            !l && (n = s(n, r));
             try {
                 return e(t, n, {
                     exactMatch: !0,
@@ -53,7 +53,7 @@ function(e, t, n) {
                 if (a) return null;
                 throw e
             }
-        }, i = !0
+        }, l = !0
     }
 
     function a(e, t) {
@@ -66,26 +66,26 @@ function(e, t, n) {
     }
 
     function s(e, t) {
-        let n, [l, i] = e;
-        if (!o(l) || 0 === l.childNodes.length) return e;
-        for ("forward" === t && i === l.childNodes.length && (t = "backward"), "backward" === t && i--, [l, n] = r(l, i, t), "forward" === t && n < i ? t = "backward" : "backward" === t && n > i && (t = "forward"), i = n; o(l) && l.childNodes.length > 0;) {
-            let e = "backward" === t ? l.childNodes.length - 1 : 0;
-            l = r(l, e, t)[0]
+        let n, [i, l] = e;
+        if (!o(i) || 0 === i.childNodes.length) return e;
+        for ("forward" === t && l === i.childNodes.length && (t = "backward"), "backward" === t && l--, [i, n] = r(i, l, t), "forward" === t && n < l ? t = "backward" : "backward" === t && n > l && (t = "forward"), l = n; o(i) && i.childNodes.length > 0;) {
+            let e = "backward" === t ? i.childNodes.length - 1 : 0;
+            i = r(i, e, t)[0]
         }
-        let a = "backward" === t && null != l.textContent ? l.textContent.length : 0;
-        return [l, a]
+        let a = "backward" === t && null != i.textContent ? i.textContent.length : 0;
+        return [i, a]
     }
 
     function r(e, t, n) {
         let {
-            childNodes: l
-        } = e, i = l[t], a = t, s = !1, r = !1;
+            childNodes: i
+        } = e, l = i[t], a = t, s = !1, r = !1;
         for (;
             (function(e) {
                 return u(e) && 8 === e.nodeType
-            }(i) || o(i) && 0 === i.childNodes.length || o(i) && "false" === i.getAttribute("contenteditable")) && (!s || !r);) {
+            }(l) || o(l) && 0 === l.childNodes.length || o(l) && "false" === l.getAttribute("contenteditable")) && (!s || !r);) {
             ;
-            if (a >= l.length) {
+            if (a >= i.length) {
                 s = !0, a = t - 1, n = "backward";
                 continue
             }
@@ -93,9 +93,9 @@ function(e, t, n) {
                 r = !0, a = t + 1, n = "forward";
                 continue
             }
-            i = l[a], t = a, a += "forward" === n ? 1 : -1
+            l = i[a], t = a, a += "forward" === n ? 1 : -1
         }
-        return [i, t]
+        return [l, t]
     }
 
     function o(e) {

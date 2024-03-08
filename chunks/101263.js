@@ -2,33 +2,33 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return l
         }
     }), n("222007");
-    var l, i, a = n("872717"),
+    var i, l, a = n("872717"),
         s = n("666038"),
         r = n("813006"),
         o = n("315102"),
         u = n("159885"),
         d = n("49111");
-    (l || (l = {})).GUILD = "GUILD";
+    (i || (i = {})).GUILD = "GUILD";
     let c = async e => {
         let t = null;
         try {
             var n;
-            let l = await a.default.get({
+            let i = await a.default.get({
                 url: d.Endpoints.EMOJI_SOURCE_DATA(e),
                 oldFormErrors: !0,
                 timeout: 5e3
             });
-            (null == l ? void 0 : null === (n = l.body) || void 0 === n ? void 0 : n.guild) != null && (t = {
-                guild: i.createFromServer(l.body.guild),
-                type: l.body.type
+            (null == i ? void 0 : null === (n = i.body) || void 0 === n ? void 0 : n.guild) != null && (t = {
+                guild: l.createFromServer(i.body.guild),
+                type: i.body.type
             })
         } catch {}
         return t
     };
-    i = class e extends s.default {
+    l = class e extends s.default {
         getIconURL(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             return o.default.getGuildIconURL({

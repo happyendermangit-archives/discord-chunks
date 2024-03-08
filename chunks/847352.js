@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("118810"),
@@ -15,54 +15,54 @@ function(e, t, n) {
         d = n("77078"),
         c = n("901582"),
         f = n("244201"),
-        m = n("983782"),
-        p = n("659500"),
+        p = n("983782"),
+        m = n("659500"),
         h = n("791776"),
-        E = n("82372"),
-        g = n("426969"),
-        S = n("105571"),
-        C = n("634114"),
-        T = n("49111"),
-        v = n("13030"),
+        x = n("82372"),
+        E = n("426969"),
+        y = n("105571"),
+        g = n("634114"),
+        S = n("49111"),
+        C = n("13030"),
         I = n("942838"),
-        _ = i.memo(function(e) {
+        T = l.memo(function(e) {
             let {
                 positionTargetRef: t,
                 channel: n,
                 closeOnModalOuterClick: a = !1,
-                parentModalKey: _
-            } = e, N = i.useRef(null), A = i.useRef(null), {
-                renderWindow: x,
-                windowDispatch: y
-            } = i.useContext(f.default), O = null != _, R = (0, u.useIsModalAtTop)(null != _ ? _ : ""), M = () => {
-                E.dismissAppLauncherPopup()
-            }, L = i.useCallback(e => {
+                parentModalKey: T
+            } = e, _ = l.useRef(null), v = l.useRef(null), {
+                renderWindow: N,
+                windowDispatch: A
+            } = l.useContext(f.default), O = null != T, k = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
+                x.dismissAppLauncherPopup()
+            }, R = l.useCallback(e => {
                 var t;
-                if (!O && (0, u.hasAnyModalOpen)() || O && !(R && a)) return;
+                if (!O && (0, u.hasAnyModalOpen)() || O && !(k && a)) return;
                 let {
                     target: n
                 } = e;
-                if ((0, r.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
+                if ((0, r.isElement)(n) && null != n.closest("." + C.CHAT_INPUT_BUTTON_CLASSNAME)) return;
                 for (;
                     (0, r.isElement)(n);) {
-                    if (n === A.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
+                    if (n === v.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
                     n = n.parentNode
                 }
                 M();
-                let l = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-                (null == l || "BODY" === l.tagName) && p.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.TEXTAREA_FOCUS)
-            }, [a, R, O]), P = i.useCallback(() => {
+                let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+                (null == i || "BODY" === i.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS)
+            }, [a, k, O]), L = l.useCallback(() => {
                 M()
             }, []);
-            i.useLayoutEffect(() => (x.addEventListener("mousedown", L), x.addEventListener("contextmenu", L), y.subscribe(T.ComponentActions.POPOUT_CLOSE, P), () => {
-                x.removeEventListener("mousedown", L), x.removeEventListener("contextmenu", L), y.unsubscribe(T.ComponentActions.POPOUT_CLOSE, P)
-            }), [P, L, x, y]), (0, d.useFocusLock)(N), i.useEffect(() => {
-                (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
-            }, [R, O]);
-            let b = (0, o.useStateFromStores)([g.default], () => g.default.getCurrentAppDetail());
-            return (0, l.jsx)(c.default, {
-                section: T.AnalyticsSections.EXPRESSION_PICKER,
-                children: (0, l.jsx)(m.AppReferencePositionLayer, {
+            l.useLayoutEffect(() => (N.addEventListener("mousedown", R), N.addEventListener("contextmenu", R), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
+                N.removeEventListener("mousedown", R), N.removeEventListener("contextmenu", R), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
+            }), [L, R, N, A]), (0, d.useFocusLock)(_), l.useEffect(() => {
+                (!O && (0, u.hasAnyModalOpen)() || O && !k) && M()
+            }, [k, O]);
+            let b = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
+            return (0, i.jsx)(c.default, {
+                section: S.AnalyticsSections.EXPRESSION_PICKER,
+                children: (0, i.jsx)(p.AppReferencePositionLayer, {
                     className: I.positionLayer,
                     reference: t,
                     position: "top",
@@ -73,22 +73,22 @@ function(e, t, n) {
                         let {
                             isPositioned: t
                         } = e;
-                        return (0, l.jsx)("section", {
+                        return (0, i.jsx)("section", {
                             className: s(I.positionContainer),
-                            ref: N,
+                            ref: _,
                             role: "dialog",
                             "aria-label": "Application Launcher",
-                            children: t ? (0, l.jsxs)("div", {
+                            children: t ? (0, i.jsxs)("div", {
                                 className: I.drawerSizingWrapper,
-                                ref: A,
-                                children: [(0, l.jsx)("div", {
+                                ref: v,
+                                children: [(0, i.jsx)("div", {
                                     className: I.resizeHandle
-                                }), (0, l.jsxs)("div", {
+                                }), (0, i.jsxs)("div", {
                                     className: I.contentWrapper,
-                                    children: [(0, l.jsx)(C.default, {
+                                    children: [(0, i.jsx)(g.default, {
                                         channel: n,
                                         isAppDetailPresent: null != b
-                                    }), null != b ? (0, l.jsx)(S.default, {
+                                    }), null != b ? (0, i.jsx)(y.default, {
                                         channel: n,
                                         appDetail: b
                                     }, b.id) : null]

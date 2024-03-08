@@ -5,9 +5,9 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("77078");
+    var l = n("77078");
 
     function a(e) {
         let {
@@ -15,11 +15,11 @@ function(e, t, n) {
             onConfirm: a,
             onCancel: s
         } = e;
-        return (0, i.openModalLazy)(async () => {
+        return (0, l.openModalLazy)(async () => {
             let {
                 ConfirmNoSharedServerSubscribeWarningModal: e
             } = await n.el("754768").then(n.bind(n, "754768"));
-            return n => (0, l.jsx)(e, {
+            return n => (0, i.jsx)(e, {
                 ...n,
                 application: t,
                 onConfirm: a,

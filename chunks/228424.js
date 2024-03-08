@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useMutualFriends: function() {
-            return m
+            return p
         }
     }), n("222007");
-    var l, i, a = n("884691"),
+    var i, l, a = n("884691"),
         s = n("917351"),
         r = n("446674"),
         o = n("327037"),
@@ -14,32 +14,32 @@ function(e, t, n) {
         c = n("337487"),
         f = n("713135");
 
-    function m(e) {
+    function p(e) {
         let t = (0, r.useStateFromStores)([f.default], () => f.default.getMutualFriends(e.id)),
             n = a.useRef(null != t),
-            [l, i] = a.useState(n.current ? 2 : 0),
-            m = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-            p = e.id === m,
-            h = e.bot || p,
+            [i, l] = a.useState(n.current ? 2 : 0),
+            p = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
+            m = e.id === p,
+            h = e.bot || m,
             {
-                enabled: E
+                enabled: x
             } = (0, c.useProfileMutualsExperiment)({
                 disable: h
             }),
-            g = a.useCallback(async (e, t) => {
-                !(t > 0) && (i(1), await (0, o.fetchMutualFriends)(e), i(2))
+            E = a.useCallback(async (e, t) => {
+                !(t > 0) && (l(1), await (0, o.fetchMutualFriends)(e), l(2))
             }, []);
         a.useEffect(() => {
-            null == t && !h && E && g(e.id, l)
-        }, [h, E, l, g, t, e.bot, e.id]);
-        let S = l > 1,
-            C = (0, r.useStateFromStoresArray)([d.default], () => (0, s.sortBy)(t, e => {
+            null == t && !h && x && E(e.id, i)
+        }, [h, x, i, E, t, e.bot, e.id]);
+        let y = i > 1,
+            g = (0, r.useStateFromStoresArray)([d.default], () => (0, s.sortBy)(t, e => {
                 var t, n;
                 let {
-                    user: l
+                    user: i
                 } = e;
-                return -(null !== (n = null === (t = d.default.getUserAffinity(l.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0)
+                return -(null !== (n = null === (t = d.default.getUserAffinity(i.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0)
             }));
-        return [S, C]
-    }(i = l || (l = {}))[i.NOT_FETCHED = 0] = "NOT_FETCHED", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED"
+        return [y, g]
+    }(l = i || (i = {}))[l.NOT_FETCHED = 0] = "NOT_FETCHED", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED"
 }

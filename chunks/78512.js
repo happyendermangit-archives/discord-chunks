@@ -5,17 +5,17 @@ function(e, t, n) {
             return h
         },
         getActivityPlatform: function() {
-            return E
+            return x
         },
         getProfileInfo: function() {
-            return g
+            return E
         },
         getActivityAltText: function() {
-            return S
+            return y
         }
     }), n("222007");
-    var l = n("509043"),
-        i = n("376556"),
+    var i = n("509043"),
+        l = n("376556"),
         a = n("429928"),
         s = n("36539"),
         r = n("502651"),
@@ -24,15 +24,15 @@ function(e, t, n) {
         d = n("49111"),
         c = n("782340");
     let f = e => "".concat(e).length < 13 ? 1e3 * e : e,
-        m = e => {
+        p = e => {
             let t = Date.now() / 1e3;
-            return null != e.end ? p(t, f(e.end) / 1e3) : null != e.start ? p(f(e.start) / 1e3, t) : {
+            return null != e.end ? m(t, f(e.end) / 1e3) : null != e.start ? m(f(e.start) / 1e3, t) : {
                 hours: 0,
                 minutes: 0,
                 seconds: 0
             }
         },
-        p = (e, t) => {
+        m = (e, t) => {
             let n = Math.max(t - e, 0);
             return {
                 hours: Math.floor(n / 3600) % 24,
@@ -41,22 +41,22 @@ function(e, t, n) {
             }
         },
         h = e => {
-            let t = m(e);
+            let t = p(e);
             return t.hours > 0 ? "".concat(t.hours, " hours") : t.minutes > 0 ? "".concat(t.minutes, " minutes") : "".concat(t.seconds, " seconds")
         },
-        E = e => (0, a.default)(e) ? i.default.get(d.PlatformTypes.SPOTIFY) : (0, s.default)(e) ? i.default.get(d.PlatformTypes.XBOX) : null != e.platform && [d.ActivityGamePlatforms.PS4, d.ActivityGamePlatforms.PS5].includes(e.platform) ? i.default.get(d.PlatformTypes.PLAYSTATION) : e.name === i.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? i.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS) : void(e.type, d.ActivityTypes.PLAYING),
-        g = (e, t) => {
+        x = e => (0, a.default)(e) ? l.default.get(d.PlatformTypes.SPOTIFY) : (0, s.default)(e) ? l.default.get(d.PlatformTypes.XBOX) : null != e.platform && [d.ActivityGamePlatforms.PS4, d.ActivityGamePlatforms.PS5].includes(e.platform) ? l.default.get(d.PlatformTypes.PLAYSTATION) : e.name === l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS) : void(e.type, d.ActivityTypes.PLAYING),
+        E = (e, t) => {
             var n;
-            let i = u.default.getUserProfile(e.id),
-                [a, s] = null !== (n = null == i ? void 0 : i.themeColors) && void 0 !== n ? n : [],
+            let l = u.default.getUserProfile(e.id),
+                [a, s] = null !== (n = null == l ? void 0 : l.themeColors) && void 0 !== n ? n : [],
                 r = (0, o.getProfileTheme)(a),
-                d = null != s ? (0, l.int2hex)(s) : t;
+                d = null != s ? (0, i.int2hex)(s) : t;
             return {
                 color: d,
                 theme: d === t ? "dark" : r
             }
         },
-        S = (e, t) => (0, a.default)(t) ? c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
+        y = (e, t) => (0, a.default)(t) ? c.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
             username: e.username,
             song: t.details,
             artist: t.state

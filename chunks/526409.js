@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         sendReaction: function() {
-            return S
+            return y
         },
         sendReply: function() {
-            return C
+            return g
         }
     }), n("70102");
-    var l = n("913144"),
-        i = n("450911"),
+    var i = n("913144"),
+        l = n("450911"),
         a = n("819689"),
         s = n("81594"),
         r = n("282928"),
@@ -18,28 +18,28 @@ function(e, t, n) {
         d = n("166257"),
         c = n("432173"),
         f = n("271938"),
-        m = n("42203"),
-        p = n("474643"),
+        p = n("42203"),
+        m = n("474643"),
         h = n("462495");
-    let E = e => {
+    let x = e => {
             let t = h.default.getFiles(e),
                 n = t[0],
-                i = h.default.getMessageForFile(n.id);
-            return null == i ? Promise.reject() : new Promise((e, t) => {
-                let i = a => {
-                    a.file.id === n.id && (l.default.unsubscribe("UPLOAD_COMPLETE", i), l.default.unsubscribe("UPLOAD_FAIL", i), "UPLOAD_COMPLETE" === a.type ? e(a.messageRecord) : t(Error("Upload failed")))
+                l = h.default.getMessageForFile(n.id);
+            return null == l ? Promise.reject() : new Promise((e, t) => {
+                let l = a => {
+                    a.file.id === n.id && (i.default.unsubscribe("UPLOAD_COMPLETE", l), i.default.unsubscribe("UPLOAD_FAIL", l), "UPLOAD_COMPLETE" === a.type ? e(a.messageRecord) : t(Error("Upload failed")))
                 };
-                l.default.subscribe("UPLOAD_COMPLETE", i), l.default.subscribe("UPLOAD_FAIL", i)
+                i.default.subscribe("UPLOAD_COMPLETE", l), i.default.subscribe("UPLOAD_FAIL", l)
             })
         },
-        g = function(e, t) {
-            var l;
-            let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        E = function(e, t) {
+            var i;
+            let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 a = arguments.length > 3 ? arguments[3] : void 0,
-                d = m.default.getChannel(t);
-            l = f.default.getToken(), u.default.parse(d, "");
+                d = p.default.getChannel(t);
+            i = f.default.getToken(), u.default.parse(d, "");
             let c = o.UploadPlatform.WEB;
-            if (i) s.default.addFile({
+            if (l) s.default.addFile({
                 file: {
                     platform: c,
                     file: e,
@@ -47,50 +47,50 @@ function(e, t, n) {
                     originalUri: ""
                 },
                 channelId: t,
-                draftType: p.DraftType.ChannelMessage
+                draftType: m.DraftType.ChannelMessage
             });
             else {
-                let l = m.default.getChannel(t);
-                if (null == l) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
+                let i = p.default.getChannel(t);
+                if (null == i) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
                 {
-                    let l = n("783480").default,
-                        i = new r.CloudUpload({
+                    let i = n("783480").default,
+                        l = new r.CloudUpload({
                             file: e,
                             platform: o.UploadPlatform.WEB,
                             isThumbnail: !1
                         }, t);
-                    i.description = a, l.uploadFiles({
+                    l.description = a, i.uploadFiles({
                         channelId: t,
-                        uploads: [i],
-                        draftType: p.DraftType.ChannelMessage
+                        uploads: [l],
+                        draftType: m.DraftType.ChannelMessage
                     })
                 }
             }
         },
-        S = async e => {
+        y = async e => {
             let {
                 file: t,
                 reaction: n,
-                user: l,
+                user: i,
                 altText: a,
                 requireConfirmation: s = !1
-            } = e, r = await i.default.openPrivateChannel(l.id, !1, !1);
-            g(t, r, s, a);
-            let o = await E(r);
+            } = e, r = await l.default.openPrivateChannel(i.id, !1, !1);
+            E(t, r, s, a);
+            let o = await x(r);
             if (null != o) {
                 let e = (0, c.toReactionEmoji)(n);
                 await (0, d.addReaction)(r, o.id, e)
             }
-        }, C = async e => {
+        }, g = async e => {
             let {
                 file: t,
                 reply: n,
-                user: l,
+                user: i,
                 altText: s,
                 requireConfirmation: r = !1
-            } = e, o = await i.default.openPrivateChannel(l.id, !1, !1);
-            g(t, o, r, s), await E(o);
-            let d = m.default.getChannel(o),
+            } = e, o = await l.default.openPrivateChannel(i.id, !1, !1);
+            E(t, o, r, s), await x(o);
+            let d = p.default.getChannel(o),
                 c = u.default.parse(d, n);
             await a.default.sendMessage(o, c)
         }

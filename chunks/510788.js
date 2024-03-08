@@ -5,9 +5,9 @@ function(e, t, n) {
             return u
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("605250"),
+    var l = n("605250"),
         a = n("871388"),
         s = n("295999"),
         r = n("49111"),
@@ -20,11 +20,11 @@ function(e, t, n) {
             look: u,
             color: d
         } = e;
-        return (0, a.default)(t, r.ActivityFlags.INSTANCE) ? (0, l.jsx)(s.default, {
+        return (0, a.default)(t, r.ActivityFlags.INSTANCE) ? (0, i.jsx)(s.default, {
             look: u,
             color: d,
             onClick: function() {
-                new(0, i.default)("UserActivityActions").log("notify", n.id, t)
+                new(0, l.default)("UserActivityActions").log("notify", n.id, t)
             },
             fullWidth: !0,
             children: o.default.Messages.USER_ACTIVITY_ACTION_NOTIFY_ME

@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return v
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("446674"),
@@ -15,122 +15,122 @@ function(e, t, n) {
         d = n("206230"),
         c = n("385976"),
         f = n("858619"),
-        m = n("867805"),
-        p = n("246511"),
+        p = n("867805"),
+        m = n("246511"),
         h = n("139321"),
-        E = n("140708"),
-        g = n("305961"),
-        S = n("773336"),
-        C = n("429569"),
-        T = n("215550"),
-        v = n("782340"),
+        x = n("140708"),
+        E = n("305961"),
+        y = n("773336"),
+        g = n("429569"),
+        S = n("215550"),
+        C = n("782340"),
         I = n("348473");
-    let _ = (e, t) => "".concat(e, ":").concat(t),
-        N = i.forwardRef(function(e, t) {
+    let T = (e, t) => "".concat(e, ":").concat(t),
+        _ = l.forwardRef(function(e, t) {
             let n, {
-                    emoji: i,
+                    emoji: l,
                     isFavorite: a,
                     isLargeSize: u,
                     isMediumSize: d,
                     isInspected: c,
-                    isDisabled: m,
+                    isDisabled: p,
                     showPulse: h,
-                    columnIndex: E,
-                    rowIndex: S,
-                    size: _,
-                    surrogateCodePoint: N,
-                    allowAnimatedEmoji: A,
-                    selectedItemClassName: x,
-                    inNitroLockedSection: y,
+                    columnIndex: x,
+                    rowIndex: y,
+                    size: T,
+                    surrogateCodePoint: _,
+                    allowAnimatedEmoji: v,
+                    selectedItemClassName: N,
+                    inNitroLockedSection: A,
                     ...O
                 } = e,
-                R = (0, r.useStateFromStores)([g.default], () => i.type === f.EmojiTypes.GUILD ? g.default.getGuild(i.guildId) : void 0, [i]),
+                k = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
                 {
                     enabled: M
-                } = C.default.useExperiment({
+                } = g.default.useExperiment({
                     location: "Emoji Picker List"
                 }, {
-                    autoTrackExposure: m
+                    autoTrackExposure: p
                 }),
-                L = m && M && !y;
-            return (0, l.jsx)(o.FocusRing, {
-                children: (0, l.jsx)("button", {
+                R = p && M && !A;
+            return (0, i.jsx)(o.FocusRing, {
+                children: (0, i.jsx)("button", {
                     ...O,
                     className: s(I.emojiItem, {
                         [I.emojiItemLarge]: u,
                         [I.emojiItemMedium]: d,
                         [I.emojiItemSelected]: c,
-                        [null != x ? x : ""]: c,
-                        [I.emojiItemDisabled]: m && !M,
+                        [null != N ? N : ""]: c,
+                        [I.emojiItemDisabled]: p && !M,
                         [I.showPulse]: h
                     }),
-                    "data-type": p.PickerContextMenuDataTypes.EMOJI,
-                    "data-id": i.id,
-                    "data-name": i.name,
+                    "data-type": m.PickerContextMenuDataTypes.EMOJI,
+                    "data-id": l.id,
+                    "data-name": l.name,
                     ref: t,
-                    children: (0, l.jsx)(T.default, {
-                        "aria-label": (n = i.allNamesString, ((null == R ? void 0 : R.name) != null && (n = v.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+                    children: (0, i.jsx)(S.default, {
+                        "aria-label": (n = l.allNamesString, ((null == k ? void 0 : k.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
                             names: n,
-                            guildName: R.name
-                        })), a) ? v.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+                            guildName: k.name
+                        })), a) ? C.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
                             names: n
                         }) : n),
-                        columnIndex: E,
-                        rowIndex: S,
-                        emoji: i,
-                        size: _,
-                        surrogateCodePoint: N,
-                        allowAnimatedEmoji: A,
-                        isLocked: L
+                        columnIndex: x,
+                        rowIndex: y,
+                        emoji: l,
+                        size: T,
+                        surrogateCodePoint: _,
+                        allowAnimatedEmoji: v,
+                        isLocked: R
                     })
                 })
             })
         });
 
-    function A(e) {
+    function v(e) {
         let {
             descriptor: t,
             emojiItemKey: a,
             isInspected: s,
             rowIndex: f,
-            channelGuildId: p,
-            onInspect: g,
-            onSelect: C,
-            isScrolling: T,
+            channelGuildId: m,
+            onInspect: E,
+            onSelect: g,
+            isScrolling: S,
             isUsingKeyboardNavigation: I,
-            showEmojiFavoriteTooltip: A,
-            surrogateCodePoint: x,
-            selectedItemClassName: y,
+            showEmojiFavoriteTooltip: v,
+            surrogateCodePoint: N,
+            selectedItemClassName: A,
             getEmojiItemProps: O,
-            isMediumSize: R,
+            isMediumSize: k,
             isLargeSize: M,
-            pulseItemKey: L,
-            allowAnimatedEmoji: P,
+            pulseItemKey: R,
+            allowAnimatedEmoji: L,
             setPulseItemKey: b,
-            messageId: j,
-            isBurstReaction: U,
-            rowPosition: D,
-            inNitroLockedSection: k
-        } = e, [w, F] = i.useState(""), G = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), B = (0, r.useStateFromStores)([c.default], () => c.default.getDisambiguatedEmojiContext(p), [p]), H = i.useRef(null), {
+            messageId: P,
+            isBurstReaction: j,
+            rowPosition: U,
+            inNitroLockedSection: D
+        } = e, [w, F] = l.useState(""), B = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), G = (0, r.useStateFromStores)([c.default], () => c.default.getDisambiguatedEmojiContext(m), [m]), H = l.useRef(null), {
             emoji: V,
             size: K,
             isDisabled: W,
             columnIndex: Y
         } = t, z = e => {
-            if (e.stopPropagation(), T.current || I.current) return;
+            if (e.stopPropagation(), S.current || I.current) return;
             let n = e.altKey;
-            n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && b(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), C(t, {
+            n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && b(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), g(t, {
                 isFinalSelection: !e.shiftKey,
                 toggleFavorite: n
             })
         }, Z = () => {
-            !T.current && !I.current && g(t)
+            !S.current && !I.current && E(t)
         }, J = e => {
             (0, u.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
                 } = await n.el("367343").then(n.bind(n, "367343"));
-                return t => (0, l.jsx)(e, {
+                return t => (0, i.jsx)(e, {
                     ...t
                 })
             })
@@ -145,29 +145,29 @@ function(e, t, n) {
                 onFocus: u,
                 ...d
             } = null !== (e = O(Y, f)) && void 0 !== e ? e : {};
-            return (0, i.createElement)("li", {
+            return (0, l.createElement)("li", {
                 ...d,
                 key: a,
                 ref: H
-            }, w !== _(Y, f) && (0, l.jsx)(N, {
+            }, w !== T(Y, f) && (0, i.jsx)(_, {
                 ref: r,
                 emoji: V,
-                isFavorite: B.isFavoriteEmojiWithoutFetchingLatest(V),
+                isFavorite: G.isFavoriteEmojiWithoutFetchingLatest(V),
                 isLargeSize: M,
-                isMediumSize: R,
+                isMediumSize: k,
                 isInspected: s,
                 isDisabled: W,
-                showPulse: L === a,
-                allowAnimatedEmoji: P,
+                showPulse: R === a,
+                allowAnimatedEmoji: L,
                 onFocus: null != u ? u : Z,
                 onMouseMove: Z,
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onClick: e => {
-                    if (null != H.current && null != D && null != j && !e.shiftKey && null != V.name && U && !G && P) {
-                        let e = null == V.id ? m.default.convertNameToSurrogate(V.name) : V.name,
+                    if (null != H.current && null != U && null != P && !e.shiftKey && null != V.name && j && !B && L) {
+                        let e = null == V.id ? p.default.convertNameToSurrogate(V.name) : V.name,
                             t = H.current.getBoundingClientRect();
-                        t.x = D.x + (Y + 1) * K, F(_(Y, f)), (0, E.addReactionPickerAnimation)(j, e, V.id, t)
+                        t.x = U.x + (Y + 1) * K, F(T(Y, f)), (0, x.addReactionPickerAnimation)(P, e, V.id, t)
                     }
                     z(e)
                 },
@@ -176,14 +176,14 @@ function(e, t, n) {
                 columnIndex: Y,
                 rowIndex: f,
                 size: K,
-                surrogateCodePoint: x,
-                selectedItemClassName: y,
-                inNitroLockedSection: k
+                surrogateCodePoint: N,
+                selectedItemClassName: A,
+                inNitroLockedSection: D
             }))
         };
-        return A ? (0, l.jsx)(o.Tooltip, {
-            text: v.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
-                key: (0, S.isMac)() ? "Opt" : "Alt"
+        return v ? (0, i.jsx)(o.Tooltip, {
+            text: C.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
+                key: (0, y.isMac)() ? "Opt" : "Alt"
             }),
             position: "top",
             delay: 200,

@@ -11,10 +11,10 @@ function(e, t, n) {
             return l
         },
         updateAddressInfo: function() {
-            return o
+            return a
         },
         clearError: function() {
-            return a
+            return o
         }
     });
     var i = n("913144");
@@ -44,7 +44,7 @@ function(e, t, n) {
         })
     }
 
-    function o(e, t) {
+    function a(e, t) {
         i.default.dispatch({
             type: "NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE",
             info: e,
@@ -52,7 +52,7 @@ function(e, t, n) {
         })
     }
 
-    function a() {
+    function o() {
         i.default.wait(() => i.default.dispatch({
             type: "NEW_PAYMENT_SOURCE_CLEAR_ERROR"
         }))

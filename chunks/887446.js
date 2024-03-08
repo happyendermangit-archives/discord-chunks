@@ -3,11 +3,11 @@ function(e, t, n) {
     let i, s, r, l;
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return C
         }
     });
-    var o = n("748820"),
-        a = n("446674"),
+    var a = n("748820"),
+        o = n("446674"),
         u = n("913144"),
         c = n("724210"),
         d = n("515631");
@@ -16,14 +16,14 @@ function(e, t, n) {
     function h(e) {
         return {
             guildId: e,
-            sessionId: (0, o.v4)()
+            sessionId: (0, a.v4)()
         }
     }
 
     function v(e) {
         null != r && r.guildId === e ? (s = r, r = void 0) : s = h(e)
     }
-    class C extends a.default.Store {
+    class E extends o.default.Store {
         getSavedScrollPosition(e) {
             return f[e]
         }
@@ -34,8 +34,8 @@ function(e, t, n) {
             return null != l && l.guildId === e ? l.source : d.GuildHomeLandingSource.ORGANIC
         }
     }
-    C.displayName = "GuildHomeStore";
-    var E = new C(u.default, {
+    E.displayName = "GuildHomeStore";
+    var C = new E(u.default, {
         CONNECTION_OPEN: function() {
             f = {}
         },
@@ -61,9 +61,9 @@ function(e, t, n) {
                 i = void 0, s = void 0, r = void 0, l = void 0;
                 return
             }
-            let o = (0, c.buildGuildStaticChannelId)(n, t);
-            if (i === o || null != s && s.guildId === t) return !1;
-            v(t), i = o, null != l && l.guildId !== t && (l = void 0)
+            let a = (0, c.buildGuildStaticChannelId)(n, t);
+            if (i === a || null != s && s.guildId === t) return !1;
+            v(t), i = a, null != l && l.guildId !== t && (l = void 0)
         },
         CHANNEL_PRELOAD: function(e) {
             let {

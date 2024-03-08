@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return g
+            return E
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("866227"),
         r = n.n(s),
         o = n("446674"),
@@ -16,51 +16,51 @@ function(e, t, n) {
         d = n("442939"),
         c = n("730859"),
         f = n("697218"),
-        m = n("953109"),
-        p = n("449008"),
+        p = n("953109"),
+        m = n("449008"),
         h = n("782340"),
-        E = n("291488"),
-        g = function(e) {
+        x = n("291488"),
+        E = function(e) {
             let {
                 createdAt: t,
                 participantIds: n,
-                applicationId: i,
+                applicationId: l,
                 title: s,
-                guildId: g,
-                className: S
-            } = e, C = (0, d.useGetOrFetchApplication)(i), T = (0, o.useStateFromStoresArray)([f.default], () => {
+                guildId: E,
+                className: y
+            } = e, g = (0, d.useGetOrFetchApplication)(l), S = (0, o.useStateFromStoresArray)([f.default], () => {
                 var e;
-                return null !== (e = n.map(e => f.default.getUser(e)).filter(p.isNotNullish)) && void 0 !== e ? e : []
-            }), v = null == C ? void 0 : C.name, I = r(t).fromNow();
-            return null == t ? null : (0, l.jsxs)("div", {
-                className: a(S, E.container),
-                children: [(0, l.jsx)(m.default, {
-                    game: C
-                }), (0, l.jsxs)("div", {
-                    className: E.textSection,
-                    children: [null != s && "" !== s ? (0, l.jsx)(u.Text, {
+                return null !== (e = n.map(e => f.default.getUser(e)).filter(m.isNotNullish)) && void 0 !== e ? e : []
+            }), C = null == g ? void 0 : g.name, I = r(t).fromNow();
+            return null == t ? null : (0, i.jsxs)("div", {
+                className: a(y, x.container),
+                children: [(0, i.jsx)(p.default, {
+                    game: g
+                }), (0, i.jsxs)("div", {
+                    className: x.textSection,
+                    children: [null != s && "" !== s ? (0, i.jsx)(u.Text, {
                         variant: "text-md/semibold",
                         color: "interactive-active",
                         children: s
-                    }) : (0, l.jsx)(u.Text, {
+                    }) : (0, i.jsx)(u.Text, {
                         variant: "text-md/semibold",
                         color: "text-muted",
                         children: h.default.Messages.CLIPS_UNTITLED
-                    }), (0, l.jsxs)(u.Text, {
+                    }), (0, i.jsxs)(u.Text, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        className: E.subtitle,
-                        children: [null != v ? "".concat(v, " • ") : null, I]
-                    }), (0, l.jsx)(u.Text, {
+                        className: x.subtitle,
+                        children: [null != C ? "".concat(C, " • ") : null, I]
+                    }), (0, i.jsx)(u.Text, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        className: E.subtitle
+                        className: x.subtitle
                     })]
-                }), null != T && T.length > 0 && (0, l.jsx)(c.default, {
+                }), null != S && S.length > 0 && (0, i.jsx)(c.default, {
                     maxUsers: 4,
-                    users: T,
-                    className: E.facePile,
-                    guildId: g
+                    users: S,
+                    className: x.facePile,
+                    guildId: E
                 })]
             })
         }

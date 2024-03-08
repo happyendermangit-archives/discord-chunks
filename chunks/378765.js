@@ -14,8 +14,8 @@ function(e, t, n) {
             return c
         }
     }), n("222007"), n("70102");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("44170"),
         s = n("659500");
     class r {
@@ -33,7 +33,7 @@ function(e, t, n) {
             this.emitter = new a.EventEmitter
         }
     }
-    let o = i.createContext(new class e {
+    let o = l.createContext(new class e {
             subscribe(e, t) {
                 s.ComponentDispatch.subscribe(e, t)
             }
@@ -42,15 +42,15 @@ function(e, t, n) {
             }
             bumpDispatchPriority() {}
         }),
-        u = i.forwardRef(function(e, t) {
+        u = l.forwardRef(function(e, t) {
             let {
                 children: n
-            } = e, a = i.useRef(null);
+            } = e, a = l.useRef(null);
 
             function s() {
                 return null === a.current && (a.current = new r), a.current
             }
-            return i.useImperativeHandle(t, s), (0, l.jsx)(o.Provider, {
+            return l.useImperativeHandle(t, s), (0, i.jsx)(o.Provider, {
                 value: s(),
                 children: n
             })
@@ -60,21 +60,21 @@ function(e, t, n) {
         let {
             event: t,
             handler: n
-        } = e, l = i.useContext(o), a = i.useRef(n);
-        i.useEffect(() => {
+        } = e, i = l.useContext(o), a = l.useRef(n);
+        l.useEffect(() => {
             a.current = n
         }, [n]);
         let s = null == n;
-        return i.useEffect(() => {
+        return l.useEffect(() => {
             if (s) return;
             let e = function() {
-                for (var e, t = arguments.length, n = Array(t), l = 0; l < t; l++) n[l] = arguments[l];
+                for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
                 null === (e = a.current) || void 0 === e || e.call(a, ...n)
             };
-            return l.subscribe(t, e), () => {
-                l.unsubscribe(t, e)
+            return i.subscribe(t, e), () => {
+                i.unsubscribe(t, e)
             }
-        }, [l, t, s]), null
+        }, [i, t, s]), null
     }
 
     function c(e) {

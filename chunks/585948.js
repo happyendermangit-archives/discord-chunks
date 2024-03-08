@@ -5,8 +5,8 @@ function(e, t, n) {
             return o
         }
     });
-    var l = n("884691"),
-        i = n("880317"),
+    var i = n("884691"),
+        l = n("880317"),
         a = n("997289"),
         s = n("246511"),
         r = n("45961");
@@ -19,43 +19,43 @@ function(e, t, n) {
             gridNavigatorId: d,
             setInspectedStickerPosition: c,
             onGridItemSelect: f
-        } = e, m = (0, a.useAnalyticsContext)(), p = l.useCallback(e => {
-            f(e, m)
-        }, [f, m]), h = l.useCallback((e, t) => {
+        } = e, p = (0, a.useAnalyticsContext)(), m = i.useCallback(e => {
+            f(e, p)
+        }, [f, p]), h = i.useCallback((e, t) => {
             c(e, t, s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
         }, [c]), {
-            gridDispatch: E,
-            getItemProps: g,
-            getRowProps: S,
-            gridContainerProps: C,
-            handleGridContainerKeyDown: T,
-            isUsingKeyboardNavigation: v
+            gridDispatch: x,
+            getItemProps: E,
+            getRowProps: y,
+            gridContainerProps: g,
+            handleGridContainerKeyDown: S,
+            isUsingKeyboardNavigation: C
         } = (0, r.useExpressionPickerGridKeyboardNavigation)({
             columnCounts: t,
             gridNavigatorId: d,
             itemGrid: n,
             itemList: o,
-            onGridNavigatorItemSelect: p,
+            onGridNavigatorItemSelect: m,
             onGridNavigatorPositionChange: h
         });
-        return l.useEffect(() => u.useStore.subscribe(e => {
+        return i.useEffect(() => u.useStore.subscribe(e => {
             if (null == e) return;
             let {
                 columnIndex: t,
                 rowIndex: n,
-                source: l
+                source: i
             } = e;
-            l !== s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && E({
-                type: i.GridActionType.SET_FOCUSED_POSITION,
+            i !== s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && x({
+                type: l.GridActionType.SET_FOCUSED_POSITION,
                 x: t,
                 y: n
             })
-        }, e => e.inspectedExpressionPosition), [E, u]), {
-            getItemProps: g,
-            getRowProps: S,
-            gridContainerProps: C,
-            handleGridContainerKeyDown: T,
-            isUsingKeyboardNavigation: v
+        }, e => e.inspectedExpressionPosition), [x, u]), {
+            getItemProps: E,
+            getRowProps: y,
+            gridContainerProps: g,
+            handleGridContainerKeyDown: S,
+            isUsingKeyboardNavigation: C
         }
     }
 }

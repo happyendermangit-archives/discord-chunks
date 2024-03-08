@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return i
         }
     });
-    var l, i = n("627445"),
-        a = n.n(i);
-    l = class {
+    var i, l = n("627445"),
+        a = n.n(l);
+    i = class {
         setExporter(e) {
             this.exporter = e
         }

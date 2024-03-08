@@ -5,19 +5,19 @@ function(e, t, n) {
             return s
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("65597"),
+    var l = n("65597"),
         a = n("880731");
 
     function s(e) {
         let {
             children: t,
             confettiLocation: n
-        } = e, s = (0, i.default)([a.default], () => a.default.isEnabled({
+        } = e, s = (0, l.default)([a.default], () => a.default.isEnabled({
             confettiLocation: n
         }));
-        return s ? (0, l.jsx)(l.Fragment, {
+        return s ? (0, i.jsx)(i.Fragment, {
             children: t
         }) : null
     }

@@ -10,8 +10,8 @@ function(e, t, n) {
         r = n("685665"),
         l = n("929423");
     n("424562");
-    var o = n("49111"),
-        a = n("397336");
+    var a = n("49111"),
+        o = n("397336");
 
     function u(e) {
         let {
@@ -23,7 +23,7 @@ function(e, t, n) {
         } = e, {
             analyticsLocations: f
         } = (0, r.default)(), h = (0, i.useCallback)(() => {
-            null != t && (0, l.initGuildIdentitySettings)(t, null != c ? c : f), s.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null != t ? a.ProfileCustomizationSubsection.GUILD : a.ProfileCustomizationSubsection.USER_PROFILE, {
+            null != t && (0, l.initGuildIdentitySettings)(t, null != c ? c : f), s.default.open(a.UserSettingsSections.PROFILE_CUSTOMIZATION, null != t ? o.ProfileCustomizationSubsection.GUILD : o.ProfileCustomizationSubsection.USER_PROFILE, {
                 scrollPosition: n,
                 analyticsLocation: u,
                 analyticsLocations: c,

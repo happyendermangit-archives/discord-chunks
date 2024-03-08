@@ -1,97 +1,97 @@
-function(i, x, t) {
+function(e, t, n) {
     "use strict";
-    t.r(x), t.d(x, {
+    n.r(t), n.d(t, {
         default: function() {
-            return f
+            return C
         }
     });
-    var s = t("37983");
-    t("884691");
-    var a = t("414456"),
-        o = t.n(a),
-        y = t("446674"),
-        k = t("77078"),
-        d = t("102985"),
-        p = t("79798"),
-        r = t("754474"),
-        e = t("158998"),
-        m = t("782340"),
-        n = t("168540");
+    var i = n("37983");
+    n("884691");
+    var s = n("414456"),
+        r = n.n(s),
+        l = n("446674"),
+        a = n("77078"),
+        o = n("102985"),
+        u = n("79798"),
+        c = n("754474"),
+        d = n("158998"),
+        f = n("782340"),
+        h = n("168540");
 
-    function c(i) {
-        if (i.isSystemUser()) return r.BotTypes.SYSTEM_DM;
-        if (i.isClyde()) return r.BotTypes.AI;
-        if (i.bot) return r.BotTypes.BOT;
+    function v(e) {
+        if (e.isSystemUser()) return c.BotTypes.SYSTEM_DM;
+        if (e.isClyde()) return c.BotTypes.AI;
+        if (e.bot) return c.BotTypes.BOT;
         return null
     }
-    let l = i => {
+    let E = e => {
         let {
-            primary: x,
-            secondary: t,
-            botType: a,
-            botVerified: y,
-            discriminatorClass: d,
-            className: r,
-            usernameClass: e,
-            color: c,
-            botClass: l,
-            showStreamerModeTooltip: f
-        } = i;
-        return (0, s.jsxs)("div", {
-            className: o(n.info, r),
-            children: [(0, s.jsx)(k.Tooltip, {
-                text: m.default.Messages.STREAMER_MODE_ENABLED,
-                shouldShow: f,
-                "aria-label": !!f && void 0,
-                children: i => (0, s.jsx)("span", {
-                    ...i,
-                    className: o(n.username, e),
-                    style: null != c ? {
-                        color: c
+            primary: t,
+            secondary: n,
+            botType: s,
+            botVerified: l,
+            discriminatorClass: o,
+            className: c,
+            usernameClass: d,
+            color: v,
+            botClass: E,
+            showStreamerModeTooltip: C
+        } = e;
+        return (0, i.jsxs)("div", {
+            className: r(h.info, c),
+            children: [(0, i.jsx)(a.Tooltip, {
+                text: f.default.Messages.STREAMER_MODE_ENABLED,
+                shouldShow: C,
+                "aria-label": !!C && void 0,
+                children: e => (0, i.jsx)("span", {
+                    ...e,
+                    className: r(h.username, d),
+                    style: null != v ? {
+                        color: v
                     } : void 0,
-                    children: x
+                    children: t
                 })
-            }), null != t ? (0, s.jsx)("span", {
-                className: o(n.infoSpacing, d),
-                children: t
-            }) : void 0, null != a && (0, s.jsx)(p.default, {
-                type: a,
-                className: o(n.infoSpacing, l),
-                verified: y
+            }), null != n ? (0, i.jsx)("span", {
+                className: r(h.infoSpacing, o),
+                children: n
+            }) : void 0, null != s && (0, i.jsx)(u.default, {
+                type: s,
+                className: r(h.infoSpacing, E),
+                verified: l
             })]
         })
     };
-    var f = i => {
+    var C = e => {
         let {
-            hideDiscriminator: x = !1,
-            user: t,
-            nick: a,
-            forceUsername: o,
-            showAccountIdentifier: k,
-            overrideDiscriminator: p,
-            forcePomelo: m,
-            ...n
-        } = i, f = (0, y.useStateFromStores)([d.default], () => d.default.hidePersonalInformation), h = f || x || t.isNonUserBot(), _ = t.toString(), u = e.default.getName(t), b = o ? _ : null != a ? a : u, I = t.isPomelo() || m;
-        if (I || b !== _) {
-            let i = b === _ && I && o ? e.default.getUserTag(t, {
-                    forcePomelo: m
-                }) : b,
-                x = k && i !== "@".concat(_) ? e.default.getUserTag(t) : void 0;
-            return (0, s.jsx)(l, {
-                primary: i,
-                secondary: x,
-                botVerified: t.isVerifiedBot(),
-                botType: c(t),
-                showStreamerModeTooltip: f && i !== u,
-                ...n
+            hideDiscriminator: t = !1,
+            user: n,
+            nick: s,
+            forceUsername: r,
+            showAccountIdentifier: a,
+            overrideDiscriminator: u,
+            forcePomelo: f,
+            ...h
+        } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.hidePersonalInformation), p = C || t || n.isNonUserBot(), m = n.toString(), _ = d.default.getName(n), S = r ? m : null != s ? s : _, I = n.isPomelo() || f;
+        if (I || S !== m) {
+            let e = S === m && I && r ? d.default.getUserTag(n, {
+                    forcePomelo: f
+                }) : S,
+                t = a && e !== "@".concat(m) ? d.default.getUserTag(n) : void 0;
+            return (0, i.jsx)(E, {
+                primary: e,
+                secondary: t,
+                botVerified: n.isVerifiedBot(),
+                botType: v(n),
+                showStreamerModeTooltip: C && e !== _,
+                ...h
             })
         }
-        return (0, s.jsx)(r.default, {
-            name: b,
-            botType: c(t),
-            botVerified: t.isVerifiedBot(),
-            discriminator: h || b !== _ ? null : null != p ? p : t.discriminator,
-            ...n
+        return (0, i.jsx)(c.default, {
+            name: S,
+            botType: v(n),
+            botVerified: n.isVerifiedBot(),
+            discriminator: p || S !== m ? null : null != u ? u : n.discriminator,
+            ...h
         })
     }
 }

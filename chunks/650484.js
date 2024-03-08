@@ -18,13 +18,13 @@ function(e, t, i) {
         a = i("627445"),
         u = i.n(a),
         c = i("817736"),
-        d = i.n(c),
-        o = i("77078"),
+        o = i.n(c),
+        d = i("77078"),
         f = i("642906"),
         S = i("304006");
 
     function m(e) {
-        var t, i, s, a, c, d;
+        var t, i, s, a, c, o;
         let {
             header: m,
             isLargeModal: h,
@@ -55,14 +55,14 @@ function(e, t, i) {
             R = null == y ? void 0 : null === (i = y.options) || void 0 === i ? void 0 : i.bodyClassName,
             T = void 0 !== h && h ? S.sliderBodyLarge : null == y ? void 0 : null === (s = y.options) || void 0 === s ? void 0 : s.sliderBodyClassName;
         return (0, r.jsxs)(r.Fragment, {
-            children: [null === (d = null == y ? void 0 : null === (a = y.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === d || d ? m : null, y.renderStep(p), null == E || _ ? null : (0, r.jsxs)(r.Fragment, {
-                children: [(0, r.jsx)(o.ModalContent, {
+            children: [null === (o = null == y ? void 0 : null === (a = y.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === o || o ? m : null, y.renderStep(p), null == E || _ ? null : (0, r.jsxs)(r.Fragment, {
+                children: [(0, r.jsx)(d.ModalContent, {
                     className: l(S.body, R),
-                    children: (0, r.jsx)(o.Slides, {
+                    children: (0, r.jsx)(d.Slides, {
                         activeSlide: E,
                         centered: !1,
                         onSlideReady: e => g(e),
-                        children: I.filter(e => null != e.key).map(e => (0, r.jsx)(o.Slide, {
+                        children: I.filter(e => null != e.key).map(e => (0, r.jsx)(d.Slide, {
                             id: e.key,
                             children: (0, r.jsx)("form", {
                                 className: l(S.sliderBody, T),
@@ -86,7 +86,7 @@ function(e, t, i) {
         } = e, {
             bodyNode: i
         } = (0, f.usePaymentContext)();
-        return null == i ? null : d.createPortal(t, i)
+        return null == i ? null : o.createPortal(t, i)
     }
 
     function p(e) {
@@ -95,6 +95,6 @@ function(e, t, i) {
         } = e, {
             footerNode: i
         } = (0, f.usePaymentContext)();
-        return null == i ? null : d.createPortal(t, i)
+        return null == i ? null : o.createPortal(t, i)
     }
 }

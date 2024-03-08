@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return v
+            return C
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("974667"),
@@ -15,87 +15,87 @@ function(e, t, n) {
         d = n("296141"),
         c = n("305961"),
         f = n("501536"),
-        m = n("476765"),
-        p = n("983782"),
+        p = n("476765"),
+        m = n("983782"),
         h = n("659186"),
-        E = n("418062"),
-        g = n("851745"),
-        S = n("280214"),
-        C = n("497858"),
-        T = n("892149"),
-        v = i.forwardRef(function(e, t) {
-            var n, a, v, I, _;
+        x = n("418062"),
+        E = n("851745"),
+        y = n("280214"),
+        g = n("497858"),
+        S = n("892149"),
+        C = l.forwardRef(function(e, t) {
+            var n, a, C, I, T;
             let {
-                channel: N,
-                type: A,
-                editorHeight: x,
-                onVisibilityChange: y
-            } = e, O = (0, m.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
+                channel: _,
+                type: v,
+                editorHeight: N,
+                onVisibilityChange: A
+            } = e, O = (0, p.useUID)(), k = (0, o.useStateFromStores)([c.default], () => {
                 var e;
-                return null !== (e = c.default.getGuild(N.guild_id)) && void 0 !== e ? e : null
-            }, [N.guild_id]), M = i.useRef(), [L, P, b] = (0, C.default)({
+                return null !== (e = c.default.getGuild(_.guild_id)) && void 0 !== e ? e : null
+            }, [_.guild_id]), M = l.useRef(), [R, L, b] = (0, g.default)({
                 ...e,
-                guild: R
-            }, t, M), j = (null === (n = A.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : p.default, U = (0, f.getAutocompleteRowId)(L.selectedIndex);
-            (0, d.useChannelEditorPopup)(O, L.isVisible, U), E.default.trackExposure({
+                guild: k
+            }, t, M), P = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(R.selectedIndex);
+            (0, d.useChannelEditorPopup)(O, R.isVisible, j), x.default.trackExposure({
                 location: "6e9811_1"
             });
             let {
-                usePopoutAutocomplete: D
-            } = E.default.useExperiment({
+                usePopoutAutocomplete: U
+            } = x.default.useExperiment({
                 location: "6e9811_2"
             }, {
                 autoTrackExposure: !1
-            }), k = (0, S.useChannelAutocompleteLayerPosition)({
-                editorHeight: x,
-                type: A,
-                state: L,
-                isInPopoutExperiment: D
-            }), w = i.useMemo(() => null == k ? "" : String(Date.now()), [null == k ? void 0 : k.top, null == k ? void 0 : k.left, null == k ? void 0 : k.bottom, null == k ? void 0 : k.right]);
-            if (i.useEffect(() => {
-                    y(L.isVisible)
-                }, [y, L.isVisible]), !L.isVisible || null == L.query || void 0 === k) return null;
-            let F = null !== (a = L.query.typeInfo.renderResults({
-                results: L.query.results,
-                selectedIndex: L.selectedIndex,
-                channel: N,
-                guild: R,
-                query: L.query.queryText,
-                options: L.query.options,
-                onHover: e => P.onResultHover(e),
-                onClick: e => P.onResultClick(e)
+            }), D = (0, y.useChannelAutocompleteLayerPosition)({
+                editorHeight: N,
+                type: v,
+                state: R,
+                isInPopoutExperiment: U
+            }), w = l.useMemo(() => null == D ? "" : String(Date.now()), [null == D ? void 0 : D.top, null == D ? void 0 : D.left, null == D ? void 0 : D.bottom, null == D ? void 0 : D.right]);
+            if (l.useEffect(() => {
+                    A(R.isVisible)
+                }, [A, R.isVisible]), !R.isVisible || null == R.query || void 0 === D) return null;
+            let F = null !== (a = R.query.typeInfo.renderResults({
+                results: R.query.results,
+                selectedIndex: R.selectedIndex,
+                channel: _,
+                guild: k,
+                query: R.query.queryText,
+                options: R.query.options,
+                onHover: e => L.onResultHover(e),
+                onClick: e => L.onResultClick(e)
             })) && void 0 !== a ? a : null;
             if (null == F) return null;
-            let G = {
-                    [T.autocompleteAttached]: null == k,
-                    [T.autocompletePopout]: null != k,
-                    [T.bottom]: null == k && "bottom" === e.position
+            let B = {
+                    [S.autocompleteAttached]: null == D,
+                    [S.autocompletePopout]: null != D,
+                    [S.bottom]: null == D && "bottom" === e.position
                 },
-                B = 490;
-            null != k && (B = (null === (v = A.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (I = L.query) || void 0 === I ? void 0 : I.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
-            let H = (0, l.jsx)(f.default, {
+                G = 490;
+            null != D && (G = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (I = R.query) || void 0 === I ? void 0 : I.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), G = Math.min(window.innerHeight - 175, G);
+            let H = (0, i.jsx)(f.default, {
                 id: O,
-                className: s(T.autocomplete, G),
-                innerClassName: T.autocompleteInner,
+                className: s(S.autocomplete, B),
+                innerClassName: S.autocompleteInner,
                 onMouseDown: e => e.preventDefault(),
-                children: (0, l.jsx)(r.ListNavigatorProvider, {
+                children: (0, i.jsx)(r.ListNavigatorProvider, {
                     navigator: b,
-                    children: (0, l.jsx)(r.ListNavigatorContainer, {
+                    children: (0, i.jsx)(r.ListNavigatorContainer, {
                         children: e => {
                             let {
                                 ref: t,
                                 ...n
                             } = e;
-                            return (0, l.jsx)(u.AdvancedScrollerThin, {
+                            return (0, i.jsx)(u.AdvancedScrollerThin, {
                                 id: O,
                                 ref: e => {
                                     var n;
                                     t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null, M.current = e
                                 },
                                 ...n,
-                                className: T.scroller,
+                                className: S.scroller,
                                 style: {
-                                    maxHeight: B
+                                    maxHeight: G
                                 },
                                 role: "listbox",
                                 "aria-labelledby": (0, f.getAutocompleteTitleId)(O),
@@ -105,11 +105,11 @@ function(e, t, n) {
                     })
                 })
             });
-            return null != k ? (0, l.jsx)(j, {
-                children: (0, l.jsx)(u.ReferencePositionLayer, {
-                    reference: () => k,
+            return null != D ? (0, i.jsx)(P, {
+                children: (0, i.jsx)(u.ReferencePositionLayer, {
+                    reference: () => D,
                     positionKey: w,
-                    position: null !== (_ = e.position) && void 0 !== _ ? _ : "top",
+                    position: null !== (T = e.position) && void 0 !== T ? T : "top",
                     align: "left",
                     spacing: 8,
                     autoInvert: !0,

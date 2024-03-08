@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return R
+            return k
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("917351"),
         r = n.n(s),
         o = n("509043"),
@@ -16,22 +16,22 @@ function(e, t, n) {
         d = n("77078"),
         c = n("272030"),
         f = n("888503"),
-        m = n("206230"),
-        p = n("862205"),
+        p = n("206230"),
+        m = n("862205"),
         h = n("895026"),
-        E = n("506885"),
-        g = n("981601"),
-        S = n("42203"),
-        C = n("26989"),
-        T = n("305961"),
-        v = n("697218"),
+        x = n("506885"),
+        E = n("981601"),
+        y = n("42203"),
+        g = n("26989"),
+        S = n("305961"),
+        C = n("697218"),
         I = n("145131"),
-        _ = n("666897"),
-        N = n("826684"),
-        A = n("782340"),
-        x = n("665958"),
-        y = n("919163");
-    let O = (0, p.createExperiment)({
+        T = n("666897"),
+        _ = n("826684"),
+        v = n("782340"),
+        N = n("665958"),
+        A = n("919163");
+    let O = (0, m.createExperiment)({
         kind: "user",
         id: "2021-07_role_popout",
         label: "Role Popout",
@@ -47,59 +47,59 @@ function(e, t, n) {
         }]
     });
 
-    function R(e) {
+    function k(e) {
         let {
             roleColor: t,
-            roleId: i,
+            roleId: l,
             channelId: s,
-            roleName: p,
-            guildId: R,
+            roleName: m,
+            guildId: k,
             children: M,
-            inlinePreview: L = !1
-        } = e, P = (0, u.useStateFromStores)([m.default], () => m.default.roleStyle), b = null != t && 0 !== t && !L, j = b && "dot" === P, U = e => (0, l.jsxs)(_.default, {
-            className: a(y.roleMention),
-            color: "username" === P && b ? t : null,
+            inlinePreview: R = !1
+        } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), b = null != t && 0 !== t && !R, P = b && "dot" === L, j = e => (0, i.jsxs)(T.default, {
+            className: a(A.roleMention),
+            color: "username" === L && b ? t : null,
             ...e,
-            children: [j && (0, l.jsx)(d.RoleDot, {
+            children: [P && (0, i.jsx)(d.RoleDot, {
                 color: (0, o.int2hex)(t),
-                className: x.roleDot,
+                className: N.roleDot,
                 background: !1,
                 tooltip: !1
             }), M]
         }), {
-            enabled: D
+            enabled: U
         } = O.getCurrentConfig({
             location: "2ec235_1"
         }, {
             autoTrackExposure: !1
         });
-        return !D || L || null == s || null == R || null == i && "@everyone" !== p ? U() : (0, l.jsx)(d.Popout, {
+        return !U || R || null == s || null == k || null == l && "@everyone" !== m ? j() : (0, i.jsx)(d.Popout, {
             preload: async () => {
-                null != i && await (0, h.requestMembersForRole)(R, i)
+                null != l && await (0, h.requestMembersForRole)(k, l)
             },
             renderPopout: e => {
-                let t = S.default.getChannel(s),
-                    a = T.default.getGuild(R),
-                    o = C.default.getMembers(a.id),
-                    u = null == i ? a.roles[a.getEveryoneRoleId()] : a.roles[i],
-                    m = r(o).filter(e => {
-                        if ("@everyone" === p || e.roles.includes(i)) {
-                            let t = v.default.getUser(e.userId);
+                let t = y.default.getChannel(s),
+                    a = S.default.getGuild(k),
+                    o = g.default.getMembers(a.id),
+                    u = null == l ? a.roles[a.getEveryoneRoleId()] : a.roles[l],
+                    p = r(o).filter(e => {
+                        if ("@everyone" === m || e.roles.includes(l)) {
+                            let t = C.default.getUser(e.userId);
                             return null != t
                         }
                         return !1
                     }).sortBy(e => {
                         var t;
-                        let n = v.default.getUser(e.userId);
+                        let n = C.default.getUser(e.userId);
                         return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
                     }).map(e => {
-                        let i = v.default.getUser(e.userId);
-                        return (0, l.jsx)(d.Popout, {
-                            preload: () => (0, E.default)(i.id, i.getAvatarURL(t.guild_id, 80), {
+                        let l = C.default.getUser(e.userId);
+                        return (0, i.jsx)(d.Popout, {
+                            preload: () => (0, x.default)(l.id, l.getAvatarURL(t.guild_id, 80), {
                                 guildId: t.guild_id,
                                 channelId: t.id
                             }),
-                            renderPopout: n => (0, l.jsx)(g.default, {
+                            renderPopout: n => (0, i.jsx)(E.default, {
                                 ...n,
                                 userId: e.userId,
                                 guildId: a.id,
@@ -110,11 +110,11 @@ function(e, t, n) {
                                 let {
                                     isShown: o
                                 } = r;
-                                return (0, l.jsx)(f.default, {
+                                return (0, i.jsx)(f.default, {
                                     selected: o,
                                     colorString: e.colorString,
                                     colorRoleName: u.name,
-                                    user: i,
+                                    user: l,
                                     isOwner: e.userId === a.ownerId,
                                     nick: e.nick,
                                     premiumSince: null == e.premiumSince ? null : new Date(e.premiumSince),
@@ -125,9 +125,9 @@ function(e, t, n) {
                                             let {
                                                 default: e
                                             } = await n.el("834247").then(n.bind(n, "834247"));
-                                            return n => (0, l.jsx)(e, {
+                                            return n => (0, i.jsx)(e, {
                                                 ...n,
-                                                user: i,
+                                                user: l,
                                                 guildId: a.id,
                                                 channel: t,
                                                 showMediaItems: !0
@@ -137,29 +137,29 @@ function(e, t, n) {
                                     ...s
                                 }, e.userId)
                             }
-                        }, i.id)
+                        }, l.id)
                     }).value();
-                return (0, l.jsx)(I.default, {
-                    className: y.rolePopout,
+                return (0, i.jsx)(I.default, {
+                    className: A.rolePopout,
                     ...e,
-                    children: (0, l.jsxs)(d.Scroller, {
-                        className: y.roleScroller,
-                        children: [(0, l.jsx)(N.default, {
-                            className: y.roleHeader,
-                            "aria-label": A.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+                    children: (0, i.jsxs)(d.Scroller, {
+                        className: A.roleScroller,
+                        children: [(0, i.jsx)(_.default, {
+                            className: A.roleHeader,
+                            "aria-label": v.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                                 title: u.name,
-                                count: m.length
+                                count: p.length
                             }),
-                            children: (0, l.jsxs)("span", {
+                            children: (0, i.jsxs)("span", {
                                 "aria-hidden": !0,
-                                children: [u.name, " — ", m.length]
+                                children: [u.name, " — ", p.length]
                             })
-                        }), m]
+                        }), p]
                     })
                 })
             },
             position: "right",
-            children: U
+            children: j
         })
     }
 }

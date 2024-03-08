@@ -8,11 +8,11 @@ function(e, t, n) {
             return r
         }
     });
-    var l = n("308503");
-    let i = Object.freeze({
+    var i = n("308503");
+    let l = Object.freeze({
             showPremiumUpsell: !1
         }),
-        a = (0, l.default)(e => i),
+        a = (0, i.default)(e => l),
         s = e => {
             a.setState({
                 showPremiumUpsell: e

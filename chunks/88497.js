@@ -5,26 +5,26 @@ function(e, t, n) {
             return r
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("469563"),
+    var l = n("469563"),
         a = n("65969"),
         s = n("75196"),
-        r = (0, i.replaceIcon)(function(e) {
+        r = (0, l.replaceIcon)(function(e) {
             let {
                 width: t = 24,
                 height: n = 24,
-                color: i = "currentColor",
+                color: l = "currentColor",
                 foreground: a,
                 ...r
             } = e;
-            return (0, l.jsx)("svg", {
+            return (0, i.jsx)("svg", {
                 width: t,
                 height: n,
                 ...(0, s.default)(r),
                 viewBox: "0 0 20 20",
-                children: (0, l.jsx)("path", {
-                    fill: i,
+                children: (0, i.jsx)("path", {
+                    fill: l,
                     className: a,
                     fillRule: "evenodd",
                     clipRule: "evenodd",

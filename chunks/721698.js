@@ -5,26 +5,26 @@ function(e, t, n) {
             return h
         },
         getApplication: function() {
-            return E
+            return x
         },
         getCategories: function() {
-            return g
+            return E
         },
         getSimilarApplications: function() {
-            return S
+            return y
         },
         search: function() {
-            return C
+            return g
         },
         getCollections: function() {
-            return T
+            return S
         },
         fetchIntegrationApplicationIdsForMyGuilds: function() {
-            return v
+            return C
         }
     }), n("222007");
-    var l = n("981980"),
-        i = n("872717"),
+    var i = n("981980"),
+        l = n("872717"),
         a = n("913144"),
         s = n("915639"),
         r = n("349503"),
@@ -33,24 +33,24 @@ function(e, t, n) {
         d = n("856894"),
         c = n("388647"),
         f = n("506061"),
-        m = n("49111");
-    let p = new Map;
+        p = n("49111");
+    let m = new Map;
     async function h(e) {
         var t;
         let n = Date.now(),
-            s = null !== (t = p.get(e)) && void 0 !== t ? t : 0;
+            s = null !== (t = m.get(e)) && void 0 !== t ? t : 0;
         if (r.default.getApplicationFetchState(e) === r.FetchState.FETCHING || r.default.isInvalidApplication(e) || n < s + 6e5) return;
-        p.set(e, n), a.default.dispatch({
+        m.set(e, n), a.default.dispatch({
             type: "APPLICATION_DIRECTORY_FETCH_APPLICATION",
             applicationId: e
         });
-        let o = new l.default(1e3, 5e3),
+        let o = new i.default(1e3, 5e3),
             u = (e, t) => 429 === e.status && !!(o.fails < 10) && (o.fail(() => {
                 t(void 0, u)
             }), !0);
         try {
-            let t = await i.default.get({
-                    url: m.Endpoints.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
+            let t = await l.default.get({
+                    url: p.Endpoints.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
                     backoff: o,
                     retries: 10,
                     interceptResponse: u
@@ -68,23 +68,23 @@ function(e, t, n) {
             })
         }
     }
-    async function E(e) {
+    async function x(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             n = Date.now(),
-            l = r.default.getApplicationFetchState(e),
+            i = r.default.getApplicationFetchState(e),
             o = r.default.getApplicationLastFetchTime(e),
             {
                 dontRefetchMs: u
             } = t;
-        if (l !== r.FetchState.FETCHING) {
+        if (i !== r.FetchState.FETCHING) {
             if (!(null != o && o + (null != u ? u : 6e5) > n)) {
                 a.default.dispatch({
                     type: "APPLICATION_DIRECTORY_FETCH_APPLICATION",
                     applicationId: e
                 });
                 try {
-                    let t = await i.default.get({
-                        url: m.Endpoints.APPLICATION_DIRECTORY_APPLICATION(e),
+                    let t = await l.default.get({
+                        url: p.Endpoints.APPLICATION_DIRECTORY_APPLICATION(e),
                         query: {
                             locale: s.default.locale
                         }
@@ -103,12 +103,12 @@ function(e, t, n) {
             }
         }
     }
-    async function g() {
+    async function E() {
         let e = Date.now(),
             t = o.default.getLastFetchTimeMs();
         if (null != t && t + 6e5 > e) return;
-        let n = await i.default.get({
-            url: m.Endpoints.APPLICATION_DIRECTORY_CATEGORIES,
+        let n = await l.default.get({
+            url: p.Endpoints.APPLICATION_DIRECTORY_CATEGORIES,
             query: {
                 locale: s.default.locale
             }
@@ -118,36 +118,36 @@ function(e, t, n) {
             categories: n.body
         })
     }
-    async function S(e) {
+    async function y(e) {
         var t;
         let {
             applicationId: n,
-            guildId: l,
+            guildId: i,
             options: r
         } = e, {
             page: o
         } = null != r ? r : {}, u = Date.now(), d = c.default.getFetchState({
             applicationId: n,
-            guildId: l
+            guildId: i
         }), {
             lastFetchTimeMs: f
         } = null !== (t = c.default.getSimilarApplications({
             applicationId: n,
-            guildId: l
+            guildId: i
         })) && void 0 !== t ? t : {};
         if (d !== c.FetchState.FETCHING) {
             if (null == f || !(f + 6e5 > u)) {
                 a.default.dispatch({
                     type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS",
                     applicationId: n,
-                    guildId: l,
+                    guildId: i,
                     page: o
                 });
                 try {
-                    let e = await i.default.get({
-                        url: m.Endpoints.APPLICATION_DIRECTORY_SIMILAR(n),
+                    let e = await l.default.get({
+                        url: p.Endpoints.APPLICATION_DIRECTORY_SIMILAR(n),
                         query: {
-                            guild_id: l,
+                            guild_id: i,
                             page: o,
                             locale: s.default.locale
                         }
@@ -155,7 +155,7 @@ function(e, t, n) {
                     a.default.dispatch({
                         type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS",
                         applicationId: n,
-                        guildId: l,
+                        guildId: i,
                         similarApplications: e.body.applications,
                         loadId: e.body.load_id,
                         page: o,
@@ -165,51 +165,51 @@ function(e, t, n) {
                     a.default.dispatch({
                         type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE",
                         applicationId: n,
-                        guildId: l,
+                        guildId: i,
                         page: o
                     })
                 }
             }
         }
     }
-    async function C(e) {
+    async function g(e) {
         var t;
         let {
             query: n,
-            guildId: l,
+            guildId: i,
             options: r,
             onSuccessCallback: o
         } = e, {
             page: u,
             categoryId: c
-        } = null != r ? r : {}, f = Date.now(), p = d.default.getFetchState({
+        } = null != r ? r : {}, f = Date.now(), m = d.default.getFetchState({
             query: n,
-            guildId: l,
+            guildId: i,
             page: u,
             categoryId: c
         }), {
             lastFetchTimeMs: h
         } = null !== (t = d.default.getSearchResults({
             query: n,
-            guildId: l,
+            guildId: i,
             page: u,
             categoryId: c
         })) && void 0 !== t ? t : {};
-        if (p !== d.FetchState.FETCHING) {
+        if (m !== d.FetchState.FETCHING) {
             if (null == h || !(h + 6e5 > f)) {
                 a.default.dispatch({
                     type: "APPLICATION_DIRECTORY_FETCH_SEARCH",
                     query: n,
-                    guildId: l,
+                    guildId: i,
                     page: u,
                     categoryId: c
                 });
                 try {
-                    let e = await i.default.get({
-                        url: m.Endpoints.APPLICATION_DIRECTORY_SEARCH,
+                    let e = await l.default.get({
+                        url: p.Endpoints.APPLICATION_DIRECTORY_SEARCH,
                         query: {
                             query: n,
-                            guild_id: l,
+                            guild_id: i,
                             page: u,
                             category_id: c,
                             locale: s.default.locale
@@ -218,7 +218,7 @@ function(e, t, n) {
                     a.default.dispatch({
                         type: "APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS",
                         query: n,
-                        guildId: l,
+                        guildId: i,
                         page: u,
                         categoryId: c,
                         result: {
@@ -234,7 +234,7 @@ function(e, t, n) {
                     a.default.dispatch({
                         type: "APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE",
                         query: n,
-                        guildId: l,
+                        guildId: i,
                         page: u,
                         categoryId: c
                     })
@@ -242,23 +242,23 @@ function(e, t, n) {
             }
         }
     }
-    async function T() {
+    async function S() {
         let {
             includesInactive: e = !1
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, t = Date.now(), n = u.default.getFetchState({
             includesInactive: e
-        }), l = u.default.getLastFetchTimeMs({
+        }), i = u.default.getLastFetchTimeMs({
             includesInactive: e
         });
         if (n !== u.FetchState.FETCHING) {
-            if (null == l || !(l + 6e5 > t)) {
+            if (null == i || !(i + 6e5 > t)) {
                 a.default.dispatch({
                     type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS",
                     includesInactive: e
                 });
                 try {
-                    let t = await i.default.get({
-                        url: m.Endpoints.APPLICATION_DIRECTORY_COLLECTIONS,
+                    let t = await l.default.get({
+                        url: p.Endpoints.APPLICATION_DIRECTORY_COLLECTIONS,
                         query: {
                             includes_inactive: e,
                             locale: s.default.locale
@@ -278,19 +278,19 @@ function(e, t, n) {
             }
         }
     }
-    async function v() {
+    async function C() {
         let e = Date.now(),
             t = f.default.getFetchState(),
             n = f.default.getLastFetchTimeMs(),
-            l = f.default.getNextFetchRetryTimeMs();
+            i = f.default.getNextFetchRetryTimeMs();
         if (t !== f.FetchState.FETCHING && (null == n || !(n + 864e5 > e))) {
-            if (null == l || !(e < l)) {
+            if (null == i || !(e < i)) {
                 a.default.dispatch({
                     type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS"
                 });
                 try {
-                    let e = await i.default.get({
-                        url: m.Endpoints.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS
+                    let e = await l.default.get({
+                        url: p.Endpoints.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS
                     });
                     a.default.dispatch({
                         type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS",

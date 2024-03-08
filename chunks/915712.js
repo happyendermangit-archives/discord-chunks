@@ -5,9 +5,9 @@ function(e, t, n) {
             return o
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("463848"),
+    var l = n("463848"),
         a = n("777003"),
         s = n("49111"),
         r = n("787678");
@@ -21,9 +21,9 @@ function(e, t, n) {
             onClose: d,
             analyticsParams: c
         } = e;
-        return (0, l.jsx)(a.default, {
-            children: (0, l.jsx)(i.default, {
-                type: i.UserActivityTypes.USER_POPOUT_V2,
+        return (0, i.jsx)(a.default, {
+            children: (0, i.jsx)(l.default, {
+                type: l.UserActivityTypes.USER_POPOUT_V2,
                 activity: t,
                 className: r.activity,
                 user: n,

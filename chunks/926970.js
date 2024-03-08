@@ -5,8 +5,8 @@ function(e, t, n) {
             return s
         }
     });
-    var l = n("371621"),
-        i = n("939563"),
+    var i = n("371621"),
+        l = n("939563"),
         a = n("385887");
     let s = (e, t) => {
         let {
@@ -19,11 +19,11 @@ function(e, t, n) {
             insertFragmentData: c,
             insertTextData: f
         } = e;
-        return (e = (0, l.withReact)(e)).addMark = n, e.removeMark = s, e.setFragmentData = u, e.insertData = d, e.insertFragmentData = c, e.insertTextData = f, e.deleteBackward = n => {
+        return (e = (0, i.withReact)(e)).addMark = n, e.removeMark = s, e.setFragmentData = u, e.insertData = d, e.insertFragmentData = c, e.insertTextData = f, e.deleteBackward = n => {
             if ("line" !== n || t) r(n);
             else {
                 let t = a.DOMUtils.getLineActionRange(e, !0);
-                null != t && i.SlateTransforms.delete(e, {
+                null != t && l.SlateTransforms.delete(e, {
                     at: t
                 })
             }
@@ -31,7 +31,7 @@ function(e, t, n) {
             if ("line" !== n || t) o(n);
             else {
                 let t = a.DOMUtils.getLineActionRange(e, !1);
-                null != t && i.SlateTransforms.delete(e, {
+                null != t && l.SlateTransforms.delete(e, {
                     at: t
                 })
             }

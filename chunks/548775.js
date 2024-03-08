@@ -5,32 +5,32 @@ function(e, t, n) {
             return s
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("469563"),
+    var l = n("469563"),
         a = n("645156"),
-        s = (0, i.replaceIcon)(function(e) {
+        s = (0, l.replaceIcon)(function(e) {
             let {
                 width: t = 16,
                 height: n = 16,
-                color: i = "currentColor",
+                color: l = "currentColor",
                 className: a,
                 foreground: s
             } = e;
-            return (0, l.jsx)("svg", {
+            return (0, i.jsx)("svg", {
                 className: a,
                 width: t,
                 height: n,
                 viewBox: "0 0 16 16",
-                children: (0, l.jsxs)("g", {
+                children: (0, i.jsxs)("g", {
                     fill: "none",
                     fillRule: "evenodd",
-                    children: [(0, l.jsx)("rect", {
+                    children: [(0, i.jsx)("rect", {
                         width: "16",
                         height: "16"
-                    }), (0, l.jsx)("polygon", {
+                    }), (0, i.jsx)("polygon", {
                         className: s,
-                        fill: i,
+                        fill: l,
                         points: "12 2.32 10.513 2 4 13.68 5.487 14"
                     })]
                 })

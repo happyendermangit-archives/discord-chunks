@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return x
         }
     }), n("843762"), n("222007");
-    var l = n("298386"),
-        i = n("123225"),
+    var i = n("298386"),
+        l = n("123225"),
         a = n("679653"),
         s = n("42203"),
         r = n("923959"),
@@ -15,17 +15,17 @@ function(e, t, n) {
         d = n("200294"),
         c = n("851745"),
         f = n("406291"),
-        m = n("724210"),
-        p = n("782340");
+        p = n("724210"),
+        m = n("782340");
     let h = {
         sentinel: f.CHANNEL_SENTINEL,
-        matches: (e, t, n, l, i) => i.mentions.channel !== c.ChannelMentionMode.DENY && !e.isPrivate(),
-        queryResults(e, t, n, l, a) {
+        matches: (e, t, n, i, l) => l.mentions.channel !== c.ChannelMentionMode.DENY && !e.isPrivate(),
+        queryResults(e, t, n, i, a) {
             let s, o, d = r.GUILD_SELECTABLE_CHANNELS_KEY;
-            return n.charAt(0) === i.AutocompleterQuerySymbols.VOICE_CHANNEL && (d = r.GUILD_VOCAL_CHANNELS_KEY, n = n.substring(1)), l.forNonStringCommandOption ? s = u.default.queryApplicationCommandChannelResults({
+            return n.charAt(0) === l.AutocompleterQuerySymbols.VOICE_CHANNEL && (d = r.GUILD_VOCAL_CHANNELS_KEY, n = n.substring(1)), i.forNonStringCommandOption ? s = u.default.queryApplicationCommandChannelResults({
                 query: n,
                 channel: e,
-                channelTypes: l.allowedChannelTypes
+                channelTypes: i.allowedChannelTypes
             }) : (s = u.default.queryChannelResults({
                 query: n,
                 channel: e,
@@ -41,21 +41,21 @@ function(e, t, n) {
         renderResults(e) {
             let t, n, {
                     results: {
-                        channels: l
+                        channels: i
                     },
                     selectedIndex: a,
                     query: r,
                     options: u,
                     onHover: c,
-                    onClick: m
+                    onClick: p
                 } = e,
-                h = r.charAt(0) === i.AutocompleterQuerySymbols.VOICE_CHANNEL;
-            return h ? (t = p.default.Messages.VOICE_CHANNELS_MATCHING, n = p.default.Messages.VOICE_CHANNELS, r = r.substring(1)) : u.forNonStringCommandOption ? (t = p.default.Messages.CHANNELS_MATCHING, n = p.default.Messages.CHANNELS) : (t = p.default.Messages.TEXT_CHANNELS_MATCHING, n = p.default.Messages.TEXT_CHANNELS), (0, d.renderAutocompleteGroup)({
+                h = r.charAt(0) === l.AutocompleterQuerySymbols.VOICE_CHANNEL;
+            return h ? (t = m.default.Messages.VOICE_CHANNELS_MATCHING, n = m.default.Messages.VOICE_CHANNELS, r = r.substring(1)) : u.forNonStringCommandOption ? (t = m.default.Messages.CHANNELS_MATCHING, n = m.default.Messages.CHANNELS) : (t = m.default.Messages.TEXT_CHANNELS_MATCHING, n = m.default.Messages.TEXT_CHANNELS), (0, d.renderAutocompleteGroup)({
                 query: r,
                 selectedIndex: a,
-                autocompletes: l,
+                autocompletes: i,
                 onHover: c,
-                onClick: m,
+                onClick: p,
                 titleWithQuery: t,
                 titleWithoutQuery: n,
                 Component: o.default.Channel,
@@ -64,7 +64,7 @@ function(e, t, n) {
                     key: e.id,
                     category: s.default.getChannel(e.parent_id)
                 }),
-                getQuery: e => h ? "".concat(f.CHANNEL_SENTINEL).concat(i.AutocompleterQuerySymbols.VOICE_CHANNEL).concat(e) : "".concat(f.CHANNEL_SENTINEL).concat(e),
+                getQuery: e => h ? "".concat(f.CHANNEL_SENTINEL).concat(l.AutocompleterQuerySymbols.VOICE_CHANNEL).concat(e) : "".concat(f.CHANNEL_SENTINEL).concat(e),
                 key: "channels"
             })
         },
@@ -74,27 +74,27 @@ function(e, t, n) {
                     channels: t
                 },
                 index: n,
-                options: i
+                options: l
             } = e, s = t[n];
-            return i.insertText(function(e) {
+            return l.insertText(function(e) {
                 switch (e.type) {
-                    case l.ChannelTypes.PUBLIC_THREAD:
-                    case l.ChannelTypes.PRIVATE_THREAD:
-                    case l.ChannelTypes.ANNOUNCEMENT_THREAD:
-                    case l.ChannelTypes.GUILD_VOICE:
-                    case l.ChannelTypes.GUILD_STAGE_VOICE:
-                    case l.ChannelTypes.GUILD_CATEGORY:
+                    case i.ChannelTypes.PUBLIC_THREAD:
+                    case i.ChannelTypes.PRIVATE_THREAD:
+                    case i.ChannelTypes.ANNOUNCEMENT_THREAD:
+                    case i.ChannelTypes.GUILD_VOICE:
+                    case i.ChannelTypes.GUILD_STAGE_VOICE:
+                    case i.ChannelTypes.GUILD_CATEGORY:
                         return '#"'.concat((0, a.escapeChannelName)(e.name), '"');
                     default:
                         let t = r.default.getTextChannelNameDisambiguations(e.guild_id)[e.id];
                         return "#".concat(null != t ? t.name : e.name)
                 }
             }(s), function(e) {
-                return m.StaticChannelIds.has(e.id) ? "<id:".concat(e.id, ">") : "<#".concat(e.id, ">")
+                return p.StaticChannelIds.has(e.id) ? "<id:".concat(e.id, ">") : "<#".concat(e.id, ">")
             }(s)), {
                 type: c.AutocompleteSelectionTypes.CHANNEL
             }
         }
     };
-    var E = h
+    var x = h
 }

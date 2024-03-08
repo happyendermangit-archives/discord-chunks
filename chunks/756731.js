@@ -5,9 +5,9 @@ function(e, t, n) {
             return u
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("564594"),
+    var l = n("564594"),
         a = n("871388"),
         s = n("429928"),
         r = n("49111"),
@@ -21,10 +21,10 @@ function(e, t, n) {
             look: d,
             guildId: c,
             channelId: f,
-            source: m
+            source: p
         } = e;
         if (null == t || !(0, a.default)(t, r.ActivityFlags.PLAY) || !(0, s.default)(t)) return null;
-        let p = {
+        let m = {
             key: "play",
             className: o.button,
             size: o.buttonSize,
@@ -34,11 +34,11 @@ function(e, t, n) {
             user: n,
             fullWidth: !0
         };
-        return (0, l.jsx)(i.default, {
+        return (0, i.jsx)(l.default, {
             guildId: null != c ? c : void 0,
             channelId: f,
-            source: m,
-            ...p
+            source: p,
+            ...m
         })
     }
 }

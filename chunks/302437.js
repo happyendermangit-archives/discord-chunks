@@ -5,8 +5,8 @@ function(e, t, n) {
             return o
         }
     });
-    var l = n("974667"),
-        i = n("446674"),
+    var i = n("974667"),
+        l = n("446674"),
         a = n("206230");
 
     function s() {
@@ -19,8 +19,8 @@ function(e, t, n) {
     }
 
     function o(e, t) {
-        let n = (0, i.useStateFromStores)([a.default], () => a.default.keyboardModeEnabled);
-        return (0, l.default)({
+        let n = (0, l.useStateFromStores)([a.default], () => a.default.keyboardModeEnabled);
+        return (0, i.default)({
             id: e,
             isEnabled: n,
             orientation: t,

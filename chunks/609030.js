@@ -5,14 +5,14 @@ function(e, t, n) {
             return r
         }
     });
-    var l = n("376556"),
-        i = n("575365"),
+    var i = n("376556"),
+        l = n("575365"),
         a = n("49111"),
         s = n("782340");
 
     function r(e) {
         var t;
-        let n = null !== (t = (0, i.default)(e)) && void 0 !== t ? t : "";
+        let n = null !== (t = (0, l.default)(e)) && void 0 !== t ? t : "";
         switch (n) {
             case a.ActivityGamePlatforms.PS4:
             case a.ActivityGamePlatforms.PS5:
@@ -22,7 +22,7 @@ function(e, t, n) {
             case a.ActivityGamePlatforms.XBOX:
             case a.ActivityGamePlatforms.SAMSUNG:
                 return s.default.Messages.USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM.format({
-                    platform: l.default.get(n).name
+                    platform: i.default.get(n).name
                 });
             default:
                 return s.default.Messages.USER_ACTIVITY_HEADER_PLAYING

@@ -8,8 +8,8 @@ function(e, t, n) {
             return d
         }
     }), n("222007");
-    var l = n("884691"),
-        i = n("65597"),
+    var i = n("884691"),
+        l = n("65597"),
         a = n("305961"),
         s = n("299039"),
         r = n("235004");
@@ -20,9 +20,9 @@ function(e, t, n) {
     }
 
     function u() {
-        let e = (0, i.default)([a.default], () => a.default.getGuilds()),
-            t = (0, i.default)([r.default], () => r.default.getSounds());
-        return (0, l.useMemo)(() => o(e, t), [e, t])
+        let e = (0, l.default)([a.default], () => a.default.getGuilds()),
+            t = (0, l.default)([r.default], () => r.default.getSounds());
+        return (0, i.useMemo)(() => o(e, t), [e, t])
     }
 
     function d() {

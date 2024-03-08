@@ -14,19 +14,19 @@ function(e, t, n) {
             return c
         }
     }), n("70102");
-    var l = n("968194"),
-        i = n("773336"),
+    var i = n("968194"),
+        l = n("773336"),
         a = n("155815"),
         s = n("450484");
 
     function r(e, t, n) {
         let r;
-        !(0, i.isDesktop)() && (r = window.open("", "_blank")), (0, l.getMetadata)(e, t).then(e => n(e)).then(e => {
+        !(0, l.isDesktop)() && (r = window.open("", "_blank")), (0, i.getMetadata)(e, t).then(e => n(e)).then(e => {
             let {
                 resourceType: t,
                 resourceId: n
-            } = e, l = a.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(t, n) : s.SpotifyEndpoints.WEB_OPEN(t, n);
-            null != r ? r.location.href = l : window.open(l)
+            } = e, i = a.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(t, n) : s.SpotifyEndpoints.WEB_OPEN(t, n);
+            null != r ? r.location.href = i : window.open(i)
         }).catch(() => {
             null != r && r.close()
         })
@@ -40,12 +40,12 @@ function(e, t, n) {
         var t;
         let {
             sync_id: n,
-            metadata: l
+            metadata: i
         } = e;
         if (null == n) return;
-        let i = (0, s.getSpotifyResourceType)(null !== (t = null == l ? void 0 : l.type) && void 0 !== t ? t : s.SpotifyResourceTypes.TRACK);
-        if (null == i) return;
-        let r = a.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(i, n) : s.SpotifyEndpoints.WEB_OPEN(i, n);
+        let l = (0, s.getSpotifyResourceType)(null !== (t = null == i ? void 0 : i.type) && void 0 !== t ? t : s.SpotifyResourceTypes.TRACK);
+        if (null == l) return;
+        let r = a.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(l, n) : s.SpotifyEndpoints.WEB_OPEN(l, n);
         window.open(r)
     }
 
@@ -53,11 +53,11 @@ function(e, t, n) {
         r(e, t, t => {
             var n;
             let {
-                album_id: l
-            } = t, i = (0, s.getSpotifyResourceType)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === s.SpotifyResourceTypes.EPISODE;
+                album_id: i
+            } = t, l = (0, s.getSpotifyResourceType)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === s.SpotifyResourceTypes.EPISODE;
             return {
-                resourceType: i ? s.SpotifyResourceTypes.SHOW : s.SpotifyResourceTypes.ALBUM,
-                resourceId: l
+                resourceType: l ? s.SpotifyResourceTypes.SHOW : s.SpotifyResourceTypes.ALBUM,
+                resourceId: i
             }
         })
     }
@@ -68,11 +68,11 @@ function(e, t, n) {
                 artist_ids: t
             } = e;
             if (null == t) throw Error("no artist ids in metadata");
-            let l = t[n];
-            if (null == l) throw Error("invalid artist index");
+            let i = t[n];
+            if (null == i) throw Error("invalid artist index");
             return {
                 resourceType: s.SpotifyResourceTypes.ARTIST,
-                resourceId: l
+                resourceId: i
             }
         })
     }

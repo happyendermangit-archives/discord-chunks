@@ -5,8 +5,8 @@ function(e, t, n) {
             return f
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("77078"),
@@ -20,18 +20,18 @@ function(e, t, n) {
             onPlay: t,
             className: n,
             inactive: a
-        } = e, f = i.useRef(null), m = (0, l.jsx)("div", {
+        } = e, f = l.useRef(null), p = (0, i.jsx)("div", {
             className: c.iconWrapper,
             ref: f,
-            children: (0, l.jsx)(u.default, {
+            children: (0, i.jsx)(u.default, {
                 className: s(c.icon)
             })
         });
-        return (0, l.jsx)(o.MessagesInteractionContext.Consumer, {
-            children: e => a || null == t ? (0, l.jsx)("div", {
+        return (0, i.jsx)(o.MessagesInteractionContext.Consumer, {
+            children: e => a || null == t ? (0, i.jsx)("div", {
                 className: c.cover,
-                children: m
-            }) : (0, l.jsx)(r.Clickable, {
+                children: p
+            }) : (0, i.jsx)(r.Clickable, {
                 className: s(n, c.cover, {
                     [c.active]: !e.disableInteractions
                 }),
@@ -41,7 +41,7 @@ function(e, t, n) {
                 focusProps: {
                     ringTarget: f
                 },
-                children: m
+                children: p
             })
         })
     }

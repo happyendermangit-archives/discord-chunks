@@ -8,11 +8,11 @@ function(e, t, n) {
             return f
         },
         findCommandOptionAutocompleteType: function() {
-            return m
+            return p
         }
     }), n("222007"), n("70102");
-    var l = n("798609"),
-        i = n("389153"),
+    var i = n("798609"),
+        l = n("389153"),
         a = n("149022"),
         s = n("558986"),
         r = n("237700"),
@@ -29,17 +29,17 @@ function(e, t, n) {
             canMentionEveryone: d,
             canMentionClyde: c = !1,
             useNewSlashCommands: f,
-            canOnlyUseTextCommands: m,
-            canSendStickers: p,
+            canOnlyUseTextCommands: p,
+            canSendStickers: m,
             hideMentionDescription: h,
-            hidePersonalInformation: E,
-            type: g,
-            emojiIntention: S,
-            editorRef: C,
-            onSendMessage: T,
-            onSendSticker: v,
+            hidePersonalInformation: x,
+            type: E,
+            emojiIntention: y,
+            editorRef: g,
+            onSendMessage: S,
+            onSendSticker: C,
             setValue: I
-        } = e, _ = {
+        } = e, T = {
             mentions: {
                 channel: o.ChannelMentionMode.DENY,
                 global: o.GlobalMentionMode.DENY,
@@ -48,75 +48,75 @@ function(e, t, n) {
                 clyde: o.ClydeMentionMode.DENY
             },
             commands: o.CommandMode.DISABLED,
-            allowStickers: !0 === p,
-            forNonStringCommandOption: null != n && n.type !== l.ApplicationCommandOptionType.STRING,
+            allowStickers: !0 === m,
+            forNonStringCommandOption: null != n && n.type !== i.ApplicationCommandOptionType.STRING,
             hideMentionDescription: !0 === h,
-            hidePersonalInformation: !0 === E,
-            chatInputType: g,
-            emojiIntention: S,
-            sendMessage: T,
-            sendSticker: v,
+            hidePersonalInformation: !0 === x,
+            chatInputType: E,
+            emojiIntention: y,
+            sendMessage: S,
+            sendSticker: C,
             insertText: (e, t) => {
                 var n;
-                null === (n = C.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
+                null === (n = g.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
             },
             replaceText: (e, t) => {
                 I(e, null != t ? t : (0, a.toRichValue)(e))
             },
             getCommandOptionValues: () => {
                 var e;
-                return null === (e = C.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
+                return null === (e = g.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
             }
         };
         if (null != n) {
-            let e = (0, i.getApplicationCommandOptionQueryOptions)(n);
-            e.canMentionChannels && (_.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), e.canMentionEveryone && (_.mentions.global = e.canMentionHere ? o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE : o.GlobalMentionMode.ALLOW_EVERYONE), e.canMentionRoles && (_.mentions.role = e.canMentionNonMentionableRoles ? o.RoleMentionMode.ALLOW_ALL : o.RoleMentionMode.ALLOW_MENTIONABLE), e.canMentionUsers && (_.mentions.user = e.canMentionAnyGuildUser ? o.UserMentionMode.ALLOW_GUILD : o.UserMentionMode.ALLOW_CHANNEL), _.hideMentionDescription = !0
-        } else u && (_.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), r && (_.mentions.role = o.RoleMentionMode.ALLOW_MENTIONABLE), s && (_.mentions.user = o.UserMentionMode.ALLOW_CHANNEL), d && (_.mentions.global = o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), c && (_.mentions.clyde = o.ClydeMentionMode.ALLOW);
-        return (null === (t = g.commands) || void 0 === t ? void 0 : t.enabled) && (f ? _.commands = m ? o.CommandMode.NEW_TEXT_ONLY : o.CommandMode.NEW : _.commands = o.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (_.allowedChannelTypes = n.channelTypes), _
+            let e = (0, l.getApplicationCommandOptionQueryOptions)(n);
+            e.canMentionChannels && (T.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), e.canMentionEveryone && (T.mentions.global = e.canMentionHere ? o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE : o.GlobalMentionMode.ALLOW_EVERYONE), e.canMentionRoles && (T.mentions.role = e.canMentionNonMentionableRoles ? o.RoleMentionMode.ALLOW_ALL : o.RoleMentionMode.ALLOW_MENTIONABLE), e.canMentionUsers && (T.mentions.user = e.canMentionAnyGuildUser ? o.UserMentionMode.ALLOW_GUILD : o.UserMentionMode.ALLOW_CHANNEL), T.hideMentionDescription = !0
+        } else u && (T.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), r && (T.mentions.role = o.RoleMentionMode.ALLOW_MENTIONABLE), s && (T.mentions.user = o.UserMentionMode.ALLOW_CHANNEL), d && (T.mentions.global = o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), c && (T.mentions.clyde = o.ClydeMentionMode.ALLOW);
+        return (null === (t = E.commands) || void 0 === t ? void 0 : t.enabled) && (f ? T.commands = p ? o.CommandMode.NEW_TEXT_ONLY : o.CommandMode.NEW : T.commands = o.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (T.allowedChannelTypes = n.channelTypes), T
     }
 
     function c(e) {
         let {
             type: t,
             channel: n,
-            guild: l,
-            query: i,
+            guild: i,
+            query: l,
             isAtStart: a,
             options: s
         } = e, o = r.AUTOCOMPLETE_OPTIONS[t];
         if (null != o.sentinel) {
-            if (!i.startsWith(o.sentinel)) return !1;
-            i = i.substring(o.sentinel.length)
+            if (!l.startsWith(o.sentinel)) return !1;
+            l = l.substring(o.sentinel.length)
         }
-        return !!(null == o.matches || o.matches(n, l, i, a, s)) || !1
+        return !!(null == o.matches || o.matches(n, i, l, a, s)) || !1
     }
 
     function f(e) {
         let {
             channel: t,
             guild: n,
-            options: l,
-            currentWord: i,
+            options: i,
+            currentWord: l,
             currentWordIsAtStart: a,
             textValue: d,
             optionText: f
-        } = e, m = null;
+        } = e, p = null;
         for (let e of r.AUTOCOMPLETE_PRIORITY) {
-            var p, h, E, g, S, C;
-            let T = r.AUTOCOMPLETE_OPTIONS[e];
+            var m, h, x, E, y, g;
+            let S = r.AUTOCOMPLETE_OPTIONS[e];
             if (e === o.AutocompleteOptionTypes.GIFS || e === o.AutocompleteOptionTypes.CHOICES) {
-                if (l.commands === o.CommandMode.OLD_BUILT_INS) {
+                if (i.commands === o.CommandMode.OLD_BUILT_INS) {
                     if (c({
                             type: e,
                             channel: t,
                             guild: n,
                             query: d,
                             isAtStart: !1,
-                            options: l
+                            options: i
                         })) {
-                        m = {
+                        p = {
                             type: e,
-                            typeInfo: T,
+                            typeInfo: S,
                             query: d
                         };
                         break
@@ -127,25 +127,25 @@ function(e, t, n) {
                         guild: n,
                         query: f,
                         isAtStart: !1,
-                        options: l
+                        options: i
                     })) return {
                     type: e,
-                    typeInfo: T,
+                    typeInfo: S,
                     query: f
                 }
-            } else if (e === o.AutocompleteOptionTypes.COMMANDS && l.commands !== o.CommandMode.OLD_BUILT_INS) {
+            } else if (e === o.AutocompleteOptionTypes.COMMANDS && i.commands !== o.CommandMode.OLD_BUILT_INS) {
                 if (c({
                         type: e,
                         channel: t,
                         guild: n,
                         query: d,
                         isAtStart: !0,
-                        options: l
+                        options: i
                     })) {
-                    m = {
+                    p = {
                         type: e,
-                        typeInfo: T,
-                        query: d.substring(null !== (h = null === (p = T.sentinel) || void 0 === p ? void 0 : p.length) && void 0 !== h ? h : 0)
+                        typeInfo: S,
+                        query: d.substring(null !== (h = null === (m = S.sentinel) || void 0 === m ? void 0 : m.length) && void 0 !== h ? h : 0)
                     };
                     break
                 }
@@ -156,73 +156,73 @@ function(e, t, n) {
                         guild: n,
                         query: d,
                         isAtStart: a,
-                        options: l
+                        options: i
                     })) {
-                    m = {
+                    p = {
                         type: e,
-                        typeInfo: T,
+                        typeInfo: S,
                         query: d
                     };
                     break
                 }
             } else if (e === o.AutocompleteOptionTypes.EMOJIS_AND_STICKERS) {
-                if (null != i && i.length > 0 && (0, s.initiateEmojiInteraction)(u.EmojiInteractionPoint.AutocompleteTyped), null != i && c({
+                if (null != l && l.length > 0 && (0, s.initiateEmojiInteraction)(u.EmojiInteractionPoint.AutocompleteTyped), null != l && c({
                         type: e,
                         channel: t,
                         guild: n,
-                        query: i,
+                        query: l,
                         isAtStart: a,
-                        options: l
+                        options: i
                     })) {
-                    m = {
+                    p = {
                         type: e,
-                        typeInfo: T,
-                        query: i.substring(null !== (g = null === (E = T.sentinel) || void 0 === E ? void 0 : E.length) && void 0 !== g ? g : 0)
+                        typeInfo: S,
+                        query: l.substring(null !== (E = null === (x = S.sentinel) || void 0 === x ? void 0 : x.length) && void 0 !== E ? E : 0)
                     };
                     break
                 }
-            } else if (null != i && c({
+            } else if (null != l && c({
                     type: e,
                     channel: t,
                     guild: n,
-                    query: i,
+                    query: l,
                     isAtStart: a,
-                    options: l
+                    options: i
                 })) {
-                m = {
+                p = {
                     type: e,
-                    typeInfo: T,
-                    query: i.substring(null !== (C = null === (S = T.sentinel) || void 0 === S ? void 0 : S.length) && void 0 !== C ? C : 0)
+                    typeInfo: S,
+                    query: l.substring(null !== (g = null === (y = S.sentinel) || void 0 === y ? void 0 : y.length) && void 0 !== g ? g : 0)
                 };
                 break
             }
         }
-        return null == m ? null : (m.query = m.query.toLocaleLowerCase(), m)
+        return null == p ? null : (p.query = p.query.toLocaleLowerCase(), p)
     }
 
-    function m(e, t) {
+    function p(e, t) {
         let n;
         if (null == t || null == e) return null;
         if (null != e.choices || e.autocomplete) n = o.AutocompleteOptionTypes.CHOICES;
         else switch (e.type) {
-            case l.ApplicationCommandOptionType.BOOLEAN:
+            case i.ApplicationCommandOptionType.BOOLEAN:
                 n = o.AutocompleteOptionTypes.CHOICES;
                 break;
-            case l.ApplicationCommandOptionType.CHANNEL:
+            case i.ApplicationCommandOptionType.CHANNEL:
                 n = o.AutocompleteOptionTypes.CHANNELS;
                 break;
-            case l.ApplicationCommandOptionType.ROLE:
-            case l.ApplicationCommandOptionType.USER:
-            case l.ApplicationCommandOptionType.MENTIONABLE:
+            case i.ApplicationCommandOptionType.ROLE:
+            case i.ApplicationCommandOptionType.USER:
+            case i.ApplicationCommandOptionType.MENTIONABLE:
                 n = o.AutocompleteOptionTypes.MENTIONS;
                 break;
             default:
                 return null
         }
-        let i = r.AUTOCOMPLETE_OPTIONS[n];
+        let l = r.AUTOCOMPLETE_OPTIONS[n];
         return {
             type: n,
-            typeInfo: i,
+            typeInfo: l,
             query: t
         }
     }

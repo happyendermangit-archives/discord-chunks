@@ -1,14 +1,14 @@
 function(e, t, n) {
     "use strict";
-    var l, i;
+    var i, l;
     n.r(t), n.d(t, {
         MAX_CHAR_COUNT: function() {
             return a
         },
         AtomicReactorInteractionTypes: function() {
-            return l
+            return i
         }
     });
     let a = 200;
-    (i = l || (l = {})).ReactBegin = "React Begin", i.ReplyBegin = "Reply Begin", i.ReactSubmit = "React Submit", i.ReplySubmit = "Reply Submit", i.ReactSend = "React Send", i.ReplySend = "Reply Send"
+    (l = i || (i = {})).ReactBegin = "React Begin", l.ReplyBegin = "Reply Begin", l.ReactSubmit = "React Submit", l.ReplySubmit = "Reply Submit", l.ReactSend = "React Send", l.ReplySend = "Reply Send"
 }

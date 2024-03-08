@@ -15,8 +15,8 @@ function(e, t, i) {
         a = i("627445"),
         u = i.n(a),
         c = i("907002"),
-        d = i("446674"),
-        o = i("290381"),
+        o = i("446674"),
+        d = i("290381"),
         f = i("77078"),
         S = i("206230"),
         m = i("407063"),
@@ -90,14 +90,14 @@ function(e, t, i) {
                 sticker: l,
                 fileUri: a,
                 assetData: c,
-                isFocused: d,
-                className: o,
+                isFocused: o,
+                className: d,
                 maskAsset: f,
                 positionRef: S,
                 withLoadingIndicator: h,
                 onError: p
             } = e, E = n.useRef(null), I = n.useRef(null), [k, y] = n.useState(!0), [_, R] = n.useState(!1), A = n.useRef(!1);
-            A.current = t && d;
+            A.current = t && o;
             let P = null == a ? (0, C.getStickerAssetUrl)(l) : a;
             return (u(null != P, "Unable to determine sticker asset URL. Sticker ID: ".concat(l.id)), n.useEffect(() => {
                 if (null == E.current || null == P) return;
@@ -128,10 +128,10 @@ function(e, t, i) {
             }, [P, s, l.id, c, p]), n.useEffect(() => {
                 var e;
                 let i;
-                !t && (i = 0), null === (e = I.current) || void 0 === e || e.setState(t && d, i)
-            }, [l, t, d]), null == P) ? null : (0, r.jsx)("div", {
+                !t && (i = 0), null === (e = I.current) || void 0 === e || e.setState(t && o, i)
+            }, [l, t, o]), null == P) ? null : (0, r.jsx)("div", {
                 role: "img",
-                className: o,
+                className: d,
                 "aria-label": _ ? v.default.Messages.ERROR_LOADING_STICKER : L(l),
                 ref: S,
                 children: (0, r.jsx)(x, {
@@ -155,7 +155,7 @@ function(e, t, i) {
                 size: a,
                 className: u,
                 maskAsset: c,
-                positionRef: d,
+                positionRef: o,
                 withLoadingIndicator: f,
                 fileUri: S
             } = e, [m, h] = n.useState(!1), [p, E] = n.useState(!0), [I, k] = n.useState(!1), v = n.useRef(null), _ = n.useRef(null), R = null != S ? S : (0, C.getStickerAssetUrl)(i, {
@@ -176,13 +176,13 @@ function(e, t, i) {
             }, []), n.useLayoutEffect(() => {
                 var e;
                 (null === (e = _.current) || void 0 === e ? void 0 : e.complete) === !0 && E(!1)
-            }, []), null == R) ? null : (0, r.jsx)(o.VisibilitySensor, {
+            }, []), null == R) ? null : (0, r.jsx)(d.VisibilitySensor, {
                 ref: v,
                 onChange: h,
                 threshold: .7,
                 children: (0, r.jsx)("div", {
                     className: l(u, g.pngImageWrapper),
-                    ref: d,
+                    ref: o,
                     children: (0, r.jsx)(x, {
                         hasError: I,
                         isLoading: p,
@@ -211,8 +211,8 @@ function(e, t, i) {
                 isInteracting: l,
                 positionRef: a,
                 size: u,
-                sticker: o
-            } = e, m = (0, d.useStateFromStores)([S.default], () => S.default.useReducedMotion), h = n.useRef(null), E = {
+                sticker: d
+            } = e, m = (0, o.useStateFromStores)([S.default], () => S.default.useReducedMotion), h = n.useRef(null), E = {
                 transform: "scale(".concat(m ? 1 : 1 / i, ")"),
                 opacity: 0
             }, I = (0, c.useTransition)(l, {
@@ -247,7 +247,7 @@ function(e, t, i) {
                             enlargeOnInteraction: !1,
                             isInteracting: l,
                             maskAsset: !1,
-                            sticker: o,
+                            sticker: d,
                             size: Math.round(u * i),
                             withLoadingIndicator: !1
                         })
@@ -257,7 +257,7 @@ function(e, t, i) {
                         children: (0, r.jsx)(f.Text, {
                             variant: "text-sm/medium",
                             className: g.overlayLabel,
-                            children: o.name
+                            children: d.name
                         })
                     })]
                 })
@@ -272,22 +272,22 @@ function(e, t, i) {
                 enlargeScaleFactor: a = 1.55,
                 maskAsset: u = !1,
                 size: c,
-                sticker: d,
-                className: o,
+                sticker: o,
+                className: d,
                 withLoadingIndicator: f,
                 assetData: S,
                 fileUri: m,
                 onError: h
             } = e, p = (0, E.useIsWindowFocused)(), C = (0, I.useShouldAnimateSticker)(t) && !i, v = n.useRef(null);
-            if (null == d) return null;
-            let g = d.format_type === k.StickerFormat.LOTTIE ? A : P;
+            if (null == o) return null;
+            let g = o.format_type === k.StickerFormat.LOTTIE ? A : P;
             return (0, r.jsxs)(n.Fragment, {
                 children: [(0, r.jsx)(g, {
                     shouldAnimate: C,
                     isFocused: p,
                     size: c,
-                    sticker: d,
-                    className: o,
+                    sticker: o,
+                    className: d,
                     maskAsset: u,
                     positionRef: v,
                     withLoadingIndicator: f,
@@ -301,9 +301,9 @@ function(e, t, i) {
                     isInteracting: t,
                     positionRef: v,
                     size: c,
-                    sticker: d
+                    sticker: o
                 })]
-            }, "".concat(d.id, ",").concat(c))
+            }, "".concat(o.id, ",").concat(c))
         };
     var M = U
 }

@@ -5,9 +5,9 @@ function(e, t, n) {
             return c
         }
     }), n("424973");
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("383018"),
+    var l = n("383018"),
         a = n("501536"),
         s = n("200294"),
         r = n("851745"),
@@ -18,13 +18,13 @@ function(e, t, n) {
             }
         },
         d = {
-            stores: [i.default],
+            stores: [l.default],
             focusMode: r.FocusMode.AUTO_WHEN_FILTERED,
-            matches: (e, t, n, l, a) => !(l || null == i.default.getActiveCommand(e.id) || null != i.default.getActiveOption(e.id)),
-            queryResults(e, t, n, l, a) {
-                let s = i.default.getActiveCommand(e.id);
+            matches: (e, t, n, i, a) => !(i || null == l.default.getActiveCommand(e.id) || null != l.default.getActiveOption(e.id)),
+            queryResults(e, t, n, i, a) {
+                let s = l.default.getActiveCommand(e.id);
                 if ((null == s ? void 0 : s.options) == null) return u;
-                let r = i.default.getOptionStates(e.id),
+                let r = l.default.getOptionStates(e.id),
                     o = s.options.filter(e => {
                         var t;
                         return e.displayName.startsWith(n) && !(null === (t = r[e.name]) || void 0 === t ? void 0 : t.hasValue)
@@ -41,7 +41,7 @@ function(e, t, n) {
                         commandOptions: t
                     },
                     selectedIndex: n,
-                    query: i,
+                    query: l,
                     onHover: r,
                     onClick: u
                 } = e, d = [], c = [];
@@ -49,7 +49,7 @@ function(e, t, n) {
                     (e.required ? d : c).push(e)
                 });
                 let f = d.length > 0 ? (0, s.renderAutocompleteGroup)({
-                        query: i,
+                        query: l,
                         selectedIndex: n,
                         autocompletes: d,
                         onHover: r,
@@ -65,8 +65,8 @@ function(e, t, n) {
                         getQuery: e => e,
                         key: "required-options"
                     }) : null,
-                    m = c.length > 0 ? (0, s.renderAutocompleteGroup)({
-                        query: i,
+                    p = c.length > 0 ? (0, s.renderAutocompleteGroup)({
+                        query: l,
                         selectedIndex: n,
                         autocompletes: c,
                         onHover: r,
@@ -83,8 +83,8 @@ function(e, t, n) {
                         key: "optional-options",
                         indexOffset: d.length
                     }) : null;
-                return (0, l.jsxs)(l.Fragment, {
-                    children: [f, m]
+                return (0, i.jsxs)(i.Fragment, {
+                    children: [f, p]
                 })
             },
             onSelect(e) {
@@ -93,11 +93,11 @@ function(e, t, n) {
                         commandOptions: t
                     },
                     index: n,
-                    options: l
-                } = e, i = t[n];
-                return l.insertText(function(e) {
+                    options: i
+                } = e, l = t[n];
+                return i.insertText(function(e) {
                     return "".concat(e.displayName, ":")
-                }(i)), {
+                }(l)), {
                     type: r.AutocompleteSelectionTypes.COMMAND_OPTION
                 }
             }

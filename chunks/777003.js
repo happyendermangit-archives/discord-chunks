@@ -5,21 +5,21 @@ function(e, t, n) {
             return r
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("994468");
 
     function r(e) {
         let {
             children: t,
             lastSection: n = !1,
-            className: i,
+            className: l,
             ...r
         } = e;
-        return (0, l.jsx)("div", {
-            className: a(s.section, i, {
+        return (0, i.jsx)("div", {
+            className: a(s.section, l, {
                 [s.lastSection]: n
             }),
             ...r,

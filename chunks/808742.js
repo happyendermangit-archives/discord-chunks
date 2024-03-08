@@ -5,14 +5,14 @@ function(e, t, n) {
             return f
         },
         getHangStatusDetails: function() {
-            return m
+            return p
         },
         getHangStatusText: function() {
-            return p
+            return m
         }
     });
-    var l = n("49111"),
-        i = n("782340"),
+    var i = n("49111"),
+        l = n("782340"),
         a = n("65833"),
         s = n("270664"),
         r = n("763388"),
@@ -21,50 +21,50 @@ function(e, t, n) {
         d = n("908332"),
         c = n("850390");
     let f = () => ({
-            [l.HangStatusTypes.CHILLING]: {
-                title: i.default.Messages.STATUS_CHILLING,
+            [i.HangStatusTypes.CHILLING]: {
+                title: l.default.Messages.STATUS_CHILLING,
                 icon: s,
                 color: "#567C7E"
             },
-            [l.HangStatusTypes.GAMING]: {
-                title: i.default.Messages.STATUS_GAMING,
+            [i.HangStatusTypes.GAMING]: {
+                title: l.default.Messages.STATUS_GAMING,
                 icon: r,
                 color: "#685F8C"
             },
-            [l.HangStatusTypes.FOCUSING]: {
-                title: i.default.Messages.STATUS_FOCUSING,
+            [i.HangStatusTypes.FOCUSING]: {
+                title: l.default.Messages.STATUS_FOCUSING,
                 icon: u,
                 color: "#7F6956"
             },
-            [l.HangStatusTypes.BRB]: {
-                title: i.default.Messages.STATUS_BRB,
+            [i.HangStatusTypes.BRB]: {
+                title: l.default.Messages.STATUS_BRB,
                 icon: a,
                 color: "#76567E"
             },
-            [l.HangStatusTypes.EATING]: {
-                title: i.default.Messages.STATUS_EATING,
+            [i.HangStatusTypes.EATING]: {
+                title: l.default.Messages.STATUS_EATING,
                 icon: o,
                 color: "#717B54"
             },
-            [l.HangStatusTypes.IN_TRANSIT]: {
-                title: i.default.Messages.STATUS_IN_TRANSIT,
+            [i.HangStatusTypes.IN_TRANSIT]: {
+                title: l.default.Messages.STATUS_IN_TRANSIT,
                 icon: d,
                 color: "#56697F"
             },
-            [l.HangStatusTypes.WATCHING]: {
-                title: i.default.Messages.STATUS_WATCHING,
+            [i.HangStatusTypes.WATCHING]: {
+                title: l.default.Messages.STATUS_WATCHING,
                 icon: c,
                 color: "#7C5571"
             }
         }),
-        m = e => {
-            if ((null == e ? void 0 : e.type) !== l.ActivityTypes.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
-            let t = e.state;
-            return t === l.HangStatusTypes.CUSTOM ? null : f()[t]
-        },
         p = e => {
+            if ((null == e ? void 0 : e.type) !== i.ActivityTypes.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
+            let t = e.state;
+            return t === i.HangStatusTypes.CUSTOM ? null : f()[t]
+        },
+        m = e => {
             var t;
             let n = (null == e ? void 0 : e.state) != null ? e.state : null;
-            return n === l.HangStatusTypes.CUSTOM ? null == e ? void 0 : e.details : null === (t = m(e)) || void 0 === t ? void 0 : t.title
+            return n === i.HangStatusTypes.CUSTOM ? null == e ? void 0 : e.details : null === (t = p(e)) || void 0 === t ? void 0 : t.title
         }
 }

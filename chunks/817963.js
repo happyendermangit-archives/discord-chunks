@@ -5,7 +5,7 @@ function(e, t, n) {
             return v
         },
         getManageResourcePermissions: function() {
-            return C
+            return E
         }
     }), n("222007");
     var i = n("884691"),
@@ -13,8 +13,8 @@ function(e, t, n) {
         r = n("446674"),
         l = n("813006");
     n("923959");
-    var o = n("957255"),
-        a = n("697218");
+    var a = n("957255"),
+        o = n("697218");
     n("991170");
     var u = n("270161"),
         c = n("843455");
@@ -43,32 +43,32 @@ function(e, t, n) {
             return e.isGuildStageVoice() ? t = u.CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS : e.isGuildVoice() && (t = u.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS), [s.default.combine(t, c.Permissions.CREATE_EVENTS), s.default.combine(t, c.Permissions.MANAGE_EVENTS)]
         },
         v = e => {
-            let [t, n] = e instanceof l.default ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS] : h(e), [s, u, v, C] = (0, r.useStateFromStoresArray)([o.default], () => [o.default.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e), o.default.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS, e), o.default.can(t, e), o.default.can(n, e)]), E = (0, r.useStateFromStores)([a.default], () => a.default.getCurrentUser()), p = i.useCallback(e => f(e, E, u, s), [s, u, E]), _ = i.useCallback(e => f(e, E, C, v), [C, v, E]);
+            let [t, n] = e instanceof l.default ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS] : h(e), [s, u, v, E] = (0, r.useStateFromStoresArray)([a.default], () => [a.default.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e), a.default.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS, e), a.default.can(t, e), a.default.can(n, e)]), C = (0, r.useStateFromStores)([o.default], () => o.default.getCurrentUser()), p = i.useCallback(e => f(e, C, u, s), [s, u, C]), m = i.useCallback(e => f(e, C, E, v), [E, v, C]);
             return null == e ? d : {
                 canCreateExpressions: s,
                 canCreateGuildEvent: v,
                 canManageAllExpressions: u,
-                canManageAllEvents: C,
+                canManageAllEvents: E,
                 canManageGuildExpression: p,
-                canManageGuildEvent: _
+                canManageGuildEvent: m
             }
         },
-        C = function(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.default,
-                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.default,
+        E = function(e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default,
+                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
                 [i, s] = e instanceof l.default ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS] : h(e),
                 r = t.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e),
                 u = t.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS, e),
                 v = t.can(i, e),
-                C = t.can(s, e),
-                E = n.getCurrentUser();
+                E = t.can(s, e),
+                C = n.getCurrentUser();
             return null == e ? d : {
                 canCreateExpressions: r,
                 canCreateGuildEvent: v,
                 canManageAllExpressions: u,
-                canManageAllEvents: C,
-                canManageGuildExpression: e => f(e, E, u, r),
-                canManageGuildEvent: e => f(e, E, C, v)
+                canManageAllEvents: E,
+                canManageGuildExpression: e => f(e, C, u, r),
+                canManageGuildEvent: e => f(e, C, E, v)
             }
         }
 }

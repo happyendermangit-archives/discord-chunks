@@ -5,8 +5,8 @@ function(e, t, n) {
             return a
         }
     }), n("70102");
-    var l = n("103603"),
-        i = n("695412"),
+    var i = n("103603"),
+        l = n("695412"),
         a = class e {
             toDataUrl(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "png",
@@ -20,14 +20,14 @@ function(e, t, n) {
                     quality: s = 1,
                     fileName: r
                 } = t;
-                if (n === i.DiscordCanvasExporterOutputFormats.Base64) return this.toDataUrl(e, a, s);
-                if (n === i.DiscordCanvasExporterOutputFormats.Blob) {
+                if (n === l.DiscordCanvasExporterOutputFormats.Base64) return this.toDataUrl(e, a, s);
+                if (n === l.DiscordCanvasExporterOutputFormats.Blob) {
                     let t = this.toDataUrl(e, a, s);
-                    return (0, l.dataUrlToBlob)(t)
+                    return (0, i.dataUrlToBlob)(t)
                 }
-                if (n === i.DiscordCanvasExporterOutputFormats.File) {
+                if (n === l.DiscordCanvasExporterOutputFormats.File) {
                     let t = this.toDataUrl(e, a, s);
-                    return await (0, l.dataUrlToFile)(t, r, "image/png")
+                    return await (0, i.dataUrlToFile)(t, r, "image/png")
                 }
                 throw Error("DiscordCanvas: ".concat(n, " is not a valid export format."))
             }

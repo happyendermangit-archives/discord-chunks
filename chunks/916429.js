@@ -8,11 +8,11 @@ function(e, t, n) {
             return h
         },
         toggleBlockStyle: function() {
-            return E
+            return x
         }
     }), n("222007");
-    var l = n("627445"),
-        i = n.n(l),
+    var i = n("627445"),
+        l = n.n(i),
         a = n("83800"),
         s = n("939563"),
         r = n("385887");
@@ -31,74 +31,74 @@ function(e, t, n) {
             before: {},
             after: {}
         };
-        let l = c(e, t),
-            i = c(e, n);
-        for (let e in l) !(e in i) && delete l[e];
+        let i = c(e, t),
+            l = c(e, n);
         for (let e in i) !(e in l) && delete i[e];
+        for (let e in l) !(e in i) && delete l[e];
         return {
-            before: l,
-            after: i
+            before: i,
+            after: l
         }
     }
 
     function c(e, t) {
         let [n] = r.EditorUtils.node(e, t.path);
         if (!r.TextUtils.isText(n)) return {};
-        let l = n.text,
-            i = t.offset;
-        for (let e = i - 1; e >= 0 && o.has(l.charAt(e)); e--) i--;
+        let i = n.text,
+            l = t.offset;
+        for (let e = l - 1; e >= 0 && o.has(i.charAt(e)); e--) l--;
         let a = t.offset;
-        for (let e = a; e < l.length && o.has(l.charAt(e)); e++) a++;
-        let s = l.substring(i, a),
+        for (let e = a; e < i.length && o.has(i.charAt(e)); e++) a++;
+        let s = i.substring(l, a),
             u = {};
-        return m({
+        return p({
             result: u,
             text: s,
-            startIndex: i,
+            startIndex: l,
             syntax: "***",
             type1: "italics",
             type2: "bold"
-        }), m({
+        }), p({
             result: u,
             text: s,
-            startIndex: i,
+            startIndex: l,
             syntax: "___",
             type1: "italics",
             type2: "underline"
-        }), f(u, s, i, "**", "bold"), f(u, s, i, "*", "italics"), f(u, s, i, "_", "italics"), f(u, s, i, "__", "underline"), f(u, s, i, "`", "inlineCode"), f(u, s, i, "~~", "strikethrough"), f(u, s, i, "||", "spoiler"), u
+        }), f(u, s, l, "**", "bold"), f(u, s, l, "*", "italics"), f(u, s, l, "_", "italics"), f(u, s, l, "__", "underline"), f(u, s, l, "`", "inlineCode"), f(u, s, l, "~~", "strikethrough"), f(u, s, l, "||", "spoiler"), u
     }
 
-    function f(e, t, n, l, i) {
-        let a = p(t, l);
-        a >= 0 && (e[i] = {
-            chars: l,
+    function f(e, t, n, i, l) {
+        let a = m(t, i);
+        a >= 0 && (e[l] = {
+            chars: i,
             location: n + a
         })
     }
 
-    function m(e) {
+    function p(e) {
         let {
             result: t,
             text: n,
-            startIndex: l,
-            syntax: i,
+            startIndex: i,
+            syntax: l,
             type1: a,
             type2: s
-        } = e, r = p(n, i);
+        } = e, r = m(n, l);
         r >= 0 && (t[a] = {
-            chars: i.substring(0, 1),
-            location: r + l
+            chars: l.substring(0, 1),
+            location: r + i
         }, t[s] = {
-            chars: i.substring(1),
-            location: r + l + 1
+            chars: l.substring(1),
+            location: r + i + 1
         })
     }
 
-    function p(e, t) {
+    function m(e, t) {
         let n = e.indexOf(t);
         if (n >= 0) {
-            let l = t.charAt(0);
-            if (n > 0 && e.charAt(n - 1) === l || n < e.length - 1 && e.charAt(n + t.length) === l) return -1
+            let i = t.charAt(0);
+            if (n > 0 && e.charAt(n - 1) === i || n < e.length - 1 && e.charAt(n + t.length) === i) return -1
         }
         return n
     }
@@ -106,55 +106,55 @@ function(e, t, n) {
     function h(e, t) {
         a.HistoryUtils.withSingleEntry(e, () => {
             r.EditorUtils.withoutNormalizing(e, () => {
-                i(null != e.selection, "Editor has no selection");
-                let [n, l] = r.RangeUtils.edges(e.selection), a = d(e, n, l), o = a.before[t], c = a.after[t], f = r.EditorUtils.node(e, n.path), m = r.EditorUtils.node(e, l.path);
-                if (null == f || null == m || !r.TextUtils.isText(f[0]) || !r.TextUtils.isText(m[0])) return;
-                let p = r.PathUtils.equals(f[1], m[1]);
+                l(null != e.selection, "Editor has no selection");
+                let [n, i] = r.RangeUtils.edges(e.selection), a = d(e, n, i), o = a.before[t], c = a.after[t], f = r.EditorUtils.node(e, n.path), p = r.EditorUtils.node(e, i.path);
+                if (null == f || null == p || !r.TextUtils.isText(f[0]) || !r.TextUtils.isText(p[0])) return;
+                let m = r.PathUtils.equals(f[1], p[1]);
                 if (null != o && null != c) {
                     let t = {
                             path: n.path,
                             offset: o.location
                         },
-                        i = {
-                            path: l.path,
+                        l = {
+                            path: i.path,
                             offset: c.location
                         };
                     s.SlateTransforms.delete(e, {
-                        at: i,
+                        at: l,
                         distance: c.chars.length
                     }), s.SlateTransforms.delete(e, {
                         at: t,
                         distance: o.chars.length
                     });
                     let a = n.offset,
-                        u = l.offset;
-                    !r.PointUtils.isBefore(n, t) && (a -= o.chars.length), p && !r.PointUtils.isBefore(l, t) && (u -= o.chars.length), r.PointUtils.isAfter(l, i) && (u -= c.chars.length), s.SlateTransforms.select(e, {
+                        u = i.offset;
+                    !r.PointUtils.isBefore(n, t) && (a -= o.chars.length), m && !r.PointUtils.isBefore(i, t) && (u -= o.chars.length), r.PointUtils.isAfter(i, l) && (u -= c.chars.length), s.SlateTransforms.select(e, {
                         anchor: {
                             path: n.path,
                             offset: Math.max(0, a)
                         },
                         focus: {
-                            path: l.path,
+                            path: i.path,
                             offset: Math.max(0, u)
                         }
                     })
                 } else {
-                    let i = u[t];
-                    s.SlateTransforms.insertText(e, i, {
-                        at: l
-                    }), s.SlateTransforms.insertText(e, i, {
+                    let l = u[t];
+                    s.SlateTransforms.insertText(e, l, {
+                        at: i
+                    }), s.SlateTransforms.insertText(e, l, {
                         at: n
                     });
-                    let a = f[0].text.length + i.length,
-                        r = m[0].text.length + (p ? 2 * i.length : i.length);
+                    let a = f[0].text.length + l.length,
+                        r = p[0].text.length + (m ? 2 * l.length : l.length);
                     s.SlateTransforms.select(e, {
                         anchor: {
                             path: n.path,
-                            offset: Math.min(a, n.offset + i.length)
+                            offset: Math.min(a, n.offset + l.length)
                         },
                         focus: {
-                            path: l.path,
-                            offset: Math.min(r, l.offset + (p ? i.length : 0))
+                            path: i.path,
+                            offset: Math.min(r, i.offset + (m ? l.length : 0))
                         }
                     })
                 }
@@ -162,13 +162,13 @@ function(e, t, n) {
         }), r.EditorUtils.focus(e)
     }
 
-    function E(e, t) {
+    function x(e, t) {
         let n = e.selection;
         if (null == n) return;
-        let l = !0;
-        for (let [i, a] of r.EditorUtils.blocks(e))("line" === i.type || i.type === t) && r.RangeUtils.includes(n, a) && (l = l && i.type === t);
+        let i = !0;
+        for (let [l, a] of r.EditorUtils.blocks(e))("line" === l.type || l.type === t) && r.RangeUtils.includes(n, a) && (i = i && l.type === t);
         r.EditorUtils.withoutNormalizing(e, () => {
-            for (let [i, a] of r.EditorUtils.blocks(e)) r.RangeUtils.includes(n, a) && (l || "line" !== i.type ? l && i.type === t && s.SlateTransforms.setNodes(e, {
+            for (let [l, a] of r.EditorUtils.blocks(e)) r.RangeUtils.includes(n, a) && (i || "line" !== l.type ? i && l.type === t && s.SlateTransforms.setNodes(e, {
                 type: "line"
             }, {
                 at: a

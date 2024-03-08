@@ -14,8 +14,8 @@ function(e, t, n) {
             return u
         }
     }), n("65597");
-    var l = n("305961"),
-        i = n("49111"),
+    var i = n("305961"),
+        l = n("49111"),
         a = n("724210");
 
     function s(e) {
@@ -28,11 +28,11 @@ function(e, t, n) {
         if (null == e || ! function(e) {
                 var t;
                 if (null == e) return !1;
-                let n = l.default.getGuild(null !== (t = null == e ? void 0 : e.guild_id) && void 0 !== t ? t : ""),
+                let n = i.default.getGuild(null !== (t = null == e ? void 0 : e.guild_id) && void 0 !== t ? t : ""),
                     a = null != n && n.rulesChannelId === e.id;
-                return i.ChannelTypesSets.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !a
+                return l.ChannelTypesSets.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !a
             }(e) || !1 === t && e.hasFlag(a.ChannelFlags.SUMMARIES_DISABLED)) return !1;
-        let s = l.default.getGuild(e.guild_id);
+        let s = i.default.getGuild(e.guild_id);
         return o(s, n)
     }
 
@@ -40,7 +40,7 @@ function(e, t, n) {
         var t;
         let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         if (null == e) return !1;
-        return !!((null == (t = e.id) || t !== i.ME && t !== i.FAVORITES) && e.hasFeature(i.GuildFeatures.SUMMARIES_ENABLED_GA)) && (!n || e.hasFeature(i.GuildFeatures.SUMMARIES_ENABLED_BY_USER))
+        return !!((null == (t = e.id) || t !== l.ME && t !== l.FAVORITES) && e.hasFeature(l.GuildFeatures.SUMMARIES_ENABLED_GA)) && (!n || e.hasFeature(l.GuildFeatures.SUMMARIES_ENABLED_BY_USER))
     }
 
     function u(e) {

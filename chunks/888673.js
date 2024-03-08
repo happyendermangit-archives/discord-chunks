@@ -2,47 +2,47 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return i
         }
     });
-    var l, i = n("37983"),
+    var i, l = n("37983"),
         a = n("884691"),
         s = n("254490"),
         r = n("952368"),
         o = n("170113"),
         u = n("49111"),
         d = n("782340");
-    l = class extends a.Component {
+    i = class extends a.Component {
         render() {
             let {
                 src: e,
                 fileSize: t,
                 className: n,
-                mediaPlayerClassName: l,
+                mediaPlayerClassName: i,
                 poster: a,
                 fileName: c,
                 naturalWidth: f,
-                naturalHeight: m,
-                playable: p,
+                naturalHeight: p,
+                playable: m,
                 downloadable: h = !0,
-                volume: E,
-                autoPlay: g,
-                autoMute: S,
-                responsive: C,
-                mediaLayoutType: T,
-                mimeType: v,
+                volume: x,
+                autoPlay: E,
+                autoMute: y,
+                responsive: g,
+                mediaLayoutType: S,
+                mimeType: C,
                 renderOverlayContent: I,
-                renderLinkComponent: _,
-                onClick: N,
-                onPlay: A,
-                onEnded: x,
-                onVolumeChange: y,
+                renderLinkComponent: T,
+                onClick: _,
+                onPlay: v,
+                onEnded: N,
+                onVolumeChange: A,
                 onMute: O,
-                alt: R = d.default.Messages.VIDEO,
+                alt: k = d.default.Messages.VIDEO,
                 ...M
             } = this.props;
-            return (0, i.jsx)(r.default, {
-                alt: R,
+            return (0, l.jsx)(r.default, {
+                alt: k,
                 className: n,
                 src: a,
                 ...M,
@@ -50,8 +50,8 @@ function(e, t, n) {
                 minHeight: o.default.minHeight,
                 shouldLink: !1,
                 shouldAnimate: !1,
-                mediaLayoutType: T,
-                responsive: C,
+                mediaLayoutType: S,
+                responsive: g,
                 children: n => {
                     let {
                         src: a,
@@ -59,32 +59,32 @@ function(e, t, n) {
                             width: r,
                             height: d
                         }
-                    } = n, R = !(f <= u.MAX_VIDEO_WIDTH && m <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && m <= u.MAX_VIDEO_WIDTH);
-                    return (0, i.jsx)(o.default, {
-                        className: l,
-                        forceExternal: R,
+                    } = n, k = !(f <= u.MAX_VIDEO_WIDTH && p <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && p <= u.MAX_VIDEO_WIDTH);
+                    return (0, l.jsx)(o.default, {
+                        className: i,
+                        forceExternal: k,
                         src: e,
                         poster: a,
                         width: r,
                         height: d,
-                        responsive: C,
-                        volume: E,
-                        autoPlay: null != g && g,
-                        autoMute: null != S && S,
+                        responsive: g,
+                        volume: x,
+                        autoPlay: null != E && E,
+                        autoMute: null != y && y,
                         type: o.default.Types.VIDEO,
-                        mediaLayoutType: T,
+                        mediaLayoutType: S,
                         fileName: c,
                         fileSize: null == t ? void 0 : (0, s.sizeString)(t),
                         fileSizeBytes: null == t ? void 0 : t,
-                        playable: p,
-                        renderLinkComponent: _,
+                        playable: m,
+                        renderLinkComponent: T,
                         renderOverlayContent: I,
-                        onClick: N,
-                        onPlay: A,
-                        onEnded: x,
-                        onVolumeChange: y,
+                        onClick: _,
+                        onPlay: v,
+                        onEnded: N,
+                        onVolumeChange: A,
                         onMute: O,
-                        mimeType: v,
+                        mimeType: C,
                         downloadable: h
                     })
                 }

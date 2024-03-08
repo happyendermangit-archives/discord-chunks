@@ -5,10 +5,10 @@ function(e, t, n) {
             return f
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("77078"),
         r = n("62843"),
         o = n("648739"),
@@ -19,28 +19,28 @@ function(e, t, n) {
             let {
                 onPlay: t,
                 externalURL: n,
-                className: i,
+                className: l,
                 renderLinkComponent: f,
-                inactive: m,
-                messageId: p,
+                inactive: p,
+                messageId: m,
                 channelId: h
             } = e;
-            return (0, l.jsx)(r.MessagesInteractionContext.Consumer, {
-                children: e => (0, l.jsxs)("div", {
-                    className: a(i, c.wrapper, {
+            return (0, i.jsx)(r.MessagesInteractionContext.Consumer, {
+                children: e => (0, i.jsxs)("div", {
+                    className: a(l, c.wrapper, {
                         [c.disableInteractions]: e.disableInteractions
                     }),
-                    children: [m && null == t ? (0, l.jsx)("div", {
+                    children: [p && null == t ? (0, i.jsx)("div", {
                         className: c.iconWrapper,
-                        children: (0, l.jsx)(u.default, {
+                        children: (0, i.jsx)(u.default, {
                             className: c.iconPlay
                         })
-                    }) : null, null != t ? (0, l.jsx)(s.Clickable, {
+                    }) : null, null != t ? (0, i.jsx)(s.Clickable, {
                         onClick: t,
                         className: a(c.iconWrapperActive),
-                        tabIndex: m ? -1 : 0,
+                        tabIndex: p ? -1 : 0,
                         "aria-label": d.default.Messages.PLAY,
-                        children: (0, l.jsx)(u.default, {
+                        children: (0, i.jsx)(u.default, {
                             className: c.iconPlay
                         })
                     }) : null, null != n ? f({
@@ -48,11 +48,11 @@ function(e, t, n) {
                         target: "_blank",
                         rel: "noreferrer noopener",
                         className: c.iconWrapperActive,
-                        children: (0, l.jsx)(o.default, {
+                        children: (0, i.jsx)(o.default, {
                             "aria-label": d.default.Messages.OPEN_LINK,
                             className: null != t ? c.iconExternalMargins : c.iconExternal
                         }),
-                        messageId: p,
+                        messageId: m,
                         channelId: h
                     }) : null]
                 })

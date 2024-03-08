@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         }
     }), n("222007");
-    var l, i, a = n("37983"),
+    var i, l, a = n("37983"),
         s = n("884691"),
         r = n("414456"),
         o = n.n(r),
         u = n("77078"),
         d = n("145131"),
         c = n("92796");
-    (i = l || (l = {})).SINGLE_AVATAR = "1", i.MULTIPLE_AVATAR = "2";
+    (l = i || (i = {})).SINGLE_AVATAR = "1", l.MULTIPLE_AVATAR = "2";
     let f = {
         [u.AvatarSizes.SIZE_32]: c.avatarSmall,
         [u.AvatarSizes.SIZE_40]: c.avatarLarge
     };
-    class m extends s.Component {
+    class p extends s.Component {
         render() {
             let {
                 type: e,
@@ -58,8 +58,8 @@ function(e, t, n) {
             super(...e), this.placeholderMaxWidth = "".concat(Math.floor(40 * Math.random()) + 40, "%")
         }
     }
-    m.defaultProps = {
+    p.defaultProps = {
         type: "1"
-    }, m.Types = l;
-    var p = m
+    }, p.Types = i;
+    var m = p
 }

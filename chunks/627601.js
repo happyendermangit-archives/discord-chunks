@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         UserPopoutUpsellSource: function() {
-            return i
+            return l
         },
         useUserPopoutCollectiblesUpsellStore: function() {
             return r
         }
     });
-    var l, i, a = n("308503");
-    (l = i || (i = {})).PROFILE_PANEL = "profile panel", l.USER_POPOUT = "user popout";
+    var i, l, a = n("308503");
+    (i = l || (l = {})).PROFILE_PANEL = "profile panel", i.USER_POPOUT = "user popout";
     let s = {
             upsellSource: null
         },

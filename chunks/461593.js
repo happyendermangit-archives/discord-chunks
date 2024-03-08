@@ -5,24 +5,24 @@ function(e, t, n) {
             return r
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("165555");
 
     function r(e) {
         let {
             attributes: t,
             children: n,
-            leaf: i,
+            leaf: l,
             text: r
         } = e;
-        if (i.commandName) {
+        if (l.commandName) {
             let e = a(s.commandName, {
                 [s.emptyText]: "" === r.text
             });
-            return (0, l.jsx)("span", {
+            return (0, i.jsx)("span", {
                 ...t,
                 className: e,
                 spellCheck: !1,

@@ -11,11 +11,11 @@ function(e, t, n) {
             return u
         }
     });
-    var l = n("228256");
+    var i = n("228256");
     let {
-        Layer: i,
+        Layer: l,
         LayerContainer: a,
         LayerProvider: s
-    } = (0, l.createLayer)("Chat"), r = a, o = s;
-    var u = i
+    } = (0, i.createLayer)("Chat"), r = a, o = s;
+    var u = l
 }

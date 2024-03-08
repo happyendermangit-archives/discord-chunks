@@ -5,10 +5,10 @@ function(e, t, n) {
             return d
         },
         default: function() {
-            return l
+            return i
         }
     }), n("222007");
-    var l, i = n("44170"),
+    var i, l = n("44170"),
         a = n("507217"),
         s = n("834725"),
         r = n("845579"),
@@ -23,12 +23,12 @@ function(e, t, n) {
             didInitialQuery: !1
         }
     }
-    l = class extends i.EventEmitter {
+    i = class extends l.EventEmitter {
         updateProps(e) {
             let t = this.props.focused !== e.focused,
                 n = this.props.channel.id !== e.channel.id || this.props.activeCommandOption !== e.activeCommandOption,
-                l = !this.state.didInitialQuery || this.props.currentWord !== e.currentWord || this.props.currentWordIsAtStart !== e.currentWordIsAtStart || this.props.textValue !== e.textValue || this.props.optionText !== e.optionText;
-            if (this.props = e, n || l) this.updateResults(l, n), !this.state.didInitialQuery && (this.state = {
+                i = !this.state.didInitialQuery || this.props.currentWord !== e.currentWord || this.props.currentWordIsAtStart !== e.currentWordIsAtStart || this.props.textValue !== e.textValue || this.props.optionText !== e.optionText;
+            if (this.props = e, n || i) this.updateResults(i, n), !this.state.didInitialQuery && (this.state = {
                 ...this.state,
                 didInitialQuery: !0
             });
@@ -93,19 +93,19 @@ function(e, t, n) {
         updateResults() {
             var e, t;
             let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             if (null == this.props.editorRef.current) return;
-            let i = (0, u.getOptions)(this.props),
+            let l = (0, u.getOptions)(this.props),
                 a = (0, u.findMatchingAutocompleteType)({
                     channel: this.props.channel,
                     guild: this.props.guild,
-                    options: i,
+                    options: l,
                     currentWord: this.props.currentWord,
                     currentWordIsAtStart: this.props.currentWordIsAtStart,
                     textValue: this.props.textValue,
                     optionText: this.props.optionText
                 }),
-                d = i.commands !== o.CommandMode.DISABLED ? (0, u.findCommandOptionAutocompleteType)(this.props.activeCommandOption, this.props.currentWord) : null;
+                d = l.commands !== o.CommandMode.DISABLED ? (0, u.findCommandOptionAutocompleteType)(this.props.activeCommandOption, this.props.currentWord) : null;
             if (null == a && null != d) a = d;
             else if (null == a || null != d && a.type !== d.type) {
                 this.clearQuery();
@@ -114,36 +114,36 @@ function(e, t, n) {
             let {
                 type: c,
                 typeInfo: f,
-                query: m
-            } = a, p = l || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== m || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== f), h = r.IncludeStickersInAutocomplete.getSetting();
-            i.allowStickers = i.allowStickers ? h : i.allowStickers;
+                query: p
+            } = a, m = i || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== p || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== f), h = r.IncludeStickersInAutocomplete.getSetting();
+            l.allowStickers = l.allowStickers ? h : l.allowStickers;
             let {
-                results: E,
-                metadata: g
-            } = f.queryResults(this.props.channel, this.props.guild, m, i, p), S = 0;
-            for (let e of Object.values(E)) Array.isArray(e) && (S += e.length);
-            let C = !0 === E.isLoading,
-                T = this.shouldShow(S, C, f),
-                v = this.state.selectedIndex;
-            !T || C ? v = null : null != v && v >= S && (v = S - 1), T && !this.state.isVisible && (0, s.trackAutocompleteOpen)(c, this.props.channel, g), this.setState({
+                results: x,
+                metadata: E
+            } = f.queryResults(this.props.channel, this.props.guild, p, l, m), y = 0;
+            for (let e of Object.values(x)) Array.isArray(e) && (y += e.length);
+            let g = !0 === x.isLoading,
+                S = this.shouldShow(y, g, f),
+                C = this.state.selectedIndex;
+            !S || g ? C = null : null != C && C >= y && (C = y - 1), S && !this.state.isVisible && (0, s.trackAutocompleteOpen)(c, this.props.channel, E), this.setState({
                 query: {
                     type: c,
                     typeInfo: f,
-                    queryText: m,
-                    results: E,
-                    resultCount: S,
-                    options: i,
-                    isLoading: C
+                    queryText: p,
+                    results: x,
+                    resultCount: y,
+                    options: l,
+                    isLoading: g
                 },
-                isVisible: T,
-                selectedIndex: v
+                isVisible: S,
+                selectedIndex: C
             })
         }
         shouldShow(e, t, n) {
             return this.props.focused && null == this.props.expressionPickerView && (e > 0 || t || n.showEmpty)
         }
         selectResult(e, t, n) {
-            var l, i, a;
+            var i, l, a;
             if (!this.state.isVisible) return !1;
             let {
                 type: r,
@@ -153,16 +153,16 @@ function(e, t, n) {
                 options: f
             } = this.state.query;
             if (e >= c) return !1;
-            let m = null === (i = u.onSelect) || void 0 === i ? void 0 : i.call(u, {
+            let p = null === (l = u.onSelect) || void 0 === l ? void 0 : l.call(u, {
                 results: d,
                 index: e,
                 type: t ? o.SelectType.SEND : o.SelectType.INSERT,
                 options: f,
                 channel: this.props.channel,
                 tabOrEnter: n,
-                queryText: null === (l = this.state.query) || void 0 === l ? void 0 : l.queryText
+                queryText: null === (i = this.state.query) || void 0 === i ? void 0 : i.queryText
             });
-            return null != m && (0, s.trackAutocompleteSelect)(r, null !== (a = m.type) && void 0 !== a ? a : null, this.props.channel, m.metadata), !0
+            return null != p && (0, s.trackAutocompleteSelect)(r, null !== (a = p.type) && void 0 !== a ? a : null, this.props.channel, p.metadata), !0
         }
         setState(e) {
             for (let t in e)

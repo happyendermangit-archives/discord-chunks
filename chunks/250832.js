@@ -5,10 +5,10 @@ function(e, t, n) {
             return u
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("476263"),
         r = n("328413"),
         o = n("454924"),
@@ -16,16 +16,16 @@ function(e, t, n) {
             let {
                 guild: t,
                 children: n
-            } = e, i = null != t ? (0, l.jsx)(s.default, {
+            } = e, l = null != t ? (0, i.jsx)(s.default, {
                 guild: t,
                 size: s.default.Sizes.MEDIUM,
                 className: a(o.icon, null == t.icon ? o.textIcon : o.imageIcon),
                 active: !0
             }) : null;
-            return (0, l.jsxs)("span", {
-                children: [(0, l.jsx)(r.default, {
-                    children: i
-                }), (0, l.jsx)("span", {
+            return (0, i.jsxs)("span", {
+                children: [(0, i.jsx)(r.default, {
+                    children: l
+                }), (0, i.jsx)("span", {
                     className: o.name,
                     children: n
                 })]

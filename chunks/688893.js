@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return g
+            return E
         }
     }), n("222007"), n("781738");
-    var l = n("884691"),
-        i = n("371621"),
+    var i = n("884691"),
+        l = n("371621"),
         a = n("798609"),
         s = n("383018"),
         r = n("640830"),
@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("385887"),
         c = n("467123"),
         f = n("100576"),
-        m = n("566819");
-    let p = (e, t, n) => ({
+        p = n("566819");
+    let m = (e, t, n) => ({
         getSlateEditor: () => e,
         submit(e) {
             e.preventDefault(), n()
@@ -25,7 +25,7 @@ function(e, t, n) {
             d.EditorUtils.focus(e)
         },
         blur() {
-            i.ReactEditor.blur(e)
+            l.ReactEditor.blur(e)
         },
         getCurrentWord() {
             let t = e.selection;
@@ -33,9 +33,9 @@ function(e, t, n) {
                 word: null,
                 isAtStart: !1
             };
-            let [n, l] = d.EditorUtils.node(e, d.PathUtils.parent(t.anchor.path)), [i, a] = d.EditorUtils.node(e, t.anchor.path), s = t.anchor.offset;
-            if (!d.PathUtils.hasPrevious(a) && d.TextUtils.isText(i)) {
-                let e = i.text.substring(0, s);
+            let [n, i] = d.EditorUtils.node(e, d.PathUtils.parent(t.anchor.path)), [l, a] = d.EditorUtils.node(e, t.anchor.path), s = t.anchor.offset;
+            if (!d.PathUtils.hasPrevious(a) && d.TextUtils.isText(l)) {
+                let e = l.text.substring(0, s);
                 if (d.NodeUtils.isType(n, "applicationCommand") && s < n.command.displayName.length + 2) return {
                     word: e,
                     isAtStart: !0
@@ -48,16 +48,16 @@ function(e, t, n) {
                     if (!d.PathUtils.hasPrevious(a)) {
                         o = !0;
                         break
-                    } [i, a] = d.EditorUtils.node(e, d.PathUtils.previous(a))
+                    } [l, a] = d.EditorUtils.node(e, d.PathUtils.previous(a))
                 }
-                if (!d.TextUtils.isText(i)) break;
-                let t = i.text[s];
-                if (m.WHITESPACE_RE.test(t)) break;
+                if (!d.TextUtils.isText(l)) break;
+                let t = l.text[s];
+                if (p.WHITESPACE_RE.test(t)) break;
                 r = t + r
             }
             return {
                 word: r,
-                isAtStart: o && d.PathUtils.isFirstEditorBlock(l)
+                isAtStart: o && d.PathUtils.isFirstEditorBlock(i)
             }
         },
         getFirstText() {
@@ -70,39 +70,39 @@ function(e, t, n) {
         },
         getCurrentCommandOptionValue() {
             var n;
-            let l = r.getCurrentCommandOption(e);
-            if (null == l) return [];
-            let i = s.default.getActiveCommand(t.id),
-                a = null == i ? void 0 : null === (n = i.options) || void 0 === n ? void 0 : n.find(e => e.name === l[0].optionName);
-            return null == a ? [] : r.optionToValues(e, a, l[0])
+            let i = r.getCurrentCommandOption(e);
+            if (null == i) return [];
+            let l = s.default.getActiveCommand(t.id),
+                a = null == l ? void 0 : null === (n = l.options) || void 0 === n ? void 0 : n.find(e => e.name === i[0].optionName);
+            return null == a ? [] : r.optionToValues(e, a, i[0])
         },
         getCommandOptionValues() {
             let n = s.default.getActiveCommand(t.id);
             return null == n ? {} : r.getOptionValues(e, n)
         },
         insertText(n) {
-            let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             o.HistoryUtils.withSingleEntry(e, () => {
                 let a = r.getCurrentCommandOption(e),
                     s = null != a && h(t, a[0]);
-                if (null != l && s && (u.SlateTransforms.removeInlineChildren(e, a), i = !1), E(e, n, l, i), null != l && s) {
+                if (null != i && s && (u.SlateTransforms.removeInlineChildren(e, a), l = !1), x(e, n, i, l), null != i && s) {
                     let n = r.getCommandBlock(e);
                     if (a = d.ElementUtils.updateElement(e, a), null != n) {
-                        let l = d.ElementUtils.markdown(n[0], t.guild_id);
-                        (0, f.convertRawToInlineVoids)(e, a, t.id, l) && (a = d.ElementUtils.updateElement(e, a))
+                        let i = d.ElementUtils.markdown(n[0], t.guild_id);
+                        (0, f.convertRawToInlineVoids)(e, a, t.id, i) && (a = d.ElementUtils.updateElement(e, a))
                     }
                     r.validateOption(e, t.guild_id, t.id, d.ElementUtils.updateElement(e, a), !1), u.SlateTransforms.selectNextCommandOption(e)
                 }
             })
         },
         insertAutocomplete(n) {
-            let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+            let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             o.HistoryUtils.withSingleEntry(e, () => {
                 let a = r.getCurrentCommandOption(e),
                     s = null != a && h(t, a[0]);
-                if (s) u.SlateTransforms.removeInlineChildren(e, a), i = !1;
+                if (s) u.SlateTransforms.removeInlineChildren(e, a), l = !1;
                 else {
                     let {
                         word: t
@@ -113,37 +113,37 @@ function(e, t, n) {
                         reverse: !0
                     })
                 }
-                E(e, n, l, i), s && u.SlateTransforms.selectNextCommandOption(e)
+                x(e, n, i, l), s && u.SlateTransforms.selectNextCommandOption(e)
             })
         },
         insertEmoji(t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             o.HistoryUtils.withSingleEntry(e, () => {
-                var l, i;
+                var i, l;
                 let a = t.animated ? "a" : "",
-                    s = null !== (i = null !== (l = t.originalName) && void 0 !== l ? l : t.name) && void 0 !== i ? i : "",
+                    s = null !== (l = null !== (i = t.originalName) && void 0 !== i ? i : t.name) && void 0 !== l ? l : "",
                     r = ":".concat(t.name, ":"),
                     o = null != t.id ? "<".concat(a, ":").concat(s.replace(/:/g, ""), ":").concat(t.id, ">") : null;
-                E(e, r, o, n)
+                x(e, r, o, n)
             })
         }
     });
 
     function h(e, t) {
         var n;
-        let l = s.default.getActiveCommand(e.id),
-            i = null == l ? void 0 : null === (n = l.options) || void 0 === n ? void 0 : n.find(e => e.name === t.optionName);
-        return null != i && (i.type !== a.ApplicationCommandOptionType.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete))
+        let i = s.default.getActiveCommand(e.id),
+            l = null == i ? void 0 : null === (n = i.options) || void 0 === n ? void 0 : n.find(e => e.name === t.optionName);
+        return null != l && (l.type !== a.ApplicationCommandOptionType.STRING || (null == l ? void 0 : l.choices) != null || (null == l ? void 0 : l.autocomplete))
     }
 
-    function E(e, t, n, l) {
-        let i = d.EditorUtils.areStylesDisabled(e) || null == n ? t : n;
+    function x(e, t, n, i) {
+        let l = d.EditorUtils.areStylesDisabled(e) || null == n ? t : n;
         o.HistoryUtils.withSingleEntry(e, () => {
-            u.SlateTransforms.insertText(e, l ? i + " " : i)
+            u.SlateTransforms.insertText(e, i ? l + " " : l)
         })
     }
 
-    function g(e, t, n, i) {
-        l.useImperativeHandle(e, () => p(t, n, i), [t, n, i])
+    function E(e, t, n, l) {
+        i.useImperativeHandle(e, () => m(t, n, l), [t, n, l])
     }
 }

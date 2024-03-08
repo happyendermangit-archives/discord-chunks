@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return i
         }
     });
-    var l = (0, n("862205").createExperiment)({
+    var i = (0, n("862205").createExperiment)({
         id: "2022-12_timestamp_tooltip",
         label: "Timestamp Tooltip",
         kind: "user",

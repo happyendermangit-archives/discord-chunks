@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ConnectedUserAccount: function() {
-            return A
+            return v
         },
         ConnectedApplicationUserRoleAccount: function() {
-            return x
+            return N
         },
         ConnectedUserAccounts: function() {
-            return y
+            return A
         }
     }), n("424973");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("669491"),
@@ -21,180 +21,180 @@ function(e, t, n) {
         d = n("308289"),
         c = n("376556"),
         f = n("716241"),
-        m = n("572943"),
-        p = n("535013"),
+        p = n("572943"),
+        m = n("535013"),
         h = n("816499"),
-        E = n("526190"),
-        g = n("766274"),
-        S = n("246053"),
-        C = n("867544"),
-        T = n("128259"),
-        v = n("49111"),
+        x = n("526190"),
+        E = n("766274"),
+        y = n("246053"),
+        g = n("867544"),
+        S = n("128259"),
+        C = n("49111"),
         I = n("214509"),
-        _ = n("782340"),
-        N = n("561372");
+        T = n("782340"),
+        _ = n("561372");
 
-    function A(e) {
+    function v(e) {
         var t, n;
-        let i, a, d, {
-            connectedAccount: g,
-            theme: A,
-            locale: x,
-            userId: y,
+        let l, a, d, {
+            connectedAccount: E,
+            theme: v,
+            locale: N,
+            userId: A,
             className: O,
-            showMetadata: R,
+            showMetadata: k,
             showInvisibleIcon: M
         } = e;
-        null == R && (R = !0);
-        let L = null !== (n = g.metadata) && void 0 !== n ? n : {},
-            P = R ? (0, p.getCreatedAtDate)(L[I.MetadataFields.CREATED_AT], x) : null,
+        null == k && (k = !0);
+        let R = null !== (n = E.metadata) && void 0 !== n ? n : {},
+            L = k ? (0, m.getCreatedAtDate)(R[I.MetadataFields.CREATED_AT], N) : null,
             b = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
-            j = _.default.Messages.CONNECTION_VERIFIED;
-        if (R) switch (g.type) {
-            case v.PlatformTypes.REDDIT:
-                i = (0, h.generateRedditMetadataItems)(L);
+            P = T.default.Messages.CONNECTION_VERIFIED;
+        if (k) switch (E.type) {
+            case C.PlatformTypes.REDDIT:
+                l = (0, h.generateRedditMetadataItems)(R);
                 break;
-            case v.PlatformTypes.STEAM:
-                i = (0, h.generateSteamMetadataItems)(L);
+            case C.PlatformTypes.STEAM:
+                l = (0, h.generateSteamMetadataItems)(R);
                 break;
-            case v.PlatformTypes.TWITTER: {
-                i = (0, h.generateTwitterMetadataItems)(L);
-                let e = "1" === L[I.MetadataFields.TWITTER_VERIFIED];
-                e && (a = b, j = _.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+            case C.PlatformTypes.TWITTER: {
+                l = (0, h.generateTwitterMetadataItems)(R);
+                let e = "1" === R[I.MetadataFields.TWITTER_VERIFIED];
+                e && (a = b, P = T.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
                 break
             }
-            case v.PlatformTypes.PAYPAL:
-                i = (0, h.generatePaypalMetadataItems)(L);
+            case C.PlatformTypes.PAYPAL:
+                l = (0, h.generatePaypalMetadataItems)(R);
                 break;
-            case v.PlatformTypes.EBAY:
-                i = (0, h.generateEbayMetadataItems)(L);
+            case C.PlatformTypes.EBAY:
+                l = (0, h.generateEbayMetadataItems)(R);
                 break;
-            case v.PlatformTypes.TIKTOK:
-                i = (0, h.generateTikTokMetadataItems)(L)
+            case C.PlatformTypes.TIKTOK:
+                l = (0, h.generateTikTokMetadataItems)(R)
         }
-        let U = c.default.get((0, m.useLegacyPlatformType)(g.type)),
-            D = null == U ? void 0 : null === (t = U.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(U, g);
-        null != M && M ? d = (0, l.jsx)(C.default, {
-            className: s(N.connectedAccountOpenIconContainer, N.connectedAccountHideIcon),
+        let j = c.default.get((0, p.useLegacyPlatformType)(E.type)),
+            U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, E);
+        null != M && M ? d = (0, i.jsx)(g.default, {
+            className: s(_.connectedAccountOpenIconContainer, _.connectedAccountHideIcon),
             foregroundColor: "currentColor"
-        }) : null != D && (d = (0, l.jsx)(u.Anchor, {
-            href: D,
+        }) : null != U && (d = (0, i.jsx)(u.Anchor, {
+            href: U,
             onClick: e => {
                 var t, n;
-                t = g.type, n = y, (0, f.trackWithMetadata)(v.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
+                t = E.type, n = A, (0, f.trackWithMetadata)(C.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
                     platform_type: t,
                     other_user_id: n
-                }), (0, T.handleClick)({
-                    href: D,
-                    trusted: (null == U ? void 0 : U.type) !== v.PlatformTypes.DOMAIN
+                }), (0, S.handleClick)({
+                    href: U,
+                    trusted: (null == j ? void 0 : j.type) !== C.PlatformTypes.DOMAIN
                 }, e)
             },
-            children: (0, l.jsx)(S.default, {
-                className: N.connectedAccountOpenIcon,
-                direction: S.default.Directions.RIGHT
+            children: (0, i.jsx)(y.default, {
+                className: _.connectedAccountOpenIcon,
+                direction: y.default.Directions.RIGHT
             })
         }));
-        let k = (0, u.useToken)(r.default.colors.INTERACTIVE_MUTED).hex(),
+        let D = (0, u.useToken)(r.default.colors.INTERACTIVE_MUTED).hex(),
             w = (0, u.useToken)(r.default.colors.INTERACTIVE_ACTIVE).hex(),
-            F = g.verified ? (0, l.jsx)(E.default, {
-                className: N.connectedAccountVerifiedIcon,
-                color: null != a ? a : k,
+            F = E.verified ? (0, i.jsx)(x.default, {
+                className: _.connectedAccountVerifiedIcon,
+                color: null != a ? a : D,
                 forcedIconColor: w,
                 size: 16,
-                tooltipText: j
+                tooltipText: P
             }) : null;
-        return (0, l.jsxs)("div", {
-            className: s(N.connectedAccountContainer, null != i && i.length > 0 || null != P ? N.connectedAccountContainerWithMetadata : null, O),
-            children: [(0, l.jsxs)("div", {
-                className: N.connectedAccount,
-                children: [(0, l.jsx)(u.Tooltip, {
-                    text: null == U ? void 0 : U.name,
-                    children: e => (0, l.jsx)("img", {
+        return (0, i.jsxs)("div", {
+            className: s(_.connectedAccountContainer, null != l && l.length > 0 || null != L ? _.connectedAccountContainerWithMetadata : null, O),
+            children: [(0, i.jsxs)("div", {
+                className: _.connectedAccount,
+                children: [(0, i.jsx)(u.Tooltip, {
+                    text: null == j ? void 0 : j.name,
+                    children: e => (0, i.jsx)("img", {
                         ...e,
-                        alt: _.default.Messages.IMG_ALT_LOGO.format({
-                            name: null == U ? void 0 : U.name
+                        alt: T.default.Messages.IMG_ALT_LOGO.format({
+                            name: null == j ? void 0 : j.name
                         }),
-                        className: N.connectedAccountIcon,
-                        src: (0, o.isThemeDark)(A) ? null == U ? void 0 : U.icon.darkSVG : null == U ? void 0 : U.icon.lightSVG
+                        className: _.connectedAccountIcon,
+                        src: (0, o.isThemeDark)(v) ? null == j ? void 0 : j.icon.darkSVG : null == j ? void 0 : j.icon.lightSVG
                     })
-                }), (0, l.jsxs)("div", {
-                    className: N.connectedAccountNameContainer,
-                    children: [(0, l.jsxs)("div", {
-                        className: N.connectedAccountName,
-                        children: [(0, l.jsxs)("div", {
-                            className: N.connectedAccountNameTextContainer,
-                            children: [(0, l.jsx)(u.Tooltip, {
+                }), (0, i.jsxs)("div", {
+                    className: _.connectedAccountNameContainer,
+                    children: [(0, i.jsxs)("div", {
+                        className: _.connectedAccountName,
+                        children: [(0, i.jsxs)("div", {
+                            className: _.connectedAccountNameTextContainer,
+                            children: [(0, i.jsx)(u.Tooltip, {
                                 overflowOnly: !0,
-                                text: g.name,
-                                children: e => (0, l.jsx)(u.Text, {
+                                text: E.name,
+                                children: e => (0, i.jsx)(u.Text, {
                                     ...e,
                                     variant: "text-md/semibold",
                                     color: "interactive-active",
-                                    className: N.connectedAccountNameText,
-                                    children: g.name
+                                    className: _.connectedAccountNameText,
+                                    children: E.name
                                 })
                             }), F]
                         }), d]
-                    }), null != P ? (0, l.jsx)(u.Text, {
+                    }), null != L ? (0, i.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         color: "header-secondary",
-                        children: _.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
-                            date: P
+                        children: T.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
+                            date: L
                         })
                     }) : null]
                 })]
-            }), null != i && i.length > 0 ? (0, l.jsx)("div", {
-                className: N.connectedAccountChildren,
-                children: i
+            }), null != l && l.length > 0 ? (0, i.jsx)("div", {
+                className: _.connectedAccountChildren,
+                children: l
             }) : null]
         })
     }
 
-    function x(e) {
+    function N(e) {
         let {
             applicationRoleConnection: t,
             className: n,
-            locale: i
-        } = e, a = (0, h.generateRoleConnectionMetadataItems)(t, void 0, i);
-        return (0, l.jsxs)("div", {
-            className: s(N.connectedAccountContainer, null != a && a.length > 0 ? N.connectedAccountContainerWithMetadata : null, n),
-            children: [(0, l.jsx)("div", {
-                className: N.connectedAccount,
-                children: (0, l.jsxs)("div", {
-                    className: N.connectedAccountNameContainer,
-                    children: [null != t.platform_name ? (0, l.jsx)(u.Text, {
+            locale: l
+        } = e, a = (0, h.generateRoleConnectionMetadataItems)(t, void 0, l);
+        return (0, i.jsxs)("div", {
+            className: s(_.connectedAccountContainer, null != a && a.length > 0 ? _.connectedAccountContainerWithMetadata : null, n),
+            children: [(0, i.jsx)("div", {
+                className: _.connectedAccount,
+                children: (0, i.jsxs)("div", {
+                    className: _.connectedAccountNameContainer,
+                    children: [null != t.platform_name ? (0, i.jsx)(u.Text, {
                         variant: "eyebrow",
                         color: "interactive-normal",
                         children: t.platform_name
-                    }) : null, null != t.platform_username ? (0, l.jsx)("div", {
-                        className: N.connectedAccountName,
-                        children: (0, l.jsx)("div", {
-                            className: N.connectedAccountNameTextContainer,
-                            children: (0, l.jsx)(u.Text, {
+                    }) : null, null != t.platform_username ? (0, i.jsx)("div", {
+                        className: _.connectedAccountName,
+                        children: (0, i.jsx)("div", {
+                            className: _.connectedAccountNameTextContainer,
+                            children: (0, i.jsx)(u.Text, {
                                 variant: "text-md/semibold",
                                 color: "interactive-active",
-                                className: N.connectedAccountNameText,
+                                className: _.connectedAccountNameText,
                                 children: t.platform_username
                             })
                         })
                     }) : null]
                 })
-            }), null != a && a.length > 0 ? (0, l.jsx)("div", {
-                className: s(N.connectedAccountChildren, N.connectedAccountChildrenNoIcon),
+            }), null != a && a.length > 0 ? (0, i.jsx)("div", {
+                className: s(_.connectedAccountChildren, _.connectedAccountChildrenNoIcon),
                 children: a
-            }) : null, (0, l.jsx)("div", {
-                children: (0, l.jsx)("div", {
-                    className: N.connectedAccountPoweredBy,
-                    children: (0, l.jsx)(u.Text, {
+            }) : null, (0, i.jsx)("div", {
+                children: (0, i.jsx)("div", {
+                    className: _.connectedAccountPoweredBy,
+                    children: (0, i.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: _.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
-                            applicationHook: () => (0, l.jsxs)("div", {
-                                className: N.connectedAccountPoweredByText,
-                                children: [null != t.application.bot ? (0, l.jsx)(d.default, {
-                                    user: new g.default(t.application.bot),
+                        children: T.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
+                            applicationHook: () => (0, i.jsxs)("div", {
+                                className: _.connectedAccountPoweredByText,
+                                children: [null != t.application.bot ? (0, i.jsx)(d.default, {
+                                    user: new E.default(t.application.bot),
                                     size: u.AvatarSizes.SIZE_16
-                                }) : null, (0, l.jsx)(u.Text, {
+                                }) : null, (0, i.jsx)(u.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-normal",
                                     children: t.application.name
@@ -206,18 +206,18 @@ function(e, t, n) {
             })]
         })
     }
-    let y = i.forwardRef(function(e, t) {
+    let A = l.forwardRef(function(e, t) {
         let {
             connectedAccounts: n,
-            theme: i,
+            theme: l,
             locale: a,
             className: r,
             userId: o
         } = e;
         if (null == n || 0 === n.length) return null;
-        let u = n.filter(e => c.default.isSupported(e.type)).map(e => (0, l.jsx)(A, {
+        let u = n.filter(e => c.default.isSupported(e.type)).map(e => (0, i.jsx)(v, {
                 connectedAccount: e,
-                theme: i,
+                theme: l,
                 locale: a,
                 userId: o
             }, "".concat(e.type, ":").concat(e.id))),
@@ -227,14 +227,14 @@ function(e, t, n) {
             let t = u[e];
             e % 2 == 0 ? d.push(t) : f.push(t)
         }
-        return (0, l.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             ref: t,
-            className: s(N.connectedAccounts, r),
-            children: [(0, l.jsx)("div", {
-                className: N.connectedAccountsColumn,
+            className: s(_.connectedAccounts, r),
+            children: [(0, i.jsx)("div", {
+                className: _.connectedAccountsColumn,
                 children: d
-            }), (0, l.jsx)("div", {
-                className: N.connectedAccountsColumn,
+            }), (0, i.jsx)("div", {
+                className: _.connectedAccountsColumn,
                 children: f
             })]
         })

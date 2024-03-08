@@ -5,9 +5,9 @@ function(e, t, n) {
             return d
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("77078"),
+    var l = n("77078"),
         a = n("910330"),
         s = n("777003"),
         r = n("782340"),
@@ -22,13 +22,13 @@ function(e, t, n) {
             lastSection: c,
             hideNote: f
         } = e;
-        return f ? null : (0, l.jsxs)(s.default, {
+        return f ? null : (0, i.jsxs)(s.default, {
             lastSection: c,
-            children: [(0, l.jsx)(i.Heading, {
+            children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
                 className: u.title,
                 children: r.default.Messages.NOTE
-            }), (0, l.jsx)(a.default, {
+            }), (0, i.jsx)(a.default, {
                 userId: t.id,
                 autoFocus: n || d,
                 className: o.note

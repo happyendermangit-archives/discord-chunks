@@ -2,15 +2,15 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SlateToolbarTypes: function() {
-            return i
+            return l
         },
         ChatInputTypes: function() {
-            return v
+            return C
         }
     });
-    var l, i, a = n("394846"),
+    var i, l, a = n("394846"),
         s = n("474643");
-    (l = i || (i = {}))[l.TOOLTIP = 0] = "TOOLTIP", l[l.STATIC = 1] = "STATIC";
+    (i = l || (l = {}))[i.TOOLTIP = 0] = "TOOLTIP", i[i.STATIC = 1] = "STATIC";
     let r = {
             analyticsName: "normal",
             attachments: !0,
@@ -222,7 +222,7 @@ function(e, t, n) {
             },
             showCharacterCount: !0
         },
-        m = {
+        p = {
             analyticsName: "thread_creation",
             attachments: !0,
             drafts: {
@@ -254,7 +254,7 @@ function(e, t, n) {
                 iconOnly: !0
             }
         },
-        p = {
+        m = {
             analyticsName: "create_forum_post",
             attachments: !0,
             drafts: {
@@ -300,7 +300,7 @@ function(e, t, n) {
                 disableEnterToSubmit: !0
             }
         },
-        E = {
+        x = {
             analyticsName: "profile_bio_input",
             drafts: {
                 type: s.DraftType.ChannelMessage
@@ -318,7 +318,7 @@ function(e, t, n) {
             disableAutoFocus: !0,
             showCharacterCount: !0
         },
-        g = {
+        E = {
             analyticsName: "custom_gift_type",
             drafts: {
                 type: s.DraftType.ChannelMessage
@@ -334,7 +334,7 @@ function(e, t, n) {
             disableAutoFocus: !0,
             showCharacterCount: !0
         },
-        S = {
+        y = {
             analyticsName: "rules_input",
             drafts: {
                 type: s.DraftType.ChannelMessage
@@ -348,7 +348,7 @@ function(e, t, n) {
             },
             showCharacterCount: !0
         },
-        C = {
+        g = {
             analyticsName: "forum_channel_guidelines",
             drafts: {
                 type: s.DraftType.ChannelMessage
@@ -367,7 +367,7 @@ function(e, t, n) {
             showCharacterCount: !0,
             toolbarType: 1
         },
-        T = {
+        S = {
             analyticsName: "atomic_reator_reply_input",
             drafts: {
                 type: s.DraftType.ChannelMessage
@@ -382,20 +382,20 @@ function(e, t, n) {
             disableAutoFocus: !0,
             showCharacterCount: !0
         },
-        v = {
+        C = {
             NORMAL: r,
             OVERLAY: o,
             SIDEBAR: u,
             EDIT: d,
             FORM: c,
             VOICE_CHANNEL_STATUS: f,
-            THREAD_CREATION: m,
-            PROFILE_BIO_INPUT: E,
-            CUSTOM_GIFT: g,
-            RULES_INPUT: S,
-            CREATE_FORUM_POST: p,
+            THREAD_CREATION: p,
+            PROFILE_BIO_INPUT: x,
+            CUSTOM_GIFT: E,
+            RULES_INPUT: y,
+            CREATE_FORUM_POST: m,
             CREATE_POLL: h,
-            FORUM_CHANNEL_GUIDELINES: C,
-            ATOMIC_REACTOR_REPLY_INPUT: T
+            FORUM_CHANNEL_GUIDELINES: g,
+            ATOMIC_REACTOR_REPLY_INPUT: S
         }
 }

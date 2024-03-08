@@ -42,8 +42,8 @@ function(e, t, i) {
         a = i("404118"),
         u = i("619443"),
         c = i("915639"),
-        d = i("872173"),
-        o = i("766274"),
+        o = i("872173"),
+        d = i("766274"),
         f = i("341542"),
         S = i("697218"),
         m = i("271560"),
@@ -106,7 +106,7 @@ function(e, t, i) {
             guildId: e,
             stickers: t.map(e => null != e.user ? {
                 ...e,
-                user: new o.default(e.user)
+                user: new d.default(e.user)
             } : e)
         })
     }, y = async e => {
@@ -156,7 +156,7 @@ function(e, t, i) {
     }
 
     function A(e) {
-        d.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = x(t.stickerIds), n.size(t.stickerIds) >= E.MAX_FAVORITES) ? (a.default.show({
+        o.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = x(t.stickerIds), n.size(t.stickerIds) >= E.MAX_FAVORITES) ? (a.default.show({
             title: I.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
             body: I.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
                 count: E.MAX_FAVORITES
@@ -165,7 +165,7 @@ function(e, t, i) {
     }
 
     function P(e) {
-        d.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => {
+        o.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => {
             t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = x(t.stickerIds)
         }, E.UserSettingsDelay.INFREQUENT_USER_ACTION)
     }

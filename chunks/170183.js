@@ -5,8 +5,8 @@ function(e, t, n) {
             return d
         }
     }), n("808653"), n("424973"), n("222007");
-    var l = n("446674"),
-        i = n("42203"),
+    var i = n("446674"),
+        l = n("42203"),
         a = n("957255"),
         s = n("449008"),
         r = n("299039"),
@@ -14,10 +14,10 @@ function(e, t, n) {
         u = n("834052");
 
     function d(e) {
-        let t = (0, l.useStateFromStoresArray)([u.default], () => r.default.keys(u.default.getStageInstancesByGuild(e)), [e]);
+        let t = (0, i.useStateFromStoresArray)([u.default], () => r.default.keys(u.default.getStageInstancesByGuild(e)), [e]);
         return function(e) {
-            let t = (0, l.useStateFromStoresArray)([i.default], () => e.map(e => i.default.getChannel(e)).filter(s.isNotNullish), [e]);
-            return (0, l.useStateFromStoresArray)([a.default], () => t.filter(e => a.default.can(o.JOIN_VOCAL_CHANNEL_PERMISSIONS, e)), [t])
+            let t = (0, i.useStateFromStoresArray)([l.default], () => e.map(e => l.default.getChannel(e)).filter(s.isNotNullish), [e]);
+            return (0, i.useStateFromStoresArray)([a.default], () => t.filter(e => a.default.can(o.JOIN_VOCAL_CHANNEL_PERMISSIONS, e)), [t])
         }(t)
     }
 }

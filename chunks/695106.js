@@ -5,8 +5,8 @@ function(e, t, n) {
             return M
         }
     }), n("222007"), n("843762");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("917351"),
@@ -15,42 +15,42 @@ function(e, t, n) {
         d = n("974667"),
         c = n("895547"),
         f = n("769846"),
-        m = n("77078"),
-        p = n("150021"),
+        p = n("77078"),
+        m = n("150021"),
         h = n("206625"),
-        E = n("302437"),
-        g = n("867805"),
-        S = n("476765"),
-        C = n("402671"),
-        T = n("159885"),
-        v = n("49111"),
+        x = n("302437"),
+        E = n("867805"),
+        y = n("476765"),
+        g = n("402671"),
+        S = n("159885"),
+        C = n("49111"),
         I = n("782340"),
-        _ = n("756249");
-    let N = (0, S.uid)(),
-        A = c.default.convert.fromCodePoint("1f44f"),
-        x = (0, T.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-        y = (0, T.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+        T = n("756249");
+    let _ = (0, y.uid)(),
+        v = c.default.convert.fromCodePoint("1f44f"),
+        N = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+        A = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
         O = e => {
             let {
                 fade: t,
                 surrogate: n,
-                onClick: i,
+                onClick: l,
                 delay: a,
                 index: s
-            } = e, r = (0, d.useListItem)("item-".concat(s)), o = C.default.getURL(A + n), f = (0, u.useSpring)({
+            } = e, r = (0, d.useListItem)("item-".concat(s)), o = g.default.getURL(v + n), f = (0, u.useSpring)({
                 opacity: 1,
                 from: {
                     opacity: t ? 0 : 1
                 },
                 delay: a
             });
-            return (0, l.jsx)(m.Clickable, {
+            return (0, i.jsx)(p.Clickable, {
                 ...r,
                 role: "option",
                 "aria-selected": 0 === s,
-                onClick: () => i(n),
-                className: _.diversityEmojiItem,
-                children: (0, l.jsx)(u.animated.div, {
+                onClick: () => l(n),
+                className: T.diversityEmojiItem,
+                children: (0, i.jsx)(u.animated.div, {
                     "aria-label": function(e) {
                         let t = c.default.convert.toCodePoint(e);
                         switch (t) {
@@ -68,7 +68,7 @@ function(e, t, n) {
                                 return I.default.Messages.EMOJI_MODIFIER_NONE
                         }
                     }(n),
-                    className: _.diversityEmojiItemImage,
+                    className: T.diversityEmojiItemImage,
                     style: {
                         backgroundImage: 'url("'.concat(o, '")'),
                         ...f
@@ -76,43 +76,43 @@ function(e, t, n) {
                 })
             })
         },
-        R = e => {
+        k = e => {
             let {
                 id: t,
                 selectedSurrogate: n,
                 onClick: a,
                 hasTabWrapper: r
-            } = e, c = (0, E.default)("diversity"), f = (0, u.useSpring)({
-                height: (y + 2 * x) * (g.DIVERSITY_SURROGATES.length + 1),
+            } = e, c = (0, x.default)("diversity"), f = (0, u.useSpring)({
+                height: (A + 2 * N) * (E.DIVERSITY_SURROGATES.length + 1),
                 from: {
-                    height: y
+                    height: A
                 },
                 config: {
                     duration: 125
                 }
             });
-            i.useEffect(() => {
+            l.useEffect(() => {
                 c.focusFirstVisibleItem()
             }, [c]);
-            let m = ["", ...g.DIVERSITY_SURROGATES];
-            return o.remove(m, e => e === n), m.unshift(n), (0, l.jsx)(d.ListNavigatorProvider, {
+            let p = ["", ...E.DIVERSITY_SURROGATES];
+            return o.remove(p, e => e === n), p.unshift(n), (0, i.jsx)(d.ListNavigatorProvider, {
                 navigator: c,
-                children: (0, l.jsx)(d.ListNavigatorContainer, {
+                children: (0, i.jsx)(d.ListNavigatorContainer, {
                     children: e => {
                         let {
                             ref: n,
-                            ...i
+                            ...l
                         } = e;
-                        return (0, l.jsx)(u.animated.div, {
-                            ...i,
+                        return (0, i.jsx)(u.animated.div, {
+                            ...l,
                             id: t,
                             ref: n,
-                            className: s(_.diversitySelectorOptions, {
-                                [_.diversitySelectorOptionsHasTabWrapper]: r
+                            className: s(T.diversitySelectorOptions, {
+                                [T.diversitySelectorOptionsHasTabWrapper]: r
                             }),
                             style: f,
                             role: "listbox",
-                            children: m.map((e, t) => (0, l.jsx)(O, {
+                            children: p.map((e, t) => (0, i.jsx)(O, {
                                 index: t,
                                 fade: 0 !== t,
                                 delay: 20 * t,
@@ -130,38 +130,38 @@ function(e, t, n) {
             selectedSurrogate: n,
             className: a,
             hasTabWrapper: s
-        } = e, r = C.default.getURL(A + n), [o, u] = i.useState(!1), d = (0, h.default)(null, () => u(!1)), c = i.useRef(null);
-        return (0, l.jsxs)("div", {
+        } = e, r = g.default.getURL(v + n), [o, u] = l.useState(!1), d = (0, h.default)(null, () => u(!1)), c = l.useRef(null);
+        return (0, i.jsxs)("div", {
             ref: d,
             className: a,
-            children: [(0, l.jsx)(m.Clickable, {
+            children: [(0, i.jsx)(p.Clickable, {
                 innerRef: c,
-                className: _.diversitySelectorButton,
+                className: T.diversitySelectorButton,
                 onClick: () => {
                     u(!0)
                 },
                 "aria-label": I.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
                 "aria-haspopup": !0,
                 "aria-expanded": o,
-                "aria-controls": N,
+                "aria-controls": _,
                 tabIndex: o ? -1 : 0,
-                children: (0, l.jsx)("div", {
-                    className: _.diversityEmojiItemImage,
+                children: (0, i.jsx)("div", {
+                    className: T.diversityEmojiItemImage,
                     style: {
                         backgroundImage: 'url("'.concat(r, '")')
                     }
                 })
-            }), o ? (0, l.jsx)("div", {
+            }), o ? (0, i.jsx)("div", {
                 onKeyDown: e => {
-                    e.keyCode === v.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
+                    e.keyCode === C.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
                 },
-                children: (0, l.jsx)(R, {
-                    id: N,
+                children: (0, i.jsx)(k, {
+                    id: _,
                     hasTabWrapper: s,
                     selectedSurrogate: n,
                     onClick: e => {
                         var n;
-                        (0, p.setDiversityColor)(e), u(!1), null === (n = t.current) || void 0 === n || n.focus()
+                        (0, m.setDiversityColor)(e), u(!1), null === (n = t.current) || void 0 === n || n.focus()
                     }
                 })
             }) : null]

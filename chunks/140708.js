@@ -2,26 +2,26 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         addReactionPickerAnimation: function() {
-            return i
+            return l
         },
         clearReactionPickerAnimation: function() {
             return a
         }
     });
-    var l = n("913144");
+    var i = n("913144");
 
-    function i(e, t, n, i) {
-        l.default.dispatch({
+    function l(e, t, n, l) {
+        i.default.dispatch({
             type: "BURST_REACTION_PICKER_ANIMATION_ADD",
             messageId: e,
             emojiName: t,
             emojiId: n,
-            startPosition: i
+            startPosition: l
         })
     }
 
     function a(e, t, n) {
-        l.default.dispatch({
+        i.default.dispatch({
             type: "BURST_REACTION_PICKER_ANIMATION_CLEAR",
             messageId: e,
             emojiName: t,

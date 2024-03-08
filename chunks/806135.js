@@ -5,26 +5,26 @@ function(e, t, n) {
             return s
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("333987"),
-        s = i.forwardRef(function(e, t) {
+        s = l.forwardRef(function(e, t) {
             let {
                 muted: n,
                 volume: s,
                 playing: r,
                 ...o
             } = e, [u, d] = (0, a.default)(t);
-            return i.useEffect(() => {
+            return l.useEffect(() => {
                 let e = u.current;
                 if (null != e) void 0 !== n && (e.muted = n)
-            }, [u, n]), i.useEffect(() => {
+            }, [u, n]), l.useEffect(() => {
                 let e = u.current;
                 if (null != e) void 0 !== s && (e.volume = s)
-            }, [u, s]), i.useEffect(() => {
+            }, [u, s]), l.useEffect(() => {
                 let e = u.current;
                 if (null != e) void 0 !== r && (r ? e.play() : e.pause())
-            }, [u, r]), (0, l.jsx)("audio", {
+            }, [u, r]), (0, i.jsx)("audio", {
                 ref: d,
                 ...o
             })

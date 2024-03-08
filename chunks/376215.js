@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return y
+            return A
         }
     }), n("222007"), n("424973");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("974667"),
@@ -15,33 +15,33 @@ function(e, t, n) {
         d = n("913144"),
         c = n("81594"),
         f = n("798609"),
-        m = n("206230"),
-        p = n("302437"),
+        p = n("206230"),
+        m = n("302437"),
         h = n("383018"),
-        E = n("474643"),
-        g = n("585722"),
-        S = n("898260"),
-        C = n("378765"),
-        T = n("393377"),
-        v = n("761354"),
+        x = n("474643"),
+        E = n("585722"),
+        y = n("898260"),
+        g = n("378765"),
+        S = n("393377"),
+        C = n("761354"),
         I = n("49111"),
-        _ = n("986548"),
-        N = n("356410");
-    let A = [];
+        T = n("986548"),
+        _ = n("356410");
+    let v = [];
 
-    function x(e) {
+    function N(e) {
         let {
             channelId: t,
             type: n
-        } = e, a = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), x = (0, p.default)("attachments", o.Orientations.HORIZONTAL), y = (0, u.useStateFromStores)([g.default], () => g.default.getUploads(t, n.drafts.type)), {
+        } = e, a = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), N = (0, m.default)("attachments", o.Orientations.HORIZONTAL), A = (0, u.useStateFromStores)([E.default], () => E.default.getUploads(t, n.drafts.type)), {
             isApplicationCommand: O,
-            commandOptions: R,
+            commandOptions: k,
             commandOptionStates: M
         } = (0, u.useStateFromStoresObject)([h.default], () => {
             let e = h.default.getActiveCommand(t);
             if (null == e) return {
                 isApplicationCommand: !1,
-                commandOptions: A,
+                commandOptions: v,
                 commandOptionStates: null
             };
             let n = h.default.getOptionStates(t);
@@ -50,52 +50,52 @@ function(e, t, n) {
                 commandOptions: e.options,
                 commandOptionStates: n
             }
-        }), L = i.useMemo(() => {
+        }), R = l.useMemo(() => {
             var e;
-            return null !== (e = null == R ? void 0 : R.filter(e => {
+            return null !== (e = null == k ? void 0 : k.filter(e => {
                 var t;
                 return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == M ? void 0 : null === (t = M[e.name]) || void 0 === t ? void 0 : t.hasValue)
             })) && void 0 !== e ? e : []
-        }, [R, M]), [P, b] = i.useState([]);
-        i.useEffect(() => {
+        }, [k, M]), [L, b] = l.useState([]);
+        l.useEffect(() => {
             let e = () => {
                 c.default.clearAll(t, n.drafts.type)
             };
             return d.default.subscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e), () => d.default.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
         }, [t, n]);
-        let j = i.useCallback(() => {
-            x.focusFirstVisibleItem()
-        }, [x]);
-        return ((0, C.useComponentAction)({
+        let P = l.useCallback(() => {
+            N.focusFirstVisibleItem()
+        }, [N]);
+        return ((0, g.useComponentAction)({
             event: I.ComponentActions.FOCUS_ATTACHMENT_AREA,
-            handler: j
-        }), i.useEffect(() => {
+            handler: P
+        }), l.useEffect(() => {
             if (O) {
                 let e = [];
-                P.forEach(t => {
-                    !L.some(e => t.name === e.name) && e.push(t)
+                L.forEach(t => {
+                    !R.some(e => t.name === e.name) && e.push(t)
                 }), e.forEach(e => {
                     c.default.remove(t, e.name, n.drafts.type)
-                }), b(L)
+                }), b(R)
             }
-        }, [t, L.length, n]), !O && 0 === y.length || O && 0 === L.length) ? null : (0, l.jsxs)(i.Fragment, {
-            children: [(0, l.jsx)(r.ListNavigatorProvider, {
-                navigator: x,
-                children: (0, l.jsx)(r.ListNavigatorContainer, {
+        }, [t, R.length, n]), !O && 0 === A.length || O && 0 === R.length) ? null : (0, i.jsxs)(l.Fragment, {
+            children: [(0, i.jsx)(r.ListNavigatorProvider, {
+                navigator: N,
+                children: (0, i.jsx)(r.ListNavigatorContainer, {
                     children: e => {
                         let {
-                            ref: i,
+                            ref: l,
                             ...r
                         } = e;
-                        return (0, l.jsx)("ul", {
-                            ref: i,
+                        return (0, i.jsx)("ul", {
+                            ref: l,
                             ...r,
-                            className: s(_.channelAttachmentArea, N.scrollbarGhost),
-                            children: O ? L.map(e => (0, l.jsx)(T.default, {
+                            className: s(T.channelAttachmentArea, _.scrollbarGhost),
+                            children: O ? R.map(e => (0, i.jsx)(S.default, {
                                 channelId: t,
                                 keyboardModeEnabled: a,
                                 option: e
-                            }, e.name)) : y.map(e => (0, l.jsx)(v.default, {
+                            }, e.name)) : A.map(e => (0, i.jsx)(C.default, {
                                 channelId: t,
                                 draftType: n.drafts.type,
                                 upload: e,
@@ -105,16 +105,16 @@ function(e, t, n) {
                         })
                     }
                 })
-            }), n.drafts.type === E.DraftType.FirstThreadMessage ? null : (0, l.jsx)(S.default, {})]
+            }), n.drafts.type === x.DraftType.FirstThreadMessage ? null : (0, i.jsx)(y.default, {})]
         })
     }
-    var y = i.memo(function(e) {
+    var A = l.memo(function(e) {
         let {
             channelId: t,
             type: n,
-            canAttachFiles: i
+            canAttachFiles: l
         } = e;
-        return i ? (0, l.jsx)(x, {
+        return l ? (0, i.jsx)(N, {
             channelId: t,
             type: n
         }) : null

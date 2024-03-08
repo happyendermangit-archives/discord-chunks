@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ITEM_HEIGHT: function() {
-            return P
+            return L
         },
         default: function() {
-            return U
+            return j
         }
     }), n("222007"), n("808653");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("917351"),
@@ -18,36 +18,36 @@ function(e, t, n) {
         d = n("798609"),
         c = n("716241"),
         f = n("296141"),
-        m = n("986632"),
-        p = n("45961"),
+        p = n("986632"),
+        m = n("45961"),
         h = n("515059"),
-        E = n("501536"),
-        g = n("124299"),
-        S = n("476765"),
-        C = n("507217"),
-        T = n("240249"),
-        v = n("972620"),
+        x = n("501536"),
+        E = n("124299"),
+        y = n("476765"),
+        g = n("507217"),
+        S = n("240249"),
+        C = n("972620"),
         I = n("524768"),
-        _ = n("389153"),
-        N = n("586450"),
-        A = n("41884"),
-        x = n("355263"),
-        y = n("317041"),
+        T = n("389153"),
+        _ = n("586450"),
+        v = n("41884"),
+        N = n("355263"),
+        A = n("317041"),
         O = n("49111"),
-        R = n("782340"),
+        k = n("782340"),
         M = n("847948"),
-        L = n("327769");
-    let P = 56,
+        R = n("327769");
+    let L = 56,
         b = [8, 8, 0, 8],
-        j = o.debounce(() => {
+        P = o.debounce(() => {
             (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
         }, 300);
-    var U = i.forwardRef(function(e, t) {
+    var j = l.forwardRef(function(e, t) {
         let {
             channel: n,
             canOnlyUseTextCommands: a
-        } = e, r = i.useRef(!1), o = i.useRef(0), [U, k] = i.useState(0), w = i.useRef(null), [F, G] = i.useState(!1), B = m.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
-        i.useEffect(() => {
+        } = e, r = l.useRef(!1), o = l.useRef(0), [j, D] = l.useState(0), w = l.useRef(null), [F, B] = l.useState(!1), G = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+        l.useEffect(() => {
             (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
         }, []);
         let {
@@ -59,23 +59,23 @@ function(e, t, n) {
             filteredSectionId: z,
             scrollDown: Z,
             filterSection: J
-        } = T.useDiscovery(n, {
+        } = S.useDiscovery(n, {
             commandType: d.ApplicationCommandType.CHAT,
-            builtIns: a ? v.BuiltInCommandFilter.ONLY_TEXT : v.BuiltInCommandFilter.ALLOW,
+            builtIns: a ? C.BuiltInCommandFilter.ONLY_TEXT : C.BuiltInCommandFilter.ALLOW,
             applicationCommands: !a
         }, {
             placeholderCount: 7,
-            limit: y.DISCOVERY_COMMANDS_QUERY_LIMIT,
+            limit: A.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
-        }), q = (0, p.useSynchronizedActiveCategoryIndexForScrollPosition)({
-            activeCategoryIndex: B,
+        }), q = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
+            activeCategoryIndex: G,
             isScrolling: r,
             listRef: w,
             onActiveCategoryIndexChange: e => {
                 let t = V[e];
                 if (null != t) {
                     let e = H.findIndex(e => e.id === t.id);
-                    m.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
+                    p.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
                 }
             },
             scrollOffset: 20,
@@ -83,51 +83,51 @@ function(e, t, n) {
         }), X = e => {
             let t = V.length,
                 n = K.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
-                l = 48 * t + n * P - 512;
-            W && e + 420 > l && Z(), q(e), j(), o.current = e
+                i = 48 * t + n * L - 512;
+            W && e + 420 > i && Z(), q(e), P(), o.current = e
         };
-        i.useEffect(() => {
+        l.useEffect(() => {
             X(o.current)
         }, [Y]);
-        let Q = i.useCallback(e => {
+        let Q = l.useCallback(e => {
                 let t = e === V.length - 1;
                 return t && !W ? 0 : 16
             }, [V.length, W]),
             $ = K.map(e => e.data.length);
-        i.useEffect(() => {
-            null != w.current && F && null != U && w.current.scrollRowIntoView(U)
-        }, [F, U]), i.useLayoutEffect(() => {
+        l.useEffect(() => {
+            null != w.current && F && null != j && w.current.scrollRowIntoView(j)
+        }, [F, j]), l.useLayoutEffect(() => {
             if (null != z) {
                 var e;
                 null === (e = w.current) || void 0 === e || e.scrollToSectionTop(0)
             }
         }, [Y, z]);
-        let ee = i.useCallback(e => {
-                if (e.id === z || e.id === y.BuiltInSectionId.FRECENCY) {
+        let ee = l.useCallback(e => {
+                if (e.id === z || e.id === A.BuiltInSectionId.FRECENCY) {
                     var t;
                     J(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
                 } else J(e.id)
             }, [J, z]),
-            et = i.useCallback((e, t, l) => {
-                C.setActiveCommand({
+            et = l.useCallback((e, t, i) => {
+                g.setActiveCommand({
                     channelId: n.id,
                     command: e,
                     section: t,
                     location: I.ApplicationCommandTriggerLocations.DISCOVERY,
-                    triggerSection: l
+                    triggerSection: i
                 })
             }, [n.id]);
-        i.useImperativeHandle(t, () => ({
+        l.useImperativeHandle(t, () => ({
             onTabOrEnter: e => {
-                if (null == U) return !e && (k(0), !0);
-                if (null == U) return !1;
+                if (null == j) return !e && (D(0), !0);
+                if (null == j) return !1;
                 let t = 0,
                     n = 0;
                 for (let e of K)
-                    if (t = n, U < (n += e.data.length)) {
-                        let n = e.data[U - t],
-                            l = H.find(e => e.id === n.applicationId);
-                        et(n, l, (0, _.getCommandTriggerSection)(e.section));
+                    if (t = n, j < (n += e.data.length)) {
+                        let n = e.data[j - t],
+                            i = H.find(e => e.id === n.applicationId);
+                        et(n, i, (0, T.getCommandTriggerSection)(e.section));
                         break
                     } return !0
             },
@@ -135,96 +135,96 @@ function(e, t, n) {
                 if (0 === Y.length) return !0;
                 let t = W ? 7 : 0,
                     n = Y.length + t,
-                    l = null == U ? 0 : U + e;
-                return l >= n ? l = n - 1 : l < 0 && (l = 0), k(l), G(!0), !0
+                    i = null == j ? 0 : j + e;
+                return i >= n ? i = n - 1 : i < 0 && (i = 0), D(i), B(!0), !0
             }
-        }), [Y.length, K, W, H, et, U]);
-        let en = i.useCallback(e => {
+        }), [Y.length, K, W, H, et, j]);
+        let en = l.useCallback(e => {
                 let t = V[e];
                 if (null == t) return null;
-                let i = (0, x.getIconComponent)(t),
-                    a = (0, l.jsx)(i, {
+                let l = (0, N.getIconComponent)(t),
+                    a = (0, i.jsx)(l, {
                         channel: n,
                         section: t,
                         width: 16,
                         height: 16,
                         padding: 0
                     });
-                return (0, l.jsx)(h.default, {
+                return (0, i.jsx)(h.default, {
                     className: M.categoryHeader,
                     icon: a,
                     children: t.name
                 }, e)
             }, [n, V]),
-            el = i.useCallback((e, t) => {
+            ei = l.useCallback((e, t) => {
                 let n = e === V.length - 1,
-                    i = V[e],
+                    l = V[e],
                     {
                         data: a
                     } = K[e];
-                return (0, l.jsxs)("ul", {
+                return (0, i.jsxs)("ul", {
                     role: "group",
-                    "aria-label": i.name,
+                    "aria-label": l.name,
                     className: s(M.categorySection, {
                         [M.categorySectionLast]: n
                     }),
-                    children: [t, 0 === a.length && (0, l.jsx)(u.default, {
-                        message: R.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
-                            applicationName: i.name
+                    children: [t, 0 === a.length && (0, i.jsx)(u.default, {
+                        message: k.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
+                            applicationName: l.name
                         }),
-                        noResultsImageURL: L,
+                        noResultsImageURL: R,
                         className: M.noSearchResults
                     })]
                 }, e)
             }, [V, K]),
-            ei = i.useCallback((e, t) => {
-                var i;
+            el = l.useCallback((e, t) => {
+                var l;
                 let a = K[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
-                    r = "".concat(a.section.id, ":").concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || a.section.id !== s.applicationId && a.section.id !== y.BuiltInSectionId.FRECENCY || s.inputType === I.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(A.default, {}, r);
+                    r = "".concat(a.section.id, ":").concat(null !== (l = null == s ? void 0 : s.id) && void 0 !== l ? l : e);
+                if (null == s || a.section.id !== s.applicationId && a.section.id !== A.BuiltInSectionId.FRECENCY || s.inputType === I.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
                 let o = H.find(e => e.id === s.applicationId);
-                return (0, l.jsx)(E.default.NewCommand, {
+                return (0, i.jsx)(x.default.NewCommand, {
                     index: e,
                     command: s,
                     channel: n,
                     className: M.itemWrapper,
-                    selected: U === e,
+                    selected: j === e,
                     showImage: a.section.id !== s.applicationId,
                     section: o,
-                    onClick: () => et(s, o, (0, _.getCommandTriggerSection)(a.section)),
+                    onClick: () => et(s, o, (0, T.getCommandTriggerSection)(a.section)),
                     onHover: () => {
-                        k(null), G(!1)
+                        D(null), B(!1)
                     }
                 }, r)
-            }, [n, K, et, H, U]),
-            ea = (0, S.useUID)();
-        return (0, f.useChannelEditorPopup)(ea, !0, (0, E.getAutocompleteRowId)(U)), i.useEffect(() => () => {
+            }, [n, K, et, H, j]),
+            ea = (0, y.useUID)();
+        return (0, f.useChannelEditorPopup)(ea, !0, (0, x.getAutocompleteRowId)(j)), l.useEffect(() => () => {
             (0, f.dismissChannelEditorPopup)()
-        }, []), (0, l.jsxs)(E.default, {
+        }, []), (0, i.jsxs)(x.default, {
             id: ea,
             className: M.outerWrapper,
             innerClassName: M.wrapper,
-            onMouseDown: D,
-            children: [(0, l.jsx)(N.default, {
+            onMouseDown: U,
+            children: [(0, i.jsx)(_.default, {
                 className: M.rail,
                 channel: n,
                 sections: H,
                 filteredSectionId: z,
-                activeCategoryIndex: B,
+                activeCategoryIndex: G,
                 onSectionClick: ee,
                 applicationCommandListRef: w
-            }), (0, l.jsx)(g.default, {
+            }), (0, i.jsx)(E.default, {
                 role: "listbox",
                 className: M.list,
                 listPadding: b,
                 onScroll: X,
-                renderRow: ei,
-                renderSection: el,
+                renderRow: el,
+                renderSection: ei,
                 renderSectionHeader: en,
                 rowCount: V.length,
                 rowCountBySection: $,
-                rowHeight: P,
+                rowHeight: L,
                 sectionHeaderHeight: 32,
                 sectionMarginBottom: Q,
                 ref: w,
@@ -233,7 +233,7 @@ function(e, t, n) {
         })
     });
 
-    function D(e) {
+    function U(e) {
         e.preventDefault()
     }
 }

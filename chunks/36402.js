@@ -5,11 +5,11 @@ function(e, t, n) {
             return o
         }
     });
-    var l = n("446674"),
-        i = n("913144");
+    var i = n("446674"),
+        l = n("913144");
     let a = {},
         s = {};
-    class r extends l.default.Store {
+    class r extends i.default.Store {
         getRoleMemberCount(e) {
             return null != e ? a[e] : null
         }
@@ -20,7 +20,7 @@ function(e, t, n) {
         }
     }
     r.displayName = "GuildRoleMemberCountStore";
-    var o = new r(i.default, {
+    var o = new r(l.default, {
         GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function(e) {
             let {
                 guildId: t,
@@ -32,36 +32,36 @@ function(e, t, n) {
             let {
                 guildId: t,
                 roleId: n,
-                count: l
-            } = e, i = a[t];
-            if (null == i) return !1;
-            i[n] = l
+                count: i
+            } = e, l = a[t];
+            if (null == l) return !1;
+            l[n] = i
         },
         GUILD_ROLE_MEMBER_BULK_ADD: function(e) {
             let {
                 guildId: t,
                 roleId: n,
-                added: l
-            } = e, i = a[t];
-            if (null == i || null == i[n]) return !1;
-            let s = Object.keys(l).length;
-            i[n] += s
+                added: i
+            } = e, l = a[t];
+            if (null == l || null == l[n]) return !1;
+            let s = Object.keys(i).length;
+            l[n] += s
         },
         GUILD_ROLE_MEMBER_ADD: function(e) {
             let {
                 guildId: t,
                 roleId: n
-            } = e, l = a[t];
-            if (null == l || null == l[n]) return !1;
-            l[n] = l[n] + 1
+            } = e, i = a[t];
+            if (null == i || null == i[n]) return !1;
+            i[n] = i[n] + 1
         },
         GUILD_ROLE_MEMBER_REMOVE: function(e) {
             let {
                 guildId: t,
                 roleId: n
-            } = e, l = a[t];
-            if (null == l || null == l[n]) return !1;
-            l[n] = Math.max(l[n] - 1, 0)
+            } = e, i = a[t];
+            if (null == i || null == i[n]) return !1;
+            i[n] = Math.max(i[n] - 1, 0)
         },
         GUILD_ROLE_CREATE: function(e) {
             let {

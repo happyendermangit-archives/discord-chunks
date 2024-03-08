@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return i
         }
     });
-    var l = (0, n("862205").createExperiment)({
+    var i = (0, n("862205").createExperiment)({
         kind: "user",
         id: "2021-07_popout_autocomplete",
         label: "Popout Autocomplete experiment",

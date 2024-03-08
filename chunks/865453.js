@@ -5,8 +5,8 @@ function(e, t, n) {
             return c
         }
     });
-    var l = n("884691"),
-        i = n("716241"),
+    var i = n("884691"),
+        l = n("716241"),
         a = n("42203"),
         s = n("18494"),
         r = n("599110"),
@@ -19,21 +19,21 @@ function(e, t, n) {
             currentGuildId: n,
             popoutData: c,
             nonce: f,
-            demoMode: m
+            demoMode: p
         } = e, {
-            current: p
-        } = l.useRef({
+            current: m
+        } = i.useRef({
             guild_id: n,
             emoji_id: t,
-            ...(0, i.collectChannelAnalyticsMetadata)(a.default.getChannel(s.default.getChannelId(n)))
+            ...(0, l.collectChannelAnalyticsMetadata)(a.default.getChannel(s.default.getChannelId(n)))
         });
-        return l.useEffect(() => {
+        return i.useEffect(() => {
             var e;
-            (0, o.initiateEmojiInteraction)(u.EmojiInteractionPoint.TrackOpenPopoutUsed), !m && r.default.track(d.AnalyticEvents.OPEN_POPOUT, {
+            (0, o.initiateEmojiInteraction)(u.EmojiInteractionPoint.TrackOpenPopoutUsed), !p && r.default.track(d.AnalyticEvents.OPEN_POPOUT, {
                 type: null !== (e = null == c ? void 0 : c.analyticsType) && void 0 !== e ? e : "Standard Emoji Popout",
                 nonce: f,
-                ...p
+                ...m
             })
-        }, []), p
+        }, []), m
     }
 }

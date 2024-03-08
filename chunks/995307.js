@@ -14,7 +14,7 @@ function(e, t, n) {
             return d
         }
     });
-    var l, i, a, s, r, o, u = n("782340");
+    var i, l, a, s, r, o, u = n("782340");
 
     function d() {
         return [{
@@ -36,5 +36,5 @@ function(e, t, n) {
             value: "OTHER",
             label: u.default.Messages.SUMMARIES_FEEDBACK_OPTION_OTHER
         }]
-    }(l = s || (s = {})).TOOLBAR_BUTTON = "toolbar button", l.PILL = "pill", (i = r || (r = {})).SIDEBAR = "sidebar", i.PILL_DROPDOWN = "pill dropdown", i.PILL_NEXT_ARROW = "pill next arrow", i.PILL_PREVIOUS_ARROW = "pill previous arrow", (a = o || (o = {})).DUPLICATED = "DUPLICATED", a.TOO_GENERIC = "TOO_GENERIC", a.TOO_MANY = "TOO_MANY", a.INACCURATE = "INACCURATE", a.NOT_USEFUL = "NOT_USEFUL", a.OTHER = "OTHER"
+    }(i = s || (s = {})).TOOLBAR_BUTTON = "toolbar button", i.PILL = "pill", (l = r || (r = {})).SIDEBAR = "sidebar", l.PILL_DROPDOWN = "pill dropdown", l.PILL_NEXT_ARROW = "pill next arrow", l.PILL_PREVIOUS_ARROW = "pill previous arrow", (a = o || (o = {})).DUPLICATED = "DUPLICATED", a.TOO_GENERIC = "TOO_GENERIC", a.TOO_MANY = "TOO_MANY", a.INACCURATE = "INACCURATE", a.NOT_USEFUL = "NOT_USEFUL", a.OTHER = "OTHER"
 }

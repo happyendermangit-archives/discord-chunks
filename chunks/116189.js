@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return v
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("917351"),
-        a = n.n(i),
+    var l = n("917351"),
+        a = n.n(l),
         s = n("96386"),
         r = n("798609"),
         o = n("246598"),
@@ -16,24 +16,24 @@ function(e, t, n) {
         d = n("916565"),
         c = n("501536"),
         f = n("25292"),
-        m = n("200294"),
-        p = n("851745"),
+        p = n("200294"),
+        m = n("851745"),
         h = n("317041"),
-        E = n("782340"),
-        g = n("92810"),
-        S = n("327769");
-    let C = {
+        x = n("782340"),
+        E = n("92810"),
+        y = n("327769");
+    let g = {
             results: {
                 choices: []
             }
         },
-        T = {
+        S = {
             results: {
                 choices: [],
                 isLoading: !0
             }
         },
-        v = Array.from({
+        C = Array.from({
             length: 5
         }, () => ({
             name: "",
@@ -46,27 +46,27 @@ function(e, t, n) {
                 isError: !0
             }
         },
-        _ = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+        T = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
             leading: !0,
             trailing: !0
         }),
-        N = {
+        _ = {
             stores: [u.default, o.default],
             showEmpty: !0,
-            matches(e, t, n, l, i) {
+            matches(e, t, n, i, l) {
                 let a = u.default.getActiveOption(e.id);
-                return i.commands !== p.CommandMode.DISABLED && null != a && (a.type === r.ApplicationCommandOptionType.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || (null == a ? void 0 : a.choices) != null && a.choices.length > 0)
+                return l.commands !== m.CommandMode.DISABLED && null != a && (a.type === r.ApplicationCommandOptionType.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || (null == a ? void 0 : a.choices) != null && a.choices.length > 0)
             },
-            queryResults(e, t, n, l, i) {
+            queryResults(e, t, n, i, l) {
                 var a;
                 let s = u.default.getActiveOption(e.id);
-                if (null == s) return C;
+                if (null == s) return g;
                 if (s.autocomplete) {
-                    if (i) {
-                        let i = u.default.getActiveCommand(e.id),
-                            a = l.getCommandOptionValues();
-                        _({
-                            command: i,
+                    if (l) {
+                        let l = u.default.getActiveCommand(e.id),
+                            a = i.getCommandOptionValues();
+                        T({
+                            command: l,
                             optionValues: a,
                             context: {
                                 channel: e,
@@ -81,7 +81,7 @@ function(e, t, n) {
                     let a = o.default.getLastErrored(e.id);
                     if (a) return I;
                     let r = o.default.getAutocompleteChoices(e.id, s.name, n);
-                    return null == r ? T : {
+                    return null == r ? S : {
                         results: {
                             choices: r
                         }
@@ -100,25 +100,25 @@ function(e, t, n) {
                     results: {
                         choices: t,
                         isLoading: n,
-                        isError: i
+                        isError: l
                     },
                     selectedIndex: a,
                     query: r,
                     onHover: o,
                     onClick: u
                 } = e;
-                return i ? (0, l.jsx)(s.default, {
-                    message: E.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
-                    noResultsImageURL: S,
-                    className: g.noAutocompleteResults
-                }) : 0 !== t.length || n ? (0, m.renderAutocompleteGroup)({
+                return l ? (0, i.jsx)(s.default, {
+                    message: x.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
+                    noResultsImageURL: y,
+                    className: E.noAutocompleteResults
+                }) : 0 !== t.length || n ? (0, p.renderAutocompleteGroup)({
                     query: r,
                     selectedIndex: a,
-                    autocompletes: n ? v : t,
+                    autocompletes: n ? C : t,
                     onHover: o,
                     onClick: u,
-                    titleWithQuery: E.default.Messages.OPTIONS_MATCHING,
-                    titleWithoutQuery: E.default.Messages.OPTIONS,
+                    titleWithQuery: x.default.Messages.OPTIONS_MATCHING,
+                    titleWithoutQuery: x.default.Messages.OPTIONS,
                     Component: n ? c.default.Loading : c.default.Generic,
                     getProps: (e, t) => ({
                         key: t.toString(),
@@ -126,10 +126,10 @@ function(e, t, n) {
                     }),
                     getQuery: e => e,
                     key: "choice"
-                }) : (0, l.jsx)(s.default, {
-                    message: E.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_NO_OPTIONS,
-                    noResultsImageURL: S,
-                    className: g.noAutocompleteResults
+                }) : (0, i.jsx)(s.default, {
+                    message: x.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_NO_OPTIONS,
+                    noResultsImageURL: y,
+                    className: E.noAutocompleteResults
                 })
             },
             onSelect(e) {
@@ -138,14 +138,14 @@ function(e, t, n) {
                         choices: t
                     },
                     index: n,
-                    options: l
-                } = e, i = t[n];
-                return l.insertText(function(e) {
+                    options: i
+                } = e, l = t[n];
+                return i.insertText(function(e) {
                     return e.displayName
-                }(i)), {
-                    type: p.AutocompleteSelectionTypes.CHOICE
+                }(l)), {
+                    type: m.AutocompleteSelectionTypes.CHOICE
                 }
             }
         };
-    var A = N
+    var v = _
 }

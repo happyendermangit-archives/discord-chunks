@@ -5,8 +5,8 @@ function(e, t, n) {
             return h
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("77078"),
         s = n("507217"),
         r = n("524768"),
@@ -15,14 +15,14 @@ function(e, t, n) {
         d = n("659500"),
         c = n("82372"),
         f = n("49111"),
-        m = n("783759");
+        p = n("783759");
 
-    function p(e) {
+    function m(e) {
         let {
             channel: t,
             command: n,
             applicationSection: u
-        } = e, p = (0, o.getIconComponent)(u), h = i.useCallback(() => {
+        } = e, m = (0, o.getIconComponent)(u), h = l.useCallback(() => {
             c.dismissAppLauncherPopup(), s.setActiveCommand({
                 channelId: t.id,
                 command: n,
@@ -32,20 +32,20 @@ function(e, t, n) {
                 channelId: t.id
             })
         }, [t, n, u]);
-        return (0, l.jsxs)("li", {
-            className: m.command,
+        return (0, i.jsxs)("li", {
+            className: p.command,
             onClick: h,
-            children: [(0, l.jsx)(p, {
-                className: m.applicationIcon,
+            children: [(0, i.jsx)(m, {
+                className: p.applicationIcon,
                 channel: t,
                 section: u,
                 width: 36,
                 height: 36
-            }), (0, l.jsxs)("div", {
-                children: [(0, l.jsx)(a.Text, {
+            }), (0, i.jsxs)("div", {
+                children: [(0, i.jsx)(a.Text, {
                     variant: "text-md/semibold",
                     children: n.name
-                }), (0, l.jsx)(a.Text, {
+                }), (0, i.jsx)(a.Text, {
                     variant: "text-sm/normal",
                     color: "text-muted",
                     children: u.name
@@ -59,26 +59,26 @@ function(e, t, n) {
             channel: t,
             commands: n,
             sectionDescriptors: s
-        } = e, r = i.useMemo(() => n.map(e => {
+        } = e, r = l.useMemo(() => n.map(e => {
             let n = s.find(t => t.id === e.applicationId);
-            return null == n ? null : (0, l.jsx)(p, {
+            return null == n ? null : (0, i.jsx)(m, {
                 channel: t,
                 command: e,
                 applicationSection: n
             }, e.id)
         }), [t, n, s]);
-        return 0 === n.length ? null : (0, l.jsxs)("div", {
-            children: [(0, l.jsxs)(a.Text, {
-                className: m.commandListHeading,
+        return 0 === n.length ? null : (0, i.jsxs)("div", {
+            children: [(0, i.jsxs)(a.Text, {
+                className: p.commandListHeading,
                 variant: "text-sm/bold",
                 color: "text-muted",
-                children: [(0, l.jsx)(u.default, {
-                    className: m.commandListHeadingIcon,
+                children: [(0, i.jsx)(u.default, {
+                    className: p.commandListHeadingIcon,
                     height: 16,
                     width: 16
                 }), "Recent slash commands"]
-            }), (0, l.jsx)("ul", {
-                className: m.commandList,
+            }), (0, i.jsx)("ul", {
+                className: p.commandList,
                 children: r
             })]
         })

@@ -5,11 +5,11 @@ function(e, t, n) {
             return c
         },
         requestMembersForRole: function() {
-            return m
+            return p
         }
     });
-    var l = n("693566"),
-        i = n.n(l),
+    var i = n("693566"),
+        l = n.n(i),
         a = n("872717"),
         s = n("913144"),
         r = n("851387"),
@@ -40,18 +40,18 @@ function(e, t, n) {
     async function c(e) {
         o.default.shouldFetch(e) && await d(e)
     }
-    let f = new i({
+    let f = new l({
         maxAge: 1e4
     });
 
-    function m(e, t) {
+    function p(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            l = "".concat(e, "-").concat(t);
-        if (!n || null == f.get(l)) {
-            var i, s;
-            return f.set(l, !0), i = e, s = t, a.default.get({
-                url: u.Endpoints.GUILD_ROLE_MEMBER_IDS(i, s)
-            }).then(e => (r.default.requestMembersById(i, e.body, !1), e.body.length))
+            i = "".concat(e, "-").concat(t);
+        if (!n || null == f.get(i)) {
+            var l, s;
+            return f.set(i, !0), l = e, s = t, a.default.get({
+                url: u.Endpoints.GUILD_ROLE_MEMBER_IDS(l, s)
+            }).then(e => (r.default.requestMembersById(l, e.body, !1), e.body.length))
         }
         return Promise.resolve(null)
     }

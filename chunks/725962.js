@@ -5,8 +5,8 @@ function(e, t, n) {
             return c
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("143435"),
         s = n("77078"),
         r = n("599110"),
@@ -19,38 +19,38 @@ function(e, t, n) {
                 className: n,
                 iconClassName: c,
                 rel: f,
-                target: m,
-                mimeType: p,
+                target: p,
+                mimeType: m,
                 fileName: h,
-                focusProps: E,
-                onClick: g,
-                ...S
-            } = e, C = i.useMemo(() => a.designConfig.getDefaultLinkInterceptor(t), [t]), T = i.useCallback(e => {
+                focusProps: x,
+                onClick: E,
+                ...y
+            } = e, g = l.useMemo(() => a.designConfig.getDefaultLinkInterceptor(t), [t]), S = l.useCallback(e => {
                 r.default.track(u.AnalyticEvents.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                    attachment_type: null == p ? void 0 : p[0],
-                    attachment_subtype: null == p ? void 0 : p[1]
-                }), null == g || g(), null == C || C(e)
-            }, [C, p, g]);
-            return null != h ? (0, l.jsx)(s.Anchor, {
+                    attachment_type: null == m ? void 0 : m[0],
+                    attachment_subtype: null == m ? void 0 : m[1]
+                }), null == E || E(), null == g || g(e)
+            }, [g, m, E]);
+            return null != h ? (0, i.jsx)(s.Anchor, {
                 href: t,
-                onClick: T,
-                target: m,
+                onClick: S,
+                target: p,
                 rel: f,
                 className: n,
                 "aria-label": d.default.Messages.DOWNLOAD,
-                focusProps: E,
-                ...S,
+                focusProps: x,
+                ...y,
                 children: h
-            }) : (0, l.jsx)(s.Anchor, {
+            }) : (0, i.jsx)(s.Anchor, {
                 href: t,
-                onClick: T,
-                target: m,
+                onClick: S,
+                target: p,
                 rel: f,
                 className: n,
                 "aria-label": d.default.Messages.DOWNLOAD,
-                focusProps: E,
-                ...S,
-                children: (0, l.jsx)(o.default, {
+                focusProps: x,
+                ...y,
+                children: (0, i.jsx)(o.default, {
                     className: c
                 })
             })

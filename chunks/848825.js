@@ -5,12 +5,12 @@ function(e, t, n) {
             return s
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("772280"),
+    var l = n("772280"),
         a = n("802683"),
         s = function() {
-            return (0, l.jsx)(i.default, {
+            return (0, i.jsx)(l.default, {
                 className: a.icon
             })
         }

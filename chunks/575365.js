@@ -5,10 +5,10 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("36539"),
-        i = n("49111");
+    var i = n("36539"),
+        l = n("49111");
 
     function a(e) {
-        return null == e || null == e.type || e.type !== i.ActivityTypes.PLAYING ? null : (0, l.default)(e) ? i.ActivityGamePlatforms.XBOX : null != e.platform ? e.platform : i.ActivityGamePlatforms.DESKTOP
+        return null == e || null == e.type || e.type !== l.ActivityTypes.PLAYING ? null : (0, i.default)(e) ? l.ActivityGamePlatforms.XBOX : null != e.platform ? e.platform : l.ActivityGamePlatforms.DESKTOP
     }
 }

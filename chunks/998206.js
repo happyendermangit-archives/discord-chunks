@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return y
+            return A
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("446674"),
@@ -15,67 +15,67 @@ function(e, t, n) {
         d = n("244201"),
         c = n("206230"),
         f = n("427953"),
-        m = n("550766"),
-        p = n("292655"),
+        p = n("550766"),
+        m = n("292655"),
         h = n("478272"),
-        E = n("685665"),
-        g = n("384997"),
-        S = n("128295"),
-        C = n("414868"),
-        T = n("49111"),
-        v = n("994428"),
+        x = n("685665"),
+        E = n("384997"),
+        y = n("128295"),
+        g = n("414868"),
+        S = n("49111"),
+        C = n("994428"),
         I = n("13030"),
-        _ = n("782340"),
-        N = n("868387");
+        T = n("782340"),
+        _ = n("868387");
 
-    function A(e) {
+    function v(e) {
         let {
             disabled: t,
             channel: n,
             markAsDismissed: a,
-            visibleContent: g,
-            innerRef: A
-        } = e, x = (0, d.useAppContext)(), {
-            analyticsLocations: y
-        } = (0, E.default)(), O = x === T.AppContext.POPOUT, R = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), L = i.useCallback(() => {
-            a(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
+            visibleContent: E,
+            innerRef: v
+        } = e, N = (0, d.useAppContext)(), {
+            analyticsLocations: A
+        } = (0, x.default)(), O = N === S.AppContext.POPOUT, k = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), R = l.useCallback(() => {
+            a(C.ContentDismissActionType.UNKNOWN), (0, h.default)({
                 channel: M ? n : void 0,
                 guildId: n.guild_id,
                 locationObject: {
-                    page: T.AnalyticsPages.GUILD_CHANNEL,
-                    section: T.AnalyticsSections.CHANNEL_TEXT_AREA,
-                    object: T.AnalyticsObjects.BUTTON_ICON,
-                    objectType: T.AnalyticsObjectTypes.ACTIVITY
+                    page: S.AnalyticsPages.GUILD_CHANNEL,
+                    section: S.AnalyticsSections.CHANNEL_TEXT_AREA,
+                    object: S.AnalyticsObjects.BUTTON_ICON,
+                    objectType: S.AnalyticsObjectTypes.ACTIVITY
                 },
                 openInPopout: O,
                 enableSelectedTextChannelInvite: !0,
-                analyticsLocations: y
-            }), (0, m.fetchShelf)({
+                analyticsLocations: A
+            }), (0, p.fetchShelf)({
                 guildId: n.guild_id
             })
-        }, [y, n, M, a, O]), P = () => {
-            if (g === o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
-                className: N.sparkleContainer,
-                children: [(0, l.jsx)(C.default, {
-                    className: s(N.sparkleStar, {
-                        [N.noAnimation]: R
+        }, [A, n, M, a, O]), L = () => {
+            if (E === o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, i.jsxs)("div", {
+                className: _.sparkleContainer,
+                children: [(0, i.jsx)(g.default, {
+                    className: s(_.sparkleStar, {
+                        [_.noAnimation]: k
                     })
-                }), (0, l.jsx)(S.default, {
-                    className: s(N.sparklePlus, {
-                        [N.noAnimation]: R
+                }), (0, i.jsx)(y.default, {
+                    className: s(_.sparklePlus, {
+                        [_.noAnimation]: k
                     })
                 })]
             });
             return null
         };
-        return t ? null : (0, l.jsx)(u.Tooltip, {
-            text: _.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
-            children: e => (0, l.jsxs)("div", {
+        return t ? null : (0, i.jsx)(u.Tooltip, {
+            text: T.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
+            children: e => (0, i.jsxs)("div", {
                 ...e,
-                className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, N.buttonContainer),
-                ref: A,
-                children: [(0, l.jsx)(p.default, {
-                    onClick: L,
+                className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, _.buttonContainer),
+                ref: v,
+                children: [(0, i.jsx)(m.default, {
+                    onClick: R,
                     tabIndex: 0,
                     focusProps: {
                         offset: {
@@ -85,24 +85,24 @@ function(e, t, n) {
                             right: -4
                         }
                     }
-                }), P()]
+                }), L()]
             })
         })
     }
-    let x = [o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
-    var y = i.memo(i.forwardRef(function(e, t) {
-        return (0, l.jsx)(g.default, {
-            contentTypes: x,
+    let N = [o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
+    var A = l.memo(l.forwardRef(function(e, t) {
+        return (0, i.jsx)(E.default, {
+            contentTypes: N,
             children: n => {
                 let {
-                    visibleContent: i,
+                    visibleContent: l,
                     markAsDismissed: a
                 } = n;
-                return (0, l.jsx)(A, {
+                return (0, i.jsx)(v, {
                     ...e,
                     innerRef: t,
-                    visibleContent: i,
-                    markAsDismissed: () => a(v.ContentDismissActionType.UNKNOWN)
+                    visibleContent: l,
+                    markAsDismissed: () => a(C.ContentDismissActionType.UNKNOWN)
                 })
             }
         })

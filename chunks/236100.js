@@ -5,9 +5,9 @@ function(e, t, n) {
             return c
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("77078"),
+    var l = n("77078"),
         a = n("38766"),
         s = n("49111"),
         r = n("782340"),
@@ -33,18 +33,18 @@ function(e, t, n) {
         }), f = (0, a.default)({
             analyticsLocation: d
         });
-        return (0, l.jsxs)(i.Menu, {
+        return (0, i.jsxs)(l.Menu, {
             className: o.popoutMenu,
             onSelect: t,
             navId: "edit-profile-popout",
             onClose: n,
             "aria-label": r.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-            children: [(0, l.jsx)(i.MenuItem, {
+            children: [(0, i.jsx)(l.MenuItem, {
                 id: "edit-server-profile",
                 label: r.default.Messages.CHANGE_IDENTITY,
                 subtext: r.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
                 action: () => c()
-            }), (0, l.jsx)(i.MenuItem, {
+            }), (0, i.jsx)(l.MenuItem, {
                 id: "edit-default-profile",
                 label: r.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
                 subtext: r.default.Messages.USER_PROFILE_MENU_HELP,

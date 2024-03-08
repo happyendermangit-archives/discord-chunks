@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return l
         }
     });
-    var l = n("884691");
+    var i = n("884691");
 
-    function i(e) {
+    function l(e) {
         let t = null == e ? void 0 : e.getBoundingClientRect(),
             n = null == t ? void 0 : t.left,
-            i = null == t ? void 0 : t.top,
-            a = (0, l.useMemo)(() => null != n && null != i ? {
+            l = null == t ? void 0 : t.top,
+            a = (0, i.useMemo)(() => null != n && null != l ? {
                 x: n,
-                y: i
-            } : null, [n, i]);
+                y: l
+            } : null, [n, l]);
         return a
     }
 }

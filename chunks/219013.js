@@ -5,9 +5,9 @@ function(e, t, n) {
             return s
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("86678"),
+    var l = n("86678"),
         a = n("958706");
 
     function s(e) {
@@ -18,7 +18,7 @@ function(e, t, n) {
             onSelectEmoji: r,
             messageId: o
         } = e;
-        return (0, l.jsx)(i.default, {
+        return (0, i.jsx)(l.default, {
             closePopout: n,
             channel: t,
             onSelectEmoji: r,

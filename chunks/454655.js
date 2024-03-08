@@ -5,10 +5,10 @@ function(e, t, n) {
             return o
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("600785"),
         r = n("335673"),
         o = function(e) {
@@ -16,30 +16,30 @@ function(e, t, n) {
                 glowOpacity: t,
                 className: n
             } = e;
-            return (0, l.jsxs)("div", {
+            return (0, i.jsxs)("div", {
                 className: a(r.nitroTopDividerContainer, n),
-                children: [(0, l.jsx)("div", {
+                children: [(0, i.jsx)("div", {
                     className: r.nitroTopDividerUpper
-                }), (0, l.jsx)("div", {
+                }), (0, i.jsx)("div", {
                     style: {
                         opacity: t
                     },
                     className: r.nitroTopDividerShadow
-                }), (0, l.jsxs)("div", {
+                }), (0, i.jsxs)("div", {
                     className: a(r.nitroTopDividerLockContainer),
-                    children: [(0, l.jsx)("div", {
+                    children: [(0, i.jsx)("div", {
                         className: r.nitroTopDividerLockBorder
-                    }), (0, l.jsx)("div", {
+                    }), (0, i.jsx)("div", {
                         className: r.nitroTopDividerLockCircle,
-                        children: (0, l.jsx)(s.default, {
+                        children: (0, i.jsx)(s.default, {
                             width: 16,
                             height: 16,
                             color: "white"
                         })
-                    }), (0, l.jsx)("div", {
+                    }), (0, i.jsx)("div", {
                         className: r.nitroTopDividerLockBorderReversed
                     })]
-                }), (0, l.jsx)("div", {
+                }), (0, i.jsx)("div", {
                     className: r.nitroTopDividerLower
                 })]
             })

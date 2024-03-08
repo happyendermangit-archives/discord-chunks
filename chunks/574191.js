@@ -5,10 +5,10 @@ function(e, t, n) {
             return f
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("77078"),
         r = n("581583"),
         o = n("777003"),
@@ -20,24 +20,24 @@ function(e, t, n) {
         let {
             user: t,
             guild: n,
-            guildMember: i,
+            guildMember: l,
             showBorder: f
         } = e;
-        return null == n || null == i ? null : (0, l.jsxs)(o.default, {
-            children: [(0, l.jsx)(s.Heading, {
+        return null == n || null == l ? null : (0, i.jsxs)(o.default, {
+            children: [(0, i.jsx)(s.Heading, {
                 variant: "eyebrow",
                 className: c.title,
                 children: u.default.Messages.ROLES_LIST.format({
-                    numRoles: i.roles.length
+                    numRoles: l.roles.length
                 })
-            }), (0, l.jsx)(r.default, {
+            }), (0, i.jsx)(r.default, {
                 roleClassName: a(d.rolePill, {
                     [d.rolePillBorder]: f
                 }),
                 className: d.roles,
                 guild: n,
                 user: t,
-                userRoles: i.roles,
+                userRoles: l.roles,
                 disableBorderColor: !0
             }, "roles")]
         })

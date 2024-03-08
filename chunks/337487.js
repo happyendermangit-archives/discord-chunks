@@ -5,8 +5,8 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("862205");
-    let i = (0, l.createExperiment)({
+    var i = n("862205");
+    let l = (0, i.createExperiment)({
             kind: "user",
             id: "2024-03_profile_mutuals",
             label: "Profile Mutuals",
@@ -36,7 +36,7 @@ function(e, t, n) {
                 disable: t = !1,
                 location: n = "24rt789ugh"
             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return i.useExperiment({
+            return l.useExperiment({
                 location: n
             }, {
                 autoTrackExposure: e,

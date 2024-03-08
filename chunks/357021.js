@@ -5,8 +5,8 @@ function(e, t, n) {
             return c
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("446674"),
         s = n("471671"),
         r = n("232268"),
@@ -17,16 +17,16 @@ function(e, t, n) {
         let {
             confettiSpawnRef: t,
             shouldFire: n
-        } = e, l = (0, a.useStateFromStores)([s.default], () => s.default.isFocused()), r = (0, u.default)(), d = (0, o.default)(t);
-        return i.useEffect(() => {
-            l && n && null != d && r.fire(d.x, d.y)
-        }, [r, l, d, n]), null
+        } = e, i = (0, a.useStateFromStores)([s.default], () => s.default.isFocused()), r = (0, u.default)(), d = (0, o.default)(t);
+        return l.useEffect(() => {
+            i && n && null != d && r.fire(d.x, d.y)
+        }, [r, i, d, n]), null
     }
 
     function c(e) {
-        return (0, l.jsx)(r.default, {
+        return (0, i.jsx)(r.default, {
             confettiLocation: e.confettiLocation,
-            children: (0, l.jsx)(d, {
+            children: (0, i.jsx)(d, {
                 ...e
             })
         })

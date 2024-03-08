@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return C
+            return g
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("16470"),
@@ -15,52 +15,52 @@ function(e, t, n) {
         d = n("538282"),
         c = n("374363"),
         f = n("551305"),
-        m = n("110006"),
-        p = n("378765"),
+        p = n("110006"),
+        m = n("378765"),
         h = n("49111"),
-        E = n("13030"),
-        g = n("782340"),
-        S = n("350583"),
-        C = i.memo(i.forwardRef(function(e, t) {
+        x = n("13030"),
+        E = n("782340"),
+        y = n("350583"),
+        g = l.memo(l.forwardRef(function(e, t) {
             let {
                 disabled: n,
                 type: a
-            } = e, [C, T] = i.useState(!1), v = (0, o.useStateFromStores)([c.default], () => {
+            } = e, [g, S] = l.useState(!1), C = (0, o.useStateFromStores)([c.default], () => {
                 var e, t;
-                return C && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-            }), [I, _, N] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), x = i.useCallback(() => {
-                T(!0), clearTimeout(A.current), A.current = setTimeout(() => {
-                    T(!1)
+                return g && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
+            }), [I, T, _] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), v = l.useRef(0), N = l.useCallback(() => {
+                S(!0), clearTimeout(v.current), v.current = setTimeout(() => {
+                    S(!1)
                 }, 1500)
             }, []);
-            i.useEffect(() => () => {
-                clearTimeout(A.current)
-            }), (0, p.useComponentAction)({
+            l.useEffect(() => () => {
+                clearTimeout(v.current)
+            }), (0, m.useComponentAction)({
                 event: h.ComponentActions.FAVORITE_GIF,
-                handler: x
+                handler: N
             });
-            let y = i.useCallback(() => {
-                (0, d.toggleExpressionPicker)(E.ExpressionPickerViewType.GIF, a)
+            let A = l.useCallback(() => {
+                (0, d.toggleExpressionPicker)(x.ExpressionPickerViewType.GIF, a)
             }, [a]);
             if (n) return null;
-            let O = I === E.ExpressionPickerViewType.GIF && _ === a;
-            return (0, l.jsx)(u.Tooltip, {
-                text: v ? g.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
+            let O = I === x.ExpressionPickerViewType.GIF && T === a;
+            return (0, i.jsx)(u.Tooltip, {
+                text: C ? E.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
                 forceOpen: !0,
-                children: e => (0, l.jsx)("div", {
+                children: e => (0, i.jsx)("div", {
                     ref: t,
-                    className: s(E.CHAT_INPUT_BUTTON_CLASSNAME, S.buttonContainer),
+                    className: s(x.CHAT_INPUT_BUTTON_CLASSNAME, y.buttonContainer),
                     ...e,
-                    children: (0, l.jsx)(f.default, {
-                        innerClassName: S.button,
-                        icon: m.default,
-                        onClick: y,
+                    children: (0, i.jsx)(f.default, {
+                        innerClassName: y.button,
+                        icon: p.default,
+                        onClick: A,
                         isActive: O,
-                        pulse: C,
-                        "aria-label": g.default.Messages.GIF_BUTTON_LABEL,
+                        pulse: g,
+                        "aria-label": E.default.Messages.GIF_BUTTON_LABEL,
                         "aria-expanded": O,
                         "aria-haspopup": "dialog",
-                        "aria-controls": N
+                        "aria-controls": _
                     })
                 })
             })

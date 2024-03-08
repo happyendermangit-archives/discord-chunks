@@ -5,10 +5,10 @@ function(e, t, n) {
             return c
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("77078"),
         r = n("616225"),
         o = n("387111"),
@@ -19,36 +19,36 @@ function(e, t, n) {
         let {
             activity: t,
             user: n,
-            channelId: i,
+            channelId: l,
             guildId: c,
             source: f,
-            size: m,
-            className: p,
+            size: p,
+            className: m,
             ...h
         } = e, {
-            tooltip: E,
-            loading: g,
-            disabled: S,
-            onClick: C
-        } = (0, u.useSpotifySyncAction)(t, n, f, o.default.getNickname(c, i, n));
-        return (0, l.jsx)(s.Tooltip, {
-            text: E,
+            tooltip: x,
+            loading: E,
+            disabled: y,
+            onClick: g
+        } = (0, u.useSpotifySyncAction)(t, n, f, o.default.getNickname(c, l, n));
+        return (0, i.jsx)(s.Tooltip, {
+            text: x,
             children: e => {
                 let {
                     onMouseEnter: n,
-                    onMouseLeave: i
+                    onMouseLeave: l
                 } = e;
-                return (0, l.jsx)(s.Button, {
+                return (0, i.jsx)(s.Button, {
                     ...h,
-                    size: a(m, d.iconButtonSize),
-                    className: a(p, d.iconButton),
-                    onClick: C,
+                    size: a(p, d.iconButtonSize),
+                    className: a(m, d.iconButton),
+                    onClick: g,
                     onMouseEnter: n,
-                    onMouseLeave: i,
-                    disabled: S,
-                    submitting: g,
-                    "aria-label": null != E ? E : t.name,
-                    children: (0, l.jsx)(r.default, {
+                    onMouseLeave: l,
+                    disabled: y,
+                    submitting: E,
+                    "aria-label": null != x ? x : t.name,
+                    children: (0, i.jsx)(r.default, {
                         className: d.listenAlongIcon
                     })
                 })

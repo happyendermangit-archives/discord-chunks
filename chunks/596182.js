@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return g
+            return E
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("77078"),
@@ -15,19 +15,19 @@ function(e, t, n) {
         d = n("286217"),
         c = n("355263"),
         f = n("406291"),
-        m = n("782340"),
-        p = n("595911");
+        p = n("782340"),
+        m = n("595911");
 
     function h(e, t, n) {
-        return (0, l.jsx)(d.default, {
-            className: p.option,
+        return (0, i.jsx)(d.default, {
+            className: m.option,
             name: e.displayName,
             state: t,
             onClick: n
         }, e.name)
     }
 
-    function E(e) {
+    function x(e) {
         let {
             command: t,
             optionStates: n,
@@ -36,10 +36,10 @@ function(e, t, n) {
             requiredOptions: s,
             setOptionalOptions: o,
             unsetOptionalOptions: d
-        } = i.useMemo(() => {
-            var e, l, i, a;
-            let s = null !== (i = null === (e = t.options) || void 0 === e ? void 0 : e.filter(e => e.required)) && void 0 !== i ? i : [],
-                r = null !== (a = null === (l = t.options) || void 0 === l ? void 0 : l.filter(e => !e.required)) && void 0 !== a ? a : [],
+        } = l.useMemo(() => {
+            var e, i, l, a;
+            let s = null !== (l = null === (e = t.options) || void 0 === e ? void 0 : e.filter(e => e.required)) && void 0 !== l ? l : [],
+                r = null !== (a = null === (i = t.options) || void 0 === i ? void 0 : i.filter(e => !e.required)) && void 0 !== a ? a : [],
                 o = r.filter(e => {
                     var t;
                     return null == n ? void 0 : null === (t = n[e.name]) || void 0 === t ? void 0 : t.hasValue
@@ -53,88 +53,88 @@ function(e, t, n) {
                 setOptionalOptions: o,
                 unsetOptionalOptions: u
             }
-        }, [t.options, n]), c = (0, l.jsx)("div", {
-            className: p.optionalNames,
-            children: d.map(e => (0, l.jsx)(r.Text, {
+        }, [t.options, n]), c = (0, i.jsx)("div", {
+            className: m.optionalNames,
+            children: d.map(e => (0, i.jsx)(r.Text, {
                 variant: "text-sm/normal",
                 children: e.displayName
             }, e.name))
-        }), f = s.map(e => h(e, null == n ? void 0 : n[e.name], a)), E = o.length > 0 ? (0, l.jsxs)(l.Fragment, {
-            children: [(0, l.jsx)(r.Heading, {
-                className: p.optionalHeader,
+        }), f = s.map(e => h(e, null == n ? void 0 : n[e.name], a)), x = o.length > 0 ? (0, i.jsxs)(i.Fragment, {
+            children: [(0, i.jsx)(r.Heading, {
+                className: m.optionalHeader,
                 variant: "heading-deprecated-12/semibold",
-                children: m.default.Messages.COMMANDS_OPTIONAL_HEADER
+                children: p.default.Messages.COMMANDS_OPTIONAL_HEADER
             }), o.map(e => h(e, null == n ? void 0 : n[e.name], a))]
-        }) : null, g = d.length > 0 ? (0, l.jsx)(r.Tooltip, {
+        }) : null, E = d.length > 0 ? (0, i.jsx)(r.Tooltip, {
             text: c,
             "aria-label": !1,
             delay: 200,
-            children: e => (0, l.jsx)(u.default, {
-                className: p.optionalCount,
+            children: e => (0, i.jsx)(u.default, {
+                className: m.optionalCount,
                 color: u.default.Colors.MUTED,
                 ...e,
-                children: 0 === o.length ? m.default.Messages.COMMANDS_OPTIONAL_COUNT.format({
+                children: 0 === o.length ? p.default.Messages.COMMANDS_OPTIONAL_COUNT.format({
                     count: d.length
-                }) : m.default.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({
+                }) : p.default.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({
                     count: d.length
                 })
             })
         }) : null;
-        return (0, l.jsxs)(l.Fragment, {
-            children: [f, null != E || null != g ? (0, l.jsxs)("div", {
-                className: p.optionals,
-                children: [E, g]
+        return (0, i.jsxs)(i.Fragment, {
+            children: [f, null != x || null != E ? (0, i.jsxs)("div", {
+                className: m.optionals,
+                children: [x, E]
             }) : null]
         })
     }
 
-    function g(e) {
+    function E(e) {
         var t, n, a;
         let r, {
                 command: u,
                 activeOptionName: d,
-                channel: m,
+                channel: p,
                 showOptions: h,
-                showImage: g,
-                optionStates: S,
-                onOptionClick: C,
-                section: T,
-                isSelectable: v = !0
+                showImage: E,
+                optionStates: y,
+                onOptionClick: g,
+                section: S,
+                isSelectable: C = !0
             } = e,
-            I = i.useMemo(() => {
+            I = l.useMemo(() => {
                 var e;
                 return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === d)
             }, [d, u]),
-            _ = null != d ? null == S ? void 0 : S[d] : null;
-        r = null != _ && (null === (t = _.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = _.lastValidationResult.error) && void 0 !== n ? n : "" : null;
-        let N = g && null != T ? (0, c.getIconComponent)(T) : null;
-        return (0, l.jsxs)("div", {
-            className: s(p.wrapper, v ? null : p.disabled),
-            children: [null != N ? (0, l.jsx)(N, {
-                className: p.image,
-                channel: m,
-                section: T,
+            T = null != d ? null == y ? void 0 : y[d] : null;
+        r = null != T && (null === (t = T.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = T.lastValidationResult.error) && void 0 !== n ? n : "" : null;
+        let _ = E && null != S ? (0, c.getIconComponent)(S) : null;
+        return (0, i.jsxs)("div", {
+            className: s(m.wrapper, C ? null : m.disabled),
+            children: [null != _ ? (0, i.jsx)(_, {
+                className: m.image,
+                channel: p,
+                section: S,
                 width: 32,
                 height: 32
-            }) : null, (0, l.jsxs)("div", {
-                className: p.infoWrapper,
-                children: [(0, l.jsxs)("div", {
-                    className: p.usageWrapper,
-                    children: [(0, l.jsx)(o.AutocompleteRowHeading, {
-                        className: p.title,
+            }) : null, (0, i.jsxs)("div", {
+                className: m.infoWrapper,
+                children: [(0, i.jsxs)("div", {
+                    className: m.usageWrapper,
+                    children: [(0, i.jsx)(o.AutocompleteRowHeading, {
+                        className: m.title,
                         children: f.COMMAND_SENTINEL + u.displayName
-                    }), h ? (0, l.jsx)(E, {
+                    }), h ? (0, i.jsx)(x, {
                         command: u,
-                        optionStates: S,
-                        onOptionClick: C
+                        optionStates: y,
+                        onOptionClick: g
                     }) : null]
-                }), (0, l.jsx)(o.AutocompleteRowSubheading, {
-                    className: s(p.description, null != r ? p.error : null),
+                }), (0, i.jsx)(o.AutocompleteRowSubheading, {
+                    className: s(m.description, null != r ? m.error : null),
                     children: null !== (a = null != r ? r : null == I ? void 0 : I.displayDescription) && void 0 !== a ? a : u.displayDescription
                 })]
-            }), (0, l.jsx)(o.AutocompleteRowContentSecondary, {
-                className: p.source,
-                children: null == T ? void 0 : T.name
+            }), (0, i.jsx)(o.AutocompleteRowContentSecondary, {
+                className: m.source,
+                children: null == S ? void 0 : S.name
             })]
         })
     }

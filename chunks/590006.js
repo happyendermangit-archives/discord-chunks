@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BadgeSizes: function() {
-            return l
+            return i
         },
         default: function() {
-            return C
+            return g
         }
     }), n("424973");
-    var l, i, a = n("37983");
+    var i, l, a = n("37983");
     n("884691");
     var s = n("414456"),
         r = n.n(s),
@@ -17,44 +17,44 @@ function(e, t, n) {
         d = n("244201"),
         c = n("298878"),
         f = n("643121"),
-        m = n("217513"),
-        p = n("590456"),
+        p = n("217513"),
+        m = n("590456"),
         h = n("49111"),
-        E = n("782340"),
-        g = n("77374"),
-        S = n("696246");
+        x = n("782340"),
+        E = n("77374"),
+        y = n("696246");
 
-    function C(e) {
+    function g(e) {
         let {
             user: t,
             guildId: n,
-            className: l,
-            shrinkAtCount: i,
+            className: i,
+            shrinkAtCount: l,
             shrinkToSize: s,
-            isTryItOutFlow: C,
-            size: T = 0
-        } = e, v = (0, m.default)(t.id, n), I = (0, f.default)(v).map(e => ({
+            isTryItOutFlow: g,
+            size: S = 0
+        } = e, C = (0, p.default)(t.id, n), I = (0, f.default)(C).map(e => ({
             ...e,
-            src: (0, p.getBadgeAsset)(e.icon)
-        })), _ = (0, d.useWindowDispatch)();
+            src: (0, m.getBadgeAsset)(e.icon)
+        })), T = (0, d.useWindowDispatch)();
         if (t.isClyde()) return (0, a.jsx)("div", {
-            className: r(l, g.container, g.clydeBadgeList),
-            "aria-label": E.default.Messages.PROFILE_USER_BADGES,
+            className: r(i, E.container, E.clydeBadgeList),
+            "aria-label": x.default.Messages.PROFILE_USER_BADGES,
             role: "group",
             children: (0, a.jsx)(c.default, {})
         });
-        C && null == I.find(e => "premium" === e.id) && I.push({
+        g && null == I.find(e => "premium" === e.id) && I.push({
             id: "premium",
-            icon: S,
-            src: S,
-            description: E.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+            icon: y,
+            src: y,
+            description: x.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
                 date: new Date
             })
         });
-        let N = null != i && null != s && I.length > i ? s : T;
+        let _ = null != l && null != s && I.length > l ? s : S;
         return (0, a.jsx)("div", {
-            className: r(l, I.length > 0 ? g.containerWithContent : g.container),
-            "aria-label": E.default.Messages.PROFILE_USER_BADGES,
+            className: r(i, I.length > 0 ? E.containerWithContent : E.container),
+            "aria-label": x.default.Messages.PROFILE_USER_BADGES,
             role: "group",
             children: I.map(e => (0, a.jsx)(o.Tooltip, {
                 position: "top",
@@ -63,10 +63,10 @@ function(e, t, n) {
                 children: t => (0, a.jsx)(o.Anchor, {
                     ...t,
                     onClick: n => {
-                        var l;
-                        null === (l = t.onClick) || void 0 === l || l.call(t);
-                        let i = null != e.link ? (0, u.default)(e.link) : null;
-                        if (null != i) return _.dispatch(h.ComponentActions.POPOUT_CLOSE), i(n)
+                        var i;
+                        null === (i = t.onClick) || void 0 === i || i.call(t);
+                        let l = null != e.link ? (0, u.default)(e.link) : null;
+                        if (null != l) return T.dispatch(h.ComponentActions.POPOUT_CLOSE), l(n)
                     },
                     href: e.link,
                     children: (0, a.jsx)("img", {
@@ -74,13 +74,13 @@ function(e, t, n) {
                         "aria-hidden": !0,
                         src: e.src,
                         className: r({
-                            [g.profileBadge24]: 0 === N,
-                            [g.profileBadge22]: 1 === N,
-                            [g.profileBadge18]: 2 === N
+                            [E.profileBadge24]: 0 === _,
+                            [E.profileBadge22]: 1 === _,
+                            [E.profileBadge18]: 2 === _
                         })
                     })
                 })
             }, e.id))
         })
-    }(i = l || (l = {}))[i.SIZE_24 = 0] = "SIZE_24", i[i.SIZE_22 = 1] = "SIZE_22", i[i.SIZE_18 = 2] = "SIZE_18"
+    }(l = i || (i = {}))[l.SIZE_24 = 0] = "SIZE_24", l[l.SIZE_22 = 1] = "SIZE_22", l[l.SIZE_18 = 2] = "SIZE_18"
 }

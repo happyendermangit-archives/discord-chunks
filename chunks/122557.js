@@ -5,10 +5,10 @@ function(e, t, n) {
             return f
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("77078"),
         r = n("817963"),
         o = n("151185"),
@@ -20,18 +20,18 @@ function(e, t, n) {
         let {
             guild: t,
             focused: n,
-            ...i
+            ...l
         } = e, {
             canCreateExpressions: f
         } = (0, r.useManageResourcePermissions)(t);
-        return (0, l.jsx)(s.Tooltip, {
+        return (0, i.jsx)(s.Tooltip, {
             text: d.default.Messages.SOUNDBOARD_SOUND_UPLOAD_BUTTON_DISABLED,
             shouldShow: !f,
-            children: e => (0, l.jsx)("li", {
+            children: e => (0, i.jsx)("li", {
                 className: c.soundButtonWrapper,
                 ...e,
-                children: (0, l.jsxs)(s.ClickableContainer, {
-                    ...i,
+                children: (0, i.jsxs)(s.ClickableContainer, {
+                    ...l,
                     "aria-label": d.default.Messages.SOUNDBOARD_UPLOAD_SOUND_FOR_GUILD.format({
                         guildName: t.name
                     }),
@@ -40,9 +40,9 @@ function(e, t, n) {
                         [c.disabled]: !f
                     }),
                     onClick: () => (0, u.default)(t.id),
-                    children: [(0, l.jsx)(o.default, {
+                    children: [(0, i.jsx)(o.default, {
                         className: c.soundAddIcon
-                    }), (0, l.jsx)(s.Text, {
+                    }), (0, i.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: f ? "header-primary" : "text-muted",
                         children: d.default.Messages.SOUNDBOARD_SOUND_ADD_SOUND

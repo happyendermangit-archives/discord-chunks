@@ -5,10 +5,10 @@ function(e, t, n) {
             return o
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("943722"),
         r = n("157384");
 
@@ -16,32 +16,32 @@ function(e, t, n) {
         let {
             activity: t,
             className: n,
-            emojiClassName: i,
+            emojiClassName: l,
             textClassName: o,
             placeholderText: u,
             soloEmojiClassName: d,
             animate: c = !0,
             hideTooltip: f = !1,
-            hideEmoji: m = !1,
-            children: p
+            hideEmoji: p = !1,
+            children: m
         } = e;
         if (null == t) return null;
         let {
             emoji: h
-        } = t, E = null != t.state && "" !== t.state ? t.state : u;
-        return (0, l.jsxs)("div", {
+        } = t, x = null != t.state && "" !== t.state ? t.state : u;
+        return (0, i.jsxs)("div", {
             className: a(r.container, n),
-            children: [m || null == h ? null : (0, l.jsx)(s.ActivityEmoji, {
+            children: [p || null == h ? null : (0, i.jsx)(s.ActivityEmoji, {
                 emoji: h,
-                className: a(r.emoji, i, null != d ? {
-                    [d]: null == E || "" === E
+                className: a(r.emoji, l, null != d ? {
+                    [d]: null == x || "" === x
                 } : null),
                 animate: c,
                 hideTooltip: f
-            }), null != E && E.length > 0 ? (0, l.jsx)("span", {
+            }), null != x && x.length > 0 ? (0, i.jsx)("span", {
                 className: o,
-                children: E
-            }) : null, p]
+                children: x
+            }) : null, m]
         })
     }
 }

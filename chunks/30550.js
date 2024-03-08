@@ -5,32 +5,32 @@ function(e, t, n) {
             return r
         }
     }), n("222007"), n("424973");
-    var l = n("135038"),
-        i = n("385887");
+    var i = n("135038"),
+        l = n("385887");
     let a = new Set(["line", "blockQuote"]),
         s = [];
 
     function r(e, t, n) {
-        if (i.EditorUtils.areStylesDisabled(e)) return [];
+        if (l.EditorUtils.areStylesDisabled(e)) return [];
         let [r, o] = t;
-        if (1 !== o.length || !i.NodeUtils.isInTypes(r, a)) return s;
+        if (1 !== o.length || !l.NodeUtils.isInTypes(r, a)) return s;
         let {
             entries: u,
             serializedChildren: d
-        } = i.ElementUtils.markdown(r, n, !0), c = [];
+        } = l.ElementUtils.markdown(r, n, !0), c = [];
         for (let t = 0; t < u.length; t++) {
             let n = u[t];
             if (n.attributes.length > 0 && n.text.length > 0) {
                 let a = u[t - 1],
                     s = u[t + 1],
-                    r = (0, l.getPointFromPosition)(e, o, d, n.start),
-                    f = (0, l.getPointFromPosition)(e, o, d, n.start + n.text.length),
-                    m = {
+                    r = (0, i.getPointFromPosition)(e, o, d, n.start),
+                    f = (0, i.getPointFromPosition)(e, o, d, n.start + n.text.length),
+                    p = {
                         anchor: r,
                         focus: f
                     },
-                    p = i.EditorUtils.nodes(e, {
-                        at: m,
+                    m = l.EditorUtils.nodes(e, {
+                        at: p,
                         mode: "lowest",
                         voids: !1
                     }),
@@ -40,15 +40,15 @@ function(e, t, n) {
                         for (let e of s.attributes) h["before_".concat(e)] = !0;
                     else if ("syntaxAfter" === e && null != a)
                     for (let e of a.attributes) h["after_".concat(e)] = !0;
-                for (let [t, n] of p) {
-                    if (i.EditorUtils.isVoid(e, t)) continue;
-                    let l = {
-                        anchor: i.EditorUtils.start(e, n),
-                        focus: i.EditorUtils.end(e, n)
+                for (let [t, n] of m) {
+                    if (l.EditorUtils.isVoid(e, t)) continue;
+                    let i = {
+                        anchor: l.EditorUtils.start(e, n),
+                        focus: l.EditorUtils.end(e, n)
                     };
-                    i.PointUtils.isBefore(l.anchor, m.anchor) && (l.anchor = m.anchor), i.PointUtils.isAfter(l.focus, m.focus) && (l.focus = m.focus), c.push({
+                    l.PointUtils.isBefore(i.anchor, p.anchor) && (i.anchor = p.anchor), l.PointUtils.isAfter(i.focus, p.focus) && (i.focus = p.focus), c.push({
                         ...h,
-                        ...l
+                        ...i
                     })
                 }
             }

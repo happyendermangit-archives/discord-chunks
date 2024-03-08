@@ -5,16 +5,16 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("475510");
+    var l = n("475510");
 
     function a(e) {
         let {
             children: t
         } = e;
-        return (0, l.jsxs)("span", {
-            className: i.nowrap,
+        return (0, i.jsxs)("span", {
+            className: l.nowrap,
             children: [t, "⁠"]
         })
     }

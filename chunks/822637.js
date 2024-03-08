@@ -5,30 +5,30 @@ function(e, t, n) {
             return r
         }
     });
-    var l = n("872717"),
-        i = n("913144"),
+    var i = n("872717"),
+        l = n("913144"),
         a = n("318981"),
         s = n("49111"),
         r = {
             search(e, t) {
-                null == a.default.getResults(e, t) && (i.default.dispatch({
+                null == a.default.getResults(e, t) && (l.default.dispatch({
                     type: "INTEGRATION_QUERY",
                     integration: e,
                     query: t
-                }), l.default.get({
+                }), i.default.get({
                     url: s.Endpoints.INTEGRATION_SEARCH("tenor"),
                     query: {
                         q: t
                     },
                     oldFormErrors: !0
                 }).then(n => {
-                    i.default.dispatch({
+                    l.default.dispatch({
                         type: "INTEGRATION_QUERY_SUCCESS",
                         integration: e,
                         query: t,
                         results: n.body
                     })
-                }, () => i.default.dispatch({
+                }, () => l.default.dispatch({
                     type: "INTEGRATION_QUERY_FAILURE",
                     integration: e,
                     query: t

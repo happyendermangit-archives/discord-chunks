@@ -5,11 +5,11 @@ function(e, t, n) {
             return r
         }
     }), n("222007");
-    var l = n("436443"),
-        i = n("917351"),
-        a = n.n(i),
+    var i = n("436443"),
+        l = n("917351"),
+        a = n.n(l),
         s = n("347647");
-    l.default.registerLanguage("ansi", s.default);
+    i.default.registerLanguage("ansi", s.default);
     var r = {
         highlight(e, t, n) {
             if (! function(e) {
@@ -25,10 +25,10 @@ function(e, t, n) {
                     return !0
                 }(t)) return null;
             Date.now();
-            let i = l.default.highlight(e, t, n);
-            return Date.now(), i
+            let l = i.default.highlight(e, t, n);
+            return Date.now(), l
         },
-        hasLanguage: e => null != l.default.getLanguage(e)
+        hasLanguage: e => null != i.default.getLanguage(e)
     };
     let o = a.repeat("/", 15)
 }

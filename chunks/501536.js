@@ -5,14 +5,14 @@ function(e, t, n) {
             return M
         },
         getAutocompleteTitleId: function() {
-            return L
+            return R
         },
         default: function() {
-            return U
+            return j
         }
     }), n("70102"), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("917351"),
@@ -21,33 +21,33 @@ function(e, t, n) {
         d = n("77078"),
         c = n("206230"),
         f = n("524768"),
-        m = n("596182"),
-        p = n("41884"),
+        p = n("596182"),
+        m = n("41884"),
         h = n("679653"),
-        E = n("419830"),
-        g = n("404345"),
-        S = n("364685"),
-        C = n("24373"),
-        T = n("305961"),
-        v = n("27618"),
+        x = n("419830"),
+        E = n("404345"),
+        y = n("364685"),
+        g = n("24373"),
+        S = n("305961"),
+        C = n("27618"),
         I = n("697218"),
-        _ = n("158998"),
-        N = n("563911"),
-        A = n("346955"),
-        x = n("548775"),
-        y = n("49111"),
+        T = n("158998"),
+        _ = n("563911"),
+        v = n("346955"),
+        N = n("548775"),
+        A = n("49111"),
         O = n("782340"),
-        R = n("723199");
+        k = n("723199");
 
     function M(e) {
         return null != e ? "autocomplete-".concat(e) : null
     }
 
-    function L(e) {
+    function R(e) {
         return "autocomplete-".concat(e, "-title")
     }
-    let P = i.createContext(null);
-    class b extends i.PureComponent {
+    let L = l.createContext(null);
+    class b extends l.PureComponent {
         isSelectable() {
             return this.selectable
         }
@@ -59,14 +59,14 @@ function(e, t, n) {
             let {
                 layoutClass: n,
                 props: {
-                    className: i,
+                    className: l,
                     index: a,
                     selected: r
                 }
             } = this, o = this.isSelectable();
-            return (0, l.jsx)(d.Clickable, {
+            return (0, i.jsx)(d.Clickable, {
                 ...e,
-                className: s(R.clickable, i, n),
+                className: s(k.clickable, l, n),
                 id: null !== (t = M(a)) && void 0 !== t ? t : void 0,
                 onClick: o ? this.handleClick : void 0,
                 onMouseMove: o ? () => {
@@ -80,8 +80,8 @@ function(e, t, n) {
                 role: "option",
                 "aria-disabled": !o,
                 "aria-selected": o && r,
-                children: (0, l.jsx)("div", {
-                    className: R.base,
+                children: (0, i.jsx)("div", {
+                    className: k.base,
                     children: this.renderContent()
                 })
             })
@@ -90,13 +90,13 @@ function(e, t, n) {
             let {
                 index: e
             } = this.props, t = this.isSelectable();
-            return t ? (0, l.jsx)(u.ListNavigatorItem, {
+            return t ? (0, i.jsx)(u.ListNavigatorItem, {
                 id: "".concat(e),
                 children: e => this.renderClickable(e)
             }) : this.renderClickable()
         }
         constructor(e) {
-            super(e), this.selectable = !0, this.layoutClass = R.autocompleteRowVertical, this.handleMouseEnter = () => {
+            super(e), this.selectable = !0, this.layoutClass = k.autocompleteRowVertical, this.handleMouseEnter = () => {
                 let {
                     onHover: e,
                     index: t,
@@ -114,7 +114,7 @@ function(e, t, n) {
             }
         }
     }
-    class j extends i.PureComponent {
+    class P extends l.PureComponent {
         render() {
             let {
                 children: e,
@@ -123,14 +123,14 @@ function(e, t, n) {
                 id: a,
                 ...r
             } = this.props;
-            return i.Children.count(e) > 0 ? (0, l.jsx)(P.Provider, {
+            return l.Children.count(e) > 0 ? (0, i.jsx)(L.Provider, {
                 value: {
                     id: null != a ? a : ""
                 },
-                children: (0, l.jsx)("div", {
-                    className: s(R.autocomplete, t),
-                    children: (0, l.jsx)("div", {
-                        className: s(R.autocompleteInner, n),
+                children: (0, i.jsx)("div", {
+                    className: s(k.autocomplete, t),
+                    children: (0, i.jsx)("div", {
+                        className: s(k.autocompleteInner, n),
                         ...r,
                         children: e
                     })
@@ -138,32 +138,32 @@ function(e, t, n) {
             }) : null
         }
     }
-    j.Generic = class e extends b {
+    P.Generic = class e extends b {
         renderContent() {
             let {
                 text: e,
                 description: t
             } = this.props;
-            return (0, l.jsxs)(N.AutocompleteRowContent, {
-                children: [(0, l.jsx)(N.AutocompleteRowContentPrimary, {
-                    children: (0, l.jsx)(N.AutocompleteRowHeading, {
+            return (0, i.jsxs)(_.AutocompleteRowContent, {
+                children: [(0, i.jsx)(_.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(_.AutocompleteRowHeading, {
                         children: e
                     })
-                }), null != t ? (0, l.jsx)(N.AutocompleteRowContentSecondary, {
+                }), null != t ? (0, i.jsx)(_.AutocompleteRowContentSecondary, {
                     children: t
                 }) : null]
             })
         }
-    }, j.Loading = function(e) {
-        let t = i.useMemo(() => o.random(60, 120), []);
-        return (0, l.jsx)("div", {
-            className: R.base,
+    }, P.Loading = function(e) {
+        let t = l.useMemo(() => o.random(60, 120), []);
+        return (0, i.jsx)("div", {
+            className: k.base,
             "aria-busy": !0,
-            children: (0, l.jsx)(N.AutocompleteRowContent, {
-                children: (0, l.jsx)(N.AutocompleteRowContentPrimary, {
-                    children: (0, l.jsx)(N.AutocompleteRowHeading, {
-                        children: (0, l.jsx)("div", {
-                            className: R.autocompletePlaceholder,
+            children: (0, i.jsx)(_.AutocompleteRowContent, {
+                children: (0, i.jsx)(_.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(_.AutocompleteRowHeading, {
+                        children: (0, i.jsx)("div", {
+                            className: k.autocompletePlaceholder,
                             style: {
                                 width: t
                             }
@@ -172,136 +172,136 @@ function(e, t, n) {
                 })
             })
         })
-    }, j.Title = function(e) {
+    }, P.Title = function(e) {
         let {
             title: t,
             className: n,
             children: a
-        } = e, r = i.useContext(P);
-        return (0, l.jsx)("div", {
-            className: R.base,
-            children: (0, l.jsxs)(d.Heading, {
-                id: L(r.id),
-                className: s(R.contentTitle, n),
+        } = e, r = l.useContext(L);
+        return (0, i.jsx)("div", {
+            className: k.base,
+            children: (0, i.jsxs)(d.Heading, {
+                id: R(r.id),
+                className: s(k.contentTitle, n),
                 variant: "heading-deprecated-12/semibold",
                 children: [t, a]
             })
         })
-    }, j.Divider = class e extends b {
+    }, P.Divider = class e extends b {
         renderContent() {
             let {
                 className: e
             } = this.props;
-            return (0, l.jsx)("div", {
-                className: s(e, R.divider)
+            return (0, i.jsx)("div", {
+                className: s(e, k.divider)
             })
         }
         constructor(...e) {
-            super(...e), this.layoutClass = R.dividerContainer, this.selectable = !1
+            super(...e), this.layoutClass = k.dividerContainer, this.selectable = !1
         }
-    }, j.User = class e extends b {
+    }, P.User = class e extends b {
         renderContent() {
             let {
                 user: e,
                 nick: t,
                 status: n,
-                hidePersonalInformation: i,
+                hidePersonalInformation: l,
                 guildId: a
             } = this.props;
-            return (0, l.jsxs)(N.AutocompleteRowContent, {
-                children: [(0, l.jsx)(N.AutocompleteRowIcon, {
-                    children: (0, l.jsx)(d.Avatar, {
+            return (0, i.jsxs)(_.AutocompleteRowContent, {
+                children: [(0, i.jsx)(_.AutocompleteRowIcon, {
+                    children: (0, i.jsx)(d.Avatar, {
                         size: d.AvatarSizes.SIZE_24,
                         src: e.getAvatarURL(a, 24),
                         "aria-hidden": !0,
                         status: n
                     })
-                }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
-                    children: (0, l.jsx)(N.AutocompleteRowHeading, {
-                        children: null != t ? t : _.default.getName(e)
+                }), (0, i.jsx)(_.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(_.AutocompleteRowHeading, {
+                        children: null != t ? t : T.default.getName(e)
                     })
-                }), (0, l.jsxs)(N.AutocompleteRowContentSecondary, {
-                    children: [(0, l.jsx)("span", {
-                        className: R.descriptionUsername,
-                        children: _.default.getUserTag(e, {
+                }), (0, i.jsxs)(_.AutocompleteRowContentSecondary, {
+                    children: [(0, i.jsx)("span", {
+                        className: k.descriptionUsername,
+                        children: T.default.getUserTag(e, {
                             mode: "username",
-                            identifiable: i ? "never" : "always"
+                            identifiable: l ? "never" : "always"
                         })
-                    }), i || e.isPomelo() ? null : (0, l.jsxs)("span", {
-                        className: R.descriptionDiscriminator,
+                    }), l || e.isPomelo() ? null : (0, i.jsxs)("span", {
+                        className: k.descriptionDiscriminator,
                         children: ["#", e.discriminator]
                     })]
                 })]
             })
         }
-    }, j.Role = class e extends b {
+    }, P.Role = class e extends b {
         renderContent() {
             let {
                 role: e,
                 hideDescription: t
             } = this.props, {
                 colorString: n
-            } = e, i = "dot" === c.default.roleStyle, a = "username" === c.default.roleStyle && null != n, s = a ? {
+            } = e, l = "dot" === c.default.roleStyle, a = "username" === c.default.roleStyle && null != n, s = a ? {
                 color: n
             } : void 0;
-            return (0, l.jsxs)(N.AutocompleteRowContent, {
-                children: [(0, l.jsx)(N.AutocompleteRowContentPrimary, {
-                    children: (0, l.jsxs)(N.AutocompleteRowHeading, {
-                        children: [i && (0, l.jsx)(d.RoleDot, {
-                            className: R.roleDot,
+            return (0, i.jsxs)(_.AutocompleteRowContent, {
+                children: [(0, i.jsx)(_.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsxs)(_.AutocompleteRowHeading, {
+                        children: [l && (0, i.jsx)(d.RoleDot, {
+                            className: k.roleDot,
                             color: n,
                             tooltip: !1
-                        }), (0, l.jsxs)("span", {
+                        }), (0, i.jsxs)("span", {
                             style: s,
                             children: ["@", e.name]
                         })]
                     })
-                }), t ? null : (0, l.jsx)(N.AutocompleteRowContentSecondary, {
+                }), t ? null : (0, i.jsx)(_.AutocompleteRowContentSecondary, {
                     children: O.default.Messages.MENTION_USERS_WITH_ROLE
                 })]
             })
         }
-    }, j.Channel = class e extends b {
+    }, P.Channel = class e extends b {
         renderContent() {
             let {
                 channel: e,
                 category: t
-            } = this.props, n = e.type === y.ChannelTypes.GUILD_CATEGORY ? A.default : (0, E.getChannelIconComponent)(e);
-            return (0, l.jsxs)(N.AutocompleteRowContent, {
-                children: [null != n && (0, l.jsx)(N.AutocompleteRowIcon, {
-                    children: (0, l.jsx)(n, {
-                        className: R.icon
+            } = this.props, n = e.type === A.ChannelTypes.GUILD_CATEGORY ? v.default : (0, x.getChannelIconComponent)(e);
+            return (0, i.jsxs)(_.AutocompleteRowContent, {
+                children: [null != n && (0, i.jsx)(_.AutocompleteRowIcon, {
+                    children: (0, i.jsx)(n, {
+                        className: k.icon
                     })
-                }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
-                    children: (0, l.jsx)(N.AutocompleteRowHeading, {
-                        children: (0, h.computeChannelName)(e, I.default, v.default)
+                }), (0, i.jsx)(_.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(_.AutocompleteRowHeading, {
+                        children: (0, h.computeChannelName)(e, I.default, C.default)
                     })
-                }), null != t ? (0, l.jsx)(N.AutocompleteRowContentSecondary, {
+                }), null != t ? (0, i.jsx)(_.AutocompleteRowContentSecondary, {
                     children: t.name
                 }) : null]
             })
         }
-    }, j.Command = class e extends b {
+    }, P.Command = class e extends b {
         renderContent() {
             let {
                 command: e
             } = this.props;
-            return (0, l.jsxs)(N.AutocompleteRowContent, {
-                children: [(0, l.jsx)(N.AutocompleteRowIcon, {
-                    children: (0, l.jsx)(x.default, {
-                        className: R.icon,
-                        foreground: R.iconForeground
+            return (0, i.jsxs)(_.AutocompleteRowContent, {
+                children: [(0, i.jsx)(_.AutocompleteRowIcon, {
+                    children: (0, i.jsx)(N.default, {
+                        className: k.icon,
+                        foreground: k.iconForeground
                     })
-                }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
-                    children: (0, l.jsx)(N.AutocompleteRowHeading, {
+                }), (0, i.jsx)(_.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(_.AutocompleteRowHeading, {
                         children: e.name
                     })
-                }), (0, l.jsx)(N.AutocompleteRowContentSecondary, {
+                }), (0, i.jsx)(_.AutocompleteRowContentSecondary, {
                     children: e.description
                 })]
             })
         }
-    }, j.NewCommand = class e extends b {
+    }, P.NewCommand = class e extends b {
         isSelectable() {
             return this.props.command.inputType !== f.ApplicationCommandInputType.PLACEHOLDER
         }
@@ -310,57 +310,57 @@ function(e, t, n) {
                 command: e,
                 channel: t,
                 showImage: n,
-                section: i,
+                section: l,
                 selected: a
             } = this.props, {
                 hovered: s
             } = this.state, r = this.isSelectable();
-            return e.inputType === f.ApplicationCommandInputType.PLACEHOLDER ? (0, l.jsx)(p.default, {}) : (0, l.jsx)(m.default, {
+            return e.inputType === f.ApplicationCommandInputType.PLACEHOLDER ? (0, i.jsx)(m.default, {}) : (0, i.jsx)(p.default, {
                 command: e,
                 channel: t,
                 showImage: n,
                 showOptions: s || r && a,
-                section: i,
+                section: l,
                 isSelectable: r
             })
         }
-    }, j.Emoji = class e extends b {
+    }, P.Emoji = class e extends b {
         renderContent() {
             let {
                 emoji: e,
                 sentinel: t,
                 guild: n
-            } = this.props, i = null != e.url && "" !== e.url ? (0, l.jsx)("img", {
+            } = this.props, l = null != e.url && "" !== e.url ? (0, i.jsx)("img", {
                 alt: "",
-                className: R.emojiImage,
+                className: k.emojiImage,
                 src: e.url
-            }) : (0, l.jsx)("span", {
-                className: R.emojiRaw,
+            }) : (0, i.jsx)("span", {
+                className: k.emojiRaw,
                 children: e.surrogates
-            }), a = null != n ? (0, l.jsx)(N.AutocompleteRowContentSecondary, {
+            }), a = null != n ? (0, i.jsx)(_.AutocompleteRowContentSecondary, {
                 children: n.name
             }) : null;
-            return (0, l.jsxs)(N.AutocompleteRowContent, {
-                children: [(0, l.jsx)(N.AutocompleteRowIcon, {
-                    children: i
-                }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
-                    children: (0, l.jsxs)(N.AutocompleteRowHeading, {
+            return (0, i.jsxs)(_.AutocompleteRowContent, {
+                children: [(0, i.jsx)(_.AutocompleteRowIcon, {
+                    children: l
+                }), (0, i.jsx)(_.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsxs)(_.AutocompleteRowHeading, {
                         children: [t, e.name, t]
                     })
                 }), a]
             })
         }
         constructor(...e) {
-            super(...e), this.layoutClass = s(R.autocompleteRowVertical, R.autocompleteRowVerticalSmall, this.props.isLocked ? R.premiumEmoji : null)
+            super(...e), this.layoutClass = s(k.autocompleteRowVertical, k.autocompleteRowVerticalSmall, this.props.isLocked ? k.premiumEmoji : null)
         }
-    }, j.GIFIntegration = class e extends b {
+    }, P.GIFIntegration = class e extends b {
         renderContent() {
             let {
                 width: e,
                 height: t,
                 src: n
             } = this.props;
-            return (0, l.jsx)("img", {
+            return (0, i.jsx)("img", {
                 alt: "",
                 src: n,
                 width: e,
@@ -368,46 +368,46 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), this.layoutClass = R.autocompleteRowHorizontal
+            super(...e), this.layoutClass = k.autocompleteRowHorizontal
         }
-    }, j.Sticker = class e extends b {
+    }, P.Sticker = class e extends b {
         renderContent() {
             var e, t;
             let n;
             let {
-                queryMatch: i,
+                queryMatch: l,
                 renderSticker: a,
                 selected: s,
                 sticker: r
             } = this.props, {
                 hovered: o
             } = this.state;
-            return (0, C.isStandardSticker)(r) ? n = null === (e = S.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, C.isGuildSticker)(r) && (n = null === (t = T.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, l.jsxs)(N.AutocompleteRowContent, {
-                children: [(0, l.jsx)(N.AutocompleteRowIcon, {
+            return (0, g.isStandardSticker)(r) ? n = null === (e = y.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, g.isGuildSticker)(r) && (n = null === (t = S.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, i.jsxs)(_.AutocompleteRowContent, {
+                children: [(0, i.jsx)(_.AutocompleteRowIcon, {
                     children: a(r, o || !0 === s)
-                }), (0, l.jsxs)(N.AutocompleteRowContentPrimary, {
-                    children: [(0, l.jsx)(N.AutocompleteRowHeading, {
-                        className: R.stickerName,
+                }), (0, i.jsxs)(_.AutocompleteRowContentPrimary, {
+                    children: [(0, i.jsx)(_.AutocompleteRowHeading, {
+                        className: k.stickerName,
                         children: r.name
-                    }), null != i && (0, l.jsx)(N.AutocompleteRowSubheading, {
+                    }), null != l && (0, i.jsx)(_.AutocompleteRowSubheading, {
                         children: O.default.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({
-                            queryMatch: i
+                            queryMatch: l
                         })
                     })]
-                }), null != n && (0, l.jsx)(N.AutocompleteRowContentSecondary, {
+                }), null != n && (0, i.jsx)(_.AutocompleteRowContentSecondary, {
                     children: n
                 })]
             })
         }
         constructor(...e) {
-            super(...e), this.layoutClass = s(R.autocompleteRowVertical, R.autocompleteRowVerticalSmall)
+            super(...e), this.layoutClass = s(k.autocompleteRowVertical, k.autocompleteRowVerticalSmall)
         }
-    }, j.EmojiUpsell = class e extends b {
+    }, P.EmojiUpsell = class e extends b {
         renderContent() {
-            return (0, l.jsx)(g.default, {
+            return (0, i.jsx)(E.default, {
                 emojis: this.props.emojis
             })
         }
     };
-    var U = j
+    var j = P
 }

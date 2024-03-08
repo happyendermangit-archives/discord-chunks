@@ -5,16 +5,16 @@ function(e, t, n) {
             return l
         },
         CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: function() {
-            return o
+            return a
         },
         CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: function() {
-            return a
+            return o
         }
     });
     var i = n("316693"),
         s = n("923510"),
         r = n("49111");
     let l = r.Permissions.VIEW_CHANNEL,
-        o = i.default.combine(l, r.Permissions.CONNECT),
-        a = i.default.combine(l, s.MODERATE_STAGE_CHANNEL_PERMISSIONS)
+        a = i.default.combine(l, r.Permissions.CONNECT),
+        o = i.default.combine(l, s.MODERATE_STAGE_CHANNEL_PERMISSIONS)
 }

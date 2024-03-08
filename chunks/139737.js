@@ -8,10 +8,10 @@ function(e, t, n) {
             return c
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("77078"),
         r = n("430568"),
         o = n("377527"),
@@ -20,18 +20,18 @@ function(e, t, n) {
     function d(e) {
         let t, {
             applicationId: n,
-            storeListingBenefits: i,
+            storeListingBenefits: l,
             skuBenefits: s,
             className: r
         } = e;
-        return null != i ? t = i.map(e => (0, l.jsx)(f, {
+        return null != l ? t = l.map(e => (0, i.jsx)(f, {
             applicationId: n,
             benefit: e,
             className: a(u.benefit, r)
-        }, e.id)) : null != s && (t = s.map((e, t) => (0, l.jsx)(c, {
+        }, e.id)) : null != s && (t = s.map((e, t) => (0, i.jsx)(c, {
             benefit: e,
             className: a(u.benefit, r)
-        }, t))), (0, l.jsx)(l.Fragment, {
+        }, t))), (0, i.jsx)(i.Fragment, {
             children: t
         })
     }
@@ -40,28 +40,28 @@ function(e, t, n) {
         let {
             benefit: t,
             className: n,
-            emojiContainerClassName: i,
+            emojiContainerClassName: l,
             showsDescription: o = !0,
             nameTextVariant: d = "text-md/medium",
             nameTextColor: c = "header-primary"
         } = e;
-        return (0, l.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             className: a(u.container, n),
-            children: [null != t.emoji && (0, l.jsx)("div", {
-                className: a(u.emojiContainer, i),
-                children: (0, l.jsx)(r.default, {
+            children: [null != t.emoji && (0, i.jsx)("div", {
+                className: a(u.emojiContainer, l),
+                children: (0, i.jsx)(r.default, {
                     emojiId: t.emoji.id,
                     emojiName: t.emoji.name,
                     animated: t.emoji.animated
                 })
-            }), (0, l.jsxs)("div", {
+            }), (0, i.jsxs)("div", {
                 className: u.infoContainer,
-                children: [(0, l.jsx)(s.Text, {
+                children: [(0, i.jsx)(s.Text, {
                     variant: d,
                     color: c,
                     className: u.name,
                     children: t.name
-                }), o && (0, l.jsx)(s.Text, {
+                }), o && (0, i.jsx)(s.Text, {
                     color: "interactive-normal",
                     variant: "text-sm/normal",
                     children: t.description
@@ -74,25 +74,25 @@ function(e, t, n) {
         let {
             applicationId: t,
             benefit: n,
-            className: i,
+            className: l,
             emojiContainerClassName: r,
             showsDescription: d = !0,
             nameTextVariant: c = "text-md/medium",
             nameTextColor: f = "header-primary"
         } = e;
-        return (0, l.jsxs)("div", {
-            className: a(u.container, i),
-            children: [(0, l.jsx)("div", {
+        return (0, i.jsxs)("div", {
+            className: a(u.container, l),
+            children: [(0, i.jsx)("div", {
                 className: a(u.emojiContainer, r),
                 children: (0, o.getBenefitIcon)(t, n.icon)
-            }), (0, l.jsxs)("div", {
+            }), (0, i.jsxs)("div", {
                 className: u.infoContainer,
-                children: [(0, l.jsx)(s.Text, {
+                children: [(0, i.jsx)(s.Text, {
                     variant: c,
                     color: f,
                     className: u.name,
                     children: n.name
-                }), d && (0, l.jsx)(s.Text, {
+                }), d && (0, i.jsx)(s.Text, {
                     color: "interactive-normal",
                     variant: "text-sm/normal",
                     children: n.description

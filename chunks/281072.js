@@ -5,9 +5,9 @@ function(e, t, n) {
             return d
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("77078"),
+    var l = n("77078"),
         a = n("181114"),
         s = n("216422"),
         r = n("113270"),
@@ -19,15 +19,15 @@ function(e, t, n) {
             analyticsSection: t,
             buttonText: n
         } = e;
-        return (0, l.jsxs)(a.default, {
+        return (0, i.jsxs)(a.default, {
             className: u.premiumButton,
             innerClassName: u.premiumButtonInner,
-            color: i.Button.Colors.GREEN,
-            size: i.Button.Sizes.SMALL,
+            color: l.Button.Colors.GREEN,
+            size: l.Button.Sizes.SMALL,
             onClick: () => (0, r.default)({
                 section: t
             }),
-            children: [(0, l.jsx)(s.default, {
+            children: [(0, i.jsx)(s.default, {
                 className: u.premiumButtonNitroWheel
             }), null != n ? n : o.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_CTA]
         })

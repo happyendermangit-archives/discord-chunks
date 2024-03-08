@@ -11,19 +11,19 @@ function(e, t, n) {
             return f
         },
         ApplicationBenefitsModalDescription: function() {
-            return m
+            return p
         },
         ApplicationBenefitsModalBenefits: function() {
-            return p
+            return m
         },
         ApplicationBenefitsModalContent: function() {
             return h
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        a = n.n(i),
+    var l = n("414456"),
+        a = n.n(l),
         s = n("77078"),
         r = n("167007"),
         o = n("139737"),
@@ -32,14 +32,14 @@ function(e, t, n) {
             let {
                 application: t,
                 asset: n,
-                className: i,
+                className: l,
                 ...a
             } = e;
-            return (0, l.jsx)(r.default, {
+            return (0, i.jsx)(r.default, {
                 application: t,
                 size: r.ApplicationIconSize.MEDIUM,
                 asset: n,
-                className: i,
+                className: l,
                 ...a
             })
         },
@@ -47,59 +47,59 @@ function(e, t, n) {
             let {
                 children: t,
                 className: n,
-                id: i,
+                id: l,
                 ...r
             } = e;
-            return (0, l.jsx)(s.Heading, {
+            return (0, i.jsx)(s.Heading, {
                 className: a(u.header, n),
                 variant: "heading-xl/extrabold",
-                id: i,
+                id: l,
                 ...r,
                 children: t
             })
         };
 
     function f() {
-        return (0, l.jsx)("hr", {
+        return (0, i.jsx)("hr", {
             className: u.divider
         })
     }
-    let m = e => {
+    let p = e => {
             let {
                 className: t,
                 title: n,
-                description: i,
+                description: l,
                 ...a
             } = e;
-            return (0, l.jsxs)("div", {
+            return (0, i.jsxs)("div", {
                 className: t,
                 ...a,
-                children: [(0, l.jsx)(s.Heading, {
+                children: [(0, i.jsx)(s.Heading, {
                     variant: "heading-md/bold",
                     color: "header-primary",
                     children: n
-                }), (0, l.jsx)(s.Heading, {
+                }), (0, i.jsx)(s.Heading, {
                     variant: "heading-sm/normal",
                     color: "header-secondary",
-                    children: i
+                    children: l
                 })]
             })
         },
-        p = e => {
+        m = e => {
             let {
                 applicationId: t,
                 storeListingBenefits: n,
-                skuBenefits: i,
+                skuBenefits: l,
                 className: s,
                 ...r
             } = e;
-            return (0, l.jsx)("div", {
+            return (0, i.jsx)("div", {
                 className: a(u.benefitsContainer, s),
                 ...r,
-                children: (0, l.jsx)(o.SubscriptionListingBenefits, {
+                children: (0, i.jsx)(o.SubscriptionListingBenefits, {
                     applicationId: t,
                     storeListingBenefits: n,
-                    skuBenefits: i,
+                    skuBenefits: l,
                     className: u.benefit
                 })
             })
@@ -108,11 +108,11 @@ function(e, t, n) {
             let {
                 children: t,
                 className: n,
-                ...i
+                ...l
             } = e;
-            return (0, l.jsx)("div", {
+            return (0, i.jsx)("div", {
                 className: a(u.container, n),
-                ...i,
+                ...l,
                 children: t
             })
         }

@@ -8,8 +8,8 @@ function(e, t, n) {
             return c
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("65597"),
         s = n("901165"),
         r = n("495226"),
@@ -18,10 +18,10 @@ function(e, t, n) {
 
     function d(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            l = (0, a.default)([s.default], () => !!__OVERLAY__ && s.default.isInstanceUILocked()),
-            [d, c] = (0, o.useGetDismissibleContent)(e, t, l),
+            i = (0, a.default)([s.default], () => !!__OVERLAY__ && s.default.isInstanceUILocked()),
+            [d, c] = (0, o.useGetDismissibleContent)(e, t, i),
             f = !n && null != d && !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(d);
-        return i.useEffect(() => () => {
+        return l.useEffect(() => () => {
             f && c(u.ContentDismissActionType.AUTO_DISMISS)
         }, [f, c]), [d, c]
     }
@@ -30,10 +30,10 @@ function(e, t, n) {
         let {
             contentTypes: t,
             children: n,
-            groupName: i,
+            groupName: l,
             bypassAutoDismiss: a
-        } = e, [s, r] = d(t, i, a);
-        return (0, l.jsx)(l.Fragment, {
+        } = e, [s, r] = d(t, l, a);
+        return (0, i.jsx)(i.Fragment, {
             children: n({
                 visibleContent: s,
                 markAsDismissed: r

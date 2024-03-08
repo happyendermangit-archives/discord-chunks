@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return S
         }
     }), n("222007");
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("446674"),
+    var l = n("446674"),
         a = n("77078"),
         s = n("772017"),
         r = n("987317"),
@@ -16,65 +16,65 @@ function(e, t, n) {
         d = n("223913"),
         c = n("373469"),
         f = n("42203"),
-        m = n("30672"),
-        p = n("619911"),
+        p = n("30672"),
+        m = n("619911"),
         h = n("659500"),
-        E = n("295999"),
-        g = n("49111"),
-        S = n("782340"),
-        C = n("570075");
+        x = n("295999"),
+        E = n("49111"),
+        y = n("782340"),
+        g = n("570075");
 
-    function T(e) {
+    function S(e) {
         let {
             isCurrentUser: t,
             color: n,
-            look: T,
-            applicationStream: v
+            look: S,
+            applicationStream: C
         } = e, {
             activeStream: I,
-            watchingOtherStream: _
-        } = (0, i.useStateFromStoresObject)([c.default], () => ({
-            activeStream: c.default.getActiveStreamForApplicationStream(v),
-            watchingOtherStream: null != v && c.default.getAllActiveStreamsForChannel(v.channelId).filter(e => {
+            watchingOtherStream: T
+        } = (0, l.useStateFromStoresObject)([c.default], () => ({
+            activeStream: c.default.getActiveStreamForApplicationStream(C),
+            watchingOtherStream: null != C && c.default.getAllActiveStreamsForChannel(C.channelId).filter(e => {
                 let {
                     ownerId: t
                 } = e;
-                return t !== v.ownerId
+                return t !== C.ownerId
             }).length > 0
-        })), N = (0, i.useStateFromStores)([f.default], () => f.default.getChannel(null == v ? void 0 : v.channelId)), [A, x] = (0, d.useCanWatchStream)(N), y = (0, u.useWindowDispatch)(), O = null != I && null != v && I.state !== g.ApplicationStreamStates.ENDED && I.ownerId === v.ownerId, R = e => {
-            null != v && (r.default.selectVoiceChannel(v.channelId), !O && (0, o.watchStreamAndTransitionToStream)(v, {
+        })), _ = (0, l.useStateFromStores)([f.default], () => f.default.getChannel(null == C ? void 0 : C.channelId)), [v, N] = (0, d.useCanWatchStream)(_), A = (0, u.useWindowDispatch)(), O = null != I && null != C && I.state !== E.ApplicationStreamStates.ENDED && I.ownerId === C.ownerId, k = e => {
+            null != C && (r.default.selectVoiceChannel(C.channelId), !O && (0, o.watchStreamAndTransitionToStream)(C, {
                 forceMultiple: e
-            }), y.dispatch(g.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(g.ComponentActions.MODAL_CLOSE), s.default.popAll())
+            }), A.dispatch(E.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(E.ComponentActions.MODAL_CLOSE), s.default.popAll())
         };
-        if (null == v) return null;
-        let M = (0, d.getStreamCTAString)(x);
-        t ? M = S.default.Messages.WATCH_STREAM_STREAMING : O && (M = S.default.Messages.WATCH_STREAM_WATCHING);
-        let L = {
+        if (null == C) return null;
+        let M = (0, d.getStreamCTAString)(N);
+        t ? M = y.default.Messages.WATCH_STREAM_STREAMING : O && (M = y.default.Messages.WATCH_STREAM_WATCHING);
+        let R = {
             color: n,
-            look: T
+            look: S
         };
-        return (0, l.jsxs)(l.Fragment, {
-            children: [(0, l.jsxs)(E.default, {
-                disabled: t || O || !A,
-                onClick: () => R(!1),
-                ...L,
+        return (0, i.jsxs)(i.Fragment, {
+            children: [(0, i.jsxs)(x.default, {
+                disabled: t || O || !v,
+                onClick: () => k(!1),
+                ...R,
                 fullWidth: !0,
-                children: [(0, l.jsx)(p.default, {
-                    className: C.streamIcon
+                children: [(0, i.jsx)(m.default, {
+                    className: g.streamIcon
                 }), M]
-            }, "play"), _ && !O ? (0, l.jsx)(a.Tooltip, {
-                text: S.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
-                children: e => (0, l.jsx)(E.default, {
+            }, "play"), T && !O ? (0, i.jsx)(a.Tooltip, {
+                text: y.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+                children: e => (0, i.jsx)(x.default, {
                     ...e,
                     onClick: () => {
                         var t;
-                        null === (t = e.onClick) || void 0 === t || t.call(e), R(!0)
+                        null === (t = e.onClick) || void 0 === t || t.call(e), k(!0)
                     },
-                    ...L,
-                    className: C.iconButton,
-                    size: C.iconButtonSize,
-                    children: (0, l.jsx)(m.default, {
-                        className: C.iconSize
+                    ...R,
+                    className: g.iconButton,
+                    size: g.iconButtonSize,
+                    children: (0, i.jsx)(p.default, {
+                        className: g.iconSize
                     })
                 })
             }) : null]

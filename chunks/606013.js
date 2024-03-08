@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return S
+            return y
         }
     }), n("222007"), n("781738");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("77078"),
@@ -15,11 +15,11 @@ function(e, t, n) {
         d = n("383018"),
         c = n("378765"),
         f = n("773336"),
-        m = n("573055"),
-        p = n("149022"),
+        p = n("573055"),
+        m = n("149022"),
         h = n("49111");
-    let E = /(\t|\s)/;
-    class g extends i.PureComponent {
+    let x = /(\t|\s)/;
+    class E extends l.PureComponent {
         componentDidMount() {
             !this.props.disableAutoFocus && (Promise.resolve().then(() => {
                 var e;
@@ -50,14 +50,14 @@ function(e, t, n) {
                 isAtStart: !1
             };
             let n = e.selectionStart,
-                l = e.selectionEnd;
+                i = e.selectionEnd;
             for (; n > 0;) {
-                let e = E.test(t[n - 1]);
+                let e = x.test(t[n - 1]);
                 if (e) break;
                 n--
             }
             return {
-                word: t.slice(n, l),
+                word: t.slice(n, i),
                 isAtStart: 0 === n
             }
         }
@@ -73,34 +73,34 @@ function(e, t, n) {
         insertAutocomplete(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 {
-                    word: l
+                    word: i
                 } = this.getCurrentWord();
-            if (null == l) this.insertText(e, t, n);
+            if (null == i) this.insertText(e, t, n);
             else {
                 let t = this._ref;
                 if (null == t) return;
-                let i = t.value.slice(0, t.selectionStart - l.length),
+                let l = t.value.slice(0, t.selectionStart - i.length),
                     a = t.value.slice(t.selectionEnd);
-                this._insertText(e, i, a, n)
+                this._insertText(e, l, a, n)
             }
         }
         insertText(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                l = this._ref;
-            if (null == l) return;
-            let i = l.value.slice(0, l.selectionStart),
-                a = l.value.slice(l.selectionEnd);
-            this._insertText(e, i, a, n)
-        }
-        _insertText(e, t, n, l) {
-            let i = this._ref;
+                i = this._ref;
             if (null == i) return;
-            l && (e += " ");
+            let l = i.value.slice(0, i.selectionStart),
+                a = i.value.slice(i.selectionEnd);
+            this._insertText(e, l, a, n)
+        }
+        _insertText(e, t, n, i) {
+            let l = this._ref;
+            if (null == l) return;
+            i && (e += " ");
             let a = t + e + n,
                 {
                     onChange: s
                 } = this.props;
-            null == s || s(null, a, (0, p.toRichValue)(a));
+            null == s || s(null, a, (0, m.toRichValue)(a));
             let r = t.length + e.length;
             this.setState({
                 nextSelection: r
@@ -119,22 +119,22 @@ function(e, t, n) {
                 value: e,
                 disabled: t,
                 placeholder: n,
-                required: i,
+                required: l,
                 onResize: a,
                 className: o,
                 id: u,
                 submitting: d,
                 textAreaPaddingClassName: f,
-                spellcheckEnabled: m,
-                "aria-controls": p,
-                "aria-expanded": E,
-                "aria-activedescendant": g
+                spellcheckEnabled: p,
+                "aria-controls": m,
+                "aria-expanded": x,
+                "aria-activedescendant": E
             } = this.props;
-            return (0, l.jsxs)(l.Fragment, {
-                children: [(0, l.jsx)(c.ComponentAction, {
+            return (0, i.jsxs)(i.Fragment, {
+                children: [(0, i.jsx)(c.ComponentAction, {
                     event: h.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
                     handler: this.handleGlobalPaste
-                }), (0, l.jsx)(r.TextAreaAutosize, {
+                }), (0, i.jsx)(r.TextAreaAutosize, {
                     ref: this.handleSetRef,
                     className: s(o, f),
                     id: u,
@@ -142,7 +142,7 @@ function(e, t, n) {
                     fontWidthEstimate: 6,
                     placeholder: n,
                     disabled: t || d,
-                    required: i,
+                    required: l,
                     onChange: this.handleOnChange,
                     onResize: a,
                     onKeyPress: this.handleKeyPress,
@@ -155,10 +155,10 @@ function(e, t, n) {
                     onContextMenu: this.handleContextMenu,
                     value: t ? "" : e,
                     tabIndex: 0,
-                    spellCheck: m,
-                    "aria-controls": p,
-                    "aria-expanded": E,
-                    "aria-activedescendant": g,
+                    spellCheck: p,
+                    "aria-controls": m,
+                    "aria-expanded": x,
+                    "aria-activedescendant": E,
                     "aria-haspopup": "listbox",
                     "aria-autocomplete": "list",
                     "aria-multiline": !0
@@ -237,10 +237,10 @@ function(e, t, n) {
                     let {
                         default: e
                     } = await n.el("604288").then(n.bind(n, "604288"));
-                    return t => (0, l.jsx)(e, {
+                    return t => (0, i.jsx)(e, {
                         ...t,
                         isChannelTextArea: !0,
-                        text: (0, m.getSelectionText)()
+                        text: (0, p.getSelectionText)()
                     })
                 }, {
                     align: "bottom",
@@ -250,10 +250,10 @@ function(e, t, n) {
                 let {
                     onChange: t,
                     allowNewLines: n
-                } = this.props, l = e.currentTarget.value, i = n ? l : l.replace("\n", "");
-                null == t || t(e, i, (0, p.toRichValue)(i))
+                } = this.props, i = e.currentTarget.value, l = n ? i : i.replace("\n", "");
+                null == t || t(e, l, (0, m.toRichValue)(l))
             }
         }
     }
-    var S = g
+    var y = E
 }

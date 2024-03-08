@@ -5,12 +5,12 @@ function(e, t, n) {
             return a
         }
     }), n("222007");
-    var l = n("884691");
+    var i = n("884691");
 
-    function i(e, t) {
+    function l(e, t) {
         let n = e.getBoundingClientRect(),
-            l = (t.clientX - n.left) / n.width;
-        return Math.min(1, Math.max(0, l))
+            i = (t.clientX - n.left) / n.width;
+        return Math.min(1, Math.max(0, i))
     }
 
     function a(e) {
@@ -19,25 +19,25 @@ function(e, t, n) {
             onDrag: n,
             onDragStart: a,
             onDragEnd: s
-        } = e, [r, o] = l.useState(!1);
-        l.useEffect(() => {
-            if (r) return window.addEventListener("mouseup", e), window.addEventListener("mousemove", l), () => {
-                window.removeEventListener("mouseup", e), window.removeEventListener("mousemove", l)
+        } = e, [r, o] = i.useState(!1);
+        i.useEffect(() => {
+            if (r) return window.addEventListener("mouseup", e), window.addEventListener("mousemove", i), () => {
+                window.removeEventListener("mouseup", e), window.removeEventListener("mousemove", i)
             };
 
             function e() {
                 null == s || s(), o(!1)
             }
 
-            function l(e) {
-                let l = t.current;
-                null != l && (null == n || n(i(l, e)))
+            function i(e) {
+                let i = t.current;
+                null != i && (null == n || n(l(i, e)))
             }
         }, [t, r, s, n]);
-        let u = l.useCallback(e => {
+        let u = i.useCallback(e => {
             e.preventDefault();
-            let l = t.current;
-            null != l && (o(!0), null == a || a(), null == n || n(i(l, e)))
+            let i = t.current;
+            null != i && (o(!0), null == a || a(), null == n || n(l(i, e)))
         }, [t, a, n]);
         return [r, u]
     }

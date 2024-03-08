@@ -12,8 +12,8 @@ function(e, t, i) {
         a = i("917351"),
         u = i("617258"),
         c = i("77078"),
-        d = i("272030"),
-        o = i("997289"),
+        o = i("272030"),
+        d = i("997289"),
         f = i("246511"),
         S = i("151185"),
         m = i("599110"),
@@ -51,7 +51,7 @@ function(e, t, i) {
                 checkSendability: D = !0
             } = e, {
                 location: H
-            } = (0, o.useAnalyticsContext)(), V = w + 2 * b, B = n.useMemo(() => ({
+            } = (0, d.useAnalyticsContext)(), V = w + 2 * b, B = n.useMemo(() => ({
                 gridColumnGap: T,
                 gridTemplateColumns: "repeat(auto-fill, ".concat(V, "px)"),
                 height: V,
@@ -66,7 +66,7 @@ function(e, t, i) {
                 style: B,
                 ...null == R ? void 0 : R(U),
                 children: F.map(e => {
-                    var o;
+                    var d;
                     let y = e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) && e.columnIndex === (null == L ? void 0 : L.columnIndex),
                         _ = e.type === p.StickerGridItemTypes.STICKER && j && y,
                         R = (0, a.throttle)(() => {
@@ -77,7 +77,7 @@ function(e, t, i) {
                             tabIndex: F,
                             onFocus: b,
                             ...V
-                        } = null !== (o = null == u ? void 0 : u(e.columnIndex, U)) && void 0 !== o ? o : {};
+                        } = null !== (d = null == u ? void 0 : u(e.columnIndex, U)) && void 0 !== d ? d : {};
                     switch (e.type) {
                         case p.StickerGridItemTypes.CREATE_STICKER:
                             return (0, r.jsx)("div", {
@@ -137,7 +137,7 @@ function(e, t, i) {
                                     (null == x ? void 0 : x.current) !== !0 && (null == A ? void 0 : A.current) !== !0 && (null == N || N(e, t))
                                 },
                                 onContextMenu: e => {
-                                    (0, d.openContextMenuLazy)(e, async () => {
+                                    (0, o.openContextMenuLazy)(e, async () => {
                                         let {
                                             default: e
                                         } = await i.el("367343").then(i.bind(i, "367343"));

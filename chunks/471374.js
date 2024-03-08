@@ -11,8 +11,8 @@ function(e, t, n) {
             return r
         }
     });
-    var l = n("862205");
-    let i = (0, l.createExperiment)({
+    var i = n("862205");
+    let l = (0, i.createExperiment)({
         kind: "user",
         id: "2024-01_guild_gaming_voice_activity",
         label: "Guild Gaming Voice Activity",
@@ -40,7 +40,7 @@ function(e, t, n) {
     function a(e, t) {
         let {
             showGamingVoiceActivity: n
-        } = i.useExperiment({
+        } = l.useExperiment({
             location: e
         }, {
             autoTrackExposure: t
@@ -51,12 +51,12 @@ function(e, t, n) {
     function s(e, t) {
         let {
             showGamingVoiceActivity: n
-        } = i.getCurrentConfig({
+        } = l.getCurrentConfig({
             location: e
         }, {
             autoTrackExposure: t
         });
         return n
     }
-    var r = i
+    var r = l
 }

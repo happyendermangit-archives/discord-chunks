@@ -5,93 +5,93 @@ function(e, t, n) {
             return d
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("124299"),
         s = n("538282"),
         r = n("45961"),
         o = n("95279");
-    let u = i.forwardRef(function(e, t) {
+    let u = l.forwardRef(function(e, t) {
         let {
             store: n,
             hasSearchResults: u,
             listPadding: d,
             renderRow: c,
             renderSection: f,
-            renderSectionHeader: m,
-            renderSectionFooter: p,
+            renderSectionHeader: p,
+            renderSectionFooter: m,
             renderInspector: h,
-            renderEmptySearchState: E,
-            rowCount: g,
-            rowCountBySection: S,
-            rowHeight: C,
-            sectionHeaderHeight: T,
-            sectionFooterHeight: v
-        } = e, I = i.useRef(!1), _ = i.useRef(null), N = (0, s.useExpressionPickerStore)(e => e.searchQuery), A = n.useStore(e => e.activeCategoryIndex), x = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
-            activeCategoryIndex: A,
+            renderEmptySearchState: x,
+            rowCount: E,
+            rowCountBySection: y,
+            rowHeight: g,
+            sectionHeaderHeight: S,
+            sectionFooterHeight: C
+        } = e, I = l.useRef(!1), T = l.useRef(null), _ = (0, s.useExpressionPickerStore)(e => e.searchQuery), v = n.useStore(e => e.activeCategoryIndex), N = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
+            activeCategoryIndex: v,
             isScrolling: I,
-            listRef: _,
+            listRef: T,
             onActiveCategoryIndexChange: n.setActiveCategoryIndex,
             scrollOffset: 20,
-            searchQuery: N
+            searchQuery: _
         });
         return (0, r.useSynchronizedScrollPositionForActiveCategoryIndex)({
-            searchQuery: N,
-            activeCategoryIndex: A,
-            listRef: _
-        }), i.useImperativeHandle(t, () => ({
+            searchQuery: _,
+            activeCategoryIndex: v,
+            listRef: T
+        }), l.useImperativeHandle(t, () => ({
             scrollTo: function() {
-                for (var e, t = arguments.length, n = Array(t), l = 0; l < t; l++) n[l] = arguments[l];
-                return null === (e = _.current) || void 0 === e ? void 0 : e.scrollTo(...n)
+                for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+                return null === (e = T.current) || void 0 === e ? void 0 : e.scrollTo(...n)
             },
             getRowDescriptors: () => {
                 var e, t;
-                return null !== (t = null === (e = _.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : []
+                return null !== (t = null === (e = T.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : []
             },
             getSectionDescriptors: () => {
                 var e, t;
-                return null !== (t = null === (e = _.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : []
+                return null !== (t = null === (e = T.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : []
             },
             scrollToSectionTop: function() {
-                for (var e, t = arguments.length, n = Array(t), l = 0; l < t; l++) n[l] = arguments[l];
-                return null === (e = _.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...n)
+                for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+                return null === (e = T.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...n)
             },
             scrollRowIntoView: function() {
-                for (var e, t = arguments.length, n = Array(t), l = 0; l < t; l++) n[l] = arguments[l];
-                return null === (e = _.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...n)
+                for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+                return null === (e = T.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...n)
             },
             getScrollerNode: function() {
-                for (var e, t = arguments.length, n = Array(t), l = 0; l < t; l++) n[l] = arguments[l];
-                return null === (e = _.current) || void 0 === e ? void 0 : e.getScrollerNode(...n)
+                for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+                return null === (e = T.current) || void 0 === e ? void 0 : e.getScrollerNode(...n)
             },
             scrollIntoViewNode: function() {
-                for (var e, t = arguments.length, n = Array(t), l = 0; l < t; l++) n[l] = arguments[l];
-                return null === (e = _.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...n)
+                for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+                return null === (e = T.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...n)
             },
             getListDimensions: function() {
-                for (var e, t, n = arguments.length, l = Array(n), i = 0; i < n; i++) l[i] = arguments[i];
-                return null !== (t = null === (e = _.current) || void 0 === e ? void 0 : e.getListDimensions(...l)) && void 0 !== t ? t : {
+                for (var e, t, n = arguments.length, i = Array(n), l = 0; l < n; l++) i[l] = arguments[l];
+                return null !== (t = null === (e = T.current) || void 0 === e ? void 0 : e.getListDimensions(...i)) && void 0 !== t ? t : {
                     height: -1,
                     totalHeight: -1
                 }
             }
-        }), []), (0, l.jsxs)("div", {
+        }), []), (0, i.jsxs)("div", {
             className: o.wrapper,
-            children: [N.length > 0 && !u && null != E ? E() : (0, l.jsx)(a.default, {
+            children: [_.length > 0 && !u && null != x ? x() : (0, i.jsx)(a.default, {
                 role: "none presentation",
                 listPadding: d,
-                onScroll: x,
+                onScroll: N,
                 renderRow: c,
                 renderSection: f,
-                renderSectionHeader: m,
-                renderSectionFooter: p,
-                rowCount: g,
-                rowCountBySection: S,
-                rowHeight: C,
-                sectionHeaderHeight: T,
-                sectionFooterHeight: v,
+                renderSectionHeader: p,
+                renderSectionFooter: m,
+                rowCount: E,
+                rowCountBySection: y,
+                rowHeight: g,
+                sectionHeaderHeight: S,
+                sectionFooterHeight: C,
                 stickyHeaders: !0,
-                ref: _
+                ref: T
             }), null == h ? void 0 : h()]
         })
     });

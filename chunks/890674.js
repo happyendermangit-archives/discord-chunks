@@ -5,12 +5,12 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("872717"),
-        i = n("49111"),
+    var i = n("872717"),
+        l = n("49111"),
         a = {
             updateNote(e, t) {
-                l.default.put({
-                    url: i.Endpoints.NOTE(e),
+                i.default.put({
+                    url: l.Endpoints.NOTE(e),
                     body: {
                         note: t
                     },

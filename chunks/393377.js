@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return S
+            return y
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("77078"),
@@ -15,101 +15,101 @@ function(e, t, n) {
         d = n("966724"),
         c = n("474643"),
         f = n("585722"),
-        m = n("271972"),
-        p = n("761354"),
+        p = n("271972"),
+        m = n("761354"),
         h = n("49111"),
-        E = n("825455"),
-        g = n("602416");
+        x = n("825455"),
+        E = n("602416");
 
-    function S(e) {
+    function y(e) {
         let {
             channelId: t,
             option: n,
             keyboardModeEnabled: a
-        } = e, S = i.useRef(null), [C, T] = i.useState(!1), v = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), I = i.useRef(null), _ = i.useCallback(() => {
-            T(!0)
-        }, []), N = i.useCallback(() => {
-            T(!1)
-        }, []), A = i.useCallback(e => {
-            var l;
-            T(!1);
-            let i = {
+        } = e, y = l.useRef(null), [g, S] = l.useState(!1), C = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), I = l.useRef(null), T = l.useCallback(() => {
+            S(!0)
+        }, []), _ = l.useCallback(() => {
+            S(!1)
+        }, []), v = l.useCallback(e => {
+            var i;
+            S(!1);
+            let l = {
                 id: n.name,
-                file: null === (l = e.dataTransfer) || void 0 === l ? void 0 : l.files[0],
+                file: null === (i = e.dataTransfer) || void 0 === i ? void 0 : i.files[0],
                 platform: d.UploadPlatform.WEB
             };
             o.default.setFile({
                 channelId: t,
                 id: n.name,
-                file: i,
+                file: l,
                 draftType: c.DraftType.SlashCommand
             })
         }, [t, n]);
-        return (i.useEffect(() => {
+        return (l.useEffect(() => {
             let e = I.current;
-            return null == v && (null == e || e.addEventListener("dragover", _, !1), null == e || e.addEventListener("dragleave", N, !1), null == e || e.addEventListener("drop", A, !1)), () => {
-                null == e || e.removeEventListener("dragover", _, !1), null == e || e.removeEventListener("dragleave", N, !1), null == e || e.removeEventListener("drop", A, !1)
+            return null == C && (null == e || e.addEventListener("dragover", T, !1), null == e || e.addEventListener("dragleave", _, !1), null == e || e.addEventListener("drop", v, !1)), () => {
+                null == e || e.removeEventListener("dragover", T, !1), null == e || e.removeEventListener("dragleave", _, !1), null == e || e.removeEventListener("drop", v, !1)
             }
-        }, [v, _, N, A]), null != v) ? (0, l.jsx)(p.default, {
+        }, [C, T, _, v]), null != C) ? (0, i.jsx)(m.default, {
             channelId: t,
-            upload: v,
+            upload: C,
             keyboardModeEnabled: a,
             draftType: c.DraftType.SlashCommand,
-            label: (0, l.jsxs)(i.Fragment, {
-                children: [(0, l.jsxs)(r.Text, {
+            label: (0, i.jsxs)(l.Fragment, {
+                children: [(0, i.jsxs)(r.Text, {
                     tag: "span",
                     variant: "text-md/normal",
                     children: [n.name, ": "]
-                }), (0, l.jsx)(r.Text, {
+                }), (0, i.jsx)(r.Text, {
                     tag: "span",
                     variant: "text-md/normal",
                     color: "text-brand",
-                    children: v.filename
+                    children: C.filename
                 })]
             }),
             canEdit: !1
-        }) : (0, l.jsxs)(m.default, {
+        }) : (0, i.jsxs)(p.default, {
             id: n.name,
             channelId: t,
             keyboardModeEnabled: a,
             onKeyDown: e => {
                 if (e.which === h.KeyboardKeys.ENTER) {
                     var t;
-                    e.preventDefault(), null === (t = S.current) || void 0 === t || t.activateUploadDialogue()
+                    e.preventDefault(), null === (t = y.current) || void 0 === t || t.activateUploadDialogue()
                 }
             },
-            className: s(E.emptyOption, {
-                [E.emptyOptionActive]: C
+            className: s(x.emptyOption, {
+                [x.emptyOptionActive]: g
             }),
             draftType: c.DraftType.SlashCommand,
             ref: I,
-            children: [(0, l.jsx)("span", {
-                className: s(E.optionName, {
-                    [E.optionNameActive]: C
+            children: [(0, i.jsx)("span", {
+                className: s(x.optionName, {
+                    [x.optionNameActive]: g
                 }),
                 children: n.name
-            }), (0, l.jsx)(r.Clickable, {
-                className: E.clickContainer,
+            }), (0, i.jsx)(r.Clickable, {
+                className: x.clickContainer,
                 onClick: () => {
                     var e;
-                    return null === (e = S.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+                    return null === (e = y.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
                 },
-                children: (0, l.jsxs)("div", {
-                    className: E.commandOptionContainer,
-                    children: [(0, l.jsx)("img", {
-                        src: g,
-                        className: E.optionIcon,
+                children: (0, i.jsxs)("div", {
+                    className: x.commandOptionContainer,
+                    children: [(0, i.jsx)("img", {
+                        src: E,
+                        className: x.optionIcon,
                         alt: ""
-                    }), (0, l.jsx)(r.Text, {
-                        className: E.optionHelp,
+                    }), (0, i.jsx)(r.Text, {
+                        className: x.optionHelp,
                         variant: "text-sm/normal",
                         children: "Drag and drop or click to upload file"
-                    }), (0, l.jsx)(u.default, {
-                        ref: S,
+                    }), (0, i.jsx)(u.default, {
+                        ref: y,
                         onChange: e => {
-                            var l, i;
-                            if (null != t && (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (l = i.files) || void 0 === l ? void 0 : l[0]) != null) {
-                                let l = {
+                            var i, l;
+                            if (null != t && (null === (l = e.currentTarget) || void 0 === l ? void 0 : null === (i = l.files) || void 0 === i ? void 0 : i[0]) != null) {
+                                let i = {
                                     id: n.name,
                                     file: e.currentTarget.files[0],
                                     platform: d.UploadPlatform.WEB
@@ -117,7 +117,7 @@ function(e, t, n) {
                                 o.default.setFile({
                                     channelId: t,
                                     id: n.name,
-                                    file: l,
+                                    file: i,
                                     draftType: c.DraftType.SlashCommand
                                 }), e.currentTarget.value = ""
                             }
@@ -125,7 +125,7 @@ function(e, t, n) {
                         multiple: !1,
                         tabIndex: -1,
                         "aria-hidden": !0,
-                        className: E.fileInput
+                        className: x.fileInput
                     })]
                 })
             })]

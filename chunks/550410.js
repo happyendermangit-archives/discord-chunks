@@ -8,24 +8,24 @@ function(e, t, n) {
             return r
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("908583");
 
     function s(e) {
         let {
             onPreventIdle: t,
             onAllowIdle: n,
-            onActive: l
-        } = i.useContext(a.IdleHandlerContext), s = i.useCallback(() => {
+            onActive: i
+        } = l.useContext(a.IdleHandlerContext), s = l.useCallback(() => {
             t(e)
-        }, [e, t]), r = i.useCallback(() => {
+        }, [e, t]), r = l.useCallback(() => {
             n(e)
         }, [e, n]);
         return {
             preventIdle: s,
             allowIdle: r,
-            onActive: l
+            onActive: i
         }
     }
 
@@ -36,17 +36,17 @@ function(e, t, n) {
         } = e, {
             onForceIdle: r,
             onActive: o
-        } = i.useContext(a.IdleHandlerContext), {
+        } = l.useContext(a.IdleHandlerContext), {
             preventIdle: u,
             allowIdle: d
         } = s("interact");
-        i.useEffect(() => () => d(), [d]);
-        let c = i.useCallback(e => {
+        l.useEffect(() => () => d(), [d]);
+        let c = l.useCallback(e => {
             var t;
             let n = null !== (t = e.target.ownerDocument) && void 0 !== t ? t : document;
             !e.currentTarget.contains(n.activeElement) && r()
         }, [r]);
-        return (0, l.jsx)("div", {
+        return (0, i.jsx)("div", {
             className: n,
             onMouseEnter: u,
             onMouseLeave: d,

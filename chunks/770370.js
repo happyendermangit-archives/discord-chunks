@@ -5,9 +5,9 @@ function(e, t, n) {
             return d
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("446674"),
+    var l = n("446674"),
         a = n("926994"),
         s = n("47319"),
         r = n("295999"),
@@ -19,15 +19,15 @@ function(e, t, n) {
             color: t,
             look: n,
             platform: d
-        } = e, c = (0, i.useStateFromStores)([s.default], () => s.default.getAccounts().some(e => e.type === d.type));
-        return c ? null : (0, l.jsx)(r.default, {
+        } = e, c = (0, l.useStateFromStores)([s.default], () => s.default.getAccounts().some(e => e.type === d.type));
+        return c ? null : (0, i.jsx)(r.default, {
             onClick: () => (0, a.default)(d.type, "Activity Action"),
             color: t,
             look: n,
             fullWidth: !0,
-            children: (0, l.jsxs)("div", {
+            children: (0, i.jsxs)("div", {
                 className: u.flex,
-                children: [(0, l.jsx)("img", {
+                children: [(0, i.jsx)("img", {
                     alt: "",
                     className: u.platformIcon,
                     src: d.icon.whiteSVG

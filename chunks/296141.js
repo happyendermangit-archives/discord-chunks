@@ -11,16 +11,16 @@ function(e, t, n) {
             return o
         }
     });
-    var l = n("884691"),
-        i = n("308503");
+    var i = n("884691"),
+        l = n("308503");
     let a = Object.freeze({
             id: null,
             activeDescendant: null
         }),
-        s = (0, i.default)(() => a);
+        s = (0, l.default)(() => a);
 
     function r(e, t, n) {
-        (0, l.useEffect)(() => {
+        (0, i.useEffect)(() => {
             t ? s.setState({
                 id: e,
                 activeDescendant: n

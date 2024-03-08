@@ -5,8 +5,8 @@ function(e, t, n) {
             return f
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("77078"),
         s = n("86678"),
         r = n("538282"),
@@ -20,30 +20,30 @@ function(e, t, n) {
         let {
             editorRef: n,
             options: f,
-            channel: m
-        } = e, p = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = i.useCallback((e, t) => {
-            let l = n.current;
-            null != e && null != l && l.insertEmoji(e, t, !1), t && (0, r.closeExpressionPicker)()
+            channel: p
+        } = e, m = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = l.useCallback((e, t) => {
+            let i = n.current;
+            null != e && null != i && i.insertEmoji(e, t, !1), t && (0, r.closeExpressionPicker)()
         }, [n]);
-        return null == p ? null : (0, l.jsxs)("div", {
+        return null == m ? null : (0, i.jsxs)("div", {
             id: "slate-toolbar",
             className: c.staticToolbar,
-            children: [(0, l.jsx)("div", {
+            children: [(0, i.jsx)("div", {
                 className: c.staticButtons,
-                children: (0, l.jsx)(u.ToolbarButtons, {
+                children: (0, i.jsx)(u.ToolbarButtons, {
                     editorRef: n,
                     options: f,
                     iconClassName: c.staticIcon,
                     dividerClassName: c.staticDivider
                 })
-            }), (0, l.jsx)(a.Popout, {
+            }), (0, i.jsx)(a.Popout, {
                 renderPopout: e => {
                     let {
                         closePopout: t
                     } = e;
-                    return (0, l.jsx)(s.default, {
+                    return (0, i.jsx)(s.default, {
                         persistSearch: !0,
-                        channel: m,
+                        channel: p,
                         closePopout: t,
                         onSelectEmoji: (e, n) => {
                             h(e, n), n && t()
@@ -58,7 +58,7 @@ function(e, t, n) {
                     let {
                         isShown: n
                     } = t;
-                    return (0, l.jsx)(o.default, {
+                    return (0, i.jsx)(o.default, {
                         ...e,
                         active: n,
                         className: c.emojiButton,

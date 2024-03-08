@@ -5,8 +5,8 @@ function(e, t, n) {
             return a
         }
     });
-    var l = n("862205");
-    let i = (0, l.createExperiment)({
+    var i = n("862205");
+    let l = (0, i.createExperiment)({
         kind: "user",
         id: "2023-05_referral_trials_birthday_moment",
         label: "Referral Trials Birthday Moment",
@@ -21,5 +21,5 @@ function(e, t, n) {
             }
         }]
     });
-    var a = i
+    var a = l
 }

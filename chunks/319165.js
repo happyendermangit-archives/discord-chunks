@@ -8,9 +8,9 @@ function(e, t, n) {
             return r
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("77078"),
+    var l = n("77078"),
         a = n("782340");
 
     function s(e) {
@@ -29,7 +29,7 @@ function(e, t, n) {
             muteConfig: t,
             className: n
         } = e, a = s(t);
-        return null != a ? (0, l.jsx)(i.Text, {
+        return null != a ? (0, i.jsx)(l.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
             className: n,

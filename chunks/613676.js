@@ -8,8 +8,8 @@ function(e, t, n) {
             return c
         }
     });
-    var l = n("394846"),
-        i = n("316693"),
+    var i = n("394846"),
+        l = n("316693"),
         a = n("389153"),
         s = n("33942"),
         r = n("599110"),
@@ -20,9 +20,9 @@ function(e, t, n) {
         let {
             customInstallUrl: t,
             installParams: n,
-            integrationTypesConfig: l
+            integrationTypesConfig: i
         } = e;
-        return null != t || null != n || null != l && Object.values(l).some(e => null != e && null != e.oauth2_install_params) && (0, a.isInUserAppExperiment)(null, {
+        return null != t || null != n || null != i && Object.values(i).some(e => null != e && null != e.oauth2_install_params) && (0, a.isInUserAppExperiment)(null, {
             location: "canInstallApplication"
         })
     }
@@ -34,8 +34,8 @@ function(e, t, n) {
             installParams: d,
             integrationTypesConfig: c,
             guildId: f,
-            channelId: m,
-            disableGuildSelect: p,
+            channelId: p,
+            disableGuildSelect: m,
             source: h
         } = e;
         if (null != n) {
@@ -44,7 +44,7 @@ function(e, t, n) {
                 guild_id: f,
                 auth_type: "custom_url",
                 source: h,
-                device_platform: l.isMobile ? "mobile_web" : "desktop_web"
+                device_platform: i.isMobile ? "mobile_web" : "desktop_web"
             }), (0, o.handleClick)({
                 href: n
             });
@@ -58,12 +58,12 @@ function(e, t, n) {
                 guild_id: f,
                 auth_type: "in_app",
                 source: h,
-                device_platform: l.isMobile ? "mobile_web" : "desktop_web"
+                device_platform: i.isMobile ? "mobile_web" : "desktop_web"
             }), (0, s.openOAuth2Modal)({
                 clientId: t,
                 guildId: f,
-                channelId: m,
-                disableGuildSelect: p
+                channelId: p,
+                disableGuildSelect: m
             });
             return
         }
@@ -72,14 +72,14 @@ function(e, t, n) {
             guild_id: f,
             auth_type: "in_app",
             source: h,
-            device_platform: l.isMobile ? "mobile_web" : "desktop_web"
+            device_platform: i.isMobile ? "mobile_web" : "desktop_web"
         }), (0, s.openOAuth2Modal)({
             clientId: t,
             guildId: f,
-            channelId: m,
-            disableGuildSelect: p,
+            channelId: p,
+            disableGuildSelect: m,
             scopes: d.scopes,
-            permissions: null != d.permissions ? i.default.deserialize(d.permissions) : void 0
+            permissions: null != d.permissions ? l.default.deserialize(d.permissions) : void 0
         }))
     }
 }

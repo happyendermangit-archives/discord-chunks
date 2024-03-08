@@ -5,8 +5,8 @@ function(e, t, n) {
             return d
         }
     }), n("222007");
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("600785"),
@@ -20,32 +20,32 @@ function(e, t, n) {
                 width: d = 32,
                 height: c = 32,
                 shouldAnimate: f = !0,
-                isLocked: m = !1
-            } = e, [p, h] = i.useState(!1), E = n.getIconURL(32, f && a), g = () => h(!0), S = () => h(!1);
-            return (0, l.jsxs)("div", {
-                onFocus: g,
-                onBlur: S,
-                onMouseOver: g,
-                onMouseLeave: S,
-                children: [(0, l.jsx)(o.default, {
+                isLocked: p = !1
+            } = e, [m, h] = l.useState(!1), x = n.getIconURL(32, f && a), E = () => h(!0), y = () => h(!1);
+            return (0, i.jsxs)("div", {
+                onFocus: E,
+                onBlur: y,
+                onMouseOver: E,
+                onMouseLeave: y,
+                children: [(0, i.jsx)(o.default, {
                     className: s(u.mask, t),
-                    mask: a || p ? o.MaskIDs.SQUIRCLE : o.MaskIDs.AVATAR_DEFAULT,
+                    mask: a || m ? o.MaskIDs.SQUIRCLE : o.MaskIDs.AVATAR_DEFAULT,
                     width: d,
                     height: c,
-                    children: null == E ? (0, l.jsx)("div", {
+                    children: null == x ? (0, i.jsx)("div", {
                         className: s(u.guildIcon, u.guildIconWithoutImage),
-                        children: (0, l.jsx)("div", {
+                        children: (0, i.jsx)("div", {
                             className: u.guildAcronym,
                             children: n.acronym
                         })
-                    }) : (0, l.jsx)("img", {
+                    }) : (0, i.jsx)("img", {
                         alt: n.toString(),
-                        src: E,
+                        src: x,
                         className: u.guildIcon
                     })
-                }), m ? (0, l.jsx)("div", {
+                }), p ? (0, i.jsx)("div", {
                     className: u.categoryItemLockIconContainer,
-                    children: (0, l.jsx)(r.default, {
+                    children: (0, i.jsx)(r.default, {
                         width: 10,
                         height: 10,
                         className: u.categoryItemLockIcon

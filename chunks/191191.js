@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return S
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("759843"),
@@ -15,31 +15,31 @@ function(e, t, n) {
         d = n("812204"),
         c = n("685665"),
         f = n("428958"),
-        m = n("538282"),
-        p = n("872173"),
+        p = n("538282"),
+        m = n("872173"),
         h = n("945956"),
-        E = n("305122"),
-        g = n("235004"),
-        S = n("534108"),
-        C = n("673431");
+        x = n("305122"),
+        E = n("235004"),
+        y = n("534108"),
+        g = n("673431");
 
-    function T(e) {
+    function S(e) {
         let {
             guildId: t,
             channel: n,
             containerWidth: a,
-            onClose: T,
-            onSelect: v,
+            onClose: S,
+            onSelect: C,
             analyticsSource: I,
-            suppressPlaySound: _,
-            shouldShowUpsell: N = !0,
-            gridNotice: A,
-            autoWidth: x = !1,
-            soundButtonOverlay: y,
+            suppressPlaySound: T,
+            shouldShowUpsell: _ = !0,
+            gridNotice: v,
+            autoWidth: N = !1,
+            soundButtonOverlay: A,
             listPadding: O,
-            renderHeader: R,
+            renderHeader: k,
             defaultSoundsOnly: M
-        } = e, L = (0, o.useStateFromStores)([g.default], () => g.default.isFetchingSounds() || g.default.isFetchingDefaultSounds()), P = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
+        } = e, R = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
             AnalyticsLocationProvider: b
         } = (0, c.default)(d.default.SOUNDBOARD_POPOUT);
         return (0, f.default)({
@@ -48,28 +48,28 @@ function(e, t, n) {
             properties: {
                 source: I,
                 guild_id: t,
-                media_session_id: P
+                media_session_id: L
             }
-        }), i.useEffect(() => {
-            E.maybeFetchSoundboardSounds(), p.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, m.setSearchQuery)("")
-        }, []), (0, l.jsx)(b, {
-            children: (0, l.jsx)("div", {
-                className: s(C.picker, {
-                    [C.fetching]: L,
-                    [C.autoWidth]: x
+        }), l.useEffect(() => {
+            x.maybeFetchSoundboardSounds(), m.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, p.setSearchQuery)("")
+        }, []), (0, i.jsx)(b, {
+            children: (0, i.jsx)("div", {
+                className: s(g.picker, {
+                    [g.fetching]: R,
+                    [g.autoWidth]: N
                 }),
-                children: L ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(S.default, {
+                children: R ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)(y.default, {
                     guildId: t,
                     channel: n,
-                    onClose: T,
-                    onSelect: v,
+                    onClose: S,
+                    onSelect: C,
                     containerWidth: a,
-                    suppressPlaySound: _,
-                    shouldShowUpsell: N,
-                    gridNotice: A,
-                    soundButtonOverlay: y,
+                    suppressPlaySound: T,
+                    shouldShowUpsell: _,
+                    gridNotice: v,
+                    soundButtonOverlay: A,
                     listPadding: O,
-                    renderHeader: R,
+                    renderHeader: k,
                     defaultSoundsOnly: M
                 })
             })

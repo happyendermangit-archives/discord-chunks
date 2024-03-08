@@ -5,9 +5,9 @@ function(e, t, n) {
             return c
         }
     }), n("222007");
-    var l = n("884691"),
-        i = n("866227"),
-        a = n.n(i),
+    var i = n("884691"),
+        l = n("866227"),
+        a = n.n(l),
         s = n("775560"),
         r = n("718517"),
         o = n("646630");
@@ -21,18 +21,18 @@ function(e, t, n) {
 
     function c(e) {
         let t = (0, s.useForceUpdate)();
-        return (l.useEffect(() => {
+        return (i.useEffect(() => {
             if ("R" !== e.format) return;
             let n = 1e3 * d,
-                l = Math.abs(e.parsed.diff(a()));
+                i = Math.abs(e.parsed.diff(a()));
             for (let [e, t] of u)
-                if (l < 1e3 * e) {
+                if (i < 1e3 * e) {
                     n = 1e3 * t;
                     break
-                } let i = setInterval(() => {
+                } let l = setInterval(() => {
                 t()
             }, n);
-            return () => clearInterval(i)
+            return () => clearInterval(l)
         }, [t, e.format, e.parsed]), "R" === e.format) ? o.TIMESTAMP_FORMATS.R(e.parsed) : e.formatted
     }
 }

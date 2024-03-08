@@ -5,8 +5,8 @@ function(e, t, n) {
             return o
         }
     });
-    var l = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         s = n.n(a),
         r = n("532379"),
@@ -17,8 +17,8 @@ function(e, t, n) {
                 size: a,
                 "aria-label": o,
                 className: u
-            } = e, d = i.useRef(null), c = i.useRef(!1), f = c.current ? r.image : r.imageLoading;
-            return (0, l.jsx)("img", {
+            } = e, d = l.useRef(null), c = l.useRef(!1), f = c.current ? r.image : r.imageLoading;
+            return (0, i.jsx)("img", {
                 className: s(f, u),
                 alt: n,
                 src: t,

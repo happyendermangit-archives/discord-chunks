@@ -5,8 +5,8 @@ function(e, t, n) {
             return s
         }
     }), n("222007");
-    var l = n("939563"),
-        i = n("385887"),
+    var i = n("939563"),
+        l = n("385887"),
         a = n("566819");
 
     function s(e) {
@@ -15,13 +15,13 @@ function(e, t, n) {
             onChange: n
         } = e;
         return e.apply = n => {
-            t(n), i.SelectionUtils.isValid(e, e.selection) && (e.lastGoodSelection = e.selection)
+            t(n), l.SelectionUtils.isValid(e, e.selection) && (e.lastGoodSelection = e.selection)
         }, e.onChange = () => {
-            if (!i.SelectionUtils.isValid(e, e.selection) && (e.selection = function(e) {
+            if (!l.SelectionUtils.isValid(e, e.selection) && (e.selection = function(e) {
                     let t;
-                    if (i.SelectionUtils.isValid(e, e.lastGoodSelection)) t = e.lastGoodSelection;
+                    if (l.SelectionUtils.isValid(e, e.lastGoodSelection)) t = e.lastGoodSelection;
                     else {
-                        let n = i.EditorUtils.end(e, []);
+                        let n = l.EditorUtils.end(e, []);
                         t = {
                             anchor: n,
                             focus: n
@@ -29,18 +29,18 @@ function(e, t, n) {
                     }
                     return t
                 }(e)), null != e.selection) {
-                let t, n, [s, r] = i.RangeUtils.edges(e.selection),
+                let t, n, [s, r] = l.RangeUtils.edges(e.selection),
                     o = !1;
-                for (; null != s && null != (t = i.EditorUtils.getParentVoid(e, s)) && !a.SELECTABLE_VOIDS.includes(t[0].type);) s = i.EditorUtils.before(e, s, {
+                for (; null != s && null != (t = l.EditorUtils.getParentVoid(e, s)) && !a.SELECTABLE_VOIDS.includes(t[0].type);) s = l.EditorUtils.before(e, s, {
                     unit: "offset"
                 }), o = !0;
-                for (; null != r && null != (n = i.EditorUtils.getParentVoid(e, r)) && !a.SELECTABLE_VOIDS.includes(n[0].type);) r = i.EditorUtils.after(e, r, {
+                for (; null != r && null != (n = l.EditorUtils.getParentVoid(e, r)) && !a.SELECTABLE_VOIDS.includes(n[0].type);) r = l.EditorUtils.after(e, r, {
                     unit: "offset"
                 }), o = !0;
-                o && null != s && null != r && (i.RangeUtils.isForward(e.selection) ? l.SlateTransforms.select(e, {
+                o && null != s && null != r && (l.RangeUtils.isForward(e.selection) ? i.SlateTransforms.select(e, {
                     anchor: s,
                     focus: r
-                }) : l.SlateTransforms.select(e, {
+                }) : i.SlateTransforms.select(e, {
                     anchor: r,
                     focus: s
                 }))
