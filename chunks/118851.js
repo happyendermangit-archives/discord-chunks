@@ -33,7 +33,7 @@ function(e, t, n) {
                 return function(e, t, n, i, a) {
                     let [o, r] = e.slice(1).split("#", 2), u = null != t ? c.default.getGuild(t) : null, p = (0, l.getClydeExperimentEnabled)(u);
                     if (a && null == r && null != u) {
-                        for (let e of Object.values(u.roles))
+                        for (let e of Object.values(c.default.getRoles(u.id)))
                             if (o === e.name) return {
                                 type: "roleMention",
                                 roleId: e.id,

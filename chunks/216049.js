@@ -2,25 +2,28 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return o
         }
     });
     var i = n("65597"),
         l = n("42203"),
         a = n("26989"),
-        s = n("535013");
+        s = n("305961"),
+        r = n("535013");
 
-    function r(e, t) {
+    function o(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            o = (0, i.default)([a.default], () => null != e ? a.default.getMember(e.id, t) : null, [e, t]),
-            u = (0, i.default)([l.default], () => l.default.getChannel(n), [n]),
-            d = (0, i.default)([l.default], () => l.default.getChannel(null == u ? void 0 : u.parent_id), [u]);
-        return null == e || null == o ? null : (0, s.getVisibleConnectionsRole)({
+            o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            u = (0, i.default)([a.default], () => null != e ? a.default.getMember(e.id, t) : null, [e, t]),
+            d = (0, i.default)([l.default], () => l.default.getChannel(n), [n]),
+            c = (0, i.default)([l.default], () => l.default.getChannel(null == d ? void 0 : d.parent_id), [d]),
+            f = (0, i.default)([s.default], () => null != e ? s.default.getRoles(e.id) : void 0);
+        return null == e || null == f || null == u ? null : (0, r.getVisibleConnectionsRole)({
             guild: e,
-            guildMember: o,
-            channel: null != u && u.isThread() && null != d ? d : u,
-            onlyChannelConnectionRoles: r
+            guildRoles: f,
+            guildMember: u,
+            channel: null != d && d.isThread() && null != c ? c : d,
+            onlyChannelConnectionRoles: o
         })
     }
 }

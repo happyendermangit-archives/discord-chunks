@@ -55,7 +55,7 @@ function(e, t, n) {
                 };
             default:
                 let s = p.default.getGuild(e),
-                    r = null != s ? s.getRole(t) : null;
+                    r = null != s ? p.default.getRole(s.id, t) : null;
                 return {
                     type: "GROUP", key: t, id: t, title: null != r ? r.name : "", count: n, index: i
                 }

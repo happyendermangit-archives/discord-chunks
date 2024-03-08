@@ -81,7 +81,7 @@ function(e, t, n) {
                 let t = y.default.getChannel(s),
                     a = S.default.getGuild(k),
                     o = g.default.getMembers(a.id),
-                    u = null == l ? a.roles[a.getEveryoneRoleId()] : a.roles[l],
+                    u = S.default.getRole(k, null != l ? l : a.getEveryoneRoleId()),
                     p = r(o).filter(e => {
                         if ("@everyone" === m || e.roles.includes(l)) {
                             let t = C.default.getUser(e.userId);

@@ -148,11 +148,10 @@ function(e, t, n) {
                 flags: i
             } = e;
             if (null == t) return !1;
-            let s = c[t],
-                a = r.default.getGuild(t);
-            return null != a && null != s && (null != n && (s.roles = n.reduce((e, t) => {
-                let n = a.getRole(t);
-                return null != n && (e[t] = n), e
+            let s = c[t];
+            return null != s && (null != n && (s.roles = n.reduce((e, n) => {
+                let i = r.default.getRole(t, n);
+                return null != i && (e[n] = i), e
             }, {})), null != i && s.type === l.ImpersonateType.NEW_MEMBER && (s.memberOptions.flags = i), !0)
         }
     })

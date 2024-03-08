@@ -74,9 +74,9 @@ function(e, t, n) {
         } = e;
         if (l) return D(i.id, n, v, s);
         a = null != a ? {
-            ...i.roles,
+            ...g.default.getRoles(i.id),
             ...a
-        } : i.roles;
+        } : g.default.getRoles(i.id);
         let c = a[i.getEveryoneRoleId()],
             f = null != c ? c.permissions : I;
         if (null != n)
@@ -238,21 +238,21 @@ function(e, t, n) {
         applyThreadPermissions: M,
         getGuildVisualOwnerId: function(e) {
             var t;
-            let n = s.some(e.roles, e => e.hoist && r.default.has(e.permissions, S.Permissions.ADMINISTRATOR));
+            let n = s.some(g.default.getRoles(e.id), e => e.hoist && r.default.has(e.permissions, S.Permissions.ADMINISTRATOR));
             return n ? void 0 : null !== (t = e.ownerId) && void 0 !== t ? t : void 0
         },
         isRoleHigher: function(e, t, n, i) {
             if (null != t && e.isOwner(t)) return !0;
             if (null == n) return !1;
-            let r = s(e.roles).sortBy(e => e.position).map(e => e.id).value();
+            let r = s(g.default.getRoles(e.id)).sortBy(e => e.position).map(e => e.id).value();
             return r.indexOf(n.id) > (null != i ? r.indexOf(i.id) : -1)
         },
         getHighestRole: function(e, t) {
             let n = E.default.getMember(e.id, t);
-            if (null != n) return s(e.roles).filter(e => -1 !== n.roles.indexOf(e.id)).sortBy(e => -e.position).first()
+            if (null != n) return s(g.default.getRoles(e.id)).filter(e => -1 !== n.roles.indexOf(e.id)).sortBy(e => -e.position).first()
         },
         getHighestHoistedRole: function(e, t) {
-            return null == t.hoistRoleId ? null : e.getRole(t.hoistRoleId)
+            return null == t.hoistRoleId ? null : g.default.getRole(e.id, t.hoistRoleId)
         },
         can: U,
         canEveryoneRole(e, t) {
@@ -265,8 +265,9 @@ function(e, t, n) {
                 n = null != e ? g.default.getGuild(e) : null
             } else n = t;
             if (null == n) return !1;
-            let s = n.roles[n.getEveryoneRoleId()],
-                a = s.permissions,
+            let s = g.default.getRole(n.id, n.getEveryoneRoleId());
+            if (null == s) return !1;
+            let a = s.permissions,
                 o = i[n.id];
             return null != o && (a = r.default.remove(a, o.deny), a = r.default.add(a, o.allow)), r.default.has(a, e)
         },
@@ -280,8 +281,8 @@ function(e, t, n) {
                 n = null != e ? g.default.getGuild(e) : null
             } else n = t;
             if (null == n) return !1;
-            let a = n.roles[n.getEveryoneRoleId()];
-            return !(!r.default.has(a.permissions, e) || s.some(i, t => r.default.has(t.deny, e))) && !0
+            let a = g.default.getRole(n.id, n.getEveryoneRoleId());
+            return !(null == a || !r.default.has(a.permissions, e) || s.some(i, t => r.default.has(t.deny, e))) && !0
         },
         canManageACategory: function(e, t, n) {
             return !!U({

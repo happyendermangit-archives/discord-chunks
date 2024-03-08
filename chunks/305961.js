@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return A
         }
     }), n("222007");
     var s = n("917351"),
@@ -19,126 +19,141 @@ function(e, t, n) {
         h = n("49111"),
         E = n("695838");
     let g = {},
-        m = !1,
-        p = [];
+        m = {},
+        p = !1,
+        S = [];
 
-    function S(e) {
-        g = {}, i = 0, null != e.guilds && r.forEach(e.guilds, e => {
-            i++, g[e.id] = d.fromSerializedGuildRecord(e)
+    function v(e) {
+        m = {}, g = {}, i = 0, null != e.guilds && r.forEach(e.guilds, e => {
+            i++, m[e.id] = d.fromSerializedGuildRecord(e), g[e.id] = e.roles
         })
     }
 
-    function v(e) {
+    function T(e) {
         let {
             guildId: t,
             role: n
-        } = e, i = g[t];
-        null != i && (g = {
-            ...g,
-            [i.id]: i.upsertRole(c.fromServerRole(n))
-        })
+        } = e, i = g[t], s = c.fromServerRole(n), r = null == i ? void 0 : i[s.id];
+        if (null != r && (0, o.default)(s, r)) return !1;
+        i = {
+            ...i,
+            [n.id]: c.fromServerRole(n)
+        }, g[t] = i
     }
-    class T extends a.default.Store {
+    let I = Object.freeze({});
+    class C extends a.default.Store {
         getGuild(e) {
-            if (null != e) return e === h.FAVORITES ? E.FAVORITES_GUILD_RECORD : g[e]
+            if (null != e) return e === h.FAVORITES ? E.FAVORITES_GUILD_RECORD : m[e]
         }
         getGuilds() {
-            return g
+            return m
         }
         getGuildIds() {
-            return f.default.keys(g)
+            return f.default.keys(m)
         }
         getGuildCount() {
             return i
         }
         isLoaded() {
-            return m
-        }
-        getGeoRestrictedGuilds() {
             return p
         }
+        getGeoRestrictedGuilds() {
+            return S
+        }
+        getAllGuildsRoles() {
+            return g
+        }
+        getRoles(e) {
+            var t;
+            return null !== (t = g[e]) && void 0 !== t ? t : I
+        }
+        getRole(e, t) {
+            var n;
+            return null === (n = g[e]) || void 0 === n ? void 0 : n[t]
+        }
     }
-    T.displayName = "GuildStore";
-    var I = new T(l.default, {
+    C.displayName = "GuildStore";
+    var A = new C(l.default, {
         BACKGROUND_SYNC: function(e) {
-            for (let t of e.guilds) {
-                let e = g[t.id];
-                if (null == e || "unavailable" === t.data_mode) return;
-                g[t.id] = d.fromBackgroundSync(t, e)
+            for (let n of e.guilds) {
+                var t;
+                let e = m[n.id];
+                if (null == e || "unavailable" === n.data_mode) return;
+                m[n.id] = d.fromBackgroundSync(n, e), g[n.id] = "partial" === n.data_mode ? d.filterRoleDeletes(n.id, null !== (t = g[n.id]) && void 0 !== t ? t : I, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : c.sortServerRoles(n.id, n.roles)
             }
-            i = Object.keys(g).length
+            i = Object.keys(m).length
         },
         CONNECTION_OPEN: function(e) {
-            m = !0, g = {}, i = 0, e.guilds.forEach(e => {
-                i++, g[e.id] = d.fromServer(e)
+            p = !0, m = {}, g = {}, i = 0, e.guilds.forEach(e => {
+                i++, m[e.id] = d.fromServer(e), g[e.id] = e.roles instanceof Array ? c.sortServerRoles(e.id, e.roles) : e.roles
             });
             let t = !1;
-            if (p.length !== e.geoRestrictedGuilds.length) t = !0;
+            if (S.length !== e.geoRestrictedGuilds.length) t = !0;
             else
                 for (let n = 0; n < e.geoRestrictedGuilds.length; n++)
-                    if (!(0, o.default)(p[n], e.geoRestrictedGuilds[n])) {
+                    if (!(0, o.default)(S[n], e.geoRestrictedGuilds[n])) {
                         t = !0;
                         break
-                    } t && (p = e.geoRestrictedGuilds)
+                    } t && (S = e.geoRestrictedGuilds)
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;
-            g = {}, i = 0, null === (t = e.guilds) || void 0 === t || t.forEach(e => {
-                i++, g[e.id] = new u.default(e)
-            })
+            m = {}, g = {}, i = 0, null === (t = e.guilds) || void 0 === t || t.forEach(e => {
+                i++, m[e.id] = new u.default(e)
+            }), g = e.allGuildsRoles
         },
-        CACHE_LOADED: S,
-        CACHE_LOADED_LAZY: S,
+        CACHE_LOADED: v,
+        CACHE_LOADED_LAZY: v,
         GUILD_CREATE: function(e) {
-            let t = d.fromServer(e.guild, g[e.guild.id]);
-            null == g[t.id] && i++, g = {
-                ...g,
+            let t = d.fromServer(e.guild, m[e.guild.id]);
+            null == m[t.id] && i++, m = {
+                ...m,
                 [t.id]: t
-            }
+            }, g[t.id] = e.guild.roles instanceof Array ? c.sortServerRoles(t.id, e.guild.roles) : e.guild.roles
         },
         GUILD_UPDATE: function(e) {
-            let t = d.fromServerUpdate(e.guild, g[e.guild.id]);
-            null == g[t.id] && i++, g = {
-                ...g,
+            let t = d.fromServerUpdate(e.guild, m[e.guild.id]);
+            null == m[t.id] && i++, m = {
+                ...m,
                 [t.id]: t
-            }
+            }, g[t.id] = c.sortServerRoles(t.id, e.guild.roles)
         },
         GUILD_DELETE: function(e) {
             let {
                 guild: t
-            } = e, n = p.findIndex(e => e.id === t.id);
+            } = e, n = S.findIndex(e => e.id === t.id);
             if (-1 !== n) {
-                p.splice(n, 1), p = [...p];
+                S.splice(n, 1), S = [...S];
                 return
             }
-            if (null == g[t.id] || t.unavailable) return !1;
-            g = {
-                ...g
-            }, delete g[t.id], i--
+            if (null == m[t.id] || t.unavailable) return !1;
+            m = {
+                ...m
+            }, delete m[t.id], g[t.id] = void 0, i--
         },
-        GUILD_ROLE_CREATE: v,
-        GUILD_ROLE_UPDATE: v,
+        GUILD_ROLE_CREATE: T,
+        GUILD_ROLE_UPDATE: T,
         GUILD_ROLE_DELETE: function(e) {
             let {
                 guildId: t,
                 roleId: n
             } = e, i = g[t];
-            null != i && (g = {
-                ...g,
-                [t]: i.deleteRole(n)
-            })
+            if (null == i) return !1;
+            i = {
+                ...i
+            }, delete i[n], g[t] = i
         },
         GUILD_MEMBER_ADD: function(e) {
             let {
                 guildId: t,
                 joinedAt: n,
                 user: i
-            } = e, s = _.default.getId(), r = g[t];
+            } = e, s = _.default.getId(), r = m[t];
             if (s !== i.id || null == r) return !1;
             let a = "string" == typeof n ? new Date(n) : n;
             if (a === r.joinedAt || null == a) return !1;
-            g = {
-                ...g,
+            m = {
+                ...m,
                 [t]: r.updateJoinedAt(a)
             }
         },
@@ -146,7 +161,7 @@ function(e, t, n) {
             return !0
         },
         GUILD_GEO_RESTRICTED: function(e) {
-            p = [...p, {
+            S = [...S, {
                 id: e.guildId,
                 name: e.name,
                 icon: e.icon,

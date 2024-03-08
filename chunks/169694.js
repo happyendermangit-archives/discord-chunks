@@ -450,12 +450,12 @@ function(e, t, n) {
     }
 
     function b(e, t, n) {
-        var l, a, s, r, o;
-        let u = null === (a = e.activeCommand) || void 0 === a ? void 0 : null === (l = a.options) || void 0 === l ? void 0 : l.find(e => e.name === n),
-            d = e.initialValues[n];
-        if (null == u || null == d) return null;
-        if (null != u.choices) return null === (o = u.choices.find(e => e.value === d.value)) || void 0 === o ? void 0 : o.displayName;
-        let c = null === (s = d.value) || void 0 === s ? void 0 : s.toString();
-        return u.type === i.ApplicationCommandOptionType.CHANNEL || u.type === i.ApplicationCommandOptionType.MENTIONABLE && null != p.default.getChannel(c) ? "<#".concat(c, ">	") : u.type === i.ApplicationCommandOptionType.USER || u.type === i.ApplicationCommandOptionType.MENTIONABLE && null != h.default.getUser(c) ? "<@".concat(c, ">") : u.type === i.ApplicationCommandOptionType.ROLE || u.type === i.ApplicationCommandOptionType.MENTIONABLE && (null === (r = m.default.getGuild(t.guild_id)) || void 0 === r ? void 0 : r.getRole(null != c ? c : I.EMPTY_STRING_SNOWFLAKE_ID)) != null ? "<@&".concat(c, ">") : c
+        var l, a, s, r;
+        let o = null === (a = e.activeCommand) || void 0 === a ? void 0 : null === (l = a.options) || void 0 === l ? void 0 : l.find(e => e.name === n),
+            u = e.initialValues[n];
+        if (null == o || null == u) return null;
+        if (null != o.choices) return null === (r = o.choices.find(e => e.value === u.value)) || void 0 === r ? void 0 : r.displayName;
+        let d = null === (s = u.value) || void 0 === s ? void 0 : s.toString();
+        return o.type === i.ApplicationCommandOptionType.CHANNEL || o.type === i.ApplicationCommandOptionType.MENTIONABLE && null != p.default.getChannel(d) ? "<#".concat(d, ">	") : o.type === i.ApplicationCommandOptionType.USER || o.type === i.ApplicationCommandOptionType.MENTIONABLE && null != h.default.getUser(d) ? "<@".concat(d, ">") : o.type === i.ApplicationCommandOptionType.ROLE || o.type === i.ApplicationCommandOptionType.MENTIONABLE && null != m.default.getRole(t.guild_id, null != d ? d : I.EMPTY_STRING_SNOWFLAKE_ID) ? "<@&".concat(d, ">") : d
     }
 }

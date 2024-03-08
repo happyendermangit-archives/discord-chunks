@@ -199,7 +199,7 @@ function(e, t, n) {
                 asset: a.asset,
                 skuId: a.sku_id
             } : void 0,
-            guildRoles: E.roles,
+            guildRoles: S.default.getRoles(E.id),
             roles: o,
             premiumSince: l,
             isPending: u,
@@ -224,7 +224,7 @@ function(e, t, n) {
                 guildId: e,
                 avatar: t.avatar,
                 avatarDecoration: Y(t),
-                guildRoles: i.roles,
+                guildRoles: S.default.getRoles(i.id),
                 roles: t.roles,
                 premiumSince: t.premium_since,
                 isPending: t.pending,
@@ -260,7 +260,7 @@ function(e, t, n) {
                     guildId: e.id,
                     avatar: r.avatar,
                     avatarDecoration: Y(r),
-                    guildRoles: n.roles,
+                    guildRoles: S.default.getRoles(n.id),
                     roles: r.roles,
                     premiumSince: r.premium_since,
                     isPending: r.pending,
@@ -288,7 +288,7 @@ function(e, t, n) {
                 guildId: e.guildId,
                 avatar: s.avatar,
                 avatarDecoration: s.avatarDecoration,
-                guildRoles: n.roles,
+                guildRoles: S.default.getRoles(n.id),
                 roles: s.roles,
                 premiumSince: s.premiumSince,
                 isPending: s.isPending,
@@ -314,7 +314,7 @@ function(e, t, n) {
             guildId: t,
             avatar: r.avatar,
             avatarDecoration: r.avatarDecoration,
-            guildRoles: i.roles,
+            guildRoles: S.default.getRoles(i.id),
             roles: r.roles,
             premiumSince: r.premiumSince,
             isPending: r.isPending,
@@ -532,7 +532,7 @@ function(e, t, n) {
                 nick: f.nick,
                 avatar: f.avatar,
                 avatarDecoration: f.avatarDecoration,
-                guildRoles: _.roles,
+                guildRoles: S.default.getRoles(_.id),
                 roles: null != r ? r : f.roles,
                 premiumSince: f.premiumSince,
                 isPending: f.isPending,
@@ -594,7 +594,7 @@ function(e, t, n) {
             let a = s[n];
             if (null == a || !a.roles.includes(i)) return !1;
             a.roles = a.roles.filter(e => e !== i);
-            let o = G(r.roles, a.roles);
+            let o = G(S.default.getRoles(r.id), a.roles);
             return s[n] = {
                 ...a,
                 ...o
@@ -612,7 +612,7 @@ function(e, t, n) {
             let a = s[n];
             if (null == a || a.roles.includes(i)) return !1;
             a.roles.push(i);
-            let o = G(r.roles, a.roles);
+            let o = G(S.default.getRoles(r.id), a.roles);
             return s[n] = {
                 ...a,
                 ...o
@@ -632,7 +632,7 @@ function(e, t, n) {
                 guildId: n,
                 avatar: t.avatar,
                 avatarDecoration: Y(t),
-                guildRoles: s.roles,
+                guildRoles: S.default.getRoles(s.id),
                 roles: t.roles,
                 premiumSince: t.premium_since,
                 isPending: t.pending,

@@ -29,12 +29,13 @@ function(e, t, n) {
             c = new Set;
         if (E.set(e, n.isOwner(t)), n.hasFeature(d.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) {
             var g, m;
-            let o = a.default.getMember(e, t.id),
-                l = new Set(null !== (g = null == o ? void 0 : o.roles) && void 0 !== g ? g : []);
-            for (let t in n.roles) {
+            let l = a.default.getMember(e, t.id),
+                f = new Set(null !== (g = null == l ? void 0 : l.roles) && void 0 !== g ? g : []),
+                _ = o.default.getRoles(n.id);
+            for (let t in _) {
                 ;
-                let a = n.roles[t];
-                if ((0, u.isSubscriptionRole)(a) && (s.add(t), (0, u.isSubscriptionRoleAvailableForPurchase)(a) && (r.add(t), l.has(t) && c.add(t))), l.has(t) && (m = a, i.default.has(m.permissions, d.Permissions.ADMINISTRATOR))) E.set(e, !0)
+                let n = _[t];
+                if ((0, u.isSubscriptionRole)(n) && (s.add(t), (0, u.isSubscriptionRoleAvailableForPurchase)(n) && (r.add(t), f.has(t) && c.add(t))), f.has(t) && (m = n, i.default.has(m.permissions, d.Permissions.ADMINISTRATOR))) E.set(e, !0)
             }
         }
         return f.set(e, s), h.set(e, c), _.set(e, r), !0

@@ -251,7 +251,7 @@ function(e, t, n) {
                         guild: i
                     } = n;
                     if (null != i) {
-                        let t = i.roles[e[1]];
+                        let t = p.default.getRoles(i.id)[e[1]];
                         if (null != t) return {
                             content: "@".concat(t.name)
                         }
@@ -378,7 +378,7 @@ function(e, t, n) {
                     text: i.tag
                 }), e)
             }, [])),
-            o = s(null != i ? i.roles : {}).values().filter(e => {
+            o = s(null != i ? p.default.getRoles(i.id) : {}).values().filter(e => {
                 let {
                     mentionable: t
                 } = e;

@@ -62,7 +62,7 @@ function(e, t, n) {
     function J(e) {
         if (null == o || null == a || a.id !== e) return !1;
         let t = A.default.getGuild(e);
-        return null != t && (a === o ? o = a = t : (a = t, o = o.set("roles", a.roles)), !0)
+        return null != t && (a === o ? o = a = t : a = t, !0)
     }
 
     function $(e) {

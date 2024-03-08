@@ -45,7 +45,7 @@ function(e, t, n) {
                     user: n,
                     context: i,
                     overwrites: s.permissionOverwrites,
-                    roles: i.roles
+                    roles: f.default.getRoles(i.id)
                 })) : null
             }
         }(e, t, n);

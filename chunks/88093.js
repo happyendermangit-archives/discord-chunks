@@ -37,7 +37,7 @@ function(e, t, n) {
             if ((0, r.hasFlag)(null !== (f = a.flags) && void 0 !== f ? f : 0, c.GuildMemberFlags.BYPASSES_VERIFICATION)) return;
             let e = new Set;
             for (let t of a.roles) {
-                let i = n.getRole(t);
+                let i = l.default.getRole(n.id, t);
                 null != i && !i.managed && e.add(t)
             }
             let t = new Date("2022-12-02 00:00:00"),

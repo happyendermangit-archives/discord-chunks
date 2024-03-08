@@ -67,24 +67,25 @@ function(e, t, n) {
         if (null == e) return null;
         let n = _.default.getGuild(e);
         if (null == n) return null;
-        let i = l.default.getId(),
-            s = f.default.getMember(e, i),
-            r = d.default.getChannels(e),
-            a = r[d.GUILD_SELECTABLE_CHANNELS_KEY].length,
-            o = r[d.GUILD_VOCAL_CHANNELS_KEY].length,
-            u = I.default.getVoiceStates(e);
+        let i = _.default.getRoles(n.id),
+            s = l.default.getId(),
+            r = f.default.getMember(e, s),
+            a = d.default.getChannels(e),
+            o = a[d.GUILD_SELECTABLE_CHANNELS_KEY].length,
+            u = a[d.GUILD_VOCAL_CHANNELS_KEY].length,
+            h = I.default.getVoiceStates(e);
         return {
             guild_id: n.id,
             guild_size_total: c.default.getMemberCount(e),
-            guild_num_channels: a + o,
-            guild_num_text_channels: a,
-            guild_num_voice_channels: o,
-            guild_num_roles: D(n.roles),
-            guild_member_num_roles: null != s ? s.roles.length : 0,
+            guild_num_channels: o + u,
+            guild_num_text_channels: o,
+            guild_num_voice_channels: u,
+            guild_num_roles: D(i),
+            guild_member_num_roles: null != r ? r.roles.length : 0,
             guild_member_perms: String(null !== (t = E.default.getGuildPermissions(n)) && void 0 !== t ? t : y.default.NONE),
             guild_is_vip: n.hasFeature(R.GuildFeatures.VIP_REGIONS),
-            is_member: null != s,
-            num_voice_channels_active: D(u)
+            is_member: null != r,
+            num_voice_channels_active: D(h)
         }
     }
 

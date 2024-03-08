@@ -147,10 +147,7 @@ function(e, t, n) {
         let {
             id: t,
             guildId: n
-        } = e, s = (0, l.useStateFromStores)([m.default], () => {
-            let e = m.default.getGuild(n);
-            return null == e ? null : e.roles[t]
-        }), r = (0, l.useStateFromStores)([o.default], () => o.default.roleStyle);
+        } = e, s = (0, l.useStateFromStores)([m.default], () => null != n ? m.default.getRole(n, t) : void 0), r = (0, l.useStateFromStores)([o.default], () => o.default.roleStyle);
         if (null == s) return (0, i.jsx)("span", {
             children: "@deleted-role"
         });

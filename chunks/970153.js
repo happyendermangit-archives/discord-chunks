@@ -159,8 +159,8 @@ function(e, t, n) {
             case "roleMention": {
                 let t = "<@&".concat(e.roleId, ">");
                 if ("raw" === n) return t;
-                let i = u.default.getGuild(c.default.getGuildId()),
-                    l = null == i ? void 0 : i.roles[e.roleId];
+                let i = c.default.getGuildId(),
+                    l = null != i ? u.default.getRole(i, e.roleId) : void 0;
                 if (null == l) return t;
                 return "@".concat(l.name)
             }

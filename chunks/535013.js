@@ -28,8 +28,9 @@ function(e, t, n) {
         o = n("917351"),
         l = n.n(o),
         u = n("746379"),
-        d = n.n(u),
-        c = n("429030");
+        d = n.n(u);
+    n("446674");
+    var c = n("429030");
     n("151426");
     var f = n("98309");
     n("10641");
@@ -274,8 +275,8 @@ function(e, t, n) {
         return a
     }
 
-    function v(e) {
-        return Object.values(e.roles).some(e => {
+    function v(e, t) {
+        return Object.values(t).some(e => {
             var t;
             return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
         })
@@ -286,20 +287,22 @@ function(e, t, n) {
         let {
             guildMember: i,
             guild: s,
-            channel: r,
-            onlyChannelConnectionRoles: o = !1
+            guildRoles: r,
+            channel: o,
+            onlyChannelConnectionRoles: u = !1
         } = e;
         if (null == i) return null;
-        if (null == s && null != r && (s = _.default.getGuild(r.getGuildId())), null == s) return null;
-        let u = i.roles.map(e => {
-                var t;
-                return null == s ? void 0 : null === (t = s.roles) || void 0 === t ? void 0 : t[e]
-            }).filter(e => {
+        if (null == s && null != o && (s = _.default.getGuild(o.getGuildId())), null == s) return null;
+        let {
+            id: d
+        } = s;
+        null == r && (r = _.default.getRoles(d));
+        let c = i.roles.map(e => r[e]).filter(e => {
                 var t;
                 return (null == e ? void 0 : null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
             }).sort((e, t) => (a(null != e && null != t, "roleA or roleB is null"), t.position - e.position)),
-            d = l.intersection(u, (0, f.default)(r));
-        return d.length > 0 ? null !== (t = d[0]) && void 0 !== t ? t : null : o ? null : null !== (n = u[0]) && void 0 !== n ? n : null
+            h = l.intersection(c, (0, f.default)(o));
+        return h.length > 0 ? null !== (t = h[0]) && void 0 !== t ? t : null : u ? null : null !== (n = c[0]) && void 0 !== n ? n : null
     }
 
     function I(e, t) {

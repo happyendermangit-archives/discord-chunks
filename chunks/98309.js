@@ -15,8 +15,8 @@ function(e, t, n) {
         if (null == e || !a.includes(e.type)) return [];
         let t = s.default.getGuild(e.guild_id);
         return null == t ? [] : Object.values(e.permissionOverwrites).filter(e => {
-            var n, s;
-            return 0 === e.type && (null === (s = t.roles[e.id]) || void 0 === s ? void 0 : null === (n = s.tags) || void 0 === n ? void 0 : n.guild_connections) === null && !i.default.hasAny(e.deny, o)
-        }).map(e => t.roles[e.id]).filter(e => null != e)
+            var n, r;
+            return 0 === e.type && (null === (r = s.default.getRoles(t.id)[e.id]) || void 0 === r ? void 0 : null === (n = r.tags) || void 0 === n ? void 0 : n.guild_connections) === null && !i.default.hasAny(e.deny, o)
+        }).map(e => s.default.getRoles(t.id)[e.id]).filter(e => null != e)
     }
 }

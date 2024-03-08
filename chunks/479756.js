@@ -90,8 +90,7 @@ function(e, t, n) {
     }
 
     function C(e, t) {
-        let n = u.default.getGuild(e);
-        if (null == n) return;
+        let n = u.default.getRoles(e);
         ! function(e, t) {
             let n = [...o.default.getSelectableChannelIds(e), ...o.default.getVocalChannelIds(e)],
                 i = Array.from(t);
@@ -105,7 +104,7 @@ function(e, t, n) {
             })
         }(e, t);
         let i = {};
-        t.forEach(e => i[e] = n.roles[e]), S(e, {
+        t.forEach(e => i[e] = n[e]), S(e, {
             type: E.ImpersonateType.NEW_MEMBER,
             roles: i
         })

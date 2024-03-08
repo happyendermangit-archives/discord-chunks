@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return h
         }
     }), n("222007");
     var i = n("37983");
@@ -12,39 +12,41 @@ function(e, t, n) {
         s = n("917351"),
         r = n.n(s),
         o = n("509043"),
-        u = n("77078"),
-        d = n("49111"),
-        c = n("782340"),
-        f = n("262092"),
-        p = function(e) {
+        u = n("446674"),
+        d = n("77078"),
+        c = n("305961"),
+        f = n("49111"),
+        p = n("782340"),
+        m = n("262092"),
+        h = function(e) {
             let {
                 className: t,
                 guild: n,
                 roleStyle: l,
                 roleFilter: s,
-                onSelect: p,
-                onClose: m
-            } = e, h = e => r(n.roles).filter(s).filter(t => a(e.toLowerCase(), t.name.toLowerCase())).value();
-            return (0, i.jsx)(u.ComboboxPopout, {
+                onSelect: h,
+                onClose: x
+            } = e, E = (0, u.useStateFromStores)([c.default], () => c.default.getRoles(n.id)), y = e => r(E).filter(s).filter(t => a(e.toLowerCase(), t.name.toLowerCase())).value();
+            return (0, i.jsx)(d.ComboboxPopout, {
                 className: t,
                 value: new Set,
-                onChange: p,
-                placeholder: c.default.Messages.ADD_ROLE_PLACEHOLDER,
-                "aria-label": c.default.Messages.ADD_ROLE_A11Y_LABEL,
-                onClose: m,
-                children: e => h(e).map(e => {
+                onChange: h,
+                placeholder: p.default.Messages.ADD_ROLE_PLACEHOLDER,
+                "aria-label": p.default.Messages.ADD_ROLE_A11Y_LABEL,
+                onClose: x,
+                children: e => y(e).map(e => {
                     var t, n;
-                    return (0, i.jsxs)(u.ComboboxItem, {
+                    return (0, i.jsxs)(d.ComboboxItem, {
                         value: e.id,
-                        children: ["dot" === l ? (0, i.jsx)(u.RoleDot, {
-                            className: f.popoutRoleDot,
-                            color: null !== (t = e.colorString) && void 0 !== t ? t : (0, o.int2hex)(d.DEFAULT_ROLE_COLOR),
+                        children: ["dot" === l ? (0, i.jsx)(d.RoleDot, {
+                            className: m.popoutRoleDot,
+                            color: null !== (t = e.colorString) && void 0 !== t ? t : (0, o.int2hex)(f.DEFAULT_ROLE_COLOR),
                             background: !1,
                             tooltip: !1
-                        }) : (0, i.jsx)(u.RoleCircle, {
-                            className: f.popoutRoleCircle,
-                            color: null !== (n = e.colorString) && void 0 !== n ? n : (0, o.int2hex)(d.DEFAULT_ROLE_COLOR)
-                        }), (0, i.jsx)(u.ComboboxItem.Label, {
+                        }) : (0, i.jsx)(d.RoleCircle, {
+                            className: m.popoutRoleCircle,
+                            color: null !== (n = e.colorString) && void 0 !== n ? n : (0, o.int2hex)(f.DEFAULT_ROLE_COLOR)
+                        }), (0, i.jsx)(d.ComboboxItem.Label, {
                             children: e.name
                         })]
                     }, e.id)

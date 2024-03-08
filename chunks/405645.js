@@ -30,20 +30,28 @@ function(e, t, n) {
             unicodeEmoji: l
         }
     }
-    let o = e => {
-            let {
-                guildId: t,
-                roleId: n,
-                size: o = 20
-            } = e, u = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(t));
-            return i.useMemo(() => {
-                if (null == u || null == n) return;
-                let e = u.roles[n];
-                if ((0, s.canGuildUseRoleIcons)(u, e)) return r(e, o)
-            }, [u, n, o])
-        },
-        u = (e, t) => {
-            let n = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(e));
-            if (null != n && (0, s.canGuildUseRoleIcons)(n, t)) return r(t)
-        }
+
+    function o(e) {
+        let {
+            guildId: t,
+            roleId: n,
+            size: o = 20
+        } = e, {
+            guild: u,
+            roles: d
+        } = (0, l.useStateFromStoresObject)([a.default], () => ({
+            guild: a.default.getGuild(t),
+            roles: a.default.getRoles(t)
+        }), [t]);
+        return i.useMemo(() => {
+            if (null == u || null == n) return;
+            let e = d[n];
+            if ((0, s.canGuildUseRoleIcons)(u, e)) return r(e, o)
+        }, [u, d, n, o])
+    }
+
+    function u(e, t) {
+        let n = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(e));
+        if (null != n && (0, s.canGuildUseRoleIcons)(n, t)) return r(t)
+    }
 }
