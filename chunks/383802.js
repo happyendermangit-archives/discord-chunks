@@ -5,13 +5,13 @@ function(t, e, n) {
             return a
         }
     }), n("222007");
-    var u = n("884691"),
-        i = n("976979"),
+    var i = n("884691"),
+        u = n("976979"),
         r = n("446674"),
         l = n("160299");
 
     function a() {
-        let [t, e] = u.useState(!1), [n, a] = u.useState(!1), o = (0, r.useStateFromStores)([l.default], () => i.CountryCodesSets.EEA_COUNTRIES.has(l.default.ipCountryCodeWithFallback));
+        let [t, e] = i.useState(!1), [n, a] = i.useState(!1), o = (0, r.useStateFromStores)([l.default], () => u.CountryCodesSets.EEA_COUNTRIES.has(l.default.ipCountryCodeWithFallback));
         return {
             hasViewedPurchaseTerms: t,
             setHasViewedPurchaseTerms: e,

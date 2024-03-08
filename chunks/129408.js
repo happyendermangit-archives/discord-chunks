@@ -20,14 +20,14 @@ function(t, e, n) {
             return E
         }
     });
-    var u = n("627445"),
-        i = n.n(u),
+    var i = n("627445"),
+        u = n.n(i),
         r = n("568734"),
         l = n("49111");
 
     function a(t) {
         let e = t.items;
-        return i(1 === e.length, "more than 1 subscription item for application subscription"), e[0].planId
+        return u(1 === e.length, "more than 1 subscription item for application subscription"), e[0].planId
     }
 
     function o(t) {

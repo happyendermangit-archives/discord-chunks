@@ -1,26 +1,26 @@
 function(t, e, n) {
     "use strict";
-    let u;
+    let i;
     n.r(e), n.d(e, {
         default: function() {
             return o
         }
     });
-    var i = n("446674"),
+    var u = n("446674"),
         r = n("913144");
     let l = {
         lastGuildDismissedTime: {}
     };
-    class a extends i.default.DeviceSettingsStore {
+    class a extends u.default.DeviceSettingsStore {
         initialize() {
             let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
-            u = t
+            i = t
         }
         getUserAgnosticState() {
-            return u
+            return i
         }
         getLastGuildDismissedTime(t) {
-            return u.lastGuildDismissedTime[t]
+            return i.lastGuildDismissedTime[t]
         }
     }
     a.displayName = "ApplicationSubscriptionChannelNoticeStore", a.persistKey = "ApplicationSubscriptionChannelNoticeStore";
@@ -29,7 +29,7 @@ function(t, e, n) {
             let {
                 guildId: e
             } = t;
-            u.lastGuildDismissedTime[e] = Date.now()
+            i.lastGuildDismissedTime[e] = Date.now()
         }
     })
 }

@@ -1,7 +1,7 @@
 function(t, e, n) {
     "use strict";
 
-    function u(t) {
+    function i(t) {
         if (null != t) {
             if ("activitySessionId" in t) return t.activitySessionId;
             if ("instanceId" in t) return t.instanceId;
@@ -10,7 +10,7 @@ function(t, e, n) {
     }
     n.r(e), n.d(e, {
         default: function() {
-            return u
+            return i
         }
     })
 }

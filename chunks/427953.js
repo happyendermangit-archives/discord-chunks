@@ -75,6 +75,7 @@ function(e, t, n) {
             i = d(n),
             a = (null == n ? void 0 : n.guild_id) != null ? r.default : l,
             u = a.useExperiment({
+                guildId: null == n ? void 0 : n.guild_id,
                 location: t
             }, {
                 autoTrackExposure: !0

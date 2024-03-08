@@ -2,13 +2,13 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         FetchState: function() {
-            return u
+            return i
         },
         default: function() {
             return L
         }
     }), n("222007");
-    var u, i, r = n("627445"),
+    var i, u, r = n("627445"),
         l = n.n(r),
         a = n("446674"),
         o = n("407846"),
@@ -34,7 +34,7 @@ function(t, e, n) {
 
     function T(t, e) {
         return "entitlement:".concat(e, ":").concat(t)
-    }(i = u || (u = {}))[i.NOT_FETCHED = 0] = "NOT_FETCHED", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED";
+    }(u = i || (i = {}))[u.NOT_FETCHED = 0] = "NOT_FETCHED", u[u.FETCHING = 1] = "FETCHING", u[u.FETCHED = 2] = "FETCHED";
     let I = new o.default(t => [d(t.application_id), ...t.subscription_listings_ids.map(E)], t => t.id),
         A = new o.default(t => [d(t.application_id), f(t.subscription_plans[0].id)], t => t.id),
         p = new o.default(t => [_(t.applicationId, t.isValid(null, S.default), t.guildId), T(t.isValid(null, S.default), t.guildId)], t => t.id),

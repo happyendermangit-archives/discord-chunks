@@ -152,6 +152,7 @@ function(_, E, I) {
         BRAND_830: "hsl(235, calc(var(--saturation-factor, 1) * 47.4%), 14.9%)",
         BRAND_860: "hsl(235, calc(var(--saturation-factor, 1) * 46.9%), 9.6%)",
         BRAND_900: "hsl(233, calc(var(--saturation-factor, 1) * 50%), 3.1%)",
+        BUNGIE: "hsl(197, calc(var(--saturation-factor, 1) * 100%), 44.5%)",
         CRUNCHYROLL: "hsl(29, calc(var(--saturation-factor, 1) * 93%), 55.5%)",
         DISCORD_8TH_BDAY_BLUE: "hsl(234, calc(var(--saturation-factor, 1) * 93.1%), 65.7%)",
         DISCORD_8TH_BDAY_DARK_BLUE: "hsl(235, calc(var(--saturation-factor, 1) * 73.7%), 53.7%)",

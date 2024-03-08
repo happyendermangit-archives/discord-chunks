@@ -6496,6 +6496,7 @@ function(_, E, I) {
             BRAND_830: "#141738",
             BRAND_860: "#0d0f24",
             BRAND_900: "#04050c",
+            BUNGIE: "#00a3e3",
             CRUNCHYROLL: "#f78b24",
             DISCORD_8TH_BDAY_BLUE: "#5665f9",
             DISCORD_8TH_BDAY_DARK_BLUE: "#3241e0",

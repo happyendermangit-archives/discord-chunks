@@ -2,17 +2,17 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         PurchaseTokenAuthState: function() {
-            return i
+            return u
         },
         default: function() {
             return _
         }
     });
-    var u, i, r = n("446674"),
+    var i, u, r = n("446674"),
         l = n("913144"),
         a = n("736978"),
         o = n("619443");
-    (u = i || (i = {}))[u.UNKNOWN = 0] = "UNKNOWN", u[u.PENDING = 1] = "PENDING", u[u.SUCCESS = 2] = "SUCCESS", u[u.ERROR = 3] = "ERROR";
+    (i = u || (u = {}))[i.UNKNOWN = 0] = "UNKNOWN", i[i.PENDING = 1] = "PENDING", i[i.SUCCESS = 2] = "SUCCESS", i[i.ERROR = 3] = "ERROR";
     let s = 0,
         c = null,
         S = null;

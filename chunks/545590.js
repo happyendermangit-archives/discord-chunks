@@ -55,7 +55,7 @@ function(e, t, n) {
                     className: T.button
                 }), o && (d ? (0, l.jsx)(_, {
                     app: a,
-                    listing: u,
+                    listing: null != u ? u : void 0,
                     guildId: n
                 }) : (0, l.jsx)(I, {
                     guildId: n,
@@ -100,7 +100,7 @@ function(e, t, n) {
             listing: i,
             guildId: r
         } = e;
-        return null == t || null == i || null == r ? null : (0, l.jsx)(u.default, {
+        return null == t || null == r ? null : (0, l.jsx)(u.default, {
             onClick: () => (function(e, t, i) {
                 (0, s.openModalLazy)(async () => {
                     let {
