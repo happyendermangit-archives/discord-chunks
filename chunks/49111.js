@@ -1565,7 +1565,8 @@ function(_, E, I) {
             MY_CONTENT_INVENTORY: "/content-inventory/users/@me",
             USER_LOOTBOX_DATA: "/users/@me/lootboxes",
             USER_LOOTBOX_OPEN_ITEM: "/users/@me/lootboxes/open",
-            USER_LOOTBOX_REDEEM_PRIZE: "/users/@me/lootboxes/redeem-prize"
+            USER_LOOTBOX_REDEEM_PRIZE: "/users/@me/lootboxes/redeem-prize",
+            TENURE_REWARD_SYNC: "/users/@me/tenure-reward/sync"
         }),
         a2 = Object.freeze({
             INDEX: "/",
