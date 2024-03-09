@@ -2,6 +2,9 @@ function(e, t, n) {
     "use strict";
     e.exports = {
         banner: "banner__1b5aa",
+        buttonIcon: "buttonIcon__3ae1d",
+        buttonIconLarge: "buttonIconLarge__6c2fd buttonIcon__3ae1d",
+        buttonIconSmall: "buttonIconSmall__72e00 buttonIcon__3ae1d",
         header: "header_d2e037",
         headerBackground: "headerBackground__8a4ac",
         headerButton: "headerButton_fe8970",
