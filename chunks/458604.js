@@ -46,13 +46,13 @@ function(e, t, n) {
                 } = e,
                 M = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
                 {
-                    enabled: R
+                    enabled: k
                 } = g.default.useExperiment({
                     location: "Emoji Picker List"
                 }, {
                     autoTrackExposure: p
                 }),
-                k = p && R && !A;
+                R = p && k && !A;
             return (0, i.jsx)(o.FocusRing, {
                 children: (0, i.jsx)("button", {
                     ...O,
@@ -61,7 +61,7 @@ function(e, t, n) {
                         [I.emojiItemMedium]: d,
                         [I.emojiItemSelected]: c,
                         [null != N ? N : ""]: c,
-                        [I.emojiItemDisabled]: p && !R,
+                        [I.emojiItemDisabled]: p && !k,
                         [I.showPulse]: h
                     }),
                     "data-type": m.PickerContextMenuDataTypes.EMOJI,
@@ -81,7 +81,7 @@ function(e, t, n) {
                         size: T,
                         surrogateCodePoint: _,
                         allowAnimatedEmoji: v,
-                        isLocked: k
+                        isLocked: R
                     })
                 })
             })
@@ -103,8 +103,8 @@ function(e, t, n) {
             selectedItemClassName: A,
             getEmojiItemProps: O,
             isMediumSize: M,
-            isLargeSize: R,
-            pulseItemKey: k,
+            isLargeSize: k,
+            pulseItemKey: R,
             allowAnimatedEmoji: L,
             setPulseItemKey: b,
             messageId: P,
@@ -153,11 +153,11 @@ function(e, t, n) {
                 ref: r,
                 emoji: V,
                 isFavorite: G.isFavoriteEmojiWithoutFetchingLatest(V),
-                isLargeSize: R,
+                isLargeSize: k,
                 isMediumSize: M,
                 isInspected: s,
                 isDisabled: W,
-                showPulse: k === a,
+                showPulse: R === a,
                 allowAnimatedEmoji: L,
                 onFocus: null != u ? u : Z,
                 onMouseMove: Z,

@@ -32,11 +32,11 @@ function(e, t, n) {
             maxCharacterCount: T,
             showRemainingCharsAfterCount: _,
             className: v
-        } = e, N = (0, s.useStateFromStores)([f.default], () => m.default.canUseIncreasedMessageLength(f.default.getCurrentUser())), A = (0, d.default)(), O = null != T ? T : A, M = null !== (S = null != _ ? _ : T) && void 0 !== S ? S : A / 10, R = I.length, k = null != C.upsellLongMessages && (null != R ? R : 0) > x.MAX_MESSAGE_LENGTH && N, L = null != C.upsellLongMessages && !N, b = (null === (n = (0, c.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === E.PremiumSubscriptionSKUs.TIER_2, P = O - R, j = P > M, U = P < 0 && b, D = 0 === P ? y.default.Messages.CHARACTER_COUNT_AT_LIMIT : P > 0 ? y.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+        } = e, N = (0, s.useStateFromStores)([f.default], () => m.default.canUseIncreasedMessageLength(f.default.getCurrentUser())), A = (0, d.default)(), O = null != T ? T : A, M = null !== (S = null != _ ? _ : T) && void 0 !== S ? S : A / 10, k = I.length, R = null != C.upsellLongMessages && (null != k ? k : 0) > x.MAX_MESSAGE_LENGTH && N, L = null != C.upsellLongMessages && !N, b = (null === (n = (0, c.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === E.PremiumSubscriptionSKUs.TIER_2, P = O - k, j = P > M, U = P < 0 && b, D = 0 === P ? y.default.Messages.CHARACTER_COUNT_AT_LIMIT : P > 0 ? y.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
             count: P
         }) : y.default.Messages.CHARACTER_COUNT_OVER_LIMIT, {
             AnalyticsLocationProvider: w
-        } = (0, u.default)(o.default.CHARACTER_COUNT), F = k && P >= 0 || !j || L && !j;
+        } = (0, u.default)(o.default.CHARACTER_COUNT), F = R && P >= 0 || !j || L && !j;
         return F ? (0, i.jsx)(w, {
             children: (0, i.jsxs)("div", {
                 className: a(v, g.characterCount, {
@@ -44,7 +44,7 @@ function(e, t, n) {
                 }),
                 children: [(0, i.jsxs)("div", {
                     className: g.flairContainer,
-                    children: [k && P >= 0 ? (0, i.jsx)(r.Tooltip, {
+                    children: [R && P >= 0 ? (0, i.jsx)(r.Tooltip, {
                         text: y.default.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({
                             maxLength: O
                         }),

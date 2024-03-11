@@ -45,8 +45,8 @@ function(e, t, n) {
                 src: A,
                 volume: O = 1,
                 onVolumeChange: M,
-                onMute: R,
-                waveform: k,
+                onMute: k,
+                waveform: R,
                 durationSecs: L,
                 onVolumeShow: b,
                 onVolumeHide: P,
@@ -93,8 +93,8 @@ function(e, t, n) {
                 K(0 === t), ee(t), null == M || M(t)
             }, [M]),
             eu = l.useCallback(() => {
-                K(!V), null == R || R(!V)
-            }, [V, R]),
+                K(!V), null == k || k(!V)
+            }, [V, k]),
             ed = l.useCallback(() => {
                 Z(!0)
             }, []),
@@ -203,7 +203,7 @@ function(e, t, n) {
                 })
             }), (0, i.jsx)(y.default, {
                 className: C.waveform,
-                waveform: k,
+                waveform: R,
                 currentTime: F,
                 duration: null != G ? G : 1,
                 playing: W,

@@ -32,14 +32,14 @@ function(e, t, n) {
         A = n("115279"),
         O = n("49111"),
         M = n("13030"),
-        R = n("782340"),
-        k = n("988067");
+        k = n("782340"),
+        R = n("988067");
     let L = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
         b = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
         P = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
         j = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
         U = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
-        D = (0, C.cssValueToNumber)(k.unicodeCategoryShortcutHeight),
+        D = (0, C.cssValueToNumber)(R.unicodeCategoryShortcutHeight),
         w = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
         F = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
         B = P + b + 2 * U,
@@ -68,10 +68,10 @@ function(e, t, n) {
             ...h,
             "aria-label": (0, T.getAriaIdForEmojiCategory)(o, g),
             className: s({
-                [k.categoryItemGuildCategory]: null != g,
-                [k.categoryItemDefaultCategory]: null == g,
-                [k.categoryItemDefaultCategorySelected]: null == g && y,
-                [k.categoryItemRecentEmoji]: o.type === A.EmojiCategoryTypes.RECENT
+                [R.categoryItemGuildCategory]: null != g,
+                [R.categoryItemDefaultCategory]: null == g,
+                [R.categoryItemDefaultCategorySelected]: null == g && y,
+                [R.categoryItemRecentEmoji]: o.type === A.EmojiCategoryTypes.RECENT
             }),
             onClick: () => {
                 null != g && S.default.track(O.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
@@ -87,11 +87,11 @@ function(e, t, n) {
                 isLocked: C && m
             }) : null, null == g && null != x ? (0, i.jsx)(_.default, {
                 categoryId: x,
-                className: k.categoryIcon,
+                className: R.categoryIcon,
                 height: P,
                 width: P
             }) : null]
-        }), R = r[n + 1], L = null != R && o.type === A.EmojiCategoryTypes.GUILD && R.type !== A.EmojiCategoryTypes.GUILD;
+        }), k = r[n + 1], L = null != k && o.type === A.EmojiCategoryTypes.GUILD && k.type !== A.EmojiCategoryTypes.GUILD;
         return null != g ? (0, i.jsxs)(l.Fragment, {
             children: [(0, i.jsx)(E.default, {
                 guild: g,
@@ -100,7 +100,7 @@ function(e, t, n) {
                     children: N
                 })
             }), L ? (0, i.jsx)("hr", {
-                className: k.guildCategorySeparator
+                className: R.guildCategorySeparator
             }, "separator") : null]
         }) : N
     }
@@ -207,9 +207,9 @@ function(e, t, n) {
             rowCountBySection: Z,
             children: e => W >= 7 && (0, i.jsx)(f.Clickable, {
                 "aria-hidden": !J,
-                "aria-label": R.default.Messages.EMOJI_PICKER_SCROLL_TO_UNICODE_A11Y_LABEL,
-                className: s(k.unicodeShortcut, {
-                    [k.unicodeShortcutInvisible]: !J
+                "aria-label": k.default.Messages.EMOJI_PICKER_SCROLL_TO_UNICODE_A11Y_LABEL,
+                className: s(R.unicodeShortcut, {
+                    [R.unicodeShortcutInvisible]: !J
                 }),
                 tabIndex: J ? 0 : -1,
                 onClick: () => Q(e),

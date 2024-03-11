@@ -30,8 +30,8 @@ function(e, t, n) {
         A = n("587974"),
         O = n("599110"),
         M = n("510500"),
-        R = n("171209"),
-        k = n("49111"),
+        k = n("171209"),
+        R = n("49111"),
         L = n("782340"),
         b = n("279197");
     let P = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
@@ -189,7 +189,7 @@ function(e, t, n) {
             }),
             er = (e, t) => {
                 if (ea) {
-                    if (O.default.track(k.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
+                    if (O.default.track(R.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                             sticker_id: e.id,
                             suggestion_trigger: W
                         }), t === y.StickerSendability.SENDABLE) j(!0), r(e, S.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
@@ -206,7 +206,7 @@ function(e, t, n) {
             eo = s.useRef([]),
             eu = s.useRef(!1);
         s.useEffect(() => {
-            ea && (eo.current = X), ea !== eu.current && (I.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, R.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
+            ea && (eo.current = X), ea !== eu.current && (I.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, k.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
         }, [I, ea, X, V]);
         let ed = !ea,
             ec = ea ? X : eo.current;
@@ -289,10 +289,10 @@ function(e, t, n) {
                                 })
                             }), (0, a.jsx)(p.Clickable, {
                                 onClick: () => {
-                                    O.default.track(k.AnalyticEvents.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                                    O.default.track(R.AnalyticEvents.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                         enabled: !1,
                                         location: {
-                                            section: k.AnalyticsSections.EXPRESSION_PICKER
+                                            section: R.AnalyticsSections.EXPRESSION_PICKER
                                         }
                                     }), v.ExpressionSuggestionsEnabled.updateSetting(!1)
                                 },

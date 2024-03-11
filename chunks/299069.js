@@ -35,11 +35,11 @@ function(e, t, n) {
             sound: v,
             channel: N
         } = e, A = (0, d.default)(), [O, M] = l.useState(!1), {
-            location: R
-        } = (0, u.useAnalyticsContext)(), k = l.useMemo(() => ({
-            ...R,
+            location: k
+        } = (0, u.useAnalyticsContext)(), R = l.useMemo(() => ({
+            ...k,
             section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
-        }), [R]), {
+        }), [k]), {
             analyticsLocations: L
         } = (0, f.default)(c.default.PREMIUM_UPSELL), {
             previewSound: b
@@ -53,13 +53,13 @@ function(e, t, n) {
                 type: S.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,
                 is_external: !0,
                 location: {
-                    ...k,
+                    ...R,
                     object: g.AnalyticsObjects.SOUNDBOARD_SOUND
                 },
                 location_stack: L,
                 sku_id: x.default.getSkuIdForPremiumType(S.PremiumTypes.TIER_2)
             })
-        }, [L, k]);
+        }, [L, R]);
         let U = l.useCallback(() => {
             h.default.track(g.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                 location_section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL

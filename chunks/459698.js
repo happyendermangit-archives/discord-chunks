@@ -44,8 +44,8 @@ function(e, t, n) {
         A = n("324929"),
         O = n("18494"),
         M = n("162771"),
-        R = n("697218"),
-        k = n("145131"),
+        k = n("697218"),
+        R = n("145131"),
         L = n("580357"),
         b = n("476263"),
         P = n("98292"),
@@ -78,7 +78,7 @@ function(e, t, n) {
                 currentGuildId: M.default.getGuildId()
             }), (0, i.jsx)(u.Dialog, {
                 children: (0, i.jsx)(H.MessagePopoutContent, {
-                    children: (0, i.jsxs)(k.default, {
+                    children: (0, i.jsxs)(R.default, {
                         className: z.emojiSection,
                         children: [(0, i.jsx)(f.default, {
                             emojiName: t.name,
@@ -86,9 +86,9 @@ function(e, t, n) {
                             src: t.src,
                             animated: !1,
                             size: "jumbo"
-                        }), (0, i.jsxs)(k.default, {
-                            direction: k.default.Direction.VERTICAL,
-                            justify: k.default.Justify.CENTER,
+                        }), (0, i.jsxs)(R.default, {
+                            direction: R.default.Direction.VERTICAL,
+                            justify: R.default.Justify.CENTER,
                             className: z.truncatingText,
                             children: [(0, i.jsx)(d.Text, {
                                 className: z.emojiName,
@@ -152,8 +152,8 @@ function(e, t, n) {
                         })]
                     })
                 };
-            return (0, i.jsxs)(k.default, {
-                align: k.default.Align.CENTER,
+            return (0, i.jsxs)(R.default, {
+                align: R.default.Align.CENTER,
                 children: [(0, i.jsx)(U.default, {
                     mask: U.default.Masks.SQUIRCLE,
                     width: 32,
@@ -175,11 +175,11 @@ function(e, t, n) {
                             guild: t
                         })
                     })()
-                }), (0, i.jsxs)(k.default, {
-                    direction: k.default.Direction.VERTICAL,
+                }), (0, i.jsxs)(R.default, {
+                    direction: R.default.Direction.VERTICAL,
                     className: s(z.guildInformation, z.truncatingText),
-                    children: [(0, i.jsxs)(k.default, {
-                        align: k.default.Align.CENTER,
+                    children: [(0, i.jsxs)(R.default, {
+                        align: R.default.Align.CENTER,
                         children: [(0, i.jsx)(L.default, {
                             guild: t,
                             className: z.guildBadge
@@ -199,8 +199,8 @@ function(e, t, n) {
                                 children: o
                             })
                         })]
-                    }), (0, i.jsx)(k.default, {
-                        align: k.default.Align.CENTER,
+                    }), (0, i.jsx)(R.default, {
+                        align: R.default.Align.CENTER,
                         children: p ? m() : (0, i.jsx)(d.Text, {
                             variant: "text-xs/normal",
                             color: "header-secondary",
@@ -250,7 +250,7 @@ function(e, t, n) {
                 guildEmoji: b,
                 demoMode: U = !1,
                 nonce: w
-            } = e, F = (0, o.useStateFromStores)([R.default], () => R.default.getCurrentUser()), J = (0, o.useStateFromStores)([M.default], () => M.default.getGuildId()), X = B.default.isPremium(F), Q = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
+            } = e, F = (0, o.useStateFromStores)([k.default], () => k.default.getCurrentUser()), J = (0, o.useStateFromStores)([M.default], () => M.default.getGuildId()), X = B.default.isPremium(F), Q = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
             U && (X = !0, et = !0, ee = !1, Q = !1);
             let {
                 enabled: en
@@ -328,16 +328,16 @@ function(e, t, n) {
                     }, t = !ee && et;
                     return (0, i.jsxs)("div", {
                         className: z.emojiSection,
-                        children: [(0, i.jsxs)(k.default, {
+                        children: [(0, i.jsxs)(R.default, {
                             children: [(0, i.jsx)(f.default, {
                                 className: z.primaryEmoji,
                                 emojiId: u.emojiId,
                                 emojiName: u.name,
                                 animated: u.animated,
                                 size: "jumbo"
-                            }), (0, i.jsxs)(k.default, {
-                                direction: k.default.Direction.VERTICAL,
-                                justify: k.default.Justify.CENTER,
+                            }), (0, i.jsxs)(R.default, {
+                                direction: R.default.Direction.VERTICAL,
+                                justify: R.default.Justify.CENTER,
                                 className: z.truncatingText,
                                 children: [(0, i.jsx)(d.Text, {
                                     variant: "text-md/semibold",
@@ -404,7 +404,7 @@ function(e, t, n) {
                                 return (0, i.jsx)(d.Clickable, {
                                     onClick: t,
                                     className: z.showMoreEmojis,
-                                    children: (0, i.jsxs)(k.default, {
+                                    children: (0, i.jsxs)(R.default, {
                                         children: [(0, i.jsx)(d.Text, {
                                             className: z.showMoreEmojisLabel,
                                             "aria-label": e,
@@ -444,10 +444,10 @@ function(e, t, n) {
                 type: c,
                 description: p
             } = s;
-            return (0, i.jsxs)(k.default, {
-                wrap: k.default.Wrap.WRAP,
-                align: k.default.Align.CENTER,
-                justify: k.default.Justify.CENTER,
+            return (0, i.jsxs)(R.default, {
+                wrap: R.default.Wrap.WRAP,
+                align: R.default.Align.CENTER,
+                justify: R.default.Justify.CENTER,
                 className: z.otherEmojisContainer,
                 children: [a ? null : u.map(e => (0, i.jsx)(d.Tooltip, {
                     text: e.require_colons ? ":".concat(e.name, ":") : e.name,

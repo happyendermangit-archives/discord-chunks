@@ -50,14 +50,14 @@ function(e, t, n) {
         })
     }
     let M = 76,
-        R = e => (0, i.jsx)(u.Text, {
+        k = e => (0, i.jsx)(u.Text, {
             variant: "text-sm/normal",
             color: "text-normal",
             tag: "span",
             className: N.ctaLink,
             children: e
         }),
-        k = e => {
+        R = e => {
             let {
                 user: t,
                 onClick: n
@@ -122,21 +122,21 @@ function(e, t, n) {
             }, [h]);
         if (!A && !L) return null;
         let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && B ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
-            openShop: R
+            openShop: k
         }) : K && W ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
-            openShop: R
+            openShop: k
         }) : v.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
-            openShop: R
+            openShop: k
         })).with([!0, !1], () => K && B ? v.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
-            openShop: R
+            openShop: k
         }) : v.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
-            openShop: R
+            openShop: k
         })).with([!1, !0], () => W && B ? v.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
-            openShop: R
+            openShop: k
         }) : (W && v.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
-            openShop: R
+            openShop: k
         }), v.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL.format({
-            openShop: R
+            openShop: k
         }))).otherwise(() => null);
         return (0, i.jsx)("div", {
             style: w,
@@ -147,7 +147,7 @@ function(e, t, n) {
             ref: U,
             children: (0, i.jsxs)("div", {
                 className: N.container,
-                children: [A && (0, i.jsx)(k, {
+                children: [A && (0, i.jsx)(R, {
                     user: n,
                     onClick: Y
                 }), (0, i.jsx)(u.Clickable, {

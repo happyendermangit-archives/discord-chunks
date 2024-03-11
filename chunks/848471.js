@@ -158,8 +158,8 @@ function(e, t, n) {
                 let e = d.current.getBoundingClientRect();
                 M(e.width / 2), N(e.height + 12)
             }, [S, I]), null == S || null == I) return null;
-        let R = null === (n = a.current) || void 0 === n ? void 0 : n.getSlateEditor();
-        return null == R ? null : (0, i.jsx)(x.default, {
+        let k = null === (n = a.current) || void 0 === n ? void 0 : n.getSlateEditor();
+        return null == k ? null : (0, i.jsx)(x.default, {
             children: (0, i.jsxs)("div", {
                 id: "slate-toolbar",
                 ref: d,
@@ -175,7 +175,7 @@ function(e, t, n) {
                     e.stopPropagation()
                 },
                 children: [(0, i.jsx)(O, {
-                    slateEditor: R
+                    slateEditor: k
                 }), (0, i.jsx)(_, {
                     editorRef: a,
                     options: o

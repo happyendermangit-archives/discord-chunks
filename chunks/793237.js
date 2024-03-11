@@ -17,7 +17,7 @@ function(e, t, n) {
             return M
         },
         setSummaryFeedback: function() {
-            return R
+            return k
         },
         deleteSummary: function() {
             return b
@@ -146,14 +146,14 @@ function(e, t, n) {
         }, [e, t, l, o])
     }
 
-    function R(e, t) {
+    function k(e, t) {
         u.default.dispatch({
             type: "SET_SUMMARY_FEEDBACK",
             summary: e,
             rating: t
         })
     }
-    async function k() {
+    async function R() {
         var e;
         let t, n;
         if (!x.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -244,7 +244,7 @@ function(e, t, n) {
             let t = O(e, -1);
             t <= 0 && (O(e, 0), clearInterval(C[e]))
         },
-        setSummaryFeedback: R,
+        setSummaryFeedback: k,
         useSummaryPolling: M,
         updateVisibleMessages: A,
         setSelectedSummary: N,
@@ -261,7 +261,7 @@ function(e, t, n) {
                 i.useEffect(() => {
                     (async function e() {
                         try {
-                            await k()
+                            await R()
                         } catch (e) {}
                         try {
                             var e, n;

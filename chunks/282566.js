@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return R
+            return k
         }
     }), n("222007");
     var i = n("37983"),
@@ -32,17 +32,17 @@ function(e, t, n) {
         A = n("646718"),
         O = n("782340"),
         M = n("187971"),
-        R = e => {
-            var t, a, R;
+        k = e => {
+            var t, a, k;
             let {
-                onLearnMore: k,
+                onLearnMore: R,
                 onClose: L,
                 channel: b,
                 emojiDescriptor: P,
                 pickerIntention: j,
                 analyticsLocation: U
             } = e, D = (0, u.default)(), [w, F] = l.useState(!1), B = () => {
-                (0, T.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), k()
+                (0, T.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), R()
             }, G = (0, r.isThemeLight)(D) ? n("602291") : n("609708"), H = (0, E.usePremiumTrialOffer)(), V = (0, x.usePremiumDiscountOffer)(), K = null != H || null != V, {
                 isLoading: W,
                 suggestedPremiumType: Y
@@ -82,7 +82,7 @@ function(e, t, n) {
                 }), W ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
                     children: [K ? (0, i.jsx)(y.default, {
                         type: A.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                        subscriptionTier: null !== (R = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== R ? R : A.PremiumSubscriptionSKUs.TIER_2,
+                        subscriptionTier: null !== (k = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== k ? k : A.PremiumSubscriptionSKUs.TIER_2,
                         onClose: L,
                         trialOffer: H,
                         discountOffer: V,

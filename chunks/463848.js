@@ -35,8 +35,8 @@ function(e, t, n) {
         A = n("599110"),
         O = n("474293"),
         M = n("49111"),
-        R = n("782340"),
-        k = n("970574");
+        k = n("782340"),
+        R = n("970574");
 
     function L(e) {
         let {
@@ -52,7 +52,7 @@ function(e, t, n) {
             actionColor: m
         } = e;
         return (0, i.jsx)(c.default, {
-            className: (0, O.getClass)(k, "actions", t),
+            className: (0, O.getClass)(R, "actions", t),
             type: t,
             source: n,
             activity: l,
@@ -108,7 +108,7 @@ function(e, t, n) {
             activityGuild: null != w ? w : F,
             showReactions: V,
             renderActions: o ? () => (0, i.jsxs)("div", {
-                className: s(V && k.actionsWrapper),
+                className: s(V && R.actionsWrapper),
                 children: [(0, i.jsx)(L, {
                     ...O,
                     applicationStream: j,
@@ -117,10 +117,10 @@ function(e, t, n) {
                 }), V && (0, i.jsx)(m.default, {
                     showReact: !0,
                     showReply: !0,
-                    replyHeaderText: R.default.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({
+                    replyHeaderText: k.default.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({
                         activity: t.name
                     }),
-                    replyPlaceholder: R.default.Messages.TEXTAREA_PLACEHOLDER.format({
+                    replyPlaceholder: k.default.Messages.TEXTAREA_PLACEHOLDER.format({
                         channel: "@".concat(n.globalName)
                     }),
                     onInteraction: e => {

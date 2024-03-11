@@ -38,8 +38,8 @@ function(e, t, n) {
         A = n("764364"),
         O = n("248474"),
         M = n("788506"),
-        R = n("255214"),
-        k = n("352046"),
+        k = n("255214"),
+        R = n("352046"),
         L = n("115279"),
         b = n("958706"),
         P = n("782340");
@@ -57,7 +57,7 @@ function(e, t, n) {
         } = e, d = (0, p.useStateFromStores)([h.default], () => h.default.categories), m = (0, p.useStateFromStores)([I.default], () => I.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), y = null == t ? null : t.getGuildId(), g = (0, p.useStateFromStores)([h.default], () => h.default.getDisambiguatedEmojiContext(y), [y]), j = (0, M.useFavoriteEmojis)(y), U = (0, M.useFrequentlyUsedEmojis)(y), {
             topEmojis: D,
             newlyAddedEmojis: w
-        } = (0, k.default)(y, l), F = (0, p.useStateFromStoresArray)([_.default], () => _.default.getFlattenedGuildIds(), []), {
+        } = (0, R.default)(y, l), F = (0, p.useStateFromStoresArray)([_.default], () => _.default.getFlattenedGuildIds(), []), {
             canCreateExpressions: B
         } = (0, S.useManageResourcePermissions)(m), G = (0, p.useStateFromStores)([v.default], () => v.default.getCurrentUser()), H = (0, A.isPremium)(G), V = g.getCustomEmoji(), K = e => {
             if (e.type === x.EmojiTypes.GUILD) return e.guildId
@@ -97,16 +97,16 @@ function(e, t, n) {
                             _ = !I && null != S && C === S.id && E.length < S.getMaxEmojiSlots(),
                             v = I && E.length < g && !Y,
                             A = null != S && I && Y && z === O.EmojiPickerUploadTreatment.WITH_TOP_LIST && W[S.id].length < S.getMaxEmojiSlots(),
-                            R = i && B && null != S && (_ || v || A);
-                        R && A && E.length === g && E.shift();
-                        let k = Y && R && !d,
-                            b = R ? E.length + 1 : E.length,
+                            k = i && B && null != S && (_ || v || A);
+                        k && A && E.length === g && E.shift();
+                        let R = Y && k && !d,
+                            b = k ? E.length + 1 : E.length,
                             j = Math.ceil(b / g),
                             U = [];
                         for (let e = 0; e < j; e++) {
                             let t = 0 === e,
-                                n = e * g - (k && e > 0 ? 1 : 0),
-                                i = n + g - (k && t ? 1 : 0),
+                                n = e * g - (R && e > 0 ? 1 : 0),
+                                i = n + g - (R && t ? 1 : 0),
                                 l = E.slice(n, i).map((e, n) => {
                                     var i, l;
                                     return {
@@ -115,13 +115,13 @@ function(e, t, n) {
                                         size: o,
                                         isDisabled: r.get(e),
                                         rowIndex: y,
-                                        columnIndex: k && t ? n + 1 : n,
+                                        columnIndex: R && t ? n + 1 : n,
                                         visibleRowIndex: x,
                                         category: s.type,
                                         subCategory: s.sectionId === L.EmojiCategoryTypes.TOP_GUILD_EMOJI ? (0, M.getEmojiSubCategory)(D, w, null !== (l = null !== (i = e.id) && void 0 !== i ? i : e.uniqueName) && void 0 !== l ? l : e.name) : L.EmojiSubCategory.NONE
                                     }
                                 });
-                            if (k && t && !d && (l = [{
+                            if (R && t && !d && (l = [{
                                     type: 1,
                                     guildId: S.id,
                                     name: P.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
@@ -130,7 +130,7 @@ function(e, t, n) {
                                     columnIndex: 0,
                                     visibleRowIndex: x
                                 }, ...l]), U.push(l), !d) {
-                                if (!Y && R && e === j - 1) {
+                                if (!Y && k && e === j - 1) {
                                     let t = U[e];
                                     t.push({
                                         type: 1,
@@ -197,7 +197,7 @@ function(e, t, n) {
                     if (null != m) {
                         let {
                             allEmojis: t
-                        } = (0, R.getEmojiHotrail)({
+                        } = (0, k.getEmojiHotrail)({
                             topEmojis: D,
                             newlyAddedEmojis: w
                         });

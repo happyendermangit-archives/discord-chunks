@@ -31,8 +31,8 @@ function(e, t, n) {
         A = n("606013"),
         O = n("32647"),
         M = n("970153"),
-        R = n("49111"),
-        k = n("782340"),
+        k = n("49111"),
+        R = n("782340"),
         L = n("350583");
     new S.default("ChannelEditor.tsx");
     let b = function() {
@@ -156,7 +156,7 @@ function(e, t, n) {
                 placeholder: t,
                 isPreviewing: n
             } = this.props;
-            return e && !n ? k.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
+            return e && !n ? R.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
         }
         render() {
             var e, t, n, i, a, s;
@@ -177,7 +177,7 @@ function(e, t, n) {
                 canOnlyUseTextCommands: T,
                 className: N,
                 id: M,
-                required: k,
+                required: R,
                 maxCharacterCount: b,
                 allowNewLines: j,
                 "aria-describedby": U,
@@ -194,7 +194,7 @@ function(e, t, n) {
                 }),
                 id: M,
                 placeholder: this.getPlaceholder(),
-                required: k,
+                required: R,
                 accessibilityLabel: w,
                 disabled: d || !1,
                 submitting: F,
@@ -243,10 +243,10 @@ function(e, t, n) {
             });
             return (0, l.jsxs)(l.Fragment, {
                 children: [(0, l.jsx)(I.ComponentAction, {
-                    event: R.ComponentActions.INSERT_TEXT,
+                    event: k.ComponentActions.INSERT_TEXT,
                     handler: this.handleInsertText
                 }), (0, l.jsx)(I.ComponentAction, {
-                    event: R.ComponentActions.CLEAR_TEXT,
+                    event: k.ComponentActions.CLEAR_TEXT,
                     handler: this.handleClearText
                 }), H]
             })

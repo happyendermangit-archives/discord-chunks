@@ -47,9 +47,9 @@ function(e, t, n) {
             }), A.dispatch(E.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(E.ComponentActions.MODAL_CLOSE), s.default.popAll())
         };
         if (null == C) return null;
-        let R = (0, d.getStreamCTAString)(N);
-        t ? R = y.default.Messages.WATCH_STREAM_STREAMING : O && (R = y.default.Messages.WATCH_STREAM_WATCHING);
-        let k = {
+        let k = (0, d.getStreamCTAString)(N);
+        t ? k = y.default.Messages.WATCH_STREAM_STREAMING : O && (k = y.default.Messages.WATCH_STREAM_WATCHING);
+        let R = {
             color: n,
             look: S
         };
@@ -57,11 +57,11 @@ function(e, t, n) {
             children: [(0, i.jsxs)(x.default, {
                 disabled: t || O || !v,
                 onClick: () => M(!1),
-                ...k,
+                ...R,
                 fullWidth: !0,
                 children: [(0, i.jsx)(m.default, {
                     className: g.streamIcon
-                }), R]
+                }), k]
             }, "play"), T && !O ? (0, i.jsx)(a.Tooltip, {
                 text: y.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                 children: e => (0, i.jsx)(x.default, {
@@ -70,7 +70,7 @@ function(e, t, n) {
                         var t;
                         null === (t = e.onClick) || void 0 === t || t.call(e), M(!0)
                     },
-                    ...k,
+                    ...R,
                     className: g.iconButton,
                     size: g.iconButtonSize,
                     children: (0, i.jsx)(p.default, {

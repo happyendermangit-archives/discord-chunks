@@ -157,12 +157,12 @@ function(e, t, n) {
                 placeholder: O,
                 placeholderVersion: M
             } = this.props, {
-                readyState: R,
-                hasMouseOver: k,
+                readyState: k,
+                hasMouseOver: R,
                 hasFocus: L
             } = this.state, b = null != i, P = this.getRatio(), j = (0, u.clamp)(Math.round(h * P), null != E ? E : 0, null != g ? g : 1 / 0), U = (0, u.clamp)(Math.round(x * P), null != y ? y : 0, null != S ? S : 1 / 0), D = {
                 alt: t,
-                readyState: R,
+                readyState: k,
                 onContextMenu: null != a ? a : void 0,
                 zoomable: b,
                 className: d,
@@ -197,14 +197,14 @@ function(e, t, n) {
                 onBlur: this.onBlur
             };
             if (1 === D.width && 1 === D.height) return null;
-            switch ((b || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), R) {
+            switch ((b || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), k) {
                 case T.ImageReadyStates.LOADING:
                     null != n && (D.src = n);
                     break;
                 case T.ImageReadyStates.READY:
                     if (e.isAnimated(this.props)) {
                         D.onMouseLeave = this.onMouseLeave;
-                        let t = (s || k || L) && (null == m || m) && e.visibilityObserver.isVisible(this);
+                        let t = (s || R || L) && (null == m || m) && e.visibilityObserver.isVisible(this);
                         t ? (D.src = this.getSrc(P), D.renderAccessory = _) : (D.src = this.getSrc(P, !p || !s), D.renderAccessory = this.renderAccessory), null != f && (D.children = e => {
                             let {
                                 src: n,

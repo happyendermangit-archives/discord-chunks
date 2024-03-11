@@ -75,11 +75,11 @@ function(e, t, n) {
         } = e, {
             ref: O,
             width: M
-        } = (0, u.default)(), R = l.useMemo(() => {
+        } = (0, u.default)(), k = l.useMemo(() => {
             var e;
             let t;
             return Math.floor(((t = (e = c) <= x ? 40 : e >= 45 ? 294 : (Math.min(e, 45) - x) / (45 - x) * 254 + 40) + 4) / E) * E - 4
-        }, [c]), k = l.useRef(), L = function(e, t) {
+        }, [c]), R = l.useRef(), L = function(e, t) {
             let n = l.useMemo(() => (function(e) {
                     let t;
                     if (null == e) return;
@@ -143,9 +143,9 @@ function(e, t, n) {
                 duration: c,
                 numSegments: L.length
             });
-            k.current = L.map((t, n) => new p.default(n < e ? t : 0))
+            R.current = L.map((t, n) => new p.default(n < e ? t : 0))
         }, [L]), l.useEffect(() => {
-            let e = k.current;
+            let e = R.current;
             if (null == e) return;
             let t = S({
                 showAll: !y,
@@ -166,7 +166,7 @@ function(e, t, n) {
             return e = requestAnimationFrame(function t(n) {
                 let i = O.current,
                     l = null == i ? void 0 : i.getContext("2d"),
-                    a = k.current;
+                    a = R.current;
                 if (null == i || null == l || null == a) return;
                 let s = !1;
                 (b.current !== y || P.current !== _) && (b.current = y, P.current = _, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
@@ -214,7 +214,7 @@ function(e, t, n) {
             onMouseDown: V,
             className: s(h.canvas, t),
             style: {
-                width: R
+                width: k
             },
             ref: O,
             height: 32 * window.devicePixelRatio,

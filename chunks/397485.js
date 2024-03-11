@@ -47,8 +47,8 @@ function(e, t, n) {
         A = n("867805"),
         O = n("407063"),
         M = n("697218"),
-        R = n("315102"),
-        k = n("402671"),
+        k = n("315102"),
+        R = n("402671"),
         L = n("626334"),
         b = n("782340");
     let P = {
@@ -88,7 +88,7 @@ function(e, t, n) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L.EMOJI_SIZE;
         if (null != e.id) {
             var n;
-            return R.default.getEmojiURL({
+            return k.default.getEmojiURL({
                 id: e.id,
                 animated: null !== (n = e.animated) && void 0 !== n && n,
                 size: t
@@ -96,7 +96,7 @@ function(e, t, n) {
         }
         let i = A.default.convertSurrogateToName(e.name, !1),
             l = A.default.getByName(i);
-        return null != l ? k.default.getURL(l.surrogates) : ""
+        return null != l ? R.default.getURL(l.surrogates) : ""
     }
 
     function B(e, t) {

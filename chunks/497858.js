@@ -27,13 +27,13 @@ function(e, t, n) {
         let {
             channel: N,
             type: A
-        } = e, [O, M] = i.useState(() => (0, m.createInitialState)()), R = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
+        } = e, [O, M] = i.useState(() => (0, m.createInitialState)()), k = (0, l.useForceUpdate)(), R = (0, a.useStateFromStores)([d.default], () => {
             if (null != e.guild) {
                 var t;
                 return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, E.CLYDE_AI_USER_ID)
             }
             return !1
-        }), L = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), b = (0, a.useStateFromStores)([d.default, p.default], () => {
+        }), L = (0, u.useClydeEnabled)(e.guild, e.channel) && !R && !(0, u.canUseCustomClydeProfiles)(e.guild), b = (0, a.useStateFromStores)([d.default, p.default], () => {
             var e, t;
             let n = p.default.getCurrentUser();
             return null !== (t = null != N.guild_id && null != n ? null === (e = d.default.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
@@ -78,10 +78,10 @@ function(e, t, n) {
             G.updateProps(B)
         }), i.useImperativeHandle(t, () => G, [G]), i.useEffect(() => {
             let e = e => M(e);
-            return G.on("change", e), G.on("update", R), () => {
-                G.off("change", e), G.off("update", R)
+            return G.on("change", e), G.on("update", k), () => {
+                G.off("change", e), G.off("update", k)
             }
-        }, [R, G]), i.useEffect(() => {
+        }, [k, G]), i.useEffect(() => {
             var e;
             let t = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;
             if (null != t) {

@@ -32,8 +32,8 @@ function(e, t, n) {
         A = n("719923"),
         O = n("389480"),
         M = n("78581"),
-        R = n("262439"),
-        k = n("557585"),
+        k = n("262439"),
+        R = n("557585"),
         L = n("553372"),
         b = n("122557"),
         P = n("478477"),
@@ -189,7 +189,7 @@ function(e, t, n) {
             return g.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : w.EMPTY_STRING_SNOWFLAKE_ID)
         }), q = (null == J ? void 0 : J.selfDeaf) || (null == J ? void 0 : J.mute) || (null == J ? void 0 : J.suppress), X = (0, h.useExpressionPickerStore)(e => e.searchQuery), Q = (0, S.useUID)(), {
             categories: $
-        } = (0, k.default)(a, void 0, L), [ee, et] = l.useState([]), en = (0, k.useSearchCategories)($, ee, X), ei = E.SoundboardPickerCollapsedSections.useSetting(), el = l.useMemo(() => new Set(ei), [ei]), ea = null == a, es = A.default.canUseCustomCallSounds(Z), er = l.useCallback(e => {
+        } = (0, R.default)(a, void 0, L), [ee, et] = l.useState([]), en = (0, R.useSearchCategories)($, ee, X), ei = E.SoundboardPickerCollapsedSections.useSetting(), el = l.useMemo(() => new Set(ei), [ei]), ea = null == a, es = A.default.canUseCustomCallSounds(Z), er = l.useCallback(e => {
             let t = !el.has(e);
             t ? el.add(e) : el.delete(e), E.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
         }, [el]), eo = l.useCallback((e, t) => {
@@ -231,7 +231,7 @@ function(e, t, n) {
                 collapsed: el.has(n),
                 index: t
             }, "header-".concat(n))
-        }, [el, er]), ef = l.useCallback(e => et((0, R.default)(e, $, Z, a)), [a, Z, $]), ep = l.useCallback(e => {
+        }, [el, er]), ef = l.useCallback(e => et((0, k.default)(e, $, Z, a)), [a, Z, $]), ep = l.useCallback(e => {
             (0, d.openContextMenuLazy)(e, async () => {
                 let {
                     default: e

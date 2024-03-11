@@ -46,8 +46,8 @@ function(e, t, n) {
                     className: n,
                     emojiGrid: O,
                     guildId: M,
-                    pickerIntention: R,
-                    channel: k
+                    pickerIntention: k,
+                    channel: R
                 } = e,
                 {
                     enabled: L
@@ -77,7 +77,7 @@ function(e, t, n) {
                 B = (0, g.useIsFavoriteEmoji)(M, N(j) ? j : null),
                 {
                     newlyAddedEmojis: G
-                } = (0, S.default)(M, R),
+                } = (0, S.default)(M, k),
                 H = j.id,
                 V = (null == P ? void 0 : P.type) === I.EmojiGridItemTypes.EMOJI ? P.subCategory : T.EmojiSubCategory.NONE;
             if (l.useEffect(() => {
@@ -122,9 +122,9 @@ function(e, t, n) {
                 Y = L && "CREATE_EMOJI" === j.type ? _.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : j.allNamesString,
                 z = L && "CREATE_EMOJI" === j.type ? _.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : A({
                     inspectedEmoji: j,
-                    channel: k,
+                    channel: R,
                     guildId: M,
-                    intention: R,
+                    intention: k,
                     guild: U
                 });
             return (0, i.jsx)(f.default, {

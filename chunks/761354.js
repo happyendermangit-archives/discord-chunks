@@ -70,7 +70,7 @@ function(e, t, n) {
         })
     }
 
-    function R(e) {
+    function k(e) {
         let {
             file: t,
             alt: n,
@@ -142,7 +142,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e) {
+    function R(e) {
         let {
             file: t,
             alt: n,
@@ -186,13 +186,13 @@ function(e, t, n) {
             size: a = v.AttachmentListItemSizes.MEDIUM,
             onMouseEnter: r
         } = e, [o, u] = l.useState(!1), d = a === v.AttachmentListItemSizes.SMALL;
-        return n.isImage && n.item.platform === c.UploadPlatform.WEB ? (0, i.jsx)(R, {
+        return n.isImage && n.item.platform === c.UploadPlatform.WEB ? (0, i.jsx)(k, {
             file: n.item.file,
             alt: n.description,
             spoiler: n.spoiler,
             size: a,
             onMouseEnter: r
-        }) : !o && n.isVideo && n.item.platform === c.UploadPlatform.WEB ? (0, i.jsx)(k, {
+        }) : !o && n.isVideo && n.item.platform === c.UploadPlatform.WEB ? (0, i.jsx)(R, {
             file: n.item.file,
             size: a,
             alt: n.description,
@@ -226,9 +226,9 @@ function(e, t, n) {
             canEdit: I = !0,
             hideFileName: O = !1,
             clip: M
-        } = e, R = null != M;
-        C = R ? v.AttachmentListItemSizes.CLIP : C;
-        let k = C === v.AttachmentListItemSizes.SMALL,
+        } = e, k = null != M;
+        C = k ? v.AttachmentListItemSizes.CLIP : C;
+        let R = C === v.AttachmentListItemSizes.SMALL,
             b = (0, r.useStateFromStores)([m.default], () => {
                 var e;
                 return null === (e = m.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
@@ -257,42 +257,42 @@ function(e, t, n) {
             actions: (0, i.jsxs)(l.Fragment, {
                 children: [I ? (0, i.jsx)(_.default, {
                     className: s({
-                        [A.action]: k
+                        [A.action]: R
                     }),
-                    tooltip: R ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : N.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
+                    tooltip: k ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : N.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
                     onClick: () => u.default.update(t, a.id, n, {
                         spoiler: !a.spoiler
                     }),
                     children: a.spoiler ? (0, i.jsx)(E.default, {
                         className: s({
-                            [A.actionBarIcon]: k
+                            [A.actionBarIcon]: R
                         })
                     }) : (0, i.jsx)(x.default, {
                         className: s({
-                            [A.actionBarIcon]: k
+                            [A.actionBarIcon]: R
                         })
                     })
-                }) : null, I && !R ? (0, i.jsx)(_.default, {
+                }) : null, I && !k ? (0, i.jsx)(_.default, {
                     className: s({
-                        [A.action]: k
+                        [A.action]: R
                     }),
                     tooltip: N.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
                     onClick: P,
                     children: (0, i.jsx)(y.default, {
                         className: s({
-                            [A.actionBarIcon]: k
+                            [A.actionBarIcon]: R
                         })
                     })
                 }) : null, (0, i.jsx)(_.default, {
                     className: s({
-                        [A.action]: k
+                        [A.action]: R
                     }),
-                    tooltip: R ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : N.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                    tooltip: k ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : N.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
                     onClick: () => u.default.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, i.jsx)(g.default, {
                         className: s({
-                            [A.actionBarIcon]: k
+                            [A.actionBarIcon]: R
                         })
                     })
                 })]
@@ -304,19 +304,19 @@ function(e, t, n) {
             keyboardModeEnabled: c,
             size: C,
             className: s({
-                [A.attachmentItemSmall]: k
+                [A.attachmentItemSmall]: R
             }),
             children: [(0, i.jsx)(L, {
                 upload: a,
                 size: C
-            }), !O && !R && (0, i.jsx)("div", {
+            }), !O && !k && (0, i.jsx)("div", {
                 className: A.filenameContainer,
                 children: (0, i.jsx)(o.Text, {
                     className: A.filename,
                     variant: "text-sm/normal",
                     children: null != h ? h : a.filename
                 })
-            }), R && (0, i.jsxs)(i.Fragment, {
+            }), k && (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(f.default, {
                     className: A.clipsFooter,
                     createdAt: T.default.extractTimestamp(M.id),

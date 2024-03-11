@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SecondaryActionButton: function() {
-            return R
+            return k
         },
         PreviewButton: function() {
-            return k
+            return R
         },
         default: function() {
             return L
@@ -39,7 +39,7 @@ function(e, t, n) {
         O = n("782340"),
         M = n("802501");
 
-    function R(e) {
+    function k(e) {
         let {
             disabled: t = !1,
             onClick: n,
@@ -62,14 +62,14 @@ function(e, t, n) {
         })
     }
 
-    function k(e) {
+    function R(e) {
         let {
             sound: t,
             previewSound: n,
             disabled: l = !1,
             tooltipPosition: a = "top"
         } = e;
-        return (0, i.jsx)(R, {
+        return (0, i.jsx)(k, {
             tooltipPosition: a,
             disabled: l,
             onClick: function(e) {
@@ -139,7 +139,7 @@ function(e, t, n) {
         }
 
         function em() {
-            return (0, i.jsx)(R, {
+            return (0, i.jsx)(k, {
                 disabled: !D && !U,
                 onClick: ep,
                 text: O.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
@@ -154,7 +154,7 @@ function(e, t, n) {
                 })
             })
         }
-        let eh = k({
+        let eh = R({
                 sound: L,
                 previewSound: Q,
                 disabled: ec

@@ -43,38 +43,38 @@ function(e, t, n) {
             userId: A,
             className: O,
             showMetadata: M,
-            showInvisibleIcon: R
+            showInvisibleIcon: k
         } = e;
         null == M && (M = !0);
-        let k = null !== (n = E.metadata) && void 0 !== n ? n : {},
-            L = M ? (0, m.getCreatedAtDate)(k[I.MetadataFields.CREATED_AT], N) : null,
+        let R = null !== (n = E.metadata) && void 0 !== n ? n : {},
+            L = M ? (0, m.getCreatedAtDate)(R[I.MetadataFields.CREATED_AT], N) : null,
             b = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
             P = T.default.Messages.CONNECTION_VERIFIED;
         if (M) switch (E.type) {
             case C.PlatformTypes.REDDIT:
-                l = (0, h.generateRedditMetadataItems)(k);
+                l = (0, h.generateRedditMetadataItems)(R);
                 break;
             case C.PlatformTypes.STEAM:
-                l = (0, h.generateSteamMetadataItems)(k);
+                l = (0, h.generateSteamMetadataItems)(R);
                 break;
             case C.PlatformTypes.TWITTER: {
-                l = (0, h.generateTwitterMetadataItems)(k);
-                let e = "1" === k[I.MetadataFields.TWITTER_VERIFIED];
+                l = (0, h.generateTwitterMetadataItems)(R);
+                let e = "1" === R[I.MetadataFields.TWITTER_VERIFIED];
                 e && (a = b, P = T.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
                 break
             }
             case C.PlatformTypes.PAYPAL:
-                l = (0, h.generatePaypalMetadataItems)(k);
+                l = (0, h.generatePaypalMetadataItems)(R);
                 break;
             case C.PlatformTypes.EBAY:
-                l = (0, h.generateEbayMetadataItems)(k);
+                l = (0, h.generateEbayMetadataItems)(R);
                 break;
             case C.PlatformTypes.TIKTOK:
-                l = (0, h.generateTikTokMetadataItems)(k)
+                l = (0, h.generateTikTokMetadataItems)(R)
         }
         let j = c.default.get((0, p.useLegacyPlatformType)(E.type)),
             U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, E);
-        null != R && R ? d = (0, i.jsx)(g.default, {
+        null != k && k ? d = (0, i.jsx)(g.default, {
             className: s(_.connectedAccountOpenIconContainer, _.connectedAccountHideIcon),
             foregroundColor: "currentColor"
         }) : null != U && (d = (0, i.jsx)(u.Anchor, {

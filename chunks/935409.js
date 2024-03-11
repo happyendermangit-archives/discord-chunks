@@ -38,8 +38,8 @@ function(e, t, n) {
         A = n("401642"),
         O = n("590456"),
         M = n("49111"),
-        R = n("646718"),
-        k = n("782340"),
+        k = n("646718"),
+        R = n("782340"),
         L = n("291809");
     let b = d.AvatarSizes.SIZE_80,
         P = (0, c.getDecorationSizeForAvatarSize)(b);
@@ -53,7 +53,7 @@ function(e, t, n) {
         } = e, s = (0, o.useStateFromStores)([C.default], () => C.default.getUserProfile(t.id), [t]), r = (0, o.useStateFromStores)([h.default], () => h.default.getGuild(n), [n]), c = (0, f.useClydeProfilesEnabled)(r);
         return (0, i.jsxs)(i.Fragment, {
             children: [(null == s ? void 0 : s.profileFetchFailed) && (!t.isClyde() || c) && (0, i.jsx)(d.Tooltip, {
-                text: k.default.Messages.USER_PROFILE_LOAD_ERROR,
+                text: R.default.Messages.USER_PROFILE_LOAD_ERROR,
                 spacing: 16,
                 children: e => (0, i.jsx)(x.default, {
                     ...e,
@@ -88,7 +88,7 @@ function(e, t, n) {
             hasProfileEffect: T
         } = e, {
             profileTheme: v
-        } = l.useContext(N.UserProfileContext), j = l.useContext(y.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), w = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, R.PremiumTypes.TIER_2), F = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), B = x || t.isClyde(), {
+        } = l.useContext(N.UserProfileContext), j = l.useContext(y.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), w = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, k.PremiumTypes.TIER_2), F = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), B = x || t.isClyde(), {
             avatarDecorationSrc: G,
             avatarSrc: H,
             eventHandlers: V
@@ -150,7 +150,7 @@ function(e, t, n) {
                         height: t,
                         children: (0, i.jsx)("div", {
                             className: L.avatarHintInner,
-                            children: k.default.Messages.VIEW_PROFILE
+                            children: R.default.Messages.VIEW_PROFILE
                         })
                     })
                 }()]

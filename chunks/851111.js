@@ -44,12 +44,12 @@ function(e, t, n) {
             O = s(v.currentPeriodStart).add(A, "days"),
             M = "".concat(v.id, ":").concat(O.toISOString());
         if (T === M) return null;
-        let R = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
+        let k = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
         return (0, i.jsxs)("div", {
             className: C.premiumRetentionNotice,
             children: [(0, i.jsx)(h.default, {
                 className: C.premiumRetentionNoticeIcon,
-                color: R
+                color: k
             }), (0, i.jsxs)("div", {
                 className: C.premiumRetentionNoticeContent,
                 children: [(0, i.jsx)(u.Text, {

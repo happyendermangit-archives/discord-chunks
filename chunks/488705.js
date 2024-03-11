@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return R
+            return k
         }
     }), n("506083"), n("222007");
     var i = n("37983"),
@@ -107,9 +107,9 @@ function(e, t, n) {
             onClose: a,
             isResending: r
         } = e, [u, c] = l.useState(!1), [E, v] = l.useState(!1), M = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
-            analyticsLocations: R
+            analyticsLocations: k
         } = (0, p.default)(f.default.REFERRAL_TRIALS_POPOUT), {
-            enabled: k
+            enabled: R
         } = y.default.useExperiment({
             location: "200c24_1"
         }, {
@@ -119,15 +119,15 @@ function(e, t, n) {
             onClose: a,
             referralsRemaining: t,
             recipient: M,
-            analyticsLocations: R,
-            shouldShowBirthdayUX: k
+            analyticsLocations: k,
+            shouldShowBirthdayUX: R
         }) : (0, i.jsxs)("div", {
             className: I.generalContainer,
             children: [(0, i.jsxs)("div", {
                 className: I.generalBodyContainer,
                 children: [(0, i.jsx)("img", {
                     alt: "",
-                    src: k ? _ : N,
+                    src: R ? _ : N,
                     className: I.generalBodyImage
                 }), (0, i.jsxs)("div", {
                     className: I.innerContent,
@@ -158,7 +158,7 @@ function(e, t, n) {
                             })
                         })]
                     })]
-                }), k && (0, i.jsx)("img", {
+                }), R && (0, i.jsx)("img", {
                     alt: "",
                     src: T,
                     className: I.birthdayBackgroundImage
@@ -170,7 +170,7 @@ function(e, t, n) {
                     submitting: E,
                     onClick: () => {
                         r ? A(M, a, v) : (c(!0), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
-                            location_stack: R,
+                            location_stack: k,
                             step: g.ReferralTrialsAnalyticSteps.FLOW_STARTED,
                             other_user_id: Number(M)
                         }))
@@ -181,7 +181,7 @@ function(e, t, n) {
         })
     }
 
-    function R(e) {
+    function k(e) {
         let {
             shouldShowPopout: t,
             referralsRemaining: n,

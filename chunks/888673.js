@@ -39,13 +39,13 @@ function(e, t, n) {
                 onVolumeChange: A,
                 onMute: O,
                 alt: M = d.default.Messages.VIDEO,
-                ...R
+                ...k
             } = this.props;
             return (0, l.jsx)(r.default, {
                 alt: M,
                 className: n,
                 src: a,
-                ...R,
+                ...k,
                 minWidth: o.default.minWidth,
                 minHeight: o.default.minHeight,
                 shouldLink: !1,

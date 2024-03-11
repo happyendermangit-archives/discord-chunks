@@ -39,16 +39,16 @@ function(e, t, n) {
                 analyticsLocations: A
             } = (0, c.default)(), O = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(n)), {
                 canManageAllExpressions: M
-            } = (0, h.useManageResourcePermissions)(O), R = null != O && 0 === (0, g.getTotalStickerCountForTier)(O.premiumTier) && !O.hasFeature(S.GuildFeatures.MORE_STICKERS);
+            } = (0, h.useManageResourcePermissions)(O), k = null != O && 0 === (0, g.getTotalStickerCountForTier)(O.premiumTier) && !O.hasFeature(S.GuildFeatures.MORE_STICKERS);
             return (l.useEffect(() => {
-                M && R && _ && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+                M && k && _ && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                     location: N,
                     guild_id: null == O ? void 0 : O.id,
                     channel_id: null == a ? void 0 : a.id,
                     type: "Expression Picker Inline Sticker Upsell",
                     location_stack: A
                 }), v(!0))
-            }, [R, O, a, N, _, v, A, M]), null != O && M) ? R ? (0, i.jsxs)("div", {
+            }, [k, O, a, N, _, v, A, M]), null != O && M) ? k ? (0, i.jsxs)("div", {
                 className: s(T.upsell, t),
                 children: [(0, i.jsx)(E.default, {
                     className: T.icon,

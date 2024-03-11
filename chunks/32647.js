@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return k
+            return R
         }
     }), n("222007"), n("424973");
     var i = n("37983"),
@@ -32,12 +32,12 @@ function(e, t, n) {
         A = n("765446"),
         O = n("461593"),
         M = n("49111"),
-        R = n("175543"),
-        k = l.forwardRef(function(e, t) {
+        k = n("175543"),
+        R = l.forwardRef(function(e, t) {
             let {
                 value: n,
                 type: a,
-                channel: k,
+                channel: R,
                 className: L,
                 id: b,
                 disabled: P,
@@ -82,10 +82,10 @@ function(e, t, n) {
                 if (void 0 !== l && l !== s) {
                     if (e.children = l, "parent" === t && !e.previewMarkdown) {
                         try {
-                            e.previewMarkdown = !0, (0, N.run)(e, k.guild_id, k.id)
+                            e.previewMarkdown = !0, (0, N.run)(e, R.guild_id, R.id)
                         } finally {
                             e.previewMarkdown = !1
-                        }(0, N.run)(e, k.guild_id, k.id), a = void 0
+                        }(0, N.run)(e, R.guild_id, R.id), a = void 0
                     }
                     "undo" !== t && void 0 !== l && l !== s && m.HistoryUtils.insertEntry(e, "other", !1, s, r), o = !0
                 }
@@ -102,8 +102,8 @@ function(e, t, n) {
                     null != t && (t.selection = a), o = !0
                 }
                 let d = p.getCommandBlock(e);
-                if (null != d && d[0].command.id !== (null === (i = u.default.getActiveCommand(k.id)) || void 0 === i ? void 0 : i.id) && m.HistoryUtils.withMergedEntry(e, () => {
-                        (0, v.unsetCommand)(e, k.id, null, !0)
+                if (null != d && d[0].command.id !== (null === (i = u.default.getActiveCommand(R.id)) || void 0 === i ? void 0 : i.id) && m.HistoryUtils.withMergedEntry(e, () => {
+                        (0, v.unsetCommand)(e, R.id, null, !0)
                     }), o) {
                     if (!et && y.EditorUtils.focus(e), "parent" === t) try {
                         ex.current = !1, e.onChange()
@@ -111,12 +111,12 @@ function(e, t, n) {
                         ex.current = !0
                     } else e.onChange()
                 }
-            }, [k.id, k.guild_id, et]), eg = l.useCallback(() => {
+            }, [R.id, R.guild_id, et]), eg = l.useCallback(() => {
                 eh.current = !1
             }, []), eS = l.useCallback(() => {
                 eh.current = !0
             }, []), eC = (0, S.default)({
-                channel: k,
+                channel: R,
                 chatInputType: a,
                 canUseCommands: $,
                 canOnlyUseTextCommands: ee,
@@ -125,14 +125,14 @@ function(e, t, n) {
                 updateState: ey
             }), eI = l.useCallback((e, t) => {
                 let n = p.getOptionValues(eC, e),
-                    i = p.validateOptionValues(e, k.guild_id, k.id, n, t);
+                    i = p.validateOptionValues(e, R.guild_id, R.id, n, t);
                 return {
                     values: n,
                     results: i
                 }
-            }, [k.guild_id, k.id, eC]), eT = l.useCallback(() => {
+            }, [R.guild_id, R.id, eC]), eT = l.useCallback(() => {
                 let e;
-                let t = $ ? u.default.getActiveCommand(k.id) : null;
+                let t = $ ? u.default.getActiveCommand(R.id) : null;
                 if (null != t && null != t.options) {
                     let l = eI(t, !1);
                     e = l.values;
@@ -161,14 +161,14 @@ function(e, t, n) {
                     mode: "raw",
                     ignoreTrailingEmptyNodes: !0
                 }), t, e)
-            }, [k.id, eC, Z, eI, $]);
-            (0, C.default)(t, eC, k, eT), (0, _.default)(eC, ep, G);
+            }, [R.id, eC, Z, eI, $]);
+            (0, C.default)(t, eC, R, eT), (0, _.default)(eC, ep, G);
             let {
                 handleKeyDown: e_,
                 handleKeyUp: ev
             } = (0, I.default)({
                 editor: eC,
-                channel: k,
+                channel: R,
                 disableEnterToSubmit: en,
                 onKeyDown: K,
                 onKeyUp: W,
@@ -195,13 +195,13 @@ function(e, t, n) {
             }, [eC, n, ey]), l.useEffect(() => {
                 let e = () => {
                     var e;
-                    let t = null !== (e = u.default.getActiveCommand(k.id)) && void 0 !== e ? e : null;
+                    let t = null !== (e = u.default.getActiveCommand(R.id)) && void 0 !== e ? e : null;
                     null !== t && null != t.options && eI(t, !0)
                 };
                 return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
-            }, [k, eC, eI]);
-            let eR = l.useCallback((e, t) => (0, g.default)(e, t), []),
-                ek = l.useCallback(e => (0, A.default)(eC, e, k.id), [k.id, eC]),
+            }, [R, eC, eI]);
+            let ek = l.useCallback((e, t) => (0, g.default)(e, t), []),
+                eR = l.useCallback(e => (0, A.default)(eC, e, R.id), [R.id, eC]),
                 eL = l.useCallback(e => (0, O.default)(e), []);
             return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(c.ComponentAction, {
@@ -209,13 +209,13 @@ function(e, t, n) {
                     handler: eA
                 }), (0, i.jsx)("div", {
                     ref: ep,
-                    className: s(L, R.slateContainer),
+                    className: s(L, k.slateContainer),
                     children: (0, i.jsx)(h.default, {
                         id: b,
                         editor: eC,
-                        channelId: k.id,
-                        guildId: k.guild_id,
-                        className: s(R.slateTextArea, w),
+                        channelId: R.id,
+                        guildId: R.guild_id,
+                        className: s(k.slateTextArea, w),
                         placeholder: U,
                         readOnly: eE,
                         spellCheck: Q,
@@ -228,8 +228,8 @@ function(e, t, n) {
                         onPaste: eN,
                         onKeyDown: e_,
                         onKeyUp: ev,
-                        decorateExtra: eR,
-                        renderExtraElement: ek,
+                        decorateExtra: ek,
+                        renderExtraElement: eR,
                         renderExtraLeaf: eL,
                         "aria-owns": el,
                         "aria-haspopup": es,

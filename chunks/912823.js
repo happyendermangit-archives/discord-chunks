@@ -32,9 +32,9 @@ function(e, t, n) {
         A = n("80921"),
         O = n("954016"),
         M = n("646718"),
-        R = n("350583");
+        k = n("350583");
 
-    function k(e) {
+    function R(e) {
         let {
             disabled: t,
             channel: n
@@ -122,7 +122,7 @@ function(e, t, n) {
                 }, {
                     autoTrackExposure: D.isDM()
                 }), t = D.isDM() && e;
-                !t && z.push((0, i.jsx)(k, {
+                !t && z.push((0, i.jsx)(R, {
                     disabled: U,
                     channel: D
                 }, "gift"))
@@ -141,7 +141,7 @@ function(e, t, n) {
             onClick: w,
             disabled: U || 0 === V.length && F && !H
         }, "submit")), 0 === z.length) ? null : (0, i.jsx)("div", {
-            className: R.buttons,
+            className: k.buttons,
             children: z
         })
     })
