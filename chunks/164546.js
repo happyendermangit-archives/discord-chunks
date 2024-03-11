@@ -5,7 +5,7 @@ function(e, t, n) {
             return E
         },
         DefaultThemeSelection: function() {
-            return v
+            return T
         },
         GradientThemeSelection: function() {
             return N
@@ -40,7 +40,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function v(e) {
         let {
             name: t,
             className: n,
@@ -72,7 +72,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e) {
+    function T(e) {
         let {
             theme: t,
             isSelected: n,
@@ -85,11 +85,11 @@ function(e, t, n) {
             systemPrefersColorScheme: _.ThemeTypes.LIGHT
         }, () => S.lightIcon).with({
             theme: _.ThemeTypes.LIGHT
-        }, () => S.lightIcon).otherwise(() => S.darkIcon), v = (0, s.match)(t).with(_.ThemeTypes.LIGHT, () => p.default.Messages.THEME_LIGHT).with(_.ThemeTypes.DARK, () => p.default.Messages.THEME_DARK).with("system", () => p.default.Messages.THEME_SYSTEM).exhaustive(), N = (0, c.useRedesignIconContext)().enabled;
-        return (0, i.jsx)(T, {
+        }, () => S.lightIcon).otherwise(() => S.darkIcon), T = (0, s.match)(t).with(_.ThemeTypes.LIGHT, () => p.default.Messages.THEME_LIGHT).with(_.ThemeTypes.DARK, () => p.default.Messages.THEME_DARK).with("system", () => p.default.Messages.THEME_SYSTEM).exhaustive(), N = (0, c.useRedesignIconContext)().enabled;
+        return (0, i.jsx)(v, {
             onSelect: a,
             isSelected: n,
-            name: v,
+            name: T,
             className: l(S.defaultThemeSelection, E),
             children: "system" === t && (0, i.jsx)("div", {
                 className: S.iconWrapper,
@@ -117,7 +117,7 @@ function(e, t, n) {
             colors: r,
             angle: u
         });
-        return (0, i.jsx)(T, {
+        return (0, i.jsx)(v, {
             onSelect: a ? void 0 : o,
             isSelected: n,
             name: t.getName(),

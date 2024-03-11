@@ -45,7 +45,7 @@ function(e, t, n) {
                 label: "Setting ".concat(a.length, " to mentions-only since they were all-messages and we are unmuting the guild"),
                 debug: a.map(e => "\n    - #".concat(e.name)).join(""),
                 apply: (e, t) => {
-                    for (let n of a) T(e, t, n.id, e => {
+                    for (let n of a) v(e, t, n.id, e => {
                         e.message_notifications = _.UserNotificationSettings.ONLY_MENTIONS
                     })
                 }
@@ -75,7 +75,7 @@ function(e, t, n) {
                 label: "Setting ".concat(i.length, " announcement channels to white-dot"),
                 debug: i.map(e => "\n    - #".concat(e.name)).join(""),
                 apply: (e, t) => {
-                    for (let n of i) v(e, t, n.id, !0)
+                    for (let n of i) T(e, t, n.id, !0)
                 }
             }), t
         }(S)), p.push(... function(e) {
@@ -89,7 +89,7 @@ function(e, t, n) {
                 label: "Unmuting ".concat(n.length, " categories and setting to grey-dot"),
                 debug: n.map(e => "\n    - #".concat(e.name)).join(""),
                 apply: (e, t) => {
-                    for (let i of n) v(e, t, i.id, !1), T(e, t, i.id, e => {
+                    for (let i of n) T(e, t, i.id, !1), v(e, t, i.id, e => {
                         e.muted = !1, e.mute_config = null
                     })
                 }
@@ -106,13 +106,13 @@ function(e, t, n) {
                 label: "Setting ".concat(n.length, " channels to white-dot since they were explicitly All Messages"),
                 debug: n.map(e => "\n    - #".concat(e.name)).join(""),
                 apply: (e, t) => {
-                    for (let i of n) v(e, t, i.id, !0)
+                    for (let i of n) T(e, t, i.id, !0)
                 }
             }), i.length > 0 && t.push({
                 label: "Setting ".concat(i.length, " channels to grey-dot since they were explicitly Mentions Only"),
                 debug: i.map(e => "\n    - #".concat(e.name)).join(""),
                 apply: (e, t) => {
-                    for (let n of i) v(e, t, n.id, !1)
+                    for (let n of i) T(e, t, n.id, !1)
                 }
             }), t
         }(S)), r.default.hasConsented(_.Consents.PERSONALIZATION) ? p.push(... function(e, t, n, i, l) {
@@ -141,7 +141,7 @@ function(e, t, n) {
                 label: "Setting ".concat(g.length, " channels to white-dot since they are recent and frequently viewed"),
                 debug: g.map(e => "\n    - #".concat(e.name, " (").concat(JSON.stringify(u[e.id]), ")")).join(""),
                 apply: (e, t) => {
-                    for (let n of g) v(e, t, n.id, !0)
+                    for (let n of g) T(e, t, n.id, !0)
                 }
             }), m.length > 0 && _.push({
                 label: "NOT setting ".concat(m.length, " channels to white-dot because they were only viewed a little."),
@@ -163,7 +163,7 @@ function(e, t, n) {
                 label: "Setting ".concat(r.length, " channels to white-dot since they are recent and frequently viewed"),
                 debug: r.map(e => "\n    - #".concat(e.name)).join(""),
                 apply: (e, t) => {
-                    for (let n of r) v(e, t, n.id, !0)
+                    for (let n of r) T(e, t, n.id, !0)
                 }
             }), i
         }(e, S)), p.filter(m.isNotNullish)
@@ -174,15 +174,15 @@ function(e, t, n) {
         e.flags = (0, g.setFlag)(null !== (a = null !== (i = e.flags) && void 0 !== i ? i : t.flags) && void 0 !== a ? a : 0, p.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, n), e.flags = (0, g.setFlag)(e.flags, p.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !n)
     }
 
-    function T(e, t, n, i) {
+    function v(e, t, n, i) {
         var l, s, o, r;
         let u = null !== (o = null === (l = e.channel_overrides) || void 0 === l ? void 0 : l[n]) && void 0 !== o ? o : {},
             d = null !== (r = null === (s = t.channel_overrides) || void 0 === s ? void 0 : s[n]) && void 0 !== r ? r : {};
         i(u, d), !a.isEmpty(u) && (null == e.channel_overrides && (e.channel_overrides = {}), e.channel_overrides[n] = u)
     }
 
-    function v(e, t, n, i) {
-        T(e, t, n, (e, t) => {
+    function T(e, t, n, i) {
+        v(e, t, n, (e, t) => {
             var n, a;
             e.flags = (0, g.setFlag)(null !== (a = null !== (n = e.flags) && void 0 !== n ? n : t.flags) && void 0 !== a ? a : 0, p.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES, i), e.flags = (0, g.setFlag)(e.flags, p.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !i)
         })

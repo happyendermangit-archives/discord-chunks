@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useGuildMigrationSteps: function() {
-            return L
+            return x
         },
         hasGoodCandidateServers: function() {
-            return G
+            return L
         },
         autoMigrateToNewSystem: function() {
-            return U
+            return G
         },
         useSaveSettings: function() {
-            return x
+            return U
         },
         revertToOldSystem: function() {
             return B
         },
         transformUsageData: function() {
-            return K
+            return V
         }
     }), n("222007"), n("702976"), n("808653"), n("70102");
     var i = n("884691"),
@@ -37,8 +37,8 @@ function(e, t, n) {
         p = n("305961"),
         S = n("677099"),
         E = n("282109"),
-        T = n("599110"),
-        v = n("568734"),
+        v = n("599110"),
+        T = n("568734"),
         N = n("449008"),
         I = n("286235"),
         y = n("299039"),
@@ -47,12 +47,12 @@ function(e, t, n) {
         A = n("287223"),
         b = n("76618"),
         M = n("380353"),
-        P = n("49111"),
-        R = n("133335"),
-        w = n("397336"),
+        w = n("49111"),
+        P = n("133335"),
+        R = n("397336"),
         D = n("782340");
 
-    function L(e, t) {
+    function x(e, t) {
         let [n, a] = i.useState(M.defaultThresholds), [o, r] = i.useState({});
         (0, g.useFrecencySettings)();
         let u = (0, s.useStateFromStoresArray)([p.default], () => Object.values(p.default.getGuilds())),
@@ -60,7 +60,7 @@ function(e, t, n) {
                 let i = {};
                 for (let a of u) i[a.id] = function(e, t, n, i, a) {
                     var l;
-                    let [s, o, r] = m.default.hasConsented(P.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(e, t, n, i, !0) : (0, A.guessGuildModeWithLocalData)(e, n), u = null !== (l = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== l ? l : {}, d = (0, O.default)(e, null != a ? a : s, u, i, t);
+                    let [s, o, r] = m.default.hasConsented(w.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(e, t, n, i, !0) : (0, A.guessGuildModeWithLocalData)(e, n), u = null !== (l = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== l ? l : {}, d = (0, O.default)(e, null != a ? a : s, u, i, t);
                     return {
                         guildId: e.id,
                         mode: s,
@@ -122,31 +122,31 @@ function(e, t, n) {
         }
     }
 
-    function G(e, t) {
+    function L(e, t) {
         return Object.values(p.default.getGuilds()).some(n => {
-            let [i] = m.default.hasConsented(P.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(n, M.defaultThresholds, e, t, !1) : (0, A.guessGuildModeWithLocalData)(n, e);
+            let [i] = m.default.hasConsented(w.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(n, M.defaultThresholds, e, t, !1) : (0, A.guessGuildModeWithLocalData)(n, e);
             return i === M.Mode.UseGreyDot
         })
     }
 
-    function U() {
+    function G() {
         let e = Object.values(p.default.getGuilds()),
             t = {};
         for (let a of e) {
             var n, i;
             let e = null !== (n = E.default.getAllSettings().userGuildSettings[a.id]) && void 0 !== n ? n : {},
                 l = null !== (i = e.flags) && void 0 !== i ? i : 0;
-            l = (0, v.setFlag)(l, w.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, !0), l = (0, v.setFlag)(l, w.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !1), t[a.id] = {
+            l = (0, T.setFlag)(l, R.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, !0), l = (0, T.setFlag)(l, R.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !1), t[a.id] = {
                 flags: l
             }
         }
-        k(t), T.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
+        k(t), v.default.track(w.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
             auto_migrated: !0,
             num_unread_guids_after: e.filter(e => _.default.hasUnread(e.id)).length
         })
     }
 
-    function x(e) {
+    function U(e) {
         let [t, n] = i.useState(!1), [a, l] = i.useState(!1), s = i.useCallback(async t => {
             if (a) throw Error("Already submitted notifications migration");
             n(!0);
@@ -186,7 +186,7 @@ function(e, t, n) {
                     unmuted_server_ids: t.filter(e => E.default.isMuted(e.plan.guildId)).map(e => e.plan.guildId)
                 };
             return () => {
-                T.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
+                v.default.track(w.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
                     ...n,
                     auto_migrated: !0,
                     pre_selected_server_ids: Object.values(e).filter(e => e.mode === M.Mode.UseGreyDot).map(e => e.guildId),
@@ -268,8 +268,8 @@ function(e, t, n) {
         } else(0, C.takeSnapshot)("Backup from ".concat(new Date().toLocaleDateString()))
     }
     async function B() {
-        o.default.set("turnedOffNewNotifications", !0), T.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
-            num_guilds_with_new_setting: Object.values(p.default.getGuilds()).filter(e => E.default.resolveGuildUnreadSetting(e) === R.UnreadSetting.ONLY_MENTIONS).length
+        o.default.set("turnedOffNewNotifications", !0), v.default.track(w.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
+            num_guilds_with_new_setting: Object.values(p.default.getGuilds()).filter(e => E.default.resolveGuildUnreadSetting(e) === P.UnreadSetting.ONLY_MENTIONS).length
         });
         let e = await (0, C.listSnapshots)(),
             t = l.sortBy(e, e => new Date(e.recorded_at).getTime());
@@ -285,7 +285,7 @@ function(e, t, n) {
         } else await d.default.setAccountFlag(b.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
     }
 
-    function K(e) {
+    function V(e) {
         var t, n, i;
         if (null == e) return [];
         let a = l.keyBy(null !== (t = e.voice_joins) && void 0 !== t ? t : [], "channel_id"),

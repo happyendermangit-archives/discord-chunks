@@ -35,18 +35,18 @@ function(e, t, n) {
                 var t;
                 return Number(null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0)
             }),
-            T = f("six month", i, m, e => {
+            v = f("six month", i, m, e => {
                 var t;
                 return Number(null !== (t = e.num_six_month_opens) && void 0 !== t ? t : 0)
             }),
-            v = [S, E, T, p],
+            T = [S, E, v, p],
             N = 0,
             I = 0;
         m.forEach(e => {
             var t;
             N++, I += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0
         });
-        let y = "\n**Pain**:\n- Everyones: ".concat(d.PainLevel[null !== (o = h.everyones) && void 0 !== o ? o : 0], "\n- Messages: ").concat(d.PainLevel[null !== (u = h.messages) && void 0 !== u ? u : 0], "\n- Size: ").concat(_, "\n**Remote**:\n- Channels: ").concat(N, "\n- AllVisits: ").concat(v.map(e => e.totalOpensAcrossAllServers).join(" / "), "\n- GuildVisits: ").concat(v.map(e => e.guildOpens).join(" / "), "\n- Biggest Channel (abs): ").concat(v.map(e => e.biggestChannel).join(" / "), "\n- Biggest Channel (%): ").concat(v.map(e => e.biggestChannelFormatted).join(" / "), "\n- Sent Msgs: ").concat(I, "\n"),
+        let y = "\n**Pain**:\n- Everyones: ".concat(d.PainLevel[null !== (o = h.everyones) && void 0 !== o ? o : 0], "\n- Messages: ").concat(d.PainLevel[null !== (u = h.messages) && void 0 !== u ? u : 0], "\n- Size: ").concat(_, "\n**Remote**:\n- Channels: ").concat(N, "\n- AllVisits: ").concat(T.map(e => e.totalOpensAcrossAllServers).join(" / "), "\n- GuildVisits: ").concat(T.map(e => e.guildOpens).join(" / "), "\n- Biggest Channel (abs): ").concat(T.map(e => e.biggestChannel).join(" / "), "\n- Biggest Channel (%): ").concat(T.map(e => e.biggestChannelFormatted).join(" / "), "\n- Sent Msgs: ").concat(I, "\n"),
             C = E.guildOpens >= .02 * E.totalOpensAcrossAllServers,
             O = (null !== (c = p.guildOpens) && void 0 !== c ? c : 0) > 0;
         if (h.messages === d.PainLevel.High) {

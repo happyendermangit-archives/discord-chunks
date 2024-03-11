@@ -307,6 +307,12 @@ function(e, t, n) {
                 type: "OVERLAY_NOTIFY_READY_TO_SHOW",
                 pid: e
             })
+        },
+        successfullyShown(e) {
+            s.default.dispatch({
+                type: "OVERLAY_SUCCESSFULLY_SHOWN",
+                pid: e
+            })
         }
     };
     var h = _
