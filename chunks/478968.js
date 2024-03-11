@@ -30,16 +30,16 @@ function(e, t, n) {
                 skuIDs: [_],
                 paymentSourceId: m,
                 isGift: !1
-            }), T = (0, u.usePremiumDiscountOffer)(), [I, C] = (0, o.useSubscriptionInvoicePreview)({
+            }), I = (0, u.usePremiumDiscountOffer)(), [T, C] = (0, o.useSubscriptionInvoicePreview)({
                 items: [{
                     planId: e,
                     quantity: 1
                 }],
                 renewal: !0,
-                preventFetch: !(null != T),
+                preventFetch: !(null != I),
                 paymentSourceId: m,
                 currency: E.currency
-            }), p = null == I ? void 0 : null === (f = I.invoiceItems) || void 0 === f ? void 0 : null === (d = f.find(t => t.subscriptionPlanId === e)) || void 0 === d ? void 0 : null === (n = d.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount, S = (0, a.getPrice)(e, !1, !1, E);
+            }), p = null == T ? void 0 : null === (f = T.invoiceItems) || void 0 === f ? void 0 : null === (d = f.find(t => t.subscriptionPlanId === e)) || void 0 === d ? void 0 : null === (n = d.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount, S = (0, a.getPrice)(e, !1, !1, E);
             return (0, s.formatPrice)(S.amount - (null != p ? p : 0), S.currency)
         },
         f = (e, t, n) => {
@@ -50,13 +50,13 @@ function(e, t, n) {
                 isGift: !1,
                 activeSubscription: null
             }), E = (0, a.castPremiumSubscriptionAsSkuId)(c.SubscriptionPlanInfo[t].skuId), {
-                priceOptions: T
+                priceOptions: I
             } = (0, i.default)({
                 activeSubscription: null,
                 skuIDs: [E],
                 paymentSourceId: _,
                 isGift: !1
-            }), [I, C] = (0, o.useSubscriptionInvoicePreview)({
+            }), [T, C] = (0, o.useSubscriptionInvoicePreview)({
                 subscriptionId: e.id,
                 items: [{
                     planId: t,
@@ -65,9 +65,9 @@ function(e, t, n) {
                 renewal: !0,
                 preventFetch: !(null != n),
                 paymentSourceId: _,
-                currency: T.currency,
+                currency: I.currency,
                 userDiscountOfferId: null == n ? void 0 : n.id
-            }), p = null == I ? void 0 : null === (m = I.invoiceItems) || void 0 === m ? void 0 : null === (f = m.find(e => e.subscriptionPlanId === t)) || void 0 === f ? void 0 : null === (d = f.discounts) || void 0 === d ? void 0 : null === (u = d.find(e => e.type === r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === u ? void 0 : u.amount, S = (0, a.getPrice)(t, !1, !1, T);
+            }), p = null == T ? void 0 : null === (m = T.invoiceItems) || void 0 === m ? void 0 : null === (f = m.find(e => e.subscriptionPlanId === t)) || void 0 === f ? void 0 : null === (d = f.discounts) || void 0 === d ? void 0 : null === (u = d.find(e => e.type === r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === u ? void 0 : u.amount, S = (0, a.getPrice)(t, !1, !1, I);
             return (0, s.formatPrice)(S.amount - (null != p ? p : 0), S.currency)
         }
 }

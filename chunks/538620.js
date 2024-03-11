@@ -8,7 +8,7 @@ function(e, t, n) {
             return E
         },
         default: function() {
-            return T
+            return I
         }
     });
     var r = n("872717"),
@@ -80,7 +80,7 @@ function(e, t, n) {
             })
         }
     }
-    var T = {
+    var I = {
         fetchActiveOutboundPromotions: _,
         dismissOutboundPromotionNotice: function() {
             l.default.dispatch({

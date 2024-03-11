@@ -24,7 +24,7 @@ function(e, t, n) {
         } = e, {
             avatarSrc: _,
             isAvatarAnimating: E,
-            eventHandlers: T
+            eventHandlers: I
         } = (0, s.useAnimatedAvatarSrc)({
             user: t,
             guildId: n,
@@ -33,7 +33,7 @@ function(e, t, n) {
             animateOnHover: d,
             avatarOverride: m
         }), {
-            avatarPlaceholderSrc: I,
+            avatarPlaceholderSrc: T,
             avatarDecorationSrc: C,
             eventHandlers: p
         } = (0, a.default)({
@@ -45,12 +45,12 @@ function(e, t, n) {
             avatarDecorationOverride: f,
             showTryItOut: c
         }), S = r.useCallback(() => {
-            T.onMouseEnter(), p.onMouseEnter()
-        }, [T, p]), P = r.useCallback(() => {
-            T.onMouseLeave(), p.onMouseLeave()
-        }, [T, p]);
+            I.onMouseEnter(), p.onMouseEnter()
+        }, [I, p]), P = r.useCallback(() => {
+            I.onMouseLeave(), p.onMouseLeave()
+        }, [I, p]);
         return {
-            avatarPlaceholderSrc: I,
+            avatarPlaceholderSrc: T,
             avatarDecorationSrc: C,
             avatarSrc: _,
             isAnimating: E,

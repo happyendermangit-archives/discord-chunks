@@ -45,8 +45,11 @@ function(e, t, n) {
     }
 
     function m() {
-        let e = f(u.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID),
-            t = f(u.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID);
-        return null != e ? e : t
+        var e, t;
+        let n = f(u.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID),
+            r = f(u.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID),
+            i = f(u.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID),
+            l = f(u.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID);
+        return null !== (t = null !== (e = null != n ? n : r) && void 0 !== e ? e : i) && void 0 !== t ? t : l
     }
 }

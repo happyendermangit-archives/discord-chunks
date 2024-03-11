@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return T
         }
     }), n("222007");
     var r = n("446674"),
@@ -35,7 +35,7 @@ function(e, t, n) {
         var e, t, n;
         m = null !== (n = null === (t = l.default.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null
     }
-    class T extends r.default.PersistedStore {
+    class I extends r.default.PersistedStore {
         initialize(e) {
             null != e && (s = e), this.waitFor(l.default), this.syncWith([l.default], E)
         }
@@ -73,8 +73,8 @@ function(e, t, n) {
             return s
         }
     }
-    T.displayName = "PromotionsStore", T.persistKey = "PromotionsPersistedStore";
-    var I = new T(i.default, {
+    I.displayName = "PromotionsStore", I.persistKey = "PromotionsPersistedStore";
+    var T = new I(i.default, {
         ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: function(e) {
             let {
                 activeOutboundPromotions: t,

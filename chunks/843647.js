@@ -20,16 +20,16 @@ function(e, t, n) {
             autoTrackExposure: t,
             experiment: n,
             location: f
-        } = e, m = (0, r.useStateFromStores)([i.default], () => i.default.getCurrentUser()), _ = (0, c.usePremiumTrialOffer)(), E = null != _, T = null != m && (0, a.isPremium)(m);
+        } = e, m = (0, r.useStateFromStores)([i.default], () => i.default.getCurrentUser()), _ = (0, c.usePremiumTrialOffer)(), E = null != _, I = null != m && (0, a.isPremium)(m);
         (0, s.useMaybeFetchPremiumLikelihood)(n);
         let {
-            enabled: I,
+            enabled: T,
             useExpectedValue: C,
             useLikelihood: p
         } = n.useExperiment({
             location: null != f ? f : "1"
         }, {
-            autoTrackExposure: !T && !E && t
+            autoTrackExposure: !I && !E && t
         }), {
             premiumLikelihood: S,
             fetched: P
@@ -39,23 +39,23 @@ function(e, t, n) {
                 fetched: e.fetched,
                 premiumLikelihood: e.premiumLikelihood
             }
-        }), R = (0, r.useStateFromStores)([l.default], () => l.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), L = !T && I && !E && (C ? !P || !R : !P), O = d.PremiumTypes.TIER_2;
+        }), R = (0, r.useStateFromStores)([l.default], () => l.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), O = !I && T && !E && (C ? !P || !R : !P), L = d.PremiumTypes.TIER_2;
         if (E) {
             let e = _.subscription_trial;
-            (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? O = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (O = d.PremiumTypes.TIER_2)
-        } else if (!T && !L && I) {
+            (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? L = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (L = d.PremiumTypes.TIER_2)
+        } else if (!I && !O && T) {
             if (C) {
                 let {
                     amount: e
                 } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
                     amount: t
                 } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
-                O = (0, u.getHigherExpectedValue)(S, e, t)
-            } else p && (O = (0, u.getHighestLikelihood)(S))
+                L = (0, u.getHigherExpectedValue)(S, e, t)
+            } else p && (L = (0, u.getHighestLikelihood)(S))
         }
         return {
-            isLoading: L,
-            suggestedPremiumType: O
+            isLoading: O,
+            suggestedPremiumType: L
         }
     }
 }

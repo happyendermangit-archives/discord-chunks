@@ -5,10 +5,10 @@ function(e, t, n) {
             return E
         },
         useHasDiscountApplied: function() {
-            return T
+            return I
         },
         useActiveDiscountInfo: function() {
-            return I
+            return T
         },
         useFetchChurnUserDiscountOffer: function() {
             return p
@@ -34,21 +34,22 @@ function(e, t, n) {
         let e = (0, f.usePremiumTrialOffer)(),
             t = (0, u.useHasActiveTrial)(),
             n = (0, d.usePremiumDiscountOffer)(),
-            r = T();
+            r = I();
         return null != e || t || null != n || r
     }
-    let T = () => {
+    let I = () => {
             var e;
             let t = (0, a.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
                 n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
             return null != n && l(Date.now()) <= l(n)
         },
-        I = () => {
+        T = () => {
             var e;
             let t = (0, a.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
                 n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id;
             switch (n) {
                 case m.PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID:
+                case m.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID:
                     return {
                         duration: 1, percentage: 30
                     };
@@ -57,6 +58,10 @@ function(e, t, n) {
                 case m.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID:
                     return {
                         duration: 3, percentage: 30
+                    };
+                case m.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID:
+                    return {
+                        duration: 1, percentage: 40
                     };
                 default:
                     return
@@ -96,7 +101,7 @@ function(e, t, n) {
                 location: "useShouldFetchChurnOffer"
             }, {
                 autoTrackExposure: !1
-            }), t = (0, a.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()), n = T(), r = null !== t && t.hasPremiumNitroMonthly, i = null != t && null != t.trialId;
+            }), t = (0, a.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()), n = I(), r = null !== t && t.hasPremiumNitroMonthly, i = null != t && null != t.trialId;
             return e && r && !i && !n
         }
 }

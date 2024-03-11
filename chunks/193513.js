@@ -48,9 +48,9 @@ function(e, t, n) {
             aspectRatio: n,
             placeholder: _,
             placeholderVersion: E,
-            placeholderStyle: T,
-            children: I
-        } = e, C = t === u.ImageReadyStates.LOADING, [p] = i.useState(() => Date.now()), [S] = i.useState(C), [P, R] = i.useState(!1), L = i.useMemo(() => {
+            placeholderStyle: I,
+            children: T
+        } = e, C = t === u.ImageReadyStates.LOADING, [p] = i.useState(() => Date.now()), [S] = i.useState(C), [P, R] = i.useState(!1), O = i.useMemo(() => {
             if (S && 1 === E && null != _) {
                 let e = Uint8Array.from(atob(_), e => e.charCodeAt(0)),
                     t = (0, o.thumbHashToRGBA)(e, {
@@ -69,21 +69,21 @@ function(e, t, n) {
                 clearTimeout(e)
             }
         }, [S]);
-        let O = t === u.ImageReadyStates.READY && Date.now() - p < 200,
-            M = (0, l.useTransition)(C && null != L, O ? f : d),
+        let L = t === u.ImageReadyStates.READY && Date.now() - p < 200,
+            M = (0, l.useTransition)(C && null != O, L ? f : d),
             g = (0, l.useTransition)(C && P, m);
         return (0, r.jsxs)("div", {
             className: c.loadingOverlay,
             style: {
                 aspectRatio: n
             },
-            children: [I, M((e, t) => t && (0, r.jsx)(l.animated.img, {
+            children: [T, M((e, t) => t && (0, r.jsx)(l.animated.img, {
                 style: {
-                    ...T,
+                    ...I,
                     ...e
                 },
                 className: c.imagePlaceholder,
-                src: L,
+                src: O,
                 alt: ""
             })), g((e, t) => t && (0, r.jsx)(l.animated.div, {
                 style: e,

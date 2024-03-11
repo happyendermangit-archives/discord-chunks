@@ -8,7 +8,7 @@ function(e, t, n) {
             return E
         },
         useBogoPromotion: function() {
-            return T
+            return I
         }
     }), n("222007");
     var r = n("884691"),
@@ -39,8 +39,8 @@ function(e, t, n) {
             t = m(),
             n = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
             _ = (0, o.useHasActiveTrial)(),
-            [E, T] = r.useState(!1),
-            [I, C] = r.useState([]);
+            [E, I] = r.useState(!1),
+            [T, C] = r.useState([]);
         r.useEffect(() => {
             null != e && l.default.wait(() => c.default.markOutboundPromotionsSeen())
         }, [e]);
@@ -60,9 +60,9 @@ function(e, t, n) {
         }, [e, S]), r.useEffect(() => {
             l.default.wait(() => {
                 (0, u.fetchClaimedOutboundPromotionCodes)().then(e => {
-                    C(e), T(!0)
+                    C(e), I(!0)
                 }).catch(() => {
-                    C([]), T(!0)
+                    C([]), I(!0)
                 })
             })
         }, []);
@@ -71,24 +71,24 @@ function(e, t, n) {
                 code: e,
                 promotion: t
             }
-            of I) P[t.id] = e;
+            of T) P[t.id] = e;
         let R = new Set(t.map(e => {
                 let {
                     id: t
                 } = e;
                 return t
             })),
-            L = I.filter(e => {
+            O = T.filter(e => {
                 let {
                     promotion: t
                 } = e;
                 return !R.has(t.id)
             }),
-            O = E && (!S || null != e);
+            L = E && (!S || null != e);
         return {
-            promotionsLoaded: O,
+            promotionsLoaded: L,
             activeOutboundPromotions: t.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e) && (!_ || (0, u.isTrialUserEligibleToSeeOutboundPromotion)(e, P))),
-            claimedEndedOutboundPromotions: L.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e.promotion)),
+            claimedEndedOutboundPromotions: O.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e.promotion)),
             claimedOutboundPromotionCodeMap: P,
             addClaimedOutboundPromotionCode: p
         }
@@ -111,7 +111,7 @@ function(e, t, n) {
         return l.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e))
     }
 
-    function T() {
+    function I() {
         let e = (0, i.useStateFromStores)([d.default], () => d.default.bogoPromotion);
         return {
             promotion: e

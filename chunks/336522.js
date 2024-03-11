@@ -32,23 +32,23 @@ function(e, t, n) {
             icons: m,
             fileSize: _,
             onClose: E
-        } = e, T = (0, u.useUID)(), I = null != m ? m : d.DEFAULT_FILE_UPLOAD_ICONS;
+        } = e, I = (0, u.useUID)(), T = null != m ? m : d.DEFAULT_FILE_UPLOAD_ICONS;
         return i ? (0, r.jsx)(o.default, {
             transitionState: a,
             onClose: E,
             fileSize: _
         }) : (0, r.jsx)(s.ModalRoot, {
             size: s.ModalSize.DYNAMIC,
-            "aria-labelledby": T,
+            "aria-labelledby": I,
             transitionState: a,
             children: (0, r.jsx)("div", {
                 className: l(f.uploadDropModal, f.error),
                 children: (0, r.jsxs)("div", {
                     className: f.inner,
                     children: [(0, r.jsx)(c.default, {
-                        icons: I
+                        icons: T
                     }), (0, r.jsx)("div", {
-                        id: T,
+                        id: I,
                         className: f.title,
                         children: t
                     }), (0, r.jsx)("div", {

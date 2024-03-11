@@ -28,14 +28,14 @@ function(e, t, n) {
                 className: d.priceSpinner
             });
             let E = o.default.getForSkuAndInterval((0, u.castPremiumSubscriptionAsSkuId)(t), n),
-                T = null != E ? (0, u.getFormattedPriceForPlan)(E, void 0, !1, f) : null;
+                I = null != E ? (0, u.getFormattedPriceForPlan)(E, void 0, !1, f) : null;
             return (0, r.jsxs)(s.Heading, {
                 color: "always-white",
                 variant: null != m ? m : "heading-md/medium",
                 className: l(d.pricePerInterval, i),
                 children: [(0, r.jsx)("span", {
                     className: d.price,
-                    children: T
+                    children: I
                 }), " / ", (0, u.getIntervalStringAsNoun)(n)]
             })
         }

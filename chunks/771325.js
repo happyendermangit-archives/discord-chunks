@@ -11,10 +11,10 @@ function(e, t, n) {
             return E
         },
         getPreviewNickname: function() {
-            return T
+            return I
         },
         getPreviewDisplayName: function() {
-            return I
+            return T
         },
         isColorDark: function() {
             return C
@@ -74,11 +74,11 @@ function(e, t, n) {
         return a && null == t ? s.default.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, l) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, l)
     }
 
-    function T(e, t) {
+    function I(e, t) {
         return "" === e ? null : null != e ? e : t
     }
 
-    function I(e, t) {
+    function T(e, t) {
         return "" === e ? null : null != e ? e : t
     }
 
