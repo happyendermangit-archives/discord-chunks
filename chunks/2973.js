@@ -18,12 +18,24 @@ function(e, t, n) {
         _ = new Map;
 
     function h(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+            updateProgress: !1
+        };
         a = new Map(a);
-        let n = a.get(e);
-        null != n && a.set(e, {
-            ...n,
-            ...t
-        })
+        let i = a.get(e);
+        if (null != i) {
+            var s;
+            let r = null === (s = i.userStatus) || void 0 === s ? void 0 : s.streamProgressSeconds,
+                o = {
+                    ...i,
+                    ...t
+                },
+                l = n.updateProgress || null == o.userStatus || null == r || null != o.userStatus.completedAt || null == o.userStatus.enrolledAt;
+            !l && null != o.userStatus && (o.userStatus = {
+                ...o.userStatus,
+                streamProgressSeconds: r
+            }), a.set(e, o)
+        }
     }
 
     function E(e, t) {
@@ -109,6 +121,8 @@ function(e, t, n) {
             } = e;
             h(t, {
                 userStatus: i
+            }, {
+                updateProgress: !0
             }), g(n)
         },
         QUESTS_SEND_HEARTBEAT_FAILURE: function(e) {
@@ -226,6 +240,8 @@ function(e, t, n) {
             } = e;
             h(t.questId, {
                 userStatus: t
+            }, {
+                updateProgress: !0
             })
         }
     })
