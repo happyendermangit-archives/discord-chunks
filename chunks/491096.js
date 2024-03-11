@@ -30,5 +30,5 @@ function(e, t, n) {
         u = 300,
         d = 55,
         c = 3;
-    (s = i || (i = {}))[s.ONE_HOUR = 1] = "ONE_HOUR", s[s.ONE_DAY = 24] = "ONE_DAY", s[s.THREE_DAYS = 72] = "THREE_DAYS", s[s.SEVEN_DAYS = 168] = "SEVEN_DAYS", r.ExpressionPickerViewType.GIF, r.ExpressionPickerViewType.EMOJI
+    (s = i || (i = {}))[s.ONE_HOUR = 1] = "ONE_HOUR", s[s.FOUR_HOURS = 4] = "FOUR_HOURS", s[s.EIGHT_HOURS = 8] = "EIGHT_HOURS", s[s.ONE_DAY = 24] = "ONE_DAY", s[s.THREE_DAYS = 72] = "THREE_DAYS", s[s.SEVEN_DAYS = 168] = "SEVEN_DAYS", r.ExpressionPickerViewType.GIF, r.ExpressionPickerViewType.EMOJI
 }
