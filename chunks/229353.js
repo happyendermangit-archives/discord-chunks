@@ -16557,7 +16557,6 @@ function(e, _, E) {
         STRANGER_DANGER_THUMBS_UP_A11Y: "Vote yes (thumbs up)",
         STRANGER_DANGER_THUMBS_DOWN_A11Y: "Vote no (thumbs down)",
         STRANGER_DANGER_FEEDBACK_CONFIRM: "Thanks for your feedback!",
-        STRANGER_DANGER_CONTEXT_MENU_CLEAR: "Reset Safety Warnings (Experimental)",
         INAPPROPRIATE_CONVERSATION_TAKEOVER_HEADER: "This conversation may not be safe",
         INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION: "It looks like {username} is saying things that could put your safety at risk. Take action to protect yourself.",
         INAPPROPRIATE_CONVERSATION_TAKE_ACTION: "Take action",

@@ -155,7 +155,7 @@ function(_, E, I) {
             return _F
         },
         LocalizedLinks: function() {
-            return _v
+            return _W
         },
         AppRoutes: function() {
             return _k
@@ -197,7 +197,7 @@ function(_, E, I) {
             return _J
         }
     }), I("222007");
-    var e, a, o, R, t, A, T, r, N, i, c, O, n, L, D, S, C, l, s, P, M, G, U, d, u, p, B, g, H, f, h, y, Y, w, b, m, K, V, F, v, W, k, x, X, Q, J, Z, j, z, q, $, __, _E, _I, _e, _a, _o, _R = I("543721"),
+    var e, a, o, R, t, A, T, r, N, i, c, O, n, L, D, S, C, l, s, P, M, G, U, d, u, p, B, g, H, f, h, y, Y, w, b, m, K, V, F, W, v, k, x, X, Q, J, Z, j, z, q, $, __, _E, _I, _e, _a, _o, _R = I("543721"),
         _t = I("316693"),
         _A = I("447669");
     I("927003");
@@ -279,10 +279,10 @@ function(_, E, I) {
         _U = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
         _d = new Set([6]),
         _u = new Set([4]);
-    (K = r || (r = {}))[K.NEW = 1] = "NEW", (V = N || (N = {}))[V.PENDING = 0] = "PENDING", V[V.COMPLETED = 1] = "COMPLETED", V[V.FAILED = 2] = "FAILED", V[V.REVERSED = 3] = "REVERSED", V[V.REFUNDED = 4] = "REFUNDED", V[V.CANCELED = 5] = "CANCELED", (F = i || (i = {}))[F.PREMIUM = 1] = "PREMIUM", F[F.GUILD = 2] = "GUILD", F[F.APPLICATION = 3] = "APPLICATION", (v = c || (c = {})).PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED", v.VENMO_APP_CANCELED = "VENMO_APP_CANCELED", v.VENMO_CANCELED = "VENMO_CANCELED", Object.freeze({
+    (K = r || (r = {}))[K.NEW = 1] = "NEW", (V = N || (N = {}))[V.PENDING = 0] = "PENDING", V[V.COMPLETED = 1] = "COMPLETED", V[V.FAILED = 2] = "FAILED", V[V.REVERSED = 3] = "REVERSED", V[V.REFUNDED = 4] = "REFUNDED", V[V.CANCELED = 5] = "CANCELED", (F = i || (i = {}))[F.PREMIUM = 1] = "PREMIUM", F[F.GUILD = 2] = "GUILD", F[F.APPLICATION = 3] = "APPLICATION", (W = c || (c = {})).PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED", W.VENMO_APP_CANCELED = "VENMO_APP_CANCELED", W.VENMO_CANCELED = "VENMO_CANCELED", Object.freeze({
         CONSTANT: 1,
         APPLE_STICKER: 2
-    }), (W = O || (O = {}))[W.DISCOVERY = 0] = "DISCOVERY", W[W.CHECKOUT = 1] = "CHECKOUT", (k = n || (n = {}))[k.SUBSCRIPTION = 0] = "SUBSCRIPTION", k[k.ONE_TIME = 1] = "ONE_TIME";
+    }), (v = O || (O = {}))[v.DISCOVERY = 0] = "DISCOVERY", v[v.CHECKOUT = 1] = "CHECKOUT", (k = n || (n = {}))[k.SUBSCRIPTION = 0] = "SUBSCRIPTION", k[k.ONE_TIME = 1] = "ONE_TIME";
     let _p = Object.freeze({
         0: "subscription",
         1: "sku"
@@ -382,13 +382,13 @@ function(_, E, I) {
             TWITTER_SUPPORT: "https://twitter.com/discord_support",
             QUESTS: "/quests"
         },
-        _v = Object.freeze({
+        _W = Object.freeze({
             TWITTER: Object.freeze({
                 default: "https://twitter.com/discord",
                 ja: "https://twitter.com/discord_jp"
             })
         }),
-        _W = Object.freeze({
+        _v = Object.freeze({
             WELCOME: "".concat(_N, "/welcome/"),
             ME: "".concat(_N, "/channels/@me"),
             SETTINGS: (_, E) => "".concat(_N, "/settings/").concat(_).concat(E ? "/".concat(E) : ""),
@@ -408,7 +408,7 @@ function(_, E, I) {
             REPORT: "".concat(_N, "/report")
         });
     (j = s || (s = {})).INDEX = "/", j.INDEX_WORD = "/index", j.INDEX_BUCKET = "/index/:bucketId", j.CHANGELOGS = "/changelogs/:date", j.COMMUNITY = "/community", j.COMPANY = "/company", j.COMPANY_INFORMATION = "/company-information", j.CREATORS = "/creators", j.DOWNLOADS = "/downloads", j.DOWNLOAD = "/download", j.GAMING = "/gaming", j.PRIVACY = "/privacy", j.TOS = "/tos", j.TERMS = "/terms", j.STORE_TERMS = "/store-terms", j.ACKNOWLEDGEMENTS = "/acknowledgements", j.LICENSES = "/licenses", j.PARTNERS = "/partners", j.HYPESQUAD = "/hypesquad", j.HYPESQUAD_RIOT = "/hypesquad-riot", j.BRANDING = "/branding", j.ERROR_404 = "/404", j.JOBS = "/jobs", j.JOB = "/jobs/:jobId", j.STREAMKIT = "/streamkit", j.SECURITY = "/security", j.NITRO = "/nitro", j.DISCOVER = "/servers", j.GUIDELINES = "/guidelines", j.RICH_PRESENCE = "/rich-presence", j.VERIFICATION = "/verification", j.OPEN_SOURCE = "/open-source", j.WARFRAME = "/warframe", j.REMOTE_AUTH = "/ra/:remoteAuthFingerprint", j.SAFETY_LANDING = "/safetycenter", j.SAFETY_ARTICLE_ROOT = "/safety", j.SAFETY_ARTICLE = "/safety/:article", j.NEWSROOM = "/newsroom", j.INSPIRATION = "/inspiration", j.MOD_ACADEMY_LANDING = "/moderation", j.MOD_ACADEMY_EXAM = "/moderation/exam", j.MOD_ACADEMY_ARTICLE = "/moderation/:article", j.BLOG = "/blog", j.APP_DIRECTORY = "/application-directory", j.REFRESH_INDEX = "/new", j.REFRESH_INDEX_WORD = "/new/index", j.REFRESH_COMPANY = "/new/company", j.REFRESH_DOWNLOAD = "/new/download", j.REFRESH_PRIVACY = "/new/privacy", j.REFRESH_TERMS = "/new/terms", j.REFRESH_ACKNOWLEDGEMENTS = "/new/acknowledgements", j.REFRESH_LICENSES = "/new/licenses", j.REFRESH_BRANDING = "/new/branding", j.REFRESH_JOBS = "/new/jobs", j.REFRESH_JOB = "/new/jobs/:jobId", j.REFRESH_STREAMKIT = "/new/streamkit", j.REFRESH_NITRO = "/new/nitro", j.REFRESH_GUIDELINES = "/new/guidelines", j.REFRESH_SAFETY_LANDING = "/new/safety", j.REFRESH_SAFETY_ARTICLE = "/new/safety/:article", j.COLLEGE = "/college", j.LEAGUE_CLUBS = "/league-communities", j.DISCORD_RECRUITING_SCAMS = "/discord-recruitment-scams", j.DEV_NEWSLETTER_SIGNUP = "/dev-newsletter", j.LEGACY_DEV_NEWSLETTER = "/newsletter", j.LEGAL_ARCHIVE = "/archive/", j.TERMS_MAY_2020 = "/archive/terms/may-2020", j.PRIVACY_JUNE_2020 = "/archive/privacy/june-2020", j.GUIDELINES_MAY_2020 = "/archive/guidelines/may-2020", j.FALL_RELEASE_2023 = "/fallrelease", j.MOBILE_REDESIGN_2023 = "/mobile", j.REFRESH_XBOX_OFFER = "/new/discord-xbox-offer-2019", j.REFRESH_WHY_DISCORD = "/why-discord-is-different", j.WHY_DISCORD = "/why-discord", j.XBOX_OFFER = "/discord-xbox-offer-2020", j.COLLEGE_BRUINS = "/bruins", j.COLLEGE_ANTEATERS = "/anteaters", j.COLLEGE_GAUCHOS = "/gauchos", j.COLLEGE_BEARS = "/bears", j.COLLEGE_SLUGS = "/slugs", j.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = "/terms/back-to-school-2020/instagram", j.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = "/terms/back-to-school-2020/twitter", j.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram", j.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter";
-    let _k = (0, _A.wrapPaths)(_W),
+    let _k = (0, _A.wrapPaths)(_v),
         _x = (0, _A.wrapPaths)(s),
         _X = Object.freeze({
             FACEBOOK_URL: "https://www.facebook.com/discord/",

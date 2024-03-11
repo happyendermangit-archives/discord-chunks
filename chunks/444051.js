@@ -273,6 +273,8 @@ function(e, _, E) {
         MFA_REQUIRED_FOR_STAFF: "Multi-factor authentication is required for staff.",
         INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_1: "Add Inappropriate Tier 1 Warning (Experimental)",
         INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_2: "Add Inappropriate Tier 2 Warning (Experimental)",
+        SAFETY_WARNINGS_DELETE: "Delete all Safety Warnings (Experimental)",
+        STRANGER_DANGER_CONTEXT_MENU_CLEAR: "Reset Safety Warning dismissals (Experimental)",
         SERVER_DRAWER_ACTIVITY_VOICE: "in **!!{channelName}!!**",
         SERVER_DRAWER_ACTIVITY_VOICE_STATUS: "$[](statusHook) in **!!{channelName}!!**",
         SERVER_DRAWER_ACTIVITY_EVENT_IN_UPCOMING: "in !!{relativeTime}!!",
