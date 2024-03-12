@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return N
+            return v
         }
     }), n("222007");
     var i = n("884691"),
@@ -10,34 +10,33 @@ function(e, t, n) {
         a = n("987295"),
         s = n("244201"),
         r = n("988721"),
-        o = n("166004"),
-        u = n("383018"),
-        d = n("845579"),
-        c = n("149022"),
-        f = n("169694"),
-        p = n("646220"),
-        m = n("467123"),
-        h = n("506038"),
-        x = n("663190"),
-        E = n("93640"),
-        y = n("100576"),
-        g = n("665613");
+        o = n("383018"),
+        u = n("845579"),
+        d = n("149022"),
+        c = n("169694"),
+        f = n("646220"),
+        p = n("467123"),
+        m = n("506038"),
+        h = n("663190"),
+        x = n("93640"),
+        E = n("100576"),
+        y = n("665613");
     n("473752");
-    var S = n("541926"),
-        C = n("926970"),
-        I = n("755107"),
-        T = n("518542"),
-        _ = n("269149"),
-        v = n("566819");
+    var g = n("541926"),
+        S = n("926970"),
+        C = n("755107"),
+        I = n("518542"),
+        T = n("269149"),
+        _ = n("566819");
 
-    function N(e) {
+    function v(e) {
         let t = i.useContext(s.default),
-            n = d.UseRichChatInput.useSetting(),
-            [N] = i.useState(() => {
+            n = u.UseRichChatInput.useSetting(),
+            [v] = i.useState(() => {
                 let i = (0, a.createEditor)();
-                return i.children = (0, c.toRichValue)(""), i.selection = {
-                        anchor: v.FIRST_TEXT_POINT,
-                        focus: v.FIRST_TEXT_POINT
+                return i.children = (0, d.toRichValue)(""), i.selection = {
+                        anchor: _.FIRST_TEXT_POINT,
+                        focus: _.FIRST_TEXT_POINT
                     },
                     function(e) {
                         var t, n, i;
@@ -48,22 +47,22 @@ function(e, t, n) {
                             canUseCommands: o,
                             canOnlyUseTextCommands: u,
                             windowContext: d,
-                            previewMarkdown: c,
+                            previewMarkdown: _,
                             forTests: v,
                             onChangeStart: N,
                             onChangeEnd: A,
                             updateState: O
-                        } = e, M = a, {
-                            onChange: k
-                        } = M;
-                        M.chatInputType = s, M.windowContext = d, M.previewMarkdown = c, M.composition = null, M.events = new l.EventEmitter, M.isMac = "MacIntel" === navigator.platform, M.onChange = () => {
-                            M.events.emit("onChange"), k()
-                        }, M = (0, C.withReact)(M, !0 === v), M = (0, S.default)(M), M = (0, g.default)(M), (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (M = (0, f.default)(M, r, !0 === o, !0 === u)), M = (0, y.default)(M, r.guild_id, r.id), !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (M = (0, p.default)(M)), !(null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (M = (0, m.default)(M)), v && (M = (0, T.default)(M)), M = (0, E.default)(M), M = (0, h.default)(M), M = (0, I.default)(M), M = (0, _.default)(M, N, A), M = (0, x.default)(M, e => {
+                        } = e, R = a, {
+                            onChange: M
+                        } = R;
+                        R.chatInputType = s, R.windowContext = d, R.previewMarkdown = _, R.composition = null, R.events = new l.EventEmitter, R.isMac = "MacIntel" === navigator.platform, R.onChange = () => {
+                            R.events.emit("onChange"), M()
+                        }, R = (0, S.withReact)(R, !0 === v), R = (0, g.default)(R), R = (0, y.default)(R), (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (R = (0, c.default)(R, r, !0 === o, !0 === u)), R = (0, E.default)(R, r.guild_id, r.id), !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (R = (0, f.default)(R)), !(null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (R = (0, p.default)(R)), v && (R = (0, I.default)(R)), R = (0, x.default)(R), R = (0, m.default)(R), R = (0, C.default)(R), R = (0, T.default)(R, N, A), R = (0, h.default)(R, e => {
                             let {
                                 newValue: t,
                                 newSelection: n
                             } = e;
-                            return O(M, "undo", {
+                            return O(R, "undo", {
                                 value: t,
                                 selection: n
                             })
@@ -76,12 +75,12 @@ function(e, t, n) {
                     }), i
             });
         return i.useEffect(() => {
-            let e = () => N.onChange();
-            return u.default.addChangeListener(e), o.default.addChangeListener(e), r.default.addChangeListener(e), () => {
-                u.default.removeChangeListener(e), o.default.removeChangeListener(e), r.default.removeChangeListener(e)
+            let e = () => v.onChange();
+            return o.default.addChangeListener(e), r.default.addChangeListener(e), () => {
+                o.default.removeChangeListener(e), r.default.removeChangeListener(e)
             }
-        }, [N]), i.useEffect(() => {
-            N.previewMarkdown !== n && (N.previewMarkdown = n, N.onChange())
-        }, [N, n]), N
+        }, [v]), i.useEffect(() => {
+            v.previewMarkdown !== n && (v.previewMarkdown = n, v.onChange())
+        }, [v, n]), v
     }
 }

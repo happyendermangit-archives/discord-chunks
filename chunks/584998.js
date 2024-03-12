@@ -35,7 +35,7 @@ function(e, t, n) {
             guildId: _,
             unread: v,
             onClick: N
-        } = e, [A, O] = l.useState(!1), M = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), k = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), R = (e, n) => {
+        } = e, [A, O] = l.useState(!1), R = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), k = (e, n) => {
             e.stopPropagation(), (0, y.default)({
                 summary: t,
                 channel: c,
@@ -70,7 +70,7 @@ function(e, t, n) {
                         className: T.timestamp,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
-                        children: M
+                        children: R
                     }), (0, i.jsx)(o.default, {
                         height: 4,
                         width: 4,
@@ -102,17 +102,17 @@ function(e, t, n) {
                         })]
                     })]
                 })
-            }), A && !k && (0, i.jsxs)("div", {
+            }), A && !M && (0, i.jsxs)("div", {
                 className: T.feedbackContainer,
                 children: [(0, i.jsx)(s.Clickable, {
-                    onClick: e => R(e, I.FeedbackRating.GOOD),
+                    onClick: e => k(e, I.FeedbackRating.GOOD),
                     children: (0, i.jsx)(m.default, {
                         className: T.thumbIcon,
                         width: 12,
                         height: 12
                     })
                 }), (0, i.jsx)(s.Clickable, {
-                    onClick: e => R(e, I.FeedbackRating.BAD),
+                    onClick: e => k(e, I.FeedbackRating.BAD),
                     children: (0, i.jsx)(p.default, {
                         className: T.thumbIcon,
                         width: 12,

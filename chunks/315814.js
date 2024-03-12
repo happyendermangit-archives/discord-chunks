@@ -34,11 +34,11 @@ function(e, t, n) {
                 location: "ec41f5_1"
             }, {
                 autoTrackExposure: !0
-            }), T = I ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : C ? y.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : y.default.Messages.SHARE_NITRO_TOOLTIP, _ = I ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [v, N] = l.useState(!1), [A, O] = l.useState(!1), M = (0, r.default)(null, () => O(!1)), {
-                analyticsLocations: k
-            } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), R = S.isDM() && void 0 !== S.recipients ? S.recipients[0] : null, L = (0, o.default)();
+            }), T = I ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : C ? y.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : y.default.Messages.SHARE_NITRO_TOOLTIP, _ = I ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [v, N] = l.useState(!1), [A, O] = l.useState(!1), R = (0, r.default)(null, () => O(!1)), {
+                analyticsLocations: M
+            } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), k = S.isDM() && void 0 !== S.recipients ? S.recipients[0] : null, L = (0, o.default)();
             return t ? null : (0, i.jsxs)("div", {
-                ref: M,
+                ref: R,
                 className: g.buttonContainer,
                 children: [(0, i.jsx)(f.default, {
                     shouldShowPopout: A,
@@ -53,9 +53,9 @@ function(e, t, n) {
                     children: e => (0, i.jsx)("div", {
                         onMouseEnter: () => {
                             !A && !v && (N(!0), h.default.track(x.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
-                                location_stack: k,
+                                location_stack: M,
                                 step: E.ReferralTrialsAnalyticSteps.BADGE_TOOLTIP_VIEWED,
-                                other_user_id: Number(R)
+                                other_user_id: Number(k)
                             }))
                         },
                         onMouseLeave: () => {
@@ -69,9 +69,9 @@ function(e, t, n) {
                             "aria-haspopup": "dialog",
                             onClick: () => {
                                 O(e => !e), h.default.track(x.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
-                                    location_stack: k,
+                                    location_stack: M,
                                     step: E.ReferralTrialsAnalyticSteps.BADGE_CLICKED,
-                                    other_user_id: Number(R)
+                                    other_user_id: Number(k)
                                 })
                             },
                             children: (0, i.jsx)(m.default, {

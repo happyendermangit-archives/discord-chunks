@@ -35,8 +35,8 @@ function(e, t, n) {
             type: n
         } = e, a = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), N = (0, m.default)("attachments", o.Orientations.HORIZONTAL), A = (0, u.useStateFromStores)([E.default], () => E.default.getUploads(t, n.drafts.type)), {
             isApplicationCommand: O,
-            commandOptions: M,
-            commandOptionStates: k
+            commandOptions: R,
+            commandOptionStates: M
         } = (0, u.useStateFromStoresObject)([h.default], () => {
             let e = h.default.getActiveCommand(t);
             if (null == e) return {
@@ -50,13 +50,13 @@ function(e, t, n) {
                 commandOptions: e.options,
                 commandOptionStates: n
             }
-        }), R = l.useMemo(() => {
+        }), k = l.useMemo(() => {
             var e;
-            return null !== (e = null == M ? void 0 : M.filter(e => {
+            return null !== (e = null == R ? void 0 : R.filter(e => {
                 var t;
-                return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == k ? void 0 : null === (t = k[e.name]) || void 0 === t ? void 0 : t.hasValue)
+                return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == M ? void 0 : null === (t = M[e.name]) || void 0 === t ? void 0 : t.hasValue)
             })) && void 0 !== e ? e : []
-        }, [M, k]), [L, b] = l.useState([]);
+        }, [R, M]), [L, b] = l.useState([]);
         l.useEffect(() => {
             let e = () => {
                 c.default.clearAll(t, n.drafts.type)
@@ -73,12 +73,12 @@ function(e, t, n) {
             if (O) {
                 let e = [];
                 L.forEach(t => {
-                    !R.some(e => t.name === e.name) && e.push(t)
+                    !k.some(e => t.name === e.name) && e.push(t)
                 }), e.forEach(e => {
                     c.default.remove(t, e.name, n.drafts.type)
-                }), b(R)
+                }), b(k)
             }
-        }, [t, R.length, n]), !O && 0 === A.length || O && 0 === R.length) ? null : (0, i.jsxs)(l.Fragment, {
+        }, [t, k.length, n]), !O && 0 === A.length || O && 0 === k.length) ? null : (0, i.jsxs)(l.Fragment, {
             children: [(0, i.jsx)(r.ListNavigatorProvider, {
                 navigator: N,
                 children: (0, i.jsx)(r.ListNavigatorContainer, {
@@ -91,7 +91,7 @@ function(e, t, n) {
                             ref: l,
                             ...r,
                             className: s(T.channelAttachmentArea, _.scrollbarGhost),
-                            children: O ? R.map(e => (0, i.jsx)(S.default, {
+                            children: O ? k.map(e => (0, i.jsx)(S.default, {
                                 channelId: t,
                                 keyboardModeEnabled: a,
                                 option: e

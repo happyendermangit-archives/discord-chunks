@@ -5,23 +5,23 @@ function(e, t, n) {
             return i
         },
         default: function() {
-            return C
+            return E
         }
     }), n("222007"), n("424973");
     var i, l, a = n("446674"),
-        o = n("913144"),
+        s = n("913144"),
         r = n("653047"),
-        s = n("946028");
+        o = n("946028");
     (l = i || (i = {}))[l.NOT_FETCHED = 0] = "NOT_FETCHED", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED", l[l.FETCH_FAILED = 3] = "FETCH_FAILED";
     let u = new Map,
         d = new Map,
         c = [],
-        p = 0,
-        f = [];
+        f = 0,
+        p = [];
     class m extends a.default.Store {
         getIntegrations(e) {
             var t;
-            return null !== (t = u.get(e)) && void 0 !== t ? t : f
+            return null !== (t = u.get(e)) && void 0 !== t ? t : p
         }
         getIntegration(e, t) {
             var n;
@@ -35,18 +35,18 @@ function(e, t, n) {
             return null !== (t = d.get(e)) && void 0 !== t ? t : 0
         }
         getApplicationsShelfFetchState() {
-            return p
+            return f
         }
         getApplicationsShelf() {
             return c
         }
     }
 
-    function _(e) {
+    function h(e) {
         return e.sort((e, t) => e.application.name.localeCompare(t.application.name))
     }
     m.displayName = "PrivateChannelIntegrationStore";
-    let I = new m(o.default, {
+    let x = new m(s.default, {
         LOGOUT() {
             u.clear()
         },
@@ -61,16 +61,16 @@ function(e, t, n) {
             d.set(t, 0)
         },
         APPLICATIONS_SHELF_FETCH_START() {
-            p = 1
+            f = 1
         },
         APPLICATIONS_SHELF_FETCH_SUCCESS(e) {
             let {
                 applications: t
             } = e;
-            c = t.map(r.default.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), p = 2
+            c = t.map(r.default.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), f = 2
         },
         APPLICATIONS_SHELF_FETCH_FAIL() {
-            p = 3
+            f = 3
         },
         FETCH_PRIVATE_CHANNEL_INTEGRATIONS_START(e) {
             let {
@@ -83,7 +83,7 @@ function(e, t, n) {
                 channelId: t,
                 integrations: n
             } = e;
-            u.set(t, _(n.map(s.createPrivateChannelIntegration))), d.set(t, 2)
+            u.set(t, h(n.map(o.createPrivateChannelIntegration))), d.set(t, 2)
         },
         FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
             let {
@@ -96,16 +96,16 @@ function(e, t, n) {
                 integration: t
             } = e, n = u.get(t.channel_id);
             if (null == n) return !1;
-            u.set(t.channel_id, _([...n, (0, s.createPrivateChannelIntegration)(t)]))
+            u.set(t.channel_id, h([...n, (0, o.createPrivateChannelIntegration)(t)]))
         },
         PRIVATE_CHANNEL_INTEGRATION_UPDATE(e) {
             let {
                 integration: t
             } = e, n = u.get(t.channel_id);
             if (null == n) return !1;
-            let i = (0, s.createPrivateChannelIntegration)(t),
+            let i = (0, o.createPrivateChannelIntegration)(t),
                 l = n.findIndex(e => e.application.id === i.application.id),
-                a = [...n]; - 1 === l ? a.push(i) : a[l] = i, u.set(i.channel_id, _(a))
+                a = [...n]; - 1 === l ? a.push(i) : a[l] = i, u.set(i.channel_id, h(a))
         },
         PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
             let {
@@ -122,5 +122,5 @@ function(e, t, n) {
             return u.delete(t.id)
         }
     });
-    var C = I
+    var E = x
 }

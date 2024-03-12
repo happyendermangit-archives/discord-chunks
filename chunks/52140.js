@@ -31,9 +31,9 @@ function(e, t, n) {
         N = n("657057"),
         A = n("886125"),
         O = n("180161"),
-        M = n("781423"),
-        k = n("47677"),
-        R = n("49111"),
+        R = n("781423"),
+        M = n("47677"),
+        k = n("49111"),
         L = n("724210"),
         b = n("782340"),
         P = n("356410");
@@ -158,7 +158,7 @@ function(e, t, n) {
                 let l = () => {
                     ! function(e, t) {
                         let n = m.default.getGuild(e);
-                        if (null == e || null == n || !n.hasFeature(R.GuildFeatures.COMMUNITY)) return;
+                        if (null == e || null == n || !n.hasFeature(k.GuildFeatures.COMMUNITY)) return;
                         let i = {
                                 home: L.StaticChannelRoute.GUILD_HOME,
                                 browse: L.StaticChannelRoute.CHANNEL_BROWSER,
@@ -172,7 +172,7 @@ function(e, t, n) {
                                 channelId: l
                             });
                             return
-                        }(0, p.transitionTo)(R.Routes.CHANNEL(e, l))
+                        }(0, p.transitionTo)(k.Routes.CHANNEL(e, l))
                     }(e.guildId, e.channelId)
                 };
                 if (!(0, v.isStaticRouteIconType)(e.channelId)) return null;
@@ -269,7 +269,7 @@ function(e, t, n) {
     function w(e) {
         return {
             ...D,
-            link: (0, k.default)(e),
+            link: (0, M.default)(e),
             emoji: function(e) {
                 let {
                     emojiTooltipPosition: t = "top",
@@ -319,7 +319,7 @@ function(e, t, n) {
                 }
             }(e),
             channelMention: (0, O.default)(e),
-            commandMention: (0, M.default)(e),
+            commandMention: (0, R.default)(e),
             attachmentLink: (0, A.default)(e)
         }
     }

@@ -42,39 +42,39 @@ function(e, t, n) {
             locale: N,
             userId: A,
             className: O,
-            showMetadata: M,
-            showInvisibleIcon: k
+            showMetadata: R,
+            showInvisibleIcon: M
         } = e;
-        null == M && (M = !0);
-        let R = null !== (n = E.metadata) && void 0 !== n ? n : {},
-            L = M ? (0, m.getCreatedAtDate)(R[I.MetadataFields.CREATED_AT], N) : null,
+        null == R && (R = !0);
+        let k = null !== (n = E.metadata) && void 0 !== n ? n : {},
+            L = R ? (0, m.getCreatedAtDate)(k[I.MetadataFields.CREATED_AT], N) : null,
             b = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
             P = T.default.Messages.CONNECTION_VERIFIED;
-        if (M) switch (E.type) {
+        if (R) switch (E.type) {
             case C.PlatformTypes.REDDIT:
-                l = (0, h.generateRedditMetadataItems)(R);
+                l = (0, h.generateRedditMetadataItems)(k);
                 break;
             case C.PlatformTypes.STEAM:
-                l = (0, h.generateSteamMetadataItems)(R);
+                l = (0, h.generateSteamMetadataItems)(k);
                 break;
             case C.PlatformTypes.TWITTER: {
-                l = (0, h.generateTwitterMetadataItems)(R);
-                let e = "1" === R[I.MetadataFields.TWITTER_VERIFIED];
+                l = (0, h.generateTwitterMetadataItems)(k);
+                let e = "1" === k[I.MetadataFields.TWITTER_VERIFIED];
                 e && (a = b, P = T.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
                 break
             }
             case C.PlatformTypes.PAYPAL:
-                l = (0, h.generatePaypalMetadataItems)(R);
+                l = (0, h.generatePaypalMetadataItems)(k);
                 break;
             case C.PlatformTypes.EBAY:
-                l = (0, h.generateEbayMetadataItems)(R);
+                l = (0, h.generateEbayMetadataItems)(k);
                 break;
             case C.PlatformTypes.TIKTOK:
-                l = (0, h.generateTikTokMetadataItems)(R)
+                l = (0, h.generateTikTokMetadataItems)(k)
         }
         let j = c.default.get((0, p.useLegacyPlatformType)(E.type)),
             U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, E);
-        null != k && k ? d = (0, i.jsx)(g.default, {
+        null != M && M ? d = (0, i.jsx)(g.default, {
             className: s(_.connectedAccountOpenIconContainer, _.connectedAccountHideIcon),
             foregroundColor: "currentColor"
         }) : null != U && (d = (0, i.jsx)(u.Anchor, {

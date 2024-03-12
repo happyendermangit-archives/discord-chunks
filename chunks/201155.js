@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useShowApplicationInGDM: function() {
-            return o
+            return s
         }
     });
     var i = n("65597"),
         l = n("42203"),
         a = n("337026");
 
-    function o(e) {
+    function s(e) {
         let t = (0, i.default)([l.default], () => l.default.getChannel(e)),
             {
                 enabled: n

@@ -87,14 +87,11 @@ function(e, t, n) {
             B = null;
         return e.onChange = () => {
             if (null != t) {
-                var a;
-                let u = r.default.getState(t.id),
-                    p = S.EditorUtils.getFirstText(e),
-                    m = (0, c.getCommandQuery)(t, null !== (a = null == p ? void 0 : p.text) && void 0 !== a ? a : ""),
-                    h = s.getChangeKeys(t, i.ApplicationCommandType.CHAT, m.text);
-                if (S.EditorUtils.richValue(e) !== U || !S.SelectionUtils.equals(e.selection, D) || u.activeCommand !== w || null == B || h.some((e, t) => B[t] !== e)) {
-                    let a = E.HistoryUtils.withMergedEntry(e, () => {
-                        var a;
+                let a = r.default.getState(t.id),
+                    u = s.getChangeKeys(t);
+                if (S.EditorUtils.richValue(e) !== U || !S.SelectionUtils.equals(e.selection, D) || a.activeCommand !== w || null == B || u.some((e, t) => B[t] !== e)) {
+                    let r = E.HistoryUtils.withMergedEntry(e, () => {
+                        var r;
                         return function(e) {
                             let {
                                 editor: t,
@@ -107,7 +104,7 @@ function(e, t, n) {
                             } = e, {
                                 command: m,
                                 commandText: h
-                            } = R(t), E = n.activeCommand;
+                            } = k(t), E = n.activeCommand;
                             if (!r || u && (null == E ? void 0 : E.inputType) !== o.ApplicationCommandInputType.BUILT_IN_TEXT && (null == E ? void 0 : E.inputType) !== o.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return null != m && O(t, a.id, E, !0), null;
                             if (null != m) {
                                 if (S.EditorUtils.isEditorEmpty(t) || null == E) return O(t, a.id, E, !1), null;
@@ -177,7 +174,7 @@ function(e, t, n) {
                                             o = m.length > 0 ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(T.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
                                                 text: o
                                             });
-                                            let k = {
+                                            let M = {
                                                 type: "applicationCommand",
                                                 children: N,
                                                 command: {
@@ -187,18 +184,18 @@ function(e, t, n) {
                                                 }
                                             };
                                             S.EditorUtils.withoutNormalizing(e, () => {
-                                                for (let [, t] of(g.SlateTransforms.insertNodes(e, [k], {
+                                                for (let [, t] of(g.SlateTransforms.insertNodes(e, [M], {
                                                         at: C.FIRST_BLOCK_PATH
                                                     }), S.EditorUtils.blocks(e).reverse())) S.PathUtils.isAfter(t, C.FIRST_BLOCK_PATH) && g.SlateTransforms.removeNodes(e, {
                                                     at: t,
                                                     voids: !0
                                                 })
                                             });
-                                            let R = null;
-                                            return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), R = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), R = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && M(e, d), R
+                                            let k = null;
+                                            return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), k
                                         }(t, a, n),
                                         i = x.getOptionValues(t, E);
-                                    return k({
+                                    return M({
                                         guildId: a.guild_id,
                                         channelId: a.id,
                                         command: E,
@@ -288,14 +285,14 @@ function(e, t, n) {
                                             }
                                         })
                                     }), !0)
-                                }(t, E) && M(t, E);
+                                }(t, E) && R(t, E);
                                 let e = x.getOptionValues(t, E),
                                     n = S.EditorUtils.above(t, {
                                         match: e => S.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                                         mode: "lowest"
                                     }),
                                     i = null !== (I = null == n ? void 0 : n[0].optionName) && void 0 !== I ? I : null;
-                                return k({
+                                return M({
                                     guildId: a.guild_id,
                                     channelId: a.id,
                                     command: E,
@@ -312,19 +309,19 @@ function(e, t, n) {
                             return null
                         }({
                             editor: e,
-                            storeCommandState: u,
+                            storeCommandState: a,
                             channel: t,
                             canUseCommands: n,
                             canOnlyUseTextCommands: d,
-                            commandChanged: (null === (a = u.activeCommand) || void 0 === a ? void 0 : a.id) !== (null == w ? void 0 : w.id),
+                            commandChanged: (null === (r = a.activeCommand) || void 0 === r ? void 0 : r.id) !== (null == w ? void 0 : w.id),
                             previousOptionValues: F
                         })
                     });
-                    if (null != a) {
+                    if (null != r) {
                         let t = E.HistoryUtils.currentEntry(e);
-                        null != t && (t.commandId = a.commandId), F = a.optionValues
+                        null != t && (t.commandId = r.commandId), F = r.optionValues
                     } else F = null;
-                    U = S.EditorUtils.richValue(e), D = e.selection, w = u.activeCommand, B = h
+                    U = S.EditorUtils.richValue(e), D = e.selection, w = a.activeCommand, B = u
                 }
             }
             I()
@@ -353,7 +350,7 @@ function(e, t, n) {
         })
     }
 
-    function M(e, t) {
+    function R(e, t) {
         if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || v.has(t.options[0].type) || x.getOptionNames(e).length > 0) return !1;
         let n = x.getCommandBlock(e);
         if (null == n) return !1;
@@ -382,7 +379,7 @@ function(e, t, n) {
         }), !0)
     }
 
-    function k(e) {
+    function M(e) {
         let {
             guildId: t,
             channelId: n,
@@ -418,7 +415,7 @@ function(e, t, n) {
         h && l.updateOptionStates(n, p)
     }
 
-    function R(e) {
+    function k(e) {
         let t = x.getCommandBlock(e);
         if (null == t) return {
             command: null,
@@ -442,7 +439,7 @@ function(e, t, n) {
         let {
             command: l,
             commandText: a
-        } = R(e);
+        } = k(e);
         !(null == l || null == a || a.endsWith(" ")) && S.PointUtils.equals(i, {
             path: C.FIRST_TEXT_PATH,
             offset: l.displayName.length + 1

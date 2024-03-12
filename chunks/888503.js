@@ -42,9 +42,9 @@ function(e, t, n) {
             lostPermissionTooltipText: N,
             isTyping: A = !1,
             nick: O,
-            user: M,
-            currentUser: k,
-            activities: R,
+            user: R,
+            currentUser: M,
+            activities: k,
             applicationStream: L,
             status: b,
             shouldAnimateStatus: P = !1,
@@ -66,12 +66,12 @@ function(e, t, n) {
             id: q,
             tabIndex: X,
             itemProps: Q
-        } = e, $ = g.default.useName(M), [ee, et] = l.useState(!1), [en, ei] = l.useState(null), {
+        } = e, $ = g.default.useName(R), [ee, et] = l.useState(!1), [en, ei] = l.useState(null), {
             avatarDecorationSrc: el,
             avatarSrc: ea,
             eventHandlers: es
         } = (0, f.default)({
-            user: M,
+            user: R,
             size: o.AvatarSizes.SIZE_32,
             animateOnHover: !(t || ee),
             guildId: w
@@ -96,18 +96,18 @@ function(e, t, n) {
                 })
             })
         }), ed = () => {
-            let e = (null == M ? void 0 : M.isClyde()) ? I.BotTagTypes.AI : I.BotTagTypes.BOT;
-            return null != M && M.bot ? (0, i.jsx)(p.default, {
+            let e = (null == R ? void 0 : R.isClyde()) ? I.BotTagTypes.AI : I.BotTagTypes.BOT;
+            return null != R && R.bot ? (0, i.jsx)(p.default, {
                 className: v.botTag,
                 type: e,
-                verified: M.isVerifiedBot()
+                verified: R.isVerifiedBot()
             }) : null
         }, ec = () => (0, i.jsx)(o.NameWithRole, {
             roleName: a,
             color: null != n ? n : void 0,
             name: null != O ? O : $
         }), ef = b === C.StatusTypes.OFFLINE;
-        return null == M ? (0, i.jsx)(m.default, {
+        return null == R ? (0, i.jsx)(m.default, {
             avatarSize: o.AvatarSizes.SIZE_32,
             className: v.placeholder
         }) : (0, i.jsx)(E.default, {
@@ -139,7 +139,7 @@ function(e, t, n) {
             }),
             avatar: ((e, t) => {
                 let n = P ? o.AnimatedAvatar : o.Avatar,
-                    l = (0, u.default)(R) ? C.StatusTypes.STREAMING : b;
+                    l = (0, u.default)(k) ? C.StatusTypes.STREAMING : b;
                 return l = t ? void 0 : l, (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(n, {
                         ...es,
@@ -154,24 +154,24 @@ function(e, t, n) {
                         typingIndicatorRef: er
                     }), (0, i.jsx)(c.default, {
                         confettiSpawnRef: en,
-                        shouldFire: A && null != k && e.id !== k.id,
+                        shouldFire: A && null != M && e.id !== M.id,
                         confettiLocation: T.ConfettiLocation.MEMBER_USER
                     })]
                 })
-            })(M, ef),
+            })(R, ef),
             subText: (() => {
-                let e = null != R ? R.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null,
-                    t = null != e && null != M && (0, d.default)(e, M, D);
+                let e = null != k ? k.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null,
+                    t = null != e && null != R && (0, d.default)(e, R, D);
                 return (0, i.jsx)(S.default, {
                     className: v.activity,
                     textClassName: v.activityText,
                     emojiClassName: v.activityEmoji,
-                    activities: R,
+                    activities: k,
                     applicationStream: L,
                     animate: ee,
                     hideEmoji: !t,
                     hideTooltip: !0,
-                    user: M
+                    user: R
                 })
             })(),
             decorators: (0, i.jsxs)(i.Fragment, {

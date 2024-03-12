@@ -31,9 +31,9 @@ function(e, t, n) {
         N = n("159885"),
         A = n("570759"),
         O = n("866353"),
-        M = n("364685"),
-        k = n("161585"),
-        R = n("24373"),
+        R = n("364685"),
+        M = n("161585"),
+        k = n("24373"),
         L = n("41170"),
         b = n("801396"),
         P = n("355494"),
@@ -94,9 +94,9 @@ function(e, t, n) {
                     columnIndex: n,
                     gridSectionIndex: i
                 } = e;
-                m.StickerPickerStore.setActiveCategoryIndex(i), m.StickerPickerStore.setInspectedExpressionPosition(n, t, x.InspectedExpressionChangeSource.MOUSE_EVENT), e.type === k.StickerGridItemTypes.STICKER && m.StickerPickerStore.setSearchPlaceholder(e.sticker.name)
+                m.StickerPickerStore.setActiveCategoryIndex(i), m.StickerPickerStore.setInspectedExpressionPosition(n, t, x.InspectedExpressionChangeSource.MOUSE_EVENT), e.type === M.StickerGridItemTypes.STICKER && m.StickerPickerStore.setSearchPlaceholder(e.sticker.name)
             }, []), u = l.useCallback(e => {
-                if (e.type !== k.StickerGridItemTypes.STICKER) return;
+                if (e.type !== M.StickerGridItemTypes.STICKER) return;
                 let {
                     packId: l,
                     sticker: o,
@@ -106,7 +106,7 @@ function(e, t, n) {
                     object: "" === r ? D.AnalyticsObjects.STICKER_PICKER_VIEW_ALL : D.AnalyticsObjects.STICKER_SEARCH_VIEW_ALL
                 };
                 if (null != o && !(0, O.isSendableSticker)(o, i, n)) {
-                    let e = M.default.getStickerPack(l);
+                    let e = R.default.getStickerPack(l);
                     null != e && (v.default.track(D.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
                         sticker_id: o.id,
                         sticker_pack_id: l,
@@ -116,12 +116,12 @@ function(e, t, n) {
                         stickerPack: e,
                         analyticsLocations: s
                     }));
-                    let t = (0, R.isGuildSticker)(o),
+                    let t = (0, k.isGuildSticker)(o),
                         a = (0, O.getStickerSendability)(o, i, n);
                     a === O.StickerSendability.SENDABLE_WITH_PREMIUM && (0, A.setShowPremiumUpsell)(!0), t && O.StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
                     return
                 }
-                u === k.StickerGridItemTypes.STICKER && null != o && t(e)
+                u === M.StickerGridItemTypes.STICKER && null != o && t(e)
             }, [a.location, r, i, n, s, t]);
             return {
                 handleStickerInspect: o,
@@ -207,7 +207,7 @@ function(e, t, n) {
                     })
                 }
                 switch (n.type) {
-                    case k.StickerCategoryTypes.FAVORITE:
+                    case M.StickerCategoryTypes.FAVORITE:
                         return (0, i.jsx)(y.default, {
                             className: B.packHeader,
                             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
@@ -223,7 +223,7 @@ function(e, t, n) {
                             }),
                             children: n.name
                         }, "header-".concat(n.id));
-                    case k.StickerCategoryTypes.RECENT:
+                    case M.StickerCategoryTypes.RECENT:
                         return (0, i.jsx)(y.default, {
                             className: B.packHeader,
                             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
@@ -236,8 +236,8 @@ function(e, t, n) {
                             }),
                             children: n.name
                         }, "header-".concat(n.id));
-                    case k.StickerCategoryTypes.GUILD:
-                    case k.StickerCategoryTypes.EMPTY_GUILD_UPSELL: {
+                    case M.StickerCategoryTypes.GUILD:
+                    case M.StickerCategoryTypes.EMPTY_GUILD_UPSELL: {
                         let e = S.default.getGuild(n.id);
                         if (null == e) return null;
                         return (0, i.jsx)(y.default, {
@@ -255,8 +255,8 @@ function(e, t, n) {
                             children: e.name
                         }, "h".concat(e.id))
                     }
-                    case k.StickerCategoryTypes.PACK: {
-                        let e = M.default.getStickerPack(n.id);
+                    case M.StickerCategoryTypes.PACK: {
+                        let e = R.default.getStickerPack(n.id);
                         if (null == e) return null;
                         return (0, i.jsx)(y.default, {
                             className: B.packHeader,
@@ -266,7 +266,7 @@ function(e, t, n) {
                             icon: (0, i.jsx)(L.default, {
                                 disableAnimation: !0,
                                 size: 12,
-                                sticker: (0, R.getStickerPackPreviewSticker)(e)
+                                sticker: (0, k.getStickerPackPreviewSticker)(e)
                             }),
                             isCollapsed: t.has(e.id),
                             onClick: () => $(e.id),
@@ -288,7 +288,7 @@ function(e, t, n) {
             }, [I]), en = l.useCallback(e => {
                 let n = E[e],
                     l = t.has(n.id);
-                return n.type !== k.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != I || l ? null : (0, i.jsx)(b.default, {
+                return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != I || l ? null : (0, i.jsx)(b.default, {
                     className: B.emptyGuildUpsell,
                     guildId: n.id,
                     channel: A,
@@ -298,7 +298,7 @@ function(e, t, n) {
             }, [E, t, I, A, K]), ei = l.useCallback(e => {
                 let n = E[e],
                     i = t.has(n.id);
-                return n.type !== k.StickerCategoryTypes.EMPTY_GUILD_UPSELL || i ? 0 : es
+                return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || i ? 0 : es
             }, [E, t]);
             return {
                 renderRow: z,
@@ -324,9 +324,9 @@ function(e, t, n) {
                 stickersCategories: T,
                 stickersGrid: _,
                 channel: v
-            } = e, N = l.useRef(!1), A = l.useRef(null), [O, k] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
-                AnalyticsLocationProvider: R
-            } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), b = (0, s.useStateFromStores)([M.default], () => M.default.getPremiumPacks()), j = l.useMemo(() => new Set(b.map(e => e.id)), [b]), {
+            } = e, N = l.useRef(!1), A = l.useRef(null), [O, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
+                AnalyticsLocationProvider: k
+            } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), b = (0, s.useStateFromStores)([R.default], () => R.default.getPremiumPacks()), j = l.useMemo(() => new Set(b.map(e => e.id)), [b]), {
                 renderRow: U,
                 renderSection: D,
                 renderSectionFooter: w,
@@ -344,7 +344,7 @@ function(e, t, n) {
                 getStickerItemProps: d,
                 getStickerRowProps: p,
                 gutterWidth: x,
-                inspectedStickerPosition: k,
+                inspectedStickerPosition: M,
                 filteredStickers: o,
                 ownedStickerPacks: j,
                 channel: v
@@ -396,7 +396,7 @@ function(e, t, n) {
                         totalHeight: -1
                     }
                 }
-            }), []), (0, i.jsx)(R, {
+            }), []), (0, i.jsx)(k, {
                 children: (0, i.jsxs)("div", {
                     className: B.wrapper,
                     children: [null != o && 0 === o.sendable.length && 0 === o.sendableWithPremium.length ? (0, i.jsx)(u.default, {

@@ -37,9 +37,9 @@ function(e, t, n) {
             autoWidth: N = !1,
             soundButtonOverlay: A,
             listPadding: O,
-            renderHeader: M,
-            defaultSoundsOnly: k
-        } = e, R = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
+            renderHeader: R,
+            defaultSoundsOnly: M
+        } = e, k = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
             AnalyticsLocationProvider: b
         } = (0, c.default)(d.default.SOUNDBOARD_POPOUT);
         return (0, f.default)({
@@ -55,10 +55,10 @@ function(e, t, n) {
         }, []), (0, i.jsx)(b, {
             children: (0, i.jsx)("div", {
                 className: s(g.picker, {
-                    [g.fetching]: R,
+                    [g.fetching]: k,
                     [g.autoWidth]: N
                 }),
-                children: R ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)(y.default, {
+                children: k ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)(y.default, {
                     guildId: t,
                     channel: n,
                     onClose: S,
@@ -69,8 +69,8 @@ function(e, t, n) {
                     gridNotice: v,
                     soundButtonOverlay: A,
                     listPadding: O,
-                    renderHeader: M,
-                    defaultSoundsOnly: k
+                    renderHeader: R,
+                    defaultSoundsOnly: M
                 })
             })
         })

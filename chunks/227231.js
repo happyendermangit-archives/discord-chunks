@@ -35,10 +35,10 @@ function(e, t, n) {
             return C
         },
         getGameLogotypeAssetUrl: function() {
-            return A
+            return g
         },
         getQuestUrl: function() {
-            return g
+            return A
         },
         getQuestForTargetedContent: function() {
             return I
@@ -154,8 +154,8 @@ function(e, t, n) {
         p = e => "".concat(u).concat(e).concat("/quests_bar_hero.png"),
         h = e => "".concat(u).concat(e).concat("/quests_bar_hero.webm"),
         C = e => "".concat(u).concat(e).concat("/game_tile.png"),
-        A = (e, t) => "".concat(u).concat(e, "/").concat(t).concat("/game_logotype.png"),
-        g = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
+        g = (e, t) => "".concat(u).concat(e, "/").concat(t).concat("/game_logotype.png"),
+        A = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
     function I(e, t) {
         for (let [n, s] of e)

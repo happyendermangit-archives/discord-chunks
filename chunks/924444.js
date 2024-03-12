@@ -101,19 +101,19 @@ function(e, t, n) {
             ...A
         } = e, {
             width: O,
-            height: M
-        } = (0, f.zoomFit)(s, o), k = r.isMobile && null != _;
+            height: R
+        } = (0, f.zoomFit)(s, o), M = r.isMobile && null != _;
         l.useEffect(() => {
             if (null != _) return c.ComponentDispatch.subscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, _), () => {
                 c.ComponentDispatch.unsubscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, _)
             }
         }, [_]);
-        let R = v ? e => {
+        let k = v ? e => {
             e.stopPropagation(), e.preventDefault()
         } : A.onContextMenu;
         return (0, i.jsxs)("div", {
             className: g.wrapper,
-            children: [k ? (0, i.jsx)(S, {
+            children: [M ? (0, i.jsx)(S, {
                 onClose: _
             }) : null, (0, i.jsx)(C, {
                 isObscured: N,
@@ -125,12 +125,12 @@ function(e, t, n) {
                     width: s,
                     height: o,
                     maxWidth: O,
-                    maxHeight: M,
+                    maxHeight: R,
                     children: d,
                     animated: !e && u,
                     autoPlay: !e,
                     responsive: p,
-                    onContextMenu: R,
+                    onContextMenu: k,
                     ...A
                 }, t)
             }), null != n && !v && h({

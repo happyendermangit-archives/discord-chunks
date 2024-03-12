@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         fetchApplicationCommandIndex: function() {
-            return s
+            return r
         },
         requestApplicationCommandIndex: function() {
             return u
@@ -12,24 +12,24 @@ function(e, t, n) {
         l = n("913144"),
         a = n("599110"),
         o = n("718517"),
-        r = n("49111");
-    async function s(e, t, n) {
-        let s, u = 0;
+        s = n("49111");
+    async function r(e, t, n) {
+        let r, u = 0;
         switch (e.type) {
             case "channel":
-                s = r.Endpoints.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
+                r = s.Endpoints.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
                 break;
             case "guild":
-                s = r.Endpoints.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
+                r = s.Endpoints.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
                 break;
             case "user":
-                s = r.Endpoints.APPLICATION_COMMAND_INDEX_USER
+                r = s.Endpoints.APPLICATION_COMMAND_INDEX_USER
         }
         let d = async t => u >= 3 ? (p(!0), l.default.dispatch({
             type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
             target: e
         })) : (await new Promise(e => setTimeout(e, t)), c()), c = () => i.default.get({
-            url: s,
+            url: r,
             retries: 3 - u - 1,
             signal: n.signal,
             onRequestCreated: () => u++
@@ -48,7 +48,7 @@ function(e, t, n) {
             }))
         }), p = e => {
             let i = performance.now() - t;
-            a.default.track(r.AnalyticEvents.APPLICATION_COMMAND_PERFORMANCE, {
+            a.default.track(s.AnalyticEvents.APPLICATION_COMMAND_PERFORMANCE, {
                 duration_ms: i,
                 error: e,
                 aborted: n.signal.aborted,

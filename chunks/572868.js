@@ -8,10 +8,10 @@ function(e, t, n) {
     var i, l = n("44170"),
         a = n("917351"),
         o = n.n(a),
-        r = n("605250"),
-        s = n("402752"),
+        s = n("605250"),
+        r = n("402752"),
         u = n("894488");
-    let d = new r.default("UploaderBase.tsx");
+    let d = new s.default("UploaderBase.tsx");
     i = class extends l.EventEmitter {
         _addAttachmentsToPayload(e, t, n) {
             let i = {
@@ -53,7 +53,7 @@ function(e, t, n) {
                 this._cancel = e, !this.alreadyStarted && this.emit("start", this._file), this.alreadyStarted = !0
             }, this._handleProgress = (e, t, n) => {
                 let i = Date.now(),
-                    l = (0, s.calculateProgress)(e, t),
+                    l = (0, r.calculateProgress)(e, t),
                     a = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
                 if (null != n) {
                     var o;

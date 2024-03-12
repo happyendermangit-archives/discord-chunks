@@ -19,26 +19,23 @@ function(e, t, n) {
         DISCOVERY_COMMANDS_FRECENCY_LIMIT: function() {
             return c
         },
-        DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: function() {
+        SUB_COMMAND_KEY_SEPARATOR: function() {
             return f
         },
-        SUB_COMMAND_KEY_SEPARATOR: function() {
+        APPLICATION_COMMAND_PERMISSIONS_LIMIT: function() {
             return _
         },
-        APPLICATION_COMMAND_PERMISSIONS_LIMIT: function() {
+        MAX_SUBCOMMAND_LEVEL: function() {
             return h
         },
-        MAX_SUBCOMMAND_LEVEL: function() {
+        CONTEXT_MENU_COMMANDS_QUERY_LIMIT: function() {
             return E
         },
-        CONTEXT_MENU_COMMANDS_QUERY_LIMIT: function() {
+        AUTOCOMPLETE_OPTION_DEBOUNCE_TIME: function() {
             return g
         },
-        AUTOCOMPLETE_OPTION_DEBOUNCE_TIME: function() {
-            return m
-        },
         getValidationErrorText: function() {
-            return p
+            return m
         }
     });
     var i, s, r = n("798609"),
@@ -57,14 +54,13 @@ function(e, t, n) {
     (i = s || (s = {})).BUILT_IN = "-1", i.FRECENCY = "-2";
     let d = 10,
         c = 5,
-        f = 25,
-        _ = "\x00",
-        h = 100,
-        E = 3,
-        g = 10,
-        m = 500;
+        f = "\x00",
+        _ = 100,
+        h = 3,
+        E = 10,
+        g = 500;
 
-    function p(e) {
+    function m(e) {
         if (null != e.choices) return a.default.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
         switch (e.type) {
             case r.ApplicationCommandOptionType.BOOLEAN:

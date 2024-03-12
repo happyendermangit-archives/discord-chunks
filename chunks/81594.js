@@ -70,8 +70,8 @@ function(e, t, n) {
                 let {
                     description: a,
                     filename: o,
-                    spoiler: r,
-                    thumbnail: s
+                    spoiler: s,
+                    thumbnail: r
                 } = l;
                 i.default.dispatch({
                     type: "UPLOAD_ATTACHMENT_UPDATE_FILE",
@@ -79,8 +79,8 @@ function(e, t, n) {
                     id: t,
                     filename: o,
                     description: a,
-                    thumbnail: s,
-                    spoiler: r,
+                    thumbnail: r,
+                    spoiler: s,
                     draftType: n
                 })
             },

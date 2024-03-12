@@ -20,13 +20,13 @@ function(e, t, n) {
             return U
         },
         useCreateForumPostCommon: function() {
-            return F
+            return b
         }
     }), n("781738"), n("424973"), n("222007");
     var i, l, a = n("884691"),
         o = n("872717"),
-        r = n("913144"),
-        s = n("404118"),
+        s = n("913144"),
+        r = n("404118"),
         u = n("295426"),
         d = n("819689"),
         c = n("81594"),
@@ -35,22 +35,22 @@ function(e, t, n) {
         m = n("884351"),
         _ = n("804888"),
         I = n("42203"),
-        C = n("474643"),
-        T = n("377253"),
-        A = n("401848"),
-        E = n("718517"),
+        T = n("474643"),
+        A = n("377253"),
+        E = n("401848"),
+        C = n("718517"),
         N = n("568734"),
         g = n("299039"),
-        h = n("252862"),
-        S = n("300322"),
-        O = n("24337"),
-        M = n("648564"),
-        v = n("49111"),
-        y = n("782340");
+        M = n("252862"),
+        O = n("300322"),
+        S = n("24337"),
+        h = n("648564"),
+        y = n("49111"),
+        v = n("782340");
 
     function D(e) {
-        let t = (0, S.useCanStartPublicThread)(e),
-            n = (0, S.useCanStartPrivateThread)(e);
+        let t = (0, O.useCanStartPublicThread)(e),
+            n = (0, O.useCanStartPrivateThread)(e);
         return n ? t ? 2 : 3 : 1
     }
 
@@ -62,12 +62,12 @@ function(e, t, n) {
 
     function L(e, t) {
         var n, i, l, a;
-        let o = null == t ? null : T.default.getMessage(e.id, t),
-            r = null !== (l = null == o ? void 0 : null === (i = o.embeds) || void 0 === i ? void 0 : null === (n = i[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== l ? l : "";
-        if ("" !== r) return r.length > 40 ? r.substring(0, 40) + "..." : r;
+        let o = null == t ? null : A.default.getMessage(e.id, t),
+            s = null !== (l = null == o ? void 0 : null === (i = o.embeds) || void 0 === i ? void 0 : null === (n = i[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== l ? l : "";
+        if ("" !== s) return s.length > 40 ? s.substring(0, 40) + "..." : s;
         {
             let t = m.default.unparse(null !== (a = null == o ? void 0 : o.content) && void 0 !== a ? a : "", e.id, !0),
-                n = (0, O.default)(t.split("\n")[0], !0);
+                n = (0, S.default)(t.split("\n")[0], !0);
             n = n.replace(/^[ #-]+/, "");
             let i = [];
             for (;;) {
@@ -94,45 +94,45 @@ function(e, t, n) {
             parentMessageId: n,
             threadSettings: i,
             privateThreadMode: l,
-            location: r,
-            onThreadCreated: s,
+            location: s,
+            onThreadCreated: r,
             useDefaultThreadName: p,
             uploadHandler: f
         } = e;
         return a.useCallback(async (e, a, _) => {
-            var T;
-            let A = null == n,
-                E = R(i, l),
-                N = null !== (T = i.name) && void 0 !== T ? T : "";
+            var A;
+            let E = null == n,
+                C = R(i, l),
+                N = null !== (A = i.name) && void 0 !== A ? A : "";
             if ("" === N && p) {
                 let e = L(t, n);
-                N = "" !== e ? e : y.default.Messages.THREAD
+                N = "" !== e ? e : v.default.Messages.THREAD
             }
-            let S = (0, h.getAutoArchiveDuration)(t),
-                O = I.default.getChannel(g.default.castMessageIdAsChannelId(n)),
-                M = await b(t, () => {
-                    let e = null != n ? v.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n) : v.Endpoints.CHANNEL_THREADS(t.id);
+            let O = (0, M.getAutoArchiveDuration)(t),
+                S = I.default.getChannel(g.default.castMessageIdAsChannelId(n)),
+                h = await B(t, () => {
+                    let e = null != n ? y.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n) : y.Endpoints.CHANNEL_THREADS(t.id);
                     return o.default.post({
                         url: e,
                         body: {
                             name: N,
-                            type: E ? v.ChannelTypes.PRIVATE_THREAD : t.type === v.ChannelTypes.GUILD_ANNOUNCEMENT ? v.ChannelTypes.ANNOUNCEMENT_THREAD : v.ChannelTypes.PUBLIC_THREAD,
-                            auto_archive_duration: S,
-                            location: r
+                            type: C ? y.ChannelTypes.PRIVATE_THREAD : t.type === y.ChannelTypes.GUILD_ANNOUNCEMENT ? y.ChannelTypes.ANNOUNCEMENT_THREAD : y.ChannelTypes.PUBLIC_THREAD,
+                            auto_archive_duration: O,
+                            location: s
                         }
                     })
                 });
-            M !== O && (u.default.clearDraft(t.id, C.DraftType.ThreadSettings), u.default.clearDraft(t.id, C.DraftType.FirstThreadMessage), null == s || s(M), (A || e.length > 0 || null != a && a.length > 0 || null != _ && _.length > 0) && function(e, t, n, i, l) {
+            h !== S && (u.default.clearDraft(t.id, T.DraftType.ThreadSettings), u.default.clearDraft(t.id, T.DraftType.FirstThreadMessage), null == r || r(h), (E || e.length > 0 || null != a && a.length > 0 || null != _ && _.length > 0) && function(e, t, n, i, l) {
                 if (null != l && null != i && i.length > 0) l(e, i, t, n);
                 else if (null != n && n.length > 0) d.default.sendStickers(e.id, n, t);
                 else d.default.sendMessage(e.id, m.default.parse(e, t))
-            }(M, e, a, _, f)), c.default.clearAll(t.id, C.DraftType.FirstThreadMessage)
-        }, [t, n, i, s, l, r, p, f])
+            }(h, e, a, _, f)), c.default.clearAll(t.id, T.DraftType.FirstThreadMessage)
+        }, [t, n, i, r, l, s, p, f])
     }
 
     function U(e, t, n, i, l) {
-        return b(e, () => o.default.post({
-            url: v.Endpoints.CHANNEL_THREADS(e.id),
+        return B(e, () => o.default.post({
+            url: y.Endpoints.CHANNEL_THREADS(e.id),
             body: {
                 name: t,
                 type: n,
@@ -142,21 +142,21 @@ function(e, t, n) {
         }))
     }
 
-    function F(e) {
+    function b(e) {
         let {
             parentChannel: t,
             name: n,
             appliedTags: i,
             onThreadCreated: l,
-            upload: r
+            upload: s
         } = e;
-        return a.useCallback(async (e, a, s) => {
+        return a.useCallback(async (e, a, r) => {
             let d = 0,
                 [p, m] = (0, _.default)(e);
-            p && (e = m, d = (0, N.addFlag)(d, v.MessageFlags.SUPPRESS_NOTIFICATIONS));
-            let I = (0, h.getAutoArchiveDuration)(t, null),
-                T = v.Endpoints.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
-                A = {
+            p && (e = m, d = (0, N.addFlag)(d, y.MessageFlags.SUPPRESS_NOTIFICATIONS));
+            let I = (0, M.getAutoArchiveDuration)(t, null),
+                A = y.Endpoints.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
+                E = {
                     name: n,
                     auto_archive_duration: I,
                     applied_tags: i,
@@ -166,77 +166,77 @@ function(e, t, n) {
                         flags: 0 !== d ? d : void 0
                     }
                 },
-                E = await b(t, () => null != s && s.length > 0 ? r(T, A, s) : o.default.post({
-                    url: T,
-                    body: A
+                C = await B(t, () => null != r && r.length > 0 ? s(A, E, r) : o.default.post({
+                    url: A,
+                    body: E
                 }));
-            return u.default.clearDraft(t.id, C.DraftType.ThreadSettings), u.default.clearDraft(t.id, C.DraftType.FirstThreadMessage), c.default.clearAll(t.id, C.DraftType.FirstThreadMessage), (0, f.trackForumPostCreated)({
+            return u.default.clearDraft(t.id, T.DraftType.ThreadSettings), u.default.clearDraft(t.id, T.DraftType.FirstThreadMessage), c.default.clearAll(t.id, T.DraftType.FirstThreadMessage), (0, f.trackForumPostCreated)({
                 guildId: t.guild_id,
                 channelId: t.id,
-                postId: E.id
-            }), null == l || l(E), E
-        }, [t, n, l, i, r])
+                postId: C.id
+            }), null == l || l(C), C
+        }, [t, n, l, i, s])
     }(l = i || (i = {}))[l.Disabled = 1] = "Disabled", l[l.Enabled = 2] = "Enabled", l[l.PrivateOnly = 3] = "PrivateOnly";
-    async function b(e, t) {
+    async function B(e, t) {
         let n;
         let i = e.isForumLikeChannel();
         try {
-            n = await t(), null == n.body ? s.default.show({
-                title: y.default.Messages.ERROR,
-                body: y.default.Messages.ERROR_OCCURRED_TRY_AGAIN
-            }) : (r.default.dispatch({
+            n = await t(), null == n.body ? r.default.show({
+                title: v.default.Messages.ERROR,
+                body: v.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+            }) : (s.default.dispatch({
                 type: "SLOWMODE_RESET_COOLDOWN",
-                slowmodeType: A.SlowmodeType.CreateThread,
+                slowmodeType: E.SlowmodeType.CreateThread,
                 channelId: e.id
-            }), r.default.dispatch({
+            }), s.default.dispatch({
                 type: "THREAD_CREATE_LOCAL",
                 channelId: n.body.id
             }))
         } catch (t) {
             var l, a, o, u, d, c;
-            if ((null === (l = t.body) || void 0 === l ? void 0 : l.code) === v.AbortCodes.TOO_MANY_THREADS) s.default.show({
-                title: i ? y.default.Messages.CANNOT_CREATE_FORUM_POST : y.default.Messages.CANNOT_CREATE_THREAD,
-                body: i ? y.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : y.default.Messages.TOO_MANY_THREADS_MESSAGE
+            if ((null === (l = t.body) || void 0 === l ? void 0 : l.code) === y.AbortCodes.TOO_MANY_THREADS) r.default.show({
+                title: i ? v.default.Messages.CANNOT_CREATE_FORUM_POST : v.default.Messages.CANNOT_CREATE_THREAD,
+                body: i ? v.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : v.default.Messages.TOO_MANY_THREADS_MESSAGE
             });
-            else if ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === v.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS) s.default.show({
-                title: y.default.Messages.CANNOT_CREATE_THREAD,
-                body: y.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
+            else if ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === y.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS) r.default.show({
+                title: v.default.Messages.CANNOT_CREATE_THREAD,
+                body: v.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
             });
-            else if ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === v.AbortCodes.SLOWMODE_RATE_LIMITED) {
+            else if ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === y.AbortCodes.SLOWMODE_RATE_LIMITED) {
                 let n = null !== (c = t.body.retry_after) && void 0 !== c ? c : 0;
-                n > 0 && r.default.dispatch({
+                n > 0 && s.default.dispatch({
                     type: "SLOWMODE_SET_COOLDOWN",
                     channelId: e.id,
-                    slowmodeType: A.SlowmodeType.CreateThread,
-                    cooldownMs: n * E.default.Millis.SECOND
+                    slowmodeType: E.SlowmodeType.CreateThread,
+                    cooldownMs: n * C.default.Millis.SECOND
                 })
-            } else if (429 === t.status) s.default.show({
-                title: i ? y.default.Messages.CANNOT_CREATE_FORUM_POST : y.default.Messages.CANNOT_CREATE_THREAD,
-                body: y.default.Messages.RATE_LIMITED
+            } else if (429 === t.status) r.default.show({
+                title: i ? v.default.Messages.CANNOT_CREATE_FORUM_POST : v.default.Messages.CANNOT_CREATE_THREAD,
+                body: v.default.Messages.RATE_LIMITED
             });
-            else if (M.FORUM_POST_CREATION_AUTOMOD_ERRORS.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
+            else if (h.FORUM_POST_CREATION_AUTOMOD_ERRORS.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
             else {
-                if (M.FORUM_POST_CREATION_UPLOAD_ERRORS.has(null === (d = t.body) || void 0 === d ? void 0 : d.code)) return new Promise((e, n) => {
+                if (h.FORUM_POST_CREATION_UPLOAD_ERRORS.has(null === (d = t.body) || void 0 === d ? void 0 : d.code)) return new Promise((e, n) => {
                     null == t.body && n(), p.default.addConditionalChangeListener(() => {
                         let t = p.default.getAndDeleteMostRecentUserCreatedThreadId();
                         if (null != t) {
                             let i = I.default.getChannel(t);
-                            return r.default.wait(() => {
+                            return s.default.wait(() => {
                                 null == i ? n() : e(i)
                             }), !1
                         }
                     })
                 });
-                s.default.show({
-                    title: y.default.Messages.ERROR,
-                    body: y.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+                r.default.show({
+                    title: v.default.Messages.ERROR,
+                    body: v.default.Messages.ERROR_OCCURRED_TRY_AGAIN
                 })
             }
         }
         return new Promise((e, t) => {
             null == n.body && t(), I.default.addConditionalChangeListener(() => {
                 let t = I.default.getChannel(n.body.id);
-                if (null != t) return r.default.wait(() => {
+                if (null != t) return s.default.wait(() => {
                     e(t)
                 }), !1
             })

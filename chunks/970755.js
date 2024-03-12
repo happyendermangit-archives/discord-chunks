@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         fetchApplicationsShelf: function() {
-            return s
+            return o
         },
         fetchPrivateChannelIntegrations: function() {
             return u
@@ -15,12 +15,12 @@ function(e, t, n) {
         l = n("872717"),
         a = n("913144");
     n("253981");
-    var o = n("140596"),
+    var s = n("140596"),
         r = n("49111");
     n("843455"), n("782340");
 
-    function s() {
-        o.default.getApplicationsShelfFetchState() === o.FetchState.NOT_FETCHED && (a.default.dispatch({
+    function o() {
+        s.default.getApplicationsShelfFetchState() === s.FetchState.NOT_FETCHED && (a.default.dispatch({
             type: "APPLICATIONS_SHELF_FETCH_START"
         }), l.default.get(r.Endpoints.APPLICATIONS_SHELF).then(e => a.default.dispatch({
             type: "APPLICATIONS_SHELF_FETCH_SUCCESS",

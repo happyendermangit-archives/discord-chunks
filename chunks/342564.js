@@ -1,29 +1,26 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        getTopRealCommands: function() {
-            return m
-        },
         getFilteredTopCommands: function() {
-            return _
+            return f
         },
         default: function() {
-            return A
+            return T
         }
     }), n("222007"), n("424973");
     var i = n("917351"),
         l = n.n(i),
         a = n("446674"),
         o = n("913144"),
-        r = n("798609"),
-        s = n("80507"),
-        u = n("374363"),
-        d = n("317041"),
-        c = n("397336");
-    let p = {
+        s = n("798609"),
+        r = n("80507"),
+        u = n("374363");
+    n("317041");
+    var d = n("397336");
+    let c = {
             pendingUsages: []
         },
-        f = new s.default({
+        p = new r.default({
             computeBonus: () => 1,
             computeWeight: e => e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 0,
             lookupKey: e => e,
@@ -31,69 +28,60 @@ function(e, t, n) {
             numFrequentlyItems: 500
         });
 
-    function m(e) {
-        let t = new Set;
-        for (let n of e) {
-            let e = n.split(d.SUB_COMMAND_KEY_SEPARATOR)[0];
-            if (Number(e) > 0 && t.add(e), t.size >= d.DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT) break
-        }
-        return [...t]
-    }
-
-    function _(e, t) {
+    function f(e, t) {
         return e.filter(e => {
             if (e.includes(":")) return null != t.guild && t.guild.id === e.split(":")[1];
             return !0
         }).map(e => e.split(":")[0])
     }
 
-    function I(e, t) {
+    function m(e, t) {
         return 0 > Number(t.id) ? t.id : null != e.guild && null != t.guildId ? "".concat(t.id, ":").concat(e.guild.id) : t.id
     }
 
-    function C() {
+    function _() {
         var e, t;
         let n = u.default.frecencyWithoutFetchingLatest,
             i = null !== (t = null === (e = n.applicationCommandFrecency) || void 0 === e ? void 0 : e.applicationCommands) && void 0 !== t ? t : {};
-        f.overwriteHistory(l.mapValues(i, e => ({
+        p.overwriteHistory(l.mapValues(i, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
-        })), p.pendingUsages)
+        })), c.pendingUsages)
     }
-    class T extends a.default.PersistedStore {
+    class I extends a.default.PersistedStore {
         initialize(e) {
-            null != e && (p = e), this.syncWith([u.default], C)
+            null != e && (c = e), this.syncWith([u.default], _)
         }
         getState() {
-            return p
+            return c
         }
         hasPendingUsage() {
-            return p.pendingUsages.length > 0
+            return c.pendingUsages.length > 0
         }
         getCommandFrecencyWithoutLoadingLatest() {
-            return f
+            return p
         }
         getScoreWithoutLoadingLatest(e, t) {
             var n;
-            return null !== (n = f.getScore(I(e, t))) && void 0 !== n ? n : 0
+            return null !== (n = p.getScore(m(e, t))) && void 0 !== n ? n : 0
         }
         getTopCommandsWithoutLoadingLatest() {
-            return f.frequently
+            return p.frequently
         }
     }
-    T.displayName = "ApplicationCommandFrecencyStore", T.persistKey = "ApplicationCommandFrecencyV2";
-    var A = new T(o.default, {
+    I.displayName = "ApplicationCommandFrecencyStore", I.persistKey = "ApplicationCommandFrecencyV2";
+    var T = new I(o.default, {
         APPLICATION_COMMAND_USED: function(e) {
             let {
                 command: t,
                 context: n
             } = e;
-            if (t.type !== r.ApplicationCommandType.CHAT) return !1;
-            let i = I(n, t);
-            p.pendingUsages.push({
+            if (t.type !== s.ApplicationCommandType.CHAT) return !1;
+            let i = m(n, t);
+            c.pendingUsages.push({
                 key: i,
                 timestamp: Date.now()
-            }), f.track(i), f.compute()
+            }), p.track(i), p.compute()
         },
         USER_SETTINGS_PROTO_UPDATE: function(e) {
             let {
@@ -102,8 +90,8 @@ function(e, t, n) {
                 },
                 wasSaved: n
             } = e;
-            if (t !== c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-            p.pendingUsages = []
+            if (t !== d.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+            c.pendingUsages = []
         }
     })
 }

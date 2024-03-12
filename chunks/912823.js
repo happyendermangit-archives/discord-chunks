@@ -31,10 +31,10 @@ function(e, t, n) {
         N = n("923582"),
         A = n("80921"),
         O = n("954016"),
-        M = n("646718"),
-        k = n("350583");
+        R = n("646718"),
+        M = n("350583");
 
-    function R(e) {
+    function k(e) {
         let {
             disabled: t,
             channel: n
@@ -85,7 +85,7 @@ function(e, t, n) {
             location: "dc120b_4"
         }, {
             autoTrackExposure: !1
-        }), J = y.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => Z && g.default.isPremiumExactly(J, M.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
+        }), J = y.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => Z && g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
             if (!D.isDM() || void 0 === D.recipients || D.recipients.length > 1 || !Z) return !1;
             let e = D.recipients[0],
                 t = f.default.getSentUserIds();
@@ -103,7 +103,7 @@ function(e, t, n) {
             return [Z && l && a, a]
         }), ee = (0, u.useActivitiesInTextButtonVisibility)(D.id, "ChannelTextAreaButtons");
         if (!a.isMobile) {
-            if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, M.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+            if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
                     location: "dc120b_5"
                 }), Q && z.push((0, i.jsx)(_.default, {
                     disabled: U,
@@ -122,7 +122,7 @@ function(e, t, n) {
                 }, {
                     autoTrackExposure: D.isDM()
                 }), t = D.isDM() && e;
-                !t && z.push((0, i.jsx)(R, {
+                !t && z.push((0, i.jsx)(k, {
                     disabled: U,
                     channel: D
                 }, "gift"))
@@ -141,7 +141,7 @@ function(e, t, n) {
             onClick: w,
             disabled: U || 0 === V.length && F && !H
         }, "submit")), 0 === z.length) ? null : (0, i.jsx)("div", {
-            className: k.buttons,
+            className: M.buttons,
             children: z
         })
     })

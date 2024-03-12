@@ -17,7 +17,7 @@ function(e, t, n) {
             return O
         },
         setSummaryFeedback: function() {
-            return M
+            return R
         },
         deleteSummary: function() {
             return L
@@ -145,14 +145,14 @@ function(e, t, n) {
         }, [e, t, l, o])
     }
 
-    function M(e, t) {
+    function R(e, t) {
         u.default.dispatch({
             type: "SET_SUMMARY_FEEDBACK",
             summary: e,
             rating: t
         })
     }
-    async function k() {
+    async function M() {
         var e;
         let t, n;
         if (!h.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -175,7 +175,7 @@ function(e, t, n) {
             receivedAt: Date.now()
         })
     }
-    async function R(e) {
+    async function k(e) {
         let t, n, {
             useQuickSwitcher: i = !0,
             useChannelAffinities: l = !0
@@ -243,13 +243,13 @@ function(e, t, n) {
             let t = A(e, -1);
             t <= 0 && (A(e, 0), clearInterval(S[e]))
         },
-        setSummaryFeedback: M,
+        setSummaryFeedback: R,
         useSummaryPolling: O,
         updateVisibleMessages: N,
         setSelectedSummary: v,
         setHighlightedSummary: T,
         fetchSummaries: I,
-        fetchSummariesBulk: R,
+        fetchSummariesBulk: k,
         useChannelSummaries: function(e) {
             let {
                 channelIds: t = []
@@ -262,9 +262,9 @@ function(e, t, n) {
                     t && e();
                     async function e() {
                         try {
-                            await k()
+                            await M()
                         } catch (e) {}
-                        await R(n.split(","))
+                        await k(n.split(","))
                     }
                 }, [n, t])
             }(t), (0, r.useStateFromStoresArray)([h.default], () => h.default.topSummaries(), [])

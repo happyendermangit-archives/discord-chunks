@@ -36,9 +36,9 @@ function(e, t, n) {
                 getEmojiRowProps: N,
                 isScrolling: A,
                 isUsingKeyboardNavigation: O,
-                rowIndex: M,
-                allowAnimatedEmoji: k,
-                showEmojiFavoriteTooltip: R,
+                rowIndex: R,
+                allowAnimatedEmoji: M,
+                showEmojiFavoriteTooltip: k,
                 channelGuildId: L,
                 category: b,
                 selectedItemClassName: P,
@@ -82,7 +82,7 @@ function(e, t, n) {
                                     tabIndex: p,
                                     onFocus: h,
                                     ...x
-                                } = null !== (e = v(o, M)) && void 0 !== e ? e : {};
+                                } = null !== (e = v(o, R)) && void 0 !== e ? e : {};
                                 return (0, l.createElement)("li", {
                                     ...x,
                                     key: t
@@ -120,14 +120,14 @@ function(e, t, n) {
                                 visibleRowIndex: s
                             } = e, r = B.rowIndex === s && B.columnIndex === l;
                             return (0, i.jsx)(y.default, {
-                                rowIndex: M,
+                                rowIndex: R,
                                 descriptor: e,
                                 emojiItemKey: t,
                                 isInspected: r,
                                 isScrolling: A,
                                 isUsingKeyboardNavigation: O,
                                 surrogateCodePoint: _,
-                                allowAnimatedEmoji: k,
+                                allowAnimatedEmoji: M,
                                 selectedItemClassName: P,
                                 onSelect: a,
                                 onInspect: T,
@@ -137,7 +137,7 @@ function(e, t, n) {
                                 isLargeSize: W,
                                 pulseItemKey: H,
                                 setPulseItemKey: V,
-                                showEmojiFavoriteTooltip: R,
+                                showEmojiFavoriteTooltip: k,
                                 messageId: j,
                                 isBurstReaction: U,
                                 rowPosition: null == K ? void 0 : null === (n = K.current) || void 0 === n ? void 0 : n.getBoundingClientRect(),
@@ -147,7 +147,7 @@ function(e, t, n) {
                     }
                 },
                 Z = e => (0, i.jsx)("ul", {
-                    ...N(M),
+                    ...N(R),
                     className: s(I.emojiListRow, {
                         [I.emojiListRowLargeSize]: W,
                         [I.emojiListRowMediumSize]: Y

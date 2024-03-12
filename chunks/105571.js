@@ -88,11 +88,11 @@ function(e, t, n) {
                 bot: null === (t = u.application) || void 0 === t ? void 0 : t.bot,
                 botIconFirst: !0
             }),
-            M = l.useCallback(() => {
+            R = l.useCallback(() => {
                 g.dismissAppDetail()
             }, []),
-            k = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-            R = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != k ? k : ""),
+            M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
+            k = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
             L = (0, f.getIconComponent)(u),
             b = l.useMemo(() => {
                 var e, t;
@@ -104,11 +104,11 @@ function(e, t, n) {
             children: [(0, i.jsx)("div", {
                 className: v.headerWhenSideCard,
                 style: {
-                    backgroundColor: R
+                    backgroundColor: k
                 },
                 children: (0, i.jsx)(r.Clickable, {
                     "aria-label": _.default.Messages.CLOSE,
-                    onClick: M,
+                    onClick: R,
                     className: v.headerCloseButton,
                     children: (0, i.jsx)(h.default, {})
                 })

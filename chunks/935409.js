@@ -37,9 +37,9 @@ function(e, t, n) {
         N = n("430312"),
         A = n("401642"),
         O = n("590456"),
-        M = n("49111"),
-        k = n("646718"),
-        R = n("782340"),
+        R = n("49111"),
+        M = n("646718"),
+        k = n("782340"),
         L = n("291809");
     let b = d.AvatarSizes.SIZE_80,
         P = (0, c.getDecorationSizeForAvatarSize)(b);
@@ -53,7 +53,7 @@ function(e, t, n) {
         } = e, s = (0, o.useStateFromStores)([C.default], () => C.default.getUserProfile(t.id), [t]), r = (0, o.useStateFromStores)([h.default], () => h.default.getGuild(n), [n]), c = (0, f.useClydeProfilesEnabled)(r);
         return (0, i.jsxs)(i.Fragment, {
             children: [(null == s ? void 0 : s.profileFetchFailed) && (!t.isClyde() || c) && (0, i.jsx)(d.Tooltip, {
-                text: R.default.Messages.USER_PROFILE_LOAD_ERROR,
+                text: k.default.Messages.USER_PROFILE_LOAD_ERROR,
                 spacing: 16,
                 children: e => (0, i.jsx)(x.default, {
                     ...e,
@@ -88,7 +88,7 @@ function(e, t, n) {
             hasProfileEffect: T
         } = e, {
             profileTheme: v
-        } = l.useContext(N.UserProfileContext), j = l.useContext(y.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), w = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, k.PremiumTypes.TIER_2), F = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), B = x || t.isClyde(), {
+        } = l.useContext(N.UserProfileContext), j = l.useContext(y.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), w = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, M.PremiumTypes.TIER_2), F = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), B = x || t.isClyde(), {
             avatarDecorationSrc: G,
             avatarSrc: H,
             eventHandlers: V
@@ -105,7 +105,7 @@ function(e, t, n) {
                 avatarDecoration: G,
                 size: b,
                 "aria-label": t.username,
-                status: F ? M.StatusTypes.UNKNOWN : u,
+                status: F ? R.StatusTypes.UNKNOWN : u,
                 statusBackdropColor: null != v && w && !F ? (0, d.getStatusBackdropColor)(v) : void 0,
                 isMobile: c,
                 statusTooltip: !0
@@ -141,7 +141,7 @@ function(e, t, n) {
                     let e = null != G,
                         t = e ? P : (0, d.getAvatarSize)(b);
                     return (0, i.jsx)(E.default, {
-                        mask: null == u || u === M.StatusTypes.UNKNOWN || F ? E.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, c]).with([!0, !0], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => E.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => E.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+                        mask: null == u || u === R.StatusTypes.UNKNOWN || F ? E.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, c]).with([!0, !0], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => E.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => E.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
                         className: e ? L.avatarDecorationHint : L.avatarHint,
                         style: e ? {
                             borderRadius: .4 * t
@@ -150,7 +150,7 @@ function(e, t, n) {
                         height: t,
                         children: (0, i.jsx)("div", {
                             className: L.avatarHintInner,
-                            children: R.default.Messages.VIEW_PROFILE
+                            children: k.default.Messages.VIEW_PROFILE
                         })
                     })
                 }()]
@@ -190,7 +190,7 @@ function(e, t, n) {
             }), (0, i.jsx)(D, {
                 user: t,
                 displayProfile: n,
-                status: o ? M.StatusTypes.STREAMING : u,
+                status: o ? R.StatusTypes.STREAMING : u,
                 isMobile: r,
                 guildId: l,
                 channelId: a,

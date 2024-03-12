@@ -30,14 +30,14 @@ function(e, t, n) {
                 type: v,
                 editorHeight: N,
                 onVisibilityChange: A
-            } = e, O = (0, p.useUID)(), M = (0, o.useStateFromStores)([c.default], () => {
+            } = e, O = (0, p.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
                 var e;
                 return null !== (e = c.default.getGuild(_.guild_id)) && void 0 !== e ? e : null
-            }, [_.guild_id]), k = l.useRef(), [R, L, b] = (0, g.default)({
+            }, [_.guild_id]), M = l.useRef(), [k, L, b] = (0, g.default)({
                 ...e,
-                guild: M
-            }, t, k), P = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(R.selectedIndex);
-            (0, d.useChannelEditorPopup)(O, R.isVisible, j), x.default.trackExposure({
+                guild: R
+            }, t, M), P = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
+            (0, d.useChannelEditorPopup)(O, k.isVisible, j), x.default.trackExposure({
                 location: "6e9811_1"
             });
             let {
@@ -49,19 +49,19 @@ function(e, t, n) {
             }), D = (0, y.useChannelAutocompleteLayerPosition)({
                 editorHeight: N,
                 type: v,
-                state: R,
+                state: k,
                 isInPopoutExperiment: U
             }), w = l.useMemo(() => null == D ? "" : String(Date.now()), [null == D ? void 0 : D.top, null == D ? void 0 : D.left, null == D ? void 0 : D.bottom, null == D ? void 0 : D.right]);
             if (l.useEffect(() => {
-                    A(R.isVisible)
-                }, [A, R.isVisible]), !R.isVisible || null == R.query || void 0 === D) return null;
-            let F = null !== (a = R.query.typeInfo.renderResults({
-                results: R.query.results,
-                selectedIndex: R.selectedIndex,
+                    A(k.isVisible)
+                }, [A, k.isVisible]), !k.isVisible || null == k.query || void 0 === D) return null;
+            let F = null !== (a = k.query.typeInfo.renderResults({
+                results: k.query.results,
+                selectedIndex: k.selectedIndex,
                 channel: _,
-                guild: M,
-                query: R.query.queryText,
-                options: R.query.options,
+                guild: R,
+                query: k.query.queryText,
+                options: k.query.options,
                 onHover: e => L.onResultHover(e),
                 onClick: e => L.onResultClick(e)
             })) && void 0 !== a ? a : null;
@@ -72,7 +72,7 @@ function(e, t, n) {
                     [S.bottom]: null == D && "bottom" === e.position
                 },
                 G = 490;
-            null != D && (G = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (I = R.query) || void 0 === I ? void 0 : I.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), G = Math.min(window.innerHeight - 175, G);
+            null != D && (G = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (I = k.query) || void 0 === I ? void 0 : I.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), G = Math.min(window.innerHeight - 175, G);
             let H = (0, i.jsx)(f.default, {
                 id: O,
                 className: s(S.autocomplete, B),
@@ -90,7 +90,7 @@ function(e, t, n) {
                                 id: O,
                                 ref: e => {
                                     var n;
-                                    t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null, k.current = e
+                                    t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null, M.current = e
                                 },
                                 ...n,
                                 className: S.scroller,
