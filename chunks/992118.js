@@ -21,21 +21,22 @@ function(e, t, n) {
                 interval: n = c.SubscriptionIntervalTypes.MONTH,
                 className: i,
                 isGift: f = !1,
-                variant: m
-            } = e, _ = (0, a.useStateFromStores)([o.default], () => o.default.isLoadedForPremiumSKUs());
-            if (!_) return (0, r.jsx)(s.Spinner, {
+                variant: m,
+                priceOptions: _
+            } = e, E = (0, a.useStateFromStores)([o.default], () => o.default.isLoadedForPremiumSKUs());
+            if (!E) return (0, r.jsx)(s.Spinner, {
                 type: s.Spinner.Type.PULSING_ELLIPSIS,
                 className: d.priceSpinner
             });
-            let E = o.default.getForSkuAndInterval((0, u.castPremiumSubscriptionAsSkuId)(t), n),
-                I = null != E ? (0, u.getFormattedPriceForPlan)(E, void 0, !1, f) : null;
+            let I = o.default.getForSkuAndInterval((0, u.castPremiumSubscriptionAsSkuId)(t), n),
+                T = null != I ? (0, u.getFormattedPriceForPlan)(I, _, !1, f) : null;
             return (0, r.jsxs)(s.Heading, {
                 color: "always-white",
                 variant: null != m ? m : "heading-md/medium",
                 className: l(d.pricePerInterval, i),
                 children: [(0, r.jsx)("span", {
                     className: d.price,
-                    children: I
+                    children: T
                 }), " / ", (0, u.getIntervalStringAsNoun)(n)]
             })
         }
