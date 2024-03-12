@@ -2,86 +2,99 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         fromServer: function() {
-            return o
-        },
-        attachRoles: function() {
-            return l
-        },
-        fromBackgroundSync: function() {
             return u
         },
-        fromServerUpdate: function() {
+        attachRoles: function() {
             return d
         },
-        fromInviteGuild: function() {
+        fromBackgroundSync: function() {
             return c
         },
-        toServer: function() {
+        fromServerUpdate: function() {
             return f
         },
-        fromSerializedGuildRecord: function() {
+        fromInviteGuild: function() {
             return _
         },
-        filterRoleDeletes: function() {
+        toServer: function() {
             return h
+        },
+        fromSerializedGuildRecord: function() {
+            return E
+        },
+        filterRoleDeletes: function() {
+            return g
         }
     }), n("222007");
-    var i = n("627929"),
-        s = n("813006"),
-        r = n("605136"),
-        a = n("49111");
+    var i = n("627445"),
+        s = n.n(i),
+        r = n("627929"),
+        a = n("813006"),
+        o = n("605136"),
+        l = n("49111");
 
-    function o(e, t) {
-        var n, r, o, l, u, d, c, f, _, h, E, g, m;
-        let p = {
+    function u(e, t) {
+        var n, i, o, u, d, c, f, _, h, E, g, m, p;
+        let S = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
+            v = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
+        if (null == e.properties) {
+            s(null != t, "If guild.properties is null, existingGuild must be passed in");
+            let e = t.joinedAt instanceof Date ? t.joinedAt.getTime() : t.joinedAt,
+                n = S instanceof Date ? S.getTime() : S;
+            return v === t.premiumSubscriberCount && e === n ? t : t.merge({
+                joinedAt: S,
+                premiumSubscriberCount: v
+            })
+        }
+        let T = {
             id: e.id,
-            name: null !== (n = e.properties.name) && void 0 !== n ? n : "",
+            joinedAt: S,
+            premiumSubscriberCount: v,
+            name: null !== (i = e.properties.name) && void 0 !== i ? i : "",
             description: e.properties.description,
             icon: e.properties.icon,
             splash: e.properties.splash,
             banner: e.properties.banner,
             homeHeader: e.properties.home_header,
-            features: new Set(null !== (r = e.properties.features) && void 0 !== r ? r : []),
-            preferredLocale: null !== (o = e.properties.preferred_locale) && void 0 !== o ? o : "en-us",
+            features: new Set(null !== (o = e.properties.features) && void 0 !== o ? o : []),
+            preferredLocale: null !== (u = e.properties.preferred_locale) && void 0 !== u ? u : "en-us",
             ownerId: e.properties.owner_id,
             application_id: e.properties.application_id,
             afkChannelId: e.properties.afk_channel_id,
             afkTimeout: e.properties.afk_timeout,
             systemChannelId: e.properties.system_channel_id,
-            joinedAt: null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
-            verificationLevel: null !== (l = e.properties.verification_level) && void 0 !== l ? l : a.VerificationLevels.NONE,
-            explicitContentFilter: null !== (u = e.properties.explicit_content_filter) && void 0 !== u ? u : a.GuildExplicitContentFilterTypes.DISABLED,
-            defaultMessageNotifications: null !== (d = e.properties.default_message_notifications) && void 0 !== d ? d : a.UserNotificationSettings.ALL_MESSAGES,
-            mfaLevel: null !== (c = e.properties.mfa_level) && void 0 !== c ? c : a.MFALevels.NONE,
+            verificationLevel: null !== (d = e.properties.verification_level) && void 0 !== d ? d : l.VerificationLevels.NONE,
+            explicitContentFilter: null !== (c = e.properties.explicit_content_filter) && void 0 !== c ? c : l.GuildExplicitContentFilterTypes.DISABLED,
+            defaultMessageNotifications: null !== (f = e.properties.default_message_notifications) && void 0 !== f ? f : l.UserNotificationSettings.ALL_MESSAGES,
+            mfaLevel: null !== (_ = e.properties.mfa_level) && void 0 !== _ ? _ : l.MFALevels.NONE,
             vanityURLCode: e.properties.vanity_url_code,
-            premiumTier: null !== (f = e.properties.premium_tier) && void 0 !== f ? f : a.BoostedGuildTiers.NONE,
-            premiumSubscriberCount: null !== (_ = e.premium_subscription_count) && void 0 !== _ ? _ : 0,
+            premiumTier: null !== (h = e.properties.premium_tier) && void 0 !== h ? h : l.BoostedGuildTiers.NONE,
             premiumProgressBarEnabled: e.properties.premium_progress_bar_enabled || !1,
             systemChannelFlags: e.properties.system_channel_flags,
             discoverySplash: e.properties.discovery_splash,
             rulesChannelId: e.properties.rules_channel_id,
             safetyAlertsChannelId: e.properties.safety_alerts_channel_id,
             publicUpdatesChannelId: e.properties.public_updates_channel_id,
-            maxStageVideoChannelUsers: null !== (h = e.properties.max_stage_video_channel_users) && void 0 !== h ? h : -1,
-            maxVideoChannelUsers: null !== (E = e.properties.max_video_channel_users) && void 0 !== E ? E : -1,
-            maxMembers: null !== (g = e.properties.max_members) && void 0 !== g ? g : -1,
-            nsfwLevel: null !== (m = e.properties.nsfw_level) && void 0 !== m ? m : a.GuildNSFWContentLevel.DEFAULT,
+            maxStageVideoChannelUsers: null !== (E = e.properties.max_stage_video_channel_users) && void 0 !== E ? E : -1,
+            maxVideoChannelUsers: null !== (g = e.properties.max_video_channel_users) && void 0 !== g ? g : -1,
+            maxMembers: null !== (m = e.properties.max_members) && void 0 !== m ? m : -1,
+            nsfwLevel: null !== (p = e.properties.nsfw_level) && void 0 !== p ? p : l.GuildNSFWContentLevel.DEFAULT,
             hubType: e.properties.hub_type,
             latestOnboardingQuestionId: e.properties.latest_onboarding_question_id
         };
-        return null == t ? (0, i.dangerouslyCast)(p, s.default) : t.merge(p)
+        return null == t ? (0, r.dangerouslyCast)(T, a.default) : t.merge(T)
     }
 
-    function l(e, t) {
-        return new s.GuildRecordWithRoles({
+    function d(e, t) {
+        return new a.GuildRecordWithRoles({
             ...e,
             roles: t
         })
     }
 
-    function u(e, t) {
-        var n, i, s, r, o, l, u, d, c, _, h, E, g;
-        let m = null !== (n = e.properties) && void 0 !== n ? n : f(t),
+    function c(e, t) {
+        var n, i, s, r, a, o, u, d, c, f, _, E, g;
+        let m = null !== (n = e.properties) && void 0 !== n ? n : h(t),
             p = {
                 id: e.id,
                 name: null !== (i = m.name) && void 0 !== i ? i : "",
@@ -97,29 +110,29 @@ function(e, t, n) {
                 afkChannelId: m.afk_channel_id,
                 afkTimeout: m.afk_timeout,
                 systemChannelId: m.system_channel_id,
-                verificationLevel: null !== (o = m.verification_level) && void 0 !== o ? o : a.VerificationLevels.NONE,
-                explicitContentFilter: null !== (l = m.explicit_content_filter) && void 0 !== l ? l : a.GuildExplicitContentFilterTypes.DISABLED,
-                defaultMessageNotifications: null !== (u = m.default_message_notifications) && void 0 !== u ? u : a.UserNotificationSettings.ALL_MESSAGES,
-                mfaLevel: null !== (d = m.mfa_level) && void 0 !== d ? d : a.MFALevels.NONE,
+                verificationLevel: null !== (a = m.verification_level) && void 0 !== a ? a : l.VerificationLevels.NONE,
+                explicitContentFilter: null !== (o = m.explicit_content_filter) && void 0 !== o ? o : l.GuildExplicitContentFilterTypes.DISABLED,
+                defaultMessageNotifications: null !== (u = m.default_message_notifications) && void 0 !== u ? u : l.UserNotificationSettings.ALL_MESSAGES,
+                mfaLevel: null !== (d = m.mfa_level) && void 0 !== d ? d : l.MFALevels.NONE,
                 vanityURLCode: m.vanity_url_code,
-                premiumTier: null !== (c = m.premium_tier) && void 0 !== c ? c : a.BoostedGuildTiers.NONE,
+                premiumTier: null !== (c = m.premium_tier) && void 0 !== c ? c : l.BoostedGuildTiers.NONE,
                 premiumProgressBarEnabled: m.premium_progress_bar_enabled || !1,
                 systemChannelFlags: m.system_channel_flags,
                 discoverySplash: m.discovery_splash,
                 rulesChannelId: m.rules_channel_id,
                 safetyAlertsChannelId: m.safety_alerts_channel_id,
                 publicUpdatesChannelId: m.public_updates_channel_id,
-                maxStageVideoChannelUsers: null !== (_ = m.max_stage_video_channel_users) && void 0 !== _ ? _ : -1,
-                maxVideoChannelUsers: null !== (h = m.max_video_channel_users) && void 0 !== h ? h : -1,
+                maxStageVideoChannelUsers: null !== (f = m.max_stage_video_channel_users) && void 0 !== f ? f : -1,
+                maxVideoChannelUsers: null !== (_ = m.max_video_channel_users) && void 0 !== _ ? _ : -1,
                 maxMembers: null !== (E = m.max_members) && void 0 !== E ? E : -1,
-                nsfwLevel: null !== (g = m.nsfw_level) && void 0 !== g ? g : a.GuildNSFWContentLevel.DEFAULT,
+                nsfwLevel: null !== (g = m.nsfw_level) && void 0 !== g ? g : l.GuildNSFWContentLevel.DEFAULT,
                 hubType: m.hub_type,
                 latestOnboardingQuestionId: m.latest_onboarding_question_id
             };
         return t.merge(p)
     }
 
-    function d(e, t) {
+    function f(e, t) {
         let n = {
             id: e.id,
             name: e.name,
@@ -132,7 +145,7 @@ function(e, t, n) {
             preferredLocale: e.preferred_locale,
             ownerId: e.owner_id,
             application_id: e.application_id,
-            roles: (0, r.sortServerRoles)(e.id, e.roles),
+            roles: (0, o.sortServerRoles)(e.id, e.roles),
             afkChannelId: e.afk_channel_id,
             afkTimeout: e.afk_timeout,
             systemChannelId: e.system_channel_id,
@@ -157,10 +170,10 @@ function(e, t, n) {
             hubType: e.hub_type,
             latestOnboardingQuestionId: e.latest_onboarding_question_id
         };
-        return null == t ? new s.default(n) : t.merge(n)
+        return null == t ? new a.default(n) : t.merge(n)
     }
 
-    function c(e) {
+    function _(e) {
         let t = {
             id: e.id,
             name: e.name,
@@ -175,10 +188,10 @@ function(e, t, n) {
             nsfwLevel: e.nsfw_level,
             memberCount: e.approximate_member_count
         };
-        return new s.default(t)
+        return new a.default(t)
     }
 
-    function f(e) {
+    function h(e) {
         return {
             id: e.id,
             name: e.name,
@@ -216,20 +229,20 @@ function(e, t, n) {
         }
     }
 
-    function _(e) {
+    function E(e) {
         var t;
-        for (let n in null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), e.features = new Set(null !== (t = e.features) && void 0 !== t ? t : []), e.roles)(0, r.fromSerializedGuildRole)(e.roles[n]);
-        return (0, i.dangerouslyCast)(e, s.default)
+        for (let n in null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), e.features = new Set(null !== (t = e.features) && void 0 !== t ? t : []), e.roles)(0, o.fromSerializedGuildRole)(e.roles[n]);
+        return (0, r.dangerouslyCast)(e, a.default)
     }
 
-    function h(e, t, n, i) {
+    function g(e, t, n, i) {
         let s = !1;
         if (null != i)
             for (let e of i) delete t[e], s = !0;
         if (null != n && n.length > 0) {
-            for (let e of n) t[e.id] = (0, r.fromServerRole)(e);
+            for (let e of n) t[e.id] = (0, o.fromServerRole)(e);
             s = !0
         }
-        return s ? (0, r.sortClientRoles)(e, Object.values(t)) : t
+        return s ? (0, o.sortClientRoles)(e, Object.values(t)) : t
     }
 }

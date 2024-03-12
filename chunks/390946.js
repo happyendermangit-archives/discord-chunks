@@ -208,7 +208,7 @@ function(e, t, n) {
             member_count: e.member_count,
             members: e.members,
             premium_subscription_count: e.premium_subscription_count,
-            properties: null !== (u = e.properties) && void 0 !== u ? u : _.properties,
+            properties: null !== (u = e.properties) && void 0 !== u ? u : null,
             roles: S.filterRoleDeletes(e.id, _.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
             stage_instances: e.stage_instances,
             stickers: null == _.stickers ? null : U(_.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),

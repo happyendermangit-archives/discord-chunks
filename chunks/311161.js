@@ -5,10 +5,10 @@ function(e, t, n) {
             return d
         },
         hasDetectedActivity: function() {
-            return s
+            return o
         },
         hasDetectedRaid: function() {
-            return o
+            return s
         },
         hasDetectedDMRaid: function() {
             return c
@@ -47,11 +47,11 @@ function(e, t, n) {
         minute: "2-digit"
     };
 
-    function s(e) {
+    function o(e) {
         return null != e.dmSpamDetectedAt && i(e.dmSpamDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > i() || null != e.raidDetectedAt && i(e.raidDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > i()
     }
 
-    function o(e) {
+    function s(e) {
         return null != e.raidDetectedAt && i(e.raidDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > i()
     }
 
@@ -60,7 +60,7 @@ function(e, t, n) {
     }
 
     function f(e) {
-        return null == e ? void 0 : o(e) ? r.GuildIncidentAlertTypes.JOIN_RAID : r.GuildIncidentAlertTypes.DM_RAID
+        return null == e ? void 0 : s(e) ? r.GuildIncidentAlertTypes.JOIN_RAID : r.GuildIncidentAlertTypes.DM_RAID
     }
 
     function _(e, t) {

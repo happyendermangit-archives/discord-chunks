@@ -696,10 +696,12 @@ function(e, t, n) {
             t.lastMessageId = F.default.fromTimestamp(u(Date.now()).subtract(24, "h").valueOf())
         }(e),
         function(e) {
-            let t = e.properties.latest_onboarding_question_id;
+            let t = K.default.getGuild(e.id);
             if (null == t) return;
-            let n = eO.get(e.id, er.ReadStateTypes.GUILD_ONBOARDING_QUESTION);
-            n._guildId = e.id, n.lastMessageId = t
+            let n = null == t ? void 0 : t.latestOnboardingQuestionId;
+            if (null == n) return;
+            let i = eO.get(t.id, er.ReadStateTypes.GUILD_ONBOARDING_QUESTION);
+            i._guildId = t.id, i.lastMessageId = n
         }(e)
     }
     eO._guildReadStateSentinels = {}, eO._readStates = {}, eO._mentionChannels = new Set;

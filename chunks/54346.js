@@ -11,8 +11,8 @@ function(e, t, n) {
         u = n("305961"),
         a = n("957255"),
         d = n("607620"),
-        s = n("299039"),
-        o = n("610174"),
+        o = n("299039"),
+        s = n("610174"),
         c = n("311161");
     let f = {},
         _ = {};
@@ -21,8 +21,8 @@ function(e, t, n) {
         var e;
         let t = null !== (e = r.default.getGuildsProto()) && void 0 !== e ? e : {},
             n = u.default.getGuilds(),
-            l = s.default.keys(n);
-        for (let e of (_ = {}, l))(0, o.getGuildAlertModeEnabled)(e).showAlertMode && (_[e] = {
+            l = o.default.keys(n);
+        for (let e of (_ = {}, l))(0, s.getGuildAlertModeEnabled)(e).showAlertMode && (_[e] = {
             guildId: e,
             guildName: n[e].name,
             ...t[e]
@@ -54,16 +54,18 @@ function(e, t, n) {
     h.displayName = "GuildIncidentsStore";
     var v = new h(i.default, {
         CONNECTION_OPEN: function(e) {
-            for (let t of (f = {}, e.guilds)) {
-                let e = A(t.properties.incidents_data);
-                null != e && ((0, c.hasDetectedActivity)(e) || (0, c.isUnderLockdown)(e)) && (f[t.id] = e)
+            for (let n of (f = {}, e.guilds)) {
+                var t;
+                let e = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+                null != e && ((0, c.hasDetectedActivity)(e) || (0, c.isUnderLockdown)(e)) && (f[n.id] = e)
             }
         },
         GUILD_CREATE: function(e) {
+            var t;
             let {
-                guild: t
-            } = e, n = A(t.properties.incidents_data);
-            null != n && ((0, c.hasDetectedActivity)(n) || (0, c.isUnderLockdown)(n)) && (f[t.id] = n)
+                guild: n
+            } = e, l = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+            null != l && ((0, c.hasDetectedActivity)(l) || (0, c.isUnderLockdown)(l)) && (f[n.id] = l)
         },
         GUILD_UPDATE: function(e) {
             let {

@@ -2,7 +2,7 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         default: function() {
-            return l
+            return f
         }
     }), t("222007");
     var s = t("316272"),
@@ -30,5 +30,5 @@ function(e, a, t) {
             super(...e), this._tracker = new i.default
         }
     }
-    var l = new o
+    var f = new o
 }

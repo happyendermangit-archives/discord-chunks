@@ -12,8 +12,8 @@ function(e, a, t) {
         i = t.n(c),
         r = t("872717"),
         o = t("784063"),
-        l = t("625454"),
-        f = t("441822"),
+        f = t("625454"),
+        l = t("441822"),
         u = t("862337"),
         p = t("913144"),
         b = t("605250"),
@@ -32,7 +32,7 @@ function(e, a, t) {
     let v = w.getContext("2d");
 
     function A() {
-        O.stop(), null != s && (l.default.removeSink(s, T), s = null)
+        O.stop(), null != s && (f.default.removeSink(s, T), s = null)
     }
     let S = i.debounce((e, a, t, s) => {
         N(e, (0, _.encodeStreamKey)({
@@ -62,12 +62,12 @@ function(e, a, t) {
                         };
                         d ? t.getNextVideoOutputFrame(e).then(i, a => {
                             if (s === e) throw a
-                        }) : l.default.addSink(e, T, i)
+                        }) : f.default.addSink(e, T, i)
                     }).finally(() => {
-                        !d && l.default.removeSink(e, T)
+                        !d && f.default.removeSink(e, T)
                     })
                 } : function(e, a) {
-                    let t = (0, f.getVideoStream)(e);
+                    let t = (0, l.getVideoStream)(e);
                     if (null == t) return Promise.resolve(new ImageData(0, 0));
                     let {
                         width: s,

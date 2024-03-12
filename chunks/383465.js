@@ -16,11 +16,11 @@ function(e, t, n) {
             secondaryColor: u = "transparent",
             secondaryColorClass: a = "",
             color: d = i.default.colors.INTERACTIVE_NORMAL,
-            colorClass: s = "",
-            ...o
+            colorClass: o = "",
+            ...s
         } = e;
         return (0, l.jsxs)("svg", {
-            ...(0, r.default)(o),
+            ...(0, r.default)(s),
             xmlns: "http://www.w3.org/2000/svg",
             width: t,
             height: n,
@@ -37,7 +37,7 @@ function(e, t, n) {
                 fillRule: "evenodd",
                 d: "M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm0-17a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H7a1 1 0 1 1 0-2h4V7a1 1 0 0 1 1-1Z",
                 clipRule: "evenodd",
-                className: s
+                className: o
             })]
         })
     }

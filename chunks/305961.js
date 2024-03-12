@@ -84,17 +84,19 @@ function(e, t, n) {
             i = Object.keys(m).length
         },
         CONNECTION_OPEN: function(e) {
-            p = !0, m = {}, g = {}, i = 0, e.guilds.forEach(e => {
-                i++, m[e.id] = d.fromServer(e), g[e.id] = e.roles instanceof Array ? c.sortServerRoles(e.id, e.roles) : e.roles
+            p = !0;
+            let t = m;
+            m = {}, g = {}, i = 0, e.guilds.forEach(e => {
+                i++, m[e.id] = d.fromServer(e, t[e.id]), g[e.id] = e.roles instanceof Array ? c.sortServerRoles(e.id, e.roles) : e.roles
             });
-            let t = !1;
-            if (S.length !== e.geoRestrictedGuilds.length) t = !0;
+            let n = !1;
+            if (S.length !== e.geoRestrictedGuilds.length) n = !0;
             else
-                for (let n = 0; n < e.geoRestrictedGuilds.length; n++)
-                    if (!(0, o.default)(S[n], e.geoRestrictedGuilds[n])) {
-                        t = !0;
+                for (let t = 0; t < e.geoRestrictedGuilds.length; t++)
+                    if (!(0, o.default)(S[t], e.geoRestrictedGuilds[t])) {
+                        n = !0;
                         break
-                    } t && (S = e.geoRestrictedGuilds)
+                    } n && (S = e.geoRestrictedGuilds)
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;

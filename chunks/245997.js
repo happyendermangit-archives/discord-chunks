@@ -11,8 +11,8 @@ function(e, t, n) {
         u = n("379881"),
         a = n("271938"),
         d = n("42203"),
-        s = n("923959"),
-        o = n("305961"),
+        o = n("923959"),
+        s = n("305961"),
         c = n("49111");
     let f = null,
         _ = {},
@@ -31,7 +31,7 @@ function(e, t, n) {
     }
 
     function I(e) {
-        let t = s.default.getChannels(e),
+        let t = o.default.getChannels(e),
             n = A(),
             l = e => {
                 var t;
@@ -51,7 +51,7 @@ function(e, t, n) {
                 channel: t,
                 index: -1
             }), n[t.id] = []
-        }), t[0, s.GUILD_SELECTABLE_CHANNELS_KEY].forEach(l), t[0, s.GUILD_VOCAL_CHANNELS_KEY].forEach(l), (0, r.default)(n._categories, n).forEach(v), _[e] = n, n
+        }), t[0, o.GUILD_SELECTABLE_CHANNELS_KEY].forEach(l), t[0, o.GUILD_VOCAL_CHANNELS_KEY].forEach(l), (0, r.default)(n._categories, n).forEach(v), _[e] = n, n
     }
 
     function L() {
@@ -95,7 +95,7 @@ function(e, t, n) {
     }
     class m extends l.default.Store {
         initialize() {
-            this.waitFor(s.default, o.default, a.default, d.default, u.default), this.syncWith([u.default], S)
+            this.waitFor(o.default, s.default, a.default, d.default, u.default), this.syncWith([u.default], S)
         }
         getCategories(e) {
             return null != e ? function(e) {
