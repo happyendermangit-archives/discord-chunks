@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     }), n("222007");
     var s = n("872717"),
         a = n("913144"),
-        r = n("437822"),
-        l = n("697796"),
-        i = n("524824"),
+        i = n("437822"),
+        r = n("697796"),
+        l = n("524824"),
         o = n("72177"),
         u = n("599110"),
         d = n("316272"),
@@ -21,7 +21,7 @@ function(e, t, n) {
             handoff_source: t
         })
     }
-    class E extends d.default {
+    class h extends d.default {
         _initialize() {
             a.default.subscribe("BROWSER_HANDOFF_END", this.handleEnd), a.default.subscribe("BROWSER_HANDOFF_FROM_APP", this.handleHandoff)
         }
@@ -45,16 +45,16 @@ function(e, t, n) {
                 let {
                     body: t
                 } = e;
-                (0, l.handoffSetUser)(t.user), r.default.loginToken(t.token, !1), f(!0, o)
+                (0, r.handoffSetUser)(t.user), i.default.loginToken(t.token, !1), f(!0, o)
             }, e => {
-                if (null != a && f(!1, o), r.default.setFingerprint(a), (0, l.handoffEnd)(), o === i.LoginHandoffSource.ROLE_SUBSCRIPTION) {
+                if (null != a && f(!1, o), i.default.setFingerprint(a), (0, r.handoffEnd)(), o === l.LoginHandoffSource.ROLE_SUBSCRIPTION) {
                     var t;
                     u.default.track(c.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
                         reason: null !== (t = e.message) && void 0 !== t ? t : e.text,
                         handoff_source: o
                     })
                 }
-            }) : null != a ? (r.default.setFingerprint(a), f(!1, o), (0, l.handoffEnd)()) : (r.default.setFingerprint(a), (0, l.handoffUnavailable)())
+            }) : null != a ? (i.default.setFingerprint(a), f(!1, o), (0, r.handoffEnd)()) : (i.default.setFingerprint(a), (0, r.handoffUnavailable)())
         }
         constructor(...e) {
             super(...e), this.handleEnd = e => {
@@ -67,9 +67,9 @@ function(e, t, n) {
                     handoffToken: t,
                     fingerprint: n,
                     handoffSource: void 0
-                }) : (r.default.setFingerprint(null), (0, l.handoffUnavailable)())
+                }) : (i.default.setFingerprint(null), (0, r.handoffUnavailable)())
             }
         }
     }
-    var h = new E
+    var E = new h
 }

@@ -7,12 +7,12 @@ function(e, t, n) {
     }), n("222007");
     var s = n("37983"),
         a = n("884691"),
-        r = n("907002"),
-        l = n("230606");
-    let i = () => {
+        i = n("907002"),
+        r = n("230606");
+    let l = () => {
         let e = a.useRef(null),
             [t, n] = a.useState(0),
-            s = a.useMemo(() => new l.default(e => {
+            s = a.useMemo(() => new r.default(e => {
                 let [t] = e;
                 return n(t.contentRect.height)
             }), []);
@@ -27,11 +27,11 @@ function(e, t, n) {
             show: t,
             children: n,
             top: a = 0,
-            bottom: l = 0
+            bottom: r = 0
         } = e, {
             ref: o,
             height: u
-        } = i(), d = (0, r.useSpring)({
+        } = l(), d = (0, i.useSpring)({
             from: {
                 height: 0,
                 paddingBottom: "0px",
@@ -39,14 +39,14 @@ function(e, t, n) {
             },
             to: {
                 height: t ? u : 0,
-                paddingBottom: t ? "".concat(l, "px") : "0px",
+                paddingBottom: t ? "".concat(r, "px") : "0px",
                 marginTop: t ? "".concat(a, "px") : "0px"
             },
             config: {
                 tension: 170,
                 friction: 26
             }
-        }), c = (0, r.useSpring)({
+        }), c = (0, i.useSpring)({
             from: {
                 opacity: 0
             },
@@ -58,14 +58,14 @@ function(e, t, n) {
                 easing: t ? e => e ** 4 : e => e * (2 - e)
             }
         });
-        return (0, s.jsx)(r.animated.div, {
+        return (0, s.jsx)(i.animated.div, {
             style: {
                 overflow: "hidden",
                 height: d.height,
                 paddingBottom: d.paddingBottom,
                 marginTop: d.marginTop
             },
-            children: (0, s.jsx)(r.animated.div, {
+            children: (0, s.jsx)(i.animated.div, {
                 style: {
                     opacity: c.opacity
                 },

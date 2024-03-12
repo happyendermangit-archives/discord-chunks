@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         usePomeloDebounceDelay: function() {
-            return r
+            return i
         }
     });
     var s = n("862205");
@@ -45,7 +45,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        r = () => a.useExperiment({
+        i = () => a.useExperiment({
             location: "52560d_1"
         }, {
             autoTrackExposure: !1

@@ -8,9 +8,9 @@ function(e, t, n) {
     var s = n("37983");
     n("884691");
     var a = n("759843"),
-        r = n("77078"),
-        l = n("428958"),
-        i = n("124969"),
+        i = n("77078"),
+        r = n("428958"),
+        l = n("124969"),
         o = n("851460"),
         u = n("782340"),
         d = n("61585");
@@ -19,14 +19,14 @@ function(e, t, n) {
         let {
             onDismiss: t
         } = e;
-        return (0, l.default)({
+        return (0, r.default)({
             type: a.ImpressionTypes.MODAL,
             name: a.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING
-        }), (0, s.jsxs)(i.default, {
+        }), (0, s.jsxs)(l.default, {
             className: d.chooseAccountAuthBox,
-            children: [(0, s.jsx)(i.Title, {
+            children: [(0, s.jsx)(l.Title, {
                 children: u.default.Messages.SWITCH_ACCOUNTS_CHOOSE_ACCOUNT
-            }), (0, s.jsx)(r.Text, {
+            }), (0, s.jsx)(i.Text, {
                 className: d.chooseAccountHelpText,
                 variant: "text-md/normal",
                 color: "header-secondary",
@@ -38,13 +38,13 @@ function(e, t, n) {
                 }
             }), (0, s.jsx)("div", {
                 className: d.actions,
-                children: (0, s.jsx)(r.Button, {
+                children: (0, s.jsx)(i.Button, {
                     className: d.chooseAccountButton,
-                    look: r.Button.Looks.LINK,
-                    color: r.Button.Colors.PRIMARY,
+                    look: i.Button.Looks.LINK,
+                    color: i.Button.Colors.PRIMARY,
                     onClick: t,
-                    size: r.Button.Sizes.MEDIUM,
-                    children: (0, s.jsx)(r.Text, {
+                    size: i.Button.Sizes.MEDIUM,
+                    children: (0, s.jsx)(i.Text, {
                         variant: "text-sm/normal",
                         children: u.default.Messages.SWITCH_ACCOUNTS_ADD_AN_ACCOUNT_BUTTON
                     })

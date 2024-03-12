@@ -8,12 +8,12 @@ function(e, t, n) {
             return f
         },
         default: function() {
-            return E
+            return h
         }
     });
-    var s, a, r = n("37983"),
-        l = n("884691"),
-        i = n("82697"),
+    var s, a, i = n("37983"),
+        r = n("884691"),
+        l = n("82697"),
         o = n("679001");
     (s = a || (a = {})).SIZE_40 = "SIZE_40", s.SIZE_60 = "SIZE_60";
     let u = Object.freeze({
@@ -21,14 +21,14 @@ function(e, t, n) {
             SIZE_60: "size-60"
         }),
         d = n("527826");
-    class c extends l.PureComponent {
+    class c extends r.PureComponent {
         render() {
             let {
                 className: e,
                 text: t,
                 ...n
             } = this.props;
-            return (0, r.jsx)("div", {
+            return (0, i.jsx)("div", {
                 style: {
                     padding: 8,
                     borderRadius: 4,
@@ -37,7 +37,7 @@ function(e, t, n) {
                     backgroundColor: n.bgColor
                 },
                 className: e,
-                children: (0, r.jsx)(i.default, {
+                children: (0, i.jsx)(l.default, {
                     value: t,
                     level: "M",
                     ...n
@@ -50,18 +50,18 @@ function(e, t, n) {
         bgColor: "#ffffff",
         fgColor: "#000000"
     };
-    class f extends l.PureComponent {
+    class f extends r.PureComponent {
         render() {
             let {
                 overlaySize: e
             } = this.props, t = u[null != e ? e : "SIZE_40"];
-            return (0, r.jsxs)("div", {
+            return (0, i.jsxs)("div", {
                 className: o.qrCodeContainer,
-                children: [(0, r.jsx)(c, {
+                children: [(0, i.jsx)(c, {
                     ...this.props
-                }), (0, r.jsx)("div", {
+                }), (0, i.jsx)("div", {
                     className: o.qrCodeOverlay,
-                    children: (0, r.jsx)("img", {
+                    children: (0, i.jsx)("img", {
                         className: o[t],
                         src: d,
                         alt: ""
@@ -75,5 +75,5 @@ function(e, t, n) {
         bgColor: "#ffffff",
         fgColor: "#000000"
     };
-    var E = c
+    var h = c
 }

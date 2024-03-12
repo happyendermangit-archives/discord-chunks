@@ -7,9 +7,9 @@ function(e, t, n) {
     });
     var s = n("693566"),
         a = n.n(s),
-        r = n("446674"),
-        l = n("913144"),
-        i = n("718517");
+        i = n("446674"),
+        r = n("913144"),
+        l = n("718517");
     let o = {
             taken: null,
             error: void 0,
@@ -39,7 +39,7 @@ function(e, t, n) {
                 }
             }
         };
-    class d extends r.default.Store {
+    class d extends i.default.Store {
         isRateLimited() {
             return null != u.retryAfterTime && Date.now() < u.retryAfterTime
         }
@@ -67,7 +67,7 @@ function(e, t, n) {
         }
     }
     d.displayName = "PomeloStore";
-    var c = new d(l.default, {
+    var c = new d(r.default, {
         POMELO_ATTEMPT_SUCCESS: function(e) {
             let {
                 username: t,
@@ -88,10 +88,10 @@ function(e, t, n) {
                 taken: null,
                 error: n,
                 rateLimited: !0
-            }, (null != a ? a : 7) * i.default.Millis.SECOND) : u.validations.set(t, {
+            }, (null != a ? a : 7) * l.default.Millis.SECOND) : u.validations.set(t, {
                 taken: null,
                 error: n
-            }), null != a && (u.retryAfterTime = Date.now() + a * i.default.Millis.SECOND)
+            }), null != a && (u.retryAfterTime = Date.now() + a * l.default.Millis.SECOND)
         },
         POMELO_SUGGESTIONS_RESET: function() {
             u.suggestions.migration = {

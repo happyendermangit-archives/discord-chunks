@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useUURegistrationExperiment: function() {
-            return r
+            return i
         },
         hasRegistrationUsernameSuggestions: function() {
-            return l
+            return r
         }
     });
     var s = n("862205");
@@ -47,12 +47,12 @@ function(e, t, n) {
                 }
             }]
         }),
-        r = () => a.useExperiment({
+        i = () => a.useExperiment({
             location: "83ca1a_3"
         }, {
             autoTrackExposure: !1
         }),
-        l = () => a.getCurrentConfig({
+        r = () => a.getCurrentConfig({
             location: "83ca1a_4"
         }, {
             autoTrackExposure: !1
