@@ -4,6 +4,7 @@ function(e, t, n) {
         header: "header__6145e",
         headerContent: "headerContent__8ec3c",
         iconLogotypeContainer: "iconLogotypeContainer_e2a170",
+        img: "img__4f1c2",
         outerContainer: "outerContainer_d63ffb",
         outerContainerEmbed: "outerContainerEmbed__41c25",
         outerContainerGiftInventory: "outerContainerGiftInventory__1d198",

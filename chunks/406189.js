@@ -1,55 +1,55 @@
-function(t, e, l) {
+function(e, t, n) {
     "use strict";
-    l.r(e), l.d(e, {
+    n.r(t), n.d(t, {
         default: function() {
-            return a
+            return i
         }
     });
-    var n = l("913144"),
-        a = {
-            updateChannelDimensions(t, e, l, a, i) {
-                n.default.wait(() => {
-                    n.default.dispatch({
+    var s = n("913144"),
+        i = {
+            updateChannelDimensions(e, t, n, i, r) {
+                s.default.wait(() => {
+                    s.default.dispatch({
                         type: "UPDATE_CHANNEL_DIMENSIONS",
-                        channelId: t,
-                        scrollTop: e,
-                        scrollHeight: l,
-                        offsetHeight: a
-                    }), null != i && i()
+                        channelId: e,
+                        scrollTop: t,
+                        scrollHeight: n,
+                        offsetHeight: i
+                    }), null != r && r()
                 })
             },
-            updateChannelListScroll(t, e) {
-                let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-                n.default.dispatch({
+            updateChannelListScroll(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+                s.default.dispatch({
                     type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
-                    guildId: t,
-                    scrollTop: e,
-                    channelIds: l
+                    guildId: e,
+                    scrollTop: t,
+                    channelIds: n
                 })
             },
-            channelListScrollTo(t, e) {
-                n.default.dispatch({
+            channelListScrollTo(e, t) {
+                s.default.dispatch({
                     type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
-                    guildId: t,
-                    scrollTo: e,
+                    guildId: e,
+                    scrollTo: t,
                     channelIds: []
                 })
             },
-            clearChannelListScrollTo(t) {
-                n.default.dispatch({
+            clearChannelListScrollTo(e) {
+                s.default.dispatch({
                     type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
-                    guildId: t,
+                    guildId: e,
                     scrollTo: null,
                     channelIds: []
                 })
             },
-            clearChannelDimensions(t, e) {
-                this.updateChannelDimensions(t, null, null, null, e)
+            clearChannelDimensions(e, t) {
+                this.updateChannelDimensions(e, null, null, null, t)
             },
-            updateGuildListScrollTo(t) {
-                n.default.dispatch({
+            updateGuildListScrollTo(e) {
+                s.default.dispatch({
                     type: "UPDATE_GUILD_LIST_DIMENSIONS",
-                    scrollTop: t
+                    scrollTop: e
                 })
             }
         }

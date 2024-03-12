@@ -5,7 +5,7 @@ function(e, t, n) {
             return a
         },
         useIsEligibleForQuests: function() {
-            return u
+            return l
         }
     });
     var s = n("619935"),
@@ -46,7 +46,7 @@ function(e, t, n) {
             });
             return i.enabled && !a.paymentsBlocked
         },
-        u = e => {
+        l = e => {
             let {
                 location: t,
                 autoTrackExposure: n

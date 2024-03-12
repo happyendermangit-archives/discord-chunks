@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         fetchLibrary: function() {
-            return l
+            return u
         },
         createTestModeLibraryApplications: function() {
             return o
@@ -15,11 +15,11 @@ function(e, t, n) {
         i = n("913144"),
         r = n("370999"),
         a = n("271560"),
-        u = n("49111");
-    async function l() {
+        l = n("49111");
+    async function u() {
         try {
             let e = await (0, a.httpGetWithCountryCodeQuery)({
-                url: u.Endpoints.LIBRARY,
+                url: l.Endpoints.LIBRARY,
                 oldFormErrors: !0
             }, !1);
             i.default.dispatch({
@@ -37,7 +37,7 @@ function(e, t, n) {
         let t = e.primarySkuId;
         if (null == t) return;
         let n = await s.default.get({
-                url: u.Endpoints.APPLICATION_BRANCH_LIST(e.id),
+                url: l.Endpoints.APPLICATION_BRANCH_LIST(e.id),
                 oldFormErrors: !0
             }).then(e => e.body),
             a = n.map(n => r.default.createForTestMode({
