@@ -44,8 +44,8 @@ function(e, t, n) {
         y = n("299039"),
         C = n("649649"),
         O = n("845868"),
-        b = n("287223"),
-        A = n("76618"),
+        A = n("287223"),
+        b = n("76618"),
         M = n("380353"),
         w = n("49111"),
         P = n("133335"),
@@ -60,7 +60,7 @@ function(e, t, n) {
                 let i = {};
                 for (let a of u) i[a.id] = function(e, t, n, i, a) {
                     var l;
-                    let [s, o, r] = m.default.hasConsented(w.Consents.PERSONALIZATION) ? (0, b.guessGuildModeWithRemoteData)(e, t, n, i, !0) : (0, b.guessGuildModeWithLocalData)(e, n), u = null !== (l = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== l ? l : {}, d = (0, O.default)(e, null != a ? a : s, u, i, t);
+                    let [s, o, r] = m.default.hasConsented(w.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(e, t, n, i, !0) : (0, A.guessGuildModeWithLocalData)(e, n), u = null !== (l = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== l ? l : {}, d = (0, O.default)(e, null != a ? a : s, u, i, t);
                     return {
                         guildId: e.id,
                         mode: s,
@@ -124,7 +124,7 @@ function(e, t, n) {
 
     function L(e, t) {
         return Object.values(p.default.getGuilds()).some(n => {
-            let [i] = m.default.hasConsented(w.Consents.PERSONALIZATION) ? (0, b.guessGuildModeWithRemoteData)(n, M.defaultThresholds, e, t, !1) : (0, b.guessGuildModeWithLocalData)(n, e);
+            let [i] = m.default.hasConsented(w.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(n, M.defaultThresholds, e, t, !1) : (0, A.guessGuildModeWithLocalData)(n, e);
             return i === M.Mode.UseGreyDot
         })
     }
@@ -231,7 +231,7 @@ function(e, t, n) {
         }
     }
     async function k(e) {
-        await F(() => H()), await F(() => d.default.setAccountFlag(A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
+        await F(() => H()), await F(() => d.default.setAccountFlag(b.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
         let t = await F(() => f.default.saveUserGuildSettingsBulk(e));
         r.default.dispatch({
             type: "USER_GUILD_SETTINGS_FULL_UPDATE",
@@ -281,8 +281,8 @@ function(e, t, n) {
                 onConfirm: t,
                 cancelText: "Cancel",
                 onCancel: () => {}
-            })), await (0, C.restoreSnapshot)(e.id), await d.default.setAccountFlag(A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
-        } else await d.default.setAccountFlag(A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
+            })), await (0, C.restoreSnapshot)(e.id), await d.default.setAccountFlag(b.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
+        } else await d.default.setAccountFlag(b.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
     }
 
     function V(e) {
