@@ -1,81 +1,81 @@
-function(e, n, t) {
+function(e, t, n) {
     "use strict";
-    t.r(n), t.d(n, {
+    n.r(t), n.d(t, {
         default: function() {
-            return d
+            return u
         }
-    }), t("222007");
-    var l = t("446674"),
-        i = t("913144");
+    }), n("222007");
+    var i = n("446674"),
+        s = n("913144");
     let r = {},
-        o = {},
-        u = new Set;
-    class a extends l.default.Store {
+        a = {},
+        o = new Set;
+    class l extends i.default.Store {
         getCompletedActions(e) {
-            return null == e ? null : o[e]
+            return null == e ? null : a[e]
         }
-        hasCompletedActionForChannel(e, n) {
-            let t = this.getCompletedActions(e);
-            return null != t && null != t[n]
+        hasCompletedActionForChannel(e, t) {
+            let n = this.getCompletedActions(e);
+            return null != n && null != n[t]
         }
         getState(e) {
             return null == e ? {} : {
-                completedActions: o[e],
-                loading: u.has(e)
+                completedActions: a[e],
+                loading: o.has(e)
             }
         }
     }
-    a.displayName = "GuildOnboardingMemberActionStore";
-    var d = new a(i.default, {
+    l.displayName = "GuildOnboardingMemberActionStore";
+    var u = new l(s.default, {
         GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function(e) {
             let {
-                guildId: n
+                guildId: t
             } = e;
-            u.add(n)
+            o.add(t)
         },
         GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function(e) {
             let {
-                memberActions: n,
-                guildId: t
+                memberActions: t,
+                guildId: n
             } = e;
-            if (null == n) {
-                o[t] = r;
+            if (null == t) {
+                a[n] = r;
                 return
             }
-            o[t] = n, u.delete(t)
+            a[n] = t, o.delete(n)
         },
         GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function(e) {
             let {
-                guildId: n
+                guildId: t
             } = e;
-            u.delete(n)
+            o.delete(t)
         },
         GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function(e) {
             let {
-                guildId: n
+                guildId: t
             } = e;
-            if (null == o[n]) return !1;
-            delete o[n]
+            if (null == a[t]) return !1;
+            delete a[t]
         },
         COMPLETE_NEW_MEMBER_ACTION: function(e) {
             let {
-                guildId: n,
-                channelId: t
+                guildId: t,
+                channelId: n
             } = e;
-            o = {
-                ...o,
-                [n]: {
-                    ...o[n],
-                    [t]: !0
+            a = {
+                ...a,
+                [t]: {
+                    ...a[t],
+                    [n]: !0
                 }
             }
         },
         GUILD_DELETE: function(e) {
             let {
-                guild: n
+                guild: t
             } = e;
-            if (null == o[n.id]) return !1;
-            delete o[n.id]
+            if (null == a[t.id]) return !1;
+            delete a[t.id]
         }
     })
 }

@@ -8,10 +8,10 @@ function(e, t, n) {
             return c
         },
         enrollInQuest: function() {
-            return f
+            return E
         },
         claimQuestRewardCode: function() {
-            return E
+            return f
         },
         fetchQuestRewardCode: function() {
             return _
@@ -97,7 +97,7 @@ function(e, t, n) {
             })
         }
     }
-    async function f(e, t) {
+    async function E(e, t) {
         null != t.questContentCTA && (0, a.trackQuestContentClicked)(e, t.questContent, t.questContentCTA);
         let n = u.default.isEnrolling(e);
         if (!n) {
@@ -124,7 +124,7 @@ function(e, t, n) {
             }
         }
     }
-    async function E(e, t, n) {
+    async function f(e, t, n) {
         let a = u.default.isClaimingRewardCode(e);
         if (!a) {
             i.default.dispatch({

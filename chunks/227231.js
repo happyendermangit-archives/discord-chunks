@@ -11,10 +11,10 @@ function(e, t, n) {
             return c
         },
         questWithUserStatusFromServer: function() {
-            return f
+            return E
         },
         questsRewardCodeFromServer: function() {
-            return E
+            return f
         },
         getRewardAssetUrl: function() {
             return _
@@ -47,10 +47,10 @@ function(e, t, n) {
             return I
         },
         calculatePercentComplete: function() {
-            return y
+            return U
         },
         getContextualEntrypointHeading: function() {
-            return U
+            return y
         },
         isDismissible: function() {
             return R
@@ -99,7 +99,7 @@ function(e, t, n) {
         }
     }
 
-    function f(e) {
+    function E(e) {
         var t, n, s;
         return {
             id: e.id,
@@ -139,7 +139,7 @@ function(e, t, n) {
         }
     }
 
-    function E(e) {
+    function f(e) {
         return {
             userId: e.user_id,
             questId: e.quest_id,
@@ -177,7 +177,7 @@ function(e, t, n) {
         }
     };
 
-    function y(e) {
+    function U(e) {
         if (null == e.userStatus) return 0;
         let {
             streamProgressSeconds: t,
@@ -190,11 +190,11 @@ function(e, t, n) {
         return Math.min(t / 60 / s, 1)
     }
 
-    function U(e) {
+    function y(e) {
         var t, n;
         if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return u.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
         if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-            let t = y(e);
+            let t = U(e);
             return t >= .75 ? u.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? u.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? u.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : u.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
         }
         return u.default.Messages.QUESTS_TITLE.format({

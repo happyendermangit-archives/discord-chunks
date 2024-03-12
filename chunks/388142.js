@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         initiateChannelPrompts: function() {
-            return f
+            return E
         },
         forcePrompt: function() {
-            return E
+            return f
         },
         sendGamingStatsMessage: function() {
             return _
@@ -24,7 +24,7 @@ function(e, t, n) {
         d = n("659500"),
         c = n("49111");
 
-    function f(e) {
+    function E(e) {
         s.default.post({
             url: c.Endpoints.INITIATE_CHANNEL_PROMPTS,
             body: {
@@ -33,7 +33,7 @@ function(e, t, n) {
         })
     }
 
-    function E(e) {
+    function f(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT;
         s.default.post({
             url: c.Endpoints.FORCE_SEND_PROMPT(e),
