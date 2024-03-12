@@ -14,18 +14,18 @@ function(e, t, n) {
             width: t = 24,
             height: n = 24,
             color: i = "currentColor",
-            className: r,
-            foreground: s,
-            ..._
+            className: _,
+            foreground: r,
+            ...s
         } = e;
         return (0, a.jsx)("svg", {
-            ...(0, l.default)(_),
-            className: r,
+            ...(0, l.default)(s),
+            className: _,
             width: t,
             height: n,
             viewBox: "0 0 24 24",
             children: (0, a.jsx)("path", {
-                className: s,
+                className: r,
                 fill: i,
                 fillRule: "evenodd",
                 clipRule: "evenodd",

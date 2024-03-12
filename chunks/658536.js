@@ -8,23 +8,23 @@ function(e, t, n) {
     var a = n("913144"),
         l = n("689988"),
         i = n("26989"),
-        r = n("697218"),
-        s = n("509");
-    let _ = null,
+        _ = n("697218"),
+        r = n("509");
+    let s = null,
         u = () => {
             let e = i.default.getCommunicationDisabledUserMap();
             Object.keys(e).forEach(t => {
                 let n = (0, i.getGuildIdFromCommunicationDisabledUserKey)(t),
                     a = (0, i.getUserIdFromCommunicationDisabledUserKey)(t),
                     l = e[t];
-                !(0, s.isCommunicationDisabled)(l) && o(n, a)
+                !(0, r.isCommunicationDisabled)(l) && o(n, a)
             })
         },
         o = (e, t) => {
-            var n, l, _, u, o, d;
+            var n, l, s, u, o, d;
             let E = i.default.getMember(e, t),
-                f = r.default.getUser(t);
-            if (null == E || null == f || (0, s.isMemberCommunicationDisabled)(E)) return;
+                f = _.default.getUser(t);
+            if (null == E || null == f || (0, r.isMemberCommunicationDisabled)(E)) return;
             let c = {
                 ...E,
                 guildId: e,
@@ -33,7 +33,7 @@ function(e, t, n) {
                 avatarDecoration: null != E.avatarDecoration ? {
                     ...E.avatarDecoration
                 } : void 0,
-                premiumSince: null !== (_ = E.premiumSince) && void 0 !== _ ? _ : void 0,
+                premiumSince: null !== (s = E.premiumSince) && void 0 !== s ? s : void 0,
                 isPending: null !== (u = E.isPending) && void 0 !== u && u,
                 user: {
                     ...f,
@@ -49,10 +49,10 @@ function(e, t, n) {
         };
     class d extends l.default {
         _initialize() {
-            _ = setInterval(() => u(), 1e4)
+            s = setInterval(() => u(), 1e4)
         }
         _terminate() {
-            clearInterval(_)
+            clearInterval(s)
         }
         constructor(...e) {
             super(...e), this.clearGuildMemberTimeout = o
