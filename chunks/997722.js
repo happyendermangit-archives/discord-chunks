@@ -449,7 +449,7 @@ function(e, t, n) {
             }
             u.setVideoEncoderExperiments(d.join(",")), u.on(h.BaseConnectionEvent.Speaking, (e, t, n) => {
                 this.userId === e && this.sendSpeaking(t, n), this.emit(F.RTCConnectionEvent.Speaking, e, t)
-            }), u.on(h.BaseConnectionEvent.MuteFromNative, e => {
+            }), u.on(h.BaseConnectionEvent.NativeMuteChanged, e => {
                 m.default.setSelfMute(X.MediaEngineContextTypes.DEFAULT, e)
             }), u.on(h.BaseConnectionEvent.Video, (e, t, n, i, s, r) => {
                 this._handleVideoStreamId({

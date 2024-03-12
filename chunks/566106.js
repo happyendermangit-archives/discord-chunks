@@ -41,6 +41,7 @@ function(e, t, n) {
         setSelfDeaf(e) {
             for (let t of (this.selfDeaf = e, Object.keys(this.outputs))) this.outputs[t].mute = e || this.localMutes[t]
         }
+        setNativeMute(e) {}
         setLocalMute(e, t) {
             this.localMutes[e] = t, null != this.outputs[e] && (this.outputs[e].mute = this.selfDeaf || t), this.emit(u.BaseConnectionEvent.LocalMute, e, t)
         }
