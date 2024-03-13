@@ -11,10 +11,10 @@ function(t, e, n) {
             return S
         },
         changeSubscriptionCurrency: function() {
-            return E
+            return d
         },
         changePaymentSource: function() {
-            return d
+            return E
         },
         clearError: function() {
             return f
@@ -69,11 +69,11 @@ function(t, e, n) {
         try {
             let S = (0, l.getPremiumPlanItem)(t);
             u(S, "Expected existing premium plan");
-            let E = (0, l.getItemsWithUpsertedPremiumPlanId)(t, S.planId);
+            let d = (0, l.getItemsWithUpsertedPremiumPlanId)(t, S.planId);
             await a.updateSubscription(t, {
                 status: o.SubscriptionStatusTypes.ACTIVE,
                 paymentSource: i,
-                items: E,
+                items: d,
                 currency: n
             }, e, s, c), r.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
@@ -94,7 +94,7 @@ function(t, e, n) {
             throw t
         }
     }
-    async function E(t, e, n, i) {
+    async function d(t, e, n, i) {
         try {
             await a.changeSubscriptionCurrency(t, e, n, i), r.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
@@ -106,7 +106,7 @@ function(t, e, n) {
             }), t
         }
     }
-    async function d(t, e, n, i, u) {
+    async function E(t, e, n, i, u) {
         try {
             await a.changePaymentSource(t, e, n, i, u), r.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"

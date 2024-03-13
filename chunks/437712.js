@@ -14,8 +14,8 @@ function(t, e, n) {
         s = n("964889"),
         c = n("552712");
     let S = {},
-        E = {},
         d = {},
+        E = {},
         f = {},
         _ = !1,
         T = !1,
@@ -24,11 +24,11 @@ function(t, e, n) {
         p = {};
 
     function C(t) {
-        S[t.id] = a.default.createFromServer(t), null == d[t.sku_id] && (d[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == p[t.subscription_id] && (p[t.subscription_id] = new Set), p[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), d[t.sku_id].add(t.id)
+        S[t.id] = a.default.createFromServer(t), null == E[t.sku_id] && (E[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == p[t.subscription_id] && (p[t.subscription_id] = new Set), p[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), E[t.sku_id].add(t.id)
     }
 
     function P(t) {
-        E[t.id] = a.default.createFromServer(t)
+        d[t.id] = a.default.createFromServer(t)
     }
 
     function N(t) {
@@ -42,7 +42,7 @@ function(t, e, n) {
             return S[t]
         }
         getGiftable() {
-            return u.values(E)
+            return u.values(d)
         }
         getForApplication(t) {
             let e = f[t];
@@ -52,7 +52,7 @@ function(t, e, n) {
             return n
         }
         getForSku(t) {
-            let e = d[t];
+            let e = E[t];
             if (null == e) return null;
             let n = new Set;
             for (let t of e) n.add(S[t]);
@@ -85,7 +85,7 @@ function(t, e, n) {
         }
         isEntitledToSku(t, e, n) {
             let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-                u = d[e];
+                u = E[e];
             if (null != u)
                 for (let e of u) {
                     let n = S[e];
@@ -119,7 +119,7 @@ function(t, e, n) {
             let {
                 entitlements: e
             } = t;
-            E = {}, e.forEach(P)
+            d = {}, e.forEach(P)
         },
         SKU_PURCHASE_SUCCESS: function(t) {
             let {
@@ -142,7 +142,7 @@ function(t, e, n) {
                 delete S[t.id];
                 let e = f[t.application_id];
                 null != e && e.delete(t.id);
-                let n = d[t.sku_id];
+                let n = E[t.sku_id];
                 if (null != n && n.delete(t.id), null != t.subscription_id) {
                     let e = p[t.subscription_id];
                     null != e && e.delete(t.id)
@@ -150,7 +150,7 @@ function(t, e, n) {
             }(t.entitlement)
         },
         LOGOUT: function() {
-            S = {}, d = {}, f = {}, _ = !1, T = !1, I = new Set, A = new Set
+            S = {}, E = {}, f = {}, _ = !1, T = !1, I = new Set, A = new Set
         },
         ENTITLEMENTS_FETCH_FOR_USER_START: function() {
             _ = !0

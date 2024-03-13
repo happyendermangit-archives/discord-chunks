@@ -14,8 +14,8 @@ function(t, e, n) {
         s = null,
         c = !1,
         S = null,
-        E = "",
         d = "",
+        E = "",
         f = "",
         _ = "",
         T = "",
@@ -29,11 +29,11 @@ function(t, e, n) {
         U = null;
 
     function L() {
-        s = null, l = "", a = null, o = "", c = !1, S = null, E = "US", d = "", f = "", _ = "", T = "", I = "", A = "", p = "", C = !1, P = null, N = null, R = null, U = null
+        s = null, l = "", a = null, o = "", c = !1, S = null, d = "US", E = "", f = "", _ = "", T = "", I = "", A = "", p = "", C = !1, P = null, N = null, R = null, U = null
     }
 
     function M(t) {
-        d = t.name, E = t.country, _ = t.line1, T = t.line2, I = t.city, A = t.postalCode, p = t.state, f = t.email
+        E = t.name, d = t.country, _ = t.line1, T = t.line2, I = t.city, A = t.postalCode, p = t.state, f = t.email
     }
 
     function O() {
@@ -73,7 +73,7 @@ function(t, e, n) {
         }
         getCreditCardInfo() {
             return {
-                name: d
+                name: E
             }
         }
         get isCardInfoValid() {
@@ -81,9 +81,9 @@ function(t, e, n) {
         }
         getBillingAddressInfo() {
             return {
-                name: d,
+                name: E,
                 email: f,
-                country: E,
+                country: d,
                 line1: _,
                 line2: T,
                 city: I,
@@ -119,14 +119,14 @@ function(t, e, n) {
                 info: e,
                 isValid: n
             } = t;
-            d = e.name, c = n
+            E = e.name, c = n
         },
         NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: function(t) {
             let {
                 info: e,
                 isValid: n
             } = t;
-            null != e.name && "" !== e.name && (d = e.name), E = e.country, d = e.name, _ = e.line1, T = e.line2, I = e.city, A = e.postalCode, p = e.state, f = e.email, C = n
+            null != e.name && "" !== e.name && (E = e.name), d = e.country, E = e.name, _ = e.line1, T = e.line2, I = e.city, A = e.postalCode, p = e.state, f = e.email, C = n
         },
         BRAINTREE_TOKENIZE_PAYPAL_START: function() {
             l = "", a = null
@@ -137,7 +137,7 @@ function(t, e, n) {
                 nonce: n,
                 billingAddress: i
             } = t;
-            l = e, a = n, M(i), C = E.length > 0
+            l = e, a = n, M(i), C = d.length > 0
         },
         BRAINTREE_TOKENIZE_VENMO_START: function() {
             o = "", a = null

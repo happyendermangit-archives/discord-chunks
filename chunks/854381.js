@@ -20,15 +20,15 @@ function(t, e, n) {
             isGift: S
         } = t;
         s = s.filter(t => t !== l.PremiumSubscriptionSKUs.NONE);
-        let E = (0, i.useStateFromStores)([u.default], () => {
+        let d = (0, i.useStateFromStores)([u.default], () => {
                 let t = u.default.getPlanIdsForSkus(s).filter(t => !S || l.PREMIUM_PLANS.has(t));
                 return t.length > 0 ? u.default.get(t[0]) : null
             }),
-            d = null == E ? [] : (0, r.getCurrencies)(E.id, c, S),
-            f = null !== (n = null !== (e = d.find(t => t === (null == o ? void 0 : o.currency))) && void 0 !== e ? e : d[0]) && void 0 !== n ? n : a.CurrencyCodes.USD;
+            E = null == d ? [] : (0, r.getCurrencies)(d.id, c, S),
+            f = null !== (n = null !== (e = E.find(t => t === (null == o ? void 0 : o.currency))) && void 0 !== e ? e : E[0]) && void 0 !== n ? n : a.CurrencyCodes.USD;
         return {
-            ...(0, r.useCurrencyWithPaymentSourceChange)(f, null == E ? void 0 : E.id, c, S, s),
-            currencies: d
+            ...(0, r.useCurrencyWithPaymentSourceChange)(f, null == d ? void 0 : d.id, c, S, s),
+            currencies: E
         }
     }
 }

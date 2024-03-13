@@ -28,12 +28,12 @@ function(t, e, n) {
             [n, i, u] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, l.default, a.default],
             c = n.paymentSourceIds,
             S = n.defaultPaymentSourceId,
-            E = i.isLoadedForSKUs(e),
-            d = null === (t = u.getPremiumTypeSubscription()) || void 0 === t ? void 0 : t.paymentSourceId;
-        if (null != d && !i.hasPaymentSourceForSKUIds(d, e)) return s("subscription payment source ".concat(d, " not loaded for ").concat(e)), !1;
+            d = i.isLoadedForSKUs(e),
+            E = null === (t = u.getPremiumTypeSubscription()) || void 0 === t ? void 0 : t.paymentSourceId;
+        if (null != E && !i.hasPaymentSourceForSKUIds(E, e)) return s("subscription payment source ".concat(E, " not loaded for ").concat(e)), !1;
         if (null != S && !i.hasPaymentSourceForSKUIds(S, e)) return s("default payment source ".concat(S, " not loaded for ").concat(e)), !1;
         for (let t of c)
             if (!i.hasPaymentSourceForSKUIds(t, e)) return s("payment source ".concat(t, " not loaded for ").concat(e)), !1;
-        return s("isLoadedForSKUs ".concat(E)), E
+        return s("isLoadedForSKUs ".concat(d)), d
     }
 }

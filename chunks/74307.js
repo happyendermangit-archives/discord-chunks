@@ -25,9 +25,12 @@ function(e, t, n) {
     class v extends s.Component {
         getPaddingRight() {
             let {
-                maxLength: e
+                maxLength: e,
+                showCharacterCountFullPadding: t
             } = this.props;
-            return null == e ? 10 : 7.23 * "".concat(e).length + 10
+            if (null == e) return 10;
+            let n = "".concat(e).length;
+            return t && (n += "".concat(e, " / ").length), 7.23 * n + 10
         }
         getCharsLeftLength() {
             let {

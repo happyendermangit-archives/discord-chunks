@@ -5,10 +5,10 @@ function(t, e, n) {
             return i
         },
         COLLAPSED_PAYMENT_BREADCRUMB_STEPS: function() {
-            return E
+            return d
         },
         getLabelForStep: function() {
-            return d
+            return E
         },
         errorToStep: function() {
             return f
@@ -25,9 +25,9 @@ function(t, e, n) {
         c = n("782340");
     let S = new a.default("PaymentSteps");
     (u = i || (i = {})).PAYMENT_TYPE = "payment_type", u.CREDIT_CARD_INFORMATION = "credit_card_information", u.PAYPAL_INFORMATION = "paypal_information", u.VENMO_INFORMATION = "venmo_information", u.SOFORT_INFORMATION = "sofort_information", u.PRZELEWY24_INFORMATION = "przelewy24_information", u.EPS_INFORMATION = "eps_information", u.IDEAL_INFORMATION = "ideal_information", u.CASH_APP_INFORMATION = "cash_app_information", u.PAYMENT_REQUEST_INFORMATION = "payment_request_information", u.ADDRESS = "address", u.AWAITING_AUTHENTICATION = "awaiting_authentication", u.SKU_SELECT = "sku_select", u.PLAN_SELECT = "plan_select", u.PREMIUM_UPSELL = "premium_upsell", u.PREMIUM_GUILD_UPSELL = "premium_guild_upsell", u.REVIEW = "review", u.CONFIRM = "confirm", u.CLAIM_FREE_SKU = "claim_free_sku", u.SKU_PREVIEW = "sku_preview", u.LOADING_PAYMENT_SOURCES = "loading_payment_sources", u.SHOP = "shop", u.PROMOTION_INFO = "promotion_info", u.AWAITING_PURCHASE_TOKEN_AUTH = "awaiting_purchase_token_auth", u.BENEFITS = "benefits", u.WHAT_YOU_LOSE = "what_you_lose", u.ADD_PAYMENT_STEPS = "add_payment_steps", u.AWAITING_BROWSER_CHECKOUT = "awaiting_browser_checkout", u.GIFT_CUSTOMIZATION = "gift_customization";
-    let E = new Set(["credit_card_information", "payment_request_information", "paypal_information", "venmo_information", "cash_app_information", "address", "claim_free_sku", "sku_preview", "premium_upsell", "sofort_information", "przelewy24_information"]);
+    let d = new Set(["credit_card_information", "payment_request_information", "paypal_information", "venmo_information", "cash_app_information", "address", "claim_free_sku", "sku_preview", "premium_upsell", "sofort_information", "przelewy24_information"]);
 
-    function d(t) {
+    function E(t) {
         switch (t) {
             case "plan_select":
                 return c.default.Messages.BILLING_STEP_SELECT_PLAN;

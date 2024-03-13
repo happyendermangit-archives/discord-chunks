@@ -17,7 +17,7 @@ function(t, e, n) {
             return S
         },
         isListingActiveInGuild: function() {
-            return E
+            return d
         }
     });
     var i = n("627445"),
@@ -47,7 +47,7 @@ function(t, e, n) {
         return (0, r.hasFlag)(t, l.SKUFlags.APPLICATION_USER_SUBSCRIPTION)
     }
 
-    function E(t, e, n) {
+    function d(t, e, n) {
         return t.subscription_plans[0].sku_id === e.skuId && (c(t.sku_flags) ? null != n && e.guildId === n && n !== l.ME : !!S(t.sku_flags) && null == e.guildId)
     }
 }

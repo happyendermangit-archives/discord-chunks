@@ -22,14 +22,14 @@ function(t, e, n) {
             defaultPaymentSourceId: l.default.defaultPaymentSourceId,
             paymentSources: l.default.paymentSources,
             hasFetchedPaymentSources: l.default.hasFetchedPaymentSources
-        })), c = (t, e, n) => t || (null == e ? void 0 : e.paymentSourceId) == null ? n : e.paymentSourceId, [S, E] = i.useState(() => c(e, n, a));
+        })), c = (t, e, n) => t || (null == e ? void 0 : e.paymentSourceId) == null ? n : e.paymentSourceId, [S, d] = i.useState(() => c(e, n, a));
         return i.useEffect(() => {
-            s ? E(c(e, n, a)) : (0, r.fetchPaymentSources)()
+            s ? d(c(e, n, a)) : (0, r.fetchPaymentSources)()
         }, [s, e, n, a]), {
             paymentSources: o,
             hasPaymentSources: Object.keys(o).length > 0,
             paymentSourceId: S,
-            setPaymentSourceId: E,
+            setPaymentSourceId: d,
             hasFetchedPaymentSources: s
         }
     }
