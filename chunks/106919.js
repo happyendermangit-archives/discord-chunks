@@ -11,6 +11,7 @@ function(e, t, n) {
         }
         setEnabled(e) {}
         setSelectedStream(e) {}
+        setFocusedStream(e) {}
         setMirrored(e) {}
         setPipAspectRatio(e, t) {}
         updateSourceTrackingView() {}

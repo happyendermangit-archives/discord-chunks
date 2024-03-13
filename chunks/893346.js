@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         Dispatcher: function() {
-            return A
+            return O
         }
     }), E("222007"), E("424973"), E("70102");
     var t = E("487445"),
@@ -15,10 +15,9 @@ function(e, _, E) {
         I = E("805833"),
         s = E("377678"),
         T = E("120082");
-    let S = void 0,
-        N = new Set(["APP_STATE_UPDATE", "CLEAR_CACHES", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_SOCKET", "SESSION_START", "UPLOAD_FAIL", "WRITE_CACHES"]),
-        O = new a.default("Flux");
-    class A {
+    let S = new Set(["APP_STATE_UPDATE", "CLEAR_CACHES", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_SOCKET", "SESSION_START", "UPLOAD_FAIL", "WRITE_CACHES"]),
+        N = new a.default("Flux");
+    class O {
         isDispatching() {
             return null != this._currentDispatchActionType
         }
@@ -26,7 +25,7 @@ function(e, _, E) {
             return new Promise((_, E) => {
                 this._waitQueue.push(() => {
                     try {
-                        null == this.functionCache[e.type] && (this.functionCache[e.type] = e => this._dispatchWithDevtools(e), l(this.functionCache[e.type], "dispatch_" + e.type)), this.functionCache[e.type](e), _()
+                        null == this.functionCache[e.type] && (this.functionCache[e.type] = e => this._dispatchWithDevtools(e), R(this.functionCache[e.type], "dispatch_" + e.type)), this.functionCache[e.type](e), _()
                     } catch (e) {
                         E(e)
                     }
@@ -41,7 +40,7 @@ function(e, _, E) {
                     if (++_ > 100) {
                         var e;
                         let _ = s.serialize();
-                        throw O.error("LastFewActions", _), null === (e = this._sentryUtils) || void 0 === e || e.addBreadcrumb({
+                        throw N.error("LastFewActions", _), null === (e = this._sentryUtils) || void 0 === e || e.addBreadcrumb({
                             message: "Dispatcher: Dispatch loop detected",
                             data: {
                                 lastFewActions: _
@@ -55,14 +54,14 @@ function(e, _, E) {
                     I.default.emit()
                 }
             } finally {
-                this._processingWaitQueue = !1, I.default.isDispatching = !1, null == S || S()
+                this._processingWaitQueue = !1, I.default.isDispatching = !1
             }
         }
         _dispatchWithDevtools(e) {
             this._dispatchWithLogging(e)
         }
         _dispatchWithLogging(e) {
-            n(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), n(e.type, "Dispatch.dispatch(...) called without an action type"), N.has(e.type) && O.log("Dispatching ".concat(e.type)), (0, i.mark)(e.type), s.add(e.type);
+            n(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), n(e.type, "Dispatch.dispatch(...) called without an action type"), S.has(e.type) && N.log("Dispatching ".concat(e.type)), (0, i.mark)(e.type), s.add(e.type);
             let _ = this.actionLogger.log(e, _ => {
                 try {
                     this._currentDispatchActionType = e.type, this._dispatch(e, _)
@@ -70,7 +69,7 @@ function(e, _, E) {
                     this._currentDispatchActionType = null
                 }
             });
-            _.totalTime > 100 && O.verbose("Slow dispatch on ".concat(e.type, ": ").concat(_.totalTime, "ms"));
+            _.totalTime > 100 && N.verbose("Slow dispatch on ".concat(e.type, ": ").concat(_.totalTime, "ms"));
             try {
                 (0, i.measure)("DISPATCH[".concat(e.type, "]"), e.type)
             } catch (e) {}
@@ -116,12 +115,12 @@ function(e, _, E) {
             this._actionHandlers.addDependencies(e, _)
         }
         constructor(e = 0, _, E) {
-            this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new R, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new T.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
+            this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new A, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new T.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
                 r.default.isTracing && E >= 10 && r.default.mark("\uD83E\uDDA5", _, E)
             })
         }
     }
-    class R {
+    class A {
         getOrderedActionHandlers(e) {
             var _;
             return null !== (_ = this._orderedActionHandlers[e.type]) && void 0 !== _ ? _ : this._computeOrderedActionHandlers(e.type)
@@ -133,7 +132,7 @@ function(e, _, E) {
             for (let E in _) {
                 let t = _[E],
                     o = e => t(e);
-                l(o, "".concat(e, "_").concat(E)), r[E] = o
+                R(o, "".concat(e, "_").concat(E)), r[E] = o
             }
             return this._dependencyGraph.addNode(o, {
                 name: e,
@@ -200,7 +199,7 @@ function(e, _, E) {
         }
     }
 
-    function l(e, _) {
+    function R(e, _) {
         Object.defineProperty(e, "name", {
             value: _
         })

@@ -61,7 +61,13 @@ function(e, t, n) {
 
     function V() {
         var e;
-        D = null !== (e = v.default.getIdleSince()) && void 0 !== e ? e : 0, L = v.default.isAFK(), M ? (R = O, G()) : R = N ? y.StatusTypes.INVISIBLE : h.StatusSetting.getSetting(), R === y.StatusTypes.ONLINE && D > 0 && (R = y.StatusTypes.IDLE);
+        if (D = null !== (e = v.default.getIdleSince()) && void 0 !== e ? e : 0, L = v.default.isAFK(), M) R = O, G();
+        else if (N) R = y.StatusTypes.INVISIBLE;
+        else {
+            let e = h.StatusSetting.getSetting();
+            R = e !== y.StatusTypes.UNKNOWN ? e : y.StatusTypes.ONLINE
+        }
+        R === y.StatusTypes.ONLINE && D > 0 && (R = y.StatusTypes.IDLE);
         let t = !1,
             n = M || R === y.StatusTypes.INVISIBLE ? [] : I.default.getActivities().filter(k);
         !a(P, n) && (P = n, t = !0);
