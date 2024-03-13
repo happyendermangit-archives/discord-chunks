@@ -8,7 +8,7 @@ function(e, t, n) {
             return l
         },
         default: function() {
-            return T
+            return C
         }
     }), n("222007");
     var a, l, i, _, r = n("446674"),
@@ -21,7 +21,7 @@ function(e, t, n) {
         f = {},
         c = new Set;
 
-    function A(e) {
+    function S(e) {
         let {
             safetyWarnings: t
         } = e;
@@ -33,12 +33,12 @@ function(e, t, n) {
         }) ? c.add(e.id) : c.delete(e.id)), null == t && (null != f[e.id] && delete f[e.id], c.delete(e.id))
     }
 
-    function S() {
+    function A() {
         f = {}, Object.values(u.default.getMutablePrivateChannels()).forEach(e => {
-            A(e)
+            S(e)
         })
     }
-    class C extends r.default.Store {
+    class T extends r.default.Store {
         initialize() {
             this.waitFor(u.default)
         }
@@ -54,9 +54,9 @@ function(e, t, n) {
             return c.has(e)
         }
     }
-    var T = new C(s.default, {
+    var C = new T(s.default, {
         CHANNEL_CREATE: function(e) {
-            A(e.channel)
+            S(e.channel)
         },
         CHANNEL_DELETE: function(e) {
             let {
@@ -66,11 +66,11 @@ function(e, t, n) {
         },
         CHANNEL_UPDATES: function(e) {
             e.channels.forEach(e => {
-                A(e)
+                S(e)
             })
         },
-        CONNECTION_OPEN: S,
-        CONNECTION_OPEN_SUPPLEMENTAL: S,
+        CONNECTION_OPEN: A,
+        CONNECTION_OPEN_SUPPLEMENTAL: A,
         CHANNEL_SAFETY_WARNING_FEEDBACK: function(e) {
             let {
                 channelId: t,

@@ -1564,6 +1564,7 @@ function(_, E, I) {
             GAME_INVITES: "/game-invite/@me",
             ADD_SAFETY_WARNING: _ => "/channels/".concat(_, "/add-safety-warning"),
             DELETE_SAFETY_WARNINGS: _ => "/channels/".concat(_, "/safety-warnings"),
+            SAFETY_WARNING_FALSE_POSITIVE: _ => "/channels/".concat(_, "/safety-warning/report-false-positive"),
             MY_CONTENT_INVENTORY: "/content-inventory/users/@me",
             USER_LOOTBOX_DATA: "/users/@me/lootboxes",
             USER_LOOTBOX_OPEN_ITEM: "/users/@me/lootboxes/open",

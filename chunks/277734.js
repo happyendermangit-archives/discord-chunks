@@ -12,6 +12,9 @@ function(e, t, n) {
         },
         acknowledgeChannelSafetyWarningTooltip: function() {
             return u
+        },
+        reportFalsePositive: function() {
+            return o
         }
     });
     var a = n("872717"),
@@ -52,6 +55,12 @@ function(e, t, n) {
         l.default.dispatch({
             type: "ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP",
             channelId: e
+        })
+    }
+
+    function o(e) {
+        return a.default.post({
+            url: i.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e)
         })
     }
 }
