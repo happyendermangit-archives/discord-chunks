@@ -31,20 +31,20 @@ function(e, t, n) {
                 transition: E = f.transition,
                 className: C,
                 foreground: p,
-                expanded: m,
-                ..._
+                expanded: _,
+                ...m
             } = e, {
-                enabled: S
-            } = (0, c.useRedesignIconContext)(), I = t;
-            if (!0 === m ? I = h.DOWN : !1 === m && (I = h.RIGHT), S) {
+                enabled: I
+            } = (0, c.useRedesignIconContext)(), N = t;
+            if (!0 === _ ? N = h.DOWN : !1 === _ && (N = h.RIGHT), I) {
                 let e = {
                     [h.UP]: u.ChevronSmallUpIcon,
                     [h.DOWN]: l.ChevronSmallDownIcon,
                     [h.LEFT]: a.ChevronSmallLeftIcon,
                     [h.RIGHT]: o.ChevronSmallRightIcon
-                } [I];
+                } [N];
                 return (0, i.jsx)(e, {
-                    ..._,
+                    ...m,
                     className: C,
                     width: n,
                     height: s,
@@ -53,11 +53,11 @@ function(e, t, n) {
                 })
             }
             return (0, i.jsx)("svg", {
-                className: r(C, E, I),
+                className: r(C, E, N),
                 width: n,
                 height: s,
                 viewBox: "0 0 24 24",
-                ...(0, d.default)(_),
+                ...(0, d.default)(m),
                 children: (0, i.jsx)("path", {
                     className: p,
                     fill: "none",

@@ -26,19 +26,19 @@ function(e, t, n) {
             return R
         },
         setPendingGlobalNameName: function() {
-            return D
+            return G
         },
         setPendingAvatarDecoration: function() {
-            return G
+            return D
         },
         setPendingProfileEffectId: function() {
             return C
         },
         clearErrors: function() {
-            return O
+            return P
         },
         resetPendingAccountChanges: function() {
-            return P
+            return O
         },
         resetAllPending: function() {
             return g
@@ -195,14 +195,14 @@ function(e, t, n) {
         }), null == e ? u.AccessibilityAnnouncer.announce(c.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : u.AccessibilityAnnouncer.announce(c.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
     }
 
-    function D(e) {
+    function G(e) {
         o.default.dispatch({
             type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
             globalName: e
         })
     }
 
-    function G(e) {
+    function D(e) {
         o.default.dispatch({
             type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
             avatarDecoration: e
@@ -216,13 +216,13 @@ function(e, t, n) {
         })
     }
 
-    function O() {
+    function P() {
         o.default.dispatch({
             type: "USER_SETTINGS_CLEAR_ERRORS"
         })
     }
 
-    function P() {
+    function O() {
         o.default.dispatch({
             type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
         })

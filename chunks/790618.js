@@ -12,9 +12,9 @@ function(e, t, n) {
         U = n("49111");
     let p = U.FormStates.CLOSED,
         R = {},
-        D = !1;
+        G = !1;
 
-    function G() {
+    function D() {
         p = U.FormStates.OPEN, R = {}
     }
 
@@ -22,11 +22,11 @@ function(e, t, n) {
         p = U.FormStates.CLOSED, R = {}
     }
 
-    function O() {
-        P(), g(), R = {}
+    function P() {
+        O(), g(), R = {}
     }
 
-    function P() {
+    function O() {
         i = void 0, r = void 0, u = void 0, o = void 0
     }
 
@@ -112,23 +112,23 @@ function(e, t, n) {
             }
         }
         getIsDisableSubmit() {
-            return D
+            return G
         }
     }
     L.displayName = "UserSettingsAccountStore";
     var m = new L(A.default, {
-        USER_SETTINGS_ACCOUNT_INIT: G,
-        USER_SETTINGS_MODAL_INIT: G,
-        USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: G,
+        USER_SETTINGS_ACCOUNT_INIT: D,
+        USER_SETTINGS_MODAL_INIT: D,
+        USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: D,
         USER_SETTINGS_MODAL_SET_SECTION: function(e) {
             let {
                 section: t
             } = e;
-            return t === U.UserSettingsSections.ACCOUNT && G()
+            return t === U.UserSettingsSections.ACCOUNT && D()
         },
         USER_SETTINGS_ACCOUNT_CLOSE: C,
         USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-            O(), v(), C()
+            P(), v(), C()
         },
         USER_SETTINGS_ACCOUNT_SUBMIT: function() {
             p = U.FormStates.SUBMITTING, R = {}
@@ -231,9 +231,9 @@ function(e, t, n) {
         USER_SETTINGS_CLEAR_ERRORS: function() {
             R = {}
         },
-        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: P,
+        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: O,
         USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
-        USER_SETTINGS_RESET_ALL_PENDING: O,
+        USER_SETTINGS_RESET_ALL_PENDING: P,
         USER_SETTINGS_RESET_ALL_TRY_IT_OUT: v,
         USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
             u = void 0
@@ -245,7 +245,7 @@ function(e, t, n) {
             let {
                 disable: t
             } = e;
-            D = t
+            G = t
         }
     })
 }
