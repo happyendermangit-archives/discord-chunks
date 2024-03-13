@@ -6,7 +6,7 @@ function(e, t, n) {
             return E
         },
         analyticsTrackingStoreMaker: function() {
-            return g
+            return h
         }
     }), n("860677"), n("843762"), n("222007"), n("424973"), n("704744");
     var s, l = n("391679"),
@@ -23,35 +23,36 @@ function(e, t, n) {
             handleTrack: () => {}
         },
         S = [],
-        g = e => {
+        g = () => Promise.resolve({
+            sessionId: void 0
+        }),
+        h = e => {
             let {
                 dispatcher: t,
                 actionHandler: n,
                 getFingerprint: s,
-                getSessionId: c = () => new Promise(() => ({
-                    sessionId: void 0
-                })),
-                TRACKING_URL: g,
-                drainTimeoutOverride: h,
-                waitFor: m
+                getSessionId: c = g,
+                TRACKING_URL: h,
+                drainTimeoutOverride: m,
+                waitFor: p
             } = e;
-            d = null != h ? h : 1500;
+            d = null != m ? m : 1500;
 
-            function p() {
+            function I() {
                 return 0 !== S.length && (null != r ? null != i : null != s())
             }
 
-            function I() {
-                null == o && p() && (o = _(T, {
+            function T() {
+                null == o && I() && (o = _(v, {
                     timeout: d
                 }))
             }
 
-            function T() {
-                if (o = null, !p()) return;
+            function v() {
+                if (o = null, !I()) return;
                 let e = S.slice();
                 S = [];
-                let t = v(e);
+                let t = A(e);
                 t.then(() => {
                     e.forEach(e => {
                         var t;
@@ -66,7 +67,7 @@ function(e, t, n) {
                 })
             }
 
-            function v(e) {
+            function A(e) {
                 let t = Date.now(),
                     n = e.map(e => ({
                         ...e,
@@ -76,7 +77,7 @@ function(e, t, n) {
                         }
                     }));
                 return u.default.post({
-                    url: g,
+                    url: h,
                     body: {
                         token: i,
                         events: n
@@ -89,11 +90,11 @@ function(e, t, n) {
                     analyticsToken: t,
                     user: n
                 } = e;
-                return null != t && (i = t), null != n.id && (r = n.id), I(), !1
+                return null != t && (i = t), null != n.id && (r = n.id), T(), !1
             }, E.handleConnectionClosed = function() {
-                return T(), i = null, r = null, !1
+                return v(), i = null, r = null, !1
             }, E.handleFingerprint = function() {
-                return T(), !1
+                return v(), !1
             }, E.handleTrack = function(e) {
                 let {
                     event: t,
@@ -119,17 +120,17 @@ function(e, t, n) {
                         let t = e.fingerprint || s();
                         return null != t ? (0, l.extractId)(t) : null
                     }(c);
-                    null != d && (c.properties.client_uuid = f.generate(d)), S.push(c), S.length > 1e4 && (S = S.slice(-1e4)), i ? T() : I()
+                    null != d && (c.properties.client_uuid = f.generate(d)), S.push(c), S.length > 1e4 && (S = S.slice(-1e4)), i ? v() : T()
                 }), !1
             };
-            class A extends a.default.Store {
+            class N extends a.default.Store {
                 initialize() {
-                    null != m && this.waitFor(...m)
+                    null != p && this.waitFor(...p)
                 }
                 constructor(...e) {
-                    super(...e), this.submitEventsImmediately = v
+                    super(...e), this.submitEventsImmediately = A
                 }
             }
-            return A.displayName = "AnalyticsTrackingStore", new A(t, n)
+            return N.displayName = "AnalyticsTrackingStore", new N(t, n)
         }
 }
