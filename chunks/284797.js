@@ -6,13 +6,13 @@ function(t, e, n) {
         }
     }), n("222007");
     var i = n("884691"),
-        u = n("85336"),
-        r = n("286350");
+        r = n("85336"),
+        u = n("286350");
 
     function l(t) {
-        let [e, n] = i.useState(r.PurchaseState.WAITING);
+        let [e, n] = i.useState(u.PurchaseState.WAITING);
         return i.useEffect(() => {
-            null != t && t !== u.Step.REVIEW && e !== r.PurchaseState.WAITING && e !== r.PurchaseState.COMPLETED && n(r.PurchaseState.WAITING)
+            null != t && t !== r.Step.REVIEW && e !== u.PurchaseState.WAITING && e !== u.PurchaseState.COMPLETED && n(u.PurchaseState.WAITING)
         }, [t, e, n]), [e, n]
     }
 }

@@ -42,10 +42,10 @@ function(e, t, n) {
         }), [M]), {
             analyticsLocations: L
         } = (0, f.default)(c.default.PREMIUM_UPSELL), {
-            previewSound: b
-        } = (0, E.default)(v, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), P = (0, y.PreviewButton)({
+            previewSound: P
+        } = (0, E.default)(v, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), b = (0, y.PreviewButton)({
             sound: v,
-            previewSound: b,
+            previewSound: P,
             tooltipPosition: "left"
         }), j = (0, r.isThemeLight)(A) ? n("602291") : n("609708");
         l.useEffect(() => {
@@ -92,7 +92,7 @@ function(e, t, n) {
                 className: I.buttonContainer,
                 children: [(0, i.jsx)("div", {
                     className: I.previewButtonContainer,
-                    children: P
+                    children: b
                 }), (0, i.jsx)(m.default, {
                     subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
                     submitting: O,

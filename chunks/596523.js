@@ -8,10 +8,10 @@ function(t, e, n) {
             return c
         },
         resume: function() {
-            return S
+            return d
         },
         changeSubscriptionCurrency: function() {
-            return d
+            return S
         },
         changePaymentSource: function() {
             return E
@@ -21,8 +21,8 @@ function(t, e, n) {
         }
     });
     var i = n("627445"),
-        u = n.n(i),
-        r = n("913144"),
+        r = n.n(i),
+        u = n("913144"),
         l = n("719923"),
         a = n("850068"),
         o = n("49111");
@@ -31,13 +31,13 @@ function(t, e, n) {
             planId: e,
             currency: n,
             paymentSource: i,
-            trialId: u,
+            trialId: r,
             code: l,
             metadata: o,
             referralCode: s,
             loadId: c
         } = t;
-        r.default.dispatch({
+        u.default.dispatch({
             type: "PREMIUM_PAYMENT_SUBSCRIBE_START"
         });
         try {
@@ -47,19 +47,19 @@ function(t, e, n) {
                     quantity: 1
                 }],
                 paymentSource: i,
-                trialId: u,
+                trialId: r,
                 code: l,
                 currency: n,
                 metadata: o,
                 referralCode: s,
                 loadId: c
             });
-            return null != t.subscription && r.default.dispatch({
+            return null != t.subscription && u.default.dispatch({
                 type: "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS",
                 subscription: t.subscription
             }), t
         } catch (t) {
-            throw r.default.dispatch({
+            throw u.default.dispatch({
                 type: "PREMIUM_PAYMENT_SUBSCRIBE_FAIL",
                 error: t
             }), t
@@ -67,25 +67,25 @@ function(t, e, n) {
     }
     async function c(t, e, n, i, s, c) {
         try {
-            let S = (0, l.getPremiumPlanItem)(t);
-            u(S, "Expected existing premium plan");
-            let d = (0, l.getItemsWithUpsertedPremiumPlanId)(t, S.planId);
+            let d = (0, l.getPremiumPlanItem)(t);
+            r(d, "Expected existing premium plan");
+            let S = (0, l.getItemsWithUpsertedPremiumPlanId)(t, d.planId);
             await a.updateSubscription(t, {
                 status: o.SubscriptionStatusTypes.ACTIVE,
                 paymentSource: i,
-                items: d,
+                items: S,
                 currency: n
-            }, e, s, c), r.default.dispatch({
+            }, e, s, c), u.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
             })
         } catch (t) {
-            throw r.default.dispatch({
+            throw u.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_FAIL",
                 error: t
             }), t
         }
     }
-    async function S(t, e, n) {
+    async function d(t, e, n) {
         try {
             await a.updateSubscription(t, {
                 status: o.SubscriptionStatusTypes.ACTIVE
@@ -94,25 +94,25 @@ function(t, e, n) {
             throw t
         }
     }
-    async function d(t, e, n, i) {
+    async function S(t, e, n, i) {
         try {
-            await a.changeSubscriptionCurrency(t, e, n, i), r.default.dispatch({
+            await a.changeSubscriptionCurrency(t, e, n, i), u.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
             })
         } catch (t) {
-            throw r.default.dispatch({
+            throw u.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_FAIL",
                 error: t
             }), t
         }
     }
-    async function E(t, e, n, i, u) {
+    async function E(t, e, n, i, r) {
         try {
-            await a.changePaymentSource(t, e, n, i, u), r.default.dispatch({
+            await a.changePaymentSource(t, e, n, i, r), u.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
             })
         } catch (t) {
-            throw r.default.dispatch({
+            throw u.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_FAIL",
                 error: t
             }), t
@@ -120,7 +120,7 @@ function(t, e, n) {
     }
 
     function f() {
-        r.default.dispatch({
+        u.default.dispatch({
             type: "PREMIUM_PAYMENT_ERROR_CLEAR"
         })
     }

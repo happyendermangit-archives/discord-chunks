@@ -2,17 +2,17 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         default: function() {
-            return r
+            return u
         }
     }), n("70102");
     var i = n("37983"),
-        u = n("884691");
+        r = n("884691");
 
-    function r() {
-        let t = u.createContext(void 0);
+    function u() {
+        let t = r.createContext(void 0);
 
         function e() {
-            let e = u.useContext(t);
+            let e = r.useContext(t);
             if (null == e) throw Error("Context was used outside of defined provider.");
             return e
         }
@@ -20,11 +20,11 @@ function(t, e, n) {
             let n = e();
             return function(e) {
                 let {
-                    children: u
+                    children: r
                 } = e;
                 return (0, i.jsx)(t.Provider, {
                     value: n,
-                    children: u
+                    children: r
                 })
             }
         }]

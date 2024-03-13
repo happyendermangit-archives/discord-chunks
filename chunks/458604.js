@@ -106,8 +106,8 @@ function(e, t, n) {
             isLargeSize: M,
             pulseItemKey: k,
             allowAnimatedEmoji: L,
-            setPulseItemKey: b,
-            messageId: P,
+            setPulseItemKey: P,
+            messageId: b,
             isBurstReaction: j,
             rowPosition: U,
             inNitroLockedSection: D
@@ -119,7 +119,7 @@ function(e, t, n) {
         } = t, z = e => {
             if (e.stopPropagation(), S.current || I.current) return;
             let n = e.altKey;
-            n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && b(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), g(t, {
+            n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && P(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), g(t, {
                 isFinalSelection: !e.shiftKey,
                 toggleFavorite: n
             })
@@ -164,10 +164,10 @@ function(e, t, n) {
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onClick: e => {
-                    if (null != H.current && null != U && null != P && !e.shiftKey && null != V.name && j && !B && L) {
+                    if (null != H.current && null != U && null != b && !e.shiftKey && null != V.name && j && !B && L) {
                         let e = null == V.id ? p.default.convertNameToSurrogate(V.name) : V.name,
                             t = H.current.getBoundingClientRect();
-                        t.x = U.x + (Y + 1) * K, F(T(Y, f)), (0, x.addReactionPickerAnimation)(P, e, V.id, t)
+                        t.x = U.x + (Y + 1) * K, F(T(Y, f)), (0, x.addReactionPickerAnimation)(b, e, V.id, t)
                     }
                     z(e)
                 },

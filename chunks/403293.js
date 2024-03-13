@@ -6,14 +6,14 @@ function(t, e, n) {
         }
     }), n("222007");
     var i = n("884691"),
-        u = n("745279"),
-        r = n("520713");
+        r = n("745279"),
+        u = n("520713");
 
     function l() {
         let [t, e] = i.useState(null);
         return i.useEffect(() => {
-            (0, r.getStripe)().then(t => e(t)).catch(t => {
-                (0, u.captureBillingException)(t)
+            (0, u.getStripe)().then(t => e(t)).catch(t => {
+                (0, r.captureBillingException)(t)
             })
         }, []), t
     }

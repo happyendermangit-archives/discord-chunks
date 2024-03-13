@@ -5,18 +5,18 @@ function(t, e, n) {
             return c
         },
         fetchEntitlementsForGuild: function() {
-            return S
+            return d
         },
         dismissApplicationSubscriptionExpirationNotice: function() {
-            return d
+            return S
         },
         fetchSubscriptionListingForPlan: function() {
             return E
         }
     }), n("222007");
     var i = n("913144"),
-        u = n("775433"),
-        r = n("739295"),
+        r = n("775433"),
+        u = n("739295"),
         l = n("49111");
 
     function a(t) {
@@ -71,12 +71,12 @@ function(t, e, n) {
         });
         try {
             var n;
-            let u = await r.getApplicationSubscriptionGroupListingsForApplication(t, e);
+            let r = await u.getApplicationSubscriptionGroupListingsForApplication(t, e);
             return i.default.dispatch({
                 type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS",
                 applicationId: t,
-                groupListing: u
-            }), s(null !== (n = u.subscription_listings) && void 0 !== n ? n : []), u
+                groupListing: r
+            }), s(null !== (n = r.subscription_listings) && void 0 !== n ? n : []), r
         } catch (e) {
             i.default.dispatch({
                 type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE",
@@ -84,13 +84,13 @@ function(t, e, n) {
             })
         }
     }
-    async function S(t) {
+    async function d(t) {
         i.default.dispatch({
             type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS",
             guildId: t
         });
         try {
-            let e = await r.getEntitlementsForGuild(t);
+            let e = await u.getEntitlementsForGuild(t);
             i.default.dispatch({
                 type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS",
                 guildId: t,
@@ -104,7 +104,7 @@ function(t, e, n) {
         }
     }
 
-    function d(t) {
+    function S(t) {
         i.default.dispatch({
             type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED",
             guildId: t
@@ -117,13 +117,13 @@ function(t, e, n) {
         });
         try {
             var e;
-            let n = await r.getSubscriptionGroupForSubscriptionPlan(t);
+            let n = await u.getSubscriptionGroupForSubscriptionPlan(t);
             i.default.dispatch({
                 type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS",
                 groupListing: n
             });
             let l = null !== (e = n.subscription_listings) && void 0 !== e ? e : [];
-            for (let e of l) e.subscription_plans[0].id === t && await u.fetchSubscriptionPlansForSKU(e.id, void 0, void 0, !0);
+            for (let e of l) e.subscription_plans[0].id === t && await r.fetchSubscriptionPlansForSKU(e.id, void 0, void 0, !0);
             s(l)
         } catch (t) {}
     }

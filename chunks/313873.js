@@ -36,8 +36,8 @@ function(e, t, n) {
         M = n("339521"),
         k = n("145131"),
         L = n("953109"),
-        b = n("98292"),
-        P = n("280174"),
+        P = n("98292"),
+        b = n("280174"),
         j = n("963422"),
         U = n("587974"),
         D = n("49111"),
@@ -155,7 +155,7 @@ function(e, t, n) {
                     className: (0, R.getClass)(B, "headerText", e ? "EmptyBody" : "Normal"),
                     variant: "heading-deprecated-12/semibold",
                     color: "ProfileV2" === r ? "header-primary" : void 0,
-                    children: (0, a.jsx)(b.default, {
+                    children: (0, a.jsx)(P.default, {
                         children: t
                     })
                 }), null == s ? void 0 : s()]
@@ -367,9 +367,9 @@ function(e, t, n) {
             } = e;
             return null == n ? null : (0, E.default)(e) ? (0, a.jsx)(V, {
                 timestamps: n
-            }) : (0, a.jsx)(P.default, {
+            }) : (0, a.jsx)(b.default, {
                 start: n.start,
-                location: P.default.Locations.USER_ACTIVITY,
+                location: b.default.Locations.USER_ACTIVITY,
                 className: B.playTime,
                 isApplicationStreaming: null != t
             })

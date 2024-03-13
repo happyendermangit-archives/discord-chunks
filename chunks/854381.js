@@ -6,8 +6,8 @@ function(t, e, n) {
         }
     });
     var i = n("446674"),
-        u = n("10514"),
-        r = n("713518"),
+        r = n("10514"),
+        u = n("713518"),
         l = n("646718"),
         a = n("843455");
 
@@ -17,17 +17,17 @@ function(t, e, n) {
             activeSubscription: o,
             skuIDs: s,
             paymentSourceId: c,
-            isGift: S
+            isGift: d
         } = t;
         s = s.filter(t => t !== l.PremiumSubscriptionSKUs.NONE);
-        let d = (0, i.useStateFromStores)([u.default], () => {
-                let t = u.default.getPlanIdsForSkus(s).filter(t => !S || l.PREMIUM_PLANS.has(t));
-                return t.length > 0 ? u.default.get(t[0]) : null
+        let S = (0, i.useStateFromStores)([r.default], () => {
+                let t = r.default.getPlanIdsForSkus(s).filter(t => !d || l.PREMIUM_PLANS.has(t));
+                return t.length > 0 ? r.default.get(t[0]) : null
             }),
-            E = null == d ? [] : (0, r.getCurrencies)(d.id, c, S),
+            E = null == S ? [] : (0, u.getCurrencies)(S.id, c, d),
             f = null !== (n = null !== (e = E.find(t => t === (null == o ? void 0 : o.currency))) && void 0 !== e ? e : E[0]) && void 0 !== n ? n : a.CurrencyCodes.USD;
         return {
-            ...(0, r.useCurrencyWithPaymentSourceChange)(f, null == d ? void 0 : d.id, c, S, s),
+            ...(0, u.useCurrencyWithPaymentSourceChange)(f, null == S ? void 0 : S.id, c, d, s),
             currencies: E
         }
     }

@@ -1,57 +1,57 @@
-function(e, t, n) {
+function(t, e, n) {
     "use strict";
-    n.r(t), n.d(t, {
+    n.r(e), n.d(e, {
         default: function() {
             return i
         }
     });
-    var i, l = n("666038"),
-        a = n("560350"),
-        s = n("766274");
-    i = class e extends l.default {
-        static createFromServer(t) {
-            let n = t.staff_notes;
-            return new e({
-                id: t.id,
-                skuId: t.sku.id,
-                summary: t.summary,
-                tagline: t.tagline,
-                flavorText: t.flavor_text,
-                description: t.description,
-                childSkuIds: null != t.child_skus ? t.child_skus.map(e => e.id) : null,
-                alternativeSkuIds: null != t.alternative_skus ? t.alternative_skus.map(e => e.id) : null,
-                carouselItems: null != t.carousel_items ? t.carousel_items.map(e => ({
-                    assetId: e.asset_id,
-                    youtubeVideoId: e.youtube_video_id
+    var i, r = n("666038"),
+        u = n("560350"),
+        l = n("766274");
+    i = class t extends r.default {
+        static createFromServer(e) {
+            let n = e.staff_notes;
+            return new t({
+                id: e.id,
+                skuId: e.sku.id,
+                summary: e.summary,
+                tagline: e.tagline,
+                flavorText: e.flavor_text,
+                description: e.description,
+                childSkuIds: null != e.child_skus ? e.child_skus.map(t => t.id) : null,
+                alternativeSkuIds: null != e.alternative_skus ? e.alternative_skus.map(t => t.id) : null,
+                carouselItems: null != e.carousel_items ? e.carousel_items.map(t => ({
+                    assetId: t.asset_id,
+                    youtubeVideoId: t.youtube_video_id
                 })) : null,
-                assets: null != t.assets ? t.assets.map(a.transformStoreAssetFromServer) : null,
+                assets: null != e.assets ? e.assets.map(u.transformStoreAssetFromServer) : null,
                 staffNotes: null != n ? {
                     content: n.content,
-                    user: null != n.user ? new s.default(n.user) : null
+                    user: null != n.user ? new l.default(n.user) : null
                 } : null,
-                guild: null != t.guild ? {
-                    id: t.guild.id,
-                    name: t.guild.name,
-                    icon: t.guild.icon,
-                    approximateMemberCount: t.guild.approximate_member_count,
-                    approximatePresenceCount: t.guild.approximate_presence_count
+                guild: null != e.guild ? {
+                    id: e.guild.id,
+                    name: e.guild.name,
+                    icon: e.guild.icon,
+                    approximateMemberCount: e.guild.approximate_member_count,
+                    approximatePresenceCount: e.guild.approximate_presence_count
                 } : null,
-                thumbnail: null != t.thumbnail ? (0, a.transformStoreAssetFromServer)(t.thumbnail) : null,
-                previewVideo: null != t.preview_video ? (0, a.transformStoreAssetFromServer)(t.preview_video) : null,
-                headerBackground: null != t.header_background ? (0, a.transformStoreAssetFromServer)(t.header_background) : null,
-                headerLogoDarkTheme: null != t.header_logo_dark_theme ? (0, a.transformStoreAssetFromServer)(t.header_logo_dark_theme) : null,
-                headerLogoLightTheme: null != t.header_logo_light_theme ? (0, a.transformStoreAssetFromServer)(t.header_logo_light_theme) : null,
-                boxArt: null != t.box_art ? (0, a.transformStoreAssetFromServer)(t.box_art) : null,
-                heroBackground: null != t.hero_background ? (0, a.transformStoreAssetFromServer)(t.hero_background) : null,
-                heroVideo: null != t.hero_video ? (0, a.transformStoreAssetFromServer)(t.hero_video) : null,
-                entitlementBranchId: t.entitlement_branch_id
+                thumbnail: null != e.thumbnail ? (0, u.transformStoreAssetFromServer)(e.thumbnail) : null,
+                previewVideo: null != e.preview_video ? (0, u.transformStoreAssetFromServer)(e.preview_video) : null,
+                headerBackground: null != e.header_background ? (0, u.transformStoreAssetFromServer)(e.header_background) : null,
+                headerLogoDarkTheme: null != e.header_logo_dark_theme ? (0, u.transformStoreAssetFromServer)(e.header_logo_dark_theme) : null,
+                headerLogoLightTheme: null != e.header_logo_light_theme ? (0, u.transformStoreAssetFromServer)(e.header_logo_light_theme) : null,
+                boxArt: null != e.box_art ? (0, u.transformStoreAssetFromServer)(e.box_art) : null,
+                heroBackground: null != e.hero_background ? (0, u.transformStoreAssetFromServer)(e.hero_background) : null,
+                heroVideo: null != e.hero_video ? (0, u.transformStoreAssetFromServer)(e.hero_video) : null,
+                entitlementBranchId: e.entitlement_branch_id
             })
         }
         isSlimDirectoryVersion() {
             return null == this.description
         }
-        constructor(e) {
-            super(), this.id = e.id, this.skuId = e.skuId, this.summary = e.summary, this.tagline = e.tagline, this.flavorText = e.flavorText, this.description = e.description, this.carouselItems = e.carouselItems || [], this.childSkuIds = e.childSkuIds || [], this.alternativeSkuIds = e.alternativeSkuIds || [], this.assets = e.assets || [], this.staffNotes = e.staffNotes, this.guild = e.guild, this.thumbnail = e.thumbnail || null, this.boxArt = e.boxArt || null, this.previewVideo = e.previewVideo || null, this.headerBackground = e.headerBackground || null, this.headerLogoDarkTheme = e.headerLogoDarkTheme || null, this.headerLogoLightTheme = e.headerLogoLightTheme || null, this.heroBackground = e.heroBackground || null, this.heroVideo = e.heroVideo || null, this.entitlementBranchId = e.entitlementBranchId || null, this.benefits = e.benefits || []
+        constructor(t) {
+            super(), this.id = t.id, this.skuId = t.skuId, this.summary = t.summary, this.tagline = t.tagline, this.flavorText = t.flavorText, this.description = t.description, this.carouselItems = t.carouselItems || [], this.childSkuIds = t.childSkuIds || [], this.alternativeSkuIds = t.alternativeSkuIds || [], this.assets = t.assets || [], this.staffNotes = t.staffNotes, this.guild = t.guild, this.thumbnail = t.thumbnail || null, this.boxArt = t.boxArt || null, this.previewVideo = t.previewVideo || null, this.headerBackground = t.headerBackground || null, this.headerLogoDarkTheme = t.headerLogoDarkTheme || null, this.headerLogoLightTheme = t.headerLogoLightTheme || null, this.heroBackground = t.heroBackground || null, this.heroVideo = t.heroVideo || null, this.entitlementBranchId = t.entitlementBranchId || null, this.benefits = t.benefits || []
         }
     }
 }

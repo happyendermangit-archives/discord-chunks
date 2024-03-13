@@ -2,11 +2,11 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         otpSkusExperiment: function() {
-            return u
+            return r
         }
     });
     var i = n("862205");
-    let u = (0, i.createExperiment)({
+    let r = (0, i.createExperiment)({
         kind: "user",
         id: "2024-01_otp_skus",
         label: "OTP SKUs",

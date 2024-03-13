@@ -71,8 +71,9 @@ function(e, t, n) {
         I = e => {
             let {
                 placeholder: t,
-                onEnter: n
-            } = e, [a, s] = l.useState(""), [r, o] = l.useState((0, c.toRichValue)(""));
+                onEnter: n,
+                setEditorRef: a
+            } = e, [s, r] = l.useState(""), [o, u] = l.useState((0, c.toRichValue)(""));
             return (0, i.jsx)(f.default, {
                 placeholder: t,
                 className: g.replyInput,
@@ -81,11 +82,11 @@ function(e, t, n) {
                 maxCharacterCount: x.MAX_CHAR_COUNT,
                 channel: S,
                 onChange: (e, t, n) => {
-                    s(t), o(n)
+                    r(t), u(n)
                 },
                 type: d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT,
-                textValue: a,
-                richValue: r,
+                textValue: s,
+                richValue: o,
                 onSubmit: e => {
                     let {
                         value: t
@@ -98,6 +99,7 @@ function(e, t, n) {
                         shouldRefocus: !1
                     }))
                 },
+                setEditorRef: a,
                 focused: !0,
                 disableThemedBackground: !0,
                 emojiPickerCloseOnModalOuterClick: !0,

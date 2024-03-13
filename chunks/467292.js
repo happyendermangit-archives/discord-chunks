@@ -2,22 +2,22 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         PurchaseTokenAuthState: function() {
-            return u
+            return r
         },
         default: function() {
             return _
         }
     });
-    var i, u, r = n("446674"),
+    var i, r, u = n("446674"),
         l = n("913144"),
         a = n("736978"),
         o = n("619443");
-    (i = u || (u = {}))[i.UNKNOWN = 0] = "UNKNOWN", i[i.PENDING = 1] = "PENDING", i[i.SUCCESS = 2] = "SUCCESS", i[i.ERROR = 3] = "ERROR";
+    (i = r || (r = {}))[i.UNKNOWN = 0] = "UNKNOWN", i[i.PENDING = 1] = "PENDING", i[i.SUCCESS = 2] = "SUCCESS", i[i.ERROR = 3] = "ERROR";
     let s = 0,
         c = null,
-        S = null;
+        d = null;
 
-    function d(t) {
+    function S(t) {
         let {
             error: e
         } = t, n = e instanceof a.default ? e : new a.default(e);
@@ -25,9 +25,9 @@ function(t, e, n) {
     }
 
     function E() {
-        s = 0, c = null, S = null
+        s = 0, c = null, d = null
     }
-    class f extends r.default.Store {
+    class f extends u.default.Store {
         get purchaseTokenAuthState() {
             return s
         }
@@ -35,15 +35,15 @@ function(t, e, n) {
             return c
         }
         get expiresAt() {
-            return S
+            return d
         }
     }
     f.displayName = "PurchaseTokenAuthStore";
     var _ = new f(l.default, {
-        SKU_PURCHASE_FAIL: d,
-        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
+        SKU_PURCHASE_FAIL: S,
+        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: S,
         USER_PAYMENT_CLIENT_ADD: function(t) {
-            s = 2, c = t.purchaseTokenHash, S = t.expiresAt
+            s = 2, c = t.purchaseTokenHash, d = t.expiresAt
         },
         BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: E,
         BILLING_SUBSCRIPTION_UPDATE_START: E,

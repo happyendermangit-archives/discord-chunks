@@ -40,8 +40,8 @@ function(e, t, n) {
             M = null !== (t = O[R]) && void 0 !== t ? t : O[0],
             k = I >= O.length - 1,
             L = k ? d.TooltipColors.RED : d.TooltipColors.GREEN,
-            b = _ ? L : d.TooltipColors.PRIMARY,
-            P = () => {
+            P = _ ? L : d.TooltipColors.PRIMARY,
+            b = () => {
                 i.stop(), A(!1)
             },
             j = e => {
@@ -51,7 +51,7 @@ function(e, t, n) {
             };
         return (0, a.jsx)(d.Tooltip, {
             delay: 500,
-            color: b,
+            color: P,
             forceOpen: N,
             text: _ ? (0, a.jsx)(d.Shaker, {
                 isShaking: k,
@@ -71,7 +71,7 @@ function(e, t, n) {
                     ...l,
                     className: x.clickTarget,
                     onMouseEnter: () => {
-                        _ ? P() : "function" == typeof i && i()
+                        _ ? b() : "function" == typeof i && i()
                     },
                     onClick: () => {
                         j(t)

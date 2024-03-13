@@ -14,12 +14,12 @@ function(t, e, n) {
             return c
         },
         fetchEligibleApplicationSubscriptionGuilds: function() {
-            return S
+            return d
         }
     });
     var i = n("872717"),
-        u = n("913144"),
-        r = n("599417"),
+        r = n("913144"),
+        u = n("599417"),
         l = n("49111");
     let a = async (t, e) => {
         let n = await i.default.get({
@@ -45,20 +45,20 @@ function(t, e, n) {
     };
 
     function c(t) {
-        return u.default.dispatch({
+        return r.default.dispatch({
             type: "APPLICATION_FETCH",
             applicationId: t
         }), i.default.get({
             url: l.Endpoints.APPLICATION_PUBLIC(t)
-        }).then(t => (u.default.dispatch({
+        }).then(t => (r.default.dispatch({
             type: "APPLICATION_FETCH_SUCCESS",
             application: t.body
-        }), t.body)).catch(e => (u.default.dispatch({
+        }), t.body)).catch(e => (r.default.dispatch({
             type: "APPLICATION_FETCH_FAIL",
             applicationId: t
-        }), Promise.reject(new r.default(e))))
+        }), Promise.reject(new u.default(e))))
     }
-    async function S(t) {
+    async function d(t) {
         let e = await i.default.get({
             url: l.Endpoints.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
             query: {

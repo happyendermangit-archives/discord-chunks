@@ -6,20 +6,20 @@ function(t, e, n) {
         }
     }), n("70102");
     var i = n("446674"),
-        u = n("913144"),
-        r = n("596523"),
+        r = n("913144"),
+        u = n("596523"),
         l = n("465527"),
         a = n("736978"),
         o = n("745279"),
         s = n("520713"),
         c = n("49111"),
-        S = n("782340");
-    let d = !1,
+        d = n("782340");
+    let S = !1,
         E = null,
         f = null;
 
     function _() {
-        d = !1, f = null
+        S = !1, f = null
     }
 
     function T(t) {
@@ -29,8 +29,8 @@ function(t, e, n) {
             code: n,
             paymentId: i
         } = e;
-        if (n !== a.default.ErrorCodes.AUTHENTICATION_REQUIRED) return d = !1, !1;
-        !d && (d = !0, E = i, I(i))
+        if (n !== a.default.ErrorCodes.AUTHENTICATION_REQUIRED) return S = !1, !1;
+        !S && (S = !0, E = i, I(i))
     }
     async function I(t) {
         if (null == t) return;
@@ -38,9 +38,9 @@ function(t, e, n) {
             error: e
         } = await (0, s.authenticatePaymentIntentForPaymentId)(t);
         if (null != e) {
-            u.default.dispatch({
+            r.default.dispatch({
                 type: "PAYMENT_AUTHENTICATION_ERROR",
-                error: new a.default(S.default.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
+                error: new a.default(d.default.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
             });
             let t = Error(e);
             (0, o.captureBillingException)(t, {
@@ -55,12 +55,12 @@ function(t, e, n) {
         let {
             payment: e
         } = t;
-        if (!d || e.id !== E || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(e.status)) return !1;
-        d = !1, f = null, E = null, u.default.wait(r.clearError), u.default.wait(l.clearPurchaseError)
+        if (!S || e.id !== E || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(e.status)) return !1;
+        S = !1, f = null, E = null, r.default.wait(u.clearError), r.default.wait(l.clearPurchaseError)
     }
     class p extends i.default.Store {
         get isAwaitingAuthentication() {
-            return d
+            return S
         }
         get error() {
             return f
@@ -70,7 +70,7 @@ function(t, e, n) {
         }
     }
     p.displayName = "PaymentAuthenticationStore";
-    var C = new p(u.default, {
+    var C = new p(r.default, {
         BILLING_SUBSCRIPTION_UPDATE_START: _,
         PAYMENT_AUTHENTICATION_CLEAR_ERROR: _,
         PREMIUM_PAYMENT_ERROR_CLEAR: _,
@@ -92,7 +92,7 @@ function(t, e, n) {
             let {
                 error: e
             } = t;
-            f = e, d = !1
+            f = e, S = !1
         },
         PAYMENT_UPDATE: A,
         BILLING_PAYMENT_FETCH_SUCCESS: A

@@ -35,12 +35,12 @@ function(e, t, n) {
         M = n("538282"),
         k = n("13030"),
         L = n("49111"),
-        b = n("115279"),
-        P = n("958706"),
+        P = n("115279"),
+        b = n("958706"),
         j = n("560241"),
         U = n("782340"),
         D = n("213524");
-    let w = k.MIN_EXPRESSION_PICKER_WIDTH + b.EmojiSize.MEDIUM,
+    let w = k.MIN_EXPRESSION_PICKER_WIDTH + P.EmojiSize.MEDIUM,
         F = l.memo(function(e) {
             let {
                 isActive: t,
@@ -226,8 +226,8 @@ function(e, t, n) {
                                         role: "tablist",
                                         "aria-label": U.default.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
                                         children: [em ? (0, i.jsx)(F, {
-                                            id: b.GIF_PICKER_TAB_ID,
-                                            "aria-controls": b.GIF_PICKER_TAB_PANEL_ID,
+                                            id: P.GIF_PICKER_TAB_ID,
+                                            "aria-controls": P.GIF_PICKER_TAB_PANEL_ID,
                                             "aria-selected": el === k.ExpressionPickerViewType.GIF,
                                             isActive: el === k.ExpressionPickerViewType.GIF,
                                             viewType: k.ExpressionPickerViewType.GIF,
@@ -244,15 +244,15 @@ function(e, t, n) {
                                                 children: U.default.Messages.EXPRESSION_PICKER_STICKER
                                             })
                                         }) : null, (0, i.jsx)(F, {
-                                            id: b.EMOJI_PICKER_TAB_ID,
-                                            "aria-controls": b.EMOJI_PICKER_TAB_PANEL_ID,
+                                            id: P.EMOJI_PICKER_TAB_ID,
+                                            "aria-controls": P.EMOJI_PICKER_TAB_PANEL_ID,
                                             "aria-selected": el === k.ExpressionPickerViewType.EMOJI,
                                             isActive: el === k.ExpressionPickerViewType.EMOJI,
                                             viewType: k.ExpressionPickerViewType.EMOJI,
                                             children: U.default.Messages.EXPRESSION_PICKER_EMOJI
                                         }), eu && null != V && (0, i.jsx)(F, {
-                                            id: b.SOUNDBOARD_PICKER_TAB_ID,
-                                            "aria-controls": b.SOUNDBOARD_PICKER_TAB_PANEL_ID,
+                                            id: P.SOUNDBOARD_PICKER_TAB_ID,
+                                            "aria-controls": P.SOUNDBOARD_PICKER_TAB_PANEL_ID,
                                             "aria-selected": el === k.ExpressionPickerViewType.SOUNDBOARD,
                                             isActive: el === k.ExpressionPickerViewType.SOUNDBOARD,
                                             viewType: k.ExpressionPickerViewType.SOUNDBOARD,
@@ -278,8 +278,8 @@ function(e, t, n) {
                                     channel: K,
                                     containerWidth: en,
                                     includeCreateEmojiButton: m,
-                                    emojiSize: null != en && en < w ? b.EmojiSize.MEDIUM : b.EmojiSize.LARGE,
-                                    pickerIntention: P.EmojiIntention.CHAT,
+                                    emojiSize: null != en && en < w ? P.EmojiSize.MEDIUM : P.EmojiSize.LARGE,
+                                    pickerIntention: b.EmojiIntention.CHAT,
                                     closePopout: ep,
                                     onSelectEmoji: G,
                                     ref: e => {

@@ -2,18 +2,18 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         BrowserCheckoutState: function() {
-            return u
+            return r
         },
         default: function() {
             return c
         }
     });
-    var i, u, r = n("446674"),
+    var i, r, u = n("446674"),
         l = n("913144");
-    (i = u || (u = {}))[i.UNKNOWN = 0] = "UNKNOWN", i[i.PENDING = 1] = "PENDING", i[i.DONE = 2] = "DONE";
+    (i = r || (r = {}))[i.UNKNOWN = 0] = "UNKNOWN", i[i.PENDING = 1] = "PENDING", i[i.DONE = 2] = "DONE";
     let a = 0,
         o = null;
-    class s extends r.default.Store {
+    class s extends u.default.Store {
         get browserCheckoutState() {
             return a
         }
