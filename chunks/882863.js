@@ -85,7 +85,7 @@ function(e, t, n) {
         _ = !1, g && (g = !1, b(S), S = -1), y = !0;
         var r = h;
         try {
-            for (w(n), m = a(d); null !== m && (!(m.expirationTime > n) || e && !x());) {
+            for (w(n), m = a(d); null !== m && (!(m.expirationTime > n) || e && !O());) {
                 var i = m.callback;
                 if ("function" == typeof i) {
                     m.callback = null, h = m.priorityLevel;
@@ -109,16 +109,16 @@ function(e, t, n) {
         T = null,
         S = -1,
         Y = 5,
-        O = -1;
+        x = -1;
 
-    function x() {
-        return !(t.unstable_now() - O < Y)
+    function O() {
+        return !(t.unstable_now() - x < Y)
     }
 
     function E() {
         if (null !== T) {
             var e = t.unstable_now();
-            O = e;
+            x = e;
             var n = !0;
             try {
                 n = T(!0, e)
@@ -220,7 +220,7 @@ function(e, t, n) {
             expirationTime: s,
             sortIndex: -1
         }, o > i ? (e.sortIndex = o, r(f, e), null === a(d) && e === a(f) && (g ? (b(S), S = -1) : g = !0, H(k, o - i))) : (e.sortIndex = s, r(d, e), _ || y || (_ = !0, C(L))), e
-    }, t.unstable_shouldYield = x, t.unstable_wrapCallback = function(e) {
+    }, t.unstable_shouldYield = O, t.unstable_wrapCallback = function(e) {
         var t = h;
         return function() {
             var n = h;

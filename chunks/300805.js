@@ -45,9 +45,9 @@ function(e, t, n) {
         m = {},
         h = function e(t, n, o, i, s, l, d, f, h, y, _, g, v, b, M, w) {
             for (var k, L, D = t, T = w, S = 0, Y = !1; void 0 !== (T = T.get(m)) && !Y;) {
-                var O = T.get(t);
-                if (S += 1, void 0 !== O) {
-                    if (O === S) throw RangeError("Cyclic object value");
+                var x = T.get(t);
+                if (S += 1, void 0 !== x) {
+                    if (x === S) throw RangeError("Cyclic object value");
                     Y = !0
                 }
                 void 0 === T.get(m) && (S = 0)
@@ -59,8 +59,8 @@ function(e, t, n) {
                 D = ""
             }
             if ("string" == typeof(k = D) || "number" == typeof k || "boolean" == typeof k || "symbol" == typeof k || "bigint" == typeof k || a.isBuffer(D)) return d ? [v(b ? n : d(n, p.encoder, M, "key", g)) + "=" + v(d(D, p.encoder, M, "value", g))] : [v(n) + "=" + v(String(D))];
-            var x = [];
-            if (void 0 === D) return x;
+            var O = [];
+            if (void 0 === D) return O;
             if ("comma" === o && u(D)) b && d && (D = a.maybeMap(D, d)), L = [{
                 value: D.length > 0 ? D.join(",") || null : void 0
             }];
@@ -76,10 +76,10 @@ function(e, t, n) {
                     var F = u(D) ? "function" == typeof o ? o(P, C) : P : P + (y ? "." + C : "[" + C + "]");
                     w.set(t, S);
                     var A = r();
-                    A.set(m, w), c(x, e(H, F, o, i, s, l, "comma" === o && b && u(D) ? null : d, f, h, y, _, g, v, b, M, A))
+                    A.set(m, w), c(O, e(H, F, o, i, s, l, "comma" === o && b && u(D) ? null : d, f, h, y, _, g, v, b, M, A))
                 }
             }
-            return x
+            return O
         },
         y = function(e) {
             if (!e) return p;

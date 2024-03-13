@@ -428,7 +428,7 @@ function(e, t, n) {
         return t
     }
 
-    function O(e, t) {
+    function x(e, t) {
         for (var n = t;;) {
             if (c.call(e, n) > -1) return n;
             var r = n.lastIndexOf("-");
@@ -437,11 +437,11 @@ function(e, t, n) {
         }
     }
 
-    function x(e, t) {
+    function O(e, t) {
         for (var n, r = 0, a = t.length; r < a && !n;) {
             var i = t[r],
                 s = String(i).replace(L, ""),
-                n = O(e, s);
+                n = x(e, s);
             r++
         }
         var u = new $;
@@ -457,8 +457,8 @@ function(e, t, n) {
 
     function E(e, t, n, r, a) {
         if (0 === e.length) throw ReferenceError("No locale data has been provided for this object yet.");
-        if ("lookup" === n["[[localeMatcher]]"]) var o = x(e, t);
-        else var o = x(e, t);
+        if ("lookup" === n["[[localeMatcher]]"]) var o = O(e, t);
+        else var o = O(e, t);
         var i = o["[[locale]]"];
         if (u.call(o, "[[extension]]")) var s = o["[[extension]]"],
             l = o["[[extensionIndex]]"],
@@ -500,7 +500,7 @@ function(e, t, n) {
     function P(e, t) {
         for (var n = t.length, r = new Q, a = 0; a < n;) {
             var o = t[a];
-            void 0 !== O(e, String(o).replace(L, "")) && m.call(r, o), a++
+            void 0 !== x(e, String(o).replace(L, "")) && m.call(r, o), a++
         }
         return f.call(r)
     }
@@ -570,10 +570,10 @@ function(e, t, n) {
         var D = n.minimumSignificantDigits,
             S = n.maximumSignificantDigits;
         (void 0 !== D || void 0 !== S) && (D = C(n, "minimumSignificantDigits", 1, 21, 1), S = C(n, "maximumSignificantDigits", D, 21, 21), a["[[minimumSignificantDigits]]"] = D, a["[[maximumSignificantDigits]]"] = S);
-        var O = j(n, "useGrouping", "boolean", void 0, !0);
-        a["[[useGrouping]]"] = O;
-        var x = d[p].patterns[m];
-        return a["[[positivePattern]]"] = x.positivePattern, a["[[negativePattern]]"] = x.negativePattern, a["[[boundFormat]]"] = void 0, a["[[initializedNumberFormat]]"] = !0, s && (e.format = A.call(e)), o.exp.test(o.input), e
+        var x = j(n, "useGrouping", "boolean", void 0, !0);
+        a["[[useGrouping]]"] = x;
+        var O = d[p].patterns[m];
+        return a["[[positivePattern]]"] = O.positivePattern, a["[[negativePattern]]"] = O.negativePattern, a["[[boundFormat]]"] = void 0, a["[[initializedNumberFormat]]"] = !0, s && (e.format = A.call(e)), o.exp.test(o.input), e
     }
     l(Intl, "NumberFormat", {
         configurable: !0,

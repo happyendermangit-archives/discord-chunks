@@ -39,7 +39,7 @@ function(e, t, n) {
         O = {},
         D = null,
         P = {},
-        L = {
+        M = {
             comparator: -1,
             channel: (0, f.createChannelRecord)({
                 id: T.NULL_STRING_CHANNEL_ID,
@@ -47,7 +47,7 @@ function(e, t, n) {
                 name: I.default.Messages.UNCATEGORIZED
             })
         },
-        M = w(T.NULL_STRING_GUILD_ID),
+        L = w(T.NULL_STRING_GUILD_ID),
         b = [],
         U = {};
 
@@ -56,7 +56,7 @@ function(e, t, n) {
             id: e,
             [C]: [],
             [A]: [],
-            [T.ChannelTypes.GUILD_CATEGORY]: [L],
+            [T.ChannelTypes.GUILD_CATEGORY]: [M],
             count: 0
         }
     }
@@ -206,7 +206,7 @@ function(e, t, n) {
         getChannels(e) {
             var t;
             let n;
-            return null != e ? (null == (n = N[t = e]) && (n = G(t)), n) : M
+            return null != e ? (null == (n = N[t = e]) && (n = G(t)), n) : L
         }
         getFirstChannelOfType(e, t, n) {
             let i = this.getChannels(e)[n],

@@ -1,6 +1,6 @@
-function(e, t, r) {
-    e.exports = function(e) {
-        var t = typeof e;
-        return null != e && ("object" == t || "function" == t)
+function(t, r, e) {
+    t.exports = function(t) {
+        var r = typeof t;
+        return null != t && ("object" == r || "function" == r)
     }
 }

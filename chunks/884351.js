@@ -71,7 +71,7 @@ function(e, t, n) {
         }
     }
 
-    function L(e) {
+    function M(e) {
         return {
             match: a.anyScopeRegex(e),
             parse: e => ({
@@ -80,7 +80,7 @@ function(e, t, n) {
             })
         }
     }
-    let M = d.default.RULES,
+    let L = d.default.RULES,
         b = c.default,
         U = /^<@!?(\d+)>/,
         w = /^<@&(\d+)>/,
@@ -91,12 +91,12 @@ function(e, t, n) {
             link: P(a.defaultRules.link),
             autolink: P(a.defaultRules.autolink),
             url: P(a.defaultRules.url),
-            inlineCode: P(M.inlineCode),
-            codeBlock: P(M.codeBlock),
-            rawUserMention: L(U),
-            rawRoleMention: L(w),
-            rawChannelMention: L(k),
-            rawEmoji: L(V),
+            inlineCode: P(L.inlineCode),
+            codeBlock: P(L.codeBlock),
+            rawUserMention: M(U),
+            rawRoleMention: M(w),
+            rawChannelMention: M(k),
+            rawEmoji: M(V),
             mention: {
                 match(e, t, n) {
                     let i = n.split(" ").pop() + e;
@@ -174,7 +174,7 @@ function(e, t, n) {
                 })
             },
             emoji: {
-                order: M.emoji.order,
+                order: L.emoji.order,
                 match: e => u.default.EMOJI_NAME_RE.exec(e),
                 parse(e, t, n) {
                     let [i, s] = e, {
@@ -219,8 +219,8 @@ function(e, t, n) {
             }
         },
         x = {
-            inlineCode: P(M.inlineCode),
-            codeBlock: P(M.codeBlock),
+            inlineCode: P(L.inlineCode),
+            codeBlock: P(L.codeBlock),
             mention: {
                 match: a.anyScopeRegex(U),
                 parse(e, t, n) {
@@ -303,10 +303,10 @@ function(e, t, n) {
                 })
             },
             timestamp: {
-                ...M.timestamp,
+                ...L.timestamp,
                 parse() {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    let i = M.timestamp.parse(...t);
+                    let i = L.timestamp.parse(...t);
                     return {
                         content: i.formatted
                     }

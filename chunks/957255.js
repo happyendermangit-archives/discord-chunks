@@ -47,7 +47,7 @@ function(e, t, n) {
         })
     }
 
-    function L(e) {
+    function M(e) {
         var t;
         let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             i = C.default.getCurrentUser();
@@ -63,10 +63,10 @@ function(e, t, n) {
         })
     }
 
-    function M(e) {
+    function L(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = R[e];
-        return null != n ? n : R[e] = L(e, t)
+        return null != n ? n : R[e] = M(e, t)
     }
 
     function b(e) {
@@ -153,7 +153,7 @@ function(e, t, n) {
                 let s = S.default.getChannel(e.parent_id);
                 return null == s ? p.default.NONE : p.default.applyThreadPermissions(e, Y(s, t, n, i), f.default.hasJoined(e.id))
             }
-            s = M(e.id)
+            s = L(e.id)
         } else e instanceof E.default && (s = P(e.id));
         return void 0 !== t || void 0 !== n || void 0 !== i ? p.default.computePermissions({
             user: C.default.getCurrentUser(),
@@ -169,7 +169,7 @@ function(e, t, n) {
             this.waitFor(C.default, I.default, S.default, T.default, v.default, f.default, c.default, u.default)
         }
         getChannelPermissions(e) {
-            return h.THREAD_CHANNEL_TYPES.has(e.type) ? L(e.id) : M(e.id)
+            return h.THREAD_CHANNEL_TYPES.has(e.type) ? M(e.id) : L(e.id)
         }
         getGuildPermissions(e) {
             return P(e.id)

@@ -97,7 +97,7 @@ function(e, t, n) {
                             null != e ? (D(e), y(!1)) : requestAnimationFrame(() => y(!0))
                         })
                     }, [t, _, D]),
-                    L = i.useCallback(function() {
+                    M = i.useCallback(function() {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             [n, i] = null != h ? h(d, c) : [d, c];
                         if ((n !== d || i !== c) && (E({
@@ -111,9 +111,9 @@ function(e, t, n) {
                         let r = u(l(t, n, i));
                         null != r && (R(!0), D(r))
                     }, [E, d, c, h, t, D]),
-                    [M, b] = i.useState(!1);
+                    [L, b] = i.useState(!1);
                 i.useEffect(() => {
-                    if (!M || !I) return;
+                    if (!L || !I) return;
                     b(!1);
                     let e = u(l(t, d, c));
                     if (null != e) {
@@ -123,7 +123,7 @@ function(e, t, n) {
                     C(!1);
                     let n = u(l(t));
                     null != n && D(n)
-                }, [t, M, I, D, d, c]);
+                }, [t, L, I, D, d, c]);
                 let U = i.useCallback(e => {
                     v.current && null == e && b(!0)
                 }, []);
@@ -135,7 +135,7 @@ function(e, t, n) {
                 let w = i.useCallback(e => {
                         if (!v.current) return;
                         if (!S && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
-                            e.preventDefault(), e.stopPropagation(), L();
+                            e.preventDefault(), e.stopPropagation(), M();
                             return
                         }
                         let t = function(e) {
@@ -179,8 +179,8 @@ function(e, t, n) {
                                     type: t
                                 }), null != f ? f(d, c, e) : null != T && T.click()
                         }
-                    }, [L, E, p, T, f, d, c]),
-                    k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (C(!0), R(!0)), !1) : I ? (L(!1), !1) : void(g && null != T ? P(d, c) : L(!0)), [I, g, T, L, P, d, c]),
+                    }, [M, E, p, T, f, d, c]),
+                    k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (C(!0), R(!0)), !1) : I ? (M(!1), !1) : void(g && null != T ? P(d, c) : M(!0)), [I, g, T, M, P, d, c]),
                     V = i.useCallback(e => {
                         if (e.target !== e.currentTarget) {
                             if (e.currentTarget.contains(e.relatedTarget)) return !1;

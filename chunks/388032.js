@@ -172,11 +172,11 @@ function(e, t, n) {
                 return a(r), n.isTriggeringEvent = !1, r.shouldStopPropagation
             }
             return !0
-        }), L = (0, r.useEffectEvent)(e => {
+        }), j = (0, r.useEffectEvent)(e => {
             let t = P.current;
             t.isPressed && t.target && (t.isOverTarget && null != t.pointerType && I(S(t.target, e), t.pointerType, !1), t.isPressed = !1, t.isOverTarget = !1, t.activePointerId = null, t.pointerType = null, A(), !v && p(t.target))
-        }), j = (0, r.useEffectEvent)(e => {
-            l && L(e)
+        }), L = (0, r.useEffectEvent)(e => {
+            l && j(e)
         }), N = (0, i.useMemo)(() => {
             let e = P.current,
                 t = {
@@ -233,16 +233,16 @@ function(e, t, n) {
                     t.currentTarget.contains(t.target) && "virtual" !== e.pointerType && 0 === t.button && k(t, t.currentTarget) && O(t, e.pointerType || t.pointerType)
                 };
                 let n = t => {
-                        t.pointerId === e.activePointerId && (e.target && k(t, e.target) ? !e.isOverTarget && null != e.pointerType && (e.isOverTarget = !0, R(S(e.target, t), e.pointerType)) : e.target && e.isOverTarget && null != e.pointerType && (e.isOverTarget = !1, I(S(e.target, t), e.pointerType, !1), j(t)))
+                        t.pointerId === e.activePointerId && (e.target && k(t, e.target) ? !e.isOverTarget && null != e.pointerType && (e.isOverTarget = !0, R(S(e.target, t), e.pointerType)) : e.target && e.isOverTarget && null != e.pointerType && (e.isOverTarget = !1, I(S(e.target, t), e.pointerType, !1), L(t)))
                     },
                     i = t => {
                         t.pointerId === e.activePointerId && e.isPressed && 0 === t.button && e.target && (k(t, e.target) && null != e.pointerType ? I(S(e.target, t), e.pointerType) : e.isOverTarget && null != e.pointerType && I(S(e.target, t), e.pointerType, !1), e.isPressed = !1, e.isOverTarget = !1, e.activePointerId = null, e.pointerType = null, A(), !v && p(e.target))
                     },
                     o = e => {
-                        L(e)
+                        j(e)
                     };
                 t.onDragStart = e => {
-                    e.currentTarget.contains(e.target) && L(e)
+                    e.currentTarget.contains(e.target) && j(e)
                 }
             } else {
                 t.onMouseDown = t => {
@@ -260,7 +260,7 @@ function(e, t, n) {
                 }, t.onMouseLeave = t => {
                     if (!t.currentTarget.contains(t.target)) return;
                     let n = !0;
-                    e.isPressed && !e.ignoreEmulatedMouseEvents && null != e.pointerType && (e.isOverTarget = !1, n = I(t, e.pointerType, !1), j(t)), n && t.stopPropagation()
+                    e.isPressed && !e.ignoreEmulatedMouseEvents && null != e.pointerType && (e.isOverTarget = !1, n = I(t, e.pointerType, !1), L(t)), n && t.stopPropagation()
                 }, t.onMouseUp = t => {
                     t.currentTarget.contains(t.target) && !e.ignoreEmulatedMouseEvents && 0 === t.button && O(t, e.pointerType || "mouse")
                 };
@@ -290,7 +290,7 @@ function(e, t, n) {
                     }
                     let n = w(t.nativeEvent, e.activePointerId),
                         r = !0;
-                    n && k(n, t.currentTarget) ? !e.isOverTarget && null != e.pointerType && (e.isOverTarget = !0, r = R(t, e.pointerType)) : e.isOverTarget && null != e.pointerType && (e.isOverTarget = !1, r = I(t, e.pointerType, !1), j(t)), r && t.stopPropagation()
+                    n && k(n, t.currentTarget) ? !e.isOverTarget && null != e.pointerType && (e.isOverTarget = !0, r = R(t, e.pointerType)) : e.isOverTarget && null != e.pointerType && (e.isOverTarget = !1, r = I(t, e.pointerType, !1), L(t)), r && t.stopPropagation()
                 }, t.onTouchEnd = t => {
                     if (!t.currentTarget.contains(t.target)) return;
                     if (!e.isPressed) {
@@ -301,10 +301,10 @@ function(e, t, n) {
                         r = !0;
                     n && k(n, t.currentTarget) && null != e.pointerType ? (O(t, e.pointerType), r = I(t, e.pointerType)) : e.isOverTarget && null != e.pointerType && (r = I(t, e.pointerType, !1)), r && t.stopPropagation(), e.isPressed = !1, e.activePointerId = null, e.isOverTarget = !1, e.ignoreEmulatedMouseEvents = !0, e.target && !v && p(e.target), A()
                 }, t.onTouchCancel = t => {
-                    t.currentTarget.contains(t.target) && (t.stopPropagation(), e.isPressed && L(t))
+                    t.currentTarget.contains(t.target) && (t.stopPropagation(), e.isPressed && j(t))
                 };
                 let i = t => {
-                    e.isPressed && t.target.contains(e.target) && L({
+                    e.isPressed && t.target.contains(e.target) && j({
                         currentTarget: e.target,
                         shiftKey: !1,
                         ctrlKey: !1,
@@ -313,11 +313,11 @@ function(e, t, n) {
                     })
                 };
                 t.onDragStart = e => {
-                    e.currentTarget.contains(e.target) && L(e)
+                    e.currentTarget.contains(e.target) && j(e)
                 }
             }
             return t
-        }, [T, c, d, A, v, L, j, I, R, O]);
+        }, [T, c, d, A, v, j, L, I, R, O]);
         return (0, i.useEffect)(() => () => {
             var e;
             !v && p(null !== (e = P.current.target) && void 0 !== e ? e : void 0)
@@ -475,8 +475,8 @@ function(e, t, n) {
     let R = null,
         I = new Set,
         O = !1,
-        L = !1,
         j = !1,
+        L = !1,
         N = {
             Tab: !0,
             Escape: !0
@@ -488,30 +488,30 @@ function(e, t, n) {
 
     function B(e) {
         var t;
-        if (L = !0, !((t = e).metaKey || !(0, r.isMac)() && t.altKey || t.ctrlKey || "Control" === t.key || "Shift" === t.key || "Meta" === t.key)) R = "keyboard", F("keyboard", e)
+        if (j = !0, !((t = e).metaKey || !(0, r.isMac)() && t.altKey || t.ctrlKey || "Control" === t.key || "Shift" === t.key || "Meta" === t.key)) R = "keyboard", F("keyboard", e)
     }
 
     function z(e) {
-        R = "pointer", ("mousedown" === e.type || "pointerdown" === e.type) && (L = !0, F("pointer", e))
+        R = "pointer", ("mousedown" === e.type || "pointerdown" === e.type) && (j = !0, F("pointer", e))
     }
 
     function K(e) {
-        (0, r.isVirtualClick)(e) && (L = !0, R = "virtual")
+        (0, r.isVirtualClick)(e) && (j = !0, R = "virtual")
     }
 
     function V(e) {
-        e.target !== window && e.target !== document && (!L && !j && (R = "virtual", F("virtual", e)), L = !1, j = !1)
+        e.target !== window && e.target !== document && (!j && !L && (R = "virtual", F("virtual", e)), j = !1, L = !1)
     }
 
     function U() {
-        L = !1, j = !0
+        j = !1, L = !0
     }
 
     function H() {
         if ("undefined" == typeof window || O) return;
         let e = HTMLElement.prototype.focus;
         HTMLElement.prototype.focus = function() {
-            L = !0, e.apply(this, arguments)
+            j = !0, e.apply(this, arguments)
         }, document.addEventListener("keydown", B, !0), document.addEventListener("keyup", B, !0), document.addEventListener("click", K, !0), window.addEventListener("focus", V, !0), window.addEventListener("blur", U, !1), "undefined" != typeof PointerEvent ? (document.addEventListener("pointerdown", z, !0), document.addEventListener("pointermove", z, !0), document.addEventListener("pointerup", z, !0)) : (document.addEventListener("mousedown", z, !0), document.addEventListener("mousemove", z, !0), document.addEventListener("mouseup", z, !0)), O = !0
     }
 

@@ -4,8 +4,8 @@ function(e, a, t) {
     var s, d, n, c, i, r = t("37983");
     t("320777"), t("884691");
     var o = t("288661"),
-        l = t("627445"),
-        f = t.n(l),
+        f = t("627445"),
+        l = t.n(f),
         u = t("521143"),
         p = t("938460"),
         b = t("156820"),
@@ -19,8 +19,8 @@ function(e, a, t) {
         T = t("956966"),
         O = t("773336"),
         R = t("393414"),
-        w = t("741148"),
-        v = t("336921"),
+        v = t("741148"),
+        w = t("336921"),
         A = t("862337"),
         S = t("49671"),
         N = t("60608"),
@@ -32,7 +32,7 @@ function(e, a, t) {
         y = t("718517");
     let M = 5 * y.default.Millis.MINUTE,
         k = document.getElementById("app-mount");
-    f(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : D.appMount;
+    l(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : D.appMount;
     let x = (0, o.createRoot)(k),
         U = e => x.render((0, r.jsx)(C.default, {
             children: (0, r.jsx)(N.default, {
@@ -57,18 +57,18 @@ function(e, a, t) {
         let r = Object.keys(t).filter(e => null != t[e]).map(e => "".concat(e, ": ").concat(t[e])).join(", ");
         new(0, P.default)().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(r, ", build: ").concat(a)), I.default.setBackgroundThrottling(!1), I.default.initializeExitHook()
     }
-    if ((0, v.setupWindow)(window), __OVERLAY__) U(u.default.Overlay);
+    if ((0, w.setupWindow)(window), __OVERLAY__) U(u.default.Overlay);
     else if (null != window.require && null == window.DiscordNative) U(u.default.OutdatedClient);
     else {
         if (document.addEventListener("scroll", e => e.preventDefault()), O.isPlatformEmbedded) {
             window.onbeforeunload = () => I.default.beforeUnload(), I.default.on("HELP_OPEN", () => window.open(E.default.getCommunityURL()));
             let e = new A.DelayedCall(M, () => I.default.purgeMemory());
             I.default.on("MAIN_WINDOW_BLUR", () => {
-                e.delay(), I.default.setFocused(!1), (0, w.focus)(window, !1)
+                e.delay(), I.default.setFocused(!1), (0, v.focus)(window, !1)
             }), I.default.on("MAIN_WINDOW_FOCUS", () => {
-                e.cancel(), I.default.setFocused(!0), (0, w.focus)(window, !0)
+                e.cancel(), I.default.setFocused(!0), (0, v.focus)(window, !0)
             }), I.default.on("MAIN_WINDOW_PATH", (e, a) => (0, R.transitionTo)(a)), I.default.on("MAIN_WINDOW_HIDDEN", () => {
-                (0, w.hidden)(window)
+                (0, v.hidden)(window)
             })
         }
         h.default.initialize(), p.default.init(), m.default.init(), L.default.init(), b.default.initialize(), g.default.initialize(), T.default.initialize(), j.initialize(), U(u.default.App)

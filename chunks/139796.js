@@ -46,8 +46,8 @@ function(e, t, n) {
         R = n("367520"),
         I = n("179626"),
         O = n("629448"),
-        L = n("163060"),
-        j = n("79205"),
+        j = n("163060"),
+        L = n("79205"),
         N = n("240849"),
         F = n("564341"),
         B = n("388032"),
@@ -153,8 +153,8 @@ function(e, t, n) {
         "sv-SE": R.default,
         "tr-TR": I.default,
         "uk-UA": O.default,
-        "zh-CN": L.default,
-        "zh-TW": j.default
+        "zh-CN": j.default,
+        "zh-TW": L.default
     };
     let q = new WeakMap;
 
@@ -224,7 +224,7 @@ function(e, t, n) {
         let R = (0, N.useSlotId)(),
             I = (0, N.useSlotId)(),
             O = (0, N.useSlotId)(),
-            L = {
+            j = {
                 "aria-disabled": E || void 0,
                 role: A,
                 "aria-label": e["aria-label"],
@@ -234,9 +234,9 @@ function(e, t, n) {
                 "aria-haspopup": u,
                 "aria-expanded": e["aria-expanded"]
             };
-        "none" !== t.selectionManager.selectionMode && !k && (L["aria-checked"] = _);
-        let j = t.collection.getItem(s);
-        c && (L["aria-posinset"] = null == j ? void 0 : j.index, L["aria-setsize"] = (0, V.getItemCount)(t.collection));
+        "none" !== t.selectionManager.selectionMode && !k && (j["aria-checked"] = _);
+        let L = t.collection.getItem(s);
+        c && (j["aria-posinset"] = null == L ? void 0 : L.index, j["aria-setsize"] = (0, V.getItemCount)(t.collection));
         let {
             itemProps: F,
             isFocused: z
@@ -296,12 +296,12 @@ function(e, t, n) {
             onBlur: S,
             onFocus: x,
             onFocusChange: w
-        }), Y = (0, N.filterDOMProps)(j.props, {
-            isLink: !!(null == j ? void 0 : null === (r = j.props) || void 0 === r ? void 0 : r.href)
+        }), Y = (0, N.filterDOMProps)(L.props, {
+            isLink: !!(null == L ? void 0 : null === (r = L.props) || void 0 === r ? void 0 : r.href)
         });
         return delete Y.id, {
             menuItemProps: {
-                ...L,
+                ...j,
                 ...(0, N.mergeProps)(Y, k ? {
                     onFocus: F.onFocus
                 } : F, U, G, W, Z),

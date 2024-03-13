@@ -1,23 +1,23 @@
-function(t, r, n) {
+function(t, r, e) {
     "use strict";
-    var e = n("696397").charAt,
-        i = n("998270"),
-        o = n("515011"),
-        u = n("891024"),
-        a = n("766739"),
-        f = "String Iterator",
-        c = o.set,
-        s = o.getterFor(f);
-    u(String, "String", function(t) {
-        c(this, {
-            type: f,
-            string: i(t),
+    var n = e("696397").charAt,
+        o = e("998270"),
+        i = e("515011"),
+        a = e("891024"),
+        u = e("766739"),
+        s = "String Iterator",
+        f = i.set,
+        c = i.getterFor(s);
+    a(String, "String", function(t) {
+        f(this, {
+            type: s,
+            string: o(t),
             index: 0
         })
     }, function() {
-        var t, r = s(this),
-            n = r.string,
-            i = r.index;
-        return i >= n.length ? a(void 0, !0) : (t = e(n, i), r.index += t.length, a(t, !1))
+        var t, r = c(this),
+            e = r.string,
+            o = r.index;
+        return o >= e.length ? u(void 0, !0) : (t = n(e, o), r.index += t.length, u(t, !1))
     })
 }

@@ -23,7 +23,7 @@ function(e, t, n) {
             return P
         },
         getSocialRecommendationReasons: function() {
-            return M
+            return L
         },
         getNonSocialRecommendationReasons: function() {
             return U
@@ -172,11 +172,11 @@ function(e, t, n) {
         let i = t.getApplication(e);
         return null == i || null == i.primarySkuId ? null : n.get(i.primarySkuId)
     }
-    let L = [];
+    let M = [];
 
-    function M(e, t, n, i, r) {
+    function L(e, t, n, i, r) {
         let a = t.get(e);
-        if (null == a) return L;
+        if (null == a) return M;
         let o = a.applicationId,
             l = [],
             u = [],

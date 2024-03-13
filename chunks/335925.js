@@ -39,7 +39,7 @@ function(e, t, n) {
         Y = function(e) {
             T(e.data)
         },
-        O = function(e) {
+        x = function(e) {
             s.postMessage(String(e), r.protocol + "//" + r.host)
         };
     (!v || !b) && (v = function(e) {
@@ -55,7 +55,7 @@ function(e, t, n) {
         M.nextTick(S(e))
     } : w && w.now ? a = function(e) {
         w.now(S(e))
-    } : MessageChannel && !_ ? (i = (o = new MessageChannel).port2, o.port1.onmessage = Y, a = l(i.postMessage, i)) : s.addEventListener && c(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !f(O) ? (a = O, s.addEventListener("message", Y, !1)) : a = D in h("script") ? function(e) {
+    } : MessageChannel && !_ ? (i = (o = new MessageChannel).port2, o.port1.onmessage = Y, a = l(i.postMessage, i)) : s.addEventListener && c(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !f(x) ? (a = x, s.addEventListener("message", Y, !1)) : a = D in h("script") ? function(e) {
         p.appendChild(h("script"))[D] = function() {
             p.removeChild(this), T(e)
         }

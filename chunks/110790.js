@@ -19,31 +19,31 @@ function(e, t, n) {
             R = 0,
             I = null,
             O = 0,
-            L = new r.Buf16(16),
             j = new r.Buf16(16),
+            L = new r.Buf16(16),
             N = null,
             F = 0;
-        for (k = 0; k <= 15; k++) L[k] = 0;
-        for (E = 0; E < c; E++) L[t[n + E]]++;
-        for (M = 15, D = S; M >= 1 && 0 === L[M]; M--);
+        for (k = 0; k <= 15; k++) j[k] = 0;
+        for (E = 0; E < c; E++) j[t[n + E]]++;
+        for (M = 15, D = S; M >= 1 && 0 === j[M]; M--);
         if (D > M && (D = M), 0 === M) return u[d++] = 20971520, u[d++] = 20971520, f.bits = 1, 0;
-        for (_ = 1; _ < M && 0 === L[_]; _++);
+        for (_ = 1; _ < M && 0 === j[_]; _++);
         for (D < _ && (D = _), T = 1, k = 1; k <= 15; k++)
-            if (T <<= 1, (T -= L[k]) < 0) return -1;
+            if (T <<= 1, (T -= j[k]) < 0) return -1;
         if (T > 0 && (0 === e || 1 !== M)) return -1;
-        for (k = 1, j[1] = 0; k < 15; k++) j[k + 1] = j[k] + L[k];
-        for (E = 0; E < c; E++) 0 !== t[n + E] && (l[j[t[n + E]]++] = E);
+        for (k = 1, L[1] = 0; k < 15; k++) L[k + 1] = L[k] + j[k];
+        for (E = 0; E < c; E++) 0 !== t[n + E] && (l[L[t[n + E]]++] = E);
         if (0 === e ? (I = N = l, m = 19) : 1 === e ? (I = i, O -= 257, N = o, F -= 257, m = 256) : (I = s, N = a, m = -1), R = 0, E = 0, k = _, b = d, C = D, P = 0, v = -1, g = (A = 1 << D) - 1, 1 === e && A > 852 || 2 === e && A > 592) return 1;
         for (;;) {
             y = k - P, l[E] < m ? (x = 0, w = l[E]) : l[E] > m ? (x = N[F + l[E]], w = I[O + l[E]]) : (x = 96, w = 0), p = 1 << k - P, _ = h = 1 << C;
             do u[b + (R >> P) + (h -= p)] = y << 24 | x << 16 | w | 0; while (0 !== h);
             for (p = 1 << k - 1; R & p;) p >>= 1;
-            if (0 !== p ? (R &= p - 1, R += p) : R = 0, E++, 0 == --L[k]) {
+            if (0 !== p ? (R &= p - 1, R += p) : R = 0, E++, 0 == --j[k]) {
                 if (k === M) break;
                 k = t[n + l[E]]
             }
             if (k > D && (R & g) !== v) {
-                for (0 === P && (P = D), b += _, T = 1 << (C = k - P); C + P < M && !((T -= L[C + P]) <= 0);) {
+                for (0 === P && (P = D), b += _, T = 1 << (C = k - P); C + P < M && !((T -= j[C + P]) <= 0);) {
                     ;
                     C++, T <<= 1
                 }

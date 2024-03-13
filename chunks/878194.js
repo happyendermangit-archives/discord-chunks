@@ -37,8 +37,8 @@ function(e, t, n) {
         R = n("551566"),
         I = n("544320"),
         O = n("136656"),
-        L = n("581071"),
-        j = n("302138"),
+        j = n("581071"),
+        L = n("302138"),
         N = n("362561"),
         F = n("195711"),
         B = n("932662"),
@@ -172,17 +172,17 @@ function(e, t, n) {
             R.current = T, I.current = A
         });
         let O = (0, V.getItemCount)(t.collection),
-            L = (0, K.useRef)(O),
-            j = (0, K.useRef)(t.isOpen);
+            j = (0, K.useRef)(O),
+            L = (0, K.useRef)(t.isOpen);
         (0, K.useEffect)(() => {
-            let e = t.isOpen !== j.current && (null == t.selectionManager.focusedKey || (0, z.isAppleDevice)());
-            if (t.isOpen && (e || O !== L.current)) {
+            let e = t.isOpen !== L.current && (null == t.selectionManager.focusedKey || (0, z.isAppleDevice)());
+            if (t.isOpen && (e || O !== j.current)) {
                 let e = p.format("countAnnouncement", {
                     optionCount: O
                 });
                 (0, N.announce)(e)
             }
-            L.current = O, j.current = t.isOpen
+            j.current = O, L.current = t.isOpen
         });
         let Y = (0, K.useRef)(t.selectedKey);
         return (0, K.useEffect)(() => {
@@ -278,7 +278,7 @@ function(e, t, n) {
         "sv-SE": R.default,
         "tr-TR": I.default,
         "uk-UA": O.default,
-        "zh-CN": L.default,
-        "zh-TW": j.default
+        "zh-CN": j.default,
+        "zh-TW": L.default
     }
 }

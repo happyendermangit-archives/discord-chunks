@@ -48,20 +48,20 @@ function(e, t, r) {
                 b = n ? 0 : D(r.borderBottomWidth),
                 y = n ? 0 : D(r.borderLeftWidth),
                 w = m + B,
-                x = g + E,
-                O = y + F,
+                O = g + E,
+                x = y + F,
                 k = A + b,
                 P = C ? e.offsetHeight - k - e.clientHeight : 0,
-                j = p ? e.offsetWidth - O - e.clientWidth : 0,
-                S = n ? n.width : D(r.width) - (u ? w + O : 0) - j,
-                T = n ? n.height : D(r.height) - (u ? x + k : 0) - P,
-                R = S + w + j + O,
-                M = T + x + P + k,
+                j = p ? e.offsetWidth - x - e.clientWidth : 0,
+                S = n ? n.width : D(r.width) - (u ? w + x : 0) - j,
+                R = n ? n.height : D(r.height) - (u ? O + k : 0) - P,
+                T = S + w + j + x,
+                M = R + O + P + k,
                 N = (0, i.freeze)({
-                    devicePixelContentBoxSize: h(Math.round(S * devicePixelRatio), Math.round(T * devicePixelRatio), s),
-                    borderBoxSize: h(R, M, s),
-                    contentBoxSize: h(S, T, s),
-                    contentRect: new a.DOMRectReadOnly(m, g, S, T)
+                    devicePixelContentBoxSize: h(Math.round(S * devicePixelRatio), Math.round(R * devicePixelRatio), s),
+                    borderBoxSize: h(T, M, s),
+                    contentBoxSize: h(S, R, s),
+                    contentRect: new a.DOMRectReadOnly(m, g, S, R)
                 });
             return l.set(e, N), N
         },

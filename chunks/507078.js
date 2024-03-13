@@ -49,8 +49,8 @@ function(e, t, n) {
         R = n("507827"),
         I = n("964759"),
         O = n("182468"),
-        L = n("367710"),
-        j = n("340606"),
+        j = n("367710"),
+        L = n("340606"),
         N = n("447259"),
         F = n("240849"),
         B = n("444324"),
@@ -146,8 +146,8 @@ function(e, t, n) {
         "sv-SE": R.default,
         "tr-TR": I.default,
         "uk-UA": O.default,
-        "zh-CN": L.default,
-        "zh-TW": j.default
+        "zh-CN": j.default,
+        "zh-TW": L.default
     };
     let J = new WeakMap,
         $ = "__role_" + Date.now(),

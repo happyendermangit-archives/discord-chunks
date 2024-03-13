@@ -7,7 +7,7 @@ function(e, a, t) {
     }), t("424973"), t("222007");
     var s = t("627445"),
         d = t.n(s),
-        n = t("773179"),
+        n = t("257859"),
         c = t.n(n),
         i = t("353927");
 
@@ -21,6 +21,6 @@ function(e, a, t) {
         return a.includes(i.DesktopSources.SCREEN) && e.supports(i.Features.SCREEN_PREVIEWS) && (n.push(e.getScreenPreviews(t.width, t.height)), a = a.filter(e => e !== i.DesktopSources.SCREEN)), a.includes(i.DesktopSources.WINDOW) && e.supports(i.Features.WINDOW_PREVIEWS) && (n.push(e.getWindowPreviews(t.width, t.height)), a = a.filter(e => e !== i.DesktopSources.WINDOW)), 0 !== a.length && n.push(s.desktopCapture.getDesktopCaptureSources({
             types: a,
             thumbnailSize: t
-        })), Promise.all(n).then(e => c.flatten(e))
+        })), Promise.all(n).then(e => c(e))
     }
 }

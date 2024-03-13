@@ -1,19 +1,19 @@
-function(t, r, n) {
+function(t, r, e) {
     "use strict";
-    var e = n("814026"),
-        i = n("64980"),
-        o = n("868822"),
-        u = n("664144"),
-        a = n("172479"),
-        f = n("493399"),
-        c = n("202463"),
-        s = n("116180"),
-        l = n("949580"),
+    var n = e("814026"),
+        o = e("64980"),
+        i = e("868822"),
+        a = e("664144"),
+        u = e("172479"),
+        s = e("493399"),
+        f = e("202463"),
+        c = e("116180"),
+        l = e("949580"),
         h = Object.assign,
         p = Object.defineProperty,
-        v = i([].concat);
-    t.exports = !h || u(function() {
-        if (e && 1 !== h({
+        v = o([].concat);
+    t.exports = !h || a(function() {
+        if (n && 1 !== h({
                 b: 1
             }, h(p({}, "a", {
                 enumerable: !0,
@@ -28,15 +28,15 @@ function(t, r, n) {
             })).b) return !0;
         var t = {},
             r = {},
-            n = Symbol("assign detection"),
-            i = "abcdefghijklmnopqrst";
-        return t[n] = 7, i.split("").forEach(function(t) {
+            e = Symbol("assign detection"),
+            o = "abcdefghijklmnopqrst";
+        return t[e] = 7, o.split("").forEach(function(t) {
             r[t] = t
-        }), 7 !== h({}, t)[n] || a(h({}, r)).join("") !== i
+        }), 7 !== h({}, t)[e] || u(h({}, r)).join("") !== o
     }) ? function(t, r) {
-        for (var n = s(t), i = arguments.length, u = 1, h = f.f, p = c.f; i > u;) {
-            for (var g, d = l(arguments[u++]), y = h ? v(a(d), h(d)) : a(d), b = y.length, m = 0; b > m;) g = y[m++], (!e || o(p, d, g)) && (n[g] = d[g])
+        for (var e = c(t), o = arguments.length, a = 1, h = s.f, p = f.f; o > a;) {
+            for (var d, g = l(arguments[a++]), b = h ? v(u(g), h(g)) : u(g), y = b.length, m = 0; y > m;) d = b[m++], (!n || i(p, g, d)) && (e[d] = g[d])
         }
-        return n
+        return e
     } : h
 }

@@ -55,15 +55,15 @@ function(e, t, r) {
                 for (let a = 0; a < r; a++)
                     for (let o = a ? 0 : 1; o * r < t * (r - a); o++) u.push(((e[g + (B >> 1)] >> ((1 & B++) << 2) & 15) / 7.5 - 1) * n);
                 return u
-            }, m = E(h, v, (i >> 18 & 31) / 31), A = E(3, 3, 1.25 * ((s >> 3 & 63) / 63)), F = E(3, 3, 1.25 * ((s >> 9 & 63) / 63)), b = d && E(5, 5, C), y = n(e), w = o(y > 1 ? 32 : 32 * y), x = o(y > 1 ? 32 / y : 32), O = new Uint8Array(w * x * 4), k = [], P = [];
-            for (let e = 0, n = 0; e < x; e++)
+            }, m = E(h, v, (i >> 18 & 31) / 31), A = E(3, 3, 1.25 * ((s >> 3 & 63) / 63)), F = E(3, 3, 1.25 * ((s >> 9 & 63) / 63)), b = d && E(5, 5, C), y = n(e), w = o(y > 1 ? 32 : 32 * y), O = o(y > 1 ? 32 / y : 32), x = new Uint8Array(w * O * 4), k = [], P = [];
+            for (let e = 0, n = 0; e < O; e++)
                 for (let o = 0; o < w; o++, n += 4) {
                     let i = l,
                         s = c,
                         D = f,
                         C = p;
                     for (let e = 0, r = u(h, d ? 5 : 3); e < r; e++) k[e] = a(t / w * (o + .5) * e);
-                    for (let r = 0, n = u(v, d ? 5 : 3); r < n; r++) P[r] = a(t / x * (e + .5) * r);
+                    for (let r = 0, n = u(v, d ? 5 : 3); r < n; r++) P[r] = a(t / O * (e + .5) * r);
                     for (let e = 0, t = 0; e < v; e++)
                         for (let r = e ? 0 : 1, n = 2 * P[e]; r * v < h * (v - e); r++, t++) i += m[t] * k[r] * n;
                     for (let e = 0, t = 0; e < 3; e++)
@@ -77,12 +77,12 @@ function(e, t, r) {
                     let g = i - 2 / 3 * s,
                         B = (3 * i - g + D) / 2,
                         E = B - D;
-                    O[n] = u(0, 255 * r(1, B)), O[n + 1] = u(0, 255 * r(1, E)), O[n + 2] = u(0, 255 * r(1, g)), O[n + 3] = u(0, 255 * r(1, C))
+                    x[n] = u(0, 255 * r(1, B)), x[n + 1] = u(0, 255 * r(1, E)), x[n + 2] = u(0, 255 * r(1, g)), x[n + 3] = u(0, 255 * r(1, C))
                 }
             return {
                 w,
-                h: x,
-                rgba: O
+                h: O,
+                rgba: x
             }
         }(e);
         return u(t.w, t.h, t.rgba)

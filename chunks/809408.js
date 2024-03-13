@@ -23,40 +23,40 @@ function(e, t, r) {
         b = "[object Arguments]",
         y = "[object Function]",
         w = "[object Object]",
-        x = {};
-    x[b] = x["[object Array]"] = x["[object ArrayBuffer]"] = x["[object DataView]"] = x["[object Boolean]"] = x["[object Date]"] = x["[object Float32Array]"] = x["[object Float64Array]"] = x["[object Int8Array]"] = x["[object Int16Array]"] = x["[object Int32Array]"] = x["[object Map]"] = x["[object Number]"] = x[w] = x["[object RegExp]"] = x["[object Set]"] = x["[object String]"] = x["[object Symbol]"] = x["[object Uint8Array]"] = x["[object Uint8ClampedArray]"] = x["[object Uint16Array]"] = x["[object Uint32Array]"] = !0, x["[object Error]"] = x[y] = x["[object WeakMap]"] = !1;
-    e.exports = function e(t, r, O, k, P, j) {
-        var S, T = 1 & r,
-            R = 2 & r,
+        O = {};
+    O[b] = O["[object Array]"] = O["[object ArrayBuffer]"] = O["[object DataView]"] = O["[object Boolean]"] = O["[object Date]"] = O["[object Float32Array]"] = O["[object Float64Array]"] = O["[object Int8Array]"] = O["[object Int16Array]"] = O["[object Int32Array]"] = O["[object Map]"] = O["[object Number]"] = O[w] = O["[object RegExp]"] = O["[object Set]"] = O["[object String]"] = O["[object Symbol]"] = O["[object Uint8Array]"] = O["[object Uint8ClampedArray]"] = O["[object Uint16Array]"] = O["[object Uint32Array]"] = !0, O["[object Error]"] = O[y] = O["[object WeakMap]"] = !1;
+    e.exports = function e(t, r, x, k, P, j) {
+        var S, R = 1 & r,
+            T = 2 & r,
             M = 4 & r;
-        if (O && (S = P ? O(t, k, P, j) : O(t)), void 0 !== S) return S;
+        if (x && (S = P ? x(t, k, P, j) : x(t)), void 0 !== S) return S;
         if (!m(t)) return t;
         var N = g(t);
         if (N) {
-            if (S = v(t), !T) return l(t, S)
+            if (S = v(t), !R) return l(t, S)
         } else {
             var z = h(t),
                 I = z == y || "[object GeneratorFunction]" == z;
-            if (B(t)) return s(t, T);
+            if (B(t)) return s(t, R);
             if (z == w || z == b || I && !P) {
-                if (S = R || I ? {} : C(t), !T) return R ? f(t, i(S, t)) : c(t, o(S, t))
+                if (S = T || I ? {} : C(t), !R) return T ? f(t, i(S, t)) : c(t, o(S, t))
             } else {
-                if (!x[z]) return P ? t : {};
-                S = p(t, z, T)
+                if (!O[z]) return P ? t : {};
+                S = p(t, z, R)
             }
         }
         j || (j = new n);
         var W = j.get(t);
         if (W) return W;
         j.set(t, S), A(t) ? t.forEach(function(n) {
-            S.add(e(n, r, O, n, t, j))
+            S.add(e(n, r, x, n, t, j))
         }) : E(t) && t.forEach(function(n, u) {
-            S.set(u, e(n, r, O, u, t, j))
+            S.set(u, e(n, r, x, u, t, j))
         });
-        var L = M ? R ? D : d : R ? keysIn : F,
+        var L = M ? T ? D : d : T ? keysIn : F,
             _ = N ? void 0 : L(t);
         return u(_ || t, function(n, u) {
-            _ && (n = t[u = n]), a(S, u, e(n, r, O, u, t, j))
+            _ && (n = t[u = n]), a(S, u, e(n, r, x, u, t, j))
         }), S
     }
 }

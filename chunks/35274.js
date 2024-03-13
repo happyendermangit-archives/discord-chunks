@@ -43,7 +43,7 @@ function(e, t, n) {
     t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit = function(e) {
         return v(e, 15)
     }, t.inflateInit2 = v, t.inflate = function(e, t) {
-        var n, l, f, p, h, v, m, y, x, w, S, k, E, _, M, D, C, P, T, A, R, I, O, L, j = 0,
+        var n, l, f, p, h, v, m, y, x, w, S, k, E, _, M, D, C, P, T, A, R, I, O, j, L = 0,
             N = new o.Buf8(4),
             F = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
         if (!e || !e.state || !e.output || !e.input && 0 !== e.avail_in) return -2;
@@ -246,7 +246,7 @@ function(e, t, n) {
                 n.have = 0, n.mode = 19;
             case 19:
                 for (; n.have < n.nlen + n.ndist;) {
-                    for (; M = (j = n.lencode[y & (1 << n.lenbits) - 1]) >>> 24, D = j >>> 16 & 255, C = 65535 & j, !(M <= x);) {
+                    for (; M = (L = n.lencode[y & (1 << n.lenbits) - 1]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(M <= x);) {
                         ;
                         if (0 === v) break n;
                         v--, y += l[p++] << x, x += 8
@@ -254,7 +254,7 @@ function(e, t, n) {
                     if (C < 16) y >>>= M, x -= M, n.lens[n.have++] = C;
                     else {
                         if (16 === C) {
-                            for (L = M + 2; x < L;) {
+                            for (j = M + 2; x < j;) {
                                 if (0 === v) break n;
                                 v--, y += l[p++] << x, x += 8
                             }
@@ -264,13 +264,13 @@ function(e, t, n) {
                             }
                             R = n.lens[n.have - 1], k = 3 + (3 & y), y >>>= 2, x -= 2
                         } else if (17 === C) {
-                            for (L = M + 3; x < L;) {
+                            for (j = M + 3; x < j;) {
                                 if (0 === v) break n;
                                 v--, y += l[p++] << x, x += 8
                             }
                             y >>>= M, x -= M, R = 0, k = 3 + (7 & y), y >>>= 3, x -= 3
                         } else {
-                            for (L = M + 7; x < L;) {
+                            for (j = M + 7; x < j;) {
                                 if (0 === v) break n;
                                 v--, y += l[p++] << x, x += 8
                             }
@@ -308,13 +308,13 @@ function(e, t, n) {
                     e.next_out = h, e.avail_out = m, e.next_in = p, e.avail_in = v, n.hold = y, n.bits = x, c(e, S), h = e.next_out, f = e.output, m = e.avail_out, p = e.next_in, l = e.input, v = e.avail_in, y = n.hold, x = n.bits, 12 === n.mode && (n.back = -1);
                     break
                 }
-                for (n.back = 0; M = (j = n.lencode[y & (1 << n.lenbits) - 1]) >>> 24, D = j >>> 16 & 255, C = 65535 & j, !(M <= x);) {
+                for (n.back = 0; M = (L = n.lencode[y & (1 << n.lenbits) - 1]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(M <= x);) {
                     ;
                     if (0 === v) break n;
                     v--, y += l[p++] << x, x += 8
                 }
                 if (D && (240 & D) == 0) {
-                    for (P = M, T = D, A = C; M = (j = n.lencode[A + ((y & (1 << P + T) - 1) >> P)]) >>> 24, D = j >>> 16 & 255, C = 65535 & j, !(P + M <= x);) {
+                    for (P = M, T = D, A = C; M = (L = n.lencode[A + ((y & (1 << P + T) - 1) >> P)]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(P + M <= x);) {
                         ;
                         if (0 === v) break n;
                         v--, y += l[p++] << x, x += 8
@@ -336,7 +336,7 @@ function(e, t, n) {
                 n.extra = 15 & D, n.mode = 22;
             case 22:
                 if (n.extra) {
-                    for (L = n.extra; x < L;) {
+                    for (j = n.extra; x < j;) {
                         if (0 === v) break n;
                         v--, y += l[p++] << x, x += 8
                     }
@@ -344,13 +344,13 @@ function(e, t, n) {
                 }
                 n.was = n.length, n.mode = 23;
             case 23:
-                for (; M = (j = n.distcode[y & (1 << n.distbits) - 1]) >>> 24, D = j >>> 16 & 255, C = 65535 & j, !(M <= x);) {
+                for (; M = (L = n.distcode[y & (1 << n.distbits) - 1]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(M <= x);) {
                     ;
                     if (0 === v) break n;
                     v--, y += l[p++] << x, x += 8
                 }
                 if ((240 & D) == 0) {
-                    for (P = M, T = D, A = C; M = (j = n.distcode[A + ((y & (1 << P + T) - 1) >> P)]) >>> 24, D = j >>> 16 & 255, C = 65535 & j, !(P + M <= x);) {
+                    for (P = M, T = D, A = C; M = (L = n.distcode[A + ((y & (1 << P + T) - 1) >> P)]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(P + M <= x);) {
                         ;
                         if (0 === v) break n;
                         v--, y += l[p++] << x, x += 8
@@ -364,7 +364,7 @@ function(e, t, n) {
                 n.offset = C, n.extra = 15 & D, n.mode = 24;
             case 24:
                 if (n.extra) {
-                    for (L = n.extra; x < L;) {
+                    for (j = n.extra; x < j;) {
                         if (0 === v) break n;
                         v--, y += l[p++] << x, x += 8
                     }

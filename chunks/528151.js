@@ -1,10 +1,10 @@
-function(t, r, n) {
+function(t, r, e) {
     "use strict";
-    var e = n("664144");
+    var n = e("664144");
     t.exports = function(t, r) {
-        var n = [][t];
-        return !!n && e(function() {
-            n.call(null, r || function() {
+        var e = [][t];
+        return !!e && n(function() {
+            e.call(null, r || function() {
                 return 1
             }, 1)
         })

@@ -47,10 +47,10 @@ function(e, t, n) {
             return P
         },
         trackForumOnboardingClicked: function() {
-            return L
+            return M
         },
         trackForumUpsellModalClicked: function() {
-            return M
+            return L
         },
         trackForumAddMediaToOriginalPostClicked: function() {
             return b
@@ -354,7 +354,7 @@ function(e, t, n) {
         })
     }
 
-    function L(e) {
+    function M(e) {
         let {
             onboardingCTA: t
         } = e;
@@ -363,7 +363,7 @@ function(e, t, n) {
         })
     }
 
-    function M(e) {
+    function L(e) {
         let {
             forumDemoId: t
         } = e;

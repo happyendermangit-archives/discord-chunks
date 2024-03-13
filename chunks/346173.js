@@ -1,5 +1,5 @@
-function(e, t, r) {
-    e.exports = function(e) {
-        return null != e && "object" == typeof e
+function(t, r, e) {
+    t.exports = function(t) {
+        return null != t && "object" == typeof t
     }
 }

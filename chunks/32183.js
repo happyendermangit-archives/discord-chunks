@@ -298,7 +298,7 @@ function(e, t, n) {
                         do t.x < n.x && (n = t), t = t.next; while (t !== e);
                         return n
                     }(c));
-                    for (u.sort(j), i = 0; i < u.length; i++)(function(e, t) {
+                    for (u.sort(L), i = 0; i < u.length; i++)(function(e, t) {
                         if (t = function(e, t) {
                                 var n, r = t,
                                     i = e.x,
@@ -336,7 +336,7 @@ function(e, t, n) {
                 for (var h = n; h < l; h += n) a = e[h], c = e[h + 1], a < r && (r = a), c < i && (i = c), a > o && (o = a), c > s && (s = c);
                 u = Math.max(o - r, s - i)
             }
-            return L(f, p, n, r, i, u), p
+            return j(f, p, n, r, i, u), p
         }
 
         function I(e, t, n, r, i) {
@@ -361,7 +361,7 @@ function(e, t, n) {
             return t
         }
 
-        function L(e, t, n, r, i, o, s) {
+        function j(e, t, n, r, i, o, s) {
             if (e) {
                 !s && o && function(e, t, n, r) {
                     var i = e;
@@ -404,7 +404,7 @@ function(e, t, n) {
                             return !0
                         }(e)) t.push(a.i / n), t.push(e.i / n), t.push(c.i / n), q(e), e = c.next, u = c.next;
                     else if ((e = c) === u) {
-                    s ? 1 === s ? L(e = function(e, t, n) {
+                    s ? 1 === s ? j(e = function(e, t, n) {
                         var r = e;
                         do {
                             var i = r.prev,
@@ -434,19 +434,19 @@ function(e, t, n) {
                                         }(e, t)
                                     }(s, a)) {
                                     var c = U(s, a);
-                                    return s = O(s, s.next), c = O(c, c.next), L(s, t, n, r, i, o), void L(c, t, n, r, i, o)
+                                    return s = O(s, s.next), c = O(c, c.next), j(s, t, n, r, i, o), void j(c, t, n, r, i, o)
                                 }
                                 a = a.next
                             }
                             s = s.next
                         } while (s !== e)
-                    }(e, t, n, r, i, o) : L(O(e), t, n, r, i, o, 1);
+                    }(e, t, n, r, i, o) : j(O(e), t, n, r, i, o, 1);
                     break
                 }
             }
         }
 
-        function j(e, t) {
+        function L(e, t) {
             return e.x - t.x
         }
 
@@ -857,11 +857,11 @@ function(e, t, n) {
             ef = function(e, t, n, r, i, o, a, c, u) {
                 var d, l, f, p, h, v, g, b, m, y, x, w, S, k, E, _, M, D, C, P, T, A, R, I = Math.sin(u * el / 360),
                     O = Math.cos(u * el / 360),
-                    L = O * (e - n) / 2 + I * (t - r) / 2,
-                    j = -I * (e - n) / 2 + O * (t - r) / 2;
-                if (0 === L && 0 === j || 0 === a || 0 === c) return [];
+                    j = O * (e - n) / 2 + I * (t - r) / 2,
+                    L = -I * (e - n) / 2 + O * (t - r) / 2;
+                if (0 === j && 0 === L || 0 === a || 0 === c) return [];
                 a = Math.abs(a);
-                var N = L * L / (a * a) + j * j / ((c = Math.abs(c)) * c);
+                var N = j * j / (a * a) + L * L / ((c = Math.abs(c)) * c);
                 N > 1 && (a *= Math.sqrt(N), c *= Math.sqrt(N));
                 var F = (d = e, l = t, f = n, p = r, h = i, v = o, g = a, b = c, m = I, x = (y = O) * (d - f) / 2 + m * (l - p) / 2, w = -m * (d - f) / 2 + y * (l - p) / 2, S = g * g, k = b * b, E = x * x, (M = S * k - S * (_ = w * w) - k * E) < 0 && (M = 0), M /= S * _ + k * E, D = (M = Math.sqrt(M) * (h === v ? -1 : 1)) * g / b * w, C = -(M * b) / g * x, A = s(1, 0, P = (x - D) / g, T = (w - C) / b), R = s(P, T, (-x - D) / g, (-w - C) / b), 0 === v && R > 0 && (R -= el), 1 === v && R < 0 && (R += el), [y * D - m * C + (d + f) / 2, m * D + y * C + (l + p) / 2, A, R]),
                     B = [],
@@ -1211,11 +1211,11 @@ function(e, t, n) {
             eE = function(e, t, n, r, i, o, s, a, c) {
                 var u, d, l, f, p, h, v, g, b, y, x, w, S, k, E, _, M, D, C, P, T, A, R, I = Math.sin(i * ek / 360),
                     O = Math.cos(i * ek / 360),
-                    L = O * (e - a) / 2 + I * (t - c) / 2,
-                    j = -I * (e - a) / 2 + O * (t - c) / 2;
-                if (0 === L && 0 === j || 0 === n || 0 === r) return [];
+                    j = O * (e - a) / 2 + I * (t - c) / 2,
+                    L = -I * (e - a) / 2 + O * (t - c) / 2;
+                if (0 === j && 0 === L || 0 === n || 0 === r) return [];
                 n = Math.abs(n);
-                var N = L * L / (n * n) + j * j / ((r = Math.abs(r)) * r);
+                var N = j * j / (n * n) + L * L / ((r = Math.abs(r)) * r);
                 N > 1 && (n *= Math.sqrt(N), r *= Math.sqrt(N));
                 var F = (u = e, d = t, l = a, f = c, p = o, h = s, v = n, g = r, b = I, x = (y = O) * (u - l) / 2 + b * (d - f) / 2, w = -b * (u - l) / 2 + y * (d - f) / 2, S = v * v, k = g * g, E = x * x, (M = S * k - S * (_ = w * w) - k * E) < 0 && (M = 0), M /= S * _ + k * E, D = (M = Math.sqrt(M) * (p === h ? -1 : 1)) * v / g * w, C = -(M * g) / v * x, A = m(1, 0, P = (x - D) / v, T = (w - C) / g), R = m(P, T, (-x - D) / v, (-w - C) / g), 0 === h && R > 0 && (R -= ek), 1 === h && R < 0 && (R += ek), [y * D - b * C + (u + l) / 2, b * D + y * C + (d + f) / 2, A, R]),
                     B = [],
@@ -1400,7 +1400,7 @@ function(e, t, n) {
             eO = function(e, t) {
                 for (var n, r = e.length, i = r - t; i < --r;) n = e[i], e[i++] = e[r], e[r] = n
             },
-            eL = function(e, t) {
+            ej = function(e, t) {
                 return "GeometryCollection" === t.type ? {
                     type: "FeatureCollection",
                     features: t.geometries.map(function(t) {
@@ -1408,7 +1408,7 @@ function(e, t, n) {
                     })
                 } : Z(e, t)
             },
-            ej = function(e, t) {
+            eL = function(e, t) {
                 function n(e, t) {
                     for (var n in e) {
                         var i = e[n];
@@ -1585,7 +1585,7 @@ function(e, t, n) {
                                                         i[e < 0 ? ~e : e].length < 2 && o.push(e)
                                                     })
                                                 })
-                                            }), (n = (o = ej(e, o)).length) > 1)
+                                            }), (n = (o = eL(e, o)).length) > 1)
                                             for (var s, a, c = 1, u = r(o[0]); c < n; ++c)(s = r(o[c])) > u && (a = o[0], o[0] = o[c], o[c] = a, u = s);
                                         return o
                                     })
@@ -1594,7 +1594,7 @@ function(e, t, n) {
                         s.area = t.area + o.area, s.type = "Polygon", s.arcs = s.arcs[0], n.splice(i, 1), n.shift(), n.splice(r(n, s.area), 0, s)
                     }();
                     if (t > n.length) throw RangeError("Can't collapse topology into " + t + " pieces.");
-                    return eL(e, e.objects.triangles).features.map(function(e) {
+                    return ej(e, e.objects.triangles).features.map(function(e) {
                         return e.geometry.coordinates[0].pop(), e.geometry.coordinates[0]
                     })
                 }((n = function(e) {

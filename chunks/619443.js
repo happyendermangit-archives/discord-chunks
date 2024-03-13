@@ -34,15 +34,15 @@ function(e, t, n) {
     let O = new l.default("ConnectionStore"),
         D = 0,
         P = null,
-        L = !0;
-    async function M(e) {
+        M = !0;
+    async function L(e) {
         D = Date.now(), P = e.sessionId, I.localPresenceState.handleConnectionOpen();
         let t = {},
             n = p.default.getVoiceChannelId();
         if (null != n) {
             var i, s, r, a, l, u, d, c;
             let e = (null === (l = window) || void 0 === l ? void 0 : null === (a = l.performance) || void 0 === a ? void 0 : null === (r = a.getEntriesByType) || void 0 === r ? void 0 : null === (s = r.call(a, "navigation")) || void 0 === s ? void 0 : null === (i = s[0]) || void 0 === i ? void 0 : i.type) === "reload" || (null === (u = await (null == R ? void 0 : null === (c = R.processUtils) || void 0 === c ? void 0 : null === (d = c.getLastCrash) || void 0 === d ? void 0 : d.call(c))) || void 0 === u ? void 0 : u.rendererCrashReason) != null;
-            if (e || !L) {
+            if (e || !M) {
                 let e = _.default.getChannel(n);
                 null != e && (t = {
                     guildId: e.getGuildId(),
@@ -50,7 +50,7 @@ function(e, t, n) {
                 })
             } else g.default.setLastSessionVoiceChannelId(null != n ? n : null), o.default.selectVoiceChannel(null)
         }
-        I.localVoiceState.update(t, !0), I.localLobbyVoiceStates.update({}, !0), L = !1
+        I.localVoiceState.update(t, !0), I.localLobbyVoiceStates.update({}, !0), M = !1
     }
 
     function b() {
@@ -109,7 +109,7 @@ function(e, t, n) {
             return e.resetSocket && (I.socket.close(), I.socket.dispatcher.clear(), I.socket.connect()), !1
         },
         CONNECTION_OPEN: e => {
-            M(e)
+            L(e)
         },
         CONNECTION_CLOSED: function() {
             O.verbose("connection closed dispatched"), D = Date.now()

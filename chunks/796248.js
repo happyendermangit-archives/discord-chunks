@@ -559,10 +559,10 @@ function(e, t, n) {
                 showEra: I,
                 shouldForceLeadingZeros: e.shouldForceLeadingZeros
             }), [e.maxGranularity, S, e.hourCycle, e.shouldForceLeadingZeros, k, u, I]),
-            L = (0, s.useMemo)(() => l({}, O), [O]),
-            j = (0, s.useMemo)(() => new r.DateFormatter(i, L), [i, L]),
-            N = (0, s.useMemo)(() => j.resolvedOptions(), [j]),
-            F = (0, s.useMemo)(() => j.formatToParts(new Date).filter(e => m[e.type]).reduce((e, t) => (e[t.type] = !0, e), {}), [j]),
+            j = (0, s.useMemo)(() => l({}, O), [O]),
+            L = (0, s.useMemo)(() => new r.DateFormatter(i, j), [i, j]),
+            N = (0, s.useMemo)(() => L.resolvedOptions(), [L]),
+            F = (0, s.useMemo)(() => L.formatToParts(new Date).filter(e => m[e.type]).reduce((e, t) => (e[t.type] = !0, e), {}), [L]),
             [B, z] = (0, s.useState)(() => e.value || e.defaultValue ? {
                 ...F
             } : {}),
@@ -581,7 +581,7 @@ function(e, t, n) {
                 null == t ? (C(null), A(h(e.placeholderValue, S, M, k)), z({})) : n.length >= i.length || n.length === i.length - 1 && F.dayPeriod && !B.dayPeriod && "dayPeriod" !== K.current ? C(t = (0, r.toCalendar)(t, (null == w ? void 0 : w.calendar) || new r.GregorianCalendar)) : A(t), K.current = null
             },
             q = (0, s.useMemo)(() => U.toDate(E), [U, E]),
-            G = (0, s.useMemo)(() => j.formatToParts(q).map(e => {
+            G = (0, s.useMemo)(() => L.formatToParts(q).map(e => {
                 var t, n, o;
                 let s = m[e.type];
                 "era" === e.type && 1 === M.getEras().length && (s = !1);
@@ -645,7 +645,7 @@ function(e, t, n) {
                     placeholder: c,
                     isEditable: s
                 }
-            }), [q, B, j, N, U, M, i]);
+            }), [q, B, L, N, U, M, i]);
         F.era && B.year && !B.era ? (B.era = !0, z({
             ...B
         })) : !F.era && B.era && (delete B.era, z({
@@ -697,7 +697,7 @@ function(e, t, n) {
             calendar: M,
             setValue: H,
             segments: G,
-            dateFormatter: j,
+            dateFormatter: L,
             validationState: e.validationState || (Y ? "invalid" : null),
             isInvalid: Y,
             granularity: S,

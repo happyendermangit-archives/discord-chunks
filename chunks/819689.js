@@ -33,8 +33,8 @@ function(e, t, n) {
         O = n("815297"),
         D = n("168730"),
         P = n("129953"),
-        L = n("28007"),
-        M = n("880731"),
+        M = n("28007"),
+        L = n("880731"),
         b = n("562228"),
         U = n("793277"),
         w = n("815496");
@@ -654,7 +654,7 @@ function(e, t, n) {
                         nonce: x,
                         poll: (0, b.createPollServerDataFromCreateRequest)(A)
                     });
-                    (0, L.updateComboOnMessageSend)(e, t.id), null != S && (t.sticker_items = S.map(e => V.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
+                    (0, M.updateComboOnMessageSend)(e, t.id), null != S && (t.sticker_items = S.map(e => V.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
                 }
                 if (!e_ && null != c && c.length > 0) {
                     let t, n;
@@ -689,7 +689,7 @@ function(e, t, n) {
                         null != n.party && null != n.party.id && (t.party_id = n.party.id), B.message.application_id = n.application_id, B.message.activity = t
                     }
                 }
-                return null != A && (B.message.poll = A), null != S && (B.message.sticker_ids = S), M.default.isEnabled() && (B.message.has_poggermode_enabled = !0), new Promise((t, i) => {
+                return null != A && (B.message.poll = A), null != S && (B.message.sticker_ids = S), L.default.isEnabled() && (B.message.has_poggermode_enabled = !0), new Promise((t, i) => {
                     let r = Date.now(),
                         a = u.default.length,
                         c = Math.floor(1e4 * Math.random());

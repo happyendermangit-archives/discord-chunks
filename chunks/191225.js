@@ -43,8 +43,8 @@ function(e, t, n) {
         O = new Map,
         D = new Map,
         P = new Map,
-        L = new Map,
-        M = new Map;
+        M = new Map,
+        L = new Map;
     let b = m.ActivityPanelModes.DISCONNECTED,
         U = m.FocusedActivityLayouts.RESIZABLE;
 
@@ -100,8 +100,8 @@ function(e, t, n) {
             O = R.filter(e => e.applicationId !== a),
             D = w(i),
             P = null !== (n = I.get(D)) && void 0 !== n ? n : [],
-            L = P.filter(e => !(e.applicationId === a && e.channelId === s));
-        0 !== c.length && (O.push(v), L.push(v)), C.set(s, O), I.set(D, L)
+            M = P.filter(e => !(e.applicationId === a && e.channelId === s));
+        0 !== c.length && (O.push(v), M.push(v)), C.set(s, O), I.set(D, M)
     }
 
     function V(e) {
@@ -142,7 +142,7 @@ function(e, t, n) {
             userIds: new Set([p.id]),
             connectedSince: Date.now(),
             instanceId: a
-        }), b = i !== d.default.getChannelId() || (0, g.default)(s) ? m.ActivityPanelModes.PIP : m.ActivityPanelModes.PANEL, M.set(x(s, r), Date.now())
+        }), b = i !== d.default.getChannelId() || (0, g.default)(s) ? m.ActivityPanelModes.PIP : m.ActivityPanelModes.PANEL, L.set(x(s, r), Date.now())
     }
 
     function F() {
@@ -198,7 +198,7 @@ function(e, t, n) {
             return C
         }
         getEmbeddedActivityDurationMs(e, t) {
-            let n = M.get(x(e, t));
+            let n = L.get(x(e, t));
             return null == n ? null : Date.now() - n
         }
         isLaunchingActivity() {
@@ -236,7 +236,7 @@ function(e, t, n) {
             return null !== (n = null !== (t = P.get(e)) && void 0 !== t ? t : D.get(e)) && void 0 !== n ? n : this.getOrientationLockStateForApp(e)
         }
         getLayoutModeForApp(e) {
-            return L.get(e)
+            return M.get(e)
         }
         getUsersHavePlayedByApp(e) {
             var t;
@@ -305,7 +305,7 @@ function(e, t, n) {
                 applicationId: t,
                 layoutMode: n
             } = e;
-            L.set(t, n)
+            M.set(t, n)
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
             let {

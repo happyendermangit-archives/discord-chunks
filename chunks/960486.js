@@ -75,10 +75,10 @@ function(e, t, n) {
             maxVisibleItems: C = 5,
             itemToString: A = T,
             showScrollbar: y = !1
-        } = e, [N, R] = s.useState(""), [O] = s.useState(!0), [D, P] = s.useState(null), L = s.useId(), M = s.useRef(null);
+        } = e, [N, R] = s.useState(""), [O] = s.useState(!0), [D, P] = s.useState(null), M = s.useId(), L = s.useRef(null);
         s.useLayoutEffect(() => {
             let e = document.querySelector("[".concat(m, '="').concat(D, '"]')),
-                t = M.current;
+                t = L.current;
             null != t && null != e && t.scrollIntoViewNode({
                 node: e,
                 padding: 12
@@ -88,14 +88,14 @@ function(e, t, n) {
             U = 0 === b.length,
             w = s.useId(),
             k = s.useCallback(() => new Promise(e => {
-                let t = M.current;
+                let t = L.current;
                 if (null == t) return e();
                 t.scrollToTop({
                     callback: () => requestAnimationFrame(() => e())
                 })
             }), []),
             V = s.useCallback(() => new Promise(e => {
-                let t = M.current;
+                let t = L.current;
                 if (null == t) return e();
                 t.scrollToTop({
                     callback: () => requestAnimationFrame(() => e())
@@ -104,7 +104,7 @@ function(e, t, n) {
             G = s.useCallback((e, t) => {
                 P(t);
                 let n = document.querySelector(e),
-                    i = M.current;
+                    i = L.current;
                 null != i && null != n && i.scrollIntoViewNode({
                     node: n
                 })
@@ -132,8 +132,8 @@ function(e, t, n) {
                         role: "combobox",
                         "aria-label": p,
                         "aria-expanded": O,
-                        "aria-controls": O ? L : void 0,
-                        "aria-owns": L,
+                        "aria-controls": O ? M : void 0,
+                        "aria-owns": M,
                         "aria-haspopup": "listbox",
                         className: a(g.combobox, u),
                         children: [(0, i.jsx)(_.default, {
@@ -176,8 +176,8 @@ function(e, t, n) {
                                         maxHeight: 46 * C
                                     },
                                     "aria-multiselectable": S,
-                                    id: L,
-                                    ref: M,
+                                    id: M,
+                                    ref: L,
                                     className: a(g.list, h, {
                                         [g.scroller]: y
                                     }),

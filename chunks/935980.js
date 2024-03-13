@@ -20,7 +20,7 @@ function(e, t, n) {
             return O
         },
         Select: function() {
-            return L
+            return M
         },
         SingleSelect: function() {
             return b
@@ -141,7 +141,7 @@ function(e, t, n) {
         return e.map(e => D(e)).join(", ")
     }
 
-    function L(e) {
+    function M(e) {
         let {
             options: t,
             placeholder: n = T.default.Messages.SELECT,
@@ -157,7 +157,7 @@ function(e, t, n) {
             renderOptionLabel: N = D,
             renderOptionValue: R = P,
             popoutClassName: O,
-            popoutPosition: L = "bottom",
+            popoutPosition: M = "bottom",
             popoutLayerContext: b,
             optionClassName: U,
             closeOnSelect: w,
@@ -207,7 +207,7 @@ function(e, t, n) {
                     position: s,
                     updatePosition: r
                 } = e;
-                return (0, i.jsx)(M, {
+                return (0, i.jsx)(L, {
                     className: O,
                     closeOnSelect: w,
                     maxVisibleItems: u,
@@ -224,7 +224,7 @@ function(e, t, n) {
                     popoutPosition: s
                 })
             },
-            position: L,
+            position: M,
             layerContext: b,
             children: (e, t) => {
                 let {
@@ -286,7 +286,7 @@ function(e, t, n) {
         })
     }
 
-    function M(e) {
+    function L(e) {
         let {
             className: t,
             onSelect: n,
@@ -336,7 +336,7 @@ function(e, t, n) {
                     serialize: m
                 }, null !== (n = e.key) && void 0 !== n ? n : t)
             }),
-            L = f.length <= h ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
+            M = f.length <= h ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
         return (0, i.jsx)(o.ListNavigatorProvider, {
             navigator: R,
             children: (0, i.jsx)(o.ListNavigatorContainer, {
@@ -346,7 +346,7 @@ function(e, t, n) {
                         ...s
                     } = e;
                     return (0, i.jsxs)(i.Fragment, {
-                        children: [(0, i.jsx)(L, {
+                        children: [(0, i.jsx)(M, {
                             className: a(I.popout, t, {
                                 [I.popoutPositionTop]: "top" === T
                             }),
@@ -412,7 +412,7 @@ function(e, t, n) {
             value: t,
             onChange: n
         });
-        return (0, i.jsx)(L, {
+        return (0, i.jsx)(M, {
             ...s,
             ...r
         })

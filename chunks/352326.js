@@ -30,8 +30,8 @@ function(e, t, n) {
         O = null,
         D = !1,
         P = new Map,
-        L = !1,
-        M = null;
+        M = !1,
+        L = null;
 
     function b() {
         let e = {
@@ -57,7 +57,7 @@ function(e, t, n) {
                 let e = h.default.getToken(),
                     t = h.default.getId();
                 if (null == e) throw Error("missing user token");
-                L = !m.default.setCurrentTask(r, a, s, t, e)
+                M = !m.default.setCurrentTask(r, a, s, t, e)
             }
         }
     }
@@ -108,7 +108,7 @@ function(e, t, n) {
     function B() {
         for (let e of _.default.getRunningDiscordApplicationIds()) f.cancel(e, e);
         let e = _.default.getVisibleGame();
-        return !N && null != e && e.pid !== M && f.pause(), M = null == e ? null : e.pid, !1
+        return !N && null != e && e.pid !== L && f.pause(), L = null == e ? null : e.pid, !1
     }
     class H extends u.default.Store {
         initialize() {
@@ -142,7 +142,7 @@ function(e, t, n) {
             return w(e, t)
         }
         isCorruptInstallation() {
-            return L
+            return M
         }
     }
     H.displayName = "DispatchManagerStore";

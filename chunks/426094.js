@@ -1,11 +1,11 @@
-function(t, r, n) {
+function(t, r, e) {
     "use strict";
-    var e = n("859514"),
-        i = n("503486"),
-        o = n("89157");
-    e({
+    var n = e("859514"),
+        o = e("503486"),
+        i = e("89157");
+    n({
         global: !0
     }, {
         Reflect: {}
-    }), o(i.Reflect, "Reflect", !0)
+    }), i(o.Reflect, "Reflect", !0)
 }

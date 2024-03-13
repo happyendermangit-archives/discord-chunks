@@ -29,10 +29,10 @@ function(e, t, n) {
             return D
         },
         getCommandAttachmentDraftType: function() {
-            return L
+            return M
         },
         getCommandTriggerSection: function() {
-            return M
+            return L
         },
         getApplicationCommandSection: function() {
             return b
@@ -289,7 +289,7 @@ function(e, t, n) {
         return null != r ? r.permission : null
     }
 
-    function L(e) {
+    function M(e) {
         switch (e) {
             case E.CommandOrigin.CHAT:
                 return h.DraftType.SlashCommand;
@@ -298,7 +298,7 @@ function(e, t, n) {
         }
     }
 
-    function M(e) {
+    function L(e) {
         if (null != e) {
             if (e.id === p.BuiltInSectionId.BUILT_IN) return E.ApplicationCommandTriggerSections.BUILT_IN;
             else if (e.id === p.BuiltInSectionId.FRECENCY) return E.ApplicationCommandTriggerSections.FRECENCY;

@@ -228,7 +228,7 @@ function(e, t, n) {
                 return null == s ? O(null, i, null, T(n.channelId)) : D(s, null, T(n.channelId))
             }
         },
-        L = {
+        M = {
             order: s.defaultRules.url.order - .5,
             requiredFirstCharacters: ["h"],
             match(e) {
@@ -245,7 +245,7 @@ function(e, t, n) {
                 return null == o ? O(s, r, a, T(n.channelId), i) : D(o, a, T(n.channelId), i)
             }
         },
-        M = {
+        L = {
             order: s.defaultRules.url.order - .5,
             requiredFirstCharacters: ["h"],
             match: e => l.MEDIA_POST_URL_RE.exec(e),
@@ -264,7 +264,7 @@ function(e, t, n) {
         };
     var b = {
         channelMention: P,
-        channelOrMessageUrl: L,
-        mediaPostLink: M
+        channelOrMessageUrl: M,
+        mediaPostLink: L
     }
 }

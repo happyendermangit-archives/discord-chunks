@@ -5,11 +5,11 @@ function(e, t, n) {
             return i
         }
     }), n("222007");
-    var i, s = n("773179"),
+    var i, s = n("167200"),
         r = n.n(s);
 
     function a(e, t, n, i) {
-        null != t && e.splice(r.sortedIndexBy(e, t, i), 1), null != n && e.splice(r.sortedIndexBy(e, n, i), 0, n)
+        null != t && e.splice(r(e, t, i), 1), null != n && e.splice(r(e, n, i), 0, n)
     }
     let o = [];
     i = class {

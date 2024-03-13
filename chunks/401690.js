@@ -90,7 +90,7 @@ function(e, t, n) {
         for (let n in S[e][t]) t === C ? d.default.isNewForumThread(n, t, i) && I[e][t]++ : f.default.compare(n, s) > 0 && !d.default.hasOpenedThread(n) && I[e][t]++
     }
 
-    function L(e, t, n) {
+    function M(e, t, n) {
         if (null == t) return !1;
         let i = l.default.getChannel(n),
             s = h.default.joinTimestamp(n);
@@ -114,13 +114,13 @@ function(e, t, n) {
         } else B(m, e, t, n), B(T, e, t, n), B(p, e, t, n), B(S, e, t, n), B(v, e, t, n), F(n), P(e, t)
     }
 
-    function M(e) {
-        return L(e.channel.guild_id, e.channel.parent_id, e.channel.id)
+    function L(e) {
+        return M(e.channel.guild_id, e.channel.parent_id, e.channel.id)
     }
 
     function b(e) {
         let t = l.default.getChannel(e.id);
-        return !!(null != t && _.default.isActive(e.guildId, t.parent_id, e.id)) && L(t.guild_id, t.parent_id, t.id)
+        return !!(null != t && _.default.isActive(e.guildId, t.parent_id, e.id)) && M(t.guild_id, t.parent_id, t.id)
     }
 
     function U(e) {
@@ -343,9 +343,9 @@ function(e, t, n) {
         },
         GUILD_DELETE: y,
         CURRENT_USER_UPDATE: y,
-        THREAD_CREATE: M,
-        THREAD_UPDATE: M,
-        THREAD_DELETE: M,
+        THREAD_CREATE: L,
+        THREAD_UPDATE: L,
+        THREAD_DELETE: L,
         CHANNEL_UPDATES: function(e) {
             let {
                 channels: t

@@ -146,7 +146,7 @@ function(e, t, n) {
         }
     }
 
-    function L(e, t, n) {
+    function j(e, t, n) {
         var r, i, o = -1,
             s = t[1],
             a = 0,
@@ -161,14 +161,14 @@ function(e, t, n) {
             }
         }
     }
-    var j = !1;
+    var L = !1;
 
     function N(e, t, n, r) {
         var i, o, a, c;
         E(e, 0 + (r ? 1 : 0), 3), i = e, o = t, a = n, c = !0, P(i), c && (k(i, a), k(i, ~a)), s.arraySet(i.pending_buf, i.window, o, a, i.pending), i.pending += a
     }
     t._tr_init = function(e) {
-        !j && (! function() {
+        !L && (! function() {
             var e, t, n, s, a, u = Array(16);
             for (s = 0, n = 0; s < 28; s++)
                 for (e = 0, m[s] = n; e < 1 << d[s]; e++) b[n++] = s;
@@ -183,7 +183,7 @@ function(e, t, n) {
             for (; e <= 287;) h[2 * e + 1] = 8, e++, u[8]++;
             for (D(h, c + 1, u), e = 0; e < 30; e++) v[2 * e + 1] = 5, v[2 * e] = M(e, 5);
             r = new x(h, d, 257, c, 15), i = new x(v, l, 0, 30, 15), o = new x([], f, 0, 19, 7)
-        }(), j = !0), e.l_desc = new w(e.dyn_ltree, r), e.d_desc = new w(e.dyn_dtree, i), e.bl_desc = new w(e.bl_tree, o), e.bi_buf = 0, e.bi_valid = 0, C(e)
+        }(), L = !0), e.l_desc = new w(e.dyn_ltree, r), e.d_desc = new w(e.dyn_dtree, i), e.bl_desc = new w(e.bl_tree, o), e.bi_buf = 0, e.bi_valid = 0, C(e)
     }, t._tr_stored_block = N, t._tr_flush_block = function(e, t, n, r) {
         var i, o, s = 0;
         e.level > 0 ? (2 === e.strm.data_type && (e.strm.data_type = function(e) {
@@ -201,7 +201,7 @@ function(e, t, n) {
         }(e), i = e.opt_len + 3 + 7 >>> 3, (o = e.static_len + 3 + 7 >>> 3) <= i && (i = o)) : i = o = n + 5, n + 4 <= i && -1 !== t ? N(e, t, n, r) : 4 === e.strategy || o === i ? (E(e, 2 + (r ? 1 : 0), 3), R(e, h, v)) : (E(e, 4 + (r ? 1 : 0), 3), ! function(e, t, n, r) {
             var i;
             for (E(e, t - 257, 5), E(e, n - 1, 5), E(e, r - 4, 4), i = 0; i < r; i++) E(e, e.bl_tree[2 * p[i] + 1], 3);
-            L(e, e.dyn_ltree, t - 1), L(e, e.dyn_dtree, n - 1)
+            j(e, e.dyn_ltree, t - 1), j(e, e.dyn_dtree, n - 1)
         }(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, s + 1), R(e, e.dyn_ltree, e.dyn_dtree)), C(e), r && P(e)
     }, t._tr_tally = function(e, t, n) {
         return e.pending_buf[e.d_buf + 2 * e.last_lit] = t >>> 8 & 255, e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t, e.pending_buf[e.l_buf + e.last_lit] = 255 & n, e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(b[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * S(t)]++), e.last_lit === e.lit_bufsize - 1

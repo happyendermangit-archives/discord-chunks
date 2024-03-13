@@ -34,7 +34,7 @@ function(e, t, n) {
                                 flipVariations: M,
                                 allowedAutoPlacements: w
                             }) : n)
-                        }, []), S = t.rects.reference, Y = t.rects.popper, O = new Map, x = !0, E = T[0], P = 0; P < T.length; P++) {
+                        }, []), S = t.rects.reference, Y = t.rects.popper, x = new Map, O = !0, E = T[0], P = 0; P < T.length; P++) {
                         var j = T[P],
                             C = (0, a.default)(j),
                             H = (0, l.default)(j) === u.start,
@@ -54,15 +54,15 @@ function(e, t, n) {
                         if (f && z.push(I[C] <= 0), m && z.push(I[N] <= 0, I[R] <= 0), z.every(function(e) {
                                 return e
                             })) {
-                            E = j, x = !1;
+                            E = j, O = !1;
                             break
                         }
-                        O.set(j, z)
+                        x.set(j, z)
                     }
-                    if (x) {
+                    if (O) {
                         for (var W = M ? 3 : 1, B = function(e) {
                                 var t = T.find(function(t) {
-                                    var n = O.get(t);
+                                    var n = x.get(t);
                                     if (n) return n.slice(0, e).every(function(e) {
                                         return e
                                     })

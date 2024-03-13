@@ -14,10 +14,10 @@ function(e, t, n) {
             return P
         },
         fetchDeveloperApplications: function() {
-            return L
+            return M
         },
         uploadImageAttachment: function() {
-            return M
+            return L
         },
         fetchShelf: function() {
             return U
@@ -170,7 +170,7 @@ function(e, t, n) {
             isRejoiningFromCurrentSession: n
         })
     }
-    async function L() {
+    async function M() {
         try {
             r.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START"
@@ -193,7 +193,7 @@ function(e, t, n) {
             })
         }
     }
-    async function M(e, t, n) {
+    async function L(e, t, n) {
         try {
             r.default.dispatch({
                 type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START"

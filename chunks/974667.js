@@ -71,7 +71,7 @@ function(e, t, n) {
                     i = (0, l.getItemId)(e);
                 O(n, i), (0, r.notifyFocusSubscribers)(t, i, m)
             }, [t, m, O]),
-            L = i.useMemo(() => (0, s.createFocusManager)({
+            M = i.useMemo(() => (0, s.createFocusManager)({
                 getFocusableElements: () => d(t, A),
                 getActiveElement() {
                     var e;
@@ -80,11 +80,11 @@ function(e, t, n) {
                 scrollToStart: c,
                 scrollToEnd: f
             }), [t, c, f]),
-            [M, b] = i.useState(!1),
-            U = i.useRef(M);
+            [L, b] = i.useState(!1),
+            U = i.useRef(L);
         i.useLayoutEffect(() => {
-            U.current = M
-        }, [M]), i.useLayoutEffect(() => {
+            U.current = L
+        }, [L]), i.useLayoutEffect(() => {
             let e = A.current;
             if (null != e) {
                 if (u) return e.addEventListener("focusin", n), e.addEventListener("focusout", i), e.addEventListener("focus", s), e.addEventListener("scroll", r, {
@@ -145,15 +145,15 @@ function(e, t, n) {
                 }
             }), [p, S]),
             k = i.useCallback(async () => {
-                let e = await L.getNextFocusableElement(w),
+                let e = await M.getNextFocusableElement(w),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                 null != t ? P(t) : null == e && null != h && h()
-            }, [L, w, h, P]),
+            }, [M, w, h, P]),
             V = i.useCallback(async () => {
-                let e = await L.getPreviousFocusableElement(w),
+                let e = await M.getPreviousFocusableElement(w),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                 null != t ? P(t) : null == e && null != _ && _()
-            }, [L, w, _, P]),
+            }, [M, w, _, P]),
             G = i.useCallback(e => {
                 if (!y.current || !p && !U.current) return;
                 let n = v === o.Orientations.HORIZONTAL ? o.Keys.RIGHT : o.Keys.DOWN,
@@ -205,7 +205,7 @@ function(e, t, n) {
             containerProps: {
                 onKeyDown: G,
                 ref: A,
-                tabIndex: M && m ? -1 : 0
+                tabIndex: L && m ? -1 : 0
             },
             orientation: v,
             setFocus: F,
@@ -225,7 +225,7 @@ function(e, t, n) {
                 let e = I.current;
                 return e ? (0, l.getItemId)(e) : null
             }
-        }), [t, G, v, M, m, F, V, k, P])
+        }), [t, G, v, L, m, F, V, k, P])
     }
     n.es(u, t)
 }

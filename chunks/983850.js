@@ -95,7 +95,7 @@ function(e, t, n) {
         }
     };
 
-    function L(e, t) {
+    function M(e, t) {
         let {
             forceBatchScan: n = !1,
             jitter: i = !1
@@ -133,7 +133,7 @@ function(e, t, n) {
             P(t, s)
         }, Math.random() * y) : P(e, s)
     }
-    let M = e => null == e.content_scan_version || e.content_scan_version < 1,
+    let L = e => null == e.content_scan_version || e.content_scan_version < 1,
         b = e => {
             var t, n, i, s, r, a, o, l;
             let u = null != (l = e).content_scan_version ? l.content_scan_version : null != l.contentScanVersion ? l.contentScanVersion : null;
@@ -158,7 +158,7 @@ function(e, t, n) {
                 numOfEmbedsPendingScan: 0
             });
             let d = e[t.channel_id];
-            return d.numOfAttachments += null !== (a = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0, d.numOfEmbeds += null !== (o = null === (i = t.embeds) || void 0 === i ? void 0 : i.length) && void 0 !== o ? o : 0, d.numOfAttachmentsPendingScan += null !== (l = null === (s = t.attachments) || void 0 === s ? void 0 : s.filter(M).length) && void 0 !== l ? l : 0, d.numOfEmbedsPendingScan += null !== (u = null == t ? void 0 : null === (r = t.embeds) || void 0 === r ? void 0 : r.filter(b).length) && void 0 !== u ? u : 0, {
+            return d.numOfAttachments += null !== (a = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0, d.numOfEmbeds += null !== (o = null === (i = t.embeds) || void 0 === i ? void 0 : i.length) && void 0 !== o ? o : 0, d.numOfAttachmentsPendingScan += null !== (l = null === (s = t.attachments) || void 0 === s ? void 0 : s.filter(L).length) && void 0 !== l ? l : 0, d.numOfEmbedsPendingScan += null !== (u = null == t ? void 0 : null === (r = t.embeds) || void 0 === r ? void 0 : r.filter(b).length) && void 0 !== u ? u : 0, {
                 ...e,
                 [t.channel_id]: d
             }
@@ -178,7 +178,7 @@ function(e, t, n) {
             attachmentIds: [],
             embedIds: []
         };
-        let c = null !== (o = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(M)) && void 0 !== o ? o : [],
+        let c = null !== (o = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(L)) && void 0 !== o ? o : [],
             f = null !== (l = null == e ? void 0 : null === (s = e.embeds) || void 0 === s ? void 0 : s.filter(b)) && void 0 !== l ? l : [];
         return {
             attachmentIds: c.map(e => e.id).filter(Boolean),
@@ -214,7 +214,7 @@ function(e, t, n) {
                 numOfEmbeds: n.numOfEmbeds,
                 numOfEmbedsPendingScan: n.numOfEmbedsPendingScan
             })
-        }), !!(n.length > 0) && (L(n, t), !0)
+        }), !!(n.length > 0) && (M(n, t), !0)
     }
 
     function F(e) {
@@ -362,7 +362,7 @@ function(e, t, n) {
                     numOfEmbeds: n.numOfEmbeds,
                     numOfEmbedsPendingScan: n.numOfEmbedsPendingScan
                 })
-            }), !!(t.length > 0) && (L(t), !0)
+            }), !!(t.length > 0) && (M(t), !0)
         }(t)
     }
     class X extends l.default {

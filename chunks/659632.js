@@ -82,9 +82,9 @@ function(e, t, n) {
         O = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
         D = O(4, 4),
         P = O(4, 6),
-        L = O(5, 3),
-        M = [D, P, L, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-        b = new RegExp("^(".concat("WUMP-?", ")?(").concat(M, ")$"));
+        M = O(5, 3),
+        L = [D, P, M, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+        b = new RegExp("^(".concat("WUMP-?", ")?(").concat(L, ")$"));
     (s = i || (i = {}))[s.DEFAULT = 0] = "DEFAULT", s[s.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", s[s.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2] = "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD";
     let U = (e, t) => a.isMobile || a.isTablet ? 0 : null != e || t ? 2 : 1,
         w = e => 0 !== U(e);

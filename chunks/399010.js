@@ -34,7 +34,7 @@ function(e, t, n) {
         O = n("509065"),
         D = n("518916");
     let P = new d.default("ConnectionStore"),
-        L = new O.default(D.socket, (e, t) => {
+        M = new O.default(D.socket, (e, t) => {
             var n;
             e = null != e ? e : {
                 type: "CHANNEL_UPDATES",
@@ -49,7 +49,7 @@ function(e, t, n) {
                 });
             return e.channels.push(null != r ? r : i), e
         }, e => "CHANNEL_UPDATE" !== e),
-        M = new O.default(D.socket, (e, t) => ((e = null == e ? {
+        L = new O.default(D.socket, (e, t) => ((e = null == e ? {
             type: "SOUNDBOARD_SOUNDS_RECEIVED",
             updates: []
         } : e).updates.push({
@@ -445,7 +445,7 @@ function(e, t, n) {
             channels: e.channels
         })
     }), k(["CHANNEL_UPDATE"], e => p.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-        L.add(e)
+        M.add(e)
     }), k(["THREAD_CREATE", "THREAD_UPDATE", "THREAD_DELETE"], e => p.ChannelLoader.loadGuildIds([e.guild_id]), (e, t) => {
         let {
             newly_created: n,
@@ -507,7 +507,7 @@ function(e, t, n) {
             }))
         })
     }), w(["SOUNDBOARD_SOUNDS"], e => {
-        M.add(e)
+        L.add(e)
     }), w(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
         let n = p.default.getBasicChannel(e.channel_id);
         G({

@@ -127,7 +127,7 @@ function(e, t, n) {
                 required: R,
                 onInvalid: O,
                 inputRef: D
-            } = this.props, P = N ? f.TextAreaAutosize : "textarea", L = this.hasError(), M = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, b = this.getAriaDescribedBy();
+            } = this.props, P = N ? f.TextAreaAutosize : "textarea", M = this.hasError(), L = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, b = this.getAriaDescribedBy();
             return (0, i.jsxs)("div", {
                 className: a(E.inputWrapper, {
                     [h.flex]: y
@@ -140,13 +140,13 @@ function(e, t, n) {
                         children: (0, i.jsx)(P, {
                             type: "text",
                             className: a(E.inputDefault, h.textArea, g.scrollbarDefault, I, {
-                                [E.error]: L,
+                                [E.error]: M,
                                 [E.disabled]: n,
                                 [h.resizeable]: T
                             }),
-                            "aria-labelledby": M,
+                            "aria-labelledby": L,
                             "aria-describedby": b,
-                            "aria-invalid": L,
+                            "aria-invalid": M,
                             style: {
                                 paddingRight: this.getPaddingRight()
                             },

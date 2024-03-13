@@ -170,11 +170,11 @@ function(e, t, n) {
         return null !== (n = l.default.getNick(t.id, e.id)) && void 0 !== n ? n : h.default.getName(e)
     }
 
-    function L(e, t) {
+    function M(e, t) {
         return t.isOwner(e)
     }
 
-    function M(e, t) {
+    function L(e, t) {
         var n, i, s;
         let r = (i = e, t.isOwner(i) ? E.RowType.OWNER : E.RowType.MEMBER);
         return {
@@ -197,7 +197,7 @@ function(e, t, n) {
 
     function U(e, t, n, i) {
         let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-        return e.map(u.default.getUser).filter(c.isNotNullish).filter(e => !n.isOwner(e) && I(t, e.id, i) && (s(P(e, n)) || s(e.username) || s(e.discriminator))).map(e => M(e, n)).sort(b)
+        return e.map(u.default.getUser).filter(c.isNotNullish).filter(e => !n.isOwner(e) && I(t, e.id, i) && (s(P(e, n)) || s(e.username) || s(e.discriminator))).map(e => L(e, n)).sort(b)
     }
 
     function w(e, t, n, i, s) {
@@ -205,7 +205,7 @@ function(e, t, n) {
         return (r = e, a = t, o = n, l = i, d = s, r.map(u.default.getUser).filter(c.isNotNullish).filter(e => {
             var t;
             return !I(a, e.id, l, d) || (t = e, o.isOwner(t))
-        })).map(e => M(e, n)).sort(b)
+        })).map(e => L(e, n)).sort(b)
     }
 
     function k(e, t) {

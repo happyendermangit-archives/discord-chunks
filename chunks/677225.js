@@ -56,10 +56,10 @@ function(e, t, n) {
         }
     }
 
-    function L() {
+    function M() {
         R.stop()
     }
-    class M extends r.default.Store {
+    class L extends r.default.Store {
         initialize() {
             this.syncWith([f.default], D), this.waitFor(_.default, f.default, c.default)
         }
@@ -82,8 +82,8 @@ function(e, t, n) {
             return T[e]
         }
     }
-    M.displayName = "ApplicationBuildStore";
-    var b = new M(o.default, {
+    L.displayName = "ApplicationBuildStore";
+    var b = new L(o.default, {
         CONNECTION_OPEN: function() {
             return O(y), D()
         },
@@ -175,8 +175,8 @@ function(e, t, n) {
         APPLICATION_BRANCHES_FETCH_FAIL: function() {
             O(N)
         },
-        CONNECTION_CLOSED: L,
-        LOGOUT: L,
+        CONNECTION_CLOSED: M,
+        LOGOUT: M,
         SKU_PURCHASE_SUCCESS: function(e) {
             let {
                 entitlements: t

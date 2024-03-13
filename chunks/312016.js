@@ -41,10 +41,10 @@ function(e, t, n) {
         O = k(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
         D = k(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(E.PRIMARY_DOMAIN)),
         P = k("//canary.".concat(E.PRIMARY_DOMAIN)),
-        L = k("//ptb.".concat(E.PRIMARY_DOMAIN)),
-        M = k("discordapp.com"),
+        M = k("//ptb.".concat(E.PRIMARY_DOMAIN)),
+        L = k("discordapp.com"),
         b = k("discord.com"),
-        U = [f.default.escape(null !== (s = R.host) && void 0 !== s ? s : ""), f.default.escape(null !== (r = O.host) && void 0 !== r ? r : ""), f.default.escape(null !== (a = D.host) && void 0 !== a ? a : ""), f.default.escape(null !== (o = M.host) && void 0 !== o ? o : ""), f.default.escape(null !== (l = b.host) && void 0 !== l ? l : "")].filter(Boolean),
+        U = [f.default.escape(null !== (s = R.host) && void 0 !== s ? s : ""), f.default.escape(null !== (r = O.host) && void 0 !== r ? r : ""), f.default.escape(null !== (a = D.host) && void 0 !== a ? a : ""), f.default.escape(null !== (o = L.host) && void 0 !== o ? o : ""), f.default.escape(null !== (l = b.host) && void 0 !== l ? l : "")].filter(Boolean),
         w = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(U.join("|"), ")"), "g");
 
     function k(e) {
@@ -77,7 +77,7 @@ function(e, t, n) {
 
     function G(e) {
         var t, n, i, s;
-        return null !== (s = null !== (i = null !== (n = null !== (t = V(D, e)) && void 0 !== t ? t : V(P, e)) && void 0 !== n ? n : V(L, e)) && void 0 !== i ? i : V(M, e)) && void 0 !== s ? s : V(b, e)
+        return null !== (s = null !== (i = null !== (n = null !== (t = V(D, e)) && void 0 !== t ? t : V(P, e)) && void 0 !== n ? n : V(M, e)) && void 0 !== i ? i : V(L, e)) && void 0 !== s ? s : V(b, e)
     }
 
     function F(e) {
@@ -91,7 +91,7 @@ function(e, t, n) {
         };
         let a = V(R, r),
             o = V(O, r),
-            l = null !== (s = null !== (i = null !== (n = null !== (t = V(D, r)) && void 0 !== t ? t : V(P, r)) && void 0 !== n ? n : V(L, r)) && void 0 !== i ? i : V(M, r)) && void 0 !== s ? s : V(b, r);
+            l = null !== (s = null !== (i = null !== (n = null !== (t = V(D, r)) && void 0 !== t ? t : V(P, r)) && void 0 !== n ? n : V(M, r)) && void 0 !== i ? i : V(L, r)) && void 0 !== s ? s : V(b, r);
         return {
             url: r,
             inviteHostRemainingPath: a,

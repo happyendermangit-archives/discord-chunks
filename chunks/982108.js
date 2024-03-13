@@ -8,7 +8,7 @@ function(e, t, n) {
             return N
         },
         default: function() {
-            return L
+            return M
         }
     });
     var i = n("394846"),
@@ -114,7 +114,7 @@ function(e, t, n) {
         }
     }
     P.displayName = "ChannelSectionStore", P.persistKey = "ChannelSectionStore2";
-    var L = new P(r.default, {
+    var M = new P(r.default, {
         CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
             v && (v = R(v)), S = R(S)
         },

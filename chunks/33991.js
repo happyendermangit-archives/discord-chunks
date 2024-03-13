@@ -24,12 +24,12 @@ function(e, t, n) {
 
     function v(e, t, n) {
         (0, d.default)(2, arguments);
-        var v, b, M, w, k, L, D, T, S, Y, O, x, E, P, j, C, H, F, A = String(t),
+        var v, b, M, w, k, L, D, T, S, Y, x, O, E, P, j, C, H, F, A = String(t),
             I = (0, f.getDefaultOptions)(),
             N = null !== (v = null !== (b = null == n ? void 0 : n.locale) && void 0 !== b ? b : I.locale) && void 0 !== v ? v : p.default,
             R = (0, c.default)(null !== (M = null !== (w = null !== (k = null !== (L = null == n ? void 0 : n.firstWeekContainsDate) && void 0 !== L ? L : null == n ? void 0 : null === (D = n.locale) || void 0 === D ? void 0 : null === (T = D.options) || void 0 === T ? void 0 : T.firstWeekContainsDate) && void 0 !== k ? k : I.firstWeekContainsDate) && void 0 !== w ? w : null === (S = I.locale) || void 0 === S ? void 0 : null === (Y = S.options) || void 0 === Y ? void 0 : Y.firstWeekContainsDate) && void 0 !== M ? M : 1);
         if (!(R >= 1 && R <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-        var z = (0, c.default)(null !== (O = null !== (x = null !== (E = null !== (P = null == n ? void 0 : n.weekStartsOn) && void 0 !== P ? P : null == n ? void 0 : null === (j = n.locale) || void 0 === j ? void 0 : null === (C = j.options) || void 0 === C ? void 0 : C.weekStartsOn) && void 0 !== E ? E : I.weekStartsOn) && void 0 !== x ? x : null === (H = I.locale) || void 0 === H ? void 0 : null === (F = H.options) || void 0 === F ? void 0 : F.weekStartsOn) && void 0 !== O ? O : 0);
+        var z = (0, c.default)(null !== (x = null !== (O = null !== (E = null !== (P = null == n ? void 0 : n.weekStartsOn) && void 0 !== P ? P : null == n ? void 0 : null === (j = n.locale) || void 0 === j ? void 0 : null === (C = j.options) || void 0 === C ? void 0 : C.weekStartsOn) && void 0 !== E ? E : I.weekStartsOn) && void 0 !== O ? O : null === (H = I.locale) || void 0 === H ? void 0 : null === (F = H.options) || void 0 === F ? void 0 : F.weekStartsOn) && void 0 !== x ? x : 0);
         if (!(z >= 0 && z <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
         if (!N.localize) throw RangeError("locale must contain localize property");
         if (!N.formatLong) throw RangeError("locale must contain formatLong property");

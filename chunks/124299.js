@@ -34,10 +34,10 @@ function(e, t, n) {
             fade: y = !1,
             initialScrollTop: N = 0,
             role: R = "list"
-        } = e, [O, D] = s.useState(-1), [P, L] = s.useState(-1), M = s.useRef(null), b = s.useRef(0), U = s.useRef(-1);
+        } = e, [O, D] = s.useState(-1), [P, M] = s.useState(-1), L = s.useRef(null), b = s.useRef(0), U = s.useRef(-1);
         s.useLayoutEffect(() => {
             var e;
-            let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode();
+            let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerNode();
             null != t && (t.scrollTop = N)
         }, []);
         let w = s.useCallback(() => {
@@ -107,14 +107,14 @@ function(e, t, n) {
         x.current = j, B.current = Y;
         let W = s.useCallback(() => {
             var e;
-            let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode();
+            let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerNode();
             if (null == t) return;
             let {
                 offsetWidth: n,
                 offsetHeight: i,
                 scrollTop: s
             } = t;
-            L(i), D(s), null == r || r({
+            M(i), D(s), null == r || r({
                 width: n,
                 height: i
             })
@@ -123,7 +123,7 @@ function(e, t, n) {
             -1 === P && W()
         }, [P, W]), s.useEffect(() => {
             var e;
-            let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode(),
+            let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerNode(),
                 n = null == t ? void 0 : t.ownerDocument.defaultView;
             if (null == t || null == n) return;
             let i = new n.ResizeObserver(W);
@@ -131,7 +131,7 @@ function(e, t, n) {
         }, [W]);
         let K = s.useCallback(() => {
             var e;
-            let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode();
+            let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerNode();
             null != t && (window.cancelAnimationFrame(U.current), U.current = window.requestAnimationFrame(() => {
                 let {
                     scrollTop: e
@@ -146,7 +146,7 @@ function(e, t, n) {
                     {
                         animate: i = !1
                     } = n;
-                null === (t = M.current) || void 0 === t || t.scrollTo({
+                null === (t = L.current) || void 0 === t || t.scrollTo({
                     to: e,
                     animate: i
                 })
@@ -170,13 +170,13 @@ function(e, t, n) {
                     if (d) {
                         let s = b.current + u - o,
                             r = I ? b.current - s : o;
-                        null === (t = M.current) || void 0 === t || t.scrollTo({
+                        null === (t = L.current) || void 0 === t || t.scrollTo({
                             to: 0 === e ? 0 : r - i,
                             animate: n
                         })
                     } else if (c) {
                         let e = l - (b.current + P);
-                        null === (r = M.current) || void 0 === r || r.scrollTo({
+                        null === (r = L.current) || void 0 === r || r.scrollTo({
                             to: b.current + e + i,
                             animate: n
                         })
@@ -192,7 +192,7 @@ function(e, t, n) {
                     s = x.current[e];
                 null != s && window.requestAnimationFrame(() => {
                     var t;
-                    null === (t = M.current) || void 0 === t || t.scrollTo({
+                    null === (t = L.current) || void 0 === t || t.scrollTo({
                         to: (0 === e ? 0 : s.offset.top) + i,
                         animate: n
                     })
@@ -206,11 +206,11 @@ function(e, t, n) {
             getRowDescriptors: () => B.current,
             getScrollerNode: () => {
                 var e;
-                return null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode()
+                return null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerNode()
             },
             scrollIntoViewNode: e => {
                 var t;
-                return null === (t = M.current) || void 0 === t ? void 0 : t.scrollIntoViewNode({
+                return null === (t = L.current) || void 0 === t ? void 0 : t.scrollIntoViewNode({
                     node: e
                 })
             }
@@ -287,7 +287,7 @@ function(e, t, n) {
         return (0, i.jsxs)(Z, {
             fade: y,
             className: a(l.scroller, C),
-            ref: M,
+            ref: L,
             onScroll: K,
             children: [(0, i.jsx)("div", {
                 role: R,

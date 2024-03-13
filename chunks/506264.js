@@ -1,4 +1,4 @@
-function(e, t, r) {
-    var Symbol = r("626849").Symbol;
-    e.exports = Symbol
+function(t, r, e) {
+    var Symbol = e("626849").Symbol;
+    t.exports = Symbol
 }

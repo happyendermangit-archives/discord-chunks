@@ -1,165 +1,165 @@
-function(t, r, n) {
+function(t, r, e) {
     "use strict";
-    n("414889");
-    var e, i = n("859514"),
-        o = n("814026"),
-        u = n("768897"),
-        a = n("503486"),
-        f = n("886639"),
-        c = n("64980"),
-        s = n("484784"),
-        l = n("18563"),
-        h = n("88052"),
-        p = n("59393"),
-        v = n("862799"),
-        g = n("753580"),
-        d = n("355540"),
-        y = n("696397").codeAt,
-        b = n("682714"),
-        m = n("998270"),
-        _ = n("89157"),
-        w = n("79807"),
-        k = n("753062"),
-        E = n("515011"),
-        R = E.set,
-        x = E.getterFor("URL"),
+    e("414889");
+    var n, o = e("859514"),
+        i = e("814026"),
+        a = e("768897"),
+        u = e("503486"),
+        s = e("886639"),
+        f = e("64980"),
+        c = e("484784"),
+        l = e("18563"),
+        h = e("88052"),
+        p = e("59393"),
+        v = e("862799"),
+        d = e("753580"),
+        g = e("355540"),
+        b = e("696397").codeAt,
+        y = e("682714"),
+        m = e("998270"),
+        w = e("89157"),
+        _ = e("79807"),
+        k = e("753062"),
+        x = e("515011"),
+        E = x.set,
+        S = x.getterFor("URL"),
         URLSearchParams = k.URLSearchParams,
-        A = k.getState,
-        S = a.URL,
-        TypeError = a.TypeError,
-        M = a.parseInt,
-        I = Math.floor,
-        O = Math.pow,
-        N = c("".charAt),
-        L = c(/./.exec),
-        j = c([].join),
-        P = c(1..toString),
-        U = c([].pop),
-        q = c([].push),
-        B = c("".replace),
-        C = c([].shift),
-        T = c("".split),
-        z = c("".slice),
-        D = c("".toLowerCase),
-        F = c([].unshift),
-        W = "Invalid scheme",
-        $ = "Invalid host",
-        H = "Invalid port",
-        Z = /[a-z]/i,
-        G = /[\d+-.a-z]/i,
-        J = /\d/,
-        V = /^0x/i,
-        Y = /^[0-7]+$/,
-        K = /^\d+$/,
-        X = /^[\da-f]+$/i,
-        Q = /[\0\t\n\r #%/:<>?@[\\\]^|]/,
+        M = k.getState,
+        R = u.URL,
+        TypeError = u.TypeError,
+        O = u.parseInt,
+        j = Math.floor,
+        A = Math.pow,
+        N = f("".charAt),
+        P = f(/./.exec),
+        I = f([].join),
+        q = f(1..toString),
+        U = f([].pop),
+        L = f([].push),
+        B = f("".replace),
+        T = f([].shift),
+        C = f("".split),
+        z = f("".slice),
+        D = f("".toLowerCase),
+        F = f([].unshift),
+        H = "Invalid scheme",
+        Z = "Invalid host",
+        $ = "Invalid port",
+        G = /[a-z]/i,
+        J = /[\d+-.a-z]/i,
+        V = /\d/,
+        Y = /^0x/i,
+        W = /^[0-7]+$/,
+        X = /^\d+$/,
+        Q = /^[\da-f]+$/i,
+        K = /[\0\t\n\r #%/:<>?@[\\\]^|]/,
         tt = /[\0\t\n\r #/:<>?@[\\\]^|]/,
         tr = /^[\u0000-\u0020]+/,
-        tn = /(^|[^\u0000-\u0020])[\u0000-\u0020]+$/,
-        te = /[\t\n\r]/g,
-        ti = function(t) {
-            var r, n, e, i, o, u, a, f = T(t, ".");
-            if (f.length && "" === f[f.length - 1] && f.length--, (r = f.length) > 4) return t;
-            for (e = 0, n = []; e < r; e++) {
-                if ("" === (i = f[e])) return t;
-                if (o = 10, i.length > 1 && "0" === N(i, 0) && (o = L(V, i) ? 16 : 8, i = z(i, 8 === o ? 1 : 2)), "" === i) u = 0;
-                else {
-                    if (!L(10 === o ? K : 8 === o ? Y : X, i)) return t;
-                    u = M(i, o)
-                }
-                q(n, u)
-            }
-            for (e = 0; e < r; e++)
-                if (u = n[e], e === r - 1) {
-                    if (u >= O(256, 5 - r)) return null
-                } else if (u > 255) return null;
-            for (e = 0, a = U(n); e < n.length; e++) a += n[e] * O(256, 3 - e);
-            return a
-        },
+        te = /(^|[^\u0000-\u0020])[\u0000-\u0020]+$/,
+        tn = /[\t\n\r]/g,
         to = function(t) {
-            var r, n, e, i, o, u, a, f = [0, 0, 0, 0, 0, 0, 0, 0],
-                c = 0,
-                s = null,
+            var r, e, n, o, i, a, u, s = C(t, ".");
+            if (s.length && "" === s[s.length - 1] && s.length--, (r = s.length) > 4) return t;
+            for (n = 0, e = []; n < r; n++) {
+                if ("" === (o = s[n])) return t;
+                if (i = 10, o.length > 1 && "0" === N(o, 0) && (i = P(Y, o) ? 16 : 8, o = z(o, 8 === i ? 1 : 2)), "" === o) a = 0;
+                else {
+                    if (!P(10 === i ? X : 8 === i ? W : Q, o)) return t;
+                    a = O(o, i)
+                }
+                L(e, a)
+            }
+            for (n = 0; n < r; n++)
+                if (a = e[n], n === r - 1) {
+                    if (a >= A(256, 5 - r)) return null
+                } else if (a > 255) return null;
+            for (n = 0, u = U(e); n < e.length; n++) u += e[n] * A(256, 3 - n);
+            return u
+        },
+        ti = function(t) {
+            var r, e, n, o, i, a, u, s = [0, 0, 0, 0, 0, 0, 0, 0],
+                f = 0,
+                c = null,
                 l = 0,
                 h = function() {
                     return N(t, l)
                 };
             if (":" === h()) {
                 if (":" !== N(t, 1)) return;
-                l += 2, s = ++c
+                l += 2, c = ++f
             }
             for (; h();) {
-                if (8 === c) return;
+                if (8 === f) return;
                 if (":" === h()) {
-                    if (null !== s) return;
-                    l++, s = ++c;
+                    if (null !== c) return;
+                    l++, c = ++f;
                     continue
                 }
-                for (r = n = 0; n < 4 && L(X, h());) r = 16 * r + M(h(), 16), l++, n++;
+                for (r = e = 0; e < 4 && P(Q, h());) r = 16 * r + O(h(), 16), l++, e++;
                 if ("." === h()) {
-                    if (0 === n) return;
-                    if (l -= n, c > 6) return;
-                    for (e = 0; h();) {
-                        if (i = null, e > 0) {
-                            if ("." !== h() || !(e < 4)) return;
+                    if (0 === e) return;
+                    if (l -= e, f > 6) return;
+                    for (n = 0; h();) {
+                        if (o = null, n > 0) {
+                            if ("." !== h() || !(n < 4)) return;
                             l++
                         }
-                        if (!L(J, h())) return;
-                        for (; L(J, h());) {
-                            if (o = M(h(), 10), null === i) i = o;
+                        if (!P(V, h())) return;
+                        for (; P(V, h());) {
+                            if (i = O(h(), 10), null === o) o = i;
                             else {
-                                if (0 === i) return;
-                                i = 10 * i + o
+                                if (0 === o) return;
+                                o = 10 * o + i
                             }
-                            if (i > 255) return;
+                            if (o > 255) return;
                             l++
                         }
-                        f[c] = 256 * f[c] + i, (2 == ++e || 4 === e) && c++
+                        s[f] = 256 * s[f] + o, (2 == ++n || 4 === n) && f++
                     }
-                    if (4 !== e) return;
+                    if (4 !== n) return;
                     break
                 }
                 if (":" === h()) {
                     if (l++, !h()) return
                 } else if (h()) return;
-                f[c++] = r
+                s[f++] = r
             }
-            if (null !== s)
-                for (u = c - s, c = 7; 0 !== c && u > 0;) a = f[c], f[c--] = f[s + u - 1], f[s + --u] = a;
-            else if (8 !== c) return;
-            return f
-        },
-        tu = function(t) {
-            for (var r = null, n = 1, e = null, i = 0, o = 0; o < 8; o++) 0 !== t[o] ? (i > n && (r = e, n = i), e = null, i = 0) : (null === e && (e = o), ++i);
-            return i > n && (r = e, n = i), r
+            if (null !== c)
+                for (a = f - c, f = 7; 0 !== f && a > 0;) u = s[f], s[f--] = s[c + a - 1], s[c + --a] = u;
+            else if (8 !== f) return;
+            return s
         },
         ta = function(t) {
-            var r, n, e, i;
+            for (var r = null, e = 1, n = null, o = 0, i = 0; i < 8; i++) 0 !== t[i] ? (o > e && (r = n, e = o), n = null, o = 0) : (null === n && (n = i), ++o);
+            return o > e && (r = n, e = o), r
+        },
+        tu = function(t) {
+            var r, e, n, o;
             if ("number" == typeof t) {
-                for (n = 0, r = []; n < 4; n++) F(r, t % 256), t = I(t / 256);
-                return j(r, ".")
+                for (e = 0, r = []; e < 4; e++) F(r, t % 256), t = j(t / 256);
+                return I(r, ".")
             }
             if ("object" == typeof t) {
-                for (n = 0, r = "", e = tu(t); n < 8; n++)(!i || 0 !== t[n]) && (i && (i = !1), e === n ? (r += n ? ":" : "::", i = !0) : (r += P(t[n], 16), n < 7 && (r += ":")));
+                for (e = 0, r = "", n = ta(t); e < 8; e++)(!o || 0 !== t[e]) && (o && (o = !1), n === e ? (r += e ? ":" : "::", o = !0) : (r += q(t[e], 16), e < 7 && (r += ":")));
                 return "[" + r + "]"
             }
             return t
         },
-        tf = {},
-        tc = v({}, tf, {
+        ts = {},
+        tf = v({}, ts, {
             " ": 1,
             '"': 1,
             "<": 1,
             ">": 1,
             "`": 1
         }),
-        ts = v({}, tc, {
+        tc = v({}, tf, {
             "#": 1,
             "?": 1,
             "{": 1,
             "}": 1
         }),
-        tl = v({}, ts, {
+        tl = v({}, tc, {
             "/": 1,
             ":": 1,
             ";": 1,
@@ -172,8 +172,8 @@ function(t, r, n) {
             "|": 1
         }),
         th = function(t, r) {
-            var n = y(t, 0);
-            return n > 32 && n < 127 && !p(r, t) ? t : encodeURIComponent(t)
+            var e = b(t, 0);
+            return e > 32 && e < 127 && !p(r, t) ? t : encodeURIComponent(t)
         },
         tp = {
             ftp: 21,
@@ -184,268 +184,268 @@ function(t, r, n) {
             wss: 443
         },
         tv = function(t, r) {
-            var n;
-            return 2 === t.length && L(Z, N(t, 0)) && (":" === (n = N(t, 1)) || !r && "|" === n)
+            var e;
+            return 2 === t.length && P(G, N(t, 0)) && (":" === (e = N(t, 1)) || !r && "|" === e)
         },
-        tg = function(t) {
+        td = function(t) {
             var r;
             return t.length > 1 && tv(z(t, 0, 2)) && (2 === t.length || "/" === (r = N(t, 2)) || "\\" === r || "?" === r || "#" === r)
         },
-        td = {},
-        ty = {},
+        tg = {},
         tb = {},
+        ty = {},
         tm = {},
-        t_ = {},
         tw = {},
+        t_ = {},
         tk = {},
-        tE = {},
-        tR = {},
         tx = {},
-        tA = {},
+        tE = {},
         tS = {},
         tM = {},
-        tI = {},
+        tR = {},
         tO = {},
-        tN = {},
-        tL = {},
         tj = {},
+        tA = {},
+        tN = {},
         tP = {},
-        tU = {},
+        tI = {},
         tq = {},
-        tB = function(t, r, n) {
-            var e, i, o, u = m(t);
+        tU = {},
+        tL = {},
+        tB = function(t, r, e) {
+            var n, o, i, a = m(t);
             if (r) {
-                if (i = this.parse(u)) throw TypeError(i);
+                if (o = this.parse(a)) throw TypeError(o);
                 this.searchParams = null
             } else {
-                if (void 0 !== n && (e = new tB(n, !0)), i = this.parse(u, null, e)) throw TypeError(i);
-                (o = A(new URLSearchParams)).bindURL(this), this.searchParams = o
+                if (void 0 !== e && (n = new tB(e, !0)), o = this.parse(a, null, n)) throw TypeError(o);
+                (i = M(new URLSearchParams)).bindURL(this), this.searchParams = i
             }
         };
     tB.prototype = {
         type: "URL",
-        parse: function(t, r, n) {
-            var i = r || td,
-                o = 0,
-                u = "",
-                a = !1,
-                f = !1,
-                c = !1;
-            for (t = m(t), !r && (this.scheme = "", this.username = "", this.password = "", this.host = null, this.port = null, this.path = [], this.query = null, this.fragment = null, this.cannotBeABaseURL = !1, t = B(t, tr, ""), t = B(t, tn, "$1")), s = g(t = B(t, te, "")); o <= s.length;) {
-                switch (l = s[o], i) {
-                    case td:
-                        if (l && L(Z, l)) u += D(l), i = ty;
+        parse: function(t, r, e) {
+            var o = r || tg,
+                i = 0,
+                a = "",
+                u = !1,
+                s = !1,
+                f = !1;
+            for (t = m(t), !r && (this.scheme = "", this.username = "", this.password = "", this.host = null, this.port = null, this.path = [], this.query = null, this.fragment = null, this.cannotBeABaseURL = !1, t = B(t, tr, ""), t = B(t, te, "$1")), c = d(t = B(t, tn, "")); i <= c.length;) {
+                switch (l = c[i], o) {
+                    case tg:
+                        if (l && P(G, l)) a += D(l), o = tb;
                         else {
-                            if (r) return W;
-                            i = tb;
-                            continue
-                        }
-                        break;
-                    case ty:
-                        if (l && (L(G, l) || "+" === l || "-" === l || "." === l)) u += D(l);
-                        else if (":" === l) {
-                            if (r && (this.isSpecial() !== p(tp, u) || "file" === u && (this.includesCredentials() || null !== this.port) || "file" === this.scheme && !this.host)) return;
-                            if (this.scheme = u, r) {
-                                this.isSpecial() && tp[this.scheme] === this.port && (this.port = null);
-                                return
-                            }
-                            u = "", "file" === this.scheme ? i = tI : this.isSpecial() && n && n.scheme === this.scheme ? i = tm : this.isSpecial() ? i = tE : "/" === s[o + 1] ? (i = t_, o++) : (this.cannotBeABaseURL = !0, q(this.path, ""), i = tP)
-                        } else {
-                            if (r) return W;
-                            u = "", i = tb, o = 0;
+                            if (r) return H;
+                            o = ty;
                             continue
                         }
                         break;
                     case tb:
-                        if (!n || n.cannotBeABaseURL && "#" !== l) return W;
-                        if (n.cannotBeABaseURL && "#" === l) {
-                            this.scheme = n.scheme, this.path = d(n.path), this.query = n.query, this.fragment = "", this.cannotBeABaseURL = !0, i = tq;
-                            break
-                        }
-                        i = "file" === n.scheme ? tI : tw;
-                        continue;
-                    case tm:
-                        if ("/" === l && "/" === s[o + 1]) i = tR, o++;
-                        else {
-                            i = tw;
+                        if (l && (P(J, l) || "+" === l || "-" === l || "." === l)) a += D(l);
+                        else if (":" === l) {
+                            if (r && (this.isSpecial() !== p(tp, a) || "file" === a && (this.includesCredentials() || null !== this.port) || "file" === this.scheme && !this.host)) return;
+                            if (this.scheme = a, r) {
+                                this.isSpecial() && tp[this.scheme] === this.port && (this.port = null);
+                                return
+                            }
+                            a = "", "file" === this.scheme ? o = tj : this.isSpecial() && e && e.scheme === this.scheme ? o = tm : this.isSpecial() ? o = tx : "/" === c[i + 1] ? (o = tw, i++) : (this.cannotBeABaseURL = !0, L(this.path, ""), o = tq)
+                        } else {
+                            if (r) return H;
+                            a = "", o = ty, i = 0;
                             continue
                         }
                         break;
-                    case t_:
-                        if ("/" === l) {
-                            i = tx;
+                    case ty:
+                        if (!e || e.cannotBeABaseURL && "#" !== l) return H;
+                        if (e.cannotBeABaseURL && "#" === l) {
+                            this.scheme = e.scheme, this.path = g(e.path), this.query = e.query, this.fragment = "", this.cannotBeABaseURL = !0, o = tL;
                             break
                         }
-                        i = tj;
+                        o = "file" === e.scheme ? tj : t_;
                         continue;
-                    case tw:
-                        if (this.scheme = n.scheme, l === e) this.username = n.username, this.password = n.password, this.host = n.host, this.port = n.port, this.path = d(n.path), this.query = n.query;
-                        else if ("/" === l || "\\" === l && this.isSpecial()) i = tk;
-                        else if ("?" === l) this.username = n.username, this.password = n.password, this.host = n.host, this.port = n.port, this.path = d(n.path), this.query = "", i = tU;
-                        else if ("#" === l) this.username = n.username, this.password = n.password, this.host = n.host, this.port = n.port, this.path = d(n.path), this.query = n.query, this.fragment = "", i = tq;
+                    case tm:
+                        if ("/" === l && "/" === c[i + 1]) o = tE, i++;
                         else {
-                            this.username = n.username, this.password = n.password, this.host = n.host, this.port = n.port, this.path = d(n.path), this.path.length--, i = tj;
+                            o = t_;
+                            continue
+                        }
+                        break;
+                    case tw:
+                        if ("/" === l) {
+                            o = tS;
+                            break
+                        }
+                        o = tI;
+                        continue;
+                    case t_:
+                        if (this.scheme = e.scheme, l === n) this.username = e.username, this.password = e.password, this.host = e.host, this.port = e.port, this.path = g(e.path), this.query = e.query;
+                        else if ("/" === l || "\\" === l && this.isSpecial()) o = tk;
+                        else if ("?" === l) this.username = e.username, this.password = e.password, this.host = e.host, this.port = e.port, this.path = g(e.path), this.query = "", o = tU;
+                        else if ("#" === l) this.username = e.username, this.password = e.password, this.host = e.host, this.port = e.port, this.path = g(e.path), this.query = e.query, this.fragment = "", o = tL;
+                        else {
+                            this.username = e.username, this.password = e.password, this.host = e.host, this.port = e.port, this.path = g(e.path), this.path.length--, o = tI;
                             continue
                         }
                         break;
                     case tk:
-                        if (this.isSpecial() && ("/" === l || "\\" === l)) i = tR;
-                        else if ("/" === l) i = tx;
+                        if (this.isSpecial() && ("/" === l || "\\" === l)) o = tE;
+                        else if ("/" === l) o = tS;
                         else {
-                            this.username = n.username, this.password = n.password, this.host = n.host, this.port = n.port, i = tj;
-                            continue
-                        }
-                        break;
-                    case tE:
-                        if (i = tR, "/" !== l || "/" !== N(u, o + 1)) continue;
-                        o++;
-                        break;
-                    case tR:
-                        if ("/" !== l && "\\" !== l) {
-                            i = tx;
+                            this.username = e.username, this.password = e.password, this.host = e.host, this.port = e.port, o = tI;
                             continue
                         }
                         break;
                     case tx:
+                        if (o = tE, "/" !== l || "/" !== N(a, i + 1)) continue;
+                        i++;
+                        break;
+                    case tE:
+                        if ("/" !== l && "\\" !== l) {
+                            o = tS;
+                            continue
+                        }
+                        break;
+                    case tS:
                         if ("@" === l) {
-                            a && (u = "%40" + u), a = !0, h = g(u);
-                            for (var s, l, h, v, y, b, _ = 0; _ < h.length; _++) {
-                                var w = h[_];
-                                if (":" === w && !c) {
-                                    c = !0;
+                            u && (a = "%40" + a), u = !0, h = d(a);
+                            for (var c, l, h, v, b, y, w = 0; w < h.length; w++) {
+                                var _ = h[w];
+                                if (":" === _ && !f) {
+                                    f = !0;
                                     continue
                                 }
-                                var k = th(w, tl);
-                                c ? this.password += k : this.username += k
+                                var k = th(_, tl);
+                                f ? this.password += k : this.username += k
                             }
-                            u = ""
-                        } else if (l === e || "/" === l || "?" === l || "#" === l || "\\" === l && this.isSpecial()) {
-                            if (a && "" === u) return "Invalid authority";
-                            o -= g(u).length + 1, u = "", i = tA
-                        } else u += l;
-                        break;
-                    case tA:
-                    case tS:
-                        if (r && "file" === this.scheme) {
-                            i = tN;
-                            continue
-                        }
-                        if (":" !== l || f) {
-                            if (l === e || "/" === l || "?" === l || "#" === l || "\\" === l && this.isSpecial()) {
-                                if (this.isSpecial() && "" === u) return $;
-                                if (r && "" === u && (this.includesCredentials() || null !== this.port)) return;
-                                if (v = this.parseHost(u)) return v;
-                                if (u = "", i = tL, r) return;
-                                continue
-                            } else "[" === l ? f = !0 : "]" === l && (f = !1), u += l
-                        } else {
-                            if ("" === u) return $;
-                            if (v = this.parseHost(u)) return v;
-                            if (u = "", i = tM, r === tS) return
-                        }
+                            a = ""
+                        } else if (l === n || "/" === l || "?" === l || "#" === l || "\\" === l && this.isSpecial()) {
+                            if (u && "" === a) return "Invalid authority";
+                            i -= d(a).length + 1, a = "", o = tM
+                        } else a += l;
                         break;
                     case tM:
-                        if (L(J, l)) u += l;
-                        else {
-                            if (!(l === e || "/" === l || "?" === l || "#" === l || "\\" === l && this.isSpecial()) && !r) return H;
-                            if ("" !== u) {
-                                var E = M(u, 10);
-                                if (E > 65535) return H;
-                                this.port = this.isSpecial() && E === tp[this.scheme] ? null : E, u = ""
-                            }
-                            if (r) return;
-                            i = tL;
+                    case tR:
+                        if (r && "file" === this.scheme) {
+                            o = tN;
                             continue
                         }
-                        break;
-                    case tI:
-                        if (this.scheme = "file", "/" === l || "\\" === l) i = tO;
-                        else if (n && "file" === n.scheme) switch (l) {
-                            case e:
-                                this.host = n.host, this.path = d(n.path), this.query = n.query;
-                                break;
-                            case "?":
-                                this.host = n.host, this.path = d(n.path), this.query = "", i = tU;
-                                break;
-                            case "#":
-                                this.host = n.host, this.path = d(n.path), this.query = n.query, this.fragment = "", i = tq;
-                                break;
-                            default:
-                                !tg(j(d(s, o), "")) && (this.host = n.host, this.path = d(n.path), this.shortenPath()), i = tj;
+                        if (":" !== l || s) {
+                            if (l === n || "/" === l || "?" === l || "#" === l || "\\" === l && this.isSpecial()) {
+                                if (this.isSpecial() && "" === a) return Z;
+                                if (r && "" === a && (this.includesCredentials() || null !== this.port)) return;
+                                if (v = this.parseHost(a)) return v;
+                                if (a = "", o = tP, r) return;
                                 continue
+                            } else "[" === l ? s = !0 : "]" === l && (s = !1), a += l
                         } else {
-                            i = tj;
-                            continue
+                            if ("" === a) return Z;
+                            if (v = this.parseHost(a)) return v;
+                            if (a = "", o = tO, r === tR) return
                         }
                         break;
                     case tO:
+                        if (P(V, l)) a += l;
+                        else {
+                            if (!(l === n || "/" === l || "?" === l || "#" === l || "\\" === l && this.isSpecial()) && !r) return $;
+                            if ("" !== a) {
+                                var x = O(a, 10);
+                                if (x > 65535) return $;
+                                this.port = this.isSpecial() && x === tp[this.scheme] ? null : x, a = ""
+                            }
+                            if (r) return;
+                            o = tP;
+                            continue
+                        }
+                        break;
+                    case tj:
+                        if (this.scheme = "file", "/" === l || "\\" === l) o = tA;
+                        else if (e && "file" === e.scheme) switch (l) {
+                            case n:
+                                this.host = e.host, this.path = g(e.path), this.query = e.query;
+                                break;
+                            case "?":
+                                this.host = e.host, this.path = g(e.path), this.query = "", o = tU;
+                                break;
+                            case "#":
+                                this.host = e.host, this.path = g(e.path), this.query = e.query, this.fragment = "", o = tL;
+                                break;
+                            default:
+                                !td(I(g(c, i), "")) && (this.host = e.host, this.path = g(e.path), this.shortenPath()), o = tI;
+                                continue
+                        } else {
+                            o = tI;
+                            continue
+                        }
+                        break;
+                    case tA:
                         if ("/" === l || "\\" === l) {
-                            i = tN;
+                            o = tN;
                             break
                         }
-                        n && "file" === n.scheme && !tg(j(d(s, o), "")) && (tv(n.path[0], !0) ? q(this.path, n.path[0]) : this.host = n.host), i = tj;
+                        e && "file" === e.scheme && !td(I(g(c, i), "")) && (tv(e.path[0], !0) ? L(this.path, e.path[0]) : this.host = e.host), o = tI;
                         continue;
                     case tN:
-                        if (l === e || "/" === l || "\\" === l || "?" === l || "#" === l) {
-                            if (!r && tv(u)) i = tj;
-                            else if ("" === u) {
+                        if (l === n || "/" === l || "\\" === l || "?" === l || "#" === l) {
+                            if (!r && tv(a)) o = tI;
+                            else if ("" === a) {
                                 if (this.host = "", r) return;
-                                i = tL
+                                o = tP
                             } else {
-                                if (v = this.parseHost(u)) return v;
+                                if (v = this.parseHost(a)) return v;
                                 if ("localhost" === this.host && (this.host = ""), r) return;
-                                u = "", i = tL
+                                a = "", o = tP
                             }
                             continue
                         }
-                        u += l;
-                        break;
-                    case tL:
-                        if (this.isSpecial()) {
-                            if (i = tj, "/" !== l && "\\" !== l) continue
-                        } else if (r || "?" !== l) {
-                            if (r || "#" !== l) {
-                                if (l !== e && (i = tj, "/" !== l)) continue
-                            } else this.fragment = "", i = tq
-                        } else this.query = "", i = tU;
-                        break;
-                    case tj:
-                        if (l === e || "/" === l || "\\" === l && this.isSpecial() || !r && ("?" === l || "#" === l)) {
-                            ;
-                            if (".." === (y = D(y = u)) || "%2e." === y || ".%2e" === y || "%2e%2e" === y) this.shortenPath(), "/" !== l && !("\\" === l && this.isSpecial()) && q(this.path, "");
-                            else {
-                                ;
-                                if ("." === (b = u) || "%2e" === D(b)) "/" !== l && !("\\" === l && this.isSpecial()) && q(this.path, "");
-                                else "file" === this.scheme && !this.path.length && tv(u) && (this.host && (this.host = ""), u = N(u, 0) + ":"), q(this.path, u)
-                            }
-                            if (u = "", "file" === this.scheme && (l === e || "?" === l || "#" === l))
-                                for (; this.path.length > 1 && "" === this.path[0];) C(this.path);
-                            "?" === l ? (this.query = "", i = tU) : "#" === l && (this.fragment = "", i = tq)
-                        } else u += th(l, ts);
+                        a += l;
                         break;
                     case tP:
-                        "?" === l ? (this.query = "", i = tU) : "#" === l ? (this.fragment = "", i = tq) : l !== e && (this.path[0] += th(l, tf));
+                        if (this.isSpecial()) {
+                            if (o = tI, "/" !== l && "\\" !== l) continue
+                        } else if (r || "?" !== l) {
+                            if (r || "#" !== l) {
+                                if (l !== n && (o = tI, "/" !== l)) continue
+                            } else this.fragment = "", o = tL
+                        } else this.query = "", o = tU;
                         break;
-                    case tU:
-                        r || "#" !== l ? l !== e && ("'" === l && this.isSpecial() ? this.query += "%27" : "#" === l ? this.query += "%23" : this.query += th(l, tf)) : (this.fragment = "", i = tq);
+                    case tI:
+                        if (l === n || "/" === l || "\\" === l && this.isSpecial() || !r && ("?" === l || "#" === l)) {
+                            ;
+                            if (".." === (b = D(b = a)) || "%2e." === b || ".%2e" === b || "%2e%2e" === b) this.shortenPath(), "/" !== l && !("\\" === l && this.isSpecial()) && L(this.path, "");
+                            else {
+                                ;
+                                if ("." === (y = a) || "%2e" === D(y)) "/" !== l && !("\\" === l && this.isSpecial()) && L(this.path, "");
+                                else "file" === this.scheme && !this.path.length && tv(a) && (this.host && (this.host = ""), a = N(a, 0) + ":"), L(this.path, a)
+                            }
+                            if (a = "", "file" === this.scheme && (l === n || "?" === l || "#" === l))
+                                for (; this.path.length > 1 && "" === this.path[0];) T(this.path);
+                            "?" === l ? (this.query = "", o = tU) : "#" === l && (this.fragment = "", o = tL)
+                        } else a += th(l, tc);
                         break;
                     case tq:
-                        l !== e && (this.fragment += th(l, tc))
+                        "?" === l ? (this.query = "", o = tU) : "#" === l ? (this.fragment = "", o = tL) : l !== n && (this.path[0] += th(l, ts));
+                        break;
+                    case tU:
+                        r || "#" !== l ? l !== n && ("'" === l && this.isSpecial() ? this.query += "%27" : "#" === l ? this.query += "%23" : this.query += th(l, ts)) : (this.fragment = "", o = tL);
+                        break;
+                    case tL:
+                        l !== n && (this.fragment += th(l, tf))
                 }
-                o++
+                i++
             }
         },
         parseHost: function(t) {
-            var r, n, e;
+            var r, e, n;
             if ("[" === N(t, 0)) {
-                if ("]" !== N(t, t.length - 1) || !(r = to(z(t, 1, -1)))) return $;
+                if ("]" !== N(t, t.length - 1) || !(r = ti(z(t, 1, -1)))) return Z;
                 this.host = r
             } else if (this.isSpecial()) {
-                if (L(Q, t = b(t)) || null === (r = ti(t))) return $;
+                if (P(K, t = y(t)) || null === (r = to(t))) return Z;
                 this.host = r
             } else {
-                if (L(tt, t)) return $;
-                for (e = 0, r = "", n = g(t); e < n.length; e++) r += th(n[e], tf);
+                if (P(tt, t)) return Z;
+                for (n = 0, r = "", e = d(t); n < e.length; n++) r += th(e[n], ts);
                 this.host = r
             }
         },
@@ -466,14 +466,14 @@ function(t, r, n) {
         serialize: function() {
             var t = this.scheme,
                 r = this.username,
-                n = this.password,
-                e = this.host,
-                i = this.port,
-                o = this.path,
-                u = this.query,
-                a = this.fragment,
-                f = t + ":";
-            return null !== e ? (f += "//", this.includesCredentials() && (f += r + (n ? ":" + n : "") + "@"), f += ta(e), null !== i && (f += ":" + i)) : "file" === t && (f += "//"), f += this.cannotBeABaseURL ? o[0] : o.length ? "/" + j(o, "/") : "", null !== u && (f += "?" + u), null !== a && (f += "#" + a), f
+                e = this.password,
+                n = this.host,
+                o = this.port,
+                i = this.path,
+                a = this.query,
+                u = this.fragment,
+                s = t + ":";
+            return null !== n ? (s += "//", this.includesCredentials() && (s += r + (e ? ":" + e : "") + "@"), s += tu(n), null !== o && (s += ":" + o)) : "file" === t && (s += "//"), s += this.cannotBeABaseURL ? i[0] : i.length ? "/" + I(i, "/") : "", null !== a && (s += "?" + a), null !== u && (s += "#" + u), s
         },
         setHref: function(t) {
             var r = this.parse(t);
@@ -484,66 +484,66 @@ function(t, r, n) {
             var t = this.scheme,
                 r = this.port;
             if ("blob" === t) try {
-                return new tC(t.path[0]).origin
+                return new tT(t.path[0]).origin
             } catch (t) {
                 return "null"
             }
-            return "file" !== t && this.isSpecial() ? t + "://" + ta(this.host) + (null !== r ? ":" + r : "") : "null"
+            return "file" !== t && this.isSpecial() ? t + "://" + tu(this.host) + (null !== r ? ":" + r : "") : "null"
         },
         getProtocol: function() {
             return this.scheme + ":"
         },
         setProtocol: function(t) {
-            this.parse(m(t) + ":", td)
+            this.parse(m(t) + ":", tg)
         },
         getUsername: function() {
             return this.username
         },
         setUsername: function(t) {
-            var r = g(m(t));
+            var r = d(m(t));
             if (!this.cannotHaveUsernamePasswordPort()) {
                 this.username = "";
-                for (var n = 0; n < r.length; n++) this.username += th(r[n], tl)
+                for (var e = 0; e < r.length; e++) this.username += th(r[e], tl)
             }
         },
         getPassword: function() {
             return this.password
         },
         setPassword: function(t) {
-            var r = g(m(t));
+            var r = d(m(t));
             if (!this.cannotHaveUsernamePasswordPort()) {
                 this.password = "";
-                for (var n = 0; n < r.length; n++) this.password += th(r[n], tl)
+                for (var e = 0; e < r.length; e++) this.password += th(r[e], tl)
             }
         },
         getHost: function() {
             var t = this.host,
                 r = this.port;
-            return null === t ? "" : null === r ? ta(t) : ta(t) + ":" + r
+            return null === t ? "" : null === r ? tu(t) : tu(t) + ":" + r
         },
         setHost: function(t) {
-            !this.cannotBeABaseURL && this.parse(t, tA)
+            !this.cannotBeABaseURL && this.parse(t, tM)
         },
         getHostname: function() {
             var t = this.host;
-            return null === t ? "" : ta(t)
+            return null === t ? "" : tu(t)
         },
         setHostname: function(t) {
-            !this.cannotBeABaseURL && this.parse(t, tS)
+            !this.cannotBeABaseURL && this.parse(t, tR)
         },
         getPort: function() {
             var t = this.port;
             return null === t ? "" : m(t)
         },
         setPort: function(t) {
-            !this.cannotHaveUsernamePasswordPort() && ("" === (t = m(t)) ? this.port = null : this.parse(t, tM))
+            !this.cannotHaveUsernamePasswordPort() && ("" === (t = m(t)) ? this.port = null : this.parse(t, tO))
         },
         getPathname: function() {
             var t = this.path;
-            return this.cannotBeABaseURL ? t[0] : t.length ? "/" + j(t, "/") : ""
+            return this.cannotBeABaseURL ? t[0] : t.length ? "/" + I(t, "/") : ""
         },
         setPathname: function(t) {
-            !this.cannotBeABaseURL && (this.path = [], this.parse(t, tL))
+            !this.cannotBeABaseURL && (this.path = [], this.parse(t, tP))
         },
         getSearch: function() {
             var t = this.query;
@@ -564,50 +564,50 @@ function(t, r, n) {
                 this.fragment = null;
                 return
             }
-            "#" === N(t, 0) && (t = z(t, 1)), this.fragment = "", this.parse(t, tq)
+            "#" === N(t, 0) && (t = z(t, 1)), this.fragment = "", this.parse(t, tL)
         },
         update: function() {
             this.query = this.searchParams.serialize() || null
         }
     };
-    var tC = function(t) {
-            var r = h(this, tT),
-                n = w(arguments.length, 1) > 1 ? arguments[1] : void 0,
-                e = R(r, new tB(t, !1, n));
-            !o && (r.href = e.serialize(), r.origin = e.getOrigin(), r.protocol = e.getProtocol(), r.username = e.getUsername(), r.password = e.getPassword(), r.host = e.getHost(), r.hostname = e.getHostname(), r.port = e.getPort(), r.pathname = e.getPathname(), r.search = e.getSearch(), r.searchParams = e.getSearchParams(), r.hash = e.getHash())
+    var tT = function(t) {
+            var r = h(this, tC),
+                e = _(arguments.length, 1) > 1 ? arguments[1] : void 0,
+                n = E(r, new tB(t, !1, e));
+            !i && (r.href = n.serialize(), r.origin = n.getOrigin(), r.protocol = n.getProtocol(), r.username = n.getUsername(), r.password = n.getPassword(), r.host = n.getHost(), r.hostname = n.getHostname(), r.port = n.getPort(), r.pathname = n.getPathname(), r.search = n.getSearch(), r.searchParams = n.getSearchParams(), r.hash = n.getHash())
         },
-        tT = tC.prototype,
+        tC = tT.prototype,
         tz = function(t, r) {
             return {
                 get: function() {
-                    return x(this)[t]()
+                    return S(this)[t]()
                 },
                 set: r && function(t) {
-                    return x(this)[r](t)
+                    return S(this)[r](t)
                 },
                 configurable: !0,
                 enumerable: !0
             }
         };
-    if (o && (l(tT, "href", tz("serialize", "setHref")), l(tT, "origin", tz("getOrigin")), l(tT, "protocol", tz("getProtocol", "setProtocol")), l(tT, "username", tz("getUsername", "setUsername")), l(tT, "password", tz("getPassword", "setPassword")), l(tT, "host", tz("getHost", "setHost")), l(tT, "hostname", tz("getHostname", "setHostname")), l(tT, "port", tz("getPort", "setPort")), l(tT, "pathname", tz("getPathname", "setPathname")), l(tT, "search", tz("getSearch", "setSearch")), l(tT, "searchParams", tz("getSearchParams")), l(tT, "hash", tz("getHash", "setHash"))), s(tT, "toJSON", function() {
-            return x(this).serialize()
+    if (i && (l(tC, "href", tz("serialize", "setHref")), l(tC, "origin", tz("getOrigin")), l(tC, "protocol", tz("getProtocol", "setProtocol")), l(tC, "username", tz("getUsername", "setUsername")), l(tC, "password", tz("getPassword", "setPassword")), l(tC, "host", tz("getHost", "setHost")), l(tC, "hostname", tz("getHostname", "setHostname")), l(tC, "port", tz("getPort", "setPort")), l(tC, "pathname", tz("getPathname", "setPathname")), l(tC, "search", tz("getSearch", "setSearch")), l(tC, "searchParams", tz("getSearchParams")), l(tC, "hash", tz("getHash", "setHash"))), c(tC, "toJSON", function() {
+            return S(this).serialize()
         }, {
             enumerable: !0
-        }), s(tT, "toString", function() {
-            return x(this).serialize()
+        }), c(tC, "toString", function() {
+            return S(this).serialize()
         }, {
             enumerable: !0
-        }), S) {
-        var tD = S.createObjectURL,
-            tF = S.revokeObjectURL;
-        tD && s(tC, "createObjectURL", f(tD, S)), tF && s(tC, "revokeObjectURL", f(tF, S))
+        }), R) {
+        var tD = R.createObjectURL,
+            tF = R.revokeObjectURL;
+        tD && c(tT, "createObjectURL", s(tD, R)), tF && c(tT, "revokeObjectURL", s(tF, R))
     }
-    _(tC, "URL"), i({
+    w(tT, "URL"), o({
         global: !0,
         constructor: !0,
-        forced: !u,
-        sham: !o
+        forced: !a,
+        sham: !i
     }, {
-        URL: tC
+        URL: tT
     })
 }

@@ -35,21 +35,21 @@ function(e, t, n) {
             T = M === u.popper ? u.reference : u.popper,
             S = e.rects.popper,
             Y = e.elements[void 0 !== w && w ? T : M],
-            O = (0, r.default)((0, l.isElement)(Y) ? Y : Y.contextElement || (0, a.default)(e.elements.popper), _, v, h),
-            x = (0, o.default)(e.elements.reference),
+            x = (0, r.default)((0, l.isElement)(Y) ? Y : Y.contextElement || (0, a.default)(e.elements.popper), _, v, h),
+            O = (0, o.default)(e.elements.reference),
             E = (0, i.default)({
-                reference: x,
+                reference: O,
                 element: S,
                 strategy: "absolute",
                 placement: p
             }),
             P = (0, s.default)(Object.assign({}, S, E)),
-            j = M === u.popper ? P : x,
+            j = M === u.popper ? P : O,
             C = {
-                top: O.top - j.top + D.top,
-                bottom: j.bottom - O.bottom + D.bottom,
-                left: O.left - j.left + D.left,
-                right: j.right - O.right + D.right
+                top: x.top - j.top + D.top,
+                bottom: j.bottom - x.bottom + D.bottom,
+                left: x.left - j.left + D.left,
+                right: j.right - x.right + D.right
             },
             H = e.modifiersData.offset;
         if (M === u.popper && H) {

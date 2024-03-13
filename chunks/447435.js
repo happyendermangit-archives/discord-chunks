@@ -11,10 +11,10 @@ function(e, t, n) {
             return P
         },
         shouldRedactExplicitContent: function() {
-            return L
+            return M
         },
         updateExplicitContentSetting: function() {
-            return M
+            return L
         },
         ObscuredMediaTypes: function() {
             return i
@@ -100,7 +100,7 @@ function(e, t, n) {
         return e === f.ExplicitContentRedaction.BLUR || e === f.ExplicitContentRedaction.BLOCK
     }
 
-    function L(e) {
+    function M(e) {
         var t;
         if (!(0, C.isEligibleForExplicitMediaRedaction)()) return !1;
         let n = S.default.getCurrentUser();
@@ -114,7 +114,7 @@ function(e, t, n) {
         if (a.isDM() || a.isGroupDM()) return null != e.author && p.default.getFriendIDs().includes(e.author.id) ? P(s) : P(r);
         return P(i)
     }
-    let M = e => {
+    let L = e => {
         let t = D();
         g.ExplicitContentSettings.updateSetting({
             ...t,
@@ -137,7 +137,7 @@ function(e, t, n) {
     }
 
     function U(e) {
-        let t = L(e);
+        let t = M(e);
         return t ? {
             obscuredAttachments: e.attachments.filter(e => b({
                 type: 0,

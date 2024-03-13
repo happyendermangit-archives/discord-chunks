@@ -33,8 +33,8 @@ function(e, t, n) {
         O = n("27571"),
         D = n("658530"),
         P = n("50885"),
-        L = n("819068"),
-        M = n("49111"),
+        M = n("819068"),
+        L = n("49111"),
         b = n("6791");
     (a = r || (r = {})).ATTACHING = "ATTACHING", a.CONNECTING = "CONNECTING", a.CONNECTED = "CONNECTED", a.READY = "READY", a.CRASHED = "CRASHED", a.CONNECT_FAILED = "CONNECT_FAILED", a.HOOK_FAILED = "HOOK_FAILED";
     let U = {},
@@ -58,7 +58,7 @@ function(e, t, n) {
             onContentionResolved: () => q.verbose("overlayLock contention: resolved."),
             onTimeout: (e, t) => {
                 let n = "overlayLock: lastMutexCall ".concat(X, "}");
-                q.error(n), R.default.track(M.AnalyticEvents.OVERLAY_HOOK_RESULT, {
+                q.error(n), R.default.track(L.AnalyticEvents.OVERLAY_HOOK_RESULT, {
                     success: !1,
                     error_description: n
                 })
@@ -87,7 +87,7 @@ function(e, t, n) {
                             var t, n, i, s, r, a, o;
                             if (null == l) continue;
                             let e = null != l.processName ? A.default.getGameByExecutable(l.processName) : null;
-                            R.default.track(M.AnalyticEvents.OVERLAY_HOOK_CRASHED, {
+                            R.default.track(L.AnalyticEvents.OVERLAY_HOOK_CRASHED, {
                                 process_name: null == l ? void 0 : l.processName,
                                 game_name: null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : null,
                                 game_id: null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : null,
@@ -104,7 +104,7 @@ function(e, t, n) {
         }
     }
     async function $(e) {
-        if (P.default.supportsFeature(M.NativeFeatures.CREATE_HOST_ON_ATTACH)) {
+        if (P.default.supportsFeature(L.NativeFeatures.CREATE_HOST_ON_ATTACH)) {
             if (w.size > 0) {
                 X = "reconcile.getOverlayURL";
                 let t = await es();
@@ -135,7 +135,7 @@ function(e, t, n) {
         }
         X = "detach.getOverlayModule";
         let t = await er();
-        X = "detach.transitionOverlayPIDStatus", J(e, null), e !== L.DEV_PID && (X = "detach.cancelAttachToProcess", g.cancelAttachToProcess(e), X = "detach.disconnectProcess", t.disconnectProcess(e)), X = "detach.reconcileHostProcess", await $(t)
+        X = "detach.transitionOverlayPIDStatus", J(e, null), e !== M.DEV_PID && (X = "detach.cancelAttachToProcess", g.cancelAttachToProcess(e), X = "detach.disconnectProcess", t.disconnectProcess(e)), X = "detach.reconcileHostProcess", await $(t)
     }
     async function en(e) {
         var t;
@@ -243,7 +243,7 @@ function(e, t, n) {
     let eu = (() => {
         let e = null;
         async function t() {
-            if (!b.OVERLAY_SUPPORTED || !(0, L.supportsOutOfProcess)()) throw q.error("Attempted to load out of process overlay on an unsupported platform."), Error("Out of Process Overlay is not supported on this platform.");
+            if (!b.OVERLAY_SUPPORTED || !(0, M.supportsOutOfProcess)()) throw q.error("Attempted to load out of process overlay on an unsupported platform."), Error("Out of Process Overlay is not supported on this platform.");
             try {
                 var e;
                 let {
@@ -272,7 +272,7 @@ function(e, t, n) {
             {
                 OutOfProcess: n
             } = t;
-        (0, L.setOutOfProcessSupport)(null != n), F ? (await $(t), ed()) : (await en(void 0), await $(t))
+        (0, M.setOutOfProcessSupport)(null != n), F ? (await $(t), ed()) : (await en(void 0), await $(t))
     });
 
     function ef(e) {
@@ -298,17 +298,17 @@ function(e, t, n) {
                 success: t,
                 ...n
             };
-        (0, f.createLayout)(L.OVERLAY_LAYOUT_ID, y.default.getDefaultLayout(L.OVERLAY_LAYOUT_ID), {
+        (0, f.createLayout)(M.OVERLAY_LAYOUT_ID, y.default.getDefaultLayout(M.OVERLAY_LAYOUT_ID), {
             width: n.graphics_width,
             height: n.graphics_height
-        }), R.default.track(M.AnalyticEvents.OVERLAY_HOOK_RESULT, a), q.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), a), t ? J(e, "CONNECTED", "CONNECTING") : J(e, "CONNECT_FAILED", "CONNECTING")
+        }), R.default.track(L.AnalyticEvents.OVERLAY_HOOK_RESULT, a), q.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), a), t ? J(e, "CONNECTED", "CONNECTING") : J(e, "CONNECT_FAILED", "CONNECTING")
     }
 
     function eE() {
         let e = C.default.getToken(),
             t = C.default.getId();
         null != e && m.send({
-            type: M.OverlayEventTypes.DISPATCH,
+            type: L.OverlayEventTypes.DISPATCH,
             pid: null,
             token: null,
             payloads: [{
@@ -320,10 +320,10 @@ function(e, t, n) {
     }
     async function eg(e) {
         let t = await er();
-        if (null != B && B !== L.DEV_PID && t.sendCommand(B, {
+        if (null != B && B !== M.DEV_PID && t.sendCommand(B, {
                 message: "intercept_input",
                 intercept: !e
-            }), (0, L.supportsOutOfProcess)()) {
+            }), (0, M.supportsOutOfProcess)()) {
             let t = await eu();
             t.setInteractionEnabled(!e)
         }
@@ -342,7 +342,7 @@ function(e, t, n) {
         _.default.relayClickZoneClicked(e, t, n)
     }
     async function ev(e) {
-        if (!(0, L.supportsOutOfProcess)()) return;
+        if (!(0, M.supportsOutOfProcess)()) return;
         let t = await eu();
         t.setClickZones(e.map(e => {
             let t = {
@@ -372,7 +372,7 @@ function(e, t, n) {
             return
         }
         V.size > 0 && (m.send({
-            type: M.OverlayEventTypes.DISPATCH,
+            type: L.OverlayEventTypes.DISPATCH,
             pid: null,
             token: null,
             payloads: Array.from(V)
@@ -385,34 +385,34 @@ function(e, t, n) {
 
     function eA(e) {
         switch (0, e.type) {
-            case M.OverlayEventTypes.CONNECT:
+            case L.OverlayEventTypes.CONNECT:
                 let t = C.default.getToken();
                 if (null == t) break;
-                (0, f.createLayout)(L.OVERLAY_LAYOUT_ID, y.default.getDefaultLayout(L.OVERLAY_LAYOUT_ID)), Promise.all([(0, T.default)(t, e.pid), l.default.PersistedStore.getAllStates()]).then(t => {
+                (0, f.createLayout)(M.OVERLAY_LAYOUT_ID, y.default.getDefaultLayout(M.OVERLAY_LAYOUT_ID)), Promise.all([(0, T.default)(t, e.pid), l.default.PersistedStore.getAllStates()]).then(t => {
                     let [n, i] = t, {
                         pid: s,
                         token: r
                     } = e;
                     m.send({
-                        type: M.OverlayEventTypes.STORAGE_SYNC,
+                        type: L.OverlayEventTypes.STORAGE_SYNC,
                         pid: s,
                         token: r,
                         states: i
                     }), m.send({
-                        type: M.OverlayEventTypes.DISPATCH,
+                        type: L.OverlayEventTypes.DISPATCH,
                         pid: s,
                         token: r,
                         payloads: [n]
                     }), J(s, "READY"), _.default.overlayReady(s)
                 });
                 break;
-            case M.OverlayEventTypes.DISPATCH:
+            case L.OverlayEventTypes.DISPATCH:
                 if (null != e.payloads) {
                     var n;
                     n = e.payloads, W = !0, n.forEach(e => u.default.dispatch(e)), W = !1
                 }
                 break;
-            case M.OverlayEventTypes.LOG_MESSAGES:
+            case L.OverlayEventTypes.LOG_MESSAGES:
                 q.info("[overlay data received]", e.payload)
         }
     }
@@ -457,8 +457,8 @@ function(e, t, n) {
             }, 50)
         },
         OVERLAY_SET_ASSOCIATED_GAME: function(e) {
-            if (!(0, L.isOutOfProcess)()) return;
-            (0, L.setPID)(e.associatedGamePID);
+            if (!(0, M.isOutOfProcess)()) return;
+            (0, M.setPID)(e.associatedGamePID);
             let t = () => new Promise(e => {
                     requestAnimationFrame(() => {
                         let t = new MessageChannel;
@@ -522,7 +522,7 @@ function(e, t, n) {
             } = e, n = crypto.getRandomValues(new Uint8Array(8));
             Y = btoa(String.fromCharCode(...n));
             let s = new URLSearchParams;
-            s.append("build_id", "18fe29aefc4d139ec320b6afda37420ef741002a"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
+            s.append("build_id", "c72ff7d4a3714c6961152b3bc63c64c400d0c196"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
         },
         OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
             let {

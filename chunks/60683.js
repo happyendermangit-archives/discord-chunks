@@ -1,4 +1,4 @@
-function(t, r, n) {
+function(t, r, e) {
     "use strict";
     t.exports = {
         IndexSizeError: {

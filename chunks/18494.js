@@ -30,8 +30,8 @@ function(e, t, n) {
     let O = "SelectedChannelStore",
         D = {},
         P = {},
-        L = {},
-        M = new Set;
+        M = {},
+        L = new Set;
 
     function b(e) {
         return String(e)
@@ -44,10 +44,10 @@ function(e, t, n) {
             lastChannelFollowingDestination: a,
             lastConnectedTime: l,
             selectedChannelIds: D,
-            mostRecentSelectedTextChannelIds: L,
-            knownThreadIds: c(D).values().concat(c.values(L)).filter(S.isNotNullish).uniq().filter(e => {
+            mostRecentSelectedTextChannelIds: M,
+            knownThreadIds: c(D).values().concat(c.values(M)).filter(S.isNotNullish).uniq().filter(e => {
                 let t = T.default.getBasicChannel(e);
-                return M.has(e) || null != t && p.THREAD_CHANNEL_TYPES.has(t.type)
+                return L.has(e) || null != t && p.THREAD_CHANNEL_TYPES.has(t.type)
             }).value()
         })
     }
@@ -60,11 +60,11 @@ function(e, t, n) {
     }
 
     function k(e, t) {
-        if (null == e || null == t || L[e] === t) return !1;
+        if (null == e || null == t || M[e] === t) return !1;
         let n = T.default.getChannel(t),
             i = null != n && (0, p.isGuildTextChannelType)(n.type),
             s = (null == n ? void 0 : n.getGuildId()) === e;
-        return !!i && !!s && (L[e] = t, !0)
+        return !!i && !!s && (M[e] = t, !0)
     }
 
     function V(e) {
@@ -77,23 +77,23 @@ function(e, t, n) {
         let e = !1,
             t = C.default.getGuilds();
         return c.each(D, (t, n) => {
-            (null == t || !T.default.hasChannel(t) && t !== r && !M.has(t) && !(0, R.isGuildHomeChannel)(t)) && (delete D[n], delete P[n], e = !0)
-        }), c.each(L, (t, n) => {
-            (null == t || !T.default.hasChannel(t) && !M.has(t)) && (delete L[n], e = !0)
+            (null == t || !T.default.hasChannel(t) && t !== r && !L.has(t) && !(0, R.isGuildHomeChannel)(t)) && (delete D[n], delete P[n], e = !0)
+        }), c.each(M, (t, n) => {
+            (null == t || !T.default.hasChannel(t) && !L.has(t)) && (delete M[n], e = !0)
         }), c.each(t, e => {
             let t = D[e.id];
-            null == L[e.id] && k(e.id, t)
+            null == M[e.id] && k(e.id, t)
         }), null != l && Date.now() - l >= 3e5 && (o = null, e = !0), e
     }
 
     function F(e, t) {
-        if (M.delete(e), null == t) {
+        if (L.delete(e), null == t) {
             let n = y.default.getGuildId();
             D[b(n)] === e && (t = n)
         }
         let n = null != C.default.getGuild(t) ? t : null,
             i = !1;
-        o === e && (o = null, i = !0), !(0, E.isInMainTabsExperiment)() && (D[b(n)] === e && (D[b(n)] = w(b(n)), y.default.getGuildId() === n && (0, m.replaceWith)(N.Routes.CHANNEL(t, D[b(n)])), i = !0), null != n && L[n] === e && (delete L[n], i = !0)), i && U()
+        o === e && (o = null, i = !0), !(0, E.isInMainTabsExperiment)() && (D[b(n)] === e && (D[b(n)] = w(b(n)), y.default.getGuildId() === n && (0, m.replaceWith)(N.Routes.CHANNEL(t, D[b(n)])), i = !0), null != n && M[n] === e && (delete M[n], i = !0)), i && U()
     }
 
     function x(e) {
@@ -115,9 +115,9 @@ function(e, t, n) {
                     lastChannelFollowingDestination: a,
                     lastConnectedTime: l,
                     selectedChannelIds: D,
-                    mostRecentSelectedTextChannelIds: L
+                    mostRecentSelectedTextChannelIds: M
                 };
-                null != n.knownThreadIds && (M = new Set(n.knownThreadIds)), o = n.selectedVoiceChannelId, a = n.lastChannelFollowingDestination, l = n.lastConnectedTime, L = null !== (t = n.mostRecentSelectedTextChannelIds) && void 0 !== t ? t : {}, null != n.selectedChannelIds && (D = {
+                null != n.knownThreadIds && (L = new Set(n.knownThreadIds)), o = n.selectedVoiceChannelId, a = n.lastChannelFollowingDestination, l = n.lastConnectedTime, M = null !== (t = n.mostRecentSelectedTextChannelIds) && void 0 !== t ? t : {}, null != n.selectedChannelIds && (D = {
                     ...n.selectedChannelIds,
                     null: null
                 })
@@ -135,7 +135,7 @@ function(e, t, n) {
         }
         getMostRecentSelectedTextChannelId(e) {
             var t;
-            return null == e ? null : null !== (t = L[e]) && void 0 !== t ? t : null
+            return null == e ? null : null !== (t = M[e]) && void 0 !== t ? t : null
         }
         getCurrentlySelectedChannelId(e) {
             return null != e ? D[e] : r
@@ -179,7 +179,7 @@ function(e, t, n) {
                 case N.ChannelTypes.GUILD_ANNOUNCEMENT:
                 case N.ChannelTypes.GUILD_TEXT:
                     let n = t.guild_id;
-                    if (null != n && null == L[n] && (L[n] = t.id), null != n && null == D[n]) return D[n] = w(n), !0
+                    if (null != n && null == M[n] && (M[n] = t.id), null != n && null == D[n]) return D[n] = w(n), !0
             }
             return !1
         },
@@ -208,7 +208,7 @@ function(e, t, n) {
                 }
             } = e;
             if (o === D[t] && (o = null), n) return !1;
-            delete L[t], delete D[t], U()
+            delete M[t], delete D[t], U()
         },
         VOICE_CHANNEL_SELECT: function(e) {
             let {
@@ -254,7 +254,7 @@ function(e, t, n) {
             }, U())
         },
         LOGOUT: function() {
-            D = {}, r = null, s = void 0, L = {}, a = {}, o = null, _.default.remove(O)
+            D = {}, r = null, s = void 0, M = {}, a = {}, o = null, _.default.remove(O)
         }
     })
 }

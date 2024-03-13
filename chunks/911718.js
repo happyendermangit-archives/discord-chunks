@@ -196,7 +196,7 @@ function(e, t, n) {
                 a[a.length] = n ? k(r, S, "$1") : t || e
             }), a
         },
-        O = function(e, t) {
+        x = function(e, t) {
             var n, a = e;
             if (b(g, a) && (a = "%" + (n = g[a])[0] + "%"), b(h, a)) {
                 var i = h[a];
@@ -215,7 +215,7 @@ function(e, t, n) {
         if (null === D(/^%?[^%]*%?$/, e)) throw new r("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
         var n = Y(e),
             a = n.length > 0 ? n[0] : "",
-            i = O("%" + a + "%", t),
+            i = x("%" + a + "%", t),
             u = i.name,
             l = i.value,
             c = !1,

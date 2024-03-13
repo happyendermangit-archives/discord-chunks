@@ -58,8 +58,8 @@ function(e, t, n) {
         R = n("56738"),
         I = n("406143"),
         O = n("990047"),
-        L = n("910107"),
-        j = n("840223"),
+        j = n("910107"),
+        L = n("840223"),
         N = n("721598"),
         F = n("362561"),
         B = n("240849"),
@@ -122,8 +122,8 @@ function(e, t, n) {
         "sv-SE": R.default,
         "tr-TR": I.default,
         "uk-UA": O.default,
-        "zh-CN": L.default,
-        "zh-TW": j.default
+        "zh-CN": j.default,
+        "zh-TW": L.default
     };
     class $ extends N.GridKeyboardDelegate {
         isCell(e) {

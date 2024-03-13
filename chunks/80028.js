@@ -68,10 +68,10 @@ function(e, t, n) {
             return P
         },
         CLIP_NAME_TEMPLATE: function() {
-            return L
+            return M
         },
         MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: function() {
-            return M
+            return L
         },
         CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY: function() {
             return b
@@ -116,8 +116,8 @@ function(e, t, n) {
         O = 640,
         D = 360,
         P = 100,
-        L = e => "Clip - ".concat(new Date(e).toLocaleString()),
-        M = 15,
+        M = e => "Clip - ".concat(new Date(e).toLocaleString()),
+        L = 15,
         b = 3e4,
         U = 30,
         w = 10,

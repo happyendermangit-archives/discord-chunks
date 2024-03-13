@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         default: function() {
-            return L
+            return M
         }
     }), n("222007");
     var s = n("917351"),
@@ -123,7 +123,7 @@ function(e, t, n) {
         }
     }
     P.displayName = "GuildSubscriptionsStore";
-    var L = new P(o.default, {
+    var M = new P(o.default, {
         CONNECTION_OPEN: N,
         CONNECTION_RESUMED: N,
         CONNECTION_CLOSED: function() {

@@ -1,25 +1,25 @@
-function(t, r, n) {
+function(e, t, n) {
     "use strict";
-    var e = n("859514"),
-        i = n("64980"),
+    var r = n("859514"),
+        a = n("64980"),
         o = n("590455"),
-        u = n("969708"),
-        a = n("998270"),
-        f = n("664144"),
-        c = i("".charAt);
-    e({
+        i = n("969708"),
+        s = n("998270"),
+        u = n("664144"),
+        l = a("".charAt);
+    r({
         target: "String",
         proto: !0,
-        forced: f(function() {
+        forced: u(function() {
             return "\uD842" !== "\uD842\uDFB7".at(-2)
         })
     }, {
-        at: function(t) {
-            var r = a(o(this)),
-                n = r.length,
-                e = u(t),
-                i = e >= 0 ? e : n + e;
-            return i < 0 || i >= n ? void 0 : c(r, i)
+        at: function(e) {
+            var t = s(o(this)),
+                n = t.length,
+                r = i(e),
+                a = r >= 0 ? r : n + r;
+            return a < 0 || a >= n ? void 0 : l(t, a)
         }
     })
 }

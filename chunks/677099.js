@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         default: function() {
-            return M
+            return L
         }
     }), n("70102"), n("222007");
     var s = n("714617"),
@@ -149,7 +149,7 @@ function(e, t, n) {
     }
     let D = (0, c.cachedFunction)((e, t) => e.sortedGuildNodes().map(e => e.id)),
         P = (0, c.cachedFunction)((e, t) => e.getRoots().map(v));
-    class L extends g.default {
+    class M extends g.default {
         initialize() {
             this.waitFor(E.default, m.default, d.default, _.default, u.default)
         }
@@ -170,7 +170,7 @@ function(e, t, n) {
         }
         takeSnapshot() {
             return {
-                version: L.LATEST_SNAPSHOT_VERSION,
+                version: M.LATEST_SNAPSHOT_VERSION,
                 data: {
                     tree: S.getSnapshot()
                 }
@@ -190,12 +190,12 @@ function(e, t, n) {
                 GUILD_FOLDER_EDIT_LOCAL: N,
                 GUILD_FOLDER_DELETE_LOCAL: R
             }), this.loadCache = () => {
-                let e = this.readSnapshot(L.LATEST_SNAPSHOT_VERSION),
+                let e = this.readSnapshot(M.LATEST_SNAPSHOT_VERSION),
                     t = null == e ? void 0 : e.tree;
                 null != t && (S = new l.GuildsTree).loadSnapshot(t)
             }
         }
     }
-    L.displayName = "SortedGuildStore", L.LATEST_SNAPSHOT_VERSION = 1;
-    var M = new L
+    M.displayName = "SortedGuildStore", M.LATEST_SNAPSHOT_VERSION = 1;
+    var L = new M
 }

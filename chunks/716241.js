@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         collectGuildAnalyticsMetadata: function() {
-            return L
+            return M
         },
         collectChannelAnalyticsMetadataFromId: function() {
-            return M
+            return L
         },
         collectChannelAnalyticsMetadata: function() {
             return b
@@ -63,7 +63,7 @@ function(e, t, n) {
         return t
     }
 
-    function L(e) {
+    function M(e) {
         var t;
         if (null == e) return null;
         let n = h.default.getGuild(e);
@@ -90,7 +90,7 @@ function(e, t, n) {
         }
     }
 
-    function M(e) {
+    function L(e) {
         if (null == e) return null;
         let t = d.default.getChannel(e);
         return null == t ? null : b(t)
@@ -146,7 +146,7 @@ function(e, t, n) {
         let _ = (t = f, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (s = null !== (i = t.getGuildId()) && void 0 !== i ? i : n) && void 0 !== s ? s : null);
         let h = {
             ...a,
-            ...L(_),
+            ...M(_),
             ...null != u && null != c && (0, D.isStaticChannelRoute)(c) ? (r = 0, {
                 channel_static_route: c,
                 channel_hidden: !1

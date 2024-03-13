@@ -14,7 +14,7 @@ function(e, t, n) {
             return O
         },
         hydratePreviouslyUnavailableGuild: function() {
-            return M
+            return L
         }
     }), n("424973"), n("222007"), n("70102");
     var i = n("627445"),
@@ -118,8 +118,8 @@ function(e, t, n) {
             let t = e.recipient_ids;
             null != t && (e.recipients = t.map(e => (s(null != C[e], "Missing user in compressed ready payload"), C[e]))), delete e.recipient_ids
         });
-        let v = null !== (i = null == f ? void 0 : f.map((e, t) => !0 === e.unavailable ? e : (e.members = D(C, null == d ? void 0 : d[t]), L(e)))) && void 0 !== i ? i : [],
-            I = R(t, f, e => L(e));
+        let v = null !== (i = null == f ? void 0 : f.map((e, t) => !0 === e.unavailable ? e : (e.members = D(C, null == d ? void 0 : d[t]), M(e)))) && void 0 !== i ? i : [],
+            I = R(t, f, e => M(e));
         return null != I && v.push(I), {
             ..._,
             users: r,
@@ -137,7 +137,7 @@ function(e, t, n) {
     function O(e, t) {
         var n, i, s;
         let r = m.default.getGuild(e.id),
-            a = M(e, null == r ? void 0 : {
+            a = L(e, null == r ? void 0 : {
                 properties: S.toServer(r),
                 roles: m.default.getRoles(r.id),
                 emojis: null !== (i = null === (n = h.default.getGuilds()[r.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
@@ -164,7 +164,7 @@ function(e, t, n) {
         return delete T[e], t
     }
 
-    function L(e) {
+    function M(e) {
         var t, n, i, s, r, a, o, l, u, d, c, f;
         let _ = P(e.id);
         if ("partial" !== e.data_mode) return {
@@ -224,7 +224,7 @@ function(e, t, n) {
         }
     }
 
-    function M(e, t) {
+    function L(e, t) {
         var n, i, s, r, a, o, l, u, d, c, f, _;
         if (null == t && (t = P(e.id)), "partial" !== e.data_mode) return {
             id: e.id,

@@ -121,7 +121,7 @@ function(e, t, n) {
 
     function T(e) {
         var t = e._readableState;
-        i("emitReadable_", t.destroyed, t.length, t.ended), !t.destroyed && (t.length || t.ended) && (e.emit("readable"), t.emittedReadable = !1), t.needReadable = !t.flowing && !t.ended && t.length <= t.highWaterMark, j(e)
+        i("emitReadable_", t.destroyed, t.length, t.ended), !t.destroyed && (t.length || t.ended) && (e.emit("readable"), t.emittedReadable = !1), t.needReadable = !t.flowing && !t.ended && t.length <= t.highWaterMark, L(e)
     }
 
     function A(e, t) {
@@ -166,7 +166,7 @@ function(e, t, n) {
         var d = function(e) {
             return function() {
                 var t = e._readableState;
-                i("pipeOnDrain", t.awaitDrain), t.awaitDrain && t.awaitDrain--, 0 === t.awaitDrain && u(e, "data") && (t.flowing = !0, j(e))
+                i("pipeOnDrain", t.awaitDrain), t.awaitDrain && t.awaitDrain--, 0 === t.awaitDrain && u(e, "data") && (t.flowing = !0, L(e))
             }
         }(n);
         e.on("drain", d);
@@ -238,15 +238,15 @@ function(e, t, n) {
     }, _.prototype.resume = function() {
         var e = this._readableState;
         return !e.flowing && (i("resume"), e.flowing = !e.readableListening, function(e, t) {
-            !t.resumeScheduled && (t.resumeScheduled = !0, c.nextTick(L, e, t))
+            !t.resumeScheduled && (t.resumeScheduled = !0, c.nextTick(j, e, t))
         }(this, e)), e.paused = !1, this
     };
 
-    function L(e, t) {
-        i("resume", t.reading), !t.reading && e.read(0), t.resumeScheduled = !1, e.emit("resume"), j(e), t.flowing && !t.reading && e.read(0)
+    function j(e, t) {
+        i("resume", t.reading), !t.reading && e.read(0), t.resumeScheduled = !1, e.emit("resume"), L(e), t.flowing && !t.reading && e.read(0)
     }
 
-    function j(e) {
+    function L(e) {
         var t = e._readableState;
         for (i("flow", t.flowing); t.flowing && null !== e.read(););
     }

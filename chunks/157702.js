@@ -214,22 +214,22 @@ function(e, t, n) {
         } = (0, c.useFocusable)((0, r.mergeProps)(e, {
             onFocus: () => t.setFocusedThumb(l),
             onBlur: () => t.setFocusedThumb(void 0)
-        }), g), L = (0, i.useRef)(void 0), j = e => {
-            C(), L.current = e, t.setThumbDragging(l, !0), S(window, "mouseup", N, !1), S(window, "touchend", N, !1), S(window, "pointerup", N, !1)
+        }), g), j = (0, i.useRef)(void 0), L = e => {
+            C(), j.current = e, t.setThumbDragging(l, !0), S(window, "mouseup", N, !1), S(window, "touchend", N, !1), S(window, "pointerup", N, !1)
         }, N = e => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === L.current && (C(), t.setThumbDragging(l, !1), k(window, "mouseup", N, !1), k(window, "touchend", N, !1), k(window, "pointerup", N, !1))
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === j.current && (C(), t.setThumbDragging(l, !1), k(window, "mouseup", N, !1), k(window, "touchend", N, !1), k(window, "pointerup", N, !1))
         }, F = t.getThumbPercent(l);
         (x || "rtl" === w) && (F = 1 - F);
         let B = y ? {} : (0, r.mergeProps)(R, I, {
             onMouseDown: e => {
-                0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && j()
+                0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && L()
             },
             onPointerDown: e => {
-                0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && j(e.pointerId)
+                0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && L(e.pointerId)
             },
             onTouchStart: e => {
-                j(e.changedTouches[0].identifier)
+                L(e.changedTouches[0].identifier)
             }
         });
         return (0, r.useFormReset)(g, D, e => {

@@ -37,8 +37,8 @@ function(e, t, n) {
         R = n("636311"),
         I = n("244754"),
         O = n("640455"),
-        L = n("436488"),
-        j = n("906362"),
+        j = n("436488"),
+        L = n("906362"),
         N = n("362561"),
         F = n("884691"),
         B = n("240849"),
@@ -188,7 +188,7 @@ function(e, t, n) {
         "sv-SE": R.default,
         "tr-TR": I.default,
         "uk-UA": O.default,
-        "zh-CN": L.default,
-        "zh-TW": j.default
+        "zh-CN": j.default,
+        "zh-TW": L.default
     }
 }

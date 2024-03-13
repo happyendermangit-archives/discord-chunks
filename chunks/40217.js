@@ -9,7 +9,7 @@ function(e, t, n) {
         s = n("884691"),
         r = n("677935"),
         a = n.n(r),
-        o = n("773179"),
+        o = n("582909"),
         l = n.n(o),
         u = n("784063"),
         d = n("104240"),
@@ -26,7 +26,7 @@ function(e, t, n) {
             ...h
         } = e, E = s.useRef(null), {
             current: g
-        } = s.useRef(l.uniqueId("media-engine-video-"));
+        } = s.useRef(l("media-engine-video-"));
         return s.useEffect(() => {
             let e = E.current;
             if (!n && null != e) {

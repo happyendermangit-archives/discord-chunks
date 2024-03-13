@@ -196,15 +196,15 @@ function(e, t, n) {
         }
     };
 
-    function L() {
+    function M() {
         P.reset()
     }
-    let M = [];
+    let L = [];
 
     function b() {
         let e = _.default.getAllApplicationStreams(),
-            t = M.concat(e);
-        M = e, t.forEach(e => {
+            t = L.concat(e);
+        L = e, t.forEach(e => {
             P.forEach(null, t => t.rebuildMember(e.ownerId))
         })
     }
@@ -233,8 +233,8 @@ function(e, t, n) {
     }
     w.displayName = "ChannelMemberStore";
     var k = new w(c.default, {
-        CONNECTION_OPEN: L,
-        OVERLAY_INITIALIZE: L,
+        CONNECTION_OPEN: M,
+        OVERLAY_INITIALIZE: M,
         GUILD_MEMBER_LIST_UPDATE: function(e) {
             let t = P.get(e.guildId, e.id);
             e.ops.forEach(e => {

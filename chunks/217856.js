@@ -1,17 +1,17 @@
-function(t, r, n) {
+function(e, t, n) {
     "use strict";
-    var e = n("859514"),
-        i = n("383053").right,
+    var r = n("859514"),
+        a = n("383053").right,
         o = n("528151"),
-        u = n("693523"),
-        a = n("106106");
-    e({
+        i = n("693523"),
+        s = n("106106");
+    r({
         target: "Array",
         proto: !0,
-        forced: !a && u > 79 && u < 83 || !o("reduceRight")
+        forced: !s && i > 79 && i < 83 || !o("reduceRight")
     }, {
-        reduceRight: function(t) {
-            return i(this, t, arguments.length, arguments.length > 1 ? arguments[1] : void 0)
+        reduceRight: function(e) {
+            return a(this, e, arguments.length, arguments.length > 1 ? arguments[1] : void 0)
         }
     })
 }

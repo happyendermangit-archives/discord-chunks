@@ -53,7 +53,7 @@ function(e, t, n) {
             return P
         },
         ACKED_RECENTLY_WINDOW_DAYS: function() {
-            return L
+            return M
         },
         UpcomingGuildEventNoticeTypes: function() {
             return l
@@ -82,6 +82,6 @@ function(e, t, n) {
     let O = 100,
         D = 2 * m.default.Millis.DAY,
         P = 12 * m.default.Millis.HOUR,
-        L = 4;
+        M = 4;
     (E = l || (l = {})).NEW_EVENT = "Upcoming Event Notice", E.EVENT_STARTING_SOON = "Event Starting Soon Notice", (g = u || (u = {}))[g.UNINTERESTED = 0] = "UNINTERESTED", g[g.INTERESTED = 1] = "INTERESTED"
 }

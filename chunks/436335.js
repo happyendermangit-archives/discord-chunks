@@ -1,11 +1,8 @@
-function(e, t, n) {
-    "use strict";
-    e.exports = {
-        caret: "caret_a8ea2b",
-        channelNameContainer: "channelNameContainer_e62c7b",
-        container: "container__94a29",
-        emojiContainer: "emojiContainer_bdfad4",
-        infoContainer: "infoContainer__18d69",
-        name: "name_b39c73"
+function(t, r, e) {
+    var n = e("344521"),
+        o = e("445286"),
+        i = e("169828");
+    t.exports = function(t) {
+        return i(t) ? n(t) : o(t)
     }
 }

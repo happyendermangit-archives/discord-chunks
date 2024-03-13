@@ -63,8 +63,8 @@ function(e, t, n) {
             }
         },
         P = {},
-        L = {},
-        M = new Set,
+        M = {},
+        L = new Set,
         b = new Set,
         U = {},
         w = {};
@@ -87,11 +87,11 @@ function(e, t, n) {
             var t;
             return f.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, v.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
         });
-        L[e] = new Set(l.map(e => e.channel_id)),
+        M[e] = new Set(l.map(e => e.channel_id)),
             function(e) {
                 var t;
                 if (null == e) return;
-                let n = new Set(L[e]),
+                let n = new Set(M[e]),
                     i = null !== (t = U[e]) && void 0 !== t ? t : {};
                 for (let e in i) {
                     let t = i[e];
@@ -224,7 +224,7 @@ function(e, t, n) {
         initialize(e) {
             if (this.waitFor(g.default, E.default, l.default, d.default), null != e) {
                 var t, n;
-                C = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (T = e.userGuildSettings, L = s.mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), s.forEach(T, (e, t) => {
+                C = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (T = e.userGuildSettings, M = s.mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), s.forEach(T, (e, t) => {
                     P[t] = z(e)
                 }))
             }
@@ -284,7 +284,7 @@ function(e, t, n) {
         }
         getMutedChannels(e) {
             var t;
-            return null !== (t = P[e]) && void 0 !== t ? t : M
+            return null !== (t = P[e]) && void 0 !== t ? t : L
         }
         isChannelMuted(e, t) {
             var n;
@@ -334,7 +334,7 @@ function(e, t, n) {
             return {
                 userGuildSettings: T,
                 mutedChannels: P,
-                optedInChannelsByGuild: L
+                optedInChannelsByGuild: M
             }
         }
         getChannelIdFlags(e, t) {
@@ -373,7 +373,7 @@ function(e, t, n) {
         }
         getOptedInChannels(e) {
             var t, n;
-            return l.default.isFullServerPreview(e) ? null !== (t = l.default.getViewingChannels(e)) && void 0 !== t ? t : b : null !== (n = L[e]) && void 0 !== n ? n : b
+            return l.default.isFullServerPreview(e) ? null !== (t = l.default.getViewingChannels(e)) && void 0 !== t ? t : b : null !== (n = M[e]) && void 0 !== n ? n : b
         }
         getOptedInChannelsWithPendingUpdates(e) {
             return w[e]
@@ -408,7 +408,7 @@ function(e, t, n) {
         }
         getAddedToMessages() {
             var e;
-            return null !== (e = L.null) && void 0 !== e ? e : b
+            return null !== (e = M.null) && void 0 !== e ? e : b
         }
         get accountNotificationSettings() {
             return y
@@ -481,14 +481,14 @@ function(e, t, n) {
             return !(null == t || l.default.isFullServerPreview(t)) && (x(t, n), !0)
         },
         CONNECTION_OPEN: function(e) {
-            K(e.notificationSettings), N.reset(), R.reset(), !e.userGuildSettings.partial && (T = {}, P = {}, L = {});
+            K(e.notificationSettings), N.reset(), R.reset(), !e.userGuildSettings.partial && (T = {}, P = {}, M = {});
             let t = new Set;
             for (let n in e.userGuildSettings.entries.forEach(e => {
                     !("channel_overrides" in e) && (e.channel_overrides = {}), k(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
                 }), T) !t.has(n) && V(n, T[n])
         },
         CACHE_LOADED: function(e) {
-            null != e.userGuildSettings && 0 !== e.userGuildSettings.length && (T = {}, P = {}, L = {}, e.userGuildSettings.forEach(e => {
+            null != e.userGuildSettings && 0 !== e.userGuildSettings.length && (T = {}, P = {}, M = {}, e.userGuildSettings.forEach(e => {
                 let t = e.guild_id;
                 T[t] = e;
                 let n = new Set,
@@ -498,7 +498,7 @@ function(e, t, n) {
                     let r = e.channel_overrides[t];
                     (0, o.computeIsMuted)(r) && n.add(t), f.hasFlag(null !== (s = r.flags) && void 0 !== s ? s : 0, v.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && i.add(t)
                 }
-                P[t] = n, L[t] = i
+                P[t] = n, M[t] = i
             }))
         },
         OVERLAY_INITIALIZE: function(e) {
@@ -511,10 +511,10 @@ function(e, t, n) {
             } = t;
             T = {
                 ...n
-            }, P = {}, L = {}, _.default.keys(i).forEach(e => {
+            }, P = {}, M = {}, _.default.keys(i).forEach(e => {
                 P[e] = new Set(i[e])
             }), _.default.keys(s).forEach(e => {
-                L[e] = new Set(s[e])
+                M[e] = new Set(s[e])
             })
         },
         GUILD_CREATE: q,

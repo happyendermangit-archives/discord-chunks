@@ -7,7 +7,7 @@ function(_, E, I) {
     }), I("70102");
     var e = I("10371"),
         a = I.n(e),
-        o = I("773179"),
+        o = I("91423"),
         R = I.n(o),
         t = I("58539"),
         A = I("891600"),
@@ -26,11 +26,11 @@ function(_, E, I) {
         Spacing: D
     } = r._private, S = Symbol("semanticColor"), C = {
         themes: c,
-        colors: R.mapValues(O, (_, E) => ({
+        colors: R(O, (_, E) => ({
             [S]: E
         })),
         unsafe_rawColors: n,
-        shadows: R.mapValues(L, _ => {
+        shadows: R(L, _ => {
             function E(E) {
                 return {
                     resolve: (I, e) => E(_[I].nativeStyles, e)

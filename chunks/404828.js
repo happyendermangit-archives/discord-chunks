@@ -153,17 +153,17 @@ function(e, t, n) {
                     content: S(t, e[1], n)
                 }
             },
-            O = function() {
+            x = function() {
                 return {}
             },
-            x = "(?:[*+-]|\\d+\\.)",
-            E = "( *)(" + x + ") +",
+            O = "(?:[*+-]|\\d+\\.)",
+            E = "( *)(" + O + ") +",
             P = RegExp("^" + E),
-            j = RegExp(E + "[^\\n]*(?:\\n(?!\\1" + x + " )[^\\n]*)*(\n|$)", "gm"),
+            j = RegExp(E + "[^\\n]*(?:\\n(?!\\1" + O + " )[^\\n]*)*(\n|$)", "gm"),
             C = /\n{2,}$/,
             H = /^ (?= *`)|(` *) $/g,
             F = / *\n+$/,
-            A = RegExp("^( *)(" + x + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + x + " )\\n*|\\s*\n*$)"),
+            A = RegExp("^( *)(" + O + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + O + " )\\n*|\\s*\n*$)"),
             I = /(?:^|\n)( *)$/;
         var N = (e = /^ *\| *| *\| *$/g, t = / *$/, n = /^ *-+: *$/, r = /^ *:-+: *$/, a = /^ *:-+ *$/, o = function(e) {
                 if (n.test(e)) return "right";
@@ -287,7 +287,7 @@ function(e, t, n) {
                 hr: {
                     order: K++,
                     match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
-                    parse: O,
+                    parse: x,
                     react: function(e, t, n) {
                         return g("hr", n.key, b)
                     },
@@ -490,7 +490,7 @@ function(e, t, n) {
                     order: K++,
                     requiredFirstCharacters: ["\n"],
                     match: h(/^(?:\n *)*\n/),
-                    parse: O,
+                    parse: x,
                     react: function(e, t, n) {
                         return "\n"
                     },
@@ -762,7 +762,7 @@ function(e, t, n) {
                     order: K++,
                     requiredFirstCharacters: [" "],
                     match: y(/^ {2,}\n/),
-                    parse: O,
+                    parse: x,
                     react: function(e, t, n) {
                         return g("br", n.key, b)
                     },

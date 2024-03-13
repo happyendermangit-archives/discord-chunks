@@ -142,7 +142,7 @@ function(e, t, r) {
         t._ = t.p.length;
         var r = t.p[0],
             u = void 0 !== e && e !== r;
-        return t.h.O || C("ES5").S(t, e, u), u ? (r[q].P && (E(t), n(4)), a(e) && (e = y(t, e), t.l || x(t, e)), t.u && C("Patches").M(r[q].t, e, t.u, t.s)) : e = y(t, r, []), E(t), t.u && t.v(t.u, t.s), e !== L ? e : void 0
+        return t.h.O || C("ES5").S(t, e, u), u ? (r[q].P && (E(t), n(4)), a(e) && (e = y(t, e), t.l || O(t, e)), t.u && C("Patches").M(r[q].t, e, t.u, t.s)) : e = y(t, r, []), E(t), t.u && t.v(t.u, t.s), e !== L ? e : void 0
     }
 
     function y(e, t, r) {
@@ -152,7 +152,7 @@ function(e, t, r) {
             return w(e, n, t, u, a, r)
         }, !0), t;
         if (n.A !== e) return t;
-        if (!n.P) return x(e, n.t, !0), n.t;
+        if (!n.P) return O(e, n.t, !0), n.t;
         if (!n.I) {
             n.I = !0, n.A._--;
             var u = 4 === n.i || 5 === n.i ? n.o = D(n.k) : n.o,
@@ -160,7 +160,7 @@ function(e, t, r) {
                 i = !1;
             3 === n.i && (a = new Set(u), u.clear(), i = !0), o(a, function(t, a) {
                 return w(e, n, u, t, a, r, i)
-            }), x(e, u, !1), r && e.u && C("Patches").N(n, r, e.u, e.s)
+            }), O(e, u, !1), r && e.u && C("Patches").N(n, r, e.u, e.s)
         }
         return n.o
     }
@@ -173,15 +173,15 @@ function(e, t, r) {
         } else c && r.add(o);
         if (a(o) && !p(o)) {
             if (!e.h.D && e._ < 1) return;
-            y(e, o), t && t.A.l || x(e, o)
+            y(e, o), t && t.A.l || O(e, o)
         }
     }
 
-    function x(e, t, r) {
+    function O(e, t, r) {
         void 0 === r && (r = !1), !e.l && e.h.D && e.m && h(t, r)
     }
 
-    function O(e, t) {
+    function x(e, t) {
         var r = e[q];
         return (r ? d(r) : e)[t]
     }
@@ -220,7 +220,7 @@ function(e, t, r) {
         return (r ? r.A : M).p.push(h), h
     }
 
-    function T(e, t) {
+    function R(e, t) {
         switch (t) {
             case 2:
                 return new Map(e);
@@ -229,11 +229,11 @@ function(e, t, r) {
         }
         return D(e)
     }
-    var R, M, N = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
+    var T, M, N = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
         z = "undefined" != typeof Map,
         I = "undefined" != typeof Set,
         W = "undefined" != typeof Proxy && void 0 !== Proxy.revocable && "undefined" != typeof Reflect,
-        L = N ? Symbol.for("immer-nothing") : ((R = {})["immer-nothing"] = !0, R),
+        L = N ? Symbol.for("immer-nothing") : ((T = {})["immer-nothing"] = !0, T),
         _ = N ? Symbol.for("immer-draftable") : "__$immer_draftable",
         q = N ? Symbol.for("immer-state") : "__$immer_state",
         V = "" + Object.prototype.constructor,
@@ -256,7 +256,7 @@ function(e, t, r) {
                     return r = e, (u = k(o, t)) ? "value" in u ? u.value : null === (n = u.get) || void 0 === n ? void 0 : n.call(r.k) : void 0
                 }
                 var i = o[t];
-                return e.I || !a(i) ? i : i === O(e.t, t) ? (j(e), e.o[t] = S(e.A.h, i, e)) : i
+                return e.I || !a(i) ? i : i === x(e.t, t) ? (j(e), e.o[t] = S(e.A.h, i, e)) : i
             },
             has: function(e, t) {
                 return t in d(e)
@@ -268,7 +268,7 @@ function(e, t, r) {
                 var n = k(d(e), t);
                 if (null == n ? void 0 : n.set) return n.set.call(e.k, r), !0;
                 if (!e.P) {
-                    var u, a, o = O(d(e), t),
+                    var u, a, o = x(d(e), t),
                         i = null == o ? void 0 : o[q];
                     if (i && i.t === r) return e.o[t] = r, e.R[t] = !1, !0;
                     if (((u = r) === (a = o) ? 0 !== u || 1 / u == 1 / a : u != u && a != a) && (void 0 !== r || s(e.t, t))) return !0;
@@ -277,7 +277,7 @@ function(e, t, r) {
                 return e.o[t] === r && (void 0 !== r || t in e.o) || Number.isNaN(r) && Number.isNaN(e.o[t]) || (e.o[t] = r, e.R[t] = !0), !0
             },
             deleteProperty: function(e, t) {
-                return void 0 !== O(e.t, t) || t in e.t ? (e.R[t] = !1, j(e), P(e)) : delete e.R[t], e.o && delete e.o[t], !0
+                return void 0 !== x(e.t, t) || t in e.t ? (e.R[t] = !1, j(e), P(e)) : delete e.R[t], e.o && delete e.o[t], !0
             },
             getOwnPropertyDescriptor: function(e, t) {
                 var r = d(e),
@@ -373,8 +373,8 @@ function(e, t, r) {
                         u = i(t);
                     if (n) {
                         if (!n.P && (n.i < 4 || !C("ES5").K(n))) return n.t;
-                        n.I = !0, r = T(t, u), n.I = !1
-                    } else r = T(t, u);
+                        n.I = !0, r = R(t, u), n.I = !1
+                    } else r = R(t, u);
                     return o(r, function(t, u) {
                         var a, o;
                         n && (a = n.t, o = t, (2 === i(a) ? a.get(o) : a[o]) === u) || l(r, t, e(u))

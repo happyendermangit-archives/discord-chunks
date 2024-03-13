@@ -12,8 +12,8 @@ function(e, a, t) {
         i = t.n(c),
         r = t("872717"),
         o = t("784063"),
-        l = t("625454"),
-        f = t("441822"),
+        f = t("625454"),
+        l = t("441822"),
         u = t("862337"),
         p = t("913144"),
         b = t("605250"),
@@ -27,12 +27,12 @@ function(e, a, t) {
     let T = {},
         O = new u.Timeout,
         R = !1,
-        w = window.document.createElement("canvas");
-    w.width = 512, w.height = 288;
-    let v = w.getContext("2d");
+        v = window.document.createElement("canvas");
+    v.width = 512, v.height = 288;
+    let w = v.getContext("2d");
 
     function A() {
-        O.stop(), null != s && (l.default.removeSink(s, T), s = null)
+        O.stop(), null != s && (f.default.removeSink(s, T), s = null)
     }
     let S = i.debounce((e, a, t, s) => {
         N(e, (0, _.encodeStreamKey)({
@@ -62,12 +62,12 @@ function(e, a, t) {
                         };
                         d ? t.getNextVideoOutputFrame(e).then(i, a => {
                             if (s === e) throw a
-                        }) : l.default.addSink(e, T, i)
+                        }) : f.default.addSink(e, T, i)
                     }).finally(() => {
-                        !d && l.default.removeSink(e, T)
+                        !d && f.default.removeSink(e, T)
                     })
                 } : function(e, a) {
-                    let t = (0, f.getVideoStream)(e);
+                    let t = (0, l.getVideoStream)(e);
                     if (null == t) return Promise.resolve(new ImageData(0, 0));
                     let {
                         width: s,
@@ -101,16 +101,16 @@ function(e, a, t) {
                     s = Math.min(a, t),
                     d = e.width * s,
                     n = e.height * s;
-                w.width = d, w.height = n;
+                v.width = d, v.height = n;
                 let c = window.document.createElement("canvas"),
                     i = c.getContext("2d");
                 c.width = e.width, c.height = e.height;
                 let r = new ImageData(e.data, e.width, e.height);
                 return null == i || i.putImageData(r, 0, 0), new Promise(a => {
-                    null == v || v.drawImage(c, 0, 0, e.width, e.height, 0, 0, d, n), a()
+                    null == w || w.drawImage(c, 0, 0, e.width, e.height, 0, 0, d, n), a()
                 })
             }(t);
-            let d = w.toDataURL("image/jpeg");
+            let d = v.toDataURL("image/jpeg");
             if (p.default.dispatch({
                     type: "STREAM_PREVIEW_FETCH_SUCCESS",
                     streamKey: a,

@@ -101,12 +101,12 @@ function(e, t, n) {
         if (!S.match) throw RangeError("locale must contain match property");
         var Y = (0, c.default)(null !== (F = null !== (A = null !== (I = null !== (N = null == _ ? void 0 : _.firstWeekContainsDate) && void 0 !== N ? N : null == _ ? void 0 : null === (R = _.locale) || void 0 === R ? void 0 : null === (z = R.options) || void 0 === z ? void 0 : z.firstWeekContainsDate) && void 0 !== I ? I : T.firstWeekContainsDate) && void 0 !== A ? A : null === (W = T.locale) || void 0 === W ? void 0 : null === (B = W.options) || void 0 === B ? void 0 : B.firstWeekContainsDate) && void 0 !== F ? F : 1);
         if (!(Y >= 1 && Y <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-        var O = (0, c.default)(null !== (U = null !== (K = null !== (V = null !== (J = null == _ ? void 0 : _.weekStartsOn) && void 0 !== J ? J : null == _ ? void 0 : null === (q = _.locale) || void 0 === q ? void 0 : null === (G = q.options) || void 0 === G ? void 0 : G.weekStartsOn) && void 0 !== V ? V : T.weekStartsOn) && void 0 !== K ? K : null === ($ = T.locale) || void 0 === $ ? void 0 : null === (Q = $.options) || void 0 === Q ? void 0 : Q.weekStartsOn) && void 0 !== U ? U : 0);
-        if (!(O >= 0 && O <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
+        var x = (0, c.default)(null !== (U = null !== (K = null !== (V = null !== (J = null == _ ? void 0 : _.weekStartsOn) && void 0 !== J ? J : null == _ ? void 0 : null === (q = _.locale) || void 0 === q ? void 0 : null === (G = q.options) || void 0 === G ? void 0 : G.weekStartsOn) && void 0 !== V ? V : T.weekStartsOn) && void 0 !== K ? K : null === ($ = T.locale) || void 0 === $ ? void 0 : null === (Q = $.options) || void 0 === Q ? void 0 : Q.weekStartsOn) && void 0 !== U ? U : 0);
+        if (!(x >= 0 && x <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
         if ("" === D) return "" === L ? (0, o.default)(n) : new Date(NaN);
-        var x = {
+        var O = {
                 firstWeekContainsDate: Y,
-                weekStartsOn: O,
+                weekStartsOn: x,
                 locale: S
             },
             E = [new f.DateToSystemTimezoneSetter],
@@ -135,7 +135,7 @@ function(e, t, n) {
                             token: n,
                             fullToken: t
                         });
-                        var i = r.run(L, t, S.match, x);
+                        var i = r.run(L, t, S.match, O);
                         if (!i) return {
                             v: new Date(NaN)
                         };
@@ -181,8 +181,8 @@ function(e, t, n) {
         try {
             for (ei.s(); !(eo = ei.n()).done;) {
                 var es = eo.value;
-                if (!es.validate(er, x)) return new Date(NaN);
-                var eu = es.set(er, ea, x);
+                if (!es.validate(er, O)) return new Date(NaN);
+                var eu = es.set(er, ea, O);
                 Array.isArray(eu) ? (er = eu[0], (0, i.default)(ea, eu[1])) : er = eu
             }
         } catch (e) {

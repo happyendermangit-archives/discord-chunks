@@ -328,10 +328,10 @@ function(e, t, n) {
                             R = A[0],
                             I = A[1],
                             O = t.useRef(null),
-                            L = t.useRef(null),
-                            j = M("mounts <".concat(i, ">")),
-                            N = j.setCart,
-                            F = j.setCartState;
+                            j = t.useRef(null),
+                            L = M("mounts <".concat(i, ">")),
+                            N = L.setCart,
+                            F = L.setCartState;
                         C(R, "blur", d), C(R, "focus", l), C(R, "escape", v), C(R, "click", g), C(R, "loaderror", m), C(R, "loaderstart", y), C(R, "networkschange", x), C(R, "lineitemclick", S), C(R, "confirm", k), C(R, "cancel", E), C(R, "shippingaddresschange", D), C(R, "shippingratechange", P), "cart" === e ? r = function(e) {
                             F(e), f && f(e)
                         } : f && (r = "expressCheckout" === e ? f : function() {
@@ -341,9 +341,9 @@ function(e, t, n) {
                         } : h), C(R, "checkout", "cart" === e ? function(e) {
                             F(e), w && w(e)
                         } : w), t.useLayoutEffect(function() {
-                            if (null === O.current && T && null !== L.current) {
+                            if (null === O.current && T && null !== j.current) {
                                 var t = T.create(e, u);
-                                "cart" === e && N && N(t), O.current = t, I(t), t.mount(L.current)
+                                "cart" === e && N && N(t), O.current = t, I(t), t.mount(j.current)
                             }
                         }, [T, u, N]);
                         var B = p(u);
@@ -361,7 +361,7 @@ function(e, t, n) {
                         }, []), t.createElement("div", {
                             id: o,
                             className: a,
-                            ref: L
+                            ref: j
                         })
                     };
                 return Element.propTypes = {
@@ -390,8 +390,8 @@ function(e, t, n) {
             R = P("card", T),
             I = P("cardNumber", T),
             O = P("cardExpiry", T),
-            L = P("cardCvc", T),
-            j = P("fpxBank", T),
+            j = P("cardCvc", T),
+            L = P("fpxBank", T),
             N = P("iban", T),
             F = P("idealBank", T),
             B = P("p24Bank", T),
@@ -406,7 +406,7 @@ function(e, t, n) {
             Z = P("paymentMethodMessaging", T),
             Y = P("affirmMessage", T),
             X = P("afterpayClearpayMessage", T);
-        e.AddressElement = q, e.AffirmMessageElement = Y, e.AfterpayClearpayMessageElement = X, e.AuBankAccountElement = A, e.CardCvcElement = L, e.CardElement = R, e.CardExpiryElement = O, e.CardNumberElement = I, e.CartElement = W, e.Elements = E, e.ElementsConsumer = D, e.EpsBankElement = z, e.ExpressCheckoutElement = V, e.FpxBankElement = j, e.IbanElement = N, e.IdealBankElement = F, e.LinkAuthenticationElement = H, e.P24BankElement = B, e.PaymentElement = K, e.PaymentMethodMessagingElement = Z, e.PaymentRequestButtonElement = U, e.ShippingAddressElement = G, e.useCartElement = function() {
+        e.AddressElement = q, e.AffirmMessageElement = Y, e.AfterpayClearpayMessageElement = X, e.AuBankAccountElement = A, e.CardCvcElement = j, e.CardElement = R, e.CardExpiryElement = O, e.CardNumberElement = I, e.CartElement = W, e.Elements = E, e.ElementsConsumer = D, e.EpsBankElement = z, e.ExpressCheckoutElement = V, e.FpxBankElement = L, e.IbanElement = N, e.IdealBankElement = F, e.LinkAuthenticationElement = H, e.P24BankElement = B, e.PaymentElement = K, e.PaymentMethodMessagingElement = Z, e.PaymentRequestButtonElement = U, e.ShippingAddressElement = G, e.useCartElement = function() {
             return M("calls useCartElement()").cart
         }, e.useCartElementState = function() {
             return M("calls useCartElementState()").cartState

@@ -20,10 +20,10 @@ function(e, t, n) {
             return P
         },
         createCardToken: function() {
-            return L
+            return M
         },
         confirmEPS: function() {
-            return M
+            return L
         },
         confirmIdeal: function() {
             return b
@@ -373,7 +373,7 @@ function(e, t, n) {
             extra: s
         }), u
     }
-    async function L(e, t) {
+    async function M(e, t) {
         if (null == e || null == t) throw P("Stripe or elements not loaded");
         let n = t.getElement(i.CardNumberElement);
         if (null == n) throw P("Unable to load card elements from Stripe");
@@ -385,7 +385,7 @@ function(e, t, n) {
         if (null == s) throw P("token not available with successful stripe call");
         return s.id
     }
-    async function M(e, t, n, i) {
+    async function L(e, t, n, i) {
         if (null == e) throw P("Stripe not loaded");
         if (null == t) throw P("Bank required for EPS");
         let {

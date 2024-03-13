@@ -1,9 +1,9 @@
-function(e, t, r) {
-    var Symbol = r("506264"),
-        n = r("754892"),
-        u = r("19797"),
-        a = Symbol ? Symbol.toStringTag : void 0;
-    e.exports = function(e) {
-        return null == e ? void 0 === e ? "[object Undefined]" : "[object Null]" : a && a in Object(e) ? n(e) : u(e)
+function(t, r, e) {
+    var Symbol = e("506264"),
+        n = e("754892"),
+        o = e("19797"),
+        i = Symbol ? Symbol.toStringTag : void 0;
+    t.exports = function(t) {
+        return null == t ? void 0 === t ? "[object Undefined]" : "[object Null]" : i && i in Object(t) ? n(t) : o(t)
     }
 }

@@ -1,8 +1,8 @@
-function(t, r, n) {
+function(t, r, e) {
     "use strict";
-    var e = TypeError;
+    var n = TypeError;
     t.exports = function(t, r) {
-        if (t < r) throw e("Not enough arguments");
+        if (t < r) throw n("Not enough arguments");
         return t
     }
 }

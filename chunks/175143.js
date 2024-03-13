@@ -1,20 +1,20 @@
-function(t, r, n) {
+function(e, t, n) {
     "use strict";
-    var e = n("859514"),
-        i = n("116180"),
+    var r = n("859514"),
+        a = n("116180"),
         o = n("308274"),
-        u = n("969708"),
-        a = n("505713");
-    e({
+        i = n("969708"),
+        s = n("505713");
+    r({
         target: "Array",
         proto: !0
     }, {
-        at: function(t) {
-            var r = i(this),
-                n = o(r),
-                e = u(t),
-                a = e >= 0 ? e : n + e;
-            return a < 0 || a >= n ? void 0 : r[a]
+        at: function(e) {
+            var t = a(this),
+                n = o(t),
+                r = i(e),
+                s = r >= 0 ? r : n + r;
+            return s < 0 || s >= n ? void 0 : t[s]
         }
-    }), a("at")
+    }), s("at")
 }

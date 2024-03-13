@@ -45,7 +45,7 @@ function(e, t, n) {
 
     function D(e) {
         !N.has(e) && (N.add(e), a(_.default.getMutableGuildChannelsForGuild(e)).values().forEach(e => {
-            M(e) && y.set(e.id, e)
+            L(e) && y.set(e.id, e)
         }))
     }
 
@@ -53,22 +53,22 @@ function(e, t, n) {
         let t = R[e];
         if (null != t) return t;
         let n = _.default.getChannel(e);
-        return null != n && n.isGuildStageVoice() ? (D(n.guild_id), M(n)) ? L(e) : null : null
+        return null != n && n.isGuildStageVoice() ? (D(n.guild_id), L(n)) ? M(e) : null : null
     }
 
-    function L(e) {
+    function M(e) {
         let t = R[e];
         return null == t && (t = new T.default(e), R[e] = t, t.rebuild()), t
     }
 
-    function M(e) {
+    function L(e) {
         return null != e && e.isGuildStageVoice() && v.default.countVoiceStatesForChannel(e.id) > 0
     }
 
     function b(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O();
         return t.reduce((t, n) => {
-            let i = L(n),
+            let i = M(n),
                 s = e(i);
             return s ? (! function(e, t) {
                 let n = _.default.getChannel(e);
@@ -231,7 +231,7 @@ function(e, t, n) {
         GUILD_DELETE: x,
         PASSIVE_UPDATE_V1: function(e) {
             let t = !1;
-            for (let n of O(e.guildId)) t = L(n).rebuild() || t;
+            for (let n of O(e.guildId)) t = M(n).rebuild() || t;
             return t
         }
     })

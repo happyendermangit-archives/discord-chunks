@@ -35,15 +35,15 @@ function(e, t, n) {
             T = void 0 === D ? 0 : D,
             S = v.y,
             Y = void 0 === S ? 0 : S,
-            O = "function" == typeof k ? k({
+            x = "function" == typeof k ? k({
                 x: T,
                 y: Y
             }) : {
                 x: T,
                 y: Y
             };
-        T = O.x, Y = O.y;
-        var x = v.hasOwnProperty("x"),
+        T = x.x, Y = x.y;
+        var O = v.hasOwnProperty("x"),
             E = v.hasOwnProperty("y"),
             P = r.left,
             j = r.top,
@@ -67,7 +67,7 @@ function(e, t, n) {
             x: T,
             y: Y
         };
-        return (T = N.x, Y = N.y, M) ? Object.assign({}, I, ((m = {})[j] = E ? "0" : "", m[P] = x ? "0" : "", m.transform = 1 >= (C.devicePixelRatio || 1) ? "translate(" + T + "px, " + Y + "px)" : "translate3d(" + T + "px, " + Y + "px, 0)", m)) : Object.assign({}, I, ((p = {})[j] = E ? Y + "px" : "", p[P] = x ? T + "px" : "", p.transform = "", p))
+        return (T = N.x, Y = N.y, M) ? Object.assign({}, I, ((m = {})[j] = E ? "0" : "", m[P] = O ? "0" : "", m.transform = 1 >= (C.devicePixelRatio || 1) ? "translate(" + T + "px, " + Y + "px)" : "translate3d(" + T + "px, " + Y + "px, 0)", m)) : Object.assign({}, I, ((p = {})[j] = E ? Y + "px" : "", p[P] = O ? T + "px" : "", p.transform = "", p))
     }
     var p = {
         name: "computeStyles",

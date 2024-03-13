@@ -123,11 +123,11 @@ function(e, t, n) {
             return i + o
         }
 
-        function O(e) {
+        function x(e) {
             !1 === t.suppressDeprecationWarnings && "undefined" != typeof console && console.warn && console.warn("Deprecation warning: " + e)
         }
 
-        function x(e, n) {
+        function O(e, n) {
             var r = !0;
             return c(function() {
                 if (null != t.deprecationHandler && t.deprecationHandler(null, e), r) {
@@ -138,7 +138,7 @@ function(e, t, n) {
                         } else a = arguments[i];
                         o.push(a)
                     }
-                    O(e + "\nArguments: " + Array.prototype.slice.call(o).join("") + "\n" + Error().stack), r = !1
+                    x(e + "\nArguments: " + Array.prototype.slice.call(o).join("") + "\n" + Error().stack), r = !1
                 }
                 return n.apply(this, arguments)
             }, n)
@@ -146,7 +146,7 @@ function(e, t, n) {
         var E = {};
 
         function P(e, n) {
-            null != t.deprecationHandler && t.deprecationHandler(e, n), !E[e] && (O(n), E[e] = !0)
+            null != t.deprecationHandler && t.deprecationHandler(e, n), !E[e] && (x(n), E[e] = !0)
         }
 
         function j(e) {
@@ -363,11 +363,11 @@ function(e, t, n) {
             return n = Math.min(e.date(), eL(e.year(), t)), e._d["set" + (e._isUTC ? "UTC" : "") + "Month"](t, n), e
         }
 
-        function eO(e) {
+        function ex(e) {
             return null != e ? (eY(this, e), t.updateOffset(this, !0), this) : ew(this, "Month")
         }
 
-        function ex() {
+        function eO() {
             function e(e, t) {
                 return t.length - e.length
             }
@@ -774,7 +774,7 @@ function(e, t, n) {
                 return null == n ? t : null != e.meridiemHour ? e.meridiemHour(t, n) : null != e.isPM ? ((r = e.isPM(n)) && t < 12 && (t += 12), !r && 12 === t && (t = 0), t) : t
             }(e._locale, e._a[3], e._meridiem), e0(e), eX(e)
         }
-        t.createFromInputFallback = x("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.", function(e) {
+        t.createFromInputFallback = O("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.", function(e) {
             e._d = new Date(e._i + (e._useUTC ? " UTC" : ""))
         }), t.ISO_8601 = function() {}, t.RFC_2822 = function() {};
 
@@ -832,11 +832,11 @@ function(e, t, n) {
         function ta(e, t, n, r) {
             return tr(e, t, n, r, !1)
         }
-        var to = x("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
+        var to = O("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
                 var e = ta.apply(null, arguments);
                 return this.isValid() && e.isValid() ? e < this ? this : e : m()
             }),
-            ti = x("moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
+            ti = O("moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/", function() {
                 var e = ta.apply(null, arguments);
                 return this.isValid() && e.isValid() ? e > this ? this : e : m()
             });
@@ -989,11 +989,11 @@ function(e, t, n) {
             var t;
             return void 0 === e ? this._locale._abbr : (null != (t = eQ(e)) && (this._locale = t), this)
         }
-        var tO = x("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", function(e) {
+        var tx = O("moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.", function(e) {
             return void 0 === e ? this.localeData() : this.locale(e)
         });
 
-        function tx() {
+        function tO() {
             return this._locale
         }
 
@@ -1142,7 +1142,7 @@ function(e, t, n) {
             return this.isSame(e, t) || this.isBefore(e, t)
         }, tN.isValid = function() {
             return p(this)
-        }, tN.lang = tO, tN.locale = tY, tN.localeData = tx, tN.max = ti, tN.min = to, tN.parsingFlags = function() {
+        }, tN.lang = tx, tN.locale = tY, tN.localeData = tO, tN.max = ti, tN.min = to, tN.parsingFlags = function() {
             return c({}, f(this))
         }, tN.set = function(e, t) {
             if ("object" == typeof e) {
@@ -1232,7 +1232,7 @@ function(e, t, n) {
             return tP.call(this, e, this.isoWeek(), this.isoWeekday(), 1, 4)
         }, tN.quarter = tN.quarters = function(e) {
             return null == e ? Math.ceil((this.month() + 1) / 3) : this.month((e - 1) * 3 + this.month() % 3)
-        }, tN.month = eO, tN.daysInMonth = function() {
+        }, tN.month = ex, tN.daysInMonth = function() {
             return eL(this.year(), this.month())
         }, tN.week = tN.weeks = function(e) {
             var t = this.localeData().week(this);
@@ -1293,9 +1293,9 @@ function(e, t, n) {
             return this._isUTC ? "UTC" : ""
         }, tN.zoneName = function() {
             return this._isUTC ? "Coordinated Universal Time" : ""
-        }, tN.dates = x("dates accessor is deprecated. Use date instead.", tC), tN.months = x("months accessor is deprecated. Use month instead", eO), tN.years = x("years accessor is deprecated. Use year instead", eb), tN.zone = x("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
+        }, tN.dates = O("dates accessor is deprecated. Use date instead.", tC), tN.months = O("months accessor is deprecated. Use month instead", ex), tN.years = O("years accessor is deprecated. Use year instead", eb), tN.zone = O("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", function(e, t) {
             return null != e ? ("string" != typeof e && (e = -e), this.utcOffset(e, t), this) : -this.utcOffset()
-        }), tN.isDSTShifted = x("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
+        }), tN.isDSTShifted = O("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", function() {
             if (!o(this._isDSTShifted)) return this._isDSTShifted;
             var e = {};
             if (w(e, this), (e = tn(e))._a) {
@@ -1368,9 +1368,9 @@ function(e, t, n) {
                 else if (!n && this._monthsParse[r].test(e)) return r
             }
         }, tz.monthsRegex = function(e) {
-            return this._monthsParseExact ? (!l(this, "_monthsRegex") && ex.call(this), e) ? this._monthsStrictRegex : this._monthsRegex : (!l(this, "_monthsRegex") && (this._monthsRegex = ed), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex)
+            return this._monthsParseExact ? (!l(this, "_monthsRegex") && eO.call(this), e) ? this._monthsStrictRegex : this._monthsRegex : (!l(this, "_monthsRegex") && (this._monthsRegex = ed), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex)
         }, tz.monthsShortRegex = function(e) {
-            return this._monthsParseExact ? (!l(this, "_monthsRegex") && ex.call(this), e) ? this._monthsShortStrictRegex : this._monthsShortRegex : (!l(this, "_monthsShortRegex") && (this._monthsShortRegex = ed), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
+            return this._monthsParseExact ? (!l(this, "_monthsRegex") && eO.call(this), e) ? this._monthsShortStrictRegex : this._monthsShortRegex : (!l(this, "_monthsShortRegex") && (this._monthsShortRegex = ed), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
         }, tz.week = function(e) {
             return eH(e, this._week.dow, this._week.doy).week
         }, tz.firstDayOfYear = function() {
@@ -1410,7 +1410,7 @@ function(e, t, n) {
                     n = 1 === S(e % 100 / 10) ? "th" : 1 === t ? "st" : 2 === t ? "nd" : 3 === t ? "rd" : "th";
                 return e + n
             }
-        }), t.lang = x("moment.lang is deprecated. Use moment.locale instead.", eG), t.langData = x("moment.langData is deprecated. Use moment.localeData instead.", eQ);
+        }), t.lang = O("moment.lang is deprecated. Use moment.locale instead.", eG), t.langData = O("moment.langData is deprecated. Use moment.localeData instead.", eQ);
         var tK = Math.abs;
 
         function tV(e, t, n, r) {
@@ -1541,7 +1541,7 @@ function(e, t, n) {
             var t, n, r, a, o, i, s, u, l, c, d, f = this.localeData();
             var p = (t = this, n = !e, r = f, a = tb(t).abs(), o = nr(a.as("s")), i = nr(a.as("m")), s = nr(a.as("h")), u = nr(a.as("d")), l = nr(a.as("M")), c = nr(a.as("y")), (d = o <= na.ss && ["s", o] || o < na.s && ["ss", o] || i <= 1 && ["m"] || i < na.m && ["mm", i] || s <= 1 && ["h"] || s < na.h && ["hh", s] || u <= 1 && ["d"] || u < na.d && ["dd", u] || l <= 1 && ["M"] || l < na.M && ["MM", l] || c <= 1 && ["y"] || ["yy", c])[2] = n, d[3] = +t > 0, d[4] = r, no.apply(null, d));
             return e && (p = f.pastFuture(+this, p)), f.postformat(p)
-        }, nl.toISOString = nu, nl.toString = nu, nl.toJSON = nu, nl.locale = tY, nl.localeData = tx, nl.toIsoString = x("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", nu), nl.lang = tO, J("X", 0, 0, "unix"), J("x", 0, 0, "valueOf"), ep("x", eu), ep("X", /[+-]?\d+(\.\d{1,3})?/), ey("X", function(e, t, n) {
+        }, nl.toISOString = nu, nl.toString = nu, nl.toJSON = nu, nl.locale = tY, nl.localeData = tO, nl.toIsoString = O("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", nu), nl.lang = tx, J("X", 0, 0, "unix"), J("x", 0, 0, "valueOf"), ep("x", eu), ep("X", /[+-]?\d+(\.\d{1,3})?/), ey("X", function(e, t, n) {
             n._d = new Date(1e3 * parseFloat(e, 10))
         }), ey("x", function(e, t, n) {
             n._d = new Date(S(e))

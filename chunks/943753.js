@@ -86,11 +86,11 @@ function(e, t, n) {
                     return s < 0 && (s += 4294967296), s
                 }(y, x, w, S, k, E),
                 O = this.k[D],
-                L = this.k[D + 1],
-                j = n[D],
+                j = this.k[D + 1],
+                L = n[D],
                 N = n[D + 1],
-                F = v(C, P, T, A, R, I, O, L, j, N),
-                B = g(C, P, T, A, R, I, O, L, j, N);
+                F = v(C, P, T, A, R, I, O, j, L, N),
+                B = g(C, P, T, A, R, I, O, j, L, N);
             C = function(e, t) {
                 var n = s(e, t, 28) ^ s(t, e, 2) ^ s(t, e, 7);
                 return n < 0 && (n += 4294967296), n

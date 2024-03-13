@@ -8,7 +8,7 @@ function(e, t, n) {
             return i
         }
     }), n("222007");
-    var i, s = n("773179"),
+    var i, s = n("464675"),
         r = n.n(s),
         a = n("595275"),
         o = n("614276"),
@@ -47,7 +47,7 @@ function(e, t, n) {
         setClipsKeyFrameInterval(e) {}
         setQualityDecoupling(e) {}
         getStreamParameters() {
-            return r.cloneDeep(this.videoStreamParameters)
+            return r(this.videoStreamParameters)
         }
         setExperimentFlag(e, t) {
             t ? this.experimentFlags.add(e) : this.experimentFlags.delete(e)
@@ -59,7 +59,7 @@ function(e, t, n) {
             let {
                 quality: t,
                 constraints: n
-            } = this.applyQualityConstraints({}, this.videoStreamParameters[0].ssrc), i = r.cloneDeep(this.videoStreamParameters);
+            } = this.applyQualityConstraints({}, this.videoStreamParameters[0].ssrc), i = r(this.videoStreamParameters);
             null != t && (i[0].maxBitrate = t.bitrateMax, null != t.encode && (i[0].maxPixelCount = t.encode.pixelCount, i[0].maxFrameRate = t.encode.framerate)), this.videoStreamParameters = i;
             for (let e = 1; e < this.videoStreamParameters.length; e++) {
                 let {
@@ -68,7 +68,7 @@ function(e, t, n) {
                 } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
                 null != i && (this.videoStreamParameters[e].maxBitrate = i.bitrateMax, null != i.encode && (this.videoStreamParameters[e].maxPixelCount = i.encode.pixelCount, this.videoStreamParameters[e].maxFrameRate = i.encode.framerate)), 100 === this.videoStreamParameters[e].quality && (n = s, t = i)
             }
-            n.streamParameters = r.cloneDeep(this.videoStreamParameters), n.remoteSinkWantsPixelCount = Math.max(...this.videoStreamParameters.map(e => {
+            n.streamParameters = r(this.videoStreamParameters), n.remoteSinkWantsPixelCount = Math.max(...this.videoStreamParameters.map(e => {
                 var t;
                 return null !== (t = e.maxPixelCount) && void 0 !== t ? t : 0
             }));

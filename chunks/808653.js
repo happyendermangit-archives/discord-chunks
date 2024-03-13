@@ -1,18 +1,18 @@
-function(t, r, n) {
+function(t, r, e) {
     "use strict";
-    var e = n("859514"),
-        i = n("383053").left,
-        o = n("528151"),
-        u = n("693523"),
-        a = n("106106");
-    e({
+    var n = e("859514"),
+        o = e("383053").left,
+        i = e("528151"),
+        a = e("693523"),
+        u = e("106106");
+    n({
         target: "Array",
         proto: !0,
-        forced: !a && u > 79 && u < 83 || !o("reduce")
+        forced: !u && a > 79 && a < 83 || !i("reduce")
     }, {
         reduce: function(t) {
             var r = arguments.length;
-            return i(this, t, r, r > 1 ? arguments[1] : void 0)
+            return o(this, t, r, r > 1 ? arguments[1] : void 0)
         }
     })
 }

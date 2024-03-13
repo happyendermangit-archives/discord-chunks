@@ -33,9 +33,9 @@ function(e, t, n) {
     let O = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
         D = /^$|\n *$/,
         P = /^ *>>> ?/,
-        L = /^ *> ?/gm;
+        M = /^ *> ?/gm;
 
-    function M(e) {
+    function L(e) {
         let t = (0, p.punycodeLink)(e[1]);
         if (null == t) return {
             type: "text",
@@ -84,7 +84,7 @@ function(e, t, n) {
                 parse(e, t, n) {
                     let i = e[0],
                         s = !!P.exec(i),
-                        r = i.replace(s ? P : L, ""),
+                        r = i.replace(s ? P : M, ""),
                         a = n.inQuote || !1,
                         o = n.inline || !1;
                     n.inQuote = !0, !s && (n.inline = !0);
@@ -101,7 +101,7 @@ function(e, t, n) {
             link: p.default,
             autolink: {
                 ...a.defaultRules.autolink,
-                parse: M
+                parse: L
             },
             url: {
                 ...a.defaultRules.url,
@@ -124,7 +124,7 @@ function(e, t, n) {
                     }
                     return n
                 },
-                parse: M
+                parse: L
             },
             strong: a.defaultRules.strong,
             em: a.defaultRules.em,

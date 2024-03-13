@@ -34,8 +34,8 @@ function(e, t, n) {
         O = n("614305"),
         D = n("689275"),
         P = n("755624"),
-        L = n("526311"),
-        M = n("374363"),
+        M = n("526311"),
+        L = n("374363"),
         b = n("233069"),
         U = n("845078"),
         w = n("718517"),
@@ -430,7 +430,7 @@ function(e, t, n) {
             return this.getAckTimestamp() < this._lastMessageTimestamp
         }
         hasRecentlyVisitedAndRead() {
-            return this._lastMessageTimestamp > 0 && null != this._ackMessageId && this.getAckTimestamp() > eS && M.default.getGuildRecentsDismissedAt(this._guildId) < this.getAckTimestamp()
+            return this._lastMessageTimestamp > 0 && null != this._ackMessageId && this.getAckTimestamp() > eS && L.default.getGuildRecentsDismissedAt(this._guildId) < this.getAckTimestamp()
         }
         isForumPostUnread() {
             return !!this._isActiveThread && this.hasUnread()
@@ -615,7 +615,7 @@ function(e, t, n) {
         getAckTimestamp() {
             let e, t;
             if (0 !== this._ackMessageTimestamp) return this._ackMessageTimestamp;
-            if (this._isThread) return this._ackMessageTimestamp = eM(this.guildId, this.channelId), this._ackMessageId = F.default.fromTimestamp(this._ackMessageTimestamp), this._ackMessageTimestamp;
+            if (this._isThread) return this._ackMessageTimestamp = eL(this.guildId, this.channelId), this._ackMessageId = F.default.fromTimestamp(this._ackMessageTimestamp), this._ackMessageTimestamp;
             if (this.type === er.ReadStateTypes.GUILD_EVENT || this.type === er.ReadStateTypes.GUILD_ONBOARDING_QUESTION) e = K.default.getGuild(this.channelId);
             else if ((0, ei.isStaticChannelRoute)(this.channelId)) e = K.default.getGuild(this.guildId);
             else {
@@ -670,13 +670,13 @@ function(e, t, n) {
         })
     }
 
-    function eL(e) {
+    function eM(e) {
         (function(e) {
             var t;
             null === (t = e.threads) || void 0 === t || t.forEach(t => {
                 if (!b.ALL_CHANNEL_TYPES.has(t.type)) return;
                 let n = eO.get(t.id);
-                n.lastMessageId = t.lastMessageId, n.lastPinTimestamp = eI(t.lastPinTimestamp), n._isThread = !0, n._isActiveThread = !0, n._isJoinedThread = null != t.member, null == n.ackMessageId && (n.ackMessageId = F.default.fromTimestamp(eM(e.id, t.id))), null == n.ackPinTimestamp && (n.ackPinTimestamp = eM(e.id, t.id))
+                n.lastMessageId = t.lastMessageId, n.lastPinTimestamp = eI(t.lastPinTimestamp), n._isThread = !0, n._isActiveThread = !0, n._isJoinedThread = null != t.member, null == n.ackMessageId && (n.ackMessageId = F.default.fromTimestamp(eL(e.id, t.id))), null == n.ackPinTimestamp && (n.ackPinTimestamp = eL(e.id, t.id))
             })
         })(e),
         function(e) {
@@ -706,7 +706,7 @@ function(e, t, n) {
     }
     eO._guildReadStateSentinels = {}, eO._readStates = {}, eO._mentionChannels = new Set;
 
-    function eM(e, t) {
+    function eL(e, t) {
         var n, i, s;
         let r = H.default.getChannel(t),
             a = K.default.getGuild(null != e ? e : null == r ? void 0 : r.guild_id),
@@ -846,7 +846,7 @@ function(e, t, n) {
     }
     class eX extends d.default.Store {
         initialize() {
-            this.waitFor(Y.default, $.default, K.default, W.default, H.default, Z.default, q.default, X.default, g.default, D.default, P.default, B.default, S.default, j.default, m.default, J.default, ee.default, y.default, T.default, M.default, C.default), this.syncWith([B.default], eY)
+            this.waitFor(Y.default, $.default, K.default, W.default, H.default, Z.default, q.default, X.default, g.default, D.default, P.default, B.default, S.default, j.default, m.default, J.default, ee.default, y.default, T.default, L.default, C.default), this.syncWith([B.default], eY)
         }
         getReadStatesByChannel() {
             var e;
@@ -1005,7 +1005,7 @@ function(e, t, n) {
                 let r = eO.get(e.id, s);
                 r._persisted = !0, r._mentionCount = null !== (n = e.mention_count) && void 0 !== n ? n : 0, r.flags = e.flags, r.lastViewed = e.last_viewed;
                 let a = H.default.getBasicChannel(e.id);
-                null != a && (0, b.isThread)(a.type) && (null == e.last_message_id || 0 === e.last_message_id) ? r.ackMessageId = F.default.fromTimestamp(eM(a.guild_id, a.id)) : r.ackedWhileCached ? -1 === F.default.compare(r.ackMessageId, e.last_message_id) && (r.ackMessageId = e.last_message_id) : r.ackMessageId = e.last_message_id, r.ackedWhileCached = void 0, r.ackPinTimestamp = eI(e.last_pin_timestamp), eO._mentionChannels.delete(r.channelId), r._mentionCount > 0 && r.canHaveMentions() && eO._mentionChannels.add(r.channelId)
+                null != a && (0, b.isThread)(a.type) && (null == e.last_message_id || 0 === e.last_message_id) ? r.ackMessageId = F.default.fromTimestamp(eL(a.guild_id, a.id)) : r.ackedWhileCached ? -1 === F.default.compare(r.ackMessageId, e.last_message_id) && (r.ackMessageId = e.last_message_id) : r.ackMessageId = e.last_message_id, r.ackedWhileCached = void 0, r.ackPinTimestamp = eI(e.last_pin_timestamp), eO._mentionChannels.delete(r.channelId), r._mentionCount > 0 && r.canHaveMentions() && eO._mentionChannels.add(r.channelId)
             }), eO.resetGuildSentinels();
             let o = null === (t = $.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
             if (null != o) {
@@ -1022,7 +1022,7 @@ function(e, t, n) {
                             i = null != n.ackMessageId ? F.default.extractTimestamp(n.ackMessageId) : 0;
                         i < t && (n.mentionCount++, n.lastMessageId = F.default.fromTimestamp(t))
                     })
-                }(s), eD(r), i)) eD(null !== (n = e.channels) && void 0 !== n ? n : []), eV(e), eL(e);
+                }(s), eD(r), i)) eD(null !== (n = e.channels) && void 0 !== n ? n : []), eV(e), eM(e);
             ek(), eh = setTimeout(() => (function(e) {
                 let t = em();
                 for (let i of e) {
@@ -1067,7 +1067,7 @@ function(e, t, n) {
             } = e, i = em();
             eO.forEach(e => {
                 e.guildId === n.id && e.shouldDeleteReadState(i) && e.delete(!1)
-            }), eD(null !== (t = n.channels) && void 0 !== t ? t : []), eV(n), eL(n)
+            }), eD(null !== (t = n.channels) && void 0 !== t ? t : []), eV(n), eM(n)
         },
         LOAD_MESSAGES_SUCCESS: function(e) {
             let {
@@ -1254,7 +1254,7 @@ function(e, t, n) {
             return eO.get(t).syncThreadSettings()
         },
         THREAD_MEMBERS_UPDATE: function(e) {
-            return (0, L.doesThreadMembersActionAffectMe)(e) && eO.get(e.id).syncThreadSettings()
+            return (0, M.doesThreadMembersActionAffectMe)(e) && eO.get(e.id).syncThreadSettings()
         },
         CHANNEL_DELETE: eH,
         THREAD_DELETE: eH,

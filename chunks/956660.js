@@ -1,14 +1,14 @@
-function(t, r, n) {
+function(t, r, e) {
     "use strict";
-    var e = n("814026"),
-        i = n("64980"),
-        o = n("18563"),
-        u = URLSearchParams.prototype,
-        a = i(u.forEach);
-    e && !("size" in u) && o(u, "size", {
+    var n = e("814026"),
+        o = e("64980"),
+        i = e("18563"),
+        a = URLSearchParams.prototype,
+        u = o(a.forEach);
+    n && !("size" in a) && i(a, "size", {
         get: function() {
             var t = 0;
-            return a(this, function() {
+            return u(this, function() {
                 t++
             }), t
         },

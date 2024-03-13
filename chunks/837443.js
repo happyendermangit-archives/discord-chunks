@@ -119,8 +119,8 @@ function(e, t, n) {
                 getAriaValueText: O,
                 barClassName: D,
                 grabberClassName: P,
-                grabberStyles: L = {},
-                markerPosition: M = 0,
+                grabberStyles: M = {},
+                markerPosition: L = 0,
                 "aria-hidden": b,
                 "aria-label": U,
                 "aria-labelledby": w,
@@ -135,8 +135,8 @@ function(e, t, n) {
                     return (0, r.jsx)("div", {
                         className: l(E.mark, {
                             [E.defaultValue]: i,
-                            [E.markAbove]: 0 === M,
-                            [E.markBelow]: 1 === M
+                            [E.markAbove]: 0 === L,
+                            [E.markBelow]: 1 === L
                         }),
                         style: {
                             left: "".concat(e, "%")
@@ -202,7 +202,7 @@ function(e, t, n) {
                                 ...e,
                                 className: l(E.grabber, P),
                                 style: {
-                                    ...L,
+                                    ...M,
                                     left: G
                                 },
                                 onMouseDown: this.handleMouseDown,

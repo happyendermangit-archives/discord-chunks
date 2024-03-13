@@ -36,11 +36,11 @@ function(e, t, n) {
         O = n("840707"),
         D = n("404118"),
         P = n("49111"),
-        L = n("782340");
-    let M = e => {
+        M = n("782340");
+    let L = e => {
             D.default.show({
-                title: L.default.Messages.TOO_MANY_USER_GUILDS_ALERT_TITLE,
-                body: L.default.Messages.TOO_MANY_USER_GUILDS_ALERT_DESCRIPTION.format({
+                title: M.default.Messages.TOO_MANY_USER_GUILDS_ALERT_TITLE,
+                body: M.default.Messages.TOO_MANY_USER_GUILDS_ALERT_DESCRIPTION.format({
                     quantity: e
                 })
             })
@@ -55,8 +55,8 @@ function(e, t, n) {
         },
         U = () => {
             D.default.show({
-                title: L.default.Messages.SERVER_IS_CURRENTLY_FULL,
-                body: L.default.Messages.PLEASE_TRY_AGAIN_LATER
+                title: M.default.Messages.SERVER_IS_CURRENTLY_FULL,
+                body: M.default.Messages.PLEASE_TRY_AGAIN_LATER
             })
         };
     async function w(e) {
@@ -122,7 +122,7 @@ function(e, t, n) {
             if ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === P.AbortCodes.TOO_MANY_USER_GUILDS) {
                 let e = A.default.getCurrentUser(),
                     t = R.default.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff());
-                t ? M(P.MAX_USER_GUILDS_PREMIUM) : M(P.MAX_USER_GUILDS)
+                t ? L(P.MAX_USER_GUILDS_PREMIUM) : L(P.MAX_USER_GUILDS)
             }
             throw (null === (o = t.body) || void 0 === o ? void 0 : o.code) === P.AbortCodes.GUILD_AT_CAPACITY && U(), _ && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === P.AbortCodes.UNKNOWN_GUILD && b(e), t
         }
@@ -246,7 +246,7 @@ function(e, t, n) {
         }),
         async createRole(e, t, n) {
             let i = {
-                name: null != t && "" !== t ? t : L.default.Messages.NEW_ROLE,
+                name: null != t && "" !== t ? t : M.default.Messages.NEW_ROLE,
                 color: null != n ? n : 0,
                 permissions: N.default.NONE
             };

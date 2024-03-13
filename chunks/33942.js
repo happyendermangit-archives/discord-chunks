@@ -49,8 +49,8 @@ function(e, t, n) {
         O = n("393414"),
         D = n("653047"),
         P = n("766274"),
-        L = n("271938"),
-        M = n("760190"),
+        M = n("271938"),
+        L = n("760190"),
         b = n("991170"),
         U = n("253981"),
         w = n("872825"),
@@ -78,7 +78,7 @@ function(e, t, n) {
         let e = (0, u.useLocation)(),
             t = a.useMemo(() => (0, w.parseOAuth2AuthorizeProps)(e.search), [e.search]);
         return (0, C.default)(), a.useEffect(() => {
-            L.default.isAuthenticated() && S.default.getExperiments()
+            M.default.isAuthenticated() && S.default.getExperiments()
         }, []), (0, r.jsx)(z.OAuth2Page, {
             children: (0, r.jsx)(ei, {
                 ...t,
@@ -168,17 +168,17 @@ function(e, t, n) {
                 location: "auth web"
             }),
             eI = eT.userAppsTreatment === A.UserAppsTreatment.ALLOWED,
-            eC = (0, h.useStateFromStores)([M.default], () => M.default.hasLoadedExperiments),
+            eC = (0, h.useStateFromStores)([L.default], () => L.default.hasLoadedExperiments),
             [eA, ey] = a.useState(null),
             [eN, eR] = a.useState(null),
             [eO, eD] = a.useState(null),
-            [eP, eL] = a.useState(!1),
-            eM = null == eA ? void 0 : eA.guilds,
+            [eP, eM] = a.useState(!1),
+            eL = null == eA ? void 0 : eA.guilds,
             [eb, eU] = a.useState(null != el ? el : null),
             [ew, ek] = a.useState(null != eu ? eu : null),
             [eV, eG] = a.useState(b.default.NONE),
             eF = a.useMemo(() => (null == eA ? void 0 : eA.user) != null ? new P.default(eA.user) : null, [null == eA ? void 0 : eA.user]),
-            ex = a.useMemo(() => null == eM ? void 0 : eM.find(e => e.id === eb), [eM, eb]),
+            ex = a.useMemo(() => null == eL ? void 0 : eL.find(e => e.id === eb), [eL, eb]),
             [eB, eH] = a.useState(null),
             eY = a.useMemo(() => {
                 var e;
@@ -243,7 +243,7 @@ function(e, t, n) {
                     return
                 }
                 try {
-                    eL(!0);
+                    eM(!0);
                     let t = await (0, k.authorize)({
                         authorize: e,
                         clientId: N,
@@ -274,15 +274,15 @@ function(e, t, n) {
                                 guild: ex
                             }
                         }) : window.location = t.location
-                    } else eL(!1)
+                    } else eM(!1)
                 } catch (t) {
                     let e = t.body;
-                    (null == e ? void 0 : e.message) != null && "" !== e.message ? eD(Error(e.message)) : eD(e), eR(1), eL(!1)
+                    (null == e ? void 0 : e.message) != null && "" !== e.message ? eD(Error(e.message)) : eD(e), eR(1), eM(!1)
                 }
             }, [ep, e_, em, null == eA ? void 0 : eA.application, ex, eS, N, ez, R, z, et, en, ei, eX, eV, eb, eB, ew]),
             e0 = a.useRef(!1),
             e1 = a.useCallback(async () => {
-                if (!L.default.isAuthenticated()) {
+                if (!M.default.isAuthenticated()) {
                     (0, k.logoutWithRedirect)(ev);
                     return
                 }
@@ -372,7 +372,7 @@ function(e, t, n) {
                     body: (0, r.jsx)(p.Spinner, {})
                 };
                 let e8 = null == eO || eO instanceof Error ? {} : eO,
-                    e7 = null == eM ? void 0 : eM.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
+                    e7 = null == eL ? void 0 : eL.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                     e5 = eB === f.ApplicationIntegrationType.GUILD_INSTALL && ez.includes(Q.OAuth2Scopes.WEBHOOK_INCOMING),
                     te = e5 || eB === f.ApplicationIntegrationType.GUILD_INSTALL && (ez.includes(Q.OAuth2Scopes.BOT) || ez.includes(Q.OAuth2Scopes.APPLICATIONS_COMMANDS));
                 l = (0, r.jsxs)(r.Fragment, {

@@ -41,14 +41,14 @@ function(e, t, n) {
             removed: []
         };
 
-    function L(e, t) {
-        if (null == t.communicationDisabledUntil || !(0, c.isMemberCommunicationDisabled)(t)) return M(e, t.userId);
+    function M(e, t) {
+        if (null == t.communicationDisabledUntil || !(0, c.isMemberCommunicationDisabled)(t)) return L(e, t.userId);
         let n = w(e, t.userId),
             i = A[n];
         i !== t.communicationDisabledUntil && (0, c.isMemberCommunicationDisabled)(t) && (A[n] = t.communicationDisabledUntil, b(n))
     }
 
-    function M(e, t) {
+    function L(e, t) {
         if (null != t) {
             let n = w(e, t);
             null != A[n] && b(n), U(w(e, t))
@@ -208,7 +208,7 @@ function(e, t, n) {
             unusualDMActivityUntil: f,
             fullProfileLoadedTimestamp: null === (t = h[i.id]) || void 0 === t ? void 0 : t.fullProfileLoadedTimestamp,
             flags: _
-        }), L(n, h[i.id])
+        }), M(n, h[i.id])
     }
 
     function H(e, t) {
@@ -233,7 +233,7 @@ function(e, t, n) {
                 flags: t.flags,
                 fullProfileLoadedTimestamp: null == r ? void 0 : r.fullProfileLoadedTimestamp,
                 unusualDMActivityUntil: null !== (s = t.unusual_dm_activity_until) && void 0 !== s ? s : null == r ? void 0 : r.unusualDMActivityUntil
-            }), L(e, n[t.user.id])
+            }), M(e, n[t.user.id])
         }), R++, !0)
     }
 
@@ -270,7 +270,7 @@ function(e, t, n) {
                     flags: r.flags,
                     unusualDMActivityUntil: null !== (s = r.unusual_dm_activity_until) && void 0 !== s ? s : null == o ? void 0 : o.unusualDMActivityUntil
                 });
-            i[a] = l, L(t, l)
+            i[a] = l, M(t, l)
         }
         return !0
     }
@@ -295,7 +295,7 @@ function(e, t, n) {
                 joinedAt: s.joinedAt,
                 flags: s.flags,
                 fullProfileLoadedTimestamp: null == s ? void 0 : s.fullProfileLoadedTimestamp
-            }), L(e.guildId, t[i]))
+            }), M(e.guildId, t[i]))
         }
     }
 
@@ -506,7 +506,7 @@ function(e, t, n) {
             let {
                 guild: t
             } = e;
-            delete I[t.id], M(t.id)
+            delete I[t.id], L(t.id)
         },
         GUILD_MEMBER_ADD: B,
         GUILD_MEMBER_UPDATE: B,
@@ -550,7 +550,7 @@ function(e, t, n) {
                 user: n
             } = e, i = I[t];
             if (null == i || null == i[n.id]) return !1;
-            delete i[n.id], M(t, n.id), R++
+            delete i[n.id], L(t, n.id), R++
         },
         THREAD_MEMBER_LIST_UPDATE: function(e) {
             let {
@@ -641,7 +641,7 @@ function(e, t, n) {
                 unusualDMActivityUntil: t.unusual_dm_activity_until,
                 flags: t.flags,
                 fullProfileLoadedTimestamp: Date.now()
-            }), L(n, i[t.user.id])
+            }), M(n, i[t.user.id])
         },
         IMPERSONATE_UPDATE: K,
         IMPERSONATE_STOP: K,

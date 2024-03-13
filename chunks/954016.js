@@ -14,10 +14,10 @@ function(e, t, n) {
             return O
         },
         JAM_SPACE_APPLICATION_ID: function() {
-            return L
+            return M
         },
         GARTIC_PHONE_APPLICATION_ID: function() {
-            return M
+            return L
         },
         COLOR_TOGETHER_APPLICATION_ID: function() {
             return b
@@ -127,8 +127,8 @@ function(e, t, n) {
         O = "773336526917861400",
         D = "880218832743055411",
         P = "1050941315912835122",
-        L = "1070087967294631976",
-        M = "1007373802981822582",
+        M = "1070087967294631976",
+        L = "1007373802981822582",
         b = "1039835161136746497",
         U = "852509694341283871",
         w = "903769130790969345",
