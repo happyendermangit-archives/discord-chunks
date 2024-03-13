@@ -180,6 +180,7 @@ function(e, t, n) {
             canAnimate: i = !1
         } = e;
         if (null == t) return;
+        if (/^data:/.test(t.asset)) return t.asset;
         let {
             CDN_HOST: s,
             API_ENDPOINT: r
