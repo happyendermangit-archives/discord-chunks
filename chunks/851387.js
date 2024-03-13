@@ -239,9 +239,9 @@ function(e, t, n) {
             url: P.Endpoints.BULK_GUILD_BAN(e),
             body: {
                 user_ids: t,
-                delete_message_seconds: n,
-                reason: i
+                delete_message_seconds: n
             },
+            reason: i,
             oldFormErrors: !0
         }),
         async createRole(e, t, n) {

@@ -2,53 +2,67 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return u
+            return f
         }
     }), n("222007"), n("424973");
-    var i = n("615361"),
-        s = n("872717"),
-        r = n("773336"),
-        a = n("827032"),
-        o = n("49111");
-    let l = new Set(["darwin", "linux", "win32", "ios", "android"]);
-    var u = new class e {
-        increment(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                {
-                    name: n,
-                    tags: s
-                } = e,
-                o = {
-                    name: n,
-                    tags: (0, a.getGlobalTagsArray)()
-                };
-            null != s && s.forEach(e => {
-                o.tags.push(e)
+    var i, s, r = n("615361"),
+        a = n("872717"),
+        o = n("773336"),
+        l = n("82087"),
+        u = n("827032"),
+        d = n("49111");
+    let c = new Set(["darwin", "linux", "win32", "ios", "android"]);
+    (s = i || (i = {})).COUNT = "count", s.DISTRIBUTION = "distribution";
+    var f = new class e {
+        _getMetricWithDefaults(e, t) {
+            let {
+                name: n,
+                tags: i
+            } = e, s = {
+                name: n,
+                type: t,
+                tags: (0, u.getGlobalTagsArray)()
+            };
+            null != i && i.forEach(e => {
+                s.tags.push(e)
             });
-            let u = function() {
-                if ((0, r.isWeb)()) return "web";
+            let a = function() {
+                if ((0, o.isWeb)()) return "web";
                 {
-                    let e = (0, r.getPlatformName)();
-                    return l.has(e) ? e : null
+                    let e = (0, o.getPlatformName)();
+                    return c.has(e) ? e : null
                 }
             }();
-            null != u && o.tags.push("platform:".concat(u));
-            let d = function() {
-                let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
-                return i.ReleaseChannelsSets.ALL.has(e) ? e : null
+            null != a && s.tags.push("platform:".concat(a));
+            let l = function() {
+                let e = window.GLOBAL_ENV.RELEASE_CHANNEL;
+                return null != e && r.ReleaseChannelsSets.ALL.has(e) ? e : null
             }();
-            null != d && o.tags.push("release_channel:".concat(d)), this._metrics.push(o), (t || this._metrics.length >= 100) && this._flush()
+            return null != l && s.tags.push("release_channel:".concat(l)), s
+        }
+        increment(e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                n = this._getMetricWithDefaults(e, "count");
+            this._metrics.push(n), (t || this._metrics.length >= 100) && this._flush()
+        }
+        distribution(e, t) {
+            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                i = {
+                    ...this._getMetricWithDefaults(e, "distribution"),
+                    value: t
+                };
+            this._metrics.push(i), (n || this._metrics.length >= 100) && this._flush()
         }
         _flush() {
             if (this._metrics.length > 0) {
                 let e = [...this._metrics];
-                s.default.post({
-                    url: o.Endpoints.METRICS,
+                a.default.post({
+                    url: (0, l.isMetricsEndpointV2Enabled)("monitoring-agent") ? d.Endpoints.METRICS_V2 : d.Endpoints.METRICS,
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: "1710341374677",
-                            build_number: "274711"
+                            built_at: "1710349274057",
+                            build_number: "274751"
                         }
                     },
                     retries: 1
