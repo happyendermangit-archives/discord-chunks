@@ -639,7 +639,7 @@ function(e, t, n) {
                     } = n,
                     y = null !== (i = n.flags) && void 0 !== i ? i : 0,
                     [P, k] = (0, G.default)(l);
-                if (P && (l = k, y = (0, et.addFlag)(y, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == g && null == S && null == A) return Promise.reject(Error("not sending empty message"));
+                if (P && (l = k, y = (0, et.addFlag)(y, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == g && null == S && null == A) return Promise.resolve();
                 let F = null != I ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
                     x = null !== (r = n.nonce) && void 0 !== r ? r : (0, O.createNonce)();
                 if (!1 !== n.eagerDispatch) {
