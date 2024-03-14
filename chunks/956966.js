@@ -12,8 +12,8 @@ function(e, a, t) {
         i = t("913144"),
         r = t("629109"),
         o = t("987317"),
-        l = t("316272"),
-        f = t("830210"),
+        f = t("316272"),
+        l = t("830210"),
         u = t("289180"),
         p = t("289656"),
         b = t("727284"),
@@ -24,7 +24,7 @@ function(e, a, t) {
         E = t("50885"),
         g = t("49111"),
         I = t("782340");
-    class T extends l.default {
+    class T extends f.default {
         _initialize() {
             this.isSupported && (i.default.subscribe("AUDIO_SET_MODE", this.handleViewUpdate), i.default.subscribe("VOICE_CHANNEL_SELECT", this.handleViewUpdate), i.default.subscribe("START_SESSION", this.handleViewUpdate), i.default.subscribe("CONNECTION_OPEN", this.handleViewUpdate), i.default.subscribe("CONNECTION_CLOSED", this.handleViewUpdate), i.default.subscribe("CALL_CREATE", this.handleViewUpdate), i.default.subscribe("CALL_UPDATE", this.handleViewUpdate), i.default.subscribe("CALL_DELETE", this.handleViewUpdate), i.default.subscribe("CHANNEL_DELETE", this.handleViewUpdate), i.default.subscribe("VOICE_STATE_UPDATES", this.handleViewUpdate), i.default.subscribe("AUDIO_TOGGLE_SELF_MUTE", this.handleViewUpdate), i.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", this.handleViewUpdate), i.default.subscribe("AUDIO_TOGGLE_LOCAL_MUTE", this.handleViewUpdate), i.default.subscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleViewUpdate), E.default.on("THUMBAR_BUTTONS_CLICKED", (e, a) => this.buttonClicked(a)))
         }
@@ -63,7 +63,7 @@ function(e, a, t) {
                     {
                         reachedLimit: i,
                         limit: r
-                    } = null != n ? (0, f.getChannelVideoLimit)(n) : {
+                    } = null != n ? (0, l.getChannelVideoLimit)(n) : {
                         reachedLimit: void 0,
                         limit: void 0
                     },
