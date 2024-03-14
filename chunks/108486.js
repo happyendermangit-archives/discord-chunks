@@ -38,7 +38,7 @@ function(e, t, n) {
         R = n("782340"),
         k = n("240497"),
         L = n("350583");
-    let b = [{
+    let P = [{
             box: "#FFD89E",
             ribbon: "#FF7476"
         }, {
@@ -60,7 +60,7 @@ function(e, t, n) {
             box: "#DB6D6D",
             ribbon: "#67DA9C"
         }],
-        P = [{
+        b = [{
             box: "#EABB75",
             ribbon: "#E4595C"
         }, {
@@ -94,8 +94,8 @@ function(e, t, n) {
             hovered: n,
             isContentDismissed: s,
             boxColors: r = {
-                dark: b,
-                light: P
+                dark: P,
+                light: b
             }
         } = e, u = (0, c.default)(), [d, f] = function(e) {
             let [t, n] = l.useState(!1), [i, a] = l.useState(Math.floor(7 * Math.random()));
@@ -138,14 +138,14 @@ function(e, t, n) {
         } = e, {
             analyticsLocations: a
         } = (0, p.default)(f.default.GIFT_BUTTON), [o, c] = l.useState(!1), C = (0, s.useStateFromStores)([y.default], () => !(null === y.default || void 0 === y.default ? void 0 : y.default.hasLayers())), I = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), T = null != I ? v.default.age(I.id) : 0, _ = !t && C && T >= U, {
-            enabled: b
+            enabled: P
         } = E.SeasonalGiftingMarketingExperiment.useExperiment({
             location: "ChannelPremiumGiftButton"
         }, {
             autoTrackExposure: _
-        }), P = [];
-        b && _ && P.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-        let [j, D] = (0, h.useSelectedDismissibleContent)(P), w = null != j, F = (0, N.useDirectMessageRecipient)(n), G = null != F;
+        }), b = [];
+        P && _ && b.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
+        let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, N.useDirectMessageRecipient)(n), G = null != F;
         if (t) return null;
         let H = () => {
                 (0, x.default)({

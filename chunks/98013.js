@@ -5,13 +5,13 @@ function(e, a, t) {
             return o
         },
         getPlatformReadableName: function() {
-            return f
+            return l
         },
         getCurrentPlatformDownloadURL: function() {
             return u
         },
         getMobileDownloadLink: function() {
-            return p
+            return b
         }
     });
     var s = t("597755"),
@@ -27,26 +27,26 @@ function(e, a, t) {
         return "".concat(i.DownloadLinks.DESKTOP).concat(a ? "/ptb" : "", "?platform=").concat(e).concat(null != t ? "&format=".concat(t) : "")
     }
 
-    function l() {
+    function f() {
         var e;
         let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = d.os) || void 0 === e ? void 0 : e.family;
         return null == a ? "win" : -1 !== a.indexOf("Ubuntu") || -1 !== a.indexOf("Debian") || -1 !== a.indexOf("Fedora") || -1 !== a.indexOf("Red Hat") || -1 !== a.indexOf("SuSE") || -1 !== a.indexOf("Linux") ? r : -1 !== a.indexOf("OS X") ? "osx" : "win"
     }
 
-    function f(e) {
+    function l(e) {
         return ({
             win: "Windows",
             osx: "Mac",
             [r]: "Linux"
-        })[l(e)]
+        })[f(e)]
     }
 
     function u() {
-        let e = l();
+        let e = f();
         return o(e, !1, e === r ? "tar.gz" : null)
     }
 
-    function p(e, a, t) {
+    function b(e, a, t) {
         let s = null != t ? t.toString() : null;
         switch (a) {
             case "iOS":

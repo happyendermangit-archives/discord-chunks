@@ -35,17 +35,17 @@ function(e, t, n) {
         R = n("782340"),
         k = n("988067");
     let L = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
-        b = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-        P = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+        P = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
+        b = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
         j = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
         U = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
         D = (0, C.cssValueToNumber)(k.unicodeCategoryShortcutHeight),
         w = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
         F = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-        B = P + b + 2 * U,
-        G = L + b,
+        B = b + P + 2 * U,
+        G = L + P,
         H = G + (w + 2 * F),
-        V = P + j + 2 * U;
+        V = b + j + 2 * U;
 
     function K(e) {
         let {
@@ -88,8 +88,8 @@ function(e, t, n) {
             }) : null, null == g && null != x ? (0, i.jsx)(_.default, {
                 categoryId: x,
                 className: k.categoryIcon,
-                height: P,
-                width: P
+                height: b,
+                width: b
             }) : null]
         }), R = r[n + 1], L = null != R && o.type === A.EmojiCategoryTypes.GUILD && R.type !== A.EmojiCategoryTypes.GUILD;
         return null != g ? (0, i.jsxs)(l.Fragment, {
@@ -181,9 +181,9 @@ function(e, t, n) {
                 if (n.type === A.EmojiCategoryTypes.RECENT) return t ? 0 : j;
                 if (n.type === A.EmojiCategoryTypes.GUILD) {
                     let n = C[e + 1];
-                    return null != n && n.type !== A.EmojiCategoryTypes.GUILD ? t ? w + -2 * F + b + i : b : t ? i : b
+                    return null != n && n.type !== A.EmojiCategoryTypes.GUILD ? t ? w + -2 * F + P + i : P : t ? i : P
                 }
-                return t ? b + i : 2 * b
+                return t ? P + i : 2 * P
             }, [C, J]),
             ee = l.useMemo(() => function(e, t) {
                 return (0, i.jsx)(l.Fragment, {
@@ -214,8 +214,8 @@ function(e, t, n) {
                 tabIndex: J ? 0 : -1,
                 onClick: () => Q(e),
                 children: (0, i.jsx)(g.default, {
-                    height: P,
-                    width: P
+                    height: b,
+                    width: b
                 })
             }, et)
         })

@@ -39,8 +39,8 @@ function(e, t, n) {
                 type: a,
                 channel: k,
                 className: L,
-                id: b,
-                disabled: P,
+                id: P,
+                disabled: b,
                 submitting: j,
                 placeholder: U,
                 required: D,
@@ -73,7 +73,7 @@ function(e, t, n) {
                 "aria-describedby": ed,
                 "aria-labelledby": ec,
                 "aria-autocomplete": ef
-            } = e, ep = l.useRef(null), em = l.useRef(null), eh = l.useRef(!0), ex = l.useRef(!0), eE = P || j, ey = l.useCallback((e, t, n) => {
+            } = e, ep = l.useRef(null), em = l.useRef(null), eh = l.useRef(!0), ex = l.useRef(!0), eE = b || j, ey = l.useCallback((e, t, n) => {
                 var i;
                 let {
                     value: l,
@@ -211,7 +211,7 @@ function(e, t, n) {
                     ref: ep,
                     className: s(L, R.slateContainer),
                     children: (0, i.jsx)(h.default, {
-                        id: b,
+                        id: P,
                         editor: eC,
                         channelId: k.id,
                         guildId: k.guild_id,
@@ -220,7 +220,7 @@ function(e, t, n) {
                         readOnly: eE,
                         spellCheck: Q,
                         autoFocus: !et,
-                        canFocus: !P,
+                        canFocus: !b,
                         onChange: eM,
                         onFocus: H,
                         onBlur: V,
