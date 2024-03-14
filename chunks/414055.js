@@ -229,11 +229,8 @@ function(e, t, n) {
         }
         toggleShow(e) {
             if (this.state.shouldShowTooltip !== e) {
-                if (e) {
-                    var t, n;
-                    null === (t = (n = this.props).onTooltipShow) || void 0 === t || t.call(n)
-                }
-                d.flushSync(() => {
+                var t, n, i, s;
+                e ? null === (t = (n = this.props).onTooltipShow) || void 0 === t || t.call(n) : null === (i = (s = this.props).onTooltipHide) || void 0 === i || i.call(s), d.flushSync(() => {
                     this.setState({
                         shouldShowTooltip: e
                     })

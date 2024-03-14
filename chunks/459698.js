@@ -47,8 +47,8 @@ function(e, t, n) {
         R = n("697218"),
         k = n("145131"),
         L = n("580357"),
-        P = n("476263"),
-        b = n("98292"),
+        b = n("476263"),
+        P = n("98292"),
         j = n("256170"),
         U = n("587974"),
         D = n("599110"),
@@ -93,7 +93,7 @@ function(e, t, n) {
                             children: [(0, i.jsx)(d.Text, {
                                 className: z.emojiName,
                                 variant: "text-md/semibold",
-                                children: (0, i.jsx)(b.default, {
+                                children: (0, i.jsx)(P.default, {
                                     children: t.name
                                 })
                             }), (0, i.jsx)(d.Text, {
@@ -169,8 +169,8 @@ function(e, t, n) {
                                 alt: "",
                                 className: z.guildIcon
                             }), " :"]
-                        }) : (0, i.jsx)(P.default, {
-                            size: P.default.Sizes.SMALL,
+                        }) : (0, i.jsx)(b.default, {
+                            size: b.default.Sizes.SMALL,
                             className: z.guildIconNotClickable,
                             guild: t
                         })
@@ -189,13 +189,13 @@ function(e, t, n) {
                             children: (0, i.jsx)(d.Heading, {
                                 className: z.guildName,
                                 variant: "heading-md/semibold",
-                                children: (0, i.jsx)(b.default, {
+                                children: (0, i.jsx)(P.default, {
                                     children: o
                                 })
                             })
                         }) : (0, i.jsx)(d.Heading, {
                             variant: "heading-md/semibold",
-                            children: (0, i.jsx)(b.default, {
+                            children: (0, i.jsx)(P.default, {
                                 children: o
                             })
                         })]
@@ -247,7 +247,7 @@ function(e, t, n) {
                 joinedEmojiSourceGuildRecord: N,
                 closePopout: O,
                 onToggleShowMoreEmojis: L,
-                guildEmoji: P,
+                guildEmoji: b,
                 demoMode: U = !1,
                 nonce: w
             } = e, F = (0, o.useStateFromStores)([R.default], () => R.default.getCurrentUser()), J = (0, o.useStateFromStores)([M.default], () => M.default.getGuildId()), X = B.default.isPremium(F), Q = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
@@ -262,15 +262,15 @@ function(e, t, n) {
                 isRoleSubscriptionEmoji: el,
                 isUnusableRoleSubscriptionEmoji: ea,
                 userIsRoleSubscriber: es
-            } = l.useMemo(() => null == P ? {
+            } = l.useMemo(() => null == b ? {
                 isRoleSubscriptionEmoji: !1,
                 isUnusableRoleSubscriptionEmoji: !1,
                 userIsRoleSubscriber: !1
             } : {
-                isRoleSubscriptionEmoji: S.isPurchasableRoleSubscriptionEmoji(P),
-                isUnusableRoleSubscriptionEmoji: S.isUnusableRoleSubscriptionEmoji(P, null != J ? J : void 0),
-                userIsRoleSubscriber: C.default.getUserSubscriptionRoles(P.guildId).size > 0
-            }, [P, J]), er = !!ea && (0, x.shouldHideGuildPurchaseEntryPoints)(null == P ? void 0 : P.guildId), {
+                isRoleSubscriptionEmoji: S.isPurchasableRoleSubscriptionEmoji(b),
+                isUnusableRoleSubscriptionEmoji: S.isUnusableRoleSubscriptionEmoji(b, null != J ? J : void 0),
+                userIsRoleSubscriber: C.default.getUserSubscriptionRoles(b.guildId).size > 0
+            }, [b, J]), er = !!ea && (0, x.shouldHideGuildPurchaseEntryPoints)(null == b ? void 0 : b.guildId), {
                 analyticsLocations: eo
             } = (0, m.default)(p.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
             (0, h.default)({
@@ -278,8 +278,8 @@ function(e, t, n) {
                 name: r.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
                 properties: {
                     location_stack: eo,
-                    emoji_guild_id: null !== (n = null == P ? void 0 : P.guildId) && void 0 !== n ? n : null,
-                    emoji_id: null !== (a = null == P ? void 0 : P.id) && void 0 !== a ? a : null
+                    emoji_guild_id: null !== (n = null == b ? void 0 : b.guildId) && void 0 !== n ? n : null,
+                    emoji_id: null !== (a = null == b ? void 0 : b.id) && void 0 !== a ? a : null
                 }
             }, {
                 disableTrack: !el
@@ -341,7 +341,7 @@ function(e, t, n) {
                                 className: z.truncatingText,
                                 children: [(0, i.jsx)(d.Text, {
                                     variant: "text-md/semibold",
-                                    children: (0, i.jsx)(b.default, {
+                                    children: (0, i.jsx)(P.default, {
                                         children: u.name
                                     })
                                 }), en && (0, i.jsxs)("div", {

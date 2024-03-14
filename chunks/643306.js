@@ -56,11 +56,11 @@ function(e, t, n) {
             guildId: M,
             children: R,
             inlinePreview: k = !1
-        } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), P = null != t && 0 !== t && !k, b = P && "dot" === L, j = e => (0, i.jsxs)(T.default, {
+        } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), b = null != t && 0 !== t && !k, P = b && "dot" === L, j = e => (0, i.jsxs)(T.default, {
             className: a(A.roleMention),
-            color: "username" === L && P ? t : null,
+            color: "username" === L && b ? t : null,
             ...e,
-            children: [b && (0, i.jsx)(d.RoleDot, {
+            children: [P && (0, i.jsx)(d.RoleDot, {
                 color: (0, o.int2hex)(t),
                 className: N.roleDot,
                 background: !1,

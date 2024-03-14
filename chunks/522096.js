@@ -40,8 +40,8 @@ function(e, t, n) {
             listPaddingRight: R,
             itemNodeMargin: k,
             listPadding: L,
-            gridNavigatorId: P,
-            gridNotice: b,
+            gridNavigatorId: b,
+            gridNotice: P,
             renderHeader: j
         } = e, U = l.useRef(null), D = l.useRef(null), w = l.useRef(null), F = 0 === t.length, B = (0, a.useExpressionPickerStore)(e => e.searchQuery), G = c.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
             gridWrapperRef: U,
@@ -72,7 +72,7 @@ function(e, t, n) {
             expressionsGrid: V,
             onSelectItem: f,
             store: c,
-            gridNavigatorId: P
+            gridNavigatorId: b
         }), $ = l.useCallback(e => {
             let t = V[e];
             return y(t, J(e), {
@@ -97,7 +97,7 @@ function(e, t, n) {
                 hasSendableExpressions: !0,
                 onKeyDown: X,
                 expressionsListRef: D,
-                gridNavigatorId: P,
+                gridNavigatorId: b,
                 defaultSearchPlaceholder: h,
                 emptySearchPlaceholder: x
             }), null == v ? void 0 : v()]
@@ -107,13 +107,13 @@ function(e, t, n) {
                 className: u.header,
                 children: [" ", el, " "]
             }), F && null != E ? E(u.emptyState) : (0, i.jsxs)(i.Fragment, {
-                children: [_(D), null != b && (0, i.jsx)("div", {
+                children: [_(D), null != P && (0, i.jsx)("div", {
                     className: u.gridNoticeWrapper,
-                    children: b
+                    children: P
                 }), (0, i.jsx)("div", {
                     ref: U,
                     className: u.listWrapper,
-                    id: P,
+                    id: b,
                     ...q,
                     children: null != H ? (0, i.jsx)(r.default, {
                         ref: D,

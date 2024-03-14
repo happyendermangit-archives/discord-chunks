@@ -14,6 +14,7 @@ function(e, t, n) {
         innerButton: "innerButton__2a740",
         inventoryContainer: "inventoryContainer_f4883b",
         inventoryHeader: "inventoryHeader_de1495",
+        inventoryHelpIcon: "inventoryHelpIcon_d2b3ca",
         inventoryItems: "inventoryItems__62cfb",
         noTextToSpeech: "noTextToSpeech__377ed",
         noTextToSpeechButton: "noTextToSpeechButton__999af",

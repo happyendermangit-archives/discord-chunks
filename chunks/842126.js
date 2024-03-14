@@ -40,8 +40,8 @@ function(e, t, n) {
                 allowAnimatedEmoji: R,
                 showEmojiFavoriteTooltip: k,
                 channelGuildId: L,
-                category: P,
-                selectedItemClassName: b,
+                category: b,
+                selectedItemClassName: P,
                 messageId: j,
                 isBurstReaction: U,
                 inNitroLockedSection: D
@@ -94,7 +94,7 @@ function(e, t, n) {
                                             [I.emojiItemLarge]: W,
                                             [I.emojiItemMedium]: Y,
                                             [I.emojiItemSelected]: u,
-                                            [null != b ? b : ""]: u,
+                                            [null != P ? P : ""]: u,
                                             [I.showPulse]: H === t
                                         }),
                                         onFocus: null != h ? h : c,
@@ -128,7 +128,7 @@ function(e, t, n) {
                                 isUsingKeyboardNavigation: O,
                                 surrogateCodePoint: _,
                                 allowAnimatedEmoji: R,
-                                selectedItemClassName: b,
+                                selectedItemClassName: P,
                                 onSelect: a,
                                 onInspect: T,
                                 channelGuildId: L,
@@ -155,7 +155,7 @@ function(e, t, n) {
                     ref: K,
                     children: e.map(z)
                 });
-            if (P !== g.EmojiCategoryTypes.TOP_GUILD_EMOJI) return Z(t);
+            if (b !== g.EmojiCategoryTypes.TOP_GUILD_EMOJI) return Z(t);
             let J = t.filter(e => !!w && e.type === E.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === g.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === g.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
                 q = t.filter(e => e.subCategory === g.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
             return 0 === q.length ? Z(t) : (0, i.jsxs)("div", {

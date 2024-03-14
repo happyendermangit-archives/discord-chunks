@@ -73,15 +73,15 @@ function(e, t, n) {
     }
 
     function I(e) {
-        let t = m.ChannelTypesSets.POLLS.has(e.type),
+        let t = m.ChannelTypesSets.POLLS.has(null == e ? void 0 : e.type),
             {
                 enabled: n
             } = E.CreateGuildPollsExperiment.useExperiment({
-                guildId: e.guild_id,
+                guildId: null == e ? void 0 : e.guild_id,
                 location: "useCanPostPollsInChannel"
             }, {
                 autoTrackExposure: !0,
-                disable: !t || e.isPrivate() || !c.default.can(m.Permissions.SEND_MESSAGES, e)
+                disable: !t || (null == e ? void 0 : e.isPrivate()) || !c.default.can(m.Permissions.SEND_MESSAGES, e)
             }),
             {
                 enabled: i
@@ -89,7 +89,7 @@ function(e, t, n) {
                 location: "useCanPostPollsInChannel"
             }, {
                 autoTrackExposure: !0,
-                disable: !t || !e.isPrivate()
+                disable: !t || !(null == e ? void 0 : e.isPrivate())
             });
         return n || i
     }
