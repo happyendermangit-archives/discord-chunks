@@ -36,7 +36,7 @@ function(e, t, n) {
     let y = e => 0 === e.type,
         N = e => 1 === e.type,
         R = e => y(e) ? e.message.nonce : N(e) ? e.message.messageId : e.message.data.id,
-        O = [1 * p.default.Millis.SECOND, 5 * p.default.Millis.MINUTE];
+        O = [1 * p.default.Millis.MINUTE, 5 * p.default.Millis.MINUTE];
     class D extends v.default {
         isFull() {
             return this.queue.length >= this.maxSize
