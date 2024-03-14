@@ -35,10 +35,10 @@ function(e, t, n) {
         k = n("782340"),
         L = n("350583");
     new S.default("ChannelEditor.tsx");
-    let b = function() {
+    let P = function() {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
         },
-        P = {
+        b = {
             12: L.fontSize12Padding,
             14: L.fontSize14Padding,
             15: L.fontSize15Padding,
@@ -178,7 +178,7 @@ function(e, t, n) {
                 className: N,
                 id: M,
                 required: k,
-                maxCharacterCount: b,
+                maxCharacterCount: P,
                 allowNewLines: j,
                 "aria-describedby": U,
                 "aria-labelledby": D,
@@ -212,7 +212,7 @@ function(e, t, n) {
                 onResize: p,
                 onKeyDown: f,
                 onSubmit: h,
-                textAreaPaddingClassName: r(P[y], {
+                textAreaPaddingClassName: r(b[y], {
                     [L.textAreaWithoutAttachmentButton]: E !== _.ChatInputTypes.NORMAL && E !== _.ChatInputTypes.OVERLAY && E !== _.ChatInputTypes.THREAD_CREATION && E !== _.ChatInputTypes.SIDEBAR,
                     [L.textAreaForPostCreation]: E === _.ChatInputTypes.CREATE_FORUM_POST,
                     [L.textAreaCustomGift]: E === _.ChatInputTypes.CUSTOM_GIFT
@@ -225,7 +225,7 @@ function(e, t, n) {
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== B.id || void 0,
                 "aria-activedescendant": null !== (s = B.activeDescendant) && void 0 !== s ? s : void 0,
-                "aria-invalid": o.length > b,
+                "aria-invalid": o.length > P,
                 "aria-describedby": U,
                 "aria-labelledby": D,
                 "aria-autocomplete": "list"
@@ -390,7 +390,7 @@ function(e, t, n) {
                         files: []
                     }
                 }(e.clipboardData, s.uploadLongMessages ? null != i ? i : a : null);
-                return b("onPaste", [...e.clipboardData.items].map(e => {
+                return P("onPaste", [...e.clipboardData.items].map(e => {
                     if ("file" !== e.kind) return {
                         kind: e.kind,
                         type: e.type

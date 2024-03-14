@@ -47,7 +47,7 @@ function(e, t, n) {
         return "autocomplete-".concat(e, "-title")
     }
     let L = l.createContext(null);
-    class b extends l.PureComponent {
+    class P extends l.PureComponent {
         isSelectable() {
             return this.selectable
         }
@@ -114,7 +114,7 @@ function(e, t, n) {
             }
         }
     }
-    class P extends l.PureComponent {
+    class b extends l.PureComponent {
         render() {
             let {
                 children: e,
@@ -138,7 +138,7 @@ function(e, t, n) {
             }) : null
         }
     }
-    P.Generic = class e extends b {
+    b.Generic = class e extends P {
         renderContent() {
             let {
                 text: e,
@@ -154,7 +154,7 @@ function(e, t, n) {
                 }) : null]
             })
         }
-    }, P.Loading = function(e) {
+    }, b.Loading = function(e) {
         let t = l.useMemo(() => o.random(60, 120), []);
         return (0, i.jsx)("div", {
             className: M.base,
@@ -172,7 +172,7 @@ function(e, t, n) {
                 })
             })
         })
-    }, P.Title = function(e) {
+    }, b.Title = function(e) {
         let {
             title: t,
             className: n,
@@ -187,7 +187,7 @@ function(e, t, n) {
                 children: [t, a]
             })
         })
-    }, P.Divider = class e extends b {
+    }, b.Divider = class e extends P {
         renderContent() {
             let {
                 className: e
@@ -199,7 +199,7 @@ function(e, t, n) {
         constructor(...e) {
             super(...e), this.layoutClass = M.dividerContainer, this.selectable = !1
         }
-    }, P.User = class e extends b {
+    }, b.User = class e extends P {
         renderContent() {
             let {
                 user: e,
@@ -234,7 +234,7 @@ function(e, t, n) {
                 })]
             })
         }
-    }, P.Role = class e extends b {
+    }, b.Role = class e extends P {
         renderContent() {
             let {
                 role: e,
@@ -261,7 +261,7 @@ function(e, t, n) {
                 })]
             })
         }
-    }, P.Channel = class e extends b {
+    }, b.Channel = class e extends P {
         renderContent() {
             let {
                 channel: e,
@@ -281,7 +281,7 @@ function(e, t, n) {
                 }) : null]
             })
         }
-    }, P.Command = class e extends b {
+    }, b.Command = class e extends P {
         renderContent() {
             let {
                 command: e
@@ -301,7 +301,7 @@ function(e, t, n) {
                 })]
             })
         }
-    }, P.NewCommand = class e extends b {
+    }, b.NewCommand = class e extends P {
         isSelectable() {
             return this.props.command.inputType !== f.ApplicationCommandInputType.PLACEHOLDER
         }
@@ -324,7 +324,7 @@ function(e, t, n) {
                 isSelectable: r
             })
         }
-    }, P.Emoji = class e extends b {
+    }, b.Emoji = class e extends P {
         renderContent() {
             let {
                 emoji: e,
@@ -353,7 +353,7 @@ function(e, t, n) {
         constructor(...e) {
             super(...e), this.layoutClass = s(M.autocompleteRowVertical, M.autocompleteRowVerticalSmall, this.props.isLocked ? M.premiumEmoji : null)
         }
-    }, P.GIFIntegration = class e extends b {
+    }, b.GIFIntegration = class e extends P {
         renderContent() {
             let {
                 width: e,
@@ -370,7 +370,7 @@ function(e, t, n) {
         constructor(...e) {
             super(...e), this.layoutClass = M.autocompleteRowHorizontal
         }
-    }, P.Sticker = class e extends b {
+    }, b.Sticker = class e extends P {
         renderContent() {
             var e, t;
             let n;
@@ -402,12 +402,12 @@ function(e, t, n) {
         constructor(...e) {
             super(...e), this.layoutClass = s(M.autocompleteRowVertical, M.autocompleteRowVerticalSmall)
         }
-    }, P.EmojiUpsell = class e extends b {
+    }, b.EmojiUpsell = class e extends P {
         renderContent() {
             return (0, i.jsx)(E.default, {
                 emojis: this.props.emojis
             })
         }
     };
-    var j = P
+    var j = b
 }

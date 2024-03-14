@@ -33,9 +33,9 @@ function(e, t, r) {
                 profileEffectConfig: p,
                 noBorderRadius: v = !1,
                 introDelay: I = c.ENTRY_DELAY
-            } = e, _ = u.useRef(null), [S, h] = u.useState([]);
+            } = e, _ = u.useRef(null), [S, N] = u.useState([]);
             (0, A.default)(p);
-            let [N, O] = u.useState(0), [C, y] = u.useState(0), {
+            let [h, O] = u.useState(0), [C, y] = u.useState(0), {
                 accessibilityLabel: F
             } = p, [g, L] = u.useState(-I), {
                 stop: P,
@@ -45,7 +45,7 @@ function(e, t, r) {
                 L(t => t + e)
             });
             u.useEffect(() => {
-                L(-I), h((0, E.sortEffectLayers)(p.effects))
+                L(-I), N((0, E.sortEffectLayers)(p.effects))
             }, [p]), u.useEffect(() => {
                 let e = 0,
                     t = 1 / 0;
@@ -56,8 +56,8 @@ function(e, t, r) {
             }, [y, S]);
             let [M, b] = u.useState(!1);
             return u.useEffect(() => {
-                !0 !== s && !i && (P(), L(0)), !i && M && x.current && (P(), L(0)), o && i && !x.current && (D(), p.animationType === f.AnimationTypes.PERSISTENT ? L(T === f.RestartMethod.FromStart ? 0 : N) : L(0))
-            }, [i, M, N, o, P, D, x, p.animationType, s, T]), (0, n.jsx)("div", {
+                !0 !== s && !i && (P(), L(0)), !i && M && x.current && (P(), L(0)), o && i && !x.current && (D(), p.animationType === f.AnimationTypes.PERSISTENT ? L(T === f.RestartMethod.FromStart ? 0 : h) : L(0))
+            }, [i, M, h, o, P, D, x, p.animationType, s, T]), (0, n.jsx)("div", {
                 ref: _,
                 className: l(m.profileEffects, {
                     [m.hovered]: i && a

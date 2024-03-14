@@ -35,8 +35,8 @@ function(e, t, n) {
         R = n("161585"),
         k = n("24373"),
         L = n("41170"),
-        b = n("801396"),
-        P = n("355494"),
+        P = n("801396"),
+        b = n("355494"),
         j = n("77162"),
         U = n("209069"),
         D = n("49111"),
@@ -144,13 +144,13 @@ function(e, t, n) {
                 filteredStickers: I,
                 ownedStickerPacks: N,
                 channel: A
-            } = e, O = (0, d.useAnalyticsContext)(), P = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
+            } = e, O = (0, d.useAnalyticsContext)(), b = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
                 handleStickerInspect: U,
                 handleSelect: G
             } = eu({
                 onSelectSticker: a,
                 channel: A,
-                currentUser: P
+                currentUser: b
             }), [K, W] = l.useState(!1), Y = l.useCallback(e => {
                 g.StickerPickerCollapsedSections.updateSetting(Array.from(e))
             }, []), z = l.useCallback(e => {
@@ -172,9 +172,9 @@ function(e, t, n) {
                     ownedStickerPacks: N,
                     isDisplayingIndividualStickers: !0,
                     channel: A,
-                    currentUser: P
+                    currentUser: b
                 }, e) : null
-            }, [x, r, u, c, f, m, h, U, G, n, N, A, P]), Z = l.useCallback((e, t) => (0, i.jsx)("div", {
+            }, [x, r, u, c, f, m, h, U, G, n, N, A, b]), Z = l.useCallback((e, t) => (0, i.jsx)("div", {
                 children: t
             }, e), []), $ = l.useCallback(function(e) {
                 let {
@@ -288,7 +288,7 @@ function(e, t, n) {
             }, [I]), en = l.useCallback(e => {
                 let n = E[e],
                     l = t.has(n.id);
-                return n.type !== R.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != I || l ? null : (0, i.jsx)(b.default, {
+                return n.type !== R.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != I || l ? null : (0, i.jsx)(P.default, {
                     className: B.emptyGuildUpsell,
                     guildId: n.id,
                     channel: A,
@@ -326,7 +326,7 @@ function(e, t, n) {
                 channel: v
             } = e, N = l.useRef(!1), A = l.useRef(null), [O, R] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
                 AnalyticsLocationProvider: k
-            } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), b = (0, s.useStateFromStores)([M.default], () => M.default.getPremiumPacks()), j = l.useMemo(() => new Set(b.map(e => e.id)), [b]), {
+            } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), P = (0, s.useStateFromStores)([M.default], () => M.default.getPremiumPacks()), j = l.useMemo(() => new Set(P.map(e => e.id)), [P]), {
                 renderRow: U,
                 renderSection: D,
                 renderSectionFooter: w,
@@ -421,7 +421,7 @@ function(e, t, n) {
                         sectionFooterHeight: V,
                         stickyHeaders: !0,
                         ref: A
-                    }), (0, i.jsx)(P.default, {
+                    }), (0, i.jsx)(b.default, {
                         stickersGrid: _
                     })]
                 })
