@@ -15,8 +15,8 @@ function(e, a, t) {
         f = t("316272"),
         l = t("830210"),
         u = t("289180"),
-        b = t("289656"),
-        p = t("727284"),
+        p = t("289656"),
+        b = t("727284"),
         h = t("42203"),
         j = t("42887"),
         m = t("18494"),
@@ -37,7 +37,7 @@ function(e, a, t) {
         constructor(...e) {
             super(...e), this.callbackActions = {
                 [E.ThumbarButtonName.VIDEO]: () => {
-                    j.default.isVideoEnabled() ? r.default.setVideoEnabled(!1) : (0, p.default)(() => r.default.setVideoEnabled(!0), g.AppContext.APP)
+                    j.default.isVideoEnabled() ? r.default.setVideoEnabled(!1) : (0, b.default)(() => r.default.setVideoEnabled(!0), g.AppContext.APP)
                 },
                 [E.ThumbarButtonName.MUTE]: () => r.default.toggleSelfMute(),
                 [E.ThumbarButtonName.DEAFEN]: () => r.default.toggleSelfDeaf(),
@@ -67,7 +67,7 @@ function(e, a, t) {
                         reachedLimit: void 0,
                         limit: void 0
                     },
-                    o = (0, b.getVideoButtonLabel)({
+                    o = (0, p.getVideoButtonLabel)({
                         enabled: s,
                         join: !1,
                         channel: n,
