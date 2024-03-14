@@ -20,10 +20,10 @@ function(e, t, n) {
             return _
         },
         finishUserCode: function() {
-            return h
+            return E
         },
         finishUserCodeTwoWayLinkError: function() {
-            return E
+            return h
         }
     });
     var i = n("891189"),
@@ -54,8 +54,8 @@ function(e, t, n) {
             permissions: c,
             guildId: f,
             channelId: _,
-            integrationType: h
-        } = e, E = await r.default.post({
+            integrationType: E
+        } = e, h = await r.default.post({
             url: o.Endpoints.OAUTH2_AUTHORIZE,
             query: {
                 client_id: n,
@@ -72,11 +72,11 @@ function(e, t, n) {
                 channel_id: null == f && null != _ ? _ : void 0,
                 permissions: c,
                 authorize: t,
-                integration_type: h
+                integration_type: E
             },
             oldFormErrors: !0
         });
-        return E.body
+        return h.body
     }
     async function d(e) {
         let {
@@ -129,7 +129,7 @@ function(e, t, n) {
             }
         })
     }
-    async function h(e, t) {
+    async function E(e, t) {
         return await r.default.post({
             url: o.Endpoints.OAUTH2_DEVICE_FINISH,
             body: {
@@ -138,7 +138,7 @@ function(e, t, n) {
             }
         })
     }
-    async function E(e, t, n) {
+    async function h(e, t, n) {
         return await r.default.post({
             url: o.Endpoints.OAUTH2_DEVICE_FINISH,
             body: {

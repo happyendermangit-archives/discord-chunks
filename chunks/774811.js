@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("227645"),
         f = n("718776"),
         _ = n("516826"),
-        h = n("741662"),
-        E = n("433600"),
+        E = n("741662"),
+        h = n("433600"),
         g = n("442761"),
         m = n("242670"),
         p = n("577776"),
@@ -34,30 +34,30 @@ function(e, t, n) {
         D = n("782340"),
         P = n("800836");
 
-    function M(e) {
+    function L(e) {
         return e.label
     }
-    let L = s.forwardRef(function(e, t) {
+    let M = s.forwardRef(function(e, t) {
             let {
                 options: n,
                 value: r,
                 onChange: l,
                 clearable: d = !1,
-                multi: h = !1,
-                closeOnSelect: E = !0,
+                multi: E = !1,
+                closeOnSelect: h = !0,
                 onOpen: m,
                 onClose: p,
                 placeholder: T = D.default.Messages.SELECT,
                 wrapperClassName: y,
                 className: N,
-                isDisabled: L = !1,
+                isDisabled: M = !1,
                 maxVisibleItems: b = 7,
                 look: w = O.SelectLooks.FILLED,
                 autoFocus: k = !1,
                 popoutPosition: V = "bottom",
                 filter: x = !0,
                 debounceTime: B,
-                renderOptionLabel: H = M,
+                renderOptionLabel: H = L,
                 onSearchChange: Y,
                 renderOptionPrefix: j = () => null,
                 renderOptionSuffix: W = () => null,
@@ -79,7 +79,7 @@ function(e, t, n) {
             } = (0, _.useFormContext)(), {
                 ref: er,
                 width: ea
-            } = (0, S.default)(), eo = s.useRef(null), [el, eu] = s.useState(null), [ed, ec] = s.useState(!1), [ef, e_] = s.useState(null), [eh, eE] = s.useState(!1), eg = s.useRef(null), em = s.useRef(null), {
+            } = (0, S.default)(), eo = s.useRef(null), [el, eu] = s.useState(null), [ed, ec] = s.useState(!1), [ef, e_] = s.useState(null), [eE, eh] = s.useState(!1), eg = s.useRef(null), em = s.useRef(null), {
                 options: ep,
                 loading: eS,
                 onQueryChange: ev
@@ -149,8 +149,8 @@ function(e, t, n) {
                 let n = Array.isArray(t) ? t : [t];
                 return n.map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
             })(ep, r), [ep, r]), eI = s.useMemo(() => eT.map(e => e.value), [eT]), eC = eT[eT.length - 1], eA = (0, I.default)(eC), ey = s.useId(), eN = s.useId(), eR = s.useId(), eO = s.useCallback(e => {
-                ed !== e && !L && (ec(e), e ? null == m || m() : null == p || p())
-            }, [L, p, m, ed]), eD = s.useCallback(e => {
+                ed !== e && !M && (ec(e), e ? null == m || m() : null == p || p())
+            }, [M, p, m, ed]), eD = s.useCallback(e => {
                 ed && !e && eO(!1)
             }, [eO, ed]), eP = (0, v.useIsVisible)(eD);
             s.useImperativeHandle(t, () => ({
@@ -158,14 +158,14 @@ function(e, t, n) {
                     eO(!1)
                 }
             }));
-            let eM = s.useCallback((e, t) => {
+            let eL = s.useCallback((e, t) => {
                     let n = document.querySelector(e),
                         i = eg.current;
                     eu(t), null != i && null != n && i.scrollIntoViewNode({
                         node: n
                     })
                 }, []),
-                eL = s.useCallback(() => new Promise(e => {
+                eM = s.useCallback(() => new Promise(e => {
                     let t = eg.current;
                     if (null == t) return e();
                     t.scrollToTop({
@@ -182,12 +182,12 @@ function(e, t, n) {
                 eU = (0, u.default)({
                     id: eN,
                     defaultFocused: null != eC ? String(eC.value) : void 0,
-                    scrollToStart: eL,
+                    scrollToStart: eM,
                     scrollToEnd: eb,
                     isEnabled: ed,
                     wrap: !0,
                     useVirtualFocus: !0,
-                    setFocus: eM,
+                    setFocus: eL,
                     disableClickOnSpace: !0
                 }),
                 ew = (0, I.default)(eU),
@@ -222,19 +222,19 @@ function(e, t, n) {
                     e.setFocus(n), eu(null)
                 }
             }, [ed, eS]), s.useLayoutEffect(() => {
-                !ed && (h ? e_("") : null != eC && e_(eC.label))
-            }, [h, eC, ed]), s.useLayoutEffect(() => {
-                h && e_("")
-            }, [h, eT.length]);
+                !ed && (E ? e_("") : null != eC && e_(eC.label))
+            }, [E, eC, ed]), s.useLayoutEffect(() => {
+                E && e_("")
+            }, [E, eT.length]);
             let eV = s.useCallback(function(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                 if (null == e) {
-                    l(h ? [] : void 0);
+                    l(E ? [] : void 0);
                     return
                 }
                 let i = "function" == typeof n,
                     s = i ? ep.find(t => t.value === e) : e;
-                if (h) {
+                if (E) {
                     let n = null != r ? r : [],
                         o = n.some(t => (i ? t.value : t) === e);
                     if (o ? l(n.filter(t => (i ? t.value : t) !== e)) : l([...n, s]), t) {
@@ -242,8 +242,8 @@ function(e, t, n) {
                         null === (a = eo.current) || void 0 === a || a.focus()
                     }
                 } else l(s);
-                eu(null), (!h || E) && eO(!1), eE(!1)
-            }, [n, ep, h, E, l, r, eO]);
+                eu(null), (!E || h) && eO(!1), eh(!1)
+            }, [n, ep, E, h, l, r, eO]);
             s.useLayoutEffect(() => {
                 if (k) {
                     var e;
@@ -264,15 +264,15 @@ function(e, t, n) {
                     }
                 }, [eO, ed]),
                 ex = ep;
-            eh && null != ef && !1 !== x && (ex = "function" == typeof x ? x(ep, ef) : (0, o.matchSorter)(ep, ef, {
+            eE && null != ef && !1 !== x && (ex = "function" == typeof x ? x(ep, ef) : (0, o.matchSorter)(ep, ef, {
                 keys: ["label"]
             })), s.useEffect(() => {
                 let e = eg.current;
                 null == e || e.scrollToTop()
             }, [ef]), s.useEffect(() => {
-                !eS && eh && null !== ef && requestAnimationFrame(() => eU.focusFirstVisibleItem())
-            }, [eS, eh, ef]);
-            let eB = h ? F : G;
+                !eS && eE && null !== ef && requestAnimationFrame(() => eU.focusFirstVisibleItem())
+            }, [eS, eE, ef]);
+            let eB = E ? F : G;
             return (0, i.jsx)(u.ListNavigatorProvider, {
                 navigator: eU,
                 children: (0, i.jsx)(g.Popout, {
@@ -289,7 +289,7 @@ function(e, t, n) {
                         } = e;
                         return (0, i.jsx)(U, {
                             loading: eS,
-                            multi: h,
+                            multi: E,
                             listRef: eg,
                             listId: ey,
                             maxVisibleItems: b,
@@ -297,7 +297,7 @@ function(e, t, n) {
                             selectedValues: eI,
                             closePopout: t,
                             onSelect: eV,
-                            closeOnSelect: E,
+                            closeOnSelect: h,
                             options: ex,
                             activeDescendant: el,
                             renderOptionLabel: H,
@@ -327,14 +327,14 @@ function(e, t, n) {
                             },
                             onBlur: e => {
                                 var t, n, i;
-                                !((null === (t = em.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (i = eg.current) || void 0 === i ? void 0 : null === (n = i.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget))) && (!h && null != eC && e_(eC.label), eE(!1), eO(!1), null == J || J(e))
+                                !((null === (t = em.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (i = eg.current) || void 0 === i ? void 0 : null === (n = i.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget))) && (!E && null != eC && e_(eC.label), eh(!1), eO(!1), null == J || J(e))
                             },
                             children: [(0, i.jsx)(f.FocusRing, {
                                 ringTarget: er,
                                 focusTarget: eo,
                                 offset: 4,
                                 children: (0, i.jsx)("div", {
-                                    onClick: L ? void 0 : e => {
+                                    onClick: M ? void 0 : e => {
                                         e.stopPropagation(), e.preventDefault(), e_(""), eO(!0)
                                     },
                                     onMouseDown: e => {
@@ -346,13 +346,13 @@ function(e, t, n) {
                                     className: a(P.select, P.searchable, N, {
                                         [P.open]: r,
                                         [P.lookFilled]: w === O.SelectLooks.FILLED,
-                                        [P.disabled]: L,
-                                        [P.multi]: h,
+                                        [P.disabled]: M,
+                                        [P.multi]: E,
                                         [P.selectPositionTop]: "top" === o
                                     }),
                                     children: (0, i.jsx)("div", {
                                         className: a(P.value, {
-                                            [P.multi]: h
+                                            [P.multi]: E
                                         }),
                                         children: (0, i.jsx)(eB, {
                                             query: ef,
@@ -360,8 +360,8 @@ function(e, t, n) {
                                             loading: eS,
                                             renderOptionPrefix: j,
                                             renderOptionSuffix: W,
-                                            isDisabled: L,
-                                            isEditing: eh,
+                                            isDisabled: M,
+                                            isEditing: eE,
                                             inputRef: eo,
                                             "aria-describedby": null != K ? K : ei,
                                             "aria-required": X,
@@ -376,7 +376,7 @@ function(e, t, n) {
                                                 null === (e = eo.current) || void 0 === e || e.setSelectionRange(0, null !== (t = null == ef ? void 0 : ef.length) && void 0 !== t ? t : 0)
                                             },
                                             onChange: e => {
-                                                ev(e), null == Y || Y(e), e_(e), eO(!0), eE(!0)
+                                                ev(e), null == Y || Y(e), e_(e), eO(!0), eh(!0)
                                             },
                                             onKeyDown: e => {
                                                 var t;
@@ -397,7 +397,7 @@ function(e, t, n) {
                                 })
                             }), (0, i.jsxs)("div", {
                                 className: a(P.icons, {
-                                    [P.multi]: h,
+                                    [P.multi]: E,
                                     [P.iconsContainer]: !Z
                                 }),
                                 ref: ee,
@@ -429,7 +429,7 @@ function(e, t, n) {
                 })
             })
         }),
-        b = L;
+        b = M;
 
     function U(e) {
         let {
@@ -442,7 +442,7 @@ function(e, t, n) {
             activeDescendant: c,
             listRef: f,
             listId: _,
-            renderOptionLabel: h,
+            renderOptionLabel: E,
             updatePosition: g,
             loading: S = !1,
             multi: v,
@@ -484,7 +484,7 @@ function(e, t, n) {
                     onKeyDown: n,
                     ...s
                 } = e;
-                return (0, i.jsx)(E.ListAuto, {
+                return (0, i.jsx)(h.ListAuto, {
                     className: a(P.popout, P.searchableSelect, {
                         [P.noScrollbar]: o.length <= d,
                         [P.popoutPositionTop]: "top" === I
@@ -511,7 +511,7 @@ function(e, t, n) {
                         var t;
                         let {
                             row: n
-                        } = e, s = o[n], a = h(s);
+                        } = e, s = o[n], a = E(s);
                         return (0, i.jsx)(Option, {
                             multi: v,
                             "aria-posinset": n,
@@ -600,7 +600,7 @@ function(e, t, n) {
             isFocused: d,
             multi: f,
             ..._
-        } = e, h = (0, u.useListItem)(String(t));
+        } = e, E = (0, u.useListItem)(String(t));
         return (0, i.jsxs)(c.Clickable, {
             tag: "li",
             style: {
@@ -614,10 +614,10 @@ function(e, t, n) {
                 [P.multi]: f
             }),
             onClick: () => o(t),
-            ...h,
+            ...E,
             ..._,
             "aria-selected": l,
-            id: h["data-list-item-id"],
+            id: E["data-list-item-id"],
             role: "option",
             children: [(0, i.jsxs)("div", {
                 className: P.content,
@@ -695,8 +695,8 @@ function(e, t, n) {
             isDisabled: c,
             inputRef: f,
             renderOptionPrefix: _,
-            renderOptionSuffix: h,
-            inputClassNames: E,
+            renderOptionSuffix: E,
+            inputClassNames: h,
             ...g
         } = e, m = Math.max(n.length, (null != t ? t : "").length), p = s.useRef(null), {
             focusPreviousItem: S,
@@ -758,7 +758,7 @@ function(e, t, n) {
                 listRef: p,
                 selectedOptions: r,
                 renderOptionPrefix: _,
-                renderOptionSuffix: h,
+                renderOptionSuffix: E,
                 selectValue: o,
                 focusNextItem: v,
                 focusPreviousItem: S
@@ -766,7 +766,7 @@ function(e, t, n) {
                 style: {
                     minWidth: "".concat(m, "ch")
                 },
-                className: a(P.multi, E),
+                className: a(P.multi, h),
                 query: t,
                 placeholder: n,
                 selectValue: o,
@@ -794,8 +794,8 @@ function(e, t, n) {
             isDisabled: c,
             listboxId: f,
             activeDescendant: _,
-            navigatorId: h,
-            onChange: E,
+            navigatorId: E,
+            onChange: h,
             onFocus: g,
             setInputRef: m,
             isEditing: p,
@@ -819,11 +819,11 @@ function(e, t, n) {
             "aria-required": o,
             "aria-busy": T,
             style: null != I ? I : {},
-            "aria-activedescendant": null != _ ? (0, u.createListItemId)(h, _) : "",
+            "aria-activedescendant": null != _ ? (0, u.createListItemId)(E, _) : "",
             disabled: c,
             value: null != t ? t : "",
             onChange: e => {
-                E(e.target.value)
+                h(e.target.value)
             },
             onFocus: g,
             className: a(P.searchInput, C, {
@@ -869,7 +869,7 @@ function(e, t, n) {
                 }), " ", null != u && (0, i.jsx)("div", {
                     className: P.suffix,
                     children: u
-                }), (0, i.jsx)(h.HiddenVisually, {
+                }), (0, i.jsx)(E.HiddenVisually, {
                     children: D.default.Messages.REMOVE
                 }), (0, i.jsx)(R.default, {
                     className: P.deleteOptionIcon,

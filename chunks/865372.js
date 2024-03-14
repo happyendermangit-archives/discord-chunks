@@ -28,11 +28,11 @@ function(e, t, n) {
             afterCompute: () => {},
             numFrequentlyItems: 20
         }),
-        h = () => {
+        E = () => {
             d.default.isLoaded && _.compute()
         },
-        E = () => {
-            h()
+        h = () => {
+            E()
         };
 
     function g() {
@@ -46,7 +46,7 @@ function(e, t, n) {
     }
     class m extends r.default.PersistedStore {
         initialize(e) {
-            this.waitFor(d.default), null != e && (f = e), this.syncWith([d.default], E), this.syncWith([l.default], g)
+            this.waitFor(d.default), null != e && (f = e), this.syncWith([d.default], h), this.syncWith([l.default], g)
         }
         getState() {
             return f
@@ -69,7 +69,7 @@ function(e, t, n) {
                     key: e,
                     timestamp: Date.now()
                 })
-            }), h()
+            }), E()
         },
         USER_SETTINGS_PROTO_UPDATE: function(e) {
             let {

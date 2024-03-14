@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("892974"),
         f = n("983782"),
         _ = n("668596"),
-        h = n("659500"),
-        E = n("551042"),
+        E = n("659500"),
+        h = n("551042"),
         g = n("625611"),
         m = n("49111"),
         p = n("934583");
@@ -79,13 +79,13 @@ function(e, t, n) {
     }
 
     function T() {
-        return (0, E.modalContextFromAppContext)((0, d.useAppContext)())
+        return (0, h.modalContextFromAppContext)((0, d.useAppContext)())
     }
     let I = [];
 
     function C() {
         let e = T(),
-            t = (0, E.useModalsStore)(t => void 0 !== t[e] ? t[e] : I),
+            t = (0, h.useModalsStore)(t => void 0 !== t[e] ? t[e] : I),
             n = s.useRef();
         s.useLayoutEffect(() => {
             n.current = t[t.length - 1]
@@ -97,8 +97,8 @@ function(e, t, n) {
                 let e = n.current;
                 null != e && null != e.onCloseRequest && e.onCloseRequest()
             };
-            return h.ComponentDispatch.subscribe(m.ComponentActions.MODAL_CLOSE, e), () => {
-                h.ComponentDispatch.unsubscribe(m.ComponentActions.MODAL_CLOSE, e)
+            return E.ComponentDispatch.subscribe(m.ComponentActions.MODAL_CLOSE, e), () => {
+                E.ComponentDispatch.unsubscribe(m.ComponentActions.MODAL_CLOSE, e)
             }
         }, [r]);
         let a = s.useCallback(() => {
@@ -106,7 +106,7 @@ function(e, t, n) {
                 null != e && null != e.onCloseRequest && e.onCloseRequest()
             }, []),
             o = s.useCallback(t => {
-                (0, E.closeModal)(t, e)
+                (0, h.closeModal)(t, e)
             }, [e]),
             d = S.map(e => t.some(t => t.Layer === e || null == t.Layer && e === f.default));
         return (0, i.jsxs)(u.default, {

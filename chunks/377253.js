@@ -16,9 +16,9 @@ function(e, t, n) {
         c = n("10853"),
         f = n("38654"),
         _ = n("692038"),
-        h = n("61400");
+        E = n("61400");
     n("574073");
-    var E = n("432173"),
+    var h = n("432173"),
         g = n("915639"),
         m = n("568734"),
         p = n("299039"),
@@ -34,8 +34,8 @@ function(e, t, n) {
         O = n("162771"),
         D = n("697218"),
         P = n("49111");
-    let M = new Set,
-        L = new u.default("MessageStore"),
+    let L = new Set,
+        M = new u.default("MessageStore"),
         b = !1;
 
     function U() {
@@ -44,7 +44,7 @@ function(e, t, n) {
                 ready: !1,
                 loadingMore: !1
             }))
-        }), M.clear()
+        }), L.clear()
     }
 
     function w() {
@@ -73,7 +73,7 @@ function(e, t, n) {
             emoji: r,
             reactionType: a
         } = e, l = o.default.get(n);
-        if (null == l || !(0, E.shouldApplyReaction)(e)) return !1;
+        if (null == l || !(0, h.shouldApplyReaction)(e)) return !1;
         let u = S.default.getId() === s;
         l = l.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(r, u, e.colors, a) : n.removeReaction(r, u, a)), o.default.commit(l)
     }
@@ -108,7 +108,7 @@ function(e, t, n) {
         }
         getLastEditableMessage(e) {
             let t = D.default.getCurrentUser();
-            return s(this.getMessages(e).toArray()).reverse().find(e => (0, h.default)(e, null == t ? void 0 : t.id))
+            return s(this.getMessages(e).toArray()).reverse().find(e => (0, E.default)(e, null == t ? void 0 : t.id))
         }
         getLastCommandMessage(e) {
             let t = D.default.getCurrentUser();
@@ -164,7 +164,7 @@ function(e, t, n) {
                 if (null == n) continue;
                 let i = n.cached || true;
                 if (!i) {
-                    L.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
+                    M.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
                     continue
                 }
                 n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids)
@@ -242,7 +242,7 @@ function(e, t, n) {
                 truncateBottom: n,
                 truncateTop: i
             } = e;
-            L.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
+            M.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
             let s = o.default.getOrCreate(t);
             s = s.truncate(n, i), o.default.commit(s)
         },
@@ -250,7 +250,7 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            L.log("Clearing messages for ".concat(t)), o.default.clear(t), M.clear()
+            M.log("Clearing messages for ".concat(t)), o.default.clear(t), L.clear()
         },
         MESSAGE_CREATE: function(e) {
             let {
@@ -259,11 +259,11 @@ function(e, t, n) {
                 isPushNotification: i
             } = e, s = o.default.getOrCreate(t);
             if (i) {
-                L.log("Inserting message tapped on from a push notification", n.id, n.channel_id), o.default.commit(s.receivePushNotification(n));
+                M.log("Inserting message tapped on from a push notification", n.id, n.channel_id), o.default.commit(s.receivePushNotification(n));
                 return
             }
             if (!s.ready) return !1;
-            null != n.nonce && n.state !== P.MessageStates.SENDING && M.has(n.nonce) && (s = s.remove(n.nonce), M.delete(n.nonce)), s = s.receiveMessage(n, T.default.isAtBottom(t)), o.default.commit(s)
+            null != n.nonce && n.state !== P.MessageStates.SENDING && L.has(n.nonce) && (s = s.remove(n.nonce), L.delete(n.nonce)), s = s.receiveMessage(n, T.default.isAtBottom(t)), o.default.commit(s)
         },
         MESSAGE_SEND_FAILED: function(e) {
             let {
@@ -306,7 +306,7 @@ function(e, t, n) {
                     revealedMessageId: null
                 })
             }
-            i = i.remove(t), o.default.commit(i), M.delete(t)
+            i = i.remove(t), o.default.commit(i), L.delete(t)
         },
         MESSAGE_DELETE_BULK: function(e) {
             let {
@@ -325,7 +325,7 @@ function(e, t, n) {
                 })
             }
             o.default.commit(r), t.forEach(e => {
-                M.delete(e)
+                L.delete(e)
             })
         },
         MESSAGE_REVEAL: function(e) {
@@ -388,24 +388,24 @@ function(e, t, n) {
         LOGOUT: function() {
             o.default.forEach(e => {
                 o.default.clear(e.channelId)
-            }), M.clear()
+            }), L.clear()
         },
         UPLOAD_START: function(e) {
             let {
                 message: t
             } = e;
-            null != t.nonce && M.add(t.nonce)
+            null != t.nonce && L.add(t.nonce)
         },
         UPLOAD_FAIL: function(e) {
             let {
                 channelId: t,
                 messageRecord: n
             } = e, i = null == n ? void 0 : n.nonce;
-            if (null != i && M.has(i)) {
+            if (null != i && L.has(i)) {
                 let e = o.default.getOrCreate(t),
                     n = e.get(i);
                 if (null == n) return;
-                e = (e = e.remove(i)).merge([n]), M.delete(i), o.default.commit(e)
+                e = (e = e.remove(i)).merge([n]), L.delete(i), o.default.commit(e)
             }
         },
         LOCAL_MESSAGE_CREATE: function(e) {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return M
+            return R
         }
     }), n("222007"), n("702976");
     var i = n("77078"),
@@ -31,12 +31,12 @@ function(e, t, n) {
         N = n("305515"),
         A = n("49111"),
         O = n("782340");
-    async function R(e) {
+    async function M(e) {
         var t, n, i;
         let c, {
                 channelId: f,
-                uploads: R,
-                draftType: M,
+                uploads: M,
+                draftType: R,
                 parsedMessage: k,
                 options: L = {},
                 raiseEndpointErrors: P = !1
@@ -122,10 +122,10 @@ function(e, t, n) {
             }, t)) : (0, o.openUploadError)({
                 title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                 help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-            }), "" !== U.content && "" === T.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === _.default.getUploadCount(f, M) && r.default.setUploads({
+            }), "" !== U.content && "" === T.default.getDraft(f, R) && a.default.saveDraft(f, U.content, R), 0 === _.default.getUploadCount(f, R) && r.default.setUploads({
                 channelId: f,
-                uploads: R,
-                draftType: M
+                uploads: M,
+                draftType: R
             }))
         }), b.on("complete", (e, t) => {
             l.default.dispatch({
@@ -135,9 +135,9 @@ function(e, t, n) {
                 aborted: b._aborted,
                 messageRecord: t
             })
-        }), await b.uploadFiles(R, U), j.resolve(), j.promise
+        }), await b.uploadFiles(M, U), j.resolve(), j.promise
     }
-    var M = {
+    var R = {
         instantBatchUpload: function(e) {
             let {
                 channelId: t,
@@ -154,7 +154,7 @@ function(e, t, n) {
                     ...i
                 }, t)
             });
-            R({
+            M({
                 channelId: t,
                 uploads: s,
                 draftType: i
@@ -228,7 +228,7 @@ function(e, t, n) {
                 })
             }), x.upload(r, h)
         },
-        uploadFiles: R,
+        uploadFiles: M,
         cancel(e) {
             if (l.default.dispatch({
                     type: "UPLOAD_CANCEL_REQUEST",

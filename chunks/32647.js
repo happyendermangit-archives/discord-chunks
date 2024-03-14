@@ -31,8 +31,8 @@ function(e, t, n) {
         N = n("100576"),
         A = n("765446"),
         O = n("461593"),
-        R = n("49111"),
-        M = n("175543"),
+        M = n("49111"),
+        R = n("175543"),
         k = l.forwardRef(function(e, t) {
             let {
                 value: n,
@@ -145,10 +145,10 @@ function(e, t, n) {
                     if (s.length > 0) {
                         var n, i;
                         let e = s[0];
-                        E.SlateTransforms.selectCommandOption(eC, e.name), f.ComponentDispatch.dispatch(R.ComponentActions.SHAKE_APP, {
+                        E.SlateTransforms.selectCommandOption(eC, e.name), f.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
                             duration: 200,
                             intensity: 2
-                        }), (0, o.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                        }), (0, o.trackWithMetadata)(M.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: null == t ? void 0 : t.applicationId,
                             command_id: null == t ? void 0 : null === (n = t.rootCommand) || void 0 === n ? void 0 : n.id,
                             argument_type: r.ApplicationCommandOptionType[null !== (i = null == e ? void 0 : e.type) && void 0 !== i ? i : 3],
@@ -183,7 +183,7 @@ function(e, t, n) {
                 handleGlobalPaste: eA
             } = (0, T.default)(eC, eE, B), eO = l.useCallback(e => {
                 null == J || J()
-            }, [J]), eR = l.useCallback(e => {
+            }, [J]), eM = l.useCallback(e => {
                 e !== em.current ? ex.current && (null == F || F(null, (0, x.toTextValue)(e, {
                     mode: "raw"
                 }), e)) : ex.current && J()
@@ -200,35 +200,35 @@ function(e, t, n) {
                 };
                 return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
             }, [k, eC, eI]);
-            let eM = l.useCallback((e, t) => (0, g.default)(e, t), []),
+            let eR = l.useCallback((e, t) => (0, g.default)(e, t), []),
                 ek = l.useCallback(e => (0, A.default)(eC, e, k.id), [k.id, eC]),
                 eL = l.useCallback(e => (0, O.default)(e), []);
             return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(c.ComponentAction, {
-                    event: R.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
+                    event: M.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
                     handler: eA
                 }), (0, i.jsx)("div", {
                     ref: ep,
-                    className: s(L, M.slateContainer),
+                    className: s(L, R.slateContainer),
                     children: (0, i.jsx)(h.default, {
                         id: P,
                         editor: eC,
                         channelId: k.id,
                         guildId: k.guild_id,
-                        className: s(M.slateTextArea, w),
+                        className: s(R.slateTextArea, w),
                         placeholder: U,
                         readOnly: eE,
                         spellCheck: Q,
                         autoFocus: !et,
                         canFocus: !b,
-                        onChange: eR,
+                        onChange: eM,
                         onFocus: H,
                         onBlur: V,
                         onClick: eO,
                         onPaste: eN,
                         onKeyDown: e_,
                         onKeyUp: ev,
-                        decorateExtra: eM,
+                        decorateExtra: eR,
                         renderExtraElement: ek,
                         renderExtraLeaf: eL,
                         "aria-owns": el,

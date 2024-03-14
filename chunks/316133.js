@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("26989"),
         f = n("697218"),
         _ = n("800762"),
-        h = n("299039"),
-        E = n("158998"),
+        E = n("299039"),
+        h = n("158998"),
         g = n("49111");
     let m = Object.freeze([]),
         p = {};
@@ -36,7 +36,7 @@ function(e, t, n) {
 
     function T(e, t, n) {
         var i;
-        let s = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : E.default.getName(n);
+        let s = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : h.default.getName(n);
         return {
             member: t,
             comparator: I(e, s)
@@ -81,7 +81,7 @@ function(e, t, n) {
                 if (n.voiceState !== t) {
                     var s;
                     let r = v(this.guildId, i),
-                        a = null !== (s = null == r ? void 0 : r.nick) && void 0 !== s ? s : E.default.getName(i);
+                        a = null !== (s = null == r ? void 0 : r.nick) && void 0 !== s ? s : h.default.getName(i);
                     return this._voiceStates.set(e, {
                         ...n,
                         member: r,
@@ -167,7 +167,7 @@ function(e, t, n) {
     function N() {
         p = {};
         let e = _.default.getAllVoiceStates();
-        h.default.keys(e).forEach(t => {
+        E.default.keys(e).forEach(t => {
             Object.keys(e[t]).forEach(e => {
                 S(null != t ? t : g.ME).updateVoiceState(e)
             })

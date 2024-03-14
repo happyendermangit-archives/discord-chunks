@@ -25,7 +25,7 @@ function(e, t, n) {
             required: c = !1,
             error: f,
             errorId: _,
-            ...h
+            ...E
         } = e;
         switch (n) {
             case "legend":
@@ -42,7 +42,7 @@ function(e, t, n) {
                 [u.disabled]: d,
                 [u.error]: null != f
             }),
-            ...h,
+            ...E,
             children: [i, c && null == f ? (0, r.jsx)("span", {
                 className: u.required,
                 children: "*"

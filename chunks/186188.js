@@ -14,10 +14,10 @@ function(e, t, n) {
             return O
         },
         RoleMention: function() {
-            return R
+            return M
         },
         ChannelMention: function() {
-            return M
+            return R
         },
         SoundboardMention: function() {
             return k
@@ -143,7 +143,7 @@ function(e, t, n) {
         return c
     }
 
-    function R(e) {
+    function M(e) {
         let {
             id: t,
             guildId: n
@@ -162,7 +162,7 @@ function(e, t, n) {
         })
     }
 
-    function M(e) {
+    function R(e) {
         let {
             id: t
         } = e, n = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = I.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;

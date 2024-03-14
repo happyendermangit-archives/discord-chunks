@@ -5,7 +5,7 @@ function(e, t, n) {
             return _
         },
         saveClientTheme: function() {
-            return E
+            return h
         },
         default: function() {
             return g
@@ -39,11 +39,11 @@ function(e, t, n) {
         }, c.UserSettingsDelay.SLOW_USER_ACTION)
     }
 
-    function h(e) {
+    function E(e) {
         return (0, r.isThemeLight)(e) ? i.Theme.LIGHT : i.Theme.DARK
     }
 
-    function E(e) {
+    function h(e) {
         let {
             backgroundGradientPresetId: t,
             theme: n
@@ -67,7 +67,7 @@ function(e, t, n) {
                 }
             }), l.default.shouldSync("appearance")) return c.PreloadedUserSettingsActionCreators.updateAsync("appearance", e => {
             var i;
-            e.theme = h(n), e.clientThemeSettings = {
+            e.theme = E(n), e.clientThemeSettings = {
                 backgroundGradientPresetId: null != (i = {
                     backgroundGradientPresetId: t
                 }).backgroundGradientPresetId ? s.UInt32Value.create({
@@ -155,7 +155,7 @@ function(e, t, n) {
                     }
                 }
             }), l.default.shouldSync("appearance") && c.PreloadedUserSettingsActionCreators.updateAsync("appearance", t => {
-                t.theme = h(e)
+                t.theme = E(e)
             }, c.UserSettingsDelay.INFREQUENT_USER_ACTION)
         }
     }

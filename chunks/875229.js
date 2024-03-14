@@ -31,10 +31,10 @@ function(e, t, n) {
         i.useEffect(() => {
             f && o.default.fetchVerificationForm(e)
         }, [f, e]);
-        let h = i.useMemo(() => {
+        let E = i.useMemo(() => {
             var e;
             return (null !== (e = null == _ ? void 0 : _.formFields) && void 0 !== e ? e : []).some(e => !(0, d.isTermsFormField)(e))
         }, [null == _ ? void 0 : _.formFields]);
-        return f && h
+        return f && E
     }
 }

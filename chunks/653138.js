@@ -8,10 +8,10 @@ function(e, t, n) {
             return _
         },
         MAX_PROMPT_OPTION_DESCRIPTION_LENGTH: function() {
-            return h
+            return E
         },
         MAX_NUM_PROMPTS: function() {
-            return E
+            return h
         },
         MULTIPLE_CHOICE_MAX_NUM_OPTIONS: function() {
             return g
@@ -64,8 +64,8 @@ function(e, t, n) {
         c = n("782340");
     let f = 100,
         _ = 50,
-        h = 100,
-        E = 15,
+        E = 100,
+        h = 15,
         g = 12,
         m = 50,
         p = 4,

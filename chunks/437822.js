@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("448993"),
         f = n("307439"),
         _ = n("605250"),
-        h = n("21121"),
-        E = n("393414"),
+        E = n("21121"),
+        h = n("393414"),
         g = n("271938"),
         m = n("350522"),
         p = n("840707"),
@@ -42,8 +42,8 @@ function(e, t, n) {
     function y() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Routes.DEFAULT_LOGGED_OUT;
         A();
-        let t = (0, h.getRootNavigationRefIfInExperiment)();
-        null != e && (null != t ? (S.default.popAll(), t.navigate("auth")) : (0, E.transitionTo)(e))
+        let t = (0, E.getRootNavigationRefIfInExperiment)();
+        null != e && (null != t ? (S.default.popAll(), t.navigate("auth")) : (0, h.transitionTo)(e))
     }(r = s || (s = {})).MFA = "MFA", r.SUCCESS = "SUCCESS";
     var N = {
         startSession(e) {
@@ -267,7 +267,7 @@ function(e, t, n) {
                     isCorrectToken: e === t
                 })
             });
-            return t && (0, E.transitionTo)(v.Routes.ME), i
+            return t && (0, h.transitionTo)(v.Routes.ME), i
         },
         verifySSOToken() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Routes.DEFAULT_LOGGED_OUT;

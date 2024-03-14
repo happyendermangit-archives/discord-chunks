@@ -17,7 +17,7 @@ function(e, t, n) {
             return _
         },
         Table: function() {
-            return h
+            return E
         }
     });
     var i = n("37983"),
@@ -71,7 +71,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e) {
+    function E(e) {
         let {
             title: t,
             header: n,

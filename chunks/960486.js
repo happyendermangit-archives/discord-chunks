@@ -25,8 +25,8 @@ function(e, t, n) {
         c = n("433600"),
         f = n("577776"),
         _ = n("810567"),
-        h = n("578706"),
-        E = n("782340"),
+        E = n("578706"),
+        h = n("782340"),
         g = n("30441");
     let m = "data-listbox-item-id",
         p = Object.freeze({
@@ -68,17 +68,17 @@ function(e, t, n) {
             value: r,
             onChange: l,
             className: u,
-            listClassName: h,
+            listClassName: E,
             "aria-label": p,
             multiSelect: S = !1,
             autoFocus: v = !1,
             maxVisibleItems: C = 5,
             itemToString: A = T,
             showScrollbar: y = !1
-        } = e, [N, R] = s.useState(""), [O] = s.useState(!0), [D, P] = s.useState(null), M = s.useId(), L = s.useRef(null);
+        } = e, [N, R] = s.useState(""), [O] = s.useState(!0), [D, P] = s.useState(null), L = s.useId(), M = s.useRef(null);
         s.useLayoutEffect(() => {
             let e = document.querySelector("[".concat(m, '="').concat(D, '"]')),
-                t = L.current;
+                t = M.current;
             null != t && null != e && t.scrollIntoViewNode({
                 node: e,
                 padding: 12
@@ -88,14 +88,14 @@ function(e, t, n) {
             U = 0 === b.length,
             w = s.useId(),
             k = s.useCallback(() => new Promise(e => {
-                let t = L.current;
+                let t = M.current;
                 if (null == t) return e();
                 t.scrollToTop({
                     callback: () => requestAnimationFrame(() => e())
                 })
             }), []),
             V = s.useCallback(() => new Promise(e => {
-                let t = L.current;
+                let t = M.current;
                 if (null == t) return e();
                 t.scrollToTop({
                     callback: () => requestAnimationFrame(() => e())
@@ -104,7 +104,7 @@ function(e, t, n) {
             G = s.useCallback((e, t) => {
                 P(t);
                 let n = document.querySelector(e),
-                    i = L.current;
+                    i = M.current;
                 null != i && null != n && i.scrollIntoViewNode({
                     node: n
                 })
@@ -132,8 +132,8 @@ function(e, t, n) {
                         role: "combobox",
                         "aria-label": p,
                         "aria-expanded": O,
-                        "aria-controls": O ? M : void 0,
-                        "aria-owns": M,
+                        "aria-controls": O ? L : void 0,
+                        "aria-owns": L,
                         "aria-haspopup": "listbox",
                         className: a(g.combobox, u),
                         children: [(0, i.jsx)(_.default, {
@@ -157,11 +157,11 @@ function(e, t, n) {
                                 className: g.empty,
                                 children: [(0, i.jsx)(d.Heading, {
                                     variant: "heading-md/semibold",
-                                    children: E.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
+                                    children: h.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
                                 }), (0, i.jsx)(f.Text, {
                                     color: "text-muted",
                                     variant: "text-md/normal",
-                                    children: E.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
+                                    children: h.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
                                 })]
                             }) : (0, i.jsx)(I.Provider, {
                                 value: {
@@ -176,9 +176,9 @@ function(e, t, n) {
                                         maxHeight: 46 * C
                                     },
                                     "aria-multiselectable": S,
-                                    id: M,
-                                    ref: L,
-                                    className: a(g.list, h, {
+                                    id: L,
+                                    ref: M,
+                                    className: a(g.list, E, {
                                         [g.scroller]: y
                                     }),
                                     sections: [b.length],
@@ -212,13 +212,13 @@ function(e, t, n) {
         } = e, {
             activeDescendant: f,
             selected: _,
-            setSelected: h,
-            itemToString: E
-        } = s.useContext(I), S = E(n), v = f === S, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : _.has(n), C = (0, o.useListItem)(S);
+            setSelected: E,
+            itemToString: h
+        } = s.useContext(I), S = h(n), v = f === S, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : _.has(n), C = (0, o.useListItem)(S);
         return (0, i.jsx)(u.Clickable, {
             tag: "li",
             id: S,
-            onClick: () => l ? null : h(n),
+            onClick: () => l ? null : E(n),
             [m]: n,
             className: a(g.item, {
                 [g.focused]: v,
@@ -272,7 +272,7 @@ function(e, t, n) {
         } = s.useContext(I), t = s.useContext(A), n = e.has(t);
         return n ? (0, i.jsx)("span", {
             className: g.itemCheckbox,
-            children: (0, i.jsx)(h.default, {
+            children: (0, i.jsx)(E.default, {
                 width: 20,
                 height: 20
             })

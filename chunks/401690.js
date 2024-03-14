@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("18494"),
         f = n("299039"),
         _ = n("689275"),
-        h = n("755624"),
-        E = n("984674"),
+        E = n("755624"),
+        h = n("984674"),
         g = n("724210");
     let m = {},
         p = {},
@@ -46,7 +46,7 @@ function(e, t, n) {
                 F(n);
                 let e = l.default.getChannel(n);
                 if (null == e) continue;
-                let t = h.default.joinTimestamp(n);
+                let t = E.default.joinTimestamp(n);
                 if (null != t) {
                     let n = {
                             channel: e,
@@ -90,10 +90,10 @@ function(e, t, n) {
         for (let n in S[e][t]) t === C ? d.default.isNewForumThread(n, t, i) && I[e][t]++ : f.default.compare(n, s) > 0 && !d.default.hasOpenedThread(n) && I[e][t]++
     }
 
-    function M(e, t, n) {
+    function L(e, t, n) {
         if (null == t) return !1;
         let i = l.default.getChannel(n),
-            s = h.default.joinTimestamp(n);
+            s = E.default.joinTimestamp(n);
         if (null != i && _.default.isActive(e, t, n)) {
             if (null != s) {
                 let e = {
@@ -114,13 +114,13 @@ function(e, t, n) {
         } else B(m, e, t, n), B(T, e, t, n), B(p, e, t, n), B(S, e, t, n), B(v, e, t, n), F(n), P(e, t)
     }
 
-    function L(e) {
-        return M(e.channel.guild_id, e.channel.parent_id, e.channel.id)
+    function M(e) {
+        return L(e.channel.guild_id, e.channel.parent_id, e.channel.id)
     }
 
     function b(e) {
         let t = l.default.getChannel(e.id);
-        return !!(null != t && _.default.isActive(e.guildId, t.parent_id, e.id)) && M(t.guild_id, t.parent_id, t.id)
+        return !!(null != t && _.default.isActive(e.guildId, t.parent_id, e.id)) && L(t.guild_id, t.parent_id, t.id)
     }
 
     function U(e) {
@@ -189,10 +189,10 @@ function(e, t, n) {
 
     function V(e) {
         let t = d.default.getMentionCount(e.id) > 0,
-            n = d.default.hasUnread(e.id) && (!h.default.isMuted(e.id) || t),
+            n = d.default.hasUnread(e.id) && (!E.default.isMuted(e.id) || t),
             i = e.hasFlag(g.ChannelFlags.PINNED),
             s = e.isActiveThread(),
-            r = s && (0, E.default)(e) > Date.now();
+            r = s && (0, h.default)(e) > Date.now();
         return {
             isUnread: (s || i) && n,
             isRelevant: r || i || n,
@@ -208,7 +208,7 @@ function(e, t, n) {
                     type: "THREAD_UPDATE",
                     channel: t
                 })
-            }, (0, E.default)(e) - Date.now() + 1)
+            }, (0, h.default)(e) - Date.now() + 1)
         }(e)
     }
 
@@ -253,7 +253,7 @@ function(e, t, n) {
         q = {};
     class X extends r.default.Store {
         initialize() {
-            this.waitFor(_.default, l.default, h.default, d.default), this.syncWith([c.default], k)
+            this.waitFor(_.default, l.default, E.default, d.default), this.syncWith([c.default], k)
         }
         hasActiveJoinedUnreadThreads(e, t) {
             return e in p && t in p[e]
@@ -343,9 +343,9 @@ function(e, t, n) {
         },
         GUILD_DELETE: y,
         CURRENT_USER_UPDATE: y,
-        THREAD_CREATE: L,
-        THREAD_UPDATE: L,
-        THREAD_DELETE: L,
+        THREAD_CREATE: M,
+        THREAD_UPDATE: M,
+        THREAD_DELETE: M,
         CHANNEL_UPDATES: function(e) {
             let {
                 channels: t

@@ -98,10 +98,10 @@ function(e, t, n) {
             return e_
         },
         PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID: function() {
-            return eh
+            return eE
         },
         PREMIUM_TIER_2_AUTH3_TRIAL_ID: function() {
-            return eE
+            return eh
         },
         PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID: function() {
             return em
@@ -152,7 +152,7 @@ function(e, t, n) {
             return eP
         },
         ORDERED_PREMIUM_SUBSCRIPTION_PLANS: function() {
-            return eM
+            return eL
         },
         AnalyticsPremiumFeatureNames: function() {
             return d
@@ -161,7 +161,7 @@ function(e, t, n) {
             return c
         },
         DISCOUNTS: function() {
-            return eL
+            return eM
         },
         StreamQualities: function() {
             return f
@@ -173,10 +173,10 @@ function(e, t, n) {
             return _
         },
         PremiumHeaderThemes: function() {
-            return h
+            return E
         },
         PremiumGiftStyles: function() {
-            return E
+            return h
         },
         InboundPromotionErrorCodes: function() {
             return g
@@ -218,7 +218,7 @@ function(e, t, n) {
             return eY
         }
     }), n("222007");
-    var i, s, r, a, o, l, u, d, c, f, _, h, E, g, m, p, S, v, T, I, C, A, y, N, R, O, D, P, M, L, b, U, w, k, V, G, F = n("49111"),
+    var i, s, r, a, o, l, u, d, c, f, _, E, h, g, m, p, S, v, T, I, C, A, y, N, R, O, D, P, L, M, b, U, w, k, V, G, F = n("49111"),
         x = n("958706");
     (T = i || (i = {}))[T.TIER_1 = 1] = "TIER_1", T[T.TIER_2 = 2] = "TIER_2", T[T.TIER_0 = 3] = "TIER_0";
     let B = void 0,
@@ -424,8 +424,8 @@ function(e, t, n) {
         ec = "902329034132684800",
         ef = "983601860436819968",
         e_ = "983601860436819969",
-        eh = "984244797441048577",
-        eE = "1004850445463584768",
+        eE = "984244797441048577",
+        eh = "1004850445463584768",
         eg = "1073698058383917056",
         em = "1070132870233980928",
         ep = "1150904354090532864",
@@ -451,12 +451,12 @@ function(e, t, n) {
                 id: e_,
                 skus: ["521847234246082599"]
             },
-            [eh]: {
-                id: eh,
-                skus: ["521847234246082599"]
-            },
             [eE]: {
                 id: eE,
+                skus: ["521847234246082599"]
+            },
+            [eh]: {
+                id: eh,
                 skus: ["521847234246082599"]
             },
             [em]: {
@@ -552,9 +552,9 @@ function(e, t, n) {
                 }
             }
         }),
-        eM = ["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"];
+        eL = ["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"];
     (O = d || (d = {})).SOUNDBOARD_PLAY = "soundboard play", O.PROFILE_THEME_COLOR = "profile_theme_color", O.PROFILE_BANNER = "profile_banner", O.ANIMATED_AVATAR = "animated_avatar", O.AVATAR_DECORATION = "avatar_decoration", O.CLIENT_THEME = "client_theme", O.SHARED_CANVAS = "shared_canvas", O.PROFILE_EFFECT = "profile_effect", (D = c || (c = {})).FREE = "free", D.PREMIUM_STANDARD = "premium-standard";
-    let eL = {
+    let eM = {
         "1024422698568122368": 16,
         "511651876987469824": 16,
         "511651885459963904": 16,
@@ -566,7 +566,7 @@ function(e, t, n) {
         high_streaming_quality: 2,
         mid_streaming_quality: 1
     });
-    (M = _ || (_ = {}))[M.UserSettings = 0] = "UserSettings", M[M.ApplicationStoreHome = 1] = "ApplicationStoreHome", (L = h || (h = {}))[L.DEFAULT = 0] = "DEFAULT", L[L.WINTER = 1] = "WINTER", (b = E || (E = {}))[b.SNOWGLOBE = 1] = "SNOWGLOBE", b[b.BOX = 2] = "BOX", b[b.CUP = 3] = "CUP", b[b.STANDARD_BOX = 4] = "STANDARD_BOX", b[b.CAKE = 5] = "CAKE", b[b.CHEST = 6] = "CHEST", b[b.COFFEE = 7] = "COFFEE", b[b.SEASONAL_STANDARD_BOX = 8] = "SEASONAL_STANDARD_BOX", b[b.SEASONAL_CAKE = 9] = "SEASONAL_CAKE", b[b.SEASONAL_CHEST = 10] = "SEASONAL_CHEST", b[b.SEASONAL_COFFEE = 11] = "SEASONAL_COFFEE", (U = g || (g = {})).USER_NOT_VERIFIED = "user_not_verified", U.NO_CODE_BODY = "no_code_body", U.NO_PROMOTION = "no_promotion", U.CODE_CLAIMED = "code_claimed", U.EXISTING_SUBSCRIBER = "existing_subscriber", U.PREVIOUS_SUBSCRIBER = "previous_subscriber", U.BLOCKED_PAYMENT = "blocked_payment";
+    (L = _ || (_ = {}))[L.UserSettings = 0] = "UserSettings", L[L.ApplicationStoreHome = 1] = "ApplicationStoreHome", (M = E || (E = {}))[M.DEFAULT = 0] = "DEFAULT", M[M.WINTER = 1] = "WINTER", (b = h || (h = {}))[b.SNOWGLOBE = 1] = "SNOWGLOBE", b[b.BOX = 2] = "BOX", b[b.CUP = 3] = "CUP", b[b.STANDARD_BOX = 4] = "STANDARD_BOX", b[b.CAKE = 5] = "CAKE", b[b.CHEST = 6] = "CHEST", b[b.COFFEE = 7] = "COFFEE", b[b.SEASONAL_STANDARD_BOX = 8] = "SEASONAL_STANDARD_BOX", b[b.SEASONAL_CAKE = 9] = "SEASONAL_CAKE", b[b.SEASONAL_CHEST = 10] = "SEASONAL_CHEST", b[b.SEASONAL_COFFEE = 11] = "SEASONAL_COFFEE", (U = g || (g = {})).USER_NOT_VERIFIED = "user_not_verified", U.NO_CODE_BODY = "no_code_body", U.NO_PROMOTION = "no_promotion", U.CODE_CLAIMED = "code_claimed", U.EXISTING_SUBSCRIBER = "existing_subscriber", U.PREVIOUS_SUBSCRIBER = "previous_subscriber", U.BLOCKED_PAYMENT = "blocked_payment";
     let eU = Object.freeze({
             IS_BLOCKED_IOS: 32,
             IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,

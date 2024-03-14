@@ -17,22 +17,22 @@ function(e, t, n) {
             originURL: null
         },
         _ = f,
-        h = new Set,
-        E = !1;
+        E = new Set,
+        h = !1;
 
     function g() {
         r = null
     }
 
     function m() {
-        i = null, s = null, h = new Set, _.applicationId = null, _.originURL = null, g()
+        i = null, s = null, E = new Set, _.applicationId = null, _.originURL = null, g()
     }
     class p extends a.default.PersistedStore {
         initialize(e) {
             i = (_ = {
                 ...null != e ? e : f
             }).applicationId, s = _.originURL, this.waitFor(d.default, l.default), this.syncWith([d.default, l.default], () => !0), c.default.whenInitialized(() => {
-                E = !0
+                h = !0
             })
         }
         inTestModeForApplication(e) {
@@ -51,7 +51,7 @@ function(e, t, n) {
             return null != i
         }
         get isFetchingAuthorization() {
-            return h.size > 0
+            return E.size > 0
         }
         get testModeEmbeddedApplicationId() {
             return null != s ? i : null
@@ -67,7 +67,7 @@ function(e, t, n) {
         }
         whenInitialized(e) {
             this.addConditionalChangeListener(() => {
-                if (E) return setImmediate(e), !1
+                if (h) return setImmediate(e), !1
             })
         }
     }
@@ -77,21 +77,21 @@ function(e, t, n) {
             let {
                 applicationId: t
             } = e;
-            h.add(t), r = null
+            E.add(t), r = null
         },
         DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function(e) {
             let {
                 applicationId: t,
                 originURL: n
             } = e;
-            i = t, s = n, h.delete(t), r = null, _.applicationId = t, _.originURL = n
+            i = t, s = n, E.delete(t), r = null, _.applicationId = t, _.originURL = n
         },
         DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function(e) {
             let {
                 applicationId: t,
                 error: n
             } = e;
-            h.delete(t), r = n
+            E.delete(t), r = n
         },
         OVERLAY_INITIALIZE: function(e) {
             let {

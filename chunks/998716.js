@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("373469"),
         f = n("42203"),
         _ = n("124948"),
-        h = n("26989"),
-        E = n("27618"),
+        E = n("26989"),
+        h = n("27618"),
         g = n("697218"),
         m = n("800762"),
         p = n("387111"),
@@ -79,9 +79,9 @@ function(e, t, n) {
                     voiceState: a,
                     role: (0, I.getHighestHoistedRole)(this.guildId, e),
                     speaker: S.default.isSpeaker(e, this.channelId),
-                    member: null != this.guildId ? h.default.getMember(this.guildId, e) : null,
-                    blocked: E.default.getRelationships()[o.id] === C.RelationshipTypes.BLOCKED,
-                    isFriend: E.default.isFriend(o.id),
+                    member: null != this.guildId ? E.default.getMember(this.guildId, e) : null,
+                    blocked: h.default.getRelationships()[o.id] === C.RelationshipTypes.BLOCKED,
+                    isFriend: h.default.isFriend(o.id),
                     connectedOn: null !== (n = null == l ? void 0 : l.connectedOn) && void 0 !== n ? n : Date.now()
                 },
                 f = {

@@ -35,7 +35,7 @@ function(e, t, n) {
             guildId: _,
             unread: v,
             onClick: N
-        } = e, [A, O] = l.useState(!1), R = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), k = (e, n) => {
+        } = e, [A, O] = l.useState(!1), M = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), R = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), k = (e, n) => {
             e.stopPropagation(), (0, y.default)({
                 summary: t,
                 channel: c,
@@ -70,7 +70,7 @@ function(e, t, n) {
                         className: T.timestamp,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
-                        children: R
+                        children: M
                     }), (0, i.jsx)(o.default, {
                         height: 4,
                         width: 4,
@@ -102,7 +102,7 @@ function(e, t, n) {
                         })]
                     })]
                 })
-            }), A && !M && (0, i.jsxs)("div", {
+            }), A && !R && (0, i.jsxs)("div", {
                 className: T.feedbackContainer,
                 children: [(0, i.jsx)(s.Clickable, {
                     onClick: e => k(e, I.FeedbackRating.GOOD),

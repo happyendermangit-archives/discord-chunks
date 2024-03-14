@@ -152,14 +152,14 @@ function(e, t, n) {
                 x: y + (g - y) / 2,
                 y: I
             }
-        }, [s, c, a]), [v, N] = l.useState(0), [A, R] = l.useState(0);
+        }, [s, c, a]), [v, N] = l.useState(0), [A, M] = l.useState(0);
         if (l.useLayoutEffect(() => {
                 if (null == S || null == I || null == d.current) return;
                 let e = d.current.getBoundingClientRect();
-                R(e.width / 2), N(e.height + 12)
+                M(e.width / 2), N(e.height + 12)
             }, [S, I]), null == S || null == I) return null;
-        let M = null === (n = a.current) || void 0 === n ? void 0 : n.getSlateEditor();
-        return null == M ? null : (0, i.jsx)(x.default, {
+        let R = null === (n = a.current) || void 0 === n ? void 0 : n.getSlateEditor();
+        return null == R ? null : (0, i.jsx)(x.default, {
             children: (0, i.jsxs)("div", {
                 id: "slate-toolbar",
                 ref: d,
@@ -175,7 +175,7 @@ function(e, t, n) {
                     e.stopPropagation()
                 },
                 children: [(0, i.jsx)(O, {
-                    slateEditor: M
+                    slateEditor: R
                 }), (0, i.jsx)(_, {
                     editorRef: a,
                     options: o

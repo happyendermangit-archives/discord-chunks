@@ -32,8 +32,8 @@ function(e, t, n) {
         N = n("774713"),
         A = n("510788"),
         O = n("756731"),
-        R = n("762806"),
-        M = n("438278"),
+        M = n("762806"),
+        R = n("438278"),
         k = n("898481"),
         L = n("49111"),
         P = n("279453"),
@@ -79,7 +79,7 @@ function(e, t, n) {
                 platform: f.default.get(L.PlatformTypes.PLAYSTATION)
             }, "ConnectPlatformActivityButton")];
             else if (Y) {
-                let e = (0, i.jsx)(R.default, {
+                let e = (0, i.jsx)(M.default, {
                         activity: n,
                         user: l,
                         color: D,
@@ -123,7 +123,7 @@ function(e, t, n) {
                 }, "hang-status-button");
                 t = [e]
             } else {
-                let e = (0, i.jsx)(M.default, {
+                let e = (0, i.jsx)(R.default, {
                         activity: n,
                         color: D,
                         look: w

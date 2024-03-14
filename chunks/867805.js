@@ -19,8 +19,8 @@ function(e, t, n) {
         c = {},
         f = {},
         _ = [],
-        h = 0,
         E = 0,
+        h = 0,
         g = {
             "1f3fb": 0,
             "1f3fc": 1,
@@ -113,7 +113,7 @@ function(e, t, n) {
                 let t = new I(e),
                     n = t.surrogates,
                     i = t.uniqueName;
-                if (t.setSpriteSheetIndex(t.hasDiversity ? h++ : E++), f[n] = i, 0 > n.indexOf("‍")) {
+                if (t.setSpriteSheetIndex(t.hasDiversity ? E++ : h++), f[n] = i, 0 > n.indexOf("‍")) {
                     let e = n.replace("️", "");
                     e !== n && (f[e] = i)
                 }
@@ -234,8 +234,8 @@ function(e, t, n) {
         },
         forEach: e => s.each(_, e),
         all: () => _,
-        numDiversitySprites: h,
-        numNonDiversitySprites: E,
+        numDiversitySprites: E,
+        numNonDiversitySprites: h,
         EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
         EMOJI_NAME_AND_DIVERSITY_RE: p,
         EMOJI_SHORTCUT_RE: /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,

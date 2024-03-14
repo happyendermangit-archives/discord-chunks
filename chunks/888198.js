@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("305961"),
         f = n("697218"),
         _ = n("387111"),
-        h = n("158998"),
-        E = n("946897"),
+        E = n("158998"),
+        h = n("946897"),
         g = n("632886"),
         m = n("270926"),
         p = n("647374"),
@@ -33,9 +33,9 @@ function(e, t, n) {
     let O = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
         D = /^$|\n *$/,
         P = /^ *>>> ?/,
-        M = /^ *> ?/gm;
+        L = /^ *> ?/gm;
 
-    function L(e) {
+    function M(e) {
         let t = (0, p.punycodeLink)(e[1]);
         if (null == t) return {
             type: "text",
@@ -84,7 +84,7 @@ function(e, t, n) {
                 parse(e, t, n) {
                     let i = e[0],
                         s = !!P.exec(i),
-                        r = i.replace(s ? P : M, ""),
+                        r = i.replace(s ? P : L, ""),
                         a = n.inQuote || !1,
                         o = n.inline || !1;
                     n.inQuote = !0, !s && (n.inline = !0);
@@ -101,7 +101,7 @@ function(e, t, n) {
             link: p.default,
             autolink: {
                 ...a.defaultRules.autolink,
-                parse: L
+                parse: M
             },
             url: {
                 ...a.defaultRules.url,
@@ -124,7 +124,7 @@ function(e, t, n) {
                     }
                     return n
                 },
-                parse: L
+                parse: M
             },
             strong: a.defaultRules.strong,
             em: a.defaultRules.em,
@@ -213,12 +213,12 @@ function(e, t, n) {
                         a = d.default.getChannel(n.channelId);
                     if (null != r && (s = r.id, i = r.toString(), null != a)) {
                         var l;
-                        i = null !== (l = _.default.getNickname(a.getGuildId(), n.channelId, r)) && void 0 !== l ? l : h.default.getName(r)
+                        i = null !== (l = _.default.getNickname(a.getGuildId(), n.channelId, r)) && void 0 !== l ? l : E.default.getName(r)
                     }
                     null == r && "@Clyde" === e[0] && (0, o.getClydeEnabled)(U(n), a) && (s = N.CLYDE_AI_USER_ID);
                     let u = e[1],
                         c = null != u && A.ID_REGEX.test(u.trim()),
-                        E = c && n.unknownUserMentionPlaceholder ? "@".concat(R.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+                        h = c && n.unknownUserMentionPlaceholder ? "@".concat(R.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
                     return {
                         userId: s,
                         channelId: n.channelId,
@@ -226,7 +226,7 @@ function(e, t, n) {
                         roleName: e[2],
                         content: [{
                             type: "text",
-                            content: null != i ? "@".concat(i) : E
+                            content: null != i ? "@".concat(i) : h
                         }]
                     }
                 }
@@ -234,7 +234,7 @@ function(e, t, n) {
             channelMention: g.default.channelMention,
             channelOrMessageUrl: g.default.channelOrMessageUrl,
             mediaPostLink: g.default.mediaPostLink,
-            attachmentLink: E.default.attachmentLink,
+            attachmentLink: h.default.attachmentLink,
             commandMention: {
                 order: a.defaultRules.text.order,
                 requiredFirstCharacters: ["<"],

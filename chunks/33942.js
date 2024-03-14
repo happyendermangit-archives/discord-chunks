@@ -32,8 +32,8 @@ function(e, t, n) {
         c = n.n(d),
         f = n("891189"),
         _ = n("316693"),
-        h = n("446674"),
-        E = n("271841"),
+        E = n("446674"),
+        h = n("271841"),
         g = n("551042"),
         m = n("670914"),
         p = n("242670"),
@@ -49,8 +49,8 @@ function(e, t, n) {
         O = n("393414"),
         D = n("653047"),
         P = n("766274"),
-        M = n("271938"),
-        L = n("760190"),
+        L = n("271938"),
+        M = n("760190"),
         b = n("991170"),
         U = n("253981"),
         w = n("872825"),
@@ -78,7 +78,7 @@ function(e, t, n) {
         let e = (0, u.useLocation)(),
             t = a.useMemo(() => (0, w.parseOAuth2AuthorizeProps)(e.search), [e.search]);
         return (0, C.default)(), a.useEffect(() => {
-            M.default.isAuthenticated() && S.default.getExperiments()
+            L.default.isAuthenticated() && S.default.getExperiments()
         }, []), (0, r.jsx)(z.OAuth2Page, {
             children: (0, r.jsx)(ei, {
                 ...t,
@@ -156,8 +156,8 @@ function(e, t, n) {
                 disableGuildSelect: ec = !1,
                 showLogout: ef = !1,
                 cancelCompletesFlow: e_ = !0,
-                isTrustedName: eh = !1,
-                isEmbeddedFlow: eE = !1,
+                isTrustedName: eE = !1,
+                isEmbeddedFlow: eh = !1,
                 inApp: eg = !1,
                 callback: em,
                 callbackWithoutPost: ep,
@@ -168,17 +168,17 @@ function(e, t, n) {
                 location: "auth web"
             }),
             eI = eT.userAppsTreatment === A.UserAppsTreatment.ALLOWED,
-            eC = (0, h.useStateFromStores)([L.default], () => L.default.hasLoadedExperiments),
+            eC = (0, E.useStateFromStores)([M.default], () => M.default.hasLoadedExperiments),
             [eA, ey] = a.useState(null),
             [eN, eR] = a.useState(null),
             [eO, eD] = a.useState(null),
-            [eP, eM] = a.useState(!1),
-            eL = null == eA ? void 0 : eA.guilds,
+            [eP, eL] = a.useState(!1),
+            eM = null == eA ? void 0 : eA.guilds,
             [eb, eU] = a.useState(null != el ? el : null),
             [ew, ek] = a.useState(null != eu ? eu : null),
             [eV, eG] = a.useState(b.default.NONE),
             eF = a.useMemo(() => (null == eA ? void 0 : eA.user) != null ? new P.default(eA.user) : null, [null == eA ? void 0 : eA.user]),
-            ex = a.useMemo(() => null == eL ? void 0 : eL.find(e => e.id === eb), [eL, eb]),
+            ex = a.useMemo(() => null == eM ? void 0 : eM.find(e => e.id === eb), [eM, eb]),
             [eB, eH] = a.useState(null),
             eY = a.useMemo(() => {
                 var e;
@@ -209,8 +209,8 @@ function(e, t, n) {
                 let t = eY ? _.default.deserialize(null !== (e = null == eK ? void 0 : eK.permissions) && void 0 !== e ? e : 0) : eo;
                 return null != t ? t : b.default.NONE
             }, [null == eK ? void 0 : eK.permissions, eo, eY]),
-            eQ = (0, h.useStateFromStores)([T.default], () => T.default.getCurrentEmbeddedActivity()),
-            eZ = (0, h.useStateFromStoresObject)([v.default, T.default], () => {
+            eQ = (0, E.useStateFromStores)([T.default], () => T.default.getCurrentEmbeddedActivity()),
+            eZ = (0, E.useStateFromStoresObject)([v.default, T.default], () => {
                 let e;
                 let t = v.default.getIsEnabled();
                 if (null != eQ) {
@@ -243,7 +243,7 @@ function(e, t, n) {
                     return
                 }
                 try {
-                    eM(!0);
+                    eL(!0);
                     let t = await (0, k.authorize)({
                         authorize: e,
                         clientId: N,
@@ -274,15 +274,15 @@ function(e, t, n) {
                                 guild: ex
                             }
                         }) : window.location = t.location
-                    } else eM(!1)
+                    } else eL(!1)
                 } catch (t) {
                     let e = t.body;
-                    (null == e ? void 0 : e.message) != null && "" !== e.message ? eD(Error(e.message)) : eD(e), eR(1), eM(!1)
+                    (null == e ? void 0 : e.message) != null && "" !== e.message ? eD(Error(e.message)) : eD(e), eR(1), eL(!1)
                 }
             }, [ep, e_, em, null == eA ? void 0 : eA.application, ex, eS, N, ez, R, z, et, en, ei, eX, eV, eb, eB, ew]),
             e0 = a.useRef(!1),
             e1 = a.useCallback(async () => {
-                if (!M.default.isAuthenticated()) {
+                if (!L.default.isAuthenticated()) {
                     (0, k.logoutWithRedirect)(ev);
                     return
                 }
@@ -372,7 +372,7 @@ function(e, t, n) {
                     body: (0, r.jsx)(p.Spinner, {})
                 };
                 let e8 = null == eO || eO instanceof Error ? {} : eO,
-                    e7 = null == eL ? void 0 : eL.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
+                    e7 = null == eM ? void 0 : eM.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                     e5 = eB === f.ApplicationIntegrationType.GUILD_INSTALL && ez.includes(Q.OAuth2Scopes.WEBHOOK_INCOMING),
                     te = e5 || eB === f.ApplicationIntegrationType.GUILD_INSTALL && (ez.includes(Q.OAuth2Scopes.BOT) || ez.includes(Q.OAuth2Scopes.APPLICATIONS_COMMANDS));
                 l = (0, r.jsxs)(r.Fragment, {
@@ -382,7 +382,7 @@ function(e, t, n) {
                         requestedScopes: ez,
                         integrationType: eB,
                         errors: e8,
-                        isTrustedName: eh
+                        isTrustedName: eE
                     }), te ? (0, r.jsx)(j.default, {
                         error: (null !== (n = null !== (t = e8[Q.OAuth2Scopes.BOT]) && void 0 !== t ? t : e8[Q.OAuth2Scopes.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
                         selectedGuildId: eb,
@@ -419,7 +419,7 @@ function(e, t, n) {
                 scopes: ez,
                 redirectUri: null !== (o = eA.redirect_uri) && void 0 !== o ? o : null,
                 approximateGuildCount: void 0 !== e ? e : null,
-                isEmbeddedFlow: eE
+                isEmbeddedFlow: eh
             })
         }
         return e6 && null != eA && null != eF && (S = (0, r.jsx)(W.default, {
@@ -430,24 +430,24 @@ function(e, t, n) {
             accountScopes: eq,
             showLogout: ef || !1,
             location: ev,
-            isTrustedName: eh
+            isTrustedName: eE
         })), e9 && (C = (0, r.jsxs)("div", {
             className: $.footer,
-            children: [null != d ? (0, r.jsx)(E.Button, {
-                look: E.Button.Looks.LINK,
-                color: E.Button.Colors.PRIMARY,
+            children: [null != d ? (0, r.jsx)(h.Button, {
+                look: h.Button.Looks.LINK,
+                color: h.Button.Colors.PRIMARY,
                 onClick: () => eR(d),
                 children: J.default.Messages.BACK
-            }) : (0, r.jsx)(E.Button, {
-                look: E.Button.Looks.LINK,
-                color: E.Button.Colors.PRIMARY,
+            }) : (0, r.jsx)(h.Button, {
+                look: h.Button.Looks.LINK,
+                color: h.Button.Colors.PRIMARY,
                 onClick: () => e$(!1),
                 children: J.default.Messages.CANCEL
-            }), 0 !== eN ? null != g ? (0, r.jsx)(E.Button, {
+            }), 0 !== eN ? null != g ? (0, r.jsx)(h.Button, {
                 onClick: () => eR(g),
                 disabled: e3,
                 children: J.default.Messages.CONTINUE
-            }) : (0, r.jsx)(E.Button, {
+            }) : (0, r.jsx)(h.Button, {
                 onClick: () => e$(!0),
                 disabled: e3,
                 submitting: eP,

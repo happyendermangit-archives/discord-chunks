@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return M
+            return R
         }
     }), n("222007");
     var i = n("37983"),
@@ -31,9 +31,9 @@ function(e, t, n) {
         N = n("958706"),
         A = n("646718"),
         O = n("782340"),
-        R = n("187971"),
-        M = e => {
-            var t, a, M;
+        M = n("187971"),
+        R = e => {
+            var t, a, R;
             let {
                 onLearnMore: k,
                 onClose: L,
@@ -72,17 +72,17 @@ function(e, t, n) {
                     })
                 }
             }, [W, Y, b, P, U, Z, j, z]), (0, i.jsxs)("div", {
-                className: s(R.premiumPromo, {
-                    [R.unifyTrialUpsell]: K
+                className: s(M.premiumPromo, {
+                    [M.unifyTrialUpsell]: K
                 }),
                 children: [(0, i.jsx)(o.Clickable, {
-                    className: R.premiumPromoClose,
+                    className: M.premiumPromoClose,
                     onClick: L,
                     children: O.default.Messages.CLOSE
                 }), W ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
                     children: [K ? (0, i.jsx)(y.default, {
                         type: A.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                        subscriptionTier: null !== (M = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : A.PremiumSubscriptionSKUs.TIER_2,
+                        subscriptionTier: null !== (R = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== R ? R : A.PremiumSubscriptionSKUs.TIER_2,
                         onClose: L,
                         trialOffer: H,
                         discountOffer: V,
@@ -95,13 +95,13 @@ function(e, t, n) {
                     }) : (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)("img", {
                             alt: "",
-                            className: R.premiumPromoImage,
+                            className: M.premiumPromoImage,
                             src: G
                         }), (0, i.jsx)("div", {
-                            className: R.premiumPromoTitle,
+                            className: M.premiumPromoTitle,
                             children: O.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
                         }), (0, i.jsx)("div", {
-                            className: R.premiumPromoDescription,
+                            className: M.premiumPromoDescription,
                             children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
                                 planName: (0, I.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                                 onClick: B

@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("42203"),
         f = n("923959"),
         _ = n("505507"),
-        h = n("162771"),
-        E = n("773336"),
+        E = n("162771"),
+        h = n("773336"),
         g = n("50885"),
         m = n("819068"),
         p = n("471671"),
@@ -45,9 +45,9 @@ function(e, t, n) {
         O = !1,
         D = !1,
         P = new Set,
-        M = !1;
+        L = !1;
 
-    function L(e) {
+    function M(e) {
         let t = C[e];
         return null == t && (t = C[e] = {
             ...T
@@ -138,13 +138,13 @@ function(e, t, n) {
         initialize(e) {
             if (this.waitFor(d.default), this.syncWith([d.default], () => {
                     let e = d.default.getId();
-                    b = null != e ? L(e) : {
+                    b = null != e ? M(e) : {
                         ...T
                     }
-                }), __OVERLAY__ && (E.isPlatformEmbedded && g.default.requireModule("discord_overlay2"), y.delete((0, m.getPID)())), null != e) {
+                }), __OVERLAY__ && (h.isPlatformEmbedded && g.default.requireModule("discord_overlay2"), y.delete((0, m.getPID)())), null != e) {
                 C = e;
                 let t = d.default.getId();
-                null != t && (null == (b = L(t)).textChatNotifications && (b.textChatNotifications = T.textChatNotifications), null == b.textWidgetOpacity && (b.textWidgetOpacity = T.textWidgetOpacity))
+                null != t && (null == (b = M(t)).textChatNotifications && (b.textChatNotifications = T.textChatNotifications), null == b.textWidgetOpacity && (b.textWidgetOpacity = T.textWidgetOpacity))
             }
         }
         getState() {
@@ -221,7 +221,7 @@ function(e, t, n) {
             return b.textWidgetOpacity
         }
         isPreviewingInGame() {
-            return M
+            return L
         }
     }
     F.displayName = "OverlayStore", F.persistKey = "OverlayStoreV2", F.migrations = [() => {
@@ -304,7 +304,7 @@ function(e, t, n) {
         OVERLAY_READY: function() {
             let e = b.selectedGuildId,
                 t = b.selectedChannelId;
-            if (null != e && (!f.default.hasChannels(e) || null != t && !f.default.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == c.default.getChannel(t) && (e = null, t = null), null == e && null == t && (e = h.default.getGuildId()), null != e && null == t) {
+            if (null != e && (!f.default.hasChannels(e) || null != t && !f.default.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == c.default.getChannel(t) && (e = null, t = null), null == e && null == t && (e = E.default.getGuildId()), null != e && null == t) {
                 let n = f.default.getDefaultChannel(e);
                 null != n && (t = n.id)
             }
@@ -386,7 +386,7 @@ function(e, t, n) {
                 locked: t,
                 pid: n
             } = e;
-            t ? y.delete(n) : y.add(n), V(), k(), M = !1
+            t ? y.delete(n) : y.add(n), V(), k(), L = !1
         },
         OVERLAY_ACTIVATE_REGION: function(e) {
             let {
@@ -397,12 +397,12 @@ function(e, t, n) {
         },
         OVERLAY_DEACTIVATE_ALL_REGIONS: V,
         OVERLAY_SET_PREVIEW_IN_GAME_MODE: function(e) {
-            M = e.isPreviewingInGame
+            L = e.isPreviewingInGame
         },
         WINDOW_RESIZED: function() {
             if (__OVERLAY__) {
                 let e = p.default.windowSize();
-                !(0, m.validResolution)(e) && (M = !1)
+                !(0, m.validResolution)(e) && (L = !1)
             }
         },
         OVERLAY_SET_ASSOCIATED_GAME: function(e) {

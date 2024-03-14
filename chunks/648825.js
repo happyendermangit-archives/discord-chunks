@@ -27,11 +27,11 @@ function(e, t, n) {
         return "application:".concat(e)
     }
 
-    function h(e) {
+    function E(e) {
         return "plan:".concat(e)
     }(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
-    let E = new l.default(e => [c(e.guild_id), ...e.subscription_listings_ids.map(f)], e => e.id),
-        g = new l.default(e => [_(e.application_id), h(e.subscription_plans[0].id)], e => e.id),
+    let h = new l.default(e => [c(e.guild_id), ...e.subscription_listings_ids.map(f)], e => e.id),
+        g = new l.default(e => [_(e.application_id), E(e.subscription_plans[0].id)], e => e.id),
         m = {},
         p = new Set,
         S = {},
@@ -41,12 +41,12 @@ function(e, t, n) {
         C = new Map;
 
     function A(e) {
-        return E.values(c(e))
+        return h.values(c(e))
     }
 
     function y(e) {
         var t;
-        for (let n of (E.set(e.id, e), C.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) N(n)
+        for (let n of (h.set(e.id, e), C.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) N(n)
     }
 
     function N(e) {
@@ -62,13 +62,13 @@ function(e, t, n) {
             return p.has(e)
         }
         getSubscriptionGroupListing(e) {
-            return E.get(e)
+            return h.get(e)
         }
         getSubscriptionGroupListingsForGuild(e) {
             return A(e)
         }
         getSubscriptionGroupListingForSubscriptionListing(e) {
-            let t = E.values(f(e));
+            let t = h.values(f(e));
             return a(t.length <= 1, "Found multiple group listings for listing"), t[0]
         }
         getSubscriptionListing(e) {
@@ -80,7 +80,7 @@ function(e, t, n) {
             return null != n ? g.values(_(n)) : R
         }
         getSubscriptionListingForPlan(e) {
-            let t = g.values(h(e));
+            let t = g.values(E(e));
             return a(t.length <= 1, "Found multiple listings for plan"), t[0]
         }
         getSubscriptionSettings(e) {
@@ -103,7 +103,7 @@ function(e, t, n) {
     O.displayName = "GuildRoleSubscriptionsStore";
     var D = new O(u.default, {
         CONNECTION_OPEN: function() {
-            E.clear(), g.clear(), m = {}, p.clear(), S = {}, v = {}, T = {}, I = {}, C.clear()
+            h.clear(), g.clear(), m = {}, p.clear(), S = {}, v = {}, T = {}, I = {}, C.clear()
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function(e) {
             let {
@@ -116,7 +116,7 @@ function(e, t, n) {
                 guildId: t
             } = e;
             for (let e of (m[t] = 1, A(t)))
-                for (let t of (E.delete(e.id), e.subscription_listings_ids)) g.delete(t)
+                for (let t of (h.delete(e.id), e.subscription_listings_ids)) g.delete(t)
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function(e) {
             let {
@@ -144,7 +144,7 @@ function(e, t, n) {
             let {
                 groupListingId: t
             } = e;
-            E.delete(t)
+            h.delete(t)
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: function(e) {
             let {

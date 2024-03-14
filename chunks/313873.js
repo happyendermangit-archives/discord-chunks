@@ -32,8 +32,8 @@ function(e, t, n) {
         N = n("118033"),
         A = n("315102"),
         O = n("568734"),
-        R = n("474293"),
-        M = n("339521"),
+        M = n("474293"),
+        R = n("339521"),
         k = n("145131"),
         L = n("953109"),
         P = n("98292"),
@@ -91,7 +91,7 @@ function(e, t, n) {
             } : e
         }
         getTypeClass(e, t) {
-            return (0, R.getClass)(B, e, this.props.type, t)
+            return (0, M.getClass)(B, e, this.props.type, t)
         }
         isStreamerOnTypeProfile() {
             return (0, C.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
@@ -152,7 +152,7 @@ function(e, t, n) {
                 children: [null != l && null !== p ? (0, a.jsx)(p, {
                     className: o(B.icon)
                 }) : null, (0, a.jsx)(f.Heading, {
-                    className: (0, R.getClass)(B, "headerText", e ? "EmptyBody" : "Normal"),
+                    className: (0, M.getClass)(B, "headerText", e ? "EmptyBody" : "Normal"),
                     variant: "heading-deprecated-12/semibold",
                     color: "ProfileV2" === r ? "header-primary" : void 0,
                     children: (0, a.jsx)(P.default, {
@@ -311,7 +311,7 @@ function(e, t, n) {
             }) : (0, N.isStageActivity)(e) && (u = e.name)), null == u) ? null : (0, a.jsx)(f.Text, {
                 title: o,
                 variant: "text-sm/semibold",
-                className: (0, R.getClass)(B, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
+                className: (0, M.getClass)(B, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
                 children: u
             })
         }
@@ -384,7 +384,7 @@ function(e, t, n) {
                 start: n,
                 end: i
             } = t;
-            return null == n || null == i ? null : (0, a.jsx)(M.default, {
+            return null == n || null == i ? null : (0, a.jsx)(R.default, {
                 start: n,
                 end: i,
                 className: this.getTypeClass("timeBar"),
@@ -455,7 +455,7 @@ function(e, t, n) {
                     children: [(0, a.jsxs)("div", {
                         className: B.activityDetails,
                         children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(k.default.Child, {
-                            className: o((0, R.getClass)(B, "content", p ? "GameImage" : null != e ? "Images" : "NoImages", t)),
+                            className: o((0, M.getClass)(B, "content", p ? "GameImage" : null != e ? "Images" : "NoImages", t)),
                             children: [m, h, x, E, u || f ? null : g, c ? y : null]
                         })]
                     }), d ? y : null]

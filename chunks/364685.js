@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("778689"),
         f = n("305961"),
         _ = n("718517"),
-        h = n("161585"),
-        E = n("24373");
+        E = n("161585"),
+        h = n("24373");
     let g = 2,
         m = new Map,
         p = new Map,
@@ -50,30 +50,30 @@ function(e, t, n) {
             let {
                 tags: n
             } = e, i = {
-                type: h.StickerMetadataTypes.STICKER_NAME,
+                type: E.StickerMetadataTypes.STICKER_NAME,
                 value: e.name.trim().toLocaleLowerCase()
             };
-            if ((0, E.isStandardSticker)(e)) {
+            if ((0, h.isStandardSticker)(e)) {
                 let t = v.find(t => t.id === e.pack_id),
                     s = [i, ...(null != n ? n : "").split(",").map(e => ({
-                        type: h.StickerMetadataTypes.TAG,
+                        type: E.StickerMetadataTypes.TAG,
                         value: e.trim().toLocaleLowerCase()
                     }))];
                 null != t && s.push({
-                    type: h.StickerMetadataTypes.PACK_NAME,
+                    type: E.StickerMetadataTypes.PACK_NAME,
                     value: t.name
                 }), S.set(e.id, s)
-            } else if ((0, E.isGuildSticker)(e) && null != n) {
+            } else if ((0, h.isGuildSticker)(e) && null != n) {
                 let s = u.default.getByName(n),
                     r = {
-                        type: h.StickerMetadataTypes.TAG,
+                        type: E.StickerMetadataTypes.TAG,
                         value: n.trim().toLocaleLowerCase()
                     },
                     a = [i, r];
                 if (null != t) {
                     let e = t.name.trim().toLocaleLowerCase();
                     null != e && "" !== e && a.push({
-                        type: h.StickerMetadataTypes.GUILD_NAME,
+                        type: E.StickerMetadataTypes.GUILD_NAME,
                         value: e
                     })
                 }
@@ -82,10 +82,10 @@ function(e, t, n) {
                     return
                 }
                 a.push({
-                    type: h.StickerMetadataTypes.CORRELATED_EMOJI,
+                    type: E.StickerMetadataTypes.CORRELATED_EMOJI,
                     value: s.surrogates
                 }), s.forEachDiversity(e => a.push({
-                    type: h.StickerMetadataTypes.CORRELATED_EMOJI,
+                    type: E.StickerMetadataTypes.CORRELATED_EMOJI,
                     value: e.surrogates
                 })), S.set(e.id, a)
             }
@@ -104,11 +104,11 @@ function(e, t, n) {
             })
         };
 
-    function M(e) {
+    function L(e) {
         let t = f.default.getGuild(e.id);
         null != t && null != e.stickers && (e.stickers.forEach(e => R(e, !0, t)), A(t.id, e.stickers))
     }
-    class L extends s.default.Store {
+    class M extends s.default.Store {
         initialize() {
             this.waitFor(a.default, c.default, f.default)
         }
@@ -152,8 +152,8 @@ function(e, t, n) {
             return N(), C.get(e)
         }
     }
-    L.displayName = "StickersStore";
-    var b = new L(r.default, {
+    M.displayName = "StickersStore";
+    var b = new M(r.default, {
         BACKGROUND_SYNC: () => {
             S = null, p = new Map, C = new Map, g = 0
         },
@@ -161,13 +161,13 @@ function(e, t, n) {
             let {
                 guilds: t
             } = e;
-            S = null, p = new Map, C = new Map, t.forEach(M), g = t.every(e => null != e.stickers) ? 1 : 0
+            S = null, p = new Map, C = new Map, t.forEach(L), g = t.every(e => null != e.stickers) ? 1 : 0
         },
         GUILD_CREATE: function(e) {
             let {
                 guild: t
             } = e;
-            !d.default.isLurking(t.id) && (M(t), 1 === g && null == t.stickers && null != t.stickerUpdates && (g = 0))
+            !d.default.isLurking(t.id) && (L(t), 1 === g && null == t.stickers && null != t.stickerUpdates && (g = 0))
         },
         GUILD_DELETE: function(e) {
             var t;
@@ -226,7 +226,7 @@ function(e, t, n) {
             } = e, s = e => {
                 let t;
                 let n = p.get(e.id);
-                return null != n && (0, E.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
+                return null != n && (0, h.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
                     ...e,
                     user: t
                 }

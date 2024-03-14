@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("139514"),
         f = n("312016"),
         _ = n("374021"),
-        h = n("398604"),
-        E = n("468560"),
+        E = n("398604"),
+        h = n("468560"),
         g = n("361572"),
         m = n("537325"),
         p = n("835174"),
@@ -135,7 +135,7 @@ function(e, t, n) {
                         view: c,
                         applicationId: i,
                         guildId: u,
-                        applicationSection: (0, E.default)(o, t),
+                        applicationSection: (0, h.default)(o, t),
                         entrypoint: {
                             name: d.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL
                         }
@@ -156,12 +156,12 @@ function(e, t, n) {
             } = n("33942"), s = t(e);
             if (null != s) return e => (null == e || e.preventDefault(), i(s), !0)
         }
-        let M = (0, g.tryParseEventDetailsPath)(o);
-        if (null != o && P && null != M) return e => {
+        let L = (0, g.tryParseEventDetailsPath)(o);
+        if (null != o && P && null != L) return e => {
             null == e || e.preventDefault();
             let t = I.default.getGuildId();
-            null != M.guildId && "" !== M.guildId && M.guildId !== t && (0, m.default)(N.Routes.CHANNEL(M.guildId));
-            let n = h.default.getGuildScheduledEvent(M.guildEventId);
+            null != L.guildId && "" !== L.guildId && L.guildId !== t && (0, m.default)(N.Routes.CHANNEL(L.guildId));
+            let n = E.default.getGuildScheduledEvent(L.guildEventId);
             return null != n && (0, _.openGuildEventDetails)({
                 eventId: n.id
             }), !0

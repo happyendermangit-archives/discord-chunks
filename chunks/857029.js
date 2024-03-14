@@ -30,8 +30,8 @@ function(e, t, n) {
             focusedY: c = 0,
             onSelect: f,
             prepareFocus: _,
-            getNewFocusPosition: h,
-            maintainFocusPosition: E = !0,
+            getNewFocusPosition: E,
+            maintainFocusPosition: h = !0,
             enabled: g = !0,
             onDispatch: m,
             autoFocusElement: p = !0,
@@ -62,8 +62,8 @@ function(e, t, n) {
                     focusedY: c,
                     onSelect: f,
                     prepareFocus: _,
-                    getNewFocusPosition: h,
-                    dispatch: E,
+                    getNewFocusPosition: E,
+                    dispatch: h,
                     maintainFocusPosition: g,
                     enabled: m,
                     autoFocusElement: p,
@@ -77,7 +77,7 @@ function(e, t, n) {
                     [O] = i.useState(() => new a.HandlerMemoizer(e => {
                         let [t, n] = e.split(",").map(Number);
                         return () => {
-                            C(!0), E({
+                            C(!0), h({
                                 type: s.GridActionType.SET_FOCUSED_POSITION,
                                 x: t,
                                 y: n
@@ -97,10 +97,10 @@ function(e, t, n) {
                             null != e ? (D(e), y(!1)) : requestAnimationFrame(() => y(!0))
                         })
                     }, [t, _, D]),
-                    M = i.useCallback(function() {
+                    L = i.useCallback(function() {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                            [n, i] = null != h ? h(d, c) : [d, c];
-                        if ((n !== d || i !== c) && (E({
+                            [n, i] = null != E ? E(d, c) : [d, c];
+                        if ((n !== d || i !== c) && (h({
                                 type: s.GridActionType.SET_FOCUSED_POSITION,
                                 x: n,
                                 y: i
@@ -110,10 +110,10 @@ function(e, t, n) {
                         }
                         let r = u(l(t, n, i));
                         null != r && (R(!0), D(r))
-                    }, [E, d, c, h, t, D]),
-                    [L, b] = i.useState(!1);
+                    }, [h, d, c, E, t, D]),
+                    [M, b] = i.useState(!1);
                 i.useEffect(() => {
-                    if (!L || !I) return;
+                    if (!M || !I) return;
                     b(!1);
                     let e = u(l(t, d, c));
                     if (null != e) {
@@ -123,7 +123,7 @@ function(e, t, n) {
                     C(!1);
                     let n = u(l(t));
                     null != n && D(n)
-                }, [t, L, I, D, d, c]);
+                }, [t, M, I, D, d, c]);
                 let U = i.useCallback(e => {
                     v.current && null == e && b(!0)
                 }, []);
@@ -135,7 +135,7 @@ function(e, t, n) {
                 let w = i.useCallback(e => {
                         if (!v.current) return;
                         if (!S && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
-                            e.preventDefault(), e.stopPropagation(), M();
+                            e.preventDefault(), e.stopPropagation(), L();
                             return
                         }
                         let t = function(e) {
@@ -168,19 +168,19 @@ function(e, t, n) {
                             case r.ActionType.NAVIGATE_START:
                             case r.ActionType.NAVIGATE_END:
                                 let i = 0 === n.length || 0 === d && 0 === c && t === r.ActionType.NAVIGATE_LEFT;
-                                !i && (e.preventDefault(), e.stopPropagation()), E({
+                                !i && (e.preventDefault(), e.stopPropagation()), h({
                                     type: t
                                 });
                                 return;
                             case r.ActionType.SELECT_FOCUSED_ITEM:
                                 var s;
                                 if (p && (null == (s = T) ? void 0 : s.ownerDocument.activeElement) !== s || e.repeat) return;
-                                e.preventDefault(), e.stopPropagation(), E({
+                                e.preventDefault(), e.stopPropagation(), h({
                                     type: t
                                 }), null != f ? f(d, c, e) : null != T && T.click()
                         }
-                    }, [M, E, p, T, f, d, c]),
-                    k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (C(!0), R(!0)), !1) : I ? (M(!1), !1) : void(g && null != T ? P(d, c) : M(!0)), [I, g, T, M, P, d, c]),
+                    }, [L, h, p, T, f, d, c]),
+                    k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (C(!0), R(!0)), !1) : I ? (L(!1), !1) : void(g && null != T ? P(d, c) : L(!0)), [I, g, T, L, P, d, c]),
                     V = i.useCallback(e => {
                         if (e.target !== e.currentTarget) {
                             if (e.currentTarget.contains(e.relatedTarget)) return !1;
@@ -214,11 +214,11 @@ function(e, t, n) {
                         "aria-rowindex": e + 1
                     }), []),
                     H = i.useMemo(() => ({
-                        dispatch: E,
+                        dispatch: h,
                         getContainerProps: F,
                         getItemProps: x,
                         getRowProps: B
-                    }), [E, F, x, B]);
+                    }), [h, F, x, B]);
                 return H
             }({
                 navId: t,
@@ -228,8 +228,8 @@ function(e, t, n) {
                 dispatch: N,
                 onSelect: f,
                 prepareFocus: _,
-                getNewFocusPosition: h,
-                maintainFocusPosition: E,
+                getNewFocusPosition: E,
+                maintainFocusPosition: h,
                 enabled: g,
                 autoFocusElement: p,
                 useVirtualFocus: S

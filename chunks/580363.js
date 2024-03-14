@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("45029"),
         f = n("71216"),
         _ = n("148337"),
-        h = n("568734"),
-        E = n("299039"),
+        E = n("568734"),
+        h = n("299039"),
         g = n("955145"),
         m = n("29479"),
         p = n("49111"),
@@ -36,9 +36,9 @@ function(e, t, n) {
                 isEmbeddedFlow: A,
                 embeddedActivityConfig: y
             } = e,
-            N = new Date(E.default.extractTimestamp(s.id)),
+            N = new Date(h.default.extractTimestamp(s.id)),
             R = (0, m.getSecurityMessage)(r),
-            O = (0, h.hasFlag)(null !== (t = s.flags) && void 0 !== t ? t : 0, p.ApplicationFlags.EMBEDDED);
+            O = (0, E.hasFlag)(null !== (t = s.flags) && void 0 !== t ? t : 0, p.ApplicationFlags.EMBEDDED);
         if (null != o && !O && !A) {
             let e = new URL(o);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href

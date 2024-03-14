@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("697218"),
         f = n("773336"),
         _ = n("378713"),
-        h = n("711562"),
-        E = n("334368"),
+        E = n("711562"),
+        h = n("334368"),
         g = n("420444"),
         m = n("272505"),
         p = n("49111");
@@ -43,8 +43,8 @@ function(e, t, n) {
         O = new Map,
         D = new Map,
         P = new Map,
-        M = new Map,
-        L = new Map;
+        L = new Map,
+        M = new Map;
     let b = m.ActivityPanelModes.DISCONNECTED,
         U = m.FocusedActivityLayouts.RESIZABLE;
 
@@ -61,8 +61,8 @@ function(e, t, n) {
             instanceId: d,
             userIds: c,
             activitySessionId: f
-        } = e, E = (0, h.default)(a);
-        if (null == E) return;
+        } = e, h = (0, E.default)(a);
+        if (null == h) return;
         let g = l.default.getBasicChannel(s),
             m = null != g && u.default.canBasicChannel(p.BasicPermissions.CONNECT, g) || (null == g ? void 0 : g.type) === p.ChannelTypes.DM || (null == g ? void 0 : g.type) === p.ChannelTypes.GROUP_DM;
         if (function(e, t) {
@@ -75,7 +75,7 @@ function(e, t, n) {
                 channelId: s,
                 guildId: i,
                 instanceId: d,
-                url: E,
+                url: h,
                 userIds: new Set(c)
             },
             y = o.default.getId(),
@@ -100,8 +100,8 @@ function(e, t, n) {
             O = R.filter(e => e.applicationId !== a),
             D = w(i),
             P = null !== (n = I.get(D)) && void 0 !== n ? n : [],
-            M = P.filter(e => !(e.applicationId === a && e.channelId === s));
-        0 !== c.length && (O.push(v), M.push(v)), C.set(s, O), I.set(D, M)
+            L = P.filter(e => !(e.applicationId === a && e.channelId === s));
+        0 !== c.length && (O.push(v), L.push(v)), C.set(s, O), I.set(D, L)
     }
 
     function V(e) {
@@ -128,21 +128,21 @@ function(e, t, n) {
             channelId: s,
             applicationId: r,
             instanceId: a
-        } = e, u = (0, h.default)(r), f = o.default.getSessionId();
+        } = e, u = (0, E.default)(r), f = o.default.getSessionId();
         if (null == u || null == f || (null === (t = T.get(r)) || void 0 === t ? void 0 : t.channelId) === s) return !1;
         let _ = l.default.getChannel(s),
-            E = null == _ ? void 0 : _.getGuildId(),
+            h = null == _ ? void 0 : _.getGuildId(),
             p = c.default.getCurrentUser();
-        if (null == E && !(null !== (n = null == _ ? void 0 : _.isPrivate()) && void 0 !== n && n) || null == p) return !1;
+        if (null == h && !(null !== (n = null == _ ? void 0 : _.isPrivate()) && void 0 !== n && n) || null == p) return !1;
         i = s, T.set(r, {
-            guildId: E,
+            guildId: h,
             channelId: s,
             applicationId: r,
             url: u,
             userIds: new Set([p.id]),
             connectedSince: Date.now(),
             instanceId: a
-        }), b = i !== d.default.getChannelId() || (0, g.default)(s) ? m.ActivityPanelModes.PIP : m.ActivityPanelModes.PANEL, L.set(x(s, r), Date.now())
+        }), b = i !== d.default.getChannelId() || (0, g.default)(s) ? m.ActivityPanelModes.PIP : m.ActivityPanelModes.PANEL, M.set(x(s, r), Date.now())
     }
 
     function F() {
@@ -198,7 +198,7 @@ function(e, t, n) {
             return C
         }
         getEmbeddedActivityDurationMs(e, t) {
-            let n = L.get(x(e, t));
+            let n = M.get(x(e, t));
             return null == n ? null : Date.now() - n
         }
         isLaunchingActivity() {
@@ -236,7 +236,7 @@ function(e, t, n) {
             return null !== (n = null !== (t = P.get(e)) && void 0 !== t ? t : D.get(e)) && void 0 !== n ? n : this.getOrientationLockStateForApp(e)
         }
         getLayoutModeForApp(e) {
-            return M.get(e)
+            return L.get(e)
         }
         getUsersHavePlayedByApp(e) {
             var t;
@@ -305,7 +305,7 @@ function(e, t, n) {
                 applicationId: t,
                 layoutMode: n
             } = e;
-            M.set(t, n)
+            L.set(t, n)
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
             let {
@@ -466,7 +466,7 @@ function(e, t, n) {
                 } = e;
                 t.forEach(e => {
                     let t = e.application_id,
-                        i = e.client_platform_config[(0, E.default)((0, f.getOS)())];
+                        i = e.client_platform_config[(0, h.default)((0, f.getOS)())];
                     if (!S.seenActivities.has(t) && (S.shouldShowNewActivityIndicator = !0, S.seenActivities.add(t)), null == i.label_until) return;
                     let s = new Date(i.label_until).getTime();
                     if (s < n) return;

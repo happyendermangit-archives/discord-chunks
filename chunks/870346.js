@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("773336"),
         f = n("50885"),
         _ = n("563680"),
-        h = n("49111");
-    let E = {},
+        E = n("49111");
+    let h = {},
         g = {},
         m = {},
         p = {},
@@ -28,7 +28,7 @@ function(e, t, n) {
 
     function C(e) {
         let t = m[e];
-        null != t && !t.closed && (E[e] = {
+        null != t && !t.closed && (h[e] = {
             x: t.screenX,
             y: t.screenY,
             width: t.innerWidth,
@@ -54,7 +54,7 @@ function(e, t, n) {
         if (!(t instanceof Object && t.discordPopoutEvent instanceof Object)) return;
         let n = t.discordPopoutEvent;
         if (null != n.key) switch (n.type) {
-            case h.PopoutEventTypes.LOADED:
+            case E.PopoutEventTypes.LOADED:
                 var i;
                 return i = n.key, void(v.has(i) && (! function(e) {
                     let t = m[e],
@@ -77,7 +77,7 @@ function(e, t, n) {
                     let r = (0, o.createRoot)(i.getElementById("app-mount"));
                     s(null != r, "No render target for popout!"), p[e] = r, r.render(n(e))
                 }(i), v.delete(i), O.emitChange()));
-            case h.PopoutEventTypes.UNLOADED:
+            case E.PopoutEventTypes.UNLOADED:
                 return A(n.key)
         }
     }
@@ -90,13 +90,13 @@ function(e, t, n) {
     }
     class R extends l.default.PersistedStore {
         initialize(e) {
-            window.addEventListener("message", y), window.addEventListener("beforeunload", N), E = null != e ? e : {}
+            window.addEventListener("message", y), window.addEventListener("beforeunload", N), h = null != e ? e : {}
         }
         getWindow(e) {
             return m[e]
         }
         getWindowState(e) {
-            return E[e]
+            return h[e]
         }
         getWindowKeys() {
             return Object.keys(m)
@@ -119,7 +119,7 @@ function(e, t, n) {
             return (null == n ? void 0 : null === (t = n.document) || void 0 === t ? void 0 : t.visibilityState) === "visible"
         }
         getState() {
-            return E
+            return h
         }
         unmountWindow(e) {
             return A(e)
@@ -133,7 +133,7 @@ function(e, t, n) {
                 features: n,
                 render: i
             } = e;
-            if (c.isPlatformEmbedded && !f.default.supportsFeature(h.NativeFeatures.POPOUT_WINDOWS)) throw Error("Popout windows not supported on this native module version!");
+            if (c.isPlatformEmbedded && !f.default.supportsFeature(E.NativeFeatures.POPOUT_WINDOWS)) throw Error("Popout windows not supported on this native module version!");
             let s = m[t];
             if (null != s && !s.closed) return c.isPlatformEmbedded ? f.default.focus(t) : s.focus(), !1;
             let {
@@ -141,7 +141,7 @@ function(e, t, n) {
                 defaultHeight: a,
                 defaultAlwaysOnTop: o = !1,
                 ...l
-            } = n, u = l, d = o, _ = E[t];
+            } = n, u = l, d = o, _ = h[t];
             if (null != _) {
                 let {
                     width: e,
@@ -158,7 +158,7 @@ function(e, t, n) {
                     ...u
                 }
             }
-            let p = window.open(h.Routes.POPOUT_WINDOW, t, function(e) {
+            let p = window.open(E.Routes.POPOUT_WINDOW, t, function(e) {
                 let t = "";
                 for (let n of Object.keys(e)) {
                     let i = e[n];

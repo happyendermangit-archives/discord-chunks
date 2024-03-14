@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("957255"),
         f = n("27618"),
         _ = n("697218"),
-        h = n("315102"),
-        E = n("404008"),
+        E = n("315102"),
+        h = n("404008"),
         g = n("159885"),
         m = n("82300"),
         p = n("290689"),
@@ -33,7 +33,7 @@ function(e, t, n) {
             type: "guild",
             guildId: e.id,
             content: (0, g.truncateText)(e.name, 32),
-            icon: h.default.getGuildIconURL({
+            icon: E.default.getGuildIconURL({
                 id: e.id,
                 icon: e.icon,
                 size: 40
@@ -67,7 +67,7 @@ function(e, t, n) {
         var n;
         let i = u.default.getChannel(e),
             s = (0, o.getChannelRoleSubscriptionStatus)(e, u.default, r.default, c.default).isSubscriptionGated,
-            d = null !== (n = (0, E.getMentionIconType)(i)) && void 0 !== n ? n : "text";
+            d = null !== (n = (0, h.getMentionIconType)(i)) && void 0 !== n ? n : "text";
         if (null != t) {
             let n = t.find(t => t.id === e);
             if (null != n) return {
@@ -188,7 +188,7 @@ function(e, t, n) {
                                 inContent: [C({
                                     name: e.name,
                                     type: e.type,
-                                    iconType: null !== (o = (0, E.getMentionIconType)(e)) && void 0 !== o ? o : "forum"
+                                    iconType: null !== (o = (0, h.getMentionIconType)(e)) && void 0 !== o ? o : "forum"
                                 })],
                                 content: [r]
                             }
@@ -228,7 +228,7 @@ function(e, t, n) {
                 return null == s ? O(null, i, null, T(n.channelId)) : D(s, null, T(n.channelId))
             }
         },
-        M = {
+        L = {
             order: s.defaultRules.url.order - .5,
             requiredFirstCharacters: ["h"],
             match(e) {
@@ -245,7 +245,7 @@ function(e, t, n) {
                 return null == o ? O(s, r, a, T(n.channelId), i) : D(o, a, T(n.channelId), i)
             }
         },
-        L = {
+        M = {
             order: s.defaultRules.url.order - .5,
             requiredFirstCharacters: ["h"],
             match: e => l.MEDIA_POST_URL_RE.exec(e),
@@ -264,7 +264,7 @@ function(e, t, n) {
         };
     var b = {
         channelMention: P,
-        channelOrMessageUrl: M,
-        mediaPostLink: L
+        channelOrMessageUrl: L,
+        mediaPostLink: M
     }
 }

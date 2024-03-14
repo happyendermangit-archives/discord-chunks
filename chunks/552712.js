@@ -17,18 +17,18 @@ function(e, t, n) {
         f = new Map,
         _ = new Map;
 
-    function h(e) {
+    function E(e) {
         c.set(e.id, o.default.createFromServer(e)), !f.has(e.application_id) && f.set(e.application_id, new Set);
         let t = f.get(e.application_id);
         t.add(e.id)
     }
 
-    function E(e) {
-        u.delete(e.id), d.delete(e.id), h(e)
+    function h(e) {
+        u.delete(e.id), d.delete(e.id), E(e)
     }
 
     function g(e) {
-        h(e.sku), null != e.child_skus && e.child_skus.forEach(e => h(e)), null != e.alternative_skus && e.alternative_skus.forEach(e => h(e))
+        E(e.sku), null != e.child_skus && e.child_skus.forEach(e => E(e)), null != e.alternative_skus && e.alternative_skus.forEach(e => E(e))
     }
 
     function m(e) {
@@ -42,7 +42,7 @@ function(e, t, n) {
         let {
             entitlements: t
         } = e;
-        for (let e of t) null != e.sku && h(e.sku)
+        for (let e of t) null != e.sku && E(e.sku)
     }
 
     function S() {
@@ -89,7 +89,7 @@ function(e, t, n) {
                 giftCode: t
             } = e;
             if (null == t.store_listing) return !1;
-            h(t.store_listing.sku)
+            E(t.store_listing.sku)
         },
         SKU_FETCH_START: function(e) {
             let {
@@ -101,7 +101,7 @@ function(e, t, n) {
             let {
                 sku: t
             } = e;
-            E(t)
+            h(t)
         },
         SKU_FETCH_FAIL: function(e) {
             let {
@@ -114,7 +114,7 @@ function(e, t, n) {
                 guildId: t,
                 skus: n
             } = e;
-            for (let e of n) E(e);
+            for (let e of n) h(e);
             null != t && _.set(t, new Set(n.map(e => e.id)))
         },
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: p,

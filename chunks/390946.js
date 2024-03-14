@@ -14,7 +14,7 @@ function(e, t, n) {
             return O
         },
         hydratePreviouslyUnavailableGuild: function() {
-            return L
+            return M
         }
     }), n("424973"), n("222007"), n("70102");
     var i = n("627445"),
@@ -28,8 +28,8 @@ function(e, t, n) {
         c = n("723939"),
         f = n("70754"),
         _ = n("605250"),
-        h = n("385976"),
-        E = n("364685"),
+        E = n("385976"),
+        h = n("364685"),
         g = n("233069"),
         m = n("305961"),
         p = n("660478"),
@@ -99,8 +99,8 @@ function(e, t, n) {
             let t = o.default.database();
             null != t && !1 === e.databaseOk && c.default.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"), T = {};
             let n = Object.values(m.default.getGuilds()),
-                i = h.default.getGuilds(),
-                s = E.default.getRawStickersByGuild(),
+                i = E.default.getGuilds(),
+                s = h.default.getRawStickersByGuild(),
                 r = p.default.getReadStatesByChannel();
             for (let t of n) {
                 var a, l, u;
@@ -118,8 +118,8 @@ function(e, t, n) {
             let t = e.recipient_ids;
             null != t && (e.recipients = t.map(e => (s(null != C[e], "Missing user in compressed ready payload"), C[e]))), delete e.recipient_ids
         });
-        let v = null !== (i = null == f ? void 0 : f.map((e, t) => !0 === e.unavailable ? e : (e.members = D(C, null == d ? void 0 : d[t]), M(e)))) && void 0 !== i ? i : [],
-            I = R(t, f, e => M(e));
+        let v = null !== (i = null == f ? void 0 : f.map((e, t) => !0 === e.unavailable ? e : (e.members = D(C, null == d ? void 0 : d[t]), L(e)))) && void 0 !== i ? i : [],
+            I = R(t, f, e => L(e));
         return null != I && v.push(I), {
             ..._,
             users: r,
@@ -137,11 +137,11 @@ function(e, t, n) {
     function O(e, t) {
         var n, i, s;
         let r = m.default.getGuild(e.id),
-            a = L(e, null == r ? void 0 : {
+            a = M(e, null == r ? void 0 : {
                 properties: S.toServer(r),
                 roles: m.default.getRoles(r.id),
-                emojis: null !== (i = null === (n = h.default.getGuilds()[r.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
-                stickers: null !== (s = E.default.getRawStickersByGuild().get(r.id)) && void 0 !== s ? s : null,
+                emojis: null !== (i = null === (n = E.default.getGuilds()[r.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
+                stickers: null !== (s = h.default.getRawStickersByGuild().get(r.id)) && void 0 !== s ? s : null,
                 readStates: {}
             });
         return I = {
@@ -164,7 +164,7 @@ function(e, t, n) {
         return delete T[e], t
     }
 
-    function M(e) {
+    function L(e) {
         var t, n, i, s, r, a, o, l, u, d, c, f;
         let _ = P(e.id);
         if ("partial" !== e.data_mode) return {
@@ -224,7 +224,7 @@ function(e, t, n) {
         }
     }
 
-    function L(e, t) {
+    function M(e, t) {
         var n, i, s, r, a, o, l, u, d, c, f, _;
         if (null == t && (t = P(e.id)), "partial" !== e.data_mode) return {
             id: e.id,

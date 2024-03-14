@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("76393"),
         f = n("374014"),
         _ = n("373469"),
-        h = n("271938"),
-        E = n("950104"),
+        E = n("271938"),
+        h = n("950104"),
         g = n("42203"),
         m = n("18494"),
         p = n("280168"),
@@ -33,8 +33,8 @@ function(e, t, n) {
         O = {},
         D = {},
         P = {},
-        M = {},
         L = {},
+        M = {},
         b = {},
         U = {},
         w = {},
@@ -54,9 +54,9 @@ function(e, t, n) {
                 let t = G(e);
                 if (0 === t.size()) return;
                 let n = ee(e) || W(t) ? A.ChannelModes.VIDEO : A.ChannelModes.VOICE;
-                n === A.ChannelModes.VOICE ? (delete M[e], delete L[e]) : M[e] = n
+                n === A.ChannelModes.VOICE ? (delete L[e], delete M[e]) : L[e] = n
             }(n), function(e) {
-                let t = h.default.getId(),
+                let t = E.default.getId(),
                     n = G(e);
                 if (0 === n.size() || m.default.getVoiceChannelId() !== e) {
                     j(e, null);
@@ -133,7 +133,7 @@ function(e, t, n) {
     }
 
     function K(e) {
-        delete O[e], delete D[e], delete M[e], delete L[e]
+        delete O[e], delete D[e], delete L[e], delete M[e]
     }
 
     function z() {
@@ -144,7 +144,7 @@ function(e, t, n) {
             let n = m.default.getVoiceChannelId();
             null != n && !e.includes(n) && e.push(n);
             let i = c.default.getRemoteSessionId(),
-                s = T.default.getVoiceStateForSession(h.default.getId(), i);
+                s = T.default.getVoiceStateForSession(E.default.getId(), i);
             (null == s ? void 0 : s.channelId) != null && e.push(null == s ? void 0 : s.channelId), a.difference(R, e).forEach(K);
             let r = a.difference(e, R);
             return R = e, r
@@ -201,7 +201,7 @@ function(e, t, n) {
     }
     class et extends o.default.Store {
         initialize() {
-            this.waitFor(_.default, h.default, E.default, g.default, u.default, m.default, p.default, S.default, v.default, T.default), this.syncWith([u.default], q), this.syncWith([c.default], z)
+            this.waitFor(_.default, E.default, h.default, g.default, u.default, m.default, p.default, S.default, v.default, T.default), this.syncWith([u.default], q), this.syncWith([c.default], z)
         }
         getParticipantsVersion(e) {
             return G(e).version
@@ -262,7 +262,7 @@ function(e, t, n) {
         }
         getMode(e) {
             var t;
-            return null !== (t = M[e]) && void 0 !== t ? t : ee(e) ? A.ChannelModes.VIDEO : A.ChannelModes.VOICE
+            return null !== (t = L[e]) && void 0 !== t ? t : ee(e) ? A.ChannelModes.VIDEO : A.ChannelModes.VOICE
         }
         getLayout(e) {
             var t, n;
@@ -270,7 +270,7 @@ function(e, t, n) {
             if (__OVERLAY__) return A.ChannelLayouts.NORMAL;
             let s = g.default.getChannel(e),
                 r = ee(e) || (null == s ? void 0 : s.isBroadcastChannel());
-            return null !== (n = null === (t = L[e]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : r ? A.ChannelLayouts.NO_CHAT : A.ChannelLayouts.NORMAL
+            return null !== (n = null === (t = M[e]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : r ? A.ChannelLayouts.NO_CHAT : A.ChannelLayouts.NORMAL
         }
         getChatOpen(e) {
             var t;
@@ -278,7 +278,7 @@ function(e, t, n) {
         }
         isFullscreenInContext() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : A.AppContext.APP;
-            return Object.values(L).some(t => t[e] === A.ChannelLayouts.FULL_SCREEN)
+            return Object.values(M).some(t => t[e] === A.ChannelLayouts.FULL_SCREEN)
         }
         getStageStreamSize(e) {
             return k[e]
@@ -329,11 +329,11 @@ function(e, t, n) {
                 let e = t.originChannelId;
                 if (null != e) {
                     var n, i;
-                    return L[t.id] = {
-                        [A.AppContext.APP]: null !== (i = null === (n = L[e]) || void 0 === n ? void 0 : n[A.AppContext.APP]) && void 0 !== i ? i : A.ChannelLayouts.NORMAL
+                    return M[t.id] = {
+                        [A.AppContext.APP]: null !== (i = null === (n = M[e]) || void 0 === n ? void 0 : n[A.AppContext.APP]) && void 0 !== i ? i : A.ChannelLayouts.NORMAL
                     }, !0
                 }
-                t.isBroadcastChannel() && (L[t.id] = {
+                t.isBroadcastChannel() && (M[t.id] = {
                     [A.AppContext.APP]: A.ChannelLayouts.NO_CHAT
                 })
             }
@@ -363,7 +363,7 @@ function(e, t, n) {
                     let {
                         ownerId: e
                     } = (0, f.decodeStreamKey)(n);
-                    e === h.default.getId() && x(e, [t])
+                    e === E.default.getId() && x(e, [t])
                 } catch (e) {
                     y.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
                 }!W(i) && (b[t] = !1)
@@ -375,8 +375,8 @@ function(e, t, n) {
                 layout: n,
                 appContext: i
             } = e;
-            L[t] = {
-                ...L[t],
+            M[t] = {
+                ...M[t],
                 [i]: n
             }
         },
@@ -412,7 +412,7 @@ function(e, t, n) {
             let {
                 channelId: t,
                 selfStreamHidden: n
-            } = e, i = h.default.getId();
+            } = e, i = E.default.getId();
             if (n) {
                 let [e] = B(t), n = (0, f.isStreamKey)(e);
                 n && e.includes(i) && j(t, null)

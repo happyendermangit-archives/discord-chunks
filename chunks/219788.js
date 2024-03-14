@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     }), n("222007");
     var i = n("705909"),
@@ -39,7 +39,7 @@ function(e, t, n) {
             }
         }
     }
-    var h = new class e {
+    var E = new class e {
         async startupLoad(e, t, n, i) {
             let s = o.default.messages(e),
                 r = await s.getLatest(t, n, i);

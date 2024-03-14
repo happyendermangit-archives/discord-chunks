@@ -44,12 +44,12 @@ function(e, t, n) {
                     guildId: N
                 })
             })
-        }, O = S.default.useName(_), R = (0, r.useStateFromStores)([p.default, m.default, x.default], () => g.default.getNickname(N, I, _)), M = h.default.getGuild(N), k = (0, d.useClydeEnabled)(M, v), L = k && l === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null, P = e => (0, i.jsx)(y.default, {
+        }, O = S.default.useName(_), M = (0, r.useStateFromStores)([p.default, m.default, x.default], () => g.default.getNickname(N, I, _)), R = h.default.getGuild(N), k = (0, d.useClydeEnabled)(R, v), L = k && l === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null, P = e => (0, i.jsx)(y.default, {
             className: t,
             onContextMenu: A,
             color: L,
             ...e,
-            children: "@".concat(null != R ? R : O)
+            children: "@".concat(null != M ? M : O)
         });
         return T ? P() : (0, i.jsx)(o.Popout, {
             preload: null == _ ? void 0 : () => (0, c.default)(_.id, _.getAvatarURL(N, 80), {

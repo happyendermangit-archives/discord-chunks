@@ -36,10 +36,10 @@ function(e, t, n) {
                 } = e,
                 A = null == a ? void 0 : a.subscription_plans[0],
                 O = null == a ? void 0 : a.application_id,
-                R = null == A ? void 0 : A.id,
-                M = (null == a ? void 0 : a.published) === !0,
+                M = null == A ? void 0 : A.id,
+                R = (null == a ? void 0 : a.published) === !0,
                 k = null == A ? void 0 : A.sku_id,
-                L = (0, r.useStateFromStores)([m.default], () => null != R ? m.default.get(R) : null),
+                L = (0, r.useStateFromStores)([m.default], () => null != M ? m.default.get(M) : null),
                 P = (0, h.useApplication)(O),
                 b = (0, h.useSubscriptionListingsForGroup)(I, {
                     includeSoftDeleted: !0
@@ -64,12 +64,12 @@ function(e, t, n) {
             V ? W ? Y && null != L && (n = S.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
                 tierName: L.name
             })) : n = S.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = S.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, l.useEffect(() => {
-                M && null != k && B && o.default.wait(() => {
+                R && null != k && B && o.default.wait(() => {
                     (0, u.fetchSubscriptionPlansForSKU)(k)
                 })
-            }, [M, k, B]);
+            }, [R, k, B]);
             let Z = l.useCallback(() => {
-                s(null != a, "No subscription listing"), s(null != P, "No application"), s(null != A, "No subscription plan"), s(M, "Cannot purchase this unpublished plan");
+                s(null != a, "No subscription listing"), s(null != P, "No application"), s(null != A, "No subscription plan"), s(R, "Cannot purchase this unpublished plan");
                 let e = () => {
                     (0, f.openApplicationSubscriptionPaymentModal)({
                         activeSubscription: D,
@@ -97,7 +97,7 @@ function(e, t, n) {
                     onConfirm: e,
                     onCancel: () => {}
                 }) : e()
-            }, [M, a, A, j, P, C, W, G, U, T, D, _, F, v, N]);
+            }, [R, a, A, j, P, C, W, G, U, T, D, _, F, v, N]);
             return {
                 openModal: Z,
                 canOpenModal: z,

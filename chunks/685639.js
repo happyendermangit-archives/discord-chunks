@@ -86,10 +86,10 @@ function(e, t, n) {
             var e;
             return null === (e = f.current) || void 0 === e ? void 0 : e.clear()
         }), [_]);
-        let h = [];
-        for (let [, e] of _) h.push(e.children);
+        let E = [];
+        for (let [, e] of _) E.push(e.children);
         return (0, r.jsx)(r.Fragment, {
-            children: h.length > 0 ? s(h) : null
+            children: E.length > 0 ? s(E) : null
         })
     }
 }

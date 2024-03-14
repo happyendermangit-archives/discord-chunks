@@ -31,8 +31,8 @@ function(e, t, n) {
         N = n("368121"),
         A = n("719923"),
         O = n("389480"),
-        R = n("78581"),
-        M = n("262439"),
+        M = n("78581"),
+        R = n("262439"),
         k = n("557585"),
         L = n("553372"),
         P = n("122557"),
@@ -193,11 +193,11 @@ function(e, t, n) {
             let t = !el.has(e);
             t ? el.add(e) : el.delete(e), E.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
         }, [el]), eo = l.useCallback((e, t) => {
-            if (!p && (0, R.canUseSoundboardSound)(Z, e, a, !1)) {
+            if (!p && (0, M.canUseSoundboardSound)(Z, e, a, !1)) {
                 var n;
-                (0, R.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_SNOWFLAKE_ID, t)
+                (0, M.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_SNOWFLAKE_ID, t)
             } else {
-                if ((0, R.canUseSoundboardSound)(Z, e, a)) return;
+                if ((0, M.canUseSoundboardSound)(Z, e, a)) return;
                 C && z(e)
             }
         }, [p, Z, a, C]), eu = l.useCallback(e => {
@@ -231,7 +231,7 @@ function(e, t, n) {
                 collapsed: el.has(n),
                 index: t
             }, "header-".concat(n))
-        }, [el, er]), ef = l.useCallback(e => et((0, M.default)(e, $, Z, a)), [a, Z, $]), ep = l.useCallback(e => {
+        }, [el, er]), ef = l.useCallback(e => et((0, R.default)(e, $, Z, a)), [a, Z, $]), ep = l.useCallback(e => {
             (0, d.openContextMenuLazy)(e, async () => {
                 let {
                     default: e

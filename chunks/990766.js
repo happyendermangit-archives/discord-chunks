@@ -8,10 +8,10 @@ function(e, t, n) {
             return D
         },
         watchStream: function() {
-            return M
+            return L
         },
         toggleSelfStreamHidden: function() {
-            return L
+            return M
         },
         watchStreamAndTransitionToStream: function() {
             return b
@@ -55,8 +55,8 @@ function(e, t, n) {
         c = n("870346"),
         f = n("373469"),
         _ = n("271938"),
-        h = n("42203"),
-        E = n("305961"),
+        E = n("42203"),
+        h = n("305961"),
         g = n("18494"),
         m = n("800762"),
         p = n("404008"),
@@ -91,13 +91,13 @@ function(e, t, n) {
     }
 
     function P(e, t) {
-        let n = h.default.getChannel(t);
+        let n = E.default.getChannel(t);
         s(null != n, "Cannot join a null voice channel");
         let i = m.default.isInChannel(t);
-        return !i && (0, p.isChannelFull)(n, m.default, E.default)
+        return !i && (0, p.isChannelFull)(n, m.default, h.default)
     }
 
-    function M(e, t) {
+    function L(e, t) {
         let n = null != l.default.getRemoteSessionId();
         if (n) return;
         let {
@@ -119,7 +119,7 @@ function(e, t, n) {
         }), !a && (null == t || !t.noFocus) && A.default.selectParticipant(e.channelId, r)
     }
 
-    function L(e, t) {
+    function M(e, t) {
         o.default.dispatch({
             type: "STREAM_UPDATE_SELF_HIDDEN",
             channelId: e,
@@ -133,7 +133,7 @@ function(e, t, n) {
             channelId: i
         } = e;
         if (null != n && P(n, i)) return;
-        M(e, t);
+        L(e, t);
         let s = c.default.getWindowOpen(N.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
             r = g.default.getVoiceChannelId();
         (!s || r !== i) && (0, d.default)(e)

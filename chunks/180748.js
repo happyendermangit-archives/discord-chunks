@@ -14,10 +14,10 @@ function(e, t, n) {
             return _
         },
         disableKeyboardMode: function() {
-            return h
+            return E
         },
         toggleDesaturateUserColors: function() {
-            return E
+            return h
         },
         toggleDarkSidebar: function() {
             return g
@@ -94,7 +94,7 @@ function(e, t, n) {
         })
     }
 
-    function h() {
+    function E() {
         i.default.dispatch({
             type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE"
         }), r.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
@@ -102,7 +102,7 @@ function(e, t, n) {
         })
     }
 
-    function E() {
+    function h() {
         i.default.dispatch({
             type: "ACCESSIBILITY_DESATURATE_ROLES_TOGGLE"
         })

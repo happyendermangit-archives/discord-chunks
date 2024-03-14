@@ -34,13 +34,13 @@ function(e, t, n) {
         } = e;
         null == i.installations[t] && (i.installations[t] = {}), i.installations[t][n] = {
             installationPath: s
-        }, !i.installationPaths.has(s) && E({
+        }, !i.installationPaths.has(s) && h({
             path: s,
             metadata: {}
         })
     }
 
-    function h(e) {
+    function E(e) {
         let {
             applicationId: t,
             branchId: n
@@ -49,7 +49,7 @@ function(e, t, n) {
         delete i.installations[t][n], 0 === Object.keys(i.installations[t]).length && delete i.installations[t]
     }
 
-    function E(e) {
+    function h(e) {
         if (i.installationPaths.has(e.path)) return !1;
         f(e.path, e.metadata);
         let t = new Set(i.installationPaths);
@@ -100,18 +100,18 @@ function(e, t, n) {
     g.displayName = "InstallationManagerStore", g.persistKey = "InstallationManagerStore";
     var m = new g(r.default, {
         DISPATCH_APPLICATION_INSTALL: _,
-        DISPATCH_APPLICATION_UNINSTALL: h,
+        DISPATCH_APPLICATION_UNINSTALL: E,
         DISPATCH_APPLICATION_CANCEL: function(e) {
             let {
                 applicationId: t,
                 branchId: n
             } = e, i = l.default.getState(t, n);
-            null != i && null == i.buildId && null == i.manifestIds && h({
+            null != i && null == i.buildId && null == i.manifestIds && E({
                 applicationId: t,
                 branchId: n
             })
         },
-        INSTALLATION_LOCATION_ADD: E,
+        INSTALLATION_LOCATION_ADD: h,
         INSTALLATION_LOCATION_REMOVE: function(e) {
             var t;
             let {

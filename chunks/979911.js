@@ -21,8 +21,8 @@ function(e, t, n) {
         c = n("798609"),
         f = n("716241"),
         _ = n("605250"),
-        h = n("676574"),
-        E = n("618421"),
+        E = n("676574"),
+        h = n("618421"),
         g = n("271938"),
         m = n("985365"),
         p = n("718517"),
@@ -84,14 +84,14 @@ function(e, t, n) {
                 file: s,
                 filename: r,
                 ...a
-            } = e, o = (0, E.getSignalStrength)(), l = {
+            } = e, o = (0, h.getSignalStrength)(), l = {
                 mobile_network_type: m.default.getType(),
                 ...a,
                 ...null != o && {
                     signal_strength: o
                 }
             };
-            if (h.default.get("send_fail_100")) {
+            if (E.default.get("send_fail_100")) {
                 this.logger.log("Skipping message sened because send_fail_100 is enabled"), t(null, {
                     ok: !1,
                     hasErr: !1,
@@ -179,7 +179,7 @@ function(e, t, n) {
                     maxSizeCallback: f,
                     analytics_location: _
                 } = e,
-                h = {
+                E = {
                     type: c.InteractionTypes.APPLICATION_COMMAND,
                     application_id: i,
                     guild_id: s,
@@ -190,20 +190,20 @@ function(e, t, n) {
                     analytics_location: _
                 };
             if (null != u) {
-                h.data.attachments = [], n = [];
-                h.data.attachments = u.map((e, t) => (l(e.status === I.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, T.getAttachmentPayload)(e, t)))
+                E.data.attachments = [], n = [];
+                E.data.attachments = u.map((e, t) => (l(e.status === I.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, T.getAttachmentPayload)(e, t)))
             }
-            let E = new AbortController;
+            let h = new AbortController;
             d.default.post({
                 url: C.Endpoints.INTERACTIONS,
                 fields: [{
                     name: "payload_json",
-                    value: JSON.stringify(h)
+                    value: JSON.stringify(E)
                 }],
                 attachments: n,
-                signal: E.signal,
+                signal: h.signal,
                 onRequestCreated: e => {
-                    this.requests.set(o, E), e.on("progress", e => {
+                    this.requests.set(o, h), e.on("progress", e => {
                         let {
                             total: t
                         } = e, n = (0, S.maxFileSize)(s);

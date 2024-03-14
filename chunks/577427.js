@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("299285"),
         f = n("161454"),
         _ = n("860285"),
-        h = n("915639"),
-        E = n("86878"),
+        E = n("915639"),
+        h = n("86878"),
         g = n("546463"),
         m = n("686470"),
         p = n("102985"),
@@ -33,26 +33,26 @@ function(e, t, n) {
         O = n("50885"),
         D = n("602043"),
         P = n("9377"),
-        M = n("49111");
-    let L = l().subtract(1, "week"),
+        L = n("49111");
+    let M = l().subtract(1, "week"),
         b = [],
         U = "",
         w = !1;
 
     function k(e, t) {
-        return e.application.name.localeCompare(t.application.name, h.default.locale, {
+        return e.application.name.localeCompare(t.application.name, E.default.locale, {
             sensitivity: "base"
         })
     }
     let V = {
-            [M.GameTableListKeys.NAME]: k,
-            [M.GameTableListKeys.PLATFORM]: (e, t, n) => {
+            [L.GameTableListKeys.NAME]: k,
+            [L.GameTableListKeys.PLATFORM]: (e, t, n) => {
                 let i = e.libraryApplication.getDistributor(),
                     s = t.libraryApplication.getDistributor();
-                return i === s ? (n === M.TableSortDirections.DESCENDING ? -1 : 1) * k(e, t) : null == i ? 1 : null == s ? -1 : i.localeCompare(s)
+                return i === s ? (n === L.TableSortDirections.DESCENDING ? -1 : 1) * k(e, t) : null == i ? 1 : null == s ? -1 : i.localeCompare(s)
             },
-            [M.GameTableListKeys.LAST_PLAYED]: (e, t) => e.isNew && !t.isNew ? -1 : !e.isNew && t.isNew ? 1 : e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1,
-            [M.GameTableListKeys.ACTIONS]: null
+            [L.GameTableListKeys.LAST_PLAYED]: (e, t) => e.isNew && !t.isNew ? -1 : !e.isNew && t.isNew ? 1 : e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1,
+            [L.GameTableListKeys.ACTIONS]: null
         },
         G = (0, A.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.shouldShowInLibrary)),
         F = (0, A.cachedFunction)(e => e.filter(e => null != e.libraryApplication && T.default.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
@@ -62,7 +62,7 @@ function(e, t, n) {
             if (null == s) return e;
             let r = [...e],
                 a = r.sort(s);
-            return n === M.TableSortDirections.DESCENDING ? a.reverse() : a
+            return n === L.TableSortDirections.DESCENDING ? a.reverse() : a
         }),
         H = (0, A.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.libraryApplication.isHidden()));
 
@@ -95,14 +95,14 @@ function(e, t, n) {
                     libraryApplication: e,
                     lastPlayed: u,
                     supportsCloudSync: null != e && T.default.supportsCloudSync(e.id, e.branchId),
-                    isNew: (r = e, a = u, null != r && l(r.createdAt).isAfter(L) && 0 === a),
+                    isNew: (r = e, a = u, null != r && l(r.createdAt).isAfter(M) && 0 === a),
                     isLaunching: _.default.launchingGames.has(e.id),
                     isRunning: i.has(e.id),
                     isLaunchable: (0, D.isLaunchable)({
                         LibraryApplicationStore: m.default,
                         LaunchableGameStore: _.default,
                         DispatchApplicationStore: T.default,
-                        ConnectedAppsStore: E.default,
+                        ConnectedAppsStore: h.default,
                         applicationId: e.id,
                         branchId: e.branchId
                     }),
@@ -127,7 +127,7 @@ function(e, t, n) {
                         LibraryApplicationStore: m.default,
                         LaunchableGameStore: _.default,
                         DispatchApplicationStore: T.default,
-                        ConnectedAppsStore: E.default,
+                        ConnectedAppsStore: h.default,
                         applicationId: e,
                         branchId: null
                     }),
@@ -142,7 +142,7 @@ function(e, t, n) {
     }
     class W extends u.default.Store {
         initialize() {
-            this.syncWith([c.default, g.default, _.default, f.default, T.default, I.default, m.default, S.default, p.default, E.default], j, 200), this.syncWith([v.default, h.default], () => !0)
+            this.syncWith([c.default, g.default, _.default, f.default, T.default, I.default, m.default, S.default, p.default, h.default], j, 200), this.syncWith([v.default, E.default], () => !0)
         }
         get applicationFilterQuery() {
             return U
@@ -160,7 +160,7 @@ function(e, t, n) {
             return x(this.libraryApplicationViewItems, U)
         }
         get sortedFilteredLibraryApplicationViewItems() {
-            return B(this.filteredLibraryApplicationViewItems, v.default.sortKey, v.default.sortDirection, h.default.locale)
+            return B(this.filteredLibraryApplicationViewItems, v.default.sortKey, v.default.sortDirection, E.default.locale)
         }
         get hiddenLibraryApplicationViewItems() {
             return H(b)

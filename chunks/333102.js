@@ -29,8 +29,8 @@ function(e, t, n) {
                 children: c,
                 className: f,
                 onResize: _,
-                contentClassName: h,
-                onScroll: E,
+                contentClassName: E,
+                onScroll: h,
                 dir: g = "ltr",
                 fade: m = !1,
                 customTheme: p = !1,
@@ -49,8 +49,8 @@ function(e, t, n) {
             let O = s.useCallback(e => {
                 null == T.current ? A(!0) : clearTimeout(T.current), T.current = setTimeout(() => {
                     T.current = null, A(!1)
-                }, 200), null != E && E(e)
-            }, [E]);
+                }, 200), null != h && h(e)
+            }, [h]);
             return s.useEffect(() => () => clearTimeout(T.current), []), (0, l.useResizeObserverSubscription)({
                 ref: y,
                 key: "container",
@@ -80,7 +80,7 @@ function(e, t, n) {
                     containerRef: I,
                     children: (0, i.jsxs)("div", {
                         ref: I,
-                        className: a(h, u.content),
+                        className: a(E, u.content),
                         children: [c, C && (0, i.jsx)("div", {
                             className: u.pointerCover
                         })]

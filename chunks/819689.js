@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("802493"),
         f = n("595525"),
         _ = n("219788"),
-        h = n("139514"),
-        E = n("312016"),
+        E = n("139514"),
+        h = n("312016"),
         g = n("605250"),
         m = n("447435"),
         p = n("619443"),
@@ -33,8 +33,8 @@ function(e, t, n) {
         O = n("815297"),
         D = n("168730"),
         P = n("129953"),
-        M = n("28007"),
-        L = n("880731"),
+        L = n("28007"),
+        M = n("880731"),
         b = n("562228"),
         U = n("793277"),
         w = n("815496");
@@ -72,7 +72,7 @@ function(e, t, n) {
     let ec = new g.default("MessageActionCreators"),
         ef = new g.default("MessageQueue"),
         e_ = !1;
-    class eh {
+    class eE {
         markComplete() {
             this.completed = !0
         }
@@ -81,7 +81,7 @@ function(e, t, n) {
         }
     }
 
-    function eE(e) {
+    function eh(e) {
         let {
             inviteKey: t,
             channelId: n,
@@ -327,7 +327,7 @@ function(e, t, n) {
                     isPreload: d,
                     skipLocalFetch: c,
                     truncate: f
-                } = e, _ = Y.default.getChannel(t), h = p.default.isConnectedOrOverlay(), E = Date.now();
+                } = e, _ = Y.default.getChannel(t), E = p.default.isConnectedOrOverlay(), h = Date.now();
                 if (null != _ && _.type === eo.ChannelTypes.GUILD_STORE) return !1;
                 if (t === el.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return;
                 if (ec.log("Fetching messages for ".concat(t, " between ").concat(n, " and ").concat(i, ". jump=").concat(JSON.stringify(a))), em._tryFetchMessagesCached({
@@ -350,7 +350,7 @@ function(e, t, n) {
                     type: "LOAD_MESSAGES"
                 });
                 let v = null == g ? void 0 : g.messageId,
-                    T = new eh;
+                    T = new eE;
                 return !c && this.fetchLocalMessages(t, n, i, s, T), r.default.get({
                     url: eo.Endpoints.MESSAGES(t),
                     query: {
@@ -393,7 +393,7 @@ function(e, t, n) {
                         hasMoreAfter: _,
                         limit: s,
                         jump: a,
-                        isStale: !h || p.default.lastTimeConnectedChanged() >= E,
+                        isStale: !E || p.default.lastTimeConnectedChanged() >= h,
                         truncate: f
                     })
                 }), !0), () => (ec.log("Failed to fetch messages for ".concat(t)), o.default.dispatch({
@@ -654,7 +654,7 @@ function(e, t, n) {
                         nonce: x,
                         poll: (0, b.createPollServerDataFromCreateRequest)(A)
                     });
-                    (0, M.updateComboOnMessageSend)(e, t.id), null != S && (t.sticker_items = S.map(e => V.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
+                    (0, L.updateComboOnMessageSend)(e, t.id), null != S && (t.sticker_items = S.map(e => V.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
                 }
                 if (!e_ && null != c && c.length > 0) {
                     let t, n;
@@ -689,7 +689,7 @@ function(e, t, n) {
                         null != n.party && null != n.party.id && (t.party_id = n.party.id), B.message.application_id = n.application_id, B.message.activity = t
                     }
                 }
-                return null != A && (B.message.poll = A), null != S && (B.message.sticker_ids = S), L.default.isEnabled() && (B.message.has_poggermode_enabled = !0), new Promise((t, i) => {
+                return null != A && (B.message.poll = A), null != S && (B.message.sticker_ids = S), M.default.isEnabled() && (B.message.has_poggermode_enabled = !0), new Promise((t, i) => {
                     let r = Date.now(),
                         a = u.default.length,
                         c = Math.floor(1e4 * Math.random());
@@ -726,12 +726,12 @@ function(e, t, n) {
                                 suggested: a = null,
                                 overrideProperties: o = {}
                             } = e;
-                            (0, E.default)(t).forEach(e => {
+                            (0, h.default)(t).forEach(e => {
                                 let {
                                     type: t,
                                     code: l
                                 } = e;
-                                if (t === h.CodedLinkType.INVITE) eE({
+                                if (t === E.CodedLinkType.INVITE) eh({
                                     inviteKey: l,
                                     channelId: n,
                                     messageId: i,
@@ -739,7 +739,7 @@ function(e, t, n) {
                                     suggested: a,
                                     overrideProperties: o
                                 });
-                                else if (t === h.CodedLinkType.TEMPLATE) {
+                                else if (t === E.CodedLinkType.TEMPLATE) {
                                     let e = T.default.getGuildTemplate(l);
                                     if (null == e || e.state === eu.GuildTemplateStates.RESOLVING) return;
                                     d.default.trackWithMetadata(eo.AnalyticEvents.GUILD_TEMPLATE_LINK_SENT, {
@@ -748,21 +748,21 @@ function(e, t, n) {
                                         guild_template_description: e.description,
                                         guild_template_guild_id: e.sourceGuildId
                                     })
-                                } else if (t === h.CodedLinkType.BUILD_OVERRIDE);
-                                else if (t === h.CodedLinkType.MANUAL_BUILD_OVERRIDE);
-                                else if (t === h.CodedLinkType.EVENT);
-                                else if (t === h.CodedLinkType.CHANNEL_LINK);
-                                else if (t === h.CodedLinkType.APP_DIRECTORY_PROFILE) $.default.track(eo.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
+                                } else if (t === E.CodedLinkType.BUILD_OVERRIDE);
+                                else if (t === E.CodedLinkType.MANUAL_BUILD_OVERRIDE);
+                                else if (t === E.CodedLinkType.EVENT);
+                                else if (t === E.CodedLinkType.CHANNEL_LINK);
+                                else if (t === E.CodedLinkType.APP_DIRECTORY_PROFILE) $.default.track(eo.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
                                     application_id: l,
                                     device_platform: s.isMobile ? "mobile_web" : "desktop_web",
                                     guild_id: Q.default.getGuildId(),
                                     channel_id: X.default.getChannelId()
                                 });
-                                else if (t === h.CodedLinkType.ACTIVITY_BOOKMARK);
-                                else if (t === h.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
-                                else if (t === h.CodedLinkType.GUILD_PRODUCT);
-                                else if (t === h.CodedLinkType.SERVER_SHOP);
-                                else if (t === h.CodedLinkType.QUESTS_EMBED) {
+                                else if (t === E.CodedLinkType.ACTIVITY_BOOKMARK);
+                                else if (t === E.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
+                                else if (t === E.CodedLinkType.GUILD_PRODUCT);
+                                else if (t === E.CodedLinkType.SERVER_SHOP);
+                                else if (t === E.CodedLinkType.QUESTS_EMBED) {
                                     var u;
                                     (0, w.trackQuestEvent)(l, eo.AnalyticEvents.QUEST_LINK_SHARED, {
                                         guild_id: Q.default.getGuildId(),
@@ -967,7 +967,7 @@ function(e, t, n) {
                     confirmText: ed.default.Messages.OKAY
                 })
             }),
-            trackInvite: eE
+            trackInvite: eh
         };
     var ep = em
 }

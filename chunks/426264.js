@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MenuItem: function() {
-            return E
+            return h
         }
     });
     var i = n("37983"),
@@ -16,14 +16,14 @@ function(e, t, n) {
         c = n("886074"),
         f = n("772280"),
         _ = n("389802"),
-        h = n("639826");
+        E = n("639826");
 
-    function E(e) {
+    function h(e) {
         let {
             color: t = "default",
             label: n,
             icon: r,
-            showIconFirst: E = !1,
+            showIconFirst: h = !1,
             imageUrl: g,
             hint: m,
             subtext: p,
@@ -39,8 +39,8 @@ function(e, t, n) {
             subMenuIconClassName: O,
             dontCloseOnActionIfHoldingShiftKey: D,
             dontCloseOnAction: P,
-            iconProps: M,
-            sparkle: L
+            iconProps: L,
+            sparkle: M
         } = e, b = s.useContext(u.OnMenuSelectContext), U = s.useRef(null), w = s.useCallback(e => {
             if (null == C) return !1;
             !(e.shiftKey && D) && !P && A(), e.persist(), null == b || b(), requestAnimationFrame(() => C(e))
@@ -49,51 +49,51 @@ function(e, t, n) {
             T && ((0, d.ensureItemVisible)(U), null == y || y())
         }, [T, y]), (0, i.jsxs)(o.Clickable, {
             innerRef: U,
-            className: a(h.item, h.labelContainer, _.MENU_ITEM_COLORS[t], N, {
-                [h.disabled]: v,
-                [h.focused]: T,
+            className: a(E.item, E.labelContainer, _.MENU_ITEM_COLORS[t], N, {
+                [E.disabled]: v,
+                [E.focused]: T,
                 [null != R ? R : ""]: T
             }),
             onClick: v ? void 0 : w,
             "aria-disabled": v,
             ...I,
             "data-menu-item": "true",
-            children: [E && null != r && (0, i.jsx)("div", {
-                className: h.iconContainerLeft,
+            children: [h && null != r && (0, i.jsx)("div", {
+                className: E.iconContainerLeft,
                 children: (0, i.jsx)(r, {
-                    ...M,
-                    className: a(h.icon, null == M ? void 0 : M.className),
+                    ...L,
+                    className: a(E.icon, null == L ? void 0 : L.className),
                     isFocused: T
                 })
             }), (0, i.jsxs)("div", {
-                className: h.label,
+                className: E.label,
                 children: [(0, l.renderSubnode)(n, e), null != p && (0, i.jsx)("div", {
-                    className: h.subtext,
+                    className: E.subtext,
                     children: p
                 })]
             }), null != m && (0, i.jsx)("div", {
-                className: h.hintContainer,
+                className: E.hintContainer,
                 children: (0, l.renderSubnode)(m, e)
-            }), !E && null != r && (0, i.jsx)("div", {
-                className: h.iconContainer,
+            }), !h && null != r && (0, i.jsx)("div", {
+                className: E.iconContainer,
                 children: (0, i.jsx)(r, {
-                    ...M,
-                    className: a(h.icon, null == M ? void 0 : M.className),
+                    ...L,
+                    className: a(E.icon, null == L ? void 0 : L.className),
                     isFocused: T
                 })
             }), null != g && (0, i.jsx)("div", {
-                className: h.imageContainer,
+                className: E.imageContainer,
                 children: (0, i.jsx)("img", {
-                    className: h.image,
+                    className: E.image,
                     src: (0, l.renderSubnode)(g, e),
                     alt: ""
                 })
             }), S && (0, i.jsxs)("div", {
-                className: h.iconContainer,
+                className: E.iconContainer,
                 children: [(0, i.jsx)(f.default, {
-                    className: a(h.caret, O)
-                }), L && (0, i.jsx)(c.default, {
-                    className: h.sparkles
+                    className: a(E.caret, O)
+                }), M && (0, i.jsx)(c.default, {
+                    className: E.sparkles
                 })]
             })]
         })

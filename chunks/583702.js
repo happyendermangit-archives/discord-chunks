@@ -18,8 +18,8 @@ function(e, t, n) {
         c = n("386045"),
         f = n("808122"),
         _ = n("845579"),
-        h = n("271938"),
-        E = n("42203"),
+        E = n("271938"),
+        h = n("42203"),
         g = n("42887"),
         m = n("985365"),
         p = n("945956"),
@@ -55,7 +55,7 @@ function(e, t, n) {
             let {
                 ownerId: e
             } = this._streamContext;
-            return h.default.getId() === e
+            return E.default.getId() === e
         }
         destroy(e) {
             this._videoStreamStats.stop(), this._trackVideoEndStats(e), this._updateVideoStreamId.cancel(), this._updateVideoStreamId(null, null), this._updateVideoStreamId.flush(), super.destroy()
@@ -106,8 +106,8 @@ function(e, t, n) {
                     })), e === N.RTCConnectionStates.RTC_CONNECTED) {
                     var i;
                     null === (i = this._connection) || void 0 === i || i.on(a.BaseConnectionEvent.ScreenshareFinish, (e, t, n, i, s, r, a, o, l, u, d, c, f, _) => {
-                        let h = this.getMediaSessionId(),
-                            E = this.getRTCConnectionId(),
+                        let E = this.getMediaSessionId(),
+                            h = this.getRTCConnectionId(),
                             g = this.getGoLiveSource();
                         (0, v.getSystemAnalyticsInfo)().then(m => {
                             let p = null;
@@ -141,8 +141,8 @@ function(e, t, n) {
                                 go_live_camera_frames: f,
                                 total_frames: S,
                                 desktop_capturer_type: l,
-                                media_session_id: h,
-                                rtc_connection_id: E,
+                                media_session_id: E,
+                                rtc_connection_id: h,
                                 context: R.MediaEngineContextTypes.STREAM,
                                 screens: u,
                                 windows: d,
@@ -211,7 +211,7 @@ function(e, t, n) {
             })
         }
         _trackVideoEndStats(e) {
-            let t = E.default.getChannel(this.channelId),
+            let t = h.default.getChannel(this.channelId),
                 n = null != t ? t.type : null,
                 {
                     ownerId: i
@@ -227,7 +227,7 @@ function(e, t, n) {
                     clips_enabled: u.clipsEnabled && l,
                     clips_buffer_length: u.clipsLength
                 } : {},
-                h = this.isOwner ? {
+                E = this.isOwner ? {
                     bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment()
                 } : {};
             T.default.track(N.AnalyticEvents.VIDEO_STREAM_ENDED, {
@@ -238,7 +238,7 @@ function(e, t, n) {
                 ...this._soundshareStats.getStats(),
                 ...this._getStreamAnalyticsProperties(),
                 ..._,
-                ...h,
+                ...E,
                 channel_type: n,
                 reason: e,
                 max_viewers: this.analyticsContext.maxViewers,
@@ -267,7 +267,7 @@ function(e, t, n) {
                     channelId: c
                 } = u;
             super({
-                userId: h.default.getId(),
+                userId: E.default.getId(),
                 sessionId: e,
                 guildId: d,
                 channelId: c,

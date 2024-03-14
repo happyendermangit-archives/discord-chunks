@@ -23,10 +23,10 @@ function(e, t, n) {
             return P
         },
         computeSummarizedVoiceUsers: function() {
-            return M
+            return L
         },
         channelTypeString: function() {
-            return L
+            return M
         },
         getMentionIconType: function() {
             return b
@@ -52,8 +52,8 @@ function(e, t, n) {
         c = n("923959"),
         f = n("957255"),
         _ = n("18494"),
-        h = n("316133"),
-        E = n("991170"),
+        E = n("316133"),
+        h = n("991170"),
         g = n("299039"),
         m = n("49111"),
         p = n("646718"),
@@ -69,11 +69,11 @@ function(e, t, n) {
     }
 
     function A(e, t, n) {
-        let s = E.default.NONE;
+        let s = h.default.NONE;
         return ((0, u.isGuildSelectableChannelType)(t) || t === T) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL)), (C(t, v) || C(t, I)) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL), s = i.default.add(s, m.Permissions.CONNECT)), {
             id: e,
             type: n,
-            deny: E.default.NONE,
+            deny: h.default.NONE,
             allow: s
         }
     }
@@ -84,10 +84,10 @@ function(e, t, n) {
         if (n.length > 0 || r) {
             var o, l, d;
             let n;
-            a.push((o = e, l = t, d = s.PermissionOverwriteType.ROLE, n = E.default.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === T) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL)), C(l, v) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL), n = i.default.add(n, m.Permissions.CONNECT)), {
+            a.push((o = e, l = t, d = s.PermissionOverwriteType.ROLE, n = h.default.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === T) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL)), C(l, v) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL), n = i.default.add(n, m.Permissions.CONNECT)), {
                 id: o,
                 type: d,
-                allow: E.default.NONE,
+                allow: h.default.NONE,
                 deny: n
             }))
         }
@@ -109,7 +109,7 @@ function(e, t, n) {
             id: e,
             type: s.PermissionOverwriteType.ROLE,
             deny: m.Permissions.SEND_MESSAGES,
-            allow: E.default.NONE
+            allow: h.default.NONE
         }]
     }
 
@@ -119,20 +119,20 @@ function(e, t, n) {
             o = n.getGuild(r),
             l = null !== (i = null == o ? void 0 : o.maxVideoChannelUsers) && void 0 !== i ? i : -1,
             u = null !== (s = null == o ? void 0 : o.maxStageVideoChannelUsers) && void 0 !== s ? s : -1,
-            d = h.default.countVoiceStatesForChannel(e.id),
-            c = h.default.getVoiceStatesForChannel(e),
+            d = E.default.countVoiceStatesForChannel(e.id),
+            c = E.default.getVoiceStatesForChannel(e),
             _ = f.default.can(m.Permissions.MOVE_MEMBERS, e) && f.default.can(m.Permissions.CONNECT, e),
-            E = !1;
-        E = e.type === I ? null != r && (t.hasVideo(e.id) || (0, a.hasStream)(c)) && u > 0 && d >= u : null != r && t.hasVideo(e.id) && l > 0 && d >= l + (_ ? 1 : 0);
+            h = !1;
+        h = e.type === I ? null != r && (t.hasVideo(e.id) || (0, a.hasStream)(c)) && u > 0 && d >= u : null != r && t.hasVideo(e.id) && l > 0 && d >= l + (_ ? 1 : 0);
         let g = e.userLimit > 0 && d >= e.userLimit;
-        return E || g && !_
+        return h || g && !_
     }
 
     function P(e, t) {
         return t.isGuildStageVoice() ? m.BITRATE_DEFAULT : null == e ? m.BITRATE_MAX : Math.max(e.hasFeature(m.GuildFeatures.VIP_REGIONS) ? p.BoostedGuildFeatures[m.BoostedGuildTiers.TIER_3].limits.bitrate : m.BITRATE_MAX, p.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
     }
 
-    function M(e) {
+    function L(e) {
         let {
             channels: t,
             selectedChannelId: n,
@@ -161,7 +161,7 @@ function(e, t, n) {
         return r.map(e => e.user)
     }
 
-    function L(e) {
+    function M(e) {
         let {
             type: t
         } = e;

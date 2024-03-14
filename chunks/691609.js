@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("907002"),
         f = n("748820"),
         _ = n("733724"),
-        h = n("862337"),
-        E = n("266491"),
+        E = n("862337"),
+        h = n("266491"),
         g = n("328139");
     let m = {
             friction: 13,
@@ -223,7 +223,7 @@ function(e, t, n) {
                 highlight: d
             } = this.props, {
                 maskId: f,
-                lowerBadgeMask: h,
+                lowerBadgeMask: E,
                 upperBadgeMask: m,
                 focused: p,
                 hasRenderedBadge: S,
@@ -295,7 +295,7 @@ function(e, t, n) {
                             height: 24,
                             rx: 12,
                             ry: 12,
-                            transform: this.getBadgePositionInterpolation(h)
+                            transform: this.getBadgePositionInterpolation(E)
                         }) : null]
                     }), (0, s.jsxs)("mask", {
                         id: f,
@@ -367,7 +367,7 @@ function(e, t, n) {
                         height: 48,
                         children: e
                     }, "foreign-object")]
-                }, "svg"), (0, s.jsxs)(E.default, {
+                }, "svg"), (0, s.jsxs)(h.default, {
                     component: r.Fragment,
                     children: [null != i ? (0, s.jsx)(C, {
                         className: g.lowerBadge,
@@ -382,7 +382,7 @@ function(e, t, n) {
             }, "wrapper")
         }
         constructor(...e) {
-            super(...e), this.timeout = new h.Timeout, this.state = {
+            super(...e), this.timeout = new E.Timeout, this.state = {
                 renderComplex: !1,
                 hasRenderedBadge: !1,
                 maskId: (0, f.v4)(),

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Switch: function() {
-            return E
+            return h
         }
     }), n("222007");
     var i = n("37983"),
@@ -19,7 +19,7 @@ function(e, t, n) {
             mass: 1,
             tension: 250
         },
-        h = {
+        E = {
             X: {
                 TOP: "M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z",
                 BOTTOM: "M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z"
@@ -33,12 +33,12 @@ function(e, t, n) {
                 BOTTOM: "M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z"
             }
         },
-        E = function(e) {
+        h = function(e) {
             let {
                 id: t,
                 onChange: n,
                 checked: r,
-                disabled: E,
+                disabled: h,
                 className: g,
                 focusProps: m,
                 innerRef: p
@@ -49,7 +49,7 @@ function(e, t, n) {
                 opacity: N
             } = (0, o.useSpring)({
                 config: _,
-                opacity: E ? .3 : 1,
+                opacity: h ? .3 : 1,
                 state: T ? r ? .7 : .3 : r ? 1 : 0
             });
             return (0, i.jsx)(d.FocusRing, {
@@ -59,9 +59,9 @@ function(e, t, n) {
                 children: (0, i.jsxs)(o.animated.div, {
                     className: a(f.container, g, {
                         [f.checked]: r,
-                        [f.disabled]: E
+                        [f.disabled]: h
                     }),
-                    onMouseDown: () => !E && I(!0),
+                    onMouseDown: () => !h && I(!0),
                     onMouseUp: () => I(!1),
                     onMouseLeave: () => I(!1),
                     style: {
@@ -104,8 +104,8 @@ function(e, t, n) {
                             let r = e.to({
                                     output: [t, n]
                                 }),
-                                a = s ? [h.X.TOP, h.X.TOP, h.CHECK.TOP, h.CHECK.TOP] : [h.X.TOP, h.BAR.TOP, h.BAR.TOP, h.CHECK.TOP],
-                                l = s ? [h.X.BOTTOM, h.X.BOTTOM, h.CHECK.BOTTOM, h.CHECK.BOTTOM] : [h.X.BOTTOM, h.BAR.BOTTOM, h.BAR.BOTTOM, h.CHECK.BOTTOM];
+                                a = s ? [E.X.TOP, E.X.TOP, E.CHECK.TOP, E.CHECK.TOP] : [E.X.TOP, E.BAR.TOP, E.BAR.TOP, E.CHECK.TOP],
+                                l = s ? [E.X.BOTTOM, E.X.BOTTOM, E.CHECK.BOTTOM, E.CHECK.BOTTOM] : [E.X.BOTTOM, E.BAR.BOTTOM, E.BAR.BOTTOM, E.CHECK.BOTTOM];
                             return (0, i.jsxs)("svg", {
                                 viewBox: "0 0 20 20",
                                 fill: "none",
@@ -131,19 +131,19 @@ function(e, t, n) {
                             v.current = e, null != p && (p.current = e)
                         },
                         className: f.input,
-                        tabIndex: E ? -1 : 0,
+                        tabIndex: h ? -1 : 0,
                         onKeyDown: function(e) {
-                            if (!E && !e.repeat)(" " === e.key || "Enter" === e.key) && I(!0)
+                            if (!h && !e.repeat)(" " === e.key || "Enter" === e.key) && I(!0)
                         },
                         onKeyUp: function(e) {
                             var t;
-                            if (!E && !!T && !e.repeat) I(!1), "Enter" === e.key && (null === (t = v.current) || void 0 === t || t.click())
+                            if (!h && !!T && !e.repeat) I(!1), "Enter" === e.key && (null === (t = v.current) || void 0 === t || t.click())
                         },
                         onChange: function(e) {
                             I(!1), null == n || n(e.currentTarget.checked, e)
                         },
                         checked: r,
-                        disabled: E
+                        disabled: h
                     })]
                 })
             })

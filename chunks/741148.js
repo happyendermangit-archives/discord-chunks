@@ -20,7 +20,7 @@ function(e, t, n) {
             return _
         },
         unload: function() {
-            return h
+            return E
         }
     });
     var i = n("917351"),
@@ -89,7 +89,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e) {
+    function E(e) {
         s.default.dispatch({
             type: "WINDOW_UNLOAD",
             windowId: (0, a.getWindowId)(e)

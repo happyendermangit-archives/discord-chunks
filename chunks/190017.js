@@ -52,8 +52,8 @@ function(e, t, n) {
         c = n("645672"),
         f = n("269180"),
         _ = n("152723"),
-        h = n("71313"),
-        E = n("49111"),
+        E = n("71313"),
+        h = n("49111"),
         g = n("782340");
 
     function m(e, t) {
@@ -103,7 +103,7 @@ function(e, t, n) {
             applicationId: t.id,
             branchId: n,
             installationPath: a
-        }), d.default.track(E.AnalyticEvents.LIBRARY_INSTALL_INITIATED, {
+        }), d.default.track(h.AnalyticEvents.LIBRARY_INSTALL_INITIATED, {
             application_id: t.id,
             application_name: t.name,
             sku_id: t.primarySkuId,
@@ -112,13 +112,13 @@ function(e, t, n) {
     }
 
     function v(e, t, n) {
-        (0, h.fetchLiveBuild)(e.id, t).then(() => {
+        (0, E.fetchLiveBuild)(e.id, t).then(() => {
             s.default.dispatch({
                 type: "DISPATCH_APPLICATION_REPAIR",
                 applicationId: e.id,
                 branchId: t
             })
-        }), d.default.track(E.AnalyticEvents.LIBRARY_REPAIR_INITIATED, {
+        }), d.default.track(h.AnalyticEvents.LIBRARY_REPAIR_INITIATED, {
             application_id: e.id,
             application_name: e.name,
             sku_id: e.primarySkuId,
@@ -151,7 +151,7 @@ function(e, t, n) {
 
     function I(e, t, n) {
         let i = r.default.getApplication(e);
-        null != i && (f.default.removeShortcuts(i.name), d.default.track(E.AnalyticEvents.LIBRARY_UNINSTALL_INITIATED, {
+        null != i && (f.default.removeShortcuts(i.name), d.default.track(h.AnalyticEvents.LIBRARY_UNINSTALL_INITIATED, {
             application_id: i.id,
             application_name: i.name,
             sku_id: i.primarySkuId,
@@ -203,7 +203,7 @@ function(e, t, n) {
     function D(e, t) {
         let s = r.default.getApplication(e);
         i.default.post({
-            url: E.Endpoints.LIBRARY_APPLICATION_INSTALLED(e, e),
+            url: h.Endpoints.LIBRARY_APPLICATION_INSTALLED(e, e),
             oldFormErrors: !0
         }), null != s && (f.default.createShortcuts(l.InstallShortcutDesktop.getSetting(), l.InstallShortcutStartMenu.getSetting(), s.name, s.id, t.installPath), n.el("193990").then(n.bind(n, "193990")).then(e => {
             let {
@@ -214,7 +214,7 @@ function(e, t, n) {
             }), {
                 notif_type: "Game Library Game Installed"
             }, {
-                onClick: () => (0, o.transitionTo)(E.Routes.APPLICATION_LIBRARY),
+                onClick: () => (0, o.transitionTo)(h.Routes.APPLICATION_LIBRARY),
                 omitViewTracking: !0
             })
         }))

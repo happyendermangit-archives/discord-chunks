@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("755624"),
         f = n("233069"),
         _ = n("271938"),
-        h = n("42203"),
-        E = n("26989"),
+        E = n("42203"),
+        h = n("26989"),
         g = n("305961"),
         m = n("697218"),
         p = n("299039"),
@@ -84,10 +84,10 @@ function(e, t, n) {
                 let t = a[n.roles[e]];
                 void 0 !== t && (f = r.default.add(f, t.permissions))
             }
-        return f = r.default.has(f, S.Permissions.ADMINISTRATOR) ? T : D(i.id, n, f, s), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = r.default.filter(f, u)), E.default.isCurrentUserGuest(i.id) && (f = r.default.filter(f, A)), O(f, i, t, o)
+        return f = r.default.has(f, S.Permissions.ADMINISTRATOR) ? T : D(i.id, n, f, s), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = r.default.filter(f, u)), h.default.isCurrentUserGuest(i.id) && (f = r.default.filter(f, A)), O(f, i, t, o)
     }
 
-    function M(e) {
+    function L(e) {
         var t, n, i;
         let s, {
             user: r,
@@ -103,10 +103,10 @@ function(e, t, n) {
         if (a instanceof f.ChannelRecordBase) {
             if (a.isScheduledForDeletion()) return v;
             if (f.THREAD_CHANNEL_TYPES.has(a.type)) {
-                let e = h.default.getChannel(a.parent_id);
+                let e = E.default.getChannel(a.parent_id);
                 if (null == e || e.isScheduledForDeletion()) return v;
                 let t = p === (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && c.default.hasJoined(a.id);
-                return L(a, M({
+                return M(a, L({
                     user: r,
                     context: e,
                     overwrites: o,
@@ -125,7 +125,7 @@ function(e, t, n) {
         } else o = null != o ? o : {}, s = a;
         if (null == s) return v;
         if (!(p === (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.default.isViewingRoles(s.id)) && s.isOwner(p)) return O(T, s, p, d);
-        let I = E.default.getMember(s.id, p);
+        let I = h.default.getMember(s.id, p);
         return P({
             userId: p,
             member: I,
@@ -138,7 +138,7 @@ function(e, t, n) {
         })
     }
 
-    function L(e, t, n) {
+    function M(e, t, n) {
         return e.type !== S.ChannelTypes.PRIVATE_THREAD || n || r.default.has(t, S.Permissions.MANAGE_THREADS) ? r.default.has(t, S.Permissions.SEND_MESSAGES_IN_THREADS) ? e.isLockedThread() && !r.default.has(t, S.Permissions.MANAGE_THREADS) ? r.default.remove(t, S.Permissions.SEND_MESSAGES) : r.default.combine(t, S.Permissions.SEND_MESSAGES) : r.default.remove(t, S.Permissions.SEND_MESSAGES) : v
     }
 
@@ -160,7 +160,7 @@ function(e, t, n) {
             roles: a,
             excludeGuildPermissions: o
         } = e;
-        return r.default.has(M({
+        return r.default.has(L({
             user: n,
             context: i,
             overwrites: s,
@@ -191,8 +191,8 @@ function(e, t, n) {
                 var d;
                 if (s.isScheduledForDeletion()) return v;
                 if (f.THREAD_CHANNEL_TYPES.has(s.type)) {
-                    let t = h.default.getChannel(s.parent_id);
-                    return null == t ? v : L(s, e({
+                    let t = E.default.getChannel(s.parent_id);
+                    return null == t ? v : M(s, e({
                         forceRoles: i,
                         context: t,
                         overwrites: r,
@@ -234,8 +234,8 @@ function(e, t, n) {
                 lurkerPermissionsMask: u
             })
         },
-        computePermissions: M,
-        applyThreadPermissions: L,
+        computePermissions: L,
+        applyThreadPermissions: M,
         getGuildVisualOwnerId: function(e) {
             var t;
             let n = s.some(g.default.getRoles(e.id), e => e.hoist && r.default.has(e.permissions, S.Permissions.ADMINISTRATOR));
@@ -248,7 +248,7 @@ function(e, t, n) {
             return r.indexOf(n.id) > (null != i ? r.indexOf(i.id) : -1)
         },
         getHighestRole: function(e, t) {
-            let n = E.default.getMember(e.id, t);
+            let n = h.default.getMember(e.id, t);
             if (null != n) return s(g.default.getRoles(e.id)).filter(e => -1 !== n.roles.indexOf(e.id)).sortBy(e => -e.position).first()
         },
         getHighestHoistedRole: function(e, t) {
@@ -259,7 +259,7 @@ function(e, t, n) {
             let n;
             let i = {};
             if (t instanceof f.ChannelRecordBase) {
-                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = h.default.getChannel(t.parent_id))) return !1;
+                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = E.default.getChannel(t.parent_id))) return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
                 n = null != e ? g.default.getGuild(e) : null
@@ -275,7 +275,7 @@ function(e, t, n) {
             let n;
             let i = {};
             if (t instanceof f.ChannelRecordBase) {
-                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = h.default.getChannel(t.parent_id))) return !1;
+                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = E.default.getChannel(t.parent_id))) return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
                 n = null != e ? g.default.getGuild(e) : null

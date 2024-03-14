@@ -22,8 +22,8 @@ function(e, t, n) {
         c = n("271938"),
         f = n("982108"),
         _ = n("42203"),
-        h = n("377253"),
-        E = n("18494"),
+        E = n("377253"),
+        h = n("18494"),
         g = n("162771"),
         m = n("299039"),
         p = n("695681"),
@@ -95,7 +95,7 @@ function(e, t, n) {
         }
     };
 
-    function M(e, t) {
+    function L(e, t) {
         let {
             forceBatchScan: n = !1,
             jitter: i = !1
@@ -107,7 +107,7 @@ function(e, t, n) {
                 timeout: setTimeout(() => {
                     ! function(e) {
                         if (D(e, v.TimeoutCancelSource.TIMEOUT)) {
-                            let t = h.default.getMessage(e.channel_id, e.id),
+                            let t = E.default.getMessage(e.channel_id, e.id),
                                 {
                                     attachmentIds: n,
                                     embedIds: i
@@ -133,7 +133,7 @@ function(e, t, n) {
             P(t, s)
         }, Math.random() * y) : P(e, s)
     }
-    let L = e => null == e.content_scan_version || e.content_scan_version < 1,
+    let M = e => null == e.content_scan_version || e.content_scan_version < 1,
         b = e => {
             var t, n, i, s, r, a, o, l;
             let u = null != (l = e).content_scan_version ? l.content_scan_version : null != l.contentScanVersion ? l.contentScanVersion : null;
@@ -158,7 +158,7 @@ function(e, t, n) {
                 numOfEmbedsPendingScan: 0
             });
             let d = e[t.channel_id];
-            return d.numOfAttachments += null !== (a = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0, d.numOfEmbeds += null !== (o = null === (i = t.embeds) || void 0 === i ? void 0 : i.length) && void 0 !== o ? o : 0, d.numOfAttachmentsPendingScan += null !== (l = null === (s = t.attachments) || void 0 === s ? void 0 : s.filter(L).length) && void 0 !== l ? l : 0, d.numOfEmbedsPendingScan += null !== (u = null == t ? void 0 : null === (r = t.embeds) || void 0 === r ? void 0 : r.filter(b).length) && void 0 !== u ? u : 0, {
+            return d.numOfAttachments += null !== (a = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0, d.numOfEmbeds += null !== (o = null === (i = t.embeds) || void 0 === i ? void 0 : i.length) && void 0 !== o ? o : 0, d.numOfAttachmentsPendingScan += null !== (l = null === (s = t.attachments) || void 0 === s ? void 0 : s.filter(M).length) && void 0 !== l ? l : 0, d.numOfEmbedsPendingScan += null !== (u = null == t ? void 0 : null === (r = t.embeds) || void 0 === r ? void 0 : r.filter(b).length) && void 0 !== u ? u : 0, {
                 ...e,
                 [t.channel_id]: d
             }
@@ -178,7 +178,7 @@ function(e, t, n) {
             attachmentIds: [],
             embedIds: []
         };
-        let c = null !== (o = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(L)) && void 0 !== o ? o : [],
+        let c = null !== (o = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(M)) && void 0 !== o ? o : [],
             f = null !== (l = null == e ? void 0 : null === (s = e.embeds) || void 0 === s ? void 0 : s.filter(b)) && void 0 !== l ? l : [];
         return {
             attachmentIds: c.map(e => e.id).filter(Boolean),
@@ -214,7 +214,7 @@ function(e, t, n) {
                 numOfEmbeds: n.numOfEmbeds,
                 numOfEmbedsPendingScan: n.numOfEmbedsPendingScan
             })
-        }), !!(n.length > 0) && (M(n, t), !0)
+        }), !!(n.length > 0) && (L(n, t), !0)
     }
 
     function F(e) {
@@ -224,14 +224,14 @@ function(e, t, n) {
         } = e;
         if (!(0, S.isEligibleForExplicitMediaRedaction)() || null == r.channel_id || null == r.id || (null === (t = r.author) || void 0 === t ? void 0 : t.id) === c.default.getId() || null == r.embeds && null == r.attachments) return !1;
         if (!U(r)) {
-            let e = null !== (s = null !== (i = h.default.getMessage(r.channel_id, r.id)) && void 0 !== i ? i : T.default.getMessage(r.id, r.channel_id)) && void 0 !== s ? s : null === (n = d.default.getMessage(r.channel_id, r.id)) || void 0 === n ? void 0 : n.message;
+            let e = null !== (s = null !== (i = E.default.getMessage(r.channel_id, r.id)) && void 0 !== i ? i : T.default.getMessage(r.id, r.channel_id)) && void 0 !== s ? s : null === (n = d.default.getMessage(r.channel_id, r.id)) || void 0 === n ? void 0 : n.message;
             null != e && !U((0, u.updateMessageRecord)(e, r)) && D(e, v.TimeoutCancelSource.UPDATE)
         }
-        let a = E.default.getChannelId(),
+        let a = h.default.getChannelId(),
             o = f.default.getCurrentSidebarChannelId(a),
             l = r.channel_id === a || r.channel_id === o;
         if (!l) return !1;
-        let _ = h.default.getMessage(r.channel_id, r.id);
+        let _ = E.default.getMessage(r.channel_id, r.id);
         return null != _ && G([_])
     }
 
@@ -244,15 +244,15 @@ function(e, t, n) {
             isPushNotification: a
         } = e;
         if (!(0, S.isEligibleForExplicitMediaRedaction)() || r || a || null == i || (null === (t = s.author) || void 0 === t ? void 0 : t.id) === c.default.getId()) return !1;
-        let o = E.default.getChannelId(),
+        let o = h.default.getChannelId(),
             l = f.default.getCurrentSidebarChannelId(o),
             u = i === o || i === l,
             d = _.default.getChannel(i);
         if (!u) return !1;
-        let h = null === (n = null == d ? void 0 : d.isPrivate()) || void 0 === n || n,
+        let E = null === (n = null == d ? void 0 : d.isPrivate()) || void 0 === n || n,
             g = (null == d ? void 0 : d.memberCount) == null || (null == d ? void 0 : d.memberCount) > 100;
         return G([s], {
-            jitter: h && g
+            jitter: E && g
         })
     }
 
@@ -262,7 +262,7 @@ function(e, t, n) {
             messages: n
         } = e;
         if (!(0, S.isEligibleForExplicitMediaRedaction)() || null == t || null == n) return !1;
-        let i = E.default.getChannelId(),
+        let i = h.default.getChannelId(),
             s = f.default.getCurrentSidebarChannelId(i),
             r = t === i || t === s;
         return !!r && G(n)
@@ -307,7 +307,7 @@ function(e, t, n) {
             channelId: t
         } = e;
         if (null == t || !(0, S.isEligibleForExplicitMediaRedaction)()) return !1;
-        let n = t === E.default.getChannelId();
+        let n = t === h.default.getChannelId();
         return !!n && q(t)
     }
 
@@ -317,7 +317,7 @@ function(e, t, n) {
             local: n
         } = e;
         if (!(0, S.isEligibleForExplicitMediaRedaction)() || !n || t.type !== C.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
-        let i = E.default.getChannelId();
+        let i = h.default.getChannelId();
         return null != i && q(i)
     }
 
@@ -330,7 +330,7 @@ function(e, t, n) {
     }
 
     function q(e) {
-        let t = h.default.getMessages(e);
+        let t = E.default.getMessages(e);
         return 0 !== t.length && function(e) {
             let {
                 messagesPendingScan: t,
@@ -362,7 +362,7 @@ function(e, t, n) {
                     numOfEmbeds: n.numOfEmbeds,
                     numOfEmbedsPendingScan: n.numOfEmbedsPendingScan
                 })
-            }), !!(t.length > 0) && (M(t), !0)
+            }), !!(t.length > 0) && (L(t), !0)
         }(t)
     }
     class X extends l.default {

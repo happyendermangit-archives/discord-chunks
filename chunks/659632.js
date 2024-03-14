@@ -65,8 +65,8 @@ function(e, t, n) {
         c = n("697218"),
         f = n("599110"),
         _ = n("449008"),
-        h = n("773336"),
-        E = n("719923"),
+        E = n("773336"),
+        h = n("719923"),
         g = n("655518"),
         m = n("271560"),
         p = n("49111"),
@@ -82,9 +82,9 @@ function(e, t, n) {
         O = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
         D = O(4, 4),
         P = O(4, 6),
-        M = O(5, 3),
-        L = [D, P, M, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-        b = new RegExp("^(".concat("WUMP-?", ")?(").concat(L, ")$"));
+        L = O(5, 3),
+        M = [D, P, L, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+        b = new RegExp("^(".concat("WUMP-?", ")?(").concat(M, ")$"));
     (s = i || (i = {}))[s.DEFAULT = 0] = "DEFAULT", s[s.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", s[s.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2] = "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD";
     let U = (e, t) => a.isMobile || a.isTablet ? 0 : null != e || t ? 2 : 1,
         w = e => 0 !== U(e);
@@ -120,7 +120,7 @@ function(e, t, n) {
     function B() {
         let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
             n = window.GLOBAL_ENV.GIFT_CODE_HOST;
-        return null == n || (0, h.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
+        return null == n || (0, E.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
     }
     async function H(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -275,7 +275,7 @@ function(e, t, n) {
                     return v.default.Messages.GIFT_CONFIRMATION_BODY_INVALID;
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
                     return v.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
-                        planName: (0, E.isPremiumExactly)(t, S.PremiumTypes.TIER_2) ? v.default.Messages.PREMIUM_TIER_2 : v.default.Messages.PREMIUM_TIER_1
+                        planName: (0, h.isPremiumExactly)(t, S.PremiumTypes.TIER_2) ? v.default.Messages.PREMIUM_TIER_2 : v.default.Messages.PREMIUM_TIER_1
                     });
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
                     return v.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;

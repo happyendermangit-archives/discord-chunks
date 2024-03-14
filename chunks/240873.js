@@ -28,8 +28,8 @@ function(e, t, n) {
         c = /^https:\/\/sketchfab\.com/i,
         f = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
         _ = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-        h = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-        E = new Set([u.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, u.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, u.MessageEmbedTypes.RICH, u.MessageEmbedTypes.SAFETY_POLICY_NOTICE, u.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION, u.MessageEmbedTypes.VOICE_CHANNEL]);
+        E = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+        h = new Set([u.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, u.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, u.MessageEmbedTypes.RICH, u.MessageEmbedTypes.SAFETY_POLICY_NOTICE, u.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION, u.MessageEmbedTypes.VOICE_CHANNEL]);
 
     function g(e) {
         let {
@@ -97,7 +97,7 @@ function(e, t, n) {
                 if (null != t && d.test(t.name) || c.test(n.url)) return !1;
                 let i = null != n.proxy_url || /^https:/i.test(n.url);
                 return null != e && 1492472454139 > l.default.extractTimestamp(e) && (i = i && null != t && f.test(t.name)), i
-            }(t, n.provider, n.video) && (i.video = m(n.video))), E.has(i.type)) {
+            }(t, n.provider, n.video) && (i.video = m(n.video))), h.has(i.type)) {
             var r;
             let e = null !== (r = n.fields) && void 0 !== r ? r : [];
             i.fields = e.map(e => {
@@ -145,7 +145,7 @@ function(e, t, n) {
     }
 
     function T(e) {
-        return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (h.test(e.url) || _.test(e.url))
+        return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (E.test(e.url) || _.test(e.url))
     }
 
     function I(e, t, n) {

@@ -99,9 +99,9 @@ function(e, t, n) {
             hideTooltip: f = !1,
             hideEmoji: x = !1,
             user: A
-        } = e, O = null != n ? n.find(e => e.type === T.ActivityTypes.CUSTOM_STATUS) : null, R = (0, r.useStateFromStores)([E.default], () => E.default.getId() === (null == A ? void 0 : A.id)), M = (0, r.useStateFromStores)([m.default], () => R ? m.default.getHangStatusActivity() : null != n ? n.find(e => e.type === T.ActivityTypes.HANG_STATUS) : null), k = (0, r.useStateFromStores)([C.default, y.default], () => {
+        } = e, O = null != n ? n.find(e => e.type === T.ActivityTypes.CUSTOM_STATUS) : null, M = (0, r.useStateFromStores)([E.default], () => E.default.getId() === (null == A ? void 0 : A.id)), R = (0, r.useStateFromStores)([m.default], () => M ? m.default.getHangStatusActivity() : null != n ? n.find(e => e.type === T.ActivityTypes.HANG_STATUS) : null), k = (0, r.useStateFromStores)([C.default, y.default], () => {
             var e;
-            return null != M && null != A ? y.default.getChannel(null === (e = C.default.getVoiceStateForUser(A.id)) || void 0 === e ? void 0 : e.channelId) : null
+            return null != R && null != A ? y.default.getChannel(null === (e = C.default.getVoiceStateForUser(A.id)) || void 0 === e ? void 0 : e.channelId) : null
         }), {
             enableHangStatus: L
         } = p.HangStatusExperiment.useExperiment({
@@ -109,10 +109,10 @@ function(e, t, n) {
             location: "ActivityStatus"
         }, {
             autoTrackExposure: !1
-        }), P = null, b = L && null != M && g.default.can(T.Permissions.CONNECT, k);
+        }), P = null, b = L && null != R && g.default.can(T.Permissions.CONNECT, k);
         b ? P = (0, i.jsx)(h.default, {
             className: o,
-            hangStatusActivity: M
+            hangStatusActivity: R
         }) : null != O && null != O.emoji && !x && (P = (0, i.jsx)(v, {
             emoji: O.emoji,
             animate: u,

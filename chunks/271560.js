@@ -23,7 +23,7 @@ function(e, t, n) {
             return P
         },
         getSocialRecommendationReasons: function() {
-            return L
+            return M
         },
         getNonSocialRecommendationReasons: function() {
             return U
@@ -40,8 +40,8 @@ function(e, t, n) {
         c = n("850068"),
         f = n("407063"),
         _ = n("160299"),
-        h = n("357957"),
-        E = n("521012"),
+        E = n("357957"),
+        h = n("521012"),
         g = n("560528"),
         m = n("568734"),
         p = n("449008"),
@@ -111,8 +111,8 @@ function(e, t, n) {
         let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         if (r) {
             let e = [];
-            !h.default.hasFetchedPaymentSources && e.push(null !== (n = _.default.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, c.fetchPaymentSources)()), !_.default.ipCountryCodeLoaded && e.push((0, c.fetchIpCountryCode)()), e.push(new Promise(async e => {
-                if (E.default.hasFetchedSubscriptions()) e();
+            !E.default.hasFetchedPaymentSources && e.push(null !== (n = _.default.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, c.fetchPaymentSources)()), !_.default.ipCountryCodeLoaded && e.push((0, c.fetchIpCountryCode)()), e.push(new Promise(async e => {
+                if (h.default.hasFetchedSubscriptions()) e();
                 else if (_.default.isSubscriptionFetching) {
                     let t = () => {
                         _.default.isSubscriptionFetching ? setTimeout(t, 50) : e()
@@ -121,9 +121,9 @@ function(e, t, n) {
                 } else await (0, c.fetchSubscriptions)(), e()
             })), await Promise.allSettled(e)
         }
-        let a = h.default.getDefaultBillingCountryCode(),
-            o = null !== (i = null === (t = h.default.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : null,
-            l = E.default.getPremiumTypeSubscription();
+        let a = E.default.getDefaultBillingCountryCode(),
+            o = null !== (i = null === (t = E.default.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : null,
+            l = h.default.getPremiumTypeSubscription();
         null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === a && (a = null !== (s = _.default.ipCountryCode) && void 0 !== s ? s : null);
         let u = {};
         if (null != a && (u.country_code = a), null != o && (u.payment_source_id = o), null != a || null != o) {
@@ -172,11 +172,11 @@ function(e, t, n) {
         let i = t.getApplication(e);
         return null == i || null == i.primarySkuId ? null : n.get(i.primarySkuId)
     }
-    let M = [];
+    let L = [];
 
-    function L(e, t, n, i, r) {
+    function M(e, t, n, i, r) {
         let a = t.get(e);
-        if (null == a) return M;
+        if (null == a) return L;
         let o = a.applicationId,
             l = [],
             u = [],

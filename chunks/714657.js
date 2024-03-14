@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("233069"),
         f = n("42203"),
         _ = n("697218"),
-        h = n("719923"),
-        E = n("158998"),
+        E = n("719923"),
+        h = n("158998"),
         g = n("253539"),
         m = n("941719");
     let p = !1,
@@ -31,7 +31,7 @@ function(e, t, n) {
         S && (i = void 0), v = !1, p = !1
     }
     let C = () => {
-            S = !h.default.canUseClientThemes(_.default.getCurrentUser())
+            S = !E.default.canUseClientThemes(_.default.getCurrentUser())
         },
         A = () => {
             var e, t;
@@ -112,7 +112,7 @@ function(e, t, n) {
                 channelId: t,
                 guildId: n
             } = e, i = _.default.getCurrentUser();
-            if (null == t || null == n || (0, l.isDismissibleContentDismissed)(a.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, E.ageEligibleForPremiumUpsell)(i)) return;
+            if (null == t || null == n || (0, l.isDismissibleContentDismissed)(a.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, h.ageEligibleForPremiumUpsell)(i)) return;
             let s = f.default.getChannel(t);
             null != s && (0, c.isGuildTextChannelType)(s.type) && (v = !0, function() {
                 p = !0

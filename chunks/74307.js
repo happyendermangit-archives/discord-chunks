@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("577776"),
         f = n("324584"),
         _ = n("782340"),
-        h = n("430594"),
-        E = n("182893"),
+        E = n("430594"),
+        h = n("182893"),
         g = n("356410");
     let m = (0, o.v4)(),
         p = (0, o.v4)(),
@@ -62,8 +62,8 @@ function(e, t, n) {
                     maxLength: n
                 } = this.props;
                 return (0, i.jsxs)("div", {
-                    className: a(h.maxLength, {
-                        [h.errorOverflow]: this.hasError()
+                    className: a(E.maxLength, {
+                        [E.errorOverflow]: this.hasError()
                     }),
                     "aria-hidden": "true",
                     children: [null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0, " ", null != n && "/ ".concat(n)]
@@ -75,8 +75,8 @@ function(e, t, n) {
             if (this.props.showCharacterCount || !1 === this.props.showRemainingCharacterCount) return null;
             let e = this.getCharsLeftLength();
             return null == e ? null : (0, i.jsx)("div", {
-                className: a(h.maxLength, {
-                    [h.errorOverflow]: e < 0
+                className: a(E.maxLength, {
+                    [E.errorOverflow]: e < 0
                 }),
                 "aria-hidden": "true",
                 children: e
@@ -103,7 +103,7 @@ function(e, t, n) {
                 id: m,
                 variant: "text-xs/normal",
                 color: "text-danger",
-                className: h.errorMessage,
+                className: E.errorMessage,
                 children: e
             })
         }
@@ -127,26 +127,26 @@ function(e, t, n) {
                 required: R,
                 onInvalid: O,
                 inputRef: D
-            } = this.props, P = N ? f.TextAreaAutosize : "textarea", M = this.hasError(), L = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, b = this.getAriaDescribedBy();
+            } = this.props, P = N ? f.TextAreaAutosize : "textarea", L = this.hasError(), M = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, b = this.getAriaDescribedBy();
             return (0, i.jsxs)("div", {
-                className: a(E.inputWrapper, {
-                    [h.flex]: y
+                className: a(h.inputWrapper, {
+                    [E.flex]: y
                 }),
                 children: [(0, i.jsxs)("div", {
-                    className: a(h.inputMaxLength, {
-                        [h.flex]: y
+                    className: a(E.inputMaxLength, {
+                        [E.flex]: y
                     }),
                     children: [(0, i.jsx)(l.FocusRing, {
                         children: (0, i.jsx)(P, {
                             type: "text",
-                            className: a(E.inputDefault, h.textArea, g.scrollbarDefault, I, {
-                                [E.error]: M,
-                                [E.disabled]: n,
-                                [h.resizeable]: T
+                            className: a(h.inputDefault, E.textArea, g.scrollbarDefault, I, {
+                                [h.error]: L,
+                                [h.disabled]: n,
+                                [E.resizeable]: T
                             }),
-                            "aria-labelledby": L,
+                            "aria-labelledby": M,
                             "aria-describedby": b,
-                            "aria-invalid": M,
+                            "aria-invalid": L,
                             style: {
                                 paddingRight: this.getPaddingRight()
                             },

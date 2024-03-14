@@ -29,10 +29,10 @@ function(e, t, n) {
             return _
         },
         MAX_PARAGRAPH_RESPONSE_LENGTH: function() {
-            return h
+            return E
         },
         MAX_DESCRIPTION_LENGTH: function() {
-            return E
+            return h
         },
         MEMBER_VERIFICATION_TYPE: function() {
             return g
@@ -52,8 +52,8 @@ function(e, t, n) {
         c = 8,
         f = 150,
         _ = 150,
-        h = 1e3,
-        E = 300,
+        E = 1e3,
+        h = 300,
         g = "Membership Gating",
         m = "in-app-member-verification";
     (i || (i = {})).VERIFICATION_INFO = "VERIFICATION_INFO"

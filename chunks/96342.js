@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         parse: function() {
-            return M
+            return R
         }
     }), n("222007"), n("70102"), n("781738"), n("424973");
     var i = n("627445"),
@@ -230,9 +230,9 @@ function(e, t, n) {
             updateAgeOnGet: !0
         },
         O = new s(A),
-        R = new s(A);
+        M = new s(A);
 
-    function M(e, t) {
+    function R(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             l = x.findBackticks(e);
@@ -257,7 +257,7 @@ function(e, t, n) {
                 if ("" !== c) {
                     let e = function(e, t, n) {
                         let i = [],
-                            l = n ? R : O,
+                            l = n ? M : O,
                             a = l.get(e);
                         if (null != a) return a;
                         let s = e.replace(/\r\n/g, " \n").replace(/[\r\f]/g, " ").replace(/\t/g, " ") + "\n\n",

@@ -20,13 +20,13 @@ function(e, t, n) {
                 className: c,
                 dir: f = "ltr",
                 orientation: _ = "vertical",
-                paddingFix: h = !0,
-                fade: E = !1,
+                paddingFix: E = !0,
+                fade: h = !1,
                 onScroll: g,
                 style: m,
                 ...p
             } = r, S = s.useRef(null), v = (0, l.usePaddingFixes)({
-                paddingFix: h,
+                paddingFix: E,
                 orientation: _,
                 dir: f,
                 className: c,
@@ -39,7 +39,7 @@ function(e, t, n) {
                 },
                 className: a(c, {
                     [e]: !0,
-                    [t]: E
+                    [t]: h
                 }),
                 style: (0, l.getMergedOrientationStyles)(m, _),
                 dir: f,

@@ -29,8 +29,8 @@ function(e, t, n) {
         N = n("945330"),
         A = n("587974"),
         O = n("599110"),
-        R = n("510500"),
-        M = n("171209"),
+        M = n("510500"),
+        R = n("171209"),
         k = n("49111"),
         L = n("782340"),
         P = n("279197");
@@ -91,13 +91,13 @@ function(e, t, n) {
             onSelectSticker: r,
             stickerIconVisible: c = !1,
             submitButtonVisible: f = !1
-        } = e, I = s.useContext(x.default), [T, A] = s.useState(null), [b, j] = s.useState(!1), [U, B] = s.useState(null), G = (0, E.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, b, i), {
+        } = e, I = s.useContext(x.default), [T, A] = s.useState(null), [b, j] = s.useState(!1), [U, B] = s.useState(null), G = (0, E.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, M.useStickerSuggestionResults)(V, b, i), {
             analyticsLocations: Q,
             AnalyticsLocationProvider: $
         } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
             handleTextChange: ee,
             debouncedSetTextInputValue: et
-        } = (0, R.useTextChangeHandler)({
+        } = (0, M.useTextChangeHandler)({
             setTextInputValue: K,
             setHasDismissed: j,
             setHasSelection: q,
@@ -206,7 +206,7 @@ function(e, t, n) {
             eo = s.useRef([]),
             eu = s.useRef(!1);
         s.useEffect(() => {
-            ea && (eo.current = X), ea !== eu.current && (I.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
+            ea && (eo.current = X), ea !== eu.current && (I.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, R.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
         }, [I, ea, X, V]);
         let ed = !ea,
             ec = ea ? X : eo.current;

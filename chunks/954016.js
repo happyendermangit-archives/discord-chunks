@@ -14,10 +14,10 @@ function(e, t, n) {
             return O
         },
         JAM_SPACE_APPLICATION_ID: function() {
-            return M
+            return L
         },
         GARTIC_PHONE_APPLICATION_ID: function() {
-            return L
+            return M
         },
         COLOR_TOGETHER_APPLICATION_ID: function() {
             return b
@@ -119,7 +119,7 @@ function(e, t, n) {
             return ei
         }
     }), n("222007");
-    var i, s, r, a, o, l, u, d, c, f, _, h, E, g, m, p, S, v, T, I, C = n("798609"),
+    var i, s, r, a, o, l, u, d, c, f, _, E, h, g, m, p, S, v, T, I, C = n("798609"),
         A = n("49111");
     let y = 160,
         N = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
@@ -127,8 +127,8 @@ function(e, t, n) {
         O = "773336526917861400",
         D = "880218832743055411",
         P = "1050941315912835122",
-        M = "1070087967294631976",
-        L = "1007373802981822582",
+        L = "1070087967294631976",
+        M = "1007373802981822582",
         b = "1039835161136746497",
         U = "852509694341283871",
         w = "903769130790969345",
@@ -150,7 +150,7 @@ function(e, t, n) {
             LARGE: 160
         },
         Q = ["in_development", "activities_team", "employee_release"];
-    (_ = i || (i = {})).FAILED_LOAD = "FAILED_LOAD", _.LAGGING = "LAGGING", _.CONFUSING = "CONFUSING", _.NOT_FUN = "NOT_FUN", _.OTHER = "OTHER", (h = s || (s = {}))[h.PLAY = 0] = "PLAY", h[h.SPECTATE = 1] = "SPECTATE", (E = r || (r = {})).DESKTOP = "desktop", E.MOBILE = "mobile", (g = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", g.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", g.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", g.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (m = o || (o = {}))[m.NO_UPDATE = 0] = "NO_UPDATE", m[m.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", m[m.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", m[m.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", m[m.USER_JOINED = 4] = "USER_JOINED", m[m.USER_LEFT = 5] = "USER_LEFT", m[m.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (p = l || (l = {}))[p.UNLOCKED = 1] = "UNLOCKED", p[p.PORTRAIT = 2] = "PORTRAIT", p[p.LANDSCAPE = 3] = "LANDSCAPE", (S = u || (u = {}))[S.DIRECTORY = 0] = "DIRECTORY", S[S.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", S[S.DETAIL_PAGE = 2] = "DETAIL_PAGE";
+    (_ = i || (i = {})).FAILED_LOAD = "FAILED_LOAD", _.LAGGING = "LAGGING", _.CONFUSING = "CONFUSING", _.NOT_FUN = "NOT_FUN", _.OTHER = "OTHER", (E = s || (s = {}))[E.PLAY = 0] = "PLAY", E[E.SPECTATE = 1] = "SPECTATE", (h = r || (r = {})).DESKTOP = "desktop", h.MOBILE = "mobile", (g = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", g.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", g.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", g.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (m = o || (o = {}))[m.NO_UPDATE = 0] = "NO_UPDATE", m[m.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", m[m.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", m[m.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", m[m.USER_JOINED = 4] = "USER_JOINED", m[m.USER_LEFT = 5] = "USER_LEFT", m[m.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (p = l || (l = {}))[p.UNLOCKED = 1] = "UNLOCKED", p[p.PORTRAIT = 2] = "PORTRAIT", p[p.LANDSCAPE = 3] = "LANDSCAPE", (S = u || (u = {}))[S.DIRECTORY = 0] = "DIRECTORY", S[S.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", S[S.DETAIL_PAGE = 2] = "DETAIL_PAGE";
     let Z = "activity-shelf",
         J = new Set(["755600276941176913", D, P, k, "1010174316991762534", z]),
         $ = new Set([D, P, k]);

@@ -39,9 +39,9 @@ function(e, t, n) {
             children: c,
             style: f,
             ..._
-        } = e, h = u.DEFAULT;
-        return s ? h = u.DISABLED : d && (h = u.SELECTABLE), (0, i.jsx)(a.default, {
-            className: r(o[t], n, o[h]),
+        } = e, E = u.DEFAULT;
+        return s ? E = u.DISABLED : d && (E = u.SELECTABLE), (0, i.jsx)(a.default, {
+            className: r(o[t], n, o[E]),
             style: f,
             ..._,
             children: c

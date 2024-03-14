@@ -53,7 +53,7 @@ function(e, t, n) {
             return P
         },
         ACKED_RECENTLY_WINDOW_DAYS: function() {
-            return M
+            return L
         },
         UpcomingGuildEventNoticeTypes: function() {
             return l
@@ -62,7 +62,7 @@ function(e, t, n) {
             return u
         }
     }), n("222007");
-    var i, s, r, a, o, l, u, d, c, f, _, h, E, g, m = n("718517"),
+    var i, s, r, a, o, l, u, d, c, f, _, E, h, g, m = n("718517"),
         p = n("49111");
     let S = 100,
         v = 1e3,
@@ -78,10 +78,10 @@ function(e, t, n) {
         },
         N = new Set([3]),
         R = new Set([1, 2]);
-    (h = o || (o = {}))[h.EVENT_INFO = 0] = "EVENT_INFO", h[h.RSVP_LIST = 1] = "RSVP_LIST";
+    (E = o || (o = {}))[E.EVENT_INFO = 0] = "EVENT_INFO", E[E.RSVP_LIST = 1] = "RSVP_LIST";
     let O = 100,
         D = 2 * m.default.Millis.DAY,
         P = 12 * m.default.Millis.HOUR,
-        M = 4;
-    (E = l || (l = {})).NEW_EVENT = "Upcoming Event Notice", E.EVENT_STARTING_SOON = "Event Starting Soon Notice", (g = u || (u = {}))[g.UNINTERESTED = 0] = "UNINTERESTED", g[g.INTERESTED = 1] = "INTERESTED"
+        L = 4;
+    (h = l || (l = {})).NEW_EVENT = "Upcoming Event Notice", h.EVENT_STARTING_SOON = "Event Starting Soon Notice", (g = u || (u = {}))[g.UNINTERESTED = 0] = "UNINTERESTED", g[g.INTERESTED = 1] = "INTERESTED"
 }

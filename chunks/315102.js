@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         DEFAULT_AVATARS: function() {
-            return E
+            return h
         },
         SUPPORTS_WEBP: function() {
             return g
@@ -55,9 +55,9 @@ function(e, t, n) {
         c = n("299039"),
         f = n("49111"),
         _ = n("680894"),
-        h = n("363577");
+        E = n("363577");
     i = n("523096").default;
-    let E = i.DEFAULT_AVATARS;
+    let h = i.DEFAULT_AVATARS;
     i.DEFAULT_GROUP_DM_AVATARS;
     let g = i.canUseWebp(),
         m = (0, d.isAndroid)();
@@ -78,8 +78,8 @@ function(e, t, n) {
         u && F(r) && (f = "mp4");
         let _ = window.GLOBAL_ENV.CDN_HOST;
         if (null != _ ? ("jpg" === f && (f = g ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(_, "/").concat(i, "/").concat(s, "/").concat(r, ".").concat(f)) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(s, r, f), "mp4" === f) return t;
-        let h = {};
-        return null != o && (h.size = (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())), null != d && (h.keep_aspect_ratio = d), t + "?".concat(a.stringify(h))
+        let E = {};
+        return null != o && (E.size = (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())), null != d && (E.keep_aspect_ratio = d), t + "?".concat(a.stringify(E))
     }
 
     function S(e) {
@@ -93,9 +93,9 @@ function(e, t, n) {
     }
 
     function v(e, t) {
-        if (null == e && null == t) return E[0];
+        if (null == e && null == t) return h[0];
         let n = (0, u.parseInteger)(t, 0);
-        return n > 0 ? E[n % 5] : null != e ? E[r(e).shiftRight(22).mod(6).toJSNumber()] : E[0]
+        return n > 0 ? h[n % 5] : null != e ? h[r(e).shiftRight(22).mod(6).toJSNumber()] : h[0]
     }
 
     function T(e) {
@@ -108,7 +108,7 @@ function(e, t, n) {
         if (r && t !== _.CLYDE_AI_USER_ID) {
             let e = i.BOT_AVATARS[n];
             if (e) return e;
-            if (null == n && "0000" === s) return E[0]
+            if (null == n && "0000" === s) return h[0]
         }
         return p({
             endpoint: f.Endpoints.AVATAR,
@@ -240,7 +240,7 @@ function(e, t, n) {
         return t = (null != r ? "".concat(location.protocol, "//").concat(r, "/home-headers/").concat(n, "/").concat(i, ".png") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_HOME_HEADER(n, i)) + "?size=".concat(s)
     }
 
-    function M(e) {
+    function L(e) {
         let t, {
             id: n,
             splash: i,
@@ -252,7 +252,7 @@ function(e, t, n) {
         return t = (null != r ? "".concat(location.protocol, "//").concat(r, "/discovery-splashes/").concat(n, "/").concat(i, ".jpg") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.Endpoints.GUILD_DISCOVERY_SPLASH(n, i)) + "?size=".concat(s)
     }
 
-    function L(e) {
+    function M(e) {
         let {
             id: t,
             icon: n,
@@ -311,7 +311,7 @@ function(e, t, n) {
             let e = T(s, !1, i);
             if (null != e) return e
         }
-        if (a) return h
+        if (a) return E
     }
 
     function w(e) {
@@ -423,14 +423,14 @@ function(e, t, n) {
             let i = I(e, t, n);
             return B(i)
         },
-        getGuildIconURL: L,
+        getGuildIconURL: M,
         getGuildSplashURL: O,
         getGuildSplashSource: function(e) {
             return B(O(e))
         },
-        getGuildDiscoverySplashURL: M,
+        getGuildDiscoverySplashURL: L,
         getGuildDiscoverySplashSource: function(e) {
-            return B(M(e))
+            return B(L(e))
         },
         getGuildBannerURL: D,
         getGuildHomeHeaderURL: P,
@@ -473,7 +473,7 @@ function(e, t, n) {
             return B(t)
         },
         getGuildIconSource(e) {
-            let t = L(e);
+            let t = M(e);
             return B(t)
         },
         getGuildTemplateIconSource(e) {

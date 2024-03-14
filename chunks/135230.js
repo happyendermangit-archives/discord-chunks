@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     });
     var i = n("37983");
@@ -17,10 +17,10 @@ function(e, t, n) {
         c = n("145131"),
         f = n("782340"),
         _ = n("565695"),
-        h = e => {
+        E = e => {
             let t, n, s, {
-                body: h,
-                cancelText: E,
+                body: E,
+                cancelText: h,
                 className: g,
                 confirmColor: m,
                 confirmText: p = f.default.Messages.OKAY,
@@ -33,7 +33,7 @@ function(e, t, n) {
                 transitionState: y,
                 titleClassName: N
             } = e;
-            return null != E && "" !== E && (t = (0, i.jsx)(a.Button, {
+            return null != h && "" !== h && (t = (0, i.jsx)(a.Button, {
                 type: "button",
                 size: a.Button.Sizes.XLARGE,
                 color: a.Button.Colors.PRIMARY,
@@ -41,7 +41,7 @@ function(e, t, n) {
                     null == T || T(), null == v || v()
                 },
                 className: _.secondaryButton,
-                children: E
+                children: h
             })), null != p && "" !== p && (n = (0, i.jsx)(a.Button, {
                 type: "submit",
                 color: m,
@@ -78,10 +78,10 @@ function(e, t, n) {
                                 tag: "h2",
                                 className: r(_.title, N),
                                 children: A
-                            }), null != h && (0, i.jsx)(d.Text, {
+                            }), null != E && (0, i.jsx)(d.Text, {
                                 variant: "text-md/normal",
                                 className: _.body,
-                                children: h
+                                children: E
                             })]
                         })
                     }), (0, i.jsxs)(u.ModalFooter, {

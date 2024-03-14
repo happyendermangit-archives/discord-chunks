@@ -43,13 +43,13 @@ function(e, t, n) {
         }, !0)
     }
 
-    function h(e, t) {
+    function E(e, t) {
         let n = u.default.getChannel(e);
         if (null == n) return !1;
         _(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * l.default.Millis.SECOND + 100)
     }
 
-    function E(e) {
+    function h(e) {
         let {
             file: t
         } = e, n = u.default.getChannel(t.channelId);
@@ -71,7 +71,7 @@ function(e, t, n) {
                 channelId: t,
                 slowmodeType: n
             } = e;
-            return h(t, n)
+            return E(t, n)
         },
         SLOWMODE_SET_COOLDOWN: function(e) {
             let {
@@ -86,10 +86,10 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            return h(t, 0)
+            return E(t, 0)
         },
-        UPLOAD_FAIL: E,
-        UPLOAD_CANCEL_REQUEST: E,
+        UPLOAD_FAIL: h,
+        UPLOAD_CANCEL_REQUEST: h,
         CHANNEL_UPDATES: function(e) {
             let {
                 channels: t

@@ -46,17 +46,17 @@ function(e, t, n) {
                 strong: c = !1,
                 children: f,
                 style: _,
-                "aria-label": h,
-                ...E
+                "aria-label": E,
+                ...h
             } = e;
             return (0, i.jsx)(o, {
-                "aria-label": h,
+                "aria-label": E,
                 className: r(n, s, t, {
                     [a.selectable]: d,
                     [a.strong]: c
                 }),
                 style: _,
-                ...E,
+                ...h,
                 children: f
             })
         };

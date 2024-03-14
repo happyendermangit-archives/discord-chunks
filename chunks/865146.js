@@ -17,10 +17,10 @@ function(e, t, n) {
             return _
         },
         EPSSourceRecord: function() {
-            return h
+            return E
         },
         IdealSourceRecord: function() {
-            return E
+            return h
         },
         PaysafeSourceRecord: function() {
             return g
@@ -120,7 +120,7 @@ function(e, t, n) {
                         bank: e.bank
                     });
                 case l.PaymentSourceTypes.EPS:
-                    return new h({
+                    return new E({
                         ...i,
                         bank: e.bank
                     });
@@ -153,7 +153,7 @@ function(e, t, n) {
                         ...i
                     });
                 case l.PaymentSourceTypes.IDEAL:
-                    return new E({
+                    return new h({
                         ...i,
                         bank: e.bank
                     });
@@ -197,9 +197,9 @@ function(e, t, n) {
                 case l.PaymentSourceTypes.BANCONTACT:
                     return new C(e);
                 case l.PaymentSourceTypes.EPS:
-                    return new h(e);
-                case l.PaymentSourceTypes.IDEAL:
                     return new E(e);
+                case l.PaymentSourceTypes.IDEAL:
+                    return new h(e);
                 case l.PaymentSourceTypes.CASH_APP:
                     return new A(e);
                 default:
@@ -256,13 +256,13 @@ function(e, t, n) {
             this.email = e.email || "", this.bank = e.bank
         }
     }
-    class h extends i {
+    class E extends i {
         constructor(e) {
             if (super(e), e.type !== l.PaymentSourceTypes.EPS) throw Error("Cannot instantiate EPSSourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.EPS));
             this.bank = e.bank
         }
     }
-    class E extends i {
+    class h extends i {
         constructor(e) {
             if (super(e), e.type !== l.PaymentSourceTypes.IDEAL) throw Error("Cannot instantiate IdealSourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.IDEAL));
             this.bank = e.bank

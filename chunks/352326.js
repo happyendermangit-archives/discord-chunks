@@ -12,8 +12,8 @@ function(e, t, n) {
         c = n("913144"),
         f = n("190017"),
         _ = n("161454"),
-        h = n("271938"),
-        E = n("677225"),
+        E = n("271938"),
+        h = n("677225"),
         g = n("964889"),
         m = n("152723"),
         p = n("773336"),
@@ -30,8 +30,8 @@ function(e, t, n) {
         O = null,
         D = !1,
         P = new Map,
-        M = !1,
-        L = null;
+        L = !1,
+        M = null;
 
     function b() {
         let e = {
@@ -54,10 +54,10 @@ function(e, t, n) {
                 branchId: a
             } = (0, g.convertComboId)(i);
             if (t = r, n = a, (null == R || R.applicationId !== t || R.branchId !== n) && (null == O || O.applicationId !== t || O.branchId !== n)) {
-                let e = h.default.getToken(),
-                    t = h.default.getId();
+                let e = E.default.getToken(),
+                    t = E.default.getId();
                 if (null == e) throw Error("missing user token");
-                M = !m.default.setCurrentTask(r, a, s, t, e)
+                L = !m.default.setCurrentTask(r, a, s, t, e)
             }
         }
     }
@@ -100,15 +100,15 @@ function(e, t, n) {
     }
 
     function x() {
-        let e = h.default.getToken(),
-            t = h.default.getId();
+        let e = E.default.getToken(),
+            t = E.default.getId();
         null != e && m.default.setCredentials(t, e)
     }
 
     function B() {
         for (let e of _.default.getRunningDiscordApplicationIds()) f.cancel(e, e);
         let e = _.default.getVisibleGame();
-        return !N && null != e && e.pid !== L && f.pause(), L = null == e ? null : e.pid, !1
+        return !N && null != e && e.pid !== M && f.pause(), M = null == e ? null : e.pid, !1
     }
     class H extends u.default.Store {
         initialize() {
@@ -142,7 +142,7 @@ function(e, t, n) {
             return w(e, t)
         }
         isCorruptInstallation() {
-            return M
+            return L
         }
     }
     H.displayName = "DispatchManagerStore";
@@ -196,7 +196,7 @@ function(e, t, n) {
                 } = e, {
                     applicationId: n,
                     branchId: s
-                } = (0, g.convertComboId)(t), r = S.default.getState(n, s), a = E.default.getTargetBuildId(n, s), o = E.default.getTargetManifests(n, s);
+                } = (0, g.convertComboId)(t), r = S.default.getState(n, s), a = h.default.getTargetBuildId(n, s), o = h.default.getTargetManifests(n, s);
                 if (null != r && r.type === v.LocalDispatchApplicationStates.UP_TO_DATE && r.buildId === r.targetBuildId && r.buildId === a && l.isEqual(r.manifestIds, r.targetManifestIds) && l.isEqual(r.manifestIds, o)) {
                     if (y.push(t), P.has(t)) {
                         let e = P.get(t);

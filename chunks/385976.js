@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("802493"),
         f = n("595525"),
         _ = n("629538"),
-        h = n("39616"),
-        E = n("828674"),
+        E = n("39616"),
+        h = n("828674"),
         g = n("153043"),
         m = n("256941"),
         p = n("505985"),
@@ -33,8 +33,8 @@ function(e, t, n) {
         O = n("402671"),
         D = n("449008"),
         P = n("655518"),
-        M = n("299039"),
-        L = n("858619"),
+        L = n("299039"),
+        M = n("858619"),
         b = n("867805"),
         U = n("802461"),
         w = n("26430"),
@@ -79,14 +79,14 @@ function(e, t, n) {
                     id: e.id,
                     animated: e.animated,
                     size: 48
-                }), e.allNamesString = ":".concat(e.name, ":"), e.guildId = this.id, e.type = L.EmojiTypes.GUILD, this._emojiMap[e.id] = e
+                }), e.allNamesString = ":".concat(e.name, ":"), e.guildId = this.id, e.type = M.EmojiTypes.GUILD, this._emojiMap[e.id] = e
             }), this._usableEmojis = s.sortBy(this._emojis.filter(e => this.isUsable(e)), e => e.name), this._emoticons = this._usableEmojis.filter(e => !e.require_colons))
         }
         constructor(e, t, n, i = !1) {
             this._dirty = !0, this._emojiMap = {}, this._emoticons = [], this._usableEmojis = [], this._canSeeServerSubIAP = !1, this._totalUsable = 0, this.id = e, this._userId = t, this._emojis = n, this._canSeeServerSubIAP = i
         }
     }
-    let Y = M.default.fromTimestamp(Date.now() - 60 * R.default.Millis.DAY),
+    let Y = L.default.fromTimestamp(Date.now() - 60 * R.default.Millis.DAY),
         j = [],
         W = 2,
         K = x.slice(0),
@@ -220,7 +220,7 @@ function(e, t, n) {
                     id: n,
                     names: i,
                     name: r
-                } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(h.default.getTermsForEmoji(r), e), u = null != n && s.some(U.default.getCaptionsForEmojiById({
+                } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(E.default.getTermsForEmoji(r), e), u = null != n && s.some(U.default.getCaptionsForEmojiById({
                     emojiId: n
                 }), e);
                 return a || o || l || u
@@ -245,8 +245,8 @@ function(e, t, n) {
                     }
                     if (this.emojisByName[t.name] = t, "names" in t && (null === (i = t.names) || void 0 === i || i.slice(1).forEach(e => this.unicodeAliases[e] = t.name)), null != t.id) {
                         let e, n;
-                        if (this.emojisById[t.id] = t, this.customEmojis[t.name] = t, t.type === L.EmojiTypes.GUILD) e = t.guildId, n = !0;
-                        null != e && (null != this.groupedCustomEmojis[e] ? this.groupedCustomEmojis[e].push(t) : this.groupedCustomEmojis[e] = [t], n && M.default.compare(t.id, Y) >= 0 && (null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e].push(t) : this.newlyAddedEmoji[e] = [t]))
+                        if (this.emojisById[t.id] = t, this.customEmojis[t.name] = t, t.type === M.EmojiTypes.GUILD) e = t.guildId, n = !0;
+                        null != e && (null != this.groupedCustomEmojis[e] ? this.groupedCustomEmojis[e].push(t) : this.groupedCustomEmojis[e] = [t], n && L.default.compare(t.id, Y) >= 0 && (null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e].push(t) : this.newlyAddedEmoji[e] = [t]))
                     }
                     null == this.disambiguatedEmoji && (this.disambiguatedEmoji = []), this.disambiguatedEmoji.push(t)
                 },
@@ -258,7 +258,7 @@ function(e, t, n) {
                 let t = z[null == e ? V.NULL_STRING_GUILD_ID : e];
                 null != t && (s.each(t.usableEmojis, n), s.each(t.emoticons, i))
             };
-            for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => M.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
+            for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => L.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
             A.default.getFlattenedGuildIds().forEach(e => {
                 e !== this.guildId && r(e)
             }), this.escapedEmoticonNames = t.join("|")
@@ -342,7 +342,7 @@ function(e, t, n) {
             guildId: t,
             role: n
         } = e;
-        if (!(0, E.isSubscriptionRole)(n)) return !1;
+        if (!(0, h.isSubscriptionRole)(n)) return !1;
         {
             let e = z[t];
             er(t, null == e ? void 0 : e.emojis), es()
@@ -480,7 +480,7 @@ function(e, t, n) {
         }
         hasUsableEmojiInAnyGuild() {
             $();
-            let e = M.default.keys(z);
+            let e = L.default.keys(z);
             return e.some(e => z[e].usableEmojis.length > 0)
         }
         hasFavoriteEmojis(e) {
@@ -552,7 +552,7 @@ function(e, t, n) {
                 },
                 wasSaved: n
             } = e;
-            if (h.default.setEmojiLocale(S.default.locale), t !== F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+            if (E.default.setEmojiLocale(S.default.locale), t !== F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
             B.pendingUsages = []
         },
         GUILD_ROLE_CREATE: el,

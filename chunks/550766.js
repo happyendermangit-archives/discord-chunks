@@ -14,10 +14,10 @@ function(e, t, n) {
             return P
         },
         fetchDeveloperApplications: function() {
-            return M
+            return L
         },
         uploadImageAttachment: function() {
-            return L
+            return M
         },
         fetchShelf: function() {
             return U
@@ -52,8 +52,8 @@ function(e, t, n) {
         c = n("299285"),
         f = n("191145"),
         _ = n("752598"),
-        h = n("653047"),
-        E = n("271938"),
+        E = n("653047"),
+        h = n("271938"),
         g = n("42203"),
         m = n("18494"),
         p = n("697218"),
@@ -67,7 +67,7 @@ function(e, t, n) {
         N = n("91366");
 
     function R(e, t, n) {
-        let i = E.default.getId(),
+        let i = h.default.getId(),
             s = I.default.getSelfEmbeddedActivityForChannel(e),
             a = I.default.getEmbeddedActivitiesForChannel(e),
             l = a.find(e => e.applicationId === t && e.userIds.has(i));
@@ -91,7 +91,7 @@ function(e, t, n) {
         if (null == a && !(null !== (n = null == s ? void 0 : s.isPrivate()) && void 0 !== n && n)) return;
         let o = I.default.getSelfEmbeddedActivityForChannel(e);
         if (null === o) return;
-        let l = E.default.getSessionId();
+        let l = h.default.getSessionId();
         try {
             r.default.dispatch({
                     type: "EMBEDDED_ACTIVITY_LAUNCH_START",
@@ -170,7 +170,7 @@ function(e, t, n) {
             isRejoiningFromCurrentSession: n
         })
     }
-    async function M() {
+    async function L() {
         try {
             r.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START"
@@ -182,7 +182,7 @@ function(e, t, n) {
                     },
                     oldFormErrors: !0
                 }),
-                t = e.body.map(e => h.default.createFromServer(e));
+                t = e.body.map(e => E.default.createFromServer(e));
             r.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
                 items: t
@@ -193,7 +193,7 @@ function(e, t, n) {
             })
         }
     }
-    async function L(e, t, n) {
+    async function M(e, t, n) {
         try {
             r.default.dispatch({
                 type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START"
@@ -281,7 +281,7 @@ function(e, t, n) {
                 applications: d
             }), {
                 activityConfigs: u,
-                applications: d.map(e => h.default.createFromServer(e))
+                applications: d.map(e => E.default.createFromServer(e))
             }
         } catch (e) {
             return r.default.dispatch({

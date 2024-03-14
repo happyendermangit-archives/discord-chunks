@@ -33,7 +33,7 @@ function(e, t, n) {
         let {
             soundboardSound: t,
             closePicker: v
-        } = e, N = (0, c.useExpressionPickerStore)(e => e.searchQuery), A = (0, l.default)([C.default], () => null != t && C.default.isFavoriteSound(t.soundId)), O = (0, l.default)([p.default], () => p.default.getGuild(null == t ? void 0 : t.guildId)), R = (0, l.default)([o.default], () => o.default.useReducedMotion, []), M = (0, l.default)([h.default], () => h.default.isFocused()), k = (0, l.default)([m.default], () => m.default.getKeybindForAction(I.GlobalKeybindActions.SOUNDBOARD_HOLD));
+        } = e, N = (0, c.useExpressionPickerStore)(e => e.searchQuery), A = (0, l.default)([C.default], () => null != t && C.default.isFavoriteSound(t.soundId)), O = (0, l.default)([p.default], () => p.default.getGuild(null == t ? void 0 : t.guildId)), M = (0, l.default)([o.default], () => o.default.useReducedMotion, []), R = (0, l.default)([h.default], () => h.default.isFocused()), k = (0, l.default)([m.default], () => m.default.getKeybindForAction(I.GlobalKeybindActions.SOUNDBOARD_HOLD));
         if (null != t && N.length > 0) return (0, i.jsx)(f.default, {
             graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, i.jsx)(r.default, {
                 emojiId: t.emojiId,
@@ -44,7 +44,7 @@ function(e, t, n) {
             }),
             graphicSecondary: null != O ? (0, i.jsx)(d.default, {
                 guild: O,
-                shouldAnimate: !R && M
+                shouldAnimate: !M && R
             }) : null,
             titlePrimary: t.name,
             titleSecondary: null == O ? void 0 : O.name,

@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("773364"),
         f = n("62684"),
         _ = n("324304"),
-        h = n("849074"),
-        E = n("948961"),
+        E = n("849074"),
+        h = n("948961"),
         g = n("353927"),
         m = n("53452");
     (r = i || (i = {}))[r.AUDIO_BITRATE = 0] = "AUDIO_BITRATE", r[r.VIDEO_RESOLUTION_SCALE = 1] = "VIDEO_RESOLUTION_SCALE", r[r.VIDEO_BITRATE = 2] = "VIDEO_BITRATE", r[r.VIDEO_FRAMERATE = 3] = "VIDEO_FRAMERATE", s = class extends d.default {
@@ -32,7 +32,7 @@ function(e, t, n) {
         async getStats() {
             if (!m.BROWSER_SUPPORTS_DIAGNOSTICS) return null;
             let e = await this.getRawStats();
-            return (0, E.default)(e, this.getUserIdBySsrc, this.remoteVideoSinkWants, this.localVideoSinkWants)
+            return (0, h.default)(e, this.getUserIdBySsrc, this.remoteVideoSinkWants, this.localVideoSinkWants)
         }
         setInputMode(e, t) {
             this.input.setAudioMode(e, {
@@ -205,7 +205,7 @@ function(e, t, n) {
         processMLSWelcome(e, t, n) {}
         constructor(e, t, n, i) {
             var s;
-            super(e, t), s = this, this.silenced = !1, this.interacted = !1, this.outputVolume = g.DEFAULT_VOLUME, this.sinkId = g.DEFAULT_DEVICE_ID, this.lastPingTime = 0, this.outputs = {}, this.webrtcStats = new h.WebRTCStatsCalculator, this.silenceThreshold = -100, this.canHavePriority = new Set, this.prioritySpeakers = new Set, this.setEchoCancellation = e => this.input.setEchoCancellation(e), this.setNoiseSuppression = e => this.input.setNoiseSuppression(e), this.setNoiseCancellation = e => this.input.setNoiseCancellation(e), this.setAutomaticGainControl = e => this.input.setAutomaticGainControl(e), this.setAudioSource = e => this.input.setAudioSource(e), this.setVideoSource = e => this.input.setVideoSource(e), this.setDesktopInput = e => this.input.setDesktop(e), this.setForceAudioInput = function(e) {
+            super(e, t), s = this, this.silenced = !1, this.interacted = !1, this.outputVolume = g.DEFAULT_VOLUME, this.sinkId = g.DEFAULT_DEVICE_ID, this.lastPingTime = 0, this.outputs = {}, this.webrtcStats = new E.WebRTCStatsCalculator, this.silenceThreshold = -100, this.canHavePriority = new Set, this.prioritySpeakers = new Set, this.setEchoCancellation = e => this.input.setEchoCancellation(e), this.setNoiseSuppression = e => this.input.setNoiseSuppression(e), this.setNoiseCancellation = e => this.input.setNoiseCancellation(e), this.setAutomaticGainControl = e => this.input.setAutomaticGainControl(e), this.setAudioSource = e => this.input.setAudioSource(e), this.setVideoSource = e => this.input.setVideoSource(e), this.setDesktopInput = e => this.input.setDesktop(e), this.setForceAudioInput = function(e) {
                 return arguments.length > 1 && void 0 !== arguments[1] && arguments[1], s.input.setPTTActive(e)
             }, this.setSelfMute = e => {
                 this.input.setMute(e), this.emit(c.BaseConnectionEvent.Mute, e)

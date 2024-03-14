@@ -28,8 +28,8 @@ function(e, t, n) {
             });
         return (0, s.forwardRef)(function(n, _) {
             let {
-                onScroll: h,
-                dir: E = "ltr",
+                onScroll: E,
+                dir: h = "ltr",
                 sections: g,
                 columns: m,
                 getItemKey: p,
@@ -45,8 +45,8 @@ function(e, t, n) {
                 padding: O,
                 paddingVertical: D,
                 paddingHorizontal: P,
-                fade: M = !1,
-                className: L,
+                fade: L = !1,
+                className: M,
                 style: b,
                 ...U
             } = n, w = r.useRef(null), k = r.useRef(null), [V, G] = r.useState(!1), {
@@ -56,10 +56,10 @@ function(e, t, n) {
             } = (0, u.useCachedScrollerState)();
             (0, u.usePaddingFixes)({
                 scrollerRef: F,
-                className: L,
+                className: M,
                 specs: a,
                 orientation: "vertical",
-                dir: E
+                dir: h
             });
             let {
                 forceUpdateOnChunkChange: H,
@@ -83,7 +83,7 @@ function(e, t, n) {
                 paddingVertical: D,
                 paddingHorizontal: P,
                 getScrollerState: B,
-                dir: E
+                dir: h
             }), X = (0, s.useCallback)(function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
                 e > x.current.dirty && (x.current.dirty = e, 2 === e ? z() : H(1))
@@ -104,14 +104,14 @@ function(e, t, n) {
             let ee = (0, s.useCallback)(e => {
                 X(1), null == w.current ? G(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
                     w.current = null, G(!1)
-                }, 200), null != h && h(e)
-            }, [h, X]);
+                }, 200), null != E && E(e)
+            }, [E, X]);
             return (0, i.jsx)("div", {
                 ref: F,
                 onScroll: ee,
-                className: o(L, {
+                className: o(M, {
                     [e]: !0,
-                    [t]: M,
+                    [t]: L,
                     [d.scrolling]: V
                 }),
                 style: (0, u.getMergedOrientationStyles)(b),

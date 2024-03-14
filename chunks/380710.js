@@ -38,7 +38,7 @@ function(e, t, n) {
             return P
         },
         getSelectedChannelIds: function() {
-            return M
+            return L
         }
     }), n("702976"), n("222007"), n("808653"), n("424973"), n("834022");
     var i = n("446674"),
@@ -52,8 +52,8 @@ function(e, t, n) {
         c = n("991170"),
         f = n("648747"),
         _ = n("49111"),
-        h = n("657944");
-    let E = new Date(16824888e5);
+        E = n("657944");
+    let h = new Date(16824888e5);
 
     function g(e) {
         let t = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(e)),
@@ -73,9 +73,9 @@ function(e, t, n) {
 
     function p(e, t) {
         var n;
-        if (null == e || !e.hasFeature(_.GuildFeatures.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < E) return !1;
+        if (null == e || !e.hasFeature(_.GuildFeatures.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < h) return !1;
         let i = null !== (n = t.flags) && void 0 !== n ? n : 0;
-        return u.hasFlag(i, h.GuildMemberFlags.STARTED_ONBOARDING) && !u.hasFlag(i, h.GuildMemberFlags.COMPLETED_ONBOARDING)
+        return u.hasFlag(i, E.GuildMemberFlags.STARTED_ONBOARDING) && !u.hasFlag(i, E.GuildMemberFlags.COMPLETED_ONBOARDING)
     }
 
     function S(e, t, n) {
@@ -218,7 +218,7 @@ function(e, t, n) {
         return new Set(e.map(e => e.roleIds).flat().filter(d.isNotNullish))
     }
 
-    function M(e) {
+    function L(e) {
         return new Set(e.map(e => e.channelIds).flat().filter(d.isNotNullish))
     }
 }

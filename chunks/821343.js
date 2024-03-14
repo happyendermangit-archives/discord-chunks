@@ -6,7 +6,7 @@ function(e, t, n) {
             return m
         },
         default: function() {
-            return L
+            return M
         }
     }), n("222007");
     var s = n("917351"),
@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("233069"),
         f = n("42203"),
         _ = n("660478"),
-        h = n("449008"),
-        E = n("299039"),
+        E = n("449008"),
+        h = n("299039"),
         g = n("755624");
     let m = 25,
         p = !1,
@@ -51,9 +51,9 @@ function(e, t, n) {
             if (e || null == n) return !0;
             {
                 let e = null == t ? null : R(t, C);
-                return null != e && E.default.compare(e, n) >= 0
+                return null != e && h.default.compare(e, n) >= 0
             }
-        }).sort((e, t) => E.default.compare(R(e, C), R(t, C))).map(e => e.id).reverse().value()
+        }).sort((e, t) => h.default.compare(R(e, C), R(t, C))).map(e => e.id).reverse().value()
     }
 
     function D(e) {
@@ -61,7 +61,7 @@ function(e, t, n) {
         A = A.filter(t => t !== e)
     }
     let P = [];
-    class M extends o.default.Store {
+    class L extends o.default.Store {
         initialize() {
             this.waitFor(f.default, g.default, _.default)
         }
@@ -75,14 +75,14 @@ function(e, t, n) {
             return S
         }
         isLoading(e, t, n) {
-            return I === e && C === t && (0, h.areSetsEqual)(i, n) ? p : (N(), !1)
+            return I === e && C === t && (0, E.areSetsEqual)(i, n) ? p : (N(), !1)
         }
         getThreads(e, t, n) {
-            return I === e && C === t && (0, h.areSetsEqual)(i, n) ? A : P
+            return I === e && C === t && (0, E.areSetsEqual)(i, n) ? A : P
         }
     }
-    M.displayName = "ArchivedThreadsStore";
-    var L = new M(l.default, {
+    L.displayName = "ArchivedThreadsStore";
+    var M = new L(l.default, {
         CONNECTION_OPEN: N,
         THREAD_DELETE: function(e) {
             let {
@@ -101,10 +101,10 @@ function(e, t, n) {
             N()
         },
         LOAD_ARCHIVED_THREADS: function(e) {
-            (e.channelId !== I || e.sortOrder !== C || !(0, h.areSetsEqual)(e.tagFilter, i)) && N(), I = e.channelId, C = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), p = !0, S = !1
+            (e.channelId !== I || e.sortOrder !== C || !(0, E.areSetsEqual)(e.tagFilter, i)) && N(), I = e.channelId, C = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), p = !0, S = !1
         },
         LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
-            if (e.channelId !== I || e.sortOrder !== C || !(0, h.areSetsEqual)(e.tagFilter, i)) return !1;
+            if (e.channelId !== I || e.sortOrder !== C || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
             let t = e.threads.filter(e => c.ALL_CHANNEL_TYPES.has(e.type)).map(e => e.id);
             A = A.concat(t);
             let n = f.default.getChannel(I);
@@ -118,7 +118,7 @@ function(e, t, n) {
             }), O(), v = e.hasMore, y = e.offset + m, p = !1, S = !1
         },
         LOAD_ARCHIVED_THREADS_FAIL: function(e) {
-            if (e.channelId !== I || e.sortOrder !== C || !(0, h.areSetsEqual)(e.tagFilter, i)) return !1;
+            if (e.channelId !== I || e.sortOrder !== C || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
             p = !1, T = !0, S = !1
         },
         RESORT_THREADS: function(e) {

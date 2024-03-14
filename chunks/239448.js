@@ -11,10 +11,10 @@ function(e, t, n) {
             return _
         },
         getEffectDetailAnalyticsName: function() {
-            return h
+            return E
         },
         trackBackgroundOptionUpdated: function() {
-            return E
+            return h
         },
         trackBackgroundOptionAdded: function() {
             return g
@@ -53,7 +53,7 @@ function(e, t, n) {
         return null != e ? "Video Background" : "None"
     }
 
-    function h(e) {
+    function E(e) {
         if (null == e) return "None";
         if (d(e)) return "Custom";
         if ("blur" === e) return "Blur";
@@ -79,7 +79,7 @@ function(e, t, n) {
         }(e))
     }
 
-    function E(e, t, n) {
+    function h(e, t, n) {
         let o = r.default.getGuildId(),
             l = r.default.getChannelId(),
             d = s.default.getChannel(l),
@@ -87,7 +87,7 @@ function(e, t, n) {
         a.default.track(u.AnalyticEvents.VIDEO_EFFECT_UPDATED, {
             location: t,
             effect_type: _(e),
-            effect_detail: h(e),
+            effect_detail: E(e),
             effect_state: n,
             channel_id: l,
             channel_type: null == d ? void 0 : d.type,

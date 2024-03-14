@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return L
+            return M
         }
     }), n("222007"), n("424973");
     var i = n("714617"),
@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("299039"),
         f = n("271938"),
         _ = n("697218"),
-        h = n("49111");
-    let E = Object.freeze([]),
+        E = n("49111");
+    let h = Object.freeze([]),
         g = {},
         m = {},
         p = {},
@@ -30,13 +30,13 @@ function(e, t, n) {
     }
     let I = e => {
             switch (e.type) {
-                case h.ActivityTypes.CUSTOM_STATUS:
+                case E.ActivityTypes.CUSTOM_STATUS:
                     return 4;
-                case h.ActivityTypes.COMPETING:
+                case E.ActivityTypes.COMPETING:
                     return 3;
-                case h.ActivityTypes.STREAMING:
+                case E.ActivityTypes.STREAMING:
                     return 2;
-                case h.ActivityTypes.PLAYING:
+                case E.ActivityTypes.PLAYING:
                     return 1;
                 default:
                     return 0
@@ -52,14 +52,14 @@ function(e, t, n) {
     function y(e) {
         if (delete m[e], delete p[e], delete S[e], null == g[e]) return;
         let [t] = a.sortBy(g[e], e => -e.timestamp);
-        t.status !== h.StatusTypes.OFFLINE ? (m[e] = t.status, p[e] = t.activities, null != t.clientStatus && (S[e] = t.clientStatus)) : a.every(g[e], e => e.status === h.StatusTypes.OFFLINE) && delete g[e]
+        t.status !== E.StatusTypes.OFFLINE ? (m[e] = t.status, p[e] = t.activities, null != t.clientStatus && (S[e] = t.clientStatus)) : a.every(g[e], e => e.status === E.StatusTypes.OFFLINE) && delete g[e]
     }
 
     function N(e) {
         let t = g[e];
         if (null == t) return;
         let n = a.maxBy(Object.values(t), e => e.timestamp);
-        n.status !== h.StatusTypes.OFFLINE && (m[e] = n.status, p[e] = n.activities, null != n.clientStatus && (S[e] = n.clientStatus))
+        n.status !== E.StatusTypes.OFFLINE && (m[e] = n.status, p[e] = n.activities, null != n.clientStatus && (S[e] = n.clientStatus))
     }
 
     function R(e) {
@@ -73,13 +73,13 @@ function(e, t, n) {
         if (n === f.default.getId()) return !1;
         let o = g[n];
         if (null == o) {
-            if (i === h.StatusTypes.OFFLINE) return !1;
+            if (i === E.StatusTypes.OFFLINE) return !1;
             o = g[n] = {}
         }
-        if (i === h.StatusTypes.OFFLINE) o[t] = {
+        if (i === E.StatusTypes.OFFLINE) o[t] = {
             status: i,
             clientStatus: r,
-            activities: E,
+            activities: h,
             timestamp: Date.now()
         };
         else {
@@ -107,13 +107,13 @@ function(e, t, n) {
         if (n === f.default.getId()) return;
         let o = g[n];
         if (null == o) {
-            if (i === h.StatusTypes.OFFLINE) return;
+            if (i === E.StatusTypes.OFFLINE) return;
             o = g[n] = {}
         }
-        if (i === h.StatusTypes.OFFLINE) o[t] = {
+        if (i === E.StatusTypes.OFFLINE) o[t] = {
             status: i,
             clientStatus: s,
-            activities: E,
+            activities: h,
             timestamp: Date.now()
         };
         else {
@@ -137,7 +137,7 @@ function(e, t, n) {
     function P(e) {
         for (let t of c.default.keys(g)) D(e, t)
     }
-    class M extends o.default.Store {
+    class L extends o.default.Store {
         initialize() {
             this.waitFor(f.default, d.default)
         }
@@ -147,9 +147,9 @@ function(e, t, n) {
         getStatus(e) {
             var t, n;
             let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h.StatusTypes.OFFLINE,
+                s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.StatusTypes.OFFLINE,
                 r = _.default.getUser(e);
-            if (null != r && r.hasFlag(h.UserFlags.BOT_HTTP_INTERACTIONS) && (s = h.StatusTypes.UNKNOWN), null == r ? void 0 : r.isClyde()) return h.StatusTypes.ONLINE;
+            if (null != r && r.hasFlag(E.UserFlags.BOT_HTTP_INTERACTIONS) && (s = E.StatusTypes.UNKNOWN), null == r ? void 0 : r.isClyde()) return E.StatusTypes.ONLINE;
             if (null == i) return null !== (t = m[e]) && void 0 !== t ? t : s;
             let a = T(e, i);
             return null !== (n = null == a ? void 0 : a.status) && void 0 !== n ? n : s
@@ -158,14 +158,14 @@ function(e, t, n) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
             if (null == t) {
                 var n;
-                return null !== (n = p[e]) && void 0 !== n ? n : E
+                return null !== (n = p[e]) && void 0 !== n ? n : h
             }
             let i = T(e, t);
-            return null == i || null == i.activities ? E : i.activities
+            return null == i || null == i.activities ? h : i.activities
         }
         getPrimaryActivity(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                n = this.getActivities(e, t).filter(e => e.type !== h.ActivityTypes.HANG_STATUS);
+                n = this.getActivities(e, t).filter(e => e.type !== E.ActivityTypes.HANG_STATUS);
             return n[0]
         }
         getAllApplicationActivities(e) {
@@ -195,7 +195,7 @@ function(e, t, n) {
         }
         isMobileOnline(e) {
             let t = S[e];
-            return null != t && t[h.ClientTypes.MOBILE] === h.StatusTypes.ONLINE && t[h.ClientTypes.DESKTOP] !== h.StatusTypes.ONLINE
+            return null != t && t[E.ClientTypes.MOBILE] === E.StatusTypes.ONLINE && t[E.ClientTypes.DESKTOP] !== E.StatusTypes.ONLINE
         }
         getClientStatus(e) {
             return S[e]
@@ -210,8 +210,8 @@ function(e, t, n) {
             }
         }
     }
-    M.displayName = "PresenceStore";
-    var L = new M(l.default, {
+    L.displayName = "PresenceStore";
+    var M = new L(l.default, {
         CONNECTION_OPEN: function() {
             return !0
         },
@@ -254,7 +254,7 @@ function(e, t, n) {
                     activities: a
                 } = e;
                 null != t && (O({
-                    guildId: h.ME,
+                    guildId: E.ME,
                     userId: t.id,
                     status: n,
                     clientStatus: i,
@@ -315,7 +315,7 @@ function(e, t, n) {
                     activities: r
                 } = e;
                 return R({
-                    guildId: null != t ? t : h.ME,
+                    guildId: null != t ? t : E.ME,
                     userId: n.id,
                     status: i,
                     clientStatus: s,
@@ -327,7 +327,7 @@ function(e, t, n) {
             let {
                 presences: t
             } = e;
-            P(h.ME), t.forEach(e => {
+            P(E.ME), t.forEach(e => {
                 let {
                     user: t,
                     status: n,
@@ -335,7 +335,7 @@ function(e, t, n) {
                     activities: s
                 } = e;
                 null != t && R({
-                    guildId: h.ME,
+                    guildId: E.ME,
                     userId: t.id,
                     status: n,
                     clientStatus: i,

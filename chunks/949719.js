@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("373469"),
         f = n("271938"),
         _ = n("950104"),
-        h = n("42203"),
-        E = n("42887"),
+        E = n("42203"),
+        h = n("42887"),
         g = n("280168"),
         m = n("697218"),
         p = n("555035"),
@@ -52,7 +52,7 @@ function(e, t, n) {
             return this.participantByIndex.values(e, !0)
         }
         rebuild() {
-            let e = h.default.getChannel(this.channelId);
+            let e = E.default.getChannel(this.channelId);
             if (null == e || e.type === C.ChannelTypes.GUILD_TEXT) return !1;
             if (this.call = _.default.getCall(this.channelId), e.isPrivate() && (null == this.call || this.call.unavailable)) return !1;
             let t = new Set(e.isGuildVocalOrThread() ? Object.keys(S.default.getVoiceStatesForChannel(e.id)) : e.recipients);
@@ -123,7 +123,7 @@ function(e, t, n) {
                     activityType: C.ActivityTypes.PLAYING,
                     activityUrl: e.url,
                     participants: new Set(e.userIds),
-                    guildId: null !== (i = null === (n = h.default.getChannel(this.channelId)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== i ? i : null,
+                    guildId: null !== (i = null === (n = E.default.getChannel(this.channelId)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== i ? i : null,
                     sortKey: t.toString()
                 }
             })
@@ -136,7 +136,7 @@ function(e, t, n) {
             if (null == T) return _;
             let C = S.default.getVoiceStateForChannel(this.channelId, e),
                 y = S.default.getVoicePlatformForChannel(this.channelId, e),
-                N = h.default.getChannel(this.channelId),
+                N = E.default.getChannel(this.channelId),
                 R = null !== (i = null === (n = this.call) || void 0 === n ? void 0 : null === (t = n.ringing) || void 0 === t ? void 0 : t.includes(e)) && void 0 !== i && i;
             (null != C || R) && (o = {
                 type: I.ParticipantTypes.USER,
@@ -153,7 +153,7 @@ function(e, t, n) {
                 soundsharing: g.default.isSoundSharing(e),
                 ringing: R,
                 userNick: v.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, T),
-                localVideoDisabled: E.default.isLocalVideoDisabled(T.id)
+                localVideoDisabled: h.default.isLocalVideoDisabled(T.id)
             }, _.push(o));
             let O = null !== (r = c.default.getStreamForUser(e, null == N ? void 0 : N.getGuildId())) && void 0 !== r ? r : c.default.getActiveStreamForUser(e, null == N ? void 0 : N.getGuildId());
             if (null != O && O.channelId === this.channelId) {

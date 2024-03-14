@@ -23,8 +23,8 @@ function(e, t, n) {
                 isLoading: c,
                 maxLength: f,
                 transitionState: _,
-                helpMessage: h,
-                retryPrompt: E,
+                helpMessage: E,
+                retryPrompt: h,
                 retrySuccessMessage: g
             } = this.props, {
                 code: m,
@@ -37,14 +37,14 @@ function(e, t, n) {
                     variant: "text-md/normal",
                     children: r
                 })
-            }) : null, T = null != E ? (0, i.jsxs)(o.Text, {
+            }) : null, T = null != h ? (0, i.jsxs)(o.Text, {
                 className: a(u.submitText, u.spacing),
                 variant: "text-sm/normal",
                 children: [(0, i.jsx)("br", {}), (0, i.jsx)(o.Clickable, {
                     className: a(u.spacing, u.link),
                     onClick: this.handleRetry,
                     children: (0, i.jsx)(o.Anchor, {
-                        children: E
+                        children: h
                     })
                 })]
             }) : null, I = S ? (0, i.jsx)(o.Card, {
@@ -66,11 +66,11 @@ function(e, t, n) {
                             children: t
                         })
                     }), (0, i.jsxs)(o.ModalContent, {
-                        children: [null != h ? (0, i.jsx)(o.Text, {
+                        children: [null != E ? (0, i.jsx)(o.Text, {
                             color: "text-normal",
                             variant: "text-md/normal",
                             className: u.spacing,
-                            children: h
+                            children: E
                         }) : null, v, I, (0, i.jsxs)(o.FormItem, {
                             title: this.getLabelText(),
                             className: u.spacing,

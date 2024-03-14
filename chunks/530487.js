@@ -21,13 +21,13 @@ function(e, t, n) {
             permissions: n,
             deniedPermissions: f,
             onPermissionsChange: _,
-            guild: h
-        } = e, E = s.useMemo(() => r.default.invert(h.permissions), [h.permissions]);
+            guild: E
+        } = e, h = s.useMemo(() => r.default.invert(E.permissions), [E.permissions]);
         s.useEffect(() => {
-            _(!1, r.default.filter(n, E))
-        }, [E, _, n]);
+            _(!1, r.default.filter(n, h))
+        }, [h, _, n]);
         let g = u.OrderedPermissions.filter(e => r.default.has(n, e)),
-            m = g.filter(e => !r.default.has(E, e)).map(e => {
+            m = g.filter(e => !r.default.has(h, e)).map(e => {
                 let t = (0, u.getPermissionName)(e),
                     n = !r.default.has(f, e);
                 return (0, i.jsx)("li", {
@@ -43,7 +43,7 @@ function(e, t, n) {
                     })
                 }, String(e))
             }),
-            p = g.filter(e => r.default.has(E, e)).map(e => {
+            p = g.filter(e => r.default.has(h, e)).map(e => {
                 let t = (0, u.getPermissionName)(e);
                 return (0, i.jsxs)("li", {
                     className: c.permission,
@@ -67,7 +67,7 @@ function(e, t, n) {
                     className: c.permissionsLabel,
                     children: d.default.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
                         applicationName: t.name,
-                        guildName: h.name
+                        guildName: E.name
                     })
                 }), (0, i.jsx)("ul", {
                     className: c.permissionsList,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MenuSearchControl: function() {
-            return h
+            return E
         }
     });
     var i = n("37983"),
@@ -16,10 +16,10 @@ function(e, t, n) {
         c = n("229915"),
         f = n("782340"),
         _ = n("523634");
-    let h = s.forwardRef(function(e, t) {
-        var n, r, h;
+    let E = s.forwardRef(function(e, t) {
+        var n, r, E;
         let {
-            query: E,
+            query: h,
             onChange: g,
             loading: m = !1,
             disabled: p = !1,
@@ -37,7 +37,7 @@ function(e, t, n) {
             },
             activate: () => !1
         }), []);
-        let C = (n = E, r = m, h = g, r ? (0, i.jsx)("div", {
+        let C = (n = h, r = m, E = g, r ? (0, i.jsx)("div", {
             className: _.iconContainer,
             children: (0, i.jsx)(u.Spinner, {
                 type: u.Spinner.Type.SPINNING_CIRCLE,
@@ -47,7 +47,7 @@ function(e, t, n) {
             "aria-label": f.default.Messages.SEARCH_CLEAR,
             className: a(_.iconContainer, _.iconClickable),
             onClick: e => {
-                e.stopPropagation(), h("")
+                e.stopPropagation(), E("")
             },
             onMouseDown: e => {
                 e.preventDefault(), e.stopPropagation()
@@ -92,7 +92,7 @@ function(e, t, n) {
                     "aria-busy": m,
                     ref: I,
                     className: _.input,
-                    value: E,
+                    value: h,
                     onChange: e => g(e.currentTarget.value),
                     "aria-label": v,
                     placeholder: S,

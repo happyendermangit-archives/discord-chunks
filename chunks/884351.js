@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("290689"),
         f = n("804888"),
         _ = n("401690"),
-        h = n("845579"),
-        E = n("42203"),
+        E = n("845579"),
+        h = n("42203"),
         g = n("923959"),
         m = n("26989"),
         p = n("305961"),
@@ -71,7 +71,7 @@ function(e, t, n) {
         }
     }
 
-    function M(e) {
+    function L(e) {
         return {
             match: a.anyScopeRegex(e),
             parse: e => ({
@@ -80,7 +80,7 @@ function(e, t, n) {
             })
         }
     }
-    let L = d.default.RULES,
+    let M = d.default.RULES,
         b = c.default,
         U = /^<@!?(\d+)>/,
         w = /^<@&(\d+)>/,
@@ -91,12 +91,12 @@ function(e, t, n) {
             link: P(a.defaultRules.link),
             autolink: P(a.defaultRules.autolink),
             url: P(a.defaultRules.url),
-            inlineCode: P(L.inlineCode),
-            codeBlock: P(L.codeBlock),
-            rawUserMention: M(U),
-            rawRoleMention: M(w),
-            rawChannelMention: M(k),
-            rawEmoji: M(V),
+            inlineCode: P(M.inlineCode),
+            codeBlock: P(M.codeBlock),
+            rawUserMention: L(U),
+            rawRoleMention: L(w),
+            rawChannelMention: L(k),
+            rawEmoji: L(V),
             mention: {
                 match(e, t, n) {
                     let i = n.split(" ").pop() + e;
@@ -163,7 +163,7 @@ function(e, t, n) {
             },
             emoticon: {
                 match(e, t, n) {
-                    if (!h.ConvertEmoticons.getSetting() || 0 !== n.length && !/\s$/.test(n)) return null;
+                    if (!E.ConvertEmoticons.getSetting() || 0 !== n.length && !/\s$/.test(n)) return null;
                     let i = u.default.EMOJI_SHORTCUT_RE.exec(e);
                     return null == i || i[0].length !== e.length && " " !== e[i[0].length] && "\n" !== e[i[0].length] ? null : i
                 },
@@ -174,7 +174,7 @@ function(e, t, n) {
                 })
             },
             emoji: {
-                order: L.emoji.order,
+                order: M.emoji.order,
                 match: e => u.default.EMOJI_NAME_RE.exec(e),
                 parse(e, t, n) {
                     let [i, s] = e, {
@@ -219,8 +219,8 @@ function(e, t, n) {
             }
         },
         x = {
-            inlineCode: P(L.inlineCode),
-            codeBlock: P(L.codeBlock),
+            inlineCode: P(M.inlineCode),
+            codeBlock: P(M.codeBlock),
             mention: {
                 match: a.anyScopeRegex(U),
                 parse(e, t, n) {
@@ -264,7 +264,7 @@ function(e, t, n) {
             channel: {
                 match: a.anyScopeRegex(k),
                 parse(e) {
-                    let t = E.default.getChannel(e[1]);
+                    let t = h.default.getChannel(e[1]);
                     return {
                         content: null == t ? e[0] : (0, o.computeChannelName)(t, I.default, v.default, !0, !0)
                     }
@@ -303,10 +303,10 @@ function(e, t, n) {
                 })
             },
             timestamp: {
-                ...L.timestamp,
+                ...M.timestamp,
                 parse() {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    let i = L.timestamp.parse(...t);
+                    let i = M.timestamp.parse(...t);
                     return {
                         content: i.formatted
                     }
@@ -412,8 +412,8 @@ function(e, t, n) {
                 text: e.name
             })),
             f = l.default.getDisambiguatedEmojiContext(n),
-            h = f.getEscapedCustomEmoticonNames(),
-            E = f.getCustomEmoji(),
+            E = f.getEscapedCustomEmoticonNames(),
+            h = f.getCustomEmoji(),
             v = f.getCustomEmoticonRegex(),
             T = {
                 inline: !0,
@@ -423,8 +423,8 @@ function(e, t, n) {
                 channels: u.concat(d).concat(c),
                 emojiContext: f,
                 customEmoticonsRegex: v,
-                customEmoji: E,
-                textExclusions: h,
+                customEmoji: h,
+                textExclusions: E,
                 disableErrorGuards: !0
             };
         return T
@@ -457,7 +457,7 @@ function(e, t, n) {
             return B(t, n)
         },
         unparse(e, t, n) {
-            let i = E.default.getChannel(t),
+            let i = h.default.getChannel(t),
                 r = null != i ? i.getGuildId() : null,
                 o = null != r ? p.default.getGuild(r) : null,
                 l = n ? x : s.omit(x, ["spoiler", "timestamp"]),

@@ -28,8 +28,8 @@ function(e, t, n) {
         c = n("449008"),
         f = n("271938"),
         _ = n("455079"),
-        h = n("49111"),
-        E = n("646718");
+        E = n("49111"),
+        h = n("646718");
     let g = {},
         m = 0,
         p = "47835198259242069";
@@ -87,7 +87,7 @@ function(e, t, n) {
         if (!e) return t;
         let n = a.default.getPremiumTypeOverride(),
             i = a.default.getPremiumTypeActual();
-        return n === E.UNSELECTED_PREMIUM_TYPE_OVERRIDE ? i : n
+        return n === h.UNSELECTED_PREMIUM_TYPE_OVERRIDE ? i : n
     }
 
     function A(e, t) {
@@ -168,14 +168,14 @@ function(e, t, n) {
         t.id !== f.default.getId() && I(t)
     }
 
-    function M(e) {
+    function L(e) {
         let {
             user: t
         } = e;
         I(t)
     }
 
-    function L(e) {
+    function M(e) {
         let {
             user: t
         } = e;
@@ -284,9 +284,9 @@ function(e, t, n) {
         let {
             message: t
         } = e;
-        if (A(t, !0), null != t.flags && d.hasFlag(t.flags, h.MessageFlags.URGENT)) {
+        if (A(t, !0), null != t.flags && d.hasFlag(t.flags, E.MessageFlags.URGENT)) {
             let e = g[f.default.getId()];
-            return null != e && (g[f.default.getId()] = e.set("flags", d.setFlag(e.flags, h.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
+            return null != e && (g[f.default.getId()] = e.set("flags", d.setFlag(e.flags, E.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
         }
         return !1
     }
@@ -499,7 +499,7 @@ function(e, t, n) {
         })
     }
 
-    function eh(e) {
+    function eE(e) {
         let {
             request: t
         } = e, {
@@ -509,7 +509,7 @@ function(e, t, n) {
         return null != n && (s = s || I(n)), null != i && (s = s || I(i)), s
     }
 
-    function eE(e) {
+    function eh(e) {
         let {
             integrations: t
         } = e;
@@ -651,11 +651,11 @@ function(e, t, n) {
             super({
                 CONNECTION_OPEN: N,
                 CONNECTION_OPEN_SUPPLEMENTAL: R,
-                UPDATE_CLIENT_PREMIUM_TYPE: L,
+                UPDATE_CLIENT_PREMIUM_TYPE: M,
                 OVERLAY_INITIALIZE: D,
                 CACHE_LOADED: e => this.handleLoadCache(e),
                 USER_UPDATE: P,
-                CURRENT_USER_UPDATE: M,
+                CURRENT_USER_UPDATE: L,
                 PRESENCE_UPDATES: z,
                 SEARCH_FINISH: w,
                 MOD_VIEW_SEARCH_FINISH: w,
@@ -673,8 +673,8 @@ function(e, t, n) {
                 GUILD_BAN_REMOVE: Q,
                 CHANNEL_RECIPIENT_ADD: Z,
                 CHANNEL_RECIPIENT_REMOVE: Z,
-                GUILD_JOIN_REQUEST_CREATE: eh,
-                GUILD_JOIN_REQUEST_UPDATE: eh,
+                GUILD_JOIN_REQUEST_CREATE: eE,
+                GUILD_JOIN_REQUEST_UPDATE: eE,
                 GUILD_MEMBER_ADD: J,
                 GUILD_MEMBER_UPDATE: J,
                 GUILD_MEMBERS_CHUNK: $,
@@ -703,7 +703,7 @@ function(e, t, n) {
                 LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: F,
                 PASSIVE_UPDATE_V1: ee,
                 LOCAL_MESSAGES_LOADED: et,
-                FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eE,
+                FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eh,
                 PRIVATE_CHANNEL_INTEGRATION_CREATE: eg,
                 PRIVATE_CHANNEL_INTEGRATION_UPDATE: em,
                 FAMILY_CENTER_INITIAL_LOAD: ep,

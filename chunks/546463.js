@@ -15,8 +15,8 @@ function(e, t, n) {
     let c = "GameStoreReportedGames",
         f = {},
         _ = {},
-        h = {},
-        E = null !== (s = a.default.get(c)) && void 0 !== s ? s : {},
+        E = {},
+        h = null !== (s = a.default.get(c)) && void 0 !== s ? s : {},
         g = "";
     let m = null;
 
@@ -38,7 +38,7 @@ function(e, t, n) {
         let t = e instanceof u.default ? p(e) : e;
         for (let n of (f[e.id] = t, _[e.name.toLowerCase()] = t, e.aliases)) _[n.toLowerCase()] = t;
         if ((0, d.isDesktop)())
-            for (let n of e.executables) h[n.name] = t
+            for (let n of e.executables) E[n.name] = t
     }
     class v extends r.default.PersistedStore {
         initialize(e) {
@@ -79,7 +79,7 @@ function(e, t, n) {
             return m
         }
         getGameByExecutable(e) {
-            return h[e]
+            return E[e]
         }
         getGameByGameData(e) {
             var t, n;
@@ -100,11 +100,11 @@ function(e, t, n) {
         }
         shouldReport(e) {
             let t = null != this.getGameByName(e),
-                n = null != E[e];
+                n = null != h[e];
             return l.ShowCurrentGame.getSetting() && !i && !(t || n)
         }
         markGameReported(e) {
-            E[e] = !0, a.default.set(c, E)
+            h[e] = !0, a.default.set(c, h)
         }
     }
     v.displayName = "GameStore", v.persistKey = "GameStore", v.migrations = [e => {

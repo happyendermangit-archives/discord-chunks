@@ -8,7 +8,7 @@ function(e, t, n) {
             return N
         },
         default: function() {
-            return M
+            return L
         }
     });
     var i = n("394846"),
@@ -22,8 +22,8 @@ function(e, t, n) {
         c = n("744983"),
         f = n("18494"),
         _ = n("162771"),
-        h = n("697218"),
-        E = n("49111"),
+        E = n("697218"),
+        h = n("49111"),
         g = n("724210"),
         m = n("843455");
     let p = "message_requests",
@@ -88,9 +88,9 @@ function(e, t, n) {
             }
         }
         getSection(e, t) {
-            if (I) return E.ChannelSections.SEARCH;
+            if (I) return h.ChannelSections.SEARCH;
             let n = y(e);
-            return null != n && null != C[n] ? E.ChannelSections.SIDEBAR_CHAT : t && T ? E.ChannelSections.PROFILE : v ? E.ChannelSections.SUMMARIES : S ? E.ChannelSections.MEMBERS : E.ChannelSections.NONE
+            return null != n && null != C[n] ? h.ChannelSections.SIDEBAR_CHAT : t && T ? h.ChannelSections.PROFILE : v ? h.ChannelSections.SUMMARIES : S ? h.ChannelSections.MEMBERS : h.ChannelSections.NONE
         }
         getSidebarState(e) {
             let t = y(e);
@@ -114,12 +114,12 @@ function(e, t, n) {
         }
     }
     P.displayName = "ChannelSectionStore", P.persistKey = "ChannelSectionStore2";
-    var M = new P(r.default, {
+    var L = new P(r.default, {
         CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
             v && (v = R(v)), S = R(S)
         },
         PROFILE_PANEL_TOGGLE_SECTION: function() {
-            !T && o.ComponentDispatch.dispatch(E.ComponentActions.SEARCH_RESULTS_CLOSE), T = R(T)
+            !T && o.ComponentDispatch.dispatch(h.ComponentActions.SEARCH_RESULTS_CLOSE), T = R(T)
         },
         CHANNEL_TOGGLE_SUMMARIES_SECTION: function() {
             S && (S = R(S)), v = R(v)
@@ -202,7 +202,7 @@ function(e, t, n) {
             let {
                 channel: n
             } = e;
-            if (n.ownerId === (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
+            if (n.ownerId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
             let i = C[n.parent_id];
             null != i && i.type === a.SidebarType.CREATE_THREAD && i.parentMessageId === l.default.castChannelIdAsMessageId(n.id) && (C[n.parent_id] = {
                 type: a.SidebarType.VIEW_THREAD,

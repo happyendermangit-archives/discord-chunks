@@ -38,7 +38,7 @@ function(e, t, n) {
             return P
         },
         isTextChannel: function() {
-            return M
+            return L
         },
         isVoiceChannel: function() {
             return b
@@ -107,7 +107,7 @@ function(e, t, n) {
             return e_
         },
         PrivateChannelRecord: function() {
-            return eE
+            return eh
         },
         DMChannelRecord: function() {
             return eg
@@ -136,11 +136,11 @@ function(e, t, n) {
         c = n("568734"),
         f = n("49111"),
         _ = n("724210"),
-        h = n("333188");
-    let E = new Set([f.ChannelTypes.GUILD_TEXT, f.ChannelTypes.GUILD_ANNOUNCEMENT, f.ChannelTypes.GUILD_STORE, f.ChannelTypes.ANNOUNCEMENT_THREAD, f.ChannelTypes.PUBLIC_THREAD, f.ChannelTypes.PRIVATE_THREAD, f.ChannelTypes.GUILD_DIRECTORY, f.ChannelTypes.GUILD_FORUM, f.ChannelTypes.GUILD_MEDIA, f.ChannelTypes.DM, f.ChannelTypes.GROUP_DM]);
+        E = n("333188");
+    let h = new Set([f.ChannelTypes.GUILD_TEXT, f.ChannelTypes.GUILD_ANNOUNCEMENT, f.ChannelTypes.GUILD_STORE, f.ChannelTypes.ANNOUNCEMENT_THREAD, f.ChannelTypes.PUBLIC_THREAD, f.ChannelTypes.PRIVATE_THREAD, f.ChannelTypes.GUILD_DIRECTORY, f.ChannelTypes.GUILD_FORUM, f.ChannelTypes.GUILD_MEDIA, f.ChannelTypes.DM, f.ChannelTypes.GROUP_DM]);
 
     function g(e) {
-        return E.has(e)
+        return h.has(e)
     }
     let m = new Set([f.ChannelTypes.DM, f.ChannelTypes.GROUP_DM, f.ChannelTypes.GUILD_TEXT, f.ChannelTypes.GUILD_VOICE, f.ChannelTypes.GUILD_STAGE_VOICE, f.ChannelTypes.GUILD_CATEGORY, f.ChannelTypes.GUILD_ANNOUNCEMENT, f.ChannelTypes.GUILD_STORE, f.ChannelTypes.ANNOUNCEMENT_THREAD, f.ChannelTypes.PUBLIC_THREAD, f.ChannelTypes.PRIVATE_THREAD, f.ChannelTypes.GUILD_DIRECTORY, f.ChannelTypes.GUILD_FORUM, f.ChannelTypes.GUILD_MEDIA]),
         p = new Set([f.ChannelTypes.GUILD_TEXT, f.ChannelTypes.GUILD_ANNOUNCEMENT, f.ChannelTypes.ANNOUNCEMENT_THREAD, f.ChannelTypes.PUBLIC_THREAD, f.ChannelTypes.PRIVATE_THREAD]);
@@ -173,13 +173,13 @@ function(e, t, n) {
     }
     let P = new Set([f.ChannelTypes.DM, f.ChannelTypes.GROUP_DM, f.ChannelTypes.GUILD_TEXT, f.ChannelTypes.GUILD_ANNOUNCEMENT, f.ChannelTypes.ANNOUNCEMENT_THREAD, f.ChannelTypes.PUBLIC_THREAD, f.ChannelTypes.PRIVATE_THREAD]);
 
-    function M(e) {
+    function L(e) {
         return P.has(e)
     }
-    let L = new Set([f.ChannelTypes.DM, f.ChannelTypes.GROUP_DM, f.ChannelTypes.GUILD_VOICE, f.ChannelTypes.GUILD_STAGE_VOICE, f.ChannelTypes.PUBLIC_THREAD, f.ChannelTypes.PRIVATE_THREAD]);
+    let M = new Set([f.ChannelTypes.DM, f.ChannelTypes.GROUP_DM, f.ChannelTypes.GUILD_VOICE, f.ChannelTypes.GUILD_STAGE_VOICE, f.ChannelTypes.PUBLIC_THREAD, f.ChannelTypes.PRIVATE_THREAD]);
 
     function b(e) {
-        return L.has(e)
+        return M.has(e)
     }
     let U = new Set([f.ChannelTypes.GUILD_TEXT, f.ChannelTypes.GUILD_ANNOUNCEMENT, f.ChannelTypes.ANNOUNCEMENT_THREAD, f.ChannelTypes.PUBLIC_THREAD, f.ChannelTypes.PRIVATE_THREAD, f.ChannelTypes.GUILD_DIRECTORY, f.ChannelTypes.GUILD_FORUM, f.ChannelTypes.GUILD_MEDIA, f.ChannelTypes.DM, f.ChannelTypes.GROUP_DM]);
 
@@ -245,11 +245,11 @@ function(e, t, n) {
     function en(e) {
         if (null == e) return null;
         switch (e.type) {
-            case h.VoiceCallBackgroundTypes.EMPTY:
+            case E.VoiceCallBackgroundTypes.EMPTY:
                 return {
                     type: e.type
                 };
-            case h.VoiceCallBackgroundTypes.GRADIENT:
+            case E.VoiceCallBackgroundTypes.GRADIENT:
                 return {
                     type: e.type, resourceId: e.resource_id
                 };
@@ -589,7 +589,7 @@ function(e, t, n) {
             super(e), this.application_id = e.application_id, this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration, this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser, this.flags_ = e.flags_, this.iconEmoji = e.iconEmoji, this.lastMessageId = e.lastMessageId, this.lastPinTimestamp = e.lastPinTimestamp, this.memberListId = e.memberListId, this.nsfw_ = e.nsfw_, this.parent_id = e.parent_id, this.permissionOverwrites_ = null !== (t = e.permissionOverwrites_) && void 0 !== t ? t : {}, this.position_ = e.position_, this.rateLimitPerUser_ = e.rateLimitPerUser_, this.themeColor = e.themeColor, this.topic_ = e.topic_, this.version = e.version
         }
     }
-    class eh extends ed {
+    class eE extends ed {
         static fromServer(e, t) {
             var n, i, s, r;
             let a = {
@@ -621,14 +621,14 @@ function(e, t, n) {
                 type: null != e.type ? e.type : f.ChannelTypes.GUILD_TEXT,
                 version: e.version
             };
-            return (0, l.dangerouslyCast)(a, eh)
+            return (0, l.dangerouslyCast)(a, eE)
         }
         constructor(e) {
             var t, n;
             super(e), this.availableTags = null !== (t = e.availableTags) && void 0 !== t ? t : [], this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration, this.defaultForumLayout = e.defaultForumLayout, this.defaultReactionEmoji = e.defaultReactionEmoji, this.defaultSortOrder = e.defaultSortOrder, this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser, this.flags_ = e.flags_, this.iconEmoji = e.iconEmoji, this.lastMessageId = e.lastMessageId, this.lastPinTimestamp = e.lastPinTimestamp, this.memberListId = e.memberListId, this.nsfw_ = e.nsfw_, this.parent_id = e.parent_id, this.permissionOverwrites_ = null !== (n = e.permissionOverwrites_) && void 0 !== n ? n : {}, this.position_ = e.position_, this.rateLimitPerUser_ = e.rateLimitPerUser_, this.template = e.template, this.themeColor = e.themeColor, this.topic_ = e.topic_, this.version = e.version
         }
     }
-    class eE extends ed {
+    class eh extends ed {
         static fromServer(e) {
             var t, n;
             let i = {
@@ -650,7 +650,7 @@ function(e, t, n) {
                 safetyWarnings: e.safety_warnings,
                 type: null != e.type ? e.type : f.ChannelTypes.DM
             };
-            return (0, l.dangerouslyCast)(i, eE)
+            return (0, l.dangerouslyCast)(i, eh)
         }
         isSystemDM() {
             let e = this.rawRecipients[0];
@@ -678,7 +678,7 @@ function(e, t, n) {
             super(e), this.application_id = e.application_id, this.flags_ = e.flags_, this.icon = e.icon, this.isMessageRequest = e.isMessageRequest, this.isMessageRequestTimestamp = e.isMessageRequestTimestamp, this.isSpam = e.isSpam, this.lastMessageId = e.lastMessageId, this.lastPinTimestamp = e.lastPinTimestamp, this.nicks = e.nicks, this.ownerId = e.ownerId, this.rawRecipients = null !== (t = e.rawRecipients) && void 0 !== t ? t : [], this.recipients = null !== (n = e.recipients) && void 0 !== n ? n : [], this.safetyWarnings = null !== (i = e.safetyWarnings) && void 0 !== i ? i : []
         }
     }
-    class eg extends eE {}
+    class eg extends eh {}
     class em extends ed {
         static fromServer(e, t) {
             var n, i, s, r, a;
@@ -727,8 +727,8 @@ function(e, t, n) {
         }
     }
     let ep = {
-        [f.ChannelTypes.DM]: eE.fromServer,
-        [f.ChannelTypes.GROUP_DM]: eE.fromServer,
+        [f.ChannelTypes.DM]: eh.fromServer,
+        [f.ChannelTypes.GROUP_DM]: eh.fromServer,
         [f.ChannelTypes.GUILD_TEXT]: e_.fromServer,
         [f.ChannelTypes.GUILD_VOICE]: ef.fromServer,
         [f.ChannelTypes.GUILD_STAGE_VOICE]: ef.fromServer,
@@ -739,8 +739,8 @@ function(e, t, n) {
         [f.ChannelTypes.PUBLIC_THREAD]: em.fromServer,
         [f.ChannelTypes.PRIVATE_THREAD]: em.fromServer,
         [f.ChannelTypes.GUILD_DIRECTORY]: e_.fromServer,
-        [f.ChannelTypes.GUILD_FORUM]: eh.fromServer,
-        [f.ChannelTypes.GUILD_MEDIA]: eh.fromServer
+        [f.ChannelTypes.GUILD_FORUM]: eE.fromServer,
+        [f.ChannelTypes.GUILD_MEDIA]: eE.fromServer
     };
 
     function eS(e, t) {
@@ -754,7 +754,7 @@ function(e, t, n) {
     }
     let eT = {
         [f.ChannelTypes.DM]: eg,
-        [f.ChannelTypes.GROUP_DM]: class e extends eE {},
+        [f.ChannelTypes.GROUP_DM]: class e extends eh {},
         [f.ChannelTypes.GUILD_TEXT]: class e extends e_ {},
         [f.ChannelTypes.GUILD_VOICE]: class e extends ef {},
         [f.ChannelTypes.GUILD_STAGE_VOICE]: class e extends ef {},
@@ -765,8 +765,8 @@ function(e, t, n) {
         [f.ChannelTypes.PUBLIC_THREAD]: em,
         [f.ChannelTypes.PRIVATE_THREAD]: em,
         [f.ChannelTypes.GUILD_DIRECTORY]: class e extends e_ {},
-        [f.ChannelTypes.GUILD_FORUM]: eh,
-        [f.ChannelTypes.GUILD_MEDIA]: eh
+        [f.ChannelTypes.GUILD_FORUM]: eE,
+        [f.ChannelTypes.GUILD_MEDIA]: eE
     };
 
     function eI(e) {

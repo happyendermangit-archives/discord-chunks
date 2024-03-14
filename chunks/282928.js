@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("668273"),
         f = n("168973"),
         _ = n("599110"),
-        h = n("994440"),
-        E = n("718517"),
+        E = n("994440"),
+        h = n("718517"),
         g = n("286235"),
         m = n("980134"),
         p = n("966724"),
@@ -42,11 +42,11 @@ function(e, t, n) {
         }
         retryOpts() {
             return this.item.platform === p.UploadPlatform.REACT_NATIVE ? {
-                timeout: 1 * E.default.Millis.HOUR,
-                backoff: new o.default(.5 * E.default.Millis.SECOND, 30 * E.default.Millis.MINUTE),
+                timeout: 1 * h.default.Millis.HOUR,
+                backoff: new o.default(.5 * h.default.Millis.SECOND, 30 * h.default.Millis.MINUTE),
                 retries: 12
             } : {
-                timeout: 1 * E.default.Millis.HOUR,
+                timeout: 1 * h.default.Millis.HOUR,
                 retries: 12,
                 backoff: new o.default
             }
@@ -226,7 +226,7 @@ function(e, t, n) {
                 return
             }
             T.log("Starting compression/conversion for ".concat(this.id));
-            let n = await (0, h.getAttachmentFile)(this, null !== (e = this.reactNativeFileIndex) && void 0 !== e ? e : 0);
+            let n = await (0, E.getAttachmentFile)(this, null !== (e = this.reactNativeFileIndex) && void 0 !== e ? e : 0);
             if (null == n || null == n.file) return;
             let i = n.uri,
                 s = n.file.name,

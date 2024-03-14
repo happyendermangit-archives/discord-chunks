@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return h
         }
     });
     var i = n("37983");
@@ -17,39 +17,39 @@ function(e, t, n) {
         c = n("49111"),
         f = n("52904"),
         _ = n("782340"),
-        h = n("768416");
+        E = n("768416");
 
-    function E(e) {
+    function h(e) {
         let {
             id: t,
             user: n,
-            application: E,
+            application: h,
             bot: g,
             accountScopes: m,
             showLogout: p,
             location: S,
             isTrustedName: v
         } = e, T = l.default.getApplicationIconURL({
-            id: E.id,
-            icon: E.icon
+            id: h.id,
+            icon: h.icon
         }), I = l.default.getUserAvatarURL(n);
         return (0, i.jsxs)("header", {
             id: t,
-            className: h.header,
+            className: E.header,
             children: [(0, i.jsxs)("div", {
-                className: h.headerIcons,
+                className: E.headerIcons,
                 children: [(0, i.jsx)(s.Avatar, {
                     src: T,
                     size: f.AvatarSizes.SIZE_80,
-                    "aria-label": E.name
+                    "aria-label": h.name
                 }), (0, i.jsxs)("div", {
-                    className: h.ellipseGroup,
+                    className: E.ellipseGroup,
                     children: [(0, i.jsx)("div", {
-                        className: h.ellipse
+                        className: E.ellipse
                     }), (0, i.jsx)("div", {
-                        className: h.ellipse
+                        className: E.ellipse
                     }), (0, i.jsx)("div", {
-                        className: h.ellipse
+                        className: E.ellipse
                     })]
                 }), (0, i.jsx)(s.Avatar, {
                     src: I,
@@ -59,43 +59,43 @@ function(e, t, n) {
             }), !v && (0, i.jsx)(a.Text, {
                 variant: "text-md/medium",
                 color: "header-secondary",
-                className: h.label,
+                className: E.label,
                 children: _.default.Messages.OAUTH2_THIRD_PARTY_APPLICATION
             }), (0, i.jsxs)(a.Text, {
                 variant: "text-lg/bold",
                 color: "header-primary",
-                children: [E.name, null != g ? (0, i.jsx)(o.default, {
-                    className: h.botTag,
+                children: [h.name, null != g ? (0, i.jsx)(o.default, {
+                    className: E.botTag,
                     verified: null != g.public_flags && (0, u.hasFlag)(g.public_flags, c.UserFlags.VERIFIED_BOT)
                 }) : null]
             }), m.length > 0 ? (0, i.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                className: h.label,
+                className: E.label,
                 children: _.default.Messages.OAUTH2_REQUESTS_ACCOUNT_ACCESS
             }) : (0, i.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                className: h.label,
+                className: E.label,
                 children: _.default.Messages.OAUTH2_CONNECT_TO_DISCORD
             }), p ? (0, i.jsx)("div", {
-                className: h.currentUser,
+                className: E.currentUser,
                 children: (0, i.jsxs)(a.Text, {
                     variant: "text-sm/normal",
                     color: "text-muted",
                     children: [_.default.Messages.OAUTH2_SIGNED_IN_AS.format({
                         userHook: () => (0, i.jsxs)(a.Text, {
-                            className: h.currentUserTag,
+                            className: E.currentUserTag,
                             variant: "text-sm/normal",
                             children: [n.username, !n.isPomelo() && (0, i.jsx)(a.Text, {
-                                className: h.currentUserDiscriminator,
+                                className: E.currentUserDiscriminator,
                                 variant: "text-sm/normal",
                                 children: "#".concat(n.discriminator)
                             })]
                         }, n.id)
                     }), (0, i.jsx)(r.Clickable, {
                         tag: "a",
-                        className: h.logoutLink,
+                        className: E.logoutLink,
                         onClick: () => (0, d.logoutWithRedirect)(S),
                         children: _.default.Messages.OAUTH2_LOGOUT
                     })]

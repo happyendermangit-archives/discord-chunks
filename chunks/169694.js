@@ -174,7 +174,7 @@ function(e, t, n) {
                                             o = m.length > 0 ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(T.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
                                                 text: o
                                             });
-                                            let M = {
+                                            let R = {
                                                 type: "applicationCommand",
                                                 children: N,
                                                 command: {
@@ -184,7 +184,7 @@ function(e, t, n) {
                                                 }
                                             };
                                             S.EditorUtils.withoutNormalizing(e, () => {
-                                                for (let [, t] of(g.SlateTransforms.insertNodes(e, [M], {
+                                                for (let [, t] of(g.SlateTransforms.insertNodes(e, [R], {
                                                         at: C.FIRST_BLOCK_PATH
                                                     }), S.EditorUtils.blocks(e).reverse())) S.PathUtils.isAfter(t, C.FIRST_BLOCK_PATH) && g.SlateTransforms.removeNodes(e, {
                                                     at: t,
@@ -192,10 +192,10 @@ function(e, t, n) {
                                                 })
                                             });
                                             let k = null;
-                                            return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), k
+                                            return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && M(e, d), k
                                         }(t, a, n),
                                         i = x.getOptionValues(t, E);
-                                    return M({
+                                    return R({
                                         guildId: a.guild_id,
                                         channelId: a.id,
                                         command: E,
@@ -285,14 +285,14 @@ function(e, t, n) {
                                             }
                                         })
                                     }), !0)
-                                }(t, E) && R(t, E);
+                                }(t, E) && M(t, E);
                                 let e = x.getOptionValues(t, E),
                                     n = S.EditorUtils.above(t, {
                                         match: e => S.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                                         mode: "lowest"
                                     }),
                                     i = null !== (I = null == n ? void 0 : n[0].optionName) && void 0 !== I ? I : null;
-                                return M({
+                                return R({
                                     guildId: a.guild_id,
                                     channelId: a.id,
                                     command: E,
@@ -350,7 +350,7 @@ function(e, t, n) {
         })
     }
 
-    function R(e, t) {
+    function M(e, t) {
         if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || v.has(t.options[0].type) || x.getOptionNames(e).length > 0) return !1;
         let n = x.getCommandBlock(e);
         if (null == n) return !1;
@@ -379,7 +379,7 @@ function(e, t, n) {
         }), !0)
     }
 
-    function M(e) {
+    function R(e) {
         let {
             guildId: t,
             channelId: n,

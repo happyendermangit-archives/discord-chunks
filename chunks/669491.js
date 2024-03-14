@@ -16,10 +16,10 @@ function(e, t, n) {
         c = n("891600"),
         f = n("790217"),
         _ = n("593251"),
-        h = n("130285");
+        E = n("130285");
     let {
-        Themes: E
-    } = h._private, {
+        Themes: h
+    } = E._private, {
         SemanticColors: g,
         RawColors: m
     } = u._private, {
@@ -29,7 +29,7 @@ function(e, t, n) {
     } = _._private, {
         Modules: v
     } = d._private, T = l(m, e => s(e)), I = {
-        themes: E,
+        themes: h,
         modules: v,
         colors: l(g, (e, t) => ({
             css: N(t),

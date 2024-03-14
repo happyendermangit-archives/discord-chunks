@@ -22,8 +22,8 @@ function(e, t, n) {
             disabled: c = !1,
             keepItemStyles: f = !1,
             menuItemProps: _,
-            action: h,
-            dontCloseOnActionIfHoldingShiftKey: E,
+            action: E,
+            dontCloseOnActionIfHoldingShiftKey: h,
             dontCloseOnAction: g,
             onClose: m
         } = e, p = s.useRef(null);
@@ -31,9 +31,9 @@ function(e, t, n) {
             r && (0, l.ensureItemVisible)(p)
         }, [r]);
         let S = s.useCallback(e => {
-                if (null == h) return !1;
-                !(e.shiftKey && E) && !g && m(), e.persist(), requestAnimationFrame(() => h(e))
-            }, [h, m, E, g]),
+                if (null == E) return !1;
+                !(e.shiftKey && h) && !g && m(), e.persist(), requestAnimationFrame(() => E(e))
+            }, [E, m, h, g]),
             v = f ? a(d.item, u.MENU_ITEM_COLORS[n], {
                 [d.focused]: r
             }) : d.customItem;

@@ -61,8 +61,8 @@ function(e, t, n) {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: "1710392102832",
-                            build_number: "275087"
+                            built_at: "1710430684025",
+                            build_number: "275115"
                         }
                     },
                     retries: 1

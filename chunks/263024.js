@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("271938"),
         f = n("42203"),
         _ = n("957255"),
-        h = n("449008"),
-        E = n("821343"),
+        E = n("449008"),
+        h = n("821343"),
         g = n("755624"),
         m = n("487269"),
         p = n("25932"),
@@ -265,7 +265,7 @@ function(e, t, n) {
             })
         },
         loadArchivedThreads(e, t, n, a, o) {
-            !E.default.isLoading(t, n, a) && (r.default.dispatch({
+            !h.default.isLoading(t, n, a) && (r.default.dispatch({
                 type: "LOAD_ARCHIVED_THREADS",
                 channelId: t,
                 sortOrder: n,
@@ -276,7 +276,7 @@ function(e, t, n) {
                     archived: !0,
                     sort_by: "last_message_time",
                     sort_order: "desc",
-                    limit: E.PAGE_SIZE,
+                    limit: h.PAGE_SIZE,
                     tag: a.size > 0 ? Array.from(a).join(",") : void 0,
                     tag_setting: i.ThreadSearchTagSetting.MATCH_SOME,
                     offset: o
@@ -308,7 +308,7 @@ function(e, t, n) {
                     firstMessages: d,
                     mostRecentMessages: c,
                     members: (null != l ? l : []).map(e => (0, p.default)(e)),
-                    owners: s.map(e => e.owner).filter(h.isNotNullish),
+                    owners: s.map(e => e.owner).filter(E.isNotNullish),
                     hasMore: u
                 })
             }, () => {
