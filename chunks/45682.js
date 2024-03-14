@@ -64,18 +64,18 @@ function(e, t, n) {
             let e = N === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
             e && (A(y.ContentDismissActionType.DISMISS), setTimeout(() => M(e), 200))
         }, [N, A]);
-        let P = O ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? g.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : g.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-            b = O ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+        let b = O ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? g.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : g.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+            P = O ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
         return (0, i.jsxs)(c.TooltipContainer, {
             position: "top",
             text: (0, i.jsx)(I, {
                 textColor: "always-white",
-                tooltipText: P,
-                headingText: b
+                tooltipText: b,
+                headingText: P
             }),
             color: c.Tooltip.Colors.BRAND,
             forceOpen: O,
-            "aria-label": P,
+            "aria-label": b,
             tooltipClassName: S.tooltip,
             children: [(0, i.jsx)("input", {
                 className: S.visuallyHidden,

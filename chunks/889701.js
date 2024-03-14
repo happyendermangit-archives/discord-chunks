@@ -35,8 +35,8 @@ function(e, t, n) {
         R = n("161585"),
         k = n("585948"),
         L = n("234175"),
-        P = n("451300"),
-        b = n("668333"),
+        b = n("451300"),
+        P = n("668333"),
         j = n("313790"),
         U = n("908408"),
         D = n("641680"),
@@ -76,7 +76,7 @@ function(e, t, n) {
                 [el, ea] = (0, h.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], r.default),
                 es = l.useRef("");
             l.useImperativeHandle(t, () => ({
-                onPickerOpen: eP
+                onPickerOpen: eb
             }));
             let er = (0, O.useFilteredStickerPackCategories)(u),
                 eo = 0 === er.filter(e => e.type !== R.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
@@ -157,7 +157,7 @@ function(e, t, n) {
                     gridNavigatorId: w.GRID_NAVIGATOR_ID
                 });
             l.useEffect(() => m.StickerPickerStore.resetStoreState, []);
-            let eP = () => {
+            let eb = () => {
                 let e = u.getGuildId(),
                     t = [];
                 if (null !== e) {
@@ -183,7 +183,7 @@ function(e, t, n) {
                 var e;
                 null === (e = en.current) || void 0 === e || e.focus()
             }, []);
-            let eb = l.useCallback(() => {
+            let eP = l.useCallback(() => {
                 Y(), T.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                     location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
                 }), (0, E.navigateToPremiumMarketingPage)()
@@ -197,7 +197,7 @@ function(e, t, n) {
                         stickersListRef: et,
                         channel: u
                     })
-                }), eo ? (0, i.jsx)(P.default, {
+                }), eo ? (0, i.jsx)(b.default, {
                     className: B.emptyState,
                     onClose: Y
                 }) : (0, i.jsxs)(i.Fragment, {
@@ -206,7 +206,7 @@ function(e, t, n) {
                         className: B.listWrapper,
                         id: w.GRID_NAVIGATOR_ID,
                         ...eR,
-                        children: null != eu ? (0, i.jsx)(b.default, {
+                        children: null != eu ? (0, i.jsx)(P.default, {
                             ref: et,
                             collapsedStickersCategories: ec,
                             filteredStickers: ep,
@@ -227,7 +227,7 @@ function(e, t, n) {
                         channel: u
                     })]
                 }), ei && (0, i.jsx)(U.StickersPremiumUpsell, {
-                    onLearnMore: eb
+                    onLearnMore: eP
                 })]
             })
         });

@@ -26,10 +26,10 @@ function(e, t, n) {
             return L
         },
         CommandMention: function() {
-            return P
+            return b
         },
         Timestamp: function() {
-            return b
+            return P
         }
     });
     var i = n("37983");
@@ -203,7 +203,7 @@ function(e, t, n) {
         })
     }
 
-    function P(e) {
+    function b(e) {
         let {
             text: t,
             id: n
@@ -213,7 +213,7 @@ function(e, t, n) {
         })
     }
 
-    function b(e) {
+    function P(e) {
         let {
             timestamp: t
         } = e;

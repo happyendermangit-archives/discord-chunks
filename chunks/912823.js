@@ -60,7 +60,7 @@ function(e, t, n) {
         })
     }
     var L = l.memo(function(e) {
-        var t, n, l, p, T, v, L, P, b;
+        var t, n, l, p, T, v, L, b, P;
         let {
             type: j,
             disabled: U,
@@ -126,10 +126,10 @@ function(e, t, n) {
                     disabled: U,
                     channel: D
                 }, "gift"))
-            }(null === (P = j.gifs) || void 0 === P ? void 0 : P.button) != null && null == K && z.push((0, i.jsx)(I.default, {
+            }(null === (b = j.gifs) || void 0 === b ? void 0 : b.button) != null && null == K && z.push((0, i.jsx)(I.default, {
                 disabled: U,
                 type: j
-            }, "gif")), (null === (b = j.stickers) || void 0 === b ? void 0 : b.button) != null && null == K && z.push((0, i.jsx)(A.default, {
+            }, "gif")), (null === (P = j.stickers) || void 0 === P ? void 0 : P.button) != null && null == K && z.push((0, i.jsx)(A.default, {
                 disabled: U,
                 type: j
             }, "sticker"))

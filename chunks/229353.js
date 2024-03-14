@@ -16949,6 +16949,7 @@ function(e, _, E) {
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "for {days}d",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "for {hours}h",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE: "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
-        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time"
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity"
     })
 }

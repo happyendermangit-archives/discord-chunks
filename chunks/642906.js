@@ -2,7 +2,7 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         PaymentContextProvider: function() {
-            return v
+            return b
         },
         PaymentContext: function() {
             return D
@@ -11,7 +11,7 @@ function(t, e, n) {
             return B
         },
         useForwardedPaymentContext: function() {
-            return b
+            return v
         }
     }), n("222007"), n("702976");
     var i = n("37983"),
@@ -45,15 +45,15 @@ function(t, e, n) {
         g = n("523591"),
         y = n("49111"),
         G = n("646718");
-    let [D, B, b] = (0, T.default)();
+    let [D, B, v] = (0, T.default)();
 
-    function v(t) {
+    function b(t) {
         var e, n;
         let {
             loadId: T,
             activeSubscription: B,
-            stepConfigs: b,
-            breadcrumbs: v = [],
+            stepConfigs: v,
+            breadcrumbs: b = [],
             skuIDs: H,
             isGift: K = !1,
             children: w,
@@ -87,8 +87,8 @@ function(t, e, n) {
             steps: tc,
             breadcrumbsData: td
         } = (0, F.default)({
-            stepConfigs: b,
-            breadcrumbs: v
+            stepConfigs: v,
+            breadcrumbs: b
         }), [tS, tE] = (0, L.default)(to), {
             paymentError: tf,
             paymentAuthenticationState: t_
@@ -109,7 +109,7 @@ function(t, e, n) {
             selectedPlan: tP,
             setSelectedSkuId: tN,
             setSelectedPlanId: tR
-        } = (0, C.default)(), [th, tU] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [tL, tm] = (0, o.useStateFromStoresArray)([g.default], () => [g.default.browserCheckoutState, g.default.loadId]), [tM, tF] = r.useState(null), [tO, tg] = r.useState(null), [ty, tG] = r.useState(null), [tD, tB] = r.useState(null), [tb, tv] = r.useState(null), [tH, tK] = r.useState(void 0), [tw, tY] = r.useState([]), tk = r.useMemo(() => null == tP || (0, A.isPremiumSubscriptionPlan)(tP.id), [tP]), tW = r.useRef(null != B ? B.planId : null);
+        } = (0, C.default)(), [th, tU] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [tL, tm] = (0, o.useStateFromStoresArray)([g.default], () => [g.default.browserCheckoutState, g.default.loadId]), [tM, tF] = r.useState(null), [tO, tg] = r.useState(null), [ty, tG] = r.useState(null), [tD, tB] = r.useState(null), [tv, tb] = r.useState(null), [tH, tK] = r.useState(void 0), [tw, tY] = r.useState([]), tk = r.useMemo(() => null == tP || (0, A.isPremiumSubscriptionPlan)(tP.id), [tP]), tW = r.useRef(null != B ? B.planId : null);
         r.useEffect(() => {
             null == tW.current && null != B && (tW.current = B.planId)
         }, [B]);
@@ -144,8 +144,8 @@ function(t, e, n) {
                 hasFetchedSubscriptionPlans: tt,
                 updatedSubscription: tD,
                 setUpdatedSubscription: tB,
-                subscriptionMetadataRequest: tb,
-                setSubscriptionMetadataRequest: tv,
+                subscriptionMetadataRequest: tv,
+                setSubscriptionMetadataRequest: tb,
                 hasFetchedPaymentSources: q,
                 paymentSources: Q,
                 hasPaymentSources: X,
@@ -161,7 +161,7 @@ function(t, e, n) {
                 step: to,
                 setStep: ts,
                 steps: tc,
-                stepConfigs: b,
+                stepConfigs: v,
                 breadcrumbs: td,
                 purchaseState: tS,
                 setPurchaseState: tE,

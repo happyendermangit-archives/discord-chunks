@@ -327,7 +327,6 @@ function(e, _, E) {
         PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_5: "No Text to Speech?",
         PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6: "How about you give thanks to your mail delivery person",
         PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6_ANSWER_1: "Okay",
-        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_7: "You're welcome :)",
-        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity"
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_7: "You're welcome :)"
     })
 }
