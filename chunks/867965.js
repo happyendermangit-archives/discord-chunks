@@ -88,8 +88,8 @@ function(e, t, n) {
         c = n("349778"),
         f = n("430475"),
         _ = n("994810"),
-        E = n("688169"),
-        h = n("318321"),
+        h = n("688169"),
+        E = n("318321"),
         g = n("49111");
 
     function m(e) {
@@ -101,7 +101,7 @@ function(e, t, n) {
             additionalTimes: a
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_SEEN_BATCH, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n,
                 sessionId: i
             }),
@@ -119,7 +119,7 @@ function(e, t, n) {
             numSearchResults: i
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_SEARCHED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
@@ -134,7 +134,7 @@ function(e, t, n) {
             channelId: n
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_SEARCH_CLEARED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
@@ -152,7 +152,7 @@ function(e, t, n) {
             location: o
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_TAG_FILTER_CLICKED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
@@ -170,7 +170,7 @@ function(e, t, n) {
             channelId: n
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_CREATE_NEW_POST_CLICKED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
@@ -184,7 +184,7 @@ function(e, t, n) {
             channelId: n
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_CREATE_NEW_POST_KEYBIND_USED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
@@ -202,17 +202,17 @@ function(e, t, n) {
         let c = l.default.getThreadSettings(u),
             f = null === (t = d.template) || void 0 === t ? void 0 : t.trim(),
             _ = l.default.getDraft(u, l.DraftType.FirstThreadMessage),
-            E = null == _ || 0 === _.length || (null == _ ? void 0 : _.trim()) === f,
+            h = null == _ || 0 === _.length || (null == _ ? void 0 : _.trim()) === f,
             m = (null == c ? void 0 : c.appliedTags) == null || (null == c ? void 0 : null === (n = c.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
             p = (null == c ? void 0 : c.name) == null || (null == c ? void 0 : null === (r = c.name) || void 0 === r ? void 0 : null === (i = r.trim()) || void 0 === i ? void 0 : i.length) === 0;
-        (!E || !m || !p) && s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+        (!h || !m || !p) && s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: u
             }),
             guild_id: a,
             channel_id: u,
-            applied_tag_ids: (0, h.getForumPostDraftAppliedTagIds)(u),
-            num_attachments: (0, h.getForumPostDraftNumAttachments)(u)
+            applied_tag_ids: (0, E.getForumPostDraftAppliedTagIds)(u),
+            num_attachments: (0, E.getForumPostDraftNumAttachments)(u)
         })
     }
 
@@ -222,7 +222,7 @@ function(e, t, n) {
             channelId: n
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
@@ -239,7 +239,7 @@ function(e, t, n) {
 
         function r() {
             s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_POST_CREATED, {
-                ...(0, h.collectForumPostAnalyticsMetadata)({
+                ...(0, E.collectForumPostAnalyticsMetadata)({
                     channelId: i
                 }),
                 guild_id: t,
@@ -259,7 +259,7 @@ function(e, t, n) {
             channelId: n
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_SCROLLED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
@@ -279,13 +279,13 @@ function(e, t, n) {
         u.default.track(g.AnalyticEvents.FORUM_CHANNEL_MORE_POSTS_LOADED, {
             ...(0, s.collectGuildAnalyticsMetadata)(t),
             ...(0, s.collectChannelAnalyticsMetadata)(o.default.getChannel(n)),
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
             channel_id: n,
             num_archived_threads: i,
-            num_active_threads: (0, h.getNumActiveThreads)(t, n),
+            num_active_threads: (0, E.getNumActiveThreads)(t, n),
             has_more_threads: r,
             filter_tag_ids: a,
             sort_order: l
@@ -300,7 +300,7 @@ function(e, t, n) {
             location: r
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_POST_CLICKED, {
-            ...(0, h.collectForumPostAnalyticsMetadata)({
+            ...(0, E.collectForumPostAnalyticsMetadata)({
                 channelId: i
             }),
             guild_id: t,
@@ -317,12 +317,12 @@ function(e, t, n) {
             sortOrder: i
         } = e;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_POSTS_SORTED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
             channel_id: n,
-            sort_type: (0, h.convertSortOrderToReadableString)(i),
+            sort_type: (0, E.convertSortOrderToReadableString)(i),
             sort_order: i,
             forum_channel_sort_order: i
         })
@@ -333,9 +333,9 @@ function(e, t, n) {
             guildId: t,
             channelId: n,
             forumLayout: r
-        } = e, a = (0, c.isForumActivityExperimentEnabled)(t) && r === i.ForumLayout.LIST ? E.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : r;
+        } = e, a = (0, c.isForumActivityExperimentEnabled)(t) && r === i.ForumLayout.LIST ? h.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : r;
         s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_LAYOUT_UPDATED, {
-            ...(0, h.collectForumAnalyticsMetadata)({
+            ...(0, E.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,

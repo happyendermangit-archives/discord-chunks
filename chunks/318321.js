@@ -34,8 +34,8 @@ function(e, t, n) {
         c = n("585722"),
         f = n("299039"),
         _ = n("430475"),
-        E = n("446480"),
-        h = n("589641"),
+        h = n("446480"),
+        E = n("589641"),
         g = n("369814"),
         m = n("49111"),
         p = n("724210"),
@@ -97,10 +97,10 @@ function(e, t, n) {
             forum_channel_available_tag_ids: null !== (s = null === (i = o.availableTags) || void 0 === i ? void 0 : i.map(e => e.id)) && void 0 !== s ? s : [],
             forum_channel_tag_required: o.hasFlag(p.ChannelFlags.REQUIRE_TAG),
             forum_channel_can_create_post: d.default.can(m.Permissions.SEND_MESSAGES, o),
-            forum_channel_filter_tag_ids: E.default.getFilterTagIdsAnalytics(),
-            forum_channel_sort_order: E.default.getSortOrderAnalytics(o.id),
+            forum_channel_filter_tag_ids: h.default.getFilterTagIdsAnalytics(),
+            forum_channel_sort_order: h.default.getSortOrderAnalytics(o.id),
             forum_channel_session_id: null != a ? a : v(o.id),
-            forum_channel_layout: E.default.getLayoutAnalytics(o.id),
+            forum_channel_layout: h.default.getLayoutAnalytics(o.id),
             forum_channel_default_sort_order: o.defaultSortOrder,
             forum_channel_default_layout: o.defaultForumLayout
         } : null
@@ -110,14 +110,14 @@ function(e, t, n) {
         var t, n, i, s, u, d, c;
         let {
             channelId: _,
-            sessionId: E
+            sessionId: h
         } = e, g = l.default.getChannel(_);
         if (null == g || !g.isForumPost()) return null;
         let m = l.default.getChannel(g.parent_id);
         return null != m && m.isForumLikeChannel() ? {
             ...N({
                 channelId: m.id,
-                sessionId: E
+                sessionId: h
             }),
             thread_approximate_member_count: a.default.getMemberCount(_),
             thread_approximate_message_count: o.default.getCount(_),
@@ -146,8 +146,8 @@ function(e, t, n) {
                 return null !== (n = null === (t = i.appliedTags) || void 0 === t ? void 0 : t.filter(e => a.has(e))) && void 0 !== n ? n : []
             }(g.id),
             forum_post_is_pinned: g.hasFlag(p.ChannelFlags.PINNED),
-            forum_post_is_new: null === (s = h.default.getReadStateSnapshotAnalytics(g.id)) || void 0 === s ? void 0 : s.isNew,
-            forum_post_is_unread: null === (u = h.default.getReadStateSnapshotAnalytics(g.id)) || void 0 === u ? void 0 : u.hasUnreads,
+            forum_post_is_new: null === (s = E.default.getReadStateSnapshotAnalytics(g.id)) || void 0 === s ? void 0 : s.isNew,
+            forum_post_is_unread: null === (u = E.default.getReadStateSnapshotAnalytics(g.id)) || void 0 === u ? void 0 : u.hasUnreads,
             forum_post_is_following: r.default.hasJoined(g.id),
             forum_post_attachment_mimetypes: function(e) {
                 let t = y(e);

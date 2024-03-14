@@ -41,7 +41,7 @@ function(e, t, n) {
 
     function _(e) {}
 
-    function E(e) {
+    function h(e) {
         return !1
     }
     n.r(t), n.d(t, {
@@ -79,7 +79,7 @@ function(e, t, n) {
             return _
         },
         useIsModalOpen: function() {
-            return E
+            return h
         }
     })
 }

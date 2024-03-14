@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("76393"),
         f = n("374014"),
         _ = n("373469"),
-        E = n("271938"),
-        h = n("950104"),
+        h = n("271938"),
+        E = n("950104"),
         g = n("42203"),
         m = n("18494"),
         p = n("280168"),
@@ -56,7 +56,7 @@ function(e, t, n) {
                 let n = ee(e) || W(t) ? A.ChannelModes.VIDEO : A.ChannelModes.VOICE;
                 n === A.ChannelModes.VOICE ? (delete L[e], delete M[e]) : L[e] = n
             }(n), function(e) {
-                let t = E.default.getId(),
+                let t = h.default.getId(),
                     n = G(e);
                 if (0 === n.size() || m.default.getVoiceChannelId() !== e) {
                     j(e, null);
@@ -144,7 +144,7 @@ function(e, t, n) {
             let n = m.default.getVoiceChannelId();
             null != n && !e.includes(n) && e.push(n);
             let i = c.default.getRemoteSessionId(),
-                s = T.default.getVoiceStateForSession(E.default.getId(), i);
+                s = T.default.getVoiceStateForSession(h.default.getId(), i);
             (null == s ? void 0 : s.channelId) != null && e.push(null == s ? void 0 : s.channelId), a.difference(R, e).forEach(K);
             let r = a.difference(e, R);
             return R = e, r
@@ -201,7 +201,7 @@ function(e, t, n) {
     }
     class et extends o.default.Store {
         initialize() {
-            this.waitFor(_.default, E.default, h.default, g.default, u.default, m.default, p.default, S.default, v.default, T.default), this.syncWith([u.default], q), this.syncWith([c.default], z)
+            this.waitFor(_.default, h.default, E.default, g.default, u.default, m.default, p.default, S.default, v.default, T.default), this.syncWith([u.default], q), this.syncWith([c.default], z)
         }
         getParticipantsVersion(e) {
             return G(e).version
@@ -363,7 +363,7 @@ function(e, t, n) {
                     let {
                         ownerId: e
                     } = (0, f.decodeStreamKey)(n);
-                    e === E.default.getId() && x(e, [t])
+                    e === h.default.getId() && x(e, [t])
                 } catch (e) {
                     y.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
                 }!W(i) && (b[t] = !1)
@@ -412,7 +412,7 @@ function(e, t, n) {
             let {
                 channelId: t,
                 selfStreamHidden: n
-            } = e, i = E.default.getId();
+            } = e, i = h.default.getId();
             if (n) {
                 let [e] = B(t), n = (0, f.isStreamKey)(e);
                 n && e.includes(i) && j(t, null)

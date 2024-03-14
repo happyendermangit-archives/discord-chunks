@@ -17,9 +17,9 @@ function(e, t, n) {
         var t, n, d, c, f;
         let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e || !a.THREAD_CHANNEL_TYPES.has(e.type)) return null;
-        let E = _ ? (0, i.getLastRouteChangeSource)() : void 0;
+        let h = _ ? (0, i.getLastRouteChangeSource)() : void 0;
         return {
-            location: E,
+            location: h,
             thread_approximate_member_count: s.default.getMemberCount(e.id),
             thread_approximate_message_count: r.default.getCount(e.id),
             thread_archived: (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,

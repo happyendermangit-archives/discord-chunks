@@ -35,7 +35,7 @@ function(e, t, n) {
         }
         let _ = Object.values(u).find(e => "succeeded" === e.state);
         if (void 0 === _) return null;
-        let E = [];
+        let h = [];
         for (let e of f) {
             let t = d[e.codecId];
             if (null == t) continue;
@@ -49,7 +49,7 @@ function(e, t, n) {
                 bytesSent: e.bytesSent,
                 packetsSent: e.packetsSent
             };
-            if ("audio" === e.kind) E.push({
+            if ("audio" === e.kind) h.push({
                 ...r,
                 type: "audio"
             });
@@ -59,7 +59,7 @@ function(e, t, n) {
                     width: e.frameWidth,
                     height: e.frameHeight
                 } : void 0;
-                E.push({
+                h.push({
                     ...r,
                     framesEncoded: e.framesEncoded,
                     keyFramesEncoded: e.keyFramesEncoded,
@@ -76,7 +76,7 @@ function(e, t, n) {
                 })
             }
         }
-        let h = {};
+        let E = {};
         for (let e of c) {
             let a = d[e.codecId];
             if (null == a) continue;
@@ -96,19 +96,19 @@ function(e, t, n) {
             };
             if ("audio" === e.kind) {
                 let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round(1e3 * e.jitterBufferDelay / e.jitterBufferEmittedCount) : 0;
-                null == h[o] && (h[o] = []), h[o].push({
+                null == E[o] && (E[o] = []), E[o].push({
                     ...l,
                     audioLevel: e.audioLevel,
                     jitter: 1e3 * e.jitter,
                     jitterBuffer: t
                 })
             } else if ("video" === e.kind) {
-                null == h[o] && (h[o] = []);
+                null == E[o] && (E[o] = []);
                 let t = null !== e.frameWidth ? {
                     width: e.frameWidth,
                     height: e.frameHeight
                 } : void 0;
-                h[o].push({
+                E[o].push({
                     ...l,
                     resolution: t,
                     framesDecoded: e.framesDecoded,
@@ -134,8 +134,8 @@ function(e, t, n) {
                 ping: g
             },
             rtp: {
-                inbound: h,
-                outbound: E
+                inbound: E,
+                outbound: h
             }
         }
     }

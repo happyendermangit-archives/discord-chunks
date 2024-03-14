@@ -47,8 +47,8 @@ function(e, t, n) {
                 }
             }
         })(),
-        E = "DeveloperOptionsStore",
-        h = {
+        h = "DeveloperOptionsStore",
+        E = {
             trace: !1,
             canary: !1,
             logGatewayEvents: !1,
@@ -62,21 +62,21 @@ function(e, t, n) {
             appDirectoryIncludesInactiveCollections: !1
         },
         g = {
-            ...h
+            ...E
         };
 
     function m(e) {
         g = {
-            ...h,
+            ...E,
             ...g,
             ...e
-        }, _.set(g.sourceMapsEnabled), o.default.set(E, g)
+        }, _.set(g.sourceMapsEnabled), o.default.set(h, g)
     }
     class p extends r.default.Store {
         initialize() {
-            let e = o.default.get(E);
+            let e = o.default.get(h);
             null != e && (g = {
-                ...h,
+                ...E,
                 ...e
             })
         }
@@ -122,7 +122,7 @@ function(e, t, n) {
     p.displayName = "DeveloperOptionsStore";
     var S = new p(l.default, {
         LOGOUT: function(e) {
-            m(h)
+            m(E)
         },
         CONNECTION_OPEN: function(e) {
             var t;

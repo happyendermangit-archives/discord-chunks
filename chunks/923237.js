@@ -22,20 +22,20 @@ function(e, t, n) {
             onClose: c,
             showScrollbar: f,
             className: _,
-            multiSelect: E,
-            ...h
+            multiSelect: h,
+            ...E
         } = e, g = s.useCallback(e => {
-            d(e), !E && (null == c || c())
-        }, [d, c, E]);
+            d(e), !h && (null == c || c())
+        }, [d, c, h]);
         return (0, i.jsx)(o.Dialog, {
             className: a(u.container, _, {
                 [u.scroller]: f
             }),
             children: (0, i.jsx)(l.Combobox, {
-                ...h,
+                ...E,
                 showScrollbar: f,
                 value: r,
-                multiSelect: E,
+                multiSelect: h,
                 onChange: g,
                 placeholder: n,
                 children: t,

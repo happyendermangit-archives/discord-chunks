@@ -14,14 +14,14 @@ function(e, t, n) {
         c = n("823348"),
         f = n("697218"),
         _ = n("284609"),
-        E = n("158998"),
-        h = n("404118"),
+        h = n("158998"),
+        E = n("404118"),
         g = n("272030"),
         m = n("49111"),
         p = n("782340");
 
     function S(e) {
-        (0, g.closeContextMenu)(), h.default.show(e)
+        (0, g.closeContextMenu)(), E.default.show(e)
     }
 
     function v(e, t, n) {
@@ -106,7 +106,7 @@ function(e, t, n) {
             }).then(() => {
                 null == t || t()
             }).catch(e => {
-                v(e, u, E.default.getUserTag(d))
+                v(e, u, h.default.getUserTag(d))
             })
         },
         acceptFriendRequest: e => T.addRelationship(e, function() {

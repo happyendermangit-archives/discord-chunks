@@ -11,10 +11,10 @@ function(e, t, n) {
             return _
         },
         AppPageTitle: function() {
-            return E
+            return h
         },
         usePageTitleManager: function() {
-            return h
+            return E
         }
     }), n("222007");
     var i = n("884691"),
@@ -71,11 +71,11 @@ function(e, t, n) {
         }, [...Object.values(e)])
     }
 
-    function E(e) {
+    function h(e) {
         return _(e), null
     }
 
-    function h() {
+    function E() {
         let {
             skipsSettingDefaultPageTitle: e
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};

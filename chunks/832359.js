@@ -37,8 +37,8 @@ function(e, t, n) {
             onReady: r,
             onResize: o,
             className: _,
-            ...E
-        } = e, h = s.useRef(null), g = s.useRef(null), m = s.useRef({
+            ...h
+        } = e, E = s.useRef(null), g = s.useRef(null), m = s.useRef({
             width: 0,
             height: 0
         }), p = s.useRef({
@@ -50,7 +50,7 @@ function(e, t, n) {
         return s.useLayoutEffect(() => {
             let {
                 current: e
-            } = h;
+            } = E;
             if (null != e) {
                 let t = document.createElement("video");
                 t.style.display = "block", t.style.width = "100%", t.style.height = "100%", t.autoplay = !0, t.muted = !0, t.addEventListener("pause", function() {
@@ -93,8 +93,8 @@ function(e, t, n) {
             }
         }, [n, t]), (0, i.jsx)("div", {
             className: a("media-engine-video", _),
-            ref: h,
-            ...E
+            ref: E,
+            ...h
         })
     }
     _.defaultProps = {

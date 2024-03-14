@@ -5,7 +5,7 @@ function(e, t, n) {
             return _
         },
         transitionToGuild: function() {
-            return E
+            return h
         }
     });
     var i = n("471706"),
@@ -28,7 +28,7 @@ function(e, t, n) {
         return null == a ? r : n
     }
 
-    function E(e, t) {
+    function h(e, t) {
         let n = !(0, r.isInMainTabsExperiment)() || (0, a.shouldHandleNewPanelsRoute)(e) ? _(e) : void 0;
         (0, d.transitionTo)(c.Routes.CHANNEL(e, n), {
             navigationReplace: (0, a.shouldHandleNewPanelsRoute)(e),

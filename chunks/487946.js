@@ -43,23 +43,23 @@ function(e, t, n) {
                 event: i.NetworkActionNames.INVITE_RESOLVE,
                 properties: e => {
                     var i, o, l, u, d, _;
-                    let E = e.body,
-                        h = (null === (i = e.body) || void 0 === i ? void 0 : i.code) === c.AbortCodes.USER_BANNED;
+                    let h = e.body,
+                        E = (null === (i = e.body) || void 0 === i ? void 0 : i.code) === c.AbortCodes.USER_BANNED;
                     return (0, s.exact)({
                         resolved: e.ok,
-                        guild_id: null == E ? void 0 : null === (o = E.guild) || void 0 === o ? void 0 : o.id,
-                        channel_id: null == E ? void 0 : null === (l = E.channel) || void 0 === l ? void 0 : l.id,
-                        channel_type: null == E ? void 0 : null === (u = E.channel) || void 0 === u ? void 0 : u.type,
-                        inviter_id: null == E ? void 0 : null === (d = E.inviter) || void 0 === d ? void 0 : d.id,
+                        guild_id: null == h ? void 0 : null === (o = h.guild) || void 0 === o ? void 0 : o.id,
+                        channel_id: null == h ? void 0 : null === (l = h.channel) || void 0 === l ? void 0 : l.id,
+                        channel_type: null == h ? void 0 : null === (u = h.channel) || void 0 === u ? void 0 : u.type,
+                        inviter_id: null == h ? void 0 : null === (d = h.inviter) || void 0 === d ? void 0 : d.id,
                         code: r.baseCode,
                         input_value: null == n ? void 0 : n.inputValue,
                         location: t,
                         authenticated: a.default.isAuthenticated(),
-                        size_total: null == E ? void 0 : E.approximate_member_count,
-                        size_online: null == E ? void 0 : E.approximate_presence_count,
-                        destination_user_id: null == E ? void 0 : null === (_ = E.target_user) || void 0 === _ ? void 0 : _.id,
-                        invite_type: f(E),
-                        user_banned: h
+                        size_total: null == h ? void 0 : h.approximate_member_count,
+                        size_online: null == h ? void 0 : h.approximate_presence_count,
+                        destination_user_id: null == h ? void 0 : null === (_ = h.target_user) || void 0 === _ ? void 0 : _.id,
+                        invite_type: f(h),
+                        user_banned: E
                     })
                 }
             }

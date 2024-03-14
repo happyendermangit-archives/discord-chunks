@@ -22,8 +22,8 @@ function(e, t, n) {
             onClick: n,
             className: r,
             children: _,
-            rel: E,
-            target: h,
+            rel: h,
+            target: E,
             useDefaultUnderlineStyles: g = !0,
             title: m,
             style: p,
@@ -38,8 +38,8 @@ function(e, t, n) {
                 }, r),
                 href: t,
                 onClick: n,
-                rel: null != E ? E : void 0,
-                target: null != h ? h : void 0,
+                rel: null != h ? h : void 0,
+                target: null != E ? E : void 0,
                 title: null != m ? m : void 0,
                 style: null != p ? p : void 0
             };

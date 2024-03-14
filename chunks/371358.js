@@ -8,10 +8,10 @@ function(e, t, n) {
             return _
         },
         fetchAllSubscriptionListingsDataForGuild: function() {
-            return E
+            return h
         },
         createSubscriptionGroupListing: function() {
-            return h
+            return E
         },
         fetchSubscriptionListingForPlan: function() {
             return g
@@ -58,7 +58,7 @@ function(e, t, n) {
             settings: n
         })
     }
-    async function E(e) {
+    async function h(e) {
         let {
             includeSoftDeleted: t = !0,
             countryCode: n
@@ -86,7 +86,7 @@ function(e, t, n) {
             })
         }
     }
-    async function h(e, t) {
+    async function E(e, t) {
         let n = await d.createGuildRoleSubscriptionGroupListing(e, t);
         return s.default.dispatch({
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING",

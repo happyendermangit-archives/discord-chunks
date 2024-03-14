@@ -8,7 +8,7 @@ function(e, t, n) {
             return _
         },
         useIsMonetizationReapplicationDisabled: function() {
-            return E
+            return h
         }
     });
     var i = n("884691"),
@@ -66,7 +66,7 @@ function(e, t, n) {
                 restrictionsLoading: r
             }
         },
-        E = e => {
+        h = e => {
             let t = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
                 {
                     restrictions: n,

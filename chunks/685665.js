@@ -32,11 +32,11 @@ function(e, t, n) {
 
     function f() {
         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-        let [o, l] = s.useState(n), f = s.useContext(u), _ = s.useMemo(() => c(f, o), [o, f]), E = s.useMemo(() => c(f, o.slice(0, o.length - 1)), [o, f]);
+        let [o, l] = s.useState(n), f = s.useContext(u), _ = s.useMemo(() => c(f, o), [o, f]), h = s.useMemo(() => c(f, o.slice(0, o.length - 1)), [o, f]);
         s.useEffect(() => {
             !a(n, o) && l(n)
         }, [n]);
-        let h = s.useCallback(e => {
+        let E = s.useCallback(e => {
             let {
                 children: t
             } = e;
@@ -46,9 +46,9 @@ function(e, t, n) {
             })
         }, [_]);
         return {
-            AnalyticsLocationProvider: h,
+            AnalyticsLocationProvider: E,
             analyticsLocations: _,
-            sourceAnalyticsLocations: E,
+            sourceAnalyticsLocations: h,
             newestAnalyticsLocation: null !== (e = _[_.length - 1]) && void 0 !== e ? e : null
         }
     }

@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("913144"),
         f = n("161454"),
         _ = n("583702"),
-        E = n("374014"),
-        h = n("582415"),
+        h = n("374014"),
+        E = n("582415"),
         g = n("537429"),
         m = n("773336"),
         p = n("373469"),
@@ -164,7 +164,7 @@ function(e, t, n) {
                 appContext: s,
                 pid: r,
                 sourceId: a
-            } = e, o = (0, E.encodeStreamKey)({
+            } = e, o = (0, h.encodeStreamKey)({
                 streamType: t,
                 guildId: n,
                 channelId: i,
@@ -208,8 +208,8 @@ function(e, t, n) {
             if (null == l && null != n) {
                 var u, c, f;
                 null == O[t] && (R[t] = null);
-                let e = (0, E.decodeStreamKey)(t);
-                null == R[t] && null == D[t] && (R[t] = (0, h.getStreamerApplication)(e, I.default));
+                let e = (0, h.decodeStreamKey)(t);
+                null == R[t] && null == D[t] && (R[t] = (0, E.getStreamerApplication)(e, I.default));
                 let s = v.default.getChannel(e.channelId),
                     d = null != s && s.isBroadcastChannel(),
                     g = new _.StreamRTCAnalyticsContext({

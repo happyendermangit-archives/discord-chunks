@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("77078"),
         f = n("772280"),
         _ = n("315102"),
-        E = n("52904"),
-        h = n("782340"),
+        h = n("52904"),
+        E = n("782340"),
         g = n("146482");
 
     function m(e) {
@@ -31,13 +31,13 @@ function(e, t, n) {
         }), [n.icon, n.id]), p = s.useMemo(() => [{
             type: o.ApplicationIntegrationType.USER_INSTALL,
             icon: (0, d.UserPlusIcon),
-            title: h.default.Messages.ADD_TO_USER,
-            subtitle: h.default.Messages.ADD_TO_USER_SUBTITLE
+            title: E.default.Messages.ADD_TO_USER,
+            subtitle: E.default.Messages.ADD_TO_USER_SUBTITLE
         }, {
             type: o.ApplicationIntegrationType.GUILD_INSTALL,
             icon: (0, u.ServerIcon),
-            title: h.default.Messages.ADD_TO_GUILD,
-            subtitle: h.default.Messages.ADD_TO_GUILD_SUBTITLE
+            title: E.default.Messages.ADD_TO_GUILD,
+            subtitle: E.default.Messages.ADD_TO_GUILD_SUBTITLE
         }].filter(e => {
             var t, i;
             return (null === (i = n.integrationTypesConfig) || void 0 === i ? void 0 : null === (t = i[e.type]) || void 0 === t ? void 0 : t.oauth2InstallParams) != null
@@ -48,7 +48,7 @@ function(e, t, n) {
                 className: g.header,
                 children: [(0, i.jsx)(l.Avatar, {
                     src: m,
-                    size: E.AvatarSizes.SIZE_80,
+                    size: h.AvatarSizes.SIZE_80,
                     "aria-label": n.name
                 }), (0, i.jsx)(c.Heading, {
                     variant: "heading-xl/bold",
@@ -83,7 +83,7 @@ function(e, t, n) {
                 variant: "text-xs/semibold",
                 color: "text-muted",
                 className: g.learnMore,
-                children: h.default.Messages.USER_APPS_LEARN_MORE.format({
+                children: E.default.Messages.USER_APPS_LEARN_MORE.format({
                     helpUrl: "https://support.discord.com/hc/en-us/articles/360045093012-Server-Integrations-Page"
                 })
             })]

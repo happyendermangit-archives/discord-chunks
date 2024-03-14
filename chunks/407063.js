@@ -31,7 +31,7 @@ function(e, t, n) {
             max: 1e3
         });
 
-    function E(e) {
+    function h(e) {
         let t = new Image;
         t.onerror = function(e, t) {
             null == e.backoff && (e.backoff = new l.default);
@@ -40,18 +40,18 @@ function(e, t, n) {
             } = e;
             return async () => {
                 await u.default.isOnline(), n.fails < 5 ? n.fail(() => {
-                    E(e)
-                }) : h(!0, e, t)
+                    h(e)
+                }) : E(!0, e, t)
             }
         }(e, t), t.onload = () => {
             let {
                 backoff: n
             } = e;
-            null != n && n.succeed(), h(!1, e, t)
+            null != n && n.succeed(), E(!1, e, t)
         }, t.src = e.url
     }
 
-    function h(e, t, n) {
+    function E(e, t, n) {
         let {
             callbacks: i,
             url: s
@@ -92,7 +92,7 @@ function(e, t, n) {
             return null == n && (n = {
                 url: e,
                 loaded: !1
-            }, _.set(e, n), E(n)), null != t && (i = t.bind(null), null == n.callbacks && (n.callbacks = new Set), n.callbacks.add(i)), () => {
+            }, _.set(e, n), h(n)), null != t && (i = t.bind(null), null == n.callbacks && (n.callbacks = new Set), n.callbacks.add(i)), () => {
                 null != i && null != n && (null != n.callbacks && n.callbacks.delete(i), null != n.backoff && n.backoff.cancel())
             }
         }
@@ -115,8 +115,8 @@ function(e, t, n) {
             quality: c = null
         } = e, f = n, _ = i;
         l < 1 && (f = Math.round(n * l), _ = Math.round(i * l)), null != r && (f = Math.min(f, r)), null != a && (_ = Math.min(_, a));
-        let E = (0, d.default)();
-        return f *= E,
+        let h = (0, d.default)();
+        return f *= h,
             function(e) {
                 let {
                     src: t,
@@ -136,7 +136,7 @@ function(e, t, n) {
                 sourceWidth: n,
                 sourceHeight: i,
                 targetWidth: f,
-                targetHeight: _ *= E,
+                targetHeight: _ *= h,
                 format: u,
                 quality: c
             })

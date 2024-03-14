@@ -23,8 +23,8 @@ function(e, t, n) {
                     className: o,
                     lineClamp: f,
                     color: _,
-                    tabularNumbers: E = !1,
-                    scaleFontToUserSetting: h = !1,
+                    tabularNumbers: h = !1,
+                    scaleFontToUserSetting: E = !1,
                     ...g
                 } = e,
                 m = "",
@@ -52,8 +52,8 @@ function(e, t, n) {
                 className: r({
                     [u.defaultColor]: void 0 === _,
                     [u.selectable]: a,
-                    [u.tabularNumbers]: E,
-                    [d.fontScaling]: h
+                    [u.tabularNumbers]: h,
+                    [d.fontScaling]: E
                 }, m, d[n], o),
                 ...g,
                 style: Object.values(v).filter(Boolean).length > 0 ? v : void 0,

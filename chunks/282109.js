@@ -22,8 +22,8 @@ function(e, t, n) {
         c = n("233069"),
         f = n("568734"),
         _ = n("299039"),
-        E = n("42203"),
-        h = n("305961"),
+        h = n("42203"),
+        E = n("305961"),
         g = n("697218"),
         m = n("49111"),
         p = n("76618"),
@@ -186,7 +186,7 @@ function(e, t, n) {
     }
 
     function Y(e) {
-        let t = h.default.getGuild(e),
+        let t = E.default.getGuild(e),
             n = null != t ? t.defaultMessageNotifications : m.UserNotificationSettings.ALL_MESSAGES;
         return D[n]
     }
@@ -222,7 +222,7 @@ function(e, t, n) {
     }
     class Q extends r.default.PersistedStore {
         initialize(e) {
-            if (this.waitFor(g.default, h.default, l.default, d.default), null != e) {
+            if (this.waitFor(g.default, E.default, l.default, d.default), null != e) {
                 var t, n;
                 C = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (T = e.userGuildSettings, L = s.mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), s.forEach(T, (e, t) => {
                     P[t] = z(e)
@@ -288,11 +288,11 @@ function(e, t, n) {
         }
         isChannelMuted(e, t) {
             var n;
-            let i = E.default.getChannel(t);
+            let i = h.default.getChannel(t);
             return e = null !== (n = null == i ? void 0 : i.getGuildId()) && void 0 !== n ? n : e, this.getMutedChannels(e).has(t)
         }
         isCategoryMuted(e, t) {
-            let n = E.default.getChannel(t);
+            let n = h.default.getChannel(t);
             if (null == n) return !1;
             let i = n.parent_id;
             return null != i && this.getMutedChannels(e).has(i)
@@ -360,7 +360,7 @@ function(e, t, n) {
             return null != e && null != e.guild_id && (this.isChannelOptedIn(e.guild_id, e.id, t) || null != e.parent_id && this.isChannelOptedIn(e.guild_id, e.parent_id, t))
         }
         isChannelOrParentOptedIn(e, t, n) {
-            return this.isChannelRecordOrParentOptedIn(E.default.getChannel(t), n)
+            return this.isChannelRecordOrParentOptedIn(h.default.getChannel(t), n)
         }
         isChannelOptedIn(e, t) {
             var n, i;
@@ -386,7 +386,7 @@ function(e, t, n) {
             if (null == I[e]) {
                 let t = s.filter(this.getChannelOverrides(e), t => {
                     var n, i;
-                    return f.hasFlag(null !== (i = t.flags) && void 0 !== i ? i : 0, v.ChannelNotificationSettingsFlags.FAVORITED) && (null === (n = E.default.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e
+                    return f.hasFlag(null !== (i = t.flags) && void 0 !== i ? i : 0, v.ChannelNotificationSettingsFlags.FAVORITED) && (null === (n = h.default.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e
                 });
                 I[e] = t.map(e => e.channel_id)
             }

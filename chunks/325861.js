@@ -14,8 +14,8 @@ function(e, t, n) {
         c = n("26989"),
         f = n("305961"),
         _ = n("697218"),
-        E = n("800762"),
-        h = n("991170"),
+        h = n("800762"),
+        E = n("991170"),
         g = n("923510"),
         m = n("808422");
     (s = i || (i = {})).SPEAKER = "speaker", s.MODERATOR = "moderator";
@@ -37,10 +37,10 @@ function(e, t, n) {
             if (null == l || null == a || !a.isGuildStageVoice()) return S;
             return {
                 speaker: function(e, t) {
-                    let n = E.default.getVoiceStateForChannel(t, e);
+                    let n = h.default.getVoiceStateForChannel(t, e);
                     return (0, m.getAudienceRequestToSpeakState)(n) === m.RequestToSpeakStates.ON_STAGE
                 }(e, t),
-                moderator: r ? (n = e, i = l, s = a, h.default.can({
+                moderator: r ? (n = e, i = l, s = a, E.default.can({
                     permission: g.MODERATE_STAGE_CHANNEL_PERMISSIONS,
                     user: n,
                     context: i,
@@ -98,7 +98,7 @@ function(e, t, n) {
     }
     class y extends o.default.Store {
         initialize() {
-            this.waitFor(c.default, u.default, f.default, _.default, E.default)
+            this.waitFor(c.default, u.default, f.default, _.default, h.default)
         }
         isSpeaker(e, t) {
             return this.getPermissionsForUser(e, t).speaker

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MenuRadioItem: function() {
-            return E
+            return h
         }
     });
     var i = n("37983"),
@@ -17,13 +17,13 @@ function(e, t, n) {
         f = n("389802"),
         _ = n("639826");
 
-    function E(e) {
+    function h(e) {
         let {
             color: t = "default",
             label: n,
             checked: r,
-            subtext: E,
-            disabled: h,
+            subtext: h,
+            disabled: E,
             isFocused: g,
             menuItemProps: m,
             action: p
@@ -33,18 +33,18 @@ function(e, t, n) {
         }, [g]), (0, i.jsxs)(o.Clickable, {
             innerRef: S,
             className: a(_.item, _.labelContainer, f.MENU_ITEM_COLORS[t], {
-                [_.disabled]: h,
+                [_.disabled]: E,
                 [_.focused]: g
             }),
-            onClick: h ? void 0 : p,
+            onClick: E ? void 0 : p,
             ...m,
             "aria-checked": r,
-            "aria-disabled": h,
+            "aria-disabled": E,
             children: [(0, i.jsxs)("div", {
                 className: _.label,
-                children: [(0, l.renderSubnode)(n, e), null != E && (0, i.jsx)("div", {
+                children: [(0, l.renderSubnode)(n, e), null != h && (0, i.jsx)("div", {
                     className: _.subtext,
-                    children: E
+                    children: h
                 })]
             }), (0, i.jsx)("div", {
                 className: _.iconContainer,

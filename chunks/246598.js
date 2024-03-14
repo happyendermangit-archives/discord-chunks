@@ -40,15 +40,15 @@ function(e, t, n) {
             channelId: t,
             command: n
         } = e;
-        E(t, null == n ? void 0 : n.id)
+        h(t, null == n ? void 0 : n.id)
     }
 
-    function E(e, t) {
+    function h(e, t) {
         let n = a.default.getActiveOptionName(e),
             i = u.get(e);
         return null != i && (t !== i.commandId || n !== i.optionName) && (null != t && t !== i.commandId && (i.optionNameToLastResults.clear(), i.optionNameToNonce.clear(), i.optionNameToLastQuery.clear(), i.optionNameToAutocompleteQueries.clear()), i.lastErrored = !1, i.commandId = t, i.optionName = n, !0)
     }
-    class h extends i.default.Store {
+    class E extends i.default.Store {
         initialize() {
             this.waitFor(a.default)
         }
@@ -68,8 +68,8 @@ function(e, t, n) {
             return c(e).lastResponseNonce
         }
     }
-    h.displayName = "ApplicationCommandAutocompleteStore";
-    var g = new h(s.default, {
+    E.displayName = "ApplicationCommandAutocompleteStore";
+    var g = new E(s.default, {
         CONNECTION_OPEN: f,
         LOGOUT: f,
         CHANNEL_SELECT: f,
@@ -114,8 +114,8 @@ function(e, t, n) {
                 error: !1,
                 num_options: u.length
             }), d.delete(s);
-            let E = c(a.channelId);
-            return null == E.optionNameToAutocompleteQueries.get(a.name) && E.optionNameToAutocompleteQueries.set(a.name, new Map), null === (t = E.optionNameToAutocompleteQueries.get(a.name)) || void 0 === t || t.set(a.query, u), E.optionNameToLastQuery.get(a.name) === a.query && (E.lastErrored = !1, E.optionNameToLastResults.set(a.name, u)), E.lastResponseNonce = s, !0
+            let h = c(a.channelId);
+            return null == h.optionNameToAutocompleteQueries.get(a.name) && h.optionNameToAutocompleteQueries.set(a.name, new Map), null === (t = h.optionNameToAutocompleteQueries.get(a.name)) || void 0 === t || t.set(a.query, u), h.optionNameToLastQuery.get(a.name) === a.query && (h.lastErrored = !1, h.optionNameToLastResults.set(a.name, u)), h.lastResponseNonce = s, !0
         },
         INTERACTION_FAILURE: function(e) {
             let {
@@ -141,7 +141,7 @@ function(e, t, n) {
                 channelId: t,
                 command: n
             } = e;
-            E(t, null == n ? void 0 : n.id)
+            h(t, null == n ? void 0 : n.id)
         }
     })
 }

@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("980428"),
         f = n("772280"),
         _ = n("21872"),
-        E = n("782340"),
-        h = n("546933");
+        h = n("782340"),
+        E = n("546933");
 
     function g(e) {
         let {
@@ -25,36 +25,36 @@ function(e, t, n) {
             totalPageCount: n,
             disabled: r,
             onPageChange: o
-        } = e, [c, f] = s.useState(!1), [_, E] = s.useState(null), g = null != _ && _ >= 1 && _ <= n;
+        } = e, [c, f] = s.useState(!1), [_, h] = s.useState(null), g = null != _ && _ >= 1 && _ <= n;
         return r ? (0, i.jsx)(u.Heading, {
-            className: h.gap,
+            className: E.gap,
             "aria-hidden": !0,
             variant: "heading-sm/semibold",
             children: "…"
         }, t.key) : c ? (0, i.jsx)(d.TextInput, {
             autoFocus: !0,
-            className: h.jumpToPageInlineInput,
+            className: E.jumpToPageInlineInput,
             size: d.TextInput.Sizes.MINI,
             value: null == _ ? "" : "".concat(_),
             onChange: e => {
                 let t = parseInt(e);
                 if ("" === e || isNaN(t)) {
-                    E(null);
+                    h(null);
                     return
                 }
-                E(t)
+                h(t)
             },
             onBlur: () => {
-                f(!1), E(null)
+                f(!1), h(null)
             },
             onKeyPress: e => {
-                "Enter" === e.key && null != _ && g && (o(_), f(!1), E(null))
+                "Enter" === e.key && null != _ && g && (o(_), f(!1), h(null))
             },
             disabled: r
         }, t.key) : (0, i.jsx)(l.Clickable, {
             onClick: () => f(!0),
             children: (0, i.jsx)(u.Heading, {
-                className: a(h.roundButton, h.gap),
+                className: a(E.roundButton, E.gap),
                 "aria-hidden": !0,
                 variant: "heading-sm/semibold",
                 children: "…"
@@ -87,9 +87,9 @@ function(e, t, n) {
                     hasMultiplePages: n
                 } = e;
                 return n ? (0, i.jsx)("div", {
-                    className: a(h.pageControlContainer, p),
+                    className: a(E.pageControlContainer, p),
                     children: (0, i.jsx)("nav", {
-                        className: h.pageControl,
+                        className: E.pageControl,
                         children: t.map(e => {
                             var t, n;
                             switch (e.type) {
@@ -101,29 +101,29 @@ function(e, t, n) {
                                             navigateToPage: s
                                         } = e;
                                         return (0, i.jsxs)(o.Button, {
-                                            className: h.endButton,
-                                            innerClassName: h.endButtonInner,
+                                            className: E.endButton,
+                                            innerClassName: E.endButtonInner,
                                             look: o.Button.Looks.BLANK,
                                             color: o.Button.Colors.TRANSPARENT,
                                             onClick: s,
                                             disabled: n,
                                             rel: "prev",
                                             children: [(0, i.jsx)(c.default, {
-                                                className: h.iconCaret,
+                                                className: E.iconCaret,
                                                 "aria-hidden": !0
                                             }), (0, i.jsx)("span", {
-                                                children: E.default.Messages.BACK
+                                                children: h.default.Messages.BACK
                                             })]
                                         }, t)
                                     }(e);
                                 case _.PaginationTypes.PAGE:
                                     ;
                                     return t = e, (0, i.jsx)(l.Clickable, {
-                                        className: a(h.roundButton, {
-                                            [h.activeButton]: t.selected
+                                        className: a(E.roundButton, {
+                                            [E.activeButton]: t.selected
                                         }),
                                         onClick: t.selected ? void 0 : t.navigateToPage,
-                                        "aria-label": E.default.Messages.PAGINATION_PAGE_LABEL.format({
+                                        "aria-label": h.default.Messages.PAGINATION_PAGE_LABEL.format({
                                             pageNumber: t.targetPage
                                         }),
                                         "aria-current": t.selected ? "page" : void 0,
@@ -147,17 +147,17 @@ function(e, t, n) {
                                             navigateToPage: s
                                         } = e;
                                         return (0, i.jsxs)(o.Button, {
-                                            className: h.endButton,
-                                            innerClassName: h.endButtonInner,
+                                            className: E.endButton,
+                                            innerClassName: E.endButtonInner,
                                             look: o.Button.Looks.BLANK,
                                             color: o.Button.Colors.TRANSPARENT,
                                             onClick: s,
                                             disabled: n,
                                             rel: "next",
                                             children: [(0, i.jsx)("span", {
-                                                children: E.default.Messages.NEXT
+                                                children: h.default.Messages.NEXT
                                             }), (0, i.jsx)(f.default, {
-                                                className: h.iconCaret,
+                                                className: E.iconCaret,
                                                 "aria-hidden": !0
                                             })]
                                         }, t)

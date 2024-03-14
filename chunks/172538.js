@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     });
     var i = n("913144"),
@@ -24,7 +24,7 @@ function(e, t, n) {
             media_session_id: d.default.getMediaSessionId(),
             ...(0, s.getVoiceStateMetadata)(d.default.getGuildId(), d.default.getChannelId(), t)
         }),
-        E = () => {
+        h = () => {
             var e;
             let t = (0, r.getLastUsedVideoBackgroundOption)(f.default.getCurrentUser());
             return {
@@ -35,7 +35,7 @@ function(e, t, n) {
             }
         };
 
-    function h(e, t, n, s) {
+    function E(e, t, n, s) {
         let r = c.default.getVoiceChannelId(),
             o = l.default.getChannel(r);
         if (null == t && null != r && null != o) {
@@ -43,7 +43,7 @@ function(e, t, n) {
             if (e(), a.default.hasUsedBackgroundInCall) {
                 let e = {
                     ...t,
-                    ...E()
+                    ...h()
                 };
                 i.default.dispatch({
                     type: "VIDEO_BACKGROUND_SHOW_FEEDBACK",

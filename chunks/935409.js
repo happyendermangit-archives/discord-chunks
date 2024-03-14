@@ -117,7 +117,7 @@ function(e, t, n) {
                 default: L.avatarPositionNormal
             });
             return e({
-                isPremium: w && !D,
+                isPremium: w,
                 hasBanner: o,
                 hasProfileEffect: T
             })

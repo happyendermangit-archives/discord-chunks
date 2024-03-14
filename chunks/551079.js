@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("773364"),
         f = n("953161"),
         _ = n("793722"),
-        E = n("657869"),
-        h = n("560550"),
+        h = n("657869"),
+        E = n("560550"),
         g = n("820127"),
         m = n("861001"),
         p = n("899676"),
@@ -93,7 +93,7 @@ function(e, t, n) {
                 modes: a,
                 streamUserId: o,
                 streamParameters: l
-            } = n, u = (0, h.makeConnection)(e, t, this.getAudioContext(), l);
+            } = n, u = (0, E.makeConnection)(e, t, this.getAudioContext(), l);
             return u.streamUserId = o, u.setOutputVolume(this.outputVolume), u.setSinkId(this.sinkId), u.once(d.BaseConnectionEvent.Destroy, e => this.connections.delete(e)), u.on(d.BaseConnectionEvent.Silence, e => this.emit(c.MediaEngineEvent.Silence, e)), u.on(d.BaseConnectionEvent.DesktopSourceEnd, this.handleDesktopSourceEnd), u.on(d.BaseConnectionEvent.AudioPermission, this.handleAudioPermission), u.on(d.BaseConnectionEvent.VideoPermission, this.handleVideoPermission), this.interacted && u.interact(), e === I.MediaEngineContextTypes.DEFAULT && (u.setAudioSource(this.sourceId), this.enabled && u.input.enableAudioInput()), this.connections.add(u), this.emit(c.MediaEngineEvent.Connection, u), u
         }
         findConnection(e) {
@@ -112,7 +112,7 @@ function(e, t, n) {
         async _enable() {
             if (this.enabled) return;
             await this.getAudioContext().audioWorklet.addModule(p);
-            let e = new E.default(this.getAudioContext());
+            let e = new h.default(this.getAudioContext());
             e.on("permission", this.handleAudioPermission);
             try {
                 var t;
@@ -256,7 +256,7 @@ function(e, t, n) {
                         }, this.handleDeviceChange());
                         break;
                     case c.MediaEngineEvent.VoiceActivity:
-                        null == this.voiceActivityInput && (this.voiceActivityInput = new E.default(this.getAudioContext()), this.voiceActivityInput.setSource(this.sourceId), this.voiceActivityInput.on("voiceactivity", this.handleVoiceActivity), this.enabled && this.voiceActivityInput.enable())
+                        null == this.voiceActivityInput && (this.voiceActivityInput = new h.default(this.getAudioContext()), this.voiceActivityInput.setSource(this.sourceId), this.voiceActivityInput.on("voiceactivity", this.handleVoiceActivity), this.enabled && this.voiceActivityInput.enable())
                 }
             }, this.handleRemoveListener = e => {
                 switch (e) {

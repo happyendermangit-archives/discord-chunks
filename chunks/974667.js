@@ -31,8 +31,8 @@ function(e, t, n) {
             scrollToStart: c,
             scrollToEnd: f,
             onNavigatePreviousAtStart: _,
-            onNavigateNextAtEnd: E,
-            setFocus: h,
+            onNavigateNextAtEnd: h,
+            setFocus: E,
             setFocusOnList: g,
             preserveFocusPosition: m = !0,
             useVirtualFocus: p = !1,
@@ -55,10 +55,10 @@ function(e, t, n) {
         }, [u]);
         let O = i.useCallback((e, t) => {
                 if (y.current) {
-                    let n = null != h ? h : R;
+                    let n = null != E ? E : R;
                     n(e, t)
                 }
-            }, [h]),
+            }, [E]),
             D = i.useCallback(e => {
                 if (y.current) {
                     let t = null != g ? g : R;
@@ -147,8 +147,8 @@ function(e, t, n) {
             k = i.useCallback(async () => {
                 let e = await L.getNextFocusableElement(w),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
-                null != t ? P(t) : null == e && null != E && E()
-            }, [L, w, E, P]),
+                null != t ? P(t) : null == e && null != h && h()
+            }, [L, w, h, P]),
             V = i.useCallback(async () => {
                 let e = await L.getPreviousFocusableElement(w),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Sequencer: function() {
-            return E
+            return h
         }
     }), n("222007");
     var i, s, r = n("37983"),
@@ -93,7 +93,7 @@ function(e, t, n) {
                 animationState: r,
                 baseHeight: a,
                 targetHeight: o
-            } = this.state, l = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, d = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, c = 1 === r, f = 0 === r, _ = (c ? -1 : 1) * this.direction, E = {
+            } = this.state, l = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, d = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, c = 1 === r, f = 0 === r, _ = (c ? -1 : 1) * this.direction, h = {
                 transform: [{
                     translateX: s.interpolate({
                         inputRange: [0, 2],
@@ -110,7 +110,7 @@ function(e, t, n) {
                 left: c ? l : void 0,
                 right: c ? l : void 0,
                 bottom: c ? d : void 0,
-                ...n.enabled ? null : E,
+                ...n.enabled ? null : h,
                 opacity: s.interpolate({
                     inputRange: [0, 2],
                     outputRange: [0, 1],
@@ -166,7 +166,7 @@ function(e, t, n) {
     _.contextType = c.AccessibilityPreferencesContext, _.defaultProps = {
         duration: 300
     };
-    class E extends a.Component {
+    class h extends a.Component {
         componentDidMount() {
             this.setPrevSteps()
         }
@@ -224,7 +224,7 @@ function(e, t, n) {
             }
         }
     }
-    E.defaultProps = {
+    h.defaultProps = {
         fillParent: !1
     }
 }

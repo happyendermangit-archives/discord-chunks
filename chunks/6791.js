@@ -23,14 +23,14 @@ function(e, t, n) {
             return p
         },
         OverlayMethod: function() {
-            return E
+            return h
         },
         OpacityBounds: function() {
             return S
         }
     });
-    var i, s, r, a, o, l, u, d, c, f, _, E, h = n("773336");
-    let g = h.isPlatformEmbedded && ((0, h.isWindows)() || !1);
+    var i, s, r, a, o, l, u, d, c, f, _, h, E = n("773336");
+    let g = E.isPlatformEmbedded && ((0, E.isWindows)() || !1);
 
     function m(e) {
         switch (e) {
@@ -61,7 +61,7 @@ function(e, t, n) {
         FULL: "background-opacity-full",
         DISABLED: null
     });
-    (l = E || (E = {}))[l.Disabled = 0] = "Disabled", l[l.Hook = 1] = "Hook", l[l.OutOfProcess = 2] = "OutOfProcess";
+    (l = h || (h = {}))[l.Disabled = 0] = "Disabled", l[l.Hook = 1] = "Hook", l[l.OutOfProcess = 2] = "OutOfProcess";
     let S = Object.freeze({
         BOTTOM: 0,
         LOWER: .25,

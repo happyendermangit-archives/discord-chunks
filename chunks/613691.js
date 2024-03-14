@@ -5,7 +5,7 @@ function(e, t, n) {
             return _
         },
         getAccessToken: function() {
-            return E
+            return h
         },
         subscribePlayerStateNotifications: function() {
             return function e(t, n, i) {
@@ -19,7 +19,7 @@ function(e, t, n) {
             }
         },
         getProfile: function() {
-            return h
+            return E
         },
         getDevices: function() {
             return g
@@ -56,7 +56,7 @@ function(e, t, n) {
             }
         }).then(e => 202 === e.status ? Promise.reject(e) : e).catch(n => {
             let a = !0 !== i.onlyRetryOnAuthorizationErrors && 202 === n.status;
-            return (401 === n.status || a) && r > 0 ? (202 === n.status ? (0, s.timeoutPromise)(5e3) : Promise.resolve()).then(() => E(t)).then(n => {
+            return (401 === n.status || a) && r > 0 ? (202 === n.status ? (0, s.timeoutPromise)(5e3) : Promise.resolve()).then(() => h(t)).then(n => {
                 let {
                     body: {
                         access_token: s
@@ -71,7 +71,7 @@ function(e, t, n) {
         put: f.bind(null, i.default.put)
     };
 
-    function E(e) {
+    function h(e) {
         return i.default.get({
             url: c.Endpoints.CONNECTION_ACCESS_TOKEN(c.PlatformTypes.SPOTIFY, e),
             oldFormErrors: !0
@@ -83,7 +83,7 @@ function(e, t, n) {
             else if (429 === t.status) {
                 let n = t.headers["retry-after"] * a.default.Millis.SECOND,
                     i = isNaN(n) || 0 === n ? 5e3 : n;
-                return (0, s.timeoutPromise)(i).then(() => E(e))
+                return (0, s.timeoutPromise)(i).then(() => h(e))
             }
             return Promise.reject(t)
         }).then(t => {
@@ -98,7 +98,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e, t) {
+    function E(e, t) {
         return _.get(e, t, {
             url: d.SpotifyEndpoints.PROFILE
         }).then(t => (r.default.dispatch({

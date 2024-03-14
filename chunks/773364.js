@@ -23,10 +23,10 @@ function(e, t, n) {
             return l
         },
         determineMediaEngine: function() {
-            return E
+            return h
         },
         initializeMediaEngine: function() {
-            return h
+            return E
         }
     });
     var i, s, r, a, o, l, u = n("947279"),
@@ -46,12 +46,12 @@ function(e, t, n) {
         }
     }
 
-    function E() {
+    function h() {
         var e;
         return null !== (e = [f.MediaEngineImplementations.NATIVE, f.MediaEngineImplementations.WEBRTC].find(e => _(e).supported())) && void 0 !== e ? e : f.MediaEngineImplementations.DUMMY
     }
 
-    function h(e) {
+    function E(e) {
         let t = _(e);
         return new t
     }(i = a || (a = {})).INPUT_DEVICE = "input_device", i.STREAM = "stream", (s = o || (o = {})).NONE = "", s.BACKGROUND_BLUR = "background_blur", s.BACKGROUND_REPLACEMENT = "background_replacement", (r = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview", r.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"

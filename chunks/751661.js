@@ -5,10 +5,10 @@ function(e, t, n) {
             return _
         },
         openEndGuildEventConfirmationModal: function() {
-            return E
+            return h
         },
         openStageChannelAudienceNoticeModal: function() {
-            return h
+            return E
         },
         openStageBlockedUsersSheet: function() {
             return g
@@ -52,7 +52,7 @@ function(e, t, n) {
         })
     }
 
-    function E(e, t) {
+    function h(e, t) {
         (0, s.openModalLazy)(async () => {
             let {
                 default: t
@@ -66,7 +66,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e) {}
+    function E(e) {}
 
     function g(e, t) {
         (0, s.openModalLazy)(async () => {

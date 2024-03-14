@@ -125,13 +125,13 @@ function(e, t, n) {
         }, {
             width: f,
             height: _
-        } = t, E = u(d(l({
+        } = t, h = u(d(l({
             top: i + c,
             left: s + r,
             bottom: null,
             right: null
         }, n.width, n.height, "number" == typeof f ? f : 0, "number" == typeof _ ? _ : 0)));
-        return [a(E, n), o(t, n)]
+        return [a(h, n), o(t, n)]
     }
 
     function _(e, t, n) {
@@ -147,13 +147,13 @@ function(e, t, n) {
         }, {
             width: f,
             height: _
-        } = t, E = u(d(l({
+        } = t, h = u(d(l({
             top: i + c,
             left: null,
             bottom: null,
             right: s - r
         }, n.width, n.height, "number" == typeof f ? f : 0, "number" == typeof _ ? _ : 0)));
-        return [a(E, n), o(t, n)]
+        return [a(h, n), o(t, n)]
     }
     n.r(t), n.d(t, {
         getAnchorCoordsFromLayoutSize: function() {

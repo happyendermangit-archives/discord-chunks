@@ -5,7 +5,7 @@ function(e, t, n) {
             return c.StatusTypes
         },
         useStatusFillColor: function() {
-            return h
+            return E
         },
         getStatusBackdropOpacity: function() {
             return g
@@ -43,12 +43,12 @@ function(e, t, n) {
         c = n("49111"),
         f = n("52904"),
         _ = n("143820");
-    let E = {
+    let h = {
         tension: 600,
         friction: 70
     };
 
-    function h(e, t) {
+    function E(e, t) {
         let n = (0, u.useColorValue)(function(e) {
                 switch (e) {
                     case c.StatusTypes.ONLINE:
@@ -167,8 +167,8 @@ function(e, t, n) {
             cutoutX: c,
             cutoutY: f,
             cutoutWidth: _,
-            cutoutHeight: E,
-            cutoutRadius: h,
+            cutoutHeight: h,
+            cutoutRadius: E,
             polygonScale: g,
             polygonOrigin: m,
             dotY: p,
@@ -189,9 +189,9 @@ function(e, t, n) {
                 x: c,
                 y: f,
                 width: _,
-                height: E,
-                rx: h,
-                ry: h,
+                height: h,
+                rx: E,
+                ry: E,
                 fill: "black"
             }), (0, i.jsx)(o.animated.polygon, {
                 points: (s = t, "-".concat(.216506 * s, ",-").concat(.25 * s, " ").concat(.216506 * s, ",0 -").concat(.216506 * s, ",").concat(.25 * s)),
@@ -222,12 +222,12 @@ function(e, t, n) {
             status: t,
             isMobile: m
         }), [r, t, m]), S = (0, o.useSpring)({
-            config: E,
+            config: h,
             to: p
-        }), I = h(t, l), [{
+        }), I = E(t, l), [{
             fill: C
         }] = (0, o.useSpring)({
-            config: E,
+            config: h,
             fill: I
         }, [I]), A = Math.ceil(r * f.MOBILE_HEIGHT_RATIO);
         return (0, i.jsxs)("svg", {
@@ -287,7 +287,7 @@ function(e, t, n) {
             className: r,
             style: o,
             color: l
-        } = e, u = t === c.StatusTypes.ONLINE && n, f = h(t, l);
+        } = e, u = t === c.StatusTypes.ONLINE && n, f = E(t, l);
         return (0, i.jsx)(d.default, {
             mask: C(t, u),
             className: a(_.mask, r),

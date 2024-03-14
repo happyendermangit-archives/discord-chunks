@@ -20,8 +20,8 @@ function(e, t, n) {
             renderSection: c,
             renderSectionHeader: f,
             renderSectionFooter: _,
-            renderListHeader: E,
-            rowCount: h,
+            renderListHeader: h,
+            rowCount: E,
             rowCountBySection: g,
             rowHeight: m,
             sectionMarginBottom: p,
@@ -75,7 +75,7 @@ function(e, t, n) {
                     r = [];
                 i += w();
                 for (let a = 0; a < n; a++) {
-                    let n = t ? g[a] : h,
+                    let n = t ? g[a] : E,
                         o = (null == g ? void 0 : g[a]) !== 0;
                     r[a] = {
                         firstRowIndex: e,
@@ -103,7 +103,7 @@ function(e, t, n) {
                     rowDescriptors: s,
                     sectionDescriptors: r
                 }
-            }, [k, G, V, F, u, h, g, w]);
+            }, [k, G, V, F, u, E, g, w]);
         x.current = j, B.current = Y;
         let W = s.useCallback(() => {
             var e;
@@ -228,7 +228,7 @@ function(e, t, n) {
                 n = u[0],
                 i = [],
                 s = w();
-            null != E && O < s ? i.push(E()) : n += s;
+            null != h && O < s ? i.push(h()) : n += s;
             for (let s = 0; s < j.length; s++) {
                 let r = j[s],
                     {
@@ -240,8 +240,8 @@ function(e, t, n) {
                     } = r,
                     u = l - o;
                 if (0 === u) continue;
-                let E = V(s),
-                    h = G(s),
+                let h = V(s),
+                    E = G(s),
                     g = F(s);
                 if (l <= O) n = l;
                 else if (l > O && o < e) {
@@ -249,13 +249,13 @@ function(e, t, n) {
                     let r = [],
                         l = 0,
                         m = 0,
-                        p = o + E,
+                        p = o + h,
                         S = p >= O && o <= e;
-                    for (null != f && (I || S) && r.push(f(s)), !S && !I && (n += E); l + E + h < u - g;) {
+                    for (null != f && (I || S) && r.push(f(s)), !S && !I && (n += h); l + h + E < u - g;) {
                         let i = k(s, m, t),
-                            a = o + l + E,
+                            a = o + l + h,
                             u = a + i;
-                        if (u <= O) n = u - (I ? E : 0);
+                        if (u <= O) n = u - (I ? h : 0);
                         else if (u > O && a < e) r.push(d(t, {
                             sectionIndex: s,
                             sectionRowIndex: m
@@ -263,8 +263,8 @@ function(e, t, n) {
                         else break;
                         l += i, m++, t++
                     }
-                    let v = o + E + l,
-                        T = v + h,
+                    let v = o + h + l,
+                        T = v + E,
                         C = T >= O && v <= e;
                     null != _ && C && r.push(_(s)), null != c ? i.push(c(s, r)) : i = [...i, ...r]
                 } else break
@@ -273,7 +273,7 @@ function(e, t, n) {
                 visibleItems: i,
                 listOffset: n
             }
-        }, [k, G, V, F, u, d, c, _, f, O, j, I, E, w, P]), X = s.useMemo(() => {
+        }, [k, G, V, F, u, d, c, _, f, O, j, I, h, w, P]), X = s.useMemo(() => {
             var e, t, n;
             return {
                 top: q,

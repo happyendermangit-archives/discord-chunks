@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("872717"),
         f = n("913144"),
         _ = n("105059"),
-        E = n("849365"),
-        h = n("11275"),
+        h = n("849365"),
+        E = n("11275"),
         g = n("400683"),
         m = n("605250"),
         p = n("155084"),
@@ -309,7 +309,7 @@ function(e, t, n) {
             this.connectionState = N.default.IDENTIFYING;
             let t = Date.now();
             this.identifyStartTime = t;
-            let [n, i, s] = await Promise.all([(0, g.isCacheEnabled)() ? _.default.getCommittedVersions() : {}, (0, g.isCacheEnabled)() ? h.default.getCommittedVersions() : {}, !!(0, g.isCacheEnabled)() && E.default.canUseGuildVersions()]), r = s ? {
+            let [n, i, s] = await Promise.all([(0, g.isCacheEnabled)() ? _.default.getCommittedVersions() : {}, (0, g.isCacheEnabled)() ? E.default.getCommittedVersions() : {}, !!(0, g.isCacheEnabled)() && h.default.canUseGuildVersions()]), r = s ? {
                 guild_versions: n,
                 highest_last_message_id: i.highest_last_message_id,
                 read_state_version: i.read_state_version,

@@ -21,8 +21,8 @@ function(e, t, n) {
             title: c,
             icon: f,
             disabled: _,
-            htmlFor: E,
-            tag: h = "h5",
+            htmlFor: h,
+            tag: E = "h5",
             ...g
         } = e, m = s.useId(), p = null !== (t = g.titleId) && void 0 !== t ? t : m;
         return null != c ? (0, i.jsx)("div", {
@@ -31,9 +31,9 @@ function(e, t, n) {
                 component: (0, i.jsxs)("div", {
                     className: l.sectionTitle,
                     children: [f, null != c ? (0, i.jsx)(o.FormTitle, {
-                        tag: h,
+                        tag: E,
                         id: p,
-                        htmlFor: E,
+                        htmlFor: h,
                         disabled: _,
                         className: d,
                         children: c

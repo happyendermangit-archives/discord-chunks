@@ -5,7 +5,7 @@ function(e, t, n) {
             return _
         },
         Dots: function() {
-            return E
+            return h
         }
     }), n("222007");
     var i = n("37983"),
@@ -75,13 +75,13 @@ function(e, t, n) {
                         })) : await new Promise(e => setTimeout(e, 1e3))
                     }
                 }
-            })), E = (6 * t + t / 4 * 2) / 2;
+            })), h = (6 * t + t / 4 * 2) / 2;
             return (0, i.jsx)(i.Fragment, {
                 children: [0, 1, 2].map(e => {
                     let s = .25 * e,
                         u = t + e * (t * a);
                     return (0, i.jsx)(o.animated.circle, {
-                        cx: n ? n.to([0, 1], [E, u]) : u,
+                        cx: n ? n.to([0, 1], [h, u]) : u,
                         cy: t,
                         r: _.dotCycle.to(e => f(e - s)).to([0, .4, .8, 1], [.8 * t, .8 * t, t, t]).to(e => l.current ? e : t),
                         fill: r,
@@ -92,24 +92,24 @@ function(e, t, n) {
                 })
             })
         }),
-        E = s.memo(s.forwardRef(function(e, t) {
+        h = s.memo(s.forwardRef(function(e, t) {
             let {
                 dotRadius: n,
                 x: s,
                 y: r,
                 hide: c = !1,
                 themed: f = !1,
-                className: E
-            } = e, h = (0, o.useTransition)(c, {
+                className: h
+            } = e, E = (0, o.useTransition)(c, {
                 ...d,
                 key: e => e ? "true" : "false",
                 immediate: !u()
             });
-            return h((e, u, d) => {
+            return E((e, u, d) => {
                 let {
                     dotPosition: c
                 } = e, {
-                    key: h
+                    key: E
                 } = d;
                 return u ? null : (0, i.jsx)("svg", {
                     ref: t,
@@ -117,7 +117,7 @@ function(e, t, n) {
                     y: r,
                     width: 6 * n + n / 2 * 2,
                     height: 2 * n,
-                    className: a(E, l.dots, f ? l.themed : null),
+                    className: a(h, l.dots, f ? l.themed : null),
                     children: (0, i.jsx)(o.animated.g, {
                         style: {
                             opacity: c.to(e => Math.min(1, Math.max(e, 0)))
@@ -127,7 +127,7 @@ function(e, t, n) {
                             dotPosition: c
                         })
                     })
-                }, h)
+                }, E)
             })
         }))
 }

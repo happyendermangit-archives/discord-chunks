@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("95410"),
         f = n("913144"),
         _ = n("798609"),
-        E = n("91131"),
-        h = n("821316"),
+        h = n("91131"),
+        E = n("821316"),
         g = n("605250"),
         m = n("393414"),
         p = n("705873"),
@@ -135,11 +135,11 @@ function(e, t, n) {
         en("handleLogout called."), eo(), er(), !(null == e ? void 0 : e.isSwitchingAccount) && ei(), u.default.PersistedStore.clearAll({
             omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
             type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-        }), C.default.clearAll(), h.clear(), T.default.clearUser(), c.default.remove(P), L = null, G = (null == e ? void 0 : e.isSwitchingAccount) ? A.LoginStates.LOGGING_IN : A.LoginStates.NONE, F = A.RegistrationStates.NONE, H = "", z = "", j = null, Y = !1, q = !1, X = !1, Q = {}, Z = {}
+        }), C.default.clearAll(), E.clear(), T.default.clearUser(), c.default.remove(P), L = null, G = (null == e ? void 0 : e.isSwitchingAccount) ? A.LoginStates.LOGGING_IN : A.LoginStates.NONE, F = A.RegistrationStates.NONE, H = "", z = "", j = null, Y = !1, q = !1, X = !1, Q = {}, Z = {}
     }
     class ed extends u.default.Store {
         initialize() {
-            L = c.default.get(P), M = c.default.get(D), ee = c.default.get("login_cache"), null == o.default.getToken() && ei(), this.addChangeListener(() => (0, E.setClientState)(L))
+            L = c.default.get(P), M = c.default.get(D), ee = c.default.get("login_cache"), null == o.default.getToken() && ei(), this.addChangeListener(() => (0, h.setClientState)(L))
         }
         getEmail() {
             return M

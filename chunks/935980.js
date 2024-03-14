@@ -37,8 +37,8 @@ function(e, t, n) {
         c = n("446662"),
         f = n("77078"),
         _ = n("731898"),
-        E = n("811425"),
-        h = n("31695"),
+        h = n("811425"),
+        E = n("31695"),
         g = n("837899"),
         m = n("425190"),
         p = n("578706"),
@@ -149,7 +149,7 @@ function(e, t, n) {
             isDisabled: o = !1,
             maxVisibleItems: u = 7,
             autoFocus: c = !1,
-            popoutWidth: h,
+            popoutWidth: E,
             clearable: p = !1,
             look: C = v.SelectLooks.FILLED,
             onClose: A,
@@ -176,7 +176,7 @@ function(e, t, n) {
             Y !== e && !o && (j(e), e ? null == y || y() : null == A || A())
         }, [o, A, y, Y]), X = s.useCallback(e => {
             Y && !e && q(!1)
-        }, [q, Y]), Q = (0, E.useIsVisible)(X), Z = s.useCallback(e => {
+        }, [q, Y]), Q = (0, h.useIsVisible)(X), Z = s.useCallback(e => {
             if (k(e), w) {
                 var t;
                 null === (t = W.current) || void 0 === t || t.focus()
@@ -211,7 +211,7 @@ function(e, t, n) {
                     className: O,
                     closeOnSelect: w,
                     maxVisibleItems: u,
-                    width: null != h ? h : K,
+                    width: null != E ? E : K,
                     isSelected: V,
                     closePopout: n,
                     buttonHeight: null != z ? z : 0,
@@ -234,7 +234,7 @@ function(e, t, n) {
                 } = e, {
                     isShown: c,
                     position: f
-                } = t, _ = c ? m.default : g.default, E = ee ? 18 : 24;
+                } = t, _ = c ? m.default : g.default, h = ee ? 18 : 24;
                 return (0, i.jsxs)(l.Clickable, {
                     role: "button",
                     "aria-disabled": o,
@@ -277,8 +277,8 @@ function(e, t, n) {
                                 className: I.clear
                             })
                         }) : null, x ? null : (0, i.jsx)(_, {
-                            width: E,
-                            height: E
+                            width: h,
+                            height: h
                         })]
                     })]
                 })
@@ -295,7 +295,7 @@ function(e, t, n) {
             isSelected: d,
             options: f,
             width: _,
-            maxVisibleItems: E,
+            maxVisibleItems: h,
             renderOptionLabel: g,
             serialize: m,
             optionClassName: p,
@@ -314,11 +314,11 @@ function(e, t, n) {
             null === (e = O.current) || void 0 === e || e.focus()
         }, []), s.useEffect(() => {
             S > 0 && v()
-        }, [S, v]), (0, h.default)(v), s.useLayoutEffect(() => {
+        }, [S, v]), (0, E.default)(v), s.useLayoutEffect(() => {
             var e, t;
             let n = null === (t = y.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
             null != n && A(n)
-        }, [E]), s.useEffect(() => {
+        }, [h]), s.useEffect(() => {
             v()
         }, [v, C]);
         let D = s.useCallback(e => {
@@ -336,7 +336,7 @@ function(e, t, n) {
                     serialize: m
                 }, null !== (n = e.key) && void 0 !== n ? n : t)
             }),
-            L = f.length <= E ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
+            L = f.length <= h ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
         return (0, i.jsx)(o.ListNavigatorProvider, {
             navigator: R,
             children: (0, i.jsx)(o.ListNavigatorContainer, {
@@ -366,7 +366,7 @@ function(e, t, n) {
                             "aria-hidden": !0,
                             ref: y,
                             className: I.measurement,
-                            children: P.slice(0, E)
+                            children: P.slice(0, h)
                         })]
                     })
                 }

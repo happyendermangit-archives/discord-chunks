@@ -19,7 +19,7 @@ function(e, t, n) {
             disabled: u = !1
         } = e, d = s.useRef(null), c = s.useMemo(() => new a.TimeOptions, []), [f, _] = s.useState("");
 
-        function E(e) {
+        function h(e) {
             null != t && n((0, a.timeAtSpecificDay)(t, c.selectValue(e)))
         }
         return (0, i.jsx)(r.SearchableSelect, {
@@ -27,7 +27,7 @@ function(e, t, n) {
             className: o.select,
             options: c.getOptions(f),
             value: l ? void 0 : c.lookupByValue(t),
-            onChange: E,
+            onChange: h,
             isDisabled: u,
             onSearchChange: _,
             onKeyDown: function(e) {
@@ -35,7 +35,7 @@ function(e, t, n) {
                     let e = (0, a.convertToTimeOfADay)(t, f);
                     if (null != e) {
                         var n;
-                        E(e), null === (n = d.current) || void 0 === n || n.close()
+                        h(e), null === (n = d.current) || void 0 === n || n.close()
                     }
                 }
             }

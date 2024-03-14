@@ -11,7 +11,7 @@ function(e, t, n) {
             return _
         },
         calendarFormat: function() {
-            return E
+            return h
         },
         accessibilityLabelCalendarFormat: function() {
             return m
@@ -49,21 +49,21 @@ function(e, t, n) {
     }
 
     function _(e, t) {
-        let n = h(e).locale(),
+        let n = E(e).locale(),
             i = "".concat(n, ":").concat(t),
             s = l[i];
         return null == s && (s = l[i] = (0, r.default)(t)), s(g(e))
     }
 
-    function E(e) {
+    function h(e) {
         let t;
         let n = s.localeData(),
             i = s(),
             r = d(g(e), i.toDate());
-        return r < -1 ? _(e, "L LT") : (t = r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse", _(e, n.calendar(t, h(e), i)))
+        return r < -1 ? _(e, "L LT") : (t = r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse", _(e, n.calendar(t, E(e), i)))
     }
 
-    function h(e) {
+    function E(e) {
         return s.isMoment(e) ? e : s(e)
     }
 

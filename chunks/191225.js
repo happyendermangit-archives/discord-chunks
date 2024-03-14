@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("697218"),
         f = n("773336"),
         _ = n("378713"),
-        E = n("711562"),
-        h = n("334368"),
+        h = n("711562"),
+        E = n("334368"),
         g = n("420444"),
         m = n("272505"),
         p = n("49111");
@@ -61,8 +61,8 @@ function(e, t, n) {
             instanceId: d,
             userIds: c,
             activitySessionId: f
-        } = e, h = (0, E.default)(a);
-        if (null == h) return;
+        } = e, E = (0, h.default)(a);
+        if (null == E) return;
         let g = l.default.getBasicChannel(s),
             m = null != g && u.default.canBasicChannel(p.BasicPermissions.CONNECT, g) || (null == g ? void 0 : g.type) === p.ChannelTypes.DM || (null == g ? void 0 : g.type) === p.ChannelTypes.GROUP_DM;
         if (function(e, t) {
@@ -75,7 +75,7 @@ function(e, t, n) {
                 channelId: s,
                 guildId: i,
                 instanceId: d,
-                url: h,
+                url: E,
                 userIds: new Set(c)
             },
             y = o.default.getId(),
@@ -128,14 +128,14 @@ function(e, t, n) {
             channelId: s,
             applicationId: r,
             instanceId: a
-        } = e, u = (0, E.default)(r), f = o.default.getSessionId();
+        } = e, u = (0, h.default)(r), f = o.default.getSessionId();
         if (null == u || null == f || (null === (t = T.get(r)) || void 0 === t ? void 0 : t.channelId) === s) return !1;
         let _ = l.default.getChannel(s),
-            h = null == _ ? void 0 : _.getGuildId(),
+            E = null == _ ? void 0 : _.getGuildId(),
             p = c.default.getCurrentUser();
-        if (null == h && !(null !== (n = null == _ ? void 0 : _.isPrivate()) && void 0 !== n && n) || null == p) return !1;
+        if (null == E && !(null !== (n = null == _ ? void 0 : _.isPrivate()) && void 0 !== n && n) || null == p) return !1;
         i = s, T.set(r, {
-            guildId: h,
+            guildId: E,
             channelId: s,
             applicationId: r,
             url: u,
@@ -466,7 +466,7 @@ function(e, t, n) {
                 } = e;
                 t.forEach(e => {
                     let t = e.application_id,
-                        i = e.client_platform_config[(0, h.default)((0, f.getOS)())];
+                        i = e.client_platform_config[(0, E.default)((0, f.getOS)())];
                     if (!S.seenActivities.has(t) && (S.shouldShowNewActivityIndicator = !0, S.seenActivities.add(t)), null == i.label_until) return;
                     let s = new Date(i.label_until).getTime();
                     if (s < n) return;

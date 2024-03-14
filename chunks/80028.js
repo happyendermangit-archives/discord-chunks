@@ -17,10 +17,10 @@ function(e, t, n) {
             return _
         },
         CLIPS_TOAST_DURATION: function() {
-            return E
+            return h
         },
         ClipsLogger: function() {
-            return h
+            return E
         },
         CLIPS_EXPORT_FILENAME: function() {
             return g
@@ -99,8 +99,8 @@ function(e, t, n) {
         f = n("718517");
     (i = o || (o = {}))[i.SECONDS_30 = 30 * f.default.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = f.default.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * f.default.Millis.MINUTE] = "MINUTES_2", (s = l || (l = {}))[s.ALL = 0] = "ALL", s[s.FRIENDS = 1] = "FRIENDS", (r = u || (u = {})).DECOUPLED = "decoupled", r.VIEWER = "viewer", r.STREAMER = "streamer", (a = d || (d = {}))[a.Error = 0] = "Error", a[a.Disabled = 1] = "Disabled", a[a.Enabled = 2] = "Enabled";
     let _ = "alt+c",
-        E = 6 * f.default.Millis.SECOND,
-        h = new c.default("Clips"),
+        h = 6 * f.default.Millis.SECOND,
+        E = new c.default("Clips"),
         g = e => "Discord_Clip_".concat(e, ".mp4"),
         m = 3,
         p = 1,

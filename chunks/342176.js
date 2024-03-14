@@ -17,7 +17,7 @@ function(e, t, n) {
             return _
         },
         inNotificationCenterEnabled: function() {
-            return E
+            return h
         }
     });
     var i = n("845579"),
@@ -68,7 +68,7 @@ function(e, t, n) {
     }
     let _ = e => e.type === a.NotificationCenterItems.RECENT_MENTION || e.type === a.NotificationCenterItems.REPLY_MENTION;
 
-    function E() {
+    function h() {
         return (0, r.inDesktopNotificationCenterExperiment)()
     }
 }

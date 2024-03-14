@@ -43,14 +43,14 @@ function(e, t, n) {
         return f(t)
     }
 
-    function E(e) {
+    function h(e) {
         let {
             threads: t
         } = e;
         t.forEach(g)
     }
 
-    function h(e) {
+    function E(e) {
         let t = !1;
         for (let n of e.messages)
             for (let e of n) t = g(e.thread) || t;
@@ -128,10 +128,10 @@ function(e, t, n) {
             if (null == t) return !1;
             null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), t.memberCount = e.memberCount
         },
-        SEARCH_FINISH: h,
-        MOD_VIEW_SEARCH_FINISH: h,
-        LOAD_THREADS_SUCCESS: E,
-        LOAD_ARCHIVED_THREADS_SUCCESS: E,
+        SEARCH_FINISH: E,
+        MOD_VIEW_SEARCH_FINISH: E,
+        LOAD_THREADS_SUCCESS: h,
+        LOAD_ARCHIVED_THREADS_SUCCESS: h,
         THREAD_DELETE: function(e) {
             let {
                 channel: t

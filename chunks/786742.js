@@ -11,10 +11,10 @@ function(e, t, n) {
             return _
         },
         canDisplayPostUnreadMessageCount: function() {
-            return E
+            return h
         },
         isForumPostPinned: function() {
-            return h
+            return E
         }
     }), n("222007");
     var i = n("335710"),
@@ -50,12 +50,12 @@ function(e, t, n) {
         if (t === o.ForumTimestampFormats.POSTED_DURATION_AGO && e === i.ThreadSortOrder.CREATION_DATE) return f
     }
 
-    function E(e, t) {
+    function h(e, t) {
         let [n] = t, i = n.hasTrackedUnread(e), s = n.hasOpenedThread(e), r = null != n.getTrackedAckMessageId(e);
         return i && s && r
     }
 
-    function h(e) {
+    function E(e) {
         var t;
         return (null === (t = s.default.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(l.ChannelFlags.PINNED)) === !0
     }

@@ -5,7 +5,7 @@ function(e, t, n) {
             return _
         },
         checkDefaultChannelThresholdMetAfterChannelPermissionDeny: function() {
-            return h
+            return E
         }
     }), n("222007");
     var i = n("316693"),
@@ -19,12 +19,12 @@ function(e, t, n) {
         c = n("49111"),
         f = n("782340");
     async function _(e, t) {
-        return null == e || await E(e, t, {
+        return null == e || await h(e, t, {
             removingView: !0,
             removingChat: !0
         })
     }
-    async function E(e, t, n) {
+    async function h(e, t, n) {
         var i;
         let s = a.default.getGuild(e);
         if (null == s) return !0;
@@ -32,14 +32,14 @@ function(e, t, n) {
         if (!r) return !0;
         r && l.default.shouldFetchPrompts(e) && await (0, o.fetchOnboardingPrompts)(e);
         let f = l.default.getDefaultChannelIds(e),
-            [_, E] = (0, u.getChattableDefaultChannels)(e, f),
-            h = f.includes(t);
-        if (!h) return !0;
-        let g = n.removingView && E.length - 1 < d.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING,
+            [_, h] = (0, u.getChattableDefaultChannels)(e, f),
+            E = f.includes(t);
+        if (!E) return !0;
+        let g = n.removingView && h.length - 1 < d.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING,
             m = (n.removingChat || n.removingView) && _.length - 1 < d.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
         return !g && !m
     }
-    async function h(e, t, n) {
+    async function E(e, t, n) {
         let a = e.getGuildId();
         if (null == a) return !0;
         null != n && (t = i.default.filter(t, i.default.invert(n)));
@@ -50,7 +50,7 @@ function(e, t, n) {
                 removingChat: !1
             };
         if (e.isForumLikeChannel() ? u.removingChat = i.default.has(t, c.Permissions.SEND_MESSAGES_IN_THREADS) && !i.default.has(l, c.Permissions.SEND_MESSAGES_IN_THREADS) : u.removingChat = i.default.has(t, c.Permissions.SEND_MESSAGES) && !i.default.has(l, c.Permissions.SEND_MESSAGES), !u.removingChat && !u.removingView) return !0;
-        let d = await E(a, e.id, u);
+        let d = await h(a, e.id, u);
         return !!d || (s.default.show({
             title: f.default.Messages.CANNOT_CHANGE_CHANNEL_PERMS,
             body: f.default.Messages.ONBOARDING_CHANNEL_THRESHOLD_WARNING.format({

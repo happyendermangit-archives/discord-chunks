@@ -16,16 +16,16 @@ function(e, t, n) {
         c = n("152723"),
         f = n("773336"),
         _ = n("253981"),
-        E = n("50885"),
-        h = n("49111");
+        h = n("50885"),
+        E = n("49111");
     let g = new s.default("Games"),
         m = {},
         p = 0,
         S = null;
 
     function v() {
-        return null != S ? Promise.resolve(S) : (0, f.isDesktop)() ? E.default.ensureModule("discord_game_utils").then(() => {
-            let e = E.default.getGameUtils();
+        return null != S ? Promise.resolve(S) : (0, f.isDesktop)() ? h.default.ensureModule("discord_game_utils").then(() => {
+            let e = h.default.getGameUtils();
             return null != e && null != e.findLaunchable ? (S = e, e) : Promise.reject(Error("game utils not found"))
         }) : Promise.reject(Error("not desktop client"))
     }
@@ -54,7 +54,7 @@ function(e, t, n) {
                 let {
                     distributor: t
                 } = e;
-                return t === h.Distributors.BATTLENET
+                return t === E.Distributors.BATTLENET
             }))), 0 === e.length) throw Error("No remaining launchable queries");
         let t = Date.now();
         t > p && (p = t + 36e5, m = {});
@@ -98,7 +98,7 @@ function(e, t, n) {
                 defaultLaunchOptionId: u,
                 installPath: f,
                 applicationId: _,
-                branchId: E,
+                branchId: h,
                 buildId: g,
                 shouldPatch: m
             } = e;
@@ -106,23 +106,23 @@ function(e, t, n) {
             null == a && (a = u);
             let p = l[a];
             if (null == p) throw Error("Couldn't construct launchable for ".concat(e.applicationId, ". No launch option."));
-            return (0, i.fetchBranches)([E]).then(e => {
+            return (0, i.fetchBranches)([h]).then(e => {
                 let t = e[0];
                 if (null == t) return Promise.reject(Error("branch is null"));
                 let {
                     liveBuildId: n
                 } = t;
                 if (m && n !== g) return Promise.reject(Error("live build id changed"))
-            }).then(() => c.default.runLaunchSetup(_, E)).then(() => {
+            }).then(() => c.default.runLaunchSetup(_, h)).then(() => {
                 let e = (0, r.default)(f),
                     i = {
                         DISCORD_INSTANCE_ID: d.default.getId().toString(),
                         DISCORD_ACCESS_TOKEN: null != t ? t : "",
                         DISCORD_CURRENT_LOCALE: n,
                         DISCORD_CURRENT_BRANCH: s,
-                        DISCORD_STORAGE_PATH: h.DefaultCloudSyncConfiguration.ROOT_STORAGE_PATH(e, o.default.getId())
+                        DISCORD_STORAGE_PATH: E.DefaultCloudSyncConfiguration.ROOT_STORAGE_PATH(e, o.default.getId())
                     };
-                return c.default.launch(_, E, p.name, i)
+                return c.default.launch(_, h, p.name, i)
             })
         },
         removeShortcuts: e => (0, f.isWindows)() ? v().then(t => {

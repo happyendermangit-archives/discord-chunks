@@ -23,8 +23,8 @@ function(e, t, n) {
                     onCloseCallback: c,
                     secondaryConfirmText: f,
                     onConfirmSecondary: _,
-                    className: E,
-                    titleClassName: h
+                    className: h,
+                    titleClassName: E
                 } = e;
                 (0, s.openModal)(e => (0, i.jsx)(r.default, {
                     ...e,
@@ -37,8 +37,8 @@ function(e, t, n) {
                     onCancel: d,
                     secondaryConfirmText: f,
                     onConfirmSecondary: _,
-                    className: E,
-                    titleClassName: h
+                    className: h,
+                    titleClassName: E
                 }), {
                     onCloseCallback: c
                 })

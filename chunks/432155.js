@@ -11,10 +11,10 @@ function(e, t, n) {
             return _
         },
         SOUNDBOARD_EVERYWHERE: function() {
-            return E
+            return h
         },
         CUSTOM_CALL_SOUNDS: function() {
-            return h
+            return E
         },
         ANIMATED_AVATAR: function() {
             return g
@@ -112,8 +112,8 @@ function(e, t, n) {
     let c = new d("animatedEmojis"),
         f = new d("emojisEverywhere"),
         _ = new d("stickersEverywhere"),
-        E = new d("soundboardEverywhere"),
-        h = new d("customCallSounds"),
+        h = new d("soundboardEverywhere"),
+        E = new d("customCallSounds"),
         g = new d("animatedAvatar"),
         m = new d("customDiscriminator"),
         p = new d("premiumGuildMemberProfile"),
@@ -138,7 +138,7 @@ function(e, t, n) {
         k = Object.freeze({
             [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [c, f, _, S, L, U, w, I]),
             [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [c, f, g, m, S, A, N, O, U, w, I]),
-            [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, f, _, E, h, g, m, p, S, v, C, A, y, N, R, O, D, P, L, M, b, U, w, I, T])
+            [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, f, _, h, E, g, m, p, S, v, C, A, y, N, R, O, D, P, L, M, b, U, w, I, T])
         });
 
     function V(e, t) {

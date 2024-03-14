@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("290689"),
         f = n("804888"),
         _ = n("401690"),
-        E = n("845579"),
-        h = n("42203"),
+        h = n("845579"),
+        E = n("42203"),
         g = n("923959"),
         m = n("26989"),
         p = n("305961"),
@@ -163,7 +163,7 @@ function(e, t, n) {
             },
             emoticon: {
                 match(e, t, n) {
-                    if (!E.ConvertEmoticons.getSetting() || 0 !== n.length && !/\s$/.test(n)) return null;
+                    if (!h.ConvertEmoticons.getSetting() || 0 !== n.length && !/\s$/.test(n)) return null;
                     let i = u.default.EMOJI_SHORTCUT_RE.exec(e);
                     return null == i || i[0].length !== e.length && " " !== e[i[0].length] && "\n" !== e[i[0].length] ? null : i
                 },
@@ -264,7 +264,7 @@ function(e, t, n) {
             channel: {
                 match: a.anyScopeRegex(k),
                 parse(e) {
-                    let t = h.default.getChannel(e[1]);
+                    let t = E.default.getChannel(e[1]);
                     return {
                         content: null == t ? e[0] : (0, o.computeChannelName)(t, I.default, v.default, !0, !0)
                     }
@@ -412,8 +412,8 @@ function(e, t, n) {
                 text: e.name
             })),
             f = l.default.getDisambiguatedEmojiContext(n),
-            E = f.getEscapedCustomEmoticonNames(),
-            h = f.getCustomEmoji(),
+            h = f.getEscapedCustomEmoticonNames(),
+            E = f.getCustomEmoji(),
             v = f.getCustomEmoticonRegex(),
             T = {
                 inline: !0,
@@ -423,8 +423,8 @@ function(e, t, n) {
                 channels: u.concat(d).concat(c),
                 emojiContext: f,
                 customEmoticonsRegex: v,
-                customEmoji: h,
-                textExclusions: E,
+                customEmoji: E,
+                textExclusions: h,
                 disableErrorGuards: !0
             };
         return T
@@ -457,7 +457,7 @@ function(e, t, n) {
             return B(t, n)
         },
         unparse(e, t, n) {
-            let i = h.default.getChannel(t),
+            let i = E.default.getChannel(t),
                 r = null != i ? i.getGuildId() : null,
                 o = null != r ? p.default.getGuild(r) : null,
                 l = n ? x : s.omit(x, ["spoiler", "timestamp"]),

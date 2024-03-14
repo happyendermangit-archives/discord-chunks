@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("49111"),
         f = n("353927");
     let _ = Date.now(),
-        E = !1,
         h = !1,
+        E = !1,
         g = !1,
         m = !1,
         p = !1;
@@ -27,17 +27,17 @@ function(e, t, n) {
     }
 
     function v() {
-        Date.now() - _ > c.IDLE_DURATION || S() ? E || s.default.dispatch({
+        Date.now() - _ > c.IDLE_DURATION || S() ? h || s.default.dispatch({
             type: "IDLE",
             idle: !0,
             idleSince: _
-        }) : E && s.default.dispatch({
+        }) : h && s.default.dispatch({
             type: "IDLE",
             idle: !1
-        }), Date.now() - _ > Math.min(o.AfkTimeout.getSetting() * l.default.Millis.SECOND, c.IDLE_DURATION) || S() ? h || s.default.dispatch({
+        }), Date.now() - _ > Math.min(o.AfkTimeout.getSetting() * l.default.Millis.SECOND, c.IDLE_DURATION) || S() ? E || s.default.dispatch({
             type: "AFK",
             afk: !0
-        }) : h && s.default.dispatch({
+        }) : E && s.default.dispatch({
             type: "AFK",
             afk: !1
         })
@@ -72,22 +72,22 @@ function(e, t, n) {
     }
     class I extends i.default.Store {
         isIdle() {
-            return E
-        }
-        isAFK() {
             return h
         }
+        isAFK() {
+            return E
+        }
         getIdleSince() {
-            return E ? _ : null
+            return h ? _ : null
         }
     }
     I.displayName = "IdleStore";
     var C = new I(s.default, {
         IDLE: function(e) {
-            E = e.idle
+            h = e.idle
         },
         AFK: function(e) {
-            h = e.afk
+            E = e.afk
         },
         SPEAKING: function(e) {
             let {

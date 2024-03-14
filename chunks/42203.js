@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("846527"),
         f = n("1544"),
         _ = n("605250"),
-        E = n("379881"),
-        h = n("560208"),
+        h = n("379881"),
+        E = n("560208"),
         g = n("233069"),
         m = n("449008"),
         p = n("299039"),
@@ -259,14 +259,14 @@ function(e, t, n) {
     }
 
     function er() {
-        for (let e in b = {}, E.default.getFavoriteChannels()) {
-            let t = E.default.getCategoryRecord(e);
+        for (let e in b = {}, h.default.getFavoriteChannels()) {
+            let t = h.default.getCategoryRecord(e);
             null != t && (b[e] = t)
         }
     }
     class ea extends a.default.Store {
         initialize() {
-            this.waitFor(c.default, T.default, v.default, E.default), this.syncWith([E.default], er)
+            this.waitFor(c.default, T.default, v.default, h.default), this.syncWith([h.default], er)
         }
         hasChannel(e) {
             return null != j(e)
@@ -402,7 +402,7 @@ function(e, t, n) {
         GUILD_FEED_FETCH_SUCCESS: function(e) {
             let {
                 data: t
-            } = e, n = !1, i = (0, h.getThreadsFromGuildFeedFetch)(t);
+            } = e, n = !1, i = (0, E.getThreadsFromGuildFeedFetch)(t);
             for (let e of i) !(e.id in D) && g.ALL_CHANNEL_TYPES.has(e.type) && (q((0, g.createChannelRecordFromServer)(e)), n = !0);
             return n
         },

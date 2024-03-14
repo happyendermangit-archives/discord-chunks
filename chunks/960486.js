@@ -25,8 +25,8 @@ function(e, t, n) {
         c = n("433600"),
         f = n("577776"),
         _ = n("810567"),
-        E = n("578706"),
-        h = n("782340"),
+        h = n("578706"),
+        E = n("782340"),
         g = n("30441");
     let m = "data-listbox-item-id",
         p = Object.freeze({
@@ -68,7 +68,7 @@ function(e, t, n) {
             value: r,
             onChange: l,
             className: u,
-            listClassName: E,
+            listClassName: h,
             "aria-label": p,
             multiSelect: S = !1,
             autoFocus: v = !1,
@@ -157,11 +157,11 @@ function(e, t, n) {
                                 className: g.empty,
                                 children: [(0, i.jsx)(d.Heading, {
                                     variant: "heading-md/semibold",
-                                    children: h.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
+                                    children: E.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
                                 }), (0, i.jsx)(f.Text, {
                                     color: "text-muted",
                                     variant: "text-md/normal",
-                                    children: h.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
+                                    children: E.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
                                 })]
                             }) : (0, i.jsx)(I.Provider, {
                                 value: {
@@ -178,7 +178,7 @@ function(e, t, n) {
                                     "aria-multiselectable": S,
                                     id: L,
                                     ref: M,
-                                    className: a(g.list, E, {
+                                    className: a(g.list, h, {
                                         [g.scroller]: y
                                     }),
                                     sections: [b.length],
@@ -212,13 +212,13 @@ function(e, t, n) {
         } = e, {
             activeDescendant: f,
             selected: _,
-            setSelected: E,
-            itemToString: h
-        } = s.useContext(I), S = h(n), v = f === S, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : _.has(n), C = (0, o.useListItem)(S);
+            setSelected: h,
+            itemToString: E
+        } = s.useContext(I), S = E(n), v = f === S, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : _.has(n), C = (0, o.useListItem)(S);
         return (0, i.jsx)(u.Clickable, {
             tag: "li",
             id: S,
-            onClick: () => l ? null : E(n),
+            onClick: () => l ? null : h(n),
             [m]: n,
             className: a(g.item, {
                 [g.focused]: v,
@@ -272,7 +272,7 @@ function(e, t, n) {
         } = s.useContext(I), t = s.useContext(A), n = e.has(t);
         return n ? (0, i.jsx)("span", {
             className: g.itemCheckbox,
-            children: (0, i.jsx)(E.default, {
+            children: (0, i.jsx)(h.default, {
                 width: 20,
                 height: 20
             })

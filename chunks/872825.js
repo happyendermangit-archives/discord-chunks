@@ -30,8 +30,8 @@ function(e, t, n) {
         try {
             _ = s.default.deserialize(null != f.permissions && "" !== f.permissions ? f.permissions : "0")
         } catch (e) {}
-        let E = f.channel_id,
-            h = null !== (u = null !== (l = null !== (n = f.guild_id) && void 0 !== n ? n : null === (t = r.default.getChannel(E)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== l ? l : a.default.getGuildId()) && void 0 !== u ? u : void 0;
+        let h = f.channel_id,
+            E = null !== (u = null !== (l = null !== (n = f.guild_id) && void 0 !== n ? n : null === (t = r.default.getChannel(h)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== l ? l : a.default.getGuildId()) && void 0 !== u ? u : void 0;
         return {
             clientId: null !== (d = f.client_id) && void 0 !== d ? d : "",
             scopes: (null !== (c = f.scope) && void 0 !== c ? c : "").split(" ").filter(e => e.length > 0),
@@ -41,8 +41,8 @@ function(e, t, n) {
             codeChallengeMethod: f.code_challenge_method,
             state: f.state,
             permissions: _,
-            channelId: E,
-            guildId: h,
+            channelId: h,
+            guildId: E,
             prompt: f.prompt,
             disableGuildSelect: "true" === f.disable_guild_select,
             integrationType: null == f.integration_type ? void 0 : Number(f.integration_type)

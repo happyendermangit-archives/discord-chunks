@@ -22,8 +22,8 @@ function(e, t, n) {
         c = n("271938"),
         f = n("982108"),
         _ = n("42203"),
-        E = n("377253"),
-        h = n("18494"),
+        h = n("377253"),
+        E = n("18494"),
         g = n("162771"),
         m = n("299039"),
         p = n("695681"),
@@ -107,7 +107,7 @@ function(e, t, n) {
                 timeout: setTimeout(() => {
                     ! function(e) {
                         if (D(e, v.TimeoutCancelSource.TIMEOUT)) {
-                            let t = E.default.getMessage(e.channel_id, e.id),
+                            let t = h.default.getMessage(e.channel_id, e.id),
                                 {
                                     attachmentIds: n,
                                     embedIds: i
@@ -224,14 +224,14 @@ function(e, t, n) {
         } = e;
         if (!(0, S.isEligibleForExplicitMediaRedaction)() || null == r.channel_id || null == r.id || (null === (t = r.author) || void 0 === t ? void 0 : t.id) === c.default.getId() || null == r.embeds && null == r.attachments) return !1;
         if (!U(r)) {
-            let e = null !== (s = null !== (i = E.default.getMessage(r.channel_id, r.id)) && void 0 !== i ? i : T.default.getMessage(r.id, r.channel_id)) && void 0 !== s ? s : null === (n = d.default.getMessage(r.channel_id, r.id)) || void 0 === n ? void 0 : n.message;
+            let e = null !== (s = null !== (i = h.default.getMessage(r.channel_id, r.id)) && void 0 !== i ? i : T.default.getMessage(r.id, r.channel_id)) && void 0 !== s ? s : null === (n = d.default.getMessage(r.channel_id, r.id)) || void 0 === n ? void 0 : n.message;
             null != e && !U((0, u.updateMessageRecord)(e, r)) && D(e, v.TimeoutCancelSource.UPDATE)
         }
-        let a = h.default.getChannelId(),
+        let a = E.default.getChannelId(),
             o = f.default.getCurrentSidebarChannelId(a),
             l = r.channel_id === a || r.channel_id === o;
         if (!l) return !1;
-        let _ = E.default.getMessage(r.channel_id, r.id);
+        let _ = h.default.getMessage(r.channel_id, r.id);
         return null != _ && G([_])
     }
 
@@ -244,15 +244,15 @@ function(e, t, n) {
             isPushNotification: a
         } = e;
         if (!(0, S.isEligibleForExplicitMediaRedaction)() || r || a || null == i || (null === (t = s.author) || void 0 === t ? void 0 : t.id) === c.default.getId()) return !1;
-        let o = h.default.getChannelId(),
+        let o = E.default.getChannelId(),
             l = f.default.getCurrentSidebarChannelId(o),
             u = i === o || i === l,
             d = _.default.getChannel(i);
         if (!u) return !1;
-        let E = null === (n = null == d ? void 0 : d.isPrivate()) || void 0 === n || n,
+        let h = null === (n = null == d ? void 0 : d.isPrivate()) || void 0 === n || n,
             g = (null == d ? void 0 : d.memberCount) == null || (null == d ? void 0 : d.memberCount) > 100;
         return G([s], {
-            jitter: E && g
+            jitter: h && g
         })
     }
 
@@ -262,7 +262,7 @@ function(e, t, n) {
             messages: n
         } = e;
         if (!(0, S.isEligibleForExplicitMediaRedaction)() || null == t || null == n) return !1;
-        let i = h.default.getChannelId(),
+        let i = E.default.getChannelId(),
             s = f.default.getCurrentSidebarChannelId(i),
             r = t === i || t === s;
         return !!r && G(n)
@@ -307,7 +307,7 @@ function(e, t, n) {
             channelId: t
         } = e;
         if (null == t || !(0, S.isEligibleForExplicitMediaRedaction)()) return !1;
-        let n = t === h.default.getChannelId();
+        let n = t === E.default.getChannelId();
         return !!n && q(t)
     }
 
@@ -317,7 +317,7 @@ function(e, t, n) {
             local: n
         } = e;
         if (!(0, S.isEligibleForExplicitMediaRedaction)() || !n || t.type !== C.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
-        let i = h.default.getChannelId();
+        let i = E.default.getChannelId();
         return null != i && q(i)
     }
 
@@ -330,7 +330,7 @@ function(e, t, n) {
     }
 
     function q(e) {
-        let t = E.default.getMessages(e);
+        let t = h.default.getMessages(e);
         return 0 !== t.length && function(e) {
             let {
                 messagesPendingScan: t,

@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("271938"),
         f = n("42203"),
         _ = n("341542"),
-        E = n("49111");
-    let h = E.MAX_MESSAGE_LENGTH_PREMIUM + 500;
+        h = n("49111");
+    let E = h.MAX_MESSAGE_LENGTH_PREMIUM + 500;
     (s = i || (i = {}))[s.ChannelMessage = 0] = "ChannelMessage", s[s.ThreadSettings = 1] = "ThreadSettings", s[s.FirstThreadMessage = 2] = "FirstThreadMessage", s[s.ApplicationLauncherCommand = 3] = "ApplicationLauncherCommand", s[s.Poll = 4] = "Poll", s[s.SlashCommand = 5] = "SlashCommand";
     let g = {};
 
@@ -40,7 +40,7 @@ function(e, t, n) {
             var o, l;
             let e = m(a),
                 t = e[n];
-            if (null == t && (t = e[n] = {}), (l = i).length > h && (l = l.substr(0, h)), (i = l) === (null === (o = t[s]) || void 0 === o ? void 0 : o.draft)) return !1;
+            if (null == t && (t = e[n] = {}), (l = i).length > E && (l = l.substr(0, E)), (i = l) === (null === (o = t[s]) || void 0 === o ? void 0 : o.draft)) return !1;
             t[s] = {
                 timestamp: Date.now(),
                 draft: i

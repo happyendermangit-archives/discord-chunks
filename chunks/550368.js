@@ -28,8 +28,8 @@ function(e, t, n) {
     let c = "https://i.scdn.co/image/",
         f = (e, t, n) => "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
         _ = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
-        E = e => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
-        h = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
+        h = e => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
+        E = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
         g = {
             [d.PlatformTypes.SPOTIFY]: {
                 deserialize: e => "".concat(c).concat(encodeURIComponent(e)),
@@ -43,9 +43,9 @@ function(e, t, n) {
                 }
             },
             [d.PlatformTypes.YOUTUBE]: {
-                deserialize: e => E(encodeURIComponent(e)),
+                deserialize: e => h(encodeURIComponent(e)),
                 serialize: e => {
-                    let t = e.match(h);
+                    let t = e.match(E);
                     return null != t ? t[1] : null
                 }
             },

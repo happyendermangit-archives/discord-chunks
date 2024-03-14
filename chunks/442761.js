@@ -35,8 +35,8 @@ function(e, t, n) {
                 spacing: c,
                 onShiftClick: f,
                 positionKey: _,
-                preload: E,
-                disablePointerEvents: h,
+                preload: h,
+                disablePointerEvents: E,
                 ignoreModalClicks: g,
                 closeOnScroll: m,
                 useMouseEnter: p,
@@ -45,7 +45,7 @@ function(e, t, n) {
             } = this.props;
             return (0, r.jsx)(l.BasePopout, {
                 ref: this.ref,
-                preload: E,
+                preload: h,
                 position: n,
                 align: null != a ? a : function(e) {
                     switch (e) {
@@ -71,7 +71,7 @@ function(e, t, n) {
                 onRequestClose: s,
                 onShiftClick: f,
                 positionKey: _,
-                disablePointerEvents: h,
+                disablePointerEvents: E,
                 ignoreModalClicks: g,
                 closeOnScroll: m,
                 useMouseEnter: p,
@@ -126,14 +126,14 @@ function(e, t, n) {
             if (!c.current) {
                 c.current = !0;
                 let e = setTimeout(() => {
-                        g(() => E), l(e => e + 1)
+                        g(() => h), l(e => e + 1)
                     }, 300),
                     n = await t();
                 g(() => n), l(e => e + 1), clearTimeout(e)
             }
         }
 
-        function E() {
+        function h() {
             var e, t, n, s;
             let a = null === (s = i.current) || void 0 === s ? void 0 : null === (n = s.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
                 l = Math.max(100, null == a ? 100 : a.offsetWidth - 20);
@@ -145,7 +145,7 @@ function(e, t, n) {
                 children: (0, r.jsx)(o.Spinner, {})
             })
         }
-        let [h, g] = a.useState(() => u);
+        let [E, g] = a.useState(() => u);
         return a.useEffect(() => {
             c.current ? t().then(e => {
                 g(() => e), l(e => e + 1)
@@ -153,7 +153,7 @@ function(e, t, n) {
         }, [t]), (0, r.jsx)(f, {
             ref: i,
             ...n,
-            renderPopout: h
+            renderPopout: E
         })
     }
     f.Animation = i, f.defaultProps = {

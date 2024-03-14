@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DEFAULT_WANTS_FULL: function() {
-            return h
+            return E
         },
         RTCMediaSinkWantsManagerEvent: function() {
             return i
@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("560528"),
         f = n("718517"),
         _ = n("299039"),
-        E = n("49111");
-    let h = {
+        h = n("49111");
+    let E = {
             any: 100
         },
         g = 30 * f.default.Millis.SECOND,
@@ -36,7 +36,7 @@ function(e, t, n) {
         }
         shouldReceiveFromUser(e) {
             var t, n;
-            return !((null === (t = this.connection) || void 0 === t ? void 0 : t.getLocalVideoDisabled(e)) || this.userVideoDisabled(e) && (null === (n = this.videoHealthManager) || void 0 === n ? void 0 : n.getCurrentVideoToggleState(e)) !== E.VideoToggleState.AUTO_PROBING)
+            return !((null === (t = this.connection) || void 0 === t ? void 0 : t.getLocalVideoDisabled(e)) || this.userVideoDisabled(e) && (null === (n = this.videoHealthManager) || void 0 === n ? void 0 : n.getCurrentVideoToggleState(e)) !== h.VideoToggleState.AUTO_PROBING)
         }
         getAudioSSRCs() {
             return this.audioSsrcs
@@ -81,7 +81,7 @@ function(e, t, n) {
             return delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamIds[e], this.update(Array.from(this.participants))
         }
         reset() {
-            this.setConnection(null, !1), this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.latestWants = h
+            this.setConnection(null, !1), this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.latestWants = E
         }
         setSelectedParticipant(e) {
             if (e === this.selectedParticipantId) return this.latestWants;
@@ -126,7 +126,7 @@ function(e, t, n) {
         }
         constructor(e, t, n, i = new l.MediaSinkWantsLadder) {
             var s;
-            super(), s = this, this.userId = e, this.isStageChannel = t, this.supportsSeamless = n, this.ladder = i, this.connection = null, this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.offscreenUsers = {}, this.offscreenDisabledUsers = {}, this.latestWants = h, this.participants = new Set, this.selectedParticipantId = null, this.pipOpen = !1, this.videoHealthManager = null, this.delayedUpdate = () => {
+            super(), s = this, this.userId = e, this.isStageChannel = t, this.supportsSeamless = n, this.ladder = i, this.connection = null, this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.offscreenUsers = {}, this.offscreenDisabledUsers = {}, this.latestWants = E, this.participants = new Set, this.selectedParticipantId = null, this.pipOpen = !1, this.videoHealthManager = null, this.delayedUpdate = () => {
                 this.delayedCall.delay()
             }, this.addLru = (e, t, n) => {
                 if (n.push(e), n.length <= 3) return;

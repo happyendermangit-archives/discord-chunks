@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n.n(d),
         f = n("446674"),
         _ = n("913144"),
-        E = n("485328"),
-        h = n("605250"),
+        h = n("485328"),
+        E = n("605250"),
         g = n("999819"),
         m = n("42887"),
         p = n("599110"),
@@ -32,7 +32,7 @@ function(e, t, n) {
         A = n("80028"),
         y = n("846325"),
         N = n("390493");
-    let R = new h.default("KeybindsStore"),
+    let R = new E.default("KeybindsStore"),
         O = {
             id: "1000",
             action: C.GlobalKeybindActions.TOGGLE_MUTE,
@@ -112,7 +112,7 @@ function(e, t, n) {
             keydown: !1,
             keyup: !1,
             ...a
-        }), E.default.validateKeybind((0, T.toString)(e.shortcut))
+        }), h.default.validateKeybind((0, T.toString)(e.shortcut))
     }
 
     function B(e) {
@@ -205,7 +205,7 @@ function(e, t, n) {
     function K() {
         return k(), W.reduce((e, t) => t() || e, !1)
     }
-    E.default.setGetKeybindList(() => {
+    h.default.setGetKeybindList(() => {
         let e = [];
         for (let t in P) P.hasOwnProperty(t) && e.push((0, T.toString)(P[t].shortcut));
         let {
@@ -326,7 +326,7 @@ function(e, t, n) {
             let {
                 enable: t
             } = e;
-            M = t, t ? (E.default.enable(), c.forEach(P, x), k()) : (E.default.disable(), c.forEach(P, e => F(e.id)), V())
+            M = t, t ? (h.default.enable(), c.forEach(P, x), k()) : (h.default.disable(), c.forEach(P, e => F(e.id)), V())
         },
         KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function(e) {
             let {

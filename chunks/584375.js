@@ -36,19 +36,19 @@ function(e, t, n) {
                     ratio: 5,
                     saturationFactor: a
                 })) && void 0 !== n ? n : d,
-                E = (0, s.getAccessibleColor)({
+                h = (0, s.getAccessibleColor)({
                     colors: [d, l],
                     ratio: 7,
                     saturationFactor: a
                 }),
-                h = (0, s.getAccessibleColor)({
+                E = (0, s.getAccessibleColor)({
                     colors: [d, u],
                     ratio: 7,
                     saturationFactor: a
                 });
             return {
                 LIGHT: {
-                    accentColor: null == E ? void 0 : E.toHexString(),
+                    accentColor: null == h ? void 0 : h.toHexString(),
                     backgroundColor: (0, s.getSaturatedColorHex)({
                         colorRGB: f,
                         saturationFactor: a
@@ -57,7 +57,7 @@ function(e, t, n) {
                     opacity: (null == c ? void 0 : c.saturation) < .1 ? .35 : .1
                 },
                 DARK: {
-                    accentColor: null == h ? void 0 : h.toHexString(),
+                    accentColor: null == E ? void 0 : E.toHexString(),
                     backgroundColor: (0, s.getSaturatedColorHex)({
                         colorRGB: _,
                         saturationFactor: a

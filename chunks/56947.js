@@ -11,10 +11,10 @@ function(e, t, n) {
             return _
         },
         useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock: function() {
-            return E
+            return h
         },
         useShouldSeeClipsPremiumEarlyAccessAnnouncementCoachmark: function() {
-            return h
+            return E
         },
         isUserPremiumTypeForClipsEarlyAccess: function() {
             return g
@@ -152,7 +152,7 @@ function(e, t, n) {
             });
         return (n || t || i || o) && e
     }
-    let E = e => {
+    let h = e => {
             let {
                 autoTrackExposure: t
             } = e, n = (0, l.default)(a.default), {
@@ -164,7 +164,7 @@ function(e, t, n) {
             });
             return !!n && i
         },
-        h = e => {
+        E = e => {
             let {
                 autoTrackExposure: t
             } = e, n = (0, l.default)(a.default), {

@@ -53,8 +53,8 @@ function(e, t, n) {
             type: l = u.MessageTypes.DEFAULT,
             messageReference: f,
             allowedMentions: _,
-            author: E,
-            flags: h,
+            author: h,
+            flags: E,
             nonce: g,
             poll: m
         } = e, p = [];
@@ -62,12 +62,12 @@ function(e, t, n) {
             let e = r.default.getMessageByReference(f);
             (null == e ? void 0 : e.state) === r.ReferencedMessageState.LOADED && p.push(c(e.message.author))
         }
-        return null == E && (E = o.default.getCurrentUser()), E instanceof a.default && (E = c(E)), s(null != E, "createMessage: author cannot be undefined"), {
+        return null == h && (h = o.default.getCurrentUser()), h instanceof a.default && (h = c(h)), s(null != h, "createMessage: author cannot be undefined"), {
             id: null != g ? g : d(),
             type: l,
             content: n,
             channel_id: t,
-            author: E,
+            author: h,
             attachments: [],
             embeds: [],
             pinned: !1,
@@ -79,7 +79,7 @@ function(e, t, n) {
             state: u.MessageStates.SENDING,
             tts: i,
             message_reference: f,
-            flags: h,
+            flags: E,
             nonce: g,
             poll: m
         }

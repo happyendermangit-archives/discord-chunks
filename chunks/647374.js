@@ -23,7 +23,7 @@ function(e, t, n) {
         max: 50
     });
 
-    function E(e) {
+    function h(e) {
         let t = _.get(e);
         if (null != t) return t;
         let n = (0, f.sanitizeWhitespace)(e),
@@ -34,7 +34,7 @@ function(e, t, n) {
             };
         return _.set(e, s), s
     }
-    let h = ["http:", "https:", "discord:"],
+    let E = ["http:", "https:", "discord:"],
         g = [c.AST_KEY.TEXT, c.AST_KEY.UNDERLINE, c.AST_KEY.STRONG, c.AST_KEY.ITALICS, c.AST_KEY.STRIKETHROUGH, c.AST_KEY.INLINE_CODE, c.AST_KEY.SPOILER, c.AST_KEY.LINE_BREAK, c.AST_KEY.TIMESTAMP],
         m = [...g, c.AST_KEY.EMOJI, c.AST_KEY.CUSTOM_EMOJI],
         p = [c.AST_KEY.LIST, c.AST_KEY.HEADING, c.AST_KEY.BLOCK_QUOTE],
@@ -59,7 +59,7 @@ function(e, t, n) {
             var t;
             let n = new URL(e),
                 i = null !== (t = n.protocol) && void 0 !== t ? t : "";
-            if (!h.includes(i.toLowerCase())) throw Error("Provided protocol is not allowed: " + i);
+            if (!E.includes(i.toLowerCase())) throw Error("Provided protocol is not allowed: " + i);
             if (("http:" === i || "https:" === i) && (null == n.hostname || 0 === n.hostname.length)) throw Error("no hostname");
             let s = (0, f.safelyMakeUrlHumanReadable)(n);
             n.username = "", n.password = "";
@@ -79,7 +79,7 @@ function(e, t, n) {
             let [i, r, a, o] = e, f = () => ({
                 type: c.AST_KEY.TEXT,
                 content: i
-            }), _ = E(a), h = E(r), C = E(null != o ? o : ""), A = _.whitespaceSanitized, y = h.fullySanitized, N = C.fullySanitized, R = y.trim(), O = A.trim();
+            }), _ = h(a), E = h(r), C = h(null != o ? o : ""), A = _.whitespaceSanitized, y = E.fullySanitized, N = C.fullySanitized, R = y.trim(), O = A.trim();
             if (0 === O.length || 0 === R.length) return f();
             let D = l.unescapeUrl(a),
                 P = I(D),
@@ -138,7 +138,7 @@ function(e, t, n) {
             if (B) return f();
             let H = s.pick(t.rules, b),
                 Y = l.parserFor(H),
-                j = Y(h.whitespaceSanitized, M),
+                j = Y(E.whitespaceSanitized, M),
                 W = C.whitespaceSanitized,
                 {
                     target: K

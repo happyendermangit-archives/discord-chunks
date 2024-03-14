@@ -50,23 +50,23 @@ function(e, t, n) {
         for (let e of t) u(e)
     }
 
-    function E(e) {
+    function h(e) {
         let {
             channel: t
         } = e, n = !1;
         return r.has(t.id) && (r.delete(t.id), n = !0), n
     }
-    class h extends s.default {
+    class E extends s.default {
         initialize() {
             this.waitFor(i.default)
         }
         loadCache() {
-            let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
+            let e = this.readSnapshot(E.LATEST_SNAPSHOT_VERSION);
             null != e && (r = new Set(e))
         }
         takeSnapshot() {
             return {
-                version: h.LATEST_SNAPSHOT_VERSION,
+                version: E.LATEST_SNAPSHOT_VERSION,
                 data: Array.from(r)
             }
         }
@@ -92,11 +92,11 @@ function(e, t, n) {
                 CACHE_LOADED_LAZY: () => this.loadCache(),
                 CHANNEL_CREATE: f,
                 CHANNEL_UPDATES: _,
-                CHANNEL_DELETE: E,
+                CHANNEL_DELETE: h,
                 MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: c
             })
         }
     }
-    h.displayName = "SpamMessageRequestStore", h.LATEST_SNAPSHOT_VERSION = 1;
-    var g = new h
+    E.displayName = "SpamMessageRequestStore", E.LATEST_SNAPSHOT_VERSION = 1;
+    var g = new E
 }

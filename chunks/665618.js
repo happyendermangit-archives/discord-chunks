@@ -17,10 +17,10 @@ function(e, t, n) {
             return _
         },
         toServer: function() {
-            return E
+            return h
         },
         fromSerializedGuildRecord: function() {
-            return h
+            return E
         },
         filterRoleDeletes: function() {
             return g
@@ -34,7 +34,7 @@ function(e, t, n) {
         l = n("49111");
 
     function u(e, t) {
-        var n, i, o, u, d, c, f, _, E, h, g, m, p;
+        var n, i, o, u, d, c, f, _, h, E, g, m, p;
         let S = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
             v = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
         if (null == e.properties) {
@@ -68,14 +68,14 @@ function(e, t, n) {
             defaultMessageNotifications: null !== (f = e.properties.default_message_notifications) && void 0 !== f ? f : l.UserNotificationSettings.ALL_MESSAGES,
             mfaLevel: null !== (_ = e.properties.mfa_level) && void 0 !== _ ? _ : l.MFALevels.NONE,
             vanityURLCode: e.properties.vanity_url_code,
-            premiumTier: null !== (E = e.properties.premium_tier) && void 0 !== E ? E : l.BoostedGuildTiers.NONE,
+            premiumTier: null !== (h = e.properties.premium_tier) && void 0 !== h ? h : l.BoostedGuildTiers.NONE,
             premiumProgressBarEnabled: e.properties.premium_progress_bar_enabled || !1,
             systemChannelFlags: e.properties.system_channel_flags,
             discoverySplash: e.properties.discovery_splash,
             rulesChannelId: e.properties.rules_channel_id,
             safetyAlertsChannelId: e.properties.safety_alerts_channel_id,
             publicUpdatesChannelId: e.properties.public_updates_channel_id,
-            maxStageVideoChannelUsers: null !== (h = e.properties.max_stage_video_channel_users) && void 0 !== h ? h : -1,
+            maxStageVideoChannelUsers: null !== (E = e.properties.max_stage_video_channel_users) && void 0 !== E ? E : -1,
             maxVideoChannelUsers: null !== (g = e.properties.max_video_channel_users) && void 0 !== g ? g : -1,
             maxMembers: null !== (m = e.properties.max_members) && void 0 !== m ? m : -1,
             nsfwLevel: null !== (p = e.properties.nsfw_level) && void 0 !== p ? p : l.GuildNSFWContentLevel.DEFAULT,
@@ -93,8 +93,8 @@ function(e, t, n) {
     }
 
     function c(e, t) {
-        var n, i, s, r, a, o, u, d, c, f, _, h, g;
-        let m = null !== (n = e.properties) && void 0 !== n ? n : E(t),
+        var n, i, s, r, a, o, u, d, c, f, _, E, g;
+        let m = null !== (n = e.properties) && void 0 !== n ? n : h(t),
             p = {
                 id: e.id,
                 name: null !== (i = m.name) && void 0 !== i ? i : "",
@@ -124,7 +124,7 @@ function(e, t, n) {
                 publicUpdatesChannelId: m.public_updates_channel_id,
                 maxStageVideoChannelUsers: null !== (f = m.max_stage_video_channel_users) && void 0 !== f ? f : -1,
                 maxVideoChannelUsers: null !== (_ = m.max_video_channel_users) && void 0 !== _ ? _ : -1,
-                maxMembers: null !== (h = m.max_members) && void 0 !== h ? h : -1,
+                maxMembers: null !== (E = m.max_members) && void 0 !== E ? E : -1,
                 nsfwLevel: null !== (g = m.nsfw_level) && void 0 !== g ? g : l.GuildNSFWContentLevel.DEFAULT,
                 hubType: m.hub_type,
                 latestOnboardingQuestionId: m.latest_onboarding_question_id
@@ -191,7 +191,7 @@ function(e, t, n) {
         return new a.default(t)
     }
 
-    function E(e) {
+    function h(e) {
         return {
             id: e.id,
             name: e.name,
@@ -229,7 +229,7 @@ function(e, t, n) {
         }
     }
 
-    function h(e) {
+    function E(e) {
         var t;
         for (let n in null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), e.features = new Set(null !== (t = e.features) && void 0 !== t ? t : []), e.roles)(0, o.fromSerializedGuildRole)(e.roles[n]);
         return (0, r.dangerouslyCast)(e, a.default)

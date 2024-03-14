@@ -12,8 +12,8 @@ function(e, t, n) {
         c = n("913144"),
         f = n("190017"),
         _ = n("161454"),
-        E = n("271938"),
-        h = n("677225"),
+        h = n("271938"),
+        E = n("677225"),
         g = n("964889"),
         m = n("152723"),
         p = n("773336"),
@@ -54,8 +54,8 @@ function(e, t, n) {
                 branchId: a
             } = (0, g.convertComboId)(i);
             if (t = r, n = a, (null == R || R.applicationId !== t || R.branchId !== n) && (null == O || O.applicationId !== t || O.branchId !== n)) {
-                let e = E.default.getToken(),
-                    t = E.default.getId();
+                let e = h.default.getToken(),
+                    t = h.default.getId();
                 if (null == e) throw Error("missing user token");
                 L = !m.default.setCurrentTask(r, a, s, t, e)
             }
@@ -100,8 +100,8 @@ function(e, t, n) {
     }
 
     function x() {
-        let e = E.default.getToken(),
-            t = E.default.getId();
+        let e = h.default.getToken(),
+            t = h.default.getId();
         null != e && m.default.setCredentials(t, e)
     }
 
@@ -196,7 +196,7 @@ function(e, t, n) {
                 } = e, {
                     applicationId: n,
                     branchId: s
-                } = (0, g.convertComboId)(t), r = S.default.getState(n, s), a = h.default.getTargetBuildId(n, s), o = h.default.getTargetManifests(n, s);
+                } = (0, g.convertComboId)(t), r = S.default.getState(n, s), a = E.default.getTargetBuildId(n, s), o = E.default.getTargetManifests(n, s);
                 if (null != r && r.type === v.LocalDispatchApplicationStates.UP_TO_DATE && r.buildId === r.targetBuildId && r.buildId === a && l.isEqual(r.manifestIds, r.targetManifestIds) && l.isEqual(r.manifestIds, o)) {
                     if (y.push(t), P.has(t)) {
                         let e = P.get(t);

@@ -3,7 +3,7 @@ function(e, t, n) {
     let i, s;
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     }), n("222007");
     var r = n("446674"),
@@ -20,7 +20,7 @@ function(e, t, n) {
         let t = f[e];
         null != t && delete c[t], delete f[e]
     }
-    class E extends r.default.Store {
+    class h extends r.default.Store {
         getInteraction(e) {
             let t = c[e.id];
             return null != t ? d[t] : null
@@ -44,8 +44,8 @@ function(e, t, n) {
             return i
         }
     }
-    E.displayName = "InteractionStore";
-    var h = new E(a.default, {
+    h.displayName = "InteractionStore";
+    var E = new h(a.default, {
         LOGOUT: function() {
             d = {}, c = {}, f = {}
         },

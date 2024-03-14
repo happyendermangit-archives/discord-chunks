@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     });
     var i = n("803182"),
@@ -17,13 +17,13 @@ function(e, t, n) {
     let f = {},
         _ = !1;
 
-    function E(e) {
+    function h(e) {
         if (null == e || e === c.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID || (0, c.isStaticChannelRoute)(e) || null != l.default.getChannel(e)) return Promise.resolve();
         if (_ || (_ = !0, r.default.subscribe("CONNECTION_OPEN", () => {
                 f = {};
                 let e = u.default.getChannelId(),
                     t = l.default.getChannel(e);
-                null != e && null == t && E(e)
+                null != e && null == t && h(e)
             })), !a.default.isConnected()) return Promise.resolve();
         let t = f[e];
         if (null != t) return "LOADING" === t.type ? t.promise : Promise.resolve();
@@ -31,7 +31,7 @@ function(e, t, n) {
                 path: d.Routes.CHANNEL(":guildId", ":channelId", ":messageId"),
                 exact: !0
             }),
-            h = s.default.get(d.Endpoints.CHANNEL(e)).then(t => {
+            E = s.default.get(d.Endpoints.CHANNEL(e)).then(t => {
                 let {
                     body: i
                 } = t;
@@ -60,10 +60,10 @@ function(e, t, n) {
             });
         return f[e] = {
             type: "LOADING",
-            promise: h
-        }, h
+            promise: E
+        }, E
     }
-    var h = {
-        loadThread: E
+    var E = {
+        loadThread: h
     }
 }

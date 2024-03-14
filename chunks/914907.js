@@ -14,12 +14,12 @@ function(e, t, n) {
         c = n("669491"),
         f = n("227645"),
         _ = n("577776"),
-        E = n("49111"),
-        h = n("426834");
+        h = n("49111"),
+        E = n("426834");
     let g = {
-            side: h.side,
-            top: h.top,
-            "top-pill": h.topPill
+            side: E.side,
+            top: E.top,
+            "top-pill": E.topPill
         },
         m = a.forwardRef(function(e, t) {
             let {
@@ -90,21 +90,21 @@ function(e, t, n) {
                 clickableRef: u,
                 look: d,
                 disableItemStyles: c
-            } = this.props, _ = this.props["aria-label"], E = i === n;
+            } = this.props, _ = this.props["aria-label"], h = i === n;
             return (0, r.jsx)(f.Clickable, {
                 className: l(t, {
-                    [h.item]: !c,
-                    [h.brand]: "brand" === d,
-                    [h.selected]: null == s && E,
-                    [h.themed]: "grey" === d,
-                    [h.disabled]: null == s && a
+                    [E.item]: !c,
+                    [E.brand]: "brand" === d,
+                    [E.selected]: null == s && h,
+                    [E.themed]: "grey" === d,
+                    [E.disabled]: null == s && a
                 }),
                 style: this.getStyle(),
                 role: "tab",
-                "aria-selected": E,
-                "aria-controls": E ? p("".concat(n)) : void 0,
+                "aria-selected": h,
+                "aria-controls": h ? p("".concat(n)) : void 0,
                 "aria-disabled": a,
-                tabIndex: E ? 0 : -1,
+                tabIndex: h ? 0 : -1,
                 onMouseEnter: null != s ? this.handleMouseOver : void 0,
                 onClick: this.handleClick,
                 onMouseLeave: null != s ? this.handleMouseOut : void 0,
@@ -207,15 +207,15 @@ function(e, t, n) {
             }, this.getNodeForKeydownEvent = async e => {
                 let {
                     orientation: t = "horizontal"
-                } = this.props, n = "vertical" === t ? E.KeyboardKeys.ARROW_UP : E.KeyboardKeys.ARROW_LEFT, i = "vertical" === t ? E.KeyboardKeys.ARROW_DOWN : E.KeyboardKeys.ARROW_RIGHT;
+                } = this.props, n = "vertical" === t ? h.KeyboardKeys.ARROW_UP : h.KeyboardKeys.ARROW_LEFT, i = "vertical" === t ? h.KeyboardKeys.ARROW_DOWN : h.KeyboardKeys.ARROW_RIGHT;
                 switch (e.which) {
                     case n:
                         return this.focusManager.getPreviousFocusableElement();
                     case i:
                         return this.focusManager.getNextFocusableElement();
-                    case E.KeyboardKeys.HOME:
+                    case h.KeyboardKeys.HOME:
                         return this.focusManager.getFirstFocusableElement();
-                    case E.KeyboardKeys.END:
+                    case h.KeyboardKeys.END:
                         return this.focusManager.getLastFocusableElement()
                 }
                 return null
@@ -235,7 +235,7 @@ function(e, t, n) {
         } = e;
         return (0, r.jsx)(f.Clickable, {
             tabIndex: null == n ? -1 : 0,
-            className: l(h.header, t),
+            className: l(E.header, t),
             onClick: n,
             "aria-expanded": s,
             "aria-controls": a,
@@ -247,7 +247,7 @@ function(e, t, n) {
             children: (0, r.jsx)(_.Text, {
                 variant: "eyebrow",
                 color: "none",
-                className: h.headerText,
+                className: E.headerText,
                 children: i
             })
         })
@@ -256,7 +256,7 @@ function(e, t, n) {
             style: t
         } = e;
         return (0, r.jsx)("div", {
-            className: h.separator,
+            className: E.separator,
             style: t
         })
     }, T.Panel = m

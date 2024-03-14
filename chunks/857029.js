@@ -30,8 +30,8 @@ function(e, t, n) {
             focusedY: c = 0,
             onSelect: f,
             prepareFocus: _,
-            getNewFocusPosition: E,
-            maintainFocusPosition: h = !0,
+            getNewFocusPosition: h,
+            maintainFocusPosition: E = !0,
             enabled: g = !0,
             onDispatch: m,
             autoFocusElement: p = !0,
@@ -62,8 +62,8 @@ function(e, t, n) {
                     focusedY: c,
                     onSelect: f,
                     prepareFocus: _,
-                    getNewFocusPosition: E,
-                    dispatch: h,
+                    getNewFocusPosition: h,
+                    dispatch: E,
                     maintainFocusPosition: g,
                     enabled: m,
                     autoFocusElement: p,
@@ -77,7 +77,7 @@ function(e, t, n) {
                     [O] = i.useState(() => new a.HandlerMemoizer(e => {
                         let [t, n] = e.split(",").map(Number);
                         return () => {
-                            C(!0), h({
+                            C(!0), E({
                                 type: s.GridActionType.SET_FOCUSED_POSITION,
                                 x: t,
                                 y: n
@@ -99,8 +99,8 @@ function(e, t, n) {
                     }, [t, _, D]),
                     L = i.useCallback(function() {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                            [n, i] = null != E ? E(d, c) : [d, c];
-                        if ((n !== d || i !== c) && (h({
+                            [n, i] = null != h ? h(d, c) : [d, c];
+                        if ((n !== d || i !== c) && (E({
                                 type: s.GridActionType.SET_FOCUSED_POSITION,
                                 x: n,
                                 y: i
@@ -110,7 +110,7 @@ function(e, t, n) {
                         }
                         let r = u(l(t, n, i));
                         null != r && (R(!0), D(r))
-                    }, [h, d, c, E, t, D]),
+                    }, [E, d, c, h, t, D]),
                     [M, b] = i.useState(!1);
                 i.useEffect(() => {
                     if (!M || !I) return;
@@ -168,18 +168,18 @@ function(e, t, n) {
                             case r.ActionType.NAVIGATE_START:
                             case r.ActionType.NAVIGATE_END:
                                 let i = 0 === n.length || 0 === d && 0 === c && t === r.ActionType.NAVIGATE_LEFT;
-                                !i && (e.preventDefault(), e.stopPropagation()), h({
+                                !i && (e.preventDefault(), e.stopPropagation()), E({
                                     type: t
                                 });
                                 return;
                             case r.ActionType.SELECT_FOCUSED_ITEM:
                                 var s;
                                 if (p && (null == (s = T) ? void 0 : s.ownerDocument.activeElement) !== s || e.repeat) return;
-                                e.preventDefault(), e.stopPropagation(), h({
+                                e.preventDefault(), e.stopPropagation(), E({
                                     type: t
                                 }), null != f ? f(d, c, e) : null != T && T.click()
                         }
-                    }, [L, h, p, T, f, d, c]),
+                    }, [L, E, p, T, f, d, c]),
                     k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (C(!0), R(!0)), !1) : I ? (L(!1), !1) : void(g && null != T ? P(d, c) : L(!0)), [I, g, T, L, P, d, c]),
                     V = i.useCallback(e => {
                         if (e.target !== e.currentTarget) {
@@ -214,11 +214,11 @@ function(e, t, n) {
                         "aria-rowindex": e + 1
                     }), []),
                     H = i.useMemo(() => ({
-                        dispatch: h,
+                        dispatch: E,
                         getContainerProps: F,
                         getItemProps: x,
                         getRowProps: B
-                    }), [h, F, x, B]);
+                    }), [E, F, x, B]);
                 return H
             }({
                 navId: t,
@@ -228,8 +228,8 @@ function(e, t, n) {
                 dispatch: N,
                 onSelect: f,
                 prepareFocus: _,
-                getNewFocusPosition: E,
-                maintainFocusPosition: h,
+                getNewFocusPosition: h,
+                maintainFocusPosition: E,
                 enabled: g,
                 autoFocusElement: p,
                 useVirtualFocus: S

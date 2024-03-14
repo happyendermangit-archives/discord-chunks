@@ -8,10 +8,10 @@ function(e, t, n) {
             return _
         },
         deleteVideoFilterAsset: function() {
-            return E
+            return h
         },
         saveLastUsedBackgroundOption: function() {
-            return h
+            return E
         },
         applyMediaFilterSettings: function() {
             return g
@@ -57,15 +57,15 @@ function(e, t, n) {
             throw new d.default(e)
         }
     }
-    async function E(e) {
+    async function h(e) {
         await i.default.delete(c.Endpoints.VIDEO_FILTER_ASSET(e.id));
         let t = (0, l.getLastUsedVideoBackgroundOption)(o.default.getCurrentUser());
-        (0, u.isCustomBackgroundOption)(t) && t.id === e.id && h(null), s.default.dispatch({
+        (0, u.isCustomBackgroundOption)(t) && t.id === e.id && E(null), s.default.dispatch({
             type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS",
             videoFilterAsset: e
         })
     }
-    async function h(e) {
+    async function E(e) {
         if (await r.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", t => {
                 t.videoBackgroundFilterDesktop = (0, u.getVideoBackgroundProtoFromOption)(e)
             }, r.UserSettingsDelay.FREQUENT_USER_ACTION), (0, u.isCustomBackgroundOption)(e)) {

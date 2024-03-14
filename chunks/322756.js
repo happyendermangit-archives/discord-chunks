@@ -23,8 +23,8 @@ function(e, t, n) {
             onSelect: n,
             dateFormat: s = "MMM D, YYYY",
             minDate: _,
-            maxDate: E,
-            disabled: h = !1
+            maxDate: h,
+            disabled: E = !1
         } = e;
         return (0, i.jsx)(l.Popout, {
             renderPopout: function(e) {
@@ -34,7 +34,7 @@ function(e, t, n) {
                 return (0, i.jsx)(o.Dialog, {
                     children: (0, i.jsx)(u.default, {
                         minDate: _,
-                        maxDate: E,
+                        maxDate: h,
                         value: t,
                         onSelect: e => {
                             n(e), s()
@@ -54,11 +54,11 @@ function(e, t, n) {
                 return (0, i.jsx)(a.Clickable, {
                     ...o,
                     className: r(f.inputDefault, c.container, {
-                        [f.disabled]: h,
-                        [c.disabled]: h
+                        [f.disabled]: E,
+                        [c.disabled]: E
                     }),
-                    onClick: h ? void 0 : n,
-                    "aria-disabled": h,
+                    onClick: E ? void 0 : n,
+                    "aria-disabled": E,
                     children: (0, i.jsxs)("div", {
                         className: c.content,
                         children: [(0, i.jsx)("div", {

@@ -31,8 +31,8 @@ function(e, t, n) {
         c = n("516256"),
         f = n("242670"),
         _ = n("577776"),
-        E = n("77078"),
-        h = n("69927"),
+        h = n("77078"),
+        E = n("69927"),
         g = n("393414"),
         m = n("239380"),
         p = n("599110"),
@@ -50,7 +50,7 @@ function(e, t, n) {
             spinner: o,
             onClose: l
         } = e;
-        return (0, h.usePageTitle)({
+        return (0, E.usePageTitle)({
             location: T.default.Messages.OAUTH2_TITLE
         }), (0, i.jsxs)(i.Fragment, {
             children: [null != l ? (0, i.jsx)(c.ModalCloseButton, {
@@ -112,17 +112,17 @@ function(e, t, n) {
                 children: d
             }), (null != t || null != a) && (0, i.jsxs)("div", {
                 className: I.buttonsContainer,
-                children: [null != t && (0, i.jsx)(E.Button, {
+                children: [null != t && (0, i.jsx)(h.Button, {
                     fullWidth: !0,
-                    color: E.Button.Colors.BRAND,
+                    color: h.Button.Colors.BRAND,
                     onClick: l,
                     className: I.button,
                     children: (null == t ? void 0 : t.name.length) > 30 ? T.default.Messages.OAUTH2_GO_TO_SERVER_DEFAULT_CTA : T.default.Messages.OAUTH2_GO_TO_SERVER_NAME_CTA.format({
                         guildName: null == t ? void 0 : t.name
                     })
-                }), null != a && (0, i.jsx)(E.Button, {
+                }), null != a && (0, i.jsx)(h.Button, {
                     fullWidth: !0,
-                    color: E.Button.Colors.PRIMARY,
+                    color: h.Button.Colors.PRIMARY,
                     onClick: u,
                     className: I.button,
                     children: T.default.Messages.CLOSE

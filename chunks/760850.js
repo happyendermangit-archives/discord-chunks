@@ -6,7 +6,7 @@ function(e, t, n) {
             return _
         },
         default: function() {
-            return E
+            return h
         }
     }), n("781738"), n("424973");
     var s = n("917351"),
@@ -32,7 +32,7 @@ function(e, t, n) {
             !t && e.startsWith(n) && (e = e.substr(n.length), t = !0)
         }), t) ? e = e.includes("dosbox.exe") ? e.split("/").slice(-3).join("/") : e.split("/").slice(-2).join("/") : null
     }
-    async function E() {
+    async function h() {
         if (null != i) return i;
         try {
             await u.default.ensureModule("discord_game_utils"), i = await u.default.requireModule("discord_game_utils")

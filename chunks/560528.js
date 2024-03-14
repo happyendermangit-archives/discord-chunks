@@ -5,7 +5,7 @@ function(e, t, n) {
             return f
         },
         getFirefoxVersion: function() {
-            return h
+            return E
         },
         canUseWebp: function() {
             return m
@@ -23,15 +23,15 @@ function(e, t, n) {
         return c
     }
     let _ = "electron" === d.toLowerCase() ? parseInt(null !== (r = u.version) && void 0 !== r ? r : "", 10) : -1,
-        E = "firefox" === d.toLowerCase() ? parseInt(null !== (a = u.version) && void 0 !== a ? a : "", 10) : -1;
+        h = "firefox" === d.toLowerCase() ? parseInt(null !== (a = u.version) && void 0 !== a ? a : "", 10) : -1;
 
-    function h() {
-        return E
+    function E() {
+        return h
     }
     let g = "edge" === d.toLowerCase() ? parseInt(null !== (o = u.version) && void 0 !== o ? o : "", 10) : -1;
 
     function m() {
-        return -1 !== c || -1 !== _ || -1 !== E || -1 !== g
+        return -1 !== c || -1 !== _ || -1 !== h || -1 !== g
     }
 
     function p() {

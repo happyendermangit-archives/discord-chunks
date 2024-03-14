@@ -79,8 +79,8 @@ function(e, t, n) {
         c = n("449008"),
         f = n("991170"),
         _ = n("299039"),
-        E = n("158998"),
-        h = n("606762"),
+        h = n("158998"),
+        E = n("606762"),
         g = n("49111"),
         m = n("782340");
 
@@ -91,7 +91,7 @@ function(e, t, n) {
     function S(e) {
         var t, n;
         let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        let a = (n = e, i.default.has(n.permissions, g.Permissions.ADMINISTRATOR) ? h.RowType.ADMINISTRATOR : h.RowType.ROLE);
+        let a = (n = e, i.default.has(n.permissions, g.Permissions.ADMINISTRATOR) ? E.RowType.ADMINISTRATOR : E.RowType.ROLE);
         return {
             rowType: a,
             colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, s.int2hex)(g.DEFAULT_ROLE_COLOR),
@@ -112,7 +112,7 @@ function(e, t, n) {
     function T() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
         return [{
-            rowType: h.RowType.EMPTY_STATE,
+            rowType: E.RowType.EMPTY_STATE,
             colorString: (0, s.int2hex)(g.DEFAULT_ROLE_COLOR),
             name: e,
             disabled: !0,
@@ -167,7 +167,7 @@ function(e, t, n) {
 
     function P(e, t) {
         var n;
-        return null !== (n = l.default.getNick(t.id, e.id)) && void 0 !== n ? n : E.default.getName(e)
+        return null !== (n = l.default.getNick(t.id, e.id)) && void 0 !== n ? n : h.default.getName(e)
     }
 
     function L(e, t) {
@@ -176,12 +176,12 @@ function(e, t, n) {
 
     function M(e, t) {
         var n, i, s;
-        let r = (i = e, t.isOwner(i) ? h.RowType.OWNER : h.RowType.MEMBER);
+        let r = (i = e, t.isOwner(i) ? E.RowType.OWNER : E.RowType.MEMBER);
         return {
             rowType: r,
             name: P(e, t),
             nickname: null !== (n = l.default.getNick(t.id, e.id)) && void 0 !== n ? n : null,
-            username: E.default.getName(e),
+            username: h.default.getName(e),
             id: e.id,
             avatarURL: e.getAvatarURL(t.id, 24),
             bot: e.bot,
@@ -210,34 +210,34 @@ function(e, t, n) {
 
     function k(e, t) {
         switch (e) {
-            case h.RowType.ROLE:
+            case E.RowType.ROLE:
                 return m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
-            case h.RowType.OWNER:
+            case E.RowType.OWNER:
                 return m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
-            case h.RowType.ADMINISTRATOR:
+            case E.RowType.ADMINISTRATOR:
                 return m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
-            case h.RowType.MEMBER:
+            case E.RowType.MEMBER:
                 return t ? m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
-            case h.RowType.USER:
+            case E.RowType.USER:
                 return m.default.Messages.USER;
-            case h.RowType.GUILD:
+            case E.RowType.GUILD:
                 return m.default.Messages.SERVER;
-            case h.RowType.EMPTY_STATE:
+            case E.RowType.EMPTY_STATE:
                 return null
         }
     }
 
     function V(e) {
         switch (e) {
-            case h.RowType.ROLE:
+            case E.RowType.ROLE:
                 return m.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
-            case h.RowType.OWNER:
+            case E.RowType.OWNER:
                 return m.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-            case h.RowType.ADMINISTRATOR:
+            case E.RowType.ADMINISTRATOR:
                 return m.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-            case h.RowType.MEMBER:
+            case E.RowType.MEMBER:
                 return m.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
-            case h.RowType.EMPTY_STATE:
+            case E.RowType.EMPTY_STATE:
             default:
                 return null
         }
@@ -313,7 +313,7 @@ function(e, t, n) {
             let {
                 row: i
             } = e;
-            null != i.id && "" !== i.id && (i.rowType === h.RowType.ROLE ? n.push((0, d.permissionOverwriteForRole)(i.id, t)) : i.rowType === h.RowType.MEMBER && n.push((0, d.permissionOverwriteForUser)(i.id, t)))
+            null != i.id && "" !== i.id && (i.rowType === E.RowType.ROLE ? n.push((0, d.permissionOverwriteForRole)(i.id, t)) : i.rowType === E.RowType.MEMBER && n.push((0, d.permissionOverwriteForUser)(i.id, t)))
         }), n
     }
 }

@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("299285"),
         f = n("161454"),
         _ = n("860285"),
-        E = n("915639"),
-        h = n("86878"),
+        h = n("915639"),
+        E = n("86878"),
         g = n("546463"),
         m = n("686470"),
         p = n("102985"),
@@ -40,7 +40,7 @@ function(e, t, n) {
         w = !1;
 
     function k(e, t) {
-        return e.application.name.localeCompare(t.application.name, E.default.locale, {
+        return e.application.name.localeCompare(t.application.name, h.default.locale, {
             sensitivity: "base"
         })
     }
@@ -102,7 +102,7 @@ function(e, t, n) {
                         LibraryApplicationStore: m.default,
                         LaunchableGameStore: _.default,
                         DispatchApplicationStore: T.default,
-                        ConnectedAppsStore: h.default,
+                        ConnectedAppsStore: E.default,
                         applicationId: e.id,
                         branchId: e.branchId
                     }),
@@ -127,7 +127,7 @@ function(e, t, n) {
                         LibraryApplicationStore: m.default,
                         LaunchableGameStore: _.default,
                         DispatchApplicationStore: T.default,
-                        ConnectedAppsStore: h.default,
+                        ConnectedAppsStore: E.default,
                         applicationId: e,
                         branchId: null
                     }),
@@ -142,7 +142,7 @@ function(e, t, n) {
     }
     class W extends u.default.Store {
         initialize() {
-            this.syncWith([c.default, g.default, _.default, f.default, T.default, I.default, m.default, S.default, p.default, h.default], j, 200), this.syncWith([v.default, E.default], () => !0)
+            this.syncWith([c.default, g.default, _.default, f.default, T.default, I.default, m.default, S.default, p.default, E.default], j, 200), this.syncWith([v.default, h.default], () => !0)
         }
         get applicationFilterQuery() {
             return U
@@ -160,7 +160,7 @@ function(e, t, n) {
             return x(this.libraryApplicationViewItems, U)
         }
         get sortedFilteredLibraryApplicationViewItems() {
-            return B(this.filteredLibraryApplicationViewItems, v.default.sortKey, v.default.sortDirection, E.default.locale)
+            return B(this.filteredLibraryApplicationViewItems, v.default.sortKey, v.default.sortDirection, h.default.locale)
         }
         get hiddenLibraryApplicationViewItems() {
             return H(b)

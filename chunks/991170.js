@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("755624"),
         f = n("233069"),
         _ = n("271938"),
-        E = n("42203"),
-        h = n("26989"),
+        h = n("42203"),
+        E = n("26989"),
         g = n("305961"),
         m = n("697218"),
         p = n("299039"),
@@ -84,7 +84,7 @@ function(e, t, n) {
                 let t = a[n.roles[e]];
                 void 0 !== t && (f = r.default.add(f, t.permissions))
             }
-        return f = r.default.has(f, S.Permissions.ADMINISTRATOR) ? T : D(i.id, n, f, s), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = r.default.filter(f, u)), h.default.isCurrentUserGuest(i.id) && (f = r.default.filter(f, A)), O(f, i, t, o)
+        return f = r.default.has(f, S.Permissions.ADMINISTRATOR) ? T : D(i.id, n, f, s), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = r.default.filter(f, u)), E.default.isCurrentUserGuest(i.id) && (f = r.default.filter(f, A)), O(f, i, t, o)
     }
 
     function L(e) {
@@ -103,7 +103,7 @@ function(e, t, n) {
         if (a instanceof f.ChannelRecordBase) {
             if (a.isScheduledForDeletion()) return v;
             if (f.THREAD_CHANNEL_TYPES.has(a.type)) {
-                let e = E.default.getChannel(a.parent_id);
+                let e = h.default.getChannel(a.parent_id);
                 if (null == e || e.isScheduledForDeletion()) return v;
                 let t = p === (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && c.default.hasJoined(a.id);
                 return M(a, L({
@@ -125,7 +125,7 @@ function(e, t, n) {
         } else o = null != o ? o : {}, s = a;
         if (null == s) return v;
         if (!(p === (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.default.isViewingRoles(s.id)) && s.isOwner(p)) return O(T, s, p, d);
-        let I = h.default.getMember(s.id, p);
+        let I = E.default.getMember(s.id, p);
         return P({
             userId: p,
             member: I,
@@ -191,7 +191,7 @@ function(e, t, n) {
                 var d;
                 if (s.isScheduledForDeletion()) return v;
                 if (f.THREAD_CHANNEL_TYPES.has(s.type)) {
-                    let t = E.default.getChannel(s.parent_id);
+                    let t = h.default.getChannel(s.parent_id);
                     return null == t ? v : M(s, e({
                         forceRoles: i,
                         context: t,
@@ -248,7 +248,7 @@ function(e, t, n) {
             return r.indexOf(n.id) > (null != i ? r.indexOf(i.id) : -1)
         },
         getHighestRole: function(e, t) {
-            let n = h.default.getMember(e.id, t);
+            let n = E.default.getMember(e.id, t);
             if (null != n) return s(g.default.getRoles(e.id)).filter(e => -1 !== n.roles.indexOf(e.id)).sortBy(e => -e.position).first()
         },
         getHighestHoistedRole: function(e, t) {
@@ -259,7 +259,7 @@ function(e, t, n) {
             let n;
             let i = {};
             if (t instanceof f.ChannelRecordBase) {
-                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = E.default.getChannel(t.parent_id))) return !1;
+                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = h.default.getChannel(t.parent_id))) return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
                 n = null != e ? g.default.getGuild(e) : null
@@ -275,7 +275,7 @@ function(e, t, n) {
             let n;
             let i = {};
             if (t instanceof f.ChannelRecordBase) {
-                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = E.default.getChannel(t.parent_id))) return !1;
+                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = h.default.getChannel(t.parent_id))) return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
                 n = null != e ? g.default.getGuild(e) : null

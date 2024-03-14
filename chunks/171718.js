@@ -22,11 +22,11 @@ function(e, t, n) {
     let c = !1,
         f = {},
         _ = {},
-        E = !1,
-        h = !1;
+        h = !1,
+        E = !1;
 
     function g() {
-        if (E) {
+        if (h) {
             r.default.remove(a.TOKEN_KEY), r.default.remove(a.TOKENS_KEY);
             return
         }
@@ -51,7 +51,7 @@ function(e, t, n) {
     }
     var S = {
         init() {
-            if (h) return;
+            if (E) return;
             s = r.default.get(a.TOKEN_KEY), _ = r.default.get(a.TOKENS_KEY) || {};
             let {
                 decryptedToken: e,
@@ -66,7 +66,7 @@ function(e, t, n) {
             }).filter(e => {
                 let [t, n] = e;
                 return null != n
-            })), h = !0
+            })), E = !0
         },
         getToken(e) {
             return (this.init(), null != e) ? f[e] : i
@@ -79,10 +79,10 @@ function(e, t, n) {
             i = e, null != t && (f[t] = e), c ? this.encryptAndStoreTokens() : (s = i, _ = f, g())
         },
         hideToken() {
-            !E && (E = !0, g())
+            !h && (h = !0, g())
         },
         showToken() {
-            E && (E = !1, g())
+            h && (h = !1, g())
         },
         removeToken(e) {
             let t = i;

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         socket: function() {
-            return h
+            return E
         },
         localPresenceState: function() {
             return g
@@ -25,14 +25,14 @@ function(e, t, n) {
         c = n("413196"),
         f = n("764867"),
         _ = n("292892");
-    let E = new r.default("ConnectionStore"),
-        h = new d.default,
-        g = new f.default(h),
-        m = new _.default(h),
-        p = new c.default(h);
-    h.handleIdentify = () => {
+    let h = new r.default("ConnectionStore"),
+        E = new d.default,
+        g = new f.default(E),
+        m = new _.default(E),
+        p = new c.default(E);
+    E.handleIdentify = () => {
         let e = a.default.getToken();
-        return (E.verbose("handleIdentify called", {
+        return (h.verbose("handleIdentify called", {
             hasToken: null != e
         }), null == e) ? null : {
             token: e,
@@ -40,12 +40,12 @@ function(e, t, n) {
             presence: g.getState()
         }
     }, (0, u.isDesktop)() && s.default.remotePowerMonitor.on("resume", () => {
-        h.expeditedHeartbeat(5e3, "power monitor resumed")
+        E.expeditedHeartbeat(5e3, "power monitor resumed")
     }), l.default.addOfflineCallback(() => {
-        h.networkStateChange(15e3, "network detected offline.", !1)
+        E.networkStateChange(15e3, "network detected offline.", !1)
     }), l.default.addOnlineCallback(() => {
-        h.networkStateChange(5e3, "network detected online.")
-    }), h.on("disconnect", e => {
+        E.networkStateChange(5e3, "network detected online.")
+    }), E.on("disconnect", e => {
         let {
             code: t,
             reason: n
@@ -55,7 +55,7 @@ function(e, t, n) {
             code: t,
             reason: n
         })
-    }), h.on("close", e => {
+    }), E.on("close", e => {
         let {
             code: t,
             reason: n

@@ -19,8 +19,8 @@ function(e, t, n) {
     let c = null,
         f = null,
         _ = null,
-        E = null,
         h = null,
+        E = null,
         g = !1,
         m = !1,
         p = null,
@@ -40,7 +40,7 @@ function(e, t, n) {
     }
 
     function I() {
-        c = null, f = null, _ = null, E = null, h = null, g = !1, m = !1, p = null, S = !1
+        c = null, f = null, _ = null, h = null, E = null, g = !1, m = !1, p = null, S = !1
     }
 
     function C(e) {
@@ -102,10 +102,10 @@ function(e, t, n) {
             return null !== (t = null == c ? void 0 : c[e]) && void 0 !== t ? t : void 0
         }
         getActiveGuildSubscriptions() {
-            return E
+            return h
         }
         getActiveApplicationSubscriptions() {
-            return h
+            return E
         }
         getSubscriptionForPlanIds(e) {
             var t;
@@ -140,7 +140,7 @@ function(e, t, n) {
                 }
                 let t = o.SubscriptionRecord.createFromServer(e);
                 n[t.id] = t, C(t) && (i[t.id] = t, t.type === d.SubscriptionTypes.GUILD && t.status !== d.SubscriptionStatusTypes.ENDED && s.push(t), t.type === d.SubscriptionTypes.APPLICATION && t.status !== d.SubscriptionStatusTypes.ENDED && r.push(t))
-            }), c = n, f = i, E = s, h = r
+            }), c = n, f = i, h = s, E = r
         },
         BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function(e) {
             let {
@@ -152,11 +152,11 @@ function(e, t, n) {
             }, C(n) && (f = {
                 ...f,
                 [n.id]: n
-            }), null != E && n.type === d.SubscriptionTypes.GUILD && (E = T({
-                activeSubscriptions: E,
-                record: n
-            })), null != h && n.type === d.SubscriptionTypes.APPLICATION && (E = T({
+            }), null != h && n.type === d.SubscriptionTypes.GUILD && (h = T({
                 activeSubscriptions: h,
+                record: n
+            })), null != E && n.type === d.SubscriptionTypes.APPLICATION && (h = T({
+                activeSubscriptions: E,
                 record: n
             }))
         },

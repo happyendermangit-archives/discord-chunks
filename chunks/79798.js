@@ -21,8 +21,8 @@ function(e, t, n) {
                 type: s = u.BotTagTypes.BOT,
                 className: f,
                 verified: _,
-                hideIcon: E = !1,
-                useRemSizes: h = !1,
+                hideIcon: h = !1,
+                useRemSizes: E = !1,
                 children: g = []
             } = e,
             m = null,
@@ -72,11 +72,11 @@ function(e, t, n) {
         })), t = s === u.BotTagTypes.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular;
         let C = e => (0, i.jsxs)("span", {
             ...e,
-            className: r(f, t, h ? c.rem : c.px, {
+            className: r(f, t, E ? c.rem : c.px, {
                 [c.botTagOP]: v,
                 [c.botTagRemix]: T
             }),
-            children: [E ? null : I, g, (0, i.jsx)("span", {
+            children: [h ? null : I, g, (0, i.jsx)("span", {
                 className: c.botText,
                 children: m
             })]

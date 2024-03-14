@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("181815"),
         f = n("521089"),
         _ = n("366942"),
-        E = n("125707"),
-        h = n("785744"),
+        h = n("125707"),
+        E = n("785744"),
         g = n("297384"),
         m = n("573220"),
         p = n("265284"),
@@ -34,7 +34,7 @@ function(e, t, n) {
     }
     var C = {
         DEFAULT_AVATARS: [r, a, o, l, u, d],
-        DEFAULT_GROUP_DM_AVATARS: [c, f, _, E, h, g, m, p],
+        DEFAULT_GROUP_DM_AVATARS: [c, f, _, h, E, g, m, p],
         BOT_AVATARS: {
             clyde: v
         },

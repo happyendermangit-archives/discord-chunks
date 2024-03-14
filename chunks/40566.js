@@ -17,11 +17,11 @@ function(e, t, n) {
         f = n("49111");
     let _ = new i.default("MessageRoundtripTrackerStore");
 
-    function E(e) {
+    function h(e) {
         return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp
     }
 
-    function h(e) {
+    function E(e) {
         let t = l.default.getBasicChannel(e.channelId);
         if (null == t) {
             _.warn("Ignoring a messageData for channel ".concat(e.channelId, " because we can't find that channel."));
@@ -55,7 +55,7 @@ function(e, t, n) {
             };
             this.pendingMessages.set(t, n), setTimeout(() => {
                 let e = this.pendingMessages.get(t);
-                null != e && (h(e), this.pendingMessages.delete(t))
+                null != e && (E(e), this.pendingMessages.delete(t))
             }, 3e4)
         }
         recordMessageSendApiResponse(e) {
@@ -65,7 +65,7 @@ function(e, t, n) {
                     ...t,
                     apiResponseTimestamp: Date.now()
                 };
-                E(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n)
+                h(n) ? (E(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n)
             }
         }
         recordGatewayResponse(e) {
@@ -75,7 +75,7 @@ function(e, t, n) {
                     ...t,
                     gatewaySeenTimestamp: Date.now()
                 };
-                E(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n)
+                h(n) ? (E(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n)
             }
         }
         constructor(...e) {

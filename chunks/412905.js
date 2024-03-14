@@ -23,8 +23,8 @@ function(e, t, n) {
         c = n("360782"),
         f = n("49111"),
         _ = n("180524"),
-        E = n("782340");
-    let h = new a.default("AudioActionCreators");
+        h = n("782340");
+    let E = new a.default("AudioActionCreators");
 
     function g() {
         (0, s.openModalLazy)(async () => {
@@ -40,15 +40,15 @@ function(e, t, n) {
 
     function m() {
         return !o.default.isSupported() && ((0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
-            header: E.default.Messages.UNSUPPORTED_BROWSER,
-            confirmText: E.default.Messages.DOWNLOAD_APP,
-            cancelText: E.default.Messages.CANCEL,
+            header: h.default.Messages.UNSUPPORTED_BROWSER,
+            confirmText: h.default.Messages.DOWNLOAD_APP,
+            cancelText: h.default.Messages.CANCEL,
             onConfirm: g,
             confirmButtonColor: s.Button.Colors.BRAND,
             ...e,
             children: (0, i.jsx)(s.Text, {
                 variant: "text-md/normal",
-                children: E.default.Messages.UNSUPPORTED_BROWSER_DETAILS
+                children: h.default.Messages.UNSUPPORTED_BROWSER_DETAILS
             })
         })), !0)
     }
@@ -82,7 +82,7 @@ function(e, t, n) {
                     p(_.NativePermissionStates.DISMISSED);
                     break;
                 default:
-                    p(_.NativePermissionStates.ERROR), h.warn("unknown getUserMedia error: ".concat(e))
+                    p(_.NativePermissionStates.ERROR), E.warn("unknown getUserMedia error: ".concat(e))
             }
         }).then(() => !0))
     }

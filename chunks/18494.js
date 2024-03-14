@@ -13,8 +13,8 @@ function(e, t, n) {
         c = n.n(d),
         f = n("446674"),
         _ = n("95410"),
-        E = n("913144"),
-        h = n("21121"),
+        h = n("913144"),
+        E = n("21121"),
         g = n("934306"),
         m = n("393414"),
         p = n("233069"),
@@ -93,7 +93,7 @@ function(e, t, n) {
         }
         let n = null != C.default.getGuild(t) ? t : null,
             i = !1;
-        o === e && (o = null, i = !0), !(0, h.isInMainTabsExperiment)() && (D[b(n)] === e && (D[b(n)] = w(b(n)), y.default.getGuildId() === n && (0, m.replaceWith)(N.Routes.CHANNEL(t, D[b(n)])), i = !0), null != n && L[n] === e && (delete L[n], i = !0)), i && U()
+        o === e && (o = null, i = !0), !(0, E.isInMainTabsExperiment)() && (D[b(n)] === e && (D[b(n)] = w(b(n)), y.default.getGuildId() === n && (0, m.replaceWith)(N.Routes.CHANNEL(t, D[b(n)])), i = !0), null != n && L[n] === e && (delete L[n], i = !0)), i && U()
     }
 
     function x(e) {
@@ -151,7 +151,7 @@ function(e, t, n) {
         }
     }
     B.displayName = "SelectedChannelStore";
-    var H = new B(E.default, {
+    var H = new B(h.default, {
         CONNECTION_OPEN: function(e) {
             i = e.sessionId, null != o && null == T.default.getChannel(o) && (o = null);
             let t = G();
@@ -169,7 +169,7 @@ function(e, t, n) {
                 channelId: n
             } = e;
             if (void 0 === t) return !1;
-            null == n && (!(0, h.isInMainTabsExperiment)() || (0, g.shouldHandleNewPanelsRoute)(t)) && (n = w(t)), null != r && n !== r && (s = r), r = n, k(t, n), D[b(t)] !== n && (P[b(t)] = D[b(t)], D[b(t)] = r), U()
+            null == n && (!(0, E.isInMainTabsExperiment)() || (0, g.shouldHandleNewPanelsRoute)(t)) && (n = w(t)), null != r && n !== r && (s = r), r = n, k(t, n), D[b(t)] !== n && (P[b(t)] = D[b(t)], D[b(t)] = r), U()
         },
         CHANNEL_CREATE: function(e) {
             let {

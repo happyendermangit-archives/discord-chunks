@@ -14,10 +14,10 @@ function(e, t, n) {
             return _
         },
         useListContainerProps: function() {
-            return E
+            return h
         },
         getContainerPropsFromNavigator: function() {
-            return h
+            return E
         },
         ListNavigatorContainer: function() {
             return g
@@ -75,7 +75,7 @@ function(e, t, n) {
         return t(i)
     }
 
-    function E() {
+    function h() {
         let e = s.useContext(d),
             {
                 id: t,
@@ -92,7 +92,7 @@ function(e, t, n) {
         }
     }
 
-    function h(e) {
+    function E(e) {
         let {
             id: t,
             containerProps: {
@@ -114,7 +114,7 @@ function(e, t, n) {
     function g(e) {
         let {
             children: t
-        } = e, n = E();
+        } = e, n = h();
         return t(n)
     }
 
@@ -134,7 +134,7 @@ function(e, t, n) {
         } = n, _ = s.useMemo(() => ({
             id: r,
             setFocus: a
-        }), [r, a]), E = s.useMemo(() => ({
+        }), [r, a]), h = s.useMemo(() => ({
             onKeyDown: o,
             orientation: f,
             ref: l,
@@ -142,7 +142,7 @@ function(e, t, n) {
             tabIndex: c
         }), [o, f, l, r, c]);
         return (0, i.jsxs)(d.Provider, {
-            value: E,
+            value: h,
             children: [(0, i.jsx)(u.Provider, {
                 value: _,
                 children: t

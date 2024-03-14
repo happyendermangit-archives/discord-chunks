@@ -20,12 +20,12 @@ function(e, t, n) {
         d = s(d).reject(t => t.guildId === e).keyBy("threadId").value()
     }
 
-    function E(e) {
+    function h(e) {
         var t;
-        null === (t = e.threads) || void 0 === t || t.forEach(h)
+        null === (t = e.threads) || void 0 === t || t.forEach(E)
     }
 
-    function h(e) {
+    function E(e) {
         l.ALL_CHANNEL_TYPES.has(e.type) && null != e.member && (d[e.id] = {
             threadId: e.id,
             guildId: e.guild_id,
@@ -93,7 +93,7 @@ function(e, t, n) {
     let S = new p(a.default, {
         CONNECTION_OPEN: function(e) {
             c.reset(), f = new Set, d = {}, e.guilds.forEach(e => {
-                E(e)
+                h(e)
             })
         },
         OVERLAY_INITIALIZE: function(e) {
@@ -109,7 +109,7 @@ function(e, t, n) {
             let {
                 guild: t
             } = e;
-            _(t.id), E(t)
+            _(t.id), h(t)
         },
         GUILD_DELETE: function(e) {
             let {
@@ -121,7 +121,7 @@ function(e, t, n) {
             let {
                 channel: t
             } = e;
-            h(t)
+            E(t)
         },
         THREAD_LIST_SYNC: m,
         SEARCH_FINISH: m,

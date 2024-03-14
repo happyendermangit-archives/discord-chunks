@@ -20,8 +20,8 @@ function(e, t, n) {
         c = n("509"),
         f = n("564568"),
         _ = n("38654"),
-        E = n("568734"),
-        h = n("449008"),
+        h = n("568734"),
+        E = n("449008"),
         g = n("299039"),
         m = n("271938"),
         p = n("42203"),
@@ -123,8 +123,8 @@ function(e, t, n) {
             joinedAt: d,
             communicationDisabledUntil: c,
             unusualDMActivityUntil: f,
-            fullProfileLoadedTimestamp: E,
-            flags: h
+            fullProfileLoadedTimestamp: h,
+            flags: E
         } = e, {
             colorString: p,
             colorRoleId: S,
@@ -148,8 +148,8 @@ function(e, t, n) {
             joinedAt: d,
             communicationDisabledUntil: c,
             unusualDMActivityUntil: f,
-            fullProfileLoadedTimestamp: E,
-            flags: h
+            fullProfileLoadedTimestamp: h,
+            flags: E
         }, N = I[i];
         if (null == N) return y;
         if (t === m.default.getId()) {
@@ -186,11 +186,11 @@ function(e, t, n) {
             communicationDisabledUntil: c,
             unusualDMActivityUntil: f,
             flags: _
-        } = e, E = I[n];
-        if (null == E) return !1;
-        let h = S.default.getGuild(n);
-        if (null == h) return T.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
-        E[i.id] = F({
+        } = e, h = I[n];
+        if (null == h) return !1;
+        let E = S.default.getGuild(n);
+        if (null == E) return T.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
+        h[i.id] = F({
             userId: i.id,
             nick: s,
             guildId: n,
@@ -199,16 +199,16 @@ function(e, t, n) {
                 asset: a.asset,
                 skuId: a.sku_id
             } : void 0,
-            guildRoles: S.default.getRoles(h.id),
+            guildRoles: S.default.getRoles(E.id),
             roles: o,
             premiumSince: l,
             isPending: u,
             joinedAt: d,
             communicationDisabledUntil: c,
             unusualDMActivityUntil: f,
-            fullProfileLoadedTimestamp: null === (t = E[i.id]) || void 0 === t ? void 0 : t.fullProfileLoadedTimestamp,
+            fullProfileLoadedTimestamp: null === (t = h[i.id]) || void 0 === t ? void 0 : t.fullProfileLoadedTimestamp,
             flags: _
-        }), L(n, E[i.id])
+        }), L(n, h[i.id])
     }
 
     function H(e, t) {
@@ -420,7 +420,7 @@ function(e, t, n) {
                 n = I[e];
             if (null == n || null == n[t]) return !1;
             let i = n[t].flags;
-            return null != i && (0, E.hasFlag)(i, v.GuildMemberFlags.IS_GUEST)
+            return null != i && (0, h.hasFlag)(i, v.GuildMemberFlags.IS_GUEST)
         }
         getMemberIds(e) {
             if (null == e) return [];
@@ -522,10 +522,10 @@ function(e, t, n) {
             if (null == f) return !1;
             let _ = S.default.getGuild(s);
             if (null == _) return !1;
-            let E = null !== (t = D[s]) && void 0 !== t ? t : {};
+            let h = null !== (t = D[s]) && void 0 !== t ? t : {};
             D[s] = {
-                added: a.difference(a.union(null !== (n = E.added) && void 0 !== n ? n : [], o), null != l ? l : []),
-                removed: a.difference(a.union(null !== (i = E.removed) && void 0 !== i ? i : [], l), null != o ? o : [])
+                added: a.difference(a.union(null !== (n = h.added) && void 0 !== n ? n : [], o), null != l ? l : []),
+                removed: a.difference(a.union(null !== (i = h.removed) && void 0 !== i ? i : [], l), null != o ? o : [])
             }, c[d] = F({
                 userId: d,
                 guildId: s,
@@ -557,14 +557,14 @@ function(e, t, n) {
                 guildId: t,
                 members: n
             } = e;
-            return H(t, n.map(e => e.member).filter(h.isNotNullish))
+            return H(t, n.map(e => e.member).filter(E.isNotNullish))
         },
         THREAD_MEMBERS_UPDATE: function(e) {
             let {
                 guildId: t,
                 addedMembers: n
             } = e;
-            return null != n && H(t, n.map(e => e.member).filter(h.isNotNullish))
+            return null != n && H(t, n.map(e => e.member).filter(E.isNotNullish))
         },
         LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
             let {
@@ -578,7 +578,7 @@ function(e, t, n) {
                 guildId: t,
                 threads: n
             } = e;
-            return H(t, Object.values(n).map(e => e.owner).filter(h.isNotNullish))
+            return H(t, Object.values(n).map(e => e.owner).filter(E.isNotNullish))
         },
         GUILD_ROLE_UPDATE: W,
         GUILD_ROLE_DELETE: W,

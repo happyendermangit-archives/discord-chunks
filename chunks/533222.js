@@ -21,17 +21,17 @@ function(e, t, n) {
         return null != i ? n(i) : t
     }
 
-    function E(e, t) {
+    function h(e, t) {
         let n = d[e];
         null != n && n.forEach(e => delete c[e.id]), d[e] = t, t.forEach(e => c[e.id] = e)
     }
-    class h extends r.default.Store {
+    class E extends r.default.Store {
         initialize() {
             let e = a.default.get(u);
             null != e && s.forEach(e, (e, t) => {
                 e.forEach(e => {
                     "audioinput" === e.type && e.hardwareMute && (e.hardwareMute = !1)
-                }), E(t, e)
+                }), h(t, e)
             })
         }
         isCertified(e) {
@@ -69,14 +69,14 @@ function(e, t, n) {
             return f
         }
     }
-    h.displayName = "CertifiedDeviceStore";
-    var g = new h(o.default, {
+    E.displayName = "CertifiedDeviceStore";
+    var g = new E(o.default, {
         CERTIFIED_DEVICES_SET: function(e) {
             let {
                 applicationId: t,
                 devices: n
             } = e;
-            E(t, n), a.default.set(u, d), f++
+            h(t, n), a.default.set(u, d), f++
         }
     })
 }

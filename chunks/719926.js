@@ -182,10 +182,10 @@ function(e, t, n) {
                     burst_count: f,
                     count_details: _
                 } = null !== (t = d[u]) && void 0 !== t ? t : {},
-                E = null !== (n = null == _ ? void 0 : _.normal) && void 0 !== n ? n : 0,
-                h = null !== (i = null == _ ? void 0 : _.burst) && void 0 !== i ? i : 0,
+                h = null !== (n = null == _ ? void 0 : _.normal) && void 0 !== n ? n : 0,
+                E = null !== (i = null == _ ? void 0 : _.burst) && void 0 !== i ? i : 0,
                 g = null !== (s = null == _ ? void 0 : _.vote) && void 0 !== s ? s : 0;
-            return -1 !== u && c <= 0 && f <= 0 && E <= 0 && h <= 0 && g <= 0 && d.splice(u, 1), this.set("reactions", d)
+            return -1 !== u && c <= 0 && f <= 0 && h <= 0 && E <= 0 && g <= 0 && d.splice(u, 1), this.set("reactions", d)
         }
         removeReactionsForEmoji(e) {
             return this.set("reactions", this.reactions.filter(t => !(0, o.emojiEquals)(t.emoji, e)))

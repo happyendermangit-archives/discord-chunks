@@ -21,7 +21,7 @@ function(e, t, n) {
             className: n,
             collapsibleContent: r,
             isExpanded: f
-        } = e, [_, E] = s.useState(!1), h = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [g, m] = s.useState(!0), [p, S] = s.useState(!1), v = null != f ? f : _, {
+        } = e, [_, h] = s.useState(!1), E = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [g, m] = s.useState(!0), [p, S] = s.useState(!1), v = null != f ? f : _, {
             ref: T,
             height: I = 0
         } = (0, u.default)(), {
@@ -29,12 +29,12 @@ function(e, t, n) {
             height: A = 0
         } = (0, u.default)(), y = (0, o.useSpring)({
             height: v ? I + A : A,
-            immediate: g || h,
+            immediate: g || E,
             config: o.config.stiff,
             onRest: () => S(!0)
         }), N = s.useCallback(() => {
-            E(!_)
-        }, [_, E]);
+            h(!_)
+        }, [_, h]);
         return s.useLayoutEffect(() => {
             let e = setTimeout(() => {
                 m(!1)

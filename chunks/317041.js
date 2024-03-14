@@ -26,10 +26,10 @@ function(e, t, n) {
             return _
         },
         MAX_SUBCOMMAND_LEVEL: function() {
-            return E
+            return h
         },
         CONTEXT_MENU_COMMANDS_QUERY_LIMIT: function() {
-            return h
+            return E
         },
         AUTOCOMPLETE_OPTION_DEBOUNCE_TIME: function() {
             return g
@@ -56,8 +56,8 @@ function(e, t, n) {
         c = 5,
         f = "\x00",
         _ = 100,
-        E = 3,
-        h = 10,
+        h = 3,
+        E = 10,
         g = 500;
 
     function m(e) {

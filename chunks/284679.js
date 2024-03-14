@@ -20,7 +20,7 @@ function(e, t, n) {
             return _
         },
         getColorLightnessAdjusted: function() {
-            return h
+            return E
         },
         getAccessibleColor: function() {
             return g
@@ -168,7 +168,7 @@ function(e, t, n) {
         }
     }
 
-    function E(e, t, n) {
+    function h(e, t, n) {
         let i, r, a;
         if (e /= 360, 0 === t) i = r = a = n;
         else {
@@ -182,10 +182,10 @@ function(e, t, n) {
         return new s.default(Math.round(255 * i), Math.round(255 * r), Math.round(255 * a), 1)
     }
 
-    function h(e, t) {
+    function E(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = _(e.red, e.green, e.blue);
-        return n ? i.lightness = i.lightness + t > 1 ? .9 : i.lightness + t : i.lightness = i.lightness - t < 0 ? .1 : i.lightness - t, E(i.hue, i.saturation, i.lightness)
+        return n ? i.lightness = i.lightness + t > 1 ? .9 : i.lightness + t : i.lightness = i.lightness - t < 0 ? .1 : i.lightness - t, h(i.hue, i.saturation, i.lightness)
     }
 
     function g(e) {
@@ -209,9 +209,9 @@ function(e, t, n) {
                 else break
             } else if (d.lightness > .05) d.lightness -= .05;
             else break;
-            u = f([E(d.hue, d.saturation, d.lightness), t[1]])
+            u = f([h(d.hue, d.saturation, d.lightness), t[1]])
         }
-        return E(d.hue, d.saturation, d.lightness)
+        return h(d.hue, d.saturation, d.lightness)
     }
 
     function m(e) {
@@ -227,15 +227,15 @@ function(e, t, n) {
                         c = parseInt(u[2], 16),
                         f = parseInt(u[3], 16);
                     let _ = d / 255,
-                        E = c / 255,
-                        h = f / 255,
-                        g = Math.max(_, E, h),
-                        m = g - Math.min(_, E, h),
+                        h = c / 255,
+                        E = f / 255,
+                        g = Math.max(_, h, E),
+                        m = g - Math.min(_, h, E),
                         p = e => Math.round(100 * e) / 100;
                     if (0 === m) s = r = 0;
                     else {
                         ;
-                        r = m / g, a = _, t = (g - a) / 6 / m + .5, o = E, n = (g - o) / 6 / m + .5, l = h, i = (g - l) / 6 / m + .5, (s = _ === g ? i - n : E === g ? 1 / 3 + t - i : h === g ? 2 / 3 + n - t : 0) < 0 ? s += 1 : s > 1 && (s -= 1)
+                        r = m / g, a = _, t = (g - a) / 6 / m + .5, o = h, n = (g - o) / 6 / m + .5, l = E, i = (g - l) / 6 / m + .5, (s = _ === g ? i - n : h === g ? 1 / 3 + t - i : E === g ? 2 / 3 + n - t : 0) < 0 ? s += 1 : s > 1 && (s -= 1)
                     }
                     return {
                         h: Math.round(360 * s),
@@ -267,7 +267,7 @@ function(e, t, n) {
         if (null == n) return n;
         let s = _(n.red, n.green, n.blue);
         if (null == s) return null == n ? void 0 : n.toHexString();
-        return null === (t = E(s.hue, s.saturation * i, s.lightness)) || void 0 === t ? void 0 : t.toHexString()
+        return null === (t = h(s.hue, s.saturation * i, s.lightness)) || void 0 === t ? void 0 : t.toHexString()
     }
 
     function v(e, t, n) {

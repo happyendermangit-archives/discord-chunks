@@ -19,8 +19,8 @@ function(e, t, n) {
     n("158998");
     var f = n("360191"),
         _ = n("342176"),
-        E = n("49111"),
-        h = n("782340");
+        h = n("49111"),
+        E = n("782340");
     let g = {
         loading: !1,
         initialized: !1,
@@ -92,7 +92,7 @@ function(e, t, n) {
         g.notifCenterItems = g.notifCenterItems.map(e => n(e) ? {
             ...e,
             disable_action: !0,
-            body: (0, c.isNullOrEmpty)(s) || (0, c.isNullOrEmpty)(i) ? e.body : h.default.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
+            body: (0, c.isNullOrEmpty)(s) || (0, c.isNullOrEmpty)(i) ? e.body : E.default.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
                 event_name: i,
                 guild_name: s
             })
@@ -156,7 +156,7 @@ function(e, t, n) {
     A.displayName = "NotificationCenterItemsStore", A.persistKey = "NotificationCenterItemsStore_v2";
     var y = new A(s.default, {
         CONNECTION_OPEN: function(e) {
-            p(), h.default.initialLanguageLoad.then(() => {
+            p(), E.default.initialLanguageLoad.then(() => {
                 let t = [];
                 e.relationships.forEach(e => {
                     let {
@@ -164,7 +164,7 @@ function(e, t, n) {
                         user: i,
                         since: s
                     } = e;
-                    if (n !== E.RelationshipTypes.PENDING_INCOMING || null == i || null == s) return null;
+                    if (n !== h.RelationshipTypes.PENDING_INCOMING || null == i || null == s) return null;
                     let r = u.default.getUser(i.id);
                     if (null == r) return null;
                     let a = (0, _.incomingFriendRequestLocalItem)(r, s);
@@ -232,7 +232,7 @@ function(e, t, n) {
             g.notifCenterTabFocused = t
         },
         RELATIONSHIP_ADD: function(e) {
-            if (e.relationship.type === E.RelationshipTypes.PENDING_INCOMING) {
+            if (e.relationship.type === h.RelationshipTypes.PENDING_INCOMING) {
                 let {
                     user: t,
                     since: n
@@ -242,7 +242,7 @@ function(e, t, n) {
                 if (null == i) return null;
                 g.notifCenterLocalItems = [...g.notifCenterLocalItems, (0, _.incomingFriendRequestLocalItem)(i, n)]
             }
-            e.relationship.type === E.RelationshipTypes.FRIEND && (g.notifCenterLocalItems = g.notifCenterLocalItems.map(t => {
+            e.relationship.type === h.RelationshipTypes.FRIEND && (g.notifCenterLocalItems = g.notifCenterLocalItems.map(t => {
                 if (I(t, f.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.user.id)) {
                     var n;
                     let i = u.default.getUser(e.relationship.user.id);
@@ -252,7 +252,7 @@ function(e, t, n) {
                         forceUnacked: !1,
                         local_id: "incoming_friend_requests_accepted_".concat(e.relationship.user.id, "_").concat(t.id),
                         type: f.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED,
-                        body: h.default.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST_ACCEPTED.format({
+                        body: E.default.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST_ACCEPTED.format({
                             username: "**".concat(null !== (n = null == i ? void 0 : i.globalName) && void 0 !== n ? n : e.relationship.user.username, "**")
                         })
                     }

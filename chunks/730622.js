@@ -30,7 +30,7 @@ function(e, t, n) {
             null == l || l();
             return
         }
-        let d = i(E, c, a);
+        let d = i(h, c, a);
 
         function c() {
             null == l || l()
@@ -44,8 +44,8 @@ function(e, t, n) {
             s(d), r(e)
         }
 
-        function E(e) {
-            return o(d, E, c, {
+        function h(e) {
+            return o(d, h, c, {
                 ...a,
                 isLoading: !0
             }), u({
@@ -53,16 +53,16 @@ function(e, t, n) {
                 resolve: f,
                 reject: _,
                 code: e,
-                mfaCodeHandler: h,
+                mfaCodeHandler: E,
                 isModalOpen: !0
             })
         }
 
-        function h(e) {
+        function E(e) {
             let {
                 res: t
             } = e;
-            o(d, E, c, {
+            o(d, h, c, {
                 ...a,
                 error: t.body.message
             })

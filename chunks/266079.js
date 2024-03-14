@@ -22,15 +22,15 @@ function(e, t, n) {
             disabled: n = !1,
             hideBorder: r = !1,
             tooltipNote: _,
-            onChange: E,
-            className: h,
+            onChange: h,
+            className: E,
             style: g,
             note: m,
             children: p
         } = e, S = s.useRef(null), v = s.useRef(null), T = s.useId(), I = (0, i.jsx)(l.Switch, {
             id: T,
             checked: t,
-            onChange: E,
+            onChange: h,
             disabled: n,
             focusProps: {
                 enabled: !1
@@ -39,7 +39,7 @@ function(e, t, n) {
         });
         return (0, i.jsxs)("div", {
             style: g,
-            className: a(f.container, h, {
+            className: a(f.container, E, {
                 [f.disabled]: n
             }),
             children: [(0, i.jsx)(o.FocusRing, {

@@ -5,10 +5,10 @@ function(e, t, n) {
             return f
         },
         useCanAccessMemberSafetyPage: function() {
-            return E
+            return h
         },
         useCanAccessBulkBanningFeature: function() {
-            return h
+            return E
         },
         useCanAccessInviteCodeFeature: function() {
             return g
@@ -55,13 +55,13 @@ function(e, t, n) {
             return null != n && a.default.can(d.Permissions.MANAGE_GUILD, n.guild) && a.default.can(d.Permissions.BAN_MEMBERS, n.guild)
         };
 
-    function E(e) {
+    function h(e) {
         let t = (0, s.useStateFromStores)([r.default, o.default], () => f(e, [r.default, o.default]), [e]);
         return t
     }
 
-    function h(e) {
-        let t = E(e),
+    function E(e) {
+        let t = h(e),
             n = (0, s.useStateFromStores)([r.default, o.default], () => _(e, [r.default, o.default]), [e]);
         return t && n
     }

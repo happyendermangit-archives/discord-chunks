@@ -35,8 +35,8 @@ function(e, t, n) {
         c = n("271938"),
         f = n("377253"),
         _ = n("659500"),
-        E = n("718517"),
-        h = n("402671"),
+        h = n("718517"),
+        E = n("402671"),
         g = n("61069"),
         m = n("49111"),
         p = n("782340");
@@ -46,7 +46,7 @@ function(e, t, n) {
             status: i,
             body: s
         } = e;
-        if (429 === i) return setTimeout(t, e.body.retry_after * E.default.Millis.SECOND), !1;
+        if (429 === i) return setTimeout(t, e.body.retry_after * h.default.Millis.SECOND), !1;
         if (403 === i) switch (s && s.code) {
             case m.AbortCodes.TOO_MANY_REACTIONS:
                 l.default.show({
@@ -278,7 +278,7 @@ function(e, t, n) {
     async function O(e, t) {
         let n = [];
         if (t) try {
-            n = await (0, h.getEmojiColors)(e)
+            n = await (0, E.getEmojiColors)(e)
         } catch {}
         return n
     }

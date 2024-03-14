@@ -16,8 +16,8 @@ function(e, t, n) {
     let c = new Set,
         f = new Map,
         _ = new Map,
-        E = new Map,
         h = new Map,
+        E = new Map,
         g = null;
 
     function m(e) {
@@ -27,7 +27,7 @@ function(e, t, n) {
         let s = new Set,
             r = new Set,
             c = new Set;
-        if (h.set(e, n.isOwner(t)), n.hasFeature(d.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) {
+        if (E.set(e, n.isOwner(t)), n.hasFeature(d.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) {
             var g, m;
             let l = a.default.getMember(e, t.id),
                 f = new Set(null !== (g = null == l ? void 0 : l.roles) && void 0 !== g ? g : []),
@@ -35,14 +35,14 @@ function(e, t, n) {
             for (let t in _) {
                 ;
                 let n = _[t];
-                if ((0, u.isSubscriptionRole)(n) && (s.add(t), (0, u.isSubscriptionRoleAvailableForPurchase)(n) && (r.add(t), f.has(t) && c.add(t))), f.has(t) && (m = n, i.default.has(m.permissions, d.Permissions.ADMINISTRATOR))) h.set(e, !0)
+                if ((0, u.isSubscriptionRole)(n) && (s.add(t), (0, u.isSubscriptionRoleAvailableForPurchase)(n) && (r.add(t), f.has(t) && c.add(t))), f.has(t) && (m = n, i.default.has(m.permissions, d.Permissions.ADMINISTRATOR))) E.set(e, !0)
             }
         }
-        return f.set(e, s), E.set(e, c), _.set(e, r), !0
+        return f.set(e, s), h.set(e, c), _.set(e, r), !0
     }
 
     function p() {
-        f.clear(), E.clear(), _.clear(), h.clear(), g = null
+        f.clear(), h.clear(), _.clear(), E.clear(), g = null
     }
 
     function S(e) {
@@ -97,11 +97,11 @@ function(e, t, n) {
         }
         getUserSubscriptionRoles(e) {
             var t;
-            return this.buildRoles(e), null !== (t = E.get(e)) && void 0 !== t ? t : c
+            return this.buildRoles(e), null !== (t = h.get(e)) && void 0 !== t ? t : c
         }
         getUserIsAdmin(e) {
             var t;
-            return this.buildRoles(e), null !== (t = h.get(e)) && void 0 !== t && t
+            return this.buildRoles(e), null !== (t = E.get(e)) && void 0 !== t && t
         }
     }
     T.displayName = "SubscriptionRoleStore";

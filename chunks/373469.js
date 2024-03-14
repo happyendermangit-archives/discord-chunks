@@ -13,8 +13,8 @@ function(e, t, n) {
         c = n("374014"),
         f = n("223913"),
         _ = n("537429"),
-        E = n("756898"),
-        h = n("271938"),
+        h = n("756898"),
+        E = n("271938"),
         g = n("42203"),
         m = n("305961"),
         p = n("42887"),
@@ -104,7 +104,7 @@ function(e, t, n) {
         getCurrentUserActiveStream() {
             let e = T.default.getVoiceChannelId(),
                 t = g.default.getChannel(e);
-            return null == t ? null : this.getActiveStreamForUser(h.default.getId(), t.getGuildId())
+            return null == t ? null : this.getActiveStreamForUser(E.default.getId(), t.getGuildId())
         }
         getActiveStreamForUser(e, t) {
             var n;
@@ -116,7 +116,7 @@ function(e, t, n) {
             let t = T.default.getVoiceChannelId(),
                 n = g.default.getChannel(t);
             if (null == n) return null;
-            let i = this.getActiveStreamForUser(h.default.getId(), n.getGuildId());
+            let i = this.getActiveStreamForUser(E.default.getId(), n.getGuildId());
             return null == i ? null : null !== (e = a[(0, c.encodeStreamKey)(i)]) && void 0 !== e ? e : null
         }
         getStreamerActiveStreamMetadataForStream(e) {
@@ -198,8 +198,8 @@ function(e, t, n) {
                         channelId: r
                     }).ownerId] && (s[l.ownerId] = {}), s[l.ownerId][null !== (u = l.guildId) && void 0 !== u ? u : C.NULL_STRING_GUILD_ID] = l, !0
                 } {
-                    let t = h.default.getSessionId();
-                    return n === h.default.getId() && a !== t && null != v.default.getChannelId() ? e : function(e, t) {
+                    let t = E.default.getSessionId();
+                    return n === E.default.getId() && a !== t && null != v.default.getChannelId() ? e : function(e, t) {
                         var n;
                         let i = null != t ? t : C.NULL_STRING_GUILD_ID;
                         return (null === (n = s[e]) || void 0 === n ? void 0 : n[i]) != null && (delete s[e][i], !0)
@@ -214,7 +214,7 @@ function(e, t, n) {
             i.delete(t), i.set(t, {
                 ...n,
                 state: C.ApplicationStreamStates.CONNECTING
-            }), n.ownerId === h.default.getId() && (N[n.channelId] = !1)
+            }), n.ownerId === E.default.getId() && (N[n.channelId] = !1)
         },
         STREAM_START: function(e) {
             var t;
@@ -229,8 +229,8 @@ function(e, t, n) {
                 streamType: n,
                 guildId: s,
                 channelId: r,
-                ownerId: h.default.getId()
-            }), _ = null !== (t = null != o ? d.default.getGameForPID(o) : null != u ? d.default.getRunningGames().find(e => (0, E.default)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
+                ownerId: E.default.getId()
+            }), _ = null !== (t = null != o ? d.default.getGameForPID(o) : null != u ? d.default.getRunningGames().find(e => (0, h.default)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
             a[f] = {
                 id: null == _ ? void 0 : _.id,
                 pid: o,
@@ -239,7 +239,7 @@ function(e, t, n) {
                 streamType: n,
                 guildId: s,
                 channelId: r,
-                ownerId: h.default.getId(),
+                ownerId: E.default.getId(),
                 state: C.ApplicationStreamStates.CONNECTING
             })
         },
@@ -300,7 +300,7 @@ function(e, t, n) {
                 channelId: t,
                 selfStreamHidden: n
             } = e, i = (0, c.isStreamKey)(y);
-            i && (null == y ? void 0 : y.includes(h.default.getId())) && !1 === N[t] && !0 === n && (y = null), N[t] = n
+            i && (null == y ? void 0 : y.includes(E.default.getId())) && !1 === N[t] && !0 === n && (y = null), N[t] = n
         },
         SET_STREAM_APP_INTENT: function(e) {
             let {
@@ -339,7 +339,7 @@ function(e, t, n) {
                     (0, c.encodeStreamKey)(e) !== y && e.state === C.ApplicationStreamStates.ENDED && D((0, c.encodeStreamKey)(e))
                 }), null == t) return;
             let s = (0, c.isStreamKey)(t);
-            s && t.includes(h.default.getId()) && (N[n] = !1)
+            s && t.includes(E.default.getId()) && (N[n] = !1)
         },
         CONNECTION_OPEN: O,
         CONNECTION_CLOSED: O,

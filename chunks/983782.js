@@ -11,10 +11,10 @@ function(e, t, n) {
             return _
         },
         AppReferencePositionLayer: function() {
-            return E
+            return h
         },
         default: function() {
-            return h
+            return E
         }
     });
     var i = n("37983"),
@@ -26,7 +26,7 @@ function(e, t, n) {
         LayerContainer: l,
         LayerProvider: u,
         layerContext: d
-    } = (0, r.createLayer)("App"), c = l, f = u, _ = d, E = s.forwardRef(function(e, t) {
+    } = (0, r.createLayer)("App"), c = l, f = u, _ = d, h = s.forwardRef(function(e, t) {
         return (0, i.jsx)(o, {
             children: (0, i.jsx)(a.ReferencePositionLayer, {
                 ref: t,
@@ -34,5 +34,5 @@ function(e, t, n) {
             })
         })
     });
-    var h = o
+    var E = o
 }

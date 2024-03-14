@@ -52,8 +52,8 @@ function(e, t, n) {
         c = n("923959"),
         f = n("957255"),
         _ = n("18494"),
-        E = n("316133"),
-        h = n("991170"),
+        h = n("316133"),
+        E = n("991170"),
         g = n("299039"),
         m = n("49111"),
         p = n("646718"),
@@ -69,11 +69,11 @@ function(e, t, n) {
     }
 
     function A(e, t, n) {
-        let s = h.default.NONE;
+        let s = E.default.NONE;
         return ((0, u.isGuildSelectableChannelType)(t) || t === T) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL)), (C(t, v) || C(t, I)) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL), s = i.default.add(s, m.Permissions.CONNECT)), {
             id: e,
             type: n,
-            deny: h.default.NONE,
+            deny: E.default.NONE,
             allow: s
         }
     }
@@ -84,10 +84,10 @@ function(e, t, n) {
         if (n.length > 0 || r) {
             var o, l, d;
             let n;
-            a.push((o = e, l = t, d = s.PermissionOverwriteType.ROLE, n = h.default.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === T) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL)), C(l, v) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL), n = i.default.add(n, m.Permissions.CONNECT)), {
+            a.push((o = e, l = t, d = s.PermissionOverwriteType.ROLE, n = E.default.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === T) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL)), C(l, v) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL), n = i.default.add(n, m.Permissions.CONNECT)), {
                 id: o,
                 type: d,
-                allow: h.default.NONE,
+                allow: E.default.NONE,
                 deny: n
             }))
         }
@@ -109,7 +109,7 @@ function(e, t, n) {
             id: e,
             type: s.PermissionOverwriteType.ROLE,
             deny: m.Permissions.SEND_MESSAGES,
-            allow: h.default.NONE
+            allow: E.default.NONE
         }]
     }
 
@@ -119,13 +119,13 @@ function(e, t, n) {
             o = n.getGuild(r),
             l = null !== (i = null == o ? void 0 : o.maxVideoChannelUsers) && void 0 !== i ? i : -1,
             u = null !== (s = null == o ? void 0 : o.maxStageVideoChannelUsers) && void 0 !== s ? s : -1,
-            d = E.default.countVoiceStatesForChannel(e.id),
-            c = E.default.getVoiceStatesForChannel(e),
+            d = h.default.countVoiceStatesForChannel(e.id),
+            c = h.default.getVoiceStatesForChannel(e),
             _ = f.default.can(m.Permissions.MOVE_MEMBERS, e) && f.default.can(m.Permissions.CONNECT, e),
-            h = !1;
-        h = e.type === I ? null != r && (t.hasVideo(e.id) || (0, a.hasStream)(c)) && u > 0 && d >= u : null != r && t.hasVideo(e.id) && l > 0 && d >= l + (_ ? 1 : 0);
+            E = !1;
+        E = e.type === I ? null != r && (t.hasVideo(e.id) || (0, a.hasStream)(c)) && u > 0 && d >= u : null != r && t.hasVideo(e.id) && l > 0 && d >= l + (_ ? 1 : 0);
         let g = e.userLimit > 0 && d >= e.userLimit;
-        return h || g && !_
+        return E || g && !_
     }
 
     function P(e, t) {

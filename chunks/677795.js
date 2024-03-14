@@ -5,10 +5,10 @@ function(e, t, n) {
             return _
         },
         RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY: function() {
-            return E
+            return h
         },
         RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY: function() {
-            return h
+            return E
         },
         GuildRoleSubscriptionBenefitTypes: function() {
             return l
@@ -35,8 +35,8 @@ function(e, t, n) {
     var i, s, r, a, o, l, u, d, c = n("646718"),
         f = n("843455");
     let _ = 3,
-        E = "(max-width: 485px)",
-        h = "(max-height: 450px)";
+        h = "(max-width: 485px)",
+        E = "(max-height: 450px)";
     (i = o || (o = {})).GATING = "GATING", i.GROUP = "GROUP", i.DETAILS = "DETAILS", i.BENEFITS = "BENEFITS", i.CHANNEL_BENEFITS = "CHANNEL_BENEFITS", i.INTANGIBLE_BENEFITS = "INTANGIBLE_BENEFITS ", i.DESIGN = "DESIGN", i.CONFIRMATION = "CONFIRMATION", i.MEMBERS = "MEMBERS", (s = l || (l = {}))[s.CHANNEL = 1] = "CHANNEL", s[s.INTANGIBLE = 2] = "INTANGIBLE", (r = u || (u = {}))[r.SOME_CHANNELS = 0] = "SOME_CHANNELS", r[r.ALL_CHANNELS = 1] = "ALL_CHANNELS";
     let g = [{
         interval: c.SubscriptionIntervalTypes.DAY,

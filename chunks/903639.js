@@ -23,7 +23,7 @@ function(e, t, n) {
             return _
         },
         MAX_REASON_LENGTH: function() {
-            return E
+            return h
         }
     });
     var i, s, r = n("701909"),
@@ -72,5 +72,5 @@ function(e, t, n) {
         c = "GuildCommunicationDisabledDismissedGuilds",
         f = "Set Communication Disabled Modal",
         _ = "Clear Communication Disabled Modal",
-        E = 512
+        h = 512
 }

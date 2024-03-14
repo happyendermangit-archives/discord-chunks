@@ -67,7 +67,7 @@ function(e, t, n) {
                 formFields: r.form_fields
             }
         })
-    }, E = async (e, t) => {
+    }, h = async (e, t) => {
         let n = await i.default.patch({
                 url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
                 body: {
@@ -87,7 +87,7 @@ function(e, t, n) {
                 formFields: r.form_fields
             }
         })
-    }, h = async (e, t) => {
+    }, E = async (e, t) => {
         await i.default.patch({
             url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
             body: {
@@ -127,8 +127,8 @@ function(e, t, n) {
     var m = {
         fetchVerificationForm: f,
         updateVerificationForm: _,
-        updateVerificationFormDescription: E,
-        enableVerificationForm: h,
+        updateVerificationFormDescription: h,
+        enableVerificationForm: E,
         submitVerificationForm: g
     }
 }

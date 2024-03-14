@@ -16,21 +16,21 @@ function(e, t, n) {
         c = n("229915"),
         f = n("782340"),
         _ = n("706381");
-    let E = Object.freeze({
+    let h = Object.freeze({
             SMALL: _.small,
             MEDIUM: _.medium,
             LARGE: _.large
         }),
-        h = e => {
+        E = e => {
             let {
                 hasContent: t,
                 onClear: n,
                 className: r,
                 isLoading: l,
-                size: h = E.SMALL
+                size: E = h.SMALL
             } = e;
             return (0, i.jsx)(o.Clickable, {
-                className: a(r, _.iconLayout, h, {
+                className: a(r, _.iconLayout, E, {
                     [_.pointer]: t
                 }),
                 onClick: e => {
@@ -62,7 +62,7 @@ function(e, t, n) {
                 })
             })
         };
-    h.Sizes = E;
+    E.Sizes = h;
     class g extends s.PureComponent {
         focus() {
             let {
@@ -87,7 +87,7 @@ function(e, t, n) {
                 onKeyDown: u,
                 onKeyUp: d,
                 onKeyPress: c,
-                isLoading: E,
+                isLoading: h,
                 size: g,
                 disabled: m,
                 onChange: p,
@@ -126,12 +126,12 @@ function(e, t, n) {
                             autoComplete: T,
                             "aria-label": A,
                             ref: this.inputRef
-                        }), !C && (0, i.jsx)(h, {
+                        }), !C && (0, i.jsx)(E, {
                             size: g,
                             hasContent: e.length > 0,
                             onClear: n,
                             className: o,
-                            isLoading: E
+                            isLoading: h
                         })]
                     })
                 })
@@ -146,8 +146,8 @@ function(e, t, n) {
             }
         }
     }
-    g.Sizes = E, g.defaultProps = {
-        size: E.SMALL,
+    g.Sizes = h, g.defaultProps = {
+        size: h.SMALL,
         isLoading: !1,
         disabled: !1
     };

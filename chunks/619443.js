@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("271938"),
         f = n("950104"),
         _ = n("42203"),
-        E = n("260320"),
-        h = n("42887"),
+        h = n("260320"),
+        E = n("42887"),
         g = n("945956"),
         m = n("590401"),
         p = n("18494"),
@@ -74,7 +74,7 @@ function(e, t, n) {
     }
     class G extends r.default.Store {
         initialize() {
-            this.waitFor(c.default, p.default, _.default, f.default, E.default, d.default), this.syncWith([h.default], U), this.syncWith([S.default], w)
+            this.waitFor(c.default, p.default, _.default, f.default, h.default, d.default), this.syncWith([E.default], U), this.syncWith([S.default], w)
         }
         getSocket() {
             return I.socket

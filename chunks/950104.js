@@ -17,7 +17,7 @@ function(e, t, n) {
     let f = {},
         _ = {};
 
-    function E() {
+    function h() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default.getChannelId(),
             n = l.default.getChannel(t);
@@ -33,7 +33,7 @@ function(e, t, n) {
         }
         return !1
     }
-    class h extends r.default.Store {
+    class E extends r.default.Store {
         initialize() {
             this.waitFor(d.default, u.default)
         }
@@ -62,10 +62,10 @@ function(e, t, n) {
             }
         }
     }
-    h.displayName = "CallStore";
-    var g = new h(o.default, {
+    E.displayName = "CallStore";
+    var g = new E(o.default, {
         CONNECTION_OPEN: function() {
-            return E(!0)
+            return h(!0)
         },
         CONNECTION_CLOSED: function() {
             f = {}, _ = {}
@@ -81,13 +81,13 @@ function(e, t, n) {
             }
         },
         CONNECTION_RESUMED: function() {
-            return E(!0)
+            return h(!0)
         },
         CHANNEL_SELECT: function(e) {
             let {
                 channelId: t
             } = e;
-            return E(!1, t)
+            return h(!1, t)
         },
         CHANNEL_DELETE: function(e) {
             let {

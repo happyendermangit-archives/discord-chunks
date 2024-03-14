@@ -17,13 +17,13 @@ function(e, t, n) {
             return _
         },
         ThreadMemberFlags: function() {
-            return E
+            return h
         },
         OpenThreadAnalyticsLocations: function() {
             return i
         },
         getThreadNotificationOptions: function() {
-            return h
+            return E
         },
         ThreadSortOrderReadableForAnalytics: function() {
             return s
@@ -42,22 +42,22 @@ function(e, t, n) {
         c = 1e5,
         f = 50,
         _ = 25,
-        E = {
+        h = {
             HAS_INTERACTED: 1,
             ALL_MESSAGES: 2,
             ONLY_MENTIONS: 4,
             NO_MESSAGES: 8
         };
 
-    function h() {
+    function E() {
         return [{
-            setting: E.ALL_MESSAGES,
+            setting: h.ALL_MESSAGES,
             label: l.default.Messages.FORM_LABEL_ALL_MESSAGES
         }, {
-            setting: E.ONLY_MENTIONS,
+            setting: h.ONLY_MENTIONS,
             label: l.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
         }, {
-            setting: E.NO_MESSAGES,
+            setting: h.NO_MESSAGES,
             label: l.default.Messages.FORM_LABEL_NOTHING
         }]
     }(r = i || (i = {})).EMBED = "Embed", r.BROWSER = "Thread Browser", r.POPOUT = "Active Threads Popout", r.CHANNEL_LIST = "Channel List", r.GUILD_ACTIVE_THREADS_MODAL = "Guild Active Threads Modal", r.INBOX = "Inbox", r.FORUM = "Forum", r.VOICE_AUTO_OPEN = "Voice Auto Open", (a = s || (s = {})).LATEST_ACTIVITY = "Last Message", a.CREATION_DATE = "Creation";

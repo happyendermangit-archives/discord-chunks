@@ -50,20 +50,20 @@ function(e, t, n) {
             dotAlignment: r,
             className: u,
             ...d
-        } = e, f = (0, a.useStateFromStores)([l.default], () => l.default.roleStyle), _ = "username" === f, E = (0, i.jsx)(c, {
+        } = e, f = (0, a.useStateFromStores)([l.default], () => l.default.roleStyle), _ = "username" === f, h = (0, i.jsx)(c, {
             roleStyle: f,
             name: t,
             color: n,
             roleName: s,
             dotAlignment: r,
             className: u
-        }), h = _ ? {
+        }), E = _ ? {
             color: n
         } : void 0;
         return (0, i.jsx)(o.Anchor, {
             ...d,
-            children: E,
-            style: h
+            children: h,
+            style: E
         })
     }
 

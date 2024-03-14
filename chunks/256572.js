@@ -17,9 +17,9 @@ function(e, t, n) {
         c = n("692038"),
         f = n("42203"),
         _ = n("377253"),
-        E = n("49111");
+        h = n("49111");
     (s = i || (i = {}))[s.LOADED = 0] = "LOADED", s[s.NOT_LOADED = 1] = "NOT_LOADED", s[s.DELETED = 2] = "DELETED";
-    let h = Object.freeze({
+    let E = Object.freeze({
             state: 1
         }),
         g = new Set;
@@ -89,7 +89,7 @@ function(e, t, n) {
 
     function S(e) {
         let t = !1;
-        if (p.updateExistingMessageIfCached(e) && (t = !0), E.MessageTypesWithLazyLoadedReferences.has(e.type)) {
+        if (p.updateExistingMessageIfCached(e) && (t = !0), h.MessageTypesWithLazyLoadedReferences.has(e.type)) {
             let n = e.message_reference;
             if (null == n) return t;
             let i = n.message_id;
@@ -99,7 +99,7 @@ function(e, t, n) {
                 null != t ? (p.set(t.channel_id, t.id, {
                     state: 0,
                     message: (0, c.createMessageRecord)(t)
-                }), e.type === E.MessageTypes.THREAD_STARTER_MESSAGE && S(t)) : p.set(e.channel_id, i, {
+                }), e.type === h.MessageTypes.THREAD_STARTER_MESSAGE && S(t)) : p.set(e.channel_id, i, {
                     state: 2
                 })
             } else {
@@ -107,7 +107,7 @@ function(e, t, n) {
                 null != e ? p.set(n.channel_id, i, {
                     state: 0,
                     message: e
-                }) : p.set(n.channel_id, i, h)
+                }) : p.set(n.channel_id, i, E)
             }
             t = !0
         }
@@ -161,11 +161,11 @@ function(e, t, n) {
         }
         getMessageByReference(e) {
             let t;
-            return null != e && (t = p.get(e.channel_id, e.message_id)), null != t ? t : h
+            return null != e && (t = p.get(e.channel_id, e.message_id)), null != t ? t : E
         }
         getMessage(e, t) {
             var n;
-            return null !== (n = p.get(e, t)) && void 0 !== n ? n : h
+            return null !== (n = p.get(e, t)) && void 0 !== n ? n : E
         }
         getReplyIdsForChannel(e) {
             let t;

@@ -8,10 +8,10 @@ function(e, t, n) {
             return _
         },
         GuildFeedRenderSelectorExperiment: function() {
-            return E
+            return h
         },
         GuildHomeBadgeExperiment: function() {
-            return h
+            return E
         },
         GuildHomeFeedbackExperiment: function() {
             return g
@@ -50,7 +50,7 @@ function(e, t, n) {
         let t = u.default.getGuild(e);
         return !!(null != t && c(e, l.default, s.default)) && t.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
     }
-    let E = (0, r.createExperiment)({
+    let h = (0, r.createExperiment)({
             kind: "user",
             id: "2022-01_home_feed_toggle",
             label: "Show Guild Feed Sorting Selector",
@@ -65,7 +65,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        h = (0, r.createExperiment)({
+        E = (0, r.createExperiment)({
             kind: "user",
             id: "2022-08_home_badge",
             label: "Show badge on home channel",

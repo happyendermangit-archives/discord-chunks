@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("119035"),
         f = n("39141"),
         _ = n("49111");
-    let E = new Set,
-        h = new s.default(function(e) {
+    let h = new Set,
+        E = new s.default(function(e) {
             let {
                 userId: t,
                 channelId: n
@@ -70,14 +70,14 @@ function(e, t, n) {
             this.waitFor(o.default, l.default)
         }
         getComboScore(e, t) {
-            let n = h.get(m({
+            let n = E.get(m({
                 userId: e,
                 channelId: t
             }));
             return null == n ? 0 : (0, c.getComboScore)(n)
         }
         getUserCombo(e, t) {
-            return h.get(m({
+            return E.get(m({
                 userId: e,
                 channelId: t
             }))
@@ -112,7 +112,7 @@ function(e, t, n) {
             ! function e(t) {
                 var n, i, s, a, o, l;
                 let u = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    d = h.get(m(t)),
+                    d = E.get(m(t)),
                     c = {
                         ...d,
                         ...t,
@@ -120,8 +120,8 @@ function(e, t, n) {
                         multiplier: Math.min(null !== (a = null !== (s = t.multiplier) && void 0 !== s ? s : null == d ? void 0 : d.multiplier) && void 0 !== a ? a : 1, 7),
                         decayInterval: null !== (o = null == d ? void 0 : d.decayInterval) && void 0 !== o ? o : new r.Interval
                     };
-                h.set(m(t), c), u && (null === (l = c.decayInterval) || void 0 === l || l.start(1e3, () => {
-                    let t = h.get(m(c));
+                E.set(m(t), c), u && (null === (l = c.decayInterval) || void 0 === l || l.start(1e3, () => {
+                    let t = E.get(m(c));
                     if (null != t) {
                         let i = c.multiplier !== t.multiplier && c.value !== t.value;
                         if (t.value <= 0 || i) {
@@ -159,8 +159,8 @@ function(e, t, n) {
             } = e;
             if (!d.default.isEnabled()) return !1;
             let l = o.default.getId();
-            if (!p(null == r ? void 0 : r.id, l, a, E)) return !1;
-            let g = h.get(m({
+            if (!p(null == r ? void 0 : r.id, l, a, h)) return !1;
+            let g = E.get(m({
                 userId: null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "???",
                 channelId: i
             }));

@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("670914"),
         f = n("242670"),
         _ = n("180748"),
-        E = n("206230"),
-        h = n("155823"),
+        h = n("206230"),
+        E = n("155823"),
         g = n("107728"),
         m = n("537011"),
         p = n("639826");
@@ -43,11 +43,11 @@ function(e, t, n) {
                 })
             })(t).reduce((t, n) => {
                 var i, s;
-                if (n.type === h.MenuSeparator) return t.push({
+                if (n.type === E.MenuSeparator) return t.push({
                     type: "separator",
                     navigable: !1
                 }), t;
-                if (n.type === h.MenuGroup) {
+                if (n.type === E.MenuGroup) {
                     let i = e(n.props.children);
                     return i.length > 0 && (t.push({
                         type: "groupstart",
@@ -61,7 +61,7 @@ function(e, t, n) {
                         props: n.props
                     })), t
                 }
-                if (n.type === h.MenuItem) return t.push(null != n.props.render ? {
+                if (n.type === E.MenuItem) return t.push(null != n.props.render ? {
                     type: "customitem",
                     key: n.props.id,
                     navigable: null == n.props.navigable || n.props.navigable,
@@ -79,19 +79,19 @@ function(e, t, n) {
                     listClassName: n.props.listClassName,
                     subMenuClassName: n.props.subMenuClassName
                 }), t;
-                else if (n.type === h.MenuCheckboxItem) return t.push({
+                else if (n.type === E.MenuCheckboxItem) return t.push({
                     type: "checkbox",
                     key: n.props.id,
                     navigable: !0,
                     props: n.props
                 }), t;
-                else if (n.type === h.MenuRadioItem) return t.push({
+                else if (n.type === E.MenuRadioItem) return t.push({
                     type: "radio",
                     key: n.props.id,
                     navigable: !0,
                     props: n.props
                 }), t;
-                else if (n.type === h.MenuControlItem) return t.push(null != n.props.control ? {
+                else if (n.type === E.MenuControlItem) return t.push(null != n.props.control ? {
                     type: "control",
                     key: n.props.id,
                     navigable: !0,
@@ -116,11 +116,11 @@ function(e, t, n) {
             R = (0, u.useMenuNavigator)({
                 navId: n,
                 items: y.current,
-                initialFocusPath: E.default.keyboardModeEnabled && null != N ? [N] : [],
+                initialFocusPath: h.default.keyboardModeEnabled && null != N ? [N] : [],
                 closeMenu: v
             });
         s.useEffect(() => {
-            R.isUsingKeyboardNavigation ? !E.default.keyboardModeEnabled && (0, _.enableKeyboardMode)() : E.default.keyboardModeEnabled && (0, _.disableKeyboardMode)()
+            R.isUsingKeyboardNavigation ? !h.default.keyboardModeEnabled && (0, _.enableKeyboardMode)() : h.default.keyboardModeEnabled && (0, _.disableKeyboardMode)()
         }, [R.isUsingKeyboardNavigation]);
         let O = s.useRef(null);
         (0, d.useFocusLock)(O);
@@ -168,14 +168,14 @@ function(e, t, n) {
                                         onChildrenScroll: u,
                                         listClassName: c,
                                         subMenuClassName: f
-                                    } = l, _ = null != t, E = [...s, l.key], h = n.isFocused(E), g = (0, i.jsx)(m.Item, {
+                                    } = l, _ = null != t, h = [...s, l.key], E = n.isFocused(h), g = (0, i.jsx)(m.Item, {
                                         ...l.props,
                                         label: l.label,
                                         hasSubmenu: null != t,
-                                        isFocused: h,
+                                        isFocused: E,
                                         menuItemProps: {
                                             ...n.getItemProps({
-                                                path: E,
+                                                path: h,
                                                 hasSubmenu: _
                                             }),
                                             ...null != t ? {
@@ -187,11 +187,11 @@ function(e, t, n) {
                                     _ ? null != o ? d.push((0, i.jsx)(m.SubmenuListItem, {
                                         ...l.props,
                                         parentItem: g,
-                                        isFocused: h,
+                                        isFocused: E,
                                         menuSubmenuProps: n.getSubmenuProps({
-                                            path: E
+                                            path: h
                                         }),
-                                        rows: e(t, n, E, r),
+                                        rows: e(t, n, h, r),
                                         rowHeight: o,
                                         onScroll: u,
                                         listClassName: c
@@ -199,11 +199,11 @@ function(e, t, n) {
                                         ...l.props,
                                         subMenuClassName: f,
                                         parentItem: g,
-                                        isFocused: h,
+                                        isFocused: E,
                                         menuSubmenuProps: n.getSubmenuProps({
-                                            path: E
+                                            path: h
                                         }),
-                                        renderSubmenu: () => e(t, n, E, r)
+                                        renderSubmenu: () => e(t, n, h, r)
                                     }, "".concat(l.key, "-submenu"))) : d.push(g), a++;
                                     break
                                 }
@@ -288,7 +288,7 @@ function(e, t, n) {
         let e = "♫ (つ｡◕‿‿◕｡)つ ♪",
             [t, n] = s.useState(e);
         return s.useEffect(() => {
-            if (E.default.useReducedMotion) return;
+            if (h.default.useReducedMotion) return;
             let t = setInterval(() => {
                 n(t => t === e ? "♫ ⊂(｡◕‿‿◕｡⊂) ♪" : e)
             }, 700);

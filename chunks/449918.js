@@ -8,10 +8,10 @@ function(e, t, n) {
             return _
         },
         useDesaturatedColorString: function() {
-            return E
+            return h
         },
         useThemedColorValue: function() {
-            return h
+            return E
         }
     }), n("781738");
     var i = n("884691"),
@@ -35,7 +35,7 @@ function(e, t, n) {
         return null != e ? a.ColorDetails[e] : null
     }
 
-    function E(e) {
+    function h(e) {
         let t = (0, o.default)([d.default], () => d.default.saturation);
         return i.useMemo(() => {
             if (null == e) return null;
@@ -46,7 +46,7 @@ function(e, t, n) {
         }, [e, t])
     }
 
-    function h(e, t) {
+    function E(e, t) {
         let n = (0, u.useTheme)(),
             s = (0, o.default)([d.default], () => d.default.saturation),
             r = i.useMemo(() => {

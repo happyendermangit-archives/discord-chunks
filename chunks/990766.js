@@ -55,8 +55,8 @@ function(e, t, n) {
         c = n("870346"),
         f = n("373469"),
         _ = n("271938"),
-        E = n("42203"),
-        h = n("305961"),
+        h = n("42203"),
+        E = n("305961"),
         g = n("18494"),
         m = n("800762"),
         p = n("404008"),
@@ -91,10 +91,10 @@ function(e, t, n) {
     }
 
     function P(e, t) {
-        let n = E.default.getChannel(t);
+        let n = h.default.getChannel(t);
         s(null != n, "Cannot join a null voice channel");
         let i = m.default.isInChannel(t);
-        return !i && (0, p.isChannelFull)(n, m.default, h.default)
+        return !i && (0, p.isChannelFull)(n, m.default, E.default)
     }
 
     function L(e, t) {

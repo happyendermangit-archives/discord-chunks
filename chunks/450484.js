@@ -20,7 +20,7 @@ function(e, t, n) {
             return a
         },
         SPOTIFY_HOSTNAMES: function() {
-            return E
+            return h
         },
         SpotifyEndpoints: function() {
             return m
@@ -39,17 +39,17 @@ function(e, t, n) {
     function _(e) {
         return null != e && e.startsWith(c)
     }(i = r || (r = {})).TRACK = "track", i.ARTIST = "artist", i.ALBUM = "album", i.PLAYLIST = "playlist", i.EPISODE = "episode", i.SHOW = "show", (s = a || (a = {})).USER_ACTIVITY_PLAY = "user_activity_play", s.USER_ACTIVITY_SYNC = "user_activity_sync", s.EMBED_SYNC = "embed_sync";
-    let E = ["open.spotify.com", "www.spotify.com"],
-        h = "https://api.spotify.com/v1",
+    let h = ["open.spotify.com", "www.spotify.com"],
+        E = "https://api.spotify.com/v1",
         g = e => "?utm_source=discord&utm_medium=".concat(e),
         m = Object.freeze({
-            PROFILE: "".concat(h, "/me"),
-            NOTIFICATIONS_PLAYER: "".concat(h, "/me/notifications/player"),
-            PLAYER: "".concat(h, "/me/player"),
-            PLAYER_DEVICES: "".concat(h, "/me/player/devices"),
-            PLAYER_PLAY: "".concat(h, "/me/player/play"),
-            PLAYER_PAUSE: "".concat(h, "/me/player/pause"),
-            PLAYER_REPEAT: "".concat(h, "/me/player/repeat"),
+            PROFILE: "".concat(E, "/me"),
+            NOTIFICATIONS_PLAYER: "".concat(E, "/me/notifications/player"),
+            PLAYER: "".concat(E, "/me/player"),
+            PLAYER_DEVICES: "".concat(E, "/me/player/devices"),
+            PLAYER_PLAY: "".concat(E, "/me/player/play"),
+            PLAYER_PAUSE: "".concat(E, "/me/player/pause"),
+            PLAYER_REPEAT: "".concat(E, "/me/player/repeat"),
             WEB_OPEN: function(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "desktop";
                 return "https://open.spotify.com/".concat(encodeURIComponent(e), "/").concat(encodeURIComponent(t)).concat(g(n))

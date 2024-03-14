@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     }), n("222007"), n("424973");
     var i = n("483366"),
@@ -20,10 +20,10 @@ function(e, t, n) {
         return t * (n / i) + e
     }
 
-    function E() {
+    function h() {
         return Math.min(Math.max(Math.min(.8 * window.innerWidth, .8 * window.innerHeight), u.MIN_RADIUS), u.MAX_RADIUS)
     }
-    var h = class e {
+    var E = class e {
         initialize() {
             this._resizeWave()
         }
@@ -50,7 +50,7 @@ function(e, t, n) {
         }
         fill() {
             let e = Math.sqrt(window.innerWidth * window.innerWidth + window.innerHeight * window.innerHeight) + 100,
-                t = E() - 140,
+                t = h() - 140,
                 n = (e, t, n, i) => {
                     e.targetX = -40 + t * Math.cos(u.TWO_PI * (.25 * (n / 15) + 0)), e.targetY = -40 + t * Math.sin(u.TWO_PI * (.25 * (n / 15) + 0)), i && (e.targetX += (0, l.randomNumber)(0, 30) - 15, e.targetY += (0, l.randomNumber)(0, 30) - 15, e.speedUp = 3, e.spring.tension = u.POINT_TENSION_DEFAULT * Math.random() * .5 + u.POINT_TENSION_DEFAULT)
                 };
@@ -64,7 +64,7 @@ function(e, t, n) {
         }
         constructor(e) {
             this.points = [], this.hasEntered = !1, this.isFilling = !1, this._resizeWave = () => {
-                let e = E();
+                let e = h();
                 this.points.forEach((t, n) => {
                     let i = -40 + e * Math.cos(u.TWO_PI * (.25 * (n / 15) + 0)),
                         s = -40 + e * Math.sin(u.TWO_PI * (.25 * (n / 15) + 0));

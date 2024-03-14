@@ -65,8 +65,8 @@ function(e, t, n) {
         c = n("697218"),
         f = n("599110"),
         _ = n("449008"),
-        E = n("773336"),
-        h = n("719923"),
+        h = n("773336"),
+        E = n("719923"),
         g = n("655518"),
         m = n("271560"),
         p = n("49111"),
@@ -120,7 +120,7 @@ function(e, t, n) {
     function B() {
         let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
             n = window.GLOBAL_ENV.GIFT_CODE_HOST;
-        return null == n || (0, E.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
+        return null == n || (0, h.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
     }
     async function H(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -275,7 +275,7 @@ function(e, t, n) {
                     return v.default.Messages.GIFT_CONFIRMATION_BODY_INVALID;
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
                     return v.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
-                        planName: (0, h.isPremiumExactly)(t, S.PremiumTypes.TIER_2) ? v.default.Messages.PREMIUM_TIER_2 : v.default.Messages.PREMIUM_TIER_1
+                        planName: (0, E.isPremiumExactly)(t, S.PremiumTypes.TIER_2) ? v.default.Messages.PREMIUM_TIER_2 : v.default.Messages.PREMIUM_TIER_1
                     });
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
                     return v.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;

@@ -48,11 +48,11 @@ function(e, t, n) {
         f = [d.RelativeMarketingURLs.DEVELOPER_PORTAL];
     i = __OVERLAY__ ? (0, a.createMemoryHistory)() : (0, a.createBrowserHistory)();
     let _ = !1,
-        E = i.listen((e, t) => {
-            "REPLACE" !== t && (_ = !0, E())
+        h = i.listen((e, t) => {
+            "REPLACE" !== t && (_ = !0, h())
         });
 
-    function h() {
+    function E() {
         return !l.ComponentDispatch.hasSubscribers(d.ComponentActions.MODAL_CLOSE) && (n("144747").default.close(), !0)
     }
 
@@ -131,10 +131,10 @@ function(e, t, n) {
     }
 
     function R() {
-        h() && (s = null, i.goBack())
+        E() && (s = null, i.goBack())
     }
 
     function O() {
-        h() && (s = null, i.goForward())
+        E() && (s = null, i.goForward())
     }
 }

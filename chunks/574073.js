@@ -8,10 +8,10 @@ function(e, t, n) {
             return _
         },
         getMessageAuthor: function() {
-            return E
+            return h
         },
         useNullableUserAuthor: function() {
-            return h
+            return E
         },
         getUserAuthor: function() {
             return g
@@ -39,9 +39,9 @@ function(e, t, n) {
             s = null == n ? void 0 : n.guild_id,
             f = (0, r.useStateFromStores)([o.default], () => null == s || null == i ? null : o.default.getMember(s, i)),
             _ = (0, r.useStateFromStores)([d.default], () => d.default.getUser(i), [i]),
-            E = c.default.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.author : _),
+            h = c.default.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.author : _),
             {
-                guild: h,
+                guild: E,
                 guildRoles: g
             } = (0, r.useStateFromStoresObject)([l.default], () => {
                 let e = l.default.getGuild(s),
@@ -55,20 +55,20 @@ function(e, t, n) {
         return null == e ? null : m({
             user: e.author,
             channel: n,
-            guild: h,
+            guild: E,
             guildRoles: g,
-            userName: E,
+            userName: h,
             member: f,
             friendNickname: p
         })
     }
 
-    function E(e) {
+    function h(e) {
         let t = a.default.getChannel(e.channel_id);
         return g(e.author, t)
     }
 
-    function h(e, t) {
+    function E(e, t) {
         let n = null == e ? void 0 : e.id,
             i = null == t ? void 0 : t.guild_id,
             s = (0, r.useStateFromStores)([o.default], () => null == i || null == n ? null : o.default.getMember(i, n)),

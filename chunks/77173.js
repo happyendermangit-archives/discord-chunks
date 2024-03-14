@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("991170"),
         f = n("488464"),
         _ = n("998716"),
-        E = n("118033"),
-        h = n("834052"),
+        h = n("118033"),
+        E = n("834052"),
         g = n("819450"),
         m = n("837979"),
         p = n("49111");
@@ -28,13 +28,13 @@ function(e, t, n) {
             var e, t, n, i, s, r, a;
             let u = d.default.getVoiceChannelId();
             if (null == u) return null;
-            let v = h.default.getStageInstanceByChannel(u);
+            let v = E.default.getStageInstanceByChannel(u);
             if (null == v) return null;
             let T = o.default.getChannel(u);
             if (null == T || !c.default.canEveryone(p.Permissions.VIEW_CHANNEL, T)) return null;
             let I = l.default.getGuild(T.getGuildId());
             if (null == I || !I.hasFeature(p.GuildFeatures.DISCOVERABLE)) return null;
-            let C = (0, E.packStageChannelPartyId)(T, v),
+            let C = (0, h.packStageChannelPartyId)(T, v),
                 A = (null == S ? void 0 : null === (e = S.party) || void 0 === e ? void 0 : e.id) === C ? S : null,
                 y = f.default.getMutableParticipants(T.id, _.StageChannelParticipantNamedIndex.SPEAKER),
                 N = y.filter(e => e.type === _.StageChannelParticipantTypes.STREAM).length,
@@ -62,7 +62,7 @@ function(e, t, n) {
     }
     class T extends r.default.Store {
         initialize() {
-            this.waitFor(o.default, d.default, h.default, u.default)
+            this.waitFor(o.default, d.default, E.default, u.default)
         }
         getActivity() {
             return S
@@ -87,7 +87,7 @@ function(e, t, n) {
                 voiceStates: t
             } = e;
             if (null == S) return;
-            let n = (0, E.unpackStageChannelParty)(S);
+            let n = (0, h.unpackStageChannelParty)(S);
             null != n && null != t.find(e => e.channelId === n.channelId) && v()
         }
     })

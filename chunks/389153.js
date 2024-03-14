@@ -61,8 +61,8 @@ function(e, t, n) {
         c = n("716241"),
         f = n("892692"),
         _ = n("233069"),
-        E = n("474643"),
-        h = n("524768"),
+        h = n("474643"),
+        E = n("524768"),
         g = n("970254"),
         m = n("696415"),
         p = n("317041"),
@@ -82,7 +82,7 @@ function(e, t, n) {
             s[e.id] = e
         })));
         let _ = (null != l ? l : []).map(e => e.name),
-            E = (null != l ? l : []).map(e => e.displayName);
+            h = (null != l ? l : []).map(e => e.displayName);
         return {
             version: r.version,
             guildId: r.guild_id,
@@ -91,7 +91,7 @@ function(e, t, n) {
             serverLocalizedName: a.name_localized,
             applicationId: o,
             type: null !== (t = r.type) && void 0 !== t ? t : d.ApplicationCommandType.CHAT,
-            inputType: h.ApplicationCommandInputType.BOT,
+            inputType: E.ApplicationCommandInputType.BOT,
             description: a.description,
             options: function e(t) {
                 return null == t ? void 0 : t.map(t => {
@@ -134,7 +134,7 @@ function(e, t, n) {
             defaultMemberPermissions: null == r.default_member_permissions ? void 0 : u.default.deserialize(r.default_member_permissions),
             dmPermission: r.dm_permission,
             permissions: s,
-            displayName: [null !== (n = r.name_localized) && void 0 !== n ? n : r.name, ...E].join(" "),
+            displayName: [null !== (n = r.name_localized) && void 0 !== n ? n : r.name, ...h].join(" "),
             displayDescription: null !== (i = a.description_localized) && void 0 !== i ? i : a.description,
             nsfw: r.nsfw,
             contexts: r.contexts,
@@ -277,39 +277,39 @@ function(e, t, n) {
     }
 
     function P(e, t, n) {
-        let i = n[(0, f.toPermissionKey)(e.userId, h.ApplicationCommandPermissionType.USER)];
+        let i = n[(0, f.toPermissionKey)(e.userId, E.ApplicationCommandPermissionType.USER)];
         if (null != i) return i.permission;
         let s = !1;
         for (let t of e.roles) {
-            let e = n[(0, f.toPermissionKey)(t, h.ApplicationCommandPermissionType.ROLE)];
+            let e = n[(0, f.toPermissionKey)(t, E.ApplicationCommandPermissionType.ROLE)];
             if (null != e && (s = !0, e.permission)) return !0
         }
         if (s) return !1;
-        let r = n[(0, f.toPermissionKey)(t, h.ApplicationCommandPermissionType.ROLE)];
+        let r = n[(0, f.toPermissionKey)(t, E.ApplicationCommandPermissionType.ROLE)];
         return null != r ? r.permission : null
     }
 
     function L(e) {
         switch (e) {
-            case h.CommandOrigin.CHAT:
-                return E.DraftType.SlashCommand;
-            case h.CommandOrigin.APPLICATION_LAUNCHER:
-                return E.DraftType.ApplicationLauncherCommand
+            case E.CommandOrigin.CHAT:
+                return h.DraftType.SlashCommand;
+            case E.CommandOrigin.APPLICATION_LAUNCHER:
+                return h.DraftType.ApplicationLauncherCommand
         }
     }
 
     function M(e) {
         if (null != e) {
-            if (e.id === p.BuiltInSectionId.BUILT_IN) return h.ApplicationCommandTriggerSections.BUILT_IN;
-            else if (e.id === p.BuiltInSectionId.FRECENCY) return h.ApplicationCommandTriggerSections.FRECENCY;
-            else return h.ApplicationCommandTriggerSections.APP
+            if (e.id === p.BuiltInSectionId.BUILT_IN) return E.ApplicationCommandTriggerSections.BUILT_IN;
+            else if (e.id === p.BuiltInSectionId.FRECENCY) return E.ApplicationCommandTriggerSections.FRECENCY;
+            else return E.ApplicationCommandTriggerSections.APP
         }
     }
 
     function b(e) {
         var t, n;
         return {
-            type: h.ApplicationCommandSectionType.APPLICATION,
+            type: E.ApplicationCommandSectionType.APPLICATION,
             id: e.id,
             name: null !== (n = null == e ? void 0 : null === (t = e.bot) || void 0 === t ? void 0 : t.username) && void 0 !== n ? n : e.name,
             icon: e.icon,

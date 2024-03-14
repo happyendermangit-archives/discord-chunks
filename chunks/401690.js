@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("18494"),
         f = n("299039"),
         _ = n("689275"),
-        E = n("755624"),
-        h = n("984674"),
+        h = n("755624"),
+        E = n("984674"),
         g = n("724210");
     let m = {},
         p = {},
@@ -46,7 +46,7 @@ function(e, t, n) {
                 F(n);
                 let e = l.default.getChannel(n);
                 if (null == e) continue;
-                let t = E.default.joinTimestamp(n);
+                let t = h.default.joinTimestamp(n);
                 if (null != t) {
                     let n = {
                             channel: e,
@@ -93,7 +93,7 @@ function(e, t, n) {
     function L(e, t, n) {
         if (null == t) return !1;
         let i = l.default.getChannel(n),
-            s = E.default.joinTimestamp(n);
+            s = h.default.joinTimestamp(n);
         if (null != i && _.default.isActive(e, t, n)) {
             if (null != s) {
                 let e = {
@@ -189,10 +189,10 @@ function(e, t, n) {
 
     function V(e) {
         let t = d.default.getMentionCount(e.id) > 0,
-            n = d.default.hasUnread(e.id) && (!E.default.isMuted(e.id) || t),
+            n = d.default.hasUnread(e.id) && (!h.default.isMuted(e.id) || t),
             i = e.hasFlag(g.ChannelFlags.PINNED),
             s = e.isActiveThread(),
-            r = s && (0, h.default)(e) > Date.now();
+            r = s && (0, E.default)(e) > Date.now();
         return {
             isUnread: (s || i) && n,
             isRelevant: r || i || n,
@@ -208,7 +208,7 @@ function(e, t, n) {
                     type: "THREAD_UPDATE",
                     channel: t
                 })
-            }, (0, h.default)(e) - Date.now() + 1)
+            }, (0, E.default)(e) - Date.now() + 1)
         }(e)
     }
 
@@ -253,7 +253,7 @@ function(e, t, n) {
         q = {};
     class X extends r.default.Store {
         initialize() {
-            this.waitFor(_.default, l.default, E.default, d.default), this.syncWith([c.default], k)
+            this.waitFor(_.default, l.default, h.default, d.default), this.syncWith([c.default], k)
         }
         hasActiveJoinedUnreadThreads(e, t) {
             return e in p && t in p[e]

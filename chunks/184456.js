@@ -22,9 +22,9 @@ function(e, t, n) {
                 foregroundColor: o = u.default.unsafe_rawColors.BRAND_500.css,
                 backgroundColor: f = "var(--background-modifier-active)",
                 foregroundGradientColor: _,
-                animate: E = !0
+                animate: h = !0
             } = e,
-            h = null != i ? i : 0;
+            E = null != i ? i : 0;
         return t = null != _ ? {
             background: "linear-gradient(to right, ".concat(_[0], ", ").concat(_[1], ")")
         } : {
@@ -34,23 +34,23 @@ function(e, t, n) {
             style: {
                 backgroundColor: f
             },
-            children: h !== c && "number" == typeof h ? (0, r.jsx)("div", {
+            children: E !== c && "number" == typeof E ? (0, r.jsx)("div", {
                 className: l(d.progressBar, d[s], {
-                    [d.animating]: E
+                    [d.animating]: h
                 }),
                 style: {
-                    transform: "translate3d(".concat(Math.min(Math.max(0, h), 100) - 100, "%, 0, 0)"),
+                    transform: "translate3d(".concat(Math.min(Math.max(0, E), 100) - 100, "%, 0, 0)"),
                     ...t
                 }
             }) : (0, r.jsxs)(a.Fragment, {
                 children: [(0, r.jsx)("div", {
                     className: l(d.indeterminateBar1, d[s], {
-                        [d.animating]: E
+                        [d.animating]: h
                     }),
                     style: t
                 }), (0, r.jsx)("div", {
                     className: l(d.indeterminateBar2, d[s], {
-                        [d.animating]: E
+                        [d.animating]: h
                     }),
                     style: t
                 })]

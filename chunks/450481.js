@@ -16,19 +16,19 @@ function(e, t, n) {
         c = n("305961"),
         f = n("88093"),
         _ = n("18494"),
-        E = n("800762"),
-        h = n("404008");
+        h = n("800762"),
+        E = n("404008");
     let g = function(e, t) {
         let g = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             m = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             p = d.default.getChannel(e),
-            S = E.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
+            S = h.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
             v = null != p ? f.default.getCheck(p.guild_id) : null,
             T = null != t && (0, r.shouldShowMembershipVerificationGate)(t);
         if (!T) {
             if (null == v || v.canChat || (0, a.canLurkerListen)(p)) {
                 if (null != p && !S) {
-                    let e = (0, h.isChannelFull)(p, E.default, c.default);
+                    let e = (0, E.isChannelFull)(p, h.default, c.default);
                     if (e && p.isGuildStageVoice() && (0, o.getStageHasMedia)(p.id)) {
                         (0, i.openModalLazy)(async () => {
                             let {

@@ -28,14 +28,14 @@ function(e, t, n) {
                 className: r,
                 onDismiss: f,
                 backgroundColor: _ = c.RED,
-                icon: E = u.default,
-                iconClassName: h
+                icon: h = u.default,
+                iconClassName: E
             } = e;
             return (0, i.jsxs)("div", {
                 className: a(d.error, r, _),
                 ref: t,
-                children: [(0, i.jsx)(E, {
-                    className: a(d.icon, h)
+                children: [(0, i.jsx)(h, {
+                    className: a(d.icon, E)
                 }), (0, i.jsx)("div", {
                     role: n,
                     className: d.text,

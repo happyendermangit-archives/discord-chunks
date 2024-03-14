@@ -31,8 +31,8 @@ function(e, t, n) {
                 type: s = a.Card.Types.DANGER,
                 imageData: c,
                 button: _,
-                className: E,
-                iconClassName: h,
+                className: h,
+                iconClassName: E,
                 title: g,
                 body: m,
                 style: p,
@@ -49,14 +49,14 @@ function(e, t, n) {
                 shrink: 0,
                 children: (0, i.jsx)("img", {
                     alt: "",
-                    className: r(d.icon, h),
+                    className: r(d.icon, E),
                     ...n
                 })
             }), e === f.RIGHT && (v = o.default.Direction.HORIZONTAL_REVERSE)
         } else null != _ && (n = _);
         let T = !0;
         return s === a.Card.Types.PRIMARY && (T = !1), (0, i.jsx)(a.Card, {
-            className: r(d.formNotice, E),
+            className: r(d.formNotice, h),
             type: s,
             style: p,
             children: (0, i.jsxs)(o.default, {

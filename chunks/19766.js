@@ -23,8 +23,8 @@ function(e, t, n) {
         c = n("913144"),
         f = n("991170"),
         _ = n("373469"),
-        E = n("271938"),
-        h = n("42203"),
+        h = n("271938"),
+        E = n("42203"),
         g = n("525065"),
         m = n("26989"),
         p = n("305961"),
@@ -63,7 +63,7 @@ function(e, t, n) {
     }
 
     function R(e, t, n) {
-        let i = n === E.default.getId(),
+        let i = n === h.default.getId(),
             s = S.default.isMobileOnline(n),
             r = i ? v.default.getStatus() : S.default.getStatus(n, e),
             a = i ? v.default.getActivities() : S.default.getActivities(n, e),
@@ -82,7 +82,7 @@ function(e, t, n) {
     }
 
     function O(e) {
-        let t = h.default.getChannel(e);
+        let t = E.default.getChannel(e);
         return null == t ? A : null == t.memberListId ? function(e) {
             return f.default.canEveryone(I.Permissions.VIEW_CHANNEL, e) ? A : l.v3(a(e.permissionOverwrites).reduce((e, t) => {
                 let {
@@ -210,12 +210,12 @@ function(e, t, n) {
     }
 
     function U() {
-        let e = E.default.getId();
+        let e = h.default.getId();
         P.forEach(null, t => t.rebuildMember(e))
     }
     class w extends d.default.Store {
         initialize() {
-            this.waitFor(T.default, p.default, h.default, m.default, S.default, v.default, E.default, g.default, _.default), this.syncWith([v.default], U), this.syncWith([_.default], b)
+            this.waitFor(T.default, p.default, E.default, m.default, S.default, v.default, h.default, g.default, _.default), this.syncWith([v.default], U), this.syncWith([_.default], b)
         }
         getProps(e, t) {
             let n = P.get(e, O(t));

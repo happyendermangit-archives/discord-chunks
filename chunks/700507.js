@@ -37,8 +37,8 @@ function(e, t, n) {
         c = n("599110"),
         f = n("286235"),
         _ = n("893243"),
-        E = n("76393"),
-        h = n("780338"),
+        h = n("76393"),
+        E = n("780338"),
         g = n("49111"),
         m = n("782340");
 
@@ -50,7 +50,7 @@ function(e, t, n) {
         })
     }
     async function S() {
-        let e = E.default.getAwaitingRemoteSessionInfo(),
+        let e = h.default.getAwaitingRemoteSessionInfo(),
             t = null == e ? void 0 : e.nonce;
         a.default.dispatch({
             type: "REMOTE_SESSION_DISCONNECT"
@@ -230,6 +230,6 @@ function(e, t, n) {
     async function D(e, t, n) {
         await _.default.maybeShowPTTAlert(e), await S();
         let i = await A();
-        await R(e, t, n, i), (0, h.default)(n.id, e)
+        await R(e, t, n, i), (0, E.default)(n.id, e)
     }
 }

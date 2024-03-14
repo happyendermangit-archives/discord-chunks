@@ -17,7 +17,7 @@ function(e, t, n) {
         f = n("49111");
     let _ = new l.default("ChannelMessages");
 
-    function E(e, t) {
+    function h(e, t) {
         let n = e.get(t.id);
         return null == n || function(e, t) {
             var n, i;
@@ -26,9 +26,9 @@ function(e, t, n) {
             return !!(r > s) || !!(e.embeds.length < (null !== (i = null === (n = t.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== i ? i : 0)) || e.content !== t.content
         }(n, t) || e.cached ? (0, u.createMessageRecord)(t) : n
     }
-    class h {
+    class E {
         clone() {
-            let e = new h(this._isCacheBefore);
+            let e = new E(this._isCacheBefore);
             return e._map = {
                 ...this._map
             }, e._messages = [...this._messages], e._wasAtEdge = this._wasAtEdge, e
@@ -370,7 +370,7 @@ function(e, t, n) {
                         location: "2ecb25_1"
                     }, {
                         autoTrackExposure: !1
-                    }).enabled ? (0, u.createMessageRecord)(e) : E(this, e),
+                    }).enabled ? (0, u.createMessageRecord)(e) : h(this, e),
                     n = this.merge([t]);
                 return i ? n.truncateTop(f.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : this.length > f.MAX_LOADED_MESSAGES ? n.truncateBottom(f.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : n
             }
@@ -381,7 +381,7 @@ function(e, t, n) {
             return null != t ? this : this.mutate({
                 ready: !0,
                 cached: !0
-            }).merge([E(this, e)])
+            }).merge([h(this, e)])
         }
         loadStart(e) {
             var t, n, i, s;
@@ -396,7 +396,7 @@ function(e, t, n) {
             })
         }
         loadComplete(e) {
-            var t, n, i, o, l, d, c, h, g, m, p;
+            var t, n, i, o, l, d, c, E, g, m, p;
             let S = [...e.newMessages],
                 v = null !== (t = e.isBefore) && void 0 !== t && t,
                 T = null !== (n = e.isAfter) && void 0 !== n && n,
@@ -408,7 +408,7 @@ function(e, t, n) {
                     location: "2ecb25_2"
                 }, {
                     autoTrackExposure: !1
-                }).enabled ? e => (0, u.createMessageRecord)(e) : e => E(this, e)).value(),
+                }).enabled ? e => (0, u.createMessageRecord)(e) : e => h(this, e)).value(),
                 R = null;
             if ((v || T) && null == I && this.ready) R = this.merge(N, v, !0);
             else {
@@ -419,7 +419,7 @@ function(e, t, n) {
                 ready: !0,
                 loadingMore: !1,
                 jumpType: null !== (c = null == I ? void 0 : I.jumpType) && void 0 !== c ? c : a.JumpTypes.ANIMATED,
-                jumpFlash: null !== (h = null == I ? void 0 : I.flash) && void 0 !== h && h,
+                jumpFlash: null !== (E = null == I ? void 0 : I.flash) && void 0 !== E && E,
                 jumped: null != I,
                 jumpedToPresent: null !== (g = null == I ? void 0 : I.present) && void 0 !== g && g,
                 jumpTargetId: null !== (m = null == I ? void 0 : I.messageId) && void 0 !== m ? m : null,
@@ -435,7 +435,7 @@ function(e, t, n) {
         }
         addCachedMessages(e, t) {
             (0, o.requireSortedDescending)(e);
-            let n = e.map(e => E(this, e)).reverse();
+            let n = e.map(e => h(this, e)).reverse();
             return this._array.filter(e => !n.some(t => t.id === e.id)).forEach(e => c.insert(n, e, (e, t) => d.default.compare(e.id, t.id))), this.reset(n).mutate({
                 ready: !0,
                 cached: t,
@@ -443,7 +443,7 @@ function(e, t, n) {
             })
         }
         constructor(e) {
-            this._array = [], this._map = {}, this.channelId = e, this.ready = !1, this.jumpTargetId = null, this.jumpTargetOffset = 0, this.jumpSequenceId = 1, this.jumped = !1, this.jumpedToPresent = !1, this.jumpType = a.JumpTypes.ANIMATED, this.jumpFlash = !0, this.jumpReturnTargetId = null, this.hasMoreBefore = !0, this.hasMoreAfter = !1, this.loadingMore = !1, this.revealedMessageId = null, this._clearMessages(), this._before = new h(!0), this._after = new h(!1), this.cached = !1, this.hasFetched = !1, this.error = !1
+            this._array = [], this._map = {}, this.channelId = e, this.ready = !1, this.jumpTargetId = null, this.jumpTargetOffset = 0, this.jumpSequenceId = 1, this.jumped = !1, this.jumpedToPresent = !1, this.jumpType = a.JumpTypes.ANIMATED, this.jumpFlash = !0, this.jumpReturnTargetId = null, this.hasMoreBefore = !0, this.hasMoreAfter = !1, this.loadingMore = !1, this.revealedMessageId = null, this._clearMessages(), this._before = new E(!0), this._after = new E(!1), this.cached = !1, this.hasFetched = !1, this.error = !1
         }
     }
     g._channelMessages = {};

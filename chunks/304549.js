@@ -28,8 +28,8 @@ function(e, t, n) {
             });
         return (0, s.forwardRef)(function(n, _) {
             let {
-                onScroll: E,
-                dir: h = "ltr",
+                onScroll: h,
+                dir: E = "ltr",
                 sections: g,
                 columns: m,
                 getItemKey: p,
@@ -59,7 +59,7 @@ function(e, t, n) {
                 className: M,
                 specs: a,
                 orientation: "vertical",
-                dir: h
+                dir: E
             });
             let {
                 forceUpdateOnChunkChange: H,
@@ -83,7 +83,7 @@ function(e, t, n) {
                 paddingVertical: D,
                 paddingHorizontal: P,
                 getScrollerState: B,
-                dir: h
+                dir: E
             }), X = (0, s.useCallback)(function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
                 e > x.current.dirty && (x.current.dirty = e, 2 === e ? z() : H(1))
@@ -104,8 +104,8 @@ function(e, t, n) {
             let ee = (0, s.useCallback)(e => {
                 X(1), null == w.current ? G(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
                     w.current = null, G(!1)
-                }, 200), null != E && E(e)
-            }, [E, X]);
+                }, 200), null != h && h(e)
+            }, [h, X]);
             return (0, i.jsx)("div", {
                 ref: F,
                 onScroll: ee,

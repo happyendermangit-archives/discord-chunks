@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("222007"), n("702976");
     var i, s, r, a, o, l, u, d, c, f = n("627445"),
         _ = n.n(f),
-        E = n("981980"),
-        h = n("595275"),
+        h = n("981980"),
+        E = n("595275"),
         g = n("605250"),
         m = n("313915"),
         p = n("718517"),
@@ -75,7 +75,7 @@ function(e, t, n) {
                 height: e.max_resolution.height
             } : void 0
         }))) && void 0 !== t ? t : []
-    }(c = a || (a = {})).Connecting = "connecting", c.Connect = "connect", c.Disconnect = "disconnect", c.Resuming = "resuming", c.Ready = "ready", c.Speaking = "speaking", c.Video = "video", c.Ping = "ping", c.ClientDisconnect = "client-disconnect", c.Codecs = "codecs", c.MediaSessionId = "media-session-id", c.MediaSinkWants = "media-sink-wants", c.VoiceBackendVersion = "voice-backend-version", c.KeyframeInterval = "keyframe-interval", c.ChannelOptionsUpdateRtcLog = "channel-options-update-rtc-log", c.ChannelOptionsUpdateSecureFramesProtocol = "update-secure-frames-protocol", c.Flags = "flags", c.Platform = "platform", c.SDP = "sdp", c.Encryption = "encryption", c.SpeedTest = "speed-test", c.BandwidthEstimationExperiment = "bandwidth-estimation-experiment", c.SecureFramesInit = "secure-frames-init", c.SecureFramesPrepareTransition = "secure-frames-prepare-transition", c.SecureFramesExecuteTransition = "secure-frames-execute-transition", c.SecureFramesPrepareEpoch = "secure-frames-prepare-epoch", c.MLSExternalSenderPackage = "mls-external-sender-package", c.MLSProposals = "mls-proposals", c.MLSPrepareCommitTransition = "mls-prepare-commit-transition", c.MLSWelcome = "mls-welcome", o = class extends h.default {
+    }(c = a || (a = {})).Connecting = "connecting", c.Connect = "connect", c.Disconnect = "disconnect", c.Resuming = "resuming", c.Ready = "ready", c.Speaking = "speaking", c.Video = "video", c.Ping = "ping", c.ClientDisconnect = "client-disconnect", c.Codecs = "codecs", c.MediaSessionId = "media-session-id", c.MediaSinkWants = "media-sink-wants", c.VoiceBackendVersion = "voice-backend-version", c.KeyframeInterval = "keyframe-interval", c.ChannelOptionsUpdateRtcLog = "channel-options-update-rtc-log", c.ChannelOptionsUpdateSecureFramesProtocol = "update-secure-frames-protocol", c.Flags = "flags", c.Platform = "platform", c.SDP = "sdp", c.Encryption = "encryption", c.SpeedTest = "speed-test", c.BandwidthEstimationExperiment = "bandwidth-estimation-experiment", c.SecureFramesInit = "secure-frames-init", c.SecureFramesPrepareTransition = "secure-frames-prepare-transition", c.SecureFramesExecuteTransition = "secure-frames-execute-transition", c.SecureFramesPrepareEpoch = "secure-frames-prepare-epoch", c.MLSExternalSenderPackage = "mls-external-sender-package", c.MLSProposals = "mls-proposals", c.MLSPrepareCommitTransition = "mls-prepare-commit-transition", c.MLSWelcome = "mls-welcome", o = class extends E.default {
         createWebSocket() {
             this.logger.info("[CONNECT] ".concat(this.url)), null !== this.webSocket && (this.logger.error("Connect called with already existing websocket"), this.cleanupWebSocket(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
@@ -410,7 +410,7 @@ function(e, t, n) {
             this.heartbeatIntervalModifier = e
         }
         constructor(e) {
-            super(), this.logger = new g.default("RTCControlSocket"), this.backoff = new E.default(1e3, 5e3), this.serverVersion = 0, this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
+            super(), this.logger = new g.default("RTCControlSocket"), this.backoff = new h.default(1e3, 5e3), this.serverVersion = 0, this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
         }
     }
 }

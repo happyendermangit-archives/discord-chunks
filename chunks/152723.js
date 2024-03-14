@@ -15,16 +15,16 @@ function(e, t, n) {
         c = n("773336"),
         f = n("50885"),
         _ = n("49111"),
-        E = n("492249");
-    let h = new o.default("NativeDispatchUtils");
+        h = n("492249");
+    let E = new o.default("NativeDispatchUtils");
 
     function g() {
-        return null == s && h.warn("Tried getting Dispatch instance before instantiated"), s
+        return null == s && E.warn("Tried getting Dispatch instance before instantiated"), s
     }
 
     function m(e) {
         let t = JSON.parse(e);
-        return h.log("Native Dispatch error", t), new a.default(t)
+        return E.log("Native Dispatch error", t), new a.default(t)
     }
 
     function p(e, t) {
@@ -48,11 +48,11 @@ function(e, t, n) {
                 var i;
                 let c = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: "275147"
+                        build_number: "275166"
                     },
                     f = l.default.getCurrentUser();
                 null != f && (c.user_id = f.id, c.user_name = f.tag, null != f.email && (c.email = f.email));
-                let E = {
+                let h = {
                     user_token: t,
                     user_id: n,
                     install_paths: r.map(e => {
@@ -66,7 +66,7 @@ function(e, t, n) {
                     sentry: c,
                     platform: a
                 };
-                s = new e.Dispatch(JSON.stringify(E), e => {
+                s = new e.Dispatch(JSON.stringify(h), e => {
                     let t = JSON.parse(e);
                     o({
                         applications: t.applications,
@@ -213,7 +213,7 @@ function(e, t, n) {
                     r.default.dispatch({
                         type: "DISPATCH_APPLICATION_ERROR",
                         error: t
-                    }), null != t.code && t.code === E.DispatchErrorCodes.POST_INSTALL_CANCELLED ? i(t) : n();
+                    }), null != t.code && t.code === h.DispatchErrorCodes.POST_INSTALL_CANCELLED ? i(t) : n();
                     return
                 }
                 if ("" !== t) {

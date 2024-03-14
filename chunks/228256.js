@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         LayerClassName: function() {
-            return E
+            return h
         },
         LayerProvider: function() {
-            return h
+            return E
         },
         LayerContainer: function() {
             return g
@@ -31,8 +31,8 @@ function(e, t, n) {
         c = n("117362"),
         f = n("411093"),
         _ = n("855265");
-    let E = _.layerContainer;
-    class h extends s.Component {
+    let h = _.layerContainer;
+    class E extends s.Component {
         componentWillUnmount() {
             this.state.layerContainerElement = null
         }
@@ -64,7 +64,7 @@ function(e, t, n) {
             className: n
         } = e, [, r] = s.useContext(t);
         return (0, i.jsx)("div", {
-            className: a(E, n),
+            className: a(h, n),
             ref: r
         })
     };
@@ -89,7 +89,7 @@ function(e, t, n) {
     function S(e) {
         let t = s.createContext([null, () => {}]),
             n = {
-                LayerProvider: e => (0, i.jsx)(h, {
+                LayerProvider: e => (0, i.jsx)(E, {
                     layerContext: t,
                     ...e
                 }),

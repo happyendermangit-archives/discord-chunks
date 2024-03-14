@@ -128,20 +128,20 @@ function(e, t, n) {
                 overrideType: f
             } = e,
             _ = u.split("/"),
-            E = _[_.length - 1];
-        E = null !== (i = null === (n = E.split("?")) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== i ? i : "";
-        let h = r.find(e => e.reName.test(E));
-        if (null == h && null != c && (h = r.find(e => e.reName.test(c))), null != h && null != c) {
-            let e = h.name(d).split(".").pop(),
+            h = _[_.length - 1];
+        h = null !== (i = null === (n = h.split("?")) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== i ? i : "";
+        let E = r.find(e => e.reName.test(h));
+        if (null == E && null != c && (E = r.find(e => e.reName.test(c))), null != E && null != c) {
+            let e = E.name(d).split(".").pop(),
                 t = c.lastIndexOf(".");
             l = -1 !== t ? "".concat(c.substr(0, t), ".").concat(e) : "".concat(c, ".").concat(e)
-        } else l = null != h ? h.name(d) : null != c ? c : "unknown";
+        } else l = null != E ? E.name(d) : null != c ? c : "unknown";
         return {
             uri: u,
             filename: l,
-            type: null !== (s = null != f ? f : null == h ? void 0 : h.type) && void 0 !== s ? s : "unknown",
-            isVideo: -1 !== (null !== (a = null != f ? f : null == h ? void 0 : h.name(d)) && void 0 !== a ? a : "").indexOf("video"),
-            isImage: -1 !== (null !== (o = null != f ? f : null == h ? void 0 : h.name(d)) && void 0 !== o ? o : "").indexOf("image")
+            type: null !== (s = null != f ? f : null == E ? void 0 : E.type) && void 0 !== s ? s : "unknown",
+            isVideo: -1 !== (null !== (a = null != f ? f : null == E ? void 0 : E.name(d)) && void 0 !== a ? a : "").indexOf("video"),
+            isImage: -1 !== (null !== (o = null != f ? f : null == E ? void 0 : E.name(d)) && void 0 !== o ? o : "").indexOf("image")
         }
     }
 }

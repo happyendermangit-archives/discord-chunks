@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("718776"),
         f = n("145131"),
         _ = n("36694"),
-        E = n("49111"),
-        h = n("750692"),
+        h = n("49111"),
+        E = n("750692"),
         g = n("890957");
     let m = l.memoize(e => {
         let t = !1;
@@ -46,8 +46,8 @@ function(e, t, n) {
                     left: 4
                 },
                 children: (0, i.jsxs)(f.default, {
-                    className: a(h.selectableItem, s, {
-                        [h.selected]: t
+                    className: a(E.selectableItem, s, {
+                        [E.selected]: t
                     }),
                     onClick: this.handleClick,
                     onKeyUp: this.handleKeyUp,
@@ -60,7 +60,7 @@ function(e, t, n) {
                     tabIndex: 0,
                     children: [(0, i.jsx)(f.default, {
                         align: f.default.Align.CENTER,
-                        className: h.selectableItemLabel,
+                        className: E.selectableItemLabel,
                         shrink: 1,
                         children: r
                     }), t && (0, i.jsx)(f.default, {
@@ -79,7 +79,7 @@ function(e, t, n) {
             super(...e), this.state = {
                 color: m(this.props.color)
             }, this.handleKeyUp = e => {
-                if (e.which === E.KeyboardKeys.ENTER || e.which === E.KeyboardKeys.SPACE) {
+                if (e.which === h.KeyboardKeys.ENTER || e.which === h.KeyboardKeys.SPACE) {
                     let {
                         onClick: e,
                         ...t

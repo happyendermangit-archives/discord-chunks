@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return h
         }
     }), n("70102"), n("222007");
     var i = n("748820"),
@@ -185,11 +185,11 @@ function(e, t, n) {
                 o = a.default.getWidgetConfig(f.OverlayWidgets.GUILDS_TEXT);
             if (0 === n.length || null == s || null == r || null == o) return;
             let _ = l.default.windowSize(),
-                E = {
+                h = {
                     width: 0,
                     height: 0
                 },
-                h = {
+                E = {
                     top: 0,
                     left: 0,
                     right: 0,
@@ -218,10 +218,10 @@ function(e, t, n) {
                     } = e;
                     switch (t) {
                         case f.OverlayWidgets.TEXT:
-                            E = (0, u.getSizeFromLayoutSize)(s, _), (0, c.deleteWidget)(n);
+                            h = (0, u.getSizeFromLayoutSize)(s, _), (0, c.deleteWidget)(n);
                             break;
                         case f.OverlayWidgets.GUILDS:
-                            h = (0, u.getFullCoordsFromLayoutSize)(i, s, _), g = (0, u.getSizeFromLayoutSize)(s, _), (0, c.deleteWidget)(n);
+                            E = (0, u.getFullCoordsFromLayoutSize)(i, s, _), g = (0, u.getSizeFromLayoutSize)(s, _), (0, c.deleteWidget)(n);
                             break;
                         case f.OverlayWidgets.GUILDS_TEXT:
                             m = (0, u.getFullCoordsFromLayoutSize)(i, s, _), p = (0, u.getSizeFromLayoutSize)(s, _), (0, c.deleteWidget)(n)
@@ -238,20 +238,20 @@ function(e, t, n) {
                 }, _, {
                     x: 10,
                     y: 10
-                }), E = a.default.getWidgetDefaultSettings(f.OverlayWidgets.TEXT);
-                if (null == E) throw Error("OverlayActionCreators.setPinChat: No config for TEXT exists");
+                }), h = a.default.getWidgetDefaultSettings(f.OverlayWidgets.TEXT);
+                if (null == h) throw Error("OverlayActionCreators.setPinChat: No config for TEXT exists");
                 (0, c.createWidget)({
-                    ...E,
+                    ...h,
                     type: f.OverlayWidgets.TEXT,
                     id: (0, i.v4)(),
                     size: d,
                     anchor: l,
                     layoutId: t
                 });
-                let h = a.default.getWidgetDefaultSettings(f.OverlayWidgets.GUILDS);
-                if (null == h) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS exists");
+                let E = a.default.getWidgetDefaultSettings(f.OverlayWidgets.GUILDS);
+                if (null == E) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS exists");
                 (0, c.createWidget)({
-                    ...h,
+                    ...E,
                     type: f.OverlayWidgets.GUILDS,
                     id: (0, i.v4)(),
                     size: r,
@@ -259,9 +259,9 @@ function(e, t, n) {
                     layoutId: t
                 })
             } else {
-                let e = "auto" === E.width ? r.minSize.width : E.width;
+                let e = "auto" === h.width ? r.minSize.width : h.width;
                 e += s.minSize.width;
-                let [n, o] = (0, u.getLeftWidgetSpecs)(h, {
+                let [n, o] = (0, u.getLeftWidgetSpecs)(E, {
                     height: g.height,
                     width: e
                 }, _), l = a.default.getWidgetDefaultSettings(f.OverlayWidgets.GUILDS_TEXT);
@@ -315,5 +315,5 @@ function(e, t, n) {
             })
         }
     };
-    var E = _
+    var h = _
 }

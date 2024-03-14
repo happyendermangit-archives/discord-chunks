@@ -17,10 +17,10 @@ function(e, t, n) {
             return _
         },
         ApplicationStreamPresetValues: function() {
-            return E
+            return h
         },
         ApplicationStreamSettingRequirements: function() {
-            return h
+            return E
         },
         ApplicationStreamResolutionButtons: function() {
             return m
@@ -71,7 +71,7 @@ function(e, t, n) {
                 throw Error("Unknown frame rate: ".concat(e))
         }
     }(a = i || (i = {}))[a.RESOLUTION_480 = 480] = "RESOLUTION_480", a[a.RESOLUTION_720 = 720] = "RESOLUTION_720", a[a.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", a[a.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", a[a.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (o = s || (s = {}))[o.FPS_5 = 5] = "FPS_5", o[o.FPS_15 = 15] = "FPS_15", o[o.FPS_30 = 30] = "FPS_30", o[o.FPS_60 = 60] = "FPS_60", (l = r || (r = {}))[l.PRESET_VIDEO = 1] = "PRESET_VIDEO", l[l.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", l[l.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
-    let E = {
+    let h = {
             2: [{
                 resolution: 0,
                 fps: 15
@@ -94,7 +94,7 @@ function(e, t, n) {
             }],
             3: []
         },
-        h = [{
+        E = [{
             resolution: 0,
             fps: 60,
             quality: d.StreamQualities.HIGH_STREAMING_QUALITY

@@ -32,9 +32,9 @@ function(e, t, n) {
         f = a.invert(d.LinuxKeyToCode);
     f["223"] = "`", Object.freeze(f);
     let _ = Object.freeze(a.invert(d.MacosKeyToCode)),
-        E = a.invert(d.WindowsKeyToCode);
-    E["223"] = "`", Object.freeze(E);
-    let h = a.invert(null != c ? c : {});
+        h = a.invert(d.WindowsKeyToCode);
+    h["223"] = "`", Object.freeze(h);
+    let E = a.invert(null != c ? c : {});
 
     function g() {
         if ((0, u.isLinux)()) return d.KeyboardEnvs.LINUX;
@@ -51,11 +51,11 @@ function(e, t, n) {
             case d.KeyboardEnvs.MACOS:
                 return _["" + t];
             case d.KeyboardEnvs.WINDOWS:
-                return E["" + t];
+                return h["" + t];
             case d.KeyboardEnvs.BROWSER:
                 return s(t);
             default:
-                return h["" + t]
+                return E["" + t]
         }
     }
 
@@ -84,7 +84,7 @@ function(e, t, n) {
             default:
                 throw Error("Unrecognized DeviceType ".concat(n, "."))
         }
-    }!(0, u.isMac)() && (h["223"] = "`"), Object.freeze(h);
+    }!(0, u.isMac)() && (E["223"] = "`"), Object.freeze(E);
     let S = [
             ["META", "⌘"],
             ["RIGHT META", "RIGHT ⌘"],

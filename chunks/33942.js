@@ -32,8 +32,8 @@ function(e, t, n) {
         c = n.n(d),
         f = n("891189"),
         _ = n("316693"),
-        E = n("446674"),
-        h = n("271841"),
+        h = n("446674"),
+        E = n("271841"),
         g = n("551042"),
         m = n("670914"),
         p = n("242670"),
@@ -156,8 +156,8 @@ function(e, t, n) {
                 disableGuildSelect: ec = !1,
                 showLogout: ef = !1,
                 cancelCompletesFlow: e_ = !0,
-                isTrustedName: eE = !1,
-                isEmbeddedFlow: eh = !1,
+                isTrustedName: eh = !1,
+                isEmbeddedFlow: eE = !1,
                 inApp: eg = !1,
                 callback: em,
                 callbackWithoutPost: ep,
@@ -168,7 +168,7 @@ function(e, t, n) {
                 location: "auth web"
             }),
             eI = eT.userAppsTreatment === A.UserAppsTreatment.ALLOWED,
-            eC = (0, E.useStateFromStores)([M.default], () => M.default.hasLoadedExperiments),
+            eC = (0, h.useStateFromStores)([M.default], () => M.default.hasLoadedExperiments),
             [eA, ey] = a.useState(null),
             [eN, eR] = a.useState(null),
             [eO, eD] = a.useState(null),
@@ -209,8 +209,8 @@ function(e, t, n) {
                 let t = eY ? _.default.deserialize(null !== (e = null == eK ? void 0 : eK.permissions) && void 0 !== e ? e : 0) : eo;
                 return null != t ? t : b.default.NONE
             }, [null == eK ? void 0 : eK.permissions, eo, eY]),
-            eQ = (0, E.useStateFromStores)([T.default], () => T.default.getCurrentEmbeddedActivity()),
-            eZ = (0, E.useStateFromStoresObject)([v.default, T.default], () => {
+            eQ = (0, h.useStateFromStores)([T.default], () => T.default.getCurrentEmbeddedActivity()),
+            eZ = (0, h.useStateFromStoresObject)([v.default, T.default], () => {
                 let e;
                 let t = v.default.getIsEnabled();
                 if (null != eQ) {
@@ -382,7 +382,7 @@ function(e, t, n) {
                         requestedScopes: ez,
                         integrationType: eB,
                         errors: e8,
-                        isTrustedName: eE
+                        isTrustedName: eh
                     }), te ? (0, r.jsx)(j.default, {
                         error: (null !== (n = null !== (t = e8[Q.OAuth2Scopes.BOT]) && void 0 !== t ? t : e8[Q.OAuth2Scopes.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
                         selectedGuildId: eb,
@@ -419,7 +419,7 @@ function(e, t, n) {
                 scopes: ez,
                 redirectUri: null !== (o = eA.redirect_uri) && void 0 !== o ? o : null,
                 approximateGuildCount: void 0 !== e ? e : null,
-                isEmbeddedFlow: eh
+                isEmbeddedFlow: eE
             })
         }
         return e6 && null != eA && null != eF && (S = (0, r.jsx)(W.default, {
@@ -430,24 +430,24 @@ function(e, t, n) {
             accountScopes: eq,
             showLogout: ef || !1,
             location: ev,
-            isTrustedName: eE
+            isTrustedName: eh
         })), e9 && (C = (0, r.jsxs)("div", {
             className: $.footer,
-            children: [null != d ? (0, r.jsx)(h.Button, {
-                look: h.Button.Looks.LINK,
-                color: h.Button.Colors.PRIMARY,
+            children: [null != d ? (0, r.jsx)(E.Button, {
+                look: E.Button.Looks.LINK,
+                color: E.Button.Colors.PRIMARY,
                 onClick: () => eR(d),
                 children: J.default.Messages.BACK
-            }) : (0, r.jsx)(h.Button, {
-                look: h.Button.Looks.LINK,
-                color: h.Button.Colors.PRIMARY,
+            }) : (0, r.jsx)(E.Button, {
+                look: E.Button.Looks.LINK,
+                color: E.Button.Colors.PRIMARY,
                 onClick: () => e$(!1),
                 children: J.default.Messages.CANCEL
-            }), 0 !== eN ? null != g ? (0, r.jsx)(h.Button, {
+            }), 0 !== eN ? null != g ? (0, r.jsx)(E.Button, {
                 onClick: () => eR(g),
                 disabled: e3,
                 children: J.default.Messages.CONTINUE
-            }) : (0, r.jsx)(h.Button, {
+            }) : (0, r.jsx)(E.Button, {
                 onClick: () => e$(!0),
                 disabled: e3,
                 submitting: eP,

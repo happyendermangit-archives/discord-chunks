@@ -13,8 +13,8 @@ function(e, t, n) {
         c = n("342797");
     let f = new o.default("GatewaySocket"),
         _ = new Set(["INITIAL_GUILD", "READY"]),
-        E = new Set(["READY", "INITIAL_GUILD"]),
-        h = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
+        h = new Set(["READY", "INITIAL_GUILD"]),
+        E = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
     (r = i || (i = {}))[r.NotStarted = 0] = "NotStarted", r[r.Loading = 1] = "Loading", r[r.Loaded = 2] = "Loaded", s = class {
         hasStuffToDispatchNow() {
             return this.queue.length > 0 && 2 === this.queue[0].status
@@ -55,7 +55,7 @@ function(e, t, n) {
             return !1
         }
         scheduleFlush(e) {
-            !this.paused && (E.has(e) ? (null != this.dispatchTimeout && clearTimeout(this.dispatchTimeout), this.flush()) : null == this.dispatchTimeout && (this.dispatchTimeout = setTimeout(this.flush, this.nextDispatchTimeout)))
+            !this.paused && (h.has(e) ? (null != this.dispatchTimeout && clearTimeout(this.dispatchTimeout), this.flush()) : null == this.dispatchTimeout && (this.dispatchTimeout = setTimeout(this.flush, this.nextDispatchTimeout)))
         }
         dispatchMultiple(e) {
             if (0 === e.length) return;
@@ -64,7 +64,7 @@ function(e, t, n) {
             try {
                 this.socket.connectionState === d.default.RESUMING && a.default.Emitter.pause(150), a.default.Emitter.batched(() => {
                     e.forEach(e => {
-                        t = e.type, n = n || h.has(e.type), this.dispatchOne(e)
+                        t = e.type, n = n || E.has(e.type), this.dispatchOne(e)
                     }), u.default.flush()
                 }), n && a.default.Emitter.resume()
             } catch (e) {

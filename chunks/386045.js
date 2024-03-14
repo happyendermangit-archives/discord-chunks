@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("80028"),
         f = n("49111"),
         _ = n("686298");
-    let E = "default",
-        h = [],
+    let h = "default",
+        E = [],
         g = [],
         m = [],
         p = 0,
@@ -29,7 +29,7 @@ function(e, t, n) {
         A = {},
         y = {
             clipsEnabled: !1,
-            storageLocation: E,
+            storageLocation: h,
             clipsQuality: {
                 resolution: _.ApplicationStreamResolutions.RESOLUTION_1080,
                 frameRate: _.ApplicationStreamFPS.FPS_30
@@ -55,7 +55,7 @@ function(e, t, n) {
             }
         };
     async function R() {
-        if (N.clipsSettings.storageLocation !== E || null == r.default || null == r.default.remoteApp) return;
+        if (N.clipsSettings.storageLocation !== h || null == r.default || null == r.default.remoteApp) return;
         let e = await r.default.remoteApp.getPath("documents");
         N.clipsSettings.storageLocation = e, D.emitChange()
     }
@@ -86,7 +86,7 @@ function(e, t, n) {
         }
         getStreamClipAnimations(e) {
             var t;
-            return null !== (t = A[e]) && void 0 !== t ? t : h
+            return null !== (t = A[e]) && void 0 !== t ? t : E
         }
         hasAnyClipAnimations() {
             return Object.values(A).some(e => e.length > 0)

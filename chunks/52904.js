@@ -27,10 +27,10 @@ function(e, t, n) {
             return _
         },
         getAvatarSpecs: function() {
-            return E
+            return h
         },
         getAvatarSize: function() {
-            return h
+            return E
         }
     }), n("70102");
     let u = 1.5,
@@ -119,11 +119,11 @@ function(e, t, n) {
         })
     });
 
-    function E(e) {
+    function h(e) {
         return _[e]
     }
 
-    function h(e) {
+    function E(e) {
         if ("number" != typeof e) return _[e].size;
         return e
     }

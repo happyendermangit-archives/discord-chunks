@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return h
         }
     }), n("222007");
     var i = n("446674"),
@@ -68,7 +68,7 @@ function(e, t, n) {
         }
     }
     _.displayName = "ForumPostMessagesStore";
-    var E = new _(s.default, {
+    var h = new _(s.default, {
         CONNECTION_OPEN: function() {
             u = {}
         },

@@ -17,11 +17,11 @@ function(e, t, n) {
         f = n("49111");
     let _ = "LibraryApplicationStore";
 
-    function E() {
+    function h() {
         var e;
         return null !== (e = a.default.get(_)) && void 0 !== e ? e : {}
     }
-    let h = !1,
+    let E = !1,
         g = {},
         m = {},
         p = new Set,
@@ -31,14 +31,14 @@ function(e, t, n) {
 
     function I() {
         a.default.set(_, {
-            ...E(),
+            ...h(),
             activeLaunchOptionIds: v
         })
     }
 
     function C() {
         a.default.set(_, {
-            ...E(),
+            ...h(),
             activeLibraryApplicationBranchIds: S
         })
     }
@@ -123,7 +123,7 @@ function(e, t, n) {
             return v[(0, d.getComboId)(e, t)]
         }
         get fetched() {
-            return h
+            return E
         }
         get entitledBranchIds() {
             return s(R()).values().filter(e => (0, d.isUserEntitledToLibraryApplication)(e)).map(e => e.branchId).value()
@@ -133,20 +133,20 @@ function(e, t, n) {
         }
         whenInitialized(e) {
             this.addConditionalChangeListener(() => {
-                if (h) return setImmediate(e), !1
+                if (E) return setImmediate(e), !1
             })
         }
     }
     O.displayName = "LibraryApplicationStore";
     var D = new O(o.default, {
         LOGOUT: function() {
-            h = !1
+            E = !1
         },
         LIBRARY_FETCH_SUCCESS: function(e) {
             let {
                 libraryApplications: t
             } = e;
-            g = {}, A(t), h = !0
+            g = {}, A(t), E = !0
         },
         SKU_PURCHASE_SUCCESS: function(e) {
             let {

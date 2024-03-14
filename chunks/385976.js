@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("802493"),
         f = n("595525"),
         _ = n("629538"),
-        E = n("39616"),
-        h = n("828674"),
+        h = n("39616"),
+        E = n("828674"),
         g = n("153043"),
         m = n("256941"),
         p = n("505985"),
@@ -220,7 +220,7 @@ function(e, t, n) {
                     id: n,
                     names: i,
                     name: r
-                } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(E.default.getTermsForEmoji(r), e), u = null != n && s.some(U.default.getCaptionsForEmojiById({
+                } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(h.default.getTermsForEmoji(r), e), u = null != n && s.some(U.default.getCaptionsForEmojiById({
                     emojiId: n
                 }), e);
                 return a || o || l || u
@@ -342,7 +342,7 @@ function(e, t, n) {
             guildId: t,
             role: n
         } = e;
-        if (!(0, h.isSubscriptionRole)(n)) return !1;
+        if (!(0, E.isSubscriptionRole)(n)) return !1;
         {
             let e = z[t];
             er(t, null == e ? void 0 : e.emojis), es()
@@ -552,7 +552,7 @@ function(e, t, n) {
                 },
                 wasSaved: n
             } = e;
-            if (E.default.setEmojiLocale(S.default.locale), t !== F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+            if (h.default.setEmojiLocale(S.default.locale), t !== F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
             B.pendingUsages = []
         },
         GUILD_ROLE_CREATE: el,

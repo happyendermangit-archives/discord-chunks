@@ -40,8 +40,8 @@ function(e, t, n) {
         c = n("923959"),
         f = n("525065"),
         _ = n("26989"),
-        E = n("305961"),
-        h = n("42887"),
+        h = n("305961"),
+        E = n("42887"),
         g = n("957255"),
         m = n("824563"),
         p = n("945956"),
@@ -66,9 +66,9 @@ function(e, t, n) {
     function L(e) {
         var t;
         if (null == e) return null;
-        let n = E.default.getGuild(e);
+        let n = h.default.getGuild(e);
         if (null == n) return null;
-        let i = E.default.getRoles(n.id),
+        let i = h.default.getRoles(n.id),
             s = u.default.getId(),
             r = _.default.getMember(e, s),
             a = c.default.getChannels(e),
@@ -122,7 +122,7 @@ function(e, t, n) {
         if (null == e) return null;
         let t = d.default.getChannel(e);
         if (null == t) return null;
-        let n = h.default.isVideoEnabled(),
+        let n = E.default.isVideoEnabled(),
             i = p.default.getMediaSessionId();
         return {
             channel_id: t.id,
@@ -144,7 +144,7 @@ function(e, t, n) {
             c = "channel_id" in a ? a.channel_id : l ? v.default.getChannelId(u) : null,
             f = d.default.getChannel(c);
         let _ = (t = f, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (s = null !== (i = t.getGuildId()) && void 0 !== i ? i : n) && void 0 !== s ? s : null);
-        let E = {
+        let h = {
             ...a,
             ...L(_),
             ...null != u && null != c && (0, D.isStaticChannelRoute)(c) ? (r = 0, {
@@ -152,7 +152,7 @@ function(e, t, n) {
                 channel_hidden: !1
             }) : b(f)
         };
-        A.default.track(e, E, {
+        A.default.track(e, h, {
             flush: o
         })
     }
@@ -162,7 +162,7 @@ function(e, t, n) {
         if (null == t || null == t.guild_id) return {
             channel_id: e
         };
-        let n = E.default.getGuild(t.guild_id);
+        let n = h.default.getGuild(t.guild_id);
         if (null == n) return {
             channel_id: e
         };

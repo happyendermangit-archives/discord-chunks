@@ -25,8 +25,8 @@ function(e, t, n) {
         c = n("957255"),
         f = n("18494"),
         _ = n("751661"),
-        E = n("27822"),
-        h = n("923510"),
+        h = n("27822"),
+        E = n("923510"),
         g = n("30577");
 
     function m(e, t) {
@@ -47,10 +47,10 @@ function(e, t, n) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = f.default.getVoiceChannelId();
         if (!t && ! function(e, t) {
-                let n = c.default.can(h.JOIN_VOCAL_CHANNEL_PERMISSIONS, e);
+                let n = c.default.can(E.JOIN_VOCAL_CHANNEL_PERMISSIONS, e);
                 return !!n && (!_.shouldShowBlockedUsers(e.id) || t === e.id || (_.openStageBlockedUsersSheet(e, () => S(e, !0)), !1))
             }(e, n)) return !1;
-        if (E.default.initialize(), s.default.selectVoiceChannel(e.id), (n = f.default.getVoiceChannelId()) !== e.id) return !1;
+        if (h.default.initialize(), s.default.selectVoiceChannel(e.id), (n = f.default.getVoiceChannelId()) !== e.id) return !1;
         let i = l.default.getAllApplicationStreamsForChannel(e.id);
         return i.length > 0 && (0, r.watchStream)(i[0], {
             noFocus: !1

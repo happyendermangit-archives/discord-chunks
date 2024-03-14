@@ -20,7 +20,7 @@ function(e, t, n) {
         (0, u.playSound)("mention3")
     }
 
-    function E(e, t, n, i, s) {
+    function h(e, t, n, i, s) {
         if (t === n) return;
         let r = e[t],
             o = e[n];
@@ -32,17 +32,17 @@ function(e, t, n) {
             location: s
         })
     }
-    let h = {
+    let E = {
         isNotSupported: () => !1,
         enable: e => Promise.resolve(!0),
         trackToggleSelfMute(e) {}
     };
-    h = n("412905");
+    E = n("412905");
     let {
         enable: g,
         isNotSupported: m,
         trackToggleSelfMute: p
-    } = h;
+    } = E;
     var S = {
         enable: g,
         toggleSelfMute() {
@@ -161,7 +161,7 @@ function(e, t, n) {
                 if (null != t) {
                     let n = o.default.getInputDevices(),
                         i = o.default.getInputDeviceId();
-                    E(n, i, e, "Audio Input", t)
+                    h(n, i, e, "Audio Input", t)
                 }
                 i.default.dispatch({
                     type: "AUDIO_SET_INPUT_DEVICE",
@@ -174,7 +174,7 @@ function(e, t, n) {
                 if (null != t) {
                     let n = o.default.getOutputDevices(),
                         i = o.default.getOutputDeviceId();
-                    E(n, i, e, "Audio Output", t)
+                    h(n, i, e, "Audio Output", t)
                 }
                 i.default.dispatch({
                     type: "AUDIO_SET_OUTPUT_DEVICE",
@@ -187,7 +187,7 @@ function(e, t, n) {
                 if (null != t) {
                     let n = o.default.getVideoDevices(),
                         i = o.default.getVideoDeviceId();
-                    E(n, i, e, "Video", t)
+                    h(n, i, e, "Video", t)
                 }
                 i.default.dispatch({
                     type: "MEDIA_ENGINE_SET_VIDEO_DEVICE",

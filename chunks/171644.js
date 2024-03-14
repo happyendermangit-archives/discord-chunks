@@ -20,13 +20,13 @@ function(e, t, n) {
             return _
         },
         XBOX_HANDOFF_SEARCH_PARAMS: function() {
-            return E
+            return h
         },
         GameConsoleTypes: function() {
             return i
         },
         GAME_CONSOLE_SESSIONS: function() {
-            return h
+            return E
         },
         GameConsoleCommandResultErrorCodes: function() {
             return s
@@ -45,7 +45,7 @@ function(e, t, n) {
         c = [o.OAuth2Scopes.VOICE, o.OAuth2Scopes.DM_CHANNELS_READ, o.OAuth2Scopes.GUILDS, o.OAuth2Scopes.GUILDS_MEMBERS_READ, o.OAuth2Scopes.IDENTIFY, o.OAuth2Scopes.CONNECTIONS],
         f = "https://my.account.sony.com",
         _ = c,
-        E = e => {
+        h = e => {
             let {
                 guildId: t,
                 channelName: n,
@@ -65,7 +65,7 @@ function(e, t, n) {
             return null != o && (l.nonce = o), new URLSearchParams(l)
         };
     (r = i || (i = {})).PLAYSTATION = "playstation", r.XBOX = "xbox";
-    let h = new Set(["xbox", "playstation"]);
+    let E = new Set(["xbox", "playstation"]);
     o.ActivityGamePlatforms.XBOX, o.ActivityGamePlatforms.PS5, (a = s || (s = {}))[a.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED", a[a.CONSOLE_DEVICE_UNAVAILABLE = 270001] = "CONSOLE_DEVICE_UNAVAILABLE", a[a.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002] = "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS", a[a.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003] = "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED", a[a.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004] = "CONSOLE_DEVICE_INVALID_POWER_MODE", a[a.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005] = "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR", a[a.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006] = "CONSOLE_DEVICE_MAX_MEMBERS_REACHED", a[a.CONSOLE_DEVICE_BAD_COMMAND = 270007] = "CONSOLE_DEVICE_BAD_COMMAND";
     let g = new Set([27e4]),
         m = "console error alert"

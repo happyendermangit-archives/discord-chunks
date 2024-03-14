@@ -46,8 +46,8 @@ function(e, t, n) {
         c = n("957255"),
         f = n("27618"),
         _ = n("718517"),
-        E = n("387111"),
-        h = n("83995"),
+        h = n("387111"),
+        E = n("83995"),
         g = n("491096"),
         m = n("49111"),
         p = n("782340");
@@ -76,7 +76,7 @@ function(e, t, n) {
         let t = m.ChannelTypesSets.POLLS.has(e.type),
             {
                 enabled: n
-            } = h.CreateGuildPollsExperiment.useExperiment({
+            } = E.CreateGuildPollsExperiment.useExperiment({
                 guildId: e.guild_id,
                 location: "useCanPostPollsInChannel"
             }, {
@@ -85,7 +85,7 @@ function(e, t, n) {
             }),
             {
                 enabled: i
-            } = h.CreateGDMPollsExperiment.useExperiment({
+            } = E.CreateGDMPollsExperiment.useExperiment({
                 location: "useCanPostPollsInChannel"
             }, {
                 autoTrackExposure: !0,
@@ -161,7 +161,7 @@ function(e, t, n) {
                 animated: !1
             }),
             _ = null !== (r = null == c ? void 0 : null === (i = c.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== r ? r : 0,
-            h = function(e, t) {
+            E = function(e, t) {
                 let n = e.getChannelId(),
                     i = u.default.getReactions(n, e.id, {
                         id: t,
@@ -170,9 +170,9 @@ function(e, t, n) {
                     }, g.VOTES_TOOLTIP_MAX_USERS, o.ReactionTypes.VOTE),
                     r = l.default.getChannel(n),
                     a = null == r || r.isPrivate() ? null : r.getGuildId();
-                return s(i).reject(e => f.default.isBlocked(e.id)).take(g.VOTES_TOOLTIP_MAX_USERS).map(e => E.default.getName(a, null == r ? void 0 : r.id, e)).value()
+                return s(i).reject(e => f.default.isBlocked(e.id)).take(g.VOTES_TOOLTIP_MAX_USERS).map(e => h.default.getName(a, null == r ? void 0 : r.id, e)).value()
             }(a, n);
-        return 0 === h.length ? "" : function(e, t) {
+        return 0 === E.length ? "" : function(e, t) {
             let n = Math.max(0, t - e.length);
             if (1 === e.length) return n > 0 ? p.default.Messages.POLL_VOTES_TOOLTIP_1_N.format({
                 a: e[0],
@@ -199,6 +199,6 @@ function(e, t, n) {
                 b: e[1],
                 c: e[2]
             })
-        }(h, _)
+        }(E, _)
     }
 }

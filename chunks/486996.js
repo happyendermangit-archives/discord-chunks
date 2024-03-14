@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return h
         }
     });
     var i = n("446674"),
@@ -56,7 +56,7 @@ function(e, t, n) {
         }
     }
     _.displayName = "MessageReactionsStore";
-    var E = new _(s.default, {
+    var h = new _(s.default, {
         CONNECTION_OPEN: function() {
             d = {}
         },

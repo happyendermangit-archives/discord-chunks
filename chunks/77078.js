@@ -74,10 +74,10 @@ function(e, t, n) {
             return _.Checkbox
         },
         Collapsible: function() {
-            return E.Collapsible
+            return h.Collapsible
         },
         Clickable: function() {
-            return h.Clickable
+            return E.Clickable
         },
         ClickableContainer: function() {
             return g.ClickableContainer
@@ -428,10 +428,10 @@ function(e, t, n) {
             return e_.StackedProgress
         },
         BasePopout: function() {
-            return eE.BasePopout
+            return eh.BasePopout
         },
         LoadingPopout: function() {
-            return eh.LoadingPopout
+            return eE.LoadingPopout
         },
         Popout: function() {
             return eg.Popout
@@ -721,8 +721,8 @@ function(e, t, n) {
         c = n("271841"),
         f = n("659397"),
         _ = n("685698"),
-        E = n("262448"),
-        h = n("227645"),
+        h = n("262448"),
+        E = n("227645"),
         g = n("456189"),
         m = n("960486"),
         p = n("923237"),
@@ -775,8 +775,8 @@ function(e, t, n) {
         ec = n("184456"),
         ef = n("852566"),
         e_ = n("443083"),
-        eE = n("533785"),
-        eh = n("678904"),
+        eh = n("533785"),
+        eE = n("678904"),
         eg = n("442761"),
         em = n("276335"),
         ep = n("694982"),

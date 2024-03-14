@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("686470"),
         f = n("645672"),
         _ = n("718517"),
-        E = n("964889"),
-        h = n("773336"),
+        h = n("964889"),
+        E = n("773336"),
         g = n("602043"),
         m = n("352326"),
         p = n("98328"),
@@ -81,33 +81,33 @@ function(e, t, n) {
             this.waitFor(d.default)
         }
         getState(e, t) {
-            let n = (0, E.getComboId)(e, t);
+            let n = (0, h.getComboId)(e, t);
             return T[n]
         }
         isUpToDate(e, t) {
-            let n = T[(0, E.getComboId)(e, t)];
+            let n = T[(0, h.getComboId)(e, t)];
             return null != n && n.type === S.LocalDispatchApplicationStates.UP_TO_DATE
         }
         shouldPatch(e, t) {
-            let n = T[(0, E.getComboId)(e, t)];
+            let n = T[(0, h.getComboId)(e, t)];
             return null != n && !0 === n.shouldPatch
         }
         isInstalled(e, t) {
-            let n = T[(0, E.getComboId)(e, t)];
+            let n = T[(0, h.getComboId)(e, t)];
             return null != n ? n.type !== S.LocalDispatchApplicationStates.UNINSTALLING : p.default.shouldBeInstalled(e, t)
         }
         supportsCloudSync(e, t) {
             null == t && (t = e);
-            let n = T[(0, E.getComboId)(e, t)];
+            let n = T[(0, h.getComboId)(e, t)];
             return null != n && null != n.storage && !!n.storage.sync
         }
         isLaunchable(e, t) {
             if (!(0, g.isSupportedPlatform)()) return !1;
-            let n = T[(0, E.getComboId)(e, t)];
+            let n = T[(0, h.getComboId)(e, t)];
             return null != n && n.type === S.LocalDispatchApplicationStates.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length
         }
         getDefaultLaunchOption(e, t) {
-            let n = T[(0, E.getComboId)(e, t)];
+            let n = T[(0, h.getComboId)(e, t)];
             if (null == n) return null;
             let {
                 defaultLaunchOptionId: i,
@@ -116,7 +116,7 @@ function(e, t, n) {
             return null == i || null == s ? null : s[i]
         }
         getLaunchOptions(e, t) {
-            let n = T[(0, E.getComboId)(e, t)];
+            let n = T[(0, h.getComboId)(e, t)];
             return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions)
         }
         getHistoricalTotalBytesRead() {
@@ -150,7 +150,7 @@ function(e, t, n) {
                 a = !1;
             for (let e in i)
                 for (let t in i[e]) {
-                    let d = (0, E.getComboId)(e, t);
+                    let d = (0, h.getComboId)(e, t);
                     if (n[d] = function(e) {
                             let {
                                 build_id: t,
@@ -163,7 +163,7 @@ function(e, t, n) {
                                 launch_options: d,
                                 storage: c,
                                 install_path: _,
-                                installed_size: E,
+                                installed_size: h,
                                 repairing: g
                             } = e, {
                                 should_patch: m
@@ -190,7 +190,7 @@ function(e, t, n) {
                                                         name: s,
                                                         working_dir: r
                                                     } = n, a = l.default.fileManager.join(e, i);
-                                                    (0, h.isMac)() && !a.startsWith(I) && (a = "".concat(I).concat(a)), t = null != r ? l.default.fileManager.join(e, r) : l.default.fileManager.dirname(a), v[s] = {
+                                                    (0, E.isMac)() && !a.startsWith(I) && (a = "".concat(I).concat(a)), t = null != r ? l.default.fileManager.join(e, r) : l.default.fileManager.dirname(a), v[s] = {
                                                         ...n,
                                                         id: s,
                                                         fullExecutablePath: a,
@@ -224,7 +224,7 @@ function(e, t, n) {
                                         targetBuildId: n,
                                         targetManifestIds: s,
                                         installPath: _,
-                                        installedSize: E,
+                                        installedSize: h,
                                         launchOptions: v,
                                         defaultLaunchOptionId: T,
                                         shouldPatch: m,
@@ -239,7 +239,7 @@ function(e, t, n) {
                                         network_progress: d,
                                         reader_progress: c,
                                         progress: f,
-                                        total: h,
+                                        total: E,
                                         paused: p
                                     } = e.state, v = l.type;
                                     return {
@@ -252,12 +252,12 @@ function(e, t, n) {
                                         targetBuildId: n,
                                         targetManifestIds: s,
                                         installPath: _,
-                                        installedSize: E,
+                                        installedSize: h,
                                         diskProgress: u,
                                         networkProgress: d,
                                         readerProgress: c,
                                         progress: f,
-                                        total: h,
+                                        total: E,
                                         paused: p,
                                         shouldPatch: m
                                     }
@@ -278,7 +278,7 @@ function(e, t, n) {
                                 case S.DispatchApplicationStages.VERIFYING:
                                 case S.DispatchApplicationStages.REPAIRING:
                                 case S.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
-                                    u.default.setProgress("dispatch_application_progress", (0, E.calculateProgressPercentage)(e.progress, e.total) / 100), a = !0
+                                    u.default.setProgress("dispatch_application_progress", (0, h.calculateProgressPercentage)(e.progress, e.total) / 100), a = !0
                             }
                         }
                     }

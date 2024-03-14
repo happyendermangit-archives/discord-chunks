@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("373469"),
         f = n("271938"),
         _ = n("42203"),
-        E = n("305961"),
-        h = n("957255"),
+        h = n("305961"),
+        E = n("957255"),
         g = n("27618"),
         m = n("280168"),
         p = n("697218"),
@@ -134,7 +134,7 @@ function(e, t, n) {
     let H = [];
     class Y extends o.default.Store {
         initialize() {
-            this.waitFor(f.default, p.default, _.default, m.default, S.default, h.default, v.default, E.default, I.default, g.default, C.default, c.default)
+            this.waitFor(f.default, p.default, _.default, m.default, S.default, E.default, v.default, h.default, I.default, g.default, C.default, c.default)
         }
         getParticipantsVersion(e) {
             var t, n;

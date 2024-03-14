@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("117362"),
         f = n("449008"),
         _ = n("341542"),
-        E = n("26989"),
-        h = n("305961"),
+        h = n("26989"),
+        E = n("305961"),
         g = n("455079"),
         m = n("282109"),
         p = n("697218");
@@ -50,10 +50,10 @@ function(e, t, n) {
                         let e = (0, l.createFolderNode)(t);
                         for (let n of (S.addNode(e), t.guildIds)) S.addNode((0, l.createGuildNode)(n), e)
                     }
-                } for (let e of S.allNodes()) e.type === l.GuildsNodeType.GUILD && (u.default.isLurking(e.id) || E.default.isCurrentUserGuest(e.id) || null == h.default.getGuild(e.id) && !_.default.isUnavailable(e.id)) && S.removeNode(e);
+                } for (let e of S.allNodes()) e.type === l.GuildsNodeType.GUILD && (u.default.isLurking(e.id) || h.default.isCurrentUserGuest(e.id) || null == E.default.getGuild(e.id) && !_.default.isUnavailable(e.id)) && S.removeNode(e);
         for (let e of Object.values(S.nodes)) e.type === l.GuildsNodeType.FOLDER && 0 === e.children.length && S.removeNode(e);
         return ! function(e, t) {
-            for (let n in h.default.getGuilds()) e(n) && !u.default.isLurking(n) && !E.default.isCurrentUserGuest(n) && t(n)
+            for (let n in E.default.getGuilds()) e(n) && !u.default.isLurking(n) && !h.default.isCurrentUserGuest(n) && t(n)
         }(e => null == S.nodes[e], e => S.addNode((0, l.createGuildNode)(e), S.root, !1)), !r(n, S)
     }
 
@@ -115,8 +115,8 @@ function(e, t, n) {
             d = new Set(u),
             c = new Set(n),
             _ = new Set([...u].filter(e => !c.has(e))),
-            E = n.filter(e => !d.has(e));
-        E.forEach(e => {
+            h = n.filter(e => !d.has(e));
+        h.forEach(e => {
             let t = S.getNode(e);
             null != t && S.moveInto(t, a, !0)
         }), _.forEach(e => {
@@ -142,7 +142,7 @@ function(e, t, n) {
             guildId: t,
             joinedAt: n,
             user: i
-        } = e, s = p.default.getCurrentUser(), r = h.default.getGuild(t);
+        } = e, s = p.default.getCurrentUser(), r = E.default.getGuild(t);
         if ((null == s ? void 0 : s.id) !== i.id || null == r) return !1;
         let a = "string" == typeof n ? new Date(n) : n;
         return a !== r.joinedAt && null != a && I()
@@ -151,7 +151,7 @@ function(e, t, n) {
         P = (0, c.cachedFunction)((e, t) => e.getRoots().map(v));
     class L extends g.default {
         initialize() {
-            this.waitFor(h.default, m.default, d.default, _.default, u.default)
+            this.waitFor(E.default, m.default, d.default, _.default, u.default)
         }
         getGuildsTree() {
             return S

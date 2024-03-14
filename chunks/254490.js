@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         transformNativeFile: function() {
-            return E
+            return h
         },
         makeFile: function() {
-            return h
+            return E
         },
         classifyFile: function() {
             return m
@@ -41,11 +41,11 @@ function(e, t, n) {
         f = n("49111"),
         _ = n("646718");
 
-    function E(e, t) {
-        return e instanceof File ? e : h(e.data, e.filename, t)
+    function h(e, t) {
+        return e instanceof File ? e : E(e.data, e.filename, t)
     }
 
-    function h(e, t, i) {
+    function E(e, t, i) {
         let s = n("637139");
         if (null == t && (t = "unknown", "type" in e)) {
             let n = s.extension(e.type);

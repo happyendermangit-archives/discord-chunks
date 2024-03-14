@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("823411"),
         f = n("640583"),
         _ = n("539405"),
-        E = n("987317"),
-        h = n("49671"),
+        h = n("987317"),
+        E = n("49671"),
         g = n("6193"),
         m = n("121338"),
         p = n("605250"),
@@ -80,7 +80,7 @@ function(e, t, n) {
             if (null == t ? w.delete(e) : w.set(e, t), null == t || "CRASHED" === t) {
                 var s;
                 B = null;
-                let e = null === h.default || void 0 === h.default ? void 0 : null === (s = h.default.fileManager) || void 0 === s ? void 0 : s.uploadDiscordHookCrashes;
+                let e = null === E.default || void 0 === E.default ? void 0 : null === (s = E.default.fileManager) || void 0 === s ? void 0 : s.uploadDiscordHookCrashes;
                 null != e && e().then(e => {
                     if (Array.isArray(e) && 0 !== e.length)
                         for (let l of (q.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
@@ -108,11 +108,11 @@ function(e, t, n) {
             if (w.size > 0) {
                 X = "reconcile.getOverlayURL";
                 let t = await es();
-                X = "reconcile.createHostProcess", e.createHostProcess(t, eE, ef)
+                X = "reconcile.createHostProcess", e.createHostProcess(t, eh, ef)
             } else X = "reconcile.destroyHostProcess", e.destroyHostProcess()
         } else if (F) {
             let t = await es();
-            e.createHostProcess(t, eE, ef)
+            e.createHostProcess(t, eh, ef)
         } else e.destroyHostProcess()
     }
     async function ee(e) {
@@ -224,16 +224,16 @@ function(e, t, n) {
         var t, n, i, s, r, a, o;
         try {
             let t = await es() + "&oop=true&pid=".concat(e);
-            await (null === h.default || void 0 === h.default ? void 0 : null === (s = h.default.globalOverlay) || void 0 === s ? void 0 : null === (i = s.openWindow) || void 0 === i ? void 0 : i.call(s, t))
+            await (null === E.default || void 0 === E.default ? void 0 : null === (s = E.default.globalOverlay) || void 0 === s ? void 0 : null === (i = s.openWindow) || void 0 === i ? void 0 : i.call(s, t))
         } catch (e) {
-            q.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === h.default || void 0 === h.default || null === (a = h.default.window) || void 0 === a || a.close(null === h.default || void 0 === h.default ? void 0 : null === (r = h.default.globalOverlay) || void 0 === r ? void 0 : r.WINDOW_KEY)
+            q.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === E.default || void 0 === E.default || null === (a = E.default.window) || void 0 === a || a.close(null === E.default || void 0 === E.default ? void 0 : null === (r = E.default.globalOverlay) || void 0 === r ? void 0 : r.WINDOW_KEY)
         }
-        return H = e, null !== (o = await (null === h.default || void 0 === h.default ? void 0 : null === (n = h.default.window) || void 0 === n ? void 0 : n.getNativeHandle(null === h.default || void 0 === h.default ? void 0 : null === (t = h.default.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== o ? o : ""
+        return H = e, null !== (o = await (null === E.default || void 0 === E.default ? void 0 : null === (n = E.default.window) || void 0 === n ? void 0 : n.getNativeHandle(null === E.default || void 0 === E.default ? void 0 : null === (t = E.default.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== o ? o : ""
     }
 
     function eo() {
         var e, t;
-        null === h.default || void 0 === h.default || null === (t = h.default.window) || void 0 === t || t.close(null === h.default || void 0 === h.default ? void 0 : null === (e = h.default.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), H = null
+        null === E.default || void 0 === E.default || null === (t = E.default.window) || void 0 === t || t.close(null === E.default || void 0 === E.default ? void 0 : null === (e = E.default.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), H = null
     }
 
     function el(e) {
@@ -288,7 +288,7 @@ function(e, t, n) {
         _.default.successfullyShown(e)
     }
 
-    function eE(e, t, n) {
+    function eh(e, t, n) {
         var i;
         let s = null === (i = S.default.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
             r = A.default.getGameByName(s),
@@ -304,7 +304,7 @@ function(e, t, n) {
         }), R.default.track(M.AnalyticEvents.OVERLAY_HOOK_RESULT, a), q.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), a), t ? J(e, "CONNECTED", "CONNECTING") : J(e, "CONNECT_FAILED", "CONNECTING")
     }
 
-    function eh() {
+    function eE() {
         let e = C.default.getToken(),
             t = C.default.getId();
         null != e && m.send({
@@ -418,7 +418,7 @@ function(e, t, n) {
     }
     class ey extends l.default.Store {
         initialize() {
-            !(!b.OVERLAY_SUPPORTED || __OVERLAY__) && (G.add(b.OverlayMethod.Hook), this.waitFor(S.default, C.default), m.setReceiveCommandHandler(eA, eC), C.default.addChangeListener(eh), ec(v.OverlayStoredSettings.enabled), u.default.addInterceptor(eT))
+            !(!b.OVERLAY_SUPPORTED || __OVERLAY__) && (G.add(b.OverlayMethod.Hook), this.waitFor(S.default, C.default), m.setReceiveCommandHandler(eA, eC), C.default.addChangeListener(eE), ec(v.OverlayStoredSettings.enabled), u.default.addInterceptor(eT))
         }
         isInputLocked(e) {
             return !j.has(e)
@@ -522,7 +522,7 @@ function(e, t, n) {
             } = e, n = crypto.getRandomValues(new Uint8Array(8));
             Y = btoa(String.fromCharCode(...n));
             let s = new URLSearchParams;
-            s.append("build_id", "e66c321728fafe83cb121e36071b69cc5ccb14c7"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
+            s.append("build_id", "5f244e6c512400db0ecfbb7eecdca8711d4290b8"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
         },
         OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
             let {
@@ -530,7 +530,7 @@ function(e, t, n) {
                 ring: n
             } = e;
             setImmediate(() => {
-                E.default.selectPrivateChannel(t), d.default.call(t, !1, !!n)
+                h.default.selectPrivateChannel(t), d.default.call(t, !1, !!n)
             })
         },
         OVERLAY_JOIN_GAME: function(e) {

@@ -26,7 +26,7 @@ function(e, t, n) {
             items: n,
             focusPath: o,
             focusIndex: -1
-        }), E = i.useMemo(() => (0, a.throttle)(_, 30), [_]);
+        }), h = i.useMemo(() => (0, a.throttle)(_, 30), [_]);
         i.useEffect(() => {
             _({
                 type: s.MenuActionType.UPDATE_ITEMS,
@@ -34,7 +34,7 @@ function(e, t, n) {
             })
         }, [n]);
         let {
-            focusPath: h
+            focusPath: E
         } = f, [g, m] = i.useState(!1), [p, S] = i.useState(!1), [{
             onItemFocusMemoizer: v,
             onItemMouseEnterMemoizer: T
@@ -74,7 +74,7 @@ function(e, t, n) {
                 case r.ActionType.NAVIGATE_DOWN:
                 case r.ActionType.NAVIGATE_IN:
                 case r.ActionType.NAVIGATE_OUT:
-                    e.preventDefault(), e.stopPropagation(), S(!0), E({
+                    e.preventDefault(), e.stopPropagation(), S(!0), h({
                         type: n
                     });
                     return;
@@ -82,17 +82,17 @@ function(e, t, n) {
                     var i, s, o, u, f;
                     if (e.repeat) return;
                     if (e.target.tabIndex >= 0) return;
-                    if (e.preventDefault(), e.stopPropagation(), S(!1), E({
+                    if (e.preventDefault(), e.stopPropagation(), S(!1), h({
                             type: n
                         }), null != l) {
-                        l(h);
+                        l(E);
                         return
                     }
                     let _ = null !== (i = e.target.ownerDocument) && void 0 !== i ? i : document;
-                    let g = (u = _, f = (s = t, null != (o = h) ? "".concat((0, a.makeId)(s, o.join("--"))) : s), u.getElementById(f));
+                    let g = (u = _, f = (s = t, null != (o = E) ? "".concat((0, a.makeId)(s, o.join("--"))) : s), u.getElementById(f));
                     null == g || g.click()
             }
-        }, [E, t, h, l, d]), C = i.useCallback(() => {
+        }, [h, t, E, l, d]), C = i.useCallback(() => {
             !g && m(!0)
         }, [g]), A = i.useCallback(e => {
             e.target !== e.currentTarget && !e.currentTarget.contains(e.relatedTarget) && g && m(!1)
@@ -101,7 +101,7 @@ function(e, t, n) {
                 type: s.MenuActionType.SET_FOCUS_PATH,
                 path: []
             }), m(!1)
-        }, []), N = i.useCallback(e => e.every((e, t) => h[t] === e), [h]), R = i.useCallback(() => ({
+        }, []), N = i.useCallback(e => e.every((e, t) => E[t] === e), [E]), R = i.useCallback(() => ({
             role: "menu",
             id: t,
             tabIndex: -1,
@@ -109,19 +109,19 @@ function(e, t, n) {
             onFocus: C,
             onBlur: A,
             onMouseLeave: y,
-            "aria-activedescendant": h.length > 0 ? (0, a.makeId)(t, h.join("--")) : void 0
-        }), [t, I, C, A, y, h]), O = i.useCallback(e => {
+            "aria-activedescendant": E.length > 0 ? (0, a.makeId)(t, E.join("--")) : void 0
+        }), [t, I, C, A, y, E]), O = i.useCallback(e => {
             let {
                 path: n
             } = e;
             return {
                 role: "menu",
                 tabIndex: -1,
-                "aria-activedescendant": N(n) ? (0, a.makeId)(t, h.join("--")) : void 0,
+                "aria-activedescendant": N(n) ? (0, a.makeId)(t, E.join("--")) : void 0,
                 focusIndex: f.focusIndex,
                 isUsingKeyboardNavigation: p
             }
-        }, [t, h, N, f.focusIndex, p]), D = i.useCallback(e => {
+        }, [t, E, N, f.focusIndex, p]), D = i.useCallback(e => {
             let {
                 path: n,
                 hasSubmenu: i = !1,
@@ -139,13 +139,13 @@ function(e, t, n) {
                 onMouseEnter: T.get(r)
             }
         }, [t, N, v, T]), P = i.useMemo(() => ({
-            dispatch: E,
+            dispatch: h,
             getContainerProps: R,
             getSubmenuProps: O,
             getItemProps: D,
             isFocused: N,
             isUsingKeyboardNavigation: p
-        }), [E, R, O, D, N, p]);
+        }), [h, R, O, D, N, p]);
         return P
     }
 }

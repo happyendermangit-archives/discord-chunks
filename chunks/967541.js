@@ -21,14 +21,14 @@ function(e, t, n) {
             rowHeight: c,
             onScroll: f,
             listClassName: _
-        } = e, E = s.useRef(null), h = s.useRef(null), g = s.useRef(null), m = s.useRef(null), {
+        } = e, h = s.useRef(null), E = s.useRef(null), g = s.useRef(null), m = s.useRef(null), {
             isUsingKeyboardNavigation: p,
             focusIndex: S,
             ...v
         } = u;
         s.useLayoutEffect(() => {
             var e;
-            n && ((0, a.ensureItemVisible)(E), null === (e = g.current) || void 0 === e || e.focus())
+            n && ((0, a.ensureItemVisible)(h), null === (e = g.current) || void 0 === e || e.focus())
         }, [n]), s.useEffect(() => {
             if (n && S >= 0 && p) {
                 var e;
@@ -37,12 +37,12 @@ function(e, t, n) {
         }, [n, p, S]);
         let T = s.useCallback(e => d[e], [d]);
         return (0, i.jsxs)("div", {
-            ref: E,
+            ref: h,
             className: l.submenuContainer,
             children: [(0, i.jsx)("div", {
-                ref: h
+                ref: E
             }), t, n ? (0, i.jsx)(r.ReferencePositionLayer, {
-                reference: h,
+                reference: E,
                 autoInvert: !0,
                 nudgeAlignIntoViewport: !0,
                 fixed: !0,

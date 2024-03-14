@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         loadOnboardingPrompts: function() {
-            return h
+            return E
         },
         fetchOnboardingPrompts: function() {
             return g
@@ -25,9 +25,9 @@ function(e, t, n) {
         c = n("863636"),
         f = n("653138"),
         _ = n("49111"),
-        E = n("657944");
+        h = n("657944");
 
-    function h(e) {
+    function E(e) {
         u.default.track(_.AnalyticEvents.GUILD_ONBOARDING_LOADED, {
             ...(0, r.collectGuildAnalyticsMetadata)(e),
             has_new_prompts: !1,
@@ -58,14 +58,14 @@ function(e, t, n) {
     async function m(e) {
         var t, n;
         let i = a.default.getId(),
-            s = (0, d.hasFlag)(null !== (n = null === (t = o.default.getMember(e, i)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, E.GuildMemberFlags.COMPLETED_ONBOARDING),
+            s = (0, d.hasFlag)(null !== (n = null === (t = o.default.getMember(e, i)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, h.GuildMemberFlags.COMPLETED_ONBOARDING),
             r = l.default.getGuild(e);
         if (null == r || !r.hasFeature(_.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
         let u = c.default.shouldFetchPrompts(e),
             f = c.default.getOnboardingPrompts(e);
         if (!u && f.length > 0) return f.every(e => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!s && p(e), Promise.resolve());
-        let h = await g(e);
-        return Array.isArray(h) && h.every(e => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!s && p(e), h)
+        let E = await g(e);
+        return Array.isArray(E) && E.every(e => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!s && p(e), E)
     }
 
     function p(e) {

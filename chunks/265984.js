@@ -19,14 +19,14 @@ function(e, t, n) {
         c = n("685665"),
         f = n("542489"),
         _ = n("561744");
-    let E = {
+    let h = {
         mass: 1,
         tension: 300,
         friction: 28,
         clamp: !0
     };
 
-    function h(e, t) {
+    function E(e, t) {
         return n => {
             if (0 === n) return "auto";
             let i = "forwards" === t.current,
@@ -81,7 +81,7 @@ function(e, t, n) {
             width: P = 0,
             height: L = 0
         } = (0, u.default)(I), M = {
-            ...E,
+            ...h,
             ...S.springConfig,
             ...y.enabled ? {
                 clamp: !0
@@ -144,8 +144,8 @@ function(e, t, n) {
                         ...y.enabled ? {
                             opacity: e.value.to(e => 1 - Math.abs(e))
                         } : {
-                            left: e.value.to(h("left", w)),
-                            right: e.value.to(h("right", w))
+                            left: e.value.to(E("left", w)),
+                            right: e.value.to(E("right", w))
                         }
                     },
                     children: v[t].children

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     }), n("222007");
     var i = n("446674"),
@@ -16,7 +16,7 @@ function(e, t, n) {
         c = {},
         f = new Set,
         _ = Object.freeze({});
-    class E extends i.default.DeviceSettingsStore {
+    class h extends i.default.DeviceSettingsStore {
         initialize(e) {
             null != e && (c = e.lastSelectedDeviceByPlatform), this.waitFor(r.default, a.default)
         }
@@ -49,8 +49,8 @@ function(e, t, n) {
             return l
         }
     }
-    E.displayName = "GameConsoleStore", E.persistKey = "GameConsoleStore";
-    var h = new E(s.default, {
+    h.displayName = "GameConsoleStore", h.persistKey = "GameConsoleStore";
+    var E = new h(s.default, {
         REMOTE_SESSION_CONNECT: function(e) {
             let {
                 sessionId: t

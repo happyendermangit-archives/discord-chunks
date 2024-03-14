@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("599417"),
         f = n("333805"),
         _ = n("427953"),
-        E = n("644223"),
-        h = n("523086"),
+        h = n("644223"),
+        E = n("523086"),
         g = n("263901"),
         m = n("677315"),
         p = n("233322"),
@@ -110,11 +110,11 @@ function(e, t, n) {
                         ownerId: l,
                         guildId: t,
                         channelId: o
-                    }), u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, O.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, E.default)(o, d, r, null == s ? void 0 : s.intent))
+                    }), u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, O.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, h.default)(o, d, r, null == s ? void 0 : s.intent))
                 };
                 (0, S.shouldShowMembershipVerificationGate)(t, [w.default, k.default, F.default, U.default]) ? (0, p.openMemberVerificationModal)(t, a) : a()
             })
-        }) : (0, _.isActivityInTextSupportedForChannelType)(a) && u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, O.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, E.default)(o, d, r, null == s ? void 0 : s.intent)), (function(e, t) {
+        }) : (0, _.isActivityInTextSupportedForChannelType)(a) && u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, O.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, h.default)(o, d, r, null == s ? void 0 : s.intent)), (function(e, t) {
             let {
                 type: n
             } = e, {
@@ -327,8 +327,8 @@ function(e, t, n) {
                 context: a,
                 callback: o,
                 skipOnboarding: l
-            } = e, c = (0, A.parseExtraDataFromInviteKey)(r), _ = c.baseCode, E = L.default.getSessionId();
-            let h = (i = a, s = c, {
+            } = e, c = (0, A.parseExtraDataFromInviteKey)(r), _ = c.baseCode, h = L.default.getSessionId();
+            let E = (i = a, s = c, {
                     ...i,
                     invite_guild_scheduled_event_id: s.guildScheduledEventId
                 }),
@@ -338,10 +338,10 @@ function(e, t, n) {
                 code: _
             }), u.default.post({
                 url: K.Endpoints.INVITE(_),
-                context: h,
+                context: E,
                 oldFormErrors: !0,
                 body: {
-                    session_id: E
+                    session_id: h
                 }
             }).then(async e => {
                 var t, i;
@@ -433,13 +433,13 @@ function(e, t, n) {
             }
         },
         openNativeAppModal(e) {
-            h.default.openNativeAppModal(e, K.RPCCommands.INVITE_BROWSER)
+            E.default.openNativeAppModal(e, K.RPCCommands.INVITE_BROWSER)
         },
         openApp(e, t, n, i, r) {
             var u, c;
             let f;
             let _ = null != e ? (0, A.parseExtraDataFromInviteKey)(e) : null,
-                E = null == _ ? void 0 : _.baseCode;
+                h = null == _ ? void 0 : _.baseCode;
             if (d.default.dispatch({
                     type: "INVITE_APP_OPENING",
                     code: e
@@ -451,7 +451,7 @@ function(e, t, n) {
                 return
             }
             if ((null === (u = s.os) || void 0 === u ? void 0 : u.family) === "Android" || (null === (c = s.os) || void 0 === c ? void 0 : c.family) === "iOS") {
-                let e = null != E ? (0, a.getInviteDynamicLinkTemplate)(E) : (0, a.getDefaultDynamicLinkTemplate)(),
+                let e = null != h ? (0, a.getInviteDynamicLinkTemplate)(h) : (0, a.getDefaultDynamicLinkTemplate)(),
                     t = (0, o.generateAttemptId)();
                 f = (0, o.default)(e, {
                     utmSource: 2 === r ? "friend_invite" : Z,
@@ -459,12 +459,12 @@ function(e, t, n) {
                     username: i,
                     attemptId: t,
                     event: null == _ ? void 0 : _.guildScheduledEventId,
-                    iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(E)
+                    iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(h)
                 }), x.default.track(K.AnalyticEvents.DEEP_LINK_CLICKED, {
                     fingerprint: (0, l.maybeExtractId)(n),
                     attempt_id: t,
                     source: Z,
-                    invite_code: E
+                    invite_code: h
                 })
             } else "#" === (f = null != t ? K.Routes.INVITE_PROXY(t) : "")[0] && (f = f.slice(1)), f = "discord://".concat(f);
             Y.default.launch(f, t => {

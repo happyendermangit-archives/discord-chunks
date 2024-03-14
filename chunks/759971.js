@@ -18,7 +18,7 @@ function(e, t, n) {
     function f(e, t) {
         var n, f;
         let _ = r.default.getGuild(e),
-            E = i.default.getChannel(t);
-        return null != _ && null != E && (0, u.default)(_) && _.hasFeature(d.GuildFeatures.GUILD_SERVER_GUIDE) && !a.hasFlag(null !== (f = null === (n = s.default.getSelfMember(_.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== f ? f : 0, c.GuildMemberFlags.COMPLETED_HOME_ACTIONS) && o.default.hasMemberAction(_.id, E.id) && !l.default.hasCompletedActionForChannel(_.id, E.id)
+            h = i.default.getChannel(t);
+        return null != _ && null != h && (0, u.default)(_) && _.hasFeature(d.GuildFeatures.GUILD_SERVER_GUIDE) && !a.hasFlag(null !== (f = null === (n = s.default.getSelfMember(_.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== f ? f : 0, c.GuildMemberFlags.COMPLETED_HOME_ACTIONS) && o.default.hasMemberAction(_.id, h.id) && !l.default.hasCompletedActionForChannel(_.id, h.id)
     }
 }

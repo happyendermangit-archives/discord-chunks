@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("120252"),
         f = n("42203"),
         _ = n("305961"),
-        E = n("449008"),
-        h = n("361572"),
+        h = n("449008"),
+        E = n("361572"),
         g = n("49111"),
         m = n("724210");
     async function p(e) {
@@ -45,9 +45,9 @@ function(e, t, n) {
             case m.StaticChannelRoute.MEMBER_SAFETY:
                 return (0, o.canAccessMemberSafetyPage)(t);
             default:
-                (0, E.assertNever)(n)
+                (0, h.assertNever)(n)
         }
         let v = f.default.getChannel(n);
-        return (null != v || (await c.default.loadThread(n), null != (v = f.default.getChannel(n)))) && ((0, h.canViewChannel)(v) || i.default.isChannelGatedAndVisible(t, n))
+        return (null != v || (await c.default.loadThread(n), null != (v = f.default.getChannel(n)))) && ((0, E.canViewChannel)(v) || i.default.isChannelGatedAndVisible(t, n))
     }
 }

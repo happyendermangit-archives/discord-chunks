@@ -62,8 +62,8 @@ function(e, t, n) {
     var i, s, r, a, o, l, u, d, c = n("432710"),
         f = n("151426"),
         _ = n("676574"),
-        E = n("155084"),
-        h = n("684337"),
+        h = n("155084"),
+        E = n("684337"),
         g = n("845579"),
         m = n("42203"),
         p = n("27618"),
@@ -235,14 +235,14 @@ function(e, t, n) {
             guild_id: null == r ? void 0 : r.guild_id,
             channel_id: n,
             message_id: i,
-            user_is_underage: (0, h.isCurrentUserTeen)(),
+            user_is_underage: (0, E.isCurrentUserTeen)(),
             context: s
         })
     }
 
     function W(e, t) {
         let n = Date.now() - e;
-        E.default.increment({
+        h.default.increment({
             name: c.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
             tags: ["timingBucket:".concat(Math.min(Math.floor(n / 1e3), 3)), "source:".concat(t)]
         })
@@ -262,10 +262,10 @@ function(e, t, n) {
             guild_id: null == r ? void 0 : r.guild_id,
             message_id: n,
             embed_ids: s,
-            user_is_underage: (0, h.isCurrentUserTeen)(),
+            user_is_underage: (0, E.isCurrentUserTeen)(),
             scan_timeout_duration: I.MESSAGE_SCAN_TIMEOUT,
             attachment_ids_v2: i
-        }), E.default.increment({
+        }), h.default.increment({
             name: c.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT
         })
     }

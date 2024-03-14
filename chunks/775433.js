@@ -11,7 +11,7 @@ function(e, t, n) {
             return _
         },
         resetSubscriptionPlanData: function() {
-            return E
+            return h
         }
     }), n("222007");
     var i = n("872717"),
@@ -56,7 +56,7 @@ function(e, t, n) {
         return Promise.all(d.ACTIVE_PREMIUM_SKUS.filter(e => e !== d.PremiumSubscriptionSKUs.NONE).map(i => c(i, e, t, void 0, n)))
     }
 
-    function E() {
+    function h() {
         s.default.dispatch({
             type: "SUBSCRIPTION_PLANS_RESET"
         })

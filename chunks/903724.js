@@ -8,7 +8,7 @@ function(e, t, n) {
             return _
         },
         useShowRoleSubscriptionsInChannelList: function() {
-            return E
+            return h
         }
     }), n("222007");
     var i = n("446674"),
@@ -43,7 +43,7 @@ function(e, t, n) {
         return !s && (n || t)
     }
 
-    function E(e) {
+    function h(e) {
         let t = _(e),
             n = (0, s.useIsEligibleForSubscriptionsInGuildShop)(e, "useShowRoleSubscriptionsInChannelList");
         return t && !n

@@ -12,8 +12,8 @@ function(e, t, n) {
         c = n("627445"),
         f = n.n(c),
         _ = n("509043"),
-        E = n("669491"),
-        h = n("718776"),
+        h = n("669491"),
+        E = n("718776"),
         g = n("36694"),
         m = n("49111"),
         p = n("139368");
@@ -41,7 +41,7 @@ function(e, t, n) {
             if (!1 === t) return s;
             if (s = {
                     ...s
-                }, i === E.default.unsafe_rawColors.BRAND_500.css) switch (n) {
+                }, i === h.default.unsafe_rawColors.BRAND_500.css) switch (n) {
                 case "default":
                     s.borderColor = "var(--control-brand-foreground)";
                     break;
@@ -73,7 +73,7 @@ function(e, t, n) {
                 type: t,
                 color: n
             } = this.props;
-            return e ? "inverted" === t || "row" === t ? E.default.unsafe_rawColors.WHITE_500.css : n : E.default.unsafe_rawColors.TRANSPARENT.css
+            return e ? "inverted" === t || "row" === t ? h.default.unsafe_rawColors.WHITE_500.css : n : h.default.unsafe_rawColors.TRANSPARENT.css
         }
         render() {
             let {
@@ -89,7 +89,7 @@ function(e, t, n) {
                 reverse: c,
                 checkboxColor: f,
                 displayOnly: _,
-                type: E,
+                type: h,
                 onClick: S
             } = this.props, T = null != l ? (0, o.jsx)("div", {
                 className: d(p.label, e ? p.labelDisabled : p.labelClickable, c ? p.labelReversed : p.labelForward),
@@ -100,10 +100,10 @@ function(e, t, n) {
             }) : null, I = this.props.disabled ? p.inputDisabled : this.props.readOnly ? p.inputReadonly : p.inputDefault;
             return (0, o.jsxs)(_ ? "span" : "label", {
                 className: d(e ? p.checkboxWrapperDisabled : p.checkboxWrapper, v[s], r, {
-                    [p.row]: "row" === E,
+                    [p.row]: "row" === h,
                     [p.checked]: n
                 }),
-                children: [c ? T : null, !_ && (0, o.jsx)(h.FocusRing, {
+                children: [c ? T : null, !_ && (0, o.jsx)(E.FocusRing, {
                     children: (0, o.jsx)("input", {
                         className: d(a, I),
                         type: "checkbox",
@@ -150,7 +150,7 @@ function(e, t, n) {
         displayOnly: !1,
         value: !1,
         type: "default",
-        color: E.default.unsafe_rawColors.BRAND_500.css,
+        color: h.default.unsafe_rawColors.BRAND_500.css,
         shape: S.BOX,
         align: "center",
         onChange: m.NOOP,

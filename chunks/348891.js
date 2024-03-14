@@ -23,8 +23,8 @@ function(e, t, n) {
                 children: c,
                 confirmText: f,
                 cancelText: _,
-                className: E,
-                onConfirm: h,
+                className: h,
+                onConfirm: E,
                 onCancel: g,
                 onClose: m,
                 onCloseCallback: p,
@@ -57,7 +57,7 @@ function(e, t, n) {
             submitting: T,
             onClick: async () => {
                 try {
-                    await (null == h ? void 0 : h()), m()
+                    await (null == E ? void 0 : E()), m()
                 } catch (e) {
                     throw e
                 }
@@ -65,7 +65,7 @@ function(e, t, n) {
             autoFocus: !C,
             children: f
         })), (0, i.jsxs)(u.ModalRoot, {
-            className: E,
+            className: h,
             transitionState: v,
             children: [null != r ? (0, i.jsx)(u.ModalHeader, {
                 separator: !1,

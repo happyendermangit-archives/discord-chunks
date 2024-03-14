@@ -5,7 +5,7 @@ function(e, t, n) {
             return c
         },
         default: function() {
-            return E
+            return h
         }
     });
     var i = n("446674"),
@@ -59,7 +59,7 @@ function(e, t, n) {
         }
     }
     _.displayName = "UserGuildJoinRequestStore";
-    var E = new _(s.default, {
+    var h = new _(s.default, {
         CONNECTION_OPEN: function(e) {
             let {
                 guildJoinRequests: t

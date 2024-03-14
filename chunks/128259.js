@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("537025"),
         f = n("765089"),
         _ = n("647374"),
-        E = n("91984"),
-        h = n("835174"),
+        h = n("91984"),
+        E = n("835174"),
         g = n("566271"),
         m = n("42203"),
         p = n("305961"),
@@ -112,7 +112,7 @@ function(e, t, n) {
             return
         }
         if (null != (0, g.isSuspiciousDownload)(M)) {
-            null == t || t.preventDefault(), h.default.show(M);
+            null == t || t.preventDefault(), E.default.show(M);
             return
         }
         if ((0, c.shouldShowLinkNotDiscordWarning)(M)) {
@@ -132,7 +132,7 @@ function(e, t, n) {
             });
             return
         }
-        if (null != t && t.preventDefault(), z) E.default.show({
+        if (null != t && t.preventDefault(), z) h.default.show({
             url: M,
             trustUrl: a.trustProtocol,
             onConfirm: Y,
@@ -141,7 +141,7 @@ function(e, t, n) {
         else {
             let e = (0, _.punycodeLink)(M),
                 t = null != e ? e.displayTarget : M;
-            E.default.show({
+            h.default.show({
                 url: t,
                 trustUrl: a.trustDomain,
                 onConfirm: Y,

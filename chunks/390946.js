@@ -28,8 +28,8 @@ function(e, t, n) {
         c = n("723939"),
         f = n("70754"),
         _ = n("605250"),
-        E = n("385976"),
-        h = n("364685"),
+        h = n("385976"),
+        E = n("364685"),
         g = n("233069"),
         m = n("305961"),
         p = n("660478"),
@@ -99,8 +99,8 @@ function(e, t, n) {
             let t = o.default.database();
             null != t && !1 === e.databaseOk && c.default.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"), T = {};
             let n = Object.values(m.default.getGuilds()),
-                i = E.default.getGuilds(),
-                s = h.default.getRawStickersByGuild(),
+                i = h.default.getGuilds(),
+                s = E.default.getRawStickersByGuild(),
                 r = p.default.getReadStatesByChannel();
             for (let t of n) {
                 var a, l, u;
@@ -140,8 +140,8 @@ function(e, t, n) {
             a = M(e, null == r ? void 0 : {
                 properties: S.toServer(r),
                 roles: m.default.getRoles(r.id),
-                emojis: null !== (i = null === (n = E.default.getGuilds()[r.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
-                stickers: null !== (s = h.default.getRawStickersByGuild().get(r.id)) && void 0 !== s ? s : null,
+                emojis: null !== (i = null === (n = h.default.getGuilds()[r.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
+                stickers: null !== (s = E.default.getRawStickersByGuild().get(r.id)) && void 0 !== s ? s : null,
                 readStates: {}
             });
         return I = {

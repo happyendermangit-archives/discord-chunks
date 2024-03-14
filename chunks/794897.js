@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("753848"),
         f = n("818697"),
         _ = n("875081");
-    let E = null,
-        h = new l.ExtendedMemoryLru(750, 500),
+    let h = null,
+        E = new l.ExtendedMemoryLru(750, 500),
         g = new u.Lru(15),
         m = !1;
     class p extends a.default {
@@ -33,7 +33,7 @@ function(e, t, n) {
         }
         saveLimit(e) {
             let t = i.default.getBasicChannel(e);
-            return null != t && (0, c.isPrivateChannel)(t) || null != t && h.has(e) ? 25 : 1
+            return null != t && (0, c.isPrivateChannel)(t) || null != t && E.has(e) ? 25 : 1
         }
         getSaveableChannels() {
             let e = i.default.getChannelIds(null),
@@ -41,23 +41,23 @@ function(e, t, n) {
                     guildId: null,
                     channelId: e
                 }));
-            return o.default.isLowDisk ? null != E ? [...t, E] : t : [...t, ...h.values()]
+            return o.default.isLowDisk ? null != h ? [...t, h] : t : [...t, ...E.values()]
         }
         takeSnapshot() {
             return {
                 version: p.LATEST_SNAPSHOT_VERSION,
                 data: {
-                    channels: [...h.allValues()].filter(e => !e.fallback),
+                    channels: [...E.allValues()].filter(e => !e.fallback),
                     penalized: [...g.keys()],
-                    lastChannel: E
+                    lastChannel: h
                 }
             }
         }
         static mergeSnapshot(e) {
-            let t = h,
+            let t = E,
                 n = g;
-            for (let n of (h = new l.ExtendedMemoryLru(h.primaryCapacity, h.extendedCapacity), g = new u.Lru(g.capacity), E = null != E ? E : e.lastChannel, [e.channels, t.values()]))
-                for (let e of n) !e.fallback && h.put(e.channelId, e);
+            for (let n of (E = new l.ExtendedMemoryLru(E.primaryCapacity, E.extendedCapacity), g = new u.Lru(g.capacity), h = null != h ? h : e.lastChannel, [e.channels, t.values()]))
+                for (let e of n) !e.fallback && E.put(e.channelId, e);
             for (let t of [e.penalized, n.keys()])
                 for (let e of t) g.put(e, null)
         }
@@ -70,29 +70,29 @@ function(e, t, n) {
                     channelId: e,
                     channelType: t.type
                 };
-                if (E = i, h.put(e, i), (0, d.isLimitedChannel)(t)) {
+                if (h = i, E.put(e, i), (0, d.isLimitedChannel)(t)) {
                     let t = g.put(e, null);
-                    null != t && h.delete(e)
+                    null != t && E.delete(e)
                 }
             }
         }
         static deleteChannel(e) {
-            h.delete(e)
+            E.delete(e)
         }
         static deleteGuild(e) {
-            for (let t of h.allValues()) t.guildId === e && h.delete(t.channelId)
+            for (let t of E.allValues()) t.guildId === e && E.delete(t.channelId)
         }
         static dropUnreachableChannels() {
-            for (let e of h.keys()) {
+            for (let e of E.keys()) {
                 let t = i.default.getBasicChannel(e);
                 !(0, f.isReadableChannel)(t) && p.deleteChannel(e)
             }
         }
         static deleteUnreadableGuildChannels(e) {
-            for (let t of h.values()) e === t.guildId && !(0, f.isReadableChannelId)(t.channelId) && p.deleteChannel(t.channelId)
+            for (let t of E.values()) e === t.guildId && !(0, f.isReadableChannelId)(t.channelId) && p.deleteChannel(t.channelId)
         }
         static replaceLru(e) {
-            h = e
+            E = e
         }
         constructor() {
             super({
@@ -115,7 +115,7 @@ function(e, t, n) {
     }
 
     function v() {
-        p.dropUnreachableChannels(), p.replaceLru((0, _.withFallbacks)(h, 1250))
+        p.dropUnreachableChannels(), p.replaceLru((0, _.withFallbacks)(E, 1250))
     }
 
     function T(e) {
@@ -146,7 +146,7 @@ function(e, t, n) {
     }
 
     function R(e) {
-        h.clear(), g.clear(), m = !1
+        E.clear(), g.clear(), m = !1
     }
 
     function O(e) {
