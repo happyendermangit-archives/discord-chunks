@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return a
         }
@@ -8,19 +8,19 @@ function(e, t, i) {
     var n = i("450484"),
         l = i("782340");
 
-    function a(e, t) {
-        switch (t) {
+    function a(t, e) {
+        switch (e) {
             case n.SpotifyActionTypes.USER_ACTIVITY_PLAY:
-                return e.hasSpotifyAccount ? l.default.Messages.USER_ACTIVITY_PLAY_ON_PLATFORM.format({
+                return t.hasSpotifyAccount ? l.default.Messages.USER_ACTIVITY_PLAY_ON_PLATFORM.format({
                     platform: n.SPOTIFY_PLATFORM_NAME
                 }) : l.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
                     platform: n.SPOTIFY_PLATFORM_NAME
                 });
             case n.SpotifyActionTypes.EMBED_SYNC:
-                if (!e.hasSpotifyAccount) return l.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
+                if (!t.hasSpotifyAccount) return l.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
                     platform: n.SPOTIFY_PLATFORM_NAME
                 });
-                if (e.syncingWithUser || e.syncingWithParty) return l.default.Messages.INVITE_EMBED_JOINED;
+                if (t.syncingWithUser || t.syncingWithParty) return l.default.Messages.INVITE_EMBED_JOINED;
                 return l.default.Messages.JOIN;
             case n.SpotifyActionTypes.USER_ACTIVITY_SYNC:
             default:

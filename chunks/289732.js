@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return d
         }
@@ -16,10 +16,10 @@ function(e, t, i) {
     }
     let u = a();
     class r extends n.default.PersistedStore {
-        initialize(e) {
+        initialize(t) {
             u = {
                 ...a(),
-                ...null != e ? e : {}
+                ...null != t ? t : {}
             }
         }
         getState() {

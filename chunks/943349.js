@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         EmbeddedActivityLaunchability: function() {
             return l
         },
@@ -23,20 +23,20 @@ function(e, t, i) {
         c = i("49111"),
         f = i("782340");
 
-    function _(e) {
+    function _(t) {
         let {
-            channelId: t,
+            channelId: e,
             ChannelStore: i,
             GuildStore: n,
             PermissionStore: l
-        } = e, a = i.getChannel(t);
+        } = t, a = i.getChannel(e);
         if (null == a) return 3;
         if (!(0, s.getIsActivitiesEnabledForCurrentPlatform)(a)) return 6;
         if (!(0, o.isPrivateChannelWithEnabledActivities)(a.id)) {
-            let e = a.getGuildId();
-            if (null == e) return 4;
-            let t = n.getGuild(e);
-            if ((null == t ? void 0 : t.afkChannelId) === a.id) return 5;
+            let t = a.getGuildId();
+            if (null == t) return 4;
+            let e = n.getGuild(t);
+            if ((null == e ? void 0 : e.afkChannelId) === a.id) return 5;
             let i = l.can(c.Permissions.CONNECT, a);
             if (!i) return 2;
             let u = l.can(c.Permissions.USE_EMBEDDED_ACTIVITIES, a);
@@ -45,18 +45,18 @@ function(e, t, i) {
         return 0
     }
 
-    function E(e) {
-        let t = (0, a.useStateFromStores)([u.default, r.default, d.default], () => _({
-            channelId: e,
+    function E(t) {
+        let e = (0, a.useStateFromStores)([u.default, r.default, d.default], () => _({
+            channelId: t,
             ChannelStore: u.default,
             GuildStore: r.default,
             PermissionStore: d.default
-        }), [e]);
-        return t
+        }), [t]);
+        return e
     }
 
-    function I(e) {
-        switch (e) {
+    function I(t) {
+        switch (t) {
             case 0:
                 return f.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY;
             case 1:

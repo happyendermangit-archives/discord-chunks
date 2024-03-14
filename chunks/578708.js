@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return o
         }
@@ -13,10 +13,10 @@ function(e, t, i) {
         d = i("420444"),
         s = i("49111");
 
-    function o(e, t) {
+    function o(t, e) {
         let i = l.default.getWindowOpen(s.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-        i ? (0, a.default)(s.PopoutWindowKeys.CHANNEL_CALL_POPOUT) : (0, u.transitionTo)(s.Routes.CHANNEL(e, t));
-        let o = r.default.getSelfEmbeddedActivityForChannel(t);
-        null != o && (0, d.default)(t) && n.default.selectParticipant(t, o.applicationId)
+        i ? (0, a.default)(s.PopoutWindowKeys.CHANNEL_CALL_POPOUT) : (0, u.transitionTo)(s.Routes.CHANNEL(t, e));
+        let o = r.default.getSelfEmbeddedActivityForChannel(e);
+        null != o && (0, d.default)(e) && n.default.selectParticipant(e, o.applicationId)
     }
 }

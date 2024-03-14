@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         confirmActivityAgeGateAlert: function() {
             return r
         }
@@ -11,19 +11,19 @@ function(e, t, i) {
         a = i("870346"),
         u = i("49111");
 
-    function r(e) {
+    function r(t) {
         let {
-            application: t,
+            application: e,
             onAgree: r,
             onDisagree: d
-        } = e, s = a.default.getWindowOpen(u.PopoutWindowKeys.CHANNEL_CALL_POPOUT), o = s ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
+        } = t, s = a.default.getWindowOpen(u.PopoutWindowKeys.CHANNEL_CALL_POPOUT), o = s ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
         return (0, l.openModalLazy)(async () => {
             let {
-                ActivityAgeGateModal: e
+                ActivityAgeGateModal: t
             } = await i.el("413012").then(i.bind(i, "413012"));
-            return i => (0, n.jsx)(e, {
+            return i => (0, n.jsx)(t, {
                 ...i,
-                application: t,
+                application: e,
                 onAgree: r,
                 onDisagree: d
             })

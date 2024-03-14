@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return d
         }
@@ -13,35 +13,35 @@ function(e, t, i) {
         a = {}
     }
     class r extends n.default.Store {
-        getNote(e) {
-            return a[e]
+        getNote(t) {
+            return a[t]
         }
     }
     r.displayName = "NoteStore";
     var d = new r(l.default, {
         CONNECTION_OPEN: u,
         OVERLAY_INITIALIZE: u,
-        USER_NOTE_UPDATE: function(e) {
-            a[e.id] = {
+        USER_NOTE_UPDATE: function(t) {
+            a[t.id] = {
                 loading: !1,
-                note: e.note
+                note: t.note
             }
         },
-        USER_NOTE_LOAD_START: function(e) {
+        USER_NOTE_LOAD_START: function(t) {
             let {
-                userId: t
-            } = e;
-            a[t] = {
+                userId: e
+            } = t;
+            a[e] = {
                 loading: !0,
                 note: null
             }
         },
-        USER_NOTE_LOADED: function(e) {
+        USER_NOTE_LOADED: function(t) {
             let {
-                userId: t,
+                userId: e,
                 note: i
-            } = e;
-            a[t] = {
+            } = t;
+            a[e] = {
                 loading: !1,
                 note: null == i ? void 0 : i.note
             }

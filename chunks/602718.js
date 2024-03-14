@@ -1,19 +1,19 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return l
         }
     });
     var n = i("299285");
 
-    function l(e) {
-        var t;
+    function l(t) {
+        var e;
         let {
             applicationId: i,
             activityConfigs: l,
             applications: a
-        } = e, u = null !== (t = null == a ? void 0 : a.find(e => e.id === i)) && void 0 !== t ? t : n.default.getApplication(i), r = l.find(e => e.application_id === i);
+        } = t, u = null !== (e = null == a ? void 0 : a.find(t => t.id === i)) && void 0 !== e ? e : n.default.getApplication(i), r = l.find(t => t.application_id === i);
         return null == r || null == u ? null : {
             activity: r,
             application: u

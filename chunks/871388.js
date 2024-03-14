@@ -1,13 +1,13 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return l
         }
     }), i("702976");
     var n = i("49111");
 
-    function l(e, t) {
-        return t !== n.ActivityFlags.INSTANCE && null != e && null != e.flags && !!(e.flags & t)
+    function l(t, e) {
+        return e !== n.ActivityFlags.INSTANCE && null != t && null != t.flags && !!(t.flags & e)
     }
 }

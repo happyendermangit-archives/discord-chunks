@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return d
         },
@@ -14,14 +14,14 @@ function(e, t, i) {
         u = i("651057"),
         r = i("299285");
 
-    function d(e) {
-        let t = n.useRef([]);
+    function d(t) {
+        let e = n.useRef([]);
         return n.useEffect(() => {
-            !(0, a.areArraysShallowEqual)(e, t.current) && (u.default.fetchApplications(e, !1), t.current = e)
-        }, [e]), (0, l.useStateFromStoresArray)([r.default], () => e.map(e => r.default.getApplication(e)))
+            !(0, a.areArraysShallowEqual)(t, e.current) && (u.default.fetchApplications(t, !1), e.current = t)
+        }, [t]), (0, l.useStateFromStoresArray)([r.default], () => t.map(t => r.default.getApplication(t)))
     }
 
-    function s(e) {
-        return d(null != e ? [e] : [])[0]
+    function s(t) {
+        return d(null != t ? [t] : [])[0]
     }
 }

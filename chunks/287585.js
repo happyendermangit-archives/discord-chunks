@@ -1,13 +1,13 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return l
         }
     });
     var n = i("954016");
 
-    function l(e) {
-        if (null != e && null != e.url && n.validStreamURL.test(e.url)) return e.url
+    function l(t) {
+        if (null != t && null != t.url && n.validStreamURL.test(t.url)) return t.url
     }
 }

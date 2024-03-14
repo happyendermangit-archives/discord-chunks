@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return f
         }
@@ -12,29 +12,29 @@ function(e, t, i) {
     let r = {},
         d = {};
 
-    function s(e, t, i) {
+    function s(t, e, i) {
         var n;
         let {
             applicationId: s
         } = i, o = null !== (n = r[s]) && void 0 !== n ? n : {};
-        if (o[t] = e, r[s] = o, !__OVERLAY__ && e === u.ActivityActionStates.FAILED) {
+        if (o[e] = t, r[s] = o, !__OVERLAY__ && t === u.ActivityActionStates.FAILED) {
             null != d[s] && d[s].stop();
-            let e = new l.Timeout;
-            e.start(12e4, () => a.default.dispatch({
+            let t = new l.Timeout;
+            t.start(12e4, () => a.default.dispatch({
                 type: "ACTIVITY_LAUNCH_FAIL",
                 applicationId: s,
-                activityType: t
-            })), d[s] = e
+                activityType: e
+            })), d[s] = t
         }
     }
 
-    function o(e) {
-        return s(u.ActivityActionStates.COMPLETE, u.ActivityActionTypes.JOIN, e)
+    function o(t) {
+        return s(u.ActivityActionStates.COMPLETE, u.ActivityActionTypes.JOIN, t)
     }
     class c extends n.default.Store {
-        getState(e, t) {
-            let i = r[e];
-            return null == i ? void 0 : i[t]
+        getState(t, e) {
+            let i = r[t];
+            return null == i ? void 0 : i[e]
         }
         getStates() {
             return r
@@ -42,23 +42,23 @@ function(e, t, i) {
     }
     c.displayName = "ActivityLauncherStore";
     var f = new c(a.default, {
-        OVERLAY_INITIALIZE: function(e) {
+        OVERLAY_INITIALIZE: function(t) {
             let {
-                activityLauncherStates: t
-            } = e;
+                activityLauncherStates: e
+            } = t;
             r = {
-                ...t
+                ...e
             }
         },
-        ACTIVITY_JOIN_LOADING: e => s(u.ActivityActionStates.LOADING, u.ActivityActionTypes.JOIN, e),
-        ACTIVITY_JOIN_FAILED: e => s(u.ActivityActionStates.FAILED, u.ActivityActionTypes.JOIN, e),
+        ACTIVITY_JOIN_LOADING: t => s(u.ActivityActionStates.LOADING, u.ActivityActionTypes.JOIN, t),
+        ACTIVITY_JOIN_FAILED: t => s(u.ActivityActionStates.FAILED, u.ActivityActionTypes.JOIN, t),
         ACTIVITY_JOIN: o,
         EMBEDDED_ACTIVITY_CLOSE: o,
-        ACTIVITY_LAUNCH_FAIL: function(e) {
+        ACTIVITY_LAUNCH_FAIL: function(t) {
             let {
-                applicationId: t,
+                applicationId: e,
                 activityType: i
-            } = e, n = r[t];
+            } = t, n = r[e];
             if (null == n || n[i] !== u.ActivityActionStates.FAILED) return !1;
             delete n[i]
         }

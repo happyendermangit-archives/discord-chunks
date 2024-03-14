@@ -14,18 +14,18 @@ function(e, t, n) {
             return c
         }
     }), n("70102");
-    var i = n("968194"),
-        l = n("773336"),
-        a = n("155815"),
+    var i = n("773336"),
+        l = n("155815"),
+        a = n("884385"),
         s = n("450484");
 
     function r(e, t, n) {
         let r;
-        !(0, l.isDesktop)() && (r = window.open("", "_blank")), (0, i.getMetadata)(e, t).then(e => n(e)).then(e => {
+        !(0, i.isDesktop)() && (r = window.open("", "_blank")), (0, a.getSpotifyMetadataFromActivity)(e, t).then(e => n(e)).then(e => {
             let {
                 resourceType: t,
                 resourceId: n
-            } = e, i = a.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(t, n) : s.SpotifyEndpoints.WEB_OPEN(t, n);
+            } = e, i = l.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(t, n) : s.SpotifyEndpoints.WEB_OPEN(t, n);
             null != r ? r.location.href = i : window.open(i)
         }).catch(() => {
             null != r && r.close()
@@ -43,9 +43,9 @@ function(e, t, n) {
             metadata: i
         } = e;
         if (null == n) return;
-        let l = (0, s.getSpotifyResourceType)(null !== (t = null == i ? void 0 : i.type) && void 0 !== t ? t : s.SpotifyResourceTypes.TRACK);
-        if (null == l) return;
-        let r = a.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(l, n) : s.SpotifyEndpoints.WEB_OPEN(l, n);
+        let a = (0, s.getSpotifyResourceType)(null !== (t = null == i ? void 0 : i.type) && void 0 !== t ? t : s.SpotifyResourceTypes.TRACK);
+        if (null == a) return;
+        let r = l.default.isProtocolRegistered() ? s.SpotifyEndpoints.PLAYER_OPEN(a, n) : s.SpotifyEndpoints.WEB_OPEN(a, n);
         window.open(r)
     }
 

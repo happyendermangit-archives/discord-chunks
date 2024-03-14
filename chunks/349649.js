@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return s
         }
@@ -12,36 +12,36 @@ function(e, t, i) {
         r = i("555179"),
         d = i("49111");
 
-    function s(e) {
-        let t = (0, l.useStateFromStores)([r.default], () => r.default.getNote(e));
+    function s(t) {
+        let e = (0, l.useStateFromStores)([r.default], () => r.default.getNote(t));
         return n.useEffect(() => {
-            null == t && o(e)
-        }, [t, e]), null != t ? t : {
+            null == e && o(t)
+        }, [e, t]), null != e ? e : {
             loading: !0,
             note: null
         }
     }
-    async function o(e) {
+    async function o(t) {
         u.default.dispatch({
             type: "USER_NOTE_LOAD_START",
-            userId: e
+            userId: t
         });
         try {
             let {
-                body: t
+                body: e
             } = await a.default.get({
-                url: d.Endpoints.NOTE(e),
+                url: d.Endpoints.NOTE(t),
                 oldFormErrors: !0
             });
             u.default.dispatch({
                 type: "USER_NOTE_LOADED",
-                userId: e,
-                note: t
+                userId: t,
+                note: e
             })
-        } catch (t) {
+        } catch (e) {
             u.default.dispatch({
                 type: "USER_NOTE_LOADED",
-                userId: e
+                userId: t
             })
         }
     }

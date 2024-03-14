@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         toggleUseActivityUrlOverride: function() {
             return l
         },
@@ -22,25 +22,25 @@ function(e, t, i) {
         })
     }
 
-    function a(e) {
+    function a(t) {
         n.default.dispatch({
             type: "DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE",
-            activityUrlOverride: e
+            activityUrlOverride: t
         })
     }
 
-    function u(e) {
+    function u(t) {
         n.default.dispatch({
             type: "DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED",
-            applicationId: e,
+            applicationId: t,
             timestamp: new Date().getTime()
         })
     }
 
-    function r(e) {
+    function r(t) {
         n.default.dispatch({
             type: "DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER",
-            filter: e
+            filter: t
         })
     }
 }

@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return A
         }
@@ -18,20 +18,20 @@ function(e, t, i) {
         _ = i("578708"),
         E = i("954016"),
         I = i("49111");
-    async function A(e) {
+    async function A(t) {
         let {
-            applicationId: t,
+            applicationId: e,
             currentEmbeddedApplication: i,
             activityChannelId: A,
             locationObject: T,
             embeddedActivitiesManager: C,
             analyticsLocations: v
-        } = e, S = l.default.getChannel(A), N = null == S ? void 0 : S.getGuildId(), p = null == N || "" === N, y = u.default.getCurrentUser();
-        if (null == S || p && !S.isPrivate() || null == A || null == y) return Promise.resolve(!1);
-        if (a.default.getVoiceChannelId() === A && (null == i ? void 0 : i.id) === t) return (0, _.default)(N, A), Promise.resolve(!0);
+        } = t, S = l.default.getChannel(A), p = null == S ? void 0 : S.getGuildId(), N = null == p || "" === p, y = u.default.getCurrentUser();
+        if (null == S || N && !S.isPrivate() || null == A || null == y) return Promise.resolve(!1);
+        if (a.default.getVoiceChannelId() === A && (null == i ? void 0 : i.id) === e) return (0, _.default)(p, A), Promise.resolve(!0);
         let h = await (0, s.confirmActivityLaunchChecks)({
-            applicationId: t,
-            application: n.default.getApplication(t),
+            applicationId: e,
+            application: n.default.getApplication(e),
             channel: S,
             currentEmbeddedApplication: i,
             embeddedActivitiesManager: C,
@@ -41,16 +41,16 @@ function(e, t, i) {
         let D = (0, o.default)(S.id),
             O = E.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(S.type);
         if (D) {
-            let e = await (0, c.default)({
+            let t = await (0, c.default)({
                 channelId: S.id,
                 bypassChangeModal: null != i
             });
-            if (!e) return !1
+            if (!t) return !1
         } else if (!(0, r.isActivitiesInTextEnabled)(S, "joinEmbeddedActivity") || !O) return !1;
-        return (0, _.default)(N, A), (0, d.startEmbeddedActivity)(A, t, v), (0, f.default)({
+        return (0, _.default)(p, A), (0, d.startEmbeddedActivity)(A, e, v), (0, f.default)({
             type: I.AnalyticsGameOpenTypes.JOIN,
             userId: y.id,
-            applicationId: t,
+            applicationId: e,
             locationObject: T,
             analyticsLocations: v
         }), !0

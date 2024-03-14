@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         confirmExternalAppLaunchAlert: function() {
             return a
         }
@@ -9,18 +9,18 @@ function(e, t, i) {
     i("884691");
     var l = i("77078");
 
-    function a(e) {
+    function a(t) {
         let {
-            application: t,
+            application: e,
             onConfirm: a,
             onCancel: u
-        } = e;
+        } = t;
         return (0, l.openModalLazy)(async () => {
             let {
-                default: e
+                default: t
             } = await i.el("285281").then(i.bind(i, "285281"));
-            return i => (0, n.jsx)(e, {
-                application: t,
+            return i => (0, n.jsx)(t, {
+                application: e,
                 onConfirm: a,
                 onCancel: u,
                 ...i

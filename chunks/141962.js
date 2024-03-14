@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         default: function() {
             return c
         }
@@ -14,44 +14,44 @@ function(e, t, i) {
         d = i("648456"),
         s = i("782340");
     class o extends d.default {
-        showErrorModal(e) {
+        showErrorModal(t) {
             let {
-                code: t,
+                code: e,
                 message: i
-            } = e;
-            (0, l.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
+            } = t;
+            (0, l.openModalLazy)(async () => t => (0, n.jsx)(u.default, {
                 title: s.default.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
-                    code: t
+                    code: e
                 }),
                 body: i,
-                ...e
-            }))
-        }
-        showLaunchErrorModal(e) {
-            (0, l.openModalLazy)(async () => t => (0, n.jsx)(u.default, {
-                title: s.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-                body: e,
                 ...t
             }))
         }
-        leaveActivity(e) {
+        showLaunchErrorModal(t) {
+            (0, l.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
+                title: s.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+                body: t,
+                ...e
+            }))
+        }
+        leaveActivity(t) {
             let {
-                channelId: t,
+                channelId: e,
                 applicationId: i
-            } = e;
+            } = t;
             a.default.wait(() => (0, r.stopEmbeddedActivity)({
-                channelId: t,
+                channelId: e,
                 applicationId: i
             }))
         }
-        constructor(...e) {
-            super(...e), this.handleRPCDisconnect = e => {
+        constructor(...t) {
+            super(...t), this.handleRPCDisconnect = t => {
                 let {
-                    reason: t,
+                    reason: e,
                     application: i
-                } = e;
+                } = t;
                 this.superHandleRPCDisconnect({
-                    reason: t,
+                    reason: e,
                     application: i
                 })
             }

@@ -1,6 +1,6 @@
-function(e, t, i) {
+function(t, e, i) {
     "use strict";
-    i.r(t), i.d(t, {
+    i.r(e), i.d(e, {
         confirmActivityLaunchChecks: function() {
             return C
         }
@@ -16,83 +16,83 @@ function(e, t, i) {
         c = i("370507"),
         f = i("772926"),
         _ = i("49111");
-    async function E(e, t) {
+    async function E(t, e) {
         try {
             var i;
-            return null !== (i = u.default.getApplication(e)) && void 0 !== i ? i : r.default.createFromServer(await a.default.fetchApplication(e))
+            return null !== (i = u.default.getApplication(t)) && void 0 !== i ? i : r.default.createFromServer(await a.default.fetchApplication(t))
         } catch (i) {
             n.default.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                applicationId: e,
-                guildId: t,
+                applicationId: t,
+                guildId: e,
                 error: new l.APIError(i)
             })
         }
     }
-    async function I(e) {
+    async function I(t) {
         let {
-            channel: t,
+            channel: e,
             currentEmbeddedApplication: i,
             embeddedActivitiesManager: n
-        } = e;
+        } = t;
         if (null != i) {
-            let e = await new Promise(e => {
-                (0, c.default)(i, t, () => {
+            let t = await new Promise(t => {
+                (0, c.default)(i, e, () => {
                     n.leaveActivity({
-                        channelId: t.id,
+                        channelId: e.id,
                         applicationId: i.id
-                    }), e(!0)
-                }, () => e(!1))
+                    }), t(!0)
+                }, () => t(!1))
             });
-            if (!e) return !1
+            if (!t) return !1
         }
         return !0
     }
-    async function A(e) {
+    async function A(t) {
         let {
-            application: t,
+            application: e,
             applicationId: i,
             channel: n,
             user: l
-        } = e;
+        } = t;
         if (null == l.nsfwAllowed) {
             var a, u;
-            let e = null != t ? t : await E(i, n.getGuildId());
-            if (null == e) return !1;
-            let l = null !== (u = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) && void 0 !== u && u;
+            let t = null != e ? e : await E(i, n.getGuildId());
+            if (null == t) return !1;
+            let l = null !== (u = null === (a = t.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) && void 0 !== u && u;
             if (l) {
-                let t = await new Promise(t => {
+                let e = await new Promise(e => {
                     (0, o.confirmActivityAgeGateAlert)({
-                        application: e,
-                        onAgree: () => t(!0),
-                        onDisagree: () => t(!1)
+                        application: t,
+                        onAgree: () => e(!0),
+                        onDisagree: () => e(!1)
                     })
                 });
-                if (!t) return !1
+                if (!e) return !1
             }
         }
         return !0
     }
-    async function T(e) {
+    async function T(t) {
         let {
-            application: t,
+            application: e,
             applicationId: i,
             channel: n
-        } = e, l = null != t ? t : await E(i, n.getGuildId());
-        return null != l && (!!((0, d.hasFlag)(l.flags, _.ApplicationFlags.EMBEDDED_RELEASED) || s.default.hasActivityEverBeenLaunched(i)) || new Promise(e => {
+        } = t, l = null != e ? e : await E(i, n.getGuildId());
+        return null != l && (!!((0, d.hasFlag)(l.flags, _.ApplicationFlags.EMBEDDED_RELEASED) || s.default.hasActivityEverBeenLaunched(i)) || new Promise(t => {
             (0, f.confirmExternalAppLaunchAlert)({
                 application: l,
-                onConfirm: () => e(!0),
-                onCancel: () => e(!1)
+                onConfirm: () => t(!0),
+                onCancel: () => t(!1)
             })
         }))
     }
-    async function C(e) {
-        let t = await I(e);
-        if (!t) return !1;
-        let i = await A(e);
+    async function C(t) {
+        let e = await I(t);
+        if (!e) return !1;
+        let i = await A(t);
         if (!i) return !1;
-        let n = await T(e);
+        let n = await T(t);
         return !!n || !1
     }
 }
