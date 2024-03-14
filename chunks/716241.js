@@ -159,22 +159,32 @@ function(e, t, n) {
 
     function k(e) {
         let t = d.default.getChannel(e);
-        if (null == t || null == t.guild_id) return {};
+        if (null == t || null == t.guild_id) return {
+            channel_id: e
+        };
         let n = h.default.getGuild(t.guild_id);
-        if (null == n) return {};
+        if (null == n) return {
+            channel_id: e
+        };
         let i = S.default.getSnapshot(e, 10 * y.default.Millis.SECOND);
         return {
+            channel_id: e,
             channel_was_unread: i.unread,
             channel_mention_count: i.mentionCount,
             channel_is_muted: I.default.isChannelMuted(t.guild_id, t.id),
+            channel_is_nsfw: t.isNSFW(),
             channel_resolved_unread_setting: I.default.resolveUnreadSetting(t),
             channel_preset: (0, o.presetFromSettings)(I.default.resolveUnreadSetting(t), I.default.resolvedMessageNotifications(t)),
+            guild_id: t.guild_id,
             guild_was_unread: i.guildUnread,
             guild_mention_count: i.guildMentionCount,
             guild_is_muted: I.default.isMuted(t.guild_id),
             guild_resolved_unread_setting: I.default.resolveGuildUnreadSetting(n),
             guild_preset: (0, o.presetFromSettings)(I.default.resolveGuildUnreadSetting(n), I.default.getMessageNotifications(t.guild_id)),
-            has_pending_member_action: (0, a.hasPendingMemberAction)(t.guild_id, e)
+            parent_id: t.parent_id,
+            parent_channel_type: t.parentChannelThreadType,
+            has_pending_member_action: (0, a.hasPendingMemberAction)(t.guild_id, e),
+            can_send_message: g.default.can(O.Permissions.SEND_MESSAGES, t)
         }
     }
 

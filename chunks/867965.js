@@ -413,10 +413,6 @@ function(e, t, n) {
             ...(0, s.collectChannelAnalyticsMetadata)(e),
             ...(0, r.collectThreadMetadata)(e, !0),
             ...(0, s.getChannelOpenedMetadata)(e.id),
-            channel_id: e.id,
-            guild_id: e.guild_id,
-            parent_id: e.parent_id,
-            parent_channel_type: e.parentChannelThreadType,
             channel_view: "Split View",
             platform: (0, u.getPlatform)()
         })
