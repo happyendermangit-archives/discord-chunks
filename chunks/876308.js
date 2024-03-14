@@ -48,8 +48,8 @@ function(e, t, n) {
                 onMute: R,
                 waveform: k,
                 durationSecs: L,
-                onVolumeShow: P,
-                onVolumeHide: b,
+                onVolumeShow: b,
+                onVolumeHide: P,
                 onPlay: j,
                 onPause: U,
                 onError: D
@@ -226,8 +226,8 @@ function(e, t, n) {
                 currentWindow: window,
                 onValueChange: eo,
                 onToggleMute: eu,
-                onVolumeShow: P,
-                onVolumeHide: b
+                onVolumeShow: b,
+                onVolumeHide: P
             }), N]
         })
     })

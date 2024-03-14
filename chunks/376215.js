@@ -56,19 +56,19 @@ function(e, t, n) {
                 var t;
                 return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == R ? void 0 : null === (t = R[e.name]) || void 0 === t ? void 0 : t.hasValue)
             })) && void 0 !== e ? e : []
-        }, [M, R]), [L, P] = l.useState([]);
+        }, [M, R]), [L, b] = l.useState([]);
         l.useEffect(() => {
             let e = () => {
                 c.default.clearAll(t, n.drafts.type)
             };
             return d.default.subscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e), () => d.default.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
         }, [t, n]);
-        let b = l.useCallback(() => {
+        let P = l.useCallback(() => {
             N.focusFirstVisibleItem()
         }, [N]);
         return ((0, g.useComponentAction)({
             event: I.ComponentActions.FOCUS_ATTACHMENT_AREA,
-            handler: b
+            handler: P
         }), l.useEffect(() => {
             if (O) {
                 let e = [];
@@ -76,7 +76,7 @@ function(e, t, n) {
                     !k.some(e => t.name === e.name) && e.push(t)
                 }), e.forEach(e => {
                     c.default.remove(t, e.name, n.drafts.type)
-                }), P(k)
+                }), b(k)
             }
         }, [t, k.length, n]), !O && 0 === A.length || O && 0 === k.length) ? null : (0, i.jsxs)(l.Fragment, {
             children: [(0, i.jsx)(r.ListNavigatorProvider, {
