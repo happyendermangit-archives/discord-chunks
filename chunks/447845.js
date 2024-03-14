@@ -2,11 +2,11 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return l
         }
     });
-    var a = n("862205");
-    let i = (0, a.createExperiment)({
+    var i = n("862205");
+    let a = (0, i.createExperiment)({
         kind: "user",
         id: "2024-03_packages",
         label: "Packages",
@@ -21,5 +21,5 @@ function(e, t, n) {
             }
         }]
     });
-    var s = i
+    var l = a
 }

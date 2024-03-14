@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return S
+            return E
         }
     }), n("222007");
-    var a = n("37983"),
-        i = n("884691"),
-        s = n("414456"),
-        l = n.n(s),
+    var i = n("37983"),
+        a = n("884691"),
+        l = n("414456"),
+        s = n.n(l),
         o = n("917351"),
         r = n.n(o),
         u = n("77078"),
@@ -20,7 +20,7 @@ function(e, t, n) {
         h = n("782340"),
         _ = n("113037");
     let p = () => [h.default.Messages.APP_ICON_PIRATE, h.default.Messages.APP_ICON_PIRATE_1, h.default.Messages.APP_ICON_PIRATE_2, h.default.Messages.APP_ICON_PIRATE_3, h.default.Messages.APP_ICON_PIRATE_4],
-        E = () => {
+        S = () => {
             var e;
             return null !== (e = r.sample(p())) && void 0 !== e ? e : h.default.Messages.APP_ICON_PIRATE
         };
@@ -29,48 +29,48 @@ function(e, t, n) {
         let {
             id: t,
             className: n,
-            onSelect: s,
+            onSelect: l,
             isSelected: o = !1,
             tabIndex: r,
             children: f
-        } = e, [h, p] = i.useState(g.ICONS_BY_ID[t].name), S = t === c.PremiumAppIconIds.PIRATE, T = (0, u.useRadioItem)({
+        } = e, [h, p] = a.useState(g.ICONS_BY_ID[t].name), E = t === c.PremiumAppIconIds.PIRATE, v = (0, u.useRadioItem)({
             label: h,
             isSelected: o
         });
-        return (0, a.jsx)(u.Tooltip, {
+        return (0, i.jsx)(u.Tooltip, {
             text: h,
-            onTooltipShow: () => S && p(E()),
-            children: e => (0, a.jsxs)("div", {
+            onTooltipShow: () => E && p(S()),
+            children: e => (0, i.jsxs)("div", {
                 className: _.appIconSelectionContainer,
-                children: [(0, a.jsx)(u.Clickable, {
+                children: [(0, i.jsx)(u.Clickable, {
                     ...e,
-                    ...T,
-                    tabIndex: null != r ? r : T.tabIndex,
-                    className: l(_.appIconSelection, {
+                    ...v,
+                    tabIndex: null != r ? r : v.tabIndex,
+                    className: s(_.appIconSelection, {
                         [_.selected]: o
                     }, n),
-                    onClick: o ? m.NOOP : () => null == s ? void 0 : s(t),
+                    onClick: o ? m.NOOP : () => null == l ? void 0 : l(t),
                     children: f
-                }), o && (0, a.jsx)(d.SelectionCircle, {})]
+                }), o && (0, i.jsx)(d.SelectionCircle, {})]
             })
         })
     }
 
-    function S(e) {
+    function E(e) {
         let {
             icon: t,
             isSelected: n,
-            disabled: i,
-            tabIndex: s,
-            onSelect: l
+            disabled: a,
+            tabIndex: l,
+            onSelect: s
         } = e;
-        return (0, a.jsx)(Selection, {
-            onSelect: i ? void 0 : l,
+        return (0, i.jsx)(Selection, {
+            onSelect: a ? void 0 : s,
             isSelected: n,
             id: t.id,
-            className: i ? _.disabled : void 0,
-            tabIndex: s,
-            children: (0, a.jsx)(f.default, {
+            className: a ? _.disabled : void 0,
+            tabIndex: l,
+            children: (0, i.jsx)(f.default, {
                 id: t.id,
                 width: g.CUSTOM_BASE_SIZE
             })

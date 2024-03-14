@@ -8,7 +8,7 @@ function(e, t, n) {
             return C
         },
         default: function() {
-            return _
+            return m
         }
     });
     var i, s, r = n("37983"),
@@ -68,14 +68,14 @@ function(e, t, n) {
             buttonShineClassName: v,
             onlyShineOnHover: E,
             ...p
-        } = e, _ = l.createRef(), m = (0, d.default)(_), I = !i && !s && !0 !== a && (!E || m);
+        } = e, m = l.createRef(), _ = (0, d.default)(m), S = !i && !s && !0 !== a && (!E || _);
         return (0, r.jsxs)(c.Button, {
-            buttonRef: _,
+            buttonRef: m,
             ...p,
             className: o(h.shinyButton, n),
             disabled: i,
             submitting: s,
-            children: [t, I ? (0, r.jsx)(C, {
+            children: [t, S ? (0, r.jsx)(C, {
                 shinePaused: f,
                 className: o(h.buttonShine, E ? h.onlyShineOnHover : void 0, v),
                 shineSize: u
@@ -83,5 +83,5 @@ function(e, t, n) {
         })
     };
     p.ShineSizes = s;
-    var _ = p
+    var m = p
 }

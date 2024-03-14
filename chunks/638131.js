@@ -5,10 +5,10 @@ function(e, t, n) {
             return m
         }
     }), n("222007");
-    var a = n("37983"),
-        i = n("884691"),
-        s = n("414456"),
-        l = n.n(s),
+    var i = n("37983"),
+        a = n("884691"),
+        l = n("414456"),
+        s = n.n(l),
         o = n("917351"),
         r = n.n(o),
         u = n("907002"),
@@ -25,34 +25,34 @@ function(e, t, n) {
         let {
             className: t,
             pageMultiplier: n
-        } = e, s = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion), [o, m] = i.useState({
+        } = e, l = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion), [o, m] = a.useState({
             x: 0,
             y: 0
-        }), h = i.useMemo(() => r.throttle(e => {
-            if (s) return;
+        }), h = a.useMemo(() => r.throttle(e => {
+            if (l) return;
             let t = (window.innerWidth - e.pageX * n) / 90,
-                a = (window.innerHeight - e.pageY * n) / 90;
+                i = (window.innerHeight - e.pageY * n) / 90;
             m({
                 x: t,
-                y: a
+                y: i
             })
-        }, 20), [n, s]);
-        i.useEffect(() => (window.addEventListener("mousemove", h), () => window.removeEventListener("mousemove", h)), [h]);
+        }, 20), [n, l]);
+        a.useEffect(() => (window.addEventListener("mousemove", h), () => window.removeEventListener("mousemove", h)), [h]);
         let [_, p] = (0, u.useSpring)(() => ({
             x: 0,
             y: 0,
             config: g
         }));
-        return i.useEffect(() => {
+        return a.useEffect(() => {
             p({
                 x: o.x,
                 y: o.y
             })
-        }, [o.x, o.y, p]), (0, a.jsx)(u.animated.div, {
+        }, [o.x, o.y, p]), (0, i.jsx)(u.animated.div, {
             style: {
                 transform: (0, u.to)([_.x, _.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)"))
             },
-            className: l(f.background, t)
+            className: s(f.background, t)
         })
     }
 }

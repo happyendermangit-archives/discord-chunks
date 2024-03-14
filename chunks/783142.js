@@ -32,10 +32,10 @@ function(e, t, n) {
             return R
         },
         setTryItOutBanner: function() {
-            return G
+            return D
         },
         setTryItOutThemeColors: function() {
-            return D
+            return G
         }
     });
     var i = n("872717"),
@@ -157,14 +157,14 @@ function(e, t, n) {
         }), a(d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
     }
 
-    function G(e) {
+    function D(e) {
         r.default.dispatch({
             type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
             banner: e
         }), a(d.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
     }
 
-    function D(e) {
+    function G(e) {
         r.default.dispatch({
             type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
             themeColors: e
