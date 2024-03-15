@@ -2,7 +2,7 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         default: function() {
-            return l
+            return f
         }
     });
     var s = t("37983");
@@ -14,7 +14,7 @@ function(e, a, t) {
         r = t("782340"),
         o = t("321562");
 
-    function l(e) {
+    function f(e) {
         let {
             text: a = r.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
             className: t

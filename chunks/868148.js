@@ -5,8 +5,8 @@ function(e, a, t) {
         var r = -1,
             o = a.length;
         for (n || (n = d), i || (i = []); ++r < o;) {
-            var l = a[r];
-            t > 0 && n(l) ? t > 1 ? e(l, t - 1, n, c, i) : s(i, l) : !c && (i[i.length] = l)
+            var f = a[r];
+            t > 0 && n(f) ? t > 1 ? e(f, t - 1, n, c, i) : s(i, f) : !c && (i[i.length] = f)
         }
         return i
     }
