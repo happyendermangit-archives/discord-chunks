@@ -12,8 +12,8 @@ function(e, a, t) {
         i = t("99317"),
         r = t("693051"),
         o = t("607542"),
-        l = t("153498"),
-        f = t("934306"),
+        f = t("153498"),
+        l = t("934306"),
         u = t("742171"),
         b = t("393027"),
         p = t("393414"),
@@ -38,15 +38,15 @@ function(e, a, t) {
                 if (null == p || !p.isReady()) return;
                 let _ = e.navigationReplace,
                     E = null !== (t = e.useScreen) && void 0 !== t && t;
-                if (j && (0, f.isSplitMessagesTab)() && b === h.Routes.ME) {
-                    (0, l.navigateToRootTab)({
+                if (j && (0, l.isSplitMessagesTab)() && b === h.Routes.ME) {
+                    (0, f.navigateToRootTab)({
                         screen: "messages",
                         resetRoot: _
                     });
                     return
                 }
                 if (j && b === h.Routes.NOTIFICATIONS) {
-                    (0, l.navigateToRootTab)({
+                    (0, f.navigateToRootTab)({
                         screen: "notifications",
                         resetRoot: _
                     });
@@ -61,7 +61,7 @@ function(e, a, t) {
                         });
                     if (!j) {
                         let e = p.getRootState();
-                        (null == e ? void 0 : null === (n = e.routes) || void 0 === n ? void 0 : null === (s = n[0]) || void 0 === s ? void 0 : s.name) !== "panels" && (0, l.resetToPanelsUI)();
+                        (null == e ? void 0 : null === (n = e.routes) || void 0 === n ? void 0 : null === (s = n[0]) || void 0 === s ? void 0 : s.name) !== "panels" && (0, f.resetToPanelsUI)();
                         return
                     }
                     if (null != a) {
@@ -70,7 +70,7 @@ function(e, a, t) {
                             voiceChannelId: t,
                             voiceMessageId: s
                         } = a.params;
-                        (0, u.isOldVoiceUIEnabled)() && (0, l.navigateToChannel)({
+                        (0, u.isOldVoiceUIEnabled)() && (0, f.navigateToChannel)({
                             channelId: t,
                             guildId: e,
                             messageId: s,
@@ -85,27 +85,27 @@ function(e, a, t) {
                             guildId: t,
                             messageId: s
                         } = e.params;
-                        if (!(0, f.isSplitMessagesTab)() && !m) {
-                            (0, l.navigateToRootTab)({
+                        if (!(0, l.isSplitMessagesTab)() && !m) {
+                            (0, f.navigateToRootTab)({
                                 screen: "guilds",
                                 guildId: t,
                                 resetRoot: _
                             });
                             return
                         }
-                        if ((0, f.isOnNewPanels)()) {
+                        if ((0, l.isOnNewPanels)()) {
                             let [e, s] = (0, o.default)(p.getCurrentRoute());
                             if (e === t && s === a) return
                         }
-                        null == a || (0, f.shouldHandleNewPanelsRoute)(t) && !1 !== _ ? t !== h.ME || m ? (0, l.navigateToRootTab)({
+                        null == a || (0, l.shouldHandleNewPanelsRoute)(t) && !1 !== _ ? t !== h.ME || m ? (0, f.navigateToRootTab)({
                             screen: "guilds",
                             guildId: t,
-                            channelId: (0, f.isOnNewPanels)() ? a : void 0,
+                            channelId: (0, l.isOnNewPanels)() ? a : void 0,
                             resetRoot: _
-                        }) : (0, l.navigateToRootTab)({
+                        }) : (0, f.navigateToRootTab)({
                             screen: "messages",
                             resetRoot: _
-                        }) : null != t && (0, l.navigateToChannel)({
+                        }) : null != t && (0, f.navigateToChannel)({
                             channelId: a,
                             guildId: t,
                             messageId: s,
@@ -119,11 +119,11 @@ function(e, a, t) {
                     let e = (0, d.matchPath)(b, {
                         path: h.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?")
                     });
-                    null != e && (0, l.navigateToMemberVerification)(e.params.guildId, e.params.inviteCode);
+                    null != e && (0, f.navigateToMemberVerification)(e.params.guildId, e.params.inviteCode);
                     return
                 }
                 if (b.startsWith("/login") || b.startsWith("/register")) {
-                    (0, l.resetToAuthRoute)();
+                    (0, f.resetToAuthRoute)();
                     return
                 }
                 if (b.startsWith("/account-standing")) {
@@ -133,7 +133,7 @@ function(e, a, t) {
                     });
                     return
                 }
-                j && (0, l.navigateToRootTab)({
+                j && (0, f.navigateToRootTab)({
                     screen: "messages",
                     resetRoot: _
                 })

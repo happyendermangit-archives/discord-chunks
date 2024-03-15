@@ -51,6 +51,7 @@ function(e, t, n) {
         getNumFastUdpReconnects() {
             return null
         }
+        wasRemoteDisconnected() {}
         setRemoteVideoSinkWants(e) {
             this.remoteVideoSinkWants = e, this.updateVideoQuality(g.MEDIA_SINK_WANTS_PROPERTIES)
         }
