@@ -9,18 +9,18 @@ function(t, e, i) {
         l = i("913144");
     let a = {};
 
-    function u() {
+    function r() {
         a = {}
     }
-    class r extends n.default.Store {
+    class u extends n.default.Store {
         getNote(t) {
             return a[t]
         }
     }
-    r.displayName = "NoteStore";
-    var d = new r(l.default, {
-        CONNECTION_OPEN: u,
-        OVERLAY_INITIALIZE: u,
+    u.displayName = "NoteStore";
+    var d = new u(l.default, {
+        CONNECTION_OPEN: r,
+        OVERLAY_INITIALIZE: r,
         USER_NOTE_UPDATE: function(t) {
             a[t.id] = {
                 loading: !1,

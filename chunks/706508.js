@@ -8,8 +8,8 @@ function(t, e, i) {
     var n = i("299285"),
         l = i("42203"),
         a = i("18494"),
-        u = i("697218"),
-        r = i("427953"),
+        r = i("697218"),
+        u = i("427953"),
         d = i("550766"),
         s = i("900551"),
         o = i("420444"),
@@ -26,9 +26,9 @@ function(t, e, i) {
             locationObject: T,
             embeddedActivitiesManager: C,
             analyticsLocations: v
-        } = t, S = l.default.getChannel(A), p = null == S ? void 0 : S.getGuildId(), N = null == p || "" === p, y = u.default.getCurrentUser();
-        if (null == S || N && !S.isPrivate() || null == A || null == y) return Promise.resolve(!1);
-        if (a.default.getVoiceChannelId() === A && (null == i ? void 0 : i.id) === e) return (0, _.default)(p, A), Promise.resolve(!0);
+        } = t, S = l.default.getChannel(A), N = null == S ? void 0 : S.getGuildId(), p = null == N || "" === N, y = r.default.getCurrentUser();
+        if (null == S || p && !S.isPrivate() || null == A || null == y) return Promise.resolve(!1);
+        if (a.default.getVoiceChannelId() === A && (null == i ? void 0 : i.id) === e) return (0, _.default)(N, A), Promise.resolve(!0);
         let h = await (0, s.confirmActivityLaunchChecks)({
             applicationId: e,
             application: n.default.getApplication(e),
@@ -46,8 +46,8 @@ function(t, e, i) {
                 bypassChangeModal: null != i
             });
             if (!t) return !1
-        } else if (!(0, r.isActivitiesInTextEnabled)(S, "joinEmbeddedActivity") || !O) return !1;
-        return (0, _.default)(p, A), (0, d.startEmbeddedActivity)(A, e, v), (0, f.default)({
+        } else if (!(0, u.isActivitiesInTextEnabled)(S, "joinEmbeddedActivity") || !O) return !1;
+        return (0, _.default)(N, A), (0, d.startEmbeddedActivity)(A, e, v), (0, f.default)({
             type: I.AnalyticsGameOpenTypes.JOIN,
             userId: y.id,
             applicationId: e,

@@ -8,8 +8,8 @@ function(t, e, i) {
     var n = i("203288"),
         l = i("242740"),
         a = i("848848"),
-        u = i("42203"),
-        r = i("957255"),
+        r = i("42203"),
+        u = i("957255"),
         d = i("18494"),
         s = i("800762");
     class o extends Error {}
@@ -18,14 +18,14 @@ function(t, e, i) {
             channelId: e,
             timeoutMs: i = 1e4,
             bypassChangeModal: c = !1
-        } = t, f = u.default.getChannel(e);
+        } = t, f = r.default.getChannel(e);
         if (null == f) return !1;
         let _ = await l.default.handleVoiceConnect({
             bypassGuildIdCheck: !0,
             bypassChangeModal: c,
             channel: f,
             connected: s.default.isInChannel(e),
-            needSubscriptionToAccess: (0, a.getChannelRoleSubscriptionStatus)(e, u.default, n.default, r.default).needSubscriptionToAccess
+            needSubscriptionToAccess: (0, a.getChannelRoleSubscriptionStatus)(e, r.default, n.default, u.default).needSubscriptionToAccess
         });
         if (!_) return !1;
         let E = new Promise((t, n) => {

@@ -14,8 +14,8 @@ function(t, e, i) {
     var n = i("872717"),
         l = i("913144"),
         a = i("884385"),
-        u = i("824563"),
-        r = i("49111");
+        r = i("824563"),
+        u = i("49111");
 
     function d(t, e) {
         l.default.dispatch({
@@ -40,13 +40,13 @@ function(t, e, i) {
     async function o(t, e) {
         let i = t.metadata;
         if (null != i) return i;
-        let a = u.default.getActivityMetadata(e);
+        let a = r.default.getActivityMetadata(e);
         if (null != a) return a;
         if (null == t.session_id) throw Error("null/undefined session_id");
         let {
             body: d
         } = await n.default.get({
-            url: r.Endpoints.USER_ACTIVITY_METADATA(e, t.session_id, t.application_id),
+            url: u.Endpoints.USER_ACTIVITY_METADATA(e, t.session_id, t.application_id),
             oldFormErrors: !0
         });
         return l.default.dispatch({

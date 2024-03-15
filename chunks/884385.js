@@ -20,13 +20,13 @@ function(t, e, i) {
     var n = i("968194"),
         l = i("376556"),
         a = i("161454"),
-        u = i("718517"),
-        r = i("613691"),
+        r = i("718517"),
+        u = i("613691"),
         d = i("155815"),
         s = i("662285"),
         o = i("450484"),
         c = i("49111");
-    let f = 30 * u.default.Millis.SECOND;
+    let f = 30 * r.default.Millis.SECOND;
 
     function _(t) {
         return null != t.getActiveSocketAndDevice() || d.default.isProtocolRegistered()
@@ -42,7 +42,7 @@ function(t, e, i) {
                 socket: t,
                 device: i
             } = e[0];
-            return (0, r.setActiveDevice)(t.accountId, i.id), Promise.resolve({
+            return (0, u.setActiveDevice)(t.accountId, i.id), Promise.resolve({
                 socket: t,
                 device: i
             })
@@ -55,12 +55,12 @@ function(t, e, i) {
                     let i = s.default.getPlayableComputerDevices();
                     for (let {
                             socket: a,
-                            device: u
+                            device: r
                         }
-                        of i) null == e.find(t => t.device.id === u.id) && (clearTimeout(n), s.default.removeChangeListener(l), setImmediate(() => {
-                        (0, r.setActiveDevice)(a.accountId, u.id), t({
+                        of i) null == e.find(t => t.device.id === r.id) && (clearTimeout(n), s.default.removeChangeListener(l), setImmediate(() => {
+                        (0, u.setActiveDevice)(a.accountId, r.id), t({
                             socket: a,
-                            device: u
+                            device: r
                         })
                     }))
                 };
@@ -83,7 +83,7 @@ function(t, e, i) {
         let {
             socket: e
         } = t;
-        return e.isPremium ? Promise.resolve() : (0, r.getProfile)(e.accountId, e.accessToken).then(() => {
+        return e.isPremium ? Promise.resolve() : (0, u.getProfile)(e.accountId, e.accessToken).then(() => {
             if (!e.isPremium) return Promise.reject(Error("spotify account is not premium"))
         })
     }

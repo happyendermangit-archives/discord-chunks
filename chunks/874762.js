@@ -15,8 +15,8 @@ function(e, a, t) {
         i = t("90915"),
         r = t("759843"),
         o = t("817792"),
-        f = t("815157"),
-        l = t("391679"),
+        l = t("815157"),
+        f = t("391679"),
         u = t("446674"),
         b = t("95410"),
         p = t("795137"),
@@ -259,9 +259,9 @@ function(e, a, t) {
                         });
                         {
                             let e = (0, R.getMobileDownloadLink)("app_open_from_email", t, d.mobile),
-                                a = (0, f.parseDynamicLink)(e);
+                                a = (0, l.parseDynamicLink)(e);
                             null != a && O.default.track(S.AnalyticEvents.DEEP_LINK_CLICKED, {
-                                fingerprint: (0, l.maybeExtractId)(a.fingerprint),
+                                fingerprint: (0, f.maybeExtractId)(a.fingerprint),
                                 attempt_id: a.attemptId,
                                 source: a.utmSource,
                                 destination: null != d.mobile ? d.mobile.toString() : null

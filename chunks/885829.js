@@ -8,8 +8,8 @@ function(t, e, i) {
     var n = i("404118"),
         l = i("651057"),
         a = i("299285"),
-        u = i("645999"),
-        r = i("653047"),
+        r = i("645999"),
+        u = i("653047"),
         d = i("42203"),
         s = i("305961"),
         o = i("957255"),
@@ -27,12 +27,12 @@ function(t, e, i) {
             applicationId: C,
             instanceId: v,
             inputApplication: S,
-            analyticsLocations: p,
-            embeddedActivitiesManager: N
+            analyticsLocations: N,
+            embeddedActivitiesManager: p
         } = t, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(t => t.applicationId === C && (null == v || t.instanceId === v)), D = S;
         if (null == D) {
             let t = await l.default.fetchApplication(C);
-            D = r.default.createFromServer(t)
+            D = u.default.createFromServer(t)
         }
         if (null == h || null == D) return;
         let O = c.default.getCurrentUser(),
@@ -61,7 +61,7 @@ function(t, e, i) {
                     null == i || i();
                     break;
                 case A.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-                    (0, u.showActivitiesInvalidPermissionsAlert)();
+                    (0, r.showActivitiesInvalidPermissionsAlert)();
                     break;
                 case A.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
                     n.default.show({
@@ -102,8 +102,8 @@ function(t, e, i) {
                     currentEmbeddedApplication: M,
                     activityChannelId: i,
                     locationObject: {},
-                    embeddedActivitiesManager: N,
-                    analyticsLocations: p
+                    embeddedActivitiesManager: p,
+                    analyticsLocations: N
                 })
             }
         })

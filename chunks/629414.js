@@ -2,14 +2,14 @@ function(t, e, i) {
     "use strict";
     i.r(e), i.d(e, {
         default: function() {
-            return u
+            return r
         }
     });
     var n = i("158998"),
         l = i("450484"),
         a = i("782340");
 
-    function u(t, e, i) {
+    function r(t, e, i) {
         switch (e) {
             case l.SpotifyActionTypes.USER_ACTIVITY_PLAY:
                 if (t.isCurrentUser) return a.default.Messages.USER_ACTIVITY_CANNOT_PLAY_SELF;

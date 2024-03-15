@@ -11,8 +11,8 @@ function(e, a, t) {
         i = t.n(c),
         r = t("703809"),
         o = t("446674"),
-        f = t("895547"),
-        l = t("77078"),
+        l = t("895547"),
+        f = t("77078"),
         u = t("430568"),
         b = t("471671"),
         p = t("90404"),
@@ -46,14 +46,14 @@ function(e, a, t) {
             let e = (0, d.jsx)("div", {
                     children: (0, d.jsxs)("p", {
                         children: [T.default.Messages.VERY_OUT_OF_DATE_DESCRIPTION, " ", (0, d.jsx)(u.default, {
-                            src: h.default.getURL(f.default.convert.fromCodePoint("1f44c")),
+                            src: h.default.getURL(l.default.convert.fromCodePoint("1f44c")),
                             emojiName: ":ok_hand:",
                             animated: !1
                         })]
                     })
                 }),
-                a = (0, d.jsx)(l.Button, {
-                    size: l.ButtonSizes.LARGE,
+                a = (0, d.jsx)(f.Button, {
+                    size: f.ButtonSizes.LARGE,
                     onClick: this.handleDownload,
                     children: T.default.Messages.DOWNLOAD
                 });

@@ -244,29 +244,31 @@ function(e, t, n) {
         let n = Date.now() - e;
         h.default.increment({
             name: c.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
-            tags: ["timingBucket:".concat(Math.min(Math.floor(n / 1e3), 3)), "source:".concat(t)]
+            tags: ["timingBucket:".concat(Math.min(Math.floor(n / 1e3), 3)), "source:".concat(t), "metricVersion:".concat(1)]
         })
     }
 
     function K(e) {
+        var t, n;
         let {
-            channelId: t,
-            messageId: n,
-            attachmentIds: i,
-            embedIds: s
+            channelId: i,
+            messageId: s,
+            attachmentIds: r,
+            embedIds: a
         } = e;
-        if (null == t || null == n) return;
-        let r = m.default.getChannel(t);
+        if (null == i || null == s || (null !== (t = null == r ? void 0 : r.length) && void 0 !== t ? t : 0) === 0 && (null !== (n = null == a ? void 0 : a.length) && void 0 !== n ? n : 0) === 0) return;
+        let o = m.default.getChannel(i);
         v.default.track(N.AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
-            channel_id: t,
-            guild_id: null == r ? void 0 : r.guild_id,
-            message_id: n,
-            embed_ids: s,
+            channel_id: i,
+            guild_id: null == o ? void 0 : o.guild_id,
+            message_id: s,
+            embed_ids: a,
             user_is_underage: (0, E.isCurrentUserTeen)(),
             scan_timeout_duration: I.MESSAGE_SCAN_TIMEOUT,
-            attachment_ids_v2: i
+            attachment_ids_v2: r
         }), h.default.increment({
-            name: c.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT
+            name: c.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,
+            tags: ["metricVersion:".concat(1)]
         })
     }
 

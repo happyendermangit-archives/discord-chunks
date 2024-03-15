@@ -12,18 +12,18 @@ function(e, a, t) {
         i = t("599110"),
         r = t("50885"),
         o = t("50361"),
-        f = t("49111");
+        l = t("49111");
 
-    function l(e) {
+    function f(e) {
         var a;
         return null == e ? void 0 : null === (a = e._state) || void 0 === a ? void 0 : a.lastTestTimestamp
     }
 
     function u() {
         return s.useEffect(() => {
-            window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.default.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) && r.default.supportsFeature(f.NativeFeatures.USER_DATA_CACHE) && (o.migrate(), c.default.userDataCache.getCached().then(e => {
+            window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.default.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) && r.default.supportsFeature(l.NativeFeatures.USER_DATA_CACHE) && (o.migrate(), c.default.userDataCache.getCached().then(e => {
                 if (null == e) {
-                    o.failMigration(), i.default.track(f.AnalyticEvents.DOMAIN_MIGRATED, {
+                    o.failMigration(), i.default.track(l.AnalyticEvents.DOMAIN_MIGRATED, {
                         success: !1,
                         has_data: !1
                     }, {
@@ -35,13 +35,13 @@ function(e, a, t) {
                     t = 0 !== a.length,
                     s = null != e.token,
                     r = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-                    u = null == r || null == l(r) || l(r) <= l(n.default.get("RTCRegionStore"));
+                    u = null == r || null == f(r) || f(r) <= f(n.default.get("RTCRegionStore"));
                 t && s && !u && (n.default.clear(), a.forEach(a => {
                     let t = e[a];
                     try {
                         n.default.set(a, JSON.parse(t))
                     } catch (e) {}
-                })), i.default.track(f.AnalyticEvents.DOMAIN_MIGRATED, {
+                })), i.default.track(l.AnalyticEvents.DOMAIN_MIGRATED, {
                     success: !0,
                     current_is_newer: u,
                     has_data: t

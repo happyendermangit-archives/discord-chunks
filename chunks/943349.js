@@ -15,8 +15,8 @@ function(t, e, i) {
         }
     });
     var n, l, a = i("446674"),
-        u = i("42203"),
-        r = i("305961"),
+        r = i("42203"),
+        u = i("305961"),
         d = i("957255"),
         s = i("126939"),
         o = i("702173"),
@@ -39,17 +39,17 @@ function(t, e, i) {
             if ((null == e ? void 0 : e.afkChannelId) === a.id) return 5;
             let i = l.can(c.Permissions.CONNECT, a);
             if (!i) return 2;
-            let u = l.can(c.Permissions.USE_EMBEDDED_ACTIVITIES, a);
-            if (!u) return 1
+            let r = l.can(c.Permissions.USE_EMBEDDED_ACTIVITIES, a);
+            if (!r) return 1
         }
         return 0
     }
 
     function E(t) {
-        let e = (0, a.useStateFromStores)([u.default, r.default, d.default], () => _({
+        let e = (0, a.useStateFromStores)([r.default, u.default, d.default], () => _({
             channelId: t,
-            ChannelStore: u.default,
-            GuildStore: r.default,
+            ChannelStore: r.default,
+            GuildStore: u.default,
             PermissionStore: d.default
         }), [t]);
         return e

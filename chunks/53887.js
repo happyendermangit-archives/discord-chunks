@@ -8,13 +8,13 @@ function(t, e, i) {
     var n = i("884385");
 
     function l(t, e, i, l) {
-        var a, u, r;
+        var a, r, u;
         let d = t.hasConnectedAccount(),
             s = (0, n.isSpotifyPlayable)(t),
             o = t.getTrack(),
             c = t.getSyncingWith(),
             f = t.getActivity(),
-            _ = null !== (r = null !== (u = null == o ? void 0 : o.id) && void 0 !== u ? u : null == f ? void 0 : f.sync_id) && void 0 !== r ? r : t.getLastPlayedTrackId();
+            _ = null !== (u = null !== (r = null == o ? void 0 : o.id) && void 0 !== r ? r : null == f ? void 0 : f.sync_id) && void 0 !== u ? u : t.getLastPlayedTrackId();
         return {
             user: i,
             activity: l,
