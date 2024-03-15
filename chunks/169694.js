@@ -84,12 +84,12 @@ function(e, t, n) {
             D = null,
             w = null,
             F = null,
-            B = null;
+            G = null;
         return e.onChange = () => {
             if (null != t) {
                 let a = r.default.getState(t.id),
                     u = s.getChangeKeys(t);
-                if (S.EditorUtils.richValue(e) !== U || !S.SelectionUtils.equals(e.selection, D) || a.activeCommand !== w || null == B || u.some((e, t) => B[t] !== e)) {
+                if (S.EditorUtils.richValue(e) !== U || !S.SelectionUtils.equals(e.selection, D) || a.activeCommand !== w || null == G || u.some((e, t) => G[t] !== e)) {
                     let r = E.HistoryUtils.withMergedEntry(e, () => {
                         var r;
                         return function(e) {
@@ -174,7 +174,7 @@ function(e, t, n) {
                                             o = m.length > 0 ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(T.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
                                                 text: o
                                             });
-                                            let R = {
+                                            let M = {
                                                 type: "applicationCommand",
                                                 children: N,
                                                 command: {
@@ -184,7 +184,7 @@ function(e, t, n) {
                                                 }
                                             };
                                             S.EditorUtils.withoutNormalizing(e, () => {
-                                                for (let [, t] of(g.SlateTransforms.insertNodes(e, [R], {
+                                                for (let [, t] of(g.SlateTransforms.insertNodes(e, [M], {
                                                         at: C.FIRST_BLOCK_PATH
                                                     }), S.EditorUtils.blocks(e).reverse())) S.PathUtils.isAfter(t, C.FIRST_BLOCK_PATH) && g.SlateTransforms.removeNodes(e, {
                                                     at: t,
@@ -192,10 +192,10 @@ function(e, t, n) {
                                                 })
                                             });
                                             let k = null;
-                                            return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && M(e, d), k
+                                            return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), k
                                         }(t, a, n),
                                         i = x.getOptionValues(t, E);
-                                    return R({
+                                    return M({
                                         guildId: a.guild_id,
                                         channelId: a.id,
                                         command: E,
@@ -285,14 +285,14 @@ function(e, t, n) {
                                             }
                                         })
                                     }), !0)
-                                }(t, E) && M(t, E);
+                                }(t, E) && R(t, E);
                                 let e = x.getOptionValues(t, E),
                                     n = S.EditorUtils.above(t, {
                                         match: e => S.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                                         mode: "lowest"
                                     }),
                                     i = null !== (I = null == n ? void 0 : n[0].optionName) && void 0 !== I ? I : null;
-                                return R({
+                                return M({
                                     guildId: a.guild_id,
                                     channelId: a.id,
                                     command: E,
@@ -321,7 +321,7 @@ function(e, t, n) {
                         let t = E.HistoryUtils.currentEntry(e);
                         null != t && (t.commandId = r.commandId), F = r.optionValues
                     } else F = null;
-                    U = S.EditorUtils.richValue(e), D = e.selection, w = a.activeCommand, B = u
+                    U = S.EditorUtils.richValue(e), D = e.selection, w = a.activeCommand, G = u
                 }
             }
             I()
@@ -350,7 +350,7 @@ function(e, t, n) {
         })
     }
 
-    function M(e, t) {
+    function R(e, t) {
         if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || v.has(t.options[0].type) || x.getOptionNames(e).length > 0) return !1;
         let n = x.getCommandBlock(e);
         if (null == n) return !1;
@@ -379,7 +379,7 @@ function(e, t, n) {
         }), !0)
     }
 
-    function R(e) {
+    function M(e) {
         let {
             guildId: t,
             channelId: n,

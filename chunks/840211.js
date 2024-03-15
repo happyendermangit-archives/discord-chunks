@@ -2,137 +2,173 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return v
+            return A
         }
     }), n("222007");
-    var i = n("37983"),
-        l = n("884691"),
-        a = n("414456"),
-        s = n.n(a),
-        r = n("446674"),
-        o = n("77078"),
-        u = n("685665"),
-        d = n("730859"),
-        c = n("296262"),
-        f = n("271938"),
-        p = n("476263"),
-        m = n("387111"),
-        h = n("337487"),
-        x = n("228424"),
-        E = n("602872"),
-        y = n("401642"),
-        g = n("590456"),
-        S = n("782340"),
-        C = n("45907");
-    let I = l.memo(function(e) {
-            let {
-                user: t,
-                onClose: n,
-                analyticsLocation: a,
-                maxGuilds: r = 2
-            } = e, u = (0, E.useMutualGuilds)(t), d = l.useMemo(() => {
-                var e;
-                return null !== (e = null == u ? void 0 : u.map(e => {
-                    let {
-                        guild: t
-                    } = e;
-                    return t
-                })) && void 0 !== e ? e : []
-            }, [u]), f = l.useMemo(() => S.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
-                count: d.length
-            }), [d]), m = l.useCallback(() => {
-                (0, y.openUserProfileModal)({
-                    userId: t.id,
-                    section: g.UserProfileSections.MUTUAL_GUILDS,
-                    analyticsLocation: a
-                }), null == n || n()
-            }, [a, n, t.id]);
-            return null == d || 0 === d.length ? null : (0, i.jsxs)(o.Clickable, {
-                onClick: m,
-                className: s(C.avatarAndTextContainer, C.serverContainer),
-                children: [(0, i.jsx)("div", {
-                    className: C.avatars,
-                    children: (0, i.jsx)(c.default, {
-                        maxGuilds: r,
-                        guilds: d,
-                        size: p.default.Sizes.SMOL,
-                        hideOverflowCount: !0
-                    })
-                }), (0, i.jsx)(o.Text, {
-                    className: C.itemizedListText,
-                    variant: "text-sm/normal",
-                    color: "interactive-normal",
-                    children: f
-                })]
-            })
-        }),
-        T = l.memo(function(e) {
+    var i, l, a = n("37983"),
+        s = n("884691"),
+        r = n("414456"),
+        o = n.n(r),
+        u = n("446674"),
+        d = n("77078"),
+        c = n("685665"),
+        f = n("730859"),
+        p = n("296262"),
+        m = n("271938"),
+        h = n("476263"),
+        x = n("387111"),
+        E = n("337487"),
+        y = n("228424"),
+        g = n("602872"),
+        S = n("401642"),
+        C = n("590456"),
+        I = n("782340"),
+        T = n("45907");
+    let _ = s.memo(function(e) {
+        let {
+            user: t,
+            onClose: n,
+            analyticsLocation: i,
+            maxGuilds: l = 2
+        } = e, r = (0, g.useMutualGuilds)(t), u = s.useMemo(() => {
+            var e;
+            return null !== (e = null == r ? void 0 : r.map(e => {
+                let {
+                    guild: t
+                } = e;
+                return t
+            })) && void 0 !== e ? e : []
+        }, [r]), c = s.useMemo(() => I.default.Messages.USER_PROFILE_MUTUAL_GUILDS_COUNT.format({
+            count: u.length
+        }), [u]), f = s.useCallback(() => {
+            (0, S.openUserProfileModal)({
+                userId: t.id,
+                section: C.UserProfileSections.MUTUAL_GUILDS,
+                analyticsLocation: i
+            }), null == n || n()
+        }, [i, n, t.id]);
+        return null == u || 0 === u.length ? null : (0, a.jsxs)(d.Clickable, {
+            onClick: f,
+            className: o(T.avatarAndTextContainer, T.serverContainer),
+            children: [(0, a.jsx)("div", {
+                className: T.avatars,
+                children: (0, a.jsx)(p.default, {
+                    maxGuilds: l,
+                    guilds: u,
+                    size: h.default.Sizes.SMOL,
+                    hideOverflowCount: !0
+                })
+            }), (0, a.jsx)(d.Text, {
+                className: T.itemizedListText,
+                variant: "text-sm/normal",
+                color: "interactive-normal",
+                children: c
+            })]
+        })
+    });
+    (l = i || (i = {}))[l.NOT_CHECKED = 0] = "NOT_CHECKED", l[l.NOT_OVERFLOWING = 1] = "NOT_OVERFLOWING", l[l.OVERFLOWING_LARGE_ONLY = 2] = "OVERFLOWING_LARGE_ONLY", l[l.OVERFLOWING_ALL = 3] = "OVERFLOWING_ALL";
+    let v = s.memo(function(e) {
             let {
                 user: t,
                 hasFetchedFriends: n,
-                mutualFriends: a,
-                onClose: r,
-                analyticsLocation: u,
-                maxFriends: c = 2
-            } = e, f = l.useMemo(() => {
+                mutualFriends: i,
+                onClose: l,
+                analyticsLocation: r,
+                maxFriends: u = 2
+            } = e, c = s.useMemo(() => {
                 var e;
-                return null !== (e = null == a ? void 0 : a.map(e => {
+                return null !== (e = null == i ? void 0 : i.map(e => {
                     let {
                         user: t
                     } = e;
                     return t
                 })) && void 0 !== e ? e : []
-            }, [a]), p = l.useCallback(() => {
-                (0, y.openUserProfileModal)({
+            }, [i]), p = s.useRef(null), [m, h] = s.useState(!1), [E, y] = s.useState(0), g = s.useCallback(() => {
+                if (null != p.current) {
+                    let e = p.current.clientHeight > 19;
+                    y(t => {
+                        switch (t) {
+                            case 0:
+                                return e ? 2 : 1;
+                            case 1:
+                                return h(!e), e ? 2 : 1;
+                            case 2:
+                                return h(!e), e ? 3 : 2;
+                            case 3:
+                                return h(!0), 3
+                        }
+                    })
+                }
+            }, []), _ = s.useCallback(() => {
+                (0, S.openUserProfileModal)({
                     userId: t.id,
-                    section: g.UserProfileSections.MUTUAL_FRIENDS,
-                    analyticsLocation: u
-                }), null == r || r()
-            }, [u, r, t.id]), h = l.useMemo(() => {
-                if (0 === f.length) return null;
-                let [e, t, ...n] = f;
-                return 1 === f.length ? S.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_ONE.format({
-                    usernameOne: m.default.getName(null, null, e)
-                }) : 2 === f.length ? S.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TWO.format({
-                    usernameOne: m.default.getName(null, null, e),
-                    usernameTwo: m.default.getName(null, null, t)
-                }) : f.length > 2 ? S.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_MANY.format({
-                    usernameOne: m.default.getName(null, null, e),
-                    usernameTwo: m.default.getName(null, null, t),
+                    section: C.UserProfileSections.MUTUAL_FRIENDS,
+                    analyticsLocation: r
+                }), null == l || l()
+            }, [r, l, t.id]), v = s.useMemo(() => {
+                if (0 === c.length) return null;
+                let [e, t, ...n] = c;
+                return 1 === c.length ? I.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_ONE.format({
+                    usernameOne: x.default.getName(null, null, e)
+                }) : 2 === c.length ? I.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TWO.format({
+                    usernameOne: x.default.getName(null, null, e),
+                    usernameTwo: x.default.getName(null, null, t)
+                }) : c.length > 2 ? I.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_MANY.format({
+                    usernameOne: x.default.getName(null, null, e),
+                    usernameTwo: x.default.getName(null, null, t),
                     count: n.length
                 }) : void 0
-            }, [f]);
-            return n ? 0 === f.length ? null : (0, i.jsxs)(o.Clickable, {
-                onClick: p,
-                className: s(C.avatarAndTextContainer, C.friendsContainer),
-                children: [(0, i.jsx)("div", {
-                    className: C.avatars,
-                    children: (0, i.jsx)(d.default, {
-                        maxUsers: c,
-                        users: f,
-                        size: o.AvatarSizes.SIZE_16,
-                        hideOverflowCount: !0
+            }, [c]);
+            s.useEffect(() => {
+                g()
+            }, [g, v, E]);
+            let N = s.useMemo(() => {
+                if (c.length > 0 && E > 1) {
+                    let [e, ...t] = c;
+                    return c.length > 1 && 2 === E ? I.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT.format({
+                        usernameOne: x.default.getName(null, null, e),
+                        count: t.length
+                    }) : I.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_COUNT.format({
+                        count: c.length
                     })
-                }), (0, i.jsx)(o.Text, {
-                    className: C.itemizedListText,
-                    variant: "text-sm/normal",
-                    color: "interactive-normal",
-                    children: h
-                })]
-            }) : (0, i.jsx)("div", {
-                className: C.skeleton
+                }
+                return v
+            }, [c, E, v]);
+            return n ? 0 === c.length ? null : (0, a.jsx)("div", {
+                className: o(!m && T.hideElement),
+                ref: p,
+                children: (0, a.jsxs)(d.Clickable, {
+                    onClick: _,
+                    className: o(T.avatarAndTextContainer, T.friendsContainer),
+                    children: [(0, a.jsx)("div", {
+                        className: T.avatars,
+                        children: (0, a.jsx)(f.default, {
+                            maxUsers: u,
+                            users: c,
+                            size: d.AvatarSizes.SIZE_16,
+                            hideOverflowCount: !0
+                        })
+                    }), (0, a.jsx)(d.Text, {
+                        className: T.itemizedListText,
+                        variant: "text-sm/normal",
+                        color: "interactive-normal",
+                        children: N
+                    })]
+                })
+            }) : (0, a.jsx)("div", {
+                className: T.skeleton
             })
         }),
-        _ = l.memo(function(e) {
+        N = s.memo(function(e) {
             let {
                 user: t,
                 mutualFriends: n,
-                mutualGuilds: a,
-                hasFetchedFriends: r,
-                onClose: u,
-                analyticsLocation: f,
-                maxIcons: m = 3
-            } = e, h = l.useMemo(() => {
+                mutualGuilds: i,
+                hasFetchedFriends: l,
+                onClose: r,
+                analyticsLocation: u,
+                maxIcons: c = 3
+            } = e, m = s.useMemo(() => {
                 var e;
                 return null !== (e = null == n ? void 0 : n.map(e => {
                     let {
@@ -140,106 +176,122 @@ function(e, t, n) {
                     } = e;
                     return t
                 })) && void 0 !== e ? e : []
-            }, [n]), x = l.useMemo(() => {
+            }, [n]), x = s.useMemo(() => {
                 var e;
-                return null !== (e = null == a ? void 0 : a.map(e => {
+                return null !== (e = null == i ? void 0 : i.map(e => {
                     let {
                         guild: t
                     } = e;
                     return t
                 })) && void 0 !== e ? e : []
-            }, [a]), E = l.useMemo(() => S.default.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
-                count: h.length
-            }), [h]), I = l.useCallback(e => () => {
-                (0, y.openUserProfileModal)({
+            }, [i]), E = s.useMemo(() => I.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
+                count: m.length
+            }), [m]), y = s.useMemo(() => I.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+                count: x.length
+            }), [x]), g = s.useRef(null), [_, v] = s.useState(!1), [N, A] = s.useState(!1), O = s.useCallback(() => {
+                if (null != g.current) {
+                    var e;
+                    let t = (null === (e = g.current) || void 0 === e ? void 0 : e.clientHeight) > 19;
+                    A(t), v(!0)
+                }
+            }, []), R = s.useCallback(e => () => {
+                (0, S.openUserProfileModal)({
                     userId: t.id,
                     section: e,
-                    analyticsLocation: f
-                }), null == u || u()
-            }, [f, u, t.id]), T = l.useMemo(() => S.default.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
-                count: x.length
-            }), [x]), _ = h.length > 0, v = x.length > 0;
-            return r ? (0, i.jsxs)("div", {
-                className: C.itemContainer,
-                children: [_ && (0, i.jsxs)(o.Clickable, {
-                    onClick: I(g.UserProfileSections.MUTUAL_FRIENDS),
-                    className: s(C.avatarAndTextContainer, C.friendsContainer),
-                    children: [(0, i.jsx)("div", {
-                        className: C.avatars,
-                        children: (0, i.jsx)(d.default, {
-                            maxUsers: m,
-                            users: h,
-                            size: o.AvatarSizes.SIZE_16,
+                    analyticsLocation: u
+                }), null == r || r()
+            }, [u, r, t.id]);
+            s.useEffect(() => {
+                O()
+            }, [O, E]);
+            let M = m.length > 0,
+                k = x.length > 0;
+            return l ? (0, a.jsxs)("div", {
+                className: o(T.compactItemContainer, !_ && T.hideElement),
+                ref: g,
+                children: [M && (0, a.jsxs)(d.Clickable, {
+                    onClick: R(C.UserProfileSections.MUTUAL_FRIENDS),
+                    className: o(T.avatarAndTextContainer, T.friendsContainer),
+                    children: [(0, a.jsx)("div", {
+                        className: T.avatars,
+                        children: (0, a.jsx)(f.default, {
+                            maxUsers: c,
+                            users: m,
+                            size: d.AvatarSizes.SIZE_16,
                             hideOverflowCount: !0
                         })
-                    }), (0, i.jsx)(o.Text, {
-                        className: C.itemizedListText,
-                        variant: "text-sm/medium",
-                        color: "interactive-active",
+                    }), (0, a.jsx)(d.Text, {
+                        className: T.itemizedListText,
+                        variant: "text-sm/normal",
+                        color: "interactive-normal",
                         children: E
                     })]
-                }), _ && v && (0, i.jsx)("div", {
+                }), M && k && (0, a.jsx)("div", {
                     "aria-hidden": "true",
-                    className: C.dotSpacer
-                }), v && (0, i.jsxs)(o.Clickable, {
-                    onClick: I(g.UserProfileSections.MUTUAL_GUILDS),
-                    className: s(C.avatarAndTextContainer, C.serverContainer),
-                    children: [!_ && (0, i.jsx)("div", {
-                        className: C.avatars,
-                        children: (0, i.jsx)(c.default, {
-                            maxGuilds: m,
+                    className: T.dotSpacer
+                }), k && (0, a.jsxs)(d.Clickable, {
+                    onClick: R(C.UserProfileSections.MUTUAL_GUILDS),
+                    className: o(T.avatarAndTextContainer, T.serverContainer),
+                    children: [!N && (0, a.jsx)("div", {
+                        className: T.avatars,
+                        children: (0, a.jsx)(p.default, {
+                            maxGuilds: c,
                             guilds: x,
-                            size: p.default.Sizes.SMOL,
+                            size: h.default.Sizes.SMOL,
                             hideOverflowCount: !0
                         })
-                    }), (0, i.jsx)(o.Text, {
-                        className: C.itemizedListText,
-                        variant: "text-sm/medium",
-                        color: "interactive-active",
-                        children: T
+                    }), (0, a.jsx)(d.Text, {
+                        className: T.itemizedListText,
+                        variant: "text-sm/normal",
+                        color: "interactive-normal",
+                        children: y
                     })]
                 })]
-            }) : (0, i.jsx)("div", {
-                className: C.skeleton
+            }) : (0, a.jsx)("div", {
+                className: T.skeleton
             })
         });
-    var v = l.memo(function(e) {
+    var A = s.memo(function(e) {
         var t, n;
         let {
-            user: l,
-            onClose: a,
-            className: o,
-            sourceAnaylticsLocations: d
+            user: i,
+            onClose: l,
+            className: s,
+            sourceAnaylticsLocations: r
         } = e, {
-            analyticsLocations: c
-        } = (0, u.default)(), p = null !== (n = null !== (t = null == d ? void 0 : d[0]) && void 0 !== t ? t : null == c ? void 0 : c[0]) && void 0 !== n ? n : null, m = (0, r.useStateFromStores)([f.default], () => f.default.getId()), y = l.id === m, g = l.bot || y, {
-            compact: S,
-            enabled: v
-        } = (0, h.useProfileMutualsExperiment)({
+            analyticsLocations: f
+        } = (0, c.default)(), p = null !== (n = null !== (t = null == r ? void 0 : r[0]) && void 0 !== t ? t : null == f ? void 0 : f[0]) && void 0 !== n ? n : null, h = (0, u.useStateFromStores)([m.default], () => m.default.getId()), x = i.id === h, S = i.bot || x, {
+            compact: C,
+            enabled: A
+        } = (0, E.useProfileMutualsExperiment)({
             autoTrackExposure: !1,
             location: p,
-            disable: g
-        }), N = (0, E.useMutualGuilds)(l), [A, O] = (0, x.useMutualFriends)(l);
-        if (!v || g) return null;
-        let M = (null == O || 0 === O.length) && 0 === N.length;
-        return A && M ? null : (0, i.jsxs)("div", {
-            className: s(C.mainContainer, o),
-            children: [S && (0, i.jsx)(_, {
-                user: l,
-                mutualFriends: O,
-                hasFetchedFriends: A,
-                mutualGuilds: N,
-                onClose: a
-            }), !S && (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(T, {
-                    user: l,
-                    mutualFriends: O,
-                    hasFetchedFriends: A,
-                    onClose: a
-                }), (0, i.jsx)(I, {
-                    user: l,
-                    mutualGuilds: N,
-                    onClose: a
+            disable: S
+        }), O = (0, g.useMutualGuilds)(i), [R, M] = (0, y.useMutualFriends)(i);
+        if (!A || S) return null;
+        let k = (null == M || 0 === M.length) && 0 === O.length;
+        return R && k ? null : (0, a.jsxs)("div", {
+            className: o(T.mainContainer, s),
+            children: [(0, a.jsx)(d.Heading, {
+                variant: "eyebrow",
+                className: T.title,
+                children: I.default.Messages.USER_PROFILE_MUTUALS_TITLE
+            }), C && (0, a.jsx)(N, {
+                user: i,
+                mutualFriends: M,
+                hasFetchedFriends: R,
+                mutualGuilds: O,
+                onClose: l
+            }), !C && (0, a.jsxs)(a.Fragment, {
+                children: [(0, a.jsx)(v, {
+                    user: i,
+                    mutualFriends: M,
+                    hasFetchedFriends: R,
+                    onClose: l
+                }), (0, a.jsx)(_, {
+                    user: i,
+                    mutualGuilds: O,
+                    onClose: l
                 })]
             })]
         })

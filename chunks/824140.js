@@ -42,15 +42,15 @@ function(e, t, n) {
             locale: N,
             userId: A,
             className: O,
-            showMetadata: M,
-            showInvisibleIcon: R
+            showMetadata: R,
+            showInvisibleIcon: M
         } = e;
-        null == M && (M = !0);
+        null == R && (R = !0);
         let k = null !== (n = E.metadata) && void 0 !== n ? n : {},
-            L = M ? (0, m.getCreatedAtDate)(k[I.MetadataFields.CREATED_AT], N) : null,
+            L = R ? (0, m.getCreatedAtDate)(k[I.MetadataFields.CREATED_AT], N) : null,
             P = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
             b = T.default.Messages.CONNECTION_VERIFIED;
-        if (M) switch (E.type) {
+        if (R) switch (E.type) {
             case C.PlatformTypes.REDDIT:
                 l = (0, h.generateRedditMetadataItems)(k);
                 break;
@@ -74,7 +74,7 @@ function(e, t, n) {
         }
         let j = c.default.get((0, p.useLegacyPlatformType)(E.type)),
             U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, E);
-        null != R && R ? d = (0, i.jsx)(g.default, {
+        null != M && M ? d = (0, i.jsx)(g.default, {
             className: s(_.connectedAccountOpenIconContainer, _.connectedAccountHideIcon),
             foregroundColor: "currentColor"
         }) : null != U && (d = (0, i.jsx)(u.Anchor, {

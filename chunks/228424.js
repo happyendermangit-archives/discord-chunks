@@ -18,28 +18,38 @@ function(e, t, n) {
         let t = (0, r.useStateFromStores)([f.default], () => f.default.getMutualFriends(e.id)),
             n = a.useRef(null != t),
             [i, l] = a.useState(n.current ? 2 : 0),
-            p = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-            m = e.id === p,
-            h = e.bot || m,
+            p = a.useRef(new AbortController),
+            m = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
+            h = e.id === m,
+            x = e.bot || h,
             {
-                enabled: x
+                enabled: E
             } = (0, c.useProfileMutualsExperiment)({
-                disable: h
+                disable: x
             }),
-            E = a.useCallback(async (e, t) => {
-                !(t > 0) && (l(1), await (0, o.fetchMutualFriends)(e), l(2))
+            y = a.useCallback(async (e, t) => {
+                if (!(t > 0)) {
+                    l(1);
+                    try {
+                        await (0, o.fetchMutualFriends)(e, p.current.signal)
+                    } catch (e) {}
+                    l(2)
+                }
             }, []);
         a.useEffect(() => {
-            null == t && !h && x && E(e.id, i)
-        }, [h, x, i, E, t, e.bot, e.id]);
-        let y = i > 1,
-            g = (0, r.useStateFromStoresArray)([d.default], () => (0, s.sortBy)(t, e => {
+            null == t && !x && E && y(e.id, i)
+        }, [x, E, i, y, t, e.bot, e.id]), a.useEffect(() => () => {
+            var e;
+            null === (e = p.current) || void 0 === e || e.abort()
+        }, []);
+        let g = i > 1,
+            S = (0, r.useStateFromStoresArray)([d.default], () => (0, s.sortBy)(t, e => {
                 var t, n;
                 let {
                     user: i
                 } = e;
                 return -(null !== (n = null === (t = d.default.getUserAffinity(i.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0)
             }));
-        return [y, g]
+        return [g, S]
     }(l = i || (i = {}))[l.NOT_FETCHED = 0] = "NOT_FETCHED", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED"
 }

@@ -32,8 +32,8 @@ function(e, t, n) {
         N = n("774713"),
         A = n("510788"),
         O = n("756731"),
-        M = n("762806"),
-        R = n("438278"),
+        R = n("762806"),
+        M = n("438278"),
         k = n("898481"),
         L = n("49111"),
         P = n("279453"),
@@ -49,8 +49,8 @@ function(e, t, n) {
                     color: D = d.Button.Colors.WHITE,
                     look: w = d.Button.Looks.OUTLINED,
                     type: F,
-                    onAction: B,
-                    isEmbedded: G = !1
+                    onAction: G,
+                    isEmbedded: B = !1
                 } = e,
                 H = (0, C.default)(),
                 V = (0, u.useStateFromStores)([h.default], () => {
@@ -79,7 +79,7 @@ function(e, t, n) {
                 platform: f.default.get(L.PlatformTypes.PLAYSTATION)
             }, "ConnectPlatformActivityButton")];
             else if (Y) {
-                let e = (0, i.jsx)(M.default, {
+                let e = (0, i.jsx)(R.default, {
                         activity: n,
                         user: l,
                         color: D,
@@ -123,7 +123,7 @@ function(e, t, n) {
                 }, "hang-status-button");
                 t = [e]
             } else {
-                let e = (0, i.jsx)(R.default, {
+                let e = (0, i.jsx)(M.default, {
                         activity: n,
                         color: D,
                         look: w
@@ -135,7 +135,7 @@ function(e, t, n) {
                         isCurrentUser: V.id === l.id,
                         color: D,
                         look: w,
-                        isEmbedded: G
+                        isEmbedded: B
                     }, "join-activity-button"),
                     s = (0, i.jsx)(A.default, {
                         activity: n,
@@ -160,7 +160,7 @@ function(e, t, n) {
                 wrap: Q ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
                 className: a(c, P.buttonsWrapper, Q ? P.vertical : P.horizontal),
                 onClick: function(e) {
-                    (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == B || B())
+                    (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == G || G())
                 },
                 children: t
             })

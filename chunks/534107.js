@@ -74,8 +74,8 @@ function(e, t, n) {
             onDragEnd: A
         } = e, {
             ref: O,
-            width: M
-        } = (0, u.default)(), R = l.useMemo(() => {
+            width: R
+        } = (0, u.default)(), M = l.useMemo(() => {
             var e;
             let t;
             return Math.floor(((t = (e = c) <= x ? 40 : e >= 45 ? 294 : (Math.min(e, 45) - x) / (45 - x) * 254 + 40) + 4) / E) * E - 4
@@ -108,12 +108,12 @@ function(e, t, n) {
                     }(null != n ? n : [], i)) && void 0 !== e ? e : g
                 }, [n, i]);
             return a
-        }(n, M), P = l.useRef(y), b = l.useRef(_), j = l.useRef(null), U = window.devicePixelRatio, {
+        }(n, R), P = l.useRef(y), b = l.useRef(_), j = l.useRef(null), U = window.devicePixelRatio, {
             lastBackgroundFillColor: D,
             backgroundFillColor: w,
             lastActiveFillColor: F,
-            activeFillColor: B,
-            lastInactiveFillColor: G,
+            activeFillColor: G,
+            lastInactiveFillColor: B,
             inactiveFillColor: H
         } = function(e, t) {
             let n = (0, o.useToken)(r.default.colors.INTERACTIVE_MUTED).hex(),
@@ -183,9 +183,9 @@ function(e, t, n) {
                     constrainMin: !0
                 });
                 l.fill();
-                let [d, c] = T(G, H, n, j.current);
+                let [d, c] = T(B, H, n, j.current);
                 s = s || c;
-                let [f, p] = T(F, B, n, j.current);
+                let [f, p] = T(F, G, n, j.current);
                 s = s || p;
                 for (let e = 0; e < a.length; e++) {
                     let t = a[e],
@@ -203,7 +203,7 @@ function(e, t, n) {
             }), () => {
                 null != e && cancelAnimationFrame(e)
             }
-        }, [O, U, L, M, a, c, y, _, D, w, F, B, G, H]);
+        }, [O, U, L, R, a, c, y, _, D, w, F, G, B, H]);
         let [, V] = (0, d.default)({
             ref: O,
             onDrag: v,
@@ -214,11 +214,11 @@ function(e, t, n) {
             onMouseDown: V,
             className: s(h.canvas, t),
             style: {
-                width: R
+                width: M
             },
             ref: O,
             height: 32 * window.devicePixelRatio,
-            width: (null != M ? M : 0) * window.devicePixelRatio
+            width: (null != R ? R : 0) * window.devicePixelRatio
         })
     }
 }

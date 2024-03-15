@@ -30,8 +30,8 @@ function(e, t, n) {
         N = n("296141"),
         A = n("606013"),
         O = n("32647"),
-        M = n("970153"),
-        R = n("49111"),
+        R = n("970153"),
+        M = n("49111"),
         k = n("782340"),
         L = n("350583");
     new S.default("ChannelEditor.tsx");
@@ -55,7 +55,7 @@ function(e, t, n) {
             if (this.fixFocus(e), this.props.useSlate !== e.useSlate) {
                 var t, n;
                 let e;
-                e = this.props.useSlate ? this.props.textValue : (0, M.toTextValue)(this.props.richValue, {
+                e = this.props.useSlate ? this.props.textValue : (0, R.toTextValue)(this.props.richValue, {
                     mode: "plain"
                 }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, v.toRichValue)(e))
             } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
@@ -176,7 +176,7 @@ function(e, t, n) {
                 useNewSlashCommands: C,
                 canOnlyUseTextCommands: T,
                 className: N,
-                id: M,
+                id: R,
                 required: k,
                 maxCharacterCount: P,
                 allowNewLines: j,
@@ -185,14 +185,14 @@ function(e, t, n) {
                 accessibilityLabel: w
             } = this.props, {
                 submitting: F,
-                popup: B
-            } = this.state, G = {
+                popup: G
+            } = this.state, B = {
                 channel: x,
                 className: r(N, L.textArea, {
                     [L.textAreaSlate]: g,
                     [L.textAreaDisabled]: d || F
                 }),
-                id: M,
+                id: R,
                 placeholder: this.getPlaceholder(),
                 required: k,
                 accessibilityLabel: w,
@@ -221,32 +221,32 @@ function(e, t, n) {
                 useNewSlashCommands: C,
                 disableAutoFocus: m.isMobile || null !== (n = E.disableAutoFocus) && void 0 !== n && n,
                 disableEnterToSubmit: null !== (i = null === (e = E.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
-                "aria-controls": null !== (a = B.id) && void 0 !== a ? a : void 0,
+                "aria-controls": null !== (a = G.id) && void 0 !== a ? a : void 0,
                 "aria-haspopup": "listbox",
-                "aria-expanded": null !== B.id || void 0,
-                "aria-activedescendant": null !== (s = B.activeDescendant) && void 0 !== s ? s : void 0,
+                "aria-expanded": null !== G.id || void 0,
+                "aria-activedescendant": null !== (s = G.activeDescendant) && void 0 !== s ? s : void 0,
                 "aria-invalid": o.length > P,
                 "aria-describedby": U,
                 "aria-labelledby": D,
                 "aria-autocomplete": "list"
             }, H = g ? (0, l.jsx)(O.default, {
                 ref: this.ref,
-                ...G,
+                ...B,
                 type: E,
                 value: d ? (0, v.toRichValue)("") : u,
                 canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
                 canOnlyUseTextCommands: T
             }) : (0, l.jsx)(A.default, {
                 ref: this.ref,
-                ...G,
+                ...B,
                 value: d ? "" : o
             });
             return (0, l.jsxs)(l.Fragment, {
                 children: [(0, l.jsx)(I.ComponentAction, {
-                    event: R.ComponentActions.INSERT_TEXT,
+                    event: M.ComponentActions.INSERT_TEXT,
                     handler: this.handleInsertText
                 }), (0, l.jsx)(I.ComponentAction, {
-                    event: R.ComponentActions.CLEAR_TEXT,
+                    event: M.ComponentActions.CLEAR_TEXT,
                     handler: this.handleClearText
                 }), H]
             })

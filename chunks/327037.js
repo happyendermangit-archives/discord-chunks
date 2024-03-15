@@ -131,20 +131,21 @@ function(e, t, n) {
             }), t
         }
     }
-    async function S(e) {
+    async function S(e, t) {
         l.default.dispatch({
             type: "MUTUAL_FRIENDS_FETCH_START",
             userId: e
         });
         try {
-            let t = await o.default.get({
+            let n = await o.default.get({
                 url: f.Endpoints.USER_RELATIONSHIPS(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                signal: t
             });
             l.default.dispatch({
                 type: "MUTUAL_FRIENDS_FETCH_SUCCESS",
                 userId: e,
-                mutualFriends: t.body
+                mutualFriends: n.body
             })
         } catch (t) {
             throw (null == t ? void 0 : t.body) != null && _.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({

@@ -35,16 +35,16 @@ function(e, t, n) {
             location: "PaymentContextProvider"
         }, {
             autoTrackExposure: T && _
-        }), [N, A] = l.useState(T ? v && _ ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : p), [O, M] = l.useState(t && (0, o.getGiftExperience)(E) === o.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? c.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : r), [R, k] = l.useState(void 0), [L, P] = l.useState(void 0), b = (0, o.useGetGiftCode)(x, t), [j, U] = l.useState(!1), [D, w] = l.useState(!1), [F, B] = l.useState(), G = l.useCallback(e => {
+        }), [N, A] = l.useState(T ? v && _ ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : p), [O, R] = l.useState(t && (0, o.getGiftExperience)(E) === o.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? c.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : r), [M, k] = l.useState(void 0), [L, P] = l.useState(void 0), b = (0, o.useGetGiftCode)(x, t), [j, U] = l.useState(!1), [D, w] = l.useState(!1), [F, G] = l.useState(), B = l.useCallback(e => {
             let {
                 onSubscriptionConfirmation: t
             } = e;
             return w(!0), (0, a.sendGiftMessage)(E, b).then(() => {
                 w(!1), null == t || t(), U(!0)
             }).catch(e => {
-                w(!1), B(e), U(!0)
+                w(!1), G(e), U(!0)
             })
-        }, [E, b, w, U, B]);
+        }, [E, b, w, U, G]);
         return (0, i.jsx)(m.Provider, {
             value: {
                 isGift: t,
@@ -56,15 +56,15 @@ function(e, t, n) {
                 setGiftRecipientError: S,
                 validatingGiftRecipient: C,
                 setValidatingGiftRecipient: I,
-                soundEffect: R,
+                soundEffect: M,
                 setSoundEffect: k,
                 emojiConfetti: L,
                 setEmojiConfetti: P,
                 customGiftMessage: O,
-                setCustomGiftMessage: M,
+                setCustomGiftMessage: R,
                 selectedGiftStyle: N,
                 setSelectedGiftStyle: A,
-                sendGiftMessage: G,
+                sendGiftMessage: B,
                 hasSentMessage: j,
                 isSendingMessage: D,
                 giftMessageError: F

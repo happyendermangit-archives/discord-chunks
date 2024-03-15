@@ -31,8 +31,8 @@ function(e, t, n) {
         N = n("200197"),
         A = n("538282"),
         O = n("241488"),
-        M = n("292936"),
-        R = n("791234"),
+        R = n("292936"),
+        M = n("791234"),
         k = n("267567"),
         L = n("217535"),
         P = n("558901"),
@@ -42,8 +42,8 @@ function(e, t, n) {
         D = n("300322"),
         w = n("845579"),
         F = n("26989"),
-        B = n("957255"),
-        G = n("18494"),
+        G = n("957255"),
+        B = n("18494"),
         H = n("769264"),
         V = n("585722"),
         K = n("697218"),
@@ -76,8 +76,8 @@ function(e, t, n) {
                 id: eN,
                 required: eA,
                 disabled: eO,
-                placeholder: eM,
-                accessibilityLabel: eR,
+                placeholder: eR,
+                accessibilityLabel: eM,
                 channel: ek,
                 type: eL,
                 focused: eP,
@@ -87,8 +87,8 @@ function(e, t, n) {
                 pendingReply: eD,
                 onChange: ew,
                 onResize: eF,
-                onBlur: eB,
-                onFocus: eG,
+                onBlur: eG,
+                onFocus: eB,
                 onKeyDown: eH,
                 onSubmit: eV,
                 promptToUpload: eK,
@@ -141,10 +141,10 @@ function(e, t, n) {
                         let n = K.default.getCurrentUser();
                         return null !== (t = null != l && null != n ? null === (e = F.default.getMember(l, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
                     }),
-                    r = (0, p.useStateFromStoresObject)([B.default], () => {
+                    r = (0, p.useStateFromStoresObject)([G.default], () => {
                         var l, a;
                         let r = e.isPrivate(),
-                            o = B.default.computePermissions(e),
+                            o = G.default.computePermissions(e),
                             u = f.default.has(o, ea.Permissions.CREATE_PUBLIC_THREADS) || f.default.has(o, ea.Permissions.CREATE_PRIVATE_THREADS),
                             d = (!(null === (l = t.permissions) || void 0 === l ? void 0 : l.requireCreateTherads) || u) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || f.default.has(o, ea.Permissions.SEND_MESSAGES)),
                             c = d && f.default.has(o, ea.Permissions.ATTACH_FILES),
@@ -216,7 +216,7 @@ function(e, t, n) {
                     o(!0);
                     let g = null !== (E = null === (x = b.default.getStickerPreview(s, t.drafts.type)) || void 0 === x ? void 0 : x.map(e => e.id)) && void 0 !== E ? E : [],
                         S = null !== (y = V.default.getUploads(s, t.drafts.type)) && void 0 !== y ? y : [];
-                    if (null == d && !f && !p && (0, R.shouldShowAddMediaToOriginalPostModal)(S, s)) {
+                    if (null == d && !f && !p && (0, M.shouldShowAddMediaToOriginalPostModal)(S, s)) {
                         o(!1), (0, m.openModalLazy)(async () => {
                             let {
                                 default: e
@@ -246,7 +246,7 @@ function(e, t, n) {
                         let c = (n = u, i = t, null !== (r = n && (null === (l = i.submit) || void 0 === l ? void 0 : l.clearOnSubmit)) && void 0 !== r && r),
                             f = null != a.current;
                         if (c) {
-                            if (s !== G.default.getChannelId()) h.default.saveDraft(s, "", t.drafts.type);
+                            if (s !== B.default.getChannelId()) h.default.saveDraft(s, "", t.drafts.type);
                             else f && a.current.clearValue()
                         }
                         f && (o(!1), (0, A.closeExpressionPicker)(), d && a.current.focus())
@@ -325,12 +325,12 @@ function(e, t, n) {
                     let t = eS.current;
                     null != e && null != t && t.insertSound(e), (0, A.closeExpressionPicker)()
                 }, [eS])),
-                tM = l.useCallback(() => {
+                tR = l.useCallback(() => {
                     var e;
                     return null == tt ? void 0 : null === (e = tt.current) || void 0 === e ? void 0 : e.hide()
                 }, []),
                 {
-                    editorHeight: tR,
+                    editorHeight: tM,
                     handleResize: tk
                 } = function(e) {
                     let [t, n] = l.useState(0), i = l.useCallback(t => {
@@ -394,13 +394,13 @@ function(e, t, n) {
                 }, {
                     autoTrackExposure: !1
                 }).enabled,
-                tB = (0, p.useStateFromStores)([S.default], () => S.default.shouldShowPopup(), []);
+                tG = (0, p.useStateFromStores)([S.default], () => S.default.shouldShowPopup(), []);
             (0, Z.useHereMentionCallback)(tE, ek.guild_id, ek.id);
-            let tG = null != eD,
+            let tB = null != eD,
                 tH = ts && !((tl || ta) && tu) || tg && (null === (o = eL.submit) || void 0 === o ? void 0 : o.useDisabledStylesOnSubmit),
                 tV = null,
                 tK = null;
-            null != tn ? tV = null == eU ? void 0 : eU(tn, ti, eo.attachButton) : (!ts || to) && (tV = null == eb ? void 0 : eb(tG, eo.attachButton), tF && (tK = null == ej ? void 0 : ej()));
+            null != tn ? tV = null == eU ? void 0 : eU(tn, ti, eo.attachButton) : (!ts || to) && (tV = null == eb ? void 0 : eb(tB, eo.attachButton), tF && (tK = null == ej ? void 0 : ej()));
             let tW = tc && null != eI && !ts && eL.showCharacterCount && null == tn,
                 tY = tc && !__OVERLAY__ && null != eI && null == tn,
                 tz = function(e, t, n, i) {
@@ -412,7 +412,7 @@ function(e, t, n) {
                 }(ek, eL, eI, tI),
                 tZ = (0, _.useShouldShowPTONotice)(ek),
                 tJ = null != tn || null != eD || tZ,
-                tq = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tR <= 44;
+                tq = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
             return (0, i.jsx)(N.EventEmitterProvider, {
                 value: tE,
                 children: (0, i.jsxs)(e8, {
@@ -441,7 +441,7 @@ function(e, t, n) {
                             pendingReply: eD
                         }), (0, i.jsxs)("div", {
                             ref: te,
-                            onScroll: tM,
+                            onScroll: tR,
                             className: s(e_, {
                                 [eo.scrollableContainer]: !0,
                                 [eo.themedBackground]: !e7,
@@ -473,9 +473,9 @@ function(e, t, n) {
                                         textValue: eC,
                                         richValue: eI,
                                         disabled: ts,
-                                        placeholder: eM,
+                                        placeholder: eR,
                                         required: eA,
-                                        accessibilityLabel: eR,
+                                        accessibilityLabel: eM,
                                         isPreviewing: (tl || ta) && tu,
                                         channel: ek,
                                         type: eL,
@@ -486,8 +486,8 @@ function(e, t, n) {
                                         "aria-describedby": eQ,
                                         onChange: ew,
                                         onResize: tk,
-                                        onBlur: eB,
-                                        onFocus: eG,
+                                        onBlur: eG,
+                                        onFocus: eB,
                                         onKeyDown: eH,
                                         onSubmit: tS,
                                         onTab: tL,
@@ -499,7 +499,7 @@ function(e, t, n) {
                                         promptToUpload: eK,
                                         fontSize: th,
                                         spellcheckEnabled: tx,
-                                        canOnlyUseTextCommands: tG,
+                                        canOnlyUseTextCommands: tB,
                                         className: s({
                                             [eo.textAreaThreadCreation]: eL === J.ChatInputTypes.THREAD_CREATION,
                                             [eo.profileBioInput]: eL === J.ChatInputTypes.PROFILE_BIO_INPUT
@@ -517,14 +517,14 @@ function(e, t, n) {
                         }), tf ? null : (0, i.jsx)(T.default, {
                             ref: e5,
                             channel: ek,
-                            canOnlyUseTextCommands: tG
+                            canOnlyUseTextCommands: tB
                         }), (0, i.jsx)(v.default, {
                             ref: tI,
                             channel: ek,
                             canMentionRoles: eY,
                             canMentionChannels: ez,
                             useNewSlashCommands: tc,
-                            canOnlyUseTextCommands: tG,
+                            canOnlyUseTextCommands: tB,
                             canSendStickers: null === (ed = eL.stickers) || void 0 === ed ? void 0 : ed.allowSending,
                             textValue: eC,
                             focused: eP,
@@ -534,12 +534,12 @@ function(e, t, n) {
                             onSendMessage: tS,
                             onSendSticker: tA,
                             onVisibilityChange: tD,
-                            editorHeight: tR,
+                            editorHeight: tM,
                             setValue: (e, t) => null == ew ? void 0 : ew(null, e, t),
                             position: e1
                         }), (0, i.jsx)(P.default, {
                             textValue: eC,
-                            editorHeight: tR
+                            editorHeight: tM
                         }), tW ? (0, i.jsx)(en.default, {
                             type: eL,
                             textValue: eC,
@@ -548,7 +548,7 @@ function(e, t, n) {
                             }),
                             maxCharacterCount: eZ,
                             showRemainingCharsAfterCount: eJ
-                        }) : null, tz ? (0, i.jsx)(M.default, {
+                        }) : null, tz ? (0, i.jsx)(R.default, {
                             editorRef: e9,
                             channel: ek,
                             isEditorFocused: eP,
@@ -569,7 +569,7 @@ function(e, t, n) {
                         position: "top",
                         align: "right",
                         positionLayerClassName: eo.expressionPickerPositionLayer
-                    }), tB ? (0, i.jsx)(C.default, {
+                    }), tG ? (0, i.jsx)(C.default, {
                         positionTargetRef: e4,
                         channel: ek,
                         closeOnModalOuterClick: e6,

@@ -31,8 +31,8 @@ function(e, t, n) {
         N = n("923582"),
         A = n("80921"),
         O = n("954016"),
-        M = n("646718"),
-        R = n("350583");
+        R = n("646718"),
+        M = n("350583");
 
     function k(e) {
         let {
@@ -67,7 +67,7 @@ function(e, t, n) {
             channel: D,
             handleSubmit: w,
             isEmpty: F
-        } = e, B = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), G = (0, s.useStateFromStores)([x.default], () => x.default.getStickerPreview(D.id, j.drafts.type)), H = null != G && G.length > 0, V = (0, s.useStateFromStores)([E.default], () => E.default.getUploads(D.id, j.drafts.type)), {
+        } = e, G = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), B = (0, s.useStateFromStores)([x.default], () => x.default.getStickerPreview(D.id, j.drafts.type)), H = null != B && B.length > 0, V = (0, s.useStateFromStores)([E.default], () => E.default.getUploads(D.id, j.drafts.type)), {
             activeCommand: K,
             activeCommandOption: W
         } = (0, s.useStateFromStoresObject)([d.default], () => ({
@@ -85,7 +85,7 @@ function(e, t, n) {
             location: "dc120b_4"
         }, {
             autoTrackExposure: !1
-        }), J = y.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => Z && g.default.isPremiumExactly(J, M.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
+        }), J = y.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => Z && g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
             if (!D.isDM() || void 0 === D.recipients || D.recipients.length > 1 || !Z) return !1;
             let e = D.recipients[0],
                 t = f.default.getSentUserIds();
@@ -103,7 +103,7 @@ function(e, t, n) {
             return [Z && l && a, a]
         }), ee = (0, u.useActivitiesInTextButtonVisibility)(D.id, "ChannelTextAreaButtons");
         if (!a.isMobile) {
-            if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, M.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+            if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
                     location: "dc120b_5"
                 }), Q && z.push((0, i.jsx)(_.default, {
                     disabled: U,
@@ -137,11 +137,11 @@ function(e, t, n) {
         return ((null === (t = j.emojis) || void 0 === t ? void 0 : t.button) != null && (null == K || null != W && W.type !== r.ApplicationCommandOptionType.ATTACHMENT) && z.push((0, i.jsx)(C.default, {
             disabled: U,
             type: j
-        }, "emoji")), (null === (n = j.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (l = j.submit) || void 0 === l ? void 0 : l.ignorePreference) || B) && z.push((0, i.jsx)(N.default, {
+        }, "emoji")), (null === (n = j.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (l = j.submit) || void 0 === l ? void 0 : l.ignorePreference) || G) && z.push((0, i.jsx)(N.default, {
             onClick: w,
             disabled: U || 0 === V.length && F && !H
         }, "submit")), 0 === z.length) ? null : (0, i.jsx)("div", {
-            className: R.buttons,
+            className: M.buttons,
             children: z
         })
     })

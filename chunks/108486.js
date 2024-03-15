@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SeasonalGiftIcon: function() {
-            return B
+            return G
         },
         default: function() {
-            return G
+            return B
         }
     }), n("222007"), n("424973");
     var i = n("37983"),
@@ -34,8 +34,8 @@ function(e, t, n) {
         N = n("158998"),
         A = n("49111"),
         O = n("994428"),
-        M = n("646718"),
-        R = n("782340"),
+        R = n("646718"),
+        M = n("782340"),
         k = n("240497"),
         L = n("350583");
     let P = [{
@@ -88,7 +88,7 @@ function(e, t, n) {
         w = (0, a.animated)(T.default),
         F = (0, a.animated)(C.default);
 
-    function B(e) {
+    function G(e) {
         let {
             themeOverride: t,
             hovered: n,
@@ -131,7 +131,7 @@ function(e, t, n) {
             style: p
         })
     }
-    var G = l.memo(function(e) {
+    var B = l.memo(function(e) {
         let {
             disabled: t,
             channel: n
@@ -145,14 +145,14 @@ function(e, t, n) {
             autoTrackExposure: _
         }), b = [];
         P && _ && b.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-        let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, N.useDirectMessageRecipient)(n), G = null != F;
+        let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, N.useDirectMessageRecipient)(n), B = null != F;
         if (t) return null;
         let H = () => {
                 (0, x.default)({
                     isGift: !0,
                     giftRecipient: null == F ? void 0 : F,
                     initialPlanId: null,
-                    subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
+                    subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
                     analyticsLocations: a,
                     analyticsObject: {
                         page: n.isPrivate() ? A.AnalyticsPages.DM_CHANNEL : A.AnalyticsPages.GUILD_CHANNEL,
@@ -174,10 +174,10 @@ function(e, t, n) {
                     onComplete: () => c(!1),
                     onDMCheckItOutClick: H,
                     markAsDismissed: D,
-                    isDM: G
+                    isDM: B
                 }), (0, i.jsx)(S.default, {
                     innerClassName: L.button,
-                    "aria-label": R.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+                    "aria-label": M.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     isActive: !1,
                     onClick: () => {
                         c(!1), (0, m.markDismissibleContentAsDismissed)(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {
@@ -186,7 +186,7 @@ function(e, t, n) {
                     },
                     children: (0, i.jsx)("div", {
                         className: k.noPointerEvents,
-                        children: (0, i.jsx)(B, {
+                        children: (0, i.jsx)(G, {
                             hovered: o,
                             isContentDismissed: !w
                         })
@@ -195,7 +195,7 @@ function(e, t, n) {
             });
         return w ? V : (0, i.jsx)(u.TooltipContainer, {
             className: k.container,
-            text: (0, d.getSeasonalGiftingBody)(G),
+            text: (0, d.getSeasonalGiftingBody)(B),
             children: V
         })
     })

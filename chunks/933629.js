@@ -74,8 +74,8 @@ function(e, t, n) {
         N = n("876308"),
         A = n("660478"),
         O = n("697218"),
-        M = n("663175"),
-        R = n("888673"),
+        R = n("663175"),
+        M = n("888673"),
         k = n("839952"),
         L = n("476765"),
         P = n("62843"),
@@ -85,8 +85,8 @@ function(e, t, n) {
         D = n("909004"),
         w = n("599110"),
         F = n("449008"),
-        B = n("874276"),
-        G = n("299039"),
+        G = n("874276"),
+        B = n("299039"),
         H = n("49111"),
         V = n("894282"),
         K = n("995307"),
@@ -98,10 +98,10 @@ function(e, t, n) {
             position: "top"
         },
         J = e => t => {
-            null == e || e(t), (0, B.setVolume)(t)
+            null == e || e(t), (0, G.setVolume)(t)
         },
         q = e => t => {
-            null == e || e(t), (0, B.setMuted)(t)
+            null == e || e(t), (0, G.setMuted)(t)
         };
 
     function X(e) {
@@ -115,8 +115,8 @@ function(e, t, n) {
             renderOverlayContent: u,
             ...d
         } = e, c = J(t), f = q(n);
-        return i = null == i ? B.getVolume : i, l = null == l ? B.getMuted : l, (0, a.jsxs)(s.Fragment, {
-            children: [(0, a.jsx)(R.default, {
+        return i = null == i ? G.getVolume : i, l = null == l ? G.getMuted : l, (0, a.jsxs)(s.Fragment, {
+            children: [(0, a.jsx)(M.default, {
                 ...d,
                 alt: r,
                 volume: i,
@@ -139,8 +139,8 @@ function(e, t, n) {
             renderAdjacentContent: o,
             ...u
         } = e, d = J(t), c = q(i);
-        return n = null == n ? B.getVolume : n, (0, a.jsxs)(s.Fragment, {
-            children: [(0, a.jsx)(M.default, {
+        return n = null == n ? G.getVolume : n, (0, a.jsxs)(s.Fragment, {
+            children: [(0, a.jsx)(R.default, {
                 ...u,
                 onVolumeChange: d,
                 onMute: c,
@@ -160,7 +160,7 @@ function(e, t, n) {
             onMute: i,
             ...l
         } = e, s = J(t), r = q(i);
-        return n = null == n ? B.getVolume : n, (0, a.jsx)(N.default, {
+        return n = null == n ? G.getVolume : n, (0, a.jsx)(N.default, {
             ...l,
             onVolumeChange: s,
             onMute: r,
@@ -349,7 +349,7 @@ function(e, t, n) {
                 context: "Mark As Read"
             }) : m.default.jumpToMessage({
                 channelId: n,
-                messageId: G.default.castChannelIdAsMessageId(n),
+                messageId: B.default.castChannelIdAsMessageId(n),
                 offset: 1,
                 context: "Mark As Read"
             })
@@ -398,7 +398,7 @@ function(e, t, n) {
             scrollManager: u
         } = e, {
             disableInteractions: x
-        } = s.useContext(P.MessagesInteractionContext), [E, _] = s.useState(null), v = s.useRef(null), [N, M] = s.useState(null), R = s.useRef(null), k = (0, f.useStateFromStoresArray)([I.default], () => {
+        } = s.useContext(P.MessagesInteractionContext), [E, _] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([I.default], () => {
             var e;
             return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
         }, [l]), L = (0, g.default)(k);
@@ -414,7 +414,7 @@ function(e, t, n) {
                 channel_type: l.type
             })
         }, [k, L, l.guild_id, l.id, l.type]);
-        let B = (0, f.useStateFromStores)([O.default], () => {
+        let G = (0, f.useStateFromStores)([O.default], () => {
                 var e;
                 return null !== (e = null == k ? void 0 : k.map(e => {
                     var t;
@@ -481,13 +481,13 @@ function(e, t, n) {
             et = s.useCallback(e => {
                 var t;
                 Q(e);
-                let n = null === (t = R.current) || void 0 === t ? void 0 : t.scrollTop;
-                null != n && M(n)
+                let n = null === (t = M.current) || void 0 === t ? void 0 : t.scrollTop;
+                null != n && R(n)
             }, []);
         s.useEffect(() => {
             if (null != N && X) {
                 var e;
-                null === (e = R.current) || void 0 === e || e.scrollTo({
+                null === (e = M.current) || void 0 === e || e.scrollTo({
                     top: N
                 })
             }
@@ -514,10 +514,10 @@ function(e, t, n) {
         let ei = s.useMemo(() => (0, a.jsx)(T.default, {
                 channel: l,
                 summaries: k,
-                summariesMembers: B,
+                summariesMembers: G,
                 selectTopic: ee,
                 setOpen: et
-            }), [k, B, ee, et, l]),
+            }), [k, G, ee, et, l]),
             el = s.useCallback(() => {
                 let e = A.default.ackMessageId(l.id);
                 null != e ? m.default.jumpToMessage({
@@ -527,7 +527,7 @@ function(e, t, n) {
                     context: "Mark As Read"
                 }) : m.default.jumpToMessage({
                     channelId: l.id,
-                    messageId: G.default.castChannelIdAsMessageId(l.id),
+                    messageId: B.default.castChannelIdAsMessageId(l.id),
                     offset: 1,
                     context: "Mark As Read"
                 })
@@ -604,7 +604,7 @@ function(e, t, n) {
                         children: (0, a.jsx)(U.default, {})
                     })]
                 }), (0, a.jsx)(p.Scroller, {
-                    ref: R,
+                    ref: M,
                     className: z.topicsScroller,
                     fade: !0,
                     children: ei
@@ -630,9 +630,9 @@ function(e, t, n) {
         } = s.useContext(P.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [_, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([I.default], () => {
             var e;
             return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
-        }, [l]), M = (0, g.default)(A);
+        }, [l]), R = (0, g.default)(A);
         s.useEffect(() => {
-            !d.isEqual(M, A) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+            !d.isEqual(R, A) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: A.length,
                 message_counts: A.map(e => e.count),
                 start_message_ids: A.map(e => e.startId),
@@ -642,8 +642,8 @@ function(e, t, n) {
                 channel_id: l.id,
                 channel_type: l.type
             })
-        }, [A, M, l.guild_id, l.id, l.type]);
-        let R = (0, f.useStateFromStores)([O.default], () => {
+        }, [A, R, l.guild_id, l.id, l.type]);
+        let M = (0, f.useStateFromStores)([O.default], () => {
                 var e;
                 return null !== (e = null == A ? void 0 : A.map(e => {
                     var t;
@@ -657,8 +657,8 @@ function(e, t, n) {
             L = null == A ? void 0 : null === (t = A[k]) || void 0 === t ? void 0 : t.topic;
         null == L && null == h && (null == A ? void 0 : A.length) >= 1 && (L = null === (i = A[0]) || void 0 === i ? void 0 : i.topic);
         let j = s.useMemo(() => d.get(A, k - 1), [k, A]),
-            B = s.useMemo(() => d.get(A, k + 1), [k, A]),
-            G = s.useMemo(() => d.debounce(e => {
+            G = s.useMemo(() => d.get(A, k + 1), [k, A]),
+            B = s.useMemo(() => d.debounce(e => {
                 var t;
                 x(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
             }, 64), [x]),
@@ -668,8 +668,8 @@ function(e, t, n) {
                 trailing: !1
             }), []),
             W = s.useCallback(e => {
-                V(), G(e)
-            }, [G, V]),
+                V(), B(e)
+            }, [B, V]),
             [Z, J] = s.useState(!1),
             q = s.useCallback(() => {
                 w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
@@ -751,10 +751,10 @@ function(e, t, n) {
         let en = s.useMemo(() => (0, a.jsx)(T.default, {
                 channel: l,
                 summaries: A,
-                summariesMembers: R,
+                summariesMembers: M,
                 selectTopic: X,
                 setOpen: ee
-            }), [A, R, X, ee, l]),
+            }), [A, M, X, ee, l]),
             ei = (0, f.useStateFromStores)([I.default], () => I.default.shouldShowTopicsBar());
         if (!ei) return null;
         let el = Y.default.Messages.SUMMARIES_NO_SUMMARIES;
@@ -793,7 +793,7 @@ function(e, t, n) {
                         "aria-label": Y.default.Messages.SUMMARY_PILL_NEXT,
                         onClick: $,
                         className: o(z.topicsPillCaret, z.topicsCaretLeft, {
-                            [z.topicsPillCaretDisabled]: null == B
+                            [z.topicsPillCaretDisabled]: null == G
                         }),
                         children: (0, a.jsx)(b.default, {
                             width: 16,

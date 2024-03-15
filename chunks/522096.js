@@ -36,14 +36,14 @@ function(e, t, n) {
             rowHeight: N,
             sectionHeaderHeight: A,
             sectionFooterHeight: O,
-            itemNodeWidth: M,
-            listPaddingRight: R,
+            itemNodeWidth: R,
+            listPaddingRight: M,
             itemNodeMargin: k,
             listPadding: L,
             gridNavigatorId: P,
             gridNotice: b,
             renderHeader: j
-        } = e, U = l.useRef(null), D = l.useRef(null), w = l.useRef(null), F = 0 === t.length, B = (0, a.useExpressionPickerStore)(e => e.searchQuery), G = c.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
+        } = e, U = l.useRef(null), D = l.useRef(null), w = l.useRef(null), F = 0 === t.length, G = (0, a.useExpressionPickerStore)(e => e.searchQuery), B = c.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
             gridWrapperRef: U,
             containerWidth: d,
             showingEmptyState: F
@@ -57,8 +57,8 @@ function(e, t, n) {
             categories: t,
             collapsedCategories: n,
             gridWidth: H,
-            listPaddingRight: R,
-            itemNodeWidth: M,
+            listPaddingRight: M,
+            itemNodeWidth: R,
             itemNodeMargin: k
         }), {
             getItemProps: Z,
@@ -82,11 +82,11 @@ function(e, t, n) {
             }, t => Z(e, t), t => c.setInspectedExpressionPosition(t, e))
         }, [V, Z, J, z, Q, y, c]), ee = l.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = l.useCallback(e => null == S ? void 0 : S(t[e], e), [t, S]), en = l.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), ei = l.useCallback(() => {
             var e;
-            return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[G.rowIndex]) || void 0 === e ? void 0 : e[G.columnIndex])
-        }, [V, G.columnIndex, G.rowIndex, I]);
+            return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
+        }, [V, B.columnIndex, B.rowIndex, I]);
         l.useEffect(() => {
-            p(B)
-        }, [p, B]), l.useEffect(() => c.resetStoreState, [c.resetStoreState]), l.useLayoutEffect(() => {
+            p(G)
+        }, [p, G]), l.useEffect(() => c.resetStoreState, [c.resetStoreState]), l.useLayoutEffect(() => {
             var e;
             null === (e = w.current) || void 0 === e || e.focus()
         }, []);

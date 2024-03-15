@@ -45,8 +45,8 @@ function(e, t, n) {
             let t, {
                     className: n,
                     emojiGrid: O,
-                    guildId: M,
-                    pickerIntention: R,
+                    guildId: R,
+                    pickerIntention: M,
                     channel: k
                 } = e,
                 {
@@ -74,21 +74,21 @@ function(e, t, n) {
                 D = (0, a.useStateFromStores)([h.default], () => h.default.isFocused()),
                 w = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
                 F = p.AnimateEmoji.useSetting(),
-                B = (0, g.useIsFavoriteEmoji)(M, N(j) ? j : null),
+                G = (0, g.useIsFavoriteEmoji)(R, N(j) ? j : null),
                 {
-                    newlyAddedEmojis: G
-                } = (0, S.default)(M, R),
+                    newlyAddedEmojis: B
+                } = (0, S.default)(R, M),
                 H = j.id,
                 V = (null == b ? void 0 : b.type) === I.EmojiGridItemTypes.EMOJI ? b.subCategory : T.EmojiSubCategory.NONE;
             if (l.useEffect(() => {
                     let e = Date.now();
                     return () => {
                         let t = Date.now() - e;
-                        t >= 250 && N(j) && V !== T.EmojiSubCategory.NONE && (V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== j && j.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(j.guildId, G[0].id), null != P.source && (0, g.trackEmojiFocus)({
+                        t >= 250 && N(j) && V !== T.EmojiSubCategory.NONE && (V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== j && j.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(j.guildId, B[0].id), null != P.source && (0, g.trackEmojiFocus)({
                             emoji: j,
                             subCategory: V,
                             position: b.columnIndex + 1,
-                            newlyAddedHighlight: V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(M, H)
+                            newlyAddedHighlight: V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(R, H)
                         }))
                     }
                 }), null == j) return null;
@@ -123,8 +123,8 @@ function(e, t, n) {
                 z = L && "CREATE_EMOJI" === j.type ? _.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : A({
                     inspectedEmoji: j,
                     channel: k,
-                    guildId: M,
-                    intention: R,
+                    guildId: R,
+                    intention: M,
                     guild: U
                 });
             return (0, i.jsx)(f.default, {
@@ -133,7 +133,7 @@ function(e, t, n) {
                 graphicSecondary: W,
                 titlePrimary: Y,
                 titleSecondary: z,
-                isFavorite: B,
+                isFavorite: G,
                 emojiSubCategory: V
             })
         })

@@ -27,7 +27,7 @@ function(e, t, n) {
         let {
             channel: N,
             type: A
-        } = e, [O, M] = i.useState(() => (0, m.createInitialState)()), R = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
+        } = e, [O, R] = i.useState(() => (0, m.createInitialState)()), M = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
             if (null != e.guild) {
                 var t;
                 return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, E.CLYDE_AI_USER_ID)
@@ -56,8 +56,8 @@ function(e, t, n) {
             navId: "channel-autocomplete",
             scrollerRef: n,
             state: O,
-            onFocus: e => G.setSelectedIndex(e)
-        }), F = null === (g = e.editorRef.current) || void 0 === g ? void 0 : g.getCurrentWord(), B = {
+            onFocus: e => B.setSelectedIndex(e)
+        }), F = null === (g = e.editorRef.current) || void 0 === g ? void 0 : g.getCurrentWord(), G = {
             ...e,
             navigator: w,
             activeCommand: U,
@@ -73,24 +73,24 @@ function(e, t, n) {
             optionText: null != D ? (0, s.getString)({
                 [D.name]: null !== (v = null === (C = e.editorRef.current) || void 0 === C ? void 0 : C.getCurrentCommandOptionValue()) && void 0 !== v ? v : []
             }, D.name) : ""
-        }, [G] = i.useState(() => new m.default(B));
+        }, [B] = i.useState(() => new m.default(G));
         return i.useEffect(() => {
-            G.updateProps(B)
-        }), i.useImperativeHandle(t, () => G, [G]), i.useEffect(() => {
-            let e = e => M(e);
-            return G.on("change", e), G.on("update", R), () => {
-                G.off("change", e), G.off("update", R)
+            B.updateProps(G)
+        }), i.useImperativeHandle(t, () => B, [B]), i.useEffect(() => {
+            let e = e => R(e);
+            return B.on("change", e), B.on("update", M), () => {
+                B.off("change", e), B.off("update", M)
             }
-        }, [R, G]), i.useEffect(() => {
+        }, [M, B]), i.useEffect(() => {
             var e;
             let t = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;
             if (null != t) {
-                let e = () => G.queryResults();
+                let e = () => B.queryResults();
                 for (let n of t) n.addChangeListener(e);
                 return () => {
                     for (let n of t) n.removeChangeListener(e)
                 }
             }
-        }, [G, null === (I = O.query) || void 0 === I ? void 0 : I.typeInfo]), [O, G, w]
+        }, [B, null === (I = O.query) || void 0 === I ? void 0 : I.typeInfo]), [O, B, w]
     }
 }

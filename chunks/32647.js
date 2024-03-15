@@ -31,8 +31,8 @@ function(e, t, n) {
         N = n("100576"),
         A = n("765446"),
         O = n("461593"),
-        M = n("49111"),
-        R = n("175543"),
+        R = n("49111"),
+        M = n("175543"),
         k = l.forwardRef(function(e, t) {
             let {
                 value: n,
@@ -46,8 +46,8 @@ function(e, t, n) {
                 required: D,
                 textAreaPaddingClassName: w,
                 onChange: F,
-                onPaste: B,
-                onResize: G,
+                onPaste: G,
+                onResize: B,
                 onFocus: H,
                 onBlur: V,
                 onKeyDown: K,
@@ -145,10 +145,10 @@ function(e, t, n) {
                     if (s.length > 0) {
                         var n, i;
                         let e = s[0];
-                        E.SlateTransforms.selectCommandOption(eC, e.name), f.ComponentDispatch.dispatch(M.ComponentActions.SHAKE_APP, {
+                        E.SlateTransforms.selectCommandOption(eC, e.name), f.ComponentDispatch.dispatch(R.ComponentActions.SHAKE_APP, {
                             duration: 200,
                             intensity: 2
-                        }), (0, o.trackWithMetadata)(M.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                        }), (0, o.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: null == t ? void 0 : t.applicationId,
                             command_id: null == t ? void 0 : null === (n = t.rootCommand) || void 0 === n ? void 0 : n.id,
                             argument_type: r.ApplicationCommandOptionType[null !== (i = null == e ? void 0 : e.type) && void 0 !== i ? i : 3],
@@ -162,7 +162,7 @@ function(e, t, n) {
                     ignoreTrailingEmptyNodes: !0
                 }), t, e)
             }, [k.id, eC, Z, eI, $]);
-            (0, C.default)(t, eC, k, eT), (0, _.default)(eC, ep, G);
+            (0, C.default)(t, eC, k, eT), (0, _.default)(eC, ep, B);
             let {
                 handleKeyDown: e_,
                 handleKeyUp: ev
@@ -181,9 +181,9 @@ function(e, t, n) {
             }), {
                 handlePaste: eN,
                 handleGlobalPaste: eA
-            } = (0, T.default)(eC, eE, B), eO = l.useCallback(e => {
+            } = (0, T.default)(eC, eE, G), eO = l.useCallback(e => {
                 null == J || J()
-            }, [J]), eM = l.useCallback(e => {
+            }, [J]), eR = l.useCallback(e => {
                 e !== em.current ? ex.current && (null == F || F(null, (0, x.toTextValue)(e, {
                     mode: "raw"
                 }), e)) : ex.current && J()
@@ -200,35 +200,35 @@ function(e, t, n) {
                 };
                 return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
             }, [k, eC, eI]);
-            let eR = l.useCallback((e, t) => (0, g.default)(e, t), []),
+            let eM = l.useCallback((e, t) => (0, g.default)(e, t), []),
                 ek = l.useCallback(e => (0, A.default)(eC, e, k.id), [k.id, eC]),
                 eL = l.useCallback(e => (0, O.default)(e), []);
             return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(c.ComponentAction, {
-                    event: M.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
+                    event: R.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
                     handler: eA
                 }), (0, i.jsx)("div", {
                     ref: ep,
-                    className: s(L, R.slateContainer),
+                    className: s(L, M.slateContainer),
                     children: (0, i.jsx)(h.default, {
                         id: P,
                         editor: eC,
                         channelId: k.id,
                         guildId: k.guild_id,
-                        className: s(R.slateTextArea, w),
+                        className: s(M.slateTextArea, w),
                         placeholder: U,
                         readOnly: eE,
                         spellCheck: Q,
                         autoFocus: !et,
                         canFocus: !b,
-                        onChange: eM,
+                        onChange: eR,
                         onFocus: H,
                         onBlur: V,
                         onClick: eO,
                         onPaste: eN,
                         onKeyDown: e_,
                         onKeyUp: ev,
-                        decorateExtra: eR,
+                        decorateExtra: eM,
                         renderExtraElement: ek,
                         renderExtraLeaf: eL,
                         "aria-owns": el,

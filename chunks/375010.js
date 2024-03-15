@@ -36,10 +36,10 @@ function(e, t, n) {
                 } = e,
                 A = null == a ? void 0 : a.subscription_plans[0],
                 O = null == a ? void 0 : a.application_id,
-                M = null == A ? void 0 : A.id,
-                R = (null == a ? void 0 : a.published) === !0,
+                R = null == A ? void 0 : A.id,
+                M = (null == a ? void 0 : a.published) === !0,
                 k = null == A ? void 0 : A.sku_id,
-                L = (0, r.useStateFromStores)([m.default], () => null != M ? m.default.get(M) : null),
+                L = (0, r.useStateFromStores)([m.default], () => null != R ? m.default.get(R) : null),
                 P = (0, h.useApplication)(O),
                 b = (0, h.useSubscriptionListingsForGroup)(I, {
                     includeSoftDeleted: !0
@@ -53,23 +53,23 @@ function(e, t, n) {
                     activeEntitlement: w
                 } = (0, h.useActiveSubscriptionListingForApplication)(O, C),
                 F = (0, h.useEligibleApplicationSubscriptionGuilds)(O, C),
-                B = (0, c.default)(),
-                G = null != a && (0, x.isApplicationUserSubscription)(a.sku_flags),
+                G = (0, c.default)(),
+                B = null != a && (0, x.isApplicationUserSubscription)(a.sku_flags),
                 H = null != w && w.userId === (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
                 V = null == w || H,
                 K = null == w || j.length > 1,
                 W = null != C || F.length > 0,
-                Y = G && H,
-                z = null != L && null != P && V && K && (W || G) && !Y;
+                Y = B && H,
+                z = null != L && null != P && V && K && (W || B) && !Y;
             V ? W ? Y && null != L && (n = S.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
                 tierName: L.name
             })) : n = S.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = S.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, l.useEffect(() => {
-                R && null != k && B && o.default.wait(() => {
+                M && null != k && G && o.default.wait(() => {
                     (0, u.fetchSubscriptionPlansForSKU)(k)
                 })
-            }, [R, k, B]);
+            }, [M, k, G]);
             let Z = l.useCallback(() => {
-                s(null != a, "No subscription listing"), s(null != P, "No application"), s(null != A, "No subscription plan"), s(R, "Cannot purchase this unpublished plan");
+                s(null != a, "No subscription listing"), s(null != P, "No application"), s(null != A, "No subscription plan"), s(M, "Cannot purchase this unpublished plan");
                 let e = () => {
                     (0, f.openApplicationSubscriptionPaymentModal)({
                         activeSubscription: D,
@@ -92,12 +92,12 @@ function(e, t, n) {
                         forcesTransitionToGuild: N
                     })
                 };
-                !W && G ? (0, y.confirmNoSharedServerSubscribeWarningModal)({
+                !W && B ? (0, y.confirmNoSharedServerSubscribeWarningModal)({
                     application: P,
                     onConfirm: e,
                     onCancel: () => {}
                 }) : e()
-            }, [R, a, A, j, P, C, W, G, U, T, D, _, F, v, N]);
+            }, [M, a, A, j, P, C, W, B, U, T, D, _, F, v, N]);
             return {
                 openModal: Z,
                 canOpenModal: z,

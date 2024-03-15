@@ -44,8 +44,8 @@ function(e, t, n) {
         let N, {
                 src: A,
                 volume: O = 1,
-                onVolumeChange: M,
-                onMute: R,
+                onVolumeChange: R,
+                onMute: M,
                 waveform: k,
                 durationSecs: L,
                 onVolumeShow: P,
@@ -55,8 +55,8 @@ function(e, t, n) {
                 onError: D
             } = e,
             w = l.useRef(null),
-            [F, B] = l.useState(0),
-            [G, H] = l.useState(L),
+            [F, G] = l.useState(0),
+            [B, H] = l.useState(L),
             [V, K] = l.useState(!1),
             [W, Y] = l.useState(!1),
             [z, Z] = l.useState(!1),
@@ -90,23 +90,23 @@ function(e, t, n) {
             }, [D]),
             eo = l.useCallback(e => {
                 let t = (0, E.perceptualToAmplitude)(e, 1);
-                K(0 === t), ee(t), null == M || M(t)
-            }, [M]),
+                K(0 === t), ee(t), null == R || R(t)
+            }, [R]),
             eu = l.useCallback(() => {
-                K(!V), null == R || R(!V)
-            }, [V, R]),
+                K(!V), null == M || M(!V)
+            }, [V, M]),
             ed = l.useCallback(() => {
                 Z(!0)
             }, []),
             ec = l.useCallback(() => {
-                Z(!1), F === G && ea()
-            }, [F, G, ea]),
+                Z(!1), F === B && ea()
+            }, [F, B, ea]),
             ef = l.useCallback(e => {
                 let t = w.current;
-                if (null == G || null == t) return;
-                let n = e * G;
-                B(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
-            }, [G]);
+                if (null == B || null == t) return;
+                let n = e * B;
+                G(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
+            }, [B]);
         l.useEffect(() => {
             !J && W && q(!0)
         }, [W, J]);
@@ -122,7 +122,7 @@ function(e, t, n) {
                     null == U || U(F, null != t ? (e - t) / 1e3 : 0), ep.current = null
                 }
             }
-        }, [W]), t = w, n = W, a = B, l.useEffect(() => {
+        }, [W]), t = w, n = W, a = G, l.useEffect(() => {
             let e;
             return ! function i() {
                 let l = t.current;
@@ -205,7 +205,7 @@ function(e, t, n) {
                 className: C.waveform,
                 waveform: k,
                 currentTime: F,
-                duration: null != G ? G : 1,
+                duration: null != B ? B : 1,
                 playing: W,
                 played: J,
                 onDrag: ef,
@@ -214,7 +214,7 @@ function(e, t, n) {
             }), (0, i.jsx)(T, {
                 played: J,
                 currentTime: F,
-                duration: G
+                duration: B
             }), (0, i.jsx)(f.default, {
                 className: C.volumeButton,
                 iconClassName: C.volumeButtonIcon,

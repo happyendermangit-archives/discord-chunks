@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DEFAULT_COLLECTIBLES_UPSELL_HEIGHT: function() {
-            return M
+            return R
         },
         default: function() {
             return L
@@ -49,8 +49,8 @@ function(e, t, n) {
             })
         })
     }
-    let M = 76,
-        R = e => (0, i.jsx)(u.Text, {
+    let R = 76,
+        M = e => (0, i.jsx)(u.Text, {
             variant: "text-sm/normal",
             color: "text-normal",
             tag: "span",
@@ -96,14 +96,14 @@ function(e, t, n) {
             ref: U,
             height: D
         } = (0, d.default)(), w = l.useMemo(() => ({
-            top: "-".concat((null != D ? D : M) + 6, "px")
-        }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), B = I.default.canUseCollectibles(F), {
-            setUpsellSource: G,
+            top: "-".concat((null != D ? D : R) + 6, "px")
+        }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), G = I.default.canUseCollectibles(F), {
+            setUpsellSource: B,
             reset: H
         } = (0, T.useUserPopoutCollectiblesUpsellStore)();
-        l.useEffect(() => (G(P), () => {
+        l.useEffect(() => (B(P), () => {
             H()
-        }), [G, P, H]);
+        }), [B, P, H]);
         let V = (0, o.default)([g.default], () => g.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
             [K, W] = (0, o.useStateFromStoresArray)([E.default], () => {
                 var e;
@@ -121,22 +121,22 @@ function(e, t, n) {
                 null == h || h(_.ContentDismissActionType.DISMISS)
             }, [h]);
         if (!A && !L) return null;
-        let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && B ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
-            openShop: R
+        let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+            openShop: M
         }) : K && W ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
-            openShop: R
+            openShop: M
         }) : v.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
-            openShop: R
-        })).with([!0, !1], () => K && B ? v.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
-            openShop: R
+            openShop: M
+        })).with([!0, !1], () => K && G ? v.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
+            openShop: M
         }) : v.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
-            openShop: R
-        })).with([!1, !0], () => W && B ? v.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
-            openShop: R
+            openShop: M
+        })).with([!1, !0], () => W && G ? v.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
+            openShop: M
         }) : (W && v.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
-            openShop: R
+            openShop: M
         }), v.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL.format({
-            openShop: R
+            openShop: M
         }))).otherwise(() => null);
         return (0, i.jsx)("div", {
             style: w,

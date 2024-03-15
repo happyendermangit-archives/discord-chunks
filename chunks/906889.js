@@ -33,19 +33,19 @@ function(e, t, n) {
             T(C())
         }, [h, g, S, m, C]);
         let O = (0, o.useAvatarBorderColor)(I, h, g),
-            M = null != O ? (0, l.int2hsl)(O, !1, E ? y : null) : null,
-            R = e => d.forEach(t => {
+            R = null != O ? (0, l.int2hsl)(O, !1, E ? y : null) : null,
+            M = e => d.forEach(t => {
                 e.style.removeProperty(t)
             });
         return i.useEffect(() => {
             if (null != h && null != x && null != I && null != O && null != v && null != N) {
                 let e = g && I !== S ? null == _ ? void 0 : _.overlaySyncedWithUserTheme : null == _ ? void 0 : _.overlay;
                 c(n, "--profile-gradient-primary-color", A(h)), c(n, "--profile-gradient-secondary-color", A(x)), c(n, "--profile-gradient-button-color", A((0, o.calculateButtonColor)(h))), c(n, "--profile-gradient-overlay-color", e), c(n, "--profile-body-background-color", null == _ ? void 0 : _.sectionBox), c(n, "--profile-body-background-hover", null == _ ? void 0 : _.profileBodyBackgroundHover), c(n, "--profile-body-divider-color", A(v, null == _ ? void 0 : _.dividerOpacity)), c(n, "--profile-avatar-border-color", A(O)), c(n, "--profile-message-input-border-color", A(N)), c(n, "--profile-note-background-color", null == _ ? void 0 : _.noteBackgroundColor), c(n, "--profile-role-pill-background-color", null == _ ? void 0 : _.rolePillBackgroundColor), c(n, "--profile-role-pill-border-color", null == _ ? void 0 : _.rolePillBorderColor)
-            } else(null == n ? void 0 : n.current) != null && R(null == n ? void 0 : n.current)
+            } else(null == n ? void 0 : n.current) != null && M(null == n ? void 0 : n.current)
         }, [h, x, O, I, S, n, A, g, v, null == _ ? void 0 : _.overlaySyncedWithUserTheme, null == _ ? void 0 : _.overlay, null == _ ? void 0 : _.sectionBox, null == _ ? void 0 : _.profileBodyBackgroundHover, null == _ ? void 0 : _.dividerOpacity, null == _ ? void 0 : _.noteBackgroundColor, null == _ ? void 0 : _.rolePillBackgroundColor, null == _ ? void 0 : _.rolePillBorderColor, N]), {
             profileTheme: null != I ? I : S,
             primaryProfileColor: h,
-            avatarBorderColor: M
+            avatarBorderColor: R
         }
     }
 }

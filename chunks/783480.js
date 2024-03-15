@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return R
+            return M
         }
     }), n("222007"), n("702976");
     var i = n("77078"),
@@ -31,12 +31,12 @@ function(e, t, n) {
         N = n("305515"),
         A = n("49111"),
         O = n("782340");
-    async function M(e) {
+    async function R(e) {
         var t, n, i;
         let c, {
                 channelId: f,
-                uploads: M,
-                draftType: R,
+                uploads: R,
+                draftType: M,
                 parsedMessage: k,
                 options: L = {},
                 raiseEndpointErrors: P = !1
@@ -56,20 +56,20 @@ function(e, t, n) {
         null != D && (U.type = A.MessageTypes.REPLY, U.message_reference = L.messageReference, U.allowed_mentions = L.allowedMentions, (0, S.deletePendingReply)(f));
         let [w, F] = (0, I.default)(U.content);
         w && (U.content = F, U.flags = (0, v.addFlag)(null !== (t = U.flags) && void 0 !== t ? t : 0, A.MessageFlags.SUPPRESS_NOTIFICATIONS));
-        let B = null !== (n = L.nonce) && void 0 !== n ? n : (0, E.createNonce)(),
-            G = (0, E.default)({
+        let G = null !== (n = L.nonce) && void 0 !== n ? n : (0, E.createNonce)(),
+            B = (0, E.default)({
                 channelId: f,
                 content: U.content,
                 tts: null !== (i = null == k ? void 0 : k.tts) && void 0 !== i && i,
                 type: U.type,
                 messageReference: U.message_reference,
                 flags: U.flags,
-                nonce: B,
+                nonce: G,
                 poll: (0, g.createPollServerDataFromCreateRequest)(L.poll)
             });
-        return (U.nonce = B, b.on("start", e => {
+        return (U.nonce = G, b.on("start", e => {
             c = (0, x.createMessageRecord)({
-                ...G,
+                ...B,
                 id: e.id
             }), l.default.dispatch({
                 type: "UPLOAD_START",
@@ -122,10 +122,10 @@ function(e, t, n) {
             }, t)) : (0, o.openUploadError)({
                 title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                 help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-            }), "" !== U.content && "" === T.default.getDraft(f, R) && a.default.saveDraft(f, U.content, R), 0 === _.default.getUploadCount(f, R) && r.default.setUploads({
+            }), "" !== U.content && "" === T.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === _.default.getUploadCount(f, M) && r.default.setUploads({
                 channelId: f,
-                uploads: M,
-                draftType: R
+                uploads: R,
+                draftType: M
             }))
         }), b.on("complete", (e, t) => {
             l.default.dispatch({
@@ -135,9 +135,9 @@ function(e, t, n) {
                 aborted: b._aborted,
                 messageRecord: t
             })
-        }), await b.uploadFiles(M, U), j.resolve(), j.promise
+        }), await b.uploadFiles(R, U), j.resolve(), j.promise
     }
-    var R = {
+    var M = {
         instantBatchUpload: function(e) {
             let {
                 channelId: t,
@@ -154,7 +154,7 @@ function(e, t, n) {
                     ...i
                 }, t)
             });
-            M({
+            R({
                 channelId: t,
                 uploads: s,
                 draftType: i
@@ -228,7 +228,7 @@ function(e, t, n) {
                 })
             }), x.upload(r, h)
         },
-        uploadFiles: M,
+        uploadFiles: R,
         cancel(e) {
             if (l.default.dispatch({
                     type: "UPLOAD_CANCEL_REQUEST",

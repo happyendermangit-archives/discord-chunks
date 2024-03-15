@@ -43,8 +43,8 @@ function(e, t, n) {
         N = n("393414"),
         A = n("324929"),
         O = n("18494"),
-        M = n("162771"),
-        R = n("697218"),
+        R = n("162771"),
+        M = n("697218"),
         k = n("145131"),
         L = n("580357"),
         P = n("476263"),
@@ -54,8 +54,8 @@ function(e, t, n) {
         D = n("599110"),
         w = n("315102"),
         F = n("794818"),
-        B = n("719923"),
-        G = n("412745"),
+        G = n("719923"),
+        B = n("412745"),
         H = n("933629"),
         V = n("49111"),
         K = n("724210"),
@@ -63,7 +63,7 @@ function(e, t, n) {
         Y = n("782340"),
         z = n("325417");
     let Z = () => {
-            let e = (0, o.useStateFromStores)([M.default], () => M.default.getGuildId());
+            let e = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId());
             return {
                 page: null != e ? V.AnalyticsPages.GUILD_CHANNEL : V.AnalyticsPages.DM_CHANNEL,
                 section: V.AnalyticsSections.EMOJI_UPSELL_POPOUT
@@ -75,7 +75,7 @@ function(e, t, n) {
             } = e;
             return (0, g.useTrackOpenPopout)({
                 emojiId: t.emojiId,
-                currentGuildId: M.default.getGuildId()
+                currentGuildId: R.default.getGuildId()
             }), (0, i.jsx)(u.Dialog, {
                 children: (0, i.jsx)(H.MessagePopoutContent, {
                     children: (0, i.jsxs)(k.default, {
@@ -250,7 +250,7 @@ function(e, t, n) {
                 guildEmoji: P,
                 demoMode: U = !1,
                 nonce: w
-            } = e, F = (0, o.useStateFromStores)([R.default], () => R.default.getCurrentUser()), J = (0, o.useStateFromStores)([M.default], () => M.default.getGuildId()), X = B.default.isPremium(F), Q = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
+            } = e, F = (0, o.useStateFromStores)([M.default], () => M.default.getCurrentUser()), J = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId()), X = G.default.isPremium(F), Q = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
             U && (X = !0, et = !0, ee = !1, Q = !1);
             let {
                 enabled: en
@@ -284,8 +284,8 @@ function(e, t, n) {
             }, {
                 disableTrack: !el
             });
-            let eu = M.default.getGuildId(),
-                ed = (0, G.getEmojiPopoutData)({
+            let eu = R.default.getGuildId(),
+                ed = (0, B.getEmojiPopoutData)({
                     isPremium: X,
                     hasJoinedEmojiSourceGuild: ee,
                     isRoleSubscriptionEmoji: el,
@@ -311,8 +311,8 @@ function(e, t, n) {
                     nonce: w,
                     demoMode: U
                 }),
-                em = ed.type === G.EmojiPopoutType.JOIN_GUILD,
-                eh = ed.type === G.EmojiPopoutType.GET_PREMIUM,
+                em = ed.type === B.EmojiPopoutType.JOIN_GUILD,
+                eh = ed.type === B.EmojiPopoutType.GET_PREMIUM,
                 [ex, eE] = l.useState(!1),
                 ey = et || ee && !Q || null != E;
             return (0, i.jsxs)(H.MessagePopoutContent, {
@@ -458,7 +458,7 @@ function(e, t, n) {
                         animated: e.animated,
                         ...t
                     })
-                }, e.id)), !o && (c === G.EmojiPopoutType.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
+                }, e.id)), !o && (c === B.EmojiPopoutType.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(v.default, {
                         subscriptionTier: W.PremiumSubscriptionSKUs.TIER_2,
                         buttonText: s.text,
@@ -473,7 +473,7 @@ function(e, t, n) {
                             children: p
                         })
                     })]
-                }) : c === G.EmojiPopoutType.JOIN_GUILD ? (0, i.jsx)(d.Button, {
+                }) : c === B.EmojiPopoutType.JOIN_GUILD ? (0, i.jsx)(d.Button, {
                     size: d.Button.Sizes.SMALL,
                     className: z.ctaButton,
                     color: d.ButtonColors.BRAND,

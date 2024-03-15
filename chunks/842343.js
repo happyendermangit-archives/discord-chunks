@@ -30,13 +30,13 @@ function(e, t, n) {
                 type: v,
                 editorHeight: N,
                 onVisibilityChange: A
-            } = e, O = (0, p.useUID)(), M = (0, o.useStateFromStores)([c.default], () => {
+            } = e, O = (0, p.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
                 var e;
                 return null !== (e = c.default.getGuild(_.guild_id)) && void 0 !== e ? e : null
-            }, [_.guild_id]), R = l.useRef(), [k, L, P] = (0, g.default)({
+            }, [_.guild_id]), M = l.useRef(), [k, L, P] = (0, g.default)({
                 ...e,
-                guild: M
-            }, t, R), b = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
+                guild: R
+            }, t, M), b = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
             (0, d.useChannelEditorPopup)(O, k.isVisible, j), x.default.trackExposure({
                 location: "6e9811_1"
             });
@@ -59,23 +59,23 @@ function(e, t, n) {
                 results: k.query.results,
                 selectedIndex: k.selectedIndex,
                 channel: _,
-                guild: M,
+                guild: R,
                 query: k.query.queryText,
                 options: k.query.options,
                 onHover: e => L.onResultHover(e),
                 onClick: e => L.onResultClick(e)
             })) && void 0 !== a ? a : null;
             if (null == F) return null;
-            let B = {
+            let G = {
                     [S.autocompleteAttached]: null == D,
                     [S.autocompletePopout]: null != D,
                     [S.bottom]: null == D && "bottom" === e.position
                 },
-                G = 490;
-            null != D && (G = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (I = k.query) || void 0 === I ? void 0 : I.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), G = Math.min(window.innerHeight - 175, G);
+                B = 490;
+            null != D && (B = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (I = k.query) || void 0 === I ? void 0 : I.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
             let H = (0, i.jsx)(f.default, {
                 id: O,
-                className: s(S.autocomplete, B),
+                className: s(S.autocomplete, G),
                 innerClassName: S.autocompleteInner,
                 onMouseDown: e => e.preventDefault(),
                 children: (0, i.jsx)(r.ListNavigatorProvider, {
@@ -90,12 +90,12 @@ function(e, t, n) {
                                 id: O,
                                 ref: e => {
                                     var n;
-                                    t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null, R.current = e
+                                    t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null, M.current = e
                                 },
                                 ...n,
                                 className: S.scroller,
                                 style: {
-                                    maxHeight: G
+                                    maxHeight: B
                                 },
                                 role: "listbox",
                                 "aria-labelledby": (0, f.getAutocompleteTitleId)(O),

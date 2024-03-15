@@ -35,8 +35,8 @@ function(e, t, n) {
             type: n
         } = e, a = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), N = (0, m.default)("attachments", o.Orientations.HORIZONTAL), A = (0, u.useStateFromStores)([E.default], () => E.default.getUploads(t, n.drafts.type)), {
             isApplicationCommand: O,
-            commandOptions: M,
-            commandOptionStates: R
+            commandOptions: R,
+            commandOptionStates: M
         } = (0, u.useStateFromStoresObject)([h.default], () => {
             let e = h.default.getActiveCommand(t);
             if (null == e) return {
@@ -52,11 +52,11 @@ function(e, t, n) {
             }
         }), k = l.useMemo(() => {
             var e;
-            return null !== (e = null == M ? void 0 : M.filter(e => {
+            return null !== (e = null == R ? void 0 : R.filter(e => {
                 var t;
-                return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == R ? void 0 : null === (t = R[e.name]) || void 0 === t ? void 0 : t.hasValue)
+                return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == M ? void 0 : null === (t = M[e.name]) || void 0 === t ? void 0 : t.hasValue)
             })) && void 0 !== e ? e : []
-        }, [M, R]), [L, P] = l.useState([]);
+        }, [R, M]), [L, P] = l.useState([]);
         l.useEffect(() => {
             let e = () => {
                 c.default.clearAll(t, n.drafts.type)

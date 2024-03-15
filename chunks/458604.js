@@ -44,15 +44,15 @@ function(e, t, n) {
                     inNitroLockedSection: A,
                     ...O
                 } = e,
-                M = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
+                R = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
                 {
-                    enabled: R
+                    enabled: M
                 } = g.default.useExperiment({
                     location: "Emoji Picker List"
                 }, {
                     autoTrackExposure: p
                 }),
-                k = p && R && !A;
+                k = p && M && !A;
             return (0, i.jsx)(o.FocusRing, {
                 children: (0, i.jsx)("button", {
                     ...O,
@@ -61,7 +61,7 @@ function(e, t, n) {
                         [I.emojiItemMedium]: d,
                         [I.emojiItemSelected]: c,
                         [null != N ? N : ""]: c,
-                        [I.emojiItemDisabled]: p && !R,
+                        [I.emojiItemDisabled]: p && !M,
                         [I.showPulse]: h
                     }),
                     "data-type": m.PickerContextMenuDataTypes.EMOJI,
@@ -69,9 +69,9 @@ function(e, t, n) {
                     "data-name": l.name,
                     ref: t,
                     children: (0, i.jsx)(S.default, {
-                        "aria-label": (n = l.allNamesString, ((null == M ? void 0 : M.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+                        "aria-label": (n = l.allNamesString, ((null == R ? void 0 : R.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
                             names: n,
-                            guildName: M.name
+                            guildName: R.name
                         })), a) ? C.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
                             names: n
                         }) : n),
@@ -102,8 +102,8 @@ function(e, t, n) {
             surrogateCodePoint: N,
             selectedItemClassName: A,
             getEmojiItemProps: O,
-            isMediumSize: M,
-            isLargeSize: R,
+            isMediumSize: R,
+            isLargeSize: M,
             pulseItemKey: k,
             allowAnimatedEmoji: L,
             setPulseItemKey: P,
@@ -111,7 +111,7 @@ function(e, t, n) {
             isBurstReaction: j,
             rowPosition: U,
             inNitroLockedSection: D
-        } = e, [w, F] = l.useState(""), B = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), G = (0, r.useStateFromStores)([c.default], () => c.default.getDisambiguatedEmojiContext(m), [m]), H = l.useRef(null), {
+        } = e, [w, F] = l.useState(""), G = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), B = (0, r.useStateFromStores)([c.default], () => c.default.getDisambiguatedEmojiContext(m), [m]), H = l.useRef(null), {
             emoji: V,
             size: K,
             isDisabled: W,
@@ -152,9 +152,9 @@ function(e, t, n) {
             }, w !== T(Y, f) && (0, i.jsx)(_, {
                 ref: r,
                 emoji: V,
-                isFavorite: G.isFavoriteEmojiWithoutFetchingLatest(V),
-                isLargeSize: R,
-                isMediumSize: M,
+                isFavorite: B.isFavoriteEmojiWithoutFetchingLatest(V),
+                isLargeSize: M,
+                isMediumSize: R,
                 isInspected: s,
                 isDisabled: W,
                 showPulse: k === a,
@@ -164,7 +164,7 @@ function(e, t, n) {
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onClick: e => {
-                    if (null != H.current && null != U && null != b && !e.shiftKey && null != V.name && j && !B && L) {
+                    if (null != H.current && null != U && null != b && !e.shiftKey && null != V.name && j && !G && L) {
                         let e = null == V.id ? p.default.convertNameToSurrogate(V.name) : V.name,
                             t = H.current.getBoundingClientRect();
                         t.x = U.x + (Y + 1) * K, F(T(Y, f)), (0, x.addReactionPickerAnimation)(b, e, V.id, t)

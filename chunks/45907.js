@@ -3,7 +3,9 @@ function(e, t, n) {
     e.exports = {
         animatedContainer: "animatedContainer_f47edf",
         avatarAndTextContainer: "avatarAndTextContainer__394c8",
+        compactItemContainer: "compactItemContainer_fea2b8",
         dotSpacer: "dotSpacer_c6c9f0",
+        hideElement: "hideElement__0e94b",
         itemContainer: "itemContainer__47bc5",
         itemizedListText: "itemizedListText_b91012",
         mainContainer: "mainContainer_ec6e51",

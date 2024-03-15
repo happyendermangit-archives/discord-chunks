@@ -155,14 +155,14 @@ function(e, t, n) {
                 limitResponsiveWidth: N,
                 useFullWidth: A,
                 placeholder: O,
-                placeholderVersion: M
+                placeholderVersion: R
             } = this.props, {
-                readyState: R,
+                readyState: M,
                 hasMouseOver: k,
                 hasFocus: L
             } = this.state, P = null != i, b = this.getRatio(), j = (0, u.clamp)(Math.round(h * b), null != E ? E : 0, null != g ? g : 1 / 0), U = (0, u.clamp)(Math.round(x * b), null != y ? y : 0, null != S ? S : 1 / 0), D = {
                 alt: t,
-                readyState: R,
+                readyState: M,
                 onContextMenu: null != a ? a : void 0,
                 zoomable: P,
                 className: d,
@@ -177,7 +177,7 @@ function(e, t, n) {
                 height: U,
                 src: "",
                 placeholder: O,
-                placeholderVersion: M,
+                placeholderVersion: R,
                 children: null != f ? e => {
                     let {
                         src: t,
@@ -197,7 +197,7 @@ function(e, t, n) {
                 onBlur: this.onBlur
             };
             if (1 === D.width && 1 === D.height) return null;
-            switch ((P || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), R) {
+            switch ((P || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), M) {
                 case T.ImageReadyStates.LOADING:
                     null != n && (D.src = n);
                     break;
