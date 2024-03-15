@@ -13,8 +13,8 @@ function(e, t, n) {
     let c = !1,
         f = !1,
         _ = !1,
-        h = !1,
         E = !1,
+        h = !1,
         g = null,
         m = null,
         p = !1,
@@ -29,19 +29,19 @@ function(e, t, n) {
     }
 
     function I() {
-        h = !1
-    }
-
-    function C() {
-        E = !0
+        E = !1
     }
 
     function A() {
-        E = !1
+        h = !0
+    }
+
+    function C() {
+        h = !1
     }
     class y extends o.default.Store {
         get isBusy() {
-            return c || f || E || _
+            return c || f || h || _
         }
         get isUpdatingPaymentSource() {
             return f
@@ -53,7 +53,7 @@ function(e, t, n) {
             return this.isPaymentSourceFetching || this.isSubscriptionFetching
         }
         get isSubscriptionFetching() {
-            return h
+            return E
         }
         get isPaymentSourceFetching() {
             return null != i
@@ -139,16 +139,16 @@ function(e, t, n) {
         BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: T,
         BILLING_PAYMENT_SOURCES_FETCH_FAIL: T,
         BILLING_SUBSCRIPTION_FETCH_START: function() {
-            h = !0
+            E = !0
         },
         BILLING_SUBSCRIPTION_FETCH_SUCCESS: I,
         BILLING_SUBSCRIPTION_FETCH_FAIL: I,
-        BILLING_SUBSCRIPTION_UPDATE_START: C,
-        BILLING_SUBSCRIPTION_CANCEL_START: C,
-        BILLING_SUBSCRIPTION_UPDATE_SUCCESS: A,
-        BILLING_SUBSCRIPTION_UPDATE_FAIL: A,
-        BILLING_SUBSCRIPTION_CANCEL_FAIL: A,
-        BILLING_SUBSCRIPTION_CANCEL_SUCCESS: A,
+        BILLING_SUBSCRIPTION_UPDATE_START: A,
+        BILLING_SUBSCRIPTION_CANCEL_START: A,
+        BILLING_SUBSCRIPTION_UPDATE_SUCCESS: C,
+        BILLING_SUBSCRIPTION_UPDATE_FAIL: C,
+        BILLING_SUBSCRIPTION_CANCEL_FAIL: C,
+        BILLING_SUBSCRIPTION_CANCEL_SUCCESS: C,
         BILLING_IP_COUNTRY_CODE_FETCH_START: function(e) {
             let {
                 request: t

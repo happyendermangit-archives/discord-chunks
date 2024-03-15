@@ -16,8 +16,8 @@ function(e, t, n) {
         c = RegExp("^" + d),
         f = RegExp(d + "[^\\n]*(?:\\n(?!\\1" + u + " )[^\\n]*)*(\n|$)", "gm"),
         _ = / *\n$/,
-        h = RegExp("^( *)(" + u + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + u + " )|$)"),
-        E = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
+        E = RegExp("^( *)(" + u + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + u + " )|$)"),
+        h = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
         g = e => e.map(e => ("text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")), e)),
         m = {
             ...a.defaultRules.list,
@@ -26,7 +26,7 @@ function(e, t, n) {
                 if (!t.allowList || t._listLevel >= 11) return null;
                 let n = null == t.prevCapture ? "" : t.prevCapture[0],
                     i = l.exec(n);
-                return null == i || E.test(i[0]) ? null : h.exec(e)
+                return null == i || h.test(i[0]) ? null : E.exec(e)
             },
             parse: (e, t, n) => {
                 let i = e[2],
@@ -41,13 +41,13 @@ function(e, t, n) {
                             u = RegExp("^ {1," + o + "}", "gm"),
                             d = e.replace(u, "").replace(c, ""),
                             f = i === a.length - 1,
-                            h = -1 !== d.indexOf("\n\n"),
-                            E = h || f && l;
-                        l = E;
+                            E = -1 !== d.indexOf("\n\n"),
+                            h = E || f && l;
+                        l = h;
                         let m = n.inline,
                             p = n._list,
                             S = n._listLevel;
-                        n._list = !0, n._listLevel = (null != S ? S : 0) + 1, E ? (n.inline = !1, s = d.replace(_, "\n\n")) : (n.inline = !0, s = d.replace(_, ""));
+                        n._list = !0, n._listLevel = (null != S ? S : 0) + 1, h ? (n.inline = !1, s = d.replace(_, "\n\n")) : (n.inline = !0, s = d.replace(_, ""));
                         let v = g(t(s, {
                             ...n,
                             allowHeading: !1

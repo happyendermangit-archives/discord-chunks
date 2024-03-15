@@ -31,8 +31,8 @@ function(e, t, n) {
             focusedIndex: c = 0,
             onSelect: f,
             setFocus: _,
-            getNewFocusIndex: h,
-            maintainFocusPosition: E = !0,
+            getNewFocusIndex: E,
+            maintainFocusPosition: h = !0,
             includeSetSizes: g = !0,
             focusOnMount: m = !0,
             enabled: p = !0,
@@ -44,8 +44,8 @@ function(e, t, n) {
             focusedIndex: c,
             itemCount: n
         }), {
-            itemCount: C,
-            focusedIndex: A
+            itemCount: A,
+            focusedIndex: C
         } = T, [y] = i.useState(() => (0, a.throttle)(I, 16));
         return i.useEffect(() => {
                 I({
@@ -60,30 +60,30 @@ function(e, t, n) {
                     focusedIndex: c,
                     onSelect: f,
                     setFocus: _ = d,
-                    getNewFocusIndex: h,
-                    dispatch: E,
+                    getNewFocusIndex: E,
+                    dispatch: h,
                     maintainFocusPosition: g,
                     includeSetSizes: m,
                     focusOnMount: p,
                     enabled: S,
                     makeId: v = a.makeId,
                     getIndexFromId: T
-                } = e, I = i.useRef(n), C = i.useRef(T);
-                C.current = T, I.current = n;
-                let A = i.useRef();
+                } = e, I = i.useRef(n), A = i.useRef(T);
+                A.current = T, I.current = n;
+                let C = i.useRef();
                 i.useEffect(() => {
-                    A.current = S
+                    C.current = S
                 }, [S]);
                 let [y, N] = i.useState(!1), [R] = i.useState(() => new a.HandlerMemoizer(e => () => {
-                    let t = null != C.current && "string" == typeof e ? C.current(e) : e;
-                    "number" == typeof t && !(t < 0) && E({
+                    let t = null != A.current && "string" == typeof e ? A.current(e) : e;
+                    "number" == typeof t && !(t < 0) && h({
                         type: s.ListActionType.SET_FOCUSED_INDEX,
                         index: t
                     })
                 }));
                 i.useEffect(() => () => R.clean(), [R]);
                 let O = i.useCallback((e, t) => {
-                        A.current && _(e, t)
+                        C.current && _(e, t)
                     }, [_]),
                     [D, P] = i.useState(!0);
                 i.useEffect(() => {
@@ -95,14 +95,14 @@ function(e, t, n) {
                 }, [c]);
                 let L = i.useCallback(function() {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                            n = null != h ? h(c) : c;
-                        n !== c && E({
+                            n = null != E ? E(c) : c;
+                        n !== c && h({
                             type: s.ListActionType.SET_FOCUSED_INDEX,
                             index: n
                         }), e && O(v(t, n), n)
-                    }, [v, c, h, E, t, O]),
+                    }, [v, c, E, h, t, O]),
                     M = i.useCallback(e => {
-                        if (!A.current) return;
+                        if (!C.current) return;
                         if (o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             e.preventDefault(), e.stopPropagation(), L();
                             return
@@ -127,7 +127,7 @@ function(e, t, n) {
                             case r.ActionType.NAVIGATE_DOWN:
                             case r.ActionType.NAVIGATE_START:
                             case r.ActionType.NAVIGATE_END:
-                                e.preventDefault(), e.stopPropagation(), E({
+                                e.preventDefault(), e.stopPropagation(), h({
                                     type: n
                                 });
                                 return;
@@ -135,7 +135,7 @@ function(e, t, n) {
                                 var i;
                                 let s = u(l(v, t, c));
                                 if ((null == (i = s) ? void 0 : i.ownerDocument.activeElement) !== i || e.repeat) return;
-                                if (e.preventDefault(), e.stopPropagation(), E({
+                                if (e.preventDefault(), e.stopPropagation(), h({
                                         type: n
                                     }), null != f) {
                                     f(c);
@@ -143,7 +143,7 @@ function(e, t, n) {
                                 }
                                 null == s || s.click()
                         }
-                    }, [v, t, E, c, L, f]),
+                    }, [v, t, h, c, L, f]),
                     b = i.useCallback(() => {
                         y || N(!0)
                     }, [y]),
@@ -183,24 +183,24 @@ function(e, t, n) {
                             "aria-posinset": m ? n + 1 : void 0,
                             id: v(t, n),
                             tabIndex: g && n === c ? 0 : -1,
-                            onFocus: R.get(null != C.current ? v(t, n) : n)
+                            onFocus: R.get(null != A.current ? v(t, n) : n)
                         }
                     }, [v, t, c, g, R, m]),
                     F = i.useMemo(() => ({
-                        dispatch: E,
+                        dispatch: h,
                         getContainerProps: V,
                         getItemProps: G
-                    }), [E, V, G]);
+                    }), [h, V, G]);
                 return F
             }({
                 navId: t,
-                itemCount: C,
-                focusedIndex: A,
+                itemCount: A,
+                focusedIndex: C,
                 dispatch: y,
                 onSelect: f,
                 setFocus: _,
-                getNewFocusIndex: h,
-                maintainFocusPosition: E,
+                getNewFocusIndex: E,
+                maintainFocusPosition: h,
                 includeSetSizes: g,
                 focusOnMount: m,
                 enabled: p

@@ -8,10 +8,10 @@ function(e, t, n) {
             return I
         },
         isSnowflake: function() {
-            return C
+            return A
         },
         getMatchingGroupCommands: function() {
-            return A
+            return C
         },
         getApplicationCommandOptionQueryOptions: function() {
             return y
@@ -40,14 +40,20 @@ function(e, t, n) {
         extractInteractionDataProps: function() {
             return U
         },
-        useIsInUserAppExperiment: function() {
+        useIsUserInUserAppExperiment: function() {
             return w
         },
-        isInUserAppExperiment: function() {
+        isUserInUserAppExperiment: function() {
             return k
         },
-        trackCommandSelected: function() {
+        useIsGuildInUserAppExperiment: function() {
             return V
+        },
+        isGuildInUserAppExperiment: function() {
+            return G
+        },
+        trackCommandSelected: function() {
+            return F
         }
     }), n("222007"), n("424973"), n("881410"), n("808653");
     var i = n("552442"),
@@ -61,8 +67,8 @@ function(e, t, n) {
         c = n("716241"),
         f = n("892692"),
         _ = n("233069"),
-        h = n("474643"),
-        E = n("524768"),
+        E = n("474643"),
+        h = n("524768"),
         g = n("970254"),
         m = n("696415"),
         p = n("317041"),
@@ -82,7 +88,7 @@ function(e, t, n) {
             s[e.id] = e
         })));
         let _ = (null != l ? l : []).map(e => e.name),
-            h = (null != l ? l : []).map(e => e.displayName);
+            E = (null != l ? l : []).map(e => e.displayName);
         return {
             version: r.version,
             guildId: r.guild_id,
@@ -91,7 +97,7 @@ function(e, t, n) {
             serverLocalizedName: a.name_localized,
             applicationId: o,
             type: null !== (t = r.type) && void 0 !== t ? t : d.ApplicationCommandType.CHAT,
-            inputType: E.ApplicationCommandInputType.BOT,
+            inputType: h.ApplicationCommandInputType.BOT,
             description: a.description,
             options: function e(t) {
                 return null == t ? void 0 : t.map(t => {
@@ -134,7 +140,7 @@ function(e, t, n) {
             defaultMemberPermissions: null == r.default_member_permissions ? void 0 : u.default.deserialize(r.default_member_permissions),
             dmPermission: r.dm_permission,
             permissions: s,
-            displayName: [null !== (n = r.name_localized) && void 0 !== n ? n : r.name, ...h].join(" "),
+            displayName: [null !== (n = r.name_localized) && void 0 !== n ? n : r.name, ...E].join(" "),
             displayDescription: null !== (i = a.description_localized) && void 0 !== i ? i : a.description,
             nsfw: r.nsfw,
             contexts: r.contexts,
@@ -210,11 +216,11 @@ function(e, t, n) {
         })))
     }
 
-    function C(e) {
+    function A(e) {
         return S.ID_REGEX.test(e.trim())
     }
 
-    function A(e, t, n, i) {
+    function C(e, t, n, i) {
         let s = [];
         return l(e).forEach(e => {
             t.test(e.displayName) && (null == e.predicate || e.predicate(n)) && s.push(e)
@@ -243,12 +249,12 @@ function(e, t, n) {
 
     function R(e, t, n, i) {
         if (n) return !1;
-        if (i.isMultiUserDM()) return k(i.guild_id, {
+        if (i.isMultiUserDM()) return k({
             location: "canUseApplicationCommands"
         }, {
             autoTrackExposure: !1
         }) || t.getIntegrations(i.id).length > 0;
-        if (i.isDM()) return !i.isSystemDM() && (null != i.rawRecipients.find(e => e.bot) || k(i.guild_id, {
+        if (i.isDM()) return !i.isSystemDM() && (null != i.rawRecipients.find(e => e.bot) || k({
             location: "canUseApplicationCommands"
         }, {
             autoTrackExposure: !1
@@ -277,39 +283,39 @@ function(e, t, n) {
     }
 
     function P(e, t, n) {
-        let i = n[(0, f.toPermissionKey)(e.userId, E.ApplicationCommandPermissionType.USER)];
+        let i = n[(0, f.toPermissionKey)(e.userId, h.ApplicationCommandPermissionType.USER)];
         if (null != i) return i.permission;
         let s = !1;
         for (let t of e.roles) {
-            let e = n[(0, f.toPermissionKey)(t, E.ApplicationCommandPermissionType.ROLE)];
+            let e = n[(0, f.toPermissionKey)(t, h.ApplicationCommandPermissionType.ROLE)];
             if (null != e && (s = !0, e.permission)) return !0
         }
         if (s) return !1;
-        let r = n[(0, f.toPermissionKey)(t, E.ApplicationCommandPermissionType.ROLE)];
+        let r = n[(0, f.toPermissionKey)(t, h.ApplicationCommandPermissionType.ROLE)];
         return null != r ? r.permission : null
     }
 
     function L(e) {
         switch (e) {
-            case E.CommandOrigin.CHAT:
-                return h.DraftType.SlashCommand;
-            case E.CommandOrigin.APPLICATION_LAUNCHER:
-                return h.DraftType.ApplicationLauncherCommand
+            case h.CommandOrigin.CHAT:
+                return E.DraftType.SlashCommand;
+            case h.CommandOrigin.APPLICATION_LAUNCHER:
+                return E.DraftType.ApplicationLauncherCommand
         }
     }
 
     function M(e) {
         if (null != e) {
-            if (e.id === p.BuiltInSectionId.BUILT_IN) return E.ApplicationCommandTriggerSections.BUILT_IN;
-            else if (e.id === p.BuiltInSectionId.FRECENCY) return E.ApplicationCommandTriggerSections.FRECENCY;
-            else return E.ApplicationCommandTriggerSections.APP
+            if (e.id === p.BuiltInSectionId.BUILT_IN) return h.ApplicationCommandTriggerSections.BUILT_IN;
+            else if (e.id === p.BuiltInSectionId.FRECENCY) return h.ApplicationCommandTriggerSections.FRECENCY;
+            else return h.ApplicationCommandTriggerSections.APP
         }
     }
 
     function b(e) {
         var t, n;
         return {
-            type: E.ApplicationCommandSectionType.APPLICATION,
+            type: h.ApplicationCommandSectionType.APPLICATION,
             id: e.id,
             name: null !== (n = null == e ? void 0 : null === (t = e.bot) || void 0 === t ? void 0 : t.username) && void 0 !== n ? n : e.name,
             icon: e.icon,
@@ -329,25 +335,34 @@ function(e, t, n) {
         }
     }
 
-    function w(e, t, n) {
-        let i = g.default.useExperiment(t, n).userAppsTreatment === g.UserAppsTreatment.ALLOWED,
-            s = m.default.useExperiment({
-                guildId: null != e ? e : S.EMPTY_STRING_SNOWFLAKE_ID,
-                ...t
-            }, n).userAppsTreatment === g.UserAppsTreatment.ALLOWED;
-        return i && (null == e || s)
+    function w(e, t) {
+        let n = g.default.useExperiment(e, t);
+        return n.userAppsTreatment === g.UserAppsTreatment.ALLOWED
     }
 
-    function k(e, t, n) {
-        let i = g.default.getCurrentConfig(t, n).userAppsTreatment === g.UserAppsTreatment.ALLOWED,
-            s = m.default.getCurrentConfig({
-                guildId: null != e ? e : S.EMPTY_STRING_SNOWFLAKE_ID,
-                ...t
-            }, n).userAppsTreatment === g.UserAppsTreatment.ALLOWED;
-        return i && (s || null == e)
+    function k(e, t) {
+        let n = g.default.getCurrentConfig(e, t);
+        return n.userAppsTreatment === g.UserAppsTreatment.ALLOWED
     }
 
-    function V(e) {
+    function V(e, t, n) {
+        let i = m.default.useExperiment({
+            guildId: null != e ? e : S.EMPTY_STRING_SNOWFLAKE_ID,
+            ...t
+        }, n);
+        return null == e || i.userAppsTreatment === g.UserAppsTreatment.ALLOWED
+    }
+
+    function G(e, t, n) {
+        if (null == e) return !0;
+        let i = m.default.getCurrentConfig({
+            guildId: e,
+            ...t
+        }, n);
+        return i.userAppsTreatment === g.UserAppsTreatment.ALLOWED
+    }
+
+    function F(e) {
         var t, n;
         let {
             command: i,

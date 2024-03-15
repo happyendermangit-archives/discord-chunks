@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("546463"),
         f = n("686470"),
         _ = n("535974"),
-        h = n("568734"),
-        E = n("269180"),
+        E = n("568734"),
+        h = n("269180"),
         g = n("773336"),
         m = n("260365"),
         p = n("438931"),
@@ -26,7 +26,7 @@ function(e, t, n) {
         T = n("954016"),
         I = n("782340");
 
-    function C(e) {
+    function A(e) {
         let {
             applicationId: t,
             secret: n,
@@ -35,7 +35,7 @@ function(e, t, n) {
             embedded: a = !1,
             analyticsLocations: o = []
         } = e;
-        A(t, null, i, a, o).then(() => E.default.waitConnected(t)).then(() => Promise.race([E.default.waitSubscribed(t, v.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+        C(t, null, i, a, o).then(() => h.default.waitConnected(t)).then(() => Promise.race([h.default.waitSubscribed(t, v.RPCEvents.ACTIVITY_JOIN)])).then(() => {
             r.default.dispatch({
                 type: "ACTIVITY_JOIN",
                 applicationId: t,
@@ -49,12 +49,12 @@ function(e, t, n) {
         }))
     }
 
-    function A(e, t, n) {
+    function C(e, t, n) {
         let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             c = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
         if (l) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, a.startEmbeddedActivity)(n, e, c), Promise.resolve());
         if (d.default.isConnected(e)) return Promise.resolve();
-        let h = null;
+        let E = null;
         if (null == t) {
             let n = f.default.getActiveLibraryApplication(e);
             t = null != n ? n.branchId : e
@@ -66,7 +66,7 @@ function(e, t, n) {
             if (null == n) throw Error("Missing dispatch game when launching");
             let a = f.default.getLibraryApplication(e, t);
             if (null == a) throw Error("Missing library application when launching");
-            h = (g = e, s.default.post({
+            E = (g = e, s.default.post({
                 url: v.Endpoints.OAUTH2_AUTHORIZE,
                 query: {
                     client_id: g,
@@ -90,20 +90,20 @@ function(e, t, n) {
             }, e => {
                 if (404 === e.status) return null;
                 throw e
-            })).then(e => E.default.launchDispatchApplication(n, e, u.default.locale, a.getBranchName(), r))
+            })).then(e => h.default.launchDispatchApplication(n, e, u.default.locale, a.getBranchName(), r))
         } else {
             let t = o.default.getApplication(e);
-            h = null != t ? E.default.launch(t) : E.default.launchGame(e)
+            E = null != t ? h.default.launch(t) : h.default.launchGame(e)
         }
         let m = Error("game not found");
-        return null != h ? (r.default.dispatch({
+        return null != E ? (r.default.dispatch({
             type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
             applicationId: e,
             branchId: t
         }), r.default.dispatch({
             type: "GAME_LAUNCH_START",
             applicationId: e
-        }), h.then(t => {
+        }), E.then(t => {
             r.default.dispatch({
                 type: "GAME_LAUNCH_SUCCESS",
                 applicationId: e,
@@ -133,7 +133,7 @@ function(e, t, n) {
             if (null != n) {
                 let e = f.default.getActiveLibraryApplication(n.id);
                 if (null != e) {
-                    let t = h.toggleFlag(e.getFlags(), v.LibraryApplicationFlags.OVERLAY_DISABLED);
+                    let t = E.toggleFlag(e.getFlags(), v.LibraryApplicationFlags.OVERLAY_DISABLED);
                     p.updateFlags(e.id, e.branchId, t);
                     return
                 }
@@ -277,7 +277,7 @@ function(e, t, n) {
                 game: e
             })
         },
-        launch: A,
+        launch: C,
         async join(e) {
             let {
                 userId: t,
@@ -302,7 +302,7 @@ function(e, t, n) {
             });
             try {
                 let e = await m.default.getJoinSecret(t, n, i, s, a);
-                return C({
+                return A({
                     applicationId: i,
                     secret: e,
                     channelId: s,
@@ -316,6 +316,6 @@ function(e, t, n) {
                 }), !1
             }
         },
-        joinWithSecret: C
+        joinWithSecret: A
     }
 }

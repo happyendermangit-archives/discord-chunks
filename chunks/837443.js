@@ -14,8 +14,8 @@ function(e, t, n) {
         c = n("118810"),
         f = n("718776"),
         _ = n("414055"),
-        h = n("206230"),
-        E = n("455298");
+        E = n("206230"),
+        h = n("455298");
 
     function g(e, t) {
         let n = 0;
@@ -111,8 +111,8 @@ function(e, t, n) {
                 barStyles: v,
                 fillStyles: T,
                 mini: I,
-                hideBubble: C,
-                defaultValue: A,
+                hideBubble: A,
+                defaultValue: C,
                 orientation: y,
                 onValueRender: N,
                 renderMarker: R,
@@ -130,23 +130,23 @@ function(e, t, n) {
             let G = "".concat(V, "%"),
                 F = null != a && null != s ? a.map((e, t) => {
                     let n = s[t],
-                        i = null != A && A === n,
+                        i = null != C && C === n,
                         a = this.renderMark(n);
                     return (0, r.jsx)("div", {
-                        className: l(E.mark, {
-                            [E.defaultValue]: i,
-                            [E.markAbove]: 0 === M,
-                            [E.markBelow]: 1 === M
+                        className: l(h.mark, {
+                            [h.defaultValue]: i,
+                            [h.markAbove]: 0 === M,
+                            [h.markBelow]: 1 === M
                         }),
                         style: {
                             left: "".concat(e, "%")
                         },
                         children: null != R ? R(n) : (0, r.jsxs)(r.Fragment, {
                             children: [(0, r.jsx)("div", {
-                                className: E.markValue,
+                                className: h.markValue,
                                 children: a
                             }), (0, r.jsx)("div", {
-                                className: E["markDash".concat(null == a ? "simple" : "")]
+                                className: h["markDash".concat(null == a ? "simple" : "")]
                             })]
                         })
                     }, t)
@@ -157,9 +157,9 @@ function(e, t, n) {
                 focusTarget: this.containerRef,
                 ringTarget: this.grabberRef,
                 children: (0, r.jsxs)("div", {
-                    className: l(E.slider, p, {
-                        [E.disabled]: g,
-                        [E.mini]: I
+                    className: l(h.slider, p, {
+                        [h.disabled]: g,
+                        [h.mini]: I
                     }),
                     "aria-valuemin": d,
                     "aria-valuemax": c,
@@ -179,28 +179,28 @@ function(e, t, n) {
                     onBlur: this.onBlur,
                     ref: this.containerRef,
                     children: [(0, r.jsx)("div", {
-                        className: E.track,
+                        className: h.track,
                         children: F
                     }), (0, r.jsx)("div", {
-                        className: l(E.bar, D),
+                        className: l(h.bar, D),
                         style: v,
                         children: (0, r.jsx)("div", {
-                            className: E.barFill,
+                            className: h.barFill,
                             style: {
                                 ...T,
                                 width: G
                             }
                         })
                     }), S, (0, r.jsx)("div", {
-                        className: E.track,
+                        className: h.track,
                         children: (0, r.jsx)(_.Tooltip, {
                             color: _.Tooltip.Colors.GREY,
                             hideOnClick: !1,
-                            text: C || m ? null : x,
-                            forceOpen: n || i && h.default.keyboardModeEnabled,
+                            text: A || m ? null : x,
+                            forceOpen: n || i && E.default.keyboardModeEnabled,
                             children: e => (0, r.jsx)("div", {
                                 ...e,
-                                className: l(E.grabber, P),
+                                className: l(h.grabber, P),
                                 style: {
                                     ...L,
                                     left: G
@@ -301,13 +301,13 @@ function(e, t, n) {
                 if (!(0, c.isElement)(f)) return;
                 let {
                     left: _,
-                    width: h
-                } = f.getBoundingClientRect(), E = (d - _) / h;
+                    width: E
+                } = f.getBoundingClientRect(), h = (d - _) / E;
                 if (o) {
                     let {
                         nextClosestMarkerIndex: e
                     } = u.reduce((e, t, n) => {
-                        let i = Math.abs(t / 100 - E);
+                        let i = Math.abs(t / 100 - h);
                         return i <= e.smallestDelta ? {
                             smallestDelta: i,
                             nextClosestMarkerIndex: n
@@ -320,7 +320,7 @@ function(e, t, n) {
                     this.setState({
                         closestMarkerIndex: e
                     }), t = l[e]
-                } else t = s + (i - s) * E, this.setState({
+                } else t = s + (i - s) * h, this.setState({
                     value: t
                 }), this.handleMouseDown(e);
                 null != a && a(t), null != r && r(t)

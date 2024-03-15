@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("659500"),
         f = n("439932"),
         _ = n("411093"),
-        h = n("228256"),
-        E = n("49111"),
+        E = n("228256"),
+        h = n("49111"),
         g = n("855265");
     let m = new WeakMap;
 
@@ -246,7 +246,7 @@ function(e, t, n) {
                 autoInvert: t
             } = this.props, n = this.elementRef.current;
             l(null != n, "Unexpected null element");
-            let i = (0, h.getParentLayerContainer)(n),
+            let i = (0, E.getParentLayerContainer)(n),
                 {
                     style: s,
                     nudge: r
@@ -299,7 +299,7 @@ function(e, t, n) {
                 ...this.calculateState()
             });
             let s = this.elementRef.current;
-            l(null != s, "Missing elementRef"), "function" != typeof n && null != n.current && m.set(s, n.current), c.ComponentDispatch.subscribe(E.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.subscribe(E.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == s || null === (t = s.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
+            l(null != s, "Missing elementRef"), "function" != typeof n && null != n.current && m.set(s, n.current), c.ComponentDispatch.subscribe(h.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.subscribe(h.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == s || null === (t = s.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
         }
         componentDidUpdate(e, t) {
             if (S(e) !== S(this.props) ? this.updatePosition() : ! function(e, t) {
@@ -317,7 +317,7 @@ function(e, t, n) {
         componentWillUnmount() {
             var e, t, n, i;
             let s = this.elementRef.current;
-            l(null != s, "Missing elementRef"), m.delete(s), c.ComponentDispatch.unsubscribe(E.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.unsubscribe(E.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == s || null === (t = s.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
+            l(null != s, "Missing elementRef"), m.delete(s), c.ComponentDispatch.unsubscribe(h.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.unsubscribe(h.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == s || null === (t = s.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
         }
         render() {
             let {
@@ -335,11 +335,11 @@ function(e, t, n) {
             return (0, i.jsx)(d.UseThemeContext, {
                 children: d => {
                     let {
-                        theme: h
+                        theme: E
                     } = d;
                     return (0, i.jsx)("div", {
                         id: e,
-                        className: a(t, (0, f.getThemeClass)(h), g.layer, {
+                        className: a(t, (0, f.getThemeClass)(E), g.layer, {
                             [g.emptyError]: !1,
                             [g.layerHidden]: c,
                             [g.disabledPointerEvents]: r

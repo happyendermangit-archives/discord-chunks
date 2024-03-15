@@ -5,7 +5,7 @@ function(e, t, n) {
             return l
         },
         default: function() {
-            return h
+            return E
         }
     }), n("424973");
     var i = n("917351"),
@@ -70,7 +70,7 @@ function(e, t, n) {
         }
     }
     _.displayName = "LobbyStore";
-    var h = new _(a.default, {
+    var E = new _(a.default, {
         CONNECTION_OPEN: function() {
             u = {}
         },

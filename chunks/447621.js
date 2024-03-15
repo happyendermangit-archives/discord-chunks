@@ -14,10 +14,10 @@ function(e, t, n) {
             return _
         },
         DISCORD_HUB_ID: function() {
-            return h
+            return E
         },
         MAX_ALGOLIA_PAGINATOR_RESULTS: function() {
-            return E
+            return h
         },
         DISCOVERY_SIDEBAR_CATEGORIES: function() {
             return g
@@ -41,7 +41,7 @@ function(e, t, n) {
             return l
         },
         ALLOWED_SOCIAL_LINKS_DOMAINS: function() {
-            return C
+            return A
         }
     });
     var i, s, r, a, o, l, u = n("782340");
@@ -49,8 +49,8 @@ function(e, t, n) {
         c = 13,
         f = !0,
         _ = -1,
-        h = -2,
-        E = 1e3,
+        E = -2,
+        h = 1e3,
         g = [{
             categoryId: -1,
             icon: "Discover"
@@ -122,7 +122,7 @@ function(e, t, n) {
         T = 40,
         I = 20;
     (s = o || (o = {})).GAME_RECOMMENDATIONS = "Game Recommendations", s.SERVER_RECOMMENDATIONS = "Server Recommendations", (r = l || (l = {}))[r.Activity = 0] = "Activity", r[r.Discover = 1] = "Discover", r[r.Education = 2] = "Education", r[r.Music = 3] = "Music", r[r.Science = 4] = "Science", r[r.Stage = 5] = "Stage", r[r.Television = 6] = "Television";
-    let C = {
+    let A = {
         facebook: {
             presentation: "Facebook",
             baseUrl: "https://facebook.com"

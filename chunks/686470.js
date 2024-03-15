@@ -17,11 +17,11 @@ function(e, t, n) {
         f = n("49111");
     let _ = "LibraryApplicationStore";
 
-    function h() {
+    function E() {
         var e;
         return null !== (e = a.default.get(_)) && void 0 !== e ? e : {}
     }
-    let E = !1,
+    let h = !1,
         g = {},
         m = {},
         p = new Set,
@@ -31,19 +31,19 @@ function(e, t, n) {
 
     function I() {
         a.default.set(_, {
-            ...h(),
+            ...E(),
             activeLaunchOptionIds: v
         })
     }
 
-    function C() {
+    function A() {
         a.default.set(_, {
-            ...h(),
+            ...E(),
             activeLibraryApplicationBranchIds: S
         })
     }
 
-    function A(e) {
+    function C(e) {
         for (let t of e) {
             let e = l.default.createFromServer(t),
                 n = (0, d.getComboId)(e.id, e.branchId);
@@ -74,7 +74,7 @@ function(e, t, n) {
         initialize() {
             this.waitFor(c.default);
             let e = a.default.get(_);
-            null != e && (null == e.activeLaunchOptionIds ? I() : v = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? C() : S = e.activeLibraryApplicationBranchIds)
+            null != e && (null == e.activeLaunchOptionIds ? I() : v = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? A() : S = e.activeLibraryApplicationBranchIds)
         }
         get libraryApplications() {
             return function(e) {
@@ -123,7 +123,7 @@ function(e, t, n) {
             return v[(0, d.getComboId)(e, t)]
         }
         get fetched() {
-            return E
+            return h
         }
         get entitledBranchIds() {
             return s(R()).values().filter(e => (0, d.isUserEntitledToLibraryApplication)(e)).map(e => e.branchId).value()
@@ -133,26 +133,26 @@ function(e, t, n) {
         }
         whenInitialized(e) {
             this.addConditionalChangeListener(() => {
-                if (E) return setImmediate(e), !1
+                if (h) return setImmediate(e), !1
             })
         }
     }
     O.displayName = "LibraryApplicationStore";
     var D = new O(o.default, {
         LOGOUT: function() {
-            E = !1
+            h = !1
         },
         LIBRARY_FETCH_SUCCESS: function(e) {
             let {
                 libraryApplications: t
             } = e;
-            g = {}, A(t), E = !0
+            g = {}, C(t), h = !0
         },
         SKU_PURCHASE_SUCCESS: function(e) {
             let {
                 libraryApplications: t
             } = e;
-            A(t)
+            C(t)
         },
         LIBRARY_APPLICATION_FLAGS_UPDATE_START: function(e) {
             let {
@@ -178,7 +178,7 @@ function(e, t, n) {
                 branchId: n
             } = e;
             if (S[t] === n) return !1;
-            S[t] = n, C()
+            S[t] = n, A()
         },
         LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function(e) {
             let {

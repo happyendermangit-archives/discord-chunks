@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         CHANNEL_OR_MESSAGES_URL_RE: function() {
-            return E
+            return h
         },
         MEDIA_POST_URL_RE: function() {
             return g
@@ -31,8 +31,8 @@ function(e, t, n) {
         c = new RegExp("^/channels/(\\d+|".concat(o.ME, ")(?:/)(\\d+|").concat(u, ")(?:/)(\\d+)")),
         f = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
         _ = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
-        h = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-        E = new RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+|".concat(o.ME, ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?")),
+        E = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+        h = new RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+|".concat(o.ME, ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?")),
         g = RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
 
     function m(e) {
@@ -66,7 +66,7 @@ function(e, t, n) {
 
     function p(e) {
         if (null == e) return null;
-        let t = e.match(h);
+        let t = e.match(E);
         return null != t && t.length > 1 ? {
             guildId: t[1],
             guildEventId: t[2],

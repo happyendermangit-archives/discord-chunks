@@ -53,13 +53,13 @@ function(e, t, n) {
             return Y
         },
         BYS_TWOODLE_APP_ID: function() {
-            return j
+            return K
         },
         CHEF_SHOWDOWN_APPLICATION_ID: function() {
-            return W
+            return j
         },
         PUTT_PARTY_APPLICATION_ID: function() {
-            return K
+            return W
         },
         KRUNKER_STRIKE_APPLICATION_ID: function() {
             return z
@@ -119,8 +119,8 @@ function(e, t, n) {
             return ei
         }
     }), n("222007");
-    var i, s, r, a, o, l, u, d, c, f, _, h, E, g, m, p, S, v, T, I, C = n("798609"),
-        A = n("49111");
+    var i, s, r, a, o, l, u, d, c, f, _, E, h, g, m, p, S, v, T, I, A = n("798609"),
+        C = n("49111");
     let y = 160,
         N = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
         R = "438122941302046720",
@@ -140,9 +140,9 @@ function(e, t, n) {
         B = "832025144389533716",
         H = "755827207812677713",
         Y = "879863686565621790",
-        j = "902271654783242291",
-        W = "1037680572660727838",
-        K = "945737671223947305",
+        K = "902271654783242291",
+        j = "1037680572660727838",
+        W = "945737671223947305",
         z = "1011683823555199066",
         q = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
         X = {
@@ -150,13 +150,13 @@ function(e, t, n) {
             LARGE: 160
         },
         Q = ["in_development", "activities_team", "employee_release"];
-    (_ = i || (i = {})).FAILED_LOAD = "FAILED_LOAD", _.LAGGING = "LAGGING", _.CONFUSING = "CONFUSING", _.NOT_FUN = "NOT_FUN", _.OTHER = "OTHER", (h = s || (s = {}))[h.PLAY = 0] = "PLAY", h[h.SPECTATE = 1] = "SPECTATE", (E = r || (r = {})).DESKTOP = "desktop", E.MOBILE = "mobile", (g = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", g.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", g.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", g.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (m = o || (o = {}))[m.NO_UPDATE = 0] = "NO_UPDATE", m[m.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", m[m.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", m[m.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", m[m.USER_JOINED = 4] = "USER_JOINED", m[m.USER_LEFT = 5] = "USER_LEFT", m[m.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (p = l || (l = {}))[p.UNLOCKED = 1] = "UNLOCKED", p[p.PORTRAIT = 2] = "PORTRAIT", p[p.LANDSCAPE = 3] = "LANDSCAPE", (S = u || (u = {}))[S.DIRECTORY = 0] = "DIRECTORY", S[S.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", S[S.DETAIL_PAGE = 2] = "DETAIL_PAGE";
+    (_ = i || (i = {})).FAILED_LOAD = "FAILED_LOAD", _.LAGGING = "LAGGING", _.CONFUSING = "CONFUSING", _.NOT_FUN = "NOT_FUN", _.OTHER = "OTHER", (E = s || (s = {}))[E.PLAY = 0] = "PLAY", E[E.SPECTATE = 1] = "SPECTATE", (h = r || (r = {})).DESKTOP = "desktop", h.MOBILE = "mobile", (g = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", g.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", g.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", g.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (m = o || (o = {}))[m.NO_UPDATE = 0] = "NO_UPDATE", m[m.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", m[m.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", m[m.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", m[m.USER_JOINED = 4] = "USER_JOINED", m[m.USER_LEFT = 5] = "USER_LEFT", m[m.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (p = l || (l = {}))[p.UNLOCKED = 1] = "UNLOCKED", p[p.PORTRAIT = 2] = "PORTRAIT", p[p.LANDSCAPE = 3] = "LANDSCAPE", (S = u || (u = {}))[S.DIRECTORY = 0] = "DIRECTORY", S[S.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", S[S.DETAIL_PAGE = 2] = "DETAIL_PAGE";
     let Z = "activity-shelf",
         J = new Set(["755600276941176913", D, P, k, "1010174316991762534", z]),
         $ = new Set([D, P, k]);
     (v = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", v.GDM_ACTIVITIES = "GDM_ACTIVITIES", v.PUTT_PARTY = "PUTT_PARTY", v.JAMSPACE_OLD = "JAMSPACE", v.JAMSPACE = "JAMSPACE2", v.POKER = "POKER", v.FREE = "FREE", (T = c || (c = {}))[T.PORTRAIT = 0] = "PORTRAIT", T[T.LANDSCAPE = 1] = "LANDSCAPE", (I = f || (f = {}))[I.FOCUSED = 0] = "FOCUSED", I[I.PIP = 1] = "PIP", I[I.GRID = 2] = "GRID";
     let ee = {
-            label_type: C.EmbeddedActivityLabelTypes.NONE,
+            label_type: A.EmbeddedActivityLabelTypes.NONE,
             release_phase: "",
             label_until: null
         },
@@ -165,15 +165,15 @@ function(e, t, n) {
             requires_age_gate: !1,
             default_orientation_lock_state: 1,
             tablet_default_orientation_lock_state: 1,
-            supported_platforms: [C.EmbeddedActivitySupportedPlatforms.WEB],
+            supported_platforms: [A.EmbeddedActivitySupportedPlatforms.WEB],
             client_platform_config: {
-                [C.EmbeddedActivitySupportedPlatforms.WEB]: ee,
-                [C.EmbeddedActivitySupportedPlatforms.IOS]: ee,
-                [C.EmbeddedActivitySupportedPlatforms.ANDROID]: ee
+                [A.EmbeddedActivitySupportedPlatforms.WEB]: ee,
+                [A.EmbeddedActivitySupportedPlatforms.IOS]: ee,
+                [A.EmbeddedActivitySupportedPlatforms.ANDROID]: ee
             },
             has_csp_exception: !1,
             displays_advertisements: !1
         },
-        en = [A.ChannelTypes.GUILD_TEXT, A.ChannelTypes.DM, A.ChannelTypes.GROUP_DM],
+        en = [C.ChannelTypes.GUILD_TEXT, C.ChannelTypes.DM, C.ChannelTypes.GROUP_DM],
         ei = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
 }

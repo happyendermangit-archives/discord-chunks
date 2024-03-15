@@ -26,16 +26,19 @@ function(e, t, n) {
             return _
         },
         MAX_SUBCOMMAND_LEVEL: function() {
-            return h
+            return E
         },
         CONTEXT_MENU_COMMANDS_QUERY_LIMIT: function() {
-            return E
+            return h
         },
         AUTOCOMPLETE_OPTION_DEBOUNCE_TIME: function() {
             return g
         },
-        getValidationErrorText: function() {
+        APPLICATION_USER_INSTALL_BETA_USER_LIMIT: function() {
             return m
+        },
+        getValidationErrorText: function() {
+            return p
         }
     });
     var i, s, r = n("798609"),
@@ -56,11 +59,13 @@ function(e, t, n) {
         c = 5,
         f = "\x00",
         _ = 100,
-        h = 3,
-        E = 10,
+        E = 3,
+        h = 10,
         g = 500;
+    Object.freeze([]), Object.freeze([]);
+    let m = 200;
 
-    function m(e) {
+    function p(e) {
         if (null != e.choices) return a.default.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
         switch (e.type) {
             case r.ApplicationCommandOptionType.BOOLEAN:
@@ -81,5 +86,4 @@ function(e, t, n) {
                 return a.default.Messages.COMMAND_VALIDATION_GENERAL_ERROR
         }
     }
-    Object.freeze([]), Object.freeze([])
 }

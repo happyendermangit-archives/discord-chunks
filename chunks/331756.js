@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("159885"),
         f = n("470074"),
         _ = n("261147"),
-        h = n("401059"),
-        E = n("289382"),
+        E = n("401059"),
+        h = n("289382"),
         g = n("49111"),
         m = n("611787");
     let p = (0, c.cssValueToNumber)(l.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
@@ -30,7 +30,7 @@ function(e, t, n) {
             let {
                 waveState: t
             } = this.props;
-            t === E.WaveStates.FILLING && t !== e.waveState && this.waveFill()
+            t === h.WaveStates.FILLING && t !== e.waveState && this.waveFill()
         }
         componentWillUnmount() {
             this.terminate()
@@ -51,10 +51,10 @@ function(e, t, n) {
             let {
                 waveState: e
             } = this.props;
-            (e === E.WaveStates.INITIAL || e === E.WaveStates.FILLING) && this.updateWaveState(e + 1)
+            (e === h.WaveStates.INITIAL || e === h.WaveStates.FILLING) && this.updateWaveState(e + 1)
         }
         waveFill() {
-            this._isPlaying ? this.children.forEach(e => e.fill()) : this.updateWaveState(E.WaveStates.FILLED)
+            this._isPlaying ? this.children.forEach(e => e.fill()) : this.updateWaveState(h.WaveStates.FILLED)
         }
         updateAnimation(e) {
             this.children.forEach(t => t.update(e))
@@ -81,7 +81,7 @@ function(e, t, n) {
                     return r.enabled ? (0, i.jsx)("div", {
                         className: a(m.fallbackImage, {
                             [m.embedded]: n,
-                            [m.visible]: !t && e >= E.WaveStates.ENTERED
+                            [m.visible]: !t && e >= h.WaveStates.ENTERED
                         })
                     }) : (0, i.jsx)("canvas", {
                         className: a(m.canvas, {
@@ -138,7 +138,7 @@ function(e, t, n) {
                     this.updateAnimation(e), t -= e
                 }
                 this.renderAnimation(), this._lastTick = e, this._reqAnimId = requestAnimationFrame(this.run)
-            }, this.wave = new h.default(this.updateWaveState), this.children = [new f.default, new _.default, this.wave]
+            }, this.wave = new E.default(this.updateWaveState), this.children = [new f.default, new _.default, this.wave]
         }
     }
     v.defaultProps = {

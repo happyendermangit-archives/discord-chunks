@@ -13,8 +13,8 @@ function(e, t, n) {
         c = n.n(d),
         f = n("446674"),
         _ = n("95410"),
-        h = n("913144"),
-        E = n("21121"),
+        E = n("913144"),
+        h = n("21121"),
         g = n("934306"),
         m = n("393414"),
         p = n("233069"),
@@ -22,8 +22,8 @@ function(e, t, n) {
         v = n("271938"),
         T = n("42203"),
         I = n("923959"),
-        C = n("305961"),
-        A = n("42887"),
+        A = n("305961"),
+        C = n("42887"),
         y = n("162771"),
         N = n("49111"),
         R = n("724210");
@@ -75,7 +75,7 @@ function(e, t, n) {
 
     function G() {
         let e = !1,
-            t = C.default.getGuilds();
+            t = A.default.getGuilds();
         return c.each(D, (t, n) => {
             (null == t || !T.default.hasChannel(t) && t !== r && !M.has(t) && !(0, R.isGuildHomeChannel)(t)) && (delete D[n], delete P[n], e = !0)
         }), c.each(L, (t, n) => {
@@ -91,9 +91,9 @@ function(e, t, n) {
             let n = y.default.getGuildId();
             D[b(n)] === e && (t = n)
         }
-        let n = null != C.default.getGuild(t) ? t : null,
+        let n = null != A.default.getGuild(t) ? t : null,
             i = !1;
-        o === e && (o = null, i = !0), !(0, E.isInMainTabsExperiment)() && (D[b(n)] === e && (D[b(n)] = w(b(n)), y.default.getGuildId() === n && (0, m.replaceWith)(N.Routes.CHANNEL(t, D[b(n)])), i = !0), null != n && L[n] === e && (delete L[n], i = !0)), i && U()
+        o === e && (o = null, i = !0), !(0, h.isInMainTabsExperiment)() && (D[b(n)] === e && (D[b(n)] = w(b(n)), y.default.getGuildId() === n && (0, m.replaceWith)(N.Routes.CHANNEL(t, D[b(n)])), i = !0), null != n && L[n] === e && (delete L[n], i = !0)), i && U()
     }
 
     function x(e) {
@@ -122,7 +122,7 @@ function(e, t, n) {
                     null: null
                 })
             }
-            this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(C.default, T.default, y.default, I.default, A.default)
+            this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(A.default, T.default, y.default, I.default, C.default)
         }
         getChannelId(e) {
             var t, n;
@@ -131,7 +131,7 @@ function(e, t, n) {
             return i ? null !== (n = D[s]) && void 0 !== n ? n : w(s) : D[s]
         }
         getVoiceChannelId() {
-            return A.default.isSupported() ? o : null
+            return C.default.isSupported() ? o : null
         }
         getMostRecentSelectedTextChannelId(e) {
             var t;
@@ -151,7 +151,7 @@ function(e, t, n) {
         }
     }
     B.displayName = "SelectedChannelStore";
-    var H = new B(h.default, {
+    var H = new B(E.default, {
         CONNECTION_OPEN: function(e) {
             i = e.sessionId, null != o && null == T.default.getChannel(o) && (o = null);
             let t = G();
@@ -169,7 +169,7 @@ function(e, t, n) {
                 channelId: n
             } = e;
             if (void 0 === t) return !1;
-            null == n && (!(0, E.isInMainTabsExperiment)() || (0, g.shouldHandleNewPanelsRoute)(t)) && (n = w(t)), null != r && n !== r && (s = r), r = n, k(t, n), D[b(t)] !== n && (P[b(t)] = D[b(t)], D[b(t)] = r), U()
+            null == n && (!(0, h.isInMainTabsExperiment)() || (0, g.shouldHandleNewPanelsRoute)(t)) && (n = w(t)), null != r && n !== r && (s = r), r = n, k(t, n), D[b(t)] !== n && (P[b(t)] = D[b(t)], D[b(t)] = r), U()
         },
         CHANNEL_CREATE: function(e) {
             let {

@@ -26,8 +26,8 @@ function(e, t, n) {
         c = n("800762"),
         f = n("404008"),
         _ = n("49111"),
-        h = n("782340");
-    let E = (e, t) => (0, o.isPrivate)(e.type) || t.canBasicChannel(_.BasicPermissions.CONNECT | _.BasicPermissions.VIEW_CHANNEL, e);
+        E = n("782340");
+    let h = (e, t) => (0, o.isPrivate)(e.type) || t.canBasicChannel(_.BasicPermissions.CONNECT | _.BasicPermissions.VIEW_CHANNEL, e);
 
     function g(e, t, n) {
         var i;
@@ -35,19 +35,19 @@ function(e, t, n) {
         if (e.isPrivate()) return !0;
         let r = t.getGuild(e.getGuildId()),
             a = null !== (i = null == r ? void 0 : r.maxStageVideoChannelUsers) && void 0 !== i ? i : 0;
-        return (!e.isGuildStageVoice() || !(a <= 0)) && (!s || !!E(e, n)) && !!n.can(_.Permissions.STREAM, e) && null != r && r.afkChannelId !== e.id && !0
+        return (!e.isGuildStageVoice() || !(a <= 0)) && (!s || !!h(e, n)) && !!n.can(_.Permissions.STREAM, e) && null != r && r.afkChannelId !== e.id && !0
     }
 
     function m(e) {
         switch (e) {
             case 0:
-                return h.default.Messages.CONSOLE_STREAM_UNAVAILABLE;
+                return E.default.Messages.CONSOLE_STREAM_UNAVAILABLE;
             case 1:
-                return h.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL_MODAL_HEADER;
+                return E.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL_MODAL_HEADER;
             case 2:
-                return h.default.Messages.STREAM_NO_PERMISSION_CTA;
+                return E.default.Messages.STREAM_NO_PERMISSION_CTA;
             default:
-                return h.default.Messages.WATCH_STREAM
+                return E.default.Messages.WATCH_STREAM
         }
     }
 
@@ -56,7 +56,7 @@ function(e, t, n) {
         if (null == e) return [!1, 2];
         let a = t.isInChannel(e.id),
             l = e instanceof o.ChannelRecordBase && (0, f.isChannelFull)(e, t, n),
-            u = E(e, i),
+            u = h(e, i),
             d = null != s.getAwaitingRemoteSessionInfo() || null != s.getRemoteSessionId();
         d ? r = 0 : u || a ? l && !a && (r = 1) : r = 2;
         let c = !__OVERLAY__ && !d && (a || u && !l);

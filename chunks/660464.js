@@ -52,10 +52,10 @@ function(e, t, n) {
                 embedIds: []
             };
             let _ = null !== (u = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(r)) && void 0 !== u ? u : [],
-                h = null !== (d = null == e ? void 0 : null === (s = e.embeds) || void 0 === s ? void 0 : s.filter(a)) && void 0 !== d ? d : [];
+                E = null !== (d = null == e ? void 0 : null === (s = e.embeds) || void 0 === s ? void 0 : s.filter(a)) && void 0 !== d ? d : [];
             return {
                 attachmentIds: _.map(e => e.id).filter(Boolean),
-                embedIds: h.map((e, t) => "embed_".concat(t)).filter(Boolean)
+                embedIds: E.map((e, t) => "embed_".concat(t)).filter(Boolean)
             }
         }(e);
         return t.length > 0 || n.length > 0
@@ -80,10 +80,10 @@ function(e, t, n) {
             embedIds: []
         };
         let _ = null !== (o = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(l)) && void 0 !== o ? o : [],
-            h = null !== (d = null == e ? void 0 : null === (s = e.embeds) || void 0 === s ? void 0 : s.filter(u)) && void 0 !== d ? d : [];
+            E = null !== (d = null == e ? void 0 : null === (s = e.embeds) || void 0 === s ? void 0 : s.filter(u)) && void 0 !== d ? d : [];
         return {
             attachmentIds: _.map(e => e.id).filter(Boolean),
-            embedIds: h.map((e, t) => "embed_".concat(t)).filter(Boolean)
+            embedIds: E.map((e, t) => "embed_".concat(t)).filter(Boolean)
         }
     }
 

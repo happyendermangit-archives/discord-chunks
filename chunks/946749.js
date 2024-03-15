@@ -16,10 +16,10 @@ function(e, t, n) {
         c = u.TableSortDirections.ASCENDING,
         f = u.GameTableListKeys.LAST_PLAYED,
         _ = !1,
-        h = r.debounce(() => {
+        E = r.debounce(() => {
             _ = !1, g.emitChange()
         }, 200);
-    class E extends a.default.Store {
+    class h extends a.default.Store {
         initialize() {
             var e;
             let t = null !== (e = o.default.get(d)) && void 0 !== e ? e : {};
@@ -38,8 +38,8 @@ function(e, t, n) {
             return _
         }
     }
-    E.displayName = "GameLibraryViewStore";
-    let g = new E(l.default, {
+    h.displayName = "GameLibraryViewStore";
+    let g = new h(l.default, {
         LIBRARY_TABLE_SORT_UPDATE: function(e) {
             let {
                 direction: t,
@@ -55,7 +55,7 @@ function(e, t, n) {
                 key: t,
                 isKeyboardEvent: n
             } = e;
-            n && (_ = !0, h()), i = t
+            n && (_ = !0, E()), i = t
         }
     });
     var m = g

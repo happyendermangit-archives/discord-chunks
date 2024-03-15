@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return K
+            return W
         }
     }), n("222007"), n("808653"), n("424973"), n("881410");
     var i = n("917351"),
@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("290689"),
         f = n("804888"),
         _ = n("401690"),
-        h = n("845579"),
-        E = n("42203"),
+        E = n("845579"),
+        h = n("42203"),
         g = n("923959"),
         m = n("26989"),
         p = n("305961"),
@@ -25,8 +25,8 @@ function(e, t, n) {
         v = n("27618"),
         T = n("102985"),
         I = n("697218"),
-        C = n("25292"),
-        A = n("402671"),
+        A = n("25292"),
+        C = n("402671"),
         y = n("158998"),
         N = n("49111"),
         R = n("958706"),
@@ -163,7 +163,7 @@ function(e, t, n) {
             },
             emoticon: {
                 match(e, t, n) {
-                    if (!h.ConvertEmoticons.getSetting() || 0 !== n.length && !/\s$/.test(n)) return null;
+                    if (!E.ConvertEmoticons.getSetting() || 0 !== n.length && !/\s$/.test(n)) return null;
                     let i = u.default.EMOJI_SHORTCUT_RE.exec(e);
                     return null == i || i[0].length !== e.length && " " !== e[i[0].length] && "\n" !== e[i[0].length] ? null : i
                 },
@@ -264,7 +264,7 @@ function(e, t, n) {
             channel: {
                 match: a.anyScopeRegex(k),
                 parse(e) {
-                    let t = E.default.getChannel(e[1]);
+                    let t = h.default.getChannel(e[1]);
                     return {
                         content: null == t ? e[0] : (0, o.computeChannelName)(t, I.default, v.default, !0, !0)
                     }
@@ -351,7 +351,7 @@ function(e, t, n) {
         }), s
     }
 
-    function j(e) {
+    function K(e) {
         let t;
         let n = null == e ? void 0 : e.getGuildId(),
             i = null != n ? p.default.getGuild(n) : null,
@@ -403,7 +403,7 @@ function(e, t, n) {
                     text: n
                 }
             }),
-            d = null != n ? s(C.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter(e => e !== g.GUILD_SELECTABLE_CHANNELS_KEY).flatMap(e => g.default.getChannels(n)[e].map(e => ({
+            d = null != n ? s(A.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter(e => e !== g.GUILD_SELECTABLE_CHANNELS_KEY).flatMap(e => g.default.getChannels(n)[e].map(e => ({
                 id: e.channel.id,
                 text: e.channel.name
             }))).value() : [],
@@ -412,8 +412,8 @@ function(e, t, n) {
                 text: e.name
             })),
             f = l.default.getDisambiguatedEmojiContext(n),
-            h = f.getEscapedCustomEmoticonNames(),
-            E = f.getCustomEmoji(),
+            E = f.getEscapedCustomEmoticonNames(),
+            h = f.getCustomEmoji(),
             v = f.getCustomEmoticonRegex(),
             T = {
                 inline: !0,
@@ -423,21 +423,21 @@ function(e, t, n) {
                 channels: u.concat(d).concat(c),
                 emojiContext: f,
                 customEmoticonsRegex: v,
-                customEmoji: E,
-                textExclusions: h,
+                customEmoji: h,
+                textExclusions: E,
                 disableErrorGuards: !0
             };
         return T
     }
 
-    function W(e) {
+    function j(e) {
         return e
     }
-    var K = {
+    var W = {
         parse(e, t) {
             var n, i, s;
             let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-                a = null != r ? r : j(e),
+                a = null != r ? r : K(e),
                 o = {
                     content: t,
                     tts: !1,
@@ -445,7 +445,7 @@ function(e, t, n) {
                     validNonShortcutEmojis: []
                 };
             return o.content = (n = o.content, i = a, s = (t, n) => {
-                A.default.isEmojiPremiumLocked({
+                C.default.isEmojiPremiumLocked({
                     emoji: t,
                     channel: e,
                     intention: R.EmojiIntention.CHAT
@@ -453,15 +453,15 @@ function(e, t, n) {
             }, Y(B(n, i), i, u.default.translateInlineEmojiToSurrogates, s)), o
         },
         parsePreprocessor(e, t) {
-            let n = j(e);
+            let n = K(e);
             return B(t, n)
         },
         unparse(e, t, n) {
-            let i = E.default.getChannel(t),
+            let i = h.default.getChannel(t),
                 r = null != i ? i.getGuildId() : null,
                 o = null != r ? p.default.getGuild(r) : null,
                 l = n ? x : s.omit(x, ["spoiler", "timestamp"]),
-                d = n ? W : u.default.translateSurrogatesToInlineEmoji,
+                d = n ? j : u.default.translateSurrogatesToInlineEmoji,
                 c = a.parserFor(l),
                 f = {
                     inline: !0,

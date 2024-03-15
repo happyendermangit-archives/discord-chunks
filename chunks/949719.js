@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("373469"),
         f = n("271938"),
         _ = n("950104"),
-        h = n("42203"),
-        E = n("42887"),
+        E = n("42203"),
+        h = n("42887"),
         g = n("280168"),
         m = n("697218"),
         p = n("555035"),
@@ -25,8 +25,8 @@ function(e, t, n) {
         v = n("387111"),
         T = n("246846"),
         I = n("99795"),
-        C = n("49111"),
-        A = n("353927");
+        A = n("49111"),
+        C = n("353927");
     let y = "__EMBEDDED_ACTIVITIES__";
 
     function N(e) {
@@ -52,8 +52,8 @@ function(e, t, n) {
             return this.participantByIndex.values(e, !0)
         }
         rebuild() {
-            let e = h.default.getChannel(this.channelId);
-            if (null == e || e.type === C.ChannelTypes.GUILD_TEXT) return !1;
+            let e = E.default.getChannel(this.channelId);
+            if (null == e || e.type === A.ChannelTypes.GUILD_TEXT) return !1;
             if (this.call = _.default.getCall(this.channelId), e.isPrivate() && (null == this.call || this.call.unavailable)) return !1;
             let t = new Set(e.isGuildVocalOrThread() ? Object.keys(S.default.getVoiceStatesForChannel(e.id)) : e.recipients);
             return t.add(f.default.getId()), c.default.getAllActiveStreamsForChannel(this.channelId).forEach(e => {
@@ -120,10 +120,10 @@ function(e, t, n) {
                 return {
                     type: I.ParticipantTypes.ACTIVITY,
                     id: e.applicationId,
-                    activityType: C.ActivityTypes.PLAYING,
+                    activityType: A.ActivityTypes.PLAYING,
                     activityUrl: e.url,
                     participants: new Set(e.userIds),
-                    guildId: null !== (i = null === (n = h.default.getChannel(this.channelId)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== i ? i : null,
+                    guildId: null !== (i = null === (n = E.default.getChannel(this.channelId)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== i ? i : null,
                     sortKey: t.toString()
                 }
             })
@@ -134,16 +134,16 @@ function(e, t, n) {
             let _ = [],
                 T = m.default.getUser(e);
             if (null == T) return _;
-            let C = S.default.getVoiceStateForChannel(this.channelId, e),
+            let A = S.default.getVoiceStateForChannel(this.channelId, e),
                 y = S.default.getVoicePlatformForChannel(this.channelId, e),
-                N = h.default.getChannel(this.channelId),
+                N = E.default.getChannel(this.channelId),
                 R = null !== (i = null === (n = this.call) || void 0 === n ? void 0 : null === (t = n.ringing) || void 0 === t ? void 0 : t.includes(e)) && void 0 !== i && i;
-            (null != C || R) && (o = {
+            (null != A || R) && (o = {
                 type: I.ParticipantTypes.USER,
                 ...p.default.getUserStreamData(e, null == N ? void 0 : N.getGuildId()),
                 user: T,
                 id: T.id,
-                voiceState: C,
+                voiceState: A,
                 voicePlatform: y,
                 speaking: (0, l.getIsSpeaking)({
                     userId: e,
@@ -153,7 +153,7 @@ function(e, t, n) {
                 soundsharing: g.default.isSoundSharing(e),
                 ringing: R,
                 userNick: v.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, T),
-                localVideoDisabled: E.default.isLocalVideoDisabled(T.id)
+                localVideoDisabled: h.default.isLocalVideoDisabled(T.id)
             }, _.push(o));
             let O = null !== (r = c.default.getStreamForUser(e, null == N ? void 0 : N.getGuildId())) && void 0 !== r ? r : c.default.getActiveStreamForUser(e, null == N ? void 0 : N.getGuildId());
             if (null != O && O.channelId === this.channelId) {
@@ -167,11 +167,11 @@ function(e, t, n) {
                         maxFrameRate: n.maxFrameRate
                     } : null;
                 u = {
-                    ...p.default.getUserStreamData(e, null == N ? void 0 : N.getGuildId(), A.MediaEngineContextTypes.STREAM),
+                    ...p.default.getUserStreamData(e, null == N ? void 0 : N.getGuildId(), C.MediaEngineContextTypes.STREAM),
                     ...s,
                     type: i ? I.ParticipantTypes.HIDDEN_STREAM : I.ParticipantTypes.STREAM,
                     id: t,
-                    userVideo: null !== (a = null == C ? void 0 : C.selfVideo) && void 0 !== a && a,
+                    userVideo: null !== (a = null == A ? void 0 : A.selfVideo) && void 0 !== a && a,
                     user: T,
                     userNick: v.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, T),
                     stream: O

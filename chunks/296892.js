@@ -48,22 +48,22 @@ function(e, t, n) {
                 n = arguments.length > 2 ? arguments[2] : void 0,
                 i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
             if (t.exposureType = n ? l.ExposureTypes.AUTO_FALLBACK : l.ExposureTypes.AUTO, t.excluded = !1, null == i) {
-                h(e, t);
+                E(e, t);
                 return
             }
-            E(e, t, i)
+            h(e, t, i)
         }
 
-        function h(t) {
+        function E(t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
                     excluded: !1,
                     exposureType: l.ExposureTypes.MANUAL
                 },
                 i = u(e.kind, f.id, t);
-            null != i && E(t, n, i)
+            null != i && h(t, n, i)
         }
 
-        function E(e, t, n) {
+        function h(e, t, n) {
             if (null != n) {
                 var i, s, o, u, d;
                 let c = l.ExposureTypes.MANUAL;
@@ -85,14 +85,14 @@ function(e, t, n) {
                 f = null == r ? -1 : r.revision,
                 _ = d(e, a, c, r);
 
-            function h() {
+            function E() {
                 let i = u(e.kind, e.id, t),
                     r = null == i || s ? l.ExperimentBuckets.NOT_ELIGIBLE : i.bucket,
                     o = null == i ? -1 : i.revision;
                 (r !== a || f !== o) && (n(d(e, r, c, i), r, o), a = r, f = o)
             }
-            return n(_, a, f), o.default.addReactChangeListener(h), () => {
-                o.default.removeReactChangeListener(h)
+            return n(_, a, f), o.default.addReactChangeListener(E), () => {
+                o.default.removeReactChangeListener(E)
             }
         }
         return {
@@ -102,27 +102,27 @@ function(e, t, n) {
                         autoTrackExposure: !0
                     },
                     f = null !== (n = o.disable) && void 0 !== n && n,
-                    h = !1 !== o.autoTrackExposure,
-                    E = u(e.kind, e.id, t),
+                    E = !1 !== o.autoTrackExposure,
+                    h = u(e.kind, e.id, t),
                     m = null == o.trackExposureOptions ? void 0 : (0, s.default)(null !== (r = o.trackExposureOptions) && void 0 !== r ? r : {}),
-                    p = null !== (a = null == E ? void 0 : E.triggerDebuggingEnabled) && void 0 !== a && a,
+                    p = null !== (a = null == h ? void 0 : h.triggerDebuggingEnabled) && void 0 !== a && a,
                     [
                         [S, v, T], I
                     ] = (0, i.useState)(() => {
-                        let t = null == E || f ? l.ExperimentBuckets.NOT_ELIGIBLE : E.bucket;
-                        return [d(e, t, c, E), t, null == E ? -1 : E.revision]
+                        let t = null == h || f ? l.ExperimentBuckets.NOT_ELIGIBLE : h.bucket;
+                        return [d(e, t, c, h), t, null == h ? -1 : h.revision]
                     }),
-                    C = (0, s.default)(t);
+                    A = (0, s.default)(t);
                 return (0, i.useEffect)(() => {
-                    if (!f && (!!h || !!p)) _(C, m, !1 === h)
-                }, [f, h, C, m, v, T, p]), (0, i.useEffect)(() => g(C, (e, t, n) => {
+                    if (!f && (!!E || !!p)) _(A, m, !1 === E)
+                }, [f, E, A, m, v, T, p]), (0, i.useEffect)(() => g(A, (e, t, n) => {
                     I(i => i[0] === e && i[1] === t && i[2] === n ? i : [e, t, n])
                 }, {
                     disable: f
-                }), [f, C]), S
+                }), [f, A]), S
             },
             subscribe: g,
-            trackExposure: h,
+            trackExposure: E,
             getCurrentConfig: function(t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
                         autoTrackExposure: !0

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     }), n("222007"), n("424973");
     var i = n("446674"),
@@ -62,7 +62,7 @@ function(e, t, n) {
         }
     }
     _.displayName = "ApplicationStore";
-    var h = new _(s.default, {
+    var E = new _(s.default, {
         CONNECTION_OPEN: function() {
             o = {}, l = {}
         },

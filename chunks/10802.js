@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("19766"),
         f = n("982108"),
         _ = n("42203"),
-        h = n("341542"),
-        E = n("26989"),
+        E = n("341542"),
+        h = n("26989"),
         g = n("305961"),
         m = n("945956"),
         p = n("27618"),
@@ -25,14 +25,14 @@ function(e, t, n) {
         v = n("162771"),
         T = n("49111");
     let I = new l.default(e => {
-        for (let t in e) null == g.default.getGuild(t) && !h.default.isUnavailable(t) && delete e[t];
+        for (let t in e) null == g.default.getGuild(t) && !E.default.isUnavailable(t) && delete e[t];
         o.default.dispatch({
             type: "GUILD_SUBSCRIPTIONS_FLUSH",
             subscriptions: e
         })
     });
 
-    function C(e, t) {
+    function A(e, t) {
         let n = {};
         I.forEach(s => {
             var r;
@@ -43,7 +43,7 @@ function(e, t, n) {
         })
     }
 
-    function A(e, t) {
+    function C(e, t) {
         return I.subscribeToGuild(e), null != t && f.default.getSection(t) === T.ChannelSections.MEMBERS && y(e, t, l.DEFAULT_RANGES)
     }
 
@@ -59,9 +59,9 @@ function(e, t, n) {
         let {
             type: t
         } = e;
-        "CONNECTION_OPEN" === t && C(!0, !1);
+        "CONNECTION_OPEN" === t && A(!0, !1);
         let n = v.default.getGuildId();
-        null != n && A(n, S.default.getChannelId(n));
+        null != n && C(n, S.default.getChannelId(n));
         let i = {};
         I.forEach(e => {
             null == g.default.getGuild(e) ? I.clearWithoutFlushing(e, !0) : i[e] = I.get(e)
@@ -75,12 +75,12 @@ function(e, t, n) {
         let {
             guildId: t,
             channelId: n
-        } = e, i = h.default.isUnavailable(t);
-        return !i && A(t, n)
+        } = e, i = E.default.isUnavailable(t);
+        return !i && C(t, n)
     }
 
     function O() {
-        return A(v.default.getGuildId(), S.default.getChannelId())
+        return C(v.default.getGuildId(), S.default.getChannelId())
     }
 
     function D() {
@@ -91,7 +91,7 @@ function(e, t, n) {
                 userId: t
             } = e;
             if (null != i && i.userId === t || p.default.isFriend(t)) return !1;
-            let n = E.default.memberOf(t);
+            let n = h.default.memberOf(t);
             if (0 === n.length) return !1;
             let [s] = n;
             i = {
@@ -127,14 +127,14 @@ function(e, t, n) {
         CONNECTION_OPEN: N,
         CONNECTION_RESUMED: N,
         CONNECTION_CLOSED: function() {
-            C(!1, !1)
+            A(!1, !1)
         },
         IDLE: function(e) {
             let {
                 idle: t
             } = e;
             if (!t) return !1;
-            C(!1, !0)
+            A(!1, !0)
         },
         LOGOUT: function() {
             I.reset()
@@ -202,7 +202,7 @@ function(e, t, n) {
                 guildId: t,
                 channelId: n
             } = e;
-            return A(t, n)
+            return C(t, n)
         },
         INBOX_OPEN: function(e) {
             let {

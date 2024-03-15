@@ -40,8 +40,8 @@ function(e, t, n) {
         c = n("923959"),
         f = n("525065"),
         _ = n("26989"),
-        h = n("305961"),
-        E = n("42887"),
+        E = n("305961"),
+        h = n("42887"),
         g = n("957255"),
         m = n("824563"),
         p = n("945956"),
@@ -49,8 +49,8 @@ function(e, t, n) {
         v = n("18494"),
         T = n("162771"),
         I = n("282109"),
-        C = n("800762"),
-        A = n("599110"),
+        A = n("800762"),
+        C = n("599110"),
         y = n("718517"),
         N = n("991170"),
         R = n("761932"),
@@ -66,15 +66,15 @@ function(e, t, n) {
     function L(e) {
         var t;
         if (null == e) return null;
-        let n = h.default.getGuild(e);
+        let n = E.default.getGuild(e);
         if (null == n) return null;
-        let i = h.default.getRoles(n.id),
+        let i = E.default.getRoles(n.id),
             s = u.default.getId(),
             r = _.default.getMember(e, s),
             a = c.default.getChannels(e),
             o = a[c.GUILD_SELECTABLE_CHANNELS_KEY].length,
             l = a[c.GUILD_VOCAL_CHANNELS_KEY].length,
-            d = C.default.getVoiceStates(e);
+            d = A.default.getVoiceStates(e);
         return {
             guild_id: n.id,
             guild_size_total: f.default.getMemberCount(e),
@@ -122,7 +122,7 @@ function(e, t, n) {
         if (null == e) return null;
         let t = d.default.getChannel(e);
         if (null == t) return null;
-        let n = E.default.isVideoEnabled(),
+        let n = h.default.isVideoEnabled(),
             i = p.default.getMediaSessionId();
         return {
             channel_id: t.id,
@@ -138,13 +138,13 @@ function(e, t, n) {
         var t, n, i, s, r;
         let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (A.default.isThrottled(e)) return;
+        if (C.default.isThrottled(e)) return;
         let l = !("location" in a) || a.location !== O.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
             u = "guild_id" in a ? a.guild_id : l ? T.default.getGuildId() : null,
             c = "channel_id" in a ? a.channel_id : l ? v.default.getChannelId(u) : null,
             f = d.default.getChannel(c);
         let _ = (t = f, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (s = null !== (i = t.getGuildId()) && void 0 !== i ? i : n) && void 0 !== s ? s : null);
-        let h = {
+        let E = {
             ...a,
             ...L(_),
             ...null != u && null != c && (0, D.isStaticChannelRoute)(c) ? (r = 0, {
@@ -152,7 +152,7 @@ function(e, t, n) {
                 channel_hidden: !1
             }) : b(f)
         };
-        A.default.track(e, h, {
+        C.default.track(e, E, {
             flush: o
         })
     }
@@ -162,7 +162,7 @@ function(e, t, n) {
         if (null == t || null == t.guild_id) return {
             channel_id: e
         };
-        let n = h.default.getGuild(t.guild_id);
+        let n = E.default.getGuild(t.guild_id);
         if (null == n) return {
             channel_id: e
         };
@@ -194,7 +194,7 @@ function(e, t, n) {
             video_stream_count: 0,
             video_enabled: n
         };
-        return s(C.default.getVoiceStates(e)).filter(e => e.channelId === t).filter(e => e.userId !== u.default.getId()).forEach(e => {
+        return s(A.default.getVoiceStates(e)).filter(e => e.channelId === t).filter(e => e.userId !== u.default.getId()).forEach(e => {
             i.voice_state_count++, (e.selfVideo || e.selfStream) && i.video_stream_count++
         }), i
     }
@@ -203,7 +203,7 @@ function(e, t, n) {
         let n = {
             custom_status_count: 0
         };
-        return s(C.default.getVoiceStates(e)).forEach(e => {
+        return s(A.default.getVoiceStates(e)).forEach(e => {
             e.channelId === t && null != m.default.findActivity(e.userId, e => e.type === O.ActivityTypes.CUSTOM_STATUS) && n.custom_status_count++
         }), n
     }

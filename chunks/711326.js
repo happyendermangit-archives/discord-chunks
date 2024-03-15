@@ -8,7 +8,7 @@ function(e, t, n) {
             return _
         },
         canUseMediaPostEmbed: function() {
-            return h
+            return E
         }
     }), n("702976");
     var i = n("312016"),
@@ -27,8 +27,8 @@ function(e, t, n) {
             mediaPostEmbedData: u,
             guild: f,
             parentChannel: _,
-            postThread: h,
-            user: E,
+            postThread: E,
+            user: h,
             selectedGuildId: g,
             canAccess: m = !1
         } = e;
@@ -36,15 +36,15 @@ function(e, t, n) {
         let p = (0, l.getThumbnailImage)(u.thumbnail),
             S = !m && u.has_media_attachment,
             v = m ? c.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : c.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
-            T = null != E ? o.default.getName(u.guild_id, u.channel_id, E) : void 0,
-            I = null == E ? void 0 : E.getAvatarURL(null == f ? void 0 : f.id, 40);
+            T = null != h ? o.default.getName(u.guild_id, u.channel_id, h) : void 0,
+            I = null == h ? void 0 : h.getAvatarURL(null == f ? void 0 : f.id, 40);
         (null == I || g !== u.guild_id) && (I = a.default.getGuildIconURL({
             id: u.guild_id,
             icon: u.guild_icon,
             size: 40,
             canAnimate: !1
         }));
-        let C = function(e) {
+        let A = function(e) {
                 if (null == e) return !1;
                 let {
                     height: t,
@@ -52,7 +52,7 @@ function(e, t, n) {
                 } = e;
                 return null != t && null != n && t >= n
             }(u.thumbnail) && !S,
-            A = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(d.SPOILER_ATTACHMENT_PREFIX));
+            C = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(d.SPOILER_ATTACHMENT_PREFIX));
         return {
             title: null !== (s = u.title) && void 0 !== s ? s : "",
             subtitle: u.description,
@@ -61,7 +61,7 @@ function(e, t, n) {
             coverImageOverlayText: S ? c.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
             parentChannelId: u.parent_channel_id,
             threadId: u.channel_id,
-            postThread: h,
+            postThread: E,
             messageId: u.message_id,
             canAccess: m,
             guildId: u.guild_id,
@@ -71,8 +71,8 @@ function(e, t, n) {
             channelName: null == _ ? void 0 : _.name,
             avatarUrl: I,
             shouldShowBlurredThumbnailImage: S,
-            shouldContainMediaWithBackground: C,
-            shouldSpoiler: A,
+            shouldContainMediaWithBackground: A,
+            shouldSpoiler: C,
             obscureAwaitingScan: !1,
             flags: u.flags,
             contentScanVersion: u.content_scan_version
@@ -87,7 +87,7 @@ function(e, t, n) {
         if (null != n) return (0, s.tryParseChannelPath)(n)
     }
 
-    function h(e, t) {
+    function E(e, t) {
         let n = r.default.getGuild(e);
         if (null == n || null == t) return !1;
         let i = n.hasFeature(u.GuildFeatures.CREATOR_MONETIZABLE) || n.hasFeature(u.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL),

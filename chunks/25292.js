@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("966506"),
         f = n("605250"),
         _ = n("385976"),
-        h = n("677315"),
-        E = n("361776"),
+        E = n("677315"),
+        h = n("361776"),
         g = n("290886"),
         m = n("866353"),
         p = n("865372"),
@@ -28,8 +28,8 @@ function(e, t, n) {
         v = n("161585"),
         T = n("401690"),
         I = n("872173"),
-        C = n("233069"),
-        A = n("766274"),
+        A = n("233069"),
+        C = n("766274"),
         y = n("42203"),
         N = n("923959"),
         R = n("26989"),
@@ -49,9 +49,9 @@ function(e, t, n) {
         B = n("299039"),
         H = n("159885"),
         Y = n("158998"),
-        j = n("49111"),
-        W = n("375822"),
-        K = n("724210"),
+        K = n("49111"),
+        j = n("375822"),
+        W = n("724210"),
         z = n("782340");
     let q = new f.default("AutocompleteUtils"),
         X = () => !0,
@@ -67,7 +67,7 @@ function(e, t, n) {
             t = arguments.length > 1 ? arguments[1] : void 0;
         return 1e3 * e * (null != t ? t : 1)
     }
-    let en = [N.GUILD_SELECTABLE_CHANNELS_KEY, N.GUILD_VOCAL_CHANNELS_KEY, j.ChannelTypes.GUILD_CATEGORY];
+    let en = [N.GUILD_SELECTABLE_CHANNELS_KEY, N.GUILD_VOCAL_CHANNELS_KEY, K.ChannelTypes.GUILD_CATEGORY];
 
     function ei(e, t) {
         let {
@@ -111,42 +111,42 @@ function(e, t, n) {
             limit: i,
             filter: s,
             allowSnowflake: a
-        } = e, o = w.default.getUsers(), u = U.default.getGuildId(), d = t.toLocaleLowerCase(), c = (0, H.normalize)(d), f = [], _ = [], h = n.length, E = 0, g = 0;
-        for (; E < h;) {
-            var m, p, S, v, T, I, C, y, N;
+        } = e, o = w.default.getUsers(), u = U.default.getGuildId(), d = t.toLocaleLowerCase(), c = (0, H.normalize)(d), f = [], _ = [], E = n.length, h = 0, g = 0;
+        for (; h < E;) {
+            var m, p, S, v, T, I, A, y, N;
             let e, i;
-            let l = n[E];
-            l instanceof A.default ? (i = l, e = null === (p = R.default.getNick(u, i.id)) || void 0 === p ? void 0 : p.toLocaleLowerCase()) : (e = null === (S = l.nick) || void 0 === S ? void 0 : S.toLocaleLowerCase(), i = o[l.userId]);
-            let h = null === (m = Y.default.getGlobalName(i)) || void 0 === m ? void 0 : m.toLocaleLowerCase();
+            let l = n[h];
+            l instanceof C.default ? (i = l, e = null === (p = R.default.getNick(u, i.id)) || void 0 === p ? void 0 : p.toLocaleLowerCase()) : (e = null === (S = l.nick) || void 0 === S ? void 0 : S.toLocaleLowerCase(), i = o[l.userId]);
+            let E = null === (m = Y.default.getGlobalName(i)) || void 0 === m ? void 0 : m.toLocaleLowerCase();
             if (null == s || s(i)) {
                 let n = i.username.toLocaleLowerCase(),
                     s = (0, H.stripDiacritics)(n),
                     o = (0, H.normalize)(s),
                     l = null != e ? (0, H.stripDiacritics)(e) : null,
                     u = null != l ? (0, H.normalize)(l) : null,
-                    E = null != h ? (0, H.stripDiacritics)(h) : null,
-                    m = null != E ? (0, H.normalize)(E) : null;
-                a && t === i.id || n.substring(0, d.length) === d || s.substring(0, d.length) === d || (null == e ? void 0 : e.substring(0, d.length)) === d || (null == l ? void 0 : l.substring(0, d.length)) === d || (null == h ? void 0 : h.substring(0, d.length)) === d || (null == E ? void 0 : E.substring(0, d.length)) === d ? f.push({
-                    type: W.AutocompleterResultTypes.USER,
+                    h = null != E ? (0, H.stripDiacritics)(E) : null,
+                    m = null != h ? (0, H.normalize)(h) : null;
+                a && t === i.id || n.substring(0, d.length) === d || s.substring(0, d.length) === d || (null == e ? void 0 : e.substring(0, d.length)) === d || (null == l ? void 0 : l.substring(0, d.length)) === d || (null == E ? void 0 : E.substring(0, d.length)) === d || (null == h ? void 0 : h.substring(0, d.length)) === d ? f.push({
+                    type: j.AutocompleterResultTypes.USER,
                     record: i,
                     score: 10,
-                    comparator: null !== (v = null != h ? h : e) && void 0 !== v ? v : n,
-                    sortable: null !== (T = null != E ? E : l) && void 0 !== T ? T : s
+                    comparator: null !== (v = null != E ? E : e) && void 0 !== v ? v : n,
+                    sortable: null !== (T = null != h ? h : l) && void 0 !== T ? T : s
                 }) : o.substring(0, c.length) === c || (null == u ? void 0 : u.substring(0, c.length)) === c || (null == m ? void 0 : m.substring(0, c.length)) === c ? f.push({
-                    type: W.AutocompleterResultTypes.USER,
+                    type: j.AutocompleterResultTypes.USER,
                     record: i,
                     score: 1,
-                    comparator: null !== (I = null != h ? h : e) && void 0 !== I ? I : n,
-                    sortable: null !== (C = null != E ? E : l) && void 0 !== C ? C : s
-                }) : g < 50 && (r(d, s) || r(c, o) || null != l && r(d, l) || null != u && r(c, u) || null != E && r(d, E) || null != m && r(c, m)) && (_.push({
-                    type: W.AutocompleterResultTypes.USER,
+                    comparator: null !== (I = null != E ? E : e) && void 0 !== I ? I : n,
+                    sortable: null !== (A = null != h ? h : l) && void 0 !== A ? A : s
+                }) : g < 50 && (r(d, s) || r(c, o) || null != l && r(d, l) || null != u && r(c, u) || null != h && r(d, h) || null != m && r(c, m)) && (_.push({
+                    type: j.AutocompleterResultTypes.USER,
                     record: i,
                     score: 1,
-                    comparator: null !== (y = null != h ? h : e) && void 0 !== y ? y : n,
-                    sortable: null !== (N = null != E ? E : l) && void 0 !== N ? N : s
+                    comparator: null !== (y = null != E ? E : e) && void 0 !== y ? y : n,
+                    sortable: null !== (N = null != h ? h : l) && void 0 !== N ? N : s
                 }), g += 1)
             }
-            E += 1
+            h += 1
         }
         return f.sort(l.default), f.length < i && (_.sort(l.default), f = f.concat(_.slice(0, Math.max(0, i - f.length)))), f.length > i && (f.length = i), f
     }
@@ -174,7 +174,7 @@ function(e, t, n) {
             let i = n.getGuildId(),
                 s = null != i ? R.default.getMember(i, e.id) : null;
             return {
-                type: W.AutocompleterResultTypes.USER,
+                type: j.AutocompleterResultTypes.USER,
                 record: e,
                 score: 0,
                 comparator: null !== (t = null == s ? void 0 : s.nick) && void 0 !== t ? t : Y.default.getName(e)
@@ -248,7 +248,7 @@ function(e, t, n) {
                 members: t,
                 limit: s,
                 filter: e => d.isPrivate() || F.default.can({
-                    permission: j.Permissions.VIEW_CHANNEL,
+                    permission: K.Permissions.VIEW_CHANNEL,
                     user: e,
                     context: d
                 }),
@@ -294,16 +294,16 @@ function(e, t, n) {
             let t, {
                     query: n,
                     guildId: i,
-                    limit: s = j.MAX_AUTOCOMPLETE_RESULTS,
+                    limit: s = K.MAX_AUTOCOMPLETE_RESULTS,
                     fuzzy: r = !0,
                     filter: a = X,
                     type: d = N.GUILD_SELECTABLE_CHANNELS_KEY,
                     allowEmptyQueries: c = !1,
                     requireVocalConnectAccess: f = !0,
                     boosters: _ = {},
-                    allowSnowflake: h
+                    allowSnowflake: E
                 } = e,
-                E = function(e) {
+                h = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         n = e.split(" ").filter(e => "" !== e || t).map(e => {
                             let t = e.toLocaleLowerCase();
@@ -329,11 +329,11 @@ function(e, t, n) {
             let g = {},
                 m = [];
             for (let e of t) {
-                var p, S, v, I, A;
-                if (p = d, S = e.type, v = null != i, !(p === S || (v || (0, C.isGuildChannelType)(S)) && (p === N.GUILD_SELECTABLE_CHANNELS_KEY ? (0, C.isGuildSelectableChannelType)(S) || (0, C.isGuildVocalChannelType)(S) : p === N.GUILD_VOCAL_CHANNELS_KEY && (0, C.isGuildVocalChannelType)(S))) || (0, C.isGuildChannelType)(e.type) && !P.default.can(f ? e.accessPermissions : j.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
-                let t = [...E],
+                var p, S, v, I, C;
+                if (p = d, S = e.type, v = null != i, !(p === S || (v || (0, A.isGuildChannelType)(S)) && (p === N.GUILD_SELECTABLE_CHANNELS_KEY ? (0, A.isGuildSelectableChannelType)(S) || (0, A.isGuildVocalChannelType)(S) : p === N.GUILD_VOCAL_CHANNELS_KEY && (0, A.isGuildVocalChannelType)(S))) || (0, A.isGuildChannelType)(e.type) && !P.default.can(f ? e.accessPermissions : K.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
+                let t = [...h],
                     s = e.name.toLocaleLowerCase(),
-                    o = h && n === e.id,
+                    o = E && n === e.id,
                     l = o ? 10 : ea(s, t, r);
                 if (0 !== l) {
                     if (t.length > 0) {
@@ -362,9 +362,9 @@ function(e, t, n) {
                     }
                     if (0 !== l && !(t.length > 1) && (1 !== t.length || t[0].isFullMatch || o)) {
                         ;
-                        if (I = d, A = e.type, I === N.GUILD_SELECTABLE_CHANNELS_KEY && (0, C.isGuildVocalChannelType)(A)) l = Math.max(l - 1, .5);
+                        if (I = d, C = e.type, I === N.GUILD_SELECTABLE_CHANNELS_KEY && (0, A.isGuildVocalChannelType)(C)) l = Math.max(l - 1, .5);
                         m.push({
-                            type: (0, C.isGuildVocalChannelType)(e.type) ? W.AutocompleterResultTypes.VOICE_CHANNEL : W.AutocompleterResultTypes.TEXT_CHANNEL,
+                            type: (0, A.isGuildVocalChannelType)(e.type) ? j.AutocompleterResultTypes.VOICE_CHANNEL : j.AutocompleterResultTypes.TEXT_CHANNEL,
                             record: e,
                             score: et(l, _[e.id]),
                             comparator: (0, u.computeChannelName)(e, w.default, M.default),
@@ -392,7 +392,7 @@ function(e, t, n) {
                 let t = e.name.toLocaleLowerCase(),
                     n = ei(t, u, i);
                 n > 0 && d.push({
-                    type: W.AutocompleterResultTypes.GUILD,
+                    type: j.AutocompleterResultTypes.GUILD,
                     record: e,
                     score: et(n, r[e.id]),
                     comparator: e.toString(),
@@ -419,7 +419,7 @@ function(e, t, n) {
                     n = (0, H.stripDiacritics)((0, H.normalize)(t)),
                     a = ei(n, d, i);
                 a > 0 && f.push({
-                    type: W.AutocompleterResultTypes.GROUP_DM,
+                    type: j.AutocompleterResultTypes.GROUP_DM,
                     record: e,
                     score: et(a, r[e.id]),
                     comparator: (0, u.computeChannelName)(e, w.default, M.default),
@@ -447,7 +447,7 @@ function(e, t, n) {
                 let t = e.name.toLocaleLowerCase(),
                     n = ei(t, a, i);
                 n > 0 && u.push({
-                    type: W.AutocompleterResultTypes.APPLICATION,
+                    type: j.AutocompleterResultTypes.APPLICATION,
                     record: e,
                     score: n,
                     comparator: e.name,
@@ -468,11 +468,11 @@ function(e, t, n) {
                 queryLower: r
             }, u = o(k.default.getSKUs()).values().value(), d = [];
             for (let e of u)
-                if (e.type === j.SKUTypes.DURABLE_PRIMARY && s(e)) {
+                if (e.type === K.SKUTypes.DURABLE_PRIMARY && s(e)) {
                     let t = e.name.toLocaleLowerCase(),
                         n = ei(t, a, i);
                     n > 0 && d.push({
-                        type: W.AutocompleterResultTypes.SKU,
+                        type: j.AutocompleterResultTypes.SKU,
                         record: e,
                         score: n,
                         comparator: e.name,
@@ -492,22 +492,22 @@ function(e, t, n) {
                 includeAllGuildUsers: u = !1,
                 includeNonMentionableRoles: d = !1,
                 checkRecentlyTalkedOnEmptyQuery: c = !0,
-                limit: f = j.MAX_AUTOCOMPLETE_RESULTS,
+                limit: f = K.MAX_AUTOCOMPLETE_RESULTS,
                 request: _,
-                allowSnowflake: h = !1
-            } = e, E = a ? (u && null != n.guild_id ? this.queryGuildUsers({
+                allowSnowflake: E = !1
+            } = e, h = a ? (u && null != n.guild_id ? this.queryGuildUsers({
                 guildId: n.guild_id,
                 query: t,
                 limit: f,
                 checkRecentlyTalkedOnEmptyQuery: c,
                 request: _,
-                allowSnowflake: h
+                allowSnowflake: E
             }) : this.queryChannelUsers({
                 channelId: n.id,
                 query: t,
                 limit: f,
                 checkRecentlyTalkedOnEmptyQuery: c,
-                allowSnowflake: h
+                allowSnowflake: E
             })).map(e => {
                 let {
                     record: t,
@@ -521,7 +521,7 @@ function(e, t, n) {
                     nick: R.default.getNick(n.guild_id, t.id),
                     status: L.default.getStatus(t.id)
                 }
-            }) : [], g = E.length, m = t.toLowerCase(), p = [];
+            }) : [], g = h.length, m = t.toLowerCase(), p = [];
             if (g < f && l) {
                 let e = n.getGuildId(),
                     t = O.default.getGuild(e);
@@ -531,14 +531,14 @@ function(e, t, n) {
                         name: s,
                         id: a
                     } = t;
-                    return (n || i || d) && (r(m, s.toLowerCase()) || h && m === a) && a !== B.default.castGuildIdAsEveryoneGuildRoleId(e)
+                    return (n || i || d) && (r(m, s.toLowerCase()) || E && m === a) && a !== B.default.castGuildIdAsEveryoneGuildRoleId(e)
                 }).take(f - g).forEach(e => {
                     p.push(e)
                 }), g += p.length)
             }
             let S = [];
             return !n.isPrivate() && i && l && (g < f && r(m, J().test) && (S.push(J()), g += 1), s && g < f && r(m, $().test) && S.push($())), {
-                users: E,
+                users: h,
                 globals: S,
                 roles: p
             }
@@ -558,7 +558,7 @@ function(e, t, n) {
                 ...e,
                 status: L.default.getStatus(e.record.id)
             })) : [], c = u.length, f = t.toLowerCase(), _ = [];
-            if (c < j.MAX_AUTOCOMPLETE_RESULTS && a) {
+            if (c < K.MAX_AUTOCOMPLETE_RESULTS && a) {
                 let e = O.default.getGuild(n);
                 null != e && (o(O.default.getRoles(e.id)).filter(e => {
                     let {
@@ -567,14 +567,14 @@ function(e, t, n) {
                         id: a
                     } = e;
                     return (t || i || l) && r(f, s.toLowerCase()) && (0, d.isNotEveryoneRoleId)(n, a)
-                }).take(j.MAX_AUTOCOMPLETE_RESULTS - c).forEach(e => {
+                }).take(K.MAX_AUTOCOMPLETE_RESULTS - c).forEach(e => {
                     _.push(e)
                 }), c += _.length)
             }
-            let h = [];
-            return i && a && (c < j.MAX_AUTOCOMPLETE_RESULTS && r(f, J().test) && (h.push(J()), c += 1), c < j.MAX_AUTOCOMPLETE_RESULTS && r(f, $().test) && h.push($())), {
+            let E = [];
+            return i && a && (c < K.MAX_AUTOCOMPLETE_RESULTS && r(f, J().test) && (E.push(J()), c += 1), c < K.MAX_AUTOCOMPLETE_RESULTS && r(f, $().test) && E.push($())), {
                 users: u,
-                globals: h,
+                globals: E,
                 roles: _
             }
         },
@@ -606,24 +606,24 @@ function(e, t, n) {
                 exactQuery: RegExp("^".concat(x.default.escape(i)), "i"),
                 containQuery: RegExp(x.default.escape(i), "i"),
                 queryLower: i
-            }, r = ((0, h.canSeeGuildHome)(n.id) || (0, g.canSeeOnboardingHome)(n.id)) && !n.hasFeature(j.GuildFeatures.HUB), a = n.hasFeature(j.GuildFeatures.COMMUNITY), o = (0, E.isGuildOnboardingAvailable)(n) && n.hasFeature(j.GuildFeatures.COMMUNITY), l = [{
-                id: K.StaticChannelId.SERVER_GUIDE,
+            }, r = ((0, E.canSeeGuildHome)(n.id) || (0, g.canSeeOnboardingHome)(n.id)) && !n.hasFeature(K.GuildFeatures.HUB), a = n.hasFeature(K.GuildFeatures.COMMUNITY), o = (0, h.isGuildOnboardingAvailable)(n) && n.hasFeature(K.GuildFeatures.COMMUNITY), l = [{
+                id: W.StaticChannelId.SERVER_GUIDE,
                 name: z.default.Messages.SERVER_GUIDE
             }, {
-                id: K.StaticChannelId.CHANNEL_BROWSER,
+                id: W.StaticChannelId.CHANNEL_BROWSER,
                 name: z.default.Messages.CHANNEL_BROWSER_TITLE
             }, {
-                id: K.StaticChannelId.CUSTOMIZE_COMMUNITY,
+                id: W.StaticChannelId.CUSTOMIZE_COMMUNITY,
                 name: z.default.Messages.CHANNELS_AND_ROLES
             }], u = [];
             for (let e of l) {
-                if (e.id === K.StaticChannelId.SERVER_GUIDE && !r || e.id === K.StaticChannelId.CHANNEL_BROWSER && !a || e.id === K.StaticChannelId.CUSTOMIZE_COMMUNITY && !o) continue;
+                if (e.id === W.StaticChannelId.SERVER_GUIDE && !r || e.id === W.StaticChannelId.CHANNEL_BROWSER && !a || e.id === W.StaticChannelId.CUSTOMIZE_COMMUNITY && !o) continue;
                 let t = e.name.toLocaleLowerCase(),
                     i = ei(t, s, !1);
-                i > 0 && u.push(new C.UnknownChannelRecord({
+                i > 0 && u.push(new A.UnknownChannelRecord({
                     id: e.id,
                     name: e.name,
-                    type: j.ChannelTypes.UNKNOWN,
+                    type: K.ChannelTypes.UNKNOWN,
                     guild_id: n.id
                 }))
             }
@@ -653,7 +653,7 @@ function(e, t, n) {
                 query: t,
                 channel: n,
                 channelTypes: i,
-                limit: s = j.MAX_AUTOCOMPLETE_RESULTS,
+                limit: s = K.MAX_AUTOCOMPLETE_RESULTS,
                 allowSnowflake: r
             } = e;
             if (null == n.guild_id) {
@@ -701,7 +701,7 @@ function(e, t, n) {
                 query: t,
                 channel: n,
                 intention: i,
-                maxCount: s = j.MAX_AUTOCOMPLETE_RESULTS,
+                maxCount: s = K.MAX_AUTOCOMPLETE_RESULTS,
                 matchComparator: r
             } = e;
             I.FrecencyUserSettingsActionCreators.loadIfNecessary();
@@ -757,8 +757,8 @@ function(e, t, n) {
                         }(i), a = 0;
                         t ? s === e ? a = 10 * r : d.test(s) ? a = 7 * r : (i === v.StickerMetadataTypes.GUILD_NAME || i === v.StickerMetadataTypes.PACK_NAME || i === v.StickerMetadataTypes.STICKER_NAME) && c.test(s) && (a = 5 * r) : s === e && (a = 10 * r, f = s), a > u && (u = a, f = s)
                     }
-                    let h = p.default.stickerFrecencyWithoutFetchingLatest.getScore(o);
-                    null != h && (u *= h / 100), u > 0 && null != f && !a.has(_.id) && (a.add(_.id), l.push({
+                    let E = p.default.stickerFrecencyWithoutFetchingLatest.getScore(o);
+                    null != E && (u *= E / 100), u > 0 && null != f && !a.has(_.id) && (a.add(_.id), l.push({
                         sticker: _,
                         comparator: f,
                         score: u

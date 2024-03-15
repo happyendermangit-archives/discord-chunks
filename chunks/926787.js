@@ -18,8 +18,8 @@ function(e, t, n) {
         c = n("197231"),
         f = n("271938"),
         _ = n("251013"),
-        h = n("49111"),
-        E = n("447621");
+        E = n("49111"),
+        h = n("447621");
     (s = i || (i = {})).UNSET = "unset", s.FETCHING = "fetching", s.FAILED = "failed", s.SUCCEEDED = "succeeded";
     let g = {
             guilds: [],
@@ -30,17 +30,17 @@ function(e, t, n) {
             isFirstLoad: !0
         },
         m = {
-            [h.GuildDiscoverySections.FEATURED]: {
+            [E.GuildDiscoverySections.FEATURED]: {
                 ...g
             },
-            [h.GuildDiscoverySections.GAMES_YOU_PLAY]: {
+            [E.GuildDiscoverySections.GAMES_YOU_PLAY]: {
                 ...g
             },
-            [h.GuildDiscoverySections.MISC]: {
+            [E.GuildDiscoverySections.MISC]: {
                 ...g
             },
-            [h.GuildDiscoverySections.SEARCH]: {},
-            [E.DISCOVERY_ALL_CATEGORIES_ID]: {
+            [E.GuildDiscoverySections.SEARCH]: {},
+            [h.DISCOVERY_ALL_CATEGORIES_ID]: {
                 ...g
             }
         },
@@ -48,9 +48,9 @@ function(e, t, n) {
         S = !1,
         v = "unset",
         T = null,
-        I = E.DISCOVERY_ALL_CATEGORIES_ID,
-        C = E.DISCOVERY_ALL_CATEGORIES_ID,
-        A = null,
+        I = h.DISCOVERY_ALL_CATEGORIES_ID,
+        A = h.DISCOVERY_ALL_CATEGORIES_ID,
+        C = null,
         y = [],
         N = (0, c.makeAnalyticsID)();
 
@@ -93,17 +93,17 @@ function(e, t, n) {
             return I
         }
         getCurrentHomepageCategoryId() {
-            return C
+            return A
         }
         getSearchIndex() {
-            return A
+            return C
         }
         getMostRecentQuery() {
             return p
         }
         getTopCategoryCounts(e) {
             var t;
-            return null === (t = m[h.GuildDiscoverySections.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts
+            return null === (t = m[E.GuildDiscoverySections.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts
         }
         getSeenGuildIds() {
             return y
@@ -118,7 +118,7 @@ function(e, t, n) {
             let {
                 index: t
             } = e;
-            A = t
+            C = t
         },
         GUILD_DISCOVERY_FETCH_START: function(e) {
             let {
@@ -286,7 +286,7 @@ function(e, t, n) {
                 categoryId: t,
                 isHomepage: n
             } = e;
-            I = t, n && (C = t)
+            I = t, n && (A = t)
         },
         GUILD_DISCOVERY_CLEAR_SEARCH: function() {
             p = ""
@@ -300,19 +300,19 @@ function(e, t, n) {
             if (null != n) {
                 var r;
                 let e = null !== (r = n["categories.id"]) && void 0 !== r ? r : {};
-                delete e[E.DEFAULT_DISCOVERY_CATEGORY_ID], s = Object.entries(e).map(e => {
+                delete e[h.DEFAULT_DISCOVERY_CATEGORY_ID], s = Object.entries(e).map(e => {
                     let [t, n] = e;
                     return [parseInt(t, 10), n]
                 }).sort((e, t) => t[1] - e[1]).slice(0, 7)
             }
             m = {
                 ...m,
-                [h.GuildDiscoverySections.SEARCH]: {
-                    ...m[h.GuildDiscoverySections.SEARCH],
+                [E.GuildDiscoverySections.SEARCH]: {
+                    ...m[E.GuildDiscoverySections.SEARCH],
                     [i]: {
-                        ...m[h.GuildDiscoverySections.SEARCH][i],
+                        ...m[E.GuildDiscoverySections.SEARCH][i],
                         resultCounts: [
-                            [E.DISCOVERY_ALL_CATEGORIES_ID, Math.min(E.MAX_ALGOLIA_PAGINATOR_RESULTS, t)], ...s
+                            [h.DISCOVERY_ALL_CATEGORIES_ID, Math.min(h.MAX_ALGOLIA_PAGINATOR_RESULTS, t)], ...s
                         ]
                     }
                 }
@@ -324,10 +324,10 @@ function(e, t, n) {
             } = e;
             m = {
                 ...m,
-                [h.GuildDiscoverySections.SEARCH]: {
-                    ...m[h.GuildDiscoverySections.SEARCH],
+                [E.GuildDiscoverySections.SEARCH]: {
+                    ...m[E.GuildDiscoverySections.SEARCH],
                     [t]: {
-                        ...m[h.GuildDiscoverySections.SEARCH][t],
+                        ...m[E.GuildDiscoverySections.SEARCH][t],
                         resultCounts: null
                     }
                 }

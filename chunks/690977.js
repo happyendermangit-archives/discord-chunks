@@ -45,18 +45,18 @@ function(e, t, n) {
             }
             _ = _.parentElement
         }
-        let h = (0, s.createFocusManager)({
+        let E = (0, s.createFocusManager)({
             getFocusableElements: () => Array.from(d.querySelectorAll("[".concat(o, '="').concat(null != c ? c : l, '"]'))),
             getActiveElement: () => d.activeElement
         });
         if ((null === (t = (0, r.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == f) {
-            null === (n = h.getFirstFocusableElement()) || void 0 === n || n.focus();
+            null === (n = E.getFirstFocusableElement()) || void 0 === n || n.focus();
             return
         }
-        e.getModifierState("Shift") ? null === (i = await h.getPreviousFocusableElement({
+        e.getModifierState("Shift") ? null === (i = await E.getPreviousFocusableElement({
             wrap: !0,
             from: f
-        })) || void 0 === i || i.focus() : null === (u = await h.getNextFocusableElement({
+        })) || void 0 === i || i.focus() : null === (u = await E.getNextFocusableElement({
             wrap: !0,
             from: f
         })) || void 0 === u || u.focus()

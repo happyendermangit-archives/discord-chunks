@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return C
+            return A
         }
     });
     var i = n("759843"),
@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("38654"),
         f = n("267567"),
         _ = n("271938"),
-        h = n("26989"),
-        E = n("305961"),
+        E = n("26989"),
+        h = n("305961"),
         g = n("730622"),
         m = n("840707"),
         p = n("900938"),
@@ -36,7 +36,7 @@ function(e, t, n) {
             },
             async open(e, t, i, s) {
                 var r;
-                await n.el("725621").then(n.bind(n, "725621")), (null === (r = E.default.getGuild(e)) || void 0 === r ? void 0 : r.hasFeature(S.GuildFeatures.COMMUNITY)) && (t === S.GuildSettingsSections.GUILD_AUTOMOD && (t = S.GuildSettingsSections.SAFETY, s = S.GuildSettingsSubsections.SAFETY_AUTOMOD), t === S.GuildSettingsSections.MEMBER_VERIFICATION && (t = S.GuildSettingsSections.SAFETY, s = S.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), I.init(e, t, i, s), (0, a.pushLayer)(S.Layers.GUILD_SETTINGS)
+                await n.el("725621").then(n.bind(n, "725621")), (null === (r = h.default.getGuild(e)) || void 0 === r ? void 0 : r.hasFeature(S.GuildFeatures.COMMUNITY)) && (t === S.GuildSettingsSections.GUILD_AUTOMOD && (t = S.GuildSettingsSections.SAFETY, s = S.GuildSettingsSubsections.SAFETY_AUTOMOD), t === S.GuildSettingsSections.MEMBER_VERIFICATION && (t = S.GuildSettingsSections.SAFETY, s = S.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), I.init(e, t, i, s), (0, a.pushLayer)(S.Layers.GUILD_SETTINGS)
             },
             close() {
                 r.default.dispatch({
@@ -52,7 +52,7 @@ function(e, t, n) {
             setSection(e, t) {
                 var n;
                 let i = p.default.getGuildId();
-                null != i && ((null === (n = E.default.getGuild(i)) || void 0 === n ? void 0 : n.hasFeature(S.GuildFeatures.COMMUNITY)) && (e === S.GuildSettingsSections.GUILD_AUTOMOD && (e = S.GuildSettingsSections.SAFETY, t = S.GuildSettingsSubsections.SAFETY_AUTOMOD), e === S.GuildSettingsSections.MEMBER_VERIFICATION && (e = S.GuildSettingsSections.SAFETY, t = S.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), r.default.dispatch({
+                null != i && ((null === (n = h.default.getGuild(i)) || void 0 === n ? void 0 : n.hasFeature(S.GuildFeatures.COMMUNITY)) && (e === S.GuildSettingsSections.GUILD_AUTOMOD && (e = S.GuildSettingsSections.SAFETY, t = S.GuildSettingsSubsections.SAFETY_AUTOMOD), e === S.GuildSettingsSections.MEMBER_VERIFICATION && (e = S.GuildSettingsSections.SAFETY, t = S.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), r.default.dispatch({
                     type: "GUILD_SETTINGS_SET_SECTION",
                     section: e,
                     subsection: t
@@ -164,15 +164,15 @@ function(e, t, n) {
                     afkChannelId: c,
                     afkTimeout: f,
                     systemChannelId: _,
-                    verificationLevel: h,
-                    defaultMessageNotifications: E,
+                    verificationLevel: E,
+                    defaultMessageNotifications: h,
                     explicitContentFilter: g,
                     features: m,
                     systemChannelFlags: p,
                     preferredLocale: v,
                     rulesChannelId: I,
-                    safetyAlertsChannelId: C,
-                    discoverySplash: A,
+                    safetyAlertsChannelId: A,
+                    discoverySplash: C,
                     publicUpdatesChannelId: y,
                     premiumProgressBarEnabled: N
                 } = t, R = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, O = {
@@ -187,14 +187,14 @@ function(e, t, n) {
                     afk_channel_id: c,
                     afk_timeout: f,
                     system_channel_id: _,
-                    verification_level: h,
-                    default_message_notifications: E,
+                    verification_level: E,
+                    default_message_notifications: h,
                     explicit_content_filter: g,
                     system_channel_flags: p,
                     rules_channel_id: I,
-                    discovery_splash: A,
+                    discovery_splash: C,
                     public_updates_channel_id: y,
-                    safety_alerts_channel_id: C,
+                    safety_alerts_channel_id: A,
                     ...null != N ? {
                         premium_progress_bar_enabled: N
                     } : null
@@ -290,7 +290,7 @@ function(e, t, n) {
                 await s.default.delete({
                     url: S.Endpoints.GUILD_LEAVE(e),
                     body: {
-                        lurking: f.default.isLurking(e) || h.default.isCurrentUserGuest(e)
+                        lurking: f.default.isLurking(e) || E.default.isCurrentUserGuest(e)
                     },
                     oldFormErrors: !0
                 }), I.close()
@@ -365,5 +365,5 @@ function(e, t, n) {
                 })
             }
         };
-    var C = I
+    var A = I
 }

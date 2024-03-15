@@ -13,9 +13,9 @@ function(e, t, n) {
     n("228803");
     var f = n("116319"),
         _ = n("49111"),
-        h = n("13030");
+        E = n("13030");
     (i = r || (r = {})).DATA_SAVER = "data_saver", i.STANDARD = "standard", i.BEST = "best", (s = a || (a = {})).VERY_LOW = "very_low", s.LOW = "low", s.MEDIUM = "medium", s.HIGH = "high", s.VERY_HIGH = "very_high";
-    let E = (window.innerWidth - _.CHANNEL_SIDEBAR_WIDTH) / 2,
+    let h = (window.innerWidth - _.CHANNEL_SIDEBAR_WIDTH) / 2,
         g = null,
         m = {};
     class p extends u.default.DeviceSettingsStore {
@@ -48,7 +48,7 @@ function(e, t, n) {
         }
         get expressionPickerWidth() {
             var e;
-            return null !== (e = m.expressionPickerWidth) && void 0 !== e ? e : h.ExpressionPickerWidths.MIN
+            return null !== (e = m.expressionPickerWidth) && void 0 !== e ? e : E.ExpressionPickerWidths.MIN
         }
         get messageRequestSidebarWidth() {
             var e;
@@ -60,7 +60,7 @@ function(e, t, n) {
         }
         get postSidebarWidth() {
             var e;
-            return null !== (e = m.postSidebarWidth) && void 0 !== e ? e : E
+            return null !== (e = m.postSidebarWidth) && void 0 !== e ? e : h
         }
         get callChatSidebarWidth() {
             var e;

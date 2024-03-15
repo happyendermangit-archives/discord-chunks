@@ -17,7 +17,7 @@ function(e, t, n) {
             return _
         },
         getPalette: function() {
-            return E
+            return h
         },
         getPaletteForAvatar: function() {
             return g
@@ -102,14 +102,14 @@ function(e, t, n) {
     function _(e) {
         return null == e || "" === e ? "none" : "url(".concat(e, ")")
     }
-    let h = [
+    let E = [
         [0, 0, 0]
     ];
 
-    function E(e, t, n) {
+    function h(e, t, n) {
         let i = document.createElement("canvas"),
             s = i.getContext("2d");
-        if (null == s) return h;
+        if (null == s) return E;
         let r = i.width = 0 === e.width ? 128 : e.width,
             a = i.height = 0 === e.height ? 128 : e.height;
         s.drawImage(e, 0, 0, r, a);
@@ -120,7 +120,7 @@ function(e, t, n) {
                 return i
             }(o, r * a, n),
             d = l(u, t);
-        return "boolean" == typeof d ? h : d.palette()
+        return "boolean" == typeof d ? E : d.palette()
     }
     let g = e => "number" == typeof e ? null : m(e),
         m = a.memoize(e => new Promise((t, n) => {
@@ -128,7 +128,7 @@ function(e, t, n) {
             i.crossOrigin = "Anonymous", i.onerror = e => {
                 n(e), i.onerror = i.onload = null, i = null
             }, i.onload = () => {
-                t(E(i, 5, 10)), i.onerror = i.onload = null, i = null
+                t(h(i, 5, 10)), i.onerror = i.onload = null, i = null
             }, i.src = e
         }));
 

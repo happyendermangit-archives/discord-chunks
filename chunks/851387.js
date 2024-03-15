@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("693051"),
         f = n("153498"),
         _ = n("934306"),
-        h = n("258158"),
-        E = n("393414"),
+        E = n("258158"),
+        h = n("393414"),
         g = n("239380"),
         m = n("271938"),
         p = n("42203"),
@@ -28,8 +28,8 @@ function(e, t, n) {
         v = n("923959"),
         T = n("305961"),
         I = n("18494"),
-        C = n("162771"),
-        A = n("697218"),
+        A = n("162771"),
+        C = n("697218"),
         y = n("599110"),
         N = n("991170"),
         R = n("719923"),
@@ -68,8 +68,8 @@ function(e, t, n) {
                 lurkLocation: f
             } = u,
             _ = null !== (t = u.lurker) && void 0 !== t && t,
-            g = A.default.getCurrentUser();
-        if (null !== (i = null == g ? void 0 : g.hasFlag(P.UserFlags.QUARANTINED)) && void 0 !== i && i) return (0, h.default)(), new Promise((e, t) => t(Error()));
+            g = C.default.getCurrentUser();
+        if (null !== (i = null == g ? void 0 : g.hasFlag(P.UserFlags.QUARANTINED)) && void 0 !== i && i) return (0, E.default)(), new Promise((e, t) => t(Error()));
         a.default.wait(() => a.default.dispatch({
             type: "GUILD_JOIN",
             guildId: e,
@@ -78,7 +78,7 @@ function(e, t, n) {
             loadId: c
         }));
         try {
-            let t = C.default.getGuildId(),
+            let t = A.default.getGuildId(),
                 i = e === t && null != T.default.getGuild(e),
                 s = i ? I.default.getChannelId(e) : null,
                 o = await r.default.put({
@@ -99,7 +99,7 @@ function(e, t, n) {
                     type: "USER_GUILD_JOIN_REQUEST_UPDATE",
                     guildId: e,
                     request: o.body.join_request
-                }), null == T.default.getGuild(e) && o.body.show_verification_form) return (0, E.transitionTo)(P.Routes.GUILD_MEMBER_VERIFICATION(e)), o;
+                }), null == T.default.getGuild(e) && o.body.show_verification_form) return (0, h.transitionTo)(P.Routes.GUILD_MEMBER_VERIFICATION(e)), o;
             if (null != o.body.welcome_screen && a.default.dispatch({
                     type: "WELCOME_SCREEN_UPDATE",
                     guildId: o.body.id,
@@ -120,7 +120,7 @@ function(e, t, n) {
             return o
         } catch (t) {
             if ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === P.AbortCodes.TOO_MANY_USER_GUILDS) {
-                let e = A.default.getCurrentUser(),
+                let e = C.default.getCurrentUser(),
                     t = R.default.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff());
                 t ? M(P.MAX_USER_GUILDS_PREMIUM) : M(P.MAX_USER_GUILDS)
             }
@@ -145,7 +145,7 @@ function(e, t, n) {
             (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) && null == t.welcomeModalChannelId && (l = {
                 ...t,
                 welcomeModalChannelId: o
-            }), (0, E.transitionTo)(P.Routes.CHANNEL(e, o), l, void 0, i), await new Promise(setImmediate)
+            }), (0, h.transitionTo)(P.Routes.CHANNEL(e, o), l, void 0, i), await new Promise(setImmediate)
         },
         deleteGuild: b,
         selectGuild(e) {
@@ -430,15 +430,15 @@ function(e, t, n) {
                 return
             }
             if (null == e) {
-                (0, E.transitionTo)(P.Routes.FRIENDS);
+                (0, h.transitionTo)(P.Routes.FRIENDS);
                 return
             }
             let t = v.default.getDefaultChannel(e);
-            null == t || t.isNSFW() ? (0, E.transitionTo)(P.Routes.FRIENDS) : (0, E.transitionTo)(P.Routes.CHANNEL(e, t.id))
+            null == t || t.isNSFW() ? (0, h.transitionTo)(P.Routes.FRIENDS) : (0, h.transitionTo)(P.Routes.CHANNEL(e, t.id))
         },
         escapeToDefaultChannel(e) {
             let t = v.default.getDefaultChannel(e);
-            null != t ? (0, E.transitionTo)(P.Routes.CHANNEL(e, t.id)) : (0, E.transitionTo)(P.Routes.FRIENDS)
+            null != t ? (0, h.transitionTo)(P.Routes.CHANNEL(e, t.id)) : (0, h.transitionTo)(P.Routes.FRIENDS)
         },
         async fetchApplications(e, t) {
             let n = {

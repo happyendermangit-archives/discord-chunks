@@ -14,16 +14,16 @@ function(e, t, n) {
             return Y
         },
         PREMIUM_SUBSCRIPTION_APPLICATION: function() {
-            return j
+            return K
         },
         PremiumSubscriptionSKUs: function() {
             return s
         },
         ACTIVE_PREMIUM_SKUS: function() {
-            return W
+            return j
         },
         PremiumSubscriptionSKUToPremiumType: function() {
-            return K
+            return W
         },
         SubscriptionPlans: function() {
             return r
@@ -98,10 +98,10 @@ function(e, t, n) {
             return e_
         },
         PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID: function() {
-            return eh
+            return eE
         },
         PREMIUM_TIER_2_AUTH3_TRIAL_ID: function() {
-            return eE
+            return eh
         },
         PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID: function() {
             return em
@@ -122,10 +122,10 @@ function(e, t, n) {
             return eI
         },
         PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: function() {
-            return eC
+            return eA
         },
         SubscriptionTrials: function() {
-            return eA
+            return eC
         },
         PremiumUpsellTypes: function() {
             return l
@@ -173,10 +173,10 @@ function(e, t, n) {
             return _
         },
         PremiumHeaderThemes: function() {
-            return h
+            return E
         },
         PremiumGiftStyles: function() {
-            return E
+            return h
         },
         InboundPromotionErrorCodes: function() {
             return g
@@ -218,7 +218,7 @@ function(e, t, n) {
             return eY
         }
     }), n("222007");
-    var i, s, r, a, o, l, u, d, c, f, _, h, E, g, m, p, S, v, T, I, C, A, y, N, R, O, D, P, L, M, b, U, w, k, V, G, F = n("49111"),
+    var i, s, r, a, o, l, u, d, c, f, _, E, h, g, m, p, S, v, T, I, A, C, y, N, R, O, D, P, L, M, b, U, w, k, V, G, F = n("49111"),
         x = n("958706");
     (T = i || (i = {}))[T.TIER_1 = 1] = "TIER_1", T[T.TIER_2 = 2] = "TIER_2", T[T.TIER_0 = 3] = "TIER_0";
     let B = void 0,
@@ -240,17 +240,17 @@ function(e, t, n) {
             1: 1,
             2: 2
         }),
-        j = "521842831262875670";
+        K = "521842831262875670";
     (I = s || (s = {})).NONE = "628379670982688768", I.TIER_0 = "978380684370378762", I.TIER_1 = "521846918637420545", I.TIER_2 = "521847234246082599", I.GUILD = "590663762298667008", I.LEGACY = "521842865731534868";
-    let W = ["628379670982688768", "978380684370378762", "521846918637420545", "521847234246082599", "590663762298667008"],
-        K = Object.freeze({
+    let j = ["628379670982688768", "978380684370378762", "521846918637420545", "521847234246082599", "590663762298667008"],
+        W = Object.freeze({
             "978380684370378762": 3,
             "521846918637420545": 1,
             "521847234246082599": 2,
             "628379670982688768": 2,
             "521842865731534868": 2
         });
-    (C = r || (r = {})).NONE_MONTH = "628379151761408000", C.NONE_YEAR = "628381571568631808", C.PREMIUM_MONTH_TIER_0 = "978380692553465866", C.PREMIUM_YEAR_TIER_0 = "1024422698568122368", C.PREMIUM_MONTH_TIER_1 = "511651871736201216", C.PREMIUM_YEAR_TIER_1 = "511651876987469824", C.PREMIUM_MONTH_TIER_2 = "511651880837840896", C.PREMIUM_YEAR_TIER_2 = "511651885459963904", C.PREMIUM_MONTH_GUILD = "590665532894740483", C.PREMIUM_YEAR_GUILD = "590665538238152709", C.NONE_3_MONTH = "944265614527037440", C.NONE_6_MONTH = "944265636643602432", C.PREMIUM_3_MONTH_TIER_2 = "642251038925127690", C.PREMIUM_6_MONTH_TIER_2 = "944037208325619722", C.PREMIUM_3_MONTH_GUILD = "944037355453415424", C.PREMIUM_6_MONTH_GUILD = "944037391444738048", C.PREMIUM_MONTH_LEGACY = "511651856145973248", C.PREMIUM_YEAR_LEGACY = "511651860671627264";
+    (A = r || (r = {})).NONE_MONTH = "628379151761408000", A.NONE_YEAR = "628381571568631808", A.PREMIUM_MONTH_TIER_0 = "978380692553465866", A.PREMIUM_YEAR_TIER_0 = "1024422698568122368", A.PREMIUM_MONTH_TIER_1 = "511651871736201216", A.PREMIUM_YEAR_TIER_1 = "511651876987469824", A.PREMIUM_MONTH_TIER_2 = "511651880837840896", A.PREMIUM_YEAR_TIER_2 = "511651885459963904", A.PREMIUM_MONTH_GUILD = "590665532894740483", A.PREMIUM_YEAR_GUILD = "590665538238152709", A.NONE_3_MONTH = "944265614527037440", A.NONE_6_MONTH = "944265636643602432", A.PREMIUM_3_MONTH_TIER_2 = "642251038925127690", A.PREMIUM_6_MONTH_TIER_2 = "944037208325619722", A.PREMIUM_3_MONTH_GUILD = "944037355453415424", A.PREMIUM_6_MONTH_GUILD = "944037391444738048", A.PREMIUM_MONTH_LEGACY = "511651856145973248", A.PREMIUM_YEAR_LEGACY = "511651860671627264";
     let z = new Set(["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904", "511651856145973248", "511651860671627264"]),
         q = new Set(["511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"]),
         X = new Set(["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"]),
@@ -272,7 +272,7 @@ function(e, t, n) {
             "590663762298667008": void 0,
             "521842865731534868": void 0
         });
-    (A = a || (a = {}))[A.MONTH = 1] = "MONTH", A[A.YEAR = 2] = "YEAR", A[A.DAY = 3] = "DAY", (y = o || (o = {}))[y.DAY = 1] = "DAY", y[y.WEEK = 2] = "WEEK", y[y.MONTH = 3] = "MONTH", y[y.YEAR = 4] = "YEAR";
+    (C = a || (a = {}))[C.MONTH = 1] = "MONTH", C[C.YEAR = 2] = "YEAR", C[C.DAY = 3] = "DAY", (y = o || (o = {}))[y.DAY = 1] = "DAY", y[y.WEEK = 2] = "WEEK", y[y.MONTH = 3] = "MONTH", y[y.YEAR = 4] = "YEAR";
     let ee = Object.freeze({
             "628379151761408000": {
                 id: "628379151761408000",
@@ -424,8 +424,8 @@ function(e, t, n) {
         ec = "902329034132684800",
         ef = "983601860436819968",
         e_ = "983601860436819969",
-        eh = "984244797441048577",
-        eE = "1004850445463584768",
+        eE = "984244797441048577",
+        eh = "1004850445463584768",
         eg = "1073698058383917056",
         em = "1070132870233980928",
         ep = "1150904354090532864",
@@ -433,8 +433,8 @@ function(e, t, n) {
         ev = "1204865493622587392",
         eT = "1204867673024888832",
         eI = "1215346678383509504",
-        eC = "1215366184820539392",
-        eA = Object.freeze({
+        eA = "1215366184820539392",
+        eC = Object.freeze({
             [ed]: {
                 id: ed,
                 skus: ["521847234246082599"]
@@ -451,12 +451,12 @@ function(e, t, n) {
                 id: e_,
                 skus: ["521847234246082599"]
             },
-            [eh]: {
-                id: eh,
-                skus: ["521847234246082599"]
-            },
             [eE]: {
                 id: eE,
+                skus: ["521847234246082599"]
+            },
+            [eh]: {
+                id: eh,
                 skus: ["521847234246082599"]
             },
             [em]: {
@@ -566,7 +566,7 @@ function(e, t, n) {
         high_streaming_quality: 2,
         mid_streaming_quality: 1
     });
-    (L = _ || (_ = {}))[L.UserSettings = 0] = "UserSettings", L[L.ApplicationStoreHome = 1] = "ApplicationStoreHome", (M = h || (h = {}))[M.DEFAULT = 0] = "DEFAULT", M[M.WINTER = 1] = "WINTER", (b = E || (E = {}))[b.SNOWGLOBE = 1] = "SNOWGLOBE", b[b.BOX = 2] = "BOX", b[b.CUP = 3] = "CUP", b[b.STANDARD_BOX = 4] = "STANDARD_BOX", b[b.CAKE = 5] = "CAKE", b[b.CHEST = 6] = "CHEST", b[b.COFFEE = 7] = "COFFEE", b[b.SEASONAL_STANDARD_BOX = 8] = "SEASONAL_STANDARD_BOX", b[b.SEASONAL_CAKE = 9] = "SEASONAL_CAKE", b[b.SEASONAL_CHEST = 10] = "SEASONAL_CHEST", b[b.SEASONAL_COFFEE = 11] = "SEASONAL_COFFEE", (U = g || (g = {})).USER_NOT_VERIFIED = "user_not_verified", U.NO_CODE_BODY = "no_code_body", U.NO_PROMOTION = "no_promotion", U.CODE_CLAIMED = "code_claimed", U.EXISTING_SUBSCRIBER = "existing_subscriber", U.PREVIOUS_SUBSCRIBER = "previous_subscriber", U.BLOCKED_PAYMENT = "blocked_payment";
+    (L = _ || (_ = {}))[L.UserSettings = 0] = "UserSettings", L[L.ApplicationStoreHome = 1] = "ApplicationStoreHome", (M = E || (E = {}))[M.DEFAULT = 0] = "DEFAULT", M[M.WINTER = 1] = "WINTER", (b = h || (h = {}))[b.SNOWGLOBE = 1] = "SNOWGLOBE", b[b.BOX = 2] = "BOX", b[b.CUP = 3] = "CUP", b[b.STANDARD_BOX = 4] = "STANDARD_BOX", b[b.CAKE = 5] = "CAKE", b[b.CHEST = 6] = "CHEST", b[b.COFFEE = 7] = "COFFEE", b[b.SEASONAL_STANDARD_BOX = 8] = "SEASONAL_STANDARD_BOX", b[b.SEASONAL_CAKE = 9] = "SEASONAL_CAKE", b[b.SEASONAL_CHEST = 10] = "SEASONAL_CHEST", b[b.SEASONAL_COFFEE = 11] = "SEASONAL_COFFEE", (U = g || (g = {})).USER_NOT_VERIFIED = "user_not_verified", U.NO_CODE_BODY = "no_code_body", U.NO_PROMOTION = "no_promotion", U.CODE_CLAIMED = "code_claimed", U.EXISTING_SUBSCRIBER = "existing_subscriber", U.PREVIOUS_SUBSCRIBER = "previous_subscriber", U.BLOCKED_PAYMENT = "blocked_payment";
     let eU = Object.freeze({
             IS_BLOCKED_IOS: 32,
             IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,

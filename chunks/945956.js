@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("122530"),
         f = n("271938"),
         _ = n("316133"),
-        h = n("49111"),
-        E = n("353927");
+        E = n("49111"),
+        h = n("353927");
     let g = null,
         m = null,
         p = null,
@@ -49,7 +49,7 @@ function(e, t, n) {
                 userId: n,
                 streamId: i,
                 rtcServerId: s,
-                context: E.MediaEngineContextTypes.DEFAULT
+                context: h.MediaEngineContextTypes.DEFAULT
             }))
         }), u.on(o.RTCConnectionEvent.Ping, (e, t) => {
             a.default.wait(() => a.default.dispatch({
@@ -87,12 +87,12 @@ function(e, t, n) {
         }), p = new l.default(f.default.getId(), t), S = null, v = !1, T = !1, u
     }
 
-    function C() {
+    function A() {
         if (null == i) return !1;
         S = i.getDuration(), i.destroy(), i = null, p = null
     }
 
-    function A() {
+    function C() {
         g = null
     }
 
@@ -101,7 +101,7 @@ function(e, t, n) {
             channel: t
         } = e;
         if (null == i || i.channelId !== t.id) return !1;
-        C()
+        A()
     }
 
     function N() {
@@ -115,13 +115,13 @@ function(e, t, n) {
             return i
         }
         getState() {
-            return null != i ? i.state : h.RTCConnectionStates.DISCONNECTED
+            return null != i ? i.state : E.RTCConnectionStates.DISCONNECTED
         }
         isConnected() {
-            return this.getState() === h.RTCConnectionStates.RTC_CONNECTED
+            return this.getState() === E.RTCConnectionStates.RTC_CONNECTED
         }
         isDisconnected() {
-            return this.getState() === h.RTCConnectionStates.DISCONNECTED
+            return this.getState() === E.RTCConnectionStates.DISCONNECTED
         }
         getRemoteDisconnectVoiceChannelId() {
             return g
@@ -142,7 +142,7 @@ function(e, t, n) {
             return null != i ? i.hostname : ""
         }
         getQuality() {
-            return null != i ? i.quality : h.RTCConnectionQuality.UNKNOWN
+            return null != i ? i.quality : E.RTCConnectionQuality.UNKNOWN
         }
         getPings() {
             return null != i ? i.getPings() : []
@@ -182,13 +182,13 @@ function(e, t, n) {
     R.displayName = "RTCConnectionStore";
     let O = new R(a.default, __OVERLAY__ ? {} : {
         CONNECTION_OPEN: function(e) {
-            return s = e.sessionId, g = null, m = null, C(), !1
+            return s = e.sessionId, g = null, m = null, A(), !1
         },
         CONNECTION_CLOSED: function() {
-            s = null, g = null, m = null, C()
+            s = null, g = null, m = null, A()
         },
         RTC_CONNECTION_STATE: function(e) {
-            return e.state === h.RTCConnectionStates.RTC_CONNECTED && (T = !0), !0
+            return e.state === E.RTCConnectionStates.RTC_CONNECTED && (T = !0), !0
         },
         RTC_CONNECTION_PING: N,
         RTC_CONNECTION_LOSS_RATE: N,
@@ -203,10 +203,10 @@ function(e, t, n) {
                 var n, r, a;
                 if (null == p || p.updateVoiceStates(t.userId, t.channelId), v = v || (null !== (n = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1, f.default.getId() !== t.userId) return !1;
                 if (null != i) {
-                    if (t.sessionId === s) null != t.guildId && t.guildId === i.guildId || null == t.guildId && t.channelId === i.channelId ? null == t.channelId ? C() : i.channelId = t.channelId : (t.guildId !== i.guildId && null == t.channelId || C(), null != t.channelId && (g = null, m = null, i = I(t.guildId, t.channelId), v = (null !== (r = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== r ? r : 0) > 1));
+                    if (t.sessionId === s) null != t.guildId && t.guildId === i.guildId || null == t.guildId && t.channelId === i.channelId ? null == t.channelId ? A() : i.channelId = t.channelId : (t.guildId !== i.guildId && null == t.channelId || A(), null != t.channelId && (g = null, m = null, i = I(t.guildId, t.channelId), v = (null !== (r = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== r ? r : 0) > 1));
                     else if (t.guildId === i.guildId) {
                         let e = null != d.default.getAwaitingRemoteSessionInfo() && null != d.default.getRemoteSessionId();
-                        !e && (g = i.channelId), C()
+                        !e && (g = i.channelId), A()
                     }
                 } else {
                     if (t.sessionId !== s || null == t.channelId) return e;
@@ -220,14 +220,14 @@ function(e, t, n) {
                 channelId: t
             } = e;
             if (null == i || null != t && i.channelId === t) return !1;
-            C()
+            A()
         },
         VOICE_SERVER_UPDATE: function(e) {
             if (null == i || null != e.guildId && e.guildId !== i.guildId || null != e.channelId && e.channelId !== i.channelId) return !1;
             i.connect(e.endpoint, e.token)
         },
-        CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: A,
-        REMOTE_SESSION_CONNECT: A,
+        CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: C,
+        REMOTE_SESSION_CONNECT: C,
         CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: function() {
             m = null
         },
@@ -236,7 +236,7 @@ function(e, t, n) {
                 guild: t
             } = e;
             if (null == i || i.guildId !== t.id) return !1;
-            C()
+            A()
         },
         CHANNEL_DELETE: y,
         THREAD_DELETE: y,
@@ -245,15 +245,15 @@ function(e, t, n) {
                 channelId: t
             } = e;
             if (null == i || i.channelId !== t) return !1;
-            C()
+            A()
         },
         APP_STATE_UPDATE: function(e) {
             if (null != i) {
-                let t = e.state === h.AppStates.BACKGROUND,
+                let t = e.state === E.AppStates.BACKGROUND,
                     n = u.default.isEnabled();
                 i.setAppBackgrounded(t, n)
             }
-            return e.state === h.AppStates.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
+            return e.state === E.AppStates.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
         },
         RTC_LOG_MARKER: function(e) {
             if (null == i) {

@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("42887"),
         f = n("18494"),
         _ = n("162771"),
-        h = n("697218"),
-        E = n("404008"),
+        E = n("697218"),
+        h = n("404008"),
         g = n("450481"),
         m = n("49111"),
         p = {
@@ -50,7 +50,7 @@ function(e, t, n) {
                     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     s = u.default.getChannel(e),
                     r = null == s ? void 0 : s.getGuildId();
-                if ((null == s ? void 0 : s.isGuildVocal()) && (null == s ? void 0 : s.isNSFW()) && (!(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) || !d.default.didAgree(r))) {
+                if ((null == s ? void 0 : s.isGuildVocal()) && (null == s ? void 0 : s.isNSFW()) && (!(null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) || !d.default.didAgree(r))) {
                     (0, o.transitionTo)(m.Routes.CHANNEL(r, e));
                     return
                 }
@@ -63,7 +63,7 @@ function(e, t, n) {
                         t = f.default.getChannelId() === f.default.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
                     if (this.selectVoiceChannel(null), a.close(m.PopoutWindowKeys.CHANNEL_CALL_POPOUT), t) {
                         let e = _.default.getGuildId();
-                        null != e && (0, o.transitionTo)((0, E.previousTextChannelRouteForGuild)(e))
+                        null != e && (0, o.transitionTo)((0, h.previousTextChannelRouteForGuild)(e))
                     }
                 } else this.selectVoiceChannel(null)
             }

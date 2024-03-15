@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("605250"),
         f = n("271938"),
         _ = n("455079"),
-        h = n("599110"),
-        E = n("316805"),
+        E = n("599110"),
+        h = n("316805"),
         g = n("565034"),
         m = n("49111");
     let p = "scientist:triggered",
@@ -28,8 +28,8 @@ function(e, t, n) {
         v = "userExperimentOverrides",
         T = "guildExperimentOverrides",
         I = new c.default("ExperimentStore"),
-        C = !1,
-        A = {},
+        A = !1,
+        C = {},
         y = {},
         N = [],
         R = [],
@@ -80,13 +80,13 @@ function(e, t, n) {
     let H = Date.now();
 
     function Y(e, t, n, i) {
-        let s = A[x(e, t, n, i)];
+        let s = C[x(e, t, n, i)];
         if (null == s) return !1;
         let r = Date.now() - s.time > 6048e5;
         return !r && s.hash === B(t)
     }
 
-    function j(e) {
+    function K(e) {
         let {
             experimentId: t,
             descriptor: n,
@@ -115,13 +115,13 @@ function(e, t, n) {
             };
             null != r && (e.context_guild_id = r.guildId);
             let d = u ? m.AnalyticEvents.EXPERIMENT_USER_TRIGGERED_FALLBACK : m.AnalyticEvents.EXPERIMENT_USER_TRIGGERED;
-            h.default.track(d, e, {
+            E.default.track(d, e, {
                 flush: !0,
                 fingerprint: a
             })
         } else if (n.type === g.ExperimentTypes.GUILD) {
             let e = u ? m.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED_FALLBACK : m.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED;
-            h.default.track(e, {
+            E.default.track(e, {
                 name: t,
                 revision: n.revision,
                 bucket: n.bucket,
@@ -136,18 +136,18 @@ function(e, t, n) {
                 fingerprint: a
             })
         }
-        A[x(t, n, i, u)] = {
+        C[x(t, n, i, u)] = {
             time: Date.now(),
             hash: B(n)
-        }, en(A)
+        }, en(C)
+    }
+
+    function j(e) {
+        let [t, n] = e;
+        return null != h.GUILD_FILTERS[t] ? (0, h.GUILD_FILTERS)[t](n) : null
     }
 
     function W(e) {
-        let [t, n] = e;
-        return null != E.GUILD_FILTERS[t] ? (0, E.GUILD_FILTERS)[t](n) : null
-    }
-
-    function K(e) {
         let [t, n] = e;
         return {
             buckets: t.map(e => {
@@ -166,7 +166,7 @@ function(e, t, n) {
                     })
                 }
             }),
-            filters: n.map(W),
+            filters: n.map(j),
             rawFilterData: n
         }
     }
@@ -178,7 +178,7 @@ function(e, t, n) {
                 experiments: n,
                 guildExperiments: i
             } = e;
-        t && q(n, i), C = !0
+        t && q(n, i), A = !0
     }
 
     function q(e, t) {
@@ -199,7 +199,7 @@ function(e, t, n) {
             D[t] = {
                 hashKey: n,
                 revision: i,
-                populations: s.map(K),
+                populations: s.map(W),
                 overrides: function(e) {
                     let t = {};
                     if (null == e) return t;
@@ -211,7 +211,7 @@ function(e, t, n) {
                         for (let e of i) t[e] = n;
                     return t
                 }(r),
-                overridesFormatted: (null != a ? a : []).map(e => e.map(K)),
+                overridesFormatted: (null != a ? a : []).map(e => e.map(W)),
                 holdoutName: null != o ? o : null,
                 holdoutBucket: null != l ? l : null,
                 aaMode: 1 === u,
@@ -261,9 +261,9 @@ function(e, t, n) {
             let s = e[i];
             for (let e of (t[i] = {
                     ...s
-                }, t[i].populations)) e.filters = e.rawFilterData.map(W);
+                }, t[i].populations)) e.filters = e.rawFilterData.map(j);
             for (let e of null !== (n = t[i].overridesFormatted) && void 0 !== n ? n : [])
-                for (let t of e) t.filters = t.rawFilterData.map(W)
+                for (let t of e) t.filters = t.rawFilterData.map(j)
         }
         return t
     }
@@ -273,29 +273,29 @@ function(e, t, n) {
             serializedExperimentStore: t,
             user: n
         } = e;
-        !b && F(n) && (b = !0), C = t.hasLoadedExperiments, A = t.trackedExposureExperiments, O = t.loadedUserExperiments, L = t.userExperimentOverrides, M = t.guildExperimentOverrides, D = Q(t.loadedGuildExperiments), P = {}
+        !b && F(n) && (b = !0), A = t.hasLoadedExperiments, C = t.trackedExposureExperiments, O = t.loadedUserExperiments, L = t.userExperimentOverrides, M = t.guildExperimentOverrides, D = Q(t.loadedGuildExperiments), P = {}
     }
 
     function J() {
-        C = !0
+        A = !0
     }
 
     function $(e) {
         let {
             isSwitchingAccount: t
         } = e;
-        u.default.remove(p), !t && (u.default.remove(S), u.default.remove(v), u.default.remove(T), L = {}, M = {}), O = {}, N = [], A = {}, C = !1
+        u.default.remove(p), !t && (u.default.remove(S), u.default.remove(v), u.default.remove(T), L = {}, M = {}), O = {}, N = [], C = {}, A = !1
     }
 
     function ee() {
-        C = !1, A = {}, u.default.remove(p)
+        A = !1, C = {}, u.default.remove(p)
     }
 
     function et() {
         try {
             u.default.set(v, L)
         } catch (e) {
-            I.error("Error saving user experiment overrides, unsaved data will be lost", e), h.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+            I.error("Error saving user experiment overrides, unsaved data will be lost", e), E.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
                 call: "ExperimentStore.saveExperimentOverrides"
             })
@@ -303,7 +303,7 @@ function(e, t, n) {
         try {
             u.default.set(T, M)
         } catch (e) {
-            I.error("Error saving guild experiment overrides, unsaved data will be lost", e), h.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+            I.error("Error saving guild experiment overrides, unsaved data will be lost", e), E.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
                 call: "ExperimentStore.saveExperimentOverrides"
             })
@@ -317,7 +317,7 @@ function(e, t, n) {
                 e: e
             })
         } catch (e) {
-            I.error("Error saving tracked exposure experiments, unsaved data will be lost", e), h.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+            I.error("Error saving tracked exposure experiments, unsaved data will be lost", e), E.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
                 call: "ExperimentStore.saveTrackedExposureExperiments"
             })
@@ -408,7 +408,7 @@ function(e, t, n) {
     }
     class eo extends _.default {
         initialize() {
-            A = function() {
+            C = function() {
                 let e = u.default.get(p);
                 if (null == e || 1 !== e.v) return {};
                 let t = e.e,
@@ -458,7 +458,7 @@ function(e, t, n) {
             }
         }
         get hasLoadedExperiments() {
-            return C
+            return A
         }
         hasRegisteredExperiment(e) {
             return null != y[e]
@@ -498,22 +498,22 @@ function(e, t, n) {
                 let c = "".concat(null !== (i = a.hashKey) && void 0 !== i ? i : n, ":").concat(t),
                     f = w(c),
                     _ = f % 1e4,
-                    h = null,
-                    E = null !== (s = a.overridesFormatted) && void 0 !== s ? s : [];
-                for (let e of E)
-                    if (null !== (h = X(t, e, _))) return {
+                    E = null,
+                    h = null !== (s = a.overridesFormatted) && void 0 !== s ? s : [];
+                for (let e of h)
+                    if (null !== (E = X(t, e, _))) return {
                         type: g.ExperimentTypes.GUILD,
                         guildId: t,
                         revision: a.revision,
-                        bucket: h,
+                        bucket: E,
                         override: !0,
                         hashResult: _,
                         triggerDebuggingEnabled: d
                     };
-                if (null == (h = X(t, a.populations, _))) return null;
+                if (null == (E = X(t, a.populations, _))) return null;
                 if (null != a.holdoutName && null != a.holdoutBucket && a.holdoutName !== n) {
                     let n = e(t, a.holdoutName);
-                    if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && j({
+                    if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && K({
                             experimentId: a.holdoutName,
                             descriptor: n
                         }), (null == n ? void 0 : n.bucket) === a.holdoutBucket)) return null
@@ -522,7 +522,7 @@ function(e, t, n) {
                     type: g.ExperimentTypes.GUILD,
                     guildId: t,
                     revision: a.revision,
-                    bucket: h,
+                    bucket: E,
                     hashResult: _,
                     aaMode: l,
                     triggerDebuggingEnabled: d
@@ -552,7 +552,7 @@ function(e, t, n) {
         }
         getRecentExposures(e, t) {
             let n = "".concat(e, "|").concat(t, "|");
-            return Object.entries(A).filter(e => {
+            return Object.entries(C).filter(e => {
                 let [t] = e;
                 return t.startsWith(n)
             }).map(e => {
@@ -595,8 +595,8 @@ function(e, t, n) {
             for (let t in D)
                 for (let n of (e[t] = JSON.parse(JSON.stringify(D[t])), e[t].populations)) n.filters = [];
             return {
-                hasLoadedExperiments: C,
-                trackedExposureExperiments: A,
+                hasLoadedExperiments: A,
+                trackedExposureExperiments: C,
                 loadedUserExperiments: O,
                 loadedGuildExperiments: e,
                 userExperimentOverrides: L,
@@ -619,7 +619,7 @@ function(e, t, n) {
                 EXPERIMENT_OVERRIDE_BUCKET: er,
                 GUILD_CREATE: ea,
                 GUILD_UPDATE: ea
-            }), this.trackExposure = j
+            }), this.trackExposure = K
         }
     }
     eo.displayName = "ExperimentStore", eo.LATEST_SNAPSHOT_VERSION = 1;

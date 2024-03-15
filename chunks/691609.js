@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("907002"),
         f = n("748820"),
         _ = n("733724"),
-        h = n("862337"),
-        E = n("266491"),
+        E = n("862337"),
+        h = n("266491"),
         g = n("328139");
     let m = {
             friction: 13,
@@ -42,7 +42,7 @@ function(e, t, n) {
         I = T ? (0, l.interpolate)("M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z", "M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z", {
             maxSegmentLength: 1.5
         }) : e => "".concat(e);
-    class C extends r.Component {
+    class A extends r.Component {
         componentDidMount() {
             this.forceUpdate()
         }
@@ -72,7 +72,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function C(e) {
         let {
             selected: t,
             upperBadge: n,
@@ -97,9 +97,9 @@ function(e, t, n) {
                 spring: 0
             }), s = new c.Controller({
                 spring: 0
-            })), A(e) && null == r && (u = !0, r = new c.Controller({
+            })), C(e) && null == r && (u = !0, r = new c.Controller({
                 spring: 0
-            })), !a && A(e) && (u = !0, a = !0), u ? {
+            })), !a && C(e) && (u = !0, a = !0), u ? {
                 hasRenderedBadge: n,
                 lowerBadgeMask: s,
                 upperBadgeMask: i,
@@ -171,7 +171,7 @@ function(e, t, n) {
                 spring: 0,
                 immediate: !document.hasFocus(),
                 config: v
-            }).start()), !o || A(this.props) || this.timeout.isStarted() ? A(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(d(108e5, 18e6), this.handleTimeout)
+            }).start()), !o || C(this.props) || this.timeout.isStarted() ? C(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(d(108e5, 18e6), this.handleTimeout)
         }
         getBadgePositionInterpolation(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
@@ -223,7 +223,7 @@ function(e, t, n) {
                 highlight: d
             } = this.props, {
                 maskId: f,
-                lowerBadgeMask: h,
+                lowerBadgeMask: E,
                 upperBadgeMask: m,
                 focused: p,
                 hasRenderedBadge: S,
@@ -255,7 +255,7 @@ function(e, t, n) {
             }, "wrapper");
             let T = "".concat(f, "-upper_badge_masks"),
                 I = "".concat(f, "-lower_badge_masks"),
-                A = "".concat(f, "-blob_mask"),
+                C = "".concat(f, "-blob_mask"),
                 y = "".concat(f, "-stroke_mask"),
                 N = "".concat(f, "-highlight_mask");
             return (0, s.jsxs)("div", {
@@ -277,7 +277,7 @@ function(e, t, n) {
                             id: N
                         }), (0, s.jsx)(c.animated.path, {
                             d: this.getPathInterpolation(),
-                            id: A
+                            id: C
                         }), S ? (0, s.jsx)(c.animated.rect, {
                             id: T,
                             x: 28,
@@ -295,7 +295,7 @@ function(e, t, n) {
                             height: 24,
                             rx: 12,
                             ry: 12,
-                            transform: this.getBadgePositionInterpolation(h)
+                            transform: this.getBadgePositionInterpolation(E)
                         }) : null]
                     }), (0, s.jsxs)("mask", {
                         id: f,
@@ -308,7 +308,7 @@ function(e, t, n) {
                             href: "#".concat(N),
                             fill: "black"
                         }), (0, s.jsx)("use", {
-                            href: "#".concat(A),
+                            href: "#".concat(C),
                             fill: "white",
                             className: o({
                                 [g.isHighlighted]: d
@@ -342,7 +342,7 @@ function(e, t, n) {
                             className: g.focusStroke,
                             mask: "url(#".concat(y, ")"),
                             children: (0, s.jsx)("use", {
-                                href: "#".concat(A)
+                                href: "#".concat(C)
                             })
                         }), (0, s.jsxs)("g", {
                             className: g.focusFill,
@@ -367,13 +367,13 @@ function(e, t, n) {
                         height: 48,
                         children: e
                     }, "foreign-object")]
-                }, "svg"), (0, s.jsxs)(E.TransitionGroup, {
+                }, "svg"), (0, s.jsxs)(h.TransitionGroup, {
                     component: r.Fragment,
-                    children: [null != i ? (0, s.jsx)(C, {
+                    children: [null != i ? (0, s.jsx)(A, {
                         className: g.lowerBadge,
                         animatedStyle: this.getLowerBadgeStyles(),
                         children: i
-                    }, "lower-badge") : null, null != u ? (0, s.jsx)(C, {
+                    }, "lower-badge") : null, null != u ? (0, s.jsx)(A, {
                         className: g.upperBadge,
                         animatedStyle: this.getUpperBadgeStyles(),
                         children: u
@@ -382,7 +382,7 @@ function(e, t, n) {
             }, "wrapper")
         }
         constructor(...e) {
-            super(...e), this.timeout = new h.Timeout, this.state = {
+            super(...e), this.timeout = new E.Timeout, this.state = {
                 renderComplex: !1,
                 hasRenderedBadge: !1,
                 maskId: (0, f.v4)(),

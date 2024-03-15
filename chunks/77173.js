@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("991170"),
         f = n("488464"),
         _ = n("998716"),
-        h = n("118033"),
-        E = n("834052"),
+        E = n("118033"),
+        h = n("834052"),
         g = n("819450"),
         m = n("837979"),
         p = n("49111");
@@ -28,32 +28,32 @@ function(e, t, n) {
             var e, t, n, i, s, r, a;
             let u = d.default.getVoiceChannelId();
             if (null == u) return null;
-            let v = E.default.getStageInstanceByChannel(u);
+            let v = h.default.getStageInstanceByChannel(u);
             if (null == v) return null;
             let T = o.default.getChannel(u);
             if (null == T || !c.default.canEveryone(p.Permissions.VIEW_CHANNEL, T)) return null;
             let I = l.default.getGuild(T.getGuildId());
             if (null == I || !I.hasFeature(p.GuildFeatures.DISCOVERABLE)) return null;
-            let C = (0, h.packStageChannelPartyId)(T, v),
-                A = (null == S ? void 0 : null === (e = S.party) || void 0 === e ? void 0 : e.id) === C ? S : null,
+            let A = (0, E.packStageChannelPartyId)(T, v),
+                C = (null == S ? void 0 : null === (e = S.party) || void 0 === e ? void 0 : e.id) === A ? S : null,
                 y = f.default.getMutableParticipants(T.id, _.StageChannelParticipantNamedIndex.SPEAKER),
                 N = y.filter(e => e.type === _.StageChannelParticipantTypes.STREAM).length,
                 R = y.length - N,
                 O = f.default.getParticipantCount(u) - N,
-                D = (null == A ? void 0 : null === (t = A.party) || void 0 === t ? void 0 : t.size) != null ? A.party.size[1] : 0;
+                D = (null == C ? void 0 : null === (t = C.party) || void 0 === t ? void 0 : t.size) != null ? C.party.size[1] : 0;
             return {
                 application_id: m.STAGE_APPLICATION_ID,
                 name: null !== (s = null !== (i = v.topic) && void 0 !== i ? i : T.topic) && void 0 !== s ? s : T.name,
                 type: (0, g.getStageHasMedia)(T.id) ? p.ActivityTypes.WATCHING : p.ActivityTypes.LISTENING,
                 timestamps: {
-                    start: null !== (r = null == A ? void 0 : null === (n = A.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== r ? r : new Date().getTime()
+                    start: null !== (r = null == C ? void 0 : null === (n = C.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== r ? r : new Date().getTime()
                 },
                 assets: {
                     small_image: null !== (a = I.icon) && void 0 !== a ? a : void 0,
                     small_text: I.name
                 },
                 party: {
-                    id: C,
+                    id: A,
                     size: [R, Math.max(O, D)]
                 }
             }
@@ -62,7 +62,7 @@ function(e, t, n) {
     }
     class T extends r.default.Store {
         initialize() {
-            this.waitFor(o.default, d.default, E.default, u.default)
+            this.waitFor(o.default, d.default, h.default, u.default)
         }
         getActivity() {
             return S
@@ -87,7 +87,7 @@ function(e, t, n) {
                 voiceStates: t
             } = e;
             if (null == S) return;
-            let n = (0, h.unpackStageChannelParty)(S);
+            let n = (0, E.unpackStageChannelParty)(S);
             null != n && null != t.find(e => e.channelId === n.channelId) && v()
         }
     })

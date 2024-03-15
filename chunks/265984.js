@@ -19,14 +19,14 @@ function(e, t, n) {
         c = n("685665"),
         f = n("542489"),
         _ = n("561744");
-    let h = {
+    let E = {
         mass: 1,
         tension: 300,
         friction: 28,
         clamp: !0
     };
 
-    function E(e, t) {
+    function h(e, t) {
         return n => {
             if (0 === n) return "auto";
             let i = "forwards" === t.current,
@@ -57,8 +57,8 @@ function(e, t, n) {
             }
         });
         let I = S.activeSlide,
-            C = (0, d.default)(S.activeSlide);
-        let A = (g = null != C ? v[C] : null, m = v[I], null == g ? null : g.index > m.index ? "backwards" : g.index < m.index ? "forwards" : null),
+            A = (0, d.default)(S.activeSlide);
+        let C = (g = null != A ? v[A] : null, m = v[I], null == g ? null : g.index > m.index ? "backwards" : g.index < m.index ? "forwards" : null),
             {
                 reducedMotion: y
             } = s.useContext(l.AccessibilityPreferencesContext),
@@ -81,18 +81,18 @@ function(e, t, n) {
             width: P = 0,
             height: L = 0
         } = (0, u.default)(I), M = {
-            ...h,
+            ...E,
             ...S.springConfig,
             ...y.enabled ? {
                 clamp: !0
             } : null
         }, b = (0, r.useSpring)({
-            immediate: null == C,
+            immediate: null == A,
             width: null !== (t = S.width) && void 0 !== t ? t : P,
             height: L,
             config: M
         }), U = (0, r.useTransition)(I, {
-            immediate: null == C,
+            immediate: null == A,
             value: 0,
             from: {
                 value: 1
@@ -110,7 +110,7 @@ function(e, t, n) {
                 } = t;
                 n === I && null != S.onSlideReady && S.onSlideReady(n)
             }
-        }), w = (0, _.default)(A), {
+        }), w = (0, _.default)(C), {
             width: k,
             centered: V = !0
         } = S, G = o.isMobile ? "100%" : b.width.to(e => Math.round(e)), F = o.isMobile ? "100%" : b.height.to(e => Math.round(e)), x = o.isMobile ? {} : V ? {
@@ -144,8 +144,8 @@ function(e, t, n) {
                         ...y.enabled ? {
                             opacity: e.value.to(e => 1 - Math.abs(e))
                         } : {
-                            left: e.value.to(E("left", w)),
-                            right: e.value.to(E("right", w))
+                            left: e.value.to(h("left", w)),
+                            right: e.value.to(h("right", w))
                         }
                     },
                     children: v[t].children

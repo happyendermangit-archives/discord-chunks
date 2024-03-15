@@ -8,10 +8,10 @@ function(e, t, n) {
             return f
         },
         getContentProperties: function() {
-            return h
+            return E
         },
         trackQuestEvent: function() {
-            return E
+            return h
         },
         QuestContentCTA: function() {
             return s
@@ -45,14 +45,14 @@ function(e, t, n) {
         }
     }
 
-    function h(e) {
+    function E(e) {
         return {
             content_id: e,
             content_name: c(e)
         }
     }
 
-    function E(e, t, n) {
+    function h(e, t, n) {
         let i = o.default.quests.get(e);
         if (null != i) {
             if (i.preview) {
@@ -70,8 +70,8 @@ function(e, t, n) {
     }
 
     function g(e, t, n) {
-        E(e, u.AnalyticEvents.QUEST_CONTENT_CLICKED, {
-            ...h(t),
+        h(e, u.AnalyticEvents.QUEST_CONTENT_CLICKED, {
+            ...E(t),
             cta_name: n
         })
     }(i = s || (s = {})).LEARN_MORE = "LEARN_MORE", i.SHOW_REWARD = "SHOW_REWARD", i.CLAIM_REWARD = "CLAIM_REWARD", i.ACCEPT_QUEST = "ACCEPT_QUEST", i.COPY_QUEST_URL = "COPY_QUEST_URL", i.TRACK_PROGRESS = "TRACK_PROGRESS", i.REWARD_LEARN_MORE = "REWARD_LEARN_MORE", i.OPEN_CONTEXT_MENU = "OPEN_CONTEXT_MENU", i.CONTEXT_MENU_COPY_LINK = "CONTEXT_MENU.COPY_LINK", i.CONTEXT_MENU_HIDE_CONTENT = "CONTEXT_MENU.HIDE_CONTENT", i.CONTEXT_MENU_OPEN_GAME_LINK = "CONTEXT_MENU.OPEN_GAME_LINK", i.CONTEXT_MENU_OPEN_DISCLOSURE = "CONTEXT_MENU.OPEN_DISCLOSURE", i.CONTEXT_MENU_LEARN_MORE = "CONTEXT_MENU.LEARN_MORE"

@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("18494"),
         f = n("299039"),
         _ = n("689275"),
-        h = n("755624"),
-        E = n("984674"),
+        E = n("755624"),
+        h = n("984674"),
         g = n("724210");
     let m = {},
         p = {},
@@ -25,12 +25,12 @@ function(e, t, n) {
         v = {},
         T = {},
         I = {},
-        C = null,
-        A = {};
+        A = null,
+        C = {};
 
     function y() {
-        for (let e in m = {}, T = {}, p = {}, S = {}, v = {}, C = c.default.getChannelId(), A) clearTimeout(A[e]);
-        A = {}, _.default.forEachGuild(e => {
+        for (let e in m = {}, T = {}, p = {}, S = {}, v = {}, A = c.default.getChannelId(), C) clearTimeout(C[e]);
+        C = {}, _.default.forEachGuild(e => {
             R(e)
         }), O()
     }
@@ -46,7 +46,7 @@ function(e, t, n) {
                 F(n);
                 let e = l.default.getChannel(n);
                 if (null == e) continue;
-                let t = h.default.joinTimestamp(n);
+                let t = E.default.joinTimestamp(n);
                 if (null != t) {
                     let n = {
                             channel: e,
@@ -87,13 +87,13 @@ function(e, t, n) {
             let e = Date.now();
             null != i.joinedAt && (i.joinedAt instanceof Date ? e = i.joinedAt.getTime() : "string" == typeof i.joinedAt && (e = new Date(i.joinedAt).getTime())), s = f.default.fromTimestamp(e)
         }
-        for (let n in S[e][t]) t === C ? d.default.isNewForumThread(n, t, i) && I[e][t]++ : f.default.compare(n, s) > 0 && !d.default.hasOpenedThread(n) && I[e][t]++
+        for (let n in S[e][t]) t === A ? d.default.isNewForumThread(n, t, i) && I[e][t]++ : f.default.compare(n, s) > 0 && !d.default.hasOpenedThread(n) && I[e][t]++
     }
 
     function L(e, t, n) {
         if (null == t) return !1;
         let i = l.default.getChannel(n),
-            s = h.default.joinTimestamp(n);
+            s = E.default.joinTimestamp(n);
         if (null != i && _.default.isActive(e, t, n)) {
             if (null != s) {
                 let e = {
@@ -182,17 +182,17 @@ function(e, t, n) {
     }
 
     function k() {
-        let e = C;
-        if ((C = c.default.getChannelId()) === e) return !1;
-        D(e), D(C)
+        let e = A;
+        if ((A = c.default.getChannelId()) === e) return !1;
+        D(e), D(A)
     }
 
     function V(e) {
         let t = d.default.getMentionCount(e.id) > 0,
-            n = d.default.hasUnread(e.id) && (!h.default.isMuted(e.id) || t),
+            n = d.default.hasUnread(e.id) && (!E.default.isMuted(e.id) || t),
             i = e.hasFlag(g.ChannelFlags.PINNED),
             s = e.isActiveThread(),
-            r = s && (0, E.default)(e) > Date.now();
+            r = s && (0, h.default)(e) > Date.now();
         return {
             isUnread: (s || i) && n,
             isRelevant: r || i || n,
@@ -202,18 +202,18 @@ function(e, t, n) {
 
     function G(e, t) {
         F(e.id), t && function(e) {
-            A[e.id] = setTimeout(() => {
+            C[e.id] = setTimeout(() => {
                 let t = l.default.getChannel(e.id);
                 null != t && a.default.dispatch({
                     type: "THREAD_UPDATE",
                     channel: t
                 })
-            }, (0, E.default)(e) - Date.now() + 1)
+            }, (0, h.default)(e) - Date.now() + 1)
         }(e)
     }
 
     function F(e) {
-        e in A && (clearTimeout(A[e]), delete A[e])
+        e in C && (clearTimeout(C[e]), delete C[e])
     }
 
     function x(e, t, n, i) {
@@ -246,14 +246,14 @@ function(e, t, n) {
     function Y(e, t, n, i) {
         return t in e && n in e[t] && i in e[t][n]
     }
-    let j = {},
+    let K = {},
+        j = {},
         W = {},
-        K = {},
         z = {},
         q = {};
     class X extends r.default.Store {
         initialize() {
-            this.waitFor(_.default, l.default, h.default, d.default), this.syncWith([c.default], k)
+            this.waitFor(_.default, l.default, E.default, d.default), this.syncWith([c.default], k)
         }
         hasActiveJoinedUnreadThreads(e, t) {
             return e in p && t in p[e]
@@ -264,39 +264,39 @@ function(e, t, n) {
         }
         getActiveJoinedThreadsForParent(e, t) {
             var n;
-            return e in m && null !== (n = m[e][t]) && void 0 !== n ? n : K
+            return e in m && null !== (n = m[e][t]) && void 0 !== n ? n : W
         }
         getActiveJoinedThreadsForGuild(e) {
             var t;
-            return null !== (t = m[e]) && void 0 !== t ? t : j
+            return null !== (t = m[e]) && void 0 !== t ? t : K
         }
         getActiveJoinedUnreadThreadsForGuild(e) {
             var t;
-            return null !== (t = p[e]) && void 0 !== t ? t : j
+            return null !== (t = p[e]) && void 0 !== t ? t : K
         }
         getActiveJoinedUnreadThreadsForParent(e, t) {
             var n;
-            return null !== (n = this.getActiveJoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : K
+            return null !== (n = this.getActiveJoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : W
         }
         getActiveJoinedRelevantThreadsForGuild(e) {
             var t;
-            return null !== (t = T[e]) && void 0 !== t ? t : j
+            return null !== (t = T[e]) && void 0 !== t ? t : K
         }
         getActiveJoinedRelevantThreadsForParent(e, t) {
             var n;
-            return null !== (n = this.getActiveJoinedRelevantThreadsForGuild(e)[t]) && void 0 !== n ? n : K
+            return null !== (n = this.getActiveJoinedRelevantThreadsForGuild(e)[t]) && void 0 !== n ? n : W
         }
         getActiveUnjoinedThreadsForGuild(e) {
             var t;
-            return null !== (t = S[e]) && void 0 !== t ? t : W
+            return null !== (t = S[e]) && void 0 !== t ? t : j
         }
         getActiveUnjoinedUnreadThreadsForGuild(e) {
             var t;
-            return null !== (t = v[e]) && void 0 !== t ? t : j
+            return null !== (t = v[e]) && void 0 !== t ? t : K
         }
         getActiveUnjoinedUnreadThreadsForParent(e, t) {
             var n;
-            return null !== (n = this.getActiveUnjoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : K
+            return null !== (n = this.getActiveUnjoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : W
         }
         getNewThreadCountsForGuild(e) {
             var t;

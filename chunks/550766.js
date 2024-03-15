@@ -52,8 +52,8 @@ function(e, t, n) {
         c = n("299285"),
         f = n("191145"),
         _ = n("752598"),
-        h = n("653047"),
-        E = n("271938"),
+        E = n("653047"),
+        h = n("271938"),
         g = n("42203"),
         m = n("18494"),
         p = n("697218"),
@@ -61,13 +61,13 @@ function(e, t, n) {
         v = n("840707"),
         T = n("427953"),
         I = n("191225"),
-        C = n("458184"),
-        A = n("420444"),
+        A = n("458184"),
+        C = n("420444"),
         y = n("49111"),
         N = n("91366");
 
     function R(e, t, n) {
-        let i = E.default.getId(),
+        let i = h.default.getId(),
             s = I.default.getSelfEmbeddedActivityForChannel(e),
             a = I.default.getEmbeddedActivitiesForChannel(e),
             l = a.find(e => e.applicationId === t && e.userIds.has(i));
@@ -81,8 +81,8 @@ function(e, t, n) {
             applicationId: t,
             analyticsLocations: n
         });
-        let u = (0, A.default)(e);
-        u ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, y.ChannelLayouts.NO_CHAT)) : (0, C.default)(e)
+        let u = (0, C.default)(e);
+        u ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, y.ChannelLayouts.NO_CHAT)) : (0, A.default)(e)
     }
     async function O(e) {
         var t, n;
@@ -91,7 +91,7 @@ function(e, t, n) {
         if (null == a && !(null !== (n = null == s ? void 0 : s.isPrivate()) && void 0 !== n && n)) return;
         let o = I.default.getSelfEmbeddedActivityForChannel(e);
         if (null === o) return;
-        let l = E.default.getSessionId();
+        let l = h.default.getSessionId();
         try {
             r.default.dispatch({
                     type: "EMBEDDED_ACTIVITY_LAUNCH_START",
@@ -182,7 +182,7 @@ function(e, t, n) {
                     },
                     oldFormErrors: !0
                 }),
-                t = e.body.map(e => h.default.createFromServer(e));
+                t = e.body.map(e => E.default.createFromServer(e));
             r.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
                 items: t
@@ -281,7 +281,7 @@ function(e, t, n) {
                 applications: d
             }), {
                 activityConfigs: u,
-                applications: d.map(e => h.default.createFromServer(e))
+                applications: d.map(e => E.default.createFromServer(e))
             }
         } catch (e) {
             return r.default.dispatch({

@@ -15,13 +15,13 @@ function(e, t, n) {
             return r
         },
         INACTIVE_CATEGORY_INDEX: function() {
-            return h
+            return E
         },
         EmojiSize: function() {
             return o
         },
         EMOJI_PICKER_TAB_PANEL_ID: function() {
-            return E
+            return h
         },
         EMOJI_PICKER_TAB_ID: function() {
             return g
@@ -47,9 +47,9 @@ function(e, t, n) {
     }), (l = i || (i = {})).GUILD = "GUILD", l.UNICODE = "UNICODE", l.RECENT = "RECENT", l.CUSTOM = "CUSTOM", l.SEARCH_RESULTS = "SEARCH_RESULTS", l.FAVORITES = "FAVORITES", l.TOP_GUILD_EMOJI = "TOP_GUILD_EMOJI", l.PREMIUM_UPSELL = "PREMIUM_UPSELL";
     let _ = "emoji-picker-grid";
     (u = s || (s = {})).RECENT = "recent", u.FAVORITES = "favorites", u.TOP_GUILD_EMOJI = "top guild emoji", u.CUSTOM = "custom", u.PEOPLE = "people", u.NATURE = "nature", u.FOOD = "food", u.ACTIVITY = "activity", u.TRAVEL = "travel", u.OBJECTS = "objects", u.SYMBOLS = "symbols", u.FLAGS = "flags", u.PREMIUM_UPSELL = "premium emoji", (d = r || (r = {})).NONE = "", d.TOP_GUILD_EMOJI = "top_server", d.NEWLY_ADDED_EMOJI = "newly_added", (c = a || (a = {}))[c.EMOJI = 0] = "EMOJI", c[c.NSFW = 1] = "NSFW";
-    let h = -1;
+    let E = -1;
     (f = o || (o = {}))[f.MEDIUM = 40] = "MEDIUM", f[f.LARGE = 48] = "LARGE";
-    let E = "emoji-picker-tab-panel",
+    let h = "emoji-picker-tab-panel",
         g = "emoji-picker-tab",
         m = "soundboard-picker-tab-panel",
         p = "soundboard-picker-tab",

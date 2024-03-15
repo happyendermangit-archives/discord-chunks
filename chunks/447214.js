@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("872717"),
         f = n("913144"),
         _ = n("105059"),
-        h = n("849365"),
-        E = n("11275"),
+        E = n("849365"),
+        h = n("11275"),
         g = n("400683"),
         m = n("605250"),
         p = n("155084"),
@@ -24,8 +24,8 @@ function(e, t, n) {
         v = n("313915"),
         T = n("599110"),
         I = n("922932"),
-        C = n("718517"),
-        A = n("773336"),
+        A = n("718517"),
+        C = n("773336"),
         y = n("286235"),
         N = n("41642"),
         R = n("265912"),
@@ -41,9 +41,9 @@ function(e, t, n) {
         V = new D.default;
 
     function G() {}
-    let F = 30 * C.default.Millis.SECOND,
-        x = 3 * C.default.Millis.MINUTE,
-        B = 1 * C.default.Millis.MINUTE;
+    let F = 30 * A.default.Millis.SECOND,
+        x = 3 * A.default.Millis.MINUTE,
+        B = 1 * A.default.Millis.MINUTE;
 
     function H(e) {
         return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength
@@ -240,7 +240,7 @@ function(e, t, n) {
             }
         }
         _tryDetectInvalidIOSToken(e, t, n) {
-            (0, A.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && c.default.get({
+            (0, C.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && c.default.get({
                 url: w.Endpoints.ME,
                 headers: {
                     authorization: this.token
@@ -309,7 +309,7 @@ function(e, t, n) {
             this.connectionState = N.default.IDENTIFYING;
             let t = Date.now();
             this.identifyStartTime = t;
-            let [n, i, s] = await Promise.all([(0, g.isCacheEnabled)() ? _.default.getCommittedVersions() : {}, (0, g.isCacheEnabled)() ? E.default.getCommittedVersions() : {}, !!(0, g.isCacheEnabled)() && h.default.canUseGuildVersions()]), r = s ? {
+            let [n, i, s] = await Promise.all([(0, g.isCacheEnabled)() ? _.default.getCommittedVersions() : {}, (0, g.isCacheEnabled)() ? h.default.getCommittedVersions() : {}, !!(0, g.isCacheEnabled)() && E.default.canUseGuildVersions()]), r = s ? {
                 guild_versions: n,
                 highest_last_message_id: i.highest_last_message_id,
                 read_state_version: i.read_state_version,

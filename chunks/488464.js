@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return j
+            return K
         }
     }), n("222007"), n("808653"), n("424973");
     var i = n("714617"),
@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("373469"),
         f = n("271938"),
         _ = n("42203"),
-        h = n("305961"),
-        E = n("957255"),
+        E = n("305961"),
+        h = n("957255"),
         g = n("27618"),
         m = n("280168"),
         p = n("697218"),
@@ -25,11 +25,11 @@ function(e, t, n) {
         v = n("316133"),
         T = n("998716"),
         I = n("325861"),
-        C = n("834052");
-    let A = "NO_GUILD",
+        A = n("834052");
+    let C = "NO_GUILD",
         y = new l.default(e => [function(e) {
             var t;
-            return null !== (t = e.getGuildId()) && void 0 !== t ? t : A
+            return null !== (t = e.getGuildId()) && void 0 !== t ? t : C
         }(e)], e => e.id),
         N = new Set,
         R = {};
@@ -134,7 +134,7 @@ function(e, t, n) {
     let H = [];
     class Y extends o.default.Store {
         initialize() {
-            this.waitFor(f.default, p.default, _.default, m.default, S.default, E.default, v.default, h.default, I.default, g.default, C.default, c.default)
+            this.waitFor(f.default, p.default, _.default, m.default, S.default, h.default, v.default, E.default, I.default, g.default, A.default, c.default)
         }
         getParticipantsVersion(e) {
             var t, n;
@@ -157,7 +157,7 @@ function(e, t, n) {
             return null !== (i = null === (n = P(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== i ? i : 0
         }
         getChannels(e) {
-            return D(null != e ? e : A), y.values(null != e ? e : A)
+            return D(null != e ? e : C), y.values(null != e ? e : C)
         }
         getChannelsVersion() {
             return y.version
@@ -168,7 +168,7 @@ function(e, t, n) {
         }
     }
     Y.displayName = "StageChannelParticipantStore";
-    var j = new Y(u.default, {
+    var K = new Y(u.default, {
         CONNECTION_OPEN: k,
         OVERLAY_INITIALIZE: k,
         VOICE_STATE_UPDATES: function(e) {

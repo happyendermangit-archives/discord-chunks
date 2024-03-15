@@ -55,8 +55,8 @@ function(e, t, n) {
         c = n("870346"),
         f = n("373469"),
         _ = n("271938"),
-        h = n("42203"),
-        E = n("305961"),
+        E = n("42203"),
+        h = n("305961"),
         g = n("18494"),
         m = n("800762"),
         p = n("404008"),
@@ -64,8 +64,8 @@ function(e, t, n) {
         v = n("12307"),
         T = n("840707"),
         I = n("561288"),
-        C = n("450911"),
-        A = n("255397"),
+        A = n("450911"),
+        C = n("255397"),
         y = n("987317"),
         N = n("49111"),
         R = n("706530");
@@ -91,10 +91,10 @@ function(e, t, n) {
     }
 
     function P(e, t) {
-        let n = h.default.getChannel(t);
+        let n = E.default.getChannel(t);
         s(null != n, "Cannot join a null voice channel");
         let i = m.default.isInChannel(t);
-        return !i && (0, p.isChannelFull)(n, m.default, E.default)
+        return !i && (0, p.isChannelFull)(n, m.default, h.default)
     }
 
     function L(e, t) {
@@ -116,7 +116,7 @@ function(e, t, n) {
             type: "STREAM_WATCH",
             streamKey: r,
             allowMultiple: a
-        }), !a && (null == t || !t.noFocus) && A.default.selectParticipant(e.channelId, r)
+        }), !a && (null == t || !t.noFocus) && C.default.selectParticipant(e.channelId, r)
     }
 
     function M(e, t) {
@@ -238,7 +238,7 @@ function(e, t, n) {
                 sourceId: i,
                 sourceName: s
             }
-        }), null == t ? C.default.createBroadcastPrivateChannel() : O(null, t, {
+        }), null == t ? A.default.createBroadcastPrivateChannel() : O(null, t, {
             pid: n,
             sourceId: i,
             sourceName: s
@@ -249,7 +249,7 @@ function(e, t, n) {
         let n = _.default.getId(),
             i = (0, u.decodeStreamKey)(t),
             s = g.default.getVoiceChannelId();
-        null != s && s !== e && y.default.disconnect(), C.default.addRecipient(e, n, void 0, () => {
+        null != s && s !== e && y.default.disconnect(), A.default.addRecipient(e, n, void 0, () => {
             I.default.call(e, !1, !1, null, () => {
                 b(i)
             })

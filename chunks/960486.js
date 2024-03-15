@@ -8,7 +8,7 @@ function(e, t, n) {
             return v
         },
         Combobox: function() {
-            return C
+            return A
         },
         ComboboxItem: function() {
             return y
@@ -25,8 +25,8 @@ function(e, t, n) {
         c = n("433600"),
         f = n("577776"),
         _ = n("810567"),
-        h = n("578706"),
-        E = n("782340"),
+        E = n("578706"),
+        h = n("782340"),
         g = n("30441");
     let m = "data-listbox-item-id",
         p = Object.freeze({
@@ -61,19 +61,19 @@ function(e, t, n) {
         itemToString: T
     });
 
-    function C(e) {
+    function A(e) {
         let {
             placeholder: t,
             children: n,
             value: r,
             onChange: l,
             className: u,
-            listClassName: h,
+            listClassName: E,
             "aria-label": p,
             multiSelect: S = !1,
             autoFocus: v = !1,
-            maxVisibleItems: C = 5,
-            itemToString: A = T,
+            maxVisibleItems: A = 5,
+            itemToString: C = T,
             showScrollbar: y = !1
         } = e, [N, R] = s.useState(""), [O] = s.useState(!0), [D, P] = s.useState(null), L = s.useId(), M = s.useRef(null);
         s.useLayoutEffect(() => {
@@ -157,28 +157,28 @@ function(e, t, n) {
                                 className: g.empty,
                                 children: [(0, i.jsx)(d.Heading, {
                                     variant: "heading-md/semibold",
-                                    children: E.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
+                                    children: h.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
                                 }), (0, i.jsx)(f.Text, {
                                     color: "text-muted",
                                     variant: "text-md/normal",
-                                    children: E.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
+                                    children: h.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
                                 })]
                             }) : (0, i.jsx)(I.Provider, {
                                 value: {
                                     activeDescendant: D,
                                     selected: r,
                                     setSelected: l,
-                                    itemToString: A
+                                    itemToString: C
                                 },
                                 children: (0, i.jsx)(x, {
                                     ...o,
                                     style: {
-                                        maxHeight: 46 * C
+                                        maxHeight: 46 * A
                                     },
                                     "aria-multiselectable": S,
                                     id: L,
                                     ref: M,
-                                    className: a(g.list, h, {
+                                    className: a(g.list, E, {
                                         [g.scroller]: y
                                     }),
                                     sections: [b.length],
@@ -199,7 +199,7 @@ function(e, t, n) {
             })
         })
     }
-    let A = s.createContext(null);
+    let C = s.createContext(null);
 
     function y(e) {
         var t;
@@ -212,24 +212,24 @@ function(e, t, n) {
         } = e, {
             activeDescendant: f,
             selected: _,
-            setSelected: h,
-            itemToString: E
-        } = s.useContext(I), S = E(n), v = f === S, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : _.has(n), C = (0, o.useListItem)(S);
+            setSelected: E,
+            itemToString: h
+        } = s.useContext(I), S = h(n), v = f === S, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : _.has(n), A = (0, o.useListItem)(S);
         return (0, i.jsx)(u.Clickable, {
             tag: "li",
             id: S,
-            onClick: () => l ? null : h(n),
+            onClick: () => l ? null : E(n),
             [m]: n,
             className: a(g.item, {
                 [g.focused]: v,
                 [d]: T,
                 [g.disabled]: l
             }),
-            ...C,
+            ...A,
             role: "option",
             "aria-selected": T,
             "aria-disabled": l,
-            children: (0, i.jsx)(A.Provider, {
+            children: (0, i.jsx)(C.Provider, {
                 value: n,
                 children: r
             })
@@ -256,7 +256,7 @@ function(e, t, n) {
             checked: t
         } = e, {
             selected: n
-        } = s.useContext(I), r = s.useContext(A);
+        } = s.useContext(I), r = s.useContext(C);
         return (0, i.jsx)("span", {
             className: g.itemCheckbox,
             children: (0, i.jsx)(l.Checkbox, {
@@ -269,10 +269,10 @@ function(e, t, n) {
     }, y.Checkmark = function() {
         let {
             selected: e
-        } = s.useContext(I), t = s.useContext(A), n = e.has(t);
+        } = s.useContext(I), t = s.useContext(C), n = e.has(t);
         return n ? (0, i.jsx)("span", {
             className: g.itemCheckbox,
-            children: (0, i.jsx)(h.default, {
+            children: (0, i.jsx)(E.default, {
                 width: 20,
                 height: 20
             })

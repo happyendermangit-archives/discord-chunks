@@ -5,7 +5,7 @@ function(e, t, n) {
             return _
         },
         timeAtSpecificDay: function() {
-            return E
+            return h
         },
         TimeOptions: function() {
             return m
@@ -28,13 +28,13 @@ function(e, t, n) {
                 if (c(t.format("LT")) === c(n)) return t
             }
         },
-        h = s("2021-04-12T00:00:00"),
-        E = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
+        E = s("2021-04-12T00:00:00"),
+        h = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
         g = (e, t) => e.value.unix() - t.value.unix();
     class m {
         lookupByValue(e) {
             if (null == e) return;
-            let t = E(h, e);
+            let t = h(E, e);
             return this._index[t.unix()]
         }
         _createLabel(e) {
@@ -42,7 +42,7 @@ function(e, t, n) {
         }
         _generateTimeOptions() {
             this.options = [], this._index = {};
-            let e = s(h),
+            let e = s(E),
                 t = s(e).add(1, "day"),
                 n = s(e);
             for (; n < t;) {
@@ -51,7 +51,7 @@ function(e, t, n) {
             }
         }
         _createNewOption(e) {
-            let t = E(h, e),
+            let t = h(E, e),
                 n = this._createLabel(t);
             return {
                 label: n,
@@ -59,7 +59,7 @@ function(e, t, n) {
             }
         }
         _addNewOption(e) {
-            let t = E(h, e),
+            let t = h(E, e),
                 n = this._createLabel(t);
             return this._index[t.unix()] = t, this.options.push({
                 label: n,
@@ -69,13 +69,13 @@ function(e, t, n) {
         _guessOptions(e) {
             let t = [];
             if (/[:\\.]/.test(e)) {
-                let n = _(h, e);
+                let n = _(E, e);
                 if (null != n) {
                     t.push(n.clone());
                     let i = n.add({
                         hours: 12
                     });
-                    i.isBefore(h.clone().add({
+                    i.isBefore(E.clone().add({
                         hours: 24
                     })) && f(i.format("LT")) === f(e) && t.push(i)
                 }

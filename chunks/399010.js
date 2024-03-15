@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("875978"),
         f = n("25932"),
         _ = n("410912"),
-        h = n("116949"),
-        E = n("233069"),
+        E = n("116949"),
+        h = n("233069"),
         g = n("522308"),
         m = n("766274"),
         p = n("42203"),
@@ -26,8 +26,8 @@ function(e, t, n) {
         v = n("778588"),
         T = n("260320"),
         I = n("697218"),
-        C = n("800762"),
-        A = n("10514"),
+        A = n("800762"),
+        C = n("10514"),
         y = n("521012"),
         N = n("224400"),
         R = n("390946"),
@@ -40,7 +40,7 @@ function(e, t, n) {
                 type: "CHANNEL_UPDATES",
                 channels: []
             };
-            let i = (0, E.createChannelRecordFromServer)(t),
+            let i = (0, h.createChannelRecordFromServer)(t),
                 s = p.default.getChannel(t.id),
                 r = null == s ? void 0 : s.merge({
                     ...i,
@@ -108,8 +108,8 @@ function(e, t, n) {
             joined_at: c,
             communication_disabled_until: f,
             unusual_dm_activity_until: _
-        } = n, h = S.default.getMember(e, t.id);
-        (!(null != h && h.nick === r && h.avatar === a && s.isEqual(h.roles, i) && s.isEqual(h.avatarDecoration, o)) || h.premiumSince !== u || h.isPending !== d || h.joinedAt !== c || h.communicationDisabledUntil !== f || h.flags !== l || h.unusualDMActivityUntil !== _) && G({
+        } = n, E = S.default.getMember(e, t.id);
+        (!(null != E && E.nick === r && E.avatar === a && s.isEqual(E.roles, i) && s.isEqual(E.avatarDecoration, o)) || E.premiumSince !== u || E.isPending !== d || E.joinedAt !== c || E.communicationDisabledUntil !== f || E.flags !== l || E.unusualDMActivityUntil !== _) && G({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
             user: t,
@@ -225,7 +225,7 @@ function(e, t, n) {
                     e.presences = i(e.presences || [])
                 });
                 let r = e.presences ? i(e.presences) : [],
-                    a = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map(e => (0, E.createChannelRecordFromServer)(e)),
+                    a = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map(e => (0, h.createChannelRecordFromServer)(e)),
                     o = null !== (n = e.game_invites) && void 0 !== n ? n : [];
                 _.default.dispatchReadySupplemental.measure(() => {
                     G({
@@ -287,14 +287,14 @@ function(e, t, n) {
         _.default.ready.measure(() => {
             r.default.Emitter.batched(() => {
                 e = _.default.hydrateReady.measure(() => R.hydrateReadyPayloadPrioritized(e, D.socket.identifyStartTime, n));
-                let t = e.private_channels.map(e => (0, E.createChannelRecordFromServer)(e)),
+                let t = e.private_channels.map(e => (0, h.createChannelRecordFromServer)(e)),
                     i = e.guilds.filter(e => !0 === e.unavailable && !0 !== e.geo_restricted).map(e => e.id),
                     s = e.guilds.filter(e => !0 !== e.unavailable),
                     r = e.guilds.filter(e => !0 === e.geo_restricted);
                 s.forEach(e => {
                     e.presences = []
                 });
-                let a = null == e.user_settings_proto ? void 0 : (0, h.b64ToPreloadedUserSettingsProto)(e.user_settings_proto);
+                let a = null == e.user_settings_proto ? void 0 : (0, E.b64ToPreloadedUserSettingsProto)(e.user_settings_proto);
                 _.default.dispatchReady.measure(() => {
                     var n;
                     G({
@@ -429,7 +429,7 @@ function(e, t, n) {
     }), k(["CHANNEL_CREATE", "CHANNEL_DELETE"], e => p.ChannelLoader.loadGuildIds([e.guild_id]), (e, t) => {
         G({
             type: t,
-            channel: (0, E.createChannelRecordFromServer)(e)
+            channel: (0, h.createChannelRecordFromServer)(e)
         })
     }), w(["VOICE_CHANNEL_STATUS_UPDATE"], (e, t) => {
         G({
@@ -454,7 +454,7 @@ function(e, t, n) {
         G({
             type: t,
             isNewlyCreated: n,
-            channel: (0, E.createChannelRecordFromServer)(i)
+            channel: (0, h.createChannelRecordFromServer)(i)
         })
     }), k(["THREAD_LIST_SYNC"], e => p.ChannelLoader.loadGuildIds([e.guild_id]), e => {
         G({
@@ -462,7 +462,7 @@ function(e, t, n) {
             guildId: e.guild_id,
             threads: e.threads.map(e => {
                 let t = p.default.getChannel(e.parent_id);
-                return null != t && (e.nsfw = t.nsfw, e.parentChannelThreadType = t.type), (0, E.createChannelRecordFromServer)(e)
+                return null != t && (e.nsfw = t.nsfw, e.parentChannelThreadType = t.type), (0, h.createChannelRecordFromServer)(e)
             }),
             mostRecentMessages: e.most_recent_messages,
             members: e.members ? s.map(e.members, f.default) : void 0,
@@ -680,7 +680,7 @@ function(e, t, n) {
             user: e
         })
     }), w(["USER_SETTINGS_PROTO_UPDATE"], e => {
-        let t = (0, h.b64ToProtoWithType)(e.settings.type, e.settings.proto);
+        let t = (0, E.b64ToProtoWithType)(e.settings.type, e.settings.proto);
         if (null != t) {
             if ("string" == typeof t) throw console.error("Invalid proto: |".concat(t, "| |").concat(e.settings.proto, "|")), console.error({
                 parsed: t,
@@ -773,7 +773,7 @@ function(e, t, n) {
                 suppress: e.suppress,
                 selfStream: e.self_stream || !1,
                 requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
-                oldChannelId: C.default.getUserVoiceChannelId(e.guild_id, e.user_id)
+                oldChannelId: A.default.getUserVoiceChannelId(e.guild_id, e.user_id)
             }]
         })
     }), w(["LOBBY_VOICE_STATE_UPDATE"], e => {
@@ -926,7 +926,7 @@ function(e, t, n) {
             entitlement: e
         })
     }), w(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        v.default.hasLayers() && (n("850068").fetchPaymentSources(), l.fetchSubscriptionPlansBySKUs(A.default.getFetchedSKUIDs()))
+        v.default.hasLayers() && (n("850068").fetchPaymentSources(), l.fetchSubscriptionPlansBySKUs(C.default.getFetchedSKUIDs()))
     }), w(["USER_SUBSCRIPTIONS_UPDATE"], () => {
         u.fetchCurrentUser(), v.default.hasLayers() && n("850068").fetchSubscriptions()
     }), w(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], e => {

@@ -23,12 +23,12 @@ function(e, t, n) {
             onReady: r,
             onResize: o,
             className: _,
-            ...h
-        } = e, E = s.useRef(null), {
+            ...E
+        } = e, h = s.useRef(null), {
             current: g
         } = s.useRef(l("media-engine-video-"));
         return s.useEffect(() => {
-            let e = E.current;
+            let e = h.current;
             if (!n && null != e) {
                 let n = !1,
                     i = (t, i) => {
@@ -48,18 +48,18 @@ function(e, t, n) {
                         return "canary" === r || "development" === r ? (0, c.initRenderingContextWebGL)(e) : (0, d.initRenderingContext2D)(e)
                     }(e);
                     if (null == n) return;
-                    return f.default.addSink(t, E, e => {
+                    return f.default.addSink(t, h, e => {
                         i(e.width, e.height), n.render(e)
                     }), () => {
-                        f.default.removeSink(t, E)
+                        f.default.removeSink(t, h)
                     }
                 }
             }
         }, [t, n, o, r, g]), (0, i.jsx)("canvas", {
             id: g,
             className: a("media-engine-video", _),
-            ref: E,
-            ...h
+            ref: h,
+            ...E
         })
     }
     _.defaultProps = {

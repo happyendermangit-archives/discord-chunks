@@ -8,10 +8,10 @@ function(e, t, n) {
             return _
         },
         fetchAllSubscriptionListingsDataForGuild: function() {
-            return h
+            return E
         },
         createSubscriptionGroupListing: function() {
-            return E
+            return h
         },
         fetchSubscriptionListingForPlan: function() {
             return g
@@ -32,7 +32,7 @@ function(e, t, n) {
             return I
         },
         fetchMonetizationRestrictions: function() {
-            return C
+            return A
         }
     }), n("222007");
     var i = n("398183"),
@@ -58,7 +58,7 @@ function(e, t, n) {
             settings: n
         })
     }
-    async function h(e) {
+    async function E(e) {
         let {
             includeSoftDeleted: t = !0,
             countryCode: n
@@ -86,7 +86,7 @@ function(e, t, n) {
             })
         }
     }
-    async function E(e, t) {
+    async function h(e, t) {
         let n = await d.createGuildRoleSubscriptionGroupListing(e, t);
         return s.default.dispatch({
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING",
@@ -170,7 +170,7 @@ function(e, t, n) {
             includeArchivedListings: !0
         }), a
     }
-    async function C(e) {
+    async function A(e) {
         let {
             signal: t
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = !1;

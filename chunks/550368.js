@@ -28,8 +28,8 @@ function(e, t, n) {
     let c = "https://i.scdn.co/image/",
         f = (e, t, n) => "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
         _ = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
-        h = e => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
-        E = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
+        E = e => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
+        h = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
         g = {
             [d.PlatformTypes.SPOTIFY]: {
                 deserialize: e => "".concat(c).concat(encodeURIComponent(e)),
@@ -43,9 +43,9 @@ function(e, t, n) {
                 }
             },
             [d.PlatformTypes.YOUTUBE]: {
-                deserialize: e => h(encodeURIComponent(e)),
+                deserialize: e => E(encodeURIComponent(e)),
                 serialize: e => {
-                    let t = e.match(E);
+                    let t = e.match(h);
                     return null != t ? t[1] : null
                 }
             },
@@ -118,7 +118,7 @@ function(e, t, n) {
             of i) m[e] = t
     }
 
-    function C(e, t) {
+    function A(e, t) {
         let n = 0,
             i = e.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
         if (i.length > 0)
@@ -131,7 +131,7 @@ function(e, t, n) {
         return n === e.length
     }
 
-    function A(e, t, n, i) {
+    function C(e, t, n, i) {
         let s = !1;
         for (let r = 0; r < e.length; r++) {
             let a = e[r];
@@ -157,13 +157,13 @@ function(e, t, n) {
         let i = [],
             s = t.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
         s.length > 0 && await I(e, s);
-        let r = C(t, i);
+        let r = A(t, i);
         if (r) return a.default.dispatch({
             type: "APPLICATION_ASSETS_FETCH_SUCCESS",
             applicationId: e
         }), i;
         let o = await T(e),
-            l = A(t, i, o, n);
+            l = C(t, i, o, n);
         return l ? p(e).then(() => y(e, t, n - 1)) : (a.default.dispatch({
             type: "APPLICATION_ASSETS_FETCH_SUCCESS",
             applicationId: e
@@ -172,9 +172,9 @@ function(e, t, n) {
 
     function N(e, t) {
         let n = [],
-            i = C(t, n);
+            i = A(t, n);
         if (i) return n;
         let s = o.default.getApplicationAssets(e);
-        return null == s ? n : (A(t, n, s), n)
+        return null == s ? n : (C(t, n, s), n)
     }
 }

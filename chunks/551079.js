@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("773364"),
         f = n("953161"),
         _ = n("793722"),
-        h = n("657869"),
-        E = n("560550"),
+        E = n("657869"),
+        h = n("560550"),
         g = n("820127"),
         m = n("861001"),
         p = n("899676"),
@@ -24,8 +24,8 @@ function(e, t, n) {
         v = n("238372"),
         T = n("232125"),
         I = n("353927"),
-        C = n("53452");
-    let A = new a.default("MediaEngineWebRTC");
+        A = n("53452");
+    let C = new a.default("MediaEngineWebRTC");
     i = class extends o.default {
         destroy() {
             null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null), this.eachConnection(e => e.destroy()), this.emit(c.MediaEngineEvent.Destroy), this.removeAllListeners()
@@ -34,7 +34,7 @@ function(e, t, n) {
             !this.interacted && (document.createElement("audio").play(), this.interacted = !0), this.eachConnection(e => e.interact())
         }
         static supported() {
-            return !__OVERLAY__ && (C.BROWSER_SUPPORTS_VOICE && null != window.AudioContext && null != window.RTCPeerConnection ? (n("231638"), !0) : (A.info("WebRTC is not supported on", r.name, r.version), !1))
+            return !__OVERLAY__ && (A.BROWSER_SUPPORTS_VOICE && null != window.AudioContext && null != window.RTCPeerConnection ? (n("231638"), !0) : (C.info("WebRTC is not supported on", r.name, r.version), !1))
         }
         supported() {
             return !0
@@ -46,7 +46,7 @@ function(e, t, n) {
                 case I.Features.AUDIO_OUTPUT_DEVICE:
                     return m.CAN_SET_OUTPUT_DEVICES;
                 case I.Features.VIDEO:
-                    return C.BROWSER_SUPPORTS_VIDEO;
+                    return A.BROWSER_SUPPORTS_VIDEO;
                 case I.Features.DESKTOP_CAPTURE:
                     var t;
                     return (null === (t = navigator.mediaDevices) || void 0 === t ? void 0 : t.getDisplayMedia) != null;
@@ -54,7 +54,7 @@ function(e, t, n) {
                     return "Chrome" === r.name;
                 case I.Features.NATIVE_PING:
                 case I.Features.DIAGNOSTICS:
-                    return C.BROWSER_SUPPORTS_DIAGNOSTICS;
+                    return A.BROWSER_SUPPORTS_DIAGNOSTICS;
                 case I.Features.DESKTOP_CAPTURE_APPLICATIONS:
                 case I.Features.LOOPBACK:
                 case I.Features.NOISE_SUPPRESSION:
@@ -93,7 +93,7 @@ function(e, t, n) {
                 modes: a,
                 streamUserId: o,
                 streamParameters: l
-            } = n, u = (0, E.makeConnection)(e, t, this.getAudioContext(), l);
+            } = n, u = (0, h.makeConnection)(e, t, this.getAudioContext(), l);
             return u.streamUserId = o, u.setOutputVolume(this.outputVolume), u.setSinkId(this.sinkId), u.once(d.BaseConnectionEvent.Destroy, e => this.connections.delete(e)), u.on(d.BaseConnectionEvent.Silence, e => this.emit(c.MediaEngineEvent.Silence, e)), u.on(d.BaseConnectionEvent.DesktopSourceEnd, this.handleDesktopSourceEnd), u.on(d.BaseConnectionEvent.AudioPermission, this.handleAudioPermission), u.on(d.BaseConnectionEvent.VideoPermission, this.handleVideoPermission), this.interacted && u.interact(), e === I.MediaEngineContextTypes.DEFAULT && (u.setAudioSource(this.sourceId), this.enabled && u.input.enableAudioInput()), this.connections.add(u), this.emit(c.MediaEngineEvent.Connection, u), u
         }
         findConnection(e) {
@@ -112,7 +112,7 @@ function(e, t, n) {
         async _enable() {
             if (this.enabled) return;
             await this.getAudioContext().audioWorklet.addModule(p);
-            let e = new h.default(this.getAudioContext());
+            let e = new E.default(this.getAudioContext());
             e.on("permission", this.handleAudioPermission);
             try {
                 var t;
@@ -256,7 +256,7 @@ function(e, t, n) {
                         }, this.handleDeviceChange());
                         break;
                     case c.MediaEngineEvent.VoiceActivity:
-                        null == this.voiceActivityInput && (this.voiceActivityInput = new h.default(this.getAudioContext()), this.voiceActivityInput.setSource(this.sourceId), this.voiceActivityInput.on("voiceactivity", this.handleVoiceActivity), this.enabled && this.voiceActivityInput.enable())
+                        null == this.voiceActivityInput && (this.voiceActivityInput = new E.default(this.getAudioContext()), this.voiceActivityInput.setSource(this.sourceId), this.voiceActivityInput.on("voiceactivity", this.handleVoiceActivity), this.enabled && this.voiceActivityInput.enable())
                 }
             }, this.handleRemoveListener = e => {
                 switch (e) {

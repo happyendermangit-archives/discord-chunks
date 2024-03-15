@@ -21,10 +21,10 @@ function(e, t, n) {
             return I
         },
         getLastRouteChangeSourceLocationStack: function() {
-            return C
+            return A
         },
         isValidFingerprintRoute: function() {
-            return A
+            return C
         },
         getFingerprintLocation: function() {
             return y
@@ -48,11 +48,11 @@ function(e, t, n) {
         f = [d.RelativeMarketingURLs.DEVELOPER_PORTAL];
     i = __OVERLAY__ ? (0, a.createMemoryHistory)() : (0, a.createBrowserHistory)();
     let _ = !1,
-        h = i.listen((e, t) => {
-            "REPLACE" !== t && (_ = !0, h())
+        E = i.listen((e, t) => {
+            "REPLACE" !== t && (_ = !0, E())
         });
 
-    function E() {
+    function h() {
         return !l.ComponentDispatch.hasSubscribers(d.ComponentActions.MODAL_CLOSE) && (n("144747").default.close(), !0)
     }
 
@@ -93,11 +93,11 @@ function(e, t, n) {
         return s
     }
 
-    function C() {
+    function A() {
         return r
     }
 
-    function A(e) {
+    function C(e) {
         if (null == e) {
             var t;
             e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""
@@ -131,10 +131,10 @@ function(e, t, n) {
     }
 
     function R() {
-        E() && (s = null, i.goBack())
+        h() && (s = null, i.goBack())
     }
 
     function O() {
-        E() && (s = null, i.goForward())
+        h() && (s = null, i.goForward())
     }
 }

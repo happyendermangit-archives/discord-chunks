@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("668273"),
         f = n("168973"),
         _ = n("985365"),
-        h = n("599110"),
-        E = n("994440"),
+        E = n("599110"),
+        h = n("994440"),
         g = n("718517"),
         m = n("286235"),
         p = n("980134"),
@@ -26,9 +26,9 @@ function(e, t, n) {
         v = n("142852"),
         T = n("49111");
     let I = new u.default("CloudUpload.tsx"),
-        C = n("123010").default;
+        A = n("123010").default;
     (s = i || (i = {})).NOT_STARTED = "NOT_STARTED", s.STARTED = "STARTED", s.UPLOADING = "UPLOADING", s.ERROR = "ERROR", s.COMPLETED = "COMPLETED", s.CANCELED = "CANCELED";
-    class A {
+    class C {
         constructor() {
             this.timing = {}
         }
@@ -184,7 +184,7 @@ function(e, t, n) {
                 this.handleComplete(this.id);
                 return
             }
-            let i = await C.getUploadPayload(this),
+            let i = await A.getUploadPayload(this),
                 s = (0, v.getUploadTarget)(this.item.target);
             if (null == i.filename || "" === i.filename || 0 === this.currentSize) {
                 I.error("File does not have a filename or size is 0.", JSON.stringify(i)), this.handleError(T.AbortCodes.INVALID_FILE_ASSET);
@@ -240,7 +240,7 @@ function(e, t, n) {
             I.log("Starting compression/conversion for ".concat(this.id));
             let t = await this.trackTime("compressTimeMs", async () => {
                 var e;
-                return await (0, E.getAttachmentFile)(this, null !== (e = this.reactNativeFileIndex) && void 0 !== e ? e : 0)
+                return await (0, h.getAttachmentFile)(this, null !== (e = this.reactNativeFileIndex) && void 0 !== e ? e : 0)
             });
             if (null == t || null == t.file) return;
             let n = t.uri,
@@ -279,7 +279,7 @@ function(e, t, n) {
             I.log("Cancelled called for ".concat(this.id)), this._abortController.abort(), this.trackUploadFinished("CANCELED"), "COMPLETED" === this.status && this.delete(), this.setStatus("CANCELED"), this.emit("complete"), this.removeAllListeners()
         }
         resetState() {
-            return this.status = "NOT_STARTED", this.uploadedFilename = void 0, this.responseUrl = void 0, this.error = void 0, this.startTime = void 0, this.uploadAnalytics = new A, this._abortController = new AbortController, super.resetState()
+            return this.status = "NOT_STARTED", this.uploadedFilename = void 0, this.responseUrl = void 0, this.error = void 0, this.startTime = void 0, this.uploadAnalytics = new C, this._abortController = new AbortController, super.resetState()
         }
         async delete() {
             if (null == this.uploadedFilename) return;
@@ -302,7 +302,7 @@ function(e, t, n) {
         }
         trackUploadStart() {
             var e;
-            h.default.track(T.AnalyticEvents.ATTACHMENT_UPLOAD_STARTED, {
+            E.default.track(T.AnalyticEvents.ATTACHMENT_UPLOAD_STARTED, {
                 file_size: this.currentSize,
                 mime_type: null !== (e = this.mimeType) && void 0 !== e ? e : "unknown",
                 video_upload_quality: f.default.videoUploadQuality,
@@ -316,7 +316,7 @@ function(e, t, n) {
         trackUploadFinished(e) {
             var t, n;
             let i = null != this.startTime ? performance.now() - this.startTime : -1;
-            h.default.track(T.AnalyticEvents.ATTACHMENT_UPLOAD_FINISHED, {
+            E.default.track(T.AnalyticEvents.ATTACHMENT_UPLOAD_FINISHED, {
                 duration_ms: i,
                 file_size: this.currentSize,
                 pre_compression_file_size: this.preCompressionSize,
@@ -338,7 +338,7 @@ function(e, t, n) {
         }
         constructor(e, t, n, i) {
             var s, r, a, o;
-            super(e, n), this.RESUME_INCOMPLETE_CODES = [308], this.status = "NOT_STARTED", this.loaded = 0, this.reactNativeFilePrepped = !1, this.uploadAnalytics = new A, this._aborted = !1, this.channelId = t, this.preCompressionSize = null !== (a = null === (s = e.file) || void 0 === s ? void 0 : s.size) && void 0 !== a ? a : 0, this.currentSize = null !== (o = null === (r = e.file) || void 0 === r ? void 0 : r.size) && void 0 !== o ? o : 0, this.reactNativeFileIndex = i, this._abortController = new AbortController
+            super(e, n), this.RESUME_INCOMPLETE_CODES = [308], this.status = "NOT_STARTED", this.loaded = 0, this.reactNativeFilePrepped = !1, this.uploadAnalytics = new C, this._aborted = !1, this.channelId = t, this.preCompressionSize = null !== (a = null === (s = e.file) || void 0 === s ? void 0 : s.size) && void 0 !== a ? a : 0, this.currentSize = null !== (o = null === (r = e.file) || void 0 === r ? void 0 : r.size) && void 0 !== o ? o : 0, this.reactNativeFileIndex = i, this._abortController = new AbortController
         }
     }
 }

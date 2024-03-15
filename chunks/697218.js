@@ -28,8 +28,8 @@ function(e, t, n) {
         c = n("449008"),
         f = n("271938"),
         _ = n("455079"),
-        h = n("49111"),
-        E = n("646718");
+        E = n("49111"),
+        h = n("646718");
     let g = {},
         m = 0,
         p = "47835198259242069";
@@ -68,14 +68,14 @@ function(e, t, n) {
         let t, n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             i = g[e.id],
             s = void 0 !== e.id && e.id === f.default.getId();
-        if (null == i) void 0 !== (t = (i = new u.default(e)).premiumType) && s && (i.premiumType = C((0, l.isStaffEnv)(i), i.premiumType));
+        if (null == i) void 0 !== (t = (i = new u.default(e)).premiumType) && s && (i.premiumType = A((0, l.isStaffEnv)(i), i.premiumType));
         else if (n) {
             var r;
             let n = v(e);
             void 0 !== (t = null !== (r = n.premium_type) && void 0 !== r ? r : n.premiumType) && s && (0, l.isStaffEnvRawData)(n) && (n = function(e) {
                 var t;
                 let n = null !== (t = e.premium_type) && void 0 !== t ? t : e.premiumType,
-                    i = C((0, l.isStaffEnvRawData)(e), n);
+                    i = A((0, l.isStaffEnvRawData)(e), n);
                 return void 0 !== e.premiumType ? e.premiumType = i : void 0 !== e.premium_type && (e.premium_type = i), e
             }(n)), i = i.merge(n)
         }(0, l.validatePremiumType)((0, l.isStaffEnv)(i), t, i.premiumType);
@@ -83,14 +83,14 @@ function(e, t, n) {
         return g[e.id] = i, a && m++, a
     }
 
-    function C(e, t) {
+    function A(e, t) {
         if (!e) return t;
         let n = a.default.getPremiumTypeOverride(),
             i = a.default.getPremiumTypeActual();
-        return n === E.UNSELECTED_PREMIUM_TYPE_OVERRIDE ? i : n
+        return n === h.UNSELECTED_PREMIUM_TYPE_OVERRIDE ? i : n
     }
 
-    function A(e, t) {
+    function C(e, t) {
         var n, i, s, r, a;
         if (null != e.author && "SENDING" !== e.state && T(e.author) && I(e.author, t), null === (n = e.mentions) || void 0 === n || n.forEach(e => {
                 T(e) && I(e, t)
@@ -186,14 +186,14 @@ function(e, t, n) {
         let {
             messages: t
         } = e;
-        return t.forEach(e => A(e, !0)), !1
+        return t.forEach(e => C(e, !0)), !1
     }
 
     function U(e) {
         let {
             mostRecentMessages: t
         } = e;
-        return null == t || t.forEach(e => A(e, !1)), !1
+        return null == t || t.forEach(e => C(e, !1)), !1
     }
 
     function w(e) {
@@ -209,7 +209,7 @@ function(e, t, n) {
         let {
             data: t
         } = e;
-        (0, r.getMessagesFromGuildFeedFetch)(t).forEach(e => A(e, !0))
+        (0, r.getMessagesFromGuildFeedFetch)(t).forEach(e => C(e, !0))
     }
 
     function V(e) {
@@ -217,7 +217,7 @@ function(e, t, n) {
             firstMessages: t,
             owners: n
         } = e;
-        null != t && t.forEach(e => A(e, !0)), null != n && n.forEach(e => I(e.user, !0))
+        null != t && t.forEach(e => C(e, !0)), null != n && n.forEach(e => I(e.user, !0))
     }
 
     function G(e) {
@@ -230,7 +230,7 @@ function(e, t, n) {
                 most_recent_message: n,
                 owner: i
             } = e;
-            null != t && A(t, !0), null != n && A(n, !0), null != i && null != i.user && I(i.user, !0)
+            null != t && C(t, !0), null != n && C(n, !0), null != i && null != i.user && I(i.user, !0)
         })
     }
 
@@ -242,7 +242,7 @@ function(e, t, n) {
             let {
                 message_preview: t
             } = e;
-            null != t && A(t, !0)
+            null != t && C(t, !0)
         })
     }
 
@@ -284,14 +284,14 @@ function(e, t, n) {
         let {
             message: t
         } = e;
-        if (A(t, !0), null != t.flags && d.hasFlag(t.flags, h.MessageFlags.URGENT)) {
+        if (C(t, !0), null != t.flags && d.hasFlag(t.flags, E.MessageFlags.URGENT)) {
             let e = g[f.default.getId()];
-            return null != e && (g[f.default.getId()] = e.set("flags", d.setFlag(e.flags, h.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
+            return null != e && (g[f.default.getId()] = e.set("flags", d.setFlag(e.flags, E.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
         }
         return !1
     }
 
-    function j(e) {
+    function K(e) {
         let {
             channel: {
                 rawRecipients: t
@@ -300,7 +300,7 @@ function(e, t, n) {
         return null != t && t.forEach(e => I(e)), !1
     }
 
-    function W(e) {
+    function j(e) {
         let {
             channels: t
         } = e;
@@ -310,7 +310,7 @@ function(e, t, n) {
             of t) null != e && e.forEach(e => I(e));
         return !1
     }
-    let K = ["username", "avatar", "global_name", "discriminator", "bot"];
+    let W = ["username", "avatar", "global_name", "discriminator", "bot"];
 
     function z(e) {
         let {
@@ -319,7 +319,7 @@ function(e, t, n) {
         return t.map(e => {
             let t = g[e.user.id];
             if (null == t) return !1;
-            let n = K.reduce((n, s) => {
+            let n = W.reduce((n, s) => {
                 if (e.user.hasOwnProperty(s)) {
                     let r = t.set((0, i.camelCase)(s), e.user[s]);
                     n = n || r !== t, t = r
@@ -499,7 +499,7 @@ function(e, t, n) {
         })
     }
 
-    function eh(e) {
+    function eE(e) {
         let {
             request: t
         } = e, {
@@ -509,7 +509,7 @@ function(e, t, n) {
         return null != n && (s = s || I(n)), null != i && (s = s || I(i)), s
     }
 
-    function eE(e) {
+    function eh(e) {
         let {
             integrations: t
         } = e;
@@ -572,7 +572,7 @@ function(e, t, n) {
         return n.reduce((e, t) => I(t) || e, !1)
     }
 
-    function eC(e) {
+    function eA(e) {
         let {
             familyCenterTeenActivity: t
         } = e, {
@@ -581,7 +581,7 @@ function(e, t, n) {
         return n.reduce((e, t) => I(t) || e, !1)
     }
 
-    function eA(e) {
+    function eC(e) {
         let {
             members: t
         } = e, n = f.default.getId();
@@ -673,15 +673,15 @@ function(e, t, n) {
                 GUILD_BAN_REMOVE: Q,
                 CHANNEL_RECIPIENT_ADD: Z,
                 CHANNEL_RECIPIENT_REMOVE: Z,
-                GUILD_JOIN_REQUEST_CREATE: eh,
-                GUILD_JOIN_REQUEST_UPDATE: eh,
+                GUILD_JOIN_REQUEST_CREATE: eE,
+                GUILD_JOIN_REQUEST_UPDATE: eE,
                 GUILD_MEMBER_ADD: J,
                 GUILD_MEMBER_UPDATE: J,
                 GUILD_MEMBERS_CHUNK: $,
                 THREAD_MEMBER_LIST_UPDATE: en,
                 THREAD_MEMBERS_UPDATE: ei,
-                CHANNEL_CREATE: j,
-                CHANNEL_UPDATES: W,
+                CHANNEL_CREATE: K,
+                CHANNEL_UPDATES: j,
                 RELATIONSHIP_ADD: er,
                 LOAD_RELATIONSHIPS_SUCCESS: ea,
                 FRIEND_SUGGESTION_CREATE: eo,
@@ -703,16 +703,16 @@ function(e, t, n) {
                 LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: F,
                 PASSIVE_UPDATE_V1: ee,
                 LOCAL_MESSAGES_LOADED: et,
-                FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eE,
+                FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eh,
                 PRIVATE_CHANNEL_INTEGRATION_CREATE: eg,
                 PRIVATE_CHANNEL_INTEGRATION_UPDATE: em,
                 FAMILY_CENTER_INITIAL_LOAD: ep,
                 FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eS,
                 FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eI,
-                FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eC,
+                FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eA,
                 FAMILY_CENTER_REQUEST_LINK_SUCCESS: ev,
                 FRIEND_FINDER_PYMK_LOADED: eT,
-                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eA
+                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eC
             })
         }
     }

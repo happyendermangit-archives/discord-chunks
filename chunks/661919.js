@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         graphs: function() {
-            return h
+            return E
         },
         keySection: function() {
             return v
@@ -25,7 +25,7 @@ function(e, t, n) {
     let c = v(d.MediaEngineContextTypes.DEFAULT, u.RTCDebugSections.TRANSPORT, 0),
         f = c,
         _ = {},
-        h = {
+        E = {
             availableOutgoingBitrate: !0,
             bitrate: !0,
             bitrateTarget: !0,
@@ -46,7 +46,7 @@ function(e, t, n) {
             ping: !0
         };
 
-    function E(e, t, n) {
+    function h(e, t, n) {
         return "".concat(e, ":").concat(t, ":").concat(n)
     }
     class g {
@@ -58,15 +58,15 @@ function(e, t, n) {
                 let i = {
                     ...this.state
                 };
-                return delete i[E(e, t, n)], new g(i)
+                return delete i[h(e, t, n)], new g(i)
             }
             return new g({
-                [E(e, t, n)]: i,
+                [h(e, t, n)]: i,
                 ...this.state
             })
         }
         get(e, t, n) {
-            let i = this.state[E(e, t, n)];
+            let i = this.state[h(e, t, n)];
             return null != i ? i : null
         }
         constructor(e) {
@@ -96,10 +96,10 @@ function(e, t, n) {
     }
     I();
 
-    function C() {
+    function A() {
         null != S && (S.destroy(), S = null)
     }
-    class A extends i.default.Store {
+    class C extends i.default.Store {
         getSection() {
             return f
         }
@@ -118,14 +118,14 @@ function(e, t, n) {
             return p
         }
     }
-    A.displayName = "RTCDebugStore";
-    var y = new A(r.default, {
+    C.displayName = "RTCDebugStore";
+    var y = new C(r.default, {
         RTC_DEBUG_MODAL_OPEN: function(e) {
             var t;
             f = null !== (t = e.section) && void 0 !== t ? t : c
         },
         RTC_DEBUG_MODAL_CLOSE: function() {
-            C()
+            A()
         },
         RTC_DEBUG_MODAL_SET_SECTION: function(e) {
             f = e.section
@@ -168,7 +168,7 @@ function(e, t, n) {
                         } else if ("object" == typeof a && null !== a) {
                             let n = "object" == typeof t && null !== t ? t : {};
                             s[r] = e(a, n, i)
-                        } else if (r in h && "number" == typeof a) {
+                        } else if (r in E && "number" == typeof a) {
                             let e = s[r] = Array.isArray(t) ? t : [];
                             e.push({
                                 value: a,
@@ -187,7 +187,7 @@ function(e, t, n) {
             let {
                 path: t
             } = e, n = o.default.getMediaEngine();
-            if (C(), !n.supports(d.Features.CONNECTION_REPLAY) || 0 === t.length) return;
+            if (A(), !n.supports(d.Features.CONNECTION_REPLAY) || 0 === t.length) return;
             let i = n.createReplayConnection(d.MediaEngineContextTypes.DEFAULT, t);
             null != i && (S = i, i.on(s.BaseConnectionEvent.Video, (e, t, n, s, a) => {
                 r.default.dispatch({

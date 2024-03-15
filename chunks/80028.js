@@ -17,10 +17,10 @@ function(e, t, n) {
             return _
         },
         CLIPS_TOAST_DURATION: function() {
-            return h
+            return E
         },
         ClipsLogger: function() {
-            return E
+            return h
         },
         CLIPS_EXPORT_FILENAME: function() {
             return g
@@ -44,10 +44,10 @@ function(e, t, n) {
             return I
         },
         CLIP_PLAYING_DEBOUNCE_MS: function() {
-            return C
+            return A
         },
         CLIP_NAME_MIN_CHAR_LENGTH: function() {
-            return A
+            return C
         },
         CLIP_NAME_MAX_CHAR_LENGTH: function() {
             return y
@@ -99,8 +99,8 @@ function(e, t, n) {
         f = n("718517");
     (i = o || (o = {}))[i.SECONDS_30 = 30 * f.default.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = f.default.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * f.default.Millis.MINUTE] = "MINUTES_2", (s = l || (l = {}))[s.ALL = 0] = "ALL", s[s.FRIENDS = 1] = "FRIENDS", (r = u || (u = {})).DECOUPLED = "decoupled", r.VIEWER = "viewer", r.STREAMER = "streamer", (a = d || (d = {}))[a.Error = 0] = "Error", a[a.Disabled = 1] = "Disabled", a[a.Enabled = 2] = "Enabled";
     let _ = "alt+c",
-        h = 6 * f.default.Millis.SECOND,
-        E = new c.default("Clips"),
+        E = 6 * f.default.Millis.SECOND,
+        h = new c.default("Clips"),
         g = e => "Discord_Clip_".concat(e, ".mp4"),
         m = 3,
         p = 1,
@@ -108,8 +108,8 @@ function(e, t, n) {
         v = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
         T = /(Apple M[12].*)/,
         I = .1,
-        C = 25,
-        A = 0,
+        A = 25,
+        C = 0,
         y = 200,
         N = "clips-edit",
         R = "clips-gallery",

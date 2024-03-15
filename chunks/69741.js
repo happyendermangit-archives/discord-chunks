@@ -23,7 +23,7 @@ function(e, t, n) {
             return _
         },
         ENABLE_COMMUNITY_FLOW_MODAL_KEY: function() {
-            return h
+            return E
         },
         EnableCommunityModalSteps: function() {
             return i
@@ -38,6 +38,6 @@ function(e, t, n) {
         c = [a.Permissions.ADMINISTRATOR, a.Permissions.KICK_MEMBERS, a.Permissions.BAN_MEMBERS, a.Permissions.MANAGE_GUILD, a.Permissions.MANAGE_CHANNELS, a.Permissions.MANAGE_ROLES, a.Permissions.MANAGE_MESSAGES, a.Permissions.MANAGE_GUILD_EXPRESSIONS, a.Permissions.CREATE_GUILD_EXPRESSIONS, a.Permissions.MANAGE_EVENTS, a.Permissions.CREATE_EVENTS, a.Permissions.MODERATE_MEMBERS, a.Permissions.MENTION_EVERYONE],
         f = r.default.combine(...c),
         _ = 1e3,
-        h = "Enable Community Modal";
+        E = "Enable Community Modal";
     (s = i || (i = {})).SAFETY_CHECK = "safety_check", s.BASICS = "basics", s.FINISH = "finish"
 }

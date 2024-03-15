@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("802493"),
         f = n("595525"),
         _ = n("629538"),
-        h = n("39616"),
-        E = n("828674"),
+        E = n("39616"),
+        h = n("828674"),
         g = n("153043"),
         m = n("256941"),
         p = n("505985"),
@@ -25,8 +25,8 @@ function(e, t, n) {
         v = n("374363"),
         T = n("26989"),
         I = n("778689"),
-        C = n("305961"),
-        A = n("677099"),
+        A = n("305961"),
+        C = n("677099"),
         y = n("697218"),
         N = n("315102"),
         R = n("718517"),
@@ -87,9 +87,9 @@ function(e, t, n) {
         }
     }
     let Y = L.default.fromTimestamp(Date.now() - 60 * R.default.Millis.DAY),
-        j = [],
-        W = 2,
-        K = x.slice(0),
+        K = [],
+        j = 2,
+        W = x.slice(0),
         z = {},
         q = {},
         X = null,
@@ -110,10 +110,10 @@ function(e, t, n) {
         return q
     }
     async function $() {
-        if (0 !== W) return;
+        if (0 !== j) return;
         let e = c.default.database();
         if (null == e) return;
-        W = 2;
+        j = 2;
         let t = await (0, f.tryLoadOrResetCacheGatewayAsync)("EmojiStore.loadSavedEmojis", () => o.default.timeAsync("\uD83D\uDCBE", "loadSavedEmojis", () => _.default.getAsync(e)));
         null != t && u.default.dispatch({
             type: "CACHED_EMOJIS_LOADED",
@@ -191,7 +191,7 @@ function(e, t, n) {
                 var t;
                 let n = Q.get(e),
                     i = w.default.getTopEmojiIdsByGuildId(e);
-                if (null == n && null == i) return j;
+                if (null == n && null == i) return K;
                 let s = null !== (t = null == n ? void 0 : n.emojiIds) && void 0 !== t ? t : i,
                     r = s.map(e => {
                         var t;
@@ -207,9 +207,9 @@ function(e, t, n) {
             return this.topEmojis
         }
         getNewlyAddedEmojiForGuild(e) {
-            if (this.ensureDisambiguated(), null == this.newlyAddedEmoji) return j;
+            if (this.ensureDisambiguated(), null == this.newlyAddedEmoji) return K;
             let t = this.newlyAddedEmoji[e];
-            return null == t ? j : t
+            return null == t ? K : t
         }
         getEscapedCustomEmoticonNames() {
             return null == this.escapedEmoticonNames && this._buildDisambiguatedCustomEmoji(), this.escapedEmoticonNames
@@ -220,7 +220,7 @@ function(e, t, n) {
                     id: n,
                     names: i,
                     name: r
-                } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(h.default.getTermsForEmoji(r), e), u = null != n && s.some(U.default.getCaptionsForEmojiById({
+                } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(E.default.getTermsForEmoji(r), e), u = null != n && s.some(U.default.getCaptionsForEmojiById({
                     emojiId: n
                 }), e);
                 return a || o || l || u
@@ -259,7 +259,7 @@ function(e, t, n) {
                 null != t && (s.each(t.usableEmojis, n), s.each(t.emoticons, i))
             };
             for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => L.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
-            A.default.getFlattenedGuildIds().forEach(e => {
+            C.default.getFlattenedGuildIds().forEach(e => {
                 e !== this.guildId && r(e)
             }), this.escapedEmoticonNames = t.join("|")
         }
@@ -284,13 +284,13 @@ function(e, t, n) {
             return null !== (t = b.default.getByName(e)) && void 0 !== t ? t : Z(e)
         },
         afterCompute: () => {
-            ee.resetFrequentlyUsed(), K = x.slice(0), !s.some(z, e => e.usableEmojis.length > 0) && K.splice(x.indexOf(G.EmojiCategories.CUSTOM), 1)
+            ee.resetFrequentlyUsed(), W = x.slice(0), !s.some(z, e => e.usableEmojis.length > 0) && W.splice(x.indexOf(G.EmojiCategories.CUSTOM), 1)
         },
         numFrequentlyItems: 42
     });
 
     function en() {
-        z = {}, q = {}, ee.reset(), Q.clear(), W = 2
+        z = {}, q = {}, ee.reset(), Q.clear(), j = 2
     }
 
     function ei(e) {
@@ -299,7 +299,7 @@ function(e, t, n) {
     }
 
     function es() {
-        q = null, ee.reset(), 0 !== W && et.compute()
+        q = null, ee.reset(), 0 !== j && et.compute()
     }
 
     function er(e, t) {
@@ -334,7 +334,7 @@ function(e, t, n) {
             }))
         }
         let i = e.length > 0;
-        return i && 0 !== W && et.compute(), i
+        return i && 0 !== j && et.compute(), i
     }
 
     function el(e) {
@@ -342,7 +342,7 @@ function(e, t, n) {
             guildId: t,
             role: n
         } = e;
-        if (!(0, E.isSubscriptionRole)(n)) return !1;
+        if (!(0, h.isSubscriptionRole)(n)) return !1;
         {
             let e = z[t];
             er(t, null == e ? void 0 : e.emojis), es()
@@ -350,19 +350,19 @@ function(e, t, n) {
     }
     class eu extends l.default.PersistedStore {
         initialize(e) {
-            this.waitFor(c.default, I.default, T.default, C.default, S.default, m.default, w.default, y.default), null != e && (B = e), this.syncWith([v.default], ea)
+            this.waitFor(c.default, I.default, T.default, A.default, S.default, m.default, w.default, y.default), null != e && (B = e), this.syncWith([v.default], ea)
         }
         getState() {
             return B
         }
         get loadState() {
-            return W
+            return j
         }
         hasPendingUsage() {
             return B.pendingUsages.length > 0
         }
         get categories() {
-            return K
+            return W
         }
         get diversitySurrogate() {
             var e;
@@ -455,10 +455,10 @@ function(e, t, n) {
                 }(e)
         }
         getTopEmoji(e) {
-            return null == e ? j : ($(), ee.get(e).getTopEmojiWithoutFetchingLatest(e))
+            return null == e ? K : ($(), ee.get(e).getTopEmojiWithoutFetchingLatest(e))
         }
         getNewlyAddedEmoji(e) {
-            return null == e ? j : ($(), ee.get(e).getNewlyAddedEmojiForGuild(e))
+            return null == e ? K : ($(), ee.get(e).getNewlyAddedEmojiForGuild(e))
         }
         getTopEmojisMetadata(e) {
             return Q.get(e)
@@ -495,7 +495,7 @@ function(e, t, n) {
         },
         CONNECTION_OPEN: function(e) {
             for (let t of (en(), e.guilds)) er(t.id, t.emojis);
-            W = e.guilds.every(e => null != e.emojis) ? 1 : 0, es()
+            j = e.guilds.every(e => null != e.emojis) ? 1 : 0, es()
         },
         CACHED_EMOJIS_LOADED: function(e) {
             let {
@@ -515,7 +515,7 @@ function(e, t, n) {
             er(n, null == s ? void 0 : s.usableEmojis), es()
         },
         GUILD_CREATE: function(e) {
-            0 !== W && null == e.guild.emojis && null != e.guild.emojiUpdates && (W = 0), er(e.guild.id, e.guild.emojis), es()
+            0 !== j && null == e.guild.emojis && null != e.guild.emojiUpdates && (j = 0), er(e.guild.id, e.guild.emojis), es()
         },
         GUILD_UPDATE: function(e) {
             er(e.guild.id, e.guild.emojis), es()
@@ -552,7 +552,7 @@ function(e, t, n) {
                 },
                 wasSaved: n
             } = e;
-            if (h.default.setEmojiLocale(S.default.locale), t !== F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+            if (E.default.setEmojiLocale(S.default.locale), t !== F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
             B.pendingUsages = []
         },
         GUILD_ROLE_CREATE: el,

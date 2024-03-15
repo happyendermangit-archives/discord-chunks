@@ -22,8 +22,8 @@ function(e, t, n) {
         c = n("577776"),
         f = n("414055"),
         _ = n("904276"),
-        h = n("875436"),
-        E = n("49111"),
+        E = n("875436"),
+        h = n("49111"),
         g = n("713274");
     let m = {
         NOT_SET: "",
@@ -42,16 +42,16 @@ function(e, t, n) {
             onClick: u,
             infoClassName: d,
             titleClassName: f,
-            radioItemClassName: E,
+            radioItemClassName: h,
             radioItemIconClassName: m,
             radioBarClassName: p,
             hasSelection: S,
             radioPosition: v = "left",
             icon: T,
             withTransparentBackground: I
-        } = e, C = null !== (t = r.color) && void 0 !== t ? t : "", A = s || !S, y = (0, i.jsxs)("div", {
+        } = e, A = null !== (t = r.color) && void 0 !== t ? t : "", C = s || !S, y = (0, i.jsxs)("div", {
             className: m,
-            children: [s ? (0, i.jsx)(h.default, {
+            children: [s ? (0, i.jsx)(E.default, {
                 foreground: g.radioIconForeground
             }) : (0, i.jsx)(_.default, {}), null != T && (0, i.jsx)(T, {
                 className: g.icon,
@@ -63,14 +63,14 @@ function(e, t, n) {
             role: "radio",
             "aria-checked": s,
             onClick: n ? void 0 : u,
-            tabIndex: !n && A ? 0 : -1,
+            tabIndex: !n && C ? 0 : -1,
             className: a(null != r.collapsibleContent ? g.collapsibleItem : g.item, {
                 [g.disabled]: n,
                 [g.itemFilled]: !I
-            }, E),
+            }, h),
             children: (0, i.jsxs)("div", {
                 style: {
-                    "--radio-bar-accent-color": C,
+                    "--radio-bar-accent-color": A,
                     padding: o
                 },
                 className: a(g.radioBar, {
@@ -107,8 +107,8 @@ function(e, t, n) {
                 radioItemIconClassName: d,
                 radioBarClassName: c,
                 collapsibleClassName: _,
-                withTransparentBackground: h,
-                radioPosition: E
+                withTransparentBackground: E,
+                radioPosition: h
             } = this.props, m = t || n.disabled, {
                 tooltipText: S,
                 tooltipPosition: v,
@@ -135,9 +135,9 @@ function(e, t, n) {
                         radioItemClassName: l,
                         radioItemIconClassName: d,
                         radioBarClassName: c,
-                        radioPosition: E,
+                        radioPosition: h,
                         icon: T,
-                        withTransparentBackground: h
+                        withTransparentBackground: E
                     })
                 }
             }) : (0, i.jsx)(p, {
@@ -152,9 +152,9 @@ function(e, t, n) {
                 radioItemClassName: l,
                 radioItemIconClassName: d,
                 radioBarClassName: c,
-                radioPosition: E,
+                radioPosition: h,
                 icon: T,
-                withTransparentBackground: h
+                withTransparentBackground: E
             });
             return null != S ? (0, i.jsx)(f.Tooltip, {
                 text: S,
@@ -199,8 +199,8 @@ function(e, t, n) {
         }), []), a = s.useCallback(async t => {
             let n = i.current;
             if (null == n) return;
-            let s = "vertical" === e ? E.KeyboardKeys.ARROW_UP : E.KeyboardKeys.ARROW_LEFT,
-                a = "vertical" === e ? E.KeyboardKeys.ARROW_DOWN : E.KeyboardKeys.ARROW_RIGHT;
+            let s = "vertical" === e ? h.KeyboardKeys.ARROW_UP : h.KeyboardKeys.ARROW_LEFT,
+                a = "vertical" === e ? h.KeyboardKeys.ARROW_DOWN : h.KeyboardKeys.ARROW_RIGHT;
             switch (t.which) {
                 case a: {
                     t.stopPropagation(), t.preventDefault();
@@ -251,22 +251,22 @@ function(e, t, n) {
             value: o = null,
             size: l = m.MEDIUM,
             radioPosition: u = "left",
-            onChange: c = E.NOOP,
+            onChange: c = h.NOOP,
             disabled: f = !1,
             options: _ = [],
-            "aria-labelledby": h,
+            "aria-labelledby": E,
             orientation: g,
             withTransparentBackground: p
         } = e, T = (0, d.useFormContext)(), I = v({
-            labelledBy: null != h ? h : T.titleId,
+            labelledBy: null != E ? E : T.titleId,
             orientation: g,
             isDisabled: f
-        }), C = _.some(e => e.value === o);
+        }), A = _.some(e => e.value === o);
         return (0, i.jsx)("div", {
             ...I,
             className: a,
             children: _.map(e => (0, i.jsx)(S, {
-                hasSelection: C,
+                hasSelection: A,
                 disabled: f,
                 checked: o === e.value,
                 option: e,

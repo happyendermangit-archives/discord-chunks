@@ -7,6 +7,9 @@ function(e, t, n) {
         learnMore: "learnMore__02804",
         leftIcon: "leftIcon_f180e1",
         rightIcon: "rightIcon__53ec6",
-        row: "row_eb598a"
+        row: "row_eb598a",
+        rowDetails: "rowDetails__4f215",
+        rowInner: "rowInner__465aa",
+        rows: "rows__4923b"
     }
 }

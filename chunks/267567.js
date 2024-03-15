@@ -25,10 +25,10 @@ function(e, t, n) {
         return !1
     }
 
-    function h(e) {
+    function E(e) {
         return !(e === l.ME || u.includes(e)) && (u = [...u, e], !0)
     }
-    class E extends i.default.Store {
+    class h extends i.default.Store {
         initialize() {
             this.waitFor(a.default, o.default)
         }
@@ -57,8 +57,8 @@ function(e, t, n) {
             return null != e ? d[e] : null
         }
     }
-    E.displayName = "LurkingStore";
-    var g = new E(s.default, {
+    h.displayName = "LurkingStore";
+    var g = new h(s.default, {
         CONNECTION_OPEN: function() {
             let e = Object.values(a.default.getGuilds()).reduce((e, t) => {
                 let n = t.isLurker();
@@ -76,7 +76,7 @@ function(e, t, n) {
             } = e;
             if (n) {
                 var a, o;
-                switch (h(t), a = t, null != (o = r) && (d[a] = o), i) {
+                switch (E(t), a = t, null != (o = r) && (d[a] = o), i) {
                     case l.JoinGuildSources.MOBILE_GUILD_DISCOVERY:
                         f = {
                             type: l.JoinGuildSources.MOBILE_GUILD_DISCOVERY
@@ -109,7 +109,7 @@ function(e, t, n) {
                 lurkingGuildId: t,
                 lurkingSource: n
             } = e;
-            return h(t), f = n, !0
+            return E(t), f = n, !0
         },
         GUILD_CREATE: function(e) {
             let {

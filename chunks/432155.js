@@ -11,10 +11,10 @@ function(e, t, n) {
             return _
         },
         SOUNDBOARD_EVERYWHERE: function() {
-            return h
+            return E
         },
         CUSTOM_CALL_SOUNDS: function() {
-            return E
+            return h
         },
         ANIMATED_AVATAR: function() {
             return g
@@ -38,10 +38,10 @@ function(e, t, n) {
             return I
         },
         CLIENT_THEMES: function() {
-            return C
+            return A
         },
         BOOST_DISCOUNT: function() {
-            return A
+            return C
         },
         FREE_BOOSTS: function() {
             return y
@@ -112,8 +112,8 @@ function(e, t, n) {
     let c = new d("animatedEmojis"),
         f = new d("emojisEverywhere"),
         _ = new d("stickersEverywhere"),
-        h = new d("soundboardEverywhere"),
-        E = new d("customCallSounds"),
+        E = new d("soundboardEverywhere"),
+        h = new d("customCallSounds"),
         g = new d("animatedAvatar"),
         m = new d("customDiscriminator"),
         p = new d("premiumGuildMemberProfile"),
@@ -121,8 +121,8 @@ function(e, t, n) {
         v = new d("profilePremiumFeatures", "custom banner and avatar decoration"),
         T = new d("collectibles"),
         I = new d("appIcons"),
-        C = new d("clientThemes"),
-        A = new d("boostDiscount"),
+        A = new d("clientThemes"),
+        C = new d("boostDiscount"),
         y = new d("freeBoosts"),
         N = new d("streamMidQuality"),
         R = new d("streamHighQuality"),
@@ -137,8 +137,8 @@ function(e, t, n) {
         w = new d("uploadLargeFiles"),
         k = Object.freeze({
             [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [c, f, _, S, L, U, w, I]),
-            [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [c, f, g, m, S, A, N, O, U, w, I]),
-            [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, f, _, h, E, g, m, p, S, v, C, A, y, N, R, O, D, P, L, M, b, U, w, I, T])
+            [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [c, f, g, m, S, C, N, O, U, w, I]),
+            [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, f, _, E, h, g, m, p, S, v, A, C, y, N, R, O, D, P, L, M, b, U, w, I, T])
         });
 
     function V(e, t) {

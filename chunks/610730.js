@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("766274"),
         f = n("42203"),
         _ = n("377253"),
-        h = n("299039"),
-        E = n("648564"),
+        E = n("299039"),
+        h = n("648564"),
         g = n("49111");
     let m = new Set,
         p = {},
@@ -47,10 +47,10 @@ function(e, t, n) {
 
     function I(e) {
         var t;
-        null === (t = e.threads) || void 0 === t || t.forEach(C)
+        null === (t = e.threads) || void 0 === t || t.forEach(A)
     }
 
-    function C(e) {
+    function A(e) {
         v(e, t => {
             var n;
             null != e.messageCount && (t.count = e.messageCount);
@@ -59,10 +59,10 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function C(e) {
         if (null != e && !(e.id in p)) {
             let t = f.default.getChannel(e.id);
-            if (null != t) return C(t), !0
+            if (null != t) return A(t), !0
         }
         return !1
     }
@@ -71,14 +71,14 @@ function(e, t, n) {
         let {
             channel: t
         } = e;
-        C(t)
+        A(t)
     }
 
     function N(e) {
         let {
             threads: t
         } = e;
-        t.forEach(A)
+        t.forEach(C)
     }
 
     function R(e) {
@@ -87,8 +87,8 @@ function(e, t, n) {
             threads: n
         } = e;
         for (let e of t)
-            for (let t of e) A(t.thread);
-        n.forEach(A)
+            for (let t of e) C(t.thread);
+        n.forEach(C)
     }
     class O extends r.default.Store {
         initialize() {
@@ -152,7 +152,7 @@ function(e, t, n) {
                 threads: t,
                 mostRecentMessages: n
             } = e;
-            t.forEach(C), null == n || n.forEach(e => {
+            t.forEach(A), null == n || n.forEach(e => {
                 let t = f.default.getChannel(e.channel_id);
                 null != t && e.type !== g.MessageTypes.THREAD_STARTER_MESSAGE && v(t, t => {
                     t.mostRecentRawMessage = e, t.mostRecentMessage = null
@@ -186,10 +186,10 @@ function(e, t, n) {
             if (n || i || null != s) return !1;
             let r = f.default.getChannel(t.channel_id);
             if (null == r || !u.THREAD_CHANNEL_TYPES.has(r.type) || ! function(e, t) {
-                    return !(t.type === g.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === h.default.castChannelIdAsMessageId(e.id)) && !0
+                    return !(t.type === g.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === E.default.castChannelIdAsMessageId(e.id)) && !0
                 }(r, t)) return !1;
             v(r, e => {
-                e.count = Math.min(e.count + 1, E.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
+                e.count = Math.min(e.count + 1, h.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
             })
         },
         MESSAGE_UPDATE: function(e) {
@@ -208,7 +208,7 @@ function(e, t, n) {
                 channelId: n
             } = e, i = p[n];
             if (null == i) return !1;
-            let s = h.default.castChannelIdAsMessageId(n) !== t,
+            let s = E.default.castChannelIdAsMessageId(n) !== t,
                 r = !m.has(t);
             T(i, e => {
                 var n;
@@ -223,7 +223,7 @@ function(e, t, n) {
             } = e, i = p[n];
             if (null == i) return !1;
             let s = t.filter(e => {
-                let t = h.default.castChannelIdAsMessageId(n) !== e,
+                let t = E.default.castChannelIdAsMessageId(n) !== e,
                     i = !m.has(e);
                 return t && i
             }).length;
@@ -235,7 +235,7 @@ function(e, t, n) {
         },
         LOAD_MESSAGES_SUCCESS: function(e) {
             let t = !1;
-            for (let n of e.messages) t = A(n.thread) || t;
+            for (let n of e.messages) t = C(n.thread) || t;
             if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
             let n = f.default.getChannel(e.channelId);
             if (null == n || !u.THREAD_CHANNEL_TYPES.has(n.type)) return t;
@@ -244,7 +244,7 @@ function(e, t, n) {
                 else {
                     var n;
                     let i = null !== (n = e.messages[0]) && void 0 !== n ? n : null;
-                    t.count = e.messages.length >= E.MAX_THREAD_MESSAGE_COUNT ? E.MAX_THREAD_MESSAGE_COUNT : t.count, (null == i ? void 0 : i.type) !== g.MessageTypes.THREAD_STARTER_MESSAGE && (t.mostRecentRawMessage = i, t.mostRecentMessage = null)
+                    t.count = e.messages.length >= h.MAX_THREAD_MESSAGE_COUNT ? h.MAX_THREAD_MESSAGE_COUNT : t.count, (null == i ? void 0 : i.type) !== g.MessageTypes.THREAD_STARTER_MESSAGE && (t.mostRecentRawMessage = i, t.mostRecentMessage = null)
                 }
             })
         },
@@ -252,7 +252,7 @@ function(e, t, n) {
             let {
                 data: t
             } = e, n = !1;
-            for (let e of (0, o.getThreadsFromGuildFeedFetch)(t)) n = A(e) || n;
+            for (let e of (0, o.getThreadsFromGuildFeedFetch)(t)) n = C(e) || n;
             return n
         }
     })

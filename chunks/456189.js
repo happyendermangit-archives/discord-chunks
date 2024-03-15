@@ -21,8 +21,8 @@ function(e, t, n) {
             onContextMenu: c,
             onKeyDown: f,
             onFocus: _,
-            onBlur: h,
-            onMouseOver: E,
+            onBlur: E,
+            onMouseOver: h,
             onMouseDown: g,
             onMouseLeave: m,
             buttonProps: p,
@@ -32,7 +32,7 @@ function(e, t, n) {
             ref: v,
             className: o,
             onClick: u,
-            onMouseOver: E,
+            onMouseOver: h,
             onMouseLeave: m,
             onDoubleClick: d,
             onContextMenu: c,
@@ -49,7 +49,7 @@ function(e, t, n) {
                 },
                 onKeyDown: f,
                 onFocus: _,
-                onBlur: h,
+                onBlur: E,
                 onMouseDown: g
             }), n]
         })

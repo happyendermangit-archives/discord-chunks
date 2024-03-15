@@ -16,9 +16,9 @@ function(e, t, n) {
         c = n("10853"),
         f = n("38654"),
         _ = n("692038"),
-        h = n("61400");
+        E = n("61400");
     n("574073");
-    var E = n("432173"),
+    var h = n("432173"),
         g = n("915639"),
         m = n("568734"),
         p = n("299039"),
@@ -26,8 +26,8 @@ function(e, t, n) {
         v = n("42203"),
         T = n("162805"),
         I = n("923959"),
-        C = n("26989"),
-        A = n("305961"),
+        A = n("26989"),
+        C = n("305961"),
         y = n("957255"),
         N = n("27618"),
         R = n("18494"),
@@ -73,7 +73,7 @@ function(e, t, n) {
             emoji: r,
             reactionType: a
         } = e, l = o.default.get(n);
-        if (null == l || !(0, E.shouldApplyReaction)(e)) return !1;
+        if (null == l || !(0, h.shouldApplyReaction)(e)) return !1;
         let u = S.default.getId() === s;
         l = l.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(r, u, e.colors, a) : n.removeReaction(r, u, a)), o.default.commit(l)
     }
@@ -93,7 +93,7 @@ function(e, t, n) {
     }
     class x extends r.default.Store {
         initialize() {
-            this.waitFor(D.default, v.default, T.default, C.default, g.default, R.default, O.default, A.default, N.default, I.default), this.syncWith([f.default], () => {})
+            this.waitFor(D.default, v.default, T.default, A.default, g.default, R.default, O.default, C.default, N.default, I.default), this.syncWith([f.default], () => {})
         }
         getMessages(e) {
             if (f.default.hasViewingRoles()) {
@@ -108,7 +108,7 @@ function(e, t, n) {
         }
         getLastEditableMessage(e) {
             let t = D.default.getCurrentUser();
-            return s(this.getMessages(e).toArray()).reverse().find(e => (0, h.default)(e, null == t ? void 0 : t.id))
+            return s(this.getMessages(e).toArray()).reverse().find(e => (0, E.default)(e, null == t ? void 0 : t.id))
         }
         getLastCommandMessage(e) {
             let t = D.default.getCurrentUser();

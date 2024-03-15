@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("755624"),
         f = n("233069"),
         _ = n("271938"),
-        h = n("42203"),
-        E = n("26989"),
+        E = n("42203"),
+        h = n("26989"),
         g = n("305961"),
         m = n("697218"),
         p = n("299039"),
@@ -25,8 +25,8 @@ function(e, t, n) {
     let v = r.default.deserialize(0),
         T = r.default.combine(...s.values(S.Permissions)),
         I = r.default.combine(S.Permissions.CREATE_INSTANT_INVITE, S.Permissions.CHANGE_NICKNAME, S.Permissions.VIEW_CHANNEL, S.Permissions.SEND_MESSAGES, S.Permissions.EMBED_LINKS, S.Permissions.ATTACH_FILES, S.Permissions.READ_MESSAGE_HISTORY, S.Permissions.MENTION_EVERYONE, S.Permissions.USE_EXTERNAL_EMOJIS, S.Permissions.USE_EXTERNAL_STICKERS, S.Permissions.ADD_REACTIONS, S.Permissions.CREATE_PUBLIC_THREADS, S.Permissions.CREATE_PRIVATE_THREADS, S.Permissions.SEND_MESSAGES_IN_THREADS, S.Permissions.CONNECT, S.Permissions.SPEAK, S.Permissions.USE_VAD, S.Permissions.STREAM, S.Permissions.USE_EMBEDDED_ACTIVITIES, S.Permissions.USE_SOUNDBOARD, S.Permissions.REQUEST_TO_SPEAK, S.Permissions.USE_APPLICATION_COMMANDS, S.Permissions.CREATE_GUILD_EXPRESSIONS, S.Permissions.CREATE_EVENTS),
-        C = r.default.combine(S.Permissions.VIEW_CHANNEL, S.Permissions.READ_MESSAGE_HISTORY),
-        A = r.default.combine(S.Permissions.VIEW_CHANNEL, S.Permissions.SEND_MESSAGES, S.Permissions.CONNECT, S.Permissions.SPEAK, S.Permissions.STREAM, S.Permissions.USE_EMBEDDED_ACTIVITIES, S.Permissions.USE_EXTERNAL_EMOJIS, S.Permissions.USE_EXTERNAL_SOUNDS, S.Permissions.USE_EXTERNAL_STICKERS, S.Permissions.USE_SOUNDBOARD, S.Permissions.USE_VAD),
+        A = r.default.combine(S.Permissions.VIEW_CHANNEL, S.Permissions.READ_MESSAGE_HISTORY),
+        C = r.default.combine(S.Permissions.VIEW_CHANNEL, S.Permissions.SEND_MESSAGES, S.Permissions.CONNECT, S.Permissions.SPEAK, S.Permissions.STREAM, S.Permissions.USE_EMBEDDED_ACTIVITIES, S.Permissions.USE_EXTERNAL_EMOJIS, S.Permissions.USE_EXTERNAL_SOUNDS, S.Permissions.USE_EXTERNAL_STICKERS, S.Permissions.USE_SOUNDBOARD, S.Permissions.USE_VAD),
         y = r.default.combine(S.Permissions.VIEW_CHANNEL, S.Permissions.READ_MESSAGE_HISTORY),
         N = r.default.combine(S.Permissions.VIEW_CHANNEL, S.Permissions.READ_MESSAGE_HISTORY, S.Permissions.CHANGE_NICKNAME),
         R = r.default.combine(S.Permissions.MANAGE_GUILD, S.Permissions.MANAGE_ROLES, S.Permissions.ADMINISTRATOR, S.Permissions.BAN_MEMBERS, S.Permissions.MANAGE_NICKNAMES, S.Permissions.CREATE_GUILD_EXPRESSIONS, S.Permissions.MANAGE_GUILD_EXPRESSIONS, S.Permissions.MANAGE_WEBHOOKS, S.Permissions.VIEW_AUDIT_LOG);
@@ -70,7 +70,7 @@ function(e, t, n) {
             roles: a,
             checkElevated: o = !0,
             excludeGuildPermissions: l = !1,
-            lurkerPermissionsMask: u = C
+            lurkerPermissionsMask: u = A
         } = e;
         if (l) return D(i.id, n, v, s);
         a = null != a ? {
@@ -84,7 +84,7 @@ function(e, t, n) {
                 let t = a[n.roles[e]];
                 void 0 !== t && (f = r.default.add(f, t.permissions))
             }
-        return f = r.default.has(f, S.Permissions.ADMINISTRATOR) ? T : D(i.id, n, f, s), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = r.default.filter(f, u)), E.default.isCurrentUserGuest(i.id) && (f = r.default.filter(f, A)), O(f, i, t, o)
+        return f = r.default.has(f, S.Permissions.ADMINISTRATOR) ? T : D(i.id, n, f, s), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = r.default.filter(f, u)), h.default.isCurrentUserGuest(i.id) && (f = r.default.filter(f, C)), O(f, i, t, o)
     }
 
     function L(e) {
@@ -99,11 +99,11 @@ function(e, t, n) {
         } = e;
         if (null == r) return v;
         let p = "string" == typeof r ? r : r.id,
-            S = C;
+            S = A;
         if (a instanceof f.ChannelRecordBase) {
             if (a.isScheduledForDeletion()) return v;
             if (f.THREAD_CHANNEL_TYPES.has(a.type)) {
-                let e = h.default.getChannel(a.parent_id);
+                let e = E.default.getChannel(a.parent_id);
                 if (null == e || e.isScheduledForDeletion()) return v;
                 let t = p === (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && c.default.hasJoined(a.id);
                 return M(a, L({
@@ -125,7 +125,7 @@ function(e, t, n) {
         } else o = null != o ? o : {}, s = a;
         if (null == s) return v;
         if (!(p === (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.default.isViewingRoles(s.id)) && s.isOwner(p)) return O(T, s, p, d);
-        let I = E.default.getMember(s.id, p);
+        let I = h.default.getMember(s.id, p);
         return P({
             userId: p,
             member: I,
@@ -186,12 +186,12 @@ function(e, t, n) {
                     checkElevated: o = !0,
                     excludeGuildPermissions: l
                 } = t,
-                u = C;
+                u = A;
             if (s instanceof f.ChannelRecordBase) {
                 var d;
                 if (s.isScheduledForDeletion()) return v;
                 if (f.THREAD_CHANNEL_TYPES.has(s.type)) {
-                    let t = h.default.getChannel(s.parent_id);
+                    let t = E.default.getChannel(s.parent_id);
                     return null == t ? v : M(s, e({
                         forceRoles: i,
                         context: t,
@@ -248,7 +248,7 @@ function(e, t, n) {
             return r.indexOf(n.id) > (null != i ? r.indexOf(i.id) : -1)
         },
         getHighestRole: function(e, t) {
-            let n = E.default.getMember(e.id, t);
+            let n = h.default.getMember(e.id, t);
             if (null != n) return s(g.default.getRoles(e.id)).filter(e => -1 !== n.roles.indexOf(e.id)).sortBy(e => -e.position).first()
         },
         getHighestHoistedRole: function(e, t) {
@@ -259,7 +259,7 @@ function(e, t, n) {
             let n;
             let i = {};
             if (t instanceof f.ChannelRecordBase) {
-                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = h.default.getChannel(t.parent_id))) return !1;
+                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = E.default.getChannel(t.parent_id))) return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
                 n = null != e ? g.default.getGuild(e) : null
@@ -275,7 +275,7 @@ function(e, t, n) {
             let n;
             let i = {};
             if (t instanceof f.ChannelRecordBase) {
-                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = h.default.getChannel(t.parent_id))) return !1;
+                if (t.type === S.ChannelTypes.PRIVATE_THREAD || f.THREAD_CHANNEL_TYPES.has(t.type) && null == (t = E.default.getChannel(t.parent_id))) return !1;
                 i = t.permissionOverwrites;
                 let e = t.getGuildId();
                 n = null != e ? g.default.getGuild(e) : null

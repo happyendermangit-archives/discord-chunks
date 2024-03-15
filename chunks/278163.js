@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getSystemAnalyticsInfo: function() {
-            return h
+            return E
         }
     }), n("222007");
     var i = n("446674"),
@@ -63,7 +63,7 @@ function(e, t, n) {
         }
     });
 
-    function h() {
+    function E() {
         return _.info()
     }
 }

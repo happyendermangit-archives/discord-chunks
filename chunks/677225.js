@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("299285"),
         f = n("686470"),
         _ = n("535974"),
-        h = n("98328"),
-        E = n("718517"),
+        E = n("98328"),
+        h = n("718517"),
         g = n("964889"),
         m = n("602043");
     let p = new Set,
@@ -25,27 +25,27 @@ function(e, t, n) {
         v = new Set,
         T = {},
         I = new Set,
-        C = {},
-        A = 10 * E.default.Millis.MINUTE,
-        y = 6 * E.default.Millis.HOUR,
-        N = 10 * E.default.Millis.MINUTE,
+        A = {},
+        C = 10 * h.default.Millis.MINUTE,
+        y = 6 * h.default.Millis.HOUR,
+        N = 10 * h.default.Millis.MINUTE,
         R = new a.Timeout;
 
     function O(e) {
-        R.start(e + Math.random() * A, l.fetchBranches)
+        R.start(e + Math.random() * C, l.fetchBranches)
     }
 
     function D() {
         if (!(0, m.isSupportedPlatform)()) return !1;
         let e = f.default.entitledBranchIds,
             t = [];
-        for (let n of e) !C.hasOwnProperty(n) && (C[n] = null, t.push(n));
+        for (let n of e) !A.hasOwnProperty(n) && (A[n] = null, t.push(n));
         if (0 === t.length) return !1;
         o.default.wait(() => l.fetchBranches(t))
     }
 
     function P(e, t) {
-        if (null != S[t] && h.default.shouldBeInstalled(e, t)) {
+        if (null != S[t] && E.default.shouldBeInstalled(e, t)) {
             let n = S[t],
                 i = n.manifestIds,
                 r = _.default.getState(e, t);
@@ -163,12 +163,12 @@ function(e, t, n) {
                 let {
                     id: t,
                     liveBuildId: i
-                } = e, s = C[t];
+                } = e, s = A[t];
                 if (i !== s) {
                     let e = n[t];
                     null != e && o.default.wait(() => u.fetchLiveBuild(e.id, e.branchId, !0))
                 }
-                C[t] = i
+                A[t] = i
             }
             O(y)
         },

@@ -5,7 +5,7 @@ function(e, t, n) {
             return s
         },
         default: function() {
-            return h
+            return E
         }
     });
     var i, s, r = n("37983"),
@@ -25,7 +25,7 @@ function(e, t, n) {
             LayerComponent: a,
             isVisible: o,
             onClose: _
-        } = e, h = function() {
+        } = e, E = function() {
             let e = (0, d.useToken)(d.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
                     opacity: .25
                 }),
@@ -35,7 +35,7 @@ function(e, t, n) {
                 DARK: t,
                 BLUR: t
             }
-        }(), E = h[n], g = (0, d.useToken)(d.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
+        }(), h = E[n], g = (0, d.useToken)(d.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
             opacity: 0
         }), m = {
             background: g,
@@ -47,7 +47,7 @@ function(e, t, n) {
             },
             from: m,
             enter: {
-                background: E,
+                background: h,
                 backdropFilter: "blur(".concat("BLUR" === n ? 8 : 0, "px)")
             },
             leave: m
@@ -73,5 +73,5 @@ function(e, t, n) {
             }) : null)
         })
     });
-    var h = _
+    var E = _
 }

@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("957255"),
         f = n("27618"),
         _ = n("697218"),
-        h = n("315102"),
-        E = n("404008"),
+        E = n("315102"),
+        h = n("404008"),
         g = n("159885"),
         m = n("82300"),
         p = n("290689"),
@@ -33,7 +33,7 @@ function(e, t, n) {
             type: "guild",
             guildId: e.id,
             content: (0, g.truncateText)(e.name, 32),
-            icon: h.default.getGuildIconURL({
+            icon: E.default.getGuildIconURL({
                 id: e.id,
                 icon: e.icon,
                 size: 40
@@ -41,7 +41,7 @@ function(e, t, n) {
         }
     }
 
-    function C(e, t) {
+    function A(e, t) {
         let n;
         let i = R((0, g.truncateText)(e.name, 32));
         return {
@@ -55,7 +55,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function C(e) {
         return {
             type: "channel",
             content: [R("")],
@@ -67,7 +67,7 @@ function(e, t, n) {
         var n;
         let i = u.default.getChannel(e),
             s = (0, o.getChannelRoleSubscriptionStatus)(e, u.default, r.default, c.default).isSubscriptionGated,
-            d = null !== (n = (0, E.getMentionIconType)(i)) && void 0 !== n ? n : "text";
+            d = null !== (n = (0, h.getMentionIconType)(i)) && void 0 !== n ? n : "text";
         if (null != t) {
             let n = t.find(t => t.id === e);
             if (null != n) return {
@@ -128,7 +128,7 @@ function(e, t, n) {
             messageId: n,
             originalLink: s,
             inContent: null == r || a ? null : [I(r)],
-            content: [C({
+            content: [A({
                 name: v.default.Messages.UNKNOWN_CHANNEL,
                 type: S.ChannelTypes.UNKNOWN,
                 iconType: "text"
@@ -167,8 +167,8 @@ function(e, t, n) {
             if (e.isDm) return {
                 ...s,
                 guildId: S.ME,
-                inContent: [C(e)],
-                content: [A(!1)]
+                inContent: [A(e)],
+                content: [C(!1)]
             };
             return null != (a = i) ? N(a) : R("#".concat(v.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
         }
@@ -177,18 +177,18 @@ function(e, t, n) {
             ...s,
             ... function(e, t, n, i) {
                 let s = I(e),
-                    r = C(t),
-                    a = A(t.isForumPost);
+                    r = A(t),
+                    a = C(t.isForumPost);
                 if (n && i) {
                     if (t.isForumPost) {
                         let e = u.default.getChannel(t.parentId);
                         if (null != e) {
                             var o;
                             return {
-                                inContent: [C({
+                                inContent: [A({
                                     name: e.name,
                                     type: e.type,
-                                    iconType: null !== (o = (0, E.getMentionIconType)(e)) && void 0 !== o ? o : "forum"
+                                    iconType: null !== (o = (0, h.getMentionIconType)(e)) && void 0 !== o ? o : "forum"
                                 })],
                                 content: [r]
                             }

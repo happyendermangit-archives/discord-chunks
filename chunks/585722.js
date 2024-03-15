@@ -16,11 +16,11 @@ function(e, t, n) {
         c = n("49111"),
         f = n("782340");
     let _ = new Map,
-        h = [];
+        E = [];
 
-    function E(e, t) {
+    function h(e, t) {
         var n, i;
-        return null !== (i = null === (n = g(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== i ? i : h
+        return null !== (i = null === (n = g(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== i ? i : E
     }
 
     function g(e) {
@@ -34,25 +34,25 @@ function(e, t, n) {
     }
     class p extends r.default.Store {
         getFirstUpload(e, t) {
-            let n = E(e, t);
+            let n = h(e, t);
             return n.length > 0 ? n[0] : null
         }
         hasAdditionalUploads(e, t) {
             var n;
-            return (null !== (n = E(e, t).length) && void 0 !== n ? n : 0) > 1
+            return (null !== (n = h(e, t).length) && void 0 !== n ? n : 0) > 1
         }
         getUploads(e, t) {
-            return E(e, t)
+            return h(e, t)
         }
         getUploadCount(e, t) {
             var n;
-            return null !== (n = E(e, t).length) && void 0 !== n ? n : 0
+            return null !== (n = h(e, t).length) && void 0 !== n ? n : 0
         }
         getUpload(e, t, n) {
-            return E(e, n).find(e => e.id === t)
+            return h(e, n).find(e => e.id === t)
         }
         findUpload(e, t, n) {
-            return E(e, t).find(n)
+            return h(e, t).find(n)
         }
     }
     p.displayName = "UploadAttachmentStore";
@@ -60,7 +60,7 @@ function(e, t, n) {
         UPLOAD_ATTACHMENT_POP_FILE: function(e) {
             let {
                 channelId: t
-            } = e, n = [...E(t, d.DraftType.ChannelMessage)];
+            } = e, n = [...h(t, d.DraftType.ChannelMessage)];
             n.shift(), m(t, d.DraftType.ChannelMessage, n)
         },
         UPLOAD_ATTACHMENT_ADD_FILES: e => {
@@ -69,7 +69,7 @@ function(e, t, n) {
                 channelId: n,
                 showLargeMessageDialog: i,
                 draftType: r
-            } = e, a = [...E(n, r)];
+            } = e, a = [...h(n, r)];
             if (a.length + t.length > c.MAX_UPLOAD_COUNT && r !== d.DraftType.SlashCommand && r !== d.DraftType.ApplicationLauncherCommand) {
                 o.default.show({
                     title: f.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
@@ -93,7 +93,7 @@ function(e, t, n) {
                 spoiler: r,
                 thumbnail: a,
                 draftType: o
-            } = e, l = [...E(t, o)], u = l.map(e => (e.id === n && (void 0 !== i && (e.filename = i), void 0 !== r && (e.spoiler = r), void 0 !== s && (e.description = s), void 0 !== a && (e.isThumbnail = a)), e));
+            } = e, l = [...h(t, o)], u = l.map(e => (e.id === n && (void 0 !== i && (e.filename = i), void 0 !== r && (e.spoiler = r), void 0 !== s && (e.description = s), void 0 !== a && (e.isThumbnail = a)), e));
             m(t, o, u)
         },
         UPLOAD_ATTACHMENT_REMOVE_FILE: function(e) {
@@ -101,7 +101,7 @@ function(e, t, n) {
                 channelId: t,
                 id: n,
                 draftType: i
-            } = e, s = [...E(t, i)], r = s.findIndex(e => (0, u.doesImageMatchUpload)({
+            } = e, s = [...h(t, i)], r = s.findIndex(e => (0, u.doesImageMatchUpload)({
                 uri: n,
                 filename: n
             }, e));
@@ -115,7 +115,7 @@ function(e, t, n) {
                 channelId: t,
                 attachmentIds: n,
                 draftType: i
-            } = e, s = [...E(t, i)];
+            } = e, s = [...h(t, i)];
             n.forEach(e => {
                 let t = s.findIndex(t => e === t.id);
                 if (t > -1) {
@@ -145,7 +145,7 @@ function(e, t, n) {
                 id: n,
                 file: i,
                 draftType: s
-            } = e, r = [...E(t, s)], a = r.filter(e => e.id !== n), o = new l.CloudUpload(i, t);
+            } = e, r = [...h(t, s)], a = r.filter(e => e.id !== n), o = new l.CloudUpload(i, t);
             o.upload(), a.push(o), m(t, s, a)
         },
         SIDEBAR_CLOSE: function(e) {

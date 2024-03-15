@@ -14,10 +14,10 @@ function(e, t, n) {
             return I
         },
         useIsAnyContentShown: function() {
-            return C
+            return A
         },
         getCurrentlyShownCounts: function() {
-            return A
+            return C
         },
         reset: function() {
             return y
@@ -59,8 +59,8 @@ function(e, t, n) {
         },
         f = (e, t) => (e.candidates.set(t.content, t), e),
         _ = (e, t) => (e.candidates.delete(t.content), e),
-        h = (e, t) => c(d(e, e.shownFatigableCandidate), t),
-        E = e => null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0,
+        E = (e, t) => c(d(e, e.shownFatigableCandidate), t),
+        h = e => null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0,
         g = e => {
             let t = [...e.candidates.keys()];
             return null !== e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && e.candidates.size > 1 && (t = t.filter(t => {
@@ -72,13 +72,13 @@ function(e, t, n) {
         p = e => {
             if (0 === e.candidates.size) return e;
             let t = new Date().getTime() - e.lastWinnerTime > 3e5;
-            if (m(e) && !t) return a.unschedule(), h(e, E(e));
+            if (m(e) && !t) return a.unschedule(), E(e, h(e));
             if (null != e.shownFatigableCandidate && !t || a.scheduled()) return e;
             let n = new Date().getTime();
             return null == e.shownFatigableCandidate && n - e.lastWinnerTime < 36e5 ? e : (a.schedule(() => {
                 l.setState(e => {
                     let t = u(e);
-                    return h(t, g(t))
+                    return E(t, g(t))
                 })
             }, 250), e)
         },
@@ -97,8 +97,8 @@ function(e, t, n) {
         },
         T = e => l.getState().currentlyShown.has(e),
         I = e => l(t => t.currentlyShown.has(e)),
-        C = e => l(t => e.some(e => t.currentlyShown.has(e))),
-        A = () => {
+        A = e => l(t => e.some(e => t.currentlyShown.has(e))),
+        C = () => {
             let e = [...l.getState().currentlyShown].filter(e => !s.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e)).length,
                 t = l.getState().currentlyShown.size;
             return [t, e]

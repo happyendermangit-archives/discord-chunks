@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     }), n("222007");
     var i = n("917351"),
@@ -40,7 +40,7 @@ function(e, t, n) {
         }
     }
     _.displayName = "GuildAvailabilityStore";
-    var h = new _(a.default, {
+    var E = new _(a.default, {
         CONNECTION_OPEN: c,
         OVERLAY_INITIALIZE: c,
         GUILD_UNAVAILABLE: function(e) {

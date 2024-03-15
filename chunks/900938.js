@@ -9,8 +9,8 @@ function(e, t, n) {
     var c = n("917351"),
         f = n.n(c),
         _ = n("866227"),
-        h = n.n(_),
-        E = n("446674"),
+        E = n.n(_),
+        h = n("446674"),
         g = n("872717"),
         m = n("95410"),
         p = n("913144"),
@@ -18,8 +18,8 @@ function(e, t, n) {
         v = n("233069"),
         T = n("813006"),
         I = n("517763"),
-        C = n("766274"),
-        A = n("305961"),
+        A = n("766274"),
+        C = n("305961"),
         y = n("697218"),
         N = n("299039"),
         R = n("468349"),
@@ -50,9 +50,9 @@ function(e, t, n) {
             socialLinks: [],
             about: ""
         },
-        j = !1,
+        K = !1,
+        j = Y,
         W = Y,
-        K = Y,
         z = null,
         q = 0,
         X = null,
@@ -61,7 +61,7 @@ function(e, t, n) {
 
     function J(e) {
         if (null == o || null == a || a.id !== e) return !1;
-        let t = A.default.getGuild(e);
+        let t = C.default.getGuild(e);
         return null != t && (a === o ? o = a = t : a = t, !0)
     }
 
@@ -72,9 +72,9 @@ function(e, t, n) {
             section: s,
             subsection: r,
             location: u
-        } = e, c = A.default.getGuild(n);
+        } = e, c = C.default.getGuild(n);
         if (null == c) return ee();
-        a = o = c, w = D.FormStates.OPEN, k = {}, l = N.default.castGuildIdAsEveryoneGuildRoleId(n), B = o.mfaLevel, K = W, d = null, H = u, et({
+        a = o = c, w = D.FormStates.OPEN, k = {}, l = N.default.castGuildIdAsEveryoneGuildRoleId(n), B = o.mfaLevel, W = j, d = null, H = u, et({
             section: null !== (t = null != s ? s : i) && void 0 !== t ? t : D.GuildSettingsSections.OVERVIEW,
             subsection: null != r ? r : null
         })
@@ -145,13 +145,13 @@ function(e, t, n) {
             code: e.code,
             temporary: e.temporary,
             revoked: e.revoked,
-            inviter: null != e.inviter ? new C.default(e.inviter) : null,
+            inviter: null != e.inviter ? new A.default(e.inviter) : null,
             channel: (0, v.createChannelRecordFromInvite)(e.channel),
             guild: null != e.guild ? new T.default(e.guild) : null,
             uses: e.uses,
             maxUses: e.max_uses,
             maxAge: e.max_age,
-            createdAt: h(null !== (t = e.created_at) && void 0 !== t ? t : void 0)
+            createdAt: E(null !== (t = e.created_at) && void 0 !== t ? t : void 0)
         })
     }
 
@@ -159,15 +159,15 @@ function(e, t, n) {
         if (null == o || w !== D.FormStates.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== o.id) return !1;
         (0, O.fetchGuildIntegrationsApplications)(o.id)
     }
-    class es extends E.default.Store {
+    class es extends h.default.Store {
         initialize() {
-            this.waitFor(A.default, y.default)
+            this.waitFor(C.default, y.default)
         }
         getMetadata() {
-            return K
+            return W
         }
         hasChanges() {
-            return !f.isEqual(o, a) || !f.isEqual(K, W)
+            return !f.isEqual(o, a) || !f.isEqual(W, j)
         }
         isOpen() {
             return U
@@ -194,7 +194,7 @@ function(e, t, n) {
             return w === D.FormStates.SUBMITTING
         }
         isGuildMetadataLoaded() {
-            return j
+            return K
         }
         getErrors() {
             return k
@@ -228,9 +228,9 @@ function(e, t, n) {
                 vanityURLUses: x,
                 originalGuild: a,
                 hasChanges: this.hasChanges(),
-                guildMetadata: K,
+                guildMetadata: W,
                 analyticsLocation: H,
-                isGuildMetadataLoaded: j
+                isGuildMetadataLoaded: K
             }
         }
     }
@@ -258,7 +258,7 @@ function(e, t, n) {
                 guildId: t
             } = e;
             k = {};
-            let n = A.default.getGuild(t);
+            let n = C.default.getGuild(t);
             null != n && (a = o = n)
         },
         GUILD_SETTINGS_SAVE_ROUTE_STACK: function(e) {
@@ -358,7 +358,7 @@ function(e, t, n) {
         GUILD_UPDATE: function(e) {
             if (null == o || o.id !== e.guild.id) return !1;
             {
-                let e = A.default.getGuild(o.id);
+                let e = C.default.getGuild(o.id);
                 if (null == e) return !1;
                 let t = a = e,
                     n = o.toJS();
@@ -398,7 +398,7 @@ function(e, t, n) {
                 guildId: f,
                 metadata: _
             } = e;
-            null != o && f === o.id && (!1 === j && (j = !0), K = W = {
+            null != o && f === o.id && (!1 === K && (K = !0), W = j = {
                 primaryCategoryId: null !== (t = _.primaryCategoryId) && void 0 !== t ? t : P.DEFAULT_DISCOVERY_CATEGORY_ID,
                 secondaryCategoryIds: null !== (n = _.secondaryCategoryIds) && void 0 !== n ? n : [],
                 keywords: null !== (i = _.keywords) && void 0 !== i ? i : [],
@@ -412,19 +412,19 @@ function(e, t, n) {
             }, k = {})
         },
         GUILD_DISCOVERY_METADATA_FETCH_FAIL: function() {
-            W = K = Y
+            j = W = Y
         },
         GUILD_DISCOVERY_CATEGORY_ADD: function(e) {
             let {
                 guildId: t,
                 categoryId: n
             } = e;
-            null != o && t === o.id && (K = {
-                ...K,
-                secondaryCategoryIds: [...K.secondaryCategoryIds, n]
-            }, W = {
+            null != o && t === o.id && (W = {
                 ...W,
                 secondaryCategoryIds: [...W.secondaryCategoryIds, n]
+            }, j = {
+                ...j,
+                secondaryCategoryIds: [...j.secondaryCategoryIds, n]
             })
         },
         GUILD_DISCOVERY_CATEGORY_DELETE: function(e) {
@@ -433,11 +433,11 @@ function(e, t, n) {
                 categoryId: i
             } = e;
             if (null == o || n !== o.id) return;
-            let s = K.secondaryCategoryIds.indexOf(i); - 1 !== s && ((t = [...K.secondaryCategoryIds]).splice(s, 1), K = {
-                ...K,
-                secondaryCategoryIds: t
-            }), -1 !== (s = W.secondaryCategoryIds.indexOf(i)) && ((t = [...W.secondaryCategoryIds]).splice(s, 1), W = {
+            let s = W.secondaryCategoryIds.indexOf(i); - 1 !== s && ((t = [...W.secondaryCategoryIds]).splice(s, 1), W = {
                 ...W,
+                secondaryCategoryIds: t
+            }), -1 !== (s = j.secondaryCategoryIds.indexOf(i)) && ((t = [...j.secondaryCategoryIds]).splice(s, 1), j = {
+                ...j,
                 secondaryCategoryIds: t
             })
         },
@@ -459,15 +459,15 @@ function(e, t, n) {
                 socialLinks: l,
                 about: u
             } = e;
-            null != o && t === o.id && (K = {
-                ...K,
-                primaryCategoryId: null != n ? n : K.primaryCategoryId,
-                keywords: null != i ? i : K.keywords,
-                emojiDiscoverabilityEnabled: null != s ? s : K.emojiDiscoverabilityEnabled,
-                isPublished: null != r ? r : K.isPublished,
-                reasonsToJoin: null != a ? a : K.reasonsToJoin,
-                socialLinks: null != l ? l : K.socialLinks,
-                about: null != u ? u : K.about
+            null != o && t === o.id && (W = {
+                ...W,
+                primaryCategoryId: null != n ? n : W.primaryCategoryId,
+                keywords: null != i ? i : W.keywords,
+                emojiDiscoverabilityEnabled: null != s ? s : W.emojiDiscoverabilityEnabled,
+                isPublished: null != r ? r : W.isPublished,
+                reasonsToJoin: null != a ? a : W.reasonsToJoin,
+                socialLinks: null != l ? l : W.socialLinks,
+                about: null != u ? u : W.about
             })
         },
         GUILD_UPDATE_DISCOVERY_METADATA_FAIL: function(e) {

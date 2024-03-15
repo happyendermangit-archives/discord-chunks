@@ -14,7 +14,7 @@ function(e, t, n) {
             return _
         },
         canUseCustomClydeProfiles: function() {
-            return h
+            return E
         }
     }), n("884691"), n("446674");
     var i = n("305961"),
@@ -77,16 +77,16 @@ function(e, t, n) {
 
     function _(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = E(e, t);
+            n = h(e, t);
         return n !== r.ClydeExperimentState.None
     }
 
-    function h(e) {
+    function E(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return E(e, t) === r.ClydeExperimentState.ClydeProfiles
+        return h(e, t) === r.ClydeExperimentState.ClydeProfiles
     }
 
-    function E(e) {
+    function h(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return !1;
         let n = e.id;

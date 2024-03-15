@@ -5,7 +5,7 @@ function(e, t, n) {
             return c.StatusTypes
         },
         useStatusFillColor: function() {
-            return E
+            return h
         },
         getStatusBackdropOpacity: function() {
             return g
@@ -23,10 +23,10 @@ function(e, t, n) {
             return I
         },
         getStatusMask: function() {
-            return C
+            return A
         },
         getStatusSize: function() {
-            return A
+            return C
         },
         Status: function() {
             return y
@@ -43,12 +43,12 @@ function(e, t, n) {
         c = n("49111"),
         f = n("52904"),
         _ = n("143820");
-    let h = {
+    let E = {
         tension: 600,
         friction: 70
     };
 
-    function E(e, t) {
+    function h(e, t) {
         let n = (0, u.useColorValue)(function(e) {
                 switch (e) {
                     case c.StatusTypes.ONLINE:
@@ -167,8 +167,8 @@ function(e, t, n) {
             cutoutX: c,
             cutoutY: f,
             cutoutWidth: _,
-            cutoutHeight: h,
-            cutoutRadius: E,
+            cutoutHeight: E,
+            cutoutRadius: h,
             polygonScale: g,
             polygonOrigin: m,
             dotY: p,
@@ -189,9 +189,9 @@ function(e, t, n) {
                 x: c,
                 y: f,
                 width: _,
-                height: h,
-                rx: E,
-                ry: E,
+                height: E,
+                rx: h,
+                ry: h,
                 fill: "black"
             }), (0, i.jsx)(o.animated.polygon, {
                 points: (s = t, "-".concat(.216506 * s, ",-").concat(.25 * s, " ").concat(.216506 * s, ",0 -").concat(.216506 * s, ",").concat(.25 * s)),
@@ -222,32 +222,32 @@ function(e, t, n) {
             status: t,
             isMobile: m
         }), [r, t, m]), S = (0, o.useSpring)({
-            config: h,
+            config: E,
             to: p
-        }), I = E(t, l), [{
-            fill: C
+        }), I = h(t, l), [{
+            fill: A
         }] = (0, o.useSpring)({
-            config: h,
+            config: E,
             fill: I
-        }, [I]), A = Math.ceil(r * f.MOBILE_HEIGHT_RATIO);
+        }, [I]), C = Math.ceil(r * f.MOBILE_HEIGHT_RATIO);
         return (0, i.jsxs)("svg", {
             width: r,
-            height: A,
-            viewBox: "0 0 ".concat(r, " ").concat(A),
+            height: C,
+            viewBox: "0 0 ".concat(r, " ").concat(C),
             className: a(_.mask, u),
             style: d,
             children: [T(S, r, g), (0, i.jsx)(o.animated.rect, {
                 x: 0,
                 y: 0,
                 width: r,
-                height: A,
-                fill: C,
+                height: C,
+                fill: A,
                 mask: "url(#".concat(g, ")")
             })]
         })
     }
 
-    function C(e, t) {
+    function A(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (n) return d.default.Masks.STATUS_TYPING;
         switch (e) {
@@ -268,7 +268,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e, t, n) {
+    function C(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         return t === c.StatusTypes.ONLINE && n && !i ? {
             width: e,
@@ -287,12 +287,12 @@ function(e, t, n) {
             className: r,
             style: o,
             color: l
-        } = e, u = t === c.StatusTypes.ONLINE && n, f = E(t, l);
+        } = e, u = t === c.StatusTypes.ONLINE && n, f = h(t, l);
         return (0, i.jsx)(d.default, {
-            mask: C(t, u),
+            mask: A(t, u),
             className: a(_.mask, r),
             style: o,
-            ...A(s, t, u),
+            ...C(s, t, u),
             children: (0, i.jsx)("div", {
                 style: {
                     backgroundColor: f

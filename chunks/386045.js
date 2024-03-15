@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("80028"),
         f = n("49111"),
         _ = n("686298");
-    let h = "default",
-        E = [],
+    let E = "default",
+        h = [],
         g = [],
         m = [],
         p = 0,
@@ -25,11 +25,11 @@ function(e, t, n) {
         v = null,
         T = {},
         I = null,
-        C = null,
-        A = {},
+        A = null,
+        C = {},
         y = {
             clipsEnabled: !1,
-            storageLocation: h,
+            storageLocation: E,
             clipsQuality: {
                 resolution: _.ApplicationStreamResolutions.RESOLUTION_1080,
                 frameRate: _.ApplicationStreamFPS.FPS_30
@@ -55,7 +55,7 @@ function(e, t, n) {
             }
         };
     async function R() {
-        if (N.clipsSettings.storageLocation !== h || null == r.default || null == r.default.remoteApp) return;
+        if (N.clipsSettings.storageLocation !== E || null == r.default || null == r.default.remoteApp) return;
         let e = await r.default.remoteApp.getPath("documents");
         N.clipsSettings.storageLocation = e, D.emitChange()
     }
@@ -82,14 +82,14 @@ function(e, t, n) {
             return S === e
         }
         getActiveAnimation() {
-            return C
+            return A
         }
         getStreamClipAnimations(e) {
             var t;
-            return null !== (t = A[e]) && void 0 !== t ? t : E
+            return null !== (t = C[e]) && void 0 !== t ? t : h
         }
         hasAnyClipAnimations() {
-            return Object.values(A).some(e => e.length > 0)
+            return Object.values(C).some(e => e.length > 0)
         }
         getHardwareClassification() {
             return N.hardwareClassification
@@ -272,7 +272,7 @@ function(e, t, n) {
             if (p += 1, N.hasTakenDecoupledClip = N.hasTakenDecoupledClip || t === c.ClipSaveTypes.DECOUPLED, null != n && null != i) {
                 var s;
                 let e = Date.now();
-                C = null != C ? C : e, A[n] = [...null !== (s = A[n]) && void 0 !== s ? s : [], {
+                A = null != A ? A : e, C[n] = [...null !== (s = C[n]) && void 0 !== s ? s : [], {
                     timestamp: e,
                     thumbnail: i
                 }]
@@ -286,7 +286,7 @@ function(e, t, n) {
                 streamKey: t,
                 timestamp: n
             } = e;
-            C === n && (C = null), null == n ? A[t] = [] : A[t] = A[t].filter(e => e.timestamp !== n)
+            A === n && (A = null), null == n ? C[t] = [] : C[t] = C[t].filter(e => e.timestamp !== n)
         },
         STREAM_START: function(e) {
             let {
@@ -311,7 +311,7 @@ function(e, t, n) {
             let {
                 streamKey: t
             } = e;
-            if (C = null, A[t] = [], null == v || (0, o.decodeStreamKey)(t).ownerId !== l.default.getId()) return !1;
+            if (A = null, C[t] = [], null == v || (0, o.decodeStreamKey)(t).ownerId !== l.default.getId()) return !1;
             v = 0 === v.newClipIds.length ? null : {
                 ...v,
                 ended: !0

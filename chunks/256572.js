@@ -17,9 +17,9 @@ function(e, t, n) {
         c = n("692038"),
         f = n("42203"),
         _ = n("377253"),
-        h = n("49111");
+        E = n("49111");
     (s = i || (i = {}))[s.LOADED = 0] = "LOADED", s[s.NOT_LOADED = 1] = "NOT_LOADED", s[s.DELETED = 2] = "DELETED";
-    let E = Object.freeze({
+    let h = Object.freeze({
             state: 1
         }),
         g = new Set;
@@ -89,7 +89,7 @@ function(e, t, n) {
 
     function S(e) {
         let t = !1;
-        if (p.updateExistingMessageIfCached(e) && (t = !0), h.MessageTypesWithLazyLoadedReferences.has(e.type)) {
+        if (p.updateExistingMessageIfCached(e) && (t = !0), E.MessageTypesWithLazyLoadedReferences.has(e.type)) {
             let n = e.message_reference;
             if (null == n) return t;
             let i = n.message_id;
@@ -99,7 +99,7 @@ function(e, t, n) {
                 null != t ? (p.set(t.channel_id, t.id, {
                     state: 0,
                     message: (0, c.createMessageRecord)(t)
-                }), e.type === h.MessageTypes.THREAD_STARTER_MESSAGE && S(t)) : p.set(e.channel_id, i, {
+                }), e.type === E.MessageTypes.THREAD_STARTER_MESSAGE && S(t)) : p.set(e.channel_id, i, {
                     state: 2
                 })
             } else {
@@ -107,7 +107,7 @@ function(e, t, n) {
                 null != e ? p.set(n.channel_id, i, {
                     state: 0,
                     message: e
-                }) : p.set(n.channel_id, i, E)
+                }) : p.set(n.channel_id, i, h)
             }
             t = !0
         }
@@ -134,11 +134,11 @@ function(e, t, n) {
         return v(t, e => v(e, e => S(e)))
     }
 
-    function C(e) {
+    function A(e) {
         return p.deleteChannelCache(e.channel.id)
     }
 
-    function A(e, t) {
+    function C(e, t) {
         if (!p.has(e, t)) return !1;
         p.set(e, t, {
             state: 2
@@ -161,11 +161,11 @@ function(e, t, n) {
         }
         getMessageByReference(e) {
             let t;
-            return null != e && (t = p.get(e.channel_id, e.message_id)), null != t ? t : E
+            return null != e && (t = p.get(e.channel_id, e.message_id)), null != t ? t : h
         }
         getMessage(e, t) {
             var n;
-            return null !== (n = p.get(e, t)) && void 0 !== n ? n : E
+            return null !== (n = p.get(e, t)) && void 0 !== n ? n : h
         }
         getReplyIdsForChannel(e) {
             let t;
@@ -240,14 +240,14 @@ function(e, t, n) {
                 id: t,
                 channelId: n
             } = e;
-            return A(n, t)
+            return C(n, t)
         },
         MESSAGE_DELETE_BULK: function(e) {
             let {
                 ids: t,
                 channelId: n
             } = e;
-            return v(t, e => A(n, e))
+            return v(t, e => C(n, e))
         },
         CREATE_PENDING_REPLY: function(e) {
             let {
@@ -258,8 +258,8 @@ function(e, t, n) {
                 message: t
             })
         },
-        CHANNEL_DELETE: C,
-        THREAD_DELETE: C,
+        CHANNEL_DELETE: A,
+        THREAD_DELETE: A,
         GUILD_DELETE: function() {
             let e = p.retainWhere(e => null != f.default.getChannel(e));
             if (0 === e) return !1

@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("45029"),
         f = n("71216"),
         _ = n("148337"),
-        h = n("568734"),
-        E = n("299039"),
+        E = n("568734"),
+        h = n("299039"),
         g = n("955145"),
         m = n("29479"),
         p = n("49111"),
@@ -33,51 +33,51 @@ function(e, t, n) {
                 scopes: r,
                 redirectUri: o,
                 approximateGuildCount: I,
-                isEmbeddedFlow: A,
+                isEmbeddedFlow: C,
                 embeddedActivityConfig: y
             } = e,
-            N = new Date(E.default.extractTimestamp(s.id)),
+            N = new Date(h.default.extractTimestamp(s.id)),
             R = (0, m.getSecurityMessage)(r),
-            O = (0, h.hasFlag)(null !== (t = s.flags) && void 0 !== t ? t : 0, p.ApplicationFlags.EMBEDDED);
-        if (null != o && !O && !A) {
+            O = (0, E.hasFlag)(null !== (t = s.flags) && void 0 !== t ? t : 0, p.ApplicationFlags.EMBEDDED);
+        if (null != o && !O && !C) {
             let e = new URL(o);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href
         }
         return (0, i.jsxs)("div", {
             className: T.applicationDetails,
-            children: [null != n ? (0, i.jsx)(C, {
+            children: [null != n ? (0, i.jsx)(A, {
                 className: T.redirectWarning,
                 icon: d.default,
                 text: v.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
                     origin: n
                 })
-            }) : null, (0, i.jsx)(C, {
+            }) : null, (0, i.jsx)(A, {
                 icon: c.default,
                 text: (0, g.getApplicationDetailsText)(s)
-            }), (0, i.jsx)(C, {
+            }), (0, i.jsx)(A, {
                 icon: l.default,
                 text: v.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
                     date: N
                 })
-            }), r.includes(S.OAuth2Scopes.BOT) && null != I ? (0, i.jsx)(C, {
+            }), r.includes(S.OAuth2Scopes.BOT) && null != I ? (0, i.jsx)(A, {
                 icon: f.default,
                 text: v.default.Messages.OAUTH2_DETAILS_GUILDS.format({
                     guildCount: I
                 })
-            }) : null, (0, i.jsx)(C, {
+            }) : null, (0, i.jsx)(A, {
                 icon: _.default,
                 text: R
-            }), (null == y ? void 0 : y.has_csp_exception) ? (0, i.jsx)(C, {
+            }), (null == y ? void 0 : y.has_csp_exception) ? (0, i.jsx)(A, {
                 icon: u.default,
                 text: v.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
-            }) : null, (null == y ? void 0 : y.displays_advertisements) ? (0, i.jsx)(C, {
+            }) : null, (null == y ? void 0 : y.displays_advertisements) ? (0, i.jsx)(A, {
                 icon: a.EmbedIcon,
                 text: v.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
             }) : null]
         })
     }
 
-    function C(e) {
+    function A(e) {
         let {
             icon: t,
             text: n,

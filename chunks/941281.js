@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return C
+            return A
         },
         OAuth2Success: function() {
-            return A
+            return C
         },
         OAuth2AuthorizedSuccess: function() {
             return y
@@ -31,8 +31,8 @@ function(e, t, n) {
         c = n("516256"),
         f = n("242670"),
         _ = n("577776"),
-        h = n("77078"),
-        E = n("69927"),
+        E = n("77078"),
+        h = n("69927"),
         g = n("393414"),
         m = n("239380"),
         p = n("599110"),
@@ -41,7 +41,7 @@ function(e, t, n) {
         T = n("782340"),
         I = n("977396");
 
-    function C(e) {
+    function A(e) {
         let {
             message: t,
             footer: n,
@@ -50,7 +50,7 @@ function(e, t, n) {
             spinner: o,
             onClose: l
         } = e;
-        return (0, E.usePageTitle)({
+        return (0, h.usePageTitle)({
             location: T.default.Messages.OAUTH2_TITLE
         }), (0, i.jsxs)(i.Fragment, {
             children: [null != l ? (0, i.jsx)(c.ModalCloseButton, {
@@ -74,8 +74,8 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
-        return (0, i.jsx)(C, {
+    function C(e) {
+        return (0, i.jsx)(A, {
             ...e,
             headerClassName: I.headerSuccess
         })
@@ -112,17 +112,17 @@ function(e, t, n) {
                 children: d
             }), (null != t || null != a) && (0, i.jsxs)("div", {
                 className: I.buttonsContainer,
-                children: [null != t && (0, i.jsx)(h.Button, {
+                children: [null != t && (0, i.jsx)(E.Button, {
                     fullWidth: !0,
-                    color: h.Button.Colors.BRAND,
+                    color: E.Button.Colors.BRAND,
                     onClick: l,
                     className: I.button,
                     children: (null == t ? void 0 : t.name.length) > 30 ? T.default.Messages.OAUTH2_GO_TO_SERVER_DEFAULT_CTA : T.default.Messages.OAUTH2_GO_TO_SERVER_NAME_CTA.format({
                         guildName: null == t ? void 0 : t.name
                     })
-                }), null != a && (0, i.jsx)(h.Button, {
+                }), null != a && (0, i.jsx)(E.Button, {
                     fullWidth: !0,
-                    color: h.Button.Colors.PRIMARY,
+                    color: E.Button.Colors.PRIMARY,
                     onClick: u,
                     className: I.button,
                     children: T.default.Messages.CLOSE
@@ -135,7 +135,7 @@ function(e, t, n) {
             })
         }, [null == n ? void 0 : n.id]), (0, i.jsx)("div", {
             className: I.authorizedSuccessWrapper,
-            children: (0, i.jsx)(A, {
+            children: (0, i.jsx)(C, {
                 message: o,
                 footer: c,
                 ...r
@@ -144,7 +144,7 @@ function(e, t, n) {
     }
 
     function N(e) {
-        return (0, i.jsx)(C, {
+        return (0, i.jsx)(A, {
             ...e,
             headerClassName: I.headerFailure
         })

@@ -5,7 +5,7 @@ function(e, t, n) {
             return Y
         },
         convertChannelOverridesToMap: function() {
-            return j
+            return K
         },
         default: function() {
             return J
@@ -22,8 +22,8 @@ function(e, t, n) {
         c = n("233069"),
         f = n("568734"),
         _ = n("299039"),
-        h = n("42203"),
-        E = n("305961"),
+        E = n("42203"),
+        h = n("305961"),
         g = n("697218"),
         m = n("49111"),
         p = n("76618"),
@@ -31,8 +31,8 @@ function(e, t, n) {
         v = n("397336");
     let T = {},
         I = {},
-        C = !1,
         A = !1,
+        C = !1,
         y = {
             flags: 0
         },
@@ -73,7 +73,7 @@ function(e, t, n) {
         var n;
         let i = T[e],
             r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
-            a = j(t.channel_overrides),
+            a = K(t.channel_overrides),
             o = {
                 ...Y(e),
                 ...i,
@@ -186,23 +186,23 @@ function(e, t, n) {
     }
 
     function Y(e) {
-        let t = E.default.getGuild(e),
+        let t = h.default.getGuild(e),
             n = null != t ? t.defaultMessageNotifications : m.UserNotificationSettings.ALL_MESSAGES;
         return D[n]
     }
 
-    function j() {
+    function K() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         return e instanceof Array ? s.keyBy(e, "channel_id") : e
     }
 
-    function W(e) {
+    function j(e) {
         var t;
         return null !== (t = T[e]) && void 0 !== t ? t : Y(e)
     }
 
-    function K(e) {
-        C = f.hasFlag(e.flags, p.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), A = f.hasFlag(e.flags, p.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), y = e
+    function W(e) {
+        A = f.hasFlag(e.flags, p.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), C = f.hasFlag(e.flags, p.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), y = e
     }
 
     function z(e) {
@@ -214,7 +214,7 @@ function(e, t, n) {
     }
 
     function X() {
-        return C && u.NotificationsExperiment.getCurrentConfig({
+        return A && u.NotificationsExperiment.getCurrentConfig({
             location: "UserGuildSettingsStore"
         }, {
             autoTrackExposure: !1
@@ -222,57 +222,57 @@ function(e, t, n) {
     }
     class Q extends r.default.PersistedStore {
         initialize(e) {
-            if (this.waitFor(g.default, E.default, l.default, d.default), null != e) {
+            if (this.waitFor(g.default, h.default, l.default, d.default), null != e) {
                 var t, n;
-                C = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (T = e.userGuildSettings, L = s.mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), s.forEach(T, (e, t) => {
+                A = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (T = e.userGuildSettings, L = s.mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), s.forEach(T, (e, t) => {
                     P[t] = z(e)
                 }))
             }
         }
         getState() {
             return {
-                useNewNotifications: C
+                useNewNotifications: A
             }
         }
         get mentionOnAllMessages() {
-            return A
+            return C
         }
         isSuppressEveryoneEnabled(e) {
-            return W(e).suppress_everyone
+            return j(e).suppress_everyone
         }
         isSuppressRolesEnabled(e) {
-            return W(e).suppress_roles
+            return j(e).suppress_roles
         }
         isMuteScheduledEventsEnabled(e) {
-            return W(e).mute_scheduled_events
+            return j(e).mute_scheduled_events
         }
         isMobilePushEnabled(e) {
-            return W(e).mobile_push
+            return j(e).mobile_push
         }
         isMuted(e) {
-            let t = W(e);
+            let t = j(e);
             return (0, o.computeIsMuted)(t)
         }
         isTemporarilyMuted(e) {
-            let t = W(e);
+            let t = j(e);
             return (0, o.isTemporarilyMuted)(t)
         }
         getMuteConfig(e) {
-            let t = W(e);
+            let t = j(e);
             return t.mute_config
         }
         getMessageNotifications(e) {
-            return W(e).message_notifications
+            return j(e).message_notifications
         }
         getChannelOverrides(e) {
             var t;
-            return null !== (t = W(e).channel_overrides) && void 0 !== t ? t : {}
+            return null !== (t = j(e).channel_overrides) && void 0 !== t ? t : {}
         }
         getNotifyHighlights(e) {
-            return W(e).notify_highlights
+            return j(e).notify_highlights
         }
         getGuildFlags(e) {
-            return W(e).flags
+            return j(e).flags
         }
         getChannelMessageNotifications(e, t) {
             let n = this.getChannelOverrides(e)[t];
@@ -288,11 +288,11 @@ function(e, t, n) {
         }
         isChannelMuted(e, t) {
             var n;
-            let i = h.default.getChannel(t);
+            let i = E.default.getChannel(t);
             return e = null !== (n = null == i ? void 0 : i.getGuildId()) && void 0 !== n ? n : e, this.getMutedChannels(e).has(t)
         }
         isCategoryMuted(e, t) {
-            let n = h.default.getChannel(t);
+            let n = E.default.getChannel(t);
             if (null == n) return !1;
             let i = n.parent_id;
             return null != i && this.getMutedChannels(e).has(i)
@@ -360,7 +360,7 @@ function(e, t, n) {
             return null != e && null != e.guild_id && (this.isChannelOptedIn(e.guild_id, e.id, t) || null != e.parent_id && this.isChannelOptedIn(e.guild_id, e.parent_id, t))
         }
         isChannelOrParentOptedIn(e, t, n) {
-            return this.isChannelRecordOrParentOptedIn(h.default.getChannel(t), n)
+            return this.isChannelRecordOrParentOptedIn(E.default.getChannel(t), n)
         }
         isChannelOptedIn(e, t) {
             var n, i;
@@ -386,7 +386,7 @@ function(e, t, n) {
             if (null == I[e]) {
                 let t = s.filter(this.getChannelOverrides(e), t => {
                     var n, i;
-                    return f.hasFlag(null !== (i = t.flags) && void 0 !== i ? i : 0, v.ChannelNotificationSettingsFlags.FAVORITED) && (null === (n = h.default.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e
+                    return f.hasFlag(null !== (i = t.flags) && void 0 !== i ? i : 0, v.ChannelNotificationSettingsFlags.FAVORITED) && (null === (n = E.default.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e
                 });
                 I[e] = t.map(e => e.channel_id)
             }
@@ -414,7 +414,7 @@ function(e, t, n) {
             return y
         }
         get useNewNotifications() {
-            return C
+            return A
         }
         getGuildUnreadSetting(e) {
             if (!X()) return S.UnreadSetting.ALL_MESSAGES;
@@ -481,7 +481,7 @@ function(e, t, n) {
             return !(null == t || l.default.isFullServerPreview(t)) && (x(t, n), !0)
         },
         CONNECTION_OPEN: function(e) {
-            K(e.notificationSettings), N.reset(), R.reset(), !e.userGuildSettings.partial && (T = {}, P = {}, L = {});
+            W(e.notificationSettings), N.reset(), R.reset(), !e.userGuildSettings.partial && (T = {}, P = {}, L = {});
             let t = new Set;
             for (let n in e.userGuildSettings.entries.forEach(e => {
                     !("channel_overrides" in e) && (e.channel_overrides = {}), k(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
@@ -552,7 +552,7 @@ function(e, t, n) {
             let {
                 settings: t
             } = e;
-            K(t)
+            W(t)
         },
         GUILD_MUTE_EXPIRED: () => !0,
         CHANNEL_MUTE_EXPIRED: () => !0

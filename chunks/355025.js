@@ -14,10 +14,10 @@ function(e, t, n) {
             return _
         },
         probablyHasBuildOverride: function() {
-            return h
+            return E
         },
         getBuildOverrideExperiments: function() {
-            return E
+            return h
         },
         isBuildOverrideLink: function() {
             return m
@@ -72,11 +72,11 @@ function(e, t, n) {
         }).then(e => e.body || null, () => null))
     }
 
-    function h() {
+    function E() {
         return -1 !== window.document.cookie.indexOf("".concat(l.BUILD_OVERRIDE_COOKIE_NAME, "="))
     }
 
-    function E() {
+    function h() {
         try {
             var e;
             let t = i.parse(window.document.cookie)[l.BUILD_OVERRIDE_COOKIE_NAME];

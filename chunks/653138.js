@@ -8,10 +8,10 @@ function(e, t, n) {
             return _
         },
         MAX_PROMPT_OPTION_DESCRIPTION_LENGTH: function() {
-            return h
+            return E
         },
         MAX_NUM_PROMPTS: function() {
-            return E
+            return h
         },
         MULTIPLE_CHOICE_MAX_NUM_OPTIONS: function() {
             return g
@@ -44,10 +44,10 @@ function(e, t, n) {
             return I
         },
         getDefaultPrompt: function() {
-            return C
+            return A
         },
         getEmptyPrompt: function() {
-            return A
+            return C
         },
         clientPromptToServerPrompt: function() {
             return y
@@ -64,8 +64,8 @@ function(e, t, n) {
         c = n("782340");
     let f = 100,
         _ = 50,
-        h = 100,
-        E = 15,
+        E = 100,
+        h = 15,
         g = 12,
         m = 50,
         p = 4,
@@ -78,14 +78,14 @@ function(e, t, n) {
         let {
             id: t,
             ...n
-        } = C(), {
+        } = A(), {
             id: i,
             ...s
         } = e;
         return d(n, s)
     }
 
-    function C() {
+    function A() {
         return {
             id: String(Date.now()),
             title: c.default.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
@@ -97,7 +97,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function C(e) {
         return {
             id: String(Date.now()),
             title: "",

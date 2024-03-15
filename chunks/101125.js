@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("429928"),
         f = n("837374"),
         _ = n("662285"),
-        h = n("845579"),
-        E = n("374363"),
+        E = n("845579"),
+        h = n("374363"),
         g = n("233069"),
         m = n("964889"),
         p = n("271938"),
@@ -24,8 +24,8 @@ function(e, t, n) {
         v = n("603699"),
         T = n("686470"),
         I = n("52028"),
-        C = n("824563"),
-        A = n("235660"),
+        A = n("824563"),
+        C = n("235660"),
         y = n("49111");
     let N = !1,
         R = y.StatusTypes.ONLINE,
@@ -50,7 +50,7 @@ function(e, t, n) {
             case y.ActivityTypes.PLAYING:
                 return null != e.application_id ? w(e.application_id) : function(e) {
                     let t = S.default.getGameByName(e);
-                    return null != t ? w(t.id) : h.ShowCurrentGame.getSetting()
+                    return null != t ? w(t.id) : E.ShowCurrentGame.getSetting()
                 }(e.name);
             case y.ActivityTypes.STREAMING:
             case y.ActivityTypes.WATCHING:
@@ -64,14 +64,14 @@ function(e, t, n) {
         if (D = null !== (e = v.default.getIdleSince()) && void 0 !== e ? e : 0, L = v.default.isAFK(), M) R = O, G();
         else if (N) R = y.StatusTypes.INVISIBLE;
         else {
-            let e = h.StatusSetting.getSetting();
+            let e = E.StatusSetting.getSetting();
             R = e !== y.StatusTypes.UNKNOWN ? e : y.StatusTypes.ONLINE
         }
         R === y.StatusTypes.ONLINE && D > 0 && (R = y.StatusTypes.IDLE);
         let t = !1,
             n = M || R === y.StatusTypes.INVISIBLE ? [] : I.default.getActivities().filter(k);
         !a(P, n) && (P = n, t = !0);
-        let i = A.default.getRemoteActivities();
+        let i = C.default.getRemoteActivities();
         if (b !== i && (b = i, t = !0), t) {
             let e = P.find(e => e.type === y.ActivityTypes.CUSTOM_STATUS),
                 t = P.filter(e => e.type !== y.ActivityTypes.CUSTOM_STATUS);
@@ -84,11 +84,11 @@ function(e, t, n) {
     }
 
     function F() {
-        M = !1, O = y.StatusTypes.UNKNOWN, V(), C.default.setCurrentUserOnConnectionOpen(R, U)
+        M = !1, O = y.StatusTypes.UNKNOWN, V(), A.default.setCurrentUserOnConnectionOpen(R, U)
     }
     class x extends u.default.Store {
         initialize() {
-            this.waitFor(v.default, E.default, I.default, A.default, T.default, S.default), this.syncWith([I.default], V)
+            this.waitFor(v.default, h.default, I.default, C.default, T.default, S.default), this.syncWith([I.default], V)
         }
         getLocalPresence() {
             return {

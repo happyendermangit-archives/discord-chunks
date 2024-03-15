@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("305961"),
         f = n("697218"),
         _ = n("387111"),
-        h = n("158998"),
-        E = n("946897"),
+        E = n("158998"),
+        h = n("946897"),
         g = n("632886"),
         m = n("270926"),
         p = n("647374"),
@@ -25,8 +25,8 @@ function(e, t, n) {
         v = n("290689"),
         T = n("839462"),
         I = n("646630"),
-        C = n("788554"),
-        A = n("49111"),
+        A = n("788554"),
+        C = n("49111"),
         y = n("317041"),
         N = n("680894"),
         R = n("782340");
@@ -213,12 +213,12 @@ function(e, t, n) {
                         a = d.default.getChannel(n.channelId);
                     if (null != r && (s = r.id, i = r.toString(), null != a)) {
                         var l;
-                        i = null !== (l = _.default.getNickname(a.getGuildId(), n.channelId, r)) && void 0 !== l ? l : h.default.getName(r)
+                        i = null !== (l = _.default.getNickname(a.getGuildId(), n.channelId, r)) && void 0 !== l ? l : E.default.getName(r)
                     }
                     null == r && "@Clyde" === e[0] && (0, o.getClydeEnabled)(U(n), a) && (s = N.CLYDE_AI_USER_ID);
                     let u = e[1],
-                        c = null != u && A.ID_REGEX.test(u.trim()),
-                        E = c && n.unknownUserMentionPlaceholder ? "@".concat(R.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+                        c = null != u && C.ID_REGEX.test(u.trim()),
+                        h = c && n.unknownUserMentionPlaceholder ? "@".concat(R.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
                     return {
                         userId: s,
                         channelId: n.channelId,
@@ -226,7 +226,7 @@ function(e, t, n) {
                         roleName: e[2],
                         content: [{
                             type: "text",
-                            content: null != i ? "@".concat(i) : E
+                            content: null != i ? "@".concat(i) : h
                         }]
                     }
                 }
@@ -234,7 +234,7 @@ function(e, t, n) {
             channelMention: g.default.channelMention,
             channelOrMessageUrl: g.default.channelOrMessageUrl,
             mediaPostLink: g.default.mediaPostLink,
-            attachmentLink: E.default.attachmentLink,
+            attachmentLink: h.default.attachmentLink,
             commandMention: {
                 order: a.defaultRules.text.order,
                 requiredFirstCharacters: ["<"],
@@ -320,7 +320,7 @@ function(e, t, n) {
             spoiler: {
                 order: v.default.order,
                 requiredFirstCharacters: ["|"],
-                match: e => A.MARKDOWN_SPOILER_REGEXP.exec(e),
+                match: e => C.MARKDOWN_SPOILER_REGEXP.exec(e),
                 parse: (e, t, n) => ({
                     content: t(e[1], n),
                     channelId: n.channelId
@@ -329,7 +329,7 @@ function(e, t, n) {
             staticRouteLink: {
                 order: v.default.order,
                 requiredFirstCharacters: ["<"],
-                match: e => A.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
+                match: e => C.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
                 parse(e, t, n) {
                     let i = {
                         home: R.default.Messages.SERVER_GUIDE,
@@ -351,11 +351,11 @@ function(e, t, n) {
             heading: m.default,
             list: S.default
         },
-        k = (0, C.default)([w, T.default]),
+        k = (0, A.default)([w, T.default]),
         V = s.omit(k, ["inlineCode", "codeBlock", "br", "blockQuote"]),
         G = s.omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
         F = s.omit(k, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),
-        x = s.omit((0, C.default)([k, {
+        x = s.omit((0, A.default)([k, {
             inlineCode: {
                 match(e, t, n) {
                     let i = k.codeBlock.match(e, t, n);
@@ -368,21 +368,21 @@ function(e, t, n) {
         B = s.omit(k, ["codeBlock", "br", "blockQuote"]),
         H = s.omit(k, ["codeBlock", "br", "attachmentLink", "mention", "roleMention", "channel", "paragraph", "newline"]),
         Y = s.omit(k, ["codeBlock", "blockQuote", "br"]),
-        j = s.omit(k, ["codeBlock", "br", "inlineCode"]);
+        K = s.omit(k, ["codeBlock", "br", "inlineCode"]);
 
-    function W(e, t) {
+    function j(e, t) {
         return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim()
     }
-    let K = (0, C.default)([{
+    let W = (0, A.default)([{
         highlightWord: {
             order: -1,
             match(e, t) {
                 if (null == t.highlightWord || 0 === t.highlightWord.length) return null;
                 let n = e.indexOf(t.highlightWord);
                 if (-1 === n) return null;
-                let i = !W(e, n);
+                let i = !j(e, n);
                 if (i)
-                    do n = e.indexOf(t.highlightWord, n + 1), i = !W(e, n); while (i && -1 !== n);
+                    do n = e.indexOf(t.highlightWord, n + 1), i = !j(e, n); while (i && -1 !== n);
                 if (-1 === n) return null;
                 let s = e.substring(0, n),
                     r = e.substring(n + t.highlightWord.length);
@@ -407,7 +407,7 @@ function(e, t, n) {
         GUILD_VERIFICATION_FORM_RULES: B,
         GUILD_EVENT_RULES: Y,
         PROFILE_BIO_RULES: H,
-        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: K,
-        NATIVE_SEARCH_RESULT_LINK_RULES: j
+        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: W,
+        NATIVE_SEARCH_RESULT_LINK_RULES: K
     }
 }

@@ -19,15 +19,15 @@ function(e, t, n) {
         c = n("26989"),
         f = n("697218"),
         _ = n("800762"),
-        h = n("299039"),
-        E = n("158998"),
+        E = n("299039"),
+        h = n("158998"),
         g = n("49111");
     let m = Object.freeze([]),
         p = {};
 
     function S(e) {
         let t = p[e];
-        return null == t && (t = new A(e), p[e] = t), t
+        return null == t && (t = new C(e), p[e] = t), t
     }
 
     function v(e, t) {
@@ -36,7 +36,7 @@ function(e, t, n) {
 
     function T(e, t, n) {
         var i;
-        let s = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : E.default.getName(n);
+        let s = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : h.default.getName(n);
         return {
             member: t,
             comparator: I(e, s)
@@ -47,7 +47,7 @@ function(e, t, n) {
         return "".concat(e.selfStream ? "\x00" : "\x01").concat(t.toLowerCase(), "\x00").concat(e.userId)
     }
 
-    function C(e, t, n) {
+    function A(e, t, n) {
         let i = f.default.getUser(n),
             s = null == i;
         null == i && (i = new l.default({
@@ -70,18 +70,18 @@ function(e, t, n) {
         };
         return s && (o._isPlaceholder = !0), o
     }
-    class A {
+    class C {
         updateVoiceState(e) {
             if (null != this._pending) return this._pending.add(e), !1;
             let t = _.default.getVoiceState(this.guildId, e),
                 n = this._voiceStates.get(e),
                 i = f.default.getUser(e);
             if (null != t && null != i) {
-                if (null == n) return this._voiceStates.set(e, C(t, this.guildId, e)), !0;
+                if (null == n) return this._voiceStates.set(e, A(t, this.guildId, e)), !0;
                 if (n.voiceState !== t) {
                     var s;
                     let r = v(this.guildId, i),
-                        a = null !== (s = null == r ? void 0 : r.nick) && void 0 !== s ? s : E.default.getName(i);
+                        a = null !== (s = null == r ? void 0 : r.nick) && void 0 !== s ? s : h.default.getName(i);
                     return this._voiceStates.set(e, {
                         ...n,
                         member: r,
@@ -117,7 +117,7 @@ function(e, t, n) {
         updateUsers() {
             return null == this._pending && this._voiceStates.values().reduce((e, t) => {
                 let n = f.default.getUser(t.user.id);
-                return null != n && t.user !== n ? (this._voiceStates.set(n.id, C(t.voiceState, this.guildId, n.id)), !0) : e
+                return null != n && t.user !== n ? (this._voiceStates.set(n.id, A(t.voiceState, this.guildId, n.id)), !0) : e
             }, !1)
         }
         getUserIds() {
@@ -167,7 +167,7 @@ function(e, t, n) {
     function N() {
         p = {};
         let e = _.default.getAllVoiceStates();
-        h.default.keys(e).forEach(t => {
+        E.default.keys(e).forEach(t => {
             Object.keys(e[t]).forEach(e => {
                 S(null != t ? t : g.ME).updateVoiceState(e)
             })

@@ -19,8 +19,8 @@ function(e, t, n) {
         c = n("537025"),
         f = n("765089"),
         _ = n("647374"),
-        h = n("91984"),
-        E = n("835174"),
+        E = n("91984"),
+        h = n("835174"),
         g = n("566271"),
         m = n("42203"),
         p = n("305961"),
@@ -28,14 +28,14 @@ function(e, t, n) {
         v = n("48703"),
         T = n("377253"),
         I = n("27618"),
-        C = n("18494"),
-        A = n("599110"),
+        A = n("18494"),
+        C = n("599110"),
         y = n("49111"),
         N = n("782340");
 
     function R(e, t) {
         var n;
-        let i = m.default.getChannel(C.default.getChannelId());
+        let i = m.default.getChannel(A.default.getChannelId());
         return !!(null == i || i.type !== y.ChannelTypes.DM || I.default.isFriend(null !== (n = i.getRecipientId()) && void 0 !== n ? n : "")) && e === t
     }
 
@@ -43,7 +43,7 @@ function(e, t, n) {
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             {
                 trusted: I,
-                onClick: C,
+                onClick: A,
                 onConfirm: R,
                 shouldConfirm: O,
                 messageId: D,
@@ -80,14 +80,14 @@ function(e, t, n) {
         if (null != P) {
             let e = m.default.getChannel(P),
                 t = p.default.getGuild(null == e ? void 0 : e.getGuildId());
-            null != e && null != t && t.hasFeature(y.GuildFeatures.DISCOVERABLE) && A.default.track(y.AnalyticEvents.URL_CLICKED, {
+            null != e && null != t && t.hasFeature(y.GuildFeatures.DISCOVERABLE) && C.default.track(y.AnalyticEvents.URL_CLICKED, {
                 url_domain: (0, v.getHostname)(L),
                 guild_id: t.id,
                 channel_id: e.id
             })
         }
-        if (f.default.trackLinkClicked(L), null != C) {
-            if (C(t)) return
+        if (f.default.trackLinkClicked(L), null != A) {
+            if (A(t)) return
         } else {
             let {
                 default: e
@@ -115,7 +115,7 @@ function(e, t, n) {
             return
         }
         if (null != (0, g.isSuspiciousDownload)(L)) {
-            null == t || t.preventDefault(), E.default.show(L);
+            null == t || t.preventDefault(), h.default.show(L);
             return
         }
         if ((0, c.shouldShowLinkNotDiscordWarning)(L)) {
@@ -124,8 +124,8 @@ function(e, t, n) {
         }
         let H = "function" == typeof I ? I() : I,
             Y = (0, v.getProtocol)(L),
-            j = !("http:" === Y || "https:" === Y);
-        if (!j && (H || S.default.isTrustedDomain(L)) || j && S.default.isTrustedProtocol(L)) {
+            K = !("http:" === Y || "https:" === Y);
+        if (!K && (H || S.default.isTrustedDomain(L)) || K && S.default.isTrustedProtocol(L)) {
             null == t || null != O && O ? x() : b && f.default.trackAnnouncementMessageLinkClicked({
                 messageId: U,
                 channelId: P,
@@ -135,7 +135,7 @@ function(e, t, n) {
             });
             return
         }
-        if (null != t && t.preventDefault(), j) h.default.show({
+        if (null != t && t.preventDefault(), K) E.default.show({
             url: L,
             trustUrl: a.trustProtocol,
             onConfirm: x,
@@ -144,7 +144,7 @@ function(e, t, n) {
         else {
             let e = (0, _.punycodeLink)(L),
                 t = null != e ? e.displayTarget : L;
-            h.default.show({
+            E.default.show({
                 url: t,
                 trustUrl: a.trustDomain,
                 onConfirm: x,

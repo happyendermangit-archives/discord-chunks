@@ -14,7 +14,7 @@ function(e, t, n) {
             return I
         },
         remoteAudioSettingsUpdate: function() {
-            return C
+            return A
         },
         fetchDevices: function() {
             return y
@@ -37,8 +37,8 @@ function(e, t, n) {
         c = n("599110"),
         f = n("286235"),
         _ = n("893243"),
-        h = n("76393"),
-        E = n("780338"),
+        E = n("76393"),
+        h = n("780338"),
         g = n("49111"),
         m = n("782340");
 
@@ -50,7 +50,7 @@ function(e, t, n) {
         })
     }
     async function S() {
-        let e = h.default.getAwaitingRemoteSessionInfo(),
+        let e = E.default.getAwaitingRemoteSessionInfo(),
             t = null == e ? void 0 : e.nonce;
         a.default.dispatch({
             type: "REMOTE_SESSION_DISCONNECT"
@@ -104,7 +104,7 @@ function(e, t, n) {
         }), p("DISCONNECT", e), S()
     }
 
-    function C(e, t, n, i) {
+    function A(e, t, n, i) {
         let s = (0, l.coerceAudioContextForProto)(n);
         null != s && (a.default.dispatch({
             type: "REMOTE_COMMAND",
@@ -117,7 +117,7 @@ function(e, t, n) {
             }
         }), p("AUDIO_SETTINGS_UPDATE", e))
     }
-    async function A() {
+    async function C() {
         let e;
         try {
             let t = null != u.default.getRTCConnectionId() ? s.ConsoleHandoffType.TRANSFER_EXISTING_CALL : s.ConsoleHandoffType.CREATE_NEW_CALL,
@@ -229,7 +229,7 @@ function(e, t, n) {
     }
     async function D(e, t, n) {
         await _.default.maybeShowPTTAlert(e), await S();
-        let i = await A();
-        await R(e, t, n, i), (0, E.default)(n.id, e)
+        let i = await C();
+        await R(e, t, n, i), (0, h.default)(n.id, e)
     }
 }

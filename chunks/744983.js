@@ -16,11 +16,11 @@ function(e, t, n) {
         c = n("42203"),
         f = n("305961"),
         _ = n("49111");
-    let h = {},
-        E = !1;
+    let E = {},
+        h = !1;
 
     function g(e) {
-        return null == h[e] && (h[e] = {
+        return null == E[e] && (E[e] = {
             searchId: e,
             searchType: m(e),
             isIndexing: !1,
@@ -38,7 +38,7 @@ function(e, t, n) {
             resultsBlocked: 0,
             showBlockedResults: !1,
             showNoResultsAlt: !1
-        }), h[e]
+        }), E[e]
     }
 
     function m(e) {
@@ -48,7 +48,7 @@ function(e, t, n) {
     function p(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (null == e) return n;
-        let i = h[e];
+        let i = E[e];
         return null == i ? n : t(i)
     }
     let S = "SearchStore",
@@ -56,7 +56,7 @@ function(e, t, n) {
         T = {},
         I = null;
 
-    function C(e) {
+    function A(e) {
         var t;
         let {
             searchId: n,
@@ -69,17 +69,17 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function C(e) {
         let {
             searchId: t
-        } = e, n = h[t];
+        } = e, n = E[t];
         if (null == n) return !1;
-        null != n.searchFetcher && n.searchFetcher.cancel(), delete h[t]
+        null != n.searchFetcher && n.searchFetcher.cancel(), delete E[t]
     }
 
     function y(e) {
         if (e === I) return !1;
-        null != e && null == h[e] && g(e), I = e
+        null != e && null == E[e] && g(e), I = e
     }
     class N extends a.default.Store {
         initialize() {
@@ -94,7 +94,7 @@ function(e, t, n) {
             v = !!o.default.get("tokenized")
         }
         isOpen() {
-            return E
+            return h
         }
         getCurrentSearchModalType() {
             return i
@@ -193,19 +193,19 @@ function(e, t, n) {
             } = e, o = g(s);
             null != o.searchFetcher && (o.searchFetcher.cancel(), o.searchFetcher = null);
             let f = o.searchType,
-                h = new u.default(s, f, a);
-            o.searchFetcher = h, o.isSearching = !0, o.rawResults = null, o.analyticsId = null, o.query = r.omit(a, "type"), o.offset = null !== (n = a.offset) && void 0 !== n ? n : 0, o.showBlockedResults = !1, C({
+                E = new u.default(s, f, a);
+            o.searchFetcher = E, o.isSearching = !0, o.rawResults = null, o.analyticsId = null, o.query = r.omit(a, "type"), o.offset = null !== (n = a.offset) && void 0 !== n ? n : 0, o.showBlockedResults = !1, A({
                 type: "SEARCH_ADD_HISTORY",
                 searchId: s,
                 query: i
             });
-            let E = s === _.FAVORITES ? null === (t = c.default.getChannel(s)) || void 0 === t ? void 0 : t.guild_id : f === _.SearchTypes.GUILD ? s : null;
-            h.fetch(e => {
+            let h = s === _.FAVORITES ? null === (t = c.default.getChannel(s)) || void 0 === t ? void 0 : t.guild_id : f === _.SearchTypes.GUILD ? s : null;
+            E.fetch(e => {
                 var t, n;
                 l.default.dispatch({
                     type: "SEARCH_FINISH",
                     searchId: s,
-                    guildId: E,
+                    guildId: h,
                     analyticsId: e.body.analytics_id,
                     totalResults: e.body.total_results,
                     messages: e.body.messages,
@@ -224,7 +224,7 @@ function(e, t, n) {
                 l.default.dispatch({
                     type: "SEARCH_FINISH",
                     searchId: s,
-                    guildId: E,
+                    guildId: h,
                     messages: [],
                     threads: [],
                     members: [],
@@ -250,7 +250,7 @@ function(e, t, n) {
             let i = n.query;
             null == i && (n.hasError = !0)
         },
-        SEARCH_EDITOR_STATE_CLEAR: A,
+        SEARCH_EDITOR_STATE_CLEAR: C,
         SEARCH_ENSURE_SEARCH_STATE: function(e) {
             let {
                 searchId: t
@@ -285,7 +285,7 @@ function(e, t, n) {
             y(null != t ? t : n)
         },
         CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
-            return null != I && A({
+            return null != I && C({
                 searchId: I
             })
         },
@@ -306,13 +306,13 @@ function(e, t, n) {
                 history: T
             }))
         },
-        SEARCH_ADD_HISTORY: C,
+        SEARCH_ADD_HISTORY: A,
         LOGOUT: function() {
             o.default.remove(S), T = {}
         },
         CONNECTION_OPEN: function() {
-            Object.keys(h).forEach(e => {
-                null != h[e] && (h[e].searchType = m(e))
+            Object.keys(E).forEach(e => {
+                null != E[e] && (E[e].searchType = m(e))
             })
         },
         SEARCH_MODAL_OPEN: function(e) {
@@ -320,10 +320,10 @@ function(e, t, n) {
                 searchId: t,
                 searchType: n
             } = e;
-            null != t && (I = t), E = !0, i = n
+            null != t && (I = t), h = !0, i = n
         },
         SEARCH_MODAL_CLOSE: function() {
-            E = !1, i = void 0
+            h = !1, i = void 0
         }
     })
 }

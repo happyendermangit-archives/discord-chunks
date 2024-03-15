@@ -35,16 +35,16 @@ function(e, t, n) {
             return r
         },
         trackMediaRedactionAction: function() {
-            return j
+            return K
         },
         TimeoutCancelSource: function() {
             return a
         },
         trackScanTiming: function() {
-            return W
+            return j
         },
         trackScanningTimedOut: function() {
-            return K
+            return W
         },
         trackExplicitMediaRedactableMessagedLoaded: function() {
             return z
@@ -62,8 +62,8 @@ function(e, t, n) {
     var i, s, r, a, o, l, u, d, c = n("432710"),
         f = n("151426"),
         _ = n("676574"),
-        h = n("155084"),
-        E = n("684337"),
+        E = n("155084"),
+        h = n("684337"),
         g = n("845579"),
         m = n("42203"),
         p = n("27618"),
@@ -71,8 +71,8 @@ function(e, t, n) {
         v = n("599110"),
         T = n("568734"),
         I = n("983850"),
-        C = n("318137"),
-        A = n("457971"),
+        A = n("318137"),
+        C = n("457971"),
         y = n("612920"),
         N = n("49111"),
         R = n("568456");
@@ -127,7 +127,7 @@ function(e, t, n) {
             let {
                 isDm: t = !1,
                 isFriend: n = !1
-            } = e, i = (0, C.isEligibleForNewAdultDefaults)("explicit_media_redaction_utils");
+            } = e, i = (0, A.isEligibleForNewAdultDefaults)("explicit_media_redaction_utils");
             if (i && !t) return f.ExplicitContentRedaction.BLUR;
             if (!t) return f.ExplicitContentRedaction.SHOW;
             let s = g.ExplicitContentFilter.getSetting();
@@ -166,7 +166,7 @@ function(e, t, n) {
 
     function F(e) {
         var t;
-        if (!(0, A.isEligibleForExplicitMediaRedaction)()) return !1;
+        if (!(0, C.isEligibleForExplicitMediaRedaction)()) return !1;
         let n = S.default.getCurrentUser();
         if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
         let {
@@ -221,7 +221,7 @@ function(e, t, n) {
         return !_.default.get("explicit_media_redaction_ignore_pending_scan") && null == e
     }
 
-    function j(e) {
+    function K(e) {
         let {
             action: t,
             channelId: n,
@@ -235,20 +235,20 @@ function(e, t, n) {
             guild_id: null == r ? void 0 : r.guild_id,
             channel_id: n,
             message_id: i,
-            user_is_underage: (0, E.isCurrentUserTeen)(),
+            user_is_underage: (0, h.isCurrentUserTeen)(),
             context: s
         })
     }
 
-    function W(e, t) {
+    function j(e, t) {
         let n = Date.now() - e;
-        h.default.increment({
+        E.default.increment({
             name: c.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
             tags: ["timingBucket:".concat(Math.min(Math.floor(n / 1e3), 3)), "source:".concat(t), "metricVersion:".concat(1)]
         })
     }
 
-    function K(e) {
+    function W(e) {
         var t, n;
         let {
             channelId: i,
@@ -263,10 +263,10 @@ function(e, t, n) {
             guild_id: null == o ? void 0 : o.guild_id,
             message_id: s,
             embed_ids: a,
-            user_is_underage: (0, E.isCurrentUserTeen)(),
+            user_is_underage: (0, h.isCurrentUserTeen)(),
             scan_timeout_duration: I.MESSAGE_SCAN_TIMEOUT,
             attachment_ids_v2: r
-        }), h.default.increment({
+        }), E.default.increment({
             name: c.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,
             tags: ["metricVersion:".concat(1)]
         })

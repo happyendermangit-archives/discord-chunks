@@ -15,8 +15,8 @@ function(e, t, n) {
         c = n("233069"),
         f = n("42203"),
         _ = n("697218"),
-        h = n("719923"),
-        E = n("158998"),
+        E = n("719923"),
+        h = n("158998"),
         g = n("253539"),
         m = n("941719");
     let p = !1,
@@ -30,17 +30,17 @@ function(e, t, n) {
     function I() {
         S && (i = void 0), v = !1, p = !1
     }
-    let C = () => {
-            S = !h.default.canUseClientThemes(_.default.getCurrentUser())
+    let A = () => {
+            S = !E.default.canUseClientThemes(_.default.getCurrentUser())
         },
-        A = () => {
+        C = () => {
             var e, t;
             let n = null === (t = u.default.getAppearanceSettings()) || void 0 === t ? void 0 : null === (e = t.clientThemeSettings) || void 0 === e ? void 0 : e.backgroundGradientPresetId;
             null != n && (i = m.BACKGROUND_GRADIENT_PRESETS_MAP[n])
         };
     class y extends r.default.PersistedStore {
         initialize(e) {
-            null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? m.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(_.default, d.default, f.default, u.default), this.syncWith([_.default], C), this.syncWith([u.default], A)
+            null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? m.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(_.default, d.default, f.default, u.default), this.syncWith([_.default], A), this.syncWith([u.default], C)
         }
         getState() {
             return S ? {} : {
@@ -112,7 +112,7 @@ function(e, t, n) {
                 channelId: t,
                 guildId: n
             } = e, i = _.default.getCurrentUser();
-            if (null == t || null == n || (0, l.isDismissibleContentDismissed)(a.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, E.ageEligibleForPremiumUpsell)(i)) return;
+            if (null == t || null == n || (0, l.isDismissibleContentDismissed)(a.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, h.ageEligibleForPremiumUpsell)(i)) return;
             let s = f.default.getChannel(t);
             null != s && (0, c.isGuildTextChannelType)(s.type) && (v = !0, function() {
                 p = !0

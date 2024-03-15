@@ -5,7 +5,7 @@ function(e, t, n) {
             return _
         },
         daysSinceYouBarFirstSeen: function() {
-            return h
+            return E
         }
     }), n("884691"), n("233736");
     var i = n("95410"),
@@ -60,7 +60,7 @@ function(e, t, n) {
         }) : (!d && (c = null !== (n = i.default.get("--you-bar-experiment-cached-config")) && void 0 !== n ? n : u, d = !0), c)
     }
 
-    function h() {
+    function E() {
         let e = i.default.get("--you-bar-experiment-first-seen");
         return null == e ? -1 : Math.floor((Date.now() - e) / o.default.Millis.DAY)
     }

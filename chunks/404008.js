@@ -52,8 +52,8 @@ function(e, t, n) {
         c = n("923959"),
         f = n("957255"),
         _ = n("18494"),
-        h = n("316133"),
-        E = n("991170"),
+        E = n("316133"),
+        h = n("991170"),
         g = n("299039"),
         m = n("49111"),
         p = n("646718"),
@@ -64,16 +64,16 @@ function(e, t, n) {
         GUILD_STAGE_VOICE: I
     } = m.ChannelTypes;
 
-    function C(e, t) {
+    function A(e, t) {
         return e === t || e === T
     }
 
-    function A(e, t, n) {
-        let s = E.default.NONE;
-        return ((0, u.isGuildSelectableChannelType)(t) || t === T) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL)), (C(t, v) || C(t, I)) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL), s = i.default.add(s, m.Permissions.CONNECT)), {
+    function C(e, t, n) {
+        let s = h.default.NONE;
+        return ((0, u.isGuildSelectableChannelType)(t) || t === T) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL)), (A(t, v) || A(t, I)) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL), s = i.default.add(s, m.Permissions.CONNECT)), {
             id: e,
             type: n,
-            deny: E.default.NONE,
+            deny: h.default.NONE,
             allow: s
         }
     }
@@ -84,24 +84,24 @@ function(e, t, n) {
         if (n.length > 0 || r) {
             var o, l, d;
             let n;
-            a.push((o = e, l = t, d = s.PermissionOverwriteType.ROLE, n = E.default.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === T) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL)), C(l, v) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL), n = i.default.add(n, m.Permissions.CONNECT)), {
+            a.push((o = e, l = t, d = s.PermissionOverwriteType.ROLE, n = h.default.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === T) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL)), A(l, v) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL), n = i.default.add(n, m.Permissions.CONNECT)), {
                 id: o,
                 type: d,
-                allow: E.default.NONE,
+                allow: h.default.NONE,
                 deny: n
             }))
         }
         return n.forEach(e => {
-            a.push(A(e, t, s.PermissionOverwriteType.ROLE))
+            a.push(C(e, t, s.PermissionOverwriteType.ROLE))
         }), a
     }
 
     function N(e, t) {
-        return A(e, t, s.PermissionOverwriteType.MEMBER)
+        return C(e, t, s.PermissionOverwriteType.MEMBER)
     }
 
     function R(e, t) {
-        return A(e, t, s.PermissionOverwriteType.ROLE)
+        return C(e, t, s.PermissionOverwriteType.ROLE)
     }
 
     function O(e) {
@@ -109,7 +109,7 @@ function(e, t, n) {
             id: e,
             type: s.PermissionOverwriteType.ROLE,
             deny: m.Permissions.SEND_MESSAGES,
-            allow: E.default.NONE
+            allow: h.default.NONE
         }]
     }
 
@@ -119,13 +119,13 @@ function(e, t, n) {
             o = n.getGuild(r),
             l = null !== (i = null == o ? void 0 : o.maxVideoChannelUsers) && void 0 !== i ? i : -1,
             u = null !== (s = null == o ? void 0 : o.maxStageVideoChannelUsers) && void 0 !== s ? s : -1,
-            d = h.default.countVoiceStatesForChannel(e.id),
-            c = h.default.getVoiceStatesForChannel(e),
+            d = E.default.countVoiceStatesForChannel(e.id),
+            c = E.default.getVoiceStatesForChannel(e),
             _ = f.default.can(m.Permissions.MOVE_MEMBERS, e) && f.default.can(m.Permissions.CONNECT, e),
-            E = !1;
-        E = e.type === I ? null != r && (t.hasVideo(e.id) || (0, a.hasStream)(c)) && u > 0 && d >= u : null != r && t.hasVideo(e.id) && l > 0 && d >= l + (_ ? 1 : 0);
+            h = !1;
+        h = e.type === I ? null != r && (t.hasVideo(e.id) || (0, a.hasStream)(c)) && u > 0 && d >= u : null != r && t.hasVideo(e.id) && l > 0 && d >= l + (_ ? 1 : 0);
         let g = e.userLimit > 0 && d >= e.userLimit;
-        return E || g && !_
+        return h || g && !_
     }
 
     function P(e, t) {

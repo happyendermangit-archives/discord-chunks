@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return C
         }
     }), n("222007");
     var s = n("917351"),
@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("605136"),
         f = n("299039"),
         _ = n("271938"),
-        h = n("49111"),
-        E = n("695838");
+        E = n("49111"),
+        h = n("695838");
     let g = {},
         m = {},
         p = !1,
@@ -41,9 +41,9 @@ function(e, t, n) {
         }, g[t] = i
     }
     let I = Object.freeze({});
-    class C extends a.default.Store {
+    class A extends a.default.Store {
         getGuild(e) {
-            if (null != e) return e === h.FAVORITES ? E.FAVORITES_GUILD_RECORD : m[e]
+            if (null != e) return e === E.FAVORITES ? h.FAVORITES_GUILD_RECORD : m[e]
         }
         getGuilds() {
             return m
@@ -72,8 +72,8 @@ function(e, t, n) {
             return null === (n = g[e]) || void 0 === n ? void 0 : n[t]
         }
     }
-    C.displayName = "GuildStore";
-    var A = new C(l.default, {
+    A.displayName = "GuildStore";
+    var C = new A(l.default, {
         BACKGROUND_SYNC: function(e) {
             for (let n of e.guilds) {
                 var t;

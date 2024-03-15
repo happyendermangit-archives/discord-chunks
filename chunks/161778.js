@@ -17,8 +17,8 @@ function(e, t, n) {
     var f = n("228803");
     n("831588");
     var _ = n("922932"),
-        h = n("773336"),
-        E = n("737292"),
+        E = n("773336"),
+        h = n("737292"),
         g = n("168973"),
         m = n("374363"),
         p = n("116319"),
@@ -26,8 +26,8 @@ function(e, t, n) {
         v = n("941719");
     let T = null !== (s = (0, f.default)()) && void 0 !== s ? s : S.ThemeTypes.DARK,
         I = T,
-        C = null,
-        A = !1;
+        A = null,
+        C = !1;
 
     function y() {
         let e = function() {
@@ -36,7 +36,7 @@ function(e, t, n) {
             if (d.default.syncForcedColors && "active" === d.default.systemForcedColors && null != i) return i;
             let n = g.default.useSystemTheme;
             if (n === p.SystemThemeState.ON && null != i) return i;
-            let s = null === (e = E.default.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
+            let s = null === (e = h.default.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
             if (null != s) return s;
             let r = null === (t = m.default.settings.appearance) || void 0 === t ? void 0 : t.theme;
             return null == r ? I : r === a.Theme.LIGHT ? S.ThemeTypes.LIGHT : S.ThemeTypes.DARK
@@ -58,7 +58,7 @@ function(e, t, n) {
     }
     class D extends r.default.PersistedStore {
         initialize(e) {
-            (null == e ? void 0 : e.theme) != null && (I = e.theme), this.waitFor(g.default, E.default, m.default, d.default)
+            (null == e ? void 0 : e.theme) != null && (I = e.theme), this.waitFor(g.default, h.default, m.default, d.default)
         }
         getState() {
             return {
@@ -66,19 +66,19 @@ function(e, t, n) {
             }
         }
         get darkSidebar() {
-            return (0, l.isThemeLight)(this.theme) && g.default.darkSidebar && !A
+            return (0, l.isThemeLight)(this.theme) && g.default.darkSidebar && !C
         }
         get theme() {
             return y()
         }
         get systemTheme() {
-            return C
+            return A
         }
         get systemPrefersColorScheme() {
             return i
         }
         get isSystemThemeAvailable() {
-            return null !== C
+            return null !== A
         }
     }
     D.displayName = "ThemeStore", D.persistKey = "ThemeStore", D.migrations = [e => {
@@ -93,7 +93,7 @@ function(e, t, n) {
         CONNECTION_OPEN: N,
         LOGOUT: function(e) {
             return !e.isSwitchingAccount && I !== S.ThemeTypes.DARK && (I = S.ThemeTypes.DARK, function() {
-                !__OVERLAY__ && h.isPlatformEmbedded && _.default.setApplicationBackgroundColor((0, l.isThemeDark)(y()) ? o.default.unsafe_rawColors.PRIMARY_700.resolve({
+                !__OVERLAY__ && E.isPlatformEmbedded && _.default.setApplicationBackgroundColor((0, l.isThemeDark)(y()) ? o.default.unsafe_rawColors.PRIMARY_700.resolve({
                     saturation: d.default.saturation
                 }).hsl() : o.default.unsafe_rawColors.WHITE_500.resolve({
                     saturation: d.default.saturation
@@ -111,7 +111,7 @@ function(e, t, n) {
             } = e;
             I = null != i && null !== (n = null === (t = v.BACKGROUND_GRADIENT_PRESETS_MAP[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : y();
             let s = null != i;
-            return A !== s ? (A = s, !0) : function() {
+            return C !== s ? (C = s, !0) : function() {
                 let e = y();
                 return !(0, c.areThemesEqualForGradientThemes)(I, e) && (I = e, !0)
             }()
@@ -121,7 +121,7 @@ function(e, t, n) {
             let {
                 systemTheme: t
             } = e;
-            return C = t, O()
+            return A = t, O()
         },
         ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function(e) {
             return i = e.systemPrefersColorScheme, O()

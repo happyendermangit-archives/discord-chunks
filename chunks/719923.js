@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isPremiumAtLeast: function() {
-            return A.isPremiumAtLeast
+            return C.isPremiumAtLeast
         },
         isPremium: function() {
-            return A.isPremium
+            return C.isPremium
         },
         isPremiumExactly: function() {
-            return A.isPremiumExactly
+            return C.isPremiumExactly
         },
         StreamQuality: function() {
             return s
@@ -38,13 +38,13 @@ function(e, t, n) {
             return Y
         },
         getDisplayName: function() {
-            return j
+            return K
         },
         getDisplayNameFromSku: function() {
-            return W
+            return j
         },
         getTierDisplayName: function() {
-            return K
+            return W
         },
         getDisplayPremiumType: function() {
             return z
@@ -95,7 +95,7 @@ function(e, t, n) {
             return e_
         },
         getBillingReviewSubheader: function() {
-            return eE
+            return eh
         },
         getIntervalForInvoice: function() {
             return eg
@@ -119,10 +119,10 @@ function(e, t, n) {
             return eI
         },
         getItemsWithoutPremiumPlanItem: function() {
-            return eC
+            return eA
         },
         getItemsWithUpsertedPlanIdForGroup: function() {
-            return eA
+            return eC
         },
         getItemsWithUpsertedPremiumPlanId: function() {
             return ey
@@ -154,8 +154,8 @@ function(e, t, n) {
     var c = n("605250"),
         f = n("432155"),
         _ = n("669073"),
-        h = n("797647"),
-        E = n("697218"),
+        E = n("797647"),
+        h = n("697218"),
         g = n("160299"),
         m = n("357957"),
         p = n("10514"),
@@ -163,8 +163,8 @@ function(e, t, n) {
         v = n("745279"),
         T = n("993105"),
         I = n("773336"),
-        C = n("886551"),
-        A = n("764364"),
+        A = n("886551"),
+        C = n("764364"),
         y = n("719923"),
         N = n("153160"),
         R = n("49111"),
@@ -384,7 +384,7 @@ function(e, t, n) {
         }), n
     }
 
-    function j(e) {
+    function K(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 ? arguments[3] : void 0;
@@ -434,7 +434,7 @@ function(e, t, n) {
         }), s
     }
 
-    function W(e) {
+    function j(e) {
         switch (e) {
             case D.PremiumSubscriptionSKUs.TIER_0:
                 return L.default.Messages.PREMIUM_TIER_0;
@@ -451,7 +451,7 @@ function(e, t, n) {
         }), t
     }
 
-    function K(e) {
+    function W(e) {
         switch (e) {
             case D.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
             case D.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
@@ -517,7 +517,7 @@ function(e, t, n) {
             includePremiumGuilds: l,
             hasDiscountApplied: u,
             activeDiscountInfo: d
-        } = e, c = y.default.formatPriceString(y.default.getDefaultPrice(D.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D.SubscriptionIntervalTypes.MONTH), f = ef(r) || null == r.paymentSourceId && !r.isPurchasedExternally && !(null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), _ = null != o, h = r.status === R.SubscriptionStatusTypes.UNPAID && null !== r.latestInvoice && (null === (n = r.latestInvoice) || void 0 === n ? void 0 : n.status) === R.InvoiceStatusTypes.OPEN, g = f ? R.SubscriptionStatusTypes.CANCELED : h ? R.SubscriptionStatusTypes.UNPAID : r.status, m = D.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (l ? et(r.additionalPlans) : 0);
+        } = e, c = y.default.formatPriceString(y.default.getDefaultPrice(D.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D.SubscriptionIntervalTypes.MONTH), f = ef(r) || null == r.paymentSourceId && !r.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), _ = null != o, E = r.status === R.SubscriptionStatusTypes.UNPAID && null !== r.latestInvoice && (null === (n = r.latestInvoice) || void 0 === n ? void 0 : n.status) === R.InvoiceStatusTypes.OPEN, g = f ? R.SubscriptionStatusTypes.CANCELED : E ? R.SubscriptionStatusTypes.UNPAID : r.status, m = D.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (l ? et(r.additionalPlans) : 0);
         switch (a) {
             case D.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
             case D.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
@@ -665,7 +665,7 @@ function(e, t, n) {
         let {
             planId: t,
             additionalPlans: n
-        } = e, i = (0, h.isNoneSubscription)(t) ? null : j(t), s = null == n ? void 0 : n.find(e => {
+        } = e, i = (0, E.isNoneSubscription)(t) ? null : K(t), s = null == n ? void 0 : n.find(e => {
             let {
                 planId: t
             } = e;
@@ -818,7 +818,7 @@ function(e, t, n) {
         } = t, o = p.default.get(r);
         l(null != o, "Missing plan");
         let u = et(a),
-            d = eh(t.planId, t.paymentSourceId, t.currency, n),
+            d = eE(t.planId, t.paymentSourceId, t.currency, n),
             c = d.amount * u;
         if (null != s) {
             let e = s.invoiceItems.find(e => D.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(e.subscriptionPlanId));
@@ -863,14 +863,14 @@ function(e, t, n) {
             status: t,
             renewalMutations: n
         } = e;
-        return t === R.SubscriptionStatusTypes.CANCELED || null != n && (0, h.isNoneSubscription)(n.planId) && !e.isPurchasedExternally
+        return t === R.SubscriptionStatusTypes.CANCELED || null != n && (0, E.isNoneSubscription)(n.planId) && !e.isPurchasedExternally
     }
 
     function e_(e) {
         return e === R.SubscriptionStatusTypes.PAST_DUE || e === R.SubscriptionStatusTypes.ACCOUNT_HOLD || e === R.SubscriptionStatusTypes.BILLING_RETRY
     }
 
-    function eh(e, t, n, i) {
+    function eE(e, t, n, i) {
         let s = null != t ? {
                 paymentSourceId: t,
                 currency: n
@@ -896,10 +896,10 @@ function(e, t, n) {
                 }
             }), t
         }
-        return G(a.id, (0, A.isPremium)(i), !1, s)
+        return G(a.id, (0, C.isPremium)(i), !1, s)
     }
 
-    function eE(e, t, n) {
+    function eh(e, t, n) {
         let i = t.id;
         if (null != e) switch (i) {
             case D.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
@@ -1068,7 +1068,7 @@ function(e, t, n) {
     }
 
     function eT(e, t) {
-        return (0, A.isPremium)(e) || e_(null == t ? void 0 : t.status)
+        return (0, C.isPremium)(e) || e_(null == t ? void 0 : t.status)
     }
 
     function eI(e, t) {
@@ -1086,11 +1086,11 @@ function(e, t, n) {
         })
     }
 
-    function eC(e) {
+    function eA(e) {
         return e.filter(e => !D.PREMIUM_PLANS.has(e.planId))
     }
 
-    function eA(e, t, n, i) {
+    function eC(e, t, n, i) {
         var s, r;
         l(i.has(t), "Expected planId in group");
         let a = !1,
@@ -1112,11 +1112,11 @@ function(e, t, n) {
     }
 
     function ey(e, t) {
-        return eA(e, t, 1, D.PREMIUM_PLANS)
+        return eC(e, t, 1, D.PREMIUM_PLANS)
     }
 
     function eN(e, t, n) {
-        return eA(e, n, t, D.PREMIUM_GUILD_SUBSCRIPTION_PLANS)
+        return eC(e, n, t, D.PREMIUM_GUILD_SUBSCRIPTION_PLANS)
     }
 
     function eR(e) {
@@ -1164,9 +1164,9 @@ function(e, t, n) {
     }
     var eM = Object.freeze({
         isNewUser: e => null != e && Date.now() - e.createdAt.getTime() < 2592e6,
-        isPremiumAtLeast: A.isPremiumAtLeast,
-        isPremium: A.isPremium,
-        isPremiumExactly: A.isPremiumExactly,
+        isPremiumAtLeast: C.isPremiumAtLeast,
+        isPremium: C.isPremium,
+        isPremiumExactly: C.isPremiumExactly,
         getPrice: G,
         getDefaultPrice: V,
         getInterval: function(e) {
@@ -1185,7 +1185,7 @@ function(e, t, n) {
         getIntervalString: B,
         getIntervalStringAsNoun: H,
         getPremiumType: Y,
-        getDisplayName: j,
+        getDisplayName: K,
         getDisplayPremiumType: z,
         getPremiumPlanOptions: J,
         getUpgradeEligibilities: ee,
@@ -1212,7 +1212,7 @@ function(e, t, n) {
             if (e === D.SubscriptionIntervalTypes.YEAR) return 12 * t;
             throw Error("".concat(e, " interval subscription period not implemented"))
         },
-        getUserMaxFileSize: C.getUserMaxFileSize,
+        getUserMaxFileSize: A.getUserMaxFileSize,
         getSkuIdForPlan: $,
         getSkuIdForPremiumType: function(e) {
             switch (e) {
@@ -1286,7 +1286,7 @@ function(e, t, n) {
                 price: i
             })
         },
-        isNoneSubscription: h.isNoneSubscription,
+        isNoneSubscription: E.isNoneSubscription,
         getPlanIdFromInvoice: function(e, t) {
             let {
                 planId: n
@@ -1299,7 +1299,7 @@ function(e, t, n) {
                 } = e;
                 return ei(t)
             });
-            return n = null == i || (0, h.isNoneSubscription)(i.subscriptionPlanId) ? e.planId : null != e.renewalMutations && e.renewalMutations.planId !== e.planId ? e.planId : i.subscriptionPlanId
+            return n = null == i || (0, E.isNoneSubscription)(i.subscriptionPlanId) ? e.planId : null != e.renewalMutations && e.renewalMutations.planId !== e.planId ? e.planId : i.subscriptionPlanId
         },
         getStatusFromInvoice: function(e, t) {
             let {
@@ -1313,10 +1313,10 @@ function(e, t, n) {
                 } = e;
                 return ei(t)
             });
-            return (null == i || (0, h.isNoneSubscription)(i.subscriptionPlanId)) && (n = R.SubscriptionStatusTypes.CANCELED), n
+            return (null == i || (0, E.isNoneSubscription)(i.subscriptionPlanId)) && (n = R.SubscriptionStatusTypes.CANCELED), n
         },
         isBaseSubscriptionCanceled: ef,
-        getPremiumGuildIntervalPrice: eh,
+        getPremiumGuildIntervalPrice: eE,
         hasAccountCredit: function(e) {
             return null != e && 0 !== e.size && Array.from(e).some(e => {
                 let {
@@ -1327,7 +1327,7 @@ function(e, t, n) {
                 return null != t && null != n && !i
             })
         },
-        getBillingReviewSubheader: eE,
+        getBillingReviewSubheader: eh,
         getIntervalForInvoice: eg,
         getPremiumPlanItem: k,
         getGuildBoostPlanItem: eD,

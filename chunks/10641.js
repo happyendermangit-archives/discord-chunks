@@ -25,14 +25,14 @@ function(e, t, n) {
         c = n("585653"),
         f = n("989691"),
         _ = n("127746"),
-        h = n("862853"),
-        E = n("846614"),
+        E = n("862853"),
+        h = n("846614"),
         g = n("994428"),
         m = n("49111");
 
     function p(e) {
         var t;
-        if ((0, E.disableNewUserDismissibleContent)(e)) return !0;
+        if ((0, h.disableNewUserDismissibleContent)(e)) return !0;
         let n = null === (t = o.default.settings.userContent) || void 0 === t ? void 0 : t.dismissedContents;
         return null != n && (0, u.hasBit)(n, e)
     }
@@ -42,7 +42,7 @@ function(e, t, n) {
     }
 
     function v(e, t, n) {
-        if ((0, h.isContentShown)(e) || f.default.hasUserHitDCCap(e)) return;
+        if ((0, E.isContentShown)(e) || f.default.hasUserHitDCCap(e)) return;
         let i = function(e) {
             let t = _.CONTENT_TYPES_WITH_BYPASS_HOLDOUT.has(e),
                 {
@@ -54,12 +54,12 @@ function(e, t, n) {
                 });
             return n && !t
         }(e);
-        if (!i) !n && (0, h.addCandidateContent)({
+        if (!i) !n && (0, E.addCandidateContent)({
             content: e,
             groupName: null == t ? void 0 : t.groupName,
             onAdded: () => {
                 var n;
-                let [i, r] = (0, h.getCurrentlyShownCounts)();
+                let [i, r] = (0, E.getCurrentlyShownCounts)();
                 (0, c.handleDCShownToUser)(e), l.default.track(m.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
                     type: s.DismissibleContent[e],
                     content_count: i,
@@ -73,9 +73,9 @@ function(e, t, n) {
     }
     async function T(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        ((0, h.isContentShown)(e) || t.forceTrack) && function(e, t) {
+        ((0, E.isContentShown)(e) || t.forceTrack) && function(e, t) {
             var n;
-            let [i] = (0, h.getCurrentlyShownCounts)(), r = f.default.getRenderedAtTimestamp(e), a = new Date, o = null == r ? null : a.getTime() - r;
+            let [i] = (0, E.getCurrentlyShownCounts)(), r = f.default.getRenderedAtTimestamp(e), a = new Date, o = null == r ? null : a.getTime() - r;
             l.default.track(m.AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, {
                 type: s.DismissibleContent[e],
                 action: null !== (n = null == t ? void 0 : t.dismissAction) && void 0 !== n ? n : g.ContentDismissActionType.UNKNOWN,
@@ -87,7 +87,7 @@ function(e, t, n) {
             })
         }(e, t), (0, c.handleDCDismissed)(e), await (0, a.addDismissedContent)(e);
         let n = !f.default.hasUserHitDCCap();
-        (0, h.removeCandidateContent)({
+        (0, E.removeCandidateContent)({
             content: e,
             groupName: null == t ? void 0 : t.groupName
         }, n)

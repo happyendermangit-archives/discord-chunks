@@ -23,8 +23,8 @@ function(e, t, n) {
                 children: c,
                 confirmText: f,
                 cancelText: _,
-                className: h,
-                onConfirm: E,
+                className: E,
+                onConfirm: h,
                 onCancel: g,
                 onClose: m,
                 onCloseCallback: p,
@@ -32,15 +32,15 @@ function(e, t, n) {
                 transitionState: v,
                 loading: T = !1,
                 confirmButtonColor: I = o.Button.Colors.RED,
-                focusCancel: C = !1
+                focusCancel: A = !1
             } = e,
-            A = s.useRef(null);
+            C = s.useRef(null);
         return s.useEffect(() => {
-            !C && setTimeout(() => {
+            !A && setTimeout(() => {
                 var e;
-                return null === (e = A.current) || void 0 === e ? void 0 : e.focus()
+                return null === (e = C.current) || void 0 === e ? void 0 : e.focus()
             }, 0)
-        }, [C]), s.useLayoutEffect(() => () => null == p ? void 0 : p()), null != _ && (t = (0, i.jsx)(o.Button, {
+        }, [A]), s.useLayoutEffect(() => () => null == p ? void 0 : p()), null != _ && (t = (0, i.jsx)(o.Button, {
             type: "button",
             look: o.Button.Looks.LINK,
             color: o.Button.Colors.PRIMARY,
@@ -48,24 +48,24 @@ function(e, t, n) {
             onClick: () => {
                 null == g || g(), m()
             },
-            autoFocus: C,
+            autoFocus: A,
             children: _
         })), null != f && (n = (0, i.jsx)(o.Button, {
-            buttonRef: A,
+            buttonRef: C,
             type: "submit",
             color: I,
             submitting: T,
             onClick: async () => {
                 try {
-                    await (null == E ? void 0 : E()), m()
+                    await (null == h ? void 0 : h()), m()
                 } catch (e) {
                     throw e
                 }
             },
-            autoFocus: !C,
+            autoFocus: !A,
             children: f
         })), (0, i.jsxs)(u.ModalRoot, {
-            className: h,
+            className: E,
             transitionState: v,
             children: [null != r ? (0, i.jsx)(u.ModalHeader, {
                 separator: !1,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MenuCheckboxItem: function() {
-            return h
+            return E
         }
     });
     var i = n("37983"),
@@ -17,13 +17,13 @@ function(e, t, n) {
         f = n("389802"),
         _ = n("639826");
 
-    function h(e) {
+    function E(e) {
         let {
             color: t = "default",
             label: n,
             checked: r,
-            subtext: h,
-            disabled: E,
+            subtext: E,
+            disabled: h,
             isFocused: g,
             menuItemProps: m,
             action: p,
@@ -35,19 +35,19 @@ function(e, t, n) {
         }, [g]), (0, i.jsxs)(o.Clickable, {
             innerRef: T,
             className: a(_.item, _.labelContainer, f.MENU_ITEM_COLORS[t], S, {
-                [_.disabled]: E,
+                [_.disabled]: h,
                 [_.focused]: g,
                 [null != v ? v : ""]: g
             }),
-            onClick: E ? void 0 : p,
+            onClick: h ? void 0 : p,
             ...m,
             "aria-checked": r,
-            "aria-disabled": E,
+            "aria-disabled": h,
             children: [(0, i.jsxs)("div", {
                 className: _.label,
-                children: [(0, l.renderSubnode)(n, e), null != h && (0, i.jsx)("div", {
+                children: [(0, l.renderSubnode)(n, e), null != E && (0, i.jsx)("div", {
                     className: _.subtext,
-                    children: h
+                    children: E
                 })]
             }), (0, i.jsx)("div", {
                 className: _.iconContainer,

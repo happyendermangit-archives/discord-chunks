@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("353927");
     let f = new Map,
         _ = null,
-        h = null,
-        E = null;
+        E = null,
+        h = null;
 
     function g(e, t) {
         let n = f.get(e);
@@ -48,7 +48,7 @@ function(e, t, n) {
             user: t,
             sessionId: n
         } = e;
-        _ = t.id, h = n, E = null
+        _ = t.id, E = n, h = null
     }
     class v extends i.default.Store {
         initialize() {
@@ -144,8 +144,8 @@ function(e, t, n) {
                     userId: n,
                     channelId: i,
                     sessionId: s
-                } = t, r = !1, a = E;
-                return n === _ && s === h && (E = null != i ? i : null), a !== E && (r = f.delete(c.MediaEngineContextTypes.DEFAULT) || r), null == i ? r = n === _ && s === h ? f.delete(c.MediaEngineContextTypes.DEFAULT) || r : g(c.MediaEngineContextTypes.DEFAULT, n) || r : n === _ && s !== h ? r = f.delete(c.MediaEngineContextTypes.DEFAULT) || r : n !== _ && i !== l.default.getChannelId() && (r = g(c.MediaEngineContextTypes.DEFAULT, n) || r), r || e
+                } = t, r = !1, a = h;
+                return n === _ && s === E && (h = null != i ? i : null), a !== h && (r = f.delete(c.MediaEngineContextTypes.DEFAULT) || r), null == i ? r = n === _ && s === E ? f.delete(c.MediaEngineContextTypes.DEFAULT) || r : g(c.MediaEngineContextTypes.DEFAULT, n) || r : n === _ && s !== E ? r = f.delete(c.MediaEngineContextTypes.DEFAULT) || r : n !== _ && i !== l.default.getChannelId() && (r = g(c.MediaEngineContextTypes.DEFAULT, n) || r), r || e
             }, !1)
         },
         LOBBY_VOICE_STATE_UPDATE: function(e) {}

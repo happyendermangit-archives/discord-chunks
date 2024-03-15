@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return E
         }
     });
     var i = n("872717"),
@@ -16,9 +16,9 @@ function(e, t, n) {
         c = n("987317"),
         f = n("49111"),
         _ = n("782340"),
-        h = {
+        E = {
             call(e, t, n, s, r) {
-                let h = n => {
+                let E = n => {
                     c.default.selectVoiceChannel(e, t), n && this.ring(e), null == r || r(e)
                 };
                 if (null != s) {
@@ -29,7 +29,7 @@ function(e, t, n) {
                         url: f.Endpoints.CALL(e),
                         oldFormErrors: !0
                     }).then(e => {
-                        h(n && e.body.ringable)
+                        E(n && e.body.ringable)
                     }, () => {
                         l.default.track(f.AnalyticEvents.OPEN_POPOUT, {
                             type: "Not Friend",
@@ -51,7 +51,7 @@ function(e, t, n) {
                             }
                         })
                     })
-                } else h(n)
+                } else E(n)
             },
             ring(e, t) {
                 let n = r.default.getCall(e);

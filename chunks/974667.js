@@ -31,19 +31,19 @@ function(e, t, n) {
             scrollToStart: c,
             scrollToEnd: f,
             onNavigatePreviousAtStart: _,
-            onNavigateNextAtEnd: h,
-            setFocus: E,
+            onNavigateNextAtEnd: E,
+            setFocus: h,
             setFocusOnList: g,
             preserveFocusPosition: m = !0,
             useVirtualFocus: p = !1,
             wrap: S = !1,
             orientation: v = o.Orientations.VERTICAL,
             disableClickOnSpace: T = !1
-        } = e, I = i.useRef(n ? (0, l.createListItemId)(t, n) : null), C = i.useRef(!1), A = i.useRef(null), y = i.useRef(u);
+        } = e, I = i.useRef(n ? (0, l.createListItemId)(t, n) : null), A = i.useRef(!1), C = i.useRef(null), y = i.useRef(u);
 
         function N(e) {
             var t;
-            return (null !== (t = A.current) && void 0 !== t ? t : document).querySelector(e)
+            return (null !== (t = C.current) && void 0 !== t ? t : document).querySelector(e)
         }
 
         function R(e) {
@@ -55,10 +55,10 @@ function(e, t, n) {
         }, [u]);
         let O = i.useCallback((e, t) => {
                 if (y.current) {
-                    let n = null != E ? E : R;
+                    let n = null != h ? h : R;
                     n(e, t)
                 }
-            }, [E]),
+            }, [h]),
             D = i.useCallback(e => {
                 if (y.current) {
                     let t = null != g ? g : R;
@@ -72,10 +72,10 @@ function(e, t, n) {
                 O(n, i), (0, r.notifyFocusSubscribers)(t, i, m)
             }, [t, m, O]),
             L = i.useMemo(() => (0, s.createFocusManager)({
-                getFocusableElements: () => d(t, A),
+                getFocusableElements: () => d(t, C),
                 getActiveElement() {
                     var e;
-                    return null === (e = A.current) || void 0 === e ? void 0 : e.ownerDocument.activeElement
+                    return null === (e = C.current) || void 0 === e ? void 0 : e.ownerDocument.activeElement
                 },
                 scrollToStart: c,
                 scrollToEnd: f
@@ -85,7 +85,7 @@ function(e, t, n) {
         i.useLayoutEffect(() => {
             U.current = M
         }, [M]), i.useLayoutEffect(() => {
-            let e = A.current;
+            let e = C.current;
             if (null != e) {
                 if (u) return e.addEventListener("focusin", n), e.addEventListener("focusout", i), e.addEventListener("focus", s), e.addEventListener("scroll", r, {
                     passive: !0
@@ -108,7 +108,7 @@ function(e, t, n) {
                 }))
             }
             async function s() {
-                let e = A.current,
+                let e = C.current,
                     n = U.current;
                 if (n || null == e) return;
                 let i = I.current;
@@ -116,19 +116,19 @@ function(e, t, n) {
                     let t = (0, l.createSelector)(i),
                         n = N(t);
                     if (null != n) {
-                        if (!0 !== C.current) return O(t, (0, l.getItemId)(i));
+                        if (!0 !== A.current) return O(t, (0, l.getItemId)(i));
                         {
                             let s = await (0, a.isItemVisible)(e, n);
                             if (s) return O(t, (0, l.getItemId)(i))
                         }
                     }
                 }
-                let s = await (0, a.findFirstVisibleItem)(e, d(t, A));
+                let s = await (0, a.findFirstVisibleItem)(e, d(t, C));
                 null !== s && P(s)
             }
 
             function r() {
-                C.current = !0
+                A.current = !0
             }
         }, [u, t, m, O, g, D, P]);
         let w = i.useMemo(() => ({
@@ -147,8 +147,8 @@ function(e, t, n) {
             k = i.useCallback(async () => {
                 let e = await L.getNextFocusableElement(w),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
-                null != t ? P(t) : null == e && null != h && h()
-            }, [L, w, h, P]),
+                null != t ? P(t) : null == e && null != E && E()
+            }, [L, w, E, P]),
             V = i.useCallback(async () => {
                 let e = await L.getPreviousFocusableElement(w),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
@@ -168,7 +168,7 @@ function(e, t, n) {
                     case o.Keys.HOME:
                         e.stopPropagation(), e.preventDefault(), c().then(() => {
                             var e;
-                            let n = d(t, A),
+                            let n = d(t, C),
                                 i = null === (e = n[0]) || void 0 === e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                             null != i && P(i)
                         });
@@ -176,7 +176,7 @@ function(e, t, n) {
                     case o.Keys.END:
                         e.stopPropagation(), e.preventDefault(), f().then(() => {
                             var e;
-                            let n = d(t, A),
+                            let n = d(t, C),
                                 i = null === (e = n[n.length - 1]) || void 0 === e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                             null != i && P(i)
                         });
@@ -204,19 +204,19 @@ function(e, t, n) {
             id: t,
             containerProps: {
                 onKeyDown: G,
-                ref: A,
+                ref: C,
                 tabIndex: M && m ? -1 : 0
             },
             orientation: v,
             setFocus: F,
             async focusLastVisibleItem() {
                 var e;
-                let n = await (0, a.findLastVisibleItem)(null !== (e = A.current) && void 0 !== e ? e : document.body, d(t, A));
+                let n = await (0, a.findLastVisibleItem)(null !== (e = C.current) && void 0 !== e ? e : document.body, d(t, C));
                 null !== n && P(n)
             },
             async focusFirstVisibleItem() {
                 var e;
-                let n = await (0, a.findFirstVisibleItem)(null !== (e = A.current) && void 0 !== e ? e : document.body, d(t, A));
+                let n = await (0, a.findFirstVisibleItem)(null !== (e = C.current) && void 0 !== e ? e : document.body, d(t, C));
                 null !== n && P(n)
             },
             focusPreviousItem: V,

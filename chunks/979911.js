@@ -21,8 +21,8 @@ function(e, t, n) {
         c = n("798609"),
         f = n("716241"),
         _ = n("605250"),
-        h = n("676574"),
-        E = n("618421"),
+        E = n("676574"),
+        h = n("618421"),
         g = n("271938"),
         m = n("985365"),
         p = n("718517"),
@@ -30,9 +30,9 @@ function(e, t, n) {
         v = n("231987"),
         T = n("980134"),
         I = n("282928"),
-        C = n("49111");
-    let A = null;
-    __OVERLAY__ && (A = n("901165").default), (r = i || (i = {})).OVERLAY_UNLOCKED = "overlay_unlocked", r.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", r.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (a = s || (s = {}))[a.SEND = 0] = "SEND", a[a.EDIT = 1] = "EDIT", a[a.COMMAND = 2] = "COMMAND";
+        A = n("49111");
+    let C = null;
+    __OVERLAY__ && (C = n("901165").default), (r = i || (i = {})).OVERLAY_UNLOCKED = "overlay_unlocked", r.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", r.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (a = s || (s = {}))[a.SEND = 0] = "SEND", a[a.EDIT = 1] = "EDIT", a[a.COMMAND = 2] = "COMMAND";
     let y = e => 0 === e.type,
         N = e => 1 === e.type,
         R = e => y(e) ? e.message.nonce : N(e) ? e.message.messageId : e.message.data.id,
@@ -59,7 +59,7 @@ function(e, t, n) {
         }
         startQueueMetricTimers(e) {
             let t = O.map(e => setTimeout(() => {
-                (0, f.trackWithMetadata)(C.AnalyticEvents.SEND_MESSAGE_QUEUED, {
+                (0, f.trackWithMetadata)(A.AnalyticEvents.SEND_MESSAGE_QUEUED, {
                     queued_duration_ms: e
                 })
             }, e));
@@ -72,7 +72,7 @@ function(e, t, n) {
         createResponseHandler(e, t) {
             return n => {
                 if (null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr) return t(null, n);
-                null != n.body && (n.body.code === C.AbortCodes.SLOWMODE_RATE_LIMITED || n.body.code === C.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({
+                null != n.body && (n.body.code === A.AbortCodes.SLOWMODE_RATE_LIMITED || n.body.code === A.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({
                     retryAfter: n.body.retry_after * p.default.Millis.SECOND
                 }) : t(null, n)
             }
@@ -84,14 +84,14 @@ function(e, t, n) {
                 file: s,
                 filename: r,
                 ...a
-            } = e, o = (0, E.getSignalStrength)(), l = {
+            } = e, o = (0, h.getSignalStrength)(), l = {
                 mobile_network_type: m.default.getType(),
                 ...a,
                 ...null != o && {
                     signal_strength: o
                 }
             };
-            if (h.default.get("send_fail_100")) {
+            if (E.default.get("send_fail_100")) {
                 this.logger.log("Skipping message sened because send_fail_100 is enabled"), t(null, {
                     ok: !1,
                     hasErr: !1,
@@ -102,9 +102,9 @@ function(e, t, n) {
                 });
                 return
             }
-            null != A && (A.isInstanceUILocked() ? n = {
+            null != C && (C.isInstanceUILocked() ? n = {
                 location: "overlay_locked_activated"
-            } : !A.isInstanceUILocked() && (n = A.isPinned(C.OverlayWidgets.TEXT) ? {
+            } : !C.isInstanceUILocked() && (n = C.isPinned(A.OverlayWidgets.TEXT) ? {
                 location: "overlay_unlocked_pinned"
             } : {
                 location: "overlay_unlocked"
@@ -112,7 +112,7 @@ function(e, t, n) {
             let c = this.createResponseHandler(e.nonce, t),
                 f = new AbortController;
             if (this.startQueueMetricTimers(e.nonce), null != s && null != r && "" !== r) d.default.post({
-                url: C.Endpoints.MESSAGES(i),
+                url: A.Endpoints.MESSAGES(i),
                 fields: Object.entries(l).map(e => {
                     let [t, n] = e;
                     return {
@@ -139,7 +139,7 @@ function(e, t, n) {
                     backoff: new u.default
                 };
                 d.default.post({
-                    url: C.Endpoints.MESSAGES(i),
+                    url: A.Endpoints.MESSAGES(i),
                     body: l,
                     context: n,
                     oldFormErrors: !0,
@@ -158,7 +158,7 @@ function(e, t, n) {
                 ...s
             } = e, r = new AbortController;
             d.default.patch({
-                url: C.Endpoints.MESSAGE(n, i),
+                url: A.Endpoints.MESSAGE(n, i),
                 body: s,
                 retries: 1,
                 oldFormErrors: !0,
@@ -179,7 +179,7 @@ function(e, t, n) {
                     maxSizeCallback: f,
                     analytics_location: _
                 } = e,
-                h = {
+                E = {
                     type: c.InteractionTypes.APPLICATION_COMMAND,
                     application_id: i,
                     guild_id: s,
@@ -190,20 +190,20 @@ function(e, t, n) {
                     analytics_location: _
                 };
             if (null != u) {
-                h.data.attachments = [], n = [];
-                h.data.attachments = u.map((e, t) => (l(e.status === I.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, T.getAttachmentPayload)(e, t)))
+                E.data.attachments = [], n = [];
+                E.data.attachments = u.map((e, t) => (l(e.status === I.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, T.getAttachmentPayload)(e, t)))
             }
-            let E = new AbortController;
+            let h = new AbortController;
             d.default.post({
-                url: C.Endpoints.INTERACTIONS,
+                url: A.Endpoints.INTERACTIONS,
                 fields: [{
                     name: "payload_json",
-                    value: JSON.stringify(h)
+                    value: JSON.stringify(E)
                 }],
                 attachments: n,
-                signal: E.signal,
+                signal: h.signal,
                 onRequestCreated: e => {
-                    this.requests.set(o, E), e.on("progress", e => {
+                    this.requests.set(o, h), e.on("progress", e => {
                         let {
                             total: t
                         } = e, n = (0, S.maxFileSize)(s);

@@ -16,8 +16,8 @@ function(e, t, n) {
         c = n("42203"),
         f = n("923959"),
         _ = n("505507"),
-        h = n("162771"),
-        E = n("773336"),
+        E = n("162771"),
+        h = n("773336"),
         g = n("50885"),
         m = n("819068"),
         p = n("471671"),
@@ -37,8 +37,8 @@ function(e, t, n) {
             textWidgetOpacity: v.OpacityBounds.LOWER
         }),
         I = null,
-        C = {},
-        A = null,
+        A = {},
+        C = null,
         y = new Set,
         N = !1,
         R = null,
@@ -48,8 +48,8 @@ function(e, t, n) {
         L = !1;
 
     function M(e) {
-        let t = C[e];
-        return null == t && (t = C[e] = {
+        let t = A[e];
+        return null == t && (t = A[e] = {
             ...T
         }), t
     }
@@ -141,14 +141,14 @@ function(e, t, n) {
                     b = null != e ? M(e) : {
                         ...T
                     }
-                }), __OVERLAY__ && (E.isPlatformEmbedded && g.default.requireModule("discord_overlay2"), y.delete((0, m.getPID)())), null != e) {
-                C = e;
+                }), __OVERLAY__ && (h.isPlatformEmbedded && g.default.requireModule("discord_overlay2"), y.delete((0, m.getPID)())), null != e) {
+                A = e;
                 let t = d.default.getId();
                 null != t && (null == (b = M(t)).textChatNotifications && (b.textChatNotifications = T.textChatNotifications), null == b.textWidgetOpacity && (b.textWidgetOpacity = T.textWidgetOpacity))
             }
         }
         getState() {
-            return C
+            return A
         }
         isUILocked(e) {
             return !y.has(e)
@@ -182,7 +182,7 @@ function(e, t, n) {
             return b.selectedChannelId
         }
         getSelectedCallId() {
-            return A
+            return C
         }
         getDisplayUserMode() {
             return b.displayUserMode
@@ -251,10 +251,10 @@ function(e, t, n) {
     }];
     var x = new F(r.default, {
         LOGOUT: function(e) {
-            !e.isSwitchingAccount && (C = {})
+            !e.isSwitchingAccount && (A = {})
         },
         MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
-            e.userId in C && delete C[e.userId]
+            e.userId in A && delete A[e.userId]
         },
         CONNECTION_CLOSED: function() {
             y.clear()
@@ -304,7 +304,7 @@ function(e, t, n) {
         OVERLAY_READY: function() {
             let e = b.selectedGuildId,
                 t = b.selectedChannelId;
-            if (null != e && (!f.default.hasChannels(e) || null != t && !f.default.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == c.default.getChannel(t) && (e = null, t = null), null == e && null == t && (e = h.default.getGuildId()), null != e && null == t) {
+            if (null != e && (!f.default.hasChannels(e) || null != t && !f.default.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == c.default.getChannel(t) && (e = null, t = null), null == e && null == t && (e = E.default.getGuildId()), null != e && null == t) {
                 let n = f.default.getDefaultChannel(e);
                 null != n && (t = n.id)
             }
@@ -327,10 +327,10 @@ function(e, t, n) {
             let {
                 callId: t
             } = e;
-            A = t
+            C = t
         },
         CALL_DELETE: function() {
-            A = null
+            C = null
         },
         LAYOUT_CREATE: function() {},
         OVERLAY_SET_DISPLAY_NAME_MODE: function(e) {

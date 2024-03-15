@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         hydrateReadySupplementalPayload: function() {
-            return A
+            return C
         },
         preloadReadyPayloadData: function() {
             return y
@@ -28,8 +28,8 @@ function(e, t, n) {
         c = n("723939"),
         f = n("70754"),
         _ = n("605250"),
-        h = n("385976"),
-        E = n("364685"),
+        E = n("385976"),
+        h = n("364685"),
         g = n("233069"),
         m = n("305961"),
         p = n("660478"),
@@ -37,18 +37,18 @@ function(e, t, n) {
     let v = new _.default("ReadyPayloadUtils"),
         T = {},
         I = null,
-        C = {};
+        A = {};
 
-    function A(e, t) {
+    function C(e, t) {
         var n;
         let {
             guilds: i,
             merged_members: s,
             merged_presences: r,
             ...a
-        } = e, o = D(C, null == r ? void 0 : r.friends), l = null !== (n = null == i ? void 0 : i.map((e, t) => {
-            let n = D(C, null == r ? void 0 : r.guilds[t]),
-                i = D(C, null == s ? void 0 : s[t]);
+        } = e, o = D(A, null == r ? void 0 : r.friends), l = null !== (n = null == i ? void 0 : i.map((e, t) => {
+            let n = D(A, null == r ? void 0 : r.guilds[t]),
+                i = D(A, null == s ? void 0 : s[t]);
             return {
                 ...e,
                 unavailable: void 0 === e.voice_states,
@@ -63,7 +63,7 @@ function(e, t, n) {
             voice_states: e.voice_states,
             unavailable: !1
         }));
-        return null != u && l.push(u), C = {}, {
+        return null != u && l.push(u), A = {}, {
             ...a,
             presences: o,
             guilds: l
@@ -99,8 +99,8 @@ function(e, t, n) {
             let t = o.default.database();
             null != t && !1 === e.databaseOk && c.default.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"), T = {};
             let n = Object.values(m.default.getGuilds()),
-                i = h.default.getGuilds(),
-                s = E.default.getRawStickersByGuild(),
+                i = E.default.getGuilds(),
+                s = h.default.getRawStickersByGuild(),
                 r = p.default.getReadStatesByChannel();
             for (let t of n) {
                 var a, l, u;
@@ -112,13 +112,13 @@ function(e, t, n) {
                     readStates: r
                 })
             }
-        })(n), C = a.keyBy(r, e => e.id);
-        let g = D(C, l);
+        })(n), A = a.keyBy(r, e => e.id);
+        let g = D(A, l);
         null == u || u.forEach(e => {
             let t = e.recipient_ids;
-            null != t && (e.recipients = t.map(e => (s(null != C[e], "Missing user in compressed ready payload"), C[e]))), delete e.recipient_ids
+            null != t && (e.recipients = t.map(e => (s(null != A[e], "Missing user in compressed ready payload"), A[e]))), delete e.recipient_ids
         });
-        let v = null !== (i = null == f ? void 0 : f.map((e, t) => !0 === e.unavailable ? e : (e.members = D(C, null == d ? void 0 : d[t]), L(e)))) && void 0 !== i ? i : [],
+        let v = null !== (i = null == f ? void 0 : f.map((e, t) => !0 === e.unavailable ? e : (e.members = D(A, null == d ? void 0 : d[t]), L(e)))) && void 0 !== i ? i : [],
             I = R(t, f, e => L(e));
         return null != I && v.push(I), {
             ..._,
@@ -140,8 +140,8 @@ function(e, t, n) {
             a = M(e, null == r ? void 0 : {
                 properties: S.toServer(r),
                 roles: m.default.getRoles(r.id),
-                emojis: null !== (i = null === (n = h.default.getGuilds()[r.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
-                stickers: null !== (s = E.default.getRawStickersByGuild().get(r.id)) && void 0 !== s ? s : null,
+                emojis: null !== (i = null === (n = E.default.getGuilds()[r.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
+                stickers: null !== (s = h.default.getRawStickersByGuild().get(r.id)) && void 0 !== s ? s : null,
                 readStates: {}
             });
         return I = {
