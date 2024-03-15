@@ -60,15 +60,15 @@ function(e, t, n) {
                     })
                 })
             },
-            P = (0, u.isDismissibleContentDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
-            b = null != k && (0, g.isWindows)() && !P ? T.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
+            b = (0, u.isDismissibleContentDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
+            P = null != k && (0, g.isWindows)() && !b ? T.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
                 keybind: (0, S.toString)(k.shortcut, !0),
                 openSettingsHook: (e, t) => (0, i.jsx)(s.Anchor, {
                     onClick: L,
                     children: e
                 }, t)
             }) : null;
-        return null == b ? null : (0, i.jsxs)("div", {
+        return null == P ? null : (0, i.jsxs)("div", {
             className: _.keybindHint,
             children: [(0, i.jsx)(y.default, {
                 className: _.warningIcon
@@ -76,7 +76,7 @@ function(e, t, n) {
                 variant: "text-sm/medium",
                 color: "text-normal",
                 className: _.keybindHintText,
-                children: b
+                children: P
             }), (0, i.jsx)(s.Clickable, {
                 className: _.closeButton,
                 onClick: () => (0, u.markDismissibleContentAsDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),

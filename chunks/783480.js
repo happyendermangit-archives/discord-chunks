@@ -39,9 +39,9 @@ function(e, t, n) {
                 draftType: M,
                 parsedMessage: k,
                 options: L = {},
-                raiseEndpointErrors: P = !1
+                raiseEndpointErrors: b = !1
             } = e,
-            b = new p.default(A.Endpoints.MESSAGES(f)),
+            P = new p.default(A.Endpoints.MESSAGES(f)),
             j = new N.Future,
             U = {
                 content: "",
@@ -67,7 +67,7 @@ function(e, t, n) {
                 nonce: G,
                 poll: (0, g.createPollServerDataFromCreateRequest)(L.poll)
             });
-        return (U.nonce = G, b.on("start", e => {
+        return (U.nonce = G, P.on("start", e => {
             c = (0, x.createMessageRecord)({
                 ...B,
                 id: e.id
@@ -76,15 +76,15 @@ function(e, t, n) {
                 channelId: f,
                 file: e,
                 message: c,
-                uploader: b
+                uploader: P
             })
-        }), b.on("progress", e => {
+        }), P.on("progress", e => {
             l.default.dispatch({
                 type: "UPLOAD_PROGRESS",
                 channelId: f,
                 file: e
             })
-        })), b.on("error", (e, t, n, i) => {
+        })), P.on("error", (e, t, n, i) => {
             if (l.default.dispatch({
                     type: "UPLOAD_FAIL",
                     channelId: f,
@@ -116,7 +116,7 @@ function(e, t, n) {
                 });
                 return
             }
-            t !== A.AbortCodes.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS && (P ? j.reject(new u.APIError({
+            t !== A.AbortCodes.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS && (b ? j.reject(new u.APIError({
                 status: t,
                 body: null != n ? n : {}
             }, t)) : (0, o.openUploadError)({
@@ -127,15 +127,15 @@ function(e, t, n) {
                 uploads: R,
                 draftType: M
             }))
-        }), b.on("complete", (e, t) => {
+        }), P.on("complete", (e, t) => {
             l.default.dispatch({
                 type: "UPLOAD_COMPLETE",
                 channelId: f,
                 file: e,
-                aborted: b._aborted,
+                aborted: P._aborted,
                 messageRecord: t
             })
-        }), await b.uploadFiles(R, U), j.resolve(), j.promise
+        }), await P.uploadFiles(R, U), j.resolve(), j.promise
     }
     var M = {
         instantBatchUpload: function(e) {

@@ -33,11 +33,11 @@ function(e, t, n) {
         M = n("171209"),
         k = n("49111"),
         L = n("782340"),
-        P = n("279197");
-    let b = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
+        b = n("279197");
+    let P = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
         j = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
         U = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN),
-        D = 2 * j + U + 2 * b,
+        D = 2 * j + U + 2 * P,
         w = () => Promise.resolve();
 
     function F(e) {
@@ -56,8 +56,8 @@ function(e, t, n) {
         return (0, a.jsxs)(p.Clickable, {
             ...f,
             tabIndex: n ? -1 : c,
-            className: o(P.suggestedExpression, {
-                [P.suggestedExpressionFocused]: t
+            className: o(b.suggestedExpression, {
+                [b.suggestedExpressionFocused]: t
             }),
             focusProps: {
                 enabled: !1
@@ -68,15 +68,15 @@ function(e, t, n) {
                 mask: A.default.Masks.STICKER_ROUNDED_RECT,
                 width: j + 4,
                 height: j + 4,
-                className: P.mask,
+                className: b.mask,
                 children: (0, a.jsx)("div", {
-                    className: P.maskBackground
+                    className: b.maskBackground
                 })
             }), (0, a.jsx)(I.default, {
                 maskAsset: !0,
                 size: j,
                 sticker: s,
-                className: P.sticker
+                className: b.sticker
             }), i !== y.StickerSendability.SENDABLE && (0, a.jsx)(T.default, {
                 size: 14
             })]
@@ -91,7 +91,7 @@ function(e, t, n) {
             onSelectSticker: r,
             stickerIconVisible: c = !1,
             submitButtonVisible: f = !1
-        } = e, I = s.useContext(x.default), [T, A] = s.useState(null), [b, j] = s.useState(!1), [U, G] = s.useState(null), B = (0, E.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, b, i), {
+        } = e, I = s.useContext(x.default), [T, A] = s.useState(null), [P, j] = s.useState(!1), [U, G] = s.useState(null), B = (0, E.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, P, i), {
             analyticsLocations: Q,
             AnalyticsLocationProvider: $
         } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
@@ -128,7 +128,7 @@ function(e, t, n) {
             })
         }, [l]);
         let el = X.length > 0,
-            ea = en && !B && !z && !b && !J && el,
+            ea = en && !B && !z && !P && !J && el,
             {
                 stickersNavigator: es
             } = function(e) {
@@ -214,10 +214,10 @@ function(e, t, n) {
             children: (0, a.jsxs)(p.Clickable, {
                 tabIndex: ed ? -1 : 0,
                 "aria-hidden": ed,
-                className: o(P.container, {
-                    [P.hidden]: ed,
-                    [P.submitButtonOffset]: f,
-                    [P.stickerIconOffset]: c
+                className: o(b.container, {
+                    [b.hidden]: ed,
+                    [b.submitButtonOffset]: f,
+                    [b.stickerIconOffset]: c
                 }),
                 innerRef: H,
                 style: {
@@ -238,7 +238,7 @@ function(e, t, n) {
                                     ...i
                                 } = e;
                                 return (0, a.jsx)("div", {
-                                    className: P.stickerResults,
+                                    className: b.stickerResults,
                                     ref: e => {
                                         t.current = e
                                     },
@@ -268,13 +268,13 @@ function(e, t, n) {
                             }
                         })
                     }), (0, a.jsxs)("div", {
-                        className: P.bottomInformationTextContainer,
+                        className: b.bottomInformationTextContainer,
                         children: [(0, a.jsx)("div", {
-                            className: P.textDivider
+                            className: b.textDivider
                         }), (0, a.jsxs)("div", {
-                            className: P.bottomInformationLayout,
+                            className: b.bottomInformationLayout,
                             children: [(0, a.jsx)(p.Text, {
-                                className: P.descriptionText,
+                                className: b.descriptionText,
                                 style: {
                                     maxWidth: D
                                 },
@@ -284,7 +284,7 @@ function(e, t, n) {
                                 }) : L.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_SHORT_NAV_PROMPT.format({
                                     upHook: (e, t) => (0, a.jsx)(p.KeyCombo, {
                                         shortcut: "up",
-                                        className: P.keybind
+                                        className: b.keybind
                                     }, t)
                                 })
                             }), (0, a.jsx)(p.Clickable, {
@@ -300,14 +300,14 @@ function(e, t, n) {
                                     text: L.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,
                                     children: e => (0, a.jsx)(N.default, {
                                         ...e,
-                                        className: P.closeIcon
+                                        className: b.closeIcon
                                     })
                                 })
                             })]
                         })]
                     })]
                 }), (0, a.jsx)("div", {
-                    className: P.containerBackground
+                    className: b.containerBackground
                 })]
             })
         })

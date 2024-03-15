@@ -38,8 +38,8 @@ function(e, t, n) {
         M = n("580357"),
         k = n("40469"),
         L = n("351368"),
-        P = n("272339"),
-        b = n("82636"),
+        b = n("272339"),
+        P = n("82636"),
         j = n("368121"),
         U = n("228427"),
         D = n("619911"),
@@ -134,7 +134,7 @@ function(e, t, n) {
                     max: 3
                 }), (0, i.jsxs)("div", {
                     className: V.stageListenerPill,
-                    children: [(0, i.jsx)(P.default, {
+                    children: [(0, i.jsx)(b.default, {
                         width: 16,
                         height: 16
                     }), (0, i.jsx)(c.Text, {
@@ -146,7 +146,7 @@ function(e, t, n) {
                 })]
             })),
             $ = z(D.default, q.filter(e => null != e && !Y.includes(e.id)), d),
-            ee = z(b.default, J, d),
+            ee = z(P.default, J, d),
             {
                 isMuted: et,
                 muteConfig: en

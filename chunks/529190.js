@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return b
+            return P
         }
     }), n("222007"), n("808653");
     var i = n("37983"),
@@ -35,14 +35,14 @@ function(e, t, n) {
         M = n("847948"),
         k = n("327769");
     let L = [8, 8, 0, 8],
-        P = o.debounce(() => {
+        b = o.debounce(() => {
             (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
         }, 300);
-    var b = l.forwardRef(function(e, t) {
+    var P = l.forwardRef(function(e, t) {
         let {
             channel: n,
             canOnlyUseTextCommands: a
-        } = e, r = l.useRef(!1), o = l.useRef(0), [b, U] = l.useState(0), D = l.useRef(null), [w, F] = l.useState(!1), G = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+        } = e, r = l.useRef(!1), o = l.useRef(0), [P, U] = l.useState(0), D = l.useRef(null), [w, F] = l.useState(!1), G = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
         l.useEffect(() => {
             (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
         }, []);
@@ -79,7 +79,7 @@ function(e, t, n) {
         }), q = e => {
             let t = H.length,
                 n = V.reduce((e, t) => e + t.data.length, 0) - (K ? 7 : 0);
-            K && e + 420 > 48 * t + 56 * n - 512 && z(), J(e), P(), o.current = e
+            K && e + 420 > 48 * t + 56 * n - 512 && z(), J(e), b(), o.current = e
         };
         l.useEffect(() => {
             q(o.current)
@@ -90,8 +90,8 @@ function(e, t, n) {
             }, [H.length, K]),
             Q = V.map(e => e.data.length);
         l.useEffect(() => {
-            null != D.current && w && null != b && D.current.scrollRowIntoView(b)
-        }, [w, b]), l.useLayoutEffect(() => {
+            null != D.current && w && null != P && D.current.scrollRowIntoView(P)
+        }, [w, P]), l.useLayoutEffect(() => {
             if (null != Y) {
                 var e;
                 null === (e = D.current) || void 0 === e || e.scrollToSectionTop(0)
@@ -114,13 +114,13 @@ function(e, t, n) {
             }, [n.id]);
         l.useImperativeHandle(t, () => ({
             onTabOrEnter: e => {
-                if (null == b) return !e && (U(0), !0);
-                if (null == b) return !1;
+                if (null == P) return !e && (U(0), !0);
+                if (null == P) return !1;
                 let t = 0,
                     n = 0;
                 for (let e of V)
-                    if (t = n, b < (n += e.data.length)) {
-                        let n = e.data[b - t],
+                    if (t = n, P < (n += e.data.length)) {
+                        let n = e.data[P - t],
                             i = B.find(e => e.id === n.applicationId);
                         ee(n, i, (0, T.getCommandTriggerSection)(e.section));
                         break
@@ -130,10 +130,10 @@ function(e, t, n) {
                 if (0 === W.length) return !0;
                 let t = K ? 7 : 0,
                     n = W.length + t,
-                    i = null == b ? 0 : b + e;
+                    i = null == P ? 0 : P + e;
                 return i >= n ? i = n - 1 : i < 0 && (i = 0), U(i), F(!0), !0
             }
-        }), [W.length, V, K, B, ee, b]);
+        }), [W.length, V, K, B, ee, P]);
         let et = l.useCallback(e => {
                 let t = H[e];
                 if (null == t) return null;
@@ -184,7 +184,7 @@ function(e, t, n) {
                     command: s,
                     channel: n,
                     className: M.itemWrapper,
-                    selected: b === e,
+                    selected: P === e,
                     showImage: a.section.id !== s.applicationId,
                     section: o,
                     onClick: () => ee(s, o, (0, T.getCommandTriggerSection)(a.section)),
@@ -192,9 +192,9 @@ function(e, t, n) {
                         U(null), F(!1)
                     }
                 }, r)
-            }, [n, V, ee, B, b]),
+            }, [n, V, ee, B, P]),
             el = (0, y.useUID)();
-        return (0, f.useChannelEditorPopup)(el, !0, (0, x.getAutocompleteRowId)(b)), l.useEffect(() => () => {
+        return (0, f.useChannelEditorPopup)(el, !0, (0, x.getAutocompleteRowId)(P)), l.useEffect(() => () => {
             (0, f.dismissChannelEditorPopup)()
         }, []), (0, i.jsxs)(x.default, {
             id: el,

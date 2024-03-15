@@ -44,14 +44,14 @@ function(e, t, n) {
                     guildId: N
                 })
             })
-        }, O = S.default.useName(_), R = (0, r.useStateFromStores)([p.default, m.default, x.default], () => g.default.getNickname(N, I, _)), M = h.default.getGuild(N), k = (0, d.useClydeEnabled)(M, v), L = k && l === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null, P = e => (0, i.jsx)(y.default, {
+        }, O = S.default.useName(_), R = (0, r.useStateFromStores)([p.default, m.default, x.default], () => g.default.getNickname(N, I, _)), M = h.default.getGuild(N), k = (0, d.useClydeEnabled)(M, v), L = k && l === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null, b = e => (0, i.jsx)(y.default, {
             className: t,
             onContextMenu: A,
             color: L,
             ...e,
             children: "@".concat(null != R ? R : O)
         });
-        return T ? P() : (0, i.jsx)(o.Popout, {
+        return T ? b() : (0, i.jsx)(o.Popout, {
             preload: null == _ ? void 0 : () => (0, c.default)(_.id, _.getAvatarURL(N, 80), {
                 guildId: null != N ? N : void 0,
                 channelId: null != I ? I : void 0
@@ -63,7 +63,7 @@ function(e, t, n) {
                 ...e
             })),
             position: s.isMobile ? "top" : "right",
-            children: e => P(e)
+            children: e => b(e)
         })
     }
 }

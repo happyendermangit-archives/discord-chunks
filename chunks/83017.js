@@ -41,8 +41,8 @@ function(e, t, n) {
         M = n("255214"),
         k = n("352046"),
         L = n("115279"),
-        P = n("958706"),
-        b = n("782340");
+        b = n("958706"),
+        P = n("782340");
     (s = i || (i = {}))[s.EMOJI = 0] = "EMOJI", s[s.CREATE_EMOJI = 1] = "CREATE_EMOJI", (r = l || (l = {}))[r.SECTION_HEADING = 0] = "SECTION_HEADING", r[r.SECTION_ROW = 1] = "SECTION_ROW";
     let j = e => {
         let {
@@ -100,8 +100,8 @@ function(e, t, n) {
                             M = i && G && null != S && (_ || v || A);
                         M && A && E.length === g && E.shift();
                         let k = Y && M && !d,
-                            P = M ? E.length + 1 : E.length,
-                            j = Math.ceil(P / g),
+                            b = M ? E.length + 1 : E.length,
+                            j = Math.ceil(b / g),
                             U = [];
                         for (let e = 0; e < j; e++) {
                             let t = 0 === e,
@@ -124,7 +124,7 @@ function(e, t, n) {
                             if (k && t && !d && (l = [{
                                     type: 1,
                                     guildId: S.id,
-                                    name: b.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                                    name: P.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                                     size: o,
                                     rowIndex: y,
                                     columnIndex: 0,
@@ -135,7 +135,7 @@ function(e, t, n) {
                                     t.push({
                                         type: 1,
                                         guildId: S.id,
-                                        name: b.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                                        name: P.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                                         size: o,
                                         rowIndex: e,
                                         columnIndex: t.length,
@@ -174,7 +174,7 @@ function(e, t, n) {
                                     emoji: e,
                                     channel: null != t ? t : C.default.getDefaultChannel(n),
                                     intention: l
-                                }) !== P.EmojiDisabledReasons.DISALLOW_EXTERNAL);
+                                }) !== b.EmojiDisabledReasons.DISALLOW_EXTERNAL);
                                 if (0 === a.length) return;
                                 let s = I.default.getGuild(n),
                                     r = !H && N.default.isEmojiCategoryNitroLocked({
@@ -191,7 +191,7 @@ function(e, t, n) {
                                     isNitroLocked: r
                                 })
                             };
-                            if (null != m && n(m.id), (0, P.isExternalEmojiAllowedForIntention)(l))
+                            if (null != m && n(m.id), (0, b.isExternalEmojiAllowedForIntention)(l))
                                 for (let e of F)(null == m || m.id !== e) && n(e)
                         } else if (e === L.EmojiCategories.TOP_GUILD_EMOJI) {
                     if (null != m) {
@@ -287,15 +287,15 @@ function(e, t, n) {
                             r.isFavoriteEmojiWithoutFetchingLatest(u) || null != d ? (0, m.unfavoriteEmoji)(u) : (null == s || s(e), (0, m.favoriteEmoji)(u));
                             return
                         }
-                        if (d === P.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE) return;
-                        if (d === P.EmojiDisabledReasons.PREMIUM_LOCKED) {
+                        if (d === b.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE) return;
+                        if (d === b.EmojiDisabledReasons.PREMIUM_LOCKED) {
                             l({
                                 type: 0,
                                 emojiDescriptor: e
                             });
                             return
                         }
-                        if (d === P.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED && u.type === x.EmojiTypes.GUILD) {
+                        if (d === b.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED && u.type === x.EmojiTypes.GUILD) {
                             l({
                                 type: 1,
                                 guildId: u.guildId,
@@ -303,7 +303,7 @@ function(e, t, n) {
                             });
                             return
                         }
-                        if (d === P.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE) return;
+                        if (d === b.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE) return;
                         null == a || a(e), i(u, o.isFinalSelection, o.isBurst)
                     }
                 }

@@ -40,7 +40,7 @@ function(e, t, n) {
             isVoid: h,
             onChange: I,
             deleteBackward: A,
-            deleteForward: b,
+            deleteForward: P,
             deleteFragment: j
         } = e;
         e.insertData = n => {
@@ -76,7 +76,7 @@ function(e, t, n) {
         }, e.isInline = e => !!_.has(e.type) || m(e), e.isVoid = e => !!("applicationCommandOption" === e.type && v.has(e.optionType)) || h(e), e.deleteBackward = t => {
             L(e, () => A(t))
         }, e.deleteForward = t => {
-            L(e, () => b(t))
+            L(e, () => P(t))
         }, e.deleteFragment = t => {
             L(e, () => j(t))
         };
@@ -143,7 +143,7 @@ function(e, t, n) {
                                                 if (null != c)
                                                     for (let i of c) {
                                                         e.add(i.name);
-                                                        let l = null !== (r = P(n, t, i.name)) && void 0 !== r ? r : i.text,
+                                                        let l = null !== (r = b(n, t, i.name)) && void 0 !== r ? r : i.text,
                                                             a = {
                                                                 type: "applicationCommandOption",
                                                                 optionName: i.name,
@@ -158,7 +158,7 @@ function(e, t, n) {
                                                 for (let i of d.options)
                                                     if (!e.has(i.name) && (i.required || null != u[i.name])) {
                                                         let e, l;
-                                                        m.length > 0 && !v.has(i.type) ? (e = m, m = "") : e = null != (l = P(n, t, i.name)) ? l : "";
+                                                        m.length > 0 && !v.has(i.type) ? (e = m, m = "") : e = null != (l = b(n, t, i.name)) ? l : "";
                                                         let a = {
                                                             type: "applicationCommandOption",
                                                             optionName: i.name,
@@ -446,7 +446,7 @@ function(e, t, n) {
         }) && g.SlateTransforms.insertText(e, " ")
     }
 
-    function P(e, t, n) {
+    function b(e, t, n) {
         var l, a, s, r;
         let o = null === (a = e.activeCommand) || void 0 === a ? void 0 : null === (l = a.options) || void 0 === l ? void 0 : l.find(e => e.name === n),
             u = e.initialValues[n];

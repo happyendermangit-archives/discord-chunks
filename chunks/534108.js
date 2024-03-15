@@ -35,8 +35,8 @@ function(e, t, n) {
         M = n("262439"),
         k = n("557585"),
         L = n("553372"),
-        P = n("122557"),
-        b = n("478477"),
+        b = n("122557"),
+        P = n("478477"),
         j = n("181021"),
         U = n("299069"),
         D = n("569717"),
@@ -157,7 +157,7 @@ function(e, t, n) {
                             buttonOverlay: f
                         });
                     case O.SoundboardSoundItemType.ADD_SOUND:
-                        return (0, l.createElement)(P.default, {
+                        return (0, l.createElement)(b.default, {
                             ...u(t),
                             key: i,
                             guild: e.item.guild,
@@ -183,7 +183,7 @@ function(e, t, n) {
             renderHeader: v,
             defaultSoundsOnly: L = !1
         } = e, {
-            analyticsLocations: P
+            analyticsLocations: b
         } = (0, f.default)(), [Y, z] = l.useState(null), Z = (0, r.useStateFromStores)([y.default], () => y.default.getCurrentUser()), J = (0, r.useStateFromStores)([g.default], () => {
             var e;
             return g.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : w.EMPTY_STRING_SNOWFLAKE_ID)
@@ -203,11 +203,11 @@ function(e, t, n) {
         }, [p, Z, a, C]), eu = l.useCallback(e => {
             switch (e.item.type) {
                 case O.SoundboardSoundItemType.SOUND:
-                    return null == c || c(e.item.sound), eo(e.item.sound, P);
+                    return null == c || c(e.item.sound), eo(e.item.sound, b);
                 case O.SoundboardSoundItemType.ADD_SOUND:
                     return (0, D.default)(e.item.guild.id)
             }
-        }, [P, eo, c]), ed = l.useCallback((e, t, n, l, s) => (0, i.jsx)(W, {
+        }, [b, eo, c]), ed = l.useCallback((e, t, n, l, s) => (0, i.jsx)(W, {
             descriptors: e,
             rowIndex: n.rowIndex,
             isUsingKeyboardNavigation: n.isUsingKeyboardNavigation,
@@ -220,10 +220,10 @@ function(e, t, n) {
                 channel: a,
                 interactive: ea ? es : !q,
                 forceSecondaryActions: ea,
-                analyticsLocations: P
+                analyticsLocations: b
             },
             buttonOverlay: T
-        }, "row-".concat(t["aria-rowindex"])), [eu, a, q, p, P, ea, es, T]), ec = l.useCallback((e, t) => {
+        }, "row-".concat(t["aria-rowindex"])), [eu, a, q, p, b, ea, es, T]), ec = l.useCallback((e, t) => {
             let n = "".concat(e.key);
             return (0, i.jsx)(V, {
                 categoryInfo: e.categoryInfo,
@@ -248,7 +248,7 @@ function(e, t, n) {
             children: (0, i.jsx)(N.default, {
                 className: G.settingsIcon
             })
-        }), [ep]), eh = l.useCallback(e => (0, i.jsx)(b.default, {
+        }), [ep]), eh = l.useCallback(e => (0, i.jsx)(P.default, {
             soundboardListRef: e,
             categories: $,
             listPadding: _
