@@ -146,24 +146,111 @@ function(e, t, n) {
             Array.isArray(e) ? a(e, t, n) : l(e, t, n)
         }
         drawImage(e, t, n) {
-            if (a(null != this.assetMap, "DiscordCavas: `drawImage` requires an AssetMap to be initialized."), null == this.context) return o.DrawResultStatus.Failure;
-            let i = this.assetMap.get(e);
-            return null == i ? o.DrawResultStatus.ImageNotLoaded : (null != n ? this.context.drawImage(i, t.x, t.y, n.w, n.h) : this.context.drawImage(i, t.x, t.y), o.DrawResultStatus.Success)
+            let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+                fillMode: o.FillMode.Stretch
+            };
+            a(null != this.assetMap, "DiscordCavas: `drawImage` requires an AssetMap to be initialized.");
+            let {
+                fillMode: l
+            } = i;
+            if (null == this.context) return o.DrawResultStatus.Failure;
+            let s = this.assetMap.get(e);
+            if (null == s) return o.DrawResultStatus.ImageNotLoaded;
+            if (null != n) {
+                if (l === o.FillMode.Contain) {
+                    let i;
+                    let l = {
+                            w: s.width,
+                            h: s.height
+                        },
+                        a = +(l.w / l.h).toFixed(1),
+                        r = +(n.w / n.h).toFixed(1);
+                    if (r > a) {
+                        let e = n.h * a;
+                        i = {
+                            x: t.x + (n.w - e) / 2,
+                            y: t.y,
+                            w: e,
+                            h: n.h
+                        }
+                    } else {
+                        let e = n.w / a;
+                        i = {
+                            x: t.x,
+                            y: t.y + (n.h - e) / 2,
+                            w: n.w,
+                            h: e
+                        }
+                    }
+                    return this.drawCroppedImage(e, {
+                        x: 0,
+                        y: 0,
+                        w: l.w,
+                        h: l.h
+                    }, {
+                        x: i.x,
+                        y: i.y,
+                        w: i.w,
+                        h: i.h
+                    }), o.DrawResultStatus.Success
+                }
+                if (l === o.FillMode.Cover) {
+                    var r, u, d, c;
+                    let l;
+                    let a = {
+                            w: s.width,
+                            h: s.height
+                        },
+                        f = +(a.w / a.h).toFixed(1),
+                        p = +(n.w / n.h).toFixed(1);
+                    if (p > f) {
+                        let e = a.w / p,
+                            t = {
+                                x: 0,
+                                y: (a.h - e) * (null !== (u = null == i ? void 0 : null === (r = i.focus) || void 0 === r ? void 0 : r.y) && void 0 !== u ? u : .5)
+                            };
+                        l = {
+                            ...t,
+                            w: s.width,
+                            h: e
+                        }
+                    } else {
+                        let e = a.h * p,
+                            t = {
+                                x: (s.width - e) * (null !== (c = null == i ? void 0 : null === (d = i.focus) || void 0 === d ? void 0 : d.x) && void 0 !== c ? c : .5),
+                                y: 0
+                            };
+                        l = {
+                            ...t,
+                            w: e,
+                            h: s.height
+                        }
+                    }
+                    return this.drawCroppedImage(e, l, {
+                        x: t.x,
+                        y: t.y,
+                        w: n.w,
+                        h: n.h
+                    }), o.DrawResultStatus.Success
+                }
+                this.context.drawImage(s, t.x, t.y, n.w, n.h)
+            } else this.context.drawImage(s, t.x, t.y);
+            return o.DrawResultStatus.Success
         }
-        drawRoundedImage(e, t, n, i) {
+        drawRoundedImage(e, t, n, i, l) {
             if (null == this.context) return o.DrawResultStatus.Failure;
             let {
-                x: l,
-                y: a
+                x: a,
+                y: s
             } = t, {
-                w: s,
-                h: r
+                w: r,
+                h: u
             } = n;
             this.context.save();
-            let u = new Path2D;
-            u.roundRect(l, a, s, r, i), this.context.clip(u);
-            let d = this.drawImage(e, t, n);
-            return this.context.restore(), d
+            let d = new Path2D;
+            d.roundRect(a, s, r, u, i), this.context.clip(d);
+            let c = this.drawImage(e, t, n, l);
+            return this.context.restore(), c
         }
         drawCroppedImage(e, t, n) {
             var i;
