@@ -11,14 +11,14 @@ function(t, e, i) {
     var n = i("884691"),
         l = i("446674"),
         a = i("233736"),
-        r = i("651057"),
-        u = i("299285");
+        u = i("651057"),
+        r = i("299285");
 
     function d(t) {
         let e = n.useRef([]);
         return n.useEffect(() => {
-            !(0, a.areArraysShallowEqual)(t, e.current) && (r.default.fetchApplications(t, !1), e.current = t)
-        }, [t]), (0, l.useStateFromStoresArray)([u.default], () => t.map(t => u.default.getApplication(t)))
+            !(0, a.areArraysShallowEqual)(t, e.current) && (u.default.fetchApplications(t, !1), e.current = t)
+        }, [t]), (0, l.useStateFromStoresArray)([r.default], () => t.map(t => r.default.getApplication(t)))
     }
 
     function s(t) {

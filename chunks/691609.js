@@ -367,7 +367,7 @@ function(e, t, n) {
                         height: 48,
                         children: e
                     }, "foreign-object")]
-                }, "svg"), (0, s.jsxs)(E.default, {
+                }, "svg"), (0, s.jsxs)(E.TransitionGroup, {
                     component: r.Fragment,
                     children: [null != i ? (0, s.jsx)(C, {
                         className: g.lowerBadge,

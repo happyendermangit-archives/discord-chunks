@@ -108,7 +108,7 @@ function(e, t, n) {
                     }(null != n ? n : [], i)) && void 0 !== e ? e : g
                 }, [n, i]);
             return a
-        }(n, R), b = l.useRef(y), P = l.useRef(_), j = l.useRef(null), U = window.devicePixelRatio, {
+        }(n, R), P = l.useRef(y), b = l.useRef(_), j = l.useRef(null), U = window.devicePixelRatio, {
             lastBackgroundFillColor: D,
             backgroundFillColor: w,
             lastActiveFillColor: F,
@@ -169,7 +169,7 @@ function(e, t, n) {
                     a = k.current;
                 if (null == i || null == l || null == a) return;
                 let s = !1;
-                (b.current !== y || P.current !== _) && (b.current = y, P.current = _, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
+                (P.current !== y || b.current !== _) && (P.current = y, b.current = _, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
                 let r = i.height / U;
                 l.clearRect(0, 0, i.width, i.height), l.beginPath();
                 let [o, u] = T(D, w, n, j.current);

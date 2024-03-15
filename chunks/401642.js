@@ -11,19 +11,19 @@ function(t, e, i) {
     var n = i("913144"),
         l = i("327037"),
         a = i("697218"),
-        r = i("506885"),
-        u = i("49111");
+        u = i("506885"),
+        r = i("49111");
 
     function d(t) {
         let {
             userId: e,
             section: i,
-            guildId: d = u.ME,
+            guildId: d = r.ME,
             channelId: s,
             friendToken: o,
             autoFocusNote: c,
             analyticsLocation: f
-        } = t, _ = a.default.getUser(e), E = d !== u.ME ? d : void 0;
+        } = t, _ = a.default.getUser(e), E = d !== r.ME ? d : void 0;
         if (null == _) return (0, l.fetchProfile)(e, {
             friendToken: o,
             guildId: E
@@ -39,7 +39,7 @@ function(t, e, i) {
                 analyticsLocation: f
             })
         });
-        (0, r.default)(e, _.getAvatarURL(void 0, 80), {
+        (0, u.default)(e, _.getAvatarURL(void 0, 80), {
             withMutualGuilds: !0,
             friendToken: o,
             guildId: E

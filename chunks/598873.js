@@ -80,7 +80,7 @@ function(e, t, n) {
                 [P.idle]: n
             }, I),
             onDoubleClick: l,
-            children: [(0, a.jsx)(s.default, {
+            children: [(0, a.jsx)(s.TransitionGroup, {
                 children: (0, a.jsx)(p.BackgroundTransition, {
                     className: S,
                     children: t

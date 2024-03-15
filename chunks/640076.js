@@ -35,8 +35,8 @@ function(e, t, n) {
         M = n("600785"),
         k = n("599110"),
         L = n("764364"),
-        b = n("159885"),
-        P = n("429569"),
+        P = n("159885"),
+        b = n("429569"),
         j = n("788506"),
         U = n("675280"),
         D = n("917764"),
@@ -49,15 +49,15 @@ function(e, t, n) {
         K = n("646718"),
         W = n("782340"),
         Y = n("555254");
-    let z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
-        Z = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
-        J = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
-        q = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-        X = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
-        Q = (0, b.cssValueToNumber)(p.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
-        $ = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM),
-        ee = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_HEIGHT) + (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_MARGIN_TOP),
-        et = (0, b.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+    let z = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
+        Z = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
+        J = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
+        q = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
+        X = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
+        Q = (0, P.cssValueToNumber)(p.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
+        $ = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM),
+        ee = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_HEIGHT) + (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_MARGIN_TOP),
+        et = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
         en = e => e + 2 * et,
         ei = e => {
             let {
@@ -80,28 +80,28 @@ function(e, t, n) {
                 listHeaderClassName: R,
                 activeSectionIndex: M,
                 upsellGlowOpacity: L,
-                enableNitroUpsell: b
-            } = e, P = (0, x.useAnalyticsContext)(), K = l.useRef(H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), W = l.useMemo(() => "" !== n ? f.default.convert.toCodePoint(n) : "", [n]), et = l.useCallback(e => {
-                if (!b) return !1;
+                enableNitroUpsell: P
+            } = e, b = (0, x.useAnalyticsContext)(), K = l.useRef(H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), W = l.useMemo(() => "" !== n ? f.default.convert.toCodePoint(n) : "", [n]), et = l.useCallback(e => {
+                if (!P) return !1;
                 let t = p[e],
                     n = p[e + 1];
                 return e >= p.length - 1 ? t.isNitroLocked : t.isNitroLocked && !n.isNitroLocked
-            }, [b, p]), en = l.useCallback(e => {
-                if (!b || e >= p.length - 1) return !1;
+            }, [P, p]), en = l.useCallback(e => {
+                if (!P || e >= p.length - 1) return !1;
                 let t = p[e],
                     n = p[e + 1];
                 return !t.isNitroLocked && n.isNitroLocked
-            }, [b, p]), ei = l.useCallback(function(e) {
+            }, [P, p]), ei = l.useCallback(function(e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     i = new Set(t),
                     l = t.has(e);
                 l ? i.delete(e) : i.add(e), null != n && k.default.track(H.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
-                    location: P.location,
+                    location: b.location,
                     tab: V.ExpressionPickerViewType.EMOJI,
                     collapsed: !l,
                     guild_id: n.id
                 }), m(i)
-            }, [P, t, m]), el = l.useCallback(e => {
+            }, [b, t, m]), el = l.useCallback(e => {
                 let {
                     columnIndex: t,
                     visibleRowIndex: n
@@ -160,8 +160,8 @@ function(e, t, n) {
                     null != a && (d = (0, j.getStringForEmojiCategory)(a, null == l ? void 0 : l.toString()));
                     let c = M === e,
                         f = n.isNitroLocked,
-                        m = b && f && !c,
-                        h = b && f && c;
+                        m = P && f && !c,
+                        h = P && f && c;
                     return (0, i.jsx)(T.default, {
                         className: s(Y.header, R, {
                             [Y.inactiveNitroHeader]: m,
@@ -172,7 +172,7 @@ function(e, t, n) {
                         onClick: () => ei(o, l),
                         children: d
                     }, o)
-                }), [p, t, ei, R, M, b]),
+                }), [p, t, ei, R, M, P]),
                 eo = l.useCallback((e, n) => {
                     let l = p[e],
                         a = en(e),
@@ -181,26 +181,26 @@ function(e, t, n) {
                         className: s(Y.categorySection, {
                             [Y.categorySectionLast]: e === p.length - 1,
                             [Y.categorySectionCollapsed]: t.has(l.sectionId),
-                            [Y.categorySectionNitroLocked]: b && l.isNitroLocked,
+                            [Y.categorySectionNitroLocked]: P && l.isNitroLocked,
                             [Y.categorySectionNitroDivider]: a || r
                         }),
                         children: n
                     }, e)
-                }, [t, p, b, en, et]),
+                }, [t, p, P, en, et]),
                 eu = l.useCallback(e => {
                     let n = p[e];
-                    return n.sectionId !== B.EmojiCategoryTypes.PREMIUM_UPSELL || t.has(n.sectionId) || b ? en(e) ? (0, i.jsx)(v.default, {
+                    return n.sectionId !== B.EmojiCategoryTypes.PREMIUM_UPSELL || t.has(n.sectionId) || P ? en(e) ? (0, i.jsx)(v.default, {
                         glowOpacity: L
                     }) : et(e) ? (0, i.jsx)("div", {
                         className: Y.nitroBottomDivider
                     }) : null : (0, i.jsx)(F.default, {
                         className: Y.premiumUpsell
                     }, "emoji-picker-inline-upsell")
-                }, [p, t, L, b, en, et]),
+                }, [p, t, L, P, en, et]),
                 ed = l.useCallback(e => {
                     let n = p[e];
-                    return n.sectionId !== B.EmojiCategoryTypes.PREMIUM_UPSELL || t.has(n.sectionId) || b ? en(e) ? 41 : et(e) ? 33 : 0 : ee
-                }, [p, t, b, en, et]),
+                    return n.sectionId !== B.EmojiCategoryTypes.PREMIUM_UPSELL || t.has(n.sectionId) || P ? en(e) ? 41 : et(e) ? 33 : 0 : ee
+                }, [p, t, P, en, et]),
                 ec = l.useCallback(e => {
                     var n;
                     return e === p.length - 1 || t.has(null === (n = p[e]) || void 0 === n ? void 0 : n.sectionId) || en(e) || et(e) ? 0 : $
@@ -235,7 +235,7 @@ function(e, t, n) {
                 getEmojiItemProps: T,
                 getEmojiRowProps: _,
                 rowCount: v,
-                isUsingKeyboardNavigation: b,
+                isUsingKeyboardNavigation: P,
                 channelGuildId: j,
                 messageId: U,
                 isBurstReaction: D,
@@ -254,7 +254,7 @@ function(e, t, n) {
                 immediate: ea
             }), er = o.some(e => e.isNitroLocked), {
                 enabled: eo
-            } = P.default.useExperiment({
+            } = b.default.useExperiment({
                 location: "Emoji Picker List"
             }, {
                 autoTrackExposure: er
@@ -279,7 +279,7 @@ function(e, t, n) {
                 getEmojiItemProps: T,
                 getEmojiRowProps: _,
                 isScrolling: F,
-                isUsingKeyboardNavigation: b,
+                isUsingKeyboardNavigation: P,
                 allowAnimatedEmoji: V,
                 channelGuildId: j,
                 messageId: U,

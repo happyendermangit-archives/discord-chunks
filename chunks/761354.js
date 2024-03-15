@@ -5,7 +5,7 @@ function(e, t, n) {
             return L
         },
         default: function() {
-            return b
+            return P
         }
     }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
     var i = n("37983"),
@@ -215,7 +215,7 @@ function(e, t, n) {
         })
     }
 
-    function b(e) {
+    function P(e) {
         let {
             channelId: t,
             draftType: n,
@@ -229,11 +229,11 @@ function(e, t, n) {
         } = e, M = null != R;
         C = M ? v.AttachmentListItemSizes.CLIP : C;
         let k = C === v.AttachmentListItemSizes.SMALL,
-            b = (0, r.useStateFromStores)([m.default], () => {
+            P = (0, r.useStateFromStores)([m.default], () => {
                 var e;
                 return null === (e = m.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
             }),
-            P = e => {
+            b = e => {
                 e.stopPropagation(), (0, o.openModal)(e => (0, i.jsx)(d.default, {
                     ...e,
                     draftType: n,
@@ -277,7 +277,7 @@ function(e, t, n) {
                         [A.action]: k
                     }),
                     tooltip: N.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
-                    onClick: P,
+                    onClick: b,
                     children: (0, i.jsx)(y.default, {
                         className: s({
                             [A.actionBarIcon]: k
@@ -300,7 +300,7 @@ function(e, t, n) {
             draftType: n,
             id: a.id,
             channelId: t,
-            handleEditModal: P,
+            handleEditModal: b,
             keyboardModeEnabled: c,
             size: C,
             className: s({
@@ -323,7 +323,7 @@ function(e, t, n) {
                     participantIds: R.users,
                     applicationId: R.applicationId,
                     title: R.name,
-                    guildId: b
+                    guildId: P
                 }), (0, i.jsx)(S.TextBadge, {
                     color: p.default.BG_BRAND,
                     className: A.clipsBadge,

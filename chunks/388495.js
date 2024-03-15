@@ -109,7 +109,7 @@ function(e, t, n) {
                 (0, E.closeModal)(t, e)
             }, [e]),
             d = S.map(e => t.some(t => t.Layer === e || null == t.Layer && e === f.default));
-        return (0, i.jsxs)(u.default, {
+        return (0, i.jsxs)(u.TransitionGroup, {
             component: s.Fragment,
             children: [S.map((e, n) => {
                 var s;

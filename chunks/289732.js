@@ -14,22 +14,22 @@ function(t, e, i) {
             shelfOrder: []
         }
     }
-    let r = a();
-    class u extends n.default.PersistedStore {
+    let u = a();
+    class r extends n.default.PersistedStore {
         initialize(t) {
-            r = {
+            u = {
                 ...a(),
                 ...null != t ? t : {}
             }
         }
         getState() {
-            return r
+            return u
         }
     }
-    u.displayName = "ActivityShelfStore", u.persistKey = "ActivityShelfStore";
-    var d = new u(l.default, {
+    r.displayName = "ActivityShelfStore", r.persistKey = "ActivityShelfStore";
+    var d = new r(l.default, {
         LOGOUT: function() {
-            r = a()
+            u = a()
         }
     })
 }

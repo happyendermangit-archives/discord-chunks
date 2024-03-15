@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         CUSTOM_CALL_SOUND_ANIMATION_RANGE: function() {
-            return P
+            return b
         },
         AnimationTypeToAnimations: function() {
             return U
@@ -50,8 +50,8 @@ function(e, t, n) {
         M = n("315102"),
         k = n("402671"),
         L = n("626334"),
-        b = n("782340");
-    let P = {
+        P = n("782340");
+    let b = {
             start: 10,
             end: 15
         },
@@ -113,16 +113,16 @@ function(e, t, n) {
             o = G(e, "emojiName"),
             u = o.length < 2 ? null !== (t = null == o ? void 0 : o[0]) && void 0 !== t ? t : "" : o.join(", ");
         if (r.length < 1) return "";
-        if (1 === r.length) return b.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
+        if (1 === r.length) return P.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
             firstUsername: null === (n = R.default.getUser(r[0])) || void 0 === n ? void 0 : n.username,
             emojiNames: u
         });
-        if (2 === r.length) return b.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
+        if (2 === r.length) return P.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
             firstUsername: null === (i = R.default.getUser(r[0])) || void 0 === i ? void 0 : i.username,
             secondUsername: null === (l = R.default.getUser(r[1])) || void 0 === l ? void 0 : l.username,
             emojiNames: u
         });
-        else return b.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
+        else return P.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
             firstUsername: null === (a = R.default.getUser(r[0])) || void 0 === a ? void 0 : a.username,
             secondUsername: null === (s = R.default.getUser(r[1])) || void 0 === s ? void 0 : s.username,
             count: r.length - 2,

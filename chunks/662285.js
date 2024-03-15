@@ -557,7 +557,12 @@ function(e, t, n) {
             null != a && N.default.track(L.AnalyticEvents.ACTIVITY_UPDATED, {
                 party_platform: L.PlatformTypes.SPOTIFY,
                 track_id: a.id,
-                has_images: !0
+                has_images: !0,
+                details: a.album.name,
+                state: a.name,
+                album_id: a.album.id,
+                author_ids: a.artists.map(e => e.id),
+                author_names: a.artists.map(e => e.name)
             })
         },
         SPOTIFY_PLAYER_PLAY: function(e) {

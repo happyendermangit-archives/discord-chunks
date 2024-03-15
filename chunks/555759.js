@@ -2,19 +2,19 @@ function(t, e, i) {
     "use strict";
     i.r(e), i.d(e, {
         default: function() {
-            return u
+            return r
         }
     });
     var n = i("968194"),
         l = i("884385"),
         a = i("170108"),
-        r = i("922174");
-    async function u(t, e, i) {
+        u = i("922174");
+    async function r(t, e, i) {
         let {
-            hasSpotifyAccount: u,
+            hasSpotifyAccount: r,
             activity: d,
             user: s
         } = t;
-        (0, r.default)(u) && null != d && null != d.sync_id && (await (0, l.ensureSpotifyPlayable)(), n.play(d, s.id), (0, a.default)(e, s, d, i))
+        (0, u.default)(r) && null != d && null != d.sync_id && (await (0, l.ensureSpotifyPlayable)(), n.play(d, s.id), (0, a.default)(e, s, d, i))
     }
 }
