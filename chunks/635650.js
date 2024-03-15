@@ -13,6 +13,7 @@ function(e, t, n) {
         cardSubtitle: "cardSubtitle__4a267",
         carouselCardImage: "carouselCardImage__4e898",
         clickable: "clickable__32f63",
+        confettiCanvas: "confettiCanvas__5f200",
         cover: "cover__60fa6",
         flipCard: "flipCard_c19f9d",
         flipCardBack: "flipCardBack__90c03",
