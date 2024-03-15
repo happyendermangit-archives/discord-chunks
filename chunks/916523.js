@@ -15,7 +15,8 @@ function(e, t, n) {
             profile_effect_debug_controls: "Shop: Scrolls through profile effects with arrow up / down. Restart with R",
             shop_disable_cache: "Shop: Disable shop cache",
             shop_include_unpublished: "Shop: Show unpublished items in the shop",
-            enable_avatar_decoration_uploads: "Shop: Enable avatar decoration uploads"
+            enable_avatar_decoration_uploads: "Shop: Enable avatar decoration uploads",
+            lottie_hover_multiple_loop: "Lotties - continue playing the hover animation after mouse enter"
         },
         a = {};
     class o extends i.default.DeviceSettingsStore {

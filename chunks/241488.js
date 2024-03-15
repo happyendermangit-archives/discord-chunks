@@ -31,16 +31,16 @@ function(e, t, n) {
         N = n("168973"),
         A = n("983782"),
         O = n("659500"),
-        R = n("791776"),
-        M = n("538282"),
+        M = n("791776"),
+        R = n("538282"),
         k = n("13030"),
         L = n("49111"),
-        P = n("115279"),
-        b = n("958706"),
+        b = n("115279"),
+        P = n("958706"),
         j = n("560241"),
         U = n("782340"),
         D = n("213524");
-    let w = k.MIN_EXPRESSION_PICKER_WIDTH + P.EmojiSize.MEDIUM,
+    let w = k.MIN_EXPRESSION_PICKER_WIDTH + b.EmojiSize.MEDIUM,
         F = l.memo(function(e) {
             let {
                 isActive: t,
@@ -59,7 +59,7 @@ function(e, t, n) {
                     y.default.trackWithMetadata(L.AnalyticEvents.EXPRESSION_PICKER_TAB_CLICKED, {
                         tab: l,
                         badged: !1
-                    }), (0, M.setExpressionPickerView)(l)
+                    }), (0, R.setExpressionPickerView)(l)
                 },
                 "aria-current": t ? "page" : void 0,
                 className: s(n, D.navButton, D.navItem, {
@@ -138,7 +138,7 @@ function(e, t, n) {
             positionContainerRef: X,
             drawerRef: ee,
             orientation: et
-        }), el = (0, M.useExpressionPickerStore)(e => e.activeView), ea = (0, T.useHasSendableSticker)(K), {
+        }), el = (0, R.useExpressionPickerStore)(e => e.activeView), ea = (0, T.useHasSendableSticker)(K), {
             renderWindow: es,
             windowDispatch: er
         } = l.useContext(E.default), eo = (0, c.useStateFromStores)([_.default], () => !_.default.hasLoadedStickerPacks), eu = (0, C.useSoundmojiExperiment)("expression_picker"), ed = null != q, ec = (0, f.useIsModalAtTop)(null != q ? q : ""), ef = l.useCallback(e => {
@@ -152,23 +152,23 @@ function(e, t, n) {
                 (0, d.isElement)(n);) {
                 if (n === ee.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
                 n = n.parentNode
-            }(0, M.closeExpressionPicker)();
-            let i = null === (t = (0, R.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+            }(0, R.closeExpressionPicker)();
+            let i = null === (t = (0, M.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
             (null == i || "BODY" === i.tagName) && O.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.TEXTAREA_FOCUS)
         }, [J, ec, ed]), ep = l.useCallback(() => {
-            (0, M.closeExpressionPicker)()
+            (0, R.closeExpressionPicker)()
         }, []);
         l.useLayoutEffect(() => {
             let e = () => {
-                el === k.ExpressionPickerViewType.GIF && (0, M.closeExpressionPicker)()
+                el === k.ExpressionPickerViewType.GIF && (0, R.closeExpressionPicker)()
             };
             return es.addEventListener("mousedown", ef), es.addEventListener("contextmenu", ef), er.subscribe(L.ComponentActions.POPOUT_CLOSE, ep), O.ComponentDispatch.subscribe(L.ComponentActions.CLOSE_GIF_PICKER, e), () => {
                 es.removeEventListener("mousedown", ef), es.removeEventListener("contextmenu", ef), er.unsubscribe(L.ComponentActions.POPOUT_CLOSE, ep), O.ComponentDispatch.unsubscribe(L.ComponentActions.CLOSE_GIF_PICKER, e)
             }
         }, [el, ep, ef, es, er]), (0, p.useFocusLock)(X), l.useEffect(() => {
-            (0, M.setSearchQuery)("")
+            (0, R.setSearchQuery)("")
         }, []), l.useEffect(() => {
-            (!ed && (0, f.hasAnyModalOpen)() || ed && !ec) && (0, M.closeExpressionPicker)()
+            (!ed && (0, f.hasAnyModalOpen)() || ed && !ec) && (0, R.closeExpressionPicker)()
         }, [ec, ed]), l.useEffect(() => {
             if (null != ee.current && !Q.current) {
                 var e, t, n, i;
@@ -226,8 +226,8 @@ function(e, t, n) {
                                         role: "tablist",
                                         "aria-label": U.default.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
                                         children: [em ? (0, i.jsx)(F, {
-                                            id: P.GIF_PICKER_TAB_ID,
-                                            "aria-controls": P.GIF_PICKER_TAB_PANEL_ID,
+                                            id: b.GIF_PICKER_TAB_ID,
+                                            "aria-controls": b.GIF_PICKER_TAB_PANEL_ID,
                                             "aria-selected": el === k.ExpressionPickerViewType.GIF,
                                             isActive: el === k.ExpressionPickerViewType.GIF,
                                             viewType: k.ExpressionPickerViewType.GIF,
@@ -244,15 +244,15 @@ function(e, t, n) {
                                                 children: U.default.Messages.EXPRESSION_PICKER_STICKER
                                             })
                                         }) : null, (0, i.jsx)(F, {
-                                            id: P.EMOJI_PICKER_TAB_ID,
-                                            "aria-controls": P.EMOJI_PICKER_TAB_PANEL_ID,
+                                            id: b.EMOJI_PICKER_TAB_ID,
+                                            "aria-controls": b.EMOJI_PICKER_TAB_PANEL_ID,
                                             "aria-selected": el === k.ExpressionPickerViewType.EMOJI,
                                             isActive: el === k.ExpressionPickerViewType.EMOJI,
                                             viewType: k.ExpressionPickerViewType.EMOJI,
                                             children: U.default.Messages.EXPRESSION_PICKER_EMOJI
                                         }), eu && null != V && (0, i.jsx)(F, {
-                                            id: P.SOUNDBOARD_PICKER_TAB_ID,
-                                            "aria-controls": P.SOUNDBOARD_PICKER_TAB_PANEL_ID,
+                                            id: b.SOUNDBOARD_PICKER_TAB_ID,
+                                            "aria-controls": b.SOUNDBOARD_PICKER_TAB_PANEL_ID,
                                             "aria-selected": el === k.ExpressionPickerViewType.SOUNDBOARD,
                                             isActive: el === k.ExpressionPickerViewType.SOUNDBOARD,
                                             viewType: k.ExpressionPickerViewType.SOUNDBOARD,
@@ -278,8 +278,8 @@ function(e, t, n) {
                                     channel: K,
                                     containerWidth: en,
                                     includeCreateEmojiButton: m,
-                                    emojiSize: null != en && en < w ? P.EmojiSize.MEDIUM : P.EmojiSize.LARGE,
-                                    pickerIntention: b.EmojiIntention.CHAT,
+                                    emojiSize: null != en && en < w ? b.EmojiSize.MEDIUM : b.EmojiSize.LARGE,
+                                    pickerIntention: P.EmojiIntention.CHAT,
                                     closePopout: ep,
                                     onSelectEmoji: B,
                                     ref: e => {

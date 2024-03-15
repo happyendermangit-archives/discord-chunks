@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return M
+            return R
         }
     }), n("222007"), n("702976");
     var i = n("77078"),
@@ -31,17 +31,17 @@ function(e, t, n) {
         N = n("305515"),
         A = n("49111"),
         O = n("782340");
-    async function R(e) {
+    async function M(e) {
         var t, n, i;
         let c, {
                 channelId: f,
-                uploads: R,
-                draftType: M,
+                uploads: M,
+                draftType: R,
                 parsedMessage: k,
                 options: L = {},
-                raiseEndpointErrors: P = !1
+                raiseEndpointErrors: b = !1
             } = e,
-            b = new p.default(A.Endpoints.MESSAGES(f)),
+            P = new p.default(A.Endpoints.MESSAGES(f)),
             j = new N.Future,
             U = {
                 content: "",
@@ -67,7 +67,7 @@ function(e, t, n) {
                 nonce: G,
                 poll: (0, g.createPollServerDataFromCreateRequest)(L.poll)
             });
-        return (U.nonce = G, b.on("start", e => {
+        return (U.nonce = G, P.on("start", e => {
             c = (0, x.createMessageRecord)({
                 ...B,
                 id: e.id
@@ -76,15 +76,15 @@ function(e, t, n) {
                 channelId: f,
                 file: e,
                 message: c,
-                uploader: b
+                uploader: P
             })
-        }), b.on("progress", e => {
+        }), P.on("progress", e => {
             l.default.dispatch({
                 type: "UPLOAD_PROGRESS",
                 channelId: f,
                 file: e
             })
-        })), b.on("error", (e, t, n, i) => {
+        })), P.on("error", (e, t, n, i) => {
             if (l.default.dispatch({
                     type: "UPLOAD_FAIL",
                     channelId: f,
@@ -116,28 +116,28 @@ function(e, t, n) {
                 });
                 return
             }
-            t !== A.AbortCodes.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS && (P ? j.reject(new u.APIError({
+            t !== A.AbortCodes.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS && (b ? j.reject(new u.APIError({
                 status: t,
                 body: null != n ? n : {}
             }, t)) : (0, o.openUploadError)({
                 title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                 help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-            }), "" !== U.content && "" === T.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === _.default.getUploadCount(f, M) && r.default.setUploads({
+            }), "" !== U.content && "" === T.default.getDraft(f, R) && a.default.saveDraft(f, U.content, R), 0 === _.default.getUploadCount(f, R) && r.default.setUploads({
                 channelId: f,
-                uploads: R,
-                draftType: M
+                uploads: M,
+                draftType: R
             }))
-        }), b.on("complete", (e, t) => {
+        }), P.on("complete", (e, t) => {
             l.default.dispatch({
                 type: "UPLOAD_COMPLETE",
                 channelId: f,
                 file: e,
-                aborted: b._aborted,
+                aborted: P._aborted,
                 messageRecord: t
             })
-        }), await b.uploadFiles(R, U), j.resolve(), j.promise
+        }), await P.uploadFiles(M, U), j.resolve(), j.promise
     }
-    var M = {
+    var R = {
         instantBatchUpload: function(e) {
             let {
                 channelId: t,
@@ -154,7 +154,7 @@ function(e, t, n) {
                     ...i
                 }, t)
             });
-            R({
+            M({
                 channelId: t,
                 uploads: s,
                 draftType: i
@@ -228,7 +228,7 @@ function(e, t, n) {
                 })
             }), x.upload(r, h)
         },
-        uploadFiles: R,
+        uploadFiles: M,
         cancel(e) {
             if (l.default.dispatch({
                     type: "UPLOAD_CANCEL_REQUEST",

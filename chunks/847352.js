@@ -34,11 +34,11 @@ function(e, t, n) {
             } = e, _ = l.useRef(null), v = l.useRef(null), {
                 renderWindow: N,
                 windowDispatch: A
-            } = l.useContext(f.default), O = null != T, R = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
+            } = l.useContext(f.default), O = null != T, M = (0, u.useIsModalAtTop)(null != T ? T : ""), R = () => {
                 x.dismissAppLauncherPopup()
             }, k = l.useCallback(e => {
                 var t;
-                if (!O && (0, u.hasAnyModalOpen)() || O && !(R && a)) return;
+                if (!O && (0, u.hasAnyModalOpen)() || O && !(M && a)) return;
                 let {
                     target: n
                 } = e;
@@ -48,18 +48,18 @@ function(e, t, n) {
                     if (n === v.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
                     n = n.parentNode
                 }
-                M();
+                R();
                 let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == i || "BODY" === i.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS)
-            }, [a, R, O]), L = l.useCallback(() => {
-                M()
+            }, [a, M, O]), L = l.useCallback(() => {
+                R()
             }, []);
             l.useLayoutEffect(() => (N.addEventListener("mousedown", k), N.addEventListener("contextmenu", k), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
                 N.removeEventListener("mousedown", k), N.removeEventListener("contextmenu", k), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
             }), [L, k, N, A]), (0, d.useFocusLock)(_), l.useEffect(() => {
-                (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
-            }, [R, O]);
-            let P = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
+                (!O && (0, u.hasAnyModalOpen)() || O && !M) && R()
+            }, [M, O]);
+            let b = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
             return (0, i.jsx)(c.default, {
                 section: S.AnalyticsSections.EXPRESSION_PICKER,
                 children: (0, i.jsx)(p.AppReferencePositionLayer, {
@@ -87,11 +87,11 @@ function(e, t, n) {
                                     className: I.contentWrapper,
                                     children: [(0, i.jsx)(g.default, {
                                         channel: n,
-                                        isAppDetailPresent: null != P
-                                    }), null != P ? (0, i.jsx)(y.default, {
+                                        isAppDetailPresent: null != b
+                                    }), null != b ? (0, i.jsx)(y.default, {
                                         channel: n,
-                                        appDetail: P
-                                    }, P.id) : null]
+                                        appDetail: b
+                                    }, b.id) : null]
                                 })]
                             }) : null
                         })

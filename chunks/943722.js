@@ -99,9 +99,9 @@ function(e, t, n) {
             hideTooltip: f = !1,
             hideEmoji: x = !1,
             user: A
-        } = e, O = null != n ? n.find(e => e.type === T.ActivityTypes.CUSTOM_STATUS) : null, R = (0, r.useStateFromStores)([E.default], () => E.default.getId() === (null == A ? void 0 : A.id)), M = (0, r.useStateFromStores)([m.default], () => R ? m.default.getHangStatusActivity() : null != n ? n.find(e => e.type === T.ActivityTypes.HANG_STATUS) : null), k = (0, r.useStateFromStores)([C.default, y.default], () => {
+        } = e, O = null != n ? n.find(e => e.type === T.ActivityTypes.CUSTOM_STATUS) : null, M = (0, r.useStateFromStores)([E.default], () => E.default.getId() === (null == A ? void 0 : A.id)), R = (0, r.useStateFromStores)([m.default], () => M ? m.default.getHangStatusActivity() : null != n ? n.find(e => e.type === T.ActivityTypes.HANG_STATUS) : null), k = (0, r.useStateFromStores)([C.default, y.default], () => {
             var e;
-            return null != M && null != A ? y.default.getChannel(null === (e = C.default.getVoiceStateForUser(A.id)) || void 0 === e ? void 0 : e.channelId) : null
+            return null != R && null != A ? y.default.getChannel(null === (e = C.default.getVoiceStateForUser(A.id)) || void 0 === e ? void 0 : e.channelId) : null
         }), {
             enableHangStatus: L
         } = p.HangStatusExperiment.useExperiment({
@@ -109,11 +109,11 @@ function(e, t, n) {
             location: "ActivityStatus"
         }, {
             autoTrackExposure: !1
-        }), P = null, b = L && null != M && g.default.can(T.Permissions.CONNECT, k);
-        b ? P = (0, i.jsx)(h.default, {
+        }), b = null, P = L && null != R && g.default.can(T.Permissions.CONNECT, k);
+        P ? b = (0, i.jsx)(h.default, {
             className: o,
-            hangStatusActivity: M
-        }) : null != O && null != O.emoji && !x && (P = (0, i.jsx)(v, {
+            hangStatusActivity: R
+        }) : null != O && null != O.emoji && !x && (b = (0, i.jsx)(v, {
             emoji: O.emoji,
             animate: u,
             hideTooltip: f,
@@ -121,14 +121,14 @@ function(e, t, n) {
         }));
         let j = (0, r.useStateFromStores)([S.default], () => null != A ? S.default.getStatus(A.id) : null),
             U = null !== j && [T.StatusTypes.OFFLINE, T.StatusTypes.INVISIBLE].includes(j),
-            D = null === (t = (0, c.default)(n, l, void 0, b)) || void 0 === t ? void 0 : t.activityText,
+            D = null === (t = (0, c.default)(n, l, void 0, P)) || void 0 === t ? void 0 : t.activityText,
             w = null != D && D.length > 0;
-        return U || null == P && !w ? null : (0, i.jsxs)("div", {
+        return U || null == b && !w ? null : (0, i.jsxs)("div", {
             className: a,
-            children: [P, (0, i.jsx)(N, {
+            children: [b, (0, i.jsx)(N, {
                 text: D,
                 className: s
-            }), null != n && n.some(e => (0, d.default)(e, b)) ? (0, i.jsx)(I.default, {
+            }), null != n && n.some(e => (0, d.default)(e, P)) ? (0, i.jsx)(I.default, {
                 width: 16,
                 height: 16,
                 className: _.icon

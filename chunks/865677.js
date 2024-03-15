@@ -31,12 +31,12 @@ function(e, t, n) {
         N = n("773336"),
         A = n("602043"),
         O = n("191225"),
-        R = n("706508"),
-        M = n("612696"),
+        M = n("706508"),
+        R = n("612696"),
         k = n("126808"),
         L = n("871388"),
-        P = n("407908"),
-        b = n("141962"),
+        b = n("407908"),
+        P = n("141962"),
         j = n("295999"),
         U = n("954016"),
         D = n("49111"),
@@ -70,7 +70,7 @@ function(e, t, n) {
                 channelId: i
             } = e;
             return n === (null == t ? void 0 : t.application_id) && i === X
-        })), ee = (0, a.useStateFromStores)([_.default], () => null != t && null != t.application_id && _.default.getState(t.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([m.default, E.default, x.default, S.default, C.default, T.default, g.default], () => (0, M.default)({
+        })), ee = (0, a.useStateFromStores)([_.default], () => null != t && null != t.application_id && _.default.getState(t.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([m.default, E.default, x.default, S.default, C.default, T.default, g.default], () => (0, R.default)({
             user: V,
             activity: t,
             application: et,
@@ -101,7 +101,7 @@ function(e, t, n) {
                 messageId: null,
                 intent: U.ActivityIntent.PLAY,
                 embedded: (0, L.default)(t, D.ActivityFlags.EMBEDDED)
-            }), (0, P.default)({
+            }), (0, b.default)({
                 type: D.AnalyticsGameOpenTypes.JOIN,
                 userId: e.id,
                 applicationId: t.application_id,
@@ -113,12 +113,12 @@ function(e, t, n) {
             let e = !1;
             if (K) {
                 if (!en || null == X || null == t.application_id) return;
-                e = await (0, R.default)({
+                e = await (0, M.default)({
                     applicationId: t.application_id,
                     currentEmbeddedApplication: n,
                     activityChannelId: X,
                     locationObject: el.location,
-                    embeddedActivitiesManager: b.default,
+                    embeddedActivitiesManager: P.default,
                     analyticsLocations: W
                 })
             }

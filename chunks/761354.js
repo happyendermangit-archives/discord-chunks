@@ -5,7 +5,7 @@ function(e, t, n) {
             return L
         },
         default: function() {
-            return P
+            return b
         }
     }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
     var i = n("37983"),
@@ -35,7 +35,7 @@ function(e, t, n) {
         A = n("483099");
     let O = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
 
-    function R(e) {
+    function M(e) {
         let {
             alt: t,
             spoiler: n,
@@ -70,7 +70,7 @@ function(e, t, n) {
         })
     }
 
-    function M(e) {
+    function R(e) {
         let {
             file: t,
             alt: n,
@@ -132,7 +132,7 @@ function(e, t, n) {
             children: (0, i.jsx)(o.Clickable, {
                 onClick: x,
                 className: A.clickableMedia,
-                children: (0, i.jsx)(R, {
+                children: (0, i.jsx)(M, {
                     size: r,
                     alt: n,
                     spoiler: a,
@@ -160,7 +160,7 @@ function(e, t, n) {
         }, [t]), (0, i.jsx)("div", {
             onMouseEnter: o,
             className: A.mediaContainer,
-            children: (0, i.jsx)(R, {
+            children: (0, i.jsx)(M, {
                 size: r,
                 alt: n,
                 spoiler: a,
@@ -186,7 +186,7 @@ function(e, t, n) {
             size: a = v.AttachmentListItemSizes.MEDIUM,
             onMouseEnter: r
         } = e, [o, u] = l.useState(!1), d = a === v.AttachmentListItemSizes.SMALL;
-        return n.isImage && n.item.platform === c.UploadPlatform.WEB ? (0, i.jsx)(M, {
+        return n.isImage && n.item.platform === c.UploadPlatform.WEB ? (0, i.jsx)(R, {
             file: n.item.file,
             alt: n.description,
             spoiler: n.spoiler,
@@ -215,7 +215,7 @@ function(e, t, n) {
         })
     }
 
-    function P(e) {
+    function b(e) {
         let {
             channelId: t,
             draftType: n,
@@ -225,15 +225,15 @@ function(e, t, n) {
             size: C = v.AttachmentListItemSizes.MEDIUM,
             canEdit: I = !0,
             hideFileName: O = !1,
-            clip: R
-        } = e, M = null != R;
-        C = M ? v.AttachmentListItemSizes.CLIP : C;
+            clip: M
+        } = e, R = null != M;
+        C = R ? v.AttachmentListItemSizes.CLIP : C;
         let k = C === v.AttachmentListItemSizes.SMALL,
-            P = (0, r.useStateFromStores)([m.default], () => {
+            b = (0, r.useStateFromStores)([m.default], () => {
                 var e;
                 return null === (e = m.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
             }),
-            b = e => {
+            P = e => {
                 e.stopPropagation(), (0, o.openModal)(e => (0, i.jsx)(d.default, {
                     ...e,
                     draftType: n,
@@ -259,7 +259,7 @@ function(e, t, n) {
                     className: s({
                         [A.action]: k
                     }),
-                    tooltip: M ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : N.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
+                    tooltip: R ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : N.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
                     onClick: () => u.default.update(t, a.id, n, {
                         spoiler: !a.spoiler
                     }),
@@ -272,12 +272,12 @@ function(e, t, n) {
                             [A.actionBarIcon]: k
                         })
                     })
-                }) : null, I && !M ? (0, i.jsx)(_.default, {
+                }) : null, I && !R ? (0, i.jsx)(_.default, {
                     className: s({
                         [A.action]: k
                     }),
                     tooltip: N.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
-                    onClick: b,
+                    onClick: P,
                     children: (0, i.jsx)(y.default, {
                         className: s({
                             [A.actionBarIcon]: k
@@ -287,7 +287,7 @@ function(e, t, n) {
                     className: s({
                         [A.action]: k
                     }),
-                    tooltip: M ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : N.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                    tooltip: R ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : N.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
                     onClick: () => u.default.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, i.jsx)(g.default, {
@@ -300,7 +300,7 @@ function(e, t, n) {
             draftType: n,
             id: a.id,
             channelId: t,
-            handleEditModal: b,
+            handleEditModal: P,
             keyboardModeEnabled: c,
             size: C,
             className: s({
@@ -309,21 +309,21 @@ function(e, t, n) {
             children: [(0, i.jsx)(L, {
                 upload: a,
                 size: C
-            }), !O && !M && (0, i.jsx)("div", {
+            }), !O && !R && (0, i.jsx)("div", {
                 className: A.filenameContainer,
                 children: (0, i.jsx)(o.Text, {
                     className: A.filename,
                     variant: "text-sm/normal",
                     children: null != h ? h : a.filename
                 })
-            }), M && (0, i.jsxs)(i.Fragment, {
+            }), R && (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(f.default, {
                     className: A.clipsFooter,
-                    createdAt: T.default.extractTimestamp(R.id),
-                    participantIds: R.users,
-                    applicationId: R.applicationId,
-                    title: R.name,
-                    guildId: P
+                    createdAt: T.default.extractTimestamp(M.id),
+                    participantIds: M.users,
+                    applicationId: M.applicationId,
+                    title: M.name,
+                    guildId: b
                 }), (0, i.jsx)(S.TextBadge, {
                     color: p.default.BG_BRAND,
                     className: A.clipsBadge,

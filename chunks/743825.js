@@ -30,15 +30,15 @@ function(e, t, n) {
         N = n("296141"),
         A = n("606013"),
         O = n("32647"),
-        R = n("970153"),
-        M = n("49111"),
+        M = n("970153"),
+        R = n("49111"),
         k = n("782340"),
         L = n("350583");
     new S.default("ChannelEditor.tsx");
-    let P = function() {
+    let b = function() {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
         },
-        b = {
+        P = {
             12: L.fontSize12Padding,
             14: L.fontSize14Padding,
             15: L.fontSize15Padding,
@@ -55,7 +55,7 @@ function(e, t, n) {
             if (this.fixFocus(e), this.props.useSlate !== e.useSlate) {
                 var t, n;
                 let e;
-                e = this.props.useSlate ? this.props.textValue : (0, R.toTextValue)(this.props.richValue, {
+                e = this.props.useSlate ? this.props.textValue : (0, M.toTextValue)(this.props.richValue, {
                     mode: "plain"
                 }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, v.toRichValue)(e))
             } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
@@ -176,9 +176,9 @@ function(e, t, n) {
                 useNewSlashCommands: C,
                 canOnlyUseTextCommands: T,
                 className: N,
-                id: R,
+                id: M,
                 required: k,
-                maxCharacterCount: P,
+                maxCharacterCount: b,
                 allowNewLines: j,
                 "aria-describedby": U,
                 "aria-labelledby": D,
@@ -192,7 +192,7 @@ function(e, t, n) {
                     [L.textAreaSlate]: g,
                     [L.textAreaDisabled]: d || F
                 }),
-                id: R,
+                id: M,
                 placeholder: this.getPlaceholder(),
                 required: k,
                 accessibilityLabel: w,
@@ -212,7 +212,7 @@ function(e, t, n) {
                 onResize: p,
                 onKeyDown: f,
                 onSubmit: h,
-                textAreaPaddingClassName: r(b[y], {
+                textAreaPaddingClassName: r(P[y], {
                     [L.textAreaWithoutAttachmentButton]: E !== _.ChatInputTypes.NORMAL && E !== _.ChatInputTypes.OVERLAY && E !== _.ChatInputTypes.THREAD_CREATION && E !== _.ChatInputTypes.SIDEBAR,
                     [L.textAreaForPostCreation]: E === _.ChatInputTypes.CREATE_FORUM_POST,
                     [L.textAreaCustomGift]: E === _.ChatInputTypes.CUSTOM_GIFT
@@ -225,7 +225,7 @@ function(e, t, n) {
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== G.id || void 0,
                 "aria-activedescendant": null !== (s = G.activeDescendant) && void 0 !== s ? s : void 0,
-                "aria-invalid": o.length > P,
+                "aria-invalid": o.length > b,
                 "aria-describedby": U,
                 "aria-labelledby": D,
                 "aria-autocomplete": "list"
@@ -243,10 +243,10 @@ function(e, t, n) {
             });
             return (0, l.jsxs)(l.Fragment, {
                 children: [(0, l.jsx)(I.ComponentAction, {
-                    event: M.ComponentActions.INSERT_TEXT,
+                    event: R.ComponentActions.INSERT_TEXT,
                     handler: this.handleInsertText
                 }), (0, l.jsx)(I.ComponentAction, {
-                    event: M.ComponentActions.CLEAR_TEXT,
+                    event: R.ComponentActions.CLEAR_TEXT,
                     handler: this.handleClearText
                 }), H]
             })
@@ -390,7 +390,7 @@ function(e, t, n) {
                         files: []
                     }
                 }(e.clipboardData, s.uploadLongMessages ? null != i ? i : a : null);
-                return P("onPaste", [...e.clipboardData.items].map(e => {
+                return b("onPaste", [...e.clipboardData.items].map(e => {
                     if ("file" !== e.kind) return {
                         kind: e.kind,
                         type: e.type

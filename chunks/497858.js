@@ -27,26 +27,26 @@ function(e, t, n) {
         let {
             channel: N,
             type: A
-        } = e, [O, R] = i.useState(() => (0, m.createInitialState)()), M = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
+        } = e, [O, M] = i.useState(() => (0, m.createInitialState)()), R = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
             if (null != e.guild) {
                 var t;
                 return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, E.CLYDE_AI_USER_ID)
             }
             return !1
-        }), L = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, a.useStateFromStores)([d.default, p.default], () => {
+        }), L = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), b = (0, a.useStateFromStores)([d.default, p.default], () => {
             var e, t;
             let n = p.default.getCurrentUser();
             return null !== (t = null != N.guild_id && null != n ? null === (e = d.default.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
         }), {
-            canMentionEveryone: b,
+            canMentionEveryone: P,
             hidePersonalInformation: j
         } = (0, a.useStateFromStoresObject)([c.default, f.default], () => {
             let e = N.isPrivate();
             return {
-                canMentionEveryone: e || P || A === o.ChatInputTypes.RULES_INPUT || c.default.can(x.Permissions.MENTION_EVERYONE, N),
+                canMentionEveryone: e || b || A === o.ChatInputTypes.RULES_INPUT || c.default.can(x.Permissions.MENTION_EVERYONE, N),
                 hidePersonalInformation: f.default.hidePersonalInformation
             }
-        }, [N, A, P]), {
+        }, [N, A, b]), {
             activeCommand: U,
             activeCommandOption: D
         } = (0, a.useStateFromStoresObject)([r.default], () => ({
@@ -63,7 +63,7 @@ function(e, t, n) {
             activeCommand: U,
             activeCommandOption: D,
             canMentionUsers: null !== (T = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== T && T,
-            canMentionEveryone: b,
+            canMentionEveryone: P,
             canMentionClyde: L,
             hidePersonalInformation: j,
             hideMentionDescription: A === o.ChatInputTypes.RULES_INPUT,
@@ -77,11 +77,11 @@ function(e, t, n) {
         return i.useEffect(() => {
             B.updateProps(G)
         }), i.useImperativeHandle(t, () => B, [B]), i.useEffect(() => {
-            let e = e => R(e);
-            return B.on("change", e), B.on("update", M), () => {
-                B.off("change", e), B.off("update", M)
+            let e = e => M(e);
+            return B.on("change", e), B.on("update", R), () => {
+                B.off("change", e), B.off("update", R)
             }
-        }, [M, B]), i.useEffect(() => {
+        }, [R, B]), i.useEffect(() => {
             var e;
             let t = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;
             if (null != t) {

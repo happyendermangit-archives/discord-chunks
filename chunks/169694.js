@@ -40,7 +40,7 @@ function(e, t, n) {
             isVoid: h,
             onChange: I,
             deleteBackward: A,
-            deleteForward: b,
+            deleteForward: P,
             deleteFragment: j
         } = e;
         e.insertData = n => {
@@ -76,7 +76,7 @@ function(e, t, n) {
         }, e.isInline = e => !!_.has(e.type) || m(e), e.isVoid = e => !!("applicationCommandOption" === e.type && v.has(e.optionType)) || h(e), e.deleteBackward = t => {
             L(e, () => A(t))
         }, e.deleteForward = t => {
-            L(e, () => b(t))
+            L(e, () => P(t))
         }, e.deleteFragment = t => {
             L(e, () => j(t))
         };
@@ -143,7 +143,7 @@ function(e, t, n) {
                                                 if (null != c)
                                                     for (let i of c) {
                                                         e.add(i.name);
-                                                        let l = null !== (r = P(n, t, i.name)) && void 0 !== r ? r : i.text,
+                                                        let l = null !== (r = b(n, t, i.name)) && void 0 !== r ? r : i.text,
                                                             a = {
                                                                 type: "applicationCommandOption",
                                                                 optionName: i.name,
@@ -158,7 +158,7 @@ function(e, t, n) {
                                                 for (let i of d.options)
                                                     if (!e.has(i.name) && (i.required || null != u[i.name])) {
                                                         let e, l;
-                                                        m.length > 0 && !v.has(i.type) ? (e = m, m = "") : e = null != (l = P(n, t, i.name)) ? l : "";
+                                                        m.length > 0 && !v.has(i.type) ? (e = m, m = "") : e = null != (l = b(n, t, i.name)) ? l : "";
                                                         let a = {
                                                             type: "applicationCommandOption",
                                                             optionName: i.name,
@@ -174,7 +174,7 @@ function(e, t, n) {
                                             o = m.length > 0 ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(T.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
                                                 text: o
                                             });
-                                            let M = {
+                                            let R = {
                                                 type: "applicationCommand",
                                                 children: N,
                                                 command: {
@@ -184,7 +184,7 @@ function(e, t, n) {
                                                 }
                                             };
                                             S.EditorUtils.withoutNormalizing(e, () => {
-                                                for (let [, t] of(g.SlateTransforms.insertNodes(e, [M], {
+                                                for (let [, t] of(g.SlateTransforms.insertNodes(e, [R], {
                                                         at: C.FIRST_BLOCK_PATH
                                                     }), S.EditorUtils.blocks(e).reverse())) S.PathUtils.isAfter(t, C.FIRST_BLOCK_PATH) && g.SlateTransforms.removeNodes(e, {
                                                     at: t,
@@ -192,10 +192,10 @@ function(e, t, n) {
                                                 })
                                             });
                                             let k = null;
-                                            return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), k
+                                            return null != A ? (g.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (g.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : g.SlateTransforms.resetSelectionToEnd(e), null == O && M(e, d), k
                                         }(t, a, n),
                                         i = x.getOptionValues(t, E);
-                                    return M({
+                                    return R({
                                         guildId: a.guild_id,
                                         channelId: a.id,
                                         command: E,
@@ -285,14 +285,14 @@ function(e, t, n) {
                                             }
                                         })
                                     }), !0)
-                                }(t, E) && R(t, E);
+                                }(t, E) && M(t, E);
                                 let e = x.getOptionValues(t, E),
                                     n = S.EditorUtils.above(t, {
                                         match: e => S.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                                         mode: "lowest"
                                     }),
                                     i = null !== (I = null == n ? void 0 : n[0].optionName) && void 0 !== I ? I : null;
-                                return M({
+                                return R({
                                     guildId: a.guild_id,
                                     channelId: a.id,
                                     command: E,
@@ -350,7 +350,7 @@ function(e, t, n) {
         })
     }
 
-    function R(e, t) {
+    function M(e, t) {
         if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || v.has(t.options[0].type) || x.getOptionNames(e).length > 0) return !1;
         let n = x.getCommandBlock(e);
         if (null == n) return !1;
@@ -379,7 +379,7 @@ function(e, t, n) {
         }), !0)
     }
 
-    function M(e) {
+    function R(e) {
         let {
             guildId: t,
             channelId: n,
@@ -446,7 +446,7 @@ function(e, t, n) {
         }) && g.SlateTransforms.insertText(e, " ")
     }
 
-    function P(e, t, n) {
+    function b(e, t, n) {
         var l, a, s, r;
         let o = null === (a = e.activeCommand) || void 0 === a ? void 0 : null === (l = a.options) || void 0 === l ? void 0 : l.find(e => e.name === n),
             u = e.initialValues[n];

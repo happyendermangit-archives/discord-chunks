@@ -22,8 +22,8 @@ function(e, t, n) {
         h = window.matchMedia("(prefers-contrast: more)"),
         E = window.matchMedia("(prefers-contrast: less)"),
         p = window.matchMedia("(prefers-color-scheme: dark)"),
-        C = window.matchMedia("(prefers-color-scheme: light)"),
-        m = window.matchMedia("(forced-colors: active)"),
+        m = window.matchMedia("(prefers-color-scheme: light)"),
+        C = window.matchMedia("(forced-colors: active)"),
         S = 5;
 
     function g() {
@@ -31,7 +31,7 @@ function(e, t, n) {
     }
     var _ = {
         initBasic() {
-            f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), p.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), h.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
+            f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), p.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), h.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
         },
         init() {
             this.initBasic(), s.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
@@ -64,9 +64,9 @@ function(e, t, n) {
         },
         handleSystemColorPreferencesChanged() {
             let e;
-            p.matches ? e = c.ThemeTypes.DARK : C.matches && (e = c.ThemeTypes.LIGHT);
+            p.matches ? e = c.ThemeTypes.DARK : m.matches && (e = c.ThemeTypes.LIGHT);
             let t = !u.isPlatformEmbedded || g(),
-                n = t && m.matches ? "active" : "none";
+                n = t && C.matches ? "active" : "none";
             s.default.wait(() => {
                 o.systemColorPreferencesChanged(e, n)
             })

@@ -47,11 +47,11 @@ function(e, t, n) {
                 maxX: i,
                 maxY: o,
                 dockedRect: c
-            } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), E = Math.round(a), p = Math.round(i - s - this._width), C = (0, u.getPlatform)(), m = C !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+            } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), E = Math.round(a), p = Math.round(i - s - this._width), m = (0, u.getPlatform)(), C = m !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
             if (null != c) {
                 var S, g;
                 return {
-                    y: (null !== (S = null == c ? void 0 : c.y) && void 0 !== S ? S : 0) - m,
+                    y: (null !== (S = null == c ? void 0 : c.y) && void 0 !== S ? S : 0) - C,
                     x: null !== (g = null == c ? void 0 : c.x) && void 0 !== g ? g : 0
                 }
             }

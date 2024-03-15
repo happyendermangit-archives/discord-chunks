@@ -136,7 +136,7 @@ function(e, t, n) {
             }(0, f.setFailed)(e)
         }
     };
-    (s = i || (i = {}))[s.SENDING = 0] = "SENDING", s[s.CREATED = 1] = "CREATED", s[s.FAILED = 2] = "FAILED", s[s.TIMED_OUT = 3] = "TIMED_OUT";
+    (s = i || (i = {}))[s.SENDING = 0] = "SENDING", s[s.CREATED = 1] = "CREATED", s[s.FAILED = 2] = "FAILED", s[s.TIMED_OUT = 3] = "TIMED_OUT", s[s.EPHEMERAL_SUCCESS = 4] = "EPHEMERAL_SUCCESS";
     let I = (e, t) => {
         var n;
         let i = null == t ? void 0 : t.state,
@@ -148,7 +148,8 @@ function(e, t, n) {
         if (a && i === E.InteractionState.CREATED || e.hasFlag(g.MessageFlags.LOADING) && !s) return 1;
         if (null != e.interaction && e.hasFlag(g.MessageFlags.LOADING) && s) return 3;
         else if (null != e.interaction && !e.hasFlag(g.MessageFlags.LOADING) && r) return 3;
-        else if (o && e.state === g.MessageStates.SEND_FAILED) return 2
+        else if (o && e.state === g.MessageStates.SEND_FAILED) return 2;
+        else if (null != e.interaction && e.hasFlag(g.MessageFlags.EPHEMERAL)) return 4
     };
 
     function A(e) {

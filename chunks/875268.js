@@ -35,8 +35,8 @@ function(e, t, n) {
         _ = n("550410"),
         L = n("598873"),
         w = n("54727"),
-        b = n("336971"),
-        O = n("954519"),
+        O = n("336971"),
+        b = n("954519"),
         D = n("857398"),
         R = n("373469"),
         F = n("271938"),
@@ -272,7 +272,7 @@ function(e, t, n) {
                 let {
                     isSelf: e
                 } = this.viewProperties;
-                return (0, a.jsx)(O.default, {
+                return (0, a.jsx)(b.default, {
                     isSelfStream: e,
                     className: el.rightTrayIcon,
                     onClick: this.handleStopStream
@@ -291,7 +291,7 @@ function(e, t, n) {
                         compact: !0
                     })
                 })
-            }, this.renderPopoutIcon = () => (0, a.jsx)(b.default, {
+            }, this.renderPopoutIcon = () => (0, a.jsx)(O.default, {
                 className: el.rightTrayIcon,
                 popoutOpen: !1,
                 onOpenPopout: this.handleOpenPopout,

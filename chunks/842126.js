@@ -36,12 +36,12 @@ function(e, t, n) {
                 getEmojiRowProps: N,
                 isScrolling: A,
                 isUsingKeyboardNavigation: O,
-                rowIndex: R,
-                allowAnimatedEmoji: M,
+                rowIndex: M,
+                allowAnimatedEmoji: R,
                 showEmojiFavoriteTooltip: k,
                 channelGuildId: L,
-                category: P,
-                selectedItemClassName: b,
+                category: b,
+                selectedItemClassName: P,
                 messageId: j,
                 isBurstReaction: U,
                 inNitroLockedSection: D
@@ -82,7 +82,7 @@ function(e, t, n) {
                                     tabIndex: p,
                                     onFocus: h,
                                     ...x
-                                } = null !== (e = v(o, R)) && void 0 !== e ? e : {};
+                                } = null !== (e = v(o, M)) && void 0 !== e ? e : {};
                                 return (0, l.createElement)("li", {
                                     ...x,
                                     key: t
@@ -94,7 +94,7 @@ function(e, t, n) {
                                             [I.emojiItemLarge]: W,
                                             [I.emojiItemMedium]: Y,
                                             [I.emojiItemSelected]: u,
-                                            [null != b ? b : ""]: u,
+                                            [null != P ? P : ""]: u,
                                             [I.showPulse]: H === t
                                         }),
                                         onFocus: null != h ? h : c,
@@ -120,15 +120,15 @@ function(e, t, n) {
                                 visibleRowIndex: s
                             } = e, r = G.rowIndex === s && G.columnIndex === l;
                             return (0, i.jsx)(y.default, {
-                                rowIndex: R,
+                                rowIndex: M,
                                 descriptor: e,
                                 emojiItemKey: t,
                                 isInspected: r,
                                 isScrolling: A,
                                 isUsingKeyboardNavigation: O,
                                 surrogateCodePoint: _,
-                                allowAnimatedEmoji: M,
-                                selectedItemClassName: b,
+                                allowAnimatedEmoji: R,
+                                selectedItemClassName: P,
                                 onSelect: a,
                                 onInspect: T,
                                 channelGuildId: L,
@@ -147,7 +147,7 @@ function(e, t, n) {
                     }
                 },
                 Z = e => (0, i.jsx)("ul", {
-                    ...N(R),
+                    ...N(M),
                     className: s(I.emojiListRow, {
                         [I.emojiListRowLargeSize]: W,
                         [I.emojiListRowMediumSize]: Y
@@ -155,7 +155,7 @@ function(e, t, n) {
                     ref: K,
                     children: e.map(z)
                 });
-            if (P !== g.EmojiCategoryTypes.TOP_GUILD_EMOJI) return Z(t);
+            if (b !== g.EmojiCategoryTypes.TOP_GUILD_EMOJI) return Z(t);
             let J = t.filter(e => !!w && e.type === E.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === g.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === g.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
                 q = t.filter(e => e.subCategory === g.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
             return 0 === q.length ? Z(t) : (0, i.jsxs)("div", {

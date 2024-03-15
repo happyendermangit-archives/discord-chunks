@@ -14,10 +14,10 @@ function(e, t, n) {
             return O
         },
         RoleMention: function() {
-            return R
+            return M
         },
         ChannelMention: function() {
-            return M
+            return R
         },
         SoundboardMention: function() {
             return k
@@ -26,10 +26,10 @@ function(e, t, n) {
             return L
         },
         CommandMention: function() {
-            return P
+            return b
         },
         Timestamp: function() {
-            return b
+            return P
         }
     });
     var i = n("37983");
@@ -143,7 +143,7 @@ function(e, t, n) {
         return c
     }
 
-    function R(e) {
+    function M(e) {
         let {
             id: t,
             guildId: n
@@ -162,7 +162,7 @@ function(e, t, n) {
         })
     }
 
-    function M(e) {
+    function R(e) {
         let {
             id: t
         } = e, n = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = I.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
@@ -203,7 +203,7 @@ function(e, t, n) {
         })
     }
 
-    function P(e) {
+    function b(e) {
         let {
             text: t,
             id: n
@@ -213,7 +213,7 @@ function(e, t, n) {
         })
     }
 
-    function b(e) {
+    function P(e) {
         let {
             timestamp: t
         } = e;

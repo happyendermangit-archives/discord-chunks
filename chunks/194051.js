@@ -17,8 +17,8 @@ function(e, t, n) {
     (r = a || (a = {}))[r.INVALID = 0] = "INVALID", r[r.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", r[r.VALID = 2] = "VALID";
     let E = new Set,
         p = new Set,
-        C = new Set,
-        m = [],
+        m = new Set,
+        C = [],
         S = {
             BROADCASTS_BY_USER_ID: e => "user:".concat(e),
             BROADCASTS_BY_CHANNEL_ID: e => "channel:".concat(e),
@@ -34,12 +34,12 @@ function(e, t, n) {
         if (null == t) {
             let t = g.get(e);
             return !!(null != t && (0, s.isEqual)(t.source, n)) && (g.delete(e), void 0)
-        }!E.has(e) && !p.has(e) && (C.add(e), m = [...C]);
+        }!E.has(e) && !p.has(e) && (m.add(e), C = [...m]);
         let a = (0, h.broadcastFromServer)(t, e, n);
         g.set(e, a)
     }
 
-    function T(e) {
+    function v(e) {
         return null != e ? {
             type: h.BroadcastSourceType.GUILD,
             guildId: e
@@ -47,7 +47,7 @@ function(e, t, n) {
             type: h.BroadcastSourceType.GLOBAL
         }
     }
-    class v extends i.default.Store {
+    class T extends i.default.Store {
         getBroadcasts() {
             return g.values(S.BROADCASTS_BY_VALIDITY(2))
         }
@@ -61,11 +61,11 @@ function(e, t, n) {
             return g.get(e)
         }
         getUserIdsToValidate() {
-            return m
+            return C
         }
     }
-    v.displayName = "BroadcastingStore";
-    var I = new v(u.default, {
+    T.displayName = "BroadcastingStore";
+    var I = new T(u.default, {
         PRESENCE_UPDATES: function(e) {
             let {
                 updates: t
@@ -76,7 +76,7 @@ function(e, t, n) {
                     broadcast: n,
                     guildId: a
                 } = e;
-                _(t.id, n, T(a))
+                _(t.id, n, v(a))
             })
         },
         PRESENCES_REPLACE: function(e) {
@@ -89,7 +89,7 @@ function(e, t, n) {
                     broadcast: n,
                     guildId: a
                 } = e;
-                _(t.id, n, T(a))
+                _(t.id, n, v(a))
             })
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
@@ -103,7 +103,7 @@ function(e, t, n) {
                     broadcast: n,
                     guildId: a
                 } = e;
-                _(t.id, n, T(a))
+                _(t.id, n, v(a))
             }), n.forEach(e => {
                 let {
                     presences: t,
@@ -114,7 +114,7 @@ function(e, t, n) {
                         user: t,
                         broadcast: a
                     } = e;
-                    _(t.id, a, T(n))
+                    _(t.id, a, v(n))
                 })
             })
         },
@@ -123,7 +123,7 @@ function(e, t, n) {
                 data: t
             } = e;
             c.default.keys(t).forEach(e => {
-                f.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? E.add(e) : p.add(e), C.clear(), m = [...C];
+                f.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? E.add(e) : p.add(e), m.clear(), C = [...m];
                 let n = g.get(e);
                 null != n && (g.delete(e), g.set(e, n))
             })
@@ -175,7 +175,7 @@ function(e, t, n) {
             })
         },
         LOGOUT: function() {
-            E.clear(), p.clear(), C.clear(), m = [], g.clear()
+            E.clear(), p.clear(), m.clear(), C = [], g.clear()
         }
     })
 }

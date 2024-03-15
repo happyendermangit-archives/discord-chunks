@@ -37,10 +37,10 @@ function(e, t, n) {
             autoWidth: N = !1,
             soundButtonOverlay: A,
             listPadding: O,
-            renderHeader: R,
-            defaultSoundsOnly: M
+            renderHeader: M,
+            defaultSoundsOnly: R
         } = e, k = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
-            AnalyticsLocationProvider: P
+            AnalyticsLocationProvider: b
         } = (0, c.default)(d.default.SOUNDBOARD_POPOUT);
         return (0, f.default)({
             type: r.ImpressionTypes.POPOUT,
@@ -52,7 +52,7 @@ function(e, t, n) {
             }
         }), l.useEffect(() => {
             x.maybeFetchSoundboardSounds(), m.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, p.setSearchQuery)("")
-        }, []), (0, i.jsx)(P, {
+        }, []), (0, i.jsx)(b, {
             children: (0, i.jsx)("div", {
                 className: s(g.picker, {
                     [g.fetching]: k,
@@ -69,8 +69,8 @@ function(e, t, n) {
                     gridNotice: v,
                     soundButtonOverlay: A,
                     listPadding: O,
-                    renderHeader: R,
-                    defaultSoundsOnly: M
+                    renderHeader: M,
+                    defaultSoundsOnly: R
                 })
             })
         })

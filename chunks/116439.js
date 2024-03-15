@@ -8,39 +8,45 @@ function(e, t, n) {
             return h
         }
     });
-    var a = n("37983");
-    n("884691");
-    var r = n("414456"),
-        s = n.n(r),
-        i = n("244201"),
-        l = n("289656"),
-        u = n("437825"),
-        o = n("142303"),
+    var a = n("37983"),
+        r = n("884691"),
+        s = n("414456"),
+        i = n.n(s),
+        l = n("881913"),
+        u = n("244201"),
+        o = n("289656"),
         d = n("981913"),
         c = n("423725");
 
     function f(e) {
-        let t = (0, l.getVideoButtonLabel)(e),
+        let t = (0, o.getVideoButtonLabel)(e),
             {
                 enabled: n,
-                cameraUnavailable: r,
-                onChange: s,
+                cameraUnavailable: s,
+                onChange: i,
                 onCameraUnavailable: d,
                 hasPermission: c,
                 children: f,
                 channelLimitReached: h = !1,
                 join: E
             } = e,
-            p = (0, i.useAppContext)(),
-            C = r ? () => d() : () => s(!e.enabled, p);
-        return (0, a.jsx)(a.Fragment, {
+            p = (0, u.useAppContext)(),
+            m = s ? () => d() : () => i(!e.enabled, p),
+            {
+                Component: C,
+                play: S,
+                events: g
+            } = (0, l.useVideoLottie)(E || n ? "mute" : "unmute");
+        return r.useEffect(() => () => S(), [n, S]), (0, a.jsx)(a.Fragment, {
             children: f({
-                onClick: C,
+                onClick: m,
                 active: n,
                 disabled: !n && (!c || h),
-                iconComponent: E || n ? u.default : o.default,
+                iconComponent: C,
                 label: t,
-                unavailable: r
+                unavailable: s,
+                onMouseEnter: E ? void 0 : g.onMouseEnter,
+                onMouseLeave: E ? void 0 : g.onMouseLeave
             })
         })
     }
@@ -50,22 +56,22 @@ function(e, t, n) {
             enabled: t,
             join: n,
             channel: r,
-            onChange: i,
+            onChange: s,
             onCameraUnavailable: l,
             cameraUnavailable: u,
             hasPermission: o,
             className: h,
             channelLimitReached: E,
             channelLimit: p,
-            centerButton: C = !1,
-            onPopoutClick: m,
+            centerButton: m = !1,
+            onPopoutClick: C,
             ...S
-        } = e, g = C ? d.CenterControlButton : d.default;
+        } = e, g = m ? d.CenterControlButton : d.default;
         return (0, a.jsx)(f, {
             enabled: t,
             join: n,
             channel: r,
-            onChange: i,
+            onChange: s,
             onCameraUnavailable: l,
             cameraUnavailable: u,
             hasPermission: o,
@@ -74,16 +80,26 @@ function(e, t, n) {
             children: e => {
                 let {
                     unavailable: n,
-                    ...r
+                    onMouseEnter: r,
+                    onMouseLeave: s,
+                    ...l
                 } = e;
                 return (0, a.jsx)(g, {
-                    ...r,
+                    ...l,
                     ...S,
+                    onMouseEnter: e => {
+                        var t;
+                        null === (t = S.onMouseEnter) || void 0 === t || t.call(S, e), null == r || r()
+                    },
+                    onMouseLeave: e => {
+                        var t;
+                        null === (t = S.onMouseLeave) || void 0 === t || t.call(S, e), null == s || s()
+                    },
                     isActive: t,
-                    className: s(h, {
+                    className: i(h, {
                         [c.fauxDisabled]: n
                     }),
-                    onPopoutClick: m
+                    onPopoutClick: C
                 })
             }
         })

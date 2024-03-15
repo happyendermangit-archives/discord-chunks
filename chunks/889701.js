@@ -31,12 +31,12 @@ function(e, t, n) {
         N = n("866353"),
         A = n("178207"),
         O = n("256860"),
-        R = n("364685"),
-        M = n("161585"),
+        M = n("364685"),
+        R = n("161585"),
         k = n("585948"),
         L = n("234175"),
-        P = n("451300"),
-        b = n("668333"),
+        b = n("451300"),
+        P = n("668333"),
         j = n("313790"),
         U = n("908408"),
         D = n("641680"),
@@ -76,10 +76,10 @@ function(e, t, n) {
                 [el, ea] = (0, h.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], r.default),
                 es = l.useRef("");
             l.useImperativeHandle(t, () => ({
-                onPickerOpen: eP
+                onPickerOpen: eb
             }));
             let er = (0, O.useFilteredStickerPackCategories)(u),
-                eo = 0 === er.filter(e => e.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
+                eo = 0 === er.filter(e => e.type !== R.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
                 eu = (0, x.useExpressionPickerGridWidth)({
                     gridWrapperRef: ee,
                     containerWidth: s,
@@ -93,14 +93,14 @@ function(e, t, n) {
                 ep = l.useMemo(() => (0, D.getFilteredStickers)(el, ef, u), [el, ef, u]),
                 em = (0, O.useFavoriteStickers)(),
                 eh = (0, O.useLatestFrecentStickers)(),
-                ex = (0, o.useStateFromStoresObject)([R.default], () => R.default.getAllGuildStickers()),
+                ex = (0, o.useStateFromStoresObject)([M.default], () => M.default.getAllGuildStickers()),
                 {
                     sendable: eE = [],
                     sendableWithPremium: ey = []
                 } = null != ep ? ep : {},
                 eg = eE.length + ey.length,
                 eS = l.useCallback(e => {
-                    "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), _(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
+                    "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), _(e.sticker, R.StickerSelectLocation.STICKER_PICKER)
                 }, [_, el, eg]),
                 eC = null != eu && eu > B,
                 {
@@ -123,7 +123,7 @@ function(e, t, n) {
                         location: l
                     } = t;
                     switch (e.type) {
-                        case M.StickerGridItemTypes.CREATE_STICKER:
+                        case R.StickerGridItemTypes.CREATE_STICKER:
                             T.default.track(F.AnalyticEvents.OPEN_MODAL, {
                                 type: F.AnalyticsSections.CREATE_STICKER_MODAL,
                                 location: z
@@ -137,14 +137,14 @@ function(e, t, n) {
                                 })
                             });
                             break;
-                        case M.StickerGridItemTypes.STICKER:
+                        case R.StickerGridItemTypes.STICKER:
                             null != e.sticker && (0, N.isSendableSticker)(e.sticker, ef, u) && eS(e)
                     }
                 }, [z, ef, u, eS]),
                 {
                     getItemProps: eO,
-                    getRowProps: eR,
-                    gridContainerProps: eM,
+                    getRowProps: eM,
+                    gridContainerProps: eR,
                     handleGridContainerKeyDown: ek,
                     isUsingKeyboardNavigation: eL
                 } = (0, k.useKeyboardNavigation)({
@@ -157,12 +157,12 @@ function(e, t, n) {
                     gridNavigatorId: w.GRID_NAVIGATOR_ID
                 });
             l.useEffect(() => m.StickerPickerStore.resetStoreState, []);
-            let eP = () => {
+            let eb = () => {
                 let e = u.getGuildId(),
                     t = [];
                 if (null !== e) {
                     var n;
-                    t = null !== (n = R.default.getStickersByGuildId(e)) && void 0 !== n ? n : []
+                    t = null !== (n = M.default.getStickersByGuildId(e)) && void 0 !== n ? n : []
                 }
                 let i = 0;
                 null != ex && [...ex.values()].forEach(e => {
@@ -183,7 +183,7 @@ function(e, t, n) {
                 var e;
                 null === (e = en.current) || void 0 === e || e.focus()
             }, []);
-            let eb = l.useCallback(() => {
+            let eP = l.useCallback(() => {
                 Y(), T.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                     location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
                 }), (0, E.navigateToPremiumMarketingPage)()
@@ -197,7 +197,7 @@ function(e, t, n) {
                         stickersListRef: et,
                         channel: u
                     })
-                }), eo ? (0, i.jsx)(P.default, {
+                }), eo ? (0, i.jsx)(b.default, {
                     className: G.emptyState,
                     onClose: Y
                 }) : (0, i.jsxs)(i.Fragment, {
@@ -205,13 +205,13 @@ function(e, t, n) {
                         ref: ee,
                         className: G.listWrapper,
                         id: w.GRID_NAVIGATOR_ID,
-                        ...eM,
-                        children: null != eu ? (0, i.jsx)(b.default, {
+                        ...eR,
+                        children: null != eu ? (0, i.jsx)(P.default, {
                             ref: et,
                             collapsedStickersCategories: ec,
                             filteredStickers: ep,
                             getStickerItemProps: eO,
-                            getStickerRowProps: eR,
+                            getStickerRowProps: eM,
                             gridWidth: eu,
                             gutterWidth: ev,
                             isUsingKeyboardNavigation: eL,
@@ -227,7 +227,7 @@ function(e, t, n) {
                         channel: u
                     })]
                 }), ei && (0, i.jsx)(U.StickersPremiumUpsell, {
-                    onLearnMore: eb
+                    onLearnMore: eP
                 })]
             })
         });

@@ -8,7 +8,7 @@ function(e, t, n) {
             return p
         },
         stopBroadcast: function() {
-            return C
+            return m
         },
         fetchBroadcasterBuckets: function() {
             return S
@@ -55,9 +55,9 @@ function(e, t, n) {
         if (l !== h) return;
         let p = u.default.getSessionId();
         if (null == p) return;
-        let C = o.default.getChannel(f),
-            m = null != C && C.isBroadcastChannel();
-        if (null == C || l !== C.ownerId || !m) return;
+        let m = o.default.getChannel(f),
+            C = null != m && m.isBroadcastChannel();
+        if (null == m || l !== m.ownerId || !C) return;
         let S = function(e) {
             var t;
             let n = s.default.getGameForPID(e),
@@ -76,18 +76,18 @@ function(e, t, n) {
             sessionId: p,
             userId: h,
             applicationId: S,
-            channelId: C.id,
+            channelId: m.id,
             streamKey: e
         })
     }
 
-    function C() {
+    function m() {
         r.default.dispatch({
             type: "BROADCAST_STOP"
         })
     }
 
-    function m(e) {
+    function C(e) {
         let t = {};
         e.forEach(e => {
             t[e] = -1
@@ -114,9 +114,9 @@ function(e, t, n) {
                     type: "BROADCASTER_BUCKETS_RECEIVED",
                     data: n
                 })
-            } else m(e)
+            } else C(e)
         } catch (t) {
-            m(e)
+            C(e)
         }
     }
     async function g() {

@@ -42,15 +42,15 @@ function(e, t, n) {
             locale: N,
             userId: A,
             className: O,
-            showMetadata: R,
-            showInvisibleIcon: M
+            showMetadata: M,
+            showInvisibleIcon: R
         } = e;
-        null == R && (R = !0);
+        null == M && (M = !0);
         let k = null !== (n = E.metadata) && void 0 !== n ? n : {},
-            L = R ? (0, m.getCreatedAtDate)(k[I.MetadataFields.CREATED_AT], N) : null,
-            P = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
-            b = T.default.Messages.CONNECTION_VERIFIED;
-        if (R) switch (E.type) {
+            L = M ? (0, m.getCreatedAtDate)(k[I.MetadataFields.CREATED_AT], N) : null,
+            b = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
+            P = T.default.Messages.CONNECTION_VERIFIED;
+        if (M) switch (E.type) {
             case C.PlatformTypes.REDDIT:
                 l = (0, h.generateRedditMetadataItems)(k);
                 break;
@@ -60,7 +60,7 @@ function(e, t, n) {
             case C.PlatformTypes.TWITTER: {
                 l = (0, h.generateTwitterMetadataItems)(k);
                 let e = "1" === k[I.MetadataFields.TWITTER_VERIFIED];
-                e && (a = P, b = T.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+                e && (a = b, P = T.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
                 break
             }
             case C.PlatformTypes.PAYPAL:
@@ -74,7 +74,7 @@ function(e, t, n) {
         }
         let j = c.default.get((0, p.useLegacyPlatformType)(E.type)),
             U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, E);
-        null != M && M ? d = (0, i.jsx)(g.default, {
+        null != R && R ? d = (0, i.jsx)(g.default, {
             className: s(_.connectedAccountOpenIconContainer, _.connectedAccountHideIcon),
             foregroundColor: "currentColor"
         }) : null != U && (d = (0, i.jsx)(u.Anchor, {
@@ -101,7 +101,7 @@ function(e, t, n) {
                 color: null != a ? a : D,
                 forcedIconColor: w,
                 size: 16,
-                tooltipText: b
+                tooltipText: P
             }) : null;
         return (0, i.jsxs)("div", {
             className: s(_.connectedAccountContainer, null != l && l.length > 0 || null != L ? _.connectedAccountContainerWithMetadata : null, O),

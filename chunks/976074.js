@@ -20,13 +20,13 @@ function(e, t, n) {
         let h = (0, l.useGetStreamApplication)(e),
             E = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
             p = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
-            C = null !== (f = o.default.getVideoStats(p)) && void 0 !== f ? f : {},
-            m = {
+            m = null !== (f = o.default.getVideoStats(p)) && void 0 !== f ? f : {},
+            C = {
                 media_session_id: o.default.getMediaSessionId(p),
                 rtc_connection_id: o.default.getRtcConnectionId(p),
                 stream_region: o.default.getRegion(p),
                 max_viewers: o.default.getMaxViewers(p),
-                ...C
+                ...m
             };
         return null == e ? null : (0, a.jsx)(s.MenuItem, {
             id: "report-stream-problem",
@@ -40,7 +40,7 @@ function(e, t, n) {
                         stream: e,
                         streamApplication: h,
                         isStreamer: E === (null == e ? void 0 : e.ownerId),
-                        analyticsData: m,
+                        analyticsData: C,
                         ...n
                     })
                 })

@@ -22,19 +22,19 @@ function(e, t, n) {
                 style: t,
                 src: n,
                 backgroundSrc: p,
-                userId: C,
-                pulseSpeakingIndicator: m = !1,
+                userId: m,
+                pulseSpeakingIndicator: C = !1,
                 speaking: S = !1,
                 ...g
-            } = e, _ = null != p ? p : n, T = (0, l.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != C ? C : h.EMPTY_STRING_SNOWFLAKE_ID), A = null == I ? void 0 : I.getBannerURL({
+            } = e, _ = null != p ? p : n, v = (0, l.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != m ? m : h.EMPTY_STRING_SNOWFLAKE_ID), A = null == I ? void 0 : I.getBannerURL({
                 size: 1024,
                 canAnimate: f.GifAutoPlay.getSetting()
             });
             if (r.useEffect(() => {
-                    null != C && v && (0, d.default)(C, void 0, {
+                    null != m && T && (0, d.default)(m, void 0, {
                         dispatchWait: !0
                     })
-                }, [v, C]), null == n) return null;
+                }, [T, m]), null == n) return null;
             let M = (0, a.jsx)(i.Avatar, {
                     className: E.avatarWrapper,
                     src: n,
@@ -42,12 +42,12 @@ function(e, t, n) {
                 }),
                 R = {
                     ...t,
-                    backgroundColor: T
+                    backgroundColor: v
                 };
-            return null != A && S && v && (R.backgroundImage = "url(".concat(A, ")"), R.backgroundSize = "cover"), (0, a.jsx)("div", {
+            return null != A && S && T && (R.backgroundImage = "url(".concat(A, ")"), R.backgroundSize = "cover"), (0, a.jsx)("div", {
                 style: R,
                 className: E.background,
-                children: m ? (0, a.jsx)(o.default, {
+                children: C ? (0, a.jsx)(o.default, {
                     shouldAnimate: S,
                     children: M
                 }) : M

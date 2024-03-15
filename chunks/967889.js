@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return N
         }
     }), n("222007");
     var a = n("37983"),
@@ -18,13 +18,13 @@ function(e, t, n) {
         h = n("489740"),
         E = n("355025"),
         p = n("51545"),
-        C = n("155084"),
-        m = n("393414"),
+        m = n("155084"),
+        C = n("393414"),
         S = n("90404"),
         g = n("599110"),
         _ = n("286235"),
-        T = n("50885"),
-        v = n("49111"),
+        v = n("50885"),
+        T = n("49111"),
         I = n("782340"),
         A = n("966585");
 
@@ -50,19 +50,19 @@ function(e, t, n) {
         })
     }
     let R = i.throttle(() => {
-        C.default.increment({
+        m.default.increment({
             name: o.MetricEvents.APP_CRASHED,
             tags: ["reason:".concat(l.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
         }, !0)
     }, 100, {
         trailing: !1
     });
-    class N extends r.PureComponent {
+    class y extends r.PureComponent {
         componentDidCatch(e, t) {
             this.triggerSoftCrash(e, t)
         }
         triggerSoftCrash(e, t) {
-            let n = (0, m.getHistory)().location;
+            let n = (0, C.getHistory)().location;
             this.setState({
                 error: e,
                 info: t
@@ -70,14 +70,14 @@ function(e, t, n) {
             let a = _.default.captureCrash(e, {
                 extra: t
             });
-            g.default.track(v.AnalyticEvents.APP_CRASHED, {
+            g.default.track(T.AnalyticEvents.APP_CRASHED, {
                 path: n.pathname,
                 extra: t,
                 error_message: e.message,
                 error_stack: e.stack,
                 sentry_issue_id: a,
                 uses_client_mods: (0, p.usesClientMods)()
-            }), R(), T.default.cleanupDisplaySleep()
+            }), R(), v.default.cleanupDisplaySleep()
         }
         _handleSubmitReport() {
             location.reload(!0)
@@ -129,5 +129,5 @@ function(e, t, n) {
             }, this.discordErrorsSet = !1
         }
     }
-    var O = N
+    var N = y
 }

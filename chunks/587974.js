@@ -264,7 +264,7 @@ function(e, t, n) {
                 width: n,
                 height: i,
                 overflow: "visible",
-                mask: "url(#".concat(t, ")"),
+                mask: null != t ? "url(#".concat(t, ")") : void 0,
                 children: o
             })
         })

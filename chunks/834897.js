@@ -2,19 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return a
         }
     }), n("222007");
-    var i = n("884691");
+    var i = n("884691"),
+        l = n("244201");
 
-    function l(e) {
-        let [t, n] = (0, i.useState)(() => window.matchMedia(e).matches);
+    function a(e) {
+        let {
+            renderWindow: t
+        } = (0, i.useContext)(l.default), [n, a] = (0, i.useState)(() => t.matchMedia(e).matches);
         return (0, i.useEffect)(() => {
-            let t = window.matchMedia(e),
+            let n = t.matchMedia(e),
                 i = e => {
-                    n(null == e ? void 0 : e.matches)
+                    a(null == e ? void 0 : e.matches)
                 };
-            return i(t), t.addListener(i), () => t.removeListener(i)
-        }, [e]), t
+            return i(n), n.addListener(i), () => n.removeListener(i)
+        }, [e, t]), n
     }
 }

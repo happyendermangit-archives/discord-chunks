@@ -7,12 +7,12 @@ function(e, t, n) {
     });
     var i = n("37983"),
         l = n("884691"),
-        a = n("77078"),
-        s = n("812204"),
-        r = n("685665"),
-        o = n("649844"),
-        u = n("551305"),
-        d = n("978679"),
+        a = n("855643"),
+        s = n("77078"),
+        r = n("812204"),
+        o = n("685665"),
+        u = n("649844"),
+        d = n("551305"),
         c = n("158998"),
         f = n("49111"),
         p = n("646718"),
@@ -24,9 +24,13 @@ function(e, t, n) {
                 channel: n
             } = e, {
                 analyticsLocations: l
-            } = (0, r.default)(s.default.GIFT_BUTTON), x = (0, c.useDirectMessageRecipient)(n);
+            } = (0, o.default)(r.default.GIFT_BUTTON), x = (0, c.useDirectMessageRecipient)(n), {
+                Component: E,
+                events: y,
+                play: g
+            } = (0, a.useGiftLottie)();
             if (t) return null;
-            let E = () => (0, o.default)({
+            let S = () => (0, u.default)({
                 isGift: !0,
                 giftRecipient: null === x ? void 0 : x,
                 initialPlanId: null,
@@ -39,16 +43,21 @@ function(e, t, n) {
                     objectType: f.AnalyticsObjectTypes.GIFT
                 }
             });
-            return (0, i.jsx)(a.Tooltip, {
+            return (0, i.jsx)(s.Tooltip, {
                 text: m.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
-                children: e => (0, i.jsx)(u.default, {
+                children: e => (0, i.jsx)(d.default, {
                     ...e,
                     innerClassName: h.button,
                     isActive: !1,
                     "aria-label": m.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     "aria-haspopup": "dialog",
-                    onClick: E,
-                    children: (0, i.jsx)(d.default, {})
+                    onClick: () => {
+                        S(), g()
+                    },
+                    ...y,
+                    children: (0, i.jsx)(E, {
+                        color: "currentColor"
+                    })
                 })
             })
         })

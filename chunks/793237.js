@@ -17,13 +17,13 @@ function(e, t, n) {
             return O
         },
         setSummaryFeedback: function() {
-            return R
+            return M
         },
         deleteSummary: function() {
             return L
         },
         default: function() {
-            return b
+            return P
         }
     }), n("222007");
     var i = n("884691"),
@@ -139,20 +139,20 @@ function(e, t, n) {
                 a(null)
             }
         }, [e, o]), i.useEffect(() => {
-            if (l !== e && null != l && P.stopPolling(e), o && null != l) return (t || null != e && l !== e) && P.fetchSummaries(e), P.startPolling(e), () => {
-                null != l && P.stopPolling(e)
+            if (l !== e && null != l && b.stopPolling(e), o && null != l) return (t || null != e && l !== e) && b.fetchSummaries(e), b.startPolling(e), () => {
+                null != l && b.stopPolling(e)
             }
         }, [e, t, l, o])
     }
 
-    function R(e, t) {
+    function M(e, t) {
         u.default.dispatch({
             type: "SET_SUMMARY_FEEDBACK",
             summary: e,
             rating: t
         })
     }
-    async function M() {
+    async function R() {
         var e;
         let t, n;
         if (!h.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -232,18 +232,18 @@ function(e, t, n) {
             throw new d.APIError(e)
         }
     }
-    let P = {
+    let b = {
         startPolling: function(e) {
             let t = A(e, 1);
             t - 1 == 0 && (S[e] = setInterval(async () => {
-                await P.fetchSummaries(e)
+                await b.fetchSummaries(e)
             }, x.SUMMARY_POLL_INTERVAL))
         },
         stopPolling: function(e) {
             let t = A(e, -1);
             t <= 0 && (A(e, 0), clearInterval(S[e]))
         },
-        setSummaryFeedback: R,
+        setSummaryFeedback: M,
         useSummaryPolling: O,
         updateVisibleMessages: N,
         setSelectedSummary: v,
@@ -262,7 +262,7 @@ function(e, t, n) {
                     t && e();
                     async function e() {
                         try {
-                            await M()
+                            await R()
                         } catch (e) {}
                         await k(n.split(","))
                     }
@@ -271,5 +271,5 @@ function(e, t, n) {
         },
         deleteSummary: L
     };
-    var b = P
+    var P = b
 }

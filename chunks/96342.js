@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         parse: function() {
-            return M
+            return R
         }
     }), n("222007"), n("70102"), n("781738"), n("424973");
     var i = n("627445"),
@@ -230,9 +230,9 @@ function(e, t, n) {
             updateAgeOnGet: !0
         },
         O = new s(A),
-        R = new s(A);
+        M = new s(A);
 
-    function M(e, t) {
+    function R(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             l = x.findBackticks(e);
@@ -257,7 +257,7 @@ function(e, t, n) {
                 if ("" !== c) {
                     let e = function(e, t, n) {
                         let i = [],
-                            l = n ? R : O,
+                            l = n ? M : O,
                             a = l.get(e);
                         if (null != a) return a;
                         let s = e.replace(/\r\n/g, " \n").replace(/[\r\f]/g, " ").replace(/\t/g, " ") + "\n\n",
@@ -316,7 +316,7 @@ function(e, t, n) {
             case "emoji":
             case "customEmoji": {
                 let l = t.substring(i);
-                if (!l.startsWith(o[0]) && (i = U(e, t, i, t.length), l = t.substring(i)), l.startsWith(o[0])) return b({
+                if (!l.startsWith(o[0]) && (i = U(e, t, i, t.length), l = t.substring(i)), l.startsWith(o[0])) return P({
                     result: e,
                     sourceText: t,
                     text: o[0],
@@ -337,7 +337,7 @@ function(e, t, n) {
                     text: a,
                     id: s
                 } = n;
-                if (null != a) return l(a === o[0], "Slate: text mentions must exactly match the regex match"), b({
+                if (null != a) return l(a === o[0], "Slate: text mentions must exactly match the regex match"), P({
                     result: e,
                     sourceText: t,
                     text: a,
@@ -347,7 +347,7 @@ function(e, t, n) {
                         text: a
                     }
                 });
-                return b({
+                return P({
                     result: e,
                     sourceText: t,
                     text: o[0],
@@ -363,7 +363,7 @@ function(e, t, n) {
                         location: "c70cbb_1"
                     }, {
                         autoTrackExposure: !1
-                    }).enabled) return b({
+                    }).enabled) return P({
                     result: e,
                     sourceText: t,
                     text: o[0],
@@ -401,7 +401,7 @@ function(e, t, n) {
                     if ("inlineStyle" === l.type) return l;
                     throw Error("Slate: rule must be an inlineStyle")
                 }(t, r, i, o);
-                return i = P(e, t, n, i, "syntaxBefore"), a.push(r), i = L(e, t, null != s ? s : "", i, a), a.pop(), i = P(e, t, l, i, "syntaxAfter"), j(t, i)
+                return i = b(e, t, n, i, "syntaxBefore"), a.push(r), i = L(e, t, null != s ? s : "", i, a), a.pop(), i = b(e, t, l, i, "syntaxAfter"), j(t, i)
             }
             default:
                 throw Error("Slate: Unknown rule type: ".concat(r))
@@ -409,7 +409,7 @@ function(e, t, n) {
     }
 
     function L(e, t, n, i, l) {
-        return "string" == typeof n ? i = b({
+        return "string" == typeof n ? i = P({
             result: e,
             sourceText: t,
             text: n,
@@ -421,7 +421,7 @@ function(e, t, n) {
         })), j(t, i)
     }
 
-    function P(e, t, n, i, a) {
+    function b(e, t, n, i, a) {
         if (n.length > 0) {
             let s = t.indexOf(n, i),
                 r = t.substring(i, s + n.length);
@@ -435,7 +435,7 @@ function(e, t, n) {
         return i
     }
 
-    function b(e) {
+    function P(e) {
         let {
             result: t,
             sourceText: n,
@@ -471,7 +471,7 @@ function(e, t, n) {
 
     function U(e, t, n, i) {
         for (; n < i;)
-            if (y.has(t[n])) n = P(e, t, t[n], n, "syntaxBefore"), n = j(t, n);
+            if (y.has(t[n])) n = b(e, t, t[n], n, "syntaxBefore"), n = j(t, n);
             else break;
         return n
     }

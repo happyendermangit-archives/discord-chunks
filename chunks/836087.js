@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return N
         }
     }), n("70102"), n("222007");
     var a = n("37983"),
@@ -18,23 +18,23 @@ function(e, t, n) {
         h = n("901582"),
         E = n("373469"),
         p = n("697218"),
-        C = n("427302"),
-        m = n("462579"),
+        m = n("427302"),
+        C = n("462579"),
         S = n("449008"),
         g = n("387111"),
         _ = n("99795"),
-        T = n("49111"),
-        v = n("782340"),
+        v = n("49111"),
+        T = n("782340"),
         I = n("964376");
 
     function A(e, t) {
         switch (e) {
             case _.ParticipantTypes.ACTIVITY:
-                return v.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
+                return T.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
                     numUsers: t
                 });
             case _.ParticipantTypes.STREAM:
-                return v.default.Messages.SPECTATORS.format({
+                return T.default.Messages.SPECTATORS.format({
                     numViewers: t
                 });
             default:
@@ -61,7 +61,7 @@ function(e, t, n) {
                     className: I.memberListHeader,
                     children: o
                 }), (0, a.jsx)("div", {
-                    children: t.map(e => (0, a.jsx)(C.default, {
+                    children: t.map(e => (0, a.jsx)(m.default, {
                         guildId: null != r ? r : void 0,
                         className: i(I.memberListItem, {
                             [I.popoutDisabled]: n
@@ -94,7 +94,7 @@ function(e, t, n) {
             "aria-label": o,
             children: (0, a.jsxs)("div", {
                 className: i(I.viewers, l),
-                children: [(0, a.jsx)(m.default, {
+                children: [(0, a.jsx)(C.default, {
                     className: I.viewersIcon
                 }), (0, a.jsx)("span", {
                     "aria-hidden": "true",
@@ -103,29 +103,29 @@ function(e, t, n) {
             })
         })
     }
-    let N = [];
+    let y = [];
 
-    function O(e) {
+    function N(e) {
         let {
             channelId: t,
             guildId: s,
             participant: l,
-            className: C,
-            compact: m = !1,
+            className: m,
+            compact: C = !1,
             disableInteraction: g = !1,
-            maxVisibleUsers: v = 3
-        } = e, [A, O] = r.useState(!1), x = r.useRef(new d.DelayedCall(150, () => O(!1))), y = (0, o.useStateFromStoresArray)([E.default, p.default], () => {
+            maxVisibleUsers: T = 3
+        } = e, [A, N] = r.useState(!1), O = r.useRef(new d.DelayedCall(150, () => N(!1))), L = (0, o.useStateFromStoresArray)([E.default, p.default], () => {
             if (l.type === _.ParticipantTypes.STREAM) {
                 let e = E.default.getViewerIds(l.id);
-                return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish) : N
+                return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish) : y
             }
-            return l.type === _.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => p.default.getUser(e)).filter(S.isNotNullish) : N : N
-        }, [l]), L = r.useCallback(() => {
-            x.current.cancel(), O(!0)
+            return l.type === _.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => p.default.getUser(e)).filter(S.isNotNullish) : y : y
+        }, [l]), x = r.useCallback(() => {
+            O.current.cancel(), N(!0)
         }, []), P = r.useCallback(() => {
-            x.current.delay()
+            O.current.delay()
         }, []), D = r.useCallback((e, t) => {
-            L(), (0, f.openContextMenuLazy)(e, async () => {
+            x(), (0, f.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
                 } = await n.el("406784").then(n.bind(n, "406784"));
@@ -136,29 +136,29 @@ function(e, t, n) {
             }, {
                 onClose: P
             })
-        }, [P, L]);
-        if (0 === y.length) return null;
-        if (m) return (0, a.jsx)(R, {
-            maxVisibleUsers: v,
-            users: y,
+        }, [P, x]);
+        if (0 === L.length) return null;
+        if (C) return (0, a.jsx)(R, {
+            maxVisibleUsers: T,
+            users: L,
             guildId: s,
             channelId: t,
-            className: C,
+            className: m,
             participantType: l.type
         });
-        let b = u(y).take(v).map(e => (0, a.jsx)(c.Avatar, {
+        let b = u(L).take(T).map(e => (0, a.jsx)(c.Avatar, {
             src: e.getAvatarURL(s, 24),
             "aria-label": e.username,
             size: c.AvatarSizes.SIZE_24,
             className: I.viewer
         }, e.id)).value();
-        return y.length > v && (b[b.length - 1] = (0, a.jsxs)("div", {
+        return L.length > T && (b[b.length - 1] = (0, a.jsxs)("div", {
             className: I.overflow,
-            children: ["+", y.length - v + 1]
+            children: ["+", L.length - T + 1]
         }, "overflow")), (0, a.jsx)(h.default, {
-            section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
+            section: v.AnalyticsSections.STREAM_VIEWER_POPOUT,
             children: (0, a.jsx)("div", {
-                onMouseEnter: L,
+                onMouseEnter: x,
                 onMouseLeave: P,
                 children: (0, a.jsx)(c.Popout, {
                     renderPopout: () => (0, a.jsx)(M, {
@@ -166,13 +166,13 @@ function(e, t, n) {
                         handleUserContextMenu: D,
                         guildId: s,
                         channelId: t,
-                        users: y,
+                        users: L,
                         disableInteraction: g
                     }),
                     shouldShow: A,
                     position: "top",
                     children: () => (0, a.jsx)("div", {
-                        className: i(I.viewers, C),
+                        className: i(I.viewers, m),
                         children: b
                     })
                 })

@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         },
         CenterControlButton: function() {
-            return h
+            return x
         }
     });
     var i = n("37983");
@@ -13,23 +13,24 @@ function(e, t, n) {
     var l = n("414456"),
         a = n.n(l),
         s = n("77078"),
-        r = n("461380"),
-        o = n("587974"),
-        u = n("550410"),
-        d = n("641568"),
-        c = n("782340"),
-        f = n("4536");
+        r = n("834897"),
+        o = n("461380"),
+        u = n("587974"),
+        d = n("550410"),
+        c = n("641568"),
+        f = n("782340"),
+        p = n("4536");
 
-    function p(e) {
+    function m(e) {
         let {
             label: t,
             onClick: n,
             onKeyDown: l,
             onMouseEnter: r,
             onMouseLeave: o,
-            onContextMenu: d,
+            onContextMenu: u,
             className: c,
-            wrapperClassName: p,
+            wrapperClassName: f,
             iconClassName: m,
             iconComponent: h,
             themeable: x = !1,
@@ -42,7 +43,7 @@ function(e, t, n) {
             grow: T,
             "aria-label": _
         } = e;
-        return (0, i.jsx)(u.default, {
+        return (0, i.jsx)(d.default, {
             children: (0, i.jsx)(s.Tooltip, {
                 position: g,
                 text: t,
@@ -52,7 +53,7 @@ function(e, t, n) {
                 children: e => {
                     let {
                         onClick: t,
-                        onContextMenu: u,
+                        onContextMenu: d,
                         onMouseEnter: g,
                         onMouseLeave: S,
                         ...C
@@ -73,7 +74,7 @@ function(e, t, n) {
                             null == S || S(), null == o || o(e)
                         },
                         onContextMenu: e => {
-                            null == u || u(), null == d || d(e)
+                            null == d || d(), null == u || u(e)
                         },
                         onFocus: e => {
                             null == g || g(), null == r || r(e)
@@ -82,81 +83,75 @@ function(e, t, n) {
                             null == S || S(), null == o || o(e)
                         },
                         disabled: E,
-                        innerClassName: f.lineHeightReset,
+                        innerClassName: p.lineHeightReset,
                         className: a({
-                            [f.active]: y
+                            [p.active]: y
                         }, c),
-                        wrapperClassName: p,
+                        wrapperClassName: f,
                         buttonRef: I,
                         grow: T,
                         "aria-label": _,
                         ...C,
                         children: (0, i.jsx)(h, {
-                            className: a(f.controlIcon, m, {
-                                [f.themeable]: x,
-                                [f.active]: y
-                            })
+                            className: a(p.controlIcon, m, {
+                                [p.themeable]: x,
+                                [p.active]: y
+                            }),
+                            color: "currentColor"
                         })
                     })
                 }
             })
         })
     }
-    let m = {
-        red: f.red,
-        white: f.white,
-        green: f.green,
-        yellow: f.yellow,
-        primaryDark: f.primaryDark,
-        primaryLight: f.primaryLight,
-        activeLight: f.activeLight
+    let h = {
+        red: p.red,
+        white: p.white,
+        green: p.green,
+        yellow: p.yellow,
+        primaryDark: p.primaryDark,
+        primaryLight: p.primaryLight,
+        activeLight: p.activeLight
     };
 
-    function h(e) {
+    function x(e) {
         let {
             color: t,
             isActive: n = !1,
             className: l,
-            iconClassName: h,
-            onPopoutClick: x,
-            popoutOpen: E = !1,
-            ...y
-        } = e, g = (0, d.default)(t, n), S = (0, i.jsx)(p, {
-            ...y,
+            iconClassName: x,
+            onPopoutClick: E,
+            popoutOpen: y = !1,
+            ...g
+        } = e, S = (0, c.default)(t, n), C = (0, r.default)("(max-width: 456px)"), I = (0, i.jsx)(m, {
+            ...g,
             grow: !1,
-            onContextMenu: x,
-            iconClassName: a(h, f.centerIcon),
-            className: a(null == x ? l : f.staticButton, f.centerButton, m[g])
-        }), C = null;
-        return null != x && (C = (0, i.jsxs)("div", {
-            className: a(l, f.contextMenuContainer),
-            children: [(0, i.jsx)(o.default, {
-                mask: o.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
+            onContextMenu: E,
+            iconClassName: a(x, p.centerIcon),
+            className: a(C ? l : null, p.staticButton, p.centerButton, h[S])
+        });
+        return C ? I : (0, i.jsxs)("div", {
+            className: a(l, p.contextMenuContainer),
+            children: [(0, i.jsx)(u.default, {
+                mask: null == E ? null : u.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
                 width: 56,
                 height: 56,
-                children: S
-            }), (0, i.jsx)(u.default, {
+                children: I
+            }), null != E ? (0, i.jsx)(d.default, {
                 children: (0, i.jsx)(s.Clickable, {
-                    "aria-label": c.default.Messages.MORE_OPTIONS,
-                    onClick: x,
-                    onContextMenu: x,
-                    className: a(f.contextMenuNub, m[g], {
-                        [f.active]: E
+                    "aria-label": f.default.Messages.MORE_OPTIONS,
+                    onClick: E,
+                    onContextMenu: E,
+                    className: a(p.contextMenuNub, h[S], {
+                        [p.active]: y
                     }),
-                    children: (0, i.jsx)(r.default, {
-                        className: a(f.contextMenuCaret, {
-                            [f.open]: E
+                    children: (0, i.jsx)(o.default, {
+                        className: a(p.contextMenuCaret, {
+                            [p.open]: y
                         })
                     })
                 })
-            })]
-        })), (0, i.jsxs)(i.Fragment, {
-            children: [C, (0, i.jsx)("div", {
-                className: a({
-                    [f.unmasked]: null != x
-                }, null != x ? l : null),
-                children: S
-            })]
+            }) : null]
         })
     }
 }

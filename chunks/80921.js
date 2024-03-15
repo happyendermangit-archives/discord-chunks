@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return h
         }
     }), n("222007");
     var i = n("37983"),
@@ -10,65 +10,62 @@ function(e, t, n) {
         a = n("414456"),
         s = n.n(a),
         r = n("16470"),
-        o = n("77078"),
+        o = n("497555"),
         u = n("200197"),
         d = n("538282"),
         c = n("551305"),
-        f = n("595086"),
-        p = n("88497"),
-        m = n("13030"),
-        h = n("782340"),
-        x = n("350583"),
-        E = l.memo(l.forwardRef(function(e, t) {
-            let n, {
-                    disabled: a,
-                    type: p
-                } = e,
-                [E, y] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
-                g = l.useContext(u.default),
-                [S, C] = l.useState(!1),
-                I = E === m.ExpressionPickerViewType.STICKER,
-                T = l.useCallback(() => {
-                    (0, d.toggleExpressionPicker)(m.ExpressionPickerViewType.STICKER, p)
-                }, [p]);
+        f = n("13030"),
+        p = n("782340"),
+        m = n("350583"),
+        h = l.memo(l.forwardRef(function(e, t) {
+            let {
+                disabled: n,
+                type: a
+            } = e, [h, x] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default), E = l.useContext(u.default), [y, g] = l.useState(!1), S = h === f.ExpressionPickerViewType.STICKER, C = l.useCallback(() => {
+                (0, d.toggleExpressionPicker)(f.ExpressionPickerViewType.STICKER, a)
+            }, [a]);
             l.useEffect(() => {
                 let e = () => {
                         requestAnimationFrame(() => {
-                            C(!0)
+                            g(!0)
                         })
                     },
                     t = () => {
                         requestAnimationFrame(() => {
-                            C(!1)
+                            g(!1)
                         })
                     };
-                return g.addListener("sticker-suggestions-shown", e), g.addListener("sticker-suggestions-hidden", t), () => {
-                    g.removeListener("sticker-suggestions-shown", e), g.removeListener("sticker-suggestions-hidden", t)
+                return E.addListener("sticker-suggestions-shown", e), E.addListener("sticker-suggestions-hidden", t), () => {
+                    E.removeListener("sticker-suggestions-shown", e), E.removeListener("sticker-suggestions-hidden", t)
                 }
-            }, [g]);
-            let _ = (0, o.useRedesignIconContext)().enabled;
-            return a ? null : (n = (0, i.jsx)(f.default, {
-                className: _ ? "" : x.stickerIcon,
-                winking: S,
-                color: "currentColor"
-            }), (0, i.jsx)("div", {
-                className: s(m.CHAT_INPUT_BUTTON_CLASSNAME, x.buttonContainer),
+            }, [E]);
+            let {
+                Component: I,
+                events: T,
+                play: _
+            } = (0, o.useStickerLottie)();
+            return n ? null : (0, i.jsx)("div", {
+                className: s(f.CHAT_INPUT_BUTTON_CLASSNAME, m.buttonContainer),
                 ref: t,
                 children: (0, i.jsx)(c.default, {
-                    innerClassName: s(x.button, x.stickerButton, {
-                        [x.stickerButtonWithNotification]: !1,
-                        [x.stickerButtonTilted]: S && !I
+                    innerClassName: s(m.button, m.stickerButton, {
+                        [m.stickerButtonTilted]: y && !S
                     }),
-                    onClick: T,
-                    isActive: I,
-                    "aria-label": h.default.Messages.STICKER_BUTTON_LABEL,
-                    "aria-expanded": I,
+                    ...T,
+                    onClick: () => {
+                        C(), _()
+                    },
+                    isActive: S,
+                    "aria-label": p.default.Messages.STICKER_BUTTON_LABEL,
+                    "aria-expanded": S,
                     "aria-haspopup": "dialog",
-                    "aria-controls": y,
+                    "aria-controls": x,
                     sparkle: !1,
                     notification: null,
-                    children: n
+                    children: (0, i.jsx)(I, {
+                        color: "currentColor"
+                    })
                 })
-            }))
+            })
         }))
 }

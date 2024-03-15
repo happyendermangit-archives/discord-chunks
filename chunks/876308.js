@@ -44,12 +44,12 @@ function(e, t, n) {
         let N, {
                 src: A,
                 volume: O = 1,
-                onVolumeChange: R,
-                onMute: M,
+                onVolumeChange: M,
+                onMute: R,
                 waveform: k,
                 durationSecs: L,
-                onVolumeShow: P,
-                onVolumeHide: b,
+                onVolumeShow: b,
+                onVolumeHide: P,
                 onPlay: j,
                 onPause: U,
                 onError: D
@@ -90,11 +90,11 @@ function(e, t, n) {
             }, [D]),
             eo = l.useCallback(e => {
                 let t = (0, E.perceptualToAmplitude)(e, 1);
-                K(0 === t), ee(t), null == R || R(t)
-            }, [R]),
+                K(0 === t), ee(t), null == M || M(t)
+            }, [M]),
             eu = l.useCallback(() => {
-                K(!V), null == M || M(!V)
-            }, [V, M]),
+                K(!V), null == R || R(!V)
+            }, [V, R]),
             ed = l.useCallback(() => {
                 Z(!0)
             }, []),
@@ -226,8 +226,8 @@ function(e, t, n) {
                 currentWindow: window,
                 onValueChange: eo,
                 onToggleMute: eu,
-                onVolumeShow: P,
-                onVolumeHide: b
+                onVolumeShow: b,
+                onVolumeHide: P
             }), N]
         })
     })

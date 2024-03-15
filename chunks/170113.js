@@ -34,15 +34,15 @@ function(e, t, n) {
         N = n("58608"),
         A = n("719347"),
         O = n("49111"),
-        R = n("782340"),
-        M = n("273818"),
+        M = n("782340"),
+        R = n("273818"),
         k = n("125047");
     let L = "-:--",
-        P = {
+        b = {
             friction: 14,
             tension: 200
         },
-        b = {
+        P = {
             VIDEO: "VIDEO",
             AUDIO: "AUDIO"
         },
@@ -63,15 +63,15 @@ function(e, t, n) {
             duration: n
         } = e, l = null != t ? U(t) : L, a = null != n ? U(n) : L;
         return l = l.padStart(a.length, "0"), (0, i.jsxs)("div", {
-            className: M.durationTimeWrapper,
+            className: R.durationTimeWrapper,
             children: [(0, i.jsx)("span", {
-                className: M.durationTimeDisplay,
+                className: R.durationTimeDisplay,
                 children: l
             }), (0, i.jsx)("span", {
-                className: M.durationTimeSeparator,
+                className: R.durationTimeSeparator,
                 children: "/"
             }), (0, i.jsx)("span", {
-                className: M.durationTimeDisplay,
+                className: R.durationTimeDisplay,
                 children: a
             })]
         })
@@ -103,7 +103,7 @@ function(e, t, n) {
             } = this.state;
             t ? u.default.spring(n, {
                 toValue: e,
-                ...P
+                ...b
             }).start() : n.setValue(e)
         }
         getAnimatedStyle() {
@@ -129,28 +129,28 @@ function(e, t, n) {
                 disabled: s
             } = this.props;
             return e ? (0, i.jsx)(d.Clickable, {
-                className: M.videoButton,
+                className: R.videoButton,
                 onClick: l,
                 tabIndex: s ? -1 : 0,
-                "aria-label": R.default.Messages.PAUSE,
+                "aria-label": M.default.Messages.PAUSE,
                 children: (0, i.jsx)(T.default, {
-                    className: M.controlIcon
+                    className: R.controlIcon
                 }, "pause")
             }) : null != t && t === n ? (0, i.jsx)(d.Clickable, {
-                className: M.videoButton,
+                className: R.videoButton,
                 onClick: a,
                 tabIndex: s ? -1 : 0,
-                "aria-label": R.default.Messages.PLAY_AGAIN,
+                "aria-label": M.default.Messages.PLAY_AGAIN,
                 children: (0, i.jsx)(v.default, {
-                    className: M.controlIcon
+                    className: R.controlIcon
                 }, "replay")
             }) : (0, i.jsx)(d.Clickable, {
-                className: M.videoButton,
+                className: R.videoButton,
                 onClick: a,
                 tabIndex: s ? -1 : 0,
-                "aria-label": R.default.Messages.PLAY,
+                "aria-label": M.default.Messages.PLAY,
                 children: (0, i.jsx)(_.default, {
-                    className: M.controlIcon
+                    className: R.controlIcon
                 }, "play")
             })
         }
@@ -172,7 +172,7 @@ function(e, t, n) {
                 type: h
             } = this.props;
             return (0, i.jsxs)(u.default.div, {
-                className: h === b.VIDEO ? M.videoControls : M.audioControls,
+                className: h === P.VIDEO ? R.videoControls : R.audioControls,
                 onClick: e => e.stopPropagation(),
                 onDoubleClick: e => e.stopPropagation(),
                 style: this.getAnimatedStyle(),
@@ -200,8 +200,8 @@ function(e, t, n) {
                         onToggleMute: d,
                         onVolumeShow: c,
                         onVolumeHide: f,
-                        iconClassName: M.controlIcon,
-                        sliderWrapperClassName: M.volumeSliderWrapper
+                        iconClassName: R.controlIcon,
+                        sliderWrapperClassName: R.volumeSliderWrapper
                     })
                 }), t]
             })
@@ -227,23 +227,23 @@ function(e, t, n) {
             hideDownloadButton: r
         } = e;
         return (0, i.jsxs)("div", {
-            className: M.audioMetadata,
+            className: R.audioMetadata,
             children: [(0, i.jsxs)("div", {
-                className: M.metadataContent,
+                className: R.metadataContent,
                 children: [a ? t : (0, i.jsx)(y.default, {
                     href: l,
-                    className: M.metadataDownload,
-                    iconClassName: M.metadataIcon,
+                    className: R.metadataDownload,
+                    iconClassName: R.metadataIcon,
                     mimeType: s,
                     fileName: t
                 }), (0, i.jsx)("div", {
-                    className: M.metadataSize,
+                    className: R.metadataSize,
                     children: n
                 })]
             }), !r && (0, i.jsx)(y.default, {
                 href: l,
-                className: M.metadataDownload,
-                iconClassName: M.metadataIcon,
+                className: R.metadataDownload,
+                iconClassName: R.metadataIcon,
                 mimeType: s
             })]
         })
@@ -281,10 +281,10 @@ function(e, t, n) {
                 play: e
             } = this.state, t = e ? _.default : T.default;
             return (0, i.jsx)(u.default.div, {
-                className: M.playPausePop,
+                className: R.playPausePop,
                 style: this.getAnimatedStyle(),
                 children: (0, i.jsx)(t, {
-                    className: M.playPausePopIcon
+                    className: R.playPausePopIcon
                 })
             })
         }
@@ -306,7 +306,7 @@ function(e, t, n) {
                     duration: 200
                 })]), u.default.spring(t, {
                     toValue: 1.5,
-                    ...P,
+                    ...b,
                     friction: 80
                 })]).start()
             }
@@ -603,7 +603,7 @@ function(e, t, n) {
                 fullscreen: o
             } = this.state, u = this.getWidth(), d = this.getHeight();
             return n ? (0, i.jsx)(N.default, {
-                className: M.video,
+                className: R.video,
                 controls: !1,
                 height: d,
                 poster: t,
@@ -613,7 +613,7 @@ function(e, t, n) {
                 playsInline: !0,
                 autoPlay: r
             }) : (0, i.jsx)(N.default, {
-                className: M.video,
+                className: R.video,
                 controls: !1,
                 playsInline: !0,
                 autoPlay: r,
@@ -640,7 +640,7 @@ function(e, t, n) {
         }
         renderAudio() {
             return (0, i.jsx)("audio", {
-                className: M.audio,
+                className: R.audio,
                 controls: !1,
                 onClick: this.handleVideoClick,
                 onEnded: this.handleEnded,
@@ -677,12 +677,12 @@ function(e, t, n) {
                     dragging: g
                 }
             } = this, C = this.getWidth();
-            return d || n || t === b.AUDIO ? (0, i.jsx)(w, {
+            return d || n || t === P.AUDIO ? (0, i.jsx)(w, {
                 buffers: r,
                 currentTime: o,
                 duration: u,
                 volume: (0, x.amplitudeToPerceptual)(y, 1),
-                hide: t === b.VIDEO && c,
+                hide: t === P.VIDEO && c,
                 muted: p,
                 autoPlay: n,
                 onDrag: this.handleDrag,
@@ -699,9 +699,9 @@ function(e, t, n) {
                 ref: this.controlsRef,
                 width: h ? window.screen.width : C,
                 disabled: !l,
-                children: t === b.VIDEO ? (0, i.jsx)(f.default, {
-                    "aria-label": R.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
-                    className: M.videoButton,
+                children: t === P.VIDEO ? (0, i.jsx)(f.default, {
+                    "aria-label": M.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
+                    className: R.videoButton,
                     guestWindow: window,
                     onClick: this.toggleFullscreen,
                     node: (0, E.getFullScreenNode)(null == e ? void 0 : e.parentNode, e)
@@ -720,7 +720,7 @@ function(e, t, n) {
                 playable: a,
                 mimeType: s
             } = this.props;
-            return null == e || null == t ? null : l === b.AUDIO ? (0, i.jsx)(F, {
+            return null == e || null == t ? null : l === P.AUDIO ? (0, i.jsx)(F, {
                 fileName: e,
                 fileSize: t,
                 src: n,
@@ -742,7 +742,7 @@ function(e, t, n) {
             } = this.props, {
                 fullscreen: i
             } = this.state, l = this.getWidth();
-            return i ? j : t === b.AUDIO ? {
+            return i ? j : t === P.AUDIO ? {
                 width: void 0,
                 height: "auto"
             } : e ? void 0 : {
@@ -765,21 +765,21 @@ function(e, t, n) {
                 fullscreen: c,
                 hideControls: f,
                 playing: p
-            } = this.state, m = M.wrapperPaused;
-            if (t === b.AUDIO ? m = M.wrapperAudio : f ? m = M.wrapperControlsHidden : p && (m = M.wrapperPlaying), l && t === b.VIDEO) {
+            } = this.state, m = R.wrapperPaused;
+            if (t === P.AUDIO ? m = R.wrapperAudio : f ? m = R.wrapperControlsHidden : p && (m = R.wrapperPlaying), l && t === P.VIDEO) {
                 let t = this.getWidth();
                 return (0, i.jsxs)("div", {
                     className: s(m, {
-                        [M.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
+                        [R.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
                     }),
                     style: o ? void 0 : {
                         width: t,
                         height: e
                     },
                     children: [this.renderMetadata(), this.renderVideo(), (0, i.jsx)("div", {
-                        className: M.playCenter,
+                        className: R.playCenter,
                         children: (0, i.jsx)(C.default, {
-                            className: M.playButton,
+                            className: R.playButton,
                             externalURL: n,
                             renderLinkComponent: r
                         })
@@ -787,8 +787,8 @@ function(e, t, n) {
                 })
             }
             return (0, i.jsxs)("div", {
-                className: s(m, M.newMosaicStyle, a, {
-                    [M.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
+                className: s(m, R.newMosaicStyle, a, {
+                    [R.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
                 }),
                 "data-fullscreen": c,
                 onMouseEnter: this.handleMouseEnter,
@@ -796,9 +796,9 @@ function(e, t, n) {
                 onMouseMove: p ? this.handleMouseMove : void 0,
                 onKeyDown: this.handleKeyDown,
                 style: this.getMediaStyle(),
-                children: [this.renderMetadata(), t === b.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === b.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, i.jsx)("div", {
+                children: [this.renderMetadata(), t === P.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === P.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, i.jsx)("div", {
                     className: s({
-                        [M.overlayContentHidden]: p || c
+                        [R.overlayContentHidden]: p || c
                     }),
                     children: d()
                 }) : null]
@@ -1006,7 +1006,7 @@ function(e, t, n) {
             }
         }
     }
-    V.Types = b, V.defaultProps = {
+    V.Types = P, V.defaultProps = {
         width: 400,
         height: 300,
         forceExternal: !1,

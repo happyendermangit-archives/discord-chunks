@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return M
+            return R
         }
     }), n("222007");
     var i = n("37983"),
@@ -31,18 +31,18 @@ function(e, t, n) {
         N = n("958706"),
         A = n("646718"),
         O = n("782340"),
-        R = n("187971"),
-        M = e => {
-            var t, a, M;
+        M = n("187971"),
+        R = e => {
+            var t, a, R;
             let {
                 onLearnMore: k,
                 onClose: L,
-                channel: P,
-                emojiDescriptor: b,
+                channel: b,
+                emojiDescriptor: P,
                 pickerIntention: j,
                 analyticsLocation: U
             } = e, D = (0, u.default)(), [w, F] = l.useState(!1), G = () => {
-                (0, T.trackPremiumSettingsPaneOpened)(P), (0, p.navigateToPremiumMarketingPage)(), k()
+                (0, T.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), k()
             }, B = (0, r.isThemeLight)(D) ? n("602291") : n("609708"), H = (0, E.usePremiumTrialOffer)(), V = (0, x.usePremiumDiscountOffer)(), K = null != H || null != V, {
                 isLoading: W,
                 suggestedPremiumType: Y
@@ -56,12 +56,12 @@ function(e, t, n) {
             return l.useEffect(() => {
                 if (!W) {
                     let e;
-                    e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : b.subCategory === _.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : b.subCategory === _.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
-                    let t = b.emoji;
+                    e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : P.subCategory === _.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : P.subCategory === _.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
+                    let t = P.emoji;
                     S.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                         type: e,
                         is_animated: t.animated,
-                        is_external: !C.default.isInternalEmojiForGuildId(t, null == P ? void 0 : P.getGuildId()),
+                        is_external: !C.default.isInternalEmojiForGuildId(t, null == b ? void 0 : b.getGuildId()),
                         has_search_query: null != z && "" !== z,
                         location: {
                             ...U,
@@ -71,18 +71,18 @@ function(e, t, n) {
                         sku_id: (0, I.castPremiumSubscriptionAsSkuId)(I.default.getSkuIdForPremiumType(Y))
                     })
                 }
-            }, [W, Y, b, P, U, Z, j, z]), (0, i.jsxs)("div", {
-                className: s(R.premiumPromo, {
-                    [R.unifyTrialUpsell]: K
+            }, [W, Y, P, b, U, Z, j, z]), (0, i.jsxs)("div", {
+                className: s(M.premiumPromo, {
+                    [M.unifyTrialUpsell]: K
                 }),
                 children: [(0, i.jsx)(o.Clickable, {
-                    className: R.premiumPromoClose,
+                    className: M.premiumPromoClose,
                     onClick: L,
                     children: O.default.Messages.CLOSE
                 }), W ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
                     children: [K ? (0, i.jsx)(y.default, {
                         type: A.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                        subscriptionTier: null !== (M = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : A.PremiumSubscriptionSKUs.TIER_2,
+                        subscriptionTier: null !== (R = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== R ? R : A.PremiumSubscriptionSKUs.TIER_2,
                         onClose: L,
                         trialOffer: H,
                         discountOffer: V,
@@ -95,13 +95,13 @@ function(e, t, n) {
                     }) : (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)("img", {
                             alt: "",
-                            className: R.premiumPromoImage,
+                            className: M.premiumPromoImage,
                             src: B
                         }), (0, i.jsx)("div", {
-                            className: R.premiumPromoTitle,
+                            className: M.premiumPromoTitle,
                             children: O.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
                         }), (0, i.jsx)("div", {
-                            className: R.premiumPromoDescription,
+                            className: M.premiumPromoDescription,
                             children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
                                 planName: (0, I.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                                 onClick: G

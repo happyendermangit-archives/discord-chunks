@@ -31,12 +31,12 @@ function(e, t, n) {
         N = n("713135"),
         A = n("561845"),
         O = n("217513"),
-        R = n("641055"),
-        M = n("430312"),
+        M = n("641055"),
+        R = n("430312"),
         k = n("763866"),
         L = n("789321"),
-        P = n("627601"),
-        b = n("935409"),
+        b = n("627601"),
+        P = n("935409"),
         j = n("849674"),
         U = n("590456"),
         D = n("49111"),
@@ -94,7 +94,7 @@ function(e, t, n) {
         let es = (0, A.default)(t.id, n),
             er = (0, j.useShouldShowUserPopoutCollectiblesUpsell)({
                 popoutUser: t,
-                source: P.UserPopoutUpsellSource.USER_POPOUT,
+                source: b.UserPopoutUpsellSource.USER_POPOUT,
                 guildId: n
             }),
             [eo, eu] = l.useState(!1);
@@ -157,13 +157,13 @@ function(e, t, n) {
                     style: er.shouldShow ? {
                         marginTop: L.DEFAULT_COLLECTIBLES_UPSELL_HEIGHT
                     } : void 0,
-                    children: (0, i.jsxs)(M.default, {
+                    children: (0, i.jsxs)(R.default, {
                         user: t,
                         guildId: n,
                         profileType: U.UserProfileTypes.POPOUT,
                         className: er.shouldShow ? F.hasCollectiblesUpsell : void 0,
                         showOutOfBoundaryComponents: eo,
-                        children: [(0, i.jsx)(b.default, {
+                        children: [(0, i.jsx)(P.default, {
                             user: t,
                             displayProfile: W,
                             guildId: n,
@@ -176,13 +176,13 @@ function(e, t, n) {
                             isHovering: Y,
                             upsell: er.shouldShow ? (0, i.jsx)(L.default, {
                                 user: t,
-                                upsellSource: P.UserPopoutUpsellSource.USER_POPOUT,
+                                upsellSource: b.UserPopoutUpsellSource.USER_POPOUT,
                                 displayProfile: W,
                                 onClose: _,
                                 ...er
                             }) : void 0
-                        }), (0, i.jsxs)(M.default.Inner, {
-                            children: [(0, i.jsx)(R.default, {
+                        }), (0, i.jsxs)(R.default.Inner, {
+                            children: [(0, i.jsx)(M.default, {
                                 onTooltipClose: _
                             }), (0, i.jsx)(k.default, {
                                 activity: Q,
