@@ -324,6 +324,7 @@ function(e, t, n) {
                     ...null != this._voiceQuality ? this._voiceQuality.getBytesStats() : null,
                     ...null != this._voiceQuality ? this._voiceQuality.getBufferStats() : null,
                     ...null != this._voiceQuality ? this._voiceQuality.getNetworkStats() : null,
+                    ...null != this._voiceQuality ? this._voiceQuality.getSystemResourceStats() : null,
                     ...null != this._voiceQuality ? this._voiceQuality.getFrameOpStats() : null,
                     ...null != this._voiceQuality ? this._voiceQuality.getDurationStats() : null,
                     ...null != this._voiceQuality ? this._voiceQuality.getTransportStats() : null,

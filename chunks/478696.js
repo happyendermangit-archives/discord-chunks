@@ -9,7 +9,8 @@ function(e, t, n) {
         r = n.n(s),
         a = n("773364"),
         o = n("398183"),
-        l = n("497407");
+        l = n("497407"),
+        u = n("966649");
     i = class {
         start() {
             this.connection.on(a.BaseConnectionEvent.Stats, this.sampleStats)
@@ -60,6 +61,9 @@ function(e, t, n) {
         }
         getNetworkStats() {
             return this.networkQuality.getStats()
+        }
+        getSystemResourceStats() {
+            return this.systemResources.getStats()
         }
         getBufferStats() {
             let e = r.reduce(this.inboundStats, (e, t) => ((null == e || null != t.bufferStats.audioJitterBuffer && null != e.audioJitterBuffer && t.bufferStats.audioJitterBuffer.p75 > e.audioJitterBuffer.p75) && (e = t.bufferStats), e), null);
@@ -183,7 +187,7 @@ function(e, t, n) {
         constructor(e) {
             this.connection = e, this.sampleStats = e => {
                 if (null == e) return;
-                this.networkQuality.incrementNetworkStats((0, o.now)()), this.decryptionFailures = e.transport.decryptionFailures, this.routingFailures = e.transport.routingFailures, this.duration.connected++;
+                this.networkQuality.incrementNetworkStats((0, o.now)()), this.systemResources.takeSample(), this.decryptionFailures = e.transport.decryptionFailures, this.routingFailures = e.transport.routingFailures, this.duration.connected++;
                 let t = this.outboundStats.packetsSent,
                     n = r.reduce(this.inboundStats, (e, t) => (e.packetsReceived += t.packetsReceived, e), {
                         packetsReceived: 0
@@ -300,7 +304,7 @@ function(e, t, n) {
                     packetsReceived: 0
                 });
                 a.packetsReceived > n.packetsReceived && (s = !0, this.duration.listening++), (i || s) && this.duration.participation++
-            }, this.networkQuality = new l.default, this.inboundStats = {}, this.outboundStats = {
+            }, this.networkQuality = new l.default, this.systemResources = new u.default, this.inboundStats = {}, this.outboundStats = {
                 packetsSent: 0,
                 bytesSent: 0,
                 packetsLost: 0,

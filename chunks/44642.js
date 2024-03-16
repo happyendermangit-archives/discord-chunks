@@ -24,8 +24,8 @@ function(e, t, n) {
         }
     }), n("222007"), n("424973");
     var i, s, r, a, o, l, u, d, c = n("398183"),
-        f = n("872507"),
-        _ = n("226445");
+        f = n("226445"),
+        _ = n("966649");
     let E = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
         h = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
         g = [720, 480, 360],
@@ -185,9 +185,7 @@ function(e, t, n) {
             }), this.resolutionHistogram.addSample(a), this.bitrateHistogram.addSample(T), this.fpsHistogram.addSample(I), this.statsWindow.shift()
         }
         addSystemResources() {
-            let e = f.default.getCurrentCPUUsagePercent(),
-                t = f.default.getCurrentMemoryUsageKB();
-            null != e && this.cpuHistogram.addSample(e), null != t && this.memoryHistogram.addSample(t)
+            this.systemResources.takeSample()
         }
         getCodecsUsed() {
             let e = new Set;
@@ -212,7 +210,7 @@ function(e, t, n) {
                 VP9: 0,
                 AV1: 0,
                 UNKNOWN: 0
-            }, this.statsWindow = [], this.cpuHistogram = new _.Histogram, this.memoryHistogram = new _.Histogram, this.fpsHistogram = new _.Histogram, this.bitrateHistogram = new _.Histogram, this.resolutionHistogram = new _.Histogram, this.decoderCodec = "UNKNOWN", this.aggregatedProperties = {
+            }, this.statsWindow = [], this.fpsHistogram = new f.Histogram, this.bitrateHistogram = new f.Histogram, this.resolutionHistogram = new f.Histogram, this.systemResources = new _.default, this.decoderCodec = "UNKNOWN", this.aggregatedProperties = {
                 framesCodec: 0,
                 framesNetwork: 0,
                 packets: 0,
@@ -262,7 +260,7 @@ function(e, t, n) {
                 vp8_libvpx: 0,
                 uncategorized: 0,
                 unknown: 0
-            }, this.encoderCodec = "UNKNOWN", this.targetFrames = 0, this.targetBytesMax = 0, this.targetBytesNetwork = 0, this.targetBitrateHistogram = new _.Histogram, this.averageEncodeTime = 0, this.vmafScoreSum = 0, this.vmafScoreNum = 0, this.vmafHistogram = new _.Histogram, this.psnrDbSum = 0, this.psnrDbNum = 0, this.psnrHistogram = new _.Histogram, this.outboundSinkWantSum = 0, this.outboundSinkWantNum = 0, this.framesDroppedRateLimiter = null, this.framesDroppedEncoderQueue = null, this.framesDroppedCongestionWindow = null
+            }, this.encoderCodec = "UNKNOWN", this.targetFrames = 0, this.targetBytesMax = 0, this.targetBytesNetwork = 0, this.targetBitrateHistogram = new f.Histogram, this.averageEncodeTime = 0, this.vmafScoreSum = 0, this.vmafScoreNum = 0, this.vmafHistogram = new f.Histogram, this.psnrDbSum = 0, this.psnrDbNum = 0, this.psnrHistogram = new f.Histogram, this.outboundSinkWantSum = 0, this.outboundSinkWantNum = 0, this.framesDroppedRateLimiter = null, this.framesDroppedEncoderQueue = null, this.framesDroppedCongestionWindow = null
         }
     }
 }
