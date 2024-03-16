@@ -27,7 +27,7 @@ function(e, t, n) {
         let {
             channel: N,
             type: A
-        } = e, [O, M] = i.useState(() => (0, m.createInitialState)()), R = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
+        } = e, [O, R] = i.useState(() => (0, m.createInitialState)()), M = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
             if (null != e.guild) {
                 var t;
                 return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, E.CLYDE_AI_USER_ID)
@@ -77,11 +77,11 @@ function(e, t, n) {
         return i.useEffect(() => {
             B.updateProps(G)
         }), i.useImperativeHandle(t, () => B, [B]), i.useEffect(() => {
-            let e = e => M(e);
-            return B.on("change", e), B.on("update", R), () => {
-                B.off("change", e), B.off("update", R)
+            let e = e => R(e);
+            return B.on("change", e), B.on("update", M), () => {
+                B.off("change", e), B.off("update", M)
             }
-        }, [R, B]), i.useEffect(() => {
+        }, [M, B]), i.useEffect(() => {
             var e;
             let t = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;
             if (null != t) {

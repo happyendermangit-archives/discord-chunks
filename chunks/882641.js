@@ -45,7 +45,7 @@ function(e, t, n) {
             O = l.useCallback(() => {
                 C(!1)
             }, [C]),
-            M = l.useCallback(() => (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonFocused), []);
+            R = l.useCallback(() => (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonFocused), []);
         return (0, i.jsx)(o.Button, {
             look: o.Button.Looks.BLANK,
             size: o.Button.Sizes.NONE,
@@ -54,7 +54,7 @@ function(e, t, n) {
             onMouseEnter: A,
             onMouseOver: A,
             onMouseLeave: O,
-            onFocus: M,
+            onFocus: R,
             onClick: E,
             "aria-label": f.default.Messages.SELECT_EMOJI,
             "aria-controls": y,

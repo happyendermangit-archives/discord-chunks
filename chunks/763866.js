@@ -31,8 +31,8 @@ function(e, t, n) {
         N = n("545590"),
         A = n("316095"),
         O = n("802279"),
-        M = n("577172"),
-        R = n("465215"),
+        R = n("577172"),
+        M = n("465215"),
         k = n("301998"),
         L = n("379657"),
         b = n("853780"),
@@ -145,7 +145,7 @@ function(e, t, n) {
                         className: w.profileMutuals,
                         user: H,
                         onClose: z
-                    }), (0, i.jsx)(R.default, {
+                    }), (0, i.jsx)(M.default, {
                         userId: H.id,
                         guild: K,
                         guildMember: W
@@ -190,7 +190,7 @@ function(e, t, n) {
                         autoFocus: !J,
                         lastSection: !J,
                         hideNote: $ || q
-                    }), (0, i.jsx)(M.default, {
+                    }), (0, i.jsx)(R.default, {
                         user: H,
                         setNote: Z,
                         canDM: J,

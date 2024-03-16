@@ -42,7 +42,7 @@ function(e, t, n) {
                 autoTrackExposure: !0,
                 experiment: f.default,
                 location: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH
-            }), O = l.useRef(!1), M = l.useCallback(() => {
+            }), O = l.useRef(!1), R = l.useCallback(() => {
                 (0, c.default)({
                     subscriptionTier: y.default.getSkuIdForPremiumType(A),
                     analyticsLocations: v,
@@ -52,7 +52,7 @@ function(e, t, n) {
                         objectType: g.AnalyticsObjectTypes.TIER_2
                     }
                 }), null == T || T()
-            }, [v, _, T, A]), R = A === S.PremiumTypes.TIER_0;
+            }, [v, _, T, A]), M = A === S.PremiumTypes.TIER_0;
             return (0, i.jsx)("div", {
                 className: s(I.wrapper, n),
                 children: N ? (0, i.jsx)(o.Spinner, {
@@ -69,20 +69,20 @@ function(e, t, n) {
                     children: (0, i.jsxs)("div", {
                         className: I.upsell,
                         children: [(0, i.jsx)(x.default, {
-                            color: R ? m.GradientCssUrls.PREMIUM_TIER_0 : m.GradientCssUrls.PREMIUM_TIER_2,
+                            color: M ? m.GradientCssUrls.PREMIUM_TIER_0 : m.GradientCssUrls.PREMIUM_TIER_2,
                             className: I.premiumIcon
                         }), (0, i.jsx)(o.Text, {
                             color: "interactive-normal",
                             className: I.body,
                             variant: "text-sm/normal",
-                            children: R ? C.default.Messages.EMOJI_PICKER_PREMIUM_TIER_0_UPSELL_BODY.format({
+                            children: M ? C.default.Messages.EMOJI_PICKER_PREMIUM_TIER_0_UPSELL_BODY.format({
                                 planName: (0, y.getTierDisplayName)(S.SubscriptionPlans.PREMIUM_MONTH_TIER_0)
                             }) : t
                         }), (0, i.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.LINK,
-                            onClick: M,
-                            children: R ? C.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
+                            onClick: R,
+                            children: M ? C.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
                         }), null != a && (0, i.jsx)(o.Button, {
                             onClick: a,
                             className: I.dismissButton,

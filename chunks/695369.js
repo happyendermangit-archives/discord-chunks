@@ -44,8 +44,8 @@ function(e, t, n) {
                 }, [a]),
                 {
                     Component: O,
-                    events: M,
-                    play: R
+                    events: R,
+                    play: M
                 } = (0, u.useGifLottie)();
             if (n) return null;
             let k = I === x.ExpressionPickerViewType.GIF && T === a;
@@ -58,10 +58,10 @@ function(e, t, n) {
                     ...e,
                     children: (0, i.jsx)(p.default, {
                         innerClassName: y.button,
-                        onMouseEnter: M.onMouseEnter,
-                        onMouseLeave: M.onMouseLeave,
+                        onMouseEnter: R.onMouseEnter,
+                        onMouseLeave: R.onMouseLeave,
                         onClick: () => {
-                            A(), R()
+                            A(), M()
                         },
                         isActive: k,
                         pulse: g,

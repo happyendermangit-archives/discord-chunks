@@ -41,14 +41,14 @@ function(e, t, n) {
                 } = e;
                 return t !== C.ownerId
             }).length > 0
-        })), _ = (0, l.useStateFromStores)([f.default], () => f.default.getChannel(null == C ? void 0 : C.channelId)), [v, N] = (0, d.useCanWatchStream)(_), A = (0, u.useWindowDispatch)(), O = null != I && null != C && I.state !== E.ApplicationStreamStates.ENDED && I.ownerId === C.ownerId, M = e => {
+        })), _ = (0, l.useStateFromStores)([f.default], () => f.default.getChannel(null == C ? void 0 : C.channelId)), [v, N] = (0, d.useCanWatchStream)(_), A = (0, u.useWindowDispatch)(), O = null != I && null != C && I.state !== E.ApplicationStreamStates.ENDED && I.ownerId === C.ownerId, R = e => {
             null != C && (r.default.selectVoiceChannel(C.channelId), !O && (0, o.watchStreamAndTransitionToStream)(C, {
                 forceMultiple: e
             }), A.dispatch(E.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(E.ComponentActions.MODAL_CLOSE), s.default.popAll())
         };
         if (null == C) return null;
-        let R = (0, d.getStreamCTAString)(N);
-        t ? R = y.default.Messages.WATCH_STREAM_STREAMING : O && (R = y.default.Messages.WATCH_STREAM_WATCHING);
+        let M = (0, d.getStreamCTAString)(N);
+        t ? M = y.default.Messages.WATCH_STREAM_STREAMING : O && (M = y.default.Messages.WATCH_STREAM_WATCHING);
         let k = {
             color: n,
             look: S
@@ -56,19 +56,19 @@ function(e, t, n) {
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsxs)(x.default, {
                 disabled: t || O || !v,
-                onClick: () => M(!1),
+                onClick: () => R(!1),
                 ...k,
                 fullWidth: !0,
                 children: [(0, i.jsx)(m.default, {
                     className: g.streamIcon
-                }), R]
+                }), M]
             }, "play"), T && !O ? (0, i.jsx)(a.Tooltip, {
                 text: y.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                 children: e => (0, i.jsx)(x.default, {
                     ...e,
                     onClick: () => {
                         var t;
-                        null === (t = e.onClick) || void 0 === t || t.call(e), M(!0)
+                        null === (t = e.onClick) || void 0 === t || t.call(e), R(!0)
                     },
                     ...k,
                     className: g.iconButton,
