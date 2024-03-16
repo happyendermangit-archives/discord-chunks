@@ -610,10 +610,11 @@ function(e, t, n) {
                 for (let e of t.users) g[e.id] = new u.default(e);
             if (null != e.users)
                 for (let t of e.users) !(t.id in g && O(t)) && (g[t.id] = new u.default(t));
-            for (let t of e.channels) {
-                var n;
-                null === (n = t.rawRecipients) || void 0 === n || n.forEach(e => I(e, !1))
-            }
+            for (let t of [e.privateChannels, e.initialGuildChannels])
+                for (let e of t) {
+                    var n;
+                    null === (n = e.rawRecipients) || void 0 === n || n.forEach(e => I(e, !1))
+                }
         }
         getUserStoreVersion() {
             return m

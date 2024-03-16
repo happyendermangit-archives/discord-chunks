@@ -5,7 +5,7 @@ function(e, t, n) {
             return x
         },
         default: function() {
-            return el
+            return eo
         }
     }), n("222007"), n("581081"), n("70102");
     var i = n("917351"),
@@ -168,7 +168,7 @@ function(e, t, n) {
             for (let t of (A.fileOnly("GuildCreate contained full channels for ".concat(e.id, " #:").concat(e.channels.length)), Y(e.id), U.add(e.id), c.default.restored(e.id), e.channels)) X(t);
         if (null != e.channelUpdates) {
             let t = e.channelUpdates;
-            for (let n of ((t.writes.length > 0 || t.deletes.length > 0) && c.default.invalidate(e.id), t.deletes)) ee(y[n]);
+            for (let n of ((t.writes.length > 0 || t.deletes.length > 0) && c.default.invalidate(e.id), t.deletes)) $(y[n]);
             for (let e of t.writes) X(e)
         }
         if (null != e.threads)
@@ -176,13 +176,6 @@ function(e, t, n) {
     }
 
     function Z(e) {
-        for (let t of e.channels) W((0, f.deserializeChannel)((0, g.castChannelRecord)(t)));
-        e.guilds.forEach(e => {
-            A.fileOnly("Early cache contained full guild channels for ".concat(e.id)), U.add(e.id)
-        })
-    }
-
-    function J(e) {
         if (!g.ALL_CHANNEL_TYPES.has(e.channel.type)) return !1;
         let t = j(e.channel.id);
         if (null == t) t = e.channel;
@@ -196,7 +189,7 @@ function(e, t, n) {
         W(t)
     }
 
-    function $(e) {
+    function J(e) {
         let {
             threads: t
         } = e;
@@ -205,7 +198,7 @@ function(e, t, n) {
         })
     }
 
-    function ee(e) {
+    function $(e) {
         if (null == e) return;
         let t = e.guild_id;
         e.id in R && delete R[e.id], e.id in y && delete y[e.id], e.id in D && delete D[e.id], null != t && null != N[t] && e.id in N[t] && delete N[t][e.id], ! function(e) {
@@ -217,13 +210,13 @@ function(e, t, n) {
         }(e)
     }
 
-    function et(e) {
+    function ee(e) {
         var t, n;
         let {
             channel: i
         } = e, s = null !== (n = null !== (t = y[i.id]) && void 0 !== t ? t : R[i.id]) && void 0 !== n ? n : D[i.id];
         if (null == s) return !1;
-        ee(s), ! function(e) {
+        $(s), ! function(e) {
             if ("basicPermissions" in e || e.type !== I.ChannelTypes.DM) return;
             let t = e.getRecipientId(),
                 n = P[t];
@@ -231,22 +224,22 @@ function(e, t, n) {
         }(s)
     }
 
-    function en(e) {
+    function et(e) {
         let {
             messages: t
         } = e;
         for (let e of t) null != e.thread && !(e.thread.id in D) && g.ALL_CHANNEL_TYPES.has(e.thread.type) && q((0, g.createChannelRecordFromServer)(e.thread))
     }
 
-    function ei(e) {
+    function en(e) {
         let {
             messages: t,
             threads: n,
             channels: i
         } = e;
         for (let e of t)
-            for (let t of e) es(t.thread);
-        n.forEach(es), null == i || i.forEach(e => {
+            for (let t of e) ei(t.thread);
+        n.forEach(ei), null == i || i.forEach(e => {
             let t = (0, g.createChannelRecordFromServer)(e),
                 n = null != j(e.id),
                 i = null != V[e.id];
@@ -254,19 +247,19 @@ function(e, t, n) {
         })
     }
 
-    function es(e) {
+    function ei(e) {
         null != e && !(e.id in D) && g.ALL_CHANNEL_TYPES.has(e.type) && q((0, g.createChannelRecordFromServer)(e))
     }
 
-    function er() {
+    function es() {
         for (let e in b = {}, E.default.getFavoriteChannels()) {
             let t = E.default.getCategoryRecord(e);
             null != t && (b[e] = t)
         }
     }
-    class ea extends a.default.Store {
+    class er extends a.default.Store {
         initialize() {
-            this.waitFor(c.default, T.default, v.default, E.default), this.syncWith([E.default], er)
+            this.waitFor(c.default, T.default, v.default, E.default), this.syncWith([E.default], es)
         }
         hasChannel(e) {
             return null != K(e)
@@ -332,39 +325,50 @@ function(e, t, n) {
             return {
                 loadedGuildIds: Array.from(U).sort(p.default.compare),
                 pendingGuildLoads: Object.keys(w).sort(p.default.compare),
-                guildSizes: Object.keys(N).sort(p.default.compare).map(e => "".concat(e, ": ").concat(eo(e)))
+                guildSizes: Object.keys(N).sort(p.default.compare).map(e => "".concat(e, ": ").concat(ea(e)))
             }
         }
     }
 
-    function eo(e) {
+    function ea(e) {
         return null == N[e] ? null : Object.keys(N[e]).length
     }
-    ea.displayName = "ChannelStore";
-    var el = new ea(o.default, {
+    er.displayName = "ChannelStore";
+    var eo = new er(o.default, {
         BACKGROUND_SYNC: function(e) {
             let {
                 guilds: t
             } = e, n = N;
             y = {}, N = {}, M = {}, t.forEach(e => {
-                if ("unavailable" === e.data_mode) A.fileOnly("Restoring guild channels b/c unavailable in bg sync, for ".concat(e.id, " #:").concat(eo(e.id))), s.forEach(n[e.id], X);
+                if ("unavailable" === e.data_mode) A.fileOnly("Restoring guild channels b/c unavailable in bg sync, for ".concat(e.id, " #:").concat(ea(e.id))), s.forEach(n[e.id], X);
                 else if ("partial" === e.data_mode) {
                     var t, i;
-                    A.fileOnly("Restoring guild channels b/c partial in bg sync, for ".concat(e.id, " #:").concat(eo(e.id))), s.forEach(n[e.id], X);
+                    A.fileOnly("Restoring guild channels b/c partial in bg sync, for ".concat(e.id, " #:").concat(ea(e.id))), s.forEach(n[e.id], X);
                     let r = null !== (i = e.partial_updates.deleted_channel_ids) && void 0 !== i ? i : [];
-                    r.length > 0 && (B(e.id, 1, "handleBackgroundSync"), r.forEach(e => ee(y[e]))), null === (t = e.partial_updates.channels) || void 0 === t || t.forEach(t => X((0, g.createChannelRecordFromServer)(t, e.id)))
+                    r.length > 0 && (B(e.id, 1, "handleBackgroundSync"), r.forEach(e => $(y[e]))), null === (t = e.partial_updates.channels) || void 0 === t || t.forEach(t => X((0, g.createChannelRecordFromServer)(t, e.id)))
                 } else A.fileOnly("BG sync contained full channels for ".concat(e.id, " #:").concat(e.channels.length)), Y(e.id), U.add(e.id), c.default.restored(e.id), e.channels.forEach(t => X((0, g.createChannelRecordFromServer)(t, e.id)))
             })
         },
         CACHE_LOADED_LAZY: function(e) {
-            for (let [t, n] of(e.guilds.length, e.guildChannels))
+            for (let [t, n] of e.guildChannels)
                 for (let e of (A.fileOnly("Lazy cache contained full guild channels for ".concat(t, " #:").concat(n.length)), U.add(t), n)) W((0, g.castChannelRecord)(e))
         },
-        CACHE_LOADED: Z,
+        CACHE_LOADED: function(e) {
+            var t;
+            e.guilds.length;
+            let {
+                privateChannels: n,
+                initialGuildChannels: i
+            } = e;
+            for (let e of [n, i])
+                for (let t of e) W((0, f.deserializeChannel)((0, g.castChannelRecord)(t)));
+            let s = null === (t = i[0]) || void 0 === t ? void 0 : t.guild_id;
+            null != s && (A.fileOnly("Early cache contained full guild channels for ".concat(s)), U.add(s))
+        },
         CHANNEL_CREATE: function(e) {
             W(e.channel)
         },
-        CHANNEL_DELETE: et,
+        CHANNEL_DELETE: ee,
         CHANNEL_RECIPIENT_ADD: function(e) {
             let t = j(e.channelId),
                 n = S.default.getId();
@@ -390,8 +394,8 @@ function(e, t, n) {
         },
         CONNECTION_OPEN: function(e) {
             let t = N;
-            for (let n of (P = {}, y = {}, N = {}, D = {}, M = {}, V = {}, w = {}, k = Date.now(), O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(z), e.guilds)) "partial" === n.dataMode && (s.forEach(t[n.id], X), A.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(eo(n.id)))), Q(n);
-            er()
+            for (let n of (P = {}, y = {}, N = {}, D = {}, M = {}, V = {}, w = {}, k = Date.now(), O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(z), e.guilds)) "partial" === n.dataMode && (s.forEach(t[n.id], X), A.fileOnly("Restoring guild channels for ".concat(n.id, " #:").concat(ea(n.id)))), Q(n);
+            es()
         },
         GUILD_CREATE: function(e) {
             Q(e.guild)
@@ -406,7 +410,7 @@ function(e, t, n) {
             for (let e of i) !(e.id in D) && g.ALL_CHANNEL_TYPES.has(e.type) && (q((0, g.createChannelRecordFromServer)(e)), n = !0);
             return n
         },
-        LOAD_ARCHIVED_THREADS_SUCCESS: $,
+        LOAD_ARCHIVED_THREADS_SUCCESS: J,
         LOAD_CHANNELS: function(e) {
             for (let {
                     guildId: t,
@@ -416,17 +420,19 @@ function(e, t, n) {
                 for (let e of (A.fileOnly("Lazy loaded guild channels for ".concat(t)), (0, f.default)(n), U.add(t), c.default.restored(t), n)) !Object.hasOwn(y, e.id) && X((0, g.castChannelRecord)(e));
             return !1
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: en,
-        LOAD_MESSAGES_SUCCESS: en,
-        LOAD_THREADS_SUCCESS: $,
+        LOAD_MESSAGES_AROUND_SUCCESS: et,
+        LOAD_MESSAGES_SUCCESS: et,
+        LOAD_THREADS_SUCCESS: J,
         LOGOUT: function() {
             A.fileOnly("initializeClear()"), P = {}, y = {}, N = {}, M = {}, R = {}, V = {}, D = {}, U = new Set, w = {}, k = Date.now()
         },
-        OVERLAY_INITIALIZE: Z,
-        SEARCH_FINISH: ei,
-        MOD_VIEW_SEARCH_FINISH: ei,
-        THREAD_CREATE: J,
-        THREAD_DELETE: et,
+        OVERLAY_INITIALIZE: function(e) {
+            for (let t of (e.guilds.length, e.channels)) W((0, f.deserializeChannel)((0, g.castChannelRecord)(t)))
+        },
+        SEARCH_FINISH: en,
+        MOD_VIEW_SEARCH_FINISH: en,
+        THREAD_CREATE: Z,
+        THREAD_DELETE: ee,
         THREAD_LIST_SYNC: function(e) {
             let {
                 threads: t
@@ -435,7 +441,7 @@ function(e, t, n) {
                 g.ALL_CHANNEL_TYPES.has(e.type) && W(e)
             })
         },
-        THREAD_UPDATE: J,
+        THREAD_UPDATE: Z,
         VOICE_BACKGROUND_UPDATE: function(e) {
             let t = j(e.channelId);
             null != t && (t.voiceBackgroundDisplay = e.background, W(t))
