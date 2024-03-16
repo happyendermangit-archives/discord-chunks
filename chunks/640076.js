@@ -31,8 +31,8 @@ function(e, t, n) {
         N = n("635956"),
         A = n("845579"),
         O = n("697218"),
-        R = n("124299"),
-        M = n("600785"),
+        M = n("124299"),
+        R = n("600785"),
         k = n("599110"),
         L = n("764364"),
         b = n("159885"),
@@ -77,8 +77,8 @@ function(e, t, n) {
                 channelGuildId: N,
                 messageId: A,
                 isBurstReaction: O,
-                listHeaderClassName: R,
-                activeSectionIndex: M,
+                listHeaderClassName: M,
+                activeSectionIndex: R,
                 upsellGlowOpacity: L,
                 enableNitroUpsell: b
             } = e, P = (0, x.useAnalyticsContext)(), K = l.useRef(H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), W = l.useMemo(() => "" !== n ? f.default.convert.toCodePoint(n) : "", [n]), et = l.useCallback(e => {
@@ -158,12 +158,12 @@ function(e, t, n) {
                         }) : null,
                         d = null == l ? void 0 : l.toString();
                     null != a && (d = (0, j.getStringForEmojiCategory)(a, null == l ? void 0 : l.toString()));
-                    let c = M === e,
+                    let c = R === e,
                         f = n.isNitroLocked,
                         m = b && f && !c,
                         h = b && f && c;
                     return (0, i.jsx)(T.default, {
-                        className: s(Y.header, R, {
+                        className: s(Y.header, M, {
                             [Y.inactiveNitroHeader]: m,
                             [Y.activeNitroHeader]: h
                         }),
@@ -172,7 +172,7 @@ function(e, t, n) {
                         onClick: () => ei(o, l),
                         children: d
                     }, o)
-                }), [p, t, ei, R, M, b]),
+                }), [p, t, ei, M, R, b]),
                 eo = l.useCallback((e, n) => {
                     let l = p[e],
                         a = en(e),
@@ -324,7 +324,7 @@ function(e, t, n) {
                 "" !== B && (el(0), ee(!1))
             }, [B]), (0, i.jsxs)("div", {
                 className: Y.listWrapper,
-                children: [eS ? (0, i.jsx)(R.default, {
+                children: [eS ? (0, i.jsx)(M.default, {
                     role: "none presentation",
                     className: Y.list,
                     listPadding: eu,
@@ -350,7 +350,7 @@ function(e, t, n) {
                         opacity: es.opacity
                     },
                     className: Y.upsellContainer,
-                    children: [(0, i.jsx)(M.default, {
+                    children: [(0, i.jsx)(R.default, {
                         width: 16,
                         height: 16,
                         className: Y.upsellLock

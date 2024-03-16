@@ -43,8 +43,8 @@ function(e, t, n) {
         N = n("393414"),
         A = n("324929"),
         O = n("18494"),
-        R = n("162771"),
-        M = n("697218"),
+        M = n("162771"),
+        R = n("697218"),
         k = n("145131"),
         L = n("580357"),
         b = n("476263"),
@@ -63,7 +63,7 @@ function(e, t, n) {
         Y = n("782340"),
         z = n("325417");
     let Z = () => {
-            let e = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId());
+            let e = (0, o.useStateFromStores)([M.default], () => M.default.getGuildId());
             return {
                 page: null != e ? V.AnalyticsPages.GUILD_CHANNEL : V.AnalyticsPages.DM_CHANNEL,
                 section: V.AnalyticsSections.EMOJI_UPSELL_POPOUT
@@ -75,7 +75,7 @@ function(e, t, n) {
             } = e;
             return (0, g.useTrackOpenPopout)({
                 emojiId: t.emojiId,
-                currentGuildId: R.default.getGuildId()
+                currentGuildId: M.default.getGuildId()
             }), (0, i.jsx)(u.Dialog, {
                 children: (0, i.jsx)(H.MessagePopoutContent, {
                     children: (0, i.jsxs)(k.default, {
@@ -250,7 +250,7 @@ function(e, t, n) {
                 guildEmoji: b,
                 demoMode: U = !1,
                 nonce: w
-            } = e, F = (0, o.useStateFromStores)([M.default], () => M.default.getCurrentUser()), J = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId()), X = G.default.isPremium(F), Q = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
+            } = e, F = (0, o.useStateFromStores)([R.default], () => R.default.getCurrentUser()), J = (0, o.useStateFromStores)([M.default], () => M.default.getGuildId()), X = G.default.isPremium(F), Q = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
             U && (X = !0, et = !0, ee = !1, Q = !1);
             let {
                 enabled: en
@@ -284,7 +284,7 @@ function(e, t, n) {
             }, {
                 disableTrack: !el
             });
-            let eu = R.default.getGuildId(),
+            let eu = M.default.getGuildId(),
                 ed = (0, B.getEmojiPopoutData)({
                     isPremium: X,
                     hasJoinedEmojiSourceGuild: ee,

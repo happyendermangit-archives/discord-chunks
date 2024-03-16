@@ -43,7 +43,7 @@ function(e, t, n) {
         } = (0, u.useListItem)(n), {
             handleFocus: N,
             handleBlur: A
-        } = (0, m.useFocusInside)(_), O = 0 === T, R = null != r;
+        } = (0, m.useFocusInside)(_), O = 0 === T, M = null != r;
         return (0, a.jsx)(d.FocusRing, {
             children: (0, a.jsx)("li", {
                 ...v,
@@ -77,7 +77,7 @@ function(e, t, n) {
                 ref: t,
                 children: (0, a.jsxs)("div", {
                     className: E.uploadContainer,
-                    children: [s, R ? (0, a.jsx)("div", {
+                    children: [s, M ? (0, a.jsx)("div", {
                         className: E.actionBarContainer,
                         children: (0, a.jsx)("div", {
                             className: o(E.actionBar, {

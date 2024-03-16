@@ -45,8 +45,8 @@ function(e, t, n) {
             let t, {
                     className: n,
                     emojiGrid: O,
-                    guildId: R,
-                    pickerIntention: M,
+                    guildId: M,
+                    pickerIntention: R,
                     channel: k
                 } = e,
                 {
@@ -74,10 +74,10 @@ function(e, t, n) {
                 D = (0, a.useStateFromStores)([h.default], () => h.default.isFocused()),
                 w = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
                 F = p.AnimateEmoji.useSetting(),
-                G = (0, g.useIsFavoriteEmoji)(R, N(j) ? j : null),
+                G = (0, g.useIsFavoriteEmoji)(M, N(j) ? j : null),
                 {
                     newlyAddedEmojis: B
-                } = (0, S.default)(R, M),
+                } = (0, S.default)(M, R),
                 H = j.id,
                 V = (null == P ? void 0 : P.type) === I.EmojiGridItemTypes.EMOJI ? P.subCategory : T.EmojiSubCategory.NONE;
             if (l.useEffect(() => {
@@ -88,7 +88,7 @@ function(e, t, n) {
                             emoji: j,
                             subCategory: V,
                             position: P.columnIndex + 1,
-                            newlyAddedHighlight: V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(R, H)
+                            newlyAddedHighlight: V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(M, H)
                         }))
                     }
                 }), null == j) return null;
@@ -123,8 +123,8 @@ function(e, t, n) {
                 z = L && "CREATE_EMOJI" === j.type ? _.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : A({
                     inspectedEmoji: j,
                     channel: k,
-                    guildId: R,
-                    intention: M,
+                    guildId: M,
+                    intention: R,
                     guild: U
                 });
             return (0, i.jsx)(f.default, {

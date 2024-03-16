@@ -2345,6 +2345,25 @@ function(_, E, I) {
                 opacity: .1
             }
         },
+        COACHMARK_BG: {
+            category: "background",
+            [a.DARK]: {
+                raw: "PRIMARY_800",
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: "WHITE_500",
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: "PLUM_19",
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: "PLUM_17",
+                opacity: 1
+            }
+        },
         CONTEXT_MENU_BACKDROP_BACKGROUND: {
             category: "generic",
             [a.DARK]: {
