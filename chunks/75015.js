@@ -32,10 +32,10 @@ function(e, t, r) {
             return A
         },
         BANNER_ASPECT_RATIO: function() {
-            return S
+            return L
         },
         GUILD_BANNER_ASPECT_RATIO: function() {
-            return L
+            return S
         },
         SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
             return T
@@ -76,12 +76,12 @@ function(e, t, r) {
         d = 960,
         I = 2400,
         A = 600,
-        S = 17 / 6,
-        L = 16 / 9,
+        L = 17 / 6,
+        S = 16 / 9,
         T = 2.5,
         p = 4,
-        f = l / S,
-        O = l / L,
+        f = l / L,
+        O = l / S,
         h = l / T,
         R = l / p,
         y = E.BACKGROUND_REPLACEMENT_SIZE.width / E.BACKGROUND_REPLACEMENT_SIZE.height,
