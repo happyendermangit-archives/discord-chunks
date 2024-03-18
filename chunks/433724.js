@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("222007");
     var i = n("37983"),
         a = n("884691"),
-        l = n("446674"),
-        s = n("77078"),
+        s = n("446674"),
+        l = n("77078"),
         o = n("913144"),
         r = n("891653"),
         u = n("225849"),
@@ -25,12 +25,12 @@ function(e, t, n) {
             className: t,
             disabled: n,
             renderCTAButtons: p
-        } = e, [S, E] = (0, l.useStateFromStoresArray)([c.default], () => [c.default.getCurrentDesktopIcon(), c.default.isEditorOpen]), v = a.useRef(null);
-        (0, u.default)(v, m.AppearanceScrollPositions.CUSTOM_APP_ICONS);
-        let T = (0, d.useUID)(),
-            N = (0, s.useRadioGroup)({
+        } = e, [E, S] = (0, s.useStateFromStoresArray)([c.default], () => [c.default.getCurrentDesktopIcon(), c.default.isEditorOpen]), T = a.useRef(null);
+        (0, u.default)(T, m.AppearanceScrollPositions.CUSTOM_APP_ICONS);
+        let v = (0, d.useUID)(),
+            N = (0, l.useRadioGroup)({
                 orientation: "horizontal",
-                labelledBy: T
+                labelledBy: v
             }),
             I = e => {
                 o.default.dispatch({
@@ -39,7 +39,7 @@ function(e, t, n) {
                 })
             };
         return (0, i.jsx)("div", {
-            ref: v,
+            ref: T,
             children: (0, i.jsx)("div", {
                 ...N,
                 className: _.container,
@@ -49,15 +49,15 @@ function(e, t, n) {
                         className: _.header,
                         children: [(0, i.jsxs)("div", {
                             className: _.headings,
-                            children: [E ? null : (0, i.jsxs)("div", {
+                            children: [S ? null : (0, i.jsxs)("div", {
                                 className: _.title,
-                                children: [(0, i.jsx)(s.Heading, {
+                                children: [(0, i.jsx)(l.Heading, {
                                     variant: "text-md/medium",
                                     children: h.default.Messages.APP_ICON_SETTINGS_TITLE
                                 }), (0, i.jsx)(r.default, {
                                     className: _.premiumIcon
                                 })]
-                            }), (0, i.jsx)(s.Heading, {
+                            }), (0, i.jsx)(l.Heading, {
                                 variant: "text-sm/normal",
                                 children: h.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
                             })]
@@ -71,7 +71,7 @@ function(e, t, n) {
                             return !0 !== t
                         }).map((e, t) => (0, i.jsx)(f.default, {
                             icon: e,
-                            isSelected: S === e.id,
+                            isSelected: E === e.id,
                             onSelect: e => I(e),
                             disabled: n,
                             tabIndex: 0 !== t || n ? void 0 : 0

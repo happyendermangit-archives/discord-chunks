@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("872717"),
         a = n("890747"),
-        l = n("42203"),
-        s = n("821316"),
+        s = n("42203"),
+        l = n("821316"),
         o = n("605250"),
         r = n("836403"),
         u = n("825287"),
@@ -20,7 +20,7 @@ function(e, t, n) {
     }
     async function m(e) {
         try {
-            let t = s.stringify(),
+            let t = l.stringify(),
                 n = "",
                 a = await (0, r.getPushNotificationLogs)().then(e => (0, r.serializePushNotificationLogs)(e, !0)),
                 o = t.length + n.length + a.length;
@@ -29,8 +29,8 @@ function(e, t, n) {
                 t = t.slice(t.length - Math.floor(t.length * e)), n = n.slice(n.length - Math.floor(n.length * e)), a = a.slice(a.length - Math.floor(a.length * e))
             }
             let f = null,
-                g = "\n    ".concat((0, d.default)(f), "\n\n    Metadata:\n    ").concat(JSON.stringify((0, u.default)(), void 0, 2), "\n\n    ChannelStore:\n    ").concat(JSON.stringify(l.default.getDebugInfo(), void 0, 2), "\n\n    Logs:\n    ").concat(t, "\n\n    System logs:\n    ").concat(n, "\n\n    Push Notifications:\n    ").concat(a, "\n    ");
-            s.clear();
+                g = "\n    ".concat((0, d.default)(f), "\n\n    Metadata:\n    ").concat(JSON.stringify((0, u.default)(), void 0, 2), "\n\n    ChannelStore:\n    ").concat(JSON.stringify(s.default.getDebugInfo(), void 0, 2), "\n\n    Logs:\n    ").concat(t, "\n\n    System logs:\n    ").concat(n, "\n\n    Push Notifications:\n    ").concat(a, "\n    ");
+            l.clear();
             let m = c.Endpoints.DEBUG_LOG(e, "discord_app_logs");
             await i.default.post({
                 url: m,

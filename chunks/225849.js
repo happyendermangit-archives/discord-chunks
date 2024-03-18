@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("884691"),
         a = n("446674"),
-        l = n("79112"),
-        s = n("206230"),
+        s = n("79112"),
+        l = n("206230"),
         o = n("26092"),
         r = n("397336"),
         u = n("49111");
@@ -21,7 +21,7 @@ function(e, t, n) {
         [r.UserSettingsScrollPositions.AppearanceScrollPositions.CUSTOM_APP_ICONS]: u.UserSettingsSections.APPEARANCE
     });
     var c = (e, t) => {
-        let n = (0, a.useStateFromStores)([s.default], () => s.default.useReducedMotion),
+        let n = (0, a.useStateFromStores)([l.default], () => l.default.useReducedMotion),
             r = (0, a.useStateFromStores)([o.default], () => o.default.getScrollPosition());
         (0, i.useEffect)(() => {
             let i = e.current;
@@ -29,7 +29,7 @@ function(e, t, n) {
             let a = requestAnimationFrame(() => {
                 i.scrollIntoView({
                     behavior: n ? "auto" : "smooth"
-                }), l.default.clearScrollPosition(d[t])
+                }), s.default.clearScrollPosition(d[t])
             });
             return () => cancelAnimationFrame(a)
         }, [e, t, r, n])
