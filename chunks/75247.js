@@ -31,7 +31,7 @@ function(e, _, E) {
         }
         registerActionHandlers(e, _) {
             this._dispatcher.register(this.getName(), e, e => {
-                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny()) && (s.default.markChanged(this), s.default.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && s.default.resume(!1))
+                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) && (s.default.markChanged(this), s.default.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && s.default.resume(!1))
             }, _, this._dispatchToken)
         }
         getName() {
@@ -48,24 +48,29 @@ function(e, _, E) {
         }
         initialize() {}
         syncWith(e, _, E) {
-            var t, o;
-            let n;
-            this.waitFor(...e);
-            let r = 0,
-                a = () => {
-                    r !== s.default.getChangeSentinel() && (r = s.default.getChangeSentinel(), !1 !== _() && this.emitChange())
-                };
-            t = null != E ? E : 0, o = a, n = null, a = 0 === t ? function() {
-                clearImmediate(n), n = setImmediate(o)
-            } : function() {
-                null == n && (n = setTimeout(() => {
-                    try {
-                        o()
-                    } finally {
-                        n = null
-                    }
-                }, t))
-            }, e.forEach(e => e.addChangeListener(a))
+            if (this.waitFor(...e), null != E) {
+                var t, o;
+                let n, r = 0,
+                    a = () => {
+                        r !== s.default.getChangeSentinel() && (r = s.default.getChangeSentinel(), !1 !== _() && this.emitChange())
+                    };
+                t = null != E ? E : 0, o = a, n = null, a = 0 === t ? function() {
+                    clearImmediate(n), n = setImmediate(o)
+                } : function() {
+                    null == n && (n = setTimeout(() => {
+                        try {
+                            o()
+                        } finally {
+                            n = null
+                        }
+                    }, t))
+                }, e.forEach(e => e.addChangeListener(a))
+            } else e.forEach(e => {
+                e._syncWiths.push({
+                    func: _,
+                    store: this
+                })
+            })
         }
         waitFor() {
             for (var e = arguments.length, _ = Array(e), E = 0; E < e; E++) _[E] = arguments[E];
@@ -83,7 +88,7 @@ function(e, _, E) {
             this._mustEmitChanges = e
         }
         constructor(e, _, E) {
-            this._changeCallbacks = new I.default, this._reactChangeCallbacks = new I.default, this._isInitialized = !1, this.addChangeListener = this._changeCallbacks.add, this.addConditionalChangeListener = this._changeCallbacks.addConditional, this.removeChangeListener = this._changeCallbacks.remove, this.addReactChangeListener = this._reactChangeCallbacks.add, this.removeReactChangeListener = this._reactChangeCallbacks.remove, this._dispatcher = e, this._dispatchToken = this._dispatcher.createToken(), this.registerActionHandlers(null != _ ? _ : {}, E), T.push(this), S && this.initializeIfNeeded()
+            this._changeCallbacks = new I.default, this._reactChangeCallbacks = new I.default, this._syncWiths = [], this._isInitialized = !1, this.addChangeListener = this._changeCallbacks.add, this.addConditionalChangeListener = this._changeCallbacks.addConditional, this.removeChangeListener = this._changeCallbacks.remove, this.addReactChangeListener = this._reactChangeCallbacks.add, this.removeReactChangeListener = this._reactChangeCallbacks.remove, this._dispatcher = e, this._dispatchToken = this._dispatcher.createToken(), this.registerActionHandlers(null != _ ? _ : {}, E), T.push(this), S && this.initializeIfNeeded()
         }
     }).initialized = N, n = o
 }

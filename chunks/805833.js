@@ -4,7 +4,7 @@ function(e, _, E) {
         default: function() {
             return i
         }
-    }), E("860677"), E("70102"), E("222007"), E("704744");
+    }), E("860677"), E("222007"), E("70102"), E("704744");
     var t = E("811022"),
         o = E("377678");
     let n = void 0,
@@ -39,10 +39,12 @@ function(e, _, E) {
             !this.isBatchEmitting && !this.isPaused && a(() => {
                 try {
                     this.isBatchEmitting = !0, this.changeSentinel++;
-                    let e = 0;
+                    let e = 0,
+                        _ = new Set,
+                        E = new Set;
                     for (; this.changedStores.size > 0;) {
                         if (++e > 100) throw r.error("LastFewActions", o.serialize()), Error("change emit loop detected, aborting");
-                        this.emitNonReactOnce()
+                        this.emitNonReactOnce(_, E)
                     }
                     for (; this.reactChangedStores.size > 0;) {
                         if (++e > 100) throw r.error("LastFewActions", o.serialize()), Error("react change emit loop detected, aborting");
@@ -60,16 +62,27 @@ function(e, _, E) {
             return this.isPaused
         }
         markChanged(e) {
-            e._changeCallbacks.hasAny() && this.changedStores.add(e), e._reactChangeCallbacks.hasAny() && this.reactChangedStores.add(e), !this.isBatchEmitting && !this.isDispatching && !this.isPaused && this.emit()
+            (e._changeCallbacks.hasAny() || e._syncWiths.length > 0) && this.changedStores.add(e), e._reactChangeCallbacks.hasAny() && this.reactChangedStores.add(e), !this.isBatchEmitting && !this.isDispatching && !this.isPaused && this.emit()
         }
-        emitNonReactOnce() {
-            let e = Date.now(),
-                _ = this.changedStores;
-            this.changedStores = new Set, _.forEach(e => {
-                e._changeCallbacks.invokeAll(), this.changedStores.delete(e)
+        emitNonReactOnce(e, _) {
+            let E = Date.now(),
+                t = this.changedStores;
+            this.changedStores = new Set, t.forEach(e => {
+                _.add(e), e._changeCallbacks.invokeAll(), this.changedStores.delete(e)
+            }), t.forEach(E => {
+                E._syncWiths.forEach(E => {
+                    let {
+                        func: t,
+                        store: o
+                    } = E;
+                    if (e.has(t)) return;
+                    e.add(t);
+                    let n = t();
+                    !1 !== n && !_.has(o) && (_.add(o), this.markChanged(o))
+                })
             });
-            let E = Date.now();
-            E - e > 100 && r.verbose("Slow batch emitChanges took ".concat(E - e, "ms recentActions:"), o.serialize())
+            let n = Date.now();
+            n - E > 100 && r.verbose("Slow batch emitChanges took ".concat(n - E, "ms recentActions:"), o.serialize())
         }
         emitReactOnce() {
             let e = Date.now(),
