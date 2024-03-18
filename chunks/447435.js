@@ -249,27 +249,29 @@ function(e, t, n) {
     }
 
     function W(e) {
-        var t, n;
+        var t, n, i, s;
         let {
-            channelId: i,
-            messageId: s,
-            attachmentIds: r,
-            embedIds: a
+            channelId: r,
+            messageId: a,
+            attachmentIds: o,
+            embedIds: l
         } = e;
-        if (null == i || null == s || (null !== (t = null == r ? void 0 : r.length) && void 0 !== t ? t : 0) === 0 && (null !== (n = null == a ? void 0 : a.length) && void 0 !== n ? n : 0) === 0) return;
-        let o = m.default.getChannel(i);
+        if (null == r || null == a || (null !== (t = null == o ? void 0 : o.length) && void 0 !== t ? t : 0) === 0 && (null !== (n = null == l ? void 0 : l.length) && void 0 !== n ? n : 0) === 0) return;
+        let u = m.default.getChannel(r);
         v.default.track(N.AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
-            channel_id: i,
-            guild_id: null == o ? void 0 : o.guild_id,
-            message_id: s,
-            embed_ids: a,
+            channel_id: r,
+            guild_id: null == u ? void 0 : u.guild_id,
+            message_id: a,
+            embed_ids: l,
             user_is_underage: (0, h.isCurrentUserTeen)(),
             scan_timeout_duration: I.MESSAGE_SCAN_TIMEOUT,
-            attachment_ids_v2: r
+            attachment_ids_v2: o
         }), E.default.increment({
             name: c.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,
             tags: ["metricVersion:".concat(1)]
-        })
+        }), E.default.distribution({
+            name: c.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION
+        }, (null !== (i = null == o ? void 0 : o.length) && void 0 !== i ? i : 0) + (null !== (s = null == l ? void 0 : l.length) && void 0 !== s ? s : 0))
     }
 
     function z(e) {
@@ -289,7 +291,9 @@ function(e, t, n) {
             num_of_attachments_pending_scan: i,
             num_of_embeds: s,
             num_of_embeds_pending_scan: r
-        })
+        }), E.default.distribution({
+            name: c.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED
+        }, i + r)
     }
 
     function q(e) {

@@ -47,11 +47,12 @@ function(e, t, n) {
             this._metrics.push(n), (t || this._metrics.length >= 100) && this._flush()
         }
         distribution(e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                i = {
-                    ...this._getMetricWithDefaults(e, "distribution"),
-                    value: t
-                };
+            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            if (!(0, u.isMetricsEndpointV2Enabled)("distribution-metric")) return;
+            let i = {
+                ...this._getMetricWithDefaults(e, "distribution"),
+                value: t
+            };
             this._metrics.push(i), (n || this._metrics.length >= 100) && this._flush()
         }
         _flush() {
@@ -62,8 +63,8 @@ function(e, t, n) {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: "1710800306555",
-                            build_number: "276279"
+                            built_at: "1710801995389",
+                            build_number: "276307"
                         }
                     },
                     retries: 1
