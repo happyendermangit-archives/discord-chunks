@@ -44,7 +44,7 @@ function(e, t, n) {
     function T(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
         for (let i of (!Array.isArray(e) && (e = [e]), e)) {
-            if (!t.includes(i.type)) return null;
+            if (void 0 === i || !t.includes(i.type)) return null;
             if (i.type === c.AST_KEY.INLINE_CODE) {
                 let e = [...t, ...n];
                 if (null == T(i.validationChildContent, e)) return null
