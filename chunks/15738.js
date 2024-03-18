@@ -9,7 +9,7 @@ function(e, t, n) {
     n("884691");
     var l = n("414456"),
         a = n.n(l),
-        s = n("907002"),
+        s = n("146606"),
         r = n("739613");
     let o = Object.freeze({
             tension: 400,
