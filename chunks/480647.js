@@ -291,7 +291,7 @@ function(e, t, n) {
         drawGradientRect(e, t, n, i) {
             return null == this.context ? o.DrawResultStatus.Failure : (this.setGradientFillStyle(e, t, n), this.drawRect(i, !0, !1), o.DrawResultStatus.Success)
         }
-        drawGradientRoundedRect(e, t, n, i, l) {
+        drawRoundedGradientRect(e, t, n, i, l) {
             return null == this.context ? o.DrawResultStatus.Failure : (this.setGradientFillStyle(e, t, n), this.drawRoundedRect(i, l, !0, !1), o.DrawResultStatus.Success)
         }
         constructor(e, t) {
