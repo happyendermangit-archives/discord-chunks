@@ -508,7 +508,9 @@ function(e, t, n) {
         }, [X, k, l, et]);
         s.useEffect(() => (u.addAutomaticAnchorCallback(q), () => {
             u.removeAutomaticAnchorCallback(q)
-        }), [u, q]), (0, C.useSummaryPolling)(l.id, !0), s.useEffect(() => (document.addEventListener("mousedown", en), () => {
+        }), [u, q]), s.useEffect(() => {
+            (0, C.fetchSummaries)(l.id)
+        }, [l.id]), s.useEffect(() => (document.addEventListener("mousedown", en), () => {
             document.removeEventListener("mousedown", en)
         }), [en]);
         let ei = s.useMemo(() => (0, a.jsx)(T.default, {
@@ -745,7 +747,9 @@ function(e, t, n) {
         }, [Z, A, l, ee]);
         s.useEffect(() => (r.addAutomaticAnchorCallback(W), () => {
             r.removeAutomaticAnchorCallback(W)
-        }), [r, W]), (0, C.useSummaryPolling)(l.id, !0), s.useEffect(() => (document.addEventListener("mousedown", et), () => {
+        }), [r, W]), s.useEffect(() => {
+            (0, C.fetchSummaries)(l.id)
+        }, [l.id]), s.useEffect(() => (document.addEventListener("mousedown", et), () => {
             document.removeEventListener("mousedown", et)
         }), [et]);
         let en = s.useMemo(() => (0, a.jsx)(T.default, {

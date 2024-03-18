@@ -1539,6 +1539,11 @@ function(e, t, n) {
             type: "GAME_INVITE_DELETE_MANY",
             inviteIds: e.invite_ids
         })
+    }), w(["CONVERSATION_SUMMARY_UPDATE"], e => {
+        G({
+            type: "CONVERSATION_SUMMARY_UPDATE",
+            ...e
+        })
     }), w(["PREMIUM_MARKETING_PREVIEW"], e => {
         G({
             type: "PREMIUM_MARKETING_PREVIEW",

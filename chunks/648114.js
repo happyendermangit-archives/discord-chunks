@@ -33,8 +33,8 @@ function(e, t, n) {
         y = n("168973"),
         C = n("491605"),
         O = n("476765"),
-        b = n("599110"),
-        A = n("32531"),
+        A = n("599110"),
+        b = n("32531"),
         M = n("714657"),
         P = n("164546"),
         w = n("941719"),
@@ -57,7 +57,7 @@ function(e, t, n) {
                 themeName: n,
                 analyticsLocations: i
             } = e;
-            b.default.track(R.AnalyticEvents.CLIENT_THEME_UPDATED, {
+            A.default.track(R.AnalyticEvents.CLIENT_THEME_UPDATED, {
                 feature_name: D.AnalyticsPremiumFeatureNames.CLIENT_THEME,
                 theme_name: n,
                 is_persisted: t,
@@ -153,7 +153,7 @@ function(e, t, n) {
         } = s.useContext(F), {
             analyticsLocations: i
         } = (0, p.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [a, o, u] = (0, d.useStateFromStoresArray)([I.default, y.default, M.default], () => [I.default.theme, null == M.default.gradientPreset, y.default.useSystemTheme === L.SystemThemeState.ON]), c = e => {
-            (0, A.resetBackgroundGradientPreset)(), H({
+            (0, b.resetBackgroundGradientPreset)(), H({
                 isPersisted: !0,
                 analyticsLocations: i,
                 themeName: "default ".concat(e)
@@ -191,12 +191,12 @@ function(e, t, n) {
         } = (0, p.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [T, I, y] = (0, d.useStateFromStoresArray)([M.default], () => {
             var e;
             return [M.default.isPreview, M.default.isCoachmark, null === (e = M.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-        }), [O, b] = s.useState(!1), [R, x] = s.useState(-1), G = (0, d.useStateFromStores)([h.default], () => h.default.useReducedMotion), k = (null === (i = (0, E.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
+        }), [O, A] = s.useState(!1), [R, x] = s.useState(-1), G = (0, d.useStateFromStores)([h.default], () => h.default.useReducedMotion), k = (null === (i = (0, E.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
         s.useEffect(() => {
-            (R === w.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || y === c.BackgroundGradientPresetId.EASTER_EGG) && b(!0)
+            (R === w.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || y === c.BackgroundGradientPresetId.EASTER_EGG) && A(!0)
         }, [R, u, y]);
         let K = (e, t) => {
-            if ((0, A.updateBackgroundGradientPreset)(e.id), H({
+            if ((0, b.updateBackgroundGradientPreset)(e.id), H({
                     isPersisted: !T,
                     analyticsLocations: g,
                     themeName: c.BackgroundGradientPresetId[e.id]
@@ -208,7 +208,7 @@ function(e, t, n) {
                     backgroundGradientPresetId: e.id,
                     theme: e.theme
                 }, f), null != t) {
-                if (O && b(!1), t <= R || 0 === t) {
+                if (O && A(!1), t <= R || 0 === t) {
                     x(0);
                     return
                 }
