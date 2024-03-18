@@ -99,7 +99,7 @@ function(e, t, n) {
                     animated: t.animated,
                     isInteracting: n
                 })
-            }, O = (0, r.v4)(), R = e => (0, i.jsx)(o.Tooltip, {
+            }, O = (0, r.v4)(), M = e => (0, i.jsx)(o.Tooltip, {
                 text: (0, h.renderClickableTooltipNode)(t.name, d, N),
                 "aria-label": t.name,
                 ...h.EXPRESSION_TOOLTIP_PROPS,
@@ -152,8 +152,8 @@ function(e, t, n) {
                     nonce: O
                 }),
                 positionKey: y,
-                children: R
-            }) : R()
+                children: M
+            }) : M()
         },
         I = e => {
             let {

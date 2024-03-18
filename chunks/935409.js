@@ -37,8 +37,8 @@ function(e, t, n) {
         N = n("430312"),
         A = n("401642"),
         O = n("590456"),
-        R = n("49111"),
-        M = n("646718"),
+        M = n("49111"),
+        R = n("646718"),
         k = n("782340"),
         L = n("291809");
     let b = d.AvatarSizes.SIZE_80,
@@ -88,7 +88,7 @@ function(e, t, n) {
             hasProfileEffect: T
         } = e, {
             profileTheme: v
-        } = l.useContext(N.UserProfileContext), j = l.useContext(y.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), w = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, M.PremiumTypes.TIER_2), F = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), G = x || t.isClyde(), {
+        } = l.useContext(N.UserProfileContext), j = l.useContext(y.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), w = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, R.PremiumTypes.TIER_2), F = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), G = x || t.isClyde(), {
             avatarDecorationSrc: B,
             avatarSrc: H,
             eventHandlers: V
@@ -105,7 +105,7 @@ function(e, t, n) {
                 avatarDecoration: B,
                 size: b,
                 "aria-label": t.username,
-                status: F ? R.StatusTypes.UNKNOWN : u,
+                status: F ? M.StatusTypes.UNKNOWN : u,
                 statusBackdropColor: null != v && w && !F ? (0, d.getStatusBackdropColor)(v) : void 0,
                 isMobile: c,
                 statusTooltip: !0
@@ -141,7 +141,7 @@ function(e, t, n) {
                     let e = null != B,
                         t = e ? P : (0, d.getAvatarSize)(b);
                     return (0, i.jsx)(E.default, {
-                        mask: null == u || u === R.StatusTypes.UNKNOWN || F ? E.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, c]).with([!0, !0], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => E.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => E.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+                        mask: null == u || u === M.StatusTypes.UNKNOWN || F ? E.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, c]).with([!0, !0], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => E.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => E.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
                         className: e ? L.avatarDecorationHint : L.avatarHint,
                         style: e ? {
                             borderRadius: .4 * t
@@ -190,7 +190,7 @@ function(e, t, n) {
             }), (0, i.jsx)(D, {
                 user: t,
                 displayProfile: n,
-                status: o ? R.StatusTypes.STREAMING : u,
+                status: o ? M.StatusTypes.STREAMING : u,
                 isMobile: r,
                 guildId: l,
                 channelId: a,

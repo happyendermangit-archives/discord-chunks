@@ -74,8 +74,8 @@ function(e, t, n) {
         N = n("876308"),
         A = n("660478"),
         O = n("697218"),
-        R = n("663175"),
-        M = n("888673"),
+        M = n("663175"),
+        R = n("888673"),
         k = n("839952"),
         L = n("476765"),
         b = n("62843"),
@@ -116,7 +116,7 @@ function(e, t, n) {
             ...d
         } = e, c = J(t), f = q(n);
         return i = null == i ? G.getVolume : i, l = null == l ? G.getMuted : l, (0, a.jsxs)(s.Fragment, {
-            children: [(0, a.jsx)(M.default, {
+            children: [(0, a.jsx)(R.default, {
                 ...d,
                 alt: r,
                 volume: i,
@@ -140,7 +140,7 @@ function(e, t, n) {
             ...u
         } = e, d = J(t), c = q(i);
         return n = null == n ? G.getVolume : n, (0, a.jsxs)(s.Fragment, {
-            children: [(0, a.jsx)(R.default, {
+            children: [(0, a.jsx)(M.default, {
                 ...u,
                 onVolumeChange: d,
                 onMute: c,
@@ -398,7 +398,7 @@ function(e, t, n) {
             scrollManager: u
         } = e, {
             disableInteractions: x
-        } = s.useContext(b.MessagesInteractionContext), [E, _] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([I.default], () => {
+        } = s.useContext(b.MessagesInteractionContext), [E, _] = s.useState(null), v = s.useRef(null), [N, M] = s.useState(null), R = s.useRef(null), k = (0, f.useStateFromStoresArray)([I.default], () => {
             var e;
             return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
         }, [l]), L = (0, g.default)(k);
@@ -481,13 +481,13 @@ function(e, t, n) {
             et = s.useCallback(e => {
                 var t;
                 Q(e);
-                let n = null === (t = M.current) || void 0 === t ? void 0 : t.scrollTop;
-                null != n && R(n)
+                let n = null === (t = R.current) || void 0 === t ? void 0 : t.scrollTop;
+                null != n && M(n)
             }, []);
         s.useEffect(() => {
             if (null != N && X) {
                 var e;
-                null === (e = M.current) || void 0 === e || e.scrollTo({
+                null === (e = R.current) || void 0 === e || e.scrollTo({
                     top: N
                 })
             }
@@ -606,7 +606,7 @@ function(e, t, n) {
                         children: (0, a.jsx)(U.default, {})
                     })]
                 }), (0, a.jsx)(p.Scroller, {
-                    ref: M,
+                    ref: R,
                     className: z.topicsScroller,
                     fade: !0,
                     children: ei
@@ -632,9 +632,9 @@ function(e, t, n) {
         } = s.useContext(b.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [_, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([I.default], () => {
             var e;
             return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
-        }, [l]), R = (0, g.default)(A);
+        }, [l]), M = (0, g.default)(A);
         s.useEffect(() => {
-            !d.isEqual(R, A) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+            !d.isEqual(M, A) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: A.length,
                 message_counts: A.map(e => e.count),
                 start_message_ids: A.map(e => e.startId),
@@ -644,8 +644,8 @@ function(e, t, n) {
                 channel_id: l.id,
                 channel_type: l.type
             })
-        }, [A, R, l.guild_id, l.id, l.type]);
-        let M = (0, f.useStateFromStores)([O.default], () => {
+        }, [A, M, l.guild_id, l.id, l.type]);
+        let R = (0, f.useStateFromStores)([O.default], () => {
                 var e;
                 return null !== (e = null == A ? void 0 : A.map(e => {
                     var t;
@@ -755,10 +755,10 @@ function(e, t, n) {
         let en = s.useMemo(() => (0, a.jsx)(T.default, {
                 channel: l,
                 summaries: A,
-                summariesMembers: M,
+                summariesMembers: R,
                 selectTopic: X,
                 setOpen: ee
-            }), [A, M, X, ee, l]),
+            }), [A, R, X, ee, l]),
             ei = (0, f.useStateFromStores)([I.default], () => I.default.shouldShowTopicsBar());
         if (!ei) return null;
         let el = Y.default.Messages.SUMMARIES_NO_SUMMARIES;

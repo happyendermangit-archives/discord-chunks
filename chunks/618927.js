@@ -36,8 +36,8 @@ function(e, t, n) {
             children: g
         });
         let O = [h.default.Messages.COPY_SUCCESS_1, h.default.Messages.COPY_SUCCESS_2, h.default.Messages.COPY_SUCCESS_3, h.default.Messages.COPY_SUCCESS_4, h.default.Messages.COPY_SUCCESS_5, h.default.Messages.COPY_SUCCESS_6, h.default.Messages.COPY_SUCCESS_7, h.default.Messages.COPY_SUCCESS_8, h.default.Messages.COPY_SUCCESS_9, h.default.Messages.COPY_SUCCESS_10, h.default.Messages.COPY_SUCCESS_11],
-            R = Math.min(Math.max(I - 1, 0), O.length - 1),
-            M = null !== (t = O[R]) && void 0 !== t ? t : O[0],
+            M = Math.min(Math.max(I - 1, 0), O.length - 1),
+            R = null !== (t = O[M]) && void 0 !== t ? t : O[0],
             k = I >= O.length - 1,
             L = k ? d.TooltipColors.RED : d.TooltipColors.GREEN,
             b = _ ? L : d.TooltipColors.PRIMARY,
@@ -55,7 +55,7 @@ function(e, t, n) {
             forceOpen: N,
             text: _ ? (0, a.jsx)(d.Shaker, {
                 isShaking: k,
-                children: M
+                children: R
             }) : y,
             onAnimationRest: (e, t) => {
                 !N && _ && t.phase === m.SpringTransitionPhases.LEAVE && v(!1)

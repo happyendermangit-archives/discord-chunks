@@ -33,23 +33,23 @@ function(e, t, n) {
             enabled: O
         } = c.default.useExperiment({
             location: "LottieIcon web entry point"
-        }), R = A || !O;
+        }), M = A || !O;
         return l.useImperativeHandle(t, () => ({
             play: e => {
                 if (null != _.current) {
-                    if (T.current = e, R) {
+                    if (T.current = e, M) {
                         let t = g[e];
                         _.current.setSegment(t.start, t.start + t.duration), _.current.goToAndStop(t.duration, !0)
                     } else _.current.setLoop(!N && e.includes("hover")), _.current.goToAndPlay(e)
                 }
             },
             stop: () => {
-                null != _.current && !R && _.current.goToAndStop(0, !0)
+                null != _.current && !M && _.current.goToAndStop(0, !0)
             },
             stopIfPlaying: e => {
-                null != _.current && !R && T.current === e && _.current.goToAndStop(0, !0)
+                null != _.current && !M && T.current === e && _.current.goToAndStop(0, !0)
             }
-        }), [R, N, g]), l.useEffect(() => {
+        }), [M, N, g]), l.useEffect(() => {
             null == S && r().then(e => C(e.default))
         }, [S, r]), l.useEffect(() => (n.el("865981").then(n.t.bind(n, "865981", 23)).then(e => {
             var t;
