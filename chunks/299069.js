@@ -34,12 +34,12 @@ function(e, t, n) {
             closePopout: _,
             sound: v,
             channel: N
-        } = e, A = (0, d.default)(), [O, M] = l.useState(!1), {
-            location: R
+        } = e, A = (0, d.default)(), [O, R] = l.useState(!1), {
+            location: M
         } = (0, u.useAnalyticsContext)(), k = l.useMemo(() => ({
-            ...R,
+            ...M,
             section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
-        }), [R]), {
+        }), [M]), {
             analyticsLocations: L
         } = (0, f.default)(c.default.PREMIUM_UPSELL), {
             previewSound: b
@@ -103,10 +103,10 @@ function(e, t, n) {
                     size: o.Button.Sizes.SMALL,
                     color: o.Button.Colors.GREEN,
                     onClick: () => {
-                        M(!0)
+                        R(!0)
                     },
                     onSubscribeModalClose: e => {
-                        M(!1), e && a()
+                        R(!1), e && a()
                     }
                 })]
             })]

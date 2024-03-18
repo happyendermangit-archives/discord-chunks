@@ -34,8 +34,8 @@ function(e, t, n) {
         N = n("158998"),
         A = n("49111"),
         O = n("994428"),
-        M = n("646718"),
-        R = n("782340"),
+        R = n("646718"),
+        M = n("782340"),
         k = n("240497"),
         L = n("350583");
     let b = [{
@@ -152,7 +152,7 @@ function(e, t, n) {
                     isGift: !0,
                     giftRecipient: null == F ? void 0 : F,
                     initialPlanId: null,
-                    subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
+                    subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
                     analyticsLocations: a,
                     analyticsObject: {
                         page: n.isPrivate() ? A.AnalyticsPages.DM_CHANNEL : A.AnalyticsPages.GUILD_CHANNEL,
@@ -177,7 +177,7 @@ function(e, t, n) {
                     isDM: B
                 }), (0, i.jsx)(S.default, {
                     innerClassName: L.button,
-                    "aria-label": R.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+                    "aria-label": M.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     isActive: !1,
                     onClick: () => {
                         c(!1), (0, m.markDismissibleContentAsDismissed)(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {

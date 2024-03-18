@@ -27,8 +27,8 @@ function(e, t, n) {
     (o = r || (r = {})).FETCHING = "fetching", o.OK = "ok", o.ERROR = "error";
     let A = {},
         O = {},
-        M = {},
-        R = [],
+        R = {},
+        M = [],
         k = {},
         L = {
             status: "ok",
@@ -73,7 +73,7 @@ function(e, t, n) {
             return null != s && s.channelId === e && null != s.summaryId ? this.findSummary(e, null == s ? void 0 : s.summaryId) : null
         }
         summaryFeedback(e) {
-            return null == e ? null : M[e.id]
+            return null == e ? null : R[e.id]
         }
         isFetching(e, t) {
             var n, i;
@@ -96,7 +96,7 @@ function(e, t, n) {
             return !(null == l ? void 0 : l.fetching) && 0 === s
         }
         channelAffinities() {
-            return R
+            return M
         }
         channelAffinitiesById(e) {
             return null == e ? k : k[e]
@@ -114,7 +114,7 @@ function(e, t, n) {
                 withUnreads: i,
                 numChannels: l = 25
             } = e, a = [];
-            return t && (a = a.concat(b)), n && (a = a.concat(R.map(e => e.channel_id))), i && (a = a.filter(e => {
+            return t && (a = a.concat(b)), n && (a = a.concat(M.map(e => e.channel_id))), i && (a = a.filter(e => {
                 let t = E.default.getChannel(e);
                 return null != t && !C.default.isChannelMuted(t.guild_id, e) && g.default.hasUnread(e)
             })), (a = a.filter(e => {
@@ -246,7 +246,7 @@ function(e, t, n) {
                 summary: t,
                 rating: n
             } = e;
-            null != n ? M[t.id] = n : delete M[t.id]
+            null != n ? R[t.id] = n : delete R[t.id]
         },
         REQUEST_CHANNEL_AFFINITIES() {
             L = {
@@ -262,14 +262,14 @@ function(e, t, n) {
                 error: i
             } = e;
             if (null != i) {
-                R = [], k = {}, L = {
+                M = [], k = {}, L = {
                     ...L,
                     status: "error",
                     lastResponse: Date.now()
                 };
                 return
             }
-            R = null != n ? n : [], k = null !== (t = null == n ? void 0 : n.reduce((e, t) => (e[t.channel_id] = t.affinity, e), {})) && void 0 !== t ? t : {}, L = {
+            M = null != n ? n : [], k = null !== (t = null == n ? void 0 : n.reduce((e, t) => (e[t.channel_id] = t.affinity, e), {})) && void 0 !== t ? t : {}, L = {
                 ...L,
                 status: "ok",
                 lastResponse: Date.now()
