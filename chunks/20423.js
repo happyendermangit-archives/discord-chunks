@@ -1,7 +1,7 @@
 function(e, a, t) {
     "use strict";
     t.r(a), t("860677");
-    var d, s, n, c, i, r = t("37983");
+    var s, d, n, i, c, r = t("37983");
     t("320777"), t("884691");
     var o = t("288661"),
         f = t("627445"),
@@ -40,13 +40,13 @@ function(e, a, t) {
             })
         }));
     if (null != S.default) {
-        null === (d = S.default.setUncaughtExceptionHandler) || void 0 === d || d.call(S.default, (e, a) => {
+        null === (s = S.default.setUncaughtExceptionHandler) || void 0 === s || s.call(S.default, (e, a) => {
             setImmediate(() => {
                 throw _.default.captureCrash(e), e
             })
         });
-        let e = null === (s = (n = S.default.remoteApp).getVersion) || void 0 === s ? void 0 : s.call(n),
-            a = null === (c = (i = S.default.remoteApp).getBuildNumber) || void 0 === c ? void 0 : c.call(i),
+        let e = null === (d = (n = S.default.remoteApp).getVersion) || void 0 === d ? void 0 : d.call(n),
+            a = null === (i = (c = S.default.remoteApp).getBuildNumber) || void 0 === i ? void 0 : i.call(c),
             t = {};
         null != S.default.remoteApp.getModuleVersions && (t = S.default.remoteApp.getModuleVersions()), _.default.setExtra({
             hostVersion: e,
