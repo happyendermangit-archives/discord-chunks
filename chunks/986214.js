@@ -39,15 +39,15 @@ function(t, e, i) {
         if (null == p) return s.ComponentDispatch.dispatch(v.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
             applicationId: e.application.id
         }), !1;
-        let m = a.default.getChannel(p);
-        if (null == m) return !1;
-        let R = null != p ? (0, f.getEmbeddedActivityLaunchability)({
+        let R = a.default.getChannel(p);
+        if (null == R) return !1;
+        let m = null != p ? (0, f.getEmbeddedActivityLaunchability)({
             channelId: p,
             ChannelStore: a.default,
             GuildStore: r.default,
             PermissionStore: u.default
         }) : f.EmbeddedActivityLaunchability.NO_CHANNEL;
-        if (R !== f.EmbeddedActivityLaunchability.CAN_LAUNCH) return R === f.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, l.showActivitiesInvalidPermissionsAlert)() : R === f.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && n.default.show({
+        if (m !== f.EmbeddedActivityLaunchability.CAN_LAUNCH) return m === f.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, l.showActivitiesInvalidPermissionsAlert)() : m === f.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && n.default.show({
             title: O.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
             body: O.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
             hideActionSheet: !1
@@ -55,21 +55,21 @@ function(t, e, i) {
         let M = await (0, _.confirmActivityLaunchChecks)({
             applicationId: e.application.id,
             application: e.application,
-            channel: m,
+            channel: R,
             currentEmbeddedApplication: i,
             embeddedActivitiesManager: h,
             user: g
         });
         if (!M) return !1;
         let U = (0, I.default)(p),
-            V = N.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(m.type);
+            V = N.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(R.type);
         if (U) {
             let t = await (0, A.default)({
                 channelId: p,
                 bypassChangeModal: null != i
             });
             if (!t) return !1
-        } else if (!(0, o.isActivitiesInTextEnabled)(m, "handleStartEmbeddedActivity") || !V) return !1;
+        } else if (!(0, o.isActivitiesInTextEnabled)(R, "handleStartEmbeddedActivity") || !V) return !1;
         return E.startEmbeddedActivity(p, e.application.id, L), (0, C.default)(y, p), (0, T.default)({
             type: v.AnalyticsGameOpenTypes.LAUNCH,
             userId: g.id,
