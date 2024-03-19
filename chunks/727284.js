@@ -5,25 +5,25 @@ function(e, a, t) {
             return i
         }
     });
-    var d = t("37983");
+    var s = t("37983");
     t("884691");
-    var s = t("77078"),
+    var d = t("77078"),
         n = t("845579"),
         c = t("49111");
 
     function i(e, a) {
-        n.AlwaysPreviewVideo.getSetting() ? (0, s.openModalLazy)(async () => {
+        n.AlwaysPreviewVideo.getSetting() ? (0, d.openModalLazy)(async () => {
             let {
                 default: a
             } = await t.el("381736").then(t.bind(t, "381736"));
-            return t => (0, d.jsx)(a, {
+            return t => (0, s.jsx)(a, {
                 ...t,
                 onEnable: e,
                 videoEnabled: !1
             })
         }, {
             modalKey: "camera-preview",
-            contextKey: a === c.AppContext.POPOUT ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT
+            contextKey: a === c.AppContext.POPOUT ? d.POPOUT_MODAL_CONTEXT : d.DEFAULT_MODAL_CONTEXT
         }) : null == e || e()
     }
 }

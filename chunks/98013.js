@@ -14,8 +14,8 @@ function(e, a, t) {
             return p
         }
     });
-    var d = t("597755"),
-        s = t.n(d),
+    var s = t("597755"),
+        d = t.n(s),
         n = t("815157"),
         c = t("271938"),
         i = t("49111");
@@ -29,7 +29,7 @@ function(e, a, t) {
 
     function f() {
         var e;
-        let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = s.os) || void 0 === e ? void 0 : e.family;
+        let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = d.os) || void 0 === e ? void 0 : e.family;
         return null == a ? "win" : -1 !== a.indexOf("Ubuntu") || -1 !== a.indexOf("Debian") || -1 !== a.indexOf("Fedora") || -1 !== a.indexOf("Red Hat") || -1 !== a.indexOf("SuSE") || -1 !== a.indexOf("Linux") ? r : -1 !== a.indexOf("OS X") ? "osx" : "win"
     }
 
@@ -47,23 +47,23 @@ function(e, a, t) {
     }
 
     function p(e, a, t) {
-        let d = null != t ? t.toString() : null;
+        let s = null != t ? t.toString() : null;
         switch (a) {
             case "iOS":
-                return (0, n.default)(null != d ? d : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
+                return (0, n.default)(null != s ? s : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
                     utmSource: e,
                     fingerprint: c.default.getFingerprint(),
                     attemptId: (0, n.generateAttemptId)()
                 });
             case "Android":
-                return (0, n.default)(null != d ? d : "https://play.google.com/store/apps/details", {
+                return (0, n.default)(null != s ? s : "https://play.google.com/store/apps/details", {
                     utmSource: e,
                     id: "com.discord",
                     fingerprint: c.default.getFingerprint(),
                     attemptId: (0, n.generateAttemptId)()
                 });
             default:
-                return null != d ? d : "https://www.discord.com"
+                return null != s ? s : "https://www.discord.com"
         }
     }
 }

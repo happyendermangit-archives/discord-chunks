@@ -1,13 +1,13 @@
 function(e, a, t) {
     "use strict";
-    let d;
+    let s;
     t.r(a), t.d(a, {
         default: function() {
             return C
         }
     }), t("990131"), t("477657"), t("811875"), t("90301"), t("652153"), t("28797"), t("817884"), t("597349"), t("667536"), t("690341"), t("70102"), t("506083");
-    var s = t("627445"),
-        n = t.n(s),
+    var d = t("627445"),
+        n = t.n(d),
         c = t("917351"),
         i = t.n(c),
         r = t("872717"),
@@ -32,18 +32,18 @@ function(e, a, t) {
     let w = v.getContext("2d");
 
     function A() {
-        O.stop(), null != d && (f.default.removeSink(d, T), d = null)
+        O.stop(), null != s && (f.default.removeSink(s, T), s = null)
     }
-    let S = i.debounce((e, a, t, d) => {
+    let S = i.debounce((e, a, t, s) => {
         N(e, (0, _.encodeStreamKey)({
             streamType: null != a ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
             guildId: a,
             channelId: t,
-            ownerId: d
+            ownerId: s
         }))
     }, 500);
     async function N(e, a) {
-        if (d !== e) return;
+        if (s !== e) return;
         let t = () => N(e, a);
         if (!R) try {
             let t = await
@@ -51,7 +51,7 @@ function(e, a, t) {
                 let t = 0;
                 return ((0, j.isPlatformEmbedded) ? function(e, a) {
                     let t = (0, o.getVoiceEngine)(),
-                        s = (null == t ? void 0 : t.getNextVideoOutputFrame) != null;
+                        d = (null == t ? void 0 : t.getNextVideoOutputFrame) != null;
                     return new Promise((n, c) => {
                         let i = e => {
                             try {
@@ -60,27 +60,27 @@ function(e, a, t) {
                                 c(e)
                             }
                         };
-                        s ? t.getNextVideoOutputFrame(e).then(i, a => {
-                            if (d === e) throw a
+                        d ? t.getNextVideoOutputFrame(e).then(i, a => {
+                            if (s === e) throw a
                         }) : f.default.addSink(e, T, i)
                     }).finally(() => {
-                        !s && f.default.removeSink(e, T)
+                        !d && f.default.removeSink(e, T)
                     })
                 } : function(e, a) {
                     let t = (0, l.getVideoStream)(e);
                     if (null == t) return Promise.resolve(new ImageData(0, 0));
                     let {
-                        width: d,
-                        height: s
+                        width: s,
+                        height: d
                     } = t.getVideoTracks()[0].getSettings(), n = document.createElement("video"), c = document.createElement("canvas");
-                    n.width = c.width = null != d ? d : 512, n.height = c.height = null != s ? s : 288, n.srcObject = t, n.play();
+                    n.width = c.width = null != s ? s : 512, n.height = c.height = null != d ? d : 288, n.srcObject = t, n.play();
                     let i = c.getContext("2d");
                     return new Promise((e, t) => {
                         n.ontimeupdate = () => {
                             null == i || i.drawImage(n, 0, 0, c.width, c.height);
-                            let d = null == i ? void 0 : i.getImageData(0, 0, c.width, c.height);
+                            let s = null == i ? void 0 : i.getImageData(0, 0, c.width, c.height);
                             try {
-                                null != d && a(d) && e(d)
+                                null != s && a(s) && e(s)
                             } catch (e) {
                                 t(e)
                             }
@@ -98,27 +98,27 @@ function(e, a, t) {
             function(e) {
                 let a = 512 / e.width,
                     t = 288 / e.height,
-                    d = Math.min(a, t),
-                    s = e.width * d,
-                    n = e.height * d;
-                v.width = s, v.height = n;
+                    s = Math.min(a, t),
+                    d = e.width * s,
+                    n = e.height * s;
+                v.width = d, v.height = n;
                 let c = window.document.createElement("canvas"),
                     i = c.getContext("2d");
                 c.width = e.width, c.height = e.height;
                 let r = new ImageData(e.data, e.width, e.height);
                 return null == i || i.putImageData(r, 0, 0), new Promise(a => {
-                    null == w || w.drawImage(c, 0, 0, e.width, e.height, 0, 0, s, n), a()
+                    null == w || w.drawImage(c, 0, 0, e.width, e.height, 0, 0, d, n), a()
                 })
             }(t);
-            let s = v.toDataURL("image/jpeg");
+            let d = v.toDataURL("image/jpeg");
             if (p.default.dispatch({
                     type: "STREAM_PREVIEW_FETCH_SUCCESS",
                     streamKey: a,
-                    previewURL: s
+                    previewURL: d
                 }), j.isPlatformEmbedded) {
                 let e = h.default.getToken();
                 n(null != e, "Auth token was null while sending screenshot."), await m.default.makeChunkedRequest(g.Endpoints.STREAM_PREVIEW(a), {
-                    thumbnail: s
+                    thumbnail: d
                 }, {
                     method: "POST",
                     token: e
@@ -126,15 +126,15 @@ function(e, a, t) {
             } else await r.default.post({
                 url: g.Endpoints.STREAM_PREVIEW(a),
                 body: {
-                    thumbnail: s
+                    thumbnail: d
                 },
                 oldFormErrors: !0
             })
         } catch (a) {
-            new(0, b.default)("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", a), d === e && O.start(6e4, t);
+            new(0, b.default)("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", a), s === e && O.start(6e4, t);
             return
         }
-        d === e && (R ? O.start(6e4, t) : O.start(3e5, t))
+        s === e && (R ? O.start(6e4, t) : O.start(3e5, t))
     }
     var C = {
         init() {
@@ -142,11 +142,11 @@ function(e, a, t) {
                 let {
                     guildId: a,
                     channelId: t,
-                    userId: s,
+                    userId: d,
                     streamId: n,
                     context: c
                 } = e;
-                !(null == n || c !== I.MediaEngineContextTypes.STREAM || s !== h.default.getId() || __OVERLAY__) && (A(), d = n, S(n, a, t, s))
+                !(null == n || c !== I.MediaEngineContextTypes.STREAM || d !== h.default.getId() || __OVERLAY__) && (A(), s = n, S(n, a, t, d))
             }), p.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
                 let {
                     videoState: a
