@@ -195,7 +195,13 @@ function(e, _, E) {
                 if ("locale" === e) this.emit(e, this._chosenLocale)
             }, this.initialLanguageLoad = new Promise((e, _) => {
                 this.resolveLanguageLoaded = e
-            }), Intl.__addLocaleData && Intl.__addLocaleData(E("169123")), this._languages = t(), this._provider = null != window.Proxy ? new S(this._getParsedMessages) : new T(this._getParsedMessages), this.Messages = this._provider.getMessages(), this._getMessages = _, this.setLocale(e || this.getDefaultLocale()), this.on("newListener", this._handleNewListener)
+            }), Intl.__addLocaleData && Intl.__addLocaleData(E("169123")), this._languages = t(), this._provider = null != window.Proxy ? new S(this._getParsedMessages) : new T(this._getParsedMessages), this.Messages = this._provider.getMessages(), this._getMessages = _;
+            try {
+                new Intl.NumberFormat(e, {}), this.setLocale(e || this.getDefaultLocale())
+            } catch (e) {
+                this.setLocale(this.getDefaultLocale())
+            }
+            this.on("newListener", this._handleNewListener)
         }
     }
 }
