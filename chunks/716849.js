@@ -2,58 +2,58 @@ function(e, t, i) {
     "use strict";
     i.r(t), i.d(t, {
         NON_SUBSCRIBER_SENTINEL: function() {
-            return E
+            return h
         },
         maybeFetchPremiumLikelihood: function() {
-            return S
+            return E
         },
         useMaybeFetchPremiumLikelihood: function() {
             return I
         }
     });
     var r = i("884691"),
-        u = i("65597"),
-        n = i("872717"),
-        s = i("913144"),
-        o = i("775433"),
-        l = i("697218"),
-        a = i("10514"),
-        c = i("764364"),
+        n = i("65597"),
+        s = i("872717"),
+        l = i("913144"),
+        a = i("775433"),
+        u = i("697218"),
+        c = i("10514"),
+        o = i("764364"),
         d = i("719923"),
         f = i("676572"),
-        h = i("646718"),
-        p = i("49111");
-    let E = "nonSubscriber";
-    async function m() {
+        S = i("646718"),
+        m = i("49111");
+    let h = "nonSubscriber";
+    async function p() {
         try {
-            s.default.dispatch({
+            l.default.dispatch({
                 type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH"
             });
             let {
                 body: e
-            } = await n.default.get({
-                url: p.Endpoints.USER_PREMIUM_LIKELIHOOD
+            } = await s.default.get({
+                url: m.Endpoints.USER_PREMIUM_LIKELIHOOD
             });
-            s.default.dispatch({
+            l.default.dispatch({
                 type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS",
                 premiumLikelihood: function(e) {
                     return {
-                        [E]: e.non_subscriber,
-                        [h.PremiumSubscriptionSKUs.TIER_0]: e[h.PremiumSubscriptionSKUs.TIER_0],
-                        [h.PremiumSubscriptionSKUs.TIER_2]: e[h.PremiumSubscriptionSKUs.TIER_2]
+                        [h]: e.non_subscriber,
+                        [S.PremiumSubscriptionSKUs.TIER_0]: e[S.PremiumSubscriptionSKUs.TIER_0],
+                        [S.PremiumSubscriptionSKUs.TIER_2]: e[S.PremiumSubscriptionSKUs.TIER_2]
                     }
                 }(e)
             })
         } catch (e) {
-            404 === e.status ? s.default.dispatch({
+            404 === e.status ? l.default.dispatch({
                 type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS"
-            }) : s.default.dispatch({
+            }) : l.default.dispatch({
                 type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_ERROR"
             })
         }
     }
 
-    function S(e) {
+    function E(e) {
         let {
             enabled: t,
             useExpectedValue: i
@@ -61,8 +61,8 @@ function(e, t, i) {
             location: "443cca_1"
         }, {
             autoTrackExposure: !1
-        }), r = f.default.shouldFetchPremiumLikelihood(), u = l.default.getCurrentUser();
-        L(u, r, t, i)
+        }), r = f.default.shouldFetchPremiumLikelihood(), n = u.default.getCurrentUser();
+        k(n, r, t, i)
     }
 
     function I(e) {
@@ -73,13 +73,13 @@ function(e, t, i) {
             location: "443cca_2"
         }, {
             autoTrackExposure: !1
-        }), n = (0, u.default)([f.default], () => f.default.shouldFetchPremiumLikelihood()), s = (0, u.default)([l.default], () => l.default.getCurrentUser());
+        }), s = (0, n.default)([f.default], () => f.default.shouldFetchPremiumLikelihood()), l = (0, n.default)([u.default], () => u.default.getCurrentUser());
         r.useEffect(() => {
-            L(s, n, t, i)
-        }, [s, n, t, i])
+            k(l, s, t, i)
+        }, [l, s, t, i])
     }
 
-    function L(e, t, i, r) {
-        null != e && !(0, c.isPremium)(e) && i && (t && m(), r && (!a.default.isLoadedForSKU((0, d.castPremiumSubscriptionAsSkuId)(h.PremiumSubscriptionSKUs.TIER_0)) && !a.default.isFetchingForSKU((0, d.castPremiumSubscriptionAsSkuId)(h.PremiumSubscriptionSKUs.TIER_0)) && (0, o.fetchSubscriptionPlansForSKU)((0, d.castPremiumSubscriptionAsSkuId)(h.PremiumSubscriptionSKUs.TIER_0)), !a.default.isLoadedForSKU((0, d.castPremiumSubscriptionAsSkuId)(h.PremiumSubscriptionSKUs.TIER_2)) && !a.default.isFetchingForSKU((0, d.castPremiumSubscriptionAsSkuId)(h.PremiumSubscriptionSKUs.TIER_2)) && (0, o.fetchSubscriptionPlansForSKU)((0, d.castPremiumSubscriptionAsSkuId)(h.PremiumSubscriptionSKUs.TIER_2))))
+    function k(e, t, i, r) {
+        null != e && !(0, o.isPremium)(e) && i && (t && p(), r && (!c.default.isLoadedForSKU((0, d.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_0)) && !c.default.isFetchingForSKU((0, d.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_0)) && (0, a.fetchSubscriptionPlansForSKU)((0, d.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_0)), !c.default.isLoadedForSKU((0, d.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_2)) && !c.default.isFetchingForSKU((0, d.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_2)) && (0, a.fetchSubscriptionPlansForSKU)((0, d.castPremiumSubscriptionAsSkuId)(S.PremiumSubscriptionSKUs.TIER_2))))
     }
 }

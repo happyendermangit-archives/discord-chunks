@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return _
         }
     });
     var i = n("37983");
@@ -26,13 +26,13 @@ function(e, t, n) {
         S = n("158998"),
         C = n("680894");
 
-    function I(e) {
+    function _(e) {
         let {
             className: t,
             userId: l,
-            channelId: I,
-            inlinePreview: _ = !1
-        } = e, T = (0, r.useStateFromStores)([E.default], () => E.default.getUser(l)), v = (0, r.useStateFromStores)([p.default], () => p.default.getChannel(I)), N = null != v ? v.getGuildId() : null, A = _ || null == T || null == N || null == I ? void 0 : e => {
+            channelId: _,
+            inlinePreview: I = !1
+        } = e, T = (0, r.useStateFromStores)([E.default], () => E.default.getUser(l)), v = (0, r.useStateFromStores)([p.default], () => p.default.getChannel(_)), N = null != v ? v.getGuildId() : null, A = I || null == T || null == N || null == _ ? void 0 : e => {
             null != v && (0, u.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
@@ -44,26 +44,26 @@ function(e, t, n) {
                     guildId: N
                 })
             })
-        }, O = S.default.useName(T), R = (0, r.useStateFromStores)([p.default, m.default, x.default], () => g.default.getNickname(N, I, T)), M = h.default.getGuild(N), k = (0, d.useClydeEnabled)(M, v), L = k && l === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null, b = e => (0, i.jsx)(y.default, {
+        }, O = S.default.useName(T), R = (0, r.useStateFromStores)([p.default, m.default, x.default], () => g.default.getNickname(N, _, T)), M = h.default.getGuild(N), k = (0, d.useClydeEnabled)(M, v), L = k && l === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null, P = e => (0, i.jsx)(y.default, {
             className: t,
             onContextMenu: A,
             color: L,
             ...e,
             children: "@".concat(null != R ? R : O)
         });
-        return _ ? b() : (0, i.jsx)(o.Popout, {
+        return I ? P() : (0, i.jsx)(o.Popout, {
             preload: null == T ? void 0 : () => (0, c.default)(T.id, T.getAvatarURL(N, 80), {
                 guildId: null != N ? N : void 0,
-                channelId: null != I ? I : void 0
+                channelId: null != _ ? _ : void 0
             }),
             renderPopout: e => (a(null != T, "Unexpected missing user"), (0, i.jsx)(f.default, {
                 userId: T.id,
                 guildId: null != N ? N : void 0,
-                channelId: I,
+                channelId: _,
                 ...e
             })),
             position: s.isMobile ? "top" : "right",
-            children: e => b(e)
+            children: e => P(e)
         })
     }
 }

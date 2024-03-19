@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return I
         }
     });
     var i = n("37983");
@@ -25,24 +25,24 @@ function(e, t, n) {
         g = n("724210"),
         S = n("782340"),
         C = n("560158");
-    let I = () => {
+    let _ = () => {
         let e = (0, o.default)();
         return (0, s.isThemeLight)(e) ? n("602291") : n("609708")
     };
 
-    function _(e) {
+    function I(e) {
         let {
             onClose: t,
             guildId: n,
             emojiId: s
-        } = e, o = I(), {
-            analyticsLocations: _
+        } = e, o = _(), {
+            analyticsLocations: I
         } = (0, d.default)(u.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
         (0, c.default)({
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
             properties: {
-                location_stack: _,
+                location_stack: I,
                 emoji_guild_id: n,
                 emoji_id: null != s ? s : null
             }
@@ -92,7 +92,7 @@ function(e, t, n) {
                     size: 24
                 }), (0, i.jsx)(E.default, {
                     onClick: () => {
-                        (0, f.transitionTo)(y.Routes.CHANNEL(n, g.StaticChannelRoute.ROLE_SUBSCRIPTIONS), void 0, void 0, _)
+                        (0, f.transitionTo)(y.Routes.CHANNEL(n, g.StaticChannelRoute.ROLE_SUBSCRIPTIONS), void 0, void 0, I)
                     },
                     children: A
                 })]

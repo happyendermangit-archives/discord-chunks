@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useGetVoiceChannelInfoForVoiceActivitySection: function() {
-            return g
+            return C
         },
         default: function() {
-            return S
+            return _
         }
     });
     var i = n("37983");
@@ -20,55 +20,59 @@ function(e, t, n) {
         c = n("800762"),
         f = n("476263"),
         p = n("368121"),
-        m = n("777003"),
-        h = n("49111"),
-        x = n("782340"),
-        E = n("862939"),
-        y = n("463147");
+        m = n("756507"),
+        h = n("4462"),
+        x = n("777003"),
+        E = n("49111"),
+        y = n("782340"),
+        g = n("862939"),
+        S = n("463147");
 
-    function g(e, t) {
+    function C(e, t) {
         let n = (0, l.useStateFromStores)([c.default], () => {
                 var n;
                 return null !== (n = c.default.getVoiceState(t, e)) && void 0 !== n ? n : c.default.getVoiceStateForUser(e)
             }, [t, e]),
             i = (0, l.useStateFromStores)([r.default], () => null != n && null != n.channelId ? r.default.getChannel(n.channelId) : null, [n]),
             a = (0, l.useStateFromStores)([o.default], () => null != i ? o.default.getGuild(i.guild_id) : null, [i]),
-            s = (0, l.useStateFromStores)([u.default], () => null != i && u.default.can(h.Permissions.VIEW_CHANNEL, i), [i]),
-            d = (0, l.useStateFromStores)([u.default], () => null != i && u.default.can(h.Permissions.CONNECT, i), [i]);
+            s = (0, l.useStateFromStores)([u.default], () => null != i && u.default.can(E.Permissions.VIEW_CHANNEL, i), [i]),
+            d = (0, l.useStateFromStores)([u.default], () => null != i && u.default.can(E.Permissions.CONNECT, i), [i]);
         return s && d && null != i && null != a ? {
             voiceGuild: a,
             voiceChannel: i
         } : null
     }
 
-    function S(e) {
+    function _(e) {
         let {
             voiceGuild: t,
             voiceChannel: n,
-            onClose: r,
-            color: o
-        } = e, u = (0, l.useStateFromStores)([d.default], () => d.default.getChannelId() === n.id), c = u ? x.default.Messages.PROFILE_OPEN_VOICE_CHANNEL : n.isGuildStageVoice() ? x.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : x.default.Messages.PROFILE_JOIN_VOICE_CHANNEL;
-        return (0, i.jsxs)(m.default, {
+            color: r
+        } = e, {
+            trackUserProfileAction: o,
+            ...u
+        } = (0, m.useUserProfileAnalyticsContext)(), c = (0, l.useStateFromStores)([d.default], () => d.default.getChannelId() === n.id), E = c ? y.default.Messages.PROFILE_OPEN_VOICE_CHANNEL : n.isGuildStageVoice() ? y.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : y.default.Messages.PROFILE_JOIN_VOICE_CHANNEL;
+        return (0, i.jsxs)(x.default, {
             children: [(0, i.jsx)(a.Heading, {
                 variant: "eyebrow",
-                className: E.title,
-                children: x.default.Messages.PROFILE_IN_VOICE_CALL
+                className: g.title,
+                children: y.default.Messages.PROFILE_IN_VOICE_CALL
             }), (0, i.jsxs)("div", {
-                className: y.voiceDisplayContainer,
+                className: S.voiceDisplayContainer,
                 children: [(0, i.jsxs)("div", {
-                    className: y.iconContainer,
+                    className: S.iconContainer,
                     children: [(0, i.jsx)(f.default, {
                         size: f.default.Sizes.SMALL,
                         active: !0,
                         guild: t
                     }), (0, i.jsx)("div", {
-                        className: y.speakerIconContainer,
+                        className: S.speakerIconContainer,
                         children: (0, i.jsx)(p.default, {
-                            className: y.speakerIcon
+                            className: S.speakerIcon
                         })
                     })]
                 }), (0, i.jsxs)("div", {
-                    className: y.voiceChannelInfo,
+                    className: S.voiceChannelInfo,
                     children: [(0, i.jsx)(a.Text, {
                         variant: "text-sm/semibold",
                         children: n.name
@@ -79,17 +83,23 @@ function(e, t, n) {
                     })]
                 })]
             }), (0, i.jsx)(a.Button, {
-                onClick: function() {
-                    null != n && (s.default.handleVoiceConnect({
+                onClick: () => {
+                    o({
+                        action: "JOIN_ACTIVITY"
+                    }), (0, h.trackUserProfileActivityJoined)({
+                        activityType: "VOICE",
+                        voiceChannelId: n.id,
+                        ...u
+                    }), s.default.handleVoiceConnect({
                         channel: n,
-                        connected: d.default.getChannelId() === n.id,
-                        needSubscriptionToAccess: !1
-                    }), null == r || r())
+                        needSubscriptionToAccess: !1,
+                        connected: c
+                    })
                 },
-                color: null != o ? o : a.Button.Colors.PRIMARY,
+                color: null != r ? r : a.Button.Colors.PRIMARY,
                 size: a.Button.Sizes.SMALL,
                 fullWidth: !0,
-                children: c
+                children: E
             })]
         })
     }

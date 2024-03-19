@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("635956"),
         S = n("599110"),
         C = n("402671"),
-        I = n("719923"),
-        _ = n("788506"),
+        _ = n("719923"),
+        I = n("788506"),
         T = n("115279"),
         v = n("49111"),
         N = n("958706"),
@@ -37,12 +37,12 @@ function(e, t, n) {
             let {
                 onLearnMore: k,
                 onClose: L,
-                channel: b,
-                emojiDescriptor: P,
+                channel: P,
+                emojiDescriptor: b,
                 pickerIntention: j,
                 analyticsLocation: U
             } = e, D = (0, u.default)(), [w, F] = l.useState(!1), G = () => {
-                (0, _.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), k()
+                (0, I.trackPremiumSettingsPaneOpened)(P), (0, p.navigateToPremiumMarketingPage)(), k()
             }, B = (0, r.isThemeLight)(D) ? n("602291") : n("609708"), H = (0, E.usePremiumTrialOffer)(), V = (0, x.usePremiumDiscountOffer)(), K = null != H || null != V, {
                 isLoading: W,
                 suggestedPremiumType: Y
@@ -56,22 +56,22 @@ function(e, t, n) {
             return l.useEffect(() => {
                 if (!W) {
                     let e;
-                    e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : P.subCategory === T.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : P.subCategory === T.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
-                    let t = P.emoji;
+                    e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : b.subCategory === T.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : b.subCategory === T.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
+                    let t = b.emoji;
                     S.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                         type: e,
                         is_animated: t.animated,
-                        is_external: !C.default.isInternalEmojiForGuildId(t, null == b ? void 0 : b.getGuildId()),
+                        is_external: !C.default.isInternalEmojiForGuildId(t, null == P ? void 0 : P.getGuildId()),
                         has_search_query: null != z && "" !== z,
                         location: {
                             ...U,
                             object: v.AnalyticsObjects.EMOJI
                         },
                         location_stack: Z,
-                        sku_id: (0, I.castPremiumSubscriptionAsSkuId)(I.default.getSkuIdForPremiumType(Y))
+                        sku_id: (0, _.castPremiumSubscriptionAsSkuId)(_.default.getSkuIdForPremiumType(Y))
                     })
                 }
-            }, [W, Y, P, b, U, Z, j, z]), (0, i.jsxs)("div", {
+            }, [W, Y, b, P, U, Z, j, z]), (0, i.jsxs)("div", {
                 className: s(R.premiumPromo, {
                     [R.unifyTrialUpsell]: K
                 }),
@@ -87,7 +87,7 @@ function(e, t, n) {
                         trialOffer: H,
                         discountOffer: V,
                         children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
-                            planName: (0, I.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+                            planName: (0, _.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                             onClick: G
                         }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
                             onClick: G
@@ -103,7 +103,7 @@ function(e, t, n) {
                         }), (0, i.jsx)("div", {
                             className: R.premiumPromoDescription,
                             children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
-                                planName: (0, I.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+                                planName: (0, _.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                                 onClick: G
                             }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
                                 onClick: G

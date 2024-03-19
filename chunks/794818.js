@@ -26,10 +26,10 @@ function(e, t, n) {
             return C
         },
         trackSearchStarted: function() {
-            return I
+            return _
         },
         trackTagSearchStarted: function() {
-            return _
+            return I
         },
         trackSearchResultsViewed: function() {
             return T
@@ -184,7 +184,7 @@ function(e, t, n) {
         })
     }
 
-    function I(e, t) {
+    function _(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         p.default.track(m.AnalyticEvents.SEARCH_STARTED, {
             search_type: m.SearchTypes.GUILD_DISCOVERY,
@@ -194,7 +194,7 @@ function(e, t, n) {
         })
     }
 
-    function _(e, t, n, i) {
+    function I(e, t, n, i) {
         p.default.track(m.AnalyticEvents.SEARCH_STARTED, {
             search_type: m.SearchTypes.GUILD_DISCOVERY_TAG,
             load_id: e,

@@ -40,13 +40,13 @@ function(e, t, n) {
             displayName: "",
             value: ""
         })),
-        I = {
+        _ = {
             results: {
                 choices: [],
                 isError: !0
             }
         },
-        _ = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+        I = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
             leading: !0,
             trailing: !0
         }),
@@ -65,7 +65,7 @@ function(e, t, n) {
                     if (l) {
                         let l = u.default.getActiveCommand(e.id),
                             a = i.getCommandOptionValues();
-                        _({
+                        I({
                             command: l,
                             optionValues: a,
                             context: {
@@ -79,7 +79,7 @@ function(e, t, n) {
                         })
                     }
                     let a = o.default.getLastErrored(e.id);
-                    if (a) return I;
+                    if (a) return _;
                     let r = o.default.getAutocompleteChoices(e.id, s.name, n);
                     return null == r ? S : {
                         results: {

@@ -8,12 +8,12 @@ function(t, e, i) {
     var n = i("884691"),
         l = i("446674"),
         a = i("872717"),
-        u = i("913144"),
-        r = i("555179"),
+        r = i("913144"),
+        u = i("555179"),
         d = i("49111");
 
     function s(t) {
-        let e = (0, l.useStateFromStores)([r.default], () => r.default.getNote(t));
+        let e = (0, l.useStateFromStores)([u.default], () => u.default.getNote(t));
         return n.useEffect(() => {
             null == e && o(t)
         }, [e, t]), null != e ? e : {
@@ -22,7 +22,7 @@ function(t, e, i) {
         }
     }
     async function o(t) {
-        u.default.dispatch({
+        r.default.dispatch({
             type: "USER_NOTE_LOAD_START",
             userId: t
         });
@@ -33,13 +33,13 @@ function(t, e, i) {
                 url: d.Endpoints.NOTE(t),
                 oldFormErrors: !0
             });
-            u.default.dispatch({
+            r.default.dispatch({
                 type: "USER_NOTE_LOADED",
                 userId: t,
                 note: e
             })
         } catch (e) {
-            u.default.dispatch({
+            r.default.dispatch({
                 type: "USER_NOTE_LOADED",
                 userId: t
             })

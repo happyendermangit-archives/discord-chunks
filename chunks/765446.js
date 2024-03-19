@@ -74,8 +74,8 @@ function(e, t, n) {
             S = (0, r.useFocused)(),
             C = (0, r.useSlateStatic)(),
             {
-                optionType: I,
-                errored: _
+                optionType: _,
+                errored: I
             } = (0, o.useStateFromStoresObject)([d.default], () => {
                 var e, t, i;
                 return {
@@ -88,12 +88,12 @@ function(e, t, n) {
             N = null != v && h.TextUtils.isText(v) && v.text.endsWith("\n"),
             A = s(E.inlineElement, E.optionPill, {
                 [E.selectedPill]: S && g,
-                [E.erroredPill]: (!S || !g) && _
+                [E.erroredPill]: (!S || !g) && I
             }),
             O = l.useCallback(() => {
                 !h.EditorUtils.isVoid(C, a) && m.SlateTransforms.selectCommandOption(C, a.optionName, !0)
             }, [C, a]);
-        return t = I === u.ApplicationCommandOptionType.ATTACHMENT ? (null == T ? void 0 : T.filename) != null ? (0, i.jsxs)("span", {
+        return t = _ === u.ApplicationCommandOptionType.ATTACHMENT ? (null == T ? void 0 : T.filename) != null ? (0, i.jsxs)("span", {
             className: s(E.optionPillValue, E.attachmentFilename),
             contentEditable: !1,
             children: [T.filename, y]

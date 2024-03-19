@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("845579"),
         S = n("305961"),
         C = n("697218"),
-        I = n("124299"),
-        _ = n("841811"),
+        _ = n("124299"),
+        I = n("841811"),
         T = n("290581"),
         v = n("599110"),
         N = n("159885"),
@@ -35,8 +35,8 @@ function(e, t, n) {
         M = n("161585"),
         k = n("24373"),
         L = n("41170"),
-        b = n("801396"),
-        P = n("355494"),
+        P = n("801396"),
+        b = n("355494"),
         j = n("77162"),
         U = n("209069"),
         D = n("49111"),
@@ -141,16 +141,16 @@ function(e, t, n) {
                 isUsingKeyboardNavigation: h,
                 stickersGrid: x,
                 stickersCategories: E,
-                filteredStickers: I,
+                filteredStickers: _,
                 ownedStickerPacks: N,
                 channel: A
-            } = e, O = (0, d.useAnalyticsContext)(), P = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
+            } = e, O = (0, d.useAnalyticsContext)(), b = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
                 handleStickerInspect: U,
                 handleSelect: B
             } = eu({
                 onSelectSticker: a,
                 channel: A,
-                currentUser: P
+                currentUser: b
             }), [K, W] = l.useState(!1), Y = l.useCallback(e => {
                 g.StickerPickerCollapsedSections.updateSetting(Array.from(e))
             }, []), z = l.useCallback(e => {
@@ -172,9 +172,9 @@ function(e, t, n) {
                     ownedStickerPacks: N,
                     isDisplayingIndividualStickers: !0,
                     channel: A,
-                    currentUser: P
+                    currentUser: b
                 }, e) : null
-            }, [x, r, u, c, f, m, h, U, B, n, N, A, P]), Z = l.useCallback((e, t) => (0, i.jsx)("div", {
+            }, [x, r, u, c, f, m, h, U, B, n, N, A, b]), Z = l.useCallback((e, t) => (0, i.jsx)("div", {
                 children: t
             }, e), []), $ = l.useCallback(function(e) {
                 let {
@@ -188,11 +188,11 @@ function(e, t, n) {
                 }), Y(i)
             }, [O, t, Y]), ee = l.useCallback(e => {
                 let n = E[e];
-                if (null != I) {
+                if (null != _) {
                     let {
                         sendable: t,
                         sendableWithPremium: n
-                    } = I;
+                    } = _;
                     if (0 === e && t.length > 0) return null;
                     let l = t.length > 0 && n.length > 0;
                     return (0, i.jsxs)(i.Fragment, {
@@ -229,7 +229,7 @@ function(e, t, n) {
                             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: n.name
                             }),
-                            icon: (0, i.jsx)(_.default, {}),
+                            icon: (0, i.jsx)(I.default, {}),
                             isCollapsed: t.has(n.id),
                             onClick: () => $(n.id, {
                                 isStickerPack: !1
@@ -274,28 +274,28 @@ function(e, t, n) {
                         }, "h".concat(e.id))
                     }
                 }
-            }, [t, E, $, I]), et = l.useCallback(e => {
-                if (null != I) {
+            }, [t, E, $, _]), et = l.useCallback(e => {
+                if (null != _) {
                     let {
                         sendable: t,
                         sendableWithPremium: n
-                    } = I;
+                    } = _;
                     if (0 === e && t.length > 0) return 0;
                     let i = t.length > 0 && n.length > 0 ? J : 0;
                     return q + i
                 }
                 return q
-            }, [I]), en = l.useCallback(e => {
+            }, [_]), en = l.useCallback(e => {
                 let n = E[e],
                     l = t.has(n.id);
-                return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != I || l ? null : (0, i.jsx)(b.default, {
+                return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != _ || l ? null : (0, i.jsx)(P.default, {
                     className: G.emptyGuildUpsell,
                     guildId: n.id,
                     channel: A,
                     shouldTrackUpsellViewed: !K,
                     setTrackedUpsellViewed: W
                 }, "sticker-picker-empty-guild-inline-upsell-".concat(n.id))
-            }, [E, t, I, A, K]), ei = l.useCallback(e => {
+            }, [E, t, _, A, K]), ei = l.useCallback(e => {
                 let n = E[e],
                     i = t.has(n.id);
                 return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || i ? 0 : es
@@ -321,12 +321,12 @@ function(e, t, n) {
                 onSelectSticker: g,
                 rowCount: S,
                 rowCountBySection: C,
-                stickersCategories: _,
+                stickersCategories: I,
                 stickersGrid: T,
                 channel: v
             } = e, N = l.useRef(!1), A = l.useRef(null), [O, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
                 AnalyticsLocationProvider: k
-            } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), b = (0, s.useStateFromStores)([R.default], () => R.default.getPremiumPacks()), j = l.useMemo(() => new Set(b.map(e => e.id)), [b]), {
+            } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), P = (0, s.useStateFromStores)([R.default], () => R.default.getPremiumPacks()), j = l.useMemo(() => new Set(P.map(e => e.id)), [P]), {
                 renderRow: U,
                 renderSection: D,
                 renderSectionFooter: w,
@@ -336,7 +336,7 @@ function(e, t, n) {
             } = ed({
                 collapsedStickersCategories: n,
                 gridWidth: r,
-                stickersCategories: _,
+                stickersCategories: I,
                 stickersGrid: T,
                 isScrolling: N,
                 isUsingKeyboardNavigation: y,
@@ -406,7 +406,7 @@ function(e, t, n) {
                         suggestions: (0, i.jsx)(eo, {
                             onSuggestionClick: e => (0, h.setSearchQuery)(e, !0)
                         })
-                    }) : (0, i.jsx)(I.default, {
+                    }) : (0, i.jsx)(_.default, {
                         role: "none presentation",
                         listPadding: null != o ? ea : el,
                         onScroll: Y,
@@ -421,7 +421,7 @@ function(e, t, n) {
                         sectionFooterHeight: V,
                         stickyHeaders: !0,
                         ref: A
-                    }), (0, i.jsx)(P.default, {
+                    }), (0, i.jsx)(b.default, {
                         stickersGrid: T
                     })]
                 })

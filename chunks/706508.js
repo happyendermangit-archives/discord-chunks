@@ -8,8 +8,8 @@ function(t, e, i) {
     var n = i("299285"),
         l = i("42203"),
         a = i("18494"),
-        u = i("697218"),
-        r = i("427953"),
+        r = i("697218"),
+        u = i("427953"),
         d = i("550766"),
         s = i("900551"),
         o = i("420444"),
@@ -26,7 +26,7 @@ function(t, e, i) {
             locationObject: T,
             embeddedActivitiesManager: C,
             analyticsLocations: S
-        } = t, N = l.default.getChannel(A), v = null == N ? void 0 : N.getGuildId(), O = null == v || "" === v, D = u.default.getCurrentUser();
+        } = t, N = l.default.getChannel(A), v = null == N ? void 0 : N.getGuildId(), O = null == v || "" === v, D = r.default.getCurrentUser();
         if (null == N || O && !N.isPrivate() || null == A || null == D) return Promise.resolve(!1);
         if (a.default.getVoiceChannelId() === A && (null == i ? void 0 : i.id) === e) return (0, _.default)(v, A), Promise.resolve(!0);
         let p = await (0, s.confirmActivityLaunchChecks)({
@@ -46,7 +46,7 @@ function(t, e, i) {
                 bypassChangeModal: null != i
             });
             if (!t) return !1
-        } else if (!(0, r.isActivitiesInTextEnabled)(N, "joinEmbeddedActivity") || !h) return !1;
+        } else if (!(0, u.isActivitiesInTextEnabled)(N, "joinEmbeddedActivity") || !h) return !1;
         return (0, _.default)(v, A), (0, d.startEmbeddedActivity)(A, e, S), (0, E.default)({
             type: I.AnalyticsGameOpenTypes.JOIN,
             userId: D.id,

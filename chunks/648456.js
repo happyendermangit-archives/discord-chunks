@@ -10,8 +10,8 @@ function(t, e, i) {
     }), i("424973"), i("222007");
     var n, l = i("627445"),
         a = i.n(l),
-        u = i("748820"),
-        r = i("913144"),
+        r = i("748820"),
+        u = i("913144"),
         d = i("255397"),
         s = i("316272"),
         o = i("651057"),
@@ -55,14 +55,14 @@ function(t, e, i) {
             channelId: e,
             applicationId: i,
             analyticsLocations: n
-        } = t, l = A.default.getChannel(e), a = null == l ? void 0 : l.getGuildId(), u = S.default.getCurrentUser();
-        if (null == l || null == u) return;
-        let r = p.default.getShelfActivities(a),
+        } = t, l = A.default.getChannel(e), a = null == l ? void 0 : l.getGuildId(), r = S.default.getCurrentUser();
+        if (null == l || null == r) return;
+        let u = p.default.getShelfActivities(a),
             d = O.default.getState().shelfOrder,
             s = 0 === p.default.getEmbeddedActivitiesForChannel(e).filter(t => t.applicationId === i).length,
             o = (0, y.default)({
                 applicationId: i,
-                activityConfigs: r
+                activityConfigs: u
             }),
             c = 1 + d.findIndex(t => t === i),
             {
@@ -70,7 +70,7 @@ function(t, e, i) {
             } = w(o),
             I = await (0, _.default)();
         Y[i] = t => {
-            var e, a, r;
+            var e, a, u;
             F[i] = t, N.default.track(V.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
                 channel_id: l.id,
                 guild_id: l.getGuildId(),
@@ -78,7 +78,7 @@ function(t, e, i) {
                 activity_session_id: t.activitySessionId,
                 application_id: i,
                 location_stack: n,
-                user_premium_tier: u.premiumType,
+                user_premium_tier: r.premiumType,
                 raw_thermal_state: I,
                 n_participants: E.default.getUserParticipantCount(l.id),
                 is_activity_start: s,
@@ -99,7 +99,7 @@ function(t, e, i) {
                 activity_user_session_id: t.activityUserSessionId,
                 raw_thermal_state: I,
                 is_activity_start: s,
-                shelf_rank: null == o ? void 0 : null === (r = o.activity) || void 0 === r ? void 0 : r.shelf_rank,
+                shelf_rank: null == o ? void 0 : null === (u = o.activity) || void 0 === u ? void 0 : u.shelf_rank,
                 shelf_sorted_rank: c > 0 ? c : null
             })
         }
@@ -109,8 +109,8 @@ function(t, e, i) {
         let {
             channelId: n,
             applicationId: l
-        } = t, a = F[l], u = A.default.getChannel(n), r = p.default.getEmbeddedActivityDurationMs(n, l), d = S.default.getCurrentUser(), s = null == u ? void 0 : u.getGuildId();
-        if (null == a || null == u || null == d) return;
+        } = t, a = F[l], r = A.default.getChannel(n), u = p.default.getEmbeddedActivityDurationMs(n, l), d = S.default.getCurrentUser(), s = null == r ? void 0 : r.getGuildId();
+        if (null == a || null == r || null == d) return;
         let o = p.default.getShelfActivities(s),
             c = (0, y.default)({
                 applicationId: l,
@@ -121,29 +121,29 @@ function(t, e, i) {
             } = w(c),
             f = await (0, _.default)();
         N.default.track(V.AnalyticEvents.ACTIVITY_SESSION_LEFT, {
-            channel_id: u.id,
-            guild_id: u.getGuildId(),
+            channel_id: r.id,
+            guild_id: r.getGuildId(),
             media_session_id: a.mediaSessionIds[0],
             activity_session_id: a.activitySessionId,
             application_id: l,
-            duration_ms: r,
+            duration_ms: u,
             user_premium_tier: d.premiumType,
             raw_thermal_state: f,
             release_phase: E,
             activity_premium_tier_requirement: null == c ? void 0 : null === (e = c.activity) || void 0 === e ? void 0 : e.premium_tier_requirement,
             shelf_rank: null == c ? void 0 : null === (i = c.activity) || void 0 === i ? void 0 : i.shelf_rank,
             activity_user_session_id: a.activityUserSessionId,
-            channel_type: u.type,
+            channel_type: r.type,
             media_session_ids: a.mediaSessionIds
         }), N.default.track(V.AnalyticEvents.ACTIVITY_IFRAME_UNMOUNT, {
-            channel_id: u.id,
-            guild_id: u.getGuildId(),
+            channel_id: r.id,
+            guild_id: r.getGuildId(),
             application_id: l,
             instance_ids: [a.instanceId],
             media_session_ids: a.mediaSessionIds,
             activity_user_session_id: a.activityUserSessionId,
             raw_thermal_state: f,
-            duration_ms: r
+            duration_ms: u
         }), delete Y[l], delete F[l]
     }
 
@@ -153,9 +153,9 @@ function(t, e, i) {
             channelId: n,
             embeddedActivity: l,
             connections: a,
-            updateCode: r
+            updateCode: u
         } = t, s = I.default.getId(), o = p.default.getEmbeddedActivitiesForChannel(n), c = A.default.getChannel(n);
-        if (r === U.EmbeddedActivityUpdateCodes.ACTIVITY_STARTED && null !== (i = null == c ? void 0 : c.isPrivate()) && void 0 !== i && i && o.length <= 1 && void 0 === a.find(t => t.user_id === s) && d.default.selectParticipant(n, null), !a.some(t => t.user_id === s)) return;
+        if (u === U.EmbeddedActivityUpdateCodes.ACTIVITY_STARTED && null !== (i = null == c ? void 0 : c.isPrivate()) && void 0 !== i && i && o.length <= 1 && void 0 === a.find(t => t.user_id === s) && d.default.selectParticipant(n, null), !a.some(t => t.user_id === s)) return;
         let E = T.default.getMediaSessionId(),
             {
                 application_id: _
@@ -164,7 +164,7 @@ function(t, e, i) {
             C = null == E && (null == c ? void 0 : c.isVocal()) === !0;
         null != f && !C && (null === (e = Y[_]) || void 0 === e || e.call(Y, {
             activitySessionId: f,
-            activityUserSessionId: (0, u.v4)(),
+            activityUserSessionId: (0, r.v4)(),
             instanceId: l.activity_id,
             mediaSessionIds: null != E ? [E] : []
         }), delete Y[_])
@@ -181,13 +181,13 @@ function(t, e, i) {
             let t = p.default.getSelfEmbeddedActivityForChannel(i),
                 n = null == t ? void 0 : t.applicationId,
                 l = null == t ? void 0 : t.instanceId,
-                r = (0, g.default)(t);
-            if (null != n && null != e && null != r && null != l) {
+                u = (0, g.default)(t);
+            if (null != n && null != e && null != u && null != l) {
                 let t = F[n],
                     i = Y[n];
                 a(null == t || null == i, "an active session and awaiting session both exist"), null == i || i({
-                    activitySessionId: r,
-                    activityUserSessionId: (0, u.v4)(),
+                    activitySessionId: u,
+                    activityUserSessionId: (0, r.v4)(),
                     instanceId: l,
                     mediaSessionIds: [e]
                 }), delete Y[n]
@@ -200,10 +200,10 @@ function(t, e, i) {
     }
     n = class extends s.default {
         _initialize() {
-            C.default.addChangeListener(this.handleSelectedChannelUpdate), r.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), r.default.subscribe("EMBEDDED_ACTIVITY_OPEN", G), r.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", B), r.default.subscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", H), r.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), r.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), r.default.subscribe("MEDIA_SESSION_JOINED", k)
+            C.default.addChangeListener(this.handleSelectedChannelUpdate), u.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), u.default.subscribe("EMBEDDED_ACTIVITY_OPEN", G), u.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", B), u.default.subscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", H), u.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), u.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), u.default.subscribe("MEDIA_SESSION_JOINED", k)
         }
         _terminate() {
-            C.default.removeChangeListener(this.handleSelectedChannelUpdate), r.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), r.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", G), r.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", B), r.default.unsubscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", H), r.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), r.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), r.default.unsubscribe("MEDIA_SESSION_JOINED", k)
+            C.default.removeChangeListener(this.handleSelectedChannelUpdate), u.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), u.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", G), u.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", B), u.default.unsubscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", H), u.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), u.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), u.default.unsubscribe("MEDIA_SESSION_JOINED", k)
         }
         constructor(...t) {
             super(...t), this.handleSelectedChannelUpdate = () => {
@@ -277,13 +277,13 @@ function(t, e, i) {
                 let l;
                 let {
                     channelId: a,
-                    applicationId: u,
-                    analyticsLocations: r
+                    applicationId: r,
+                    analyticsLocations: u
                 } = t, d = A.default.getChannel(a);
                 if (void 0 === d || f.GUILD_VOCAL_CHANNEL_TYPES.has(null == d ? void 0 : d.type) && C.default.getVoiceChannelId() !== a) return;
                 let s = p.default.getSelfEmbeddedActivityForChannel(a);
-                if ((null == s ? void 0 : s.applicationId) === u) return;
-                let E = await o.default.fetchApplication(u),
+                if ((null == s ? void 0 : s.applicationId) === r) return;
+                let E = await o.default.fetchApplication(r),
                     _ = (0, P.getIsActivitiesEnabledForCurrentPlatform)(d);
                 if (!_) {
                     this.showLaunchErrorModal(b.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
@@ -303,7 +303,7 @@ function(t, e, i) {
                         guildId: T
                     }),
                     v = (0, y.default)({
-                        applicationId: u,
+                        applicationId: r,
                         activityConfigs: S,
                         applications: N
                     });
@@ -313,19 +313,19 @@ function(t, e, i) {
                         force: !0
                     });
                     v = (0, y.default)({
-                        applicationId: u,
+                        applicationId: r,
                         activityConfigs: t.activityConfigs,
                         applications: t.applications
                     })
                 }
-                let O = p.default.getEmbeddedActivitiesForChannel(a).find(t => t.applicationId === u),
+                let O = p.default.getEmbeddedActivitiesForChannel(a).find(t => t.applicationId === r),
                     g = null !== (n = null == O ? void 0 : O.userIds.size) && void 0 !== n ? n : 0;
                 g > 0 ? (0, h.maybeJoinEmbeddedActivity)({
                     channelId: a,
-                    applicationId: u,
+                    applicationId: r,
                     instanceId: null == O ? void 0 : O.instanceId,
                     inputApplication: null,
-                    analyticsLocations: r,
+                    analyticsLocations: u,
                     embeddedActivitiesManager: this
                 }) : await (0, L.default)({
                     activityItem: v,
@@ -333,7 +333,7 @@ function(t, e, i) {
                     channelId: a,
                     guildId: T,
                     embeddedActivitiesManager: this,
-                    analyticsLocations: r
+                    analyticsLocations: u
                 })
             }
         }

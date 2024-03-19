@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return _
         }
     });
     var i = n("37983"),
@@ -83,5 +83,5 @@ function(e, t, n) {
                 titleSecondary: (0, m.isStandardSticker)(a) || (0, m.isGuildSticker)(a) ? u : null
             })
         });
-    var I = C
+    var _ = C
 }

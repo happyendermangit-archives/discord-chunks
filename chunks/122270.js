@@ -83,8 +83,8 @@ function(e, t, n) {
                     role: e,
                     hideDescription: x.hideMentionDescription
                 }, e.id)),
-                I = x.mentions.user === d.UserMentionMode.DENY;
-            return I ? (t = f.default.Messages.ROLES_MATCHING, n = f.default.Messages.ROLES) : (t = f.default.Messages.MEMBERS_MATCHING, n = f.default.Messages.MEMBERS), (0, i.jsxs)(l.Fragment, {
+                _ = x.mentions.user === d.UserMentionMode.DENY;
+            return _ ? (t = f.default.Messages.ROLES_MATCHING, n = f.default.Messages.ROLES) : (t = f.default.Messages.MEMBERS_MATCHING, n = f.default.Messages.MEMBERS), (0, i.jsxs)(l.Fragment, {
                 children: [(0, u.renderHeader)({
                     titleWithQuery: t,
                     titleWithoutQuery: n,

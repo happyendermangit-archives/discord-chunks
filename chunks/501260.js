@@ -12,8 +12,8 @@ function(t, e, i) {
         }
     });
     var n, l, a = i("446674"),
-        u = i("42203"),
-        r = i("305961"),
+        r = i("42203"),
+        u = i("305961"),
         d = i("957255"),
         s = i("697218"),
         o = i("800762"),
@@ -27,8 +27,8 @@ function(t, e, i) {
         let {
             userId: l,
             activity: a,
-            application: u,
-            channelId: r,
+            application: r,
+            channelId: u,
             currentUser: d,
             isActivitiesEnabledForCurrentPlatform: s,
             ChannelStore: o,
@@ -37,12 +37,12 @@ function(t, e, i) {
             GuildStore: A
         } = t;
         if (null == l) return 8;
-        if ((null == d ? void 0 : d.nsfwAllowed) === !1 && (null == u ? void 0 : null === (e = u.embeddedActivityConfig) || void 0 === e ? void 0 : e.requires_age_gate) === !0) return 7;
+        if ((null == d ? void 0 : d.nsfwAllowed) === !1 && (null == r ? void 0 : null === (e = r.embeddedActivityConfig) || void 0 === e ? void 0 : e.requires_age_gate) === !0) return 7;
         if (!s) return 5;
-        if (!(0, _.default)(null == u ? void 0 : null === (i = u.embeddedActivityConfig) || void 0 === i ? void 0 : i.supported_platforms)) return 6;
-        let T = null != r ? r : null === (n = E.getVoiceStateForSession(l, null == a ? void 0 : a.session_id)) || void 0 === n ? void 0 : n.channelId;
+        if (!(0, _.default)(null == r ? void 0 : null === (i = r.embeddedActivityConfig) || void 0 === i ? void 0 : i.supported_platforms)) return 6;
+        let T = null != u ? u : null === (n = E.getVoiceStateForSession(l, null == a ? void 0 : a.session_id)) || void 0 === n ? void 0 : n.channelId;
         if (null == T) return 4;
-        let C = o.getChannel(r);
+        let C = o.getChannel(u);
         if (null == C) return 4;
         let S = C.getGuildId();
         if (!C.isPrivate()) {
@@ -68,17 +68,17 @@ function(t, e, i) {
             activity: i,
             channelId: n,
             application: l
-        } = t, c = (0, E.useIsActivitiesEnabledForCurrentPlatform)(null != n ? n : void 0), _ = (0, a.useStateFromStores)([s.default], () => s.default.getCurrentUser()), f = (0, a.useStateFromStores)([u.default, o.default, d.default, r.default], () => I({
+        } = t, c = (0, E.useIsActivitiesEnabledForCurrentPlatform)(null != n ? n : void 0), _ = (0, a.useStateFromStores)([s.default], () => s.default.getCurrentUser()), f = (0, a.useStateFromStores)([r.default, o.default, d.default, u.default], () => I({
             userId: e,
             activity: i,
             application: l,
             channelId: n,
             currentUser: _,
             isActivitiesEnabledForCurrentPlatform: c,
-            ChannelStore: u.default,
+            ChannelStore: r.default,
             VoiceStateStore: o.default,
             PermissionStore: d.default,
-            GuildStore: r.default
+            GuildStore: u.default
         }), [i, l, n, _, c, e]);
         return f
     }(n = l || (l = {}))[n.CAN_JOIN = 0] = "CAN_JOIN", n[n.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", n[n.NO_CHANNEL_CONNECT_PERMISSION = 2] = "NO_CHANNEL_CONNECT_PERMISSION", n[n.CHANNEL_FULL = 3] = "CHANNEL_FULL", n[n.NO_CHANNEL = 4] = "NO_CHANNEL", n[n.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 5] = "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", n[n.ACTIVITY_NOT_SUPPORTED_ON_OS = 6] = "ACTIVITY_NOT_SUPPORTED_ON_OS", n[n.ACTIVITY_AGE_GATED = 7] = "ACTIVITY_AGE_GATED", n[n.NO_USER = 8] = "NO_USER", n[n.IS_AFK_CHANNEL = 9] = "IS_AFK_CHANNEL", n[n.NO_GUILD = 10] = "NO_GUILD"

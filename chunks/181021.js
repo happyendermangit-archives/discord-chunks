@@ -25,15 +25,15 @@ function(e, t, n) {
         g = n("773336"),
         S = n("13798"),
         C = n("235004"),
-        I = n("49111"),
-        _ = n("782340"),
+        _ = n("49111"),
+        I = n("782340"),
         T = n("870477");
 
     function v(e) {
         let {
             soundboardSound: t,
             closePicker: v
-        } = e, N = (0, c.useExpressionPickerStore)(e => e.searchQuery), A = (0, l.default)([C.default], () => null != t && C.default.isFavoriteSound(t.soundId)), O = (0, l.default)([p.default], () => p.default.getGuild(null == t ? void 0 : t.guildId)), R = (0, l.default)([o.default], () => o.default.useReducedMotion, []), M = (0, l.default)([h.default], () => h.default.isFocused()), k = (0, l.default)([m.default], () => m.default.getKeybindForAction(I.GlobalKeybindActions.SOUNDBOARD_HOLD));
+        } = e, N = (0, c.useExpressionPickerStore)(e => e.searchQuery), A = (0, l.default)([C.default], () => null != t && C.default.isFavoriteSound(t.soundId)), O = (0, l.default)([p.default], () => p.default.getGuild(null == t ? void 0 : t.guildId)), R = (0, l.default)([o.default], () => o.default.useReducedMotion, []), M = (0, l.default)([h.default], () => h.default.isFocused()), k = (0, l.default)([m.default], () => m.default.getKeybindForAction(_.GlobalKeybindActions.SOUNDBOARD_HOLD));
         if (null != t && N.length > 0) return (0, i.jsx)(f.default, {
             graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, i.jsx)(r.default, {
                 emojiId: t.emojiId,
@@ -60,15 +60,15 @@ function(e, t, n) {
                     })
                 })
             },
-            b = (0, u.isDismissibleContentDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
-            P = null != k && (0, g.isWindows)() && !b ? _.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
+            P = (0, u.isDismissibleContentDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
+            b = null != k && (0, g.isWindows)() && !P ? I.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
                 keybind: (0, S.toString)(k.shortcut, !0),
                 openSettingsHook: (e, t) => (0, i.jsx)(s.Anchor, {
                     onClick: L,
                     children: e
                 }, t)
             }) : null;
-        return null == P ? null : (0, i.jsxs)("div", {
+        return null == b ? null : (0, i.jsxs)("div", {
             className: T.keybindHint,
             children: [(0, i.jsx)(y.default, {
                 className: T.warningIcon
@@ -76,7 +76,7 @@ function(e, t, n) {
                 variant: "text-sm/medium",
                 color: "text-normal",
                 className: T.keybindHintText,
-                children: P
+                children: b
             }), (0, i.jsx)(s.Clickable, {
                 className: T.closeButton,
                 onClick: () => (0, u.markDismissibleContentAsDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),

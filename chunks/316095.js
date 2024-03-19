@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return I
         }
     }), n("222007");
     var i = n("37983"),
@@ -24,11 +24,11 @@ function(e, t, n) {
         g = n("49111"),
         S = n("782340"),
         C = n("715392"),
-        I = n("862939");
+        _ = n("862939");
 
-    function _(e) {
+    function I(e) {
         var t, n;
-        let a, _, {
+        let a, I, {
                 userId: T,
                 channelId: v,
                 guild: N,
@@ -38,9 +38,9 @@ function(e, t, n) {
             } = e,
             M = (0, d.default)(N, T, v),
             [k, L] = l.useState(new Set),
-            b = (0, r.useStateFromStores)([m.default], () => m.default.getUserProfile(T)),
-            P = null !== (t = null == b ? void 0 : b.connectedAccounts) && void 0 !== t ? t : [],
-            j = null !== (n = null == b ? void 0 : b.applicationRoleConnections) && void 0 !== n ? n : [],
+            P = (0, r.useStateFromStores)([m.default], () => m.default.getUserProfile(T)),
+            b = null !== (t = null == P ? void 0 : P.connectedAccounts) && void 0 !== t ? t : [],
+            j = null !== (n = null == P ? void 0 : P.applicationRoleConnections) && void 0 !== n ? n : [],
             U = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation),
             D = (0, r.useStateFromStores)([c.default], () => c.default.locale);
         if (l.useEffect(() => {
@@ -55,7 +55,7 @@ function(e, t, n) {
                 })
             }, [null == N ? void 0 : N.id, null == M ? void 0 : M.id]), U || null == M) return null;
         let w = Array.from(k).map(e => {
-            let t = P.find(t => t.type === e);
+            let t = b.find(t => t.type === e);
             return null == t ? null : (0, i.jsx)(h.ConnectedUserAccount, {
                 connectedAccount: t,
                 theme: A,
@@ -66,7 +66,7 @@ function(e, t, n) {
         return (w.length > 0 && (a = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(o.Heading, {
                 variant: "eyebrow",
-                className: I.title,
+                className: _.title,
                 children: S.default.Messages.CONNECTIONS
             }), (0, i.jsxs)("div", {
                 className: s(C.connectionsContainer, R),
@@ -94,10 +94,10 @@ function(e, t, n) {
                     })]
                 })]
             })]
-        })), j.length > 0 && (_ = (0, i.jsxs)(i.Fragment, {
+        })), j.length > 0 && (I = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(o.Heading, {
                 variant: "eyebrow",
-                className: I.title,
+                className: _.title,
                 children: S.default.Messages.APPS
             }), (0, i.jsx)("div", {
                 className: s(C.connectionsContainer, R),
@@ -106,8 +106,8 @@ function(e, t, n) {
                     locale: D
                 }, e.application.id))
             })]
-        })), null == a && null == _) ? null : (0, i.jsxs)(E.default, {
-            children: [_, a]
+        })), null == a && null == I) ? null : (0, i.jsxs)(E.default, {
+            children: [I, a]
         })
     }
 }

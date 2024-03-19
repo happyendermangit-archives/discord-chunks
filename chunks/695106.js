@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("402671"),
         S = n("159885"),
         C = n("49111"),
-        I = n("782340"),
-        _ = n("756249");
+        _ = n("782340"),
+        I = n("756249");
     let T = (0, y.uid)(),
         v = c.default.convert.fromCodePoint("1f44f"),
         N = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
@@ -49,26 +49,26 @@ function(e, t, n) {
                 role: "option",
                 "aria-selected": 0 === s,
                 onClick: () => l(n),
-                className: _.diversityEmojiItem,
+                className: I.diversityEmojiItem,
                 children: (0, i.jsx)(u.animated.div, {
                     "aria-label": function(e) {
                         let t = c.default.convert.toCodePoint(e);
                         switch (t) {
                             case "1f3fb":
-                                return I.default.Messages.EMOJI_MODIFIER_LIGHT_SKIN_TONE;
+                                return _.default.Messages.EMOJI_MODIFIER_LIGHT_SKIN_TONE;
                             case "1f3fc":
-                                return I.default.Messages.EMOJI_MODIFIER_MEDIUM_LIGHT_SKIN_TONE;
+                                return _.default.Messages.EMOJI_MODIFIER_MEDIUM_LIGHT_SKIN_TONE;
                             case "1f3fd":
-                                return I.default.Messages.EMOJI_MODIFIER_MEDIUM_SKIN_TONE;
+                                return _.default.Messages.EMOJI_MODIFIER_MEDIUM_SKIN_TONE;
                             case "1f3fe":
-                                return I.default.Messages.EMOJI_MODIFIER_MEDIUM_DARK_SKIN_TONE;
+                                return _.default.Messages.EMOJI_MODIFIER_MEDIUM_DARK_SKIN_TONE;
                             case "1f3ff":
-                                return I.default.Messages.EMOJI_MODIFIER_DARK_SKIN_TONE;
+                                return _.default.Messages.EMOJI_MODIFIER_DARK_SKIN_TONE;
                             default:
-                                return I.default.Messages.EMOJI_MODIFIER_NONE
+                                return _.default.Messages.EMOJI_MODIFIER_NONE
                         }
                     }(n),
-                    className: _.diversityEmojiItemImage,
+                    className: I.diversityEmojiItemImage,
                     style: {
                         backgroundImage: 'url("'.concat(o, '")'),
                         ...f
@@ -107,8 +107,8 @@ function(e, t, n) {
                             ...l,
                             id: t,
                             ref: n,
-                            className: s(_.diversitySelectorOptions, {
-                                [_.diversitySelectorOptionsHasTabWrapper]: r
+                            className: s(I.diversitySelectorOptions, {
+                                [I.diversitySelectorOptionsHasTabWrapper]: r
                             }),
                             style: f,
                             role: "listbox",
@@ -136,17 +136,17 @@ function(e, t, n) {
             className: a,
             children: [(0, i.jsx)(p.Clickable, {
                 innerRef: c,
-                className: _.diversitySelectorButton,
+                className: I.diversitySelectorButton,
                 onClick: () => {
                     u(!0)
                 },
-                "aria-label": I.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
+                "aria-label": _.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
                 "aria-haspopup": !0,
                 "aria-expanded": o,
                 "aria-controls": T,
                 tabIndex: o ? -1 : 0,
                 children: (0, i.jsx)("div", {
-                    className: _.diversityEmojiItemImage,
+                    className: I.diversityEmojiItemImage,
                     style: {
                         backgroundImage: 'url("'.concat(r, '")')
                     }

@@ -56,8 +56,8 @@ function(e, t, n) {
             onMouseEnter: g,
             onMouseLeave: S,
             onFocus: C,
-            onBlur: I,
-            pulse: _,
+            onBlur: _,
+            pulse: I,
             sparkle: T,
             notification: v,
             "aria-label": N,
@@ -96,13 +96,13 @@ function(e, t, n) {
                 [m.active]: y
             }),
             innerClassName: o(m.button, i, {
-                [m.pulseButton]: _
+                [m.pulseButton]: I
             }),
             onClick: E,
             onMouseEnter: g,
             onMouseLeave: S,
             onFocus: C,
-            onBlur: I,
+            onBlur: _,
             focusProps: {
                 offset: {
                     top: 4,
@@ -125,7 +125,7 @@ function(e, t, n) {
                     children: k({
                         component: (0, a.jsx)(r, {
                             className: o(m.icon, s, {
-                                [m.pulseIcon]: _
+                                [m.pulseIcon]: I
                             })
                         })
                     })

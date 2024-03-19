@@ -23,8 +23,8 @@ function(e, t, n) {
         g = n("383018"),
         S = n("605250"),
         C = n("585722"),
-        I = n("378765"),
-        _ = n("254490"),
+        _ = n("378765"),
+        I = n("254490"),
         T = n("850391"),
         v = n("149022"),
         N = n("296141"),
@@ -35,10 +35,10 @@ function(e, t, n) {
         k = n("782340"),
         L = n("350583");
     new S.default("ChannelEditor.tsx");
-    let b = function() {
+    let P = function() {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
         },
-        P = {
+        b = {
             12: L.fontSize12Padding,
             14: L.fontSize14Padding,
             15: L.fontSize15Padding,
@@ -174,11 +174,11 @@ function(e, t, n) {
                 useSlate: g,
                 spellcheckEnabled: S,
                 useNewSlashCommands: C,
-                canOnlyUseTextCommands: _,
+                canOnlyUseTextCommands: I,
                 className: N,
                 id: R,
                 required: k,
-                maxCharacterCount: b,
+                maxCharacterCount: P,
                 allowNewLines: j,
                 "aria-describedby": U,
                 "aria-labelledby": D,
@@ -212,7 +212,7 @@ function(e, t, n) {
                 onResize: p,
                 onKeyDown: f,
                 onSubmit: h,
-                textAreaPaddingClassName: r(P[y], {
+                textAreaPaddingClassName: r(b[y], {
                     [L.textAreaWithoutAttachmentButton]: E !== T.ChatInputTypes.NORMAL && E !== T.ChatInputTypes.OVERLAY && E !== T.ChatInputTypes.THREAD_CREATION && E !== T.ChatInputTypes.SIDEBAR,
                     [L.textAreaForPostCreation]: E === T.ChatInputTypes.CREATE_FORUM_POST,
                     [L.textAreaCustomGift]: E === T.ChatInputTypes.CUSTOM_GIFT
@@ -225,7 +225,7 @@ function(e, t, n) {
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== G.id || void 0,
                 "aria-activedescendant": null !== (s = G.activeDescendant) && void 0 !== s ? s : void 0,
-                "aria-invalid": o.length > b,
+                "aria-invalid": o.length > P,
                 "aria-describedby": U,
                 "aria-labelledby": D,
                 "aria-autocomplete": "list"
@@ -235,17 +235,17 @@ function(e, t, n) {
                 type: E,
                 value: d ? (0, v.toRichValue)("") : u,
                 canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
-                canOnlyUseTextCommands: _
+                canOnlyUseTextCommands: I
             }) : (0, l.jsx)(A.default, {
                 ref: this.ref,
                 ...B,
                 value: d ? "" : o
             });
             return (0, l.jsxs)(l.Fragment, {
-                children: [(0, l.jsx)(I.ComponentAction, {
+                children: [(0, l.jsx)(_.ComponentAction, {
                     event: M.ComponentActions.INSERT_TEXT,
                     handler: this.handleInsertText
-                }), (0, l.jsx)(I.ComponentAction, {
+                }), (0, l.jsx)(_.ComponentAction, {
                     event: M.ComponentActions.CLEAR_TEXT,
                     handler: this.handleClearText
                 }), H]
@@ -367,7 +367,7 @@ function(e, t, n) {
                                     }
                                 }(n)) && void 0 !== s ? s : t.name;
                             return {
-                                files: [(0, _.makeFile)(t, l, t.type)]
+                                files: [(0, I.makeFile)(t, l, t.type)]
                             }
                         }
                         return {
@@ -381,7 +381,7 @@ function(e, t, n) {
                                 type: "text/plain"
                             });
                             return {
-                                files: [(0, _.makeFile)(e, "message.txt")],
+                                files: [(0, I.makeFile)(e, "message.txt")],
                                 convertedStringToFile: !0
                             }
                         }
@@ -390,7 +390,7 @@ function(e, t, n) {
                         files: []
                     }
                 }(e.clipboardData, s.uploadLongMessages ? null != i ? i : a : null);
-                return b("onPaste", [...e.clipboardData.items].map(e => {
+                return P("onPaste", [...e.clipboardData.items].map(e => {
                     if ("file" !== e.kind) return {
                         kind: e.kind,
                         type: e.type

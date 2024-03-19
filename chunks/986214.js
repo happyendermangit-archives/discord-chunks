@@ -8,8 +8,8 @@ function(t, e, i) {
     var n = i("404118"),
         l = i("645999"),
         a = i("42203"),
-        u = i("305961"),
-        r = i("957255"),
+        r = i("305961"),
+        u = i("957255"),
         d = i("697218"),
         s = i("659500"),
         o = i("427953"),
@@ -34,7 +34,7 @@ function(t, e, i) {
             guildId: y,
             embeddedActivitiesManager: h,
             analyticsLocations: L
-        } = t, P = u.default.getGuild(y), g = d.default.getCurrentUser();
+        } = t, P = r.default.getGuild(y), g = d.default.getCurrentUser();
         if (null == P && !(0, S.isPrivateChannelWithEnabledActivities)(p) || null == g || null == e || null == e.application) return !1;
         if (null == p) return s.ComponentDispatch.dispatch(v.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
             applicationId: e.application.id
@@ -44,8 +44,8 @@ function(t, e, i) {
         let R = null != p ? (0, f.getEmbeddedActivityLaunchability)({
             channelId: p,
             ChannelStore: a.default,
-            GuildStore: u.default,
-            PermissionStore: r.default
+            GuildStore: r.default,
+            PermissionStore: u.default
         }) : f.EmbeddedActivityLaunchability.NO_CHANNEL;
         if (R !== f.EmbeddedActivityLaunchability.CAN_LAUNCH) return R === f.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, l.showActivitiesInvalidPermissionsAlert)() : R === f.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && n.default.show({
             title: O.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,

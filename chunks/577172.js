@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     }), n("222007");
     var i = n("37983"),
@@ -13,17 +13,18 @@ function(e, t, n) {
         o = n("77078"),
         u = n("36341"),
         d = n("158998"),
-        c = n("777003"),
-        f = n("782340"),
-        p = n("888485"),
-        m = n("107680"),
-        h = n("379539"),
-        x = n("714073"),
-        E = n("980923"),
-        y = n("779585"),
-        g = n("900143"),
-        S = n("923337");
-    let C = [S, m, E, x, y, h, g];
+        c = n("756507"),
+        f = n("777003"),
+        p = n("782340"),
+        m = n("888485"),
+        h = n("107680"),
+        x = n("379539"),
+        E = n("714073"),
+        y = n("980923"),
+        g = n("779585"),
+        S = n("900143"),
+        C = n("923337");
+    let _ = [C, h, y, E, g, x, S];
 
     function I(e) {
         let {
@@ -32,48 +33,52 @@ function(e, t, n) {
         return l.useLayoutEffect(() => {
             !n && a(!0)
         }, [n]), (0, i.jsx)("div", {
-            className: p.wumpusWrapper,
+            className: m.wumpusWrapper,
             children: (0, i.jsxs)("div", {
-                className: s(p.wumpus, {
-                    [p.wumpusShown]: n
+                className: s(m.wumpus, {
+                    [m.wumpusShown]: n
                 }),
                 children: [(0, i.jsx)("img", {
-                    className: p.wumpusImage,
-                    alt: f.default.Messages.IMG_ALT_ICON.format({
-                        name: f.default.Messages.WUMPUS
+                    className: m.wumpusImage,
+                    alt: p.default.Messages.IMG_ALT_ICON.format({
+                        name: p.default.Messages.WUMPUS
                     }),
                     src: function() {
                         let e = parseInt(t.slice(-6), 10);
-                        return C[e % C.length]
+                        return _[e % _.length]
                     }()
                 }), (0, i.jsxs)(o.Text, {
                     variant: "text-sm/normal",
-                    children: [f.default.Messages.USER_POPOUT_WUMPUS_TOOLTIP, "???"]
+                    children: [p.default.Messages.USER_POPOUT_WUMPUS_TOOLTIP, "???"]
                 })]
             })
         })
     }
 
-    function _(e) {
+    function T(e) {
         let {
             user: t,
             setNote: n,
             canDM: l,
             onClose: a
-        } = e;
-        if (t.isNonUserBot() || !l) return null;
-        let s = l && (0, d.isNewUser)(t) && !t.bot;
-        return (0, i.jsxs)(c.default, {
-            className: p.section,
+        } = e, {
+            trackUserProfileAction: s
+        } = (0, c.useUserProfileAnalyticsContext)(), o = l && (0, d.isNewUser)(t) && !t.bot;
+        return (0, i.jsxs)(f.default, {
+            className: m.section,
             lastSection: !0,
-            children: [s && l ? (0, i.jsx)(I, {
+            children: [o && l ? (0, i.jsx)(I, {
                 userId: t.id
             }) : null, l ? (0, i.jsx)(u.default, {
-                className: p.messageInputContainer,
-                inputClassName: p.messageInput,
+                className: m.messageInputContainer,
+                inputClassName: m.messageInput,
                 user: t,
-                onClose: () => null == a ? void 0 : a(),
-                autoFocus: !r.isMobile && !n
+                autoFocus: !r.isMobile && !n,
+                onSend: () => {
+                    s({
+                        action: "SEND_DIRECT_MESSAGE"
+                    }), null == a || a()
+                }
             }) : null]
         })
     }

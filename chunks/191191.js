@@ -30,8 +30,8 @@ function(e, t, n) {
             containerWidth: a,
             onClose: S,
             onSelect: C,
-            analyticsSource: I,
-            suppressPlaySound: _,
+            analyticsSource: _,
+            suppressPlaySound: I,
             shouldShowUpsell: T = !0,
             gridNotice: v,
             autoWidth: N = !1,
@@ -40,19 +40,19 @@ function(e, t, n) {
             renderHeader: R,
             defaultSoundsOnly: M
         } = e, k = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
-            AnalyticsLocationProvider: b
+            AnalyticsLocationProvider: P
         } = (0, c.default)(d.default.SOUNDBOARD_POPOUT);
         return (0, f.default)({
             type: r.ImpressionTypes.POPOUT,
             name: r.ImpressionNames.SOUNDBOARD_POPOUT,
             properties: {
-                source: I,
+                source: _,
                 guild_id: t,
                 media_session_id: L
             }
         }), l.useEffect(() => {
             x.maybeFetchSoundboardSounds(), m.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, p.setSearchQuery)("")
-        }, []), (0, i.jsx)(b, {
+        }, []), (0, i.jsx)(P, {
             children: (0, i.jsx)("div", {
                 className: s(g.picker, {
                     [g.fetching]: k,
@@ -64,7 +64,7 @@ function(e, t, n) {
                     onClose: S,
                     onSelect: C,
                     containerWidth: a,
-                    suppressPlaySound: _,
+                    suppressPlaySound: I,
                     shouldShowUpsell: T,
                     gridNotice: v,
                     soundButtonOverlay: A,

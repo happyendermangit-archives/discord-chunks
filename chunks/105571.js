@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("82372"),
         S = n("476606"),
         C = n("540843"),
-        I = n("49111"),
-        _ = n("317041"),
+        _ = n("49111"),
+        I = n("317041"),
         T = n("782340"),
         v = n("23429"),
         N = n("919163");
@@ -41,7 +41,7 @@ function(e, t, n) {
                 command: n,
                 section: a,
                 location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-            }), y.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+            }), y.ComponentDispatch.dispatch(_.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                 channelId: t.id
             })
         }, [t, n, a]);
@@ -71,10 +71,10 @@ function(e, t, n) {
             commandType: o.ApplicationCommandType.CHAT
         }, {
             placeholderCount: 0,
-            limit: _.DISCOVERY_COMMANDS_QUERY_LIMIT,
+            limit: I.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
         }), {
-            commands: I
+            commands: _
         } = (0, S.default)({
             sectionId: u.id,
             commandsByActiveSection: y
@@ -94,7 +94,7 @@ function(e, t, n) {
             M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
             k = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
             L = (0, f.getIconComponent)(u),
-            b = l.useMemo(() => {
+            P = l.useMemo(() => {
                 var e, t;
                 return (0, m.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
             }, [null === (n = u.application) || void 0 === n ? void 0 : n.description]);
@@ -133,10 +133,10 @@ function(e, t, n) {
                         className: s(v.appDescription, N.markup),
                         variant: "text-sm/medium",
                         lineClamp: 3,
-                        children: b
+                        children: P
                     })]
                 }), (0, i.jsx)(C.default, {
-                    commands: I,
+                    commands: _,
                     channel: a
                 }), (0, i.jsxs)("div", {
                     className: v.commandListHeader,
@@ -149,7 +149,7 @@ function(e, t, n) {
                         children: ["Popular", (0, i.jsx)(x.default, {})]
                     })]
                 }), (0, i.jsx)("ul", {
-                    children: I.map(e => (0, i.jsx)(A, {
+                    children: _.map(e => (0, i.jsx)(A, {
                         channel: a,
                         command: e,
                         section: u

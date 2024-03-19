@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("49111"),
         S = n("646718"),
         C = n("782340"),
-        I = n("163448"),
-        _ = n("187971");
+        _ = n("163448"),
+        I = n("187971");
 
     function T(e) {
         var t;
@@ -42,10 +42,10 @@ function(e, t, n) {
         }), [M]), {
             analyticsLocations: L
         } = (0, f.default)(c.default.PREMIUM_UPSELL), {
-            previewSound: b
-        } = (0, E.default)(v, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), P = (0, y.PreviewButton)({
+            previewSound: P
+        } = (0, E.default)(v, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), b = (0, y.PreviewButton)({
             sound: v,
-            previewSound: b,
+            previewSound: P,
             tooltipPosition: "left"
         }), j = (0, r.isThemeLight)(A) ? n("602291") : n("609708");
         l.useEffect(() => {
@@ -66,33 +66,33 @@ function(e, t, n) {
             }), (0, p.navigateToPremiumMarketingPage)(), T()
         }, [T]);
         return (0, i.jsxs)("div", {
-            className: s(_.premiumPromo, I.container),
+            className: s(I.premiumPromo, _.container),
             children: [(0, i.jsx)(o.Clickable, {
-                className: _.premiumPromoClose,
+                className: I.premiumPromoClose,
                 onClick: a,
                 children: C.default.Messages.CLOSE
             }), (0, i.jsx)("img", {
                 "aria-hidden": !0,
                 alt: "",
-                className: s(_.premiumPromoImage, _.premiumPromoImageSmaller, I.image),
+                className: s(I.premiumPromoImage, I.premiumPromoImageSmaller, _.image),
                 src: j
             }), (0, i.jsx)(o.Heading, {
                 variant: "heading-lg/normal",
                 color: "header-primary",
-                className: _.premiumPromoTitle,
+                className: I.premiumPromoTitle,
                 children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
             }), (0, i.jsx)(o.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                className: _.premiumPromoDescription,
+                className: I.premiumPromoDescription,
                 children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
                     onClick: U
                 })
             }), (0, i.jsxs)("div", {
-                className: I.buttonContainer,
+                className: _.buttonContainer,
                 children: [(0, i.jsx)("div", {
-                    className: I.previewButtonContainer,
-                    children: P
+                    className: _.previewButtonContainer,
+                    children: b
                 }), (0, i.jsx)(m.default, {
                     subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
                     submitting: O,

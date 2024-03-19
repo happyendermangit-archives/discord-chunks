@@ -13,8 +13,8 @@ function(t, e, i) {
             type: e,
             source: i,
             userId: a,
-            applicationId: u,
-            partyId: r,
+            applicationId: r,
+            partyId: u,
             messageId: d,
             locationObject: s,
             analyticsLocations: o
@@ -22,8 +22,8 @@ function(t, e, i) {
         n.default.track(l.AnalyticEvents.APPLICATION_OPENED, {
             type: e,
             source: i,
-            application_id: u,
-            party_id: null != r ? r : void 0,
+            application_id: r,
+            party_id: null != u ? u : void 0,
             other_user_id: a,
             message_id: d,
             location: s,

@@ -23,7 +23,7 @@ function(e, t, n) {
         y = n("958706");
 
     function g(e, t, n) {
-        var g, S, C, I, _, T, v;
+        var g, S, C, _, I, T, v;
         let {
             channel: N,
             type: A
@@ -33,20 +33,20 @@ function(e, t, n) {
                 return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, E.CLYDE_AI_USER_ID)
             }
             return !1
-        }), L = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), b = (0, a.useStateFromStores)([d.default, p.default], () => {
+        }), L = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, a.useStateFromStores)([d.default, p.default], () => {
             var e, t;
             let n = p.default.getCurrentUser();
             return null !== (t = null != N.guild_id && null != n ? null === (e = d.default.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
         }), {
-            canMentionEveryone: P,
+            canMentionEveryone: b,
             hidePersonalInformation: j
         } = (0, a.useStateFromStoresObject)([c.default, f.default], () => {
             let e = N.isPrivate();
             return {
-                canMentionEveryone: e || b || A === o.ChatInputTypes.RULES_INPUT || c.default.can(x.Permissions.MENTION_EVERYONE, N),
+                canMentionEveryone: e || P || A === o.ChatInputTypes.RULES_INPUT || c.default.can(x.Permissions.MENTION_EVERYONE, N),
                 hidePersonalInformation: f.default.hidePersonalInformation
             }
-        }, [N, A, b]), {
+        }, [N, A, P]), {
             activeCommand: U,
             activeCommandOption: D
         } = (0, a.useStateFromStoresObject)([r.default], () => ({
@@ -62,8 +62,8 @@ function(e, t, n) {
             navigator: w,
             activeCommand: U,
             activeCommandOption: D,
-            canMentionUsers: null !== (_ = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== _ && _,
-            canMentionEveryone: P,
+            canMentionUsers: null !== (I = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== I && I,
+            canMentionEveryone: b,
             canMentionClyde: L,
             hidePersonalInformation: j,
             hideMentionDescription: A === o.ChatInputTypes.RULES_INPUT,
@@ -91,6 +91,6 @@ function(e, t, n) {
                     for (let n of t) n.removeChangeListener(e)
                 }
             }
-        }, [B, null === (I = O.query) || void 0 === I ? void 0 : I.typeInfo]), [O, B, w]
+        }, [B, null === (_ = O.query) || void 0 === _ ? void 0 : _.typeInfo]), [O, B, w]
     }
 }

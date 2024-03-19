@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("765698"),
         S = n("906889"),
         C = n("840211"),
-        I = n("779479"),
-        _ = n("10532"),
+        _ = n("779479"),
+        I = n("10532"),
         T = n("648149"),
         v = n("915712"),
         N = n("261523"),
@@ -35,8 +35,8 @@ function(e, t, n) {
         M = n("802279"),
         k = n("577172"),
         L = n("465215"),
-        b = n("301998"),
-        P = n("379657"),
+        P = n("301998"),
+        b = n("379657"),
         j = n("853780"),
         U = n("574191"),
         D = n("491250"),
@@ -128,7 +128,7 @@ function(e, t, n) {
                 children: [(0, i.jsx)(M.default, {
                     className: G.customStatusSection,
                     customStatusActivity: V
-                }), (0, i.jsx)(_.default, {
+                }), (0, i.jsx)(I.default, {
                     className: G.divider
                 }), (0, i.jsxs)(o.AdvancedScroller, {
                     className: s(G.scroller, {
@@ -152,12 +152,11 @@ function(e, t, n) {
                         userId: K.id,
                         guild: Y,
                         guildMember: z
-                    }), ey && (0, i.jsx)(I.default, {
+                    }), ey && (0, i.jsx)(_.default, {
                         user: K
                     }), er && es && (0, i.jsx)(w.default, {
                         voiceChannel: el.voiceChannel,
                         voiceGuild: el.voiceGuild,
-                        onClose: J,
                         color: B.buttonColor
                     }), (0, i.jsx)(v.default, {
                         activity: H,
@@ -166,7 +165,7 @@ function(e, t, n) {
                         channelId: Z,
                         onClose: J,
                         analyticsParams: (null == ee ? void 0 : ee.location) != null ? ee : eS
-                    }), (null == en ? void 0 : en.popularApplicationCommandIds) != null && null != eo ? (0, i.jsx)(P.default, {
+                    }), (null == en ? void 0 : en.popularApplicationCommandIds) != null && null != eo ? (0, i.jsx)(b.default, {
                         applicationId: en.id,
                         commandIds: en.popularApplicationCommandIds,
                         channel: eo,
@@ -189,13 +188,12 @@ function(e, t, n) {
                     }), null != en && void 0 !== Z && (0, i.jsx)(j.default, {
                         channelId: Z,
                         applicationId: en.id
-                    }), (0, i.jsx)(b.default, {
+                    }), !et && !Q && (0, i.jsx)(P.default, {
                         user: K,
                         setNote: q,
                         autoFocus: !X,
-                        lastSection: !X,
-                        hideNote: et || Q
-                    }), (0, i.jsx)(k.default, {
+                        lastSection: !X
+                    }), !K.isNonUserBot() && X && (0, i.jsx)(k.default, {
                         user: K,
                         setNote: q,
                         canDM: X,

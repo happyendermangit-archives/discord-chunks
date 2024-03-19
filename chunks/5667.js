@@ -42,12 +42,12 @@ function(e, t, n) {
             asset: g,
             markAsDismissed: S,
             caretPosition: C = "caretTopCenter",
-            buttonLayout: I = 0
+            buttonLayout: _ = 0
         } = e;
         o.useEffect(() => {
             null == y || y()
         }, []);
-        let _ = null != u;
+        let I = null != u;
         return (0, r.jsxs)("div", {
             className: d(t, p.upsellTooltipWrapper, p[C]),
             children: [g, null == n ? null : (0, r.jsx)(c.Heading, {
@@ -59,12 +59,12 @@ function(e, t, n) {
                 className: d(a, p.content),
                 variant: "text-sm/normal",
                 children: l
-            }), null != s || _ ? (0, r.jsxs)("div", {
+            }), null != s || I ? (0, r.jsxs)("div", {
                 className: d(p.upsellButtonsContainer, {
-                    [p.upsellButtonsAdjacent]: 0 === I,
-                    [p.upsellButtonsStacked]: 1 === I
+                    [p.upsellButtonsAdjacent]: 0 === _,
+                    [p.upsellButtonsStacked]: 1 === _
                 }),
-                children: [_ ? (0, r.jsx)(c.Button, {
+                children: [I ? (0, r.jsx)(c.Button, {
                     ...E,
                     onClick: () => {
                         null == h || h(), null == S || S(f.ContentDismissActionType.SECONDARY)
@@ -72,7 +72,7 @@ function(e, t, n) {
                     children: u
                 }) : null, null == s ? null : (0, r.jsx)(c.Button, {
                     className: d({
-                        [p.fullWidth]: !_
+                        [p.fullWidth]: !I
                     }, x.className),
                     color: x.color,
                     look: x.look,

@@ -19,8 +19,8 @@ function(e, t, n) {
         g = n("660478"),
         S = n("18494"),
         C = n("282109"),
-        I = n("697218"),
-        _ = n("718517"),
+        _ = n("697218"),
+        I = n("718517"),
         T = n("299039"),
         v = n("204653"),
         N = n("995307");
@@ -35,11 +35,11 @@ function(e, t, n) {
             lastRequest: null,
             lastResponse: null
         },
-        b = [],
-        P = [];
+        P = [],
+        b = [];
 
     function j() {
-        b = x.default.getProps().results.filter(e => e.type === m.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
+        P = x.default.getProps().results.filter(e => e.type === m.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
     }
     class U extends c.default.PersistedStore {
         getState() {
@@ -49,18 +49,18 @@ function(e, t, n) {
         }
         initialize(e) {
             var t;
-            i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(E.default, I.default, S.default, y.default, h.default), this.syncWith([x.default], j)
+            i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(E.default, _.default, S.default, y.default, h.default), this.syncWith([x.default], j)
         }
         allSummaries() {
             return A
         }
         topSummaries() {
-            let e = Object.values(A).flat().filter(e => e.people.length > 1 && T.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * _.default.Millis.HOUR).sort((e, t) => T.default.extractTimestamp(t.endId) - T.default.extractTimestamp(e.endId));
+            let e = Object.values(A).flat().filter(e => e.people.length > 1 && T.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * I.default.Millis.HOUR).sort((e, t) => T.default.extractTimestamp(t.endId) - T.default.extractTimestamp(e.endId));
             return e
         }
         summaries(e) {
             var t;
-            return null !== (t = A[e]) && void 0 !== t ? t : P
+            return null !== (t = A[e]) && void 0 !== t ? t : b
         }
         shouldShowTopicsBar() {
             return i
@@ -105,7 +105,7 @@ function(e, t, n) {
             return L
         }
         shouldFetchChannelAffinities() {
-            return !("fetching" === L.status || null != L.lastResponse && Date.now() - L.lastResponse < 30 * _.default.Millis.SECOND) && !0
+            return !("fetching" === L.status || null != L.lastResponse && Date.now() - L.lastResponse < 30 * I.default.Millis.SECOND) && !0
         }
         defaultChannelIds(e) {
             let {
@@ -114,7 +114,7 @@ function(e, t, n) {
                 withUnreads: i,
                 numChannels: l = 25
             } = e, a = [];
-            return t && (a = a.concat(b)), n && (a = a.concat(M.map(e => e.channel_id))), i && (a = a.filter(e => {
+            return t && (a = a.concat(P)), n && (a = a.concat(M.map(e => e.channel_id))), i && (a = a.filter(e => {
                 let t = E.default.getChannel(e);
                 return null != t && !C.default.isChannelMuted(t.guild_id, e) && g.default.hasUnread(e)
             })), (a = a.filter(e => {

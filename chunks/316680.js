@@ -47,9 +47,9 @@ function(e, t, n) {
             } = this.props, {
                 hovered: S,
                 focused: C,
-                dragging: I
-            } = this.state, _ = u.default;
-            return m || E === h ? _ = d.default : E < x / 2 && (_ = c.default), (0, i.jsxs)("div", {
+                dragging: _
+            } = this.state, I = u.default;
+            return m || E === h ? I = d.default : E < x / 2 && (I = c.default), (0, i.jsxs)("div", {
                 className: s(t, p.container),
                 onMouseEnter: () => {
                     clearTimeout(this._hoverTimeout), this.setState({
@@ -72,7 +72,7 @@ function(e, t, n) {
                 onKeyDown: this.handleKeyDown,
                 children: [(0, i.jsx)("div", {
                     className: s(p.volumeButtonSlider, n, {
-                        [p.sliderVisible]: S || C || I
+                        [p.sliderVisible]: S || C || _
                     }),
                     onMouseEnter: () => {
                         clearTimeout(this._hoverTimeout), this.setState({
@@ -100,7 +100,7 @@ function(e, t, n) {
                     size: r.Button.Sizes.NONE,
                     look: r.Button.Looks.BLANK,
                     onClick: this.handleToggleMute,
-                    children: (0, i.jsx)(_, {
+                    children: (0, i.jsx)(I, {
                         className: e
                     })
                 })]

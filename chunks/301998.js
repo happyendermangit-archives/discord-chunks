@@ -2,36 +2,41 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return d
+            return c
         }
     });
     var i = n("37983");
     n("884691");
     var l = n("77078"),
         a = n("910330"),
-        s = n("777003"),
-        r = n("782340"),
-        o = n("999050"),
-        u = n("862939");
+        s = n("756507"),
+        r = n("777003"),
+        o = n("782340"),
+        u = n("999050"),
+        d = n("862939");
 
-    function d(e) {
+    function c(e) {
         let {
             user: t,
             setNote: n,
-            autoFocus: d,
-            lastSection: c,
-            hideNote: f
-        } = e;
-        return f ? null : (0, i.jsxs)(s.default, {
-            lastSection: c,
+            autoFocus: c,
+            lastSection: f
+        } = e, {
+            trackUserProfileAction: p
+        } = (0, s.useUserProfileAnalyticsContext)();
+        return (0, i.jsxs)(r.default, {
+            lastSection: f,
             children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
-                className: u.title,
-                children: r.default.Messages.NOTE
+                className: d.title,
+                children: o.default.Messages.NOTE
             }), (0, i.jsx)(a.default, {
                 userId: t.id,
-                autoFocus: n || d,
-                className: o.note
+                autoFocus: n || c,
+                className: u.note,
+                onUpdate: () => p({
+                    action: "SET_NOTE"
+                })
             }, "note")]
         })
     }

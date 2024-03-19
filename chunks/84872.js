@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("25292"),
         S = n("200294"),
         C = n("851745"),
-        I = n("406291"),
-        _ = n("49111"),
+        _ = n("406291"),
+        I = n("49111"),
         T = n("782340"),
         v = n("522572");
 
@@ -37,12 +37,12 @@ function(e, t, n) {
         })
     }
     let A = {
-        sentinel: I.EMOJI_SENTINEL,
+        sentinel: _.EMOJI_SENTINEL,
         stores: [p.default],
         matches: (e, t, n, i, l) => n.length > 1,
         queryResults(e, t, n, i, l) {
             let a = i.allowStickers ? 0 : 40,
-                s = _.MAX_AUTOCOMPLETE_RESULTS + a,
+                s = I.MAX_AUTOCOMPLETE_RESULTS + a,
                 {
                     emojis: {
                         locked: r,
@@ -132,11 +132,11 @@ function(e, t, n) {
                     getProps: e => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
-                        sentinel: I.EMOJI_SENTINEL,
+                        sentinel: _.EMOJI_SENTINEL,
                         guild: null != e.guildId ? x.default.getGuild(e.guildId) : null,
                         isLocked: !1
                     }),
-                    getQuery: e => "".concat(I.EMOJI_SENTINEL).concat(e),
+                    getQuery: e => "".concat(_.EMOJI_SENTINEL).concat(e),
                     key: "emoji"
                 }), u.length > 0 ? (0, S.renderAutocompleteGroup)({
                     query: f,
@@ -159,11 +159,11 @@ function(e, t, n) {
                     getProps: e => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
-                        sentinel: I.EMOJI_SENTINEL,
+                        sentinel: _.EMOJI_SENTINEL,
                         guild: null != e.guildId ? x.default.getGuild(e.guildId) : null,
                         isLocked: !0
                     }),
-                    getQuery: e => "".concat(I.EMOJI_SENTINEL).concat(e),
+                    getQuery: e => "".concat(_.EMOJI_SENTINEL).concat(e),
                     key: "emoji-upsell",
                     indexOffset: t.length,
                     subHeader: h
@@ -211,11 +211,11 @@ function(e, t, n) {
                 let e = t[l],
                     s = t.length + n.length;
                 return a.insertText(function(e) {
-                    return "".concat(I.EMOJI_SENTINEL).concat(e.name).concat(I.EMOJI_SENTINEL)
+                    return "".concat(_.EMOJI_SENTINEL).concat(e.name).concat(_.EMOJI_SENTINEL)
                 }(e), function(e) {
                     var t;
                     let n = e.animated ? "a" : "";
-                    return e.managed || null == e.id ? "".concat(I.EMOJI_SENTINEL).concat(e.name).concat(I.EMOJI_SENTINEL) : "<".concat(n, ":").concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ":").concat(e.id, ">")
+                    return e.managed || null == e.id ? "".concat(_.EMOJI_SENTINEL).concat(e.name).concat(_.EMOJI_SENTINEL) : "<".concat(n, ":").concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ":").concat(e.id, ">")
                 }(e)), {
                     type: C.AutocompleteSelectionTypes.EMOJI,
                     metadata: {

@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         openThreadSidebarForViewing: function() {
-            return I
+            return _
         },
         openThreadSidebarForCreating: function() {
-            return _
+            return I
         },
         closeThreadSidebar: function() {
             return T
@@ -34,7 +34,7 @@ function(e, t, n) {
         S = n("49111"),
         C = n("724210");
 
-    function I(e, t, n) {
+    function _(e, t, n) {
         u.MainWindowDispatch.dispatch(S.ComponentActions.POPOUT_CLOSE);
         let i = !s.isEmpty(E.default.getVoiceStatesForChannel(e.id));
         if (t || !m.UseThreadSidebar.getSetting() || __OVERLAY__ || i) {
@@ -53,7 +53,7 @@ function(e, t, n) {
         }, 0)
     }
 
-    function _(e, t, n) {
+    function I(e, t, n) {
         l(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), l(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(S.AnalyticEvents.THREAD_CREATION_STARTED, {
             location: n,
             channel_id: e.id,

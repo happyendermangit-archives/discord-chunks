@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("378765"),
         S = n("393377"),
         C = n("761354"),
-        I = n("49111"),
-        _ = n("986548"),
+        _ = n("49111"),
+        I = n("986548"),
         T = n("356410");
     let v = [];
 
@@ -56,19 +56,19 @@ function(e, t, n) {
                 var t;
                 return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == M ? void 0 : null === (t = M[e.name]) || void 0 === t ? void 0 : t.hasValue)
             })) && void 0 !== e ? e : []
-        }, [R, M]), [L, b] = l.useState([]);
+        }, [R, M]), [L, P] = l.useState([]);
         l.useEffect(() => {
             let e = () => {
                 c.default.clearAll(t, n.drafts.type)
             };
             return d.default.subscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e), () => d.default.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
         }, [t, n]);
-        let P = l.useCallback(() => {
+        let b = l.useCallback(() => {
             N.focusFirstVisibleItem()
         }, [N]);
         return ((0, g.useComponentAction)({
-            event: I.ComponentActions.FOCUS_ATTACHMENT_AREA,
-            handler: P
+            event: _.ComponentActions.FOCUS_ATTACHMENT_AREA,
+            handler: b
         }), l.useEffect(() => {
             if (O) {
                 let e = [];
@@ -76,7 +76,7 @@ function(e, t, n) {
                     !k.some(e => t.name === e.name) && e.push(t)
                 }), e.forEach(e => {
                     c.default.remove(t, e.name, n.drafts.type)
-                }), b(k)
+                }), P(k)
             }
         }, [t, k.length, n]), !O && 0 === A.length || O && 0 === k.length) ? null : (0, i.jsxs)(l.Fragment, {
             children: [(0, i.jsx)(r.ListNavigatorProvider, {
@@ -90,7 +90,7 @@ function(e, t, n) {
                         return (0, i.jsx)("ul", {
                             ref: l,
                             ...r,
-                            className: s(_.channelAttachmentArea, T.scrollbarGhost),
+                            className: s(I.channelAttachmentArea, T.scrollbarGhost),
                             children: O ? k.map(e => (0, i.jsx)(S.default, {
                                 channelId: t,
                                 keyboardModeEnabled: a,

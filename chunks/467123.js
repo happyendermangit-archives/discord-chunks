@@ -5,10 +5,10 @@ function(e, t, n) {
             return y
         },
         isPointInCodeBlock: function() {
-            return I
+            return _
         },
         hasOpenPlainTextCodeBlock: function() {
-            return _
+            return I
         }
     }), n("222007"), n("70102"), n("424973"), n("781738");
     var i = n("436443"),
@@ -187,7 +187,7 @@ function(e, t, n) {
         },
         C = new a(S);
 
-    function I(e, t) {
+    function _(e, t) {
         let n = 0;
         for (let l of c.EditorUtils.nodes(e, {
                 at: {
@@ -209,9 +209,9 @@ function(e, t, n) {
         return n % 2 != 0
     }
 
-    function _(e) {
+    function I(e) {
         if (null == e.selection) return !1;
         let t = c.RangeUtils.start(e.selection);
-        return I(e, t)
+        return _(e, t)
     }
 }

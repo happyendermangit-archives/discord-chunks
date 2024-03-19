@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("800762"),
         S = n("476765"),
         C = n("461380"),
-        I = n("93393"),
-        _ = n("153769"),
+        _ = n("93393"),
+        I = n("153769"),
         T = n("671434"),
         v = n("229915"),
         N = n("368121"),
@@ -35,8 +35,8 @@ function(e, t, n) {
         M = n("262439"),
         k = n("557585"),
         L = n("553372"),
-        b = n("122557"),
-        P = n("478477"),
+        P = n("122557"),
+        b = n("478477"),
         j = n("181021"),
         U = n("299069"),
         D = n("569717"),
@@ -68,7 +68,7 @@ function(e, t, n) {
                             className: G.headerIcon
                         });
                     case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                        return (0, i.jsx)(I.default, {
+                        return (0, i.jsx)(_.default, {
                             className: G.headerIcon
                         });
                     case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
@@ -82,7 +82,7 @@ function(e, t, n) {
                             width: 16
                         });
                     case O.SoundboardSoundGridSectionType.DEFAULTS:
-                        return (0, i.jsx)(_.default, {
+                        return (0, i.jsx)(I.default, {
                             className: G.headerIcon
                         });
                     case O.SoundboardSoundGridSectionType.SEARCH:
@@ -157,7 +157,7 @@ function(e, t, n) {
                             buttonOverlay: f
                         });
                     case O.SoundboardSoundItemType.ADD_SOUND:
-                        return (0, l.createElement)(b.default, {
+                        return (0, l.createElement)(P.default, {
                             ...u(t),
                             key: i,
                             guild: e.item.guild,
@@ -177,13 +177,13 @@ function(e, t, n) {
             onSelect: c,
             suppressPlaySound: p = !1,
             shouldShowUpsell: C = !0,
-            gridNotice: I,
-            soundButtonOverlay: _,
+            gridNotice: _,
+            soundButtonOverlay: I,
             listPadding: T,
             renderHeader: v,
             defaultSoundsOnly: L = !1
         } = e, {
-            analyticsLocations: b
+            analyticsLocations: P
         } = (0, f.default)(), [Y, z] = l.useState(null), Z = (0, r.useStateFromStores)([y.default], () => y.default.getCurrentUser()), J = (0, r.useStateFromStores)([g.default], () => {
             var e;
             return g.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : w.EMPTY_STRING_SNOWFLAKE_ID)
@@ -203,11 +203,11 @@ function(e, t, n) {
         }, [p, Z, a, C]), eu = l.useCallback(e => {
             switch (e.item.type) {
                 case O.SoundboardSoundItemType.SOUND:
-                    return null == c || c(e.item.sound), eo(e.item.sound, b);
+                    return null == c || c(e.item.sound), eo(e.item.sound, P);
                 case O.SoundboardSoundItemType.ADD_SOUND:
                     return (0, D.default)(e.item.guild.id)
             }
-        }, [b, eo, c]), ed = l.useCallback((e, t, n, l, s) => (0, i.jsx)(W, {
+        }, [P, eo, c]), ed = l.useCallback((e, t, n, l, s) => (0, i.jsx)(W, {
             descriptors: e,
             rowIndex: n.rowIndex,
             isUsingKeyboardNavigation: n.isUsingKeyboardNavigation,
@@ -220,10 +220,10 @@ function(e, t, n) {
                 channel: a,
                 interactive: ea ? es : !q,
                 forceSecondaryActions: ea,
-                analyticsLocations: b
+                analyticsLocations: P
             },
-            buttonOverlay: _
-        }, "row-".concat(t["aria-rowindex"])), [eu, a, q, p, b, ea, es, _]), ec = l.useCallback((e, t) => {
+            buttonOverlay: I
+        }, "row-".concat(t["aria-rowindex"])), [eu, a, q, p, P, ea, es, I]), ec = l.useCallback((e, t) => {
             let n = "".concat(e.key);
             return (0, i.jsx)(V, {
                 categoryInfo: e.categoryInfo,
@@ -248,7 +248,7 @@ function(e, t, n) {
             children: (0, i.jsx)(N.default, {
                 className: G.settingsIcon
             })
-        }), [ep]), eh = l.useCallback(e => (0, i.jsx)(P.default, {
+        }), [ep]), eh = l.useCallback(e => (0, i.jsx)(b.default, {
             soundboardListRef: e,
             categories: $,
             listPadding: T
@@ -288,7 +288,7 @@ function(e, t, n) {
                 gridNavigatorId: Q,
                 renderEmptySearchState: K,
                 renderInspector: ex,
-                gridNotice: I,
+                gridNotice: _,
                 renderHeader: v
             })]
         })

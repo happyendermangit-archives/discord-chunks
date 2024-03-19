@@ -67,8 +67,8 @@ function(e, t, n) {
         g = n("84339"),
         S = n("298878"),
         C = n("793237"),
-        I = n("347738"),
-        _ = n("584998"),
+        _ = n("347738"),
+        I = n("584998"),
         T = n("845579"),
         v = n("324929"),
         N = n("876308"),
@@ -78,8 +78,8 @@ function(e, t, n) {
         M = n("888673"),
         k = n("839952"),
         L = n("476765"),
-        b = n("62843"),
-        P = n("461380"),
+        P = n("62843"),
+        b = n("461380"),
         j = n("171710"),
         U = n("945330"),
         D = n("909004"),
@@ -257,7 +257,7 @@ function(e, t, n) {
                 type: t = 0,
                 onClick: n
             } = e;
-            return (0, a.jsx)(b.MessagesInteractionContext.Consumer, {
+            return (0, a.jsx)(P.MessagesInteractionContext.Consumer, {
                 children: e => e.disableInteractions ? null : (0, a.jsxs)("div", {
                     className: z.jumpToPresentBar,
                     children: [(0, a.jsx)(p.FocusRing, {
@@ -292,7 +292,7 @@ function(e, t, n) {
                                     default:
                                         return (0, F.assertNever)(e)
                                 }
-                            }(t), (0, a.jsx)(P.default, {
+                            }(t), (0, a.jsx)(b.default, {
                                 className: z.barButtonIcon
                             })]
                         })
@@ -309,7 +309,7 @@ function(e, t, n) {
                 onClick: t,
                 loading: n
             } = e;
-            return (0, a.jsx)(b.MessagesInteractionContext.Consumer, {
+            return (0, a.jsx)(P.MessagesInteractionContext.Consumer, {
                 children: e => e.disableInteractions ? null : (0, a.jsxs)(p.Clickable, {
                     className: z.messagesErrorBar,
                     onClick: t,
@@ -357,7 +357,7 @@ function(e, t, n) {
             (0, h.ack)(n)
         }, [n]), {
             disableInteractions: u
-        } = s.useContext(b.MessagesInteractionContext);
+        } = s.useContext(P.MessagesInteractionContext);
         return u ? null : (0, a.jsxs)("div", {
             className: o(z.newMessagesBar, {
                 [z.disableInteractions]: u
@@ -398,9 +398,9 @@ function(e, t, n) {
             scrollManager: u
         } = e, {
             disableInteractions: x
-        } = s.useContext(b.MessagesInteractionContext), [E, T] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([I.default], () => {
+        } = s.useContext(P.MessagesInteractionContext), [E, T] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([_.default], () => {
             var e;
-            return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
+            return null !== (e = _.default.summaries(l.id)) && void 0 !== e ? e : []
         }, [l]), L = (0, g.default)(k);
         s.useEffect(() => {
             !d.isEqual(L, k) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
@@ -424,7 +424,7 @@ function(e, t, n) {
                     }).filter(F.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [k], er),
-            V = null !== (n = (0, f.useStateFromStores)([I.default], () => I.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+            V = null !== (n = (0, f.useStateFromStores)([_.default], () => _.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
             W = null == k ? void 0 : null === (t = k[V]) || void 0 === t ? void 0 : t.topic;
         null == W && null == E && (null == k ? void 0 : k.length) >= 1 && (W = null === (i = k[0]) || void 0 === i ? void 0 : i.topic);
         let Z = s.useMemo(() => d.debounce(e => {
@@ -513,7 +513,7 @@ function(e, t, n) {
         }, [l.id]), s.useEffect(() => (document.addEventListener("mousedown", en), () => {
             document.removeEventListener("mousedown", en)
         }), [en]);
-        let ei = s.useMemo(() => (0, a.jsx)(_.default, {
+        let ei = s.useMemo(() => (0, a.jsx)(I.default, {
                 channel: l,
                 summaries: k,
                 summariesMembers: G,
@@ -560,10 +560,10 @@ function(e, t, n) {
                             variant: "text-sm/medium",
                             className: o(z.newTopicsBarCompact, z.newTopicsBarText),
                             children: es
-                        }), (0, a.jsx)(P.default, {
+                        }), (0, a.jsx)(b.default, {
                             width: 16,
                             height: 16,
-                            direction: P.default.Directions.DOWN,
+                            direction: b.default.Directions.DOWN,
                             className: z.newTopicsBarCaret
                         })]
                     })
@@ -629,9 +629,9 @@ function(e, t, n) {
             scrollManager: r
         } = e, {
             disableInteractions: u
-        } = s.useContext(b.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [T, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([I.default], () => {
+        } = s.useContext(P.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [T, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([_.default], () => {
             var e;
-            return null !== (e = I.default.summaries(l.id)) && void 0 !== e ? e : []
+            return null !== (e = _.default.summaries(l.id)) && void 0 !== e ? e : []
         }, [l]), R = (0, g.default)(A);
         s.useEffect(() => {
             !d.isEqual(R, A) && w.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
@@ -655,7 +655,7 @@ function(e, t, n) {
                     }).filter(F.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [A], er),
-            k = null !== (n = (0, f.useStateFromStores)([I.default], () => I.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+            k = null !== (n = (0, f.useStateFromStores)([_.default], () => _.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
             L = null == A ? void 0 : null === (t = A[k]) || void 0 === t ? void 0 : t.topic;
         null == L && null == h && (null == A ? void 0 : A.length) >= 1 && (L = null === (i = A[0]) || void 0 === i ? void 0 : i.topic);
         let j = s.useMemo(() => d.get(A, k - 1), [k, A]),
@@ -752,14 +752,14 @@ function(e, t, n) {
         }, [l.id]), s.useEffect(() => (document.addEventListener("mousedown", et), () => {
             document.removeEventListener("mousedown", et)
         }), [et]);
-        let en = s.useMemo(() => (0, a.jsx)(_.default, {
+        let en = s.useMemo(() => (0, a.jsx)(I.default, {
                 channel: l,
                 summaries: A,
                 summariesMembers: M,
                 selectTopic: X,
                 setOpen: ee
             }), [A, M, X, ee, l]),
-            ei = (0, f.useStateFromStores)([I.default], () => I.default.shouldShowTopicsBar());
+            ei = (0, f.useStateFromStores)([_.default], () => _.default.shouldShowTopicsBar());
         if (!ei) return null;
         let el = Y.default.Messages.SUMMARIES_NO_SUMMARIES;
         return A.length > 0 && (el = "" === L || null == L ? Y.default.Messages.SUMMARIES_VIEW_ALL : L), u ? null : (0, a.jsxs)("div", {
@@ -784,10 +784,10 @@ function(e, t, n) {
                             className: z.topicsPillTextTitle,
                             variant: "text-sm/medium",
                             children: el
-                        }), (0, a.jsx)(P.default, {
+                        }), (0, a.jsx)(b.default, {
                             width: 16,
                             height: 16,
-                            direction: P.default.Directions.DOWN,
+                            direction: b.default.Directions.DOWN,
                             className: z.topicsPillDropdownCaret
                         })]
                     })
@@ -799,10 +799,10 @@ function(e, t, n) {
                         className: o(z.topicsPillCaret, z.topicsCaretLeft, {
                             [z.topicsPillCaretDisabled]: null == G
                         }),
-                        children: (0, a.jsx)(P.default, {
+                        children: (0, a.jsx)(b.default, {
                             width: 16,
                             height: 16,
-                            direction: P.default.Directions.UP
+                            direction: b.default.Directions.UP
                         })
                     }), (0, a.jsx)(p.Clickable, {
                         "aria-label": Y.default.Messages.SUMMARY_PILL_PREVIOUS,
@@ -810,10 +810,10 @@ function(e, t, n) {
                         className: o(z.topicsPillCaret, z.topicsCaretRight, {
                             [z.topicsPillCaretDisabled]: null == j
                         }),
-                        children: (0, a.jsx)(P.default, {
+                        children: (0, a.jsx)(b.default, {
                             width: 16,
                             height: 16,
-                            direction: P.default.Directions.DOWN
+                            direction: b.default.Directions.DOWN
                         })
                     })]
                 })]

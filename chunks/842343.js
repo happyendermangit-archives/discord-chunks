@@ -24,7 +24,7 @@ function(e, t, n) {
         g = n("497858"),
         S = n("892149"),
         C = l.forwardRef(function(e, t) {
-            var n, a, C, I, _;
+            var n, a, C, _, I;
             let {
                 channel: T,
                 type: v,
@@ -33,10 +33,10 @@ function(e, t, n) {
             } = e, O = (0, p.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
                 var e;
                 return null !== (e = c.default.getGuild(T.guild_id)) && void 0 !== e ? e : null
-            }, [T.guild_id]), M = l.useRef(), [k, L, b] = (0, g.default)({
+            }, [T.guild_id]), M = l.useRef(), [k, L, P] = (0, g.default)({
                 ...e,
                 guild: R
-            }, t, M), P = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
+            }, t, M), b = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
             (0, d.useChannelEditorPopup)(O, k.isVisible, j), x.default.trackExposure({
                 location: "6e9811_1"
             });
@@ -72,14 +72,14 @@ function(e, t, n) {
                     [S.bottom]: null == D && "bottom" === e.position
                 },
                 B = 490;
-            null != D && (B = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (I = k.query) || void 0 === I ? void 0 : I.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
+            null != D && (B = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (_ = k.query) || void 0 === _ ? void 0 : _.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
             let H = (0, i.jsx)(f.default, {
                 id: O,
                 className: s(S.autocomplete, G),
                 innerClassName: S.autocompleteInner,
                 onMouseDown: e => e.preventDefault(),
                 children: (0, i.jsx)(r.ListNavigatorProvider, {
-                    navigator: b,
+                    navigator: P,
                     children: (0, i.jsx)(r.ListNavigatorContainer, {
                         children: e => {
                             let {
@@ -105,11 +105,11 @@ function(e, t, n) {
                     })
                 })
             });
-            return null != D ? (0, i.jsx)(P, {
+            return null != D ? (0, i.jsx)(b, {
                 children: (0, i.jsx)(u.ReferencePositionLayer, {
                     reference: () => D,
                     positionKey: w,
-                    position: null !== (_ = e.position) && void 0 !== _ ? _ : "top",
+                    position: null !== (I = e.position) && void 0 !== I ? I : "top",
                     align: "left",
                     spacing: 8,
                     autoInvert: !0,

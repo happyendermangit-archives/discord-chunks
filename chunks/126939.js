@@ -5,7 +5,7 @@ function(t, e, i) {
             return a
         },
         getIsActivitiesEnabledForCurrentPlatform: function() {
-            return u
+            return r
         }
     });
     var n = i("394846");
@@ -18,7 +18,7 @@ function(t, e, i) {
         return l()
     }
 
-    function u(t) {
+    function r(t) {
         return l()
     }
 }

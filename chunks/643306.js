@@ -25,8 +25,8 @@ function(e, t, n) {
         g = n("26989"),
         S = n("305961"),
         C = n("697218"),
-        I = n("145131"),
-        _ = n("666897"),
+        _ = n("145131"),
+        I = n("666897"),
         T = n("826684"),
         v = n("782340"),
         N = n("665958"),
@@ -56,11 +56,11 @@ function(e, t, n) {
             guildId: R,
             children: M,
             inlinePreview: k = !1
-        } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), b = null != t && 0 !== t && !k, P = b && "dot" === L, j = e => (0, i.jsxs)(_.default, {
+        } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), P = null != t && 0 !== t && !k, b = P && "dot" === L, j = e => (0, i.jsxs)(I.default, {
             className: a(A.roleMention),
-            color: "username" === L && b ? t : null,
+            color: "username" === L && P ? t : null,
             ...e,
-            children: [P && (0, i.jsx)(d.RoleDot, {
+            children: [b && (0, i.jsx)(d.RoleDot, {
                 color: (0, o.int2hex)(t),
                 className: N.roleDot,
                 background: !1,
@@ -139,7 +139,7 @@ function(e, t, n) {
                             }
                         }, l.id)
                     }).value();
-                return (0, i.jsx)(I.default, {
+                return (0, i.jsx)(_.default, {
                     className: A.rolePopout,
                     ...e,
                     children: (0, i.jsxs)(d.Scroller, {

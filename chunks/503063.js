@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return _
         }
     });
     var i = n("37983"),
@@ -64,7 +64,7 @@ function(e, t, n) {
         })
     }
 
-    function I(e) {
+    function _(e) {
         let {
             reply: t,
             chatInputType: n
@@ -74,8 +74,8 @@ function(e, t, n) {
             shouldMention: u,
             showMentionToggle: m
         } = t, {
-            nick: I,
-            colorString: _,
+            nick: _,
+            colorString: I,
             colorRoleName: T
         } = (0, d.default)(a), v = function(e, t) {
             let n = e.id,
@@ -117,8 +117,8 @@ function(e, t, n) {
                             children: g.default.Messages.REPLYING_TO.format({
                                 userHook: (e, t) => (0, i.jsx)(o.NameWithRole, {
                                     className: S.name,
-                                    name: I,
-                                    color: _,
+                                    name: _,
+                                    color: I,
                                     roleName: T
                                 }, t)
                             })

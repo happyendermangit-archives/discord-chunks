@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("646718"),
         S = n("782340"),
         C = n("669821");
-    let I = "premiumRetentionEmojiPickerNotice",
-        _ = o.default.get(I);
+    let _ = "premiumRetentionEmojiPickerNotice",
+        I = o.default.get(_);
     var T = e => {
         let {
             closePopout: t,
@@ -43,7 +43,7 @@ function(e, t, n) {
         let A = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDays)(v) : g.MAX_ACCOUNT_HOLD_DAYS,
             O = s(v.currentPeriodStart).add(A, "days"),
             R = "".concat(v.id, ":").concat(O.toISOString());
-        if (_ === R) return null;
+        if (I === R) return null;
         let M = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
         return (0, i.jsxs)("div", {
             className: C.premiumRetentionNotice,
@@ -68,7 +68,7 @@ function(e, t, n) {
                 })]
             }), (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    o.default.set(I, R), _ = R, T(!0)
+                    o.default.set(_, R), I = R, T(!0)
                 },
                 children: (0, i.jsx)(m.default, {
                     className: C.premiumRetentionNoticeClose

@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("429569"),
         S = n("215550"),
         C = n("782340"),
-        I = n("348473");
-    let _ = (e, t) => "".concat(e, ":").concat(t),
+        _ = n("348473");
+    let I = (e, t) => "".concat(e, ":").concat(t),
         T = l.forwardRef(function(e, t) {
             let n, {
                     emoji: l,
@@ -37,7 +37,7 @@ function(e, t, n) {
                     showPulse: h,
                     columnIndex: x,
                     rowIndex: y,
-                    size: _,
+                    size: I,
                     surrogateCodePoint: T,
                     allowAnimatedEmoji: v,
                     selectedItemClassName: N,
@@ -56,13 +56,13 @@ function(e, t, n) {
             return (0, i.jsx)(o.FocusRing, {
                 children: (0, i.jsx)("button", {
                     ...O,
-                    className: s(I.emojiItem, {
-                        [I.emojiItemLarge]: u,
-                        [I.emojiItemMedium]: d,
-                        [I.emojiItemSelected]: c,
+                    className: s(_.emojiItem, {
+                        [_.emojiItemLarge]: u,
+                        [_.emojiItemMedium]: d,
+                        [_.emojiItemSelected]: c,
                         [null != N ? N : ""]: c,
-                        [I.emojiItemDisabled]: p && !M,
-                        [I.showPulse]: h
+                        [_.emojiItemDisabled]: p && !M,
+                        [_.showPulse]: h
                     }),
                     "data-type": m.PickerContextMenuDataTypes.EMOJI,
                     "data-id": l.id,
@@ -78,7 +78,7 @@ function(e, t, n) {
                         columnIndex: x,
                         rowIndex: y,
                         emoji: l,
-                        size: _,
+                        size: I,
                         surrogateCodePoint: T,
                         allowAnimatedEmoji: v,
                         isLocked: k
@@ -97,7 +97,7 @@ function(e, t, n) {
             onInspect: E,
             onSelect: g,
             isScrolling: S,
-            isUsingKeyboardNavigation: I,
+            isUsingKeyboardNavigation: _,
             showEmojiFavoriteTooltip: v,
             surrogateCodePoint: N,
             selectedItemClassName: A,
@@ -106,8 +106,8 @@ function(e, t, n) {
             isLargeSize: M,
             pulseItemKey: k,
             allowAnimatedEmoji: L,
-            setPulseItemKey: b,
-            messageId: P,
+            setPulseItemKey: P,
+            messageId: b,
             isBurstReaction: j,
             rowPosition: U,
             inNitroLockedSection: D
@@ -117,14 +117,14 @@ function(e, t, n) {
             isDisabled: W,
             columnIndex: Y
         } = t, z = e => {
-            if (e.stopPropagation(), S.current || I.current) return;
+            if (e.stopPropagation(), S.current || _.current) return;
             let n = e.altKey;
-            n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && b(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), g(t, {
+            n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && P(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), g(t, {
                 isFinalSelection: !e.shiftKey,
                 toggleFavorite: n
             })
         }, Z = () => {
-            !S.current && !I.current && E(t)
+            !S.current && !_.current && E(t)
         }, J = e => {
             (0, u.openContextMenuLazy)(e, async () => {
                 let {
@@ -149,7 +149,7 @@ function(e, t, n) {
                 ...d,
                 key: a,
                 ref: H
-            }, w !== _(Y, f) && (0, i.jsx)(T, {
+            }, w !== I(Y, f) && (0, i.jsx)(T, {
                 ref: r,
                 emoji: V,
                 isFavorite: B.isFavoriteEmojiWithoutFetchingLatest(V),
@@ -164,10 +164,10 @@ function(e, t, n) {
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onClick: e => {
-                    if (null != H.current && null != U && null != P && !e.shiftKey && null != V.name && j && !G && L) {
+                    if (null != H.current && null != U && null != b && !e.shiftKey && null != V.name && j && !G && L) {
                         let e = null == V.id ? p.default.convertNameToSurrogate(V.name) : V.name,
                             t = H.current.getBoundingClientRect();
-                        t.x = U.x + (Y + 1) * K, F(_(Y, f)), (0, x.addReactionPickerAnimation)(P, e, V.id, t)
+                        t.x = U.x + (Y + 1) * K, F(I(Y, f)), (0, x.addReactionPickerAnimation)(b, e, V.id, t)
                     }
                     z(e)
                 },

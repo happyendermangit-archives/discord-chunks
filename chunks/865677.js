@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("957255"),
         S = n("27618"),
         C = n("18494"),
-        I = n("697218"),
-        _ = n("800762"),
+        _ = n("697218"),
+        I = n("800762"),
         T = n("953998"),
         v = n("535974"),
         N = n("773336"),
@@ -35,8 +35,8 @@ function(e, t, n) {
         M = n("612696"),
         k = n("126808"),
         L = n("871388"),
-        b = n("407908"),
-        P = n("141962"),
+        P = n("407908"),
+        b = n("141962"),
         j = n("295999"),
         U = n("954016"),
         D = n("49111"),
@@ -54,7 +54,7 @@ function(e, t, n) {
             isEmbedded: K = !1
         } = e, {
             analyticsLocations: W
-        } = (0, c.default)(), [Y, z] = l.useState(!1), Z = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), J = null == t ? void 0 : t.application_id, q = (0, a.useStateFromStores)([O.default], () => K ? O.default.getEmbeddedActivityForUserId(V.id, J) : null, [V.id, K, J]), X = (0, k.default)({
+        } = (0, c.default)(), [Y, z] = l.useState(!1), Z = (0, a.useStateFromStores)([_.default], () => _.default.getCurrentUser()), J = null == t ? void 0 : t.application_id, q = (0, a.useStateFromStores)([O.default], () => K ? O.default.getEmbeddedActivityForUserId(V.id, J) : null, [V.id, K, J]), X = (0, k.default)({
             channelId: null == q ? void 0 : q.channelId,
             userId: V.id,
             activity: t
@@ -70,7 +70,7 @@ function(e, t, n) {
                 channelId: i
             } = e;
             return n === (null == t ? void 0 : t.application_id) && i === X
-        })), ee = (0, a.useStateFromStores)([T.default], () => null != t && null != t.application_id && T.default.getState(t.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([m.default, E.default, x.default, S.default, C.default, _.default, g.default], () => (0, M.default)({
+        })), ee = (0, a.useStateFromStores)([T.default], () => null != t && null != t.application_id && T.default.getState(t.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([m.default, E.default, x.default, S.default, C.default, I.default, g.default], () => (0, M.default)({
             user: V,
             activity: t,
             application: et,
@@ -82,7 +82,7 @@ function(e, t, n) {
             GuildMemberCountStore: x.default,
             RelationshipStore: S.default,
             SelectedChannelStore: C.default,
-            VoiceStateStore: _.default,
+            VoiceStateStore: I.default,
             PermissionStore: g.default
         })), ei = (0, a.useStateFromStores)([O.default], () => Array.from(O.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == q ? void 0 : q.applicationId) && e.channelId === (null == q ? void 0 : q.channelId))), el = (0, d.useAnalyticsContext)(), ea = !N.isPlatformEmbedded, es = (0, L.default)(t, D.ActivityFlags.JOIN) || K;
         if (null == t || !es || null == t.application_id) return null;
@@ -101,7 +101,7 @@ function(e, t, n) {
                 messageId: null,
                 intent: U.ActivityIntent.PLAY,
                 embedded: (0, L.default)(t, D.ActivityFlags.EMBEDDED)
-            }), (0, b.default)({
+            }), (0, P.default)({
                 type: D.AnalyticsGameOpenTypes.JOIN,
                 userId: e.id,
                 applicationId: t.application_id,
@@ -118,7 +118,7 @@ function(e, t, n) {
                     currentEmbeddedApplication: n,
                     activityChannelId: X,
                     locationObject: el.location,
-                    embeddedActivitiesManager: P.default,
+                    embeddedActivitiesManager: b.default,
                     analyticsLocations: W
                 })
             }

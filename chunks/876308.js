@@ -24,9 +24,9 @@ function(e, t, n) {
         g = n("49111"),
         S = n("782340"),
         C = n("722552");
-    let I = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
+    let _ = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
-    function _(e) {
+    function I(e) {
         let {
             played: t,
             duration: n,
@@ -48,8 +48,8 @@ function(e, t, n) {
                 onMute: M,
                 waveform: k,
                 durationSecs: L,
-                onVolumeShow: b,
-                onVolumeHide: P,
+                onVolumeShow: P,
+                onVolumeHide: b,
                 onPlay: j,
                 onPause: U,
                 onError: D
@@ -147,7 +147,7 @@ function(e, t, n) {
         let em = W ? p.default : m.default,
             eh = W ? S.default.Messages.PAUSE : S.default.Messages.PLAY;
         N = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
-            children: (0, i.jsx)(I, {
+            children: (0, i.jsx)(_, {
                 ref: w,
                 className: C.audioElement,
                 src: A,
@@ -211,7 +211,7 @@ function(e, t, n) {
                 onDrag: ef,
                 onDragStart: ed,
                 onDragEnd: ec
-            }), (0, i.jsx)(_, {
+            }), (0, i.jsx)(I, {
                 played: J,
                 currentTime: F,
                 duration: B
@@ -226,8 +226,8 @@ function(e, t, n) {
                 currentWindow: window,
                 onValueChange: eo,
                 onToggleMute: eu,
-                onVolumeShow: b,
-                onVolumeHide: P
+                onVolumeShow: P,
+                onVolumeHide: b
             }), N]
         })
     })

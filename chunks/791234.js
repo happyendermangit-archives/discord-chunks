@@ -8,7 +8,7 @@ function(e, t, n) {
             return i
         },
         useForumPostMediaThumbnail: function() {
-            return _
+            return I
         },
         useForumPostMediaProperties: function() {
             return T
@@ -108,7 +108,7 @@ function(e, t, n) {
         }(e, t)
     }
 
-    function I(e, t) {
+    function _(e, t) {
         let n = o.InlineEmbedMedia.useSetting(),
             i = o.RenderEmbeds.useSetting();
         if (null == e) return [];
@@ -137,7 +137,7 @@ function(e, t, n) {
         }).filter(p.isNotNullish) : []
     }
 
-    function _(e, t) {
+    function I(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = T(e, n);
         return a.useMemo(() => {
@@ -152,20 +152,20 @@ function(e, t, n) {
 
     function T(e, t) {
         let n = C(e),
-            i = I(e, t);
+            i = _(e, t);
         return [...n, ...i]
     }
 
     function v(e, t) {
         var n, i;
         let l = C(e),
-            a = I(e, t);
+            a = _(e, t);
         return null !== (i = null !== (n = l[0]) && void 0 !== n ? n : a[0]) && void 0 !== i ? i : null
     }
 
     function N(e, t) {
         let n = C(e),
-            i = I(e, t);
+            i = _(e, t);
         return null == n[0] && null != i[0]
     }
 

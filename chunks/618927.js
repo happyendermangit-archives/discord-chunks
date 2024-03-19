@@ -29,29 +29,29 @@ function(e, t, n) {
             children: g,
             disableCopy: S,
             showCopyIcon: C
-        } = e, [I, _] = s.useState(0), [T, v] = s.useState(!1), [N, A] = s.useState(!1);
+        } = e, [_, I] = s.useState(0), [T, v] = s.useState(!1), [N, A] = s.useState(!1);
         if (s.useEffect(() => (i = new u.Timeout, l = new u.Timeout, function() {
                 i.stop(), l.stop()
             }), []), !f.SUPPORTS_COPY || S) return (0, a.jsx)(a.Fragment, {
             children: g
         });
         let O = [h.default.Messages.COPY_SUCCESS_1, h.default.Messages.COPY_SUCCESS_2, h.default.Messages.COPY_SUCCESS_3, h.default.Messages.COPY_SUCCESS_4, h.default.Messages.COPY_SUCCESS_5, h.default.Messages.COPY_SUCCESS_6, h.default.Messages.COPY_SUCCESS_7, h.default.Messages.COPY_SUCCESS_8, h.default.Messages.COPY_SUCCESS_9, h.default.Messages.COPY_SUCCESS_10, h.default.Messages.COPY_SUCCESS_11],
-            R = Math.min(Math.max(I - 1, 0), O.length - 1),
+            R = Math.min(Math.max(_ - 1, 0), O.length - 1),
             M = null !== (t = O[R]) && void 0 !== t ? t : O[0],
-            k = I >= O.length - 1,
+            k = _ >= O.length - 1,
             L = k ? d.TooltipColors.RED : d.TooltipColors.GREEN,
-            b = T ? L : d.TooltipColors.PRIMARY,
-            P = () => {
+            P = T ? L : d.TooltipColors.PRIMARY,
+            b = () => {
                 i.stop(), A(!1)
             },
             j = e => {
                 (0, f.copy)(r), c.default.track(m.AnalyticEvents.TEXT_COPIED, {
                     type: E
-                }), "function" == typeof e && e(), !N && _(I + 1), A(!0), v(!0), i.start(1e3, () => A(!1)), l.start(2e3, () => _(0))
+                }), "function" == typeof e && e(), !N && I(_ + 1), A(!0), v(!0), i.start(1e3, () => A(!1)), l.start(2e3, () => I(0))
             };
         return (0, a.jsx)(d.Tooltip, {
             delay: 500,
-            color: b,
+            color: P,
             forceOpen: N,
             text: T ? (0, a.jsx)(d.Shaker, {
                 isShaking: k,
@@ -71,7 +71,7 @@ function(e, t, n) {
                     ...l,
                     className: x.clickTarget,
                     onMouseEnter: () => {
-                        T ? P() : "function" == typeof i && i()
+                        T ? b() : "function" == typeof i && i()
                     },
                     onClick: () => {
                         j(t)

@@ -28,7 +28,7 @@ function(e, t, n) {
         var t, n;
         let {
             onDismiss: l
-        } = e, S = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), C = y.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, I = (0, d.usePremiumTrialOffer)(), _ = (0, u.usePremiumDiscountOffer)(), T = (null == I ? void 0 : I.subscription_trial) != null, v = T || null != _, N = {
+        } = e, S = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), C = y.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, _ = (0, d.usePremiumTrialOffer)(), I = (0, u.usePremiumDiscountOffer)(), T = (null == _ ? void 0 : _.subscription_trial) != null, v = T || null != I, N = {
             object: x.AnalyticsObjects.BUTTON_CTA,
             section: x.AnalyticsSections.SUPER_REACTION_PICKER
         };
@@ -58,11 +58,11 @@ function(e, t, n) {
                     })
                 }), v ? (0, i.jsx)(c.default, {
                     type: E.PremiumUpsellTypes.BURST_REACTION_QUICK_ACTION_UPSELL,
-                    subscriptionTier: null !== (n = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : E.PremiumSubscriptionSKUs.TIER_2,
+                    subscriptionTier: null !== (n = null == _ ? void 0 : null === (t = _.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : E.PremiumSubscriptionSKUs.TIER_2,
                     headingText: y.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
                     analyticsLocationObject: N,
-                    discountOffer: _,
-                    trialOffer: I,
+                    discountOffer: I,
+                    trialOffer: _,
                     children: C
                 }) : (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsxs)("div", {

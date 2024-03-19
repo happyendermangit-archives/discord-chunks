@@ -31,7 +31,7 @@ function(e, t, n) {
             } = e, g = (0, d.useGetOrFetchApplication)(l), S = (0, o.useStateFromStoresArray)([f.default], () => {
                 var e;
                 return null !== (e = n.map(e => f.default.getUser(e)).filter(m.isNotNullish)) && void 0 !== e ? e : []
-            }), C = null == g ? void 0 : g.name, I = r(t).fromNow();
+            }), C = null == g ? void 0 : g.name, _ = r(t).fromNow();
             return null == t ? null : (0, i.jsxs)("div", {
                 className: a(y, x.container),
                 children: [(0, i.jsx)(p.default, {
@@ -50,7 +50,7 @@ function(e, t, n) {
                         variant: "text-xs/medium",
                         color: "text-muted",
                         className: x.subtitle,
-                        children: [null != C ? "".concat(C, " • ") : null, I]
+                        children: [null != C ? "".concat(C, " • ") : null, _]
                     }), (0, i.jsx)(u.Text, {
                         variant: "text-xs/medium",
                         color: "text-muted",

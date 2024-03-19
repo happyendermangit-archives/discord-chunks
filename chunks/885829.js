@@ -8,8 +8,8 @@ function(t, e, i) {
     var n = i("404118"),
         l = i("651057"),
         a = i("299285"),
-        u = i("645999"),
-        r = i("653047"),
+        r = i("645999"),
+        u = i("653047"),
         d = i("42203"),
         s = i("305961"),
         o = i("957255"),
@@ -32,7 +32,7 @@ function(t, e, i) {
         } = t, D = _.default.getEmbeddedActivitiesForChannel(i), p = D.find(t => t.applicationId === C && (null == S || t.instanceId === S)), y = N;
         if (null == y) {
             let t = await l.default.fetchApplication(C);
-            y = r.default.createFromServer(t)
+            y = u.default.createFromServer(t)
         }
         if (null == p || null == y) return;
         let h = c.default.getCurrentUser(),
@@ -61,7 +61,7 @@ function(t, e, i) {
                     null == i || i();
                     break;
                 case A.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-                    (0, u.showActivitiesInvalidPermissionsAlert)();
+                    (0, r.showActivitiesInvalidPermissionsAlert)();
                     break;
                 case A.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
                     n.default.show({

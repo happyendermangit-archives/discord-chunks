@@ -9,8 +9,8 @@ function(t, e, i) {
     i("884691");
     var l = i("77078"),
         a = i("987317"),
-        u = i("76393"),
-        r = i("393414"),
+        r = i("76393"),
+        u = i("393414"),
         d = i("755624"),
         s = i("263024"),
         o = i("271938"),
@@ -30,7 +30,7 @@ function(t, e, i) {
                     bypassGuildIdCheck: N = !1
                 } = t;
                 e.isThread() && (await s.default.unarchiveThreadIfNecessary(e.id), !d.default.hasJoined(e.id) && await s.default.joinThread(e, "Join Voice"));
-                let v = u.default.getRemoteSessionId(),
+                let v = r.default.getRemoteSessionId(),
                     O = E.default.getVoiceStateForSession(o.default.getId(), v),
                     D = (null == O ? void 0 : O.channelId) === e.id,
                     p = D || c.default.getChannelId() === E.default.getCurrentClientVoiceChannelId(e.guild_id);
@@ -56,7 +56,7 @@ function(t, e, i) {
                     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         i = t.getGuildId();
                     if (null == i && !e) throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
-                    (0, r.transitionTo)(f.Routes.CHANNEL(i, t.id))
+                    (0, u.transitionTo)(f.Routes.CHANNEL(i, t.id))
                 }(e, N), !0)
             }
         }

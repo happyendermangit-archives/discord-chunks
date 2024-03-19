@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("873218"),
         S = n("250832"),
         C = n("22248"),
-        I = n("28236"),
-        _ = n("306160"),
+        _ = n("28236"),
+        I = n("306160"),
         T = n("794818"),
         v = n("844659"),
         N = n("657057"),
@@ -35,8 +35,8 @@ function(e, t, n) {
         M = n("47677"),
         k = n("49111"),
         L = n("724210"),
-        b = n("782340"),
-        P = n("356410");
+        P = n("782340"),
+        b = n("356410");
     n("312336");
     var j = n("919163");
 
@@ -47,7 +47,7 @@ function(e, t, n) {
         return (0, i.jsx)(o.Clickable, {
             onClick: () => {
                 try {
-                    (0, _.copy)(t), a(!0)
+                    (0, I.copy)(t), a(!0)
                 } catch (e) {
                     a(!1)
                 }
@@ -97,13 +97,13 @@ function(e, t, n) {
         codeBlock: {
             react(e, t, l) {
                 let a = () => (0, i.jsx)("code", {
-                    className: s(P.scrollbarGhostHairline, "hljs"),
+                    className: s(b.scrollbarGhostHairline, "hljs"),
                     children: (0, v.smartOutput)(e, t, l)
                 });
                 return (0, i.jsx)("pre", {
                     children: (0, i.jsxs)("div", {
                         className: j.codeContainer,
-                        children: [_.SUPPORTS_COPY ? (0, i.jsx)("div", {
+                        children: [I.SUPPORTS_COPY ? (0, i.jsx)("div", {
                             className: j.codeActions,
                             children: (0, i.jsx)(U, {
                                 text: e.content
@@ -117,7 +117,7 @@ function(e, t, n) {
                                 {
                                     let n = t.highlight(e.lang, e.content, !0);
                                     return null == n ? a() : (0, i.jsx)("code", {
-                                        className: s(P.scrollbarGhostHairline, "hljs", n.language),
+                                        className: s(b.scrollbarGhostHairline, "hljs", n.language),
                                         dangerouslySetInnerHTML: {
                                             __html: n.value
                                         }
@@ -147,7 +147,7 @@ function(e, t, n) {
             }, n.key)
         },
         soundboard: {
-            react: e => (0, i.jsx)(I.default, {
+            react: e => (0, i.jsx)(_.default, {
                 channelId: e.channelId,
                 soundId: e.soundId,
                 jumbo: e.jumboable
@@ -180,13 +180,13 @@ function(e, t, n) {
                 switch (e.channelId) {
                     case L.StaticChannelId.GUILD_HOME:
                     case L.StaticChannelId.SERVER_GUIDE:
-                        a = b.default.Messages.SERVER_GUIDE;
+                        a = P.default.Messages.SERVER_GUIDE;
                         break;
                     case L.StaticChannelId.CHANNEL_BROWSER:
-                        a = b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
+                        a = P.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
                         break;
                     case L.StaticChannelId.CUSTOMIZE_COMMUNITY:
-                        a = b.default.Messages.CHANNELS_AND_ROLES
+                        a = P.default.Messages.CHANNELS_AND_ROLES
                 }
                 return (0, i.jsx)(o.Tooltip, {
                     text: a,

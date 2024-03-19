@@ -27,8 +27,8 @@ function(e, t, n) {
         g = n("845962"),
         S = n("697218"),
         C = n("945330"),
-        I = n("719923"),
-        _ = n("627601"),
+        _ = n("719923"),
+        I = n("627601"),
         T = n("994428"),
         v = n("782340"),
         N = n("154477"),
@@ -89,21 +89,21 @@ function(e, t, n) {
             isInSidebar: C = !1,
             canShowAvatarDecorationUpsell: A = !1,
             canShowProfileEffectUpsell: L = !1,
-            upsellSource: b
+            upsellSource: P
         } = e, {
-            analyticsLocations: P
+            analyticsLocations: b
         } = (0, p.default)(f.default.COLLECTIBLES_USER_POPOUT_UPSELL), j = (0, o.default)([c.default], () => c.default.useReducedMotion), {
             ref: U,
             height: D
         } = (0, d.default)(), w = l.useMemo(() => ({
             top: "-".concat((null != D ? D : R) + 6, "px")
-        }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), G = I.default.canUseCollectibles(F), {
+        }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), G = _.default.canUseCollectibles(F), {
             setUpsellSource: B,
             reset: H
-        } = (0, _.useUserPopoutCollectiblesUpsellStore)();
-        l.useEffect(() => (B(b), () => {
+        } = (0, I.useUserPopoutCollectiblesUpsellStore)();
+        l.useEffect(() => (B(P), () => {
             H()
-        }), [B, b, H]);
+        }), [B, P, H]);
         let V = (0, o.default)([g.default], () => g.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
             [K, W] = (0, o.useStateFromStoresArray)([E.default], () => {
                 var e;
@@ -112,11 +112,11 @@ function(e, t, n) {
             Y = l.useCallback(() => {
                 var e, t, i, l;
                 null == h || h(T.ContentDismissActionType.PRIMARY), null == m || m(), (0, x.openCollectiblesShop)({
-                    analyticsLocations: P,
+                    analyticsLocations: b,
                     analyticsSource: f.default.COLLECTIBLES_USER_POPOUT_UPSELL,
                     initialProductSkuId: K ? null !== (i = null == V ? void 0 : V.skuId) && void 0 !== i ? i : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId : null !== (l = null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId) && void 0 !== l ? l : null == V ? void 0 : V.skuId
                 })
-            }, [h, m, P, null == V ? void 0 : V.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, K]),
+            }, [h, m, b, null == V ? void 0 : V.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, K]),
             z = l.useCallback(() => {
                 null == h || h(T.ContentDismissActionType.DISMISS)
             }, [h]);

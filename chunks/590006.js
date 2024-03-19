@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         },
         default: function() {
-            return g
+            return C
         }
     }), n("424973");
     var i, l, a = n("37983");
@@ -16,47 +16,52 @@ function(e, t, n) {
         u = n("572544"),
         d = n("244201"),
         c = n("298878"),
-        f = n("643121"),
-        p = n("217513"),
-        m = n("590456"),
-        h = n("49111"),
-        x = n("782340"),
-        E = n("77374"),
-        y = n("696246");
+        f = n("756507"),
+        p = n("4462"),
+        m = n("643121"),
+        h = n("217513"),
+        x = n("590456"),
+        E = n("49111"),
+        y = n("782340"),
+        g = n("77374"),
+        S = n("696246");
 
-    function g(e) {
+    function C(e) {
         let {
             user: t,
             guildId: n,
             className: i,
             shrinkAtCount: l,
             shrinkToSize: s,
-            isTryItOutFlow: g,
-            size: S = 0
-        } = e, C = (0, p.default)(t.id, n), I = (0, f.default)(C).map(e => ({
+            isTryItOutFlow: C,
+            size: _ = 0
+        } = e, I = (0, h.default)(t.id, n), T = (0, m.default)(I).map(e => ({
             ...e,
-            src: (0, m.getBadgeAsset)(e.icon)
-        })), _ = (0, d.useWindowDispatch)();
+            src: (0, x.getBadgeAsset)(e.icon)
+        })), {
+            trackUserProfileAction: v,
+            ...N
+        } = (0, f.useUserProfileAnalyticsContext)(), A = (0, d.useWindowDispatch)();
         if (t.isClyde()) return (0, a.jsx)("div", {
-            className: r(i, E.container, E.clydeBadgeList),
-            "aria-label": x.default.Messages.PROFILE_USER_BADGES,
+            className: r(i, g.container, g.clydeBadgeList),
+            "aria-label": y.default.Messages.PROFILE_USER_BADGES,
             role: "group",
             children: (0, a.jsx)(c.default, {})
         });
-        g && null == I.find(e => "premium" === e.id) && I.push({
+        C && null == T.find(e => "premium" === e.id) && T.push({
             id: "premium",
-            icon: y,
-            src: y,
-            description: x.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+            icon: S,
+            src: S,
+            description: y.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
                 date: new Date
             })
         });
-        let T = null != l && null != s && I.length > l ? s : S;
+        let O = null != l && null != s && T.length > l ? s : _;
         return (0, a.jsx)("div", {
-            className: r(i, I.length > 0 ? E.containerWithContent : E.container),
-            "aria-label": x.default.Messages.PROFILE_USER_BADGES,
+            className: r(i, T.length > 0 ? g.containerWithContent : g.container),
+            "aria-label": y.default.Messages.PROFILE_USER_BADGES,
             role: "group",
-            children: I.map(e => (0, a.jsx)(o.Tooltip, {
+            children: T.map(e => (0, a.jsx)(o.Tooltip, {
                 position: "top",
                 text: e.description,
                 spacing: 12,
@@ -64,9 +69,14 @@ function(e, t, n) {
                     ...t,
                     onClick: n => {
                         var i;
-                        null === (i = t.onClick) || void 0 === i || i.call(t);
+                        v({
+                            action: "PRESS_BADGE"
+                        }), (0, p.trackUserProfileBadgePressed)({
+                            badge: e.id,
+                            ...N
+                        }), null === (i = t.onClick) || void 0 === i || i.call(t);
                         let l = null != e.link ? (0, u.default)(e.link) : null;
-                        if (null != l) return _.dispatch(h.ComponentActions.POPOUT_CLOSE), l(n)
+                        if (null != l) return A.dispatch(E.ComponentActions.POPOUT_CLOSE), l(n)
                     },
                     href: e.link,
                     children: (0, a.jsx)("img", {
@@ -74,9 +84,9 @@ function(e, t, n) {
                         "aria-hidden": !0,
                         src: e.src,
                         className: r({
-                            [E.profileBadge24]: 0 === T,
-                            [E.profileBadge22]: 1 === T,
-                            [E.profileBadge18]: 2 === T
+                            [g.profileBadge24]: 0 === O,
+                            [g.profileBadge22]: 1 === O,
+                            [g.profileBadge18]: 2 === O
                         })
                     })
                 })

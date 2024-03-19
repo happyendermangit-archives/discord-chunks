@@ -84,14 +84,14 @@ function(e, t, n) {
             className: s,
             count: o,
             label: f.default.Messages.CONNECTIONS_PROFILE_STEAM_GAMES
-        }, c.MetadataFields.STEAM_GAME_COUNT)), u > -1 && r.push((0, i.jsx)(_, {
+        }, c.MetadataFields.STEAM_GAME_COUNT)), u > -1 && r.push((0, i.jsx)(I, {
             className: s,
             label: f.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: u
             }),
             imageSrc: n("142226"),
             imageAlt: f.default.Messages.CONNECTIONS_STEAM_DOTA2
-        }, c.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && r.push((0, i.jsx)(_, {
+        }, c.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && r.push((0, i.jsx)(I, {
             className: s,
             label: f.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: d
@@ -181,7 +181,7 @@ function(e, t, n) {
                     break;
                     case c.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
                     case c.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
-                        l.push((0, i.jsx)(I, {
+                        l.push((0, i.jsx)(_, {
                             className: t,
                             date: r,
                             locale: n,
@@ -224,7 +224,7 @@ function(e, t, n) {
         })
     }
 
-    function I(e) {
+    function _(e) {
         let {
             date: t,
             locale: n,
@@ -242,7 +242,7 @@ function(e, t, n) {
         })
     }
 
-    function _(e) {
+    function I(e) {
         let {
             label: t,
             imageSrc: n,

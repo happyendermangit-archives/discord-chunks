@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("719923"),
         S = n("998206"),
         C = n("35385"),
-        I = n("695369"),
-        _ = n("198"),
+        _ = n("695369"),
+        I = n("198"),
         T = n("315814"),
         v = n("108486"),
         N = n("923582"),
@@ -54,13 +54,13 @@ function(e, t, n) {
         return r ? (0, i.jsx)(v.default, {
             disabled: t,
             channel: n
-        }) : (0, i.jsx)(_.default, {
+        }) : (0, i.jsx)(I.default, {
             disabled: t,
             channel: n
         })
     }
     var L = l.memo(function(e) {
-        var t, n, l, p, _, v, L, b, P;
+        var t, n, l, p, I, v, L, P, b;
         let {
             type: j,
             disabled: U,
@@ -103,7 +103,7 @@ function(e, t, n) {
             return [Z && l && a, a]
         }), ee = (0, u.useActivitiesInTextButtonVisibility)(D.id, "ChannelTextAreaButtons");
         if (!a.isMobile) {
-            if (D.isDM() && (null === (_ = j.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+            if (D.isDM() && (null === (I = j.gifts) || void 0 === I ? void 0 : I.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
                     location: "dc120b_5"
                 }), Q && z.push((0, i.jsx)(T.default, {
                     disabled: U,
@@ -126,10 +126,10 @@ function(e, t, n) {
                     disabled: U,
                     channel: D
                 }, "gift"))
-            }(null === (b = j.gifs) || void 0 === b ? void 0 : b.button) != null && null == K && z.push((0, i.jsx)(I.default, {
+            }(null === (P = j.gifs) || void 0 === P ? void 0 : P.button) != null && null == K && z.push((0, i.jsx)(_.default, {
                 disabled: U,
                 type: j
-            }, "gif")), (null === (P = j.stickers) || void 0 === P ? void 0 : P.button) != null && null == K && z.push((0, i.jsx)(A.default, {
+            }, "gif")), (null === (b = j.stickers) || void 0 === b ? void 0 : b.button) != null && null == K && z.push((0, i.jsx)(A.default, {
                 disabled: U,
                 type: j
             }, "sticker"))
