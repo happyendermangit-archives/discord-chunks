@@ -5,7 +5,7 @@ function(e, t, n) {
             return a
         },
         useIsEligibleForQuests: function() {
-            return l
+            return u
         }
     });
     var s = n("619935"),
@@ -33,32 +33,30 @@ function(e, t, n) {
         }),
         a = e => {
             let {
-                location: t,
-                autoTrackExposure: n
-            } = e, i = r.getCurrentConfig({
+                location: t
+            } = e, n = r.getCurrentConfig({
                 location: t
             }, {
-                autoTrackExposure: n
-            }), a = s.default.getCurrentConfig({
+                autoTrackExposure: !1
+            }), i = s.default.getCurrentConfig({
                 location: t
             }, {
-                autoTrackExposure: n
+                autoTrackExposure: !1
             });
-            return i.enabled && !a.paymentsBlocked
+            return n.enabled && !i.paymentsBlocked
         },
-        l = e => {
+        u = e => {
             let {
-                location: t,
-                autoTrackExposure: n
-            } = e, i = r.useExperiment({
+                location: t
+            } = e, n = r.useExperiment({
                 location: t
             }, {
-                autoTrackExposure: n
-            }), a = s.default.useExperiment({
+                autoTrackExposure: !1
+            }), i = s.default.useExperiment({
                 location: t
             }, {
-                autoTrackExposure: n
+                autoTrackExposure: !1
             });
-            return i.enabled && !a.paymentsBlocked
+            return n.enabled && !i.paymentsBlocked
         }
 }

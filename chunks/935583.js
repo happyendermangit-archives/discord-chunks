@@ -3,10 +3,10 @@ function(e, t, n) {
     var s, i, r, a;
     n.r(t), n.d(t, {
         dirtyChars: function() {
-            return l
+            return u
         },
         coalescePeriods: function() {
-            return u
+            return l
         },
         EditState: function() {
             return s
@@ -27,8 +27,8 @@ function(e, t, n) {
             return E
         }
     });
-    let l = /([^A-Za-z0-9_.]+)/g,
-        u = /\.+/g;
+    let u = /([^A-Za-z0-9_.]+)/g,
+        l = /\.+/g;
     (r = s || (s = {})).NONE = "none", r.EDIT_DISPLAY_NAME = "display-name", r.EDIT_USERNAME = "username", r.PREVIEW = "preview", r.SUGGESTION = "suggestion", (a = i || (i = {})).APP_START = "app start", a.NOTICE = "notice", a.USER_SETTINGS = "user settings", a.USER_SETTINGS_EDIT = "user settings edit", a.YOU_TAB = "you tab";
     let o = 32,
         d = "pomelo",

@@ -97,8 +97,7 @@ function(e, _, E) {
     class y extends t.default {
         maybeFetchCurrentQuests() {
             (0, R.getIsEligibleForQuests)({
-                location: L.QuestsExperimentLocations.QUESTS_MANAGER,
-                autoTrackExposure: !1
+                location: L.QuestsExperimentLocations.QUESTS_MANAGER
             }) && !l.default.isFetchingCurrentQuests && (0, O.fetchCurrentQuests)()
         }
         constructor(...e) {

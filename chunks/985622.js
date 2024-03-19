@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return l
+            return u
         }
     });
     var s = n("37983");
@@ -10,16 +10,16 @@ function(e, t, n) {
     var i = n("469563"),
         r = n("671306"),
         a = n("75196"),
-        l = (0, i.replaceIcon)(function(e) {
+        u = (0, i.replaceIcon)(function(e) {
             let {
                 width: t = 24,
                 height: n = 24,
                 color: i = "currentColor",
                 foreground: r,
-                ...l
+                ...u
             } = e;
             return (0, s.jsx)("svg", {
-                ...(0, a.default)(l),
+                ...(0, a.default)(u),
                 width: t,
                 height: n,
                 viewBox: "0 0 24 24",

@@ -2,7 +2,7 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         default: function() {
-            return c
+            return i
         },
         getChannelVideoLimit: function() {
             return r
@@ -11,16 +11,16 @@ function(e, a, t) {
     var s = t("446674"),
         d = t("305961"),
         n = t("316133"),
-        i = t("49111");
+        c = t("49111");
 
-    function c(e) {
+    function i(e) {
         return (0, s.useStateFromStoresObject)([n.default, d.default], () => {
             let a = n.default.countVoiceStatesForChannel(e.id),
                 t = d.default.getGuild(e.getGuildId());
             return null == t ? {
                 reachedLimit: !1,
                 limit: -1
-            } : e.type === i.ChannelTypes.GUILD_STAGE_VOICE ? {
+            } : e.type === c.ChannelTypes.GUILD_STAGE_VOICE ? {
                 reachedLimit: a > t.maxStageVideoChannelUsers,
                 limit: t.maxStageVideoChannelUsers
             } : {
@@ -36,7 +36,7 @@ function(e, a, t) {
         return null == t ? {
             reachedLimit: !1,
             limit: -1
-        } : e.type === i.ChannelTypes.GUILD_STAGE_VOICE ? {
+        } : e.type === c.ChannelTypes.GUILD_STAGE_VOICE ? {
             reachedLimit: a > t.maxStageVideoChannelUsers,
             limit: t.maxStageVideoChannelUsers
         } : {

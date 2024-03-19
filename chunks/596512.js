@@ -9,8 +9,8 @@ function(e, t, n) {
         i = n.n(s),
         r = n("689988"),
         a = n("599110"),
-        l = n("299039"),
-        u = n("49111");
+        u = n("299039"),
+        l = n("49111");
     class o extends r.default {
         handleMessageBecameVisible(e) {
             let {
@@ -31,14 +31,14 @@ function(e, t, n) {
         handleMessageListVisibilityChange(e) {
             for (let t of e) this.handleMessageBecameVisible(t);
             let t = new Set(e.map(e => e.messageId));
-            for (let e of l.default.keys(this.currentlyVisibleMessageTimers)) !t.has(e) && this.handleMessageLostVisibility(e)
+            for (let e of u.default.keys(this.currentlyVisibleMessageTimers)) !t.has(e) && this.handleMessageLostVisibility(e)
         }
         handleChannelSelect() {
             for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
             this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel.clear(), this.drainBuffer()
         }
         drainBuffer() {
-            for (let e of this.batchBuffer) a.default.track(u.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
+            for (let e of this.batchBuffer) a.default.track(l.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
                 message_id: e.messageId,
                 channel_id: e.channelId,
                 guild_id: e.guildId,

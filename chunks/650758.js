@@ -7,8 +7,8 @@ function(e, a, t) {
     }), t("222007");
     var s, d = t("37983"),
         n = t("884691"),
-        i = t("597755"),
-        c = t.n(i),
+        c = t("597755"),
+        i = t.n(c),
         r = t("703809"),
         o = t("446674"),
         f = t("895547"),
@@ -30,7 +30,7 @@ function(e, a, t) {
     s = class extends n.PureComponent {
         getPlatform() {
             var e;
-            let a = null === (e = c.os) || void 0 === e ? void 0 : e.family;
+            let a = null === (e = i.os) || void 0 === e ? void 0 : e.family;
             return null != a && /^win/i.test(a) ? m.PlatformTypes.WINDOWS : null != a && /darwin|os x/i.test(a) ? m.PlatformTypes.OSX : m.PlatformTypes.LINUX
         }
         componentDidMount() {

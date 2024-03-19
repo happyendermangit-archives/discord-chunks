@@ -48,13 +48,13 @@ function(e, t, n) {
         P = Symbol("currentUser"),
         U = Symbol("stale"),
         b = Symbol("current"),
-        B = Object.freeze({
+        x = Object.freeze({
             descriptors: [],
             commands: [],
             sectionedCommands: [],
             loading: !0
         }),
-        x = Object.freeze({
+        B = Object.freeze({
             serverVersion: b,
             fetchState: {
                 fetching: !1
@@ -135,7 +135,7 @@ function(e, t, n) {
         }
         getContextState(e) {
             var t, n;
-            return null != e && ee(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : F : x
+            return null != e && ee(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : F : B
         }
         getUserState() {
             var e;
@@ -143,11 +143,11 @@ function(e, t, n) {
                 location: "getUserState"
             }, {
                 autoTrackExposure: !1
-            }) ? null !== (e = this.indices[P]) && void 0 !== e ? e : F : x
+            }) ? null !== (e = this.indices[P]) && void 0 !== e ? e : F : B
         }
         query(e, t, n) {
             let i = A.default.getCurrentUser();
-            if (null == i) return B;
+            if (null == i) return x;
             let l = this.getContextState(e),
                 a = this.getUserState(),
                 o = (0, y.buildPermissionContext)(e, t.commandType),
@@ -247,7 +247,7 @@ function(e, t, n) {
                     let s = {
                         ...e,
                         description: null !== (l = null !== (i = e.description_default) && void 0 !== i ? i : e.description) && void 0 !== l ? l : "",
-                        dm_permission: void 0,
+                        dm_permission: e.dm_permission,
                         name: null !== (a = e.name_default) && void 0 !== a ? a : e.name,
                         options: null !== (o = null === (n = e.options) || void 0 === n ? void 0 : n.map(en)) && void 0 !== o ? o : [],
                         permissions: null != e.permissions ? el(e.permissions, t) : void 0
