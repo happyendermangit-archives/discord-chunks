@@ -291,9 +291,12 @@ function(e, t, n) {
             num_of_attachments_pending_scan: i,
             num_of_embeds: s,
             num_of_embeds_pending_scan: r
-        }), E.default.distribution({
-            name: c.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED
-        }, i + r)
+        });
+        let o = i + r,
+            l = o > 0;
+        l && E.default.distribution({
+            name: c.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2
+        }, o)
     }
 
     function q(e) {

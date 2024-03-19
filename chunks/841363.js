@@ -2,56 +2,56 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getChannelFromEvent: function() {
-            return r
+            return u
         },
         getLocationFromEvent: function() {
-            return i
-        },
-        getLocationFromEventData: function() {
             return a
         },
+        getLocationFromEventData: function() {
+            return r
+        },
         getChannelTypeFromEntity: function() {
-            return c
+            return E
         }
     });
-    var u = n("42203"),
-        l = n("745049");
+    var l = n("42203"),
+        d = n("745049");
 
-    function r(e) {
+    function u(e) {
         let t;
         let {
             entity_type: n,
-            channel_id: r
+            channel_id: u
         } = e;
-        if (n in l.EntityChannelTypes && null != r) {
-            var d;
-            t = null !== (d = u.default.getChannel(e.channel_id)) && void 0 !== d ? d : void 0
+        if (n in d.EntityChannelTypes && null != u) {
+            var i;
+            t = null !== (i = l.default.getChannel(e.channel_id)) && void 0 !== i ? i : void 0
         }
         return t
     }
 
-    function d(e, t) {
+    function i(e, t) {
         let n = null;
-        return e === l.GuildScheduledEventEntityTypes.EXTERNAL && null != t && "location" in t && (n = t.location), n
-    }
-
-    function i(e) {
-        let {
-            entity_type: t,
-            entity_metadata: n
-        } = e;
-        return d(t, n)
+        return e === d.GuildScheduledEventEntityTypes.EXTERNAL && null != t && "location" in t && (n = t.location), n
     }
 
     function a(e) {
         let {
+            entity_type: t,
+            entity_metadata: n
+        } = e;
+        return i(t, n)
+    }
+
+    function r(e) {
+        let {
             entityType: t,
             entityMetadata: n
         } = e;
-        return d(t, n)
+        return i(t, n)
     }
 
-    function c(e) {
-        return e === l.GuildScheduledEventEntityTypes.VOICE || e === l.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? l.EntityChannelTypes[e] : void 0
+    function E(e) {
+        return e === d.GuildScheduledEventEntityTypes.VOICE || e === d.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? d.EntityChannelTypes[e] : void 0
     }
 }
