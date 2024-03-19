@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("305961"),
         C = n("697218"),
         I = n("124299"),
-        T = n("841811"),
-        _ = n("290581"),
+        _ = n("841811"),
+        T = n("290581"),
         v = n("599110"),
         N = n("159885"),
         A = n("570759"),
@@ -213,7 +213,7 @@ function(e, t, n) {
                             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: n.name
                             }),
-                            icon: (0, i.jsx)(_.default, {
+                            icon: (0, i.jsx)(T.default, {
                                 height: 16,
                                 width: 16
                             }),
@@ -229,7 +229,7 @@ function(e, t, n) {
                             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: n.name
                             }),
-                            icon: (0, i.jsx)(T.default, {}),
+                            icon: (0, i.jsx)(_.default, {}),
                             isCollapsed: t.has(n.id),
                             onClick: () => $(n.id, {
                                 isStickerPack: !1
@@ -321,8 +321,8 @@ function(e, t, n) {
                 onSelectSticker: g,
                 rowCount: S,
                 rowCountBySection: C,
-                stickersCategories: T,
-                stickersGrid: _,
+                stickersCategories: _,
+                stickersGrid: T,
                 channel: v
             } = e, N = l.useRef(!1), A = l.useRef(null), [O, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
                 AnalyticsLocationProvider: k
@@ -336,8 +336,8 @@ function(e, t, n) {
             } = ed({
                 collapsedStickersCategories: n,
                 gridWidth: r,
-                stickersCategories: T,
-                stickersGrid: _,
+                stickersCategories: _,
+                stickersGrid: T,
                 isScrolling: N,
                 isUsingKeyboardNavigation: y,
                 onSelectSticker: g,
@@ -422,7 +422,7 @@ function(e, t, n) {
                         stickyHeaders: !0,
                         ref: A
                     }), (0, i.jsx)(P.default, {
-                        stickersGrid: _
+                        stickersGrid: T
                     })]
                 })
             })

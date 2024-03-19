@@ -26,8 +26,8 @@ function(e, t, n) {
         S = n("36539"),
         C = n("502651"),
         I = n("419830"),
-        T = n("808742"),
-        _ = n("342845"),
+        _ = n("808742"),
+        T = n("342845"),
         v = n("239380"),
         N = n("118033"),
         A = n("315102"),
@@ -176,7 +176,7 @@ function(e, t, n) {
             let l, r;
             if (e.type === D.ActivityTypes.HANG_STATUS) return (0, a.jsx)("div", {
                 className: G.assets,
-                children: (0, a.jsx)(_.default, {
+                children: (0, a.jsx)(T.default, {
                     hangStatusActivity: e,
                     className: o(G.assetsHangStatus, this.getTypeClass("assetsSmallImage", "WithoutLargeImage"))
                 })
@@ -301,7 +301,7 @@ function(e, t, n) {
             let r = (0, y.default)(e),
                 o = e.name,
                 u = o;
-            return (s === D.ActivityTypes.HANG_STATUS ? u = (0, T.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
+            return (s === D.ActivityTypes.HANG_STATUS ? u = (0, _.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
                 className: G.activityName,
                 children: u
             }) : !r && (o = l, u = l, (0, g.default)(e) && null != e.sync_id && null != l ? u = (0, a.jsx)(f.Anchor, {

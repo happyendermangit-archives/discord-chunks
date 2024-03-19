@@ -30,8 +30,8 @@ function(e, t, n) {
             renderSectionHeader: S,
             renderSectionFooter: C,
             renderInspector: I,
-            renderEmptySearchState: T,
-            renderCategoryList: _,
+            renderEmptySearchState: _,
+            renderCategoryList: T,
             renderHeaderAccessories: v,
             rowHeight: N,
             sectionHeaderHeight: A,
@@ -107,7 +107,7 @@ function(e, t, n) {
                 className: u.header,
                 children: [" ", el, " "]
             }), F && null != E ? E(u.emptyState) : (0, i.jsxs)(i.Fragment, {
-                children: [_(D), null != P && (0, i.jsx)("div", {
+                children: [T(D), null != P && (0, i.jsx)("div", {
                     className: u.gridNoticeWrapper,
                     children: P
                 }), (0, i.jsx)("div", {
@@ -125,7 +125,7 @@ function(e, t, n) {
                         renderSectionHeader: null != S ? et : void 0,
                         renderSectionFooter: null != C ? en : void 0,
                         renderInspector: null != I ? ei : void 0,
-                        renderEmptySearchState: T,
+                        renderEmptySearchState: _,
                         rowCount: K,
                         rowCountBySection: W,
                         rowHeight: N,

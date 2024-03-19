@@ -26,8 +26,8 @@ function(e, t, n) {
         S = n("36539"),
         C = n("698372"),
         I = n("770370"),
-        T = n("667618"),
-        _ = n("865677"),
+        _ = n("667618"),
+        T = n("865677"),
         v = n("15874"),
         N = n("774713"),
         A = n("510788"),
@@ -128,7 +128,7 @@ function(e, t, n) {
                         color: D,
                         look: w
                     }, "watch-button"),
-                    a = (0, i.jsx)(_.default, {
+                    a = (0, i.jsx)(T.default, {
                         activity: n,
                         currentEmbeddedApplication: H,
                         user: l,
@@ -143,7 +143,7 @@ function(e, t, n) {
                         color: D,
                         look: w
                     }, "notify-button"),
-                    r = (0, i.jsx)(T.default, {
+                    r = (0, i.jsx)(_.default, {
                         user: l,
                         color: D,
                         look: w,

@@ -57,8 +57,8 @@ function(e, t, n) {
             onMouseLeave: S,
             onFocus: C,
             onBlur: I,
-            pulse: T,
-            sparkle: _,
+            pulse: _,
+            sparkle: T,
             notification: v,
             "aria-label": N,
             "aria-expanded": A,
@@ -96,7 +96,7 @@ function(e, t, n) {
                 [m.active]: y
             }),
             innerClassName: o(m.button, i, {
-                [m.pulseButton]: T
+                [m.pulseButton]: _
             }),
             onClick: E,
             onMouseEnter: g,
@@ -125,12 +125,12 @@ function(e, t, n) {
                     children: k({
                         component: (0, a.jsx)(r, {
                             className: o(m.icon, s, {
-                                [m.pulseIcon]: T
+                                [m.pulseIcon]: _
                             })
                         })
                     })
                 }, i) : void 0
-            }), _ && (0, a.jsxs)("div", {
+            }), T && (0, a.jsxs)("div", {
                 className: m.sparkleContainer,
                 children: [(0, a.jsx)(f.default, {
                     className: m.sparkleStar

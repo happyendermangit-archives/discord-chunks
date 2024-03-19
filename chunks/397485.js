@@ -40,8 +40,8 @@ function(e, t, n) {
         S = n("97656"),
         C = n("812007"),
         I = n("721336"),
-        T = n("954877"),
-        _ = n("662151"),
+        _ = n("954877"),
+        T = n("662151"),
         v = n("155232"),
         N = n("843093"),
         A = n("867805"),
@@ -57,7 +57,7 @@ function(e, t, n) {
         },
         j = {
             BASIC: [a],
-            PREMIUM: [s, r, o, u, d, c, f, p, m, h, x, E, y, g, S, C, I, T, _, v, N]
+            PREMIUM: [s, r, o, u, d, c, f, p, m, h, x, E, y, g, S, C, I, _, T, v, N]
         },
         U = {
             [L.VoiceChannelEffectAnimationType.BASIC]: j.BASIC,

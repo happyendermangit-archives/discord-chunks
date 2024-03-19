@@ -28,7 +28,7 @@ function(e, t, n) {
             } = e, [g, S] = l.useState(!1), C = (0, o.useStateFromStores)([f.default], () => {
                 var e, t;
                 return g && Object.values(null !== (t = null === (e = f.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-            }), [I, T, _] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), v = l.useRef(0), N = l.useCallback(() => {
+            }), [I, _, T] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), v = l.useRef(0), N = l.useCallback(() => {
                 S(!0), clearTimeout(v.current), v.current = setTimeout(() => {
                     S(!1)
                 }, 1500)
@@ -48,7 +48,7 @@ function(e, t, n) {
                     play: M
                 } = (0, u.useGifLottie)();
             if (n) return null;
-            let k = I === x.ExpressionPickerViewType.GIF && T === a;
+            let k = I === x.ExpressionPickerViewType.GIF && _ === a;
             return (0, i.jsx)(d.Tooltip, {
                 text: C ? E.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
                 forceOpen: !0,
@@ -68,7 +68,7 @@ function(e, t, n) {
                         "aria-label": E.default.Messages.GIF_BUTTON_LABEL,
                         "aria-expanded": k,
                         "aria-haspopup": "dialog",
-                        "aria-controls": _,
+                        "aria-controls": T,
                         children: (0, i.jsx)(O, {
                             color: "currentColor"
                         })

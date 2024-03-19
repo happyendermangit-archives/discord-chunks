@@ -75,7 +75,7 @@ function(e, t, n) {
             C = (0, r.useSlateStatic)(),
             {
                 optionType: I,
-                errored: T
+                errored: _
             } = (0, o.useStateFromStoresObject)([d.default], () => {
                 var e, t, i;
                 return {
@@ -83,20 +83,20 @@ function(e, t, n) {
                     errored: (null === (i = d.default.getOptionState(n, a.optionName)) || void 0 === i ? void 0 : null === (t = i.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
                 }
             }, [n, a.optionName]),
-            _ = (0, o.useStateFromStores)([f.default], () => f.default.getUpload(n, a.optionName, c.DraftType.SlashCommand), [n, a.optionName]),
+            T = (0, o.useStateFromStores)([f.default], () => f.default.getUpload(n, a.optionName, c.DraftType.SlashCommand), [n, a.optionName]),
             v = a.children[a.children.length - 1],
             N = null != v && h.TextUtils.isText(v) && v.text.endsWith("\n"),
             A = s(E.inlineElement, E.optionPill, {
                 [E.selectedPill]: S && g,
-                [E.erroredPill]: (!S || !g) && T
+                [E.erroredPill]: (!S || !g) && _
             }),
             O = l.useCallback(() => {
                 !h.EditorUtils.isVoid(C, a) && m.SlateTransforms.selectCommandOption(C, a.optionName, !0)
             }, [C, a]);
-        return t = I === u.ApplicationCommandOptionType.ATTACHMENT ? (null == _ ? void 0 : _.filename) != null ? (0, i.jsxs)("span", {
+        return t = I === u.ApplicationCommandOptionType.ATTACHMENT ? (null == T ? void 0 : T.filename) != null ? (0, i.jsxs)("span", {
             className: s(E.optionPillValue, E.attachmentFilename),
             contentEditable: !1,
-            children: [_.filename, y]
+            children: [T.filename, y]
         }) : (0, i.jsxs)("span", {
             className: s(E.optionPillValue, E.readonlyPillValue),
             contentEditable: !1,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         IMAGE_GIF_RE: function() {
-            return _
+            return T
         },
         default: function() {
             return a
@@ -24,8 +24,8 @@ function(e, t, n) {
         S = n("275623"),
         C = n("594098"),
         I = n("719347"),
-        T = n("49111");
-    let _ = /\.gif($|\?|#)/i,
+        _ = n("49111");
+    let T = /\.gif($|\?|#)/i,
         v = /\.png($|\?|#)/i;
     (s = l || (l = {})).LOAD = "LOAD", s.PRELOAD = "PRELOAD", s.CLICK = "CLICK", (i = class e extends o.Component {
         static isAnimated(e) {
@@ -34,7 +34,7 @@ function(e, t, n) {
                 original: n,
                 animated: i
             } = e;
-            return i || _.test(null != n && "" !== n ? n : t)
+            return i || T.test(null != n && "" !== n ? n : t)
         }
         static isSrcPNG(e) {
             let {
@@ -46,7 +46,7 @@ function(e, t, n) {
             let {
                 readyState: t
             } = this.state;
-            t === T.ImageReadyStates.LOADING && this.loadImage(this.getSrc(this.getRatio(), e.isAnimated(this.props)), this.handleImageLoad), e.isAnimated(this.props) && this.observeVisibility()
+            t === _.ImageReadyStates.LOADING && this.loadImage(this.getSrc(this.getRatio(), e.isAnimated(this.props)), this.handleImageLoad), e.isAnimated(this.props) && this.observeVisibility()
         }
         componentDidUpdate(t) {
             let n = e.isAnimated(this.props),
@@ -150,7 +150,7 @@ function(e, t, n) {
                 maxWidth: g,
                 maxHeight: S,
                 onClick: I,
-                renderAccessory: _,
+                renderAccessory: T,
                 tabIndex: v,
                 limitResponsiveWidth: N,
                 useFullWidth: A,
@@ -198,14 +198,14 @@ function(e, t, n) {
             };
             if (1 === D.width && 1 === D.height) return null;
             switch ((b || null != I) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), M) {
-                case T.ImageReadyStates.LOADING:
+                case _.ImageReadyStates.LOADING:
                     null != n && (D.src = n);
                     break;
-                case T.ImageReadyStates.READY:
+                case _.ImageReadyStates.READY:
                     if (e.isAnimated(this.props)) {
                         D.onMouseLeave = this.onMouseLeave;
                         let t = (s || k || L) && (null == m || m) && e.visibilityObserver.isVisible(this);
-                        t ? (D.src = this.getSrc(P), D.renderAccessory = _) : (D.src = this.getSrc(P, !p || !s), D.renderAccessory = this.renderAccessory), null != f && (D.children = e => {
+                        t ? (D.src = this.getSrc(P), D.renderAccessory = T) : (D.src = this.getSrc(P, !p || !s), D.renderAccessory = this.renderAccessory), null != f && (D.children = e => {
                             let {
                                 src: n,
                                 size: i,
@@ -239,7 +239,7 @@ function(e, t, n) {
                     format: o,
                     quality: u
                 } = this.getFormatQuality();
-            E.default.track(T.AnalyticEvents.IMAGE_LOADING_COMPLETED, {
+            E.default.track(_.AnalyticEvents.IMAGE_LOADING_COMPLETED, {
                 duration_ms: r,
                 requested_height: t.height,
                 requested_width: t.width,
@@ -250,7 +250,7 @@ function(e, t, n) {
                 requested_url: t.url,
                 format: o,
                 quality: u,
-                state: e ? T.ImageReadyStates.ERROR : this.state.readyState,
+                state: e ? _.ImageReadyStates.ERROR : this.state.readyState,
                 data_saving_mode: h.default.dataSavingMode,
                 low_quality_image_mode: h.default.lowQualityImageMode,
                 trigger: n,
@@ -262,7 +262,7 @@ function(e, t, n) {
         }
         constructor(t) {
             super(t), this.imageLoadAnalyticsEnabled = !1, this.state = {
-                readyState: T.ImageReadyStates.LOADING,
+                readyState: _.ImageReadyStates.LOADING,
                 hasMouseOver: !1,
                 hasFocus: !1
             }, this.startLoadingTime = Date.now(), this._cancellers = new Set, this.observeVisibility = () => {
@@ -271,7 +271,7 @@ function(e, t, n) {
                 e.visibilityObserver.unobserve(this)
             }, this.handleImageLoad = (e, t) => {
                 this.setState({
-                    readyState: e ? T.ImageReadyStates.ERROR : T.ImageReadyStates.READY
+                    readyState: e ? _.ImageReadyStates.ERROR : _.ImageReadyStates.READY
                 }, () => {
                     var n;
                     return this.trackLoadingCompleted(e, t, null !== (n = this.props.trigger) && void 0 !== n ? n : "LOAD")
@@ -331,7 +331,7 @@ function(e, t, n) {
                     hasFocus: t
                 } = this.state, n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
                 return this.props.shouldRenderAccessory ? e || t ? n : (0, r.jsx)(S.default, {}) : null
-            }, (0, p.isImageLoaded)(this.getSrc(this.getRatio(), e.isAnimated(this.props))) && (this.state.readyState = T.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = N.getCurrentConfig({
+            }, (0, p.isImageLoaded)(this.getSrc(this.getRatio(), e.isAnimated(this.props))) && (this.state.readyState = _.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = N.getCurrentConfig({
                 location: "lazy_image"
             }).enabled
         }

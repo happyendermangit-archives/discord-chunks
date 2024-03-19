@@ -30,9 +30,9 @@ function(t, e, i) {
                     bypassGuildIdCheck: S = !1
                 } = t;
                 e.isThread() && (await s.default.unarchiveThreadIfNecessary(e.id), !d.default.hasJoined(e.id) && await s.default.joinThread(e, "Join Voice"));
-                let p = u.default.getRemoteSessionId(),
-                    N = f.default.getVoiceStateForSession(o.default.getId(), p),
-                    y = (null == N ? void 0 : N.channelId) === e.id,
+                let N = u.default.getRemoteSessionId(),
+                    p = f.default.getVoiceStateForSession(o.default.getId(), N),
+                    y = (null == p ? void 0 : p.channelId) === e.id,
                     h = y || c.default.getChannelId() === f.default.getCurrentClientVoiceChannelId(e.guild_id);
                 return !v && !T && (0, _.shouldShowVoiceChannelChangeConfirmation)(e) ? new Promise(t => {
                     (0, l.openModalLazy)(async () => {

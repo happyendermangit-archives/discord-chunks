@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("256860"),
         C = n("364685"),
         I = n("161585"),
-        T = n("24373"),
-        _ = n("41170"),
+        _ = n("24373"),
+        T = n("41170"),
         v = n("49111"),
         N = n("13030"),
         A = n("782340"),
@@ -106,10 +106,10 @@ function(e, t, n) {
                     }))
                 } else if (w) {
                     let e = C.default.getStickerPack(j.id);
-                    null != e && (F = e.name, G = (0, i.jsx)(_.default, {
+                    null != e && (F = e.name, G = (0, i.jsx)(T.default, {
                         disableAnimation: !P || E,
                         size: M,
-                        sticker: (0, T.getStickerPackPreviewSticker)(e)
+                        sticker: (0, _.getStickerPackPreviewSticker)(e)
                     }))
                 }
                 return (0, i.jsxs)(l.Fragment, {
@@ -192,14 +192,14 @@ function(e, t, n) {
         let {
             renderCategoryListItem: g,
             rowHeight: C,
-            onScroll: T
+            onScroll: _
         } = w({
             activeIndex: d,
             stickerPickerCategories: f,
             categoryListRef: a,
             firstStandardStickerCategoryOffsetTop: h,
             setShouldRenderShortcut: u
-        }), _ = l.useCallback(e => {
+        }), T = l.useCallback(e => {
             var t;
             e(m), null === (t = a.current) || void 0 === t || t.scrollTo(h)
         }, [m, h]);
@@ -209,7 +209,7 @@ function(e, t, n) {
             expressionsListRef: t,
             store: c.StickerPickerStore,
             listPadding: j,
-            onScroll: T,
+            onScroll: _,
             renderCategoryListItem: g,
             rowCount: f.length,
             categories: f,
@@ -218,7 +218,7 @@ function(e, t, n) {
                 className: s(O.standardStickerShortcut, {
                     [O.invisibleShortcut]: !r
                 }),
-                onClick: () => _(e),
+                onClick: () => T(e),
                 children: (0, i.jsx)(E.default, {
                     height: 24,
                     width: 24

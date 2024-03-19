@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("200294"),
         C = n("851745"),
         I = n("406291"),
-        T = n("49111"),
-        _ = n("782340"),
+        _ = n("49111"),
+        T = n("782340"),
         v = n("522572");
 
     function N(e, t) {
@@ -42,7 +42,7 @@ function(e, t, n) {
         matches: (e, t, n, i, l) => n.length > 1,
         queryResults(e, t, n, i, l) {
             let a = i.allowStickers ? 0 : 40,
-                s = T.MAX_AUTOCOMPLETE_RESULTS + a,
+                s = _.MAX_AUTOCOMPLETE_RESULTS + a,
                 {
                     emojis: {
                         locked: r,
@@ -115,7 +115,7 @@ function(e, t, n) {
                     }), (0, i.jsx)(o.Text, {
                         className: v.premiumText,
                         variant: "text-sm/semibold",
-                        children: _.default.Messages.UNLOCK_WITH_NITRO
+                        children: T.default.Messages.UNLOCK_WITH_NITRO
                     })]
                 })]
             }) : null;
@@ -126,8 +126,8 @@ function(e, t, n) {
                     autocompletes: t,
                     onHover: p,
                     onClick: m,
-                    titleWithQuery: _.default.Messages.EMOJI_MATCHING,
-                    titleWithoutQuery: _.default.Messages.EMOJI,
+                    titleWithQuery: T.default.Messages.EMOJI_MATCHING,
+                    titleWithoutQuery: T.default.Messages.EMOJI,
                     Component: E.default.Emoji,
                     getProps: e => ({
                         emoji: e,
@@ -153,8 +153,8 @@ function(e, t, n) {
                             })
                         })
                     },
-                    titleWithQuery: 0 === t.length ? _.default.Messages.EMOJI_MATCHING : null,
-                    titleWithoutQuery: 0 === t.length ? _.default.Messages.EMOJI : null,
+                    titleWithQuery: 0 === t.length ? T.default.Messages.EMOJI_MATCHING : null,
+                    titleWithoutQuery: 0 === t.length ? T.default.Messages.EMOJI : null,
                     Component: E.default.Emoji,
                     getProps: e => ({
                         emoji: e,
@@ -175,8 +175,8 @@ function(e, t, n) {
                     autocompletes: a,
                     onHover: p,
                     onClick: m,
-                    titleWithQuery: _.default.Messages.STICKERS_MATCHING,
-                    titleWithoutQuery: _.default.Messages.STICKER,
+                    titleWithQuery: T.default.Messages.STICKERS_MATCHING,
+                    titleWithoutQuery: T.default.Messages.STICKER,
                     Component: E.default.Sticker,
                     getProps: e => {
                         let {

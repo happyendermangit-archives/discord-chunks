@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
     var i = n("37983"),
@@ -245,7 +245,7 @@ function(e, t, n) {
         }
     }
 
-    function T(e) {
+    function _(e) {
         let t = (0, c.default)();
         return e.upload.item.platform !== u.UploadPlatform.WEB ? null : (0, i.jsx)(I, {
             ...e,

@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("769791"),
         C = n("373469"),
         I = n("42203"),
-        T = n("305961"),
-        _ = n("957255"),
+        _ = n("305961"),
+        T = n("957255"),
         v = n("800762"),
         N = n("313873"),
         A = n("599110"),
@@ -86,10 +86,10 @@ function(e, t, n) {
             location: "UserActivityContainer"
         }, {
             autoTrackExposure: !1
-        }), j = (0, r.useStateFromStores)([C.default], () => a ? C.default.getAnyStreamForUser(n.id) : null), U = P && _.default.can(R.Permissions.CONNECT, b), D = (null == t ? void 0 : t.type) === R.ActivityTypes.HANG_STATUS && U ? b : null, w = (0, r.useStateFromStores)([T.default, v.default, I.default], () => {
+        }), j = (0, r.useStateFromStores)([C.default], () => a ? C.default.getAnyStreamForUser(n.id) : null), U = P && T.default.can(R.Permissions.CONNECT, b), D = (null == t ? void 0 : t.type) === R.ActivityTypes.HANG_STATUS && U ? b : null, w = (0, r.useStateFromStores)([_.default, v.default, I.default], () => {
             var e, i;
-            return (0, u.default)(t, R.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = I.default.getChannel(null === (i = v.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? T.default.getGuild(D.getGuildId()) : null
-        }), F = (0, r.useStateFromStores)([T.default], () => null != j ? T.default.getGuild(j.guildId) : null), G = (0, r.useStateFromStores)([f.default], () => {
+            return (0, u.default)(t, R.ActivityFlags.EMBEDDED) ? _.default.getGuild(null === (e = I.default.getChannel(null === (i = v.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? _.default.getGuild(D.getGuildId()) : null
+        }), F = (0, r.useStateFromStores)([_.default], () => null != j ? _.default.getGuild(j.guildId) : null), G = (0, r.useStateFromStores)([f.default], () => {
             if (null != t) return null != t.application_id ? f.default.getApplication(t.application_id) : f.default.getApplicationByName(t.name);
             return null
         }), B = (0, p.default)(), H = (0, y.default)(n), V = B && null != t && H;

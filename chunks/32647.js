@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("664610"),
         C = n("688893"),
         I = n("684607"),
-        T = n("803322"),
-        _ = n("127875"),
+        _ = n("803322"),
+        T = n("127875"),
         v = n("169694"),
         N = n("100576"),
         A = n("765446"),
@@ -130,7 +130,7 @@ function(e, t, n) {
                     values: n,
                     results: i
                 }
-            }, [k.guild_id, k.id, eC]), eT = l.useCallback(() => {
+            }, [k.guild_id, k.id, eC]), e_ = l.useCallback(() => {
                 let e;
                 let t = $ ? u.default.getActiveCommand(k.id) : null;
                 if (null != t && null != t.options) {
@@ -162,9 +162,9 @@ function(e, t, n) {
                     ignoreTrailingEmptyNodes: !0
                 }), t, e)
             }, [k.id, eC, Z, eI, $]);
-            (0, C.default)(t, eC, k, eT), (0, _.default)(eC, ep, B);
+            (0, C.default)(t, eC, k, e_), (0, T.default)(eC, ep, B);
             let {
-                handleKeyDown: e_,
+                handleKeyDown: eT,
                 handleKeyUp: ev
             } = (0, I.default)({
                 editor: eC,
@@ -175,13 +175,13 @@ function(e, t, n) {
                 onTab: Y,
                 onEnter: z,
                 allowNewLines: ei,
-                submit: eT,
+                submit: e_,
                 hideAutocomplete: q,
                 moveSelection: X
             }), {
                 handlePaste: eN,
                 handleGlobalPaste: eA
-            } = (0, T.default)(eC, eE, G), eO = l.useCallback(e => {
+            } = (0, _.default)(eC, eE, G), eO = l.useCallback(e => {
                 null == J || J()
             }, [J]), eR = l.useCallback(e => {
                 e !== em.current ? ex.current && (null == F || F(null, (0, x.toTextValue)(e, {
@@ -226,7 +226,7 @@ function(e, t, n) {
                         onBlur: V,
                         onClick: eO,
                         onPaste: eN,
-                        onKeyDown: e_,
+                        onKeyDown: eT,
                         onKeyUp: ev,
                         decorateExtra: eM,
                         renderExtraElement: ek,

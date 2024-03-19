@@ -31,8 +31,8 @@ function(e, t, n) {
         S = n("817963"),
         C = n("923959"),
         I = n("305961"),
-        T = n("162771"),
-        _ = n("677099"),
+        _ = n("162771"),
+        T = n("677099"),
         v = n("697218"),
         N = n("402671"),
         A = n("764364"),
@@ -57,7 +57,7 @@ function(e, t, n) {
         } = e, d = (0, p.useStateFromStores)([h.default], () => h.default.categories), m = (0, p.useStateFromStores)([I.default], () => I.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), y = null == t ? null : t.getGuildId(), g = (0, p.useStateFromStores)([h.default], () => h.default.getDisambiguatedEmojiContext(y), [y]), j = (0, R.useFavoriteEmojis)(y), U = (0, R.useFrequentlyUsedEmojis)(y), {
             topEmojis: D,
             newlyAddedEmojis: w
-        } = (0, k.default)(y, l), F = (0, p.useStateFromStoresArray)([_.default], () => _.default.getFlattenedGuildIds(), []), {
+        } = (0, k.default)(y, l), F = (0, p.useStateFromStoresArray)([T.default], () => T.default.getFlattenedGuildIds(), []), {
             canCreateExpressions: G
         } = (0, S.useManageResourcePermissions)(m), B = (0, p.useStateFromStores)([v.default], () => v.default.getCurrentUser()), H = (0, A.isPremium)(B), V = g.getCustomEmoji(), K = e => {
             if (e.type === x.EmojiTypes.GUILD) return e.guildId
@@ -92,12 +92,12 @@ function(e, t, n) {
                             }),
                             E = f.concat(m),
                             S = s.guild,
-                            C = T.default.getGuildId(),
+                            C = _.default.getGuildId(),
                             I = s.sectionId === L.EmojiCategoryTypes.TOP_GUILD_EMOJI,
-                            _ = !I && null != S && C === S.id && E.length < S.getMaxEmojiSlots(),
+                            T = !I && null != S && C === S.id && E.length < S.getMaxEmojiSlots(),
                             v = I && E.length < g && !Y,
                             A = null != S && I && Y && z === O.EmojiPickerUploadTreatment.WITH_TOP_LIST && W[S.id].length < S.getMaxEmojiSlots(),
-                            M = i && G && null != S && (_ || v || A);
+                            M = i && G && null != S && (T || v || A);
                         M && A && E.length === g && E.shift();
                         let k = Y && M && !d,
                             b = M ? E.length + 1 : E.length,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     });
     var i = n("37983"),
@@ -25,16 +25,16 @@ function(e, t, n) {
         S = n("49111"),
         C = n("13030"),
         I = n("942838"),
-        T = l.memo(function(e) {
+        _ = l.memo(function(e) {
             let {
                 positionTargetRef: t,
                 channel: n,
                 closeOnModalOuterClick: a = !1,
-                parentModalKey: T
-            } = e, _ = l.useRef(null), v = l.useRef(null), {
+                parentModalKey: _
+            } = e, T = l.useRef(null), v = l.useRef(null), {
                 renderWindow: N,
                 windowDispatch: A
-            } = l.useContext(f.default), O = null != T, R = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
+            } = l.useContext(f.default), O = null != _, R = (0, u.useIsModalAtTop)(null != _ ? _ : ""), M = () => {
                 x.dismissAppLauncherPopup()
             }, k = l.useCallback(e => {
                 var t;
@@ -56,7 +56,7 @@ function(e, t, n) {
             }, []);
             l.useLayoutEffect(() => (N.addEventListener("mousedown", k), N.addEventListener("contextmenu", k), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
                 N.removeEventListener("mousedown", k), N.removeEventListener("contextmenu", k), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
-            }), [L, k, N, A]), (0, d.useFocusLock)(_), l.useEffect(() => {
+            }), [L, k, N, A]), (0, d.useFocusLock)(T), l.useEffect(() => {
                 (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
             }, [R, O]);
             let b = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
@@ -75,7 +75,7 @@ function(e, t, n) {
                         } = e;
                         return (0, i.jsx)("section", {
                             className: s(I.positionContainer),
-                            ref: _,
+                            ref: T,
                             role: "dialog",
                             "aria-label": "Application Launcher",
                             children: t ? (0, i.jsxs)("div", {

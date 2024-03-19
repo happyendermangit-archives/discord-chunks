@@ -29,7 +29,7 @@ function(e, t, n) {
         C = n("782340"),
         I = n("816411");
 
-    function T(e, t, n, l) {
+    function _(e, t, n, l) {
         if (null == e) return;
         let a = () => {
             let i = f.default.getChannel(e);
@@ -81,7 +81,7 @@ function(e, t, n) {
         })) : a()
     }
 
-    function _(e) {
+    function T(e) {
         var t;
         let {
             node: n,
@@ -101,16 +101,16 @@ function(e, t, n) {
                 hasUseAppCommandsPerm: t
             }
         }), {
-            command: _
+            command: T
         } = o.useCommand(E, null !== (t = n.commandKey) && void 0 !== t ? t : ""), v = c.UseLegacyChatInput.useSetting(), N = l.useMemo(() => {
-            if (null == _ || null == E || _.name !== n.commandName || v) return !1;
+            if (null == T || null == E || T.name !== n.commandName || v) return !1;
             let e = E.isPrivate(),
                 t = (0, d.computeIsReadOnlyThread)(E);
             if (t || !e && !C) return !1;
-            let i = (null == _ ? void 0 : _.applicationId) === g.BuiltInSectionId.BUILT_IN;
+            let i = (null == T ? void 0 : T.applicationId) === g.BuiltInSectionId.BUILT_IN;
             return !!e || !!i || !!I || !1
-        }, [E, _, C, I, n.commandName, v]), A = l.useCallback(e => {
-            null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && T(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
+        }, [E, T, C, I, n.commandName, v]), A = l.useCallback(e => {
+            null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && _(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
         }, [E, n.commandKey, n.commandName]);
         return N ? (0, i.jsx)(s.Tooltip, {
             text: n.output,
@@ -140,7 +140,7 @@ function(e, t, n) {
             commandDescription: l,
             onClick: r
         } = e, o = (0, a.useStateFromStores)([h.default], () => h.default.getChannelId()), d = e => {
-            null == e || e.stopPropagation(), T(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
+            null == e || e.stopPropagation(), _(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
         };
         return (0, i.jsx)(s.Tooltip, {
             text: l,
@@ -165,7 +165,7 @@ function(e, t, n) {
 
     function N(e) {
         return {
-            react: (e, t, n) => (0, i.jsx)(_, {
+            react: (e, t, n) => (0, i.jsx)(T, {
                 node: e,
                 output: t,
                 state: n

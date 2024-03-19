@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     }), n("222007");
     var i = n("37983"),
@@ -26,19 +26,19 @@ function(e, t, n) {
         C = n("715392"),
         I = n("862939");
 
-    function T(e) {
+    function _(e) {
         var t, n;
-        let a, T, {
-                userId: _,
+        let a, _, {
+                userId: T,
                 channelId: v,
                 guild: N,
                 theme: A,
                 onClose: O,
                 className: R
             } = e,
-            M = (0, d.default)(N, _, v),
+            M = (0, d.default)(N, T, v),
             [k, L] = l.useState(new Set),
-            b = (0, r.useStateFromStores)([m.default], () => m.default.getUserProfile(_)),
+            b = (0, r.useStateFromStores)([m.default], () => m.default.getUserProfile(T)),
             P = null !== (t = null == b ? void 0 : b.connectedAccounts) && void 0 !== t ? t : [],
             j = null !== (n = null == b ? void 0 : b.applicationRoleConnections) && void 0 !== n ? n : [],
             U = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation),
@@ -60,7 +60,7 @@ function(e, t, n) {
                 connectedAccount: t,
                 theme: A,
                 locale: D,
-                userId: _
+                userId: T
             }, "".concat(t.type, ":").concat(t.id))
         }).filter(e => null != e);
         return (w.length > 0 && (a = (0, i.jsxs)(i.Fragment, {
@@ -73,7 +73,7 @@ function(e, t, n) {
                 children: [w, (0, i.jsxs)(o.Clickable, {
                     onClick: function() {
                         (0, x.openUserProfileModal)({
-                            userId: _,
+                            userId: T,
                             guildId: null == N ? void 0 : N.id,
                             channelId: v,
                             section: y.UserProfileSections.USER_INFO_CONNECTIONS,
@@ -94,7 +94,7 @@ function(e, t, n) {
                     })]
                 })]
             })]
-        })), j.length > 0 && (T = (0, i.jsxs)(i.Fragment, {
+        })), j.length > 0 && (_ = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(o.Heading, {
                 variant: "eyebrow",
                 className: I.title,
@@ -106,8 +106,8 @@ function(e, t, n) {
                     locale: D
                 }, e.application.id))
             })]
-        })), null == a && null == T) ? null : (0, i.jsxs)(E.default, {
-            children: [T, a]
+        })), null == a && null == _) ? null : (0, i.jsxs)(E.default, {
+            children: [_, a]
         })
     }
 }

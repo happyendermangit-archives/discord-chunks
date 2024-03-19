@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("392284"),
         C = n("468482"),
         I = n("316680"),
-        T = n("830837"),
-        _ = n("132755"),
+        _ = n("830837"),
+        T = n("132755"),
         v = n("73034"),
         N = n("58608"),
         A = n("719347"),
@@ -133,7 +133,7 @@ function(e, t, n) {
                 onClick: l,
                 tabIndex: s ? -1 : 0,
                 "aria-label": R.default.Messages.PAUSE,
-                children: (0, i.jsx)(T.default, {
+                children: (0, i.jsx)(_.default, {
                     className: M.controlIcon
                 }, "pause")
             }) : null != t && t === n ? (0, i.jsx)(d.Clickable, {
@@ -149,7 +149,7 @@ function(e, t, n) {
                 onClick: a,
                 tabIndex: s ? -1 : 0,
                 "aria-label": R.default.Messages.PLAY,
-                children: (0, i.jsx)(_.default, {
+                children: (0, i.jsx)(T.default, {
                     className: M.controlIcon
                 }, "play")
             })
@@ -279,7 +279,7 @@ function(e, t, n) {
         render() {
             let {
                 play: e
-            } = this.state, t = e ? _.default : T.default;
+            } = this.state, t = e ? T.default : _.default;
             return (0, i.jsx)(u.default.div, {
                 className: M.playPausePop,
                 style: this.getAnimatedStyle(),

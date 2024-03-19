@@ -25,10 +25,11 @@ function(e, t, n) {
             guildId: m,
             onFocus: h,
             size: x = u.AvatarSizes.SIZE_24,
-            hideOverflowCount: E = !1
-        } = e, [y, g] = l.useState(!1);
+            hideOverflowCount: E = !1,
+            disableUsernameTooltip: y = !1
+        } = e, [g, S] = l.useState(!1);
 
-        function S() {
+        function C() {
             return (0, i.jsx)(u.Dialog, {
                 className: p.popoutWrapper,
                 children: (0, i.jsx)(u.Scroller, {
@@ -46,7 +47,7 @@ function(e, t, n) {
                                 user: e
                             })
                         }, {
-                            onClose: () => g(!1)
+                            onClose: () => S(!1)
                         })
                     }, e.id))
                 })
@@ -57,7 +58,11 @@ function(e, t, n) {
             children: function() {
                 let e = o(r).take(a).map(e => {
                         let t = f.default.getName(e);
-                        return (0, i.jsx)(u.TooltipContainer, {
+                        return y ? (0, i.jsx)(u.Avatar, {
+                            src: e.getAvatarURL(m, 24),
+                            "aria-label": t,
+                            size: x
+                        }) : (0, i.jsx)(u.TooltipContainer, {
                             text: t,
                             className: p.avatar,
                             children: (0, i.jsx)(u.Avatar, {
@@ -69,14 +74,14 @@ function(e, t, n) {
                     }).value(),
                     t = r.length - a;
                 return t > 0 && !E && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
-                    renderPopout: S,
-                    shouldShow: y,
+                    renderPopout: C,
+                    shouldShow: g,
                     position: "bottom",
-                    onRequestClose: () => g(!1),
+                    onRequestClose: () => S(!1),
                     children: () => (0, i.jsxs)(u.Button, {
                         className: s(p.avatar, p.overflow),
                         onFocus: h,
-                        onClick: () => g(!0),
+                        onClick: () => S(!0),
                         look: u.Button.Looks.BLANK,
                         size: u.Button.Sizes.NONE,
                         children: ["+", t + 1]

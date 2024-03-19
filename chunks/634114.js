@@ -38,9 +38,9 @@ function(e, t, n) {
         l.useEffect(() => {
             I(m.BuiltInSectionId.FRECENCY)
         }, [I]);
-        let T = null !== (n = null === (t = S[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
-            _ = C.filter(e => e.id !== m.BuiltInSectionId.FRECENCY && e.id !== m.BuiltInSectionId.BUILT_IN),
-            v = (0, d.useSortApplicationsViaFrecency)(_);
+        let _ = null !== (n = null === (t = S[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
+            T = C.filter(e => e.id !== m.BuiltInSectionId.FRECENCY && e.id !== m.BuiltInSectionId.BUILT_IN),
+            v = (0, d.useSortApplicationsViaFrecency)(T);
         return (0, i.jsxs)("div", {
             className: s(h.container, {
                 [h.appDetailVisible]: x
@@ -59,7 +59,7 @@ function(e, t, n) {
                 fade: !0,
                 children: [(0, i.jsx)(f.default, {
                     channel: a,
-                    commands: T,
+                    commands: _,
                     sectionDescriptors: C
                 }), (0, i.jsx)(p.default, {
                     channel: a,

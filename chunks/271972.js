@@ -36,14 +36,14 @@ function(e, t, n) {
             keyboardModeEnabled: S,
             onKeyDown: C,
             draftType: I,
-            size: T = 1
+            size: _ = 1
         } = e, {
-            onFocus: _,
+            onFocus: T,
             ...v
         } = (0, u.useListItem)(n), {
             handleFocus: N,
             handleBlur: A
-        } = (0, m.useFocusInside)(_), O = 0 === T, R = null != r;
+        } = (0, m.useFocusInside)(T), O = 0 === _, R = null != r;
         return (0, a.jsx)(d.FocusRing, {
             children: (0, a.jsx)("li", {
                 ...v,
@@ -72,7 +72,7 @@ function(e, t, n) {
                     }
                 },
                 className: o(E.upload, l, {
-                    [E.sizeClip]: 2 === T
+                    [E.sizeClip]: 2 === _
                 }),
                 ref: t,
                 children: (0, a.jsxs)("div", {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     });
     var i = n("37983"),
@@ -26,17 +26,17 @@ function(e, t, n) {
         C = n("782340"),
         I = n("925063");
 
-    function T(e) {
+    function _(e) {
         let {
             user: t,
             autoFocus: n = !1,
             onClose: a,
             className: r,
-            inputClassName: T
-        } = e, _ = l.useRef(null), v = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(t.id)), N = l.useCallback(e => {
+            inputClassName: _
+        } = e, T = l.useRef(null), v = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(t.id)), N = l.useCallback(e => {
             if ("Enter" === e.key) {
-                e.preventDefault(), o(null != _.current, "Keypress on Input when not mounted");
-                let n = _.current.value.trim();
+                e.preventDefault(), o(null != T.current, "Keypress on Input when not mounted");
+                let n = T.current.value.trim();
                 return (0, g.applyChatRestrictions)({
                     type: m.ChatInputTypes.NORMAL,
                     content: n,
@@ -57,8 +57,8 @@ function(e, t, n) {
         });
         return (0, i.jsx)(d.TextInput, {
             className: r,
-            inputClassName: s(T, I.input),
-            inputRef: _,
+            inputClassName: s(_, I.input),
+            inputRef: T,
             autoFocus: n,
             placeholder: A,
             "aria-label": A,

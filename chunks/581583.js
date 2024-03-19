@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("339023"),
         C = n("405645"),
         I = n("592407"),
-        T = n("26989"),
-        _ = n("305961"),
+        _ = n("26989"),
+        T = n("305961"),
         v = n("957255"),
         N = n("697218"),
         A = n("145131"),
@@ -90,8 +90,8 @@ function(e, t, n) {
             className: E,
             role: g,
             onRemove: I,
-            guildId: T,
-            disableBorderColor: _,
+            guildId: _,
+            disableBorderColor: T,
             onMouseDown: v
         } = e, {
             tabIndex: N,
@@ -99,7 +99,7 @@ function(e, t, n) {
         } = (0, d.useListItem)(g.id), O = (0, C.useRoleIcon)({
             roleId: g.id,
             size: 16,
-            guildId: T
+            guildId: _
         }), M = (0, f.useStateFromStores)([y.default], () => y.default.roleStyle), k = (null === (a = g.tags) || void 0 === a ? void 0 : a.guild_connections) === null, b = l.useCallback(e => {
             (0, h.openContextMenuLazy)(e, async () => {
                 let {
@@ -128,10 +128,10 @@ function(e, t, n) {
         let B = l.useMemo(() => {
             var t;
             return {
-                borderColor: _ ? void 0 : w,
+                borderColor: T ? void 0 : w,
                 ...null !== (t = e.style) && void 0 !== t ? t : {}
             }
-        }, [w, _, e.style]);
+        }, [w, T, e.style]);
         return (0, i.jsx)(m.FocusRing, {
             children: (0, i.jsxs)("div", {
                 ref: t,
@@ -210,7 +210,7 @@ function(e, t, n) {
             user: n,
             handleAddRole: l,
             roleClassName: a
-        } = e, r = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), o = (0, f.useStateFromStores)([y.default], () => y.default.roleStyle), u = v.default.getHighestRole(t), c = T.default.getMember(t.id, n.id), p = e => (0, g.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && v.default.isRoleHigher(t, u, e) && (null == c || -1 === c.roles.indexOf(e.id));
+        } = e, r = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), o = (0, f.useStateFromStores)([y.default], () => y.default.roleStyle), u = v.default.getHighestRole(t), c = _.default.getMember(t.id, n.id), p = e => (0, g.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && v.default.isRoleHigher(t, u, e) && (null == c || -1 === c.roles.indexOf(e.id));
         return (0, i.jsx)(m.Popout, {
             renderPopout: e => {
                 let {
@@ -260,15 +260,15 @@ function(e, t, n) {
             (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? x.default.unassignGuildRoleConnection(a.id, e.id) : I.default.updateMemberRoles(a.id, n.id, i, [], [e.id])
         }, [r, a.id, n.id]), C = l.useCallback(e => {
             let t = r; - 1 === t.indexOf(e) && (t = t.concat([e])), I.default.updateMemberRoles(a.id, n.id, t, [e], [])
-        }, [r, a.id, n.id]), [T, A] = l.useState(null), O = (0, f.useStateFromStores)([_.default], () => _.default.getRoles(a.id)), R = l.useMemo(() => {
+        }, [r, a.id, n.id]), [_, A] = l.useState(null), O = (0, f.useStateFromStores)([T.default], () => T.default.getRoles(a.id)), R = l.useMemo(() => {
             let e = Object.values(O).filter(e => r.includes(e.id)).sort((e, t) => {
                 var n, i;
                 let l = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
                     a = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
                 return l && !a ? 1 : !l && a ? -1 : 0
             });
-            return null != T ? e.slice(0, T) : e
-        }, [O, T, r]), M = r.length - R.length;
+            return null != _ ? e.slice(0, _) : e
+        }, [O, _, r]), M = r.length - R.length;
         l.useLayoutEffect(() => {
             if (c) return;
             if ("number" != typeof p) throw Error("Unexpected null width");
@@ -312,7 +312,7 @@ function(e, t, n) {
                     disableBorderColor: y
                 }, e.id)
             });
-        return null != T && 0 !== M ? t = (0, i.jsx)(B, {
+        return null != _ && 0 !== M ? t = (0, i.jsx)(B, {
             ...e,
             numRolesHidden: M
         }) : L && (t = (0, i.jsx)(H, {

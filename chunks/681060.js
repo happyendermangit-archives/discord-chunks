@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("426969"),
         C = n("847352"),
         I = n("383018"),
-        T = n("529190"),
-        _ = n("829290"),
+        _ = n("529190"),
+        T = n("829290"),
         v = n("842343"),
         N = n("200197"),
         A = n("538282"),
@@ -70,8 +70,8 @@ function(e, t, n) {
             let {
                 textValue: eC,
                 richValue: eI,
-                className: eT,
-                innerClassName: e_,
+                className: e_,
+                innerClassName: eT,
                 editorClassName: ev,
                 id: eN,
                 required: eA,
@@ -262,8 +262,8 @@ function(e, t, n) {
                 }
             }(eV, eL, e9, ek.id), {
                 autocompleteRef: tI,
-                handleMaybeShowAutocomplete: tT,
-                handleHideAutocomplete: t_
+                handleMaybeShowAutocomplete: t_,
+                handleHideAutocomplete: tT
             } = function() {
                 let e = l.useRef(null),
                     t = l.useCallback(() => {
@@ -410,7 +410,7 @@ function(e, t, n) {
                         o = null != r && r.length > 0;
                     return s && (null === (l = t.stickers) || void 0 === l ? void 0 : l.autoSuggest) && !o && (null === (a = i.current) || void 0 === a ? void 0 : a.isVisible()) !== !0 && !__OVERLAY__ && null != n
                 }(ek, eL, eI, tI),
-                tZ = (0, _.useShouldShowPTONotice)(ek),
+                tZ = (0, T.useShouldShowPTONotice)(ek),
                 tJ = null != tn || null != eD || tZ,
                 tq = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
             return (0, i.jsx)(N.EventEmitterProvider, {
@@ -427,7 +427,7 @@ function(e, t, n) {
                         options: eL.markdown
                     }) : null, (0, i.jsxs)("div", {
                         ref: e4,
-                        className: s(eT, {
+                        className: s(e_, {
                             [eo.channelTextArea]: !0,
                             [eo.channelTextAreaDisabled]: tH,
                             [eo.highlighted]: eW,
@@ -442,7 +442,7 @@ function(e, t, n) {
                         }), (0, i.jsxs)("div", {
                             ref: te,
                             onScroll: tR,
-                            className: s(e_, {
+                            className: s(eT, {
                                 [eo.scrollableContainer]: !0,
                                 [eo.themedBackground]: !e7,
                                 [eo.webkit]: "Blink" === platform.layout,
@@ -494,8 +494,8 @@ function(e, t, n) {
                                         onEnter: tb,
                                         onMoveSelection: tP,
                                         onSelectionChanged: ty,
-                                        onMaybeShowAutocomplete: tT,
-                                        onHideAutocomplete: t_,
+                                        onMaybeShowAutocomplete: t_,
+                                        onHideAutocomplete: tT,
                                         promptToUpload: eK,
                                         fontSize: th,
                                         spellcheckEnabled: tx,
@@ -514,7 +514,7 @@ function(e, t, n) {
                                     isEmpty: 0 === eC.trim().length
                                 })]
                             })]
-                        }), tf ? null : (0, i.jsx)(T.default, {
+                        }), tf ? null : (0, i.jsx)(_.default, {
                             ref: e5,
                             channel: ek,
                             canOnlyUseTextCommands: tB

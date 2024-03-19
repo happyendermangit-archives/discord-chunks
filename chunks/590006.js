@@ -36,7 +36,7 @@ function(e, t, n) {
         } = e, C = (0, p.default)(t.id, n), I = (0, f.default)(C).map(e => ({
             ...e,
             src: (0, m.getBadgeAsset)(e.icon)
-        })), T = (0, d.useWindowDispatch)();
+        })), _ = (0, d.useWindowDispatch)();
         if (t.isClyde()) return (0, a.jsx)("div", {
             className: r(i, E.container, E.clydeBadgeList),
             "aria-label": x.default.Messages.PROFILE_USER_BADGES,
@@ -51,7 +51,7 @@ function(e, t, n) {
                 date: new Date
             })
         });
-        let _ = null != l && null != s && I.length > l ? s : S;
+        let T = null != l && null != s && I.length > l ? s : S;
         return (0, a.jsx)("div", {
             className: r(i, I.length > 0 ? E.containerWithContent : E.container),
             "aria-label": x.default.Messages.PROFILE_USER_BADGES,
@@ -66,7 +66,7 @@ function(e, t, n) {
                         var i;
                         null === (i = t.onClick) || void 0 === i || i.call(t);
                         let l = null != e.link ? (0, u.default)(e.link) : null;
-                        if (null != l) return T.dispatch(h.ComponentActions.POPOUT_CLOSE), l(n)
+                        if (null != l) return _.dispatch(h.ComponentActions.POPOUT_CLOSE), l(n)
                     },
                     href: e.link,
                     children: (0, a.jsx)("img", {
@@ -74,9 +74,9 @@ function(e, t, n) {
                         "aria-hidden": !0,
                         src: e.src,
                         className: r({
-                            [E.profileBadge24]: 0 === _,
-                            [E.profileBadge22]: 1 === _,
-                            [E.profileBadge18]: 2 === _
+                            [E.profileBadge24]: 0 === T,
+                            [E.profileBadge22]: 1 === T,
+                            [E.profileBadge18]: 2 === T
                         })
                     })
                 })

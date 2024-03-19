@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     }), n("222007");
     var i = n("37983"),
@@ -25,13 +25,13 @@ function(e, t, n) {
         S = n("646718"),
         C = n("782340"),
         I = n("163448"),
-        T = n("187971");
+        _ = n("187971");
 
-    function _(e) {
+    function T(e) {
         var t;
         let {
             onClose: a,
-            closePopout: _,
+            closePopout: T,
             sound: v,
             channel: N
         } = e, A = (0, d.default)(), [O, R] = l.useState(!1), {
@@ -63,28 +63,28 @@ function(e, t, n) {
         let U = l.useCallback(() => {
             h.default.track(g.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                 location_section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
-            }), (0, p.navigateToPremiumMarketingPage)(), _()
-        }, [_]);
+            }), (0, p.navigateToPremiumMarketingPage)(), T()
+        }, [T]);
         return (0, i.jsxs)("div", {
-            className: s(T.premiumPromo, I.container),
+            className: s(_.premiumPromo, I.container),
             children: [(0, i.jsx)(o.Clickable, {
-                className: T.premiumPromoClose,
+                className: _.premiumPromoClose,
                 onClick: a,
                 children: C.default.Messages.CLOSE
             }), (0, i.jsx)("img", {
                 "aria-hidden": !0,
                 alt: "",
-                className: s(T.premiumPromoImage, T.premiumPromoImageSmaller, I.image),
+                className: s(_.premiumPromoImage, _.premiumPromoImageSmaller, I.image),
                 src: j
             }), (0, i.jsx)(o.Heading, {
                 variant: "heading-lg/normal",
                 color: "header-primary",
-                className: T.premiumPromoTitle,
+                className: _.premiumPromoTitle,
                 children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
             }), (0, i.jsx)(o.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                className: T.premiumPromoDescription,
+                className: _.premiumPromoDescription,
                 children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
                     onClick: U
                 })

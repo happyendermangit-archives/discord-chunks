@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("599110"),
         C = n("402671"),
         I = n("719923"),
-        T = n("788506"),
-        _ = n("115279"),
+        _ = n("788506"),
+        T = n("115279"),
         v = n("49111"),
         N = n("958706"),
         A = n("646718"),
@@ -42,7 +42,7 @@ function(e, t, n) {
                 pickerIntention: j,
                 analyticsLocation: U
             } = e, D = (0, u.default)(), [w, F] = l.useState(!1), G = () => {
-                (0, T.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), k()
+                (0, _.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), k()
             }, B = (0, r.isThemeLight)(D) ? n("602291") : n("609708"), H = (0, E.usePremiumTrialOffer)(), V = (0, x.usePremiumDiscountOffer)(), K = null != H || null != V, {
                 isLoading: W,
                 suggestedPremiumType: Y
@@ -56,7 +56,7 @@ function(e, t, n) {
             return l.useEffect(() => {
                 if (!W) {
                     let e;
-                    e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : P.subCategory === _.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : P.subCategory === _.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
+                    e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : P.subCategory === T.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : P.subCategory === T.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
                     let t = P.emoji;
                     S.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                         type: e,

@@ -25,14 +25,14 @@ function(e, t, n) {
         S = n("976818"),
         C = n("49111"),
         I = n("200521"),
-        T = n("714997");
+        _ = n("714997");
 
-    function _(e) {
+    function T(e) {
         let {
             summary: t,
             channel: c,
             members: S,
-            guildId: _,
+            guildId: T,
             unread: v,
             onClick: N
         } = e, [A, O] = l.useState(!1), R = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), k = (e, n) => {
@@ -43,7 +43,7 @@ function(e, t, n) {
             })
         }, L = d.default.can(C.Permissions.MANAGE_MESSAGES, c);
         return (0, i.jsxs)(s.Clickable, {
-            className: T.container,
+            className: _.container,
             onClick: N,
             onContextMenu: e => {
                 L && (0, r.openContextMenuLazy)(e, async () => {
@@ -61,13 +61,13 @@ function(e, t, n) {
             children: [(0, i.jsx)(h.default, {
                 hovered: A,
                 unread: v,
-                className: T.unreadPill
+                className: _.unreadPill
             }), (0, i.jsx)("div", {
-                className: T.rowHeader,
+                className: _.rowHeader,
                 children: (0, i.jsxs)("div", {
-                    className: T.rowHeaderLeft,
+                    className: _.rowHeaderLeft,
                     children: [(0, i.jsx)(s.Text, {
-                        className: T.timestamp,
+                        className: _.timestamp,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
                         children: R
@@ -75,13 +75,13 @@ function(e, t, n) {
                         height: 4,
                         width: 4,
                         "aria-hidden": "true",
-                        className: T.dot
+                        className: _.dot
                     }), (0, i.jsx)(f.default, {
                         height: 12,
                         width: 12,
-                        className: T.icon
+                        className: _.icon
                     }), (0, i.jsx)(s.Text, {
-                        className: T.count,
+                        className: _.count,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
                         children: t.count
@@ -90,7 +90,7 @@ function(e, t, n) {
                             height: 4,
                             width: 4,
                             "aria-hidden": "true",
-                            className: T.dot
+                            className: _.dot
                         }), (0, i.jsx)(g.default, {
                             partySize: {
                                 knownSize: S.length,
@@ -98,23 +98,23 @@ function(e, t, n) {
                             },
                             maxAvatarsShown: 3,
                             members: S,
-                            guildId: _
+                            guildId: T
                         })]
                     })]
                 })
             }), A && !M && (0, i.jsxs)("div", {
-                className: T.feedbackContainer,
+                className: _.feedbackContainer,
                 children: [(0, i.jsx)(s.Clickable, {
                     onClick: e => k(e, I.FeedbackRating.GOOD),
                     children: (0, i.jsx)(m.default, {
-                        className: T.thumbIcon,
+                        className: _.thumbIcon,
                         width: 12,
                         height: 12
                     })
                 }), (0, i.jsx)(s.Clickable, {
                     onClick: e => k(e, I.FeedbackRating.BAD),
                     children: (0, i.jsx)(p.default, {
-                        className: T.thumbIcon,
+                        className: _.thumbIcon,
                         width: 12,
                         height: 12
                     })
@@ -122,12 +122,12 @@ function(e, t, n) {
             }), (0, i.jsx)(s.Text, {
                 color: "header-primary",
                 variant: "text-sm/semibold",
-                className: T.title,
+                className: _.title,
                 children: t.topic
             }), (0, i.jsx)(s.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                className: T.subtitle,
+                className: _.subtitle,
                 children: t.summShort
             })]
         })
@@ -147,7 +147,7 @@ function(e, t, n) {
             children: t.map((e, t) => {
                 var l;
                 let a = null !== (l = n[t]) && void 0 !== l ? l : [];
-                return (0, i.jsx)(_, {
+                return (0, i.jsx)(T, {
                     summary: e,
                     channel: s,
                     members: a,

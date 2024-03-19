@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     });
     var i = n("37983"),
@@ -83,7 +83,7 @@ function(e, t, n) {
                 type: r.Spinner.Type.SPINNING_CIRCLE
             });
             if (null != t) {
-                var I, T;
+                var I, _;
                 let e = !1,
                     n = t.map((t, n) => {
                         if (t.type === E.ChannelTextAreaIntegrationTypes.GIF) {
@@ -101,7 +101,7 @@ function(e, t, n) {
                             }, "".concat(t.meta.url).concat(t.meta.src))
                         }
                     }),
-                    r = u.commands === h.CommandMode.OLD_BUILT_INS ? x : null !== (T = null === (I = d.default.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== T ? T : x,
+                    r = u.commands === h.CommandMode.OLD_BUILT_INS ? x : null !== (_ = null === (I = d.default.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== _ ? _ : x,
                     o = S.length > 0 && null != r ? y.default.Messages.CONTENT_MATCHING.format({
                         query: S,
                         command: r
@@ -153,8 +153,8 @@ function(e, t, n) {
         }
     };
 
-    function T(e) {
+    function _(e) {
         return e.meta.url
     }
-    var _ = I
+    var T = I
 }

@@ -117,8 +117,8 @@ function(e, t, n) {
             hasProfileEffect: g
         });
         y && (I.bannerWidth = (0, u.cssValueToNumber)(a.default.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH));
-        let T = I.avatarSize / 2 + I.avatarBorderSize,
-            _ = I.bannerHeight - I.offsetY;
+        let _ = I.avatarSize / 2 + I.avatarBorderSize,
+            T = I.bannerHeight - I.offsetY;
         return (0, i.jsxs)("svg", {
             className: p.bannerSVGWrapper,
             viewBox: "0 0 ".concat(I.bannerWidth, " ").concat(I.bannerHeight),
@@ -136,9 +136,9 @@ function(e, t, n) {
                     height: "100%"
                 }), (0, i.jsx)("circle", {
                     fill: "black",
-                    cx: I.offsetX + T,
-                    cy: _,
-                    r: T
+                    cx: I.offsetX + _,
+                    cy: T,
+                    r: _
                 })]
             }), (0, i.jsx)("foreignObject", {
                 x: "0",

@@ -29,8 +29,8 @@ function(e, t, n) {
                     listing: a,
                     guildId: C,
                     groupListingId: I,
-                    analyticsLocation: T,
-                    showBenefitsFirst: _,
+                    analyticsLocation: _,
+                    showBenefitsFirst: T,
                     onComplete: v,
                     forcesTransitionToGuild: N
                 } = e,
@@ -75,7 +75,7 @@ function(e, t, n) {
                         activeSubscription: D,
                         analyticsSubscriptionType: g.SubscriptionTypes.APPLICATION,
                         analyticsLocations: U,
-                        analyticsLocation: T,
+                        analyticsLocation: _,
                         renderHeader: (e, t, n) => (0, i.jsx)(E.PurchaseHeader, {
                             step: n,
                             onClose: () => t(!1)
@@ -87,7 +87,7 @@ function(e, t, n) {
                         planGroup: j,
                         listing: a,
                         application: b,
-                        showBenefitsFirst: _,
+                        showBenefitsFirst: T,
                         onComplete: v,
                         forcesTransitionToGuild: N
                     })
@@ -97,7 +97,7 @@ function(e, t, n) {
                     onConfirm: e,
                     onCancel: () => {}
                 }) : e()
-            }, [M, a, A, j, b, C, W, B, U, T, D, _, F, v, N]);
+            }, [M, a, A, j, b, C, W, B, U, _, D, T, F, v, N]);
             return {
                 openModal: Z,
                 canOpenModal: z,

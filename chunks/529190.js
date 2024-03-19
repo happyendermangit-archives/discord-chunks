@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("240249"),
         C = n("972620"),
         I = n("524768"),
-        T = n("389153"),
-        _ = n("586450"),
+        _ = n("389153"),
+        T = n("586450"),
         v = n("41884"),
         N = n("355263"),
         A = n("317041"),
@@ -122,7 +122,7 @@ function(e, t, n) {
                     if (t = n, P < (n += e.data.length)) {
                         let n = e.data[P - t],
                             i = B.find(e => e.id === n.applicationId);
-                        ee(n, i, (0, T.getCommandTriggerSection)(e.section));
+                        ee(n, i, (0, _.getCommandTriggerSection)(e.section));
                         break
                     } return !0
             },
@@ -187,7 +187,7 @@ function(e, t, n) {
                     selected: P === e,
                     showImage: a.section.id !== s.applicationId,
                     section: o,
-                    onClick: () => ee(s, o, (0, T.getCommandTriggerSection)(a.section)),
+                    onClick: () => ee(s, o, (0, _.getCommandTriggerSection)(a.section)),
                     onHover: () => {
                         U(null), F(!1)
                     }
@@ -201,7 +201,7 @@ function(e, t, n) {
             className: M.outerWrapper,
             innerClassName: M.wrapper,
             onMouseDown: j,
-            children: [(0, i.jsx)(_.default, {
+            children: [(0, i.jsx)(T.default, {
                 className: M.rail,
                 channel: n,
                 sections: B,

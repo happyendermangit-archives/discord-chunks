@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("697218"),
         C = n("945330"),
         I = n("719923"),
-        T = n("627601"),
-        _ = n("994428"),
+        _ = n("627601"),
+        T = n("994428"),
         v = n("782340"),
         N = n("154477"),
         A = n("604689");
@@ -100,7 +100,7 @@ function(e, t, n) {
         }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), G = I.default.canUseCollectibles(F), {
             setUpsellSource: B,
             reset: H
-        } = (0, T.useUserPopoutCollectiblesUpsellStore)();
+        } = (0, _.useUserPopoutCollectiblesUpsellStore)();
         l.useEffect(() => (B(b), () => {
             H()
         }), [B, b, H]);
@@ -111,14 +111,14 @@ function(e, t, n) {
             }),
             Y = l.useCallback(() => {
                 var e, t, i, l;
-                null == h || h(_.ContentDismissActionType.PRIMARY), null == m || m(), (0, x.openCollectiblesShop)({
+                null == h || h(T.ContentDismissActionType.PRIMARY), null == m || m(), (0, x.openCollectiblesShop)({
                     analyticsLocations: P,
                     analyticsSource: f.default.COLLECTIBLES_USER_POPOUT_UPSELL,
                     initialProductSkuId: K ? null !== (i = null == V ? void 0 : V.skuId) && void 0 !== i ? i : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId : null !== (l = null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId) && void 0 !== l ? l : null == V ? void 0 : V.skuId
                 })
             }, [h, m, P, null == V ? void 0 : V.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, K]),
             z = l.useCallback(() => {
-                null == h || h(_.ContentDismissActionType.DISMISS)
+                null == h || h(T.ContentDismissActionType.DISMISS)
             }, [h]);
         if (!A && !L) return null;
         let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({

@@ -23,7 +23,7 @@ function(e, t, n) {
         y = n("958706");
 
     function g(e, t, n) {
-        var g, S, C, I, T, _, v;
+        var g, S, C, I, _, T, v;
         let {
             channel: N,
             type: A
@@ -62,13 +62,13 @@ function(e, t, n) {
             navigator: w,
             activeCommand: U,
             activeCommandOption: D,
-            canMentionUsers: null !== (T = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== T && T,
+            canMentionUsers: null !== (_ = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== _ && _,
             canMentionEveryone: P,
             canMentionClyde: L,
             hidePersonalInformation: j,
             hideMentionDescription: A === o.ChatInputTypes.RULES_INPUT,
             emojiIntention: A === o.ChatInputTypes.RULES_INPUT ? y.EmojiIntention.COMMUNITY_CONTENT : y.EmojiIntention.CHAT,
-            currentWord: null !== (_ = null == F ? void 0 : F.word) && void 0 !== _ ? _ : "",
+            currentWord: null !== (T = null == F ? void 0 : F.word) && void 0 !== T ? T : "",
             currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
             optionText: null != D ? (0, s.getString)({
                 [D.name]: null !== (v = null === (C = e.editorRef.current) || void 0 === C ? void 0 : C.getCurrentCommandOptionValue()) && void 0 !== v ? v : []

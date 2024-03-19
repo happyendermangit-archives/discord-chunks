@@ -27,8 +27,8 @@ function(t, e, i) {
             applicationId: C,
             instanceId: v,
             inputApplication: S,
-            analyticsLocations: p,
-            embeddedActivitiesManager: N
+            analyticsLocations: N,
+            embeddedActivitiesManager: p
         } = t, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(t => t.applicationId === C && (null == v || t.instanceId === v)), D = S;
         if (null == D) {
             let t = await l.default.fetchApplication(C);
@@ -102,8 +102,8 @@ function(t, e, i) {
                     currentEmbeddedApplication: M,
                     activityChannelId: i,
                     locationObject: {},
-                    embeddedActivitiesManager: N,
-                    analyticsLocations: p
+                    embeddedActivitiesManager: p,
+                    analyticsLocations: N
                 })
             }
         })

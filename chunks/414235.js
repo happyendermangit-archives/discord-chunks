@@ -26,7 +26,7 @@ function(e, t, n) {
             className: E,
             initialAnimation: y,
             markers: g
-        } = e, [S, C] = l.useState(null), I = l.useRef(null), T = l.useRef(null), _ = l.useRef(null), v = "custom" === m ? {
+        } = e, [S, C] = l.useState(null), I = l.useRef(null), _ = l.useRef(null), T = l.useRef(null), v = "custom" === m ? {
             width: h,
             height: x
         } : (0, d.getIconSize)(m), N = !(0, f.default)("lottie_hover_multiple_loop"), A = l.useContext(u.AccessibilityPreferencesContext).reducedMotion.enabled, {
@@ -36,18 +36,18 @@ function(e, t, n) {
         }), R = A || !O;
         return l.useImperativeHandle(t, () => ({
             play: e => {
-                if (null != _.current) {
-                    if (T.current = e, R) {
+                if (null != T.current) {
+                    if (_.current = e, R) {
                         let t = g[e];
-                        _.current.setSegment(t.start, t.start + t.duration), _.current.goToAndStop(t.duration, !0)
-                    } else _.current.setLoop(!N && e.includes("hover")), _.current.goToAndPlay(e)
+                        T.current.setSegment(t.start, t.start + t.duration), T.current.goToAndStop(t.duration, !0)
+                    } else T.current.setLoop(!N && e.includes("hover")), T.current.goToAndPlay(e)
                 }
             },
             stop: () => {
-                null != _.current && !R && _.current.goToAndStop(0, !0)
+                null != T.current && !R && T.current.goToAndStop(0, !0)
             },
             stopIfPlaying: e => {
-                null != _.current && !R && T.current === e && _.current.goToAndStop(0, !0)
+                null != T.current && !R && _.current === e && T.current.goToAndStop(0, !0)
             }
         }), [R, N, g]), l.useEffect(() => {
             null == S && r().then(e => C(e.default))
@@ -56,12 +56,12 @@ function(e, t, n) {
             let n, {
                     default: i
                 } = e,
-                l = null !== (t = T.current) && void 0 !== t ? t : y;
+                l = null !== (t = _.current) && void 0 !== t ? t : y;
             if (null != l && null != g[l]) {
                 let e = g[l];
                 n = [e.start, e.start + e.duration]
             }
-            null != I.current && (_.current = i.loadAnimation({
+            null != I.current && (T.current = i.loadAnimation({
                 container: I.current,
                 renderer: "svg",
                 loop: !1,
@@ -71,7 +71,7 @@ function(e, t, n) {
             }))
         }), () => {
             var e;
-            null === (e = _.current) || void 0 === e || e.destroy()
+            null === (e = T.current) || void 0 === e || e.destroy()
         }), [S, y, g]), (0, i.jsx)("div", {
             style: {
                 "--__lottieIconColor": null != a && "string" == typeof a ? a : null == a ? void 0 : a.css,

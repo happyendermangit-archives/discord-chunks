@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("385976"),
         C = n("575226"),
         I = n("305781"),
-        T = n("986632"),
-        _ = n("538282"),
+        _ = n("986632"),
+        T = n("538282"),
         v = n("246511"),
         N = n("45961"),
         A = n("802894"),
@@ -60,7 +60,7 @@ function(e, t, n) {
         et = (0, D.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
         en = e => e.stopPropagation(),
         ei = (e, t) => {
-            T.EmojiPickerStore.setInspectedExpressionPosition(e, t, v.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
+            _.EmojiPickerStore.setInspectedExpressionPosition(e, t, v.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
         },
         el = e => {
             let {
@@ -122,7 +122,7 @@ function(e, t, n) {
                 onGridNavigatorItemSelect: p,
                 onGridNavigatorPositionChange: ei
             });
-            return l.useEffect(() => T.EmojiPickerStore.useStore.subscribe(e => {
+            return l.useEffect(() => _.EmojiPickerStore.useStore.subscribe(e => {
                 if (null == e) return;
                 let {
                     columnIndex: t,
@@ -150,7 +150,7 @@ function(e, t, n) {
                     null === (e = t.current) || void 0 === e || e.scrollToSectionTop(n), i(null)
                 }
             }, [t, n]), l.useEffect(() => {
-                i(T.EmojiPickerStore.getState().activeCategoryIndex)
+                i(_.EmojiPickerStore.getState().activeCategoryIndex)
             }, [e])
         },
         es = (e, t, n, i) => {
@@ -193,14 +193,14 @@ function(e, t, n) {
             } = e,
             {
                 onFocus: eI,
-                onKeyDown: eT,
-                autoFocus: e_ = !0,
+                onKeyDown: e_,
+                autoFocus: eT = !0,
                 accessory: ev
             } = ex,
             eN = (0, d.useStateFromStores)([b.default], () => null != f ? b.default.getDefaultChannel(f) : null, [f]),
             [eA, eO] = l.useState(null),
             eR = l.useRef(""),
-            eM = (0, _.useExpressionPickerStore)(e => e.searchQuery),
+            eM = (0, T.useExpressionPickerStore)(e => e.searchQuery),
             ek = l.useRef(null),
             eL = l.useRef(null),
             eb = l.useRef(null);
@@ -324,18 +324,18 @@ function(e, t, n) {
                 channelGuildId: eP,
                 isBurstReaction: ej
             });
-        ea(ed, eL), es(ed, eY, eb, e_), l.useEffect(() => {
-            !ef && (0, _.setSearchQuery)("")
+        ea(ed, eL), es(ed, eY, eb, eT), l.useEffect(() => {
+            !ef && (0, T.setSearchQuery)("")
         }, [ef]), l.useEffect(() => (j.default.track(q.AnalyticEvents.OPEN_POPOUT, {
             type: null != eV ? eV : "Emoji Picker",
             guild_id: eP
-        }), T.EmojiPickerStore.resetStoreState), [eV, eP]), l.useEffect(() => () => (0, R.hideHotspot)(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
+        }), _.EmojiPickerStore.resetStoreState), [eV, eP]), l.useEffect(() => () => (0, R.hideHotspot)(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
             var e;
             let {
                 columnIndex: t,
                 rowIndex: n
-            } = T.EmojiPickerStore.getState().inspectedExpressionPosition;
-            (null === (e = e1[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && T.EmojiPickerStore.setInspectedExpressionPosition(0, 0)
+            } = _.EmojiPickerStore.getState().inspectedExpressionPosition;
+            (null === (e = e1[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && _.EmojiPickerStore.setInspectedExpressionPosition(0, 0)
         }, [e1]), l.useEffect(() => {
             if ("" === eR.current && "" !== eM && (0, w.trackEmojiSearchStart)(eK, o), 0 === eZ && "" !== eM) er(eK, eM);
             else if ("" !== eM && eR.current !== eM) {
@@ -364,11 +364,11 @@ function(e, t, n) {
                 pickerIntention: o,
                 emojiListRef: eL,
                 onKeyDown: e => {
-                    null == tt || tt(e), null == eT || eT(e)
+                    null == tt || tt(e), null == e_ || e_(e)
                 },
                 searchBarRef: eb,
                 onFocus: eI,
-                autoFocus: e_,
+                autoFocus: eT,
                 accessory: ev,
                 headerClassName: em,
                 hasTabWrapper: O,

@@ -23,8 +23,8 @@ function(e, t, n) {
         S = n("161585"),
         C = n("24373"),
         I = n("41170"),
-        T = n("591522"),
-        _ = n("209069"),
+        _ = n("591522"),
+        T = n("209069"),
         v = n("845579"),
         N = n("945330"),
         A = n("587974"),
@@ -77,7 +77,7 @@ function(e, t, n) {
                 size: j,
                 sticker: s,
                 className: b.sticker
-            }), i !== y.StickerSendability.SENDABLE && (0, a.jsx)(T.default, {
+            }), i !== y.StickerSendability.SENDABLE && (0, a.jsx)(_.default, {
                 size: 14
             })]
         })
@@ -91,7 +91,7 @@ function(e, t, n) {
             onSelectSticker: r,
             stickerIconVisible: c = !1,
             submitButtonVisible: f = !1
-        } = e, I = s.useContext(x.default), [T, A] = s.useState(null), [P, j] = s.useState(!1), [U, G] = s.useState(null), B = (0, E.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, P, i), {
+        } = e, I = s.useContext(x.default), [_, A] = s.useState(null), [P, j] = s.useState(!1), [U, G] = s.useState(null), B = (0, E.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, P, i), {
             analyticsLocations: Q,
             AnalyticsLocationProvider: $
         } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
@@ -118,8 +118,8 @@ function(e, t, n) {
                 I.removeListener("text-changed", ee), I.removeListener("autocomplete-visibility-change", e), I.removeListener("selection-changed", t)
             }
         }, [ee, n, I]), s.useLayoutEffect(() => {
-            null == T && G(null)
-        }, [T]);
+            null == _ && G(null)
+        }, [_]);
         let [en, ei] = s.useState(!1);
         s.useLayoutEffect(() => {
             requestAnimationFrame(() => {
@@ -181,7 +181,7 @@ function(e, t, n) {
                 editorRef: n,
                 hasStickerResults: el,
                 shouldRenderSuggestions: ea,
-                focusedSuggestionType: T,
+                focusedSuggestionType: _,
                 setFocusedSuggestionType: A,
                 setHasDismissed: j,
                 setFocusedStickerListItem: G,
@@ -195,7 +195,7 @@ function(e, t, n) {
                         }), t === y.StickerSendability.SENDABLE) j(!0), r(e, S.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
                     else if ((0, C.isStandardSticker)(e)) {
                         let t = g.default.getStickerPack(e.pack_id);
-                        null != t && (0, _.default)({
+                        null != t && (0, T.default)({
                             stickerPack: t,
                             analyticsLocations: Q
                         })
@@ -243,7 +243,7 @@ function(e, t, n) {
                                         t.current = e
                                     },
                                     onMouseLeave: () => {
-                                        null == T && G(null)
+                                        null == _ && G(null)
                                     },
                                     tabIndex: ed ? -1 : n,
                                     ...i,

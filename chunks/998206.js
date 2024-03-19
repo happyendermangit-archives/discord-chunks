@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("49111"),
         C = n("994428"),
         I = n("13030"),
-        T = n("782340"),
-        _ = n("868387");
+        _ = n("782340"),
+        T = n("868387");
 
     function v(e) {
         let {
@@ -55,24 +55,24 @@ function(e, t, n) {
             })
         }, [A, n, M, a, O]), L = () => {
             if (E === o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, i.jsxs)("div", {
-                className: _.sparkleContainer,
+                className: T.sparkleContainer,
                 children: [(0, i.jsx)(g.default, {
-                    className: s(_.sparkleStar, {
-                        [_.noAnimation]: R
+                    className: s(T.sparkleStar, {
+                        [T.noAnimation]: R
                     })
                 }), (0, i.jsx)(y.default, {
-                    className: s(_.sparklePlus, {
-                        [_.noAnimation]: R
+                    className: s(T.sparklePlus, {
+                        [T.noAnimation]: R
                     })
                 })]
             });
             return null
         };
         return t ? null : (0, i.jsx)(u.Tooltip, {
-            text: T.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
+            text: _.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
             children: e => (0, i.jsxs)("div", {
                 ...e,
-                className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, _.buttonContainer),
+                className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, T.buttonContainer),
                 ref: v,
                 children: [(0, i.jsx)(m.default, {
                     onClick: k,

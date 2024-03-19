@@ -32,8 +32,8 @@ function(e, t, n) {
             application: n,
             className: l
         } = e, I = c.default.getChannel(f.default.getChannelId()), {
-            appsInGDMEnabled: T,
-            availableApplications: _
+            appsInGDMEnabled: _,
+            availableApplications: T
         } = (0, d.usePrivateChannelIntegrationState)({
             channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : g.EMPTY_STRING_SNOWFLAKE_ID
         });
@@ -42,7 +42,7 @@ function(e, t, n) {
                 installParams: n.installParams,
                 integrationTypesConfig: n.integrationTypesConfig
             })) return null;
-        let v = T && null != _.find(e => e.id === (null == n ? void 0 : n.id));
+        let v = _ && null != T.find(e => e.id === (null == n ? void 0 : n.id));
         return (0, i.jsx)(s.Button, {
             color: s.Button.Colors.PRIMARY,
             look: s.Button.Looks.FILLED,

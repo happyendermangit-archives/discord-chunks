@@ -23,8 +23,8 @@ function(e, t, n) {
         S = n("845579"),
         C = n("271938"),
         I = n("42203"),
-        T = n("305961"),
-        _ = n("18494"),
+        _ = n("305961"),
+        T = n("18494"),
         v = n("697218"),
         N = n("471671"),
         A = n("275623"),
@@ -170,10 +170,10 @@ function(e, t, n) {
             allowEdit: k = !0,
             showPremiumBadgeUpsell: L = !0,
             hasProfileEffect: b = !1
-        } = e, [W, Y] = s.useState((null == r ? void 0 : r.banner) == null ? 2 : 0), J = (0, d.useStateFromStores)([T.default], () => T.default.getGuild(h)), q = (0, d.useStateFromStores)([C.default], () => C.default.getId()), X = q === l.id && k, Q = j.default.isPremiumAtLeast(null == r ? void 0 : r.premiumType, H.PremiumTypes.TIER_2), [$, ee] = s.useState(!1), et = (0, d.useStateFromStores)([N.default], () => N.default.isFocused()), en = S.GifAutoPlay.getSetting(), ei = (0, f.useToken)(c.default.unsafe_rawColors.PRIMARY_800).hex(), el = (0, f.getAvatarSize)(f.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, x.default)(l.getAvatarURL(h, el), ei, !1)), es = (0, E.default)(null !== (t = null == r ? void 0 : r.primaryColor) && void 0 !== t ? t : ea).hsl, er = (0, w.getUserBannerSize)(v), eo = null != p ? p : null == r ? void 0 : r.getBannerURL({
+        } = e, [W, Y] = s.useState((null == r ? void 0 : r.banner) == null ? 2 : 0), J = (0, d.useStateFromStores)([_.default], () => _.default.getGuild(h)), q = (0, d.useStateFromStores)([C.default], () => C.default.getId()), X = q === l.id && k, Q = j.default.isPremiumAtLeast(null == r ? void 0 : r.premiumType, H.PremiumTypes.TIER_2), [$, ee] = s.useState(!1), et = (0, d.useStateFromStores)([N.default], () => N.default.isFocused()), en = S.GifAutoPlay.getSetting(), ei = (0, f.useToken)(c.default.unsafe_rawColors.PRIMARY_800).hex(), el = (0, f.getAvatarSize)(f.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, x.default)(l.getAvatarURL(h, el), ei, !1)), es = (0, E.default)(null !== (t = null == r ? void 0 : r.primaryColor) && void 0 !== t ? t : ea).hsl, er = (0, w.getUserBannerSize)(v), eo = null != p ? p : null == r ? void 0 : r.getBannerURL({
             size: er,
             canAnimate: M || !en ? $ : et
-        }), eu = null != eo, ed = (0, d.useStateFromStores)([U.default], () => U.default.getUserProfile(l.id)), ec = I.default.getChannel(_.default.getChannelId()), {
+        }), eu = null != eo, ed = (0, d.useStateFromStores)([U.default], () => U.default.getUserProfile(l.id)), ec = I.default.getChannel(T.default.getChannelId()), {
             appsInGDMEnabled: ef,
             availableApplications: ep
         } = (0, y.usePrivateChannelIntegrationState)({

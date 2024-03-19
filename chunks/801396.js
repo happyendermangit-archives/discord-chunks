@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     });
     var i = n("37983"),
@@ -25,13 +25,13 @@ function(e, t, n) {
         S = n("49111"),
         C = n("944305"),
         I = n("782340"),
-        T = n("754334"),
-        _ = e => {
+        _ = n("754334"),
+        T = e => {
             let {
                 className: t,
                 guildId: n,
                 channel: a,
-                shouldTrackUpsellViewed: _,
+                shouldTrackUpsellViewed: T,
                 setTrackedUpsellViewed: v
             } = e, {
                 location: N
@@ -41,22 +41,22 @@ function(e, t, n) {
                 canManageAllExpressions: R
             } = (0, h.useManageResourcePermissions)(O), M = null != O && 0 === (0, g.getTotalStickerCountForTier)(O.premiumTier) && !O.hasFeature(S.GuildFeatures.MORE_STICKERS);
             return (l.useEffect(() => {
-                R && M && _ && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+                R && M && T && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                     location: N,
                     guild_id: null == O ? void 0 : O.id,
                     channel_id: null == a ? void 0 : a.id,
                     type: "Expression Picker Inline Sticker Upsell",
                     location_stack: A
                 }), v(!0))
-            }, [M, O, a, N, _, v, A, R]), null != O && R) ? M ? (0, i.jsxs)("div", {
-                className: s(T.upsell, t),
+            }, [M, O, a, N, T, v, A, R]), null != O && R) ? M ? (0, i.jsxs)("div", {
+                className: s(_.upsell, t),
                 children: [(0, i.jsx)(E.default, {
-                    className: T.icon,
+                    className: _.icon,
                     width: 24,
                     height: 24
                 }), (0, i.jsx)(o.Text, {
                     color: "interactive-normal",
-                    className: T.body,
+                    className: _.body,
                     variant: "text-sm/normal",
                     children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
                         count: (0, g.getTotalStickerCountForTier)(S.BoostedGuildTiers.TIER_1)
@@ -75,14 +75,14 @@ function(e, t, n) {
                     children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
                 })]
             }) : (0, i.jsxs)("div", {
-                className: s(T.upsell, t),
+                className: s(_.upsell, t),
                 children: [(0, i.jsx)(y.default, {
-                    className: T.icon,
+                    className: _.icon,
                     width: 20,
                     height: 20
                 }), (0, i.jsx)(o.Text, {
                     color: "interactive-normal",
-                    className: T.body,
+                    className: _.body,
                     variant: "text-sm/normal",
                     children: I.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_DESCRIPTION
                 }), (0, i.jsx)(o.Button, {

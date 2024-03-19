@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     }), n("222007");
     var i = n("37983"),
@@ -26,7 +26,7 @@ function(e, t, n) {
         C = n("722552");
     let I = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
-    function T(e) {
+    function _(e) {
         let {
             played: t,
             duration: n,
@@ -39,8 +39,8 @@ function(e, t, n) {
             children: a
         })
     }
-    var _ = l.memo(function(e) {
-        var t, n, a, c, _, v;
+    var T = l.memo(function(e) {
+        var t, n, a, c, T, v;
         let N, {
                 src: A,
                 volume: O = 1,
@@ -130,8 +130,8 @@ function(e, t, n) {
             }(), () => {
                 null != e && cancelAnimationFrame(e)
             }
-        }, [t, n, a]), c = A, _ = W, v = Y, l.useEffect(() => {
-            if (_) return h.ComponentDispatch.dispatch(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
+        }, [t, n, a]), c = A, T = W, v = Y, l.useEffect(() => {
+            if (T) return h.ComponentDispatch.dispatch(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
                 src: c
             }), h.ComponentDispatch.subscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
                 h.ComponentDispatch.unsubscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
@@ -143,7 +143,7 @@ function(e, t, n) {
                 } = e;
                 c !== t && v(!1)
             }
-        }, [c, _, v]);
+        }, [c, T, v]);
         let em = W ? p.default : m.default,
             eh = W ? S.default.Messages.PAUSE : S.default.Messages.PLAY;
         N = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
@@ -211,7 +211,7 @@ function(e, t, n) {
                 onDrag: ef,
                 onDragStart: ed,
                 onDragEnd: ec
-            }), (0, i.jsx)(T, {
+            }), (0, i.jsx)(_, {
                 played: J,
                 currentTime: F,
                 duration: B

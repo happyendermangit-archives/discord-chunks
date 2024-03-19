@@ -23,14 +23,20 @@ function(e, t, n) {
             onFocus: s,
             onClick: c,
             size: f = u.default.Sizes.SMALLER,
-            hideOverflowCount: p = !1
+            hideOverflowCount: p = !1,
+            disableGuildNameTooltip: m = !1
         } = e;
         return l.length <= 0 ? null : (0, i.jsx)("div", {
             className: a(t, d.avatars),
             children: function() {
                 let e = r(l).take(n).map(e => {
                         let t = e.name;
-                        return (0, i.jsx)(o.TooltipContainer, {
+                        return m ? (0, i.jsx)(u.default, {
+                            guild: e,
+                            onClick: c,
+                            size: f,
+                            showTooltip: !1
+                        }) : (0, i.jsx)(o.TooltipContainer, {
                             text: t,
                             className: d.avatar,
                             children: (0, i.jsx)(u.default, {

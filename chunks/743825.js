@@ -24,8 +24,8 @@ function(e, t, n) {
         S = n("605250"),
         C = n("585722"),
         I = n("378765"),
-        T = n("254490"),
-        _ = n("850391"),
+        _ = n("254490"),
+        T = n("850391"),
         v = n("149022"),
         N = n("296141"),
         A = n("606013"),
@@ -174,7 +174,7 @@ function(e, t, n) {
                 useSlate: g,
                 spellcheckEnabled: S,
                 useNewSlashCommands: C,
-                canOnlyUseTextCommands: T,
+                canOnlyUseTextCommands: _,
                 className: N,
                 id: R,
                 required: k,
@@ -198,7 +198,7 @@ function(e, t, n) {
                 accessibilityLabel: w,
                 disabled: d || !1,
                 submitting: F,
-                isEdit: E === _.ChatInputTypes.EDIT,
+                isEdit: E === T.ChatInputTypes.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -213,9 +213,9 @@ function(e, t, n) {
                 onKeyDown: f,
                 onSubmit: h,
                 textAreaPaddingClassName: r(P[y], {
-                    [L.textAreaWithoutAttachmentButton]: E !== _.ChatInputTypes.NORMAL && E !== _.ChatInputTypes.OVERLAY && E !== _.ChatInputTypes.THREAD_CREATION && E !== _.ChatInputTypes.SIDEBAR,
-                    [L.textAreaForPostCreation]: E === _.ChatInputTypes.CREATE_FORUM_POST,
-                    [L.textAreaCustomGift]: E === _.ChatInputTypes.CUSTOM_GIFT
+                    [L.textAreaWithoutAttachmentButton]: E !== T.ChatInputTypes.NORMAL && E !== T.ChatInputTypes.OVERLAY && E !== T.ChatInputTypes.THREAD_CREATION && E !== T.ChatInputTypes.SIDEBAR,
+                    [L.textAreaForPostCreation]: E === T.ChatInputTypes.CREATE_FORUM_POST,
+                    [L.textAreaCustomGift]: E === T.ChatInputTypes.CUSTOM_GIFT
                 }),
                 spellcheckEnabled: S,
                 useNewSlashCommands: C,
@@ -235,7 +235,7 @@ function(e, t, n) {
                 type: E,
                 value: d ? (0, v.toRichValue)("") : u,
                 canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
-                canOnlyUseTextCommands: T
+                canOnlyUseTextCommands: _
             }) : (0, l.jsx)(A.default, {
                 ref: this.ref,
                 ...B,
@@ -367,7 +367,7 @@ function(e, t, n) {
                                     }
                                 }(n)) && void 0 !== s ? s : t.name;
                             return {
-                                files: [(0, T.makeFile)(t, l, t.type)]
+                                files: [(0, _.makeFile)(t, l, t.type)]
                             }
                         }
                         return {
@@ -381,7 +381,7 @@ function(e, t, n) {
                                 type: "text/plain"
                             });
                             return {
-                                files: [(0, T.makeFile)(e, "message.txt")],
+                                files: [(0, _.makeFile)(e, "message.txt")],
                                 convertedStringToFile: !0
                             }
                         }

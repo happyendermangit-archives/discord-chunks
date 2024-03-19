@@ -80,9 +80,9 @@ function(e, t, n) {
     function C(e) {
         let {
             filterOutEmptyCurrentGuild: t = !1
-        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], c = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [E, C, I] = (0, l.useStateFromStoresArray)([m.default], () => [m.default.getSounds(), m.default.getFavorites(), m.default.isFetching()]), T = (0, x.useSortedGuildIdsForSoundboard)(e, !1), _ = (0, l.useStateFromStoresArray)([r.default], () => {
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], c = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [E, C, I] = (0, l.useStateFromStoresArray)([m.default], () => [m.default.getSounds(), m.default.getFavorites(), m.default.isFetching()]), _ = (0, x.useSortedGuildIdsForSoundboard)(e, !1), T = (0, l.useStateFromStoresArray)([r.default], () => {
             let e = [];
-            return T.forEach(t => {
+            return _.forEach(t => {
                 let n = r.default.getGuild(t);
                 null != n && e.push(n)
             }), e
@@ -111,21 +111,21 @@ function(e, t, n) {
                 isFetching: I
             }) : (g({
                 sections: e,
-                guildIds: T,
+                guildIds: _,
                 allSounds: E,
                 potentialSoundIdsForSection: Array.from(C),
                 sectionType: h.SoundboardSoundGridSectionType.FAVORITES,
                 sortById: !0
             }), O && g({
                 sections: e,
-                guildIds: T,
+                guildIds: _,
                 allSounds: E,
                 potentialSoundIdsForSection: k,
                 sectionType: h.SoundboardSoundGridSectionType.RECENTLY_HEARD,
                 sortById: !1
             }), R && g({
                 sections: e,
-                guildIds: T,
+                guildIds: _,
                 allSounds: E,
                 potentialSoundIdsForSection: M.map(e => e.soundId),
                 sectionType: h.SoundboardSoundGridSectionType.FREQUENTLY_USED,
@@ -164,11 +164,11 @@ function(e, t, n) {
                         items: s
                     })
                 }
-            }(e, _, null == N ? void 0 : N.id, E), v && S(e, E), {
+            }(e, T, null == N ? void 0 : N.id, E), v && S(e, E), {
                 categories: e,
                 isFetching: I
             })
-        }, [T, E, C, k, M, R, O, N, A, t, v, _, n, I])
+        }, [_, E, C, k, M, R, O, N, A, t, v, T, n, I])
     }
 
     function I(e, t, n) {

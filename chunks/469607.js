@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     }), n("424973"), n("222007");
     var i = n("917351"),
@@ -74,7 +74,7 @@ function(e, t, n) {
         }
     }
     I.displayName = "SoundboardEventStore", I.persistKey = "SoundboardEventStore";
-    var T = new I(o.default, {
+    var _ = new I(o.default, {
         GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function(e) {
             let {
                 sound: t,

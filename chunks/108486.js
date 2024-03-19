@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("551305"),
         C = n("978679"),
         I = n("953957"),
-        T = n("762974"),
-        _ = n("718517"),
+        _ = n("762974"),
+        T = n("718517"),
         v = n("299039"),
         N = n("158998"),
         A = n("49111"),
@@ -83,9 +83,9 @@ function(e, t, n) {
             ribbon: "#81C29F"
         }],
         j = 1 / 300,
-        U = _.default.Millis.DAYS_30,
+        U = T.default.Millis.DAYS_30,
         D = (0, a.animated)(I.default),
-        w = (0, a.animated)(T.default),
+        w = (0, a.animated)(_.default),
         F = (0, a.animated)(C.default);
 
     function G(e) {
@@ -137,14 +137,14 @@ function(e, t, n) {
             channel: n
         } = e, {
             analyticsLocations: a
-        } = (0, p.default)(f.default.GIFT_BUTTON), [o, c] = l.useState(!1), C = (0, s.useStateFromStores)([y.default], () => !(null === y.default || void 0 === y.default ? void 0 : y.default.hasLayers())), I = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), T = null != I ? v.default.age(I.id) : 0, _ = !t && C && T >= U, {
+        } = (0, p.default)(f.default.GIFT_BUTTON), [o, c] = l.useState(!1), C = (0, s.useStateFromStores)([y.default], () => !(null === y.default || void 0 === y.default ? void 0 : y.default.hasLayers())), I = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), _ = null != I ? v.default.age(I.id) : 0, T = !t && C && _ >= U, {
             enabled: b
         } = E.SeasonalGiftingMarketingExperiment.useExperiment({
             location: "ChannelPremiumGiftButton"
         }, {
-            autoTrackExposure: _
+            autoTrackExposure: T
         }), P = [];
-        b && _ && P.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
+        b && T && P.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
         let [j, D] = (0, h.useSelectedDismissibleContent)(P), w = null != j, F = (0, N.useDirectMessageRecipient)(n), B = null != F;
         if (t) return null;
         let H = () => {

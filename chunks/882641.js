@@ -33,15 +33,15 @@ function(e, t, n) {
             onClick: E,
             "aria-controls": y,
             focusProps: g
-        } = e, [S, C] = l.useState(!1), [I, T] = l.useState(50), _ = S || x, v = (0, d.getClass)(p, "emojiButton", _ ? "Hovered" : "Normal");
+        } = e, [S, C] = l.useState(!1), [I, _] = l.useState(50), T = S || x, v = (0, d.getClass)(p, "emojiButton", T ? "Hovered" : "Normal");
         let N = (t = I, {
                 "--custom-emoji-sprite-size": "".concat(24, "px"),
                 "--custom-emoji-sprite-row": Math.floor(t / 20),
                 "--custom-emoji-sprite-col": t % 20
             }),
             A = l.useCallback(() => {
-                if (!_) C(!0), T(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
-            }, [_, C, T]),
+                if (!T) C(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
+            }, [T, C, _]),
             O = l.useCallback(() => {
                 C(!1)
             }, [C]),
@@ -64,7 +64,7 @@ function(e, t, n) {
             children: null != h ? h() : (0, i.jsx)(r.Spring, {
                 config: m,
                 to: {
-                    value: _ ? 1 : 0
+                    value: T ? 1 : 0
                 },
                 children: e => {
                     let {
@@ -77,9 +77,9 @@ function(e, t, n) {
                             transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
                         },
                         children: [(0, i.jsx)("div", {
-                            className: s(p.sprite, p.spriteColored, _ ? p.active : p.inactive)
+                            className: s(p.sprite, p.spriteColored, T ? p.active : p.inactive)
                         }), (0, i.jsx)("div", {
-                            className: s(p.sprite, p.spriteGreyscale, _ ? p.inactive : p.active)
+                            className: s(p.sprite, p.spriteGreyscale, T ? p.inactive : p.active)
                         })]
                     })
                 }

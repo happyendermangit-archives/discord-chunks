@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("529805"),
         C = n("685841"),
         I = n("804888"),
-        T = n("474643"),
-        _ = n("585722"),
+        _ = n("474643"),
+        T = n("585722"),
         v = n("568734"),
         N = n("305515"),
         A = n("49111"),
@@ -122,7 +122,7 @@ function(e, t, n) {
             }, t)) : (0, o.openUploadError)({
                 title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                 help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-            }), "" !== U.content && "" === T.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === _.default.getUploadCount(f, M) && r.default.setUploads({
+            }), "" !== U.content && "" === _.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === T.default.getUploadCount(f, M) && r.default.setUploads({
                 channelId: f,
                 uploads: R,
                 draftType: M
@@ -219,7 +219,7 @@ function(e, t, n) {
                             })
                         }
                     })
-                }), "" !== h.content && "" === T.default.getDraft(n, u) && a.default.saveDraft(n, h.content, u)
+                }), "" !== h.content && "" === _.default.getDraft(n, u) && a.default.saveDraft(n, h.content, u)
             }), x.on("complete", e => {
                 l.default.dispatch({
                     type: "UPLOAD_COMPLETE",
@@ -234,12 +234,12 @@ function(e, t, n) {
                     type: "UPLOAD_CANCEL_REQUEST",
                     file: e
                 }), null != e.draftContent && null != e.channelId) {
-                let t = T.default.getDraft(e.channelId, T.DraftType.ChannelMessage);
+                let t = _.default.getDraft(e.channelId, _.DraftType.ChannelMessage);
                 "" === t && l.default.dispatch({
                     type: "DRAFT_SAVE",
                     channelId: e.channelId,
                     draft: e.draftContent,
-                    draftType: T.DraftType.ChannelMessage
+                    draftType: _.DraftType.ChannelMessage
                 })
             }
         }

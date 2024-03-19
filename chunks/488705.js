@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("49111"),
         C = n("782340"),
         I = n("486433"),
-        T = n("278410"),
-        _ = n("410957"),
+        _ = n("278410"),
+        T = n("410957"),
         v = n("730708"),
         N = n("754702");
     let A = async (e, t, n) => {
@@ -55,7 +55,7 @@ function(e, t, n) {
                     className: I.closeButton
                 }), (0, i.jsx)("img", {
                     alt: "",
-                    src: o ? _ : v,
+                    src: o ? T : v,
                     className: I.confirmationImage
                 }), (0, i.jsx)(d.Heading, {
                     variant: "heading-xl/bold",
@@ -127,7 +127,7 @@ function(e, t, n) {
                 className: I.generalBodyContainer,
                 children: [(0, i.jsx)("img", {
                     alt: "",
-                    src: k ? _ : N,
+                    src: k ? T : N,
                     className: I.generalBodyImage
                 }), (0, i.jsxs)("div", {
                     className: I.innerContent,
@@ -160,7 +160,7 @@ function(e, t, n) {
                     })]
                 }), k && (0, i.jsx)("img", {
                     alt: "",
-                    src: T,
+                    src: _,
                     className: I.birthdayBackgroundImage
                 })]
             }), (0, i.jsx)("div", {

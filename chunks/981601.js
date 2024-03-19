@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("26989"),
         C = n("305961"),
         I = n("824563"),
-        T = n("27618"),
-        _ = n("697218"),
+        _ = n("27618"),
+        T = n("697218"),
         v = n("599110"),
         N = n("713135"),
         A = n("561845"),
@@ -53,7 +53,7 @@ function(e, t, n) {
             guildId: n,
             channelId: a,
             setNote: s,
-            closePopout: _,
+            closePopout: T,
             setPopoutRef: B,
             disableUserProfileLink: H = __OVERLAY__,
             analyticsParams: V = {}
@@ -127,7 +127,7 @@ function(e, t, n) {
                     application_id: null != Q ? Q.application_id : void 0,
                     application_name: null != Q ? Q.name : void 0,
                     sku_id: null != s ? s.primarySkuId : null,
-                    is_friend: T.default.isFriend(t.id),
+                    is_friend: _.default.isFriend(t.id),
                     has_images: !!(null !== (e = null == l ? void 0 : l.large_image) && void 0 !== e ? e : null == l ? void 0 : l.small_image),
                     party_max: null != i && null != i.size ? i.size[1] : void 0,
                     party_id: null != i ? i.id : void 0,
@@ -168,7 +168,7 @@ function(e, t, n) {
                             displayProfile: W,
                             guildId: n,
                             channelId: a,
-                            onClose: () => null == _ ? void 0 : _(),
+                            onClose: () => null == T ? void 0 : T(),
                             isMobile: et,
                             isStreaming: (0, m.default)(Q),
                             status: ee,
@@ -178,12 +178,12 @@ function(e, t, n) {
                                 user: t,
                                 upsellSource: b.UserPopoutUpsellSource.USER_POPOUT,
                                 displayProfile: W,
-                                onClose: _,
+                                onClose: T,
                                 ...er
                             }) : void 0
                         }), (0, i.jsxs)(M.default.Inner, {
                             children: [(0, i.jsx)(R.default, {
-                                onTooltipClose: _
+                                onTooltipClose: T
                             }), (0, i.jsx)(k.default, {
                                 activity: Q,
                                 customStatusActivity: $,
@@ -192,7 +192,7 @@ function(e, t, n) {
                                 guild: J,
                                 guildMember: q,
                                 channelId: a,
-                                onClose: _,
+                                onClose: T,
                                 setNote: s,
                                 canDM: es,
                                 analyticsParams: V
@@ -208,7 +208,7 @@ function(e, t, n) {
             userId: t,
             user: n,
             ...l
-        } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), o = null != n ? n : a;
+        } = e, a = (0, r.useStateFromStores)([T.default], () => T.default.getUser(t), [t]), o = null != n ? n : a;
         return s(null != o, "Unexpected missing user"), (0, i.jsx)(B, {
             user: o,
             ...l

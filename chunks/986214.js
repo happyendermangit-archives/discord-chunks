@@ -23,8 +23,8 @@ function(t, e, i) {
         C = i("578708"),
         v = i("702173"),
         S = i("954016"),
-        p = i("49111"),
-        N = i("782340");
+        N = i("49111"),
+        p = i("782340");
     async function y(t) {
         let {
             activityItem: e,
@@ -36,7 +36,7 @@ function(t, e, i) {
             analyticsLocations: L
         } = t, g = u.default.getGuild(D), m = d.default.getCurrentUser();
         if (null == g && !(0, v.isPrivateChannelWithEnabledActivities)(h) || null == m || null == e || null == e.application) return !1;
-        if (null == h) return s.ComponentDispatch.dispatch(p.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
+        if (null == h) return s.ComponentDispatch.dispatch(N.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
             applicationId: e.application.id
         }), !1;
         let P = a.default.getChannel(h);
@@ -48,8 +48,8 @@ function(t, e, i) {
             PermissionStore: r.default
         }) : E.EmbeddedActivityLaunchability.NO_CHANNEL;
         if (M !== E.EmbeddedActivityLaunchability.CAN_LAUNCH) return M === E.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, l.showActivitiesInvalidPermissionsAlert)() : M === E.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && n.default.show({
-            title: N.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
-            body: N.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+            title: p.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
+            body: p.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
             hideActionSheet: !1
         }), !1;
         let b = await (0, _.confirmActivityLaunchChecks)({
@@ -71,7 +71,7 @@ function(t, e, i) {
             if (!t) return !1
         } else if (!(0, o.isActivitiesInTextEnabled)(P, "handleStartEmbeddedActivity") || !R) return !1;
         return f.startEmbeddedActivity(h, e.application.id, L), (0, C.default)(D, h), (0, T.default)({
-            type: p.AnalyticsGameOpenTypes.LAUNCH,
+            type: N.AnalyticsGameOpenTypes.LAUNCH,
             userId: m.id,
             applicationId: e.application.id,
             locationObject: y,

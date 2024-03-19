@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("998716"),
         C = n("170183"),
         I = n("689275"),
-        T = n("373469"),
-        _ = n("546463"),
+        _ = n("373469"),
+        T = n("546463"),
         v = n("923959"),
         N = n("824563"),
         A = n("282109"),
@@ -123,7 +123,7 @@ function(e, t, n) {
             let e = 0;
             for (let t of h) e += g.default.getParticipantCount(t, S.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
-        }), k = (0, u.useStateFromStoresArray)([T.default], () => T.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([N.default, _.default], () => E.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != _.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => k.map(e => O.default.getUser(e)), [k]), X = z(j.default, E.filter(e => !k.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
+        }), k = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([N.default, T.default], () => E.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != T.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => k.map(e => O.default.getUser(e)), [k]), X = z(j.default, E.filter(e => !k.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
         let Q = (t = d, n = y, a = M, 0 === n.length ? null : (0, i.jsxs)("div", {
                 className: V.row,
                 children: [(0, i.jsx)(U.default, {

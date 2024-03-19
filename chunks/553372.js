@@ -31,8 +31,8 @@ function(e, t, n) {
         S = n("368121"),
         C = n("305122"),
         I = n("235004"),
-        T = n("389480"),
-        _ = n("78581"),
+        _ = n("389480"),
+        T = n("78581"),
         v = n("23106"),
         N = n("796864"),
         A = n("172858"),
@@ -98,7 +98,7 @@ function(e, t, n) {
             onMouseEnter: G,
             onSelectItem: B,
             analyticsLocations: H,
-            buttonOverlay: V = T.SoundButtonOverlay.PLAY,
+            buttonOverlay: V = _.SoundButtonOverlay.PLAY,
             ...K
         } = e, {
             soundId: W,
@@ -131,7 +131,7 @@ function(e, t, n) {
             eo = "sound-".concat(L.soundId),
             eu = (0, r.useListItem)(eo),
             ed = null != z || null != Z,
-            ec = !(0, _.canUseSoundboardSound)(J, L, b),
+            ec = !(0, T.canUseSoundboardSound)(J, L, b),
             ef = U || w && !ec;
 
         function ep(e) {
@@ -229,7 +229,7 @@ function(e, t, n) {
                     })]
                 }), function() {
                     switch (V) {
-                        case T.SoundButtonOverlay.ADD:
+                        case _.SoundButtonOverlay.ADD:
                             return (0, i.jsxs)("div", {
                                 className: R.addButtonOverlay,
                                 children: [(0, i.jsx)("div", {
@@ -248,7 +248,7 @@ function(e, t, n) {
                                     }), ef && em()]
                                 })]
                             });
-                        case T.SoundButtonOverlay.PLAY:
+                        case _.SoundButtonOverlay.PLAY:
                         default:
                             return ex()
                     }

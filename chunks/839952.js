@@ -156,7 +156,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function _(e) {
         return (0, i.jsx)(o.Tooltip, {
             text: x.default.Messages.PREVIEW_WHOLE_FILE,
             children: t => (0, i.jsx)(o.Clickable, {
@@ -173,7 +173,7 @@ function(e, t, n) {
         })
     }
 
-    function _(e) {
+    function T(e) {
         var t;
         let {
             attachment: n,
@@ -184,8 +184,8 @@ function(e, t, n) {
             setLanguage: c,
             bytesLeft: f,
             className: p
-        } = e, m = null == l ? void 0 : l.split("\n"), h = null !== (t = null == m ? void 0 : m.length) && void 0 !== t ? t : 0, y = a ? 100 : 6, _ = 0 === f, v = "";
-        _ && a && h > y ? v = "\n..." : !_ && (v = "..."), "" !== v && (_ ? v += " " + x.default.Messages.PREVIEW_LINES_LEFT.format({
+        } = e, m = null == l ? void 0 : l.split("\n"), h = null !== (t = null == m ? void 0 : m.length) && void 0 !== t ? t : 0, y = a ? 100 : 6, T = 0 === f, v = "";
+        T && a && h > y ? v = "\n..." : !T && (v = "..."), "" !== v && (T ? v += " " + x.default.Messages.PREVIEW_LINES_LEFT.format({
             lines: h - y
         }) : v += " " + x.default.Messages.PREVIEW_BYTES_LEFT.format({
             formattedBytes: (0, d.formatKbSize)(f)
@@ -212,9 +212,9 @@ function(e, t, n) {
                     children: [(0, i.jsx)(S, {
                         expanded: a,
                         setExpanded: r,
-                        isWholeFile: _,
+                        isWholeFile: T,
                         numLines: h
-                    }), (0, i.jsx)(T, {
+                    }), (0, i.jsx)(_, {
                         language: u,
                         fileContents: l,
                         bytesLeft: f,
@@ -329,7 +329,7 @@ function(e, t, n) {
             onClick: a,
             onContextMenu: r,
             className: n
-        }) : (0, i.jsx)(_, {
+        }) : (0, i.jsx)(T, {
             attachment: t,
             fileContents: p,
             bytesLeft: m,

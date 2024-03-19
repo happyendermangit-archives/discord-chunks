@@ -167,8 +167,8 @@ function(e, t, n) {
                 className: g,
                 inputProps: S,
                 focusAfterReady: C
-            } = this.props, I = null != t && t.length > 0, T = !1, _ = [];
-            return null != m && m.length > 0 && ("string" == typeof m[0] ? m.forEach((e, t) => _.push((0, a.jsxs)(u.Anchor, {
+            } = this.props, I = null != t && t.length > 0, _ = !1, T = [];
+            return null != m && m.length > 0 && ("string" == typeof m[0] ? m.forEach((e, t) => T.push((0, a.jsxs)(u.Anchor, {
                 focusProps: {
                     offset: 4
                 },
@@ -178,7 +178,7 @@ function(e, t, n) {
                     className: x.close,
                     "aria-label": h.default.Messages.REMOVE
                 })]
-            }, t))) : (T = !0, m.forEach((e, t) => _.push((0, a.jsxs)(u.Anchor, {
+            }, t))) : (_ = !0, m.forEach((e, t) => T.push((0, a.jsxs)(u.Anchor, {
                 className: o(x.tag, x.richTag),
                 onClick: this.handleRemoveTag.bind(this, t),
                 children: [("MEMBER" === e.type || "USER" === e.type) && null != e.avatar && (0, a.jsx)(u.Avatar, {
@@ -214,9 +214,9 @@ function(e, t, n) {
                         style: {
                             maxHeight: f
                         },
-                        children: [_, (0, a.jsx)("input", {
+                        children: [T, (0, a.jsx)("input", {
                             className: o(x.input, {
-                                [x.richTagInput]: T
+                                [x.richTagInput]: _
                             }),
                             type: "text",
                             ref: this.ref,

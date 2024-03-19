@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("873622"),
         C = n("277855"),
         I = n("191191"),
-        T = n("256860"),
-        _ = n("364685"),
+        _ = n("256860"),
+        T = n("364685"),
         v = n("889701"),
         N = n("168973"),
         A = n("983782"),
@@ -138,10 +138,10 @@ function(e, t, n) {
             positionContainerRef: X,
             drawerRef: ee,
             orientation: et
-        }), el = (0, M.useExpressionPickerStore)(e => e.activeView), ea = (0, T.useHasSendableSticker)(K), {
+        }), el = (0, M.useExpressionPickerStore)(e => e.activeView), ea = (0, _.useHasSendableSticker)(K), {
             renderWindow: es,
             windowDispatch: er
-        } = l.useContext(E.default), eo = (0, c.useStateFromStores)([_.default], () => !_.default.hasLoadedStickerPacks), eu = (0, C.useSoundmojiExperiment)("expression_picker"), ed = null != q, ec = (0, f.useIsModalAtTop)(null != q ? q : ""), ef = l.useCallback(e => {
+        } = l.useContext(E.default), eo = (0, c.useStateFromStores)([T.default], () => !T.default.hasLoadedStickerPacks), eu = (0, C.useSoundmojiExperiment)("expression_picker"), ed = null != q, ec = (0, f.useIsModalAtTop)(null != q ? q : ""), ef = l.useCallback(e => {
             var t;
             if (!ed && (0, f.hasAnyModalOpen)() || ed && !(ec && J)) return;
             let {
