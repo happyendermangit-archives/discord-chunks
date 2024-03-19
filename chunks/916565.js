@@ -40,8 +40,8 @@ function(e, t, n) {
         P = n("317041"),
         U = n("49111"),
         b = n("894488"),
-        x = n("782340");
-    let B = (e, t) => {
+        B = n("782340");
+    let x = (e, t) => {
             var n;
             return null == e ? void 0 : null === (n = e.find(e => e.displayName === t)) || void 0 === n ? void 0 : n.value
         },
@@ -52,7 +52,7 @@ function(e, t, n) {
             if (o) return n.autocomplete.query;
             if ("" === t) return null;
             let s = y.default.getAutocompleteLastChoices(n.channel.id, e.name);
-            return null != s ? null !== (l = B(s, t)) && void 0 !== l ? l : a(t) : a(t)
+            return null != s ? null !== (l = x(s, t)) && void 0 !== l ? l : a(t) : a(t)
         },
         H = e => {
             let t = e.toLowerCase() === P.TRUE_OPTION_NAME.toLowerCase(),
@@ -67,7 +67,7 @@ function(e, t, n) {
             context: D,
             commandTargetId: P,
             maxSizeCallback: b,
-            commandOrigin: x = R.CommandOrigin.CHAT
+            commandOrigin: B = R.CommandOrigin.CHAT
         } = e;
         null == D.autocomplete && a.default.dispatch({
             type: "APPLICATION_COMMAND_USED",
@@ -76,7 +76,7 @@ function(e, t, n) {
         }), await A.default.unarchiveThreadIfNecessary(D.channel.id);
         let w = [],
             k = [],
-            W = (0, L.getCommandAttachmentDraftType)(x);
+            W = (0, L.getCommandAttachmentDraftType)(B);
         if (null != S.options)
             for (let e of S.options) {
                 if (e.type === u.ApplicationCommandOptionType.SUB_COMMAND || e.type === u.ApplicationCommandOptionType.SUB_COMMAND_GROUP || !(e.name in y)) continue;
@@ -84,7 +84,7 @@ function(e, t, n) {
                     n = null;
                 if (e.type === u.ApplicationCommandOptionType.STRING) {
                     let i = null !== (r = null === (o = v.getOptionalString(y, e.name)) || void 0 === o ? void 0 : o.trim()) && void 0 !== r ? r : "";
-                    n = null != e.choices ? B(e.choices, i) : e.autocomplete ? F(e, i, D) : i, l(null != D.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && w.push({
+                    n = null != e.choices ? x(e.choices, i) : e.autocomplete ? F(e, i, D) : i, l(null != D.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && w.push({
                         type: e.type,
                         name: e.name,
                         value: n,
@@ -164,13 +164,13 @@ function(e, t, n) {
                     case u.ApplicationCommandOptionType.INTEGER:
                         if ("text" === s.type) {
                             let t = s.text.trim();
-                            n = null != e.choices ? Number(B(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(v.normalizeNumericString(E.default.locale, t))
+                            n = null != e.choices ? Number(x(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(v.normalizeNumericString(E.default.locale, t))
                         }
                         break;
                     case u.ApplicationCommandOptionType.NUMBER:
                         if ("text" === s.type) {
                             let t = s.text.trim();
-                            n = null != e.choices ? Number(B(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(v.normalizeNumericString(E.default.locale, t))
+                            n = null != e.choices ? Number(x(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(v.normalizeNumericString(E.default.locale, t))
                         }
                         break;
                     default:
@@ -200,7 +200,7 @@ function(e, t, n) {
             command_id: S.id,
             application_id: S.applicationId,
             command_type: S.type,
-            location: x === R.CommandOrigin.APPLICATION_LAUNCHER ? R.ApplicationCommandTriggerLocations.APP_LAUNCHER : R.ApplicationCommandTriggerLocations.SLASH_UI
+            location: B === R.CommandOrigin.APPLICATION_LAUNCHER ? R.ApplicationCommandTriggerLocations.APP_LAUNCHER : R.ApplicationCommandTriggerLocations.SLASH_UI
         }), S.execute(w, D);
         if (S.inputType === R.ApplicationCommandInputType.BUILT_IN || S.inputType === R.ApplicationCommandInputType.BUILT_IN_TEXT || S.inputType === R.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return;
         let V = {
@@ -222,7 +222,7 @@ function(e, t, n) {
                 G(y)
             },
             commandDisplayName: S.displayName,
-            analytics_location: x === R.CommandOrigin.APPLICATION_LAUNCHER ? R.ApplicationCommandTriggerLocations.APP_LAUNCHER : R.ApplicationCommandTriggerLocations.SLASH_UI
+            analytics_location: B === R.CommandOrigin.APPLICATION_LAUNCHER ? R.ApplicationCommandTriggerLocations.APP_LAUNCHER : R.ApplicationCommandTriggerLocations.SLASH_UI
         }))
     }
     let G = e => {
@@ -351,7 +351,7 @@ function(e, t, n) {
     async function j(e, t, n, i) {
         let l = (0, M.maxFileSize)(n),
             a = e => {
-                null == i || i(l, e), _.setFailed(t, U.AbortCodes.ENTITY_TOO_LARGE, x.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+                null == i || i(l, e), _.setFailed(t, U.AbortCodes.ENTITY_TOO_LARGE, B.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
                     maxSize: (0, M.sizeString)(l)
                 }))
             },
@@ -363,7 +363,7 @@ function(e, t, n) {
         try {
             await (0, c.stageAttachmentFiles)(e)
         } catch {
-            _.setFailed(t, void 0, x.default.Messages.UPLOADING_FILES_FAILED.format({
+            _.setFailed(t, void 0, B.default.Messages.UPLOADING_FILES_FAILED.format({
                 count: e.length
             }))
         }({

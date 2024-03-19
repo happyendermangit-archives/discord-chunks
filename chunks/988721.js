@@ -48,13 +48,13 @@ function(e, t, n) {
         P = Symbol("currentUser"),
         U = Symbol("stale"),
         b = Symbol("current"),
-        x = Object.freeze({
+        B = Object.freeze({
             descriptors: [],
             commands: [],
             sectionedCommands: [],
             loading: !0
         }),
-        B = Object.freeze({
+        x = Object.freeze({
             serverVersion: b,
             fetchState: {
                 fetching: !1
@@ -135,7 +135,7 @@ function(e, t, n) {
         }
         getContextState(e) {
             var t, n;
-            return null != e && ee(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : F : B
+            return null != e && ee(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : F : x
         }
         getUserState() {
             var e;
@@ -143,11 +143,11 @@ function(e, t, n) {
                 location: "getUserState"
             }, {
                 autoTrackExposure: !1
-            }) ? null !== (e = this.indices[P]) && void 0 !== e ? e : F : B
+            }) ? null !== (e = this.indices[P]) && void 0 !== e ? e : F : x
         }
         query(e, t, n) {
             let i = A.default.getCurrentUser();
-            if (null == i) return x;
+            if (null == i) return B;
             let l = this.getContextState(e),
                 a = this.getUserState(),
                 o = (0, y.buildPermissionContext)(e, t.commandType),

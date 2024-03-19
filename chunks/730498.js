@@ -110,7 +110,7 @@ function(e, t, n) {
             }
             let O = (0, M.getAutoArchiveDuration)(t),
                 S = I.default.getChannel(g.default.castMessageIdAsChannelId(n)),
-                h = await x(t, () => {
+                h = await B(t, () => {
                     let e = null != n ? y.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n) : y.Endpoints.CHANNEL_THREADS(t.id);
                     return o.default.post({
                         url: e,
@@ -131,7 +131,7 @@ function(e, t, n) {
     }
 
     function U(e, t, n, i, l) {
-        return x(e, () => o.default.post({
+        return B(e, () => o.default.post({
             url: y.Endpoints.CHANNEL_THREADS(e.id),
             body: {
                 name: t,
@@ -166,7 +166,7 @@ function(e, t, n) {
                         flags: 0 !== d ? d : void 0
                     }
                 },
-                C = await x(t, () => null != r && r.length > 0 ? s(A, E, r) : o.default.post({
+                C = await B(t, () => null != r && r.length > 0 ? s(A, E, r) : o.default.post({
                     url: A,
                     body: E
                 }));
@@ -177,7 +177,7 @@ function(e, t, n) {
             }), null == l || l(C), C
         }, [t, n, l, i, s])
     }(l = i || (i = {}))[l.Disabled = 1] = "Disabled", l[l.Enabled = 2] = "Enabled", l[l.PrivateOnly = 3] = "PrivateOnly";
-    async function x(e, t) {
+    async function B(e, t) {
         let n;
         let i = e.isForumLikeChannel();
         try {
