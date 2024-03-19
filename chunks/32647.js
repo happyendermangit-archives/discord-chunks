@@ -54,8 +54,8 @@ function(e, t, n) {
                 onKeyUp: W,
                 onTab: Y,
                 onEnter: z,
-                onSubmit: Z,
-                maybeShowAutocomplete: J,
+                onSubmit: J,
+                maybeShowAutocomplete: Z,
                 hideAutocomplete: q,
                 moveSelection: X,
                 spellcheckEnabled: Q,
@@ -157,11 +157,11 @@ function(e, t, n) {
                         return
                     }
                 }
-                null == Z || Z((0, x.toTextValue)(y.EditorUtils.richValue(eC), {
+                null == J || J((0, x.toTextValue)(y.EditorUtils.richValue(eC), {
                     mode: "raw",
                     ignoreTrailingEmptyNodes: !0
                 }), t, e)
-            }, [k.id, eC, Z, e_, $]);
+            }, [k.id, eC, J, e_, $]);
             (0, C.default)(t, eC, k, eI), (0, T.default)(eC, ep, B);
             let {
                 handleKeyDown: eT,
@@ -182,12 +182,12 @@ function(e, t, n) {
                 handlePaste: eN,
                 handleGlobalPaste: eA
             } = (0, I.default)(eC, eE, G), eO = l.useCallback(e => {
-                null == J || J()
-            }, [J]), eR = l.useCallback(e => {
+                null == Z || Z()
+            }, [Z]), eR = l.useCallback(e => {
                 e !== em.current ? ex.current && (null == F || F(null, (0, x.toTextValue)(e, {
                     mode: "raw"
-                }), e)) : ex.current && J()
-            }, [J, F]);
+                }), e)) : ex.current && Z()
+            }, [Z, F]);
             l.useLayoutEffect(() => {
                 eh.current && (em.current = n, ey(eC, "parent", {
                     value: n

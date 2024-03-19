@@ -68,7 +68,7 @@ function(e, t, n) {
                     (0, u.fetchSubscriptionPlansForSKU)(k)
                 })
             }, [M, k, G]);
-            let Z = l.useCallback(() => {
+            let J = l.useCallback(() => {
                 s(null != a, "No subscription listing"), s(null != P, "No application"), s(null != A, "No subscription plan"), s(M, "Cannot purchase this unpublished plan");
                 let e = () => {
                     (0, f.openApplicationSubscriptionPaymentModal)({
@@ -99,7 +99,7 @@ function(e, t, n) {
                 }) : e()
             }, [M, a, A, j, P, C, W, B, U, I, D, T, F, v, N]);
             return {
-                openModal: Z,
+                openModal: J,
                 canOpenModal: z,
                 cannotOpenReason: n
             }
