@@ -2,7 +2,7 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         getOpenAppFromEmailDestinations: function() {
-            return c
+            return i
         }
     }), t("511434"), t("313619"), t("654714"), t("287168"), t("956660"), t("222007");
     var d = t("730290"),
@@ -16,7 +16,7 @@ function(e, a, t) {
                 return null
             }
         },
-        c = e => {
+        i = e => {
             let a = (0, d.parse)(e);
             return {
                 desktop: n(a.desktop_link),

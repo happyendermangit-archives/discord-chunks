@@ -8,7 +8,7 @@ function(e, a, t) {
             return n
         },
         finishMigration: function() {
-            return c
+            return i
         }
     });
     var d = t("913144");
@@ -25,7 +25,7 @@ function(e, a, t) {
         })
     }
 
-    function c() {
+    function i() {
         window.location.reload()
     }
 }
