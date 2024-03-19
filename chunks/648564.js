@@ -61,6 +61,6 @@ function(e, t, n) {
             label: l.default.Messages.FORM_LABEL_NOTHING
         }]
     }(r = i || (i = {})).EMBED = "Embed", r.BROWSER = "Thread Browser", r.POPOUT = "Active Threads Popout", r.CHANNEL_LIST = "Channel List", r.GUILD_ACTIVE_THREADS_MODAL = "Guild Active Threads Modal", r.INBOX = "Inbox", r.FORUM = "Forum", r.VOICE_AUTO_OPEN = "Voice Auto Open", (a = s || (s = {})).LATEST_ACTIVITY = "Last Message", a.CREATION_DATE = "Creation";
-    let g = new Set([o.AbortCodes.TOO_MANY_ATTACHMENTS, o.AbortCodes.EXPLICIT_CONTENT, o.AbortCodes.ENTITY_TOO_LARGE]),
+    let g = new Set([o.AbortCodes.TOO_MANY_ATTACHMENTS, o.AbortCodes.EXPLICIT_CONTENT, o.AbortCodes.ENTITY_TOO_LARGE, o.AbortCodes.EXPLICIT_CONTENT]),
         m = new Set([o.AbortCodes.AUTOMOD_MESSAGE_BLOCKED, o.AbortCodes.AUTOMOD_TITLE_BLOCKED])
 }

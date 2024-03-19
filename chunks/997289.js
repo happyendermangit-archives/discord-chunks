@@ -1,11 +1,11 @@
-function(e, t, r) {
+function(e, t, i) {
     "use strict";
-    r.r(t), r.d(t, {
+    i.r(t), i.d(t, {
         useAnalyticsContext: function() {
             return s
         }
     });
-    var n = r("884691"),
-        i = r("599110");
-    let s = () => n.useContext(i.AnalyticsContext)
+    var r = i("884691"),
+        n = i("599110");
+    let s = () => r.useContext(n.AnalyticsContext)
 }

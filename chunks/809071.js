@@ -132,7 +132,7 @@ function(e, t, r) {
                 },
                 oldFormErrors: !0
             });
-            return e.body
+            return f.default.createInvoiceFromServer(e.body)
         } catch (e) {
             throw new a.BillingError(e)
         }
