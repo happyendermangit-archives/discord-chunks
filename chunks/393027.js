@@ -5,12 +5,12 @@ function(e, a, t) {
             return c
         }
     });
-    var d = t("803182"),
-        s = t("308503"),
+    var s = t("803182"),
+        d = t("308503"),
         n = t("49111");
 
     function i(e) {
-        let a = (0, d.matchPath)(null != e ? e : "", {
+        let a = (0, s.matchPath)(null != e ? e : "", {
             path: n.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
         });
         if (null != a) {
@@ -23,7 +23,7 @@ function(e, a, t) {
                 channelId: null != t ? t : null
             }
         }
-        let t = (0, d.matchPath)(null != e ? e : "", {
+        let t = (0, s.matchPath)(null != e ? e : "", {
             path: n.Routes.GUILD_BOOSTING_MARKETING(":guildId")
         });
         return null != t ? {
@@ -34,7 +34,7 @@ function(e, a, t) {
             channelId: null
         }
     }
-    var c = (0, s.default)(e => ({
+    var c = (0, d.default)(e => ({
         path: null,
         basePath: "/",
         guildId: null,
@@ -42,23 +42,23 @@ function(e, a, t) {
         updatePath(a) {
             let {
                 guildId: t,
-                channelId: d
+                channelId: s
             } = i(a);
             e({
                 path: a,
                 guildId: t,
-                channelId: d
+                channelId: s
             })
         },
         resetPath(a) {
             let {
                 guildId: t,
-                channelId: d
+                channelId: s
             } = i(a);
             e({
                 path: null,
                 guildId: t,
-                channelId: d,
+                channelId: s,
                 basePath: a
             })
         }
