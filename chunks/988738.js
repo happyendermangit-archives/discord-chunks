@@ -58,15 +58,15 @@ function(e, t, n) {
             properties: m
         });
         let _ = (0, d.useWindowDispatch)(),
-            v = r.useCallback(() => {
+            T = r.useCallback(() => {
                 _.dispatch(C.ComponentActions.POPOUT_SHOW)
             }, [_]),
-            T = r.useCallback(() => {
+            v = r.useCallback(() => {
                 _.dispatch(C.ComponentActions.POPOUT_HIDE)
             }, [_]);
         return (0, a.jsx)(E.AppReferencePositionLayer, {
-            onMount: v,
-            onUnmount: T,
+            onMount: T,
+            onUnmount: v,
             reference: () => o,
             position: null != f ? f : "right",
             align: null != h ? h : "top",

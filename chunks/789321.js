@@ -121,7 +121,7 @@ function(e, t, n) {
                 null == h || h(T.ContentDismissActionType.DISMISS)
             }, [h]);
         if (!A && !L) return null;
-        let J = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+        let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
             openShop: M
         }) : K && W ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
             openShop: M
@@ -158,7 +158,7 @@ function(e, t, n) {
                         variant: "text-sm/normal",
                         color: "text-normal",
                         tag: "span",
-                        children: J
+                        children: Z
                     })
                 }), (0, i.jsx)("div", {
                     className: N.buttons,

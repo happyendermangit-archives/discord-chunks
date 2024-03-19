@@ -93,7 +93,7 @@ function(e, t, n) {
                 return u.default.has(i, I.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : u.default.has(s, I.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
             }, []).sort().join(",")).toString()
         }(t) : t.memberListId
-    }(s = i || (i = {})).GROUP = "GROUP", s.MEMBER = "MEMBER", s.CONTENT_INVENTORY = "CONTENT_INVENTORY", s.CONTENT_INVENTORY_GROUP = "CONTENT_INVENTORY_GROUP";
+    }(s = i || (i = {})).GROUP = "GROUP", s.MEMBER = "MEMBER", s.CONTENT_INVENTORY = "CONTENT_INVENTORY", s.CONTENT_INVENTORY_GROUP = "CONTENT_INVENTORY_GROUP", s.HIDDEN_CONTENT_INVENTORY = "HIDDEN_CONTENT_INVENTORY";
     class D {
         updateOwnerId() {
             let e = p.default.getGuild(this.guildId);

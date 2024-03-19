@@ -39,7 +39,7 @@ function(e, t, n) {
         g.set(e, a)
     }
 
-    function v(e) {
+    function T(e) {
         return null != e ? {
             type: h.BroadcastSourceType.GUILD,
             guildId: e
@@ -47,7 +47,7 @@ function(e, t, n) {
             type: h.BroadcastSourceType.GLOBAL
         }
     }
-    class T extends i.default.Store {
+    class v extends i.default.Store {
         getBroadcasts() {
             return g.values(S.BROADCASTS_BY_VALIDITY(2))
         }
@@ -64,8 +64,8 @@ function(e, t, n) {
             return C
         }
     }
-    T.displayName = "BroadcastingStore";
-    var I = new T(u.default, {
+    v.displayName = "BroadcastingStore";
+    var I = new v(u.default, {
         PRESENCE_UPDATES: function(e) {
             let {
                 updates: t
@@ -76,7 +76,7 @@ function(e, t, n) {
                     broadcast: n,
                     guildId: a
                 } = e;
-                _(t.id, n, v(a))
+                _(t.id, n, T(a))
             })
         },
         PRESENCES_REPLACE: function(e) {
@@ -89,7 +89,7 @@ function(e, t, n) {
                     broadcast: n,
                     guildId: a
                 } = e;
-                _(t.id, n, v(a))
+                _(t.id, n, T(a))
             })
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
@@ -103,7 +103,7 @@ function(e, t, n) {
                     broadcast: n,
                     guildId: a
                 } = e;
-                _(t.id, n, v(a))
+                _(t.id, n, T(a))
             }), n.forEach(e => {
                 let {
                     presences: t,
@@ -114,7 +114,7 @@ function(e, t, n) {
                         user: t,
                         broadcast: a
                     } = e;
-                    _(t.id, a, v(n))
+                    _(t.id, a, T(n))
                 })
             })
         },

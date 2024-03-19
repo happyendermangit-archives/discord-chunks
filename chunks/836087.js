@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return N
+            return y
         }
     }), n("70102"), n("222007");
     var a = n("37983"),
@@ -23,18 +23,18 @@ function(e, t, n) {
         S = n("449008"),
         g = n("387111"),
         _ = n("99795"),
-        v = n("49111"),
-        T = n("782340"),
+        T = n("49111"),
+        v = n("782340"),
         I = n("964376");
 
     function A(e, t) {
         switch (e) {
             case _.ParticipantTypes.ACTIVITY:
-                return T.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
+                return v.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
                     numUsers: t
                 });
             case _.ParticipantTypes.STREAM:
-                return T.default.Messages.SPECTATORS.format({
+                return v.default.Messages.SPECTATORS.format({
                     numViewers: t
                 });
             default:
@@ -103,9 +103,9 @@ function(e, t, n) {
             })
         })
     }
-    let y = [];
+    let N = [];
 
-    function N(e) {
+    function y(e) {
         let {
             channelId: t,
             guildId: s,
@@ -113,15 +113,15 @@ function(e, t, n) {
             className: m,
             compact: C = !1,
             disableInteraction: g = !1,
-            maxVisibleUsers: T = 3
-        } = e, [A, N] = r.useState(!1), O = r.useRef(new d.DelayedCall(150, () => N(!1))), L = (0, o.useStateFromStoresArray)([E.default, p.default], () => {
+            maxVisibleUsers: v = 3
+        } = e, [A, y] = r.useState(!1), O = r.useRef(new d.DelayedCall(150, () => y(!1))), L = (0, o.useStateFromStoresArray)([E.default, p.default], () => {
             if (l.type === _.ParticipantTypes.STREAM) {
                 let e = E.default.getViewerIds(l.id);
-                return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish) : y
+                return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish) : N
             }
-            return l.type === _.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => p.default.getUser(e)).filter(S.isNotNullish) : y : y
+            return l.type === _.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => p.default.getUser(e)).filter(S.isNotNullish) : N : N
         }, [l]), x = r.useCallback(() => {
-            O.current.cancel(), N(!0)
+            O.current.cancel(), y(!0)
         }, []), P = r.useCallback(() => {
             O.current.delay()
         }, []), D = r.useCallback((e, t) => {
@@ -139,24 +139,24 @@ function(e, t, n) {
         }, [P, x]);
         if (0 === L.length) return null;
         if (C) return (0, a.jsx)(R, {
-            maxVisibleUsers: T,
+            maxVisibleUsers: v,
             users: L,
             guildId: s,
             channelId: t,
             className: m,
             participantType: l.type
         });
-        let b = u(L).take(T).map(e => (0, a.jsx)(c.Avatar, {
+        let b = u(L).take(v).map(e => (0, a.jsx)(c.Avatar, {
             src: e.getAvatarURL(s, 24),
             "aria-label": e.username,
             size: c.AvatarSizes.SIZE_24,
             className: I.viewer
         }, e.id)).value();
-        return L.length > T && (b[b.length - 1] = (0, a.jsxs)("div", {
+        return L.length > v && (b[b.length - 1] = (0, a.jsxs)("div", {
             className: I.overflow,
-            children: ["+", L.length - T + 1]
+            children: ["+", L.length - v + 1]
         }, "overflow")), (0, a.jsx)(h.default, {
-            section: v.AnalyticsSections.STREAM_VIEWER_POPOUT,
+            section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
             children: (0, a.jsx)("div", {
                 onMouseEnter: x,
                 onMouseLeave: P,

@@ -202,7 +202,7 @@ function(e, t, n) {
     function e6(e) {
         let t = e2(e.context),
             n = !ey || t.mute || t.deaf;
-        e.context === eg.MediaEngineContextTypes.DEFAULT && (n = n || eL || eM || eb || !z.default.didHavePermission(eE.NativePermissionTypes.AUDIO)), e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === eg.MediaEngineContextTypes.DEFAULT && e.setNativeMute(n)
+        e.context === eg.MediaEngineContextTypes.DEFAULT ? n = n || eL || eM || eb || !z.default.didHavePermission(eE.NativePermissionTypes.AUDIO) : e.context === eg.MediaEngineContextTypes.STREAM && (n = !0), e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === eg.MediaEngineContextTypes.DEFAULT && e.setNativeMute(n)
     }
 
     function e9() {

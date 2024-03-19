@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return C
+            return D
         }
     }), E("222007");
     var t = E("913144"),
@@ -17,46 +17,50 @@ function(e, _, E) {
         S = 0;
 
     function N() {
-        l()
+        u()
     }
 
     function O() {
-        R()
+        l()
     }
 
     function A(e) {
-        e.idle ? R() : l()
+        e.idle ? l() : u()
     }
 
     function R() {
-        clearTimeout(s), s = null
+        return !!(0, n.isEligibleForContentInventoryV1)("ContentInventoryManager") && !T && !a.default.hidden && !0
     }
 
     function l() {
-        if (R(), !(0, n.isEligibleForContentInventoryV1)("ContentInventoryManager") || T) return;
+        clearTimeout(s), s = null
+    }
+
+    function u() {
+        if (l(), !R()) return;
         let e = a.default.getFeed(I),
             _ = null == e ? void 0 : e.expired_at,
             E = null == _ ? 0 : new Date(_).getTime() - Date.now();
-        s = setTimeout(() => u(), E)
+        s = setTimeout(() => L(), E)
     }
-    async function u() {
-        if (!T) try {
+    async function L() {
+        if (R()) try {
             T = !0;
             let e = await (0, r.getMyContentInventory)();
             t.default.dispatch({
                 type: "CONTENT_INVENTORY_SET_FEED",
                 feedId: I,
                 feed: e
-            }), S = 0, T = !1, l()
+            }), S = 0, T = !1, u()
         } catch (e) {
             if (S < 3) {
                 let e = 1e3 * Math.pow(5, S);
-                s = setTimeout(() => u(), e), S += 1
+                s = setTimeout(() => L(), e), S += 1
             }
             T = !1
         }
     }
-    class L extends o.default {
+    class C extends o.default {
         constructor(...e) {
             super(...e), this.actions = {
                 POST_CONNECTION_OPEN: N,
@@ -65,5 +69,5 @@ function(e, _, E) {
             }
         }
     }
-    var C = new L
+    var D = new C
 }
