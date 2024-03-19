@@ -11,10 +11,10 @@ function(e, t, r) {
             return T
         },
         useGetSubscriptionInvoice: function() {
-            return p
+            return A
         },
         getItemUnitPriceWithDiscount: function() {
-            return A
+            return p
         }
     }), r("222007");
     var n = r("884691"),
@@ -188,12 +188,12 @@ function(e, t, r) {
         return S(e, t)
     }
 
-    function p(e) {
+    function A(e) {
         let t = (0, n.useCallback)(() => L(e), [JSON.stringify(e)]);
         return S(e, t)
     }
 
-    function A(e) {
+    function p(e) {
         let t = e.subscriptionPlanPrice;
         return e.discounts.forEach(r => {
             let n = r.amount / e.quantity;

@@ -27,14 +27,14 @@ function(e, t, r) {
         d.add(e)
     }
 
-    function p(e) {
+    function A(e) {
         let {
             messages: t
         } = e;
-        t.forEach(e => A(e))
+        t.forEach(e => p(e))
     }
 
-    function A(e) {
+    function p(e) {
         let t = e.type === n.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
         if (null == t) return !1;
         if (!R.has(t) && !d.has(t)) {
@@ -135,14 +135,14 @@ function(e, t, r) {
             } = e;
             d.delete(t), R.add(t)
         },
-        LOAD_MESSAGES_SUCCESS: p,
+        LOAD_MESSAGES_SUCCESS: A,
         MESSAGE_CREATE: function(e) {
             let {
                 message: t
             } = e;
-            A(t)
+            p(t)
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: p,
+        LOAD_MESSAGES_AROUND_SUCCESS: A,
         LOGOUT: function() {
             f = null, o = {}, c = [], _ = new Set, E = !1, d = new Set, R = new Set, I = {}, L = 0, S = null
         }

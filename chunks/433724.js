@@ -5,8 +5,8 @@ function(e, t, n) {
             return p
         }
     }), n("222007");
-    var i = n("37983"),
-        a = n("884691"),
+    var a = n("37983"),
+        i = n("884691"),
         s = n("446674"),
         l = n("77078"),
         o = n("913144"),
@@ -25,7 +25,7 @@ function(e, t, n) {
             className: t,
             disabled: n,
             renderCTAButtons: p
-        } = e, [E, S] = (0, s.useStateFromStoresArray)([c.default], () => [c.default.getCurrentDesktopIcon(), c.default.isEditorOpen]), T = a.useRef(null);
+        } = e, [E, S] = (0, s.useStateFromStoresArray)([c.default], () => [c.default.getCurrentDesktopIcon(), c.default.isEditorOpen]), T = i.useRef(null);
         (0, u.default)(T, m.AppearanceScrollPositions.CUSTOM_APP_ICONS);
         let v = (0, d.useUID)(),
             N = (0, l.useRadioGroup)({
@@ -38,38 +38,38 @@ function(e, t, n) {
                     id: e
                 })
             };
-        return (0, i.jsx)("div", {
+        return (0, a.jsx)("div", {
             ref: T,
-            children: (0, i.jsx)("div", {
+            children: (0, a.jsx)("div", {
                 ...N,
                 className: _.container,
-                children: (0, i.jsxs)("div", {
+                children: (0, a.jsxs)("div", {
                     className: t,
-                    children: [(0, i.jsxs)("div", {
+                    children: [(0, a.jsxs)("div", {
                         className: _.header,
-                        children: [(0, i.jsxs)("div", {
+                        children: [(0, a.jsxs)("div", {
                             className: _.headings,
-                            children: [S ? null : (0, i.jsxs)("div", {
+                            children: [S ? null : (0, a.jsxs)("div", {
                                 className: _.title,
-                                children: [(0, i.jsx)(l.Heading, {
+                                children: [(0, a.jsx)(l.Heading, {
                                     variant: "text-md/medium",
                                     children: h.default.Messages.APP_ICON_SETTINGS_TITLE
-                                }), (0, i.jsx)(r.default, {
+                                }), (0, a.jsx)(r.default, {
                                     className: _.premiumIcon
                                 })]
-                            }), (0, i.jsx)(l.Heading, {
+                            }), (0, a.jsx)(l.Heading, {
                                 variant: "text-sm/normal",
                                 children: h.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
                             })]
                         }), null == p ? void 0 : p()]
-                    }), (0, i.jsx)("div", {
+                    }), (0, a.jsx)("div", {
                         className: _.presets,
                         children: g.ICONS.filter(e => {
                             let {
                                 isHidden: t
                             } = e;
                             return !0 !== t
-                        }).map((e, t) => (0, i.jsx)(f.default, {
+                        }).map((e, t) => (0, a.jsx)(f.default, {
                             icon: e,
                             isSelected: E === e.id,
                             onSelect: e => I(e),
