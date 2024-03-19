@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return a
         }
     });
-    var a = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = e => {
+    var a = e => {
         let {
             fill: t,
             className: n
         } = e;
-        return (0, a.jsxs)("svg", {
+        return (0, i.jsxs)("svg", {
             className: n,
             version: "1.1",
             xmlns: "http://www.w3.org/2000/svg",
@@ -23,21 +23,21 @@ function(e, t, n) {
             height: "24",
             viewBox: "0 0 24 24",
             fill: t,
-            children: [(0, a.jsx)("g", {
+            children: [(0, i.jsx)("g", {
                 id: "Frame_-_24px",
-                children: (0, a.jsx)("rect", {
+                children: (0, i.jsx)("rect", {
                     y: "0",
                     fill: "none",
                     width: "24",
                     height: "24"
                 })
-            }), (0, a.jsx)("g", {
+            }), (0, i.jsx)("g", {
                 id: "Filled_Icons",
-                children: (0, a.jsxs)("g", {
-                    children: [(0, a.jsx)("path", {
+                children: (0, i.jsxs)("g", {
+                    children: [(0, i.jsx)("path", {
                         fill: t,
                         d: "M6.351,6.351C7.824,4.871,9.828,4,12,4c4.411,0,8,3.589,8,8h2c0-5.515-4.486-10-10-10    C9.285,2,6.779,3.089,4.938,4.938L3,3v6h6L6.351,6.351z"
-                    }), (0, a.jsx)("path", {
+                    }), (0, i.jsx)("path", {
                         fill: t,
                         d: "M17.649,17.649C16.176,19.129,14.173,20,12,20c-4.411,0-8-3.589-8-8H2c0,5.515,4.486,10,10,10    c2.716,0,5.221-1.089,7.062-2.938L21,21v-6h-6L17.649,17.649z"
                     })]
