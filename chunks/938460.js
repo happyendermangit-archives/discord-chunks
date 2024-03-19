@@ -5,11 +5,11 @@ function(e, a, t) {
             return j
         }
     }), t("70102");
-    var s = t("913144"),
-        d = t("629109"),
+    var d = t("913144"),
+        s = t("629109"),
         n = t("990766"),
-        c = t("605250"),
-        i = t("660078"),
+        i = t("605250"),
+        c = t("660078"),
         r = t("268491"),
         o = t("373469"),
         f = t("271938"),
@@ -33,12 +33,12 @@ function(e, a, t) {
         _onStreamApplication(e, a) {
             this.mode = "application", this.streamKey = e, this.director.onStreamBegin(this.applications, a)
         }
-        _onStreamDirectSource(e, a, t, s) {
+        _onStreamDirectSource(e, a, t, d) {
             this.mode = "verbatim-source", this.streamKey = e, this._onDirectorAction({
-                type: i.StreamDirectorActionType.STREAM,
+                type: c.StreamDirectorActionType.STREAM,
                 sourceId: a,
                 audioSourceId: t,
-                sound: s
+                sound: d
             })
         }
         _onStreamEnd(e) {
@@ -48,7 +48,7 @@ function(e, a, t) {
                     break;
                 case "verbatim-source":
                     this._onDirectorAction({
-                        type: i.StreamDirectorActionType.STOP
+                        type: c.StreamDirectorActionType.STOP
                     });
                     break;
                 default:
@@ -72,13 +72,13 @@ function(e, a, t) {
             let a = o.default.getCurrentUserActiveStream(),
                 t = r.default.getState();
             switch (e.type) {
-                case i.StreamDirectorActionType.STREAM:
+                case c.StreamDirectorActionType.STREAM:
                     if (null != a && (0, n.setStreamPaused)(a, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
                         let a = e.sourceId.split(":"),
-                            s = a[1];
-                        d.default.setGoLiveSource({
+                            d = a[1];
+                        s.default.setGoLiveSource({
                             cameraSettings: {
-                                videoDeviceGuid: s,
+                                videoDeviceGuid: d,
                                 audioDeviceGuid: e.audioSourceId
                             },
                             qualityOptions: {
@@ -89,11 +89,11 @@ function(e, a, t) {
                             context: b.MediaEngineContextTypes.STREAM
                         })
                     } else {
-                        var s;
-                        d.default.setGoLiveSource({
+                        var d;
+                        s.default.setGoLiveSource({
                             desktopSettings: {
                                 sourceId: e.sourceId,
-                                sound: null === (s = e.sound) || void 0 === s || s
+                                sound: null === (d = e.sound) || void 0 === d || d
                             },
                             qualityOptions: {
                                 preset: t.preset,
@@ -104,10 +104,10 @@ function(e, a, t) {
                         })
                     }
                     break;
-                case i.StreamDirectorActionType.PAUSE:
+                case c.StreamDirectorActionType.PAUSE:
                     null != a && (0, n.setStreamPaused)(a, !0);
                     break;
-                case i.StreamDirectorActionType.STOP:
+                case c.StreamDirectorActionType.STOP:
                     null != a && (0, u.default)(a);
                     break;
                 default:
@@ -132,44 +132,44 @@ function(e, a, t) {
             }
         }
         constructor() {
-            this.mode = null, this.applications = [], this.director = new i.StreamDirector(e => this._onDirectorAction(e)), s.default.subscribe("STREAM_START", e => {
+            this.mode = null, this.applications = [], this.director = new c.StreamDirector(e => this._onDirectorAction(e)), d.default.subscribe("STREAM_START", e => {
                 let {
                     streamType: a,
                     guildId: t,
-                    channelId: s,
-                    pid: d,
+                    channelId: d,
+                    pid: s,
                     sourceId: n,
-                    audioSourceId: i,
+                    audioSourceId: c,
                     sound: r
                 } = e, o = f.default.getId(), u = (0, l.encodeStreamKey)({
                     streamType: a,
                     guildId: t,
-                    channelId: s,
+                    channelId: d,
                     ownerId: o
                 });
-                null == d != (null == n) ? (null != d && this._onStreamApplication(u, d), null != n && this._onStreamDirectSource(u, n, i, r)) : new(0, c.default)("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(d, ", source-id: ").concat(n, ")"))
-            }), s.default.subscribe("STREAM_DELETE", e => {
+                null == s != (null == n) ? (null != s && this._onStreamApplication(u, s), null != n && this._onStreamDirectSource(u, n, c, r)) : new(0, i.default)("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(s, ", source-id: ").concat(n, ")"))
+            }), d.default.subscribe("STREAM_DELETE", e => {
                 let {
                     streamKey: a
                 } = e;
                 this._onStreamKilled(a)
-            }), s.default.subscribe("STREAM_STOP", e => {
+            }), d.default.subscribe("STREAM_STOP", e => {
                 let {
                     streamKey: a
                 } = e;
                 this._onStreamEnd(a)
-            }), s.default.subscribe("RUNNING_GAMES_CHANGE", e => {
+            }), d.default.subscribe("RUNNING_GAMES_CHANGE", e => {
                 let {
                     games: a
                 } = e;
                 this._onGameDetectionUpdate(a)
-            }), s.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
+            }), d.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
                 let {
                     videoState: a,
                     context: t
                 } = e;
                 t === b.MediaEngineContextTypes.STREAM && this._onCapturePaused(a === p.MediaEngineVideoStates.PAUSED)
-            }), s.default.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", e => {
+            }), d.default.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", e => {
                 let {
                     settings: a
                 } = e;
