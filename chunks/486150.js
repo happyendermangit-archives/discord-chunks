@@ -16,7 +16,7 @@ function(t, e, i) {
         let {
             hasSpotifyAccount: o,
             activity: c,
-            user: f
+            user: E
         } = t;
         (0, d.default)(o) && null != c && null != c.sync_id && (await (0, u.ensureSpotifyPlayable)(), await (0, u.ensureSpotifyPremium)().catch(t => ((0, l.openModalLazy)(async () => {
             let {
@@ -25,6 +25,6 @@ function(t, e, i) {
             return e => (0, n.jsx)(t, {
                 ...e
             })
-        }), Promise.reject(t))), a.sync(c, f.id), (0, r.default)(e, f, c, s))
+        }), Promise.reject(t))), a.sync(c, E.id), (0, r.default)(e, E, c, s))
     }
 }

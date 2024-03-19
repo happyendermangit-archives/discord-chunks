@@ -5,7 +5,7 @@ function(t, e, i) {
             return _
         },
         ensureSpotifyPlayable: function() {
-            return E
+            return f
         },
         isSpotifyPremium: function() {
             return I
@@ -26,13 +26,13 @@ function(t, e, i) {
         s = i("662285"),
         o = i("450484"),
         c = i("49111");
-    let f = 30 * u.default.Millis.SECOND;
+    let E = 30 * u.default.Millis.SECOND;
 
     function _(t) {
         return null != t.getActiveSocketAndDevice() || d.default.isProtocolRegistered()
     }
 
-    function E() {
+    function f() {
         let t = s.default.getActiveSocketAndDevice();
         if (null != t) return Promise.resolve(t);
         if (!d.default.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
@@ -50,7 +50,7 @@ function(t, e, i) {
         return new Promise((t, i) => {
             let n = setTimeout(() => {
                     s.default.removeChangeListener(l), i(Error("timeout launching spotify"))
-                }, f),
+                }, E),
                 l = () => {
                     let i = s.default.getPlayableComputerDevices();
                     for (let {

@@ -1,6 +1,6 @@
 function(e, a, t) {
-    var d = t("868148");
+    var s = t("868148");
     e.exports = function(e) {
-        return (null == e ? 0 : e.length) ? d(e, 1) : []
+        return (null == e ? 0 : e.length) ? s(e, 1) : []
     }
 }

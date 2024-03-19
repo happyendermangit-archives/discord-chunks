@@ -8,7 +8,7 @@ function(t, e, i) {
             return _
         },
         useEmbeddedActivityLaunchability: function() {
-            return E
+            return f
         },
         getEmbeddedActivityLaunchabilityLabel: function() {
             return I
@@ -21,7 +21,7 @@ function(t, e, i) {
         s = i("126939"),
         o = i("702173"),
         c = i("49111"),
-        f = i("782340");
+        E = i("782340");
 
     function _(t) {
         let {
@@ -45,7 +45,7 @@ function(t, e, i) {
         return 0
     }
 
-    function E(t) {
+    function f(t) {
         let e = (0, a.useStateFromStores)([u.default, r.default, d.default], () => _({
             channelId: t,
             ChannelStore: u.default,
@@ -58,11 +58,11 @@ function(t, e, i) {
     function I(t) {
         switch (t) {
             case 0:
-                return f.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY;
+                return E.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY;
             case 1:
-                return f.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
+                return E.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
             default:
-                return f.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL
+                return E.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL
         }
     }(n = l || (l = {}))[n.CAN_LAUNCH = 0] = "CAN_LAUNCH", n[n.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", n[n.NO_CHANNEL_CONNECT_PERMISSION = 2] = "NO_CHANNEL_CONNECT_PERMISSION", n[n.NO_CHANNEL = 3] = "NO_CHANNEL", n[n.NO_GUILD = 4] = "NO_GUILD", n[n.IS_AFK_CHANNEL = 5] = "IS_AFK_CHANNEL", n[n.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 6] = "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS"
 }

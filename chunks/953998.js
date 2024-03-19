@@ -2,7 +2,7 @@ function(t, e, i) {
     "use strict";
     i.r(e), i.d(e, {
         default: function() {
-            return f
+            return E
         }
     });
     var n = i("446674"),
@@ -41,7 +41,7 @@ function(t, e, i) {
         }
     }
     c.displayName = "ActivityLauncherStore";
-    var f = new c(a.default, {
+    var E = new c(a.default, {
         OVERLAY_INITIALIZE: function(t) {
             let {
                 activityLauncherStates: e

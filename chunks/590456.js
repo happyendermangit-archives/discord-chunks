@@ -2,22 +2,22 @@ function(t, e, i) {
     "use strict";
     i.r(e), i.d(e, {
         UserProfileSections: function() {
-            return a
+            return s
         },
         UserProfileTypes: function() {
-            return u
+            return o
         },
         getBadgeAsset: function() {
-            return d
+            return A
         }
     });
-    var n, l, a, u, r = i("49111");
+    var n, l, a, u, r, d, s, o, c, E, _, f, I = i("49111");
 
-    function d(t) {
+    function A(t) {
         let {
             API_ENDPOINT: e,
             CDN_HOST: i
         } = window.GLOBAL_ENV;
-        return null != i ? "".concat(location.protocol, "//").concat(i, "/badge-icons/").concat(t, ".png") : "".concat(location.protocol).concat(e).concat(r.Endpoints.BADGE_ICON(t))
-    }(n = a || (a = {})).USER_INFO = "USER_INFO", n.USER_INFO_CONNECTIONS = "USER_INFO_CONNECTIONS", n.ACTIVITY = "ACTIVITY", n.MUTUAL_GUILDS = "MUTUAL_GUILDS", n.MUTUAL_FRIENDS = "MUTUAL_FRIENDS", n.BOT_DATA_ACCESS = "BOT_DATA_ACCESS", n.RECENT_GAMES = "RECENT_GAMES", (l = u || (u = {})).POPOUT = "POPOUT", l.MODAL = "MODAL", l.SETTINGS = "SETTINGS", l.PANEL = "PANEL", l.CARD = "CARD", l.POMELO_POPOUT = "POMELO_POPOUT", l.CANCEL_MODAL = "CANCEL_MODAL"
+        return null != i ? "".concat(location.protocol, "//").concat(i, "/badge-icons/").concat(t, ".png") : "".concat(location.protocol).concat(e).concat(I.Endpoints.BADGE_ICON(t))
+    }(n = s || (s = {})).USER_INFO = "USER_INFO", n.USER_INFO_CONNECTIONS = "USER_INFO_CONNECTIONS", n.ACTIVITY = "ACTIVITY", n.MUTUAL_GUILDS = "MUTUAL_GUILDS", n.MUTUAL_FRIENDS = "MUTUAL_FRIENDS", n.BOT_DATA_ACCESS = "BOT_DATA_ACCESS", n.RECENT_GAMES = "RECENT_GAMES", (l = o || (o = {})).POPOUT = "POPOUT", l.MODAL = "MODAL", l.SETTINGS = "SETTINGS", l.PANEL = "PANEL", l.CARD = "CARD", l.POMELO_POPOUT = "POMELO_POPOUT", l.CANCEL_MODAL = "CANCEL_MODAL", (a = c || (c = {})).POPOUT = "POPOUT", a.MODAL = "MODAL", a.DM_PANEL = "DM_PANEL", a.ACCOUNT_POPOUT = "ACCOUNT_POPOUT", a.ACTION_SHEET = "ACTION_SHEET", (u = E || (E = {}))[u.NICKNAME = 0] = "NICKNAME", u[u.PRONOUNS = 1] = "PRONOUNS", u[u.AVATAR = 2] = "AVATAR", u[u.ANIMATED_AVATAR = 3] = "ANIMATED_AVATAR", u[u.BANNER = 4] = "BANNER", u[u.ANIMATED_BANNER = 5] = "ANIMATED_BANNER", u[u.BIO = 6] = "BIO", u[u.THEME = 7] = "THEME", u[u.AVATAR_DECORATION = 8] = "AVATAR_DECORATION", u[u.PROFILE_EFFECT = 9] = "PROFILE_EFFECT", (r = _ || (_ = {})).VIEW = "VIEW", r.SEND_MESSAGE = "SEND_MESSAGE", r.SEND_DIRECT_MESSAGE = "SEND_DIRECT_MESSAGE", r.SEND_FRIEND_REQUEST = "SEND_FRIEND_REQUEST", r.ACCEPT_FRIEND_REQUEST = "ACCEPT_FRIEND_REQUEST", r.IGNORE_FRIEND_REQUEST = "IGNORE_FRIEND_REQUEST", r.CANCEL_FRIEND_REQUEST = "CANCEL_FRIEND_REQUEST", r.REMOVE_FRIEND = "REMOVE_FRIEND", r.BLOCK = "BLOCK", r.UNBLOCK = "UNBLOCK", r.REPORT = "REPORT", r.COPY_USERNAME = "COPY_USERNAME", r.COPY_USER_ID = "COPY_USER_ID", r.PRESS_VIEW_PROFILE = "PRESS_VIEW_PROFILE", r.PRESS_OPTIONS = "PRESS_OPTIONS", r.PRESS_BADGE = "PRESS_BADGE", r.PRESS_SECTION = "PRESS_SECTION", r.PRESS_PREMIUM_UPSELL = "PRESS_PREMIUM_UPSELL", r.JOIN_ACTIVITY = "JOIN_ACTIVITY", r.SET_NOTE = "SET_NOTE", r.SET_STATUS = "SET_STATUS", r.SET_CUSTOM_STATUS = "SET_CUSTOM_STATUS", r.SET_FRIEND_NICKNAME = "SET_FRIEND_NICKNAME", r.SWITCH_ACCOUNTS = "SWITCH_ACCOUNTS", r.EDIT_PROFILE = "EDIT_PROFILE", r.EDIT_GUILD_PROFILE = "EDIT_GUILD_PROFILE", r.GIFT_PREMIUM = "GIFT_PREMIUM", r.VOICE_CALL = "VOICE_CALL", r.VIDEO_CALL = "VIDEO_CALL", r.SET_VOLUME = "SET_VOLUME", r.MUTE = "MUTE", r.MUTE_SOUNDBOARD = "MUTE_SOUNDBOARD", r.DISABLE_VIDEO = "DISABLE_VIDEO", r.DEAFEN = "DEAFEN", r.DISCONNECT = "DISCONNECT", (d = f || (f = {})).VOICE = "VOICE", d.PLAYING = "PLAYING", d.STREAMING = "STREAMING", d.LISTENING = "LISTENING", d.WATCHING = "WATCHING", d.CUSTOM_STATUS = "CUSTOM_STATUS", d.COMPETING = "COMPETING", d.HANG_STATUS = "HANG_STATUS"
 }

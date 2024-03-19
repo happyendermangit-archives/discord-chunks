@@ -18,17 +18,17 @@ function(t, e, i) {
             channelId: e,
             timeoutMs: i = 1e4,
             bypassChangeModal: c = !1
-        } = t, f = u.default.getChannel(e);
-        if (null == f) return !1;
+        } = t, E = u.default.getChannel(e);
+        if (null == E) return !1;
         let _ = await l.default.handleVoiceConnect({
             bypassGuildIdCheck: !0,
             bypassChangeModal: c,
-            channel: f,
+            channel: E,
             connected: s.default.isInChannel(e),
             needSubscriptionToAccess: (0, a.getChannelRoleSubscriptionStatus)(e, u.default, n.default, r.default).needSubscriptionToAccess
         });
         if (!_) return !1;
-        let E = new Promise((t, n) => {
+        let f = new Promise((t, n) => {
             let l = setTimeout(() => {
                 n(new o("Joining voice channel has timed out."))
             }, i);
@@ -38,7 +38,7 @@ function(t, e, i) {
             })
         });
         try {
-            await E
+            await f
         } catch (t) {
             if (t instanceof o) return !1;
             throw t

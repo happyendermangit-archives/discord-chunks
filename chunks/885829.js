@@ -14,9 +14,9 @@ function(t, e, i) {
         s = i("305961"),
         o = i("957255"),
         c = i("697218"),
-        f = i("800762"),
+        E = i("800762"),
         _ = i("191225"),
-        E = i("706508"),
+        f = i("706508"),
         I = i("126939"),
         A = i("501260"),
         T = i("782340");
@@ -25,32 +25,32 @@ function(t, e, i) {
         let {
             channelId: i,
             applicationId: C,
-            instanceId: v,
-            inputApplication: S,
-            analyticsLocations: N,
-            embeddedActivitiesManager: p
-        } = t, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(t => t.applicationId === C && (null == v || t.instanceId === v)), D = S;
-        if (null == D) {
+            instanceId: S,
+            inputApplication: N,
+            analyticsLocations: v,
+            embeddedActivitiesManager: O
+        } = t, D = _.default.getEmbeddedActivitiesForChannel(i), p = D.find(t => t.applicationId === C && (null == S || t.instanceId === S)), y = N;
+        if (null == y) {
             let t = await l.default.fetchApplication(C);
-            D = r.default.createFromServer(t)
+            y = r.default.createFromServer(t)
         }
-        if (null == h || null == D) return;
-        let O = c.default.getCurrentUser(),
+        if (null == p || null == y) return;
+        let h = c.default.getCurrentUser(),
             L = d.default.getChannel(i),
-            g = (0, A.default)({
-                userId: null == O ? void 0 : O.id,
-                application: D,
+            P = (0, A.default)({
+                userId: null == h ? void 0 : h.id,
+                application: y,
                 channelId: i,
-                currentUser: O,
+                currentUser: h,
                 isActivitiesEnabledForCurrentPlatform: (0, I.getIsActivitiesEnabledForCurrentPlatform)(L),
                 ChannelStore: d.default,
-                VoiceStateStore: f.default,
+                VoiceStateStore: E.default,
                 PermissionStore: o.default,
                 GuildStore: s.default
             }),
-            m = _.default.getSelfEmbeddedActivityForChannel(i),
-            P = null == m ? void 0 : m.applicationId,
-            M = null != P && null !== (e = a.default.getApplication(P)) && void 0 !== e ? e : void 0;
+            g = _.default.getSelfEmbeddedActivityForChannel(i),
+            m = null == g ? void 0 : g.applicationId,
+            R = null != m && null !== (e = a.default.getApplication(m)) && void 0 !== e ? e : void 0;
         ! function(t) {
             let {
                 embeddedActivityJoinability: e,
@@ -95,15 +95,15 @@ function(t, e, i) {
                     })
             }
         }({
-            embeddedActivityJoinability: g,
+            embeddedActivityJoinability: P,
             handleCanJoin: async function t() {
-                null != h && await (0, E.default)({
-                    applicationId: h.applicationId,
-                    currentEmbeddedApplication: M,
+                null != p && await (0, f.default)({
+                    applicationId: p.applicationId,
+                    currentEmbeddedApplication: R,
                     activityChannelId: i,
                     locationObject: {},
-                    embeddedActivitiesManager: p,
-                    analyticsLocations: N
+                    embeddedActivitiesManager: O,
+                    analyticsLocations: v
                 })
             }
         })

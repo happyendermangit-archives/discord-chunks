@@ -19,14 +19,14 @@ function(t, e, i) {
             channelId: s,
             currentUser: o,
             isEmbedded: c,
-            ChannelStore: f,
+            ChannelStore: E,
             GuildStore: _,
-            GuildMemberCountStore: E,
+            GuildMemberCountStore: f,
             RelationshipStore: I,
             SelectedChannelStore: A,
             VoiceStateStore: T,
             PermissionStore: C
-        } = t, v = f.getChannel(s), S = (0, l.getIsActivitiesEnabledForCurrentPlatform)(v);
+        } = t, S = E.getChannel(s), N = (0, l.getIsActivitiesEnabledForCurrentPlatform)(S);
         if (null == e) return !1;
         if (c) return (0, a.default)({
             userId: e.id,
@@ -34,8 +34,8 @@ function(t, e, i) {
             channelId: s,
             currentUser: o,
             application: d,
-            isActivitiesEnabledForCurrentPlatform: S,
-            ChannelStore: f,
+            isActivitiesEnabledForCurrentPlatform: N,
+            ChannelStore: E,
             VoiceStateStore: T,
             PermissionStore: C,
             GuildStore: _
@@ -43,7 +43,7 @@ function(t, e, i) {
         if (!(0, n.isDesktop)()) return !1;
         if ((0, u.default)(i, r.ActivityFlags.PARTY_PRIVACY_FRIENDS) && I.isFriend(e.id)) return !0;
         if ((0, u.default)(i, r.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)) {
-            let t = f.getChannel(A.getVoiceChannelId());
+            let t = E.getChannel(A.getVoiceChannelId());
             if (null == t || !T.isInChannel(t.id, e.id)) return !1;
             switch (t.type) {
                 case r.ChannelTypes.DM:
@@ -52,7 +52,7 @@ function(t, e, i) {
             }
             let i = _.getGuild(t.getGuildId());
             if (null == i || i.hasFeature(r.GuildFeatures.COMMUNITY)) return !1;
-            let n = E.getMemberCount(i.id);
+            let n = f.getMemberCount(i.id);
             return null != n && n < 100
         }
         return !1

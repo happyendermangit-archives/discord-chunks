@@ -14,9 +14,9 @@ function(t, e, i) {
         s = i("191225"),
         o = i("213765"),
         c = i("370507"),
-        f = i("772926"),
+        E = i("772926"),
         _ = i("49111");
-    async function E(t, e) {
+    async function f(t, e) {
         try {
             var i;
             return null !== (i = u.default.getApplication(t)) && void 0 !== i ? i : r.default.createFromServer(await a.default.fetchApplication(t))
@@ -57,7 +57,7 @@ function(t, e, i) {
         } = t;
         if (null == l.nsfwAllowed) {
             var a, u;
-            let t = null != e ? e : await E(i, n.getGuildId());
+            let t = null != e ? e : await f(i, n.getGuildId());
             if (null == t) return !1;
             let l = null !== (u = null === (a = t.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) && void 0 !== u && u;
             if (l) {
@@ -78,9 +78,9 @@ function(t, e, i) {
             application: e,
             applicationId: i,
             channel: n
-        } = t, l = null != e ? e : await E(i, n.getGuildId());
+        } = t, l = null != e ? e : await f(i, n.getGuildId());
         return null != l && (!!((0, d.hasFlag)(l.flags, _.ApplicationFlags.EMBEDDED_RELEASED) || s.default.hasActivityEverBeenLaunched(i)) || new Promise(t => {
-            (0, f.confirmExternalAppLaunchAlert)({
+            (0, E.confirmExternalAppLaunchAlert)({
                 application: l,
                 onConfirm: () => t(!0),
                 onCancel: () => t(!1)
