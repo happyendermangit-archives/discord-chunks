@@ -5,8 +5,8 @@ function(e, a, t) {
             return j
         }
     }), t("70102");
-    var d = t("913144"),
-        s = t("629109"),
+    var s = t("913144"),
+        d = t("629109"),
         n = t("990766"),
         i = t("605250"),
         c = t("660078"),
@@ -33,12 +33,12 @@ function(e, a, t) {
         _onStreamApplication(e, a) {
             this.mode = "application", this.streamKey = e, this.director.onStreamBegin(this.applications, a)
         }
-        _onStreamDirectSource(e, a, t, d) {
+        _onStreamDirectSource(e, a, t, s) {
             this.mode = "verbatim-source", this.streamKey = e, this._onDirectorAction({
                 type: c.StreamDirectorActionType.STREAM,
                 sourceId: a,
                 audioSourceId: t,
-                sound: d
+                sound: s
             })
         }
         _onStreamEnd(e) {
@@ -75,10 +75,10 @@ function(e, a, t) {
                 case c.StreamDirectorActionType.STREAM:
                     if (null != a && (0, n.setStreamPaused)(a, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
                         let a = e.sourceId.split(":"),
-                            d = a[1];
-                        s.default.setGoLiveSource({
+                            s = a[1];
+                        d.default.setGoLiveSource({
                             cameraSettings: {
-                                videoDeviceGuid: d,
+                                videoDeviceGuid: s,
                                 audioDeviceGuid: e.audioSourceId
                             },
                             qualityOptions: {
@@ -89,11 +89,11 @@ function(e, a, t) {
                             context: b.MediaEngineContextTypes.STREAM
                         })
                     } else {
-                        var d;
-                        s.default.setGoLiveSource({
+                        var s;
+                        d.default.setGoLiveSource({
                             desktopSettings: {
                                 sourceId: e.sourceId,
-                                sound: null === (d = e.sound) || void 0 === d || d
+                                sound: null === (s = e.sound) || void 0 === s || s
                             },
                             qualityOptions: {
                                 preset: t.preset,
@@ -132,44 +132,44 @@ function(e, a, t) {
             }
         }
         constructor() {
-            this.mode = null, this.applications = [], this.director = new c.StreamDirector(e => this._onDirectorAction(e)), d.default.subscribe("STREAM_START", e => {
+            this.mode = null, this.applications = [], this.director = new c.StreamDirector(e => this._onDirectorAction(e)), s.default.subscribe("STREAM_START", e => {
                 let {
                     streamType: a,
                     guildId: t,
-                    channelId: d,
-                    pid: s,
+                    channelId: s,
+                    pid: d,
                     sourceId: n,
                     audioSourceId: c,
                     sound: r
                 } = e, o = f.default.getId(), u = (0, l.encodeStreamKey)({
                     streamType: a,
                     guildId: t,
-                    channelId: d,
+                    channelId: s,
                     ownerId: o
                 });
-                null == s != (null == n) ? (null != s && this._onStreamApplication(u, s), null != n && this._onStreamDirectSource(u, n, c, r)) : new(0, i.default)("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(s, ", source-id: ").concat(n, ")"))
-            }), d.default.subscribe("STREAM_DELETE", e => {
+                null == d != (null == n) ? (null != d && this._onStreamApplication(u, d), null != n && this._onStreamDirectSource(u, n, c, r)) : new(0, i.default)("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(d, ", source-id: ").concat(n, ")"))
+            }), s.default.subscribe("STREAM_DELETE", e => {
                 let {
                     streamKey: a
                 } = e;
                 this._onStreamKilled(a)
-            }), d.default.subscribe("STREAM_STOP", e => {
+            }), s.default.subscribe("STREAM_STOP", e => {
                 let {
                     streamKey: a
                 } = e;
                 this._onStreamEnd(a)
-            }), d.default.subscribe("RUNNING_GAMES_CHANGE", e => {
+            }), s.default.subscribe("RUNNING_GAMES_CHANGE", e => {
                 let {
                     games: a
                 } = e;
                 this._onGameDetectionUpdate(a)
-            }), d.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
+            }), s.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
                 let {
                     videoState: a,
                     context: t
                 } = e;
                 t === b.MediaEngineContextTypes.STREAM && this._onCapturePaused(a === p.MediaEngineVideoStates.PAUSED)
-            }), d.default.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", e => {
+            }), s.default.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", e => {
                 let {
                     settings: a
                 } = e;

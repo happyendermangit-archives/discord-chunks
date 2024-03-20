@@ -5,18 +5,18 @@ function(e, a, t) {
             return l
         }
     });
-    var d = t("37983"),
-        s = t("884691"),
+    var s = t("37983"),
+        d = t("884691"),
         n = t("414456"),
         i = t.n(n),
         c = t("474557"),
         r = t("793932"),
         o = t("125047");
-    class f extends s.Component {
+    class f extends d.Component {
         render() {
-            return (0, d.jsx)("div", {
+            return (0, s.jsx)("div", {
                 className: i(r.app, o.vertical),
-                children: (0, d.jsx)(c.default, {})
+                children: (0, s.jsx)(c.default, {})
             })
         }
     }
