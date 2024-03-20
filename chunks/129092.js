@@ -29,7 +29,7 @@ function(e, t, n) {
             return h
         },
         NewMemberActionTypes: function() {
-            return a
+            return r
         },
         newMemberActionFromServer: function() {
             return R
@@ -41,28 +41,28 @@ function(e, t, n) {
             return A
         },
         settingsToServer: function() {
-            return g
-        },
-        actionsFromServer: function() {
-            return N
-        },
-        isWelcomeMessageEmpty: function() {
             return I
         },
+        actionsFromServer: function() {
+            return g
+        },
+        isWelcomeMessageEmpty: function() {
+            return N
+        },
         isSettingsEmpty: function() {
-            return y
+            return M
         },
         isSettingsValid: function() {
-            return m
+            return y
         },
         isChannelValidForResourceChannel: function() {
-            return M
+            return m
         },
         isChannelValidForNewMemberAction: function() {
             return C
         }
     });
-    var l, a, r = n("42203"),
+    var l, r, a = n("42203"),
         u = n("449008"),
         s = n("991170"),
         o = n("49111");
@@ -113,53 +113,53 @@ function(e, t, n) {
             welcome_message: t,
             new_member_actions: n,
             resource_channels: l,
-            enabled: a
+            enabled: r
         } = e, s = {
             authorIds: t.author_ids,
             message: t.message
-        }, o = n.filter(e => (0, u.isNotNullish)(r.default.getChannel(e.channel_id))).map(R), i = l.filter(e => (0, u.isNotNullish)(r.default.getChannel(e.channel_id))).map(p);
+        }, o = n.filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channel_id))).map(R), i = l.filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channel_id))).map(p);
         return {
             welcomeMessage: s,
             newMemberActions: o,
             resourceChannels: i,
-            enabled: a
+            enabled: r
         }
     }
 
-    function g(e, t) {
+    function I(e, t) {
         var n, l;
         if (null == t) return null;
         let {
-            welcomeMessage: a,
+            welcomeMessage: r,
             newMemberActions: s,
             resourceChannels: o,
             enabled: i
         } = t, c = {
-            author_ids: null !== (n = null == a ? void 0 : a.authorIds) && void 0 !== n ? n : [],
-            message: null !== (l = null == a ? void 0 : a.message) && void 0 !== l ? l : ""
-        }, E = (null != s ? s : []).filter(e => (0, u.isNotNullish)(r.default.getChannel(e.channelId))).map(e => {
-            var t, n, l, a, r, u, s;
+            author_ids: null !== (n = null == r ? void 0 : r.authorIds) && void 0 !== n ? n : [],
+            message: null !== (l = null == r ? void 0 : r.message) && void 0 !== l ? l : ""
+        }, E = (null != s ? s : []).filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channelId))).map(e => {
+            var t, n, l, r, a, u, s;
             return {
                 channel_id: e.channelId,
                 action_type: e.actionType,
                 title: e.title,
                 description: e.description,
                 emoji: {
-                    id: null !== (a = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== a ? a : void 0,
-                    name: null !== (r = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== r ? r : void 0,
+                    id: null !== (r = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : void 0,
+                    name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
                     animated: null !== (u = null === (l = e.emoji) || void 0 === l ? void 0 : l.animated) && void 0 !== u ? u : void 0
                 },
                 icon: null !== (s = e.icon) && void 0 !== s ? s : void 0
             }
-        }), d = (null != o ? o : []).filter(e => (0, u.isNotNullish)(r.default.getChannel(e.channelId))).map(e => {
-            var t, n, l, a, r, u, s;
+        }), d = (null != o ? o : []).filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channelId))).map(e => {
+            var t, n, l, r, a, u, s;
             return {
                 channel_id: e.channelId,
                 title: e.title,
                 description: e.description,
                 emoji: {
-                    id: null !== (a = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== a ? a : void 0,
-                    name: null !== (r = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== r ? r : void 0,
+                    id: null !== (r = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : void 0,
+                    name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
                     animated: null !== (u = null === (l = e.emoji) || void 0 === l ? void 0 : l.animated) && void 0 !== u ? u : void 0
                 },
                 icon: null !== (s = e.icon) && void 0 !== s ? s : void 0
@@ -172,28 +172,28 @@ function(e, t, n) {
             resource_channels: d,
             enabled: i
         }
-    }(l = a || (a = {}))[l.VIEW = 0] = "VIEW", l[l.CHAT = 1] = "CHAT";
-    let N = e => {
+    }(l = r || (r = {}))[l.VIEW = 0] = "VIEW", l[l.CHAT = 1] = "CHAT";
+    let g = e => {
         if (null == e) return null;
         let t = {};
         for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
         return t
     };
 
-    function I(e) {
+    function N(e) {
         return null == e || (null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0
     }
 
+    function M(e) {
+        return null == e || !!N(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0
+    }
+
     function y(e) {
-        return null == e || !!I(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0
+        var t, n;
+        return null != e && (!!M(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < i) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
     }
 
     function m(e) {
-        var t, n;
-        return null != e && (!!y(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < i) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
-    }
-
-    function M(e) {
         return e.type === o.ChannelTypes.GUILD_TEXT && !s.default.canEveryoneRole(o.Permissions.SEND_MESSAGES, e) && s.default.canEveryoneRole(o.Permissions.VIEW_CHANNEL, e)
     }
 
