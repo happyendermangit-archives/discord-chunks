@@ -59,7 +59,6 @@ function(N, I, A) {
         Storefront: {
             BENEFITS_TITLE: "Exclusive to this tier",
             PRODUCT_DETAILS: "Product Details",
-            SEE_MORE_DETAILS: "See more details",
             SERVER_SUBSCRIPTION: "Server subscription",
             USER_SUBSCRIPTION: "Personal subscription",
             MORE_BENEFITS: "+ {count, plural, one {# more benefit} other {# more benefits}}"
