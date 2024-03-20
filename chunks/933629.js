@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         EXPRESSION_TOOLTIP_PROPS: function() {
-            return Z
+            return J
         },
         renderVideoComponent: function() {
             return X
@@ -93,11 +93,11 @@ function(e, t, n) {
         W = n("719347"),
         Y = n("782340"),
         z = n("464354");
-    let Z = {
+    let J = {
             delay: 300,
             position: "top"
         },
-        J = e => t => {
+        Z = e => t => {
             null == e || e(t), (0, G.setVolume)(t)
         },
         q = e => t => {
@@ -114,7 +114,7 @@ function(e, t, n) {
             renderAdjacentContent: o,
             renderOverlayContent: u,
             ...d
-        } = e, c = J(t), f = q(n);
+        } = e, c = Z(t), f = q(n);
         return i = null == i ? G.getVolume : i, l = null == l ? G.getMuted : l, (0, a.jsxs)(s.Fragment, {
             children: [(0, a.jsx)(M.default, {
                 ...d,
@@ -138,7 +138,7 @@ function(e, t, n) {
             onVolumeHide: r,
             renderAdjacentContent: o,
             ...u
-        } = e, d = J(t), c = q(i);
+        } = e, d = Z(t), c = q(i);
         return n = null == n ? G.getVolume : n, (0, a.jsxs)(s.Fragment, {
             children: [(0, a.jsx)(R.default, {
                 ...u,
@@ -159,7 +159,7 @@ function(e, t, n) {
             volume: n,
             onMute: i,
             ...l
-        } = e, s = J(t), r = q(i);
+        } = e, s = Z(t), r = q(i);
         return n = null == n ? G.getVolume : n, (0, a.jsx)(N.default, {
             ...l,
             onVolumeChange: s,
@@ -427,18 +427,18 @@ function(e, t, n) {
             V = null !== (n = (0, f.useStateFromStores)([_.default], () => _.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
             W = null == k ? void 0 : null === (t = k[V]) || void 0 === t ? void 0 : t.topic;
         null == W && null == E && (null == k ? void 0 : k.length) >= 1 && (W = null === (i = k[0]) || void 0 === i ? void 0 : i.topic);
-        let Z = s.useMemo(() => d.debounce(e => {
+        let J = s.useMemo(() => d.debounce(e => {
                 var t;
                 I(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
             }, 64), [I]),
-            J = s.useMemo(() => d.throttle(() => {
+            Z = s.useMemo(() => d.throttle(() => {
                 (0, C.setHighlightedSummary)(null)
             }, 1200, {
                 trailing: !1
             }), []),
             q = s.useCallback(e => {
-                J(), Z(e)
-            }, [Z, J]),
+                Z(), J(e)
+            }, [J, Z]),
             [X, Q] = s.useState(!1),
             $ = s.useCallback(() => {
                 w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
@@ -672,10 +672,10 @@ function(e, t, n) {
             W = s.useCallback(e => {
                 V(), H(e)
             }, [H, V]),
-            [Z, J] = s.useState(!1),
+            [J, Z] = s.useState(!1),
             q = s.useCallback(() => {
                 w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
-                    topics_dropdown_open: !Z,
+                    topics_dropdown_open: !J,
                     num_summaries: A.length,
                     message_counts: A.map(e => e.count),
                     start_message_ids: A.map(e => e.startId),
@@ -684,8 +684,8 @@ function(e, t, n) {
                     guild_id: l.guild_id,
                     channel_id: l.id,
                     channel_type: l.type
-                }), J(!Z)
-            }, [Z, A, J, l]),
+                }), Z(!J)
+            }, [J, A, Z, l]),
             X = s.useCallback(function(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : K.SummariesTopicClickedSource.PILL_DROPDOWN,
                     n = A[e];
@@ -719,21 +719,21 @@ function(e, t, n) {
             }, [k, X]),
             ee = s.useCallback(e => {
                 var t;
-                J(e);
+                Z(e);
                 let n = null === (t = N.current) || void 0 === t ? void 0 : t.scrollTop;
                 null != n && v(n)
             }, []);
         s.useEffect(() => {
-            if (null != I && Z) {
+            if (null != I && J) {
                 var e;
                 null === (e = N.current) || void 0 === e || e.scrollTo({
                     top: I
                 })
             }
-        }, [I, Z]);
+        }, [I, J]);
         let et = s.useCallback(e => {
             var t;
-            !((0, c.isElement)(e.target) && (null === (t = E.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            !((0, c.isElement)(e.target) && (null === (t = E.current) || void 0 === t ? void 0 : t.contains(e.target))) && (J && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !1,
                 num_summaries: A.length,
                 message_counts: A.map(e => e.count),
@@ -744,7 +744,7 @@ function(e, t, n) {
                 channel_id: l.id,
                 channel_type: l.type
             }), ee(!1))
-        }, [Z, A, l, ee]);
+        }, [J, A, l, ee]);
         s.useEffect(() => (r.addAutomaticAnchorCallback(W), () => {
             r.removeAutomaticAnchorCallback(W)
         }), [r, W]), s.useEffect(() => {
@@ -773,8 +773,8 @@ function(e, t, n) {
                     onClick: q,
                     children: (0, a.jsxs)("div", {
                         className: o({
-                            [z.topicsPillTextUnselected]: !Z,
-                            [z.topicsPillTextSelected]: Z
+                            [z.topicsPillTextUnselected]: !J,
+                            [z.topicsPillTextSelected]: J
                         }),
                         children: [(0, a.jsx)(D.default, {
                             className: z.topicsPillSummaryIcon,
@@ -817,7 +817,7 @@ function(e, t, n) {
                         })
                     })]
                 })]
-            }), Z && (0, a.jsxs)("div", {
+            }), J && (0, a.jsxs)("div", {
                 className: z.topicsDropdown,
                 children: [(0, a.jsxs)("div", {
                     className: z.topicsDropdownHeading,

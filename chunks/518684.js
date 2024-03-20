@@ -5,21 +5,21 @@ function(e, a, t) {
             return o
         }
     });
-    var d = t("393414"),
-        s = t("227602"),
+    var s = t("393414"),
+        d = t("227602"),
         n = t("773336"),
         i = t("50885"),
         c = t("49111");
 
     function r(e, a) {
-        return !(e === c.NavigateEventSource.BROWSER && s.default.hasKeybind(c.KeyboardDeviceTypes.MOUSE_BUTTON, a)) && !0
+        return !(e === c.NavigateEventSource.BROWSER && d.default.hasKeybind(c.KeyboardDeviceTypes.MOUSE_BUTTON, a)) && !0
     }
     var o = new class e {
         initialize() {
             (0, n.isDesktop)() && (i.default.on("NAVIGATE_BACK", (e, a) => {
-                r(a, c.MouseKeyCodes.Back) && (0, d.back)()
+                r(a, c.MouseKeyCodes.Back) && (0, s.back)()
             }), i.default.on("NAVIGATE_FORWARD", (e, a) => {
-                r(a, c.MouseKeyCodes.Forward) && (0, d.forward)()
+                r(a, c.MouseKeyCodes.Forward) && (0, s.forward)()
             }))
         }
     }

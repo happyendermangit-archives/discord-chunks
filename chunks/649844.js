@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return v
+            return p
         }
     });
     var i = n("37983");
@@ -17,31 +17,31 @@ function(e, t, n) {
         d = n("659500"),
         f = n("719923"),
         h = n("49111"),
-        E = n("646718");
+        v = n("646718");
 
-    function v(e) {
+    function p(e) {
         let {
             initialPlanId: t,
-            followupSKUInfo: v,
+            followupSKUInfo: p,
             onClose: C,
-            onComplete: p,
-            onSubscriptionConfirmation: _,
-            analyticsLocations: I,
-            analyticsObject: m,
+            onComplete: E,
+            onSubscriptionConfirmation: m,
+            analyticsLocations: _,
+            analyticsObject: g,
             analyticsLocation: N,
-            analyticsSourceLocation: g,
-            isGift: T = !1,
-            giftMessage: S,
-            subscriptionTier: M,
-            trialId: R,
-            postSuccessGuild: x,
+            analyticsSourceLocation: I,
+            isGift: S = !1,
+            giftMessage: x,
+            subscriptionTier: T,
+            trialId: M,
+            postSuccessGuild: R,
             openInvoiceId: A,
-            applicationId: y,
-            referralTrialOfferId: w,
-            giftRecipient: b,
+            applicationId: b,
+            referralTrialOfferId: y,
+            giftRecipient: w,
             returnRef: L,
             subscription: P
-        } = null != e ? e : {}, V = !1, O = (0, r.v4)(), j = u.default.getCurrentUser(), U = (0, f.isPremiumExactly)(j, E.PremiumTypes.TIER_2);
+        } = null != e ? e : {}, V = !1, j = (0, r.v4)(), O = u.default.getCurrentUser(), U = (0, f.isPremiumExactly)(O, v.PremiumTypes.TIER_2);
         (0, s.openModalLazy)(async () => {
             let {
                 default: e
@@ -53,31 +53,31 @@ function(e, t, n) {
                 } = n;
                 return (0, i.jsx)(e, {
                     ...s,
-                    loadId: O,
-                    subscriptionTier: M,
-                    skuId: (0, f.castPremiumSubscriptionAsSkuId)(M),
-                    isGift: T,
-                    giftMessage: S,
-                    giftRecipient: b,
+                    loadId: j,
+                    subscriptionTier: T,
+                    skuId: (0, f.castPremiumSubscriptionAsSkuId)(T),
+                    isGift: S,
+                    giftMessage: x,
+                    giftRecipient: w,
                     initialPlanId: t,
-                    followupSKUInfo: v,
+                    followupSKUInfo: p,
                     onClose: (e, t) => {
-                        r(), null == C || C(e), e && (null == _ || _(), !T && null != t && t === E.PremiumSubscriptionSKUs.TIER_2 && !U && d.ComponentDispatch.dispatch(h.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+                        r(), null == C || C(e), e && (null == m || m(), !S && null != t && t === v.PremiumSubscriptionSKUs.TIER_2 && !U && d.ComponentDispatch.dispatch(h.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
                     },
                     onComplete: () => {
-                        V = !0, null == p || p(), !T && (0, o.setCanPlayWowMoment)(!0)
+                        V = !0, null == E || E(), !S && (0, o.setCanPlayWowMoment)(!0)
                     },
-                    onSubscriptionConfirmation: _,
-                    analyticsLocations: I,
-                    analyticsObject: m,
+                    onSubscriptionConfirmation: m,
+                    analyticsLocations: _,
+                    analyticsObject: g,
                     analyticsLocation: N,
-                    analyticsSourceLocation: g,
-                    trialId: R,
-                    postSuccessGuild: x,
-                    planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
+                    analyticsSourceLocation: I,
+                    trialId: M,
+                    postSuccessGuild: R,
+                    planGroup: v.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                     openInvoiceId: A,
-                    applicationId: y,
-                    referralTrialOfferId: w,
+                    applicationId: b,
+                    referralTrialOfferId: y,
                     returnRef: L,
                     subscription: P
                 })
@@ -86,16 +86,16 @@ function(e, t, n) {
             modalKey: "payment-modal",
             onCloseCallback: () => {
                 !V && c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                    load_id: O,
+                    load_id: j,
                     payment_type: h.PurchaseTypeToAnalyticsPaymentType[h.PurchaseTypes.SUBSCRIPTION],
-                    location: null != N ? N : m,
-                    source: g,
+                    location: null != N ? N : g,
+                    source: I,
                     subscription_type: h.SubscriptionTypes.PREMIUM,
-                    is_gift: T,
-                    eligible_for_trial: null != R,
-                    application_id: y,
-                    location_stack: I
-                }), (0, l.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == C || C(V), V && (null == _ || _())
+                    is_gift: S,
+                    eligible_for_trial: null != M,
+                    application_id: b,
+                    location_stack: _
+                }), (0, l.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == C || C(V), V && (null == m || m())
             }
         })
     }
