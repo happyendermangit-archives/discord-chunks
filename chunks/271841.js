@@ -14,10 +14,10 @@ function(e, t, n) {
             return g
         },
         ButtonSizes: function() {
-            return h
+            return m
         },
         getButtonStyle: function() {
-            return m
+            return h
         },
         Button: function() {
             return p
@@ -79,7 +79,7 @@ function(e, t, n) {
             BLACK: _.hoverBlack,
             TRANSPARENT: _.hoverTransparent
         },
-        h = {
+        m = {
             NONE: "",
             TINY: _.sizeTiny,
             SMALL: _.sizeSmall,
@@ -91,13 +91,13 @@ function(e, t, n) {
             ICON: _.sizeIcon
         };
 
-    function m() {
+    function h() {
         let {
             look: e = f.FILLED,
             color: t = E.BRAND,
             borderColor: n,
             hover: i,
-            size: r = h.MEDIUM,
+            size: r = m.MEDIUM,
             fullWidth: o = !1,
             grow: l = !0,
             submitting: a = !1,
@@ -117,7 +117,7 @@ function(e, t, n) {
             color: n = E.BRAND,
             borderColor: o,
             hover: l,
-            size: S = h.MEDIUM,
+            size: S = m.MEDIUM,
             fullWidth: g = !1,
             grow: p = !0,
             disabled: I = !1,
@@ -177,7 +177,7 @@ function(e, t, n) {
                 disabled: I,
                 style: A,
                 rel: w,
-                className: s(C, m({
+                className: s(C, h({
                     look: t,
                     color: n,
                     borderColor: o,
@@ -217,12 +217,12 @@ function(e, t, n) {
             color: n = E.BRAND,
             borderColor: r,
             hover: o,
-            size: a = h.MEDIUM,
+            size: a = m.MEDIUM,
             fullWidth: u = !1,
             grow: c = !0,
             style: d,
             className: S,
-            innerClassName: m,
+            innerClassName: h,
             to: p,
             onClick: I,
             onMouseDown: T,
@@ -245,10 +245,10 @@ function(e, t, n) {
                 [_.hasHover]: null != o && o !== g.DEFAULT
             }),
             children: (0, i.jsx)("span", {
-                className: s(_.contents, m),
+                className: s(_.contents, h),
                 children: A
             })
         })
     }
-    p.Looks = f, p.Colors = E, p.BorderColors = S, p.Hovers = g, p.Sizes = h, p.Link = I
+    p.Looks = f, p.Colors = E, p.BorderColors = S, p.Hovers = g, p.Sizes = m, p.Link = I
 }

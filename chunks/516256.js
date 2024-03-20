@@ -35,8 +35,8 @@ function(e, t, n) {
         E = n("130969"),
         S = n("718776"),
         g = n("860226"),
-        h = n("433600"),
-        m = n("446662"),
+        m = n("433600"),
+        h = n("446662"),
         p = n("145131"),
         I = n("945330"),
         T = n("625611"),
@@ -60,8 +60,8 @@ function(e, t, n) {
             role: l = "dialog",
             className: f,
             fullscreenOnMobile: g = !0,
-            hideShadow: h = !1,
-            onAnimationEnd: m = v.NOOP,
+            hideShadow: m = !1,
+            onAnimationEnd: h = v.NOOP,
             returnRef: p,
             ...I
         } = e, A = n === T.ModalTransitionState.ENTERING || n === T.ModalTransitionState.ENTERED, {
@@ -74,7 +74,7 @@ function(e, t, n) {
                 easing: A ? d.default.Easing.inOut(d.default.Easing.back()) : d.default.Easing.quad,
                 clamp: !0
             },
-            onRest: m
+            onRest: h
         }), L = s.useRef(null), y = null != I["aria-label"], D = null != I["aria-labelledby"], P = s.useId(), M = null !== (t = I["aria-labelledby"]) && void 0 !== t ? t : P, U = s.useMemo(() => ({
             headerId: M,
             headerIdIsManaged: D
@@ -91,7 +91,7 @@ function(e, t, n) {
                 children: (0, o.jsx)(u.animated.div, {
                     className: a(f, N.root, C[r], {
                         [N.fullscreenOnMobile]: g,
-                        [N.rootWithShadow]: !h
+                        [N.rootWithShadow]: !m
                     }),
                     ref: L,
                     style: O,
@@ -135,11 +135,11 @@ function(e, t, n) {
         } = e, l = function(e) {
             switch (null != e ? e : "thin") {
                 case "auto":
-                    return m.AdvancedScrollerAuto;
+                    return h.AdvancedScrollerAuto;
                 case "none":
-                    return m.AdvancedScrollerNone;
+                    return h.AdvancedScrollerNone;
                 default:
-                    return m.AdvancedScrollerThin
+                    return h.AdvancedScrollerThin
             }
         }(r);
         return (0, o.jsx)(l, {
@@ -198,7 +198,7 @@ function(e, t, n) {
             scrollerRef: n,
             ...i
         } = e;
-        return (0, o.jsx)(h.ListThin, {
+        return (0, o.jsx)(m.ListThin, {
             className: t,
             ref: n,
             ...i

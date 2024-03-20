@@ -3,13 +3,22 @@ function(e, t, n) {
     let i, r;
     n.r(t), n.d(t, {
         analyticsTrackingStoreMaker: function() {
-            return m.analyticsTrackingStoreMaker
+            return h.analyticsTrackingStoreMaker
         },
         AnalyticsActionHandlers: function() {
-            return m.AnalyticsActionHandlers
+            return h.AnalyticsActionHandlers
+        },
+        Impression: function() {
+            return p.Impression
         },
         ImpressionTypes: function() {
             return p.ImpressionTypes
+        },
+        TypedEventProperties: function() {
+            return p.TypedEventProperties
+        },
+        StandardAnalyticsLocation: function() {
+            return p.StandardAnalyticsLocation
         },
         ImpressionGroups: function() {
             return p.ImpressionGroups
@@ -20,14 +29,41 @@ function(e, t, n) {
         NetworkActionNames: function() {
             return S.NetworkActionNames
         },
+        StandardAnalyticsSchemaNameMap: function() {
+            return S.StandardAnalyticsSchemaNameMap
+        },
+        ImpressionSchema: function() {
+            return S.ImpressionSchema
+        },
+        encodeProperties: function() {
+            return m.encodeProperties
+        },
+        CommonAnalyticsSchema: function() {
+            return S
+        },
         getCampaignParams: function() {
             return O
         },
-        trackMaker: function() {
+        getOS: function() {
+            return L
+        },
+        getDevice: function() {
+            return y
+        },
+        isThrottled: function() {
             return P
         },
-        default: function() {
+        extendSuperProperties: function() {
             return M
+        },
+        trackMaker: function() {
+            return U
+        },
+        getSuperProperties: function() {
+            return b
+        },
+        getSuperPropertiesBase64: function() {
+            return w
         }
     }), n("781738"), n("222007");
     var o, s = n("714617"),
@@ -41,8 +77,8 @@ function(e, t, n) {
         E = n("444095"),
         S = n("33112"),
         g = n("375492"),
-        h = n("612481"),
-        m = n("615582"),
+        m = n("612481"),
+        h = n("615582"),
         p = n("660516");
     let I = "deviceProperties",
         T = "referralProperties",
@@ -104,6 +140,31 @@ function(e, t, n) {
     }
 
     function L() {
+        let {
+            userAgent: e
+        } = window.navigator;
+        if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
+        if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
+        if (/Android/.test(e)) return "Android";
+        else if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
+        else if (/Mac/i.test(e)) return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "iOS" : "Mac OS X";
+        else if (/Linux/i.test(e)) return "Linux";
+        else return ""
+    }
+
+    function y() {
+        let {
+            userAgent: e
+        } = window.navigator;
+        if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
+        if (/Windows Phone/i.test(e)) return "Windows Phone";
+        if (/Android/.test(e)) return "Android";
+        else if (/iPhone/.test(e)) return "iPhone";
+        else if (/iPad/.test(e)) return "iPad";
+        else return ""
+    }
+
+    function D() {
         let e = {};
         return e.referrer = document.referrer, e.referring_domain = function() {
             let e = document.referrer.split("/");
@@ -132,25 +193,14 @@ function(e, t, n) {
         }
     }
 
-    function y(e) {
+    function P(e) {
         return null != v[e] && v[e] > Date.now()
     }
     if (null == i) try {
         let e, t, n;
         e = f.default.get(I), null == e && (e = function() {
             let e = {},
-                t = function() {
-                    let {
-                        userAgent: e
-                    } = window.navigator;
-                    if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
-                    if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
-                    if (/Android/.test(e)) return "Android";
-                    else if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
-                    else if (/Mac/i.test(e)) return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "iOS" : "Mac OS X";
-                    else if (/Linux/i.test(e)) return "Linux";
-                    else return ""
-                }();
+                t = L();
             return e.os = t, e.browser = function() {
                 let {
                     userAgent: e,
@@ -171,21 +221,11 @@ function(e, t, n) {
                 else if (/MSIE|Trident\//.test(e)) return "Internet Explorer";
                 else if (/Gecko/.test(e)) return "Mozilla";
                 else return ""
-            }(), e.device = function() {
-                let {
-                    userAgent: e
-                } = window.navigator;
-                if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
-                if (/Windows Phone/i.test(e)) return "Windows Phone";
-                if (/Android/.test(e)) return "Android";
-                else if (/iPhone/.test(e)) return "iPhone";
-                else if (/iPad/.test(e)) return "iPad";
-                else return ""
-            }(), e.system_locale = (0, _.getSystemLocale)(), e
-        }(), f.default.set(I, e)), t = f.default.get(T), null == t && (t = L(), f.default.set(T, t)), n = E.default.get(T), null == n && (n = function(e, t) {
+            }(), e.device = y(), e.system_locale = (0, _.getSystemLocale)(), e
+        }(), f.default.set(I, e)), t = f.default.get(T), null == t && (t = D(), f.default.set(T, t)), n = E.default.get(T), null == n && (n = function(e, t) {
             let n = {};
             return Object.keys(e).map(i => n["".concat(i).concat(t)] = e[i]), n
-        }(L(), "_current"), E.default.set(T, n)), i = {
+        }(D(), "_current"), E.default.set(T, n)), i = {
             ...e,
             ... function() {
                 var e, t;
@@ -205,18 +245,18 @@ function(e, t, n) {
         i = {}
     }
 
-    function D(e) {
+    function M(e) {
         i = {
             ...i,
             ...e
-        }, r = (0, h.default)(i)
+        }, r = (0, m.encodeProperties)(i)
     }
-    D(function() {
+    M(function() {
         var e, t, n;
         let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
         r && (i.release_channel = r.split("-")[0]);
-        let o = parseInt((n = "277016", "277016"), 10);
+        let o = parseInt((n = "277035", "277035"), 10);
         !isNaN(o) && (i.client_build_number = o);
         let s = null == N ? void 0 : null === (e = (t = N.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return !isNaN(s) && (i.native_build_number = s), i.client_event_source = function() {
@@ -226,12 +266,12 @@ function(e, t, n) {
             return null
         }(), i
     }());
-    let P = e => {
+    let U = e => {
         let {
             analyticEventConfigs: t,
             dispatcher: i,
             TRACK_ACTION_NAME: r
-        } = e, o = (0, g.default)(i, r);
+        } = e, o = (0, g.queueTrackingEventMaker)(i, r);
         return function(e, i) {
             let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
             if (null != n.g.isServerRendering && !0 === n.g.isServerRendering) return Promise.resolve();
@@ -240,7 +280,7 @@ function(e, t, n) {
             if (null != a) {
                 if ("throttlePeriod" in a) {
                     let t = [e, ...a.throttleKeys(s)].join("_");
-                    if (y(t)) return Promise.resolve();
+                    if (P(t)) return Promise.resolve();
                     if ("number" == typeof a.throttlePercent && Math.random() > a.throttlePercent) return Promise.resolve();
                     if (a.deduplicate) {
                         let e = A[t];
@@ -255,11 +295,12 @@ function(e, t, n) {
             return o(e, i, r)
         }
     };
-    var M = {
-        isThrottled: y,
-        encodeProperties: h.default,
-        getSuperProperties: () => i,
-        getSuperPropertiesBase64: () => r,
-        extendSuperProperties: D
+
+    function b() {
+        return i
+    }
+
+    function w() {
+        return r
     }
 }

@@ -11,10 +11,10 @@ function(e, t, n) {
             return N
         }
     }), n("794252");
-    var a = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        s = n.n(i),
+    var a = n("414456"),
+        s = n.n(a),
         l = n("506838"),
         o = n("446674"),
         r = n("669491"),
@@ -30,9 +30,9 @@ function(e, t, n) {
         E = n("605940");
 
     function S() {
-        return (0, a.jsx)("div", {
+        return (0, i.jsx)("div", {
             className: E.selectionCircle,
-            children: (0, a.jsx)(g.default, {
+            children: (0, i.jsx)(g.default, {
                 className: E.checkmarkCircle,
                 foreground: E.checkmark,
                 backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
@@ -44,7 +44,7 @@ function(e, t, n) {
         let {
             name: t,
             className: n,
-            style: i,
+            style: a,
             onSelect: l,
             isSelected: o = !1,
             tabIndex: r,
@@ -53,21 +53,21 @@ function(e, t, n) {
             label: t,
             isSelected: o
         });
-        return (0, a.jsx)(c.Tooltip, {
+        return (0, i.jsx)(c.Tooltip, {
             text: t,
-            children: e => (0, a.jsxs)("div", {
+            children: e => (0, i.jsxs)("div", {
                 className: E.themeSelectionContainer,
-                children: [(0, a.jsx)(c.Clickable, {
+                children: [(0, i.jsx)(c.Clickable, {
                     ...e,
                     ...d,
                     tabIndex: null != r ? r : d.tabIndex,
                     className: s(E.themeSelection, {
                         [E.selected]: o
                     }, n),
-                    style: i,
+                    style: a,
                     onClick: o ? _.NOOP : l,
                     children: u
-                }), o && (0, a.jsx)(S, {})]
+                }), o && (0, i.jsx)(S, {})]
             })
         })
     }
@@ -76,7 +76,7 @@ function(e, t, n) {
         let {
             theme: t,
             isSelected: n,
-            onSelect: i
+            onSelect: a
         } = e, g = (0, o.useStateFromStores)([f.default], () => f.default.systemPrefersColorScheme), m = e => (0, d.isThemeLight)(e) ? r.default.unsafe_rawColors.PRIMARY_600.css : r.default.unsafe_rawColors.WHITE_500.css, S = (0, l.match)({
             theme: t,
             systemPrefersColorScheme: g
@@ -86,16 +86,16 @@ function(e, t, n) {
         }, () => E.lightIcon).with({
             theme: _.ThemeTypes.LIGHT
         }, () => E.lightIcon).otherwise(() => E.darkIcon), v = (0, l.match)(t).with(_.ThemeTypes.LIGHT, () => p.default.Messages.THEME_LIGHT).with(_.ThemeTypes.DARK, () => p.default.Messages.THEME_DARK).with("system", () => p.default.Messages.THEME_SYSTEM).exhaustive(), N = (0, c.useRedesignIconContext)().enabled;
-        return (0, a.jsx)(T, {
-            onSelect: i,
+        return (0, i.jsx)(T, {
+            onSelect: a,
             isSelected: n,
             name: v,
             className: s(E.defaultThemeSelection, S),
-            children: "system" === t && (0, a.jsx)("div", {
+            children: "system" === t && (0, i.jsx)("div", {
                 className: E.iconWrapper,
-                children: N ? (0, a.jsx)(u.RefreshIcon, {
+                children: N ? (0, i.jsx)(u.RefreshIcon, {
                     color: m(g)
-                }) : (0, a.jsx)(h.default, {
+                }) : (0, i.jsx)(h.default, {
                     fill: m(g)
                 })
             })
@@ -106,7 +106,7 @@ function(e, t, n) {
         let {
             preset: t,
             isSelected: n,
-            disabled: i,
+            disabled: a,
             tabIndex: l,
             onSelect: o
         } = e, {
@@ -117,11 +117,11 @@ function(e, t, n) {
             colors: r,
             angle: u
         });
-        return (0, a.jsx)(T, {
-            onSelect: i ? void 0 : o,
+        return (0, i.jsx)(T, {
+            onSelect: a ? void 0 : o,
             isSelected: n,
             name: t.getName(),
-            className: s([i ? E.disabled : null, (0, d.isThemeDark)(c) ? E.darkOverlay : E.lightOverlay]),
+            className: s([a ? E.disabled : null, (0, d.isThemeDark)(c) ? E.darkOverlay : E.lightOverlay]),
             style: {
                 background: "var(--bg-overlay), ".concat(f)
             },

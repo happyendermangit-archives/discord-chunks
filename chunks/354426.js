@@ -32,7 +32,7 @@ function(e, t, n) {
             paddingBottom: E = 0,
             getScrollerState: S,
             getAnchorId: g
-        } = e, h = (0, o.default)(), m = (0, i.useRef)(l), [p] = (0, i.useState)(() => new r.default), {
+        } = e, m = (0, o.default)(), h = (0, i.useRef)(l), [p] = (0, i.useState)(() => new r.default), {
             dirty: I,
             chunkStart: T,
             chunkEnd: v,
@@ -40,10 +40,10 @@ function(e, t, n) {
         } = (0, s.default)({
             chunkSize: _,
             getScrollerState: S,
-            forceUpdate: h
+            forceUpdate: m
         }), {
             items: N
-        } = m.current, C = null, {
+        } = h.current, C = null, {
             scrollTop: R
         } = S();
         for (let e of N) {
@@ -64,7 +64,7 @@ function(e, t, n) {
                 let e = Math.max(0, T * _);
                 return null != c && e < c
             }, [_, T, c]),
-            L = (0, i.useMemo)(() => I > 0 ? m.current : (p.mergeProps({
+            L = (0, i.useMemo)(() => I > 0 ? h.current : (p.mergeProps({
                 sectionHeight: n,
                 rowHeight: a,
                 footerHeight: u,
@@ -74,7 +74,7 @@ function(e, t, n) {
                 sections: t,
                 getAnchorId: g
             }), p.compute(Math.max(0, T * _), v * _)), [I, T, v, n, a, u, d, E, f, t, p, _, g]);
-        return (0, i.useLayoutEffect)(() => void(m.current = L)), {
+        return (0, i.useLayoutEffect)(() => void(h.current = L)), {
             ...L,
             listComputer: p,
             forceUpdateOnChunkChange: A,

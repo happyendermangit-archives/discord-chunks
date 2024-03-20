@@ -32,8 +32,8 @@ function(e, t, n) {
             removeEdgeItemGutters: E,
             sectionGutter: S,
             padding: g,
-            paddingVertical: h,
-            paddingHorizontal: m,
+            paddingVertical: m,
+            paddingHorizontal: h,
             dir: p
         } = e, I = (0, o.default)(), T = (0, i.useRef)(l), [v] = (0, i.useState)(() => new r.default), A = _(), {
             offsetWidth: N
@@ -58,10 +58,10 @@ function(e, t, n) {
             removeEdgeItemGutters: E,
             sectionGutter: S,
             padding: g,
-            paddingVertical: h,
-            paddingHorizontal: m,
+            paddingVertical: m,
+            paddingHorizontal: h,
             dir: p
-        }), v.computeVisibleSections(Math.max(0, R * d), O * d), v.getState()), [C, v, t, n, a, u, c, R, O, d, f, E, S, g, h, m, N, p]), {
+        }), v.computeVisibleSections(Math.max(0, R * d), O * d), v.getState()), [C, v, t, n, a, u, c, R, O, d, f, E, S, g, m, h, N, p]), {
             ...T.current,
             masonryComputer: v,
             forceUpdateOnChunkChange: L,

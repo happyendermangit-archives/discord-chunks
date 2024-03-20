@@ -46,8 +46,8 @@ function(e, t, n) {
         E = n("374363"),
         S = n("116949"),
         g = n("397336"),
-        h = n("49111");
-    let m = "UserSettingsProtoLastWriteTimes",
+        m = n("49111");
+    let h = "UserSettingsProtoLastWriteTimes",
         p = Date.now();
     c.default.subscribe("CONNECTION_OPEN", () => {
         Date.now()
@@ -123,8 +123,8 @@ function(e, t, n) {
         }
         saveLastSendTime() {
             var e;
-            let t = null !== (e = u.default.get(m)) && void 0 !== e ? e : {};
-            t[this.type] = Date.now(), u.default.set(m, t)
+            let t = null !== (e = u.default.get(h)) && void 0 !== e ? e : {};
+            t[this.type] = Date.now(), u.default.set(h, t)
         }
         async loadIfNecessary(e) {
             if (__OVERLAY__) {
@@ -147,7 +147,7 @@ function(e, t, n) {
                             settings: t
                         }
                     } = await s.default.get({
-                        url: h.Endpoints.USER_SETTINGS_PROTO(this.type)
+                        url: m.Endpoints.USER_SETTINGS_PROTO(this.type)
                     }), n = (0, S.b64ToProto)(this.ProtoClass, t);
                     if (null == n) {
                         this.dispatchChanges({
@@ -238,7 +238,7 @@ function(e, t, n) {
                     let {
                         body: n
                     } = await s.default.patch({
-                        url: h.Endpoints.USER_SETTINGS_PROTO(this.type),
+                        url: m.Endpoints.USER_SETTINGS_PROTO(this.type),
                         body: {
                             settings: t,
                             required_data_version: e.offlineEditDataVersion
@@ -266,7 +266,7 @@ function(e, t, n) {
                             rateLimited: !0,
                             timeout: t
                         })
-                    } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === h.AbortCodes.INVALID_USER_SETTINGS_DATA) throw this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e;
+                    } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === m.AbortCodes.INVALID_USER_SETTINGS_DATA) throw this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e;
                     else throw this.logger.log("Unknown user settings error"), e
                 }
             }, this.logger = new o.default(this.ProtoClass.typeName)

@@ -323,7 +323,7 @@ function(e, t, n) {
         }), R(e, i), O(e, i)
     }
     var P = {
-        ...s.default,
+        ...s,
         getCampaignParams: s.getCampaignParams,
         setSystemAccessibilityFeatures: function(e) {
             A = e

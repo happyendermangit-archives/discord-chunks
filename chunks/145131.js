@@ -86,18 +86,18 @@ function(e, t, n) {
             shrink: E,
             grow: S,
             basis: g,
-            style: h,
-            ...m
+            style: m,
+            ...h
         } = e;
         return (0, i.jsx)("div", {
             style: {
                 flexShrink: E,
                 flexGrow: S,
                 flexBasis: g,
-                ...h
+                ...m
             },
             className: s(l.flex, r, o, a, f, n),
-            ...m,
+            ...h,
             children: t
         })
     };

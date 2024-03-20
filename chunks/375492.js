@@ -1,11 +1,11 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        default: function() {
+        queueTrackingEventMaker: function() {
             return i
         }
     });
-    var i = (e, t) => function(n, i, r) {
+    let i = (e, t) => function(n, i, r) {
         return new Promise(o => {
             var s;
             e.dispatch({

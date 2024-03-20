@@ -57,19 +57,19 @@ function(e, t, n) {
                 type: E = "spring",
                 shouldLoop: S,
                 durationMin: g,
-                durationMax: h,
-                ...m
-            } = n, p = t._value, I = f(n.duration, g, h), T = f(n.toValue, o, s), v = i[E](t, {
-                ...m,
+                durationMax: m,
+                ...h
+            } = n, p = t._value, I = f(n.duration, g, m), T = f(n.toValue, o, s), v = i[E](t, {
+                ...h,
                 toValue: T,
                 tension: l,
                 friction: a,
                 duration: I
             }), A = v;
             if (c || d) {
-                let e = f(n.duration, g, h);
+                let e = f(n.duration, g, m);
                 r = i[E](t, {
-                    ...m,
+                    ...h,
                     toValue: c ? p : -T,
                     tension: l,
                     friction: a,
