@@ -341,6 +341,11 @@ function(e, _, E) {
             actions: ["RUNNING_GAMES_CHANGE", "LOGOUT", "CONNECTION_CLOSED", "POST_CONNECTION_OPEN"],
             inlineRequire: () => E("34226").default,
             neverLoadBeforeConnectionOpen: !0
+        },
+        TenureRewardManager: {
+            actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "ENTITLEMENT_FETCH_APPLICATION_SUCCESS", "ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE", "LOGOUT"],
+            inlineRequire: () => E("881717").default,
+            neverLoadBeforeConnectionOpen: !0
         }
     };
     (0, t.initialize)(o)

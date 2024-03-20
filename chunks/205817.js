@@ -180,7 +180,8 @@ function(e, t, n) {
                 null != e && (R[o] = {
                     name: e.name,
                     id: e.id,
-                    exe: e.exeName
+                    exe: e.exeName,
+                    distributor: e.distributor
                 })
             }
         },
