@@ -1,22 +1,21 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        useIsUserRecentGamesEnabled: function() {
+        useIsUserRecentGamesFetchEnabled: function() {
             return s
         }
     });
     var i = n("446674"),
         l = n("697218"),
-        a = n("75326");
+        a = n("916355");
 
     function s(e) {
         let t = (0, i.useStateFromStores)([l.default], () => {
                 let t = l.default.getUser(e);
                 return null != t && !t.bot
             }),
-            n = (0, a.useUserIsRecentGamesExperimentEnabled)({
-                location: "28tk0bf_1",
-                autoTrackExposure: !0
+            n = (0, a.useUserIsRecentGamesExperimentApiEnabled)({
+                location: "28tk0bf_1"
             });
         return n && t
     }

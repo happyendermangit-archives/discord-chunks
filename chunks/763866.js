@@ -12,7 +12,7 @@ function(e, t, n) {
         r = n("446674"),
         o = n("77078"),
         u = n("812204"),
-        d = n("820081"),
+        d = n("755815"),
         c = n("373469"),
         f = n("271938"),
         p = n("42203"),
@@ -97,7 +97,7 @@ function(e, t, n) {
                 location: u.default.PROFILE_POPOUT,
                 disable: ex
             }),
-            ey = (0, d.useIsUserRecentGamesEnabled)(K.id);
+            ey = (0, d.useIsUserRecentGamesFetchEnabled)(K.id);
         if (K.isSystemUser()) return null;
         if (K.isNonUserBot()) return (0, i.jsx)(D.default, {
             user: K,

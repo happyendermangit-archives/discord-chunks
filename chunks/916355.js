@@ -1,15 +1,15 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        useUserIsRecentGamesExperimentEnabled: function() {
+        useUserIsRecentGamesExperimentApiEnabled: function() {
             return a
         }
     });
     var i = n("862205");
     let l = (0, i.createExperiment)({
-            id: "2024-03_user_recent_games",
+            id: "2024-03_user_recent_games_api",
             kind: "user",
-            label: "Recent Games",
+            label: "Recent Games API",
             defaultConfig: {
                 enabled: !1
             },
@@ -29,13 +29,10 @@ function(e, t, n) {
         }),
         a = e => {
             let {
-                location: t,
-                autoTrackExposure: n
-            } = e, i = l.useExperiment({
                 location: t
-            }, {
-                autoTrackExposure: n
+            } = e, n = l.useExperiment({
+                location: t
             });
-            return i.enabled
+            return n.enabled
         }
 }
