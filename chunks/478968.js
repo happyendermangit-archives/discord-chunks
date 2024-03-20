@@ -30,7 +30,7 @@ function(e, t, n) {
                 skuIDs: [_],
                 paymentSourceId: m,
                 isGift: !1
-            }), I = (0, u.usePremiumDiscountOffer)(), [T, C] = (0, o.useSubscriptionInvoicePreview)({
+            }), I = (0, u.usePremiumDiscountOffer)(), [T, p] = (0, o.useSubscriptionInvoicePreview)({
                 items: [{
                     planId: e,
                     quantity: 1
@@ -39,8 +39,8 @@ function(e, t, n) {
                 preventFetch: !(null != I),
                 paymentSourceId: m,
                 currency: E.currency
-            }), p = null == T ? void 0 : null === (f = T.invoiceItems) || void 0 === f ? void 0 : null === (d = f.find(t => t.subscriptionPlanId === e)) || void 0 === d ? void 0 : null === (n = d.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount, S = (0, a.getPrice)(e, !1, !1, E);
-            return (0, s.formatPrice)(S.amount - (null != p ? p : 0), S.currency)
+            }), S = null == T ? void 0 : null === (f = T.invoiceItems) || void 0 === f ? void 0 : null === (d = f.find(t => t.subscriptionPlanId === e)) || void 0 === d ? void 0 : null === (n = d.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount, P = (0, a.getPrice)(e, !1, !1, E);
+            return (0, s.formatPrice)(P.amount - (null != S ? S : 0), P.currency)
         },
         f = (e, t, n) => {
             var u, d, f, m;
@@ -56,7 +56,7 @@ function(e, t, n) {
                 skuIDs: [E],
                 paymentSourceId: _,
                 isGift: !1
-            }), [T, C] = (0, o.useSubscriptionInvoicePreview)({
+            }), [T, p] = (0, o.useSubscriptionInvoicePreview)({
                 subscriptionId: e.id,
                 items: [{
                     planId: t,
@@ -67,7 +67,7 @@ function(e, t, n) {
                 paymentSourceId: _,
                 currency: I.currency,
                 userDiscountOfferId: null == n ? void 0 : n.id
-            }), p = null == T ? void 0 : null === (m = T.invoiceItems) || void 0 === m ? void 0 : null === (f = m.find(e => e.subscriptionPlanId === t)) || void 0 === f ? void 0 : null === (d = f.discounts) || void 0 === d ? void 0 : null === (u = d.find(e => e.type === r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === u ? void 0 : u.amount, S = (0, a.getPrice)(t, !1, !1, I);
-            return (0, s.formatPrice)(S.amount - (null != p ? p : 0), S.currency)
+            }), S = null == T ? void 0 : null === (m = T.invoiceItems) || void 0 === m ? void 0 : null === (f = m.find(e => e.subscriptionPlanId === t)) || void 0 === f ? void 0 : null === (d = f.discounts) || void 0 === d ? void 0 : null === (u = d.find(e => e.type === r.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === u ? void 0 : u.amount, P = (0, a.getPrice)(t, !1, !1, I);
+            return (0, s.formatPrice)(P.amount - (null != S ? S : 0), P.currency)
         }
 }

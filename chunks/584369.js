@@ -2,18 +2,18 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DEVTOOLS_SIDEBAR_MIN_WIDTH: function() {
-            return d
+            return r
         },
         default: function() {
-            return u
+            return d
         }
     });
     var a = n("446674"),
         i = n("913144"),
         l = n("368694");
-    let d = 360,
-        r = {
-            sidebarWidth: d,
+    let r = 360,
+        s = {
+            sidebarWidth: r,
             lastOpenTabId: null,
             displayTools: !1,
             showDevWidget: !1,
@@ -22,35 +22,35 @@ function(e, t, n) {
                 y: 0
             }
         };
-    class s extends a.default.DeviceSettingsStore {
+    class u extends a.default.DeviceSettingsStore {
         initialize(e) {
-            r = null != e ? e : r, i.default.actionLogger.persist = l.default.isDeveloper
+            s = null != e ? e : s, i.default.actionLogger.persist = l.default.isDeveloper
         }
         getUserAgnosticState() {
-            return r
+            return s
         }
         get sidebarWidth() {
-            return this.displayTools ? r.sidebarWidth : 0
+            return this.displayTools ? s.sidebarWidth : 0
         }
         get lastOpenTabId() {
             var e;
-            return null !== (e = r.lastOpenTabId) && void 0 !== e ? e : null
+            return null !== (e = s.lastOpenTabId) && void 0 !== e ? e : null
         }
         get displayTools() {
-            return l.default.isDeveloper && r.displayTools
+            return l.default.isDeveloper && s.displayTools
         }
         get showDevWidget() {
-            return l.default.isDeveloper && r.showDevWidget
+            return l.default.isDeveloper && s.showDevWidget
         }
         get devWidgetPosition() {
-            return r.devWidgetPosition
+            return s.devWidgetPosition
         }
     }
-    s.displayName = "DevToolsSettingsStore", s.persistKey = "DevToolsSettingsStore";
-    var u = new s(i.default, {
+    u.displayName = "DevToolsSettingsStore", u.persistKey = "DevToolsSettingsStore";
+    var d = new u(i.default, {
         DEV_TOOLS_SETTINGS_UPDATE: function(e) {
-            l.default.isDeveloper && (r = {
-                ...r,
+            l.default.isDeveloper && (s = {
+                ...s,
                 ...e.settings
             })
         }

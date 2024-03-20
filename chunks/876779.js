@@ -1,5 +1,5 @@
-function(I, N, A) {
-    I.exports = {
+function(N, I, A) {
+    N.exports = {
         Common: {
             OPEN_DISCORD: "Open Discord",
             SIGN_UP_NOW: "Sign Up Now"

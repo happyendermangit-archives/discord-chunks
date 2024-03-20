@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("392284"),
         C = n("468482"),
         _ = n("316680"),
-        I = n("830837"),
-        T = n("132755"),
+        T = n("830837"),
+        I = n("132755"),
         v = n("73034"),
         N = n("58608"),
         A = n("719347"),
@@ -133,7 +133,7 @@ function(e, t, n) {
                 onClick: l,
                 tabIndex: s ? -1 : 0,
                 "aria-label": R.default.Messages.PAUSE,
-                children: (0, i.jsx)(I.default, {
+                children: (0, i.jsx)(T.default, {
                     className: M.controlIcon
                 }, "pause")
             }) : null != t && t === n ? (0, i.jsx)(d.Clickable, {
@@ -149,7 +149,7 @@ function(e, t, n) {
                 onClick: a,
                 tabIndex: s ? -1 : 0,
                 "aria-label": R.default.Messages.PLAY,
-                children: (0, i.jsx)(T.default, {
+                children: (0, i.jsx)(I.default, {
                     className: M.controlIcon
                 }, "play")
             })
@@ -279,7 +279,7 @@ function(e, t, n) {
         render() {
             let {
                 play: e
-            } = this.state, t = e ? T.default : I.default;
+            } = this.state, t = e ? I.default : T.default;
             return (0, i.jsx)(u.default.div, {
                 className: M.playPausePop,
                 style: this.getAnimatedStyle(),
@@ -312,7 +312,7 @@ function(e, t, n) {
             }
         }
     }
-    let B = (0, c.createExperiment)({
+    let H = (0, c.createExperiment)({
         kind: "user",
         id: "2024-03_media_play_metrics",
         label: "Media play metrics User Experiment",
@@ -327,7 +327,7 @@ function(e, t, n) {
             }
         }]
     });
-    class H {
+    class B {
         moveToState(e) {
             this.stateTime = performance.now(), this.currentState = e
         }
@@ -476,7 +476,7 @@ function(e, t, n) {
                 null != e && (this.lastPlayingTime = e)
             }, this.onLoadedMetadata = e => {
                 this.metadata.fileDurationSec = e.currentTarget.duration
-            }, this.metadata = e, this.analyticsEnabled = B.getCurrentConfig({
+            }, this.metadata = e, this.analyticsEnabled = H.getCurrentConfig({
                 location: "media_player"
             }).enabled
         }
@@ -976,7 +976,7 @@ function(e, t, n) {
                     let n = (e.which - O.KeyboardKeys.DIGIT_0) / 10;
                     t.currentTime = t.duration * n, this.setPlay(!0)
                 }
-            }, this._analytics = new H({
+            }, this._analytics = new B({
                 src: e.src,
                 mimeType: null === (n = e.mimeType) || void 0 === n ? void 0 : n.join("/"),
                 fileSize: e.fileSizeBytes

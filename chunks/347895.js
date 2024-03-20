@@ -1,147 +1,147 @@
-function(e, n, t) {
+function(e, t, n) {
     "use strict";
-    t.r(n), t.d(n, {
+    n.r(t), n.d(t, {
         fetchGuildHomeSettings: function() {
-            return p
+            return h
         },
         fetchNewMemberActions: function() {
-            return g
+            return R
         },
         selectHomeResourceChannel: function() {
-            return C
+            return p
         },
         selectNewMemberActionChannel: function() {
-            return T
+            return A
         },
         completeNewMemberAction: function() {
-            return v
+            return g
         },
         getBlockForChannelDeletion: function() {
             return N
         }
-    }), t("222007"), t("808653");
-    var l = t("872717"),
-        i = t("913144"),
-        r = t("819689"),
-        o = t("115718"),
-        a = t("38654"),
-        u = t("144491"),
-        d = t("42203"),
-        c = t("599110"),
-        s = t("299039"),
-        E = t("698882"),
-        _ = t("129092"),
-        f = t("675305"),
-        h = t("290886"),
-        m = t("49111");
-    let p = async e => {
-        i.default.dispatch({
+    }), n("222007"), n("808653");
+    var l = n("872717"),
+        a = n("913144"),
+        r = n("819689"),
+        u = n("115718"),
+        s = n("38654"),
+        o = n("144491"),
+        i = n("42203"),
+        c = n("599110"),
+        E = n("299039"),
+        d = n("698882"),
+        _ = n("129092"),
+        T = n("675305"),
+        f = n("290886"),
+        S = n("49111");
+    let h = async e => {
+        a.default.dispatch({
             type: "GUILD_HOME_SETTINGS_FETCH_START",
             guildId: e
         });
         try {
-            let n = await l.default.get({
-                    url: m.Endpoints.GUILD_HOME_SETTINGS(e),
+            let t = await l.default.get({
+                    url: S.Endpoints.GUILD_HOME_SETTINGS(e),
                     oldFormErrors: !0
                 }),
-                t = (0, _.settingsFromServer)(n.body);
-            return i.default.dispatch({
+                n = (0, _.settingsFromServer)(t.body);
+            return a.default.dispatch({
                 type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS",
                 guildId: e,
-                homeSettings: t
-            }), t
-        } catch (n) {
-            i.default.dispatch({
+                homeSettings: n
+            }), n
+        } catch (t) {
+            a.default.dispatch({
                 type: "GUILD_HOME_SETTINGS_FETCH_FAIL",
                 guildId: e
             })
         }
-    }, g = async e => {
-        if (!a.default.isFullServerPreview(e)) {
-            i.default.dispatch({
+    }, R = async e => {
+        if (!s.default.isFullServerPreview(e)) {
+            a.default.dispatch({
                 type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
                 guildId: e
             });
             try {
-                let n = await l.default.get({
-                        url: m.Endpoints.GUILD_MEMBER_ACTIONS(e),
+                let t = await l.default.get({
+                        url: S.Endpoints.GUILD_MEMBER_ACTIONS(e),
                         oldFormErrors: !0
                     }),
-                    t = (0, _.actionsFromServer)(n.body);
-                return i.default.dispatch({
+                    n = (0, _.actionsFromServer)(t.body);
+                return a.default.dispatch({
                     type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS",
                     guildId: e,
-                    memberActions: t
-                }), t
-            } catch (n) {
-                i.default.dispatch({
+                    memberActions: n
+                }), n
+            } catch (t) {
+                a.default.dispatch({
                     type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL",
                     guildId: e
                 })
             }
         }
-    }, C = function(e, n) {
-        let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        if (i.default.dispatch({
+    }, p = function(e, t) {
+        let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+        if (a.default.dispatch({
                 type: "SELECT_HOME_RESOURCE_CHANNEL",
                 guildId: e,
-                channelId: n
-            }), null == n) return;
-        let l = d.default.getChannel(n),
-            _ = E.default.getResourceForChannel(e, n);
-        null != e && !a.default.isFullServerPreview(e) && null != l && null != _ && c.default.track(m.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
+                channelId: t
+            }), null == t) return;
+        let l = i.default.getChannel(t),
+            _ = d.default.getResourceForChannel(e, t);
+        null != e && !s.default.isFullServerPreview(e) && null != l && null != _ && c.default.track(S.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
             guild_id: e,
             channel_id: l.id,
             server_guide_channel_type: "resource",
             channel_action_type: -1
-        }), t && (0, u.transitionToChannel)(n), r.default.jumpToMessage({
-            channelId: n,
-            messageId: s.default.castChannelIdAsMessageId(n),
+        }), n && (0, o.transitionToChannel)(t), r.default.jumpToMessage({
+            channelId: t,
+            messageId: E.default.castChannelIdAsMessageId(t),
             flash: !1,
-            jumpType: o.JumpTypes.INSTANT
+            jumpType: u.JumpTypes.INSTANT
         })
-    }, T = (e, n) => {
-        i.default.dispatch({
+    }, A = (e, t) => {
+        a.default.dispatch({
             type: "SELECT_NEW_MEMBER_ACTION_CHANNEL",
             guildId: e,
-            channelId: n
+            channelId: t
         });
-        let t = d.default.getChannel(n),
-            l = E.default.getActionForChannel(e, n);
-        null != e && !a.default.isFullServerPreview(e) && null != t && null != l && c.default.track(m.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
+        let n = i.default.getChannel(t),
+            l = d.default.getActionForChannel(e, t);
+        null != e && !s.default.isFullServerPreview(e) && null != n && null != l && c.default.track(S.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
             guild_id: e,
-            channel_id: t.id,
+            channel_id: n.id,
             server_guide_channel_type: "member action",
             channel_action_type: l.actionType
-        }), (0, u.transitionToChannel)(n)
-    }, v = (e, n) => {
-        if (i.default.dispatch({
+        }), (0, o.transitionToChannel)(t)
+    }, g = (e, t) => {
+        if (a.default.dispatch({
                 type: "COMPLETE_NEW_MEMBER_ACTION",
                 guildId: e,
-                channelId: n
-            }), a.default.isFullServerPreview(e)) return;
-        let t = d.default.getChannel(n),
-            r = E.default.getActionForChannel(e, n);
-        if (null != t && null != r) {
-            var o, u;
-            let n = s.default.keys(null !== (o = f.default.getCompletedActions(e)) && void 0 !== o ? o : {}),
-                l = null !== (u = E.default.getNewMemberActions(e)) && void 0 !== u ? u : [];
-            c.default.track(m.AnalyticEvents.SERVER_GUIDE_ACTION_COMPLETED, {
-                guild_id: t.guild_id,
-                channel_id: t.id,
+                channelId: t
+            }), s.default.isFullServerPreview(e)) return;
+        let n = i.default.getChannel(t),
+            r = d.default.getActionForChannel(e, t);
+        if (null != n && null != r) {
+            var u, o;
+            let t = E.default.keys(null !== (u = T.default.getCompletedActions(e)) && void 0 !== u ? u : {}),
+                l = null !== (o = d.default.getNewMemberActions(e)) && void 0 !== o ? o : [];
+            c.default.track(S.AnalyticEvents.SERVER_GUIDE_ACTION_COMPLETED, {
+                guild_id: n.guild_id,
+                channel_id: n.id,
                 channel_action_type: r.actionType,
-                has_completed_all: l.reduce((e, t) => e && n.includes(t.channelId), !0)
+                has_completed_all: l.reduce((e, n) => e && t.includes(n.channelId), !0)
             })
         }
         l.default.post({
-            url: m.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, n)
+            url: S.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t)
         })
     };
-    async function N(e, n) {
+    async function N(e, t) {
         if (null == e) return !1;
-        let t = (0, h.canSeeOnboardingHome)(e);
-        if (!t) return !1;
-        let l = E.default.getSettings(e);
-        return l === E.NO_SETTINGS && (await p(e), l = E.default.getSettings(e)), l !== E.NO_SETTINGS && null != l && (null != l.newMemberActions && null != l.newMemberActions.find(e => e.channelId === n) ? "todo" : null != l.resourceChannels && null != l.resourceChannels.find(e => e.channelId === n) && "resource")
+        let n = (0, f.canSeeOnboardingHome)(e);
+        if (!n) return !1;
+        let l = d.default.getSettings(e);
+        return l === d.NO_SETTINGS && (await h(e), l = d.default.getSettings(e)), l !== d.NO_SETTINGS && null != l && (null != l.newMemberActions && null != l.newMemberActions.find(e => e.channelId === t) ? "todo" : null != l.resourceChannels && null != l.resourceChannels.find(e => e.channelId === t) && "resource")
     }
 }

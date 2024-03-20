@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("998206"),
         C = n("35385"),
         _ = n("695369"),
-        I = n("198"),
-        T = n("315814"),
+        T = n("198"),
+        I = n("315814"),
         v = n("108486"),
         N = n("923582"),
         A = n("80921"),
@@ -54,20 +54,20 @@ function(e, t, n) {
         return r ? (0, i.jsx)(v.default, {
             disabled: t,
             channel: n
-        }) : (0, i.jsx)(I.default, {
+        }) : (0, i.jsx)(T.default, {
             disabled: t,
             channel: n
         })
     }
     var L = l.memo(function(e) {
-        var t, n, l, p, I, v, L, P, b;
+        var t, n, l, p, T, v, L, P, b;
         let {
             type: j,
             disabled: U,
             channel: D,
             handleSubmit: w,
             isEmpty: F
-        } = e, G = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), B = (0, s.useStateFromStores)([x.default], () => x.default.getStickerPreview(D.id, j.drafts.type)), H = null != B && B.length > 0, V = (0, s.useStateFromStores)([E.default], () => E.default.getUploads(D.id, j.drafts.type)), {
+        } = e, G = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), H = (0, s.useStateFromStores)([x.default], () => x.default.getStickerPreview(D.id, j.drafts.type)), B = null != H && H.length > 0, V = (0, s.useStateFromStores)([E.default], () => E.default.getUploads(D.id, j.drafts.type)), {
             activeCommand: K,
             activeCommandOption: W
         } = (0, s.useStateFromStoresObject)([d.default], () => ({
@@ -103,9 +103,9 @@ function(e, t, n) {
             return [Z && l && a, a]
         }), ee = (0, u.useActivitiesInTextButtonVisibility)(D.id, "ChannelTextAreaButtons");
         if (!a.isMobile) {
-            if (D.isDM() && (null === (I = j.gifts) || void 0 === I ? void 0 : I.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+            if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
                     location: "dc120b_5"
-                }), Q && z.push((0, i.jsx)(T.default, {
+                }), Q && z.push((0, i.jsx)(I.default, {
                     disabled: U,
                     referralsRemaining: q,
                     channel: D,
@@ -139,7 +139,7 @@ function(e, t, n) {
             type: j
         }, "emoji")), (null === (n = j.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (l = j.submit) || void 0 === l ? void 0 : l.ignorePreference) || G) && z.push((0, i.jsx)(N.default, {
             onClick: w,
-            disabled: U || 0 === V.length && F && !H
+            disabled: U || 0 === V.length && F && !B
         }, "submit")), 0 === z.length) ? null : (0, i.jsx)("div", {
             className: M.buttons,
             children: z

@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isStaffTeenSafetyAssistAgeBypass: function() {
-            return i
+            return l
         },
         useStaffTeenSafetyAssistAgeBypass: function() {
-            return _
+            return r
         }
     });
     var a = n("862205");
-    let l = (0, a.createExperiment)({
+    let i = (0, a.createExperiment)({
         kind: "user",
         id: "2023-10_staff_teen_safety_assist_age_bypass",
         label: "Staff Teen Safety Assist Age Bypass",
@@ -25,10 +25,10 @@ function(e, t, n) {
         }]
     });
 
-    function i(e) {
+    function l(e) {
         let {
             enabled: t
-        } = l.getCurrentConfig({
+        } = i.getCurrentConfig({
             location: e
         }, {
             autoTrackExposure: !0
@@ -36,8 +36,8 @@ function(e, t, n) {
         return t
     }
 
-    function _(e) {
-        return l.useExperiment({
+    function r(e) {
+        return i.useExperiment({
             location: e
         }, {
             autoTrackExposure: !0

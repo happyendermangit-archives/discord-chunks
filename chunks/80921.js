@@ -41,8 +41,8 @@ function(e, t, n) {
             }, [E]);
             let {
                 Component: _,
-                events: I,
-                play: T
+                events: T,
+                play: I
             } = (0, o.useStickerLottie)();
             return n ? null : (0, i.jsx)("div", {
                 className: s(f.CHAT_INPUT_BUTTON_CLASSNAME, m.buttonContainer),
@@ -51,9 +51,9 @@ function(e, t, n) {
                     innerClassName: s(m.button, m.stickerButton, {
                         [m.stickerButtonTilted]: y && !S
                     }),
-                    ...I,
+                    ...T,
                     onClick: () => {
-                        C(), T()
+                        C(), I()
                     },
                     isActive: S,
                     "aria-label": p.default.Messages.STICKER_BUTTON_LABEL,

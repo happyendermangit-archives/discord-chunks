@@ -1,4 +1,4 @@
-function(I, N, A) {
+function(N, I, A) {
     var O = {
         "./bg": "652617",
         "./bg.json": "652617",
@@ -64,18 +64,18 @@ function(I, N, A) {
         "./zh-TW.json": "391977"
     };
 
-    function T(I) {
-        return A(_(I))
+    function T(N) {
+        return A(_(N))
     }
 
-    function _(I) {
-        if (!A.o(O, I)) {
-            var N = Error("Cannot find module '" + I + "'");
-            throw N.code = "MODULE_NOT_FOUND", N
+    function _(N) {
+        if (!A.o(O, N)) {
+            var I = Error("Cannot find module '" + N + "'");
+            throw I.code = "MODULE_NOT_FOUND", I
         }
-        return O[I]
+        return O[N]
     }
     T.id = '"826507"', T.keys = function() {
         return Object.keys(O)
-    }, T.resolve = _, I.exports = T
+    }, T.resolve = _, N.exports = T
 }

@@ -20,8 +20,8 @@ function(e, t, n) {
         S = n("18494"),
         C = n("282109"),
         _ = n("697218"),
-        I = n("718517"),
-        T = n("299039"),
+        T = n("718517"),
+        I = n("299039"),
         v = n("204653"),
         N = n("995307");
     (o = r || (r = {})).FETCHING = "fetching", o.OK = "ok", o.ERROR = "error";
@@ -55,7 +55,7 @@ function(e, t, n) {
             return A
         }
         topSummaries() {
-            let e = Object.values(A).flat().filter(e => e.people.length > 1 && T.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * I.default.Millis.HOUR).sort((e, t) => T.default.extractTimestamp(t.endId) - T.default.extractTimestamp(e.endId));
+            let e = Object.values(A).flat().filter(e => e.people.length > 1 && I.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * T.default.Millis.HOUR).sort((e, t) => I.default.extractTimestamp(t.endId) - I.default.extractTimestamp(e.endId));
             return e
         }
         summaries(e) {
@@ -105,7 +105,7 @@ function(e, t, n) {
             return L
         }
         shouldFetchChannelAffinities() {
-            return !("fetching" === L.status || null != L.lastResponse && Date.now() - L.lastResponse < 30 * I.default.Millis.SECOND) && !0
+            return !("fetching" === L.status || null != L.lastResponse && Date.now() - L.lastResponse < 30 * T.default.Millis.SECOND) && !0
         }
         defaultChannelIds(e) {
             let {
@@ -190,7 +190,7 @@ function(e, t, n) {
                     t = e.find(e => e.id === (null == s ? void 0 : s.summaryId));
                 null != t && a.push(t)
             }
-            A[n] = (0, u.sortBy)(a, e => T.default.extractTimestamp(e.startId)).reverse();
+            A[n] = (0, u.sortBy)(a, e => I.default.extractTimestamp(e.startId)).reverse();
             let o = {
                 ...O[n],
                 fetching: !1,
@@ -303,7 +303,7 @@ function(e, t, n) {
                     channelIds: l
                 }
             } = e, a = d.toPairs(t).reduce((e, t) => {
-                let [n, i] = t, l = d.chain(i.map(e => (0, v.createSummaryFromServer)(e, n))).sortBy(e => T.default.extractTimestamp(e.startId)).takeRight(75).reverse().filter(e => Object.keys(e).length > 0).value();
+                let [n, i] = t, l = d.chain(i.map(e => (0, v.createSummaryFromServer)(e, n))).sortBy(e => I.default.extractTimestamp(e.startId)).takeRight(75).reverse().filter(e => Object.keys(e).length > 0).value();
                 return e[n] = l, e
             }, {}), s = l.reduce((e, t) => {
                 var l;
@@ -333,7 +333,7 @@ function(e, t, n) {
                 channel_id: l,
                 summaries: a,
                 guild_id: s
-            } = e, r = Date.now(), o = d.chain(a).sortBy(e => T.default.extractTimestamp(e.start_id)).filter(e => Object.keys(e).length > 0).map(e => (0, v.createSummaryFromServer)(e, l)).reverse().value(), u = null !== (n = A[l]) && void 0 !== n ? n : [], c = d.chain(o).concat(u).sortBy(e => T.default.extractTimestamp(e.startId)).takeRight(75).uniqBy("id").reverse().value();
+            } = e, r = Date.now(), o = d.chain(a).sortBy(e => I.default.extractTimestamp(e.start_id)).filter(e => Object.keys(e).length > 0).map(e => (0, v.createSummaryFromServer)(e, l)).reverse().value(), u = null !== (n = A[l]) && void 0 !== n ? n : [], c = d.chain(o).concat(u).sortBy(e => I.default.extractTimestamp(e.startId)).takeRight(75).uniqBy("id").reverse().value();
             A[l] = c, O[l] = {
                 ...O[l],
                 error: void 0,

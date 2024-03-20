@@ -1,8 +1,8 @@
-function(I, N, A) {
+function(N, I, A) {
     "use strict";
-    A.r(N), A.d(N, {
+    A.r(I), A.d(I, {
         default: function() {
-            return n
+            return t
         }
     });
     var O = A("446674"),
@@ -12,11 +12,11 @@ function(I, N, A) {
     let E = A("782340").default.getDefaultLocale();
 
     function V() {
-        var I, N;
-        let A = null === (N = e.default.settings.localization) || void 0 === N ? void 0 : null === (I = N.locale) || void 0 === I ? void 0 : I.value;
+        var N, I;
+        let A = null === (I = e.default.settings.localization) || void 0 === I ? void 0 : null === (N = I.locale) || void 0 === N ? void 0 : N.value;
         return null != A && "" !== A && A !== E && (E = A, _.setLocale(E), !0)
     }
-    class t extends O.default.Store {
+    class i extends O.default.Store {
         initialize() {
             this.waitFor(e.default), V(), _.setLocale(E)
         }
@@ -24,14 +24,14 @@ function(I, N, A) {
             return E
         }
     }
-    t.displayName = "LocaleStore";
-    var n = new t(T.default, {
+    i.displayName = "LocaleStore";
+    var t = new i(T.default, {
         OVERLAY_INITIALIZE: V,
         CACHE_LOADED: V,
         CONNECTION_OPEN: V,
         USER_SETTINGS_PROTO_UPDATE: V,
-        USER_SETTINGS_LOCALE_OVERRIDE: function(I) {
-            E = I.locale, _.setLocale(E)
+        USER_SETTINGS_LOCALE_OVERRIDE: function(N) {
+            E = N.locale, _.setLocale(E)
         }
     })
 }

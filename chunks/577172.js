@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return I
         }
     }), n("222007");
     var i = n("37983"),
@@ -26,7 +26,7 @@ function(e, t, n) {
         C = n("923337");
     let _ = [C, h, y, E, g, x, S];
 
-    function I(e) {
+    function T(e) {
         let {
             userId: t
         } = e, [n, a] = l.useState(!1);
@@ -55,7 +55,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function I(e) {
         let {
             user: t,
             setNote: n,
@@ -67,7 +67,7 @@ function(e, t, n) {
         return (0, i.jsxs)(f.default, {
             className: m.section,
             lastSection: !0,
-            children: [o && l ? (0, i.jsx)(I, {
+            children: [o && l ? (0, i.jsx)(T, {
                 userId: t.id
             }) : null, l ? (0, i.jsx)(u.default, {
                 className: m.messageInputContainer,

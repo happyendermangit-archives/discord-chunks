@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("476765"),
         C = n("461380"),
         _ = n("93393"),
-        I = n("153769"),
-        T = n("671434"),
+        T = n("153769"),
+        I = n("671434"),
         v = n("229915"),
         N = n("368121"),
         A = n("719923"),
@@ -43,9 +43,9 @@ function(e, t, n) {
         w = n("49111"),
         F = n("782340"),
         G = n("851289");
-    let B = [8, 0, 8, 8];
+    let H = [8, 0, 8, 8];
 
-    function H(e) {
+    function B(e) {
         return 0 === e ? 16 : 32
     }
 
@@ -64,7 +64,7 @@ function(e, t, n) {
             children: [function() {
                 switch (t.type) {
                     case O.SoundboardSoundGridSectionType.FAVORITES:
-                        return (0, i.jsx)(T.default, {
+                        return (0, i.jsx)(I.default, {
                             className: G.headerIcon
                         });
                     case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
@@ -82,7 +82,7 @@ function(e, t, n) {
                             width: 16
                         });
                     case O.SoundboardSoundGridSectionType.DEFAULTS:
-                        return (0, i.jsx)(I.default, {
+                        return (0, i.jsx)(T.default, {
                             className: G.headerIcon
                         });
                     case O.SoundboardSoundGridSectionType.SEARCH:
@@ -178,8 +178,8 @@ function(e, t, n) {
             suppressPlaySound: p = !1,
             shouldShowUpsell: C = !0,
             gridNotice: _,
-            soundButtonOverlay: I,
-            listPadding: T,
+            soundButtonOverlay: T,
+            listPadding: I,
             renderHeader: v,
             defaultSoundsOnly: L = !1
         } = e, {
@@ -222,8 +222,8 @@ function(e, t, n) {
                 forceSecondaryActions: ea,
                 analyticsLocations: P
             },
-            buttonOverlay: I
-        }, "row-".concat(t["aria-rowindex"])), [eu, a, q, p, P, ea, es, I]), ec = l.useCallback((e, t) => {
+            buttonOverlay: T
+        }, "row-".concat(t["aria-rowindex"])), [eu, a, q, p, P, ea, es, T]), ec = l.useCallback((e, t) => {
             let n = "".concat(e.key);
             return (0, i.jsx)(V, {
                 categoryInfo: e.categoryInfo,
@@ -251,8 +251,8 @@ function(e, t, n) {
         }), [ep]), eh = l.useCallback(e => (0, i.jsx)(b.default, {
             soundboardListRef: e,
             categories: $,
-            listPadding: T
-        }), [$, T]), ex = l.useCallback(e => {
+            listPadding: I
+        }), [$, I]), ex = l.useCallback(e => {
             if ((null == e ? void 0 : e.item.type) === O.SoundboardSoundItemType.SOUND) {
                 var t;
                 return (0, i.jsx)(j.default, {
@@ -282,8 +282,8 @@ function(e, t, n) {
                 renderCategoryList: eh,
                 renderHeaderAccessories: em,
                 rowHeight: 48,
-                sectionHeaderHeight: H,
-                listPadding: B,
+                sectionHeaderHeight: B,
+                listPadding: H,
                 itemNodeWidth: 150,
                 gridNavigatorId: Q,
                 renderEmptySearchState: K,

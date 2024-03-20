@@ -220,10 +220,10 @@ function(e, t, n) {
                 }
             }
         },
-        I = (0, p.default)([g, _]),
-        T = (0, p.default)([S, _]),
-        v = o.astParserFor(I),
-        N = o.astParserFor(T),
+        T = (0, p.default)([g, _]),
+        I = (0, p.default)([S, _]),
+        v = o.astParserFor(T),
+        N = o.astParserFor(I),
         A = {
             max: 1 / 0,
             maxAge: 1 * m.default.Millis.MINUTE,

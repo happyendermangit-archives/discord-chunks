@@ -11,10 +11,10 @@ function(e, t, n) {
             return T
         },
         useFetchChurnUserDiscountOffer: function() {
-            return p
+            return S
         },
         useShouldFetchChurnOffer: function() {
-            return S
+            return P
         }
     }), n("222007");
     var r = n("884691"),
@@ -67,7 +67,7 @@ function(e, t, n) {
                     return
             }
         },
-        C = async () => {
+        p = async () => {
             let e = null;
             try {
                 var t;
@@ -77,7 +77,7 @@ function(e, t, n) {
                 e = null !== (t = n.body.offer) && void 0 !== t ? t : null
             } catch (e) {}
             return e
-        }, p = e => {
+        }, S = e => {
             let [t, n] = r.useState(!1), [i, l] = r.useState(!1), [a, s] = r.useState(null);
             if (e) return {
                 churnUserDiscountOffer: a,
@@ -86,7 +86,7 @@ function(e, t, n) {
             let o = () => {
                 n(!0), l(!1)
             };
-            return !i && !t && (l(!0), C().then(e => {
+            return !i && !t && (l(!0), p().then(e => {
                 s(e), o()
             }).catch(e => {
                 o()
@@ -94,7 +94,7 @@ function(e, t, n) {
                 churnUserDiscountOffer: a,
                 isFetchingChurnDiscountOffer: i
             }
-        }, S = () => {
+        }, P = () => {
             let {
                 enabled: e
             } = c.default.useExperiment({

@@ -30,7 +30,7 @@ function(e, t, n) {
         }), a.default), S = o.StickerPickerStore.useStore(e => e.searchPlaceholder), C = o.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, a.default), _ = l.useCallback(e => {
             var t;
             o.StickerPickerStore.setActiveCategoryIndex("" === e ? 0 : c.INACTIVE_CATEGORY_INDEX), o.StickerPickerStore.setInspectedExpressionPosition(0, 0), o.StickerPickerStore.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = m.current) || void 0 === t || t.scrollTo(0)
-        }, [m]), I = l.useCallback(() => {
+        }, [m]), T = l.useCallback(() => {
             (0, u.setSearchQuery)("")
         }, []);
         return l.useImperativeHandle(t, () => ({
@@ -52,7 +52,7 @@ function(e, t, n) {
                 ref: E,
                 size: r.default.Sizes.MEDIUM,
                 placeholder: null != S ? S : x ? f.default.Messages.SEARCH_FOR_STICKERS : f.default.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
-                onClear: I,
+                onClear: T,
                 onKeyDown: n,
                 onQueryChange: _,
                 className: p.searchBar,

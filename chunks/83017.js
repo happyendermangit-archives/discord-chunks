@@ -31,8 +31,8 @@ function(e, t, n) {
         S = n("817963"),
         C = n("923959"),
         _ = n("305961"),
-        I = n("162771"),
-        T = n("677099"),
+        T = n("162771"),
+        I = n("677099"),
         v = n("697218"),
         N = n("402671"),
         A = n("764364"),
@@ -57,9 +57,9 @@ function(e, t, n) {
         } = e, d = (0, p.useStateFromStores)([h.default], () => h.default.categories), m = (0, p.useStateFromStores)([_.default], () => _.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), y = null == t ? null : t.getGuildId(), g = (0, p.useStateFromStores)([h.default], () => h.default.getDisambiguatedEmojiContext(y), [y]), j = (0, R.useFavoriteEmojis)(y), U = (0, R.useFrequentlyUsedEmojis)(y), {
             topEmojis: D,
             newlyAddedEmojis: w
-        } = (0, k.default)(y, l), F = (0, p.useStateFromStoresArray)([T.default], () => T.default.getFlattenedGuildIds(), []), {
+        } = (0, k.default)(y, l), F = (0, p.useStateFromStoresArray)([I.default], () => I.default.getFlattenedGuildIds(), []), {
             canCreateExpressions: G
-        } = (0, S.useManageResourcePermissions)(m), B = (0, p.useStateFromStores)([v.default], () => v.default.getCurrentUser()), H = (0, A.isPremium)(B), V = g.getCustomEmoji(), K = e => {
+        } = (0, S.useManageResourcePermissions)(m), H = (0, p.useStateFromStores)([v.default], () => v.default.getCurrentUser()), B = (0, A.isPremium)(H), V = g.getCustomEmoji(), K = e => {
             if (e.type === x.EmojiTypes.GUILD) return e.guildId
         }, W = u.useMemo(() => c.groupBy(V, K), [V]), {
             enabled: Y,
@@ -92,12 +92,12 @@ function(e, t, n) {
                             }),
                             E = f.concat(m),
                             S = s.guild,
-                            C = I.default.getGuildId(),
+                            C = T.default.getGuildId(),
                             _ = s.sectionId === L.EmojiCategoryTypes.TOP_GUILD_EMOJI,
-                            T = !_ && null != S && C === S.id && E.length < S.getMaxEmojiSlots(),
+                            I = !_ && null != S && C === S.id && E.length < S.getMaxEmojiSlots(),
                             v = _ && E.length < g && !Y,
                             A = null != S && _ && Y && z === O.EmojiPickerUploadTreatment.WITH_TOP_LIST && W[S.id].length < S.getMaxEmojiSlots(),
-                            M = i && G && null != S && (T || v || A);
+                            M = i && G && null != S && (I || v || A);
                         M && A && E.length === g && E.shift();
                         let k = Y && M && !d,
                             P = M ? E.length + 1 : E.length,
@@ -162,7 +162,7 @@ function(e, t, n) {
                     categoryId: L.EmojiCategories.PREMIUM_UPSELL,
                     sectionId: L.EmojiCategoryTypes.PREMIUM_UPSELL,
                     count: a.locked.length,
-                    isNitroLocked: !H
+                    isNitroLocked: !B
                 });
                 else
                     for (let e of d)
@@ -177,7 +177,7 @@ function(e, t, n) {
                                 }) !== P.EmojiDisabledReasons.DISALLOW_EXTERNAL);
                                 if (0 === a.length) return;
                                 let s = _.default.getGuild(n),
-                                    r = !H && N.default.isEmojiCategoryNitroLocked({
+                                    r = !B && N.default.isEmojiCategoryNitroLocked({
                                         categoryEmojis: a,
                                         channel: t,
                                         intention: l
@@ -256,7 +256,7 @@ function(e, t, n) {
                 rowCountBySection: e,
                 sectionDescriptors: u
             }
-        }, [g, s, o, r, a, n, t, l, d, m, W, F, w, D, U, j, G, i, H, Y, z])
+        }, [g, s, o, r, a, n, t, l, d, m, W, F, w, D, U, j, G, i, B, Y, z])
     };
     (o = a || (a = {}))[o.PREMIUM = 0] = "PREMIUM", o[o.ROLE_SUBSCRIPTION = 1] = "ROLE_SUBSCRIPTION";
     let U = e => {

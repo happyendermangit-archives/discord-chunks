@@ -5,10 +5,10 @@ function(e, t, n) {
             return l
         },
         sendVoiceChannelCustomCallSoundEffect: function() {
-            return I
+            return T
         },
         sendVoiceChannelSoundboardEffect: function() {
-            return T
+            return I
         },
         sendVoiceChannelEffect: function() {
             return v
@@ -43,7 +43,7 @@ function(e, t, n) {
         }
     }
 
-    function I(e, t, n) {
+    function T(e, t, n) {
         var i;
         let {
             abortController: l,
@@ -62,7 +62,7 @@ function(e, t, n) {
         }), (0, f.default)([o.default.CHANNEL_CALL], n, t, c.AnalyticsSoundType.ENTRY)
     }
 
-    function T(e, t, n, i) {
+    function I(e, t, n, i) {
         var l, a;
         let r = d.default.getCustomEmojiById(null !== (l = t.emojiId) && void 0 !== l ? l : ""),
             {

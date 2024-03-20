@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return I
         }
     }), n("222007");
     var i = n("37983"),
@@ -25,12 +25,12 @@ function(e, t, n) {
         S = n("782340"),
         C = n("669821");
     let _ = "premiumRetentionEmojiPickerNotice",
-        I = o.default.get(_);
-    var T = e => {
+        T = o.default.get(_);
+    var I = e => {
         let {
             closePopout: t,
             channel: n
-        } = e, [a, T] = l.useState(!1), {
+        } = e, [a, I] = l.useState(!1), {
             subscription: v,
             hasFetchedSubscriptions: N
         } = (0, r.useStateFromStoresObject)([f.default], () => ({
@@ -43,7 +43,7 @@ function(e, t, n) {
         let A = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDays)(v) : g.MAX_ACCOUNT_HOLD_DAYS,
             O = s(v.currentPeriodStart).add(A, "days"),
             R = "".concat(v.id, ":").concat(O.toISOString());
-        if (I === R) return null;
+        if (T === R) return null;
         let M = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
         return (0, i.jsxs)("div", {
             className: C.premiumRetentionNotice,
@@ -68,7 +68,7 @@ function(e, t, n) {
                 })]
             }), (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    o.default.set(_, R), I = R, T(!0)
+                    o.default.set(_, R), T = R, I(!0)
                 },
                 children: (0, i.jsx)(m.default, {
                     className: C.premiumRetentionNoticeClose

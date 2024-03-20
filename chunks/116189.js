@@ -46,11 +46,11 @@ function(e, t, n) {
                 isError: !0
             }
         },
-        I = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+        T = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
             leading: !0,
             trailing: !0
         }),
-        T = {
+        I = {
             stores: [u.default, o.default],
             showEmpty: !0,
             matches(e, t, n, i, l) {
@@ -65,7 +65,7 @@ function(e, t, n) {
                     if (l) {
                         let l = u.default.getActiveCommand(e.id),
                             a = i.getCommandOptionValues();
-                        I({
+                        T({
                             command: l,
                             optionValues: a,
                             context: {
@@ -147,5 +147,5 @@ function(e, t, n) {
                 }
             }
         };
-    var v = T
+    var v = I
 }

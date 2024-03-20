@@ -26,8 +26,8 @@ function(e, t, n) {
         S = n("305961"),
         C = n("697218"),
         _ = n("145131"),
-        I = n("666897"),
-        T = n("826684"),
+        T = n("666897"),
+        I = n("826684"),
         v = n("782340"),
         N = n("665958"),
         A = n("919163");
@@ -56,7 +56,7 @@ function(e, t, n) {
             guildId: R,
             children: M,
             inlinePreview: k = !1
-        } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), P = null != t && 0 !== t && !k, b = P && "dot" === L, j = e => (0, i.jsxs)(I.default, {
+        } = e, L = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), P = null != t && 0 !== t && !k, b = P && "dot" === L, j = e => (0, i.jsxs)(T.default, {
             className: a(A.roleMention),
             color: "username" === L && P ? t : null,
             ...e,
@@ -144,7 +144,7 @@ function(e, t, n) {
                     ...e,
                     children: (0, i.jsxs)(d.Scroller, {
                         className: A.roleScroller,
-                        children: [(0, i.jsx)(T.default, {
+                        children: [(0, i.jsx)(I.default, {
                             className: A.roleHeader,
                             "aria-label": v.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                                 title: u.name,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return T
         }
     });
     var i = n("37983"),
@@ -25,14 +25,14 @@ function(e, t, n) {
         S = n("646718"),
         C = n("782340"),
         _ = n("230537"),
-        I = function(e) {
+        T = function(e) {
             let {
                 bodyCopy: t = C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
                 className: n,
                 onDismiss: a,
-                onCtaClick: I
+                onCtaClick: T
             } = e, {
-                location: T
+                location: I
             } = (0, u.useAnalyticsContext)(), {
                 analyticsLocations: v
             } = (0, d.default)(), {
@@ -47,12 +47,12 @@ function(e, t, n) {
                     subscriptionTier: y.default.getSkuIdForPremiumType(A),
                     analyticsLocations: v,
                     analyticsObject: {
-                        ...T,
+                        ...I,
                         object: g.AnalyticsObjects.BUTTON_CTA,
                         objectType: g.AnalyticsObjectTypes.TIER_2
                     }
-                }), null == I || I()
-            }, [v, T, I, A]), M = A === S.PremiumTypes.TIER_0;
+                }), null == T || T()
+            }, [v, I, T, A]), M = A === S.PremiumTypes.TIER_0;
             return (0, i.jsx)("div", {
                 className: s(_.wrapper, n),
                 children: N ? (0, i.jsx)(o.Spinner, {
@@ -61,7 +61,7 @@ function(e, t, n) {
                     onChange: e => {
                         e && !O.current && (E.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                             type: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
-                            location: T,
+                            location: I,
                             location_stack: v,
                             sku_id: y.default.getSkuIdForPremiumType(A)
                         }), O.current = !0)

@@ -23,8 +23,8 @@ function(e, _, E) {
         u = E("521735"),
         L = E("572544"),
         C = E("244201"),
-        D = E("206230"),
-        c = E("320679"),
+        c = E("206230"),
+        D = E("320679"),
         d = E("428958"),
         U = E("154403"),
         M = E("805199"),
@@ -87,7 +87,7 @@ function(e, _, E) {
             skipsSettingDefaultPageTitle: E
         } = e, {
             pathname: n
-        } = (0, I.useLocation)(), N = (0, X.getPlatform)(), L = s.isMobile || s.isTablet, Y = (0, T.useStateFromStores)([b.default], () => b.default.darkSidebar ? ee.ThemeTypes.DARK : void 0), J = (0, T.useStateFromStores)([D.default], () => D.default.useForcedColors ? "yes" : "no"), [Z, en] = (0, T.useStateFromStoresArray)([m.default], () => [m.default.isEditorOpen, m.default.isCoachmark]), er = (0, T.useStateFromStores)([M.default], () => M.default.isEditorOpen), {
+        } = (0, I.useLocation)(), N = (0, X.getPlatform)(), L = s.isMobile || s.isTablet, Y = (0, T.useStateFromStores)([b.default], () => b.default.darkSidebar ? ee.ThemeTypes.DARK : void 0), J = (0, T.useStateFromStores)([c.default], () => c.default.useForcedColors ? "yes" : "no"), [Z, en] = (0, T.useStateFromStoresArray)([m.default], () => [m.default.isEditorOpen, m.default.isCoachmark]), er = (0, T.useStateFromStores)([M.default], () => M.default.isEditorOpen), {
             enabled: ea
         } = H.default.useExperiment({
             location: "client_themes_coachmark_reintro"
@@ -114,7 +114,7 @@ function(e, _, E) {
         }, [eO, eA, eN, n]);
         let eR = o.useRef(document.body);
         return (0, t.jsx)(v.default, {
-            children: (0, t.jsx)(c.default, {
+            children: (0, t.jsx)(D.default, {
                 children: (0, t.jsxs)(O.RedesignIconContextProvider, {
                     children: [(0, t.jsx)(q.default, {
                         skipsSettingDefaultPageTitle: E

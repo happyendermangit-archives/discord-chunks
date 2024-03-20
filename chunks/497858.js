@@ -23,7 +23,7 @@ function(e, t, n) {
         y = n("958706");
 
     function g(e, t, n) {
-        var g, S, C, _, I, T, v;
+        var g, S, C, _, T, I, v;
         let {
             channel: N,
             type: A
@@ -56,41 +56,41 @@ function(e, t, n) {
             navId: "channel-autocomplete",
             scrollerRef: n,
             state: O,
-            onFocus: e => B.setSelectedIndex(e)
+            onFocus: e => H.setSelectedIndex(e)
         }), F = null === (g = e.editorRef.current) || void 0 === g ? void 0 : g.getCurrentWord(), G = {
             ...e,
             navigator: w,
             activeCommand: U,
             activeCommandOption: D,
-            canMentionUsers: null !== (I = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== I && I,
+            canMentionUsers: null !== (T = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== T && T,
             canMentionEveryone: b,
             canMentionClyde: L,
             hidePersonalInformation: j,
             hideMentionDescription: A === o.ChatInputTypes.RULES_INPUT,
             emojiIntention: A === o.ChatInputTypes.RULES_INPUT ? y.EmojiIntention.COMMUNITY_CONTENT : y.EmojiIntention.CHAT,
-            currentWord: null !== (T = null == F ? void 0 : F.word) && void 0 !== T ? T : "",
+            currentWord: null !== (I = null == F ? void 0 : F.word) && void 0 !== I ? I : "",
             currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
             optionText: null != D ? (0, s.getString)({
                 [D.name]: null !== (v = null === (C = e.editorRef.current) || void 0 === C ? void 0 : C.getCurrentCommandOptionValue()) && void 0 !== v ? v : []
             }, D.name) : ""
-        }, [B] = i.useState(() => new m.default(G));
+        }, [H] = i.useState(() => new m.default(G));
         return i.useEffect(() => {
-            B.updateProps(G)
-        }), i.useImperativeHandle(t, () => B, [B]), i.useEffect(() => {
+            H.updateProps(G)
+        }), i.useImperativeHandle(t, () => H, [H]), i.useEffect(() => {
             let e = e => R(e);
-            return B.on("change", e), B.on("update", M), () => {
-                B.off("change", e), B.off("update", M)
+            return H.on("change", e), H.on("update", M), () => {
+                H.off("change", e), H.off("update", M)
             }
-        }, [M, B]), i.useEffect(() => {
+        }, [M, H]), i.useEffect(() => {
             var e;
             let t = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;
             if (null != t) {
-                let e = () => B.queryResults();
+                let e = () => H.queryResults();
                 for (let n of t) n.addChangeListener(e);
                 return () => {
                     for (let n of t) n.removeChangeListener(e)
                 }
             }
-        }, [B, null === (_ = O.query) || void 0 === _ ? void 0 : _.typeInfo]), [O, B, w]
+        }, [H, null === (_ = O.query) || void 0 === _ ? void 0 : _.typeInfo]), [O, H, w]
     }
 }

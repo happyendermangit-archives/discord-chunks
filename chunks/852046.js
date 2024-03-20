@@ -1,6 +1,6 @@
-function(I, N, A) {
+function(N, I, A) {
     "use strict";
-    A.r(N), A.d(N, {
+    A.r(I), A.d(I, {
         install: function() {
             return s
         }
@@ -11,19 +11,19 @@ function(I, N, A) {
         e = A("118810"),
         E = A("49671"),
         V = A("605250"),
-        t = A("915639"),
-        n = A("449008"),
-        i = A("851234"),
+        i = A("915639"),
+        t = A("449008"),
+        n = A("851234"),
         R = A("648610");
     let G = new V.default("Spellchecker"),
         r = null === E.default || void 0 === E.default ? void 0 : E.default.spellCheck;
 
-    function a(I) {
-        var N;
-        I = null !== (N = R.default[I]) && void 0 !== N ? N : I;
-        let A = (0, O.parse)(I.replace(/[_-]/g, "-"));
+    function a(N) {
+        var I;
+        N = null !== (I = R.default[N]) && void 0 !== I ? I : N;
+        let A = (0, O.parse)(N.replace(/[_-]/g, "-"));
         if (null == A || null == A.langtag.language || null == A.langtag.region) {
-            G.error("".concat(I, " is not a valid locale."));
+            G.error("".concat(N, " is not a valid locale."));
             return
         }
         let {
@@ -36,70 +36,70 @@ function(I, N, A) {
         get enabled() {
             return this._enabled
         }
-        set enabled(I) {
-            this._enabled = I
+        set enabled(N) {
+            this._enabled = N
         }
-        setLearnedWords(I) {
-            r.setLearnedWords(I)
+        setLearnedWords(N) {
+            r.setLearnedWords(N)
         }
-        setLocale(I) {
-            var N;
-            null === (N = r.setLocale(I)) || void 0 === N || N.then(N => {
-                G.info("Switching to ".concat(I), N ? "(available)" : "(unavailable)")
+        setLocale(N) {
+            var I;
+            null === (I = r.setLocale(N)) || void 0 === I || I.then(I => {
+                G.info("Switching to ".concat(N), I ? "(available)" : "(unavailable)")
             })
         }
-        setAppLocale(I) {
-            this.regionPreference = I.split("-")[1]
+        setAppLocale(N) {
+            this.regionPreference = N.split("-")[1]
         }
-        detectLanguage(I) {
-            this.enabled && this.languageDetector.process(I)
+        detectLanguage(N) {
+            this.enabled && this.languageDetector.process(N)
         }
-        getAvailableLanguages(I) {
-            let N = {};
-            return I.forEach(I => {
+        getAvailableLanguages(N) {
+            let I = {};
+            return N.forEach(N => {
                 var A;
-                let [O] = I.split("-");
-                N[O] = null !== (A = N[O]) && void 0 !== A ? A : I
-            }), N
+                let [O] = N.split("-");
+                I[O] = null !== (A = I[O]) && void 0 !== A ? A : N
+            }), I
         }
-        isMisspelled(I, N) {
-            return "" !== this.misspelledWord && I === this.misspelledWord
+        isMisspelled(N, I) {
+            return "" !== this.misspelledWord && N === this.misspelledWord
         }
-        getCorrectionsForMisspelling(I, N) {
-            return this.isMisspelled(I, N) ? this.corrections : []
+        getCorrectionsForMisspelling(N, I) {
+            return this.isMisspelled(N, I) ? this.corrections : []
         }
-        replaceMisspelling(I) {
-            r.replaceMisspelling(I)
+        replaceMisspelling(N) {
+            r.replaceMisspelling(N)
         }
-        constructor(I) {
+        constructor(N) {
             this._enabled = !0, this.misspelledWord = "", this.corrections = [];
-            let [N, A] = t.default.locale.split("-");
+            let [I, A] = i.default.locale.split("-");
             this.regionPreference = A;
-            let O = this.getAvailableLanguages(I);
-            this.languageDetector = new i.default(N, A => {
+            let O = this.getAvailableLanguages(N);
+            this.languageDetector = new n.default(I, A => {
                 let T = "".concat(A, "-").concat(this.regionPreference);
-                if (-1 !== I.indexOf(T)) this.setLocale(T);
+                if (-1 !== N.indexOf(T)) this.setLocale(T);
                 else {
                     var _;
-                    let I = null !== (_ = O[A]) && void 0 !== _ ? _ : R.default[N];
-                    null != I && this.setLocale(I)
+                    let N = null !== (_ = O[A]) && void 0 !== _ ? _ : R.default[I];
+                    null != N && this.setLocale(N)
                 }
-            }), r.on("spellcheck-result", (I, N) => {
-                this.misspelledWord = null != I ? I : "", this.corrections = null != N ? N : []
+            }), r.on("spellcheck-result", (N, I) => {
+                this.misspelledWord = null != N ? N : "", this.corrections = null != I ? I : []
             })
         }
     }
-    let o = _.debounce((I, N) => {
-        let A = function(I) {
-            return null == I ? null : (0, e.isElement)(I, HTMLInputElement) || (0, e.isElement)(I, HTMLTextAreaElement) ? I.value : (0, e.isElement)(I) && I.hasAttribute("contenteditable") ? I.textContent : void 0
-        }(N);
-        null != A && I.detectLanguage(A)
+    let o = _.debounce((N, I) => {
+        let A = function(N) {
+            return null == N ? null : (0, e.isElement)(N, HTMLInputElement) || (0, e.isElement)(N, HTMLTextAreaElement) ? N.value : (0, e.isElement)(N) && N.hasAttribute("contenteditable") ? N.textContent : void 0
+        }(I);
+        null != A && N.detectLanguage(A)
     }, 250);
     async function s() {
-        var I, N;
-        let A = null !== (I = await r.getAvailableDictionaries()) && void 0 !== I ? I : [],
-            O = A.map(a).filter(n.isNotNullish),
+        var N, I;
+        let A = null !== (N = await r.getAvailableDictionaries()) && void 0 !== N ? N : [],
+            O = A.map(a).filter(t.isNotNullish),
             T = new S(O);
-        return N = T, null != document.body && document.body.addEventListener("beforeinput", I => o(N, I.target), !0), T
+        return I = T, null != document.body && document.body.addEventListener("beforeinput", N => o(I, N.target), !0), T
     }
 }

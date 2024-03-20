@@ -26,8 +26,8 @@ function(e, t, n) {
         S = n("36539"),
         C = n("698372"),
         _ = n("770370"),
-        I = n("667618"),
-        T = n("865677"),
+        T = n("667618"),
+        I = n("865677"),
         v = n("15874"),
         N = n("774713"),
         A = n("510788"),
@@ -50,9 +50,9 @@ function(e, t, n) {
                     look: w = d.Button.Looks.OUTLINED,
                     type: F,
                     onAction: G,
-                    isEmbedded: B = !1
+                    isEmbedded: H = !1
                 } = e,
-                H = (0, C.default)(),
+                B = (0, C.default)(),
                 V = (0, u.useStateFromStores)([h.default], () => {
                     let e = h.default.getCurrentUser();
                     return r(null != e, "UserActivityActions: currentUser cannot be undefined"), e
@@ -128,14 +128,14 @@ function(e, t, n) {
                         color: D,
                         look: w
                     }, "watch-button"),
-                    a = (0, i.jsx)(T.default, {
+                    a = (0, i.jsx)(I.default, {
                         activity: n,
-                        currentEmbeddedApplication: H,
+                        currentEmbeddedApplication: B,
                         user: l,
                         isCurrentUser: V.id === l.id,
                         color: D,
                         look: w,
-                        isEmbedded: B
+                        isEmbedded: H
                     }, "join-activity-button"),
                     s = (0, i.jsx)(A.default, {
                         activity: n,
@@ -143,7 +143,7 @@ function(e, t, n) {
                         color: D,
                         look: w
                     }, "notify-button"),
-                    r = (0, i.jsx)(I.default, {
+                    r = (0, i.jsx)(T.default, {
                         user: l,
                         color: D,
                         look: w,

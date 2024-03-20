@@ -1,6 +1,6 @@
-function(I, N, A) {
+function(N, I, A) {
     "use strict";
-    I.exports = {
+    N.exports = {
         COMMON_OPEN_DISCORD: "Discord 열기",
         COMMON_SIGN_UP_NOW: "지금 가입하세요",
         FOOTER_READY_TO_TRY_DISCORD: "Discord를 사용할 준비가 되었나요? 무료입니다!",

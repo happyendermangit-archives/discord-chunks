@@ -7,20 +7,20 @@ function(e, t, n) {
     });
     var i = n("37983");
     n("884691");
-    var s = n("669491"),
-        r = n("82169");
+    var r = n("669491"),
+        s = n("82169");
     let l = e => {
         let {
             width: t = 24,
             height: n = 24,
             secondaryColor: l = "transparent",
             secondaryColorClass: a = "",
-            color: o = s.default.colors.INTERACTIVE_NORMAL,
+            color: o = r.default.colors.INTERACTIVE_NORMAL,
             colorClass: u = "",
             ...c
         } = e;
         return (0, i.jsxs)("svg", {
-            ...(0, r.default)(c),
+            ...(0, s.default)(c),
             xmlns: "http://www.w3.org/2000/svg",
             width: t,
             height: n,

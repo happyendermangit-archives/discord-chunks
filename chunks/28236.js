@@ -27,7 +27,7 @@ function(e, t, n) {
                 jumbo: n = !1
             } = e, {
                 currentPreviewRef: a
-            } = l.useContext(f.default), g = (0, r.default)([p.default], () => p.default.getSoundById(t)), S = (null == g ? void 0 : g.emojiId) != null || (null == g ? void 0 : g.emojiName) != null, [C, _] = l.useState(!1), I = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), T = l.useCallback(() => {
+            } = l.useContext(f.default), g = (0, r.default)([p.default], () => p.default.getSoundById(t)), S = (null == g ? void 0 : g.emojiId) != null || (null == g ? void 0 : g.emojiName) != null, [C, _] = l.useState(!1), T = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), I = l.useCallback(() => {
                 var e;
                 null == g && (0, c.maybeFetchSoundboardSounds)();
                 let n = new Audio((0, m.default)(t));
@@ -37,10 +37,10 @@ function(e, t, n) {
                     once: !0
                 })
             }, [t, g, a, _]);
-            return I ? null == g ? (0, i.jsxs)(o.Clickable, {
+            return T ? null == g ? (0, i.jsxs)(o.Clickable, {
                 title: "Risky Click",
                 tag: "span",
-                onClick: T,
+                onClick: I,
                 className: y.container,
                 children: [(0, i.jsx)(E.default, {
                     className: y.unknownSound
@@ -52,7 +52,7 @@ function(e, t, n) {
                     children: "Unknown"
                 })]
             }) : n ? (0, i.jsxs)(o.Clickable, {
-                onClick: T,
+                onClick: I,
                 className: y.jumboContainer,
                 children: [(0, i.jsx)("div", {
                     className: s(y.jumboOverlay, {
@@ -74,7 +74,7 @@ function(e, t, n) {
                 })]
             }) : (0, i.jsxs)(o.Clickable, {
                 tag: "span",
-                onClick: T,
+                onClick: I,
                 className: y.container,
                 children: [S && (0, i.jsx)(u.default, {
                     emojiId: null == g ? void 0 : g.emojiId,

@@ -1,6 +1,6 @@
-function(I, N, A) {
+function(N, I, A) {
     "use strict";
-    I.exports = {
+    N.exports = {
         COMMON_OPEN_DISCORD: "Mở Discord",
         COMMON_SIGN_UP_NOW: "Đăng K\xfd Ngay",
         FOOTER_READY_TO_TRY_DISCORD: "Bạn đ\xe3 sẵn s\xe0ng thử Discord chưa? Ho\xe0n to\xe0n miễn ph\xed!",

@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("393377"),
         C = n("761354"),
         _ = n("49111"),
-        I = n("986548"),
-        T = n("356410");
+        T = n("986548"),
+        I = n("356410");
     let v = [];
 
     function N(e) {
@@ -90,7 +90,7 @@ function(e, t, n) {
                         return (0, i.jsx)("ul", {
                             ref: l,
                             ...r,
-                            className: s(I.channelAttachmentArea, T.scrollbarGhost),
+                            className: s(T.channelAttachmentArea, I.scrollbarGhost),
                             children: O ? k.map(e => (0, i.jsx)(S.default, {
                                 channelId: t,
                                 keyboardModeEnabled: a,

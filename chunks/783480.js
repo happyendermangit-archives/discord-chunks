@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("529805"),
         C = n("685841"),
         _ = n("804888"),
-        I = n("474643"),
-        T = n("585722"),
+        T = n("474643"),
+        I = n("585722"),
         v = n("568734"),
         N = n("305515"),
         A = n("49111"),
@@ -57,7 +57,7 @@ function(e, t, n) {
         let [w, F] = (0, _.default)(U.content);
         w && (U.content = F, U.flags = (0, v.addFlag)(null !== (t = U.flags) && void 0 !== t ? t : 0, A.MessageFlags.SUPPRESS_NOTIFICATIONS));
         let G = null !== (n = L.nonce) && void 0 !== n ? n : (0, E.createNonce)(),
-            B = (0, E.default)({
+            H = (0, E.default)({
                 channelId: f,
                 content: U.content,
                 tts: null !== (i = null == k ? void 0 : k.tts) && void 0 !== i && i,
@@ -69,7 +69,7 @@ function(e, t, n) {
             });
         return (U.nonce = G, b.on("start", e => {
             c = (0, x.createMessageRecord)({
-                ...B,
+                ...H,
                 id: e.id
             }), l.default.dispatch({
                 type: "UPLOAD_START",
@@ -122,7 +122,7 @@ function(e, t, n) {
             }, t)) : (0, o.openUploadError)({
                 title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                 help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-            }), "" !== U.content && "" === I.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === T.default.getUploadCount(f, M) && r.default.setUploads({
+            }), "" !== U.content && "" === T.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === I.default.getUploadCount(f, M) && r.default.setUploads({
                 channelId: f,
                 uploads: R,
                 draftType: M
@@ -219,7 +219,7 @@ function(e, t, n) {
                             })
                         }
                     })
-                }), "" !== h.content && "" === I.default.getDraft(n, u) && a.default.saveDraft(n, h.content, u)
+                }), "" !== h.content && "" === T.default.getDraft(n, u) && a.default.saveDraft(n, h.content, u)
             }), x.on("complete", e => {
                 l.default.dispatch({
                     type: "UPLOAD_COMPLETE",
@@ -234,12 +234,12 @@ function(e, t, n) {
                     type: "UPLOAD_CANCEL_REQUEST",
                     file: e
                 }), null != e.draftContent && null != e.channelId) {
-                let t = I.default.getDraft(e.channelId, I.DraftType.ChannelMessage);
+                let t = T.default.getDraft(e.channelId, T.DraftType.ChannelMessage);
                 "" === t && l.default.dispatch({
                     type: "DRAFT_SAVE",
                     channelId: e.channelId,
                     draft: e.draftContent,
-                    draftType: I.DraftType.ChannelMessage
+                    draftType: T.DraftType.ChannelMessage
                 })
             }
         }

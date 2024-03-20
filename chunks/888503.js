@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("943722"),
         C = n("49111"),
         _ = n("988268"),
-        I = n("39141"),
-        T = n("782340"),
+        T = n("39141"),
+        I = n("782340"),
         v = n("591665");
     let N = (0, y.cssValueToNumber)(r.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
     var A = function(e) {
@@ -54,8 +54,8 @@ function(e, t, n) {
             guildId: w,
             className: F,
             onMouseDown: G,
-            onKeyDown: B,
-            onClick: H,
+            onKeyDown: H,
+            onClick: B,
             onContextMenu: V,
             onClickPremiumGuildIcon: K,
             onFocus: W,
@@ -78,13 +78,13 @@ function(e, t, n) {
         }), er = e => {
             ei(e)
         }, eo = () => null != r && r && null == N ? (0, i.jsx)(o.Tooltip, {
-            text: null != y ? y : T.default.Messages.GUILD_OWNER,
+            text: null != y ? y : I.default.Messages.GUILD_OWNER,
             children: e => (0, i.jsx)(h.default, {
                 ...e,
                 className: v.ownerIcon
             })
         }) : null, eu = () => null == U ? null : (0, i.jsx)(o.Tooltip, {
-            text: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
+            text: I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
                 date: U
             }),
             children: e => (0, i.jsx)(o.Clickable, {
@@ -116,8 +116,8 @@ function(e, t, n) {
                 [v.offline]: ef && !t
             }),
             innerClassName: v.memberInner,
-            onClick: H,
-            onKeyDown: B,
+            onClick: B,
+            onKeyDown: H,
             onMouseDown: G,
             onContextMenu: V,
             onMouseEnter: () => {
@@ -155,7 +155,7 @@ function(e, t, n) {
                     }), (0, i.jsx)(c.default, {
                         confettiSpawnRef: en,
                         shouldFire: A && null != M && e.id !== M.id,
-                        confettiLocation: I.ConfettiLocation.MEMBER_USER
+                        confettiLocation: T.ConfettiLocation.MEMBER_USER
                     })]
                 })
             })(R, ef),

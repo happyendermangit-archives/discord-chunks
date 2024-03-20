@@ -24,38 +24,38 @@ function(e, t, n) {
         (0, s.useMaybeFetchPremiumLikelihood)(n);
         let {
             enabled: T,
-            useExpectedValue: C,
-            useLikelihood: p
+            useExpectedValue: p,
+            useLikelihood: S
         } = n.useExperiment({
             location: null != f ? f : "1"
         }, {
             autoTrackExposure: !I && !E && t
         }), {
-            premiumLikelihood: S,
-            fetched: P
+            premiumLikelihood: P,
+            fetched: R
         } = (0, r.useStateFromStoresObject)([o.default], () => {
             let e = o.default.getState();
             return {
                 fetched: e.fetched,
                 premiumLikelihood: e.premiumLikelihood
             }
-        }), R = (0, r.useStateFromStores)([l.default], () => l.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), O = !I && T && !E && (C ? !P || !R : !P), L = d.PremiumTypes.TIER_2;
+        }), C = (0, r.useStateFromStores)([l.default], () => l.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), O = !I && T && !E && (p ? !R || !C : !R), M = d.PremiumTypes.TIER_2;
         if (E) {
             let e = _.subscription_trial;
-            (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? L = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (L = d.PremiumTypes.TIER_2)
+            (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? M = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (M = d.PremiumTypes.TIER_2)
         } else if (!I && !O && T) {
-            if (C) {
+            if (p) {
                 let {
                     amount: e
                 } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
                     amount: t
                 } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
-                L = (0, u.getHigherExpectedValue)(S, e, t)
-            } else p && (L = (0, u.getHighestLikelihood)(S))
+                M = (0, u.getHigherExpectedValue)(P, e, t)
+            } else S && (M = (0, u.getHighestLikelihood)(P))
         }
         return {
             isLoading: O,
-            suggestedPremiumType: L
+            suggestedPremiumType: M
         }
     }
 }

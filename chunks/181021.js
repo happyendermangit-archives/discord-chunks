@@ -26,8 +26,8 @@ function(e, t, n) {
         S = n("13798"),
         C = n("235004"),
         _ = n("49111"),
-        I = n("782340"),
-        T = n("870477");
+        T = n("782340"),
+        I = n("870477");
 
     function v(e) {
         let {
@@ -38,9 +38,9 @@ function(e, t, n) {
             graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, i.jsx)(r.default, {
                 emojiId: t.emojiId,
                 emojiName: t.emojiName,
-                className: T.emoji
+                className: I.emoji
             }) : (0, i.jsx)(E.default, {
-                className: T.emoji
+                className: I.emoji
             }),
             graphicSecondary: null != O ? (0, i.jsx)(d.default, {
                 guild: O,
@@ -61,7 +61,7 @@ function(e, t, n) {
                 })
             },
             P = (0, u.isDismissibleContentDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
-            b = null != k && (0, g.isWindows)() && !P ? I.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
+            b = null != k && (0, g.isWindows)() && !P ? T.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
                 keybind: (0, S.toString)(k.shortcut, !0),
                 openSettingsHook: (e, t) => (0, i.jsx)(s.Anchor, {
                     onClick: L,
@@ -69,16 +69,16 @@ function(e, t, n) {
                 }, t)
             }) : null;
         return null == b ? null : (0, i.jsxs)("div", {
-            className: T.keybindHint,
+            className: I.keybindHint,
             children: [(0, i.jsx)(y.default, {
-                className: T.warningIcon
+                className: I.warningIcon
             }), (0, i.jsx)(s.Text, {
                 variant: "text-sm/medium",
                 color: "text-normal",
-                className: T.keybindHintText,
+                className: I.keybindHintText,
                 children: b
             }), (0, i.jsx)(s.Clickable, {
-                className: T.closeButton,
+                className: I.closeButton,
                 onClick: () => (0, u.markDismissibleContentAsDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
                 children: (0, i.jsx)(x.default, {
                     width: 16,

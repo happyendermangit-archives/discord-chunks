@@ -39,7 +39,7 @@ function(e, t, n) {
             onSendMessage: S,
             onSendSticker: C,
             setValue: _
-        } = e, I = {
+        } = e, T = {
             mentions: {
                 channel: o.ChannelMentionMode.DENY,
                 global: o.GlobalMentionMode.DENY,
@@ -70,9 +70,9 @@ function(e, t, n) {
         };
         if (null != n) {
             let e = (0, l.getApplicationCommandOptionQueryOptions)(n);
-            e.canMentionChannels && (I.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), e.canMentionEveryone && (I.mentions.global = e.canMentionHere ? o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE : o.GlobalMentionMode.ALLOW_EVERYONE), e.canMentionRoles && (I.mentions.role = e.canMentionNonMentionableRoles ? o.RoleMentionMode.ALLOW_ALL : o.RoleMentionMode.ALLOW_MENTIONABLE), e.canMentionUsers && (I.mentions.user = e.canMentionAnyGuildUser ? o.UserMentionMode.ALLOW_GUILD : o.UserMentionMode.ALLOW_CHANNEL), I.hideMentionDescription = !0
-        } else u && (I.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), r && (I.mentions.role = o.RoleMentionMode.ALLOW_MENTIONABLE), s && (I.mentions.user = o.UserMentionMode.ALLOW_CHANNEL), d && (I.mentions.global = o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), c && (I.mentions.clyde = o.ClydeMentionMode.ALLOW);
-        return (null === (t = E.commands) || void 0 === t ? void 0 : t.enabled) && (f ? I.commands = p ? o.CommandMode.NEW_TEXT_ONLY : o.CommandMode.NEW : I.commands = o.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (I.allowedChannelTypes = n.channelTypes), I
+            e.canMentionChannels && (T.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), e.canMentionEveryone && (T.mentions.global = e.canMentionHere ? o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE : o.GlobalMentionMode.ALLOW_EVERYONE), e.canMentionRoles && (T.mentions.role = e.canMentionNonMentionableRoles ? o.RoleMentionMode.ALLOW_ALL : o.RoleMentionMode.ALLOW_MENTIONABLE), e.canMentionUsers && (T.mentions.user = e.canMentionAnyGuildUser ? o.UserMentionMode.ALLOW_GUILD : o.UserMentionMode.ALLOW_CHANNEL), T.hideMentionDescription = !0
+        } else u && (T.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), r && (T.mentions.role = o.RoleMentionMode.ALLOW_MENTIONABLE), s && (T.mentions.user = o.UserMentionMode.ALLOW_CHANNEL), d && (T.mentions.global = o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), c && (T.mentions.clyde = o.ClydeMentionMode.ALLOW);
+        return (null === (t = E.commands) || void 0 === t ? void 0 : t.enabled) && (f ? T.commands = p ? o.CommandMode.NEW_TEXT_ONLY : o.CommandMode.NEW : T.commands = o.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (T.allowedChannelTypes = n.channelTypes), T
     }
 
     function c(e) {

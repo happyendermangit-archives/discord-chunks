@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("917247"),
         C = n("845579"),
         _ = n("697218"),
-        I = n("599110"),
-        T = n("159885"),
+        T = n("599110"),
+        I = n("159885"),
         v = n("570759"),
         N = n("866353"),
         A = n("178207"),
@@ -43,14 +43,14 @@ function(e, t, n) {
         w = n("560241"),
         F = n("49111"),
         G = n("253763");
-    let B = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-        H = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-        V = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-        K = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-        W = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
-        Y = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-        z = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-        Z = (0, T.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+    let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+        B = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+        V = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+        K = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+        W = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
+        Y = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+        z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+        Z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
         J = Y + 2 * Z,
         q = z + 2 * Z,
         X = s(A.trackStickerSearchEmpty, 200),
@@ -60,7 +60,7 @@ function(e, t, n) {
             let {
                 containerWidth: s,
                 channel: u,
-                onSelectSticker: T,
+                onSelectSticker: I,
                 closePopout: Y
             } = e, {
                 location: z
@@ -84,7 +84,7 @@ function(e, t, n) {
                     gridWrapperRef: ee,
                     containerWidth: s,
                     showingEmptyState: eo,
-                    listPaddingLeft: H,
+                    listPaddingLeft: B,
                     listScrollbarWidth: 8
                 }),
                 ed = C.StickerPickerCollapsedSections.useSetting(),
@@ -100,13 +100,13 @@ function(e, t, n) {
                 } = null != ep ? ep : {},
                 eg = eE.length + ey.length,
                 eS = l.useCallback(e => {
-                    "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), T(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
-                }, [T, el, eg]),
-                eC = null != eu && eu > B,
+                    "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), I(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
+                }, [I, el, eg]),
+                eC = null != eu && eu > H,
                 {
                     rowCount: e_,
-                    rowCountBySection: eI,
-                    stickersGrid: eT,
+                    rowCountBySection: eT,
+                    stickersGrid: eI,
                     gutterWidth: ev,
                     columnCounts: eN
                 } = (0, O.useStickersGrid)({
@@ -124,7 +124,7 @@ function(e, t, n) {
                     } = t;
                     switch (e.type) {
                         case M.StickerGridItemTypes.CREATE_STICKER:
-                            I.default.track(F.AnalyticEvents.OPEN_MODAL, {
+                            T.default.track(F.AnalyticEvents.OPEN_MODAL, {
                                 type: F.AnalyticsSections.CREATE_STICKER_MODAL,
                                 location: z
                             }), (0, d.openModalLazy)(async () => {
@@ -150,7 +150,7 @@ function(e, t, n) {
                 } = (0, k.useKeyboardNavigation)({
                     columnCounts: eN,
                     stickersListRef: et,
-                    stickersGrid: eT,
+                    stickersGrid: eI,
                     onGridItemSelect: eA,
                     store: m.StickerPickerStore,
                     setInspectedStickerPosition: m.StickerPickerStore.setInspectedExpressionPosition,
@@ -184,7 +184,7 @@ function(e, t, n) {
                 null === (e = en.current) || void 0 === e || e.focus()
             }, []);
             let eb = l.useCallback(() => {
-                Y(), I.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                Y(), T.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                     location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
                 }), (0, E.navigateToPremiumMarketingPage)()
             }, [Y]);
@@ -217,9 +217,9 @@ function(e, t, n) {
                             isUsingKeyboardNavigation: eL,
                             onSelectSticker: eS,
                             rowCount: e_,
-                            rowCountBySection: eI,
+                            rowCountBySection: eT,
                             stickersCategories: er,
-                            stickersGrid: eT,
+                            stickersGrid: eI,
                             channel: u
                         }) : null
                     }), (0, i.jsx)(L.default, {

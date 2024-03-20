@@ -1,4 +1,4 @@
-function(I, N, A) {
+function(N, I, A) {
     "use strict";
-    I.exports = {}
+    N.exports = {}
 }

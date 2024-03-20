@@ -37,7 +37,7 @@ function(e, _, E) {
                 }
             }(n, E),
             S = function(e, _, E) {
-                var o, n, r, a, i, I, s, T, S, N, O, A, R, l, u, L, C, D, c;
+                var o, n, r, a, i, I, s, T, S, N, O, A, R, l, u, L, C, c, D;
 
                 function d(e) {
                     return (null == E ? void 0 : E.storedInformation) != null && 1 === E.storedInformation[e]
@@ -80,8 +80,8 @@ function(e, _, E) {
                     minidump_exception_type: null !== (u = null == h ? void 0 : h.exceptionString) && void 0 !== u ? u : null,
                     minidump_exception_module_name: null !== (L = null == h ? void 0 : h.exceptionModuleName) && void 0 !== L ? L : null,
                     minidump_relative_crash_address: null !== (C = null == h ? void 0 : h.relativeCrashAddress) && void 0 !== C ? C : null,
-                    minidump_exception_module_version: null !== (D = null == h ? void 0 : h.exceptionModuleVersion) && void 0 !== D ? D : null,
-                    minidump_exception_module_code_id: null !== (c = null == h ? void 0 : h.exceptionModuleCodeId) && void 0 !== c ? c : null,
+                    minidump_exception_module_version: null !== (c = null == h ? void 0 : h.exceptionModuleVersion) && void 0 !== c ? c : null,
+                    minidump_exception_module_code_id: null !== (D = null == h ? void 0 : h.exceptionModuleCodeId) && void 0 !== D ? D : null,
                     ...M
                 }
             }(r, i, E);

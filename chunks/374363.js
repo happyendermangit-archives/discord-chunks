@@ -48,11 +48,11 @@ function(e, _, E) {
         })
     }
 
-    function D(e) {
+    function c(e) {
         null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), e.editInfo = (0, O.createEmptyEditInfo)()
     }
 
-    function c(e) {
+    function D(e) {
         let {
             settings: {
                 proto: _,
@@ -64,7 +64,7 @@ function(e, _, E) {
         } = e;
         u = !r;
         let a = l[E];
-        n && D(a), t ? (a.proto = (0, N.mergeTopLevelFields)(a.ProtoClass, a.proto, _), o("string" != typeof a.proto, "UserSettingsProto cannot be a string")) : (a.proto = _, o("string" != typeof a.proto, "UserSettingsProto cannot be a string"), a.editInfo.loaded = !0, a.editInfo.loading = !1)
+        n && c(a), t ? (a.proto = (0, N.mergeTopLevelFields)(a.ProtoClass, a.proto, _), o("string" != typeof a.proto, "UserSettingsProto cannot be a string")) : (a.proto = _, o("string" != typeof a.proto, "UserSettingsProto cannot be a string"), a.editInfo.loaded = !0, a.editInfo.loading = !1)
     }
 
     function d(e) {
@@ -150,8 +150,8 @@ function(e, _, E) {
             } = e;
             d(_)
         },
-        USER_SETTINGS_PROTO_UPDATE: c,
-        USER_SETTINGS_PROTO_ENQUEUE_UPDATE: c,
+        USER_SETTINGS_PROTO_UPDATE: D,
+        USER_SETTINGS_PROTO_ENQUEUE_UPDATE: D,
         USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function(e) {
             let {
                 settings: {
@@ -176,7 +176,7 @@ function(e, _, E) {
                 isDirty: t,
                 cleanupFuncs: n
             } = (0, N.runMigrations)(A.proto, S.default[O.UserSettingsTypes.PRELOADED_USER_SETTINGS]);
-            t && D(A), A.proto = E, o("string" != typeof A.proto, "UserSettingsProto cannot be a string"), A.editInfo.triggeredMigrations = t, A.editInfo.cleanupFuncs = n, A.editInfo.loaded = !0, Object.values(l).forEach(e => {
+            t && c(A), A.proto = E, o("string" != typeof A.proto, "UserSettingsProto cannot be a string"), A.editInfo.triggeredMigrations = t, A.editInfo.cleanupFuncs = n, A.editInfo.loaded = !0, Object.values(l).forEach(e => {
                 e.lazyLoaded && (e.editInfo.loaded = !1, e.editInfo.loading = !1)
             }), C()
         },

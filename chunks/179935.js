@@ -2,26 +2,26 @@ function(e, t, r) {
     "use strict";
     r.r(t), r.d(t, {
         fetchReferralsRemaining: function() {
-            return a
-        },
-        checkRecipientEligibility: function() {
             return f
         },
+        checkRecipientEligibility: function() {
+            return a
+        },
         createReferralTrial: function() {
-            return o
+            return _
         },
         resolveReferralTrialOffer: function() {
-            return c
+            return E
         }
     });
-    var n = r("872717"),
+    var l = r("872717"),
         i = r("913144"),
-        l = r("819689"),
+        n = r("819689"),
         u = r("18494"),
         s = r("49111");
-    let a = () => (i.default.dispatch({
+    let f = () => (i.default.dispatch({
             type: "BILLING_REFERRALS_REMAINING_FETCH_START"
-        }), n.default.get({
+        }), l.default.get({
             url: s.Endpoints.GET_REFERRALS_REMAINING,
             oldFormErrors: !0
         }).then(e => {
@@ -35,10 +35,10 @@ function(e, t, r) {
                 type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL"
             })
         })),
-        f = e => (i.default.dispatch({
+        a = e => (i.default.dispatch({
             type: "BILLING_CREATE_REFERRAL_PREVIEW_START",
             recipientId: e
-        }), n.default.post({
+        }), l.default.post({
             url: s.Endpoints.CREATE_REFERRAL_PREVIEW(e),
             oldFormErrors: !0
         }).then(t => {
@@ -53,42 +53,42 @@ function(e, t, r) {
                 recipientId: e
             })
         }));
-    async function o(e) {
+    async function _(e) {
         try {
             var t;
-            let r = await n.default.post({
+            let r = await l.default.post({
                     url: s.Endpoints.CREATE_REFERRAL(e),
                     oldFormErrors: !0
                 }),
-                l = null !== (t = r.body) && void 0 !== t ? t : null;
+                n = null !== (t = r.body) && void 0 !== t ? t : null;
             return i.default.dispatch({
                 type: "BILLING_CREATE_REFERRAL_SUCCESS",
-                userTrialOffer: l
+                userTrialOffer: n
             }), {
-                userTrialOffer: l
+                userTrialOffer: n
             }
         } catch (e) {
             if (i.default.dispatch({
                     type: "BILLING_CREATE_REFERRAL_FAIL"
                 }), e.body.code === s.AbortCodes.INVALID_MESSAGE_SEND_USER) {
                 let t = u.default.getCurrentlySelectedChannelId();
-                null != t && l.default.sendClydeError(t, e.body.code)
+                null != t && n.default.sendClydeError(t, e.body.code)
             }
         }
     }
-    async function c(e) {
+    async function E(e) {
         try {
             var t;
-            let r = await n.default.get({
+            let r = await l.default.get({
                     url: s.Endpoints.REFERRAL_OFFER_ID_RESOLVE(e),
                     oldFormErrors: !0
                 }),
-                l = null !== (t = r.body) && void 0 !== t ? t : null;
+                n = null !== (t = r.body) && void 0 !== t ? t : null;
             return i.default.dispatch({
                 type: "BILLING_REFERRAL_RESOLVE_SUCCESS",
-                userTrialOffer: l
+                userTrialOffer: n
             }), {
-                userTrialOffer: l
+                userTrialOffer: n
             }
         } catch (t) {
             i.default.dispatch({

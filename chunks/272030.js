@@ -1,14 +1,14 @@
-function(I, N, A) {
+function(N, I, A) {
     "use strict";
-    A.r(N), A.d(N, {
+    A.r(I), A.d(I, {
         closeContextMenu: function() {
-            return t
+            return i
         },
         openContextMenu: function() {
-            return n
+            return t
         },
         openContextMenuLazy: function() {
-            return i
+            return n
         }
     }), A("506083");
     var O = A("913144"),
@@ -17,61 +17,61 @@ function(I, N, A) {
         e = A("749866"),
         E = A("49111");
 
-    function V(I) {
+    function V(N) {
         O.default.dispatch({
             type: "CONTEXT_MENU_OPEN",
-            contextMenu: I
+            contextMenu: N
         })
     }
 
-    function t(I) {
+    function i(N) {
         {
             let {
-                flushSync: N
+                flushSync: I
             } = A("817736");
-            N(() => {
+            I(() => {
                 O.default.wait(() => {
                     O.default.dispatch({
                         type: "CONTEXT_MENU_CLOSE"
-                    }).finally(I)
+                    }).finally(N)
                 })
             })
         }
     }
 
-    function n(I, N, A, O) {
-        var t, n, i;
-        if (I.stopPropagation(), null != I.currentTarget.contains && !I.currentTarget.contains(I.target)) return;
+    function t(N, I, A, O) {
+        var i, t, n;
+        if (N.stopPropagation(), null != N.currentTarget.contains && !N.currentTarget.contains(N.target)) return;
         let R = 0,
             G = 0;
-        if ("pageX" in I && (R = I.pageX, G = I.pageY), 0 === R && 0 === G) {
-            let N = null === (t = I.target) || void 0 === t ? void 0 : t.getBoundingClientRect(),
+        if ("pageX" in N && (R = N.pageX, G = N.pageY), 0 === R && 0 === G) {
+            let I = null === (i = N.target) || void 0 === i ? void 0 : i.getBoundingClientRect(),
                 {
                     left: A = 0,
                     top: O = 0,
                     width: T = 0,
                     height: _ = 0
-                } = null != N ? N : {};
+                } = null != I ? I : {};
             R = A + T / 2, G = O + _ / 2
         }
         let r = {
-            render: N,
+            render: I,
             renderLazy: O,
-            target: null !== (n = I.target) && void 0 !== n ? n : I.currentTarget,
+            target: null !== (t = N.target) && void 0 !== t ? t : N.currentTarget,
             rect: new DOMRect(R, G, 0, 0),
             config: {
-                context: __OVERLAY__ ? E.AppContext.OVERLAY : null !== (i = (0, T.getCurrentlyInteractingAppContext)()) && void 0 !== i ? i : E.AppContext.APP,
+                context: __OVERLAY__ ? E.AppContext.OVERLAY : null !== (n = (0, T.getCurrentlyInteractingAppContext)()) && void 0 !== n ? n : E.AppContext.APP,
                 ...A
             }
         };
         if ((null == A ? void 0 : A.enableSpellCheck) && (0, _.isDesktop)()) {
-            let I = (0, e.addResultListener)(() => {
-                I(), V(r)
+            let N = (0, e.addResultListener)(() => {
+                N(), V(r)
             })
-        } else I.preventDefault(), V(r)
+        } else N.preventDefault(), V(r)
     }
 
-    function i(I, N, A) {
-        n(I, void 0, A, N)
+    function n(N, I, A) {
+        t(N, void 0, A, I)
     }
 }

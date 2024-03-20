@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         StickersPremiumUpsell: function() {
-            return T
+            return I
         }
     });
     var i = n("37983"),
@@ -25,21 +25,21 @@ function(e, t, n) {
         S = n("782340"),
         C = n("350327"),
         _ = n("481927");
-    let I = () => (0, x.setShowPremiumUpsell)(!1),
-        T = e => {
+    let T = () => (0, x.setShowPremiumUpsell)(!1),
+        I = e => {
             var t, n, a;
             let {
                 onLearnMore: x
             } = e, {
-                analyticsLocations: T
+                analyticsLocations: I
             } = (0, u.default)(o.default.PREMIUM_UPSELL);
             l.useEffect(() => {
                 m.default.track(y.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                     location_section: y.AnalyticsSections.STICKER_PICKER_UPSELL,
                     type: g.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
-                    location_stack: T
+                    location_stack: I
                 })
-            }, [T]);
+            }, [I]);
             let v = (0, c.usePremiumTrialOffer)(),
                 N = (0, d.usePremiumDiscountOffer)(),
                 A = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === g.PremiumSubscriptionSKUs.TIER_0,
@@ -51,7 +51,7 @@ function(e, t, n) {
                 children: [O ? (0, i.jsx)(f.default, {
                     trialOffer: v,
                     discountOffer: N,
-                    onClose: I,
+                    onClose: T,
                     type: g.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
                     subscriptionTier: null !== (a = null == v ? void 0 : null === (n = v.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : g.PremiumSubscriptionSKUs.TIER_2,
                     children: A ? S.default.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
@@ -82,7 +82,7 @@ function(e, t, n) {
                     buttonText: O ? A ? S.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : S.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
                 }), (0, i.jsx)(r.Clickable, {
                     className: C.upsellClose,
-                    onClick: I,
+                    onClick: T,
                     children: (0, i.jsx)(p.default, {})
                 })]
             })

@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("664610"),
         C = n("688893"),
         _ = n("684607"),
-        I = n("803322"),
-        T = n("127875"),
+        T = n("803322"),
+        I = n("127875"),
         v = n("169694"),
         N = n("100576"),
         A = n("765446"),
@@ -47,8 +47,8 @@ function(e, t, n) {
                 textAreaPaddingClassName: w,
                 onChange: F,
                 onPaste: G,
-                onResize: B,
-                onFocus: H,
+                onResize: H,
+                onFocus: B,
                 onBlur: V,
                 onKeyDown: K,
                 onKeyUp: W,
@@ -130,7 +130,7 @@ function(e, t, n) {
                     values: n,
                     results: i
                 }
-            }, [k.guild_id, k.id, eC]), eI = l.useCallback(() => {
+            }, [k.guild_id, k.id, eC]), eT = l.useCallback(() => {
                 let e;
                 let t = $ ? u.default.getActiveCommand(k.id) : null;
                 if (null != t && null != t.options) {
@@ -162,9 +162,9 @@ function(e, t, n) {
                     ignoreTrailingEmptyNodes: !0
                 }), t, e)
             }, [k.id, eC, Z, e_, $]);
-            (0, C.default)(t, eC, k, eI), (0, T.default)(eC, ep, B);
+            (0, C.default)(t, eC, k, eT), (0, I.default)(eC, ep, H);
             let {
-                handleKeyDown: eT,
+                handleKeyDown: eI,
                 handleKeyUp: ev
             } = (0, _.default)({
                 editor: eC,
@@ -175,13 +175,13 @@ function(e, t, n) {
                 onTab: Y,
                 onEnter: z,
                 allowNewLines: ei,
-                submit: eI,
+                submit: eT,
                 hideAutocomplete: q,
                 moveSelection: X
             }), {
                 handlePaste: eN,
                 handleGlobalPaste: eA
-            } = (0, I.default)(eC, eE, G), eO = l.useCallback(e => {
+            } = (0, T.default)(eC, eE, G), eO = l.useCallback(e => {
                 null == J || J()
             }, [J]), eR = l.useCallback(e => {
                 e !== em.current ? ex.current && (null == F || F(null, (0, x.toTextValue)(e, {
@@ -222,11 +222,11 @@ function(e, t, n) {
                         autoFocus: !et,
                         canFocus: !b,
                         onChange: eR,
-                        onFocus: H,
+                        onFocus: B,
                         onBlur: V,
                         onClick: eO,
                         onPaste: eN,
-                        onKeyDown: eT,
+                        onKeyDown: eI,
                         onKeyUp: ev,
                         decorateExtra: eM,
                         renderExtraElement: ek,

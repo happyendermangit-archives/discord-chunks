@@ -24,8 +24,8 @@ function(e, t, n) {
         S = n("605250"),
         C = n("585722"),
         _ = n("378765"),
-        I = n("254490"),
-        T = n("850391"),
+        T = n("254490"),
+        I = n("850391"),
         v = n("149022"),
         N = n("296141"),
         A = n("606013"),
@@ -174,7 +174,7 @@ function(e, t, n) {
                 useSlate: g,
                 spellcheckEnabled: S,
                 useNewSlashCommands: C,
-                canOnlyUseTextCommands: I,
+                canOnlyUseTextCommands: T,
                 className: N,
                 id: R,
                 required: k,
@@ -186,7 +186,7 @@ function(e, t, n) {
             } = this.props, {
                 submitting: F,
                 popup: G
-            } = this.state, B = {
+            } = this.state, H = {
                 channel: x,
                 className: r(N, L.textArea, {
                     [L.textAreaSlate]: g,
@@ -198,7 +198,7 @@ function(e, t, n) {
                 accessibilityLabel: w,
                 disabled: d || !1,
                 submitting: F,
-                isEdit: E === T.ChatInputTypes.EDIT,
+                isEdit: E === I.ChatInputTypes.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -213,9 +213,9 @@ function(e, t, n) {
                 onKeyDown: f,
                 onSubmit: h,
                 textAreaPaddingClassName: r(b[y], {
-                    [L.textAreaWithoutAttachmentButton]: E !== T.ChatInputTypes.NORMAL && E !== T.ChatInputTypes.OVERLAY && E !== T.ChatInputTypes.THREAD_CREATION && E !== T.ChatInputTypes.SIDEBAR,
-                    [L.textAreaForPostCreation]: E === T.ChatInputTypes.CREATE_FORUM_POST,
-                    [L.textAreaCustomGift]: E === T.ChatInputTypes.CUSTOM_GIFT
+                    [L.textAreaWithoutAttachmentButton]: E !== I.ChatInputTypes.NORMAL && E !== I.ChatInputTypes.OVERLAY && E !== I.ChatInputTypes.THREAD_CREATION && E !== I.ChatInputTypes.SIDEBAR,
+                    [L.textAreaForPostCreation]: E === I.ChatInputTypes.CREATE_FORUM_POST,
+                    [L.textAreaCustomGift]: E === I.ChatInputTypes.CUSTOM_GIFT
                 }),
                 spellcheckEnabled: S,
                 useNewSlashCommands: C,
@@ -229,16 +229,16 @@ function(e, t, n) {
                 "aria-describedby": U,
                 "aria-labelledby": D,
                 "aria-autocomplete": "list"
-            }, H = g ? (0, l.jsx)(O.default, {
+            }, B = g ? (0, l.jsx)(O.default, {
                 ref: this.ref,
-                ...B,
+                ...H,
                 type: E,
                 value: d ? (0, v.toRichValue)("") : u,
                 canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
-                canOnlyUseTextCommands: I
+                canOnlyUseTextCommands: T
             }) : (0, l.jsx)(A.default, {
                 ref: this.ref,
-                ...B,
+                ...H,
                 value: d ? "" : o
             });
             return (0, l.jsxs)(l.Fragment, {
@@ -248,7 +248,7 @@ function(e, t, n) {
                 }), (0, l.jsx)(_.ComponentAction, {
                     event: M.ComponentActions.CLEAR_TEXT,
                     handler: this.handleClearText
-                }), H]
+                }), B]
             })
         }
         constructor(e) {
@@ -367,7 +367,7 @@ function(e, t, n) {
                                     }
                                 }(n)) && void 0 !== s ? s : t.name;
                             return {
-                                files: [(0, I.makeFile)(t, l, t.type)]
+                                files: [(0, T.makeFile)(t, l, t.type)]
                             }
                         }
                         return {
@@ -381,7 +381,7 @@ function(e, t, n) {
                                 type: "text/plain"
                             });
                             return {
-                                files: [(0, I.makeFile)(e, "message.txt")],
+                                files: [(0, T.makeFile)(e, "message.txt")],
                                 convertedStringToFile: !0
                             }
                         }

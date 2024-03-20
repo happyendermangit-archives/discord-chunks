@@ -1,17 +1,17 @@
-function(I, N, A) {
+function(N, I, A) {
     "use strict";
-    A.r(N), A.d(N, {
+    A.r(I), A.d(I, {
         isSupported: function() {
             return E
         },
         setEnabled: function() {
-            return t
+            return i
         },
         setLearnedWords: function() {
-            return n
+            return t
         },
         isMisspelled: function() {
-            return i
+            return n
         },
         getCorrections: function() {
             return R
@@ -38,37 +38,37 @@ function(I, N, A) {
         return (0, _.isDesktop)() && e()
     }
     let V = E() ? (0, T.install)() : null;
-    async function t(I) {
-        let N = await V;
-        null != N && (N.enabled = I)
+    async function i(N) {
+        let I = await V;
+        null != I && (I.enabled = N)
     }
-    async function n(I) {
-        let N = await V;
-        null != N && N.setLearnedWords(I)
+    async function t(N) {
+        let I = await V;
+        null != I && I.setLearnedWords(N)
     }
-    async function i(I) {
-        let N = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    async function n(N) {
+        let I = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             A = await V;
-        return null != A && A.isMisspelled(I, N)
+        return null != A && A.isMisspelled(N, I)
     }
-    async function R(I) {
-        let N = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    async function R(N) {
+        let I = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             A = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
             O = await V;
-        return null == O ? [] : O.getCorrectionsForMisspelling(I, N).slice(0, A)
+        return null == O ? [] : O.getCorrectionsForMisspelling(N, I).slice(0, A)
     }
-    async function G(I) {
-        let N = await V;
-        null != N && N.replaceMisspelling(I)
+    async function G(N) {
+        let I = await V;
+        null != I && I.replaceMisspelling(N)
     }
-    async function r(I) {
-        let N = await V;
-        null != N && N.setAppLocale(I)
+    async function r(N) {
+        let I = await V;
+        null != I && I.setAppLocale(N)
     }
 
-    function a(I) {
+    function a(N) {
         if (!e()) return () => {};
-        let N = O.default.spellCheck.on("spellcheck-result", I);
-        return null != N ? N : () => {}
+        let I = O.default.spellCheck.on("spellcheck-result", N);
+        return null != I ? I : () => {}
     }
 }

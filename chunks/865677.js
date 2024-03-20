@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("27618"),
         C = n("18494"),
         _ = n("697218"),
-        I = n("800762"),
-        T = n("953998"),
+        T = n("800762"),
+        I = n("953998"),
         v = n("535974"),
         N = n("773336"),
         A = n("602043"),
@@ -48,8 +48,8 @@ function(e, t, n) {
             currentEmbeddedApplication: n,
             isCurrentUser: F,
             color: G,
-            look: B,
-            hover: H,
+            look: H,
+            hover: B,
             user: V,
             isEmbedded: K = !1
         } = e, {
@@ -70,7 +70,7 @@ function(e, t, n) {
                 channelId: i
             } = e;
             return n === (null == t ? void 0 : t.application_id) && i === X
-        })), ee = (0, a.useStateFromStores)([T.default], () => null != t && null != t.application_id && T.default.getState(t.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([m.default, E.default, x.default, S.default, C.default, I.default, g.default], () => (0, M.default)({
+        })), ee = (0, a.useStateFromStores)([I.default], () => null != t && null != t.application_id && I.default.getState(t.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([m.default, E.default, x.default, S.default, C.default, T.default, g.default], () => (0, M.default)({
             user: V,
             activity: t,
             application: et,
@@ -82,7 +82,7 @@ function(e, t, n) {
             GuildMemberCountStore: x.default,
             RelationshipStore: S.default,
             SelectedChannelStore: C.default,
-            VoiceStateStore: I.default,
+            VoiceStateStore: T.default,
             PermissionStore: g.default
         })), ei = (0, a.useStateFromStores)([O.default], () => Array.from(O.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == q ? void 0 : q.applicationId) && e.channelId === (null == q ? void 0 : q.channelId))), el = (0, d.useAnalyticsContext)(), ea = !N.isPlatformEmbedded, es = (0, L.default)(t, D.ActivityFlags.JOIN) || K;
         if (null == t || !es || null == t.application_id) return null;
@@ -145,8 +145,8 @@ function(e, t, n) {
                     onMouseEnter: t,
                     onMouseLeave: n,
                     color: G,
-                    look: B,
-                    hover: H,
+                    look: H,
+                    hover: B,
                     disabled: !er,
                     submitting: ee,
                     fullWidth: !0,

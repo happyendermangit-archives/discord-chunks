@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("37983");
     n("884691");
-    var s = n("414456"),
-        r = n.n(s),
+    var r = n("414456"),
+        s = n.n(r),
         l = n("446674"),
         a = n("77078"),
         o = n("102985"),
@@ -18,45 +18,45 @@ function(e, t, n) {
         f = n("782340"),
         h = n("168540");
 
-    function v(e) {
+    function E(e) {
         if (e.isSystemUser()) return c.BotTypes.SYSTEM_DM;
         if (e.isClyde()) return c.BotTypes.AI;
         if (e.bot) return c.BotTypes.BOT;
         return null
     }
-    let E = e => {
+    let v = e => {
         let {
             primary: t,
             secondary: n,
-            botType: s,
+            botType: r,
             botVerified: l,
             discriminatorClass: o,
             className: c,
             usernameClass: d,
-            color: v,
-            botClass: E,
+            color: E,
+            botClass: v,
             showStreamerModeTooltip: C
         } = e;
         return (0, i.jsxs)("div", {
-            className: r(h.info, c),
+            className: s(h.info, c),
             children: [(0, i.jsx)(a.Tooltip, {
                 text: f.default.Messages.STREAMER_MODE_ENABLED,
                 shouldShow: C,
                 "aria-label": !!C && void 0,
                 children: e => (0, i.jsx)("span", {
                     ...e,
-                    className: r(h.username, d),
-                    style: null != v ? {
-                        color: v
+                    className: s(h.username, d),
+                    style: null != E ? {
+                        color: E
                     } : void 0,
                     children: t
                 })
             }), null != n ? (0, i.jsx)("span", {
-                className: r(h.infoSpacing, o),
+                className: s(h.infoSpacing, o),
                 children: n
-            }) : void 0, null != s && (0, i.jsx)(u.default, {
-                type: s,
-                className: r(h.infoSpacing, E),
+            }) : void 0, null != r && (0, i.jsx)(u.default, {
+                type: r,
+                className: s(h.infoSpacing, v),
                 verified: l
             })]
         })
@@ -65,32 +65,32 @@ function(e, t, n) {
         let {
             hideDiscriminator: t = !1,
             user: n,
-            nick: s,
-            forceUsername: r,
+            nick: r,
+            forceUsername: s,
             showAccountIdentifier: a,
             overrideDiscriminator: u,
             forcePomelo: f,
             ...h
-        } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.hidePersonalInformation), p = C || t || n.isNonUserBot(), m = n.toString(), _ = d.default.getName(n), S = r ? m : null != s ? s : _, I = n.isPomelo() || f;
-        if (I || S !== m) {
-            let e = S === m && I && r ? d.default.getUserTag(n, {
+        } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.hidePersonalInformation), p = C || t || n.isNonUserBot(), _ = n.toString(), I = d.default.getName(n), m = s ? _ : null != r ? r : I, N = n.isPomelo() || f;
+        if (N || m !== _) {
+            let e = m === _ && N && s ? d.default.getUserTag(n, {
                     forcePomelo: f
-                }) : S,
-                t = a && e !== "@".concat(m) ? d.default.getUserTag(n) : void 0;
-            return (0, i.jsx)(E, {
+                }) : m,
+                t = a && e !== "@".concat(_) ? d.default.getUserTag(n) : void 0;
+            return (0, i.jsx)(v, {
                 primary: e,
                 secondary: t,
                 botVerified: n.isVerifiedBot(),
-                botType: v(n),
-                showStreamerModeTooltip: C && e !== _,
+                botType: E(n),
+                showStreamerModeTooltip: C && e !== I,
                 ...h
             })
         }
         return (0, i.jsx)(c.default, {
-            name: S,
-            botType: v(n),
+            name: m,
+            botType: E(n),
             botVerified: n.isVerifiedBot(),
-            discriminator: p || S !== m ? null : null != u ? u : n.discriminator,
+            discriminator: p || m !== _ ? null : null != u ? u : n.discriminator,
             ...h
         })
     }

@@ -2,32 +2,32 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         dismissChannelSafetyWarnings: function() {
-            return _
-        },
-        setChannelSafetyWarningFeedback: function() {
             return r
         },
-        clearChannelSafetyWarnings: function() {
+        setChannelSafetyWarningFeedback: function() {
             return s
         },
-        acknowledgeChannelSafetyWarningTooltip: function() {
+        clearChannelSafetyWarnings: function() {
             return u
+        },
+        acknowledgeChannelSafetyWarningTooltip: function() {
+            return d
         },
         reportFalsePositive: function() {
             return o
         }
     });
     var a = n("872717"),
-        l = n("913144"),
-        i = n("49111");
+        i = n("913144"),
+        l = n("49111");
 
-    function _(e, t) {
-        return l.default.dispatch({
+    function r(e, t) {
+        return i.default.dispatch({
             type: "DISMISS_CHANNEL_SAFETY_WARNINGS",
             channelId: e,
             warningIds: t
         }), a.default.post({
-            url: i.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
+            url: l.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
             body: {
                 warning_ids: t
             },
@@ -35,8 +35,8 @@ function(e, t, n) {
         })
     }
 
-    function r(e, t, n) {
-        l.default.dispatch({
+    function s(e, t, n) {
+        i.default.dispatch({
             type: "CHANNEL_SAFETY_WARNING_FEEDBACK",
             channelId: e,
             warningId: t,
@@ -44,15 +44,15 @@ function(e, t, n) {
         })
     }
 
-    function s(e) {
-        l.default.dispatch({
+    function u(e) {
+        i.default.dispatch({
             type: "CLEAR_CHANNEL_SAFETY_WARNINGS",
             channelId: e
         })
     }
 
-    function u(e) {
-        l.default.dispatch({
+    function d(e) {
+        i.default.dispatch({
             type: "ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP",
             channelId: e
         })
@@ -60,7 +60,7 @@ function(e, t, n) {
 
     function o(e) {
         return a.default.post({
-            url: i.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e)
+            url: l.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e)
         })
     }
 }

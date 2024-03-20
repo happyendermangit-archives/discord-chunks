@@ -5,9 +5,9 @@ function(e, t, n) {
             return i.default
         },
         VisibilitySensor: function() {
-            return s.default
+            return r.default
         }
     }), n("6268");
     var i = n("157590"),
-        s = n("235855")
+        r = n("235855")
 }

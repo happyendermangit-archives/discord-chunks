@@ -22,8 +22,8 @@ function(e, _, E) {
         u = E("30591"),
         L = E("18346"),
         C = E("80028"),
-        D = E("49111"),
-        c = E("706530");
+        c = E("49111"),
+        D = E("706530");
     t = class extends r.default {
         handleRTCConnectionState(e) {
             let {
@@ -31,7 +31,7 @@ function(e, _, E) {
                 state: E,
                 streamKey: t
             } = e;
-            if (!(0, R.areClipsEnabled)() || E !== D.RTCConnectionStates.RTC_CONNECTED) return;
+            if (!(0, R.areClipsEnabled)() || E !== c.RTCConnectionStates.RTC_CONNECTED) return;
             let n = s.default.getId();
             if (_ === o.MediaEngineContextTypes.DEFAULT) return this.applyUserVoiceRecording(n);
             if (_ === o.MediaEngineContextTypes.STREAM && null != t) {
@@ -59,7 +59,7 @@ function(e, _, E) {
             } = e;
             this.maybeShowClipsWarning(_), this.applyUserVoiceRecording(_);
             let o = N.default.getRTCConnection(i.encodeStreamKey({
-                streamType: null != t ? c.StreamTypes.GUILD : c.StreamTypes.CALL,
+                streamType: null != t ? D.StreamTypes.GUILD : D.StreamTypes.CALL,
                 ownerId: _,
                 channelId: E,
                 guildId: t
@@ -71,7 +71,7 @@ function(e, _, E) {
                 applicationName: _,
                 errMsg: E
             } = e;
-            O.default.track(D.AnalyticEvents.CLIPS_INIT_FAILURE, {
+            O.default.track(c.AnalyticEvents.CLIPS_INIT_FAILURE, {
                 application_name: _,
                 error_message: E
             })
@@ -107,7 +107,7 @@ function(e, _, E) {
             } = e;
             if (E !== o.MediaEngineContextTypes.STREAM || !(0, L.default)(T.default)) return;
             let r = N.default.getRTCConnection(i.encodeStreamKey({
-                streamType: null != n ? c.StreamTypes.GUILD : c.StreamTypes.CALL,
+                streamType: null != n ? D.StreamTypes.GUILD : D.StreamTypes.CALL,
                 ownerId: _,
                 channelId: t,
                 guildId: n
@@ -118,7 +118,7 @@ function(e, _, E) {
             try {
                 let e = await a.default.processUtils.getSystemInfo(),
                     _ = this.classifyHardware(e);
-                return O.default.track(D.AnalyticEvents.CLIPS_HARDWARE_CLASSIFICATION, {
+                return O.default.track(c.AnalyticEvents.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: _,
                     version: C.CLIPS_HARDWARE_CLASSIFICATION_VERSION,
                     gpu_models: e.gpus.map(e => {

@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     });
     var i = n("37983"),
-        s = n("884691"),
-        r = n("414456"),
-        l = n.n(r),
+        r = n("884691"),
+        s = n("414456"),
+        l = n.n(s),
         a = n("77078"),
         o = n("760607"),
         u = n("684133");
@@ -17,12 +17,12 @@ function(e, t, n) {
         let {
             children: t,
             size: n = 16,
-            className: r,
+            className: s,
             flowerStarClassName: c,
             ...d
-        } = e, f = s.Children.only(t), h = (0, a.useRedesignIconContext)().enabled;
+        } = e, f = r.Children.only(t), h = (0, a.useRedesignIconContext)().enabled;
         return (0, i.jsxs)("div", {
-            className: l(u.flowerStarContainer, r),
+            className: l(u.flowerStarContainer, s),
             style: {
                 width: n,
                 height: n

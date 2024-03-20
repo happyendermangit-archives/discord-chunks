@@ -2,61 +2,61 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return _
         }
     }), n("222007");
     var a = n("913144"),
-        l = n("689988"),
-        i = n("26989"),
-        _ = n("697218"),
-        r = n("509");
-    let s = null,
-        u = () => {
-            let e = i.default.getCommunicationDisabledUserMap();
+        i = n("689988"),
+        l = n("26989"),
+        r = n("697218"),
+        s = n("509");
+    let u = null,
+        d = () => {
+            let e = l.default.getCommunicationDisabledUserMap();
             Object.keys(e).forEach(t => {
-                let n = (0, i.getGuildIdFromCommunicationDisabledUserKey)(t),
-                    a = (0, i.getUserIdFromCommunicationDisabledUserKey)(t),
-                    l = e[t];
-                !(0, r.isCommunicationDisabled)(l) && o(n, a)
+                let n = (0, l.getGuildIdFromCommunicationDisabledUserKey)(t),
+                    a = (0, l.getUserIdFromCommunicationDisabledUserKey)(t),
+                    i = e[t];
+                !(0, s.isCommunicationDisabled)(i) && o(n, a)
             })
         },
         o = (e, t) => {
-            var n, l, s, u, o, d;
-            let E = i.default.getMember(e, t),
-                f = _.default.getUser(t);
-            if (null == E || null == f || (0, r.isMemberCommunicationDisabled)(E)) return;
-            let c = {
-                ...E,
+            var n, i, u, d, o, c;
+            let _ = l.default.getMember(e, t),
+                f = r.default.getUser(t);
+            if (null == _ || null == f || (0, s.isMemberCommunicationDisabled)(_)) return;
+            let E = {
+                ..._,
                 guildId: e,
-                nick: null !== (n = E.nick) && void 0 !== n ? n : f.username,
-                avatar: null !== (l = E.avatar) && void 0 !== l ? l : void 0,
-                avatarDecoration: null != E.avatarDecoration ? {
-                    ...E.avatarDecoration
+                nick: null !== (n = _.nick) && void 0 !== n ? n : f.username,
+                avatar: null !== (i = _.avatar) && void 0 !== i ? i : void 0,
+                avatarDecoration: null != _.avatarDecoration ? {
+                    ..._.avatarDecoration
                 } : void 0,
-                premiumSince: null !== (s = E.premiumSince) && void 0 !== s ? s : void 0,
-                isPending: null !== (u = E.isPending) && void 0 !== u && u,
+                premiumSince: null !== (u = _.premiumSince) && void 0 !== u ? u : void 0,
+                isPending: null !== (d = _.isPending) && void 0 !== d && d,
                 user: {
                     ...f,
                     email: null !== (o = f.email) && void 0 !== o ? o : void 0,
-                    phone: null !== (d = f.phone) && void 0 !== d ? d : void 0
+                    phone: null !== (c = f.phone) && void 0 !== c ? c : void 0
                 },
                 communicationDisabledUntil: null
             };
             a.default.dispatch({
                 type: "GUILD_MEMBER_UPDATE",
-                ...c
+                ...E
             })
         };
-    class d extends l.default {
+    class c extends i.default {
         _initialize() {
-            s = setInterval(() => u(), 1e4)
+            u = setInterval(() => d(), 1e4)
         }
         _terminate() {
-            clearInterval(s)
+            clearInterval(u)
         }
         constructor(...e) {
             super(...e), this.clearGuildMemberTimeout = o
         }
     }
-    var E = new d
+    var _ = new c
 }

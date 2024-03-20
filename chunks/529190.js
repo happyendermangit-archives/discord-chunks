@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("240249"),
         C = n("972620"),
         _ = n("524768"),
-        I = n("389153"),
-        T = n("586450"),
+        T = n("389153"),
+        I = n("586450"),
         v = n("41884"),
         N = n("355263"),
         A = n("317041"),
@@ -47,8 +47,8 @@ function(e, t, n) {
             (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
         }, []);
         let {
-            sectionDescriptors: B,
-            activeSections: H,
+            sectionDescriptors: H,
+            activeSections: B,
             commandsByActiveSection: V,
             hasMoreAfter: K,
             commands: W,
@@ -68,16 +68,16 @@ function(e, t, n) {
             isScrolling: r,
             listRef: D,
             onActiveCategoryIndexChange: e => {
-                let t = H[e];
+                let t = B[e];
                 if (null != t) {
-                    let e = B.findIndex(e => e.id === t.id);
+                    let e = H.findIndex(e => e.id === t.id);
                     p.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
                 }
             },
             scrollOffset: 20,
             searchQuery: ""
         }), q = e => {
-            let t = H.length,
+            let t = B.length,
                 n = V.reduce((e, t) => e + t.data.length, 0) - (K ? 7 : 0);
             K && e + 420 > 48 * t + 56 * n - 512 && z(), J(e), P(), o.current = e
         };
@@ -85,9 +85,9 @@ function(e, t, n) {
             q(o.current)
         }, [W]);
         let X = l.useCallback(e => {
-                let t = e === H.length - 1;
+                let t = e === B.length - 1;
                 return t && !K ? 0 : 16
-            }, [H.length, K]),
+            }, [B.length, K]),
             Q = V.map(e => e.data.length);
         l.useEffect(() => {
             null != D.current && w && null != b && D.current.scrollRowIntoView(b)
@@ -121,8 +121,8 @@ function(e, t, n) {
                 for (let e of V)
                     if (t = n, b < (n += e.data.length)) {
                         let n = e.data[b - t],
-                            i = B.find(e => e.id === n.applicationId);
-                        ee(n, i, (0, I.getCommandTriggerSection)(e.section));
+                            i = H.find(e => e.id === n.applicationId);
+                        ee(n, i, (0, T.getCommandTriggerSection)(e.section));
                         break
                     } return !0
             },
@@ -133,9 +133,9 @@ function(e, t, n) {
                     i = null == b ? 0 : b + e;
                 return i >= n ? i = n - 1 : i < 0 && (i = 0), U(i), F(!0), !0
             }
-        }), [W.length, V, K, B, ee, b]);
+        }), [W.length, V, K, H, ee, b]);
         let et = l.useCallback(e => {
-                let t = H[e];
+                let t = B[e];
                 if (null == t) return null;
                 let l = (0, N.getIconComponent)(t),
                     a = (0, i.jsx)(l, {
@@ -150,10 +150,10 @@ function(e, t, n) {
                     icon: a,
                     children: t.name
                 }, e)
-            }, [n, H]),
+            }, [n, B]),
             en = l.useCallback((e, t) => {
-                let n = e === H.length - 1,
-                    l = H[e],
+                let n = e === B.length - 1,
+                    l = B[e],
                     {
                         data: a
                     } = V[e];
@@ -171,14 +171,14 @@ function(e, t, n) {
                         className: M.noSearchResults
                     })]
                 }, e)
-            }, [H, V]),
+            }, [B, V]),
             ei = l.useCallback((e, t) => {
                 var l;
                 let a = V[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     r = "".concat(a.section.id, ":").concat(null !== (l = null == s ? void 0 : s.id) && void 0 !== l ? l : e);
                 if (null == s || a.section.id !== s.applicationId && a.section.id !== A.BuiltInSectionId.FRECENCY || s.inputType === _.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
-                let o = B.find(e => e.id === s.applicationId);
+                let o = H.find(e => e.id === s.applicationId);
                 return (0, i.jsx)(x.default.NewCommand, {
                     index: e,
                     command: s,
@@ -187,12 +187,12 @@ function(e, t, n) {
                     selected: b === e,
                     showImage: a.section.id !== s.applicationId,
                     section: o,
-                    onClick: () => ee(s, o, (0, I.getCommandTriggerSection)(a.section)),
+                    onClick: () => ee(s, o, (0, T.getCommandTriggerSection)(a.section)),
                     onHover: () => {
                         U(null), F(!1)
                     }
                 }, r)
-            }, [n, V, ee, B, b]),
+            }, [n, V, ee, H, b]),
             el = (0, y.useUID)();
         return (0, f.useChannelEditorPopup)(el, !0, (0, x.getAutocompleteRowId)(b)), l.useEffect(() => () => {
             (0, f.dismissChannelEditorPopup)()
@@ -201,10 +201,10 @@ function(e, t, n) {
             className: M.outerWrapper,
             innerClassName: M.wrapper,
             onMouseDown: j,
-            children: [(0, i.jsx)(T.default, {
+            children: [(0, i.jsx)(I.default, {
                 className: M.rail,
                 channel: n,
-                sections: B,
+                sections: H,
                 filteredSectionId: Y,
                 activeCategoryIndex: G,
                 onSectionClick: $,
@@ -217,7 +217,7 @@ function(e, t, n) {
                 renderRow: ei,
                 renderSection: en,
                 renderSectionHeader: et,
-                rowCount: H.length,
+                rowCount: B.length,
                 rowCountBySection: Q,
                 rowHeight: 56,
                 sectionHeaderHeight: 32,

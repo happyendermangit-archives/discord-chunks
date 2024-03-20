@@ -29,8 +29,8 @@ function(e, t, n) {
         S = n("851745"),
         C = n("406291"),
         _ = n("317041"),
-        I = n("782340"),
-        T = n("826214");
+        T = n("782340"),
+        I = n("826214");
     let v = {
         results: {
             entries: []
@@ -117,8 +117,8 @@ function(e, t, n) {
                 autocompletes: t,
                 onHover: o,
                 onClick: u,
-                titleWithQuery: I.default.Messages.COMMANDS_MATCHING,
-                titleWithoutQuery: I.default.Messages.COMMANDS,
+                titleWithQuery: T.default.Messages.COMMANDS_MATCHING,
+                titleWithoutQuery: T.default.Messages.COMMANDS,
                 getQuery: e => "".concat(C.COMMAND_SENTINEL).concat(e),
                 Component: c ? E.default.Command : E.default.NewCommand,
                 getProps: e => {
@@ -136,14 +136,14 @@ function(e, t, n) {
                     }
                 },
                 key: "commands",
-                headerClassName: c ? T.legacyInputCommandHeader : null,
+                headerClassName: c ? I.legacyInputCommandHeader : null,
                 headerTrailingContent: c ? (0, i.jsx)(l.Button, {
                     type: "button",
                     look: l.Button.Looks.LINK,
                     color: l.Button.Colors.BRAND,
                     size: l.Button.Sizes.MIN,
                     onClick: N,
-                    children: I.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
+                    children: T.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
                 }) : null
             })
         },

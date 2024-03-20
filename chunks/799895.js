@@ -29,10 +29,10 @@ function(e, _, E) {
             leading: !0
         });
 
-    function D() {
+    function c() {
         O.default.flashFrame(!1)
     }
-    R && (window.addEventListener("focus", D), O.default.on("MAIN_WINDOW_FOCUS", D));
+    R && (window.addEventListener("focus", c), O.default.on("MAIN_WINDOW_FOCUS", c));
     let Notification = window.Notification;
     if (l) {
         let e = {};
@@ -60,7 +60,7 @@ function(e, _, E) {
         }).permission = "granted", t._id = 0, Notification = t
     }
 
-    function c() {
+    function D() {
         return null != Notification && "granted" === Notification.permission
     }
 
@@ -70,13 +70,13 @@ function(e, _, E) {
     }
 
     function U(e) {
-        return s.default.disableNotifications && null == e.overrideStreamerMode || !c() || S.isPlatformEmbedded && !O.default.shouldDisplayNotifications()
+        return s.default.disableNotifications && null == e.overrideStreamerMode || !D() || S.isPlatformEmbedded && !O.default.shouldDisplayNotifications()
     }
     var M = {
-        hasPermission: c,
+        hasPermission: D,
         requestPermission: function(e) {
             null != Notification && Notification.requestPermission(() => {
-                null != e && e(c())
+                null != e && e(D())
             })
         },
         showNotification: function(e, _, E, t, o) {

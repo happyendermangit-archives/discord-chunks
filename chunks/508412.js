@@ -23,8 +23,8 @@ function(e, _, E) {
         u = E("76393"),
         L = E("209969"),
         C = E("201615"),
-        D = E("171644"),
-        c = E("353927"),
+        c = E("171644"),
+        D = E("353927"),
         d = E("782340");
     let U = new I.default("GameConsoleManager");
     async function M(e) {
@@ -51,7 +51,7 @@ function(e, _, E) {
                 let _ = function(e) {
                     let _ = u.default.getAwaitingRemoteSessionInfo();
                     return e.find(e => {
-                        let E = D.GAME_CONSOLE_SESSIONS.has(e.clientInfo.os),
+                        let E = c.GAME_CONSOLE_SESSIONS.has(e.clientInfo.os),
                             t = null != O.default.getVoiceStateForSession(s.default.getId(), e.sessionId),
                             o = null == _ || (0, L.coercePlatformTypeToConsoleType)(_.type) === e.clientInfo.os;
                         return E && o && t
@@ -66,7 +66,7 @@ function(e, _, E) {
                     syncRemote: _,
                     context: E
                 } = e;
-                if (!_ || E !== c.MediaEngineContextTypes.DEFAULT) return;
+                if (!_ || E !== D.MediaEngineContextTypes.DEFAULT) return;
                 let t = T.default.isSelfDeaf(),
                     o = T.default.isSelfMute(),
                     n = s.default.getId(),
@@ -131,7 +131,7 @@ function(e, _, E) {
                     body: a.body,
                     errorCodeMessage: a.errorCodeMessage,
                     reconnectPlatformType: a.isAccountLinkError ? n.type : void 0
-                }), D.USER_ACTION_REQUIRED_ERROR_CODES.has(o.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(18e4, () => (0, R.disconnectRemote)(), !0) : "failed" === t && (0, R.disconnectRemote)()
+                }), c.USER_ACTION_REQUIRED_ERROR_CODES.has(o.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(18e4, () => (0, R.disconnectRemote)(), !0) : "failed" === t && (0, R.disconnectRemote)()
             }, this.handleRemoteSessionDisconnect = () => {
                 this.awaitRemoteTimeout.stop()
             }

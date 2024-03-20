@@ -2,15 +2,15 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         getInitialStreamTarget: function() {
-            return d
+            return s
         },
         getStreamTarget: function() {
             return i
         }
     }), t("222007");
-    var s = t("449008");
+    var d = t("449008");
 
-    function d(e, a) {
+    function s(e, a) {
         let t = e.find(e => e.processId === a);
         return null == t ? null : i(e, t)
     }
@@ -21,24 +21,24 @@ function(e, a, t) {
         if (null == a) return null;
         if (a.applicationId === n) return function(e, a) {
             let t = a.processPath.length > 1 ? a.processPath[a.processPath.length - 2] : 0,
-                s = e.filter(e => e.applicationId === n && e.processPath.includes(t)),
-                d = s.find(e => "league of legends.exe" === e.executableName);
-            return void 0 !== d ? d : s.length > 0 ? s[0] : null
+                d = e.filter(e => e.applicationId === n && e.processPath.includes(t)),
+                s = d.find(e => "league of legends.exe" === e.executableName);
+            return void 0 !== s ? s : d.length > 0 ? d[0] : null
         }(e, a);
-        let d = new Map(e.map(e => [e.processId, e])),
-            i = a.processPath.map(e => d.get(e)).find(e => null != e);
+        let s = new Map(e.map(e => [e.processId, e])),
+            i = a.processPath.map(e => s.get(e)).find(e => null != e);
         if (null == i) return null;
         let r = e.map(e => {
-            let a = e.processPath.findIndex(e => d.has(e));
+            let a = e.processPath.findIndex(e => s.has(e));
             return -1 === a ? null : {
                 application: e,
                 rootedPath: e.processPath.slice(a)
             }
-        }).filter(s.isNotNullish).filter(e => e.rootedPath[0] === i.processId);
+        }).filter(d.isNotNullish).filter(e => e.rootedPath[0] === i.processId);
         r.sort((e, a) => {
-            let t = e.rootedPath.map(e => d.get(e)).filter(e => null != e && null != e.windowHandle),
-                s = a.rootedPath.map(e => d.get(e)).filter(e => null != e && null != e.windowHandle),
-                n = c(s, t);
+            let t = e.rootedPath.map(e => s.get(e)).filter(e => null != e && null != e.windowHandle),
+                d = a.rootedPath.map(e => s.get(e)).filter(e => null != e && null != e.windowHandle),
+                n = c(d, t);
             return 0 !== n ? n : c(a.rootedPath, e.rootedPath)
         });
         let o = null !== (t = r.find(e => null != e.application.windowHandle)) && void 0 !== t ? t : r[0];

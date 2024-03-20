@@ -8,23 +8,23 @@ function(e, t, n) {
             return f
         }
     }), n("70102");
-    var i, l, a = n("627445"),
-        s = n.n(a),
-        r = n("450911"),
+    var i, a, s = n("627445"),
+        r = n.n(s),
+        l = n("450911"),
         o = n("819689"),
         u = n("884351"),
-        d = n("42203"),
-        c = n("659632");
-    (l = i || (i = {})).ACTION = "action", l.LOOP = "loop", l.IDLE = "idle";
+        c = n("42203"),
+        d = n("659632");
+    (a = i || (i = {})).ACTION = "action", a.LOOP = "loop", a.IDLE = "idle";
     let f = async (e, t) => {
         if (null == t) throw Error("giftCode must be defined");
         if (null == e) throw Error("Recipient must be defined");
-        let n = await r.default.openPrivateChannel(e.id).then(e => {
-                let t = d.default.getChannel(e);
-                if (s(null != t, "PrivateChannel is null"), null == t) throw Error("Channel must be defined");
+        let n = await l.default.openPrivateChannel(e.id).then(e => {
+                let t = c.default.getChannel(e);
+                if (r(null != t, "PrivateChannel is null"), null == t) throw Error("Channel must be defined");
                 return t
             }),
-            i = (0, c.getGiftCodeURL)(t);
+            i = (0, d.getGiftCodeURL)(t);
         return o.default.sendMessage(n.id, u.default.parse(n, i), void 0, {
             isGiftLinkSentOnBehalfOfUser: !0
         })

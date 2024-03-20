@@ -14,7 +14,7 @@ function(e, _, E) {
             return C
         },
         useCanStartThread: function() {
-            return D
+            return c
         },
         useCanViewThreadForMessage: function() {
             return d
@@ -85,27 +85,27 @@ function(e, _, E) {
             let _ = e.isForumLikeChannel() ? R.Permissions.SEND_MESSAGES : n.default.combine(R.Permissions.CREATE_PUBLIC_THREADS, R.Permissions.READ_MESSAGE_HISTORY);
             return N.default.can(_, e)
         }, [e]);
-        return c(E, e, _)
+        return D(E, e, _)
     }
 
     function L(e, _) {
         let E = e.isForumLikeChannel() ? R.Permissions.SEND_MESSAGES : n.default.combine(R.Permissions.CREATE_PUBLIC_THREADS, R.Permissions.READ_MESSAGE_HISTORY),
             t = N.default.can(E, e);
-        return c(t, e, _)
+        return D(t, e, _)
     }
 
     function C(e) {
         let _ = (0, r.useStateFromStores)([N.default], () => N.default.can(n.default.combine(R.Permissions.CREATE_PRIVATE_THREADS), e), [e]);
-        return e.type === R.ChannelTypes.GUILD_TEXT && c(_, e)
+        return e.type === R.ChannelTypes.GUILD_TEXT && D(_, e)
     }
 
-    function D(e) {
+    function c(e) {
         let _ = u(e),
             E = C(e);
         return _ || E
     }
 
-    function c(e, _, E) {
+    function D(e, _, E) {
         return !(__OVERLAY__ || !e || !s.THREADED_CHANNEL_TYPES.has(_.type) || null != E && (E.hasFlag(R.MessageFlags.HAS_THREAD) || (0, I.default)(E))) && !0
     }
 

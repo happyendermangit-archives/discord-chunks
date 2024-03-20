@@ -47,10 +47,10 @@ function(e, t, n) {
             className: n,
             count: a,
             label: f.default.Messages.CONNECTIONS_PROFILE_REDDIT_KARMA
-        }, c.MetadataFields.REDDIT_TOTAL_KARMA)), s && l.push((0, i.jsx)(T, {
+        }, c.MetadataFields.REDDIT_TOTAL_KARMA)), s && l.push((0, i.jsx)(I, {
             className: n,
             label: f.default.Messages.CONNECTIONS_REDDIT_GOLD
-        }, c.MetadataFields.REDDIT_GOLD)), r && l.push((0, i.jsx)(T, {
+        }, c.MetadataFields.REDDIT_GOLD)), r && l.push((0, i.jsx)(I, {
             className: n,
             label: f.default.Messages.CONNECTIONS_REDDIT_MOD
         }, c.MetadataFields.REDDIT_MOD)), l
@@ -84,14 +84,14 @@ function(e, t, n) {
             className: s,
             count: o,
             label: f.default.Messages.CONNECTIONS_PROFILE_STEAM_GAMES
-        }, c.MetadataFields.STEAM_GAME_COUNT)), u > -1 && r.push((0, i.jsx)(I, {
+        }, c.MetadataFields.STEAM_GAME_COUNT)), u > -1 && r.push((0, i.jsx)(T, {
             className: s,
             label: f.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: u
             }),
             imageSrc: n("142226"),
             imageAlt: f.default.Messages.CONNECTIONS_STEAM_DOTA2
-        }, c.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && r.push((0, i.jsx)(I, {
+        }, c.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && r.push((0, i.jsx)(T, {
             className: s,
             label: f.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: d
@@ -105,7 +105,7 @@ function(e, t, n) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             n = [],
             l = "1" === e[c.MetadataFields.PAYPAL_VERIFIED];
-        return l && n.push((0, i.jsx)(T, {
+        return l && n.push((0, i.jsx)(I, {
             className: a(t, p.paypalVerifiedTag),
             label: f.default.Messages.CONNECTIONS_PAYPAL_VERIFIED
         }, c.MetadataFields.PAYPAL_VERIFIED)), n
@@ -122,7 +122,7 @@ function(e, t, n) {
             count: a,
             label: f.default.Messages.CONNECTIONS_PROFILE_EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
             percent: !0
-        }, c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), s && l.push((0, i.jsx)(T, {
+        }, c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), s && l.push((0, i.jsx)(I, {
             className: n,
             label: f.default.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER
         }, c.MetadataFields.EBAY_TOP_RATED_SELLER)), l
@@ -148,7 +148,7 @@ function(e, t, n) {
             className: a,
             count: d,
             label: f.default.Messages.CONNECTIONS_PROFILE_TIKTOK_LIKES
-        }, c.MetadataFields.TIKTOK_LIKES_COUNT)), r && s.push((0, i.jsx)(T, {
+        }, c.MetadataFields.TIKTOK_LIKES_COUNT)), r && s.push((0, i.jsx)(I, {
             className: a,
             label: f.default.Messages.CONNECTIONS_TIKTOK_VERIFIED
         }, c.MetadataFields.TIKTOK_VERIFIED)), s
@@ -173,7 +173,7 @@ function(e, t, n) {
                     case c.MetadataItemTypes.BOOLEAN_EQUAL:
                     case c.MetadataItemTypes.BOOLEAN_NOT_EQUAL: {
                         let e = s.type === c.MetadataItemTypes.BOOLEAN_EQUAL && "1" === r || s.type === c.MetadataItemTypes.BOOLEAN_NOT_EQUAL && "1" !== r;
-                        e && l.push((0, i.jsx)(T, {
+                        e && l.push((0, i.jsx)(I, {
                             className: t,
                             label: s.name
                         }, s.key))
@@ -242,7 +242,7 @@ function(e, t, n) {
         })
     }
 
-    function I(e) {
+    function T(e) {
         let {
             label: t,
             imageSrc: n,
@@ -267,7 +267,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function I(e) {
         let {
             label: t,
             className: n

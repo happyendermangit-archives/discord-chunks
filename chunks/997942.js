@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         validateClipMetadata: function() {
-            return d
+            return r
         }
     }), n("222007"), n("808653");
     var a = n("80028");
@@ -30,10 +30,10 @@ function(e, t, n) {
             return t
         }],
         l = null;
-    async function d(e) {
+    async function r(e) {
         var t;
-        let d = (await n.el("990599").then(n.t.bind(n, "990599", 23))).default;
-        let r = (t = d, null != l ? l : l = t.object({
+        let r = (await n.el("990599").then(n.t.bind(n, "990599", 23))).default;
+        let s = (t = r, null != l ? l : l = t.object({
             id: t.string().required(),
             version: t.number().positive().integer().min(0).max(a.CURRENT_CLIP_METADATA_VERSION).optional(),
             name: t.string().when("version", {
@@ -64,7 +64,7 @@ function(e, t, n) {
             clipMethod: t.string().allow("auto", "manual").required()
         }).required());
         try {
-            d.assert(e, r);
+            r.assert(e, s);
             return null == e.version && (e.version = 0), i.slice(e.version).reduce((e, t) => t(e), e)
         } catch (e) {
             return null

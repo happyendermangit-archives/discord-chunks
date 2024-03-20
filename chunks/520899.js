@@ -8,58 +8,58 @@ function(e, t, n) {
     var a = n("446674"),
         i = n("913144"),
         l = n("718517");
-    let d = [],
-        r = new Set,
-        s = 0;
-    class u extends a.default.Store {
+    let r = [],
+        s = new Set,
+        u = 0;
+    class d extends a.default.Store {
         initialize() {
             setInterval(() => {
                 this.emitChange()
             }, 1 * l.default.Millis.MINUTE)
         }
         getMessageReminders() {
-            return d
+            return r
         }
         isMessageReminder(e) {
-            let t = d.find(t => t.messageId === e);
+            let t = r.find(t => t.messageId === e);
             return null != t && !t.complete
         }
         getOverdueMessageReminderCount() {
-            return d.filter(e => null == e.dueAt || new Date > e.dueAt).length
+            return r.filter(e => null == e.dueAt || new Date > e.dueAt).length
         }
         recentlyFetched() {
-            return new Date().getTime() - s < 1 * l.default.Millis.MINUTE
+            return new Date().getTime() - u < 1 * l.default.Millis.MINUTE
         }
         hasSentNotification(e) {
-            return r.has(e)
+            return s.has(e)
         }
         getState() {
             return {
-                messages: d
+                messages: r
             }
         }
     }
-    u.displayName = "MessageRemindersStore";
-    var o = new u(i.default, {
+    d.displayName = "MessageRemindersStore";
+    var o = new d(i.default, {
         SAVED_MESSAGES_UPDATE: function(e) {
             let {
                 messages: t
             } = e;
-            s = new Date().getTime(), d = t.map(e => ({
+            u = new Date().getTime(), r = t.map(e => ({
                 ...e,
                 complete: !1
             })), t.forEach(e => {
-                null != e.dueAt && e.dueAt > new Date && r.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && r.add(e.messageId)
+                null != e.dueAt && e.dueAt > new Date && s.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && s.add(e.messageId)
             })
         },
         MESSAGE_REMINDER_TOGGLE: function(e) {
             let {
                 messageId: t,
                 complete: n
-            } = e, a = d.findIndex(e => e.messageId === t);
+            } = e, a = r.findIndex(e => e.messageId === t);
             if (-1 === a) return !1;
-            d[a] = {
-                ...d[a],
+            r[a] = {
+                ...r[a],
                 complete: n
             }
         },
@@ -67,7 +67,7 @@ function(e, t, n) {
             let {
                 messageId: t
             } = e;
-            r.add(t)
+            s.add(t)
         }
     })
 }

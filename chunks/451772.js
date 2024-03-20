@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return c
+            return D
         }
     }), E("222007");
     var t = E("862337"),
@@ -37,11 +37,11 @@ function(e, _, E) {
         }), !0)
     }
 
-    function D(e, _) {
+    function c(e, _) {
         let E = null != _ ? _ : I.default.getPreferredRegion();
         null != E && E !== I.default.getRegion(T.default.getHostname(T.default.getActiveStreamKey())) && (0, n.changeStreamRegion)(e, E)
     }
-    var c = {
+    var D = {
         init() {
             let e = (e, _) => {
                 !T.default.getAllActiveStreamKeys().includes(e) && R.start(_ ? u : l, () => {
@@ -118,13 +118,13 @@ function(e, _, E) {
                     channelId: _,
                     region: E
                 } = e, t = r.default.getCurrentUserActiveStream();
-                (null == t ? void 0 : t.channelId) === _ && D((0, N.encodeStreamKey)(t), E)
+                (null == t ? void 0 : t.channelId) === _ && c((0, N.encodeStreamKey)(t), E)
             }), o.default.subscribe("CHANNEL_UPDATES", e => {
                 let {
                     channels: _
                 } = e, E = r.default.getCurrentUserActiveStream();
                 if (null != E)
-                    for (let e of _) E.channelId === e.id && D((0, N.encodeStreamKey)(E), e.rtcRegion)
+                    for (let e of _) E.channelId === e.id && c((0, N.encodeStreamKey)(E), e.rtcRegion)
             })
         }
     }

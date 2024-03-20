@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("426969"),
         C = n("847352"),
         _ = n("383018"),
-        I = n("529190"),
-        T = n("829290"),
+        T = n("529190"),
+        I = n("829290"),
         v = n("842343"),
         N = n("200197"),
         A = n("538282"),
@@ -43,8 +43,8 @@ function(e, t, n) {
         w = n("845579"),
         F = n("26989"),
         G = n("957255"),
-        B = n("18494"),
-        H = n("769264"),
+        H = n("18494"),
+        B = n("769264"),
         V = n("585722"),
         K = n("697218"),
         W = n("378765"),
@@ -70,8 +70,8 @@ function(e, t, n) {
             let {
                 textValue: eC,
                 richValue: e_,
-                className: eI,
-                innerClassName: eT,
+                className: eT,
+                innerClassName: eI,
                 editorClassName: ev,
                 id: eN,
                 required: eA,
@@ -88,8 +88,8 @@ function(e, t, n) {
                 onChange: ew,
                 onResize: eF,
                 onBlur: eG,
-                onFocus: eB,
-                onKeyDown: eH,
+                onFocus: eH,
+                onKeyDown: eB,
                 onSubmit: eV,
                 promptToUpload: eK,
                 highlighted: eW,
@@ -168,7 +168,7 @@ function(e, t, n) {
             } = (0, p.useStateFromStoresObject)([x.default], () => ({
                 fontSize: x.default.fontSize,
                 isSubmitButtonEnabled: x.default.isSubmitButtonEnabled
-            })), tx = (0, p.useStateFromStores)([H.default], () => H.default.isEnabled());
+            })), tx = (0, p.useStateFromStores)([B.default], () => B.default.isEnabled());
             ! function(e, t) {
                 let n = l.useCallback(() => {
                         !t && (0, A.toggleExpressionPicker)(er.ExpressionPickerViewType.EMOJI, e)
@@ -246,7 +246,7 @@ function(e, t, n) {
                         let c = (n = u, i = t, null !== (r = n && (null === (l = i.submit) || void 0 === l ? void 0 : l.clearOnSubmit)) && void 0 !== r && r),
                             f = null != a.current;
                         if (c) {
-                            if (s !== B.default.getChannelId()) h.default.saveDraft(s, "", t.drafts.type);
+                            if (s !== H.default.getChannelId()) h.default.saveDraft(s, "", t.drafts.type);
                             else f && a.current.clearValue()
                         }
                         f && (o(!1), (0, A.closeExpressionPicker)(), d && a.current.focus())
@@ -262,8 +262,8 @@ function(e, t, n) {
                 }
             }(eV, eL, e9, ek.id), {
                 autocompleteRef: t_,
-                handleMaybeShowAutocomplete: tI,
-                handleHideAutocomplete: tT
+                handleMaybeShowAutocomplete: tT,
+                handleHideAutocomplete: tI
             } = function() {
                 let e = l.useRef(null),
                     t = l.useCallback(() => {
@@ -396,11 +396,11 @@ function(e, t, n) {
                 }).enabled,
                 tG = (0, p.useStateFromStores)([S.default], () => S.default.shouldShowPopup(), []);
             (0, Z.useHereMentionCallback)(tE, ek.guild_id, ek.id);
-            let tB = null != eD,
-                tH = ts && !((tl || ta) && tu) || tg && (null === (o = eL.submit) || void 0 === o ? void 0 : o.useDisabledStylesOnSubmit),
+            let tH = null != eD,
+                tB = ts && !((tl || ta) && tu) || tg && (null === (o = eL.submit) || void 0 === o ? void 0 : o.useDisabledStylesOnSubmit),
                 tV = null,
                 tK = null;
-            null != tn ? tV = null == eU ? void 0 : eU(tn, ti, eo.attachButton) : (!ts || to) && (tV = null == eb ? void 0 : eb(tB, eo.attachButton), tF && (tK = null == ej ? void 0 : ej()));
+            null != tn ? tV = null == eU ? void 0 : eU(tn, ti, eo.attachButton) : (!ts || to) && (tV = null == eb ? void 0 : eb(tH, eo.attachButton), tF && (tK = null == ej ? void 0 : ej()));
             let tW = tc && null != e_ && !ts && eL.showCharacterCount && null == tn,
                 tY = tc && !__OVERLAY__ && null != e_ && null == tn,
                 tz = function(e, t, n, i) {
@@ -410,7 +410,7 @@ function(e, t, n) {
                         o = null != r && r.length > 0;
                     return s && (null === (l = t.stickers) || void 0 === l ? void 0 : l.autoSuggest) && !o && (null === (a = i.current) || void 0 === a ? void 0 : a.isVisible()) !== !0 && !__OVERLAY__ && null != n
                 }(ek, eL, e_, t_),
-                tZ = (0, T.useShouldShowPTONotice)(ek),
+                tZ = (0, I.useShouldShowPTONotice)(ek),
                 tJ = null != tn || null != eD || tZ,
                 tq = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
             return (0, i.jsx)(N.EventEmitterProvider, {
@@ -427,9 +427,9 @@ function(e, t, n) {
                         options: eL.markdown
                     }) : null, (0, i.jsxs)("div", {
                         ref: e4,
-                        className: s(eI, {
+                        className: s(eT, {
                             [eo.channelTextArea]: !0,
-                            [eo.channelTextAreaDisabled]: tH,
+                            [eo.channelTextAreaDisabled]: tB,
                             [eo.highlighted]: eW,
                             [eo.textAreaMobileThemed]: c.isMobile
                         }),
@@ -442,7 +442,7 @@ function(e, t, n) {
                         }), (0, i.jsxs)("div", {
                             ref: te,
                             onScroll: tR,
-                            className: s(eT, {
+                            className: s(eI, {
                                 [eo.scrollableContainer]: !0,
                                 [eo.themedBackground]: !e7,
                                 [eo.webkit]: "Blink" === platform.layout,
@@ -457,8 +457,8 @@ function(e, t, n) {
                                 canAttachFiles: tr
                             }), (0, i.jsxs)("div", {
                                 className: s(eo.inner, {
-                                    [eo.innerDisabled]: tH,
-                                    [eo.sansAttachButton]: eL !== J.ChatInputTypes.EDIT && (null != tV || tH && null == tV || tl),
+                                    [eo.innerDisabled]: tB,
+                                    [eo.sansAttachButton]: eL !== J.ChatInputTypes.EDIT && (null != tV || tB && null == tV || tl),
                                     [eo.sansAttachButtonCreateThread]: eL === J.ChatInputTypes.THREAD_CREATION,
                                     [eo.sansAttachButtonCreatePost]: eL === J.ChatInputTypes.CREATE_FORUM_POST
                                 }),
@@ -487,19 +487,19 @@ function(e, t, n) {
                                         onChange: ew,
                                         onResize: tk,
                                         onBlur: eG,
-                                        onFocus: eB,
-                                        onKeyDown: eH,
+                                        onFocus: eH,
+                                        onKeyDown: eB,
                                         onSubmit: tS,
                                         onTab: tL,
                                         onEnter: tP,
                                         onMoveSelection: tb,
                                         onSelectionChanged: ty,
-                                        onMaybeShowAutocomplete: tI,
-                                        onHideAutocomplete: tT,
+                                        onMaybeShowAutocomplete: tT,
+                                        onHideAutocomplete: tI,
                                         promptToUpload: eK,
                                         fontSize: th,
                                         spellcheckEnabled: tx,
-                                        canOnlyUseTextCommands: tB,
+                                        canOnlyUseTextCommands: tH,
                                         className: s({
                                             [eo.textAreaThreadCreation]: eL === J.ChatInputTypes.THREAD_CREATION,
                                             [eo.profileBioInput]: eL === J.ChatInputTypes.PROFILE_BIO_INPUT
@@ -514,17 +514,17 @@ function(e, t, n) {
                                     isEmpty: 0 === eC.trim().length
                                 })]
                             })]
-                        }), tf ? null : (0, i.jsx)(I.default, {
+                        }), tf ? null : (0, i.jsx)(T.default, {
                             ref: e5,
                             channel: ek,
-                            canOnlyUseTextCommands: tB
+                            canOnlyUseTextCommands: tH
                         }), (0, i.jsx)(v.default, {
                             ref: t_,
                             channel: ek,
                             canMentionRoles: eY,
                             canMentionChannels: ez,
                             useNewSlashCommands: tc,
-                            canOnlyUseTextCommands: tB,
+                            canOnlyUseTextCommands: tH,
                             canSendStickers: null === (ed = eL.stickers) || void 0 === ed ? void 0 : ed.allowSending,
                             textValue: eC,
                             focused: eP,

@@ -5,10 +5,10 @@ function(e, t, n) {
             return _
         },
         openThreadSidebarForCreating: function() {
-            return I
+            return T
         },
         closeThreadSidebar: function() {
-            return T
+            return I
         },
         closeAndClearThreadSidebar: function() {
             return v
@@ -53,7 +53,7 @@ function(e, t, n) {
         }, 0)
     }
 
-    function I(e, t, n) {
+    function T(e, t, n) {
         l(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), l(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(S.AnalyticEvents.THREAD_CREATION_STARTED, {
             location: n,
             channel_id: e.id,
@@ -74,7 +74,7 @@ function(e, t, n) {
         }, 0)
     }
 
-    function T(e, t) {
+    function I(e, t) {
         (0, f.transitionTo)(S.Routes.CHANNEL(e, (0, C.isGuildHomeChannel)(t) ? C.StaticChannelRoute.GUILD_HOME : t)), r.default.dispatch({
             type: "SIDEBAR_CLOSE",
             baseChannelId: t

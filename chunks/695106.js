@@ -25,8 +25,8 @@ function(e, t, n) {
         S = n("159885"),
         C = n("49111"),
         _ = n("782340"),
-        I = n("756249");
-    let T = (0, y.uid)(),
+        T = n("756249");
+    let I = (0, y.uid)(),
         v = c.default.convert.fromCodePoint("1f44f"),
         N = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
         A = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
@@ -49,7 +49,7 @@ function(e, t, n) {
                 role: "option",
                 "aria-selected": 0 === s,
                 onClick: () => l(n),
-                className: I.diversityEmojiItem,
+                className: T.diversityEmojiItem,
                 children: (0, i.jsx)(u.animated.div, {
                     "aria-label": function(e) {
                         let t = c.default.convert.toCodePoint(e);
@@ -68,7 +68,7 @@ function(e, t, n) {
                                 return _.default.Messages.EMOJI_MODIFIER_NONE
                         }
                     }(n),
-                    className: I.diversityEmojiItemImage,
+                    className: T.diversityEmojiItemImage,
                     style: {
                         backgroundImage: 'url("'.concat(o, '")'),
                         ...f
@@ -107,8 +107,8 @@ function(e, t, n) {
                             ...l,
                             id: t,
                             ref: n,
-                            className: s(I.diversitySelectorOptions, {
-                                [I.diversitySelectorOptionsHasTabWrapper]: r
+                            className: s(T.diversitySelectorOptions, {
+                                [T.diversitySelectorOptionsHasTabWrapper]: r
                             }),
                             style: f,
                             role: "listbox",
@@ -136,17 +136,17 @@ function(e, t, n) {
             className: a,
             children: [(0, i.jsx)(p.Clickable, {
                 innerRef: c,
-                className: I.diversitySelectorButton,
+                className: T.diversitySelectorButton,
                 onClick: () => {
                     u(!0)
                 },
                 "aria-label": _.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
                 "aria-haspopup": !0,
                 "aria-expanded": o,
-                "aria-controls": T,
+                "aria-controls": I,
                 tabIndex: o ? -1 : 0,
                 children: (0, i.jsx)("div", {
-                    className: I.diversityEmojiItemImage,
+                    className: T.diversityEmojiItemImage,
                     style: {
                         backgroundImage: 'url("'.concat(r, '")')
                     }
@@ -156,7 +156,7 @@ function(e, t, n) {
                     e.keyCode === C.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
                 },
                 children: (0, i.jsx)(R, {
-                    id: T,
+                    id: I,
                     hasTabWrapper: s,
                     selectedSurrogate: n,
                     onClick: e => {

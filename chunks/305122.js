@@ -8,10 +8,10 @@ function(e, t, n) {
             return _
         },
         updateSound: function() {
-            return I
+            return T
         },
         deleteSound: function() {
-            return T
+            return I
         },
         addFavoriteSound: function() {
             return v
@@ -112,7 +112,7 @@ function(e, t, n) {
         }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
         return u
     }
-    async function I(e) {
+    async function T(e) {
         let {
             guildId: t,
             soundId: n,
@@ -131,7 +131,7 @@ function(e, t, n) {
         }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
         return u
     }
-    async function T(e, t) {
+    async function I(e, t) {
         await a.default.delete({
             url: m.Endpoints.GUILD_SOUNDBOARD_SOUND(e, t),
             oldFormErrors: !0

@@ -75,8 +75,8 @@ function(e, t, n) {
             showMentionToggle: m
         } = t, {
             nick: _,
-            colorString: I,
-            colorRoleName: T
+            colorString: T,
+            colorRoleName: I
         } = (0, d.default)(a), v = function(e, t) {
             let n = e.id,
                 i = t.id;
@@ -118,8 +118,8 @@ function(e, t, n) {
                                 userHook: (e, t) => (0, i.jsx)(o.NameWithRole, {
                                     className: S.name,
                                     name: _,
-                                    color: I,
-                                    roleName: T
+                                    color: T,
+                                    roleName: I
                                 }, t)
                             })
                         })

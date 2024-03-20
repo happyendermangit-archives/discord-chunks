@@ -23,8 +23,8 @@ function(e, _, E) {
         u = E("630615"),
         L = E("49111"),
         C = E("994428"),
-        D = E("782340"),
-        c = E("61701");
+        c = E("782340"),
+        D = E("61701");
     let d = "https://www.youtube.com/embed/".concat(u.LOOTBOX_VIDEO_ID, "?autoplay=1&mute=1&controls=0&loop=1&playlist=").concat(u.LOOTBOX_VIDEO_ID, "&origin=https://").concat(L.PRIMARY_DOMAIN);
 
     function U() {
@@ -38,59 +38,59 @@ function(e, _, E) {
             })
         };
         return E && n ? (0, t.jsxs)("div", {
-            className: r(c.wrapper, e ? c.wrapperHovered : null),
+            className: r(D.wrapper, e ? D.wrapperHovered : null),
             onMouseLeave: () => _(!1),
             children: [(0, t.jsxs)(S.Clickable, {
-                className: c.closeButton,
+                className: D.closeButton,
                 onClick: () => u(C.ContentDismissActionType.DISMISS),
                 children: [(0, t.jsx)(i.CloseSmallIcon, {
-                    className: c.closeIcon,
+                    className: D.closeIcon,
                     color: T.default.colors.WHITE
                 }), (0, t.jsx)(I.Text, {
                     variant: "text-xs/bold",
                     color: "always-white",
-                    children: D.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
+                    children: c.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
                 })]
             }), (0, t.jsxs)("div", {
-                className: c.videoWrapper,
+                className: D.videoWrapper,
                 children: [(0, t.jsx)("iframe", {
-                    className: c.video,
+                    className: D.video,
                     src: d,
                     sandbox: "allow-same-origin allow-scripts"
                 }), (0, t.jsxs)(S.Clickable, {
-                    className: c.entrypoint,
+                    className: D.entrypoint,
                     onClick: () => {
                         u(C.ContentDismissActionType.PRIMARY), N.default.open(L.UserSettingsSections.LOOTBOXES)
                     },
                     onMouseEnter: () => _(!0),
                     children: [(0, t.jsx)("div", {
-                        className: c.backgroundWrapper,
+                        className: D.backgroundWrapper,
                         children: (0, t.jsx)(l.default, {
-                            className: c.backgroundImage,
+                            className: D.backgroundImage,
                             pageMultiplier: 5
                         })
                     }), (0, t.jsx)(R.default, {
-                        className: c.image,
+                        className: D.image,
                         color: T.default.colors.POLLS_NORMAL_FILL_HOVER,
                         width: 70,
                         height: 70
                     }), (0, t.jsxs)("div", {
-                        className: c.body,
+                        className: D.body,
                         children: [(0, t.jsx)(I.Text, {
                             variant: "text-md/bold",
                             color: "always-white",
-                            children: D.default.Messages.PACKAGES_ENTRYPOINT_TITLE
+                            children: c.default.Messages.PACKAGES_ENTRYPOINT_TITLE
                         }), (0, t.jsx)(I.Text, {
                             variant: "text-sm/medium",
                             color: "always-white",
-                            children: D.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION
+                            children: c.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION
                         })]
                     }), (0, t.jsx)("div", {
-                        className: c.buttonWrapper,
+                        className: D.buttonWrapper,
                         children: (0, t.jsx)("div", {
-                            className: c.iconButton,
+                            className: D.iconButton,
                             children: (0, t.jsx)(a.ArrowLargeRightIcon, {
-                                className: c.buttonIcon,
+                                className: D.buttonIcon,
                                 color: T.default.colors.WHITE
                             })
                         })

@@ -35,8 +35,8 @@ function(e, t, r) {
     var u = r("872717"),
         n = r("913144"),
         i = r("54239"),
-        s = r("448993"),
-        E = r("514296"),
+        E = r("448993"),
+        s = r("514296"),
         l = r("407788"),
         c = r("489134"),
         o = r("49111");
@@ -81,13 +81,13 @@ function(e, t, r) {
                 });
                 n.default.dispatch({
                     type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                    categories: e.body.map(E.default.fromServer)
+                    categories: e.body.map(s.default.fromServer)
                 })
             } catch (e) {
                 throw n.default.dispatch({
                     type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
                     error: e
-                }), new s.APIError(e)
+                }), new E.APIError(e)
             }
         }, A = async () => {
             n.default.dispatch({
@@ -103,7 +103,7 @@ function(e, t, r) {
                 throw n.default.dispatch({
                     type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
                     error: e
-                }), new s.APIError(e)
+                }), new E.APIError(e)
             }
         }, L = async (e, t) => {
             n.default.dispatch({
@@ -124,7 +124,7 @@ function(e, t, r) {
                 throw n.default.dispatch({
                     type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
                     error: e
-                }), new s.APIError(e)
+                }), new E.APIError(e)
             }
         }, S = async e => {
             n.default.dispatch({
@@ -149,7 +149,7 @@ function(e, t, r) {
                     type: "COLLECTIBLES_CLAIM_FAILURE",
                     skuId: e,
                     error: t
-                }), new s.APIError(t)
+                }), new E.APIError(t)
             }
         }, T = async (e, t) => {
             try {
@@ -162,7 +162,7 @@ function(e, t, r) {
                 });
                 return r.body.valid
             } catch (e) {
-                throw new s.APIError(e)
+                throw new E.APIError(e)
             }
         }, p = e => {
             n.default.dispatch({

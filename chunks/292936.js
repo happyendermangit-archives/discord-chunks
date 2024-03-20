@@ -23,8 +23,8 @@ function(e, t, n) {
         S = n("161585"),
         C = n("24373"),
         _ = n("41170"),
-        I = n("591522"),
-        T = n("209069"),
+        T = n("591522"),
+        I = n("209069"),
         v = n("845579"),
         N = n("945330"),
         A = n("587974"),
@@ -77,7 +77,7 @@ function(e, t, n) {
                 size: j,
                 sticker: s,
                 className: P.sticker
-            }), i !== y.StickerSendability.SENDABLE && (0, a.jsx)(I.default, {
+            }), i !== y.StickerSendability.SENDABLE && (0, a.jsx)(T.default, {
                 size: 14
             })]
         })
@@ -91,7 +91,7 @@ function(e, t, n) {
             onSelectSticker: r,
             stickerIconVisible: c = !1,
             submitButtonVisible: f = !1
-        } = e, _ = s.useContext(x.default), [I, A] = s.useState(null), [b, j] = s.useState(!1), [U, G] = s.useState(null), B = (0, E.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, b, i), {
+        } = e, _ = s.useContext(x.default), [T, A] = s.useState(null), [b, j] = s.useState(!1), [U, G] = s.useState(null), H = (0, E.useExpressionPickerStore)(e => null != e.activeView), B = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, b, i), {
             analyticsLocations: Q,
             AnalyticsLocationProvider: $
         } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
@@ -118,17 +118,17 @@ function(e, t, n) {
                 _.removeListener("text-changed", ee), _.removeListener("autocomplete-visibility-change", e), _.removeListener("selection-changed", t)
             }
         }, [ee, n, _]), s.useLayoutEffect(() => {
-            null == I && G(null)
-        }, [I]);
+            null == T && G(null)
+        }, [T]);
         let [en, ei] = s.useState(!1);
         s.useLayoutEffect(() => {
             requestAnimationFrame(() => {
-                let e = H.current;
+                let e = B.current;
                 ei(l || (null == e ? void 0 : e.contains(null == e ? void 0 : e.ownerDocument.activeElement)) === !0)
             })
         }, [l]);
         let el = X.length > 0,
-            ea = en && !B && !z && !b && !J && el,
+            ea = en && !H && !z && !b && !J && el,
             {
                 stickersNavigator: es
             } = function(e) {
@@ -181,7 +181,7 @@ function(e, t, n) {
                 editorRef: n,
                 hasStickerResults: el,
                 shouldRenderSuggestions: ea,
-                focusedSuggestionType: I,
+                focusedSuggestionType: T,
                 setFocusedSuggestionType: A,
                 setHasDismissed: j,
                 setFocusedStickerListItem: G,
@@ -195,7 +195,7 @@ function(e, t, n) {
                         }), t === y.StickerSendability.SENDABLE) j(!0), r(e, S.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
                     else if ((0, C.isStandardSticker)(e)) {
                         let t = g.default.getStickerPack(e.pack_id);
-                        null != t && (0, T.default)({
+                        null != t && (0, I.default)({
                             stickerPack: t,
                             analyticsLocations: Q
                         })
@@ -219,7 +219,7 @@ function(e, t, n) {
                     [P.submitButtonOffset]: f,
                     [P.stickerIconOffset]: c
                 }),
-                innerRef: H,
+                innerRef: B,
                 style: {
                     minWidth: D
                 },
@@ -243,7 +243,7 @@ function(e, t, n) {
                                         t.current = e
                                     },
                                     onMouseLeave: () => {
-                                        null == I && G(null)
+                                        null == T && G(null)
                                     },
                                     tabIndex: ed ? -1 : n,
                                     ...i,

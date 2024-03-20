@@ -5,57 +5,57 @@ function(e, t, n) {
             return d
         }
     });
-    var r = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("414456"),
-        l = n.n(i),
-        a = n("77078"),
-        u = n("451914"),
-        s = n("548122");
-    let o = Object.freeze({
-            SIZE_10: s.size10,
-            SIZE_12: s.size12,
-            SIZE_14: s.size14,
-            SIZE_16: s.size16,
-            SIZE_20: s.size20,
-            SIZE_24: s.size24,
-            SIZE_32: s.size32
+    var r = n("414456"),
+        s = n.n(r),
+        l = n("77078"),
+        a = n("451914"),
+        o = n("548122");
+    let u = Object.freeze({
+            SIZE_10: o.size10,
+            SIZE_12: o.size12,
+            SIZE_14: o.size14,
+            SIZE_16: o.size16,
+            SIZE_20: o.size20,
+            SIZE_24: o.size24,
+            SIZE_32: o.size32
         }),
         c = e => {
             let {
                 id: t,
                 muted: n = !1,
-                className: i = u.wrapper,
-                size: s = o.SIZE_14,
+                className: r = a.wrapper,
+                size: o = u.SIZE_14,
                 selectable: c = !1,
                 children: d,
                 color: f,
-                onClick: E,
-                onContextMenu: _,
-                style: I,
-                title: T,
-                uppercase: M
+                onClick: h,
+                onContextMenu: E,
+                style: v,
+                title: C,
+                uppercase: p
             } = e;
-            return (0, r.jsx)(a.H, {
-                role: null != E ? "button" : void 0,
-                onClick: E,
-                onContextMenu: _,
+            return (0, i.jsx)(l.H, {
+                role: null != h ? "button" : void 0,
+                onClick: h,
+                onContextMenu: E,
                 id: t,
-                className: l(i, {
-                    [u.base]: !0,
-                    [s]: !0,
-                    [u.selectable]: c,
-                    [u.muted]: n,
-                    [u.uppercase]: M
+                className: s(r, {
+                    [a.base]: !0,
+                    [o]: !0,
+                    [a.selectable]: c,
+                    [a.muted]: n,
+                    [a.uppercase]: p
                 }),
-                title: T,
+                title: C,
                 style: null != f ? {
-                    ...I,
+                    ...v,
                     color: f
-                } : I,
+                } : v,
                 children: d
             })
         };
-    c.Sizes = o;
+    c.Sizes = u;
     var d = c
 }

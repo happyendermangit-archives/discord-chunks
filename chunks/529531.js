@@ -23,8 +23,8 @@ function(e, _, E) {
         u = E("697218"),
         L = E("381546"),
         C = E("599110"),
-        D = E("719923"),
-        c = E("805199"),
+        c = E("719923"),
+        D = E("805199"),
         d = E("433724"),
         U = E("49111"),
         M = E("994428"),
@@ -38,12 +38,12 @@ function(e, _, E) {
         },
         p = () => {
             var e, _, E;
-            let o = (0, a.useStateFromStores)([u.default], () => D.default.isPremium(u.default.getCurrentUser())),
+            let o = (0, a.useStateFromStores)([u.default], () => c.default.isPremium(u.default.getCurrentUser())),
                 n = (0, A.usePremiumTrialOffer)(),
                 r = (null == n ? void 0 : null === (e = n.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === h.PremiumSubscriptionSKUs.TIER_2;
             return (0, t.jsx)(R.default, {
                 size: i.Button.Sizes.MEDIUM,
-                buttonText: o ? P.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : r ? (0, D.formatTrialCtaIntervalDuration)({
+                buttonText: o ? P.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : r ? (0, c.formatTrialCtaIntervalDuration)({
                     intervalType: null == n ? void 0 : null === (_ = n.subscription_trial) || void 0 === _ ? void 0 : _.interval,
                     intervalCount: null == n ? void 0 : null === (E = n.subscription_trial) || void 0 === E ? void 0 : E.interval_count
                 }) : P.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
@@ -79,7 +79,7 @@ function(e, _, E) {
             let {
                 isCoachmark: _,
                 markAsDismissed: E
-            } = e, o = (0, a.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
+            } = e, o = (0, a.useStateFromStores)([D.default], () => D.default.isUpsellPreview);
             return (0, t.jsxs)("div", {
                 className: m.editorFooter,
                 children: [o && (0, t.jsx)(p, {}), (0, t.jsx)(i.Button, {
@@ -105,9 +105,9 @@ function(e, _, E) {
             isUpsellPreview: A,
             isEditorOpen: R,
             shouldEditorAnimate: l
-        } = (0, a.useStateFromStoresObject)([c.default, S.default], () => ({
-            isUpsellPreview: c.default.isUpsellPreview,
-            isEditorOpen: c.default.isEditorOpen,
+        } = (0, a.useStateFromStoresObject)([D.default, S.default], () => ({
+            isUpsellPreview: D.default.isUpsellPreview,
+            isEditorOpen: D.default.isEditorOpen,
             shouldEditorAnimate: _ && !S.default.useReducedMotion
         }));
         o.useEffect(() => {

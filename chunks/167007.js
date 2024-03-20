@@ -2,39 +2,39 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ApplicationIconSize: function() {
-            return l
+            return a
         },
         default: function() {
             return f
         }
     });
-    var i, l, a = n("37983");
+    var i, a, s = n("37983");
     n("884691");
-    var s = n("414456"),
-        r = n.n(s),
+    var r = n("414456"),
+        l = n.n(r),
         o = n("315102"),
         u = n("271560"),
-        d = n("614181");
-    (i = l || (l = {}))[i.SMALL = 40] = "SMALL", i[i.MEDIUM = 66] = "MEDIUM";
-    let c = {
-        40: d.small,
-        66: d.medium
+        c = n("614181");
+    (i = a || (a = {}))[i.SMALL = 40] = "SMALL", i[i.MEDIUM = 66] = "MEDIUM";
+    let d = {
+        40: c.small,
+        66: c.medium
     };
     var f = e => {
         let t, {
             application: n,
             size: i,
-            asset: l,
-            className: s
+            asset: a,
+            className: r
         } = e;
-        return t = null != l ? (0, u.getAssetURL)(n.id, l, i) : o.default.getApplicationIconURL({
+        return t = null != a ? (0, u.getAssetURL)(n.id, a, i) : o.default.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
             size: i
-        }), (0, a.jsx)("img", {
+        }), (0, s.jsx)("img", {
             alt: "",
             src: t,
-            className: r(d.icon, c[i], s)
+            className: l(c.icon, d[i], r)
         })
     }
 }

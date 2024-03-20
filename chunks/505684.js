@@ -5,7 +5,7 @@ function(e, t, n) {
             return _
         },
         default: function() {
-            return T
+            return I
         }
     }), n("222007");
     var i, l, a = n("37983"),
@@ -103,7 +103,7 @@ function(e, t, n) {
             })
         },
         _ = s.createContext(!1);
-    class I extends s.PureComponent {
+    class T extends s.PureComponent {
         renderWithTooltip(e) {
             return (0, a.jsx)(c.Tooltip, {
                 position: "left",
@@ -355,6 +355,6 @@ function(e, t, n) {
             }
         }
     }
-    I.Types = i, I.Reasons = f.ObscureReason;
-    var T = I
+    T.Types = i, T.Reasons = f.ObscureReason;
+    var I = T
 }

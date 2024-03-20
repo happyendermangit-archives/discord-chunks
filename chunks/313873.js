@@ -26,8 +26,8 @@ function(e, t, n) {
         S = n("36539"),
         C = n("502651"),
         _ = n("419830"),
-        I = n("808742"),
-        T = n("342845"),
+        T = n("808742"),
+        I = n("342845"),
         v = n("239380"),
         N = n("118033"),
         A = n("315102"),
@@ -45,7 +45,7 @@ function(e, t, n) {
         F = n("782340"),
         G = n("542371");
     (l = i || (i = {})).USER_POPOUT = "UserPopout", l.USER_POPOUT_V2 = "UserPopoutV2", l.ACTIVITY_FEED = "ActivityFeed", l.PROFILE = "Profile", l.PROFILE_V2 = "ProfileV2", l.STREAM_PREVIEW = "StreamPreview", l.VOICE_CHANNEL = "VoiceChannel";
-    let B = {
+    let H = {
             StreamPreview: [108, 60],
             UserPopout: [108, 60],
             UserPopoutV2: [108, 60],
@@ -55,7 +55,7 @@ function(e, t, n) {
             ActivityFeed: [900, 500]
         },
         {
-            getAssetImage: H
+            getAssetImage: B
         } = n("550368"),
         V = (0, p.default)(class extends s.PureComponent {
             render() {
@@ -176,7 +176,7 @@ function(e, t, n) {
             let l, r;
             if (e.type === D.ActivityTypes.HANG_STATUS) return (0, a.jsx)("div", {
                 className: G.assets,
-                children: (0, a.jsx)(T.default, {
+                children: (0, a.jsx)(I.default, {
                     hangStatusActivity: e,
                     className: o(G.assetsHangStatus, this.getTypeClass("assetsSmallImage", "WithoutLargeImage"))
                 })
@@ -188,11 +188,11 @@ function(e, t, n) {
                 application_id: c
             } = e;
             if (null == d || null == d.large_image && null == d.small_image) return null;
-            (0, C.default)(e) && (l = B[u]);
+            (0, C.default)(e) && (l = H[u]);
             let p = (0, g.default)(e),
                 m = null != d.large_image ? (0, a.jsx)("img", {
                     alt: null !== (t = d.large_text) && void 0 !== t ? t : "",
-                    src: H(c, d.large_image, null != l ? l : [w.ImageSizes.LARGE, w.ImageSizes.LARGE]),
+                    src: B(c, d.large_image, null != l ? l : [w.ImageSizes.LARGE, w.ImageSizes.LARGE]),
                     className: o(this.getTypeClass("assetsLargeImage", this.isStreamerOnTypeProfile() || this.isStreamerOnTypeActivityFeed() ? D.PlatformTypes.TWITCH : ""), {
                         [null !== (n = this.getTypeClass("assetsLargeMask")) && void 0 !== n ? n : ""]: null != d.small_image
                     }, {
@@ -246,7 +246,7 @@ function(e, t, n) {
                     var t;
                     return (0, a.jsx)("img", {
                         alt: null !== (t = d.small_text) && void 0 !== t ? t : "",
-                        src: H(c, d.small_image, [w.ImageSizes.SMALL, w.ImageSizes.SMALL]),
+                        src: B(c, d.small_image, [w.ImageSizes.SMALL, w.ImageSizes.SMALL]),
                         className: this.getTypeClass("assetsSmallImage", null == m ? "WithoutLargeImage" : void 0),
                         ...e
                     })
@@ -301,7 +301,7 @@ function(e, t, n) {
             let r = (0, y.default)(e),
                 o = e.name,
                 u = o;
-            return (s === D.ActivityTypes.HANG_STATUS ? u = (0, I.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
+            return (s === D.ActivityTypes.HANG_STATUS ? u = (0, T.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
                 className: G.activityName,
                 children: u
             }) : !r && (o = l, u = l, (0, g.default)(e) && null != e.sync_id && null != l ? u = (0, a.jsx)(f.Anchor, {

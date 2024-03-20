@@ -5,7 +5,7 @@ function(e, t, n) {
             return G
         },
         default: function() {
-            return B
+            return H
         }
     }), n("222007"), n("424973");
     var i = n("37983"),
@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("551305"),
         C = n("978679"),
         _ = n("953957"),
-        I = n("762974"),
-        T = n("718517"),
+        T = n("762974"),
+        I = n("718517"),
         v = n("299039"),
         N = n("158998"),
         A = n("49111"),
@@ -83,9 +83,9 @@ function(e, t, n) {
             ribbon: "#81C29F"
         }],
         j = 1 / 300,
-        U = T.default.Millis.DAYS_30,
+        U = I.default.Millis.DAYS_30,
         D = (0, a.animated)(_.default),
-        w = (0, a.animated)(I.default),
+        w = (0, a.animated)(T.default),
         F = (0, a.animated)(C.default);
 
     function G(e) {
@@ -131,23 +131,23 @@ function(e, t, n) {
             style: p
         })
     }
-    var B = l.memo(function(e) {
+    var H = l.memo(function(e) {
         let {
             disabled: t,
             channel: n
         } = e, {
             analyticsLocations: a
-        } = (0, p.default)(f.default.GIFT_BUTTON), [o, c] = l.useState(!1), C = (0, s.useStateFromStores)([y.default], () => !(null === y.default || void 0 === y.default ? void 0 : y.default.hasLayers())), _ = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), I = null != _ ? v.default.age(_.id) : 0, T = !t && C && I >= U, {
+        } = (0, p.default)(f.default.GIFT_BUTTON), [o, c] = l.useState(!1), C = (0, s.useStateFromStores)([y.default], () => !(null === y.default || void 0 === y.default ? void 0 : y.default.hasLayers())), _ = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), T = null != _ ? v.default.age(_.id) : 0, I = !t && C && T >= U, {
             enabled: P
         } = E.SeasonalGiftingMarketingExperiment.useExperiment({
             location: "ChannelPremiumGiftButton"
         }, {
-            autoTrackExposure: T
+            autoTrackExposure: I
         }), b = [];
-        P && T && b.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-        let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, N.useDirectMessageRecipient)(n), B = null != F;
+        P && I && b.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
+        let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, N.useDirectMessageRecipient)(n), H = null != F;
         if (t) return null;
-        let H = () => {
+        let B = () => {
                 (0, x.default)({
                     isGift: !0,
                     giftRecipient: null == F ? void 0 : F,
@@ -172,9 +172,9 @@ function(e, t, n) {
                 },
                 children: [w && (0, i.jsx)(d.default, {
                     onComplete: () => c(!1),
-                    onDMCheckItOutClick: H,
+                    onDMCheckItOutClick: B,
                     markAsDismissed: D,
-                    isDM: B
+                    isDM: H
                 }), (0, i.jsx)(S.default, {
                     innerClassName: L.button,
                     "aria-label": M.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
@@ -182,7 +182,7 @@ function(e, t, n) {
                     onClick: () => {
                         c(!1), (0, m.markDismissibleContentAsDismissed)(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {
                             dismissAction: O.ContentDismissActionType.TAKE_ACTION
-                        }), H()
+                        }), B()
                     },
                     children: (0, i.jsx)("div", {
                         className: k.noPointerEvents,
@@ -195,7 +195,7 @@ function(e, t, n) {
             });
         return w ? V : (0, i.jsx)(u.TooltipContainer, {
             className: k.container,
-            text: (0, d.getSeasonalGiftingBody)(B),
+            text: (0, d.getSeasonalGiftingBody)(H),
             children: V
         })
     })

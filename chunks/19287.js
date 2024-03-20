@@ -21,17 +21,17 @@ function(e, t, n) {
             showPending: d = !1,
             animateOnHover: f = !1,
             avatarOverride: m
-        } = e, [_, E] = r.useState(!1), I = (0, i.useStateFromStores)([l.default], () => l.default.useReducedMotion), T = (0, i.useStateFromStores)([o.default], () => o.default.isFocused()), C = T && (_ || !I && !f), {
-            pendingAvatar: p
-        } = (0, u.default)({}), S = (0, i.useStateFromStores)([s.default], () => null != n && null != t ? s.default.getMember(n, t.id) : null), P = r.useMemo(() => null != t ? (0, a.getPreviewAvatar)(d ? null != m ? m : p : void 0, S, t, {
-            canAnimate: C,
+        } = e, [_, E] = r.useState(!1), I = (0, i.useStateFromStores)([l.default], () => l.default.useReducedMotion), T = (0, i.useStateFromStores)([o.default], () => o.default.isFocused()), p = T && (_ || !I && !f), {
+            pendingAvatar: S
+        } = (0, u.default)({}), P = (0, i.useStateFromStores)([s.default], () => null != n && null != t ? s.default.getMember(n, t.id) : null), R = r.useMemo(() => null != t ? (0, a.getPreviewAvatar)(d ? null != m ? m : S : void 0, P, t, {
+            canAnimate: p,
             size: c
-        }) : void 0, [d, p, S, t, C, c, m]), R = r.useCallback(() => E(!0), []), O = r.useCallback(() => E(!1), []);
+        }) : void 0, [d, S, P, t, p, c, m]), C = r.useCallback(() => E(!0), []), O = r.useCallback(() => E(!1), []);
         return {
-            avatarSrc: P,
-            isAvatarAnimating: C,
+            avatarSrc: R,
+            isAvatarAnimating: p,
             eventHandlers: {
-                onMouseEnter: R,
+                onMouseEnter: C,
                 onMouseLeave: O
             }
         }

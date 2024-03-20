@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("385887"),
         C = n("566819"),
         _ = n("49111"),
-        I = n("406291");
-    let T = new Set(["applicationCommandOption"]),
+        T = n("406291");
+    let I = new Set(["applicationCommandOption"]),
         v = new Set([i.ApplicationCommandOptionType.ATTACHMENT]),
         N = new Set(["line", "applicationCommand"]);
 
@@ -73,7 +73,7 @@ function(e, t, n) {
                 }
             }
             return p(n)
-        }, e.isInline = e => !!T.has(e.type) || m(e), e.isVoid = e => !!("applicationCommandOption" === e.type && v.has(e.optionType)) || h(e), e.deleteBackward = t => {
+        }, e.isInline = e => !!I.has(e.type) || m(e), e.isVoid = e => !!("applicationCommandOption" === e.type && v.has(e.optionType)) || h(e), e.deleteBackward = t => {
             L(e, () => A(t))
         }, e.deleteForward = t => {
             L(e, () => b(t))
@@ -108,7 +108,7 @@ function(e, t, n) {
                             if (!r || u && (null == E ? void 0 : E.inputType) !== o.ApplicationCommandInputType.BUILT_IN_TEXT && (null == E ? void 0 : E.inputType) !== o.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return null != m && O(t, a.id, E, !0), null;
                             if (null != m) {
                                 if (S.EditorUtils.isEditorEmpty(t) || null == E) return O(t, a.id, E, !1), null;
-                                let e = "".concat(I.COMMAND_SENTINEL).concat(m.displayName);
+                                let e = "".concat(T.COMMAND_SENTINEL).concat(m.displayName);
                                 if (null == h || !h.startsWith(e) || 0 === x.getOptionNames(t).length && (h.length < e.length + 1 || " " !== h[e.length])) return O(t, a.id, E, !0), null
                             } else {
                                 if (null != E && d) {
@@ -131,10 +131,10 @@ function(e, t, n) {
                                                 m = "",
                                                 h = p.toLocaleLowerCase(),
                                                 E = f.PREFIX_COMMAND_REGEX.exec(h);
-                                            null != E && (h = I.COMMAND_SENTINEL + h.substring(E.length));
-                                            let _ = "".concat(I.COMMAND_SENTINEL).concat(d.displayName).toLocaleLowerCase(),
-                                                T = "".concat(I.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
-                                            h.startsWith(_) && h.length > _.length ? m = p.substring(_.length).trim() : h.startsWith(T) && h.length > T.length && (m = p.substring(T.length).trim());
+                                            null != E && (h = T.COMMAND_SENTINEL + h.substring(E.length));
+                                            let _ = "".concat(T.COMMAND_SENTINEL).concat(d.displayName).toLocaleLowerCase(),
+                                                I = "".concat(T.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
+                                            h.startsWith(_) && h.length > _.length ? m = p.substring(_.length).trim() : h.startsWith(I) && h.length > I.length && (m = p.substring(I.length).trim());
                                             let N = [],
                                                 A = null,
                                                 O = null;
@@ -171,7 +171,7 @@ function(e, t, n) {
                                                         N.push(a), 0 === e.length && null == A && (A = a), null == l && (O = a)
                                                     }
                                             }
-                                            o = m.length > 0 ? "".concat(I.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(I.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(I.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
+                                            o = m.length > 0 ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(T.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(T.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
                                                 text: o
                                             });
                                             let M = {
@@ -365,7 +365,7 @@ function(e, t, n) {
                 path: C.FIRST_TEXT_PATH,
                 offset: i.text.length
             };
-        return !(!i.text.startsWith("".concat(I.COMMAND_SENTINEL).concat(t.displayName, " ").toLocaleLowerCase()) || S.PointUtils.equals(a, s)) && (g.SlateTransforms.textToInline(e, {
+        return !(!i.text.startsWith("".concat(T.COMMAND_SENTINEL).concat(t.displayName, " ").toLocaleLowerCase()) || S.PointUtils.equals(a, s)) && (g.SlateTransforms.textToInline(e, {
             type: "applicationCommandOption",
             optionName: l.name,
             optionDisplayName: l.displayName,

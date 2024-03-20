@@ -2,7 +2,7 @@ function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
         default: function() {
-            return D
+            return c
         }
     });
     var t = E("37983");
@@ -24,7 +24,7 @@ function(e, _, E) {
         u = E("706530"),
         L = E("49111");
     let C = (0, o.debounce)(i.notifyStreamStart, 1e3);
-    var D = {
+    var c = {
         init() {
             A.default.init(), r.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
                 let {

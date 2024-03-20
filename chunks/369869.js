@@ -45,8 +45,8 @@ function(e, t, n) {
             isUsingGuildBio: S,
             lastSection: C = !1,
             animateOnHover: _ = !1,
-            isHovering: I = !1,
-            lineClamp: T
+            isHovering: T = !1,
+            lineClamp: I
         } = e, {
             location: v
         } = (0, o.useAnalyticsContext)(), N = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), A = f.default.canUsePremiumGuildMemberProfile(N);
@@ -91,8 +91,8 @@ function(e, t, n) {
             }), (0, i.jsx)(p.default, {
                 userBio: l,
                 animateOnHover: _,
-                isHovering: I,
-                lineClamp: T
+                isHovering: T,
+                lineClamp: I
             })]
         })
     }

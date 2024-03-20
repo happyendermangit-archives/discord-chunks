@@ -31,8 +31,8 @@ function(e, t, n) {
         S = n("50885"),
         C = n("756507"),
         _ = n("713135"),
-        I = n("106435"),
-        T = n("289918"),
+        T = n("106435"),
+        I = n("289918"),
         v = n("878569"),
         N = n("590006"),
         A = n("430312"),
@@ -86,16 +86,16 @@ function(e, t, n) {
             disableUserProfileLink: x,
             profileType: S,
             animateOnHover: _,
-            hasProfileEffect: T
+            hasProfileEffect: I
         } = e, {
             profileTheme: N
         } = l.useContext(A.UserProfileContext), U = l.useContext(y.AnalyticsContext), w = t.isNonUserBot() && !t.isClyde(), F = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, k.PremiumTypes.TIER_2), G = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), {
-            trackUserProfileAction: B
-        } = (0, C.useUserProfileAnalyticsContext)(), H = x || t.isClyde(), {
+            trackUserProfileAction: H
+        } = (0, C.useUserProfileAnalyticsContext)(), B = x || t.isClyde(), {
             avatarDecorationSrc: V,
             avatarSrc: K,
             eventHandlers: W
-        } = (0, I.default)({
+        } = (0, T.default)({
             user: t,
             guildId: f,
             size: b,
@@ -122,18 +122,18 @@ function(e, t, n) {
             return e({
                 isPremium: F,
                 hasBanner: o,
-                hasProfileEffect: T
+                hasProfileEffect: I
             })
         }).with(R.UserProfileTypes.POMELO_POPOUT, () => P.avatarPositionPomelo).with(R.UserProfileTypes.PANEL, () => P.avatarPositionPanel).exhaustive();
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)(d.Clickable, {
                 className: s({
-                    [P.clickable]: !H,
+                    [P.clickable]: !B,
                     [P.avatarWrapperNonUserBot]: w,
                     [P.avatarWrapperNormal]: !w
                 }, z),
-                onClick: w || H ? void 0 : function() {
-                    B({
+                onClick: w || B ? void 0 : function() {
+                    H({
                         action: "PRESS_VIEW_PROFILE"
                     }), (0, O.openUserProfileModal)({
                         userId: t.id,
@@ -142,7 +142,7 @@ function(e, t, n) {
                         analyticsLocation: U.location
                     }), null == h || h()
                 },
-                children: [Y, !H && function() {
+                children: [Y, !B && function() {
                     let e = null != V,
                         t = e ? j : (0, d.getAvatarSize)(b);
                     return (0, i.jsx)(E.default, {
@@ -179,7 +179,7 @@ function(e, t, n) {
             upsell: p
         } = e;
         return (0, i.jsxs)(i.Fragment, {
-            children: [p, (0, i.jsx)(T.default, {
+            children: [p, (0, i.jsx)(I.default, {
                 user: t,
                 displayProfile: n,
                 onClose: s,

@@ -29,7 +29,7 @@ function(e, t, n) {
             children: g,
             disableCopy: S,
             showCopyIcon: C
-        } = e, [_, I] = s.useState(0), [T, v] = s.useState(!1), [N, A] = s.useState(!1);
+        } = e, [_, T] = s.useState(0), [I, v] = s.useState(!1), [N, A] = s.useState(!1);
         if (s.useEffect(() => (i = new u.Timeout, l = new u.Timeout, function() {
                 i.stop(), l.stop()
             }), []), !f.SUPPORTS_COPY || S) return (0, a.jsx)(a.Fragment, {
@@ -40,25 +40,25 @@ function(e, t, n) {
             M = null !== (t = O[R]) && void 0 !== t ? t : O[0],
             k = _ >= O.length - 1,
             L = k ? d.TooltipColors.RED : d.TooltipColors.GREEN,
-            P = T ? L : d.TooltipColors.PRIMARY,
+            P = I ? L : d.TooltipColors.PRIMARY,
             b = () => {
                 i.stop(), A(!1)
             },
             j = e => {
                 (0, f.copy)(r), c.default.track(m.AnalyticEvents.TEXT_COPIED, {
                     type: E
-                }), "function" == typeof e && e(), !N && I(_ + 1), A(!0), v(!0), i.start(1e3, () => A(!1)), l.start(2e3, () => I(0))
+                }), "function" == typeof e && e(), !N && T(_ + 1), A(!0), v(!0), i.start(1e3, () => A(!1)), l.start(2e3, () => T(0))
             };
         return (0, a.jsx)(d.Tooltip, {
             delay: 500,
             color: P,
             forceOpen: N,
-            text: T ? (0, a.jsx)(d.Shaker, {
+            text: I ? (0, a.jsx)(d.Shaker, {
                 isShaking: k,
                 children: M
             }) : y,
             onAnimationRest: (e, t) => {
-                !N && T && t.phase === m.SpringTransitionPhases.LEAVE && v(!1)
+                !N && I && t.phase === m.SpringTransitionPhases.LEAVE && v(!1)
             },
             "aria-label": y,
             children: e => {
@@ -71,7 +71,7 @@ function(e, t, n) {
                     ...l,
                     className: x.clickTarget,
                     onMouseEnter: () => {
-                        T ? b() : "function" == typeof i && i()
+                        I ? b() : "function" == typeof i && i()
                     },
                     onClick: () => {
                         j(t)

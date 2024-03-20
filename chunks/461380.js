@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return v
         }
     });
     var i = n("37983");
     n("884691");
-    var s = n("414456"),
-        r = n.n(s),
+    var r = n("414456"),
+        s = n.n(r),
         l = n("384737"),
         a = n("448052"),
         o = n("748802"),
@@ -22,46 +22,46 @@ function(e, t, n) {
             DOWN: f.directionDown,
             LEFT: f.directionLeft
         },
-        v = e => {
+        E = e => {
             let {
                 direction: t = h.DOWN,
                 width: n = 24,
-                height: s = 24,
-                color: v = "currentColor",
-                transition: E = f.transition,
+                height: r = 24,
+                color: E = "currentColor",
+                transition: v = f.transition,
                 className: C,
                 foreground: p,
-                expanded: m,
-                ..._
+                expanded: _,
+                ...I
             } = e, {
-                enabled: S
-            } = (0, c.useRedesignIconContext)(), I = t;
-            if (!0 === m ? I = h.DOWN : !1 === m && (I = h.RIGHT), S) {
+                enabled: m
+            } = (0, c.useRedesignIconContext)(), N = t;
+            if (!0 === _ ? N = h.DOWN : !1 === _ && (N = h.RIGHT), m) {
                 let e = {
                     [h.UP]: u.ChevronSmallUpIcon,
                     [h.DOWN]: l.ChevronSmallDownIcon,
                     [h.LEFT]: a.ChevronSmallLeftIcon,
                     [h.RIGHT]: o.ChevronSmallRightIcon
-                } [I];
+                } [N];
                 return (0, i.jsx)(e, {
-                    ..._,
+                    ...I,
                     className: C,
                     width: n,
-                    height: s,
-                    color: v,
+                    height: r,
+                    color: E,
                     colorClass: p
                 })
             }
             return (0, i.jsx)("svg", {
-                className: r(C, E, I),
+                className: s(C, v, N),
                 width: n,
-                height: s,
+                height: r,
                 viewBox: "0 0 24 24",
-                ...(0, d.default)(_),
+                ...(0, d.default)(I),
                 children: (0, i.jsx)("path", {
                     className: p,
                     fill: "none",
-                    stroke: v,
+                    stroke: E,
                     strokeWidth: "2",
                     strokeLinecap: "round",
                     strokeLinejoin: "round",
@@ -70,6 +70,6 @@ function(e, t, n) {
                 })
             })
         };
-    v.Directions = h;
-    var E = v
+    E.Directions = h;
+    var v = E
 }

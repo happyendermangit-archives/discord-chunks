@@ -2,15 +2,15 @@ function(e, t, i) {
     "use strict";
     i.r(t), i.d(t, {
         default: function() {
-            return a
+            return l
         }
     });
     var r = i("37983");
     i("884691");
     var n = i("469563"),
         s = i("441888"),
-        l = i("75196"),
-        a = (0, n.replaceIcon)(function(e) {
+        a = i("75196"),
+        l = (0, n.replaceIcon)(function(e) {
             let {
                 width: t = 20,
                 height: i = 20,
@@ -20,7 +20,7 @@ function(e, t, i) {
             return (0, r.jsx)("svg", {
                 width: t,
                 height: i,
-                ...(0, l.default)(s),
+                ...(0, a.default)(s),
                 viewBox: "0 0 20 20",
                 children: (0, r.jsx)("path", {
                     fillRule: "evenodd",

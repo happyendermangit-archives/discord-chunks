@@ -1,6 +1,6 @@
-function(I, N, A) {
+function(N, I, A) {
     "use strict";
-    I.exports = {
+    N.exports = {
         COMMON_OPEN_DISCORD: "Discordを開く",
         COMMON_SIGN_UP_NOW: "今すぐ登録する",
         FOOTER_READY_TO_TRY_DISCORD: "Discordを使ってみるかい？（無料だよ！）",

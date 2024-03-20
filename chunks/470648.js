@@ -31,33 +31,33 @@ function(e, t, n) {
             className: t,
             userId: l,
             channelId: _,
-            inlinePreview: I = !1
-        } = e, T = (0, r.useStateFromStores)([E.default], () => E.default.getUser(l)), v = (0, r.useStateFromStores)([p.default], () => p.default.getChannel(_)), N = null != v ? v.getGuildId() : null, A = I || null == T || null == N || null == _ ? void 0 : e => {
+            inlinePreview: T = !1
+        } = e, I = (0, r.useStateFromStores)([E.default], () => E.default.getUser(l)), v = (0, r.useStateFromStores)([p.default], () => p.default.getChannel(_)), N = null != v ? v.getGuildId() : null, A = T || null == I || null == N || null == _ ? void 0 : e => {
             null != v && (0, u.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
                 } = await n.el("834247").then(n.bind(n, "834247"));
                 return t => (0, i.jsx)(e, {
                     ...t,
-                    user: T,
+                    user: I,
                     channel: v,
                     guildId: N
                 })
             })
-        }, O = S.default.useName(T), R = (0, r.useStateFromStores)([p.default, m.default, x.default], () => g.default.getNickname(N, _, T)), M = h.default.getGuild(N), k = (0, d.useClydeEnabled)(M, v), L = k && l === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null, P = e => (0, i.jsx)(y.default, {
+        }, O = S.default.useName(I), R = (0, r.useStateFromStores)([p.default, m.default, x.default], () => g.default.getNickname(N, _, I)), M = h.default.getGuild(N), k = (0, d.useClydeEnabled)(M, v), L = k && l === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null, P = e => (0, i.jsx)(y.default, {
             className: t,
             onContextMenu: A,
             color: L,
             ...e,
             children: "@".concat(null != R ? R : O)
         });
-        return I ? P() : (0, i.jsx)(o.Popout, {
-            preload: null == T ? void 0 : () => (0, c.default)(T.id, T.getAvatarURL(N, 80), {
+        return T ? P() : (0, i.jsx)(o.Popout, {
+            preload: null == I ? void 0 : () => (0, c.default)(I.id, I.getAvatarURL(N, 80), {
                 guildId: null != N ? N : void 0,
                 channelId: null != _ ? _ : void 0
             }),
-            renderPopout: e => (a(null != T, "Unexpected missing user"), (0, i.jsx)(f.default, {
-                userId: T.id,
+            renderPopout: e => (a(null != I, "Unexpected missing user"), (0, i.jsx)(f.default, {
+                userId: I.id,
                 guildId: null != N ? N : void 0,
                 channelId: _,
                 ...e

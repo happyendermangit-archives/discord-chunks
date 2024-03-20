@@ -17,7 +17,7 @@ function(e, t, n) {
             return F
         },
         getEffectAnnouncement: function() {
-            return B
+            return H
         }
     });
     var i = n("917351"),
@@ -40,8 +40,8 @@ function(e, t, n) {
         S = n("97656"),
         C = n("812007"),
         _ = n("721336"),
-        I = n("954877"),
-        T = n("662151"),
+        T = n("954877"),
+        I = n("662151"),
         v = n("155232"),
         N = n("843093"),
         A = n("867805"),
@@ -57,7 +57,7 @@ function(e, t, n) {
         },
         j = {
             BASIC: [a],
-            PREMIUM: [s, r, o, u, d, c, f, p, m, h, x, E, y, g, S, C, _, I, T, v, N]
+            PREMIUM: [s, r, o, u, d, c, f, p, m, h, x, E, y, g, S, C, _, T, I, v, N]
         },
         U = {
             [L.VoiceChannelEffectAnimationType.BASIC]: j.BASIC,
@@ -106,7 +106,7 @@ function(e, t, n) {
         }).filter(e => null != e).uniq().value()
     }
 
-    function B(e) {
+    function H(e) {
         var t, n, i, l, a, s;
         if (e.length < 1) return "";
         let r = G(e, "userId"),

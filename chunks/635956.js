@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return M
+            return g
         }
     });
     var r = n("37983");
@@ -21,44 +21,44 @@ function(e, t, n) {
         E = n("521012"),
         I = n("471671"),
         T = n("181114"),
-        C = n("978679"),
-        p = n("216422"),
-        S = n("719923"),
-        P = n("646718"),
-        R = n("49111"),
+        p = n("978679"),
+        S = n("216422"),
+        P = n("719923"),
+        R = n("646718"),
+        C = n("49111"),
         O = n("782340"),
-        L = n("917746"),
-        M = function(e) {
+        M = n("917746"),
+        g = function(e) {
             let {
                 isGift: t,
                 subscriptionTier: i,
-                onClick: M,
-                size: g,
-                className: h,
-                trialId: x,
-                isTrialCTA: N,
-                buttonText: v,
+                onClick: g,
+                size: h,
+                className: L,
+                trialId: N,
+                isTrialCTA: v,
+                buttonText: x,
                 buttonTextClassName: A,
                 iconClassName: U,
                 postSuccessGuild: b,
-                onSubscribeModalClose: D,
-                premiumModalAnalyticsLocation: y,
+                onSubscribeModalClose: y,
+                premiumModalAnalyticsLocation: D,
                 showIcon: j = !0,
                 disableShine: F,
                 applicationId: B,
-                giftMessage: H,
-                overrideDisabledButtonText: k,
-                shinyButtonClassName: w,
-                ...G
-            } = e, K = (0, a.useStateFromStores)([_.default], () => _.default.getCurrentUser()), V = (0, a.useStateFromStores)([I.default], () => I.default.isFocused()), Z = (0, a.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), {
-                analyticsLocations: W
-            } = (0, u.default)(), z = e => {
+                giftMessage: k,
+                overrideDisabledButtonText: w,
+                shinyButtonClassName: G,
+                ...H
+            } = e, K = (0, a.useStateFromStores)([_.default], () => _.default.getCurrentUser()), V = (0, a.useStateFromStores)([I.default], () => I.default.isFocused()), W = (0, a.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), {
+                analyticsLocations: z
+            } = (0, u.default)(), Z = e => {
                 if (e.preventDefault(), null == K) {
-                    (0, f.transitionTo)(R.Routes.LOGIN);
+                    (0, f.transitionTo)(C.Routes.LOGIN);
                     return
                 }
-                if (null == M || M(e), (null == Z ? void 0 : Z.status) === R.SubscriptionStatusTypes.ACCOUNT_HOLD) {
-                    (0, c.trackPremiumSettingsPaneOpened)(), o.default.open(R.UserSettingsSections.PREMIUM), null == D || D(!1);
+                if (null == g || g(e), (null == W ? void 0 : W.status) === C.SubscriptionStatusTypes.ACCOUNT_HOLD) {
+                    (0, c.trackPremiumSettingsPaneOpened)(), o.default.open(C.UserSettingsSections.PREMIUM), null == y || y(!1);
                     return
                 }! function(e) {
                     let {
@@ -110,14 +110,14 @@ function(e, t, n) {
                         });
                         return
                     }
-                    let I = R.AnalyticsObjectTypes.BUY;
-                    null != o ? I = R.AnalyticsObjectTypes.TRIAL : l && (I = R.AnalyticsObjectTypes.GIFT), (0, d.default)({
+                    let I = C.AnalyticsObjectTypes.BUY;
+                    null != o ? I = C.AnalyticsObjectTypes.TRIAL : l && (I = C.AnalyticsObjectTypes.GIFT), (0, d.default)({
                         isGift: l,
                         initialPlanId: null,
                         subscriptionTier: a,
                         analyticsLocations: f,
                         analyticsObject: {
-                            object: R.AnalyticsObjects.BUTTON_CTA,
+                            object: C.AnalyticsObjects.BUTTON_CTA,
                             objectType: I,
                             ...m
                         },
@@ -132,62 +132,62 @@ function(e, t, n) {
                     isVerified: K.verified,
                     isGift: t,
                     subscriptionTier: i,
-                    trialId: x,
+                    trialId: N,
                     postSuccessGuild: b,
-                    onSubscribeModalClose: D,
-                    analyticsLocations: W,
-                    premiumModalAnalyticsLocation: y,
+                    onSubscribeModalClose: y,
+                    analyticsLocations: z,
+                    premiumModalAnalyticsLocation: D,
                     applicationId: B,
-                    giftMessage: H
+                    giftMessage: k
                 })
             };
-            if (N) return (0, r.jsxs)(s.Button, {
-                size: g,
-                className: h,
-                innerClassName: L.premiumSubscribeButton,
+            if (v) return (0, r.jsxs)(s.Button, {
+                size: h,
+                className: L,
+                innerClassName: M.premiumSubscribeButton,
                 look: s.Button.Looks.INVERTED,
-                onClick: z,
-                ...G,
-                children: [j && (0, r.jsx)(p.default, {
-                    className: L.premiumIcon
+                onClick: Z,
+                ...H,
+                children: [j && (0, r.jsx)(S.default, {
+                    className: M.premiumIcon
                 }), (0, r.jsx)("span", {
-                    className: l(L.buttonText, A),
-                    children: null != v ? v : O.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
+                    className: l(M.buttonText, A),
+                    children: null != x ? x : O.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
                 })]
             });
             if (t) return (0, r.jsxs)(s.Button, {
-                size: g,
-                className: h,
-                innerClassName: L.giftButton,
+                size: h,
+                className: L,
+                innerClassName: M.giftButton,
                 color: s.Button.Colors.PRIMARY,
-                onClick: z,
-                ...G,
-                children: [(0, r.jsx)(C.default, {
-                    className: L.giftIcon
+                onClick: Z,
+                ...H,
+                children: [(0, r.jsx)(p.default, {
+                    className: M.giftIcon
                 }), (0, r.jsx)("span", {
-                    className: l(L.buttonText, A),
-                    children: null != v ? v : O.default.Messages.PREMIUM_GIFTING_BUTTON
+                    className: l(M.buttonText, A),
+                    children: null != x ? x : O.default.Messages.PREMIUM_GIFTING_BUTTON
                 })]
             });
             let Y = O.default.Messages.APPLICATION_STORE_GET_PREMIUM,
-                X = null != Z ? (0, S.getPremiumPlanItem)(Z) : null,
-                J = null != X ? S.default.getPremiumType(X.planId) : null == K ? void 0 : K.premiumType,
-                q = i === P.PremiumSubscriptionSKUs.TIER_2 && null != J && [P.PremiumTypes.TIER_0, P.PremiumTypes.TIER_1].includes(J);
+                X = null != W ? (0, P.getPremiumPlanItem)(W) : null,
+                J = null != X ? P.default.getPremiumType(X.planId) : null == K ? void 0 : K.premiumType,
+                q = i === R.PremiumSubscriptionSKUs.TIER_2 && null != J && [R.PremiumTypes.TIER_0, R.PremiumTypes.TIER_1].includes(J);
             q && (Y = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
-            let Q = null != Z && Z.status !== R.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, m.isNoneSubscription)(Z.planId) && !q,
-                $ = Q ? null != k ? k : function(e) {
+            let Q = null != W && W.status !== C.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, m.isNoneSubscription)(W.planId) && !q,
+                $ = Q ? null != w ? w : function(e) {
                     let {
                         ctaSubscriptionSkuId: t,
                         currentPremiumType: n
                     } = e, r = null, i = null;
-                    if (null != t && t !== P.PremiumSubscriptionSKUs.LEGACY && t !== P.PremiumSubscriptionSKUs.TIER_0 && t !== P.PremiumSubscriptionSKUs.TIER_1 && t !== P.PremiumSubscriptionSKUs.TIER_2) return {
+                    if (null != t && t !== R.PremiumSubscriptionSKUs.LEGACY && t !== R.PremiumSubscriptionSKUs.TIER_0 && t !== R.PremiumSubscriptionSKUs.TIER_1 && t !== R.PremiumSubscriptionSKUs.TIER_2) return {
                         disabledButtonText: r,
                         disabledButtonTooltipText: i
                     };
-                    let l = null != t ? P.PremiumSubscriptionSKUToPremiumType[(0, S.castPremiumSubscriptionAsSkuId)(t)] : null,
-                        a = null != l ? P.PremiumTypeOrder[l] : null,
-                        s = null != n ? P.PremiumTypeOrder[n] : null;
-                    return null != s && null != a && a < s ? (r = O.default.Messages.APPLICATION_STORE_GET_PREMIUM, i = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null != l && null != n && l === n ? (r = O.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, i = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null == l && null != n && n === P.PremiumTypes.TIER_2 && (i = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP), {
+                    let l = null != t ? R.PremiumSubscriptionSKUToPremiumType[(0, P.castPremiumSubscriptionAsSkuId)(t)] : null,
+                        a = null != l ? R.PremiumTypeOrder[l] : null,
+                        s = null != n ? R.PremiumTypeOrder[n] : null;
+                    return null != s && null != a && a < s ? (r = O.default.Messages.APPLICATION_STORE_GET_PREMIUM, i = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null != l && null != n && l === n ? (r = O.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, i = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null == l && null != n && n === R.PremiumTypes.TIER_2 && (i = O.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP), {
                         disabledButtonText: r,
                         disabledButtonTooltipText: i
                     }
@@ -200,20 +200,20 @@ function(e, t, n) {
                 var t, n;
                 return (0, r.jsxs)(T.default, {
                     disabled: Q,
-                    onClick: z,
-                    innerClassName: L.premiumSubscribeButton,
-                    color: i === P.PremiumSubscriptionSKUs.TIER_1 ? s.Button.Colors.PRIMARY : s.Button.Colors.GREEN,
-                    size: g,
-                    className: w,
-                    wrapperClassName: h,
+                    onClick: Z,
+                    innerClassName: M.premiumSubscribeButton,
+                    color: i === R.PremiumSubscriptionSKUs.TIER_1 ? s.Button.Colors.PRIMARY : s.Button.Colors.GREEN,
+                    size: h,
+                    className: G,
+                    wrapperClassName: L,
                     pauseAnimation: !V || F,
-                    ...G,
+                    ...H,
                     ...e,
-                    children: [j && (0, r.jsx)(p.default, {
-                        className: l(L.premiumIcon, U)
+                    children: [j && (0, r.jsx)(S.default, {
+                        className: l(M.premiumIcon, U)
                     }), (0, r.jsx)("span", {
-                        className: l(L.buttonText, A),
-                        children: null !== (n = null !== (t = null == $ ? void 0 : $.disabledButtonText) && void 0 !== t ? t : v) && void 0 !== n ? n : Y
+                        className: l(M.buttonText, A),
+                        children: null !== (n = null !== (t = null == $ ? void 0 : $.disabledButtonText) && void 0 !== t ? t : x) && void 0 !== n ? n : Y
                     })]
                 })
             }

@@ -23,8 +23,8 @@ function(e, _, E) {
         u = E("397336");
     let L = "lastFrecencySavedTime",
         C = Math.random() * (5 * O.default.Millis.MINUTE),
-        D = 1 * O.default.Millis.DAY + Math.floor(Math.random() * (1 * O.default.Millis.HOUR)),
-        c = null,
+        c = 1 * O.default.Millis.DAY + Math.floor(Math.random() * (1 * O.default.Millis.HOUR)),
+        D = null,
         d = Date.now();
     class U extends a.default {
         _initialize() {
@@ -80,7 +80,7 @@ function(e, _, E) {
     }
 
     function h() {
-        clearTimeout(c), c = null
+        clearTimeout(D), D = null
     }
     async function P() {
         d = Date.now(), m(!0), !R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (S.default.hasPendingUsage() || s.default.hasPendingUsage() || i.default.hasPendingUsage() || I.default.hasPendingUsage() || N.default.hasPendingUsage()) && await A.FrecencyUserSettingsActionCreators.loadIfNecessary(), o.forEach(A.UserSettingsActionCreatorsByType, e => {
@@ -89,9 +89,9 @@ function(e, _, E) {
     }
 
     function m(e) {
-        e && (d = Date.now(), r.default.set(L, d)), null != c && clearTimeout(c);
+        e && (d = Date.now(), r.default.set(L, d)), null != D && clearTimeout(D);
         let _ = Date.now() - d;
-        c = setTimeout(P, Math.max(C, D - _))
+        D = setTimeout(P, Math.max(C, c - _))
     }
     var G = new U
 }

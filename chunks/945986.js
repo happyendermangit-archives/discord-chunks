@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ApplicationBenefitsModalIcon: function() {
-            return d
+            return c
         },
         ApplicationBenefitsModalHeading: function() {
-            return c
+            return d
         },
         ApplicationBenefitsModalDivider: function() {
             return f
@@ -14,47 +14,47 @@ function(e, t, n) {
             return p
         },
         ApplicationBenefitsModalBenefits: function() {
-            return m
+            return h
         },
         ApplicationBenefitsModalContent: function() {
-            return h
+            return m
         }
     });
     var i = n("37983");
     n("884691");
-    var l = n("414456"),
-        a = n.n(l),
-        s = n("77078"),
-        r = n("167007"),
+    var a = n("414456"),
+        s = n.n(a),
+        r = n("77078"),
+        l = n("167007"),
         o = n("139737"),
         u = n("678598");
-    let d = e => {
+    let c = e => {
             let {
                 application: t,
                 asset: n,
-                className: l,
-                ...a
+                className: a,
+                ...s
             } = e;
-            return (0, i.jsx)(r.default, {
+            return (0, i.jsx)(l.default, {
                 application: t,
-                size: r.ApplicationIconSize.MEDIUM,
+                size: l.ApplicationIconSize.MEDIUM,
                 asset: n,
-                className: l,
-                ...a
+                className: a,
+                ...s
             })
         },
-        c = e => {
+        d = e => {
             let {
                 children: t,
                 className: n,
-                id: l,
-                ...r
+                id: a,
+                ...l
             } = e;
-            return (0, i.jsx)(s.Heading, {
-                className: a(u.header, n),
+            return (0, i.jsx)(r.Heading, {
+                className: s(u.header, n),
                 variant: "heading-xl/extrabold",
-                id: l,
-                ...r,
+                id: a,
+                ...l,
                 children: t
             })
         };
@@ -68,51 +68,51 @@ function(e, t, n) {
             let {
                 className: t,
                 title: n,
-                description: l,
-                ...a
+                description: a,
+                ...s
             } = e;
             return (0, i.jsxs)("div", {
                 className: t,
-                ...a,
-                children: [(0, i.jsx)(s.Heading, {
+                ...s,
+                children: [(0, i.jsx)(r.Heading, {
                     variant: "heading-md/bold",
                     color: "header-primary",
                     children: n
-                }), (0, i.jsx)(s.Heading, {
+                }), (0, i.jsx)(r.Heading, {
                     variant: "heading-sm/normal",
                     color: "header-secondary",
-                    children: l
+                    children: a
                 })]
-            })
-        },
-        m = e => {
-            let {
-                applicationId: t,
-                storeListingBenefits: n,
-                skuBenefits: l,
-                className: s,
-                ...r
-            } = e;
-            return (0, i.jsx)("div", {
-                className: a(u.benefitsContainer, s),
-                ...r,
-                children: (0, i.jsx)(o.SubscriptionListingBenefits, {
-                    applicationId: t,
-                    storeListingBenefits: n,
-                    skuBenefits: l,
-                    className: u.benefit
-                })
             })
         },
         h = e => {
             let {
-                children: t,
-                className: n,
+                applicationId: t,
+                storeListingBenefits: n,
+                skuBenefits: a,
+                className: r,
                 ...l
             } = e;
             return (0, i.jsx)("div", {
-                className: a(u.container, n),
+                className: s(u.benefitsContainer, r),
                 ...l,
+                children: (0, i.jsx)(o.SubscriptionListingBenefits, {
+                    applicationId: t,
+                    storeListingBenefits: n,
+                    skuBenefits: a,
+                    className: u.benefit
+                })
+            })
+        },
+        m = e => {
+            let {
+                children: t,
+                className: n,
+                ...a
+            } = e;
+            return (0, i.jsx)("div", {
+                className: s(u.container, n),
+                ...a,
                 children: t
             })
         }

@@ -2,14 +2,14 @@ function(e, t, i) {
     "use strict";
     i.r(t), i.d(t, {
         default: function() {
-            return l
+            return a
         }
     });
     var r = i("37983");
     i("884691");
     var n = i("45029"),
         s = i("440162"),
-        l = e => {
+        a = e => {
             let {
                 size: t
             } = e;

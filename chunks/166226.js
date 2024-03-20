@@ -1,6 +1,6 @@
-function(I, N, A) {
+function(N, I, A) {
     "use strict";
-    I.exports = {
+    N.exports = {
         COMMON_OPEN_DISCORD: "\xc5bn Discord",
         COMMON_SIGN_UP_NOW: "Tilmeld dig nu",
         FOOTER_READY_TO_TRY_DISCORD: "Klar til at pr\xf8ve Discord? Det er gratis.",

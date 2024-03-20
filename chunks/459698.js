@@ -37,8 +37,8 @@ function(e, t, n) {
         S = n("153043"),
         C = n("256941"),
         _ = n("270295"),
-        I = n("626301"),
-        T = n("505233"),
+        T = n("626301"),
+        I = n("505233"),
         v = n("635956"),
         N = n("393414"),
         A = n("324929"),
@@ -55,8 +55,8 @@ function(e, t, n) {
         w = n("315102"),
         F = n("794818"),
         G = n("719923"),
-        B = n("412745"),
-        H = n("933629"),
+        H = n("412745"),
+        B = n("933629"),
         V = n("49111"),
         K = n("724210"),
         W = n("646718"),
@@ -77,7 +77,7 @@ function(e, t, n) {
                 emojiId: t.emojiId,
                 currentGuildId: R.default.getGuildId()
             }), (0, i.jsx)(u.Dialog, {
-                children: (0, i.jsx)(H.MessagePopoutContent, {
+                children: (0, i.jsx)(B.MessagePopoutContent, {
                     children: (0, i.jsxs)(k.default, {
                         className: z.emojiSection,
                         children: [(0, i.jsx)(f.default, {
@@ -225,7 +225,7 @@ function(e, t, n) {
                 emojiId: t.emojiId,
                 refreshPositionKey: l
             });
-            return d ? (0, i.jsx)(H.PopoutLoadingAnimation, {}) : (0, i.jsx)(u.Dialog, {
+            return d ? (0, i.jsx)(B.PopoutLoadingAnimation, {}) : (0, i.jsx)(u.Dialog, {
                 "aria-label": t.name,
                 children: (0, i.jsx)(Q, {
                     node: t,
@@ -254,7 +254,7 @@ function(e, t, n) {
             U && (X = !0, et = !0, ee = !1, Q = !1);
             let {
                 enabled: en
-            } = T.NitroBadgeOnEmojiHoverExperiment.useExperiment({
+            } = I.NitroBadgeOnEmojiHoverExperiment.useExperiment({
                 location: "CustomGuildEmojiPopout"
             }, {
                 autoTrackExposure: !0
@@ -285,7 +285,7 @@ function(e, t, n) {
                 disableTrack: !el
             });
             let eu = R.default.getGuildId(),
-                ed = (0, B.getEmojiPopoutData)({
+                ed = (0, H.getEmojiPopoutData)({
                     isPremium: X,
                     hasJoinedEmojiSourceGuild: ee,
                     isRoleSubscriptionEmoji: el,
@@ -298,7 +298,7 @@ function(e, t, n) {
                         O(), D.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                             location_page: ei.page,
                             location_section: ei.section
-                        }), (0, I.navigateToPremiumMarketingPage)()
+                        }), (0, T.navigateToPremiumMarketingPage)()
                     }
                 }),
                 ec = ee && ea && !er && (X && el || !X),
@@ -311,11 +311,11 @@ function(e, t, n) {
                     nonce: w,
                     demoMode: U
                 }),
-                em = ed.type === B.EmojiPopoutType.JOIN_GUILD,
-                eh = ed.type === B.EmojiPopoutType.GET_PREMIUM,
+                em = ed.type === H.EmojiPopoutType.JOIN_GUILD,
+                eh = ed.type === H.EmojiPopoutType.GET_PREMIUM,
                 [ex, eE] = l.useState(!1),
                 ey = et || ee && !Q || null != E;
-            return (0, i.jsxs)(H.MessagePopoutContent, {
+            return (0, i.jsxs)(B.MessagePopoutContent, {
                 className: z.popoutContent,
                 children: [(() => {
                     let e = async () => {
@@ -451,14 +451,14 @@ function(e, t, n) {
                 className: z.otherEmojisContainer,
                 children: [a ? null : u.map(e => (0, i.jsx)(d.Tooltip, {
                     text: e.require_colons ? ":".concat(e.name, ":") : e.name,
-                    ...H.EXPRESSION_TOOLTIP_PROPS,
+                    ...B.EXPRESSION_TOOLTIP_PROPS,
                     children: t => (0, i.jsx)(f.default, {
                         className: z.otherEmoji,
                         emojiId: e.id,
                         animated: e.animated,
                         ...t
                     })
-                }, e.id)), !o && (c === B.EmojiPopoutType.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
+                }, e.id)), !o && (c === H.EmojiPopoutType.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(v.default, {
                         subscriptionTier: W.PremiumSubscriptionSKUs.TIER_2,
                         buttonText: s.text,
@@ -473,7 +473,7 @@ function(e, t, n) {
                             children: p
                         })
                     })]
-                }) : c === B.EmojiPopoutType.JOIN_GUILD ? (0, i.jsx)(d.Button, {
+                }) : c === H.EmojiPopoutType.JOIN_GUILD ? (0, i.jsx)(d.Button, {
                     size: d.Button.Sizes.SMALL,
                     className: z.ctaButton,
                     color: d.ButtonColors.BRAND,

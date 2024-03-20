@@ -22,13 +22,13 @@ function(e, t, n) {
         n.muted = !0, n.src = e, n.currentTime = t, await n.play(), n.pause();
         let i = a.CLIPS_THUMBNAIL_MAX_WIDTH / n.videoWidth,
             l = a.CLIPS_THUMBNAIL_MAX_HEIGHT / n.videoHeight,
-            d = Math.min(i, l),
-            r = n.videoWidth * d,
-            s = n.videoHeight * d,
-            u = document.createElement("canvas");
-        u.width = r, u.height = s;
-        let o = u.getContext("2d");
+            r = Math.min(i, l),
+            s = n.videoWidth * r,
+            u = n.videoHeight * r,
+            d = document.createElement("canvas");
+        d.width = s, d.height = u;
+        let o = d.getContext("2d");
         if (null == o) throw Error("Could not create canvas context");
-        return o.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, r, s), u.toDataURL("image/jpeg", .9)
+        return o.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, s, u), d.toDataURL("image/jpeg", .9)
     }
 }

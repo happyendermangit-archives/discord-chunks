@@ -30,13 +30,13 @@ function(e, _, E) {
             impressions: e.impressions
         })), E = (0, a.useStateFromStores)([s.default], () => s.default.isAnalyticsDebuggerEnabled), n = (0, a.useStateFromStores)([I.default], () => I.default.isDeveloper), [u, L] = o.useState(!1), {
             name: C,
-            ...D
-        } = null != e ? e : {}, c = null != C;
+            ...c
+        } = null != e ? e : {}, D = null != C;
         return n && E ? (0, t.jsx)(A.default, {
             children: (0, t.jsxs)("div", {
                 className: r(l.container, {
                     [l.containerMinimized]: u,
-                    [l.notTracked]: !c
+                    [l.notTracked]: !D
                 }),
                 children: [(0, t.jsx)(i.Clickable, {
                     className: l.minimizeButton,
@@ -50,20 +50,20 @@ function(e, _, E) {
                     }),
                     children: [(0, t.jsxs)(i.Text, {
                         className: r(l.label, {
-                            [l.notTracked]: !c
+                            [l.notTracked]: !D
                         }),
                         variant: "text-xxs/normal",
-                        children: [c ? (0, t.jsx)(T.default, {
+                        children: [D ? (0, t.jsx)(T.default, {
                             className: l.iconTracked
                         }) : (0, t.jsx)(S.default, {
                             className: l.iconNotTracked
                         }), null != C ? C : "(untracked)"]
                     }), (0, t.jsx)("div", {
                         className: l.current,
-                        children: JSON.stringify(D, void 0, 2)
+                        children: JSON.stringify(c, void 0, 2)
                     }), (0, t.jsx)(i.Text, {
                         className: r(l.label, {
-                            [l.notTracked]: !c
+                            [l.notTracked]: !D
                         }),
                         variant: "text-xxs/normal",
                         children: "impressions stack"

@@ -1,12 +1,12 @@
-function(e, n, t) {
+function(e, t, n) {
     "use strict";
-    t.r(n), t.d(n, {
+    n.r(t), n.d(t, {
         SimpleDeadchatPromptExperiment: function() {
-            return i
+            return a
         }
     });
-    var l = t("862205");
-    let i = (0, l.createExperiment)({
+    var l = n("862205");
+    let a = (0, l.createExperiment)({
         kind: "guild",
         id: "2023-08_deadchat_simple_prompt_guild",
         label: "Simple deadchat prompt",

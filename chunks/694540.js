@@ -40,39 +40,39 @@ function(e, t, n) {
             n = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
             _ = (0, o.useHasActiveTrial)(),
             [E, I] = r.useState(!1),
-            [T, C] = r.useState([]);
+            [T, p] = r.useState([]);
         r.useEffect(() => {
             null != e && l.default.wait(() => c.default.markOutboundPromotionsSeen())
         }, [e]);
-        let p = r.useCallback(e => {
-                C(t => t.some(t => {
+        let S = r.useCallback(e => {
+                p(t => t.some(t => {
                     let {
                         promotion: n
                     } = t;
                     return n.id === e.promotion.id
                 }) ? t : [...t, e])
             }, []),
-            S = (0, s.isPremiumExactly)(n, f.PremiumTypes.TIER_2);
+            P = (0, s.isPremiumExactly)(n, f.PremiumTypes.TIER_2);
         r.useEffect(() => {
             l.default.wait(() => {
-                S && null == e && c.default.fetchActiveOutboundPromotions()
+                P && null == e && c.default.fetchActiveOutboundPromotions()
             })
-        }, [e, S]), r.useEffect(() => {
+        }, [e, P]), r.useEffect(() => {
             l.default.wait(() => {
                 (0, u.fetchClaimedOutboundPromotionCodes)().then(e => {
-                    C(e), I(!0)
+                    p(e), I(!0)
                 }).catch(() => {
-                    C([]), I(!0)
+                    p([]), I(!0)
                 })
             })
         }, []);
-        let P = {};
+        let R = {};
         for (let {
                 code: e,
                 promotion: t
             }
-            of T) P[t.id] = e;
-        let R = new Set(t.map(e => {
+            of T) R[t.id] = e;
+        let C = new Set(t.map(e => {
                 let {
                     id: t
                 } = e;
@@ -82,15 +82,15 @@ function(e, t, n) {
                 let {
                     promotion: t
                 } = e;
-                return !R.has(t.id)
+                return !C.has(t.id)
             }),
-            L = E && (!S || null != e);
+            M = E && (!P || null != e);
         return {
-            promotionsLoaded: L,
-            activeOutboundPromotions: t.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e) && (!_ || (0, u.isTrialUserEligibleToSeeOutboundPromotion)(e, P))),
+            promotionsLoaded: M,
+            activeOutboundPromotions: t.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e) && (!_ || (0, u.isTrialUserEligibleToSeeOutboundPromotion)(e, R))),
             claimedEndedOutboundPromotions: O.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e.promotion)),
-            claimedOutboundPromotionCodeMap: P,
-            addClaimedOutboundPromotionCode: p
+            claimedOutboundPromotionCodeMap: R,
+            addClaimedOutboundPromotionCode: S
         }
     }
 

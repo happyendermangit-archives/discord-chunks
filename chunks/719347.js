@@ -6,10 +6,10 @@ function(e, t, r) {
             return i
         },
         MEDIA_MOSAIC_MAX_HEIGHT: function() {
-            return s
+            return E
         },
         MINIMUM_MEDIA_MOSAIC_DIM: function() {
-            return E
+            return s
         },
         MediaLayoutType: function() {
             return u
@@ -19,8 +19,8 @@ function(e, t, r) {
         }
     });
     let i = 550,
-        s = 350,
-        E = 40;
+        E = 350,
+        s = 40;
     (n = u || (u = {})).STATIC = "STATIC", n.RESPONSIVE = "RESPONSIVE", n.MOSAIC = "MOSAIC";
     let l = 20
 }

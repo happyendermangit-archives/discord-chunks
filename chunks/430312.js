@@ -36,19 +36,19 @@ function(e, t, n) {
             children: S,
             forceShowPremium: C = !1,
             showOutOfBoundaryComponents: _ = !1
-        } = e, I = l.useRef(null), T = (0, o.default)(a.id, m), {
+        } = e, T = l.useRef(null), I = (0, o.default)(a.id, m), {
             profileTheme: v
-        } = (0, u.default)(a, T, {
-            themeElementRef: I,
+        } = (0, u.default)(a, I, {
+            themeElementRef: T,
             pendingThemeColors: E,
             isPreview: C,
             useDefaultClientTheme: g
-        }), N = (null == T ? void 0 : T.canEditThemes) || C, A = l.useMemo(() => ({
+        }), N = (null == I ? void 0 : I.canEditThemes) || C, A = l.useMemo(() => ({
             profileType: h,
             profileTheme: v
         }), [h, v]);
         return (0, i.jsx)("div", {
-            ref: I,
+            ref: T,
             className: s((t = h, (0, r.match)(t).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutOuter).with(d.UserProfileTypes.MODAL, () => f.userProfileModalOuter).with(d.UserProfileTypes.PANEL, () => f.userPanelOuter).with(d.UserProfileTypes.CARD, () => f.userCardOuter).exhaustive()), N ? f.userProfileOuterThemed : f.userProfileOuterUnthemed, c.profileColors, _ ? f.showOutOfBoundaryComponents : void 0, "theme-".concat(v), x),
             children: (0, i.jsx)("div", {
                 className: s((n = h, (0, r.match)(n).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutInner).with(d.UserProfileTypes.MODAL, () => f.userProfileModalInner).with(d.UserProfileTypes.PANEL, () => f.userPanelInner).with(d.UserProfileTypes.CARD, () => f.userCardInner).exhaustive()), function() {
@@ -67,7 +67,7 @@ function(e, t, n) {
                     }, () => f.userProfileInnerThemedWithBanner).with({
                         canUsePremiumProfileCustomization: !0
                     }, () => f.userProfileInnerThemedPremiumWithoutBanner).otherwise(() => f.userProfileInnerThemedNonPremium)
-                }((null == T ? void 0 : T.canUsePremiumProfileCustomization) || C, null !== y && ((null == T ? void 0 : T.banner) != null || void 0 !== y), h)),
+                }((null == I ? void 0 : I.canUsePremiumProfileCustomization) || C, null !== y && ((null == I ? void 0 : I.banner) != null || void 0 !== y), h)),
                 children: (0, i.jsx)(p.Provider, {
                     value: A,
                     children: S

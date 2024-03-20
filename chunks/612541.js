@@ -21,8 +21,8 @@ function(e, _, E) {
         u = E("713726"),
         L = E("9759"),
         C = E("705565"),
-        D = E("754493"),
-        c = E("49111");
+        c = E("754493"),
+        D = E("49111");
     let d = [];
     class U extends I.default {
         handleRunningGamesChange() {
@@ -34,7 +34,7 @@ function(e, _, E) {
                 location: "handle_running_games_change"
             }, {
                 autoTrackExposure: !1
-            }), E = l.default.getBroadcast(), t = (0, u.getGameName)(e), o = null != A.default.getGameByName(t), n = (0, D.getIsBroadcastingToAnyone)();
+            }), E = l.default.getBroadcast(), t = (0, u.getGameName)(e), o = null != A.default.getGameByName(t), n = (0, c.getIsBroadcastingToAnyone)();
             if (!_ || null != E || !S.BroadcastAutoBroadcast.getSetting() || !o || !n) return;
             let r = null != d.find(_ => _.pid === e.pid);
             if (r) return;
@@ -94,7 +94,7 @@ function(e, _, E) {
                 channelId: _,
                 state: E
             } = e;
-            if (E !== c.RTCConnectionStates.DISCONNECTED) return;
+            if (E !== D.RTCConnectionStates.DISCONNECTED) return;
             let t = R.default.getChannelId(),
                 o = O.default.getChannel(_);
             if (null == o || !o.isBroadcastChannel()) return;

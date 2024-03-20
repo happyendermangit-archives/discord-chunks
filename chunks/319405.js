@@ -26,8 +26,8 @@ function(e, _, E) {
     let u = 12 * s.default.Millis.HOUR,
         L = 1 * s.default.Millis.MINUTE,
         C = 1 * s.default.Millis.SECOND,
-        D = 5 * s.default.Millis.SECOND,
-        c = 1 * s.default.Millis.SECOND,
+        c = 5 * s.default.Millis.SECOND,
+        D = 1 * s.default.Millis.SECOND,
         d = e => (0, n.encodeStreamKey)({
             streamType: l.StreamTypes.CALL,
             channelId: e,
@@ -188,7 +188,7 @@ function(e, _, E) {
                             (0, T.optimisticallyUpdateQuestProgress)(_), this.lastOptimisticallyUpdatedProgressMap.set(e, Date.now())
                         }
                     }
-                }, c))
+                }, D))
             }, this.terminateOptimisticProgressUpdateInterval = e => {
                 window.clearInterval(this.optimisticProgressUpdateIntervalIds.get(e)), this.optimisticProgressUpdateIntervalIds.delete(e), this.lastOptimisticallyUpdatedProgressMap.delete(e)
             }, this.handleEnrollmentSuccess = e => {
@@ -218,7 +218,7 @@ function(e, _, E) {
                     return
                 }
             }, this.handlePostConnectionOpen = () => {
-                if (0 === O.default.lastFetchedCurrentQuests) window.setTimeout(this.maybeFetchCurrentQuests, Math.floor(Math.random() * D))
+                if (0 === O.default.lastFetchedCurrentQuests) window.setTimeout(this.maybeFetchCurrentQuests, Math.floor(Math.random() * c))
             }, this.handleSendHeartbeatSuccess = e => {
                 let {
                     streamKey: _,

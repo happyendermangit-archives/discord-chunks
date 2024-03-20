@@ -8,8 +8,8 @@ function(e, t, n) {
             return g
         }
     }), n("808653");
-    var i = n("917351"),
-        a = n.n(i),
+    var a = n("917351"),
+        i = n.n(a),
         s = n("233069"),
         l = n("42203"),
         o = n("319781"),
@@ -17,25 +17,25 @@ function(e, t, n) {
         u = n("718517"),
         d = n("380353");
 
-    function c(e, t, n, i, a) {
+    function c(e, t, n, a, i) {
         var s, o, u, c;
         let g = l.default.getMutableGuildChannelsForGuild(e.id),
-            m = i.filter(e => e.channel_id in g),
+            m = a.filter(e => e.channel_id in g),
             h = null !== (s = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== s ? s : {},
             _ = r.default.getMemberCount(e.id),
-            p = f("year", i, m, e => {
+            p = f("year", a, m, e => {
                 var t;
                 return Number(null !== (t = e.num_year_opens) && void 0 !== t ? t : 0)
             }),
-            E = f("one month", i, m, e => {
+            E = f("one month", a, m, e => {
                 var t;
                 return Number(null !== (t = e.num_month_opens) && void 0 !== t ? t : 0)
             }),
-            S = f("three month", i, m, e => {
+            S = f("three month", a, m, e => {
                 var t;
                 return Number(null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0)
             }),
-            T = f("six month", i, m, e => {
+            T = f("six month", a, m, e => {
                 var t;
                 return Number(null !== (t = e.num_six_month_opens) && void 0 !== t ? t : 0)
             }),
@@ -50,17 +50,17 @@ function(e, t, n) {
             C = S.guildOpens >= .02 * S.totalOpensAcrossAllServers,
             A = (null !== (c = p.guildOpens) && void 0 !== c ? c : 0) > 0;
         if (h.messages === d.PainLevel.High) {
-            if (!a) return [d.Mode.UseGreyDot, C, "UseGreyDot" + y];
+            if (!i) return [d.Mode.UseGreyDot, C, "UseGreyDot" + y];
             if (!C && A) return [d.Mode.UseGreyDot, C, "UseGreyDot" + y]
         }
         return [d.Mode.KeepAsIs, C, "KeepAsIs" + y]
     }
 
-    function f(e, t, n, i) {
-        let s = t.reduce((e, t) => e + i(t), 0),
-            l = n.reduce((e, t) => e + i(t), 0),
-            o = a.sortBy(n, i).reverse()[0],
-            r = null == o ? 0 : i(o),
+    function f(e, t, n, a) {
+        let s = t.reduce((e, t) => e + a(t), 0),
+            l = n.reduce((e, t) => e + a(t), 0),
+            o = i.sortBy(n, a).reverse()[0],
+            r = null == o ? 0 : a(o),
             u = (r / l * 100).toFixed(1);
         return {
             label: e,
@@ -72,22 +72,22 @@ function(e, t, n) {
     }
 
     function g(e, t) {
-        var n, i;
-        let a = null !== (n = t.filter(t => t.guild_id === e.id)[0]) && void 0 !== n ? n : {},
-            l = null !== (i = r.default.getMemberCount(e.id)) && void 0 !== i ? i : 0,
+        var n, a;
+        let i = null !== (n = t.filter(t => t.guild_id === e.id)[0]) && void 0 !== n ? n : {},
+            l = null !== (a = r.default.getMemberCount(e.id)) && void 0 !== a ? a : 0,
             c = Date.now() - u.default.Millis.DAYS_30,
             f = o.default.getFrequentlyWithoutFetchingLatest().filter(t => t instanceof s.ChannelRecordBase && t.guild_id === e.id),
             g = f.filter(e => {
                 var t, n;
-                let i = null !== (n = null === (t = o.default.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
-                return 0 !== i.length && i[i.length - 1] >= c
+                let a = null !== (n = null === (t = o.default.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
+                return 0 !== a.length && a[a.length - 1] >= c
             }),
             m = g.length >= 5,
             h = f.reduce((e, t) => {
-                var n, i;
-                return e + (null !== (i = null === (n = o.default.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== i ? i : 0)
+                var n, a;
+                return e + (null !== (a = null === (n = o.default.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== a ? a : 0)
             }, 0),
             _ = "\n- **Local**:\n    - Guild Visits: ".concat(h, "\n    - Channels: ").concat(f.length, "\n    - Recent Channels: ").concat(g.length, "\n");
-        return a.messages === d.PainLevel.High || l > 1e3 ? [d.Mode.UseGreyDot, m, "SuggestGreyDot" + _] : [d.Mode.KeepAsIs, m, "KeepAsIs" + _]
+        return i.messages === d.PainLevel.High || l > 1e3 ? [d.Mode.UseGreyDot, m, "SuggestGreyDot" + _] : [d.Mode.KeepAsIs, m, "KeepAsIs" + _]
     }
 }

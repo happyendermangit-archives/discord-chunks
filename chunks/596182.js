@@ -105,12 +105,12 @@ function(e, t, n) {
                 var e;
                 return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === d)
             }, [d, u]),
-            I = null != d ? null == y ? void 0 : y[d] : null;
-        r = null != I && (null === (t = I.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = I.lastValidationResult.error) && void 0 !== n ? n : "" : null;
-        let T = E && null != S ? (0, c.getIconComponent)(S) : null;
+            T = null != d ? null == y ? void 0 : y[d] : null;
+        r = null != T && (null === (t = T.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = T.lastValidationResult.error) && void 0 !== n ? n : "" : null;
+        let I = E && null != S ? (0, c.getIconComponent)(S) : null;
         return (0, i.jsxs)("div", {
             className: s(m.wrapper, C ? null : m.disabled),
-            children: [null != T ? (0, i.jsx)(T, {
+            children: [null != I ? (0, i.jsx)(I, {
                 className: m.image,
                 channel: p,
                 section: S,

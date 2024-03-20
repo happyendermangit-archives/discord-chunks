@@ -1,70 +1,70 @@
-function(e, n, t) {
+function(e, t, n) {
     "use strict";
-    t.r(n), t.d(n, {
+    n.r(t), n.d(t, {
         moveItemFromTo: function() {
-            return u
+            return o
         },
         default: function() {
-            return d
+            return i
         }
-    }), t("424973"), t("222007");
-    var l = t("917351"),
-        i = t.n(l),
-        r = t("605250");
-    let o = new r.default("DragAndDropUtils");
+    }), n("424973"), n("222007");
+    var l = n("917351"),
+        a = n.n(l),
+        r = n("605250");
+    let u = new r.default("DragAndDropUtils");
 
-    function a(e) {
+    function s(e) {
         let {
-            oldOrdering: n,
-            newOrdering: t,
+            oldOrdering: t,
+            newOrdering: n,
             idGetter: l,
-            existingPositionGetter: i,
+            existingPositionGetter: a,
             ascending: r = !0
-        } = e, a = t.length;
-        if (n.length !== a) return o.warn("Arrays are not of the same length!", n, t), [];
-        let u = n.map(l).sort().join(":"),
-            d = t.map(l).sort().join(":");
-        if (u !== d) return o.warn("Object IDs in the old ordering and the new ordering are not the same.", u, d), [];
+        } = e, s = n.length;
+        if (t.length !== s) return u.warn("Arrays are not of the same length!", t, n), [];
+        let o = t.map(l).sort().join(":"),
+            i = n.map(l).sort().join(":");
+        if (o !== i) return u.warn("Object IDs in the old ordering and the new ordering are not the same.", o, i), [];
         let c = {};
-        for (let e = 0; e < a; e++) c[l(n[e])] = i(n[e]);
-        let s = [];
-        for (let e = 0; e < a; e++) {
-            let n = l(t[e]),
-                o = c[n],
-                u = r ? e : a - 1 - e;
-            (o !== u || i(t[e]) !== u) && s.push({
-                id: n,
-                position: u
+        for (let e = 0; e < s; e++) c[l(t[e])] = a(t[e]);
+        let E = [];
+        for (let e = 0; e < s; e++) {
+            let t = l(n[e]),
+                u = c[t],
+                o = r ? e : s - 1 - e;
+            (u !== o || a(n[e]) !== o) && E.push({
+                id: t,
+                position: o
             })
         }
-        return !r && s.reverse(), s
+        return !r && E.reverse(), E
     }
 
-    function u(e, n, t) {
-        let l = e[n],
-            i = [...e];
-        return i.splice(n, 1), i.splice(t, 0, l), i
+    function o(e, t, n) {
+        let l = e[t],
+            a = [...e];
+        return a.splice(t, 1), a.splice(n, 0, l), a
     }
-    var d = {
-        moveItemFromTo: u,
-        calculatePositionDeltas: a,
+    var i = {
+        moveItemFromTo: o,
+        calculatePositionDeltas: s,
         getPositionUpdates: function(e) {
             let {
-                objectArray: n,
-                fromPosition: t,
+                objectArray: t,
+                fromPosition: n,
                 toPosition: l,
                 idGetter: r,
-                existingPositionGetter: o,
-                ascending: d = !0
+                existingPositionGetter: u,
+                ascending: i = !0
             } = e;
-            !Array.isArray(n) && (n = i.values(n));
-            let c = u(n, t, l);
-            return a({
-                oldOrdering: n,
+            !Array.isArray(t) && (t = a.values(t));
+            let c = o(t, n, l);
+            return s({
+                oldOrdering: t,
                 newOrdering: c,
                 idGetter: r,
-                existingPositionGetter: o,
-                ascending: d
+                existingPositionGetter: u,
+                ascending: i
             })
         }
     }

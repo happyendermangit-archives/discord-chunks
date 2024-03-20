@@ -28,8 +28,8 @@ function(e, t, n) {
         S = n("956089"),
         C = n("58608"),
         _ = n("103603"),
-        I = n("299039"),
-        T = n("9560"),
+        T = n("299039"),
+        I = n("9560"),
         v = n("271972"),
         N = n("782340"),
         A = n("483099");
@@ -255,7 +255,7 @@ function(e, t, n) {
             };
         return (0, i.jsxs)(v.default, {
             actions: (0, i.jsxs)(l.Fragment, {
-                children: [_ ? (0, i.jsx)(T.default, {
+                children: [_ ? (0, i.jsx)(I.default, {
                     className: s({
                         [A.action]: k
                     }),
@@ -272,7 +272,7 @@ function(e, t, n) {
                             [A.actionBarIcon]: k
                         })
                     })
-                }) : null, _ && !M ? (0, i.jsx)(T.default, {
+                }) : null, _ && !M ? (0, i.jsx)(I.default, {
                     className: s({
                         [A.action]: k
                     }),
@@ -283,7 +283,7 @@ function(e, t, n) {
                             [A.actionBarIcon]: k
                         })
                     })
-                }) : null, (0, i.jsx)(T.default, {
+                }) : null, (0, i.jsx)(I.default, {
                     className: s({
                         [A.action]: k
                     }),
@@ -319,7 +319,7 @@ function(e, t, n) {
             }), M && (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(f.default, {
                     className: A.clipsFooter,
-                    createdAt: I.default.extractTimestamp(R.id),
+                    createdAt: T.default.extractTimestamp(R.id),
                     participantIds: R.users,
                     applicationId: R.applicationId,
                     title: R.name,

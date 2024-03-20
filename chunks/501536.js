@@ -31,8 +31,8 @@ function(e, t, n) {
         S = n("305961"),
         C = n("27618"),
         _ = n("697218"),
-        I = n("158998"),
-        T = n("563911"),
+        T = n("158998"),
+        I = n("563911"),
         v = n("346955"),
         N = n("548775"),
         A = n("49111"),
@@ -144,12 +144,12 @@ function(e, t, n) {
                 text: e,
                 description: t
             } = this.props;
-            return (0, i.jsxs)(T.AutocompleteRowContent, {
-                children: [(0, i.jsx)(T.AutocompleteRowContentPrimary, {
-                    children: (0, i.jsx)(T.AutocompleteRowHeading, {
+            return (0, i.jsxs)(I.AutocompleteRowContent, {
+                children: [(0, i.jsx)(I.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(I.AutocompleteRowHeading, {
                         children: e
                     })
-                }), null != t ? (0, i.jsx)(T.AutocompleteRowContentSecondary, {
+                }), null != t ? (0, i.jsx)(I.AutocompleteRowContentSecondary, {
                     children: t
                 }) : null]
             })
@@ -159,9 +159,9 @@ function(e, t, n) {
         return (0, i.jsx)("div", {
             className: R.base,
             "aria-busy": !0,
-            children: (0, i.jsx)(T.AutocompleteRowContent, {
-                children: (0, i.jsx)(T.AutocompleteRowContentPrimary, {
-                    children: (0, i.jsx)(T.AutocompleteRowHeading, {
+            children: (0, i.jsx)(I.AutocompleteRowContent, {
+                children: (0, i.jsx)(I.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(I.AutocompleteRowHeading, {
                         children: (0, i.jsx)("div", {
                             className: R.autocompletePlaceholder,
                             style: {
@@ -208,22 +208,22 @@ function(e, t, n) {
                 hidePersonalInformation: l,
                 guildId: a
             } = this.props;
-            return (0, i.jsxs)(T.AutocompleteRowContent, {
-                children: [(0, i.jsx)(T.AutocompleteRowIcon, {
+            return (0, i.jsxs)(I.AutocompleteRowContent, {
+                children: [(0, i.jsx)(I.AutocompleteRowIcon, {
                     children: (0, i.jsx)(d.Avatar, {
                         size: d.AvatarSizes.SIZE_24,
                         src: e.getAvatarURL(a, 24),
                         "aria-hidden": !0,
                         status: n
                     })
-                }), (0, i.jsx)(T.AutocompleteRowContentPrimary, {
-                    children: (0, i.jsx)(T.AutocompleteRowHeading, {
-                        children: null != t ? t : I.default.getName(e)
+                }), (0, i.jsx)(I.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(I.AutocompleteRowHeading, {
+                        children: null != t ? t : T.default.getName(e)
                     })
-                }), (0, i.jsxs)(T.AutocompleteRowContentSecondary, {
+                }), (0, i.jsxs)(I.AutocompleteRowContentSecondary, {
                     children: [(0, i.jsx)("span", {
                         className: R.descriptionUsername,
-                        children: I.default.getUserTag(e, {
+                        children: T.default.getUserTag(e, {
                             mode: "username",
                             identifiable: l ? "never" : "always"
                         })
@@ -244,9 +244,9 @@ function(e, t, n) {
             } = e, l = "dot" === c.default.roleStyle, a = "username" === c.default.roleStyle && null != n, s = a ? {
                 color: n
             } : void 0;
-            return (0, i.jsxs)(T.AutocompleteRowContent, {
-                children: [(0, i.jsx)(T.AutocompleteRowContentPrimary, {
-                    children: (0, i.jsxs)(T.AutocompleteRowHeading, {
+            return (0, i.jsxs)(I.AutocompleteRowContent, {
+                children: [(0, i.jsx)(I.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsxs)(I.AutocompleteRowHeading, {
                         children: [l && (0, i.jsx)(d.RoleDot, {
                             className: R.roleDot,
                             color: n,
@@ -256,7 +256,7 @@ function(e, t, n) {
                             children: ["@", e.name]
                         })]
                     })
-                }), t ? null : (0, i.jsx)(T.AutocompleteRowContentSecondary, {
+                }), t ? null : (0, i.jsx)(I.AutocompleteRowContentSecondary, {
                     children: O.default.Messages.MENTION_USERS_WITH_ROLE
                 })]
             })
@@ -267,16 +267,16 @@ function(e, t, n) {
                 channel: e,
                 category: t
             } = this.props, n = e.type === A.ChannelTypes.GUILD_CATEGORY ? v.default : (0, x.getChannelIconComponent)(e);
-            return (0, i.jsxs)(T.AutocompleteRowContent, {
-                children: [null != n && (0, i.jsx)(T.AutocompleteRowIcon, {
+            return (0, i.jsxs)(I.AutocompleteRowContent, {
+                children: [null != n && (0, i.jsx)(I.AutocompleteRowIcon, {
                     children: (0, i.jsx)(n, {
                         className: R.icon
                     })
-                }), (0, i.jsx)(T.AutocompleteRowContentPrimary, {
-                    children: (0, i.jsx)(T.AutocompleteRowHeading, {
+                }), (0, i.jsx)(I.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(I.AutocompleteRowHeading, {
                         children: (0, h.computeChannelName)(e, _.default, C.default)
                     })
-                }), null != t ? (0, i.jsx)(T.AutocompleteRowContentSecondary, {
+                }), null != t ? (0, i.jsx)(I.AutocompleteRowContentSecondary, {
                     children: t.name
                 }) : null]
             })
@@ -286,17 +286,17 @@ function(e, t, n) {
             let {
                 command: e
             } = this.props;
-            return (0, i.jsxs)(T.AutocompleteRowContent, {
-                children: [(0, i.jsx)(T.AutocompleteRowIcon, {
+            return (0, i.jsxs)(I.AutocompleteRowContent, {
+                children: [(0, i.jsx)(I.AutocompleteRowIcon, {
                     children: (0, i.jsx)(N.default, {
                         className: R.icon,
                         foreground: R.iconForeground
                     })
-                }), (0, i.jsx)(T.AutocompleteRowContentPrimary, {
-                    children: (0, i.jsx)(T.AutocompleteRowHeading, {
+                }), (0, i.jsx)(I.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsx)(I.AutocompleteRowHeading, {
                         children: e.name
                     })
-                }), (0, i.jsx)(T.AutocompleteRowContentSecondary, {
+                }), (0, i.jsx)(I.AutocompleteRowContentSecondary, {
                     children: e.description
                 })]
             })
@@ -337,14 +337,14 @@ function(e, t, n) {
             }) : (0, i.jsx)("span", {
                 className: R.emojiRaw,
                 children: e.surrogates
-            }), a = null != n ? (0, i.jsx)(T.AutocompleteRowContentSecondary, {
+            }), a = null != n ? (0, i.jsx)(I.AutocompleteRowContentSecondary, {
                 children: n.name
             }) : null;
-            return (0, i.jsxs)(T.AutocompleteRowContent, {
-                children: [(0, i.jsx)(T.AutocompleteRowIcon, {
+            return (0, i.jsxs)(I.AutocompleteRowContent, {
+                children: [(0, i.jsx)(I.AutocompleteRowIcon, {
                     children: l
-                }), (0, i.jsx)(T.AutocompleteRowContentPrimary, {
-                    children: (0, i.jsxs)(T.AutocompleteRowHeading, {
+                }), (0, i.jsx)(I.AutocompleteRowContentPrimary, {
+                    children: (0, i.jsxs)(I.AutocompleteRowHeading, {
                         children: [t, e.name, t]
                     })
                 }), a]
@@ -382,19 +382,19 @@ function(e, t, n) {
             } = this.props, {
                 hovered: o
             } = this.state;
-            return (0, g.isStandardSticker)(r) ? n = null === (e = y.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, g.isGuildSticker)(r) && (n = null === (t = S.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, i.jsxs)(T.AutocompleteRowContent, {
-                children: [(0, i.jsx)(T.AutocompleteRowIcon, {
+            return (0, g.isStandardSticker)(r) ? n = null === (e = y.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, g.isGuildSticker)(r) && (n = null === (t = S.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, i.jsxs)(I.AutocompleteRowContent, {
+                children: [(0, i.jsx)(I.AutocompleteRowIcon, {
                     children: a(r, o || !0 === s)
-                }), (0, i.jsxs)(T.AutocompleteRowContentPrimary, {
-                    children: [(0, i.jsx)(T.AutocompleteRowHeading, {
+                }), (0, i.jsxs)(I.AutocompleteRowContentPrimary, {
+                    children: [(0, i.jsx)(I.AutocompleteRowHeading, {
                         className: R.stickerName,
                         children: r.name
-                    }), null != l && (0, i.jsx)(T.AutocompleteRowSubheading, {
+                    }), null != l && (0, i.jsx)(I.AutocompleteRowSubheading, {
                         children: O.default.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({
                             queryMatch: l
                         })
                     })]
-                }), null != n && (0, i.jsx)(T.AutocompleteRowContentSecondary, {
+                }), null != n && (0, i.jsx)(I.AutocompleteRowContentSecondary, {
                     children: n
                 })]
             })

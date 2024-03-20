@@ -30,15 +30,15 @@ function(e, t, n) {
             wrapContent: S,
             highlighted: C,
             focusProps: _,
-            ...I
+            ...T
         } = e;
-        I.className = s(I.className, u.container, {
+        T.className = s(T.className, u.container, {
             [u.selected]: m,
             [u.highlighted]: C,
             [null != y ? y : ""]: m,
             [u.clickable]: !m && (null != x || null != p)
-        }), I["aria-selected"] = null !== (n = I["aria-selected"]) && void 0 !== n ? n : m;
-        let T = (0, i.jsxs)("div", {
+        }), T["aria-selected"] = null !== (n = T["aria-selected"]) && void 0 !== n ? n : m;
+        let I = (0, i.jsxs)("div", {
             className: s(g, u.layout, {
                 [u.muted]: !m && h,
                 [u.wrappedLayout]: S
@@ -70,25 +70,25 @@ function(e, t, n) {
             children: (0, i.jsx)(r.Link, {
                 to: x,
                 onClick: p,
-                ...I,
+                ...T,
                 role: "listitem",
                 ref: t,
-                children: T
+                children: I
             })
         }) : null != p ? (0, i.jsx)(o.Clickable, {
             onClick: p,
             focusProps: _,
-            ...I,
+            ...T,
             role: "listitem",
             innerRef: t,
-            children: T
+            children: I
         }) : (0, i.jsx)(o.FocusRing, {
             ..._,
             children: (0, i.jsx)("div", {
-                ...I,
+                ...T,
                 role: "listitem",
                 ref: t,
-                children: T
+                children: I
             })
         })
     });
