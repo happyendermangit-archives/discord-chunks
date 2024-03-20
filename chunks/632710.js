@@ -61,8 +61,8 @@ function(e, t, n) {
                 W = F === y.Types.STREAM_PREVIEW || null != s,
                 Y = (0, g.default)(n),
                 z = (0, p.isStageActivity)(n),
-                Z = K ? E.default.Align.END : E.default.Align.STRETCH,
-                J = Y || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
+                J = K ? E.default.Align.END : E.default.Align.STRETCH,
+                Z = Y || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
                 q = (null == n ? void 0 : n.type) === L.ActivityTypes.HANG_STATUS,
                 X = (0, u.useStateFromStores)([x.default, m.default], () => {
                     var e;
@@ -152,11 +152,11 @@ function(e, t, n) {
                 if (null == a && null == s && null == e && null == r) return null;
                 t = [a, s, e, r]
             }
-            let Q = J === E.default.Direction.VERTICAL;
+            let Q = Z === E.default.Direction.VERTICAL;
             return (0, i.jsx)(E.default, {
                 grow: 0,
-                align: Z,
-                direction: J,
+                align: J,
+                direction: Z,
                 wrap: Q ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
                 className: a(c, P.buttonsWrapper, Q ? P.vertical : P.horizontal),
                 onClick: function(e) {

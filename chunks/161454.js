@@ -198,25 +198,19 @@ function(e, t, n) {
                 overlayMethod: D.OverlayMethod.Disabled
             }
         }
-        let n = E.isOOPExperimentEnabled() && (0, N.supportsOutOfProcess)(),
-            i = null == e.id ? null : K[e.id],
-            s = n && null != i && i.supportsOutOfProcessOverlay,
-            r = s ? D.OverlayMethod.OutOfProcess : D.OverlayMethod.Hook,
-            a = g.OverlayStoredSettings.methodOverride;
-        if (null != a && a !== D.OverlayMethod.Disabled) {
-            let t = D.OverlayMethod[r],
-                n = D.OverlayMethod[a];
-            P.info("getOverlayGameStatus: overlay method overriden ".concat(t, " -> ").concat(n, " (").concat(e.name, ")")), r = a
-        }
-        let o = H.enableOverlay[$(e)];
-        return null != o ? {
+        let n = E.isOOPExperimentEnabled() && (0, N.supportsOutOfProcess)() && !g.OverlayStoredSettings.legacyEnabled,
+            i = n ? D.OverlayMethod.OutOfProcess : D.OverlayMethod.Hook,
+            s = H.enableOverlay[$(e)];
+        if (null != s) return {
             source: R.OverlayGameStatusSource.USER_OVERRIDE,
-            enabled: o,
-            overlayMethod: r
-        } : null != i ? {
+            enabled: s,
+            overlayMethod: i
+        };
+        let r = null == e.id ? null : K[e.id];
+        return null != r ? {
             source: R.OverlayGameStatusSource.DATABASE,
-            enabled: i.enabled || s,
-            overlayMethod: r
+            enabled: r.enabled || n,
+            overlayMethod: i
         } : {
             source: R.OverlayGameStatusSource.DEFAULT,
             enabled: !1,

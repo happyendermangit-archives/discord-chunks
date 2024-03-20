@@ -69,10 +69,11 @@ function(e, t, n) {
             if (!__OVERLAY__) throw Error("OverlayActionCreators.setInstanceLocked: Must be called within Overlay context");
             _.setLocked(e, (0, d.getPID)())
         },
-        setEnabled(e) {
+        setEnabled(e, t) {
             s.default.dispatch({
                 type: "OVERLAY_SET_ENABLED",
-                enabled: e
+                enabled: e,
+                legacyEnabled: t
             })
         },
         selectCall(e) {
