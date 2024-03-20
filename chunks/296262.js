@@ -31,11 +31,14 @@ function(e, t, n) {
             children: function() {
                 let e = r(l).take(n).map(e => {
                         let t = e.name;
-                        return m ? (0, i.jsx)(u.default, {
-                            guild: e,
-                            onClick: c,
-                            size: f,
-                            showTooltip: !1
+                        return m ? (0, i.jsx)("div", {
+                            className: d.avatar,
+                            children: (0, i.jsx)(u.default, {
+                                guild: e,
+                                onClick: c,
+                                size: f,
+                                showTooltip: !1
+                            })
                         }) : (0, i.jsx)(o.TooltipContainer, {
                             text: t,
                             className: d.avatar,

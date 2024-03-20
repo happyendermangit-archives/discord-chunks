@@ -2,27 +2,27 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         CASH_APP_PAY_CONTAINER: function() {
-            return d
+            return s
         },
         default: function() {
-            return i
+            return c
         }
     });
-    var s = t("37983");
+    var d = t("37983");
     t("884691"), t("771042");
-    let d = "cash-app-pay-container";
+    let s = "cash-app-pay-container";
 
     function n() {
-        return (0, s.jsx)(s.Fragment, {
-            children: (0, s.jsx)("div", {
-                id: d
+        return (0, d.jsx)(d.Fragment, {
+            children: (0, d.jsx)("div", {
+                id: s
             })
         })
     }
 
-    function i() {
-        return (0, s.jsx)(s.Fragment, {
-            children: (0, s.jsx)(n, {})
+    function c() {
+        return (0, d.jsx)(d.Fragment, {
+            children: (0, d.jsx)(n, {})
         })
     }
 }
