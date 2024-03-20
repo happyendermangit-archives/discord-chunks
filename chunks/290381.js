@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         VisibilityObserver: function() {
-            return i.default
+            return i.VisibilityObserver
         },
         VisibilitySensor: function() {
-            return r.default
+            return r.VisibilitySensor
         }
     }), n("6268");
     var i = n("157590"),

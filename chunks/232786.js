@@ -9,7 +9,7 @@ function(e, t, n) {
         l = n("884691"),
         a = n("414456"),
         s = n.n(a),
-        r = n("235855"),
+        r = n("290381"),
         o = n("77078"),
         u = n("997289"),
         d = n("685665"),
@@ -57,7 +57,7 @@ function(e, t, n) {
                 className: s(_.wrapper, n),
                 children: N ? (0, i.jsx)(o.Spinner, {
                     type: o.SpinnerTypes.PULSING_ELLIPSIS
-                }) : (0, i.jsx)(r.default, {
+                }) : (0, i.jsx)(r.VisibilitySensor, {
                     onChange: e => {
                         e && !O.current && (E.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                             type: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,

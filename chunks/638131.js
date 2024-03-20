@@ -5,8 +5,8 @@ function(e, t, n) {
             return m
         }
     }), n("222007");
-    var i = n("37983"),
-        a = n("884691"),
+    var a = n("37983"),
+        i = n("884691"),
         s = n("414456"),
         l = n.n(s),
         o = n("917351"),
@@ -25,30 +25,30 @@ function(e, t, n) {
         let {
             className: t,
             pageMultiplier: n
-        } = e, s = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion), [o, m] = a.useState({
+        } = e, s = (0, d.useStateFromStores)([c.default], () => c.default.useReducedMotion), [o, m] = i.useState({
             x: 0,
             y: 0
-        }), h = a.useMemo(() => r.throttle(e => {
+        }), h = i.useMemo(() => r.throttle(e => {
             if (s) return;
             let t = (window.innerWidth - e.pageX * n) / 90,
-                i = (window.innerHeight - e.pageY * n) / 90;
+                a = (window.innerHeight - e.pageY * n) / 90;
             m({
                 x: t,
-                y: i
+                y: a
             })
         }, 20), [n, s]);
-        a.useEffect(() => (window.addEventListener("mousemove", h), () => window.removeEventListener("mousemove", h)), [h]);
+        i.useEffect(() => (window.addEventListener("mousemove", h), () => window.removeEventListener("mousemove", h)), [h]);
         let [_, p] = (0, u.useSpring)(() => ({
             x: 0,
             y: 0,
             config: g
         }));
-        return a.useEffect(() => {
+        return i.useEffect(() => {
             p({
                 x: o.x,
                 y: o.y
             })
-        }, [o.x, o.y, p]), (0, i.jsx)(u.animated.div, {
+        }, [o.x, o.y, p]), (0, a.jsx)(u.animated.div, {
             style: {
                 transform: (0, u.to)([_.x, _.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)"))
             },

@@ -1764,7 +1764,7 @@ function(e, t, n) {
             let {
                 settings: t
             } = e;
-            !1 === t.decoupledClipsEnabled && (a = null, eI.setClipsSource(null)), !1 === t.decoupledClipsEnabled && (a = null, eI.setClipsSource(null))
+            !1 === t.decoupledClipsEnabled && (a = null, eI.setClipsSource(null))
         }
     })
 }
