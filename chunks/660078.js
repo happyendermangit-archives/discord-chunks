@@ -2,15 +2,15 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         StreamDirectorActionType: function() {
-            return s
+            return d
         },
         StreamDirector: function() {
-            return c
+            return i
         }
     });
-    var d, s, n = t("242761");
-    (d = s || (s = {})).STREAM = "stream", d.PAUSE = "pause", d.STOP = "stop";
-    class c {
+    var s, d, n = t("242761");
+    (s = d || (d = {})).STREAM = "stream", s.PAUSE = "pause", s.STOP = "stop";
+    class i {
         onStreamBegin(e, a) {
             let t = (0, n.getInitialStreamTarget)(e, a);
             null == t || null == t.windowHandle ? this.callback({

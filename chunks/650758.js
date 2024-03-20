@@ -2,13 +2,13 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         default: function() {
-            return d
+            return s
         }
     }), t("222007");
-    var d, s = t("37983"),
+    var s, d = t("37983"),
         n = t("884691"),
-        c = t("597755"),
-        i = t.n(c),
+        i = t("597755"),
+        c = t.n(i),
         r = t("703809"),
         o = t("446674"),
         f = t("895547"),
@@ -27,10 +27,10 @@ function(e, a, t) {
     let O = o.default.connectStores([p.default], () => ({
         focused: p.default.isFocused()
     }))(g.default);
-    d = class extends n.PureComponent {
+    s = class extends n.PureComponent {
         getPlatform() {
             var e;
-            let a = null === (e = i.os) || void 0 === e ? void 0 : e.family;
+            let a = null === (e = c.os) || void 0 === e ? void 0 : e.family;
             return null != a && /^win/i.test(a) ? m.PlatformTypes.WINDOWS : null != a && /darwin|os x/i.test(a) ? m.PlatformTypes.OSX : m.PlatformTypes.LINUX
         }
         componentDidMount() {
@@ -43,28 +43,28 @@ function(e, a, t) {
             }()
         }
         render() {
-            let e = (0, s.jsx)("div", {
-                    children: (0, s.jsxs)("p", {
-                        children: [T.default.Messages.VERY_OUT_OF_DATE_DESCRIPTION, " ", (0, s.jsx)(u.default, {
+            let e = (0, d.jsx)("div", {
+                    children: (0, d.jsxs)("p", {
+                        children: [T.default.Messages.VERY_OUT_OF_DATE_DESCRIPTION, " ", (0, d.jsx)(u.default, {
                             src: h.default.getURL(f.default.convert.fromCodePoint("1f44c")),
                             emojiName: ":ok_hand:",
                             animated: !1
                         })]
                     })
                 }),
-                a = (0, s.jsx)(l.Button, {
+                a = (0, d.jsx)(l.Button, {
                     size: l.ButtonSizes.LARGE,
                     onClick: this.handleDownload,
                     children: T.default.Messages.DOWNLOAD
                 });
-            return (0, s.jsxs)(n.Fragment, {
-                children: [(0, s.jsx)(r.Helmet, {
-                    children: (0, s.jsx)("html", {
+            return (0, d.jsxs)(n.Fragment, {
+                children: [(0, d.jsx)(r.Helmet, {
+                    children: (0, d.jsx)("html", {
                         className: (0, _.getThemeClass)(I.ThemeTypes.DARK)
                     })
-                }), (0, s.jsx)(O, {
+                }), (0, d.jsx)(O, {
                     type: this.getPlatform()
-                }), (0, s.jsx)(b.default, {
+                }), (0, d.jsx)(b.default, {
                     title: T.default.Messages.UNSUPPORTED_BROWSER_TITLE,
                     note: e,
                     action: a

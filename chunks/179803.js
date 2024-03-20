@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         shouldShowGuildOnboardingUpsell: function() {
-            return h
+            return C
         },
         dismissedGuildOnboardingUpsell: function() {
-            return C
+            return h
         }
     }), n("222007");
     var s = n("866227"),
@@ -24,7 +24,7 @@ function(e, t, n) {
     let T = [r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2, r.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, r.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR],
         p = [0, 1, 7];
 
-    function h(e, t) {
+    function C(e, t) {
         var n;
         let s = d.default.getGuilds(),
             r = c.default.entries(s).some(e => {
@@ -34,13 +34,13 @@ function(e, t, n) {
         if (r || !(0, f.isGuildOnboardingSettingsAvailable)(e)) return !1;
         let l = null === (n = o.default.settings.userContent) || void 0 === n ? void 0 : n.guildOnboardingUpsellDismissedAt,
             _ = null != l ? a.Timestamp.toDate(l) : void 0,
-            h = null != _ ? i().diff(_, "days") : null,
-            C = T.indexOf(t);
-        if (-1 === C) return !1;
-        let g = null == h || h > p[C];
-        if (!g) return !1;
-        let A = T.find(e => !(0, u.isDismissibleContentDismissed)(e)) === t;
+            C = null != _ ? i().diff(_, "days") : null,
+            h = T.indexOf(t);
+        if (-1 === h) return !1;
+        let A = null == C || C > p[h];
         if (!A) return !1;
+        let g = T.find(e => !(0, u.isDismissibleContentDismissed)(e)) === t;
+        if (!g) return !1;
         let {
             showLifecycleUpsells: I
         } = E.default.getCurrentConfig({
@@ -53,7 +53,7 @@ function(e, t, n) {
         return I
     }
 
-    function C(e, t) {
+    function h(e, t) {
         let n = a.Timestamp.now();
         l.PreloadedUserSettingsActionCreators.updateAsync("userContent", e => {
             e.guildOnboardingUpsellDismissedAt = n
