@@ -2,15 +2,15 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         MigrationStatus: function() {
-            return d
+            return s
         },
         default: function() {
             return o
         }
     });
-    var s, d, n = t("446674"),
+    var d, s, n = t("446674"),
         i = t("913144");
-    (s = d || (d = {}))[s.NOT_STARTED = 0] = "NOT_STARTED", s[s.IN_PROGRESS = 1] = "IN_PROGRESS", s[s.FAILED = 2] = "FAILED", s[s.SKIPPED = 3] = "SKIPPED";
+    (d = s || (s = {}))[d.NOT_STARTED = 0] = "NOT_STARTED", d[d.IN_PROGRESS = 1] = "IN_PROGRESS", d[d.FAILED = 2] = "FAILED", d[d.SKIPPED = 3] = "SKIPPED";
     let c = 0;
     class r extends n.default.Store {
         getMigrationStatus() {

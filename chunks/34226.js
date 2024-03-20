@@ -15,7 +15,7 @@ function(e, _, E) {
         s = E("161454"),
         T = E("161454"),
         S = E("49111");
-    let N = 15 * i.default.Millis.MINUTE;
+    let N = 5 * i.default.Millis.MINUTE;
     class O extends o.default {
         _terminate() {
             this.stopHeartbeat()
@@ -27,7 +27,7 @@ function(e, _, E) {
             this.heartbeatInterval.stop(), this.runningGameKeys.clear()
         }
         handlePostConnectionOpen() {
-            s.default.getVisibleRunningGames().length > 0 && this.maybeStartHeartbeat()
+            s.default.getRunningGames().length > 0 && this.maybeStartHeartbeat()
         }
         constructor(...e) {
             super(...e), this.heartbeatInterval = new t.Interval, this.runningGameKeys = new Set, this.actions = {
@@ -45,7 +45,7 @@ function(e, _, E) {
                 }
                 this.maybeStartHeartbeat()
             }, this.logRunningGameHeartbeats = () => {
-                let e = s.default.getVisibleRunningGames(),
+                let e = s.default.getRunningGames(),
                     _ = {
                         rtc_connection_id: r.default.getRTCConnectionId(),
                         media_session_id: r.default.getMediaSessionId()
@@ -61,6 +61,7 @@ function(e, _, E) {
                         game_name: e.name,
                         game_distributor: e.distributor,
                         game_executable: (0, I.removeExecutablePathPrefix)(e.exePath),
+                        game_detection_enabled: (0, T.isDetectionEnabled)(e),
                         initial_heartbeat: i,
                         ..._
                     }), E.add((0, T.gameKey)(e))
