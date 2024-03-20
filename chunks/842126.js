@@ -146,7 +146,7 @@ function(e, t, n) {
                         }
                     }
                 },
-                J = e => (0, i.jsx)("ul", {
+                Z = e => (0, i.jsx)("ul", {
                     ...N(R),
                     className: s(_.emojiListRow, {
                         [_.emojiListRowLargeSize]: W,
@@ -155,29 +155,29 @@ function(e, t, n) {
                     ref: K,
                     children: e.map(z)
                 });
-            if (P !== g.EmojiCategoryTypes.TOP_GUILD_EMOJI) return J(t);
-            let Z = t.filter(e => !!w && e.type === E.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === g.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === g.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+            if (P !== g.EmojiCategoryTypes.TOP_GUILD_EMOJI) return Z(t);
+            let J = t.filter(e => !!w && e.type === E.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === g.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === g.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
                 q = t.filter(e => e.subCategory === g.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
-            return 0 === q.length ? J(t) : (0, i.jsxs)("div", {
+            return 0 === q.length ? Z(t) : (0, i.jsxs)("div", {
                 className: _.topEmojiSectionContainer,
                 children: [(0, i.jsx)("div", {
                     className: s(_.topEmojiContainer, {
-                        [_.noEmojis]: 0 === Z.length
+                        [_.noEmojis]: 0 === J.length
                     }),
-                    children: J(Z)
+                    children: Z(J)
                 }), (0, i.jsxs)("div", {
                     className: _.newlyAddedHighlightContainer,
                     children: [(0, i.jsx)("div", {
                         className: s(_.newlyAddedHighlight, {
                             [_.oneItem]: 1 === q.length,
-                            [_.alignRight]: Z.length > 0
+                            [_.alignRight]: J.length > 0
                         }),
-                        children: J(q)
+                        children: Z(q)
                     }), (0, i.jsxs)("div", {
                         className: s(_.newlyAddedBadge, {
                             [_.newlyAddedBadgeLarge]: W,
                             [_.newlyAddedBadgeMedium]: Y,
-                            [_.alignRight]: Z.length > 0
+                            [_.alignRight]: J.length > 0
                         }),
                         children: [(0, i.jsx)(h.default, {
                             foreground: _.newlyAddedBadgeStar
