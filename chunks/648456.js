@@ -22,8 +22,8 @@ function(t, e, i) {
         I = i("271938"),
         A = i("42203"),
         T = i("945956"),
-        C = i("18494"),
-        S = i("697218"),
+        S = i("18494"),
+        C = i("697218"),
         N = i("599110"),
         v = i("773336"),
         O = i("289732"),
@@ -55,7 +55,7 @@ function(t, e, i) {
             channelId: e,
             applicationId: i,
             analyticsLocations: n
-        } = t, l = A.default.getChannel(e), a = null == l ? void 0 : l.getGuildId(), r = S.default.getCurrentUser();
+        } = t, l = A.default.getChannel(e), a = null == l ? void 0 : l.getGuildId(), r = C.default.getCurrentUser();
         if (null == l || null == r) return;
         let u = p.default.getShelfActivities(a),
             d = O.default.getState().shelfOrder,
@@ -109,7 +109,7 @@ function(t, e, i) {
         let {
             channelId: n,
             applicationId: l
-        } = t, a = F[l], r = A.default.getChannel(n), u = p.default.getEmbeddedActivityDurationMs(n, l), d = S.default.getCurrentUser(), s = null == r ? void 0 : r.getGuildId();
+        } = t, a = F[l], r = A.default.getChannel(n), u = p.default.getEmbeddedActivityDurationMs(n, l), d = C.default.getCurrentUser(), s = null == r ? void 0 : r.getGuildId();
         if (null == a || null == r || null == d) return;
         let o = p.default.getShelfActivities(s),
             c = (0, y.default)({
@@ -161,8 +161,8 @@ function(t, e, i) {
                 application_id: _
             } = l,
             f = (0, g.default)(l),
-            C = null == E && (null == c ? void 0 : c.isVocal()) === !0;
-        null != f && !C && (null === (e = Y[_]) || void 0 === e || e.call(Y, {
+            S = null == E && (null == c ? void 0 : c.isVocal()) === !0;
+        null != f && !S && (null === (e = Y[_]) || void 0 === e || e.call(Y, {
             activitySessionId: f,
             activityUserSessionId: (0, r.v4)(),
             instanceId: l.activity_id,
@@ -200,14 +200,14 @@ function(t, e, i) {
     }
     n = class extends s.default {
         _initialize() {
-            C.default.addChangeListener(this.handleSelectedChannelUpdate), u.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), u.default.subscribe("EMBEDDED_ACTIVITY_OPEN", G), u.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", B), u.default.subscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", H), u.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), u.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), u.default.subscribe("MEDIA_SESSION_JOINED", k)
+            S.default.addChangeListener(this.handleSelectedChannelUpdate), u.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), u.default.subscribe("EMBEDDED_ACTIVITY_OPEN", G), u.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", B), u.default.subscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", H), u.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), u.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), u.default.subscribe("MEDIA_SESSION_JOINED", k)
         }
         _terminate() {
-            C.default.removeChangeListener(this.handleSelectedChannelUpdate), u.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), u.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", G), u.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", B), u.default.unsubscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", H), u.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), u.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), u.default.unsubscribe("MEDIA_SESSION_JOINED", k)
+            S.default.removeChangeListener(this.handleSelectedChannelUpdate), u.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), u.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", G), u.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", B), u.default.unsubscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", H), u.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), u.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), u.default.unsubscribe("MEDIA_SESSION_JOINED", k)
         }
         constructor(...t) {
             super(...t), this.handleSelectedChannelUpdate = () => {
-                let t = C.default.getVoiceChannelId();
+                let t = S.default.getVoiceChannelId();
                 for (let {
                         channelId: e,
                         applicationId: i
@@ -280,7 +280,7 @@ function(t, e, i) {
                     applicationId: r,
                     analyticsLocations: u
                 } = t, d = A.default.getChannel(a);
-                if (void 0 === d || f.GUILD_VOCAL_CHANNEL_TYPES.has(null == d ? void 0 : d.type) && C.default.getVoiceChannelId() !== a) return;
+                if (void 0 === d || f.GUILD_VOCAL_CHANNEL_TYPES.has(null == d ? void 0 : d.type) && S.default.getVoiceChannelId() !== a) return;
                 let s = p.default.getSelfEmbeddedActivityForChannel(a);
                 if ((null == s ? void 0 : s.applicationId) === r) return;
                 let E = await o.default.fetchApplication(r),
@@ -297,14 +297,14 @@ function(t, e, i) {
                 null != I && (await o.default.fetchApplication(I), l = c.default.getApplication(I));
                 let T = null !== (i = null == d ? void 0 : d.getGuildId()) && void 0 !== i ? i : void 0,
                     {
-                        activityConfigs: S,
+                        activityConfigs: C,
                         applications: N
                     } = await (0, D.fetchShelf)({
                         guildId: T
                     }),
                     v = (0, y.default)({
                         applicationId: r,
-                        activityConfigs: S,
+                        activityConfigs: C,
                         applications: N
                     });
                 if (null == v) {

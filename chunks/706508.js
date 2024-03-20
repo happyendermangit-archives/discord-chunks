@@ -24,8 +24,8 @@ function(t, e, i) {
             currentEmbeddedApplication: i,
             activityChannelId: A,
             locationObject: T,
-            embeddedActivitiesManager: C,
-            analyticsLocations: S
+            embeddedActivitiesManager: S,
+            analyticsLocations: C
         } = t, N = l.default.getChannel(A), v = null == N ? void 0 : N.getGuildId(), O = null == v || "" === v, D = r.default.getCurrentUser();
         if (null == N || O && !N.isPrivate() || null == A || null == D) return Promise.resolve(!1);
         if (a.default.getVoiceChannelId() === A && (null == i ? void 0 : i.id) === e) return (0, _.default)(v, A), Promise.resolve(!0);
@@ -34,7 +34,7 @@ function(t, e, i) {
             application: n.default.getApplication(e),
             channel: N,
             currentEmbeddedApplication: i,
-            embeddedActivitiesManager: C,
+            embeddedActivitiesManager: S,
             user: D
         });
         if (!p) return !1;
@@ -47,12 +47,12 @@ function(t, e, i) {
             });
             if (!t) return !1
         } else if (!(0, u.isActivitiesInTextEnabled)(N, "joinEmbeddedActivity") || !h) return !1;
-        return (0, _.default)(v, A), (0, d.startEmbeddedActivity)(A, e, S), (0, E.default)({
+        return (0, _.default)(v, A), (0, d.startEmbeddedActivity)(A, e, C), (0, E.default)({
             type: I.AnalyticsGameOpenTypes.JOIN,
             userId: D.id,
             applicationId: e,
             locationObject: T,
-            analyticsLocations: S
+            analyticsLocations: C
         }), !0
     }
 }
