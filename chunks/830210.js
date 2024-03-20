@@ -8,15 +8,15 @@ function(e, a, t) {
             return r
         }
     });
-    var s = t("446674"),
-        d = t("305961"),
+    var d = t("446674"),
+        s = t("305961"),
         n = t("316133"),
         i = t("49111");
 
     function c(e) {
-        return (0, s.useStateFromStoresObject)([n.default, d.default], () => {
+        return (0, d.useStateFromStoresObject)([n.default, s.default], () => {
             let a = n.default.countVoiceStatesForChannel(e.id),
-                t = d.default.getGuild(e.getGuildId());
+                t = s.default.getGuild(e.getGuildId());
             return null == t ? {
                 reachedLimit: !1,
                 limit: -1
@@ -32,7 +32,7 @@ function(e, a, t) {
 
     function r(e) {
         let a = n.default.countVoiceStatesForChannel(e.id),
-            t = d.default.getGuild(e.getGuildId());
+            t = s.default.getGuild(e.getGuildId());
         return null == t ? {
             reachedLimit: !1,
             limit: -1
