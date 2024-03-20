@@ -51,8 +51,8 @@ function(e, t, n) {
                 experiment: m.default,
                 location: "emoji_picker"
             }), z = (0, f.useExpressionPickerStore)(e => e.searchQuery), {
-                analyticsLocations: J
-            } = (0, c.default)(d.default.EMOJI_PICKER), Z = null == B ? void 0 : null === (t = B.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = null != Z ? Z === A.PremiumSubscriptionSKUs.TIER_0 : Y === A.PremiumTypes.TIER_0;
+                analyticsLocations: Z
+            } = (0, c.default)(d.default.EMOJI_PICKER), J = null == B ? void 0 : null === (t = B.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = null != J ? J === A.PremiumSubscriptionSKUs.TIER_0 : Y === A.PremiumTypes.TIER_0;
             return l.useEffect(() => {
                 if (!W) {
                     let e;
@@ -67,11 +67,11 @@ function(e, t, n) {
                             ...U,
                             object: v.AnalyticsObjects.EMOJI
                         },
-                        location_stack: J,
+                        location_stack: Z,
                         sku_id: (0, _.castPremiumSubscriptionAsSkuId)(_.default.getSkuIdForPremiumType(Y))
                     })
                 }
-            }, [W, Y, b, P, U, J, j, z]), (0, i.jsxs)("div", {
+            }, [W, Y, b, P, U, Z, j, z]), (0, i.jsxs)("div", {
                 className: s(R.premiumPromo, {
                     [R.unifyTrialUpsell]: K
                 }),

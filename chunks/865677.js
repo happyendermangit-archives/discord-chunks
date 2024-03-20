@@ -54,7 +54,7 @@ function(e, t, n) {
             isEmbedded: K = !1
         } = e, {
             analyticsLocations: W
-        } = (0, c.default)(), [Y, z] = l.useState(!1), J = (0, a.useStateFromStores)([_.default], () => _.default.getCurrentUser()), Z = null == t ? void 0 : t.application_id, q = (0, a.useStateFromStores)([O.default], () => K ? O.default.getEmbeddedActivityForUserId(V.id, Z) : null, [V.id, K, Z]), X = (0, k.default)({
+        } = (0, c.default)(), [Y, z] = l.useState(!1), Z = (0, a.useStateFromStores)([_.default], () => _.default.getCurrentUser()), J = null == t ? void 0 : t.application_id, q = (0, a.useStateFromStores)([O.default], () => K ? O.default.getEmbeddedActivityForUserId(V.id, J) : null, [V.id, K, J]), X = (0, k.default)({
             channelId: null == q ? void 0 : q.channelId,
             userId: V.id,
             activity: t
@@ -75,7 +75,7 @@ function(e, t, n) {
             activity: t,
             application: et,
             channelId: X,
-            currentUser: J,
+            currentUser: Z,
             isEmbedded: K,
             ChannelStore: m.default,
             GuildStore: E.default,

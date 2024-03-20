@@ -6,7 +6,7 @@ function(e, t, n) {
         }
     }), n("222007");
     var i, s, r, a, o, l, u, d, c, f, _ = n("773336");
-    (l = i || (i = {})).DISMISSED = "dismissed", l.PIP = "pip", l.PIP_EXTERNAL = "pip_external", l.PANEL = "panel";
+    (l = i || (i = {})).DISMISSED = "dismissed", l.PIP = "pip", l.PANEL = "panel";
     let E = {
         mass: .5,
         damping: 80,
