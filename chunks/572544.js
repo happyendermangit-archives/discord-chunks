@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("389153"),
         d = n("412707"),
         c = n("139514"),
-        f = n("312016"),
-        _ = n("374021"),
+        _ = n("312016"),
+        f = n("374021"),
         E = n("398604"),
         h = n("468560"),
         g = n("361572"),
@@ -64,7 +64,7 @@ function(e, t, n) {
 
     function P(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D,
-            i = (0, f.findCodedLink)(e),
+            i = (0, _.findCodedLink)(e),
             {
                 skipExtensionCheck: a
             } = t;
@@ -162,7 +162,7 @@ function(e, t, n) {
             let t = I.default.getGuildId();
             null != L.guildId && "" !== L.guildId && L.guildId !== t && (0, m.default)(N.Routes.CHANNEL(L.guildId));
             let n = E.default.getGuildScheduledEvent(L.guildEventId);
-            return null != n && (0, _.openGuildEventDetails)({
+            return null != n && (0, f.openGuildEventDetails)({
                 eventId: n.id
             }), !0
         };

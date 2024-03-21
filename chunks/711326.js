@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getMediaPostEmbedCommonData: function() {
-            return f
+            return _
         },
         getMediaPostEmbedChannelPath: function() {
-            return _
+            return f
         },
         canUseMediaPostEmbed: function() {
             return E
@@ -21,12 +21,12 @@ function(e, t, n) {
         d = n("894488"),
         c = n("782340");
 
-    function f(e) {
+    function _(e) {
         var t, n, i, s, r;
         let {
             mediaPostEmbedData: u,
-            guild: f,
-            parentChannel: _,
+            guild: _,
+            parentChannel: f,
             postThread: E,
             user: h,
             selectedGuildId: g,
@@ -37,7 +37,7 @@ function(e, t, n) {
             S = !m && u.has_media_attachment,
             v = m ? c.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : c.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
             T = null != h ? o.default.getName(u.guild_id, u.channel_id, h) : void 0,
-            I = null == h ? void 0 : h.getAvatarURL(null == f ? void 0 : f.id, 40);
+            I = null == h ? void 0 : h.getAvatarURL(null == _ ? void 0 : _.id, 40);
         (null == I || g !== u.guild_id) && (I = a.default.getGuildIconURL({
             id: u.guild_id,
             icon: u.guild_icon,
@@ -65,10 +65,10 @@ function(e, t, n) {
             messageId: u.message_id,
             canAccess: m,
             guildId: u.guild_id,
-            guildName: null !== (r = null == f ? void 0 : f.name) && void 0 !== r ? r : u.guild_name,
+            guildName: null !== (r = null == _ ? void 0 : _.name) && void 0 !== r ? r : u.guild_name,
             authorId: null == u ? void 0 : u.author_id,
             authorName: T,
-            channelName: null == _ ? void 0 : _.name,
+            channelName: null == f ? void 0 : f.name,
             avatarUrl: I,
             shouldShowBlurredThumbnailImage: S,
             shouldContainMediaWithBackground: A,
@@ -79,7 +79,7 @@ function(e, t, n) {
         }
     }
 
-    function _(e) {
+    function f(e) {
         if (null == e) return;
         let t = (0, i.parseURLSafely)(e);
         if (null == t) return;

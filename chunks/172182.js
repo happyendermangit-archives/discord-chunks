@@ -81,27 +81,27 @@ function(e, t, n) {
                     green: n,
                     blue: i,
                     alpha: s
-                } = e, r = t / 255, a = n / 255, o = i / 255, l = Math.max(r, a, o), u = Math.min(r, a, o), d = l - u, c = (l + u) / 2, f = d > 0 ? d / (1 - Math.abs(2 * c - 1)) : 0;
+                } = e, r = t / 255, a = n / 255, o = i / 255, l = Math.max(r, a, o), u = Math.min(r, a, o), d = l - u, c = (l + u) / 2, _ = d > 0 ? d / (1 - Math.abs(2 * c - 1)) : 0;
                 if (0 === d) return {
                     hue: 0,
-                    saturation: f,
+                    saturation: _,
                     lightness: c,
                     alpha: s
                 };
-                let _ = 0;
+                let f = 0;
                 switch (l) {
                     case r:
-                        _ = (a - o) / d % 6;
+                        f = (a - o) / d % 6;
                         break;
                     case a:
-                        _ = (o - r) / d + 2;
+                        f = (o - r) / d + 2;
                         break;
                     case o:
-                        _ = (a - o) / d + 4
+                        f = (a - o) / d + 4
                 }
                 return {
-                    hue: 60 * _,
-                    saturation: f,
+                    hue: 60 * f,
+                    saturation: _,
                     lightness: c,
                     alpha: s
                 }

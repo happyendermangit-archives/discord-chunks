@@ -29,8 +29,8 @@ function(e, t, n) {
         u = n("282109"),
         d = n("599110"),
         c = n("568734"),
-        f = n("34676"),
-        _ = n("299039"),
+        _ = n("34676"),
+        f = n("299039"),
         E = n("755624"),
         h = n("319126"),
         g = n("648564"),
@@ -60,17 +60,17 @@ function(e, t, n) {
         if (null == s) return;
         let r = e.getGuildId(),
             a = e.parent_id,
-            l = (0, f.getCurrentChannelSettings)(r, a),
-            _ = e => {
-                if ((0, c.hasFlag)(e, g.ThreadMemberFlags.ALL_MESSAGES)) return f.MessageNotificationSettings[m.UserNotificationSettings.ALL_MESSAGES];
-                if ((0, c.hasFlag)(e, g.ThreadMemberFlags.ONLY_MENTIONS)) return f.MessageNotificationSettings[m.UserNotificationSettings.ONLY_MENTIONS];
-                if ((0, c.hasFlag)(e, g.ThreadMemberFlags.NO_MESSAGES)) return f.MessageNotificationSettings[m.UserNotificationSettings.NO_MESSAGES];
-                return f.MessageNotificationSettings[m.UserNotificationSettings.NULL]
+            l = (0, _.getCurrentChannelSettings)(r, a),
+            f = e => {
+                if ((0, c.hasFlag)(e, g.ThreadMemberFlags.ALL_MESSAGES)) return _.MessageNotificationSettings[m.UserNotificationSettings.ALL_MESSAGES];
+                if ((0, c.hasFlag)(e, g.ThreadMemberFlags.ONLY_MENTIONS)) return _.MessageNotificationSettings[m.UserNotificationSettings.ONLY_MENTIONS];
+                if ((0, c.hasFlag)(e, g.ThreadMemberFlags.NO_MESSAGES)) return _.MessageNotificationSettings[m.UserNotificationSettings.NO_MESSAGES];
+                return _.MessageNotificationSettings[m.UserNotificationSettings.NULL]
             },
             h = null !== (n = E.default.flags(e.id)) && void 0 !== n ? n : 0,
-            p = _(h),
+            p = f(h),
             S = E.default.isMuted(e.id),
-            v = (0, f.muteConfigToTimestamp)(E.default.getMuteConfig(e.id)),
+            v = (0, _.muteConfigToTimestamp)(E.default.getMuteConfig(e.id)),
             {
                 can_send_message: T,
                 ...I
@@ -84,12 +84,12 @@ function(e, t, n) {
                 has_interacted_with_thread: (h & g.ThreadMemberFlags.HAS_INTERACTED) != 0,
                 parent_is_muted: u.default.isGuildOrCategoryOrChannelMuted(r, a),
                 old_thread_notification_setting: p,
-                new_thread_notification_setting: null != t.flags ? _(t.flags) : p,
+                new_thread_notification_setting: null != t.flags ? f(t.flags) : p,
                 parent_notification_setting: l.channel_message_notification_settings,
                 old_thread_is_muted: S,
                 new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : S,
                 old_thread_muted_until: v,
-                new_thread_muted_until: null != t.mute_config ? (0, f.muteConfigToTimestamp)(t.mute_config) : v
+                new_thread_muted_until: null != t.mute_config ? (0, _.muteConfigToTimestamp)(t.mute_config) : v
             };
         d.default.track(m.AnalyticEvents.THREAD_NOTIFICATION_SETTINGS_UPDATED, A)
     }
@@ -97,9 +97,9 @@ function(e, t, n) {
     let I = e => {
         var t, n;
         let i = (0, r.useStateFromStores)([l.default], () => l.default.lastMessageId(e.id)),
-            a = null != i ? _.default.extractTimestamp(i) : null,
+            a = null != i ? f.default.extractTimestamp(i) : null,
             o = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
             u = null != o ? s(o).valueOf() : null;
-        return null !== (n = null != a ? a : u) && void 0 !== n ? n : _.default.extractTimestamp(e.id)
+        return null !== (n = null != a ? a : u) && void 0 !== n ? n : f.default.extractTimestamp(e.id)
     }
 }

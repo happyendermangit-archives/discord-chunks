@@ -12,8 +12,8 @@ function(e, t, n) {
         u = n("773364"),
         d = n("953161"),
         c = n("784343"),
-        f = n("446497"),
-        _ = n("785347"),
+        _ = n("446497"),
+        f = n("785347"),
         E = n("784063"),
         h = n("710584"),
         g = n("595432"),
@@ -155,27 +155,27 @@ function(e, t, n) {
             (0, E.getVoiceEngine)().setOutputVolume(p(e))
         }
         getAudioInputDevices() {
-            return (0, f.getAudioInputDevices)()
+            return (0, _.getAudioInputDevices)()
         }
         setAudioInputDevice(e) {
-            (0, E.supportsFeature)(m.NativeFeatures.SET_AUDIO_DEVICE_BY_ID) ? (0, E.getVoiceEngine)().setInputDevice(e): (0, f.getAudioInputDevices)().then(t => {
+            (0, E.supportsFeature)(m.NativeFeatures.SET_AUDIO_DEVICE_BY_ID) ? (0, E.getVoiceEngine)().setInputDevice(e): (0, _.getAudioInputDevices)().then(t => {
                 var n;
                 let i = null !== (n = t.find(t => t.id === e)) && void 0 !== n ? n : t[0];
                 null != i && (0, E.getVoiceEngine)().setInputDevice(i.index)
             })
         }
         getAudioOutputDevices() {
-            return (0, f.getAudioOutputDevices)()
+            return (0, _.getAudioOutputDevices)()
         }
         setAudioOutputDevice(e) {
-            (0, E.supportsFeature)(m.NativeFeatures.SET_AUDIO_DEVICE_BY_ID) ? (0, E.getVoiceEngine)().setOutputDevice(e): (0, f.getAudioOutputDevices)().then(t => {
+            (0, E.supportsFeature)(m.NativeFeatures.SET_AUDIO_DEVICE_BY_ID) ? (0, E.getVoiceEngine)().setOutputDevice(e): (0, _.getAudioOutputDevices)().then(t => {
                 var n;
                 let i = null !== (n = t.find(t => t.id === e)) && void 0 !== n ? n : t[0];
                 null != i && (0, E.getVoiceEngine)().setOutputDevice(i.index)
             })
         }
         getVideoInputDevices() {
-            return (0, f.getVideoInputDevices)()
+            return (0, _.getVideoInputDevices)()
         }
         async setVideoInputDevice(e) {
             let t = await this.getVideoInputDevices(),
@@ -241,9 +241,9 @@ function(e, t, n) {
                 width: n <= 480 ? n / 3 * 4 : n / 9 * 16,
                 height: n
             });
-            let [f, _] = null != i ? i.split(":") : ["", ""];
+            let [_, f] = null != i ? i.split(":") : ["", ""];
             (0, E.getVoiceEngine)().setClipsSource({
-                id: _,
+                id: f,
                 soundshareId: null != s ? s : 0
             })
         }
@@ -457,7 +457,7 @@ function(e, t, n) {
         }
         speedTester(e, t) {
             if (!this.supports(m.Features.SPEED_TEST)) throw Error("speedTester is not supported.");
-            let n = _.default.create(e, t);
+            let n = f.default.create(e, t);
             return n.on(u.BaseSpeedTesterEvent.Destroy, e => {
                 this.speedTesters.delete(e), this.connectionsEmpty() && (0, E.setProcessPriority)(m.ProcessPriority.NORMAL)
             }), this.speedTesters.add(n), (0, E.setProcessPriority)(m.ProcessPriority.HIGH), n
@@ -489,7 +489,7 @@ function(e, t, n) {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                     i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-                t.deviceChangeGeneration++, t.emit(u.MediaEngineEvent.DeviceChange, (0, f.sanitizeDevices)(m.DeviceTypes.AUDIO_INPUT, e), (0, f.sanitizeDevices)(m.DeviceTypes.AUDIO_OUTPUT, n), (0, f.sanitizeDevices)(m.DeviceTypes.VIDEO_INPUT, i))
+                t.deviceChangeGeneration++, t.emit(u.MediaEngineEvent.DeviceChange, (0, _.sanitizeDevices)(m.DeviceTypes.AUDIO_INPUT, e), (0, _.sanitizeDevices)(m.DeviceTypes.AUDIO_OUTPUT, n), (0, _.sanitizeDevices)(m.DeviceTypes.VIDEO_INPUT, i))
             }, this.handleVolumeChange = (e, t) => {
                 this.emit(u.MediaEngineEvent.VolumeChange, e * m.DEFAULT_VOLUME, t * m.DEFAULT_VOLUME)
             }, this.handleVoiceActivity = (e, t) => {

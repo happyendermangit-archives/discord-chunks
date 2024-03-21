@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("77078"),
         d = n("659500"),
         c = n("159885"),
-        f = n("470074"),
-        _ = n("261147"),
+        _ = n("470074"),
+        f = n("261147"),
         E = n("401059"),
         h = n("289382"),
         g = n("49111"),
@@ -138,7 +138,7 @@ function(e, t, n) {
                     this.updateAnimation(e), t -= e
                 }
                 this.renderAnimation(), this._lastTick = e, this._reqAnimId = requestAnimationFrame(this.run)
-            }, this.wave = new E.default(this.updateWaveState), this.children = [new f.default, new _.default, this.wave]
+            }, this.wave = new E.default(this.updateWaveState), this.children = [new _.default, new f.default, this.wave]
         }
     }
     v.defaultProps = {

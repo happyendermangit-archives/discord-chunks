@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("271938"),
         d = n("42203"),
         c = n("26989"),
-        f = n("697218"),
-        _ = n("800762"),
+        _ = n("697218"),
+        f = n("800762"),
         E = n("299039"),
         h = n("158998"),
         g = n("49111");
@@ -48,7 +48,7 @@ function(e, t, n) {
     }
 
     function A(e, t, n) {
-        let i = f.default.getUser(n),
+        let i = _.default.getUser(n),
             s = null == i;
         null == i && (i = new l.default({
             id: n,
@@ -73,9 +73,9 @@ function(e, t, n) {
     class C {
         updateVoiceState(e) {
             if (null != this._pending) return this._pending.add(e), !1;
-            let t = _.default.getVoiceState(this.guildId, e),
+            let t = f.default.getVoiceState(this.guildId, e),
                 n = this._voiceStates.get(e),
-                i = f.default.getUser(e);
+                i = _.default.getUser(e);
             if (null != t && null != i) {
                 if (null == n) return this._voiceStates.set(e, A(t, this.guildId, e)), !0;
                 if (n.voiceState !== t) {
@@ -96,7 +96,7 @@ function(e, t, n) {
         updateMember(e) {
             if (null != this._pending) return this._pending.add(e), !1;
             let t = this._voiceStates.get(e),
-                n = f.default.getUser(e);
+                n = _.default.getUser(e);
             if (null != t && null != n) {
                 var i, s;
                 let r = v(this.guildId, n);
@@ -116,7 +116,7 @@ function(e, t, n) {
         }
         updateUsers() {
             return null == this._pending && this._voiceStates.values().reduce((e, t) => {
-                let n = f.default.getUser(t.user.id);
+                let n = _.default.getUser(t.user.id);
                 return null != n && t.user !== n ? (this._voiceStates.set(n.id, A(t.voiceState, this.guildId, n.id)), !0) : e
             }, !1)
         }
@@ -166,7 +166,7 @@ function(e, t, n) {
 
     function N() {
         p = {};
-        let e = _.default.getAllVoiceStates();
+        let e = f.default.getAllVoiceStates();
         E.default.keys(e).forEach(t => {
             Object.keys(e[t]).forEach(e => {
                 S(null != t ? t : g.ME).updateVoiceState(e)
@@ -175,7 +175,7 @@ function(e, t, n) {
     }
     class R extends r.default.Store {
         initialize() {
-            N(), this.waitFor(u.default, f.default, c.default, _.default), this.syncWith([f.default], y)
+            N(), this.waitFor(u.default, _.default, c.default, f.default), this.syncWith([_.default], y)
         }
         getVoiceStates(e) {
             return S(null != e ? e : g.ME).getVoiceStates()

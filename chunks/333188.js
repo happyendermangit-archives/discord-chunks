@@ -5,7 +5,7 @@ function(e, t, n) {
             return o
         }
     }), n("222007");
-    var i, s, r, a, o, l, u, d, c, f, _ = n("773336");
+    var i, s, r, a, o, l, u, d, c, _, f = n("773336");
     (l = i || (i = {})).DISMISSED = "dismissed", l.PIP = "pip", l.PANEL = "panel";
     let E = {
         mass: .5,
@@ -19,5 +19,5 @@ function(e, t, n) {
     }), ({
         ...E
     }), (u = s || (s = {})).USER = "USER", u.STREAM = "STREAM", u.ACTIVITY = "ACTIVIY", (d = r || (r = {})).NO_VIDEO_PARTICIPANTS = "no_video_participants", d.CALLER_DISCONNECTED = "caller_disconnected";
-    (c = a || (a = {})).PARTICIPANT = "participant", c.CTA = "cta", (0, _.isAndroid)(), (0, _.isIOS)(), (f = o || (o = {}))[f.EMPTY = 0] = "EMPTY", f[f.GRADIENT = 1] = "GRADIENT"
+    (c = a || (a = {})).PARTICIPANT = "participant", c.CTA = "cta", (0, f.isAndroid)(), (0, f.isIOS)(), (_ = o || (o = {}))[_.EMPTY = 0] = "EMPTY", _[_.GRADIENT = 1] = "GRADIENT"
 }

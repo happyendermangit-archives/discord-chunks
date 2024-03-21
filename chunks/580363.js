@@ -15,8 +15,8 @@ function(e, t, n) {
         u = n("338835"),
         d = n("83900"),
         c = n("45029"),
-        f = n("71216"),
-        _ = n("148337"),
+        _ = n("71216"),
+        f = n("148337"),
         E = n("568734"),
         h = n("299039"),
         g = n("955145"),
@@ -60,12 +60,12 @@ function(e, t, n) {
                     date: N
                 })
             }), r.includes(S.OAuth2Scopes.BOT) && null != I ? (0, i.jsx)(A, {
-                icon: f.default,
+                icon: _.default,
                 text: v.default.Messages.OAUTH2_DETAILS_GUILDS.format({
                     guildCount: I
                 })
             }) : null, (0, i.jsx)(A, {
-                icon: _.default,
+                icon: f.default,
                 text: R
             }), (null == y ? void 0 : y.has_csp_exception) ? (0, i.jsx)(A, {
                 icon: u.default,

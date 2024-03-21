@@ -11,7 +11,7 @@ function(e, t, n) {
             return c.MediaEngineEvent
         },
         MediaEngineContextTypes: function() {
-            return f.MediaEngineContextTypes
+            return _.MediaEngineContextTypes
         },
         FilterTargetType: function() {
             return a
@@ -32,15 +32,15 @@ function(e, t, n) {
     var i, s, r, a, o, l, u = n("947279"),
         d = n("571877"),
         c = n("775766"),
-        f = n("353927");
+        _ = n("353927");
 
-    function _(e) {
+    function f(e) {
         switch (e) {
-            case f.MediaEngineImplementations.NATIVE:
+            case _.MediaEngineImplementations.NATIVE:
                 return n("741397").default;
-            case f.MediaEngineImplementations.WEBRTC:
+            case _.MediaEngineImplementations.WEBRTC:
                 return n("551079").default;
-            case f.MediaEngineImplementations.DUMMY:
+            case _.MediaEngineImplementations.DUMMY:
             default:
                 return n("870630").default
         }
@@ -48,11 +48,11 @@ function(e, t, n) {
 
     function E() {
         var e;
-        return null !== (e = [f.MediaEngineImplementations.NATIVE, f.MediaEngineImplementations.WEBRTC].find(e => _(e).supported())) && void 0 !== e ? e : f.MediaEngineImplementations.DUMMY
+        return null !== (e = [_.MediaEngineImplementations.NATIVE, _.MediaEngineImplementations.WEBRTC].find(e => f(e).supported())) && void 0 !== e ? e : _.MediaEngineImplementations.DUMMY
     }
 
     function h(e) {
-        let t = _(e);
+        let t = f(e);
         return new t
     }(i = a || (a = {})).INPUT_DEVICE = "input_device", i.STREAM = "stream", (s = o || (o = {})).NONE = "", s.BACKGROUND_BLUR = "background_blur", s.BACKGROUND_REPLACEMENT = "background_replacement", (r = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview", r.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"
 }

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("222007");
     var i = n("446674"),
@@ -17,7 +17,7 @@ function(e, t, n) {
     function c() {
         d = (0, r.isStaffEnv)(o.default.getCurrentUser())
     }
-    class f extends i.default.Store {
+    class _ extends i.default.Store {
         initialize() {
             this.waitFor(o.default, a.default), Object.defineProperties(this, {
                 isDeveloper: {
@@ -40,8 +40,8 @@ function(e, t, n) {
             super(...e), this.isDeveloper = !1
         }
     }
-    f.displayName = "DeveloperExperimentStore";
-    var _ = new f(s.default, {
+    _.displayName = "DeveloperExperimentStore";
+    var f = new _(s.default, {
         CONNECTION_OPEN: c,
         OVERLAY_INITIALIZE: c,
         CURRENT_USER_UPDATE: c

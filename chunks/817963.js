@@ -40,7 +40,7 @@ function(e, t, n) {
         h = e => {
             if (null == e) return [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS];
             let t = u.CREATE_GUILD_EVENT_CORE_PERMISSIONS;
-            return e.isGuildStageVoice() ? t = u.CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS : e.isGuildVoice() && (t = u.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS), [r.default.combine(t, c.Permissions.CREATE_EVENTS), r.default.combine(t, c.Permissions.MANAGE_EVENTS)]
+            return e.isGuildStageVoice() ? t = u.CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS : e.isGuildVoice() && (t = u.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS), [r.combine(t, c.Permissions.CREATE_EVENTS), r.combine(t, c.Permissions.MANAGE_EVENTS)]
         },
         E = e => {
             let [t, n] = e instanceof l.default ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS] : h(e), [r, u, E, v] = (0, s.useStateFromStoresArray)([a.default], () => [a.default.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e), a.default.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS, e), a.default.can(t, e), a.default.can(n, e)]), C = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser()), p = i.useCallback(e => f(e, C, u, r), [r, u, C]), _ = i.useCallback(e => f(e, C, v, E), [v, E, C]);

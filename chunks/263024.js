@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("507217"),
         d = n("233069"),
         c = n("271938"),
-        f = n("42203"),
-        _ = n("957255"),
+        _ = n("42203"),
+        f = n("957255"),
         E = n("449008"),
         h = n("821343"),
         g = n("755624"),
@@ -95,8 +95,8 @@ function(e, t, n) {
         },
         async unarchiveThreadIfNecessary(e) {
             var t;
-            let n = f.default.getChannel(e),
-                i = _.default.can(S.Permissions.MANAGE_THREADS, n);
+            let n = _.default.getChannel(e),
+                i = f.default.can(S.Permissions.MANAGE_THREADS, n);
             null != n && n.isArchivedThread() && (i || (null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0) && await this.unarchiveThread(n, !1)
         },
         setInvitable: (e, t) => I(e, {

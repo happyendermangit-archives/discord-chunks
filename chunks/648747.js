@@ -11,6 +11,6 @@ function(e, t, n) {
         a = n("49111");
 
     function o(e, t) {
-        return i.default.isChannelGated(e, t) || r.default.canEveryoneRole(a.Permissions.VIEW_CHANNEL, s.default.getChannel(t))
+        return i.default.isChannelGated(e, t) || r.canEveryoneRole(a.Permissions.VIEW_CHANNEL, s.default.getChannel(t))
     }
 }

@@ -9,10 +9,10 @@ function(e, t, n) {
             return c
         },
         parseStripePaymentMethod: function() {
-            return f
+            return _
         },
         authenticatePaymentIntentForPaymentId: function() {
-            return _
+            return f
         }
     }), n("222007");
     var s, r, a = n("60979"),
@@ -46,7 +46,7 @@ function(e, t, n) {
         return null != i ? Promise.resolve(i) : (0, a.loadStripe)(l.PaymentSettings.STRIPE.KEY).then(e => (i = e, e))
     }
 
-    function f(e) {
+    function _(e) {
         var t, n, i, s, r, a, o, l;
         let {
             billing_details: u
@@ -64,7 +64,7 @@ function(e, t, n) {
             billingAddressInfo: c
         }
     }
-    async function _(e) {
+    async function f(e) {
         try {
             let t = await o.default.get({
                     url: l.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),

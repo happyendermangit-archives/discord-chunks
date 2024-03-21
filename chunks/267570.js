@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("69927"),
         d = n("554054"),
         c = n("831588"),
-        f = n("439932"),
-        _ = n("49111"),
+        _ = n("439932"),
+        f = n("49111"),
         E = n("289382"),
         h = n("782340"),
         g = n("720016");
@@ -34,10 +34,10 @@ function(e, t, n) {
         return (0, u.usePageTitle)({
             location: h.default.Messages.OAUTH2_TITLE
         }), (0, i.jsx)(l.ThemeContextProvider, {
-            theme: _.ThemeTypes.DARK,
+            theme: f.ThemeTypes.DARK,
             children: (0, i.jsx)(d.default, {
                 embedded: r,
-                className: a((0, f.getThemeClass)(_.ThemeTypes.DARK), g.wave),
+                className: a((0, _.getThemeClass)(f.ThemeTypes.DARK), g.wave),
                 splash: (0, c.getArtForPath)(),
                 waveState: o,
                 showLogo: !0,

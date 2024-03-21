@@ -16,24 +16,24 @@ function(e, t, n) {
         d = n("957255"),
         c = n("49111");
     (s = i || (i = {}))[s.SendMessage = 0] = "SendMessage", s[s.CreateThread = 1] = "CreateThread";
-    let f = {
+    let _ = {
         0: {},
         1: {}
     };
 
-    function _(e, t, n) {
+    function f(e, t, n) {
         if (function(e, t) {
-                null != f[t][e.id] && (f[t][e.id].timer.stop(), delete f[t][e.id])
+                null != _[t][e.id] && (_[t][e.id].timer.stop(), delete _[t][e.id])
             }(e, t), function(e, t) {
                 return 0 === t ? d.default.can(c.Permissions.MANAGE_CHANNELS, e) || d.default.can(c.Permissions.MANAGE_MESSAGES, e) : d.default.can(c.Permissions.MANAGE_THREADS, e)
             }(e, t) || n <= 0) return;
         let i = n + Date.now();
-        f[t][e.id] = {
+        _[t][e.id] = {
             rateLimitPerUser: e.rateLimitPerUser,
             cooldownMs: n,
             cooldownEndTimestamp: i,
             timer: new a.Timeout
-        }, f[t][e.id].timer.start(1e3, () => {
+        }, _[t][e.id].timer.start(1e3, () => {
             o.default.dispatch({
                 type: "SLOWMODE_SET_COOLDOWN",
                 channelId: e.id,
@@ -46,21 +46,21 @@ function(e, t, n) {
     function E(e, t) {
         let n = u.default.getChannel(e);
         if (null == n) return !1;
-        _(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * l.default.Millis.SECOND + 100)
+        f(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * l.default.Millis.SECOND + 100)
     }
 
     function h(e) {
         let {
             file: t
         } = e, n = u.default.getChannel(t.channelId);
-        return null != n && _(n, 0, 0)
+        return null != n && f(n, 0, 0)
     }
     class g extends r.default.Store {
         initialize() {
             this.waitFor(u.default)
         }
         getSlowmodeCooldownGuess(e, t) {
-            let n = f[null != t ? t : 0][e];
+            let n = _[null != t ? t : 0][e];
             return null != n ? n.cooldownMs : 0
         }
     }
@@ -80,7 +80,7 @@ function(e, t, n) {
                 cooldownMs: i
             } = e, s = u.default.getChannel(t);
             if (null == s) return !1;
-            _(s, n, 0 === i ? 0 : i + 100)
+            f(s, n, 0 === i ? 0 : i + 100)
         },
         UPLOAD_START: function(e) {
             let {
@@ -97,17 +97,17 @@ function(e, t, n) {
             [0, 1].forEach(e => {
                 for (let i of t) {
                     var n;
-                    let t = f[e][i.id],
+                    let t = _[e][i.id],
                         s = i.rateLimitPerUser;
                     if (null == t || t.rateLimitPerUser === s) continue;
                     let r = Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, s * l.default.Millis.SECOND);
-                    _(i, e, r)
+                    f(i, e, r)
                 }
             })
         },
         LOGOUT: function() {
             [0, 1].forEach(e => {
-                Object.keys(f[e]).forEach(t => f[e][t].timer.stop()), f[e] = {}
+                Object.keys(_[e]).forEach(t => _[e][t].timer.stop()), _[e] = {}
             })
         }
     })

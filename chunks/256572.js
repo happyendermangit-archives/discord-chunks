@@ -15,8 +15,8 @@ function(e, t, n) {
         u = n("447435"),
         d = n("560208"),
         c = n("692038"),
-        f = n("42203"),
-        _ = n("377253"),
+        _ = n("42203"),
+        f = n("377253"),
         E = n("49111");
     (s = i || (i = {}))[s.LOADED = 0] = "LOADED", s[s.NOT_LOADED = 1] = "NOT_LOADED", s[s.DELETED = 2] = "DELETED";
     let h = Object.freeze({
@@ -103,7 +103,7 @@ function(e, t, n) {
                     state: 2
                 })
             } else {
-                let e = _.default.getMessage(n.channel_id, i);
+                let e = f.default.getMessage(n.channel_id, i);
                 null != e ? p.set(n.channel_id, i, {
                     state: 0,
                     message: e
@@ -157,7 +157,7 @@ function(e, t, n) {
     }
     class R extends o.default.Store {
         initialize() {
-            this.waitFor(_.default, f.default)
+            this.waitFor(f.default, _.default)
         }
         getMessageByReference(e) {
             let t;
@@ -221,7 +221,7 @@ function(e, t, n) {
             let {
                 message: t
             } = e;
-            return !!_.default.getMessages(t.channel_id).ready && S(t)
+            return !!f.default.getMessages(t.channel_id).ready && S(t)
         },
         MESSAGE_UPDATE: function(e) {
             let {
@@ -261,7 +261,7 @@ function(e, t, n) {
         CHANNEL_DELETE: A,
         THREAD_DELETE: A,
         GUILD_DELETE: function() {
-            let e = p.retainWhere(e => null != f.default.getChannel(e));
+            let e = p.retainWhere(e => null != _.default.getChannel(e));
             if (0 === e) return !1
         },
         CONNECTION_OPEN: y,

@@ -15,16 +15,16 @@ function(e, t, n) {
         u = n("146606"),
         d = n("77078"),
         c = n("84339"),
-        f = n("816452");
+        _ = n("816452");
     (i = s || (s = {})).SUBTLE = "SUBTLE", i.DARK = "DARK", i.BLUR = "BLUR";
-    let _ = a.forwardRef(function(e, t) {
+    let f = a.forwardRef(function(e, t) {
         let {
             backdropStyle: n = "SUBTLE",
             backdropInstant: i = !1,
             zIndexBoost: s = 0,
             LayerComponent: a,
             isVisible: o,
-            onClose: _
+            onClose: f
         } = e, E = function() {
             let e = (0, d.useToken)(d.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
                     opacity: .25
@@ -57,21 +57,21 @@ function(e, t, n) {
                 zIndex: 1e3 + s
             };
             return S((t, n) => n ? (0, r.jsx)(u.animated.div, {
-                className: f.backdrop,
+                className: _.backdrop,
                 style: {
                     ...t,
                     ...e
                 },
-                onClick: _
+                onClick: f
             }) : null)
         }
         return (0, r.jsx)(a, {
             children: S((e, t) => t ? (0, r.jsx)(u.animated.div, {
-                className: l(f.backdrop, f.withLayer),
+                className: l(_.backdrop, _.withLayer),
                 style: e,
-                onClick: _
+                onClick: f
             }) : null)
         })
     });
-    var E = _
+    var E = f
 }

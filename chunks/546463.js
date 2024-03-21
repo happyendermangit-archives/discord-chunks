@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("653047"),
         d = n("773336");
     let c = "GameStoreReportedGames",
-        f = {},
         _ = {},
+        f = {},
         E = {},
         h = null !== (s = a.default.get(c)) && void 0 !== s ? s : {},
         g = "";
@@ -36,7 +36,7 @@ function(e, t, n) {
 
     function S(e) {
         let t = e instanceof u.default ? p(e) : e;
-        for (let n of (f[e.id] = t, _[e.name.toLowerCase()] = t, e.aliases)) _[n.toLowerCase()] = t;
+        for (let n of (_[e.id] = t, f[e.name.toLowerCase()] = t, e.aliases)) f[n.toLowerCase()] = t;
         if ((0, d.isDesktop)())
             for (let n of e.executables) E[n.name] = t
     }
@@ -48,22 +48,22 @@ function(e, t, n) {
         getState() {
             return (0, d.isDesktop)() ? {
                 detectableGamesEtag: g,
-                detectableGames: Object.values(f)
+                detectableGames: Object.values(_)
             } : {
                 detectableGamesEtag: "",
                 detectableGames: []
             }
         }
         get games() {
-            return Object.values(f)
+            return Object.values(_)
         }
         getDetectableGame(e) {
-            return f[e]
+            return _[e]
         }
         getGameByName(e) {
             if (null == e) return null;
             let t = e.toLowerCase();
-            return Object.prototype.hasOwnProperty.call(_, t) ? _[t] : null
+            return Object.prototype.hasOwnProperty.call(f, t) ? f[t] : null
         }
         isGameInDatabase(e) {
             let t = this.getGameByName(e.name);
@@ -96,7 +96,7 @@ function(e, t, n) {
             return null !== (n = null !== (t = this.getGameByExecutable(s)) && void 0 !== t ? t : this.getGameByExecutable(r)) && void 0 !== n ? n : i
         }
         getGameById(e) {
-            return f[e]
+            return _[e]
         }
         shouldReport(e) {
             let t = null != this.getGameByName(e),

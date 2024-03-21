@@ -60,8 +60,8 @@ function(e, t, n) {
         }
     }), n("702976");
     var i, s, r, a, o, l, u, d, c = n("432710"),
-        f = n("151426"),
-        _ = n("676574"),
+        _ = n("151426"),
+        f = n("676574"),
         E = n("155084"),
         h = n("684337"),
         g = n("845579"),
@@ -78,34 +78,34 @@ function(e, t, n) {
         R = n("568456");
     n("782340");
     let O = {
-            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: f.ExplicitContentRedaction.SHOW,
-            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.SHOW,
-            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLOCK
+            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: _.ExplicitContentRedaction.SHOW,
+            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.SHOW,
+            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLOCK
         },
         D = {
-            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: f.ExplicitContentRedaction.SHOW,
-            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLOCK,
-            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLOCK
+            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: _.ExplicitContentRedaction.SHOW,
+            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLOCK,
+            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLOCK
         },
         P = {
-            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: f.ExplicitContentRedaction.BLUR,
-            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLUR,
-            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLOCK
+            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: _.ExplicitContentRedaction.BLUR,
+            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLUR,
+            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLOCK
         },
         L = {
-            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: f.ExplicitContentRedaction.BLUR,
-            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLOCK,
-            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLOCK
+            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: _.ExplicitContentRedaction.BLUR,
+            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLOCK,
+            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLOCK
         },
         M = {
-            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: f.ExplicitContentRedaction.BLUR,
-            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLUR,
-            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLOCK
+            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: _.ExplicitContentRedaction.BLUR,
+            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLUR,
+            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLOCK
         },
         b = {
-            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: f.ExplicitContentRedaction.BLUR,
-            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLOCK,
-            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: f.ExplicitContentRedaction.BLOCK
+            [R.ExplicitContentFilterTypes.DISABLED.valueOf()]: _.ExplicitContentRedaction.BLUR,
+            [R.ExplicitContentFilterTypes.NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLOCK,
+            [R.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS.valueOf()]: _.ExplicitContentRedaction.BLOCK
         },
         U = e => {
             let {
@@ -113,7 +113,7 @@ function(e, t, n) {
                 isDm: n = !1,
                 isFriend: i = !1
             } = e;
-            if (null != t && t !== f.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
+            if (null != t && t !== _.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
             let s = S.default.getCurrentUser();
             return (null == s ? void 0 : s.nsfwAllowed) === !1 ? k({
                 isDm: n,
@@ -128,8 +128,8 @@ function(e, t, n) {
                 isDm: t = !1,
                 isFriend: n = !1
             } = e, i = (0, A.isEligibleForNewAdultDefaults)("explicit_media_redaction_utils");
-            if (i && !t) return f.ExplicitContentRedaction.BLUR;
-            if (!t) return f.ExplicitContentRedaction.SHOW;
+            if (i && !t) return _.ExplicitContentRedaction.BLUR;
+            if (!t) return _.ExplicitContentRedaction.SHOW;
             let s = g.ExplicitContentFilter.getSetting();
             return n ? i ? P[s] : O[s] : i ? L[s] : D[s]
         },
@@ -138,7 +138,7 @@ function(e, t, n) {
                 isDm: t = !1,
                 isFriend: n = !1
             } = e;
-            if (!t) return f.ExplicitContentRedaction.BLUR;
+            if (!t) return _.ExplicitContentRedaction.BLUR;
             let i = g.ExplicitContentFilter.getSetting();
             return n ? M[i] : b[i]
         },
@@ -161,7 +161,7 @@ function(e, t, n) {
         };
 
     function G(e) {
-        return e === f.ExplicitContentRedaction.BLUR || e === f.ExplicitContentRedaction.BLOCK
+        return e === _.ExplicitContentRedaction.BLUR || e === _.ExplicitContentRedaction.BLOCK
     }
 
     function F(e) {
@@ -189,7 +189,7 @@ function(e, t, n) {
     function B(e, t) {
         var n, i;
         if (!t) return !1;
-        if (_.default.get("obscure_blur_effect_enabled")) return !0;
+        if (f.default.get("obscure_blur_effect_enabled")) return !0;
         switch (e.type) {
             case 1:
                 return (0, T.hasFlag)(null !== (n = e.media.flags) && void 0 !== n ? n : 0, N.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA);
@@ -218,7 +218,7 @@ function(e, t, n) {
     }
 
     function Y(e) {
-        return !_.default.get("explicit_media_redaction_ignore_pending_scan") && null == e
+        return !f.default.get("explicit_media_redaction_ignore_pending_scan") && null == e
     }
 
     function K(e) {

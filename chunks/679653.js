@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         computeChannelName: function() {
-            return f
+            return _
         },
         escapeChannelName: function() {
-            return _
+            return f
         },
         unescapeChannelName: function() {
             return E
@@ -24,16 +24,16 @@ function(e, t, n) {
         d = n("49111"),
         c = n("782340");
 
-    function f(e, t, n) {
+    function _(e, t, n) {
         var i, r;
         let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         switch (e.type) {
             case d.ChannelTypes.DM:
-                let [f] = e.recipients.map(t.getUser).filter(l.isNotNullish);
-                if (null == f) return "???";
-                let E = n.getNickname(f.id),
-                    h = null !== (i = null != E ? E : u.default.getName(f)) && void 0 !== i ? i : "???";
+                let [_] = e.recipients.map(t.getUser).filter(l.isNotNullish);
+                if (null == _) return "???";
+                let E = n.getNickname(_.id),
+                    h = null !== (i = null != E ? E : u.default.getName(_)) && void 0 !== i ? i : "???";
                 return a ? "@".concat(h) : h;
             case d.ChannelTypes.GROUP_DM:
                 let g = (0, s.getIsBroadcastingGDM)(e.id);
@@ -66,7 +66,7 @@ function(e, t, n) {
             case d.ChannelTypes.GUILD_VOICE:
             case d.ChannelTypes.GUILD_STAGE_VOICE:
             case d.ChannelTypes.GUILD_CATEGORY:
-                if (o) return '#"'.concat(_(e.name), '"');
+                if (o) return '#"'.concat(f(e.name), '"');
                 if (a && e.isThread()) return '"'.concat(e.name, '"');
                 return e.name;
             default:
@@ -74,7 +74,7 @@ function(e, t, n) {
         }
     }
 
-    function _(e) {
+    function f(e) {
         return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"')
     }
 
@@ -84,6 +84,6 @@ function(e, t, n) {
 
     function h(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return (0, i.useStateFromStores)([o.default, r.default, a.default], () => null == e ? null : f(e, o.default, a.default, t))
+        return (0, i.useStateFromStores)([o.default, r.default, a.default], () => null == e ? null : _(e, o.default, a.default, t))
     }
 }

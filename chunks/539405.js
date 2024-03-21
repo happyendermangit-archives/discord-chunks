@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("80687"),
         d = n("819068"),
         c = n("640583"),
-        f = n("49111");
-    let _ = {
+        _ = n("49111");
+    let f = {
         track(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -67,7 +67,7 @@ function(e, t, n) {
         },
         setInstanceLocked(e) {
             if (!__OVERLAY__) throw Error("OverlayActionCreators.setInstanceLocked: Must be called within Overlay context");
-            _.setLocked(e, (0, d.getPID)())
+            f.setLocked(e, (0, d.getPID)())
         },
         setEnabled(e, t) {
             s.default.dispatch({
@@ -160,7 +160,7 @@ function(e, t, n) {
             })
         },
         updateNotificationStatus(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.OverlayNotificationStatus.DISMISSED;
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.OverlayNotificationStatus.DISMISSED;
             s.default.dispatch({
                 type: "OVERLAY_UPDATE_NOTIFICATION_STATUS",
                 notificationId: e,
@@ -181,11 +181,11 @@ function(e, t, n) {
         setPinChat(e) {
             let t = d.OVERLAY_LAYOUT_ID,
                 n = a.default.getWidgetsForLayout(t),
-                s = a.default.getWidgetConfig(f.OverlayWidgets.GUILDS),
-                r = a.default.getWidgetConfig(f.OverlayWidgets.TEXT),
-                o = a.default.getWidgetConfig(f.OverlayWidgets.GUILDS_TEXT);
+                s = a.default.getWidgetConfig(_.OverlayWidgets.GUILDS),
+                r = a.default.getWidgetConfig(_.OverlayWidgets.TEXT),
+                o = a.default.getWidgetConfig(_.OverlayWidgets.GUILDS_TEXT);
             if (0 === n.length || null == s || null == r || null == o) return;
-            let _ = l.default.windowSize(),
+            let f = l.default.windowSize(),
                 E = {
                     width: 0,
                     height: 0
@@ -218,14 +218,14 @@ function(e, t, n) {
                         size: s
                     } = e;
                     switch (t) {
-                        case f.OverlayWidgets.TEXT:
-                            E = (0, u.getSizeFromLayoutSize)(s, _), (0, c.deleteWidget)(n);
+                        case _.OverlayWidgets.TEXT:
+                            E = (0, u.getSizeFromLayoutSize)(s, f), (0, c.deleteWidget)(n);
                             break;
-                        case f.OverlayWidgets.GUILDS:
-                            h = (0, u.getFullCoordsFromLayoutSize)(i, s, _), g = (0, u.getSizeFromLayoutSize)(s, _), (0, c.deleteWidget)(n);
+                        case _.OverlayWidgets.GUILDS:
+                            h = (0, u.getFullCoordsFromLayoutSize)(i, s, f), g = (0, u.getSizeFromLayoutSize)(s, f), (0, c.deleteWidget)(n);
                             break;
-                        case f.OverlayWidgets.GUILDS_TEXT:
-                            m = (0, u.getFullCoordsFromLayoutSize)(i, s, _), p = (0, u.getSizeFromLayoutSize)(s, _), (0, c.deleteWidget)(n)
+                        case _.OverlayWidgets.GUILDS_TEXT:
+                            m = (0, u.getFullCoordsFromLayoutSize)(i, s, f), p = (0, u.getSizeFromLayoutSize)(s, f), (0, c.deleteWidget)(n)
                     }
                 }), e) {
                 let e = "auto" === p.width ? o.minSize.width : p.width;
@@ -233,27 +233,27 @@ function(e, t, n) {
                 let [n, r] = (0, u.getLeftWidgetSpecs)(m, {
                     ...p,
                     width: s.minSize.width
-                }, _), [l, d] = (0, u.getRightWidgetSpecs)(m, {
+                }, f), [l, d] = (0, u.getRightWidgetSpecs)(m, {
                     ...p,
                     width: e
-                }, _, {
+                }, f, {
                     x: 10,
                     y: 10
-                }), E = a.default.getWidgetDefaultSettings(f.OverlayWidgets.TEXT);
+                }), E = a.default.getWidgetDefaultSettings(_.OverlayWidgets.TEXT);
                 if (null == E) throw Error("OverlayActionCreators.setPinChat: No config for TEXT exists");
                 (0, c.createWidget)({
                     ...E,
-                    type: f.OverlayWidgets.TEXT,
+                    type: _.OverlayWidgets.TEXT,
                     id: (0, i.v4)(),
                     size: d,
                     anchor: l,
                     layoutId: t
                 });
-                let h = a.default.getWidgetDefaultSettings(f.OverlayWidgets.GUILDS);
+                let h = a.default.getWidgetDefaultSettings(_.OverlayWidgets.GUILDS);
                 if (null == h) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS exists");
                 (0, c.createWidget)({
                     ...h,
-                    type: f.OverlayWidgets.GUILDS,
+                    type: _.OverlayWidgets.GUILDS,
                     id: (0, i.v4)(),
                     size: r,
                     anchor: n,
@@ -265,11 +265,11 @@ function(e, t, n) {
                 let [n, o] = (0, u.getLeftWidgetSpecs)(h, {
                     height: g.height,
                     width: e
-                }, _), l = a.default.getWidgetDefaultSettings(f.OverlayWidgets.GUILDS_TEXT);
+                }, f), l = a.default.getWidgetDefaultSettings(_.OverlayWidgets.GUILDS_TEXT);
                 if (null == l) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists");
                 (0, c.createWidget)({
                     ...l,
-                    type: f.OverlayWidgets.GUILDS_TEXT,
+                    type: _.OverlayWidgets.GUILDS_TEXT,
                     id: (0, i.v4)(),
                     layoutId: t,
                     anchor: n,
@@ -316,5 +316,5 @@ function(e, t, n) {
             })
         }
     };
-    var E = _
+    var E = f
 }

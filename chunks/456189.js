@@ -19,8 +19,8 @@ function(e, t, n) {
             onClick: u,
             onDoubleClick: d,
             onContextMenu: c,
-            onKeyDown: f,
-            onFocus: _,
+            onKeyDown: _,
+            onFocus: f,
             onBlur: E,
             onMouseOver: h,
             onMouseDown: g,
@@ -47,8 +47,8 @@ function(e, t, n) {
                 onClick: e => {
                     e.stopPropagation(), null == u || u(e)
                 },
-                onKeyDown: f,
-                onFocus: _,
+                onKeyDown: _,
+                onFocus: f,
                 onBlur: E,
                 onMouseDown: g
             }), n]

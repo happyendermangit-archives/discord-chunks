@@ -82,20 +82,20 @@ function(e, _, E) {
 
     function u(e, _) {
         let E = (0, r.useStateFromStores)([N.default], () => {
-            let _ = e.isForumLikeChannel() ? R.Permissions.SEND_MESSAGES : n.default.combine(R.Permissions.CREATE_PUBLIC_THREADS, R.Permissions.READ_MESSAGE_HISTORY);
+            let _ = e.isForumLikeChannel() ? R.Permissions.SEND_MESSAGES : n.combine(R.Permissions.CREATE_PUBLIC_THREADS, R.Permissions.READ_MESSAGE_HISTORY);
             return N.default.can(_, e)
         }, [e]);
         return D(E, e, _)
     }
 
     function L(e, _) {
-        let E = e.isForumLikeChannel() ? R.Permissions.SEND_MESSAGES : n.default.combine(R.Permissions.CREATE_PUBLIC_THREADS, R.Permissions.READ_MESSAGE_HISTORY),
+        let E = e.isForumLikeChannel() ? R.Permissions.SEND_MESSAGES : n.combine(R.Permissions.CREATE_PUBLIC_THREADS, R.Permissions.READ_MESSAGE_HISTORY),
             t = N.default.can(E, e);
         return D(t, e, _)
     }
 
     function C(e) {
-        let _ = (0, r.useStateFromStores)([N.default], () => N.default.can(n.default.combine(R.Permissions.CREATE_PRIVATE_THREADS), e), [e]);
+        let _ = (0, r.useStateFromStores)([N.default], () => N.default.can(n.combine(R.Permissions.CREATE_PRIVATE_THREADS), e), [e]);
         return e.type === R.ChannelTypes.GUILD_TEXT && D(_, e)
     }
 

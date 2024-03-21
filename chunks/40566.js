@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("525065"),
         d = n("985365"),
         c = n("599110"),
-        f = n("49111");
-    let _ = new i.default("MessageRoundtripTrackerStore");
+        _ = n("49111");
+    let f = new i.default("MessageRoundtripTrackerStore");
 
     function E(e) {
         return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp
@@ -24,14 +24,14 @@ function(e, t, n) {
     function h(e) {
         let t = l.default.getBasicChannel(e.channelId);
         if (null == t) {
-            _.warn("Ignoring a messageData for channel ".concat(e.channelId, " because we can't find that channel."));
+            f.warn("Ignoring a messageData for channel ".concat(e.channelId, " because we can't find that channel."));
             return
         }
         if (Math.random() > .1) return;
         let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
             i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
             s = (0, o.getSignalStrength)();
-        c.default.track(f.AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, {
+        c.default.track(_.AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, {
             ...(0, a.default)(),
             api_latency_ms: n,
             gateway_latency_ms: i,

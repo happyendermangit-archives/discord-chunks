@@ -19,7 +19,7 @@ function(e, t, n) {
         delete d[e.id]
     }
 
-    function f(e) {
+    function _(e) {
         let {
             entitlements: t
         } = e, n = !1;
@@ -29,7 +29,7 @@ function(e, t, n) {
             of t)(null == e ? void 0 : e.application) != null && (c(r.default.createFromServer(e.application)), n = !0);
         return n
     }
-    class _ extends i.default.Store {
+    class f extends i.default.Store {
         _getAllApplications() {
             return Object.values(o)
         }
@@ -61,8 +61,8 @@ function(e, t, n) {
             return Object.keys(d)
         }
     }
-    _.displayName = "ApplicationStore";
-    var E = new _(s.default, {
+    f.displayName = "ApplicationStore";
+    var E = new f(s.default, {
         CONNECTION_OPEN: function() {
             o = {}, l = {}
         },
@@ -116,9 +116,9 @@ function(e, t, n) {
             }
             return n
         },
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: f,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: f,
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: f,
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: _,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: _,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: _,
         GUILD_SETTINGS_LOADED_INTEGRATIONS: function(e) {
             let {
                 integrations: t,

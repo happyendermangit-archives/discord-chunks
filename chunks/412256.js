@@ -20,8 +20,8 @@ function(e, t, n) {
             control: r,
             disabled: d,
             isFocused: c,
-            showDefaultFocus: f = !1,
-            menuItemProps: _,
+            showDefaultFocus: _ = !1,
+            menuItemProps: f,
             onClose: E
         } = e, h = s.useRef(null), g = s.useRef(null);
         s.useLayoutEffect(() => {
@@ -42,11 +42,11 @@ function(e, t, n) {
             onClick: m,
             className: a(u.item, l.MENU_ITEM_COLORS[t], {
                 [u.disabled]: d,
-                [u.focused]: f && c,
-                [u.hideInteraction]: !f
+                [u.focused]: _ && c,
+                [u.hideInteraction]: !_
             }),
             "aria-disabled": d,
-            ..._,
+            ...f,
             children: [null != n ? (0, i.jsx)("div", {
                 className: u.labelContainer,
                 children: (0, i.jsx)("div", {

@@ -8,10 +8,10 @@ function(e, t, n) {
             return c
         },
         SPOTIFY_PLATFORM_NAME: function() {
-            return f
+            return _
         },
         isSpotifyParty: function() {
-            return _
+            return f
         },
         SpotifyResourceTypes: function() {
             return r
@@ -34,9 +34,9 @@ function(e, t, n) {
         u = n("49111");
     let d = "spotify",
         c = "spotify:",
-        f = o.default.get(u.PlatformTypes.SPOTIFY).name;
+        _ = o.default.get(u.PlatformTypes.SPOTIFY).name;
 
-    function _(e) {
+    function f(e) {
         return null != e && e.startsWith(c)
     }(i = r || (r = {})).TRACK = "track", i.ARTIST = "artist", i.ALBUM = "album", i.PLAYLIST = "playlist", i.EPISODE = "episode", i.SHOW = "show", (s = a || (a = {})).USER_ACTIVITY_PLAY = "user_activity_play", s.USER_ACTIVITY_SYNC = "user_activity_sync", s.EMBED_SYNC = "embed_sync";
     let E = ["open.spotify.com", "www.spotify.com"],

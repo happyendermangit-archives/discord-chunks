@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("374014"),
         d = n("374363"),
         c = n("271938"),
-        f = n("950104"),
-        _ = n("42203"),
+        _ = n("950104"),
+        f = n("42203"),
         E = n("260320"),
         h = n("42887"),
         g = n("945956"),
@@ -43,7 +43,7 @@ function(e, t, n) {
             var i, s, r, a, l, u, d, c;
             let e = (null === (l = window) || void 0 === l ? void 0 : null === (a = l.performance) || void 0 === a ? void 0 : null === (r = a.getEntriesByType) || void 0 === r ? void 0 : null === (s = r.call(a, "navigation")) || void 0 === s ? void 0 : null === (i = s[0]) || void 0 === i ? void 0 : i.type) === "reload" || (null === (u = await (null == R ? void 0 : null === (c = R.processUtils) || void 0 === c ? void 0 : null === (d = c.getLastCrash) || void 0 === d ? void 0 : d.call(c))) || void 0 === u ? void 0 : u.rendererCrashReason) != null;
             if (e || !L) {
-                let e = _.default.getChannel(n);
+                let e = f.default.getChannel(n);
                 null != e && (t = {
                     guildId: e.getGuildId(),
                     channelId: n
@@ -74,7 +74,7 @@ function(e, t, n) {
     }
     class G extends r.default.Store {
         initialize() {
-            this.waitFor(c.default, p.default, _.default, f.default, E.default, d.default), this.syncWith([h.default], U), this.syncWith([S.default], w)
+            this.waitFor(c.default, p.default, f.default, _.default, E.default, d.default), this.syncWith([h.default], U), this.syncWith([S.default], w)
         }
         getSocket() {
             return I.socket
@@ -239,7 +239,7 @@ function(e, t, n) {
             } = e;
             if (I.socket.isSessionEstablished()) {
                 var s, r;
-                let e = null != n ? null === (s = _.default.getChannel(i)) || void 0 === s ? void 0 : s.rtcRegion : null === (r = f.default.getCall(i)) || void 0 === r ? void 0 : r.region;
+                let e = null != n ? null === (s = f.default.getChannel(i)) || void 0 === s ? void 0 : s.rtcRegion : null === (r = _.default.getCall(i)) || void 0 === r ? void 0 : r.region;
                 I.socket.streamCreate(t, n, i, null != e ? e : m.default.getPreferredRegion())
             }
             return !1
@@ -277,7 +277,7 @@ function(e, t, n) {
             let {
                 channelId: i,
                 applicationId: s
-            } = e, r = null !== (n = null === (t = _.default.getChannel(i)) || void 0 === t ? void 0 : t.getGuildId()) && void 0 !== n ? n : null;
+            } = e, r = null !== (n = null === (t = f.default.getChannel(i)) || void 0 === t ? void 0 : t.getGuildId()) && void 0 !== n ? n : null;
             I.socket.embeddedActivityClose(r, i, s)
         },
         REQUEST_FORUM_UNREADS: function(e) {

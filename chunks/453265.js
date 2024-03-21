@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return _
         }
     });
     var i = n("37983");
@@ -24,7 +24,7 @@ function(e, t, n) {
                 guild_id: e
             })
         };
-    var f = {
+    var _ = {
         openMemberVerificationModal(e, t) {
             c(e);
             let r = async t => {

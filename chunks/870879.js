@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("697218"),
         d = n("239448");
     let c = !1,
-        f = null,
-        _ = !1,
+        _ = null,
+        f = !1,
         E = {};
 
     function h(e) {
@@ -27,7 +27,7 @@ function(e, t, n) {
     }
 
     function g() {
-        f !== l.default.getVoiceChannelId() && (_ = !1), h() && (_ = !0), f = l.default.getVoiceChannelId()
+        _ !== l.default.getVoiceChannelId() && (f = !1), h() && (f = !0), _ = l.default.getVoiceChannelId()
     }
     class m extends i.default.Store {
         initialize() {
@@ -40,7 +40,7 @@ function(e, t, n) {
             return c
         }
         get hasUsedBackgroundInCall() {
-            return _
+            return f
         }
     }
     m.displayName = "VideoBackgroundStore";
@@ -75,7 +75,7 @@ function(e, t, n) {
             let {
                 backgroundOption: t
             } = e;
-            h(t) && (_ = !0)
+            h(t) && (f = !0)
         },
         MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(e) {
             let {

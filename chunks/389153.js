@@ -65,8 +65,8 @@ function(e, t, n) {
         u = n("316693"),
         d = n("798609"),
         c = n("716241"),
-        f = n("892692"),
-        _ = n("233069"),
+        _ = n("892692"),
+        f = n("233069"),
         E = n("474643"),
         h = n("524768"),
         g = n("970254"),
@@ -84,16 +84,16 @@ function(e, t, n) {
             subCommandPath: l,
             useKeyedPermissions: c
         } = e;
-        null != r.permissions && r.permissions.length > 0 && (c ? s = (0, f.keyPermissions)(r.permissions) : (s = {}, r.permissions.forEach(e => {
+        null != r.permissions && r.permissions.length > 0 && (c ? s = (0, _.keyPermissions)(r.permissions) : (s = {}, r.permissions.forEach(e => {
             s[e.id] = e
         })));
-        let _ = (null != l ? l : []).map(e => e.name),
+        let f = (null != l ? l : []).map(e => e.name),
             E = (null != l ? l : []).map(e => e.displayName);
         return {
             version: r.version,
             guildId: r.guild_id,
-            id: [r.id, ..._].join(p.SUB_COMMAND_KEY_SEPARATOR),
-            name: [r.name, ..._].join(" "),
+            id: [r.id, ...f].join(p.SUB_COMMAND_KEY_SEPARATOR),
+            name: [r.name, ...f].join(" "),
             serverLocalizedName: a.name_localized,
             applicationId: o,
             type: null !== (t = r.type) && void 0 !== t ? t : d.ApplicationCommandType.CHAT,
@@ -137,7 +137,7 @@ function(e, t, n) {
             }(a.options),
             rootCommand: r,
             subCommandPath: l,
-            defaultMemberPermissions: null == r.default_member_permissions ? void 0 : u.default.deserialize(r.default_member_permissions),
+            defaultMemberPermissions: null == r.default_member_permissions ? void 0 : u.deserialize(r.default_member_permissions),
             dmPermission: r.dm_permission,
             permissions: s,
             displayName: [null !== (n = r.name_localized) && void 0 !== n ? n : r.name, ...E].join(" "),
@@ -188,19 +188,19 @@ function(e, t, n) {
                 }]),
                 useKeyedPermissions: l
             }));
-            let f = r.options.filter(e => e.type === d.ApplicationCommandOptionType.SUB_COMMAND);
-            for (let e = 0; e < f.length; e++) u.push(T({
+            let _ = r.options.filter(e => e.type === d.ApplicationCommandOptionType.SUB_COMMAND);
+            for (let e = 0; e < _.length; e++) u.push(T({
                 rootCommand: s,
-                command: f[e],
+                command: _[e],
                 applicationId: a,
                 subCommandPath: (null != o ? o : []).concat([{
-                    name: f[e].name,
+                    name: _[e].name,
                     type: d.ApplicationCommandOptionType.SUB_COMMAND,
-                    displayName: null !== (i = f[e].name_localized) && void 0 !== i ? i : f[e].name
+                    displayName: null !== (i = _[e].name_localized) && void 0 !== i ? i : _[e].name
                 }]),
                 useKeyedPermissions: l
             }));
-            return 0 === c.length && 0 === f.length && u.push(T({
+            return 0 === c.length && 0 === _.length && u.push(T({
                 rootCommand: s,
                 command: r,
                 applicationId: a,
@@ -259,9 +259,9 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !1
         }) || t.getIntegrations(i.id).length > 0);
-        return i.isArchivedLockedThread() ? e.can(u.default.combine(v.Permissions.USE_APPLICATION_COMMANDS, v.Permissions.MANAGE_THREADS), i) : !!(0, _.isReadableType)(i.type) && e.can(u.default.combine(v.Permissions.USE_APPLICATION_COMMANDS, v.Permissions.SEND_MESSAGES), i)
+        return i.isArchivedLockedThread() ? e.can(u.combine(v.Permissions.USE_APPLICATION_COMMANDS, v.Permissions.MANAGE_THREADS), i) : !!(0, f.isReadableType)(i.type) && e.can(u.combine(v.Permissions.USE_APPLICATION_COMMANDS, v.Permissions.SEND_MESSAGES), i)
     }
-    let O = u.default.deserialize(0);
+    let O = u.deserialize(0);
 
     function D(e) {
         let {
@@ -279,19 +279,19 @@ function(e, t, n) {
             if ("boolean" == typeof e) return e
         }
         let l = P(i, o, s);
-        return ("boolean" != typeof l || !!l) && (null == a || !u.default.equals(a, O) && t.can(a, n))
+        return ("boolean" != typeof l || !!l) && (null == a || !u.equals(a, O) && t.can(a, n))
     }
 
     function P(e, t, n) {
-        let i = n[(0, f.toPermissionKey)(e.userId, h.ApplicationCommandPermissionType.USER)];
+        let i = n[(0, _.toPermissionKey)(e.userId, h.ApplicationCommandPermissionType.USER)];
         if (null != i) return i.permission;
         let s = !1;
         for (let t of e.roles) {
-            let e = n[(0, f.toPermissionKey)(t, h.ApplicationCommandPermissionType.ROLE)];
+            let e = n[(0, _.toPermissionKey)(t, h.ApplicationCommandPermissionType.ROLE)];
             if (null != e && (s = !0, e.permission)) return !0
         }
         if (s) return !1;
-        let r = n[(0, f.toPermissionKey)(t, h.ApplicationCommandPermissionType.ROLE)];
+        let r = n[(0, _.toPermissionKey)(t, h.ApplicationCommandPermissionType.ROLE)];
         return null != r ? r.permission : null
     }
 

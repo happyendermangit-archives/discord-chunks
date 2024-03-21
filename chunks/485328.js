@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("599110"),
         d = n("773336"),
         c = n("49111");
-    let f = {},
-        _ = [],
+    let _ = {},
+        f = [],
         E = !1,
         h = a(new s(window)),
         g = (0, d.isMac)() ? "cmd" : "ctrl",
@@ -74,17 +74,17 @@ function(e, t, n) {
             n.length > 0 && new(0, l.default)("Keybinds").warn("Duplicate keyboard shortcuts defined:", n)
         },
         setLayout(e) {
-            f = e
+            _ = e
         },
         enable() {
-            !E && (E = !0, this.checkDupes(f), C(f))
+            !E && (E = !0, this.checkDupes(_), C(_))
         },
         enableTemp(e) {
-            _.push(f), f = e, C(e), E = !0
+            f.push(_), _ = e, C(e), E = !0
         },
         disableTemp() {
-            let e = _.pop();
-            null != e && (f = e), this.disable(), this.enable()
+            let e = f.pop();
+            null != e && (_ = e), this.disable(), this.enable()
         },
         disable() {
             E && (E = !1, T.forEach(e => e()), T = [], h.reset())
@@ -93,7 +93,7 @@ function(e, t, n) {
             E && this.hasBind(e) && h.unbind(e)
         },
         hasBind(e) {
-            let t = I(f);
+            let t = I(_);
             return e = (e = e.replace("meta", "cmd")).replace(/right |left /i, "").trim(), t.includes(e)
         }
     }

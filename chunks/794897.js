@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("185496"),
         d = n("689257"),
         c = n("753848"),
-        f = n("818697"),
-        _ = n("875081");
+        _ = n("818697"),
+        f = n("875081");
     let E = null,
         h = new l.ExtendedMemoryLru(750, 500),
         g = new u.Lru(15),
@@ -63,7 +63,7 @@ function(e, t, n) {
         }
         static recordChannel(e) {
             let t = i.default.getBasicChannel(e);
-            if (null != t && (0, f.isReadableChannel)(t)) {
+            if (null != t && (0, _.isReadableChannel)(t)) {
                 var n;
                 let i = {
                     guildId: null !== (n = t.guild_id) && void 0 !== n ? n : null,
@@ -85,11 +85,11 @@ function(e, t, n) {
         static dropUnreachableChannels() {
             for (let e of h.keys()) {
                 let t = i.default.getBasicChannel(e);
-                !(0, f.isReadableChannel)(t) && p.deleteChannel(e)
+                !(0, _.isReadableChannel)(t) && p.deleteChannel(e)
             }
         }
         static deleteUnreadableGuildChannels(e) {
-            for (let t of h.values()) e === t.guildId && !(0, f.isReadableChannelId)(t.channelId) && p.deleteChannel(t.channelId)
+            for (let t of h.values()) e === t.guildId && !(0, _.isReadableChannelId)(t.channelId) && p.deleteChannel(t.channelId)
         }
         static replaceLru(e) {
             h = e
@@ -115,12 +115,12 @@ function(e, t, n) {
     }
 
     function v() {
-        p.dropUnreachableChannels(), p.replaceLru((0, _.withFallbacks)(h, 1250))
+        p.dropUnreachableChannels(), p.replaceLru((0, f.withFallbacks)(h, 1250))
     }
 
     function T(e) {
         let t = e.id,
-            n = (0, f.isReadableChannel)(e),
+            n = (0, _.isReadableChannel)(e),
             i = r.default.getChannelId();
         n && t === i && p.recordChannel(t), !n && p.deleteChannel(t)
     }

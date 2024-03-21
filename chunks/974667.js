@@ -29,8 +29,8 @@ function(e, t, n) {
             defaultFocused: n,
             isEnabled: u,
             scrollToStart: c,
-            scrollToEnd: f,
-            onNavigatePreviousAtStart: _,
+            scrollToEnd: _,
+            onNavigatePreviousAtStart: f,
             onNavigateNextAtEnd: E,
             setFocus: h,
             setFocusOnList: g,
@@ -78,8 +78,8 @@ function(e, t, n) {
                     return null === (e = C.current) || void 0 === e ? void 0 : e.ownerDocument.activeElement
                 },
                 scrollToStart: c,
-                scrollToEnd: f
-            }), [t, c, f]),
+                scrollToEnd: _
+            }), [t, c, _]),
             [M, b] = i.useState(!1),
             U = i.useRef(M);
         i.useLayoutEffect(() => {
@@ -152,8 +152,8 @@ function(e, t, n) {
             V = i.useCallback(async () => {
                 let e = await L.getPreviousFocusableElement(w),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
-                null != t ? P(t) : null == e && null != _ && _()
-            }, [L, w, _, P]),
+                null != t ? P(t) : null == e && null != f && f()
+            }, [L, w, f, P]),
             G = i.useCallback(e => {
                 if (!y.current || !p && !U.current) return;
                 let n = v === o.Orientations.HORIZONTAL ? o.Keys.RIGHT : o.Keys.DOWN,
@@ -174,7 +174,7 @@ function(e, t, n) {
                         });
                         return;
                     case o.Keys.END:
-                        e.stopPropagation(), e.preventDefault(), f().then(() => {
+                        e.stopPropagation(), e.preventDefault(), _().then(() => {
                             var e;
                             let n = d(t, C),
                                 i = null === (e = n[n.length - 1]) || void 0 === e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
@@ -195,7 +195,7 @@ function(e, t, n) {
                         }
                     }
                 }
-            }, [k, V, t, v, f, c, P, p]),
+            }, [k, V, t, v, _, c, P, p]),
             F = i.useCallback(e => {
                 let n = null != e ? (0, l.createListItemId)(t, e) : null;
                 I.current = n

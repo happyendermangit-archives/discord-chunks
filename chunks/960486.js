@@ -23,8 +23,8 @@ function(e, t, n) {
         u = n("227645"),
         d = n("605451"),
         c = n("433600"),
-        f = n("577776"),
-        _ = n("810567"),
+        _ = n("577776"),
+        f = n("810567"),
         E = n("578706"),
         h = n("782340"),
         g = n("30441");
@@ -136,9 +136,9 @@ function(e, t, n) {
                         "aria-owns": L,
                         "aria-haspopup": "listbox",
                         className: a(g.combobox, u),
-                        children: [(0, i.jsx)(_.default, {
+                        children: [(0, i.jsx)(f.default, {
                             autoFocus: v,
-                            size: _.default.Sizes.MEDIUM,
+                            size: f.default.Sizes.MEDIUM,
                             placeholder: t,
                             query: N,
                             onChange: R,
@@ -158,7 +158,7 @@ function(e, t, n) {
                                 children: [(0, i.jsx)(d.Heading, {
                                     variant: "heading-md/semibold",
                                     children: h.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
-                                }), (0, i.jsx)(f.Text, {
+                                }), (0, i.jsx)(_.Text, {
                                     color: "text-muted",
                                     variant: "text-md/normal",
                                     children: h.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
@@ -210,11 +210,11 @@ function(e, t, n) {
             selectedColor: d = p.STANDARD,
             ...c
         } = e, {
-            activeDescendant: f,
-            selected: _,
+            activeDescendant: _,
+            selected: f,
             setSelected: E,
             itemToString: h
-        } = s.useContext(I), S = h(n), v = f === S, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : _.has(n), A = (0, o.useListItem)(S);
+        } = s.useContext(I), S = h(n), v = _ === S, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : f.has(n), A = (0, o.useListItem)(S);
         return (0, i.jsx)(u.Clickable, {
             tag: "li",
             id: S,

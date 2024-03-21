@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("172538"),
         d = n("42203"),
         c = n("305961"),
-        f = n("88093"),
-        _ = n("18494"),
+        _ = n("88093"),
+        f = n("18494"),
         E = n("800762"),
         h = n("404008");
     let g = function(e, t) {
@@ -23,7 +23,7 @@ function(e, t, n) {
             m = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             p = d.default.getChannel(e),
             S = E.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-            v = null != p ? f.default.getCheck(p.guild_id) : null,
+            v = null != p ? _.default.getCheck(p.guild_id) : null,
             T = null != t && (0, r.shouldShowMembershipVerificationGate)(t);
         if (!T) {
             if (null == v || v.canChat || (0, a.canLurkerListen)(p)) {
@@ -56,7 +56,7 @@ function(e, t, n) {
                         type: "VOICE_CHANNEL_SELECT",
                         guildId: t,
                         channelId: e,
-                        currentVoiceChannelId: _.default.getVoiceChannelId(),
+                        currentVoiceChannelId: f.default.getVoiceChannelId(),
                         video: g,
                         stream: m
                     })

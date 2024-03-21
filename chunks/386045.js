@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("568734"),
         d = n("30591"),
         c = n("80028"),
-        f = n("49111"),
-        _ = n("686298");
+        _ = n("49111"),
+        f = n("686298");
     let E = "default",
         h = [],
         g = [],
@@ -31,8 +31,8 @@ function(e, t, n) {
             clipsEnabled: !1,
             storageLocation: E,
             clipsQuality: {
-                resolution: _.ApplicationStreamResolutions.RESOLUTION_1080,
-                frameRate: _.ApplicationStreamFPS.FPS_30
+                resolution: f.ApplicationStreamResolutions.RESOLUTION_1080,
+                frameRate: f.ApplicationStreamFPS.FPS_30
             },
             clipsLength: c.ClipsLengthSettings.SECONDS_30,
             remindersEnabled: !0,
@@ -347,9 +347,9 @@ function(e, t, n) {
         },
         RTC_CONNECTION_FLAGS: function(e) {
             T[e.userId] = {
-                clipsEnabled: (0, u.hasFlag)(e.flags, f.VoiceFlags.CLIPS_ENABLED),
-                allowVoiceRecording: (0, u.hasFlag)(e.flags, f.VoiceFlags.ALLOW_VOICE_RECORDING),
-                allowAnyViewerClips: (0, u.hasFlag)(e.flags, f.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS)
+                clipsEnabled: (0, u.hasFlag)(e.flags, _.VoiceFlags.CLIPS_ENABLED),
+                allowVoiceRecording: (0, u.hasFlag)(e.flags, _.VoiceFlags.ALLOW_VOICE_RECORDING),
+                allowAnyViewerClips: (0, u.hasFlag)(e.flags, _.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS)
             }
         },
         CLIPS_SHOW_CALL_WARNING: function(e) {

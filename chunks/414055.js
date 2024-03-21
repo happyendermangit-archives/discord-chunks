@@ -21,8 +21,8 @@ function(e, t, n) {
         u = n("817736"),
         d = n.n(u),
         c = n("146606"),
-        f = n("394846"),
-        _ = n("118810"),
+        _ = n("394846"),
+        f = n("118810"),
         E = n("862337"),
         h = n("413197"),
         g = n("120590"),
@@ -58,8 +58,8 @@ function(e, t, n) {
                 onNonAccessibleClick: o,
                 tooltipClassName: u,
                 tooltipContentClassName: d,
-                spacing: f = 8,
-                animationStyle: _,
+                spacing: _ = 8,
+                animationStyle: f,
                 disableTooltipPointerEvents: E = !1,
                 allowOverflow: h = !1
             } = e, g = "".concat("string" == typeof a ? a : "", ":").concat(i);
@@ -70,19 +70,19 @@ function(e, t, n) {
                 autoInvert: !0,
                 align: n,
                 positionKey: g,
-                spacing: f,
+                spacing: _,
                 nudgeAlignIntoViewport: !0,
                 children: e => {
                     let {
                         position: t,
-                        nudge: f
+                        nudge: _
                     } = e;
                     return (0, r.jsxs)(c.animated.div, {
                         onClick: o,
                         className: l(S.tooltip, T[null != t ? t : i], T[s], {
                             [S.tooltipDisablePointerEvents]: E
                         }, u),
-                        style: _,
+                        style: f,
                         children: [(0, r.jsx)("div", {
                             className: S.tooltipPointer,
                             style: function(e, t, n) {
@@ -92,7 +92,7 @@ function(e, t, n) {
                                 return t === (i ? "top" : "left") ? (s = "0%", r += 16) : t === (i ? "bottom" : "right") && (s = "100%", r -= 20), {
                                     [i ? "top" : "left"]: "calc(".concat(s, " + ").concat(r, "px)")
                                 }
-                            }(null != t ? t : i, n, f)
+                            }(null != t ? t : i, n, _)
                         }), (0, r.jsx)("div", {
                             className: l(S.tooltipContent, {
                                 [S.tooltipContentAllowOverflow]: h
@@ -152,7 +152,7 @@ function(e, t, n) {
         }
         setDomElement() {
             let e = d.findDOMNode(this);
-            if (!(0, _.isElement)(e)) throw Error("Tooltip cannot find DOM node");
+            if (!(0, f.isElement)(e)) throw Error("Tooltip cannot find DOM node");
             this.domElementRef.current = e, this.hasDomElement = !0, this.forceUpdate()
         }
         componentWillUnmount() {
@@ -195,8 +195,8 @@ function(e, t, n) {
                 onAnimationRest: u,
                 allowOverflow: d,
                 clickableOnMobile: c,
-                hideOnClick: _
-            } = this.props, E = (f.isMobile || f.isTablet) && !0 === c && _, h = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, g = null;
+                hideOnClick: f
+            } = this.props, E = (_.isMobile || _.isTablet) && !0 === c && f, h = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, g = null;
             return g = e instanceof Function ? h ? e() : null : e, (0, r.jsx)(N, {
                 disableTooltipPointerEvents: !1 !== l && !E || !0 === l,
                 targetElementRef: this.domElementRef,
@@ -220,7 +220,7 @@ function(e, t, n) {
             } = this.props;
             if (t) {
                 let e = d.findDOMNode(this);
-                if (null == e || (0, _.isElement)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth) return
+                if (null == e || (0, f.isElement)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth) return
             }
             null != e ? this.showTimeout.start(e, () => this.toggleShow(!0), !1) : this.toggleShow(!0)
         }
@@ -241,16 +241,16 @@ function(e, t, n) {
             super(...e), this.showTimeout = new E.Timeout, this.domElementRef = a.createRef(), this.hasDomElement = !1, this.state = {
                 shouldShowTooltip: !1
             }, this.handleMouseEnter = () => {
-                !((f.isMobile || f.isTablet) && !0 === this.props.clickableOnMobile) && this.show()
+                !((_.isMobile || _.isTablet) && !0 === this.props.clickableOnMobile) && this.show()
             }, this.handleMouseLeave = () => {
-                !((f.isMobile || f.isTablet) && !0 === this.props.clickableOnMobile) && this.hide()
+                !((_.isMobile || _.isTablet) && !0 === this.props.clickableOnMobile) && this.hide()
             }, this.handleFocus = () => {
                 m.default.keyboardModeEnabled && this.show()
             }, this.handleBlur = () => {
                 this.hide()
             }, this.handleClick = () => {
                 let e = this.hasDomElement;
-                e && this.props.hideOnClick ? this.hide() : !e && (f.isMobile || f.isTablet) && !0 === this.props.clickableOnMobile && this.show()
+                e && this.props.hideOnClick ? this.hide() : !e && (_.isMobile || _.isTablet) && !0 === this.props.clickableOnMobile && this.show()
             }, this.handleContextMenu = () => {
                 this.hide()
             }

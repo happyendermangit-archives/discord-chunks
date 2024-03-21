@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         areRoleSubscriptionsVisibleInGuild: function() {
-            return f
+            return _
         },
         useRoleSubscriptionsVisibleInGuild: function() {
-            return _
+            return f
         },
         useShowRoleSubscriptionsInChannelList: function() {
             return E
@@ -30,11 +30,11 @@ function(e, t, n) {
         return !!u || !1
     }
 
-    function f(e, t) {
+    function _(e, t) {
         return !!c(e) || (0, u.computeHasRoleSubscriptionsInGuild)(e, t)
     }
 
-    function _(e) {
+    function f(e) {
         let t = (0, u.default)(e),
             n = (0, i.useStateFromStores)([l.default, o.default], () => c(e, [l.default, o.default]), [e]),
             {
@@ -44,7 +44,7 @@ function(e, t, n) {
     }
 
     function E(e) {
-        let t = _(e),
+        let t = f(e),
             n = (0, s.useIsEligibleForSubscriptionsInGuildShop)(e, "useShowRoleSubscriptionsInChannelList");
         return t && !n
     }

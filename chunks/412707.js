@@ -8,7 +8,7 @@ function(e, t, n) {
             return a
         },
         useApplicationDirectoryHistory: function() {
-            return _
+            return f
         },
         getPreviousView: function() {
             return E
@@ -35,12 +35,12 @@ function(e, t, n) {
         d = n("349503"),
         c = n("49111");
     (i = r || (r = {})).HOME = "home", i.SEARCH = "search", i.APPLICATION = "application", (s = a || (a = {})).EXTERNAL = "External", s.KEYBOARD_SHORTCUT = "Keyboard Shortcut", s.APPLICATION_DIRECTORY_URL = "Application Directory URL", s.APPLICATION_DIRECTORY_PROFILE_EMBED = "Application Directory Profile Embed", s.APPLICATION_DIRECTORY_UPSELL_MODAL = "Application Directory Upsell Modal", s.GUILD_HEADER_POPOUT = "Guild Header Popout", s.GUILD_SETTINGS = "Guild Settings", s.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings", s.GUILD_CONTEXT_MENU = "Guild Context Menu";
-    let f = (0, l.default)(() => ({
+    let _ = (0, l.default)(() => ({
             guildId: null,
             entrypoint: null,
             trackedOpenedFromExternalEntrypoint: !1
         })),
-        _ = f;
+        f = _;
 
     function E() {
         let {
@@ -88,26 +88,26 @@ function(e, t, n) {
     }
 
     function g(e) {
-        f.setState({
+        _.setState({
             entrypoint: e
         })
     }
 
     function m(e) {
-        f.setState({
+        _.setState({
             guildId: e
         })
     }
 
     function p() {
-        f.setState({
+        _.setState({
             entrypoint: null,
             guildId: null
         })
     }
 
     function S(e) {
-        f.setState({
+        _.setState({
             trackedOpenedFromExternalEntrypoint: e
         })
     }

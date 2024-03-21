@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("376556"),
         d = n("550368"),
         c = n("718517"),
-        f = n("47319"),
-        _ = n("102985"),
+        _ = n("47319"),
+        f = n("102985"),
         E = n("49111");
     let h = 1 * c.default.Millis.MINUTE,
         g = e => "https://youtube.com/watch?v=".concat(e),
@@ -51,7 +51,7 @@ function(e, t, n) {
     }
     let N = new class e {
         start() {
-            !this._started && (this._started = !0, f.default.isFetching() ? l.default.fetch() : this._check())
+            !this._started && (this._started = !0, _.default.isFetching() ? l.default.fetch() : this._check())
         }
         stop() {
             this._started = !1, T = null, v = 0, null != this._nextCheck && clearTimeout(this._nextCheck), o.default.dispatch({
@@ -75,11 +75,11 @@ function(e, t, n) {
                 if (null == l || "live" !== l.type) throw Error("no stream");
                 let {
                     thumbnail_url: c,
-                    game_id: f,
-                    title: _
+                    game_id: _,
+                    title: f
                 } = l, h = {
                     large_image: null != c && null !== (i = (0, d.getAssetFromImageURL)(E.PlatformTypes.TWITCH, c)) && void 0 !== i ? i : void 0
-                }, g = await y(f, t), m = u.default.get(E.PlatformTypes.TWITCH);
+                }, g = await y(_, t), m = u.default.get(E.PlatformTypes.TWITCH);
                 let S = null !== (r = c, s = null === (a = p.exec(r)) || void 0 === a ? void 0 : a[1]) && void 0 !== s ? s : e.name;
                 return {
                     url: null === (n = m.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(m, {
@@ -88,7 +88,7 @@ function(e, t, n) {
                     }),
                     name: m.name,
                     assets: h,
-                    details: _,
+                    details: f,
                     state: g
                 }
             } catch (n) {
@@ -140,7 +140,7 @@ function(e, t, n) {
         }
         _check() {
             if (!this._started) return;
-            let e = f.default.getAccounts();
+            let e = _.default.getAccounts();
             if (null == e) return;
             null != this._nextCheck && clearTimeout(this._nextCheck);
             let t = [E.PlatformTypes.TWITCH],
@@ -168,11 +168,11 @@ function(e, t, n) {
     };
 
     function R() {
-        _.default.enabled ? N.start() : N.stop()
+        f.default.enabled ? N.start() : N.stop()
     }
     class O extends r.default.Store {
         initialize() {
-            R(), this.waitFor(f.default), this.syncWith([_.default], R)
+            R(), this.waitFor(_.default), this.syncWith([f.default], R)
         }
         getStream() {
             return S

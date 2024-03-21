@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("305961"),
         d = n("660478"),
         c = n("18494"),
-        f = n("299039"),
-        _ = n("689275"),
+        _ = n("299039"),
+        f = n("689275"),
         E = n("755624"),
         h = n("984674"),
         g = n("724210");
@@ -30,7 +30,7 @@ function(e, t, n) {
 
     function y() {
         for (let e in m = {}, T = {}, p = {}, S = {}, v = {}, A = c.default.getChannelId(), C) clearTimeout(C[e]);
-        C = {}, _.default.forEachGuild(e => {
+        C = {}, f.default.forEachGuild(e => {
             R(e)
         }), O()
     }
@@ -40,7 +40,7 @@ function(e, t, n) {
     }
 
     function R(e) {
-        let t = _.default.getThreadsForGuild(e);
+        let t = f.default.getThreadsForGuild(e);
         for (let e in t)
             for (let n in t[e]) {
                 F(n);
@@ -85,16 +85,16 @@ function(e, t, n) {
         let s = d.default.getTrackedAckMessageId(t);
         if (null == s) {
             let e = Date.now();
-            null != i.joinedAt && (i.joinedAt instanceof Date ? e = i.joinedAt.getTime() : "string" == typeof i.joinedAt && (e = new Date(i.joinedAt).getTime())), s = f.default.fromTimestamp(e)
+            null != i.joinedAt && (i.joinedAt instanceof Date ? e = i.joinedAt.getTime() : "string" == typeof i.joinedAt && (e = new Date(i.joinedAt).getTime())), s = _.default.fromTimestamp(e)
         }
-        for (let n in S[e][t]) t === A ? d.default.isNewForumThread(n, t, i) && I[e][t]++ : f.default.compare(n, s) > 0 && !d.default.hasOpenedThread(n) && I[e][t]++
+        for (let n in S[e][t]) t === A ? d.default.isNewForumThread(n, t, i) && I[e][t]++ : _.default.compare(n, s) > 0 && !d.default.hasOpenedThread(n) && I[e][t]++
     }
 
     function L(e, t, n) {
         if (null == t) return !1;
         let i = l.default.getChannel(n),
             s = E.default.joinTimestamp(n);
-        if (null != i && _.default.isActive(e, t, n)) {
+        if (null != i && f.default.isActive(e, t, n)) {
             if (null != s) {
                 let e = {
                         channel: i,
@@ -120,7 +120,7 @@ function(e, t, n) {
 
     function b(e) {
         let t = l.default.getChannel(e.id);
-        return !!(null != t && _.default.isActive(e.guildId, t.parent_id, e.id)) && L(t.guild_id, t.parent_id, t.id)
+        return !!(null != t && f.default.isActive(e.guildId, t.parent_id, e.id)) && L(t.guild_id, t.parent_id, t.id)
     }
 
     function U(e) {
@@ -253,7 +253,7 @@ function(e, t, n) {
         q = {};
     class X extends r.default.Store {
         initialize() {
-            this.waitFor(_.default, l.default, E.default, d.default), this.syncWith([c.default], k)
+            this.waitFor(f.default, l.default, E.default, d.default), this.syncWith([c.default], k)
         }
         hasActiveJoinedUnreadThreads(e, t) {
             return e in p && t in p[e]
@@ -375,7 +375,7 @@ function(e, t, n) {
             let {
                 channel: t
             } = e, n = !1;
-            return null != t.guild_id && null != t.parent_id && (t.guild_id in m && t.parent_id in m[t.guild_id] && (delete m[t.guild_id][t.parent_id], n = !0), t.guild_id in p && t.parent_id in p[t.guild_id] && (delete p[t.guild_id][t.parent_id], n = !0), t.guild_id in T && t.parent_id in T[t.guild_id] && (f.default.keys(T[t.guild_id][t.parent_id]).forEach(F), delete T[t.guild_id][t.parent_id], n = !0), t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], n = !0), t.guild_id in v && t.parent_id in v[t.guild_id] && (delete v[t.guild_id][t.parent_id], n = !0), n && P(t.guild_id, t.parent_id)), n
+            return null != t.guild_id && null != t.parent_id && (t.guild_id in m && t.parent_id in m[t.guild_id] && (delete m[t.guild_id][t.parent_id], n = !0), t.guild_id in p && t.parent_id in p[t.guild_id] && (delete p[t.guild_id][t.parent_id], n = !0), t.guild_id in T && t.parent_id in T[t.guild_id] && (_.default.keys(T[t.guild_id][t.parent_id]).forEach(F), delete T[t.guild_id][t.parent_id], n = !0), t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], n = !0), t.guild_id in v && t.parent_id in v[t.guild_id] && (delete v[t.guild_id][t.parent_id], n = !0), n && P(t.guild_id, t.parent_id)), n
         },
         THREAD_MEMBER_UPDATE: b,
         THREAD_MEMBERS_UPDATE: b,

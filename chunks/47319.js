@@ -14,13 +14,13 @@ function(e, t, n) {
         u = n("49111");
     let d = new Set([u.PlatformTypes.CONTACTS]),
         c = !0,
-        f = [],
         _ = [],
+        f = [],
         E = {},
         h = {},
         g = {},
         m = e => {
-            f = e.filter(e => !d.has(e.type) && a.default.isSupported(e.type)), _ = e.filter(e => d.has(e.type)), c = !1
+            _ = e.filter(e => !d.has(e.type) && a.default.isSupported(e.type)), f = e.filter(e => d.has(e.type)), c = !1
         };
     class p extends i.default.Store {
         isJoining(e) {
@@ -33,16 +33,16 @@ function(e, t, n) {
             return c
         }
         getAccounts() {
-            return f
-        }
-        getLocalAccounts() {
             return _
         }
+        getLocalAccounts() {
+            return f
+        }
         getAccount(e, t) {
-            return f.find(n => (null == e || n.id === e) && n.type === t)
+            return _.find(n => (null == e || n.id === e) && n.type === t)
         }
         getLocalAccount(e) {
-            return _.find(t => t.type === e)
+            return f.find(t => t.type === e)
         }
         isSuggestedAccountType(e) {
             return h[e] || !1
@@ -75,7 +75,7 @@ function(e, t, n) {
                 id: n,
                 revoked: i,
                 accessToken: s
-            } = e, r = f.find(e => e.id === n && e.type === t);
+            } = e, r = _.find(e => e.id === n && e.type === t);
             if (null == r) return !1;
             null != i && (r.revoked = i), null != s && (r.accessToken = s)
         },

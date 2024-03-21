@@ -14,12 +14,12 @@ function(e, t, n) {
         u = n("325236"),
         d = n("159350"),
         c = n("354149");
-    let f = {
+    let _ = {
             duration: 300,
             friction: 24,
             tension: 280
         },
-        _ = {
+        f = {
             [d.ToastPosition.TOP]: {
                 styles: c.containerTop,
                 transition: {
@@ -27,18 +27,18 @@ function(e, t, n) {
                     from: {
                         transform: "translate3d(0, -100%, 0)",
                         opacity: 0,
-                        config: f
+                        config: _
                     },
                     enter: {
                         transform: "translate3d(0, -0px, 0)",
                         opacity: 1,
-                        config: f
+                        config: _
                     },
                     leave: {
                         transform: "translate3d(0, -100%, 0)",
                         opacity: 0,
                         config: {
-                            ...f,
+                            ..._,
                             friction: 40,
                             clamp: !0
                         }
@@ -52,18 +52,18 @@ function(e, t, n) {
                     from: {
                         transform: "translate3d(0, 100%, 0)",
                         opacity: 0,
-                        config: f
+                        config: _
                     },
                     enter: {
                         transform: "translate3d(0, 0px, 0)",
                         opacity: 1,
-                        config: f
+                        config: _
                     },
                     leave: {
                         transform: "translate3d(0, 100%, 0)",
                         opacity: 0,
                         config: {
-                            ...f,
+                            ..._,
                             friction: 40,
                             clamp: !0
                         }
@@ -74,21 +74,21 @@ function(e, t, n) {
 
     function E() {
         var e, t, n, c;
-        let f = (0, u.useToastStore)(e => e.currentToast),
-            E = s.useRef(null !== (n = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : d.TOAST_DEFAULT_OPTIONS.position),
-            h = s.useRef(null !== (c = null == f ? void 0 : null === (t = f.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : d.TOAST_DEFAULT_OPTIONS.duration),
+        let _ = (0, u.useToastStore)(e => e.currentToast),
+            E = s.useRef(null !== (n = null == _ ? void 0 : null === (e = _.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : d.TOAST_DEFAULT_OPTIONS.position),
+            h = s.useRef(null !== (c = null == _ ? void 0 : null === (t = _.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : d.TOAST_DEFAULT_OPTIONS.duration),
             g = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion);
         s.useEffect(() => {
-            if (null != f) {
+            if (null != _) {
                 var e, t, n, i;
-                E.current = null !== (n = null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : d.TOAST_DEFAULT_OPTIONS.position, h.current = null !== (i = null === (t = f.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : d.TOAST_DEFAULT_OPTIONS.duration
+                E.current = null !== (n = null === (e = _.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : d.TOAST_DEFAULT_OPTIONS.position, h.current = null !== (i = null === (t = _.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : d.TOAST_DEFAULT_OPTIONS.duration
             }
-        }, [f]);
+        }, [_]);
         let m = s.useMemo(() => {
                 var e, t;
-                return _[null !== (t = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : E.current]
-            }, [f]),
-            p = (0, r.useTransition)(f, {
+                return f[null !== (t = null == _ ? void 0 : null === (e = _.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : E.current]
+            }, [_]),
+            p = (0, r.useTransition)(_, {
                 keys: e => {
                     var t;
                     return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
@@ -97,10 +97,10 @@ function(e, t, n) {
                 ...m.transition
             });
         return s.useEffect(() => {
-            null != f && setTimeout(() => {
+            null != _ && setTimeout(() => {
                 (0, u.popToast)()
             }, h.current)
-        }, [f]), (0, i.jsx)("div", {
+        }, [_]), (0, i.jsx)("div", {
             className: m.styles,
             children: p((e, t) => null === t ? null : (0, i.jsx)(r.animated.div, {
                 style: e,

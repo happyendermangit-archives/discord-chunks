@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("584687"),
         d = n("103979"),
         c = n("845579"),
-        f = n("373469"),
-        _ = n("42203"),
+        _ = n("373469"),
+        f = n("42203"),
         E = n("42887"),
         h = n("590401"),
         g = n("568734"),
@@ -31,14 +31,14 @@ function(e, t, n) {
             let i = 0,
                 s = c.ClipsAllowVoiceRecording.getSetting();
             i = (0, g.setFlag)(i, m.VoiceFlags.ALLOW_VOICE_RECORDING, s);
-            let _ = (0, o.default)(E.default),
-                h = (0, r.areClipsEnabled)() && a.default.getSettings().clipsEnabled && ((null === (e = f.default.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === m.ApplicationStreamStates.ACTIVE || (null === (t = f.default.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === m.ApplicationStreamStates.PAUSED),
+            let f = (0, o.default)(E.default),
+                h = (0, r.areClipsEnabled)() && a.default.getSettings().clipsEnabled && ((null === (e = _.default.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === m.ApplicationStreamStates.ACTIVE || (null === (t = _.default.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === m.ApplicationStreamStates.PAUSED),
                 {
                     enableDecoupledGameClipping: p
                 } = u.default.getCurrentConfig({
                     location: "computeVoiceFlags"
                 }),
-                S = _ && a.default.getSettings().decoupledClipsEnabled && (null === (n = l.default.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && p;
+                S = f && a.default.getSettings().decoupledClipsEnabled && (null === (n = l.default.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && p;
             i = (0, g.setFlag)(i, m.VoiceFlags.CLIPS_ENABLED, h || S);
             let {
                 enableViewerClipping: v
@@ -46,7 +46,7 @@ function(e, t, n) {
                 location: "computeVoiceFlags"
             }, {
                 autoTrackExposure: !1
-            }), T = v && _ && a.default.getSettings().viewerClipsEnabled;
+            }), T = v && f && a.default.getSettings().viewerClipsEnabled;
             return i = (0, g.setFlag)(i, m.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS, T)
         }
         getInitialState() {
@@ -95,7 +95,7 @@ function(e, t, n) {
                 videoStreamParameters: u,
                 flags: d = 0
             } = e;
-            a && (null === (t = _.default.getChannel(i)) || void 0 === t ? void 0 : t.type) === m.ChannelTypes.GUILD_STAGE_VOICE ? this.socket.voiceStateUpdate({
+            a && (null === (t = f.default.getChannel(i)) || void 0 === t ? void 0 : t.type) === m.ChannelTypes.GUILD_STAGE_VOICE ? this.socket.voiceStateUpdate({
                 guildId: n,
                 channelId: i,
                 selfMute: s,

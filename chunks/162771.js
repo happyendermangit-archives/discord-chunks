@@ -15,28 +15,28 @@ function(e, t, n) {
         u = n("49111");
     let d = null,
         c = null,
-        f = {};
+        _ = {};
 
-    function _() {
+    function f() {
         null != d && null == l.default.getGuild(d) && null == r.default.getRequest(d) && (d = null), null != c && null == l.default.getGuild(c) && null == r.default.getRequest(c) && (c = null), E(d)
     }
 
     function E(e) {
-        null != e && (f[e] = Date.now())
+        null != e && (_[e] = Date.now())
     }
 
     function h(e) {
         let t = !1;
-        return delete f[e], c === e && (c = null, t = !0), d === e && (Object.values(l.default.getGuilds()).find(t => t.id !== e), d = null, (0, a.replaceWith)(u.Routes.ME), t = !0), t
+        return delete _[e], c === e && (c = null, t = !0), d === e && (Object.values(l.default.getGuilds()).find(t => t.id !== e), d = null, (0, a.replaceWith)(u.Routes.ME), t = !0), t
     }
     class g extends i.default.PersistedStore {
         initialize(e) {
             var t, n, i;
-            this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(l.default, o.default), f = null !== (t = null == e ? void 0 : e.selectedGuildTimestampMillis) && void 0 !== t ? t : {}, d = null !== (n = null == e ? void 0 : e.selectedGuildId) && void 0 !== n ? n : null, c = null !== (i = null == e ? void 0 : e.lastSelectedGuildId) && void 0 !== i ? i : null
+            this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(l.default, o.default), _ = null !== (t = null == e ? void 0 : e.selectedGuildTimestampMillis) && void 0 !== t ? t : {}, d = null !== (n = null == e ? void 0 : e.selectedGuildId) && void 0 !== n ? n : null, c = null !== (i = null == e ? void 0 : e.lastSelectedGuildId) && void 0 !== i ? i : null
         }
         getState() {
             return {
-                selectedGuildTimestampMillis: f,
+                selectedGuildTimestampMillis: _,
                 selectedGuildId: d,
                 lastSelectedGuildId: c
             }
@@ -48,14 +48,14 @@ function(e, t, n) {
             return c
         }
         getLastSelectedTimestamp(e) {
-            return d === e ? -1 : f[e]
+            return d === e ? -1 : _[e]
         }
     }
     g.displayName = "SelectedGuildStore", g.persistKey = "SelectedGuildStore";
     var m = new g(s.default, {
-        CONNECTION_OPEN: _,
+        CONNECTION_OPEN: f,
         OVERLAY_INITIALIZE: function(e) {
-            d = e.selectedGuildId, c = void 0, _()
+            d = e.selectedGuildId, c = void 0, f()
         },
         CHANNEL_SELECT: function(e) {
             let {

@@ -10,8 +10,8 @@ function(e, t, n) {
         u = n("446674"),
         d = n("95410"),
         c = n("913144"),
-        f = n("190017"),
-        _ = n("161454"),
+        _ = n("190017"),
+        f = n("161454"),
         E = n("271938"),
         h = n("677225"),
         g = n("964889"),
@@ -106,9 +106,9 @@ function(e, t, n) {
     }
 
     function B() {
-        for (let e of _.default.getRunningDiscordApplicationIds()) f.cancel(e, e);
-        let e = _.default.getVisibleGame();
-        return !N && null != e && e.pid !== M && f.pause(), M = null == e ? null : e.pid, !1
+        for (let e of f.default.getRunningDiscordApplicationIds()) _.cancel(e, e);
+        let e = f.default.getVisibleGame();
+        return !N && null != e && e.pid !== M && _.pause(), M = null == e ? null : e.pid, !1
     }
     class H extends u.default.Store {
         initialize() {
@@ -122,7 +122,7 @@ function(e, t, n) {
                 comboId: e,
                 action: "Patch"
             } : e);
-            null != t.paused && (N = t.paused), null != t.userActions && (P = new Map(Array.from(t.userActions))), this.waitFor(S.default, _.default), this.syncWith([_.default], B), this.waitFor(S.default)
+            null != t.paused && (N = t.paused), null != t.userActions && (P = new Map(Array.from(t.userActions))), this.waitFor(S.default, f.default), this.syncWith([f.default], B), this.waitFor(S.default)
         }
         get activeItems() {
             return C.map(e => {
@@ -202,10 +202,10 @@ function(e, t, n) {
                         let e = P.get(t);
                         switch (e) {
                             case "Install":
-                                f.completeInstall(n, r);
+                                _.completeInstall(n, r);
                                 break;
                             case "Repair":
-                                f.completeRepair(n, r)
+                                _.completeRepair(n, r)
                         }
                         P.delete(t)
                     }

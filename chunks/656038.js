@@ -16,8 +16,8 @@ function(e, t, n) {
             type: t
         } = e;
         if (null == e.guild_id || !s.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(t)) return !1;
-        if (e.isGuildVocal() && !r.default.canEveryoneRole(a.Permissions.CONNECT, e)) return !0;
+        if (e.isGuildVocal() && !r.canEveryoneRole(a.Permissions.CONNECT, e)) return !0;
         let n = e.permissionOverwrites[e.guild_id];
-        return null != n && i.default.has(n.deny, a.Permissions.VIEW_CHANNEL)
+        return null != n && i.has(n.deny, a.Permissions.VIEW_CHANNEL)
     }
 }

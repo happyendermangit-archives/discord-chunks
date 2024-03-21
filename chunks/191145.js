@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("191225"),
         d = n("605250"),
         c = n("76393"),
-        f = n("374014"),
-        _ = n("373469"),
+        _ = n("374014"),
+        f = n("373469"),
         E = n("271938"),
         h = n("950104"),
         g = n("42203"),
@@ -63,7 +63,7 @@ function(e, t, n) {
                     return
                 }
                 let i = A.ParticipantSelectionTypes.NONE,
-                    r = n.toArray(I.ChannelRTCParticipantsIndexes.STREAM).find(e => e.type === A.ParticipantTypes.STREAM && _.default.getActiveStreamForStreamKey(e.id));
+                    r = n.toArray(I.ChannelRTCParticipantsIndexes.STREAM).find(e => e.type === A.ParticipantTypes.STREAM && f.default.getActiveStreamForStreamKey(e.id));
                 if (null != r) s(r.type === A.ParticipantTypes.STREAM, "Impossible condition"), i = r.id;
                 else if (1 === n.size()) i = t;
                 else if (1 === n.size(I.ChannelRTCParticipantsIndexes.VIDEO)) {
@@ -77,7 +77,7 @@ function(e, t, n) {
                 let [o] = B(e);
                 if (o !== A.ParticipantSelectionTypes.AUTO && o !== A.ParticipantSelectionTypes.NONE) {
                     let e = n.getParticipant(o);
-                    (null == e || e.type === A.ParticipantTypes.STREAM && null == _.default.getActiveStreamForStreamKey(e.id)) && (o = A.ParticipantSelectionTypes.NONE)
+                    (null == e || e.type === A.ParticipantTypes.STREAM && null == f.default.getActiveStreamForStreamKey(e.id)) && (o = A.ParticipantSelectionTypes.NONE)
                 }
                 K(e, [o, i])
             }(n), !0) : t
@@ -191,7 +191,7 @@ function(e, t, n) {
         } = e, {
             channelId: n,
             ownerId: i
-        } = (0, f.decodeStreamKey)(t);
+        } = (0, _.decodeStreamKey)(t);
         return x(i, [n])
     }
 
@@ -201,7 +201,7 @@ function(e, t, n) {
     }
     class et extends o.default.Store {
         initialize() {
-            this.waitFor(_.default, E.default, h.default, g.default, u.default, m.default, p.default, S.default, v.default, T.default), this.syncWith([u.default], q), this.syncWith([c.default], z)
+            this.waitFor(f.default, E.default, h.default, g.default, u.default, m.default, p.default, S.default, v.default, T.default), this.syncWith([u.default], q), this.syncWith([c.default], z)
         }
         getParticipantsVersion(e) {
             return G(e).version
@@ -358,11 +358,11 @@ function(e, t, n) {
                 (0, A.isStreamParticipant)(e) && i.updateParticipant(e.user.id)
             });
             let [, r] = B(t);
-            if (K(t, [null != n ? n : A.ParticipantSelectionTypes.NONE, r]), (0, f.isStreamKey)(n)) {
+            if (K(t, [null != n ? n : A.ParticipantSelectionTypes.NONE, r]), (0, _.isStreamKey)(n)) {
                 try {
                     let {
                         ownerId: e
-                    } = (0, f.decodeStreamKey)(n);
+                    } = (0, _.decodeStreamKey)(n);
                     e === E.default.getId() && x(e, [t])
                 } catch (e) {
                     y.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
@@ -414,7 +414,7 @@ function(e, t, n) {
                 selfStreamHidden: n
             } = e, i = E.default.getId();
             if (n) {
-                let [e] = B(t), n = (0, f.isStreamKey)(e);
+                let [e] = B(t), n = (0, _.isStreamKey)(e);
                 n && e.includes(i) && K(t, null)
             }
             x(i, [t])
@@ -463,7 +463,7 @@ function(e, t, n) {
             } = e, {
                 channelId: n,
                 ownerId: i
-            } = (0, f.decodeStreamKey)(t);
+            } = (0, _.decodeStreamKey)(t);
             return x(i, [n])
         },
         SPEAKING: X,

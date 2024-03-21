@@ -16,10 +16,10 @@ function(e, t, n) {
 
     function c(e) {
         var t;
-        null === (t = e.threads) || void 0 === t || t.forEach(f)
+        null === (t = e.threads) || void 0 === t || t.forEach(_)
     }
 
-    function f(e) {
+    function _(e) {
         if (!l.ALL_CHANNEL_TYPES.has(e.type)) return !1;
         let t = function(e) {
             if (!(e.id in d)) {
@@ -36,11 +36,11 @@ function(e, t, n) {
         null != e.memberCount && (t.memberCount = e.memberCount), null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview)
     }
 
-    function _(e) {
+    function f(e) {
         let {
             channel: t
         } = e;
-        return f(t)
+        return _(t)
     }
 
     function E(e) {
@@ -62,7 +62,7 @@ function(e, t, n) {
     function g(e) {
         if (null != e && !(e.id in d)) {
             let t = u.default.getChannel(e.id);
-            if (null != t) return f(t), !0
+            if (null != t) return _(t), !0
         }
         return !1
     }
@@ -115,13 +115,13 @@ function(e, t, n) {
             } = e;
             t = n.id, d = s.omitBy(d, e => e.parentId === t)
         },
-        THREAD_CREATE: _,
-        THREAD_UPDATE: _,
+        THREAD_CREATE: f,
+        THREAD_UPDATE: f,
         THREAD_LIST_SYNC: function(e) {
             let {
                 threads: t
             } = e;
-            t.forEach(f)
+            t.forEach(_)
         },
         THREAD_MEMBERS_UPDATE: function(e) {
             let t = d[e.id];

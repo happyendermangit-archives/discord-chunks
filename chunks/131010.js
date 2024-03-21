@@ -49,13 +49,13 @@ function(e, _, E) {
                     o = null
                 }
                 t = n.id;
-                let a = r.default.getToken();
-                null != a && "" !== a && r.default.setToken(a, n.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, n)
+                let a = r.getToken();
+                null != a && "" !== a && r.setToken(a, n.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, n)
             }, this.handleLogout = e => {
                 if (e.isSwitchingAccount) {
                     var _;
                     o = t, null === (_ = this.onSwitchStart) || void 0 === _ || _.call(this)
-                } else r.default.removeToken(t);
+                } else r.removeToken(t);
                 t = null
             }, this.onSwitchStart = e, this.onSwitchSuccess = _, this.onSwitchError = E, this.onTokenSet = n
         }

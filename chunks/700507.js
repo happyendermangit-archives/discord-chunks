@@ -35,8 +35,8 @@ function(e, t, n) {
         u = n("945956"),
         d = n("235660"),
         c = n("599110"),
-        f = n("286235"),
-        _ = n("893243"),
+        _ = n("286235"),
+        f = n("893243"),
         E = n("76393"),
         h = n("780338"),
         g = n("49111"),
@@ -131,7 +131,7 @@ function(e, t, n) {
                 });
             e = n.body.nonce
         } catch (e) {
-            f.default.captureException(e)
+            _.default.captureException(e)
         }
         return e
     }
@@ -228,7 +228,7 @@ function(e, t, n) {
         })
     }
     async function D(e, t, n) {
-        await _.default.maybeShowPTTAlert(e), await S();
+        await f.default.maybeShowPTTAlert(e), await S();
         let i = await C();
         await R(e, t, n, i), (0, h.default)(n.id, e)
     }

@@ -22,12 +22,12 @@ function(e, t, n) {
                 notClaimed: d
             } = n.getCheck(e),
             c = i.getCurrentUser(),
-            f = !1;
+            _ = !1;
         if (null != c) {
-            var _, E;
-            f = null !== (E = null === (_ = l.getMember(e, c.id)) || void 0 === _ ? void 0 : _.isPending) && void 0 !== E && E
+            var f, E;
+            _ = null !== (E = null === (f = l.getMember(e, c.id)) || void 0 === f ? void 0 : f.isPending) && void 0 !== E && E
         }
-        let h = f || d;
+        let h = _ || d;
         return h && !!(null == u ? void 0 : u.hasVerificationGate())
     }
 

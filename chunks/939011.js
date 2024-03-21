@@ -17,7 +17,7 @@ function(e, t, n) {
             return c
         },
         getImpressionStack: function() {
-            return f
+            return _
         }
     }), n("222007");
     var i = n("308503"),
@@ -54,7 +54,7 @@ function(e, t, n) {
         }), e
     }
 
-    function f() {
+    function _() {
         return a.getState().impressions
     }
 }

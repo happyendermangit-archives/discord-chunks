@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("402752"),
         d = n("474643"),
         c = n("49111"),
-        f = n("782340");
-    let _ = new Map,
+        _ = n("782340");
+    let f = new Map,
         E = [];
 
     function h(e, t) {
@@ -25,12 +25,12 @@ function(e, t, n) {
 
     function g(e) {
         var t;
-        return null !== (t = _.get(e)) && void 0 !== t ? t : new Map
+        return null !== (t = f.get(e)) && void 0 !== t ? t : new Map
     }
 
     function m(e, t, n) {
         let i = g(e);
-        i.set(t, n), _.set(e, i)
+        i.set(t, n), f.set(e, i)
     }
     class p extends r.default.Store {
         getFirstUpload(e, t) {
@@ -72,8 +72,8 @@ function(e, t, n) {
             } = e, a = [...h(n, r)];
             if (a.length + t.length > c.MAX_UPLOAD_COUNT && r !== d.DraftType.SlashCommand && r !== d.DraftType.ApplicationLauncherCommand) {
                 o.default.show({
-                    title: f.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-                    body: f.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+                    title: _.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+                    body: _.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
                         limit: c.MAX_UPLOAD_COUNT
                     })
                 });

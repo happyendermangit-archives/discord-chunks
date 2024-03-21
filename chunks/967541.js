@@ -19,8 +19,8 @@ function(e, t, n) {
             menuSubmenuProps: u,
             rows: d,
             rowHeight: c,
-            onScroll: f,
-            listClassName: _
+            onScroll: _,
+            listClassName: f
         } = e, E = s.useRef(null), h = s.useRef(null), g = s.useRef(null), m = s.useRef(null), {
             isUsingKeyboardNavigation: p,
             focusIndex: S,
@@ -57,9 +57,9 @@ function(e, t, n) {
                         ref: g,
                         children: (0, i.jsx)(o.default, {
                             ref: m,
-                            className: _,
+                            className: f,
                             listPadding: [6, 0, 6, 8],
-                            onScroll: f,
+                            onScroll: _,
                             renderRow: T,
                             rowCount: d.length,
                             rowHeight: c

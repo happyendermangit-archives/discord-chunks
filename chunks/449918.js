@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getColor: function() {
-            return f
+            return _
         },
         useColorValue: function() {
-            return _
+            return f
         },
         useDesaturatedColorString: function() {
             return E
@@ -27,11 +27,11 @@ function(e, t, n) {
         return e.toUpperCase().replace(/-/g, "_")
     }
 
-    function f(e) {
+    function _(e) {
         return l.default.unsafe_rawColors[c(e)].css
     }
 
-    function _(e) {
+    function f(e) {
         return null != e ? a.ColorDetails[e] : null
     }
 

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Progress: function() {
-            return f
+            return _
         }
     });
     var i, s, r = n("37983"),
@@ -14,25 +14,25 @@ function(e, t, n) {
     (i = s || (s = {})).XSMALL = "xsmall", i.SMALL = "small", i.LARGE = "large";
     let c = "indeterminate";
 
-    function f(e) {
+    function _(e) {
         let t, {
                 className: n,
                 percent: i,
                 size: s = "small",
                 foregroundColor: o = u.default.unsafe_rawColors.BRAND_500.css,
-                backgroundColor: f = "var(--background-modifier-active)",
-                foregroundGradientColor: _,
+                backgroundColor: _ = "var(--background-modifier-active)",
+                foregroundGradientColor: f,
                 animate: E = !0
             } = e,
             h = null != i ? i : 0;
-        return t = null != _ ? {
-            background: "linear-gradient(to right, ".concat(_[0], ", ").concat(_[1], ")")
+        return t = null != f ? {
+            background: "linear-gradient(to right, ".concat(f[0], ", ").concat(f[1], ")")
         } : {
             backgroundColor: o
         }, (0, r.jsx)("div", {
             className: l(n, d.progress, d[s]),
             style: {
-                backgroundColor: f
+                backgroundColor: _
             },
             children: h !== c && "number" == typeof h ? (0, r.jsx)("div", {
                 className: l(d.progressBar, d[s], {
@@ -57,5 +57,5 @@ function(e, t, n) {
             })
         })
     }
-    f.Sizes = s, f.INDETERMINATE = c
+    _.Sizes = s, _.INDETERMINATE = c
 }

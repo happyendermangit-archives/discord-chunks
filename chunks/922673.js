@@ -14,6 +14,6 @@ function(e, t, n) {
         let o = n.getGuild(e);
         if (null == o) return null;
         let l = a.getMember(o.id, t);
-        return null == l ? null : r.default.getHighestHoistedRole(o, l)
+        return null == l ? null : r.getHighestHoistedRole(o, l)
     }
 }

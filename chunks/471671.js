@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("222007");
     var i = n("627445"),
@@ -53,7 +53,7 @@ function(e, t, n) {
         }
     }
     c.displayName = "WindowStore";
-    let f = new c(a.default, {
+    let _ = new c(a.default, {
         WINDOW_INIT: function(e) {
             s(!u.has(e.windowId), "Window initialized multiple times");
             let {
@@ -113,8 +113,8 @@ function(e, t, n) {
             addExtraAnalyticsDecorator: t
         } = e;
         t(e => {
-            e.client_app_state = f.isFocused() ? "focused" : "unfocused"
+            e.client_app_state = _.isFocused() ? "focused" : "unfocused"
         })
     });
-    var _ = f
+    var f = _
 }

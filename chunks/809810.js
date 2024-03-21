@@ -13,12 +13,12 @@ function(e, t, n) {
         u = n("3765");
     let d = {},
         c = {},
-        f = {};
+        _ = {};
 
-    function _(e) {
+    function f(e) {
         delete d[e];
-        let t = f[e];
-        null != t && delete c[t], delete f[e]
+        let t = _[e];
+        null != t && delete c[t], delete _[e]
     }
     class E extends r.default.Store {
         getInteraction(e) {
@@ -28,7 +28,7 @@ function(e, t, n) {
         getMessageInteractionStates() {
             let e = {};
             for (let [t, n] of Object.entries(d)) {
-                let i = f[t];
+                let i = _[t];
                 null != i && (e[i] = n.state)
             }
             return e
@@ -47,7 +47,7 @@ function(e, t, n) {
     E.displayName = "InteractionStore";
     var h = new E(a.default, {
         LOGOUT: function() {
-            d = {}, c = {}, f = {}
+            d = {}, c = {}, _ = {}
         },
         INTERACTION_QUEUE: function(e) {
             let {
@@ -59,7 +59,7 @@ function(e, t, n) {
                 onSuccess: a,
                 onFailure: o
             } = e;
-            null != n && (c[n] = t, f[t] = n), d[t] = {
+            null != n && (c[n] = t, _[t] = n), d[t] = {
                 state: u.InteractionState.QUEUED,
                 data: i,
                 onCreate: s,
@@ -87,7 +87,7 @@ function(e, t, n) {
             if (null == n) return !1;
             let i = d[n];
             if (null == i) return !1;
-            null === (t = i.onSuccess) || void 0 === t || t.call(i), _(n)
+            null === (t = i.onSuccess) || void 0 === t || t.call(i), f(n)
         },
         INTERACTION_FAILURE: function(e) {
             var t;
@@ -99,7 +99,7 @@ function(e, t, n) {
             if (null == n) return !1;
             let r = d[n];
             if (null == r) return !1;
-            null === (t = r.onFailure) || void 0 === t || t.call(r, i, s), r.data.interactionType === o.InteractionTypes.APPLICATION_COMMAND ? _(n) : d[n] = {
+            null === (t = r.onFailure) || void 0 === t || t.call(r, i, s), r.data.interactionType === o.InteractionTypes.APPLICATION_COMMAND ? f(n) : d[n] = {
                 ...r,
                 state: u.InteractionState.FAILED,
                 errorCode: i,
@@ -115,7 +115,7 @@ function(e, t, n) {
                 var n;
                 let e = d[t.nonce];
                 if (null == e) return !1;
-                null === (n = e.onSuccess) || void 0 === n || n.call(e), _(t.nonce)
+                null === (n = e.onSuccess) || void 0 === n || n.call(e), f(t.nonce)
             }
         },
         CHANNEL_SELECT: function(e) {
@@ -123,7 +123,7 @@ function(e, t, n) {
                 channelId: t
             } = e, n = l.default.getChannel(t);
             if (null == n) return !1;
-            for (let [e, t] of Object.entries(d)) t.state === u.InteractionState.FAILED && _(e)
+            for (let [e, t] of Object.entries(d)) t.state === u.InteractionState.FAILED && f(e)
         },
         INTERACTION_IFRAME_MODAL_CREATE: function(e) {
             let {

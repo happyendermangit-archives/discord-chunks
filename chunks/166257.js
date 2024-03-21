@@ -33,8 +33,8 @@ function(e, t, n) {
         u = n("875978"),
         d = n("263024"),
         c = n("271938"),
-        f = n("377253"),
-        _ = n("659500"),
+        _ = n("377253"),
+        f = n("659500"),
         E = n("718517"),
         h = n("402671"),
         g = n("61069"),
@@ -56,7 +56,7 @@ function(e, t, n) {
                 });
                 break;
             case m.AbortCodes.REACTION_BLOCKED:
-                _.ComponentDispatch.dispatch(m.ComponentActions.SHAKE_APP, {
+                f.ComponentDispatch.dispatch(m.ComponentActions.SHAKE_APP, {
                     duration: 200,
                     intensity: 2
                 })
@@ -113,15 +113,15 @@ function(e, t, n) {
                 type: l
             },
             oldFormErrors: !0
-        }), f = l === u.ReactionTypes.VOTE ? c.body.users : c.body;
+        }), _ = l === u.ReactionTypes.VOTE ? c.body.users : c.body;
         return o.default.dispatch({
             type: "MESSAGE_REACTION_ADD_USERS",
             channelId: t,
             messageId: n,
-            users: f,
+            users: _,
             emoji: i,
             reactionType: l
-        }), f
+        }), _
     }
     async function A(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
@@ -129,7 +129,7 @@ function(e, t, n) {
             o = null != s && !!s.burst,
             c = null != s && !!s.isRetry;
         if (!c && function(e, t, n, i) {
-                let s = f.default.getMessage(e, t);
+                let s = _.default.getMessage(e, t);
                 return null != s && s.userHasReactedWithEmoji(n, i)
             }(e, t, n, o)) {
             l.default.show({
@@ -139,10 +139,10 @@ function(e, t, n) {
             });
             return
         }
-        let _ = await O(n, o);
+        let f = await O(n, o);
         return v("MESSAGE_REACTION_ADD", e, t, n, {
             burst: o,
-            colors: _
+            colors: f
         }), await d.default.unarchiveThreadIfNecessary(e), r.default.put({
             url: T({
                 channelId: e,

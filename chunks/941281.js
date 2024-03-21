@@ -29,8 +29,8 @@ function(e, t, n) {
         u = n("746379"),
         d = n.n(u),
         c = n("516256"),
-        f = n("242670"),
-        _ = n("577776"),
+        _ = n("242670"),
+        f = n("577776"),
         E = n("77078"),
         h = n("69927"),
         g = n("393414"),
@@ -58,13 +58,13 @@ function(e, t, n) {
                 className: I.closeButton
             }) : null, (0, i.jsxs)("div", {
                 className: I.wrapper,
-                children: [o ? (0, i.jsx)(f.Spinner, {}) : null, (0, i.jsx)("div", {
+                children: [o ? (0, i.jsx)(_.Spinner, {}) : null, (0, i.jsx)("div", {
                     className: a(I.header, s)
-                }), (0, i.jsx)(_.Text, {
+                }), (0, i.jsx)(f.Text, {
                     variant: "text-md/normal",
                     className: I.text,
                     children: t
-                }), null != n ? n : null, r ? (0, i.jsx)(_.Text, {
+                }), null != n ? n : null, r ? (0, i.jsx)(f.Text, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     className: I.cta,
@@ -106,7 +106,7 @@ function(e, t, n) {
             });
             return T.default.Messages.AUTHORIZED_GENERIC
         }, [n, t]), c = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(_.Text, {
+            children: [(0, i.jsx)(f.Text, {
                 variant: "text-sm/normal",
                 className: I.authorizedSuccessSubtext,
                 children: d

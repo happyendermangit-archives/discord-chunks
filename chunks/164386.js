@@ -13,7 +13,7 @@ function(e, t, n) {
             ...e,
             guilds: e.guilds.map(e => ({
                 ...e,
-                permissions: i.default.deserialize(e.permissions)
+                permissions: i.deserialize(e.permissions)
             }))
         }
     }

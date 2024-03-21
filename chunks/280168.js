@@ -14,32 +14,32 @@ function(e, t, n) {
         u = n("18494"),
         d = n("49111"),
         c = n("353927");
-    let f = new Map,
-        _ = null,
+    let _ = new Map,
+        f = null,
         E = null,
         h = null;
 
     function g(e, t) {
-        let n = f.get(e);
+        let n = _.get(e);
         if (null == n) return !1;
         let i = n.delete(t);
-        return 0 === n.size && f.delete(e), i
+        return 0 === n.size && _.delete(e), i
     }
 
     function m(e, t, n) {
         var i, s, r;
-        let a = null !== (r = null === (s = f.get(e)) || void 0 === s ? void 0 : null === (i = s.get(t)) || void 0 === i ? void 0 : i.flags) && void 0 !== r ? r : c.SpeakingFlags.NONE;
+        let a = null !== (r = null === (s = _.get(e)) || void 0 === s ? void 0 : null === (i = s.get(t)) || void 0 === i ? void 0 : i.flags) && void 0 !== r ? r : c.SpeakingFlags.NONE;
         return (a & n) === n
     }
 
     function p(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = f.get(e);
+            i = _.get(e);
         if (null == i) return !1;
         for (let [e, {
                 flags: s
             }] of i)
-            if ((!n || e !== _) && (s & t) === t) return !0;
+            if ((!n || e !== f) && (s & t) === t) return !0;
         return !1
     }
 
@@ -48,7 +48,7 @@ function(e, t, n) {
             user: t,
             sessionId: n
         } = e;
-        _ = t.id, E = n, h = null
+        f = t.id, E = n, h = null
     }
     class v extends i.default.Store {
         initialize() {
@@ -57,13 +57,13 @@ function(e, t, n) {
         getSpeakingDuration(e, t) {
             var n, i;
             let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.MediaEngineContextTypes.DEFAULT,
-                r = null === (i = f.get(s)) || void 0 === i ? void 0 : null === (n = i.get(e)) || void 0 === n ? void 0 : n.since;
+                r = null === (i = _.get(s)) || void 0 === i ? void 0 : null === (n = i.get(e)) || void 0 === n ? void 0 : n.since;
             return null != r ? t - r : 0
         }
         getSpeakers() {
             var e, t;
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
-            return Array.from(null !== (t = null === (e = f.get(n)) || void 0 === e ? void 0 : e.keys()) && void 0 !== t ? t : []).filter(e => m(n, e, c.SpeakingFlags.VOICE))
+            return Array.from(null !== (t = null === (e = _.get(n)) || void 0 === e ? void 0 : e.keys()) && void 0 !== t ? t : []).filter(e => m(n, e, c.SpeakingFlags.VOICE))
         }
         isSpeaking(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MediaEngineContextTypes.DEFAULT;
@@ -83,7 +83,7 @@ function(e, t, n) {
         }
         isCurrentUserSpeaking() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
-            return null != _ && this.isSpeaking(_, e)
+            return null != f && this.isSpeaking(f, e)
         }
         isAnyonePrioritySpeaking() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
@@ -91,7 +91,7 @@ function(e, t, n) {
         }
         isCurrentUserPrioritySpeaking() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
-            return null != _ && this.isPrioritySpeaker(_, e) && this.isSpeaking(_, e)
+            return null != f && this.isPrioritySpeaker(f, e) && this.isSpeaking(f, e)
         }
     }
     v.displayName = "SpeakingStore";
@@ -106,7 +106,7 @@ function(e, t, n) {
             } = e;
             if ((i & c.SpeakingFlags.PRIORITY) === c.SpeakingFlags.PRIORITY) {
                 let e = a.default.getChannel(u.default.getVoiceChannelId());
-                null != e && r.default.can({
+                null != e && r.can({
                     permission: d.Permissions.PRIORITY_SPEAKER,
                     user: n,
                     context: e
@@ -116,13 +116,13 @@ function(e, t, n) {
                 var i, s;
                 let r = function() {
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT,
-                            t = f.get(e);
-                        return null == t && (t = new Map, f.set(e, t)), t
+                            t = _.get(e);
+                        return null == t && (t = new Map, _.set(e, t)), t
                     }(e),
                     a = r.get(t),
                     o = null !== (i = null == a ? void 0 : a.flags) && void 0 !== i ? i : 0;
                 if (0 === o && 0 === n) return !1;
-                if (0 === n) r.delete(t), 0 === r.size && f.delete(e);
+                if (0 === n) r.delete(t), 0 === r.size && _.delete(e);
                 else {
                     let e = null !== (s = null == a ? void 0 : a.since) && void 0 !== s ? s : null,
                         i = (o & c.SpeakingFlags.VOICE) === c.SpeakingFlags.VOICE,
@@ -145,7 +145,7 @@ function(e, t, n) {
                     channelId: i,
                     sessionId: s
                 } = t, r = !1, a = h;
-                return n === _ && s === E && (h = null != i ? i : null), a !== h && (r = f.delete(c.MediaEngineContextTypes.DEFAULT) || r), null == i ? r = n === _ && s === E ? f.delete(c.MediaEngineContextTypes.DEFAULT) || r : g(c.MediaEngineContextTypes.DEFAULT, n) || r : n === _ && s !== E ? r = f.delete(c.MediaEngineContextTypes.DEFAULT) || r : n !== _ && i !== l.default.getChannelId() && (r = g(c.MediaEngineContextTypes.DEFAULT, n) || r), r || e
+                return n === f && s === E && (h = null != i ? i : null), a !== h && (r = _.delete(c.MediaEngineContextTypes.DEFAULT) || r), null == i ? r = n === f && s === E ? _.delete(c.MediaEngineContextTypes.DEFAULT) || r : g(c.MediaEngineContextTypes.DEFAULT, n) || r : n === f && s !== E ? r = _.delete(c.MediaEngineContextTypes.DEFAULT) || r : n !== f && i !== l.default.getChannelId() && (r = g(c.MediaEngineContextTypes.DEFAULT, n) || r), r || e
             }, !1)
         },
         LOBBY_VOICE_STATE_UPDATE: function(e) {}

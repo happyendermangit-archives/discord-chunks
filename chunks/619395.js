@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         removeModeratorOverwrite: function() {
-            return _
+            return f
         },
         isEmptyOverwrite: function() {
             return E
@@ -27,16 +27,16 @@ function(e, t, n) {
         u = n("991170"),
         d = n("923510"),
         c = n("834052"),
-        f = n("49111");
+        _ = n("49111");
 
-    function _(e, t, n) {
+    function f(e, t, n) {
         var s, r;
         let a = null == n ? void 0 : n.permissionOverwrites[e];
         return {
             id: e,
             type: t,
-            deny: null !== (s = null == a ? void 0 : a.deny) && void 0 !== s ? s : u.default.NONE,
-            allow: i.default.remove(null !== (r = null == a ? void 0 : a.allow) && void 0 !== r ? r : u.default.NONE, d.MODERATE_STAGE_CHANNEL_PERMISSIONS)
+            deny: null !== (s = null == a ? void 0 : a.deny) && void 0 !== s ? s : u.NONE,
+            allow: i.remove(null !== (r = null == a ? void 0 : a.allow) && void 0 !== r ? r : u.NONE, d.MODERATE_STAGE_CHANNEL_PERMISSIONS)
         }
     }
 
@@ -45,19 +45,19 @@ function(e, t, n) {
             allow: t,
             deny: n
         } = e;
-        return i.default.equals(t, u.default.NONE) && i.default.equals(n, u.default.NONE)
+        return i.equals(t, u.NONE) && i.equals(n, u.NONE)
     }
 
     function h(e) {
         return (0, s.useStateFromStores)([l.default, o.default, a.default], () => {
             let t = a.default.getChannel(e),
                 n = o.default.getGuild(null == t ? void 0 : t.getGuildId());
-            return !!(l.default.can(f.Permissions.ADMINISTRATOR, n) || l.default.can(f.Permissions.MANAGE_ROLES, t, void 0, void 0, !0) || l.default.can(d.UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, t)) || !1
+            return !!(l.default.can(_.Permissions.ADMINISTRATOR, n) || l.default.can(_.Permissions.MANAGE_ROLES, t, void 0, void 0, !0) || l.default.can(d.UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, t)) || !1
         }, [e])
     }
 
     function g(e) {
-        return (0, s.useStateFromStores)([a.default, l.default], () => null != e && l.default.can(f.Permissions.MUTE_MEMBERS, a.default.getChannel(e)), [e])
+        return (0, s.useStateFromStores)([a.default, l.default], () => null != e && l.default.can(_.Permissions.MUTE_MEMBERS, a.default.getChannel(e)), [e])
     }
 
     function m(e) {

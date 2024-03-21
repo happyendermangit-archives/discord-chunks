@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return _
         }
     });
     var i = n("917351"),
@@ -43,7 +43,7 @@ function(e, t, n) {
         }
     }
     c.displayName = "RTCRegionStore", c.persistKey = "RTCRegionStore", c.migrations = [e => (e.preferredRegion ? e.preferredRegions = [e.preferredRegion] : e.preferredRegions = null, delete e.preferredRegion, e)];
-    var f = new c(a.default, {
+    var _ = new c(a.default, {
         RTC_LATENCY_TEST_COMPLETE: function(e) {
             e.latencyRankedRegions.length > 0 && (u.lastGeoRankedOrder = e.geoRankedRegions, u.preferredRegions = e.latencyRankedRegions), u.lastTestTimestamp = Date.now()
         }

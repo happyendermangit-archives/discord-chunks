@@ -12,7 +12,7 @@ function(e, t, n) {
         u = n("458960"),
         d = n("77078"),
         c = n("49111"),
-        f = n("646405");
+        _ = n("646405");
     (i = class extends a.Component {
         componentDidMount() {
             this.props.show && this.animate(1)
@@ -43,7 +43,7 @@ function(e, t, n) {
                 href: c.Routes.INDEX,
                 target: "_blank",
                 rel: "noopener",
-                className: l(f.logo, this.props.className),
+                className: l(_.logo, this.props.className),
                 style: this.getAnimatedStyle()
             })
         }

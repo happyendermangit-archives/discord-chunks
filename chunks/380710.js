@@ -50,30 +50,30 @@ function(e, t, n) {
         u = n("568734"),
         d = n("449008"),
         c = n("991170"),
-        f = n("648747"),
-        _ = n("49111"),
+        _ = n("648747"),
+        f = n("49111"),
         E = n("657944");
     let h = new Date(16824888e5);
 
     function g(e) {
         let t = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(e)),
-            n = !!(null == t ? void 0 : t.hasFeature(_.GuildFeatures.COMMUNITY)),
-            s = l.default.can(_.Permissions.MANAGE_GUILD, t),
-            r = l.default.can(_.Permissions.MANAGE_ROLES, t);
+            n = !!(null == t ? void 0 : t.hasFeature(f.GuildFeatures.COMMUNITY)),
+            s = l.default.can(f.Permissions.MANAGE_GUILD, t),
+            r = l.default.can(f.Permissions.MANAGE_ROLES, t);
         return n && s && r
     }
 
     function m(e) {
         let t = o.default.getGuild(e),
-            n = !!(null == t ? void 0 : t.hasFeature(_.GuildFeatures.COMMUNITY)),
-            i = l.default.can(_.Permissions.MANAGE_GUILD, t),
-            s = l.default.can(_.Permissions.MANAGE_ROLES, t);
+            n = !!(null == t ? void 0 : t.hasFeature(f.GuildFeatures.COMMUNITY)),
+            i = l.default.can(f.Permissions.MANAGE_GUILD, t),
+            s = l.default.can(f.Permissions.MANAGE_ROLES, t);
         return n && i && s
     }
 
     function p(e, t) {
         var n;
-        if (null == e || !e.hasFeature(_.GuildFeatures.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < h) return !1;
+        if (null == e || !e.hasFeature(f.GuildFeatures.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < h) return !1;
         let i = null !== (n = t.flags) && void 0 !== n ? n : 0;
         return u.hasFlag(i, E.GuildMemberFlags.STARTED_ONBOARDING) && !u.hasFlag(i, E.GuildMemberFlags.COMPLETED_ONBOARDING)
     }
@@ -120,7 +120,7 @@ function(e, t, n) {
     }
 
     function A(e) {
-        return !!(null != e && (0, f.canChannelBeDefault)(e.guild_id, e.id)) && (e.isForumChannel() ? c.default.canEveryoneRole(_.Permissions.SEND_MESSAGES_IN_THREADS, e) : c.default.canEveryoneRole(_.Permissions.SEND_MESSAGES, e))
+        return !!(null != e && (0, _.canChannelBeDefault)(e.guild_id, e.id)) && (e.isForumChannel() ? c.canEveryoneRole(f.Permissions.SEND_MESSAGES_IN_THREADS, e) : c.canEveryoneRole(f.Permissions.SEND_MESSAGES, e))
     }
 
     function C(e) {
@@ -165,7 +165,7 @@ function(e, t, n) {
             let {
                 channel: n
             } = e;
-            return (0, f.canChannelBeDefault)(n.guild_id, n.id) && (t.includes(n.id) && !n.isCategory() || !n.isThread() && null != n.parent_id && t.includes(n.parent_id))
+            return (0, _.canChannelBeDefault)(n.guild_id, n.id) && (t.includes(n.id) && !n.isCategory() || !n.isThread() && null != n.parent_id && t.includes(n.parent_id))
         }).map(e => {
             let {
                 channel: t
@@ -195,7 +195,7 @@ function(e, t, n) {
                     let {
                         channel: n
                     } = e;
-                    return (0, f.canChannelBeDefault)(n.guild_id, n.id) && (t.includes(n.id) && !n.isCategory() || !n.isThread() && null != n.parent_id && t.includes(n.parent_id))
+                    return (0, _.canChannelBeDefault)(n.guild_id, n.id) && (t.includes(n.id) && !n.isCategory() || !n.isThread() && null != n.parent_id && t.includes(n.parent_id))
                 }).map(e => {
                     let {
                         channel: t

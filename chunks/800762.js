@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("628454"),
         d = n("299039"),
         c = n("49111"),
-        f = n("99795");
-    let _ = 0,
+        _ = n("99795");
+    let f = 0,
         E = 0,
         h = {},
         g = {},
@@ -132,10 +132,10 @@ function(e, t, n) {
         getVoicePlatformForChannel(e, t) {
             var n, r;
             let a = null != s && (null === (r = p[i]) || void 0 === r ? void 0 : null === (n = r[s]) || void 0 === n ? void 0 : n.channelId);
-            return t === i && e === a ? f.VoicePlatforms.DESKTOP : S[v(t, e)]
+            return t === i && e === a ? _.VoicePlatforms.DESKTOP : S[v(t, e)]
         }
         get userHasBeenMovedVersion() {
-            return _
+            return f
         }
     }
     N.displayName = "VoiceStateStore";
@@ -173,7 +173,7 @@ function(e, t, n) {
             } = e;
             return t.reduce((e, t) => {
                 let [n, i, r] = C(t.guildId, t);
-                return n ? (t.sessionId === s && null != i && null != r && r.channelId !== i.channelId && (_ += 1), E++, !0) : e
+                return n ? (t.sessionId === s && null != i && null != r && r.channelId !== i.channelId && (f += 1), E++, !0) : e
             }, !1)
         },
         GUILD_DELETE: y,

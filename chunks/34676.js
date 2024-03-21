@@ -41,8 +41,8 @@ function(e, t, n) {
         d = n("282109");
     n("599110");
     var c = n("568734"),
-        f = n("49111"),
-        _ = n("133335"),
+        _ = n("49111"),
+        f = n("133335"),
         E = n("397336");
     (r = i || (i = {})).GUILD = "guild", r.CHANNEL = "channel", r.ACCOUNT = "account", (a = s || (s = {})).ForumThreadsCreatedOn = "enabled forum thread created notifs", a.ForumThreadsCreatedOff = "disabled forum thread created notifs", a.SuppressEveryoneOn = "enabled suppress everyone", a.SuppressEveryoneOff = "disabled suppress everyone", a.SuppressRolesOn = "enabled suppress roles", a.SuppressRolesOff = "disabled suppress roles", a.HighlightsOn = "enabled highlights", a.HighlightsOff = "disabled highlights", a.MobilePushOn = "enabled mobile push notifications", a.MobilePushOff = "disabled mobile push notifications", a.UnreadsAll = "unreads set to all messages", a.UnreadsMentions = "unreads set to mentions", a.UnreadsDefault = "unreads set to the default", a.NotificationsAll = "notifications set to all messages", a.NotificationsMentions = "notifications set to mentions", a.NotificationsNothing = "notifications set to nothing", a.NotificationsDefault = "notifications set to the default", a.PresetAll = "notification preset set to all messages", a.PresetMentions = "notification preset set to mentions", a.PresetNothing = "notification preset set to nothing", a.PresetDefault = "notification preset set to the default", a.OptedIn = "opted in to entity", a.OptedOut = "opted out from entity", a.Favorited = "favorited", a.UnFavorited = "unfavorited", a.Muted = "muted", a.Unmuted = "unmuted", a.MutedScheduledEvents = "muted scheduled events", a.UnmutedScheduledEvents = "unmuted scheduled events", a.OverrideCreated = "channel override created", a.OverrideDeleted = "channel override deleted";
     let h = {
@@ -55,14 +55,14 @@ function(e, t, n) {
             favorited: e => e ? "favorited" : "unfavorited",
             muted: e => e ? "muted" : "unmuted",
             mutedEvents: e => e ? "muted scheduled events" : "unmuted scheduled events",
-            unreads: e => e === _.UnreadSetting.ALL_MESSAGES ? "unreads set to all messages" : e === _.UnreadSetting.ONLY_MENTIONS ? "unreads set to mentions" : "unreads set to the default",
-            notifications: e => e === f.UserNotificationSettings.ALL_MESSAGES ? "notifications set to all messages" : e === f.UserNotificationSettings.ONLY_MENTIONS ? "notifications set to mentions" : e === f.UserNotificationSettings.NO_MESSAGES ? "notifications set to nothing" : "notifications set to the default"
+            unreads: e => e === f.UnreadSetting.ALL_MESSAGES ? "unreads set to all messages" : e === f.UnreadSetting.ONLY_MENTIONS ? "unreads set to mentions" : "unreads set to the default",
+            notifications: e => e === _.UserNotificationSettings.ALL_MESSAGES ? "notifications set to all messages" : e === _.UserNotificationSettings.ONLY_MENTIONS ? "notifications set to mentions" : e === _.UserNotificationSettings.NO_MESSAGES ? "notifications set to nothing" : "notifications set to the default"
         },
         g = Object.freeze({
-            [f.UserNotificationSettings.ALL_MESSAGES]: "All",
-            [f.UserNotificationSettings.ONLY_MENTIONS]: "Mentions",
-            [f.UserNotificationSettings.NO_MESSAGES]: "Nothing",
-            [f.UserNotificationSettings.NULL]: null
+            [_.UserNotificationSettings.ALL_MESSAGES]: "All",
+            [_.UserNotificationSettings.ONLY_MENTIONS]: "Mentions",
+            [_.UserNotificationSettings.NO_MESSAGES]: "Nothing",
+            [_.UserNotificationSettings.NULL]: null
         });
 
     function m(e, t, n, i, s) {
@@ -85,13 +85,13 @@ function(e, t, n) {
                 }
             },
             d = u(n),
-            _ = u(T(e), t),
-            h = p(d, _, "RETURN_PREVIOUS_WHEN_CHANGED"),
+            f = u(T(e), t),
+            h = p(d, f, "RETURN_PREVIOUS_WHEN_CHANGED"),
             m = null !== (r = h("guild_flags")) && void 0 !== r ? r : 0,
-            S = (null !== (a = _.guild_flags) && void 0 !== a ? a : 0) ^ m,
+            S = (null !== (a = f.guild_flags) && void 0 !== a ? a : 0) ^ m,
             v = 0 === (0, c.removeFlags)(S, E.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_OFF, E.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON);
-        o.default.trackWithMetadata(f.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
-            ..._,
+        o.default.trackWithMetadata(_.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+            ...f,
             ...l.default.getStats(e),
             location: s,
             guild_id: e,
@@ -121,7 +121,7 @@ function(e, t, n) {
 
     function v(e, t, n, i, s, r) {
         var a, d;
-        let _ = function(t) {
+        let f = function(t) {
                 var n, i;
                 let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     r = null !== (n = s.muted) && void 0 !== n ? n : null == t ? void 0 : t.channel_is_muted,
@@ -135,14 +135,14 @@ function(e, t, n) {
                     channel_muted_until: S(s.mute_config)
                 }
             },
-            h = _(i),
-            m = _(A(e, t), n),
+            h = f(i),
+            m = f(A(e, t), n),
             v = p(h, m, "RETURN_PREVIOUS_WHEN_CHANGED"),
             T = u.default.getChannel(t),
             I = null !== (a = v("channel_flags")) && void 0 !== a ? a : 0,
             C = (null !== (d = m.channel_flags) && void 0 !== d ? d : 0) ^ I,
             y = 0 === (0, c.removeFlags)(C, E.ChannelNotificationSettingsFlags.FAVORITED, E.ChannelNotificationSettingsFlags.OPT_IN_ENABLED);
-        o.default.trackWithMetadata(f.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+        o.default.trackWithMetadata(_.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
             ...m,
             ...l.default.getStats(e),
             location: r,

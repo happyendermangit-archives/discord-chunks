@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isFavoritesGuildVisible: function() {
-            return f
+            return _
         },
         default: function() {
-            return _
+            return f
         }
     }), n("222007");
     var i = n("917351"),
@@ -18,7 +18,7 @@ function(e, t, n) {
         d = n("498139"),
         c = n("843455");
 
-    function f(e, t, n) {
+    function _(e, t, n) {
         let {
             canShow: i,
             isFavoritesPerk: r
@@ -38,11 +38,11 @@ function(e, t, n) {
         return !s.isEmpty(o) && !0
     }
 
-    function _() {
+    function f() {
         let {
             canShow: e,
             isFavoritesPerk: t
-        } = (0, d.useFavoritesServerExperiment)("7993a7_2"), n = (0, r.useStateFromStores)([u.default, a.default, o.default], () => e && f(u.default, a.default, o.default));
+        } = (0, d.useFavoritesServerExperiment)("7993a7_2"), n = (0, r.useStateFromStores)([u.default, a.default, o.default], () => e && _(u.default, a.default, o.default));
         return !!t || n
     }
 }

@@ -17,10 +17,10 @@ function(e, t, n) {
             return c
         },
         MODERATOR_PERMISSIONS_FLAG: function() {
-            return f
+            return _
         },
         COMMUNITY_UPSELL_MINIMUM_GUILD_SIZE: function() {
-            return _
+            return f
         },
         ENABLE_COMMUNITY_FLOW_MODAL_KEY: function() {
             return E
@@ -36,8 +36,8 @@ function(e, t, n) {
         u = "669627189624307712",
         d = "1",
         c = [a.Permissions.ADMINISTRATOR, a.Permissions.KICK_MEMBERS, a.Permissions.BAN_MEMBERS, a.Permissions.MANAGE_GUILD, a.Permissions.MANAGE_CHANNELS, a.Permissions.MANAGE_ROLES, a.Permissions.MANAGE_MESSAGES, a.Permissions.MANAGE_GUILD_EXPRESSIONS, a.Permissions.CREATE_GUILD_EXPRESSIONS, a.Permissions.MANAGE_EVENTS, a.Permissions.CREATE_EVENTS, a.Permissions.MODERATE_MEMBERS, a.Permissions.MENTION_EVERYONE],
-        f = r.default.combine(...c),
-        _ = 1e3,
+        _ = r.combine(...c),
+        f = 1e3,
         E = "Enable Community Modal";
     (s = i || (i = {})).SAFETY_CHECK = "safety_check", s.BASICS = "basics", s.FINISH = "finish"
 }

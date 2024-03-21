@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("368694"),
         d = n("560733"),
         c = n("152723"),
-        f = n("773336"),
-        _ = n("253981"),
+        _ = n("773336"),
+        f = n("253981"),
         E = n("50885"),
         h = n("49111");
     let g = new s.default("Games"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         S = null;
 
     function v() {
-        return null != S ? Promise.resolve(S) : (0, f.isDesktop)() ? E.default.ensureModule("discord_game_utils").then(() => {
+        return null != S ? Promise.resolve(S) : (0, _.isDesktop)() ? E.default.ensureModule("discord_game_utils").then(() => {
             let e = E.default.getGameUtils();
             return null != e && null != e.findLaunchable ? (S = e, e) : Promise.reject(Error("game utils not found"))
         }) : Promise.reject(Error("not desktop client"))
@@ -35,7 +35,7 @@ function(e, t, n) {
                 id: e.id,
                 name: e.name,
                 thirdPartySkus: e.thirdPartySkus,
-                executables: e.executables.filter(e => e.os === (0, f.getPlatformName)()).map(e => e.name)
+                executables: e.executables.filter(e => e.os === (0, _.getPlatformName)()).map(e => e.name)
             },
             n = e.aliases.map(e => ({
                 ...t,
@@ -81,7 +81,7 @@ function(e, t, n) {
 
     function y(e) {
         return g.info("launch", e), new Promise((t, n) => {
-            let i = _.default.safeParseWithQuery(e.launchTarget);
+            let i = f.default.safeParseWithQuery(e.launchTarget);
             null == i ? n(Error("Failed to parse launch target. ".concat(e.launchTarget))) : (window.open(e.launchTarget), t([]))
         })
     }
@@ -96,13 +96,13 @@ function(e, t, n) {
             let {
                 launchOptions: l,
                 defaultLaunchOptionId: u,
-                installPath: f,
-                applicationId: _,
+                installPath: _,
+                applicationId: f,
                 branchId: E,
                 buildId: g,
                 shouldPatch: m
             } = e;
-            if (null == l || null == u || null == f) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
+            if (null == l || null == u || null == _) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
             null == a && (a = u);
             let p = l[a];
             if (null == p) throw Error("Couldn't construct launchable for ".concat(e.applicationId, ". No launch option."));
@@ -113,8 +113,8 @@ function(e, t, n) {
                     liveBuildId: n
                 } = t;
                 if (m && n !== g) return Promise.reject(Error("live build id changed"))
-            }).then(() => c.default.runLaunchSetup(_, E)).then(() => {
-                let e = (0, r.default)(f),
+            }).then(() => c.default.runLaunchSetup(f, E)).then(() => {
+                let e = (0, r.default)(_),
                     i = {
                         DISCORD_INSTANCE_ID: d.default.getId().toString(),
                         DISCORD_ACCESS_TOKEN: null != t ? t : "",
@@ -122,15 +122,15 @@ function(e, t, n) {
                         DISCORD_CURRENT_BRANCH: s,
                         DISCORD_STORAGE_PATH: h.DefaultCloudSyncConfiguration.ROOT_STORAGE_PATH(e, o.default.getId())
                     };
-                return c.default.launch(_, E, p.name, i)
+                return c.default.launch(f, E, p.name, i)
             })
         },
-        removeShortcuts: e => (0, f.isWindows)() ? v().then(t => {
+        removeShortcuts: e => (0, _.isWindows)() ? v().then(t => {
             var n, i;
             return null !== (i = null === (n = t.removeShortcuts) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== i && i
         }) : Promise.resolve(!1),
         createShortcuts(e, t, n, i, s) {
-            if (null == s || !(0, f.isWindows)()) return Promise.resolve(!1);
+            if (null == s || !(0, _.isWindows)()) return Promise.resolve(!1);
             let r = "discord:///library/".concat(i, "/launch"),
                 a = "".concat(s, "\\icon.ico");
             return v().then(i => {

@@ -17,7 +17,7 @@ function(e, t, n) {
             return d
         },
         rawRgbToHsl: function() {
-            return _
+            return f
         },
         getColorLightnessAdjusted: function() {
             return h
@@ -131,7 +131,7 @@ function(e, t, n) {
         return .2126 * s[0] + .7152 * s[1] + .0722 * s[2]
     }
 
-    function f(e) {
+    function _(e) {
         let t = e[0],
             n = e[1],
             i = c(t),
@@ -139,7 +139,7 @@ function(e, t, n) {
         return (Math.max(i, s) + .05) / (Math.min(i, s) + .05)
     }
 
-    function _(e, t, n) {
+    function f(e, t, n) {
         let i, s;
         e /= 255, t /= 255, n /= 255;
         let r = Math.max(e, t, n),
@@ -184,7 +184,7 @@ function(e, t, n) {
 
     function h(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = _(e.red, e.green, e.blue);
+            i = f(e.red, e.green, e.blue);
         return n ? i.lightness = i.lightness + t > 1 ? .9 : i.lightness + t : i.lightness = i.lightness - t < 0 ? .1 : i.lightness - t, E(i.hue, i.saturation, i.lightness)
     }
 
@@ -200,8 +200,8 @@ function(e, t, n) {
         if (null == a || null == r) return;
         let o = (0, i.hex2int)(a.toHexString()),
             l = (0, i.getDarkness)(o) > .5,
-            u = f([r, a]),
-            d = _(r.red, r.green, r.blue);
+            u = _([r, a]),
+            d = f(r.red, r.green, r.blue);
         for (d.saturation *= s; u < n && null != d;) {
             ;
             if (l) {
@@ -209,7 +209,7 @@ function(e, t, n) {
                 else break
             } else if (d.lightness > .05) d.lightness -= .05;
             else break;
-            u = f([E(d.hue, d.saturation, d.lightness), t[1]])
+            u = _([E(d.hue, d.saturation, d.lightness), t[1]])
         }
         return E(d.hue, d.saturation, d.lightness)
     }
@@ -225,17 +225,17 @@ function(e, t, n) {
                     if (null == u) return null;
                     var d = parseInt(u[1], 16),
                         c = parseInt(u[2], 16),
-                        f = parseInt(u[3], 16);
-                    let _ = d / 255,
+                        _ = parseInt(u[3], 16);
+                    let f = d / 255,
                         E = c / 255,
-                        h = f / 255,
-                        g = Math.max(_, E, h),
-                        m = g - Math.min(_, E, h),
+                        h = _ / 255,
+                        g = Math.max(f, E, h),
+                        m = g - Math.min(f, E, h),
                         p = e => Math.round(100 * e) / 100;
                     if (0 === m) s = r = 0;
                     else {
                         ;
-                        r = m / g, a = _, t = (g - a) / 6 / m + .5, o = E, n = (g - o) / 6 / m + .5, l = h, i = (g - l) / 6 / m + .5, (s = _ === g ? i - n : E === g ? 1 / 3 + t - i : h === g ? 2 / 3 + n - t : 0) < 0 ? s += 1 : s > 1 && (s -= 1)
+                        r = m / g, a = f, t = (g - a) / 6 / m + .5, o = E, n = (g - o) / 6 / m + .5, l = h, i = (g - l) / 6 / m + .5, (s = f === g ? i - n : E === g ? 1 / 3 + t - i : h === g ? 2 / 3 + n - t : 0) < 0 ? s += 1 : s > 1 && (s -= 1)
                     }
                     return {
                         h: Math.round(360 * s),
@@ -265,7 +265,7 @@ function(e, t, n) {
             saturationFactor: i = 1
         } = e;
         if (null == n) return n;
-        let s = _(n.red, n.green, n.blue);
+        let s = f(n.red, n.green, n.blue);
         if (null == s) return null == n ? void 0 : n.toHexString();
         return null === (t = E(s.hue, s.saturation * i, s.lightness)) || void 0 === t ? void 0 : t.toHexString()
     }

@@ -21,8 +21,8 @@ function(e, t, n) {
                 children: r,
                 error: d,
                 isLoading: c,
-                maxLength: f,
-                transitionState: _,
+                maxLength: _,
+                transitionState: f,
                 helpMessage: E,
                 retryPrompt: h,
                 retrySuccessMessage: g
@@ -56,7 +56,7 @@ function(e, t, n) {
                 })
             }) : null;
             return (0, i.jsx)(o.ModalRoot, {
-                transitionState: _,
+                transitionState: f,
                 children: (0, i.jsxs)("form", {
                     onSubmit: this.handleSubmit,
                     children: [(0, i.jsx)(o.ModalHeader, {
@@ -78,7 +78,7 @@ function(e, t, n) {
                                 inputRef: this.setRef,
                                 onChange: this.handleCodeChange,
                                 placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
-                                maxLength: null != f ? f : 10,
+                                maxLength: null != _ ? _ : 10,
                                 value: m,
                                 autoComplete: "one-time-code",
                                 autoFocus: !0

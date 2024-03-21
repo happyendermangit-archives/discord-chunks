@@ -14,12 +14,12 @@ function(e, t, n) {
         u = n("242670"),
         d = n("945330"),
         c = n("229915"),
-        f = n("782340"),
-        _ = n("706381");
+        _ = n("782340"),
+        f = n("706381");
     let E = Object.freeze({
-            SMALL: _.small,
-            MEDIUM: _.medium,
-            LARGE: _.large
+            SMALL: f.small,
+            MEDIUM: f.medium,
+            LARGE: f.large
         }),
         h = e => {
             let {
@@ -30,8 +30,8 @@ function(e, t, n) {
                 size: h = E.SMALL
             } = e;
             return (0, i.jsx)(o.Clickable, {
-                className: a(r, _.iconLayout, h, {
-                    [_.pointer]: t
+                className: a(r, f.iconLayout, h, {
+                    [f.pointer]: t
                 }),
                 onClick: e => {
                     e.stopPropagation(), null != n && n(e)
@@ -42,21 +42,21 @@ function(e, t, n) {
                     e.preventDefault(), e.stopPropagation()
                 },
                 children: (0, i.jsx)("div", {
-                    className: _.iconContainer,
+                    className: f.iconContainer,
                     children: l ? (0, i.jsx)(u.Spinner, {
                         type: u.Spinner.Type.SPINNING_CIRCLE,
-                        className: a(_.icon, _.visible)
+                        className: a(f.icon, f.visible)
                     }) : (0, i.jsxs)(s.Fragment, {
                         children: [(0, i.jsx)(c.default, {
-                            className: a(_.icon, {
-                                [_.visible]: !t
+                            className: a(f.icon, {
+                                [f.visible]: !t
                             }),
-                            "aria-label": f.default.Messages.SEARCH
+                            "aria-label": _.default.Messages.SEARCH
                         }), (0, i.jsx)(d.default, {
-                            className: a(_.clear, {
-                                [_.visible]: t
+                            className: a(f.clear, {
+                                [f.visible]: t
                             }),
-                            "aria-label": f.default.Messages.CLEAR
+                            "aria-label": _.default.Messages.CLEAR
                         })]
                     })
                 })
@@ -82,7 +82,7 @@ function(e, t, n) {
                 autoFocus: t,
                 onClear: n,
                 className: s,
-                placeholder: r = f.default.Messages.SEARCH,
+                placeholder: r = _.default.Messages.SEARCH,
                 iconClassName: o,
                 onKeyDown: u,
                 onKeyUp: d,
@@ -96,25 +96,25 @@ function(e, t, n) {
                 autoComplete: T,
                 inputProps: I,
                 hideSearchIcon: A,
-                "aria-label": C = f.default.Messages.SEARCH,
+                "aria-label": C = _.default.Messages.SEARCH,
                 ...y
             } = this.props;
             return (0, i.jsx)(l.FocusRing, {
                 focusTarget: this.inputRef,
                 ringTarget: this.containerRef,
                 children: (0, i.jsx)("div", {
-                    className: a(s, _.container, g, {
-                        [_.disabled]: m
+                    className: a(s, f.container, g, {
+                        [f.disabled]: m
                     }),
                     ref: this.containerRef,
                     ...y,
                     children: (0, i.jsxs)("div", {
-                        className: _.inner,
+                        className: f.inner,
                         children: [(0, i.jsx)("input", {
                             ...I,
                             onFocus: v,
                             onBlur: S,
-                            className: _.input,
+                            className: f.input,
                             value: e,
                             onChange: this.handleOnChange,
                             onKeyDown: u,

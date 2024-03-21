@@ -20,8 +20,8 @@ function(e, t, n) {
         u = n("262448"),
         d = n("516826"),
         c = n("577776"),
-        f = n("414055"),
-        _ = n("904276"),
+        _ = n("414055"),
+        f = n("904276"),
         E = n("875436"),
         h = n("49111"),
         g = n("713274");
@@ -41,7 +41,7 @@ function(e, t, n) {
             size: o,
             onClick: u,
             infoClassName: d,
-            titleClassName: f,
+            titleClassName: _,
             radioItemClassName: h,
             radioItemIconClassName: m,
             radioBarClassName: p,
@@ -53,7 +53,7 @@ function(e, t, n) {
             className: m,
             children: [s ? (0, i.jsx)(E.default, {
                 foreground: g.radioIconForeground
-            }) : (0, i.jsx)(_.default, {}), null != T && (0, i.jsx)(T, {
+            }) : (0, i.jsx)(f.default, {}), null != T && (0, i.jsx)(T, {
                 className: g.icon,
                 width: 24,
                 height: 24
@@ -81,7 +81,7 @@ function(e, t, n) {
                     className: a(g.info, d),
                     children: [(0, i.jsx)(c.Text, {
                         variant: "text-md/medium",
-                        className: f,
+                        className: _,
                         color: "none",
                         children: r.name
                     }), null != r.desc && "" !== r.desc ? (0, i.jsx)(c.Text, {
@@ -106,7 +106,7 @@ function(e, t, n) {
                 radioItemClassName: l,
                 radioItemIconClassName: d,
                 radioBarClassName: c,
-                collapsibleClassName: _,
+                collapsibleClassName: f,
                 withTransparentBackground: E,
                 radioPosition: h
             } = this.props, m = t || n.disabled, {
@@ -114,7 +114,7 @@ function(e, t, n) {
                 tooltipPosition: v,
                 icon: T
             } = n, I = null != n.collapsibleContent ? (0, i.jsx)(u.Collapsible, {
-                className: _,
+                className: f,
                 isExpanded: e,
                 collapsibleContent: n.collapsibleContent,
                 children: t => {
@@ -156,7 +156,7 @@ function(e, t, n) {
                 icon: T,
                 withTransparentBackground: E
             });
-            return null != S ? (0, i.jsx)(f.Tooltip, {
+            return null != S ? (0, i.jsx)(_.Tooltip, {
                 text: S,
                 position: null != v ? v : "top",
                 children: e => (0, i.jsx)("div", {
@@ -252,22 +252,22 @@ function(e, t, n) {
             size: l = m.MEDIUM,
             radioPosition: u = "left",
             onChange: c = h.NOOP,
-            disabled: f = !1,
-            options: _ = [],
+            disabled: _ = !1,
+            options: f = [],
             "aria-labelledby": E,
             orientation: g,
             withTransparentBackground: p
         } = e, T = (0, d.useFormContext)(), I = v({
             labelledBy: null != E ? E : T.titleId,
             orientation: g,
-            isDisabled: f
-        }), A = _.some(e => e.value === o);
+            isDisabled: _
+        }), A = f.some(e => e.value === o);
         return (0, i.jsx)("div", {
             ...I,
             className: a,
-            children: _.map(e => (0, i.jsx)(S, {
+            children: f.map(e => (0, i.jsx)(S, {
                 hasSelection: A,
-                disabled: f,
+                disabled: _,
                 checked: o === e.value,
                 option: e,
                 onClick: c,

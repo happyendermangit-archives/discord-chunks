@@ -31,11 +31,11 @@ function(e, t, n) {
         return u.get(e)
     }
 
-    function f() {
+    function _() {
         return l.clear(), u.clear(), !0
     }
 
-    function _(e) {
+    function f(e) {
         let {
             channelId: t,
             command: n
@@ -70,9 +70,9 @@ function(e, t, n) {
     }
     h.displayName = "ApplicationCommandAutocompleteStore";
     var g = new h(s.default, {
-        CONNECTION_OPEN: f,
-        LOGOUT: f,
-        CHANNEL_SELECT: f,
+        CONNECTION_OPEN: _,
+        LOGOUT: _,
+        CHANNEL_SELECT: _,
         APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST: function(e) {
             var t;
             let {
@@ -107,10 +107,10 @@ function(e, t, n) {
                         displayName: null !== (t = e.name_localized) && void 0 !== t ? t : e.name
                     }
                 })) && void 0 !== n ? n : [],
-                f = d.get(s),
-                _ = null != f ? new Date().getTime() - f.getTime() : 0;
+                _ = d.get(s),
+                f = null != _ ? new Date().getTime() - _.getTime() : 0;
             (0, r.trackWithMetadata)(o.AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
-                duration_ms: _,
+                duration_ms: f,
                 error: !1,
                 num_options: u.length
             }), d.delete(s);
@@ -134,8 +134,8 @@ function(e, t, n) {
             let a = c(n.channelId);
             return a.lastErrored = !0, !0
         },
-        APPLICATION_COMMAND_SET_ACTIVE_COMMAND: _,
-        APP_LAUNCHER_SET_ACTIVE_COMMAND: _,
+        APPLICATION_COMMAND_SET_ACTIVE_COMMAND: f,
+        APP_LAUNCHER_SET_ACTIVE_COMMAND: f,
         APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function(e) {
             let {
                 channelId: t,

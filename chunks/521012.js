@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("745279"),
         d = n("49111");
     let c = null,
-        f = null,
         _ = null,
+        f = null,
         E = null,
         h = null,
         g = !1,
@@ -40,7 +40,7 @@ function(e, t, n) {
     }
 
     function I() {
-        c = null, f = null, _ = null, E = null, h = null, g = !1, m = !1, p = null, S = !1
+        c = null, _ = null, f = null, E = null, h = null, g = !1, m = !1, p = null, S = !1
     }
 
     function A(e) {
@@ -54,7 +54,7 @@ function(e, t, n) {
 
     function y(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            i = n ? f : c;
+            i = n ? _ : c;
         if (null == i) return null;
         for (let n in i) {
             let s = i[n];
@@ -95,7 +95,7 @@ function(e, t, n) {
         }
         getSubscriptions() {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-            return e ? f : c
+            return e ? _ : c
         }
         getSubscriptionById(e) {
             var t;
@@ -111,11 +111,11 @@ function(e, t, n) {
             var t;
             let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 i = new Set(e),
-                s = n ? f : c;
+                s = n ? _ : c;
             return null == s ? null : null !== (t = Object.values(s).find(e => e.items.some(e => i.has(e.planId)))) && void 0 !== t ? t : null
         }
         getMostRecentPremiumTypeSubscription() {
-            return _
+            return f
         }
         getPreviousPremiumTypeSubscription() {
             return p
@@ -140,7 +140,7 @@ function(e, t, n) {
                 }
                 let t = o.SubscriptionRecord.createFromServer(e);
                 n[t.id] = t, A(t) && (i[t.id] = t, t.type === d.SubscriptionTypes.GUILD && t.status !== d.SubscriptionStatusTypes.ENDED && s.push(t), t.type === d.SubscriptionTypes.APPLICATION && t.status !== d.SubscriptionStatusTypes.ENDED && r.push(t))
-            }), c = n, f = i, E = s, h = r
+            }), c = n, _ = i, E = s, h = r
         },
         BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function(e) {
             let {
@@ -149,8 +149,8 @@ function(e, t, n) {
             c = {
                 ...c,
                 [n.id]: n
-            }, A(n) && (f = {
-                ...f,
+            }, A(n) && (_ = {
+                ..._,
                 [n.id]: n
             }), null != E && n.type === d.SubscriptionTypes.GUILD && (E = T({
                 activeSubscriptions: E,
@@ -177,7 +177,7 @@ function(e, t, n) {
                     return
                 }
                 let n = o.SubscriptionRecord.createFromServer(t);
-                _ = n
+                f = n
             }
         },
         BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: function(e) {

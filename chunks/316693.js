@@ -4,8 +4,38 @@ function(_, E, I) {
         isBigFlag: function() {
             return T
         },
-        default: function() {
+        deserialize: function() {
+            return N
+        },
+        filter: function() {
+            return c
+        },
+        invert: function() {
+            return L
+        },
+        equals: function() {
+            return D
+        },
+        combine: function() {
+            return S
+        },
+        has: function() {
+            return C
+        },
+        hasAny: function() {
             return l
+        },
+        add: function() {
+            return s
+        },
+        remove: function() {
+            return P
+        },
+        getFlag: function() {
+            return M
+        },
+        asUintN: function() {
+            return U
         }
     }), I("274635");
     var e = I("552442"),
@@ -157,41 +187,38 @@ function(_, E, I) {
             return _ === E
         } : function(_, E) {
             return null == _ || null == E ? _ == E : _.equals(E)
-        },
-        S = A ? function(_) {
+        };
+
+    function S() {
+        for (var _ = arguments.length, E = Array(_), I = 0; I < _; I++) E[I] = arguments[I];
+        let e = E[0];
+        for (let _ = 1; _ < E.length; _++) e = O(e, E[_]);
+        return e
+    }
+
+    function C(_, E) {
+        return D(c(_, E), E)
+    }
+
+    function l(_, E) {
+        return !D(c(_, E), i)
+    }
+
+    function s(_, E) {
+        return E === i ? _ : O(_, E)
+    }
+
+    function P(_, E) {
+        return E === i ? _ : n(_, c(_, E))
+    }
+    let M = A ? function(_) {
             return BigInt(1) << BigInt(_)
         } : function(_) {
             return t.fromBit(_)
         },
-        C = A ? function(_, E) {
+        U = A ? function(_, E) {
             return Number(BigInt.asUintN(_, E))
         } : function(_, E) {
             return t.asUintN(_, E)
-        };
-    var l = {
-        asUintN: C,
-        combine: function() {
-            for (var _ = arguments.length, E = Array(_), I = 0; I < _; I++) E[I] = arguments[I];
-            let e = E[0];
-            for (let _ = 1; _ < E.length; _++) e = O(e, E[_]);
-            return e
-        },
-        add: function(_, E) {
-            return E === i ? _ : O(_, E)
-        },
-        remove: function(_, E) {
-            return E === i ? _ : n(_, c(_, E))
-        },
-        filter: c,
-        invert: L,
-        has: function(_, E) {
-            return D(c(_, E), E)
-        },
-        hasAny: function(_, E) {
-            return !D(c(_, E), i)
-        },
-        equals: D,
-        deserialize: N,
-        getFlag: S
-    }
+        }
 }

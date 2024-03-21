@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("316661"),
         d = n("599110"),
         c = n("773336"),
-        f = n("50885"),
-        _ = n("49111"),
+        _ = n("50885"),
+        f = n("49111"),
         E = n("492249");
     let h = new o.default("NativeDispatchUtils");
 
@@ -40,18 +40,18 @@ function(e, t, n) {
                 stateCallback: o,
                 errorCallback: u
             } = e;
-            null == s && (null != i ? Promise.resolve(i) : (0, c.isDesktop)() ? Promise.all([f.default.ensureModule("discord_dispatch"), f.default.ensureModule("discord_modules")]).then(() => {
-                f.default.requireModule("discord_modules");
-                let e = f.default.getDispatch();
+            null == s && (null != i ? Promise.resolve(i) : (0, c.isDesktop)() ? Promise.all([_.default.ensureModule("discord_dispatch"), _.default.ensureModule("discord_modules")]).then(() => {
+                _.default.requireModule("discord_modules");
+                let e = _.default.getDispatch();
                 return null != e ? (i = e, e) : Promise.reject(Error("dispatch not found"))
             }) : Promise.reject(Error("not desktop client"))).then(e => {
                 var i;
                 let c = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: "277341"
+                        build_number: "277376"
                     },
-                    f = l.default.getCurrentUser();
-                null != f && (c.user_id = f.id, c.user_name = f.tag, null != f.email && (c.email = f.email));
+                    _ = l.default.getCurrentUser();
+                null != _ && (c.user_id = _.id, c.user_name = _.tag, null != _.email && (c.email = _.email));
                 let E = {
                     user_token: t,
                     user_id: n,
@@ -90,13 +90,13 @@ function(e, t, n) {
                             properties: t
                         } = e;
                         switch (null != t.stage && null != t.stage.type && (t.stage = t.stage.type), e.event_name) {
-                            case _.AnalyticEvents.DISPATCH_PATCH_STARTED:
-                            case _.AnalyticEvents.DISPATCH_PATCH_PAUSED:
-                            case _.AnalyticEvents.DISPATCH_PATCH_FAILED:
-                            case _.AnalyticEvents.DISPATCH_PATCH_VERIFICATION_FAILED:
-                            case _.AnalyticEvents.DISPATCH_PATCH_COMPLETE:
-                            case _.AnalyticEvents.DISPATCH_PATCH_CANCELLED:
-                            case _.AnalyticEvents.DISPATCH_APPLICATION_UNINSTALLED:
+                            case f.AnalyticEvents.DISPATCH_PATCH_STARTED:
+                            case f.AnalyticEvents.DISPATCH_PATCH_PAUSED:
+                            case f.AnalyticEvents.DISPATCH_PATCH_FAILED:
+                            case f.AnalyticEvents.DISPATCH_PATCH_VERIFICATION_FAILED:
+                            case f.AnalyticEvents.DISPATCH_PATCH_COMPLETE:
+                            case f.AnalyticEvents.DISPATCH_PATCH_CANCELLED:
+                            case f.AnalyticEvents.DISPATCH_APPLICATION_UNINSTALLED:
                                 d.default.track(e.event_name, t)
                         }
                     }(t)

@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("786742"),
         d = n("867965"),
         c = n("233069"),
-        f = n("42203"),
-        _ = n("660478"),
+        _ = n("42203"),
+        f = n("660478"),
         E = n("449008"),
         h = n("299039"),
         g = n("755624");
@@ -37,15 +37,15 @@ function(e, t, n) {
     }
 
     function R(e, t) {
-        return t === a.ThreadSortOrder.LATEST_ACTIVITY ? _.default.lastMessageId(e.id) : e.id
+        return t === a.ThreadSortOrder.LATEST_ACTIVITY ? f.default.lastMessageId(e.id) : e.id
     }
 
     function O() {
         if (null == I) return !1;
         let e = !v,
-            t = f.default.getChannel(C[C.length - 1]),
+            t = _.default.getChannel(C[C.length - 1]),
             n = null == t ? null : R(t, A);
-        C = r(f.default.getAllThreadsForParent(I)).filter(e => e.isArchivedThread()).filter(t => {
+        C = r(_.default.getAllThreadsForParent(I)).filter(e => e.isArchivedThread()).filter(t => {
             var s;
             if (0 !== i.size && (null === (s = t.appliedTags) || void 0 === s ? void 0 : s.some(e => i.has(e))) !== !0) return !1;
             if (e || null == n) return !0;
@@ -63,7 +63,7 @@ function(e, t, n) {
     let P = [];
     class L extends o.default.Store {
         initialize() {
-            this.waitFor(f.default, g.default, _.default)
+            this.waitFor(_.default, g.default, f.default)
         }
         get canLoadMore() {
             return v && !p && !T
@@ -107,7 +107,7 @@ function(e, t, n) {
             if (e.channelId !== I || e.sortOrder !== A || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
             let t = e.threads.filter(e => c.ALL_CHANNEL_TYPES.has(e.type)).map(e => e.id);
             C = C.concat(t);
-            let n = f.default.getChannel(I);
+            let n = _.default.getChannel(I);
             null != n && n.isForumLikeChannel() && (0, d.trackForumMorePostsLoaded)({
                 guildId: n.guild_id,
                 channelId: n.id,

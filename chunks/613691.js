@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SpotifyAPI: function() {
-            return _
+            return f
         },
         getAccessToken: function() {
             return E
@@ -10,7 +10,7 @@ function(e, t, n) {
         subscribePlayerStateNotifications: function() {
             return function e(t, n, i) {
                 let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-                return _.put(t, n, {
+                return f.put(t, n, {
                     url: d.SpotifyEndpoints.NOTIFICATIONS_PLAYER,
                     query: {
                         connection_id: i
@@ -47,7 +47,7 @@ function(e, t, n) {
         d = n("450484"),
         c = n("49111");
 
-    function f(e, t, n, i) {
+    function _(e, t, n, i) {
         let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
         return e(i = {
             ...i,
@@ -62,13 +62,13 @@ function(e, t, n) {
                         access_token: s
                     }
                 } = n;
-                return f(e, t, s, i, r - 1)
+                return _(e, t, s, i, r - 1)
             }).then(e => new Promise(t => setImmediate(() => t(e)))) : Promise.reject(n)
         })
     }
-    let _ = {
-        get: f.bind(null, i.default.get),
-        put: f.bind(null, i.default.put)
+    let f = {
+        get: _.bind(null, i.default.get),
+        put: _.bind(null, i.default.put)
     };
 
     function E(e) {
@@ -99,7 +99,7 @@ function(e, t, n) {
     }
 
     function h(e, t) {
-        return _.get(e, t, {
+        return f.get(e, t, {
             url: d.SpotifyEndpoints.PROFILE
         }).then(t => (r.default.dispatch({
             type: "SPOTIFY_PROFILE_UPDATE",
@@ -109,7 +109,7 @@ function(e, t, n) {
     }
 
     function g(e, t) {
-        return _.get(e, t, {
+        return f.get(e, t, {
             url: d.SpotifyEndpoints.PLAYER_DEVICES
         }).then(t => (t.body && r.default.dispatch({
             type: "SPOTIFY_SET_DEVICES",
@@ -127,7 +127,7 @@ function(e, t, n) {
                 contextUri: u,
                 repeat: c
             } = s;
-        return _.put(e, t, {
+        return f.put(e, t, {
             url: d.SpotifyEndpoints.PLAYER_PLAY,
             query: {
                 device_id: o
@@ -140,7 +140,7 @@ function(e, t, n) {
                 } : void 0,
                 position_ms: null != l ? l : 0
             }
-        }).then(n => null == c ? n : _.put(e, t, {
+        }).then(n => null == c ? n : f.put(e, t, {
             url: d.SpotifyEndpoints.PLAYER_REPEAT,
             query: {
                 device_id: o,
@@ -154,7 +154,7 @@ function(e, t, n) {
     }
 
     function p(e, t) {
-        return _.put(e, t, {
+        return f.put(e, t, {
             url: d.SpotifyEndpoints.PLAYER_PAUSE
         }).then(e => (r.default.dispatch({
             type: "SPOTIFY_PLAYER_PAUSE"

@@ -18,11 +18,11 @@ function(e, t, n) {
         d = new Set(e.unavailableGuilds), e.unavailableGuilds.length > 0 && u.warn("".concat(e.unavailableGuilds.length, " guilds are unavailable on connection open: ").concat(e.unavailableGuilds))
     }
 
-    function f(e) {
+    function _(e) {
         if (!d.has(e.guild.id)) return !1;
         d.delete(e.guild.id), u.info("Guild has become available: ".concat(e.guild.id))
     }
-    class _ extends r.default.Store {
+    class f extends r.default.Store {
         initialize() {
             this.waitFor(l.default)
         }
@@ -39,8 +39,8 @@ function(e, t, n) {
             return Array.from(d)
         }
     }
-    _.displayName = "GuildAvailabilityStore";
-    var E = new _(a.default, {
+    f.displayName = "GuildAvailabilityStore";
+    var E = new f(a.default, {
         CONNECTION_OPEN: c,
         OVERLAY_INITIALIZE: c,
         GUILD_UNAVAILABLE: function(e) {
@@ -52,8 +52,8 @@ function(e, t, n) {
         GUILD_DELETE: function(e) {
             !0 !== e.guild.unavailable && d.delete(e.guild.id)
         },
-        GUILD_CREATE: f,
-        GUILD_UPDATE: f,
+        GUILD_CREATE: _,
+        GUILD_UPDATE: _,
         GUILD_GEO_RESTRICTED: function(e) {
             if (!d.has(e.guildId)) return !1;
             d.delete(e.guildId)

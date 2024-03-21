@@ -15,8 +15,8 @@ function(e, t, n) {
         u = n("577776"),
         d = n("36694"),
         c = n("945330"),
-        f = n("29479"),
-        _ = n("843455"),
+        _ = n("29479"),
+        f = n("843455"),
         E = n("782340"),
         h = n("963355");
 
@@ -58,11 +58,11 @@ function(e, t, n) {
             integrationType: u,
             errors: d,
             isTrustedName: c = !1
-        } = e, m = (0, a.useLazyValue)(() => f.FAKE_SCOPES[Math.floor(Math.random() * f.FAKE_SCOPES.length)]);
+        } = e, m = (0, a.useLazyValue)(() => _.FAKE_SCOPES[Math.floor(Math.random() * _.FAKE_SCOPES.length)]);
         if (0 === s.length) return null;
         let p = m(),
             S = c ? E.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.default.Messages.OAUTH2_SCOPES_LABEL,
-            v = u === o.ApplicationIntegrationType.USER_INSTALL && r.includes(_.OAuth2Scopes.APPLICATIONS_COMMANDS);
+            v = u === o.ApplicationIntegrationType.USER_INSTALL && r.includes(f.OAuth2Scopes.APPLICATIONS_COMMANDS);
         return (0, i.jsxs)("div", {
             className: h.scopes,
             children: [(0, i.jsx)(l.Heading, {
@@ -74,7 +74,7 @@ function(e, t, n) {
             }), s.map(e => {
                 var t;
                 return (0, i.jsx)(g, {
-                    text: (0, f.getScopeName)(e, s),
+                    text: (0, _.getScopeName)(e, s),
                     error: null == d ? void 0 : null === (t = d[e]) || void 0 === t ? void 0 : t[0]
                 }, e)
             }), v && (0, i.jsx)(g, {

@@ -92,10 +92,10 @@ function(e, t, n) {
             return ec
         },
         PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID: function() {
-            return ef
+            return e_
         },
         PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID: function() {
-            return e_
+            return ef
         },
         PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID: function() {
             return eE
@@ -164,13 +164,13 @@ function(e, t, n) {
             return eM
         },
         StreamQualities: function() {
-            return f
+            return _
         },
         StreamQualitiesToPremiumType: function() {
             return eb
         },
         PremiumMarketingEntrypoints: function() {
-            return _
+            return f
         },
         PremiumHeaderThemes: function() {
             return E
@@ -218,7 +218,7 @@ function(e, t, n) {
             return eY
         }
     }), n("222007");
-    var i, s, r, a, o, l, u, d, c, f, _, E, h, g, m, p, S, v, T, I, A, C, y, N, R, O, D, P, L, M, b, U, w, k, V, G, F = n("49111"),
+    var i, s, r, a, o, l, u, d, c, _, f, E, h, g, m, p, S, v, T, I, A, C, y, N, R, O, D, P, L, M, b, U, w, k, V, G, F = n("49111"),
         x = n("958706");
     (T = i || (i = {}))[T.TIER_1 = 1] = "TIER_1", T[T.TIER_2 = 2] = "TIER_2", T[T.TIER_0 = 3] = "TIER_0";
     let B = void 0,
@@ -422,8 +422,8 @@ function(e, t, n) {
         eu = 14,
         ed = "520373071933079552",
         ec = "902329034132684800",
-        ef = "983601860436819968",
-        e_ = "983601860436819969",
+        e_ = "983601860436819968",
+        ef = "983601860436819969",
         eE = "984244797441048577",
         eh = "1004850445463584768",
         eg = "1073698058383917056",
@@ -443,12 +443,12 @@ function(e, t, n) {
                 id: ec,
                 skus: ["521847234246082599"]
             },
-            [ef]: {
-                id: ef,
-                skus: ["521847234246082599"]
-            },
             [e_]: {
                 id: e_,
+                skus: ["521847234246082599"]
+            },
+            [ef]: {
+                id: ef,
                 skus: ["521847234246082599"]
             },
             [eE]: {
@@ -561,12 +561,12 @@ function(e, t, n) {
         "944037208325619722": 8,
         "642251038925127690": 5
     };
-    (P = f || (f = {})).HIGH_STREAMING_QUALITY = "high_streaming_quality", P.MID_STREAMING_QUALITY = "mid_streaming_quality";
+    (P = _ || (_ = {})).HIGH_STREAMING_QUALITY = "high_streaming_quality", P.MID_STREAMING_QUALITY = "mid_streaming_quality";
     let eb = Object.freeze({
         high_streaming_quality: 2,
         mid_streaming_quality: 1
     });
-    (L = _ || (_ = {}))[L.UserSettings = 0] = "UserSettings", L[L.ApplicationStoreHome = 1] = "ApplicationStoreHome", (M = E || (E = {}))[M.DEFAULT = 0] = "DEFAULT", M[M.WINTER = 1] = "WINTER", (b = h || (h = {}))[b.SNOWGLOBE = 1] = "SNOWGLOBE", b[b.BOX = 2] = "BOX", b[b.CUP = 3] = "CUP", b[b.STANDARD_BOX = 4] = "STANDARD_BOX", b[b.CAKE = 5] = "CAKE", b[b.CHEST = 6] = "CHEST", b[b.COFFEE = 7] = "COFFEE", b[b.SEASONAL_STANDARD_BOX = 8] = "SEASONAL_STANDARD_BOX", b[b.SEASONAL_CAKE = 9] = "SEASONAL_CAKE", b[b.SEASONAL_CHEST = 10] = "SEASONAL_CHEST", b[b.SEASONAL_COFFEE = 11] = "SEASONAL_COFFEE", (U = g || (g = {})).USER_NOT_VERIFIED = "user_not_verified", U.NO_CODE_BODY = "no_code_body", U.NO_PROMOTION = "no_promotion", U.CODE_CLAIMED = "code_claimed", U.EXISTING_SUBSCRIBER = "existing_subscriber", U.PREVIOUS_SUBSCRIBER = "previous_subscriber", U.BLOCKED_PAYMENT = "blocked_payment";
+    (L = f || (f = {}))[L.UserSettings = 0] = "UserSettings", L[L.ApplicationStoreHome = 1] = "ApplicationStoreHome", (M = E || (E = {}))[M.DEFAULT = 0] = "DEFAULT", M[M.WINTER = 1] = "WINTER", (b = h || (h = {}))[b.SNOWGLOBE = 1] = "SNOWGLOBE", b[b.BOX = 2] = "BOX", b[b.CUP = 3] = "CUP", b[b.STANDARD_BOX = 4] = "STANDARD_BOX", b[b.CAKE = 5] = "CAKE", b[b.CHEST = 6] = "CHEST", b[b.COFFEE = 7] = "COFFEE", b[b.SEASONAL_STANDARD_BOX = 8] = "SEASONAL_STANDARD_BOX", b[b.SEASONAL_CAKE = 9] = "SEASONAL_CAKE", b[b.SEASONAL_CHEST = 10] = "SEASONAL_CHEST", b[b.SEASONAL_COFFEE = 11] = "SEASONAL_COFFEE", (U = g || (g = {})).USER_NOT_VERIFIED = "user_not_verified", U.NO_CODE_BODY = "no_code_body", U.NO_PROMOTION = "no_promotion", U.CODE_CLAIMED = "code_claimed", U.EXISTING_SUBSCRIBER = "existing_subscriber", U.PREVIOUS_SUBSCRIBER = "previous_subscriber", U.BLOCKED_PAYMENT = "blocked_payment";
     let eU = Object.freeze({
             IS_BLOCKED_IOS: 32,
             IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,

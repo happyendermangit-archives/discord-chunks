@@ -53,8 +53,8 @@ function(e, t, n) {
         u = n("374014"),
         d = n("709463"),
         c = n("870346"),
-        f = n("373469"),
-        _ = n("271938"),
+        _ = n("373469"),
+        f = n("271938"),
         E = n("42203"),
         h = n("305961"),
         g = n("18494"),
@@ -106,11 +106,11 @@ function(e, t, n) {
         } = e;
         if (null != i && P(i, s)) return;
         let r = (0, u.encodeStreamKey)(e),
-            a = (null == t ? void 0 : t.forceMultiple) || f.default.getAllActiveStreamsForChannel(s).filter(e => {
+            a = (null == t ? void 0 : t.forceMultiple) || _.default.getAllActiveStreamsForChannel(s).filter(e => {
                 let {
                     ownerId: t
                 } = e;
-                return t !== _.default.getId()
+                return t !== f.default.getId()
             }).length >= 2;
         o.default.dispatch({
             type: "STREAM_WATCH",
@@ -220,7 +220,7 @@ function(e, t, n) {
 
     function x() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-            t = f.default.getCurrentUserActiveStream();
+            t = _.default.getCurrentUserActiveStream();
         null != t && U((0, u.encodeStreamKey)(t), e)
     }
 
@@ -246,7 +246,7 @@ function(e, t, n) {
     }
 
     function H(e, t) {
-        let n = _.default.getId(),
+        let n = f.default.getId(),
             i = (0, u.decodeStreamKey)(t),
             s = g.default.getVoiceChannelId();
         null != s && s !== e && y.default.disconnect(), A.default.addRecipient(e, n, void 0, () => {

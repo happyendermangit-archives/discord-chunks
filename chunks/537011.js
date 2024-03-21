@@ -29,7 +29,7 @@ function(e, t, n) {
             return c.MenuSubmenuItem
         },
         SubmenuListItem: function() {
-            return f.MenuSubmenuListItem
+            return _.MenuSubmenuListItem
         }
     });
     var i = n("964019"),
@@ -41,5 +41,5 @@ function(e, t, n) {
         u = n("146155"),
         d = n("536864"),
         c = n("8022"),
-        f = n("967541")
+        _ = n("967541")
 }

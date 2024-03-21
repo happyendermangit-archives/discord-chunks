@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         convertToTimeOfADay: function() {
-            return _
+            return f
         },
         timeAtSpecificDay: function() {
             return h
@@ -20,8 +20,8 @@ function(e, t, n) {
         u = /(PM|ΜΜ|शाम)/i,
         d = /\s+/,
         c = e => e.replace(a, "").replace(o, "").replace(l, "").replace(d, ""),
-        f = e => e.replace(a, "").replace(u, "").replace(d, ""),
-        _ = (e, t) => {
+        _ = e => e.replace(a, "").replace(u, "").replace(d, ""),
+        f = (e, t) => {
             let n = t.toUpperCase().trim();
             if (n.length > 0) {
                 let t = s("".concat(null == e ? void 0 : e.format("YYYY-MM-DD"), " ").concat(n), "YYYY-MM-DD LT");
@@ -69,7 +69,7 @@ function(e, t, n) {
         _guessOptions(e) {
             let t = [];
             if (/[:\\.]/.test(e)) {
-                let n = _(E, e);
+                let n = f(E, e);
                 if (null != n) {
                     t.push(n.clone());
                     let i = n.add({
@@ -77,7 +77,7 @@ function(e, t, n) {
                     });
                     i.isBefore(E.clone().add({
                         hours: 24
-                    })) && f(i.format("LT")) === f(e) && t.push(i)
+                    })) && _(i.format("LT")) === _(e) && t.push(i)
                 }
             }
             return t

@@ -15,14 +15,14 @@ function(e, t, n) {
         s = n("49111");
 
     function r(e) {
-        return i.default.has(e.permissions, s.Permissions.VIEW_CHANNEL)
+        return i.has(e.permissions, s.Permissions.VIEW_CHANNEL)
     }
 
     function a(e, t) {
-        return null != t && (!!i.default.has(t.deny, s.Permissions.VIEW_CHANNEL) || e.isGuildVocal() && i.default.has(t.deny, s.Permissions.CONNECT))
+        return null != t && (!!i.has(t.deny, s.Permissions.VIEW_CHANNEL) || e.isGuildVocal() && i.has(t.deny, s.Permissions.CONNECT))
     }
 
     function o(e, t) {
-        return !(null == t || a(e, t)) && !!i.default.has(t.allow, s.Permissions.VIEW_CHANNEL) && (!e.isGuildVocal() || i.default.has(t.allow, s.Permissions.CONNECT))
+        return !(null == t || a(e, t)) && !!i.has(t.allow, s.Permissions.VIEW_CHANNEL) && (!e.isGuildVocal() || i.has(t.allow, s.Permissions.CONNECT))
     }
 }

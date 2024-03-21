@@ -23,12 +23,12 @@ function(e, t, n) {
         u = n("599110"),
         d = n("568734"),
         c = n("863636"),
-        f = n("653138"),
-        _ = n("49111"),
+        _ = n("653138"),
+        f = n("49111"),
         E = n("657944");
 
     function h(e) {
-        u.default.track(_.AnalyticEvents.GUILD_ONBOARDING_LOADED, {
+        u.default.track(f.AnalyticEvents.GUILD_ONBOARDING_LOADED, {
             ...(0, r.collectGuildAnalyticsMetadata)(e),
             has_new_prompts: !1,
             number_of_prompts: 0
@@ -40,11 +40,11 @@ function(e, t, n) {
             type: "GUILD_ONBOARDING_PROMPTS_FETCH_START",
             guildId: e
         }), i.default.get({
-            url: _.Endpoints.GUILD_ONBOARDING(e)
+            url: f.Endpoints.GUILD_ONBOARDING(e)
         }).then(t => {
             let {
                 body: n
-            } = t, i = (0, f.serverApiResponseToClientState)(n);
+            } = t, i = (0, _.serverApiResponseToClientState)(n);
             return s.default.dispatch({
                 type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS",
                 guildId: e,
@@ -60,10 +60,10 @@ function(e, t, n) {
         let i = a.default.getId(),
             s = (0, d.hasFlag)(null !== (n = null === (t = o.default.getMember(e, i)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, E.GuildMemberFlags.COMPLETED_ONBOARDING),
             r = l.default.getGuild(e);
-        if (null == r || !r.hasFeature(_.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
+        if (null == r || !r.hasFeature(f.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
         let u = c.default.shouldFetchPrompts(e),
-            f = c.default.getOnboardingPrompts(e);
-        if (!u && f.length > 0) return f.every(e => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!s && p(e), Promise.resolve());
+            _ = c.default.getOnboardingPrompts(e);
+        if (!u && _.length > 0) return _.every(e => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!s && p(e), Promise.resolve());
         let h = await g(e);
         return Array.isArray(h) && h.every(e => !e.inOnboarding) ? (S(e), Promise.resolve()) : (!s && p(e), h)
     }
@@ -76,11 +76,11 @@ function(e, t, n) {
     }
 
     function S(e) {
-        u.default.track(_.AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, {
+        u.default.track(f.AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, {
             ...(0, r.collectGuildAnalyticsMetadata)(e),
             step: -2,
             required: !0
-        }), u.default.track(_.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
+        }), u.default.track(f.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
             ...(0, r.collectGuildAnalyticsMetadata)(e),
             step: -2,
             skipped: !1,

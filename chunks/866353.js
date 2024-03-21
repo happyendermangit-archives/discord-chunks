@@ -20,7 +20,7 @@ function(e, t, n) {
             if (null == t) return 2;
             let i = a.default.canUseCustomStickersEverywhere(t);
             if ((0, o.isStandardSticker)(e)) return 0;
-            if ((0, o.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? 0 : null == n.guild_id || r.default.can({
+            if ((0, o.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? 0 : null == n.guild_id || r.can({
                 permission: l.Permissions.USE_EXTERNAL_STICKERS,
                 user: t,
                 context: n

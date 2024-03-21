@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("697917"),
         d = n("904276"),
         c = n("875436"),
-        f = n("389802"),
-        _ = n("639826");
+        _ = n("389802"),
+        f = n("639826");
 
     function E(e) {
         let {
@@ -32,29 +32,29 @@ function(e, t, n) {
             g && (0, u.ensureItemVisible)(S)
         }, [g]), (0, i.jsxs)(o.Clickable, {
             innerRef: S,
-            className: a(_.item, _.labelContainer, f.MENU_ITEM_COLORS[t], {
-                [_.disabled]: h,
-                [_.focused]: g
+            className: a(f.item, f.labelContainer, _.MENU_ITEM_COLORS[t], {
+                [f.disabled]: h,
+                [f.focused]: g
             }),
             onClick: h ? void 0 : p,
             ...m,
             "aria-checked": r,
             "aria-disabled": h,
             children: [(0, i.jsxs)("div", {
-                className: _.label,
+                className: f.label,
                 children: [(0, l.renderSubnode)(n, e), null != E && (0, i.jsx)("div", {
-                    className: _.subtext,
+                    className: f.subtext,
                     children: E
                 })]
             }), (0, i.jsx)("div", {
-                className: _.iconContainer,
+                className: f.iconContainer,
                 children: r ? (0, i.jsx)(c.default, {
-                    className: _.icon,
-                    background: _.radio,
-                    foreground: _.radioSelection
+                    className: f.icon,
+                    background: f.radio,
+                    foreground: f.radioSelection
                 }) : (0, i.jsx)(d.default, {
-                    className: _.icon,
-                    foreground: _.radio
+                    className: f.icon,
+                    foreground: f.radio
                 })
             })]
         })

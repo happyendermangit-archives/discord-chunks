@@ -16,8 +16,8 @@ function(e, t, n) {
     n("233736");
     var d = n("913144"),
         c = n("197231"),
-        f = n("271938"),
-        _ = n("251013"),
+        _ = n("271938"),
+        f = n("251013"),
         E = n("49111"),
         h = n("447621");
     (s = i || (i = {})).UNSET = "unset", s.FETCHING = "fetching", s.FAILED = "failed", s.SUCCEEDED = "succeeded";
@@ -75,10 +75,10 @@ function(e, t, n) {
     }
     class O extends u.default.Store {
         initialize() {
-            this.waitFor(f.default)
+            this.waitFor(_.default)
         }
         isFetching() {
-            return S || null == T || null == _.default.lastFetched
+            return S || null == T || null == f.default.lastFetched
         }
         isFetchingSearch() {
             return "fetching" === v

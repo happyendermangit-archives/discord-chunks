@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("446674"),
         d = n("773364"),
         c = n("913144"),
-        f = n("161454"),
-        _ = n("583702"),
+        _ = n("161454"),
+        f = n("583702"),
         E = n("374014"),
         h = n("582415"),
         g = n("537429"),
@@ -176,7 +176,7 @@ function(e, t, n) {
                     } = e;
                     t.setActionContext(s)
                 }), D[o] = a, O[o] = r, null != r) {
-                let e = f.default.getGameForPID(r);
+                let e = _.default.getGameForPID(r);
                 null != e && (R[o] = {
                     name: e.name,
                     id: e.id,
@@ -207,13 +207,13 @@ function(e, t, n) {
             s = t;
             let l = L[t];
             if (null == l && null != n) {
-                var u, c, f;
+                var u, c, _;
                 null == O[t] && (R[t] = null);
                 let e = (0, E.decodeStreamKey)(t);
                 null == R[t] && null == D[t] && (R[t] = (0, h.getStreamerApplication)(e, I.default));
                 let s = v.default.getChannel(e.channelId),
                     d = null != s && s.isBroadcastChannel(),
-                    g = new _.StreamRTCAnalyticsContext({
+                    g = new f.StreamRTCAnalyticsContext({
                         streamRegion: r,
                         streamApplication: R[t],
                         streamSourceType: function(e) {
@@ -231,12 +231,12 @@ function(e, t, n) {
                         numViewers: null != o ? o.length : 0,
                         isBroadcast: d
                     });
-                u = t, c = n, f = g, a(null != i, "Creating RTCConnection without session."), l = new _.default({
+                u = t, c = n, _ = g, a(null != i, "Creating RTCConnection without session."), l = new f.default({
                     sessionId: i,
                     streamKey: u,
                     serverId: c,
                     initialLayout: P,
-                    analyticsContext: f,
+                    analyticsContext: _,
                     isStreamer: null != R[u],
                     parentMediaSessionId: A.default.getMediaSessionId()
                 }), L[t] = l

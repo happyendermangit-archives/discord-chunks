@@ -23,29 +23,29 @@ function(e, t, n) {
 
     function c(e) {
         var t, n, l, u, d, c;
-        let f = (0, i.parse)(e, {
+        let _ = (0, i.parse)(e, {
                 arrayFormat: "bracket"
             }),
-            _ = o.default.NONE;
+            f = o.NONE;
         try {
-            _ = s.default.deserialize(null != f.permissions && "" !== f.permissions ? f.permissions : "0")
+            f = s.deserialize(null != _.permissions && "" !== _.permissions ? _.permissions : "0")
         } catch (e) {}
-        let E = f.channel_id,
-            h = null !== (u = null !== (l = null !== (n = f.guild_id) && void 0 !== n ? n : null === (t = r.default.getChannel(E)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== l ? l : a.default.getGuildId()) && void 0 !== u ? u : void 0;
+        let E = _.channel_id,
+            h = null !== (u = null !== (l = null !== (n = _.guild_id) && void 0 !== n ? n : null === (t = r.default.getChannel(E)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== l ? l : a.default.getGuildId()) && void 0 !== u ? u : void 0;
         return {
-            clientId: null !== (d = f.client_id) && void 0 !== d ? d : "",
-            scopes: (null !== (c = f.scope) && void 0 !== c ? c : "").split(" ").filter(e => e.length > 0),
-            responseType: f.response_type,
-            redirectUri: f.redirect_uri,
-            codeChallenge: f.code_challenge,
-            codeChallengeMethod: f.code_challenge_method,
-            state: f.state,
-            permissions: _,
+            clientId: null !== (d = _.client_id) && void 0 !== d ? d : "",
+            scopes: (null !== (c = _.scope) && void 0 !== c ? c : "").split(" ").filter(e => e.length > 0),
+            responseType: _.response_type,
+            redirectUri: _.redirect_uri,
+            codeChallenge: _.code_challenge,
+            codeChallengeMethod: _.code_challenge_method,
+            state: _.state,
+            permissions: f,
             channelId: E,
             guildId: h,
-            prompt: f.prompt,
-            disableGuildSelect: "true" === f.disable_guild_select,
-            integrationType: null == f.integration_type ? void 0 : Number(f.integration_type)
+            prompt: _.prompt,
+            disableGuildSelect: "true" === _.disable_guild_select,
+            integrationType: null == _.integration_type ? void 0 : Number(_.integration_type)
         }
     }
 }

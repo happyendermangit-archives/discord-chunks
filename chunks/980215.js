@@ -8,10 +8,10 @@ function(e, t, n) {
             return d
         },
         getClydeEnabled: function() {
-            return f
+            return _
         },
         getClydeExperimentEnabled: function() {
-            return _
+            return f
         },
         canUseCustomClydeProfiles: function() {
             return E
@@ -54,7 +54,7 @@ function(e, t, n) {
         if (null == t) {
             if (null != n && n.isPrivate()) {
                 if (n.hasFlag(o.ChannelFlags.CLYDE_AI)) return !0;
-                let e = i.default.getGuildIds().some(e => _(i.default.getGuild(e)));
+                let e = i.default.getGuildIds().some(e => f(i.default.getGuild(e)));
                 return e
             }
             return !1
@@ -62,7 +62,7 @@ function(e, t, n) {
         return null != e && e !== r.ClydeExperimentState.None && s.default.can(a.Permissions.USE_CLYDE_AI, n)
     }
 
-    function f(e, t) {
+    function _(e, t) {
         var n;
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             s = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : a.EMPTY_STRING_SNOWFLAKE_ID,
@@ -75,7 +75,7 @@ function(e, t, n) {
         return c(o, e, t)
     }
 
-    function _(e) {
+    function f(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = h(e, t);
         return n !== r.ClydeExperimentState.None

@@ -18,8 +18,8 @@ function(e, t, n) {
         u = n("913144"),
         d = n("605250"),
         c = n("509"),
-        f = n("564568"),
-        _ = n("38654"),
+        _ = n("564568"),
+        f = n("38654"),
         E = n("568734"),
         h = n("449008"),
         g = n("299039"),
@@ -64,7 +64,7 @@ function(e, t, n) {
     }
 
     function U(e) {
-        k(e) === m.default.getId() && (0, f.clearCommunicationDisabledNotice)(V(e)), delete C[e]
+        k(e) === m.default.getId() && (0, _.clearCommunicationDisabledNotice)(V(e)), delete C[e]
     }
 
     function w(e, t) {
@@ -122,7 +122,7 @@ function(e, t, n) {
             isPending: u,
             joinedAt: d,
             communicationDisabledUntil: c,
-            unusualDMActivityUntil: f,
+            unusualDMActivityUntil: _,
             fullProfileLoadedTimestamp: E,
             flags: h
         } = e, {
@@ -147,17 +147,17 @@ function(e, t, n) {
             isPending: u,
             joinedAt: d,
             communicationDisabledUntil: c,
-            unusualDMActivityUntil: f,
+            unusualDMActivityUntil: _,
             fullProfileLoadedTimestamp: E,
             flags: h
         }, N = I[i];
         if (null == N) return y;
         if (t === m.default.getId()) {
-            if (_.default.isViewingRoles(i) || _.default.isFullServerPreview(i)) {
-                let e = _.default.getViewingRoles(i);
+            if (f.default.isViewingRoles(i) || f.default.isFullServerPreview(i)) {
+                let e = f.default.getViewingRoles(i);
                 A[i] = {
                     ...y,
-                    ..._.default.getMemberOptions(i),
+                    ...f.default.getMemberOptions(i),
                     roles: null != e ? g.default.keys(e) : []
                 }
             } else null != A[i] && delete A[i]
@@ -184,8 +184,8 @@ function(e, t, n) {
             isPending: u,
             joinedAt: d,
             communicationDisabledUntil: c,
-            unusualDMActivityUntil: f,
-            flags: _
+            unusualDMActivityUntil: _,
+            flags: f
         } = e, E = I[n];
         if (null == E) return !1;
         let h = S.default.getGuild(n);
@@ -205,9 +205,9 @@ function(e, t, n) {
             isPending: u,
             joinedAt: d,
             communicationDisabledUntil: c,
-            unusualDMActivityUntil: f,
+            unusualDMActivityUntil: _,
             fullProfileLoadedTimestamp: null === (t = E[i.id]) || void 0 === t ? void 0 : t.fullProfileLoadedTimestamp,
-            flags: _
+            flags: f
         }), L(n, E[i.id])
     }
 
@@ -376,7 +376,7 @@ function(e, t, n) {
     }
     class Q extends l.default.Store {
         initialize() {
-            this.waitFor(S.default, m.default, _.default)
+            this.waitFor(S.default, m.default, f.default)
         }
         getMutableAllGuildsAndMembers() {
             return I
@@ -438,7 +438,7 @@ function(e, t, n) {
         }
         getMember(e, t) {
             let n = this.getTrueMember(e, t);
-            if (null != n && t === m.default.getId() && (_.default.isViewingRoles(e) || _.default.isFullServerPreview(e))) {
+            if (null != n && t === m.default.getId() && (f.default.isViewingRoles(e) || f.default.isFullServerPreview(e))) {
                 var i;
                 return null !== (i = A[e]) && void 0 !== i ? i : n
             }
@@ -518,10 +518,10 @@ function(e, t, n) {
                 addedRoleIds: o,
                 removedRoleIds: l,
                 flags: u
-            } = e, d = m.default.getId(), c = I[s], f = null != c ? c[d] : null;
-            if (null == f) return !1;
-            let _ = S.default.getGuild(s);
+            } = e, d = m.default.getId(), c = I[s], _ = null != c ? c[d] : null;
             if (null == _) return !1;
+            let f = S.default.getGuild(s);
+            if (null == f) return !1;
             let E = null !== (t = D[s]) && void 0 !== t ? t : {};
             D[s] = {
                 added: a.difference(a.union(null !== (n = E.added) && void 0 !== n ? n : [], o), null != l ? l : []),
@@ -529,16 +529,16 @@ function(e, t, n) {
             }, c[d] = F({
                 userId: d,
                 guildId: s,
-                nick: f.nick,
-                avatar: f.avatar,
-                avatarDecoration: f.avatarDecoration,
-                guildRoles: S.default.getRoles(_.id),
-                roles: null != r ? r : f.roles,
-                premiumSince: f.premiumSince,
-                isPending: f.isPending,
-                joinedAt: f.joinedAt,
-                flags: null != u ? u : f.flags,
-                fullProfileLoadedTimestamp: f.fullProfileLoadedTimestamp
+                nick: _.nick,
+                avatar: _.avatar,
+                avatarDecoration: _.avatarDecoration,
+                guildRoles: S.default.getRoles(f.id),
+                roles: null != r ? r : _.roles,
+                premiumSince: _.premiumSince,
+                isPending: _.isPending,
+                joinedAt: _.joinedAt,
+                flags: null != u ? u : _.flags,
+                fullProfileLoadedTimestamp: _.fullProfileLoadedTimestamp
             })
         },
         GUILD_MEMBERS_CHUNK: function(e) {

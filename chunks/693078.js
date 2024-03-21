@@ -14,8 +14,8 @@ function(e, t, n) {
         u = "(?:[*-]|\\d+\\.)",
         d = "( *)(" + u + ") +",
         c = RegExp("^" + d),
-        f = RegExp(d + "[^\\n]*(?:\\n(?!\\1" + u + " )[^\\n]*)*(\n|$)", "gm"),
-        _ = / *\n$/,
+        _ = RegExp(d + "[^\\n]*(?:\\n(?!\\1" + u + " )[^\\n]*)*(\n|$)", "gm"),
+        f = / *\n$/,
         E = RegExp("^( *)(" + u + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + u + " )|$)"),
         h = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
         g = e => e.map(e => ("text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")), e)),
@@ -31,7 +31,7 @@ function(e, t, n) {
             parse: (e, t, n) => {
                 let i = e[2],
                     r = i.length > 1,
-                    a = e[0].replace(o, "\n").match(f);
+                    a = e[0].replace(o, "\n").match(_);
                 s(null != a, "markup list items can not be parsed.");
                 let l = !1,
                     u = a.map((e, i) => {
@@ -40,14 +40,14 @@ function(e, t, n) {
                             o = null != r ? r[0].length : 0,
                             u = RegExp("^ {1," + o + "}", "gm"),
                             d = e.replace(u, "").replace(c, ""),
-                            f = i === a.length - 1,
+                            _ = i === a.length - 1,
                             E = -1 !== d.indexOf("\n\n"),
-                            h = E || f && l;
+                            h = E || _ && l;
                         l = h;
                         let m = n.inline,
                             p = n._list,
                             S = n._listLevel;
-                        n._list = !0, n._listLevel = (null != S ? S : 0) + 1, h ? (n.inline = !1, s = d.replace(_, "\n\n")) : (n.inline = !0, s = d.replace(_, ""));
+                        n._list = !0, n._listLevel = (null != S ? S : 0) + 1, h ? (n.inline = !1, s = d.replace(f, "\n\n")) : (n.inline = !0, s = d.replace(f, ""));
                         let v = g(t(s, {
                             ...n,
                             allowHeading: !1

@@ -23,8 +23,8 @@ function(e, t, n) {
         u = n("315102"),
         d = n("61069"),
         c = n("103603"),
-        f = n("719923"),
-        _ = n("49111"),
+        _ = n("719923"),
+        f = n("49111"),
         E = n("958706");
     let h = new Set([E.EmojiDisabledReasons.PREMIUM_LOCKED, E.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED]),
         g = new Set([E.EmojiDisabledReasons.PREMIUM_LOCKED, E.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE, E.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED, E.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE]),
@@ -53,17 +53,17 @@ function(e, t, n) {
             h = null != s && (0, a.isGuildTextChannelType)(s.type),
             g = null != s && (0, a.isGuildVocalChannelType)(s.type),
             m = S(n, c),
-            v = o.default.can(_.Permissions.USE_EXTERNAL_EMOJIS, s);
+            v = o.default.can(f.Permissions.USE_EXTERNAL_EMOJIS, s);
         if (u === E.EmojiIntention.COMMUNITY_CONTENT || u === E.EmojiIntention.COMMUNITY_CONTENT_ONLY) return m && n.available ? null : E.EmojiDisabledReasons.DISALLOW_EXTERNAL;
         if (!(0, E.isExternalEmojiAllowedForIntention)(u) && !S(n, c) && !d || (h || g) && !m && !v) return E.EmojiDisabledReasons.DISALLOW_EXTERNAL;
         if (!n.available) return E.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
         let T = l.default.getCurrentUser();
-        if (!f.default.canUseEmojisEverywhere(T) && !m) {
+        if (!_.default.canUseEmojisEverywhere(T) && !m) {
             if (u === E.EmojiIntention.STATUS) return E.EmojiDisabledReasons.PREMIUM_LOCKED;
             if (!n.managed) return E.EmojiDisabledReasons.PREMIUM_LOCKED
         }
         if ((0, r.isUnusableRoleSubscriptionEmoji)(n, null != c ? c : void 0)) return (0, i.shouldHideGuildPurchaseEntryPoints)(n.guildId) ? E.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : E.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
-        return !n.animated || f.default.canUseAnimatedEmojis(T) || (0, r.isPurchasableRoleSubscriptionEmoji)(n) ? null : E.EmojiDisabledReasons.PREMIUM_LOCKED
+        return !n.animated || _.default.canUseAnimatedEmojis(T) || (0, r.isPurchasableRoleSubscriptionEmoji)(n) ? null : E.EmojiDisabledReasons.PREMIUM_LOCKED
     }
 
     function T(e, t) {

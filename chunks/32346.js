@@ -11,18 +11,18 @@ function(e, t, n) {
         l = n("446674"),
         u = n("913144"),
         d = n("49111");
-    let c = f();
+    let c = _();
 
-    function f() {
+    function _() {
         return {
             recentCustomStatuses: [],
             currentDefaultStatus: null
         }
     }
-    class _ extends l.default.PersistedStore {
+    class f extends l.default.PersistedStore {
         initialize(e) {
             c = {
-                ...f(),
+                ..._(),
                 ...null != e ? e : {}
             }
         }
@@ -45,10 +45,10 @@ function(e, t, n) {
             return null == i ? null : r
         }
     }
-    _.displayName = "HangStatusStore", _.persistKey = "HangStatusStore";
-    var E = new _(u.default, {
+    f.displayName = "HangStatusStore", f.persistKey = "HangStatusStore";
+    var E = new f(u.default, {
         LOGOUT: function() {
-            c = f()
+            c = _()
         },
         UPDATE_HANG_STATUS: function(e) {
             let {

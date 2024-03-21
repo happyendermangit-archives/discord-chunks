@@ -6,7 +6,7 @@ function(e, t, n) {
             return c
         },
         MAX_VISIBLE_PAGES: function() {
-            return f
+            return _
         },
         VerificationFormFieldTypes: function() {
             return i
@@ -18,13 +18,13 @@ function(e, t, n) {
             return a
         },
         isTermsFormField: function() {
-            return _
+            return f
         }
     });
     let c = 25,
-        f = 4;
+        _ = 4;
 
-    function _(e) {
+    function f(e) {
         return null != e && "TERMS" === e.field_type
     }(o = i || (i = {})).TERMS = "TERMS", o.TEXT_INPUT = "TEXT_INPUT", o.PARAGRAPH = "PARAGRAPH", o.MULTIPLE_CHOICE = "MULTIPLE_CHOICE", o.VERIFICATION = "VERIFICATION", (l = s || (s = {})).EMAIL = "email", l.PHONE = "phone", (u = r || (r = {})).TIMESTAMP_DESC = "NEWEST", u.TIMESTAMP_ASC = "OLDEST", (d = a || (a = {})).STARTED = "STARTED", d.SUBMITTED = "SUBMITTED", d.REJECTED = "REJECTED", d.APPROVED = "APPROVED"
 }

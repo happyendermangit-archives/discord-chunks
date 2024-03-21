@@ -15,19 +15,19 @@ function(e, t, n) {
         u = n("42887"),
         d = n("599110"),
         c = n("129978"),
-        f = n("171644"),
-        _ = n("49111"),
+        _ = n("171644"),
+        f = n("49111"),
         E = n("782340"),
         h = n("86813");
     let g = "game_console_alert_modal",
         m = "game_console_ptt_alert_modal";
     var p = {
         maybeShowPTTAlert(e) {
-            if (u.default.getMode() !== _.InputModes.PUSH_TO_TALK || (0, l.isDismissibleContentDismissed)(s.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
+            if (u.default.getMode() !== f.InputModes.PUSH_TO_TALK || (0, l.isDismissibleContentDismissed)(s.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
             let t = {
-                    [_.PlatformTypes.XBOX]: E.default.Messages.PTT_NOT_SUPPORTED_XBOX,
-                    [_.PlatformTypes.PLAYSTATION]: E.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION,
-                    [_.PlatformTypes.PLAYSTATION_STAGING]: E.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION
+                    [f.PlatformTypes.XBOX]: E.default.Messages.PTT_NOT_SUPPORTED_XBOX,
+                    [f.PlatformTypes.PLAYSTATION]: E.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION,
+                    [f.PlatformTypes.PLAYSTATION_STAGING]: E.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION
                 },
                 n = t[e];
             return null == n ? Promise.resolve() : new Promise(e => {
@@ -59,8 +59,8 @@ function(e, t, n) {
             });
 
             function E() {
-                null != l && ((0, o.default)(l), d.default.track(_.AnalyticEvents.ACCOUNT_LINK_STEP, {
-                    previous_step: f.GAME_CONSOLE_ALERT_MODAL_LOCATION,
+                null != l && ((0, o.default)(l), d.default.track(f.AnalyticEvents.ACCOUNT_LINK_STEP, {
+                    previous_step: _.GAME_CONSOLE_ALERT_MODAL_LOCATION,
                     current_step: "desktop oauth",
                     platform_type: l
                 }))

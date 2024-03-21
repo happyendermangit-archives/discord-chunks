@@ -50,14 +50,14 @@ function(e, t, n) {
         u = n("98328"),
         d = n("599110"),
         c = n("645672"),
-        f = n("269180"),
-        _ = n("152723"),
+        _ = n("269180"),
+        f = n("152723"),
         E = n("71313"),
         h = n("49111"),
         g = n("782340");
 
     function m(e, t) {
-        _.default.init({
+        f.default.init({
             userToken: e,
             userId: t,
             installPaths: u.default.installationPaths,
@@ -78,7 +78,7 @@ function(e, t, n) {
     }
 
     function p() {
-        _.default.destroy()
+        f.default.destroy()
     }
 
     function S(e) {
@@ -90,7 +90,7 @@ function(e, t, n) {
             installationPath: a,
             analyticsLocation: o
         } = e;
-        _.default.setTargetManifest({
+        f.default.setTargetManifest({
             applicationId: t.id,
             applicationName: t.name,
             applicationIcon: t.icon,
@@ -132,7 +132,7 @@ function(e, t, n) {
             if (a.default.getRunningDiscordApplicationIds().includes(e.id)) return;
             let s = u.default.getInstallationPath(e.id, t);
             if (null == s) throw Error("Missing installation path for application: ".concat(e.id, " ").concat(t));
-            _.default.setTargetManifest({
+            f.default.setTargetManifest({
                 applicationId: e.id,
                 applicationName: e.name,
                 applicationIcon: e.icon,
@@ -151,12 +151,12 @@ function(e, t, n) {
 
     function I(e, t, n) {
         let i = r.default.getApplication(e);
-        null != i && (f.default.removeShortcuts(i.name), d.default.track(h.AnalyticEvents.LIBRARY_UNINSTALL_INITIATED, {
+        null != i && (_.default.removeShortcuts(i.name), d.default.track(h.AnalyticEvents.LIBRARY_UNINSTALL_INITIATED, {
             application_id: i.id,
             application_name: i.name,
             sku_id: i.primarySkuId,
             location: n
-        })), _.default.uninstall(e, t), s.default.dispatch({
+        })), f.default.uninstall(e, t), s.default.dispatch({
             type: "DISPATCH_APPLICATION_UNINSTALL",
             applicationId: e,
             branchId: t
@@ -164,11 +164,11 @@ function(e, t, n) {
     }
 
     function A() {
-        _.default.resume()
+        f.default.resume()
     }
 
     function C() {
-        _.default.pause()
+        f.default.pause()
     }
 
     function y(e, t) {
@@ -180,7 +180,7 @@ function(e, t, n) {
     }
 
     function N(e, t) {
-        _.default.cancel(e, t), s.default.dispatch({
+        f.default.cancel(e, t), s.default.dispatch({
             type: "DISPATCH_APPLICATION_CANCEL",
             applicationId: e,
             branchId: t
@@ -197,7 +197,7 @@ function(e, t, n) {
 
     function O(e, t) {
         let n = r.default.getApplication(e);
-        null != n && f.default.createShortcuts(l.InstallShortcutDesktop.getSetting(), l.InstallShortcutStartMenu.getSetting(), n.name, n.id, t.installPath)
+        null != n && _.default.createShortcuts(l.InstallShortcutDesktop.getSetting(), l.InstallShortcutStartMenu.getSetting(), n.name, n.id, t.installPath)
     }
 
     function D(e, t) {
@@ -205,7 +205,7 @@ function(e, t, n) {
         i.default.post({
             url: h.Endpoints.LIBRARY_APPLICATION_INSTALLED(e, e),
             oldFormErrors: !0
-        }), null != s && (f.default.createShortcuts(l.InstallShortcutDesktop.getSetting(), l.InstallShortcutStartMenu.getSetting(), s.name, s.id, t.installPath), n.el("193990").then(n.bind(n, "193990")).then(e => {
+        }), null != s && (_.default.createShortcuts(l.InstallShortcutDesktop.getSetting(), l.InstallShortcutStartMenu.getSetting(), s.name, s.id, t.installPath), n.el("193990").then(n.bind(n, "193990")).then(e => {
             let {
                 default: t
             } = e;

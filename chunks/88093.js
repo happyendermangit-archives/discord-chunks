@@ -14,7 +14,7 @@ function(e, t, n) {
         u = n("697218"),
         d = n("49111"),
         c = n("657944");
-    let f = {
+    let _ = {
             notClaimed: !1,
             notEmailVerified: !1,
             notPhoneVerified: !1,
@@ -22,19 +22,19 @@ function(e, t, n) {
             newMember: !1,
             canChat: !0
         },
-        _ = new Set,
+        f = new Set,
         E = {};
 
     function h(e) {
         let t;
-        g(e), _.add(e);
+        g(e), f.add(e);
         let n = l.default.getGuild(e),
             i = u.default.getCurrentUser();
         if (null == n || n.verificationLevel === d.VerificationLevels.NONE || null == i || n.isOwner(i) || i.isPhoneVerified()) return;
         let a = o.default.getMember(n.id, i.id);
         if (null != a) {
-            var f;
-            if ((0, r.hasFlag)(null !== (f = a.flags) && void 0 !== f ? f : 0, c.GuildMemberFlags.BYPASSES_VERIFICATION)) return;
+            var _;
+            if ((0, r.hasFlag)(null !== (_ = a.flags) && void 0 !== _ ? _ : 0, c.GuildMemberFlags.BYPASSES_VERIFICATION)) return;
             let e = new Set;
             for (let t of a.roles) {
                 let i = l.default.getRole(n.id, t);
@@ -76,7 +76,7 @@ function(e, t, n) {
     }
 
     function m(e) {
-        _.delete(e.guild.id), h(e.guild.id)
+        f.delete(e.guild.id), h(e.guild.id)
     }
     class p extends i.default.Store {
         initialize() {
@@ -84,7 +84,7 @@ function(e, t, n) {
         }
         getCheck(e) {
             var t;
-            return !_.has(e) && h(e), null !== (t = E[e]) && void 0 !== t ? t : f
+            return !f.has(e) && h(e), null !== (t = E[e]) && void 0 !== t ? t : _
         }
         canChatInGuild(e) {
             return this.getCheck(e).canChat
@@ -93,13 +93,13 @@ function(e, t, n) {
     p.displayName = "GuildVerificationStore";
     var S = new p(s.default, {
         CONNECTION_OPEN: function() {
-            for (let e in _.clear(), E) g(e)
+            for (let e in f.clear(), E) g(e)
         },
         CONNECTION_CLOSED: function() {
             a.default.keys(E).forEach(g)
         },
         CURRENT_USER_UPDATE: function() {
-            _.clear()
+            f.clear()
         },
         GUILD_CREATE: m,
         GUILD_UPDATE: m,
@@ -116,7 +116,7 @@ function(e, t, n) {
                 user: i
             } = e;
             if (i.id !== (null === (t = u.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-            _.delete(n)
+            f.delete(n)
         },
         GUILD_VERIFICATION_CHECK: function(e) {
             let {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return _
         }
     }), n("222007");
     var i = n("917351"),
@@ -52,8 +52,8 @@ function(e, t, n) {
             screenshakeEnabled: s,
             shakeIntensity: a,
             screenshakeEnabledLocations: c,
-            confettiEnabled: f,
-            confettiSize: _,
+            confettiEnabled: _,
+            confettiSize: f,
             confettiCount: E,
             confettiEnabledLocations: h
         } = e;
@@ -64,11 +64,11 @@ function(e, t, n) {
             screenshake_enabled: s,
             shake_intensity: a,
             screenshake_enabled_locations: d(c, l),
-            confetti_enabled: f,
-            confetti_size: _,
+            confetti_enabled: _,
+            confetti_size: f,
             confetti_count: E,
             confetti_enabled_locations: d(h, u)
         })
     }, 5e3);
-    var f = c
+    var _ = c
 }

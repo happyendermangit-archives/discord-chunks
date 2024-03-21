@@ -66,11 +66,11 @@ function(e, t, n) {
         if (d || null == l || 0 === l.length) return !1;
         let c = i.default.getChannel(n);
         if (null == c) return !1;
-        let f = c.getGuildId();
-        if (null == f) return !1;
-        let _ = r.default.getGuild(f);
+        let _ = c.getGuildId();
         if (null == _) return !1;
-        let E = s.default.getMember(f, t);
+        let f = r.default.getGuild(_);
+        if (null == f) return !1;
+        let E = s.default.getMember(_, t);
         return null != E && l.some(e => E.roles.includes(e))
     }
 }

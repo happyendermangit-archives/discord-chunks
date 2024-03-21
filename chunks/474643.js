@@ -15,8 +15,8 @@ function(e, t, n) {
         u = n("449008"),
         d = n("299039"),
         c = n("271938"),
-        f = n("42203"),
-        _ = n("341542"),
+        _ = n("42203"),
+        f = n("341542"),
         E = n("49111");
     let h = E.MAX_MESSAGE_LENGTH_PREMIUM + 500;
     (s = i || (i = {}))[s.ChannelMessage = 0] = "ChannelMessage", s[s.ThreadSettings = 1] = "ThreadSettings", s[s.FirstThreadMessage = 2] = "FirstThreadMessage", s[s.ApplicationLauncherCommand = 3] = "ApplicationLauncherCommand", s[s.Poll = 4] = "Poll", s[s.SlashCommand = 5] = "SlashCommand";
@@ -33,7 +33,7 @@ function(e, t, n) {
             channelId: n,
             draft: i,
             draftType: s
-        } = e, r = f.default.getChannel(n);
+        } = e, r = _.default.getChannel(n);
         i === (null == r ? void 0 : r.template) && (i = "");
         let a = c.default.getId();
         if (null != a && null != i && "" !== i) {
@@ -60,9 +60,9 @@ function(e, t, n) {
 
     function v() {
         let e = c.default.getId();
-        if (null == e || _.default.totalUnavailableGuilds > 0) return;
+        if (null == e || f.default.totalUnavailableGuilds > 0) return;
         let t = m(e);
-        for (let e in t) null == f.default.getChannel(e) && delete t[e]
+        for (let e in t) null == _.default.getChannel(e) && delete t[e]
     }
 
     function T(e) {
@@ -83,7 +83,7 @@ function(e, t, n) {
                         let t = i[0];
                         null != t && ("" === t.draft || "" === t.draft.trim()) && S(n, 0, e)
                     }
-            }(), this.waitFor(c.default, f.default, _.default)
+            }(), this.waitFor(c.default, _.default, f.default)
         }
         getState() {
             return g

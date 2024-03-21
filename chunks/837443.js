@@ -12,8 +12,8 @@ function(e, t, n) {
         u = n("917351"),
         d = n.n(u),
         c = n("118810"),
-        f = n("718776"),
-        _ = n("414055"),
+        _ = n("718776"),
+        f = n("414055"),
         E = n("206230"),
         h = n("455298");
 
@@ -153,7 +153,7 @@ function(e, t, n) {
                 }) : null,
                 x = null != N ? N(t) : "".concat(V.toFixed(0), "%"),
                 B = null !== (e = null == O ? void 0 : O(t)) && void 0 !== e ? e : void 0;
-            return (0, r.jsx)(f.FocusRing, {
+            return (0, r.jsx)(_.FocusRing, {
                 focusTarget: this.containerRef,
                 ringTarget: this.grabberRef,
                 children: (0, r.jsxs)("div", {
@@ -193,8 +193,8 @@ function(e, t, n) {
                         })
                     }), S, (0, r.jsx)("div", {
                         className: h.track,
-                        children: (0, r.jsx)(_.Tooltip, {
-                            color: _.Tooltip.Colors.GREY,
+                        children: (0, r.jsx)(f.Tooltip, {
+                            color: f.Tooltip.Colors.GREY,
                             hideOnClick: !1,
                             text: A || m ? null : x,
                             forceOpen: n || i && E.default.keyboardModeEnabled,
@@ -296,13 +296,13 @@ function(e, t, n) {
                 if (n) return;
                 let {
                     clientX: d,
-                    currentTarget: f
+                    currentTarget: _
                 } = e;
-                if (!(0, c.isElement)(f)) return;
+                if (!(0, c.isElement)(_)) return;
                 let {
-                    left: _,
+                    left: f,
                     width: E
-                } = f.getBoundingClientRect(), h = (d - _) / E;
+                } = _.getBoundingClientRect(), h = (d - f) / E;
                 if (o) {
                     let {
                         nextClosestMarkerIndex: e

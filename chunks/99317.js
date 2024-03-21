@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getNavYouBarExperiment: function() {
-            return _
+            return f
         },
         daysSinceYouBarFirstSeen: function() {
             return E
@@ -20,7 +20,7 @@ function(e, t, n) {
         },
         d = !1,
         c = u,
-        f = (0, s.default)({
+        _ = (0, s.default)({
             kind: "user",
             id: "2024-02_navi_bar",
             label: "Mobile Redesign - Nav Experiment: You Bar",
@@ -49,13 +49,13 @@ function(e, t, n) {
             }]
         });
 
-    function _(e, t) {
+    function f(e, t) {
         var n, s;
         let o = !(0, l.isInMainTabsExperiment)(),
-            _ = !!o || (null == t ? void 0 : t.disable);
-        return a.default.hasLoadedExperiments || _ ? (0, r.getMergedExperimentConfigs)(f.existingUsers, f.newUsers, e, {
+            f = !!o || (null == t ? void 0 : t.disable);
+        return a.default.hasLoadedExperiments || f ? (0, r.getMergedExperimentConfigs)(_.existingUsers, _.newUsers, e, {
             ...t,
-            disable: _,
+            disable: f,
             autoTrackExposure: !o && (null === (s = null == t ? void 0 : t.autoTrackExposure) || void 0 === s || s)
         }) : (!d && (c = null !== (n = i.default.get("--you-bar-experiment-cached-config")) && void 0 !== n ? n : u, d = !0), c)
     }

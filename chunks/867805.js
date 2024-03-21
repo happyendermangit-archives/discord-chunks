@@ -17,8 +17,8 @@ function(e, t, n) {
         u = {},
         d = {},
         c = {},
-        f = {},
-        _ = [],
+        _ = {},
+        f = [],
         E = 0,
         h = 0,
         g = {
@@ -35,7 +35,7 @@ function(e, t, n) {
         T = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
     for (let e = 0; e < m.length; e++) {
         let t = m[e];
-        c["skin-tone-".concat(e + 1)] = t, f[t] = "skin-tone-".concat(e + 1)
+        c["skin-tone-".concat(e + 1)] = t, _[t] = "skin-tone-".concat(e + 1)
     }
     class I {
         get names() {
@@ -81,7 +81,7 @@ function(e, t, n) {
             return null != e ? a.default.getURL(e.surrogates) : a.default.getURL(this.surrogates)
         }
         get name() {
-            return this.hasDiversity && null != l ? "".concat(this.uniqueName, "::").concat(f[l]) : this.uniqueName
+            return this.hasDiversity && null != l ? "".concat(this.uniqueName, "::").concat(_[l]) : this.uniqueName
         }
         get optionallyDiverseSequence() {
             let e = this.defaultDiversityChild;
@@ -113,9 +113,9 @@ function(e, t, n) {
                 let t = new I(e),
                     n = t.surrogates,
                     i = t.uniqueName;
-                if (t.setSpriteSheetIndex(t.hasDiversity ? E++ : h++), f[n] = i, 0 > n.indexOf("‍")) {
+                if (t.setSpriteSheetIndex(t.hasDiversity ? E++ : h++), _[n] = i, 0 > n.indexOf("‍")) {
                     let e = n.replace("️", "");
-                    e !== n && (f[e] = i)
+                    e !== n && (_[e] = i)
                 }
                 for (let e of t.names) d[e] = t, c[e] = n;
                 let s = t.diversityChildren;
@@ -131,15 +131,15 @@ function(e, t, n) {
                             c[e] = i, d[e] = n
                         }
                     }
-                    f[i] = n.uniqueName
+                    _[i] = n.uniqueName
                 }
-                return _.push(t), t
+                return f.push(t), t
             });
         u[e] = a.default.filterUnsupportedEmojis(n)
     }
 
     function C(e) {
-        let t = f[e];
+        let t = _[e];
         return null != t ? {
             type: "emoji",
             surrogate: e,
@@ -224,7 +224,7 @@ function(e, t, n) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
                 i = n;
-            return Object.prototype.hasOwnProperty.call(f, e) && (i = f[e]), t ? ":".concat(i, ":") : i
+            return Object.prototype.hasOwnProperty.call(_, e) && (i = _[e]), t ? ":".concat(i, ":") : i
         },
         convertShortcutToName: function(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -232,15 +232,15 @@ function(e, t, n) {
                 i = n;
             return Object.prototype.hasOwnProperty.call(S, e) && (i = S[e]), t ? ":".concat(i, ":") : i
         },
-        forEach: e => s.each(_, e),
-        all: () => _,
+        forEach: e => s.each(f, e),
+        all: () => f,
         numDiversitySprites: E,
         numNonDiversitySprites: h,
         EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
         EMOJI_NAME_AND_DIVERSITY_RE: p,
         EMOJI_SHORTCUT_RE: /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
         hasSurrogates: function(e) {
-            return s.toArray(e).some(e => null != f[e])
+            return s.toArray(e).some(e => null != _[e])
         }
     }
 }

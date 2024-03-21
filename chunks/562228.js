@@ -44,8 +44,8 @@ function(e, t, n) {
         u = n("42203"),
         d = n("486996"),
         c = n("377253"),
-        f = n("957255"),
-        _ = n("27618"),
+        _ = n("957255"),
+        f = n("27618"),
         E = n("718517"),
         h = n("387111"),
         g = n("83995"),
@@ -75,7 +75,7 @@ function(e, t, n) {
 
     function A(e) {
         let t = p.ChannelTypesSets.POLLS.has(null == e ? void 0 : e.type),
-            n = (0, o.useStateFromStores)([f.default], () => f.default.can(p.Permissions.SEND_MESSAGES, e)),
+            n = (0, o.useStateFromStores)([_.default], () => _.default.can(p.Permissions.SEND_MESSAGES, e)),
             {
                 enabled: i
             } = g.CreateGuildPollsExperiment.useExperiment({
@@ -162,7 +162,7 @@ function(e, t, n) {
                 name: "",
                 animated: !1
             }),
-            f = null !== (r = null == o ? void 0 : null === (i = o.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== r ? r : 0,
+            _ = null !== (r = null == o ? void 0 : null === (i = o.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== r ? r : 0,
             E = function(e, t) {
                 let n = e.getChannelId(),
                     i = d.default.getReactions(n, e.id, {
@@ -172,7 +172,7 @@ function(e, t, n) {
                     }, m.VOTES_TOOLTIP_MAX_USERS, l.ReactionTypes.VOTE),
                     r = u.default.getChannel(n),
                     a = null == r || r.isPrivate() ? null : r.getGuildId();
-                return s(i).reject(e => _.default.isBlocked(e.id)).take(m.VOTES_TOOLTIP_MAX_USERS).map(e => h.default.getName(a, null == r ? void 0 : r.id, e)).value()
+                return s(i).reject(e => f.default.isBlocked(e.id)).take(m.VOTES_TOOLTIP_MAX_USERS).map(e => h.default.getName(a, null == r ? void 0 : r.id, e)).value()
             }(a, n);
         return 0 === E.length ? "" : function(e, t) {
             let n = Math.max(0, t - e.length);
@@ -201,6 +201,6 @@ function(e, t, n) {
                 b: e[1],
                 c: e[2]
             })
-        }(E, f)
+        }(E, _)
     }
 }

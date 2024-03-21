@@ -36,14 +36,14 @@ function(e, t, n) {
         a.add(t)
     }
 
-    function f(e) {
+    function _(e) {
         let {
             channel: t
         } = e;
         return u(t)
     }
 
-    function _(e) {
+    function f(e) {
         let {
             channels: t
         } = e;
@@ -90,8 +90,8 @@ function(e, t, n) {
                 CONNECTION_OPEN: d,
                 CONNECTION_OPEN_SUPPLEMENTAL: d,
                 CACHE_LOADED_LAZY: () => this.loadCache(),
-                CHANNEL_CREATE: f,
-                CHANNEL_UPDATES: _,
+                CHANNEL_CREATE: _,
+                CHANNEL_UPDATES: f,
                 CHANNEL_DELETE: E,
                 MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: c
             })

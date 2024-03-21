@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n.n(l),
         d = n("10429"),
         c = n.n(d),
-        f = n("53379"),
-        _ = n("811022"),
+        _ = n("53379"),
+        f = n("811022"),
         E = n("947279"),
         h = n("22546"),
         g = n("685961"),
@@ -120,14 +120,14 @@ function(e, t, n) {
                             decode: e.decode
                         }
                     })], this.logger.info("Video codecs: ".concat(this.codecs.map(e => e.name))), t.getEncryptionModes(i => {
-                        var s, r, u, d, c, f, _, E, h, g;
+                        var s, r, u, d, c, _, f, E, h, g;
                         this.logger.info("Encryption modes: ".concat(i)), t.setTransportOptions(this.getConnectionTransportOptions()), t.setSelfMute(this.selfMute || this.context === C.MediaEngineContextTypes.STREAM), t.setSelfDeafen(this.selfDeaf), t.setOnSpeakingCallback(this.handleSpeakingNative), null === (s = t.setOnNativeMuteChangedCallback) || void 0 === s || s.call(t, this.handleNativeMuteChanged), null === (r = t.setOnSpeakingWhileMutedCallback) || void 0 === r || r.call(t, this.handleSpeakingWhileMuted), null === (u = t.setPingInterval) || void 0 === u || u.call(t, C.PING_INTERVAL), t.setPingCallback(this.handlePing), null === (d = t.setPingTimeoutCallback) || void 0 === d || d.call(t, this.handlePingTimeout), null === (c = t.setOnVideoEncoderFallbackCallback) || void 0 === c || c.call(t, this.handleVideoEncoderFallback), n.setTransportOptions({
                             builtInEchoCancellation: !0,
                             echoCancellation: this.echoCancellation,
                             noiseSuppression: this.noiseSuppression,
                             automaticGainControl: this.automaticGainControl,
                             noiseCancellation: this.noiseCancellation
-                        }), n.setNoInputThreshold(-100), n.setNoInputCallback(this.handleNoInput), this.videoSupported && (t.setOnVideoCallback(this.handleVideo), null === (f = t.setOnFirstFrameCallback) || void 0 === f || f.call(t, this.handleFirstFrame), null === (_ = t.setOnDesktopSourceEnded) || void 0 === _ || _.call(t, this.handleDesktopSourceEnded), null === (E = t.setOnSoundshare) || void 0 === E || E.call(t, this.handleSoundshare), null === (h = t.setOnSoundshareEnded) || void 0 === h || h.call(t, this.handleSoundshareEnded), null === (g = t.setOnSoundshareFailed) || void 0 === g || g.call(t, this.handleSoundshareFailed)), this.setConnectionState(C.ConnectionStates.CONNECTED), this.emit(m.BaseConnectionEvent.Connected, a, {
+                        }), n.setNoInputThreshold(-100), n.setNoInputCallback(this.handleNoInput), this.videoSupported && (t.setOnVideoCallback(this.handleVideo), null === (_ = t.setOnFirstFrameCallback) || void 0 === _ || _.call(t, this.handleFirstFrame), null === (f = t.setOnDesktopSourceEnded) || void 0 === f || f.call(t, this.handleDesktopSourceEnded), null === (E = t.setOnSoundshare) || void 0 === E || E.call(t, this.handleSoundshare), null === (h = t.setOnSoundshareEnded) || void 0 === h || h.call(t, this.handleSoundshareEnded), null === (g = t.setOnSoundshareFailed) || void 0 === g || g.call(t, this.handleSoundshareFailed)), this.setConnectionState(C.ConnectionStates.CONNECTED), this.emit(m.BaseConnectionEvent.Connected, a, {
                             address: o,
                             port: l,
                             mode: this.chooseEncryptionMode(e.modes, i),
@@ -157,7 +157,7 @@ function(e, t, n) {
             this.conn.setTransportOptions(this.getCodecOptions(e, t, n)), this.videoEncoderFallbackPending && (this.videoEncoderFallbackPending = !1)
         }
         getStats() {
-            return this.connectionState === C.ConnectionStates.DISCONNECTED ? Promise.resolve(null) : (0, f.timeout)(new Promise(e => {
+            return this.connectionState === C.ConnectionStates.DISCONNECTED ? Promise.resolve(null) : (0, _.timeout)(new Promise(e => {
                 if (null != this.conn.getFilteredStats) this.conn.getFilteredStats(A.StatsFilter.ALL, t => e((0, T.default)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants)));
                 else if (null != this.conn.getStats) this.conn.getStats(t => e((0, T.default)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants)));
                 else {
@@ -165,7 +165,7 @@ function(e, t, n) {
                     t.getStats(t => e((0, T.default)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants)))
                 }
             }), h.STATS_INTERVAL).catch(e => {
-                if (!(e instanceof f.TimeoutError)) throw e
+                if (!(e instanceof _.TimeoutError)) throw e
             })
         }
         createUser(e, t, n) {
@@ -433,10 +433,10 @@ function(e, t, n) {
                         hdrCaptureMode: d
                     } = e.desktopDescription;
                     this.setSoundshareSource(n, i);
-                    let [c, f] = null != t ? t.split(":") : ["", ""];
-                    null != t ? this.logger.info("capturing desktop (type: ".concat(c, ", handle: ").concat(f, ", use-video-hook: ").concat(s.toString(), ", use-graphics-capture: ").concat(null == r ? void 0 : r.toString(), ").")) : this.logger.info("capturing desktop (type: <stop>)."), null != this.conn.setDesktopSourceWithOptions ? null != t ? this.conn.setDesktopSourceWithOptions({
+                    let [c, _] = null != t ? t.split(":") : ["", ""];
+                    null != t ? this.logger.info("capturing desktop (type: ".concat(c, ", handle: ").concat(_, ", use-video-hook: ").concat(s.toString(), ", use-graphics-capture: ").concat(null == r ? void 0 : r.toString(), ").")) : this.logger.info("capturing desktop (type: <stop>)."), null != this.conn.setDesktopSourceWithOptions ? null != t ? this.conn.setDesktopSourceWithOptions({
                         type: c,
-                        sourceId: f,
+                        sourceId: _,
                         useVideoHook: s,
                         useGraphicsCapture: r,
                         useQuartzCapturer: a,
@@ -444,7 +444,7 @@ function(e, t, n) {
                         videoHookStaleFrameTimeoutMs: l,
                         graphicsCaptureStaleFrameTimeoutMs: u,
                         hdrCaptureMode: d
-                    }) : this.conn.clearDesktopSource() : this.conn.setDesktopSource("wumpus-".concat(f), s, c)
+                    }) : this.conn.clearDesktopSource() : this.conn.setDesktopSource("wumpus-".concat(_), s, c)
                 } else if (null != e.cameraDescription) {
                     let {
                         videoDeviceGuid: t,
@@ -861,7 +861,7 @@ function(e, t, n) {
                     }
                     this.stats = e
                 }
-            }, this.logger = new _.default("Connection(".concat(e, ")")), this.videoSupported = n
+            }, this.logger = new f.default("Connection(".concat(e, ")")), this.videoSupported = n
         }
     }
 }

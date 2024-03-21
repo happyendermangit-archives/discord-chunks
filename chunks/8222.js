@@ -14,10 +14,10 @@ function(e, t, n) {
             return c
         },
         logoutWithRedirect: function() {
-            return f
+            return _
         },
         verifyUserCode: function() {
-            return _
+            return f
         },
         finishUserCode: function() {
             return E
@@ -52,8 +52,8 @@ function(e, t, n) {
             codeChallengeMethod: u,
             state: d,
             permissions: c,
-            guildId: f,
-            channelId: _,
+            guildId: _,
+            channelId: f,
             integrationType: E
         } = e, h = await r.default.post({
             url: o.Endpoints.OAUTH2_AUTHORIZE,
@@ -67,9 +67,9 @@ function(e, t, n) {
                 state: d
             },
             body: {
-                guild_id: f,
-                webhook_channel_id: null != f && null != _ ? _ : void 0,
-                channel_id: null == f && null != _ ? _ : void 0,
+                guild_id: _,
+                webhook_channel_id: null != _ && null != f ? f : void 0,
+                channel_id: null == _ && null != f ? f : void 0,
                 permissions: c,
                 authorize: t,
                 integration_type: E
@@ -88,7 +88,7 @@ function(e, t, n) {
             codeChallengeMethod: u,
             state: d,
             userInstall: c
-        } = e, f = await r.default.get({
+        } = e, _ = await r.default.get({
             url: o.Endpoints.OAUTH2_AUTHORIZE,
             query: {
                 client_id: t,
@@ -103,7 +103,7 @@ function(e, t, n) {
             retries: 3,
             oldFormErrors: !0
         });
-        return f.body
+        return _.body
     }
     async function c(e) {
         let {
@@ -118,10 +118,10 @@ function(e, t, n) {
         return t
     }
 
-    function f(e) {
+    function _(e) {
         a.default.logout((0, s.getLoginPath)(e.pathname + e.search, !1))
     }
-    async function _(e) {
+    async function f(e) {
         return await r.default.post({
             url: o.Endpoints.OAUTH2_DEVICE_VERIFY,
             body: {

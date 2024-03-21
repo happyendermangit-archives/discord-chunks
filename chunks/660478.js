@@ -15,8 +15,8 @@ function(e, t, n) {
         u = n.n(l),
         d = n("446674"),
         c = n("872717"),
-        f = n("862337"),
-        _ = n("627929"),
+        _ = n("862337"),
+        f = n("627929"),
         E = n("913144"),
         h = n("191225"),
         g = n("191145"),
@@ -70,8 +70,8 @@ function(e, t, n) {
         eu = null,
         ed = null,
         ec = !1,
-        ef = [],
-        e_ = !1,
+        e_ = [],
+        ef = !1,
         eE = null,
         eh = {},
         eg = 30 * w.default.Millis.DAY;
@@ -111,26 +111,26 @@ function(e, t, n) {
         return null != e && e.isPrivate() && !J.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id)
     }
     async function ey(e) {
-        if (0 === ef.length) {
-            e_ = !1, null == e || e();
+        if (0 === e_.length) {
+            ef = !1, null == e || e();
             return
         }
-        e_ = !0;
-        let t = ef.splice(0, 100);
+        ef = !0;
+        let t = e_.splice(0, 100);
         await eN(() => c.default.post({
             url: et.Endpoints.BULK_ACK,
             body: {
                 read_states: t
             },
             oldFormErrors: !0
-        })), await (0, f.timeoutPromise)(1e3), ey(e)
+        })), await (0, _.timeoutPromise)(1e3), ey(e)
     }
     async function eN(e) {
         let t = x.default.getId();
         for (let n = 0; n < 3; n++) try {
             return await e()
         } catch (e) {
-            if (ea.error("", e), n + 1 < 3 && (await (0, f.timeoutPromise)((n + 1) * 2e3), await G.default.awaitOnline(), t !== x.default.getId())) return Promise.reject(Error("User changed."))
+            if (ea.error("", e), n + 1 < 3 && (await (0, _.timeoutPromise)((n + 1) * 2e3), await G.default.awaitOnline(), t !== x.default.getId())) return Promise.reject(Error("User changed."))
         }
     }
 
@@ -221,8 +221,8 @@ function(e, t, n) {
                 _lastMessageId: u,
                 _lastMessageTimestamp: d,
                 _ackMessageId: c,
-                _ackMessageTimestamp: f,
-                ackPinTimestamp: _,
+                _ackMessageTimestamp: _,
+                ackPinTimestamp: f,
                 isManualAck: E,
                 lastPinTimestamp: h,
                 _oldestUnreadMessageId: g,
@@ -244,8 +244,8 @@ function(e, t, n) {
                 _lastMessageId: u,
                 _lastMessageTimestamp: d,
                 _ackMessageId: c,
-                _ackMessageTimestamp: f,
-                ackPinTimestamp: _,
+                _ackMessageTimestamp: _,
+                ackPinTimestamp: f,
                 isManualAck: E,
                 lastPinTimestamp: h,
                 _oldestUnreadMessageId: g,
@@ -263,8 +263,8 @@ function(e, t, n) {
                 _lastMessageId: u,
                 _lastMessageTimestamp: d,
                 _ackMessageId: c,
-                _ackMessageTimestamp: f,
-                ackPinTimestamp: _,
+                _ackMessageTimestamp: _,
+                ackPinTimestamp: f,
                 lastPinTimestamp: h,
                 _mentionCount: S,
                 flags: v
@@ -284,8 +284,8 @@ function(e, t, n) {
                 loadedMessages: u,
                 _lastMessageId: d,
                 _lastMessageTimestamp: c,
-                _ackMessageId: f,
-                _ackMessageTimestamp: _,
+                _ackMessageId: _,
+                _ackMessageTimestamp: f,
                 ackPinTimestamp: E,
                 isManualAck: h,
                 lastPinTimestamp: g,
@@ -297,7 +297,7 @@ function(e, t, n) {
                 flags: I,
                 lastViewed: A
             } = e;
-            this.channelId = t, this.type = null != n ? n : er.ReadStateTypes.CHANNEL, this._guildId = i, this._isThread = null != s && s, null != r ? (this._isActiveThread = r, this._isJoinedThread = r) : (this._isActiveThread = null != a && a, this._isJoinedThread = null != o && o), this._persisted = !1 !== l, this.loadedMessages = null != u && u, this._lastMessageId = d, this._lastMessageTimestamp = c, this._ackMessageId = f, this._ackMessageTimestamp = _, this.ackPinTimestamp = E, this.isManualAck = null != h && h, this.lastPinTimestamp = g, this._oldestUnreadMessageId = m, this.oldestUnreadMessageIdStale = null != p && p, this.estimated = null != S && S, this._unreadCount = null != v ? v : 0, this._mentionCount = T, this.flags = I, this.lastViewed = A, eO._mentionChannels.delete(this.channelId), this._mentionCount > 0 && this.canHaveMentions() && eO._mentionChannels.add(this.channelId)
+            this.channelId = t, this.type = null != n ? n : er.ReadStateTypes.CHANNEL, this._guildId = i, this._isThread = null != s && s, null != r ? (this._isActiveThread = r, this._isJoinedThread = r) : (this._isActiveThread = null != a && a, this._isJoinedThread = null != o && o), this._persisted = !1 !== l, this.loadedMessages = null != u && u, this._lastMessageId = d, this._lastMessageTimestamp = c, this._ackMessageId = _, this._ackMessageTimestamp = f, this.ackPinTimestamp = E, this.isManualAck = null != h && h, this.lastPinTimestamp = g, this._oldestUnreadMessageId = m, this.oldestUnreadMessageIdStale = null != p && p, this.estimated = null != S && S, this._unreadCount = null != v ? v : 0, this._mentionCount = T, this.flags = I, this.lastViewed = A, eO._mentionChannels.delete(this.channelId), this._mentionCount > 0 && this.canHaveMentions() && eO._mentionChannels.add(this.channelId)
         }
         incrementGuildUnreadsSentinel() {
             null != this._guildId && eO.getGuildSentinels(this._guildId).unreadsSentinel++
@@ -1057,7 +1057,7 @@ function(e, t, n) {
             ec = !0, eT(), t.forEach(e => {
                 var t;
                 let n = null !== (t = e.type) && void 0 !== t ? t : er.ReadStateTypes.CHANNEL;
-                e.type = n, null == eO._readStates[n] && (eO._readStates[n] = {}), eO._readStates[n][e.channelId] = (0, _.dangerouslyCast)(e, eO)
+                e.type = n, null == eO._readStates[n] && (eO._readStates[n] = {}), eO._readStates[n][e.channelId] = (0, f.dangerouslyCast)(e, eO)
             })
         },
         GUILD_CREATE: function(e) {
@@ -1105,13 +1105,13 @@ function(e, t, n) {
                     t = null === (c = e.params) || void 0 === c ? void 0 : c.channelId
                 }
             } else null == d && (t = Z.default.getChannelId(), n = B.default.getCurrentSidebarChannelId(t));
-            let f = t === s || n === s;
-            if (f && eR(o) && !a || null != i && i.isInstanceFocused() && f && i.isInstanceUILocked() && i.isPinned(et.OverlayWidgets.TEXT)) return o.ack({
+            let _ = t === s || n === s;
+            if (_ && eR(o) && !a || null != i && i.isInstanceFocused() && _ && i.isInstanceUILocked() && i.isPinned(et.OverlayWidgets.TEXT)) return o.ack({
                 messageId: r.id
             });
             (null == o.oldestUnreadMessageId || o.oldestUnreadMessageIdStale) && (o.oldestUnreadMessageId = r.id), o.unreadCount++;
-            let _ = null != r.author && Q.default.isBlocked(r.author.id) || r.type === et.MessageTypes.RECIPIENT_REMOVE && (null == u ? void 0 : u.type) === et.ChannelTypes.GROUP_DM;
-            !_ && function(e, t, n) {
+            let f = null != r.author && Q.default.isBlocked(r.author.id) || r.type === et.MessageTypes.RECIPIENT_REMOVE && (null == u ? void 0 : u.type) === et.ChannelTypes.GROUP_DM;
+            !f && function(e, t, n) {
                 if (null != t && (0, C.isRawMessageMentioned)({
                         rawMessage: e,
                         userId: t.id,
@@ -1306,11 +1306,11 @@ function(e, t, n) {
                     force: void 0,
                     isExplicitUserAction: !0
                 })
-            }), n !== et.CURRENT_APP_CONTEXT || (ef.push(...t.map(e => ({
+            }), n !== et.CURRENT_APP_CONTEXT || (e_.push(...t.map(e => ({
                 channel_id: e.channelId,
                 message_id: e.messageId,
                 read_state_type: e.readStateType
-            }))), e_ || ey(i))
+            }))), ef || ey(i))
         },
         ENABLE_AUTOMATIC_ACK: function(e) {
             let {

@@ -14,9 +14,9 @@ function(e, t, n) {
         u = n("599110"),
         d = n("840707"),
         c = n("49111");
-    let f = new l.default("ConnectedAccounts");
+    let _ = new l.default("ConnectedAccounts");
 
-    function _(e, t) {
+    function f(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return r.default.post({
             url: c.Endpoints.CONNECTIONS_CALLBACK(e),
@@ -55,7 +55,7 @@ function(e, t, n) {
                 oldFormErrors: !0
             })
         },
-        callback: _,
+        callback: f,
         connect(e, t, n, s, r) {
             var a;
             return d.default.put({
@@ -97,7 +97,7 @@ function(e, t, n) {
                 current_step: "PIN success",
                 session_id: n.state,
                 platform_type: t
-            }), _(t, {
+            }), f(t, {
                 ...n,
                 from_continuation: !0
             }, !0)
@@ -187,7 +187,7 @@ function(e, t, n) {
         }),
         async completeTwoWayLink(e, t, n, i, s) {
             if (null == t) {
-                f.error("Two-way link: missing authorize location");
+                _.error("Two-way link: missing authorize location");
                 return
             }
             let {
@@ -196,13 +196,13 @@ function(e, t, n) {
                 errorDescription: l
             } = (0, o.getCallbackParamsFromURL)(t);
             if (null != a) {
-                f.error("Two-way link: missing authorize code", {
+                _.error("Two-way link: missing authorize code", {
                     error: a,
                     errorDescription: l
                 });
                 return
             }
-            return await _(e, {
+            return await f(e, {
                 code: n,
                 state: i,
                 two_way_link_code: r,

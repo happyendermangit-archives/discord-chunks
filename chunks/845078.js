@@ -11,10 +11,10 @@ function(e, t, n) {
             return (e & t) != 0
         }
         static asBasicFlag(e) {
-            return r.default.asUintN(20, e)
+            return r.asUintN(20, e)
         }
         static asBigFlag(e) {
-            return !Object.hasOwn(this.cache, e) && (this.cache[e] = r.default.deserialize(e)), this.cache[e]
+            return !Object.hasOwn(this.cache, e) && (this.cache[e] = r.deserialize(e)), this.cache[e]
         }
     }).cache = {}, s = i
 }

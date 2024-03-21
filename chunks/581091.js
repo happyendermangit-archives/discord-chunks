@@ -8,7 +8,7 @@ function(e, t, n) {
             return c
         },
         default: function() {
-            return f
+            return _
         }
     });
     var i = n("866227"),
@@ -33,7 +33,7 @@ function(e, t, n) {
             years: r.default.Messages.DURATION_YEARS_AGO
         });
 
-    function f(e) {
+    function _(e) {
         let {
             since: t,
             getFormatter: n

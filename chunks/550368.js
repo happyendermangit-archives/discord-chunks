@@ -26,8 +26,8 @@ function(e, t, n) {
         u = n("407063"),
         d = n("49111");
     let c = "https://i.scdn.co/image/",
-        f = (e, t, n) => "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
-        _ = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
+        _ = (e, t, n) => "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
+        f = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
         E = e => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
         h = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
         g = {
@@ -36,9 +36,9 @@ function(e, t, n) {
                 serialize: e => e.split(c)[1]
             },
             [d.PlatformTypes.TWITCH]: {
-                deserialize: (e, t) => f(encodeURIComponent(e), t[0], t[1]),
+                deserialize: (e, t) => _(encodeURIComponent(e), t[0], t[1]),
                 serialize: e => {
-                    let t = e.match(_);
+                    let t = e.match(f);
                     return null != t ? t[1] : null
                 }
             },

@@ -12,8 +12,8 @@ function(e, t, n) {
         u = n("746379"),
         d = n.n(u),
         c = n("748820"),
-        f = n("981980"),
-        _ = n("595275"),
+        _ = n("981980"),
+        f = n("595275"),
         E = n("773364"),
         h = n("398183"),
         g = n("913144"),
@@ -58,7 +58,7 @@ function(e, t, n) {
     function $(e) {
         return e
     }
-    s = class extends _.default {
+    s = class extends f.default {
         get quality() {
             let e = this.getLastPing();
             if (this.state !== Q.RTCConnectionStates.RTC_CONNECTED || void 0 === e) return Q.RTCConnectionQuality.UNKNOWN;
@@ -930,7 +930,7 @@ function(e, t, n) {
                         context: this.context,
                         channel_type: t
                     })
-                }, this.context = s, this.logger = new S.default("RTCConnection(".concat(null !== (o = null != r ? r : n) && void 0 !== o ? o : i, ", ").concat(this.context, ")")), this.userId = e, this.sessionId = t, this.guildId = n, this._channelId = i, this.channelIds = new Set([i]), this.rtcServerId = r, this.parentMediaSessionId = a, this._endpoint = null, this.hostname = null, this.port = null, this.token = null, this.voiceVersion = null, this.rtcWorkerVersion = null, this.state = Q.RTCConnectionStates.AWAITING_ENDPOINT, this.stateHistory = new H.StateHistory(this.state), this._socket = null, this._backoff = new f.default(1e3, 1e4), this._destroyed = !1, this._pings = [], this._pingBadCount = 0, this._pingTimeouts = [], this._mediaSessionId = null, this._voiceQuality = null, this._voiceQualityPeriodicStatsInterval = null, this._voiceQualityPeriodicStatsSequenceId = 0, this._noiseCancellationError = 0, this._voiceDuration = null, this._videoQuality = null, this._videoHealthManager = null, this._sentVideo = !1, this._outboundLossRate = null, this._createdTime = (0, h.now)(), this._connectStartTime = 0, this._connectCompletedTime = 0, this._rtcConnectionId = (0, c.v4)(), this._connectCount = 0, this._connected = !1, this._connecting = !1, this._encountered_socket_failure = !1, this._inputDetected = !1, this._selectedExperiments = [], s === Z.MediaEngineContextTypes.DEFAULT) {
+                }, this.context = s, this.logger = new S.default("RTCConnection(".concat(null !== (o = null != r ? r : n) && void 0 !== o ? o : i, ", ").concat(this.context, ")")), this.userId = e, this.sessionId = t, this.guildId = n, this._channelId = i, this.channelIds = new Set([i]), this.rtcServerId = r, this.parentMediaSessionId = a, this._endpoint = null, this.hostname = null, this.port = null, this.token = null, this.voiceVersion = null, this.rtcWorkerVersion = null, this.state = Q.RTCConnectionStates.AWAITING_ENDPOINT, this.stateHistory = new H.StateHistory(this.state), this._socket = null, this._backoff = new _.default(1e3, 1e4), this._destroyed = !1, this._pings = [], this._pingBadCount = 0, this._pingTimeouts = [], this._mediaSessionId = null, this._voiceQuality = null, this._voiceQualityPeriodicStatsInterval = null, this._voiceQualityPeriodicStatsSequenceId = 0, this._noiseCancellationError = 0, this._voiceDuration = null, this._videoQuality = null, this._videoHealthManager = null, this._sentVideo = !1, this._outboundLossRate = null, this._createdTime = (0, h.now)(), this._connectStartTime = 0, this._connectCompletedTime = 0, this._rtcConnectionId = (0, c.v4)(), this._connectCount = 0, this._connected = !1, this._connecting = !1, this._encountered_socket_failure = !1, this._inputDetected = !1, this._selectedExperiments = [], s === Z.MediaEngineContextTypes.DEFAULT) {
                 let t = M.default.supports(Z.Features.FIRST_FRAME_CALLBACK) && M.default.supports(Z.Features.REMOTE_USER_MULTI_STREAM),
                     n = (null === (l = L.default.getChannel(this.channelId)) || void 0 === l ? void 0 : l.type) === Q.ChannelTypes.GUILD_STAGE_VOICE;
                 this._localMediaSinkWantsManager = new K.default(e, n, t), this._localMediaSinkWantsManager.on(K.RTCMediaSinkWantsManagerEvent.Update, e => {

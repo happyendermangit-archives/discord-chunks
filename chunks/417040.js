@@ -8,8 +8,8 @@ function(e, t, n) {
             return o
         }
     }), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("222007"), n("702976");
-    var i, s, r, a, o, l, u, d, c, f = n("627445"),
-        _ = n.n(f),
+    var i, s, r, a, o, l, u, d, c, _ = n("627445"),
+        f = n.n(_),
         E = n("981980"),
         h = n("595275"),
         g = n("605250"),
@@ -287,7 +287,7 @@ function(e, t, n) {
             this.logger.warn("[HEARTBEAT ACK TIMEOUT] reconnecting in ".concat((e / 1e3).toFixed(2), " seconds."))
         }
         startHeartbeater() {
-            _(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here."), this.logger.info("Starting heartbeat with interval: ".concat(this.heartbeatInterval)), null !== this.heartbeater && clearInterval(this.heartbeater), this.heartbeatAck = !0, this.heartbeater = setInterval(() => {
+            f(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here."), this.logger.info("Starting heartbeat with interval: ".concat(this.heartbeatInterval)), null !== this.heartbeater && clearInterval(this.heartbeater), this.heartbeatAck = !0, this.heartbeater = setInterval(() => {
                 this.heartbeatAck ? (this.heartbeatAck = !1, this.sendHeartbeat()) : null === this.expeditedHeartbeatTimeout && this.handleHeartbeatTimeout()
             }, this.heartbeatInterval)
         }

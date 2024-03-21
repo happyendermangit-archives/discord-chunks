@@ -21,11 +21,11 @@ function(e, t, n) {
         })
     });
 
-    function f() {
+    function _() {
         c.reset()
     }
 
-    function _(e, t) {
+    function f(e, t) {
         return c.request(e, t), !1
     }
 
@@ -35,7 +35,7 @@ function(e, t, n) {
                 author: n,
                 mentions: i
             } = t;
-            null != n && _(e, n.id), null == i || i.forEach(t => _(e, t.id))
+            null != n && f(e, n.id), null == i || i.forEach(t => f(e, t.id))
         }), !1
     }
 
@@ -59,13 +59,13 @@ function(e, t, n) {
             this.waitFor(u.default, d.default)
         }
         requestMember(e, t) {
-            _(e, t)
+            f(e, t)
         }
     }
     m.displayName = "GuildMemberRequesterStore";
     var p = new m(a.default, {
-        CONNECTION_CLOSED: f,
-        CONNECTION_OPEN: f,
+        CONNECTION_CLOSED: _,
+        CONNECTION_OPEN: _,
         CONNECTION_RESUMED: function() {
             return c.requestUnacknowledged(), !1
         },

@@ -32,9 +32,9 @@ function(e, t, n) {
     n("446674");
     var c = n("429030");
     n("151426");
-    var f = n("98309");
+    var _ = n("98309");
     n("10641");
-    var _ = n("305961");
+    var f = n("305961");
     n("957255");
     var E = n("214509"),
         h = n("49111"),
@@ -292,16 +292,16 @@ function(e, t, n) {
             onlyChannelConnectionRoles: u = !1
         } = e;
         if (null == i) return null;
-        if (null == s && null != o && (s = _.default.getGuild(o.getGuildId())), null == s) return null;
+        if (null == s && null != o && (s = f.default.getGuild(o.getGuildId())), null == s) return null;
         let {
             id: d
         } = s;
-        null == r && (r = _.default.getRoles(d));
+        null == r && (r = f.default.getRoles(d));
         let c = i.roles.map(e => r[e]).filter(e => {
                 var t;
                 return (null == e ? void 0 : null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
             }).sort((e, t) => (a(null != e && null != t, "roleA or roleB is null"), t.position - e.position)),
-            E = l.intersection(c, (0, f.default)(o));
+            E = l.intersection(c, (0, _.default)(o));
         return E.length > 0 ? null !== (t = E[0]) && void 0 !== t ? t : null : u ? null : null !== (n = c[0]) && void 0 !== n ? n : null
     }
 

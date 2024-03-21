@@ -21,8 +21,8 @@ function(e, t, n) {
         u = n("471671"),
         d = n("599110"),
         c = n("360782"),
-        f = n("49111"),
-        _ = n("180524"),
+        _ = n("49111"),
+        f = n("180524"),
         E = n("782340");
     let h = new a.default("AudioActionCreators");
 
@@ -54,7 +54,7 @@ function(e, t, n) {
     }
 
     function p(e) {
-        d.default.track(f.AnalyticEvents.PERMISSIONS_ACKED, {
+        d.default.track(_.AnalyticEvents.PERMISSIONS_ACKED, {
             type: "audio",
             action: e
         })
@@ -62,27 +62,27 @@ function(e, t, n) {
 
     function S() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return m() ? Promise.resolve(!1) : (d.default.track(f.AnalyticEvents.PERMISSIONS_REQUESTED, {
+        return m() ? Promise.resolve(!1) : (d.default.track(_.AnalyticEvents.PERMISSIONS_REQUESTED, {
             type: "audio"
         }), o.default.getMediaEngine().enable().then(() => {
             r.default.dispatch({
                 type: "MEDIA_ENGINE_SET_AUDIO_ENABLED",
                 enabled: !0,
                 unmute: e
-            }), p(_.NativePermissionStates.ACCEPTED)
+            }), p(f.NativePermissionStates.ACCEPTED)
         }, e => {
             switch (e) {
-                case f.UserMediaErrors.NO_DEVICES_FOUND:
-                    p(_.NativePermissionStates.NO_DEVICES);
+                case _.UserMediaErrors.NO_DEVICES_FOUND:
+                    p(f.NativePermissionStates.NO_DEVICES);
                     break;
-                case f.UserMediaErrors.PERMISSION_DENIED:
-                    p(_.NativePermissionStates.DENIED);
+                case _.UserMediaErrors.PERMISSION_DENIED:
+                    p(f.NativePermissionStates.DENIED);
                     break;
-                case f.UserMediaErrors.PERMISSION_DISMISSED:
-                    p(_.NativePermissionStates.DISMISSED);
+                case _.UserMediaErrors.PERMISSION_DISMISSED:
+                    p(f.NativePermissionStates.DISMISSED);
                     break;
                 default:
-                    p(_.NativePermissionStates.ERROR), h.warn("unknown getUserMedia error: ".concat(e))
+                    p(f.NativePermissionStates.ERROR), h.warn("unknown getUserMedia error: ".concat(e))
             }
         }).then(() => !0))
     }
@@ -90,8 +90,8 @@ function(e, t, n) {
     function v(e) {
         let {
             usedKeybind: t = !1
-        } = e, n = l.default.getKeybindForAction(f.GlobalKeybindActions.TOGGLE_MUTE, !1, !0);
-        d.default.track(f.AnalyticEvents.INPUT_MUTE_TOGGLED, {
+        } = e, n = l.default.getKeybindForAction(_.GlobalKeybindActions.TOGGLE_MUTE, !1, !0);
+        d.default.track(_.AnalyticEvents.INPUT_MUTE_TOGGLED, {
             enabled: !o.default.isSelfMute(),
             custom_keybind_assigned: null != n && n.id !== l.DEFAULT_MUTE_KEYBIND.id,
             used_keybind: t,

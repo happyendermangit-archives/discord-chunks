@@ -15,12 +15,12 @@ function(e, t, n) {
         d = n("49111");
     let c = d.RPC_STARTING_PORT + d.RPC_PORT_RANGE - 1;
 
-    function f(e, t) {
+    function _(e, t) {
         if (null == e || null == t) throw Error("cmd and name required");
         return "".concat(e, ":").concat(t)
     }
-    let _ = a.parse(location.search.slice(1)),
-        E = parseInt(null != _.rpc && "" !== _.rpc ? _.rpc : d.RPC_STARTING_PORT, 10),
+    let f = a.parse(location.search.slice(1)),
+        E = parseInt(null != f.rpc && "" !== f.rpc ? f.rpc : d.RPC_STARTING_PORT, 10),
         h = null;
     class g extends i.EventEmitter {
         get port() {
@@ -69,13 +69,13 @@ function(e, t, n) {
                             }, r.message)), this.disconnect();
                             return
                         }
-                        this.emit(f(n, i), r);
+                        this.emit(_(n, i), r);
                         return
                     }
                     let a = null;
                     i === d.RPCEvents.ERROR && (a = new u.default({
                         errorCode: r.code
-                    }, r.message), r = null), this.emit(f(n, s), a, r)
+                    }, r.message), r = null), this.emit(_(n, s), a, r)
                 }, h.onclose = h.onerror = e => this.disconnect(e))
             }
         }
@@ -87,10 +87,10 @@ function(e, t, n) {
             null != h && (this.emit("disconnected"), h.close(), h = null)
         }
         subscribe(e, t, n) {
-            return this.on(f(d.RPCCommands.DISPATCH, e), n), this.request(d.RPCCommands.SUBSCRIBE, t, e)
+            return this.on(_(d.RPCCommands.DISPATCH, e), n), this.request(d.RPCCommands.SUBSCRIBE, t, e)
         }
         unsubscribe(e, t, n) {
-            return this.removeListener(f(d.RPCCommands.DISPATCH, e), n), this.request(d.RPCCommands.UNSUBSCRIBE, t, e)
+            return this.removeListener(_(d.RPCCommands.DISPATCH, e), n), this.request(d.RPCCommands.UNSUBSCRIBE, t, e)
         }
         request(e, t, n) {
             return new Promise((i, s) => {
@@ -109,7 +109,7 @@ function(e, t, n) {
                         evt: n,
                         nonce: r
                     });
-                this.once(f(e, r), (e, t) => null != e ? s(e) : i(t)), null == h || h.send(a)
+                this.once(_(e, r), (e, t) => null != e ? s(e) : i(t)), null == h || h.send(a)
             })
         }
         requestOnce(e, t, n) {

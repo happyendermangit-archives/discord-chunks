@@ -18,7 +18,7 @@ function(e, t, n) {
     function u(e, t) {
         let [n, i, u] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.default, l.default, a.default], d = i.getGuild(e), c = n.getUser(t);
         if (null == d || null == c || c.isNonUserBot()) return !1;
-        let p = d.isOwner(c) || s.default.can({
+        let p = d.isOwner(c) || s.can({
             permission: r.Permissions.ADMINISTRATOR,
             user: c,
             context: d

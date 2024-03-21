@@ -19,7 +19,7 @@ function(e, t, n) {
             windowLength: u,
             allowedPoorFpsRatio: d,
             fpsThreshold: c,
-            backoffTimeSec: f
+            backoffTimeSec: _
         } = a.default.getConfig(!1);
         r.default.track(o.AnalyticEvents.VIDEO_TOGGLED, {
             video_toggle_reason: t,
@@ -30,7 +30,7 @@ function(e, t, n) {
             video_health_manager_poor_fps_ratio: l ? d : null,
             video_health_manager_fps_threshold: l ? c : null,
             is_video_shown: n,
-            video_health_manager_backoff_time_seconds: l ? f : null
+            video_health_manager_backoff_time_seconds: l ? _ : null
         })
     }
 

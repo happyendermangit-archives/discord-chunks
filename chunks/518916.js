@@ -23,12 +23,12 @@ function(e, t, n) {
         u = n("773336"),
         d = n("447214"),
         c = n("413196"),
-        f = n("764867"),
-        _ = n("292892");
+        _ = n("764867"),
+        f = n("292892");
     let E = new r.default("ConnectionStore"),
         h = new d.default,
-        g = new f.default(h),
-        m = new _.default(h),
+        g = new _.default(h),
+        m = new f.default(h),
         p = new c.default(h);
     h.handleIdentify = () => {
         let e = a.default.getToken();

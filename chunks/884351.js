@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("867805"),
         d = n("888198"),
         c = n("290689"),
-        f = n("804888"),
-        _ = n("401690"),
+        _ = n("804888"),
+        f = n("401690"),
         E = n("845579"),
         h = n("42203"),
         g = n("923959"),
@@ -110,8 +110,8 @@ function(e, t, n) {
                     if (!(s = D("@", e, r, "mention"))) return null;
                     let a = G.exec(e);
                     if (null != a && s[0].length <= a[0].length) return null;
-                    if ("" === n && (0, f.canSuppressNotifications)()) {
-                        let t = f.SILENT_RE.exec(e);
+                    if ("" === n && (0, _.canSuppressNotifications)()) {
+                        let t = _.SILENT_RE.exec(e);
                         if (null != t && s[0].length <= t[0].length) return null
                     }
                     return s
@@ -407,21 +407,21 @@ function(e, t, n) {
                 id: e.channel.id,
                 text: e.channel.name
             }))).value() : [],
-            c = _.default.computeAllActiveJoinedThreads(n).map(e => ({
+            c = f.default.computeAllActiveJoinedThreads(n).map(e => ({
                 id: e.id,
                 text: e.name
             })),
-            f = l.default.getDisambiguatedEmojiContext(n),
-            E = f.getEscapedCustomEmoticonNames(),
-            h = f.getCustomEmoji(),
-            v = f.getCustomEmoticonRegex(),
+            _ = l.default.getDisambiguatedEmojiContext(n),
+            E = _.getEscapedCustomEmoticonNames(),
+            h = _.getCustomEmoji(),
+            v = _.getCustomEmoticonRegex(),
             T = {
                 inline: !0,
                 mentionableRoles: o,
                 guild: i,
                 users: a,
                 channels: u.concat(d).concat(c),
-                emojiContext: f,
+                emojiContext: _,
                 customEmoticonsRegex: v,
                 customEmoji: h,
                 textExclusions: E,
@@ -463,12 +463,12 @@ function(e, t, n) {
                 l = n ? x : s.omit(x, ["spoiler", "timestamp"]),
                 d = n ? j : u.default.translateSurrogatesToInlineEmoji,
                 c = a.parserFor(l),
-                f = {
+                _ = {
                     inline: !0,
                     guild: o,
                     isNotification: n
                 };
-            return Y(c(e, f), f, d)
+            return Y(c(e, _), _, d)
         }
     }
 }

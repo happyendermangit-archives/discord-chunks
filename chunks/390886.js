@@ -17,7 +17,7 @@ function(e, t, n) {
         if (null == o.id || null == n || !(0, l.isGuildTextChannelType)(n.type)) return !0;
         let u = i.default.getUsableCustomEmojiById(o.id),
             d = a.default.isInternalEmojiForGuildId(u, n.getGuildId()),
-            c = s.default.can({
+            c = s.can({
                 permission: r.Permissions.USE_EXTERNAL_EMOJIS,
                 user: t,
                 context: n

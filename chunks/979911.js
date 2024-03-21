@@ -19,8 +19,8 @@ function(e, t, n) {
         u = n("981980"),
         d = n("872717"),
         c = n("798609"),
-        f = n("716241"),
-        _ = n("605250"),
+        _ = n("716241"),
+        f = n("605250"),
         E = n("676574"),
         h = n("618421"),
         g = n("271938"),
@@ -59,7 +59,7 @@ function(e, t, n) {
         }
         startQueueMetricTimers(e) {
             let t = O.map(e => setTimeout(() => {
-                (0, f.trackWithMetadata)(A.AnalyticEvents.SEND_MESSAGE_QUEUED, {
+                (0, _.trackWithMetadata)(A.AnalyticEvents.SEND_MESSAGE_QUEUED, {
                     queued_duration_ms: e
                 })
             }, e));
@@ -110,7 +110,7 @@ function(e, t, n) {
                 location: "overlay_unlocked"
             }));
             let c = this.createResponseHandler(e.nonce, t),
-                f = new AbortController;
+                _ = new AbortController;
             if (this.startQueueMetricTimers(e.nonce), null != s && null != r && "" !== r) d.default.post({
                 url: A.Endpoints.MESSAGES(i),
                 fields: Object.entries(l).map(e => {
@@ -127,9 +127,9 @@ function(e, t, n) {
                 }],
                 context: n,
                 oldFormErrors: !0,
-                signal: f.signal,
+                signal: _.signal,
                 onRequestCreated: () => {
-                    null != e.nonce && this.requests.set(e.nonce, f)
+                    null != e.nonce && this.requests.set(e.nonce, _)
                 }
             }, c);
             else {
@@ -144,9 +144,9 @@ function(e, t, n) {
                     context: n,
                     oldFormErrors: !0,
                     ...t,
-                    signal: f.signal,
+                    signal: _.signal,
                     onRequestCreated: () => {
-                        null != e.nonce && this.requests.set(e.nonce, f)
+                        null != e.nonce && this.requests.set(e.nonce, _)
                     }
                 }, c)
             }
@@ -176,8 +176,8 @@ function(e, t, n) {
                     data: a,
                     nonce: o,
                     attachments: u,
-                    maxSizeCallback: f,
-                    analytics_location: _
+                    maxSizeCallback: _,
+                    analytics_location: f
                 } = e,
                 E = {
                     type: c.InteractionTypes.APPLICATION_COMMAND,
@@ -187,7 +187,7 @@ function(e, t, n) {
                     session_id: g.default.getSessionId(),
                     data: a,
                     nonce: o,
-                    analytics_location: _
+                    analytics_location: f
                 };
             if (null != u) {
                 E.data.attachments = [], n = [];
@@ -207,13 +207,13 @@ function(e, t, n) {
                         let {
                             total: t
                         } = e, n = (0, S.maxFileSize)(s);
-                        null != t && t > n && (this.cancelRequest(o), null == f || f(n))
+                        null != t && t > n && (this.cancelRequest(o), null == _ || _(n))
                     })
                 }
             }, this.createResponseHandler(o, t))
         }
         constructor(e = 5) {
-            super(new _.default("MessageQueue")), this.maxSize = e, this.requests = new Map, this.analyticsTimeouts = new Map
+            super(new f.default("MessageQueue")), this.maxSize = e, this.requests = new Map, this.analyticsTimeouts = new Map
         }
     }
     var P = new D

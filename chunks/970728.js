@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("872717"),
         d = n("913144"),
         c = n("599417"),
-        f = n("333805"),
-        _ = n("427953"),
+        _ = n("333805"),
+        f = n("427953"),
         E = n("644223"),
         h = n("523086"),
         g = n("263901"),
@@ -95,14 +95,14 @@ function(e, t, n) {
             targetUserId: l,
             targetType: u,
             targetApplicationId: d
-        } = null != s ? s : {}, c = a === W.ChannelTypes.GUILD_STAGE_VOICE, f = W.Routes.CHANNEL(t, o);
+        } = null != s ? s : {}, c = a === W.ChannelTypes.GUILD_STAGE_VOICE, _ = W.Routes.CHANNEL(t, o);
         P.GUILD_VOCAL_CHANNEL_TYPES.has(a) ? (0, g.addPostConnectionCallback)(() => {
             n.el("987317").then(n.bind(n, "987317")).then(e => {
                 let {
                     default: n
                 } = e, a = () => {
                     if (c) {
-                        (0, D.connectAndOpen)(i instanceof P.ChannelRecordBase ? i : (0, P.createChannelRecord)(i)), (0, O.transitionTo)(f);
+                        (0, D.connectAndOpen)(i instanceof P.ChannelRecordBase ? i : (0, P.createChannelRecord)(i)), (0, O.transitionTo)(_);
                         return
                     }
                     n.selectVoiceChannel(o), u === X.InviteTargetTypes.STREAM && null != l && j.watchStreamAndTransitionToStream({
@@ -114,7 +114,7 @@ function(e, t, n) {
                 };
                 (0, S.shouldShowMembershipVerificationGate)(t, [w.default, k.default, F.default, U.default]) ? (0, p.openMemberVerificationModal)(t, a) : a()
             })
-        }) : (0, _.isActivityInTextSupportedForChannelType)(a) && u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, O.transitionTo)(W.Routes.CHANNEL(null != t ? t : W.ME, o)), (0, E.default)(o, d, r, null == s ? void 0 : s.intent)), (function(e, t) {
+        }) : (0, f.isActivityInTextSupportedForChannelType)(a) && u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, O.transitionTo)(W.Routes.CHANNEL(null != t ? t : W.ME, o)), (0, E.default)(o, d, r, null == s ? void 0 : s.intent)), (function(e, t) {
             let {
                 type: n
             } = e, {
@@ -125,7 +125,7 @@ function(e, t, n) {
                 navigationReplace: !0
             };
             return null != s && (o.welcomeModalChannelId = s), a && (o.state = Q.STAGE_INVITE_STATE_KEY), null != r && (o.guildScheduledEventId = r.id), e => null != i ? i(e, o, R.default.INVITE_ACCEPT) : (0, O.transitionTo)(e, o, R.default.INVITE_ACCEPT)
-        })(i, s)(f)
+        })(i, s)(_)
     }
     let et = function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
@@ -327,7 +327,7 @@ function(e, t, n) {
                 context: a,
                 callback: o,
                 skipOnboarding: l
-            } = e, c = (0, C.parseExtraDataFromInviteKey)(r), _ = c.baseCode, E = L.default.getSessionId();
+            } = e, c = (0, C.parseExtraDataFromInviteKey)(r), f = c.baseCode, E = L.default.getSessionId();
             let h = (i = a, s = c, {
                     ...i,
                     invite_guild_scheduled_event_id: s.guildScheduledEventId
@@ -335,9 +335,9 @@ function(e, t, n) {
                 g = F.default.getCurrentUser();
             return null !== (t = null == g ? void 0 : g.hasFlag(W.UserFlags.QUARANTINED)) && void 0 !== t && t ? ((0, N.default)(), new Promise((e, t) => t(Error()))) : (d.default.dispatch({
                 type: "INVITE_ACCEPT",
-                code: _
+                code: f
             }), u.default.post({
-                url: W.Endpoints.INVITE(_),
+                url: W.Endpoints.INVITE(f),
                 context: h,
                 oldFormErrors: !0,
                 body: {
@@ -348,7 +348,7 @@ function(e, t, n) {
                 d.default.dispatch({
                     type: "INVITE_ACCEPT_SUCCESS",
                     invite: e.body,
-                    code: _
+                    code: f
                 });
                 let s = I.default.getGuildScheduledEvent(c.guildScheduledEventId),
                     r = {
@@ -369,12 +369,12 @@ function(e, t, n) {
                 var t, n;
                 throw d.default.dispatch({
                     type: "INVITE_ACCEPT_FAILURE",
-                    code: _,
+                    code: f,
                     error: {
                         message: null === (t = e.body) || void 0 === t ? void 0 : t.message,
                         code: null === (n = e.body) || void 0 === n ? void 0 : n.code
                     }
-                }), new f.default(e)
+                }), new _.default(e)
             }))
         },
         acceptInviteAndTransitionToInviteChannel(e) {
@@ -437,9 +437,9 @@ function(e, t, n) {
         },
         openApp(e, t, n, i, r) {
             var u, c;
-            let f;
-            let _ = null != e ? (0, C.parseExtraDataFromInviteKey)(e) : null,
-                E = null == _ ? void 0 : _.baseCode;
+            let _;
+            let f = null != e ? (0, C.parseExtraDataFromInviteKey)(e) : null,
+                E = null == f ? void 0 : f.baseCode;
             if (d.default.dispatch({
                     type: "INVITE_APP_OPENING",
                     code: e
@@ -453,12 +453,12 @@ function(e, t, n) {
             if ((null === (u = s.os) || void 0 === u ? void 0 : u.family) === "Android" || (null === (c = s.os) || void 0 === c ? void 0 : c.family) === "iOS") {
                 let e = null != E ? (0, a.getInviteDynamicLinkTemplate)(E) : (0, a.getDefaultDynamicLinkTemplate)(),
                     t = (0, o.generateAttemptId)();
-                f = (0, o.default)(e, {
+                _ = (0, o.default)(e, {
                     utmSource: 2 === r ? "friend_invite" : Z,
                     fingerprint: n,
                     username: i,
                     attemptId: t,
-                    event: null == _ ? void 0 : _.guildScheduledEventId,
+                    event: null == f ? void 0 : f.guildScheduledEventId,
                     iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(E)
                 }), x.default.track(W.AnalyticEvents.DEEP_LINK_CLICKED, {
                     fingerprint: (0, l.maybeExtractId)(n),
@@ -466,8 +466,8 @@ function(e, t, n) {
                     source: Z,
                     invite_code: E
                 })
-            } else "#" === (f = null != t ? W.Routes.INVITE_PROXY(t) : "")[0] && (f = f.slice(1)), f = "discord://".concat(f);
-            Y.default.launch(f, t => {
+            } else "#" === (_ = null != t ? W.Routes.INVITE_PROXY(t) : "")[0] && (_ = _.slice(1)), _ = "discord://".concat(_);
+            Y.default.launch(_, t => {
                 d.default.dispatch(t ? {
                     type: "INVITE_APP_OPENED",
                     code: e

@@ -12,8 +12,8 @@ function(e, t, n) {
         u = n("71185"),
         d = n("509043"),
         c = n("669491"),
-        f = n("227645"),
-        _ = n("577776"),
+        _ = n("227645"),
+        f = n("577776"),
         E = n("49111"),
         h = n("426834");
     let g = {
@@ -90,8 +90,8 @@ function(e, t, n) {
                 clickableRef: u,
                 look: d,
                 disableItemStyles: c
-            } = this.props, _ = this.props["aria-label"], E = i === n;
-            return (0, r.jsx)(f.Clickable, {
+            } = this.props, f = this.props["aria-label"], E = i === n;
+            return (0, r.jsx)(_.Clickable, {
                 className: l(t, {
                     [h.item]: !c,
                     [h.brand]: "brand" === d,
@@ -111,7 +111,7 @@ function(e, t, n) {
                 onMouseUp: null != s ? this.handleMouseUp : void 0,
                 onMouseDown: this.handleMouseDown,
                 onContextMenu: o,
-                "aria-label": _,
+                "aria-label": f,
                 ref: u,
                 children: e
             })
@@ -233,7 +233,7 @@ function(e, t, n) {
             "aria-expanded": s,
             "aria-controls": a
         } = e;
-        return (0, r.jsx)(f.Clickable, {
+        return (0, r.jsx)(_.Clickable, {
             tabIndex: null == n ? -1 : 0,
             className: l(h.header, t),
             onClick: n,
@@ -244,7 +244,7 @@ function(e, t, n) {
                     top: -6
                 }
             },
-            children: (0, r.jsx)(_.Text, {
+            children: (0, r.jsx)(f.Text, {
                 variant: "eyebrow",
                 color: "none",
                 className: h.headerText,

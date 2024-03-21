@@ -17,7 +17,7 @@ function(e, t, n) {
             return c
         },
         shouldApplyReaction: function() {
-            return f
+            return _
         }
     }), n("781738");
     var i = n("867805"),
@@ -64,7 +64,7 @@ function(e, t, n) {
         return r.AnalyticsSections.CHANNEL_TEXT_AREA
     }
 
-    function f(e) {
+    function _(e) {
         let {
             userId: t,
             optimistic: n

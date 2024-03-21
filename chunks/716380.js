@@ -17,14 +17,14 @@ function(e, t, n) {
         u = n("233736"),
         d = n("862337"),
         c = n("560528"),
-        f = n("718517"),
-        _ = n("299039"),
+        _ = n("718517"),
+        f = n("299039"),
         E = n("49111");
     let h = {
             any: 100
         },
-        g = 30 * f.default.Millis.SECOND,
-        m = 120 * f.default.Millis.SECOND,
+        g = 30 * _.default.Millis.SECOND,
+        m = 120 * _.default.Millis.SECOND,
         p = -1 !== (0, c.getFirefoxVersion)();
     (r = i || (i = {})).UserSSRCUpdate = "user-ssrc-update", r.Update = "update", s = class extends a.default {
         getWantsLevel() {
@@ -103,7 +103,7 @@ function(e, t, n) {
         }
         setAppBackgrounded(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            for (let [i, s] of _.default.entries(this.streamIds))
+            for (let [i, s] of f.default.entries(this.streamIds))
                 if (this.offscreenDisabledUsers[i] = e, null != s) {
                     var n;
                     let i = !e || t;
@@ -143,7 +143,7 @@ function(e, t, n) {
                 if (!(null === (e = this.connection) || void 0 === e ? void 0 : e.getActiveOutputSinkTrackingEnabled())) return;
                 let n = Date.now(),
                     i = [];
-                for (let [e, s] of _.default.entries(this.streamIds))
+                for (let [e, s] of f.default.entries(this.streamIds))
                     if (null != s) {
                         if (null === (t = this.connection) || void 0 === t ? void 0 : t.getHasActiveVideoOutputSink(s)) delete this.offscreenUsers[e], delete this.offscreenDisabledUsers[e];
                         else if (null == this.offscreenUsers[e]) this.offscreenUsers[e] = n, this.addLru(e, n, i);
@@ -166,7 +166,7 @@ function(e, t, n) {
                     n = {
                         any: t
                     };
-                for (let [i, r] of(s.updateOffscreenUsers(), _.default.entries(s.videoSsrcs))) {
+                for (let [i, r] of(s.updateOffscreenUsers(), f.default.entries(s.videoSsrcs))) {
                     let a = [],
                         o = !1,
                         l = r[0].ssrc;

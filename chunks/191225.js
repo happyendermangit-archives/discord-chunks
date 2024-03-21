@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("957255"),
         d = n("18494"),
         c = n("697218"),
-        f = n("659500"),
-        _ = n("773336"),
+        _ = n("659500"),
+        f = n("773336"),
         E = n("378713"),
         h = n("711562"),
         g = n("334368"),
@@ -61,7 +61,7 @@ function(e, t, n) {
             applicationId: a,
             instanceId: d,
             userIds: c,
-            activitySessionId: _
+            activitySessionId: f
         } = e, g = (0, h.default)(a);
         if (null == g) return;
         let m = l.default.getBasicChannel(s),
@@ -71,7 +71,7 @@ function(e, t, n) {
                 v.usersHavePlayedByApp.set(e, new Set([...null !== (n = v.usersHavePlayedByApp.get(e)) && void 0 !== n ? n : [], ...t]))
             }(a, c), !p) return;
         let T = {
-                activitySessionId: null != _ ? _ : d,
+                activitySessionId: null != f ? f : d,
                 applicationId: a,
                 channelId: s,
                 guildId: i,
@@ -90,12 +90,12 @@ function(e, t, n) {
                 instanceId: d
             })), null != R && s === R.channelId && !c.some(e => e === N) && Array.from(R.userIds).some(e => e === N)) y.get(s) === a ? y.delete(s) : I.delete(a);
         else if (c.some(e => e === N) && (null == R || R.applicationId !== a || R.channelId !== s)) {
-            let e = null != _ && _ === o.default.getSessionId();
+            let e = null != f && f === o.default.getSessionId();
             (e || (0, E.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
                 channelId: s,
                 applicationId: a,
                 instanceId: d
-            }), f.ComponentDispatch.dispatch(S.ComponentActions.OPEN_EMBEDDED_ACTIVITY, {
+            }), _.ComponentDispatch.dispatch(S.ComponentActions.OPEN_EMBEDDED_ACTIVITY, {
                 channelId: s
             }))
         }
@@ -131,12 +131,12 @@ function(e, t, n) {
             channelId: s,
             applicationId: r,
             instanceId: a
-        } = e, u = (0, h.default)(r), f = o.default.getSessionId();
-        if (null == u || null == f || (null === (t = I.get(r)) || void 0 === t ? void 0 : t.channelId) === s) return !1;
-        let _ = l.default.getChannel(s),
-            E = null == _ ? void 0 : _.getGuildId(),
+        } = e, u = (0, h.default)(r), _ = o.default.getSessionId();
+        if (null == u || null == _ || (null === (t = I.get(r)) || void 0 === t ? void 0 : t.channelId) === s) return !1;
+        let f = l.default.getChannel(s),
+            E = null == f ? void 0 : f.getGuildId(),
             g = c.default.getCurrentUser();
-        if (null == E && !(null !== (n = null == _ ? void 0 : _.isPrivate()) && void 0 !== n && n) || null == g) return !1;
+        if (null == E && !(null !== (n = null == f ? void 0 : f.isPrivate()) && void 0 !== n && n) || null == g) return !1;
         i = s, I.set(r, {
             guildId: E,
             channelId: s,
@@ -469,7 +469,7 @@ function(e, t, n) {
                 } = e;
                 t.forEach(e => {
                     let t = e.application_id,
-                        i = e.client_platform_config[(0, g.default)((0, _.getOS)())];
+                        i = e.client_platform_config[(0, g.default)((0, f.getOS)())];
                     if (!v.seenActivities.has(t) && (v.shouldShowNewActivityIndicator = !0, v.seenActivities.add(t)), null == i.label_until) return;
                     let s = new Date(i.label_until).getTime();
                     if (s < n) return;

@@ -32,7 +32,7 @@ function(e, t, n) {
         return delete d[e], null != i && clearTimeout(i), null != s && null != r && t(s, r), n
     }
 
-    function f(e) {
+    function _(e) {
         let {
             lobbyId: t,
             member: {
@@ -47,7 +47,7 @@ function(e, t, n) {
             metadata: i
         })
     }
-    class _ extends r.default.Store {
+    class f extends r.default.Store {
         getLobbies() {
             return u
         }
@@ -69,8 +69,8 @@ function(e, t, n) {
             })
         }
     }
-    _.displayName = "LobbyStore";
-    var E = new _(a.default, {
+    f.displayName = "LobbyStore";
+    var E = new f(a.default, {
         CONNECTION_OPEN: function() {
             u = {}
         },
@@ -136,8 +136,8 @@ function(e, t, n) {
             } = e;
             delete u[t], c(t, (e, t) => t(new l(n)))
         },
-        LOBBY_MEMBER_CONNECT: f,
-        LOBBY_MEMBER_UPDATE: f,
+        LOBBY_MEMBER_CONNECT: _,
+        LOBBY_MEMBER_UPDATE: _,
         LOBBY_MEMBER_DISCONNECT: function(e) {
             let {
                 lobbyId: t,

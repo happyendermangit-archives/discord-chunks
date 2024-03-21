@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("450484");
     let d = "MaskedLinkStore",
         c = new Set,
-        f = new Set,
-        _ = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace("//", "");
+        _ = new Set,
+        f = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace("//", "");
 
     function E(e) {
         let t = (0, l.getHostname)(e);
@@ -23,7 +23,7 @@ function(e, t, n) {
             case window.GLOBAL_ENV.INVITE_HOST:
             case window.GLOBAL_ENV.GIFT_CODE_HOST:
             case window.GLOBAL_ENV.GUILD_TEMPLATE_HOST:
-            case _:
+            case f:
             case location.hostname:
                 return !0;
             default:
@@ -33,19 +33,19 @@ function(e, t, n) {
 
     function h(e) {
         let t = (0, l.getProtocol)(e);
-        return f.has(t)
+        return _.has(t)
     }
     class g extends s.default.Store {
         initialize() {
             var e;
             let t = null !== (e = r.default.get(d)) && void 0 !== e ? e : {};
-            if (Array.isArray(t)) c = new Set(null != t ? Array.from(t) : null), f = new Set;
+            if (Array.isArray(t)) c = new Set(null != t ? Array.from(t) : null), _ = new Set;
             else {
                 let {
                     trustedDomains: e,
                     trustedProtocols: n
                 } = t;
-                c = new Set(null != e ? Array.from(e) : null), f = new Set(null != n ? Array.from(n) : null)
+                c = new Set(null != e ? Array.from(e) : null), _ = new Set(null != n ? Array.from(n) : null)
             }
         }
         isTrustedDomain(e) {
@@ -64,7 +64,7 @@ function(e, t, n) {
             if (E(t)) return !1;
             c.add((0, l.getHostname)(t)), r.default.set(d, {
                 trustedDomains: c,
-                trustedProtocols: f
+                trustedProtocols: _
             })
         },
         MASKED_LINK_ADD_TRUSTED_PROTOCOL: function(e) {
@@ -72,9 +72,9 @@ function(e, t, n) {
                 url: t
             } = e;
             if (h(t)) return !1;
-            f.add((0, l.getProtocol)(t)), r.default.set(d, {
+            _.add((0, l.getProtocol)(t)), r.default.set(d, {
                 trustedDomains: c,
-                trustedProtocols: f
+                trustedProtocols: _
             })
         }
     })

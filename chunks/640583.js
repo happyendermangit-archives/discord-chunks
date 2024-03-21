@@ -23,7 +23,7 @@ function(e, t, n) {
             return c
         },
         createWidgets: function() {
-            return f
+            return _
         }
     });
     var i = n("913144"),
@@ -77,10 +77,10 @@ function(e, t, n) {
     }
 
     function c(e) {
-        f([e])
+        _([e])
     }
 
-    function f(e) {
+    function _(e) {
         i.default.dispatch({
             type: "LAYOUT_CREATE_WIDGETS",
             widgetConfigs: e

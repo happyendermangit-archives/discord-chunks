@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("679653"),
         d = n("454273"),
         c = n("966506"),
-        f = n("605250"),
-        _ = n("385976"),
+        _ = n("605250"),
+        f = n("385976"),
         E = n("677315"),
         h = n("361776"),
         g = n("290886"),
@@ -53,7 +53,7 @@ function(e, t, n) {
         j = n("375822"),
         W = n("724210"),
         z = n("782340");
-    let q = new f.default("AutocompleteUtils"),
+    let q = new _.default("AutocompleteUtils"),
         X = () => !0,
         Q = /(\t|\s)/,
         Z = [];
@@ -111,7 +111,7 @@ function(e, t, n) {
             limit: i,
             filter: s,
             allowSnowflake: a
-        } = e, o = w.default.getUsers(), u = U.default.getGuildId(), d = t.toLocaleLowerCase(), c = (0, H.normalize)(d), f = [], _ = [], E = n.length, h = 0, g = 0;
+        } = e, o = w.default.getUsers(), u = U.default.getGuildId(), d = t.toLocaleLowerCase(), c = (0, H.normalize)(d), _ = [], f = [], E = n.length, h = 0, g = 0;
         for (; h < E;) {
             var m, p, S, v, T, I, A, y, N;
             let e, i;
@@ -126,19 +126,19 @@ function(e, t, n) {
                     u = null != l ? (0, H.normalize)(l) : null,
                     h = null != E ? (0, H.stripDiacritics)(E) : null,
                     m = null != h ? (0, H.normalize)(h) : null;
-                a && t === i.id || n.substring(0, d.length) === d || s.substring(0, d.length) === d || (null == e ? void 0 : e.substring(0, d.length)) === d || (null == l ? void 0 : l.substring(0, d.length)) === d || (null == E ? void 0 : E.substring(0, d.length)) === d || (null == h ? void 0 : h.substring(0, d.length)) === d ? f.push({
+                a && t === i.id || n.substring(0, d.length) === d || s.substring(0, d.length) === d || (null == e ? void 0 : e.substring(0, d.length)) === d || (null == l ? void 0 : l.substring(0, d.length)) === d || (null == E ? void 0 : E.substring(0, d.length)) === d || (null == h ? void 0 : h.substring(0, d.length)) === d ? _.push({
                     type: j.AutocompleterResultTypes.USER,
                     record: i,
                     score: 10,
                     comparator: null !== (v = null != E ? E : e) && void 0 !== v ? v : n,
                     sortable: null !== (T = null != h ? h : l) && void 0 !== T ? T : s
-                }) : o.substring(0, c.length) === c || (null == u ? void 0 : u.substring(0, c.length)) === c || (null == m ? void 0 : m.substring(0, c.length)) === c ? f.push({
+                }) : o.substring(0, c.length) === c || (null == u ? void 0 : u.substring(0, c.length)) === c || (null == m ? void 0 : m.substring(0, c.length)) === c ? _.push({
                     type: j.AutocompleterResultTypes.USER,
                     record: i,
                     score: 1,
                     comparator: null !== (I = null != E ? E : e) && void 0 !== I ? I : n,
                     sortable: null !== (A = null != h ? h : l) && void 0 !== A ? A : s
-                }) : g < 50 && (r(d, s) || r(c, o) || null != l && r(d, l) || null != u && r(c, u) || null != h && r(d, h) || null != m && r(c, m)) && (_.push({
+                }) : g < 50 && (r(d, s) || r(c, o) || null != l && r(d, l) || null != u && r(c, u) || null != h && r(d, h) || null != m && r(c, m)) && (f.push({
                     type: j.AutocompleterResultTypes.USER,
                     record: i,
                     score: 1,
@@ -148,7 +148,7 @@ function(e, t, n) {
             }
             h += 1
         }
-        return f.sort(l.default), f.length < i && (_.sort(l.default), f = f.concat(_.slice(0, Math.max(0, i - f.length)))), f.length > i && (f.length = i), f
+        return _.sort(l.default), _.length < i && (f.sort(l.default), _ = _.concat(f.slice(0, Math.max(0, i - _.length)))), _.length > i && (_.length = i), _
     }
 
     function ea(e, t, n) {
@@ -247,7 +247,7 @@ function(e, t, n) {
                 query: i,
                 members: t,
                 limit: s,
-                filter: e => d.isPrivate() || F.default.can({
+                filter: e => d.isPrivate() || F.can({
                     permission: K.Permissions.VIEW_CHANNEL,
                     user: e,
                     context: d
@@ -299,8 +299,8 @@ function(e, t, n) {
                     filter: a = X,
                     type: d = N.GUILD_SELECTABLE_CHANNELS_KEY,
                     allowEmptyQueries: c = !1,
-                    requireVocalConnectAccess: f = !0,
-                    boosters: _ = {},
+                    requireVocalConnectAccess: _ = !0,
+                    boosters: f = {},
                     allowSnowflake: E
                 } = e,
                 h = function(e) {
@@ -330,7 +330,7 @@ function(e, t, n) {
                 m = [];
             for (let e of t) {
                 var p, S, v, I, C;
-                if (p = d, S = e.type, v = null != i, !(p === S || (v || (0, A.isGuildChannelType)(S)) && (p === N.GUILD_SELECTABLE_CHANNELS_KEY ? (0, A.isGuildSelectableChannelType)(S) || (0, A.isGuildVocalChannelType)(S) : p === N.GUILD_VOCAL_CHANNELS_KEY && (0, A.isGuildVocalChannelType)(S))) || (0, A.isGuildChannelType)(e.type) && !P.default.can(f ? e.accessPermissions : K.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
+                if (p = d, S = e.type, v = null != i, !(p === S || (v || (0, A.isGuildChannelType)(S)) && (p === N.GUILD_SELECTABLE_CHANNELS_KEY ? (0, A.isGuildSelectableChannelType)(S) || (0, A.isGuildVocalChannelType)(S) : p === N.GUILD_VOCAL_CHANNELS_KEY && (0, A.isGuildVocalChannelType)(S))) || (0, A.isGuildChannelType)(e.type) && !P.default.can(_ ? e.accessPermissions : K.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
                 let t = [...h],
                     s = e.name.toLocaleLowerCase(),
                     o = E && n === e.id,
@@ -366,7 +366,7 @@ function(e, t, n) {
                         m.push({
                             type: (0, A.isGuildVocalChannelType)(e.type) ? j.AutocompleterResultTypes.VOICE_CHANNEL : j.AutocompleterResultTypes.TEXT_CHANNEL,
                             record: e,
-                            score: et(l, _[e.id]),
+                            score: et(l, f[e.id]),
                             comparator: (0, u.computeChannelName)(e, w.default, M.default),
                             sortable: s
                         })
@@ -412,13 +412,13 @@ function(e, t, n) {
                 exactQuery: RegExp("^".concat(x.default.escape(a)), "i"),
                 containQuery: RegExp(x.default.escape(a), "i"),
                 queryLower: a
-            }, c = o(y.default.getMutablePrivateChannels()).values().value(), f = [];
+            }, c = o(y.default.getMutablePrivateChannels()).values().value(), _ = [];
             for (let e of c) {
                 if (!e.isMultiUserDM() || !s(e)) continue;
                 let t = (0, u.computeChannelName)(e, w.default, M.default).toLocaleLowerCase(),
                     n = (0, H.stripDiacritics)((0, H.normalize)(t)),
                     a = ei(n, d, i);
-                a > 0 && f.push({
+                a > 0 && _.push({
                     type: j.AutocompleterResultTypes.GROUP_DM,
                     record: e,
                     score: et(a, r[e.id]),
@@ -426,7 +426,7 @@ function(e, t, n) {
                     sortable: n
                 })
             }
-            return f.sort(l.default), f.length > n && (f.length = n), f
+            return _.sort(l.default), _.length > n && (_.length = n), _
         },
         queryApplications(e) {
             let {
@@ -492,20 +492,20 @@ function(e, t, n) {
                 includeAllGuildUsers: u = !1,
                 includeNonMentionableRoles: d = !1,
                 checkRecentlyTalkedOnEmptyQuery: c = !0,
-                limit: f = K.MAX_AUTOCOMPLETE_RESULTS,
-                request: _,
+                limit: _ = K.MAX_AUTOCOMPLETE_RESULTS,
+                request: f,
                 allowSnowflake: E = !1
             } = e, h = a ? (u && null != n.guild_id ? this.queryGuildUsers({
                 guildId: n.guild_id,
                 query: t,
-                limit: f,
+                limit: _,
                 checkRecentlyTalkedOnEmptyQuery: c,
-                request: _,
+                request: f,
                 allowSnowflake: E
             }) : this.queryChannelUsers({
                 channelId: n.id,
                 query: t,
-                limit: f,
+                limit: _,
                 checkRecentlyTalkedOnEmptyQuery: c,
                 allowSnowflake: E
             })).map(e => {
@@ -522,7 +522,7 @@ function(e, t, n) {
                     status: L.default.getStatus(t.id)
                 }
             }) : [], g = h.length, m = t.toLowerCase(), p = [];
-            if (g < f && l) {
+            if (g < _ && l) {
                 let e = n.getGuildId(),
                     t = O.default.getGuild(e);
                 null != t && (o(O.default.getRoles(t.id)).filter(t => {
@@ -532,12 +532,12 @@ function(e, t, n) {
                         id: a
                     } = t;
                     return (n || i || d) && (r(m, s.toLowerCase()) || E && m === a) && a !== B.default.castGuildIdAsEveryoneGuildRoleId(e)
-                }).take(f - g).forEach(e => {
+                }).take(_ - g).forEach(e => {
                     p.push(e)
                 }), g += p.length)
             }
             let S = [];
-            return !n.isPrivate() && i && l && (g < f && r(m, J().test) && (S.push(J()), g += 1), s && g < f && r(m, $().test) && S.push($())), {
+            return !n.isPrivate() && i && l && (g < _ && r(m, J().test) && (S.push(J()), g += 1), s && g < _ && r(m, $().test) && S.push($())), {
                 users: h,
                 globals: S,
                 roles: p
@@ -557,7 +557,7 @@ function(e, t, n) {
             }).map(e => ({
                 ...e,
                 status: L.default.getStatus(e.record.id)
-            })) : [], c = u.length, f = t.toLowerCase(), _ = [];
+            })) : [], c = u.length, _ = t.toLowerCase(), f = [];
             if (c < K.MAX_AUTOCOMPLETE_RESULTS && a) {
                 let e = O.default.getGuild(n);
                 null != e && (o(O.default.getRoles(e.id)).filter(e => {
@@ -566,16 +566,16 @@ function(e, t, n) {
                         name: s,
                         id: a
                     } = e;
-                    return (t || i || l) && r(f, s.toLowerCase()) && (0, d.isNotEveryoneRoleId)(n, a)
+                    return (t || i || l) && r(_, s.toLowerCase()) && (0, d.isNotEveryoneRoleId)(n, a)
                 }).take(K.MAX_AUTOCOMPLETE_RESULTS - c).forEach(e => {
-                    _.push(e)
-                }), c += _.length)
+                    f.push(e)
+                }), c += f.length)
             }
             let E = [];
-            return i && a && (c < K.MAX_AUTOCOMPLETE_RESULTS && r(f, J().test) && (E.push(J()), c += 1), c < K.MAX_AUTOCOMPLETE_RESULTS && r(f, $().test) && E.push($())), {
+            return i && a && (c < K.MAX_AUTOCOMPLETE_RESULTS && r(_, J().test) && (E.push(J()), c += 1), c < K.MAX_AUTOCOMPLETE_RESULTS && r(_, $().test) && E.push($())), {
                 users: u,
                 globals: E,
-                roles: _
+                roles: f
             }
         },
         queryChoice(e) {
@@ -705,7 +705,7 @@ function(e, t, n) {
                 matchComparator: r
             } = e;
             I.FrecencyUserSettingsActionCreators.loadIfNecessary();
-            let a = _.default.searchWithoutFetchingLatest({
+            let a = f.default.searchWithoutFetchingLatest({
                 channel: n,
                 query: t,
                 count: s,
@@ -733,9 +733,9 @@ function(e, t, n) {
                     c = RegExp("".concat(x.default.escape(u)), "i");
                 s.forEach((s, o) => {
                     let u = 0,
-                        f = null,
-                        _ = S.default.getStickerById(o);
-                    if (null == _ || !i(_, (0, m.getStickerSendability)(_, r, n))) return;
+                        _ = null,
+                        f = S.default.getStickerById(o);
+                    if (null == f || !i(f, (0, m.getStickerSendability)(f, r, n))) return;
                     for (let n of s) {
                         let {
                             type: i,
@@ -755,12 +755,12 @@ function(e, t, n) {
                                     return 1
                             }
                         }(i), a = 0;
-                        t ? s === e ? a = 10 * r : d.test(s) ? a = 7 * r : (i === v.StickerMetadataTypes.GUILD_NAME || i === v.StickerMetadataTypes.PACK_NAME || i === v.StickerMetadataTypes.STICKER_NAME) && c.test(s) && (a = 5 * r) : s === e && (a = 10 * r, f = s), a > u && (u = a, f = s)
+                        t ? s === e ? a = 10 * r : d.test(s) ? a = 7 * r : (i === v.StickerMetadataTypes.GUILD_NAME || i === v.StickerMetadataTypes.PACK_NAME || i === v.StickerMetadataTypes.STICKER_NAME) && c.test(s) && (a = 5 * r) : s === e && (a = 10 * r, _ = s), a > u && (u = a, _ = s)
                     }
                     let E = p.default.stickerFrecencyWithoutFetchingLatest.getScore(o);
-                    null != E && (u *= E / 100), u > 0 && null != f && !a.has(_.id) && (a.add(_.id), l.push({
-                        sticker: _,
-                        comparator: f,
+                    null != E && (u *= E / 100), u > 0 && null != _ && !a.has(f.id) && (a.add(f.id), l.push({
+                        sticker: f,
+                        comparator: _,
                         score: u
                     }))
                 })

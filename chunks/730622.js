@@ -36,11 +36,11 @@ function(e, t, n) {
             null == l || l()
         }
 
-        function f(e) {
+        function _(e) {
             s(d), n(e)
         }
 
-        function _(e) {
+        function f(e) {
             s(d), r(e)
         }
 
@@ -50,8 +50,8 @@ function(e, t, n) {
                 isLoading: !0
             }), u({
                 promiseFn: t,
-                resolve: f,
-                reject: _,
+                resolve: _,
+                reject: f,
                 code: e,
                 mfaCodeHandler: h,
                 isModalOpen: !0

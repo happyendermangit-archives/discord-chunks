@@ -8,7 +8,7 @@ function(e, t, n) {
             return c
         },
         getForumTimestampFormatter: function() {
-            return _
+            return f
         },
         canDisplayPostUnreadMessageCount: function() {
             return E
@@ -39,15 +39,15 @@ function(e, t, n) {
         let l = n.getGuild(o.guild_id);
         return null == l ? null : d(o, l, [i])
     }
-    let f = () => ({
+    let _ = () => ({
         minutes: u.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
         hours: u.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_HOURS,
         days: u.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_DAYS,
         month: u.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MORE_THAN_MONTH
     });
 
-    function _(e, t) {
-        if (t === o.ForumTimestampFormats.POSTED_DURATION_AGO && e === i.ThreadSortOrder.CREATION_DATE) return f
+    function f(e, t) {
+        if (t === o.ForumTimestampFormats.POSTED_DURATION_AGO && e === i.ThreadSortOrder.CREATION_DATE) return _
     }
 
     function E(e, t) {

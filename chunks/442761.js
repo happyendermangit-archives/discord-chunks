@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Popout: function() {
-            return f
+            return _
         },
         LazyPopout: function() {
-            return _
+            return f
         }
     }), n("70102"), n("222007");
     var i, s, r = n("37983"),
@@ -20,7 +20,7 @@ function(e, t, n) {
         3: u.PopoutCSSAnimator.Types.SCALE,
         4: u.PopoutCSSAnimator.Types.FADE
     });
-    class f extends a.Component {
+    class _ extends a.Component {
         render() {
             let {
                 children: e,
@@ -33,8 +33,8 @@ function(e, t, n) {
                 fixed: u,
                 nudgeAlignIntoViewport: d,
                 spacing: c,
-                onShiftClick: f,
-                positionKey: _,
+                onShiftClick: _,
+                positionKey: f,
                 preload: E,
                 disablePointerEvents: h,
                 ignoreModalClicks: g,
@@ -69,8 +69,8 @@ function(e, t, n) {
                 shouldShow: null != S && t,
                 onRequestOpen: i,
                 onRequestClose: s,
-                onShiftClick: f,
-                positionKey: _,
+                onShiftClick: _,
+                positionKey: f,
                 disablePointerEvents: h,
                 ignoreModalClicks: g,
                 closeOnScroll: m,
@@ -103,14 +103,14 @@ function(e, t, n) {
         }
     }
 
-    function _(e) {
+    function f(e) {
         let {
             renderPopout: t,
             ...n
         } = e, i = a.useRef(null), [s, l] = a.useState(0);
 
         function u() {
-            return _(), (0, r.jsx)(r.Fragment, {})
+            return f(), (0, r.jsx)(r.Fragment, {})
         }
         a.useLayoutEffect(() => {
             if (s > 0) {
@@ -122,7 +122,7 @@ function(e, t, n) {
             return () => clearTimeout(e)
         }, []);
         let c = a.useRef(!1);
-        async function _() {
+        async function f() {
             if (!c.current) {
                 c.current = !0;
                 let e = setTimeout(() => {
@@ -150,18 +150,18 @@ function(e, t, n) {
             c.current ? t().then(e => {
                 g(() => e), l(e => e + 1)
             }) : g(u)
-        }, [t]), (0, r.jsx)(f, {
+        }, [t]), (0, r.jsx)(_, {
             ref: i,
             ...n,
             renderPopout: h
         })
     }
-    f.Animation = i, f.defaultProps = {
+    _.Animation = i, _.defaultProps = {
         position: "right",
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         spacing: 8,
         animation: "2",
         positionKey: void 0
-    }, _.Animation = i
+    }, f.Animation = i
 }

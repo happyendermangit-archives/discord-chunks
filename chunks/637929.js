@@ -21,20 +21,20 @@ function(e, t, n) {
             u = a.default.isSuppressRolesEnabled(t),
             d = null != e.mentions && e.mentions.some(e => e.id === i),
             c = null == t || null == i ? null : r.default.getMember(t, i),
-            f = null != e.mention_roles && null != c && null != c.roles && e.mention_roles.some(e => c.roles.includes(e));
+            _ = null != e.mention_roles && null != c && null != c.roles && e.mention_roles.some(e => c.roles.includes(e));
         s.default.dispatch({
             type: "MESSAGE_NOTIFICATION_SHOWN",
             guildId: t,
             mentioned: d,
-            roleMentioned: f && !u,
+            roleMentioned: _ && !u,
             everyoneMentioned: !0 === e.mention_everyone && !l
         })
     }
     let u = null,
         d = null,
         c = null,
-        f = null,
-        _ = {},
+        _ = null,
+        f = {},
         E = {},
         h = {},
         g = {};
@@ -45,7 +45,7 @@ function(e, t, n) {
                 approx_seconds_since_last_notification: e(u),
                 approx_seconds_since_last_mention: e(d),
                 approx_seconds_since_last_role_mention: e(c),
-                approx_seconds_since_last_everyone_mention: e(f)
+                approx_seconds_since_last_everyone_mention: e(_)
             }
         }
         getStats(e) {
@@ -54,8 +54,8 @@ function(e, t, n) {
                 approx_seconds_since_last_notification: t(u),
                 approx_seconds_since_last_mention: t(d),
                 approx_seconds_since_last_role_mention: t(c),
-                approx_seconds_since_last_everyone_mention: t(f),
-                approx_seconds_since_last_guild_notification: null == e ? null : t(_[e]),
+                approx_seconds_since_last_everyone_mention: t(_),
+                approx_seconds_since_last_guild_notification: null == e ? null : t(f[e]),
                 approx_seconds_since_last_guild_mention: null == e ? null : t(E[e]),
                 approx_seconds_since_last_guild_role_mention: null == e ? null : t(g[e]),
                 approx_seconds_since_last_guild_everyone_mention: null == e ? null : t(h[e])
@@ -65,7 +65,7 @@ function(e, t, n) {
     var p = new m(s.default, {
         CONNECTION_OPEN: function() {
             let e = e => null != e && Date.now() - e < 6e4;
-            for (let t in !e(u) && (u = null), !e(d) && (d = null), !e(c) && (c = null), !e(f) && (f = null), _) !e(_[t]) && delete _[t];
+            for (let t in !e(u) && (u = null), !e(d) && (d = null), !e(c) && (c = null), !e(_) && (_ = null), f) !e(f[t]) && delete f[t];
             for (let t in E) !e(E[t]) && delete E[t];
             for (let t in g) !e(g[t]) && delete g[t];
             for (let t in h) !e(h[t]) && delete h[t]
@@ -77,7 +77,7 @@ function(e, t, n) {
                 roleMentioned: i,
                 everyoneMentioned: s
             } = e, r = Date.now();
-            u = r, null != t && (_[t] = r), n && (d = r, null != t && (E[t] = r)), i && (c = r, null != t && (g[t] = r)), s && (f = r, null != t && (h[t] = r))
+            u = r, null != t && (f[t] = r), n && (d = r, null != t && (E[t] = r)), i && (c = r, null != t && (g[t] = r)), s && (_ = r, null != t && (h[t] = r))
         }
     })
 }

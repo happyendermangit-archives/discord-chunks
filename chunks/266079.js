@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         FormSwitch: function() {
-            return _
+            return f
         }
     });
     var i = n("37983"),
@@ -14,14 +14,14 @@ function(e, t, n) {
         u = n("414055"),
         d = n("370373"),
         c = n("329272"),
-        f = n("37973");
+        _ = n("37973");
 
-    function _(e) {
+    function f(e) {
         let {
             value: t,
             disabled: n = !1,
             hideBorder: r = !1,
-            tooltipNote: _,
+            tooltipNote: f,
             onChange: E,
             className: h,
             style: g,
@@ -39,8 +39,8 @@ function(e, t, n) {
         });
         return (0, i.jsxs)("div", {
             style: g,
-            className: a(f.container, h, {
-                [f.disabled]: n
+            className: a(_.container, h, {
+                [_.disabled]: n
             }),
             children: [(0, i.jsx)(o.FocusRing, {
                 within: !0,
@@ -48,29 +48,29 @@ function(e, t, n) {
                 focusTarget: S,
                 ringTarget: v,
                 children: (0, i.jsxs)("div", {
-                    className: f.labelRow,
+                    className: _.labelRow,
                     ref: v,
                     children: [(0, i.jsx)("label", {
                         htmlFor: T,
-                        className: f.title,
+                        className: _.title,
                         children: p
                     }), (0, i.jsx)("div", {
-                        className: f.control,
-                        children: null != _ ? (0, i.jsx)(u.TooltipContainer, {
-                            text: _,
+                        className: _.control,
+                        children: null != f ? (0, i.jsx)(u.TooltipContainer, {
+                            text: f,
                             children: I
                         }) : I
                     })]
                 })
             }), null != m && (0, i.jsx)("div", {
-                className: f.note,
+                className: _.note,
                 children: (0, i.jsx)(c.FormText, {
                     disabled: n,
                     type: c.FormTextTypes.DESCRIPTION,
                     children: m
                 })
             }), !r && (0, i.jsx)(d.FormDivider, {
-                className: f.dividerDefault
+                className: _.dividerDefault
             })]
         })
     }

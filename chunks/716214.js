@@ -23,8 +23,8 @@ function(e, t, n) {
         u = n("42203"),
         d = n("305961"),
         c = n("957255"),
-        f = n("18494"),
-        _ = n("751661"),
+        _ = n("18494"),
+        f = n("751661"),
         E = n("27822"),
         h = n("923510"),
         g = n("30577");
@@ -45,12 +45,12 @@ function(e, t, n) {
 
     function p(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = f.default.getVoiceChannelId();
+            n = _.default.getVoiceChannelId();
         if (!t && ! function(e, t) {
                 let n = c.default.can(h.JOIN_VOCAL_CHANNEL_PERMISSIONS, e);
-                return !!n && (!_.shouldShowBlockedUsers(e.id) || t === e.id || (_.openStageBlockedUsersSheet(e, () => S(e, !0)), !1))
+                return !!n && (!f.shouldShowBlockedUsers(e.id) || t === e.id || (f.openStageBlockedUsersSheet(e, () => S(e, !0)), !1))
             }(e, n)) return !1;
-        if (E.default.initialize(), s.default.selectVoiceChannel(e.id), (n = f.default.getVoiceChannelId()) !== e.id) return !1;
+        if (E.default.initialize(), s.default.selectVoiceChannel(e.id), (n = _.default.getVoiceChannelId()) !== e.id) return !1;
         let i = l.default.getAllApplicationStreamsForChannel(e.id);
         return i.length > 0 && (0, r.watchStream)(i[0], {
             noFocus: !1
@@ -61,14 +61,14 @@ function(e, t, n) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            s = f.default.getVoiceChannelId();
-        if (!i && s !== e.id && (0, a.shouldShowVoiceChannelChangeConfirmation)(e) && _.showChannelChangeConfirmationAlert(e, () => S(e, t, n, !0))) return;
+            s = _.default.getVoiceChannelId();
+        if (!i && s !== e.id && (0, a.shouldShowVoiceChannelChangeConfirmation)(e) && f.showChannelChangeConfirmationAlert(e, () => S(e, t, n, !0))) return;
         let r = p(e, t);
         r && v(e, s, n)
     }
 
     function v(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        _.navigateToStage(e, t, n)
+        f.navigateToStage(e, t, n)
     }
 }

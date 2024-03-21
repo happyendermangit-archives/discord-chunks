@@ -14,8 +14,8 @@ function(e, t, n) {
         u = new Set,
         d = new Set,
         c = new Set,
-        f = new Map,
-        _ = new Map;
+        _ = new Map,
+        f = new Map;
 
     function E(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
@@ -39,8 +39,8 @@ function(e, t, n) {
     }
 
     function h(e, t) {
-        let n = new Map(f);
-        n.set(e, t), f = n;
+        let n = new Map(_);
+        n.set(e, t), _ = n;
         let i = a.get(e),
             s = null == i ? void 0 : i.userStatus;
         if (null != s && null == s.claimedAt) {
@@ -55,7 +55,7 @@ function(e, t, n) {
     }
 
     function g(e) {
-        null != _.get(e) && (_ = new Map(_)).delete(e)
+        null != f.get(e) && (f = new Map(f)).delete(e)
     }
 
     function m(e) {
@@ -90,16 +90,16 @@ function(e, t, n) {
             return c.has(e)
         }
         getRewardCode(e) {
-            return f.get(e)
+            return _.get(e)
         }
         getStreamHeartbeatFailure(e) {
-            return _.get(e)
+            return f.get(e)
         }
     }
     S.displayName = "QuestsStore";
     var v = new S(s.default, {
         LOGOUT: function() {
-            r = !1, a = new Map, o = 0, l = new Set, _ = new Map
+            r = !1, a = new Map, o = 0, l = new Set, f = new Map
         },
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
             o = Date.now(), r = !0
@@ -129,8 +129,8 @@ function(e, t, n) {
             let {
                 questId: t,
                 streamKey: n
-            } = e, i = _.get(n);
-            null == i && (_ = new Map(_)).set(n, {
+            } = e, i = f.get(n);
+            null == i && (f = new Map(f)).set(n, {
                 questId: t,
                 streamKey: n,
                 firstFailedAt: Date.now()
@@ -232,7 +232,7 @@ function(e, t, n) {
             } = e;
             E(t.questId, {
                 userStatus: t
-            }), null == t.claimedAt && (f = new Map(f)).delete(t.questId)
+            }), null == t.claimedAt && (_ = new Map(_)).delete(t.questId)
         },
         QUESTS_OPTIMISTIC_PROGRESS_UPDATE: function(e) {
             let {

@@ -28,8 +28,8 @@ function(e, t, n) {
             columnCounts: n,
             focusedX: d = 0,
             focusedY: c = 0,
-            onSelect: f,
-            prepareFocus: _,
+            onSelect: _,
+            prepareFocus: f,
             getNewFocusPosition: E,
             maintainFocusPosition: h = !0,
             enabled: g = !0,
@@ -60,8 +60,8 @@ function(e, t, n) {
                     columnCounts: n,
                     focusedX: d,
                     focusedY: c,
-                    onSelect: f,
-                    prepareFocus: _,
+                    onSelect: _,
+                    prepareFocus: f,
                     getNewFocusPosition: E,
                     dispatch: h,
                     maintainFocusPosition: g,
@@ -91,12 +91,12 @@ function(e, t, n) {
                     }, [p]),
                     P = i.useCallback((e, n) => {
                         let i = l(t, e, n),
-                            s = null != _ ? _(e, n, i) : Promise.resolve();
+                            s = null != f ? f(e, n, i) : Promise.resolve();
                         s.then(() => {
                             let e = u(i);
                             null != e ? (D(e), y(!1)) : requestAnimationFrame(() => y(!0))
                         })
-                    }, [t, _, D]),
+                    }, [t, f, D]),
                     L = i.useCallback(function() {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                             [n, i] = null != E ? E(d, c) : [d, c];
@@ -177,9 +177,9 @@ function(e, t, n) {
                                 if (p && (null == (s = T) ? void 0 : s.ownerDocument.activeElement) !== s || e.repeat) return;
                                 e.preventDefault(), e.stopPropagation(), h({
                                     type: t
-                                }), null != f ? f(d, c, e) : null != T && T.click()
+                                }), null != _ ? _(d, c, e) : null != T && T.click()
                         }
-                    }, [L, h, p, T, f, d, c]),
+                    }, [L, h, p, T, _, d, c]),
                     k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (A(!0), R(!0)), !1) : I ? (L(!1), !1) : void(g && null != T ? P(d, c) : L(!0)), [I, g, T, L, P, d, c]),
                     V = i.useCallback(e => {
                         if (e.target !== e.currentTarget) {
@@ -226,8 +226,8 @@ function(e, t, n) {
                 focusedX: C,
                 focusedY: y,
                 dispatch: N,
-                onSelect: f,
-                prepareFocus: _,
+                onSelect: _,
+                prepareFocus: f,
                 getNewFocusPosition: E,
                 maintainFocusPosition: h,
                 enabled: g,

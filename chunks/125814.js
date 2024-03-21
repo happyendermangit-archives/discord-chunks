@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("605451"),
         d = n("240353"),
         c = n("980428"),
-        f = n("772280"),
-        _ = n("21872"),
+        _ = n("772280"),
+        f = n("21872"),
         E = n("782340"),
         h = n("546933");
 
@@ -25,7 +25,7 @@ function(e, t, n) {
             totalPageCount: n,
             disabled: r,
             onPageChange: o
-        } = e, [c, f] = s.useState(!1), [_, E] = s.useState(null), g = null != _ && _ >= 1 && _ <= n;
+        } = e, [c, _] = s.useState(!1), [f, E] = s.useState(null), g = null != f && f >= 1 && f <= n;
         return r ? (0, i.jsx)(u.Heading, {
             className: h.gap,
             "aria-hidden": !0,
@@ -35,7 +35,7 @@ function(e, t, n) {
             autoFocus: !0,
             className: h.jumpToPageInlineInput,
             size: d.TextInput.Sizes.MINI,
-            value: null == _ ? "" : "".concat(_),
+            value: null == f ? "" : "".concat(f),
             onChange: e => {
                 let t = parseInt(e);
                 if ("" === e || isNaN(t)) {
@@ -45,14 +45,14 @@ function(e, t, n) {
                 E(t)
             },
             onBlur: () => {
-                f(!1), E(null)
+                _(!1), E(null)
             },
             onKeyPress: e => {
-                "Enter" === e.key && null != _ && g && (o(_), f(!1), E(null))
+                "Enter" === e.key && null != f && g && (o(f), _(!1), E(null))
             },
             disabled: r
         }, t.key) : (0, i.jsx)(l.Clickable, {
-            onClick: () => f(!0),
+            onClick: () => _(!0),
             children: (0, i.jsx)(u.Heading, {
                 className: a(h.roundButton, h.gap),
                 "aria-hidden": !0,
@@ -73,7 +73,7 @@ function(e, t, n) {
             hideMaxPage: m = !1,
             className: p
         } = e, S = Math.ceil(n / s);
-        return (0, i.jsx)(_.PaginationController, {
+        return (0, i.jsx)(f.PaginationController, {
             totalPageCount: S,
             selectedPage: t,
             maxVisiblePages: r,
@@ -93,7 +93,7 @@ function(e, t, n) {
                         children: t.map(e => {
                             var t, n;
                             switch (e.type) {
-                                case _.PaginationTypes.BACK:
+                                case f.PaginationTypes.BACK:
                                     return function(e) {
                                         let {
                                             key: t,
@@ -116,7 +116,7 @@ function(e, t, n) {
                                             })]
                                         }, t)
                                     }(e);
-                                case _.PaginationTypes.PAGE:
+                                case f.PaginationTypes.PAGE:
                                     ;
                                     return t = e, (0, i.jsx)(l.Clickable, {
                                         className: a(h.roundButton, {
@@ -131,7 +131,7 @@ function(e, t, n) {
                                             children: t.targetPage
                                         })
                                     }, t.key);
-                                case _.PaginationTypes.GAP:
+                                case f.PaginationTypes.GAP:
                                     ;
                                     return n = e, (0, i.jsx)(g, {
                                         page: n,
@@ -139,7 +139,7 @@ function(e, t, n) {
                                         disabled: !!u,
                                         onPageChange: d
                                     }, n.key);
-                                case _.PaginationTypes.NEXT:
+                                case f.PaginationTypes.NEXT:
                                     return function(e) {
                                         let {
                                             key: t,
@@ -156,7 +156,7 @@ function(e, t, n) {
                                             rel: "next",
                                             children: [(0, i.jsx)("span", {
                                                 children: E.default.Messages.NEXT
-                                            }), (0, i.jsx)(f.default, {
+                                            }), (0, i.jsx)(_.default, {
                                                 className: h.iconCaret,
                                                 "aria-hidden": !0
                                             })]

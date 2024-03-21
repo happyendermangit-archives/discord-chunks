@@ -15,14 +15,14 @@ function(e, t, n) {
     let d = {},
         c = new Set;
 
-    function f(e) {
+    function _(e) {
         return {
             id: e.id,
             parentId: e.parent_id
         }
     }
 
-    function _(e) {
+    function f(e) {
         e in d && delete d[e]
     }
 
@@ -33,7 +33,7 @@ function(e, t, n) {
     function h(e, t) {
         let n = d[e],
             i = t.parent_id;
-        !(i in n) && (n[i] = {}), d[e][i][t.id] = f(t)
+        !(i in n) && (n[i] = {}), d[e][i][t.id] = _(t)
     }
 
     function g(e) {
@@ -49,7 +49,7 @@ function(e, t, n) {
                 ...e,
                 [i.parent_id]: {
                     ...e[i.parent_id],
-                    [i.id]: f(i)
+                    [i.id]: _(i)
                 }
             }
         }
@@ -116,13 +116,13 @@ function(e, t, n) {
             let {
                 guild: t
             } = e;
-            _(t.id), E(t)
+            f(t.id), E(t)
         },
         GUILD_DELETE: function(e) {
             let {
                 guild: t
             } = e;
-            _(t.id)
+            f(t.id)
         },
         THREAD_CREATE: g,
         THREAD_UPDATE: g,

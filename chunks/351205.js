@@ -20,9 +20,9 @@ function(e, t, n) {
             error: t,
             selectedGuildId: n,
             onGuildChange: c,
-            guilds: f,
-            disabled: _ = !1
-        } = e, E = f.filter(e => s.default.has(e.permissions, l.Permissions.MANAGE_GUILD)).map(e => ({
+            guilds: _,
+            disabled: f = !1
+        } = e, E = _.filter(e => s.has(e.permissions, l.Permissions.MANAGE_GUILD)).map(e => ({
             value: e.id,
             label: e.name
         }));
@@ -42,7 +42,7 @@ function(e, t, n) {
                 placeholder: u.default.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
                 options: E,
                 select: c,
-                isDisabled: _,
+                isDisabled: f,
                 isSelected: e => e === n,
                 serialize: e => e
             }), (0, i.jsx)(a.Text, {

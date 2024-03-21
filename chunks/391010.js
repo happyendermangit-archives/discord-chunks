@@ -41,8 +41,8 @@ function(e, t, n) {
         u = n("449918"),
         d = n("587974"),
         c = n("49111"),
-        f = n("52904"),
-        _ = n("143820");
+        _ = n("52904"),
+        f = n("143820");
     let E = {
         tension: 600,
         friction: 70
@@ -71,11 +71,11 @@ function(e, t, n) {
     }
 
     function g(e, t) {
-        return t === f.StatusBackdropColors.WHITE && e === c.StatusTypes.IDLE ? f.StatusBackdropOpacity.HIGH : f.StatusBackdropOpacity.LOW
+        return t === _.StatusBackdropColors.WHITE && e === c.StatusTypes.IDLE ? _.StatusBackdropOpacity.HIGH : _.StatusBackdropOpacity.LOW
     }
 
     function m(e) {
-        return (0, l.isThemeDark)(e) ? f.StatusBackdropColors.BLACK : f.StatusBackdropColors.WHITE
+        return (0, l.isThemeDark)(e) ? _.StatusBackdropColors.BLACK : _.StatusBackdropColors.WHITE
     }
 
     function p(e, t, n, i) {
@@ -100,7 +100,7 @@ function(e, t, n) {
             bgY: .25 * t + o,
             bgX: 0,
             bgHeight: t,
-            bgWidth: t * f.TYPING_WIDTH_RATIO,
+            bgWidth: t * _.TYPING_WIDTH_RATIO,
             cutoutX: .5 * t + l,
             cutoutY: .75 * t + o,
             cutoutWidth: 0,
@@ -115,10 +115,10 @@ function(e, t, n) {
         switch (n) {
             case c.StatusTypes.ONLINE:
                 if (i) return {
-                    bgRadius: t * f.MOBILE_HEIGHT_RATIO * f.MOBILE_ICON_RADIUS,
+                    bgRadius: t * _.MOBILE_HEIGHT_RATIO * _.MOBILE_ICON_RADIUS,
                     bgY: 0,
                     bgX: l,
-                    bgHeight: t * f.MOBILE_HEIGHT_RATIO,
+                    bgHeight: t * _.MOBILE_HEIGHT_RATIO,
                     bgWidth: t,
                     cutoutX: .125 * t + l,
                     cutoutY: .25 * t,
@@ -165,8 +165,8 @@ function(e, t, n) {
             bgHeight: u,
             bgWidth: d,
             cutoutX: c,
-            cutoutY: f,
-            cutoutWidth: _,
+            cutoutY: _,
+            cutoutWidth: f,
             cutoutHeight: E,
             cutoutRadius: h,
             polygonScale: g,
@@ -187,8 +187,8 @@ function(e, t, n) {
                 fill: "white"
             }), (0, i.jsx)(o.animated.rect, {
                 x: c,
-                y: f,
-                width: _,
+                y: _,
+                width: f,
                 height: E,
                 rx: h,
                 ry: h,
@@ -229,12 +229,12 @@ function(e, t, n) {
         }] = (0, o.useSpring)({
             config: E,
             fill: I
-        }, [I]), C = Math.ceil(r * f.MOBILE_HEIGHT_RATIO);
+        }, [I]), C = Math.ceil(r * _.MOBILE_HEIGHT_RATIO);
         return (0, i.jsxs)("svg", {
             width: r,
             height: C,
             viewBox: "0 0 ".concat(r, " ").concat(C),
-            className: a(_.mask, u),
+            className: a(f.mask, u),
             style: d,
             children: [T(S, r, g), (0, i.jsx)(o.animated.rect, {
                 x: 0,
@@ -272,9 +272,9 @@ function(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         return t === c.StatusTypes.ONLINE && n && !i ? {
             width: e,
-            height: e * f.MOBILE_HEIGHT_RATIO
+            height: e * _.MOBILE_HEIGHT_RATIO
         } : {
-            width: i ? e * f.TYPING_WIDTH_RATIO : e,
+            width: i ? e * _.TYPING_WIDTH_RATIO : e,
             height: e
         }
     }
@@ -287,17 +287,17 @@ function(e, t, n) {
             className: r,
             style: o,
             color: l
-        } = e, u = t === c.StatusTypes.ONLINE && n, f = h(t, l);
+        } = e, u = t === c.StatusTypes.ONLINE && n, _ = h(t, l);
         return (0, i.jsx)(d.default, {
             mask: A(t, u),
-            className: a(_.mask, r),
+            className: a(f.mask, r),
             style: o,
             ...C(s, t, u),
             children: (0, i.jsx)("div", {
                 style: {
-                    backgroundColor: f
+                    backgroundColor: _
                 },
-                className: _.status
+                className: f.status
             })
         })
     }

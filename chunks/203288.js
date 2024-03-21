@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("808388"),
         d = n("828674"),
         c = n("866595"),
-        f = n("38654"),
-        _ = n("42203"),
+        _ = n("38654"),
+        f = n("42203"),
         E = n("26989"),
         h = n("305961"),
         g = n("697218"),
@@ -40,7 +40,7 @@ function(e, t, n) {
 
     function T(e, t) {
         if (!t.hasFeature(m.GuildFeatures.CREATOR_MONETIZABLE) && !t.hasFeature(m.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
-        let n = f.default.isViewingServerShop(t.id);
+        let n = _.default.isViewingServerShop(t.id);
         for (let i of Object.keys(e.permissionOverwrites)) {
             let s = h.default.getRole(t.id, i);
             if (!v({
@@ -52,7 +52,7 @@ function(e, t, n) {
             if ((0, c.isChannelAccessGrantedBy)(e, r)) return !0
         }
         let s = h.default.getRole(t.id, t.getEveryoneRoleId()),
-            r = null != s && !i.default.has(s.permissions, m.Permissions.VIEW_CHANNEL),
+            r = null != s && !i.has(s.permissions, m.Permissions.VIEW_CHANNEL),
             a = (0, c.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
         if (r && !a) {
             for (let e of Object.values(h.default.getRoles(t.id)))
@@ -68,7 +68,7 @@ function(e, t, n) {
     function I(e, t) {
         let n = p[e];
         if (null == n) return !1;
-        let i = _.default.getChannel(t);
+        let i = f.default.getChannel(t);
         if (null == i) return !1;
         let s = h.default.getGuild(i.getGuildId());
         if (null == s) return !1;
@@ -103,7 +103,7 @@ function(e, t, n) {
     }
     class R extends s.default.Store {
         initialize() {
-            this.waitFor(h.default, _.default, f.default), l.GuildRoleSubscriptionUsersExperiment.subscribe({
+            this.waitFor(h.default, f.default, _.default), l.GuildRoleSubscriptionUsersExperiment.subscribe({
                 location: "1"
             }, () => A())
         }
@@ -115,7 +115,7 @@ function(e, t, n) {
                 if (null == t) return;
                 let n = p[e] = new Set;
                 if (!t.hasFeature(m.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) || !(0, u.isGuildEligibleForRoleSubscriptions)(e) && !(0, a.isExpeditedMonetizationOnboardingGuild)(t)) return;
-                let i = _.default.getMutableGuildChannelsForGuild(e);
+                let i = f.default.getMutableGuildChannelsForGuild(e);
                 for (let e in i) {
                     let s = i[e];
                     T(s, t) && n.add(s.id)

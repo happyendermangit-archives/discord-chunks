@@ -18,8 +18,8 @@ function(e, t, n) {
             let {
                 children: d,
                 className: c,
-                dir: f = "ltr",
-                orientation: _ = "vertical",
+                dir: _ = "ltr",
+                orientation: f = "vertical",
                 paddingFix: E = !0,
                 fade: h = !1,
                 onScroll: g,
@@ -27,8 +27,8 @@ function(e, t, n) {
                 ...p
             } = r, S = s.useRef(null), v = (0, l.usePaddingFixes)({
                 paddingFix: E,
-                orientation: _,
-                dir: f,
+                orientation: f,
+                dir: _,
                 className: c,
                 scrollerRef: S,
                 specs: n
@@ -41,8 +41,8 @@ function(e, t, n) {
                     [e]: !0,
                     [t]: h
                 }),
-                style: (0, l.getMergedOrientationStyles)(m, _),
-                dir: f,
+                style: (0, l.getMergedOrientationStyles)(m, f),
+                dir: _,
                 ...p,
                 children: (0, i.jsxs)(o.FocusRingScope, {
                     containerRef: S,

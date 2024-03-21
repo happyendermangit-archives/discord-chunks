@@ -92,7 +92,7 @@ function(e, t, n) {
             return ec
         },
         isSubscriptionStatusFailedPayment: function() {
-            return e_
+            return ef
         },
         getBillingReviewSubheader: function() {
             return eh
@@ -152,8 +152,8 @@ function(e, t, n) {
         d = n.n(u);
     n("446674");
     var c = n("605250"),
-        f = n("432155"),
-        _ = n("669073"),
+        _ = n("432155"),
+        f = n("669073"),
         E = n("797647"),
         h = n("697218"),
         g = n("160299"),
@@ -517,23 +517,23 @@ function(e, t, n) {
             includePremiumGuilds: l,
             hasDiscountApplied: u,
             activeDiscountInfo: d
-        } = e, c = y.default.formatPriceString(y.default.getDefaultPrice(D.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D.SubscriptionIntervalTypes.MONTH), f = ef(r) || null == r.paymentSourceId && !r.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), _ = null != o, E = r.status === R.SubscriptionStatusTypes.UNPAID && null !== r.latestInvoice && (null === (n = r.latestInvoice) || void 0 === n ? void 0 : n.status) === R.InvoiceStatusTypes.OPEN, g = f ? R.SubscriptionStatusTypes.CANCELED : E ? R.SubscriptionStatusTypes.UNPAID : r.status, m = D.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (l ? et(r.additionalPlans) : 0);
+        } = e, c = y.default.formatPriceString(y.default.getDefaultPrice(D.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D.SubscriptionIntervalTypes.MONTH), _ = e_(r) || null == r.paymentSourceId && !r.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), f = null != o, E = r.status === R.SubscriptionStatusTypes.UNPAID && null !== r.latestInvoice && (null === (n = r.latestInvoice) || void 0 === n ? void 0 : n.status) === R.InvoiceStatusTypes.OPEN, g = _ ? R.SubscriptionStatusTypes.CANCELED : E ? R.SubscriptionStatusTypes.UNPAID : r.status, m = D.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (l ? et(r.additionalPlans) : 0);
         switch (a) {
             case D.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
             case D.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
                 switch (g) {
                     case R.SubscriptionStatusTypes.CANCELED:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({
                             price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE;
                     case R.SubscriptionStatusTypes.ACCOUNT_HOLD:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({
                             price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE.format();
                     case R.SubscriptionStatusTypes.UNPAID:
                         return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAYMENT.format();
                     case R.SubscriptionStatusTypes.PAUSE_PENDING:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE.format({
                             price: o,
                             pauseDate: r.currentPeriodEnd
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE.format({
@@ -544,7 +544,7 @@ function(e, t, n) {
                             resumeDate: r.pauseEndsAt
                         });
                     default:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({
                             price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_NO_PRICE
                 }
@@ -552,17 +552,17 @@ function(e, t, n) {
             case D.SubscriptionPlans.PREMIUM_YEAR_TIER_1:
                 switch (g) {
                     case R.SubscriptionStatusTypes.CANCELED:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({
                             price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE;
                     case R.SubscriptionStatusTypes.ACCOUNT_HOLD:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({
                             price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE.format();
                     case R.SubscriptionStatusTypes.UNPAID:
                         return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAYMENT.format();
                     case R.SubscriptionStatusTypes.CANCELED:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE.format({
                             price: o,
                             pauseDate: r.currentPeriodEnd
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE.format({
@@ -573,7 +573,7 @@ function(e, t, n) {
                             resumeDate: r.pauseEndsAt
                         });
                     default:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({
                             price: o
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_NO_PRICE
                 }
@@ -583,14 +583,14 @@ function(e, t, n) {
             case D.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2:
                 switch (g) {
                     case R.SubscriptionStatusTypes.CANCELED:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
                             price: o,
                             num: m
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE.format({
                             num: m
                         });
                     case R.SubscriptionStatusTypes.ACCOUNT_HOLD:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
                             price: o,
                             num: m
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE.format({
@@ -601,7 +601,7 @@ function(e, t, n) {
                             num: m
                         });
                     case R.SubscriptionStatusTypes.PAUSE_PENDING:
-                        return _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE.format({
+                        return f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE.format({
                             price: o,
                             num: m,
                             pauseDate: r.currentPeriodEnd
@@ -618,7 +618,7 @@ function(e, t, n) {
                             percent: null !== (i = null == d ? void 0 : d.percentage) && void 0 !== i ? i : D.DISCOUNT_PERCENTAGE_FALLBACK,
                             regularPrice: c,
                             numMonths: null !== (s = null == d ? void 0 : d.duration) && void 0 !== s ? s : D.DISCOUNT_DURATION_FALLBACK
-                        }) : _ ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
+                        }) : f ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
                             price: o,
                             num: m
                         }) : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_NO_PRICE.format({
@@ -695,7 +695,7 @@ function(e, t, n) {
         } = e;
         if (null == t || !n) return [];
         let u = void 0 !== o && t === D.SubscriptionPlanInfo[o].skuId ? o : void 0;
-        void 0 === u && l && !r && (u = D.PREMIUM_SKU_TO_MONTHLY_PLAN[t]), a && !r && (void 0 === o || l && D.PREMIUM_MONTHLY_PLANS.has(o)) && _.TrialRedemptionDefaultPlanExperiment.trackExposure({
+        void 0 === u && l && !r && (u = D.PREMIUM_SKU_TO_MONTHLY_PLAN[t]), a && !r && (void 0 === o || l && D.PREMIUM_MONTHLY_PLANS.has(o)) && f.TrialRedemptionDefaultPlanExperiment.trackExposure({
             location: "de805e_1"
         });
         let d = [];
@@ -825,8 +825,8 @@ function(e, t, n) {
             null != e && (c = e.amount)
         }
         i = null != i ? i : (0, N.formatPrice)(c, t.currency);
-        let f = el(t);
-        return f ? t.isPurchasedViaGoogle ? L.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION_NO_PRICE.format({
+        let _ = el(t);
+        return _ ? t.isPurchasedViaGoogle ? L.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION_NO_PRICE.format({
             quantity: u
         }) : L.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION.format({
             quantity: u,
@@ -858,7 +858,7 @@ function(e, t, n) {
         return (0, N.formatRate)(i, e.interval, e.intervalCount)
     }
 
-    function ef(e) {
+    function e_(e) {
         let {
             status: t,
             renewalMutations: n
@@ -866,7 +866,7 @@ function(e, t, n) {
         return t === R.SubscriptionStatusTypes.CANCELED || null != n && (0, E.isNoneSubscription)(n.planId) && !e.isPurchasedExternally
     }
 
-    function e_(e) {
+    function ef(e) {
         return e === R.SubscriptionStatusTypes.PAST_DUE || e === R.SubscriptionStatusTypes.ACCOUNT_HOLD || e === R.SubscriptionStatusTypes.BILLING_RETRY
     }
 
@@ -1068,7 +1068,7 @@ function(e, t, n) {
     }
 
     function eT(e, t) {
-        return (0, C.isPremium)(e) || e_(null == t ? void 0 : t.status)
+        return (0, C.isPremium)(e) || ef(null == t ? void 0 : t.status)
     }
 
     function eI(e, t) {
@@ -1315,7 +1315,7 @@ function(e, t, n) {
             });
             return (null == i || (0, E.isNoneSubscription)(i.subscriptionPlanId)) && (n = R.SubscriptionStatusTypes.CANCELED), n
         },
-        isBaseSubscriptionCanceled: ef,
+        isBaseSubscriptionCanceled: e_,
         getPremiumGuildIntervalPrice: eE,
         hasAccountCredit: function(e) {
             return null != e && 0 !== e.size && Array.from(e).some(e => {
@@ -1359,76 +1359,76 @@ function(e, t, n) {
         },
         castPremiumSubscriptionAsSkuId: eL,
         canUseAnimatedEmojis: function(e) {
-            return (0, f.canUserUse)(f.ANIMATED_EMOJIS, e)
+            return (0, _.canUserUse)(_.ANIMATED_EMOJIS, e)
         },
         canUseEmojisEverywhere: function(e) {
-            return (0, f.canUserUse)(f.EMOJIS_EVERYWHERE, e)
+            return (0, _.canUserUse)(_.EMOJIS_EVERYWHERE, e)
         },
         canUseSoundboardEverywhere: function(e) {
-            return (0, f.canUserUse)(f.SOUNDBOARD_EVERYWHERE, e)
+            return (0, _.canUserUse)(_.SOUNDBOARD_EVERYWHERE, e)
         },
         canUseCustomCallSounds: function(e) {
-            return (0, f.canUserUse)(f.CUSTOM_CALL_SOUNDS, e)
+            return (0, _.canUserUse)(_.CUSTOM_CALL_SOUNDS, e)
         },
         canUploadLargeFiles: function(e) {
-            return (0, f.canUserUse)(f.UPLOAD_LARGE_FILES, e)
+            return (0, _.canUserUse)(_.UPLOAD_LARGE_FILES, e)
         },
         canUseBadges: function(e) {
-            return (0, f.canUserUse)(f.PROFILE_BADGES, e)
+            return (0, _.canUserUse)(_.PROFILE_BADGES, e)
         },
         canUseHighVideoUploadQuality: function(e) {
-            return (0, f.canUserUse)(f.INCREASED_VIDEO_UPLOAD_QUALITY, e)
+            return (0, _.canUserUse)(_.INCREASED_VIDEO_UPLOAD_QUALITY, e)
         },
         canEditDiscriminator: function(e) {
-            return (0, f.canUserUse)(f.CUSTOM_DISCRIMINATOR, e)
+            return (0, _.canUserUse)(_.CUSTOM_DISCRIMINATOR, e)
         },
         hasBoostDiscount: function(e) {
-            return (0, f.canUserUse)(f.BOOST_DISCOUNT, e)
+            return (0, _.canUserUse)(_.BOOST_DISCOUNT, e)
         },
         canUseAnimatedAvatar: function(e) {
-            return (0, f.canUserUse)(f.ANIMATED_AVATAR, e)
+            return (0, _.canUserUse)(_.ANIMATED_AVATAR, e)
         },
         canUseFancyVoiceChannelReactions: function(e) {
-            return (0, f.canUserUse)(f.FANCY_VOICE_CHANNEL_REACTIONS, e)
+            return (0, _.canUserUse)(_.FANCY_VOICE_CHANNEL_REACTIONS, e)
         },
         canInstallPremiumApplications: function(e) {
-            return (0, f.canUserUse)(f.INSTALL_PREMIUM_APPLICATIONS, e)
+            return (0, _.canUserUse)(_.INSTALL_PREMIUM_APPLICATIONS, e)
         },
         canUseIncreasedMessageLength: function(e) {
-            return (0, f.canUserUse)(f.INCREASED_MESSAGE_LENGTH, e)
+            return (0, _.canUserUse)(_.INCREASED_MESSAGE_LENGTH, e)
         },
         canUseIncreasedGuildCap: function(e) {
-            return (0, f.canUserUse)(f.INCREASED_GUILD_LIMIT, e)
+            return (0, _.canUserUse)(_.INCREASED_GUILD_LIMIT, e)
         },
         canRedeemPremiumPerks: function(e) {
-            return (0, f.canUserUse)(f.REDEEM_PREMIUM_PERKS, e)
+            return (0, _.canUserUse)(_.REDEEM_PREMIUM_PERKS, e)
         },
         canUsePremiumProfileCustomization: function(e) {
-            return (0, f.canUserUse)(f.PROFILE_PREMIUM_FEATURES, e)
+            return (0, _.canUserUse)(_.PROFILE_PREMIUM_FEATURES, e)
         },
         canUsePremiumAppIcons: function(e) {
-            return (0, f.canUserUse)(f.APP_ICONS, e)
+            return (0, _.canUserUse)(_.APP_ICONS, e)
         },
         canUsePremiumGuildMemberProfile: function(e) {
-            return (0, f.canUserUse)(f.PREMIUM_GUILD_MEMBER_PROFILE, e)
+            return (0, _.canUserUse)(_.PREMIUM_GUILD_MEMBER_PROFILE, e)
         },
         canUseClientThemes: function(e) {
-            return (0, f.canUserUse)(f.CLIENT_THEMES, e)
+            return (0, _.canUserUse)(_.CLIENT_THEMES, e)
         },
         canStreamQuality: function(e, t) {
-            return "high" === e ? (0, f.canUserUse)(f.STREAM_HIGH_QUALITY, t) : "mid" === e && (0, f.canUserUse)(f.STREAM_MID_QUALITY, t)
+            return "high" === e ? (0, _.canUserUse)(_.STREAM_HIGH_QUALITY, t) : "mid" === e && (0, _.canUserUse)(_.STREAM_MID_QUALITY, t)
         },
         hasFreeBoosts: function(e) {
-            return (0, f.canUserUse)(f.FREE_BOOSTS, e)
+            return (0, _.canUserUse)(_.FREE_BOOSTS, e)
         },
         canUseCustomStickersEverywhere: function(e) {
-            return (0, f.canUserUse)(f.STICKERS_EVERYWHERE, e)
+            return (0, _.canUserUse)(_.STICKERS_EVERYWHERE, e)
         },
         canUseCustomBackgrounds: function(e) {
-            return (0, f.canUserUse)(f.VIDEO_FILTER_ASSETS, e)
+            return (0, _.canUserUse)(_.VIDEO_FILTER_ASSETS, e)
         },
         canUseCollectibles: function(e) {
-            return (0, f.canUserUse)(f.COLLECTIBLES, e)
+            return (0, _.canUserUse)(_.COLLECTIBLES, e)
         },
         formatPriceString: function(e, t) {
             let n = (0, N.formatPrice)(e.amount, e.currency),

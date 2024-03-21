@@ -20,12 +20,12 @@ function(e, t, n) {
         c = n("509063");
     (i = s || (s = {})).SQUIRCLE = "svg-mask-squircle", i.HEADER_BAR_BADGE = "svg-mask-header-bar-badge", i.VOICE_USER_SUMMARY_ITEM = "svg-mask-voice-user-summary-item", i.VERTICAL_FADE = "svg-mask-vertical-fade", i.PANEL_BUTTON = "svg-mask-panel-button", i.CHANNEL_CALL_CONTROL_BUTTON = "svg-mask-channel-call-control-button", i.CHANNEL_CALL_CONTROL_BUTTON_BADGE_16 = "svg-mask-channel-call-control-button-badge-16", i.CHANNEL_CALL_CONTROL_BUTTON_BADGE_22 = "svg-mask-channel-call-control-button-badge-22", i.CHANNEL_CALL_CONTROL_BUTTON_BADGE_29 = "svg-mask-channel-call-control-button-badge-29", i.AVATAR_DEFAULT = "svg-mask-avatar-default", i.AVATAR_STATUS_ROUND_16 = "svg-mask-avatar-status-round-16", i.AVATAR_STATUS_ROUND_20 = "svg-mask-avatar-status-round-20", i.AVATAR_STATUS_ROUND_24 = "svg-mask-avatar-status-round-24", i.AVATAR_STATUS_ROUND_32 = "svg-mask-avatar-status-round-32", i.AVATAR_STATUS_ROUND_40 = "svg-mask-avatar-status-round-40", i.AVATAR_STATUS_ROUND_48 = "svg-mask-avatar-status-round-48", i.AVATAR_STATUS_ROUND_56 = "svg-mask-avatar-status-round-56", i.AVATAR_STATUS_ROUND_80 = "svg-mask-avatar-status-round-80", i.AVATAR_STATUS_ROUND_100 = "svg-mask-avatar-status-round-100", i.AVATAR_STATUS_ROUND_120 = "svg-mask-avatar-status-round-120", i.AVATAR_STATUS_MOBILE_16 = "svg-mask-avatar-status-mobile-16", i.AVATAR_STATUS_MOBILE_20 = "svg-mask-avatar-status-mobile-20", i.AVATAR_STATUS_MOBILE_24 = "svg-mask-avatar-status-mobile-24", i.AVATAR_STATUS_MOBILE_32 = "svg-mask-avatar-status-mobile-32", i.AVATAR_STATUS_MOBILE_40 = "svg-mask-avatar-status-mobile-40", i.AVATAR_STATUS_MOBILE_48 = "svg-mask-avatar-status-mobile-48", i.AVATAR_STATUS_MOBILE_56 = "svg-mask-avatar-status-mobile-56", i.AVATAR_STATUS_MOBILE_80 = "svg-mask-avatar-status-mobile-80", i.AVATAR_STATUS_MOBILE_100 = "svg-mask-avatar-status-mobile-100", i.AVATAR_STATUS_MOBILE_120 = "svg-mask-avatar-status-mobile-120", i.AVATAR_STATUS_TYPING_16 = "svg-mask-avatar-status-typing-16", i.AVATAR_STATUS_TYPING_20 = "svg-mask-avatar-status-typing-20", i.AVATAR_STATUS_TYPING_24 = "svg-mask-avatar-status-typing-24", i.AVATAR_STATUS_TYPING_32 = "svg-mask-avatar-status-typing-32", i.AVATAR_STATUS_TYPING_40 = "svg-mask-avatar-status-typing-40", i.AVATAR_STATUS_TYPING_48 = "svg-mask-avatar-status-typing-48", i.AVATAR_STATUS_TYPING_56 = "svg-mask-avatar-status-typing-56", i.AVATAR_STATUS_TYPING_80 = "svg-mask-avatar-status-typing-80", i.AVATAR_STATUS_TYPING_100 = "svg-mask-avatar-status-typing-100", i.AVATAR_STATUS_TYPING_120 = "svg-mask-avatar-status-typing-120", i.AVATAR_DECORATION_STATUS_ROUND_16 = "svg-mask-avatar-decoration-status-round-16", i.AVATAR_DECORATION_STATUS_ROUND_20 = "svg-mask-avatar-decoration-status-round-20", i.AVATAR_DECORATION_STATUS_ROUND_24 = "svg-mask-avatar-decoration-status-round-24", i.AVATAR_DECORATION_STATUS_ROUND_32 = "svg-mask-avatar-decoration-status-round-32", i.AVATAR_DECORATION_STATUS_ROUND_40 = "svg-mask-avatar-decoration-status-round-40", i.AVATAR_DECORATION_STATUS_ROUND_48 = "svg-mask-avatar-decoration-status-round-48", i.AVATAR_DECORATION_STATUS_ROUND_56 = "svg-mask-avatar-decoration-status-round-56", i.AVATAR_DECORATION_STATUS_ROUND_80 = "svg-mask-avatar-decoration-status-round-80", i.AVATAR_DECORATION_STATUS_ROUND_120 = "svg-mask-avatar-decoration-status-round-120", i.AVATAR_DECORATION_STATUS_MOBILE_16 = "svg-mask-avatar-decoration-status-mobile-16", i.AVATAR_DECORATION_STATUS_MOBILE_20 = "svg-mask-avatar-decoration-status-mobile-20", i.AVATAR_DECORATION_STATUS_MOBILE_24 = "svg-mask-avatar-decoration-status-mobile-24", i.AVATAR_DECORATION_STATUS_MOBILE_32 = "svg-mask-avatar-decoration-status-mobile-32", i.AVATAR_DECORATION_STATUS_MOBILE_40 = "svg-mask-avatar-decoration-status-mobile-40", i.AVATAR_DECORATION_STATUS_MOBILE_48 = "svg-mask-avatar-decoration-status-mobile-48", i.AVATAR_DECORATION_STATUS_MOBILE_56 = "svg-mask-avatar-decoration-status-mobile-56", i.AVATAR_DECORATION_STATUS_MOBILE_80 = "svg-mask-avatar-decoration-status-mobile-80", i.AVATAR_DECORATION_STATUS_MOBILE_100 = "svg-mask-avatar-decoration-status-mobile-100", i.AVATAR_DECORATION_STATUS_MOBILE_120 = "svg-mask-avatar-decoration-status-mobile-120", i.AVATAR_DECORATION_STATUS_TYPING_16 = "svg-mask-avatar-decoration-status-typing-16", i.AVATAR_DECORATION_STATUS_TYPING_20 = "svg-mask-avatar-decoration-status-typing-20", i.AVATAR_DECORATION_STATUS_TYPING_24 = "svg-mask-avatar-decoration-status-typing-24", i.AVATAR_DECORATION_STATUS_TYPING_32 = "svg-mask-avatar-decoration-status-typing-32", i.AVATAR_DECORATION_STATUS_TYPING_40 = "svg-mask-avatar-decoration-status-typing-40", i.AVATAR_DECORATION_STATUS_TYPING_48 = "svg-mask-avatar-decoration-status-typing-48", i.AVATAR_DECORATION_STATUS_TYPING_56 = "svg-mask-avatar-decoration-status-typing-56", i.AVATAR_DECORATION_STATUS_TYPING_80 = "svg-mask-avatar-decoration-status-typing-80", i.AVATAR_DECORATION_STATUS_TYPING_100 = "svg-mask-avatar-decoration-status-typing-100", i.AVATAR_DECORATION_STATUS_TYPING_120 = "svg-mask-avatar-decoration-status-typing-120", i.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80 = "svg-mask-avatar-decoration-profile-status-square-80", i.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80 = "svg-mask-avatar-decoration-profile-status-mobile-square-80", i.AVATAR_VOICE_CALL_80 = "svg-mask-avatar-voice-call-80", i.AVATAR_CALL_ICON = "svg-mask-avatar-call-icon", i.AVATAR_CALL_ICON_32 = "svg-mask-avatar-call-icon-32", i.STATUS_ONLINE_MOBILE = "svg-mask-status-online-mobile", i.STATUS_ONLINE = "svg-mask-status-online", i.STATUS_IDLE = "svg-mask-status-idle", i.STATUS_DND = "svg-mask-status-dnd", i.STATUS_OFFLINE = "svg-mask-status-offline", i.STATUS_STREAMING = "svg-mask-status-streaming", i.STATUS_TYPING = "svg-mask-status-typing", i.STATUS_SCREENSHARE = "svg-mask-status-screenshare", i.STICKER_ROUNDED_RECT = "svg-mask-sticker-rounded-rect", i.STICKER_SHOP_NOTIFICATION = "svg-mask-sticker-shop-notification", i.GUILD_ICON_WITH_CHANNEL_TYPE = "svg-mask-guild-icon-with-channel-type", i.CHAT_INPUT_BUTTON_NOTIFICATION = "svg-mask-chat-input-button-notification", i.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI = "svg-mask-autocomplete-emoji-upsell-emoji", i.EVENT_TICKET = "svg-mask-event-ticket";
 
-    function f(e, t) {
+    function _(e, t) {
         let n = null != t ? t : d.DECORATION_TO_AVATAR_RATIO;
         return (e - .5) / n + .5
     }
 
-    function _(e, t, n) {
+    function f(e, t, n) {
         let i = (0, u.getAvatarSpecs)(t),
             s = 32 === i.size,
             a = s ? 8 : 0,
@@ -110,7 +110,7 @@ function(e, t, n) {
         let n = (0, u.getAvatarSpecs)(t),
             i = n.status / 2,
             s = (i + n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO,
-            a = f((n.size - i - n.offset) / n.size);
+            a = _((n.size - i - n.offset) / n.size);
         return (0, r.jsxs)("mask", {
             id: e,
             maskContentUnits: "objectBoundingBox",
@@ -159,11 +159,11 @@ function(e, t, n) {
     function S(e, t) {
         let n = (0, u.getAvatarSpecs)(t),
             i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
-            s = f((n.size - n.status - n.stroke - n.offset) / n.size),
-            a = f((n.size - n.status - i - n.offset) / n.size),
+            s = _((n.size - n.status - n.stroke - n.offset) / n.size),
+            a = _((n.size - n.status - i - n.offset) / n.size),
             o = (2.5 * n.status + 2 * n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO,
             l = (n.status + 2 * n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO,
-            c = f(l / 2 / n.size);
+            c = _(l / 2 / n.size);
         return (0, r.jsxs)("mask", {
             id: e,
             maskContentUnits: "objectBoundingBox",
@@ -211,8 +211,8 @@ function(e, t, n) {
 
     function T(e, t) {
         let n = (0, u.getAvatarSpecs)(t),
-            i = f((n.size - n.status - n.stroke - n.offset) / n.size),
-            s = f((n.size - n.status * u.MOBILE_HEIGHT_RATIO - n.stroke - n.offset) / n.size),
+            i = _((n.size - n.status - n.stroke - n.offset) / n.size),
+            s = _((n.size - n.status * u.MOBILE_HEIGHT_RATIO - n.stroke - n.offset) / n.size),
             a = (n.status + 2 * n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO,
             o = (n.status * u.MOBILE_HEIGHT_RATIO + 2 * n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO;
         return (0, r.jsxs)("mask", {
@@ -247,8 +247,8 @@ function(e, t, n) {
             children: o,
             className: u,
             style: d,
-            "aria-label": f,
-            ..._
+            "aria-label": _,
+            ...f
         } = e;
         return (0, r.jsx)("svg", {
             width: n + s,
@@ -256,8 +256,8 @@ function(e, t, n) {
             className: l(c.svg, u),
             viewBox: "0 0 ".concat(n + s, " ").concat(i + a),
             style: d,
-            "aria-label": f,
-            ..._,
+            "aria-label": _,
+            ...f,
             children: (0, r.jsx)("foreignObject", {
                 x: 0,
                 y: 0,
@@ -387,7 +387,7 @@ function(e, t, n) {
                     s = n.size * d.DECORATION_TO_AVATAR_RATIO,
                     a = s / n.size,
                     o = (i + n.stroke) / n.size / a,
-                    l = f((n.size - i - n.offset) / n.size, a);
+                    l = _((n.size - i - n.offset) / n.size, a);
                 return (0, r.jsxs)("mask", {
                     id: e,
                     maskContentUnits: "objectBoundingBox",
@@ -409,8 +409,8 @@ function(e, t, n) {
                 let n = (0, u.getAvatarSpecs)(t),
                     i = n.size * d.DECORATION_TO_AVATAR_RATIO,
                     s = i / n.size,
-                    a = f((n.size - n.status - n.stroke - n.offset) / n.size, s),
-                    o = f((n.size - n.status * u.MOBILE_HEIGHT_RATIO - n.stroke - n.offset) / n.size, s),
+                    a = _((n.size - n.status - n.stroke - n.offset) / n.size, s),
+                    o = _((n.size - n.status * u.MOBILE_HEIGHT_RATIO - n.stroke - n.offset) / n.size, s),
                     l = (n.status + 2 * n.stroke) / n.size / s,
                     c = (n.status * u.MOBILE_HEIGHT_RATIO + 2 * n.stroke) / n.size / s;
                 return (0, r.jsxs)("mask", {
@@ -562,7 +562,7 @@ function(e, t, n) {
                     cy: .85,
                     r: .2
                 })]
-            })), _("svg-mask-avatar-call-icon", u.AvatarSizes.SIZE_56, 1), _("svg-mask-avatar-call-icon-32", u.AvatarSizes.SIZE_32, .5), (y = "svg-mask-sticker-rounded-rect", (0, r.jsx)("mask", {
+            })), f("svg-mask-avatar-call-icon", u.AvatarSizes.SIZE_56, 1), f("svg-mask-avatar-call-icon-32", u.AvatarSizes.SIZE_32, .5), (y = "svg-mask-sticker-rounded-rect", (0, r.jsx)("mask", {
                 id: y,
                 maskContentUnits: "objectBoundingBox",
                 viewBox: "0 0 1 1",

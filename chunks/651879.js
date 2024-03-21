@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("305961"),
         d = n("697218"),
         c = n("718517"),
-        f = n("158998"),
-        _ = n("782340");
+        _ = n("158998"),
+        f = n("782340");
     let E = new o({
         maxAge: 1 * c.default.Millis.MINUTE
     });
@@ -48,8 +48,8 @@ function(e, t, n) {
     var m = {
         getGuildNameSuggestion: function(e) {
             let t = d.default.getCurrentUser(),
-                n = f.getName(t);
-            return null == n || 0 === n.length ? "" : _.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
+                n = _.getName(t);
+            return null == n || 0 === n.length ? "" : f.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
                 username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n
             })
         },

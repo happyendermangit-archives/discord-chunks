@@ -5,7 +5,7 @@ function(e, t, n) {
             return c
         },
         DeclarativeConfirmModal: function() {
-            return f
+            return _
         }
     });
     var i = n("37983"),
@@ -21,8 +21,8 @@ function(e, t, n) {
         let t, n, {
                 header: r,
                 children: c,
-                confirmText: f,
-                cancelText: _,
+                confirmText: _,
+                cancelText: f,
                 className: E,
                 onConfirm: h,
                 onCancel: g,
@@ -40,7 +40,7 @@ function(e, t, n) {
                 var e;
                 return null === (e = C.current) || void 0 === e ? void 0 : e.focus()
             }, 0)
-        }, [A]), s.useLayoutEffect(() => () => null == p ? void 0 : p()), null != _ && (t = (0, i.jsx)(o.Button, {
+        }, [A]), s.useLayoutEffect(() => () => null == p ? void 0 : p()), null != f && (t = (0, i.jsx)(o.Button, {
             type: "button",
             look: o.Button.Looks.LINK,
             color: o.Button.Colors.PRIMARY,
@@ -49,8 +49,8 @@ function(e, t, n) {
                 null == g || g(), m()
             },
             autoFocus: A,
-            children: _
-        })), null != f && (n = (0, i.jsx)(o.Button, {
+            children: f
+        })), null != _ && (n = (0, i.jsx)(o.Button, {
             buttonRef: C,
             type: "submit",
             color: I,
@@ -63,7 +63,7 @@ function(e, t, n) {
                 }
             },
             autoFocus: !A,
-            children: f
+            children: _
         })), (0, i.jsxs)(u.ModalRoot, {
             className: E,
             transitionState: v,
@@ -82,7 +82,7 @@ function(e, t, n) {
         })
     }
 
-    function f(e) {
+    function _(e) {
         return (0, i.jsx)(u.Modal, {
             onCloseRequest: e.dismissable ? e.onCancel : null,
             renderModal: t => (0, i.jsx)(c, {

@@ -14,16 +14,16 @@ function(e, t, n) {
         u = n("18494"),
         d = n("162771"),
         c = n("49111");
-    let f = {},
-        _ = {};
+    let _ = {},
+        f = {};
 
     function E() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default.getChannelId(),
             n = l.default.getChannel(t);
-        if (null != n && null == n.getGuildId() && null != t && (null == f[t] || e)) {
+        if (null != n && null == n.getGuildId() && null != t && (null == _[t] || e)) {
             var i;
-            return f[t] = null !== (i = f[t]) && void 0 !== i ? i : {
+            return _[t] = null !== (i = _[t]) && void 0 !== i ? i : {
                 channelId: t,
                 ringing: []
             }, o.default.dispatch({
@@ -38,27 +38,27 @@ function(e, t, n) {
             this.waitFor(d.default, u.default)
         }
         getCall(e) {
-            return f[e]
+            return _[e]
         }
         getCalls() {
-            return Object.values(f)
+            return Object.values(_)
         }
         getMessageId(e) {
             let t = this.getCall(e);
             return null != t ? t.messageId : null
         }
         isCallActive(e, t) {
-            let n = f[e];
+            let n = _[e];
             return null != n && !n.unavailable && (null != t ? n.messageId === t : null != n.region)
         }
         isCallUnavailable(e) {
-            let t = f[e];
+            let t = _[e];
             return null != t && t.unavailable
         }
         getInternalState() {
             return {
-                calls: f,
-                enqueuedRings: _
+                calls: _,
+                enqueuedRings: f
             }
         }
     }
@@ -68,15 +68,15 @@ function(e, t, n) {
             return E(!0)
         },
         CONNECTION_CLOSED: function() {
-            f = {}, _ = {}
+            _ = {}, f = {}
         },
         OVERLAY_INITIALIZE: function(e) {
             let {
                 callStoreInternalState: t
             } = e;
-            f = {
+            _ = {
                 ...t.calls
-            }, _ = {
+            }, f = {
                 ...t.enqueuedRings
             }
         },
@@ -93,8 +93,8 @@ function(e, t, n) {
             let {
                 channel: t
             } = e;
-            if (null != _[t.id] && delete _[t.id], null == f[t.id]) return !1;
-            delete f[t.id]
+            if (null != f[t.id] && delete f[t.id], null == _[t.id]) return !1;
+            delete _[t.id]
         },
         CALL_CREATE: function(e) {
             let {
@@ -103,16 +103,16 @@ function(e, t, n) {
                 region: i,
                 ringing: s
             } = e;
-            if (f[t] = {
+            if (_[t] = {
                     channelId: t,
                     messageId: n,
                     region: i,
                     ringing: s,
                     unavailable: !1,
                     regionUpdated: !1
-                }, null != _[t]) {
-                let e = _[t];
-                delete _[t], 1 !== e.indexOf("all") && (e = null), a.default.post({
+                }, null != f[t]) {
+                let e = f[t];
+                delete f[t], 1 !== e.indexOf("all") && (e = null), a.default.post({
                     url: c.Endpoints.CALL_RING(t),
                     body: {
                         recipients: e
@@ -127,9 +127,9 @@ function(e, t, n) {
                 messageId: n,
                 region: i,
                 ringing: s
-            } = e, r = f[t], a = null != r && (r.regionUpdated || r.region !== i);
-            f[t] = {
-                ...f[t],
+            } = e, r = _[t], a = null != r && (r.regionUpdated || r.region !== i);
+            _[t] = {
+                ..._[t],
                 messageId: n,
                 region: i,
                 ringing: s,
@@ -140,18 +140,18 @@ function(e, t, n) {
             let {
                 channelId: t,
                 unavailable: n
-            } = e, i = f[t];
-            !0 === n && null != i ? f[t] = {
+            } = e, i = _[t];
+            !0 === n && null != i ? _[t] = {
                 ...i,
                 unavailable: n
-            } : f[t] = {
+            } : _[t] = {
                 channelId: t,
                 ringing: [],
                 messageId: null,
                 region: null,
                 regionUpdated: !1,
                 unavailable: n
-            }, null != _[t] && delete _[t]
+            }, null != f[t] && delete f[t]
         },
         CALL_ENQUEUE_RING: function(e) {
             var t;
@@ -159,13 +159,13 @@ function(e, t, n) {
                 channelId: n,
                 recipients: i
             } = e;
-            _[n] = s.union(null !== (t = _[n]) && void 0 !== t ? t : [], null != i ? i : ["all"])
+            f[n] = s.union(null !== (t = f[n]) && void 0 !== t ? t : [], null != i ? i : ["all"])
         },
         VOICE_CHANNEL_SELECT: function(e) {
             let {
                 channelId: t
             } = e;
-            null == t && (_ = {})
+            null == t && (f = {})
         }
     })
 }

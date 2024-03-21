@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getChannelIdForGuildTransition: function() {
-            return _
+            return f
         },
         transitionToGuild: function() {
             return E
@@ -17,19 +17,19 @@ function(e, t, n) {
         u = n("18494"),
         d = n("393414"),
         c = n("49111"),
-        f = n("724210");
+        _ = n("724210");
 
-    function _(e) {
+    function f(e) {
         var t;
         let n = u.default.getChannelId(e),
             r = null === (t = l.default.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
-        if (n === f.StaticChannelRoute.GUILD_ONBOARDING && !i.default.shouldShowOnboarding(e) || n === f.StaticChannelRoute.GUILD_HOME && !(0, s.canSeeOnboardingHome)(e)) return r;
+        if (n === _.StaticChannelRoute.GUILD_ONBOARDING && !i.default.shouldShowOnboarding(e) || n === _.StaticChannelRoute.GUILD_HOME && !(0, s.canSeeOnboardingHome)(e)) return r;
         let a = o.default.getChannel(n);
         return null == a ? r : n
     }
 
     function E(e, t) {
-        let n = !(0, r.isInMainTabsExperiment)() || (0, a.shouldHandleNewPanelsRoute)(e) ? _(e) : void 0;
+        let n = !(0, r.isInMainTabsExperiment)() || (0, a.shouldHandleNewPanelsRoute)(e) ? f(e) : void 0;
         (0, d.transitionTo)(c.Routes.CHANNEL(e, n), {
             navigationReplace: (0, a.shouldHandleNewPanelsRoute)(e),
             ...t

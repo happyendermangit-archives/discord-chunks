@@ -18,21 +18,21 @@ function(e, t, n) {
         u = n("312016"),
         d = n("449008"),
         c = n("891137"),
-        f = n("76216");
-    let _ = new a({
+        _ = n("76216");
+    let f = new a({
         max: 50
     });
 
     function E(e) {
-        let t = _.get(e);
+        let t = f.get(e);
         if (null != t) return t;
-        let n = (0, f.sanitizeWhitespace)(e),
-            i = (0, f.sanitizeUnicodeConfusables)(n),
+        let n = (0, _.sanitizeWhitespace)(e),
+            i = (0, _.sanitizeUnicodeConfusables)(n),
             s = {
                 whitespaceSanitized: n,
                 fullySanitized: i
             };
-        return _.set(e, s), s
+        return f.set(e, s), s
     }
     let h = ["http:", "https:", "discord:"],
         g = [c.AST_KEY.TEXT, c.AST_KEY.UNDERLINE, c.AST_KEY.STRONG, c.AST_KEY.ITALICS, c.AST_KEY.STRIKETHROUGH, c.AST_KEY.INLINE_CODE, c.AST_KEY.SPOILER, c.AST_KEY.LINE_BREAK, c.AST_KEY.TIMESTAMP],
@@ -61,9 +61,9 @@ function(e, t, n) {
                 i = null !== (t = n.protocol) && void 0 !== t ? t : "";
             if (!h.includes(i.toLowerCase())) throw Error("Provided protocol is not allowed: " + i);
             if (("http:" === i || "https:" === i) && (null == n.hostname || 0 === n.hostname.length)) throw Error("no hostname");
-            let s = (0, f.safelyMakeUrlHumanReadable)(n);
+            let s = (0, _.safelyMakeUrlHumanReadable)(n);
             n.username = "", n.password = "";
-            let r = (0, f.safelyMakeUrlHumanReadable)(n);
+            let r = (0, _.safelyMakeUrlHumanReadable)(n);
             return {
                 target: s,
                 displayTarget: r
@@ -76,15 +76,15 @@ function(e, t, n) {
         ...l.defaultRules.link,
         match: (e, t, n) => t.allowLinks ? l.defaultRules.link.match(e, t, n) : null,
         parse(e, t, n) {
-            let [i, r, a, o] = e, f = () => ({
+            let [i, r, a, o] = e, _ = () => ({
                 type: c.AST_KEY.TEXT,
                 content: i
-            }), _ = E(a), h = E(r), A = E(null != o ? o : ""), C = _.whitespaceSanitized, y = h.fullySanitized, N = A.fullySanitized, R = y.trim(), O = C.trim();
-            if (0 === O.length || 0 === R.length) return f();
+            }), f = E(a), h = E(r), A = E(null != o ? o : ""), C = f.whitespaceSanitized, y = h.fullySanitized, N = A.fullySanitized, R = y.trim(), O = C.trim();
+            if (0 === O.length || 0 === R.length) return _();
             let D = l.unescapeUrl(a),
                 P = I(D),
                 L = (0, u.default)(r).length > 0 || (0, u.default)(o).length > 0;
-            if (null == P || L) return f();
+            if (null == P || L) return _();
             let M = {
                     ...n,
                     allowEscape: !1,
@@ -97,7 +97,7 @@ function(e, t, n) {
                 V = T(k, U, [c.AST_KEY.EMOJI]),
                 G = t(N, M),
                 F = T(G, w);
-            if (null == V || null == F) return f();
+            if (null == V || null == F) return _();
             let x = function e(t) {
                     let n = "";
                     for (let i of t) switch (i.type) {
@@ -135,7 +135,7 @@ function(e, t, n) {
                     return n
                 }(V),
                 B = 0 === x.trim().length;
-            if (B) return f();
+            if (B) return _();
             let H = s.pick(t.rules, b),
                 Y = l.parserFor(H),
                 K = Y(h.whitespaceSanitized, M),

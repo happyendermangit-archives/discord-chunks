@@ -5,10 +5,10 @@ function(e, t, n) {
             return c
         },
         FormNoticeImagePositions: function() {
-            return f
+            return _
         },
         FormNotice: function() {
-            return _
+            return f
         }
     });
     var i = n("37983");
@@ -21,16 +21,16 @@ function(e, t, n) {
         u = n("818810"),
         d = n("468701");
     let c = a.Card.Types,
-        f = {
+        _ = {
             LEFT: "left",
             RIGHT: "right"
         };
 
-    function _(e) {
+    function f(e) {
         let t, n, {
                 type: s = a.Card.Types.DANGER,
                 imageData: c,
-                button: _,
+                button: f,
                 className: E,
                 iconClassName: h,
                 title: g,
@@ -52,8 +52,8 @@ function(e, t, n) {
                     className: r(d.icon, h),
                     ...n
                 })
-            }), e === f.RIGHT && (v = o.default.Direction.HORIZONTAL_REVERSE)
-        } else null != _ && (n = _);
+            }), e === _.RIGHT && (v = o.default.Direction.HORIZONTAL_REVERSE)
+        } else null != f && (n = f);
         let T = !0;
         return s === a.Card.Types.PRIMARY && (T = !1), (0, i.jsx)(a.Card, {
             className: r(d.formNotice, E),
@@ -80,5 +80,5 @@ function(e, t, n) {
             })
         })
     }
-    _.Types = a.Card.Types
+    f.Types = a.Card.Types
 }

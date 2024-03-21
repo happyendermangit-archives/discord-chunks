@@ -12,8 +12,8 @@ function(e, t, n) {
         u = n("42203"),
         d = n("923959"),
         c = n("26989"),
-        f = n("305961"),
-        _ = n("697218"),
+        _ = n("305961"),
+        f = n("697218"),
         E = n("800762"),
         h = n("991170"),
         g = n("923510"),
@@ -33,19 +33,19 @@ function(e, t, n) {
             let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 a = u.default.getChannel(t),
                 o = null == a ? void 0 : a.getGuildId(),
-                l = f.default.getGuild(o);
+                l = _.default.getGuild(o);
             if (null == l || null == a || !a.isGuildStageVoice()) return S;
             return {
                 speaker: function(e, t) {
                     let n = E.default.getVoiceStateForChannel(t, e);
                     return (0, m.getAudienceRequestToSpeakState)(n) === m.RequestToSpeakStates.ON_STAGE
                 }(e, t),
-                moderator: r ? (n = e, i = l, s = a, h.default.can({
+                moderator: r ? (n = e, i = l, s = a, h.can({
                     permission: g.MODERATE_STAGE_CHANNEL_PERMISSIONS,
                     user: n,
                     context: i,
                     overwrites: s.permissionOverwrites,
-                    roles: f.default.getRoles(i.id)
+                    roles: _.default.getRoles(i.id)
                 })) : null
             }
         }(e, t, n);
@@ -98,7 +98,7 @@ function(e, t, n) {
     }
     class y extends o.default.Store {
         initialize() {
-            this.waitFor(c.default, u.default, f.default, _.default, E.default)
+            this.waitFor(c.default, u.default, _.default, f.default, E.default)
         }
         isSpeaker(e, t) {
             return this.getPermissionsForUser(e, t).speaker

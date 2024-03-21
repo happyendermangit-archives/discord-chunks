@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         fetchSubscriptionsSettings: function() {
-            return f
+            return _
         },
         updateSubscriptionsSettings: function() {
-            return _
+            return f
         },
         fetchAllSubscriptionListingsDataForGuild: function() {
             return E
@@ -44,14 +44,14 @@ function(e, t, n) {
         u = n("718517"),
         d = n("719726"),
         c = n("49111");
-    async function f(e) {
+    async function _(e) {
         let t = await d.getGuildRoleSubscriptionsSettings(e);
         s.default.dispatch({
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS",
             settings: t
         })
     }
-    async function _(e, t) {
+    async function f(e, t) {
         let n = await d.updateGuildRoleSubscriptionsSettings(e, t);
         s.default.dispatch({
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS",

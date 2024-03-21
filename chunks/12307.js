@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isPremiumResolution: function() {
-            return f
+            return _
         },
         isPremiumFPS: function() {
-            return _
+            return f
         },
         getResolutionText: function() {
             return h
@@ -30,7 +30,7 @@ function(e, t, n) {
         d = n("353927"),
         c = n("782340");
 
-    function f(e) {
+    function _(e) {
         if (null == e) return;
         let t = e.maxResolution.type === d.ResolutionTypes.SOURCE ? l.ApplicationStreamResolutions.RESOLUTION_SOURCE : e.maxResolution.height,
             n = (0, l.getApplicationResolution)(t),
@@ -38,7 +38,7 @@ function(e, t, n) {
         return i !== l.ApplicationStreamFPS.FPS_5 && null == l.ApplicationStreamSettingRequirements.find(e => e.resolution === n && e.fps !== l.ApplicationStreamFPS.FPS_5 && !E(e))
     }
 
-    function _(e) {
+    function f(e) {
         if (null == e) return;
         let t = (0, l.getApplicationFramerate)(e.maxFrameRate);
         return null == l.ApplicationStreamSettingRequirements.find(e => e.fps === t && !E(e))
@@ -68,16 +68,16 @@ function(e, t, n) {
     }
 
     function p(e, t, n) {
-        var d, c, f;
-        let _ = (d = e, c = t, f = n, l.ApplicationStreamSettingRequirements.find(e => (null == e.preset || e.preset === d) && e.resolution === c && e.fps === f)),
+        var d, c, _;
+        let f = (d = e, c = t, _ = n, l.ApplicationStreamSettingRequirements.find(e => (null == e.preset || e.preset === d) && e.resolution === c && e.fps === _)),
             E = r.default.getCurrentUser(),
             h = s.default.getGuildId(),
             g = null != h ? i.default.getGuild(h) : null;
         a.default.track(o.AnalyticEvents.STREAM_SETTINGS_UPDATE, {
             user_premium_tier: null == E ? void 0 : E.premiumType,
             guild_premium_tier: null == g ? void 0 : g.premiumTier,
-            stream_quality_user_premium_tier: (null == _ ? void 0 : _.quality) != null ? u.StreamQualitiesToPremiumType[_.quality] : null,
-            stream_quality_guild_premium_tier: null == _ ? void 0 : _.guildPremiumTier,
+            stream_quality_user_premium_tier: (null == f ? void 0 : f.quality) != null ? u.StreamQualitiesToPremiumType[f.quality] : null,
+            stream_quality_guild_premium_tier: null == f ? void 0 : f.guildPremiumTier,
             stream_quality_preset: e,
             stream_quality_resolution: t,
             stream_quality_frame_rate: n

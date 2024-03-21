@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return _
         }
     }), n("222007");
     var i, s, r = n("599110"),
@@ -25,7 +25,7 @@ function(e, t, n) {
     function c(e) {
         return null != e.guildId && null != e.channelId && null != e.messageId ? "Discord Message Link" : null != e.guildId && null != e.channelId ? "Discord Channel Link" : "Unknown"
     }
-    var f = {
+    var _ = {
         trackDiscordLinkClicked: function(e) {
             r.default.track(u.AnalyticEvents.LINK_CLICKED, {
                 is_discord_link: !0,

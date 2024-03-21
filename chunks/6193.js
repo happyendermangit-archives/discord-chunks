@@ -18,8 +18,8 @@ function(e, t, n) {
         u = n("546463"),
         d = n("697218"),
         c = n("599110"),
-        f = n("773336"),
-        _ = n("50885"),
+        _ = n("773336"),
+        f = n("50885"),
         E = n("688225"),
         h = n("49111");
     let g = {
@@ -31,13 +31,13 @@ function(e, t, n) {
 
     function m() {
         var e;
-        return !(null === _.default || void 0 === _.default ? void 0 : null === (e = _.default.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(_.default, "discord_hook", g))
+        return !(null === f.default || void 0 === f.default ? void 0 : null === (e = f.default.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(f.default, "discord_hook", g))
     }
     async function p() {
-        if (!(0, f.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
+        if (!(0, _.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
         if (m()) return Promise.reject(Error("Hook module is too old"));
-        await _.default.ensureModule("discord_hook");
-        let e = await _.default.requireModule("discord_hook");
+        await f.default.ensureModule("discord_hook");
+        let e = await f.default.requireModule("discord_hook");
         return function(e) {
             if (null == e.setFlags) return;
             let t = 0,
@@ -57,7 +57,7 @@ function(e, t, n) {
             var i;
             let s = null === (i = l.default.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
                 d = u.default.getGameByName(s),
-                f = null;
+                _ = null;
             return new Promise(i => {
                 let u = (e, n) => {
                         c.default.track(h.AnalyticEvents.HOOK_RESULT, {
@@ -66,15 +66,15 @@ function(e, t, n) {
                             success: n,
                             error: e,
                             ...t
-                        }), null != f && (clearTimeout(f), f = null), n ? i() : i(e = null != e ? e : "Unknown hook error")
+                        }), null != _ && (clearTimeout(_), _ = null), n ? i() : i(e = null != e ? e : "Unknown hook error")
                     },
-                    _ = l.default.getOverlayOptionsForPID(e),
+                    f = l.default.getOverlayOptionsForPID(e),
                     E = {
                         ...o.DEFAULT_OVERLAY_OPTIONS,
-                        ..._,
+                        ...f,
                         elevate: l.default.shouldElevateProcessForPID(e)
                     };
-                null == E.allowHook || E.allowHook ? (f = setTimeout(() => {
+                null == E.allowHook || E.allowHook ? (_ = setTimeout(() => {
                     n.cancelAttachToProcess(e), u("Timed out waiting for hook response", !1)
                 }, 12e4), n.attachToProcess(e, E, u), r.default.wait(() => a.default.clearElevatedProcess())) : i("Hook is disabled for this game")
             })

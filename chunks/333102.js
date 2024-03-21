@@ -27,8 +27,8 @@ function(e, t, n) {
         return s.forwardRef(function(t, d) {
             let {
                 children: c,
-                className: f,
-                onResize: _,
+                className: _,
+                onResize: f,
                 contentClassName: E,
                 onScroll: h,
                 dir: g = "ltr",
@@ -54,18 +54,18 @@ function(e, t, n) {
             return s.useEffect(() => () => clearTimeout(T.current), []), (0, l.useResizeObserverSubscription)({
                 ref: y,
                 key: "container",
-                onUpdate: _,
+                onUpdate: f,
                 resizeObserver: r,
                 listenerMap: n
             }), (0, l.useResizeObserverSubscription)({
                 ref: I,
                 key: "content",
-                onUpdate: _,
+                onUpdate: f,
                 resizeObserver: r,
                 listenerMap: n
             }), (0, i.jsx)("div", {
                 ref: y,
-                className: a(f, {
+                className: a(_, {
                     [u.fade]: m,
                     [u.customTheme]: p,
                     [e]: !0,

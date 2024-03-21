@@ -19,7 +19,7 @@ function(e, t, n) {
         let u = {},
             d = {},
             c = [],
-            f = [];
+            _ = [];
         for (let t of e.values()) switch (t.type) {
             case "candidate-pair":
                 u[t.id] = t;
@@ -31,12 +31,12 @@ function(e, t, n) {
                 c.push(t);
                 break;
             case "outbound-rtp":
-                f.push(t)
+                _.push(t)
         }
-        let _ = Object.values(u).find(e => "succeeded" === e.state);
-        if (void 0 === _) return null;
+        let f = Object.values(u).find(e => "succeeded" === e.state);
+        if (void 0 === f) return null;
         let E = [];
-        for (let e of f) {
+        for (let e of _) {
             let t = d[e.codecId];
             if (null == t) continue;
             let r = {
@@ -125,12 +125,12 @@ function(e, t, n) {
                 })
             }
         }
-        let g = (null !== (a = _.currentRoundTripTime) && void 0 !== a ? a : 0) * 1e3;
+        let g = (null !== (a = f.currentRoundTripTime) && void 0 !== a ? a : 0) * 1e3;
         return {
             transport: {
-                availableOutgoingBitrate: null !== (o = _.availableOutgoingBitrate) && void 0 !== o ? o : 0,
-                bytesReceived: _.bytesReceived,
-                bytesSent: _.bytesSent,
+                availableOutgoingBitrate: null !== (o = f.availableOutgoingBitrate) && void 0 !== o ? o : 0,
+                bytesReceived: f.bytesReceived,
+                bytesSent: f.bytesSent,
                 ping: g
             },
             rtp: {

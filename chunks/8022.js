@@ -20,9 +20,9 @@ function(e, t, n) {
             parentItem: n,
             isFocused: r,
             menuSubmenuProps: c,
-            renderSubmenu: f
+            renderSubmenu: _
         } = e, {
-            focusIndex: _,
+            focusIndex: f,
             isUsingKeyboardNavigation: E,
             ...h
         } = c, g = s.useRef(null), m = s.useRef(null), p = s.useRef(null);
@@ -50,7 +50,7 @@ function(e, t, n) {
                         ref: p,
                         children: (0, i.jsx)(u.ScrollerThin, {
                             className: d.scroller,
-                            children: f()
+                            children: _()
                         })
                     })
                 })

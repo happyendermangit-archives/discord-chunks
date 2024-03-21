@@ -15,8 +15,8 @@ function(e, t, n) {
         u = n("605250"),
         d = n("676574"),
         c = n("668273"),
-        f = n("168973"),
-        _ = n("985365"),
+        _ = n("168973"),
+        f = n("985365"),
         E = n("599110"),
         h = n("994440"),
         g = n("718517"),
@@ -305,12 +305,12 @@ function(e, t, n) {
             E.default.track(T.AnalyticEvents.ATTACHMENT_UPLOAD_STARTED, {
                 file_size: this.currentSize,
                 mime_type: null !== (e = this.mimeType) && void 0 !== e ? e : "unknown",
-                video_upload_quality: f.default.videoUploadQuality,
-                data_saving_mode: f.default.dataSavingMode,
-                low_quality_image_mode: f.default.lowQualityImageMode,
-                connection_type: _.default.getType(),
-                effective_connection_speed: _.default.getEffectiveConnectionSpeed(),
-                service_provider: _.default.getServiceProvider()
+                video_upload_quality: _.default.videoUploadQuality,
+                data_saving_mode: _.default.dataSavingMode,
+                low_quality_image_mode: _.default.lowQualityImageMode,
+                connection_type: f.default.getType(),
+                effective_connection_speed: f.default.getEffectiveConnectionSpeed(),
+                service_provider: f.default.getServiceProvider()
             })
         }
         trackUploadFinished(e) {
@@ -325,15 +325,15 @@ function(e, t, n) {
                 num_chunks: this.uploadAnalytics.numChunks,
                 num_upload_attempts: null !== (n = this.uploadAnalytics.totalRequestCount) && void 0 !== n ? n : 1,
                 error_code: this.error,
-                video_upload_quality: f.default.videoUploadQuality,
-                data_saving_mode: f.default.dataSavingMode,
-                low_quality_image_mode: f.default.lowQualityImageMode,
+                video_upload_quality: _.default.videoUploadQuality,
+                data_saving_mode: _.default.dataSavingMode,
+                low_quality_image_mode: _.default.lowQualityImageMode,
                 compress_time_ms: this.uploadAnalytics.timing.compressTimeMs,
                 get_upload_url_time_ms: this.uploadAnalytics.timing.getUploadUrlTimeMs,
                 upload_time_ms: this.uploadAnalytics.timing.uploadTimeMs,
-                connection_type: _.default.getType(),
-                effective_connection_speed: _.default.getEffectiveConnectionSpeed(),
-                service_provider: _.default.getServiceProvider()
+                connection_type: f.default.getType(),
+                effective_connection_speed: f.default.getEffectiveConnectionSpeed(),
+                service_provider: f.default.getServiceProvider()
             })
         }
         constructor(e, t, n, i) {

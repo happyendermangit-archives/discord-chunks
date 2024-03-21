@@ -57,8 +57,8 @@ function(e, t, n) {
             let r = e.recentlyShown.filter(e => e !== t.content);
             return r.unshift(t.content), r.splice(5), e.recentlyShown = r, null != t.groupName && e.currentlyShownGroup.add(t.groupName), !s.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(t.content) && (e.shownFatigableCandidate = t, (null === (i = e.prevFatigableCandidate) || void 0 === i ? void 0 : i.content) !== t.content && (e.prevFatigableCandidate = t, e.lastWinnerTime = new Date().getTime())), null === (n = t.onAdded) || void 0 === n || n.call(t), e
         },
-        f = (e, t) => (e.candidates.set(t.content, t), e),
-        _ = (e, t) => (e.candidates.delete(t.content), e),
+        _ = (e, t) => (e.candidates.set(t.content, t), e),
+        f = (e, t) => (e.candidates.delete(t.content), e),
         E = (e, t) => c(d(e, e.shownFatigableCandidate), t),
         h = e => null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0,
         g = e => {
@@ -86,13 +86,13 @@ function(e, t, n) {
             let t = s.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e.content);
             l.setState(n => {
                 let i = u(n);
-                return t ? c(i, e) : p(f(i, e))
+                return t ? c(i, e) : p(_(i, e))
             })
         },
         v = (e, t) => {
             l.setState(n => {
                 let i = u(n);
-                return t ? p(d(_(i, e), e)) : d(_(i, e), e)
+                return t ? p(d(f(i, e), e)) : d(f(i, e), e)
             })
         },
         T = e => l.getState().currentlyShown.has(e),

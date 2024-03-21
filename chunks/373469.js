@@ -11,8 +11,8 @@ function(e, t, n) {
         u = n("76393"),
         d = n("161454"),
         c = n("374014"),
-        f = n("223913"),
-        _ = n("537429"),
+        _ = n("223913"),
+        f = n("537429"),
         E = n("756898"),
         h = n("271938"),
         g = n("42203"),
@@ -71,7 +71,7 @@ function(e, t, n) {
     function b(e) {
         if (M(e.streamType, e.channelId)) return !0;
         let t = g.default.getBasicChannel(e.channelId);
-        return null != t && (0, f.canWatchStream)(t, I.default, m.default, S.default, u.default)[0]
+        return null != t && (0, _.canWatchStream)(t, I.default, m.default, S.default, u.default)[0]
     }
     class U extends o.default.Store {
         initialize() {
@@ -83,21 +83,21 @@ function(e, t, n) {
         }
         getLastActiveStream() {
             var e;
-            return (0, _.default)(p.default) ? null !== (e = Array.from(i.values()).pop()) && void 0 !== e ? e : null : null
+            return (0, f.default)(p.default) ? null !== (e = Array.from(i.values()).pop()) && void 0 !== e ? e : null : null
         }
         getAllActiveStreams() {
-            return (0, _.default)(p.default) ? Array.from(i.values()) : []
+            return (0, f.default)(p.default) ? Array.from(i.values()) : []
         }
         getAllActiveStreamsForChannel(e) {
-            return (0, _.default)(p.default) ? Array.from(i.values()).filter(t => t.channelId === e) : []
+            return (0, f.default)(p.default) ? Array.from(i.values()).filter(t => t.channelId === e) : []
         }
         getActiveStreamForStreamKey(e) {
             var t;
-            return (0, _.default)(p.default) ? null !== (t = i.get(e)) && void 0 !== t ? t : null : null
+            return (0, f.default)(p.default) ? null !== (t = i.get(e)) && void 0 !== t ? t : null : null
         }
         getActiveStreamForApplicationStream(e) {
             var t;
-            if (!(0, _.default)(p.default) || null == e) return null;
+            if (!(0, f.default)(p.default) || null == e) return null;
             let n = (0, c.encodeStreamKey)(e);
             return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null
         }
@@ -125,28 +125,28 @@ function(e, t, n) {
         }
         getAnyStreamForUser(e) {
             var t;
-            if (!(0, _.default)(p.default)) return null;
+            if (!(0, f.default)(p.default)) return null;
             let n = s[e];
             return null == n ? null : null !== (t = Object.values(n).find(e => b(e))) && void 0 !== t ? t : null
         }
         getStreamForUser(e, t) {
             var n;
-            if (!(0, _.default)(p.default)) return null;
+            if (!(0, f.default)(p.default)) return null;
             let i = null === (n = s[e]) || void 0 === n ? void 0 : n[null != t ? t : A.NULL_STRING_GUILD_ID];
             return null != i && b(i) ? i : null
         }
         getRTCStream(e) {
             var t;
-            return (0, _.default)(p.default) ? null !== (t = r[e]) && void 0 !== t ? t : null : null
+            return (0, f.default)(p.default) ? null !== (t = r[e]) && void 0 !== t ? t : null : null
         }
         getAllApplicationStreams() {
-            return (0, _.default)(p.default) ? P().filter(e => null != e && M(e.streamType, e.channelId)) : []
+            return (0, f.default)(p.default) ? P().filter(e => null != e && M(e.streamType, e.channelId)) : []
         }
         getAllApplicationStreamsForChannel(e) {
-            return (0, _.default)(p.default) ? P().filter(t => null != t && t.channelId === e && M(t.streamType, t.channelId)) : []
+            return (0, f.default)(p.default) ? P().filter(t => null != t && t.channelId === e && M(t.streamType, t.channelId)) : []
         }
         getViewerIds(e) {
-            if (!(0, _.default)(p.default)) return [];
+            if (!(0, f.default)(p.default)) return [];
             let t = null;
             t = "string" == typeof e ? e : (0, c.encodeStreamKey)(e);
             let n = null != t ? r[t] : null;
@@ -156,7 +156,7 @@ function(e, t, n) {
             return R
         }
         getState() {
-            return (0, _.default)(p.default) ? {
+            return (0, f.default)(p.default) ? {
                 activeStreams: Array.from(i.entries()),
                 streamsByUserAndGuild: s,
                 rtcStreams: r,
@@ -225,17 +225,17 @@ function(e, t, n) {
                 pid: o,
                 sourceName: l,
                 sourceId: u
-            } = e, f = (0, c.encodeStreamKey)({
+            } = e, _ = (0, c.encodeStreamKey)({
                 streamType: n,
                 guildId: s,
                 channelId: r,
                 ownerId: h.default.getId()
-            }), _ = null !== (t = null != o ? d.default.getGameForPID(o) : null != u ? d.default.getRunningGames().find(e => (0, E.default)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
-            a[f] = {
-                id: null == _ ? void 0 : _.id,
+            }), f = null !== (t = null != o ? d.default.getGameForPID(o) : null != u ? d.default.getRunningGames().find(e => (0, E.default)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
+            a[_] = {
+                id: null == f ? void 0 : f.id,
                 pid: o,
                 sourceName: l
-            }, i.delete(f), i.set(f, {
+            }, i.delete(_), i.set(_, {
                 streamType: n,
                 guildId: s,
                 channelId: r,

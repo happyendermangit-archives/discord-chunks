@@ -10,8 +10,8 @@ function(e, t, n) {
         u = n("414456"),
         d = n.n(u),
         c = n("627445"),
-        f = n.n(c),
-        _ = n("509043"),
+        _ = n.n(c),
+        f = n("509043"),
         E = n("669491"),
         h = n("718776"),
         g = n("36694"),
@@ -59,7 +59,7 @@ function(e, t, n) {
                     if (i.startsWith("var(--")) {
                         let e = "".concat(i.slice(0, -1), "-hsl)");
                         s.borderColor = "rgba(".concat(e, ", 0.15)"), s.backgroundColor = "rgba(".concat(e, ", 0.15)")
-                    } else f((0, _.isValidHex)(i), "Checkbox: ".concat(i, " is not a valid hex color")), s.borderColor = (0, _.hex2rgb)(i, .15), s.backgroundColor = (0, _.hex2rgb)(i, .15);
+                    } else _((0, f.isValidHex)(i), "Checkbox: ".concat(i, " is not a valid hex color")), s.borderColor = (0, f.hex2rgb)(i, .15), s.backgroundColor = (0, f.hex2rgb)(i, .15);
                     break;
                 case "row":
                 case "inverted":
@@ -87,8 +87,8 @@ function(e, t, n) {
                 children: l,
                 size: u,
                 reverse: c,
-                checkboxColor: f,
-                displayOnly: _,
+                checkboxColor: _,
+                displayOnly: f,
                 type: E,
                 onClick: S
             } = this.props, T = null != l ? (0, o.jsx)("div", {
@@ -98,12 +98,12 @@ function(e, t, n) {
                 },
                 children: l
             }) : null, I = this.props.disabled ? p.inputDisabled : this.props.readOnly ? p.inputReadonly : p.inputDefault;
-            return (0, o.jsxs)(_ ? "span" : "label", {
+            return (0, o.jsxs)(f ? "span" : "label", {
                 className: d(e ? p.checkboxWrapperDisabled : p.checkboxWrapper, v[s], r, {
                     [p.row]: "row" === E,
                     [p.checked]: n
                 }),
-                children: [c ? T : null, !_ && (0, o.jsx)(h.FocusRing, {
+                children: [c ? T : null, !f && (0, o.jsx)(h.FocusRing, {
                     children: (0, o.jsx)("input", {
                         className: d(a, I),
                         type: "checkbox",
@@ -122,7 +122,7 @@ function(e, t, n) {
                     style: {
                         width: u,
                         height: u,
-                        borderColor: f,
+                        borderColor: _,
                         ...this.getStyle()
                     },
                     children: (0, o.jsx)(g.default, {

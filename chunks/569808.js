@@ -37,12 +37,12 @@ function(e, t, n) {
         })
     }
 
-    function f(e) {
+    function _(e) {
         return u(e.code, e => {
             e.state = a.GuildTemplateStates.EXPIRED
         })
     }
-    class _ extends i.default.Store {
+    class f extends i.default.Store {
         getGuildTemplate(e) {
             return null != e ? o[e] : null
         }
@@ -59,8 +59,8 @@ function(e, t, n) {
             return l
         }
     }
-    _.displayName = "GuildTemplateStore";
-    var E = new _(s.default, {
+    f.displayName = "GuildTemplateStore";
+    var E = new f(s.default, {
         GUILD_TEMPLATE_RESOLVE: function(e) {
             let {
                 code: t
@@ -82,8 +82,8 @@ function(e, t, n) {
             } = e;
             t.forEach(e => c(e))
         },
-        GUILD_TEMPLATE_RESOLVE_FAILURE: f,
-        GUILD_TEMPLATE_DELETE_SUCCESS: f,
+        GUILD_TEMPLATE_RESOLVE_FAILURE: _,
+        GUILD_TEMPLATE_DELETE_SUCCESS: _,
         GUILD_TEMPLATE_ACCEPT: function(e) {
             return u(e.code, e => {
                 e.state = a.GuildTemplateStates.ACCEPTING

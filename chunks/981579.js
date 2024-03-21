@@ -12,9 +12,9 @@ function(e, t, n) {
         u = n("458960"),
         d = n("266491"),
         c = n("413197"),
-        f = n("86337");
+        _ = n("86337");
     (s = i || (i = {}))[s.ENTERING = 0] = "ENTERING", s[s.LEAVING = 1] = "LEAVING", s[s.APPEARING = 2] = "APPEARING", s[s.STATIC = 3] = "STATIC";
-    class _ extends a.PureComponent {
+    class f extends a.PureComponent {
         componentDidMount() {
             if (null != this._measureRef.current) {
                 let {
@@ -93,18 +93,18 @@ function(e, t, n) {
                 animationState: r,
                 baseHeight: a,
                 targetHeight: o
-            } = this.state, l = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, d = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, c = 1 === r, f = 0 === r, _ = (c ? -1 : 1) * this.direction, E = {
+            } = this.state, l = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, d = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, c = 1 === r, _ = 0 === r, f = (c ? -1 : 1) * this.direction, E = {
                 transform: [{
                     translateX: s.interpolate({
                         inputRange: [0, 2],
-                        outputRange: ["".concat(150 * _, "%"), "0%"],
+                        outputRange: ["".concat(150 * f, "%"), "0%"],
                         extrapolate: "clamp",
                         easing: u.default.Easing.inOut(u.default.Easing.ease)
                     })
                 }]
             };
             return {
-                overflow: f || c ? "hidden" : "visible",
+                overflow: _ || c ? "hidden" : "visible",
                 position: c ? "absolute" : void 0,
                 top: c ? d : void 0,
                 left: c ? l : void 0,
@@ -117,7 +117,7 @@ function(e, t, n) {
                     extrapolate: "clamp",
                     easing: u.default.Easing.inOut(u.default.Easing.ease)
                 }),
-                height: f ? s.interpolate({
+                height: _ ? s.interpolate({
                     inputRange: [0, 1],
                     outputRange: [a, o],
                     extrapolate: "clamp",
@@ -136,19 +136,19 @@ function(e, t, n) {
             } = this.state;
             return e ? (0, r.jsx)("div", {
                 ref: this._measureRef,
-                className: l(f.measurementFill, t, {
-                    [l(f.measurementFillStatic, i)]: 3 === s
+                className: l(_.measurementFill, t, {
+                    [l(_.measurementFillStatic, i)]: 3 === s
                 }),
                 children: (0, r.jsx)(u.default.div, {
-                    className: l(f.animatedNode, n),
+                    className: l(_.animatedNode, n),
                     style: this.getAnimatedStyle(),
                     children: this.props.children
                 })
             }) : (0, r.jsx)("div", {
                 ref: this._measureRef,
-                className: l(f.measurement, t),
+                className: l(_.measurement, t),
                 children: (0, r.jsx)(u.default.div, {
-                    className: l(f.animatedNode, n),
+                    className: l(_.animatedNode, n),
                     style: this.getAnimatedStyle(),
                     children: this.props.children
                 })
@@ -163,7 +163,7 @@ function(e, t, n) {
             }, this.direction = this.props.getDirection(), this._measureRef = a.createRef()
         }
     }
-    _.contextType = c.AccessibilityPreferencesContext, _.defaultProps = {
+    f.contextType = c.AccessibilityPreferencesContext, f.defaultProps = {
         duration: 300
     };
     class E extends a.Component {
@@ -194,8 +194,8 @@ function(e, t, n) {
             } = this.props;
             return (0, r.jsx)(d.TransitionGroup, {
                 component: "div",
-                className: l(f.transitionGroup, t),
-                children: (0, r.jsx)(_, {
+                className: l(_.transitionGroup, t),
+                children: (0, r.jsx)(f, {
                     fillParent: c,
                     sideMargin: a,
                     verticalMargin: o,

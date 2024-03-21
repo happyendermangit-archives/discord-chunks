@@ -22,8 +22,8 @@ function(e, t, n) {
     var d = n("9294");
     n("42793");
     var c = n("337543"),
-        f = n("655518"),
-        _ = n("253981"),
+        _ = n("655518"),
+        f = n("253981"),
         E = n("139514"),
         h = n("49111");
     let g = /^\/([a-zA-Z0-9-]+)$/,
@@ -44,7 +44,7 @@ function(e, t, n) {
         L = k("//ptb.".concat(h.PRIMARY_DOMAIN)),
         M = k("discordapp.com"),
         b = k("discord.com"),
-        U = [f.default.escape(null !== (s = R.host) && void 0 !== s ? s : ""), f.default.escape(null !== (r = O.host) && void 0 !== r ? r : ""), f.default.escape(null !== (a = D.host) && void 0 !== a ? a : ""), f.default.escape(null !== (o = M.host) && void 0 !== o ? o : ""), f.default.escape(null !== (l = b.host) && void 0 !== l ? l : "")].filter(Boolean),
+        U = [_.default.escape(null !== (s = R.host) && void 0 !== s ? s : ""), _.default.escape(null !== (r = O.host) && void 0 !== r ? r : ""), _.default.escape(null !== (a = D.host) && void 0 !== a ? a : ""), _.default.escape(null !== (o = M.host) && void 0 !== o ? o : ""), _.default.escape(null !== (l = b.host) && void 0 !== l ? l : "")].filter(Boolean),
         w = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(U.join("|"), ")"), "g");
 
     function k(e) {
@@ -104,7 +104,7 @@ function(e, t, n) {
         if (null == e) return [];
         let t = new Set,
             n = [],
-            i = (e = e.replace(w, (e, t, n, i) => null == n ? "".concat(t, "http://").concat(i) : e)).match(_.default.URL_REGEX),
+            i = (e = e.replace(w, (e, t, n, i) => null == n ? "".concat(t, "http://").concat(i) : e)).match(f.default.URL_REGEX),
             s = e.match(N);
         if (null == (i = (null != i ? i : []).concat(null != s ? s : [])) || 0 === i.length) return [];
         for (let e of i) {
@@ -144,14 +144,14 @@ function(e, t, n) {
                 } : null
             }(i.pathname);
             null != u && o(E.CodedLinkType.EVENT, "".concat(u.guildId, "-").concat(u.guildEventId) + (null != u.recurrenceId ? "-".concat(u.recurrenceId) : ""));
-            let f = null == a ? void 0 : a.match(v);
-            if (null != f) {
-                let e = f[1];
-                o(E.CodedLinkType.APP_DIRECTORY_PROFILE, e)
-            }
-            let _ = null == a ? void 0 : a.match(C);
+            let _ = null == a ? void 0 : a.match(v);
             if (null != _) {
                 let e = _[1];
+                o(E.CodedLinkType.APP_DIRECTORY_PROFILE, e)
+            }
+            let f = null == a ? void 0 : a.match(C);
+            if (null != f) {
+                let e = f[1];
                 o(E.CodedLinkType.CLYDE_PROFILE, e)
             }
             let h = null == a ? void 0 : a.match(T);

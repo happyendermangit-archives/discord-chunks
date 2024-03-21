@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("432710"),
         d = n("446674"),
         c = n("872717"),
-        f = n("913144"),
-        _ = n("105059"),
+        _ = n("913144"),
+        f = n("105059"),
         E = n("849365"),
         h = n("11275"),
         g = n("400683"),
@@ -100,11 +100,11 @@ function(e, t, n) {
                     u = !1,
                     d = !1,
                     c = null,
-                    f = null;
+                    _ = null;
                 if (window._ws = null, null != l) {
                     if (t = l.ws, l.state.gateway !== n) k.verbose("[FAST CONNECT] gatewayURL mismatch: ".concat(l.state.gateway, " !== ").concat(n)), t.close(1e3), t = null;
                     else {
-                        var _;
+                        var f;
                         let e = {
                             ...l.state
                         };
@@ -113,11 +113,11 @@ function(e, t, n) {
                             data: e.data.substring(0, 100)
                         } : e)), k.log("[FAST CONNECT] successfully took over websocket, state:", {
                             ...e,
-                            messages: null === (_ = e.messages) || void 0 === _ ? void 0 : _.length
-                        }), u = l.state.open, d = l.state.identify, c = l.state.messages, f = l.state.clientState
+                            messages: null === (f = e.messages) || void 0 === f ? void 0 : f.length
+                        }), u = l.state.open, d = l.state.identify, c = l.state.messages, _ = l.state.clientState
                     }
                 }
-                null == t && ((t = (0, U.default)(n)).binaryType = "arraybuffer"), i(t), u && s(d, f), null != c && c.forEach(r), t.onopen = () => s(d, f), t.onmessage = r, t.onclose = o, t.onerror = a
+                null == t && ((t = (0, U.default)(n)).binaryType = "arraybuffer"), i(t), u && s(d, _), null != c && c.forEach(r), t.onopen = () => s(d, _), t.onmessage = r, t.onclose = o, t.onerror = a
             }({
                 gatewayURL: o.toString(),
                 newCallback: e => {
@@ -309,7 +309,7 @@ function(e, t, n) {
             this.connectionState = N.default.IDENTIFYING;
             let t = Date.now();
             this.identifyStartTime = t;
-            let [n, i, s] = await Promise.all([(0, g.isCacheEnabled)() ? _.default.getCommittedVersions() : {}, (0, g.isCacheEnabled)() ? h.default.getCommittedVersions() : {}, !!(0, g.isCacheEnabled)() && E.default.canUseGuildVersions()]), r = s ? {
+            let [n, i, s] = await Promise.all([(0, g.isCacheEnabled)() ? f.default.getCommittedVersions() : {}, (0, g.isCacheEnabled)() ? h.default.getCommittedVersions() : {}, !!(0, g.isCacheEnabled)() && E.default.canUseGuildVersions()]), r = s ? {
                 guild_versions: n,
                 highest_last_message_id: i.highest_last_message_id,
                 read_state_version: i.read_state_version,
@@ -401,7 +401,7 @@ function(e, t, n) {
                 action: t
             }), this._cleanup(e => e.close()), this._reset(!0, 1e3, "Resetting socket due to error."), this.dispatcher.clear(), this.connectionState = N.default.WILL_RECONNECT, this.dispatchExceptionBackoff.cancel();
             let i = e.clearCache || this.dispatchExceptionBackoff._fails > 0;
-            0 === this.dispatchExceptionBackoff._fails ? (k.verbose("Triggering fast reconnect"), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect(), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect()), i && (this.didForceClearGuildHashes = !0, f.default.dispatch({
+            0 === this.dispatchExceptionBackoff._fails ? (k.verbose("Triggering fast reconnect"), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect(), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect()), i && (this.didForceClearGuildHashes = !0, _.default.dispatch({
                 type: "CLEAR_CACHES",
                 reason: "Socket reset during ".concat(t)
             })), clearTimeout(this.dispatchSuccessTimer), this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * B)

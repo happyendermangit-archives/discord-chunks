@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("352266"),
         d = n("630869"),
         c = n("537025"),
-        f = n("765089"),
-        _ = n("647374"),
+        _ = n("765089"),
+        f = n("647374"),
         E = n("91984"),
         h = n("835174"),
         g = n("566271"),
@@ -86,7 +86,7 @@ function(e, t, n) {
                 channel_id: e.id
             })
         }
-        if (f.default.trackLinkClicked(L), null != A) {
+        if (_.default.trackLinkClicked(L), null != A) {
             if (A(t)) return
         } else {
             let {
@@ -98,7 +98,7 @@ function(e, t, n) {
             if (null != s && s(t)) return
         }
         let x = () => {
-                if (b && f.default.trackAnnouncementMessageLinkClicked({
+                if (b && _.default.trackAnnouncementMessageLinkClicked({
                         messageId: U,
                         channelId: P,
                         guildId: M,
@@ -126,7 +126,7 @@ function(e, t, n) {
             Y = (0, v.getProtocol)(L),
             K = !("http:" === Y || "https:" === Y);
         if (!K && (H || S.default.isTrustedDomain(L)) || K && S.default.isTrustedProtocol(L)) {
-            null == t || null != O && O ? x() : b && f.default.trackAnnouncementMessageLinkClicked({
+            null == t || null != O && O ? x() : b && _.default.trackAnnouncementMessageLinkClicked({
                 messageId: U,
                 channelId: P,
                 guildId: M,
@@ -142,7 +142,7 @@ function(e, t, n) {
             isProtocol: !0
         });
         else {
-            let e = (0, _.punycodeLink)(L),
+            let e = (0, f.punycodeLink)(L),
                 t = null != e ? e.displayTarget : L;
             E.default.show({
                 url: t,

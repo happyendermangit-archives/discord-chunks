@@ -11,8 +11,8 @@ function(e, t, n) {
         u = n("748820"),
         d = n("446674"),
         c = n("95410"),
-        f = n("913144"),
-        _ = n("684849"),
+        _ = n("913144"),
+        f = n("684849"),
         E = n("611310"),
         h = n("80687"),
         g = n("49111");
@@ -152,7 +152,7 @@ function(e, t, n) {
             null != e && null != e.layouts && null != e.widgets ? (i = function(e) {
                 let t = {};
                 return l.forEach(e, (e, n) => {
-                    t[n] = new _.default(e)
+                    t[n] = new f.default(e)
                 }), t
             }(e.layouts), s = function(e) {
                 let t = {};
@@ -349,7 +349,7 @@ function(e, t, n) {
             widgets: s
         }
     }];
-    var I = new T(f.default, {
+    var I = new T(_.default, {
         LAYOUT_CREATE: function(e) {
             let {
                 layoutId: t,
@@ -378,7 +378,7 @@ function(e, t, n) {
                 }, a.push(o.id)
             }), i = {
                 ...i,
-                [t]: new _.default({
+                [t]: new f.default({
                     id: t,
                     widgets: a
                 })

@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("118810"),
         d = n("862337"),
         c = n("860226"),
-        f = n("228256"),
-        _ = n("222163"),
+        _ = n("228256"),
+        f = n("222163"),
         E = n("551042"),
         h = n("452453"),
         g = n("244201"),
@@ -98,9 +98,9 @@ function(e, t, n) {
                 isLoading: c,
                 shouldShowLoadingState: E
             } = this.state;
-            return c && !E ? null : (0, i.jsx)(f.Layer, {
+            return c && !E ? null : (0, i.jsx)(_.Layer, {
                 layerContext: null != u ? u : m.appLayerContext,
-                children: (0, i.jsx)(_.ReferencePositionLayer, {
+                children: (0, i.jsx)(f.ReferencePositionLayer, {
                     ref: this.layerRef,
                     onMount: this.handlePopoutShow,
                     onUnmount: this.handlePopoutHide,
@@ -214,7 +214,7 @@ function(e, t, n) {
                     ignoreModalClicks: t
                 } = this.props, n = e.target, i = this.domElementRef.current;
                 if (null != i) {
-                    if ((0, _.referencePortalAwareContains)(i, n) || null != n.closest("." + h.ContextMenuClassName) || t && (0, E.hasAnyModalOpen)()) return;
+                    if ((0, f.referencePortalAwareContains)(i, n) || null != n.closest("." + h.ContextMenuClassName) || t && (0, E.hasAnyModalOpen)()) return;
                     this.isValidClickStart = !0
                 }
             }, this.handleDocumentMouseUp = () => {

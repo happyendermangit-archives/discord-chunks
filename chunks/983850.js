@@ -20,8 +20,8 @@ function(e, t, n) {
         u = n("692038"),
         d = n("256572"),
         c = n("271938"),
-        f = n("982108"),
-        _ = n("42203"),
+        _ = n("982108"),
+        f = n("42203"),
         E = n("377253"),
         h = n("18494"),
         g = n("162771"),
@@ -196,8 +196,8 @@ function(e, t, n) {
             null != e && !(0, p.hasUnscannedAttachmentsOrEmbedsForTimeout)((0, u.updateMessageRecord)(e, o)) && P(e, T.TimeoutCancelSource.UPDATE)
         }
         let l = h.default.getChannelId(),
-            _ = f.default.getCurrentSidebarChannelId(l),
-            g = o.channel_id === l || o.channel_id === _;
+            f = _.default.getCurrentSidebarChannelId(l),
+            g = o.channel_id === l || o.channel_id === f;
         if (!g) return !1;
         let m = E.default.getMessage(o.channel_id, o.id);
         return null != m && U([m], {
@@ -215,9 +215,9 @@ function(e, t, n) {
         } = e;
         if (!(0, v.isEligibleForExplicitMediaRedaction)() || r || a || null == i || (null === (t = s.author) || void 0 === t ? void 0 : t.id) === c.default.getId()) return !1;
         let o = h.default.getChannelId(),
-            l = f.default.getCurrentSidebarChannelId(o),
+            l = _.default.getCurrentSidebarChannelId(o),
             u = i === o || i === l,
-            d = _.default.getChannel(i);
+            d = f.default.getChannel(i);
         if (!u) return !1;
         let E = null === (n = null == d ? void 0 : d.isPrivate()) || void 0 === n || n,
             g = (null == d ? void 0 : d.memberCount) == null || (null == d ? void 0 : d.memberCount) > 100;
@@ -233,7 +233,7 @@ function(e, t, n) {
         } = e;
         if (!(0, v.isEligibleForExplicitMediaRedaction)() || null == t || null == n) return !1;
         let i = h.default.getChannelId(),
-            s = f.default.getCurrentSidebarChannelId(i),
+            s = _.default.getCurrentSidebarChannelId(i),
             r = t === i || t === s;
         return !!r && U(n)
     }

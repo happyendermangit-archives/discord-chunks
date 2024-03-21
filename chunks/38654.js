@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("222007"), n("702976"), n("808653");
     var i = n("446674"),
@@ -14,7 +14,7 @@ function(e, t, n) {
         u = n("49111"),
         d = n("397336");
     let c = {};
-    class f extends i.default.Store {
+    class _ extends i.default.Store {
         hasViewingRoles() {
             return Object.keys(c).length > 0
         }
@@ -84,8 +84,8 @@ function(e, t, n) {
             }
         }
     }
-    f.displayName = "ImpersonateStore";
-    var _ = new f(s.default, {
+    _.displayName = "ImpersonateStore";
+    var f = new _(s.default, {
         IMPERSONATE_UPDATE: function(e) {
             let {
                 guildId: t,

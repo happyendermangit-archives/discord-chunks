@@ -5,10 +5,10 @@ function(e, t, n) {
             return c
         },
         setIsOnStartStageScreen: function() {
-            return f
+            return _
         },
         useUpdateIsOnStartStageScreenEffect: function() {
-            return _
+            return f
         }
     });
     var i = n("884691"),
@@ -23,19 +23,19 @@ function(e, t, n) {
     }));
     var c = d;
 
-    function f(e) {
+    function _(e) {
         d.setState({
             isOnStartStageScreen: e
         })
     }
 
-    function _(e) {
+    function f(e) {
         let t = (0, r.useStateFromStores)([o.default], () => o.default.getVoiceChannelId() === e.id),
             n = (0, r.useStateFromStores)([a.default], () => a.default.can(l.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]),
             s = (0, u.default)(e.id),
             d = n && !s;
         i.useEffect(() => {
-            t ? !d && f(!1) : f(d)
+            t ? !d && _(!1) : _(d)
         }, [t, d])
     }
 }

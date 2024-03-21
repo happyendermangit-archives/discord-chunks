@@ -16,8 +16,8 @@ function(e, t, n) {
         u = n("422791"),
         d = n("56947"),
         c = n("386045"),
-        f = n("808122"),
-        _ = n("963990"),
+        _ = n("808122"),
+        f = n("963990"),
         E = n("161454"),
         h = n("845579"),
         g = n("271938"),
@@ -106,7 +106,7 @@ function(e, t, n) {
                         streamKey: this._streamKey
                     })), e === R.RTCConnectionStates.RTC_CONNECTED) {
                     var i;
-                    null === (i = this._connection) || void 0 === i || i.on(a.BaseConnectionEvent.ScreenshareFinish, (e, t, n, i, s, r, a, o, l, u, d, c, f, h) => {
+                    null === (i = this._connection) || void 0 === i || i.on(a.BaseConnectionEvent.ScreenshareFinish, (e, t, n, i, s, r, a, o, l, u, d, c, _, h) => {
                         let g = this.getMediaSessionId(),
                             m = this.getRTCConnectionId(),
                             p = this.getGoLiveSource();
@@ -129,14 +129,14 @@ function(e, t, n) {
                                     gpu_memory: s
                                 }
                             }
-                            let y = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != s ? s : 0) + (null != r ? r : 0) + (null != o ? o : 0) + (null != h ? h : 0) + (null != f ? f : 0),
+                            let y = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != s ? s : 0) + (null != r ? r : 0) + (null != o ? o : 0) + (null != h ? h : 0) + (null != _ ? _ : 0),
                                 N = (null == p ? void 0 : null === (v = p.desktopSource) || void 0 === v ? void 0 : v.sourcePid) != null ? E.default.getGameForPID(p.desktopSource.sourcePid) : null,
                                 {
                                     gameName: D,
                                     gameId: P,
                                     exe: L,
                                     distributor: M
-                                } = (0, _.getRunningGameAnalytics)(N);
+                                } = (0, f.getRunningGameAnalytics)(N);
                             A.default.track(R.AnalyticEvents.SCREENSHARE_FINISHED, {
                                 screenshare_frames: e,
                                 videohook_frames: t,
@@ -147,7 +147,7 @@ function(e, t, n) {
                                 hybrid_capture_method_switches: a,
                                 quartz_frames: o,
                                 screencapturekit_frames: h,
-                                go_live_camera_frames: f,
+                                go_live_camera_frames: _,
                                 total_frames: y,
                                 desktop_capturer_type: l,
                                 media_session_id: g,
@@ -195,8 +195,8 @@ function(e, t, n) {
                 gameName: u,
                 gameId: d,
                 exe: c,
-                distributor: f
-            } = (0, _.getRunningGameAnalytics)(t);
+                distributor: _
+            } = (0, f.getRunningGameAnalytics)(t);
             return {
                 channel_id: this.channelId,
                 rtc_connection_id: this.getRTCConnectionId(),
@@ -212,7 +212,7 @@ function(e, t, n) {
                 share_application_name: u,
                 share_application_id: d,
                 share_application_executable: c,
-                share_application_distributor: f,
+                share_application_distributor: _,
                 video_layout: this._videoStreamStats.getLayout(),
                 client_event_source: i,
                 is_broadcast: s,
@@ -242,7 +242,7 @@ function(e, t, n) {
             null != o && (s = this.isOwner ? o.getOutboundStats()[0] : o.getInboundStats(i), r = o.getNetworkStats(), a = this.isOwner ? o.getCodecUsageStats("streamer", this.userId) : o.getCodecUsageStats("receiver", i));
             let l = (0, d.areClipsEnabled)(),
                 u = c.default.getSettings(),
-                _ = this.isOwner ? {
+                f = this.isOwner ? {
                     clips_enabled: u.clipsEnabled && l,
                     clips_buffer_length: u.clipsLength
                 } : {},
@@ -256,14 +256,14 @@ function(e, t, n) {
                 ...this._videoStreamStats.getStats(),
                 ...this._soundshareStats.getStats(),
                 ...this._getStreamAnalyticsProperties(),
-                ..._,
+                ...f,
                 ...E,
                 channel_type: n,
                 reason: e,
                 max_viewers: this.analyticsContext.maxViewers,
                 hostname: this.hostname,
                 hardware_enabled: p.default.getHardwareH264(),
-                device_performance_class: this.isOwner ? (0, f.getMediaPerformanceClass)() : null
+                device_performance_class: this.isOwner ? (0, _.getMediaPerformanceClass)() : null
             })
         }
         _getExtraConnectionOptions() {

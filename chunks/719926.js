@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return _
         }
     }), n("424973"), n("808653"), n("702976");
     var i = n("891189"),
@@ -54,8 +54,8 @@ function(e, t, n) {
                                 })
                             }
                         } else if (i === a.ReactionTypes.VOTE) {
-                            var c, f;
-                            let e = null !== (f = null === (c = l.count_details) || void 0 === c ? void 0 : c.vote) && void 0 !== f ? f : 0,
+                            var c, _;
+                            let e = null !== (_ = null === (c = l.count_details) || void 0 === c ? void 0 : c.vote) && void 0 !== _ ? _ : 0,
                                 n = t && l.me_vote ? e : e + 1;
                             l = {
                                 ...l,
@@ -179,13 +179,13 @@ function(e, t, n) {
                 }),
                 {
                     count: c,
-                    burst_count: f,
-                    count_details: _
+                    burst_count: _,
+                    count_details: f
                 } = null !== (t = d[u]) && void 0 !== t ? t : {},
-                E = null !== (n = null == _ ? void 0 : _.normal) && void 0 !== n ? n : 0,
-                h = null !== (i = null == _ ? void 0 : _.burst) && void 0 !== i ? i : 0,
-                g = null !== (s = null == _ ? void 0 : _.vote) && void 0 !== s ? s : 0;
-            return -1 !== u && c <= 0 && f <= 0 && E <= 0 && h <= 0 && g <= 0 && d.splice(u, 1), this.set("reactions", d)
+                E = null !== (n = null == f ? void 0 : f.normal) && void 0 !== n ? n : 0,
+                h = null !== (i = null == f ? void 0 : f.burst) && void 0 !== i ? i : 0,
+                g = null !== (s = null == f ? void 0 : f.vote) && void 0 !== s ? s : 0;
+            return -1 !== u && c <= 0 && _ <= 0 && E <= 0 && h <= 0 && g <= 0 && d.splice(u, 1), this.set("reactions", d)
         }
         removeReactionsForEmoji(e) {
             return this.set("reactions", this.reactions.filter(t => !(0, o.emojiEquals)(t.emoji, e)))
@@ -227,5 +227,5 @@ function(e, t, n) {
             super(), this.id = e.id, this.type = e.type || d.MessageTypes.DEFAULT, this.channel_id = e.channel_id, this.author = e.author, this.content = e.content || "", this.customRenderedContent = e.customRenderedContent, this.attachments = e.attachments || [], this.embeds = e.embeds || [], this.mentions = e.mentions || [], this.mentionRoles = e.mentionRoles || [], this.mentionChannels = e.mentionChannels || [], this.mentioned = e.mentioned || !1, this.pinned = e.pinned || !1, this.mentionEveryone = e.mentionEveryone || !1, this.tts = e.tts || !1, this.codedLinks = e.codedLinks || [], this.giftCodes = e.giftCodes || [], this.timestamp = e.timestamp || new Date, this.editedTimestamp = e.editedTimestamp || null, this.state = e.state || d.MessageStates.SENT, this.nonce = e.nonce || null, this.blocked = e.blocked || !1, this.call = e.call || null, this.bot = e.bot || !1, this.webhookId = e.webhookId || null, this.reactions = e.reactions || [], this.applicationId = e.application_id || e.applicationId || null, this.application = e.application || null, this.activity = e.activity || null, this.activityInstance = e.activity_instance || e.activityInstance || null, this.messageReference = e.messageReference || null, this.flags = e.flags || 0, this.isSearchHit = e.hit || e.isSearchHit || !1, this.stickers = e.stickers || [], this.stickerItems = null !== (n = null !== (t = e.sticker_items) && void 0 !== t ? t : e.stickerItems) && void 0 !== n ? n : [], this.components = e.components, this.loggingName = e.loggingName || null, this.colorString = e.colorString, this.nick = e.nick, this.interaction = e.interaction || null, this.interactionData = e.interactionData || null, this.interactionMetadata = e.interactionMetadata || null, this.interactionError = e.interactionError || null, this.roleSubscriptionData = e.roleSubscriptionData, this.purchaseNotification = e.purchaseNotification, this.poll = e.poll, this.referralTrialOfferId = e.referralTrialOfferId || null, this.giftInfo = null !== (i = e.gift_info) && void 0 !== i ? i : e.giftInfo
         }
     }
-    var f = c
+    var _ = c
 }

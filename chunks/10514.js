@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("646718");
     let d = {},
         c = {},
-        f = new Set,
         _ = new Set,
+        f = new Set,
         E = {},
         h = {};
 
@@ -55,7 +55,7 @@ function(e, t, n) {
     m();
 
     function S() {
-        (0, a.clearObject)(d), (0, a.clearObject)(c), f.clear(), _.clear(), (0, a.clearObject)(E), (0, a.clearObject)(h), m()
+        (0, a.clearObject)(d), (0, a.clearObject)(c), _.clear(), f.clear(), (0, a.clearObject)(E), (0, a.clearObject)(h), m()
     }
     let v = [u.SubscriptionIntervalTypes.DAY, u.SubscriptionIntervalTypes.MONTH, u.SubscriptionIntervalTypes.YEAR];
     class T extends i.default.Store {
@@ -87,13 +87,13 @@ function(e, t, n) {
             return d[e]
         }
         isFetchingForSKU(e) {
-            return f.has(e)
+            return _.has(e)
         }
         isFetchingForSKUs(e) {
             return e.some(e => this.isFetchingForSKU(e))
         }
         isLoadedForSKU(e) {
-            return !!_.has(e) || !f.has(e) && null != c[e]
+            return !!f.has(e) || !_.has(e) && null != c[e]
         }
         isLoadedForSKUs(e) {
             return e.every(e => this.isLoadedForSKU(e))
@@ -105,7 +105,7 @@ function(e, t, n) {
             return u.ACTIVE_PREMIUM_SKUS.every(e => this.isLoadedForSKU(e))
         }
         ignoreSKUFetch(e) {
-            _.add(e)
+            f.add(e)
         }
         getPaymentSourcesForPlanId(e) {
             return E.hasOwnProperty(e) ? E[e] : null
@@ -128,20 +128,20 @@ function(e, t, n) {
             let {
                 skuId: t
             } = e;
-            f.add(t)
+            _.add(t)
         },
         SUBSCRIPTION_PLANS_FETCH_SUCCESS: function(e) {
             let {
                 skuId: t,
                 subscriptionPlans: n
             } = e;
-            c[t] = new Set, h[t] = new Set, n.forEach(p), f.delete(t), _.delete(t)
+            c[t] = new Set, h[t] = new Set, n.forEach(p), _.delete(t), f.delete(t)
         },
         SUBSCRIPTION_PLANS_FETCH_FAILURE: function(e) {
             let {
                 skuId: t
             } = e;
-            f.delete(t), _.delete(t)
+            _.delete(t), f.delete(t)
         },
         SUBSCRIPTION_PLANS_RESET: S,
         GIFT_CODE_RESOLVE_SUCCESS: function(e) {

@@ -23,10 +23,10 @@ function(e, t, n) {
             return c
         },
         MAX_CHOICE_LENGTH: function() {
-            return f
+            return _
         },
         MAX_TEXT_RESPONSE_LENGTH: function() {
-            return _
+            return f
         },
         MAX_PARAGRAPH_RESPONSE_LENGTH: function() {
             return E
@@ -50,8 +50,8 @@ function(e, t, n) {
         u = 300,
         d = 300,
         c = 8,
-        f = 150,
         _ = 150,
+        f = 150,
         E = 1e3,
         h = 300,
         g = "Membership Gating",

@@ -5,10 +5,10 @@ function(e, t, n) {
             return d
         },
         areClipsEnabled: function() {
-            return f
+            return _
         },
         useEnableClips: function() {
-            return _
+            return f
         },
         useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock: function() {
             return E
@@ -90,7 +90,7 @@ function(e, t, n) {
             }]
         });
 
-    function f() {
+    function _() {
         if (!(0, l.default)(a.default)) return !1;
         let {
             enableClips: e
@@ -120,7 +120,7 @@ function(e, t, n) {
         return e || t || n || i
     }
 
-    function _() {
+    function f() {
         let e = (0, l.default)(a.default),
             {
                 enableClips: t

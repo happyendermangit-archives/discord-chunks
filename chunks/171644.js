@@ -14,10 +14,10 @@ function(e, t, n) {
             return c
         },
         PLAYSTATION_LINK_DEST_ORIGIN: function() {
-            return f
+            return _
         },
         PLAYSTATION_CLIENT_SCOPES: function() {
-            return _
+            return f
         },
         XBOX_HANDOFF_SEARCH_PARAMS: function() {
             return E
@@ -43,8 +43,8 @@ function(e, t, n) {
         u = "https://www.xbox.com/en-US/apps/xbox-app-for-mobile",
         d = "https://login.live.com",
         c = [o.OAuth2Scopes.VOICE, o.OAuth2Scopes.DM_CHANNELS_READ, o.OAuth2Scopes.GUILDS, o.OAuth2Scopes.GUILDS_MEMBERS_READ, o.OAuth2Scopes.IDENTIFY, o.OAuth2Scopes.CONNECTIONS],
-        f = "https://my.account.sony.com",
-        _ = c,
+        _ = "https://my.account.sony.com",
+        f = c,
         E = e => {
             let {
                 guildId: t,

@@ -17,10 +17,10 @@ function(e, t, n) {
             return c
         },
         updateGuildRoleSubscriptionsSettings: function() {
-            return f
+            return _
         },
         getPriceTiers: function() {
-            return _
+            return f
         },
         getGuildRoleSubscriptionGroupListing: function() {
             return E
@@ -120,7 +120,7 @@ function(e, t, n) {
             url: r.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e)
         });
         return t.body
-    }, f = async (e, t) => {
+    }, _ = async (e, t) => {
         try {
             let n = await i.default.patch({
                 url: r.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e),
@@ -130,7 +130,7 @@ function(e, t, n) {
         } catch (e) {
             throw new s.APIError(e)
         }
-    }, _ = async e => {
+    }, f = async e => {
         try {
             let t = await i.default.get({
                 url: r.Endpoints.PRICE_TIERS,

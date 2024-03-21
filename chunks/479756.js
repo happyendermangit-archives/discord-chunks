@@ -29,15 +29,15 @@ function(e, t, n) {
         u = n("305961"),
         d = n("957255"),
         c = n("18494"),
-        f = n("282109"),
-        _ = n("599110"),
+        _ = n("282109"),
+        f = n("599110"),
         E = n("38654"),
         h = n("507950"),
         g = n("49111"),
         m = n("724210");
 
     function p(e, t) {
-        _.default.track(g.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
+        f.default.track(g.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
             num_roles: Object.keys(t.roles).length,
             ...(0, s.collectGuildAnalyticsMetadata)(e),
             is_viewing_as_member: t.type === h.ImpersonateType.NEW_MEMBER
@@ -50,7 +50,7 @@ function(e, t, n) {
 
     function S(e, t) {
         let n = E.default.getData(e);
-        null != n && n.type === t.type && (_.default.track(g.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
+        null != n && n.type === t.type && (f.default.track(g.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
             num_roles: Object.keys(n.roles).length,
             ...(0, s.collectGuildAnalyticsMetadata)(e),
             is_viewing_as_member: n.type === h.ImpersonateType.NEW_MEMBER
@@ -82,7 +82,7 @@ function(e, t, n) {
     }
 
     function I(e, t, n) {
-        let i = new Set(f.default.getOptedInChannels(e));
+        let i = new Set(_.default.getOptedInChannels(e));
         t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), S(e, {
             type: h.ImpersonateType.NEW_MEMBER,
             optInChannels: i

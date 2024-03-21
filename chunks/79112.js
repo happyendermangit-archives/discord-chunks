@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("315102"),
         d = n("730622"),
         c = n("49111"),
-        f = n("191349"),
-        _ = n("782340"),
+        _ = n("191349"),
+        f = n("782340"),
         E = {
             open() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -106,10 +106,10 @@ function(e, t, n) {
                             discriminator: null != m && "" !== m ? m : void 0
                         },
                         r = s.default.get(c.DEVICE_TOKEN),
-                        l = (0, f.getDevicePushProvider)();
+                        l = (0, _.getDevicePushProvider)();
                     null != l && null != r && (t.push_provider = l, t.push_token = r);
                     let u = s.default.get(c.DEVICE_VOIP_TOKEN);
-                    return null != f.DEVICE_PUSH_VOIP_PROVIDER && null != u && (t.push_voip_provider = f.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = u), i.default.patch({
+                    return null != _.DEVICE_PUSH_VOIP_PROVIDER && null != u && (t.push_voip_provider = _.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = u), i.default.patch({
                         url: c.Endpoints.ME,
                         oldFormErrors: !0,
                         body: t
@@ -117,7 +117,7 @@ function(e, t, n) {
                 }, {
                     checkEnabled: !1,
                     modalProps: {
-                        title: _.default.Messages.TWO_FA_CHANGE_ACCOUNT
+                        title: f.default.Messages.TWO_FA_CHANGE_ACCOUNT
                     },
                     hooks: {
                         onEarlyClose: () => r.default.dispatch({

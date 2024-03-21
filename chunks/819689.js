@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("979911"),
         d = n("716241"),
         c = n("802493"),
-        f = n("595525"),
-        _ = n("219788"),
+        _ = n("595525"),
+        f = n("219788"),
         E = n("139514"),
         h = n("312016"),
         g = n("605250"),
@@ -70,8 +70,8 @@ function(e, t, n) {
         eu = n("579033"),
         ed = n("782340");
     let ec = new g.default("MessageActionCreators"),
-        ef = new g.default("MessageQueue"),
-        e_ = !1;
+        e_ = new g.default("MessageQueue"),
+        ef = !1;
     class eE {
         markComplete() {
             this.completed = !0
@@ -326,9 +326,9 @@ function(e, t, n) {
                     focus: u,
                     isPreload: d,
                     skipLocalFetch: c,
-                    truncate: f
-                } = e, _ = Y.default.getChannel(t), E = p.default.isConnectedOrOverlay(), h = Date.now();
-                if (null != _ && _.type === eo.ChannelTypes.GUILD_STORE) return !1;
+                    truncate: _
+                } = e, f = Y.default.getChannel(t), E = p.default.isConnectedOrOverlay(), h = Date.now();
+                if (null != f && f.type === eo.ChannelTypes.GUILD_STORE) return !1;
                 if (t === el.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return;
                 if (ec.log("Fetching messages for ".concat(t, " between ").concat(n, " and ").concat(i, ". jump=").concat(JSON.stringify(a))), em._tryFetchMessagesCached({
                         channelId: t,
@@ -337,7 +337,7 @@ function(e, t, n) {
                         limit: s,
                         jump: a,
                         focus: u,
-                        truncate: f
+                        truncate: _
                     })) return;
                 x.default.fetchMessages.recordStart();
                 let g = null != a ? a : void 0;
@@ -368,7 +368,7 @@ function(e, t, n) {
                         u = null != i,
                         d = null == n && null == i,
                         c = null != v || r.length === s && (l || d),
-                        _ = null != v || u && r.length === s;
+                        f = null != v || u && r.length === s;
                     if (null != v) {
                         let e = Math.floor(s / 2),
                             n = [v, ...r.map(e => {
@@ -378,9 +378,9 @@ function(e, t, n) {
                                 return t
                             })].filter((e, t, n) => n.indexOf(e) === t).sort(er.default.compare),
                             i = n.indexOf(v);
-                        if (i < e && (c = !1), r.length - i < e && (_ = !1), _ && r.length > 0) {
+                        if (i < e && (c = !1), r.length - i < e && (f = !1), f && r.length > 0) {
                             let e = q.default.lastMessageId(t);
-                            r[0].id === e && (_ = !1)
+                            r[0].id === e && (f = !1)
                         }
                     }
                     ec.log("Fetched ".concat(r.length, " messages for ").concat(t, " isBefore:").concat(l, " isAfter:").concat(u)), T.markComplete(), o.default.dispatch({
@@ -390,11 +390,11 @@ function(e, t, n) {
                         isBefore: l,
                         isAfter: u,
                         hasMoreBefore: c,
-                        hasMoreAfter: _,
+                        hasMoreAfter: f,
                         limit: s,
                         jump: a,
                         isStale: !E || p.default.lastTimeConnectedChanged() >= h,
-                        truncate: f
+                        truncate: _
                     })
                 }), !0), () => (ec.log("Failed to fetch messages for ".concat(t)), o.default.dispatch({
                     type: "LOAD_MESSAGES_FAILURE",
@@ -413,7 +413,7 @@ function(e, t, n) {
                     x.default.addLocalMessages(e, -2);
                     return
                 }
-                let d = await (0, f.tryLoadAsync)(() => _.default.load(u, e, i));
+                let d = await (0, _.tryLoadAsync)(() => f.default.load(u, e, i));
                 if (null == d) {
                     x.default.addLocalMessages(e, -3);
                     return
@@ -438,7 +438,7 @@ function(e, t, n) {
                 if (null == s || null == i) return;
                 let r = l.default.getOrCreate(e);
                 if (r.hasMoreAfter) return;
-                let a = await (0, f.tryLoadAsync)(() => _.default.load(s, e, t));
+                let a = await (0, _.tryLoadAsync)(() => f.default.load(s, e, t));
                 if (null == a) return;
                 r = l.default.getOrCreate(e);
                 let u = null === (n = r.last()) || void 0 === n ? void 0 : n.id,
@@ -524,9 +524,9 @@ function(e, t, n) {
                 return (s = {
                     ...s,
                     nonce: l
-                }, N.default.recordMessageSendAttempt(e, l), j.default.isReady(e)) ? o() : i && e !== el.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (ef.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
+                }, N.default.recordMessageSendAttempt(e, l), j.default.isReady(e)) ? o() : i && e !== el.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (e_.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
                     j.default.whenReady(e, () => {
-                        ef.info("Channel ".concat(e, " is ready for sending now.")), o().then(t, n)
+                        e_.info("Channel ".concat(e, " is ready for sending now.")), o().then(t, n)
                     })
                 })) : o()
             },
@@ -619,14 +619,14 @@ function(e, t, n) {
             _sendMessage(e, t, n) {
                 var i, r;
                 let a = (0, U.default)(e);
-                if (null != a) return ef.info("Converting channel to a private channel"), a.then(e => {
-                    ef.info("Finished converting channel to a private channel"), em._sendMessage(e, t, n)
+                if (null != a) return e_.info("Converting channel to a private channel"), a.then(e => {
+                    e_.info("Finished converting channel to a private channel"), em._sendMessage(e, t, n)
                 });
                 let l = t.content,
                     {
                         invalidEmojis: c,
-                        validNonShortcutEmojis: f,
-                        tts: _ = !1
+                        validNonShortcutEmojis: _,
+                        tts: f = !1
                     } = t,
                     {
                         activityAction: g,
@@ -646,7 +646,7 @@ function(e, t, n) {
                     let t = (0, O.default)({
                         channelId: e,
                         content: l,
-                        tts: _,
+                        tts: f,
                         type: F,
                         messageReference: I,
                         allowedMentions: A,
@@ -656,9 +656,9 @@ function(e, t, n) {
                     });
                     (0, L.updateComboOnMessageSend)(e, t.id), null != S && (t.sticker_items = S.map(e => V.default.getStickerById(e)).filter(e => null != e)), em.receiveMessage(e, t, !0, n)
                 }
-                if (!e_ && null != c && c.length > 0) {
+                if (!ef && null != c && c.length > 0) {
                     let t, n;
-                    e_ = !0;
+                    ef = !0;
                     let i = J.default.getCurrentUser();
                     c.some(e => e.animated) && !es.default.canUseAnimatedEmojis(i) ? (t = ed.default.Messages.INVALID_ANIMATED_EMOJI_BODY_UPGRADE, n = "INVALID_ANIMATED_EMOJI_BODY") : W.default.canWithPartialContext(eo.Permissions.USE_EXTERNAL_EMOJIS, {
                         channelId: e
@@ -670,7 +670,7 @@ function(e, t, n) {
                         channelId: e,
                         content: l,
                         nonce: x,
-                        tts: _,
+                        tts: f,
                         message_reference: I,
                         allowed_mentions: A,
                         flags: y
@@ -693,7 +693,7 @@ function(e, t, n) {
                     let r = Date.now(),
                         a = u.default.length,
                         c = Math.floor(1e4 * Math.random());
-                    ef.info("Queueing message to be sent LogId:".concat(c)), u.default.enqueue(B, u => {
+                    e_.info("Queueing message to be sent LogId:".concat(c)), u.default.enqueue(B, u => {
                         let c = Date.now() - r;
                         if (u.ok) R.default.donateSentMessage(l, e), em.receiveMessage(e, u.body, !0, {
                             sendAnalytics: {
@@ -707,7 +707,7 @@ function(e, t, n) {
                             channelId: e
                         }), o.default.dispatch({
                             type: "EMOJI_TRACK_USAGE",
-                            emojiUsed: f
+                            emojiUsed: _
                         }), o.default.dispatch({
                             type: "STICKER_TRACK_USAGE",
                             stickerIds: S
@@ -791,11 +791,11 @@ function(e, t, n) {
                             })
                         }(l, e, u.body.id, null != m ? m : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser), t(u);
                         else {
-                            var _;
+                            var f;
                             ec.log("Failed to send message", {
                                 hasErr: u.hasErr,
                                 status: u.status,
-                                code: null === (_ = u.body) || void 0 === _ ? void 0 : _.code,
+                                code: null === (f = u.body) || void 0 === f ? void 0 : f.code,
                                 error: u.err
                             });
                             let t = !1;

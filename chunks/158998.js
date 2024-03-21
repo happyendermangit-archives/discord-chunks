@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getName: function() {
-            return _
+            return f
         },
         useName: function() {
             return E
@@ -44,18 +44,18 @@ function(e, t, n) {
         return !!(null != e && e.length > 0)
     }
 
-    function f(e) {
+    function _(e) {
         if (c(e.global_name)) return e.global_name;
         if (c(e.globalName)) return e.globalName;
         if (c(e.username)) return e.username;
         else return "???"
     }
 
-    function _(e) {
+    function f(e) {
         var t;
         if (null == e) return;
         let n = s.default.hidePersonalInformation,
-            i = f(e);
+            i = _(e);
         return n && i.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (i = l(i)), i
     }
 
@@ -63,7 +63,7 @@ function(e, t, n) {
         var t;
         let n = (0, i.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
         if (null == e) return;
-        let r = f(e);
+        let r = _(e);
         return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (r = l(r)), r
     }
 
@@ -144,7 +144,7 @@ function(e, t, n) {
         })
     }
     var A = {
-        getName: _,
+        getName: f,
         useName: E,
         getUserTag: T,
         useUserTag: function(e, t) {

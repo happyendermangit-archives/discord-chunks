@@ -12,8 +12,8 @@ function(e, t, n) {
         u = n("862337"),
         d = n("913144"),
         c = n("697796"),
-        f = n("766274"),
-        _ = n("922932"),
+        _ = n("766274"),
+        f = n("922932"),
         E = n("773336"),
         h = n("197881");
     let g = "BrowserHandoffStore",
@@ -21,7 +21,7 @@ function(e, t, n) {
         p = new u.Timeout;
 
     function S() {
-        null != i && null != s && (window.open("".concat(i, "&key=").concat(s)), _.default.focus(null, !0))
+        null != i && null != s && (window.open("".concat(i, "&key=").concat(s)), f.default.focus(null, !0))
     }
 
     function v() {
@@ -65,7 +65,7 @@ function(e, t, n) {
         },
         BROWSER_HANDOFF_UNAVAILABLE: v,
         BROWSER_HANDOFF_SET_USER: function(e) {
-            r = new f.default(e.user)
+            r = new _.default(e.user)
         },
         LOGIN: T,
         LOGIN_SUCCESS: T,

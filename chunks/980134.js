@@ -125,10 +125,10 @@ function(e, t, n) {
                 uri: u,
                 i: d,
                 overrideFilename: c,
-                overrideType: f
+                overrideType: _
             } = e,
-            _ = u.split("/"),
-            E = _[_.length - 1];
+            f = u.split("/"),
+            E = f[f.length - 1];
         E = null !== (i = null === (n = E.split("?")) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== i ? i : "";
         let h = r.find(e => e.reName.test(E));
         if (null == h && null != c && (h = r.find(e => e.reName.test(c))), null != h && null != c) {
@@ -139,9 +139,9 @@ function(e, t, n) {
         return {
             uri: u,
             filename: l,
-            type: null !== (s = null != f ? f : null == h ? void 0 : h.type) && void 0 !== s ? s : "unknown",
-            isVideo: -1 !== (null !== (a = null != f ? f : null == h ? void 0 : h.name(d)) && void 0 !== a ? a : "").indexOf("video"),
-            isImage: -1 !== (null !== (o = null != f ? f : null == h ? void 0 : h.name(d)) && void 0 !== o ? o : "").indexOf("image")
+            type: null !== (s = null != _ ? _ : null == h ? void 0 : h.type) && void 0 !== s ? s : "unknown",
+            isVideo: -1 !== (null !== (a = null != _ ? _ : null == h ? void 0 : h.name(d)) && void 0 !== a ? a : "").indexOf("video"),
+            isImage: -1 !== (null !== (o = null != _ ? _ : null == h ? void 0 : h.name(d)) && void 0 !== o ? o : "").indexOf("image")
         }
     }
 }

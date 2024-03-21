@@ -154,7 +154,7 @@ function(e, t, n) {
                     numRateSamples: T
                 } = g;
                 if (void 0 !== v && S > v) {
-                    var t, n, i, s, r, a, o, l, u, d, c, f, _, E;
+                    var t, n, i, s, r, a, o, l, u, d, c, _, f, E;
                     let I = S - v,
                         A = {
                             userId: h,
@@ -163,8 +163,8 @@ function(e, t, n) {
                             merged: null !== (a = p.merged) && void 0 !== a ? a : 0 - (null !== (r = m.merged) && void 0 !== r ? r : 0),
                             expanded: null !== (l = p.expanded) && void 0 !== l ? l : 0 - (null !== (o = m.expanded) && void 0 !== o ? o : 0),
                             accelerated: null !== (d = p.accelerated) && void 0 !== d ? d : 0 - (null !== (u = m.accelerated) && void 0 !== u ? u : 0),
-                            preemptiveExpanded: null !== (f = p.preemptiveExpanded) && void 0 !== f ? f : 0 - (null !== (c = m.preemptiveExpanded) && void 0 !== c ? c : 0),
-                            cng: null !== (E = p.cng) && void 0 !== E ? E : 0 - (null !== (_ = m.cng) && void 0 !== _ ? _ : 0),
+                            preemptiveExpanded: null !== (_ = p.preemptiveExpanded) && void 0 !== _ ? _ : 0 - (null !== (c = m.preemptiveExpanded) && void 0 !== c ? c : 0),
+                            cng: null !== (E = p.cng) && void 0 !== E ? E : 0 - (null !== (f = m.cng) && void 0 !== f ? f : 0),
                             accelerateRate: g.accelerateRateSum / T,
                             expandRate: g.expandRateSum / T,
                             preemptiveExpandRate: g.preemptiveExpandRateSum / T,
@@ -210,7 +210,7 @@ function(e, t, n) {
                 }), r.forEach(e.rtp.inbound, (t, n) => {
                     r.forEach(t, t => {
                         if ("audio" === t.type) {
-                            var i, s, a, o, l, u, d, c, f, _, E, h, g, m, p, S, v;
+                            var i, s, a, o, l, u, d, c, _, f, E, h, g, m, p, S, v;
                             let T = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
                                 I = t.packetsReceived,
                                 A = t.packetsLost,
@@ -239,7 +239,7 @@ function(e, t, n) {
                                     decryptSuccessCount: null !== (u = t.decryptSuccessCount) && void 0 !== u ? u : 0,
                                     decryptFailureCount: null !== (d = t.decryptFailureCount) && void 0 !== d ? d : 0,
                                     decryptDuration: null !== (c = t.decryptDuration) && void 0 !== c ? c : 0,
-                                    decryptAttempts: null !== (f = t.decryptAttempts) && void 0 !== f ? f : 0
+                                    decryptAttempts: null !== (_ = t.decryptAttempts) && void 0 !== _ ? _ : 0
                                 };
                             if (null != this.inboundStats[n]) {
                                 let e = I - this.inboundStats[n].packetsReceived,
@@ -264,7 +264,7 @@ function(e, t, n) {
                                     previous: this.periodicInboundStats[n].previous,
                                     currentTimestampMs: Date.now(),
                                     current: D,
-                                    accelerateRateSum: this.periodicInboundStats[n].accelerateRateSum + (null !== (_ = t.accelerateRate) && void 0 !== _ ? _ : 0),
+                                    accelerateRateSum: this.periodicInboundStats[n].accelerateRateSum + (null !== (f = t.accelerateRate) && void 0 !== f ? f : 0),
                                     expandRateSum: this.periodicInboundStats[n].expandRateSum + (null !== (E = t.expandRate) && void 0 !== E ? E : 0),
                                     preemptiveExpandRateSum: this.periodicInboundStats[n].preemptiveExpandRateSum + (null !== (h = t.preemptiveExpandRate) && void 0 !== h ? h : 0),
                                     speechExpandRateSum: this.periodicInboundStats[n].speechExpandRateSum + (null !== (g = t.speechExpandRate) && void 0 !== g ? g : 0),

@@ -19,8 +19,8 @@ function(e, t, n) {
         let {
             selectedGuildId: n,
             selectedChannelId: c,
-            onChannelChange: f,
-            error: _
+            onChannelChange: _,
+            error: f
         } = e, [E, h] = s.useState(null), g = s.useRef(!1);
         if (s.useEffect(() => {
                 async function e(e) {
@@ -30,10 +30,10 @@ function(e, t, n) {
                         channels: t
                     }), g.current = !0)
                 }
-                h(null), null == n ? f(null) : e(n)
-            }, [f, n]), s.useEffect(() => {
-                if (!!g.current) null == E ? null != c && f(null) : !E.channels.some(e => e.id === c) && f(null)
-            }, [E, f, c, n]), null == n) return null;
+                h(null), null == n ? _(null) : e(n)
+            }, [_, n]), s.useEffect(() => {
+                if (!!g.current) null == E ? null != c && _(null) : !E.channels.some(e => e.id === c) && _(null)
+            }, [E, _, c, n]), null == n) return null;
         let m = null == E || E.guildId !== n,
             p = m ? [] : (null !== (t = null == E ? void 0 : E.channels) && void 0 !== t ? t : []).map(e => ({
                 value: e.id,
@@ -45,14 +45,14 @@ function(e, t, n) {
                 variant: "heading-deprecated-12/semibold",
                 className: d.sectionLabel,
                 children: u.default.Messages.OAUTH2_ADD_WEBHOOK_INCOMING
-            }), null != _ && "" !== _ ? (0, i.jsx)(a.Text, {
+            }), null != f && "" !== f ? (0, i.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "text-danger",
-                children: _
+                children: f
             }) : null, (0, i.jsx)(o.Select, {
                 className: d.select,
                 maxVisibleItems: 5,
-                select: f,
+                select: _,
                 placeholder: u.default.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
                 options: p,
                 isSelected: e => e === c,

@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("446674"),
         d = n("872717"),
         c = n("95410"),
-        f = n("913144"),
-        _ = n("798609"),
+        _ = n("913144"),
+        f = n("798609"),
         E = n("91131"),
         h = n("821316"),
         g = n("605250"),
@@ -59,7 +59,7 @@ function(e, t, n) {
         et = null;
 
     function en(e) {
-        let t = null != o.default.getToken(),
+        let t = null != o.getToken(),
             n = null != c.default.get(C.TOKEN_KEY);
         R.verbose(e, {
             tokenManagerHasToken: t,
@@ -70,7 +70,7 @@ function(e, t, n) {
     function ei() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
         if (w = c.default.get(O), null != $) return $;
-        let t = null != w ? w : o.default.getToken();
+        let t = null != w ? w : o.getToken();
         !(!(0, m.isValidFingerprintRoute)() || !e && null != t || I.default.isHandoffAvailable()) && es({
             withGuildExperiments: !0
         })
@@ -97,17 +97,17 @@ function(e, t, n) {
                 assignments: n,
                 guild_experiments: i
             } = e.body;
-            t && f.default.dispatch({
+            t && _.default.dispatch({
                 type: "FINGERPRINT",
                 fingerprint: t
-            }), f.default.dispatch({
+            }), _.default.dispatch({
                 type: "EXPERIMENTS_FETCH_SUCCESS",
                 fingerprint: t,
                 experiments: n,
                 guildExperiments: i
             }), $ = null
         }, () => {
-            $ = null, f.default.dispatch({
+            $ = null, _.default.dispatch({
                 type: "EXPERIMENTS_FETCH_FAILURE"
             })
         })
@@ -118,15 +118,15 @@ function(e, t, n) {
     }
 
     function ea(e, t) {
-        en("setAuthToken called."), o.default.setToken(e, t)
+        en("setAuthToken called."), o.setToken(e, t)
     }
 
     function eo() {
-        en("removeAuthToken called."), o.default.removeToken()
+        en("removeAuthToken called."), o.removeToken()
     }
 
     function el() {
-        x = !0, eu(), f.default.wait(() => {
+        x = !0, eu(), _.default.wait(() => {
             (0, m.transitionTo)(C.Routes.REGISTER)
         })
     }
@@ -139,7 +139,7 @@ function(e, t, n) {
     }
     class ed extends u.default.Store {
         initialize() {
-            L = c.default.get(P), M = c.default.get(D), ee = c.default.get("login_cache"), null == o.default.getToken() && ei(), this.addChangeListener(() => (0, E.setClientState)(L))
+            L = c.default.get(P), M = c.default.get(D), ee = c.default.get("login_cache"), null == o.getToken() && ei(), this.addChangeListener(() => (0, E.setClientState)(L))
         }
         getEmail() {
             return M
@@ -216,13 +216,13 @@ function(e, t, n) {
             }), e
         }
         hasTOTPEnabled() {
-            return B.includes(_.AuthenticatorType.TOTP)
+            return B.includes(f.AuthenticatorType.TOTP)
         }
         hasSMSEnabled() {
-            return B.includes(_.AuthenticatorType.SMS)
+            return B.includes(f.AuthenticatorType.SMS)
         }
         hasWebAuthnEnabled() {
-            return B.includes(_.AuthenticatorType.WEBAUTHN)
+            return B.includes(f.AuthenticatorType.WEBAUTHN)
         }
         getMaskedPhone() {
             return z
@@ -248,7 +248,7 @@ function(e, t, n) {
         }
     }
     ed.displayName = "AuthenticationStore";
-    var ec = new ed(f.default, {
+    var ec = new ed(_.default, {
         CONNECTION_OPEN: function(e) {
             var t;
             let {
@@ -471,5 +471,5 @@ function(e, t, n) {
         CLOSE_SUSPENDED_USER: function() {
             et = null, G = C.LoginStates.NONE, eu(), setImmediate(() => (0, m.transitionTo)(C.Routes.DEFAULT_LOGGED_OUT))
         }
-    }, f.DispatchBand.Early)
+    }, _.DispatchBand.Early)
 }

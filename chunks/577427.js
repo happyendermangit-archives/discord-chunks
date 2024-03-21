@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("446674"),
         d = n("913144"),
         c = n("299285"),
-        f = n("161454"),
-        _ = n("860285"),
+        _ = n("161454"),
+        f = n("860285"),
         E = n("915639"),
         h = n("86878"),
         g = n("546463"),
@@ -74,10 +74,10 @@ function(e, t, n) {
     }
 
     function K() {
-        let e = new Set(f.default.getRunningVerifiedApplicationIds()),
+        let e = new Set(_.default.getRunningVerifiedApplicationIds()),
             t = {},
             n = new Set,
-            i = f.default.getGamesSeen(!1, !1).map(e => {
+            i = _.default.getGamesSeen(!1, !1).map(e => {
                 let n = g.default.getGameByGameData(e);
                 return null != n ? (t[n.id] = e.lastFocused * A.default.Millis.SECOND, n.id) : null
             }),
@@ -96,11 +96,11 @@ function(e, t, n) {
                     lastPlayed: u,
                     supportsCloudSync: null != e && T.default.supportsCloudSync(e.id, e.branchId),
                     isNew: (r = e, a = u, null != r && l(r.createdAt).isAfter(M) && 0 === a),
-                    isLaunching: _.default.launchingGames.has(e.id),
+                    isLaunching: f.default.launchingGames.has(e.id),
                     isRunning: i.has(e.id),
                     isLaunchable: (0, D.isLaunchable)({
                         LibraryApplicationStore: m.default,
-                        LaunchableGameStore: _.default,
+                        LaunchableGameStore: f.default,
                         DispatchApplicationStore: T.default,
                         ConnectedAppsStore: h.default,
                         applicationId: e.id,
@@ -121,11 +121,11 @@ function(e, t, n) {
                     lastPlayed: r,
                     supportsCloudSync: !1,
                     isNew: !1,
-                    isLaunching: _.default.launchingGames.has(e),
+                    isLaunching: f.default.launchingGames.has(e),
                     isRunning: i.has(e),
                     isLaunchable: (0, D.isLaunchable)({
                         LibraryApplicationStore: m.default,
-                        LaunchableGameStore: _.default,
+                        LaunchableGameStore: f.default,
                         DispatchApplicationStore: T.default,
                         ConnectedAppsStore: h.default,
                         applicationId: e,
@@ -142,7 +142,7 @@ function(e, t, n) {
     }
     class j extends u.default.Store {
         initialize() {
-            this.syncWith([c.default, g.default, _.default, f.default, T.default, I.default, m.default, S.default, p.default, h.default], K, 200), this.syncWith([v.default, E.default], () => !0)
+            this.syncWith([c.default, g.default, f.default, _.default, T.default, I.default, m.default, S.default, p.default, h.default], K, 200), this.syncWith([v.default, E.default], () => !0)
         }
         get applicationFilterQuery() {
             return U

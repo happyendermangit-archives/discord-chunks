@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("222007");
     var i = n("446674"),
@@ -70,7 +70,7 @@ function(e, t, n) {
                 return
             }
             if (null != e) {
-                let t = await f(e);
+                let t = await _(e);
                 null == t || this.databases.has(e) ? (u.verbose("discarding speculative database (".concat(e, " → ").concat(t, ")")), null == t || t.close()) : (u.verbose("added speculative database (".concat(e, " → ").concat(t, ")")), this.databases.set(e, t), this.emitChange())
             }
         }
@@ -87,9 +87,9 @@ function(e, t, n) {
     function c(e) {
         return "@account.".concat(e)
     }
-    async function f(e) {
+    async function _(e) {
         var t;
         return null
     }
-    var _ = new d
+    var f = new d
 }

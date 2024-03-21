@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("107728"),
         d = n("697917"),
         c = n("886074"),
-        f = n("772280"),
-        _ = n("389802"),
+        _ = n("772280"),
+        f = n("389802"),
         E = n("639826");
 
     function h(e) {
@@ -49,7 +49,7 @@ function(e, t, n) {
             T && ((0, d.ensureItemVisible)(U), null == y || y())
         }, [T, y]), (0, i.jsxs)(o.Clickable, {
             innerRef: U,
-            className: a(E.item, E.labelContainer, _.MENU_ITEM_COLORS[t], N, {
+            className: a(E.item, E.labelContainer, f.MENU_ITEM_COLORS[t], N, {
                 [E.disabled]: v,
                 [E.focused]: T,
                 [null != R ? R : ""]: T
@@ -90,7 +90,7 @@ function(e, t, n) {
                 })
             }), S && (0, i.jsxs)("div", {
                 className: E.iconContainer,
-                children: [(0, i.jsx)(f.default, {
+                children: [(0, i.jsx)(_.default, {
                     className: a(E.caret, O)
                 }), M && (0, i.jsx)(c.default, {
                     className: E.sparkles

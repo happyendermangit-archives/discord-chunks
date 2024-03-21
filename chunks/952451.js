@@ -15,8 +15,8 @@ function(e, t, n) {
         u = n("233069"),
         d = n("299039"),
         c = n("271938"),
-        f = n("42203"),
-        _ = n("305961"),
+        _ = n("42203"),
+        f = n("305961"),
         E = n("957255"),
         h = n("660478"),
         g = n("18494"),
@@ -114,7 +114,7 @@ function(e, t, n) {
             s = U(n, i),
             r = !1;
         if (t.forEach(e => {
-                let t = f.default.getChannel(e);
+                let t = _.default.getChannel(e);
                 if (null == t) {
                     delete s.mentionCounts[e];
                     return
@@ -123,7 +123,7 @@ function(e, t, n) {
                 let i = h.default.getMentionCount(e);
                 null !== n && !r && h.default.hasUnread(t.id) && L(t, i, !0) && (r = !0, s.unreadChannelId = t.id), i > 0 && L(t, i) ? s.mentionCounts[t.id] = i : delete s.mentionCounts[t.id]
             }), s.unreadByType[I.ReadStateTypes.CHANNEL] = r, s.unreadByType[I.ReadStateTypes.CHANNEL] !== i.unreadByType[I.ReadStateTypes.CHANNEL] && !s.unreadByType[I.ReadStateTypes.CHANNEL]) {
-            let e = f.default.getChannel(i.unreadChannelId);
+            let e = _.default.getChannel(i.unreadChannelId);
             if (!(null != e && !t.includes(e.id) && h.default.hasUnread(e.id) && L(e))) return x(n);
             null != n && y.add(n), s.unreadByType[I.ReadStateTypes.CHANNEL] = !0
         }
@@ -141,7 +141,7 @@ function(e, t, n) {
         let n = M(e),
             i = R(n);
         if (null == n) {
-            let e = f.default.getMutablePrivateChannels();
+            let e = _.default.getMutablePrivateChannels();
             for (let t in e) {
                 let n = e[t],
                     s = h.default.getMentionCount(t);
@@ -153,29 +153,29 @@ function(e, t, n) {
             let s = p.default.getMutedChannels(n),
                 l = p.default.getChannelOverrides(n),
                 d = (0, r.isOptInEnabledForGuild)(n),
-                c = f.default.getMutableBasicGuildChannelsForGuild(n);
+                c = _.default.getMutableBasicGuildChannelsForGuild(n);
             for (let t in c) {
                 let n = c[t],
                     r = e || s.has(t) || null != n.parent_id && s.has(n.parent_id),
                     a = i.unreadByType[I.ReadStateTypes.CHANNEL],
                     {
                         mentionCount: o,
-                        unread: f
+                        unread: _
                     } = h.default.getGuildChannelUnreadState(n, d, l, r, a),
-                    _ = o > 0;
-                if (!_ && r) continue;
-                let g = !a && (!r || _) && f;
-                if (g || _) {
+                    f = o > 0;
+                if (!f && r) continue;
+                let g = !a && (!r || f) && _;
+                if (g || f) {
                     let e = function(e, t, n) {
                         if ((0, u.isGuildVocalChannelType)(e.type) && 0 === t || !E.default.canBasicChannel((0, u.getBasicAccessPermissions)(e.type), e) || P(e, t, n)) return !1;
                         return !("flags" in e && e.hasFlag(T.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && (t > 0 || p.default.resolveUnreadSetting(e) === I.UnreadSetting.ALL_MESSAGES)
                     }(n, o, d);
-                    e && (g && (i.unreadByType[I.ReadStateTypes.CHANNEL] = !0, i.unreadChannelId = t), _ && (i.mentionCount += o, i.mentionCounts[n.id] = o))
+                    e && (g && (i.unreadByType[I.ReadStateTypes.CHANNEL] = !0, i.unreadChannelId = t), f && (i.mentionCount += o, i.mentionCounts[n.id] = o))
                 }
             }
-            let _ = a.default.getActiveJoinedThreadsForGuild(n);
-            for (let t in _)
-                for (let n in _[t]) {
+            let f = a.default.getActiveJoinedThreadsForGuild(n);
+            for (let t in f)
+                for (let n in f[t]) {
                     !i.unreadByType[I.ReadStateTypes.CHANNEL] && h.default.hasUnread(n) && !o.default.isMuted(n) && !e && (i.unreadByType[I.ReadStateTypes.CHANNEL] = !0, i.unreadChannelId = n);
                     let t = h.default.getMentionCount(n);
                     t > 0 && (i.mentionCount += t, i.mentionCounts[n] = t)
@@ -213,7 +213,7 @@ function(e, t, n) {
                 if (null != e.mention_count && e.mention_count > 0) {
                     if (null == e.read_state_type || e.read_state_type === I.ReadStateTypes.CHANNEL) {
                         var t;
-                        s.add(null === (t = f.default.getChannel(e.id)) || void 0 === t ? void 0 : t.guild_id)
+                        s.add(null === (t = _.default.getChannel(e.id)) || void 0 === t ? void 0 : t.guild_id)
                     } else s.add(e.id)
                 }
             }), x(null), t)) x(e.id, i ? s.has(e.id) : void 0)
@@ -221,7 +221,7 @@ function(e, t, n) {
 
     function Y() {
         C = {}, y = new Set, x(null);
-        let e = Object.values(_.default.getGuildIds());
+        let e = Object.values(f.default.getGuildIds());
         for (let t of e) x(t)
     }
 
@@ -250,7 +250,7 @@ function(e, t, n) {
     }
 
     function z() {
-        let e = f.default.getChannel(g.default.getChannelId());
+        let e = _.default.getChannel(g.default.getChannelId());
         return null != e && G(e.getGuildId(), [e.id])
     }
 
@@ -265,14 +265,14 @@ function(e, t, n) {
     function X(e) {
         let {
             channelId: t
-        } = e, n = f.default.getChannel(t);
+        } = e, n = _.default.getChannel(t);
         return null != n && G(n.getGuildId(), [n.id])
     }
 
     function Q(e) {
         let {
             channelId: t
-        } = e, n = f.default.getChannel(t);
+        } = e, n = _.default.getChannel(t);
         if (null == n) return !1;
         if (null != n.guild_id) {
             let e = O(n.guild_id),
@@ -313,9 +313,9 @@ function(e, t, n) {
                 channelId: t
             } = e;
             return t
-        }).filter(e => null != f.default.getChannel(e)).groupBy(e => {
+        }).filter(e => null != _.default.getChannel(e)).groupBy(e => {
             var t;
-            return null === (t = f.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
+            return null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
         }).reduce((e, t, n) => G(n, t) || e, !1)
     }
 
@@ -396,14 +396,14 @@ function(e, t, n) {
         return d.default.keys(C).reduce((e, t) => n.has(t) && x(t) || e, !1)
     }
 
-    function ef() {
+    function e_() {
         for (let e in C) {
             let t = C[e];
             t.ncMentionCount = 0
         }
     }
 
-    function e_(e) {
+    function ef(e) {
         let {
             guildId: t
         } = e;
@@ -411,7 +411,7 @@ function(e, t, n) {
     }
     class eE extends m.default {
         initialize() {
-            this.waitFor(f.default, g.default, h.default, E.default, c.default, S.default, p.default, a.default, o.default)
+            this.waitFor(_.default, g.default, h.default, E.default, c.default, S.default, p.default, a.default, o.default)
         }
         loadCache() {
             let e = this.readSnapshot(eE.LATEST_SNAPSHOT_VERSION);
@@ -448,7 +448,7 @@ function(e, t, n) {
             return O(e)
         }
         getGuildHasUnreadIgnoreMuted(e) {
-            let t = f.default.getMutableGuildChannelsForGuild(e);
+            let t = _.default.getMutableGuildChannelsForGuild(e);
             for (let e in t) {
                 let n = t[e];
                 if (null != n) {
@@ -457,7 +457,7 @@ function(e, t, n) {
             }
             let n = a.default.getActiveJoinedThreadsForGuild(e);
             for (let e in n) {
-                let t = f.default.getChannel(e);
+                let t = _.default.getChannel(e);
                 if (null != t && L(t)) {
                     for (let t in n[e])
                         if (h.default.hasUnread(t)) return !0
@@ -526,10 +526,10 @@ function(e, t, n) {
                 PASSIVE_UPDATE_V1: el,
                 GUILD_MEMBER_UPDATE: q,
                 USER_GUILD_SETTINGS_FULL_UPDATE: ec,
-                USER_GUILD_SETTINGS_CHANNEL_UPDATE: e_,
-                USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: e_,
-                USER_GUILD_SETTINGS_GUILD_UPDATE: e_,
-                USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: e_,
+                USER_GUILD_SETTINGS_CHANNEL_UPDATE: ef,
+                USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: ef,
+                USER_GUILD_SETTINGS_GUILD_UPDATE: ef,
+                USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: ef,
                 GUILD_FEATURE_ACK: es,
                 GUILD_SCHEDULED_EVENT_CREATE: en,
                 GUILD_SCHEDULED_EVENT_UPDATE: en,
@@ -543,7 +543,7 @@ function(e, t, n) {
                 VOICE_CHANNEL_SELECT: X,
                 ENABLE_AUTOMATIC_ACK: X,
                 RESORT_THREADS: X,
-                NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: ef,
+                NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: e_,
                 TRY_ACK: X
             })
         }

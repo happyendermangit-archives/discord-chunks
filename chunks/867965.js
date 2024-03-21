@@ -86,8 +86,8 @@ function(e, t, n) {
         u = n("599110"),
         d = n("773336"),
         c = n("349778"),
-        f = n("430475"),
-        _ = n("994810"),
+        _ = n("430475"),
+        f = n("994810"),
         E = n("688169"),
         h = n("318321"),
         g = n("49111");
@@ -200,9 +200,9 @@ function(e, t, n) {
         } = e, d = o.default.getChannel(u);
         if (null == d) return;
         let c = l.default.getThreadSettings(u),
-            f = null === (t = d.template) || void 0 === t ? void 0 : t.trim(),
-            _ = l.default.getDraft(u, l.DraftType.FirstThreadMessage),
-            E = null == _ || 0 === _.length || (null == _ ? void 0 : _.trim()) === f,
+            _ = null === (t = d.template) || void 0 === t ? void 0 : t.trim(),
+            f = l.default.getDraft(u, l.DraftType.FirstThreadMessage),
+            E = null == f || 0 === f.length || (null == f ? void 0 : f.trim()) === _,
             m = (null == c ? void 0 : c.appliedTags) == null || (null == c ? void 0 : null === (n = c.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
             p = (null == c ? void 0 : c.name) == null || (null == c ? void 0 : null === (r = c.name) || void 0 === r ? void 0 : null === (i = r.trim()) || void 0 === i ? void 0 : i.length) === 0;
         (!E || !m || !p) && s.default.trackWithMetadata(g.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
@@ -246,9 +246,9 @@ function(e, t, n) {
                 channel_id: n
             })
         }
-        let a = f.default.isLoading(i);
-        a ? f.default.addConditionalChangeListener(() => {
-            let e = f.default.isLoading(i);
+        let a = _.default.isLoading(i);
+        a ? _.default.addConditionalChangeListener(() => {
+            let e = _.default.isLoading(i);
             return !!e || (r(), !1)
         }) : r()
     }
@@ -305,7 +305,7 @@ function(e, t, n) {
             }),
             guild_id: t,
             channel_id: n,
-            is_search_result: null != _.default.getSearchResults(n),
+            is_search_result: null != f.default.getSearchResults(n),
             location: r
         })
     }

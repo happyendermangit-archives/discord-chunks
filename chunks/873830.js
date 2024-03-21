@@ -17,22 +17,22 @@ function(e, t, n) {
                 maxValue: u = 100,
                 onChange: d,
                 renderValue: c = o,
-                "aria-label": f
-            } = e, _ = s.useRef(null);
+                "aria-label": _
+            } = e, f = s.useRef(null);
             return s.useImperativeHandle(t, () => ({
                 focus: () => {
                     var e;
-                    return null === (e = _.current) || void 0 === e ? void 0 : e.focus()
+                    return null === (e = f.current) || void 0 === e ? void 0 : e.focus()
                 },
                 blur: () => {
                     var e;
-                    return null === (e = _.current) || void 0 === e ? void 0 : e.blur()
+                    return null === (e = f.current) || void 0 === e ? void 0 : e.blur()
                 },
                 activate: () => !1
             }), []), (0, i.jsx)("div", {
                 className: a.sliderContainer,
                 children: (0, i.jsx)(r.Slider, {
-                    ref: _,
+                    ref: f,
                     mini: !0,
                     handleSize: 16,
                     className: a.slider,
@@ -43,7 +43,7 @@ function(e, t, n) {
                     asValueChanges: d,
                     onValueRender: c,
                     orientation: "horizontal",
-                    "aria-label": f
+                    "aria-label": _
                 })
             })
         })

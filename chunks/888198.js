@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("235004"),
         d = n("42203"),
         c = n("305961"),
-        f = n("697218"),
-        _ = n("387111"),
+        _ = n("697218"),
+        f = n("387111"),
         E = n("158998"),
         h = n("946897"),
         g = n("632886"),
@@ -209,11 +209,11 @@ function(e, t, n) {
                         type: "mention",
                         id: e[1]
                     };
-                    let r = f.default.getUser(e[1]),
+                    let r = _.default.getUser(e[1]),
                         a = d.default.getChannel(n.channelId);
                     if (null != r && (s = r.id, i = r.toString(), null != a)) {
                         var l;
-                        i = null !== (l = _.default.getNickname(a.getGuildId(), n.channelId, r)) && void 0 !== l ? l : E.default.getName(r)
+                        i = null !== (l = f.default.getNickname(a.getGuildId(), n.channelId, r)) && void 0 !== l ? l : E.default.getName(r)
                     }
                     null == r && "@Clyde" === e[0] && (0, o.getClydeEnabled)(U(n), a) && (s = N.CLYDE_AI_USER_ID);
                     let u = e[1],

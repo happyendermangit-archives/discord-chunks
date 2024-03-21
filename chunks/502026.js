@@ -21,18 +21,18 @@ function(e, t, n) {
                     tag: s = "div",
                     selectable: a = !1,
                     className: o,
-                    lineClamp: f,
-                    color: _,
+                    lineClamp: _,
+                    color: f,
                     tabularNumbers: E = !1,
                     scaleFontToUserSetting: h = !1,
                     ...g
                 } = e,
                 m = "",
                 p = {};
-            if (null != f && (1 === f ? m = u.lineClamp1 : (m = u.lineClamp2Plus, p = {
-                    lineClamp: f,
-                    WebkitLineClamp: f
-                })), void 0 !== _) switch (_) {
+            if (null != _ && (1 === _ ? m = u.lineClamp1 : (m = u.lineClamp2Plus, p = {
+                    lineClamp: _,
+                    WebkitLineClamp: _
+                })), void 0 !== f) switch (f) {
                 case "none":
                     t = void 0;
                     break;
@@ -41,7 +41,7 @@ function(e, t, n) {
                     break;
                 default:
                     var S;
-                    t = null === (S = l.default.colors[c[_]]) || void 0 === S ? void 0 : S.css
+                    t = null === (S = l.default.colors[c[f]]) || void 0 === S ? void 0 : S.css
             }
             let v = {
                 color: t,
@@ -50,7 +50,7 @@ function(e, t, n) {
             };
             return (0, i.jsx)(s, {
                 className: r({
-                    [u.defaultColor]: void 0 === _,
+                    [u.defaultColor]: void 0 === f,
                     [u.selectable]: a,
                     [u.tabularNumbers]: E,
                     [d.fontScaling]: h

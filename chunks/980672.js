@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("413197"),
         d = n("718776"),
         c = n("708253"),
-        f = n("737185");
-    let _ = {
+        _ = n("737185");
+    let f = {
             mass: 1,
             tension: 250
         },
@@ -48,7 +48,7 @@ function(e, t, n) {
                 state: y,
                 opacity: N
             } = (0, o.useSpring)({
-                config: _,
+                config: f,
                 opacity: h ? .3 : 1,
                 state: T ? r ? .7 : .3 : r ? 1 : 0
             });
@@ -57,9 +57,9 @@ function(e, t, n) {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsxs)(o.animated.div, {
-                    className: a(f.container, g, {
-                        [f.checked]: r,
-                        [f.disabled]: h
+                    className: a(_.container, g, {
+                        [_.checked]: r,
+                        [_.disabled]: h
                     }),
                     onMouseDown: () => !h && I(!0),
                     onMouseUp: () => I(!1),
@@ -71,7 +71,7 @@ function(e, t, n) {
                         })
                     },
                     children: [(0, i.jsxs)(o.animated.svg, {
-                        className: f.slider,
+                        className: _.slider,
                         viewBox: "0 0 28 20",
                         preserveAspectRatio: "xMinYMid meet",
                         style: {
@@ -130,7 +130,7 @@ function(e, t, n) {
                         ref: e => {
                             v.current = e, null != p && (p.current = e)
                         },
-                        className: f.input,
+                        className: _.input,
                         tabIndex: h ? -1 : 0,
                         onKeyDown: function(e) {
                             if (!h && !e.repeat)(" " === e.key || "Enter" === e.key) && I(!0)

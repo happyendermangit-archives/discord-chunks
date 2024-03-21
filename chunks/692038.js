@@ -24,8 +24,8 @@ function(e, t, n) {
         u = n("719926"),
         d = n("766274"),
         c = n("271938"),
-        f = n("27618"),
-        _ = n("697218"),
+        _ = n("27618"),
+        f = n("697218"),
         E = n("240873"),
         h = n("659632");
     n("773336"), n("158998");
@@ -45,7 +45,7 @@ function(e, t, n) {
             reactions: I,
             interactionData: R
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, O = null !== (s = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== s ? s : [], D = null !== (o = e.mention_roles) && void 0 !== o ? o : [], P = null !== (E = e.mention_channels) && void 0 !== E ? E : [], L = e.message_reference, M = new Date(e.timestamp), b = e.type === p.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
-        let U = null == (v = e).author ? S : null != v.webhook_id ? new d.default(v.author) : null !== (T = _.default.getUser(v.author.id)) && void 0 !== T ? T : new d.default(v.author),
+        let U = null == (v = e).author ? S : null != v.webhook_id ? new d.default(v.author) : null !== (T = f.default.getUser(v.author.id)) && void 0 !== T ? T : new d.default(v.author),
             w = null == e ? void 0 : e.gift_info,
             k = null != e.interaction ? l.default.createFromServer(e.interaction) : null,
             V = e.type === p.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
@@ -55,7 +55,7 @@ function(e, t, n) {
             ...e,
             author: U,
             webhookId: e.webhook_id,
-            blocked: f.default.isBlocked(U.id) || null != V && f.default.isBlocked(V),
+            blocked: _.default.isBlocked(U.id) || null != V && _.default.isBlocked(V),
             timestamp: M,
             editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
             mentionEveryone: e.mention_everyone,

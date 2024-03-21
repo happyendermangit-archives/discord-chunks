@@ -99,11 +99,11 @@ function(e, t, n) {
     function E(e) {
         let t;
         if (e instanceof u.ChannelRecordBase && e.isPrivate()) return {
-            computedPermissions: l.default.deserialize(0),
+            computedPermissions: l.deserialize(0),
             hasBaseAccessPermissions: !0
         };
         let n = f.default.computePermissions(e);
-        return t = !!l.default.has(n, _.Permissions.ADMINISTRATOR) || (e instanceof u.ChannelRecordBase ? l.default.has(n, _.Permissions.VIEW_CHANNEL) && l.default.has(n, _.Permissions.USE_APPLICATION_COMMANDS) : l.default.has(n, _.Permissions.VIEW_CHANNEL)), {
+        return t = !!l.has(n, _.Permissions.ADMINISTRATOR) || (e instanceof u.ChannelRecordBase ? l.has(n, _.Permissions.VIEW_CHANNEL) && l.has(n, _.Permissions.USE_APPLICATION_COMMANDS) : l.has(n, _.Permissions.VIEW_CHANNEL)), {
             computedPermissions: n,
             hasBaseAccessPermissions: t
         }

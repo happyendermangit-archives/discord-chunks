@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("915639"),
         d = n("86878"),
         c = n("546463"),
-        f = n("686470"),
-        _ = n("535974"),
+        _ = n("686470"),
+        f = n("535974"),
         E = n("568734"),
         h = n("269180"),
         g = n("773336"),
@@ -56,15 +56,15 @@ function(e, t, n) {
         if (d.default.isConnected(e)) return Promise.resolve();
         let E = null;
         if (null == t) {
-            let n = f.default.getActiveLibraryApplication(e);
+            let n = _.default.getActiveLibraryApplication(e);
             t = null != n ? n.branchId : e
         }
-        if (_.default.isLaunchable(e, t)) {
+        if (f.default.isLaunchable(e, t)) {
             var g;
-            let n = _.default.getState(e, t),
-                r = f.default.getActiveLaunchOptionId(e, t);
+            let n = f.default.getState(e, t),
+                r = _.default.getActiveLaunchOptionId(e, t);
             if (null == n) throw Error("Missing dispatch game when launching");
-            let a = f.default.getLibraryApplication(e, t);
+            let a = _.default.getLibraryApplication(e, t);
             if (null == a) throw Error("Missing library application when launching");
             E = (g = e, s.default.post({
                 url: v.Endpoints.OAUTH2_AUTHORIZE,
@@ -131,7 +131,7 @@ function(e, t, n) {
         toggleOverlay(e, t) {
             let n = c.default.getGameByName(e.name);
             if (null != n) {
-                let e = f.default.getActiveLibraryApplication(n.id);
+                let e = _.default.getActiveLibraryApplication(n.id);
                 if (null != e) {
                     let t = E.toggleFlag(e.getFlags(), v.LibraryApplicationFlags.OVERLAY_DISABLED);
                     p.updateFlags(e.id, e.branchId, t);
@@ -225,16 +225,16 @@ function(e, t, n) {
                 executableName: u
             } = e, d = (0, l.cleanExecutablePath)(u);
             if (null != d) {
-                var c, f;
+                var c, _;
                 s.default.post({
                     url: v.Endpoints.UNVERIFIED_APPLICATIONS,
                     body: {
                         name: t,
                         os: (0, g.getPlatformName)(),
                         icon: n,
-                        distributor_application: (c = a, f = o, null == c || "" === c ? null : {
+                        distributor_application: (c = a, _ = o, null == c || "" === c ? null : {
                             distributor: c,
-                            sku: f
+                            sku: _
                         }),
                         executable: d,
                         publisher: i,

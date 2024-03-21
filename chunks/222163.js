@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("718776"),
         d = n("36763"),
         c = n("659500"),
-        f = n("439932"),
-        _ = n("411093"),
+        _ = n("439932"),
+        f = n("411093"),
         E = n("228256"),
         h = n("49111"),
         g = n("855265");
@@ -26,12 +26,12 @@ function(e, t, n) {
 
     function p(e, t) {
         if (e.contains(t)) return !0;
-        let n = (0, _.default)(t, g.layer);
+        let n = (0, f.default)(t, g.layer);
         for (; null != n;) {
             let t = m.get(n);
             if (null == t) break;
             if (e.contains(t)) return !0;
-            n = (0, _.default)(t, g.layer)
+            n = (0, f.default)(t, g.layer)
         }
         return !1
     }
@@ -203,7 +203,7 @@ function(e, t, n) {
             } = this.props;
             let d = "function" == typeof(i = o) ? i() : (l(null != i.current, "Invalid ref"), i.current.getBoundingClientRect()),
                 c = n.getBoundingClientRect();
-            let f = (s = d, r = c.left, a = c.top, {
+            let _ = (s = d, r = c.left, a = c.top, {
                 top: s.top - a,
                 left: s.left - r,
                 bottom: s.bottom - a,
@@ -213,27 +213,27 @@ function(e, t, n) {
             });
             switch (e) {
                 case "top":
-                    return this.getHorizontalAlignmentStyle(f, t, n, {
-                        bottom: n.offsetHeight - f.top + u
+                    return this.getHorizontalAlignmentStyle(_, t, n, {
+                        bottom: n.offsetHeight - _.top + u
                     });
                 case "bottom":
-                    return this.getHorizontalAlignmentStyle(f, t, n, {
-                        top: f.bottom + u
+                    return this.getHorizontalAlignmentStyle(_, t, n, {
+                        top: _.bottom + u
                     });
                 case "left":
-                    return this.getVerticalAlignmentStyle(f, t, n, {
-                        right: n.offsetWidth - f.left + u
+                    return this.getVerticalAlignmentStyle(_, t, n, {
+                        right: n.offsetWidth - _.left + u
                     });
                 case "right":
-                    return this.getVerticalAlignmentStyle(f, t, n, {
-                        left: f.right + u
+                    return this.getVerticalAlignmentStyle(_, t, n, {
+                        left: _.right + u
                     });
                 case "center":
-                    return this.getVerticalAlignmentStyle(f, t, n, {
-                        left: f.left + f.width / 2 - t.offsetWidth / 2 + u
+                    return this.getVerticalAlignmentStyle(_, t, n, {
+                        left: _.left + _.width / 2 - t.offsetWidth / 2 + u
                     });
                 case "window_center":
-                    return this.getVerticalAlignmentStyle(f, t, n, {
+                    return this.getVerticalAlignmentStyle(_, t, n, {
                         left: Math.max((window.innerWidth - t.offsetWidth) / 2, 0)
                     });
                 default:
@@ -330,7 +330,7 @@ function(e, t, n) {
                 position: o,
                 isPositioned: l,
                 isSettingsLayerTransitioning: c,
-                nudge: _
+                nudge: f
             } = this.state;
             return (0, i.jsx)(d.UseThemeContext, {
                 children: d => {
@@ -339,7 +339,7 @@ function(e, t, n) {
                     } = d;
                     return (0, i.jsx)("div", {
                         id: e,
-                        className: a(t, (0, f.getThemeClass)(E), g.layer, {
+                        className: a(t, (0, _.getThemeClass)(E), g.layer, {
                             [g.emptyError]: !1,
                             [g.layerHidden]: c,
                             [g.disabledPointerEvents]: r
@@ -353,7 +353,7 @@ function(e, t, n) {
                             containerRef: this.elementRef,
                             children: n({
                                 position: o,
-                                nudge: _,
+                                nudge: f,
                                 isPositioned: l
                             }, this.updatePosition)
                         })

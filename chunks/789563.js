@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("95410"),
         d = n("355025"),
         c = n("605250"),
-        f = n("271938"),
-        _ = n("455079"),
+        _ = n("271938"),
+        f = n("455079"),
         E = n("599110"),
         h = n("316805"),
         g = n("565034"),
@@ -173,7 +173,7 @@ function(e, t, n) {
 
     function z(e) {
         !b && "CONNECTION_OPEN" === e.type && F(e.user) && (b = !0), O = {}, D = {}, P = {};
-        let t = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === f.default.getFingerprint(),
+        let t = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === _.default.getFingerprint(),
             {
                 experiments: n,
                 guildExperiments: i
@@ -406,7 +406,7 @@ function(e, t, n) {
             t.id === n && delete P[e]
         }
     }
-    class eo extends _.default {
+    class eo extends f.default {
         initialize() {
             C = function() {
                 let e = u.default.get(p);
@@ -496,21 +496,21 @@ function(e, t, n) {
                     triggerDebuggingEnabled: d
                 };
                 let c = "".concat(null !== (i = a.hashKey) && void 0 !== i ? i : n, ":").concat(t),
-                    f = w(c),
-                    _ = f % 1e4,
+                    _ = w(c),
+                    f = _ % 1e4,
                     E = null,
                     h = null !== (s = a.overridesFormatted) && void 0 !== s ? s : [];
                 for (let e of h)
-                    if (null !== (E = X(t, e, _))) return {
+                    if (null !== (E = X(t, e, f))) return {
                         type: g.ExperimentTypes.GUILD,
                         guildId: t,
                         revision: a.revision,
                         bucket: E,
                         override: !0,
-                        hashResult: _,
+                        hashResult: f,
                         triggerDebuggingEnabled: d
                     };
-                if (null == (E = X(t, a.populations, _))) return null;
+                if (null == (E = X(t, a.populations, f))) return null;
                 if (null != a.holdoutName && null != a.holdoutBucket && a.holdoutName !== n) {
                     let n = e(t, a.holdoutName);
                     if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && K({
@@ -523,7 +523,7 @@ function(e, t, n) {
                     guildId: t,
                     revision: a.revision,
                     bucket: E,
-                    hashResult: _,
+                    hashResult: f,
                     aaMode: l,
                     triggerDebuggingEnabled: d
                 }

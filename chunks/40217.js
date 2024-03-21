@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     });
     var i = n("37983"),
@@ -14,15 +14,15 @@ function(e, t, n) {
         u = n("784063"),
         d = n("104240"),
         c = n("340346"),
-        f = n("625454");
+        _ = n("625454");
 
-    function _(e) {
+    function f(e) {
         let {
             streamId: t,
             paused: n,
             onReady: r,
             onResize: o,
-            className: _,
+            className: f,
             ...E
         } = e, h = s.useRef(null), {
             current: g
@@ -48,21 +48,21 @@ function(e, t, n) {
                         return "canary" === r || "development" === r ? (0, c.initRenderingContextWebGL)(e) : (0, d.initRenderingContext2D)(e)
                     }(e);
                     if (null == n) return;
-                    return f.default.addSink(t, h, e => {
+                    return _.default.addSink(t, h, e => {
                         i(e.width, e.height), n.render(e)
                     }), () => {
-                        f.default.removeSink(t, h)
+                        _.default.removeSink(t, h)
                     }
                 }
             }
         }, [t, n, o, r, g]), (0, i.jsx)("canvas", {
             id: g,
-            className: a("media-engine-video", _),
+            className: a("media-engine-video", f),
             ref: h,
             ...E
         })
     }
-    _.defaultProps = {
+    f.defaultProps = {
         paused: !1
     }
 }

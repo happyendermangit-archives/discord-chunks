@@ -13,7 +13,7 @@ function(e, t, n) {
         u = n("49111");
     let d = null,
         c = null,
-        f = null;
+        _ = null;
     (0, l.isDesktop)() && (window.popupBridge = {
         getReturnUrlPrefix: () => {
             if (null == i) throw Error("popupBridgeState is unset");
@@ -23,7 +23,7 @@ function(e, t, n) {
             s = e, window.open(e), E.emitChange()
         }
     });
-    class _ extends r.default.Store {
+    class f extends r.default.Store {
         getClient() {
             return d
         }
@@ -31,14 +31,14 @@ function(e, t, n) {
             return c
         }
         getVenmoClient() {
-            return f
+            return _
         }
         getLastURL() {
             return s
         }
     }
-    _.displayName = "BraintreeStore";
-    let E = new _(o.default, {
+    f.displayName = "BraintreeStore";
+    let E = new f(o.default, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
             let {
                 client: t
@@ -79,10 +79,10 @@ function(e, t, n) {
             let {
                 venmoClient: t
             } = e;
-            f = t
+            _ = t
         },
         BRAINTREE_TEARDOWN_VENMO_CLIENT: function() {
-            f = null
+            _ = null
         }
     });
     var h = E

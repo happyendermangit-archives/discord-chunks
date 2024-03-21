@@ -14,9 +14,9 @@ function(e, t, n) {
         d = n("206230"),
         c = n("253539");
     n("21121");
-    var f = n("228803");
+    var _ = n("228803");
     n("831588");
-    var _ = n("922932"),
+    var f = n("922932"),
         E = n("773336"),
         h = n("737292"),
         g = n("168973"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         p = n("116319"),
         S = n("49111"),
         v = n("941719");
-    let T = null !== (s = (0, f.default)()) && void 0 !== s ? s : S.ThemeTypes.DARK,
+    let T = null !== (s = (0, _.default)()) && void 0 !== s ? s : S.ThemeTypes.DARK,
         I = T,
         A = null,
         C = !1;
@@ -93,7 +93,7 @@ function(e, t, n) {
         CONNECTION_OPEN: N,
         LOGOUT: function(e) {
             return !e.isSwitchingAccount && I !== S.ThemeTypes.DARK && (I = S.ThemeTypes.DARK, function() {
-                !__OVERLAY__ && E.isPlatformEmbedded && _.default.setApplicationBackgroundColor((0, l.isThemeDark)(y()) ? o.default.unsafe_rawColors.PRIMARY_700.resolve({
+                !__OVERLAY__ && E.isPlatformEmbedded && f.default.setApplicationBackgroundColor((0, l.isThemeDark)(y()) ? o.default.unsafe_rawColors.PRIMARY_700.resolve({
                     saturation: d.default.saturation
                 }).hsl() : o.default.unsafe_rawColors.WHITE_500.resolve({
                     saturation: d.default.saturation

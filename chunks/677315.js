@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useGuildHomeExperiment: function() {
-            return f
+            return _
         },
         canSeeGuildHome: function() {
-            return _
+            return f
         },
         GuildFeedRenderSelectorExperiment: function() {
             return E
@@ -39,13 +39,13 @@ function(e, t, n) {
         return i.length > 5
     }
 
-    function f(e) {
+    function _(e) {
         arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         let t = (0, i.useStateFromStores)([l.default, s.default], () => null != e && c(e.id, l.default, s.default));
         return !__OVERLAY__ && !!t && null != e && e.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
     }
 
-    function _(e) {
+    function f(e) {
         if (__OVERLAY__ || e === d.ME || e === d.FAVORITES || (0, a.isInMainTabsExperiment)() && !(0, o.isOnNewPanels)()) return !1;
         let t = u.default.getGuild(e);
         return !!(null != t && c(e, l.default, s.default)) && t.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)

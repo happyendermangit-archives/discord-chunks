@@ -18,15 +18,15 @@ function(e, t, n) {
                     var t, n, i, s, a, u;
                     let d = e[0],
                         c = null == d ? void 0 : null === (n = d.borderBoxSize) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.inlineSize,
-                        f = null == d ? void 0 : null === (s = d.borderBoxSize) || void 0 === s ? void 0 : null === (i = s[0]) || void 0 === i ? void 0 : i.blockSize;
-                    if (null == c || null == f) {
+                        _ = null == d ? void 0 : null === (s = d.borderBoxSize) || void 0 === s ? void 0 : null === (i = s[0]) || void 0 === i ? void 0 : i.blockSize;
+                    if (null == c || null == _) {
                         let e = l.current;
                         if (null != e) {
                             let t = window.getComputedStyle(e);
-                            null == c && (c = parseFloat(null !== (a = t.width) && void 0 !== a ? a : "0")), null == f && (f = parseFloat(null !== (u = t.height) && void 0 !== u ? u : "0"))
+                            null == c && (c = parseFloat(null !== (a = t.width) && void 0 !== a ? a : "0")), null == _ && (_ = parseFloat(null !== (u = t.height) && void 0 !== u ? u : "0"))
                         }
                     }
-                    r(c), o(f)
+                    r(c), o(_)
                 });
                 return n.observe(e), () => n.disconnect()
             }

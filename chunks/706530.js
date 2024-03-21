@@ -17,13 +17,13 @@ function(e, t, n) {
             return c
         },
         WINDOWS_GRAPHICS_CAPTURE_VERSION: function() {
-            return f
+            return _
         },
         StreamTypes: function() {
             return a
         },
         STREAM_NOTIFY_GUILD_MAX_SIZE: function() {
-            return _
+            return f
         }
     });
     var i, s, r, a, o = n("561467");
@@ -32,7 +32,7 @@ function(e, t, n) {
         u = ">=22.0.0",
         d = ">=22.0.0",
         c = ">=10.0.17763",
-        f = ">=10.0.22000";
+        _ = ">=10.0.22000";
     (s = a || (a = {})).GUILD = "guild", s.CALL = "call";
-    let _ = o.Notifications.StreamNotificationsGuildMaxSize
+    let f = o.Notifications.StreamNotificationsGuildMaxSize
 }

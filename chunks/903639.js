@@ -17,10 +17,10 @@ function(e, t, n) {
             return c
         },
         SET_COMMUNICATION_DISABLED_MODAL_NAME: function() {
-            return f
+            return _
         },
         CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: function() {
-            return _
+            return f
         },
         MAX_REASON_LENGTH: function() {
             return E
@@ -70,7 +70,7 @@ function(e, t, n) {
         }),
         d = r.default.getArticleURL(a.HelpdeskArticles.DISABLE_GUILD_COMMUNICATION),
         c = "GuildCommunicationDisabledDismissedGuilds",
-        f = "Set Communication Disabled Modal",
-        _ = "Clear Communication Disabled Modal",
+        _ = "Set Communication Disabled Modal",
+        f = "Clear Communication Disabled Modal",
         E = 512
 }

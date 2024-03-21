@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("527015"),
         d = n("718517"),
         c = n("286235"),
-        f = n("49111");
-    let _ = (() => {
+        _ = n("49111");
+    let f = (() => {
             let e = "".concat(location.protocol, "//").concat(location.host, "/__development/source_maps"),
                 t = null,
                 n = new i.default(5 * d.default.Millis.SECOND, 1 * d.default.Millis.MINUTE, !0),
@@ -23,7 +23,7 @@ function(e, t, n) {
                     a.default.put({
                         url: e,
                         headers: {
-                            Authorization: s.default.getToken()
+                            Authorization: s.getToken()
                         },
                         oldFormErrors: !0
                     }).then(e => {
@@ -40,7 +40,7 @@ function(e, t, n) {
                     n !== i && (n ? t = setTimeout(r, 0) : (clearTimeout(t), t = null, a.default.delete({
                         url: e,
                         headers: {
-                            Authorization: s.default.getToken()
+                            Authorization: s.getToken()
                         },
                         oldFormErrors: !0
                     })))
@@ -70,7 +70,7 @@ function(e, t, n) {
             ...h,
             ...g,
             ...e
-        }, _.set(g.sourceMapsEnabled), o.default.set(E, g)
+        }, f.set(g.sourceMapsEnabled), o.default.set(E, g)
     }
     class p extends r.default.Store {
         initialize() {
@@ -126,9 +126,9 @@ function(e, t, n) {
         },
         CONNECTION_OPEN: function(e) {
             var t;
-            let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & f.UserFlags.STAFF) === f.UserFlags.STAFF,
+            let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & _.UserFlags.STAFF) === _.UserFlags.STAFF,
                 i = n || null != e.user.personal_connection_id;
-            n && _.set(g.sourceMapsEnabled), c.default.setTags({
+            n && f.set(g.sourceMapsEnabled), c.default.setTags({
                 isStaff: i.toString()
             })
         },

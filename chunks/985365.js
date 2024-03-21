@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     });
     var i = n("446674"),
@@ -15,7 +15,7 @@ function(e, t, n) {
 
     function d(e) {
         var t;
-        o = null != e.type ? e.type : a.NetworkConnectionTypes.UNKNOWN, l = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : a.NetworkConnectionSpeeds.UNKNOWN, u = e.serviceProvider, f.emitChange()
+        o = null != e.type ? e.type : a.NetworkConnectionTypes.UNKNOWN, l = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : a.NetworkConnectionSpeeds.UNKNOWN, u = e.serviceProvider, _.emitChange()
     }
     class c extends i.default.Store {
         initialize() {
@@ -32,6 +32,6 @@ function(e, t, n) {
         }
     }
     c.displayName = "NetworkStore";
-    let f = new c(s.default, {});
-    var _ = f
+    let _ = new c(s.default, {});
+    var f = _
 }

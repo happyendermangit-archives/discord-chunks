@@ -14,8 +14,8 @@ function(e, t, n) {
     let u = l.FormStates.CLOSED,
         d = null,
         c = null,
-        f = {},
         _ = {},
+        f = {},
         E = {},
         h = null,
         g = null,
@@ -32,7 +32,7 @@ function(e, t, n) {
         var t, n, i, s, r, a;
         let d = o.default.getCurrentUser();
         if (null == d) return N();
-        c = null !== (t = e.section) && void 0 !== t ? t : c, A = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (f[c] = e.subsection), null != e.scrollPosition && null != c && (_[c] = e.scrollPosition), p = !!e.openWithoutBackstack, u = l.FormStates.OPEN, E = {}, g = {
+        c = null !== (t = e.section) && void 0 !== t ? t : c, A = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (_[c] = e.subsection), null != e.scrollPosition && null != c && (f[c] = e.scrollPosition), p = !!e.openWithoutBackstack, u = l.FormStates.OPEN, E = {}, g = {
             ...h = {
                 [l.UserSettingsSections.ACCOUNT]: {
                     userId: d.id,
@@ -49,7 +49,7 @@ function(e, t, n) {
     }
 
     function N() {
-        u = l.FormStates.CLOSED, m = !1, h = null, A = null, g = null, d = null, c = null, f = {}, _ = {}, v = null, T = null, I = [], C = null
+        u = l.FormStates.CLOSED, m = !1, h = null, A = null, g = null, d = null, c = null, _ = {}, f = {}, v = null, T = null, I = [], C = null
     }
 
     function R() {
@@ -72,10 +72,10 @@ function(e, t, n) {
             return c
         }
         getSubsection() {
-            return null != c ? f[c] : null
+            return null != c ? _[c] : null
         }
         getScrollPosition() {
-            return null != c ? _[c] : null
+            return null != c ? f[c] : null
         }
         shouldOpenWithoutBackstack() {
             return p
@@ -84,8 +84,8 @@ function(e, t, n) {
             return {
                 submitting: u === l.FormStates.SUBMITTING,
                 section: c,
-                subsection: null != c ? f[c] : null,
-                scrollPosition: null != c ? _[c] : null,
+                subsection: null != c ? _[c] : null,
+                scrollPosition: null != c ? f[c] : null,
                 settings: g,
                 errors: E,
                 hasChanges: this.hasChanges(),
@@ -118,19 +118,19 @@ function(e, t, n) {
         },
         USER_SETTINGS_MODAL_SET_SECTION: function(e) {
             var t;
-            d = c, c = e.section, T = null, I = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (f[c] = e.subsection)
+            d = c, c = e.section, T = null, I = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (_[c] = e.subsection)
         },
         USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
             let {
                 forSection: t
             } = e;
-            null != t ? delete f[t] : null != c && delete f[c]
+            null != t ? delete _[t] : null != c && delete _[c]
         },
         USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function(e) {
             let {
                 forSection: t
             } = e;
-            null != t ? delete _[t] : null != c && delete _[c]
+            null != t ? delete f[t] : null != c && delete f[c]
         },
         USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function(e) {
             let {

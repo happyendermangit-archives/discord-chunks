@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("516826"),
         d = n("741662"),
         c = n("577776"),
-        f = n("324584"),
-        _ = n("782340"),
+        _ = n("324584"),
+        f = n("782340"),
         E = n("430594"),
         h = n("182893"),
         g = n("356410");
@@ -90,9 +90,9 @@ function(e, t, n) {
                 error: e,
                 maxLength: t,
                 minLength: n
-            } = this.props, i = this.getIsOverflowing() ? _.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+            } = this.props, i = this.getIsOverflowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
                 maxLength: t
-            }) : null, s = this.getIsUnderflowing() ? _.default.Messages.MINIMUM_LENGTH_ERROR.format({
+            }) : null, s = this.getIsUnderflowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
                 minLength: n
             }) : null;
             return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : s
@@ -127,7 +127,7 @@ function(e, t, n) {
                 required: R,
                 onInvalid: O,
                 inputRef: D
-            } = this.props, P = N ? f.TextAreaAutosize : "textarea", L = this.hasError(), M = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, b = this.getAriaDescribedBy();
+            } = this.props, P = N ? _.TextAreaAutosize : "textarea", L = this.hasError(), M = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, b = this.getAriaDescribedBy();
             return (0, i.jsxs)("div", {
                 className: a(h.inputWrapper, {
                     [E.flex]: y
@@ -169,12 +169,12 @@ function(e, t, n) {
                         })
                     }), null != u && (0, i.jsx)(d.HiddenVisually, {
                         id: p,
-                        children: _.default.Messages.MINIMUM_LENGTH.format({
+                        children: f.default.Messages.MINIMUM_LENGTH.format({
                             minLength: u
                         })
                     }), null != c && (0, i.jsx)(d.HiddenVisually, {
                         id: S,
-                        children: _.default.Messages.MAXIMUM_LENGTH.format({
+                        children: f.default.Messages.MAXIMUM_LENGTH.format({
                             maxLength: c
                         })
                     }), this.renderCharacterCount(), this.renderMaxLength()]

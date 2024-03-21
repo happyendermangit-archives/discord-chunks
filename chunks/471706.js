@@ -8,7 +8,7 @@ function(e, t, n) {
             return l
         },
         default: function() {
-            return f
+            return _
         }
     });
     var i, s, r = n("446674"),
@@ -38,7 +38,7 @@ function(e, t, n) {
         }
     }
     c.displayName = "GuildOnboardingStore";
-    var f = new c(a.default, {
+    var _ = new c(a.default, {
         LOGOUT: function() {
             u = {}, d = {}
         },

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("222007"), n("424973");
     var i, s, r = n("615361"),
@@ -12,9 +12,9 @@ function(e, t, n) {
         u = n("82087"),
         d = n("827032"),
         c = n("49111");
-    let f = new Set(["darwin", "linux", "win32", "ios", "android"]);
+    let _ = new Set(["darwin", "linux", "win32", "ios", "android"]);
     (s = i || (i = {})).COUNT = "count", s.DISTRIBUTION = "distribution";
-    var _ = new class e {
+    var f = new class e {
         _getMetricWithDefaults(e, t) {
             let {
                 name: n,
@@ -31,7 +31,7 @@ function(e, t, n) {
                 if ((0, o.isWeb)()) return "web";
                 {
                     let e = (0, o.getPlatformName)();
-                    return f.has(e) ? e : null
+                    return _.has(e) ? e : null
                 }
             }();
             null != a && s.tags.push("platform:".concat(a));
@@ -63,8 +63,8 @@ function(e, t, n) {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: "1711005902668",
-                            build_number: "277341"
+                            built_at: "1711038633609",
+                            build_number: "277376"
                         }
                     },
                     retries: 1

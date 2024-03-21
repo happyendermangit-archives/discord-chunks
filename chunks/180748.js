@@ -8,10 +8,10 @@ function(e, t, n) {
             return c
         },
         setZoom: function() {
-            return f
+            return _
         },
         enableKeyboardMode: function() {
-            return _
+            return f
         },
         disableKeyboardMode: function() {
             return E
@@ -79,14 +79,14 @@ function(e, t, n) {
         })
     }
 
-    function f(e) {
+    function _(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_ZOOM",
             zoom: e
         })
     }
 
-    function _() {
+    function f() {
         i.default.dispatch({
             type: "ACCESSIBILITY_KEYBOARD_MODE_ENABLE"
         }), r.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {

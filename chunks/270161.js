@@ -15,6 +15,6 @@ function(e, t, n) {
         r = n("923510"),
         s = n("49111");
     let l = s.Permissions.VIEW_CHANNEL,
-        a = i.default.combine(l, s.Permissions.CONNECT),
-        o = i.default.combine(l, r.MODERATE_STAGE_CHANNEL_PERMISSIONS)
+        a = i.combine(l, s.Permissions.CONNECT),
+        o = i.combine(l, r.MODERATE_STAGE_CHANNEL_PERMISSIONS)
 }

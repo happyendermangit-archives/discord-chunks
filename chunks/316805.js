@@ -15,14 +15,14 @@ function(e, t, n) {
         d = n("718517"),
         c = n("299039");
 
-    function f(e, t, n) {
+    function _(e, t, n) {
         let i = s(e),
             r = null != t ? s(t) : null,
             a = null != n ? s(n) : null;
         return !(null != r && i.lesser(r) || null != a && i.greater(a)) && !0
     }
 
-    function _(e) {
+    function f(e) {
         let t, n;
         for (let [i, s] of e) switch (i) {
             case a.v3("min_id"):
@@ -47,27 +47,27 @@ function(e, t, n) {
             let {
                 min: t,
                 max: n
-            } = _(e);
-            return e => f(e, t, n)
+            } = f(e);
+            return e => _(e, t, n)
         },
         [a.v3("guild_age_range_days")]: e => {
             let {
                 min: t,
                 max: n
-            } = _(e);
+            } = f(e);
             return e => {
                 let i = Math.floor(c.default.age(e) / d.default.Millis.DAY);
-                return f(i, t, n)
+                return _(i, t, n)
             }
         },
         [a.v3("guild_member_count_range")]: e => {
             let {
                 min: t,
                 max: n
-            } = _(e);
+            } = f(e);
             return e => {
                 let i = l.default.getMemberCount(e);
-                return null != i && f(i, t, n)
+                return null != i && _(i, t, n)
             }
         },
         [a.v3("guild_has_feature")]: e => {

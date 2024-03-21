@@ -11,11 +11,11 @@ function(e, t, n) {
         d = n("95410"),
         c = n("913144");
     n("228803");
-    var f = n("116319"),
-        _ = n("49111"),
+    var _ = n("116319"),
+        f = n("49111"),
         E = n("13030");
     (i = r || (r = {})).DATA_SAVER = "data_saver", i.STANDARD = "standard", i.BEST = "best", (s = a || (a = {})).VERY_LOW = "very_low", s.LOW = "low", s.MEDIUM = "medium", s.HIGH = "high", s.VERY_HIGH = "very_high";
-    let h = (window.innerWidth - _.CHANNEL_SIDEBAR_WIDTH) / 2,
+    let h = (window.innerWidth - f.CHANNEL_SIDEBAR_WIDTH) / 2,
         g = null,
         m = {};
     class p extends u.default.DeviceSettingsStore {
@@ -52,11 +52,11 @@ function(e, t, n) {
         }
         get messageRequestSidebarWidth() {
             var e;
-            return null !== (e = m.messageRequestSidebarWidth) && void 0 !== e ? e : _.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH
+            return null !== (e = m.messageRequestSidebarWidth) && void 0 !== e ? e : f.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH
         }
         get threadSidebarWidth() {
             var e;
-            return null !== (e = m.threadSidebarWidth) && void 0 !== e ? e : _.DEFAULT_CHAT_SIDEBAR_WIDTH
+            return null !== (e = m.threadSidebarWidth) && void 0 !== e ? e : f.DEFAULT_CHAT_SIDEBAR_WIDTH
         }
         get postSidebarWidth() {
             var e;
@@ -64,18 +64,18 @@ function(e, t, n) {
         }
         get callChatSidebarWidth() {
             var e;
-            return null !== (e = m.callChatSidebarWidth) && void 0 !== e ? e : _.DEFAULT_CHAT_SIDEBAR_WIDTH
+            return null !== (e = m.callChatSidebarWidth) && void 0 !== e ? e : f.DEFAULT_CHAT_SIDEBAR_WIDTH
         }
         get homeSidebarWidth() {
             var e;
-            return null !== (e = m.homeSidebarWidth) && void 0 !== e ? e : (null == g && (g = Math.max((window.innerWidth - _.CHANNEL_SIDEBAR_WIDTH) * .4, _.DEFAULT_CHAT_SIDEBAR_WIDTH)), g)
+            return null !== (e = m.homeSidebarWidth) && void 0 !== e ? e : (null == g && (g = Math.max((window.innerWidth - f.CHANNEL_SIDEBAR_WIDTH) * .4, f.DEFAULT_CHAT_SIDEBAR_WIDTH)), g)
         }
         get callHeaderHeight() {
             return m.callHeaderHeight
         }
         get useSystemTheme() {
             var e;
-            return null !== (e = m.useSystemTheme) && void 0 !== e ? e : f.SystemThemeState.UNSET
+            return null !== (e = m.useSystemTheme) && void 0 !== e ? e : _.SystemThemeState.UNSET
         }
         get activityPanelHeight() {
             return m.activityPanelHeight

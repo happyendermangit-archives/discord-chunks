@@ -38,8 +38,8 @@ function(e, t, n) {
         u = n("271938"),
         d = n("42203"),
         c = n("923959"),
-        f = n("525065"),
-        _ = n("26989"),
+        _ = n("525065"),
+        f = n("26989"),
         E = n("305961"),
         h = n("42887"),
         g = n("957255"),
@@ -70,20 +70,20 @@ function(e, t, n) {
         if (null == n) return null;
         let i = E.default.getRoles(n.id),
             s = u.default.getId(),
-            r = _.default.getMember(e, s),
+            r = f.default.getMember(e, s),
             a = c.default.getChannels(e),
             o = a[c.GUILD_SELECTABLE_CHANNELS_KEY].length,
             l = a[c.GUILD_VOCAL_CHANNELS_KEY].length,
             d = A.default.getVoiceStates(e);
         return {
             guild_id: n.id,
-            guild_size_total: f.default.getMemberCount(e),
+            guild_size_total: _.default.getMemberCount(e),
             guild_num_channels: o + l,
             guild_num_text_channels: o,
             guild_num_voice_channels: l,
             guild_num_roles: P(i),
             guild_member_num_roles: null != r ? r.roles.length : 0,
-            guild_member_perms: String(null !== (t = g.default.getGuildPermissions(n)) && void 0 !== t ? t : N.default.NONE),
+            guild_member_perms: String(null !== (t = g.default.getGuildPermissions(n)) && void 0 !== t ? t : N.NONE),
             guild_is_vip: n.hasFeature(O.GuildFeatures.VIP_REGIONS),
             is_member: null != r,
             num_voice_channels_active: P(d)
@@ -105,7 +105,7 @@ function(e, t, n) {
             let t = e => {
                 if (null == e) return !1;
                 let t = e.permissionOverwrites[i];
-                return null != t && r.default.has(t.deny, O.Permissions.VIEW_CHANNEL)
+                return null != t && r.has(t.deny, O.Permissions.VIEW_CHANNEL)
             };
             n = l.THREAD_CHANNEL_TYPES.has(e.type) && null != e.parent_id ? t(d.default.getChannel(e.parent_id)) : t(e)
         }
@@ -113,7 +113,7 @@ function(e, t, n) {
             channel_id: e.id,
             channel_type: e.type,
             channel_size_total: e.isPrivate() ? e.recipients.length : 0,
-            channel_member_perms: String(null != i && null !== (t = g.default.getChannelPermissions(e)) && void 0 !== t ? t : N.default.NONE),
+            channel_member_perms: String(null != i && null !== (t = g.default.getChannelPermissions(e)) && void 0 !== t ? t : N.NONE),
             channel_hidden: n
         }
     }
@@ -142,15 +142,15 @@ function(e, t, n) {
         let l = !("location" in a) || a.location !== O.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
             u = "guild_id" in a ? a.guild_id : l ? T.default.getGuildId() : null,
             c = "channel_id" in a ? a.channel_id : l ? v.default.getChannelId(u) : null,
-            f = d.default.getChannel(c);
-        let _ = (t = f, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (s = null !== (i = t.getGuildId()) && void 0 !== i ? i : n) && void 0 !== s ? s : null);
+            _ = d.default.getChannel(c);
+        let f = (t = _, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (s = null !== (i = t.getGuildId()) && void 0 !== i ? i : n) && void 0 !== s ? s : null);
         let E = {
             ...a,
-            ...L(_),
+            ...L(f),
             ...null != u && null != c && (0, D.isStaticChannelRoute)(c) ? (r = 0, {
                 channel_static_route: c,
                 channel_hidden: !1
-            }) : b(f)
+            }) : b(_)
         };
         C.default.track(e, E, {
             flush: o

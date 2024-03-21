@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("913144"),
         d = n("374014"),
         c = n("373469"),
-        f = n("271938"),
-        _ = n("42203"),
+        _ = n("271938"),
+        f = n("42203"),
         E = n("305961"),
         h = n("957255"),
         g = n("27618"),
@@ -44,7 +44,7 @@ function(e, t, n) {
     }
 
     function D(e) {
-        !N.has(e) && (N.add(e), a(_.default.getMutableGuildChannelsForGuild(e)).values().forEach(e => {
+        !N.has(e) && (N.add(e), a(f.default.getMutableGuildChannelsForGuild(e)).values().forEach(e => {
             M(e) && y.set(e.id, e)
         }))
     }
@@ -52,7 +52,7 @@ function(e, t, n) {
     function P(e) {
         let t = R[e];
         if (null != t) return t;
-        let n = _.default.getChannel(e);
+        let n = f.default.getChannel(e);
         return null != n && n.isGuildStageVoice() ? (D(n.guild_id), M(n)) ? L(e) : null : null
     }
 
@@ -71,7 +71,7 @@ function(e, t, n) {
             let i = L(n),
                 s = e(i);
             return s ? (! function(e, t) {
-                let n = _.default.getChannel(e);
+                let n = f.default.getChannel(e);
                 null != n && n.isGuildStageVoice() ? 0 === t.size() ? w(n.id) : null == y.get(n.id) && y.set(n.id, n) : w(e)
             }(n, i), !0) : t
         }, !1)
@@ -92,7 +92,7 @@ function(e, t, n) {
 
     function V(e, t, n) {
         if (null == n || e.has(n)) return;
-        let i = _.default.getChannel(n);
+        let i = f.default.getChannel(n);
         (null == i ? void 0 : i.isGuildStageVoice()) && (t.add(n), e.add(n))
     }
 
@@ -134,7 +134,7 @@ function(e, t, n) {
     let H = [];
     class Y extends o.default.Store {
         initialize() {
-            this.waitFor(f.default, p.default, _.default, m.default, S.default, h.default, v.default, E.default, I.default, g.default, A.default, c.default)
+            this.waitFor(_.default, p.default, f.default, m.default, S.default, h.default, v.default, E.default, I.default, g.default, A.default, c.default)
         }
         getParticipantsVersion(e) {
             var t, n;

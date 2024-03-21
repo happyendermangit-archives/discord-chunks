@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     });
     var i = n("759843"),
@@ -15,7 +15,7 @@ function(e, t, n) {
         d = n("91366"),
         c = n("49111");
 
-    function f(e) {
+    function _(e) {
         let t = null;
         if (null != e && null != e.channel) {
             let n = e.channel;
@@ -24,7 +24,7 @@ function(e, t, n) {
         return t
     }
 
-    function _(e, t, n) {
+    function f(e, t, n) {
         o.default.track(c.AnalyticEvents.INVITE_OPENED, {
             invite_code: e
         });
@@ -42,7 +42,7 @@ function(e, t, n) {
             trackedActionData: {
                 event: i.NetworkActionNames.INVITE_RESOLVE,
                 properties: e => {
-                    var i, o, l, u, d, _;
+                    var i, o, l, u, d, f;
                     let E = e.body,
                         h = (null === (i = e.body) || void 0 === i ? void 0 : i.code) === c.AbortCodes.USER_BANNED;
                     return (0, s.exact)({
@@ -57,8 +57,8 @@ function(e, t, n) {
                         authenticated: a.default.isAuthenticated(),
                         size_total: null == E ? void 0 : E.approximate_member_count,
                         size_online: null == E ? void 0 : E.approximate_presence_count,
-                        destination_user_id: null == E ? void 0 : null === (_ = E.target_user) || void 0 === _ ? void 0 : _.id,
-                        invite_type: f(E),
+                        destination_user_id: null == E ? void 0 : null === (f = E.target_user) || void 0 === f ? void 0 : f.id,
+                        invite_type: _(E),
                         user_banned: h
                     })
                 }
@@ -78,7 +78,7 @@ function(e, t, n) {
                 size_total: s.approximate_member_count,
                 size_online: s.approximate_presence_count,
                 destination_user_id: null != s.target_user ? s.target_user.id : null,
-                invite_type: f(s)
+                invite_type: _(s)
             }, {
                 flush: !0
             }), {

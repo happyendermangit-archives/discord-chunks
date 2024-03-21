@@ -19,8 +19,8 @@ function(e, t, n) {
             className: u,
             titleClassName: d,
             title: c,
-            icon: f,
-            disabled: _,
+            icon: _,
+            disabled: f,
             htmlFor: E,
             tag: h = "h5",
             ...g
@@ -30,11 +30,11 @@ function(e, t, n) {
             children: (0, i.jsx)(r.HeadingLevel, {
                 component: (0, i.jsxs)("div", {
                     className: l.sectionTitle,
-                    children: [f, null != c ? (0, i.jsx)(o.FormTitle, {
+                    children: [_, null != c ? (0, i.jsx)(o.FormTitle, {
                         tag: h,
                         id: p,
                         htmlFor: E,
-                        disabled: _,
+                        disabled: f,
                         className: d,
                         children: c
                     }) : null]

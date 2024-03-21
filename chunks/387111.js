@@ -8,7 +8,7 @@ function(e, t, n) {
             return c
         },
         default: function() {
-            return f
+            return _
         }
     });
     var i = n("446674"),
@@ -36,7 +36,7 @@ function(e, t, n) {
     function c(e, t, n) {
         return (0, i.useStateFromStores)([r.default, s.default, a.default], () => d(e, t, n))
     }
-    var f = {
+    var _ = {
         getNickname: u,
         getName: d,
         useName: c

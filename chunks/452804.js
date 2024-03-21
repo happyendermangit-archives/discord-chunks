@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         saveGuildFolders: function() {
-            return _
+            return f
         },
         saveClientTheme: function() {
             return h
@@ -20,9 +20,9 @@ function(e, t, n) {
         u = n("161778"),
         d = n("845579"),
         c = n("872173"),
-        f = n("116319");
+        _ = n("116319");
 
-    function _(e) {
+    function f(e) {
         return c.PreloadedUserSettingsActionCreators.updateAsync("guildFolders", t => {
             t.folders = e.map(e => {
                 let t = i.GuildFolder.create({
@@ -51,7 +51,7 @@ function(e, t, n) {
         if (a.default.dispatch({
                 type: "UNSYNCED_USER_SETTINGS_UPDATE",
                 settings: {
-                    useSystemTheme: "system" === n ? f.SystemThemeState.ON : f.SystemThemeState.OFF
+                    useSystemTheme: "system" === n ? _.SystemThemeState.ON : _.SystemThemeState.OFF
                 }
             }), a.default.dispatch({
                 type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",

@@ -53,14 +53,14 @@ function(e, t, n) {
         u = n("328511"),
         d = n("161585"),
         c = n("560241"),
-        f = n("49111");
+        _ = n("49111");
     let {
-        API_ENDPOINT: _,
+        API_ENDPOINT: f,
         MEDIA_PROXY_ENDPOINT: E,
         PROJECT_ENV: h,
         ASSET_ENDPOINT: g,
         CDN_HOST: m
-    } = window.GLOBAL_ENV, p = Object.values(d.StickerExtensions), S = decodeURIComponent(f.Endpoints.STICKER_ASSET("[\\d]+", "(".concat(p.join("|"), ")"))), v = RegExp("(".concat(location.protocol).concat(g, "|").concat(location.protocol).concat(E, ")(").concat(S, ")"), "ig"), T = RegExp("".concat(location.protocol).concat(_, "(").concat(S, ")"), "ig"), I = e => {
+    } = window.GLOBAL_ENV, p = Object.values(d.StickerExtensions), S = decodeURIComponent(_.Endpoints.STICKER_ASSET("[\\d]+", "(".concat(p.join("|"), ")"))), v = RegExp("(".concat(location.protocol).concat(g, "|").concat(location.protocol).concat(E, ")(").concat(S, ")"), "ig"), T = RegExp("".concat(location.protocol).concat(f, "(").concat(S, ")"), "ig"), I = e => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find(t => t.id === e.cover_sticker_id);
             if (null != t) return t
@@ -99,20 +99,20 @@ function(e, t, n) {
             size: n = c.DEFAULT_STICKER_DIMENSIONS
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;
-        let i = f.Endpoints.STICKER_ASSET(e.id, A(e.format_type));
+        let i = _.Endpoints.STICKER_ASSET(e.id, A(e.format_type));
         if ("development" !== h) {
             if (e.format_type === d.StickerFormat.LOTTIE) return "".concat(location.protocol).concat(g).concat(i);
             let r = e.format_type === d.StickerFormat.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
                 a = Math.min(2, (0, s.getDevicePixelRatio)());
             return "".concat(location.protocol).concat(E).concat(i, "?size=").concat((0, s.getBestMediaProxySize)(n * a)).concat(r)
         }
-        return "".concat(location.protocol).concat(_).concat(i)
+        return "".concat(location.protocol).concat(f).concat(i)
     }, R = (e, t) => {
         let n;
         let i = e.banner_asset_id;
         if (null == i) return null;
         let r = o.SUPPORTS_WEBP ? "webp" : "png";
-        return n = null != m ? "".concat(location.protocol, "//").concat(m, "/app-assets/").concat(c.STICKER_APPLICATION_ID, "/store/").concat(i, ".").concat(r) : "".concat(location.protocol).concat(_).concat(f.Endpoints.STORE_ASSET(c.STICKER_APPLICATION_ID, i, r)), null != t && (n += "?size=".concat((0, s.getBestMediaProxySize)(t))), n
+        return n = null != m ? "".concat(location.protocol, "//").concat(m, "/app-assets/").concat(c.STICKER_APPLICATION_ID, "/store/").concat(i, ".").concat(r) : "".concat(location.protocol).concat(f).concat(_.Endpoints.STORE_ASSET(c.STICKER_APPLICATION_ID, i, r)), null != t && (n += "?size=".concat((0, s.getBestMediaProxySize)(t))), n
     }, O = e => e.match("development" !== h ? v : T), D = e => e.stickers.some(e => {
         let {
             format_type: t

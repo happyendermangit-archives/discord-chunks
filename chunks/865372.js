@@ -14,11 +14,11 @@ function(e, t, n) {
         u = n("718517"),
         d = n("364685"),
         c = n("397336");
-    let f = {
+    let _ = {
         pendingUsages: []
     };
     u.default.Millis.DAY;
-    let _ = new o.default({
+    let f = new o.default({
             computeBonus: () => 100,
             computeWeight: e => {
                 let t = 0;
@@ -29,7 +29,7 @@ function(e, t, n) {
             numFrequentlyItems: 20
         }),
         E = () => {
-            d.default.isLoaded && _.compute()
+            d.default.isLoaded && f.compute()
         },
         h = () => {
             E()
@@ -39,23 +39,23 @@ function(e, t, n) {
         var e;
         let t = null === (e = l.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
         if (null == t) return !1;
-        _.overwriteHistory(s.mapValues(t, e => ({
+        f.overwriteHistory(s.mapValues(t, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
-        })), f.pendingUsages)
+        })), _.pendingUsages)
     }
     class m extends r.default.PersistedStore {
         initialize(e) {
-            this.waitFor(d.default), null != e && (f = e), this.syncWith([d.default], h), this.syncWith([l.default], g)
+            this.waitFor(d.default), null != e && (_ = e), this.syncWith([d.default], h), this.syncWith([l.default], g)
         }
         getState() {
-            return f
+            return _
         }
         hasPendingUsage() {
-            return f.pendingUsages.length > 0
+            return _.pendingUsages.length > 0
         }
         get stickerFrecencyWithoutFetchingLatest() {
-            return _
+            return f
         }
     }
     m.displayName = "StickersPersistedStore", m.persistKey = "StickersPersistedStoreV2";
@@ -65,7 +65,7 @@ function(e, t, n) {
                 stickerIds: t
             } = e;
             null == t || t.forEach(e => {
-                _.track(e), f.pendingUsages.push({
+                f.track(e), _.pendingUsages.push({
                     key: e,
                     timestamp: Date.now()
                 })
@@ -79,7 +79,7 @@ function(e, t, n) {
                 wasSaved: n
             } = e;
             if (t !== c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-            f.pendingUsages = []
+            _.pendingUsages = []
         }
     })
 }

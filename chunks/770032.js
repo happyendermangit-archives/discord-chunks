@@ -25,7 +25,7 @@ function(e, _, E) {
                 id: E
             } = _;
             return E !== e
-        }), a.default.removeToken(e)
+        }), a.removeToken(e)
     }
 
     function R(e, _) {

@@ -14,10 +14,10 @@ function(e, t, n) {
             return c
         },
         TextBadge: function() {
-            return f
+            return _
         },
         PremiumBadge: function() {
-            return _
+            return f
         },
         IconBadge: function() {
             return E
@@ -54,12 +54,12 @@ function(e, t, n) {
                 color: n = a.default.STATUS_DANGER,
                 disableColor: s = !1,
                 shape: c = l.ROUND,
-                className: f,
-                style: _,
+                className: _,
+                style: f,
                 ...E
             } = e;
             return (0, i.jsx)("div", {
-                className: r(f, o.numberBadge, c),
+                className: r(_, o.numberBadge, c),
                 style: {
                     backgroundColor: s ? void 0 : n,
                     width: u(t),
@@ -73,13 +73,13 @@ function(e, t, n) {
                                 return
                         }
                     }(t),
-                    ..._
+                    ...f
                 },
                 ...E,
                 children: d(t)
             })
         },
-        f = e => {
+        _ = e => {
             let {
                 text: t,
                 className: n,
@@ -87,7 +87,7 @@ function(e, t, n) {
                 shape: u = l.ROUND,
                 disableColor: d = !1,
                 style: c,
-                ...f
+                ..._
             } = e;
             return (0, i.jsx)("div", {
                 className: r(n, o.textBadge, u),
@@ -95,17 +95,17 @@ function(e, t, n) {
                     backgroundColor: d ? void 0 : s,
                     ...c
                 },
-                ...f,
+                ..._,
                 children: t
             })
         },
-        _ = e => {
+        f = e => {
             let {
                 text: t,
                 className: n,
                 ...s
             } = e;
-            return (0, i.jsx)(f, {
+            return (0, i.jsx)(_, {
                 className: r(o.premiumBadge, n),
                 text: t,
                 ...s

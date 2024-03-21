@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         },
         default: function() {
-            return f
+            return _
         }
     }), n("222007");
     var i, s, r = n("446674"),
@@ -42,7 +42,7 @@ function(e, t, n) {
         }
     }
     c.displayName = "ApplicationDirectoryApplicationsStore";
-    var f = new c(a.default, {
+    var _ = new c(a.default, {
         APPLICATION_DIRECTORY_FETCH_APPLICATION: function(e) {
             let {
                 applicationId: t

@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("662285"),
         d = n("271938"),
         c = n("19766"),
-        f = n("982108"),
-        _ = n("42203"),
+        _ = n("982108"),
+        f = n("42203"),
         E = n("341542"),
         h = n("26989"),
         g = n("305961"),
@@ -36,7 +36,7 @@ function(e, t, n) {
         let n = {};
         I.forEach(s => {
             var r;
-            s !== v.default.getGuildId() && s !== m.default.getGuildId() && s !== (null === (r = _.default.getChannel(S.default.getChannelId())) || void 0 === r ? void 0 : r.getGuildId()) && (null == i || i.guildId !== s) && (I.clearWithoutFlushing(s, e), t && (n[s] = I.get(s)))
+            s !== v.default.getGuildId() && s !== m.default.getGuildId() && s !== (null === (r = f.default.getChannel(S.default.getChannelId())) || void 0 === r ? void 0 : r.getGuildId()) && (null == i || i.guildId !== s) && (I.clearWithoutFlushing(s, e), t && (n[s] = I.get(s)))
         }), !r.isEmpty(n) && o.default.dispatch({
             type: "GUILD_SUBSCRIPTIONS_FLUSH",
             subscriptions: n
@@ -44,12 +44,12 @@ function(e, t, n) {
     }
 
     function C(e, t) {
-        return I.subscribeToGuild(e), null != t && f.default.getSection(t) === T.ChannelSections.MEMBERS && y(e, t, l.DEFAULT_RANGES)
+        return I.subscribeToGuild(e), null != t && _.default.getSection(t) === T.ChannelSections.MEMBERS && y(e, t, l.DEFAULT_RANGES)
     }
 
     function y(e, t, n) {
         if (t === c.EVERYONE_CHANNEL_ID) return I.subscribeChannel(e, t, n);
-        let i = _.default.getChannel(t);
+        let i = f.default.getChannel(t);
         if (null == i) return !1;
         let s = i.getGuildId();
         return (s !== e && e === T.FAVORITES && I.subscribeToGuild(s), null != i && i.isThread()) ? i.type === T.ChannelTypes.ANNOUNCEMENT_THREAD ? I.subscribeChannel(s, i.parent_id, n) : !!i.isActiveThread() && I.subscribeThreadMemberList(s, t, S.default.getChannelId()) : I.subscribeChannel(s, t, n)
@@ -103,7 +103,7 @@ function(e, t, n) {
     }
     class P extends a.default.Store {
         initialize() {
-            this.waitFor(_.default, g.default, v.default, S.default, m.default, d.default, f.default), this.syncWith([u.default], D), this.syncWith([f.default], O)
+            this.waitFor(f.default, g.default, v.default, S.default, m.default, d.default, _.default), this.syncWith([u.default], D), this.syncWith([_.default], O)
         }
         getSubscribedThreadIds() {
             return I.getSubscribedThreadIds()

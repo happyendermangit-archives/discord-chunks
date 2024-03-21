@@ -14,7 +14,7 @@ function(e, t, n) {
             return d
         },
         DEFAULT_KEYBIND: function() {
-            return _
+            return f
         },
         CLIPS_TOAST_DURATION: function() {
             return E
@@ -96,10 +96,10 @@ function(e, t, n) {
         }
     });
     var i, s, r, a, o, l, u, d, c = n("605250"),
-        f = n("718517");
-    (i = o || (o = {}))[i.SECONDS_30 = 30 * f.default.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = f.default.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * f.default.Millis.MINUTE] = "MINUTES_2", (s = l || (l = {}))[s.ALL = 0] = "ALL", s[s.FRIENDS = 1] = "FRIENDS", (r = u || (u = {})).DECOUPLED = "decoupled", r.VIEWER = "viewer", r.STREAMER = "streamer", (a = d || (d = {}))[a.Error = 0] = "Error", a[a.Disabled = 1] = "Disabled", a[a.Enabled = 2] = "Enabled";
-    let _ = "alt+c",
-        E = 6 * f.default.Millis.SECOND,
+        _ = n("718517");
+    (i = o || (o = {}))[i.SECONDS_30 = 30 * _.default.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = _.default.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * _.default.Millis.MINUTE] = "MINUTES_2", (s = l || (l = {}))[s.ALL = 0] = "ALL", s[s.FRIENDS = 1] = "FRIENDS", (r = u || (u = {})).DECOUPLED = "decoupled", r.VIEWER = "viewer", r.STREAMER = "streamer", (a = d || (d = {}))[a.Error = 0] = "Error", a[a.Disabled = 1] = "Disabled", a[a.Enabled = 2] = "Enabled";
+    let f = "alt+c",
+        E = 6 * _.default.Millis.SECOND,
         h = new c.default("Clips"),
         g = e => "Discord_Clip_".concat(e, ".mp4"),
         m = 3,
@@ -121,7 +121,7 @@ function(e, t, n) {
         b = 3e4,
         U = 30,
         w = 10,
-        k = 14 * f.default.Millis.DAY,
+        k = 14 * _.default.Millis.DAY,
         V = 5,
         G = 5,
         F = 1

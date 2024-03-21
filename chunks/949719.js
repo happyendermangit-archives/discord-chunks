@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("191225"),
         d = n("374014"),
         c = n("373469"),
-        f = n("271938"),
-        _ = n("950104"),
+        _ = n("271938"),
+        f = n("950104"),
         E = n("42203"),
         h = n("42887"),
         g = n("280168"),
@@ -54,9 +54,9 @@ function(e, t, n) {
         rebuild() {
             let e = E.default.getChannel(this.channelId);
             if (null == e || e.type === A.ChannelTypes.GUILD_TEXT) return !1;
-            if (this.call = _.default.getCall(this.channelId), e.isPrivate() && (null == this.call || this.call.unavailable)) return !1;
+            if (this.call = f.default.getCall(this.channelId), e.isPrivate() && (null == this.call || this.call.unavailable)) return !1;
             let t = new Set(e.isGuildVocalOrThread() ? Object.keys(S.default.getVoiceStatesForChannel(e.id)) : e.recipients);
-            return t.add(f.default.getId()), c.default.getAllActiveStreamsForChannel(this.channelId).forEach(e => {
+            return t.add(_.default.getId()), c.default.getAllActiveStreamsForChannel(this.channelId).forEach(e => {
                 let {
                     ownerId: n
                 } = e;
@@ -131,9 +131,9 @@ function(e, t, n) {
         _getParticipantsForUser(e) {
             var t, n, i, s, r, a;
             let o, u;
-            let _ = [],
+            let f = [],
                 T = m.default.getUser(e);
-            if (null == T) return _;
+            if (null == T) return f;
             let A = S.default.getVoiceStateForChannel(this.channelId, e),
                 y = S.default.getVoicePlatformForChannel(this.channelId, e),
                 N = E.default.getChannel(this.channelId),
@@ -154,12 +154,12 @@ function(e, t, n) {
                 ringing: R,
                 userNick: v.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, T),
                 localVideoDisabled: h.default.isLocalVideoDisabled(T.id)
-            }, _.push(o));
+            }, f.push(o));
             let O = null !== (r = c.default.getStreamForUser(e, null == N ? void 0 : N.getGuildId())) && void 0 !== r ? r : c.default.getActiveStreamForUser(e, null == N ? void 0 : N.getGuildId());
             if (null != O && O.channelId === this.channelId) {
                 let t = (0, d.encodeStreamKey)(O),
                     n = this.getParticipant(t),
-                    i = O.ownerId === f.default.getId() && c.default.isSelfStreamHidden(this.channelId),
+                    i = O.ownerId === _.default.getId() && c.default.isSelfStreamHidden(this.channelId),
                     s = (null == n ? void 0 : n.type) === I.ParticipantTypes.STREAM ? {
                         maxResolution: null != n.maxResolution ? {
                             ...n.maxResolution
@@ -175,9 +175,9 @@ function(e, t, n) {
                     user: T,
                     userNick: v.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, T),
                     stream: O
-                }, _.push(u)
+                }, f.push(u)
             }
-            return _
+            return f
         }
         constructor(e) {
             this.participants = {}, this.lastSpoke = {}, this.participantByIndex = new o.default(e => {

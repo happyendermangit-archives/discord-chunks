@@ -11,10 +11,10 @@ function(e, t, n) {
             return c
         },
         GiropaySourceRecord: function() {
-            return f
+            return _
         },
         Przelewy24SourceRecord: function() {
-            return _
+            return f
         },
         EPSSourceRecord: function() {
             return E
@@ -110,11 +110,11 @@ function(e, t, n) {
                         email: e.email
                     });
                 case l.PaymentSourceTypes.GIROPAY:
-                    return new f({
+                    return new _({
                         ...i
                     });
                 case l.PaymentSourceTypes.PRZELEWY24:
-                    return new _({
+                    return new f({
                         ...i,
                         email: e.email,
                         bank: e.bank
@@ -177,9 +177,9 @@ function(e, t, n) {
                 case l.PaymentSourceTypes.SEPA_DEBIT:
                     return new c(e);
                 case l.PaymentSourceTypes.GIROPAY:
-                    return new f(e);
-                case l.PaymentSourceTypes.PRZELEWY24:
                     return new _(e);
+                case l.PaymentSourceTypes.PRZELEWY24:
+                    return new f(e);
                 case l.PaymentSourceTypes.PAYSAFE_CARD:
                     return new g(e);
                 case l.PaymentSourceTypes.GCASH:
@@ -245,12 +245,12 @@ function(e, t, n) {
             this.email = e.email || ""
         }
     }
-    class f extends i {
+    class _ extends i {
         constructor(e) {
             if (super(e), e.type !== l.PaymentSourceTypes.GIROPAY) throw Error("Cannot instantiate GiropaySourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.GIROPAY))
         }
     }
-    class _ extends i {
+    class f extends i {
         constructor(e) {
             if (super(e), e.type !== l.PaymentSourceTypes.PRZELEWY24) throw Error("Cannot instantiate Przelewy24SourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.PRZELEWY24));
             this.email = e.email || "", this.bank = e.bank

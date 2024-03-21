@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("222007");
     var i = n("37983"),
@@ -25,18 +25,18 @@ function(e, t, n) {
     }
     let c = new Map;
 
-    function f(e) {
+    function _(e) {
         let t = c.get(e);
         null != t && t.release() && ((0, l.getVoiceEngine)().removeDirectVideoOutputSink(e), c.delete(e))
     }
 
-    function _(e) {
+    function f(e) {
         let {
             streamId: t,
             paused: n,
             onReady: r,
             onResize: o,
-            className: _,
+            className: f,
             ...E
         } = e, h = s.useRef(null), g = s.useRef(null), m = s.useRef({
             width: 0,
@@ -81,23 +81,23 @@ function(e, t, n) {
         }), s.useEffect(() => {
             let e = g.current;
             if (null != e) {
-                if (n) null != e.srcObject && (e.srcObject = null, f(t));
+                if (n) null != e.srcObject && (e.srcObject = null, _(t));
                 else {
                     var i;
                     let n;
                     u.info("attaching srcObject for ".concat(t));
                     return e.srcObject = (i = t, null == (n = c.get(i)) ? (n = new d(i), (0, l.getVoiceEngine)().addDirectVideoOutputSink(i), c.set(i, n)) : n.addref(), n.stream), () => {
-                        f(t), e.srcObject = null
+                        _(t), e.srcObject = null
                     }
                 }
             }
         }, [n, t]), (0, i.jsx)("div", {
-            className: a("media-engine-video", _),
+            className: a("media-engine-video", f),
             ref: h,
             ...E
         })
     }
-    _.defaultProps = {
+    f.defaultProps = {
         paused: !1
     }
 }

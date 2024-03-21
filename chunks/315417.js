@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("542238"),
         d = n("715072"),
         c = n("77078"),
-        f = n("298878"),
-        _ = n("772280"),
+        _ = n("298878"),
+        f = n("772280"),
         E = n("315102"),
         h = n("701909"),
         g = n("49111"),
@@ -86,7 +86,7 @@ function(e, t, n) {
                                 color: "text-muted",
                                 children: e.subtitle
                             })]
-                        }), e.beta && (0, i.jsx)(f.default, {}), (0, i.jsx)(_.default, {
+                        }), e.beta && (0, i.jsx)(_.default, {}), (0, i.jsx)(f.default, {
                             className: v.rightIcon
                         })]
                     })]

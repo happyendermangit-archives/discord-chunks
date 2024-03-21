@@ -17,7 +17,7 @@ function(e, t, n) {
     function c(e, t, n) {
         let a = (0, u.getScrollbarSpecs)(e),
             c = new Map,
-            f = new n(e => {
+            _ = new n(e => {
                 e.forEach(e => {
                     var t;
                     let {
@@ -26,7 +26,7 @@ function(e, t, n) {
                     null === (t = c.get(n)) || void 0 === t || t(e)
                 })
             });
-        return (0, s.forwardRef)(function(n, _) {
+        return (0, s.forwardRef)(function(n, f) {
             let {
                 onScroll: E,
                 dir: h = "ltr",
@@ -92,9 +92,9 @@ function(e, t, n) {
                 ref: F,
                 key: "container",
                 onUpdate: $,
-                resizeObserver: f,
+                resizeObserver: _,
                 listenerMap: c
-            }), (0, s.useImperativeHandle)(_, () => ({
+            }), (0, s.useImperativeHandle)(f, () => ({
                 getScrollerNode: () => F.current,
                 getItemGrid: Z,
                 getCoordsMap: J,

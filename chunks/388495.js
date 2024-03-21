@@ -17,14 +17,14 @@ function(e, t, n) {
         u = n("266491"),
         d = n("244201"),
         c = n("892974"),
-        f = n("983782"),
-        _ = n("668596"),
+        _ = n("983782"),
+        f = n("668596"),
         E = n("659500"),
         h = n("551042"),
         g = n("625611"),
         m = n("49111"),
         p = n("934583");
-    let S = [f.default, _.default];
+    let S = [_.default, f.default];
     class v extends s.PureComponent {
         render() {
             let {
@@ -108,12 +108,12 @@ function(e, t, n) {
             o = s.useCallback(t => {
                 (0, h.closeModal)(t, e)
             }, [e]),
-            d = S.map(e => t.some(t => t.Layer === e || null == t.Layer && e === f.default));
+            d = S.map(e => t.some(t => t.Layer === e || null == t.Layer && e === _.default));
         return (0, i.jsxs)(u.TransitionGroup, {
             component: s.Fragment,
             children: [S.map((e, n) => {
                 var s;
-                let r = l.findLast(t, t => t.Layer === e || null == t.Layer && e === f.default);
+                let r = l.findLast(t, t => t.Layer === e || null == t.Layer && e === _.default);
                 return (0, i.jsx)(c.default, {
                     isVisible: d[n],
                     backdropStyle: null !== (s = null == r ? void 0 : r.backdropStyle) && void 0 !== s ? s : c.BackdropStyles.DARK,
@@ -130,7 +130,7 @@ function(e, t, n) {
                 } = e;
                 return (0, i.jsx)(v, {
                     modalKey: s,
-                    LayerComponent: null != r ? r : f.default,
+                    LayerComponent: null != r ? r : _.default,
                     isTopModal: n === t.length - 1,
                     render: a,
                     closeModal: o,

@@ -21,8 +21,8 @@ function(e, t, n) {
                     onConfirm: u,
                     onCancel: d,
                     onCloseCallback: c,
-                    secondaryConfirmText: f,
-                    onConfirmSecondary: _,
+                    secondaryConfirmText: _,
+                    onConfirmSecondary: f,
                     className: E,
                     titleClassName: h
                 } = e;
@@ -35,8 +35,8 @@ function(e, t, n) {
                     cancelText: l,
                     onConfirm: u,
                     onCancel: d,
-                    secondaryConfirmText: f,
-                    onConfirmSecondary: _,
+                    secondaryConfirmText: _,
+                    onConfirmSecondary: f,
                     className: E,
                     titleClassName: h
                 }), {

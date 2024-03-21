@@ -17,10 +17,10 @@ function(e, t, n) {
             return c
         },
         convertToTransitionState: function() {
-            return f
+            return _
         },
         getCombinedProgress: function() {
-            return _
+            return f
         },
         isUserEntitledToLibraryApplication: function() {
             return E
@@ -57,13 +57,13 @@ function(e, t, n) {
         return !(null == t || n.enabled && t.hasFlag(a.LibraryApplicationFlags.PRIVATE)) && !t.isHidden()
     }
 
-    function f(e) {
+    function _(e) {
         return null == e ? null : e.type === a.LocalDispatchApplicationStates.INSTALLING || e.type === a.LocalDispatchApplicationStates.UPDATING || e.type === a.LocalDispatchApplicationStates.UNINSTALLING ? e : null
     }
 
-    function _(e) {
+    function f(e) {
         return e.reduce((e, t) => {
-            let n = f(t);
+            let n = _(t);
             return null == n || t.type === a.LocalDispatchApplicationStates.UP_TO_DATE ? e : {
                 total: e.total + Number(n.total),
                 progress: e.progress + Number(n.progress)

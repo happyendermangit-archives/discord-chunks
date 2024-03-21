@@ -12,8 +12,8 @@ function(e, t, n) {
         u = n("132774"),
         d = n("258158"),
         c = n("823348"),
-        f = n("697218"),
-        _ = n("284609"),
+        _ = n("697218"),
+        f = n("284609"),
         E = n("158998"),
         h = n("404118"),
         g = n("272030"),
@@ -53,7 +53,7 @@ function(e, t, n) {
                 if (r === m.AbortCodes.USER_QUARANTINED)(0, g.closeContextMenu)(), (0, d.default)();
                 else if ((0, c.isLimitedAccessErrorCode)(i, r)) break;
                 else if (0 === t) {
-                    let e = null != n ? (0, _.humanizeAbortCode)(r || 0, n) : p.default.Messages.POMELO_ADD_FRIEND_ERROR;
+                    let e = null != n ? (0, f.humanizeAbortCode)(r || 0, n) : p.default.Messages.POMELO_ADD_FRIEND_ERROR;
                     S({
                         title: p.default.Messages.FRIEND_REQUEST_FAILED_HEADER,
                         body: e,
@@ -92,7 +92,7 @@ function(e, t, n) {
                 friendToken: a,
                 fromFriendSuggestion: o,
                 captchaPayload: l
-            } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, d = f.default.getUser(n);
+            } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, d = _.default.getUser(n);
             return r.default.put({
                 url: m.Endpoints.USER_RELATIONSHIP(n),
                 body: {

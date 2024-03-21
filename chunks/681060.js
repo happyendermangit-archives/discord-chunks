@@ -145,16 +145,16 @@ function(e, t, n) {
                         var l, a;
                         let r = e.isPrivate(),
                             o = G.default.computePermissions(e),
-                            u = f.default.has(o, ea.Permissions.CREATE_PUBLIC_THREADS) || f.default.has(o, ea.Permissions.CREATE_PRIVATE_THREADS),
-                            d = (!(null === (l = t.permissions) || void 0 === l ? void 0 : l.requireCreateTherads) || u) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || f.default.has(o, ea.Permissions.SEND_MESSAGES)),
-                            c = d && f.default.has(o, ea.Permissions.ATTACH_FILES),
+                            u = f.has(o, ea.Permissions.CREATE_PUBLIC_THREADS) || f.has(o, ea.Permissions.CREATE_PRIVATE_THREADS),
+                            d = (!(null === (l = t.permissions) || void 0 === l ? void 0 : l.requireCreateTherads) || u) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || f.has(o, ea.Permissions.SEND_MESSAGES)),
+                            c = d && f.has(o, ea.Permissions.ATTACH_FILES),
                             p = null != n,
                             m = (0, D.computeIsReadOnlyThread)(e);
                         return {
                             disabled: i || s || !r && !d || m,
                             canAttachFiles: !0 === t.attachments && (r || s || c || p),
                             canCreateThreads: u,
-                            canEveryoneSendMessages: Y.default.canEveryoneRole(ea.Permissions.SEND_MESSAGES, e)
+                            canEveryoneSendMessages: Y.canEveryoneRole(ea.Permissions.SEND_MESSAGES, e)
                         }
                     }, [e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, t.attachments, n, i, s]);
                 return {

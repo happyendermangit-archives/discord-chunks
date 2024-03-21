@@ -18,8 +18,8 @@ function(e, t, n) {
         u = n("812809"),
         d = n("42887"),
         c = n("773336");
-    let f = "default",
-        _ = f;
+    let _ = "default",
+        f = _;
     (s = i || (i = {})).Stopped = "stopped", s.Playing = "playing", s.Looping = "looping", s.Paused = "paused";
     let E = new Map;
     async function h(e) {
@@ -43,9 +43,9 @@ function(e, t, n) {
                 i = t[d.default.getOutputDeviceId()],
                 s = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
                 r = s[n];
-            null != i && (null == r || r.label !== i.name) && (r = s.find(e => e.label === i.name)), _ = null != r ? r.deviceId : f
+            null != i && (null == r || r.label !== i.name) && (r = s.find(e => e.label === i.name)), f = null != r ? r.deviceId : _
         }).catch(() => {
-            _ = f
+            f = _
         })
     }
     c.isPlatformEmbedded && (d.default.addChangeListener(p), p());
@@ -91,7 +91,7 @@ function(e, t, n) {
             return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
                 let i = new Audio;
                 i.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), i.onloadeddata = () => {
-                    i.volume = Math.min(d.default.getOutputVolume() / 100 * this._volume, 1), c.isPlatformEmbedded && i.setSinkId(_), e(i)
+                    i.volume = Math.min(d.default.getOutputVolume() / 100 * this._volume, 1), c.isPlatformEmbedded && i.setSinkId(f), e(i)
                 }, i.onerror = () => t(Error("could not play audio")), i.onended = () => this._destroyAudio(), i.load()
             }), this._audio
         }
@@ -150,7 +150,7 @@ function(e, t, n) {
         async _ensureAudio() {
             if (null == this._ensureAudioPromise) {
                 let e = Math.min(d.default.getOutputVolume() / 100 * this._volume, 1);
-                this._ensureAudioPromise = g(this.name).then(t => null == t ? Promise.reject(Error("Failed to load audio: ".concat(this.name))) : (this._audioContext = (0, o.getOrCreateAudioContext)(), this._gain = new GainNode(this._audioContext), this._gain.gain.value = e, c.isPlatformEmbedded && this._audioContext.setSinkId(_), this._buffer = t, this._source = this._audioContext.createBufferSource(), this._source.buffer = t, this._source.connect(this._gain).connect(this._audioContext.destination), this._source.loop = !1, this._source.onended = () => this._destroyAudio(), Promise.resolve({
+                this._ensureAudioPromise = g(this.name).then(t => null == t ? Promise.reject(Error("Failed to load audio: ".concat(this.name))) : (this._audioContext = (0, o.getOrCreateAudioContext)(), this._gain = new GainNode(this._audioContext), this._gain.gain.value = e, c.isPlatformEmbedded && this._audioContext.setSinkId(f), this._buffer = t, this._source = this._audioContext.createBufferSource(), this._source.buffer = t, this._source.connect(this._gain).connect(this._audioContext.destination), this._source.loop = !1, this._source.onended = () => this._destroyAudio(), Promise.resolve({
                     context: this._audioContext,
                     gainNode: this._gain,
                     source: this._source

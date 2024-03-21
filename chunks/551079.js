@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n.n(l),
         d = n("947279"),
         c = n("773364"),
-        f = n("953161"),
-        _ = n("793722"),
+        _ = n("953161"),
+        f = n("793722"),
         E = n("657869"),
         h = n("560550"),
         g = n("820127"),
@@ -278,7 +278,7 @@ function(e, t, n) {
                 this.emit(c.MediaEngineEvent.AudioPermission, e)
             }, this.handleVideoPermission = e => {
                 this.emit(c.MediaEngineEvent.VideoPermission, e)
-            }, this.on("newListener", this.handleNewListener), this.on("removeListener", this.handleRemoveListener), (0, _.setActiveSinksChangeCallback)(this.handleActiveSinksChange), (0, f.default)(this)
+            }, this.on("newListener", this.handleNewListener), this.on("removeListener", this.handleRemoveListener), (0, f.setActiveSinksChangeCallback)(this.handleActiveSinksChange), (0, _.default)(this)
         }
     }
 }

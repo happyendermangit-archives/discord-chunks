@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         canReviewGuildMemberApplications: function() {
-            return f
+            return _
         },
         useCanReviewGuildMemberApplications: function() {
-            return _
+            return f
         }
     });
     var i = n("884691"),
@@ -18,23 +18,23 @@ function(e, t, n) {
         d = n("567054"),
         c = n("49111");
 
-    function f(e) {
+    function _(e) {
         let t = r.default.getGuild(e);
         return null != t && (0, u.isMemberVerificationManualApproval)(e) && a.default.can(c.Permissions.KICK_MEMBERS, t)
     }
 
-    function _(e) {
+    function f(e) {
         let t = (0, u.useIsMemberVerificationManualApproval)(e),
             n = (0, s.useStateFromStores)([r.default], () => r.default.getGuild(e)),
-            f = null != n && t && a.default.can(c.Permissions.KICK_MEMBERS, n) && n.hasVerificationGate(),
-            _ = (0, s.useStateFromStores)([l.default], () => l.default.get(e), [e]);
+            _ = null != n && t && a.default.can(c.Permissions.KICK_MEMBERS, n) && n.hasVerificationGate(),
+            f = (0, s.useStateFromStores)([l.default], () => l.default.get(e), [e]);
         i.useEffect(() => {
-            f && o.default.fetchVerificationForm(e)
-        }, [f, e]);
+            _ && o.default.fetchVerificationForm(e)
+        }, [_, e]);
         let E = i.useMemo(() => {
             var e;
-            return (null !== (e = null == _ ? void 0 : _.formFields) && void 0 !== e ? e : []).some(e => !(0, d.isTermsFormField)(e))
-        }, [null == _ ? void 0 : _.formFields]);
-        return f && E
+            return (null !== (e = null == f ? void 0 : f.formFields) && void 0 !== e ? e : []).some(e => !(0, d.isTermsFormField)(e))
+        }, [null == f ? void 0 : f.formFields]);
+        return _ && E
     }
 }

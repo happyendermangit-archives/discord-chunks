@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("605250"),
         d = n("447435"),
         c = n("10853"),
-        f = n("38654"),
-        _ = n("692038"),
+        _ = n("38654"),
+        f = n("692038"),
         E = n("61400");
     n("574073");
     var h = n("432173"),
@@ -93,13 +93,13 @@ function(e, t, n) {
     }
     class x extends r.default.Store {
         initialize() {
-            this.waitFor(D.default, v.default, T.default, A.default, g.default, R.default, O.default, C.default, N.default, I.default), this.syncWith([f.default], () => {})
+            this.waitFor(D.default, v.default, T.default, A.default, g.default, R.default, O.default, C.default, N.default, I.default), this.syncWith([_.default], () => {})
         }
         getMessages(e) {
-            if (f.default.hasViewingRoles()) {
+            if (_.default.hasViewingRoles()) {
                 let t = v.default.getChannel(e),
                     n = null == t ? void 0 : t.getGuildId();
-                if (f.default.isViewingRoles(n) && !y.default.can(P.Permissions.VIEW_CHANNEL, t)) return new o.default(e)
+                if (_.default.isViewingRoles(n) && !y.default.can(P.Permissions.VIEW_CHANNEL, t)) return new o.default(e)
             }
             return o.default.getOrCreate(e)
         }
@@ -282,7 +282,7 @@ function(e, t, n) {
                 n = e.message.channel_id,
                 i = o.default.getOrCreate(n);
             if (null == i || !i.has(t)) return !1;
-            i = i.update(t, t => (0, _.updateMessageRecord)(t, e.message)), o.default.commit(i)
+            i = i.update(t, t => (0, f.updateMessageRecord)(t, e.message)), o.default.commit(i)
         },
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
             let {

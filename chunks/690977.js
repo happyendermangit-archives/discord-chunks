@@ -8,7 +8,7 @@ function(e, t, n) {
             return c
         },
         useFocusJumpSectionManager: function() {
-            return _
+            return f
         }
     }), n("37983");
     var i = n("884691"),
@@ -30,42 +30,42 @@ function(e, t, n) {
         let t = d();
         return e.children(t)
     }
-    async function f(e) {
+    async function _(e) {
         var t, n, i, u;
         if (e.key !== a.FOCUS_SECTION_JUMP_KEY) return;
         let d = (0, r.eventOwnerDocument)(e);
         if (null == d) return;
         let c = null,
-            f = null,
-            _ = e.target;
-        for (; null != _;) {
-            if (_.hasAttribute(o)) {
-                c = _.getAttribute(o), f = _;
+            _ = null,
+            f = e.target;
+        for (; null != f;) {
+            if (f.hasAttribute(o)) {
+                c = f.getAttribute(o), _ = f;
                 break
             }
-            _ = _.parentElement
+            f = f.parentElement
         }
         let E = (0, s.createFocusManager)({
             getFocusableElements: () => Array.from(d.querySelectorAll("[".concat(o, '="').concat(null != c ? c : l, '"]'))),
             getActiveElement: () => d.activeElement
         });
-        if ((null === (t = (0, r.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == f) {
+        if ((null === (t = (0, r.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == _) {
             null === (n = E.getFirstFocusableElement()) || void 0 === n || n.focus();
             return
         }
         e.getModifierState("Shift") ? null === (i = await E.getPreviousFocusableElement({
             wrap: !0,
-            from: f
+            from: _
         })) || void 0 === i || i.focus() : null === (u = await E.getNextFocusableElement({
             wrap: !0,
-            from: f
+            from: _
         })) || void 0 === u || u.focus()
     }
 
-    function _(e) {
+    function f(e) {
         i.useEffect(() => {
-            if (e) return window.addEventListener("keydown", f), () => {
-                window.removeEventListener("keydown", f)
+            if (e) return window.addEventListener("keydown", _), () => {
+                window.removeEventListener("keydown", _)
             }
         }, [e])
     }

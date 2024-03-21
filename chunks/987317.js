@@ -15,8 +15,8 @@ function(e, t, n) {
         u = n("42203"),
         d = n("247013"),
         c = n("42887"),
-        f = n("18494"),
-        _ = n("162771"),
+        _ = n("18494"),
+        f = n("162771"),
         E = n("697218"),
         h = n("404008"),
         g = n("450481"),
@@ -59,10 +59,10 @@ function(e, t, n) {
             disconnect() {
                 let e = r.default.getRemoteSessionId();
                 if (null != e && s.remoteDisconnect(e), (0, l.isOldVoiceUIEnabled)()) {
-                    let e = u.default.getChannel(f.default.getChannelId()),
-                        t = f.default.getChannelId() === f.default.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
+                    let e = u.default.getChannel(_.default.getChannelId()),
+                        t = _.default.getChannelId() === _.default.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
                     if (this.selectVoiceChannel(null), a.close(m.PopoutWindowKeys.CHANNEL_CALL_POPOUT), t) {
-                        let e = _.default.getGuildId();
+                        let e = f.default.getGuildId();
                         null != e && (0, o.transitionTo)((0, h.previousTextChannelRouteForGuild)(e))
                     }
                 } else this.selectVoiceChannel(null)

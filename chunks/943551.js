@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("659500"),
         d = n("880731"),
         c = n("119035"),
-        f = n("39141"),
-        _ = n("49111");
+        _ = n("39141"),
+        f = n("49111");
     let E = new Set,
         h = new s.default(function(e) {
             let {
@@ -164,9 +164,9 @@ function(e, t, n) {
                 userId: null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "???",
                 channelId: i
             }));
-            if (d.default.screenshakeEnabled && d.default.screenshakeEnabledLocations[f.ShakeLocation.MENTION] && null != s && null != s.find(e => e.id === l)) {
-                let e = null != g ? null !== (n = (0, c.getComboShakeIntensity)(g, f.ShakeLevel.LEVEL_4)) && void 0 !== n ? n : .001 : 4 * Math.random();
-                return u.ComponentDispatch.dispatch(_.ComponentActions.SHAKE_APP, {
+            if (d.default.screenshakeEnabled && d.default.screenshakeEnabledLocations[_.ShakeLocation.MENTION] && null != s && null != s.find(e => e.id === l)) {
+                let e = null != g ? null !== (n = (0, c.getComboShakeIntensity)(g, _.ShakeLevel.LEVEL_4)) && void 0 !== n ? n : .001 : 4 * Math.random();
+                return u.ComponentDispatch.dispatch(f.ComponentActions.SHAKE_APP, {
                     duration: 1e3,
                     intensity: e
                 }), !0

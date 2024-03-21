@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useShouldHideGuildPurchaseEntryPoints: function() {
-            return f
+            return _
         },
         useShouldRestrictUpdatingCreatorMonetizationSettings: function() {
-            return _
+            return f
         },
         useIsMonetizationReapplicationDisabled: function() {
             return E
@@ -37,7 +37,7 @@ function(e, t, n) {
                 restrictionsLoading: u
             }
         },
-        f = e => {
+        _ = e => {
             var t;
             let n = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
                 {
@@ -51,7 +51,7 @@ function(e, t, n) {
                 restrictionsLoading: r
             }
         },
-        _ = e => {
+        f = e => {
             var t;
             let n = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
                 {

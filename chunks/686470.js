@@ -14,12 +14,12 @@ function(e, t, n) {
         u = n("568734"),
         d = n("964889"),
         c = n("271938"),
-        f = n("49111");
-    let _ = "LibraryApplicationStore";
+        _ = n("49111");
+    let f = "LibraryApplicationStore";
 
     function E() {
         var e;
-        return null !== (e = a.default.get(_)) && void 0 !== e ? e : {}
+        return null !== (e = a.default.get(f)) && void 0 !== e ? e : {}
     }
     let h = !1,
         g = {},
@@ -30,14 +30,14 @@ function(e, t, n) {
         T = !1;
 
     function I() {
-        a.default.set(_, {
+        a.default.set(f, {
             ...E(),
             activeLaunchOptionIds: v
         })
     }
 
     function A() {
-        a.default.set(_, {
+        a.default.set(f, {
             ...E(),
             activeLibraryApplicationBranchIds: S
         })
@@ -73,7 +73,7 @@ function(e, t, n) {
     class O extends r.default.Store {
         initialize() {
             this.waitFor(c.default);
-            let e = a.default.get(_);
+            let e = a.default.get(f);
             null != e && (null == e.activeLaunchOptionIds ? I() : v = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? A() : S = e.activeLibraryApplicationBranchIds)
         }
         get libraryApplications() {
@@ -160,7 +160,7 @@ function(e, t, n) {
                 branchId: n,
                 flags: i
             } = e, s = (0, d.getComboId)(t, n), r = N(t, n);
-            null != r && !r.isHidden() && u.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (T = !0), p.add(s)
+            null != r && !r.isHidden() && u.hasFlag(i, _.LibraryApplicationFlags.HIDDEN) && (T = !0), p.add(s)
         },
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: y,
         LIBRARY_APPLICATION_UPDATE: y,

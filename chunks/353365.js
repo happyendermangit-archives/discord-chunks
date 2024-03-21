@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return _
         }
     });
     var i = n("446674"),
@@ -31,7 +31,7 @@ function(e, t, n) {
         }
     }
     c.displayName = "PremiumPaymentModalStore";
-    var f = new c(s.default, {
+    var _ = new c(s.default, {
         PREMIUM_PAYMENT_SUBSCRIBE_FAIL: u,
         PREMIUM_PAYMENT_UPDATE_FAIL: u,
         PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function() {

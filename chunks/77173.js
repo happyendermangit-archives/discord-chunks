@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("945956"),
         d = n("18494"),
         c = n("991170"),
-        f = n("488464"),
-        _ = n("998716"),
+        _ = n("488464"),
+        f = n("998716"),
         E = n("118033"),
         h = n("834052"),
         g = n("819450"),
@@ -31,15 +31,15 @@ function(e, t, n) {
             let v = h.default.getStageInstanceByChannel(u);
             if (null == v) return null;
             let T = o.default.getChannel(u);
-            if (null == T || !c.default.canEveryone(p.Permissions.VIEW_CHANNEL, T)) return null;
+            if (null == T || !c.canEveryone(p.Permissions.VIEW_CHANNEL, T)) return null;
             let I = l.default.getGuild(T.getGuildId());
             if (null == I || !I.hasFeature(p.GuildFeatures.DISCOVERABLE)) return null;
             let A = (0, E.packStageChannelPartyId)(T, v),
                 C = (null == S ? void 0 : null === (e = S.party) || void 0 === e ? void 0 : e.id) === A ? S : null,
-                y = f.default.getMutableParticipants(T.id, _.StageChannelParticipantNamedIndex.SPEAKER),
-                N = y.filter(e => e.type === _.StageChannelParticipantTypes.STREAM).length,
+                y = _.default.getMutableParticipants(T.id, f.StageChannelParticipantNamedIndex.SPEAKER),
+                N = y.filter(e => e.type === f.StageChannelParticipantTypes.STREAM).length,
                 R = y.length - N,
-                O = f.default.getParticipantCount(u) - N,
+                O = _.default.getParticipantCount(u) - N,
                 D = (null == C ? void 0 : null === (t = C.party) || void 0 === t ? void 0 : t.size) != null ? C.party.size[1] : 0;
             return {
                 application_id: m.STAGE_APPLICATION_ID,

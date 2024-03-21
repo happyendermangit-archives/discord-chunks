@@ -8,10 +8,10 @@ function(e, t, n) {
             return c
         },
         useIsActivitiesInTextEnabled: function() {
-            return f
+            return _
         },
         useActivitiesInTextButtonVisibility: function() {
-            return _
+            return f
         }
     });
     var i = n("298386"),
@@ -76,7 +76,7 @@ function(e, t, n) {
         }).activitiesInTextEnabled && n
     }
 
-    function f(e, t) {
+    function _(e, t) {
         let n = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(e)),
             i = d(n),
             a = (null == n ? void 0 : n.guild_id) != null ? r.default : l,
@@ -89,7 +89,7 @@ function(e, t, n) {
         return u.activitiesInTextEnabled && i
     }
 
-    function _(e, t) {
+    function f(e, t) {
         let n = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(e)),
             i = d(n),
             a = (null == n ? void 0 : n.guild_id) != null ? r.default : l,

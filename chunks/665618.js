@@ -11,10 +11,10 @@ function(e, t, n) {
             return c
         },
         fromServerUpdate: function() {
-            return f
+            return _
         },
         fromInviteGuild: function() {
-            return _
+            return f
         },
         toServer: function() {
             return E
@@ -34,7 +34,7 @@ function(e, t, n) {
         l = n("49111");
 
     function u(e, t) {
-        var n, i, o, u, d, c, f, _, E, h, g, m, p;
+        var n, i, o, u, d, c, _, f, E, h, g, m, p;
         let S = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
             v = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
         if (null == e.properties) {
@@ -65,8 +65,8 @@ function(e, t, n) {
             systemChannelId: e.properties.system_channel_id,
             verificationLevel: null !== (d = e.properties.verification_level) && void 0 !== d ? d : l.VerificationLevels.NONE,
             explicitContentFilter: null !== (c = e.properties.explicit_content_filter) && void 0 !== c ? c : l.GuildExplicitContentFilterTypes.DISABLED,
-            defaultMessageNotifications: null !== (f = e.properties.default_message_notifications) && void 0 !== f ? f : l.UserNotificationSettings.ALL_MESSAGES,
-            mfaLevel: null !== (_ = e.properties.mfa_level) && void 0 !== _ ? _ : l.MFALevels.NONE,
+            defaultMessageNotifications: null !== (_ = e.properties.default_message_notifications) && void 0 !== _ ? _ : l.UserNotificationSettings.ALL_MESSAGES,
+            mfaLevel: null !== (f = e.properties.mfa_level) && void 0 !== f ? f : l.MFALevels.NONE,
             vanityURLCode: e.properties.vanity_url_code,
             premiumTier: null !== (E = e.properties.premium_tier) && void 0 !== E ? E : l.BoostedGuildTiers.NONE,
             premiumProgressBarEnabled: e.properties.premium_progress_bar_enabled || !1,
@@ -93,7 +93,7 @@ function(e, t, n) {
     }
 
     function c(e, t) {
-        var n, i, s, r, a, o, u, d, c, f, _, h, g;
+        var n, i, s, r, a, o, u, d, c, _, f, h, g;
         let m = null !== (n = e.properties) && void 0 !== n ? n : E(t),
             p = {
                 id: e.id,
@@ -122,8 +122,8 @@ function(e, t, n) {
                 rulesChannelId: m.rules_channel_id,
                 safetyAlertsChannelId: m.safety_alerts_channel_id,
                 publicUpdatesChannelId: m.public_updates_channel_id,
-                maxStageVideoChannelUsers: null !== (f = m.max_stage_video_channel_users) && void 0 !== f ? f : -1,
-                maxVideoChannelUsers: null !== (_ = m.max_video_channel_users) && void 0 !== _ ? _ : -1,
+                maxStageVideoChannelUsers: null !== (_ = m.max_stage_video_channel_users) && void 0 !== _ ? _ : -1,
+                maxVideoChannelUsers: null !== (f = m.max_video_channel_users) && void 0 !== f ? f : -1,
                 maxMembers: null !== (h = m.max_members) && void 0 !== h ? h : -1,
                 nsfwLevel: null !== (g = m.nsfw_level) && void 0 !== g ? g : l.GuildNSFWContentLevel.DEFAULT,
                 hubType: m.hub_type,
@@ -132,7 +132,7 @@ function(e, t, n) {
         return t.merge(p)
     }
 
-    function f(e, t) {
+    function _(e, t) {
         let n = {
             id: e.id,
             name: e.name,
@@ -173,7 +173,7 @@ function(e, t, n) {
         return null == t ? new a.default(n) : t.merge(n)
     }
 
-    function _(e) {
+    function f(e) {
         let t = {
             id: e.id,
             name: e.name,

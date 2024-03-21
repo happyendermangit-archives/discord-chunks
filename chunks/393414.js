@@ -45,11 +45,11 @@ function(e, t, n) {
         u = n("877275"),
         d = n("49111");
     let c = new o.default("Routing/Utils"),
-        f = [d.RelativeMarketingURLs.DEVELOPER_PORTAL];
+        _ = [d.RelativeMarketingURLs.DEVELOPER_PORTAL];
     i = __OVERLAY__ ? (0, a.createMemoryHistory)() : (0, a.createBrowserHistory)();
-    let _ = !1,
+    let f = !1,
         E = i.listen((e, t) => {
-            "REPLACE" !== t && (_ = !0, E())
+            "REPLACE" !== t && (f = !0, E())
         });
 
     function h() {
@@ -57,7 +57,7 @@ function(e, t, n) {
     }
 
     function g(e, t) {
-        return !!("string" == typeof e && f.some(t => e.startsWith(t))) && (c.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
+        return !!("string" == typeof e && _.some(t => e.startsWith(t))) && (c.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
     }
 
     function m(e, t, n, a) {
@@ -127,7 +127,7 @@ function(e, t, n) {
     }
 
     function N() {
-        return _
+        return f
     }
 
     function R() {

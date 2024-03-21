@@ -29,9 +29,9 @@ function(e, t, n) {
         u = n("773336"),
         d = n("49111");
     let c = (0, u.isLinux)() ? d.LinuxKeyToCode : (0, u.isMac)() ? d.MacosKeyToCode : (0, u.isWindows)() ? d.WindowsKeyToCode : void 0,
-        f = a.invert(d.LinuxKeyToCode);
-    f["223"] = "`", Object.freeze(f);
-    let _ = Object.freeze(a.invert(d.MacosKeyToCode)),
+        _ = a.invert(d.LinuxKeyToCode);
+    _["223"] = "`", Object.freeze(_);
+    let f = Object.freeze(a.invert(d.MacosKeyToCode)),
         E = a.invert(d.WindowsKeyToCode);
     E["223"] = "`", Object.freeze(E);
     let h = a.invert(null != c ? c : {});
@@ -47,9 +47,9 @@ function(e, t, n) {
         let [, t, n] = e;
         switch (n) {
             case d.KeyboardEnvs.LINUX:
-                return f["" + t];
-            case d.KeyboardEnvs.MACOS:
                 return _["" + t];
+            case d.KeyboardEnvs.MACOS:
+                return f["" + t];
             case d.KeyboardEnvs.WINDOWS:
                 return E["" + t];
             case d.KeyboardEnvs.BROWSER:

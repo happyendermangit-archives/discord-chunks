@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("393414"),
         d = n("233069"),
         c = n("42203"),
-        f = n("271560"),
-        _ = n("561288"),
+        _ = n("271560"),
+        f = n("561288"),
         E = n("987317"),
         h = n("49111"),
         g = n("333188"),
@@ -28,7 +28,7 @@ function(e, t, n) {
                     r = arguments.length > 4 ? arguments[4] : void 0,
                     a = this._getRecipients(e),
                     o = e => {
-                        t && _.default.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null)
+                        t && f.default.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null)
                     };
                 if (1 === a.length) {
                     let [e] = a, t = this._openCachedDMChannel(e, r);
@@ -59,7 +59,7 @@ function(e, t, n) {
                             url: h.Endpoints.BROADCAST_PRIVATE_CHANNEL
                         }),
                         t = (0, d.createChannelRecordFromServer)(e.body);
-                    return _.default.call(t.id, !1, !1, null), e.body.id
+                    return f.default.call(t.id, !1, !1, null), e.body.id
                 } catch (t) {
                     var e;
                     throw (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.code) === h.AbortCodes.QUARANTINED && (0, l.default)(), t
@@ -216,7 +216,7 @@ function(e, t, n) {
             },
             fetchChannelStoreListing(e, t) {
                 let n = null != t ? h.Endpoints.CHANNEL_STORE_LISTING_SKU(e, t) : h.Endpoints.CHANNEL_STORE_LISTING(e);
-                return (0, f.httpGetWithCountryCodeQuery)(n).then(t => {
+                return (0, _.httpGetWithCountryCodeQuery)(n).then(t => {
                     r.default.dispatch({
                         type: "STORE_LISTING_FETCH_SUCCESS",
                         channelId: e,

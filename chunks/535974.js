@@ -13,15 +13,15 @@ function(e, t, n) {
         u = n("70513"),
         d = n("271938"),
         c = n("686470"),
-        f = n("645672"),
-        _ = n("718517"),
+        _ = n("645672"),
+        f = n("718517"),
         E = n("964889"),
         h = n("773336"),
         g = n("602043"),
         m = n("352326"),
         p = n("98328"),
         S = n("49111");
-    let v = 1 * _.default.Millis.MINUTE;
+    let v = 1 * f.default.Millis.MINUTE;
     (i || (i = {})).DISPATCH_APPLICATION_PROGRESS = "dispatch_application_progress";
     let T = {},
         I = "file://",
@@ -162,7 +162,7 @@ function(e, t, n) {
                                 launch_commands: u,
                                 launch_options: d,
                                 storage: c,
-                                install_path: _,
+                                install_path: f,
                                 installed_size: E,
                                 repairing: g
                             } = e, {
@@ -176,9 +176,9 @@ function(e, t, n) {
                                     if (g) e = S.LocalDispatchApplicationStates.REPAIRING;
                                     else if (null == t) e = S.LocalDispatchApplicationStates.INSTALL_REQUIRED;
                                     else if (m && (t !== n || null != i && 0 !== r.difference(i, s).length)) e = S.LocalDispatchApplicationStates.UPDATE_REQUIRED;
-                                    else if (e = S.LocalDispatchApplicationStates.UP_TO_DATE, null != _) {
-                                        let e = l.default.fileManager.join(_, "content"),
-                                            t = (0, f.getBuildPlatform)();
+                                    else if (e = S.LocalDispatchApplicationStates.UP_TO_DATE, null != f) {
+                                        let e = l.default.fileManager.join(f, "content"),
+                                            t = (0, _.getBuildPlatform)();
                                         if (null != d && 0 !== d.length) {
                                             var p;
                                             if (t === S.BuildPlatformTypes.WIN64 && (p = t, !d.some(e => e.platforms.includes(p)))) t = S.BuildPlatformTypes.WIN32;
@@ -223,7 +223,7 @@ function(e, t, n) {
                                         manifestIds: i,
                                         targetBuildId: n,
                                         targetManifestIds: s,
-                                        installPath: _,
+                                        installPath: f,
                                         installedSize: E,
                                         launchOptions: v,
                                         defaultLaunchOptionId: T,
@@ -238,7 +238,7 @@ function(e, t, n) {
                                         disk_progress: u,
                                         network_progress: d,
                                         reader_progress: c,
-                                        progress: f,
+                                        progress: _,
                                         total: h,
                                         paused: p
                                     } = e.state, v = l.type;
@@ -251,12 +251,12 @@ function(e, t, n) {
                                         manifestIds: i,
                                         targetBuildId: n,
                                         targetManifestIds: s,
-                                        installPath: _,
+                                        installPath: f,
                                         installedSize: E,
                                         diskProgress: u,
                                         networkProgress: d,
                                         readerProgress: c,
-                                        progress: f,
+                                        progress: _,
                                         total: h,
                                         paused: p,
                                         shouldPatch: m

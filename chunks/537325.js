@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return _
         }
     });
     var i = n("37983");
@@ -15,9 +15,9 @@ function(e, t, n) {
         u = n("361572"),
         d = n("232054"),
         c = n("49111");
-    async function f(e, t, f) {
-        let _ = (0, u.tryParseChannelPath)(e);
-        if (null != _ && !await (0, d.default)(_)) {
+    async function _(e, t, _) {
+        let f = (0, u.tryParseChannelPath)(e);
+        if (null != f && !await (0, d.default)(f)) {
             (0, s.openModalLazy)(async () => {
                 let {
                     default: e
@@ -28,7 +28,7 @@ function(e, t, n) {
             });
             return
         }
-        if (null == _) {
+        if (null == f) {
             (0, a.transitionTo)(e);
             return
         }
@@ -41,11 +41,11 @@ function(e, t, n) {
                 ...e,
                 guildId: null != n ? n : c.ME
             }
-        }(_);
+        }(f);
         if (null == E.channelId) {
             (0, o.transitionToGuild)(E.guildId);
             return
         }
-        null != E.threadId ? (0, a.transitionTo)(c.Routes.CHANNEL_THREAD_VIEW(E.guildId, E.channelId, E.threadId, E.messageId), t, f) : (0, a.transitionTo)(c.Routes.CHANNEL(E.guildId, E.channelId, E.messageId), t, f)
+        null != E.threadId ? (0, a.transitionTo)(c.Routes.CHANNEL_THREAD_VIEW(E.guildId, E.channelId, E.threadId, E.messageId), t, _) : (0, a.transitionTo)(c.Routes.CHANNEL(E.guildId, E.channelId, E.messageId), t, _)
     }
 }

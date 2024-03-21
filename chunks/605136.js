@@ -19,7 +19,7 @@ function(e, t, n) {
         r = n("299039");
 
     function a(e) {
-        e.permissions = i.default.deserialize(e.permissions)
+        e.permissions = i.deserialize(e.permissions)
     }
 
     function o(e) {
@@ -27,7 +27,7 @@ function(e, t, n) {
         return {
             id: e.id,
             name: e.name,
-            permissions: i.default.deserialize(e.permissions),
+            permissions: i.deserialize(e.permissions),
             mentionable: e.mentionable,
             position: e.position,
             originalPosition: e.position,

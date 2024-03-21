@@ -17,8 +17,8 @@ function(e, t, n) {
         u = n("709749"),
         d = n("391010"),
         c = n("414055"),
-        f = n("587974"),
-        _ = n("158998"),
+        _ = n("587974"),
+        f = n("158998"),
         E = n("52904"),
         h = n("49111"),
         g = n("573135"),
@@ -152,63 +152,63 @@ function(e, t, n) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             return null != t ? m.default.Messages.LABEL_WITH_ONLINE_STATUS.format({
                 label: e,
-                status: (0, _.humanizeStatus)(t, n)
+                status: (0, f.humanizeStatus)(t, n)
             }) : e
         }(v, I, A), P = R.size * g.DECORATION_TO_AVATAR_RATIO, L = function(e, t, n, i) {
             if (null == e) return null;
             if (i) switch (t) {
                 case E.AvatarSizes.SIZE_16:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_16;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_16;
                 case E.AvatarSizes.SIZE_20:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_20;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_20;
                 case E.AvatarSizes.SIZE_24:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_24;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_24;
                 case E.AvatarSizes.SIZE_32:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_32;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_32;
                 case E.AvatarSizes.SIZE_40:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_40;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_40;
                 case E.AvatarSizes.SIZE_56:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_56;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_56;
                 case E.AvatarSizes.SIZE_80:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_80;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_80;
                 case E.AvatarSizes.SIZE_120:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_120
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_120
             }
             if (n) switch (t) {
                 case E.AvatarSizes.SIZE_16:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_16;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_16;
                 case E.AvatarSizes.SIZE_20:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_20;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_20;
                 case E.AvatarSizes.SIZE_24:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_24;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_24;
                 case E.AvatarSizes.SIZE_32:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_32;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_32;
                 case E.AvatarSizes.SIZE_40:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_40;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_40;
                 case E.AvatarSizes.SIZE_56:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_56;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_56;
                 case E.AvatarSizes.SIZE_80:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_80;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_80;
                 case E.AvatarSizes.SIZE_120:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_120
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_120
             }
             switch (t) {
                 case E.AvatarSizes.SIZE_16:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_16;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_16;
                 case E.AvatarSizes.SIZE_20:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_20;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_20;
                 case E.AvatarSizes.SIZE_24:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_24;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_24;
                 case E.AvatarSizes.SIZE_32:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_32;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_32;
                 case E.AvatarSizes.SIZE_40:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_40;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_40;
                 case E.AvatarSizes.SIZE_56:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_56;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_56;
                 case E.AvatarSizes.SIZE_80:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_80;
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_80;
                 case E.AvatarSizes.SIZE_120:
-                    return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_120
+                    return _.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_120
             }
             return null
         }(I, n, A, C), M = null != y && (0, i.jsx)("svg", {
@@ -312,66 +312,66 @@ function(e, t, n) {
                     width: O.size,
                     height: O.size,
                     mask: "url(#".concat(function(e, t, n, i) {
-                        if (null == e) return f.MaskIDs.AVATAR_DEFAULT;
+                        if (null == e) return _.MaskIDs.AVATAR_DEFAULT;
                         if (i) switch (t) {
                             case E.AvatarSizes.SIZE_16:
-                                return f.MaskIDs.AVATAR_STATUS_TYPING_16;
+                                return _.MaskIDs.AVATAR_STATUS_TYPING_16;
                             case E.AvatarSizes.SIZE_20:
-                                return f.MaskIDs.AVATAR_STATUS_TYPING_20;
+                                return _.MaskIDs.AVATAR_STATUS_TYPING_20;
                             case E.AvatarSizes.SIZE_24:
-                                return f.MaskIDs.AVATAR_STATUS_TYPING_24;
+                                return _.MaskIDs.AVATAR_STATUS_TYPING_24;
                             case E.AvatarSizes.SIZE_32:
-                                return f.MaskIDs.AVATAR_STATUS_TYPING_32;
+                                return _.MaskIDs.AVATAR_STATUS_TYPING_32;
                             case E.AvatarSizes.SIZE_40:
-                                return f.MaskIDs.AVATAR_STATUS_TYPING_40;
+                                return _.MaskIDs.AVATAR_STATUS_TYPING_40;
                             case E.AvatarSizes.SIZE_48:
-                                return f.MaskIDs.AVATAR_STATUS_TYPING_48;
+                                return _.MaskIDs.AVATAR_STATUS_TYPING_48;
                             case E.AvatarSizes.SIZE_56:
-                                return f.MaskIDs.AVATAR_STATUS_TYPING_56;
+                                return _.MaskIDs.AVATAR_STATUS_TYPING_56;
                             case E.AvatarSizes.SIZE_80:
-                                return f.MaskIDs.AVATAR_STATUS_TYPING_80;
+                                return _.MaskIDs.AVATAR_STATUS_TYPING_80;
                             case E.AvatarSizes.SIZE_120:
-                                return f.MaskIDs.AVATAR_STATUS_TYPING_120
+                                return _.MaskIDs.AVATAR_STATUS_TYPING_120
                         }
                         if (e === h.StatusTypes.ONLINE && n) switch (t) {
                             case E.AvatarSizes.SIZE_16:
-                                return f.MaskIDs.AVATAR_STATUS_MOBILE_16;
+                                return _.MaskIDs.AVATAR_STATUS_MOBILE_16;
                             case E.AvatarSizes.SIZE_20:
-                                return f.MaskIDs.AVATAR_STATUS_MOBILE_20;
+                                return _.MaskIDs.AVATAR_STATUS_MOBILE_20;
                             case E.AvatarSizes.SIZE_24:
-                                return f.MaskIDs.AVATAR_STATUS_MOBILE_24;
+                                return _.MaskIDs.AVATAR_STATUS_MOBILE_24;
                             case E.AvatarSizes.SIZE_32:
-                                return f.MaskIDs.AVATAR_STATUS_MOBILE_32;
+                                return _.MaskIDs.AVATAR_STATUS_MOBILE_32;
                             case E.AvatarSizes.SIZE_40:
-                                return f.MaskIDs.AVATAR_STATUS_MOBILE_40;
+                                return _.MaskIDs.AVATAR_STATUS_MOBILE_40;
                             case E.AvatarSizes.SIZE_48:
-                                return f.MaskIDs.AVATAR_STATUS_MOBILE_48;
+                                return _.MaskIDs.AVATAR_STATUS_MOBILE_48;
                             case E.AvatarSizes.SIZE_56:
-                                return f.MaskIDs.AVATAR_STATUS_MOBILE_56;
+                                return _.MaskIDs.AVATAR_STATUS_MOBILE_56;
                             case E.AvatarSizes.SIZE_80:
-                                return f.MaskIDs.AVATAR_STATUS_MOBILE_80;
+                                return _.MaskIDs.AVATAR_STATUS_MOBILE_80;
                             case E.AvatarSizes.SIZE_120:
-                                return f.MaskIDs.AVATAR_STATUS_MOBILE_120
+                                return _.MaskIDs.AVATAR_STATUS_MOBILE_120
                         }
                         switch (t) {
                             case E.AvatarSizes.SIZE_16:
-                                return f.MaskIDs.AVATAR_STATUS_ROUND_16;
+                                return _.MaskIDs.AVATAR_STATUS_ROUND_16;
                             case E.AvatarSizes.SIZE_20:
-                                return f.MaskIDs.AVATAR_STATUS_ROUND_20;
+                                return _.MaskIDs.AVATAR_STATUS_ROUND_20;
                             case E.AvatarSizes.SIZE_24:
-                                return f.MaskIDs.AVATAR_STATUS_ROUND_24;
+                                return _.MaskIDs.AVATAR_STATUS_ROUND_24;
                             case E.AvatarSizes.SIZE_32:
-                                return f.MaskIDs.AVATAR_STATUS_ROUND_32;
+                                return _.MaskIDs.AVATAR_STATUS_ROUND_32;
                             case E.AvatarSizes.SIZE_40:
-                                return f.MaskIDs.AVATAR_STATUS_ROUND_40;
+                                return _.MaskIDs.AVATAR_STATUS_ROUND_40;
                             case E.AvatarSizes.SIZE_48:
-                                return f.MaskIDs.AVATAR_STATUS_ROUND_48;
+                                return _.MaskIDs.AVATAR_STATUS_ROUND_48;
                             case E.AvatarSizes.SIZE_56:
-                                return f.MaskIDs.AVATAR_STATUS_ROUND_56;
+                                return _.MaskIDs.AVATAR_STATUS_ROUND_56;
                             case E.AvatarSizes.SIZE_80:
-                                return f.MaskIDs.AVATAR_STATUS_ROUND_80;
+                                return _.MaskIDs.AVATAR_STATUS_ROUND_80;
                             case E.AvatarSizes.SIZE_120:
-                                return f.MaskIDs.AVATAR_STATUS_ROUND_120
+                                return _.MaskIDs.AVATAR_STATUS_ROUND_120
                         }
                         throw Error("getMaskId(): Unsupported type, size: ".concat(t, ", status: ").concat(e, ", isMobile: ").concat(n ? "true" : "false"))
                     }(R, s, o, l), ")"),
@@ -380,7 +380,7 @@ function(e, t, n) {
                         isSpeaking: m
                     })
                 }), null != R ? (0, i.jsx)(c.Tooltip, {
-                    text: S ? (0, _.humanizeStatus)(R) : null,
+                    text: S ? (0, f.humanizeStatus)(R) : null,
                     "aria-label": !1,
                     position: "top",
                     spacing: 5 + 1.5 * O.stroke,
@@ -409,7 +409,7 @@ function(e, t, n) {
             fromStatus: n,
             fromColor: r,
             isMobile: l = !1,
-            isTyping: f = !1,
+            isTyping: _ = !1,
             typingIndicatorRef: h,
             isSpeaking: g = !1,
             size: m,
@@ -434,9 +434,9 @@ function(e, t, n) {
                 size: m,
                 status: N,
                 isMobile: l,
-                isTyping: f
+                isTyping: _
             })
-        }), [M, m, N, l, f]), {
+        }), [M, m, N, l, _]), {
             avatarCutoutX: V,
             avatarCutoutY: G,
             avatarCutoutWidth: F,
@@ -492,13 +492,13 @@ function(e, t, n) {
                         isSpeaking: g
                     })
                 }), (0, i.jsx)(c.Tooltip, {
-                    text: O ? (0, _.humanizeStatus)(N) : null,
+                    text: O ? (0, f.humanizeStatus)(N) : null,
                     "aria-label": !1,
                     position: "top",
                     spacing: function(e, t, n) {
                         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                         return 5 - (n && !i ? 0 : .5 * e) + 1.5 * t
-                    }(j.status, j.stroke, l, f),
+                    }(j.status, j.stroke, l, _),
                     children: e => (0, i.jsxs)(i.Fragment, {
                         children: [null != D && I(D, l, j, N), (0, i.jsxs)("svg", {
                             x: X,
@@ -517,12 +517,12 @@ function(e, t, n) {
                                 dotRadius: j.status / 4,
                                 x: .15 * W,
                                 y: .5 * z,
-                                hide: !f
+                                hide: !_
                             })]
                         }), (0, i.jsx)(v, {
                             size: m,
                             isMobile: l,
-                            isTyping: f,
+                            isTyping: _,
                             className: p.pointerEvents,
                             ...e
                         })]
@@ -538,13 +538,13 @@ function(e, t, n) {
             status: u,
             ...c
         } = e, {
-            isMobile: f = !1,
-            isTyping: _ = !1
-        } = c, E = s.useRef(u), g = s.useRef(f), m = (0, d.useStatusFillColor)(u, l), p = s.useRef(m), S = s.useRef(!1);
-        let v = S.current || (t = _, n = u, r = E.current, a = f, o = g.current, null != r && null != n && (!!t || n !== r || n === h.StatusTypes.ONLINE && a !== o || !1));
+            isMobile: _ = !1,
+            isTyping: f = !1
+        } = c, E = s.useRef(u), g = s.useRef(_), m = (0, d.useStatusFillColor)(u, l), p = s.useRef(m), S = s.useRef(!1);
+        let v = S.current || (t = f, n = u, r = E.current, a = _, o = g.current, null != r && null != n && (!!t || n !== r || n === h.StatusTypes.ONLINE && a !== o || !1));
         return s.useLayoutEffect(() => {
-            S.current = v, E.current = u, g.current = f, p.current = m
-        }, [u, f, m, v]), null != u && null != E.current && v ? (0, i.jsx)(R, {
+            S.current = v, E.current = u, g.current = _, p.current = m
+        }, [u, _, m, v]), null != u && null != E.current && v ? (0, i.jsx)(R, {
             ...c,
             status: u,
             statusColor: m,

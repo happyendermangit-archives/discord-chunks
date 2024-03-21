@@ -11,8 +11,8 @@ function(e, t, n) {
     }), n("222007"), n("808653");
     var d = n("917351"),
         c = n.n(d),
-        f = n("446674"),
-        _ = n("95410"),
+        _ = n("446674"),
+        f = n("95410"),
         E = n("913144"),
         h = n("21121"),
         g = n("934306"),
@@ -38,7 +38,7 @@ function(e, t, n) {
     }
 
     function U() {
-        !__OVERLAY__ && _.default.set(O, {
+        !__OVERLAY__ && f.default.set(O, {
             selectedChannelId: r,
             selectedVoiceChannelId: o,
             lastChannelFollowingDestination: a,
@@ -105,11 +105,11 @@ function(e, t, n) {
         } = e;
         F(t, n)
     }
-    class B extends f.default.Store {
+    class B extends _.default.Store {
         initialize() {
             if (!__OVERLAY__) {
                 var e, t;
-                let n = null !== (e = _.default.get(O)) && void 0 !== e ? e : {
+                let n = null !== (e = f.default.get(O)) && void 0 !== e ? e : {
                     selectedChannelId: r,
                     selectedVoiceChannelId: o,
                     lastChannelFollowingDestination: a,
@@ -254,7 +254,7 @@ function(e, t, n) {
             }, U())
         },
         LOGOUT: function() {
-            D = {}, r = null, s = void 0, L = {}, a = {}, o = null, _.default.remove(O)
+            D = {}, r = null, s = void 0, L = {}, a = {}, o = null, f.default.remove(O)
         }
     })
 }

@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("351288"),
         d = n("595726"),
         c = n("462641"),
-        f = n("95937"),
-        _ = n("929461"),
+        _ = n("95937"),
+        f = n("929461"),
         E = () => ({
             [i.DefaultVideoBackground.OPTION_1]: {
                 id: i.DefaultVideoBackground.OPTION_1,
@@ -34,7 +34,7 @@ function(e, t, n) {
             },
             [i.DefaultVideoBackground.OPTION_4]: {
                 id: i.DefaultVideoBackground.OPTION_4,
-                source: f,
+                source: _,
                 name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_4
             },
             [i.DefaultVideoBackground.OPTION_7]: {
@@ -60,7 +60,7 @@ function(e, t, n) {
             },
             [i.DefaultVideoBackground.OPTION_10]: {
                 id: i.DefaultVideoBackground.OPTION_10,
-                source: _,
+                source: f,
                 name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_10,
                 isVideo: !0,
                 hotspotLocation: s.HotspotLocations.ANIMATED_VIDEO_BG_WUMPICE_NEW

@@ -14,8 +14,8 @@ function(e, t, n) {
         u = n("71313"),
         d = n("190017"),
         c = n("299285"),
-        f = n("686470"),
-        _ = n("535974"),
+        _ = n("686470"),
+        f = n("535974"),
         E = n("98328"),
         h = n("718517"),
         g = n("964889"),
@@ -37,7 +37,7 @@ function(e, t, n) {
 
     function D() {
         if (!(0, m.isSupportedPlatform)()) return !1;
-        let e = f.default.entitledBranchIds,
+        let e = _.default.entitledBranchIds,
             t = [];
         for (let n of e) !A.hasOwnProperty(n) && (A[n] = null, t.push(n));
         if (0 === t.length) return !1;
@@ -48,7 +48,7 @@ function(e, t, n) {
         if (null != S[t] && E.default.shouldBeInstalled(e, t)) {
             let n = S[t],
                 i = n.manifestIds,
-                r = _.default.getState(e, t);
+                r = f.default.getState(e, t);
             null != r && r.shouldPatch && (r.buildId !== n.id || !s.isEqual(r.manifestIds, i)) && o.default.wait(() => {
                 let s = c.default.getApplication(e);
                 null != s ? (I.delete((0, g.getComboId)(e, t)), (0, d.updateApplication)(s, t, n.id, i, !0)) : I.add((0, g.getComboId)(e, t))
@@ -61,7 +61,7 @@ function(e, t, n) {
     }
     class M extends r.default.Store {
         initialize() {
-            this.syncWith([f.default], D), this.waitFor(_.default, f.default, c.default)
+            this.syncWith([_.default], D), this.waitFor(f.default, _.default, c.default)
         }
         getTargetBuildId(e, t) {
             return null == S[t] ? null : S[t].id
@@ -155,8 +155,8 @@ function(e, t, n) {
             let {
                 branches: t
             } = e, n = {};
-            for (let e in f.default.libraryApplications) {
-                let t = f.default.libraryApplications[e];
+            for (let e in _.default.libraryApplications) {
+                let t = _.default.libraryApplications[e];
                 n[t.branchId] = t
             }
             for (let e of t) {
@@ -184,8 +184,8 @@ function(e, t, n) {
             if (!(0, m.isSupportedPlatform)()) return !1;
             let n = new Set;
             for (let e of t) n.add(e.application_id);
-            for (let e in f.default.libraryApplications) {
-                let t = f.default.libraryApplications[e];
+            for (let e in _.default.libraryApplications) {
+                let t = _.default.libraryApplications[e];
                 n.has(t.id) && (0, g.isUserEntitledToLibraryApplication)(t) && o.default.wait(() => u.fetchLiveBuild(t.id, t.branchId))
             }
         }

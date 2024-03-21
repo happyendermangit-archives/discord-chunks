@@ -11,10 +11,10 @@ function(e, t, n) {
             return c
         },
         getCoverRatio: function() {
-            return f
+            return _
         },
         makeCssUrlString: function() {
-            return _
+            return f
         },
         getPalette: function() {
             return h
@@ -89,7 +89,7 @@ function(e, t, n) {
         return (n = Math.round(n * r)) > s && (a = s / n), Math.min(r * a, 1)
     }
 
-    function f(e) {
+    function _(e) {
         let {
             width: t,
             height: n,
@@ -99,7 +99,7 @@ function(e, t, n) {
         return t === n ? 1 : Math.min(Math.max(i / t, s / n), 1)
     }
 
-    function _(e) {
+    function f(e) {
         return null == e || "" === e ? "none" : "url(".concat(e, ")")
     }
     let E = [

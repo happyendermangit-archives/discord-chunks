@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DnDProvider: function() {
-            return f
+            return _
         }
     });
     var i = n("37983");
@@ -35,7 +35,7 @@ function(e, t, n) {
             }]
         };
 
-    function f(e) {
+    function _(e) {
         let {
             children: t
         } = e;

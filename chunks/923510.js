@@ -19,10 +19,10 @@ function(e, t, n) {
     }), n("222007");
     var i = n("316693"),
         s = n("49111");
-    let r = i.default.combine(s.Permissions.MANAGE_CHANNELS, s.Permissions.MUTE_MEMBERS, s.Permissions.MOVE_MEMBERS);
-    i.default.combine(s.Permissions.MANAGE_CHANNELS, s.Permissions.MANAGE_ROLES);
+    let r = i.combine(s.Permissions.MANAGE_CHANNELS, s.Permissions.MUTE_MEMBERS, s.Permissions.MOVE_MEMBERS);
+    i.combine(s.Permissions.MANAGE_CHANNELS, s.Permissions.MANAGE_ROLES);
     let a = new Set([s.Permissions.SPEAK, s.Permissions.REQUEST_TO_SPEAK, s.Permissions.USE_VAD]),
-        o = i.default.combine(r, s.Permissions.MANAGE_ROLES),
-        l = i.default.combine(s.Permissions.CONNECT, s.Permissions.VIEW_CHANNEL),
-        u = i.default.combine(l, s.Permissions.READ_MESSAGE_HISTORY, s.Permissions.REQUEST_TO_SPEAK, s.Permissions.SPEAK, s.Permissions.USE_VAD)
+        o = i.combine(r, s.Permissions.MANAGE_ROLES),
+        l = i.combine(s.Permissions.CONNECT, s.Permissions.VIEW_CHANNEL),
+        u = i.combine(l, s.Permissions.READ_MESSAGE_HISTORY, s.Permissions.REQUEST_TO_SPEAK, s.Permissions.SPEAK, s.Permissions.USE_VAD)
 }

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return _
         }
     }), n("424973"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102"), n("222007");
     var i = n("917351"),
@@ -150,5 +150,5 @@ function(e, t, n) {
     l.push(d);
     let c = s.find(l, e => e.canUse());
     a.ProcessArgs.isDiscordGatewayPlaintextSet() && (c = d);
-    var f = c
+    var _ = c
 }

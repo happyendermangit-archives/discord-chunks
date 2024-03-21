@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("733589"),
         d = n("76393"),
         c = n("122530"),
-        f = n("271938"),
-        _ = n("316133"),
+        _ = n("271938"),
+        f = n("316133"),
         E = n("49111"),
         h = n("353927");
     let g = null,
@@ -26,7 +26,7 @@ function(e, t, n) {
 
     function I(e, t) {
         if (null == s) throw Error("Creating RTCConnection without session.");
-        let i = f.default.getId(),
+        let i = _.default.getId(),
             r = n("997722").default,
             u = new r({
                 userId: i,
@@ -84,7 +84,7 @@ function(e, t, n) {
                     channelId: n
                 })
             })
-        }), p = new l.default(f.default.getId(), t), S = null, v = !1, T = !1, u
+        }), p = new l.default(_.default.getId(), t), S = null, v = !1, T = !1, u
     }
 
     function A() {
@@ -109,7 +109,7 @@ function(e, t, n) {
     }
     class R extends r.default.Store {
         initialize() {
-            this.waitFor(_.default), (0, c.setVideoToggleAnalyticsParams)(this.getRTCConnectionId, this.getMediaSessionId)
+            this.waitFor(f.default), (0, c.setVideoToggleAnalyticsParams)(this.getRTCConnectionId, this.getMediaSessionId)
         }
         getRTCConnection() {
             return i
@@ -201,7 +201,7 @@ function(e, t, n) {
             } = e;
             return t.reduce((e, t) => {
                 var n, r, a;
-                if (null == p || p.updateVoiceStates(t.userId, t.channelId), v = v || (null !== (n = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1, f.default.getId() !== t.userId) return !1;
+                if (null == p || p.updateVoiceStates(t.userId, t.channelId), v = v || (null !== (n = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1, _.default.getId() !== t.userId) return !1;
                 if (null != i) {
                     if (t.sessionId === s) null != t.guildId && t.guildId === i.guildId || null == t.guildId && t.channelId === i.channelId ? null == t.channelId ? A() : i.channelId = t.channelId : (t.guildId !== i.guildId && null == t.channelId || A(), null != t.channelId && (g = null, m = null, i = I(t.guildId, t.channelId), v = (null !== (r = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== r ? r : 0) > 1));
                     else if (t.guildId === i.guildId) {

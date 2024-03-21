@@ -23,8 +23,8 @@ function(e, t, n) {
         u = n("49111"),
         d = n("353927");
     let c = v(d.MediaEngineContextTypes.DEFAULT, u.RTCDebugSections.TRANSPORT, 0),
-        f = c,
-        _ = {},
+        _ = c,
+        f = {},
         E = {
             availableOutgoingBitrate: !0,
             bitrate: !0,
@@ -91,7 +91,7 @@ function(e, t, n) {
 
     function I() {
         Object.values(d.MediaEngineContextTypes).forEach(e => {
-            _[e] = {}
+            f[e] = {}
         })
     }
     I();
@@ -101,15 +101,15 @@ function(e, t, n) {
     }
     class C extends i.default.Store {
         getSection() {
-            return f
+            return _
         }
         getStats() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.MediaEngineContextTypes.DEFAULT;
-            return _[e][0]
+            return f[e][0]
         }
         getAllStats() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.MediaEngineContextTypes.DEFAULT;
-            return Object.values(_[e])
+            return Object.values(f[e])
         }
         getVideoStreams() {
             return m
@@ -122,22 +122,22 @@ function(e, t, n) {
     var y = new C(r.default, {
         RTC_DEBUG_MODAL_OPEN: function(e) {
             var t;
-            f = null !== (t = e.section) && void 0 !== t ? t : c
+            _ = null !== (t = e.section) && void 0 !== t ? t : c
         },
         RTC_DEBUG_MODAL_CLOSE: function() {
             A()
         },
         RTC_DEBUG_MODAL_SET_SECTION: function(e) {
-            f = e.section
+            _ = e.section
         },
         RTC_DEBUG_MODAL_UPDATE: function(e) {
             let {
                 context: t,
                 stats: n,
                 index: i
-            } = e, s = _[t];
+            } = e, s = f[t];
             if (null != n) {
-                let [e, r, a] = f.split(":");
+                let [e, r, a] = _.split(":");
                 if (e === t && parseInt(a) === i) {
                     let e = l.default.getUser(r);
                     if (null != e) {
@@ -146,7 +146,7 @@ function(e, t, n) {
                                 inbound: e
                             }
                         } = n;
-                        !Object.keys(e).includes(r) && (f = c)
+                        !Object.keys(e).includes(r) && (_ = c)
                     }
                 }
                 s[i] = function e(t) {

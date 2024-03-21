@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BACKGROUND_GRADIENT_PRESETS: function() {
-            return f
+            return _
         },
         BACKGROUND_GRADIENT_PRESETS_MAP: function() {
-            return _
+            return f
         }
     }), n("222007");
     var i, s, r = n("917351"),
@@ -367,7 +367,7 @@ function(e, t, n) {
             getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_EASTER_EGG,
             midpointPercentage: 50
         },
-        f = [...u, ...d, c];
+        _ = [...u, ...d, c];
     [...d, ...u], (s = i || (i = {}))[s.DARK = 0] = "DARK", s[s.LIGHT = 1] = "LIGHT", s[s.SYSTEM = 2] = "SYSTEM", o.ThemeTypes.DARK, o.ThemeTypes.LIGHT, o.ThemeTypes.DARKER, o.ThemeTypes.LIGHT, o.ThemeTypes.MIDNIGHT, () => l.default.Messages.THEME_MIDNIGHT;
-    let _ = (0, r.keyBy)(f, "id")
+    let f = (0, r.keyBy)(_, "id")
 }

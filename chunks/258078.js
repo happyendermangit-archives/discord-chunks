@@ -44,8 +44,8 @@ function(e, t, n) {
                 tag: o = "div",
                 selectable: d = !1,
                 strong: c = !1,
-                children: f,
-                style: _,
+                children: _,
+                style: f,
                 "aria-label": E,
                 ...h
             } = e;
@@ -55,9 +55,9 @@ function(e, t, n) {
                     [a.selectable]: d,
                     [a.strong]: c
                 }),
-                style: _,
+                style: f,
                 ...h,
-                children: f
+                children: _
             })
         };
     d.Colors = l, d.Sizes = u;

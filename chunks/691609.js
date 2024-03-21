@@ -13,8 +13,8 @@ function(e, t, n) {
         u = n("272214"),
         d = n.n(u),
         c = n("146606"),
-        f = n("748820"),
-        _ = n("733724"),
+        _ = n("748820"),
+        f = n("733724"),
         E = n("862337"),
         h = n("266491"),
         g = n("328139");
@@ -222,7 +222,7 @@ function(e, t, n) {
                 upperBadge: u,
                 highlight: d
             } = this.props, {
-                maskId: f,
+                maskId: _,
                 lowerBadgeMask: E,
                 upperBadgeMask: m,
                 focused: p,
@@ -253,11 +253,11 @@ function(e, t, n) {
                     }, "foreign-object")
                 }, "svg")
             }, "wrapper");
-            let T = "".concat(f, "-upper_badge_masks"),
-                I = "".concat(f, "-lower_badge_masks"),
-                C = "".concat(f, "-blob_mask"),
-                y = "".concat(f, "-stroke_mask"),
-                N = "".concat(f, "-highlight_mask");
+            let T = "".concat(_, "-upper_badge_masks"),
+                I = "".concat(_, "-lower_badge_masks"),
+                C = "".concat(_, "-blob_mask"),
+                y = "".concat(_, "-stroke_mask"),
+                N = "".concat(_, "-highlight_mask");
             return (0, s.jsxs)("div", {
                 className: o(t, g.wrapper),
                 style: l,
@@ -298,7 +298,7 @@ function(e, t, n) {
                             transform: this.getBadgePositionInterpolation(E)
                         }) : null]
                     }), (0, s.jsxs)("mask", {
-                        id: f,
+                        id: _,
                         fill: "black",
                         x: 0,
                         y: 0,
@@ -354,12 +354,12 @@ function(e, t, n) {
                         })]
                     }) : null, d && (0, s.jsx)(c.animated.path, {
                         d: this.getPathInterpolation(),
-                        stroke: _.default.BRAND_500,
+                        stroke: f.default.BRAND_500,
                         "stroke-width": 2,
                         className: g.highlight,
                         mask: "url(#".concat(y, ")")
                     }), (0, s.jsx)("foreignObject", {
-                        mask: "url(#".concat(f, ")"),
+                        mask: "url(#".concat(_, ")"),
                         x: 0,
                         y: 0,
                         className: n,
@@ -385,7 +385,7 @@ function(e, t, n) {
             super(...e), this.timeout = new E.Timeout, this.state = {
                 renderComplex: !1,
                 hasRenderedBadge: !1,
-                maskId: (0, f.v4)(),
+                maskId: (0, _.v4)(),
                 focused: !1
             }, this.handleTimeout = () => {
                 this.timeout.stop(), this.setState({

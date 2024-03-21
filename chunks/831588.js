@@ -14,7 +14,7 @@ function(e, t, n) {
     var i = n("171718");
 
     function s() {
-        return i.default.getToken()
+        return i.getToken()
     }
 
     function r() {

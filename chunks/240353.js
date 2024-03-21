@@ -17,11 +17,11 @@ function(e, t, n) {
         u = n("516826"),
         d = n("577776"),
         c = n("634634"),
-        f = n("782340"),
-        _ = n("182893");
+        _ = n("782340"),
+        f = n("182893");
     let E = {
-        DEFAULT: _.inputDefault,
-        MINI: _.inputMini
+        DEFAULT: f.inputDefault,
+        MINI: f.inputMini
     };
 
     function h(e) {
@@ -89,22 +89,22 @@ function(e, t, n) {
                 size: u,
                 editable: d,
                 inputRef: c,
-                prefixElement: f,
+                prefixElement: _,
                 focusProps: E,
                 ...g
             } = this.props, m = null !== (t = g["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
             return (0, i.jsxs)("div", {
-                className: a(_.inputWrapper, n),
-                children: [null != f && f, null != r ? (0, i.jsx)("span", {
-                    className: _.inputPrefix,
+                className: a(f.inputWrapper, n),
+                children: [null != _ && _, null != r ? (0, i.jsx)("span", {
+                    className: f.inputPrefix,
                     children: r
                 }) : null, (0, i.jsx)(l.FocusRing, {
                     ...E,
                     children: (0, i.jsx)("input", {
                         className: a(u, s, {
-                            [_.error]: this.hasError(),
-                            [_.disabled]: o,
-                            [_.editable]: d
+                            [f.error]: this.hasError(),
+                            [f.disabled]: o,
+                            [f.editable]: d
                         }),
                         disabled: o,
                         readOnly: !1 === d || void 0,
@@ -127,9 +127,9 @@ function(e, t, n) {
                     error: e,
                     minLength: t,
                     maxLength: n
-                } = this.props, i = this.getIsUnderFlowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
+                } = this.props, i = this.getIsUnderFlowing() ? _.default.Messages.MINIMUM_LENGTH_ERROR.format({
                     minLength: t
-                }) : null, s = this.getIsOverFlowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+                }) : null, s = this.getIsOverFlowing() ? _.default.Messages.MAXIMUM_LENGTH_ERROR.format({
                     maxLength: n
                 }) : null;
                 return null != e && e.length < 1 || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != i ? i : s

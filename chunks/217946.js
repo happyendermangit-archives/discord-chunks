@@ -53,7 +53,7 @@ function(e, t, n) {
         }
         if (e.applicationId === _.BuiltInSectionId.BUILT_IN) return 0;
         let h = (0, m.getContextGuildId)(a);
-        if (null == h || s.default.has(A, I.Permissions.ADMINISTRATOR)) return 0;
+        if (null == h || s.has(A, I.Permissions.ADMINISTRATOR)) return 0;
         if (!O) return 5;
         if (a instanceof d.ChannelRecordBase) {
             o(void 0 !== i, "missing applicationAllowedForChannel");
@@ -73,7 +73,7 @@ function(e, t, n) {
             return !1 === e
         }(y) ? 7 : function(e) {
             return !1 === e
-        }(n) || null != e.defaultMemberPermissions && !(!s.default.equals(e.defaultMemberPermissions, f.DISABLED_BY_DEFAULT_PERMISSION_FLAG) && s.default.has(A, e.defaultMemberPermissions)) ? 7 : 0
+        }(n) || null != e.defaultMemberPermissions && !(!s.equals(e.defaultMemberPermissions, f.DISABLED_BY_DEFAULT_PERMISSION_FLAG) && s.has(A, e.defaultMemberPermissions)) ? 7 : 0
     }
 
     function A(e) {
