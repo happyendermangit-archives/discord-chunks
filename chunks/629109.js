@@ -49,17 +49,22 @@ function(e, t, n) {
             let {
                 context: e = f.MediaEngineContextTypes.DEFAULT,
                 syncRemote: t = !0,
-                usedKeybind: n = !1,
-                playSoundEffect: s = !0
+                usedKeybind: n = !1
             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             return m() ? Promise.resolve() : (p({
                 usedKeybind: n
             }), o.default.isEnabled()) ? i.default.dispatch({
                 type: "AUDIO_TOGGLE_SELF_MUTE",
                 context: e,
-                syncRemote: t,
-                skipMuteUnmuteSoundEffect: !s
+                syncRemote: t
             }) : this.enable(!0)
+        },
+        setSelfMute(e, t) {
+            i.default.dispatch({
+                type: "AUDIO_SET_SELF_MUTE",
+                context: e,
+                mute: t
+            })
         },
         setTemporarySelfMute(e) {
             !m() && i.default.dispatch({
