@@ -25,11 +25,12 @@ function(e, t, n) {
                 userId: n,
                 guildId: u,
                 channelId: d,
-                analyticsLocations: c = r
+                newAnalyticsLocations: c = r
             } = e, f = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], {
                 AnalyticsLocationProvider: p,
-                analyticsLocations: m
-            } = (0, a.default)(c), h = l.useMemo(() => ({
+                analyticsLocations: m,
+                sourceAnalyticsLocations: h
+            } = (0, a.default)(c), x = l.useMemo(() => ({
                 layout: t,
                 userId: null != n ? n : null,
                 guildId: null != u ? u : null,
@@ -38,14 +39,14 @@ function(e, t, n) {
             l.useEffect(() => {
                 f && (0, s.trackUserProfileAction)({
                     action: "VIEW",
+                    analyticsLocations: h,
                     layout: t,
                     userId: n,
                     guildId: u,
-                    channelId: d,
-                    analyticsLocations: m
+                    channelId: d
                 })
             }, [f]);
-            let x = l.useCallback(e => {
+            let E = l.useCallback(e => {
                     (0, s.trackUserProfileAction)({
                         layout: t,
                         userId: n,
@@ -55,21 +56,21 @@ function(e, t, n) {
                         ...e
                     })
                 }, [t, n, u, d, m]),
-                E = l.useCallback(e => {
+                y = l.useCallback(e => {
                     let {
                         children: t
                     } = e;
                     return (0, i.jsx)(o.Provider, {
-                        value: h,
+                        value: x,
                         children: (0, i.jsx)(p, {
                             children: t
                         })
                     })
-                }, [h, p]);
+                }, [x, p]);
             return {
-                UserProfileAnalyticsProvider: E,
+                UserProfileAnalyticsProvider: y,
                 analyticsLocations: m,
-                trackUserProfileAction: x
+                trackUserProfileAction: E
             }
         },
         d = function() {
