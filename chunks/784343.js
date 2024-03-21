@@ -121,7 +121,7 @@ function(e, t, n) {
                         }
                     })], this.logger.info("Video codecs: ".concat(this.codecs.map(e => e.name))), t.getEncryptionModes(i => {
                         var s, r, u, d, c, _, f, E, h, g;
-                        this.logger.info("Encryption modes: ".concat(i)), t.setTransportOptions(this.getConnectionTransportOptions()), t.setSelfMute(this.selfMute || this.context === C.MediaEngineContextTypes.STREAM), t.setSelfDeafen(this.selfDeaf), t.setOnSpeakingCallback(this.handleSpeakingNative), null === (s = t.setOnNativeMuteChangedCallback) || void 0 === s || s.call(t, this.handleNativeMuteChanged), null === (r = t.setOnSpeakingWhileMutedCallback) || void 0 === r || r.call(t, this.handleSpeakingWhileMuted), null === (u = t.setPingInterval) || void 0 === u || u.call(t, C.PING_INTERVAL), t.setPingCallback(this.handlePing), null === (d = t.setPingTimeoutCallback) || void 0 === d || d.call(t, this.handlePingTimeout), null === (c = t.setOnVideoEncoderFallbackCallback) || void 0 === c || c.call(t, this.handleVideoEncoderFallback), n.setTransportOptions({
+                        this.logger.info("Encryption modes: ".concat(i)), t.setTransportOptions(this.getConnectionTransportOptions()), t.setSelfMute(this.selfMute || this.context === C.MediaEngineContextTypes.STREAM), t.setSelfDeafen(this.selfDeaf), t.setOnSpeakingCallback(this.handleSpeakingNative), null === (s = t.setOnNativeMuteToggleCallback) || void 0 === s || s.call(t, this.handleNativeMuteToggled), null === (r = t.setOnSpeakingWhileMutedCallback) || void 0 === r || r.call(t, this.handleSpeakingWhileMuted), null === (u = t.setPingInterval) || void 0 === u || u.call(t, C.PING_INTERVAL), t.setPingCallback(this.handlePing), null === (d = t.setPingTimeoutCallback) || void 0 === d || d.call(t, this.handlePingTimeout), null === (c = t.setOnVideoEncoderFallbackCallback) || void 0 === c || c.call(t, this.handleVideoEncoderFallback), n.setTransportOptions({
                             builtInEchoCancellation: !0,
                             echoCancellation: this.echoCancellation,
                             noiseSuppression: this.noiseSuppression,
@@ -207,12 +207,6 @@ function(e, t, n) {
         }
         setSelfDeaf(e) {
             this.selfDeaf = e, this.conn.setSelfDeafen(e)
-        }
-        setNativeMute(e) {
-            if (this.context === C.MediaEngineContextTypes.DEFAULT) {
-                var t, n;
-                null === (t = (n = (0, v.getVoiceEngine)()).setNativeMuteState) || void 0 === t || t.call(n, e)
-            }
         }
         setSoundshareSource(e, t) {
             if (this.soundshareId === e && this.soundshareSentSpeakingEvent || this.context !== C.MediaEngineContextTypes.STREAM) return;
@@ -769,8 +763,8 @@ function(e, t, n) {
             super(e, t), this.mediaEngineConnectionId = "Native-".concat(y++), this.selfMute = !1, this.selfVideo = !1, this.forceAudioNormal = !1, this.forceAudioPriority = !1, this.codecs = [], this.videoEncoderFallbackPending = !1, this.desktopDegradationPreference = (0, v.getVoiceEngine)().DegradationPreference.MAINTAIN_FRAMERATE, this.sourceDesktopDegradationPreference = (0, v.getVoiceEngine)().DegradationPreference.DISABLED, this.videoDegradationPreference = (0, v.getVoiceEngine)().DegradationPreference.BALANCED, this.localPans = {}, this.remoteAudioSSRCs = {}, this.remoteVideoSSRCs = {}, this.inputMode = C.InputModes.VOICE_ACTIVITY, this.vadThreshold = -40, this.vadAutoThreshold = !0, this.vadUseKrisp = !0, this.vadLeading = 5, this.vadTrailing = 25, this.pttReleaseDelay = 20, this.soundshareActive = !1, this.soundshareId = null, this.soundshareSentSpeakingEvent = !1, this.echoCancellation = !0, this.noiseSuppression = !0, this.automaticGainControl = !0, this.noiseCancellation = !1, this.experimentalEncoders = !1, this.hardwareH264 = !0, this.attenuationFactor = .5, this.attenuateWhileSpeakingSelf = !1, this.attenuateWhileSpeakingOthers = !0, this.qos = !0, this.minimumJitterBufferLevel = 0, this.postponeDecodeLevel = 100, this.reconnectInterval = 6e4, this.keyframeInterval = 0, this.clipsKeyFrameInterval = 0, this.videoQualityMeasurement = "", this.videoEncoderExperiments = "", this.numFastUdpReconnects = 0, this.handleSpeakingNative = (e, t) => {
                 let n = C.SpeakingFlags.NONE;
                 n = "boolean" == typeof t ? t ? C.SpeakingFlags.VOICE : C.SpeakingFlags.NONE : t, this.handleSpeakingFlags(e, n)
-            }, this.handleNativeMuteChanged = e => {
-                this.emit(m.BaseConnectionEvent.NativeMuteChanged, e)
+            }, this.handleNativeMuteToggled = () => {
+                this.emit(m.BaseConnectionEvent.ToggleMuteFromNative)
             }, this.handleSpeakingFlags = (e, t) => {
                 this.localSpeakingFlags[e] = t;
                 let n = e === this.ids.userId ? this.audioSSRC : this.remoteAudioSSRCs[e];

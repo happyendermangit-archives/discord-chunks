@@ -77,16 +77,22 @@ function(e, t, n) {
     }
 
     function _(e, t) {
-        let n = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(e)),
-            i = d(n),
-            a = (null == n ? void 0 : n.guild_id) != null ? r.default : l,
-            u = a.useExperiment({
-                guildId: null == n ? void 0 : n.guild_id,
-                location: t
-            }, {
-                autoTrackExposure: !0
-            });
-        return u.activitiesInTextEnabled && i
+        let {
+            isActivitiesInTextEnabledForChannelType: n,
+            channelGuildId: i
+        } = (0, s.useStateFromStoresObject)([o.default], () => {
+            let t = o.default.getChannel(e);
+            return {
+                isActivitiesInTextEnabledForChannelType: d(t),
+                channelGuildId: null == t ? void 0 : t.guild_id
+            }
+        }), a = null != i ? r.default : l, u = a.useExperiment({
+            guildId: i,
+            location: t
+        }, {
+            autoTrackExposure: !0
+        });
+        return u.activitiesInTextEnabled && n
     }
 
     function f(e, t) {
