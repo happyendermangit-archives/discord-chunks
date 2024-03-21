@@ -6,9 +6,6 @@ function(e, t, n) {
         },
         CreateGDMPollsExperiment: function() {
             return r
-        },
-        PollsUserExperiment: function() {
-            return a
         }
     });
     var i = n("862205");
@@ -37,21 +34,6 @@ function(e, t, n) {
             treatments: [{
                 id: 1,
                 label: "Enables creation of polls within a GDM",
-                config: {
-                    enabled: !0
-                }
-            }]
-        }),
-        a = (0, i.createExperiment)({
-            kind: "user",
-            id: "2023-10_poll_users",
-            label: "Polls User Experiment",
-            defaultConfig: {
-                enabled: !1
-            },
-            treatments: [{
-                id: 1,
-                label: "Enables poll messages",
                 config: {
                     enabled: !0
                 }
