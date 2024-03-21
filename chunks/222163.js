@@ -45,7 +45,7 @@ function(e, t, n) {
         return null != t ? t : "".concat(n, ":").concat(i)
     }
 
-    function v(e, t, n, i) {
+    function T(e, t, n, i) {
         switch (e) {
             case "top":
                 return l(null != t.bottom, "Missing bottom"), i.offsetHeight - (t.bottom + n.offsetHeight);
@@ -63,7 +63,7 @@ function(e, t, n) {
         }
     }
 
-    function T(e, t, n) {
+    function v(e, t, n) {
         if (null != e && e < 0 && ("top" === n.position || "bottom" === n.position)) {
             let i = null != t && Math.abs(e) < (null == t ? void 0 : t.offsetHeight);
             if (i && null != n.style) {
@@ -253,7 +253,7 @@ function(e, t, n) {
                 } = this.calculatePositionStyle(e, n, i),
                 a = null,
                 o = null;
-            if (t && (a = v(e, s, n, i)) < 0) {
+            if (t && (a = T(e, s, n, i)) < 0) {
                 let t = function(e) {
                         switch (e) {
                             case "top":
@@ -276,13 +276,13 @@ function(e, t, n) {
                         style: s,
                         nudge: r
                     } = this.calculatePositionStyle(t, n, i);
-                if ((o = v(t, s, n, i)) > a) return T(o, n, {
+                if ((o = T(t, s, n, i)) > a) return v(o, n, {
                     position: t,
                     nudge: r,
                     style: s
                 })
             }
-            return T(a, n, {
+            return v(a, n, {
                 position: e,
                 nudge: r,
                 style: s

@@ -37,8 +37,8 @@ function(e, t, n) {
             preserveFocusPosition: m = !0,
             useVirtualFocus: p = !1,
             wrap: S = !1,
-            orientation: v = o.Orientations.VERTICAL,
-            disableClickOnSpace: T = !1
+            orientation: T = o.Orientations.VERTICAL,
+            disableClickOnSpace: v = !1
         } = e, I = i.useRef(n ? (0, l.createListItemId)(t, n) : null), A = i.useRef(!1), C = i.useRef(null), y = i.useRef(u);
 
         function N(e) {
@@ -156,8 +156,8 @@ function(e, t, n) {
             }, [L, w, f, P]),
             G = i.useCallback(e => {
                 if (!y.current || !p && !U.current) return;
-                let n = v === o.Orientations.HORIZONTAL ? o.Keys.RIGHT : o.Keys.DOWN,
-                    i = v === o.Orientations.HORIZONTAL ? o.Keys.LEFT : o.Keys.UP;
+                let n = T === o.Orientations.HORIZONTAL ? o.Keys.RIGHT : o.Keys.DOWN,
+                    i = T === o.Orientations.HORIZONTAL ? o.Keys.LEFT : o.Keys.UP;
                 switch (e.key) {
                     case n:
                         e.stopPropagation(), e.preventDefault(), k();
@@ -183,7 +183,7 @@ function(e, t, n) {
                         return;
                     case o.Keys.SPACE:
                     case o.Keys.ENTER: {
-                        if (e.key === o.Keys.SPACE && T || e.repeat) return;
+                        if (e.key === o.Keys.SPACE && v || e.repeat) return;
                         let t = I.current;
                         if (null != t) {
                             var s;
@@ -195,7 +195,7 @@ function(e, t, n) {
                         }
                     }
                 }
-            }, [k, V, t, v, _, c, P, p]),
+            }, [k, V, t, T, _, c, P, p]),
             F = i.useCallback(e => {
                 let n = null != e ? (0, l.createListItemId)(t, e) : null;
                 I.current = n
@@ -207,7 +207,7 @@ function(e, t, n) {
                 ref: C,
                 tabIndex: M && m ? -1 : 0
             },
-            orientation: v,
+            orientation: T,
             setFocus: F,
             async focusLastVisibleItem() {
                 var e;
@@ -225,7 +225,7 @@ function(e, t, n) {
                 let e = I.current;
                 return e ? (0, l.getItemId)(e) : null
             }
-        }), [t, G, v, M, m, F, V, k, P])
+        }), [t, G, T, M, m, F, V, k, P])
     }
     n.es(u, t)
 }

@@ -5,10 +5,10 @@ function(e, t, n) {
             return E
         },
         keySection: function() {
-            return v
+            return T
         },
         parseSection: function() {
-            return T
+            return v
         },
         default: function() {
             return y
@@ -22,7 +22,7 @@ function(e, t, n) {
         l = n("697218"),
         u = n("49111"),
         d = n("353927");
-    let c = v(d.MediaEngineContextTypes.DEFAULT, u.RTCDebugSections.TRANSPORT, 0),
+    let c = T(d.MediaEngineContextTypes.DEFAULT, u.RTCDebugSections.TRANSPORT, 0),
         _ = c,
         f = {},
         E = {
@@ -77,11 +77,11 @@ function(e, t, n) {
         p = !1,
         S = null;
 
-    function v(e, t, n) {
+    function T(e, t, n) {
         return "".concat(e, ":").concat(t, ":").concat(n)
     }
 
-    function T(e) {
+    function v(e) {
         let [t, n] = e.split(":");
         return {
             context: t,

@@ -38,7 +38,7 @@ function(e, t, n) {
                 style: p,
                 align: S = o.default.Align.START
             } = e,
-            v = o.default.Direction.HORIZONTAL;
+            T = o.default.Direction.HORIZONTAL;
         if (null != c) {
             let {
                 position: e,
@@ -52,27 +52,27 @@ function(e, t, n) {
                     className: r(d.icon, h),
                     ...n
                 })
-            }), e === _.RIGHT && (v = o.default.Direction.HORIZONTAL_REVERSE)
+            }), e === _.RIGHT && (T = o.default.Direction.HORIZONTAL_REVERSE)
         } else null != f && (n = f);
-        let T = !0;
-        return s === a.Card.Types.PRIMARY && (T = !1), (0, i.jsx)(a.Card, {
+        let v = !0;
+        return s === a.Card.Types.PRIMARY && (v = !1), (0, i.jsx)(a.Card, {
             className: r(d.formNotice, E),
             type: s,
             style: p,
             children: (0, i.jsxs)(o.default, {
-                direction: v,
+                direction: T,
                 align: S,
                 children: [t, (0, i.jsxs)(o.default.Child, {
                     children: [null != g && "" !== g ? (0, i.jsx)(u.FormTitle, {
                         tag: u.FormTitleTags.H5,
                         className: r(d.formNoticeTitle, {
-                            [d.whiteText]: T
+                            [d.whiteText]: v
                         }),
                         faded: !0,
                         children: g
                     }) : null, (0, i.jsx)(l.FormText, {
                         className: r(d.formNoticeBody, {
-                            [d.whiteText]: T
+                            [d.whiteText]: v
                         }),
                         children: m
                     }), n]

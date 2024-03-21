@@ -23,8 +23,8 @@ function(e, t, n) {
         p = {},
         S = {};
 
-    function v(e, t) {
-        u.ALL_CHANNEL_TYPES.has(e.type) && T(function(e) {
+    function T(e, t) {
+        u.ALL_CHANNEL_TYPES.has(e.type) && v(function(e) {
             if (!(e.id in p)) {
                 var t;
                 p[e.id] = {
@@ -39,7 +39,7 @@ function(e, t, n) {
         }(e), t)
     }
 
-    function T(e, t) {
+    function v(e, t) {
         var n;
         let i = (null !== (n = S[e.parentId]) && void 0 !== n ? n : 0) + 1;
         S[e.parentId] = i, t(e)
@@ -51,7 +51,7 @@ function(e, t, n) {
     }
 
     function A(e) {
-        v(e, t => {
+        T(e, t => {
             var n;
             null != e.messageCount && (t.count = e.messageCount);
             let i = null !== (n = t.mostRecentRawMessage) && void 0 !== n ? n : t.mostRecentMessage;
@@ -154,7 +154,7 @@ function(e, t, n) {
             } = e;
             t.forEach(A), null == n || n.forEach(e => {
                 let t = _.default.getChannel(e.channel_id);
-                null != t && e.type !== g.MessageTypes.THREAD_STARTER_MESSAGE && v(t, t => {
+                null != t && e.type !== g.MessageTypes.THREAD_STARTER_MESSAGE && T(t, t => {
                     t.mostRecentRawMessage = e, t.mostRecentMessage = null
                 })
             })
@@ -188,7 +188,7 @@ function(e, t, n) {
             if (null == r || !u.THREAD_CHANNEL_TYPES.has(r.type) || ! function(e, t) {
                     return !(t.type === g.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === E.default.castChannelIdAsMessageId(e.id)) && !0
                 }(r, t)) return !1;
-            v(r, e => {
+            T(r, e => {
                 e.count = Math.min(e.count + 1, h.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
             })
         },
@@ -198,7 +198,7 @@ function(e, t, n) {
                 message: n
             } = e, i = p[n.channel_id], s = null !== (t = null == i ? void 0 : i.mostRecentRawMessage) && void 0 !== t ? t : null == i ? void 0 : i.mostRecentMessage;
             if (null == i || null == s || s.id !== n.id) return !1;
-            T(i, e => {
+            v(i, e => {
                 null != e.mostRecentMessage && (e.mostRecentMessage = (0, l.updateMessageRecord)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, l.updateServerMessage)(e.mostRecentRawMessage, n))
             })
         },
@@ -210,7 +210,7 @@ function(e, t, n) {
             if (null == i) return !1;
             let s = E.default.castChannelIdAsMessageId(n) !== t,
                 r = !m.has(t);
-            T(i, e => {
+            v(i, e => {
                 var n;
                 let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
                 null != i && i.id === t && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count = s && r ? Math.max(e.count - 1, 0) : e.count, m.add(t)
@@ -227,7 +227,7 @@ function(e, t, n) {
                     i = !m.has(e);
                 return t && i
             }).length;
-            s > 0 && T(i, e => {
+            s > 0 && v(i, e => {
                 var n;
                 let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
                 null != i && t.includes(i.id) && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count -= s, t.forEach(e => m.add(e))
@@ -239,7 +239,7 @@ function(e, t, n) {
             if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
             let n = _.default.getChannel(e.channelId);
             if (null == n || !u.THREAD_CHANNEL_TYPES.has(n.type)) return t;
-            v(n, t => {
+            T(n, t => {
                 if (0 === e.messages.length) t.mostRecentRawMessage = null, t.mostRecentMessage = null, t.count = 0;
                 else {
                     var n;

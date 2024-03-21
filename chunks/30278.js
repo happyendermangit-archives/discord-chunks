@@ -24,9 +24,9 @@ function(e, t, n) {
         g = n("49111"),
         S = n("646718"),
         C = n("782340"),
-        _ = n("936369");
+        T = n("936369");
 
-    function T() {
+    function _() {
         (0, o.openModalLazy)(async () => {
             let {
                 default: e
@@ -66,29 +66,29 @@ function(e, t, n) {
             discountOffer: A,
             trialOffer: O,
             children: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-                onLearnMore: T
+                onLearnMore: _
             })
         }) : a ? (0, i.jsx)(o.Clickable, {
-            className: _.iconOnly,
-            onClick: () => T(),
+            className: T.iconOnly,
+            onClick: () => _(),
             children: (0, i.jsx)(o.Tooltip, {
                 text: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
                 position: "top",
                 children: e => (0, i.jsx)(E.default, {
-                    className: _.premium,
+                    className: T.premium,
                     ...e
                 })
             })
         }) : (0, i.jsxs)("div", {
-            className: s(_.root, n),
+            className: s(T.root, n),
             children: [(0, i.jsx)(E.default, {
-                className: _.premium,
+                className: T.premium,
                 color: x.GradientCssUrls.PREMIUM_TIER_2
             }), (0, i.jsx)(o.Text, {
-                className: _.text,
+                className: T.text,
                 variant: "text-sm/normal",
                 children: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-                    onLearnMore: T
+                    onLearnMore: _
                 })
             })]
         })

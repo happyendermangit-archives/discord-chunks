@@ -23,8 +23,8 @@ function(e, t, n) {
         m = n("568734"),
         p = n("299039"),
         S = n("271938"),
-        v = n("42203"),
-        T = n("162805"),
+        T = n("42203"),
+        v = n("162805"),
         I = n("923959"),
         A = n("26989"),
         C = n("305961"),
@@ -52,7 +52,7 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            null == v.default.getChannel(t) && o.default.clear(t)
+            null == T.default.getChannel(t) && o.default.clear(t)
         })
     }
 
@@ -93,11 +93,11 @@ function(e, t, n) {
     }
     class x extends r.default.Store {
         initialize() {
-            this.waitFor(D.default, v.default, T.default, A.default, g.default, R.default, O.default, C.default, N.default, I.default), this.syncWith([_.default], () => {})
+            this.waitFor(D.default, T.default, v.default, A.default, g.default, R.default, O.default, C.default, N.default, I.default), this.syncWith([_.default], () => {})
         }
         getMessages(e) {
             if (_.default.hasViewingRoles()) {
-                let t = v.default.getChannel(e),
+                let t = T.default.getChannel(e),
                     n = null == t ? void 0 : t.getGuildId();
                 if (_.default.isViewingRoles(n) && !y.default.can(P.Permissions.VIEW_CHANNEL, t)) return new o.default(e)
             }
@@ -263,7 +263,7 @@ function(e, t, n) {
                 return
             }
             if (!s.ready) return !1;
-            null != n.nonce && n.state !== P.MessageStates.SENDING && L.has(n.nonce) && (s = s.remove(n.nonce), L.delete(n.nonce)), s = s.receiveMessage(n, T.default.isAtBottom(t)), o.default.commit(s)
+            null != n.nonce && n.state !== P.MessageStates.SENDING && L.has(n.nonce) && (s = s.remove(n.nonce), L.delete(n.nonce)), s = s.receiveMessage(n, v.default.isAtBottom(t)), o.default.commit(s)
         },
         MESSAGE_SEND_FAILED: function(e) {
             let {

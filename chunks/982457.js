@@ -16,7 +16,7 @@ function(e, t, n) {
                 try {
                     let {
                         body: e
-                    } = await r.default.get({
+                    } = await r.HTTP.get({
                         url: o.Endpoints.USER_TRIAL_OFFER,
                         oldFormErrors: !0
                     });
@@ -34,7 +34,7 @@ function(e, t, n) {
                 if (null == e.expires_at) try {
                     let {
                         body: t
-                    } = await r.default.post({
+                    } = await r.HTTP.post({
                         url: o.Endpoints.USER_TRIAL_OFFER_ACKNOWLEDGED(e.id)
                     });
                     l.default.dispatch({

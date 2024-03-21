@@ -153,13 +153,13 @@ function(e, t, n) {
             g = a.EditorUtils.richValue(e),
             S = m ? -1 : 1,
             C = null !== (i = null === (t = E.path) || void 0 === t ? void 0 : t[0]) && void 0 !== i ? i : 0,
-            _ = null !== (l = null === (n = y.path) || void 0 === n ? void 0 : n[0]) && void 0 !== l ? l : g.length - 1,
-            T = m ? C : _,
-            I = m ? _ : C;
+            T = null !== (l = null === (n = y.path) || void 0 === n ? void 0 : n[0]) && void 0 !== l ? l : g.length - 1,
+            _ = m ? C : T,
+            I = m ? T : C;
         for (;;) {
             let t = g[I],
                 n = null !== (u = I === C ? null === (s = E.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
-                i = null !== (d = I === _ ? null === (r = y.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
+                i = null !== (d = I === T ? null === (r = y.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
                 l = m ? i : n,
                 f = m ? n : i,
                 p = l;
@@ -194,7 +194,7 @@ function(e, t, n) {
                 if (p === f) break;
                 p += S
             }
-            if (I === T) break;
+            if (I === _) break;
             I += S
         }
     }

@@ -18,8 +18,8 @@ function(e, t, n) {
         m = n("823704"),
         p = n("605250"),
         S = n("161454"),
-        v = n("271938"),
-        T = n("47319"),
+        T = n("271938"),
+        v = n("47319"),
         I = n("603699"),
         A = n("824563"),
         C = n("280168"),
@@ -237,7 +237,7 @@ function(e, t, n) {
 
     function ed() {
         let e = Object.keys(X),
-            t = T.default.getAccounts().filter(e => {
+            t = v.default.getAccounts().filter(e => {
                 let {
                     type: t
                 } = e;
@@ -272,7 +272,7 @@ function(e, t, n) {
     }
 
     function e_(e) {
-        if (e === v.default.getId()) {
+        if (e === T.default.getId()) {
             let t = y.default.isCurrentClientInVoiceChannel(),
                 n = (0, h.getIsSpeaking)({
                     userId: e,
@@ -290,36 +290,36 @@ function(e, t, n) {
             device: m,
             progress_ms: p,
             is_playing: S,
-            repeat_state: v,
-            item: T,
+            repeat_state: T,
+            item: v,
             context: I
         } = n;
-        if (null != T && T.type === P.SpotifyResourceTypes.TRACK) {
-            let e = T.id;
-            null != T.linked_from && null != T.linked_from.id && (e = T.linked_from.id), h = {
+        if (null != v && v.type === P.SpotifyResourceTypes.TRACK) {
+            let e = v.id;
+            null != v.linked_from && null != v.linked_from.id && (e = v.linked_from.id), h = {
                 id: e,
-                name: T.name,
-                duration: T.duration_ms,
+                name: v.name,
+                duration: v.duration_ms,
                 type: P.SpotifyResourceTypes.TRACK,
                 album: {
-                    id: null !== (a = null === (i = T.album) || void 0 === i ? void 0 : i.id) && void 0 !== a ? a : "",
-                    name: null !== (o = null === (s = T.album) || void 0 === s ? void 0 : s.name) && void 0 !== o ? o : "",
-                    image: null === (r = T.album) || void 0 === r ? void 0 : r.images[0]
+                    id: null !== (a = null === (i = v.album) || void 0 === i ? void 0 : i.id) && void 0 !== a ? a : "",
+                    name: null !== (o = null === (s = v.album) || void 0 === s ? void 0 : s.name) && void 0 !== o ? o : "",
+                    image: null === (r = v.album) || void 0 === r ? void 0 : r.images[0]
                 },
-                artists: null !== (l = T.artists) && void 0 !== l ? l : [],
-                isLocal: T.is_local || !1
+                artists: null !== (l = v.artists) && void 0 !== l ? l : [],
+                isLocal: v.is_local || !1
             }
-        } else if (null != T && T.type === P.SpotifyResourceTypes.EPISODE) {
-            let e = T.id;
+        } else if (null != v && v.type === P.SpotifyResourceTypes.EPISODE) {
+            let e = v.id;
             h = {
                 id: e,
-                name: T.name,
-                duration: T.duration_ms,
+                name: v.name,
+                duration: v.duration_ms,
                 type: P.SpotifyResourceTypes.EPISODE,
                 album: {
-                    id: null !== (_ = null === (u = T.show) || void 0 === u ? void 0 : u.id) && void 0 !== _ ? _ : "",
-                    name: null !== (f = null === (d = T.show) || void 0 === d ? void 0 : d.name) && void 0 !== f ? f : "",
-                    image: null === (c = T.show) || void 0 === c ? void 0 : c.images[0]
+                    id: null !== (_ = null === (u = v.show) || void 0 === u ? void 0 : u.id) && void 0 !== _ ? _ : "",
+                    name: null !== (f = null === (d = v.show) || void 0 === d ? void 0 : d.name) && void 0 !== f ? f : "",
+                    image: null === (c = v.show) || void 0 === c ? void 0 : c.images[0]
                 },
                 artists: [],
                 isLocal: !1
@@ -349,7 +349,7 @@ function(e, t, n) {
                 track: h,
                 volumePercent: null != m ? m.volume_percent : 0,
                 isPlaying: S,
-                repeat: "off" !== v,
+                repeat: "off" !== T,
                 position: p,
                 context: t,
                 device: m
@@ -371,7 +371,7 @@ function(e, t, n) {
     }
     class eh extends c.default.Store {
         initialize() {
-            this.waitFor(T.default, C.default), this.syncWith([A.default], () => (function() {
+            this.waitFor(v.default, C.default), this.syncWith([A.default], () => (function() {
                 if (null == s) return !1;
                 let e = ee();
                 if (null == e) return !1;
@@ -458,7 +458,7 @@ function(e, t, n) {
             }).join("; "));
             let h = {},
                 g = null != a.image ? (0, R.getAssetFromImageURL)(L.PlatformTypes.SPOTIFY, a.image.url) : null;
-            null != a.image && null != g && (h.large_image = g), "single" !== a.type && (h.large_text = a.name), null != f && (t = f.uri), n = null != s && null != s.partyId ? s.partyId : "".concat(P.SPOTIFY_PARTY_PREFIX).concat(v.default.getId());
+            null != a.image && null != g && (h.large_image = g), "single" !== a.type && (h.large_text = a.name), null != f && (t = f.uri), n = null != s && null != s.partyId ? s.partyId : "".concat(P.SPOTIFY_PARTY_PREFIX).concat(T.default.getId());
             let m = o.length > 128 ? o.substring(0, 125) + "..." : o,
                 p = {
                     name: M.name,
@@ -533,7 +533,7 @@ function(e, t, n) {
                 } else Q[t] = [l], c = !0
             }
             n ? null == $ || $.start(w, ec) : (a = null, null == $ || $.stop());
-            let f = T.default.getAccount(t, L.PlatformTypes.SPOTIFY);
+            let f = v.default.getAccount(t, L.PlatformTypes.SPOTIFY);
             if (null == f) return c;
             let E = Z[t],
                 h = null != a ? {
@@ -551,7 +551,7 @@ function(e, t, n) {
                 g = null != l && null != s && 0 === o && !n;
             !g && (Z[t] = h);
             let p = i;
-            if (i = u.values(Z).find(e => null != e), e_(v.default.getId()), null == a || g ? z.stop() : z.start(a.duration - o + V, () => et(f.id)), null != s && (!n && o > 0 || null == l || null != h && s.trackId !== h.track.id) ? (Y.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(V, "ms")), q.start(V, () => {
+            if (i = u.values(Z).find(e => null != e), e_(T.default.getId()), null == a || g ? z.stop() : z.start(a.duration - o + V, () => et(f.id)), null != s && (!n && o > 0 || null == l || null != h && s.trackId !== h.track.id) ? (Y.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(V, "ms")), q.start(V, () => {
                     Y.info("Stopping listening along"), (0, m.default)(), et(f.id)
                 })) : q.isStarted() && (Y.info("Listen along stop cancelled as playback of track resumed"), q.stop()), p === i || null == E && null == h || null != E && null != h && E.track.id === h.track.id && E.startTime === h.startTime) return c;
             null != a && N.default.track(L.AnalyticEvents.ACTIVITY_UPDATED, {

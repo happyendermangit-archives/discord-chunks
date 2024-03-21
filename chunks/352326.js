@@ -18,10 +18,10 @@ function(e, t, n) {
         m = n("152723"),
         p = n("773336"),
         S = n("535974"),
-        v = n("49111"),
-        T = n("492249");
+        T = n("49111"),
+        v = n("492249");
     (r = i || (i = {})).INSTALL = "Install", r.REPAIR = "Repair", (a = s || (s = {})).PATCH = "Patch", a.REPAIR = "Repair";
-    let I = [T.DispatchErrorCodes.AUTHENTICATION_FAILED, T.DispatchErrorCodes.NOT_ENTITLED],
+    let I = [v.DispatchErrorCodes.AUTHENTICATION_FAILED, v.DispatchErrorCodes.NOT_ENTITLED],
         A = "DispatchManagerStore",
         C = [],
         y = [],
@@ -197,7 +197,7 @@ function(e, t, n) {
                     applicationId: n,
                     branchId: s
                 } = (0, g.convertComboId)(t), r = S.default.getState(n, s), a = h.default.getTargetBuildId(n, s), o = h.default.getTargetManifests(n, s);
-                if (null != r && r.type === v.LocalDispatchApplicationStates.UP_TO_DATE && r.buildId === r.targetBuildId && r.buildId === a && l.isEqual(r.manifestIds, r.targetManifestIds) && l.isEqual(r.manifestIds, o)) {
+                if (null != r && r.type === T.LocalDispatchApplicationStates.UP_TO_DATE && r.buildId === r.targetBuildId && r.buildId === a && l.isEqual(r.manifestIds, r.targetManifestIds) && l.isEqual(r.manifestIds, o)) {
                     if (y.push(t), P.has(t)) {
                         let e = P.get(t);
                         switch (e) {
@@ -222,7 +222,7 @@ function(e, t, n) {
             } = t;
             if (null != n) {
                 if (I.includes(n)) x();
-                else if (n === T.DispatchErrorCodes.APPLICATION_NOT_FOUND) {
+                else if (n === v.DispatchErrorCodes.APPLICATION_NOT_FOUND) {
                     let {
                         context: e
                     } = t;

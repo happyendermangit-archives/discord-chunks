@@ -23,7 +23,7 @@ function(e, t, n) {
         p = n("697218");
     let S = new l.GuildsTree;
 
-    function v(e) {
+    function T(e) {
         switch (e.type) {
             case l.GuildsNodeType.FOLDER:
                 return {
@@ -38,7 +38,7 @@ function(e, t, n) {
         }
     }
 
-    function T(e, t) {
+    function v(e, t) {
         let n = S;
         if (S = new l.GuildsTree, 0 === e.length && t.length > 0)
             for (let e of t) S.addNode((0, l.createGuildNode)(e));
@@ -59,13 +59,13 @@ function(e, t, n) {
 
     function I() {
         var e, t, n;
-        return T(null !== (t = d.default.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : [])
+        return v(null !== (t = d.default.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : [])
     }
 
     function A() {
         var e, t;
         let n = d.default.getGuildFolders();
-        return !(null != i && r(i, n)) && T(null != (i = n) ? i : [], null !== (t = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : [])
+        return !(null != i && r(i, n)) && v(null != (i = n) ? i : [], null !== (t = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : [])
     }
 
     function C(e) {
@@ -148,7 +148,7 @@ function(e, t, n) {
         return a !== r.joinedAt && null != a && I()
     }
     let D = (0, c.cachedFunction)((e, t) => e.sortedGuildNodes().map(e => e.id)),
-        P = (0, c.cachedFunction)((e, t) => e.getRoots().map(v));
+        P = (0, c.cachedFunction)((e, t) => e.getRoots().map(T));
     class L extends g.default {
         initialize() {
             this.waitFor(h.default, m.default, d.default, f.default, u.default)
@@ -166,7 +166,7 @@ function(e, t, n) {
             return D(S, S.version)
         }
         getCompatibleGuildFolders() {
-            return S.root.children.map(v)
+            return S.root.children.map(T)
         }
         takeSnapshot() {
             return {

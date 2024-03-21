@@ -26,10 +26,10 @@ function(e, t, n) {
             return C
         },
         trackSearchStarted: function() {
-            return _
+            return T
         },
         trackTagSearchStarted: function() {
-            return T
+            return _
         },
         trackSearchResultsViewed: function() {
             return I
@@ -184,7 +184,7 @@ function(e, t, n) {
         })
     }
 
-    function _(e, t) {
+    function T(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         p.default.track(m.AnalyticEvents.SEARCH_STARTED, {
             search_type: m.SearchTypes.GUILD_DISCOVERY,
@@ -194,7 +194,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e, t, n, i) {
+    function _(e, t, n, i) {
         p.default.track(m.AnalyticEvents.SEARCH_STARTED, {
             search_type: m.SearchTypes.GUILD_DISCOVERY_TAG,
             load_id: e,
@@ -240,7 +240,7 @@ function(e, t, n) {
     async function N(e) {
         try {
             var t, n;
-            let i = await s.default.get({
+            let i = await s.HTTP.get({
                     url: m.Endpoints.GUILD_DISCOVERY,
                     query: a.stringify({
                         guild_ids: e

@@ -34,12 +34,12 @@ function(e, t, n) {
                 if (null == E) return !1;
                 !(e.shiftKey && h) && !g && m(), e.persist(), requestAnimationFrame(() => E(e))
             }, [E, m, h, g]),
-            v = _ ? a(d.item, u.MENU_ITEM_COLORS[n], {
+            T = _ ? a(d.item, u.MENU_ITEM_COLORS[n], {
                 [d.focused]: r
             }) : d.customItem;
         return (0, i.jsx)(o.Clickable, {
             innerRef: p,
-            className: v,
+            className: T,
             onClick: c ? void 0 : S,
             "aria-disabled": c,
             ...f,

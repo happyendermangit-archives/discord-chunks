@@ -29,7 +29,7 @@ function(e, t, n) {
                     applicationId: t,
                     duration: o,
                     distributor: n
-                })), i.default.post({
+                })), i.HTTP.post({
                     url: d.Endpoints.ACTIVITIES,
                     body: {
                         application_id: t,
@@ -105,7 +105,7 @@ function(e, t, n) {
             async getJoinSecret(e, t, n, s, r) {
                 let a = {};
                 null != s && (a.channel_id = s), null != r && (a.message_id = r);
-                let o = await i.default.get({
+                let o = await i.HTTP.get({
                     url: d.Endpoints.USER_ACTIVITY_JOIN(e, t, n),
                     retries: 3,
                     query: a

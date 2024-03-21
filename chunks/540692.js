@@ -8,8 +8,8 @@ function(e, t, r) {
     var l = r("637612"),
         i = r("446674"),
         n = r("913144"),
-        u = r("697218"),
-        s = r("179935"),
+        s = r("697218"),
+        u = r("179935"),
         f = r("49111");
     let a = null,
         _ = {},
@@ -39,15 +39,15 @@ function(e, t, r) {
         if (null == t) return !1;
         if (!o.has(t) && !c.has(t)) {
             var r;
-            r = t, c.add(r), n.default.wait(() => (0, s.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL))
+            r = t, c.add(r), n.default.wait(() => (0, u.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL))
         }
     }
     class h extends i.default.Store {
         initialize() {
-            this.waitFor(u.default), this.syncWith([u.default], T)
+            this.waitFor(s.default), this.syncWith([s.default], T)
         }
         checkAndFetchReferralsRemaining() {
-            null == a && !d && L < 5 && (null == O || O < Date.now()) && (0, s.fetchReferralsRemaining)()
+            null == a && !d && L < 5 && (null == O || O < Date.now()) && (0, u.fetchReferralsRemaining)()
         }
         getReferralsRemaining() {
             return this.checkAndFetchReferralsRemaining(), a
@@ -62,7 +62,7 @@ function(e, t, r) {
             return R.has(e)
         }
         getRecipientEligibility(e) {
-            return void 0 === _[e] && !R.has(e) && (0, s.checkRecipientEligibility)(e), _[e]
+            return void 0 === _[e] && !R.has(e) && (0, u.checkRecipientEligibility)(e), _[e]
         }
         getRelevantUserTrialOffer(e) {
             return I[e]
@@ -78,9 +78,9 @@ function(e, t, r) {
                 userTrialOfferId: t,
                 recipientId: r
             } = e;
-            if (!d && (0, s.fetchReferralsRemaining)(), !R.has(r) && (0, s.checkRecipientEligibility)(r), !c.has(t)) {
+            if (!d && (0, u.fetchReferralsRemaining)(), !R.has(r) && (0, u.checkRecipientEligibility)(r), !c.has(t)) {
                 var l;
-                l = t, c.add(l), n.default.wait(() => (0, s.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL))
+                l = t, c.add(l), n.default.wait(() => (0, u.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL))
             }
         },
         BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
@@ -121,7 +121,7 @@ function(e, t, r) {
             let {
                 userTrialOffer: t
             } = e;
-            (0, s.fetchReferralsRemaining)(), I[t.id] = t, E = [...E, t.user_id]
+            (0, u.fetchReferralsRemaining)(), I[t.id] = t, E = [...E, t.user_id]
         },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function(e) {
             let {

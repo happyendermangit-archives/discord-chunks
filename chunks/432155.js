@@ -29,10 +29,10 @@ function(e, t, n) {
             return S
         },
         PROFILE_PREMIUM_FEATURES: function() {
-            return v
+            return T
         },
         COLLECTIBLES: function() {
-            return T
+            return v
         },
         APP_ICONS: function() {
             return I
@@ -118,8 +118,8 @@ function(e, t, n) {
         m = new d("customDiscriminator"),
         p = new d("premiumGuildMemberProfile"),
         S = new d("profileBadges"),
-        v = new d("profilePremiumFeatures", "custom banner and avatar decoration"),
-        T = new d("collectibles"),
+        T = new d("profilePremiumFeatures", "custom banner and avatar decoration"),
+        v = new d("collectibles"),
         I = new d("appIcons"),
         A = new d("clientThemes"),
         C = new d("boostDiscount"),
@@ -138,7 +138,7 @@ function(e, t, n) {
         k = Object.freeze({
             [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [c, _, f, S, L, U, w, I]),
             [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [c, _, g, m, S, C, N, O, U, w, I]),
-            [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, _, f, E, h, g, m, p, S, v, A, C, y, N, R, O, D, P, L, M, b, U, w, I, T])
+            [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, _, f, E, h, g, m, p, S, T, A, C, y, N, R, O, D, P, L, M, b, U, w, I, v])
         });
 
     function V(e, t) {

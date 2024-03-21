@@ -28,7 +28,7 @@ function(e, t, n) {
         let d = async t => u >= 3 ? (p(!0), l.default.dispatch({
             type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
             target: e
-        })) : (await new Promise(e => setTimeout(e, t)), c()), c = () => i.default.get({
+        })) : (await new Promise(e => setTimeout(e, t)), c()), c = () => i.HTTP.get({
             url: r,
             retries: 3 - u - 1,
             signal: n.signal,

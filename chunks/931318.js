@@ -126,7 +126,7 @@ function(e, t, n) {
     }
 
     function h(e, t) {
-        (0 !== e.length || 0 !== t.length) && a.default.post({
+        (0 !== e.length || 0 !== t.length) && a.HTTP.post({
             url: f.Endpoints.SAVED_MESSAGES,
             body: {
                 added: e.map(_.savedMessageToServer),
@@ -138,7 +138,7 @@ function(e, t, n) {
     }
 
     function C() {
-        return c.default.recentlyFetched() ? Promise.resolve() : a.default.get({
+        return c.default.recentlyFetched() ? Promise.resolve() : a.HTTP.get({
             url: f.Endpoints.SAVED_MESSAGES
         }).then(e => {
             let t = e.body.saved_messages,

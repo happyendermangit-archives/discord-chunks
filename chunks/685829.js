@@ -39,7 +39,7 @@ function(e, t, n) {
         return s.default.dispatch({
             type: "GUILD_ONBOARDING_PROMPTS_FETCH_START",
             guildId: e
-        }), i.default.get({
+        }), i.HTTP.get({
             url: f.Endpoints.GUILD_ONBOARDING(e)
         }).then(t => {
             let {

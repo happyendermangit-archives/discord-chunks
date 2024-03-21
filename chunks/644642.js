@@ -1,12 +1,11 @@
 function(e, _, E) {
     "use strict";
-    var t;
     E.r(_), E.d(_, {
-        default: function() {
+        APIError: function() {
             return t
         }
     }), E("70102");
-    t = class {
+    class t {
         getFieldMessage(e) {
             return null != this.fields[e] ? this.fields[e][0] : null
         }

@@ -25,15 +25,15 @@ function(e, t, n) {
     let m = 25,
         p = !1,
         S = !0,
-        v = !1,
         T = !1,
+        v = !1,
         I = null,
         A = a.ThreadSortOrder.LATEST_ACTIVITY,
         C = [],
         y = 0;
 
     function N() {
-        p = !1, S = !0, v = !1, T = !1, I = null, A = a.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, y = 0, C = []
+        p = !1, S = !0, T = !1, v = !1, I = null, A = a.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, y = 0, C = []
     }
 
     function R(e, t) {
@@ -42,7 +42,7 @@ function(e, t, n) {
 
     function O() {
         if (null == I) return !1;
-        let e = !v,
+        let e = !T,
             t = _.default.getChannel(C[C.length - 1]),
             n = null == t ? null : R(t, A);
         C = r(_.default.getAllThreadsForParent(I)).filter(e => e.isArchivedThread()).filter(t => {
@@ -66,7 +66,7 @@ function(e, t, n) {
             this.waitFor(_.default, g.default, f.default)
         }
         get canLoadMore() {
-            return v && !p && !T
+            return T && !p && !v
         }
         get nextOffset() {
             return y
@@ -115,11 +115,11 @@ function(e, t, n) {
                 hasMoreThreads: e.hasMore,
                 filterTagIds: Array.from(e.tagFilter),
                 sortOrder: e.sortOrder
-            }), O(), v = e.hasMore, y = e.offset + m, p = !1, S = !1
+            }), O(), T = e.hasMore, y = e.offset + m, p = !1, S = !1
         },
         LOAD_ARCHIVED_THREADS_FAIL: function(e) {
             if (e.channelId !== I || e.sortOrder !== A || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
-            p = !1, T = !0, S = !1
+            p = !1, v = !0, S = !1
         },
         RESORT_THREADS: function(e) {
             return (null == I || null == e.channelId || I === e.channelId) && O()

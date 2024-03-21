@@ -27,8 +27,8 @@ function(e, t, n) {
         g = n("488464"),
         S = n("998716"),
         C = n("170183"),
-        _ = n("689275"),
-        T = n("373469"),
+        T = n("689275"),
+        _ = n("373469"),
         I = n("546463"),
         v = n("923959"),
         N = n("824563"),
@@ -66,7 +66,7 @@ function(e, t, n) {
         })
     }
 
-    function Z(e) {
+    function J(e) {
         let {
             muteConfig: t,
             className: n
@@ -82,11 +82,11 @@ function(e, t, n) {
         })
     }
 
-    function J(e) {
+    function Z(e) {
         var t, n, a;
         let {
             guild: r
-        } = e, d = r.id, p = (0, u.useStateFromStoresArray)([v.default, _.default], () => {
+        } = e, d = r.id, p = (0, u.useStateFromStoresArray)([v.default, T.default], () => {
             let e = v.default.getChannels(d)[v.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
                     let {
                         channel: t
@@ -98,7 +98,7 @@ function(e, t, n) {
                     } = e;
                     return t.id
                 }),
-                t = Object.values(_.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
+                t = Object.values(T.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
             return [...e, ...t]
         }, [d]), m = (0, C.default)(d), h = l.useMemo(() => m.map(e => e.id), [m]), x = (0, u.useStateFromStores)([R.default], () => R.default.getVoiceStates(d), [d]), E = o.flatMap(p, e => {
             var t;
@@ -123,7 +123,7 @@ function(e, t, n) {
             let e = 0;
             for (let t of h) e += g.default.getParticipantCount(t, S.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
-        }), k = (0, u.useStateFromStoresArray)([T.default], () => T.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), B = (0, u.useStateFromStoresArray)([N.default, I.default], () => E.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != I.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, B, d), W = F ? B.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => k.map(e => O.default.getUser(e)), [k]), X = z(j.default, E.filter(e => !k.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
+        }), k = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), B = (0, u.useStateFromStoresArray)([N.default, I.default], () => E.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != I.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, B, d), W = F ? B.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), Z = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => k.map(e => O.default.getUser(e)), [k]), X = z(j.default, E.filter(e => !k.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
         let Q = (t = d, n = y, a = M, 0 === n.length ? null : (0, i.jsxs)("div", {
                 className: V.row,
                 children: [(0, i.jsx)(U.default, {
@@ -146,7 +146,7 @@ function(e, t, n) {
                 })]
             })),
             $ = z(D.default, q.filter(e => null != e && !Y.includes(e.id)), d),
-            ee = z(b.default, J, d),
+            ee = z(b.default, Z, d),
             {
                 isMuted: et,
                 muteConfig: en
@@ -157,7 +157,7 @@ function(e, t, n) {
         return null != K && G.default.trackExposure({
             location: "Guild Tooltip"
         }), (0, i.jsxs)(i.Fragment, {
-            children: [Q, X, $, F && K, ee, et ? (0, i.jsx)(Z, {
+            children: [Q, X, $, F && K, ee, et ? (0, i.jsx)(J, {
                 muteConfig: en,
                 className: s(V.muteText, {
                     [V.muteTextWithActivity]: null != X || null != $
@@ -195,7 +195,7 @@ function(e, t, n) {
             includeActivity: n = !0
         } = e, l = (0, p.default)(t), a = (0, h.useCurrentUserGuildBadgeStatus)(t.id), r = null != a ? (0, i.jsx)(q, {
             guildJoinRequestStatus: a
-        }) : null, o = n ? (0, i.jsx)(J, {
+        }) : null, o = n ? (0, i.jsx)(Z, {
             guild: t
         }) : null, d = (0, u.useStateFromStores)([E.default], () => E.default.isViewingRoles(t.id)), f = (0, x.useShouldShowInvitesDisabledNotif)(t);
         return (0, i.jsxs)(i.Fragment, {

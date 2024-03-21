@@ -22,9 +22,9 @@ function(e, t, n) {
         m = {},
         p = {},
         S = {},
-        v = {};
+        T = {};
 
-    function T(e, t) {
+    function v(e, t) {
         let n = g[e];
         return null != n ? n[t] : null
     }
@@ -92,7 +92,7 @@ function(e, t, n) {
                 timestamp: Date.now()
             }
         }
-        return delete v[n], y(n), !0
+        return delete T[n], y(n), !0
     }
 
     function O(e) {
@@ -151,7 +151,7 @@ function(e, t, n) {
                 r = f.default.getUser(e);
             if (null != r && r.hasFlag(E.UserFlags.BOT_HTTP_INTERACTIONS) && (s = E.StatusTypes.UNKNOWN), null == r ? void 0 : r.isClyde()) return E.StatusTypes.ONLINE;
             if (null == i) return null !== (t = m[e]) && void 0 !== t ? t : s;
-            let a = T(e, i);
+            let a = v(e, i);
             return null !== (n = null == a ? void 0 : a.status) && void 0 !== n ? n : s
         }
         getActivities(e) {
@@ -160,7 +160,7 @@ function(e, t, n) {
                 var n;
                 return null !== (n = p[e]) && void 0 !== n ? n : h
             }
-            let i = T(e, t);
+            let i = v(e, t);
             return null == i || null == i.activities ? h : i.activities
         }
         getPrimaryActivity(e) {
@@ -188,7 +188,7 @@ function(e, t, n) {
             return this.getActivities(e, n).find(t)
         }
         getActivityMetadata(e) {
-            return v[e]
+            return T[e]
         }
         getUserIds() {
             return c.default.keys(p)
@@ -205,7 +205,7 @@ function(e, t, n) {
                 presencesForGuilds: g,
                 statuses: m,
                 activities: p,
-                activityMetadata: v,
+                activityMetadata: T,
                 clientStatuses: S
             }
         }
@@ -220,7 +220,7 @@ function(e, t, n) {
                 guilds: t,
                 presences: n
             } = e, i = _.default.getId();
-            g = {}, v = {}, m = {
+            g = {}, T = {}, m = {
                 [i]: m[i]
             }, p = {
                 [i]: p[i]
@@ -267,7 +267,7 @@ function(e, t, n) {
             let {
                 presences: t
             } = e;
-            g = t.presencesForGuilds, m = t.statuses, p = t.activities, v = t.activityMetadata
+            g = t.presencesForGuilds, m = t.statuses, p = t.activities, T = t.activityMetadata
         },
         GUILD_CREATE: function(e) {
             let {
@@ -348,7 +348,7 @@ function(e, t, n) {
                 userId: t,
                 metadata: n
             } = e;
-            return v[t] = n, !1
+            return T[t] = n, !1
         },
         THREAD_MEMBER_LIST_UPDATE: function(e) {
             let {
@@ -383,7 +383,7 @@ function(e, t, n) {
         SELF_PRESENCE_STORE_UPDATE: function(e) {
             let t = _.default.getId();
             if (m[t] === e.status && p[t] === e.activities) return !1;
-            m[t] = e.status, p[t] = e.activities, delete v[t]
+            m[t] = e.status, p[t] = e.activities, delete T[t]
         }
     })
 }

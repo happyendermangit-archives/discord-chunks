@@ -231,8 +231,8 @@ function(e, t, n) {
         }
     }
     async function k(e) {
-        await F(() => H()), await F(() => d.default.setAccountFlag(O.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
-        let t = await F(() => f.default.saveUserGuildSettingsBulk(e));
+        await H(() => F()), await H(() => d.default.setAccountFlag(O.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
+        let t = await H(() => f.default.saveUserGuildSettingsBulk(e));
         r.default.dispatch({
             type: "USER_GUILD_SETTINGS_FULL_UPDATE",
             userGuildSettings: t
@@ -240,7 +240,7 @@ function(e, t, n) {
             type: "RECOMPUTE_READ_STATES"
         })
     }
-    async function F(e) {
+    async function H(e) {
         for (let e = 0; e < 3; e++) try {
             break
         } catch (t) {
@@ -248,7 +248,7 @@ function(e, t, n) {
         }
         return await e()
     }
-    async function H() {
+    async function F() {
         let e = await (0, C.listSnapshots)();
         if (e.length > 0) {
             let t = await

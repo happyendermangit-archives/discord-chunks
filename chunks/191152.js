@@ -17,7 +17,7 @@ function(e, _, E) {
         });
         try {
             var E, a;
-            let n = await t.default.get({
+            let n = await t.HTTP.get({
                     url: r.Endpoints.ACTIVE_CHANNELS(e),
                     query: {
                         channel_limit: _

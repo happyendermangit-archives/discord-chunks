@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     });
     var i = n("37983"),
@@ -24,17 +24,17 @@ function(e, t, n) {
         g = n("634114"),
         S = n("49111"),
         C = n("13030"),
-        _ = n("942838"),
-        T = l.memo(function(e) {
+        T = n("942838"),
+        _ = l.memo(function(e) {
             let {
                 positionTargetRef: t,
                 channel: n,
                 closeOnModalOuterClick: a = !1,
-                parentModalKey: T
+                parentModalKey: _
             } = e, I = l.useRef(null), v = l.useRef(null), {
                 renderWindow: N,
                 windowDispatch: A
-            } = l.useContext(f.default), O = null != T, R = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
+            } = l.useContext(f.default), O = null != _, R = (0, u.useIsModalAtTop)(null != _ ? _ : ""), M = () => {
                 x.dismissAppLauncherPopup()
             }, k = l.useCallback(e => {
                 var t;
@@ -63,7 +63,7 @@ function(e, t, n) {
             return (0, i.jsx)(c.default, {
                 section: S.AnalyticsSections.EXPRESSION_PICKER,
                 children: (0, i.jsx)(p.AppReferencePositionLayer, {
-                    className: _.positionLayer,
+                    className: T.positionLayer,
                     reference: t,
                     position: "top",
                     align: "left",
@@ -74,17 +74,17 @@ function(e, t, n) {
                             isPositioned: t
                         } = e;
                         return (0, i.jsx)("section", {
-                            className: s(_.positionContainer),
+                            className: s(T.positionContainer),
                             ref: I,
                             role: "dialog",
                             "aria-label": "Application Launcher",
                             children: t ? (0, i.jsxs)("div", {
-                                className: _.drawerSizingWrapper,
+                                className: T.drawerSizingWrapper,
                                 ref: v,
                                 children: [(0, i.jsx)("div", {
-                                    className: _.resizeHandle
+                                    className: T.resizeHandle
                                 }), (0, i.jsxs)("div", {
-                                    className: _.contentWrapper,
+                                    className: T.contentWrapper,
                                     children: [(0, i.jsx)(g.default, {
                                         channel: n,
                                         isAppDetailPresent: null != P

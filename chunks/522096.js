@@ -29,8 +29,8 @@ function(e, t, n) {
             renderSection: g,
             renderSectionHeader: S,
             renderSectionFooter: C,
-            renderInspector: _,
-            renderEmptySearchState: T,
+            renderInspector: T,
+            renderEmptySearchState: _,
             renderCategoryList: I,
             renderHeaderAccessories: v,
             rowHeight: N,
@@ -61,8 +61,8 @@ function(e, t, n) {
             itemNodeWidth: R,
             itemNodeMargin: k
         }), {
-            getItemProps: Z,
-            getRowProps: J,
+            getItemProps: J,
+            getRowProps: Z,
             gridContainerProps: q,
             handleGridContainerKeyDown: X,
             isUsingKeyboardNavigation: Q
@@ -75,15 +75,15 @@ function(e, t, n) {
             gridNavigatorId: P
         }), $ = l.useCallback(e => {
             let t = V[e];
-            return y(t, J(e), {
+            return y(t, Z(e), {
                 isUsingKeyboardNavigation: Q.current,
                 gutterWidth: z,
                 rowIndex: e
-            }, t => Z(e, t), t => c.setInspectedExpressionPosition(t, e))
-        }, [V, Z, J, z, Q, y, c]), ee = l.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = l.useCallback(e => null == S ? void 0 : S(t[e], e), [t, S]), en = l.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), ei = l.useCallback(() => {
+            }, t => J(e, t), t => c.setInspectedExpressionPosition(t, e))
+        }, [V, J, Z, z, Q, y, c]), ee = l.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = l.useCallback(e => null == S ? void 0 : S(t[e], e), [t, S]), en = l.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), ei = l.useCallback(() => {
             var e;
-            return null == _ ? void 0 : _(null == V ? void 0 : null === (e = V[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
-        }, [V, H.columnIndex, H.rowIndex, _]);
+            return null == T ? void 0 : T(null == V ? void 0 : null === (e = V[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
+        }, [V, H.columnIndex, H.rowIndex, T]);
         l.useEffect(() => {
             p(G)
         }, [p, G]), l.useEffect(() => c.resetStoreState, [c.resetStoreState]), l.useLayoutEffect(() => {
@@ -124,8 +124,8 @@ function(e, t, n) {
                         renderSection: null != g ? ee : void 0,
                         renderSectionHeader: null != S ? et : void 0,
                         renderSectionFooter: null != C ? en : void 0,
-                        renderInspector: null != _ ? ei : void 0,
-                        renderEmptySearchState: T,
+                        renderInspector: null != T ? ei : void 0,
+                        renderEmptySearchState: _,
                         rowCount: K,
                         rowCountBySection: W,
                         rowHeight: N,

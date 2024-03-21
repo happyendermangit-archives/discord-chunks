@@ -23,8 +23,8 @@ function(e, t, n) {
         m = n("286235"),
         p = n("980134"),
         S = n("966724"),
-        v = n("142852"),
-        T = n("49111");
+        T = n("142852"),
+        v = n("49111");
     let I = new u.default("CloudUpload.tsx"),
         A = n("123010").default;
     (s = i || (i = {})).NOT_STARTED = "NOT_STARTED", s.STARTED = "STARTED", s.UPLOADING = "UPLOADING", s.ERROR = "ERROR", s.COMPLETED = "COMPLETED", s.CANCELED = "CANCELED";
@@ -117,7 +117,7 @@ function(e, t, n) {
                     this.emit("progress", n, e.totalSize, n - this.loaded), this.loaded = n
                 }, 50);
                 try {
-                    let n = await l.default.put({
+                    let n = await l.HTTP.put({
                         url: e.sessionUrl,
                         body: e.chunk,
                         headers: t,
@@ -156,7 +156,7 @@ function(e, t, n) {
                 i = {
                     "Content-Type": t
                 };
-            return l.default.put({
+            return l.HTTP.put({
                 url: this.responseUrl,
                 body: e,
                 headers: i,
@@ -185,13 +185,13 @@ function(e, t, n) {
                 return
             }
             let i = await A.getUploadPayload(this),
-                s = (0, v.getUploadTarget)(this.item.target);
+                s = (0, T.getUploadTarget)(this.item.target);
             if (null == i.filename || "" === i.filename || 0 === this.currentSize) {
-                I.error("File does not have a filename or size is 0.", JSON.stringify(i)), this.handleError(T.AbortCodes.INVALID_FILE_ASSET);
+                I.error("File does not have a filename or size is 0.", JSON.stringify(i)), this.handleError(v.AbortCodes.INVALID_FILE_ASSET);
                 return
             }
             if ((null !== (e = this.currentSize) && void 0 !== e ? e : 0) > s.getMaxFileSize(this.channelId)) {
-                this.handleError(T.AbortCodes.ENTITY_TOO_LARGE);
+                this.handleError(v.AbortCodes.ENTITY_TOO_LARGE);
                 return
             }
             if (d.default.get("upload_fail_50") && .5 > Math.random()) {
@@ -202,7 +202,7 @@ function(e, t, n) {
             }
             try {
                 I.log("Requesting upload url for ".concat(this.id));
-                let e = await this.trackTime("getUploadUrlTimeMs", async () => await l.default.post({
+                let e = await this.trackTime("getUploadUrlTimeMs", async () => await l.HTTP.post({
                     url: s.getCreateAttachmentURL(this.channelId),
                     body: {
                         files: [i]
@@ -212,7 +212,7 @@ function(e, t, n) {
                 this.setResponseUrl(e.body.attachments[0].upload_url), this.setUploadedFilename(e.body.attachments[0].upload_filename)
             } catch (i) {
                 let e = null !== (n = null == i ? void 0 : null === (t = i.body) || void 0 === t ? void 0 : t.code) && void 0 !== n ? n : i.status;
-                e !== T.AbortCodes.ENTITY_TOO_LARGE && (I.error("Requesting upload url failed with code ".concat(null != e ? e : JSON.stringify(i.body), " for ").concat(this.id)), m.default.captureException(i)), this.handleError(e);
+                e !== v.AbortCodes.ENTITY_TOO_LARGE && (I.error("Requesting upload url failed with code ".concat(null != e ? e : JSON.stringify(i.body), " for ").concat(this.id)), m.default.captureException(i)), this.handleError(e);
                 return
             }
             try {
@@ -229,7 +229,7 @@ function(e, t, n) {
         }
         async reactNativeCompressAndExtractData() {
             var e;
-            if (!(0, v.getUploadTarget)(this.item.target).shouldReactNativeCompressUploads) {
+            if (!(0, T.getUploadTarget)(this.item.target).shouldReactNativeCompressUploads) {
                 this.uploadAnalytics.compressAndExtractDisabled = !0, I.log("reactNativeCompressAndExtractData() disabled by upload target");
                 return
             }
@@ -283,9 +283,9 @@ function(e, t, n) {
         }
         async delete() {
             if (null == this.uploadedFilename) return;
-            let e = (0, v.getUploadTarget)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
+            let e = (0, T.getUploadTarget)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
             try {
-                await l.default.delete(e)
+                await l.HTTP.del(e)
             } catch {}
         }
         setResponseUrl(e) {
@@ -302,7 +302,7 @@ function(e, t, n) {
         }
         trackUploadStart() {
             var e;
-            E.default.track(T.AnalyticEvents.ATTACHMENT_UPLOAD_STARTED, {
+            E.default.track(v.AnalyticEvents.ATTACHMENT_UPLOAD_STARTED, {
                 file_size: this.currentSize,
                 mime_type: null !== (e = this.mimeType) && void 0 !== e ? e : "unknown",
                 video_upload_quality: _.default.videoUploadQuality,
@@ -316,7 +316,7 @@ function(e, t, n) {
         trackUploadFinished(e) {
             var t, n;
             let i = null != this.startTime ? performance.now() - this.startTime : -1;
-            E.default.track(T.AnalyticEvents.ATTACHMENT_UPLOAD_FINISHED, {
+            E.default.track(v.AnalyticEvents.ATTACHMENT_UPLOAD_FINISHED, {
                 duration_ms: i,
                 file_size: this.currentSize,
                 pre_compression_file_size: this.preCompressionSize,

@@ -40,7 +40,7 @@ function(e, t, n) {
                     guild_noise: o,
                     usage: g
                 }
-            } = await a.default.get("/users/@me/notification-migration-data2"), m = (0, c.transformUsageData)(g), {
+            } = await a.HTTP.get("/users/@me/notification-migration-data2"), m = (0, c.transformUsageData)(g), {
                 default: h
             } = await n.el("923660").then(n.bind(n, "923660"));
             if (!(0, l.hasAnyModalOpen)()) d.UnreadsEntryPointExperiment.trackExposure({
@@ -66,7 +66,7 @@ function(e, t, n) {
                 guild_noise: t,
                 usage: s
             }
-        } = await a.default.get("/users/@me/notification-migration-data2"), o = (0, c.transformUsageData)(s);
+        } = await a.HTTP.get("/users/@me/notification-migration-data2"), o = (0, c.transformUsageData)(s);
         (0, l.openModalLazy)(async () => {
             let {
                 default: a

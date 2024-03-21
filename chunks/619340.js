@@ -18,7 +18,7 @@ function(e, t, n) {
 
     function f(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return r.default.post({
+        return r.HTTP.post({
             url: c.Endpoints.CONNECTIONS_CALLBACK(e),
             body: {
                 ...t,
@@ -29,7 +29,7 @@ function(e, t, n) {
         })
     }
     var E = {
-        fetch: () => r.default.get({
+        fetch: () => r.HTTP.get({
             url: c.Endpoints.CONNECTIONS,
             oldFormErrors: !0
         }).then(e => a.default.dispatch({
@@ -50,7 +50,7 @@ function(e, t, n) {
             return u.default.track(c.AnalyticEvents.CONNECTED_ACCOUNT_INITIATED, {
                 platform_type: e,
                 location: n
-            }), t = i === s.TwoWayLinkType.DEVICE_CODE && null != a ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK_DEVICE(e, a) : null != i ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK(e, i) : c.Endpoints.CONNECTIONS_AUTHORIZE(e), r.default.get({
+            }), t = i === s.TwoWayLinkType.DEVICE_CODE && null != a ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK_DEVICE(e, a) : null != i ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK(e, i) : c.Endpoints.CONNECTIONS_AUTHORIZE(e), r.HTTP.get({
                 url: t,
                 oldFormErrors: !0
             })
@@ -77,15 +77,15 @@ function(e, t, n) {
                 }
             })
         },
-        disconnect: (e, t) => r.default.delete({
+        disconnect: (e, t) => r.HTTP.del({
             url: c.Endpoints.CONNECTION(e, t),
             oldFormErrors: !0
         }),
-        refresh: (e, t) => r.default.post({
+        refresh: (e, t) => r.HTTP.post({
             url: c.Endpoints.CONNECTION_REFRESH(e, t),
             oldFormErrors: !0
         }),
-        submitPinCode: (e, t) => r.default.get({
+        submitPinCode: (e, t) => r.HTTP.get({
             url: c.Endpoints.CONNECTIONS_CALLBACK_CONTINUATION(t, e),
             oldFormErrors: !0
         }).then(e => {
@@ -138,7 +138,7 @@ function(e, t, n) {
                 type: "USER_CONNECTIONS_INTEGRATION_JOINING",
                 integrationId: e,
                 joining: !0
-            }), r.default.post({
+            }), r.HTTP.post({
                 url: c.Endpoints.INTEGRATION_JOIN(e),
                 oldFormErrors: !0
             }, n => {
@@ -159,7 +159,7 @@ function(e, t, n) {
                     body: {
                         access_token: n
                     }
-                } = await r.default.get({
+                } = await r.HTTP.get({
                     url: c.Endpoints.CONNECTION_ACCESS_TOKEN(e, t),
                     oldFormErrors: !0
                 });
@@ -178,7 +178,7 @@ function(e, t, n) {
                 }), n
             }
         },
-        linkDispatchAuthCallback: (e, t) => r.default.post({
+        linkDispatchAuthCallback: (e, t) => r.HTTP.post({
             url: c.Endpoints.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(e),
             body: {
                 ...t

@@ -1,26 +1,26 @@
 function(e, _, E) {
     "use strict";
-    var t, o, n;
+    var t, o;
     E.r(_), E.d(_, {
         INVALID_FORM_BODY_ERROR_CODE: function() {
-            return r
+            return n
         },
         CaptchaTypes: function() {
             return t
         },
-        default: function() {
-            return o
+        APIError: function() {
+            return a
         }
     }), E("222007");
-    let r = 50035;
+    let n = 50035;
 
-    function a(e) {
+    function r(e) {
         return e.map(e => ({
             code: "UNKNOWN",
             message: e
         }))
-    }(n = t || (t = {})).HCAPTCHA = "hcaptcha", n.RECAPTCHA = "recaptcha";
-    o = class {
+    }(o = t || (t = {})).HCAPTCHA = "hcaptcha", o.RECAPTCHA = "recaptcha";
+    class a {
         hasFieldErrors() {
             return null != this.errors && Object.keys(this.errors).length > 0
         }
@@ -54,7 +54,7 @@ function(e, _, E) {
             let {
                 message: t,
                 code: o,
-                retryAfter: n,
+                retryAfter: a,
                 errors: i,
                 status: I,
                 captchaFields: s
@@ -74,16 +74,16 @@ function(e, _, E) {
                     message: E.captcha_key.length > 0 ? E.captcha_key[0] : void 0
                 } : {
                     status: e.status,
-                    code: r,
+                    code: n,
                     errors: function(e) {
                         let _ = {};
                         for (let [E, t] of Object.entries(e)) {
                             if ("_misc" === E) {
-                                _._errors = a(t);
+                                _._errors = r(t);
                                 continue
                             }
                             let e = {};
-                            e._errors = a(t), _[E] = e
+                            e._errors = r(t), _[E] = e
                         }
                         return _
                     }(E)
@@ -95,7 +95,7 @@ function(e, _, E) {
                     status: e.status
                 }
             }(e, _);
-            this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = n, this.errors = i, this.status = I, this.captchaFields = null != s ? s : {}
+            this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = a, this.errors = i, this.status = I, this.captchaFields = null != s ? s : {}
         }
     }
 }

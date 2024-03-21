@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("402318"),
         S = n("976818"),
         C = n("49111"),
-        _ = n("200521"),
-        T = n("714997");
+        T = n("200521"),
+        _ = n("714997");
 
     function I(e) {
         let {
@@ -43,7 +43,7 @@ function(e, t, n) {
             })
         }, L = d.default.can(C.Permissions.MANAGE_MESSAGES, c);
         return (0, i.jsxs)(s.Clickable, {
-            className: T.container,
+            className: _.container,
             onClick: N,
             onContextMenu: e => {
                 L && (0, r.openContextMenuLazy)(e, async () => {
@@ -61,13 +61,13 @@ function(e, t, n) {
             children: [(0, i.jsx)(h.default, {
                 hovered: A,
                 unread: v,
-                className: T.unreadPill
+                className: _.unreadPill
             }), (0, i.jsx)("div", {
-                className: T.rowHeader,
+                className: _.rowHeader,
                 children: (0, i.jsxs)("div", {
-                    className: T.rowHeaderLeft,
+                    className: _.rowHeaderLeft,
                     children: [(0, i.jsx)(s.Text, {
-                        className: T.timestamp,
+                        className: _.timestamp,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
                         children: R
@@ -75,13 +75,13 @@ function(e, t, n) {
                         height: 4,
                         width: 4,
                         "aria-hidden": "true",
-                        className: T.dot
+                        className: _.dot
                     }), (0, i.jsx)(f.default, {
                         height: 12,
                         width: 12,
-                        className: T.icon
+                        className: _.icon
                     }), (0, i.jsx)(s.Text, {
-                        className: T.count,
+                        className: _.count,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
                         children: t.count
@@ -90,7 +90,7 @@ function(e, t, n) {
                             height: 4,
                             width: 4,
                             "aria-hidden": "true",
-                            className: T.dot
+                            className: _.dot
                         }), (0, i.jsx)(g.default, {
                             partySize: {
                                 knownSize: S.length,
@@ -103,18 +103,18 @@ function(e, t, n) {
                     })]
                 })
             }), A && !M && (0, i.jsxs)("div", {
-                className: T.feedbackContainer,
+                className: _.feedbackContainer,
                 children: [(0, i.jsx)(s.Clickable, {
-                    onClick: e => k(e, _.FeedbackRating.GOOD),
+                    onClick: e => k(e, T.FeedbackRating.GOOD),
                     children: (0, i.jsx)(m.default, {
-                        className: T.thumbIcon,
+                        className: _.thumbIcon,
                         width: 12,
                         height: 12
                     })
                 }), (0, i.jsx)(s.Clickable, {
-                    onClick: e => k(e, _.FeedbackRating.BAD),
+                    onClick: e => k(e, T.FeedbackRating.BAD),
                     children: (0, i.jsx)(p.default, {
-                        className: T.thumbIcon,
+                        className: _.thumbIcon,
                         width: 12,
                         height: 12
                     })
@@ -122,12 +122,12 @@ function(e, t, n) {
             }), (0, i.jsx)(s.Text, {
                 color: "header-primary",
                 variant: "text-sm/semibold",
-                className: T.title,
+                className: _.title,
                 children: t.topic
             }), (0, i.jsx)(s.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                className: T.subtitle,
+                className: _.subtitle,
                 children: t.summShort
             })]
         })

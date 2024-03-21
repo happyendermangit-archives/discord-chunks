@@ -26,10 +26,10 @@ function(e, t, n) {
             return S
         },
         NUM_DEFAULT_CHATTABLE_CHANNELS_MIN: function() {
-            return v
+            return T
         },
         ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD: function() {
-            return T
+            return v
         },
         GuildOnboardingTab: function() {
             return a
@@ -70,8 +70,8 @@ function(e, t, n) {
         m = 50,
         p = 4,
         S = 7,
-        v = 5,
-        T = 13;
+        T = 5,
+        v = 13;
 
     function I(e) {
         if (e.options.length > 0) return !1;

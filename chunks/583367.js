@@ -1,6 +1,6 @@
-function(t, e, l) {
+function(t, e, n) {
     "use strict";
-    l.r(e), l.d(e, {
+    n.r(e), n.d(e, {
         fetchAppliedGuildBoostsForGuild: function() {
             return d
         },
@@ -20,27 +20,27 @@ function(t, e, l) {
             return S
         }
     });
-    var n = l("872717"),
-        r = l("913144"),
-        a = l("448993"),
-        s = l("783111"),
-        o = l("522308"),
-        i = l("521012"),
-        u = l("49111");
+    var l = n("872717"),
+        r = n("913144"),
+        a = n("448993"),
+        s = n("783111"),
+        o = n("522308"),
+        i = n("521012"),
+        u = n("49111");
     async function d(t) {
-        let e = await n.default.get({
+        let e = await l.HTTP.get({
                 url: u.Endpoints.APPLIED_GUILD_BOOSTS_FOR_GUILD(t),
                 oldFormErrors: !0
             }),
-            l = e.body.map(t => s.default.createFromServer(t));
+            n = e.body.map(t => s.default.createFromServer(t));
         return r.default.dispatch({
             type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS",
             guildId: t,
-            appliedBoosts: l
-        }), l
+            appliedBoosts: n
+        }), n
     }
     async function c() {
-        let t = await n.default.get({
+        let t = await l.HTTP.get({
                 url: u.Endpoints.USER_GUILD_BOOST_SLOTS,
                 oldFormErrors: !0
             }),
@@ -55,14 +55,14 @@ function(t, e, l) {
             type: "GUILD_APPLY_BOOST_START"
         });
         try {
-            let l = await n.default.put({
+            let n = await l.HTTP.put({
                     url: u.Endpoints.APPLIED_GUILD_BOOSTS_FOR_GUILD(t),
                     body: {
                         user_premium_guild_subscription_slot_ids: e
                     },
                     oldFormErrors: !0
                 }),
-                a = Array.isArray(l.body) ? l.body.map(s.default.createFromServer) : [s.default.createFromServer(l.body)];
+                a = Array.isArray(n.body) ? n.body.map(s.default.createFromServer) : [s.default.createFromServer(n.body)];
             return r.default.dispatch({
                 type: "GUILD_APPLY_BOOST_SUCCESS",
                 appliedGuildBoost: a
@@ -80,7 +80,7 @@ function(t, e, l) {
             type: "GUILD_UNAPPLY_BOOST_START"
         });
         try {
-            await n.default.delete({
+            await l.HTTP.del({
                 url: u.Endpoints.APPLIED_GUILD_BOOST(t, e),
                 oldFormErrors: !0
             }), c()
@@ -97,25 +97,25 @@ function(t, e, l) {
         })
     }
     async function p(t) {
-        let e = await n.default.post({
+        let e = await l.HTTP.post({
                 url: u.Endpoints.USER_GUILD_BOOST_SLOT_CANCEL(t),
                 oldFormErrors: !0
             }),
-            l = o.default.createFromServer(e.body, i.default.getSubscriptionById(e.body.subscription_id));
+            n = o.default.createFromServer(e.body, i.default.getSubscriptionById(e.body.subscription_id));
         return r.default.dispatch({
             type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS",
-            guildBoostSlot: l
-        }), l
+            guildBoostSlot: n
+        }), n
     }
     async function S(t) {
-        let e = await n.default.post({
+        let e = await l.HTTP.post({
                 url: u.Endpoints.USER_GUILD_BOOST_SLOT_UNCANCEL(t),
                 oldFormErrors: !0
             }),
-            l = o.default.createFromServer(e.body, i.default.getSubscriptionById(e.body.subscription_id));
+            n = o.default.createFromServer(e.body, i.default.getSubscriptionById(e.body.subscription_id));
         return r.default.dispatch({
             type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS",
-            guildBoostSlot: l
-        }), l
+            guildBoostSlot: n
+        }), n
     }
 }

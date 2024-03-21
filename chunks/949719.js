@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("697218"),
         p = n("555035"),
         S = n("800762"),
-        v = n("387111"),
-        T = n("246846"),
+        T = n("387111"),
+        v = n("246846"),
         I = n("99795"),
         A = n("49111"),
         C = n("353927");
@@ -35,11 +35,11 @@ function(e, t, n) {
                 return "\x00".concat(e.sortKey);
             case I.ParticipantTypes.HIDDEN_STREAM:
             case I.ParticipantTypes.STREAM:
-                return "".concat(e.userVideo ? "\x01" : "\x02").concat((0, T.default)(e.userNick, e.user), "\x02");
+                return "".concat(e.userVideo ? "\x01" : "\x02").concat((0, v.default)(e.userNick, e.user), "\x02");
             case I.ParticipantTypes.USER:
                 var t, n;
                 let i = "\x04";
-                return (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) ? i = "\x02" : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfStream) && (i = "\x03"), "".concat(i).concat((0, T.default)(e.userNick, e.user))
+                return (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) ? i = "\x02" : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfStream) && (i = "\x03"), "".concat(i).concat((0, v.default)(e.userNick, e.user))
         }
     }(r = i || (i = {})).VIDEO = "VIDEO", r.STREAM = "STREAM", r.FILTERED = "FILTERED", r.SPEAKING = "SPEAKING", r.ACTIVITY = "ACTIVITY", s = class {
         get version() {
@@ -132,8 +132,8 @@ function(e, t, n) {
             var t, n, i, s, r, a;
             let o, u;
             let f = [],
-                T = m.default.getUser(e);
-            if (null == T) return f;
+                v = m.default.getUser(e);
+            if (null == v) return f;
             let A = S.default.getVoiceStateForChannel(this.channelId, e),
                 y = S.default.getVoicePlatformForChannel(this.channelId, e),
                 N = E.default.getChannel(this.channelId),
@@ -141,8 +141,8 @@ function(e, t, n) {
             (null != A || R) && (o = {
                 type: I.ParticipantTypes.USER,
                 ...p.default.getUserStreamData(e, null == N ? void 0 : N.getGuildId()),
-                user: T,
-                id: T.id,
+                user: v,
+                id: v.id,
                 voiceState: A,
                 voicePlatform: y,
                 speaking: (0, l.getIsSpeaking)({
@@ -152,8 +152,8 @@ function(e, t, n) {
                 lastSpoke: null !== (s = this.lastSpoke[e]) && void 0 !== s ? s : 0,
                 soundsharing: g.default.isSoundSharing(e),
                 ringing: R,
-                userNick: v.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, T),
-                localVideoDisabled: h.default.isLocalVideoDisabled(T.id)
+                userNick: T.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, v),
+                localVideoDisabled: h.default.isLocalVideoDisabled(v.id)
             }, f.push(o));
             let O = null !== (r = c.default.getStreamForUser(e, null == N ? void 0 : N.getGuildId())) && void 0 !== r ? r : c.default.getActiveStreamForUser(e, null == N ? void 0 : N.getGuildId());
             if (null != O && O.channelId === this.channelId) {
@@ -172,8 +172,8 @@ function(e, t, n) {
                     type: i ? I.ParticipantTypes.HIDDEN_STREAM : I.ParticipantTypes.STREAM,
                     id: t,
                     userVideo: null !== (a = null == A ? void 0 : A.selfVideo) && void 0 !== a && a,
-                    user: T,
-                    userNick: v.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, T),
+                    user: v,
+                    userNick: T.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, v),
                     stream: O
                 }, f.push(u)
             }

@@ -21,7 +21,7 @@ function(e, t, n) {
                 type: "GUILD_ROLE_MEMBER_COUNT_FETCH_START",
                 guildId: e
             });
-            let t = await a.default.get({
+            let t = await a.HTTP.get({
                     url: u.Endpoints.GUILD_ROLE_MEMBER_COUNTS(e)
                 }),
                 n = t.body;
@@ -49,7 +49,7 @@ function(e, t, n) {
             i = "".concat(e, "-").concat(t);
         if (!n || null == f.get(i)) {
             var l, s;
-            return f.set(i, !0), l = e, s = t, a.default.get({
+            return f.set(i, !0), l = e, s = t, a.HTTP.get({
                 url: u.Endpoints.GUILD_ROLE_MEMBER_IDS(l, s)
             }).then(e => (r.default.requestMembersById(l, e.body, !1), e.body.length))
         }

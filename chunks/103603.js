@@ -29,10 +29,10 @@ function(e, t, n) {
             return S
         },
         dataUrlToFile: function() {
-            return v
+            return T
         },
         dataUrlToBlob: function() {
-            return T
+            return v
         },
         isPNGAnimated: function() {
             return I
@@ -145,15 +145,15 @@ function(e, t, n) {
         let t = e.split(";base64,");
         return s(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
     }
-    async function v(e, t, n) {
-        let i = T(e),
+    async function T(e, t, n) {
+        let i = v(e),
             s = await i.arrayBuffer();
         return new File([s], t, {
             type: n
         })
     }
 
-    function T(e) {
+    function v(e) {
         let t;
         t = e.split(",")[0].indexOf("base64") >= 0 ? atob(e.split(",")[1]) : btoa(e.split(",")[1]);
         let n = e.split(",")[0].split(":")[1].split(";")[0],

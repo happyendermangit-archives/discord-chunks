@@ -25,8 +25,8 @@ function(e, t, n) {
         g = n("429928"),
         S = n("36539"),
         C = n("502651"),
-        _ = n("419830"),
-        T = n("808742"),
+        T = n("419830"),
+        _ = n("808742"),
         I = n("342845"),
         v = n("239380"),
         N = n("118033"),
@@ -146,7 +146,7 @@ function(e, t, n) {
                     server: i.name
                 })
             }(null == u ? void 0 : u.type) === D.ActivityTypes.HANG_STATUS && (t = F.default.Messages.STATUS_LEAD_IN_JUST);
-            let p = (0, _.getChannelIconComponent)(l, i);
+            let p = (0, T.getChannelIconComponent)(l, i);
             return null != l && (t = l.name), (0, a.jsxs)("div", {
                 className: G.headerContainer,
                 children: [null != l && null !== p ? (0, a.jsx)(p, {
@@ -301,7 +301,7 @@ function(e, t, n) {
             let r = (0, y.default)(e),
                 o = e.name,
                 u = o;
-            return (s === D.ActivityTypes.HANG_STATUS ? u = (0, T.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
+            return (s === D.ActivityTypes.HANG_STATUS ? u = (0, _.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
                 className: G.activityName,
                 children: u
             }) : !r && (o = l, u = l, (0, g.default)(e) && null != e.sync_id && null != l ? u = (0, a.jsx)(f.Anchor, {

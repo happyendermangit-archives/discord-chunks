@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         countEmoji: function() {
-            return T
+            return v
         },
         default: function() {
             return I
@@ -39,7 +39,7 @@ function(e, t, n) {
         return null != e && null != t && (!p(e) || t === e.guildId)
     }
 
-    function v(e) {
+    function T(e) {
         var t;
         let {
             emoji: n,
@@ -53,20 +53,20 @@ function(e, t, n) {
             h = null != s && (0, a.isGuildTextChannelType)(s.type),
             g = null != s && (0, a.isGuildVocalChannelType)(s.type),
             m = S(n, c),
-            v = o.default.can(f.Permissions.USE_EXTERNAL_EMOJIS, s);
+            T = o.default.can(f.Permissions.USE_EXTERNAL_EMOJIS, s);
         if (u === E.EmojiIntention.COMMUNITY_CONTENT || u === E.EmojiIntention.COMMUNITY_CONTENT_ONLY) return m && n.available ? null : E.EmojiDisabledReasons.DISALLOW_EXTERNAL;
-        if (!(0, E.isExternalEmojiAllowedForIntention)(u) && !S(n, c) && !d || (h || g) && !m && !v) return E.EmojiDisabledReasons.DISALLOW_EXTERNAL;
+        if (!(0, E.isExternalEmojiAllowedForIntention)(u) && !S(n, c) && !d || (h || g) && !m && !T) return E.EmojiDisabledReasons.DISALLOW_EXTERNAL;
         if (!n.available) return E.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
-        let T = l.default.getCurrentUser();
-        if (!_.default.canUseEmojisEverywhere(T) && !m) {
+        let v = l.default.getCurrentUser();
+        if (!_.default.canUseEmojisEverywhere(v) && !m) {
             if (u === E.EmojiIntention.STATUS) return E.EmojiDisabledReasons.PREMIUM_LOCKED;
             if (!n.managed) return E.EmojiDisabledReasons.PREMIUM_LOCKED
         }
         if ((0, r.isUnusableRoleSubscriptionEmoji)(n, null != c ? c : void 0)) return (0, i.shouldHideGuildPurchaseEntryPoints)(n.guildId) ? E.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : E.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
-        return !n.animated || _.default.canUseAnimatedEmojis(T) || (0, r.isPurchasableRoleSubscriptionEmoji)(n) ? null : E.EmojiDisabledReasons.PREMIUM_LOCKED
+        return !n.animated || _.default.canUseAnimatedEmojis(v) || (0, r.isPurchasableRoleSubscriptionEmoji)(n) ? null : E.EmojiDisabledReasons.PREMIUM_LOCKED
     }
 
-    function T(e, t) {
+    function v(e, t) {
         let n = 0,
             i = 0,
             r = 0,
@@ -92,7 +92,7 @@ function(e, t, n) {
         filterUnsupportedEmojis: d.default.filterUnsupportedEmojis,
         getURL: d.default.getURL,
         isInternalEmojiForGuildId: S,
-        getEmojiUnavailableReason: v,
+        getEmojiUnavailableReason: T,
         isCustomEmoji: p,
         isEmojiFiltered(e) {
             let {
@@ -100,7 +100,7 @@ function(e, t, n) {
                 channel: n,
                 intention: i,
                 guildId: s
-            } = e, r = v({
+            } = e, r = T({
                 emoji: t,
                 channel: n,
                 intention: i,
@@ -114,7 +114,7 @@ function(e, t, n) {
                 channel: n,
                 intention: i,
                 guildId: s
-            } = e, r = v({
+            } = e, r = T({
                 emoji: t,
                 channel: n,
                 guildId: s,
@@ -128,7 +128,7 @@ function(e, t, n) {
                 channel: n,
                 intention: i
             } = e, s = t.reduce((e, t) => {
-                let s = v({
+                let s = T({
                     emoji: t,
                     channel: n,
                     intention: i
@@ -158,7 +158,7 @@ function(e, t, n) {
                 emoji: t,
                 channel: n,
                 intention: i
-            } = e, s = v({
+            } = e, s = T({
                 emoji: t,
                 channel: n,
                 intention: i

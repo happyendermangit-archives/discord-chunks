@@ -398,8 +398,8 @@ function(e, t, n) {
         loadComplete(e) {
             var t, n, i, o, l, d, c, h, g, m, p;
             let S = [...e.newMessages],
-                v = null !== (t = e.isBefore) && void 0 !== t && t,
-                T = null !== (n = e.isAfter) && void 0 !== n && n,
+                T = null !== (t = e.isBefore) && void 0 !== t && t,
+                v = null !== (n = e.isAfter) && void 0 !== n && n,
                 I = null !== (i = e.jump) && void 0 !== i ? i : null,
                 A = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
                 C = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
@@ -410,10 +410,10 @@ function(e, t, n) {
                     autoTrackExposure: !1
                 }).enabled ? e => (0, u.createMessageRecord)(e) : e => E(this, e)).value(),
                 R = null;
-            if ((v || T) && null == I && this.ready) R = this.merge(N, v, !0);
+            if ((T || v) && null == I && this.ready) R = this.merge(N, T, !0);
             else {
                 let e = this._array.filter(e => e.state === _.MessageStates.SENDING);
-                R = this.reset(N), !(e.length > 0) || v || T || (null == I ? void 0 : I.messageId) != null || (null == I ? void 0 : I.offset) != null ? f.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (f.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), R = R.merge(e))
+                R = this.reset(N), !(e.length > 0) || T || v || (null == I ? void 0 : I.messageId) != null || (null == I ? void 0 : I.offset) != null ? f.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (f.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), R = R.merge(e))
             }
             return R = R.mutate({
                 ready: !0,
@@ -426,8 +426,8 @@ function(e, t, n) {
                 jumpTargetOffset: null != I && null != I.messageId && null != I.offset ? I.offset : 0,
                 jumpSequenceId: null != I ? R.jumpSequenceId + 1 : R.jumpSequenceId,
                 jumpReturnTargetId: null !== (p = null == I ? void 0 : I.returnMessageId) && void 0 !== p ? p : null,
-                hasMoreBefore: null == I && T ? R.hasMoreBefore : A,
-                hasMoreAfter: null == I && v ? R.hasMoreAfter : C,
+                hasMoreBefore: null == I && v ? R.hasMoreBefore : A,
+                hasMoreAfter: null == I && T ? R.hasMoreAfter : C,
                 cached: y,
                 hasFetched: e.hasFetched,
                 error: !1

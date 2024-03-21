@@ -1,73 +1,73 @@
-function(t, e, l) {
+function(t, e, n) {
     "use strict";
-    l.r(e), l.d(e, {
+    n.r(e), n.d(e, {
         default: function() {
             return L
         }
-    }), l("222007");
-    var n = l("37983"),
-        r = l("884691"),
-        a = l("414456"),
-        s = l.n(a),
-        o = l("77078"),
-        i = l("244201"),
-        u = l("685665"),
-        d = l("181114"),
-        c = l("427459"),
-        f = l("954296"),
-        _ = l("49111"),
-        p = l("782340"),
-        S = l("921756"),
+    }), n("222007");
+    var l = n("37983"),
+        r = n("884691"),
+        a = n("414456"),
+        s = n.n(a),
+        o = n("77078"),
+        i = n("244201"),
+        u = n("685665"),
+        d = n("181114"),
+        c = n("427459"),
+        f = n("954296"),
+        _ = n("49111"),
+        p = n("782340"),
+        S = n("921756"),
         L = t => {
             let {
                 analyticsLocation: e,
-                analyticsSourceLocation: l,
+                analyticsSourceLocation: n,
                 guild: a,
                 buttonText: L,
                 targetBoostedGuildTier: C,
                 onClose: h = () => {},
-                closeLayer: y = () => {},
-                pauseAnimation: E = !1,
-                applicationId: m,
-                handleSubscribeModalClose: O,
-                withHighlight: A = !1,
-                ...T
+                closeLayer: T = () => {},
+                pauseAnimation: y = !1,
+                applicationId: E,
+                handleSubscribeModalClose: m,
+                withHighlight: O = !1,
+                ...A
             } = t, {
                 analyticsLocations: I
-            } = (0, u.default)(), g = (0, i.useAppContext)(), U = g === _.AppContext.POPOUT, [M, P] = r.useState(!1), w = null != C ? Math.max((0, c.getNumberOfAppliedBoostsNeededForTier)(a, C), 1) : 1, B = (0, c.generateBlockGuildSubscriptionPurchasesNode)(), v = async () => {
-                P(!0), await (0, f.addAppliedGuildBoosts)({
+            } = (0, u.default)(), g = (0, i.useAppContext)(), U = g === _.AppContext.POPOUT, [P, M] = r.useState(!1), w = null != C ? Math.max((0, c.getNumberOfAppliedBoostsNeededForTier)(a, C), 1) : 1, B = (0, c.generateBlockGuildSubscriptionPurchasesNode)(), v = async () => {
+                M(!0), await (0, f.addAppliedGuildBoosts)({
                     analyticsLocations: I,
                     analyticsLocation: e,
-                    analyticsSourceLocation: l,
+                    analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: w,
                     onClose: h,
-                    closeLayer: y,
+                    closeLayer: T,
                     inPopout: U,
-                    applicationId: m,
-                    handleSubscribeModalClose: O
-                }), P(!1)
+                    applicationId: E,
+                    handleSubscribeModalClose: m
+                }), M(!1)
             };
-            return null != B ? (0, n.jsx)(o.Tooltip, {
+            return null != B ? (0, l.jsx)(o.Tooltip, {
                 text: B,
                 "aria-label": !1,
-                children: t => (0, n.jsx)(d.default, {
+                children: t => (0, l.jsx)(d.default, {
                     ...t,
                     disabled: !0,
                     size: o.Button.Sizes.SMALL,
-                    pauseAnimation: E,
-                    ...T,
+                    pauseAnimation: y,
+                    ...A,
                     children: null != L ? L : p.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
                 })
-            }) : (0, n.jsx)(d.default, {
+            }) : (0, l.jsx)(d.default, {
                 size: o.Button.Sizes.SMALL,
-                ...T,
-                className: s(T.className, {
-                    [S.buttonHighlighted]: A
+                ...A,
+                className: s(A.className, {
+                    [S.buttonHighlighted]: O
                 }),
-                submitting: M,
+                submitting: P,
                 onClick: v,
-                pauseAnimation: E,
+                pauseAnimation: y,
                 children: null != L ? L : p.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
             })
         }

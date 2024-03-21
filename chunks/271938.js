@@ -21,8 +21,8 @@ function(e, t, n) {
         m = n("393414"),
         p = n("705873"),
         S = n("599110"),
-        v = n("831588"),
-        T = n("286235"),
+        T = n("831588"),
+        v = n("286235"),
         I = n("72177"),
         A = n("455079"),
         C = n("49111"),
@@ -80,7 +80,7 @@ function(e, t, n) {
         let {
             withGuildExperiments: t
         } = e, n = {}, i = S.default.getSuperPropertiesBase64();
-        null != i && (n["X-Super-Properties"] = i), null != w && (n["X-Fingerprint"] = w), $ = d.default.get({
+        null != i && (n["X-Super-Properties"] = i), null != w && (n["X-Fingerprint"] = w), $ = d.HTTP.get({
             url: C.Endpoints.EXPERIMENTS,
             query: {
                 with_guild_experiments: t
@@ -135,7 +135,7 @@ function(e, t, n) {
         en("handleLogout called."), eo(), er(), !(null == e ? void 0 : e.isSwitchingAccount) && ei(), u.default.PersistedStore.clearAll({
             omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
             type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-        }), A.default.clearAll(), h.clear(), T.default.clearUser(), c.default.remove(P), L = null, G = (null == e ? void 0 : e.isSwitchingAccount) ? C.LoginStates.LOGGING_IN : C.LoginStates.NONE, F = C.RegistrationStates.NONE, H = "", z = "", K = null, Y = !1, q = !1, X = !1, Q = {}, Z = {}
+        }), A.default.clearAll(), h.clear(), v.default.clearUser(), c.default.remove(P), L = null, G = (null == e ? void 0 : e.isSwitchingAccount) ? C.LoginStates.LOGGING_IN : C.LoginStates.NONE, F = C.RegistrationStates.NONE, H = "", z = "", K = null, Y = !1, q = !1, X = !1, Q = {}, Z = {}
     }
     class ed extends u.default.Store {
         initialize() {
@@ -172,10 +172,10 @@ function(e, t, n) {
             return U
         }
         getToken() {
-            return (0, v.getToken)()
+            return (0, T.getToken)()
         }
         isAuthenticated() {
-            return (0, v.isAuthenticated)()
+            return (0, T.isAuthenticated)()
         }
         getFingerprint() {
             return w
@@ -258,7 +258,7 @@ function(e, t, n) {
                 analyticsToken: r,
                 auth: a
             } = e;
-            en("handleConnectionOpen called"), T.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), b = i, U = s, V = r, L = n.id, M = n.email, void 0 !== a && (B = a.authenticator_types), c.default.set(D, n.email), c.default.set(P, n.id)
+            en("handleConnectionOpen called"), v.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), b = i, U = s, V = r, L = n.id, M = n.email, void 0 !== a && (B = a.authenticator_types), c.default.set(D, n.email), c.default.set(P, n.id)
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;
@@ -268,7 +268,7 @@ function(e, t, n) {
                 analyticsToken: s,
                 token: r
             } = e;
-            T.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), b = i, V = s, ea(r), er(), L = n.id, c.default.set(P, n.id)
+            v.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), b = i, V = s, ea(r), er(), L = n.id, c.default.set(P, n.id)
         },
         CONNECTION_CLOSED: function(e) {
             let {

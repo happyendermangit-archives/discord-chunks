@@ -9,7 +9,7 @@ function(e, _, E) {
         o = E("49111");
 
     function n(e, _) {
-        t.default.post({
+        t.HTTP.post({
             url: o.Endpoints.VOICE_CHANNEL_NOTIFICATIONS(e),
             query: {
                 first_user: _

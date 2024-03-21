@@ -25,8 +25,8 @@ function(e, t, n) {
         m = n("42203"),
         p = n("305961"),
         S = n("569983"),
-        v = n("48703"),
-        T = n("377253"),
+        T = n("48703"),
+        v = n("377253"),
         I = n("27618"),
         A = n("18494"),
         C = n("599110"),
@@ -67,7 +67,7 @@ function(e, t, n) {
             k = null;
         if (null != D && null != P) {
             var V, G, F;
-            let e = T.default.getMessage(P, D),
+            let e = v.default.getMessage(P, D),
                 t = m.default.getBasicChannel(P);
             M = null !== (F = null == t ? void 0 : t.guild_id) && void 0 !== F ? F : null;
             let n = p.default.getGuild(M),
@@ -81,7 +81,7 @@ function(e, t, n) {
             let e = m.default.getChannel(P),
                 t = p.default.getGuild(null == e ? void 0 : e.getGuildId());
             null != e && null != t && t.hasFeature(y.GuildFeatures.DISCOVERABLE) && C.default.track(y.AnalyticEvents.URL_CLICKED, {
-                url_domain: (0, v.getHostname)(L),
+                url_domain: (0, T.getHostname)(L),
                 guild_id: t.id,
                 channel_id: e.id
             })
@@ -123,7 +123,7 @@ function(e, t, n) {
             return
         }
         let H = "function" == typeof I ? I() : I,
-            Y = (0, v.getProtocol)(L),
+            Y = (0, T.getProtocol)(L),
             K = !("http:" === Y || "https:" === Y);
         if (!K && (H || S.default.isTrustedDomain(L)) || K && S.default.isTrustedProtocol(L)) {
             null == t || null != O && O ? x() : b && _.default.trackAnnouncementMessageLinkClicked({

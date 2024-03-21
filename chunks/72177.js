@@ -24,12 +24,12 @@ function(e, t, n) {
         null != i && null != s && (window.open("".concat(i, "&key=").concat(s)), f.default.focus(null, !0))
     }
 
-    function v() {
+    function T() {
         s = null, p.stop(), m = !1, l.default.set(g, m)
     }
 
-    function T() {
-        v()
+    function v() {
+        T()
     }
     class I extends o.default.Store {
         initialize() {
@@ -63,13 +63,13 @@ function(e, t, n) {
             if (null == t || null == n) return !1;
             m = !0, p.start(i, () => (0, c.handoffEnd)())
         },
-        BROWSER_HANDOFF_UNAVAILABLE: v,
+        BROWSER_HANDOFF_UNAVAILABLE: T,
         BROWSER_HANDOFF_SET_USER: function(e) {
             r = new _.default(e.user)
         },
-        LOGIN: T,
-        LOGIN_SUCCESS: T,
-        LOGOUT: T,
-        REGISTER: T
+        LOGIN: v,
+        LOGIN_SUCCESS: v,
+        LOGOUT: v,
+        REGISTER: v
     })
 }

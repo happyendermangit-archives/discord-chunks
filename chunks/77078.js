@@ -101,13 +101,13 @@ function(e, t, n) {
             return S.DateInput
         },
         Dialog: function() {
-            return v.Dialog
+            return T.Dialog
         },
         AnimatedDots: function() {
-            return T.AnimatedDots
+            return v.AnimatedDots
         },
         Dots: function() {
-            return T.Dots
+            return v.Dots
         },
         DnDKeyboardHelpBar: function() {
             return I.DnDKeyboardHelpBar
@@ -455,16 +455,16 @@ function(e, t, n) {
             return eS.useRadioItem
         },
         NameWithRole: function() {
-            return ev.NameWithRole
+            return eT.NameWithRole
         },
         NameWithRoleAnchor: function() {
-            return ev.NameWithRoleAnchor
+            return eT.NameWithRoleAnchor
         },
         RoleDot: function() {
-            return eT.RoleDot
+            return ev.RoleDot
         },
         RoleCircle: function() {
-            return eT.RoleCircle
+            return ev.RoleCircle
         },
         ListComputer: function() {
             return eI.ListComputer
@@ -727,8 +727,8 @@ function(e, t, n) {
         m = n("960486"),
         p = n("923237"),
         S = n("322756"),
-        v = n("130969"),
-        T = n("709749"),
+        T = n("130969"),
+        v = n("709749"),
         I = n("990749"),
         A = n("187641"),
         C = n("57406"),
@@ -781,8 +781,8 @@ function(e, t, n) {
         em = n("276335"),
         ep = n("694982"),
         eS = n("105265"),
-        ev = n("552241"),
-        eT = n("236532"),
+        eT = n("552241"),
+        ev = n("236532"),
         eI = n("462977"),
         eA = n("446662"),
         eC = n("858850"),

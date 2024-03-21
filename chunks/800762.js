@@ -21,8 +21,8 @@ function(e, t, n) {
         m = new Map,
         p = {},
         S = {},
-        v = {},
-        T = {};
+        T = {},
+        v = {};
 
     function I(e, t) {
         return "".concat(e, ":").concat(t)
@@ -56,7 +56,7 @@ function(e, t, n) {
         if (null != l) {
             ;
             let n;
-            delete o[t], null != l.channelId && (delete A(p, l.channelId)[t], delete A(S, l.channelId)[t]), null != l.sessionId && delete A(v, t)[l.sessionId];
+            delete o[t], null != l.channelId && (delete A(p, l.channelId)[t], delete A(S, l.channelId)[t]), null != l.sessionId && delete A(T, t)[l.sessionId];
             i = null != e ? e : c.ME, s = t, !(n = y(i)).has(s) || ((n = new Set(n)).delete(s), 0 === n.size ? m.delete(i) : m.set(i, n))
         }
         if (null != u) {
@@ -66,7 +66,7 @@ function(e, t, n) {
                 A(S, u.channelId)[t] = u;
                 r = null != e ? e : c.ME, a = t, (n = y(r)).has(a) || ((n = new Set(n)).add(a), m.set(r, n))
             }
-            null != u.sessionId && (A(v, t)[u.sessionId] = u)
+            null != u.sessionId && (A(T, t)[u.sessionId] = u)
         }
         return [!0, u, l]
     }
@@ -126,11 +126,11 @@ function(e, t, n) {
             return null === (t = A(p, e)) || void 0 === t ? void 0 : t[n]
         }
         getVoiceStateForUser(e) {
-            return Object.values(A(v, e))[0]
+            return Object.values(A(T, e))[0]
         }
         getVoiceStateForSession(e, t) {
             var n;
-            return null != t ? null === (n = A(v, e)) || void 0 === n ? void 0 : n[t] : null
+            return null != t ? null === (n = A(T, e)) || void 0 === n ? void 0 : n[t] : null
         }
         getUserVoiceChannelId(e, t) {
             var n;
@@ -146,7 +146,7 @@ function(e, t, n) {
         }
         isCurrentClientInVoiceChannel() {
             var e;
-            return null != s && (null === (e = v[i]) || void 0 === e ? void 0 : e[s]) != null
+            return null != s && (null === (e = T[i]) || void 0 === e ? void 0 : e[s]) != null
         }
         isInChannel(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i;
@@ -159,8 +159,8 @@ function(e, t, n) {
         }
         getVoicePlatformForChannel(e, t) {
             var n, r;
-            let a = null != s && (null === (r = v[i]) || void 0 === r ? void 0 : null === (n = r[s]) || void 0 === n ? void 0 : n.channelId);
-            return t === i && e === a ? _.VoicePlatforms.DESKTOP : T[I(t, e)]
+            let a = null != s && (null === (r = T[i]) || void 0 === r ? void 0 : null === (n = r[s]) || void 0 === n ? void 0 : n.channelId);
+            return t === i && e === a ? _.VoicePlatforms.DESKTOP : v[I(t, e)]
         }
         get userHasBeenMovedVersion() {
             return f
@@ -173,10 +173,10 @@ function(e, t, n) {
                 user: t,
                 sessionId: n
             } = e, r = null != i && i !== t.id;
-            return r && (h = {}, p = {}, v = {}, S = {}, m.clear()), i = t.id, s = n, r
+            return r && (h = {}, p = {}, T = {}, S = {}, m.clear()), i = t.id, s = n, r
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function() {
-            h = {}, p = {}, v = {}, S = {}, m.clear()
+            h = {}, p = {}, T = {}, S = {}, m.clear()
         },
         OVERLAY_INITIALIZE: function(e) {
             let {
@@ -184,7 +184,7 @@ function(e, t, n) {
                 user: n,
                 sessionId: r
             } = e;
-            for (let [e, n] of(h = {}, p = {}, v = {}, S = {}, Object.entries(t)))
+            for (let [e, n] of(h = {}, p = {}, T = {}, S = {}, Object.entries(t)))
                 for (let [t, i] of Object.entries(n)) N(e, t, () => new u.default(i));
             i = n.id, s = r
         },
@@ -236,7 +236,7 @@ function(e, t, n) {
                 channelId: n,
                 platform: i
             } = e;
-            T[I(t, n)] = i
+            v[I(t, n)] = i
         }
     })
 }

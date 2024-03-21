@@ -22,11 +22,11 @@ function(e, t, n) {
         m = n("487269"),
         p = n("25932"),
         S = n("49111"),
-        v = n("724210"),
-        T = n("782340");
+        T = n("724210"),
+        v = n("782340");
 
     function I(e, t) {
-        return s.default.patch({
+        return s.HTTP.patch({
             url: S.Endpoints.CHANNEL(e.id),
             body: t
         }).then(t => (r.default.dispatch({
@@ -79,17 +79,17 @@ function(e, t, n) {
             } catch (e) {
                 var s, r;
                 throw (null === (s = e.body) || void 0 === s ? void 0 : s.code) === S.AbortCodes.TOO_MANY_THREADS ? a.default.show({
-                    title: i ? T.default.Messages.CANNOT_UNARCHIVE_FORUM_POST : T.default.Messages.CANNOT_UNARCHIVE_THREAD,
-                    body: i ? T.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : T.default.Messages.TOO_MANY_THREADS_MESSAGE
+                    title: i ? v.default.Messages.CANNOT_UNARCHIVE_FORUM_POST : v.default.Messages.CANNOT_UNARCHIVE_THREAD,
+                    body: i ? v.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : v.default.Messages.TOO_MANY_THREADS_MESSAGE
                 }) : (null === (r = e.body) || void 0 === r ? void 0 : r.code) === S.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS ? a.default.show({
-                    title: T.default.Messages.CANNOT_UNARCHIVE_THREAD,
-                    body: T.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
+                    title: v.default.Messages.CANNOT_UNARCHIVE_THREAD,
+                    body: v.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
                 }) : 429 === e.status ? a.default.show({
-                    title: i ? T.default.Messages.CANNOT_UNARCHIVE_FORUM_POST : T.default.Messages.CANNOT_UNARCHIVE_THREAD,
-                    body: T.default.Messages.RATE_LIMITED
+                    title: i ? v.default.Messages.CANNOT_UNARCHIVE_FORUM_POST : v.default.Messages.CANNOT_UNARCHIVE_THREAD,
+                    body: v.default.Messages.RATE_LIMITED
                 }) : a.default.show({
-                    title: T.default.Messages.ERROR,
-                    body: T.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+                    title: v.default.Messages.ERROR,
+                    body: v.default.Messages.ERROR_OCCURRED_TRY_AGAIN
                 }), e
             }
         },
@@ -105,7 +105,7 @@ function(e, t, n) {
         async joinThread(e, t) {
             e.isForumPost() && A(e, !0);
             try {
-                return await s.default.post({
+                return await s.HTTP.post({
                     url: S.Endpoints.THREAD_MEMBER(e.id),
                     query: {
                         location: t
@@ -116,19 +116,19 @@ function(e, t, n) {
                 if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === S.AbortCodes.TOO_MANY_THREAD_MEMBERS) {
                     let t = e.isForumPost();
                     a.default.show({
-                        title: t ? T.default.Messages.CANNOT_JOIN_FORUM_POST : T.default.Messages.CANNOT_JOIN_THREAD,
-                        body: t ? T.default.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : T.default.Messages.TOO_MANY_MEMBERS_MESSAGE
+                        title: t ? v.default.Messages.CANNOT_JOIN_FORUM_POST : v.default.Messages.CANNOT_JOIN_THREAD,
+                        body: t ? v.default.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : v.default.Messages.TOO_MANY_MEMBERS_MESSAGE
                     })
                 } else a.default.show({
-                    title: T.default.Messages.ERROR,
-                    body: T.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+                    title: v.default.Messages.ERROR,
+                    body: v.default.Messages.ERROR_OCCURRED_TRY_AGAIN
                 });
                 e.isForumPost() && A(e, !1)
             }
         },
         async addMember(e, t, n) {
             try {
-                return await s.default.post({
+                return await s.HTTP.post({
                     url: S.Endpoints.THREAD_MEMBER(e.id, t),
                     query: {
                         location: n
@@ -139,39 +139,39 @@ function(e, t, n) {
                 if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === S.AbortCodes.TOO_MANY_THREAD_MEMBERS) {
                     let t = e.isForumPost();
                     a.default.show({
-                        title: t ? T.default.Messages.CANNOT_ADD_USER_TO_FORUM_POST : T.default.Messages.CANNOT_ADD_USER_TO_THREAD,
-                        body: t ? T.default.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : T.default.Messages.TOO_MANY_MEMBERS_MESSAGE
+                        title: t ? v.default.Messages.CANNOT_ADD_USER_TO_FORUM_POST : v.default.Messages.CANNOT_ADD_USER_TO_THREAD,
+                        body: t ? v.default.Messages.TOO_MANY_MEMBERS_MESSAGE_FORUM_POST : v.default.Messages.TOO_MANY_MEMBERS_MESSAGE
                     })
                 } else a.default.show({
-                    title: T.default.Messages.ERROR,
-                    body: T.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+                    title: v.default.Messages.ERROR,
+                    body: v.default.Messages.ERROR_OCCURRED_TRY_AGAIN
                 })
             }
         },
-        leaveThread: (e, t) => (e.isForumPost() && A(e, !1), s.default.delete({
+        leaveThread: (e, t) => (e.isForumPost() && A(e, !1), s.HTTP.del({
             url: S.Endpoints.THREAD_MEMBER(e.id),
             query: {
                 location: t
             }
         })),
-        removeMember: (e, t, n) => s.default.delete({
+        removeMember: (e, t, n) => s.HTTP.del({
             url: S.Endpoints.THREAD_MEMBER(e.id, t),
             query: {
                 location: n
             }
         }),
-        setAutoArchiveDuration: (e, t) => s.default.patch({
+        setAutoArchiveDuration: (e, t) => s.HTTP.patch({
             url: S.Endpoints.CHANNEL(e.id),
             body: {
                 auto_archive_duration: t
             }
         }),
         pin(e) {
-            let t = e.flags | v.ChannelFlags.PINNED;
+            let t = e.flags | T.ChannelFlags.PINNED;
             this.updateFlags(e, t, e.isArchivedThread())
         },
         unpin(e) {
-            let t = e.flags & ~v.ChannelFlags.PINNED;
+            let t = e.flags & ~T.ChannelFlags.PINNED;
             this.updateFlags(e, t)
         },
         async updateFlags(e, t) {
@@ -187,7 +187,7 @@ function(e, t, n) {
             };
             n && (i.archived = !1);
             try {
-                await s.default.patch({
+                await s.HTTP.patch({
                     url: S.Endpoints.CHANNEL(e.id),
                     body: i
                 })
@@ -200,10 +200,10 @@ function(e, t, n) {
         },
         async replacePin(e, t) {
             let n = e.merge({
-                    flags: e.flags & ~v.ChannelFlags.PINNED
+                    flags: e.flags & ~T.ChannelFlags.PINNED
                 }),
                 i = t.merge({
-                    flags: t.flags | v.ChannelFlags.PINNED
+                    flags: t.flags | T.ChannelFlags.PINNED
                 });
             r.default.dispatch({
                 type: "THREAD_UPDATE",
@@ -213,10 +213,10 @@ function(e, t, n) {
                 channel: i
             }), await this.unarchiveThreadIfNecessary(e.id), await this.unarchiveThreadIfNecessary(t.id);
             try {
-                await s.default.patch({
+                await s.HTTP.patch({
                     url: S.Endpoints.CHANNEL(e.id),
                     body: {
-                        flags: e.flags & ~v.ChannelFlags.PINNED
+                        flags: e.flags & ~T.ChannelFlags.PINNED
                     }
                 })
             } catch {
@@ -230,10 +230,10 @@ function(e, t, n) {
                 return
             }
             try {
-                await s.default.patch({
+                await s.HTTP.patch({
                     url: S.Endpoints.CHANNEL(t.id),
                     body: {
-                        flags: t.flags | v.ChannelFlags.PINNED
+                        flags: t.flags | T.ChannelFlags.PINNED
                     }
                 })
             } catch {
@@ -259,7 +259,7 @@ function(e, t, n) {
             })
         },
         async setNotificationSettings(e, t) {
-            return (0, m.trackThreadNotificationSettingsUpdated)(e, t), !g.default.hasJoined(e.id) && await this.joinThread(e, "Change Notification Settings"), s.default.patch({
+            return (0, m.trackThreadNotificationSettingsUpdated)(e, t), !g.default.hasJoined(e.id) && await this.joinThread(e, "Change Notification Settings"), s.HTTP.patch({
                 url: S.Endpoints.THREAD_MEMBER_SETTINGS(e.id),
                 body: t
             })
@@ -270,7 +270,7 @@ function(e, t, n) {
                 channelId: t,
                 sortOrder: n,
                 tagFilter: a
-            }), s.default.get({
+            }), s.HTTP.get({
                 url: S.Endpoints.THREAD_SEARCH(t),
                 query: {
                     archived: !0,
@@ -329,7 +329,7 @@ function(e, t, n) {
                         first_messages: d,
                         most_recent_messages: c
                     }
-                } = await s.default.get({
+                } = await s.HTTP.get({
                     url: S.Endpoints.THREAD_SEARCH(t),
                     query: {
                         name: n,

@@ -15,7 +15,7 @@ function(e, t, n) {
                     type: "INTEGRATION_QUERY",
                     integration: e,
                     query: t
-                }), i.default.get({
+                }), i.HTTP.get({
                     url: s.Endpoints.INTEGRATION_SEARCH("tenor"),
                     query: {
                         q: t

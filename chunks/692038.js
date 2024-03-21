@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         createMessageRecord: function() {
-            return v
+            return T
         },
         updateServerMessage: function() {
-            return T
+            return v
         },
         updateMessageRecord: function() {
             return I
@@ -39,13 +39,13 @@ function(e, t, n) {
         username: "???"
     });
 
-    function v(e) {
-        var t, n, i, s, o, E, m, v, T;
+    function T(e) {
+        var t, n, i, s, o, E, m, T, v;
         let {
             reactions: I,
             interactionData: R
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, O = null !== (s = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== s ? s : [], D = null !== (o = e.mention_roles) && void 0 !== o ? o : [], P = null !== (E = e.mention_channels) && void 0 !== E ? E : [], L = e.message_reference, M = new Date(e.timestamp), b = e.type === p.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
-        let U = null == (v = e).author ? S : null != v.webhook_id ? new d.default(v.author) : null !== (T = f.default.getUser(v.author.id)) && void 0 !== T ? T : new d.default(v.author),
+        let U = null == (T = e).author ? S : null != T.webhook_id ? new d.default(T.author) : null !== (v = f.default.getUser(T.author.id)) && void 0 !== v ? v : new d.default(T.author),
             w = null == e ? void 0 : e.gift_info,
             k = null != e.interaction ? l.default.createFromServer(e.interaction) : null,
             V = e.type === p.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
@@ -88,7 +88,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e, t) {
+    function v(e, t) {
         return null != t.edited_timestamp ? {
             ...t,
             reactions: e.reactions,
@@ -100,7 +100,7 @@ function(e, t, n) {
     }
 
     function I(e, t) {
-        if (null != t.edited_timestamp) return v(t, {
+        if (null != t.edited_timestamp) return T(t, {
             reactions: e.reactions,
             interactionData: e.interactionData
         });

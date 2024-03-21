@@ -23,8 +23,8 @@ function(e, t, n) {
         m = n("766274"),
         p = n("42203"),
         S = n("26989"),
-        v = n("778588"),
-        T = n("260320"),
+        T = n("778588"),
+        v = n("260320"),
         I = n("697218"),
         A = n("800762"),
         C = n("10514"),
@@ -156,7 +156,7 @@ function(e, t, n) {
     }
 
     function H() {
-        D.socket.isSessionEstablished() && T.default.getPendingLobbies().forEach(e => {
+        D.socket.isSessionEstablished() && v.default.getPendingLobbies().forEach(e => {
             D.socket.lobbyConnect(e.id, e.secret)
         })
     }
@@ -926,9 +926,9 @@ function(e, t, n) {
             entitlement: e
         })
     }), w(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        v.default.hasLayers() && (n("850068").fetchPaymentSources(), l.fetchSubscriptionPlansBySKUs(C.default.getFetchedSKUIDs()))
+        T.default.hasLayers() && (n("850068").fetchPaymentSources(), l.fetchSubscriptionPlansBySKUs(C.default.getFetchedSKUIDs()))
     }), w(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        u.fetchCurrentUser(), v.default.hasLayers() && n("850068").fetchSubscriptions()
+        u.fetchCurrentUser(), T.default.hasLayers() && n("850068").fetchSubscriptions()
     }), w(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], e => {
         G({
             type: "GUILD_BOOST_SLOT_CREATE",

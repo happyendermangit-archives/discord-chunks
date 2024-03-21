@@ -22,13 +22,13 @@ function(t, e, n) {
         u = n("599417"),
         l = n("49111");
     let a = async (t, e) => {
-        let n = await i.default.get({
+        let n = await i.HTTP.get({
             url: l.Endpoints.APPLICATION_SUBSCRIPTION_GROUP_LISTING(t, e)
         });
         return n.body
     }, o = async function(t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = await i.default.get({
+            n = await i.HTTP.get({
                 url: l.Endpoints.GUILD_ENTITLEMENTS(t),
                 query: {
                     with_sku: !0,
@@ -38,7 +38,7 @@ function(t, e, n) {
             });
         return n.body
     }, s = async t => {
-        let e = await i.default.get({
+        let e = await i.HTTP.get({
             url: l.Endpoints.SUBSCRIPTION_PLAN_GROUP_LISTING(t)
         });
         return e.body
@@ -48,7 +48,7 @@ function(t, e, n) {
         return r.default.dispatch({
             type: "APPLICATION_FETCH",
             applicationId: t
-        }), i.default.get({
+        }), i.HTTP.get({
             url: l.Endpoints.APPLICATION_PUBLIC(t)
         }).then(t => (r.default.dispatch({
             type: "APPLICATION_FETCH_SUCCESS",
@@ -59,7 +59,7 @@ function(t, e, n) {
         }), Promise.reject(new u.default(e))))
     }
     async function d(t) {
-        let e = await i.default.get({
+        let e = await i.HTTP.get({
             url: l.Endpoints.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
             query: {
                 application_id: t

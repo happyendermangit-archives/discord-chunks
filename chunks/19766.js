@@ -29,8 +29,8 @@ function(e, t, n) {
         m = n("26989"),
         p = n("305961"),
         S = n("824563"),
-        v = n("101125"),
-        T = n("697218"),
+        T = n("101125"),
+        v = n("697218"),
         I = n("49111"),
         A = n("782340");
     let C = "everyone",
@@ -65,10 +65,10 @@ function(e, t, n) {
     function R(e, t, n) {
         let i = n === E.default.getId(),
             s = S.default.isMobileOnline(n),
-            r = i ? v.default.getStatus() : S.default.getStatus(n, e),
-            a = i ? v.default.getActivities() : S.default.getActivities(n, e),
+            r = i ? T.default.getStatus() : S.default.getStatus(n, e),
+            a = i ? T.default.getActivities() : S.default.getActivities(n, e),
             o = f.default.getStreamForUser(n, e),
-            l = T.default.getUser(n);
+            l = v.default.getUser(n);
         return null == l ? null : {
             type: "MEMBER",
             ...m.default.getMember(e, n),
@@ -215,7 +215,7 @@ function(e, t, n) {
     }
     class w extends d.default.Store {
         initialize() {
-            this.waitFor(T.default, p.default, h.default, m.default, S.default, v.default, E.default, g.default, f.default), this.syncWith([v.default], U), this.syncWith([f.default], b)
+            this.waitFor(v.default, p.default, h.default, m.default, S.default, T.default, E.default, g.default, f.default), this.syncWith([T.default], U), this.syncWith([f.default], b)
         }
         getProps(e, t) {
             let n = P.get(e, O(t));

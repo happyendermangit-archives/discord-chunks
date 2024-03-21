@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("26989"),
         p = n("305961"),
         S = n("957255"),
-        v = n("27618"),
-        T = n("102985"),
+        T = n("27618"),
+        v = n("102985"),
         I = n("697218"),
         A = n("25292"),
         C = n("402671"),
@@ -231,7 +231,7 @@ function(e, t, n) {
                         content: e[0]
                     };
                     let r = y.default.getUserTag(s, {
-                        identifiable: i && T.default.enabled ? "never" : "always"
+                        identifiable: i && v.default.enabled ? "never" : "always"
                     });
                     if (!i) return {
                         content: "@".concat(r)
@@ -266,7 +266,7 @@ function(e, t, n) {
                 parse(e) {
                     let t = h.default.getChannel(e[1]);
                     return {
-                        content: null == t ? e[0] : (0, o.computeChannelName)(t, I.default, v.default, !0, !0)
+                        content: null == t ? e[0] : (0, o.computeChannelName)(t, I.default, T.default, !0, !0)
                     }
                 }
             },
@@ -414,20 +414,20 @@ function(e, t, n) {
             _ = l.default.getDisambiguatedEmojiContext(n),
             E = _.getEscapedCustomEmoticonNames(),
             h = _.getCustomEmoji(),
-            v = _.getCustomEmoticonRegex(),
-            T = {
+            T = _.getCustomEmoticonRegex(),
+            v = {
                 inline: !0,
                 mentionableRoles: o,
                 guild: i,
                 users: a,
                 channels: u.concat(d).concat(c),
                 emojiContext: _,
-                customEmoticonsRegex: v,
+                customEmoticonsRegex: T,
                 customEmoji: h,
                 textExclusions: E,
                 disableErrorGuards: !0
             };
-        return T
+        return v
     }
 
     function j(e) {

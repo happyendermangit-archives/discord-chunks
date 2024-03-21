@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("256941"),
         p = n("505985"),
         S = n("915639"),
-        v = n("374363"),
-        T = n("26989"),
+        T = n("374363"),
+        v = n("26989"),
         I = n("778689"),
         A = n("305961"),
         C = n("677099"),
@@ -56,7 +56,7 @@ function(e, t, n) {
         }
         isUsable(e) {
             if (0 === e.roles.length) return !0;
-            let t = T.default.getMember(this.id, this._userId);
+            let t = v.default.getMember(this.id, this._userId);
             if (null == t) return !1;
             let n = t.roles.some(t => e.roles.includes(t));
             return !!(n || (0, g.isPurchasableRoleSubscriptionEmoji)(e)) || !1
@@ -170,7 +170,7 @@ function(e, t, n) {
         rebuildFavoriteEmojisWithoutFetchingLatest() {
             if (this.ensureDisambiguated(), null == this.favorites || null == this.favoriteNamesAndIds) {
                 var e, t;
-                this.favoriteNamesAndIds = new Set, this.favorites = (null !== (t = null === (e = v.default.frecencyWithoutFetchingLatest.favoriteEmojis) || void 0 === e ? void 0 : e.emojis) && void 0 !== t ? t : []).map(e => {
+                this.favoriteNamesAndIds = new Set, this.favorites = (null !== (t = null === (e = T.default.frecencyWithoutFetchingLatest.favoriteEmojis) || void 0 === e ? void 0 : e.emojis) && void 0 !== t ? t : []).map(e => {
                     var t;
                     null === (t = this.favoriteNamesAndIds) || void 0 === t || t.add(e);
                     let n = this.getById(e);
@@ -312,15 +312,15 @@ function(e, t, n) {
 
     function ea() {
         var e, t, n, i;
-        let r = v.default.settings,
+        let r = T.default.settings,
             a = null === (t = r.textAndImages) || void 0 === t ? void 0 : null === (e = t.diversitySurrogate) || void 0 === e ? void 0 : e.value;
         null != a && b.default.setDefaultDiversitySurrogate(a), ee.reset();
-        let o = v.default.frecencyWithoutFetchingLatest,
+        let o = T.default.frecencyWithoutFetchingLatest,
             l = null !== (i = null === (n = o.emojiFrecency) || void 0 === n ? void 0 : n.emojis) && void 0 !== i ? i : {};
         et.overwriteHistory(s.mapValues(l, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
-        })), B.pendingUsages), s.isEmpty(l) && s.isEmpty(B.pendingUsages) && v.default.hasLoaded(F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (et.track("thumbsup"), et.track("thumbsup"), et.track("eyes"), et.track("eyes"), et.track("laughing"), et.track("laughing"), et.track("watermelon"), et.track("fork_and_knife"), et.track("yum"), et.track("weary"), et.track("tired_face"), et.track("poop"), et.track("100"))
+        })), B.pendingUsages), s.isEmpty(l) && s.isEmpty(B.pendingUsages) && T.default.hasLoaded(F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (et.track("thumbsup"), et.track("thumbsup"), et.track("eyes"), et.track("eyes"), et.track("laughing"), et.track("laughing"), et.track("watermelon"), et.track("fork_and_knife"), et.track("yum"), et.track("weary"), et.track("tired_face"), et.track("poop"), et.track("100"))
     }
 
     function eo(e) {
@@ -350,7 +350,7 @@ function(e, t, n) {
     }
     class eu extends l.default.PersistedStore {
         initialize(e) {
-            this.waitFor(c.default, I.default, T.default, A.default, S.default, m.default, w.default, y.default), null != e && (B = e), this.syncWith([v.default], ea)
+            this.waitFor(c.default, I.default, v.default, A.default, S.default, m.default, w.default, y.default), null != e && (B = e), this.syncWith([T.default], ea)
         }
         getState() {
             return B

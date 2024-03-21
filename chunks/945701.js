@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ReplyInput: function() {
-            return _
+            return T
         },
         ReactionPickerButton: function() {
             return I
@@ -56,7 +56,7 @@ function(e, t, n) {
                                 variant: "text-xs/bold",
                                 className: g.replyHeader,
                                 children: null != l ? l : y.default.Messages.CHAT
-                            }), (0, i.jsx)(_, {
+                            }), (0, i.jsx)(T, {
                                 onEnter: e => {
                                     a(e), c()
                                 },
@@ -68,7 +68,7 @@ function(e, t, n) {
                 children: () => d
             })
         }),
-        _ = e => {
+        T = e => {
             let {
                 placeholder: t,
                 onEnter: n,
@@ -109,7 +109,7 @@ function(e, t, n) {
                 disabled: !1
             })
         },
-        T = (e, t) => {
+        _ = (e, t) => {
             l.useEffect(() => {
                 let n = t => {
                         "Escape" === t.key && e()
@@ -128,7 +128,7 @@ function(e, t, n) {
                 onSelectEmoji: t,
                 onClick: n
             } = e, a = (0, u.default)(), [s, r] = l.useState(!1), d = l.useRef(null);
-            return T(() => r(!1), d), (0, i.jsx)(o.Popout, {
+            return _(() => r(!1), d), (0, i.jsx)(o.Popout, {
                 align: "right",
                 position: "top",
                 shouldShow: s,
@@ -171,7 +171,7 @@ function(e, t, n) {
             showReact: u = !0,
             showReply: d = !0
         } = e, [c, f] = l.useState(!1), p = l.useRef(null);
-        return T(() => f(!1), p), (0, i.jsx)(i.Fragment, {
+        return _(() => f(!1), p), (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)("div", {
                 className: g.reactions,
                 children: [u && (0, i.jsx)(I, {

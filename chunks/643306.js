@@ -25,8 +25,8 @@ function(e, t, n) {
         g = n("981601"),
         S = n("42203"),
         C = n("26989"),
-        _ = n("305961"),
-        T = n("697218"),
+        T = n("305961"),
+        _ = n("697218"),
         I = n("145131"),
         v = n("666897"),
         N = n("826684"),
@@ -86,21 +86,21 @@ function(e, t, n) {
                 },
                 renderPopout: e => {
                     let t = S.default.getChannel(s),
-                        a = _.default.getGuild(k),
+                        a = T.default.getGuild(k),
                         o = C.default.getMembers(a.id),
-                        u = _.default.getRole(k, null != l ? l : a.getEveryoneRoleId()),
+                        u = T.default.getRole(k, null != l ? l : a.getEveryoneRoleId()),
                         p = r(o).filter(e => {
                             if ("@everyone" === x || e.roles.includes(l)) {
-                                let t = T.default.getUser(e.userId);
+                                let t = _.default.getUser(e.userId);
                                 return null != t
                             }
                             return !1
                         }).sortBy(e => {
                             var t;
-                            let n = T.default.getUser(e.userId);
+                            let n = _.default.getUser(e.userId);
                             return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
                         }).map(e => {
-                            let l = T.default.getUser(e.userId);
+                            let l = _.default.getUser(e.userId);
                             return (0, i.jsx)(d.Popout, {
                                 preload: () => (0, y.default)(l.id, l.getAvatarURL(t.guild_id, 80), {
                                     guildId: t.guild_id,

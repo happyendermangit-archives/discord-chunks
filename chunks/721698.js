@@ -49,7 +49,7 @@ function(e, t, n) {
                 t(void 0, u)
             }), !0);
         try {
-            let t = await l.default.get({
+            let t = await l.HTTP.get({
                     url: p.Endpoints.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
                     backoff: o,
                     retries: 10,
@@ -83,7 +83,7 @@ function(e, t, n) {
                     applicationId: e
                 });
                 try {
-                    let t = await l.default.get({
+                    let t = await l.HTTP.get({
                         url: p.Endpoints.APPLICATION_DIRECTORY_APPLICATION(e),
                         query: {
                             locale: s.default.locale
@@ -107,7 +107,7 @@ function(e, t, n) {
         let e = Date.now(),
             t = o.default.getLastFetchTimeMs();
         if (null != t && t + 6e5 > e) return;
-        let n = await l.default.get({
+        let n = await l.HTTP.get({
             url: p.Endpoints.APPLICATION_DIRECTORY_CATEGORIES,
             query: {
                 locale: s.default.locale
@@ -144,7 +144,7 @@ function(e, t, n) {
                     page: o
                 });
                 try {
-                    let e = await l.default.get({
+                    let e = await l.HTTP.get({
                         url: p.Endpoints.APPLICATION_DIRECTORY_SIMILAR(n),
                         query: {
                             guild_id: i,
@@ -205,7 +205,7 @@ function(e, t, n) {
                     categoryId: c
                 });
                 try {
-                    let e = await l.default.get({
+                    let e = await l.HTTP.get({
                         url: p.Endpoints.APPLICATION_DIRECTORY_SEARCH,
                         query: {
                             query: n,
@@ -257,7 +257,7 @@ function(e, t, n) {
                     includesInactive: e
                 });
                 try {
-                    let t = await l.default.get({
+                    let t = await l.HTTP.get({
                         url: p.Endpoints.APPLICATION_DIRECTORY_COLLECTIONS,
                         query: {
                             includes_inactive: e,
@@ -289,7 +289,7 @@ function(e, t, n) {
                     type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS"
                 });
                 try {
-                    let e = await l.default.get({
+                    let e = await l.HTTP.get({
                         url: p.Endpoints.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS
                     });
                     a.default.dispatch({

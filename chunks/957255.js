@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("845078"),
         p = n("991170"),
         S = n("42203"),
-        v = n("926787"),
-        T = n("26989"),
+        T = n("926787"),
+        v = n("26989"),
         I = n("305961"),
         A = n("697218"),
         C = n("49111"),
@@ -55,7 +55,7 @@ function(e, t, n) {
         let r = S.default.getChannel(e);
         if (null == r) return p.NONE;
         let a = r.getGuildId(),
-            o = null != a && (d.default.isLurking(a) || (null === (t = T.default.getMember(a, i.id)) || void 0 === t ? void 0 : t.isPending));
+            o = null != a && (d.default.isLurking(a) || (null === (t = v.default.getMember(a, i.id)) || void 0 === t ? void 0 : t.isPending));
         return !r.isScheduledForDeletion() && !o && s.isEmpty(r.permissionOverwrites) && null != a ? P(a) : p.computePermissions({
             user: i,
             context: r,
@@ -166,7 +166,7 @@ function(e, t, n) {
     }
     class K extends a.default.Store {
         initialize() {
-            this.waitFor(A.default, I.default, S.default, T.default, v.default, _.default, c.default, u.default)
+            this.waitFor(A.default, I.default, S.default, v.default, T.default, _.default, c.default, u.default)
         }
         getChannelPermissions(e) {
             return E.THREAD_CHANNEL_TYPES.has(e.type) ? L(e.id) : M(e.id)

@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("82300"),
         p = n("290689"),
         S = n("49111"),
-        v = n("782340");
-    let T = e => {
+        T = n("782340");
+    let v = e => {
         let t = u.default.getChannel(e);
         return null == t ? void 0 : t.getGuildId()
     };
@@ -129,7 +129,7 @@ function(e, t, n) {
             originalLink: s,
             inContent: null == r || a ? null : [I(r)],
             content: [A({
-                name: v.default.Messages.UNKNOWN_CHANNEL,
+                name: T.default.Messages.UNKNOWN_CHANNEL,
                 type: S.ChannelTypes.UNKNOWN,
                 iconType: "text"
             }, "italics")]
@@ -140,7 +140,7 @@ function(e, t, n) {
         if (!e.canViewChannel) return function(e, t) {
             let n = {
                 type: "channel",
-                content: [R(e.roleSubscriptionGated ? e.name : v.default.Messages.NO_ACCESS)],
+                content: [R(e.roleSubscriptionGated ? e.name : T.default.Messages.NO_ACCESS)],
                 channelType: e.roleSubscriptionGated ? e.type : S.ChannelTypes.UNKNOWN,
                 iconType: "locked"
             };
@@ -170,7 +170,7 @@ function(e, t, n) {
                 inContent: [A(e)],
                 content: [C(!1)]
             };
-            return null != (a = i) ? N(a) : R("#".concat(v.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
+            return null != (a = i) ? N(a) : R("#".concat(T.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
         }
         let o = e.guildId === n;
         return {
@@ -225,7 +225,7 @@ function(e, t, n) {
                     id: i
                 };
                 let s = y(i, n.mentionChannels);
-                return null == s ? O(null, i, null, T(n.channelId)) : D(s, null, T(n.channelId))
+                return null == s ? O(null, i, null, v(n.channelId)) : D(s, null, v(n.channelId))
             }
         },
         L = {
@@ -242,7 +242,7 @@ function(e, t, n) {
                     a = e[3];
                 if (null == r) return N(i);
                 let o = y(r, null);
-                return null == o ? O(s, r, a, T(n.channelId), i) : D(o, a, T(n.channelId), i)
+                return null == o ? O(s, r, a, v(n.channelId), i) : D(o, a, v(n.channelId), i)
             }
         },
         M = {
@@ -257,9 +257,9 @@ function(e, t, n) {
                     o = e[4];
                 if (null == r || null == a) return N(i);
                 let l = y(a, null);
-                if (null != l) return D(l, o, T(n.channelId), i);
+                if (null != l) return D(l, o, v(n.channelId), i);
                 let u = y(r, null);
-                return null != u ? D(u, o, T(n.channelId), i) : O(s, r, o, T(n.channelId), i)
+                return null != u ? D(u, o, v(n.channelId), i) : O(s, r, o, v(n.channelId), i)
             }
         };
     var b = {

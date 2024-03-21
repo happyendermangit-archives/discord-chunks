@@ -8,7 +8,7 @@ function(e, t, n) {
             return S
         },
         cancelAttachToProcess: function() {
-            return v
+            return T
         }
     }), n("70102");
     var i, s, r = n("913144"),
@@ -81,7 +81,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e) {
+    function T(e) {
         return p().then(t => {
             t.cancelAttachToProcess(e)
         })

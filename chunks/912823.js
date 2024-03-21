@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("719923"),
         S = n("998206"),
         C = n("35385"),
-        _ = n("695369"),
-        T = n("198"),
+        T = n("695369"),
+        _ = n("198"),
         I = n("315814"),
         v = n("108486"),
         N = n("923582"),
@@ -54,13 +54,13 @@ function(e, t, n) {
         return r ? (0, i.jsx)(v.default, {
             disabled: t,
             channel: n
-        }) : (0, i.jsx)(T.default, {
+        }) : (0, i.jsx)(_.default, {
             disabled: t,
             channel: n
         })
     }
     var L = l.memo(function(e) {
-        var t, n, l, p, T, v, L, P, b;
+        var t, n, l, p, _, v, L, P, b;
         let {
             type: j,
             disabled: U,
@@ -80,13 +80,13 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !1
         }), z = [], {
-            enabled: Z
+            enabled: J
         } = h.default.getCurrentConfig({
             location: "dc120b_4"
         }, {
             autoTrackExposure: !1
-        }), J = y.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => Z && g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
-            if (!D.isDM() || void 0 === D.recipients || D.recipients.length > 1 || !Z) return !1;
+        }), Z = y.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => J && g.default.isPremiumExactly(Z, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
+            if (!D.isDM() || void 0 === D.recipients || D.recipients.length > 1 || !J) return !1;
             let e = D.recipients[0],
                 t = f.default.getSentUserIds();
             return t.includes(e)
@@ -100,10 +100,10 @@ function(e, t, n) {
             if (i) return e;
             let l = X || q > 0,
                 a = f.default.getRecipientEligibility(t);
-            return [Z && l && a, a]
+            return [J && l && a, a]
         }), ee = (0, u.useActivitiesInTextButtonVisibility)(D.id, "ChannelTextAreaButtons");
         if (!a.isMobile) {
-            if (D.isDM() && (null === (T = j.gifts) || void 0 === T ? void 0 : T.button) != null && null == K && (g.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+            if (D.isDM() && (null === (_ = j.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (g.default.isPremiumExactly(Z, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
                     location: "dc120b_5"
                 }), Q && z.push((0, i.jsx)(I.default, {
                     disabled: U,
@@ -126,7 +126,7 @@ function(e, t, n) {
                     disabled: U,
                     channel: D
                 }, "gift"))
-            }(null === (P = j.gifs) || void 0 === P ? void 0 : P.button) != null && null == K && z.push((0, i.jsx)(_.default, {
+            }(null === (P = j.gifs) || void 0 === P ? void 0 : P.button) != null && null == K && z.push((0, i.jsx)(T.default, {
                 disabled: U,
                 type: j
             }, "gif")), (null === (b = j.stickers) || void 0 === b ? void 0 : b.button) != null && null == K && z.push((0, i.jsx)(A.default, {

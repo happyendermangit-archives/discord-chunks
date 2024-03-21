@@ -58,13 +58,13 @@ function(e, t, n) {
         _flush() {
             if (this._metrics.length > 0) {
                 let e = [...this._metrics];
-                a.default.post({
+                a.HTTP.post({
                     url: (0, u.isMetricsEndpointV2Enabled)("monitoring-agent") ? c.Endpoints.METRICS_V2 : c.Endpoints.METRICS,
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: "1711058145194",
-                            build_number: "277614"
+                            built_at: "1711059906217",
+                            build_number: "277643"
                         }
                     },
                     retries: 1

@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("121338"),
         p = n("605250"),
         S = n("161454"),
-        v = n("32128"),
-        T = n("127080"),
+        T = n("32128"),
+        v = n("127080"),
         I = n("116949"),
         A = n("271938"),
         C = n("546463"),
@@ -265,7 +265,7 @@ function(e, t, n) {
     }
     let ec = Z("setOverlayEnabled", async (e, t) => {
         if (!b.OVERLAY_SUPPORTED || G === e && F === t) return;
-        G = e, F = t, v.OverlayStoredSettings.update({
+        G = e, F = t, T.OverlayStoredSettings.update({
             enabled: e,
             legacyEnabled: t
         }), eN.emitChange();
@@ -342,7 +342,7 @@ function(e, t, n) {
     function eS(e, t, n) {
         f.default.relayClickZoneClicked(e, t, n)
     }
-    async function ev(e) {
+    async function eT(e) {
         if (!(0, L.supportsOutOfProcess)()) return;
         let t = await eu();
         t.setClickZones(e.map(e => {
@@ -357,7 +357,7 @@ function(e, t, n) {
         }))
     }
 
-    function eT(e) {
+    function ev(e) {
         return !(j || !k || W.has(e.type)) && ("USER_SETTINGS_PROTO_UPDATE" === e.type && (e = {
             ...e,
             settings: {
@@ -389,7 +389,7 @@ function(e, t, n) {
             case M.OverlayEventTypes.CONNECT:
                 let t = A.default.getToken();
                 if (null == t) break;
-                (0, _.createLayout)(L.OVERLAY_LAYOUT_ID, y.default.getDefaultLayout(L.OVERLAY_LAYOUT_ID)), Promise.all([(0, T.default)(t, e.pid), l.default.PersistedStore.getAllStates()]).then(t => {
+                (0, _.createLayout)(L.OVERLAY_LAYOUT_ID, y.default.getDefaultLayout(L.OVERLAY_LAYOUT_ID)), Promise.all([(0, v.default)(t, e.pid), l.default.PersistedStore.getAllStates()]).then(t => {
                     let [n, i] = t, {
                         pid: s,
                         token: r
@@ -419,7 +419,7 @@ function(e, t, n) {
     }
     class ey extends l.default.Store {
         initialize() {
-            !(!b.OVERLAY_SUPPORTED || __OVERLAY__) && (this.waitFor(S.default, A.default), m.setReceiveCommandHandler(eC, eA), A.default.addChangeListener(eh), ec(v.OverlayStoredSettings.enabled, v.OverlayStoredSettings.legacyEnabled), u.default.addInterceptor(eT))
+            !(!b.OVERLAY_SUPPORTED || __OVERLAY__) && (this.waitFor(S.default, A.default), m.setReceiveCommandHandler(eC, eA), A.default.addChangeListener(eh), ec(T.OverlayStoredSettings.enabled, T.OverlayStoredSettings.legacyEnabled), u.default.addInterceptor(ev))
         }
         isInputLocked(e) {
             return !K.has(e)
@@ -524,7 +524,7 @@ function(e, t, n) {
             } = e, n = crypto.getRandomValues(new Uint8Array(8));
             Y = btoa(String.fromCharCode(...n));
             let s = new URLSearchParams;
-            s.append("build_id", "b7d5368f074c1febc25eb4ebf4a178ca0fc01bb9"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
+            s.append("build_id", "472335475737f8b8d63cd8c962cbaf4acdea61ac"), s.append("rpc", String(t)), s.append("rpc_auth_token", Y), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(s.toString())
         },
         OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
             let {
@@ -574,7 +574,7 @@ function(e, t, n) {
             let {
                 zones: t
             } = e;
-            ev(t)
+            eT(t)
         },
         OVERLAY_SET_ASSOCIATED_GAME: function(e) {
             var t, n;

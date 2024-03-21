@@ -57,8 +57,8 @@ function(e, t, n) {
     function S() {
         (0, a.clearObject)(d), (0, a.clearObject)(c), _.clear(), f.clear(), (0, a.clearObject)(E), (0, a.clearObject)(h), m()
     }
-    let v = [u.SubscriptionIntervalTypes.DAY, u.SubscriptionIntervalTypes.MONTH, u.SubscriptionIntervalTypes.YEAR];
-    class T extends i.default.Store {
+    let T = [u.SubscriptionIntervalTypes.DAY, u.SubscriptionIntervalTypes.MONTH, u.SubscriptionIntervalTypes.YEAR];
+    class v extends i.default.Store {
         getPlanIdsForSkus(e) {
             let t = [];
             for (let i of e) {
@@ -67,7 +67,7 @@ function(e, t, n) {
                 e.sort((e, t) => {
                     let n = d[e],
                         i = d[t];
-                    return v.indexOf(n.interval) - v.indexOf(i.interval) || n.intervalCount - i.intervalCount
+                    return T.indexOf(n.interval) - T.indexOf(i.interval) || n.intervalCount - i.intervalCount
                 }), t.push(...e)
             }
             return t
@@ -122,8 +122,8 @@ function(e, t, n) {
             return n
         }
     }
-    T.displayName = "SubscriptionPlanStore";
-    var I = new T(s.default, {
+    v.displayName = "SubscriptionPlanStore";
+    var I = new v(s.default, {
         SUBSCRIPTION_PLANS_FETCH: function(e) {
             let {
                 skuId: t

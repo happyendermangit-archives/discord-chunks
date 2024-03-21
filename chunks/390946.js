@@ -34,8 +34,8 @@ function(e, t, n) {
         m = n("305961"),
         p = n("660478"),
         S = n("665618");
-    let v = new f.default("ReadyPayloadUtils"),
-        T = {},
+    let T = new f.default("ReadyPayloadUtils"),
+        v = {},
         I = null,
         A = {};
 
@@ -97,14 +97,14 @@ function(e, t, n) {
         } = e;
         (function(e) {
             let t = o.default.database();
-            null != t && !1 === e.databaseOk && c.default.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"), T = {};
+            null != t && !1 === e.databaseOk && c.default.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"), v = {};
             let n = Object.values(m.default.getGuilds()),
                 i = E.default.getGuilds(),
                 s = h.default.getRawStickersByGuild(),
                 r = p.default.getReadStatesByChannel();
             for (let t of n) {
                 var a, l, u;
-                t.id in e.guildVersions && e.guildChannels.has(t.id) && (T[t.id] = {
+                t.id in e.guildVersions && e.guildChannels.has(t.id) && (v[t.id] = {
                     properties: S.toServer(t),
                     roles: m.default.getRoles(t.id),
                     emojis: null !== (l = null === (a = i[t.id]) || void 0 === a ? void 0 : a.rawEmojis) && void 0 !== l ? l : null,
@@ -118,14 +118,14 @@ function(e, t, n) {
             let t = e.recipient_ids;
             null != t && (e.recipients = t.map(e => (s(null != A[e], "Missing user in compressed ready payload"), A[e]))), delete e.recipient_ids
         });
-        let v = null !== (i = null == _ ? void 0 : _.map((e, t) => !0 === e.unavailable ? e : (e.members = D(A, null == d ? void 0 : d[t]), L(e)))) && void 0 !== i ? i : [],
+        let T = null !== (i = null == _ ? void 0 : _.map((e, t) => !0 === e.unavailable ? e : (e.members = D(A, null == d ? void 0 : d[t]), L(e)))) && void 0 !== i ? i : [],
             I = R(t, _, e => L(e));
-        return null != I && v.push(I), {
+        return null != I && T.push(I), {
             ...f,
             users: r,
             presences: [],
             relationships: g,
-            guilds: v,
+            guilds: T,
             private_channels: null != u ? u : []
         }
     }
@@ -160,8 +160,8 @@ function(e, t, n) {
     }
 
     function P(e) {
-        let t = T[e];
-        return delete T[e], t
+        let t = v[e];
+        return delete v[e], t
     }
 
     function L(e) {
@@ -187,7 +187,7 @@ function(e, t, n) {
             version: e.version,
             hasThreadsSubscription: e.has_threads_subscription
         };
-        if (null == f) throw v.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: ready)")), Error("Guild data was missing from store, but hash was still available.");
+        if (null == f) throw T.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: ready)")), Error("Guild data was missing from store, but hash was still available.");
         return {
             id: e.id,
             dataMode: e.data_mode,
@@ -248,7 +248,7 @@ function(e, t, n) {
             version: e.version,
             hasThreadsSubscription: e.has_threads_subscription
         };
-        if (null == t) throw v.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: post_ready)")), Error("Guild data was missing from store, but hash was still available.");
+        if (null == t) throw T.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: post_ready)")), Error("Guild data was missing from store, but hash was still available.");
         return {
             id: e.id,
             channels: null,

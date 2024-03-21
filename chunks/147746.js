@@ -32,7 +32,7 @@ function(e, t, n) {
                 g = "\n    ".concat((0, d.default)(f), "\n\n    Metadata:\n    ").concat(JSON.stringify((0, u.default)(), void 0, 2), "\n\n    ChannelStore:\n    ").concat(JSON.stringify(s.default.getDebugInfo(), void 0, 2), "\n\n    Logs:\n    ").concat(t, "\n\n    System logs:\n    ").concat(n, "\n\n    Push Notifications:\n    ").concat(a, "\n    ");
             l.clear();
             let m = c.Endpoints.DEBUG_LOG(e, "discord_app_logs");
-            await i.default.post({
+            await i.HTTP.post({
                 url: m,
                 body: g,
                 retries: 3,

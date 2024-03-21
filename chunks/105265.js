@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useRadioGroup: function() {
-            return v
+            return T
         },
         useRadioItem: function() {
-            return T
+            return v
         },
         RadioGroup: function() {
             return I
@@ -46,14 +46,14 @@ function(e, t, n) {
             radioItemIconClassName: m,
             radioBarClassName: p,
             hasSelection: S,
-            radioPosition: v = "left",
-            icon: T,
+            radioPosition: T = "left",
+            icon: v,
             withTransparentBackground: I
         } = e, A = null !== (t = r.color) && void 0 !== t ? t : "", C = s || !S, y = (0, i.jsxs)("div", {
             className: m,
             children: [s ? (0, i.jsx)(E.default, {
                 foreground: g.radioIconForeground
-            }) : (0, i.jsx)(f.default, {}), null != T && (0, i.jsx)(T, {
+            }) : (0, i.jsx)(f.default, {}), null != v && (0, i.jsx)(v, {
                 className: g.icon,
                 width: 24,
                 height: 24
@@ -74,10 +74,10 @@ function(e, t, n) {
                     padding: o
                 },
                 className: a(g.radioBar, {
-                    [g.radioPositionLeft]: "left" === v,
-                    [g.radioPositionRight]: "right" === v
+                    [g.radioPositionLeft]: "left" === T,
+                    [g.radioPositionRight]: "right" === T
                 }, p),
-                children: ["left" === v ? y : null, (0, i.jsxs)("div", {
+                children: ["left" === T ? y : null, (0, i.jsxs)("div", {
                     className: a(g.info, d),
                     children: [(0, i.jsx)(c.Text, {
                         variant: "text-md/medium",
@@ -89,7 +89,7 @@ function(e, t, n) {
                         variant: "text-sm/normal",
                         children: r.desc
                     }) : null]
-                }), "right" === v ? y : null]
+                }), "right" === T ? y : null]
             })
         })
     }
@@ -111,8 +111,8 @@ function(e, t, n) {
                 radioPosition: h
             } = this.props, m = t || n.disabled, {
                 tooltipText: S,
-                tooltipPosition: v,
-                icon: T
+                tooltipPosition: T,
+                icon: v
             } = n, I = null != n.collapsibleContent ? (0, i.jsx)(u.Collapsible, {
                 className: f,
                 isExpanded: e,
@@ -136,7 +136,7 @@ function(e, t, n) {
                         radioItemIconClassName: d,
                         radioBarClassName: c,
                         radioPosition: h,
-                        icon: T,
+                        icon: v,
                         withTransparentBackground: E
                     })
                 }
@@ -153,12 +153,12 @@ function(e, t, n) {
                 radioItemIconClassName: d,
                 radioBarClassName: c,
                 radioPosition: h,
-                icon: T,
+                icon: v,
                 withTransparentBackground: E
             });
             return null != S ? (0, i.jsx)(_.Tooltip, {
                 text: S,
-                position: null != v ? v : "top",
+                position: null != T ? T : "top",
                 children: e => (0, i.jsx)("div", {
                     ...e,
                     className: g.tooltipWrapper,
@@ -178,7 +178,7 @@ function(e, t, n) {
         }
     }
 
-    function v() {
+    function T() {
         let {
             orientation: e = "vertical",
             isDisabled: t = !1,
@@ -228,7 +228,7 @@ function(e, t, n) {
         }
     }
 
-    function T(e) {
+    function v(e) {
         let {
             isSelected: t,
             label: n
@@ -257,8 +257,8 @@ function(e, t, n) {
             "aria-labelledby": E,
             orientation: g,
             withTransparentBackground: p
-        } = e, T = (0, d.useFormContext)(), I = v({
-            labelledBy: null != E ? E : T.titleId,
+        } = e, v = (0, d.useFormContext)(), I = T({
+            labelledBy: null != E ? E : v.titleId,
             orientation: g,
             isDisabled: _
         }), A = f.some(e => e.value === o);

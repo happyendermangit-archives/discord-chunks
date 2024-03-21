@@ -112,7 +112,7 @@ function(e, t, n) {
                     regionUpdated: !1
                 }, null != f[t]) {
                 let e = f[t];
-                delete f[t], 1 !== e.indexOf("all") && (e = null), a.default.post({
+                delete f[t], 1 !== e.indexOf("all") && (e = null), a.HTTP.post({
                     url: c.Endpoints.CALL_RING(t),
                     body: {
                         recipients: e

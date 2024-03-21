@@ -22,9 +22,9 @@ function(e, t, n) {
         m = {},
         p = {},
         S = {},
-        v = new Set,
-        T = () => O.emitChange(),
-        I = a.debounce(T, 150);
+        T = new Set,
+        v = () => O.emitChange(),
+        I = a.debounce(v, 150);
 
     function A(e) {
         let t = m[e];
@@ -41,7 +41,7 @@ function(e, t, n) {
         let t = m[e];
         null != t && (!t.closed && A(e), t.close(), ! function(e) {
             let t = m[e];
-            s(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", T), t.removeEventListener("blur", T), t.removeEventListener("resize", I);
+            s(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", v), t.removeEventListener("blur", v), t.removeEventListener("resize", I);
             let n = p[e];
             s(null != n, "Window root was null while unmounting"), n.unmount(), delete m[e], delete g[e], delete S[e], delete p[e]
         }(e), O.emitChange())
@@ -56,7 +56,7 @@ function(e, t, n) {
         if (null != n.key) switch (n.type) {
             case E.PopoutEventTypes.LOADED:
                 var i;
-                return i = n.key, void(v.has(i) && (! function(e) {
+                return i = n.key, void(T.has(i) && (! function(e) {
                     let t = m[e],
                         n = S[e];
                     if (null == t) {
@@ -64,7 +64,7 @@ function(e, t, n) {
                         return
                     }
                     let i = t.document;
-                    (0, f.subscribeDocumentToFullScreenChange)(i, T), t.addEventListener("focus", T), t.addEventListener("blur", T), t.addEventListener("resize", I), ! function(e, t) {
+                    (0, f.subscribeDocumentToFullScreenChange)(i, v), t.addEventListener("focus", v), t.addEventListener("blur", v), t.addEventListener("resize", I), ! function(e, t) {
                         let n = t.document,
                             i = document.querySelectorAll('link[rel="stylesheet"]'),
                             r = "".concat(window.location.protocol, "//").concat(window.location.host);
@@ -76,7 +76,7 @@ function(e, t, n) {
                     }(0, t);
                     let r = (0, o.createRoot)(i.getElementById("app-mount"));
                     s(null != r, "No render target for popout!"), p[e] = r, r.render(n(e))
-                }(i), v.delete(i), O.emitChange()));
+                }(i), T.delete(i), O.emitChange()));
             case E.PopoutEventTypes.UNLOADED:
                 return C(n.key)
         }
@@ -166,7 +166,7 @@ function(e, t, n) {
                 }
                 return t
             }(u));
-            p.windowKey = t, null == p || p.focus(), m[t] = p, S[t] = i, c.isPlatformEmbedded && (_.default.setAlwaysOnTop(t, d), g[t] = d, _.default.isAlwaysOnTop(t).then(e => g[t] = e)), v.add(t)
+            p.windowKey = t, null == p || p.focus(), m[t] = p, S[t] = i, c.isPlatformEmbedded && (_.default.setAlwaysOnTop(t, d), g[t] = d, _.default.isAlwaysOnTop(t).then(e => g[t] = e)), T.add(t)
         },
         POPOUT_WINDOW_CLOSE: function(e) {
             let {

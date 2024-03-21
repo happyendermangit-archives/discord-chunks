@@ -146,7 +146,7 @@ function(e, t, n) {
                         body: {
                             settings: t
                         }
-                    } = await s.default.get({
+                    } = await s.HTTP.get({
                         url: m.Endpoints.USER_SETTINGS_PROTO(this.type)
                     }), n = (0, S.b64ToProto)(this.ProtoClass, t);
                     if (null == n) {
@@ -237,7 +237,7 @@ function(e, t, n) {
                     this.saveLastSendTime();
                     let {
                         body: n
-                    } = await s.default.patch({
+                    } = await s.HTTP.patch({
                         url: m.Endpoints.USER_SETTINGS_PROTO(this.type),
                         body: {
                             settings: t,

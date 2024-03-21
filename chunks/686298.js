@@ -29,10 +29,10 @@ function(e, t, n) {
             return p
         },
         ApplicationStreamResolutionButtonsWithSuffixLabel: function() {
-            return v
+            return T
         },
         ApplicationStreamFPSButtons: function() {
-            return T
+            return v
         },
         ApplicationStreamFPSButtonsWithSuffixLabel: function() {
             return I
@@ -181,8 +181,8 @@ function(e, t, n) {
     let m = [g(720), g(1080), g(1440), g(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
         p = [g(720), g(1080), g(1440)],
         S = e => "".concat(e, "p"),
-        v = [g(480, () => S(480)), g(720, () => S(720)), g(1080, () => S(1080)), g(1440, () => S(1440)), g(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
-        T = [g(15), g(30), g(60)],
+        T = [g(480, () => S(480)), g(720, () => S(720)), g(1080, () => S(1080)), g(1440, () => S(1440)), g(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
+        v = [g(15), g(30), g(60)],
         I = [g(15, () => c.default.Messages.STREAM_FPS_OPTION.format({
             value: 15
         })), g(30, () => c.default.Messages.STREAM_FPS_OPTION.format({

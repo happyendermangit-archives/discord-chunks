@@ -21,8 +21,8 @@ function(e, t, n) {
         m = n("605250"),
         p = n("155084"),
         S = n("410912"),
-        v = n("313915"),
-        T = n("599110"),
+        T = n("313915"),
+        v = n("599110"),
         I = n("922932"),
         A = n("718517"),
         C = n("773336"),
@@ -240,7 +240,7 @@ function(e, t, n) {
             }
         }
         _tryDetectInvalidIOSToken(e, t, n) {
-            (0, C.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && c.default.get({
+            (0, C.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && c.HTTP.get({
                 url: w.Endpoints.ME,
                 headers: {
                     authorization: this.token
@@ -249,14 +249,14 @@ function(e, t, n) {
                 let {
                     status: t
                 } = e;
-                T.default.track(w.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+                v.default.track(w.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
                     api_status_code: t
                 })
             }, e => {
                 let {
                     status: t
                 } = e;
-                401 === t && (this.connectionState = N.default.CLOSED, k.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), T.default.track(w.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+                401 === t && (this.connectionState = N.default.CLOSED, k.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), v.default.track(w.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
                     api_status_code: t
                 })
             }))
@@ -395,7 +395,7 @@ function(e, t, n) {
                 tags: {
                     socketCrashedAction: t
                 }
-            }), T.default.track(w.AnalyticEvents.GATEWAY_SOCKET_RESET, {
+            }), v.default.track(w.AnalyticEvents.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 action: t
@@ -451,7 +451,7 @@ function(e, t, n) {
         }
         constructor() {
             super(), this.dispatchExceptionBackoff = new o.default(1e3, B), this.dispatchSuccessTimer = 0, this.didForceClearGuildHashes = !1, this.identifyUncompressedByteSize = 0, this.identifyCompressedByteSize = 0, this.analytics = {}, this.identifyCount = 0, this.resumeUrl = null, this.iosGoingAwayEventCount = 0, this.send = (e, t, n) => {
-                v.default.isLoggingGatewayEvents && k.verboseDangerously("~>", e, t);
+                T.default.isLoggingGatewayEvents && k.verboseDangerously("~>", e, t);
                 let i = V.pack({
                     op: e,
                     d: t

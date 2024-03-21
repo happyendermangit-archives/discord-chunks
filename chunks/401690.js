@@ -22,21 +22,21 @@ function(e, t, n) {
     let m = {},
         p = {},
         S = {},
-        v = {},
         T = {},
+        v = {},
         I = {},
         A = null,
         C = {};
 
     function y() {
-        for (let e in m = {}, T = {}, p = {}, S = {}, v = {}, A = c.default.getChannelId(), C) clearTimeout(C[e]);
+        for (let e in m = {}, v = {}, p = {}, S = {}, T = {}, A = c.default.getChannelId(), C) clearTimeout(C[e]);
         C = {}, f.default.forEachGuild(e => {
             R(e)
         }), O()
     }
 
     function N(e) {
-        for (let t in delete m[e], delete T[e], delete p[e], delete S[e], delete v[e], R(e), S[e]) P(e, t)
+        for (let t in delete m[e], delete v[e], delete p[e], delete S[e], delete T[e], R(e), S[e]) P(e, t)
     }
 
     function R(e) {
@@ -57,11 +57,11 @@ function(e, t, n) {
                             isRelevant: s,
                             isTimedRelevant: r
                         } = V(e);
-                    x(m, e, n, !1), x(T, e, s ? n : null, !1), x(p, e, i ? n : null, !1), r && G(e, !0)
+                    x(m, e, n, !1), x(v, e, s ? n : null, !1), x(p, e, i ? n : null, !1), r && G(e, !0)
                 } else {
                     x(S, e, e, !1);
                     let t = d.default.isForumPostUnread(e.id);
-                    x(v, e, t ? e : null, !1)
+                    x(T, e, t ? e : null, !1)
                 }
             }
     }
@@ -105,13 +105,13 @@ function(e, t, n) {
                         isRelevant: n,
                         isTimedRelevant: r
                     } = V(i);
-                x(m, i, e, !0), x(T, i, n ? e : null, !0), x(p, i, t ? e : null, !0), x(S, i, null, !0), x(v, i, null, !0), G(i, r)
+                x(m, i, e, !0), x(v, i, n ? e : null, !0), x(p, i, t ? e : null, !0), x(S, i, null, !0), x(T, i, null, !0), G(i, r)
             } else {
                 let e = d.default.isForumPostUnread(i.id);
-                x(m, i, null, !0), x(p, i, null, !0), x(T, i, null, !0), x(S, i, i, !0), x(v, i, e ? i : null, !0), F(i.id)
+                x(m, i, null, !0), x(p, i, null, !0), x(v, i, null, !0), x(S, i, i, !0), x(T, i, e ? i : null, !0), F(i.id)
             }
             P(e, t)
-        } else B(m, e, t, n), B(T, e, t, n), B(p, e, t, n), B(S, e, t, n), B(v, e, t, n), F(n), P(e, t)
+        } else B(m, e, t, n), B(v, e, t, n), B(p, e, t, n), B(S, e, t, n), B(T, e, t, n), F(n), P(e, t)
     }
 
     function M(e) {
@@ -144,23 +144,23 @@ function(e, t, n) {
                 } = V(t);
                 G(t, r);
                 let a = H(p, t),
-                    o = H(T, t);
+                    o = H(v, t);
                 if (n === a && s === o) return !1;
                 let l = m[e][i][t.id],
                     u = n ? l : null,
                     d = s ? l : null;
-                x(p, t, u, !0), x(T, t, d, !0), P(e, i)
+                x(p, t, u, !0), x(v, t, d, !0), P(e, i)
             } else {
-                let e = H(v, t),
+                let e = H(T, t),
                     n = d.default.isForumPostUnread(t.id);
                 if (n === e) return !1;
-                x(v, t, n ? t : null, !0)
+                x(T, t, n ? t : null, !0)
             }
         }
     }
 
     function w() {
-        for (let e in p = {}, T = {}, m)
+        for (let e in p = {}, v = {}, m)
             for (let t in m[e])
                 for (let n in m[e][t]) {
                     let i = m[e][t][n],
@@ -169,14 +169,14 @@ function(e, t, n) {
                             isRelevant: r,
                             isTimedRelevant: a
                         } = V(i.channel);
-                    s && x(p, i.channel, i, !1), r && x(T, i.channel, i, !1), G(i.channel, a)
+                    s && x(p, i.channel, i, !1), r && x(v, i.channel, i, !1), G(i.channel, a)
                 }
-        for (let e in v = {}, S)
+        for (let e in T = {}, S)
             for (let t in S[e])
                 for (let n in S[e][t]) {
                     let i = S[e][t][n],
                         s = d.default.isForumPostUnread(n);
-                    s && x(v, i, i, !1)
+                    s && x(T, i, i, !1)
                 }
         O()
     }
@@ -280,7 +280,7 @@ function(e, t, n) {
         }
         getActiveJoinedRelevantThreadsForGuild(e) {
             var t;
-            return null !== (t = T[e]) && void 0 !== t ? t : K
+            return null !== (t = v[e]) && void 0 !== t ? t : K
         }
         getActiveJoinedRelevantThreadsForParent(e, t) {
             var n;
@@ -292,7 +292,7 @@ function(e, t, n) {
         }
         getActiveUnjoinedUnreadThreadsForGuild(e) {
             var t;
-            return null !== (t = v[e]) && void 0 !== t ? t : K
+            return null !== (t = T[e]) && void 0 !== t ? t : K
         }
         getActiveUnjoinedUnreadThreadsForParent(e, t) {
             var n;
@@ -375,7 +375,7 @@ function(e, t, n) {
             let {
                 channel: t
             } = e, n = !1;
-            return null != t.guild_id && null != t.parent_id && (t.guild_id in m && t.parent_id in m[t.guild_id] && (delete m[t.guild_id][t.parent_id], n = !0), t.guild_id in p && t.parent_id in p[t.guild_id] && (delete p[t.guild_id][t.parent_id], n = !0), t.guild_id in T && t.parent_id in T[t.guild_id] && (_.default.keys(T[t.guild_id][t.parent_id]).forEach(F), delete T[t.guild_id][t.parent_id], n = !0), t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], n = !0), t.guild_id in v && t.parent_id in v[t.guild_id] && (delete v[t.guild_id][t.parent_id], n = !0), n && P(t.guild_id, t.parent_id)), n
+            return null != t.guild_id && null != t.parent_id && (t.guild_id in m && t.parent_id in m[t.guild_id] && (delete m[t.guild_id][t.parent_id], n = !0), t.guild_id in p && t.parent_id in p[t.guild_id] && (delete p[t.guild_id][t.parent_id], n = !0), t.guild_id in v && t.parent_id in v[t.guild_id] && (_.default.keys(v[t.guild_id][t.parent_id]).forEach(F), delete v[t.guild_id][t.parent_id], n = !0), t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], n = !0), t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], n = !0), n && P(t.guild_id, t.parent_id)), n
         },
         THREAD_MEMBER_UPDATE: b,
         THREAD_MEMBERS_UPDATE: b,

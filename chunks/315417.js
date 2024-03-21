@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return v
         }
     });
     var i = n("37983"),
@@ -22,14 +22,14 @@ function(e, t, n) {
         m = n("52904"),
         p = n("317041"),
         S = n("782340"),
-        v = n("146482");
+        T = n("146482");
 
-    function T(e) {
+    function v(e) {
         let {
             inApp: t,
             application: n,
             onSelect: r
-        } = e, T = s.useMemo(() => E.default.getApplicationIconURL({
+        } = e, v = s.useMemo(() => E.default.getApplicationIconURL({
             id: n.id,
             icon: n.icon
         }), [n.icon, n.id]), I = s.useMemo(() => [{
@@ -49,11 +49,11 @@ function(e, t, n) {
             return (null === (i = n.integrationTypesConfig) || void 0 === i ? void 0 : null === (t = i[e.type]) || void 0 === t ? void 0 : t.oauth2InstallParams) != null
         }), [n.integrationTypesConfig]);
         return (0, i.jsxs)("div", {
-            className: v.container,
+            className: T.container,
             children: [(0, i.jsxs)("div", {
-                className: v.header,
+                className: T.header,
                 children: [(0, i.jsx)(l.Avatar, {
-                    src: T,
+                    src: v,
                     size: m.AvatarSizes.SIZE_80,
                     "aria-label": n.name
                 }), (0, i.jsx)(c.Heading, {
@@ -62,21 +62,21 @@ function(e, t, n) {
                     children: n.name
                 })]
             }), (0, i.jsx)("ul", {
-                className: v.rows,
+                className: T.rows,
                 children: I.map(e => (0, i.jsxs)(c.Clickable, {
                     tag: "li",
-                    className: a(v.row, {
-                        [v.inApp]: t
+                    className: a(T.row, {
+                        [T.inApp]: t
                     }),
                     onClick: () => r(e.type),
                     children: [(0, i.jsx)(e.icon, {
                         width: 24,
                         height: 24,
-                        className: v.leftIcon
+                        className: T.leftIcon
                     }), (0, i.jsxs)("div", {
-                        className: v.rowInner,
+                        className: T.rowInner,
                         children: [(0, i.jsxs)("div", {
-                            className: v.rowDetails,
+                            className: T.rowDetails,
                             children: [(0, i.jsx)(c.Text, {
                                 variant: "text-md/medium",
                                 color: "interactive-active",
@@ -87,14 +87,14 @@ function(e, t, n) {
                                 children: e.subtitle
                             })]
                         }), e.beta && (0, i.jsx)(_.default, {}), (0, i.jsx)(f.default, {
-                            className: v.rightIcon
+                            className: T.rightIcon
                         })]
                     })]
                 }, e.type))
             }), (0, i.jsx)(c.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                className: v.learnMore,
+                className: T.learnMore,
                 children: S.default.Messages.OAUTH2_INTEGRATION_SELECT_DETAILS.format({
                     betaUserLimit: p.APPLICATION_USER_INSTALL_BETA_USER_LIMIT,
                     learnMoreUrl: h.default.getArticleURL(g.HelpdeskArticles.USING_APPS_FAQ)

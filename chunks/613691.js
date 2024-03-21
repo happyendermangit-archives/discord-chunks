@@ -34,7 +34,7 @@ function(e, t, n) {
             return S
         },
         setActiveDevice: function() {
-            return v
+            return T
         }
     }), n("860677");
     var i = n("872717"),
@@ -67,12 +67,12 @@ function(e, t, n) {
         })
     }
     let f = {
-        get: _.bind(null, i.default.get),
-        put: _.bind(null, i.default.put)
+        get: _.bind(null, i.HTTP.get),
+        put: _.bind(null, i.HTTP.put)
     };
 
     function E(e) {
-        return i.default.get({
+        return i.HTTP.get({
             url: c.Endpoints.CONNECTION_ACCESS_TOKEN(c.PlatformTypes.SPOTIFY, e),
             oldFormErrors: !0
         }).catch(t => {
@@ -170,7 +170,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e, t) {
+    function T(e, t) {
         r.default.dispatch({
             type: "SPOTIFY_SET_ACTIVE_DEVICE",
             accountId: e,

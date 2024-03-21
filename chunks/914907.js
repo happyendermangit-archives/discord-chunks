@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         TabBar: function() {
-            return T
+            return v
         }
     }), n("781738"), n("70102"), n("222007");
     var i, s, r = n("37983"),
@@ -46,7 +46,7 @@ function(e, t, n) {
         let n = {};
         return "Selected" === t ? (n.backgroundColor = e, n.color = c.default.unsafe_rawColors.WHITE_500.css, n) : ("Hover" === t && (n.backgroundColor = (0, d.hex2rgb)(e, .1)), n.color = e, n)
     }(s = i || (i = {})).DEFAULT = "Default", s.HOVER = "Hover", s.SELECTED = "Selected";
-    class v extends a.Component {
+    class T extends a.Component {
         getStyle() {
             let {
                 color: e,
@@ -151,12 +151,12 @@ function(e, t, n) {
             }
         }
     }
-    v.defaultProps = {
+    T.defaultProps = {
         disabled: !1,
         look: "grey",
         disableItemStyles: !1
     };
-    class T extends a.Component {
+    class v extends a.Component {
         render() {
             let {
                 className: e,
@@ -225,7 +225,7 @@ function(e, t, n) {
             }
         }
     }
-    T.Header = function(e) {
+    v.Header = function(e) {
         let {
             className: t,
             onClick: n,
@@ -251,7 +251,7 @@ function(e, t, n) {
                 children: i
             })
         })
-    }, T.Item = v, T.Separator = function(e) {
+    }, v.Item = T, v.Separator = function(e) {
         let {
             style: t
         } = e;
@@ -259,5 +259,5 @@ function(e, t, n) {
             className: h.separator,
             style: t
         })
-    }, T.Panel = m
+    }, v.Panel = m
 }

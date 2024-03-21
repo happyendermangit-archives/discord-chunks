@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     });
     var i = n("37983"),
@@ -24,13 +24,13 @@ function(e, t, n) {
         g = n("49111"),
         S = n("646718"),
         C = n("782340"),
-        _ = n("230537"),
-        T = function(e) {
+        T = n("230537"),
+        _ = function(e) {
             let {
                 bodyCopy: t = C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
                 className: n,
                 onDismiss: a,
-                onCtaClick: T
+                onCtaClick: _
             } = e, {
                 location: I
             } = (0, u.useAnalyticsContext)(), {
@@ -51,10 +51,10 @@ function(e, t, n) {
                         object: g.AnalyticsObjects.BUTTON_CTA,
                         objectType: g.AnalyticsObjectTypes.TIER_2
                     }
-                }), null == T || T()
-            }, [v, I, T, A]), M = A === S.PremiumTypes.TIER_0;
+                }), null == _ || _()
+            }, [v, I, _, A]), M = A === S.PremiumTypes.TIER_0;
             return (0, i.jsx)("div", {
-                className: s(_.wrapper, n),
+                className: s(T.wrapper, n),
                 children: N ? (0, i.jsx)(o.Spinner, {
                     type: o.SpinnerTypes.PULSING_ELLIPSIS
                 }) : (0, i.jsx)(r.VisibilitySensor, {
@@ -67,13 +67,13 @@ function(e, t, n) {
                         }), O.current = !0)
                     },
                     children: (0, i.jsxs)("div", {
-                        className: _.upsell,
+                        className: T.upsell,
                         children: [(0, i.jsx)(x.default, {
                             color: M ? m.GradientCssUrls.PREMIUM_TIER_0 : m.GradientCssUrls.PREMIUM_TIER_2,
-                            className: _.premiumIcon
+                            className: T.premiumIcon
                         }), (0, i.jsx)(o.Text, {
                             color: "interactive-normal",
-                            className: _.body,
+                            className: T.body,
                             variant: "text-sm/normal",
                             children: M ? C.default.Messages.EMOJI_PICKER_PREMIUM_TIER_0_UPSELL_BODY.format({
                                 planName: (0, y.getTierDisplayName)(S.SubscriptionPlans.PREMIUM_MONTH_TIER_0)
@@ -85,11 +85,11 @@ function(e, t, n) {
                             children: M ? C.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
                         }), null != a && (0, i.jsx)(o.Button, {
                             onClick: a,
-                            className: _.dismissButton,
+                            className: T.dismissButton,
                             look: o.Button.Looks.BLANK,
                             size: o.Button.Sizes.ICON,
                             children: (0, i.jsx)(h.default, {
-                                className: _.dismissIcon
+                                className: T.dismissIcon
                             })
                         })]
                     })

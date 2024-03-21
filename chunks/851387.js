@@ -25,8 +25,8 @@ function(e, t, n) {
         m = n("271938"),
         p = n("42203"),
         S = n("383173"),
-        v = n("923959"),
-        T = n("305961"),
+        T = n("923959"),
+        v = n("305961"),
         I = n("18494"),
         A = n("162771"),
         C = n("697218"),
@@ -79,9 +79,9 @@ function(e, t, n) {
         }));
         try {
             let t = A.default.getGuildId(),
-                i = e === t && null != T.default.getGuild(e),
+                i = e === t && null != v.default.getGuild(e),
                 s = i ? I.default.getChannelId(e) : null,
-                o = await r.default.put({
+                o = await r.HTTP.put({
                     url: P.Endpoints.GUILD_JOIN(e),
                     query: {
                         lurker: f,
@@ -99,7 +99,7 @@ function(e, t, n) {
                     type: "USER_GUILD_JOIN_REQUEST_UPDATE",
                     guildId: e,
                     request: o.body.join_request
-                }), null == T.default.getGuild(e) && o.body.show_verification_form) return (0, h.transitionTo)(P.Routes.GUILD_MEMBER_VERIFICATION(e)), o;
+                }), null == v.default.getGuild(e) && o.body.show_verification_form) return (0, h.transitionTo)(P.Routes.GUILD_MEMBER_VERIFICATION(e)), o;
             if (null != o.body.welcome_screen && a.default.dispatch({
                     type: "WELCOME_SCREEN_UPDATE",
                     guildId: o.body.id,
@@ -129,8 +129,8 @@ function(e, t, n) {
     }
 
     function k(e) {
-        return new Promise(t => T.default.addConditionalChangeListener(() => {
-            let n = T.default.getGuild(e);
+        return new Promise(t => v.default.addConditionalChangeListener(() => {
+            let n = v.default.getGuild(e);
             return null == n || (t(n), !1)
         }))
     }
@@ -157,14 +157,14 @@ function(e, t, n) {
                 guild: e
             })
         },
-        setServerMute: (e, t, n) => r.default.patch({
+        setServerMute: (e, t, n) => r.HTTP.patch({
             url: P.Endpoints.GUILD_MEMBER(e, t),
             body: {
                 mute: n
             },
             oldFormErrors: !0
         }),
-        setServerDeaf: (e, t, n) => r.default.patch({
+        setServerDeaf: (e, t, n) => r.HTTP.patch({
             url: P.Endpoints.GUILD_MEMBER(e, t),
             body: {
                 deaf: n
@@ -172,7 +172,7 @@ function(e, t, n) {
             oldFormErrors: !0
         }),
         setChannel(e, t, n) {
-            r.default.patch({
+            r.HTTP.patch({
                 url: P.Endpoints.GUILD_MEMBER(e, t),
                 body: {
                     channel_id: n
@@ -181,7 +181,7 @@ function(e, t, n) {
             })
         },
         setMemberFlags(e, t, n) {
-            r.default.patch({
+            r.HTTP.patch({
                 url: P.Endpoints.GUILD_MEMBER(e, t),
                 body: {
                     flags: n
@@ -189,7 +189,7 @@ function(e, t, n) {
                 oldFormErrors: !0
             })
         },
-        kickUser: (e, t, n) => r.default.delete({
+        kickUser: (e, t, n) => r.HTTP.del({
             url: P.Endpoints.GUILD_MEMBER(e, t),
             reason: n,
             oldFormErrors: !0
@@ -223,7 +223,7 @@ function(e, t, n) {
                 }
             })
         },
-        banUser: (e, t, n, i) => r.default.put({
+        banUser: (e, t, n, i) => r.HTTP.put({
             url: P.Endpoints.GUILD_BAN(e, t),
             reason: i,
             body: {
@@ -231,11 +231,11 @@ function(e, t, n) {
             },
             oldFormErrors: !0
         }),
-        unbanUser: (e, t) => r.default.delete({
+        unbanUser: (e, t) => r.HTTP.del({
             url: P.Endpoints.GUILD_BAN(e, t),
             oldFormErrors: !0
         }),
-        banMultipleUsers: (e, t, n, i) => r.default.post({
+        banMultipleUsers: (e, t, n, i) => r.HTTP.post({
             url: P.Endpoints.BULK_GUILD_BAN(e),
             body: {
                 user_ids: t,
@@ -251,7 +251,7 @@ function(e, t, n) {
                 permissions: N.NONE
             };
             try {
-                let t = await r.default.post({
+                let t = await r.HTTP.post({
                         url: P.Endpoints.GUILD_ROLES(e),
                         oldFormErrors: !0,
                         body: i
@@ -271,7 +271,7 @@ function(e, t, n) {
                 icon: i,
                 unicodeEmoji: s,
                 ...a
-            } = n, o = null === i || (null == i ? void 0 : i.startsWith("data:")) ? i : void 0, u = await r.default.patch({
+            } = n, o = null === i || (null == i ? void 0 : i.startsWith("data:")) ? i : void 0, u = await r.HTTP.patch({
                 url: P.Endpoints.GUILD_ROLE(e, t),
                 body: {
                     ...a,
@@ -282,7 +282,7 @@ function(e, t, n) {
             });
             return l.default.checkGuildTemplateDirty(e), u
         },
-        updateRolePermissions: (e, t, n) => r.default.patch({
+        updateRolePermissions: (e, t, n) => r.HTTP.patch({
             url: P.Endpoints.GUILD_ROLE(e, t),
             body: {
                 permissions: n
@@ -290,7 +290,7 @@ function(e, t, n) {
             oldFormErrors: !0
         }),
         deleteRole(e, t) {
-            r.default.delete({
+            r.HTTP.del({
                 url: P.Endpoints.GUILD_ROLE(e, t),
                 oldFormErrors: !0
             }).then(() => {
@@ -298,7 +298,7 @@ function(e, t, n) {
             })
         },
         async batchChannelUpdate(e, t) {
-            let n = await r.default.patch({
+            let n = await r.HTTP.patch({
                 url: P.Endpoints.GUILD_CHANNELS(e),
                 body: t,
                 oldFormErrors: !0
@@ -306,7 +306,7 @@ function(e, t, n) {
             return l.default.checkGuildTemplateDirty(e), n
         },
         async batchRoleUpdate(e, t) {
-            let n = await r.default.patch({
+            let n = await r.HTTP.patch({
                 url: P.Endpoints.GUILD_ROLES(e),
                 body: t,
                 oldFormErrors: !0
@@ -433,11 +433,11 @@ function(e, t, n) {
                 (0, h.transitionTo)(P.Routes.FRIENDS);
                 return
             }
-            let t = v.default.getDefaultChannel(e);
+            let t = T.default.getDefaultChannel(e);
             null == t || t.isNSFW() ? (0, h.transitionTo)(P.Routes.FRIENDS) : (0, h.transitionTo)(P.Routes.CHANNEL(e, t.id))
         },
         escapeToDefaultChannel(e) {
-            let t = v.default.getDefaultChannel(e);
+            let t = T.default.getDefaultChannel(e);
             null != t ? (0, h.transitionTo)(P.Routes.CHANNEL(e, t.id)) : (0, h.transitionTo)(P.Routes.FRIENDS)
         },
         async fetchApplications(e, t) {
@@ -448,7 +448,7 @@ function(e, t, n) {
             null != t && (n.query = {
                 channel_id: t
             });
-            let i = await r.default.get(n),
+            let i = await r.HTTP.get(n),
                 s = i.body;
             a.default.dispatch({
                 type: "GUILD_APPLICATIONS_FETCH_SUCCESS",
@@ -462,7 +462,7 @@ function(e, t, n) {
                 i = {
                     limit: t
                 };
-            null != n && (i.after = n), await r.default.get({
+            null != n && (i.after = n), await r.HTTP.get({
                 url: P.Endpoints.GUILD_BANS(e),
                 oldFormErrors: !0,
                 query: i
@@ -479,7 +479,7 @@ function(e, t, n) {
                 s = {
                     limit: i
                 };
-            null != n && n.length > 0 && (s.user_ids = n), null != t && t.trim().length > 0 && (s.query = t), await r.default.get({
+            null != n && n.length > 0 && (s.user_ids = n), null != t && t.trim().length > 0 && (s.query = t), await r.HTTP.get({
                 url: P.Endpoints.GUILD_BANS_SEARCH(e),
                 oldFormErrors: !0,
                 query: s
@@ -492,7 +492,7 @@ function(e, t, n) {
             })
         },
         async fetchGuildBans(e) {
-            await r.default.get({
+            await r.HTTP.get({
                 url: P.Endpoints.GUILD_BANS(e),
                 oldFormErrors: !0
             }).then(e => {
@@ -502,7 +502,7 @@ function(e, t, n) {
                 })
             })
         },
-        fetchGuildRoleConnectionsEligibility: (e, t) => r.default.get({
+        fetchGuildRoleConnectionsEligibility: (e, t) => r.HTTP.get({
             url: P.Endpoints.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
             oldFormErrors: !0
         }).then(e => {
@@ -516,19 +516,19 @@ function(e, t, n) {
             }), n
         }),
         async assignGuildRoleConnection(e, t) {
-            await r.default.post({
+            await r.HTTP.post({
                 url: P.Endpoints.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
                 oldFormErrors: !0
             })
         },
         async unassignGuildRoleConnection(e, t) {
-            await r.default.post({
+            await r.HTTP.post({
                 url: P.Endpoints.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
                 oldFormErrors: !0
             })
         },
         async getGuildRoleConnectionsConfigurations(e) {
-            let t = await r.default.get({
+            let t = await r.HTTP.get({
                 url: P.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
                 oldFormErrors: !0
             });

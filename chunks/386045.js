@@ -22,8 +22,8 @@ function(e, t, n) {
         m = [],
         p = 0,
         S = null,
-        v = null,
-        T = {},
+        T = null,
+        v = {},
         I = null,
         A = null,
         C = {},
@@ -76,7 +76,7 @@ function(e, t, n) {
             return N.clipsSettings
         }
         getLastClipsSession() {
-            return v
+            return T
         }
         getClipsWarningShown(e) {
             return S === e
@@ -108,15 +108,15 @@ function(e, t, n) {
         }
         isClipsEnabledForUser(e) {
             var t, n;
-            return null !== (n = null === (t = T[e]) || void 0 === t ? void 0 : t.clipsEnabled) && void 0 !== n && n
+            return null !== (n = null === (t = v[e]) || void 0 === t ? void 0 : t.clipsEnabled) && void 0 !== n && n
         }
         isVoiceRecordingAllowedForUser(e) {
             var t, n;
-            return null !== (n = null === (t = T[e]) || void 0 === t ? void 0 : t.allowVoiceRecording) && void 0 !== n && n
+            return null !== (n = null === (t = v[e]) || void 0 === t ? void 0 : t.allowVoiceRecording) && void 0 !== n && n
         }
         isViewerClippingAllowedForUser(e) {
             var t, n;
-            return null !== (n = null === (t = T[e]) || void 0 === t ? void 0 : t.allowAnyViewerClips) && void 0 !== n && n
+            return null !== (n = null === (t = v[e]) || void 0 === t ? void 0 : t.allowAnyViewerClips) && void 0 !== n && n
         }
         hasClips() {
             return N.hasClips
@@ -231,11 +231,11 @@ function(e, t, n) {
             let {
                 clip: i
             } = e;
-            p = Math.max(p - 1, 0), v = {
+            p = Math.max(p - 1, 0), T = {
                 applicationName: i.applicationName,
                 ended: !1,
-                ...v,
-                newClipIds: [...null !== (t = null == v ? void 0 : v.newClipIds) && void 0 !== t ? t : [], i.id]
+                ...T,
+                newClipIds: [...null !== (t = null == T ? void 0 : T.newClipIds) && void 0 !== t ? t : [], i.id]
             }, N = {
                 ...N,
                 newClipIds: [...null !== (n = N.newClipIds) && void 0 !== n ? n : [], i.id]
@@ -301,7 +301,7 @@ function(e, t, n) {
                 i = null !== (s = null == e ? void 0 : e.name) && void 0 !== s ? s : i
             }
             if (null == i || "" === i) return !1;
-            v = {
+            T = {
                 applicationName: i,
                 newClipIds: [],
                 ended: !1
@@ -311,15 +311,15 @@ function(e, t, n) {
             let {
                 streamKey: t
             } = e;
-            if (A = null, C[t] = [], null == v || (0, o.decodeStreamKey)(t).ownerId !== l.default.getId()) return !1;
-            v = 0 === v.newClipIds.length ? null : {
-                ...v,
+            if (A = null, C[t] = [], null == T || (0, o.decodeStreamKey)(t).ownerId !== l.default.getId()) return !1;
+            T = 0 === T.newClipIds.length ? null : {
+                ...T,
                 ended: !0
             }
         },
         CLIPS_CLEAR_CLIPS_SESSION: function() {
-            if (null == v) return !1;
-            v = null
+            if (null == T) return !1;
+            T = null
         },
         CLIPS_CLEAR_NEW_CLIP_IDS: function() {
             N.newClipIds = []
@@ -346,7 +346,7 @@ function(e, t, n) {
                 }
         },
         RTC_CONNECTION_FLAGS: function(e) {
-            T[e.userId] = {
+            v[e.userId] = {
                 clipsEnabled: (0, u.hasFlag)(e.flags, _.VoiceFlags.CLIPS_ENABLED),
                 allowVoiceRecording: (0, u.hasFlag)(e.flags, _.VoiceFlags.ALLOW_VOICE_RECORDING),
                 allowAnyViewerClips: (0, u.hasFlag)(e.flags, _.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS)
@@ -377,7 +377,7 @@ function(e, t, n) {
                 applicationName: t
             } = e;
             if (I = null, !N.clipsSettings.clipsEnabled) return !1;
-            v = {
+            T = {
                 applicationName: t,
                 newClipIds: [],
                 ended: !1

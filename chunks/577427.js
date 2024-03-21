@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("686470"),
         p = n("102985"),
         S = n("251013"),
-        v = n("946749"),
-        T = n("535974"),
+        T = n("946749"),
+        v = n("535974"),
         I = n("352326"),
         A = n("718517"),
         C = n("117362"),
@@ -55,7 +55,7 @@ function(e, t, n) {
             [L.GameTableListKeys.ACTIONS]: null
         },
         G = (0, C.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.shouldShowInLibrary)),
-        F = (0, C.cachedFunction)(e => e.filter(e => null != e.libraryApplication && T.default.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
+        F = (0, C.cachedFunction)(e => e.filter(e => null != e.libraryApplication && v.default.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
         x = (0, C.cachedFunction)((e, t) => e.filter(e => s(t.toLowerCase(), e.application.name.toLowerCase()))),
         B = (0, C.cachedFunction)((e, t, n, i) => {
             let s = V[t];
@@ -88,27 +88,27 @@ function(e, t, n) {
                 let o = c.default.getApplication(e.id);
                 if (null == o) return null;
                 let u = Y(o, n);
-                if (t.add(e.id), !(0, N.isUserEntitledToLibraryApplication)(e) && !T.default.isInstalled(e.id, e.branchId)) return null;
+                if (t.add(e.id), !(0, N.isUserEntitledToLibraryApplication)(e) && !v.default.isInstalled(e.id, e.branchId)) return null;
                 return {
                     key: "".concat(e.id, "-").concat(e.branchId),
                     application: o,
                     libraryApplication: e,
                     lastPlayed: u,
-                    supportsCloudSync: null != e && T.default.supportsCloudSync(e.id, e.branchId),
+                    supportsCloudSync: null != e && v.default.supportsCloudSync(e.id, e.branchId),
                     isNew: (r = e, a = u, null != r && l(r.createdAt).isAfter(M) && 0 === a),
                     isLaunching: f.default.launchingGames.has(e.id),
                     isRunning: i.has(e.id),
                     isLaunchable: (0, D.isLaunchable)({
                         LibraryApplicationStore: m.default,
                         LaunchableGameStore: f.default,
-                        DispatchApplicationStore: T.default,
+                        DispatchApplicationStore: v.default,
                         ConnectedAppsStore: h.default,
                         applicationId: e.id,
                         branchId: e.branchId
                     }),
                     isUpdatingFlags: m.default.isUpdatingFlags(e.id, e.branchId),
                     shouldShowInLibrary: (0, N.shouldShowGameInLibrary)(o, e, p.default),
-                    defaultAction: (0, P.getDefaultLibraryApplicationAction)(e, T.default, I.default)
+                    defaultAction: (0, P.getDefaultLibraryApplicationAction)(e, v.default, I.default)
                 }
             })(i, n, t, e, !0)).filter(y.isNotNullish),
             o = i.map(i => (function(e, t, n, i) {
@@ -126,7 +126,7 @@ function(e, t, n) {
                     isLaunchable: (0, D.isLaunchable)({
                         LibraryApplicationStore: m.default,
                         LaunchableGameStore: f.default,
-                        DispatchApplicationStore: T.default,
+                        DispatchApplicationStore: v.default,
                         ConnectedAppsStore: h.default,
                         applicationId: e,
                         branchId: null
@@ -142,7 +142,7 @@ function(e, t, n) {
     }
     class j extends u.default.Store {
         initialize() {
-            this.syncWith([c.default, g.default, f.default, _.default, T.default, I.default, m.default, S.default, p.default, h.default], K, 200), this.syncWith([v.default, E.default], () => !0)
+            this.syncWith([c.default, g.default, f.default, _.default, v.default, I.default, m.default, S.default, p.default, h.default], K, 200), this.syncWith([T.default, E.default], () => !0)
         }
         get applicationFilterQuery() {
             return U
@@ -160,7 +160,7 @@ function(e, t, n) {
             return x(this.libraryApplicationViewItems, U)
         }
         get sortedFilteredLibraryApplicationViewItems() {
-            return B(this.filteredLibraryApplicationViewItems, v.default.sortKey, v.default.sortDirection, E.default.locale)
+            return B(this.filteredLibraryApplicationViewItems, T.default.sortKey, T.default.sortDirection, E.default.locale)
         }
         get hiddenLibraryApplicationViewItems() {
             return H(b)

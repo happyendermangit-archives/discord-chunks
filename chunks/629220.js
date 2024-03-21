@@ -11,13 +11,13 @@ function(e, t, n) {
             return I
         },
         bulkOptInChannels: function() {
-            return A
+            return T
         },
         setGuildOptIn: function() {
-            return G
+            return A
         },
         setIsFavorite: function() {
-            return T
+            return G
         },
         dimissFavoriteSuggestion: function() {
             return L
@@ -121,7 +121,7 @@ function(e, t, n) {
     }
     let I = (0, a.debounce)((e, t) => O(e, t), 1e3);
 
-    function A(e, t) {
+    function T(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             a = arguments.length > 3 ? arguments[3] : void 0;
         if (null == e) return;
@@ -154,7 +154,7 @@ function(e, t, n) {
         })
     }
 
-    function G(e, t, n) {
+    function A(e, t, n) {
         if (o.default.isFullServerPreview(e)) {
             (0, r.updateImpersonatedData)(e, {
                 optInEnabled: t
@@ -171,7 +171,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e, t, n, a) {
+    function G(e, t, n, a) {
         if (null == e || o.default.isFullServerPreview(e)) return;
         let l = c.default.getChannelIdFlags(e, t);
         !(0, p.hasFlag)(l, S.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && n && (l = (0, p.setFlag)(l, S.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)), d.default.updateChannelOverrideSettings(e, t, {

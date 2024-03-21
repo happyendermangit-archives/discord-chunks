@@ -35,7 +35,7 @@ function(e, t, n) {
             hasBanner: E,
             forProfileEffectModal: y,
             hasProfileEffect: g = !1
-        } = e, S = m[n], C = (0, o.useUID)(), _ = function(e) {
+        } = e, S = m[n], C = (0, o.useUID)(), T = function(e) {
             let {
                 profileType: t,
                 avatarSize: n,
@@ -116,15 +116,15 @@ function(e, t, n) {
             hasThemeColors: x,
             hasProfileEffect: g
         });
-        y && (_.bannerWidth = (0, u.cssValueToNumber)(a.default.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH));
-        let T = _.avatarSize / 2 + _.avatarBorderSize,
-            I = _.bannerHeight - _.offsetY;
+        y && (T.bannerWidth = (0, u.cssValueToNumber)(a.default.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH));
+        let _ = T.avatarSize / 2 + T.avatarBorderSize,
+            I = T.bannerHeight - T.offsetY;
         return (0, i.jsxs)("svg", {
             className: p.bannerSVGWrapper,
-            viewBox: "0 0 ".concat(_.bannerWidth, " ").concat(_.bannerHeight),
+            viewBox: "0 0 ".concat(T.bannerWidth, " ").concat(T.bannerHeight),
             style: {
-                minWidth: _.bannerWidth,
-                minHeight: _.bannerHeight
+                minWidth: T.bannerWidth,
+                minHeight: T.bannerHeight
             },
             children: [(0, i.jsxs)("mask", {
                 id: C,
@@ -136,9 +136,9 @@ function(e, t, n) {
                     height: "100%"
                 }), (0, i.jsx)("circle", {
                     fill: "black",
-                    cx: _.offsetX + T,
+                    cx: T.offsetX + _,
                     cy: I,
-                    r: T
+                    r: _
                 })]
             }), (0, i.jsx)("foreignObject", {
                 x: "0",

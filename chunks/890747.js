@@ -28,7 +28,7 @@ function(e, t, n) {
                 extraInfo: t,
                 mediaEngineState: l.default.getState()
             };
-            n = await a.default.post({
+            n = await a.HTTP.post({
                 url: u.Endpoints.DEBUG_LOGS(u.DebugLogCategory.RTC),
                 attachments: [...i.map(e => ({
                     name: e.name,

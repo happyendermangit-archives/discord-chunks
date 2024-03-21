@@ -26,8 +26,8 @@ function(e, t, n) {
             rowHeight: m,
             sectionMarginBottom: p,
             sectionHeaderHeight: S,
-            sectionFooterHeight: v,
-            listHeaderHeight: T,
+            sectionFooterHeight: T,
+            listHeaderHeight: v,
             stickyHeaders: I = !1,
             className: A,
             hideScrollbar: C = !1,
@@ -41,9 +41,9 @@ function(e, t, n) {
             null != t && (t.scrollTop = N)
         }, []);
         let w = s.useCallback(() => {
-                let e = "function" == typeof T ? T() : T;
+                let e = "function" == typeof v ? v() : v;
                 return null == e ? 0 : e
-            }, [T]),
+            }, [v]),
             k = s.useCallback((e, t, n) => "function" == typeof m ? m(n, {
                 sectionIndex: e,
                 sectionRowIndex: t
@@ -53,9 +53,9 @@ function(e, t, n) {
                 return null == t ? 0 : t
             }, [S]),
             G = s.useCallback(e => {
-                let t = "function" == typeof v ? v(e) : v;
+                let t = "function" == typeof T ? T(e) : T;
                 return null == t ? 0 : t
-            }, [v]),
+            }, [T]),
             F = s.useCallback(e => {
                 let t = "function" == typeof p ? p(e) : p;
                 return null == t ? 0 : t
@@ -263,9 +263,9 @@ function(e, t, n) {
                         else break;
                         l += i, m++, t++
                     }
-                    let v = o + E + l,
-                        T = v + h,
-                        A = T >= O && v <= e;
+                    let T = o + E + l,
+                        v = T + h,
+                        A = v >= O && T <= e;
                     null != f && A && r.push(f(s)), null != c ? i.push(c(s, r)) : i = [...i, ...r]
                 } else break
             }

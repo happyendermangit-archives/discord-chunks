@@ -112,7 +112,7 @@ function(e, t, n) {
                 S = I.default.getChannel(g.default.castMessageIdAsChannelId(n)),
                 h = await B(t, () => {
                     let e = null != n ? y.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n) : y.Endpoints.CHANNEL_THREADS(t.id);
-                    return o.default.post({
+                    return o.HTTP.post({
                         url: e,
                         body: {
                             name: N,
@@ -131,7 +131,7 @@ function(e, t, n) {
     }
 
     function U(e, t, n, i, l) {
-        return B(e, () => o.default.post({
+        return B(e, () => o.HTTP.post({
             url: y.Endpoints.CHANNEL_THREADS(e.id),
             body: {
                 name: t,
@@ -166,7 +166,7 @@ function(e, t, n) {
                         flags: 0 !== d ? d : void 0
                     }
                 },
-                C = await B(t, () => null != r && r.length > 0 ? s(A, E, r) : o.default.post({
+                C = await B(t, () => null != r && r.length > 0 ? s(A, E, r) : o.HTTP.post({
                     url: A,
                     body: E
                 }));

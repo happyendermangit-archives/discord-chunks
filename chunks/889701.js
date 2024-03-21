@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("552917"),
         S = n("917247"),
         C = n("845579"),
-        _ = n("697218"),
-        T = n("599110"),
+        T = n("697218"),
+        _ = n("599110"),
         I = n("159885"),
         v = n("570759"),
         N = n("866353"),
@@ -50,9 +50,9 @@ function(e, t, n) {
         W = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
         Y = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
         z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-        Z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-        J = Y + 2 * Z,
-        q = z + 2 * Z,
+        J = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+        Z = Y + 2 * J,
+        q = z + 2 * J,
         X = s(A.trackStickerSearchEmpty, 200),
         Q = s(A.trackStickerSearchResultsViewed, 200),
         $ = l.forwardRef(function(e, t) {
@@ -65,7 +65,7 @@ function(e, t, n) {
             } = e, {
                 location: z
             } = (0, c.useAnalyticsContext)(), {
-                AnalyticsLocationProvider: Z
+                AnalyticsLocationProvider: J
             } = (0, p.default)(f.default.STICKER_PICKER);
             (0, y.useMaybeFetchPremiumLikelihood)(g.default);
             let $ = (null === (a = (0, S.usePremiumTrialOffer)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
@@ -89,7 +89,7 @@ function(e, t, n) {
                 }),
                 ed = C.StickerPickerCollapsedSections.useSetting(),
                 ec = l.useMemo(() => new Set(ed), [ed]),
-                ef = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
+                ef = (0, o.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
                 ep = l.useMemo(() => (0, D.getFilteredStickers)(el, ef, u), [el, ef, u]),
                 em = (0, O.useFavoriteStickers)(),
                 eh = (0, O.useLatestFrecentStickers)(),
@@ -104,8 +104,8 @@ function(e, t, n) {
                 }, [I, el, eg]),
                 eC = null != eu && eu > H,
                 {
-                    rowCount: e_,
-                    rowCountBySection: eT,
+                    rowCount: eT,
+                    rowCountBySection: e_,
                     stickersGrid: eI,
                     gutterWidth: ev,
                     columnCounts: eN
@@ -116,7 +116,7 @@ function(e, t, n) {
                     listWidth: eu,
                     listPaddingRight: V,
                     stickerNodeMargin: eC ? K : W,
-                    stickerNodeWidth: eC ? J : q
+                    stickerNodeWidth: eC ? Z : q
                 }),
                 eA = l.useCallback((e, t) => {
                     let {
@@ -124,7 +124,7 @@ function(e, t, n) {
                     } = t;
                     switch (e.type) {
                         case M.StickerGridItemTypes.CREATE_STICKER:
-                            T.default.track(F.AnalyticEvents.OPEN_MODAL, {
+                            _.default.track(F.AnalyticEvents.OPEN_MODAL, {
                                 type: F.AnalyticsSections.CREATE_STICKER_MODAL,
                                 location: z
                             }), (0, d.openModalLazy)(async () => {
@@ -184,11 +184,11 @@ function(e, t, n) {
                 null === (e = en.current) || void 0 === e || e.focus()
             }, []);
             let eb = l.useCallback(() => {
-                Y(), T.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                Y(), _.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                     location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
                 }), (0, E.navigateToPremiumMarketingPage)()
             }, [Y]);
-            return (0, i.jsxs)(Z, {
+            return (0, i.jsxs)(J, {
                 children: [!($ && eo) && (0, i.jsx)("div", {
                     className: G.header,
                     children: (0, i.jsx)(j.default, {
@@ -216,8 +216,8 @@ function(e, t, n) {
                             gutterWidth: ev,
                             isUsingKeyboardNavigation: eL,
                             onSelectSticker: eS,
-                            rowCount: e_,
-                            rowCountBySection: eT,
+                            rowCount: eT,
+                            rowCountBySection: e_,
                             stickersCategories: er,
                             stickersGrid: eI,
                             channel: u

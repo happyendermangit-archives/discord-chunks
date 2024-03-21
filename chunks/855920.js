@@ -45,7 +45,7 @@ function(e, t, n) {
                 position: a,
                 shouldShow: !f,
                 onTooltipShow: () => {
-                    r && _({
+                    r && T({
                         emojiNode: n,
                         isCustomEmoji: !1
                     })
@@ -85,7 +85,7 @@ function(e, t, n) {
                 isInteracting: n,
                 tooltipPosition: a = h.EXPRESSION_TOOLTIP_PROPS.position,
                 enableClick: d = !0
-            } = e, [y, S] = l.useState(String(Date.now())), [C, T] = l.useState(!1), [I, v] = l.useState(!1), {
+            } = e, [y, S] = l.useState(String(Date.now())), [C, _] = l.useState(!1), [I, v] = l.useState(!1), {
                 enabled: N
             } = f.NitroBadgeOnEmojiHoverExperiment.useExperiment({
                 location: "MessageCustomEmoji"
@@ -106,7 +106,7 @@ function(e, t, n) {
                 position: a,
                 shouldShow: !I,
                 onTooltipShow: () => {
-                    T(!0), d && (_({
+                    _(!0), d && (T({
                         emojiNode: t,
                         isCustomEmoji: !0,
                         nonce: O
@@ -120,12 +120,12 @@ function(e, t, n) {
                     },
                     onClick: t => {
                         var n;
-                        T(!1), v(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+                        _(!1), v(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
                     },
                     onMouseLeave: () => {
                         C && (p.default.track(x.AnalyticEvents.CLOSE_POPOUT, {
                             nonce: O
-                        }), T(!1))
+                        }), _(!1))
                     },
                     tag: "span",
                     className: s(g.emojiContainer, {
@@ -140,7 +140,7 @@ function(e, t, n) {
                 onRequestClose: () => {
                     p.default.track(x.AnalyticEvents.CLOSE_POPOUT, {
                         nonce: O
-                    }), T(!1), v(!1)
+                    }), _(!1), v(!1)
                 },
                 autoInvert: !0,
                 nudgeAlignIntoViewport: !0,
@@ -155,7 +155,7 @@ function(e, t, n) {
                 children: R
             }) : R()
         },
-        _ = e => {
+        T = e => {
             let {
                 emojiNode: t,
                 isCustomEmoji: n,

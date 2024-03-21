@@ -5,7 +5,7 @@ function(e, t, n) {
             return S
         },
         useSingleSelect: function() {
-            return v
+            return T
         },
         Combobox: function() {
             return A
@@ -44,21 +44,21 @@ function(e, t, n) {
         return [t, i]
     }
 
-    function v(e) {
+    function T(e) {
         let [t, n] = s.useState(() => new Set(null != e ? [e] : void 0)), i = s.useCallback(e => {
             n(new Set([e]))
         }, []);
         return [t, i]
     }
 
-    function T(e) {
+    function v(e) {
         return String(e)
     }
     let I = s.createContext({
         activeDescendant: null,
         selected: new Set,
         setSelected: () => null,
-        itemToString: T
+        itemToString: v
     });
 
     function A(e) {
@@ -71,9 +71,9 @@ function(e, t, n) {
             listClassName: E,
             "aria-label": p,
             multiSelect: S = !1,
-            autoFocus: v = !1,
+            autoFocus: T = !1,
             maxVisibleItems: A = 5,
-            itemToString: C = T,
+            itemToString: C = v,
             showScrollbar: y = !1
         } = e, [N, R] = s.useState(""), [O] = s.useState(!0), [D, P] = s.useState(null), L = s.useId(), M = s.useRef(null);
         s.useLayoutEffect(() => {
@@ -137,7 +137,7 @@ function(e, t, n) {
                         "aria-haspopup": "listbox",
                         className: a(g.combobox, u),
                         children: [(0, i.jsx)(f.default, {
-                            autoFocus: v,
+                            autoFocus: T,
                             size: f.default.Sizes.MEDIUM,
                             placeholder: t,
                             query: N,
@@ -214,20 +214,20 @@ function(e, t, n) {
             selected: f,
             setSelected: E,
             itemToString: h
-        } = s.useContext(I), S = h(n), v = _ === S, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : f.has(n), A = (0, o.useListItem)(S);
+        } = s.useContext(I), S = h(n), T = _ === S, v = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : f.has(n), A = (0, o.useListItem)(S);
         return (0, i.jsx)(u.Clickable, {
             tag: "li",
             id: S,
             onClick: () => l ? null : E(n),
             [m]: n,
             className: a(g.item, {
-                [g.focused]: v,
-                [d]: T,
+                [g.focused]: T,
+                [d]: v,
                 [g.disabled]: l
             }),
             ...A,
             role: "option",
-            "aria-selected": T,
+            "aria-selected": v,
             "aria-disabled": l,
             children: (0, i.jsx)(C.Provider, {
                 value: n,

@@ -12,7 +12,7 @@ function(e, t, n) {
         o = n("49111");
 
     function l(e) {
-        i.default.get({
+        i.HTTP.get({
             url: o.Endpoints.GUILD_INTEGRATIONS(e),
             query: {
                 include_applications: !0,

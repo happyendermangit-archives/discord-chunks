@@ -379,7 +379,7 @@ function(e, _, E) {
             l.isPlatformEmbedded && null != c.remoteApp.relaunch && c.remoteApp.relaunch()
         },
         makeChunkedRequest(e, _, E) {
-            let t = "".concat(O.default.getAPIBaseURL()).concat(e);
+            let t = "".concat((0, O.getAPIBaseURL)()).concat(e);
             if (!l.isPlatformEmbedded) return Promise.reject(Error("Not embedded!"));
             if (null == c.http) return Promise.reject(Error("HTTP module not available"));
             let {

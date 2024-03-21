@@ -119,7 +119,7 @@ function(e, t, n) {
             return ei
         }
     }), n("222007");
-    var i, s, r, a, o, l, u, d, c, _, f, E, h, g, m, p, S, v, T, I, A = n("798609"),
+    var i, s, r, a, o, l, u, d, c, _, f, E, h, g, m, p, S, T, v, I, A = n("798609"),
         C = n("49111");
     let y = 160,
         N = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
@@ -154,7 +154,7 @@ function(e, t, n) {
     let Z = "activity-shelf",
         J = new Set(["755600276941176913", D, P, k, "1010174316991762534", z]),
         $ = new Set([D, P, k]);
-    (v = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", v.GDM_ACTIVITIES = "GDM_ACTIVITIES", v.PUTT_PARTY = "PUTT_PARTY", v.JAMSPACE_OLD = "JAMSPACE", v.JAMSPACE = "JAMSPACE2", v.POKER = "POKER", v.FREE = "FREE", (T = c || (c = {}))[T.PORTRAIT = 0] = "PORTRAIT", T[T.LANDSCAPE = 1] = "LANDSCAPE", (I = _ || (_ = {}))[I.FOCUSED = 0] = "FOCUSED", I[I.PIP = 1] = "PIP", I[I.GRID = 2] = "GRID";
+    (T = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", T.GDM_ACTIVITIES = "GDM_ACTIVITIES", T.PUTT_PARTY = "PUTT_PARTY", T.JAMSPACE_OLD = "JAMSPACE", T.JAMSPACE = "JAMSPACE2", T.POKER = "POKER", T.FREE = "FREE", (v = c || (c = {}))[v.PORTRAIT = 0] = "PORTRAIT", v[v.LANDSCAPE = 1] = "LANDSCAPE", (I = _ || (_ = {}))[I.FOCUSED = 0] = "FOCUSED", I[I.PIP = 1] = "PIP", I[I.GRID = 2] = "GRID";
     let ee = {
             label_type: A.EmbeddedActivityLabelTypes.NONE,
             release_phase: "",

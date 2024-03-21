@@ -21,8 +21,8 @@ function(e, t, n) {
         m = n("773336"),
         p = n("373469"),
         S = n("271938"),
-        v = n("42203"),
-        T = n("42887"),
+        T = n("42203"),
+        v = n("42887"),
         I = n("824563"),
         A = n("945956"),
         C = n("49111"),
@@ -63,7 +63,7 @@ function(e, t, n) {
     }
     class k extends u.default.Store {
         getActiveStreamKey() {
-            return (0, g.default)(T.default) ? s : null
+            return (0, g.default)(v.default) ? s : null
         }
         getAllActiveStreamKeys() {
             return Object.keys(L)
@@ -72,7 +72,7 @@ function(e, t, n) {
             return L[e]
         }
         getStatsHistory(e, t, n) {
-            if (!(0, g.default)(T.default) || null == t) return null;
+            if (!(0, g.default)(v.default) || null == t) return null;
             if (n) {
                 let n = p.default.getActiveStreamForUser(t, e);
                 if (null == n || 0 === p.default.getViewerIds(n).length) return null
@@ -103,7 +103,7 @@ function(e, t, n) {
             }(e.rtp.inbound[t]))
         }
         getQuality() {
-            if (!(0, g.default)(T.default)) return C.RTCConnectionQuality.UNKNOWN;
+            if (!(0, g.default)(v.default)) return C.RTCConnectionQuality.UNKNOWN;
             let e = this.getActiveStreamKey(),
                 t = null != e ? L[e] : null;
             return null != t ? t.quality : C.RTCConnectionQuality.UNKNOWN
@@ -143,7 +143,7 @@ function(e, t, n) {
         }
     }
     k.displayName = "StreamRTCConnectionStore";
-    var V = new k(c.default, !T.default.isSupported() || __OVERLAY__ ? {} : {
+    var V = new k(c.default, !v.default.isSupported() || __OVERLAY__ ? {} : {
         CONNECTION_OPEN: function(e) {
             i = e.sessionId, s = null, b()
         },
@@ -211,7 +211,7 @@ function(e, t, n) {
                 null == O[t] && (R[t] = null);
                 let e = (0, E.decodeStreamKey)(t);
                 null == R[t] && null == D[t] && (R[t] = (0, h.getStreamerApplication)(e, I.default));
-                let s = v.default.getChannel(e.channelId),
+                let s = T.default.getChannel(e.channelId),
                     d = null != s && s.isBroadcastChannel(),
                     g = new f.StreamRTCAnalyticsContext({
                         streamRegion: r,
@@ -241,7 +241,7 @@ function(e, t, n) {
                     parentMediaSessionId: A.default.getMediaSessionId()
                 }), L[t] = l
             }
-            M = [], T.default.getMediaEngine().on(d.MediaEngineEvent.ConnectionStats, U)
+            M = [], v.default.getMediaEngine().on(d.MediaEngineEvent.ConnectionStats, U)
         },
         STREAM_SERVER_UPDATE: function(e) {
             let t = L[e.streamKey];
@@ -262,7 +262,7 @@ function(e, t, n) {
                 streamKey: t
             } = e, n = L[t];
             if (null == n) return !1;
-            t === s && (s = null, T.default.getMediaEngine().off(d.MediaEngineEvent.ConnectionStats, U)), n.destroy("stream-end"), delete L[t]
+            t === s && (s = null, v.default.getMediaEngine().off(d.MediaEngineEvent.ConnectionStats, U)), n.destroy("stream-end"), delete L[t]
         },
         STREAM_STATS_UPDATE: function(e) {
             let {

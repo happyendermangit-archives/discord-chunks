@@ -96,7 +96,7 @@ function(e, t, n) {
             async setAccountFlag(e, t) {
                 let n = s.default.accountNotificationSettings.flags,
                     l = (0, r.setFlag)(n, e, t);
-                await a.default.patch({
+                await a.HTTP.patch({
                     url: f.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
                     body: {
                         flags: l

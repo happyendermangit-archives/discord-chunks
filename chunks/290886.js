@@ -55,8 +55,8 @@ function(e, t, n) {
         if (null == t || __OVERLAY__ || e === E.ME || e === E.FAVORITES) return !1;
         if (d) return g(t);
         let S = i && (0, a.isGuildOnboardingSettingsAvailable)(e) && t.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(E.GuildFeatures.GUILD_SERVER_GUIDE),
-            v = s.some(s.values(p), e => e.hasFlag(h.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL));
-        return !(!m && !v) && (n && t.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(E.GuildFeatures.GUILD_SERVER_GUIDE) || S) && t.hasFeature(E.GuildFeatures.COMMUNITY)
+            T = s.some(s.values(p), e => e.hasFlag(h.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL));
+        return !(!m && !T) && (n && t.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(E.GuildFeatures.GUILD_SERVER_GUIDE) || S) && t.hasFeature(E.GuildFeatures.COMMUNITY)
     }
 
     function p(e) {

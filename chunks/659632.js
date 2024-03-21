@@ -71,10 +71,10 @@ function(e, t, n) {
         m = n("271560"),
         p = n("49111"),
         S = n("646718"),
-        v = n("782340");
-    let T = g.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
+        T = n("782340");
+    let v = g.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
         I = ["discordapp.com/gifts", "discord.com/gifts"].map(e => g.default.escape(e)),
-        A = [T, ...I].join("|"),
+        A = [v, ...I].join("|"),
         C = RegExp("(?: |^|https?://)(?:".concat(A, ")/([a-z0-9-]+)"), "gi"),
         y = ["discord.com/billing/promotions", "promos.discord.gg"].map(e => g.default.escape(e)),
         N = [...y].join("|"),
@@ -168,34 +168,34 @@ function(e, t, n) {
     function j(e, t, n) {
         switch (e) {
             case p.GiftCodeModalStates.ERROR:
-                return v.default.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
+                return T.default.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
             case p.GiftCodeModalStates.SUCCESS:
-                return t.isSubscription ? v.default.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS_NITRO.format({
+                return t.isSubscription ? T.default.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS_NITRO.format({
                     skuName: n.name
-                }) : v.default.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS;
+                }) : T.default.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS;
             case p.GiftCodeModalStates.CONFIRM:
             default:
-                return t.isSubscription ? v.default.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM_NITRO.format({
+                return t.isSubscription ? T.default.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM_NITRO.format({
                     skuName: n.name
-                }) : v.default.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM
+                }) : T.default.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM
         }
     }
 
     function W(e, t, n) {
         switch (e) {
             case p.GiftCodeModalStates.ERROR:
-                return v.default.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
+                return T.default.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
             case p.GiftCodeModalStates.SUCCESS:
-                if (__OVERLAY__) return v.default.Messages.GIFT_CONFIRMATION_BUTTON_NOICE;
-                if (t.isSubscription) return v.default.Messages.GIFT_CONFIRMATION_BUTTON_SUBSCRIPTION_SUCCESS;
-                return v.default.Messages.GIFT_CONFIRMATION_BUTTON_GO_TO_LIBRARY;
+                if (__OVERLAY__) return T.default.Messages.GIFT_CONFIRMATION_BUTTON_NOICE;
+                if (t.isSubscription) return T.default.Messages.GIFT_CONFIRMATION_BUTTON_SUBSCRIPTION_SUCCESS;
+                return T.default.Messages.GIFT_CONFIRMATION_BUTTON_GO_TO_LIBRARY;
             case p.GiftCodeModalStates.OPEN:
-                return v.default.Messages.GIFT_OPEN_PROMPT;
+                return T.default.Messages.GIFT_OPEN_PROMPT;
             case p.GiftCodeModalStates.CONFIRM:
             default:
-                if (null != n && n) return v.default.Messages.GIFT_CODE_AUTH_ACCEPT;
-                if (null != t.giftStyle) return t.isClaimed ? v.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM : v.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_MOBILE;
-                return t.isSubscription ? v.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_SUBSCRIPTION : v.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM
+                if (null != n && n) return T.default.Messages.GIFT_CODE_AUTH_ACCEPT;
+                if (null != t.giftStyle) return t.isClaimed ? T.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM : T.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_MOBILE;
+                return t.isSubscription ? T.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_SUBSCRIPTION : T.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM
         }
     }
 
@@ -219,45 +219,45 @@ function(e, t, n) {
                     return d = u, (0, r.match)(d).with({
                         interval: S.SubscriptionIntervalTypes.MONTH,
                         premiumSubscriptionType: S.PremiumTypes.TIER_2
-                    }, () => v.default.Messages.PREMIUM_FEATURES_TIER_2.format({
-                        timeInterval: v.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
+                    }, () => T.default.Messages.PREMIUM_FEATURES_TIER_2.format({
+                        timeInterval: T.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
                     })).with({
                         interval: S.SubscriptionIntervalTypes.YEAR,
                         premiumSubscriptionType: S.PremiumTypes.TIER_2
-                    }, () => v.default.Messages.PREMIUM_FEATURES_TIER_2.format({
-                        timeInterval: v.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
+                    }, () => T.default.Messages.PREMIUM_FEATURES_TIER_2.format({
+                        timeInterval: T.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
                     })).with({
                         interval: S.SubscriptionIntervalTypes.MONTH,
                         premiumSubscriptionType: S.PremiumTypes.TIER_1
-                    }, () => v.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_MONTHLY.format({
+                    }, () => T.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_MONTHLY.format({
                         intervalCount: d.intervalCount
                     })).with({
                         interval: S.SubscriptionIntervalTypes.YEAR,
                         premiumSubscriptionType: S.PremiumTypes.TIER_1
-                    }, () => v.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_YEARLY.format({
+                    }, () => T.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_YEARLY.format({
                         intervalCount: d.intervalCount
-                    })).otherwise(() => v.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_GENERIC)
+                    })).otherwise(() => T.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_GENERIC)
                 }
-                return v.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS.format({
+                return T.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS.format({
                     skuName: n.name
                 });
             case p.GiftCodeModalStates.CONFIRM:
             default:
                 if (null != u) {
-                    let e = u.interval === S.SubscriptionIntervalTypes.MONTH ? v.default.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_MONTHLY_CONFIRM : v.default.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_YEARLY_CONFIRM;
+                    let e = u.interval === S.SubscriptionIntervalTypes.MONTH ? T.default.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_MONTHLY_CONFIRM : T.default.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_YEARLY_CONFIRM;
                     return e.format({
                         skuName: n.name,
                         intervalCount: u.intervalCount
                     })
                 }
-                return v.default.Messages.GIFT_CONFIRMATION_BODY_CONFIRM.format({
+                return T.default.Messages.GIFT_CONFIRMATION_BODY_CONFIRM.format({
                     skuName: n.name
                 })
         }
     }
 
     function q(e, t, n, i, s) {
-        let r = v.default.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
+        let r = T.default.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
             onGoToLibrary: s
         });
         if (null != (n || i ? void 0 : e)) return r;
@@ -266,27 +266,27 @@ function(e, t, n) {
         return function(e, t) {
             switch (e.code) {
                 case p.AbortCodes.INVALID_GIFT_SELF_REDEMPTION:
-                    return v.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT;
+                    return T.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT;
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-                    return v.default.Messages.GIFT_CONFIRMATION_BODY_CLAIMED;
+                    return T.default.Messages.GIFT_CONFIRMATION_BODY_CLAIMED;
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED:
-                    return v.default.Messages.GIFT_ERROR_OWNED;
+                    return T.default.Messages.GIFT_ERROR_OWNED;
                 case p.AbortCodes.UNKNOWN_GIFT_CODE:
-                    return v.default.Messages.GIFT_CONFIRMATION_BODY_INVALID;
+                    return T.default.Messages.GIFT_CONFIRMATION_BODY_INVALID;
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-                    return v.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
-                        planName: (0, h.isPremiumExactly)(t, S.PremiumTypes.TIER_2) ? v.default.Messages.PREMIUM_TIER_2 : v.default.Messages.PREMIUM_TIER_1
+                    return T.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
+                        planName: (0, h.isPremiumExactly)(t, S.PremiumTypes.TIER_2) ? T.default.Messages.PREMIUM_TIER_2 : T.default.Messages.PREMIUM_TIER_1
                     });
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
-                    return v.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;
+                    return T.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
-                    return v.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_INVOICE_OPEN;
+                    return T.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_INVOICE_OPEN;
                 case p.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
-                    return v.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT;
+                    return T.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT;
                 case p.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
-                    return v.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID;
+                    return T.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID;
                 default:
-                    return v.default.Messages.GIFT_CONFIRMATION_BODY_UNKNOWN_ERROR
+                    return T.default.Messages.GIFT_CONFIRMATION_BODY_UNKNOWN_ERROR
             }
         }(t, a)
     }

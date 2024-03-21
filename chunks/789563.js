@@ -25,8 +25,8 @@ function(e, t, n) {
         m = n("49111");
     let p = "scientist:triggered",
         S = "exerimentOverrides",
-        v = "userExperimentOverrides",
-        T = "guildExperimentOverrides",
+        T = "userExperimentOverrides",
+        v = "guildExperimentOverrides",
         I = new c.default("ExperimentStore"),
         A = !1,
         C = {},
@@ -284,7 +284,7 @@ function(e, t, n) {
         let {
             isSwitchingAccount: t
         } = e;
-        u.default.remove(p), !t && (u.default.remove(S), u.default.remove(v), u.default.remove(T), L = {}, M = {}), O = {}, N = [], C = {}, A = !1
+        u.default.remove(p), !t && (u.default.remove(S), u.default.remove(T), u.default.remove(v), L = {}, M = {}), O = {}, N = [], C = {}, A = !1
     }
 
     function ee() {
@@ -293,7 +293,7 @@ function(e, t, n) {
 
     function et() {
         try {
-            u.default.set(v, L)
+            u.default.set(T, L)
         } catch (e) {
             I.error("Error saving user experiment overrides, unsaved data will be lost", e), E.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
@@ -301,7 +301,7 @@ function(e, t, n) {
             })
         }
         try {
-            u.default.set(T, M)
+            u.default.set(v, M)
         } catch (e) {
             I.error("Error saving guild experiment overrides, unsaved data will be lost", e), E.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
@@ -418,7 +418,7 @@ function(e, t, n) {
                 return i && en(t), t
             }(), ! function() {
                 var e, t, n;
-                let i = [null !== (e = u.default.get(S)) && void 0 !== e ? e : {}, null !== (t = u.default.get(v)) && void 0 !== t ? t : {}, null !== (n = u.default.get(T)) && void 0 !== n ? n : {}];
+                let i = [null !== (e = u.default.get(S)) && void 0 !== e ? e : {}, null !== (t = u.default.get(T)) && void 0 !== t ? t : {}, null !== (n = u.default.get(v)) && void 0 !== n ? n : {}];
                 L = {}, M = {};
                 let s = !a.isEmpty(i[0]);
                 for (let e of i)

@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("590401"),
         p = n("18494"),
         S = n("101125"),
-        v = n("205817"),
-        T = n("773336"),
+        T = n("205817"),
+        v = n("773336"),
         I = n("41642"),
         A = n("518916"),
         C = n("571420"),
@@ -124,7 +124,7 @@ function(e, t, n) {
             return A.localVoiceState.update({
                 guildId: e.guildId,
                 channelId: e.channelId
-            }), (0, T.isIOS)() && null == e.channelId && b === N.AppStates.BACKGROUND && A.socket.close(!0), !1
+            }), (0, v.isIOS)() && null == e.channelId && b === N.AppStates.BACKGROUND && A.socket.close(!0), !1
         },
         VOICE_STATE_UPDATES: function(e) {
             let {
@@ -171,7 +171,7 @@ function(e, t, n) {
             })
         },
         APP_STATE_UPDATE: function(e) {
-            return (0, T.isIOS)() ? (c.default.isAuthenticated() && (b === N.AppStates.INACTIVE && e.state === N.AppStates.BACKGROUND && null == A.localVoiceState.channelId ? A.socket.close(!0) : b === N.AppStates.BACKGROUND && e.state === N.AppStates.ACTIVE && (C.setIsPaused(!1), A.socket.connect())), b = e.state) : e.state === N.AppStates.ACTIVE && (C.setIsPaused(!1), c.default.isAuthenticated() && A.socket.resetBackoff("App state is active")), !1
+            return (0, v.isIOS)() ? (c.default.isAuthenticated() && (b === N.AppStates.INACTIVE && e.state === N.AppStates.BACKGROUND && null == A.localVoiceState.channelId ? A.socket.close(!0) : b === N.AppStates.BACKGROUND && e.state === N.AppStates.ACTIVE && (C.setIsPaused(!1), A.socket.connect())), b = e.state) : e.state === N.AppStates.ACTIVE && (C.setIsPaused(!1), c.default.isAuthenticated() && A.socket.resetBackoff("App state is active")), !1
         },
         GUILD_MEMBERS_REQUEST: function(e) {
             return A.socket.isSessionEstablished() && ("userIds" in e ? s(e.userIds).chunk(100).forEach(t => {
@@ -253,9 +253,9 @@ function(e, t, n) {
             } = e;
             return A.socket.isSessionEstablished() && (n || ! function() {
                 let e = function() {
-                    return v.default.getAllActiveStreamKeys().find(e => (0, u.decodeStreamKey)(e).ownerId === c.default.getId())
+                    return T.default.getAllActiveStreamKeys().find(e => (0, u.decodeStreamKey)(e).ownerId === c.default.getId())
                 }();
-                v.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => F(e))
+                T.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => F(e))
             }(), A.socket.streamWatch(t)), !1
         },
         STREAM_STOP: function(e) {

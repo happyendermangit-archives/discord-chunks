@@ -9,7 +9,7 @@ function(e, t, n) {
         l = n("49111"),
         a = {
             updateNote(e, t) {
-                i.default.put({
+                i.HTTP.put({
                     url: l.Endpoints.NOTE(e),
                     body: {
                         note: t

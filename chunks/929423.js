@@ -77,7 +77,7 @@ function(e, t, n) {
             avatar_decoration_sku_id: null === _ ? null : null == _ ? void 0 : _.skuId
         };
         try {
-            let t = await i.default.patch({
+            let t = await i.HTTP.patch({
                 url: o.Endpoints.SET_GUILD_MEMBER(e),
                 body: l,
                 oldFormErrors: !0

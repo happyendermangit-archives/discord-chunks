@@ -36,8 +36,8 @@ function(e, t, n) {
             [n.id]: u.fromServerRole(n)
         }, E[t] = i
     }
-    let v = Object.freeze({});
-    class T extends s.default.Store {
+    let T = Object.freeze({});
+    class v extends s.default.Store {
         getGuild(e) {
             if (null != e) return e === _.FAVORITES ? f.FAVORITES_GUILD_RECORD : h[e]
         }
@@ -61,21 +61,21 @@ function(e, t, n) {
         }
         getRoles(e) {
             var t;
-            return null !== (t = E[e]) && void 0 !== t ? t : v
+            return null !== (t = E[e]) && void 0 !== t ? t : T
         }
         getRole(e, t) {
             var n;
             return null === (n = E[e]) || void 0 === n ? void 0 : n[t]
         }
     }
-    T.displayName = "GuildStore";
-    var I = new T(a.default, {
+    v.displayName = "GuildStore";
+    var I = new v(a.default, {
         BACKGROUND_SYNC: function(e) {
             for (let n of e.guilds) {
                 var t;
                 let e = h[n.id];
                 if (null == e || "unavailable" === n.data_mode) return;
-                h[n.id] = l.fromBackgroundSync(n, e), E[n.id] = "partial" === n.data_mode ? l.filterRoleDeletes(n.id, null !== (t = E[n.id]) && void 0 !== t ? t : v, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : u.sortServerRoles(n.id, n.roles)
+                h[n.id] = l.fromBackgroundSync(n, e), E[n.id] = "partial" === n.data_mode ? l.filterRoleDeletes(n.id, null !== (t = E[n.id]) && void 0 !== t ? t : T, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : u.sortServerRoles(n.id, n.roles)
             }
             i = Object.keys(h).length
         },

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     }), n("424973"), n("222007");
     var i = n("917351"),
@@ -50,7 +50,7 @@ function(e, t, n) {
             autoTrackExposure: !1
         }).canSeeFrequentlyPlayed
     }
-    class _ extends r.default.PersistedStore {
+    class T extends r.default.PersistedStore {
         initialize(e) {
             this.waitFor(c.default, p.default), (null == e ? void 0 : e.recentlyHeardCache) != null && y.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (E = e.playedEventsPendingFlush), this.syncWith([d.default], S)
         }
@@ -73,8 +73,8 @@ function(e, t, n) {
             return g.frequently
         }
     }
-    _.displayName = "SoundboardEventStore", _.persistKey = "SoundboardEventStore";
-    var T = new _(o.default, {
+    T.displayName = "SoundboardEventStore", T.persistKey = "SoundboardEventStore";
+    var _ = new T(o.default, {
         GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function(e) {
             let {
                 sound: t,

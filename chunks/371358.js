@@ -26,7 +26,7 @@ function(e, t, n) {
             return S
         },
         createSubscriptionListing: function() {
-            return T
+            return v
         },
         updateSubscriptionListing: function() {
             return I
@@ -127,7 +127,7 @@ function(e, t, n) {
             subscriptionTrial: i
         })
     }
-    async function v(e, t) {
+    async function T(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             i = await d.getGuildRoleSubscriptionGroupListing(e, t, n);
         return s.default.dispatch({
@@ -135,7 +135,7 @@ function(e, t, n) {
             listing: i
         }), i
     }
-    async function T(e) {
+    async function v(e) {
         let {
             guildId: t,
             groupListingId: n,
@@ -149,7 +149,7 @@ function(e, t, n) {
             template_name: r.templateCategory,
             has_change_from_template: r.hasChangeFromTemplate,
             ...(0, o.collectGuildAnalyticsMetadata)(t)
-        }), await v(t, n, {
+        }), await T(t, n, {
             includeArchivedListings: !0
         }), null == a || a(u), s.default.dispatch({
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
@@ -166,7 +166,7 @@ function(e, t, n) {
         return s.default.dispatch({
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
             listing: a
-        }), await v(t, i, {
+        }), await T(t, i, {
             includeArchivedListings: !0
         }), a
     }

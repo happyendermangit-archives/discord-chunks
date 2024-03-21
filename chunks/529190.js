@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("507217"),
         S = n("240249"),
         C = n("972620"),
-        _ = n("524768"),
-        T = n("389153"),
+        T = n("524768"),
+        _ = n("389153"),
         I = n("586450"),
         v = n("41884"),
         N = n("355263"),
@@ -54,7 +54,7 @@ function(e, t, n) {
             commands: W,
             filteredSectionId: Y,
             scrollDown: z,
-            filterSection: Z
+            filterSection: J
         } = S.useDiscovery(n, {
             commandType: d.ApplicationCommandType.CHAT,
             builtIns: a ? C.BuiltInCommandFilter.ONLY_TEXT : C.BuiltInCommandFilter.ALLOW,
@@ -63,7 +63,7 @@ function(e, t, n) {
             placeholderCount: 7,
             limit: A.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
-        }), J = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
+        }), Z = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: G,
             isScrolling: r,
             listRef: D,
@@ -79,7 +79,7 @@ function(e, t, n) {
         }), q = e => {
             let t = B.length,
                 n = V.reduce((e, t) => e + t.data.length, 0) - (K ? 7 : 0);
-            K && e + 420 > 48 * t + 56 * n - 512 && z(), J(e), P(), o.current = e
+            K && e + 420 > 48 * t + 56 * n - 512 && z(), Z(e), P(), o.current = e
         };
         l.useEffect(() => {
             q(o.current)
@@ -100,15 +100,15 @@ function(e, t, n) {
         let $ = l.useCallback(e => {
                 if (e.id === Y || e.id === A.BuiltInSectionId.FRECENCY) {
                     var t;
-                    Z(null), null === (t = D.current) || void 0 === t || t.scrollToSectionTop(0)
-                } else Z(e.id)
-            }, [Z, Y]),
+                    J(null), null === (t = D.current) || void 0 === t || t.scrollToSectionTop(0)
+                } else J(e.id)
+            }, [J, Y]),
             ee = l.useCallback((e, t, i) => {
                 g.setActiveCommand({
                     channelId: n.id,
                     command: e,
                     section: t,
-                    location: _.ApplicationCommandTriggerLocations.DISCOVERY,
+                    location: T.ApplicationCommandTriggerLocations.DISCOVERY,
                     triggerSection: i
                 })
             }, [n.id]);
@@ -122,7 +122,7 @@ function(e, t, n) {
                     if (t = n, b < (n += e.data.length)) {
                         let n = e.data[b - t],
                             i = H.find(e => e.id === n.applicationId);
-                        ee(n, i, (0, T.getCommandTriggerSection)(e.section));
+                        ee(n, i, (0, _.getCommandTriggerSection)(e.section));
                         break
                     } return !0
             },
@@ -177,7 +177,7 @@ function(e, t, n) {
                 let a = V[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     r = "".concat(a.section.id, ":").concat(null !== (l = null == s ? void 0 : s.id) && void 0 !== l ? l : e);
-                if (null == s || a.section.id !== s.applicationId && a.section.id !== A.BuiltInSectionId.FRECENCY || s.inputType === _.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
+                if (null == s || a.section.id !== s.applicationId && a.section.id !== A.BuiltInSectionId.FRECENCY || s.inputType === T.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
                 let o = H.find(e => e.id === s.applicationId);
                 return (0, i.jsx)(x.default.NewCommand, {
                     index: e,
@@ -187,7 +187,7 @@ function(e, t, n) {
                     selected: b === e,
                     showImage: a.section.id !== s.applicationId,
                     section: o,
-                    onClick: () => ee(s, o, (0, T.getCommandTriggerSection)(a.section)),
+                    onClick: () => ee(s, o, (0, _.getCommandTriggerSection)(a.section)),
                     onHover: () => {
                         U(null), F(!1)
                     }

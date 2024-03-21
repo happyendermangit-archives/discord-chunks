@@ -27,9 +27,9 @@ function(e, t, n) {
             onMouseLeave: m,
             buttonProps: p,
             "aria-label": S
-        } = e, v = s.useRef(null);
+        } = e, T = s.useRef(null);
         return (0, i.jsxs)(t, {
-            ref: v,
+            ref: T,
             className: o,
             onClick: u,
             onMouseOver: h,
@@ -39,7 +39,7 @@ function(e, t, n) {
             children: [(0, i.jsx)(r.Clickable, {
                 ...p,
                 focusProps: {
-                    ringTarget: v,
+                    ringTarget: T,
                     ...l
                 },
                 className: a.focusTarget,

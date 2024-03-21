@@ -27,7 +27,7 @@ function(e, t, n) {
         } = e, [E, y] = l.useState(""), g = l.useCallback(() => y(""), [y]), {
             commandsByActiveSection: S,
             sectionDescriptors: C,
-            filterSection: _
+            filterSection: T
         } = u.useDiscovery(a, {
             commandType: o.ApplicationCommandType.CHAT
         }, {
@@ -36,9 +36,9 @@ function(e, t, n) {
             includeFrecency: !0
         });
         l.useEffect(() => {
-            _(m.BuiltInSectionId.FRECENCY)
-        }, [_]);
-        let T = null !== (n = null === (t = S[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
+            T(m.BuiltInSectionId.FRECENCY)
+        }, [T]);
+        let _ = null !== (n = null === (t = S[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
             I = C.filter(e => e.id !== m.BuiltInSectionId.FRECENCY && e.id !== m.BuiltInSectionId.BUILT_IN),
             v = (0, d.useSortApplicationsViaFrecency)(I);
         return (0, i.jsxs)("div", {
@@ -59,7 +59,7 @@ function(e, t, n) {
                 fade: !0,
                 children: [(0, i.jsx)(f.default, {
                     channel: a,
-                    commands: T,
+                    commands: _,
                     sectionDescriptors: C
                 }), (0, i.jsx)(p.default, {
                     channel: a,

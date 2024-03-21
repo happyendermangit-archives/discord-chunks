@@ -29,7 +29,7 @@ function(e, t, n) {
         friction: 70
     };
 
-    function v(e) {
+    function T(e) {
         let {
             size: t,
             isMobile: n,
@@ -47,7 +47,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e, t, n) {
+    function v(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             s = (0, d.getStatusSize)(e.status, t, n, i),
             r = (i ? e.size - (s.width / 2 + e.status / 2) : e.size - s.width) - e.offset;
@@ -59,7 +59,7 @@ function(e, t, n) {
     }
 
     function I(e, t, n, s) {
-        let r = T(n, s, t, !1),
+        let r = v(n, s, t, !1),
             a = (0, d.getStatusBackdropOpacity)(s, e);
         if (!t) {
             let t = r.height / 2 + n.stroke,
@@ -137,8 +137,8 @@ function(e, t, n) {
             onMouseLeave: c,
             className: h,
             tabIndex: S,
-            ariaLabel: v,
-            ariaHidden: T,
+            ariaLabel: T,
+            ariaHidden: v,
             status: I,
             isMobile: A = !1,
             isTyping: C = !1,
@@ -148,13 +148,13 @@ function(e, t, n) {
         } = e, O = {
             width: (0, E.getAvatarSize)(n),
             height: (0, E.getAvatarSize)(n)
-        }, D = null == v || T ? void 0 : function(e, t) {
+        }, D = null == T || v ? void 0 : function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             return null != t ? m.default.Messages.LABEL_WITH_ONLINE_STATUS.format({
                 label: e,
                 status: (0, f.humanizeStatus)(t, n)
             }) : e
-        }(v, I, A), P = R.size * g.DECORATION_TO_AVATAR_RATIO, L = function(e, t, n, i) {
+        }(T, I, A), P = R.size * g.DECORATION_TO_AVATAR_RATIO, L = function(e, t, n, i) {
             if (null == e) return null;
             if (i) switch (t) {
                 case E.AvatarSizes.SIZE_16:
@@ -245,7 +245,7 @@ function(e, t, n) {
             onMouseEnter: null != d ? d : void 0,
             onMouseLeave: null != c ? c : void 0,
             "aria-label": D,
-            "aria-hidden": T,
+            "aria-hidden": v,
             children: [t, M]
         }) : (0, i.jsxs)("div", {
             className: a(p.wrapper, h),
@@ -255,7 +255,7 @@ function(e, t, n) {
             onMouseLeave: null != c ? c : void 0,
             role: "img",
             "aria-label": D,
-            "aria-hidden": T,
+            "aria-hidden": v,
             children: [t, M]
         })
     }
@@ -289,7 +289,7 @@ function(e, t, n) {
             typingIndicatorRef: g,
             isSpeaking: m = !1,
             statusTooltip: S = !1,
-            statusBackdropColor: v,
+            statusBackdropColor: T,
             "aria-hidden": A = !1,
             "aria-label": N
         } = e, R = n !== h.StatusTypes.UNKNOWN ? n : null, O = (0, E.getAvatarSpecs)(s), D = null != R ? Math.ceil((O.status * E.TYPING_WIDTH_RATIO - O.status) / 2) : 0, P = O.size + D, L = (0, d.useStatusFillColor)(R, r);
@@ -385,9 +385,9 @@ function(e, t, n) {
                     position: "top",
                     spacing: 5 + 1.5 * O.stroke,
                     children: e => (0, i.jsxs)(i.Fragment, {
-                        children: [null != v && I(v, o, O, R), (0, i.jsx)("rect", {
+                        children: [null != T && I(T, o, O, R), (0, i.jsx)("rect", {
                             ...e,
-                            ...T(O, R, o, l),
+                            ...v(O, R, o, l),
                             fill: L,
                             mask: "url(#".concat((0, d.getStatusMask)(R, o, l), ")"),
                             className: p.pointerEvents
@@ -413,7 +413,7 @@ function(e, t, n) {
             typingIndicatorRef: h,
             isSpeaking: g = !1,
             size: m,
-            src: T,
+            src: v,
             status: N,
             statusColor: R,
             statusTooltip: O = !1,
@@ -488,7 +488,7 @@ function(e, t, n) {
                     height: K,
                     mask: "url(#".concat(b, ")"),
                     children: (0, i.jsx)(y, {
-                        src: T,
+                        src: v,
                         isSpeaking: g
                     })
                 }), (0, i.jsx)(c.Tooltip, {
@@ -519,7 +519,7 @@ function(e, t, n) {
                                 y: .5 * z,
                                 hide: !_
                             })]
-                        }), (0, i.jsx)(v, {
+                        }), (0, i.jsx)(T, {
                             size: m,
                             isMobile: l,
                             isTyping: _,
@@ -541,10 +541,10 @@ function(e, t, n) {
             isMobile: _ = !1,
             isTyping: f = !1
         } = c, E = s.useRef(u), g = s.useRef(_), m = (0, d.useStatusFillColor)(u, l), p = s.useRef(m), S = s.useRef(!1);
-        let v = S.current || (t = f, n = u, r = E.current, a = _, o = g.current, null != r && null != n && (!!t || n !== r || n === h.StatusTypes.ONLINE && a !== o || !1));
+        let T = S.current || (t = f, n = u, r = E.current, a = _, o = g.current, null != r && null != n && (!!t || n !== r || n === h.StatusTypes.ONLINE && a !== o || !1));
         return s.useLayoutEffect(() => {
-            S.current = v, E.current = u, g.current = _, p.current = m
-        }, [u, _, m, v]), null != u && null != E.current && v ? (0, i.jsx)(R, {
+            S.current = T, E.current = u, g.current = _, p.current = m
+        }, [u, _, m, T]), null != u && null != E.current && T ? (0, i.jsx)(R, {
             ...c,
             status: u,
             statusColor: m,

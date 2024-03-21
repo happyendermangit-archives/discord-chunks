@@ -11,10 +11,10 @@ function(e, t, n) {
             return S
         },
         repairApplication: function() {
-            return v
+            return T
         },
         updateApplication: function() {
-            return T
+            return v
         },
         uninstallApplication: function() {
             return I
@@ -111,7 +111,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e, t, n) {
+    function T(e, t, n) {
         (0, E.fetchLiveBuild)(e.id, t).then(() => {
             s.default.dispatch({
                 type: "DISPATCH_APPLICATION_REPAIR",
@@ -126,7 +126,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e, t, n, i) {
+    function v(e, t, n, i) {
         let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         ! function(e, t, n, i) {
             if (a.default.getRunningDiscordApplicationIds().includes(e.id)) return;
@@ -202,7 +202,7 @@ function(e, t, n) {
 
     function D(e, t) {
         let s = r.default.getApplication(e);
-        i.default.post({
+        i.HTTP.post({
             url: h.Endpoints.LIBRARY_APPLICATION_INSTALLED(e, e),
             oldFormErrors: !0
         }), null != s && (_.default.createShortcuts(l.InstallShortcutDesktop.getSetting(), l.InstallShortcutStartMenu.getSetting(), s.name, s.id, t.installPath), n.el("193990").then(n.bind(n, "193990")).then(e => {

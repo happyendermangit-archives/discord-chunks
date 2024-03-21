@@ -14,10 +14,10 @@ function(e, t, n) {
             return C
         },
         updateVisibleMessages: function() {
-            return _
+            return T
         },
         setSummaryFeedback: function() {
-            return T
+            return _
         },
         deleteSummary: function() {
             return N
@@ -51,7 +51,7 @@ function(e, t, n) {
             requestedAt: l
         });
         try {
-            let n = await r.default.get(h.Routes.CHANNEL_SUMMARY(e, t));
+            let n = await r.HTTP.get(h.Routes.CHANNEL_SUMMARY(e, t));
             i = null == n ? void 0 : n.body
         } catch (e) {
             n = new u.APIError(e)
@@ -76,7 +76,7 @@ function(e, t, n) {
             requestedAt: s
         });
         try {
-            l = await r.default.get(h.Routes.CHANNEL_SUMMARIES(e))
+            l = await r.HTTP.get(h.Routes.CHANNEL_SUMMARIES(e))
         } catch (e) {
             i = new u.APIError(e)
         }
@@ -113,7 +113,7 @@ function(e, t, n) {
         })
     }
 
-    function _(e, t) {
+    function T(e, t) {
         o.default.dispatch({
             type: "UPDATE_VISIBLE_MESSAGES",
             topVisibleMessage: null != e ? e : null,
@@ -121,7 +121,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e, t) {
+    function _(e, t) {
         o.default.dispatch({
             type: "SET_SUMMARY_FEEDBACK",
             summary: e,
@@ -138,7 +138,7 @@ function(e, t, n) {
             requestedAt: i
         });
         try {
-            n = await r.default.get("/users/@me/affinities/channels")
+            n = await r.HTTP.get("/users/@me/affinities/channels")
         } catch (e) {
             t = new u.APIError(e)
         }
@@ -177,7 +177,7 @@ function(e, t, n) {
             requestedAt: a
         });
         try {
-            n = await r.default.post({
+            n = await r.HTTP.post({
                 url: h.Routes.USER_SUMMARIES,
                 body: {
                     channel_ids: e
@@ -200,7 +200,7 @@ function(e, t, n) {
     }
     async function N(e) {
         try {
-            await r.default.delete(h.Routes.CHANNEL_SUMMARY(e.channelId, e.id)), o.default.dispatch({
+            await r.HTTP.del(h.Routes.CHANNEL_SUMMARY(e.channelId, e.id)), o.default.dispatch({
                 type: "DELETE_SUMMARY",
                 summary: e
             })
@@ -209,8 +209,8 @@ function(e, t, n) {
         }
     }
     var A = {
-        setSummaryFeedback: T,
-        updateVisibleMessages: _,
+        setSummaryFeedback: _,
+        updateVisibleMessages: T,
         setSelectedSummary: C,
         setHighlightedSummary: g,
         fetchSummaries: y,

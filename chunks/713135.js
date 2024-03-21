@@ -56,12 +56,12 @@ function(e, t, n) {
         }).value(), N[e.userId] = e.mutualFriends.length
     }
 
-    function O() {
+    function P() {
         if (0 === Object.keys(A).length) return !1;
         A = {}
     }
 
-    function P(e) {
+    function O(e) {
         if (null == A[e.user.id]) return !1;
         delete A[e.user.id]
     }
@@ -88,8 +88,8 @@ function(e, t, n) {
             let t = e.mutual_friends_count;
             N[e.user.id] = t
         }
-        let O = null !== (d = e.premium_since) && void 0 !== d ? d : null,
-            P = e.application;
+        let P = null !== (d = e.premium_since) && void 0 !== d ? d : null,
+            O = e.application;
         if (I[e.user.id] = {
                 userId: e.user.id,
                 banner: null === (t = e.user_profile) || void 0 === t ? void 0 : t.banner,
@@ -101,20 +101,20 @@ function(e, t, n) {
                 pronouns: null !== (f = null === (T = e.user_profile) || void 0 === T ? void 0 : T.pronouns) && void 0 !== f ? f : "",
                 connectedAccounts: null !== (U = e.connected_accounts.filter(e => u.default.isSupported(e.type))) && void 0 !== U ? U : [],
                 applicationRoleConnections: null !== (p = e.application_role_connections) && void 0 !== p ? p : [],
-                premiumSince: null != O ? new Date(O) : null,
+                premiumSince: null != P ? new Date(P) : null,
                 premiumType: e.premium_type,
                 premiumGuildSince: null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
                 lastFetched: Date.now(),
                 legacyUsername: e.legacy_username,
                 profileFetchFailed: !1,
-                application: null != P ? {
-                    id: P.id,
-                    primarySkuId: P.primary_sku_id,
-                    customInstallUrl: P.custom_install_url,
-                    installParams: P.install_params,
-                    integrationTypesConfig: P.integration_types_config,
-                    flags: P.flags,
-                    popularApplicationCommandIds: P.popular_application_command_ids
+                application: null != O ? {
+                    id: O.id,
+                    primarySkuId: O.primary_sku_id,
+                    customInstallUrl: O.custom_install_url,
+                    installParams: O.install_params,
+                    integrationTypesConfig: O.integration_types_config,
+                    flags: O.flags,
+                    popularApplicationCommandIds: O.popular_application_command_ids
                 } : null,
                 badges: e.badges
             }, null != e.guild_member_profile) {
@@ -294,10 +294,10 @@ function(e, t, n) {
                 MUTUAL_FRIENDS_FETCH_START: D,
                 MUTUAL_FRIENDS_FETCH_SUCCESS: C,
                 MUTUAL_FRIENDS_FETCH_FAILURE: G,
-                GUILD_JOIN: O,
-                GUILD_DELETE: O,
-                GUILD_MEMBER_ADD: P,
-                GUILD_MEMBER_REMOVE: P,
+                GUILD_JOIN: P,
+                GUILD_DELETE: P,
+                GUILD_MEMBER_ADD: O,
+                GUILD_MEMBER_REMOVE: O,
                 GUILD_MEMBER_UPDATE: M,
                 USER_UPDATE: M,
                 LOGOUT: R

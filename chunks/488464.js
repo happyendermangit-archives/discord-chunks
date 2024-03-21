@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("280168"),
         p = n("697218"),
         S = n("800762"),
-        v = n("316133"),
-        T = n("998716"),
+        T = n("316133"),
+        v = n("998716"),
         I = n("325861"),
         A = n("834052");
     let C = "NO_GUILD",
@@ -58,11 +58,11 @@ function(e, t, n) {
 
     function L(e) {
         let t = R[e];
-        return null == t && (t = new T.default(e), R[e] = t, t.rebuild()), t
+        return null == t && (t = new v.default(e), R[e] = t, t.rebuild()), t
     }
 
     function M(e) {
-        return null != e && e.isGuildStageVoice() && v.default.countVoiceStatesForChannel(e.id) > 0
+        return null != e && e.isGuildStageVoice() && T.default.countVoiceStatesForChannel(e.id) > 0
     }
 
     function b(e) {
@@ -134,7 +134,7 @@ function(e, t, n) {
     let H = [];
     class Y extends o.default.Store {
         initialize() {
-            this.waitFor(_.default, p.default, f.default, m.default, S.default, h.default, v.default, E.default, I.default, g.default, A.default, c.default)
+            this.waitFor(_.default, p.default, f.default, m.default, S.default, h.default, T.default, E.default, I.default, g.default, A.default, c.default)
         }
         getParticipantsVersion(e) {
             var t, n;

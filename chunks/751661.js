@@ -23,7 +23,7 @@ function(e, t, n) {
             return S
         },
         showChannelChangeConfirmationAlert: function() {
-            return v
+            return T
         }
     });
     var i = n("37983");
@@ -123,7 +123,7 @@ function(e, t, n) {
         }(e)
     }
 
-    function v(e, t) {
+    function T(e, t) {
         return (0, s.openModalLazy)(async () => {
             let {
                 default: s

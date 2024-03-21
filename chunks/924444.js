@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ImageModal: function() {
-            return _
+            return T
         },
         VideoModal: function() {
-            return T
+            return _
         }
     }), n("222007");
     var i = n("37983"),
@@ -81,7 +81,7 @@ function(e, t, n) {
         })
     };
 
-    function _(e) {
+    function T(e) {
         let {
             src: t,
             original: n,
@@ -93,8 +93,8 @@ function(e, t, n) {
             responsive: p,
             renderLinkComponent: h,
             maxWidth: x,
-            maxHeight: _,
-            shouldAnimate: T,
+            maxHeight: T,
+            shouldAnimate: _,
             onClose: I,
             shouldHideMediaOptions: v = !1,
             obscure: N = !1,
@@ -143,7 +143,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function _(e) {
         let {
             src: t,
             width: n,
@@ -156,7 +156,7 @@ function(e, t, n) {
         } = e, {
             width: m,
             height: x
-        } = (0, f.zoomFit)(n, l), E = r.isMobile && null != a, _ = u ? e => {
+        } = (0, f.zoomFit)(n, l), E = r.isMobile && null != a, T = u ? e => {
             e.stopPropagation(), e.preventDefault()
         } : c.onContextMenu;
         return (0, i.jsxs)("div", {
@@ -179,7 +179,7 @@ function(e, t, n) {
                     onVolumeChange: p.setVolume,
                     onMute: p.setMuted,
                     autoPlay: !e,
-                    onContextMenu: _,
+                    onContextMenu: T,
                     ...c
                 }, t)
             }), !u && o({

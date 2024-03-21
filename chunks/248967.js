@@ -23,7 +23,7 @@ function(e, t, n) {
         }), await Promise.all(n.map(async e => {
             let t = o.default.getLurkingSource();
             try {
-                await i.default.delete({
+                await i.HTTP.del({
                     url: l.Endpoints.GUILD_LEAVE(e),
                     body: {
                         lurking: !0

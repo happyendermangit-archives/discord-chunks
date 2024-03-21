@@ -46,8 +46,8 @@ function(e, t, n) {
         m = n("824563"),
         p = n("945956"),
         S = n("660478"),
-        v = n("18494"),
-        T = n("162771"),
+        T = n("18494"),
+        v = n("162771"),
         I = n("282109"),
         A = n("800762"),
         C = n("599110"),
@@ -140,8 +140,8 @@ function(e, t, n) {
             o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (C.default.isThrottled(e)) return;
         let l = !("location" in a) || a.location !== O.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
-            u = "guild_id" in a ? a.guild_id : l ? T.default.getGuildId() : null,
-            c = "channel_id" in a ? a.channel_id : l ? v.default.getChannelId(u) : null,
+            u = "guild_id" in a ? a.guild_id : l ? v.default.getGuildId() : null,
+            c = "channel_id" in a ? a.channel_id : l ? T.default.getChannelId(u) : null,
             _ = d.default.getChannel(c);
         let f = (t = _, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (s = null !== (i = t.getGuildId()) && void 0 !== i ? i : n) && void 0 !== s ? s : null);
         let E = {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ObscuredDisplayContext: function() {
-            return _
+            return T
         },
         default: function() {
             return I
@@ -102,8 +102,8 @@ function(e, t, n) {
                 })
             })
         },
-        _ = s.createContext(!1);
-    class T extends s.PureComponent {
+        T = s.createContext(!1);
+    class _ extends s.PureComponent {
         renderWithTooltip(e) {
             return (0, a.jsx)(c.Tooltip, {
                 position: "left",
@@ -132,7 +132,7 @@ function(e, t, n) {
                 obscurityControlClassName: u
             } = this.props, {
                 visible: d
-            } = this.state, p = (0, a.jsx)(_.Consumer, {
+            } = this.state, p = (0, a.jsx)(T.Consumer, {
                 children: p => {
                     let m = p || d || !l;
                     return [f.ObscureReason.EXPLICIT_CONTENT, f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(s) && !t ? (0, a.jsxs)("div", {
@@ -193,7 +193,7 @@ function(e, t, n) {
             } = this.props, {
                 visible: r
             } = this.state;
-            return (0, a.jsx)(_.Consumer, {
+            return (0, a.jsx)(T.Consumer, {
                 children: u => {
                     let d = u || r;
                     return [f.ObscureReason.EXPLICIT_CONTENT, f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(s) ? (0, a.jsxs)("div", {
@@ -246,7 +246,7 @@ function(e, t, n) {
                 className: n
             } = this.props, {
                 visible: i
-            } = this.state, l = (0, a.jsx)(_.Consumer, {
+            } = this.state, l = (0, a.jsx)(T.Consumer, {
                 children: l => {
                     let r = l || i,
                         u = s.Children.toArray(e(r)),
@@ -355,6 +355,6 @@ function(e, t, n) {
             }
         }
     }
-    T.Types = i, T.Reasons = f.ObscureReason;
-    var I = T
+    _.Types = i, _.Reasons = f.ObscureReason;
+    var I = _
 }

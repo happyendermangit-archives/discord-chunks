@@ -43,7 +43,7 @@ function(e, t, n) {
                     var S;
                     t = null === (S = l.default.colors[c[f]]) || void 0 === S ? void 0 : S.css
             }
-            let v = {
+            let T = {
                 color: t,
                 ...p,
                 ...g.style
@@ -56,7 +56,7 @@ function(e, t, n) {
                     [d.fontScaling]: h
                 }, m, d[n], o),
                 ...g,
-                style: Object.values(v).filter(Boolean).length > 0 ? v : void 0,
+                style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
                 "data-text-variant": n
             })
         }

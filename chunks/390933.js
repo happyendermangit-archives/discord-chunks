@@ -58,7 +58,7 @@ function(e, t, n) {
         }
         makeRequest() {
             let e = this.getEndpoint();
-            return null == e ? null : r.default.get({
+            return null == e ? null : r.HTTP.get({
                 url: e,
                 query: s.stringify(this.query),
                 oldFormErrors: !0
@@ -83,7 +83,7 @@ function(e, t, n) {
         }
         makeRequest() {
             let e = this.getEndpoint();
-            return null == e ? null : r.default.post({
+            return null == e ? null : r.HTTP.post({
                 url: e,
                 body: this.payload,
                 oldFormErrors: !0

@@ -28,8 +28,8 @@ function(e, t, n) {
         g = n("200294"),
         S = n("851745"),
         C = n("406291"),
-        _ = n("317041"),
-        T = n("782340"),
+        T = n("317041"),
+        _ = n("782340"),
         I = n("826214");
     let v = {
         results: {
@@ -60,7 +60,7 @@ function(e, t, n) {
                         channel: e,
                         guild: t
                     }, S.MAX_COMMAND_AUTOCOMPLETE_RESULTS),
-                    r = o.BUILT_IN_SECTIONS[_.BuiltInSectionId.BUILT_IN];
+                    r = o.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN];
                 return 0 === a.length ? v : {
                     results: {
                         entries: a.map(e => ({
@@ -117,8 +117,8 @@ function(e, t, n) {
                 autocompletes: t,
                 onHover: o,
                 onClick: u,
-                titleWithQuery: T.default.Messages.COMMANDS_MATCHING,
-                titleWithoutQuery: T.default.Messages.COMMANDS,
+                titleWithQuery: _.default.Messages.COMMANDS_MATCHING,
+                titleWithoutQuery: _.default.Messages.COMMANDS,
                 getQuery: e => "".concat(C.COMMAND_SENTINEL).concat(e),
                 Component: c ? E.default.Command : E.default.NewCommand,
                 getProps: e => {
@@ -143,7 +143,7 @@ function(e, t, n) {
                     color: l.Button.Colors.BRAND,
                     size: l.Button.Sizes.MIN,
                     onClick: N,
-                    children: T.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
+                    children: _.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
                 }) : null
             })
         },

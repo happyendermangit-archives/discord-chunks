@@ -81,7 +81,7 @@ function(e, t, n) {
         }
     }
     async function I() {
-        let e = await r.default.get({
+        let e = await r.HTTP.get({
                 url: d.Endpoints.CLAIMED_OUTBOUND_PROMOTION_CODES,
                 query: {
                     locale: l.default.locale
@@ -92,7 +92,7 @@ function(e, t, n) {
         return t.map(E)
     }
     async function T(e) {
-        let t = await r.default.post({
+        let t = await r.HTTP.post({
                 url: d.Endpoints.CLAIM_OUTBOUND_PROMOTION_CODE(e)
             }),
             n = t.body;

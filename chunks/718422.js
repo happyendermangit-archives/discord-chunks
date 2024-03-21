@@ -41,19 +41,19 @@ function(e, t, n) {
                 channel: g,
                 restrictMentions: S,
                 respectCooldown: C,
-                userCanUsePremiumMessageLength: _,
-                resolve: T
+                userCanUsePremiumMessageLength: T,
+                resolve: _
             } = e;
             if (0 === x.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == E || 0 === E.length) && (null == y || 0 === y.length)) {
-                T({
+                _({
                     valid: !1,
                     failureReason: p.MessageRestrictionTypes.EMPTY_MESSAGE
                 });
                 return
             }
-            let I = _ ? p.MAX_MESSAGE_LENGTH_PREMIUM : p.MAX_MESSAGE_LENGTH;
+            let I = T ? p.MAX_MESSAGE_LENGTH_PREMIUM : p.MAX_MESSAGE_LENGTH;
             if (x.length > I) {
-                if (_ || null == g) {
+                if (T || null == g) {
                     ;
                     n = x.length, u = I, (0, l.openModal)(e => (0, i.jsx)(s.default, {
                         title: m.default.Messages.MESSAGE_TOO_LONG_HEADER,
@@ -72,7 +72,7 @@ function(e, t, n) {
                     channel: g,
                     content: x
                 });
-                T({
+                _({
                     valid: !1,
                     failureReason: p.MessageRestrictionTypes.MESSAGE_TOO_LONG
                 });
@@ -80,7 +80,7 @@ function(e, t, n) {
             }
             if (null != g) {
                 if (null != g.getGuildId() && C && o.default.getSlowmodeCooldownGuess(g.id) > 0) {
-                    T({
+                    _({
                         valid: !1,
                         failureReason: p.MessageRestrictionTypes.SLOWMODE_COOLDOWN
                     });
@@ -98,11 +98,11 @@ function(e, t, n) {
                             f({
                                 analyticsType: t,
                                 channel: g,
-                                onCancel: () => T({
+                                onCancel: () => _({
                                     valid: !1,
                                     failureReason: p.MessageRestrictionTypes.SHOUTING_CANCELLED
                                 }),
-                                onConfirm: () => T({
+                                onConfirm: () => _({
                                     valid: !0
                                 }),
                                 popoutText: i,
@@ -120,13 +120,13 @@ function(e, t, n) {
                     ...e
                 }), {
                     onCloseRequest: p.NOOP
-                }), T({
+                }), _({
                     valid: !1,
                     failureReason: p.MessageRestrictionTypes.RATE_LIMITED
                 });
                 return
             }
-            T({
+            _({
                 valid: !0
             })
         })({

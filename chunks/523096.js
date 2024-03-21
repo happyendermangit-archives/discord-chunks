@@ -25,18 +25,18 @@ function(e, t, n) {
         m = n("573220"),
         p = n("265284"),
         S = n("320436"),
-        v = n("348044"),
-        T = n("36409");
+        T = n("348044"),
+        v = n("36409");
 
     function I() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return e ? T : s
+        return e ? v : s
     }
     var A = {
         DEFAULT_AVATARS: [r, a, o, l, u, d],
         DEFAULT_GROUP_DM_AVATARS: [c, _, f, E, h, g, m, p],
         BOT_AVATARS: {
-            clyde: v
+            clyde: T
         },
         DEFAULT_CHANNEL_ICON: S,
         canUseWebp: function() {

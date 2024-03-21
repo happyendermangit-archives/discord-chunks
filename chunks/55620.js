@@ -96,7 +96,7 @@ function(e, t, n) {
     }
 
     function I(e) {
-        return i.default.post({
+        return i.HTTP.post({
             url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
             oldFormErrors: !0
         })

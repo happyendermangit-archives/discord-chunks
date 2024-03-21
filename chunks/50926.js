@@ -19,7 +19,7 @@ function(e, t, n) {
             r = d.default.getCurrentUser(),
             a = !l.default.isMember(e, null == r ? void 0 : r.id);
         try {
-            let t = await i.default.get({
+            let t = await i.HTTP.get({
                 url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
                 query: {
                     with_guild: a,
@@ -48,7 +48,7 @@ function(e, t, n) {
             })
         }
     }, f = async (e, t) => {
-        let n = await i.default.patch({
+        let n = await i.HTTP.patch({
                 url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
                 body: {
                     form_fields: t
@@ -68,7 +68,7 @@ function(e, t, n) {
             }
         })
     }, E = async (e, t) => {
-        let n = await i.default.patch({
+        let n = await i.HTTP.patch({
                 url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
                 body: {
                     description: t
@@ -88,7 +88,7 @@ function(e, t, n) {
             }
         })
     }, h = async (e, t) => {
-        await i.default.patch({
+        await i.HTTP.patch({
             url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
             body: {
                 enabled: t
@@ -105,7 +105,7 @@ function(e, t, n) {
             return
         }
         try {
-            let n = await i.default.put({
+            let n = await i.HTTP.put({
                     url: c.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                     body: {
                         version: t.version,

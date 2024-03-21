@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("447435"),
         p = n("619443"),
         S = n("582415"),
-        v = n("600798"),
-        T = n("569808"),
+        T = n("600798"),
+        v = n("569808"),
         I = n("9294"),
         A = n("52393"),
         C = n("143291"),
@@ -349,15 +349,15 @@ function(e, t, n) {
                 l.default.commit(S), o.default.dispatch({
                     type: "LOAD_MESSAGES"
                 });
-                let v = null == g ? void 0 : g.messageId,
-                    T = new eE;
-                return !c && this.fetchLocalMessages(t, n, i, s, T), r.default.get({
+                let T = null == g ? void 0 : g.messageId,
+                    v = new eE;
+                return !c && this.fetchLocalMessages(t, n, i, s, v), r.HTTP.get({
                     url: eo.Endpoints.MESSAGES(t),
                     query: {
                         before: n,
                         after: i,
                         limit: s,
-                        around: v,
+                        around: T,
                         preload: d
                     },
                     retries: 2,
@@ -367,23 +367,23 @@ function(e, t, n) {
                         l = null != n,
                         u = null != i,
                         d = null == n && null == i,
-                        c = null != v || r.length === s && (l || d),
-                        f = null != v || u && r.length === s;
-                    if (null != v) {
+                        c = null != T || r.length === s && (l || d),
+                        f = null != T || u && r.length === s;
+                    if (null != T) {
                         let e = Math.floor(s / 2),
-                            n = [v, ...r.map(e => {
+                            n = [T, ...r.map(e => {
                                 let {
                                     id: t
                                 } = e;
                                 return t
                             })].filter((e, t, n) => n.indexOf(e) === t).sort(er.default.compare),
-                            i = n.indexOf(v);
+                            i = n.indexOf(T);
                         if (i < e && (c = !1), r.length - i < e && (f = !1), f && r.length > 0) {
                             let e = q.default.lastMessageId(t);
                             r[0].id === e && (f = !1)
                         }
                     }
-                    ec.log("Fetched ".concat(r.length, " messages for ").concat(t, " isBefore:").concat(l, " isAfter:").concat(u)), T.markComplete(), o.default.dispatch({
+                    ec.log("Fetched ".concat(r.length, " messages for ").concat(t, " isBefore:").concat(l, " isAfter:").concat(u)), v.markComplete(), o.default.dispatch({
                         type: "LOAD_MESSAGES_SUCCESS",
                         channelId: t,
                         messages: r,
@@ -585,7 +585,7 @@ function(e, t, n) {
                         messageReference: i,
                         allowedMentions: s
                     } = n;
-                return r.default.post({
+                return r.HTTP.post({
                     url: eo.Endpoints.MESSAGES_GREET(e),
                     body: {
                         sticker_ids: [t],
@@ -740,7 +740,7 @@ function(e, t, n) {
                                     overrideProperties: o
                                 });
                                 else if (t === E.CodedLinkType.TEMPLATE) {
-                                    let e = T.default.getGuildTemplate(l);
+                                    let e = v.default.getGuildTemplate(l);
                                     if (null == e || e.state === eu.GuildTemplateStates.RESOLVING) return;
                                     d.default.trackWithMetadata(eo.AnalyticEvents.GUILD_TEMPLATE_LINK_SENT, {
                                         guild_template_code: l,
@@ -809,7 +809,7 @@ function(e, t, n) {
                                         slowmodeType: Z.SlowmodeType.SendMessage,
                                         cooldownMs: t * ee.default.Millis.SECOND
                                     })
-                                } else v.AUTOMOD_ERROR_CODES.has(u.body.code) ? o.default.dispatch({
+                                } else T.AUTOMOD_ERROR_CODES.has(u.body.code) ? o.default.dispatch({
                                     type: "MESSAGE_SEND_FAILED_AUTOMOD",
                                     messageData: B,
                                     errorResponseBody: {
@@ -882,7 +882,7 @@ function(e, t, n) {
                     type: u.MessageDataType.EDIT,
                     message: r
                 }, n => {
-                    let i = !n.hasErr && v.AUTOMOD_ERROR_CODES.has(n.body.code);
+                    let i = !n.hasErr && T.AUTOMOD_ERROR_CODES.has(n.body.code);
                     if (i) {
                         let e = {
                             type: u.MessageDataType.EDIT,
@@ -904,7 +904,7 @@ function(e, t, n) {
                 })
             },
             async suppressEmbeds(e, t) {
-                await F.default.unarchiveThreadIfNecessary(e), r.default.patch({
+                await F.default.unarchiveThreadIfNecessary(e), r.HTTP.patch({
                     url: eo.Endpoints.MESSAGE(e, t),
                     body: {
                         flags: eo.MessageFlags.SUPPRESS_EMBEDS
@@ -913,7 +913,7 @@ function(e, t, n) {
                 })
             },
             async patchMessageAttachments(e, t, n) {
-                await F.default.unarchiveThreadIfNecessary(e), r.default.patch({
+                await F.default.unarchiveThreadIfNecessary(e), r.HTTP.patch({
                     url: eo.Endpoints.MESSAGE(e, t),
                     body: {
                         attachments: n
@@ -932,7 +932,7 @@ function(e, t, n) {
                             a.AccessibilityAnnouncer.announce(ed.default.Messages.A11Y_ANNOUNCEMENT_MESSAGE_DELETED)
                         })
                     };
-                n ? i() : (await F.default.unarchiveThreadIfNecessary(e), r.default.delete({
+                n ? i() : (await F.default.unarchiveThreadIfNecessary(e), r.HTTP.del({
                     url: eo.Endpoints.MESSAGE(e, t),
                     oldFormErrors: !0
                 }).then(() => {
@@ -954,7 +954,7 @@ function(e, t, n) {
                     messageId: t
                 })
             },
-            crosspostMessage: (e, t) => r.default.post({
+            crosspostMessage: (e, t) => r.HTTP.post({
                 url: eo.Endpoints.MESSAGE_CROSSPOST(e, t),
                 oldFormErrors: !0
             }).catch(e => {

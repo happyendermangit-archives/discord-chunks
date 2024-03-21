@@ -179,7 +179,7 @@ function(e, t, n) {
             }
         }
     }
-    let _ = {
+    let T = {
             url: {
                 parse: e => null == (0, d.punycodeLink)(e[1]) ? {
                     type: "text",
@@ -220,9 +220,9 @@ function(e, t, n) {
                 }
             }
         },
-        T = (0, p.default)([g, _]),
-        I = (0, p.default)([S, _]),
-        v = o.astParserFor(T),
+        _ = (0, p.default)([g, T]),
+        I = (0, p.default)([S, T]),
+        v = o.astParserFor(_),
         N = o.astParserFor(I),
         A = {
             max: 1 / 0,

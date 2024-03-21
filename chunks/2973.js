@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return v
+            return T
         }
     }), n("222007");
     var i = n("446674"),
@@ -97,7 +97,7 @@ function(e, t, n) {
         }
     }
     S.displayName = "QuestsStore";
-    var v = new S(s.default, {
+    var T = new S(s.default, {
         LOGOUT: function() {
             r = !1, a = new Map, o = 0, l = new Set, f = new Map
         },

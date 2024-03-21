@@ -22,8 +22,8 @@ function(e, t, n) {
         g = n("38766"),
         S = n("845579"),
         C = n("271938"),
-        _ = n("42203"),
-        T = n("305961"),
+        T = n("42203"),
+        _ = n("305961"),
         I = n("18494"),
         v = n("697218"),
         N = n("471671"),
@@ -64,7 +64,7 @@ function(e, t, n) {
             [H.UserProfileTypes.CANCEL_MODAL]: B.AnalyticsPages.USER_POPOUT
         };
 
-    function Z(e) {
+    function J(e) {
         let {
             type: t,
             shown: i,
@@ -133,7 +133,7 @@ function(e, t, n) {
         })
     }
 
-    function J(e) {
+    function Z(e) {
         let {
             darkenOnHover: t,
             profileType: n,
@@ -171,12 +171,12 @@ function(e, t, n) {
             allowEdit: k = !0,
             showPremiumBadgeUpsell: L = !0,
             hasProfileEffect: P = !1
-        } = e, [Y, z] = s.useState((null == r ? void 0 : r.banner) == null ? 2 : 0), q = (0, d.useStateFromStores)([T.default], () => T.default.getGuild(h)), X = (0, d.useStateFromStores)([C.default], () => C.default.getId()), Q = X === l.id && k, $ = j.default.isPremiumAtLeast(null == r ? void 0 : r.premiumType, V.PremiumTypes.TIER_2), {
+        } = e, [Y, z] = s.useState((null == r ? void 0 : r.banner) == null ? 2 : 0), q = (0, d.useStateFromStores)([_.default], () => _.default.getGuild(h)), X = (0, d.useStateFromStores)([C.default], () => C.default.getId()), Q = X === l.id && k, $ = j.default.isPremiumAtLeast(null == r ? void 0 : r.premiumType, V.PremiumTypes.TIER_2), {
             trackUserProfileAction: ee
         } = (0, U.useUserProfileAnalyticsContext)(), [et, en] = s.useState(!1), ei = (0, d.useStateFromStores)([N.default], () => N.default.isFocused()), el = S.GifAutoPlay.getSetting(), ea = (0, f.useToken)(c.default.unsafe_rawColors.PRIMARY_800).hex(), es = (0, f.getAvatarSize)(f.AvatarSizes.SIZE_80), er = (0, u.hex2int)((0, x.default)(l.getAvatarURL(h, es), ea, !1)), eo = (0, E.default)(null !== (t = null == r ? void 0 : r.primaryColor) && void 0 !== t ? t : er).hsl, eu = (0, F.getUserBannerSize)(v), ed = null != p ? p : null == r ? void 0 : r.getBannerURL({
             size: eu,
             canAnimate: M || !el ? et : ei
-        }), ec = null != ed, ef = (0, d.useStateFromStores)([D.default], () => D.default.getUserProfile(l.id)), ep = _.default.getChannel(I.default.getChannelId()), {
+        }), ec = null != ed, ef = (0, d.useStateFromStores)([D.default], () => D.default.getUserProfile(l.id)), ep = T.default.getChannel(I.default.getChannelId()), {
             appsInGDMEnabled: em,
             availableApplications: eh
         } = (0, y.usePrivateChannelIntegrationState)({
@@ -227,7 +227,7 @@ function(e, t, n) {
                     backgroundImage: ec ? "url(".concat(ed, ")") : void 0,
                     backgroundColor: 2 !== Y ? c.default.unsafe_rawColors.PRIMARY_800.css : eo
                 },
-                children: [Q ? null == q ? (0, a.jsx)(J, {
+                children: [Q ? null == q ? (0, a.jsx)(Z, {
                     darkenOnHover: P && R,
                     profileType: v,
                     profileLabel: K.default.Messages.EDIT_PROFILE,
@@ -250,7 +250,7 @@ function(e, t, n) {
                             guild: q
                         })
                     },
-                    children: e => (0, a.jsx)(J, {
+                    children: e => (0, a.jsx)(Z, {
                         darkenOnHover: P && R,
                         profileLabel: K.default.Messages.EDIT_PROFILE,
                         icon: "pencil",
@@ -259,7 +259,7 @@ function(e, t, n) {
                     })
                 }) : (() => {
                     let e = L && ec && v !== H.UserProfileTypes.SETTINGS;
-                    return e ? (0, a.jsx)(Z, {
+                    return e ? (0, a.jsx)(J, {
                         type: v,
                         shown: void 0 === R ? et : R,
                         onClick: () => {

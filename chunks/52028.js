@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("374363"),
         p = n("373469"),
         S = n("848872"),
-        v = n("49111"),
-        T = n("782340");
+        T = n("49111"),
+        v = n("782340");
     let I = [],
         A = {};
 
@@ -35,7 +35,7 @@ function(e, t, n) {
         e.push(...n);
         let i = S.default.getStream();
         null != i && e.push({
-            type: v.ActivityTypes.STREAMING,
+            type: T.ActivityTypes.STREAMING,
             ...i
         });
         let r = new Set,
@@ -50,10 +50,10 @@ function(e, t, n) {
             if (o.has(i)) return;
             let s = null === (n = d.default.getApplication(i)) || void 0 === n ? void 0 : n.name;
             e.push({
-                type: v.ActivityTypes.PLAYING,
-                name: null != s ? s : T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCHING_ACTIVITY,
+                type: T.ActivityTypes.PLAYING,
+                name: null != s ? s : v.default.Messages.EMBEDDED_ACTIVITIES_LAUNCHING_ACTIVITY,
                 application_id: i,
-                flags: v.ActivityFlags.EMBEDDED
+                flags: T.ActivityFlags.EMBEDDED
             })
         });
         let l = _.default.getVisibleGame(),
@@ -61,7 +61,7 @@ function(e, t, n) {
             C = null != l && l.isLauncher,
             y = p.default.getCurrentUserActiveStream();
         null != l && null != l.name && !(m || C && !(null != y)) && e.push({
-            type: v.ActivityTypes.PLAYING,
+            type: T.ActivityTypes.PLAYING,
             name: l.name,
             application_id: l.id,
             timestamps: {
@@ -70,14 +70,14 @@ function(e, t, n) {
         });
         let N = h.default.getActivity();
         null != N && e.push({
-            type: v.ActivityTypes.LISTENING,
+            type: T.ActivityTypes.LISTENING,
             ...N
         });
         let R = f.default.getCurrentHangStatus();
         if (null != R) {
             let t = f.default.getCustomHangStatus();
             e.push({
-                type: v.ActivityTypes.HANG_STATUS,
+                type: T.ActivityTypes.HANG_STATUS,
                 name: "Hang Status",
                 state: R,
                 details: null == t ? void 0 : t.status,
@@ -99,7 +99,7 @@ function(e, t, n) {
             return this.findActivity(t => t.application_id === e)
         }
         getCustomStatusActivity() {
-            return this.findActivity(e => e.type === v.ActivityTypes.CUSTOM_STATUS)
+            return this.findActivity(e => e.type === T.ActivityTypes.CUSTOM_STATUS)
         }
         findActivity(e) {
             return I.find(e)

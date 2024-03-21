@@ -5,10 +5,10 @@ function(e, t, n) {
             return S
         },
         connectToRemote: function() {
-            return v
+            return T
         },
         remoteVoiceStateUpdate: function() {
-            return T
+            return v
         },
         remoteDisconnect: function() {
             return I
@@ -57,7 +57,7 @@ function(e, t, n) {
         });
         let n = [];
         ((null == e ? void 0 : e.type) === g.PlatformTypes.PLAYSTATION || (null == e ? void 0 : e.type) === g.PlatformTypes.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(O(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
-            return r.default.delete({
+            return r.HTTP.del({
                 url: g.Endpoints.CONNECT_REQUEST(e)
             })
         }(t));
@@ -71,14 +71,14 @@ function(e, t, n) {
         }
     }
 
-    function v(e) {
+    function T(e) {
         a.default.dispatch({
             type: "REMOTE_SESSION_CONNECT",
             sessionId: e
         })
     }
 
-    function T(e, t) {
+    function v(e, t) {
         let {
             selfMute: n,
             selfDeaf: i
@@ -121,7 +121,7 @@ function(e, t, n) {
         let e;
         try {
             let t = null != u.default.getRTCConnectionId() ? s.ConsoleHandoffType.TRANSFER_EXISTING_CALL : s.ConsoleHandoffType.CREATE_NEW_CALL,
-                n = await r.default.post({
+                n = await r.HTTP.post({
                     url: g.Endpoints.CONNECT_REQUEST_CREATE,
                     body: {
                         analytics_properties: {
@@ -142,7 +142,7 @@ function(e, t, n) {
             platform: e
         });
         try {
-            t = await r.default.get({
+            t = await r.HTTP.get({
                 url: g.Endpoints.CONSOLES_DEVICES(e)
             })
         } catch (t) {
@@ -174,7 +174,7 @@ function(e, t, n) {
             platform: e
         });
         try {
-            o = await r.default.post({
+            o = await r.HTTP.post({
                 url: g.Endpoints.CONSOLES_DEVICES_COMMANDS(e, t),
                 body: {
                     command: i.ConsoleCommands.CONNECT_VOICE,
@@ -208,7 +208,7 @@ function(e, t, n) {
             commandId: n
         });
         try {
-            await r.default.delete({
+            await r.HTTP.del({
                 url: g.Endpoints.CONSOLES_DEVICES_COMMAND(e, t, n)
             })
         } catch (i) {

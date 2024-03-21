@@ -25,8 +25,8 @@ function(e, t, n) {
         m = n("866353"),
         p = n("865372"),
         S = n("364685"),
-        v = n("161585"),
-        T = n("401690"),
+        T = n("161585"),
+        v = n("401690"),
         I = n("872173"),
         A = n("233069"),
         C = n("766274"),
@@ -113,7 +113,7 @@ function(e, t, n) {
             allowSnowflake: a
         } = e, o = w.default.getUsers(), u = U.default.getGuildId(), d = t.toLocaleLowerCase(), c = (0, H.normalize)(d), _ = [], f = [], E = n.length, h = 0, g = 0;
         for (; h < E;) {
-            var m, p, S, v, T, I, A, y, N;
+            var m, p, S, T, v, I, A, y, N;
             let e, i;
             let l = n[h];
             l instanceof C.default ? (i = l, e = null === (p = R.default.getNick(u, i.id)) || void 0 === p ? void 0 : p.toLocaleLowerCase()) : (e = null === (S = l.nick) || void 0 === S ? void 0 : S.toLocaleLowerCase(), i = o[l.userId]);
@@ -130,8 +130,8 @@ function(e, t, n) {
                     type: j.AutocompleterResultTypes.USER,
                     record: i,
                     score: 10,
-                    comparator: null !== (v = null != E ? E : e) && void 0 !== v ? v : n,
-                    sortable: null !== (T = null != h ? h : l) && void 0 !== T ? T : s
+                    comparator: null !== (T = null != E ? E : e) && void 0 !== T ? T : n,
+                    sortable: null !== (v = null != h ? h : l) && void 0 !== v ? v : s
                 }) : o.substring(0, c.length) === c || (null == u ? void 0 : u.substring(0, c.length)) === c || (null == m ? void 0 : m.substring(0, c.length)) === c ? _.push({
                     type: j.AutocompleterResultTypes.USER,
                     record: i,
@@ -325,12 +325,12 @@ function(e, t, n) {
                     }
                     return n
                 }(n, c);
-            t = null != i ? o(N.default.getChannels(i)[d]).map(e => e.channel).concat(T.default.computeAllActiveJoinedThreads(i)).value() : o(y.default.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(T.default.computeAllActiveJoinedThreads()).value();
+            t = null != i ? o(N.default.getChannels(i)[d]).map(e => e.channel).concat(v.default.computeAllActiveJoinedThreads(i)).value() : o(y.default.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(v.default.computeAllActiveJoinedThreads()).value();
             let g = {},
                 m = [];
             for (let e of t) {
-                var p, S, v, I, C;
-                if (p = d, S = e.type, v = null != i, !(p === S || (v || (0, A.isGuildChannelType)(S)) && (p === N.GUILD_SELECTABLE_CHANNELS_KEY ? (0, A.isGuildSelectableChannelType)(S) || (0, A.isGuildVocalChannelType)(S) : p === N.GUILD_VOCAL_CHANNELS_KEY && (0, A.isGuildVocalChannelType)(S))) || (0, A.isGuildChannelType)(e.type) && !P.default.can(_ ? e.accessPermissions : K.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
+                var p, S, T, I, C;
+                if (p = d, S = e.type, T = null != i, !(p === S || (T || (0, A.isGuildChannelType)(S)) && (p === N.GUILD_SELECTABLE_CHANNELS_KEY ? (0, A.isGuildSelectableChannelType)(S) || (0, A.isGuildVocalChannelType)(S) : p === N.GUILD_VOCAL_CHANNELS_KEY && (0, A.isGuildVocalChannelType)(S))) || (0, A.isGuildChannelType)(e.type) && !P.default.can(_ ? e.accessPermissions : K.Permissions.VIEW_CHANNEL, e) || !a(e)) continue;
                 let t = [...h],
                     s = e.name.toLocaleLowerCase(),
                     o = E && n === e.id,
@@ -742,20 +742,20 @@ function(e, t, n) {
                             value: s
                         } = n, r = function(e) {
                             switch (e) {
-                                case v.StickerMetadataTypes.STICKER_NAME:
+                                case T.StickerMetadataTypes.STICKER_NAME:
                                     return 11;
-                                case v.StickerMetadataTypes.CORRELATED_EMOJI:
+                                case T.StickerMetadataTypes.CORRELATED_EMOJI:
                                     return 6;
-                                case v.StickerMetadataTypes.TAG:
+                                case T.StickerMetadataTypes.TAG:
                                     return 1;
-                                case v.StickerMetadataTypes.GUILD_NAME:
-                                case v.StickerMetadataTypes.PACK_NAME:
+                                case T.StickerMetadataTypes.GUILD_NAME:
+                                case T.StickerMetadataTypes.PACK_NAME:
                                     return 8;
                                 default:
                                     return 1
                             }
                         }(i), a = 0;
-                        t ? s === e ? a = 10 * r : d.test(s) ? a = 7 * r : (i === v.StickerMetadataTypes.GUILD_NAME || i === v.StickerMetadataTypes.PACK_NAME || i === v.StickerMetadataTypes.STICKER_NAME) && c.test(s) && (a = 5 * r) : s === e && (a = 10 * r, _ = s), a > u && (u = a, _ = s)
+                        t ? s === e ? a = 10 * r : d.test(s) ? a = 7 * r : (i === T.StickerMetadataTypes.GUILD_NAME || i === T.StickerMetadataTypes.PACK_NAME || i === T.StickerMetadataTypes.STICKER_NAME) && c.test(s) && (a = 5 * r) : s === e && (a = 10 * r, _ = s), a > u && (u = a, _ = s)
                     }
                     let E = p.default.stickerFrecencyWithoutFetchingLatest.getScore(o);
                     null != E && (u *= E / 100), u > 0 && null != _ && !a.has(f.id) && (a.add(f.id), l.push({

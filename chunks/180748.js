@@ -32,10 +32,10 @@ function(e, t, n) {
             return S
         },
         setPrefersReducedMotion: function() {
-            return v
+            return T
         },
         setSyncForcedColors: function() {
-            return T
+            return v
         },
         systemColorPreferencesChanged: function() {
             return I
@@ -134,7 +134,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e) {
+    function T(e) {
         let t = a.default.useReducedMotion;
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
@@ -157,7 +157,7 @@ function(e, t, n) {
         }) : t && !n && s.default.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers")
     }
 
-    function T(e) {
+    function v(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_SYNC_FORCED_COLORS",
             syncForcedColors: e

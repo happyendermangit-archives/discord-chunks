@@ -35,23 +35,23 @@ function(e, t, n) {
                 fade: m = !1,
                 customTheme: p = !1,
                 style: S,
-                ...v
-            } = t, T = s.useRef(null), I = s.useRef(null), [A, C] = s.useState(!1), {
+                ...T
+            } = t, v = s.useRef(null), I = s.useRef(null), [A, C] = s.useState(!1), {
                 scrollerRef: y,
                 getScrollerState: N
             } = (0, l.useUncachedScrollerState)(), R = (0, l.useScrollSpring)(y);
             s.useImperativeHandle(d, () => ({
                 getScrollerNode: () => y.current,
-                isScrolling: () => null != T.current,
+                isScrolling: () => null != v.current,
                 getScrollerState: N,
                 ...(0, l.getAnimatedScrollHelpers)(y, N, R)
             }), [y, N, R]);
             let O = s.useCallback(e => {
-                null == T.current ? C(!0) : clearTimeout(T.current), T.current = setTimeout(() => {
-                    T.current = null, C(!1)
+                null == v.current ? C(!0) : clearTimeout(v.current), v.current = setTimeout(() => {
+                    v.current = null, C(!1)
                 }, 200), null != h && h(e)
             }, [h]);
-            return s.useEffect(() => () => clearTimeout(T.current), []), (0, l.useResizeObserverSubscription)({
+            return s.useEffect(() => () => clearTimeout(v.current), []), (0, l.useResizeObserverSubscription)({
                 ref: y,
                 key: "container",
                 onUpdate: f,
@@ -75,7 +75,7 @@ function(e, t, n) {
                 style: S,
                 dir: g,
                 onScroll: O,
-                ...v,
+                ...T,
                 children: (0, i.jsx)(o.FocusRingScope, {
                     containerRef: I,
                     children: (0, i.jsxs)("div", {

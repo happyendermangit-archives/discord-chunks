@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("49111"),
         S = n("646718"),
         C = n("782340"),
-        _ = n("163448"),
-        T = n("187971");
+        T = n("163448"),
+        _ = n("187971");
 
     function I(e) {
         var t;
@@ -66,32 +66,32 @@ function(e, t, n) {
             }), (0, p.navigateToPremiumMarketingPage)(), I()
         }, [I]);
         return (0, i.jsxs)("div", {
-            className: s(T.premiumPromo, _.container),
+            className: s(_.premiumPromo, T.container),
             children: [(0, i.jsx)(o.Clickable, {
-                className: T.premiumPromoClose,
+                className: _.premiumPromoClose,
                 onClick: a,
                 children: C.default.Messages.CLOSE
             }), (0, i.jsx)("img", {
                 "aria-hidden": !0,
                 alt: "",
-                className: s(T.premiumPromoImage, T.premiumPromoImageSmaller, _.image),
+                className: s(_.premiumPromoImage, _.premiumPromoImageSmaller, T.image),
                 src: j
             }), (0, i.jsx)(o.Heading, {
                 variant: "heading-lg/normal",
                 color: "header-primary",
-                className: T.premiumPromoTitle,
+                className: _.premiumPromoTitle,
                 children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
             }), (0, i.jsx)(o.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                className: T.premiumPromoDescription,
+                className: _.premiumPromoDescription,
                 children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
                     onClick: U
                 })
             }), (0, i.jsxs)("div", {
-                className: _.buttonContainer,
+                className: T.buttonContainer,
                 children: [(0, i.jsx)("div", {
-                    className: _.previewButtonContainer,
+                    className: T.previewButtonContainer,
                     children: b
                 }), (0, i.jsx)(m.default, {
                     subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,

@@ -35,8 +35,8 @@ function(e, t, n) {
         m = {},
         p = new Set,
         S = {},
-        v = {},
         T = {},
+        v = {},
         I = {},
         A = new Map;
 
@@ -87,10 +87,10 @@ function(e, t, n) {
             return S[e]
         }
         getSubscriptionTrial(e) {
-            return v[e]
+            return T[e]
         }
         getMonetizationRestrictions(e) {
-            return T[e]
+            return v[e]
         }
         getMonetizationRestrictionsFetchState(e) {
             var t;
@@ -103,7 +103,7 @@ function(e, t, n) {
     O.displayName = "GuildRoleSubscriptionsStore";
     var D = new O(u.default, {
         CONNECTION_OPEN: function() {
-            h.clear(), g.clear(), m = {}, p.clear(), S = {}, v = {}, T = {}, I = {}, A.clear()
+            h.clear(), g.clear(), m = {}, p.clear(), S = {}, T = {}, v = {}, I = {}, A.clear()
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function(e) {
             let {
@@ -126,7 +126,7 @@ function(e, t, n) {
                 subscriptionTrials: s
             } = e;
             for (let e of (m[t] = 2, n)) y(e);
-            for (let e of (S[t] = i, s)) v[e.id] = e
+            for (let e of (S[t] = i, s)) T[e.id] = e
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function(e) {
             let {
@@ -181,7 +181,7 @@ function(e, t, n) {
             let {
                 subscriptionTrial: t
             } = e;
-            v[t.id] = t
+            T[t.id] = t
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS: function(e) {
             let {
@@ -194,13 +194,13 @@ function(e, t, n) {
                 guildId: t,
                 restrictions: n
             } = e;
-            T[t] = n, I[t] = 2
+            v[t] = n, I[t] = 2
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function(e) {
             let {
                 guildId: t
             } = e;
-            I[t] = 2, T[t] = d.DefaultCreatorMonetizationRestrictions
+            I[t] = 2, v[t] = d.DefaultCreatorMonetizationRestrictions
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: function(e) {
             let {

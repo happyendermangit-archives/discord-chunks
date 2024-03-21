@@ -5,7 +5,7 @@ function(e, t, n) {
             return p
         },
         default: function() {
-            return T
+            return v
         }
     }), n("222007");
     var i = n("446674"),
@@ -102,7 +102,7 @@ function(e, t, n) {
         }
     }
     S.displayName = "PoggermodeStore";
-    let v = new S(a.default, {
+    let T = new S(a.default, {
         POGGERMODE_UPDATE_COMBO: function(e) {
             let {
                 type: t,
@@ -130,11 +130,11 @@ function(e, t, n) {
                                 ...t,
                                 value: 0,
                                 multiplier: 1
-                            }), v.emitChange())
+                            }), T.emitChange())
                         } else e({
                             ...t,
                             value: t.value - 1
-                        }), v.emitChange()
+                        }), T.emitChange()
                     }
                 }))
             }(n)
@@ -174,5 +174,5 @@ function(e, t, n) {
             return !1
         }
     });
-    var T = v
+    var v = T
 }

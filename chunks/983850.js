@@ -28,8 +28,8 @@ function(e, t, n) {
         m = n("18494"),
         p = n("162771"),
         S = n("299039"),
-        v = n("660464"),
-        T = n("695681"),
+        T = n("660464"),
+        v = n("695681"),
         I = n("457971"),
         A = n("447435"),
         C = n("574933"),
@@ -93,9 +93,9 @@ function(e, t, n) {
     let b = (e, t) => {
         if (0 !== e.length) {
             if (t) {
-                (0, T.sendMultiChannelMessagesForScanning)(e);
+                (0, v.sendMultiChannelMessagesForScanning)(e);
                 return
-            }(0, T.sendMessagesForScanning)(e[0].channel_id, e.map(e => e.id))
+            }(0, v.sendMessagesForScanning)(e[0].channel_id, e.map(e => e.id))
         }
     };
 
@@ -103,7 +103,7 @@ function(e, t, n) {
         let {
             forceBatchScan: n = !1,
             jitter: i = !1
-        } = null != t ? t : {}, s = (null == t ? void 0 : t.isMessageUpdate) ? e.filter(v.hasUnscannedAttachmentsOrEmbedsForTimeout) : e;
+        } = null != t ? t : {}, s = (null == t ? void 0 : t.isMessageUpdate) ? e.filter(T.hasUnscannedAttachmentsOrEmbedsForTimeout) : e;
         s.forEach(e => {
             let t = P(e);
             null == D[t] && (c.default.increment({
@@ -117,7 +117,7 @@ function(e, t, n) {
                                 {
                                     attachmentIds: n,
                                     embedIds: i
-                                } = (0, v.getUnscannedAttachmentsAndEmbedIdsForTimeout)(t);
+                                } = (0, T.getUnscannedAttachmentsAndEmbedIdsForTimeout)(t);
                             (0, A.trackScanningTimedOut)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
@@ -150,7 +150,7 @@ function(e, t, n) {
                 numOfEmbedsPendingScan: 0
             });
             let d = e[t.channel_id];
-            return d.numOfAttachments += null !== (a = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0, d.numOfEmbeds += null !== (o = null === (i = t.embeds) || void 0 === i ? void 0 : i.length) && void 0 !== o ? o : 0, d.numOfAttachmentsPendingScan += null !== (l = null === (s = t.attachments) || void 0 === s ? void 0 : s.filter(v.shouldScanAttachment).length) && void 0 !== l ? l : 0, d.numOfEmbedsPendingScan += null !== (u = null == t ? void 0 : null === (r = t.embeds) || void 0 === r ? void 0 : r.filter(v.shouldScanEmbed).length) && void 0 !== u ? u : 0, {
+            return d.numOfAttachments += null !== (a = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0, d.numOfEmbeds += null !== (o = null === (i = t.embeds) || void 0 === i ? void 0 : i.length) && void 0 !== o ? o : 0, d.numOfAttachmentsPendingScan += null !== (l = null === (s = t.attachments) || void 0 === s ? void 0 : s.filter(T.shouldScanAttachment).length) && void 0 !== l ? l : 0, d.numOfEmbedsPendingScan += null !== (u = null == t ? void 0 : null === (r = t.embeds) || void 0 === r ? void 0 : r.filter(T.shouldScanEmbed).length) && void 0 !== u ? u : 0, {
                 ...e,
                 [t.channel_id]: d
             }
@@ -163,15 +163,15 @@ function(e, t, n) {
             messagesPendingScan: n,
             attributesByChannelId: i
         } = function(e) {
-            let t = e.filter(e => (0, v.hasAttachmentsOrEmbeds)(e) && (0, A.shouldRedactExplicitContent)(e)),
+            let t = e.filter(e => (0, T.hasAttachmentsOrEmbeds)(e) && (0, A.shouldRedactExplicitContent)(e)),
                 n = e.map(e => {
-                    if (null != e && "referenced_message" in e && null != e.referenced_message && (0, v.hasAttachmentsOrEmbeds)(e.referenced_message) && (0, A.shouldRedactExplicitContent)(e.referenced_message)) return e.referenced_message
+                    if (null != e && "referenced_message" in e && null != e.referenced_message && (0, T.hasAttachmentsOrEmbeds)(e.referenced_message) && (0, A.shouldRedactExplicitContent)(e.referenced_message)) return e.referenced_message
                 }).filter(function(e) {
                     return null != e
                 });
             n.length > 0 && (t = [...t, ...n]);
             let i = a(t, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
-                s = i.filter(e => (0, v.hasAttachmentsOrEmbedsRequiringScan)(e));
+                s = i.filter(e => (0, T.hasAttachmentsOrEmbedsRequiringScan)(e));
             return {
                 messagesPendingScan: s,
                 attributesByChannelId: w(i)
@@ -195,9 +195,9 @@ function(e, t, n) {
             message: o
         } = e;
         if (!(0, I.isEligibleForExplicitMediaRedaction)() || null == o.channel_id || null == o.id || (null === (t = o.author) || void 0 === t ? void 0 : t.id) === f.default.getId() || null == o.embeds && null == o.attachments || (null === (n = o.embeds) || void 0 === n ? void 0 : n.length) === 0 && (null === (i = o.attachments) || void 0 === i ? void 0 : i.length) === 0) return !1;
-        if (!(0, v.hasUnscannedAttachmentsOrEmbedsForTimeout)(o)) {
+        if (!(0, T.hasUnscannedAttachmentsOrEmbedsForTimeout)(o)) {
             let e = null !== (a = null !== (r = g.default.getMessage(o.channel_id, o.id)) && void 0 !== r ? r : C.default.getMessage(o.id, o.channel_id)) && void 0 !== a ? a : null === (s = _.default.getMessage(o.channel_id, o.id)) || void 0 === s ? void 0 : s.message;
-            null != e && !(0, v.hasUnscannedAttachmentsOrEmbedsForTimeout)((0, d.updateMessageRecord)(e, o)) && M(e, A.TimeoutCancelSource.UPDATE)
+            null != e && !(0, T.hasUnscannedAttachmentsOrEmbedsForTimeout)((0, d.updateMessageRecord)(e, o)) && M(e, A.TimeoutCancelSource.UPDATE)
         }
         let l = m.default.getChannelId(),
             u = E.default.getCurrentSidebarChannelId(l),
@@ -310,18 +310,18 @@ function(e, t, n) {
                 messagesPendingScan: t,
                 attributesByChannelId: n
             } = function(e) {
-                let t = e.filter(e => (0, v.hasAttachmentsOrEmbeds)(e) && (0, A.shouldRedactExplicitContent)(e)),
+                let t = e.filter(e => (0, T.hasAttachmentsOrEmbeds)(e) && (0, A.shouldRedactExplicitContent)(e)),
                     n = e.map(e => {
                         if (y.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
                             let t = _.default.getMessageByReference(e.messageReference);
-                            if (t.state === _.ReferencedMessageState.LOADED && null != t.message && (0, v.hasAttachmentsOrEmbeds)(t.message) && (0, A.shouldRedactExplicitContent)(t.message)) return t.message
+                            if (t.state === _.ReferencedMessageState.LOADED && null != t.message && (0, T.hasAttachmentsOrEmbeds)(t.message) && (0, A.shouldRedactExplicitContent)(t.message)) return t.message
                         }
                     }).filter(function(e) {
                         return null != e
                     });
                 n.length > 0 && (t = [...t, ...n]);
                 let i = a(t, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
-                    s = i.filter(e => (0, v.hasAttachmentsOrEmbedsRequiringScan)(e));
+                    s = i.filter(e => (0, T.hasAttachmentsOrEmbedsRequiringScan)(e));
                 return {
                     messagesPendingScan: s,
                     attributesByChannelId: w(i)

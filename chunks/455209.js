@@ -32,7 +32,7 @@ function(e, _, E) {
             } = E("773336");
             if ("/" === e.url[0]) {
                 var S, R;
-                e.url = t.default.getAPIBaseURL() + e.url, !("Authorization" in e.header) && !("authorization" in e.header) && e.set("Authorization", _.getToken());
+                e.url = (0, t.getAPIBaseURL)() + e.url, !("Authorization" in e.header) && !("authorization" in e.header) && e.set("Authorization", _.getToken());
                 let E = i.getSuperPropertiesBase64();
                 null != E && e.set("X-Super-Properties", E);
                 let o = _.getFingerprint();

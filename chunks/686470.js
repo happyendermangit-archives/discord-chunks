@@ -26,13 +26,13 @@ function(e, t, n) {
         m = {},
         p = new Set,
         S = {},
-        v = {},
-        T = !1;
+        T = {},
+        v = !1;
 
     function I() {
         a.default.set(f, {
             ...E(),
-            activeLaunchOptionIds: v
+            activeLaunchOptionIds: T
         })
     }
 
@@ -74,7 +74,7 @@ function(e, t, n) {
         initialize() {
             this.waitFor(c.default);
             let e = a.default.get(f);
-            null != e && (null == e.activeLaunchOptionIds ? I() : v = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? A() : S = e.activeLibraryApplicationBranchIds)
+            null != e && (null == e.activeLaunchOptionIds ? I() : T = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? A() : S = e.activeLibraryApplicationBranchIds)
         }
         get libraryApplications() {
             return function(e) {
@@ -120,7 +120,7 @@ function(e, t, n) {
             return p.has((0, d.getComboId)(e, t))
         }
         getActiveLaunchOptionId(e, t) {
-            return v[(0, d.getComboId)(e, t)]
+            return T[(0, d.getComboId)(e, t)]
         }
         get fetched() {
             return h
@@ -129,7 +129,7 @@ function(e, t, n) {
             return s(R()).values().filter(e => (0, d.isUserEntitledToLibraryApplication)(e)).map(e => e.branchId).value()
         }
         get hasRemovedLibraryApplicationThisSession() {
-            return T
+            return v
         }
         whenInitialized(e) {
             this.addConditionalChangeListener(() => {
@@ -160,7 +160,7 @@ function(e, t, n) {
                 branchId: n,
                 flags: i
             } = e, s = (0, d.getComboId)(t, n), r = N(t, n);
-            null != r && !r.isHidden() && u.hasFlag(i, _.LibraryApplicationFlags.HIDDEN) && (T = !0), p.add(s)
+            null != r && !r.isHidden() && u.hasFlag(i, _.LibraryApplicationFlags.HIDDEN) && (v = !0), p.add(s)
         },
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: y,
         LIBRARY_APPLICATION_UPDATE: y,
@@ -170,7 +170,7 @@ function(e, t, n) {
                 branchId: n,
                 launchOptionId: i
             } = e;
-            v[(0, d.getComboId)(t, n)] = i, I()
+            T[(0, d.getComboId)(t, n)] = i, I()
         },
         LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function(e) {
             let {

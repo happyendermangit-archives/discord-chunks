@@ -35,10 +35,10 @@ function(e, t, n) {
             return S
         },
         VenmoSourceRecord: function() {
-            return v
+            return T
         },
         KaKaoPaySourceRecord: function() {
-            return T
+            return v
         },
         GoPayWalletSourceRecord: function() {
             return I
@@ -99,7 +99,7 @@ function(e, t, n) {
                         email: e.email
                     });
                 case l.PaymentSourceTypes.VENMO:
-                    return new v({
+                    return new T({
                         ...i,
                         username: e.username
                     });
@@ -141,7 +141,7 @@ function(e, t, n) {
                         ...i
                     });
                 case l.PaymentSourceTypes.KAKAOPAY:
-                    return new T({
+                    return new v({
                         ...i
                     });
                 case l.PaymentSourceTypes.GOPAY_WALLET:
@@ -189,9 +189,9 @@ function(e, t, n) {
                 case l.PaymentSourceTypes.MOMO_WALLET:
                     return new S(e);
                 case l.PaymentSourceTypes.VENMO:
-                    return new v(e);
-                case l.PaymentSourceTypes.KAKAOPAY:
                     return new T(e);
+                case l.PaymentSourceTypes.KAKAOPAY:
+                    return new v(e);
                 case l.PaymentSourceTypes.GOPAY_WALLET:
                     return new I(e);
                 case l.PaymentSourceTypes.BANCONTACT:
@@ -288,13 +288,13 @@ function(e, t, n) {
             if (super(e), e.type !== l.PaymentSourceTypes.MOMO_WALLET) throw Error("Cannot instantiate MomoWalletSourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.MOMO_WALLET))
         }
     }
-    class v extends i {
+    class T extends i {
         constructor(e) {
             if (super(e), e.type !== l.PaymentSourceTypes.VENMO) throw Error("Cannot instantiate VenmoSourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.VENMO));
             this.username = e.username || ""
         }
     }
-    class T extends i {
+    class v extends i {
         constructor(e) {
             if (super(e), e.type !== l.PaymentSourceTypes.KAKAOPAY) throw Error("Cannot instantiate KaKaoPaySourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.KAKAOPAY))
         }

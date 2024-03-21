@@ -114,24 +114,24 @@ function(e, t, n) {
         return t
     }
 
-    function v(e, t) {
+    function T(e, t) {
         let n = !1;
         for (let i of e) n = !1 !== t(i) || n;
         return n
     }
 
-    function T(e) {
+    function v(e) {
         let {
             messages: t
         } = e;
-        return v(t, e => S(e))
+        return T(t, e => S(e))
     }
 
     function I(e) {
         let {
             messages: t
         } = e;
-        return v(t, e => v(e, e => S(e)))
+        return T(t, e => T(e, e => S(e)))
     }
 
     function A(e) {
@@ -153,7 +153,7 @@ function(e, t, n) {
         let {
             firstMessages: t
         } = e;
-        return null != t && v(t, e => S(e))
+        return null != t && T(t, e => S(e))
     }
     class R extends o.default.Store {
         initialize() {
@@ -178,18 +178,18 @@ function(e, t, n) {
             let {
                 messages: t
             } = e;
-            return v(Object.values(t), e => v(Object.values(e), e => S(e)))
+            return T(Object.values(t), e => T(Object.values(e), e => S(e)))
         },
-        LOCAL_MESSAGES_LOADED: T,
-        LOAD_MESSAGES_SUCCESS: T,
-        LOAD_MESSAGES_AROUND_SUCCESS: T,
+        LOCAL_MESSAGES_LOADED: v,
+        LOAD_MESSAGES_SUCCESS: v,
+        LOAD_MESSAGES_AROUND_SUCCESS: v,
         SEARCH_FINISH: I,
         MOD_VIEW_SEARCH_FINISH: I,
         GUILD_FEED_FETCH_SUCCESS: function(e) {
             let {
                 data: t
             } = e, n = (0, d.getMessagesFromGuildFeedFetch)(t);
-            return v(n, e => S(e))
+            return T(n, e => S(e))
         },
         LOAD_THREADS_SUCCESS: N,
         LOAD_ARCHIVED_THREADS_SUCCESS: N,
@@ -210,7 +210,7 @@ function(e, t, n) {
             let {
                 threads: t
             } = e;
-            return v(Object.values(t), e => {
+            return T(Object.values(t), e => {
                 let {
                     first_message: t
                 } = e;
@@ -247,7 +247,7 @@ function(e, t, n) {
                 ids: t,
                 channelId: n
             } = e;
-            return v(t, e => C(n, e))
+            return T(t, e => C(n, e))
         },
         CREATE_PENDING_REPLY: function(e) {
             let {

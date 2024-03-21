@@ -23,10 +23,10 @@ function(e, t, n) {
             m = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             p = d.default.getChannel(e),
             S = E.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-            v = null != p ? _.default.getCheck(p.guild_id) : null,
-            T = null != t && (0, r.shouldShowMembershipVerificationGate)(t);
-        if (!T) {
-            if (null == v || v.canChat || (0, a.canLurkerListen)(p)) {
+            T = null != p ? _.default.getCheck(p.guild_id) : null,
+            v = null != t && (0, r.shouldShowMembershipVerificationGate)(t);
+        if (!v) {
+            if (null == T || T.canChat || (0, a.canLurkerListen)(p)) {
                 if (null != p && !S) {
                     let e = (0, h.isChannelFull)(p, E.default, c.default);
                     if (e && p.isGuildStageVoice() && (0, o.getStageHasMedia)(p.id)) {

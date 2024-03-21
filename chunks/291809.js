@@ -13,6 +13,7 @@ function(e, t, n) {
         avatarWrapper: "avatarWrapper_f77579",
         avatarWrapperNonUserBot: "avatarWrapperNonUserBot_d27212 avatarWrapper_f77579",
         avatarWrapperNormal: "avatarWrapperNormal__0bddb avatarWrapper_f77579",
+        biteSizeHeaderContainer: "biteSizeHeaderContainer__8cc75",
         clickable: "clickable__35918",
         profileBadges: "profileBadges__7a7cb",
         profileBadgesCompactNoTouch: "profileBadgesCompactNoTouch__9b41f profileBadges__7a7cb",

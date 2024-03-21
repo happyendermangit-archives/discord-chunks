@@ -24,8 +24,8 @@ function(e, t, n) {
             loading: m = !1,
             disabled: p = !1,
             placeholder: S = _.default.Messages.SEARCH,
-            "aria-label": v
-        } = e, T = s.useRef(null), I = s.useRef(null);
+            "aria-label": T
+        } = e, v = s.useRef(null), I = s.useRef(null);
         s.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
@@ -77,7 +77,7 @@ function(e, t, n) {
         }));
         return (0, i.jsx)(l.FocusRing, {
             focusTarget: I,
-            ringTarget: T,
+            ringTarget: v,
             offset: {
                 top: 2,
                 bottom: 2,
@@ -86,7 +86,7 @@ function(e, t, n) {
             },
             children: (0, i.jsxs)("div", {
                 className: f.container,
-                ref: T,
+                ref: v,
                 children: [(0, i.jsx)("input", {
                     role: "searchbox",
                     "aria-busy": m,
@@ -94,7 +94,7 @@ function(e, t, n) {
                     className: f.input,
                     value: h,
                     onChange: e => g(e.currentTarget.value),
-                    "aria-label": v,
+                    "aria-label": T,
                     placeholder: S,
                     disabled: p
                 }), A]

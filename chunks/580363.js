@@ -23,8 +23,8 @@ function(e, t, n) {
         m = n("29479"),
         p = n("49111"),
         S = n("843455"),
-        v = n("782340"),
-        T = n("10604");
+        T = n("782340"),
+        v = n("10604");
 
     function I(e) {
         var t;
@@ -44,11 +44,11 @@ function(e, t, n) {
             n = null != e.host && e.host.length > 0 ? e.origin : e.href
         }
         return (0, i.jsxs)("div", {
-            className: T.applicationDetails,
+            className: v.applicationDetails,
             children: [null != n ? (0, i.jsx)(A, {
-                className: T.redirectWarning,
+                className: v.redirectWarning,
                 icon: d.default,
-                text: v.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
+                text: T.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
                     origin: n
                 })
             }) : null, (0, i.jsx)(A, {
@@ -56,12 +56,12 @@ function(e, t, n) {
                 text: (0, g.getApplicationDetailsText)(s)
             }), (0, i.jsx)(A, {
                 icon: l.default,
-                text: v.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
+                text: T.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
                     date: N
                 })
             }), r.includes(S.OAuth2Scopes.BOT) && null != I ? (0, i.jsx)(A, {
                 icon: _.default,
-                text: v.default.Messages.OAUTH2_DETAILS_GUILDS.format({
+                text: T.default.Messages.OAUTH2_DETAILS_GUILDS.format({
                     guildCount: I
                 })
             }) : null, (0, i.jsx)(A, {
@@ -69,10 +69,10 @@ function(e, t, n) {
                 text: R
             }), (null == y ? void 0 : y.has_csp_exception) ? (0, i.jsx)(A, {
                 icon: u.default,
-                text: v.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
+                text: T.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
             }) : null, (null == y ? void 0 : y.displays_advertisements) ? (0, i.jsx)(A, {
                 icon: a.EmbedIcon,
-                text: v.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
+                text: T.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
             }) : null]
         })
     }
@@ -84,13 +84,13 @@ function(e, t, n) {
             className: s
         } = e;
         return (0, i.jsxs)("div", {
-            className: r(T.entry, s),
+            className: r(v.entry, s),
             children: [(0, i.jsx)(t, {
-                className: T.entryIcon
+                className: v.entryIcon
             }), (0, i.jsx)(o.Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
-                className: T.entryInner,
+                className: v.entryInner,
                 children: n
             })]
         })

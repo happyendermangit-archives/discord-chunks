@@ -48,11 +48,11 @@ function(e, t, n) {
                             p = n._list,
                             S = n._listLevel;
                         n._list = !0, n._listLevel = (null != S ? S : 0) + 1, h ? (n.inline = !1, s = d.replace(f, "\n\n")) : (n.inline = !0, s = d.replace(f, ""));
-                        let v = g(t(s, {
+                        let T = g(t(s, {
                             ...n,
                             allowHeading: !1
                         }));
-                        return n.inline = m, n._list = p, n._listLevel = S, v
+                        return n.inline = m, n._list = p, n._listLevel = S, T
                     });
                 return {
                     ordered: r,

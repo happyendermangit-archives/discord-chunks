@@ -39,17 +39,17 @@ function(e, t, n) {
         m = [...g, c.AST_KEY.EMOJI, c.AST_KEY.CUSTOM_EMOJI],
         p = [c.AST_KEY.LIST, c.AST_KEY.HEADING, c.AST_KEY.BLOCK_QUOTE],
         S = [c.AST_KEY.TEXT],
-        v = [c.AST_KEY.UNDERLINE, c.AST_KEY.STRONG, c.AST_KEY.ITALICS, c.AST_KEY.STRIKETHROUGH, c.AST_KEY.INLINE_CODE, c.AST_KEY.SPOILER, c.AST_KEY.LINE_BREAK, c.AST_KEY.TIMESTAMP, c.AST_KEY.EMOJI, c.AST_KEY.CUSTOM_EMOJI, c.AST_KEY.LIST, c.AST_KEY.HEADING, c.AST_KEY.BLOCK_QUOTE];
+        T = [c.AST_KEY.UNDERLINE, c.AST_KEY.STRONG, c.AST_KEY.ITALICS, c.AST_KEY.STRIKETHROUGH, c.AST_KEY.INLINE_CODE, c.AST_KEY.SPOILER, c.AST_KEY.LINE_BREAK, c.AST_KEY.TIMESTAMP, c.AST_KEY.EMOJI, c.AST_KEY.CUSTOM_EMOJI, c.AST_KEY.LIST, c.AST_KEY.HEADING, c.AST_KEY.BLOCK_QUOTE];
 
-    function T(e, t) {
+    function v(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
         for (let i of (!Array.isArray(e) && (e = [e]), e)) {
             if (void 0 === i || !t.includes(i.type)) return null;
             if (i.type === c.AST_KEY.INLINE_CODE) {
                 let e = [...t, ...n];
-                if (null == T(i.validationChildContent, e)) return null
+                if (null == v(i.validationChildContent, e)) return null
             }
-            if (Array.isArray(i.content) && null == T(i.content, t)) return null
+            if (Array.isArray(i.content) && null == v(i.content, t)) return null
         }
         return e
     }
@@ -92,11 +92,11 @@ function(e, t, n) {
                 },
                 b = n.allowEmojiLinks ? m : g,
                 U = [...b, ...p],
-                w = [...S, ...v],
+                w = [...S, ...T],
                 k = t(y, M),
-                V = T(k, U, [c.AST_KEY.EMOJI]),
+                V = v(k, U, [c.AST_KEY.EMOJI]),
                 G = t(N, M),
-                F = T(G, w);
+                F = v(G, w);
             if (null == V || null == F) return _();
             let x = function e(t) {
                     let n = "";

@@ -23,7 +23,7 @@ function(t, e, n) {
                 type: "ENTITLEMENT_FETCH_APPLICATION_START",
                 applicationId: t
             })
-        }), i.default.get({
+        }), i.HTTP.get({
             url: l.Endpoints.ENTITLEMENTS_FOR_APPLICATION(t),
             oldFormErrors: !0,
             query: {
@@ -50,7 +50,7 @@ function(t, e, n) {
             type: "ENTITLEMENTS_FETCH_FOR_USER_START"
         });
         try {
-            let t = await i.default.get({
+            let t = await i.HTTP.get({
                 url: l.Endpoints.ENTITLEMENTS_FOR_USER,
                 query: {
                     with_sku: e,

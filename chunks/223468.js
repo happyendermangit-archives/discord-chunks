@@ -10,7 +10,7 @@ function(e, t, n) {
         a = n("49111"),
         o = n("782340"),
         s = {
-            changeNickname: (e, t, n, s) => i.default.patch({
+            changeNickname: (e, t, n, s) => i.HTTP.patch({
                 url: a.Endpoints.GUILD_MEMBER_NICK(e, n),
                 body: {
                     nick: s

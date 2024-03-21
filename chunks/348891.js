@@ -29,8 +29,8 @@ function(e, t, n) {
                 onClose: m,
                 onCloseCallback: p,
                 bodyClassName: S,
-                transitionState: v,
-                loading: T = !1,
+                transitionState: T,
+                loading: v = !1,
                 confirmButtonColor: I = o.Button.Colors.RED,
                 focusCancel: A = !1
             } = e,
@@ -44,7 +44,7 @@ function(e, t, n) {
             type: "button",
             look: o.Button.Looks.LINK,
             color: o.Button.Colors.PRIMARY,
-            disabled: T,
+            disabled: v,
             onClick: () => {
                 null == g || g(), m()
             },
@@ -54,7 +54,7 @@ function(e, t, n) {
             buttonRef: C,
             type: "submit",
             color: I,
-            submitting: T,
+            submitting: v,
             onClick: async () => {
                 try {
                     await (null == h ? void 0 : h()), m()
@@ -66,7 +66,7 @@ function(e, t, n) {
             children: _
         })), (0, i.jsxs)(u.ModalRoot, {
             className: E,
-            transitionState: v,
+            transitionState: T,
             children: [null != r ? (0, i.jsx)(u.ModalHeader, {
                 separator: !1,
                 children: (0, i.jsx)(l.Heading, {

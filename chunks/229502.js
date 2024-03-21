@@ -5,7 +5,7 @@ function(e, t, n) {
             return l
         },
         sendVoiceChannelCustomCallSoundEffect: function() {
-            return T
+            return _
         },
         sendVoiceChannelSoundboardEffect: function() {
             return I
@@ -32,7 +32,7 @@ function(e, t, n) {
         S = n("49111"),
         C = n("846325");
 
-    function _(e) {
+    function T(e) {
         let t = new AbortController,
             n = (0, a.throttle)(n => {
                 p.default.getVoiceChannelId() !== e && t.abort()
@@ -43,16 +43,16 @@ function(e, t, n) {
         }
     }
 
-    function T(e, t, n) {
+    function _(e, t, n) {
         var i;
         let {
             abortController: l,
             onRequestProgress: a
-        } = _(e), r = null !== (i = x.default.getState().animationType) && void 0 !== i ? i : g.VoiceChannelEffectAnimationType.BASIC, u = {
+        } = T(e), r = null !== (i = x.default.getState().animationType) && void 0 !== i ? i : g.VoiceChannelEffectAnimationType.BASIC, u = {
             animation_type: r,
             animation_id: (0, y.sampleAnimationId)(r, y.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
         };
-        s.default.post({
+        s.HTTP.post({
             url: S.Endpoints.CUSTOM_CALL_SOUNDS(e),
             body: u,
             signal: l.signal,
@@ -68,13 +68,13 @@ function(e, t, n) {
             {
                 abortController: o,
                 onRequestProgress: u
-            } = _(e),
+            } = T(e),
             p = {
                 sound_id: t.soundId,
                 emoji_id: t.emojiId,
                 emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == r ? void 0 : r.name
             };
-        t.guildId !== C.DEFAULT_SOUND_GUILD_ID && (p.source_guild_id = t.guildId), s.default.post({
+        t.guildId !== C.DEFAULT_SOUND_GUILD_ID && (p.source_guild_id = t.guildId), s.HTTP.post({
             url: S.Endpoints.SEND_SOUNDBOARD_SOUND(e),
             body: p,
             signal: o.signal,
@@ -106,7 +106,7 @@ function(e, t, n) {
                 animation_type: u,
                 animation_id: a
             };
-            await s.default.post({
+            await s.HTTP.post({
                 url: S.Endpoints.VOICE_CHANNEL_EFFECTS(t.id),
                 body: e
             }), A(t, n, i, u), r.default.dispatch({

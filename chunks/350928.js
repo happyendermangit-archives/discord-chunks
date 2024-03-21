@@ -17,8 +17,8 @@ function(e, t, d) {
         E = d("449008"),
         o = d("299039"),
         c = d("645600"),
-        f = d("185014"),
-        _ = d("60036"),
+        _ = d("185014"),
+        f = d("60036"),
         I = d("49111");
 
     function F(e) {
@@ -43,7 +43,7 @@ function(e, t, d) {
             }, this.onFeedItemSeen = (e, t) => {
                 t && (this.pendingReadAcks[e] = setTimeout(() => {
                     this.ackItemAsRead(e)
-                }, 3e3), this.feedItemSnapshots[e] = f.default.getItem(this.guildId, e))
+                }, 3e3), this.feedItemSnapshots[e] = _.default.getItem(this.guildId, e))
             }, this.onFeedItemUnseen = (e, t) => {
                 if (e in this.pendingReadAcks) {
                     let t = this.pendingReadAcks[e];
@@ -83,8 +83,8 @@ function(e, t, d) {
                     if (0 === Object.keys(s).length) return Promise.resolve();
                     let o = [],
                         c = [],
-                        f = [];
-                    for (let e of Object.keys(s)) o.push(e), c.push(s[e].additionalSeenTimeMillis), s[e].additionalSeenTimeMillis >= 1e3 && f.push(e);
+                        _ = [];
+                    for (let e of Object.keys(s)) o.push(e), c.push(s[e].additionalSeenTimeMillis), s[e].additionalSeenTimeMillis >= 1e3 && _.push(e);
                     r.default.track(I.AnalyticEvents.FEED_ITEM_SEEN_BATCH, {
                         guild_id: t,
                         load_id: d,
@@ -92,8 +92,8 @@ function(e, t, d) {
                         additional_seen_time_millis: c,
                         home_session_id: n
                     });
-                    let F = f.map(e => l[e]).filter(E.isNotNullish).map(_.default).map(e => e.id);
-                    return 0 === F.length ? Promise.resolve() : i.default.post({
+                    let F = _.map(e => l[e]).filter(E.isNotNullish).map(f.default).map(e => e.id);
+                    return 0 === F.length ? Promise.resolve() : i.HTTP.post({
                         url: I.Endpoints.GUILD_FEED_MARK_SEEN(t),
                         body: {
                             item_ids: F
@@ -112,17 +112,17 @@ function(e, t, d) {
                     itemId: d
                 } = e;
                 if (this.guildId !== t) return;
-                let n = f.default.getItem(t, d);
+                let n = _.default.getItem(t, d);
                 if (null == n || !n.unreadMention || n.seen) return;
-                let a = (0, _.default)(n),
+                let a = (0, f.default)(n),
                     s = a.channel_id;
                 await l.default.unarchiveThreadIfNecessary(s);
                 let r = u.default.getMentionCount(s),
                     E = u.default.ackMessageId(s);
                 if (null == E) return;
                 let c = 0;
-                for (let e of (0, _.getAllMessagesFromFeedItem)(n)) e.mentioned && o.default.compare(e.id, E) > 0 && (c += 1);
-                0 !== c && i.default.post({
+                for (let e of (0, f.getAllMessagesFromFeedItem)(n)) e.mentioned && o.default.compare(e.id, E) > 0 && (c += 1);
+                0 !== c && i.HTTP.post({
                     url: I.Endpoints.MESSAGE_ACK(s, E),
                     body: {
                         manual: !0,

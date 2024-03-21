@@ -21,14 +21,14 @@ function(e, t, n) {
         m = n("941719");
     let p = !1,
         S = !0,
-        v = !1;
+        T = !1;
 
-    function T() {
+    function v() {
         p = !0
     }
 
     function I() {
-        S && (i = void 0), v = !1, p = !1
+        S && (i = void 0), T = !1, p = !1
     }
     let A = () => {
             S = !E.default.canUseClientThemes(f.default.getCurrentUser())
@@ -60,7 +60,7 @@ function(e, t, n) {
             return S
         }
         get isCoachmark() {
-            return v
+            return T
         }
         get mobilePendingThemeIndex() {
             return s
@@ -114,7 +114,7 @@ function(e, t, n) {
             } = e, i = f.default.getCurrentUser();
             if (null == t || null == n || (0, l.isDismissibleContentDismissed)(a.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, h.ageEligibleForPremiumUpsell)(i)) return;
             let s = _.default.getChannel(t);
-            null != s && (0, c.isGuildTextChannelType)(s.type) && (v = !0, function() {
+            null != s && (0, c.isGuildTextChannelType)(s.type) && (T = !0, function() {
                 p = !0
             }())
         },

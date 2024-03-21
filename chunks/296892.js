@@ -107,7 +107,7 @@ function(e, t, n) {
                     m = null == o.trackExposureOptions ? void 0 : (0, s.default)(null !== (r = o.trackExposureOptions) && void 0 !== r ? r : {}),
                     p = null !== (a = null == h ? void 0 : h.triggerDebuggingEnabled) && void 0 !== a && a,
                     [
-                        [S, v, T], I
+                        [S, T, v], I
                     ] = (0, i.useState)(() => {
                         let t = null == h || _ ? l.ExperimentBuckets.NOT_ELIGIBLE : h.bucket;
                         return [d(e, t, c, h), t, null == h ? -1 : h.revision]
@@ -115,7 +115,7 @@ function(e, t, n) {
                     A = (0, s.default)(t);
                 return (0, i.useEffect)(() => {
                     if (!_ && (!!E || !!p)) f(A, m, !1 === E)
-                }, [_, E, A, m, v, T, p]), (0, i.useEffect)(() => g(A, (e, t, n) => {
+                }, [_, E, A, m, T, v, p]), (0, i.useEffect)(() => g(A, (e, t, n) => {
                     I(i => i[0] === e && i[1] === t && i[2] === n ? i : [e, t, n])
                 }, {
                     disable: _

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return v
         }
     });
     var i = n("37983"),
@@ -22,7 +22,7 @@ function(e, t, n) {
         m = n("611787");
     let p = (0, c.cssValueToNumber)(l.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
         S = 1 / 120;
-    class v extends s.Component {
+    class T extends s.Component {
         componentDidMount() {
             this.initialize()
         }
@@ -141,12 +141,12 @@ function(e, t, n) {
             }, this.wave = new E.default(this.updateWaveState), this.children = [new _.default, new f.default, this.wave]
         }
     }
-    v.defaultProps = {
+    T.defaultProps = {
         embedded: !1
     };
-    var T = e => {
+    var v = e => {
         let t = (0, u.useToken)(o.default.unsafe_rawColors.PRIMARY_630).hex();
-        return (0, i.jsx)(v, {
+        return (0, i.jsx)(T, {
             canvasFillStyle: t,
             ...e
         })

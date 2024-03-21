@@ -26,10 +26,10 @@ function(e, t, n) {
             return k
         },
         saveClip: function() {
-            return W
+            return H
         },
         dismissSaveClipAnimation: function() {
-            return H
+            return W
         },
         updateClipMetadata: function() {
             return K
@@ -72,8 +72,8 @@ function(e, t, n) {
         A = n("555035"),
         h = n("599110"),
         C = n("773336"),
-        I = n("709681"),
-        T = n("386045"),
+        T = n("709681"),
+        I = n("386045"),
         v = n("13136"),
         N = n("881095"),
         y = n("997942"),
@@ -215,7 +215,7 @@ function(e, t, n) {
             frames_encoded_during_clip: t.framesEncodedDuringClip,
             frames_dropped: t.framesDropped,
             frames_dropped_during_clip: t.framesDroppedDuringClip,
-            clip_duration_setting: T.default.getSettings().clipsLength,
+            clip_duration_setting: I.default.getSettings().clipsLength,
             clip_duration: t.clipDuration,
             clip_resolution_width: t.clipResolutionWidth,
             clip_resolution_height: t.clipResolutionHeight,
@@ -228,7 +228,7 @@ function(e, t, n) {
         }
     }
     async function x(e) {
-        let t = T.default.getSettings(),
+        let t = I.default.getSettings(),
             n = t.storageLocation,
             a = (0, N.default)(e),
             i = "".concat((0, v.default)(a.applicationName.substring(0, 20)), "_").concat(a.id, ".mp4"),
@@ -287,7 +287,7 @@ function(e, t, n) {
             throw t.error_at = n.errorAt, t.error_message = n.errorMessage, h.default.track(L.AnalyticEvents.CLIP_SAVE_FAILURE, t), n.errorMessage
         }
     }
-    async function W(e) {
+    async function H(e) {
         var t;
         let {
             enableDecoupledGameClipping: n
@@ -302,9 +302,9 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !1
         });
-        if (T.default.getIsAtMaxSaveClipOperations()) return;
-        let s = T.default.getSettings().clipsEnabled && null != g.default.getCurrentUserActiveStream(),
-            u = n && T.default.getSettings().decoupledClipsEnabled && (null === (t = d.default.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && S.default.hasClipsSource(),
+        if (I.default.getIsAtMaxSaveClipOperations()) return;
+        let s = I.default.getSettings().clipsEnabled && null != g.default.getCurrentUserActiveStream(),
+            u = n && I.default.getSettings().decoupledClipsEnabled && (null === (t = d.default.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && S.default.hasClipsSource(),
             f = null != e && null != g.default.getActiveStreamForStreamKey(e) && l;
         if (!s && !u && !f) return;
         let E = g.default.getCurrentUserActiveStream(),
@@ -334,7 +334,7 @@ function(e, t, n) {
             streamKey: h,
             thumbnail: v
         });
-        let N = (0, I.playSound)("clip_save", .5),
+        let N = (0, T.playSound)("clip_save", .5),
             y = performance.now();
         try {
             let e = await x(h);
@@ -343,14 +343,14 @@ function(e, t, n) {
                 clip: e
             })
         } catch (e) {
-            D.ClipsLogger.error("Clip Failed to Save", e), null == N || N.stop(), (0, I.playSound)("clip_error", .5), r.default.dispatch({
+            D.ClipsLogger.error("Clip Failed to Save", e), null == N || N.stop(), (0, T.playSound)("clip_error", .5), r.default.dispatch({
                 type: "CLIPS_SAVE_CLIP_ERROR"
             })
         }
-        D.ClipsLogger.info("".concat(T.default.getSettings().clipsLength / 1e3, "s clip save took ").concat(Math.round(performance.now() - y), "ms"))
+        D.ClipsLogger.info("".concat(I.default.getSettings().clipsLength / 1e3, "s clip save took ").concat(Math.round(performance.now() - y), "ms"))
     }
 
-    function H(e, t) {
+    function W(e, t) {
         r.default.dispatch({
             type: "CLIPS_SAVE_ANIMATION_END",
             streamKey: e,
@@ -358,7 +358,7 @@ function(e, t, n) {
         })
     }
     async function K(e, t) {
-        let n = T.default.getClips().find(t => t.id === e);
+        let n = I.default.getClips().find(t => t.id === e);
         if (null == n) return;
         let a = {
                 ...n,

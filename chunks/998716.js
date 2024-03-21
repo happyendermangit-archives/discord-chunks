@@ -23,8 +23,8 @@ function(e, t, n) {
         m = n("800762"),
         p = n("387111"),
         S = n("325861"),
-        v = n("834052"),
-        T = n("808422"),
+        T = n("834052"),
+        v = n("808422"),
         I = n("922673"),
         A = n("49111");
 
@@ -51,7 +51,7 @@ function(e, t, n) {
     }
 
     function N(e) {
-        return e === T.RequestToSpeakStates.REQUESTED_TO_SPEAK || e === T.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+        return e === v.RequestToSpeakStates.REQUESTED_TO_SPEAK || e === v.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
     }
 
     function R(e) {
@@ -62,7 +62,7 @@ function(e, t, n) {
             blocked: s,
             isFriend: r
         } = e, a = [];
-        return N(i) && a.push("ALL_REQUESTED_TO_SPEAK"), i === T.RequestToSpeakStates.REQUESTED_TO_SPEAK && a.push("REQUESTED_TO_SPEAK_ONLY"), t ? a.push("SPEAKER") : (null != n ? a.push(n.id) : a.push("NO_ROLE"), a.push("AUDIENCE")), s && a.push("BLOCKED"), r && a.push("FRIEND"), a
+        return N(i) && a.push("ALL_REQUESTED_TO_SPEAK"), i === v.RequestToSpeakStates.REQUESTED_TO_SPEAK && a.push("REQUESTED_TO_SPEAK_ONLY"), t ? a.push("SPEAKER") : (null != n ? a.push(n.id) : a.push("NO_ROLE"), a.push("AUDIENCE")), s && a.push("BLOCKED"), r && a.push("FRIEND"), a
     }(a = i || (i = {})).SPEAKER = "SPEAKER", a.AUDIENCE = "AUDIENCE", a.NO_ROLE = "NO_ROLE", a.ALL_REQUESTED_TO_SPEAK = "ALL_REQUESTED_TO_SPEAK", a.REQUESTED_TO_SPEAK_ONLY = "REQUESTED_TO_SPEAK_ONLY", a.BLOCKED = "BLOCKED", a.FRIEND = "FRIEND", a.SELECTED = "SELECTED", a.MEDIA = "MEDIA", (o = s || (s = {})).VOICE = "VOICE", o.STREAM = "STREAM", r = class {
         _getParticipantsForUser(e, t) {
             var n, i;
@@ -71,7 +71,7 @@ function(e, t, n) {
                 a = m.default.getVoiceStateForChannel(this.channelId, e);
             if (null == a) return r;
             let o = g.default.getUser(e);
-            if (null == o) return null != this.guildId && v.default.isPublic(this.channelId) && f.default.requestMember(this.guildId, e), r;
+            if (null == o) return null != this.guildId && T.default.isPublic(this.channelId) && f.default.requestMember(this.guildId, e), r;
             let l = null != t ? t[0] : null,
                 u = {
                     user: o,
@@ -88,7 +88,7 @@ function(e, t, n) {
                     ...u,
                     type: "VOICE",
                     id: o.id,
-                    rtsState: (0, T.getAudienceRequestToSpeakState)(a)
+                    rtsState: (0, v.getAudienceRequestToSpeakState)(a)
                 };
             r.push(_);
             let C = null !== (i = c.default.getStreamForUser(e, this.guildId)) && void 0 !== i ? i : c.default.getActiveStreamForUser(e, this.guildId);
@@ -98,7 +98,7 @@ function(e, t, n) {
                     ...u,
                     id: e,
                     type: "STREAM",
-                    rtsState: T.RequestToSpeakStates.NONE
+                    rtsState: v.RequestToSpeakStates.NONE
                 }, r.push(s)
             }
             return r

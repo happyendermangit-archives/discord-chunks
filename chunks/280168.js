@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return v
         }
     }), n("222007"), n("702976"), n("808653");
     var i = n("446674"),
@@ -50,7 +50,7 @@ function(e, t, n) {
         } = e;
         f = t.id, E = n, h = null
     }
-    class v extends i.default.Store {
+    class T extends i.default.Store {
         initialize() {
             this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(l.default)
         }
@@ -94,8 +94,8 @@ function(e, t, n) {
             return null != f && this.isPrioritySpeaker(f, e) && this.isSpeaking(f, e)
         }
     }
-    v.displayName = "SpeakingStore";
-    var T = new v(s.default, {
+    T.displayName = "SpeakingStore";
+    var v = new T(s.default, {
         CONNECTION_OPEN: S,
         OVERLAY_INITIALIZE: S,
         SPEAKING: function(e) {

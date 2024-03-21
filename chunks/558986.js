@@ -18,7 +18,7 @@ function(e, t, n) {
         try {
             let {
                 body: e
-            } = await i.default.get({
+            } = await i.HTTP.get({
                 url: a.Endpoints.EMOJI_CAPTIONS_GET
             }), t = {};
             for (let n of e.items) t[n.emoji_id] = n.emoji_captions;

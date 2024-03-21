@@ -26,8 +26,8 @@ function(e, t, n) {
         m = n("271938"),
         p = n("42203"),
         S = n("305961"),
-        v = n("657944");
-    let T = new d.default("GuildMemberStore"),
+        T = n("657944");
+    let v = new d.default("GuildMemberStore"),
         I = {},
         A = {},
         C = {},
@@ -128,8 +128,8 @@ function(e, t, n) {
         } = e, {
             colorString: p,
             colorRoleId: S,
-            iconRoleId: v,
-            hoistRoleId: T,
+            iconRoleId: T,
+            hoistRoleId: v,
             highestRoleId: C
         } = G(a, o), y = {
             userId: t,
@@ -140,8 +140,8 @@ function(e, t, n) {
             roles: o,
             colorString: p,
             colorRoleId: S,
-            iconRoleId: v,
-            hoistRoleId: T,
+            iconRoleId: T,
+            hoistRoleId: v,
             highestRoleId: C,
             premiumSince: l,
             isPending: u,
@@ -189,7 +189,7 @@ function(e, t, n) {
         } = e, E = I[n];
         if (null == E) return !1;
         let h = S.default.getGuild(n);
-        if (null == h) return T.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
+        if (null == h) return v.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
         E[i.id] = F({
             userId: i.id,
             nick: s,
@@ -215,7 +215,7 @@ function(e, t, n) {
         let n = I[e];
         if (null == n) return !1;
         let i = S.default.getGuild(e);
-        return null == i ? (T.warn("Guild ".concat(e, " not found during GUILD_MEMBERS_CHUNK.")), !1) : (t.forEach(t => {
+        return null == i ? (v.warn("Guild ".concat(e, " not found during GUILD_MEMBERS_CHUNK.")), !1) : (t.forEach(t => {
             var s;
             let r = n[t.user.id];
             n[t.user.id] = F({
@@ -279,7 +279,7 @@ function(e, t, n) {
         let t = I[e.guildId];
         if (null == t) return !1;
         let n = S.default.getGuild(e.guildId);
-        if (null == n) return T.warn("Guild ".concat(e.guildId, " not found during ").concat(e.type, ".")), !1;
+        if (null == n) return v.warn("Guild ".concat(e.guildId, " not found during ").concat(e.type, ".")), !1;
         for (let i of g.default.keys(t)) {
             let s = t[i];
             (null != s.roles && s.roles.length > 0 || null != s.colorString || null != s.hoistRoleId) && (t[i] = F({
@@ -305,7 +305,7 @@ function(e, t, n) {
         } = e, n = I[t];
         if (null == n) return !1;
         let i = S.default.getGuild(t);
-        if (null == i) return T.warn("Guild ".concat(t, " not found during IMPERSONATE_UPDATE.")), !1;
+        if (null == i) return v.warn("Guild ".concat(t, " not found during IMPERSONATE_UPDATE.")), !1;
         let s = m.default.getId(),
             r = n[s];
         n[s] = F({
@@ -420,7 +420,7 @@ function(e, t, n) {
                 n = I[e];
             if (null == n || null == n[t]) return !1;
             let i = n[t].flags;
-            return null != i && (0, E.hasFlag)(i, v.GuildMemberFlags.IS_GUEST)
+            return null != i && (0, E.hasFlag)(i, T.GuildMemberFlags.IS_GUEST)
         }
         getMemberIds(e) {
             if (null == e) return [];
@@ -590,7 +590,7 @@ function(e, t, n) {
             } = e, s = I[t];
             if (null == s) return !1;
             let r = S.default.getGuild(t);
-            if (null == r) return T.warn("Guild ".concat(t, " not found during GUILD_MEMBER_UPDATE.")), !1;
+            if (null == r) return v.warn("Guild ".concat(t, " not found during GUILD_MEMBER_UPDATE.")), !1;
             let a = s[n];
             if (null == a || !a.roles.includes(i)) return !1;
             a.roles = a.roles.filter(e => e !== i);
@@ -608,7 +608,7 @@ function(e, t, n) {
             } = e, s = I[t];
             if (null == s) return !1;
             let r = S.default.getGuild(t);
-            if (null == r) return T.warn("Guild ".concat(t, " not found during GUILD_MEMBER_UPDATE.")), !1;
+            if (null == r) return v.warn("Guild ".concat(t, " not found during GUILD_MEMBER_UPDATE.")), !1;
             let a = s[n];
             if (null == a || a.roles.includes(i)) return !1;
             a.roles.push(i);
@@ -625,7 +625,7 @@ function(e, t, n) {
             } = e, i = I[n];
             if (null == i) return !1;
             let s = S.default.getGuild(n);
-            if (null == s) return T.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
+            if (null == s) return v.warn("Guild ".concat(n, " not found during GUILD_MEMBER_UPDATE.")), !1;
             i[t.user.id] = F({
                 userId: t.user.id,
                 nick: t.nick,

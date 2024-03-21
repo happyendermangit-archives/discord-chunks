@@ -28,7 +28,7 @@ function(e, t, n) {
             autoFocus: g,
             className: S,
             defaultSearchPlaceholder: C
-        } = e, _ = l.useRef(null), T = (0, c.useExpressionPickerStore)(e => e.searchQuery), [I, v] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), N = l.useCallback(e => {
+        } = e, T = l.useRef(null), _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), [I, v] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), N = l.useCallback(e => {
             var t;
             d.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), d.EmojiPickerStore.setInspectedExpressionPosition(0, 0), d.EmojiPickerStore.setSearchPlaceholder(null), (0, c.setSearchQuery)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
         }, [n]), A = l.useCallback(() => {
@@ -37,12 +37,12 @@ function(e, t, n) {
         return l.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
-                return null === (e = _.current) || void 0 === e ? void 0 : e.focus()
+                return null === (e = T.current) || void 0 === e ? void 0 : e.focus()
             }
         })), (0, i.jsx)(u.default, {
             autoFocus: g,
-            query: T,
-            ref: _,
+            query: _,
+            ref: T,
             size: u.default.Sizes.MEDIUM,
             placeholder: null != v ? v : C,
             onClear: A,

@@ -45,7 +45,7 @@ function(t, e, i) {
         if (null == t.session_id) throw Error("null/undefined session_id");
         let {
             body: d
-        } = await n.default.get({
+        } = await n.HTTP.get({
             url: u.Endpoints.USER_ACTIVITY_METADATA(e, t.session_id, t.application_id),
             oldFormErrors: !0
         });

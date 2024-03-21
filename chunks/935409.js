@@ -33,8 +33,8 @@ function(e, t, n) {
         g = n("719923"),
         S = n("50885"),
         C = n("756507"),
-        _ = n("713135"),
-        T = n("106435"),
+        T = n("713135"),
+        _ = n("106435"),
         I = n("289918"),
         v = n("878569"),
         N = n("590006"),
@@ -54,7 +54,7 @@ function(e, t, n) {
             guildId: n,
             isTryItOutFlow: l,
             forProfileEffectModal: a
-        } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.getUserProfile(t.id), [t]), r = (0, o.useStateFromStores)([h.default], () => h.default.getGuild(n), [n]), c = (0, f.useClydeProfilesEnabled)(r);
+        } = e, s = (0, o.useStateFromStores)([T.default], () => T.default.getUserProfile(t.id), [t]), r = (0, o.useStateFromStores)([h.default], () => h.default.getGuild(n), [n]), c = (0, f.useClydeProfilesEnabled)(r);
         return (0, i.jsxs)(i.Fragment, {
             children: [(null == s ? void 0 : s.profileFetchFailed) && (!t.isClyde() || c) && (0, i.jsx)(d.Tooltip, {
                 text: L.default.Messages.USER_PROFILE_LOAD_ERROR,
@@ -88,7 +88,7 @@ function(e, t, n) {
             onClose: h,
             disableUserProfileLink: x,
             profileType: S,
-            animateOnHover: _,
+            animateOnHover: T,
             hasProfileEffect: I
         } = e, {
             profileTheme: N
@@ -98,11 +98,11 @@ function(e, t, n) {
             avatarDecorationSrc: V,
             avatarSrc: K,
             eventHandlers: W
-        } = (0, T.default)({
+        } = (0, _.default)({
             user: t,
             guildId: f,
             size: b,
-            animateOnHover: _
+            animateOnHover: T
         }), Y = (0, i.jsx)("div", {
             className: P.avatarHoverTarget,
             ...W,

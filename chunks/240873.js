@@ -8,10 +8,10 @@ function(e, t, n) {
             return S
         },
         isEmbedInline: function() {
-            return v
+            return T
         },
         isServerShopArticleEmbed: function() {
-            return T
+            return v
         },
         getMaxEmbedMediaSize: function() {
             return I
@@ -133,7 +133,7 @@ function(e, t, n) {
         }), n
     }
 
-    function v(e) {
+    function T(e) {
         let {
             image: t,
             video: n,
@@ -144,7 +144,7 @@ function(e, t, n) {
         return (null != t || null != n) && (i === u.MessageEmbedTypes.GIFV || i !== u.MessageEmbedTypes.RICH && null == s && null == r)
     }
 
-    function T(e) {
+    function v(e) {
         return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (E.test(e.url) || f.test(e.url))
     }
 

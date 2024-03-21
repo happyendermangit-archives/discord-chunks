@@ -8,10 +8,10 @@ function(e, t, n) {
             return S
         },
         sortRoles: function() {
-            return v
+            return T
         },
         getNoRolesRow: function() {
-            return T
+            return v
         },
         isEveryoneRoleId: function() {
             return A
@@ -103,13 +103,13 @@ function(e, t, n) {
         }
     }
 
-    function v(e, t) {
+    function T(e, t) {
         let n = p(e) ? 0 : 1,
             i = p(t) ? 0 : 1;
         return n !== i ? n - i : t.position - e.position
     }
 
-    function T() {
+    function v() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
         return [{
             rowType: h.RowType.EMPTY_STATE,
@@ -142,18 +142,18 @@ function(e, t, n) {
 
     function N(e, t, n, i) {
         let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-        return Object.values(t).filter(t => !p(t) && I(n, t.id, i) && y(e, t) && s(t.name)).sort(v).map(e => S(e))
+        return Object.values(t).filter(t => !p(t) && I(n, t.id, i) && y(e, t) && s(t.name)).sort(T).map(e => S(e))
     }
 
     function R(e, t, n, s) {
         let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-        return Object.values(t).filter(t => !p(t) && I(n, t.id, s) && y(e, t) && r(t.name)).sort(v).map(e => S(e, i.has(e.permissions, s)))
+        return Object.values(t).filter(t => !p(t) && I(n, t.id, s) && y(e, t) && r(t.name)).sort(T).map(e => S(e, i.has(e.permissions, s)))
     }
 
     function O(e, t, n, i, s) {
         var r, a, o, l, u;
         let d = [];
-        return 0 === (d = (r = e, a = t, o = n, l = i, u = s, Object.values(a).filter(e => p(e) || !I(o, e.id, l, u) && y(r, e))).sort(v).map(e => S(e))).length ? T(m.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
+        return 0 === (d = (r = e, a = t, o = n, l = i, u = s, Object.values(a).filter(e => p(e) || !I(o, e.id, l, u) && y(r, e))).sort(T).map(e => S(e))).length ? v(m.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
     }
 
     function D(e, t, n, s, r) {
@@ -162,7 +162,7 @@ function(e, t, n) {
         return 0 === (c = (a = e, o = t, l = n, u = s, d = r, Object.values(o).filter(e => {
             var t;
             return p(e) || !I(l, e.id, u, d) && y(a, e) || i.has(i.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
-        })).sort(v).map(e => S(e, i.has(e.permissions, s)))).length ? T(m.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c
+        })).sort(T).map(e => S(e, i.has(e.permissions, s)))).length ? v(m.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c
     }
 
     function P(e, t) {

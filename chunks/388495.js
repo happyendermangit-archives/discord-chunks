@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useModalContext: function() {
-            return T
+            return v
         },
         Modals: function() {
             return A
@@ -25,7 +25,7 @@ function(e, t, n) {
         m = n("49111"),
         p = n("934583");
     let S = [_.default, f.default];
-    class v extends s.PureComponent {
+    class T extends s.PureComponent {
         render() {
             let {
                 render: e,
@@ -78,13 +78,13 @@ function(e, t, n) {
         }
     }
 
-    function T() {
+    function v() {
         return (0, h.modalContextFromAppContext)((0, d.useAppContext)())
     }
     let I = [];
 
     function A() {
-        let e = T(),
+        let e = v(),
             t = (0, h.useModalsStore)(t => void 0 !== t[e] ? t[e] : I),
             n = s.useRef();
         s.useLayoutEffect(() => {
@@ -128,7 +128,7 @@ function(e, t, n) {
                     render: a,
                     instant: l
                 } = e;
-                return (0, i.jsx)(v, {
+                return (0, i.jsx)(T, {
                     modalKey: s,
                     LayerComponent: null != r ? r : _.default,
                     isTopModal: n === t.length - 1,

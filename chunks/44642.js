@@ -11,7 +11,7 @@ function(e, t, n) {
             return a
         },
         parseEncoder: function() {
-            return v
+            return T
         },
         RawVideoStats: function() {
             return I
@@ -51,14 +51,14 @@ function(e, t, n) {
             libvpx: "vp8_libvpx"
         });
 
-    function v(e) {
+    function T(e) {
         if (null == e) return "unknown";
         for (let t of Object.keys(p))
             if (e.includes(t)) return p[t];
         return "uncategorized"
     }(d = a || (a = {}))[d.None = 0] = "None", d[d.ClientSideDisableVideo = 1] = "ClientSideDisableVideo", d[d.SenderStopped = 2] = "SenderStopped";
 
-    function T(e) {
+    function v(e) {
         if (null == e) return "UNKNOWN";
         if ("H264" === (e = e.toUpperCase())) return "H264";
         if ("H265" === e) return "H265";
@@ -76,7 +76,7 @@ function(e, t, n) {
                 for (let t of Object.keys(S))
                     if (e.includes(t)) return S[t];
                 return "uncategorized"
-            }(e.decoderImplementationName), u.codecType = T(e.codec.name), u.qpSum = 0, u.freezeCount = e.freezeCount, u.pauseCount = e.pauseCount, u.totalFreezesDuration = e.totalFreezesDuration, u.totalPausesDuration = e.totalPausesDuration, u.totalFramesDuration = e.totalFramesDuration, u.keyframes = null !== (i = e.keyFramesDecoded) && void 0 !== i ? i : null, u.passthroughCount = null !== (s = e.passthroughCount) && void 0 !== s ? s : 0, u.cryptorSuccessCount = null !== (r = e.decryptSuccessCount) && void 0 !== r ? r : 0, u.cryptorFailureCount = null !== (a = e.decryptFailureCount) && void 0 !== a ? a : 0, u.cryptorDuration = null !== (o = e.decryptDuration) && void 0 !== o ? o : 0, u.cryptorAttempts = null !== (l = e.decryptAttempts) && void 0 !== l ? l : 0, u)
+            }(e.decoderImplementationName), u.codecType = v(e.codec.name), u.qpSum = 0, u.freezeCount = e.freezeCount, u.pauseCount = e.pauseCount, u.totalFreezesDuration = e.totalFreezesDuration, u.totalPausesDuration = e.totalPausesDuration, u.totalFramesDuration = e.totalFramesDuration, u.keyframes = null !== (i = e.keyFramesDecoded) && void 0 !== i ? i : null, u.passthroughCount = null !== (s = e.passthroughCount) && void 0 !== s ? s : 0, u.cryptorSuccessCount = null !== (r = e.decryptSuccessCount) && void 0 !== r ? r : 0, u.cryptorFailureCount = null !== (a = e.decryptFailureCount) && void 0 !== a ? a : 0, u.cryptorDuration = null !== (o = e.decryptDuration) && void 0 !== o ? o : 0, u.cryptorAttempts = null !== (l = e.decryptAttempts) && void 0 !== l ? l : 0, u)
         }
         static parseOutboundStats(e, t) {
             var n, i, s, r, a, o, l, u, d, c, _, f, E, h, g;
@@ -93,9 +93,9 @@ function(e, t, n) {
                 minorResolution: null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0,
                 majorResolution: null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0,
                 timestamp: t,
-                encoder: v(e.encoderImplementationName),
+                encoder: T(e.encoderImplementationName),
                 decoder: null,
-                codecType: T(e.codec.name),
+                codecType: v(e.codec.name),
                 nackCount: e.nackCount,
                 pliCount: e.pliCount,
                 qpSum: e.qpSum,
@@ -175,14 +175,14 @@ function(e, t, n) {
             g.forEach(e => {
                 a <= e && (this.resolutionBuckets[e] += f)
             });
-            let v = (r - S) / 1e3,
-                T = (i - m) * 8 / v,
-                I = (s - p) / v;
+            let T = (r - S) / 1e3,
+                v = (i - m) * 8 / T,
+                I = (s - p) / T;
             E.forEach(e => {
-                T <= e && (this.bitrateBuckets[e] += f)
+                v <= e && (this.bitrateBuckets[e] += f)
             }), h.forEach(e => {
                 I <= e && (this.fpsBuckets[e] += f)
-            }), this.resolutionHistogram.addSample(a), this.bitrateHistogram.addSample(T), this.fpsHistogram.addSample(I), this.statsWindow.shift()
+            }), this.resolutionHistogram.addSample(a), this.bitrateHistogram.addSample(v), this.fpsHistogram.addSample(I), this.statsWindow.shift()
         }
         addSystemResources() {
             this.systemResources.takeSample()

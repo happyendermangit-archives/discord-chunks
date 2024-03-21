@@ -143,11 +143,11 @@ function(e, t, n) {
         return null != r && t(n, r)
     }
 
-    function v(e) {
+    function T(e) {
         var t;
         return null === (t = p[e]) || void 0 === t ? void 0 : t.defaultSettings
     }
-    class T extends d.default.PersistedStore {
+    class v extends d.default.PersistedStore {
         initialize(e) {
             null != e && null != e.layouts && null != e.widgets ? (i = function(e) {
                 let t = {};
@@ -228,7 +228,7 @@ function(e, t, n) {
             return p[e]
         }
         getWidgetDefaultSettings(e) {
-            return v(e)
+            return T(e)
         }
         getWidgetType(e) {
             let t = s[e];
@@ -253,7 +253,7 @@ function(e, t, n) {
             }), t
         }
     }
-    T.displayName = "LayoutStore", T.persistKey = "LayoutStore", T.migrations = [() => {
+    v.displayName = "LayoutStore", v.persistKey = "LayoutStore", v.migrations = [() => {
         let e = {
                 ...c.default.get("OverlayStore")
             },
@@ -323,7 +323,7 @@ function(e, t, n) {
                 }), i || null == r) return;
             let a = (0, u.v4)();
             n.widgets = [r, a], s.push([a, {
-                ...v(g.OverlayWidgets.GUILDS_TEXT),
+                ...T(g.OverlayWidgets.GUILDS_TEXT),
                 type: g.OverlayWidgets.GUILDS_TEXT,
                 id: a,
                 layoutId: t,
@@ -349,7 +349,7 @@ function(e, t, n) {
             widgets: s
         }
     }];
-    var I = new T(_.default, {
+    var I = new v(_.default, {
         LAYOUT_CREATE: function(e) {
             let {
                 layoutId: t,

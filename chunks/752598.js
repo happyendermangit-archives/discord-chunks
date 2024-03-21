@@ -11,7 +11,7 @@ function(e, t, n) {
             return S
         },
         handleInteractionResponse: function() {
-            return T
+            return v
         },
         InteractionStatusViewState: function() {
             return i
@@ -59,7 +59,7 @@ function(e, t, n) {
                 customId: s,
                 indices: a
             },
-            onFailure: (e, t) => v(E, e, t)
+            onFailure: (e, t) => T(E, e, t)
         }), null != m && (0, _.queueInteractionComponentState)(n, p, m, a);
         let S = {
             type: l.InteractionTypes.MESSAGE_COMPONENT,
@@ -84,12 +84,12 @@ function(e, t, n) {
                 }(m)
             }
         };
-        await r.default.post({
+        await r.HTTP.post({
             url: g.Endpoints.INTERACTIONS,
             body: S,
             timeout: 3e3
         }, e => {
-            T(p, E, h, e)
+            v(p, E, h, e)
         })
     }, S = async e => {
         let {
@@ -107,16 +107,16 @@ function(e, t, n) {
                 type: l.ApplicationCommandType.PRIMARY_ENTRY_POINT
             }
         };
-        await r.default.post({
+        await r.HTTP.post({
             url: g.Endpoints.INTERACTIONS,
             body: a,
             timeout: 3e3
         }, e => {
-            T(s, n, null != i ? i : null, e)
+            v(s, n, null != i ? i : null, e)
         })
-    }, v = (e, t, n) => {
+    }, T = (e, t, n) => {
         null == n && null != t && o.default.sendClydeError(e, t)
-    }, T = (e, t, n, i) => {
+    }, v = (e, t, n, i) => {
         if (!i.ok) {
             if (!i.hasErr) {
                 var s;

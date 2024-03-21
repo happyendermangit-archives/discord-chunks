@@ -22,7 +22,7 @@ function(e, t, n) {
         let t = s.chunk(e, 50);
         try {
             let e = t.map(async e => {
-                    let t = await r.default.post({
+                    let t = await r.HTTP.post({
                         url: d.Endpoints.APPLICATION_BRANCHES,
                         body: {
                             branch_ids: e
@@ -46,7 +46,7 @@ function(e, t, n) {
     }
     async function _(e) {
         try {
-            let t = await r.default.get({
+            let t = await r.HTTP.get({
                     url: d.Endpoints.OWNED_APPLICATION_BRANCHES(e),
                     oldFormErrors: !0
                 }),

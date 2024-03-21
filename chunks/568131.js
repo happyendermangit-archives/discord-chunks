@@ -36,7 +36,7 @@ function(e, t, n) {
     async function o(e) {
         let t = e.primarySkuId;
         if (null == t) return;
-        let n = await s.default.get({
+        let n = await s.HTTP.get({
                 url: u.Endpoints.APPLICATION_BRANCH_LIST(e.id),
                 oldFormErrors: !0
             }).then(e => e.body),

@@ -28,16 +28,16 @@ function(e, t, n) {
             menuItemProps: m,
             action: p,
             className: S,
-            focusedClassName: v
-        } = e, T = s.useRef(null);
+            focusedClassName: T
+        } = e, v = s.useRef(null);
         return s.useEffect(() => {
-            g && (0, u.ensureItemVisible)(T)
+            g && (0, u.ensureItemVisible)(v)
         }, [g]), (0, i.jsxs)(o.Clickable, {
-            innerRef: T,
+            innerRef: v,
             className: a(f.item, f.labelContainer, _.MENU_ITEM_COLORS[t], S, {
                 [f.disabled]: h,
                 [f.focused]: g,
-                [null != v ? v : ""]: g
+                [null != T ? T : ""]: g
             }),
             onClick: h ? void 0 : p,
             ...m,

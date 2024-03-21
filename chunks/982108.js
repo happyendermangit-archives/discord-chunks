@@ -28,8 +28,8 @@ function(e, t, n) {
         m = n("843455");
     let p = "message_requests",
         S = !1,
-        v = !1,
-        T = !0,
+        T = !1,
+        v = !0,
         I = !1,
         A = {},
         C = {};
@@ -74,15 +74,15 @@ function(e, t, n) {
         initialize(e) {
             if (null != e) {
                 var t, n, i, s, r;
-                S = null !== (t = e.isMembersOpen) && void 0 !== t && t, v = null !== (n = e.isSummariesOpen) && void 0 !== n && n, T = null === (i = e.isProfileOpen) || void 0 === i || i, A = null !== (s = e.sidebars) && void 0 !== s ? s : {}, C = null !== (r = e.guildSidebars) && void 0 !== r ? r : {}
+                S = null !== (t = e.isMembersOpen) && void 0 !== t && t, T = null !== (n = e.isSummariesOpen) && void 0 !== n && n, v = null === (i = e.isProfileOpen) || void 0 === i || i, A = null !== (s = e.sidebars) && void 0 !== s ? s : {}, C = null !== (r = e.guildSidebars) && void 0 !== r ? r : {}
             }
             this.syncWith([c.default], D), this.syncWith([d.default], O)
         }
         getState() {
             return {
                 isMembersOpen: S,
-                isSummariesOpen: v,
-                isProfileOpen: T,
+                isSummariesOpen: T,
+                isProfileOpen: v,
                 sidebars: A,
                 guildSidebars: C
             }
@@ -90,7 +90,7 @@ function(e, t, n) {
         getSection(e, t) {
             if (I) return h.ChannelSections.SEARCH;
             let n = y(e);
-            return null != n && null != A[n] ? h.ChannelSections.SIDEBAR_CHAT : t && T ? h.ChannelSections.PROFILE : v ? h.ChannelSections.SUMMARIES : S ? h.ChannelSections.MEMBERS : h.ChannelSections.NONE
+            return null != n && null != A[n] ? h.ChannelSections.SIDEBAR_CHAT : t && v ? h.ChannelSections.PROFILE : T ? h.ChannelSections.SUMMARIES : S ? h.ChannelSections.MEMBERS : h.ChannelSections.NONE
         }
         getSidebarState(e) {
             let t = y(e);
@@ -116,13 +116,13 @@ function(e, t, n) {
     P.displayName = "ChannelSectionStore", P.persistKey = "ChannelSectionStore2";
     var L = new P(r.default, {
         CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
-            v && (v = R(v)), S = R(S)
+            T && (T = R(T)), S = R(S)
         },
         PROFILE_PANEL_TOGGLE_SECTION: function() {
-            !T && o.ComponentDispatch.dispatch(h.ComponentActions.SEARCH_RESULTS_CLOSE), T = R(T)
+            !v && o.ComponentDispatch.dispatch(h.ComponentActions.SEARCH_RESULTS_CLOSE), v = R(v)
         },
         CHANNEL_TOGGLE_SUMMARIES_SECTION: function() {
-            S && (S = R(S)), v = R(v)
+            S && (S = R(S)), T = R(T)
         },
         SIDEBAR_VIEW_CHANNEL: function(e) {
             let {
@@ -195,7 +195,7 @@ function(e, t, n) {
             return n
         },
         CHANNEL_SELECT: function() {
-            i.isMobile && S && (S = !1, v = !1)
+            i.isMobile && S && (S = !1, T = !1)
         },
         THREAD_CREATE: function(e) {
             var t;

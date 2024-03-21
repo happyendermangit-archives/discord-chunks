@@ -23,9 +23,9 @@ function(e, t, n) {
         m = n("374363"),
         p = n("116319"),
         S = n("49111"),
-        v = n("941719");
-    let T = null !== (s = (0, _.default)()) && void 0 !== s ? s : S.ThemeTypes.DARK,
-        I = T,
+        T = n("941719");
+    let v = null !== (s = (0, _.default)()) && void 0 !== s ? s : S.ThemeTypes.DARK,
+        I = v,
         A = null,
         C = !1;
 
@@ -109,7 +109,7 @@ function(e, t, n) {
             let {
                 presetId: i
             } = e;
-            I = null != i && null !== (n = null === (t = v.BACKGROUND_GRADIENT_PRESETS_MAP[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : y();
+            I = null != i && null !== (n = null === (t = T.BACKGROUND_GRADIENT_PRESETS_MAP[i]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : y();
             let s = null != i;
             return C !== s ? (C = s, !0) : function() {
                 let e = y();

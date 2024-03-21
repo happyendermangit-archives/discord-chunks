@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("840707"),
         p = n("900938"),
         S = n("49111"),
-        v = n("782340");
-    let T = new o.default("GuildSettingsActionCreators"),
+        T = n("782340");
+    let v = new o.default("GuildSettingsActionCreators"),
         I = {
             init(e, t, n, i) {
                 r.default.dispatch({
@@ -70,7 +70,7 @@ function(e, t, n) {
                 searchQuery: t
             }),
             updateEmbed(e, t, n) {
-                s.default.patch({
+                s.HTTP.patch({
                     url: S.Endpoints.GUILD_WIDGET(e),
                     body: {
                         enabled: t,
@@ -92,7 +92,7 @@ function(e, t, n) {
                     level: n,
                     isEnabled: i
                 } = e;
-                return (0, g.default)(e => s.default.post({
+                return (0, g.default)(e => s.HTTP.post({
                     url: S.Endpoints.GUILD_MFA(t),
                     body: {
                         level: n,
@@ -101,8 +101,8 @@ function(e, t, n) {
                     oldFormErrors: !0
                 }), {
                     modalProps: {
-                        title: v.default.Messages.GUILD_SECURITY_REQ_MFA_LABEL,
-                        actionText: i ? v.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_OFF : v.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_ON
+                        title: T.default.Messages.GUILD_SECURITY_REQ_MFA_LABEL,
+                        actionText: i ? T.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_OFF : T.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_ON
                     },
                     checkEnabled: !1
                 }).then(e => r.default.dispatch({
@@ -111,7 +111,7 @@ function(e, t, n) {
                 }))
             },
             updateIcon(e, t) {
-                s.default.patch({
+                s.HTTP.patch({
                     url: S.Endpoints.GUILD(e),
                     body: {
                         icon: t
@@ -169,7 +169,7 @@ function(e, t, n) {
                     explicitContentFilter: g,
                     features: m,
                     systemChannelFlags: p,
-                    preferredLocale: v,
+                    preferredLocale: T,
                     rulesChannelId: I,
                     safetyAlertsChannelId: A,
                     discoverySplash: C,
@@ -183,7 +183,7 @@ function(e, t, n) {
                     banner: l,
                     home_header: d,
                     features: m,
-                    preferred_locale: v,
+                    preferred_locale: T,
                     afk_channel_id: c,
                     afk_timeout: _,
                     system_channel_id: f,
@@ -201,7 +201,7 @@ function(e, t, n) {
                 };
                 return r.default.dispatch({
                     type: "GUILD_SETTINGS_SUBMIT"
-                }), s.default.patch({
+                }), s.HTTP.patch({
                     url: S.Endpoints.GUILD(e),
                     query: {
                         for_discovery: R.isForDiscovery
@@ -217,12 +217,12 @@ function(e, t, n) {
                     if (r.default.dispatch({
                             type: "GUILD_SETTINGS_SUBMIT_FAILURE",
                             errors: e.body
-                        }), T.error("Failed to save guild settings", {
+                        }), v.error("Failed to save guild settings", {
                             errors: e.body
                         }), R.throwErr) throw e.body
                 })
             },
-            updateGuildModeration: (e, t) => s.default.patch({
+            updateGuildModeration: (e, t) => s.HTTP.patch({
                 url: S.Endpoints.GUILD(e),
                 body: {
                     verification_level: t.verificationLevel,
@@ -250,8 +250,8 @@ function(e, t, n) {
                     }
                 }), {
                     modalProps: {
-                        title: v.default.Messages.TRANSFER_OWNERSHIP,
-                        actionText: v.default.Messages.TRANSFER_OWNERSHIP
+                        title: T.default.Messages.TRANSFER_OWNERSHIP,
+                        actionText: T.default.Messages.TRANSFER_OWNERSHIP
                     },
                     checkEnabled: !1
                 })
@@ -270,16 +270,16 @@ function(e, t, n) {
                     }
                 })
             },
-            deleteGuild: (e, t) => (0, g.default)(t => s.default.post({
+            deleteGuild: (e, t) => (0, g.default)(t => s.HTTP.post({
                 url: S.Endpoints.GUILD_DELETE(e),
                 body: t,
                 oldFormErrors: !0
             }), {
                 modalProps: {
-                    title: v.default.Messages.DELETE_SERVER_TITLE.format({
+                    title: T.default.Messages.DELETE_SERVER_TITLE.format({
                         name: t
                     }),
-                    actionText: v.default.Messages.DELETE_SERVER,
+                    actionText: T.default.Messages.DELETE_SERVER,
                     disallowBackupCodes: !0
                 },
                 checkEnabled: !1
@@ -287,7 +287,7 @@ function(e, t, n) {
                 I.close()
             }),
             async leaveGuild(e) {
-                await s.default.delete({
+                await s.HTTP.del({
                     url: S.Endpoints.GUILD_LEAVE(e),
                     body: {
                         lurking: _.default.isLurking(e) || E.default.isCurrentUserGuest(e)
@@ -300,7 +300,7 @@ function(e, t, n) {
                     (0, d.updateImpersonatedRoles)(e, n);
                     return
                 }
-                await s.default.patch({
+                await s.HTTP.patch({
                     url: S.Endpoints.GUILD_MEMBER(e, t),
                     body: {
                         roles: n
@@ -318,7 +318,7 @@ function(e, t, n) {
                     userId: t
                 }))
             },
-            bulkAddMemberRoles: (e, t, n) => s.default.patch({
+            bulkAddMemberRoles: (e, t, n) => s.HTTP.patch({
                 url: S.Endpoints.GUILD_ROLE_MEMBERS(e, t),
                 body: {
                     member_ids: n
@@ -337,7 +337,7 @@ function(e, t, n) {
                     section: e
                 })
             },
-            enableIntegration: (e, t, n) => s.default.post({
+            enableIntegration: (e, t, n) => s.HTTP.post({
                 url: S.Endpoints.GUILD_INTEGRATIONS(e),
                 body: {
                     type: t,
@@ -345,11 +345,11 @@ function(e, t, n) {
                 },
                 oldFormErrors: !0
             }),
-            disableIntegration: (e, t) => s.default.delete({
+            disableIntegration: (e, t) => s.HTTP.del({
                 url: S.Endpoints.GUILD_INTEGRATION(e, t),
                 oldFormErrors: !0
             }),
-            updateIntegration: (e, t, n, i, r) => s.default.patch({
+            updateIntegration: (e, t, n, i, r) => s.HTTP.patch({
                 url: S.Endpoints.GUILD_INTEGRATION(e, t),
                 body: {
                     expire_behavior: n,
@@ -359,7 +359,7 @@ function(e, t, n) {
                 oldFormErrors: !0
             }),
             syncIntegration(e, t) {
-                s.default.post({
+                s.HTTP.post({
                     url: S.Endpoints.GUILD_INTEGRATION_SYNC(e, t),
                     oldFormErrors: !0
                 })

@@ -46,8 +46,8 @@ function(e, t, n) {
         },
         p = "",
         S = !1,
-        v = "unset",
-        T = null,
+        T = "unset",
+        v = null,
         I = h.DISCOVERY_ALL_CATEGORIES_ID,
         A = h.DISCOVERY_ALL_CATEGORIES_ID,
         C = null,
@@ -78,13 +78,13 @@ function(e, t, n) {
             this.waitFor(_.default)
         }
         isFetching() {
-            return S || null == T || null == f.default.lastFetched
+            return S || null == v || null == f.default.lastFetched
         }
         isFetchingSearch() {
-            return "fetching" === v
+            return "fetching" === T
         }
         hasSearchError() {
-            return "failed" === v
+            return "failed" === T
         }
         getDiscoverableGuilds() {
             return m
@@ -140,7 +140,7 @@ function(e, t, n) {
                 offset: s,
                 limit: r
             } = e;
-            S = !1, T = Date.now(), N = (0, c.makeAnalyticsID)();
+            S = !1, v = Date.now(), N = (0, c.makeAnalyticsID)();
             let a = l.map(t, R);
             m = {
                 ...m,
@@ -184,7 +184,7 @@ function(e, t, n) {
                 categoryId: t,
                 guilds: n
             } = e;
-            S = !1, T = Date.now();
+            S = !1, v = Date.now();
             let i = l.map(n, R);
             m = {
                 ...m,
@@ -215,7 +215,7 @@ function(e, t, n) {
                 query: i,
                 categoryId: s
             } = e;
-            a("search" === n, "This action only supports search it seems"), v = "fetching", m = {
+            a("search" === n, "This action only supports search it seems"), T = "fetching", m = {
                 ...m,
                 [n]: {
                     ...m[n],
@@ -258,7 +258,7 @@ function(e, t, n) {
                         }
                     }
                 }
-            }, p = l, v = "succeeded"
+            }, p = l, T = "succeeded"
         },
         GUILD_DISCOVERY_SEARCH_FETCH_FAILURE: function(e) {
             var t;
@@ -267,7 +267,7 @@ function(e, t, n) {
                 query: i,
                 categoryId: s
             } = e;
-            a("search" === n, "This action only supports search it seems"), v = "failed", m = {
+            a("search" === n, "This action only supports search it seems"), T = "failed", m = {
                 ...m,
                 [n]: {
                     ...m[n],

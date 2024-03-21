@@ -24,7 +24,7 @@ function(e, t, i) {
             rowSize: _,
             isBurstReaction: f,
             analyticsObject: g
-        } = e, I = o.default.getChannel(u.default.getChannelId()), O = null == I ? void 0 : I.getGuildId(), C = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), p = null != I ? r.default.getDisambiguatedEmojiContext(I.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], y = C.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), S = null != O ? r.default.getGuildEmoji(O) : [], T = null !== (t = r.default.getDisambiguatedEmojiContext(null == I ? void 0 : I.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}, j = Object.values(T).reduce((e, t) => e += t.length, 0), {
+        } = e, I = o.default.getChannel(u.default.getChannelId()), O = null == I ? void 0 : I.getGuildId(), C = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), p = null != I ? r.default.getDisambiguatedEmojiContext(I.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], y = C.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), T = null != O ? r.default.getGuildEmoji(O) : [], S = null !== (t = r.default.getDisambiguatedEmojiContext(null == I ? void 0 : I.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}, j = Object.values(S).reduce((e, t) => e += t.length, 0), {
             topEmojis: h,
             newlyAddedEmojis: A
         } = (0, l.getTopAndNewlyAddedEmojis)({
@@ -50,7 +50,7 @@ function(e, t, i) {
             num_animated_expressions_frecent: y.filter(e => null == e ? void 0 : e.animated).length,
             num_custom_expressions_frecent: y.filter(a.default.isCustomEmoji).length,
             num_standard_expressions_frecent: y.filter(e => null == e.id).length,
-            num_current_guild_expressions: S.length,
+            num_current_guild_expressions: T.length,
             num_custom_expressions_total: j,
             num_expressions_top_server: M.length,
             num_animated_expressions_top_server: M.filter(e => e.animated).length,

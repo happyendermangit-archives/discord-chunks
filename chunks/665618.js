@@ -36,20 +36,20 @@ function(e, t, n) {
     function u(e, t) {
         var n, i, o, u, d, c, _, f, E, h, g, m, p;
         let S = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
-            v = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
+            T = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
         if (null == e.properties) {
             s(null != t, "If guild.properties is null, existingGuild must be passed in");
             let e = t.joinedAt instanceof Date ? t.joinedAt.getTime() : t.joinedAt,
                 n = S instanceof Date ? S.getTime() : S;
-            return v === t.premiumSubscriberCount && e === n ? t : t.merge({
+            return T === t.premiumSubscriberCount && e === n ? t : t.merge({
                 joinedAt: S,
-                premiumSubscriberCount: v
+                premiumSubscriberCount: T
             })
         }
-        let T = {
+        let v = {
             id: e.id,
             joinedAt: S,
-            premiumSubscriberCount: v,
+            premiumSubscriberCount: T,
             name: null !== (i = e.properties.name) && void 0 !== i ? i : "",
             description: e.properties.description,
             icon: e.properties.icon,
@@ -82,7 +82,7 @@ function(e, t, n) {
             hubType: e.properties.hub_type,
             latestOnboardingQuestionId: e.properties.latest_onboarding_question_id
         };
-        return null == t ? (0, r.dangerouslyCast)(T, a.default) : t.merge(T)
+        return null == t ? (0, r.dangerouslyCast)(v, a.default) : t.merge(v)
     }
 
     function d(e, t) {

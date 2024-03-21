@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("260365"),
         p = n("438931"),
         S = n("215082"),
-        v = n("49111"),
-        T = n("954016"),
+        T = n("49111"),
+        v = n("954016"),
         I = n("782340");
 
     function A(e) {
@@ -31,11 +31,11 @@ function(e, t, n) {
             applicationId: t,
             secret: n,
             channelId: i,
-            intent: s = T.ActivityIntent.PLAY,
+            intent: s = v.ActivityIntent.PLAY,
             embedded: a = !1,
             analyticsLocations: o = []
         } = e;
-        C(t, null, i, a, o).then(() => h.default.waitConnected(t)).then(() => Promise.race([h.default.waitSubscribed(t, v.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+        C(t, null, i, a, o).then(() => h.default.waitConnected(t)).then(() => Promise.race([h.default.waitSubscribed(t, T.RPCEvents.ACTIVITY_JOIN)])).then(() => {
             r.default.dispatch({
                 type: "ACTIVITY_JOIN",
                 applicationId: t,
@@ -66,12 +66,12 @@ function(e, t, n) {
             if (null == n) throw Error("Missing dispatch game when launching");
             let a = _.default.getLibraryApplication(e, t);
             if (null == a) throw Error("Missing library application when launching");
-            E = (g = e, s.default.post({
-                url: v.Endpoints.OAUTH2_AUTHORIZE,
+            E = (g = e, s.HTTP.post({
+                url: T.Endpoints.OAUTH2_AUTHORIZE,
                 query: {
                     client_id: g,
                     response_type: "token",
-                    scope: [v.OAuth2Scopes.IDENTIFY].join(" ")
+                    scope: [T.OAuth2Scopes.IDENTIFY].join(" ")
                 },
                 retries: 3,
                 body: {
@@ -110,7 +110,7 @@ function(e, t, n) {
                 pids: t
             })
         }).catch(t => {
-            S.default.show(v.NoticeTypes.LAUNCH_GAME_FAILURE, I.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), r.default.dispatch({
+            S.default.show(T.NoticeTypes.LAUNCH_GAME_FAILURE, I.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), r.default.dispatch({
                 type: "GAME_LAUNCH_FAIL",
                 applicationId: e,
                 error: m
@@ -133,7 +133,7 @@ function(e, t, n) {
             if (null != n) {
                 let e = _.default.getActiveLibraryApplication(n.id);
                 if (null != e) {
-                    let t = E.toggleFlag(e.getFlags(), v.LibraryApplicationFlags.OVERLAY_DISABLED);
+                    let t = E.toggleFlag(e.getFlags(), T.LibraryApplicationFlags.OVERLAY_DISABLED);
                     p.updateFlags(e.id, e.branchId, t);
                     return
                 }
@@ -182,8 +182,8 @@ function(e, t, n) {
             !c.default.fetching && null == c.default.lastFetched && r.default.wait(() => {
                 r.default.dispatch({
                     type: "GAMES_DATABASE_FETCH"
-                }), s.default.get({
-                    url: v.Endpoints.APPLICATIONS_DETECTABLE,
+                }), s.HTTP.get({
+                    url: T.Endpoints.APPLICATIONS_DETECTABLE,
                     headers: {
                         "If-None-Match": c.default.detectableGamesEtag
                     },
@@ -226,8 +226,8 @@ function(e, t, n) {
             } = e, d = (0, l.cleanExecutablePath)(u);
             if (null != d) {
                 var c, _;
-                s.default.post({
-                    url: v.Endpoints.UNVERIFIED_APPLICATIONS,
+                s.HTTP.post({
+                    url: T.Endpoints.UNVERIFIED_APPLICATIONS,
                     body: {
                         name: t,
                         os: (0, g.getPlatformName)(),
@@ -260,8 +260,8 @@ function(e, t, n) {
             }
         },
         uploadIcon(e, t, n) {
-            s.default.post({
-                url: v.Endpoints.UNVERIFIED_APPLICATIONS_ICONS,
+            s.HTTP.post({
+                url: T.Endpoints.UNVERIFIED_APPLICATIONS_ICONS,
                 body: {
                     application_name: e,
                     application_hash: t,
@@ -285,7 +285,7 @@ function(e, t, n) {
                 applicationId: i,
                 channelId: s,
                 messageId: a,
-                intent: o = T.ActivityIntent.PLAY,
+                intent: o = v.ActivityIntent.PLAY,
                 embedded: l = !1
             } = e;
             if (__OVERLAY__) return r.default.dispatch({

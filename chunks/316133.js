@@ -30,11 +30,11 @@ function(e, t, n) {
         return null == t && (t = new C(e), p[e] = t), t
     }
 
-    function v(e, t) {
+    function T(e, t) {
         return c.default.getMember(e, t.id)
     }
 
-    function T(e, t, n) {
+    function v(e, t, n) {
         var i;
         let s = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : h.default.getName(n);
         return {
@@ -59,8 +59,8 @@ function(e, t, n) {
             member: r,
             comparator: a
         } = function(e, t, n) {
-            let i = v(e, t);
-            return T(n, i, t)
+            let i = T(e, t);
+            return v(n, i, t)
         }(t, i, e), o = {
             voiceState: e,
             user: i,
@@ -80,7 +80,7 @@ function(e, t, n) {
                 if (null == n) return this._voiceStates.set(e, A(t, this.guildId, e)), !0;
                 if (n.voiceState !== t) {
                     var s;
-                    let r = v(this.guildId, i),
+                    let r = T(this.guildId, i),
                         a = null !== (s = null == r ? void 0 : r.nick) && void 0 !== s ? s : h.default.getName(i);
                     return this._voiceStates.set(e, {
                         ...n,
@@ -99,11 +99,11 @@ function(e, t, n) {
                 n = _.default.getUser(e);
             if (null != t && null != n) {
                 var i, s;
-                let r = v(this.guildId, n);
+                let r = T(this.guildId, n);
                 if ((null == r ? void 0 : r.nick) !== (null === (i = t.member) || void 0 === i ? void 0 : i.nick) || (null == r ? void 0 : r.avatar) !== (null === (s = t.member) || void 0 === s ? void 0 : s.avatar)) {
                     let {
                         comparator: i
-                    } = T(t.voiceState, r, n);
+                    } = v(t.voiceState, r, n);
                     return this._voiceStates.set(e, {
                         ...t,
                         member: r,

@@ -1,21 +1,21 @@
-function(t, e, l) {
+function(t, e, n) {
     "use strict";
-    l.r(e), l.d(e, {
+    n.r(e), n.d(e, {
         default: function() {
             return _
         }
-    }), l("222007");
-    var n = l("37983");
-    l("884691");
-    var r = l("77078"),
-        a = l("404118"),
-        s = l("850068"),
-        o = l("775433"),
-        i = l("521012"),
-        u = l("599110"),
-        d = l("719923"),
-        c = l("49111"),
-        f = l("782340");
+    }), n("222007");
+    var l = n("37983");
+    n("884691");
+    var r = n("77078"),
+        a = n("404118"),
+        s = n("850068"),
+        o = n("775433"),
+        i = n("521012"),
+        u = n("599110"),
+        d = n("719923"),
+        c = n("49111"),
+        f = n("782340");
     async function _(t) {
         let {
             analyticsLocations: e,
@@ -25,19 +25,19 @@ function(t, e, l) {
             closeLayer: L,
             onCloseModal: C,
             totalNumberOfSlotsToAssign: h = 1,
-            disablePremiumUpsell: y,
-            onSubscriptionConfirmation: E,
-            inPopout: m,
-            applicationId: O
-        } = t, A = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, T = i.default.getPremiumTypeSubscription();
-        if (null != T && T.isPurchasedExternally && null != T.paymentGateway) {
+            disablePremiumUpsell: T,
+            onSubscriptionConfirmation: y,
+            inPopout: E,
+            applicationId: m
+        } = t, O = E ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, A = i.default.getPremiumTypeSubscription();
+        if (null != A && A.isPurchasedExternally && null != A.paymentGateway) {
             null != L && L(), a.default.show({
                 title: f.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
-                    paymentGatewayName: c.PaymentGatewayToFriendlyName[T.paymentGateway]
+                    paymentGatewayName: c.PaymentGatewayToFriendlyName[A.paymentGateway]
                 }),
                 body: f.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_UPGRADE_TO_PREMIUM_EXTERNAL_ERROR.format({
-                    paymentGatewayName: c.PaymentGatewayToFriendlyName[T.paymentGateway],
-                    subscriptionManagementLink: (0, d.getExternalSubscriptionMethodUrl)(T.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
+                    paymentGatewayName: c.PaymentGatewayToFriendlyName[A.paymentGateway],
+                    subscriptionManagementLink: (0, d.getExternalSubscriptionMethodUrl)(A.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
                 })
             });
             return
@@ -46,13 +46,13 @@ function(t, e, l) {
         let I = await (0, r.openModalLazy)(async () => {
             let {
                 default: t
-            } = await l.el("860634").then(l.bind(l, "860634"));
-            return l => {
+            } = await n.el("860634").then(n.bind(n, "860634"));
+            return n => {
                 let {
                     transitionState: r,
                     onClose: a
-                } = l;
-                return (0, n.jsx)(t, {
+                } = n;
+                return (0, l.jsx)(t, {
                     transitionState: r,
                     onClose: t => {
                         a(), null == C || C(t)
@@ -63,9 +63,9 @@ function(t, e, l) {
                     guildId: S,
                     totalNumberOfSlotsToAssign: h,
                     closeGuildPerksModal: L,
-                    disablePremiumUpsell: y,
-                    onSubscriptionConfirmation: E,
-                    applicationId: O
+                    disablePremiumUpsell: T,
+                    onSubscriptionConfirmation: y,
+                    applicationId: m
                 })
             }
         }, {
@@ -78,7 +78,7 @@ function(t, e, l) {
             onCloseRequest: () => {
                 null != I && (0, r.closeModal)(I), null == C || C(!1)
             },
-            contextKey: A
+            contextKey: O
         })
     }
 }

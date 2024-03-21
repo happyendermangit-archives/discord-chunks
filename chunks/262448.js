@@ -21,14 +21,14 @@ function(e, t, n) {
             className: n,
             collapsibleContent: r,
             isExpanded: _
-        } = e, [f, E] = s.useState(!1), h = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [g, m] = s.useState(!0), [p, S] = s.useState(!1), v = null != _ ? _ : f, {
-            ref: T,
+        } = e, [f, E] = s.useState(!1), h = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [g, m] = s.useState(!0), [p, S] = s.useState(!1), T = null != _ ? _ : f, {
+            ref: v,
             height: I = 0
         } = (0, u.default)(), {
             ref: A,
             height: C = 0
         } = (0, u.default)(), y = (0, o.useSpring)({
-            height: v ? I + C : C,
+            height: T ? I + C : C,
             immediate: g || h,
             config: o.config.stiff,
             onRest: () => S(!0)
@@ -42,23 +42,23 @@ function(e, t, n) {
             return () => clearTimeout(e)
         }, []), (0, i.jsx)("div", {
             className: a(c.collapseable, {
-                [c.toggled]: v
+                [c.toggled]: T
             }, n),
             children: (0, i.jsxs)(o.animated.div, {
                 className: a(c.contentExpandContainer, {
-                    [c.showOverflow]: v && p
+                    [c.showOverflow]: T && p
                 }),
                 style: y,
                 children: [(0, i.jsx)("div", {
                     ref: A,
                     className: a(c.header, {
-                        [c.toggled]: v
+                        [c.toggled]: T
                     }),
                     children: t({
                         onClick: N
                     })
                 }), (0, i.jsx)("div", {
-                    ref: T,
+                    ref: v,
                     children: r
                 })]
             })

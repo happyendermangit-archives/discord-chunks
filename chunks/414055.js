@@ -30,8 +30,8 @@ function(e, t, n) {
         p = n("983782"),
         S = n("207758");
     (s = i || (i = {})).PRIMARY = "primary", s.BLACK = "black", s.GREY = "grey", s.BRAND = "brand", s.GREEN = "green", s.YELLOW = "yellow", s.RED = "red", s.CUSTOM = "custom", s.PREMIUM = "premium";
-    let v = Object.freeze({}),
-        T = Object.freeze({
+    let T = Object.freeze({}),
+        v = Object.freeze({
             top: S.tooltipTop,
             bottom: S.tooltipBottom,
             left: S.tooltipLeft,
@@ -79,7 +79,7 @@ function(e, t, n) {
                     } = e;
                     return (0, r.jsxs)(c.animated.div, {
                         onClick: o,
-                        className: l(S.tooltip, T[null != t ? t : i], T[s], {
+                        className: l(S.tooltip, v[null != t ? t : i], v[s], {
                             [S.tooltipDisablePointerEvents]: E
                         }, u),
                         style: f,
@@ -165,7 +165,7 @@ function(e, t, n) {
                 text: n,
                 "aria-label": i
             } = this.props;
-            if (null == n) return t(v);
+            if (null == n) return t(T);
             "string" == typeof i ? e = i : "string" == typeof n && !1 !== i && (e = n);
             let s = {
                 onClick: this.handleClick,

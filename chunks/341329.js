@@ -24,8 +24,8 @@ function(e, t, n) {
         A = n("660478"),
         h = n("18494"),
         C = n("162771"),
-        I = n("718517"),
-        T = n("519841"),
+        T = n("718517"),
+        I = n("519841"),
         v = n("787336"),
         N = n("49111"),
         y = n("724210"),
@@ -57,7 +57,7 @@ function(e, t, n) {
             return
         }
         let p = _.default.getOrCreate(n);
-        T.AttachmentLinkRefreshExperiment.getCurrentConfig({
+        I.AttachmentLinkRefreshExperiment.getCurrentConfig({
             location: "fetch_messages"
         }).enabled && p.some(v.messageHasExpiredAttachmentUrl) && (O.log("Found expired attachment link, clearing messages"), _.default.clear(n), p = _.default.getOrCreate(n)), null != p.jumpTargetId && null == i && (p = p.mutate({
             jumpTargetId: null,
@@ -123,7 +123,7 @@ function(e, t, n) {
             })
         }
     }
-    let L = 90 * I.default.Millis.DAY,
+    let L = 90 * T.default.Millis.DAY,
         M = "viewedThreadIds";
 
     function b() {
@@ -242,7 +242,7 @@ function(e, t, n) {
         })
     }
 
-    function W(e) {
+    function H(e) {
         let {
             response: t
         } = e;
@@ -257,7 +257,7 @@ function(e, t, n) {
             })
         }
     }
-    let H = {};
+    let W = {};
 
     function K(e) {
         var t;
@@ -268,9 +268,9 @@ function(e, t, n) {
             isPreview: l = !1
         } = e;
         if (l) return;
-        let r = null !== (t = H[n]) && void 0 !== t ? t : 0;
-        if (Date.now() - r < 10 * I.default.Millis.SECOND) return;
-        H[n] = Date.now();
+        let r = null !== (t = W[n]) && void 0 !== t ? t : 0;
+        if (Date.now() - r < 10 * T.default.Millis.SECOND) return;
+        W[n] = Date.now();
         let s = h.default.getChannelId(),
             u = p.default.getCurrentSidebarChannelId(s),
             o = n === s || n === u;
@@ -321,7 +321,7 @@ function(e, t, n) {
                 CHANNEL_PRELOAD: k,
                 THREAD_CREATE_LOCAL: x,
                 GUILD_CREATE: () => U(),
-                MESSAGE_END_EDIT: W,
+                MESSAGE_END_EDIT: H,
                 LOAD_MESSAGES_SUCCESS: K,
                 UPLOAD_FAIL: B,
                 CHANNEL_DELETE: () => U(),

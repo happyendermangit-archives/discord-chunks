@@ -62,7 +62,7 @@ function(e, t, n) {
         if (0 === s.length) return null;
         let p = m(),
             S = c ? E.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.default.Messages.OAUTH2_SCOPES_LABEL,
-            v = u === o.ApplicationIntegrationType.USER_INSTALL && r.includes(f.OAuth2Scopes.APPLICATIONS_COMMANDS);
+            T = u === o.ApplicationIntegrationType.USER_INSTALL && r.includes(f.OAuth2Scopes.APPLICATIONS_COMMANDS);
         return (0, i.jsxs)("div", {
             className: h.scopes,
             children: [(0, i.jsx)(l.Heading, {
@@ -77,7 +77,7 @@ function(e, t, n) {
                     text: (0, _.getScopeName)(e, s),
                     error: null == d ? void 0 : null === (t = d[e]) || void 0 === t ? void 0 : t[0]
                 }, e)
-            }), v && (0, i.jsx)(g, {
+            }), T && (0, i.jsx)(g, {
                 text: E.default.Messages.SCOPE_DM_YOU
             }), (0, i.jsx)(g, {
                 text: p,

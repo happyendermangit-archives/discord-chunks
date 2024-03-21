@@ -91,7 +91,7 @@ function(e, t, n) {
                 var r;
                 e.setFont({
                     truncate: s.TextTruncationMethod.Truncate
-                }), null != u ? I(e, n, t) : (0, a.default)(n) ? C(e, n, t) : (0, l.default)(n) && n.name === i.default.get(p.PlatformTypes.LEAGUE_OF_LEGENDS).name ? T(e, n, t) : n.type === p.ActivityTypes.HANG_STATUS ? _(e, n, t) : S(e, n, t), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("Platform")) && e.drawImage("Platform", {
+                }), null != u ? I(e, n, t) : (0, a.default)(n) ? C(e, n, t) : (0, l.default)(n) && n.name === i.default.get(p.PlatformTypes.LEAGUE_OF_LEGENDS).name ? _(e, n, t) : n.type === p.ActivityTypes.HANG_STATUS ? T(e, n, t) : S(e, n, t), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("Platform")) && e.drawImage("Platform", {
                     x: c.canvasWidth - c.padding - c.platformSize,
                     y: c.padding
                 }, {
@@ -203,7 +203,7 @@ function(e, t, n) {
             x: r,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, _ = (e, t, i) => {
+    }, T = (e, t, i) => {
         var l, a;
         e.setSize({
             w: c.canvasWidth,
@@ -252,7 +252,7 @@ function(e, t, n) {
             x: o,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, T = (e, t, n) => {
+    }, _ = (e, t, n) => {
         var i;
         e.setSize({
             w: c.canvasWidth,

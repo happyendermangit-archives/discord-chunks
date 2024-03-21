@@ -23,14 +23,14 @@ function(e, t, n) {
         p = 0,
         S = null;
 
-    function v() {
+    function T() {
         return null != S ? Promise.resolve(S) : (0, _.isDesktop)() ? E.default.ensureModule("discord_game_utils").then(() => {
             let e = E.default.getGameUtils();
             return null != e && null != e.findLaunchable ? (S = e, e) : Promise.reject(Error("game utils not found"))
         }) : Promise.reject(Error("not desktop client"))
     }
 
-    function T(e) {
+    function v(e) {
         let t = {
                 id: e.id,
                 name: e.name,
@@ -58,7 +58,7 @@ function(e, t, n) {
             }))), 0 === e.length) throw Error("No remaining launchable queries");
         let t = Date.now();
         t > p && (p = t + 36e5, m = {});
-        let n = await v();
+        let n = await T();
         for (let t of e) {
             let e = m[t.id];
             if (null != e) return e;
@@ -90,8 +90,8 @@ function(e, t, n) {
         waitConnected(e) {
             return new Promise(C.bind(this, () => l.default.isConnected(e)))
         },
-        isLaunchable: e => A(T(e)).then(e => null != e).catch(() => !1),
-        launch: e => A(T(e)).then(y),
+        isLaunchable: e => A(v(e)).then(e => null != e).catch(() => !1),
+        launch: e => A(v(e)).then(y),
         launchDispatchApplication(e, t, n, s, a) {
             let {
                 launchOptions: l,
@@ -125,7 +125,7 @@ function(e, t, n) {
                 return c.default.launch(f, E, p.name, i)
             })
         },
-        removeShortcuts: e => (0, _.isWindows)() ? v().then(t => {
+        removeShortcuts: e => (0, _.isWindows)() ? T().then(t => {
             var n, i;
             return null !== (i = null === (n = t.removeShortcuts) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== i && i
         }) : Promise.resolve(!1),
@@ -133,7 +133,7 @@ function(e, t, n) {
             if (null == s || !(0, _.isWindows)()) return Promise.resolve(!1);
             let r = "discord:///library/".concat(i, "/launch"),
                 a = "".concat(s, "\\icon.ico");
-            return v().then(i => {
+            return T().then(i => {
                 var s, o;
                 return null !== (o = null === (s = i.createShortcuts) || void 0 === s ? void 0 : s.call(i, e, t, n, r, a)) && void 0 !== o && o
             })
@@ -147,12 +147,12 @@ function(e, t, n) {
                 id: e
             }).then(y)
         },
-        isProtocolRegistered: e => v().then(t => {
+        isProtocolRegistered: e => T().then(t => {
             var n, i;
             return null !== (i = null === (n = t.isProtocolSchemeRegistered) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== i && i
         }),
         setRecentGames(e) {
-            v().then(t => {
+            T().then(t => {
                 var n;
                 return null === (n = t.setRecentGames) || void 0 === n ? void 0 : n.call(t, e)
             }).catch(() => {})

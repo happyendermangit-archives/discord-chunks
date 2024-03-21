@@ -42,7 +42,7 @@ function(e, _, E) {
         },
         fetchChangelogConfig() {
             let e = r.ChangelogPlatforms.DESKTOP;
-            return t.default.get({
+            return t.HTTP.get({
                 url: "https://cdn.discordapp.com/changelogs/config_".concat(e, ".json?").concat(a())
             })
         },
@@ -50,7 +50,7 @@ function(e, _, E) {
             if (null != n.default.getChangelog(e, _)) return null;
             let E = r.ChangelogPlatforms.DESKTOP;
             try {
-                let n = await t.default.get({
+                let n = await t.HTTP.get({
                     url: "https://cdn.discordapp.com/changelogs/".concat(E, "/").concat(e, "/").concat(_, ".json?").concat(a())
                 });
                 return o.default.dispatch({

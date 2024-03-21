@@ -27,10 +27,10 @@ function(e, t, n) {
     } = _._private, {
         Spacing: S
     } = f._private, {
-        Modules: v
-    } = d._private, T = l(m, e => s(e)), I = {
+        Modules: T
+    } = d._private, v = l(m, e => s(e)), I = {
         themes: h,
-        modules: v,
+        modules: T,
         colors: l(g, (e, t) => ({
             css: N(t),
             resolve(t) {
@@ -39,13 +39,13 @@ function(e, t, n) {
                     s = n.opacity;
                 if (1 === s) return I.unsafe_rawColors[i].resolve(t);
                 {
-                    let e = T[i];
+                    let e = v[i];
                     return 0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), A(e, t.saturation)
                 }
             }
         })),
         unsafe_rawColors: l(m, (e, t) => {
-            let n = T[t];
+            let n = v[t];
             return {
                 css: N(t),
                 resolve: e => A(n, e.saturation)

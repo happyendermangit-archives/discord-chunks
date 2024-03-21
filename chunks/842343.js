@@ -24,7 +24,7 @@ function(e, t, n) {
         g = n("497858"),
         S = n("892149"),
         C = l.forwardRef(function(e, t) {
-            var n, a, C, _, T;
+            var n, a, C, T, _;
             let {
                 channel: I,
                 type: v,
@@ -72,7 +72,7 @@ function(e, t, n) {
                     [S.bottom]: null == D && "bottom" === e.position
                 },
                 H = 490;
-            null != D && (H = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (_ = k.query) || void 0 === _ ? void 0 : _.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), H = Math.min(window.innerHeight - 175, H);
+            null != D && (H = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (T = k.query) || void 0 === T ? void 0 : T.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), H = Math.min(window.innerHeight - 175, H);
             let B = (0, i.jsx)(f.default, {
                 id: O,
                 className: s(S.autocomplete, G),
@@ -109,7 +109,7 @@ function(e, t, n) {
                 children: (0, i.jsx)(u.ReferencePositionLayer, {
                     reference: () => D,
                     positionKey: w,
-                    position: null !== (T = e.position) && void 0 !== T ? T : "top",
+                    position: null !== (_ = e.position) && void 0 !== _ ? _ : "top",
                     align: "left",
                     spacing: 8,
                     autoInvert: !0,

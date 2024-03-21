@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getForumChannelSessionId: function() {
-            return v
+            return T
         },
         convertSortOrderToReadableString: function() {
-            return T
+            return v
         },
         getForumPostDraftNumAttachments: function() {
             return I
@@ -41,11 +41,11 @@ function(e, t, n) {
         p = n("724210"),
         S = n("648564");
 
-    function v(e) {
+    function T(e) {
         return g.default.getForumChannelSessionId(e)
     }
 
-    function T(e) {
+    function v(e) {
         switch (e) {
             case i.ThreadSortOrder.CREATION_DATE:
                 return S.ThreadSortOrderReadableForAnalytics.CREATION_DATE;
@@ -99,7 +99,7 @@ function(e, t, n) {
             forum_channel_can_create_post: d.default.can(m.Permissions.SEND_MESSAGES, o),
             forum_channel_filter_tag_ids: E.default.getFilterTagIdsAnalytics(),
             forum_channel_sort_order: E.default.getSortOrderAnalytics(o.id),
-            forum_channel_session_id: null != a ? a : v(o.id),
+            forum_channel_session_id: null != a ? a : T(o.id),
             forum_channel_layout: E.default.getLayoutAnalytics(o.id),
             forum_channel_default_sort_order: o.defaultSortOrder,
             forum_channel_default_layout: o.defaultForumLayout

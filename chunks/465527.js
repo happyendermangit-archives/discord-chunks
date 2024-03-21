@@ -115,7 +115,7 @@ function(t, e, n) {
             skuId: n
         });
         try {
-            let t = await i.default.post({
+            let t = await i.HTTP.post({
                 url: T.Endpoints.CHANNEL_ENTITLEMENT_GRANT(e),
                 oldFormErrors: !0
             });
@@ -172,11 +172,11 @@ function(t, e, n) {
             else {
                 if (null != a && (t.payment_source_id = a.id, t.payment_source_token = await (0, _.createPaymentSourceToken)(a), T.ADYEN_PAYMENT_SOURCES.has(a.type))) {
                     let e = await (0, _.popupBridgeState)(a.type);
-                    t.return_url = i.default.getAPIBaseURL() + T.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(a.type, null != e ? e : "", "success")
+                    t.return_url = (0, i.getAPIBaseURL)() + T.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(a.type, null != e ? e : "", "success")
                 }
                 null != s && (t.expected_amount = s), null != f && (t.expected_currency = f), t.gift_info_options = p, null != R && (t.country_code = R), t.purchase_token = (0, E.getPurchaseToken)()
             }
-            let n = await i.default.post({
+            let n = await i.HTTP.post({
                 url: T.Endpoints.STORE_SKU_PURCHASE(e),
                 body: t,
                 context: {
@@ -215,7 +215,7 @@ function(t, e, n) {
             let t = {
                     purchase_token: (0, E.getPurchaseToken)()
                 },
-                e = await i.default.post({
+                e = await i.HTTP.post({
                     url: T.Endpoints.STORE_EMAIL_RESEND_PAYMENT_VERIFICATION,
                     body: t,
                     oldFormErrors: !0

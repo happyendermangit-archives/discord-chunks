@@ -41,7 +41,7 @@ function(e, t, n) {
                 closeOnScroll: m,
                 useMouseEnter: p,
                 renderPopout: S,
-                layerContext: v
+                layerContext: T
             } = this.props;
             return (0, r.jsx)(l.BasePopout, {
                 ref: this.ref,
@@ -75,7 +75,7 @@ function(e, t, n) {
                 ignoreModalClicks: g,
                 closeOnScroll: m,
                 useMouseEnter: p,
-                layerContext: v,
+                layerContext: T,
                 children: e
             })
         }

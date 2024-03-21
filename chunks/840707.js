@@ -39,19 +39,19 @@ function(e, t, n) {
     }
     var a = {
         get: function(e) {
-            return r(i.default.get, e, "get")
+            return r(i.HTTP.get, e, "get")
         },
         post: function(e) {
-            return r(i.default.post, e, "post")
+            return r(i.HTTP.post, e, "post")
         },
         put: function(e) {
-            return r(i.default.put, e, "put")
+            return r(i.HTTP.put, e, "put")
         },
         patch: function(e) {
-            return r(i.default.patch, e, "patch")
+            return r(i.HTTP.patch, e, "patch")
         },
         delete: function(e) {
-            return r(i.default.delete, e, "del")
+            return r(i.HTTP.del, e, "del")
         }
     }
 }

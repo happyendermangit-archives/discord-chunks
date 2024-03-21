@@ -8,7 +8,7 @@ function(e, t, n) {
             return S
         },
         trackToggleSelfMute: function() {
-            return v
+            return T
         }
     });
     var i = n("37983");
@@ -87,7 +87,7 @@ function(e, t, n) {
         }).then(() => !0))
     }
 
-    function v(e) {
+    function T(e) {
         let {
             usedKeybind: t = !1
         } = e, n = l.default.getKeybindForAction(_.GlobalKeybindActions.TOGGLE_MUTE, !1, !0);

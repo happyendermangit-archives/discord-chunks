@@ -14,7 +14,7 @@ function(e, t, n) {
             return S
         },
         getStreamEligibleChannels: function() {
-            return v
+            return T
         }
     }), n("424973"), n("222007");
     var i, s, r = n("446674"),
@@ -67,7 +67,7 @@ function(e, t, n) {
         return (0, r.useStateFromStoresArray)([c.default, u.default, d.default, a.default], () => p(e, c.default, u.default, d.default, a.default))
     }
 
-    function v(e, t, n) {
+    function T(e, t, n) {
         let i = [];
         for (let {
                 channel: s

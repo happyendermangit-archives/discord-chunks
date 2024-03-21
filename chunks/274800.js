@@ -56,7 +56,7 @@ function(e, t, n) {
         })
     }
     async function u(e, t) {
-        let n = await i.default.get({
+        let n = await i.HTTP.get({
             url: r.Endpoints.MESSAGE_INTERACTION_DATA(e, t),
             oldFormErrors: !0
         });

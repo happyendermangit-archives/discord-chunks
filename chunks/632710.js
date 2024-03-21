@@ -25,8 +25,8 @@ function(e, t, n) {
         g = n("429928"),
         S = n("36539"),
         C = n("698372"),
-        _ = n("770370"),
-        T = n("667618"),
+        T = n("770370"),
+        _ = n("667618"),
         I = n("865677"),
         v = n("15874"),
         N = n("774713"),
@@ -61,19 +61,19 @@ function(e, t, n) {
                 W = F === y.Types.STREAM_PREVIEW || null != s,
                 Y = (0, g.default)(n),
                 z = (0, p.isStageActivity)(n),
-                Z = K ? E.default.Align.END : E.default.Align.STRETCH,
-                J = Y || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
+                J = K ? E.default.Align.END : E.default.Align.STRETCH,
+                Z = Y || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
                 q = (null == n ? void 0 : n.type) === L.ActivityTypes.HANG_STATUS,
                 X = (0, u.useStateFromStores)([x.default, m.default], () => {
                     var e;
                     return q ? m.default.getChannel(null === (e = x.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null
                 });
-            if ((0, S.default)(n)) t = [(0, i.jsx)(_.default, {
+            if ((0, S.default)(n)) t = [(0, i.jsx)(T.default, {
                 look: w,
                 color: D,
                 platform: f.default.get(L.PlatformTypes.XBOX)
             }, "ConnectPlatformActivityButton")];
-            else if ((null == n ? void 0 : n.platform) != null && [L.ActivityGamePlatforms.PS4, L.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(_.default, {
+            else if ((null == n ? void 0 : n.platform) != null && [L.ActivityGamePlatforms.PS4, L.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(T.default, {
                 look: w,
                 color: D,
                 platform: f.default.get(L.PlatformTypes.PLAYSTATION)
@@ -143,7 +143,7 @@ function(e, t, n) {
                         color: D,
                         look: w
                     }, "notify-button"),
-                    r = (0, i.jsx)(T.default, {
+                    r = (0, i.jsx)(_.default, {
                         user: l,
                         color: D,
                         look: w,
@@ -152,11 +152,11 @@ function(e, t, n) {
                 if (null == a && null == s && null == e && null == r) return null;
                 t = [a, s, e, r]
             }
-            let Q = J === E.default.Direction.VERTICAL;
+            let Q = Z === E.default.Direction.VERTICAL;
             return (0, i.jsx)(E.default, {
                 grow: 0,
-                align: Z,
-                direction: J,
+                align: J,
+                direction: Z,
                 wrap: Q ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
                 className: a(c, P.buttonsWrapper, Q ? P.vertical : P.horizontal),
                 onClick: function(e) {

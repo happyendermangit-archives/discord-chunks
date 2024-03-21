@@ -28,8 +28,8 @@ function(e, t, n) {
         m = n("305961"),
         p = n("957255"),
         S = n("27618"),
-        v = n("697218"),
-        T = n("49111"),
+        T = n("697218"),
+        v = n("49111"),
         I = n("782340");
     let A = "SELECTABLE",
         C = "VOCAL",
@@ -42,12 +42,12 @@ function(e, t, n) {
         L = {
             comparator: -1,
             channel: (0, _.createChannelRecord)({
-                id: T.NULL_STRING_CHANNEL_ID,
-                type: T.ChannelTypes.GUILD_CATEGORY,
+                id: v.NULL_STRING_CHANNEL_ID,
+                type: v.ChannelTypes.GUILD_CATEGORY,
                 name: I.default.Messages.UNCATEGORIZED
             })
         },
-        M = w(T.NULL_STRING_GUILD_ID),
+        M = w(v.NULL_STRING_GUILD_ID),
         b = [],
         U = {};
 
@@ -56,7 +56,7 @@ function(e, t, n) {
             id: e,
             [A]: [],
             [C]: [],
-            [T.ChannelTypes.GUILD_CATEGORY]: [L],
+            [v.ChannelTypes.GUILD_CATEGORY]: [L],
             count: 0
         }
     }
@@ -81,7 +81,7 @@ function(e, t, n) {
                 let {
                     id: t
                 } = e, n = function(e) {
-                    if (e === T.FAVORITES) return function() {
+                    if (e === v.FAVORITES) return function() {
                         let e = {},
                             t = d.default.getFavoriteChannels();
                         for (let n in t) {
@@ -107,18 +107,18 @@ function(e, t, n) {
                 s.forEach(n, n => {
                     var i;
                     let s = n.channel;
-                    if (e.count += 1, _.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(s.type) && !p.default.can(T.Permissions.VIEW_CHANNEL, s) && !l.default.isChannelGated(s.guild_id, s.id) && s.id !== D) return;
+                    if (e.count += 1, _.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(s.type) && !p.default.can(v.Permissions.VIEW_CHANNEL, s) && !l.default.isChannelGated(s.guild_id, s.id) && s.id !== D) return;
                     let r = (i = s.type, (0, _.isGuildSelectableChannelType)(i) ? A : (0, _.isGuildVocalChannelType)(i) ? C : i);
-                    s.type === T.ChannelTypes.GUILD_DIRECTORY && (null == P[t] && (P[t] = []), P[t].push(n)), null != e[r] && e[r].push(n)
+                    s.type === v.ChannelTypes.GUILD_DIRECTORY && (null == P[t] && (P[t] = []), P[t].push(n)), null != e[r] && e[r].push(n)
                 })
-            }(n), (t = n)[A].sort(k), t[C].sort(k), t[T.ChannelTypes.GUILD_CATEGORY].sort(k),
+            }(n), (t = n)[A].sort(k), t[C].sort(k), t[v.ChannelTypes.GUILD_CATEGORY].sort(k),
             function(e) {
                 let t = R[e.id] = {},
                     n = {};
                 e[A].forEach(e => {
                     let {
                         channel: i
-                    } = e, s = (0, u.computeChannelName)(i, v.default, S.default), r = Object.prototype.hasOwnProperty.call(n, s) ? n[s] : null;
+                    } = e, s = (0, u.computeChannelName)(i, T.default, S.default), r = Object.prototype.hasOwnProperty.call(n, s) ? n[s] : null;
                     null == r ? n[s] = 1 : (n[s] = r + 1, s += "~".concat(r)), t[i.id] = {
                         id: i.id,
                         name: s
@@ -126,7 +126,7 @@ function(e, t, n) {
                 })
             }(n),
             function(e) {
-                let t = v.default.getCurrentUser();
+                let t = T.default.getCurrentUser();
                 (function(e, t) {
                     let n = m.default.getGuild(t);
                     if (null != n && H(e, n)) return !0;
@@ -182,7 +182,7 @@ function(e, t, n) {
             user: e,
             context: t,
             checkElevated: !1
-        }), T.ElevatedPermissions)
+        }), v.ElevatedPermissions)
     }
 
     function Y(e, t) {
@@ -194,7 +194,7 @@ function(e, t, n) {
     }
 
     function K() {
-        G(T.FAVORITES)
+        G(v.FAVORITES)
     }
     class j extends a.default.Store {
         initialize() {
@@ -220,12 +220,12 @@ function(e, t, n) {
         }
         getDefaultChannel(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T.Permissions.VIEW_CHANNEL;
+                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v.Permissions.VIEW_CHANNEL;
             return this.getFirstChannel(e, e => p.default.can(n, e.channel), t)
         }
         getSFWDefaultChannel(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T.Permissions.VIEW_CHANNEL;
+                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v.Permissions.VIEW_CHANNEL;
             return this.getFirstChannel(e, e => p.default.can(n, e.channel) && !e.channel.nsfw, t)
         }
         getSelectableChannelIds(e) {
@@ -266,7 +266,7 @@ function(e, t, n) {
             return this.getChannels(e).count > 0
         }
         hasCategories(e) {
-            return this.getChannels(e)[T.ChannelTypes.GUILD_CATEGORY].length > 1
+            return this.getChannels(e)[v.ChannelTypes.GUILD_CATEGORY].length > 1
         }
         getTextChannelNameDisambiguations(e) {
             var t;

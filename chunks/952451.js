@@ -23,10 +23,10 @@ function(e, t, n) {
         m = n("455079"),
         p = n("282109"),
         S = n("697218"),
-        v = n("49111"),
-        T = n("724210"),
+        T = n("49111"),
+        v = n("724210"),
         I = n("133335");
-    let A = v.NULL_STRING_GUILD_ID,
+    let A = T.NULL_STRING_GUILD_ID,
         C = {},
         y = new Set,
         N = 0;
@@ -63,7 +63,7 @@ function(e, t, n) {
     function L(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (null == e || e.isGuildVocal() && 0 === t || e.hasFlag(T.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) return !1;
+        if (null == e || e.isGuildVocal() && 0 === t || e.hasFlag(v.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) return !1;
         if (0 === t || n) {
             let t = e.isThread() ? o.default.isMuted(e.id) || p.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id) : p.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id);
             if (t) return !1
@@ -168,7 +168,7 @@ function(e, t, n) {
                 if (g || f) {
                     let e = function(e, t, n) {
                         if ((0, u.isGuildVocalChannelType)(e.type) && 0 === t || !E.default.canBasicChannel((0, u.getBasicAccessPermissions)(e.type), e) || P(e, t, n)) return !1;
-                        return !("flags" in e && e.hasFlag(T.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && (t > 0 || p.default.resolveUnreadSetting(e) === I.UnreadSetting.ALL_MESSAGES)
+                        return !("flags" in e && e.hasFlag(v.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && (t > 0 || p.default.resolveUnreadSetting(e) === I.UnreadSetting.ALL_MESSAGES)
                     }(n, o, d);
                     e && (g && (i.unreadByType[I.ReadStateTypes.CHANNEL] = !0, i.unreadChannelId = t), f && (i.mentionCount += o, i.mentionCounts[n.id] = o))
                 }
@@ -287,7 +287,7 @@ function(e, t, n) {
             channelId: t,
             guildId: n
         } = e;
-        return n !== v.FAVORITES && null != t && G(n, [t])
+        return n !== T.FAVORITES && null != t && G(n, [t])
     }
 
     function J(e) {

@@ -26,7 +26,7 @@ function(e, t, n) {
             type: "DISMISS_CHANNEL_SAFETY_WARNINGS",
             channelId: e,
             warningIds: t
-        }), a.default.post({
+        }), a.HTTP.post({
             url: l.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
             body: {
                 warning_ids: t
@@ -59,7 +59,7 @@ function(e, t, n) {
     }
 
     function o(e) {
-        return a.default.post({
+        return a.HTTP.post({
             url: l.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e)
         })
     }

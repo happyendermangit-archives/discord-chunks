@@ -28,8 +28,8 @@ function(e, t, n) {
             hint: m,
             subtext: p,
             hasSubmenu: S,
-            disabled: v,
-            isFocused: T,
+            disabled: T,
+            isFocused: v,
             menuItemProps: I,
             action: A,
             onClose: C,
@@ -46,16 +46,16 @@ function(e, t, n) {
             !(e.shiftKey && D) && !P && C(), e.persist(), null == b || b(), requestAnimationFrame(() => A(e))
         }, [A, C, b, D, P]);
         return s.useEffect(() => {
-            T && ((0, d.ensureItemVisible)(U), null == y || y())
-        }, [T, y]), (0, i.jsxs)(o.Clickable, {
+            v && ((0, d.ensureItemVisible)(U), null == y || y())
+        }, [v, y]), (0, i.jsxs)(o.Clickable, {
             innerRef: U,
             className: a(E.item, E.labelContainer, f.MENU_ITEM_COLORS[t], N, {
-                [E.disabled]: v,
-                [E.focused]: T,
-                [null != R ? R : ""]: T
+                [E.disabled]: T,
+                [E.focused]: v,
+                [null != R ? R : ""]: v
             }),
-            onClick: v ? void 0 : w,
-            "aria-disabled": v,
+            onClick: T ? void 0 : w,
+            "aria-disabled": T,
             ...I,
             "data-menu-item": "true",
             children: [h && null != r && (0, i.jsx)("div", {
@@ -63,7 +63,7 @@ function(e, t, n) {
                 children: (0, i.jsx)(r, {
                     ...L,
                     className: a(E.icon, null == L ? void 0 : L.className),
-                    isFocused: T
+                    isFocused: v
                 })
             }), (0, i.jsxs)("div", {
                 className: E.label,
@@ -79,7 +79,7 @@ function(e, t, n) {
                 children: (0, i.jsx)(r, {
                     ...L,
                     className: a(E.icon, null == L ? void 0 : L.className),
-                    isFocused: T
+                    isFocused: v
                 })
             }), null != g && (0, i.jsx)("div", {
                 className: E.imageContainer,

@@ -27,8 +27,8 @@ function(e, t, n) {
             style: g,
             note: m,
             children: p
-        } = e, S = s.useRef(null), v = s.useRef(null), T = s.useId(), I = (0, i.jsx)(l.Switch, {
-            id: T,
+        } = e, S = s.useRef(null), T = s.useRef(null), v = s.useId(), I = (0, i.jsx)(l.Switch, {
+            id: v,
             checked: t,
             onChange: E,
             disabled: n,
@@ -46,12 +46,12 @@ function(e, t, n) {
                 within: !0,
                 offset: -4,
                 focusTarget: S,
-                ringTarget: v,
+                ringTarget: T,
                 children: (0, i.jsxs)("div", {
                     className: _.labelRow,
-                    ref: v,
+                    ref: T,
                     children: [(0, i.jsx)("label", {
-                        htmlFor: T,
+                        htmlFor: v,
                         className: _.title,
                         children: p
                     }), (0, i.jsx)("div", {

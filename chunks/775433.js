@@ -34,7 +34,7 @@ function(e, t, n) {
                 },
                 o = {};
             null != t && (o.country_code = t), null != n && (o.payment_source_id = n), null != d && (o.include_unpublished = d), null != c && (o.revenue_surface = c), r.query = o, !a.default.ipCountryCodeLoaded && await (0, l.fetchIpCountryCode)();
-            let _ = await i.default.get(r);
+            let _ = await i.HTTP.get(r);
             s.default.dispatch({
                 type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS",
                 skuId: e,

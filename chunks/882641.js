@@ -33,15 +33,15 @@ function(e, t, n) {
             onClick: E,
             "aria-controls": y,
             focusProps: g
-        } = e, [S, C] = l.useState(!1), [_, T] = l.useState(50), I = S || x, v = (0, d.getClass)(p, "emojiButton", I ? "Hovered" : "Normal");
-        let N = (t = _, {
+        } = e, [S, C] = l.useState(!1), [T, _] = l.useState(50), I = S || x, v = (0, d.getClass)(p, "emojiButton", I ? "Hovered" : "Normal");
+        let N = (t = T, {
                 "--custom-emoji-sprite-size": "".concat(24, "px"),
                 "--custom-emoji-sprite-row": Math.floor(t / 20),
                 "--custom-emoji-sprite-col": t % 20
             }),
             A = l.useCallback(() => {
-                if (!I) C(!0), T(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
-            }, [I, C, T]),
+                if (!I) C(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
+            }, [I, C, _]),
             O = l.useCallback(() => {
                 C(!1)
             }, [C]),

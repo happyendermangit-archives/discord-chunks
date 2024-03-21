@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return v
         }
     }), n("222007");
     var s, r = n("446674"),
@@ -40,7 +40,7 @@ function(e, t, n) {
         if ((0, d.isDesktop)())
             for (let n of e.executables) E[n.name] = t
     }
-    class v extends r.default.PersistedStore {
+    class T extends r.default.PersistedStore {
         initialize(e) {
             var t;
             null != e && (null != e.detectableGamesEtag && (g = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => S(e)))
@@ -107,7 +107,7 @@ function(e, t, n) {
             h[e] = !0, a.default.set(c, h)
         }
     }
-    v.displayName = "GameStore", v.persistKey = "GameStore", v.migrations = [e => {
+    T.displayName = "GameStore", T.persistKey = "GameStore", T.migrations = [e => {
         var t, n;
         if (null == e) return {
             detectableGamesEtag: "",
@@ -121,7 +121,7 @@ function(e, t, n) {
         detectableGamesEtag: "",
         detectableGames: []
     }];
-    var T = new v(o.default, {
+    var v = new T(o.default, {
         OVERLAY_INITIALIZE: function(e) {
             let {
                 detectableApplications: t

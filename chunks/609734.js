@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     });
     var i = n("37983");
@@ -26,23 +26,23 @@ function(e, t, n) {
         S = n("782340"),
         C = n("796440");
 
-    function _(e) {
+    function T(e) {
         var t;
         let {
             application: n,
             className: l
-        } = e, _ = c.default.getChannel(f.default.getChannelId()), {
-            appsInGDMEnabled: T,
+        } = e, T = c.default.getChannel(f.default.getChannelId()), {
+            appsInGDMEnabled: _,
             availableApplications: I
         } = (0, d.usePrivateChannelIntegrationState)({
-            channelId: null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : g.EMPTY_STRING_SNOWFLAKE_ID
+            channelId: null !== (t = null == T ? void 0 : T.id) && void 0 !== t ? t : g.EMPTY_STRING_SNOWFLAKE_ID
         });
         if (null == n || !(0, y.canInstallApplication)({
                 customInstallUrl: n.customInstallUrl,
                 installParams: n.installParams,
                 integrationTypesConfig: n.integrationTypesConfig
             })) return null;
-        let v = T && null != I.find(e => e.id === (null == n ? void 0 : n.id));
+        let v = _ && null != I.find(e => e.id === (null == n ? void 0 : n.id));
         return (0, i.jsx)(s.Button, {
             color: s.Button.Colors.PRIMARY,
             look: s.Button.Looks.FILLED,
@@ -67,7 +67,7 @@ function(e, t, n) {
                 v ? (0, u.openOAuth2Modal)({
                     clientId: n.id,
                     scopes: [g.OAuth2Scopes.APPLICATIONS_COMMANDS],
-                    channelId: _.id,
+                    channelId: T.id,
                     disableGuildSelect: !0
                 }) : (0, y.installApplication)({
                     applicationId: n.id,

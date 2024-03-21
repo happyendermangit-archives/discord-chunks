@@ -23,7 +23,7 @@ function(e, t, n) {
     let p = {},
         S = new Set;
 
-    function v(e) {
+    function T(e) {
         let {
             guildId: t,
             role: n,
@@ -38,12 +38,12 @@ function(e, t, n) {
         }(n, t)) || !1)
     }
 
-    function T(e, t) {
+    function v(e, t) {
         if (!t.hasFeature(m.GuildFeatures.CREATOR_MONETIZABLE) && !t.hasFeature(m.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
         let n = _.default.isViewingServerShop(t.id);
         for (let i of Object.keys(e.permissionOverwrites)) {
             let s = h.default.getRole(t.id, i);
-            if (!v({
+            if (!T({
                     guildId: t.id,
                     role: s,
                     isPreviewingRoles: n
@@ -56,7 +56,7 @@ function(e, t, n) {
             a = (0, c.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
         if (r && !a) {
             for (let e of Object.values(h.default.getRoles(t.id)))
-                if (v({
+                if (T({
                         guildId: t.id,
                         role: e,
                         isPreviewingRoles: n
@@ -73,7 +73,7 @@ function(e, t, n) {
         let s = h.default.getGuild(i.getGuildId());
         if (null == s) return !1;
         let r = n.has(t),
-            a = T(i, s);
+            a = v(i, s);
         return r !== a && (a ? n.add(t) : n.delete(t), !0)
     }
 
@@ -118,7 +118,7 @@ function(e, t, n) {
                 let i = f.default.getMutableGuildChannelsForGuild(e);
                 for (let e in i) {
                     let s = i[e];
-                    T(s, t) && n.add(s.id)
+                    v(s, t) && n.add(s.id)
                 }
             }(e), n = p[e]), null != n && n.has(t)
         }

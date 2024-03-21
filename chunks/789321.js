@@ -27,8 +27,8 @@ function(e, t, n) {
         g = n("845962"),
         S = n("697218"),
         C = n("945330"),
-        _ = n("719923"),
-        T = n("627601"),
+        T = n("719923"),
+        _ = n("627601"),
         I = n("994428"),
         v = n("782340"),
         N = n("154477"),
@@ -97,10 +97,10 @@ function(e, t, n) {
             height: D
         } = (0, d.default)(), w = l.useMemo(() => ({
             top: "-".concat((null != D ? D : R) + 6, "px")
-        }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), G = _.default.canUseCollectibles(F), {
+        }), [D]), F = (0, o.default)([S.default], () => S.default.getCurrentUser()), G = T.default.canUseCollectibles(F), {
             setUpsellSource: H,
             reset: B
-        } = (0, T.useUserPopoutCollectiblesUpsellStore)();
+        } = (0, _.useUserPopoutCollectiblesUpsellStore)();
         l.useEffect(() => (H(P), () => {
             B()
         }), [H, P, B]);
@@ -121,7 +121,7 @@ function(e, t, n) {
                 null == h || h(I.ContentDismissActionType.DISMISS)
             }, [h]);
         if (!A && !L) return null;
-        let Z = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+        let J = (0, r.match)([A, L]).with([!0, !0], () => K && W && G ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
             openShop: M
         }) : K && W ? v.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
             openShop: M
@@ -158,7 +158,7 @@ function(e, t, n) {
                         variant: "text-sm/normal",
                         color: "text-normal",
                         tag: "span",
-                        children: Z
+                        children: J
                     })
                 }), (0, i.jsx)("div", {
                     className: N.buttons,

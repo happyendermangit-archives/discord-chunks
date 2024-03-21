@@ -21,8 +21,8 @@ function(e, t, n) {
         m = n("861001"),
         p = n("899676"),
         S = n("13379"),
-        v = n("238372"),
-        T = n("232125"),
+        T = n("238372"),
+        v = n("232125"),
         I = n("353927"),
         A = n("53452");
     let C = new a.default("MediaEngineWebRTC");
@@ -246,7 +246,7 @@ function(e, t, n) {
             e([])
         }
         constructor() {
-            super(), this.Video = T.default, this.Camera = v.default, this._audioContext = null, this.outputVolume = I.DEFAULT_VOLUME, this.sourceId = I.DEFAULT_DEVICE_ID, this.sinkId = I.DEFAULT_DEVICE_ID, this.enabled = !1, this.connections = new Set, this.interacted = !1, this.loopback = null, this.voiceActivityInput = null, this.pendingDesktopInputs = {}, this.enablePromise = null, this.handleActiveSinksChange = (e, t) => {
+            super(), this.Video = v.default, this.Camera = T.default, this._audioContext = null, this.outputVolume = I.DEFAULT_VOLUME, this.sourceId = I.DEFAULT_DEVICE_ID, this.sinkId = I.DEFAULT_DEVICE_ID, this.enabled = !1, this.connections = new Set, this.interacted = !1, this.loopback = null, this.voiceActivityInput = null, this.pendingDesktopInputs = {}, this.enablePromise = null, this.handleActiveSinksChange = (e, t) => {
                 this.connections.forEach(n => n.setHasActiveVideoOutputSink(e, t))
             }, this.handleNewListener = e => {
                 switch (e) {

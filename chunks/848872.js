@@ -22,13 +22,13 @@ function(e, t, n) {
         m = 5 * c.default.Millis.MINUTE,
         p = /live_user_(.*)-\{width\}/,
         S = null,
-        v = 0,
-        T = null,
+        T = 0,
+        v = null,
         I = new Set,
         A = {};
 
     function C(e, t, n) {
-        return a.default.get({
+        return a.HTTP.get({
             url: "".concat("https://api.twitch.tv/helix").concat(e),
             query: t,
             headers: {
@@ -54,7 +54,7 @@ function(e, t, n) {
             !this._started && (this._started = !0, _.default.isFetching() ? l.default.fetch() : this._check())
         }
         stop() {
-            this._started = !1, T = null, v = 0, null != this._nextCheck && clearTimeout(this._nextCheck), o.default.dispatch({
+            this._started = !1, v = null, T = 0, null != this._nextCheck && clearTimeout(this._nextCheck), o.default.dispatch({
                 type: "STREAMING_UPDATE",
                 stream: null
             })
@@ -98,14 +98,14 @@ function(e, t, n) {
         }
         async _checkYouTube(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            if (T = null, e.revoked || I.has(e.id)) return null;
+            if (v = null, e.revoked || I.has(e.id)) return null;
             try {
                 var n;
                 let {
                     body: {
                         items: i
                     }
-                } = await a.default.get({
+                } = await a.HTTP.get({
                     url: "https://www.googleapis.com/youtube/v3/liveBroadcasts",
                     query: {
                         part: "id,snippet",
@@ -127,7 +127,7 @@ function(e, t, n) {
                 } = i[0], l = {
                     large_image: null !== (n = (0, d.getAssetFromImageURL)(E.PlatformTypes.YOUTUBE, o.high.url)) && void 0 !== n ? n : void 0
                 };
-                return T = {
+                return v = {
                     url: g(s),
                     name: u.default.get(E.PlatformTypes.YOUTUBE).name,
                     details: r,
@@ -145,13 +145,13 @@ function(e, t, n) {
             null != this._nextCheck && clearTimeout(this._nextCheck);
             let t = [E.PlatformTypes.TWITCH],
                 n = Date.now();
-            v <= n && (t.push(E.PlatformTypes.YOUTUBE), v = n + m);
+            T <= n && (t.push(E.PlatformTypes.YOUTUBE), T = n + m);
             let i = e.filter(e => t.includes(e.type)).map(e => e.type === E.PlatformTypes.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e));
             Promise.allSettled(i).then(e => {
                 if (this._started) {
                     var t;
                     let n = null === (t = e.find(e => "fulfilled" === e.status && null != e.value)) || void 0 === t ? void 0 : t.value;
-                    null == n && null != T && (n = T), o.default.dispatch({
+                    null == n && null != v && (n = v), o.default.dispatch({
                         type: "STREAMING_UPDATE",
                         stream: n
                     })

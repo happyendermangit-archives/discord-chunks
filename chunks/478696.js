@@ -150,12 +150,12 @@ function(e, t, n) {
                     previous: m,
                     current: p,
                     currentTimestampMs: S,
-                    previousTimestampMs: v,
-                    numRateSamples: T
+                    previousTimestampMs: T,
+                    numRateSamples: v
                 } = g;
-                if (void 0 !== v && S > v) {
+                if (void 0 !== T && S > T) {
                     var t, n, i, s, r, a, o, l, u, d, c, _, f, E;
-                    let I = S - v,
+                    let I = S - T,
                         A = {
                             userId: h,
                             silent: null !== (n = p.silent) && void 0 !== n ? n : 0 - (null !== (t = m.silent) && void 0 !== t ? t : 0),
@@ -165,10 +165,10 @@ function(e, t, n) {
                             accelerated: null !== (d = p.accelerated) && void 0 !== d ? d : 0 - (null !== (u = m.accelerated) && void 0 !== u ? u : 0),
                             preemptiveExpanded: null !== (_ = p.preemptiveExpanded) && void 0 !== _ ? _ : 0 - (null !== (c = m.preemptiveExpanded) && void 0 !== c ? c : 0),
                             cng: null !== (E = p.cng) && void 0 !== E ? E : 0 - (null !== (f = m.cng) && void 0 !== f ? f : 0),
-                            accelerateRate: g.accelerateRateSum / T,
-                            expandRate: g.expandRateSum / T,
-                            preemptiveExpandRate: g.preemptiveExpandRateSum / T,
-                            speechExpandRate: g.speechExpandRateSum / T,
+                            accelerateRate: g.accelerateRateSum / v,
+                            expandRate: g.expandRateSum / v,
+                            preemptiveExpandRate: g.preemptiveExpandRateSum / v,
+                            speechExpandRate: g.speechExpandRateSum / v,
                             durationMs: I
                         };
                     A.normal + A.merged + A.expanded + A.accelerated + A.preemptiveExpanded > 0 && e.push(A)
@@ -210,8 +210,8 @@ function(e, t, n) {
                 }), r.forEach(e.rtp.inbound, (t, n) => {
                     r.forEach(t, t => {
                         if ("audio" === t.type) {
-                            var i, s, a, o, l, u, d, c, _, f, E, h, g, m, p, S, v;
-                            let T = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
+                            var i, s, a, o, l, u, d, c, _, f, E, h, g, m, p, S, T;
+                            let v = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
                                 I = t.packetsReceived,
                                 A = t.packetsLost,
                                 C = t.bytesReceived,
@@ -246,7 +246,7 @@ function(e, t, n) {
                                     i = A - this.inboundStats[n].packetsLost,
                                     s = 0,
                                     a = this.inboundStats[n].mosBuckets;
-                                e > 0 && i >= 0 && (s = this.calculateMos(T + R, r.clamp(i / (e + i), 0, 1)), a[Math.floor(s)]++), this.inboundStats[n] = {
+                                e > 0 && i >= 0 && (s = this.calculateMos(v + R, r.clamp(i / (e + i), 0, 1)), a[Math.floor(s)]++), this.inboundStats[n] = {
                                     packetsReceived: I,
                                     bytesReceived: C,
                                     packetsLost: A,
@@ -291,7 +291,7 @@ function(e, t, n) {
                                 accelerateRateSum: null !== (m = t.accelerateRate) && void 0 !== m ? m : 0,
                                 expandRateSum: null !== (p = t.expandRate) && void 0 !== p ? p : 0,
                                 preemptiveExpandRateSum: null !== (S = t.preemptiveExpandRate) && void 0 !== S ? S : 0,
-                                speechExpandRateSum: null !== (v = t.speechExpandRate) && void 0 !== v ? v : 0,
+                                speechExpandRateSum: null !== (T = t.speechExpandRate) && void 0 !== T ? T : 0,
                                 numRateSamples: 1
                             }
                         }

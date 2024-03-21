@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("602043");
     let p = new Set,
         S = {},
-        v = new Set,
-        T = {},
+        T = new Set,
+        v = {},
         I = new Set,
         A = {},
         C = 10 * h.default.Millis.MINUTE,
@@ -70,16 +70,16 @@ function(e, t, n) {
             return null == S[t] ? null : S[t].manifestIds
         }
         hasNoBuild(e, t) {
-            return v.has(t)
+            return T.has(t)
         }
         isFetching(e, t) {
             return p.has(t)
         }
         needsToFetchBuildSize(e) {
-            return !T.hasOwnProperty(e)
+            return !v.hasOwnProperty(e)
         }
         getBuildSize(e) {
-            return T[e]
+            return v[e]
         }
     }
     M.displayName = "ApplicationBuildStore";
@@ -118,7 +118,7 @@ function(e, t, n) {
                     return t
                 }),
                 a = s.id;
-            v.delete(n), S[n] = {
+            T.delete(n), S[n] = {
                 id: a,
                 applicationId: t,
                 branchId: n,
@@ -130,26 +130,26 @@ function(e, t, n) {
             let {
                 branchId: t
             } = e;
-            p.delete(t), v.add(t)
+            p.delete(t), T.add(t)
         },
         APPLICATION_BUILD_SIZE_FETCH_START: function(e) {
             let {
                 buildId: t
             } = e;
-            !T.hasOwnProperty(t) && (T[t] = null)
+            !v.hasOwnProperty(t) && (v[t] = null)
         },
         APPLICATION_BUILD_SIZE_FETCH_SUCCESS: function(e) {
             let {
                 buildId: t,
                 sizeKB: n
             } = e;
-            T[t] = n
+            v[t] = n
         },
         APPLICATION_BUILD_SIZE_FETCH_FAIL: function(e) {
             let {
                 buildId: t
             } = e;
-            null == T[t] && delete T[t]
+            null == v[t] && delete v[t]
         },
         APPLICATION_BRANCHES_FETCH_SUCCESS: function(e) {
             let {

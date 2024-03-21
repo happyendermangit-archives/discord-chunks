@@ -25,7 +25,7 @@ function(e, t, n) {
         !__OVERLAY__ && (clearTimeout(u), u = setTimeout(() => p({}), f))
     }
     async function _(e, t) {
-        null == e || e === r.ME ? await a.default.patch({
+        null == e || e === r.ME ? await a.HTTP.patch({
             url: r.Endpoints.USER_GUILD_SETTINGS(r.ME),
             body: t
         }) : await p(null != t ? {
@@ -52,7 +52,7 @@ function(e, t, n) {
         }
         return t ? (o = {
             ...n
-        }, delete e[r.FAVORITES], (await a.default.patch({
+        }, delete e[r.FAVORITES], (await a.HTTP.patch({
             url: r.Endpoints.USER_GUILD_SETTINGS_BULK,
             body: {
                 guilds: e

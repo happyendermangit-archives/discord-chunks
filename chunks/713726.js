@@ -99,7 +99,7 @@ function(e, t, n) {
     async function S() {
         let e = f.default.getUserIdsToValidate();
         try {
-            let t = await a.default.get({
+            let t = await a.HTTP.get({
                 url: h.Endpoints.USER_BROADCASTS,
                 query: {
                     user_ids: e
@@ -123,7 +123,7 @@ function(e, t, n) {
         let e = f.default.getBroadcastsToValidateChannels(),
             t = e.filter(e => null == e.viewers).map(e => e.channelId);
         if (0 !== t.length) try {
-            let e = await a.default.get({
+            let e = await a.HTTP.get({
                 url: h.Endpoints.BROADCAST_CHANNELS,
                 query: {
                     channel_ids: t

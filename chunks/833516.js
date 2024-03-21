@@ -11,8 +11,8 @@ function(e, t, r) {
     var l = r("884691"),
         i = r("446674"),
         n = r("862337"),
-        u = r("697218"),
-        s = r("340412"),
+        s = r("697218"),
+        u = r("340412"),
         f = r("719923");
 
     function a(e) {
@@ -20,9 +20,9 @@ function(e, t, r) {
     }
 
     function _(e) {
-        let t = (0, i.useStateFromStores)([s.default], () => s.default.getUserTrialOffer(e)),
+        let t = (0, i.useStateFromStores)([u.default], () => u.default.getUserTrialOffer(e)),
             [r, _] = l.useState(a(t)),
-            E = (0, i.useStateFromStores)([u.default], () => (0, f.isPremium)(u.default.getCurrentUser()));
+            E = (0, i.useStateFromStores)([s.default], () => (0, f.isPremium)(s.default.getCurrentUser()));
         return l.useEffect(() => {
             if (null != t && null != t.expires_at) {
                 let e = new n.Timeout,

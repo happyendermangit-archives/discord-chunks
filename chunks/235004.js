@@ -21,8 +21,8 @@ function(e, t, n) {
     (s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
     let p = new Map,
         S = new Map,
-        v = new Set,
-        T = 0,
+        T = new Set,
+        v = 0,
         I = 0,
         A = new Set,
         C = new Map,
@@ -45,8 +45,8 @@ function(e, t, n) {
     function O(e) {
         var t, n;
         let i = null !== (n = null == e ? void 0 : null === (t = e.audioContextSettings) || void 0 === t ? void 0 : t.user) && void 0 !== n ? n : {};
-        for (let [e, t] of Object.entries(i)) t.soundboardMuted ? v.add(e) : v.delete(e);
-        for (let e of v.keys()) null == i[e] && v.delete(e)
+        for (let [e, t] of Object.entries(i)) t.soundboardMuted ? T.add(e) : T.delete(e);
+        for (let e of T.keys()) null == i[e] && T.delete(e)
     }
     class D extends o.default.Store {
         initialize() {
@@ -56,7 +56,7 @@ function(e, t, n) {
             return {
                 soundboardSounds: Object.fromEntries(p),
                 favoritedSoundIds: Array.from(A),
-                localSoundboardMutes: Array.from(v)
+                localSoundboardMutes: Array.from(T)
             }
         }
         getSounds() {
@@ -78,16 +78,16 @@ function(e, t, n) {
             return 1 === I
         }
         isFetchingDefaultSounds() {
-            return 1 === T
+            return 1 === v
         }
         isFetching() {
             return this.isFetchingSounds() || this.isFetchingDefaultSounds()
         }
         shouldFetchDefaultSounds() {
-            return 0 === T
+            return 0 === v
         }
         hasFetchedDefaultSounds() {
-            return 2 === T
+            return 2 === v
         }
         isUserPlayingSounds(e) {
             let t = C.get(e);
@@ -103,19 +103,19 @@ function(e, t, n) {
             return A
         }
         isLocalSoundboardMuted(e) {
-            return v.has(e)
+            return T.has(e)
         }
         hasHadOtherUserPlaySoundInSession() {
             return y
         }
         hasFetchedAllSounds() {
-            return 2 === I && 2 === T
+            return 2 === I && 2 === v
         }
     }
     D.displayName = "SoundboardStore";
     var P = new D(l.default, {
         LOGOUT: function() {
-            p.clear(), S.clear(), C.clear(), y = !1, I = 0, T = 0
+            p.clear(), S.clear(), C.clear(), y = !1, I = 0, v = 0
         },
         GUILD_SOUNDBOARD_FETCH: function() {
             I = 1
@@ -167,13 +167,13 @@ function(e, t, n) {
             } else n === m.UserSettingsTypes.PRELOADED_USER_SETTINGS && O(i)
         },
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
-            T = 1
+            v = 1
         },
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: function(e) {
             let {
                 soundboardSounds: t
             } = e;
-            p.set(h.DEFAULT_SOUND_GUILD_ID, t), T = 2
+            p.set(h.DEFAULT_SOUND_GUILD_ID, t), v = 2
         },
         SOUNDBOARD_SOUNDS_RECEIVED: function(e) {
             let {
@@ -197,13 +197,13 @@ function(e, t, n) {
             let {
                 userId: t
             } = e;
-            v.has(t) ? v.delete(t) : v.add(t)
+            T.has(t) ? T.delete(t) : T.add(t)
         },
         OVERLAY_INITIALIZE: function(e) {
             let {
                 soundboardStoreState: t
             } = e;
-            p = new Map(E.default.entries(t.soundboardSounds)), A = new Set(t.favoritedSoundIds), v = new Set(t.localSoundboardMutes)
+            p = new Map(E.default.entries(t.soundboardSounds)), A = new Set(t.favoritedSoundIds), T = new Set(t.localSoundboardMutes)
         },
         GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
             let {

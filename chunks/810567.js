@@ -92,8 +92,8 @@ function(e, t, n) {
                 disabled: m,
                 onChange: p,
                 onBlur: S,
-                onFocus: v,
-                autoComplete: T,
+                onFocus: T,
+                autoComplete: v,
                 inputProps: I,
                 hideSearchIcon: A,
                 "aria-label": C = _.default.Messages.SEARCH,
@@ -112,7 +112,7 @@ function(e, t, n) {
                         className: f.inner,
                         children: [(0, i.jsx)("input", {
                             ...I,
-                            onFocus: v,
+                            onFocus: T,
                             onBlur: S,
                             className: f.input,
                             value: e,
@@ -123,7 +123,7 @@ function(e, t, n) {
                             placeholder: r,
                             disabled: m,
                             autoFocus: t,
-                            autoComplete: T,
+                            autoComplete: v,
                             "aria-label": C,
                             ref: this.inputRef
                         }), !A && (0, i.jsx)(h, {

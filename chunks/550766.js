@@ -58,8 +58,8 @@ function(e, t, n) {
         m = n("18494"),
         p = n("697218"),
         S = n("449008"),
-        v = n("840707"),
-        T = n("427953"),
+        T = n("840707"),
+        v = n("427953"),
         I = n("191225"),
         A = n("458184"),
         C = n("420444"),
@@ -101,13 +101,13 @@ function(e, t, n) {
                     let n = g.default.getChannel(e),
                         i = I.default.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === t);
                     if (i) return !1;
-                    let s = (0, T.isActivitiesInTextEnabled)(n, "EmbeddedActivitiesActionCreators#isActivityInTextStart");
+                    let s = (0, v.isActivitiesInTextEnabled)(n, "EmbeddedActivitiesActionCreators#isActivityInTextStart");
                     return !!((null == n ? void 0 : n.type) === y.ChannelTypes.GUILD_TEXT && s || null != n && n.isPrivate() && s && null == m.default.getVoiceChannelId()) || !1
                 }(e, o.applicationId) ? await (0, f.executePrimaryEntryPointInteraction)({
                     applicationId: o.applicationId,
                     channelId: e,
                     guildId: a
-                }) : await v.default.post({
+                }) : await T.default.post({
                     url: y.Endpoints.ACTIVITY_CHANNEL_LAUNCH(e, o.applicationId),
                     body: {
                         session_id: l,
@@ -175,7 +175,7 @@ function(e, t, n) {
             r.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START"
             });
-            let e = await s.default.get({
+            let e = await s.HTTP.get({
                     url: y.Endpoints.APPLICATIONS,
                     query: {
                         with_team_applications: !0
@@ -198,7 +198,7 @@ function(e, t, n) {
             r.default.dispatch({
                 type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START"
             });
-            let i = await s.default.post({
+            let i = await s.HTTP.post({
                 url: y.Endpoints.ACTIVITY_UPLOAD_ATTACHMENT(e),
                 query: {
                     channel_id: t
@@ -255,7 +255,7 @@ function(e, t, n) {
                 t = e ? {
                     guild_id: o
                 } : void 0,
-                l = await v.default.get({
+                l = await T.default.get({
                     url: y.Endpoints.ACTIVITY_SHELF,
                     query: t,
                     trackedActionData: {
@@ -328,7 +328,7 @@ function(e, t, n) {
     async function G(e) {
         let t = y.Endpoints.ACTIVITY_TEST_MODE(e);
         try {
-            return await s.default.get({
+            return await s.HTTP.get({
                 url: t,
                 oldFormErrors: !0
             }), !0

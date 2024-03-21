@@ -38,14 +38,14 @@ function(e, t, n) {
         async getSubmitRequestURLAuthenticated(e) {
             let t = a.default.getToken();
             if (null == t) return this.getSubmitRequestURL(e);
-            let n = await i.default.get({
+            let n = await i.HTTP.get({
                     url: l.Endpoints.SSO_TOKEN,
                     headers: {
                         authorization: t
                     }
                 }),
                 s = this.getSubmitRequestURL(e);
-            return "".concat(i.default.getAPIBaseURL()).concat(l.Endpoints.SSO, "?service=zendesk&return_to=").concat(s, "&token=").concat(n.body.token)
+            return "".concat((0, i.getAPIBaseURL)()).concat(l.Endpoints.SSO, "?service=zendesk&return_to=").concat(s, "&token=").concat(n.body.token)
         },
         getSearchURL(e) {
             let t = encodeURIComponent(e);

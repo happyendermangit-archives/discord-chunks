@@ -32,7 +32,7 @@ function(e, t, n) {
                 }, {
                     autoTrackExposure: !1
                 }).previewEnabled ? m.Endpoints.OUTBOUND_PROMOTIONS_PREVIEW : m.Endpoints.OUTBOUND_PROMOTIONS,
-                n = await r.default.get({
+                n = await r.HTTP.get({
                     url: t,
                     query: {
                         locale: s.default.locale
@@ -63,7 +63,7 @@ function(e, t, n) {
             l.default.dispatch({
                 type: "ACTIVE_BOGO_PROMOTION_FETCH"
             });
-            let e = await r.default.get({
+            let e = await r.HTTP.get({
                     url: m.Endpoints.BOGO_PROMOTIONS,
                     query: {
                         locale: s.default.locale

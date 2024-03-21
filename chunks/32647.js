@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("755604"),
         S = n("664610"),
         C = n("688893"),
-        _ = n("684607"),
-        T = n("803322"),
+        T = n("684607"),
+        _ = n("803322"),
         I = n("127875"),
         v = n("169694"),
         N = n("100576"),
@@ -54,8 +54,8 @@ function(e, t, n) {
                 onKeyUp: W,
                 onTab: Y,
                 onEnter: z,
-                onSubmit: Z,
-                maybeShowAutocomplete: J,
+                onSubmit: J,
+                maybeShowAutocomplete: Z,
                 hideAutocomplete: q,
                 moveSelection: X,
                 spellcheckEnabled: Q,
@@ -123,18 +123,18 @@ function(e, t, n) {
                 onChangeStart: eg,
                 onChangeEnd: eS,
                 updateState: ey
-            }), e_ = l.useCallback((e, t) => {
+            }), eT = l.useCallback((e, t) => {
                 let n = p.getOptionValues(eC, e),
                     i = p.validateOptionValues(e, k.guild_id, k.id, n, t);
                 return {
                     values: n,
                     results: i
                 }
-            }, [k.guild_id, k.id, eC]), eT = l.useCallback(() => {
+            }, [k.guild_id, k.id, eC]), e_ = l.useCallback(() => {
                 let e;
                 let t = $ ? u.default.getActiveCommand(k.id) : null;
                 if (null != t && null != t.options) {
-                    let l = e_(t, !1);
+                    let l = eT(t, !1);
                     e = l.values;
                     let a = p.getOptionNames(eC),
                         s = a.filter(e => !l.results[e].success).map(e => {
@@ -157,16 +157,16 @@ function(e, t, n) {
                         return
                     }
                 }
-                null == Z || Z((0, x.toTextValue)(y.EditorUtils.richValue(eC), {
+                null == J || J((0, x.toTextValue)(y.EditorUtils.richValue(eC), {
                     mode: "raw",
                     ignoreTrailingEmptyNodes: !0
                 }), t, e)
-            }, [k.id, eC, Z, e_, $]);
-            (0, C.default)(t, eC, k, eT), (0, I.default)(eC, ep, H);
+            }, [k.id, eC, J, eT, $]);
+            (0, C.default)(t, eC, k, e_), (0, I.default)(eC, ep, H);
             let {
                 handleKeyDown: eI,
                 handleKeyUp: ev
-            } = (0, _.default)({
+            } = (0, T.default)({
                 editor: eC,
                 channel: k,
                 disableEnterToSubmit: en,
@@ -175,19 +175,19 @@ function(e, t, n) {
                 onTab: Y,
                 onEnter: z,
                 allowNewLines: ei,
-                submit: eT,
+                submit: e_,
                 hideAutocomplete: q,
                 moveSelection: X
             }), {
                 handlePaste: eN,
                 handleGlobalPaste: eA
-            } = (0, T.default)(eC, eE, G), eO = l.useCallback(e => {
-                null == J || J()
-            }, [J]), eR = l.useCallback(e => {
+            } = (0, _.default)(eC, eE, G), eO = l.useCallback(e => {
+                null == Z || Z()
+            }, [Z]), eR = l.useCallback(e => {
                 e !== em.current ? ex.current && (null == F || F(null, (0, x.toTextValue)(e, {
                     mode: "raw"
-                }), e)) : ex.current && J()
-            }, [J, F]);
+                }), e)) : ex.current && Z()
+            }, [Z, F]);
             l.useLayoutEffect(() => {
                 eh.current && (em.current = n, ey(eC, "parent", {
                     value: n
@@ -196,10 +196,10 @@ function(e, t, n) {
                 let e = () => {
                     var e;
                     let t = null !== (e = u.default.getActiveCommand(k.id)) && void 0 !== e ? e : null;
-                    null !== t && null != t.options && e_(t, !0)
+                    null !== t && null != t.options && eT(t, !0)
                 };
                 return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
-            }, [k, eC, e_]);
+            }, [k, eC, eT]);
             let eM = l.useCallback((e, t) => (0, g.default)(e, t), []),
                 ek = l.useCallback(e => (0, A.default)(eC, e, k.id), [k.id, eC]),
                 eL = l.useCallback(e => (0, O.default)(e), []);

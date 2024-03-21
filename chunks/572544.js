@@ -22,8 +22,8 @@ function(e, t, n) {
         m = n("537325"),
         p = n("835174"),
         S = n("566271"),
-        v = n("337543"),
-        T = n("18494"),
+        T = n("337543"),
+        v = n("18494"),
         I = n("162771"),
         A = n("677099"),
         C = n("599110"),
@@ -40,7 +40,7 @@ function(e, t, n) {
     }
     async function O(e) {
         var t;
-        let n = v.default.getInvite(e.code);
+        let n = T.default.getInvite(e.code);
         if (null == n) {
             let {
                 invite: t
@@ -79,7 +79,7 @@ function(e, t, n) {
                 application_id: s,
                 device_platform: r.isMobile ? "mobile_web" : "desktop_web",
                 guild_id: a,
-                channel_id: T.default.getChannelId()
+                channel_id: v.default.getChannelId()
             }), n.el("646186").then(n.bind(n, "646186")).then(e => {
                 let {
                     goToAppDirectory: t
@@ -108,10 +108,10 @@ function(e, t, n) {
         };
         let {
             path: o,
-            hostname: v = "",
+            hostname: T = "",
             host: A,
             query: R
-        } = s.parse(e), P = y.default.isDiscordHostname(v) || y.default.isDiscordLocalhost(A, v);
+        } = s.parse(e), P = y.default.isDiscordHostname(T) || y.default.isDiscordLocalhost(A, T);
         if (P && (null == o ? void 0 : o.startsWith("/application-directory"))) {
             let [, , e, t] = o.split("/"), i = null != e && (0, u.isSnowflake)(e) ? e : void 0;
             return s => {
@@ -126,7 +126,7 @@ function(e, t, n) {
                     application_id: i,
                     device_platform: r.isMobile ? "mobile_web" : "desktop_web",
                     guild_id: u,
-                    channel_id: T.default.getChannelId()
+                    channel_id: v.default.getChannelId()
                 })), n.el("646186").then(n.bind(n, "646186")).then(e => {
                     let {
                         goToAppDirectory: n

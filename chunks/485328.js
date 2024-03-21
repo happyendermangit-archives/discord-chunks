@@ -22,8 +22,8 @@ function(e, t, n) {
         m = (0, d.isMac)() ? "opt" : "alt",
         p = (0, d.isMac)() ? "return" : "enter",
         S = [...o.JUMP_TO_GUILD.binds, "mod+shift+[", "mod+shift+]", "mod+[", "mod+]", "alt+[", "alt+]", "ctrl+shift+tab", "ctrl+tab", "mod+n", "mod+t", "mod+shift+t", "mod+plus", "mod+minus", "mod+0"].map(e => e.replace("mod", g)),
-        v = () => [],
-        T = [];
+        T = () => [],
+        v = [];
     if ((0, d.isDesktop)()) {
         let e = new s(document.documentElement);
         e.bind("backspace", e => e.preventDefault())
@@ -44,7 +44,7 @@ function(e, t, n) {
     function C(e) {
         for (let [t, n] of Object.entries(e)) {
             if (null == n) continue;
-            let e = v();
+            let e = T();
             !d.isPlatformEmbedded && (e = e.concat(S));
             let i = n.binds.filter(t => (t = t.replace("mod", g), 0 > e.indexOf(t)));
             if (0 === i.length) continue;
@@ -52,7 +52,7 @@ function(e, t, n) {
             if (null != n.action && s.call(h, i, A(t, n.action)), null != n.keyup && s.call(h, i, A(t, n.keyup), "keyup"), null != n.keydown) {
                 let e = i.indexOf("any-character"); - 1 !== e && (! function(e, t) {
                     let n = e => t(e, e.key);
-                    document.addEventListener(e, n), T.push(() => document.removeEventListener(e, n))
+                    document.addEventListener(e, n), v.push(() => document.removeEventListener(e, n))
                 }("keydown", n.keydown), i.splice(e, 1)), i.length > 0 && s.call(h, i, A(t, n.keydown), "keydown")
             }
             null != n.keypress && s.call(h, i, A(t, n.keypress), "keypress")
@@ -64,7 +64,7 @@ function(e, t, n) {
         altKey: m,
         returnKey: p,
         setGetKeybindList(e) {
-            v = e
+            T = e
         },
         checkDupes(e) {
             let t = new Set,
@@ -87,7 +87,7 @@ function(e, t, n) {
             null != e && (_ = e), this.disable(), this.enable()
         },
         disable() {
-            E && (E = !1, T.forEach(e => e()), T = [], h.reset())
+            E && (E = !1, v.forEach(e => e()), v = [], h.reset())
         },
         validateKeybind(e) {
             E && this.hasBind(e) && h.unbind(e)

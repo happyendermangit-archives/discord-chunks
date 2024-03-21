@@ -109,7 +109,7 @@ function(e, t, n) {
                         l = (0, _.getDevicePushProvider)();
                     null != l && null != r && (t.push_provider = l, t.push_token = r);
                     let u = s.default.get(c.DEVICE_VOIP_TOKEN);
-                    return null != _.DEVICE_PUSH_VOIP_PROVIDER && null != u && (t.push_voip_provider = _.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = u), i.default.patch({
+                    return null != _.DEVICE_PUSH_VOIP_PROVIDER && null != u && (t.push_voip_provider = _.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = u), i.HTTP.patch({
                         url: c.Endpoints.ME,
                         oldFormErrors: !0,
                         body: t

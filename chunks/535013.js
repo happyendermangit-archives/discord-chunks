@@ -14,10 +14,10 @@ function(e, t, n) {
             return S
         },
         isVerifiedRolesChannelVisible: function() {
-            return v
+            return T
         },
         getVisibleConnectionsRole: function() {
-            return T
+            return v
         },
         getCreatedAtDate: function() {
             return I
@@ -275,14 +275,14 @@ function(e, t, n) {
         return a
     }
 
-    function v(e, t) {
+    function T(e, t) {
         return Object.values(t).some(e => {
             var t;
             return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
         })
     }
 
-    function T(e) {
+    function v(e) {
         var t, n;
         let {
             guildMember: i,

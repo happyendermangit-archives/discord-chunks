@@ -33,7 +33,7 @@ function(e, t, n) {
         d = n("284231"),
         c = n("49111");
     async function _() {
-        let e = await i.default.get(c.Endpoints.VIDEO_FILTER_ASSETS);
+        let e = await i.HTTP.get(c.Endpoints.VIDEO_FILTER_ASSETS);
         return s.default.dispatch({
             type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS",
             assets: e.body
@@ -41,7 +41,7 @@ function(e, t, n) {
     }
     async function f(e, t, n) {
         try {
-            let r = await i.default.post({
+            let r = await i.HTTP.post({
                 url: c.Endpoints.VIDEO_FILTER_ASSETS,
                 body: {
                     type: t,
@@ -58,7 +58,7 @@ function(e, t, n) {
         }
     }
     async function E(e) {
-        await i.default.delete(c.Endpoints.VIDEO_FILTER_ASSET(e.id));
+        await i.HTTP.del(c.Endpoints.VIDEO_FILTER_ASSET(e.id));
         let t = (0, l.getLastUsedVideoBackgroundOption)(o.default.getCurrentUser());
         (0, u.isCustomBackgroundOption)(t) && t.id === e.id && h(null), s.default.dispatch({
             type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS",
@@ -69,7 +69,7 @@ function(e, t, n) {
         if (await r.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", t => {
                 t.videoBackgroundFilterDesktop = (0, u.getVideoBackgroundProtoFromOption)(e)
             }, r.UserSettingsDelay.FREQUENT_USER_ACTION), (0, u.isCustomBackgroundOption)(e)) {
-            let t = await i.default.post(c.Endpoints.VIDEO_FILTER_ASSET_LAST_USED(e.id));
+            let t = await i.HTTP.post(c.Endpoints.VIDEO_FILTER_ASSET_LAST_USED(e.id));
             s.default.dispatch({
                 type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
                 backgroundOption: t.body

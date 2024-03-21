@@ -8,7 +8,7 @@ function(e, t, n) {
             return S
         },
         stopImpersonating: function() {
-            return v
+            return T
         },
         updateImpersonatedChannels: function() {
             return I
@@ -45,7 +45,7 @@ function(e, t, n) {
             type: "IMPERSONATE_UPDATE",
             guildId: e,
             data: t
-        }), T(e)
+        }), v(e)
     }
 
     function S(e, t) {
@@ -61,17 +61,17 @@ function(e, t, n) {
                 ...n,
                 ...t
             }
-        }), T(e))
+        }), v(e))
     }
 
-    function v(e) {
+    function T(e) {
         i.default.dispatch({
             type: "IMPERSONATE_STOP",
             guildId: e
         })
     }
 
-    function T(e) {
+    function v(e) {
         let t = c.default.getChannelId(e),
             n = a.default.getChannel(t),
             i = null != t && (0, m.isStaticChannelRoute)(t);

@@ -5,7 +5,7 @@ function(e, t, n) {
             return C
         },
         default: function() {
-            return _
+            return T
         }
     });
     var i = n("37983");
@@ -43,7 +43,7 @@ function(e, t, n) {
         } : null
     }
 
-    function _(e) {
+    function T(e) {
         let {
             voiceGuild: t,
             voiceChannel: n,

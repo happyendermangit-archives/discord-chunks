@@ -71,7 +71,7 @@ function(e, t, n) {
             let e = null;
             try {
                 var t;
-                let n = await s.default.post({
+                let n = await s.HTTP.post({
                     url: _.Endpoints.CHURN_USER_OFFER
                 });
                 e = null !== (t = n.body.offer) && void 0 !== t ? t : null

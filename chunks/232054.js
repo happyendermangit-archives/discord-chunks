@@ -47,7 +47,7 @@ function(e, t, n) {
             default:
                 (0, E.assertNever)(n)
         }
-        let v = _.default.getChannel(n);
-        return (null != v || (await c.default.loadThread(n), null != (v = _.default.getChannel(n)))) && ((0, h.canViewChannel)(v) || i.default.isChannelGatedAndVisible(t, n))
+        let T = _.default.getChannel(n);
+        return (null != T || (await c.default.loadThread(n), null != (T = _.default.getChannel(n)))) && ((0, h.canViewChannel)(T) || i.default.isChannelGatedAndVisible(t, n))
     }
 }

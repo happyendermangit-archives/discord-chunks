@@ -17,10 +17,10 @@ function(e, t, n) {
             return o
         }
     });
-    var l, d, u = n("271938"),
-        i = n("841363"),
-        a = n("822516"),
-        r = n("745049");
+    var l, d, i = n("271938"),
+        u = n("841363"),
+        r = n("822516"),
+        a = n("745049");
 
     function E(e) {
         return !!(null == e ? void 0 : e.id)
@@ -61,8 +61,8 @@ function(e, t, n) {
         let {
             name: l,
             description: d,
-            privacyLevel: i,
-            channelId: a,
+            privacyLevel: u,
+            channelId: r,
             scheduledStartTime: E,
             scheduledEndTime: s,
             entityType: _,
@@ -72,19 +72,19 @@ function(e, t, n) {
             eventExceptions: p
         } = e;
         return {
-            id: null != n ? n : r.FAKE_EVENT_ID,
+            id: null != n ? n : a.FAKE_EVENT_ID,
             name: l,
             description: null != d ? d : null,
-            privacy_level: i,
+            privacy_level: u,
             scheduled_start_time: E,
             scheduled_end_time: s,
             entity_type: _,
             entity_metadata: null != o ? o : null,
             image: null != y ? y : void 0,
-            channel_id: a,
+            channel_id: r,
             guild_id: t,
-            creator_id: u.default.getId(),
-            status: r.GuildScheduledEventStatus.SCHEDULED,
+            creator_id: i.default.getId(),
+            status: a.GuildScheduledEventStatus.SCHEDULED,
             recurrence_rule: c(v),
             guild_scheduled_event_exceptions: p.map(e => ({
                 event_exception_id: e.eventExceptionId,
@@ -98,13 +98,13 @@ function(e, t, n) {
     }
 
     function o(e, t) {
-        var n, l, d, u, E, c, _, o;
+        var n, l, d, i, E, c, _, o;
         let y = {
             name: null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : "",
-            privacyLevel: null !== (l = null == e ? void 0 : e.privacy_level) && void 0 !== l ? l : r.GuildScheduledEventPrivacyLevel.GUILD_ONLY,
+            privacyLevel: null !== (l = null == e ? void 0 : e.privacy_level) && void 0 !== l ? l : a.GuildScheduledEventPrivacyLevel.GUILD_ONLY,
             description: null !== (d = null == e ? void 0 : e.description) && void 0 !== d ? d : "",
-            scheduledStartTime: null !== (u = null == e ? void 0 : e.scheduled_start_time) && void 0 !== u ? u : (0, a.getInitialEventStartDate)().toISOString(),
-            entityType: null !== (E = null == e ? void 0 : e.entity_type) && void 0 !== E ? E : r.GuildScheduledEventEntityTypes.NONE,
+            scheduledStartTime: null !== (i = null == e ? void 0 : e.scheduled_start_time) && void 0 !== i ? i : (0, r.getInitialEventStartDate)().toISOString(),
+            entityType: null !== (E = null == e ? void 0 : e.entity_type) && void 0 !== E ? E : a.GuildScheduledEventEntityTypes.NONE,
             entityMetadata: null !== (c = null == e ? void 0 : e.entity_metadata) && void 0 !== c ? c : void 0,
             channelId: null == e ? void 0 : e.channel_id,
             creatorId: null == e ? void 0 : e.creator_id,
@@ -120,12 +120,12 @@ function(e, t, n) {
                 isCanceled: e.is_canceled
             }))
         };
-        if (null != (o = e) && "id" in o && (null == e ? void 0 : e.entity_type) === r.GuildScheduledEventEntityTypes.EXTERNAL) {
-            let t = (0, i.getLocationFromEvent)(e);
+        if (null != (o = e) && "id" in o && (null == e ? void 0 : e.entity_type) === a.GuildScheduledEventEntityTypes.EXTERNAL) {
+            let t = (0, u.getLocationFromEvent)(e);
             null != t && (y.entityMetadata = {
                 location: t
             })
-        } else null == y.channelId && null != t && (y.channelId = t.id, t.isGuildStageVoice() ? y.entityType = r.GuildScheduledEventEntityTypes.STAGE_INSTANCE : t.isGuildVoice() && (y.entityType = r.GuildScheduledEventEntityTypes.VOICE));
+        } else null == y.channelId && null != t && (y.channelId = t.id, t.isGuildStageVoice() ? y.entityType = a.GuildScheduledEventEntityTypes.STAGE_INSTANCE : t.isGuildVoice() && (y.entityType = a.GuildScheduledEventEntityTypes.VOICE));
         return y
     }
 }

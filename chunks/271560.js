@@ -46,8 +46,8 @@ function(e, t, n) {
         m = n("568734"),
         p = n("449008"),
         S = n("773336"),
-        v = n("299039"),
-        T = n("49111"),
+        T = n("299039"),
+        v = n("49111"),
         I = n("782340");
     l.shim();
     let A = !u.isMobile && !u.isTablet && -1 !== (0, g.getChromeVersion)();
@@ -62,7 +62,7 @@ function(e, t, n) {
             guildId: o
         } = t;
         return {
-            pathname: null != a && null != o ? T.Routes.CHANNEL(o, a, e) : T.Routes.APPLICATION_STORE_LISTING_SKU(e, r),
+            pathname: null != a && null != o ? v.Routes.CHANNEL(o, a, e) : v.Routes.APPLICATION_STORE_LISTING_SKU(e, r),
             state: {
                 analyticsSource: n,
                 analyticsProperties: i
@@ -78,7 +78,7 @@ function(e, t, n) {
             slug: s
         } = t;
         return {
-            pathname: T.Routes.APPLICATION_STORE_LISTING_APPLICATION(e, s),
+            pathname: v.Routes.APPLICATION_STORE_LISTING_APPLICATION(e, s),
             state: {
                 analyticsSource: n,
                 analyticsProperties: i
@@ -104,7 +104,7 @@ function(e, t, n) {
         "webp" === i && !A && (i = "png");
         let o = "string" == typeof t ? t : t.id,
             l = (s = "https:", "https:");
-        return r = null != a ? "".concat(l, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(i) : "".concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(T.Endpoints.STORE_ASSET(e, o, i)), null != n && (r += "?size=".concat((0, _.getBestMediaProxySize)(n * (0, _.getDevicePixelRatio)()))), r
+        return r = null != a ? "".concat(l, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(i) : "".concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(v.Endpoints.STORE_ASSET(e, o, i)), null != n && (r += "?size=".concat((0, _.getBestMediaProxySize)(n * (0, _.getDevicePixelRatio)()))), r
     }
     async function R(e) {
         var t, n, i, s;
@@ -140,17 +140,17 @@ function(e, t, n) {
                 ...e.query
             }
         }
-        return d.default.get(e)
+        return d.HTTP.get(e)
     }
 
     function O(e) {
         switch (e) {
             case S.PlatformTypes.WINDOWS:
-                return T.OperatingSystems.WINDOWS;
+                return v.OperatingSystems.WINDOWS;
             case S.PlatformTypes.OSX:
-                return T.OperatingSystems.MACOS;
+                return v.OperatingSystems.MACOS;
             case S.PlatformTypes.LINUX:
-                return T.OperatingSystems.LINUX;
+                return v.OperatingSystems.LINUX;
             default:
                 return null
         }
@@ -158,11 +158,11 @@ function(e, t, n) {
 
     function D(e) {
         switch (e) {
-            case T.OperatingSystems.WINDOWS:
+            case v.OperatingSystems.WINDOWS:
                 return I.default.Messages.WINDOWS;
-            case T.OperatingSystems.MACOS:
+            case v.OperatingSystems.MACOS:
                 return I.default.Messages.MACOS;
-            case T.OperatingSystems.LINUX:
+            case v.OperatingSystems.LINUX:
                 return I.default.Messages.LINUX
         }
         throw Error("Unknown operating system value: ".concat(e))
@@ -183,7 +183,7 @@ function(e, t, n) {
             d = function(e, t, n) {
                 var i;
                 let s = null !== (i = n.getNowPlaying(e)) && void 0 !== i ? i : {},
-                    r = v.default.keys(s),
+                    r = T.default.keys(s),
                     a = r.map(e => {
                         let n = t.getUser(e);
                         return null == n ? null : {
@@ -192,7 +192,7 @@ function(e, t, n) {
                         }
                     }).filter(p.isNotNullish).sort((e, t) => t.startTime - e.startTime);
                 return 0 === a.length ? null : {
-                    type: T.StoreRecommendationTypes.NOW_PLAYING,
+                    type: v.StoreRecommendationTypes.NOW_PLAYING,
                     userInfo: a
                 }
             }(o, n, i);
@@ -217,7 +217,7 @@ function(e, t, n) {
                         }
                     }).filter(p.isNotNullish).sort((e, t) => t.endTime - e.endTime);
                     return 0 === s.length ? null : {
-                        type: T.StoreRecommendationTypes.EVER_PLAYED,
+                        type: v.StoreRecommendationTypes.EVER_PLAYED,
                         userInfo: s
                     }
                 }(o, n, r);
@@ -233,18 +233,18 @@ function(e, t, n) {
             s = n.getForSKU(e);
         if (null == i || null == s) return b;
         let r = [];
-        (0, m.hasFlag)(i.flags, T.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && r.push({
-            type: T.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT
+        (0, m.hasFlag)(i.flags, v.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && r.push({
+            type: v.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT
         });
         let o = i.releaseDate;
-        return null != o && 3 > a().diff(o, "months") && (i.accessType === T.SKUAccessTypes.EARLY_ACCESS ? r.push({
-            type: T.StoreRecommendationTypes.EARLY_ACCESS,
+        return null != o && 3 > a().diff(o, "months") && (i.accessType === v.SKUAccessTypes.EARLY_ACCESS ? r.push({
+            type: v.StoreRecommendationTypes.EARLY_ACCESS,
             releaseDate: o
         }) : r.push({
-            type: T.StoreRecommendationTypes.RECENT_RELEASE_DATE,
+            type: v.StoreRecommendationTypes.RECENT_RELEASE_DATE,
             releaseDate: o
         })), null != s.flavorText && r.push({
-            type: T.StoreRecommendationTypes.FLAVOR_TEXT,
+            type: v.StoreRecommendationTypes.FLAVOR_TEXT,
             flavorText: s.flavorText
         }), r
     }
