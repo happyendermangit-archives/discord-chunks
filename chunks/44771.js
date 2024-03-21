@@ -5,8 +5,8 @@ function(e, t, n) {
             return S
         }
     }), n("222007");
-    var a = n("37983"),
-        i = n("884691"),
+    var i = n("37983"),
+        a = n("884691"),
         s = n("414456"),
         l = n.n(s),
         o = n("917351"),
@@ -33,16 +33,16 @@ function(e, t, n) {
             isSelected: o = !1,
             tabIndex: r,
             children: f
-        } = e, [h, p] = i.useState(g.ICONS_BY_ID[t].name), S = t === c.PremiumAppIconIds.PIRATE, T = (0, u.useRadioItem)({
+        } = e, [h, p] = a.useState(g.ICONS_BY_ID[t].name), S = t === c.PremiumAppIconIds.PIRATE, T = (0, u.useRadioItem)({
             label: h,
             isSelected: o
         });
-        return (0, a.jsx)(u.Tooltip, {
+        return (0, i.jsx)(u.Tooltip, {
             text: h,
             onTooltipShow: () => S && p(E()),
-            children: e => (0, a.jsxs)("div", {
+            children: e => (0, i.jsxs)("div", {
                 className: _.appIconSelectionContainer,
-                children: [(0, a.jsx)(u.Clickable, {
+                children: [(0, i.jsx)(u.Clickable, {
                     ...e,
                     ...T,
                     tabIndex: null != r ? r : T.tabIndex,
@@ -51,7 +51,7 @@ function(e, t, n) {
                     }, n),
                     onClick: o ? m.NOOP : () => null == s ? void 0 : s(t),
                     children: f
-                }), o && (0, a.jsx)(d.SelectionCircle, {})]
+                }), o && (0, i.jsx)(d.SelectionCircle, {})]
             })
         })
     }
@@ -60,17 +60,17 @@ function(e, t, n) {
         let {
             icon: t,
             isSelected: n,
-            disabled: i,
+            disabled: a,
             tabIndex: s,
             onSelect: l
         } = e;
-        return (0, a.jsx)(Selection, {
-            onSelect: i ? void 0 : l,
+        return (0, i.jsx)(Selection, {
+            onSelect: a ? void 0 : l,
             isSelected: n,
             id: t.id,
-            className: i ? _.disabled : void 0,
+            className: a ? _.disabled : void 0,
             tabIndex: s,
-            children: (0, a.jsx)(f.default, {
+            children: (0, i.jsx)(f.default, {
                 id: t.id,
                 width: g.CUSTOM_BASE_SIZE
             })

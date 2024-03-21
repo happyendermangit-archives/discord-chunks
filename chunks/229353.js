@@ -17010,6 +17010,8 @@ function(e, _, E) {
         USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}h ago",
         USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m ago",
         USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}s ago",
+        USER_RECENT_GAMES: "Recently Played",
+        USER_RECENT_GAMES_ON_PROFILE: "Show recent games on profile",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES: "{count} {count, plural, =1 {min} other {mins}} ago",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS: "{count} {count, plural, =1 {hr} other {hrs}} this week",
         USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS: "{count} {count, plural, =1 {hr} other {hrs}} this week",
