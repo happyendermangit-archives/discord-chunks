@@ -415,11 +415,14 @@ function(e, t, n) {
             })
         }
         close() {
+            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             if (this.isClosed()) {
                 k.verbose("close() called, but socket is already closed.");
                 return
             }
-            k.info("Closing connection, current state is ".concat(this.connectionState)), this._cleanup(e => e.close()), this.connectionState = N.default.CLOSED, setImmediate(() => {
+            k.info("Closing connection, current state is ".concat(this.connectionState));
+            let t = e ? 4e3 : void 0;
+            this._cleanup(e => e.close(t)), this.connectionState = N.default.CLOSED, !e && setImmediate(() => {
                 this._reset(!0, 1e3, "Disconnect requested by user")
             })
         }
