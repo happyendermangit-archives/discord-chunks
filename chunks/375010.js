@@ -85,7 +85,6 @@ function(e, t, n) {
                         guildId: E,
                         eligibleApplicationSubscriptionGuilds: D,
                         planGroup: U,
-                        listing: s,
                         application: P,
                         showBenefitsFirst: x,
                         onComplete: T,

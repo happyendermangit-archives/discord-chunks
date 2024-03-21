@@ -137,6 +137,7 @@ function(e, t, n) {
             nick: null !== (n = l.nick) && void 0 !== n ? n : _,
             colorString: null !== (i = l.colorString) && void 0 !== i ? i : void 0,
             colorRoleName: null != l.colorRoleId && null != a ? null == o ? void 0 : null === (t = o[l.colorRoleId]) || void 0 === t ? void 0 : t.name : void 0,
+            colorRoleId: l.colorRoleId,
             iconRoleId: l.iconRoleId,
             guildMemberAvatar: l.avatar
         }

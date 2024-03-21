@@ -36,29 +36,26 @@ function(e, t, n) {
             skuId: f,
             guildId: p,
             reviewWarningMessage: S,
-            listing: I,
-            application: g,
-            showBenefitsFirst: C,
-            eligibleApplicationSubscriptionGuilds: v,
-            onComplete: E,
-            forcesTransitionToGuild: A
+            application: I,
+            showBenefitsFirst: g,
+            eligibleApplicationSubscriptionGuilds: C,
+            onComplete: v,
+            forcesTransitionToGuild: E
         } = e;
         (0, r.openModalLazy)(async () => {
             let {
                 PaymentContextProvider: e
             } = await n.el("642906").then(n.bind(n, "642906")), r = (await n.el("526257").then(n.bind(n, "526257"))).default, {
-                getApplicationSubscriptionPaymentSteps: m
-            } = await n.el("999043").then(n.bind(n, "999043")), N = m({
+                getApplicationPaymentSteps: m
+            } = await n.el("470521").then(n.bind(n, "470521")), A = m({
                 guildId: p,
-                application: g,
-                listing: I,
-                showBenefitsFirst: C,
-                eligibleApplicationSubscriptionGuilds: v
+                showBenefitsFirst: g,
+                eligibleApplicationSubscriptionGuilds: C
             });
             return n => (0, i.jsx)(e, {
-                applicationId: g.id,
+                applicationId: I.id,
                 activeSubscription: a,
-                stepConfigs: N,
+                stepConfigs: A,
                 skuIDs: [f],
                 children: (0, i.jsx)(h.GiftContextProvider, {
                     children: (0, i.jsx)(r, {
@@ -72,10 +69,10 @@ function(e, t, n) {
                         renderHeader: c,
                         planGroup: d,
                         reviewWarningMessage: S,
-                        applicationId: g.id,
+                        applicationId: I.id,
                         guildId: null != p ? p : void 0,
-                        onComplete: E,
-                        forcesTransitionToGuild: A
+                        onComplete: v,
+                        forcesTransitionToGuild: E
                     })
                 })
             })
