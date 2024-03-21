@@ -17,7 +17,8 @@ function(e, t, n) {
             layout: null,
             userId: null,
             guildId: null,
-            channelId: null
+            channelId: null,
+            messageId: null
         }),
         u = function(e) {
             let {
@@ -25,52 +26,56 @@ function(e, t, n) {
                 userId: n,
                 guildId: u,
                 channelId: d,
-                newAnalyticsLocations: c = r
-            } = e, f = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], {
-                AnalyticsLocationProvider: p,
-                analyticsLocations: m,
-                sourceAnalyticsLocations: h
-            } = (0, a.default)(c), x = l.useMemo(() => ({
+                messageId: c,
+                newAnalyticsLocations: f = r
+            } = e, p = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], {
+                AnalyticsLocationProvider: m,
+                analyticsLocations: h,
+                sourceAnalyticsLocations: x
+            } = (0, a.default)(f), E = l.useMemo(() => ({
                 layout: t,
                 userId: null != n ? n : null,
                 guildId: null != u ? u : null,
-                channelId: null != d ? d : null
-            }), [t, n, u, d]);
+                channelId: null != d ? d : null,
+                messageId: null != c ? c : null
+            }), [t, n, u, d, c]);
             l.useEffect(() => {
-                f && (0, s.trackUserProfileAction)({
+                p && (0, s.trackUserProfileAction)({
                     action: "VIEW",
-                    analyticsLocations: h,
+                    analyticsLocations: x,
                     layout: t,
                     userId: n,
                     guildId: u,
-                    channelId: d
+                    channelId: d,
+                    messageId: c
                 })
-            }, [f]);
-            let E = l.useCallback(e => {
+            }, [p]);
+            let y = l.useCallback(e => {
                     (0, s.trackUserProfileAction)({
                         layout: t,
                         userId: n,
                         guildId: u,
                         channelId: d,
-                        analyticsLocations: m,
+                        messageId: c,
+                        analyticsLocations: h,
                         ...e
                     })
-                }, [t, n, u, d, m]),
-                y = l.useCallback(e => {
+                }, [t, n, u, d, c, h]),
+                g = l.useCallback(e => {
                     let {
                         children: t
                     } = e;
                     return (0, i.jsx)(o.Provider, {
-                        value: x,
-                        children: (0, i.jsx)(p, {
+                        value: E,
+                        children: (0, i.jsx)(m, {
                             children: t
                         })
                     })
-                }, [x, p]);
+                }, [E, m]);
             return {
-                UserProfileAnalyticsProvider: y,
-                analyticsLocations: m,
-                trackUserProfileAction: E
+                UserProfileAnalyticsProvider: g,
+                analyticsLocations: h,
+                trackUserProfileAction: y
             }
         },
         d = function() {
@@ -79,26 +84,29 @@ function(e, t, n) {
                 layout: i,
                 userId: r,
                 guildId: u,
-                channelId: d
+                channelId: d,
+                messageId: c
             } = l.useContext(o), {
-                analyticsLocations: c
-            } = (0, a.default)(t), f = l.useCallback(e => {
+                analyticsLocations: f
+            } = (0, a.default)(t), p = l.useCallback(e => {
                 null != i && null != r && (0, s.trackUserProfileAction)({
                     layout: i,
                     userId: r,
                     guildId: u,
                     channelId: d,
-                    analyticsLocations: c,
+                    messageId: c,
+                    analyticsLocations: f,
                     ...e
                 })
-            }, [i, r, u, d, c]);
+            }, [i, r, u, d, c, f]);
             return {
                 layout: i,
                 userId: r,
                 guildId: u,
                 channelId: d,
-                analyticsLocations: c,
-                trackUserProfileAction: f
+                messageId: c,
+                analyticsLocations: f,
+                trackUserProfileAction: p
             }
         }
 }

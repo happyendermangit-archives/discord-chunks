@@ -100,23 +100,25 @@ function(e, t, n) {
                 userId: t,
                 guildId: n,
                 channelId: l,
-                analyticsLocations: a,
-                layout: s,
-                action: r,
-                section: o
+                messageId: a,
+                analyticsLocations: s,
+                layout: r,
+                action: o,
+                section: d
             } = e;
             u.default.track(m.AnalyticEvents.USER_PROFILE_ACTION, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(l),
                 ...g({
-                    layout: s,
+                    layout: r,
                     userId: t,
                     guildId: n
                 }),
                 ...S(t),
-                location_stack: a,
-                profile_action: r,
-                profile_section: o
+                location_stack: s,
+                profile_action: o,
+                profile_section: d,
+                source_message_id: a
             })
         },
         _ = e => {

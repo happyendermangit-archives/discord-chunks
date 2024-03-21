@@ -539,6 +539,17 @@ function(e, t, n) {
         },
         CONNECTION_INTERRUPTED: function(e) {
             e.code === S.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, I.clear(), N = !1, U = p.ActivityPanelModes.DISCONNECTED)
+        },
+        CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
+            let {
+                channel: t
+            } = e, n = Array.from(I.values()).find(e => {
+                let {
+                    channelId: n
+                } = e;
+                return t.id === n
+            });
+            void 0 !== n && y.set(t.id, n.applicationId)
         }
     });
     var K = Y
