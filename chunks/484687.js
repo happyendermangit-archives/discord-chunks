@@ -10,8 +10,6 @@ function(e, t, a) {
         cardBenefit: "cardBenefit__5c2e7",
         cardBenefitDesc: "cardBenefitDesc_c9ec93",
         cardBenefitIcon: "cardBenefitIcon_fc8f2f",
-        cardBenefitName: "cardBenefitName__64263",
-        cardBenefitTitle: "cardBenefitTitle__59c65",
         container: "container_a98e7e",
         description: "description__6afbb",
         image: "image__2e834",
