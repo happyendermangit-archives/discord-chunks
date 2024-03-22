@@ -2,16 +2,16 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         default: function() {
-            return i
+            return c
         }
     });
     var d = t("37983");
     t("884691");
     var s = t("77078"),
         n = t("845579"),
-        c = t("49111");
+        i = t("49111");
 
-    function i(e, a) {
+    function c(e, a) {
         n.AlwaysPreviewVideo.getSetting() ? (0, s.openModalLazy)(async () => {
             let {
                 default: a
@@ -23,7 +23,7 @@ function(e, a, t) {
             })
         }, {
             modalKey: "camera-preview",
-            contextKey: a === c.AppContext.POPOUT ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT
+            contextKey: a === i.AppContext.POPOUT ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT
         }) : null == e || e()
     }
 }

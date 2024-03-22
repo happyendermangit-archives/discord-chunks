@@ -26,24 +26,24 @@ function(e, t, n) {
             return A
         },
         tokenizeQuery: function() {
-            return N
+            return g
         },
         clearTokenCache: function() {
-            return I
+            return N
         },
         showDatePicker: function() {
-            return y
+            return M
         },
         filterHasAnswer: function() {
-            return m
+            return y
         },
         refreshSearchTokens: function() {
-            return M
+            return m
         }
     }), n("222007"), n("808653");
     var l = n("917351"),
-        a = n.n(l),
-        r = n("76385"),
+        r = n.n(l),
+        a = n("76385"),
         u = n("955513"),
         s = n("247013"),
         o = n("697218"),
@@ -98,17 +98,17 @@ function(e, t, n) {
                     case c.SearchTokenTypes.ANSWER_ON:
                     case c.SearchTokenTypes.ANSWER_AFTER:
                         let l = e.getData("start"),
-                            a = e.getData("end");
-                        l && (t.min_id = i.default.fromTimestamp(l)), a && (t.max_id = i.default.fromTimestamp(a));
+                            r = e.getData("end");
+                        l && (t.min_id = i.default.fromTimestamp(l)), r && (t.max_id = i.default.fromTimestamp(r));
                         return
                 }
-                let r = function(e) {
+                let a = function(e) {
                     let t = u.default[e],
                         n = null != t ? t.queryKey : null;
                     return null == n && (n = "content"), n
                 }(n);
-                null == t[r] && (t[r] = new Set);
-                let s = t[r];
+                null == t[a] && (t[a] = new Set);
+                let s = t[a];
                 switch (n) {
                     case c.SearchTokenTypes.ANSWER_USERNAME_FROM:
                     case c.SearchTokenTypes.ANSWER_USERNAME_MENTIONS:
@@ -135,12 +135,12 @@ function(e, t, n) {
     }
 
     function S(e, t, n) {
-        let l, a;
-        let r = e.find((r, u) => t >= r.start && t <= r.end && n >= r.start && n <= r.end ? (null != e[u + 1] && (a = e[u + 1]), !0) : (l = r, !1));
-        return null == r ? null : {
+        let l, r;
+        let a = e.find((a, u) => t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[u + 1] && (r = e[u + 1]), !0) : (l = a, !1));
+        return null == a ? null : {
             previousToken: l,
-            currentToken: r,
-            nextToken: a,
+            currentToken: a,
+            nextToken: r,
             focusOffset: t,
             anchorOffset: n
         }
@@ -151,7 +151,7 @@ function(e, t, n) {
         e = null != e ? e : {};
         let {
             currentToken: l,
-            nextToken: a,
+            nextToken: r,
             previousToken: u
         } = e;
         if (0 === t.length) return {
@@ -165,22 +165,22 @@ function(e, t, n) {
             token: null
         };
         if (c.IS_SEARCH_FILTER_TOKEN.test(l.type)) {
-            if (null == a || a.type === r.default.NON_TOKEN_TYPE) return {
+            if (null == r || r.type === a.default.NON_TOKEN_TYPE) return {
                 type: c.SearchPopoutModes.FILTER,
                 filter: l.type,
-                token: a
+                token: r
             };
-            if (null != a && !c.IS_SEARCH_ANSWER_TOKEN.test(a.type)) return {
+            if (null != r && !c.IS_SEARCH_ANSWER_TOKEN.test(r.type)) return {
                 type: c.SearchPopoutModes.FILTER,
                 filter: l.type,
                 token: null
             }
         }
-        return l.type === r.default.NON_TOKEN_TYPE && null != u && c.IS_SEARCH_FILTER_TOKEN.test(u.type) ? {
+        return l.type === a.default.NON_TOKEN_TYPE && null != u && c.IS_SEARCH_FILTER_TOKEN.test(u.type) ? {
             type: c.SearchPopoutModes.FILTER,
             filter: u.type,
             token: l
-        } : (l.type === r.default.NON_TOKEN_TYPE && (n = l), {
+        } : (l.type === a.default.NON_TOKEN_TYPE && (n = l), {
             type: c.SearchPopoutModes.FILTER_ALL,
             filter: null,
             token: n
@@ -189,14 +189,14 @@ function(e, t, n) {
 
     function R(e, t) {
         let n = [];
-        return a(e).forEach(e => {
+        return r(e).forEach(e => {
             if (null == e || 0 === e.results.length) return;
             let l = e.group;
             n = n.concat(e.results.map(e => {
                 let n = e.text;
                 if (t === c.SearchPopoutModes.FILTER_ALL) {
-                    var a;
-                    l = null !== (a = e.group) && void 0 !== a ? a : l;
+                    var r;
+                    l = null !== (r = e.group) && void 0 !== r ? r : l;
                     let t = u.default[l];
                     (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== "" && (n = "".concat(t.key, " ").concat(n))
                 }
@@ -212,27 +212,27 @@ function(e, t, n) {
     function A(e) {
         return null == e ? "" : e.map(e => e.getFullMatch()).join("")
     }
-    let g = new r.default;
+    let I = new a.default;
 
-    function N(e) {
-        return g.tokenize(e)
+    function g(e) {
+        return I.tokenize(e)
     }
 
-    function I() {
-        return g.clearCache()
+    function N() {
+        return I.clearCache()
     }
 
-    function y(e) {
+    function M(e) {
         return null != e ? _[e] : null
     }
 
-    function m(e, t) {
+    function y(e, t) {
         let n = c.IS_SEARCH_FILTER_TOKEN.test(e.type);
         return (null != t || !n) && (null == t || !n || !!c.IS_SEARCH_ANSWER_TOKEN.test(t.type)) && !0
     }
 
-    function M() {
-        (0, u.refreshSearchTokens)(), g.reset(), a(u.default).forOwn((e, t) => g.addRule({
+    function m() {
+        (0, u.refreshSearchTokens)(), I.reset(), r(u.default).forOwn((e, t) => I.addRule({
             type: t,
             ...e
         }))

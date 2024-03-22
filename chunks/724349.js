@@ -9,24 +9,24 @@ function(e, a, t) {
         }
     });
     var d, s, n = t("446674"),
-        c = t("913144");
+        i = t("913144");
     (d = s || (s = {}))[d.NOT_STARTED = 0] = "NOT_STARTED", d[d.IN_PROGRESS = 1] = "IN_PROGRESS", d[d.FAILED = 2] = "FAILED", d[d.SKIPPED = 3] = "SKIPPED";
-    let i = 0;
+    let c = 0;
     class r extends n.default.Store {
         getMigrationStatus() {
-            return i
+            return c
         }
     }
     r.displayName = "DomainMigrationStore";
-    var o = new r(c.default, {
+    var o = new r(i.default, {
         DOMAIN_MIGRATION_START: function() {
-            i = 1
+            c = 1
         },
         DOMAIN_MIGRATION_FAILURE: function() {
-            i = 2
+            c = 2
         },
         DOMAIN_MIGRATION_SKIP: function() {
-            i = 3
+            c = 3
         }
     })
 }
