@@ -11,8 +11,8 @@ function(e, a, t) {
     var d = t("37983"),
         s = t("884691"),
         n = t("522632"),
-        i = t("803182"),
-        c = t("90915"),
+        c = t("803182"),
+        i = t("90915"),
         r = t("759843"),
         o = t("817792"),
         f = t("815157"),
@@ -149,8 +149,8 @@ function(e, a, t) {
                 migrationStatus: t,
                 skipsSettingDefaultPageTitle: s
             } = this.props;
-            return e = t === E.MigrationStatus.IN_PROGRESS ? null : C.IS_APP_COMPATIBLE_BROWSER ? w.isPlatformEmbedded ? (0, d.jsxs)(c.Switch, {
-                children: [(0, d.jsx)(c.Route, {
+            return e = t === E.MigrationStatus.IN_PROGRESS ? null : C.IS_APP_COMPATIBLE_BROWSER ? w.isPlatformEmbedded ? (0, d.jsxs)(i.Switch, {
+                children: [(0, d.jsx)(i.Route, {
                     exact: !0,
                     path: S.Routes.INDEX,
                     render: () => (0, d.jsx)(b.default, {})
@@ -158,42 +158,42 @@ function(e, a, t) {
                     exact: !0,
                     path: S.Routes.APPS,
                     component: L
-                }), (0, d.jsx)(c.Route, {
+                }), (0, d.jsx)(i.Route, {
                     path: Q([S.Routes.LOGIN, S.Routes.REGISTER, S.Routes.INVITE(":inviteCode"), S.Routes.INVITE_LOGIN(":inviteCode"), S.Routes.GIFT_CODE(":giftCode"), S.Routes.GIFT_CODE_LOGIN(":giftCode"), S.Routes.RESET], N.CONFERENCE_MODE_ENABLED),
                     component: H
                 }), (0, d.jsx)(j.default, {
                     path: S.Routes.INVITE_PROXY(":channelId"),
                     component: P
-                }), (0, d.jsx)(c.Redirect, {
+                }), (0, d.jsx)(i.Redirect, {
                     from: S.Routes.INVITE(""),
                     to: S.Routes.LOGIN
-                }), (0, d.jsx)(c.Redirect, {
+                }), (0, d.jsx)(i.Redirect, {
                     from: S.Routes.GIFT_CODE(""),
                     to: S.Routes.LOGIN
-                }), (0, d.jsx)(c.Route, {
+                }), (0, d.jsx)(i.Route, {
                     render: X
                 })]
-            }) : (0, d.jsxs)(c.Switch, {
+            }) : (0, d.jsxs)(i.Switch, {
                 children: [(0, d.jsx)(j.default, {
                     exact: !0,
                     path: S.Routes.INDEX,
                     render: () => (0, d.jsx)(b.default, {})
-                }), (0, d.jsx)(c.Route, {
+                }), (0, d.jsx)(i.Route, {
                     path: Q([S.Routes.LOGIN, S.Routes.LOGIN_HANDOFF, S.Routes.REGISTER, S.Routes.BILLING_PREFIX, S.Routes.BILLING_PROMOTION_REDEMPTION(":code"), S.Routes.INVITE(":inviteCode"), S.Routes.INVITE_LOGIN(":inviteCode"), S.Routes.GIFT_CODE(":giftCode"), S.Routes.GIFT_CODE_LOGIN(":giftCode"), S.Routes.GUILD_TEMPLATE(":guildTemplateCode"), S.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), S.Routes.DISABLE_EMAIL_NOTIFICATIONS, S.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, S.Routes.RESET, S.Routes.REPORT, S.Routes.REPORT_SECOND_LOOK], N.CONFERENCE_MODE_ENABLED),
                     component: H
-                }), a ? null : (0, d.jsx)(c.Route, {
+                }), a ? null : (0, d.jsx)(i.Route, {
                     path: S.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
                     component: H
-                }), a ? null : (0, d.jsx)(c.Route, {
+                }), a ? null : (0, d.jsx)(i.Route, {
                     path: S.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
                     component: H
-                }), (0, d.jsx)(c.Redirect, {
+                }), (0, d.jsx)(i.Redirect, {
                     from: S.Routes.INVITE(""),
                     to: S.Routes.LOGIN
                 }), (0, d.jsx)(j.default, {
                     path: S.Routes.INVITE_PROXY(":channelId"),
                     component: P
-                }), (0, d.jsx)(c.Redirect, {
+                }), (0, d.jsx)(i.Redirect, {
                     from: S.Routes.GIFT_CODE(""),
                     to: S.Routes.LOGIN
                 }), (0, d.jsx)(j.default, {
@@ -238,15 +238,15 @@ function(e, a, t) {
                         var e, a, t;
                         let d = null === (e = O.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                             s = (0, n.parse)((null !== (t = window.location.search) && void 0 !== t ? t : "").substr(1)),
-                            i = null === (a = s.referring_location) || void 0 === a ? void 0 : a.toString();
+                            c = null === (a = s.referring_location) || void 0 === a ? void 0 : a.toString();
                         return ("iOS" === d || "Android" === d) && O.default.track(S.AnalyticEvents.DOWNLOAD_APP, {
                             platform: d,
                             ptb: !1,
                             released: !0,
                             has_e_mail: "true" === s.has_e_mail,
-                            referring_location: i,
+                            referring_location: c,
                             qr_code: !0
-                        }), window.location.href = (0, R.getMobileDownloadLink)(null != i && "" !== i ? i : "qr_code", d), null
+                        }), window.location.href = (0, R.getMobileDownloadLink)(null != c && "" !== c ? c : "qr_code", d), null
                     }
                 }), (0, d.jsx)(j.default, {
                     path: S.Routes.OPEN_APP_FROM_EMAIL,
@@ -254,7 +254,7 @@ function(e, a, t) {
                         var e, a;
                         let t = null === (e = O.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                             s = (0, v.getOpenAppFromEmailDestinations)(null !== (a = window.location.search) && void 0 !== a ? a : "");
-                        if ("iOS" !== t && "Android" !== t) return (0, d.jsx)(c.Redirect, {
+                        if ("iOS" !== t && "Android" !== t) return (0, d.jsx)(i.Redirect, {
                             to: null != s.desktop ? "".concat(s.desktop.pathname).concat(s.desktop.search) : S.Routes.APP
                         });
                         {
@@ -268,28 +268,28 @@ function(e, a, t) {
                             }), window.location.href = e
                         }
                     }
-                }), (0, d.jsx)(c.Redirect, {
+                }), (0, d.jsx)(i.Redirect, {
                     from: S.Routes.CONNECT_AUTHORIZE,
                     to: {
                         ...location,
                         pathname: S.Routes.OAUTH2_AUTHORIZE
                     }
-                }), (0, d.jsx)(c.Route, {
+                }), (0, d.jsx)(i.Route, {
                     path: [S.Routes.OAUTH2_AUTHORIZED, S.Routes.OAUTH2_AUTHORIZE, S.Routes.OAUTH2_ERROR, S.Routes.OAUTH2_WHITELIST_ACCEPT],
                     component: F
-                }), a ? null : (0, d.jsx)(c.Route, {
+                }), a ? null : (0, d.jsx)(i.Route, {
                     path: [S.Routes.ACCOUNT_STANDING],
                     component: Y
-                }), a ? null : (0, d.jsx)(c.Route, {
+                }), a ? null : (0, d.jsx)(i.Route, {
                     path: S.Routes.APPLICATION_STORE,
                     component: h.default
-                }), a ? null : (0, d.jsx)(c.Route, {
+                }), a ? null : (0, d.jsx)(i.Route, {
                     path: [S.Routes.APPLICATION_DIRECTORY_SEARCH, S.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?"), S.Routes.APPLICATION_DIRECTORY],
                     component: B
-                }), (0, d.jsx)(c.Route, {
+                }), (0, d.jsx)(i.Route, {
                     render: X
                 })]
-            }) : (0, d.jsx)(c.Switch, {
+            }) : (0, d.jsx)(i.Switch, {
                 children: (0, d.jsx)(j.default, {
                     component: D
                 })
@@ -308,7 +308,7 @@ function(e, a, t) {
         let a = function() {
             let {
                 pathname: e
-            } = (0, c.useLocation)(), a = (0, i.matchPath)(e, {
+            } = (0, i.useLocation)(), a = (0, c.matchPath)(e, {
                 path: S.Routes.APPLICATION_DIRECTORY
             });
             return null != a

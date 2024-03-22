@@ -5,12 +5,12 @@ function(e, a, t) {
             return s
         },
         StreamDirector: function() {
-            return i
+            return c
         }
     });
     var d, s, n = t("242761");
     (d = s || (s = {})).STREAM = "stream", d.PAUSE = "pause", d.STOP = "stop";
-    class i {
+    class c {
         onStreamBegin(e, a) {
             let t = (0, n.getInitialStreamTarget)(e, a);
             null == t || null == t.windowHandle ? this.callback({

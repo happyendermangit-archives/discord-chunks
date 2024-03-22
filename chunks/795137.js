@@ -9,14 +9,14 @@ function(e, a, t) {
     t("884691");
     var s = t("90915"),
         n = t("446674"),
-        i = t("271938"),
-        c = t("760190"),
+        c = t("271938"),
+        i = t("760190"),
         r = t("49111"),
-        o = n.default.connectStores([c.default, i.default], () => {
-            let e = i.default.getToken();
+        o = n.default.connectStores([i.default, c.default], () => {
+            let e = c.default.getToken();
             return {
                 token: e,
-                hasLoadedExperiments: null != e || c.default.hasLoadedExperiments
+                hasLoadedExperiments: null != e || i.default.hasLoadedExperiments
             }
         })(e => {
             let {
