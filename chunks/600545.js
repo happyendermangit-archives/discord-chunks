@@ -30,6 +30,8 @@ function(e, t, n) {
         productName: "productName_ece1e1",
         profileEffectShopPreview: "profileEffectShopPreview_b8d693",
         purchaseButton: "purchaseButton__63193",
-        shopCard: "shopCard_f7822b"
+        shopCard: "shopCard_f7822b",
+        shopCardDefaultAnimation: "shopCardDefaultAnimation__2e17a",
+        shopCardTransformationAnimation: "shopCardTransformationAnimation__1ca5d"
     }
 }
