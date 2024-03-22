@@ -20,12 +20,14 @@ function(e, t, n) {
         c = n("699668"),
         f = n("49111");
     class g extends o.default {
-        async handlePostConnectionOpen() {
-            if (s.default.get("turnedOffNewNotifications") || !r.default.hasConsented(f.Consents.PERSONALIZATION) || !d.NotificationsExperiment.getCurrentConfig({
+        handlePostConnectionOpen() {
+            if (!s.default.get("turnedOffNewNotifications") && !!r.default.hasConsented(f.Consents.PERSONALIZATION) && !!d.NotificationsExperiment.getCurrentConfig({
                     location: "NotificationMigrationManager"
                 }, {
                     autoTrackExposure: !1
-                }).enabled || u.default.useNewNotifications) return;
+                }).enabled) !u.default.useNewNotifications && (this.checkOldUserExperiment(), this.checkNewUserExperiment())
+        }
+        async checkOldUserExperiment() {
             let {
                 logExposure: e,
                 autoOpen: t
@@ -37,26 +39,39 @@ function(e, t, n) {
             if (!e) return;
             let {
                 body: {
-                    guild_noise: o,
-                    usage: g
+                    guild_noise: s,
+                    usage: o
                 }
-            } = await a.HTTP.get("/users/@me/notification-migration-data2"), m = (0, c.transformUsageData)(g), {
-                default: h
+            } = await a.HTTP.get("/users/@me/notification-migration-data2"), r = (0, c.transformUsageData)(o), {
+                default: u
             } = await n.el("923660").then(n.bind(n, "923660"));
             if (!(0, l.hasAnyModalOpen)()) d.UnreadsEntryPointExperiment.trackExposure({
                 location: "NotificationMigrationManager"
-            }), t && ((0, c.hasGoodCandidateServers)(o, m) ? (0, l.openModal)(e => (0, i.jsx)(h, {
+            }), t && ((0, c.hasGoodCandidateServers)(s, r) ? (0, l.openModal)(e => (0, i.jsx)(u, {
                 ...e,
                 dismissable: !1,
-                guildPain: o,
-                myUsage: m
+                guildPain: s,
+                myUsage: r
             }), {
                 onCloseRequest: () => {}
             }) : (0, c.autoMigrateToNewSystem)())
         }
+        checkNewUserExperiment() {
+            let {
+                logExposure: e,
+                enabled: t
+            } = d.NewUserUnreadsEntryPointExperiment.getCurrentConfig({
+                location: "NotificationMigrationManager"
+            }, {
+                autoTrackExposure: !1
+            });
+            e && (d.NewUserUnreadsEntryPointExperiment.trackExposure({
+                location: "NotificationMigrationManager"
+            }), t && (0, c.autoMigrateToNewSystem)())
+        }
         constructor(...e) {
             super(...e), this.actions = {
-                POST_CONNECTION_OPEN: this.handlePostConnectionOpen
+                POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
             }
         }
     }

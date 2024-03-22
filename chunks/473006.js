@@ -9,7 +9,7 @@ function(e, _, E) {
 
     function o() {
         var e;
-        let _ = parseInt((e = "277812", "277812"));
-        return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("277812")), _ = 0), _
+        let _ = parseInt((e = "277834", "277834"));
+        return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("277834")), _ = 0), _
     }
 }
