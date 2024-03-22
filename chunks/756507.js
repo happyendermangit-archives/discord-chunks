@@ -32,9 +32,8 @@ function(e, t, n) {
                 newAnalyticsLocations: p = r
             } = e, m = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], {
                 AnalyticsLocationProvider: h,
-                analyticsLocations: x,
-                sourceAnalyticsLocations: E
-            } = (0, a.default)(p), y = l.useMemo(() => ({
+                analyticsLocations: x
+            } = (0, a.default)(p), E = l.useMemo(() => ({
                 layout: t,
                 userId: null != n ? n : null,
                 guildId: null != u ? u : null,
@@ -45,7 +44,7 @@ function(e, t, n) {
             l.useEffect(() => {
                 m && (0, s.trackUserProfileAction)({
                     action: "VIEW",
-                    analyticsLocations: E,
+                    analyticsLocations: x,
                     layout: t,
                     userId: n,
                     guildId: u,
@@ -54,7 +53,7 @@ function(e, t, n) {
                     roleId: f
                 })
             }, [m]);
-            let g = l.useCallback(e => {
+            let y = l.useCallback(e => {
                     (0, s.trackUserProfileAction)({
                         layout: t,
                         userId: n,
@@ -66,21 +65,21 @@ function(e, t, n) {
                         ...e
                     })
                 }, [t, n, u, d, c, f, x]),
-                S = l.useCallback(e => {
+                g = l.useCallback(e => {
                     let {
                         children: t
                     } = e;
                     return (0, i.jsx)(o.Provider, {
-                        value: y,
+                        value: E,
                         children: (0, i.jsx)(h, {
                             children: t
                         })
                     })
-                }, [y, h]);
+                }, [E, h]);
             return {
-                UserProfileAnalyticsProvider: S,
+                UserProfileAnalyticsProvider: g,
                 analyticsLocations: x,
-                trackUserProfileAction: g
+                trackUserProfileAction: y
             }
         },
         d = function() {
