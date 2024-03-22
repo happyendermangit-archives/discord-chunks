@@ -41,7 +41,7 @@ function(e, t, s) {
             setShouldFireConfetti: M,
             tier: G,
             tierMarkerAnimationPosition: h
-        } = e, O = (0, o.default)([u.default], () => u.default.useReducedMotion), {
+        } = e, O = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), {
             analyticsLocations: p
         } = (0, d.default)(), C = N.AppliedGuildBoostsRequiredForBoostedGuildTier[G], A = C - r.premiumSubscriberCount, B = G <= h || m, x = B && G <= r.premiumTier, v = B && G < r.premiumTier, P = B && G === r.premiumTier, {
             scaleFactor: L

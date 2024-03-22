@@ -8,10 +8,10 @@ function(e, t, r) {
             return a
         }
     });
-    var a, l = r("265586"),
-        n = r("200410");
+    var a, n = r("265586"),
+        l = r("200410");
     let i = e => e instanceof a;
-    a = class e extends n.default {
+    a = class e extends l.default {
         static fromServer(t) {
             return new e({
                 ...super.fromServer(t),
@@ -19,7 +19,7 @@ function(e, t, r) {
             })
         }
         constructor(e) {
-            super(e), this.type = l.CollectiblesItemType.PROFILE_EFFECT
+            super(e), this.type = n.CollectiblesItemType.PROFILE_EFFECT
         }
     }
 }

@@ -27,7 +27,7 @@ function(e, t, n) {
                 jumbo: n = !1
             } = e, {
                 currentPreviewRef: a
-            } = l.useContext(f.default), g = (0, r.default)([p.default], () => p.default.getSoundById(t)), S = (null == g ? void 0 : g.emojiId) != null || (null == g ? void 0 : g.emojiName) != null, [C, T] = l.useState(!1), _ = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), I = l.useCallback(() => {
+            } = l.useContext(f.default), g = (0, r.useStateFromStores)([p.default], () => p.default.getSoundById(t)), S = (null == g ? void 0 : g.emojiId) != null || (null == g ? void 0 : g.emojiName) != null, [C, T] = l.useState(!1), _ = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), I = l.useCallback(() => {
                 var e;
                 null == g && (0, c.maybeFetchSoundboardSounds)();
                 let n = new Audio((0, m.default)(t));

@@ -6,8 +6,8 @@ function(e, t, r) {
         }
     });
     var a = r("884691"),
-        l = r("65597"),
-        n = r("170313"),
+        n = r("65597"),
+        l = r("170313"),
         i = r("424562"),
         u = r("906932"),
         o = r("26989"),
@@ -19,11 +19,11 @@ function(e, t, r) {
                 isTryItOut: t,
                 analyticsLocations: r,
                 guildId: f
-            } = e, v = (0, l.default)([c.default], () => c.default.getCurrentUser()), C = (0, l.default)([o.default], () => null != f && null != v ? o.default.getMember(f, v.id) : null), E = null != C ? C.avatarDecoration : null == v ? void 0 : v.avatarDecoration, A = (0, n.default)(r), {
+            } = e, v = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), C = (0, n.useStateFromStores)([o.default], () => null != f && null != v ? o.default.getMember(f, v.id) : null), E = null != C ? C.avatarDecoration : null == v ? void 0 : v.avatarDecoration, A = (0, l.default)(r), {
                 pendingAvatar: T,
-                pendingAvatarDecoration: g,
-                pendingErrors: m
-            } = (0, l.useStateFromStoresObject)([s.default, i.default], () => ({
+                pendingAvatarDecoration: m,
+                pendingErrors: g
+            } = (0, n.useStateFromStoresObject)([s.default, i.default], () => ({
                 pendingAvatar: t ? s.default.getTryItOutAvatar() : null != f ? i.default.getPendingAvatar() : s.default.getPendingAvatar(),
                 pendingAvatarDecoration: t ? s.default.getTryItOutAvatarDecoration() : null != f ? i.default.getPendingAvatarDecoration() : s.default.getPendingAvatarDecoration(),
                 pendingErrors: null != f ? i.default.getErrors().avatarDecoration : s.default.getErrors().avatarDecoration
@@ -32,11 +32,11 @@ function(e, t, r) {
             }, [A, f]);
             return {
                 pendingAvatar: T,
-                pendingAvatarDecoration: g,
+                pendingAvatarDecoration: m,
                 setPendingAvatar: t ? d.setTryItOutAvatar : I,
                 setPendingAvatarDecoration: t ? d.setTryItOutAvatarDecoration : P,
                 savedAvatarDecoration: E,
-                pendingErrors: m
+                pendingErrors: g
             }
         }
 }

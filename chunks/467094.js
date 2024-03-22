@@ -46,15 +46,15 @@ function(e, t, i) {
         d = i("766274"),
         f = i("341542"),
         S = i("697218"),
-        h = i("271560"),
-        m = i("364685"),
+        m = i("271560"),
+        h = i("364685"),
         E = i("49111"),
         I = i("397336"),
         p = i("782340");
     let k = async (e, t) => {
         let {
             body: i
-        } = await (0, h.httpGetWithCountryCodeQuery)(E.Endpoints.STICKER_PACK(e));
+        } = await (0, m.httpGetWithCountryCodeQuery)(E.Endpoints.STICKER_PACK(e));
         return a.default.dispatch({
             type: "STICKER_PACK_FETCH_SUCCESS",
             packId: e,
@@ -65,7 +65,7 @@ function(e, t, i) {
         let {
             locale: e = c.default.locale
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (m.default.isFetchingStickerPacks || m.default.hasLoadedStickerPacks) return;
+        if (h.default.isFetchingStickerPacks || h.default.hasLoadedStickerPacks) return;
         a.default.wait(() => {
             a.default.dispatch({
                 type: "STICKER_PACKS_FETCH_START"
@@ -152,7 +152,7 @@ function(e, t, i) {
     }
 
     function x(e) {
-        return f.default.totalUnavailableGuilds > 0 || !u.default.isConnected() ? e : e.filter(e => null != m.default.getStickerById(e))
+        return f.default.totalUnavailableGuilds > 0 || !u.default.isConnected() ? e : e.filter(e => null != h.default.getStickerById(e))
     }
 
     function A(e) {

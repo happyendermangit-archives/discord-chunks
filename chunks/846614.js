@@ -22,7 +22,7 @@ function(e, t, n) {
         u = a.default.Millis.DAY;
 
     function d(e) {
-        let t = (0, i.default)([r.default], () => r.default.getId()),
+        let t = (0, i.useStateFromStores)([r.default], () => r.default.getId()),
             n = null != t ? o.default.age(t) : 0;
         return e.filter(e => {
             var t;

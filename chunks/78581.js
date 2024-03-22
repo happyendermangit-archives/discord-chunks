@@ -83,7 +83,7 @@ function(e, t, n) {
     function O(e) {
         let {
             isSoundboardButtonDisabled: t = !1
-        } = e, n = (0, i.default)([f.default], () => f.default.getCurrentUser()), a = [l.DismissibleContent.SOUNDBOARD_EDUCATION];
+        } = e, n = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), a = [l.DismissibleContent.SOUNDBOARD_EDUCATION];
         if (!t && ! function() {
                 var e, t;
                 let n = null !== (t = null === (e = o.default.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};

@@ -35,7 +35,7 @@ function(e, t, n) {
             {
                 upsellSource: y
             } = (0, h.useUserPopoutCollectiblesUpsellStore)(),
-            g = (0, s.default)([p.default], () => p.default.getCurrentUser());
+            g = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser());
         a(null != g, "currentUser should not be null");
         let S = (0, d.useBlockedPaymentsConfig)(),
             C = (0, m.default)(g.id, l),

@@ -13,7 +13,7 @@ function(e, t, n) {
     function r() {
         let {
             createMultipleConfettiAt: e
-        } = i.useContext(a.ConfettiCannonContext), t = (0, l.default)([s.default], () => s.default.getState()), n = i.useCallback(e => ({
+        } = i.useContext(a.ConfettiCannonContext), t = (0, l.useStateFromStores)([s.default], () => s.default.getState()), n = i.useCallback(e => ({
             size: {
                 type: "static-random",
                 minValue: e.confettiSize - 7,

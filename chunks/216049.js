@@ -14,10 +14,10 @@ function(e, t, n) {
     function o(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            u = (0, i.default)([a.default], () => null != e ? a.default.getMember(e.id, t) : null, [e, t]),
-            d = (0, i.default)([l.default], () => l.default.getChannel(n), [n]),
-            c = (0, i.default)([l.default], () => l.default.getChannel(null == d ? void 0 : d.parent_id), [d]),
-            f = (0, i.default)([s.default], () => null != e ? s.default.getRoles(e.id) : void 0);
+            u = (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getMember(e.id, t) : null, [e, t]),
+            d = (0, i.useStateFromStores)([l.default], () => l.default.getChannel(n), [n]),
+            c = (0, i.useStateFromStores)([l.default], () => l.default.getChannel(null == d ? void 0 : d.parent_id), [d]),
+            f = (0, i.useStateFromStores)([s.default], () => null != e ? s.default.getRoles(e.id) : void 0);
         return null == e || null == f || null == u ? null : (0, r.getVisibleConnectionsRole)({
             guild: e,
             guildRoles: f,

@@ -13,8 +13,8 @@ function(t, e, n) {
         o = "",
         s = null,
         c = !1,
-        d = null,
-        S = "",
+        S = null,
+        d = "",
         E = "",
         f = "",
         _ = "",
@@ -29,11 +29,11 @@ function(t, e, n) {
         h = null;
 
     function U() {
-        s = null, l = "", a = null, o = "", c = !1, d = null, S = "US", E = "", f = "", _ = "", T = "", I = "", A = "", p = "", C = !1, P = null, N = null, R = null, h = null
+        s = null, l = "", a = null, o = "", c = !1, S = null, d = "US", E = "", f = "", _ = "", T = "", I = "", A = "", p = "", C = !1, P = null, N = null, R = null, h = null
     }
 
     function L(t) {
-        E = t.name, S = t.country, _ = t.line1, T = t.line2, I = t.city, A = t.postalCode, p = t.state, f = t.email
+        E = t.name, d = t.country, _ = t.line1, T = t.line2, I = t.city, A = t.postalCode, p = t.state, f = t.email
     }
 
     function m() {
@@ -66,7 +66,7 @@ function(t, e, n) {
             return N
         }
         get adyenPaymentData() {
-            return d
+            return S
         }
         get redirectedPaymentSourceId() {
             return h
@@ -83,7 +83,7 @@ function(t, e, n) {
             return {
                 name: E,
                 email: f,
-                country: S,
+                country: d,
                 line1: _,
                 line2: T,
                 city: I,
@@ -126,7 +126,7 @@ function(t, e, n) {
                 info: e,
                 isValid: n
             } = t;
-            null != e.name && "" !== e.name && (E = e.name), S = e.country, E = e.name, _ = e.line1, T = e.line2, I = e.city, A = e.postalCode, p = e.state, f = e.email, C = n
+            null != e.name && "" !== e.name && (E = e.name), d = e.country, E = e.name, _ = e.line1, T = e.line2, I = e.city, A = e.postalCode, p = e.state, f = e.email, C = n
         },
         BRAINTREE_TOKENIZE_PAYPAL_START: function() {
             l = "", a = null
@@ -137,7 +137,7 @@ function(t, e, n) {
                 nonce: n,
                 billingAddress: i
             } = t;
-            l = e, a = n, L(i), C = S.length > 0
+            l = e, a = n, L(i), C = d.length > 0
         },
         BRAINTREE_TOKENIZE_VENMO_START: function() {
             o = "", a = null
@@ -153,7 +153,7 @@ function(t, e, n) {
             let {
                 data: e
             } = t;
-            d = e
+            S = e
         },
         BILLING_PAYMENT_SOURCE_CREATE_START: m,
         MODAL_POP: m,

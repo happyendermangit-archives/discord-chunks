@@ -20,7 +20,7 @@ function(e, t, s) {
                 closeLayer: t,
                 guild: s,
                 isVisible: E
-            } = e, _ = (0, a.default)([o.default], () => o.default.useReducedMotion), T = (0, r.useSpring)({
+            } = e, _ = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = (0, r.useSpring)({
                 transform: E ? "translateY(-100%)" : "translateY(0%)",
                 opacity: E ? 1 : 0,
                 config: {

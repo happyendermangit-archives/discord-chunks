@@ -36,7 +36,7 @@ function(e, t, n) {
     }
 
     function E(e) {
-        let t = (0, o.default)([d.default], () => d.default.saturation);
+        let t = (0, o.useStateFromStores)([d.default], () => d.default.saturation);
         return i.useMemo(() => {
             if (null == e) return null;
             if ("currentColor" === e || e.startsWith("var(")) return e;
@@ -48,7 +48,7 @@ function(e, t, n) {
 
     function h(e, t) {
         let n = (0, u.useTheme)(),
-            s = (0, o.default)([d.default], () => d.default.saturation),
+            s = (0, o.useStateFromStores)([d.default], () => d.default.saturation),
             r = i.useMemo(() => {
                 if (null == e) return null;
                 let i = l.default.colors[c(e)].resolve({

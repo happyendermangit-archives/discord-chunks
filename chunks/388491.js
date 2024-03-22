@@ -35,7 +35,7 @@ function(e, t, r) {
         d = r("49111");
 
     function E(e) {
-        let t = (0, l.default)([s.default], () => s.default.saturation);
+        let t = (0, l.useStateFromStores)([s.default], () => s.default.saturation);
         return (0, n.useMemo)(() => null == e ? null : {
             overlaySyncedWithUserTheme: i.default.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve({
                 theme: e,

@@ -18,7 +18,7 @@ function(e, t, n) {
 
     function d(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = (0, a.default)([s.default], () => !!__OVERLAY__ && s.default.isInstanceUILocked()),
+            i = (0, a.useStateFromStores)([s.default], () => !!__OVERLAY__ && s.default.isInstanceUILocked()),
             [d, c] = (0, o.useGetDismissibleContent)(e, t, i),
             f = !n && null != d && !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(d);
         return l.useEffect(() => () => {

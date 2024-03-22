@@ -17,7 +17,7 @@ function(e, t, n) {
     function d(e) {
         let {
             className: t
-        } = e, s = (0, a.default)([o.default], () => o.default.useReducedMotion);
+        } = e, s = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion);
         async function d() {
             let {
                 default: e

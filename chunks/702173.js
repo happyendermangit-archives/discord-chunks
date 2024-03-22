@@ -13,7 +13,7 @@ function(t, e, i) {
 
     function a(t) {
         var e;
-        let i = (0, n.default)([l.default], () => l.default.getChannel(t)),
+        let i = (0, n.useStateFromStores)([l.default], () => l.default.getChannel(t)),
             a = null !== (e = null == i ? void 0 : i.isPrivate()) && void 0 !== e && e;
         return a
     }

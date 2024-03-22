@@ -15,8 +15,8 @@ function(e, t, n) {
     function u(e) {
         var t;
         let n = l.LegacyUsernameDisabled.useSetting(),
-            u = (0, i.default)([s.default], () => s.default.getCurrentUser()),
-            d = (0, i.default)([a.default], () => a.default.hidePersonalInformation);
+            u = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
+            d = (0, i.useStateFromStores)([a.default], () => a.default.hidePersonalInformation);
         if (null == e) return [];
         let c = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
         return null != u && u.id === e.userId && n && (c = c.filter(e => e.id !== o)), d && (c = c.map(e => ({

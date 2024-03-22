@@ -32,18 +32,18 @@ function(e, t, r) {
             return F
         },
         groupProfileEffects: function() {
-            return _
+            return S
         },
         isCollectiblesGiftCode: function() {
-            return O
+            return _
         },
         getLogoSize: function() {
-            return y
+            return O
         }
     }), r("222007");
     var a = r("917351"),
-        l = r("265586"),
-        n = r("407063"),
+        n = r("265586"),
+        l = r("407063"),
         i = r("153160"),
         u = r("730297"),
         o = r("806410"),
@@ -55,9 +55,9 @@ function(e, t, r) {
             return null == r ? "" : (0, i.formatPrice)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency)
         },
         v = (e, t) => {
-            var r, a, l;
-            let n = null !== (l = e.prices[t]) && void 0 !== l ? l : null;
-            return null == n ? null : null === (a = n.countryPrices) || void 0 === a ? void 0 : null === (r = a.prices) || void 0 === r ? void 0 : r[0]
+            var r, a, n;
+            let l = null !== (n = e.prices[t]) && void 0 !== n ? n : null;
+            return null == l ? null : null === (a = l.countryPrices) || void 0 === a ? void 0 : null === (r = a.prices) || void 0 === r ? void 0 : r[0]
         },
         C = e => {
             var t;
@@ -68,42 +68,42 @@ function(e, t, r) {
             return (0, a.uniqBy)(t, "storeListingId")
         },
         A = (e, t) => {
-            if (t === l.CollectiblesItemType.AVATAR_DECORATION) {
+            if (t === n.CollectiblesItemType.AVATAR_DECORATION) {
                 let t = (0, a.flatMap)([...e.values()], "items").filter(u.isAvatarDecorationRecord);
                 return (0, a.uniqBy)(t, "id")
             }
-            if (t === l.CollectiblesItemType.PROFILE_EFFECT) {
+            if (t === n.CollectiblesItemType.PROFILE_EFFECT) {
                 let t = (0, a.flatMap)([...e.values()], "items").filter(o.isProfileEffectRecord);
                 return (0, a.uniqBy)(t, "id")
             }
         },
         T = (e, t) => {
             let r = E(e);
-            if (t === l.CollectiblesItemType.AVATAR_DECORATION) {
+            if (t === n.CollectiblesItemType.AVATAR_DECORATION) {
                 let e = (0, a.flatMap)(r, "items").filter(u.isAvatarDecorationRecord);
                 return (0, a.uniqBy)(e, "id")
             }
-            if (t === l.CollectiblesItemType.PROFILE_EFFECT) {
+            if (t === n.CollectiblesItemType.PROFILE_EFFECT) {
                 let e = (0, a.flatMap)(r, "items").filter(o.isProfileEffectRecord);
                 return (0, a.uniqBy)(e, "id")
             }
         },
-        g = e => A(e, l.CollectiblesItemType.AVATAR_DECORATION),
-        m = e => T(e, l.CollectiblesItemType.AVATAR_DECORATION),
-        I = (e, t) => (0, a.uniqBy)([...g(e), ...m(t)], "id"),
+        m = e => A(e, n.CollectiblesItemType.AVATAR_DECORATION),
+        g = e => T(e, n.CollectiblesItemType.AVATAR_DECORATION),
+        I = (e, t) => (0, a.uniqBy)([...m(e), ...g(t)], "id"),
         P = (e, t) => {
             var r;
             let {
                 CDN_HOST: a,
-                API_ENDPOINT: l
-            } = window.GLOBAL_ENV, i = (0, n.getBestMediaProxySize)(t.size * (0, n.getDevicePixelRatio)()), u = null !== (r = null == t ? void 0 : t.format) && void 0 !== r ? r : "png";
+                API_ENDPOINT: n
+            } = window.GLOBAL_ENV, i = (0, l.getBestMediaProxySize)(t.size * (0, l.getDevicePixelRatio)()), u = null !== (r = null == t ? void 0 : t.format) && void 0 !== r ? r : "png";
             if (null != a) return "".concat(location.protocol, "//").concat(a, "/app-assets/").concat(s.COLLECTIBLES_APPLICATION_ID, "/").concat(e, ".").concat(u, "?size=").concat(i);
             let o = s.Endpoints.APPLICATION_ASSET(s.COLLECTIBLES_APPLICATION_ID, e, u);
-            return "".concat(location.protocol).concat(l).concat(o, "?size=").concat(i)
+            return "".concat(location.protocol).concat(n).concat(o, "?size=").concat(i)
         },
-        p = e => A(e, l.CollectiblesItemType.PROFILE_EFFECT),
-        F = e => T(e, l.CollectiblesItemType.PROFILE_EFFECT),
-        _ = (e, t) => {
+        p = e => A(e, n.CollectiblesItemType.PROFILE_EFFECT),
+        F = e => T(e, n.CollectiblesItemType.PROFILE_EFFECT),
+        S = (e, t) => {
             let r = p(t),
                 a = F(e).filter(e => {
                     let {
@@ -116,6 +116,6 @@ function(e, t, r) {
                 shopPreviews: a
             }
         },
-        O = e => e.applicationId === s.COLLECTIBLES_APPLICATION_ID,
-        y = e => 3.8 * e
+        _ = e => e.applicationId === s.COLLECTIBLES_APPLICATION_ID,
+        O = e => 3.8 * e
 }

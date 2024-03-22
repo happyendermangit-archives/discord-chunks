@@ -20,8 +20,8 @@ function(e, t, n) {
     }
 
     function u() {
-        let e = (0, l.default)([a.default], () => a.default.getGuilds()),
-            t = (0, l.default)([r.default], () => r.default.getSounds());
+        let e = (0, l.useStateFromStores)([a.default], () => a.default.getGuilds()),
+            t = (0, l.useStateFromStores)([r.default], () => r.default.getSounds());
         return (0, i.useMemo)(() => o(e, t), [e, t])
     }
 

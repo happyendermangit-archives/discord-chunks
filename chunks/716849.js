@@ -2,7 +2,7 @@ function(e, t, i) {
     "use strict";
     i.r(t), i.d(t, {
         NON_SUBSCRIBER_SENTINEL: function() {
-            return m
+            return h
         },
         maybeFetchPremiumLikelihood: function() {
             return I
@@ -22,8 +22,8 @@ function(e, t, i) {
         d = i("719923"),
         f = i("676572"),
         S = i("646718"),
-        h = i("49111");
-    let m = "nonSubscriber";
+        m = i("49111");
+    let h = "nonSubscriber";
     async function E() {
         try {
             a.default.dispatch({
@@ -32,13 +32,13 @@ function(e, t, i) {
             let {
                 body: e
             } = await s.HTTP.get({
-                url: h.Endpoints.USER_PREMIUM_LIKELIHOOD
+                url: m.Endpoints.USER_PREMIUM_LIKELIHOOD
             });
             a.default.dispatch({
                 type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS",
                 premiumLikelihood: function(e) {
                     return {
-                        [m]: e.non_subscriber,
+                        [h]: e.non_subscriber,
                         [S.PremiumSubscriptionSKUs.TIER_0]: e[S.PremiumSubscriptionSKUs.TIER_0],
                         [S.PremiumSubscriptionSKUs.TIER_2]: e[S.PremiumSubscriptionSKUs.TIER_2]
                     }
@@ -73,7 +73,7 @@ function(e, t, i) {
             location: "443cca_2"
         }, {
             autoTrackExposure: !1
-        }), s = (0, n.default)([f.default], () => f.default.shouldFetchPremiumLikelihood()), a = (0, n.default)([u.default], () => u.default.getCurrentUser());
+        }), s = (0, n.useStateFromStores)([f.default], () => f.default.shouldFetchPremiumLikelihood()), a = (0, n.useStateFromStores)([u.default], () => u.default.getCurrentUser());
         r.useEffect(() => {
             k(a, s, t, i)
         }, [a, s, t, i])

@@ -4,7 +4,7 @@ function(e, _, E) {
         statesWillNeverBeEqual: function() {
             return a
         },
-        default: function() {
+        useStateFromStores: function() {
             return i
         },
         useStateFromStoresObject: function() {

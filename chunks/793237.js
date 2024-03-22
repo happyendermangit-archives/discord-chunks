@@ -221,7 +221,7 @@ function(e, t, n) {
             } = e;
             return ! function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-                    t = (0, s.default)([c.default], () => c.default.isConnected()),
+                    t = (0, s.useStateFromStores)([c.default], () => c.default.isConnected()),
                     n = i.useMemo(() => e.join(","), [e]);
                 i.useEffect(() => {
                     t && e();

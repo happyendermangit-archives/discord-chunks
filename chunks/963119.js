@@ -22,9 +22,9 @@ function(e, t, n) {
                     explicitContentFriendDm: c,
                     explicitContentNonFriendDm: f
                 } = (0, u.useExplicitContentSettingOrDefault)(),
-                p = (0, i.default)([a.default], () => a.default.getFriendIDs().includes(t)),
-                m = (0, i.default)([s.default], () => s.default.getCurrentUser()),
-                h = (0, i.default)([l.default], () => {
+                p = (0, i.useStateFromStores)([a.default], () => a.default.getFriendIDs().includes(t)),
+                m = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
+                h = (0, i.useStateFromStores)([l.default], () => {
                     let t = l.default.getChannel(e);
                     return null != t && t.isPrivate()
                 });
@@ -35,7 +35,7 @@ function(e, t, n) {
                 {
                     explicitContentGuilds: t
                 } = (0, u.useExplicitContentSettingOrDefault)(),
-                n = (0, i.default)([s.default], () => s.default.getCurrentUser());
+                n = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser());
             return !!e && null != n && (0, o.getShouldObscureForSetting)(t)
         }
 }

@@ -18,31 +18,31 @@ function(t, e, n) {
             skuIDs: n,
             currentPaymentSourceId: s,
             isGift: c
-        } = t, d = i.useMemo(() => n.filter(t => !o.ACTIVE_PREMIUM_SKUS.includes(t)), [JSON.stringify(n)]), S = (0, r.default)([a.default], () => d.every(t => !a.default.isFetching(t) && null != a.default.get(t))), E = (0, r.useStateFromStoresObject)([a.default], () => {
+        } = t, S = i.useMemo(() => n.filter(t => !o.ACTIVE_PREMIUM_SKUS.includes(t)), [JSON.stringify(n)]), d = (0, r.useStateFromStores)([a.default], () => S.every(t => !a.default.isFetching(t) && null != a.default.get(t))), E = (0, r.useStateFromStoresObject)([a.default], () => {
             let t = {};
-            for (let n of d) {
+            for (let n of S) {
                 var e;
                 t[n] = null !== (e = a.default.get(n)) && void 0 !== e ? e : void 0
             }
             return t
-        }, [d]);
+        }, [S]);
         i.useEffect(() => {
-            for (let t of d) !a.default.isFetching(t) && null == a.default.get(t) && (0, u.fetchSKU)(e, t)
-        }, [e, d]);
+            for (let t of S) !a.default.isFetching(t) && null == a.default.get(t) && (0, u.fetchSKU)(e, t)
+        }, [e, S]);
         let f = (0, r.useStateFromStoresObject)([l.default], () => {
             let t = {};
-            for (let n of d) {
+            for (let n of S) {
                 var e;
                 t[n] = null !== (e = l.default.getPricesForSku(n)) && void 0 !== e ? e : void 0
             }
             return t
-        }, [d]);
+        }, [S]);
         return i.useEffect(() => {
-            for (let t of d) !l.default.isFetchingSKU(t) && (0, u.fetchPurchasePreview)(e, t, s, {
+            for (let t of S) !l.default.isFetchingSKU(t) && (0, u.fetchPurchasePreview)(e, t, s, {
                 isGift: c
             })
-        }, [e, d, s, c]), {
-            hasFetchedSkus: S,
+        }, [e, S, s, c]), {
+            hasFetchedSkus: d,
             skusById: E,
             skuPricePreviewsById: f
         }

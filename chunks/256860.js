@@ -43,8 +43,8 @@ function(e, t, i) {
         d = i("697218"),
         f = i("427459"),
         S = i("991170"),
-        h = i("866353"),
-        m = i("467094"),
+        m = i("866353"),
+        h = i("467094"),
         E = i("865372"),
         I = i("364685"),
         p = i("161585"),
@@ -55,7 +55,7 @@ function(e, t, i) {
             R();
             let t = (0, n.useStateFromStores)([I.default], () => I.default.hasLoadedStickerPacks);
             r.useEffect(() => {
-                t && null == I.default.getStickerPack(e) && (0, m.fetchStickerPack)(e)
+                t && null == I.default.getStickerPack(e) && (0, h.fetchStickerPack)(e)
             }, [e, t])
         },
         v = e => {
@@ -76,8 +76,8 @@ function(e, t, i) {
                 let e = Math.floor((a - n + l) / (o + l)),
                     r = Math.floor(Math.max(l, (a - n - o * e) / (e - 1))),
                     S = [],
-                    h = [],
                     m = [],
+                    h = [],
                     E = 0,
                     I = 0,
                     C = 0;
@@ -94,7 +94,7 @@ function(e, t, i) {
                             v = t.length;
                         null != n && l === n.id && a && t.length < (0, f.getTotalStickerCountForTier)(n.premiumTier) && v++;
                         let y = Math.ceil(v / e);
-                        h[I] = r ? 0 : y;
+                        m[I] = r ? 0 : y;
                         for (let s = 0; s < y; s++) {
                             let a = s * e,
                                 l = a + e,
@@ -116,18 +116,18 @@ function(e, t, i) {
                                 rowIndex: E,
                                 columnIndex: u.length,
                                 visibleRowIndex: C
-                            }), !r && (C++, m.push(u), S.push(u.length)), E++
+                            }), !r && (C++, h.push(u), S.push(u.length)), E++
                         }
                         I++
                     };
                     if (null == i)
-                        for (let e of d) e.stickers.length > 0 ? (E++, r(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === p.StickerCategoryTypes.EMPTY_GUILD_UPSELL && (h[I] = 0, I++);
+                        for (let e of d) e.stickers.length > 0 ? (E++, r(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === p.StickerCategoryTypes.EMPTY_GUILD_UPSELL && (m[I] = 0, I++);
                     else i.sendable.length > 0 && r(i.sendable, p.StickerCategoryTypes.SEARCH_RESULTS), i.sendableWithPremium.length > 0 && r(i.sendableWithPremium, p.StickerCategoryTypes.SEARCH_RESULTS)
                 }
                 return {
                     rowCount: E,
-                    rowCountBySection: h,
-                    stickersGrid: m,
+                    rowCountBySection: m,
+                    stickersGrid: h,
                     gutterWidth: r,
                     columnCounts: S
                 }
@@ -138,13 +138,13 @@ function(e, t, i) {
             return (0, n.useStateFromStores)([I.default], () => {
                 let i = I.default.getAllStickersIterator();
                 for (let r of i)
-                    if ((0, h.isSendableSticker)(r, t, e)) return !0;
+                    if ((0, m.isSendableSticker)(r, t, e)) return !0;
                 return !1
             }, [t, e])
         },
         R = () => {
             r.useEffect(() => {
-                (0, m.fetchStickerPacks)()
+                (0, h.fetchStickerPacks)()
             }, [])
         },
         L = e => {
@@ -244,7 +244,7 @@ function(e, t, i) {
                         stickers: null !== (r = null == s ? void 0 : s.filter(t => {
                             if ((0, k.isGuildSticker)(t)) {
                                 var r, n;
-                                return null !== (n = null === (r = I.default.getStickersByGuildId(t.guild_id)) || void 0 === r ? void 0 : r.some(e => e.id === t.id)) && void 0 !== n && n && (0, h.getStickerSendability)(t, a, e) !== h.StickerSendability.NONSENDABLE
+                                return null !== (n = null === (r = I.default.getStickersByGuildId(t.guild_id)) || void 0 === r ? void 0 : r.some(e => e.id === t.id)) && void 0 !== n && n && (0, m.getStickerSendability)(t, a, e) !== m.StickerSendability.NONSENDABLE
                             }
                             if ((0, k.isStandardSticker)(t)) return i.some(e => e.id === t.pack_id)
                         })) && void 0 !== r ? r : []
@@ -263,7 +263,7 @@ function(e, t, i) {
                     if (t && !c && null == i && s && !l) {
                         a(!1);
                         try {
-                            await (0, m.fetchSticker)(e.id)
+                            await (0, h.fetchSticker)(e.id)
                         } catch {}
                         u(!0)
                     }

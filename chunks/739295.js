@@ -14,7 +14,7 @@ function(t, e, n) {
             return c
         },
         fetchEligibleApplicationSubscriptionGuilds: function() {
-            return d
+            return S
         }
     });
     var i = n("872717"),
@@ -58,7 +58,7 @@ function(t, e, n) {
             applicationId: t
         }), Promise.reject(new u.default(e))))
     }
-    async function d(t) {
+    async function S(t) {
         let e = await i.HTTP.get({
             url: l.Endpoints.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
             query: {

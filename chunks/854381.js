@@ -17,17 +17,17 @@ function(t, e, n) {
             activeSubscription: o,
             skuIDs: s,
             paymentSourceId: c,
-            isGift: d
+            isGift: S
         } = t;
         s = s.filter(t => t !== l.PremiumSubscriptionSKUs.NONE);
-        let S = (0, i.useStateFromStores)([r.default], () => {
-                let t = r.default.getPlanIdsForSkus(s).filter(t => !d || l.PREMIUM_PLANS.has(t));
+        let d = (0, i.useStateFromStores)([r.default], () => {
+                let t = r.default.getPlanIdsForSkus(s).filter(t => !S || l.PREMIUM_PLANS.has(t));
                 return t.length > 0 ? r.default.get(t[0]) : null
             }),
-            E = null == S ? [] : (0, u.getCurrencies)(S.id, c, d),
+            E = null == d ? [] : (0, u.getCurrencies)(d.id, c, S),
             f = null !== (n = null !== (e = E.find(t => t === (null == o ? void 0 : o.currency))) && void 0 !== e ? e : E[0]) && void 0 !== n ? n : a.CurrencyCodes.USD;
         return {
-            ...(0, u.useCurrencyWithPaymentSourceChange)(f, null == S ? void 0 : S.id, c, d, s),
+            ...(0, u.useCurrencyWithPaymentSourceChange)(f, null == d ? void 0 : d.id, c, S, s),
             currencies: E
         }
     }

@@ -39,7 +39,7 @@ function(e, t, n) {
     }
 
     function m(e) {
-        let t = (0, r.default)([u.default], () => u.default.getGuild(e)),
+        let t = (0, r.useStateFromStores)([u.default], () => u.default.getGuild(e)),
             n = (0, _.default)(t),
             {
                 homeSettingsEnabled: i
@@ -49,9 +49,9 @@ function(e, t, n) {
             }, {
                 autoTrackExposure: !1
             }),
-            d = (0, r.default)([o.default], () => o.default.isFullServerPreview(e)),
+            d = (0, r.useStateFromStores)([o.default], () => o.default.isFullServerPreview(e)),
             m = (0, f.default)(e),
-            p = (0, r.default)([l.default], () => l.default.getMutableGuildChannelsForGuild(e));
+            p = (0, r.useStateFromStores)([l.default], () => l.default.getMutableGuildChannelsForGuild(e));
         if (null == t || __OVERLAY__ || e === E.ME || e === E.FAVORITES) return !1;
         if (d) return g(t);
         let S = i && (0, a.isGuildOnboardingSettingsAvailable)(e) && t.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(E.GuildFeatures.GUILD_SERVER_GUIDE),

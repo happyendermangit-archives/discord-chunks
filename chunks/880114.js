@@ -24,7 +24,7 @@ function(e, t, n) {
             textClassName: p,
             guild: m,
             guildMember: h
-        } = e, x = (0, l.default)([r.default], () => r.default.locale), E = null != m && null != h;
+        } = e, x = (0, l.useStateFromStores)([r.default], () => r.default.locale), E = null != m && null != h;
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(a.Heading, {
                 variant: "eyebrow",

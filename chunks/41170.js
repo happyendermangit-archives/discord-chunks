@@ -19,8 +19,8 @@ function(e, t, i) {
         d = i("290381"),
         f = i("77078"),
         S = i("206230"),
-        h = i("407063"),
-        m = i("54560"),
+        m = i("407063"),
+        h = i("54560"),
         E = i("983782"),
         I = i("866190"),
         p = i("256860"),
@@ -70,7 +70,7 @@ function(e, t, i) {
                 },
                 children: [i ? (0, r.jsxs)("div", {
                     className: T.error,
-                    children: [(0, r.jsx)(m.default, {
+                    children: [(0, r.jsx)(h.default, {
                         className: T.errorIcon
                     }), c && (0, r.jsx)(f.Text, {
                         className: T.errorText,
@@ -94,14 +94,14 @@ function(e, t, i) {
                 className: d,
                 maskAsset: f,
                 positionRef: S,
-                withLoadingIndicator: m,
+                withLoadingIndicator: h,
                 onError: E
             } = e, I = n.useRef(null), p = n.useRef(null), [k, v] = n.useState(!0), [y, _] = n.useState(!1), A = n.useRef(!1);
             A.current = t && o;
             let P = null == l ? (0, C.getStickerAssetUrl)(a) : l;
             return (u(null != P, "Unable to determine sticker asset URL. Sticker ID: ".concat(a.id)), n.useEffect(() => {
                 if (null == I.current || null == P) return;
-                let e = Math.min(2, (0, h.getDevicePixelRatio)());
+                let e = Math.min(2, (0, m.getDevicePixelRatio)());
                 I.current.width = s * e, I.current.height = s * e;
                 let t = !1,
                     r = async () => {
@@ -139,7 +139,7 @@ function(e, t, i) {
                     isLoading: k,
                     maskAsset: f,
                     size: s,
-                    withLoadingIndicator: m,
+                    withLoadingIndicator: h,
                     children: R((0, r.jsx)("canvas", {
                         className: T.lottieCanvas,
                         ref: I
@@ -158,8 +158,8 @@ function(e, t, i) {
                 positionRef: o,
                 withLoadingIndicator: f,
                 fileUri: S
-            } = e, [h, m] = n.useState(!1), [E, I] = n.useState(!0), [p, k] = n.useState(!1), g = n.useRef(null), y = n.useRef(null), _ = null != S ? S : (0, C.getStickerAssetUrl)(i, {
-                isPreview: !t || !h || !s,
+            } = e, [m, h] = n.useState(!1), [E, I] = n.useState(!0), [p, k] = n.useState(!1), g = n.useRef(null), y = n.useRef(null), _ = null != S ? S : (0, C.getStickerAssetUrl)(i, {
+                isPreview: !t || !m || !s,
                 size: l
             }), A = n.useCallback(() => {
                 I(!1)
@@ -171,14 +171,14 @@ function(e, t, i) {
                     let {
                         isVisible: e
                     } = g.current;
-                    m(e)
+                    h(e)
                 }
             }, []), n.useLayoutEffect(() => {
                 var e;
                 (null === (e = y.current) || void 0 === e ? void 0 : e.complete) === !0 && I(!1)
             }, []), null == _) ? null : (0, r.jsx)(d.VisibilitySensor, {
                 ref: g,
-                onChange: m,
+                onChange: h,
                 threshold: .7,
                 children: (0, r.jsx)("div", {
                     className: a(u, T.pngImageWrapper),
@@ -212,11 +212,11 @@ function(e, t, i) {
                 positionRef: l,
                 size: u,
                 sticker: d
-            } = e, h = (0, o.useStateFromStores)([S.default], () => S.default.useReducedMotion), m = n.useRef(null), I = {
-                transform: "scale(".concat(h ? 1 : 1 / i, ")"),
+            } = e, m = (0, o.useStateFromStores)([S.default], () => S.default.useReducedMotion), h = n.useRef(null), I = {
+                transform: "scale(".concat(m ? 1 : 1 / i, ")"),
                 opacity: 0
             }, p = (0, c.useTransition)(a, {
-                ref: m,
+                ref: h,
                 from: I,
                 enter: {
                     transform: "scale(1)",
@@ -226,11 +226,11 @@ function(e, t, i) {
                 config: y
             }), k = n.useRef(null), C = (0, c.useSpring)({
                 ref: k,
-                transform: a || h ? "translateY(0)" : "translateY(-25px)",
+                transform: a || m ? "translateY(0)" : "translateY(-25px)",
                 opacity: a ? 1 : 0,
                 config: _
             });
-            return (0, c.useChain)(a ? [m, k] : [k, m], a ? [0, .0625] : [0, 0]), p((e, n) => n && (0, r.jsx)(E.AppReferencePositionLayer, {
+            return (0, c.useChain)(a ? [h, k] : [k, h], a ? [0, .0625] : [0, 0]), p((e, n) => n && (0, r.jsx)(E.AppReferencePositionLayer, {
                 className: T.positionedLayer,
                 fixed: !0,
                 align: "center",
@@ -276,8 +276,8 @@ function(e, t, i) {
                 className: d,
                 withLoadingIndicator: f,
                 assetData: S,
-                fileUri: h,
-                onError: m
+                fileUri: m,
+                onError: h
             } = e, E = (0, I.useIsWindowFocused)(), C = (0, p.useShouldAnimateSticker)(t) && !i, g = n.useRef(null);
             if (null == o) return null;
             let T = o.format_type === k.StickerFormat.LOTTIE ? A : P;
@@ -292,8 +292,8 @@ function(e, t, i) {
                     positionRef: g,
                     withLoadingIndicator: f,
                     assetData: S,
-                    fileUri: h,
-                    onError: m
+                    fileUri: m,
+                    onError: h
                 }), s && (0, r.jsx)(U, {
                     disableAnimation: i,
                     enlargeScaleFactor: l,

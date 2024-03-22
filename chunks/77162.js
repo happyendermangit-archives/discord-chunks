@@ -16,8 +16,8 @@ function(e, t, i) {
         d = i("997289"),
         f = i("246511"),
         S = i("151185"),
-        h = i("599110"),
-        m = i("866353"),
+        m = i("599110"),
+        h = i("866353"),
         E = i("161585"),
         I = i("24373"),
         p = i("41170"),
@@ -92,7 +92,7 @@ function(e, t, i) {
                                     onFocus: null != b ? b : _,
                                     onMouseMove: _,
                                     onClick: () => {
-                                        e.type === E.StickerGridItemTypes.CREATE_STICKER && (h.default.track(C.AnalyticEvents.OPEN_MODAL, {
+                                        e.type === E.StickerGridItemTypes.CREATE_STICKER && (m.default.track(C.AnalyticEvents.OPEN_MODAL, {
                                             type: C.AnalyticsSections.CREATE_STICKER_MODAL,
                                             location: H
                                         }), (0, c.openModalLazy)(async () => {
@@ -159,7 +159,7 @@ function(e, t, i) {
                                         className: a(T.stickerNode, {
                                             [T.stickerNodeDimmed]: O && !v && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
                                             [T.stickerNodeHidden]: y,
-                                            [T.stickerUnsendable]: D && !(0, m.isSendableSticker)(e.sticker, G, j)
+                                            [T.stickerUnsendable]: D && !(0, h.isSendableSticker)(e.sticker, G, j)
                                         }),
                                         disableAnimation: !v && !s,
                                         enlargeOnInteraction: O,

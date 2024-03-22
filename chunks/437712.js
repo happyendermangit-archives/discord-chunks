@@ -13,8 +13,8 @@ function(t, e, n) {
         o = n("686470"),
         s = n("964889"),
         c = n("552712");
-    let d = {},
-        S = {},
+    let S = {},
+        d = {},
         E = {},
         f = {},
         _ = !1,
@@ -24,11 +24,11 @@ function(t, e, n) {
         p = {};
 
     function C(t) {
-        d[t.id] = a.default.createFromServer(t), null == E[t.sku_id] && (E[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == p[t.subscription_id] && (p[t.subscription_id] = new Set), p[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), E[t.sku_id].add(t.id)
+        S[t.id] = a.default.createFromServer(t), null == E[t.sku_id] && (E[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == p[t.subscription_id] && (p[t.subscription_id] = new Set), p[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), E[t.sku_id].add(t.id)
     }
 
     function P(t) {
-        S[t.id] = a.default.createFromServer(t)
+        d[t.id] = a.default.createFromServer(t)
     }
 
     function N(t) {
@@ -39,23 +39,23 @@ function(t, e, n) {
             this.syncWith([o.default], () => !0)
         }
         get(t) {
-            return d[t]
+            return S[t]
         }
         getGiftable() {
-            return r.values(S)
+            return r.values(d)
         }
         getForApplication(t) {
             let e = f[t];
             if (null == e) return null;
             let n = new Set;
-            for (let t of e) n.add(d[t]);
+            for (let t of e) n.add(S[t]);
             return n
         }
         getForSku(t) {
             let e = E[t];
             if (null == e) return null;
             let n = new Set;
-            for (let t of e) n.add(d[t]);
+            for (let t of e) n.add(S[t]);
             return n
         }
         get fetchingAllEntitlements() {
@@ -80,7 +80,7 @@ function(t, e, n) {
             let e = p[t];
             if (null == e) return null;
             let n = new Set;
-            for (let t of e) n.add(d[t]);
+            for (let t of e) n.add(S[t]);
             return n
         }
         isEntitledToSku(t, e, n) {
@@ -88,7 +88,7 @@ function(t, e, n) {
                 r = E[e];
             if (null != r)
                 for (let e of r) {
-                    let n = d[e];
+                    let n = S[e];
                     if (null != n && n.isValid(t, c.default, i)) return !0
                 }
             if (A.has(n)) return !1;
@@ -119,7 +119,7 @@ function(t, e, n) {
             let {
                 entitlements: e
             } = t;
-            S = {}, e.forEach(P)
+            d = {}, e.forEach(P)
         },
         SKU_PURCHASE_SUCCESS: function(t) {
             let {
@@ -139,7 +139,7 @@ function(t, e, n) {
         ENTITLEMENT_UPDATE: N,
         ENTITLEMENT_DELETE: function(t) {
             return function(t) {
-                delete d[t.id];
+                delete S[t.id];
                 let e = f[t.application_id];
                 null != e && e.delete(t.id);
                 let n = E[t.sku_id];
@@ -150,7 +150,7 @@ function(t, e, n) {
             }(t.entitlement)
         },
         LOGOUT: function() {
-            d = {}, E = {}, f = {}, _ = !1, T = !1, I = new Set, A = new Set
+            S = {}, E = {}, f = {}, _ = !1, T = !1, I = new Set, A = new Set
         },
         ENTITLEMENTS_FETCH_FOR_USER_START: function() {
             _ = !0
