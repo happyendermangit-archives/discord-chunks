@@ -328,6 +328,13 @@ function(e, _, E) {
         PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_5: "No Text to Speech?",
         PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6: "How about you give thanks to your mail delivery person",
         PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6_ANSWER_1: "Okay",
-        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_7: "You're welcome :)"
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_7: "You're welcome :)",
+        SIGNUP_BUTTON_TOOLTIP_CTA: "Click to learn more",
+        SIGNUP_COMPLETE_CTA: "Sign Up",
+        SIGNUP_EMAIL_PROMPT: "Enter your email to secure your spot on the waitlist.",
+        SIGNUP_EMAIL_PLACEHOLDER: "wumpus@example.com",
+        SIGNUP_EMAIL_ERROR: "We're unable to verify that email address. Please try another",
+        SIGNUP_COMPLETED_TITLE: "Thank you for your interest!",
+        SIGNUP_COMPLETED_DESCRIPTION: "We will get back to you once it's available."
     })
 }

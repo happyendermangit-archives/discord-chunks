@@ -1,173 +1,173 @@
-function(e, t, r) {
+function(e, t, i) {
     "use strict";
-    r.r(t), r.d(t, {
+    i.r(t), i.d(t, {
         default: function() {
-            return _
+            return R
         }
     });
-    var i = r("37983"),
-        n = r("884691"),
-        s = r("414456"),
-        a = r.n(s),
-        l = r("917351"),
-        c = r("617258"),
-        u = r("77078"),
-        d = r("272030"),
-        o = r("997289"),
-        f = r("246511"),
-        S = r("151185"),
-        k = r("599110"),
-        E = r("866353"),
-        p = r("161585"),
-        I = r("24373"),
-        h = r("41170"),
-        m = r("591522"),
-        y = r("49111"),
-        g = r("782340"),
-        T = r("677930");
-    let C = (0, c.cssValueToNumber)(T.stickerPickerPreviewDimensions),
-        v = (0, c.cssValueToNumber)(T.stickerPickerPreviewPadding),
-        R = n.memo(function(e) {
+    var r = i("37983"),
+        n = i("884691"),
+        s = i("414456"),
+        a = i.n(s),
+        l = i("917351"),
+        u = i("617258"),
+        c = i("77078"),
+        o = i("272030"),
+        d = i("997289"),
+        f = i("246511"),
+        S = i("151185"),
+        m = i("599110"),
+        h = i("866353"),
+        E = i("161585"),
+        I = i("24373"),
+        p = i("41170"),
+        k = i("591522"),
+        C = i("49111"),
+        g = i("782340"),
+        T = i("677930");
+    let v = (0, u.cssValueToNumber)(T.stickerPickerPreviewDimensions),
+        y = (0, u.cssValueToNumber)(T.stickerPickerPreviewPadding),
+        _ = n.memo(function(e) {
             let {
                 isDisplayingIndividualStickers: t = !1,
                 preferAnimation: s = !0,
-                getStickerItemProps: c,
-                getStickerRowProps: R,
-                gutterWidth: _,
-                inspectedStickerPosition: A,
+                getStickerItemProps: u,
+                getStickerRowProps: _,
+                gutterWidth: R,
+                inspectedStickerPosition: L,
                 isScrolling: x,
-                isUsingKeyboardNavigation: L,
-                onInspect: N,
-                onSelect: M,
-                rowIndex: P,
-                stickerClassName: F,
-                stickerDescriptors: w,
-                stickerPadding: b = v,
-                stickerSize: j = C,
-                ownedStickerPacks: U,
-                enlargeOnInteraction: G = !1,
-                channel: K,
-                currentUser: O,
+                isUsingKeyboardNavigation: A,
+                onInspect: P,
+                onSelect: U,
+                rowIndex: M,
+                stickerClassName: N,
+                stickerDescriptors: F,
+                stickerPadding: b = y,
+                stickerSize: w = v,
+                ownedStickerPacks: K,
+                enlargeOnInteraction: O = !1,
+                channel: j,
+                currentUser: G,
                 checkSendability: D = !0
             } = e, {
-                location: V
-            } = (0, o.useAnalyticsContext)(), H = j + 2 * b, z = n.useMemo(() => ({
-                gridColumnGap: _,
-                gridTemplateColumns: "repeat(auto-fill, ".concat(H, "px)"),
-                height: H,
-                paddingRight: t ? void 0 : H
-            }), [t, _, H]), W = n.useMemo(() => ({
-                width: j,
-                height: j,
+                location: H
+            } = (0, d.useAnalyticsContext)(), V = w + 2 * b, B = n.useMemo(() => ({
+                gridColumnGap: R,
+                gridTemplateColumns: "repeat(auto-fill, ".concat(V, "px)"),
+                height: V,
+                paddingRight: t ? void 0 : V
+            }), [t, R, V]), z = n.useMemo(() => ({
+                width: w,
+                height: w,
                 padding: b
-            }), [b, j]);
-            return (0, i.jsx)("div", {
+            }), [b, w]);
+            return (0, r.jsx)("div", {
                 className: T.row,
-                style: z,
-                ...null == R ? void 0 : R(P),
-                children: w.map(e => {
-                    var o;
-                    let C = e.visibleRowIndex === (null == A ? void 0 : A.rowIndex) && e.columnIndex === (null == A ? void 0 : A.columnIndex),
-                        v = e.type === p.StickerGridItemTypes.STICKER && G && C,
-                        R = (0, l.throttle)(() => {
-                            (null == x ? void 0 : x.current) !== !0 && (null == L ? void 0 : L.current) !== !0 && !C && (null == N || N(e))
+                style: B,
+                ...null == _ ? void 0 : _(M),
+                children: F.map(e => {
+                    var d;
+                    let v = e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) && e.columnIndex === (null == L ? void 0 : L.columnIndex),
+                        y = e.type === E.StickerGridItemTypes.STICKER && O && v,
+                        _ = (0, l.throttle)(() => {
+                            (null == x ? void 0 : x.current) !== !0 && (null == A ? void 0 : A.current) !== !0 && !v && (null == P || P(e))
                         }, 250),
                         {
-                            ref: _,
-                            tabIndex: w,
+                            ref: R,
+                            tabIndex: F,
                             onFocus: b,
-                            ...H
-                        } = null !== (o = null == c ? void 0 : c(e.columnIndex, P)) && void 0 !== o ? o : {};
+                            ...V
+                        } = null !== (d = null == u ? void 0 : u(e.columnIndex, M)) && void 0 !== d ? d : {};
                     switch (e.type) {
-                        case p.StickerGridItemTypes.CREATE_STICKER:
-                            return (0, i.jsx)("div", {
-                                ...H,
-                                children: (0, i.jsxs)(u.Clickable, {
+                        case E.StickerGridItemTypes.CREATE_STICKER:
+                            return (0, r.jsx)("div", {
+                                ...V,
+                                children: (0, r.jsxs)(c.Clickable, {
                                     "aria-label": e.name,
-                                    className: a(T.createSticker, F, {
-                                        [T.createInspected]: C
+                                    className: a(T.createSticker, N, {
+                                        [T.createInspected]: v
                                     }),
-                                    innerRef: _,
-                                    tabIndex: w,
-                                    onFocus: null != b ? b : R,
-                                    onMouseMove: R,
+                                    innerRef: R,
+                                    tabIndex: F,
+                                    onFocus: null != b ? b : _,
+                                    onMouseMove: _,
                                     onClick: () => {
-                                        e.type === p.StickerGridItemTypes.CREATE_STICKER && (k.default.track(y.AnalyticEvents.OPEN_MODAL, {
-                                            type: y.AnalyticsSections.CREATE_STICKER_MODAL,
-                                            location: V
-                                        }), (0, u.openModalLazy)(async () => {
+                                        e.type === E.StickerGridItemTypes.CREATE_STICKER && (m.default.track(C.AnalyticEvents.OPEN_MODAL, {
+                                            type: C.AnalyticsSections.CREATE_STICKER_MODAL,
+                                            location: H
+                                        }), (0, c.openModalLazy)(async () => {
                                             let {
                                                 default: t
-                                            } = await r.el("54666").then(r.bind(r, "54666"));
-                                            return r => (0, i.jsx)(t, {
+                                            } = await i.el("54666").then(i.bind(i, "54666"));
+                                            return i => (0, r.jsx)(t, {
                                                 guildId: e.guild_id,
-                                                ...r
+                                                ...i
                                             })
                                         }))
                                     },
-                                    style: W,
-                                    children: [!G && (0, i.jsx)("div", {
+                                    style: z,
+                                    children: [!O && (0, r.jsx)("div", {
                                         className: T.inspectedIndicator
-                                    }), (0, i.jsx)("div", {
+                                    }), (0, r.jsx)("div", {
                                         className: T.iconWrapper,
-                                        children: (0, i.jsx)(S.default, {
+                                        children: (0, r.jsx)(S.default, {
                                             className: T.icon
                                         })
-                                    }), (0, i.jsx)(u.Text, {
+                                    }), (0, r.jsx)(c.Text, {
                                         color: "interactive-active",
                                         variant: "text-xs/normal",
                                         children: g.default.Messages.STICKER_PICKER_CREATE_STICKER
                                     })]
                                 })
                             }, e.guild_id);
-                        case p.StickerGridItemTypes.STICKER: {
-                            let l = t && null != U && (0, I.isStandardSticker)(e.sticker) && !U.has(e.sticker.pack_id);
+                        case E.StickerGridItemTypes.STICKER: {
+                            let l = t && null != K && (0, I.isStandardSticker)(e.sticker) && !K.has(e.sticker.pack_id);
                             return (0, n.createElement)("div", {
-                                ...H,
+                                ...V,
                                 key: e.sticker.id
-                            }, (0, i.jsxs)(u.Clickable, {
-                                className: a(T.sticker, F, {
-                                    [T.stickerInspected]: C
+                            }, (0, r.jsxs)(c.Clickable, {
+                                className: a(T.sticker, N, {
+                                    [T.stickerInspected]: v
                                 }),
-                                innerRef: _,
-                                tabIndex: w,
-                                onFocus: null != b ? b : R,
-                                onMouseMove: R,
+                                innerRef: R,
+                                tabIndex: F,
+                                onFocus: null != b ? b : _,
+                                onMouseMove: _,
                                 onClick: t => {
-                                    (null == x ? void 0 : x.current) !== !0 && (null == L ? void 0 : L.current) !== !0 && (null == M || M(e, t))
+                                    (null == x ? void 0 : x.current) !== !0 && (null == A ? void 0 : A.current) !== !0 && (null == U || U(e, t))
                                 },
                                 onContextMenu: e => {
-                                    (0, d.openContextMenuLazy)(e, async () => {
+                                    (0, o.openContextMenuLazy)(e, async () => {
                                         let {
                                             default: e
-                                        } = await r.el("367343").then(r.bind(r, "367343"));
-                                        return t => (0, i.jsx)(e, {
+                                        } = await i.el("367343").then(i.bind(i, "367343"));
+                                        return t => (0, r.jsx)(e, {
                                             ...t
                                         })
                                     })
                                 },
-                                style: W,
+                                style: z,
                                 "data-type": f.PickerContextMenuDataTypes.STICKER,
                                 "data-id": e.sticker.id,
-                                children: [(0, i.jsx)(u.HiddenVisually, {
-                                    children: (0, h.getStickerAltText)(e.sticker)
-                                }), (0, i.jsxs)("div", {
+                                children: [(0, r.jsx)(c.HiddenVisually, {
+                                    children: (0, p.getStickerAltText)(e.sticker)
+                                }), (0, r.jsxs)("div", {
                                     "aria-hidden": !0,
-                                    children: [!G && (0, i.jsx)("div", {
+                                    children: [!O && (0, r.jsx)("div", {
                                         className: T.inspectedIndicator
-                                    }), (0, i.jsx)(h.default, {
+                                    }), (0, r.jsx)(p.default, {
                                         className: a(T.stickerNode, {
-                                            [T.stickerNodeDimmed]: G && !C && null != A && -1 !== A.rowIndex && -1 !== A.columnIndex,
-                                            [T.stickerNodeHidden]: v,
-                                            [T.stickerUnsendable]: D && !(0, E.isSendableSticker)(e.sticker, O, K)
+                                            [T.stickerNodeDimmed]: O && !v && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
+                                            [T.stickerNodeHidden]: y,
+                                            [T.stickerUnsendable]: D && !(0, h.isSendableSticker)(e.sticker, G, j)
                                         }),
-                                        disableAnimation: !C && !s,
-                                        enlargeOnInteraction: G,
-                                        isInteracting: C,
-                                        maskAsset: C,
+                                        disableAnimation: !v && !s,
+                                        enlargeOnInteraction: O,
+                                        isInteracting: v,
+                                        maskAsset: v,
                                         sticker: e.sticker,
-                                        size: j
-                                    }), l ? (0, i.jsx)(m.default, {
+                                        size: w
+                                    }), l ? (0, r.jsx)(k.default, {
                                         size: 20
                                     }) : null]
                                 })]
@@ -177,5 +177,5 @@ function(e, t, r) {
                 })
             })
         });
-    var _ = R
+    var R = _
 }

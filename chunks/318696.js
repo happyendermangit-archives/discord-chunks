@@ -3,10 +3,10 @@ function(N, I, A) {
     let O, T;
     A.r(I), A.d(I, {
         setLocale: function() {
-            return t
+            return i
         },
         updateLocaleLoadingStatus: function() {
-            return n
+            return t
         }
     }), A("424973"), A("222007"), A("860677");
     var _ = A("913144"),
@@ -15,11 +15,11 @@ function(N, I, A) {
     O = A("792788").default;
     let V = !1;
 
-    function t(N) {
-        T = E.default.loadPromise, O && O.setLocale(N), E.default.setLocale(N), n(N)
+    function i(N) {
+        T = E.default.loadPromise, O && O.setLocale(N), E.default.setLocale(N), t(N)
     }
 
-    function n(N) {
+    function t(N) {
         let I = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (V && E.default.loadPromise === T) return;
         V = !0, I ? (0, e.setLocaleHack)(N) : _.default.dispatch({
@@ -28,9 +28,9 @@ function(N, I, A) {
         });
         let A = [E.default.loadPromise];
         O && A.push(O.loadPromise);
-        let t = Promise.all(A);
+        let i = Promise.all(A);
         setImmediate(() => {
-            t.then(() => {
+            i.then(() => {
                 _.default.dispatch({
                     type: "I18N_LOAD_SUCCESS",
                     locale: N

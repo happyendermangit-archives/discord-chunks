@@ -60,7 +60,7 @@ function(e, t, n) {
             disableUserProfileLink: K = __OVERLAY__,
             analyticsParams: W = {},
             newAnalyticsLocations: Y = []
-        } = e, z = l.useRef(null), J = (0, O.default)(t.id, n), Z = (0, d.default)(z), q = (0, r.useStateFromStores)([N.default], () => {
+        } = e, z = l.useRef(null), Z = (0, O.default)(t.id, n), J = (0, d.default)(z), q = (0, r.useStateFromStores)([N.default], () => {
             var e;
             return null === (e = N.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
         }), X = (0, r.useStateFromStores)([S.default], () => null != n ? S.default.getGuild(n) : null), Q = (0, r.useStateFromStores)([g.default], () => null != n ? g.default.getMember(n, t.id) : null), $ = t.isNonUserBot(), {
@@ -123,8 +123,8 @@ function(e, t, n) {
                 let o = null != Q ? {
                         has_nickname: !!(null == Q ? void 0 : Q.nick),
                         has_guild_member_avatar: !!(null == Q ? void 0 : Q.avatar),
-                        has_guild_member_banner: !!(null == J ? void 0 : J.isUsingGuildMemberBanner()),
-                        has_guild_member_bio: !!(null == J ? void 0 : J.isUsingGuildMemberBio())
+                        has_guild_member_banner: !!(null == Z ? void 0 : Z.isUsingGuildMemberBanner()),
+                        has_guild_member_bio: !!(null == Z ? void 0 : Z.isUsingGuildMemberBio())
                     } : {},
                     u = null != q ? {
                         other_application_id: null == q ? void 0 : q.id,
@@ -148,10 +148,10 @@ function(e, t, n) {
                     is_streaming: ea,
                     has_custom_status: null != en,
                     has_avatar_decoration: null != t.avatarDecoration,
-                    has_profile_effect: (null == J ? void 0 : J.profileEffectId) != null,
-                    profile_has_nitro_customization: null != J && (null == J ? void 0 : J.hasPremiumCustomization()),
-                    profile_has_theme_color_customized: null != J && J.hasThemeColors(),
-                    profile_has_theme_animation: (null == J ? void 0 : J.popoutAnimationParticleType) != null,
+                    has_profile_effect: (null == Z ? void 0 : Z.profileEffectId) != null,
+                    profile_has_nitro_customization: null != Z && (null == Z ? void 0 : Z.hasPremiumCustomization()),
+                    profile_has_theme_color_customized: null != Z && Z.hasThemeColors(),
+                    profile_has_theme_animation: (null == Z ? void 0 : Z.popoutAnimationParticleType) != null,
                     ...o,
                     ...u,
                     ...W
@@ -176,7 +176,7 @@ function(e, t, n) {
                         showOutOfBoundaryComponents: ec,
                         children: [(0, i.jsx)(b.default, {
                             user: t,
-                            displayProfile: J,
+                            displayProfile: Z,
                             guildId: n,
                             channelId: a,
                             onClose: () => null == B ? void 0 : B(),
@@ -184,11 +184,11 @@ function(e, t, n) {
                             isStreaming: (0, m.default)(et),
                             status: ei,
                             disableUserProfileLink: K,
-                            isHovering: Z,
+                            isHovering: J,
                             upsell: ed.shouldShow ? (0, i.jsx)(L.default, {
                                 user: t,
                                 upsellSource: P.UserPopoutUpsellSource.USER_POPOUT,
-                                displayProfile: J,
+                                displayProfile: Z,
                                 onClose: B,
                                 ...ed
                             }) : void 0
@@ -198,7 +198,7 @@ function(e, t, n) {
                             }), (0, i.jsx)(k.default, {
                                 activity: et,
                                 customStatusActivity: en,
-                                displayProfile: J,
+                                displayProfile: Z,
                                 user: t,
                                 guild: X,
                                 guildMember: Q,
