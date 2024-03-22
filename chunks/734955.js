@@ -92,9 +92,6 @@ function(e, t, n) {
                 operations: n.complete()
             }, t) : Promise.resolve())
         }
-        toString() {
-            return "[Database #".concat(this.handle, ": ").concat(this.name, "]")
-        }
         constructor(e) {
             this.raw = e, this.name = e.name, this.lastState = a.DatabaseState.Open, this.handle = e.handle, this.databaseStateCallback = r.Runtime.addDatabaseStateCallback((e, t) => {
                 this.handle === e && (this.lastState = t)
