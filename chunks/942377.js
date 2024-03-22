@@ -2,24 +2,24 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getHigherExpectedValue: function() {
-            return l
+            return a
         },
         getHighestLikelihood: function() {
-            return a
+            return l
         }
     });
     var r = n("716849"),
         i = n("646718");
 
-    function l(e, t, n) {
+    function a(e, t, n) {
         return null == e ? i.PremiumTypes.TIER_2 : e[i.PremiumSubscriptionSKUs.TIER_0] * t > e[i.PremiumSubscriptionSKUs.TIER_2] * n ? i.PremiumTypes.TIER_0 : i.PremiumTypes.TIER_2
     }
 
-    function a(e) {
+    function l(e) {
         if (null == e) return i.PremiumTypes.TIER_0;
         let t = e[r.NON_SUBSCRIBER_SENTINEL],
             n = e[i.PremiumSubscriptionSKUs.TIER_0],
-            l = e[i.PremiumSubscriptionSKUs.TIER_2];
-        return l > n && l > t ? i.PremiumTypes.TIER_2 : i.PremiumTypes.TIER_0
+            a = e[i.PremiumSubscriptionSKUs.TIER_2];
+        return a > n && a > t ? i.PremiumTypes.TIER_2 : i.PremiumTypes.TIER_0
     }
 }

@@ -19,6 +19,7 @@ function(e, t, n) {
         primaryActions: "primaryActions_accda3",
         root: "root_ef2095",
         secondaryAction: "secondaryAction__6107a",
-        sparkleBadge: "sparkleBadge__2380b"
+        sparkleBadge: "sparkleBadge__2380b",
+        subHeader: "subHeader__57c23"
     }
 }

@@ -7,9 +7,9 @@ function(e, t, n) {
     }), n("222007");
     var r = n("446674"),
         i = n("913144"),
-        l = n("374363");
+        a = n("374363");
 
-    function a() {
+    function l() {
         return {
             hasFetchedConsumedInboundPromotionId: !1,
             consumedInboundPromotionId: null,
@@ -17,7 +17,7 @@ function(e, t, n) {
             bogoPromotion: null
         }
     }
-    let s = a(),
+    let s = l(),
         o = !1,
         u = null,
         c = !1,
@@ -33,11 +33,11 @@ function(e, t, n) {
 
     function E() {
         var e, t, n;
-        m = null !== (n = null === (t = l.default.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null
+        m = null !== (n = null === (t = a.default.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null
     }
     class I extends r.default.PersistedStore {
         initialize(e) {
-            null != e && (s = e), this.waitFor(l.default), this.syncWith([l.default], E)
+            null != e && (s = e), this.waitFor(a.default), this.syncWith([a.default], E)
         }
         get outboundPromotions() {
             return f
@@ -111,7 +111,7 @@ function(e, t, n) {
             null != e && (m = e, s.lastSeenOutboundPromotionStartDate = e)
         },
         LOGOUT: function() {
-            s = a(), c = !1, d = null, o = !1, u = null, f = []
+            s = l(), c = !1, d = null, o = !1, u = null, f = []
         }
     })
 }

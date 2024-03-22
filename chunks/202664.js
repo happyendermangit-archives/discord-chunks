@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var r = n("37983"),
         i = n("884691"),
-        l = n("414456"),
-        a = n.n(l),
+        a = n("414456"),
+        l = n.n(a),
         s = n("446674"),
         o = n("77078"),
         u = n("109036"),
@@ -27,24 +27,24 @@ function(e, t, n) {
     function R(e) {
         let t, {
                 onClose: n,
-                fileSize: l,
+                fileSize: a,
                 ...R
             } = e,
-            C = null != l && I.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < l,
+            C = null != a && I.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < a,
             {
                 isLoading: O,
-                suggestedPremiumType: M
+                suggestedPremiumType: g
             } = (0, _.default)({
                 autoTrackExposure: !C,
                 experiment: m.default,
                 location: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
             }),
-            g = !C && M === I.PremiumTypes.TIER_0,
+            M = !C && g === I.PremiumTypes.TIER_0,
             h = (0, s.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
             L = (0, r.jsx)(u.default, {
                 icons: p.DEFAULT_FILE_UPLOAD_ICONS
             });
-        t = g ? S.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
+        t = M ? S.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
             premiumPlan: (0, f.getPremiumTypeDisplayName)(I.PremiumTypes.TIER_0),
             premiumMaxSize: S.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
         }) : S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
@@ -80,7 +80,7 @@ function(e, t, n) {
             });
         return (0, r.jsx)(E.default, {
             artElement: L,
-            artContainerClassName: a(P.artContainer),
+            artContainerClassName: l(P.artContainer),
             enableArtBoxShadow: !1,
             type: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
             title: S.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
@@ -93,7 +93,7 @@ function(e, t, n) {
                 section: T.AnalyticsSections.FILE_UPLOAD_POPOUT
             },
             onClose: n,
-            subscriptionTier: g ? I.PremiumSubscriptionSKUs.TIER_0 : I.PremiumSubscriptionSKUs.TIER_2,
+            subscriptionTier: M ? I.PremiumSubscriptionSKUs.TIER_0 : I.PremiumSubscriptionSKUs.TIER_2,
             isLoading: O,
             ...R
         })

@@ -8,17 +8,17 @@ function(e, t, n) {
     var r = n("37983");
     n("884691");
     var i = n("469563"),
-        l = n("856567"),
-        a = n("75196"),
+        a = n("856567"),
+        l = n("75196"),
         s = (0, i.replaceIcon)(function(e) {
             let {
                 width: t = 18,
                 height: n = 18,
                 color: i = "currentColor",
-                ...l
+                ...a
             } = e;
             return (0, r.jsx)("svg", {
-                ...(0, a.default)(l),
+                ...(0, l.default)(a),
                 width: t,
                 height: n,
                 viewBox: "0 0 24 24",
@@ -29,7 +29,7 @@ function(e, t, n) {
                     fill: i
                 })
             })
-        }, l.SuperReactionIcon, void 0, {
+        }, a.SuperReactionIcon, void 0, {
             size: 18
         })
 }

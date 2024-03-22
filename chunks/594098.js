@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     }), n("222007");
     var r, Image, i = n("37983"),
-        l = n("884691"),
-        a = n("414456"),
-        s = n.n(a),
+        a = n("884691"),
+        l = n("414456"),
+        s = n.n(l),
         o = n("819855"),
         u = n("77078"),
         c = n("841098"),
@@ -28,7 +28,7 @@ function(e, t, n) {
             size: t,
             mediaLayoutType: n,
             alt: r
-        } = e, l = (0, c.default)();
+        } = e, a = (0, c.default)();
         return (0, i.jsx)("div", {
             className: p.imageErrorWrapper,
             style: function(e, t) {
@@ -46,28 +46,28 @@ function(e, t, n) {
                 }
             }(t, n),
             children: (0, i.jsx)("img", {
-                src: (0, o.isThemeLight)(l) ? P : S,
+                src: (0, o.isThemeLight)(a) ? P : S,
                 className: p.imageError,
                 alt: null != r ? r : T.default.Messages.IMAGE
             })
         })
-    }(r = class extends l.PureComponent {
+    }(r = class extends a.PureComponent {
         render() {
             let e;
             let {
                 className: t,
                 imageClassName: n,
                 readyState: r,
-                src: l,
-                placeholder: a,
+                src: a,
+                placeholder: l,
                 placeholderVersion: o,
                 alt: c,
                 width: m,
                 height: S,
                 maxWidth: P = m,
                 maxHeight: O = S,
-                minWidth: M,
-                minHeight: g,
+                minWidth: g,
+                minHeight: M,
                 mediaLayoutType: h,
                 limitResponsiveWidth: L = !0,
                 accessory: N,
@@ -86,12 +86,12 @@ function(e, t, n) {
                     height: S,
                     maxWidth: P,
                     maxHeight: O,
-                    minWidth: M,
-                    minHeight: g
+                    minWidth: g,
+                    minHeight: M
                 }),
                 B = 0 !== F.width ? F.width / F.height : 1;
-            "" !== l && r !== I.ImageReadyStates.ERROR ? e = A({
-                src: l,
+            "" !== a && r !== I.ImageReadyStates.ERROR ? e = A({
+                src: a,
                 size: F,
                 alt: c,
                 className: n,
@@ -103,7 +103,7 @@ function(e, t, n) {
             })), e = (0, i.jsx)(_.ImageLoadingOverlay, {
                 readyState: r,
                 aspectRatio: B,
-                placeholder: a,
+                placeholder: l,
                 placeholderVersion: o,
                 placeholderStyle: C(F, h),
                 children: e
@@ -140,7 +140,7 @@ function(e, t, n) {
                         href: x,
                         ref: this._containerRef,
                         "data-role": "img",
-                        "data-safe-src": l
+                        "data-safe-src": a
                     }), null != b ? (0, i.jsx)(u.Clickable, {
                         className: p.clickableWrapper,
                         tabIndex: null != y ? y : 0,
@@ -160,7 +160,7 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), this._containerRef = l.createRef(), this._clickableRef = l.createRef()
+            super(...e), this._containerRef = a.createRef(), this._clickableRef = a.createRef()
         }
     }).defaultProps = {
         readyState: I.ImageReadyStates.READY,
@@ -170,14 +170,14 @@ function(e, t, n) {
                 src: t,
                 size: n,
                 alt: r,
-                className: l,
-                mediaLayoutType: a
+                className: a,
+                mediaLayoutType: l
             } = e;
             return (0, i.jsx)("img", {
-                className: null != l ? l : void 0,
+                className: null != a ? a : void 0,
                 alt: null != r ? r : T.default.Messages.IMAGE,
                 src: t,
-                style: C(n, a)
+                style: C(n, l)
             })
         },
         minWidth: 0,

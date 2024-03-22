@@ -5,10 +5,10 @@ function(e, t, n) {
             return i
         },
         resetBackgroundGradientPreset: function() {
-            return l
+            return a
         },
         openEditor: function() {
-            return a
+            return l
         },
         closeEditor: function() {
             return s
@@ -24,13 +24,13 @@ function(e, t, n) {
                 presetId: e
             })
         },
-        l = () => {
+        a = () => {
             r.default.dispatch({
                 type: "UPDATE_BACKGROUND_GRADIENT_PRESET",
                 presetId: null
             })
         },
-        a = () => {
+        l = () => {
             r.default.dispatch({
                 type: "CLIENT_THEMES_EDITOR_OPEN"
             })

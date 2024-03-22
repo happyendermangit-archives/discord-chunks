@@ -8,8 +8,8 @@ function(e, t, n) {
     var r = n("37983");
     n("884691");
     var i = n("414456"),
-        l = n.n(i),
-        a = n("446674"),
+        a = n.n(i),
+        l = n("446674"),
         s = n("77078"),
         o = n("10514"),
         u = n("719923"),
@@ -23,7 +23,7 @@ function(e, t, n) {
                 isGift: f = !1,
                 variant: m,
                 priceOptions: _
-            } = e, E = (0, a.useStateFromStores)([o.default], () => o.default.isLoadedForPremiumSKUs());
+            } = e, E = (0, l.useStateFromStores)([o.default], () => o.default.isLoadedForPremiumSKUs());
             if (!E) return (0, r.jsx)(s.Spinner, {
                 type: s.Spinner.Type.PULSING_ELLIPSIS,
                 className: d.priceSpinner
@@ -33,7 +33,7 @@ function(e, t, n) {
             return (0, r.jsxs)(s.Heading, {
                 color: "always-white",
                 variant: null != m ? m : "heading-md/medium",
-                className: l(d.pricePerInterval, i),
+                className: a(d.pricePerInterval, i),
                 children: [(0, r.jsx)("span", {
                     className: d.price,
                     children: T

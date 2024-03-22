@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return l
         }
     });
     var r = n("775560"),
         i = n("888400"),
-        l = n("149638");
+        a = n("149638");
 
-    function a(e) {
+    function l(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3,
             n = arguments.length > 2 ? arguments[2] : void 0,
-            a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             s = (0, i.diffAsUnits)(Date.now(), e),
             o = (0, r.useForceUpdate)();
-        return (0, l.default)(() => {
+        return (0, a.default)(() => {
             let e = 0 === s.days && 0 === s.hours && 0 === s.minutes && 0 === s.seconds;
-            !e && !a && (o(), null == n || n())
-        }, a ? null : t), s
+            !e && !l && (o(), null == n || n())
+        }, l ? null : t), s
     }
 }

@@ -12,16 +12,16 @@ function(e, t, n) {
             imageSrc: t,
             file: n,
             uploadType: i,
-            guildId: l,
-            isTryItOutFlow: a = !1
+            guildId: a,
+            isTryItOutFlow: l = !1
         } = e;
         r.default.dispatch({
             type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
             imageSrc: t,
             file: n,
             uploadType: i,
-            guildId: l,
-            isTryItOutFlow: a
+            guildId: a,
+            isTryItOutFlow: l
         })
     }
 }

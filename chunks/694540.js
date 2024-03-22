@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("222007");
     var r = n("884691"),
         i = n("446674"),
-        l = n("913144"),
-        a = n("697218"),
+        a = n("913144"),
+        l = n("697218"),
         s = n("719923"),
         o = n("324878"),
         u = n("44678"),
@@ -37,12 +37,12 @@ function(e, t, n) {
     function _() {
         let e = (0, i.useStateFromStores)([d.default], () => d.default.lastFetchedActivePromotions),
             t = m(),
-            n = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
+            n = (0, i.useStateFromStores)([l.default], () => l.default.getCurrentUser()),
             _ = (0, o.useHasActiveTrial)(),
             [E, I] = r.useState(!1),
             [T, p] = r.useState([]);
         r.useEffect(() => {
-            null != e && l.default.wait(() => c.default.markOutboundPromotionsSeen())
+            null != e && a.default.wait(() => c.default.markOutboundPromotionsSeen())
         }, [e]);
         let S = r.useCallback(e => {
                 p(t => t.some(t => {
@@ -54,11 +54,11 @@ function(e, t, n) {
             }, []),
             P = (0, s.isPremiumExactly)(n, f.PremiumTypes.TIER_2);
         r.useEffect(() => {
-            l.default.wait(() => {
+            a.default.wait(() => {
                 P && null == e && c.default.fetchActiveOutboundPromotions()
             })
         }, [e, P]), r.useEffect(() => {
-            l.default.wait(() => {
+            a.default.wait(() => {
                 (0, u.fetchClaimedOutboundPromotionCodes)().then(e => {
                     p(e), I(!0)
                 }).catch(() => {
@@ -84,9 +84,9 @@ function(e, t, n) {
                 } = e;
                 return !C.has(t.id)
             }),
-            M = E && (!P || null != e);
+            g = E && (!P || null != e);
         return {
-            promotionsLoaded: M,
+            promotionsLoaded: g,
             activeOutboundPromotions: t.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e) && (!_ || (0, u.isTrialUserEligibleToSeeOutboundPromotion)(e, R))),
             claimedEndedOutboundPromotions: O.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e.promotion)),
             claimedOutboundPromotionCodeMap: R,
@@ -98,7 +98,7 @@ function(e, t, n) {
         let e = (0, i.useStateFromStores)([d.default], () => d.default.lastSeenOutboundPromotionStartDate),
             t = (0, o.useHasActiveTrial)(),
             n = m(),
-            l = r.useMemo(() => {
+            a = r.useMemo(() => {
                 if (null == e) return t ? n.filter(e => (0, u.isOutboundPromotionRedeemableByTrialUsers)(e)) : n;
                 let r = n.filter(t => {
                     let {
@@ -108,7 +108,7 @@ function(e, t, n) {
                 });
                 return t ? r.filter(e => (0, u.isOutboundPromotionRedeemableByTrialUsers)(e)) : r
             }, [n, e, t]);
-        return l.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e))
+        return a.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e))
     }
 
     function I() {

@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID: function() {
-            return l
+            return a
         },
         MESSAGE_PRE_TIMESTAMP_PAUSE_LABEL_SEGMENT_ID: function() {
-            return a
+            return l
         },
         MESSAGE_REACTIONS_LABEL_SEGMENT_ID: function() {
             return s
@@ -19,17 +19,17 @@ function(e, t, n) {
     });
     var r = n("476765"),
         i = n("782340");
-    let l = (0, r.uid)(),
-        a = (0, r.uid)(),
+    let a = (0, r.uid)(),
+        l = (0, r.uid)(),
         s = (0, r.uid)(),
         o = (0, r.uid)();
 
     function u() {
         [{
-            id: l,
+            id: a,
             text: ","
         }, {
-            id: a,
+            id: l,
             text: ","
         }, {
             id: s,

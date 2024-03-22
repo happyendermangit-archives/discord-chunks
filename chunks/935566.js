@@ -5,10 +5,10 @@ function(e, t, n) {
             return i
         },
         isBogoPromotionExperimentEnabled: function() {
-            return l
+            return a
         },
         default: function() {
-            return a
+            return l
         }
     });
     var r = n("862205");
@@ -27,7 +27,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        l = function() {
+        a = function() {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             return i.getCurrentConfig({
                 location: "489551_2"
@@ -35,7 +35,7 @@ function(e, t, n) {
                 autoTrackExposure: e
             })
         };
-    var a = function() {
+    var l = function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return i.useExperiment({
             location: "489551_1"

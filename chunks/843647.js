@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var r = n("446674"),
         i = n("697218"),
-        l = n("10514"),
-        a = n("719923"),
+        a = n("10514"),
+        l = n("719923"),
         s = n("716849"),
         o = n("676572"),
         u = n("942377"),
@@ -20,7 +20,7 @@ function(e, t, n) {
             autoTrackExposure: t,
             experiment: n,
             location: f
-        } = e, m = (0, r.useStateFromStores)([i.default], () => i.default.getCurrentUser()), _ = (0, c.usePremiumTrialOffer)(), E = null != _, I = null != m && (0, a.isPremium)(m);
+        } = e, m = (0, r.useStateFromStores)([i.default], () => i.default.getCurrentUser()), _ = (0, c.usePremiumTrialOffer)(), E = null != _, I = null != m && (0, l.isPremium)(m);
         (0, s.useMaybeFetchPremiumLikelihood)(n);
         let {
             enabled: T,
@@ -39,23 +39,23 @@ function(e, t, n) {
                 fetched: e.fetched,
                 premiumLikelihood: e.premiumLikelihood
             }
-        }), C = (0, r.useStateFromStores)([l.default], () => l.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), O = !I && T && !E && (p ? !R || !C : !R), M = d.PremiumTypes.TIER_2;
+        }), C = (0, r.useStateFromStores)([a.default], () => a.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), O = !I && T && !E && (p ? !R || !C : !R), g = d.PremiumTypes.TIER_2;
         if (E) {
             let e = _.subscription_trial;
-            (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? M = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (M = d.PremiumTypes.TIER_2)
+            (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? g = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (g = d.PremiumTypes.TIER_2)
         } else if (!I && !O && T) {
             if (p) {
                 let {
                     amount: e
-                } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
+                } = (0, l.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
                     amount: t
-                } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
-                M = (0, u.getHigherExpectedValue)(P, e, t)
-            } else S && (M = (0, u.getHighestLikelihood)(P))
+                } = (0, l.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
+                g = (0, u.getHigherExpectedValue)(P, e, t)
+            } else S && (g = (0, u.getHighestLikelihood)(P))
         }
         return {
             isLoading: O,
-            suggestedPremiumType: M
+            suggestedPremiumType: g
         }
     }
 }

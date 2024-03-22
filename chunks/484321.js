@@ -23,8 +23,8 @@ function(e, t, n) {
     var r = n("37983");
     n("884691");
     var i = n("414456"),
-        l = n.n(i),
-        a = n("819855"),
+        a = n.n(i),
+        l = n("819855"),
         s = n("841098"),
         o = n("75196"),
         u = n("646718"),
@@ -36,12 +36,12 @@ function(e, t, n) {
                 width: t = 28,
                 height: n = 53,
                 color: i,
-                foreground: l,
-                wrapperStyle: a,
+                foreground: a,
+                wrapperStyle: l,
                 ...s
             } = e, u = "sparkle-gradient-".concat(Math.random().toString(36).substring(2, 15));
             return (0, r.jsx)("div", {
-                className: a,
+                className: l,
                 children: (0, r.jsxs)("svg", {
                     ...(0, o.default)({
                         ...s
@@ -49,7 +49,7 @@ function(e, t, n) {
                     width: t,
                     height: n,
                     viewBox: "0 0 28 53",
-                    className: l,
+                    className: a,
                     xmlns: "http://www.w3.org/2000/svg",
                     children: [(0, r.jsx)("defs", {
                         children: (0, r.jsxs)("linearGradient", {
@@ -83,10 +83,10 @@ function(e, t, n) {
                 width: t = 21,
                 height: n = 22,
                 color: i,
-                wrapperStyle: l
-            } = e, a = "sparkle-gradient-".concat(Math.random().toString(36).substring(2, 15));
+                wrapperStyle: a
+            } = e, l = "sparkle-gradient-".concat(Math.random().toString(36).substring(2, 15));
             return (0, r.jsx)("div", {
-                className: l,
+                className: a,
                 children: (0, r.jsxs)("svg", {
                     width: t,
                     height: n,
@@ -95,7 +95,7 @@ function(e, t, n) {
                     xmlns: "http://www.w3.org/2000/svg",
                     children: [(0, r.jsx)("defs", {
                         children: (0, r.jsxs)("linearGradient", {
-                            id: a,
+                            id: l,
                             x1: "0%",
                             y1: "0%",
                             x2: "100%",
@@ -109,10 +109,10 @@ function(e, t, n) {
                         })
                     }), (0, r.jsx)("path", {
                         d: "M17.8554 2.39744L20.4323 3.42308C20.4871 3.47436 20.4871 3.52563 20.4323 3.52563L17.8554 4.60256L16.7041 6.96154C16.7041 7.01282 16.6492 7.01282 16.5944 6.96154L15.4979 4.60256H15.443L12.921 3.52563C12.8662 3.52563 12.8662 3.47436 12.921 3.42308L15.443 2.39744H15.4979L16.5944 0.0384612C16.6492 -0.0128207 16.7041 -0.0128207 16.7041 0.0384612L17.8554 2.39744Z",
-                        fill: null != i ? i : "url(#".concat(a, ")")
+                        fill: null != i ? i : "url(#".concat(l, ")")
                     }), (0, r.jsx)("path", {
                         d: "M8.62582 14.7674L12.8132 16.3791C12.9023 16.4597 12.9023 16.5403 12.8132 16.5403L8.62582 18.2326L6.75481 21.9396C6.75481 22.0201 6.6657 22.0201 6.57661 21.9396L4.79473 18.2326H4.70566L0.607348 16.5403C0.518254 16.5403 0.518254 16.4597 0.607348 16.3791L4.70566 14.7674H4.79473L6.57661 11.0604C6.6657 10.9799 6.75481 10.9799 6.75481 11.0604L8.62582 14.7674Z",
-                        fill: null != i ? i : "url(#".concat(a, ")")
+                        fill: null != i ? i : "url(#".concat(l, ")")
                     })]
                 })
             })
@@ -121,11 +121,11 @@ function(e, t, n) {
     function E(e) {
         let {
             tier: t = u.PremiumTypes.TIER_2
-        } = e, n = (0, s.default)(), i = (0, a.isThemeLight)(n);
+        } = e, n = (0, s.default)(), i = (0, l.isThemeLight)(n);
         return (0, r.jsxs)(r.Fragment, {
             children: [!i && (0, r.jsxs)(r.Fragment, {
                 children: [(0, r.jsx)("div", {
-                    className: l(c.rimGlowVertical, {
+                    className: a(c.rimGlowVertical, {
                         [c.rimGlowVerticalTier0]: t === u.PremiumTypes.TIER_0,
                         [c.rimGlowVerticalTier2]: t === u.PremiumTypes.TIER_2
                     })
@@ -149,18 +149,18 @@ function(e, t, n) {
             width: t = 14,
             height: n = 13,
             color: i = "white",
-            foreground: l,
-            ...a
+            foreground: a,
+            ...l
         } = e;
         return (0, r.jsxs)("svg", {
             ...(0, o.default)({
-                ...a
+                ...l
             }),
             preserveAspectRatio: "none",
             width: t,
             height: n,
             viewBox: "0 0 14 13",
-            className: l,
+            className: a,
             xmlns: "http://www.w3.org/2000/svg",
             children: [(0, r.jsxs)("defs", {
                 children: [(0, r.jsxs)("linearGradient", {
