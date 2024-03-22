@@ -11,8 +11,8 @@ function(e, t, n) {
         id: "2023-10_bandwidth_estimation_v1",
         label: "Bandwidth Estimation",
         defaultConfig: {
-            enabled: !1,
-            fullname: ""
+            enabled: !0,
+            fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator"
         },
         treatments: [{
             id: 1,
@@ -181,6 +181,27 @@ function(e, t, n) {
             config: {
                 enabled: !0,
                 fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,rate-control-link-capacity-fix"
+            }
+        }, {
+            id: 25,
+            label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator, worker REMB PLI only",
+            config: {
+                enabled: !0,
+                fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,worker-bitrate-remb-pli"
+            }
+        }, {
+            id: 26,
+            label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator, worker continuous REMB only",
+            config: {
+                enabled: !0,
+                fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,worker-bitrate-remb-preemption-v1"
+            }
+        }, {
+            id: 27,
+            label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator, worker REMB PLI with continuous",
+            config: {
+                enabled: !0,
+                fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,worker-bitrate-remb-preemption-v1,worker-bitrate-remb-pli"
             }
         }]
     });
