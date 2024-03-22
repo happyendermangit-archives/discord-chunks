@@ -50,8 +50,8 @@ function(e, t, n) {
         W = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
         Y = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
         z = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
-        Z = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-        J = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
+        J = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+        Z = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
         q = (0, N.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
         X = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
         Q = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
@@ -60,8 +60,8 @@ function(e, t, n) {
         et = X + 2 * $,
         en = et + ee,
         ei = Q + 2 * $ + ee,
-        el = [K, Y, z, Z],
-        ea = [W, Y, z, Z],
+        el = [K, Y, z, J],
+        ea = [W, Y, z, J],
         es = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
         er = ["laugh", "wave", "yes", "dance", "sad", "no", "hi", "bye", "cry", "ok"],
         eo = e => {
@@ -174,7 +174,7 @@ function(e, t, n) {
                     channel: A,
                     currentUser: b
                 }, e) : null
-            }, [x, r, u, c, f, m, h, U, H, n, N, A, b]), Z = l.useCallback((e, t) => (0, i.jsx)("div", {
+            }, [x, r, u, c, f, m, h, U, H, n, N, A, b]), J = l.useCallback((e, t) => (0, i.jsx)("div", {
                 children: t
             }, e), []), $ = l.useCallback(function(e) {
                 let {
@@ -281,7 +281,7 @@ function(e, t, n) {
                         sendableWithPremium: n
                     } = T;
                     if (0 === e && t.length > 0) return 0;
-                    let i = t.length > 0 && n.length > 0 ? J : 0;
+                    let i = t.length > 0 && n.length > 0 ? Z : 0;
                     return q + i
                 }
                 return q
@@ -302,7 +302,7 @@ function(e, t, n) {
             }, [E, t]);
             return {
                 renderRow: z,
-                renderSection: Z,
+                renderSection: J,
                 renderSectionHeader: ee,
                 sectionHeaderHeight: et,
                 renderSectionFooter: en,
