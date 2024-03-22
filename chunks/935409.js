@@ -93,22 +93,25 @@ function(e, t, n) {
         } = e, {
             profileTheme: N
         } = l.useContext(A.UserProfileContext), U = l.useContext(y.AnalyticsContext), w = t.isNonUserBot() && !t.isClyde(), F = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, k.PremiumTypes.TIER_2), G = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), {
-            trackUserProfileAction: H
-        } = (0, C.useUserProfileAnalyticsContext)(), B = x || t.isClyde(), {
-            avatarDecorationSrc: V,
-            avatarSrc: K,
-            eventHandlers: W
+            trackUserProfileAction: H,
+            analyticsLocations: B,
+            messageId: V,
+            roleId: K
+        } = (0, C.useUserProfileAnalyticsContext)(), W = x || t.isClyde(), {
+            avatarDecorationSrc: Y,
+            avatarSrc: z,
+            eventHandlers: Z
         } = (0, _.default)({
             user: t,
             guildId: f,
             size: b,
             animateOnHover: T
-        }), Y = (0, i.jsx)("div", {
+        }), J = (0, i.jsx)("div", {
             className: P.avatarHoverTarget,
-            ...W,
+            ...Z,
             children: (0, i.jsx)(D, {
-                src: null != a ? a : K,
-                avatarDecoration: V,
+                src: null != a ? a : z,
+                avatarDecoration: Y,
                 size: b,
                 "aria-label": t.username,
                 status: G ? M.StatusTypes.UNKNOWN : u,
@@ -116,7 +119,7 @@ function(e, t, n) {
                 isMobile: c,
                 statusTooltip: !0
             })
-        }), z = (0, r.match)(S).with(R.UserProfileTypes.POPOUT, () => {
+        }), q = (0, r.match)(S).with(R.UserProfileTypes.POPOUT, () => {
             let e = (0, v.buildGetPremiumUserBannerStyles)({
                 premiumUserWithBanner: P.avatarPositionPremiumBanner,
                 premiumUserWithoutBanner: P.avatarPositionPremiumNoBanner,
@@ -131,22 +134,25 @@ function(e, t, n) {
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)(d.Clickable, {
                 className: s({
-                    [P.clickable]: !B,
+                    [P.clickable]: !W,
                     [P.avatarWrapperNonUserBot]: w,
                     [P.avatarWrapperNormal]: !w
-                }, z),
-                onClick: w || B ? void 0 : function() {
+                }, q),
+                onClick: w || W ? void 0 : function() {
                     H({
                         action: "PRESS_VIEW_PROFILE"
                     }), (0, O.openUserProfileModal)({
                         userId: t.id,
                         guildId: null != f ? f : void 0,
                         channelId: null != m ? m : void 0,
+                        messageId: null != V ? V : void 0,
+                        roleId: null != K ? K : void 0,
+                        sourceAnalyticsLocations: B,
                         analyticsLocation: U.location
                     }), null == h || h()
                 },
-                children: [Y, !B && function() {
-                    let e = null != V,
+                children: [J, !W && function() {
+                    let e = null != Y,
                         t = e ? j : (0, d.getAvatarSize)(b);
                     return (0, i.jsx)(E.default, {
                         mask: null == u || u === M.StatusTypes.UNKNOWN || G ? E.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, c]).with([!0, !0], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => E.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => E.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => E.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
