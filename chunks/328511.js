@@ -5,12 +5,12 @@ function(e, t, n) {
             return d
         }
     });
-    var i = n("35092"),
+    var i = n("75247"),
         s = n("913144"),
         r = n("474643");
     let a = {},
         o = {};
-    class l extends i.default.Store {
+    class l extends i.Store {
         getStickerPreview(e, t) {
             let n = t === r.DraftType.FirstThreadMessage ? o : a;
             return n[e]

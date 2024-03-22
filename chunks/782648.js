@@ -1,11 +1,11 @@
 function(e, _, E) {
     "use strict";
-    var t;
     E.r(_), E.d(_, {
-        default: function() {
+        ChangeListeners: function() {
             return t
         }
-    }), E("222007"), t = class {
+    }), E("222007");
+    class t {
         has(e) {
             return this.listeners.has(e)
         }

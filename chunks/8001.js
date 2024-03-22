@@ -12,7 +12,7 @@ function(e, t, n) {
         o = n("802493");
     let l = new r.default("FileSystemStore"),
         u = 10 * a.default.Millis.MINUTE;
-    class d extends i.default {
+    class d extends i.Store {
         handlePostConnectionOpen() {
             return this.refresh(), !1
         }

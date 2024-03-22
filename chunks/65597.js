@@ -51,7 +51,7 @@ function(e, _, E) {
                 !a(i.state, e) && (i.state = e, s({}))
             };
             _();
-            let E = new n.default(e, _);
+            let E = new n.BatchedStoreListener(e, _);
             return E.attach("useStateFromStores"), () => E.detach()
         }, []), I
     }
