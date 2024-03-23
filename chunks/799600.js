@@ -2,22 +2,24 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return f
         }
     }), n("424973"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102"), n("222007");
     var i = n("917351"),
         s = n.n(i),
         r = n("605250"),
-        a = n("197881");
+        a = n("197881"),
+        o = n("863856");
     let {
-        NativeModules: o
-    } = {}, l = [];
-    class u {
+        NativeModules: l
+    } = {}, u = [];
+    class d {
         static canUse() {
             return !1
         }
         bindWebSocket(e) {}
         feed(e) {}
+        recomputeAlgorithm() {}
         dataReady(e) {
             this._onDataReady = e
         }
@@ -25,7 +27,7 @@ function(e, t, n) {
             this._onDataReady = null, this._gatewayEncoding = e
         }
     }
-    l.push(class extends u {
+    u.push(class extends d {
         static canUse() {
             return void 0 !== window.Uint8Array
         }
@@ -85,7 +87,7 @@ function(e, t, n) {
                 });
             i.onEnd = this.handleFlushEnd.bind(this)
         }
-    }), l.push(class extends u {
+    }), u.push(class extends d {
         static canUse() {
             return !0
         }
@@ -106,15 +108,18 @@ function(e, t, n) {
         constructor(...e) {
             super(...e), this._pako = n("181905")
         }
-    }), l.push(class extends u {
+    }), u.push(class extends d {
         static canUse() {
             return !1
         }
         bindWebSocket(e) {
-            this.close(), this._socketId = e._socketId, o.DCDCompressionManager.enableZlibStreamSupport(this._socketId)
+            this.close(), this._socketId = e._socketId, this._usesZstd ? l.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0) : l.DCDCompressionManager.enableZlibStreamSupport(this._socketId)
+        }
+        recomputeAlgorithm() {
+            this._usesZstd = o.default.shouldUseZstd()
         }
         getAlgorithm() {
-            return "zlib-stream"
+            return this._usesZstd ? "zstd-stream" : "zlib-stream"
         }
         usesLegacyCompression() {
             return !1
@@ -125,13 +130,13 @@ function(e, t, n) {
         }
         close() {
             let e = this._socketId;
-            this._socketId = null, null !== e && o.DCDCompressionManager.disableZlibStreamSupport(e)
+            this._socketId = null, null !== e && l.DCDCompressionManager.disableZlibStreamSupport(e)
         }
         constructor(e) {
-            super(e), this._socketId = null
+            super(e), this._usesZstd = !1, this._socketId = null
         }
     });
-    class d extends u {
+    class c extends d {
         static canUse() {
             return !0
         }
@@ -147,8 +152,8 @@ function(e, t, n) {
         }
         close() {}
     }
-    l.push(d);
-    let c = s.find(l, e => e.canUse());
-    a.ProcessArgs.isDiscordGatewayPlaintextSet() && (c = d);
-    var _ = c
+    u.push(c);
+    let _ = s.find(u, e => e.canUse());
+    a.ProcessArgs.isDiscordGatewayPlaintextSet() && (_ = c);
+    var f = _
 }
