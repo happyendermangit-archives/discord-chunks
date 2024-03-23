@@ -6,6 +6,9 @@ function(e, t, n) {
         },
         CreateGDMPollsExperiment: function() {
             return r
+        },
+        CreatePollsCoachmarkExperiment: function() {
+            return a
         }
     });
     var i = n("862205");
@@ -34,6 +37,21 @@ function(e, t, n) {
             treatments: [{
                 id: 1,
                 label: "Enables creation of polls within a GDM",
+                config: {
+                    enabled: !0
+                }
+            }]
+        }),
+        a = (0, i.createExperiment)({
+            kind: "guild",
+            id: "2024-03_polls_coachmark",
+            label: "Show coachmark for poll creation entry point",
+            defaultConfig: {
+                enabled: !1
+            },
+            treatments: [{
+                id: 1,
+                label: "Can show coachmark for poll creation entry point",
                 config: {
                     enabled: !0
                 }

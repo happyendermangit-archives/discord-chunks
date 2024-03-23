@@ -13,26 +13,29 @@ function(e, t, n) {
         useCanPostPollsInChannel: function() {
             return A
         },
-        useCanPostImagePolls: function() {
+        useCanShowPollsChatInputCoachmarkInGuild: function() {
             return C
         },
-        isPollCreationEmpty: function() {
+        useCanPostImagePolls: function() {
             return y
         },
-        isAnswerFilled: function() {
+        isPollCreationEmpty: function() {
             return N
         },
-        isIncompleteAnswer: function() {
+        isAnswerFilled: function() {
             return R
         },
-        createPollServerDataFromCreateRequest: function() {
+        isIncompleteAnswer: function() {
             return O
         },
-        getTotalVotes: function() {
+        createPollServerDataFromCreateRequest: function() {
             return D
         },
-        getPollAnswerVotesTooltipText: function() {
+        getTotalVotes: function() {
             return P
+        },
+        getPollAnswerVotesTooltipText: function() {
+            return L
         }
     }), n("781738"), n("222007"), n("808653");
     var i = n("917351"),
@@ -96,15 +99,25 @@ function(e, t, n) {
         return i || s
     }
 
-    function C() {
+    function C(e) {
+        let {
+            enabled: t
+        } = g.CreatePollsCoachmarkExperiment.useExperiment({
+            guildId: e,
+            location: "useCanShowPollsChatInputCoachmarkInGuild"
+        });
+        return t
+    }
+
+    function y() {
         return !1
     }
 
-    function y(e, t, n) {
-        return 0 === e.length && null == t.find(e => N(e, n))
+    function N(e, t, n) {
+        return 0 === e.length && null == t.find(e => R(e, n))
     }
 
-    function N(e, t) {
+    function R(e, t) {
         if (t === a.PollLayoutTypes.IMAGE_ONLY_ANSWERS) return null != e.image;
         {
             var n;
@@ -113,13 +126,13 @@ function(e, t, n) {
         }
     }
 
-    function R(e, t) {
+    function O(e, t) {
         var n;
         let i = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
         return t === a.PollLayoutTypes.DEFAULT && null != e.image && (null == i || 0 === i.length)
     }
 
-    function O(e) {
+    function D(e) {
         var t, n;
         if (null == e) return;
         let i = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
@@ -146,14 +159,14 @@ function(e, t, n) {
         }
     }
 
-    function D(e) {
+    function P(e) {
         return e.reduce((e, t) => {
             var n, i;
             return e + (null !== (i = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== i ? i : 0)
         }, 0)
     }
 
-    function P(e, t, n) {
+    function L(e, t, n) {
         var i, r;
         let a = c.default.getMessage(t, e);
         if (null == a) return "";
