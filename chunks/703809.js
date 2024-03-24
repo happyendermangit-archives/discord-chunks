@@ -176,7 +176,7 @@ function(e, t, n) {
                 return t ? t + " " + r : r
             }, "")
         },
-        H = function(e, t) {
+        A = function(e, t) {
             return void 0 === t && (t = {}), Object.keys(e).reduce(function(t, n) {
                 return t[w[n] || n] = e[n], t
             }, t)
@@ -194,7 +194,7 @@ function(e, t, n) {
                 }), a.createElement(e, o)
             })
         },
-        A = function(e, t, n) {
+        H = function(e, t, n) {
             switch (e) {
                 case _.TITLE:
                     return {
@@ -202,7 +202,7 @@ function(e, t, n) {
                             var e, n, r, o;
                             return n = t.titleAttributes, (r = {
                                 key: e = t.title
-                            })["data-rh"] = !0, o = H(n, r), [a.createElement(_.TITLE, o, e)]
+                            })["data-rh"] = !0, o = A(n, r), [a.createElement(_.TITLE, o, e)]
                         }, toString: function() {
                             var r, a, o, i, s, u;
                             return r = e, a = t.title, o = t.titleAttributes, i = n, s = C(o), u = x(a), s ? "<" + r + ' data-rh="true" ' + s + ">" + j(u, i) + "</" + r + ">" : "<" + r + ' data-rh="true">' + j(u, i) + "</" + r + ">"
@@ -212,7 +212,7 @@ function(e, t, n) {
                 case "htmlAttributes":
                     return {
                         toComponent: function() {
-                            return H(t)
+                            return A(t)
                         }, toString: function() {
                             return C(t)
                         }
@@ -263,7 +263,7 @@ function(e, t, n) {
                             return [].concat(F(_.META, M.priority), F(_.LINK, w.priority), F(_.SCRIPT, k.priority))
                         },
                         toString: function() {
-                            return A(_.META, M.priority, y) + " " + A(_.LINK, w.priority, y) + " " + A(_.SCRIPT, k.priority, y)
+                            return H(_.META, M.priority, y) + " " + H(_.LINK, w.priority, y) + " " + H(_.SCRIPT, k.priority, y)
                         }
                     },
                     metaTags: M.default,
@@ -274,15 +274,15 @@ function(e, t, n) {
             }
             return {
                 priority: f,
-                base: A(_.BASE, t, r),
-                bodyAttributes: A("bodyAttributes", n, r),
-                htmlAttributes: A("htmlAttributes", a, r),
-                link: A(_.LINK, l, r),
-                meta: A(_.META, c, r),
-                noscript: A(_.NOSCRIPT, o, r),
-                script: A(_.SCRIPT, d, r),
-                style: A(_.STYLE, i, r),
-                title: A(_.TITLE, {
+                base: H(_.BASE, t, r),
+                bodyAttributes: H("bodyAttributes", n, r),
+                htmlAttributes: H("htmlAttributes", a, r),
+                link: H(_.LINK, l, r),
+                meta: H(_.META, c, r),
+                noscript: H(_.NOSCRIPT, o, r),
+                script: H(_.SCRIPT, d, r),
+                style: H(_.STYLE, i, r),
+                title: H(_.TITLE, {
                     title: void 0 === s ? "" : s,
                     titleAttributes: u
                 }, r)
@@ -412,7 +412,7 @@ function(e, t, n) {
             }), t && t(), l(e, h, y)
         },
         J = null,
-        q = function(e) {
+        G = function(e) {
             function t() {
                 for (var t, n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
                 return (t = e.call.apply(e, [this].concat(r)) || this).rendered = !1, t
@@ -470,10 +470,10 @@ function(e, t, n) {
                 return this.init(), null
             }, t
         }(r.Component);
-    q.propTypes = {
+    G.propTypes = {
         context: W.isRequired
-    }, q.displayName = "HelmetDispatcher";
-    var G = ["children"],
+    }, G.displayName = "HelmetDispatcher";
+    var q = ["children"],
         $ = ["children"],
         Q = function(e) {
             function t() {
@@ -540,7 +540,7 @@ function(e, t, n) {
                     if (e && e.props) {
                         var a = e.props,
                             o = a.children,
-                            i = y(a, G),
+                            i = y(a, q),
                             s = Object.keys(i).reduce(function(e, t) {
                                 return e[k[t] || t] = i[t], e
                             }, {}),
@@ -577,11 +577,11 @@ function(e, t, n) {
                     n = y(e, $),
                     r = p({}, n),
                     o = n.helmetData;
-                return t && (r = this.mapChildrenToProps(t, r)), !o || o instanceof R || (o = new R(o.context, o.instances)), o ? a.createElement(q, p({}, r, {
+                return t && (r = this.mapChildrenToProps(t, r)), !o || o instanceof R || (o = new R(o.context, o.instances)), o ? a.createElement(G, p({}, r, {
                     context: o.value,
                     helmetData: void 0
                 })) : a.createElement(z.Consumer, null, function(e) {
-                    return a.createElement(q, p({}, r, {
+                    return a.createElement(G, p({}, r, {
                         context: e
                     }))
                 })

@@ -58,13 +58,13 @@ function(e, t, n) {
                 P = r ? r.height : d(n.height) - (i ? T + Y : 0) - x,
                 j = E + D + O + S,
                 C = P + T + x + Y,
-                H = Object.freeze({
+                A = Object.freeze({
                     devicePixelContentBoxSize: f(Math.round(E * devicePixelRatio), Math.round(P * devicePixelRatio), m),
                     borderBoxSize: f(j, C, m),
                     contentBoxSize: f(E, P, m),
                     contentRect: new a.DOMRectReadOnly(b, _, E, P)
                 });
-            return s.set(e, H), H
+            return s.set(e, A), A
         },
         h = function(e, t, n) {
             var a = m(e, n),

@@ -75,10 +75,10 @@ function(e, t, n) {
                     if (E && !E.match(d)) {
                         for (var P = "", j = 0, C = E.length; j < C; j++) E.charCodeAt(j) > 127 ? P += "x" : P += E[j];
                         if (!P.match(d)) {
-                            var H = x.slice(0, T),
+                            var A = x.slice(0, T),
                                 F = x.slice(T + 1),
-                                A = E.match(f);
-                            A && (H.push(A[1]), F.unshift(A[2])), F.length && (g = "/" + F.join(".") + g), this.hostname = H.join(".");
+                                H = E.match(f);
+                            H && (A.push(H[1]), F.unshift(H[2])), F.length && (g = "/" + F.join(".") + g), this.hostname = A.join(".");
                             break
                         }
                     }

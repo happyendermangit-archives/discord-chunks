@@ -161,9 +161,9 @@ function(e, t, n) {
             P = RegExp("^" + E),
             j = RegExp(E + "[^\\n]*(?:\\n(?!\\1" + O + " )[^\\n]*)*(\n|$)", "gm"),
             C = /\n{2,}$/,
-            H = /^ (?= *`)|(` *) $/g,
+            A = /^ (?= *`)|(` *) $/g,
             F = / *\n+$/,
-            A = RegExp("^( *)(" + O + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + O + " )\\n*|\\s*\n*$)"),
+            H = RegExp("^( *)(" + O + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + O + " )\\n*|\\s*\n*$)"),
             I = /(?:^|\n)( *)$/;
         var N = (e = /^ *\| *| *\| *$/g, t = / *$/, n = /^ *-+: *$/, r = /^ *:-+: *$/, a = /^ *:-+ *$/, o = function(e) {
                 if (n.test(e)) return "right";
@@ -357,7 +357,7 @@ function(e, t, n) {
                         var n = null == t.prevCapture ? "" : t.prevCapture[0],
                             r = I.exec(n),
                             a = t._list || !t.inline;
-                        return r && a ? (e = r[1] + e, A.exec(e)) : null
+                        return r && a ? (e = r[1] + e, H.exec(e)) : null
                     },
                     parse: function(e, t, n) {
                         var r = e[2],
@@ -746,7 +746,7 @@ function(e, t, n) {
                     match: m(/^(`+)([\s\S]*?[^`])\1(?!`)/),
                     parse: function(e, t, n) {
                         return {
-                            content: e[2].replace(H, "$1")
+                            content: e[2].replace(A, "$1")
                         }
                     },
                     react: function(e, t, n) {
@@ -797,18 +797,18 @@ function(e, t, n) {
                     return o(e, r = f(t, n))
                 }
             },
-            q = p(V),
-            G = function(e, t) {
-                return (t = t || {}).inline = !1, q(e, t)
+            G = p(V),
+            q = function(e, t) {
+                return (t = t || {}).inline = !1, G(e, t)
             },
             $ = function(e, t) {
                 var n = C.test(e);
-                return (t = t || {}).inline = !n, q(e, t)
+                return (t = t || {}).inline = !n, G(e, t)
             },
             Q = J(V, "react"),
             X = J(V, "html"),
             Z = function(e, t) {
-                return Q(G(e, t), t)
+                return Q(q(e, t), t)
             };
         return {
             defaultRules: V,
@@ -826,16 +826,16 @@ function(e, t, n) {
             },
             markdownToReact: Z,
             markdownToHtml: function(e, t) {
-                return X(G(e, t), t)
+                return X(q(e, t), t)
             },
             ReactMarkdown: function(e) {
                 var t = {};
                 for (var n in e) "source" !== n && Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
                 return t.children = Z(e.source), g("div", null, t)
             },
-            defaultBlockParse: G,
+            defaultBlockParse: q,
             defaultInlineParse: function(e, t) {
-                return (t = t || {}).inline = !0, q(e, t)
+                return (t = t || {}).inline = !0, G(e, t)
             },
             defaultImplicitParse: $,
             defaultReactOutput: Q,
@@ -846,7 +846,7 @@ function(e, t, n) {
             unescapeUrl: T,
             htmlTag: v,
             reactElement: g,
-            defaultRawParse: q,
+            defaultRawParse: G,
             ruleOutput: function(e, t) {
                 return !t && "undefined" != typeof console && console.warn("simple-markdown ruleOutput should take 'react' or 'html' as the second argument."),
                     function(n, r, a) {

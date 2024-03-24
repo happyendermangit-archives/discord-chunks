@@ -71,12 +71,12 @@ function(e, t, n) {
             }
             for (var P = i && u(D) && 1 === D.length ? n + "[]" : n, j = 0; j < L.length; ++j) {
                 var C = L[j],
-                    H = "object" == typeof C && void 0 !== C.value ? C.value : D[C];
-                if (!l || null !== H) {
+                    A = "object" == typeof C && void 0 !== C.value ? C.value : D[C];
+                if (!l || null !== A) {
                     var F = u(D) ? "function" == typeof o ? o(P, C) : P : P + (y ? "." + C : "[" + C + "]");
                     w.set(t, S);
-                    var A = r();
-                    A.set(m, w), c(O, e(H, F, o, i, s, l, "comma" === o && b && u(D) ? null : d, f, h, y, _, g, v, b, M, A))
+                    var H = r();
+                    H.set(m, w), c(O, e(A, F, o, i, s, l, "comma" === o && b && u(D) ? null : d, f, h, y, _, g, v, b, M, H))
                 }
             }
             return O

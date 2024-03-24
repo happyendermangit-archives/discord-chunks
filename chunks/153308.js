@@ -523,7 +523,7 @@ function(e, t, n) {
         return a
     }
 
-    function H() {
+    function A() {
         var e = arguments[0],
             t = arguments[1];
         return this && this !== Intl ? F(ee(this), e, t) : new Intl.NumberFormat(e, t)
@@ -573,17 +573,17 @@ function(e, t, n) {
         var x = j(n, "useGrouping", "boolean", void 0, !0);
         a["[[useGrouping]]"] = x;
         var O = d[p].patterns[m];
-        return a["[[positivePattern]]"] = O.positivePattern, a["[[negativePattern]]"] = O.negativePattern, a["[[boundFormat]]"] = void 0, a["[[initializedNumberFormat]]"] = !0, s && (e.format = A.call(e)), o.exp.test(o.input), e
+        return a["[[positivePattern]]"] = O.positivePattern, a["[[negativePattern]]"] = O.negativePattern, a["[[boundFormat]]"] = void 0, a["[[initializedNumberFormat]]"] = !0, s && (e.format = H.call(e)), o.exp.test(o.input), e
     }
     l(Intl, "NumberFormat", {
         configurable: !0,
         writable: !0,
-        value: H
+        value: A
     }), l(Intl.NumberFormat, "prototype", {
         writable: !1
     });
 
-    function A() {
+    function H() {
         var e = this != null && "object" == typeof this && et(this);
         if (!e || !e["[[initializedNumberFormat]]"]) throw TypeError("`this` value for format() is not an initialized Intl.NumberFormat object.");
         if (void 0 === e["[[boundFormat]]"]) {
@@ -670,10 +670,10 @@ function(e, t, n) {
     }, l(Intl.NumberFormat, "supportedLocalesOf", {
         configurable: !0,
         writable: !0,
-        value: _.call(q, g.NumberFormat)
+        value: _.call(G, g.NumberFormat)
     }), l(Intl.NumberFormat.prototype, "format", {
         configurable: !0,
-        get: A
+        get: H
     });
     var N = {
         arab: ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"],
@@ -871,11 +871,11 @@ function(e, t, n) {
                 else if ("2-digit" === y)(h = I(i, _)).length > 2 && (h = h.slice(-2));
                 else if (y in b) switch (p) {
                     case "month":
-                        h = G(d, f, "months", y, s["[[" + p + "]]"]);
+                        h = q(d, f, "months", y, s["[[" + p + "]]"]);
                         break;
                     case "weekday":
                         try {
-                            h = G(d, f, "days", y, s["[[" + p + "]]"])
+                            h = q(d, f, "days", y, s["[[" + p + "]]"])
                         } catch (e) {
                             throw Error("Could not find weekday data for locale " + a)
                         }
@@ -887,7 +887,7 @@ function(e, t, n) {
                         h = s["[[" + p + "]]"]
                 }
                 l = l.replace("{" + p + "}", h)
-            } return !0 === n["[[hour12]]"] && (h = G(d, f, "dayPeriods", m ? "pm" : "am"), l = l.replace("{ampm}", h)), r.exp.test(r.input), l
+            } return !0 === n["[[hour12]]"] && (h = q(d, f, "dayPeriods", m ? "pm" : "am"), l = l.replace("{ampm}", h)), r.exp.test(r.input), l
     }
     g.DateTimeFormat = {
         "[[availableLocales]]": [],
@@ -896,7 +896,7 @@ function(e, t, n) {
     }, l(Intl.DateTimeFormat, "supportedLocalesOf", {
         configurable: !0,
         writable: !0,
-        value: _.call(q, g.DateTimeFormat)
+        value: _.call(G, g.DateTimeFormat)
     }), l(Intl.DateTimeFormat.prototype, "format", {
         configurable: !0,
         get: K
@@ -924,7 +924,7 @@ function(e, t, n) {
     };
     J.Number.toLocaleString = function() {
         if ("[object Number]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a number for Number.prototype.toLocaleString()");
-        return I(new H(arguments[0], arguments[1]), this)
+        return I(new A(arguments[0], arguments[1]), this)
     }, J.Date.toLocaleString = function() {
         if ("[object Date]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a Date instance for Date.prototype.toLocaleString()");
         var e = +this;
@@ -980,7 +980,7 @@ function(e, t, n) {
         }
     });
 
-    function q(e) {
+    function G(e) {
         if (!u.call(this, "[[availableLocales]]")) throw TypeError("supportedLocalesOf() is not a constructor");
         var t = X(),
             n = arguments[1],
@@ -1006,7 +1006,7 @@ function(e, t, n) {
             }(r, a, n)
     }
 
-    function G(e, t, n, r, a) {
+    function q(e, t, n, r, a) {
         var o = e[t] && e[t][n] ? e[t][n] : e.gregory[n],
             i = {
                 narrow: ["short", "long"],

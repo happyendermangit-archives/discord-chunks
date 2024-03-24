@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var r = n("911718")("%Object.defineProperty%", !0),
+    var r = n("20042")("%Object.defineProperty%", !0),
         a = function() {
             if (r) try {
                 return r({}, "a", {

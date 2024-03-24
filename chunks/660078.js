@@ -2,14 +2,14 @@ function(e, a, t) {
     "use strict";
     t.r(a), t.d(a, {
         StreamDirectorActionType: function() {
-            return s
+            return d
         },
         StreamDirector: function() {
             return c
         }
     });
-    var d, s, n = t("242761");
-    (d = s || (s = {})).STREAM = "stream", d.PAUSE = "pause", d.STOP = "stop";
+    var s, d, n = t("242761");
+    (s = d || (d = {})).STREAM = "stream", s.PAUSE = "pause", s.STOP = "stop";
     class c {
         onStreamBegin(e, a) {
             let t = (0, n.getInitialStreamTarget)(e, a);

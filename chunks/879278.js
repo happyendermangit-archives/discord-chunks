@@ -37,9 +37,9 @@ function(e, t, n) {
                         }, []), S = t.rects.reference, Y = t.rects.popper, x = new Map, O = !0, E = T[0], P = 0; P < T.length; P++) {
                         var j = T[P],
                             C = (0, a.default)(j),
-                            H = (0, l.default)(j) === u.start,
+                            A = (0, l.default)(j) === u.start,
                             F = [(0, u.top), (0, u.bottom)].indexOf(C) >= 0,
-                            A = F ? "width" : "height",
+                            H = F ? "width" : "height",
                             I = (0, i.default)(t, {
                                 placement: j,
                                 boundary: _,
@@ -47,8 +47,8 @@ function(e, t, n) {
                                 altBoundary: v,
                                 padding: y
                             }),
-                            N = F ? H ? u.right : u.left : H ? u.bottom : u.top;
-                        S[A] > Y[A] && (N = (0, r.default)(N));
+                            N = F ? A ? u.right : u.left : A ? u.bottom : u.top;
+                        S[H] > Y[H] && (N = (0, r.default)(N));
                         var R = (0, r.default)(N),
                             z = [];
                         if (f && z.push(I[C] <= 0), m && z.push(I[N] <= 0, I[R] <= 0), z.every(function(e) {

@@ -5,20 +5,20 @@ function(e, a, t) {
             return r
         }
     }), t("222007");
-    var d = t("171718"),
-        s = t("913144"),
+    var s = t("171718"),
+        d = t("913144"),
         n = t("316272"),
         c = t("773336");
     class i extends n.default {
         _initialize() {
-            s.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen)
+            d.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen)
         }
         _terminate() {
-            s.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen)
+            d.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen)
         }
         constructor(...e) {
             super(...e), this.handleConnectionOpen = e => {
-                ((0, c.isWindows)() || (0, c.isMac)()) && d.encryptAndStoreTokens()
+                ((0, c.isWindows)() || (0, c.isMac)()) && s.encryptAndStoreTokens()
             }
         }
     }

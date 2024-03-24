@@ -51,9 +51,9 @@ function(e, t, n) {
                 left: x.left - j.left + D.left,
                 right: j.right - x.right + D.right
             },
-            H = e.modifiersData.offset;
-        if (M === u.popper && H) {
-            var F = H[p];
+            A = e.modifiersData.offset;
+        if (M === u.popper && A) {
+            var F = A[p];
             Object.keys(C).forEach(function(e) {
                 var t = [(0, u.right), (0, u.bottom)].indexOf(e) >= 0 ? 1 : -1,
                     n = [(0, u.top), (0, u.bottom)].indexOf(e) >= 0 ? "y" : "x";
