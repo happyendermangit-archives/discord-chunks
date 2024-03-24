@@ -1,7 +1,7 @@
 function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
-        default: function() {
+        rules: function() {
             return O
         }
     });
@@ -17,8 +17,7 @@ function(e, _, E) {
         em: T,
         image: S,
         text: N
-    } = t.defaultRules;
-    var O = {
+    } = t.defaultRules, O = {
         newline: o,
         paragraph: n,
         url: r,

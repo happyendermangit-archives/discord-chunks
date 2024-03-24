@@ -57,14 +57,14 @@ function(e, _, E) {
                     unsafeContext: o
                 }))
             }
-        }(I.default, e), o = function(e) {
+        }(I.rules, e), o = function(e) {
             let _ = i.parserFor(e);
             return (e, E, t) => _(e + "\n\n", {
                 inline: !1,
                 context: E,
                 unsafeContext: t
             })
-        }(I.default)
+        }(I.rules)
     }
 
     function N(e, _) {
