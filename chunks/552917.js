@@ -2,7 +2,7 @@ function(e, t, i) {
     "use strict";
     i.r(t), i.d(t, {
         default: function() {
-            return u
+            return s
         }
     });
     var r = i("862205");
@@ -31,5 +31,5 @@ function(e, t, i) {
             }
         }]
     });
-    var u = n
+    var s = n
 }
