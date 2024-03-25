@@ -48,7 +48,7 @@ function(e, t, n) {
             premiumPlan: (0, f.getPremiumTypeDisplayName)(I.PremiumTypes.TIER_0),
             premiumMaxSize: S.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
         }) : S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
-        let N = i.useMemo(() => {
+        let v = i.useMemo(() => {
                 let e = f.default.getUserMaxFileSize(h),
                     t = (0, d.formatSize)(e / 1024, {
                         useKibibytes: !0
@@ -69,10 +69,10 @@ function(e, t, n) {
                 }
                 return n
             }, [h]),
-            v = (0, r.jsxs)("div", {
+            N = (0, r.jsxs)("div", {
                 className: P.body,
                 children: [(0, r.jsx)("span", {
-                    children: N
+                    children: v
                 }), (0, r.jsx)(o.Text, {
                     variant: "text-md/medium",
                     children: t
@@ -84,7 +84,7 @@ function(e, t, n) {
             enableArtBoxShadow: !1,
             type: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
             title: S.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-            body: v,
+            body: N,
             context: S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
                 maxSize: S.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
             }),

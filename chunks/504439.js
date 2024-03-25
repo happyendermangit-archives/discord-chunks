@@ -22,15 +22,15 @@ function(e, t, n) {
             for (let a = 0; a < n; a++)
                 for (let l = a ? 0 : 1; l * n < t * (n - a); l++) i.push(((e[P + (R >> 1)] >> ((1 & R++) << 2) & 15) / 7.5 - 1) * r);
             return i
-        }, O = C(I, T, (u >> 18 & 31) / 31 / 2), g = C(3, 3, (c >> 3 & 63) / 63 * n), M = C(3, 3, (c >> 9 & 63) / 63 * n), h = _ ? C(5, 5, S) : [], L = (0, r.thumbHashToApproximateAspectRatio)(e), N = o(L > 1 ? 32 : 32 * L), v = o(L > 1 ? 32 / L : 32), x = new Uint8Array(N * v * 4), A = [], U = [];
-        for (let e = 0, n = 0; e < v; e++)
-            for (let r = 0; r < N; r++, n += 4) {
+        }, O = C(I, T, (u >> 18 & 31) / 31 / 2), g = C(3, 3, (c >> 3 & 63) / 63 * n), M = C(3, 3, (c >> 9 & 63) / 63 * n), h = _ ? C(5, 5, S) : [], L = (0, r.thumbHashToApproximateAspectRatio)(e), v = o(L > 1 ? 32 : 32 * L), N = o(L > 1 ? 32 / L : 32), x = new Uint8Array(v * N * 4), A = [], U = [];
+        for (let e = 0, n = 0; e < N; e++)
+            for (let r = 0; r < v; r++, n += 4) {
                 let o = d,
                     u = f,
                     c = m,
                     E = p;
-                for (let e = 0, t = l(I, _ ? 5 : 3); e < t; e++) A[e] = s(i / N * (r + .5) * e);
-                for (let t = 0, n = l(T, _ ? 5 : 3); t < n; t++) U[t] = s(i / v * (e + .5) * t);
+                for (let e = 0, t = l(I, _ ? 5 : 3); e < t; e++) A[e] = s(i / v * (r + .5) * e);
+                for (let t = 0, n = l(T, _ ? 5 : 3); t < n; t++) U[t] = s(i / N * (e + .5) * t);
                 for (let e = 0, n = 0; e < T; e++)
                     for (let r = e ? 0 : 1, i = 2 * U[e]; r * T < I * (T - e); r++, n++) !(r > t) && !(e > t) && (o += O[n] * A[r] * i);
                 for (let e = 0, t = 0; e < 3; e++)
@@ -47,8 +47,8 @@ function(e, t, n) {
                 x[n] = l(0, 255 * a(1, P)), x[n + 1] = l(0, 255 * a(1, R)), x[n + 2] = l(0, 255 * a(1, S)), x[n + 3] = l(0, 255 * a(1, E))
             }
         return {
-            w: N,
-            h: v,
+            w: v,
+            h: N,
             rgba: x
         }
     }

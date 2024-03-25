@@ -1,6 +1,9 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
+        AnalyticsLocationProvider: function() {
+            return d
+        },
         default: function() {
             return _
         }
@@ -16,7 +19,7 @@ function(e, t, n) {
     function d(e) {
         let {
             children: t,
-            currentContext: n
+            value: n
         } = e;
         return (0, i.jsx)(u.Provider, {
             value: n,
@@ -31,25 +34,14 @@ function(e, t, n) {
     }
 
     function _() {
-        for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-        let [o, l] = s.useState(n), _ = s.useContext(u), f = s.useMemo(() => c(_, o), [o, _]), E = s.useMemo(() => c(_, o.slice(0, o.length - 1)), [o, _]);
-        s.useEffect(() => {
-            !a(n, o) && l(n)
-        }, [n]);
-        let h = s.useCallback(e => {
-            let {
-                children: t
-            } = e;
-            return (0, i.jsx)(d, {
-                currentContext: f,
-                children: t
-            })
-        }, [f]);
-        return {
-            AnalyticsLocationProvider: h,
-            analyticsLocations: f,
-            sourceAnalyticsLocations: E,
-            newestAnalyticsLocation: null !== (e = f[f.length - 1]) && void 0 !== e ? e : null
+        for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+        let [r, o] = s.useState(n), l = s.useContext(u), d = s.useMemo(() => c(l, r), [r, l]), _ = s.useMemo(() => c(l, r.slice(0, r.length - 1)), [r, l]);
+        return s.useEffect(() => {
+            !a(n, r) && o(n)
+        }, [n]), {
+            analyticsLocations: d,
+            sourceAnalyticsLocations: _,
+            newestAnalyticsLocation: null !== (e = d[d.length - 1]) && void 0 !== e ? e : null
         }
     }
 }

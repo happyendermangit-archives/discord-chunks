@@ -31,9 +31,8 @@ function(e, t, n) {
                 roleId: f,
                 newAnalyticsLocations: p = r
             } = e, m = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], {
-                AnalyticsLocationProvider: h,
-                analyticsLocations: x
-            } = (0, a.default)(p), E = l.useMemo(() => ({
+                analyticsLocations: h
+            } = (0, a.default)(p), x = l.useMemo(() => ({
                 layout: t,
                 userId: null != n ? n : null,
                 guildId: null != u ? u : null,
@@ -44,7 +43,7 @@ function(e, t, n) {
             l.useEffect(() => {
                 m && (0, s.trackUserProfileAction)({
                     action: "VIEW",
-                    analyticsLocations: x,
+                    analyticsLocations: h,
                     layout: t,
                     userId: n,
                     guildId: u,
@@ -53,7 +52,7 @@ function(e, t, n) {
                     roleId: f
                 })
             }, [m]);
-            let y = l.useCallback(e => {
+            let E = l.useCallback(e => {
                     (0, s.trackUserProfileAction)({
                         layout: t,
                         userId: n,
@@ -61,25 +60,26 @@ function(e, t, n) {
                         channelId: d,
                         messageId: c,
                         roleId: f,
-                        analyticsLocations: x,
+                        analyticsLocations: h,
                         ...e
                     })
-                }, [t, n, u, d, c, f, x]),
-                g = l.useCallback(e => {
+                }, [t, n, u, d, c, f, h]),
+                y = l.useCallback(e => {
                     let {
                         children: t
                     } = e;
                     return (0, i.jsx)(o.Provider, {
-                        value: E,
-                        children: (0, i.jsx)(h, {
+                        value: x,
+                        children: (0, i.jsx)(a.AnalyticsLocationProvider, {
+                            value: h,
                             children: t
                         })
                     })
-                }, [E, h]);
+                }, [x, h]);
             return {
-                UserProfileAnalyticsProvider: g,
-                analyticsLocations: x,
-                trackUserProfileAction: y
+                UserProfileAnalyticsProvider: y,
+                analyticsLocations: h,
+                trackUserProfileAction: E
             }
         },
         d = function() {

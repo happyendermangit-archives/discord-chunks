@@ -99,30 +99,30 @@ function(e, _, E) {
             isCoachmark: _,
             markAsDismissed: E
         } = e, {
-            analyticsLocations: n,
-            AnalyticsLocationProvider: I
-        } = (0, O.default)(N.default.APP_ICON_EDITOR), s = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
-            isUpsellPreview: A,
-            isEditorOpen: R,
-            shouldEditorAnimate: l
+            analyticsLocations: n
+        } = (0, O.default)(N.default.APP_ICON_EDITOR), I = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
+            isUpsellPreview: s,
+            isEditorOpen: A,
+            shouldEditorAnimate: R
         } = (0, a.useStateFromStoresObject)([D.default, S.default], () => ({
             isUpsellPreview: D.default.isUpsellPreview,
             isEditorOpen: D.default.isEditorOpen,
             shouldEditorAnimate: _ && !S.default.useReducedMotion
         }));
         o.useEffect(() => {
-            A && C.default.track(U.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+            s && C.default.track(U.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: h.PremiumUpsellTypes.APP_ICON_UPSELL,
                 location_stack: n
             })
-        }, [A, n]);
-        let L = (0, T.default)(null, A ? G : U.NOOP);
+        }, [s, n]);
+        let l = (0, T.default)(null, s ? G : U.NOOP);
         return (o.useEffect(() => {
-            if (A && !R) return G
-        }, [A, R]), null == s) ? null : (0, t.jsx)(I, {
+            if (s && !A) return G
+        }, [s, A]), null == I) ? null : (0, t.jsx)(O.AnalyticsLocationProvider, {
+            value: n,
             children: (0, t.jsx)("div", {
-                ref: L,
-                className: r(m.editor, l ? m.editorAnimate : null),
+                ref: l,
+                className: r(m.editor, R ? m.editorAnimate : null),
                 children: (0, t.jsxs)(i.HeadingLevel, {
                     children: [(0, t.jsx)(g, {
                         markAsDismissed: E

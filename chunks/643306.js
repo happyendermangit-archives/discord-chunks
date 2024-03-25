@@ -59,7 +59,7 @@ function(e, t, n) {
             children: L,
             inlinePreview: P = !1
         } = e, {
-            AnalyticsLocationProvider: b
+            analyticsLocations: b
         } = (0, h.default)(m.default.ROLE_MENTION), j = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), U = null != t && 0 !== t && !P, D = U && "dot" === j, w = e => (0, i.jsxs)(v.default, {
             className: a(R.roleMention),
             color: "username" === j && U ? t : null,
@@ -77,9 +77,11 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !1
         });
-        return !F || P || null == s || null == k || null == l && "@everyone" !== x ? (0, i.jsx)(b, {
+        return !F || P || null == s || null == k || null == l && "@everyone" !== x ? (0, i.jsx)(h.AnalyticsLocationProvider, {
+            value: b,
             children: w()
-        }) : (0, i.jsx)(b, {
+        }) : (0, i.jsx)(h.AnalyticsLocationProvider, {
+            value: b,
             children: (0, i.jsx)(d.Popout, {
                 preload: async () => {
                     null != l && await (0, E.requestMembersForRole)(k, l)

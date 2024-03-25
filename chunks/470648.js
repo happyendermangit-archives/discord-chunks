@@ -35,7 +35,7 @@ function(e, t, n) {
             channelId: I,
             inlinePreview: v = !1
         } = e, {
-            AnalyticsLocationProvider: N
+            analyticsLocations: N
         } = (0, c.default)(d.default.USER_MENTION), A = (0, r.useStateFromStores)([g.default], () => g.default.getUser(l)), O = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(I)), R = null != O ? O.getGuildId() : null, M = v || null == A || null == R || null == I ? void 0 : e => {
             null != O && (0, u.openContextMenuLazy)(e, async () => {
                 let {
@@ -55,9 +55,11 @@ function(e, t, n) {
             ...e,
             children: "@".concat(null != L ? L : k)
         });
-        return v ? (0, i.jsx)(N, {
+        return v ? (0, i.jsx)(c.AnalyticsLocationProvider, {
+            value: N,
             children: U()
-        }) : (0, i.jsx)(N, {
+        }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
+            value: N,
             children: (0, i.jsx)(o.Popout, {
                 preload: null == A ? void 0 : () => (0, p.default)(A.id, A.getAvatarURL(R, 80), {
                     guildId: null != R ? R : void 0,

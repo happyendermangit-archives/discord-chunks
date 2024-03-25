@@ -6,7 +6,7 @@ function(e, t, n) {
         }
     });
     let i = new class e {
-        enterPipMode() {
+        setActive(e) {
             return Promise.resolve()
         }
         setEnabled(e) {}
@@ -16,6 +16,7 @@ function(e, t, n) {
         setPipAspectRatio(e, t) {}
         updateSourceTrackingView() {}
         addOnPipModeChangedListener(e) {}
+        addOnPipModeWillChangeListener(e) {}
         isEnabled() {
             return !1
         }

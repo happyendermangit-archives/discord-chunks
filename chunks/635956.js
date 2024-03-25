@@ -35,8 +35,8 @@ function(e, t, n) {
                 onClick: M,
                 size: h,
                 className: L,
-                trialId: N,
-                isTrialCTA: v,
+                trialId: v,
+                isTrialCTA: N,
                 buttonText: x,
                 buttonTextClassName: A,
                 iconClassName: U,
@@ -132,7 +132,7 @@ function(e, t, n) {
                     isVerified: K.verified,
                     isGift: t,
                     subscriptionTier: i,
-                    trialId: N,
+                    trialId: v,
                     postSuccessGuild: b,
                     onSubscribeModalClose: y,
                     analyticsLocations: z,
@@ -141,7 +141,7 @@ function(e, t, n) {
                     giftMessage: k
                 })
             };
-            if (v) return (0, r.jsxs)(s.Button, {
+            if (N) return (0, r.jsxs)(s.Button, {
                 size: h,
                 className: L,
                 innerClassName: g.premiumSubscribeButton,

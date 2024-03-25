@@ -44,8 +44,8 @@ function(e, t, n) {
         M = n("915639"),
         h = n("697218"),
         L = n("521012"),
-        N = n("594098"),
-        v = n("491614"),
+        v = n("594098"),
+        N = n("491614"),
         x = n("716589"),
         A = n("46829"),
         U = n("118503"),
@@ -255,7 +255,7 @@ function(e, t, n) {
             isStacked: _,
             isFullScreen: T,
             priceOptions: p
-        } = e, P = (0, I.useStateFromStores)([L.default], () => L.default.getPremiumTypeSubscription()), R = (0, I.useStateFromStores)([h.default], () => h.default.getCurrentUser()), C = (0, K.useHasDiscountApplied)(), O = (0, K.useActiveDiscountInfo)(), g = o === Q.PremiumTypes.TIER_0 ? Q.PremiumSubscriptionSKUs.TIER_0 : Q.PremiumSubscriptionSKUs.TIER_2, M = (null == P ? void 0 : P.trialId) != null ? null == R ? void 0 : R.premiumType : C ? Q.PremiumTypes.TIER_2 : null, N = (0, W.usePremiumTrialOffer)(), v = (0, V.usePremiumDiscountOffer)(), x = null == N ? void 0 : N.subscription_trial;
+        } = e, P = (0, I.useStateFromStores)([L.default], () => L.default.getPremiumTypeSubscription()), R = (0, I.useStateFromStores)([h.default], () => h.default.getCurrentUser()), C = (0, K.useHasDiscountApplied)(), O = (0, K.useActiveDiscountInfo)(), g = o === Q.PremiumTypes.TIER_0 ? Q.PremiumSubscriptionSKUs.TIER_0 : Q.PremiumSubscriptionSKUs.TIER_2, M = (null == P ? void 0 : P.trialId) != null ? null == R ? void 0 : R.premiumType : C ? Q.PremiumTypes.TIER_2 : null, v = (0, W.usePremiumTrialOffer)(), N = (0, V.usePremiumDiscountOffer)(), x = null == v ? void 0 : v.subscription_trial;
         if (!s && null != M && o === M && null != P && null != P.planIdFromItems && !_) {
             let e = null != P.trialEndsAt ? E(null == P ? void 0 : P.trialEndsAt).diff(E(), "d") : 0,
                 r = Q.SubscriptionPlanInfo[P.planIdFromItems],
@@ -292,14 +292,14 @@ function(e, t, n) {
                     price: e
                 })
             });
-            if (null != v) return (0, d.jsx)(S.Heading, {
+            if (null != N) return (0, d.jsx)(S.Heading, {
                 variant: "heading-md/normal",
                 color: "always-white",
                 className: et.trialHeader,
                 children: (0, d.jsx)(eo, {
                     defaultPriceString: e,
                     subscriptionPlan: Q.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
-                    discountOffer: v
+                    discountOffer: N
                 })
             })
         }
@@ -336,7 +336,7 @@ function(e, t, n) {
                 Icon: A.default,
                 text: ee.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
             }), (0, d.jsx)(es, {
-                Icon: v.default,
+                Icon: N.default,
                 text: ee.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
             }), (0, d.jsx)(es, {
                 Icon: D.default,
@@ -379,7 +379,7 @@ function(e, t, n) {
                 className: et.newCircleIcon
             }), n ? (0, d.jsx)("div", {
                 className: et.wumpusImageContainer,
-                children: (0, d.jsx)(N.default, {
+                children: (0, d.jsx)(v.default, {
                     src: en,
                     mediaLayoutType: $.MediaLayoutType.RESPONSIVE,
                     width: 270,
@@ -510,7 +510,7 @@ function(e, t, n) {
                 Icon: A.default,
                 text: ee.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
             }), (0, d.jsx)(es, {
-                Icon: v.default,
+                Icon: N.default,
                 text: ee.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
             }), (0, d.jsx)(es, {
                 Icon: j.default,
@@ -546,8 +546,8 @@ function(e, t, n) {
             O = (null == E ? void 0 : E.trialId) != null ? null == T ? void 0 : T.premiumType : null,
             g = (0, K.useIsInPremiumOfferExperience)(),
             M = (0, V.usePremiumDiscountOffer)(),
-            v = (0, K.useHasDiscountApplied)(),
-            x = null != C || null != O ? 0 : null != M || v ? 1 : null,
+            N = (0, K.useHasDiscountApplied)(),
+            x = null != C || null != O ? 0 : null != M || N ? 1 : null,
             A = 1 === c,
             U = (0, Z.useIsEligibleForBogoPromotion)(),
             y = !o && g,
@@ -564,7 +564,7 @@ function(e, t, n) {
             }),
             children: [!o && null != M && (0, V.discountOfferHasTier)(M, Q.PremiumSubscriptionSKUs.TIER_2) && void 0 !== M.discount.amount ? (0, d.jsxs)(d.Fragment, {
                 children: [(0, d.jsx)(ea, {
-                    text: v ? ee.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : ee.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
+                    text: N ? ee.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : ee.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
                         percent: M.discount.amount
                     }),
                     className: et.topRimPill,
@@ -588,7 +588,7 @@ function(e, t, n) {
                 }), (0, d.jsx)("div", {
                     className: n
                 })]
-            }), !o && v && (0, d.jsxs)(d.Fragment, {
+            }), !o && N && (0, d.jsxs)(d.Fragment, {
                 children: [(0, d.jsx)(ea, {
                     text: ee.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
                     className: et.topRimPill,
@@ -598,7 +598,7 @@ function(e, t, n) {
                 })]
             }), r ? (0, d.jsx)("div", {
                 className: et.wumpusImageContainer,
-                children: (0, d.jsx)(N.default, {
+                children: (0, d.jsx)(v.default, {
                     src: er,
                     mediaLayoutType: $.MediaLayoutType.RESPONSIVE,
                     width: 270,
@@ -693,9 +693,10 @@ function(e, t, n) {
             selectedPremiumType: s,
             isFullScreen: o
         } = e, {
-            AnalyticsLocationProvider: u
+            analyticsLocations: u
         } = (0, O.default)(C.default.PREMIUM_MARKETING_TIER_CARD), c = 1 === l, f = s === Q.PremiumTypes.TIER_0, _ = (0, I.useStateFromStores)([R.default], () => R.default.useReducedMotion);
-        return (0, d.jsx)(u, {
+        return (0, d.jsx)(O.AnalyticsLocationProvider, {
+            value: u,
             children: (0, d.jsxs)("div", {
                 className: m({
                     [et.premiumCards]: !c,

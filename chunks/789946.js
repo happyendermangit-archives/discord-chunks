@@ -34,8 +34,8 @@ function(e, t, n) {
             type: M,
             guildBoostProps: h,
             analyticsSource: L,
-            analyticsLocation: N,
-            body: v,
+            analyticsLocation: v,
+            body: N,
             context: x,
             glowUp: A,
             modalClassName: U,
@@ -69,12 +69,12 @@ function(e, t, n) {
                 type: "".concat(M, " - Tier ").concat(h.boostedGuildTier),
                 guild_id: h.guild.id,
                 channel_id: h.channelId,
-                location: N,
+                location: v,
                 location_stack: Q
             }) : d.default.track(P.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: M,
                 source: L,
-                location: N,
+                location: v,
                 location_stack: Q,
                 sku_id: (0, f.castPremiumSubscriptionAsSkuId)(K)
             }))
@@ -109,7 +109,7 @@ function(e, t, n) {
                             subscriptionTier: null !== (a = null == X ? void 0 : null === (n = X.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : S.PremiumSubscriptionSKUs.TIER_2,
                             headingText: g,
                             context: x,
-                            analyticsLocationObject: N,
+                            analyticsLocationObject: v,
                             discountOffer: J,
                             trialOffer: X,
                             children: A
@@ -126,7 +126,7 @@ function(e, t, n) {
                         }), (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             className: l(y, C.subHeader),
-                            children: v
+                            children: N
                         })]
                     })
                 })
@@ -150,7 +150,7 @@ function(e, t, n) {
                     }) : null, (() => {
                         let e;
                         if (Y) return (0, r.jsx)(c.default, {
-                            analyticsLocation: N,
+                            analyticsLocation: v,
                             guild: h.guild,
                             onClose: j
                         });
@@ -170,7 +170,7 @@ function(e, t, n) {
                             className: l({
                                 [C.getNitroCTA]: en
                             }),
-                            premiumModalAnalyticsLocation: N,
+                            premiumModalAnalyticsLocation: v,
                             subscriptionTier: K,
                             trialId: e,
                             size: s.Button.Sizes.SMALL,

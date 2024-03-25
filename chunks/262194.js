@@ -138,41 +138,41 @@ function(e, _, E) {
         let {
             markAsDismissed: _
         } = e, {
-            analyticsLocations: E,
-            AnalyticsLocationProvider: n
+            analyticsLocations: E
         } = (0, R.default)(A.default.CLIENT_THEMES_EDITOR), {
-            isPreview: a,
-            isCoachmark: I,
-            isEditorOpen: T,
-            shouldEditorAnimate: S
+            isPreview: n,
+            isCoachmark: a,
+            isEditorOpen: I,
+            shouldEditorAnimate: T
         } = (0, i.useStateFromStoresObject)([M.default, O.default], () => ({
             isPreview: M.default.isPreview,
             isCoachmark: M.default.isCoachmark,
             isEditorOpen: M.default.isEditorOpen,
             shouldEditorAnimate: M.default.isCoachmark && !O.default.useReducedMotion
-        })), l = (0, h.useTrackClientThemePreviewEvent)();
-        o.useEffect(() => l(m.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [l]), o.useEffect(() => {
-            a && D.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        })), S = (0, h.useTrackClientThemePreviewEvent)();
+        o.useEffect(() => S(m.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [S]), o.useEffect(() => {
+            n && D.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: p.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: E
             })
-        }, [a, E]);
-        let u = (0, h.useResetClientThemePreview)(),
-            L = (0, N.default)(null, a ? u : m.NOOP);
+        }, [n, E]);
+        let l = (0, h.useResetClientThemePreview)(),
+            u = (0, N.default)(null, n ? l : m.NOOP);
         return o.useEffect(() => {
-            if (a && !T) return u
-        }, [a, T, u]), (0, t.jsx)(n, {
+            if (n && !I) return l
+        }, [n, I, l]), (0, t.jsx)(R.AnalyticsLocationProvider, {
+            value: E,
             children: (0, t.jsx)("div", {
-                ref: L,
-                className: r(y.themeEditor, S ? y.editorAnimate : null),
+                ref: u,
+                className: r(y.themeEditor, T ? y.editorAnimate : null),
                 children: (0, t.jsxs)(s.HeadingLevel, {
-                    children: [I ? (0, t.jsx)(B, {}) : (0, t.jsx)(f, {
+                    children: [a ? (0, t.jsx)(B, {}) : (0, t.jsx)(f, {
                         markAsDismissed: _
                     }), (0, t.jsx)(s.Scroller, {
                         className: y.editorBody,
                         children: (0, t.jsxs)(P.default, {
                             type: P.ThemeSelectionGroupType.EDITOR,
-                            children: [!a && (0, t.jsx)(P.default.Basic, {
+                            children: [!n && (0, t.jsx)(P.default.Basic, {
                                 className: y.selectionGroup
                             }), (0, t.jsx)(P.default.Gradient, {
                                 className: y.selectionGroup

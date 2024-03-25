@@ -35,9 +35,10 @@ function(e, t, n) {
         } = e, N = (0, s.useStateFromStores)([f.default], () => m.default.canUseIncreasedMessageLength(f.default.getCurrentUser())), A = (0, d.default)(), O = null != _ ? _ : A, R = null !== (S = null != I ? I : _) && void 0 !== S ? S : A / 10, M = T.length, k = null != C.upsellLongMessages && (null != M ? M : 0) > x.MAX_MESSAGE_LENGTH && N, L = null != C.upsellLongMessages && !N, P = (null === (n = (0, c.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === E.PremiumSubscriptionSKUs.TIER_2, b = O - M, j = b > R, U = b < 0 && P, D = 0 === b ? y.default.Messages.CHARACTER_COUNT_AT_LIMIT : b > 0 ? y.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
             count: b
         }) : y.default.Messages.CHARACTER_COUNT_OVER_LIMIT, {
-            AnalyticsLocationProvider: w
+            analyticsLocations: w
         } = (0, u.default)(o.default.CHARACTER_COUNT), F = k && b >= 0 || !j || L && !j;
-        return F ? (0, i.jsx)(w, {
+        return F ? (0, i.jsx)(u.AnalyticsLocationProvider, {
+            value: w,
             children: (0, i.jsxs)("div", {
                 className: a(v, g.characterCount, {
                     [g.error]: b < 0

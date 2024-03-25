@@ -65,7 +65,7 @@ function(e, t, n) {
             } = e, {
                 location: z
             } = (0, c.useAnalyticsContext)(), {
-                AnalyticsLocationProvider: Z
+                analyticsLocations: Z
             } = (0, p.default)(f.default.STICKER_PICKER);
             (0, y.useMaybeFetchPremiumLikelihood)(g.default);
             let $ = (null === (a = (0, S.usePremiumTrialOffer)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
@@ -188,7 +188,8 @@ function(e, t, n) {
                     location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
                 }), (0, E.navigateToPremiumMarketingPage)()
             }, [Y]);
-            return (0, i.jsxs)(Z, {
+            return (0, i.jsxs)(p.AnalyticsLocationProvider, {
+                value: Z,
                 children: [!($ && eo) && (0, i.jsx)("div", {
                     className: G.header,
                     children: (0, i.jsx)(j.default, {

@@ -325,7 +325,7 @@ function(e, t, n) {
                 stickersGrid: I,
                 channel: v
             } = e, N = l.useRef(!1), A = l.useRef(null), [O, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
-                AnalyticsLocationProvider: k
+                analyticsLocations: k
             } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), P = (0, s.useStateFromStores)([R.default], () => R.default.getPremiumPacks()), j = l.useMemo(() => new Set(P.map(e => e.id)), [P]), {
                 renderRow: U,
                 renderSection: D,
@@ -396,7 +396,8 @@ function(e, t, n) {
                         totalHeight: -1
                     }
                 }
-            }), []), (0, i.jsx)(k, {
+            }), []), (0, i.jsx)(f.AnalyticsLocationProvider, {
+                value: k,
                 children: (0, i.jsxs)("div", {
                     className: G.wrapper,
                     children: [null != o && 0 === o.sendable.length && 0 === o.sendableWithPremium.length ? (0, i.jsx)(u.default, {
