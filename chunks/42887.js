@@ -328,7 +328,7 @@ function(e, t, n) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : em.MediaEngineContextTypes.DEFAULT,
             n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             i = e4(t);
-        return Object.assign(i, e), !__OVERLAY__ && n && m.default.set(eT, eC), i
+        return Object.assign(i, e), !__OVERLAY__ && n && m.Storage.set(eT, eC), i
     }
 
     function tr() {
@@ -770,10 +770,10 @@ function(e, t, n) {
                 (null == a ? void 0 : null === (n = a.desktopSource) || void 0 === n ? void 0 : n.id) === e && (null != t && (null == r ? void 0 : null === (i = r.desktopSource) || void 0 === i ? void 0 : i.soundshareId) !== t && v.cancelAttachToProcess(t), a = null)
             }), ti.reset(), ! function() {
                 var e;
-                let t = m.default.get("audio");
-                null != t && (m.default.set(eT, {
+                let t = m.Storage.get("audio");
+                null != t && (m.Storage.set(eT, {
                         [em.MediaEngineContextTypes.DEFAULT]: t
-                    }), m.default.remove("audio")), eC = null !== (e = m.default.get(eT)) && void 0 !== e ? e : {}, _.each(eC, e => {
+                    }), m.Storage.remove("audio")), eC = null !== (e = m.Storage.get(eT)) && void 0 !== e ? e : {}, _.each(eC, e => {
                         if (_.defaultsDeep(e, eI()), null != e.modeOptions && "string" == typeof e.modeOptions.shortcut && (e.modeOptions.shortcut = (0, es.toCombo)(e.modeOptions.shortcut)), null != e.modeOptions && 4 !== e.vadUseKrispSettingVersion && (e.vadUseKrispSettingVersion = 4, e.modeOptions.vadUseKrisp = !0), !e.qosMigrated && (e.qosMigrated = !0, e.qos = !1), !e.vadThrehsoldMigrated) {
                             var t;
                             e.vadThrehsoldMigrated = !0, (null === (t = e.modeOptions) || void 0 === t ? void 0 : t.threshold) === -40 && (e.modeOptions.threshold = -60)
@@ -1464,7 +1464,7 @@ function(e, t, n) {
             })
         },
         AUDIO_RESET: function() {
-            m.default.remove(eT), location.reload()
+            m.Storage.remove(eT), location.reload()
         },
         AUDIO_INPUT_DETECTED: function(e) {
             let {

@@ -21,7 +21,7 @@ function(e, t, n) {
         f = n("49111");
     class g extends o.default {
         handlePostConnectionOpen() {
-            if (!s.default.get("turnedOffNewNotifications") && !!r.default.hasConsented(f.Consents.PERSONALIZATION) && !!d.NotificationsExperiment.getCurrentConfig({
+            if (!s.Storage.get("turnedOffNewNotifications") && !!r.default.hasConsented(f.Consents.PERSONALIZATION) && !!d.NotificationsExperiment.getCurrentConfig({
                     location: "NotificationMigrationManager"
                 }, {
                     autoTrackExposure: !1

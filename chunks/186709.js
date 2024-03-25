@@ -42,8 +42,8 @@ function(e, t, n) {
     }
     d.displayName = "UserSettingsOverridesStore", d.persistKey = "UserSettingsOverridesStore", d.migrations = [() => {
         var e;
-        let t = null !== (e = r.default.get("UserSettingsStoreOverrides")) && void 0 !== e ? e : {};
-        return r.default.remove("UserSettingsStoreOverrides"), t
+        let t = null !== (e = r.Storage.get("UserSettingsStoreOverrides")) && void 0 !== e ? e : {};
+        return r.Storage.remove("UserSettingsStoreOverrides"), t
     }];
     var _ = new d(o.default, {
         USER_SETTINGS_PROTO_UPDATE: function() {

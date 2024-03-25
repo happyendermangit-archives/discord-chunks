@@ -19,8 +19,8 @@ function(e, t, n) {
                 children: d,
                 className: _,
                 dir: f = "ltr",
-                orientation: E = "vertical",
-                fade: S = !1,
+                orientation: S = "vertical",
+                fade: E = !1,
                 customTheme: g = !1,
                 paddingFix: m = !0,
                 style: h,
@@ -28,15 +28,15 @@ function(e, t, n) {
             } = u, {
                 scrollerRef: I,
                 getScrollerState: T
-            } = (0, a.useUncachedScrollerState)(), v = (0, a.useScrollSpring)(I, E);
+            } = (0, a.useUncachedScrollerState)(), v = (0, a.useScrollSpring)(I, S);
             r.useImperativeHandle(c, () => ({
                 getScrollerNode: () => I.current,
                 getScrollerState: T,
-                ...(0, a.getAnimatedScrollHelpers)(I, T, v, E)
-            }), [I, T, E, v]);
+                ...(0, a.getAnimatedScrollHelpers)(I, T, v, S)
+            }), [I, T, S, v]);
             let A = (0, a.usePaddingFixes)({
                 paddingFix: m,
-                orientation: E,
+                orientation: S,
                 dir: f,
                 className: _,
                 scrollerRef: I,
@@ -46,10 +46,10 @@ function(e, t, n) {
                 ref: I,
                 className: s(_, {
                     [e]: !0,
-                    [t]: S,
+                    [t]: E,
                     [n]: g
                 }),
-                style: (0, a.getMergedOrientationStyles)(h, E),
+                style: (0, a.getMergedOrientationStyles)(h, S),
                 dir: f,
                 ...p,
                 children: (0, i.jsxs)(l.FocusRingScope, {

@@ -61,7 +61,7 @@ function(e, _, E) {
 
     function R(e) {
         if (null != e.storageKey) {
-            let _ = r.default.get(e.storageKey);
+            let _ = r.Storage.get(e.storageKey);
             if (null != _ && Date.now() - _ < e.cooldown) return !1
         }
         return !0
@@ -80,7 +80,7 @@ function(e, _, E) {
             super(...e), this.feedbackTypeToShow = null, this.showFeedbackModalDebounced = n.debounce(e => {
                 null != this.feedbackTypeToShow && (! function(e) {
                     let _ = N[e];
-                    null != _.storageKey && r.default.set(_.storageKey, Date.now())
+                    null != _.storageKey && r.Storage.set(_.storageKey, Date.now())
                 }(this.feedbackTypeToShow), this.feedbackTypeToShow = null, e())
             }, 200)
         }

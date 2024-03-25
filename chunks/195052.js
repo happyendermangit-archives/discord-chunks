@@ -24,13 +24,13 @@ function(e, t, n) {
             },
             getBlockedDomains() {
                 if ((0, a.isDesktop)()) {
-                    let e = s.default.get("BlockedDomainsV2");
+                    let e = s.Storage.get("BlockedDomainsV2");
                     return Promise.resolve(null == e ? [] : e.split("\n"))
                 }
                 return Promise.resolve([])
             },
             saveBlockedDomains(e) {
-                (0, a.isDesktop)() && s.default.set("BlockedDomainsV2", e.join("\n"))
+                (0, a.isDesktop)() && s.Storage.set("BlockedDomainsV2", e.join("\n"))
             }
         }
 }

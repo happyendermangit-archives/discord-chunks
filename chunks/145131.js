@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return S
+            return E
         }
     });
     var i = n("37983"),
@@ -75,7 +75,7 @@ function(e, t, n) {
         basis: "auto",
         wrap: !1
     };
-    let E = e => {
+    let S = e => {
         let {
             children: t,
             className: n,
@@ -83,16 +83,16 @@ function(e, t, n) {
             justify: o = c.START,
             align: a = d.STRETCH,
             wrap: f = _.NO_WRAP,
-            shrink: E,
-            grow: S,
+            shrink: S,
+            grow: E,
             basis: g,
             style: m,
             ...h
         } = e;
         return (0, i.jsx)("div", {
             style: {
-                flexShrink: E,
-                flexGrow: S,
+                flexShrink: S,
+                flexGrow: E,
                 flexBasis: g,
                 ...m
             },
@@ -101,10 +101,10 @@ function(e, t, n) {
             children: t
         })
     };
-    E.defaultProps = {
+    S.defaultProps = {
         shrink: 1,
         grow: 1,
         basis: "auto"
-    }, E.Child = f, E.Direction = u, E.Align = d, E.Justify = c, E.Wrap = _;
-    var S = E
+    }, S.Child = f, S.Direction = u, S.Align = d, S.Justify = c, S.Wrap = _;
+    var E = S
 }

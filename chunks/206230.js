@@ -39,7 +39,7 @@ function(e, t, n) {
             disableVoiceBackgrounds: !1
         },
         f = _,
-        E = {
+        S = {
             12: "font-size-12",
             14: "font-size-14",
             15: "font-size-15",
@@ -48,7 +48,7 @@ function(e, t, n) {
             20: "font-size-20",
             24: "font-size-24"
         };
-    class S extends i.default.DeviceSettingsStore {
+    class E extends i.default.DeviceSettingsStore {
         initialize(e) {
             this.waitFor(a.default), isNaN((f = {
                 ..._,
@@ -69,7 +69,7 @@ function(e, t, n) {
         }
         get fontScaleClass() {
             var e;
-            let t = null !== (e = E[this.fontSize]) && void 0 !== e ? e : "";
+            let t = null !== (e = S[this.fontSize]) && void 0 !== e ? e : "";
             return this.isFontScaledUp ? "a11y-font-scaled-up ".concat(t) : this.isFontScaledDown ? "a11y-font-scaled-down ".concat(t) : "".concat(t)
         }
         get zoom() {
@@ -166,16 +166,16 @@ function(e, t, n) {
             return f
         }
     }
-    S.displayName = "AccessibilityStore", S.persistKey = "AccessibilityStore", S.migrations = [() => {
+    E.displayName = "AccessibilityStore", E.persistKey = "AccessibilityStore", E.migrations = [() => {
         let e = {
                 FONT_SCALE: "a11yFontScale",
                 ZOOM: "a11yZoom",
                 COLORBLIND_MODE: "a11yColorblindMode"
             },
-            t = r.default.get(e.FONT_SCALE) || 100,
-            n = r.default.get(e.ZOOM) || c.Accessibility.ZOOM_DEFAULT,
-            i = r.default.get(e.COLORBLIND_MODE) || !1;
-        return r.default.remove(e.FONT_SCALE), r.default.remove(e.ZOOM), r.default.remove(e.COLORBLIND_MODE), {
+            t = r.Storage.get(e.FONT_SCALE) || 100,
+            n = r.Storage.get(e.ZOOM) || c.Accessibility.ZOOM_DEFAULT,
+            i = r.Storage.get(e.COLORBLIND_MODE) || !1;
+        return r.Storage.remove(e.FONT_SCALE), r.Storage.remove(e.ZOOM), r.Storage.remove(e.COLORBLIND_MODE), {
             fontScale: t,
             zoom: n,
             colorblindMode: i,
@@ -226,7 +226,7 @@ function(e, t, n) {
         ...e,
         disableVoiceBackgrounds: !1
     })];
-    let g = new S(s.default, {
+    let g = new E(s.default, {
         ACCESSIBILITY_SET_FONT_SIZE: function(e) {
             var t;
             let n = (t = e.fontSize, c.Accessibility.FONT_SIZES.indexOf(t) >= 0 ? t : c.Accessibility.FONT_SIZE_DEFAULT);

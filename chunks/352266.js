@@ -18,12 +18,12 @@ function(e, t, n) {
         f = null;
     class E extends s.default.Store {
         initialize() {
-            i = null, r.default.get(c) && (r.default.remove(_), r.default.remove(c))
+            i = null, r.Storage.get(c) && (r.Storage.remove(_), r.Storage.remove(c))
         }
         getCurrentRevision() {
             if (null == i) {
                 var e;
-                i = null !== (e = r.default.get(_)) && void 0 !== e ? e : null
+                i = null !== (e = r.Storage.get(_)) && void 0 !== e ? e : null
             }
             return i
         }
@@ -52,7 +52,7 @@ function(e, t, n) {
                 list: t,
                 revision: n
             } = e;
-            f = null, i = null, u.default.saveBlockedDomains(t), r.default.set("BlockedDomainRevision", n)
+            f = null, i = null, u.default.saveBlockedDomains(t), r.Storage.set("BlockedDomainRevision", n)
         }
     })
 }

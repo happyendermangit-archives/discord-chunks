@@ -43,8 +43,8 @@ function(e, t, n) {
         d = n("718517"),
         _ = n("674268"),
         f = n("275877"),
-        E = n("374363"),
-        S = n("116949"),
+        S = n("374363"),
+        E = n("116949"),
         g = n("397336"),
         m = n("49111");
     let h = "UserSettingsProtoLastWriteTimes",
@@ -56,7 +56,7 @@ function(e, t, n) {
     }), "undefined" != typeof document && (document.addEventListener("mousedown", () => {}), document.addEventListener("keydown", () => {}));
     class I {
         getEditInfo() {
-            return E.default.getFullState()[this.type]
+            return S.default.getFullState()[this.type]
         }
         getCurrentValue() {
             return this.getEditInfo().proto
@@ -67,7 +67,7 @@ function(e, t, n) {
             if (null == i) throw Error("Unknown proto field name ".concat(String(e)));
             let r = i.T(),
                 o = this.getCurrentValue()[e],
-                s = null != o ? r.fromBinary(r.toBinary(o), S.BINARY_READ_OPTIONS) : r.create(),
+                s = null != o ? r.fromBinary(r.toBinary(o), E.BINARY_READ_OPTIONS) : r.create(),
                 l = t(s);
             if (!1 === l) return;
             let a = this.ProtoClass.create();
@@ -110,7 +110,7 @@ function(e, t, n) {
                 let e = s * d.default.Millis.SECOND;
                 t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * d.default.Millis.SECOND))), this.logger.log("Scheduling save from markDirty"), o.timeout = setTimeout(this.persistChanges, e), o.timeoutDelay = s
             }
-            null != t.cleanup && (o.cleanupFuncs = [...i.cleanupFuncs, ...t.cleanup]), null == i.protoToSave ? o.protoToSave = e : o.protoToSave = (0, S.mergeTopLevelFields)(this.ProtoClass, i.protoToSave, e), this.dispatchChanges(o)
+            null != t.cleanup && (o.cleanupFuncs = [...i.cleanupFuncs, ...t.cleanup]), null == i.protoToSave ? o.protoToSave = e : o.protoToSave = (0, E.mergeTopLevelFields)(this.ProtoClass, i.protoToSave, e), this.dispatchChanges(o)
         }
         dispatchChanges(e) {
             c.default.dispatch({
@@ -123,8 +123,8 @@ function(e, t, n) {
         }
         saveLastSendTime() {
             var e;
-            let t = null !== (e = u.default.get(h)) && void 0 !== e ? e : {};
-            t[this.type] = Date.now(), u.default.set(h, t)
+            let t = null !== (e = u.Storage.get(h)) && void 0 !== e ? e : {};
+            t[this.type] = Date.now(), u.Storage.set(h, t)
         }
         async loadIfNecessary(e) {
             if (__OVERLAY__) {
@@ -148,7 +148,7 @@ function(e, t, n) {
                         }
                     } = await s.HTTP.get({
                         url: m.Endpoints.USER_SETTINGS_PROTO(this.type)
-                    }), n = (0, S.b64ToProto)(this.ProtoClass, t);
+                    }), n = (0, E.b64ToProto)(this.ProtoClass, t);
                     if (null == n) {
                         this.dispatchChanges({
                             loading: !1,
@@ -161,7 +161,7 @@ function(e, t, n) {
                             proto: r,
                             isDirty: o,
                             cleanupFuncs: l
-                        } = (0, S.runMigrations)(n, i);
+                        } = (0, E.runMigrations)(n, i);
                     return await c.default.dispatch({
                         type: "USER_SETTINGS_PROTO_UPDATE",
                         settings: {
@@ -228,7 +228,7 @@ function(e, t, n) {
                     } = t;
                     return n(e.protoToSave)
                 });
-                let t = (0, S.protoToB64)(this.ProtoClass, e.protoToSave);
+                let t = (0, E.protoToB64)(this.ProtoClass, e.protoToSave);
                 if (null == t || "" === t) {
                     this.logger.log("Not persisting proto because there is nothing to change");
                     return
@@ -245,7 +245,7 @@ function(e, t, n) {
                         }
                     });
                     n.out_of_date && this.logger.log("Proto was out of date, discarding changes"), this.getEditInfo().editInfo.cleanupFuncs.forEach(e => e());
-                    let i = (0, S.b64ToProto)(this.ProtoClass, n.settings);
+                    let i = (0, E.b64ToProto)(this.ProtoClass, n.settings);
                     if (null == i) return;
                     c.default.dispatch({
                         type: "USER_SETTINGS_PROTO_UPDATE",
@@ -280,11 +280,11 @@ function(e, t, n) {
         };
 
     function N(e, t, n) {
-        return T.updateAsync("guilds", n => (0, S.mutateUserGuildSettingsInternal)(n, e, t), n)
+        return T.updateAsync("guilds", n => (0, E.mutateUserGuildSettingsInternal)(n, e, t), n)
     }
 
     function C(e, t, n, i) {
-        return N(e, e => (0, S.mutateUserChannelSettingsInternal)(e, t, n), i)
+        return N(e, e => (0, E.mutateUserChannelSettingsInternal)(e, t, n), i)
     }
 
     function R(e) {

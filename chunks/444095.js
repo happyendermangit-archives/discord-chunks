@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
+    let i;
     n.r(t), n.d(t, {
-        default: function() {
+        SessionStorage: function() {
             return i
         }
-    });
-    var i = n("434596").impl
+    }), i = n("434596").impl
 }

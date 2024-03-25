@@ -82,13 +82,13 @@ function(e, t, n) {
                     if (A.default.hasOpenedThread(e)) return !1;
                     if (null == a) {
                         var t;
-                        a = null !== (t = r.default.get(M, {})) && void 0 !== t ? t : {}
+                        a = null !== (t = r.Storage.get(M, {})) && void 0 !== t ? t : {}
                     }
                     if (e in a) return !1;
                     a[e] = Date.now();
                     let n = Date.now() - L;
                     for (let e in a) a[e] < n && delete a[e];
-                    return r.default.set(M, a), !0
+                    return r.Storage.set(M, a), !0
                 }(n)) O.log("Jumping to start of thread ".concat(g.id)), d.default.fetchMessages({
                 channelId: n,
                 limit: N.MAX_MESSAGES_PER_CHANNEL,

@@ -23,12 +23,12 @@ function(e, _, E) {
     class u extends t.default.Store {
         initialize() {
             var e;
-            this.waitFor(r.default), this.syncWith([r.default], () => !0), A = null !== (e = o.default.get(N)) && void 0 !== e ? e : null;
-            let _ = o.default.get(O);
+            this.waitFor(r.default), this.syncWith([r.default], () => !0), A = null !== (e = o.Storage.get(N)) && void 0 !== e ? e : null;
+            let _ = o.Storage.get(O);
             if (null != _) try {
                 R = new Date(_)
             } catch {
-                o.default.remove(O)
+                o.Storage.remove(O)
             }
         }
         getChangelog(e, _) {
@@ -125,7 +125,7 @@ function(e, _, E) {
                 changelogId: _,
                 changelogDate: E
             } = e;
-            A = null != _ ? _ : null, R = new Date(E), o.default.set(N, _), o.default.set(O, E)
+            A = null != _ ? _ : null, R = new Date(E), o.Storage.set(N, _), o.Storage.set(O, E)
         }
     })
 }

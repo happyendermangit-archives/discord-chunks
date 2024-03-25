@@ -12,13 +12,13 @@ function(e, _, E) {
             let e = {
                 games: this.games
             };
-            t.default.set(n.storageKey, e)
+            t.Storage.set(n.storageKey, e)
         }
         static load() {
             return null == n._loaded && (n._loaded = n.loadInternal()), n._loaded
         }
         static loadInternal() {
-            let e = t.default.get(n.storageKey);
+            let e = t.Storage.get(n.storageKey);
             if (null != e) {
                 var _;
                 return new n(null !== (_ = e.games) && void 0 !== _ ? _ : {})

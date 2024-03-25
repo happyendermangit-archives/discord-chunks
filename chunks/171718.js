@@ -45,10 +45,10 @@ function(e, t, n) {
 
     function g() {
         if (E) {
-            r.default.remove(a.TOKEN_KEY), r.default.remove(a.TOKENS_KEY);
+            r.Storage.remove(a.TOKEN_KEY), r.Storage.remove(a.TOKENS_KEY);
             return
         }
-        null != s ? r.default.set(a.TOKEN_KEY, s) : r.default.remove(a.TOKEN_KEY), r.default.set(a.TOKENS_KEY, f)
+        null != s ? r.Storage.set(a.TOKEN_KEY, s) : r.Storage.remove(a.TOKEN_KEY), r.Storage.set(a.TOKENS_KEY, f)
     }
 
     function m(e) {
@@ -70,7 +70,7 @@ function(e, t, n) {
 
     function S() {
         if (h) return;
-        s = r.default.get(a.TOKEN_KEY), f = r.default.get(a.TOKENS_KEY) || {};
+        s = r.Storage.get(a.TOKEN_KEY), f = r.Storage.get(a.TOKENS_KEY) || {};
         let {
             decryptedToken: e,
             wasEncrypted: t

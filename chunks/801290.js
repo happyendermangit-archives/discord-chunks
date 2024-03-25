@@ -27,7 +27,7 @@ function(e, _, E) {
 
     function D() {
         (0, A.shouldReadWriteAudioSettings)() && ! function() {
-            let e = a.default.get(C(S.default.getId()));
+            let e = a.Storage.get(C(S.default.getId()));
             !e && u.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
                 let _ = !1;
                 for (let [E, t] of Object.entries(N.default.getState().settingsByContext)) {
@@ -55,7 +55,7 @@ function(e, _, E) {
                         null == n[E] && (_ = !0, n[E] = t)
                     }
                 }
-                return a.default.set(C(S.default.getId()), !0), _
+                return a.Storage.set(C(S.default.getId()), !0), _
             }, u.UserSettingsDelay.AUTOMATED)
         }()
     }

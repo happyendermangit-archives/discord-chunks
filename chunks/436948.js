@@ -31,10 +31,10 @@ function(e, a, t) {
     v.width = 512, v.height = 288;
     let w = v.getContext("2d");
 
-    function A() {
+    function S() {
         O.stop(), null != s && (f.default.removeSink(s, T), s = null)
     }
-    let S = i.debounce((e, a, t, s) => {
+    let A = i.debounce((e, a, t, s) => {
         N(e, (0, _.encodeStreamKey)({
             streamType: null != a ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
             guildId: a,
@@ -138,7 +138,7 @@ function(e, a, t) {
     }
     var C = {
         init() {
-            p.default.subscribe("CONNECTION_OPEN", A), p.default.subscribe("LOGOUT", A), p.default.subscribe("STREAM_DELETE", A), p.default.subscribe("RTC_CONNECTION_VIDEO", e => {
+            p.default.subscribe("CONNECTION_OPEN", S), p.default.subscribe("LOGOUT", S), p.default.subscribe("STREAM_DELETE", S), p.default.subscribe("RTC_CONNECTION_VIDEO", e => {
                 let {
                     guildId: a,
                     channelId: t,
@@ -146,7 +146,7 @@ function(e, a, t) {
                     streamId: n,
                     context: c
                 } = e;
-                !(null == n || c !== I.MediaEngineContextTypes.STREAM || d !== h.default.getId() || __OVERLAY__) && (A(), s = n, S(n, a, t, d))
+                !(null == n || c !== I.MediaEngineContextTypes.STREAM || d !== h.default.getId() || __OVERLAY__) && (S(), s = n, A(n, a, t, d))
             }), p.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
                 let {
                     videoState: a

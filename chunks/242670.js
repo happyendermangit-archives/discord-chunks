@@ -27,7 +27,7 @@ function(e, t, n) {
             ..._
         } = e, {
             reducedMotion: f
-        } = s.useContext(u.AccessibilityPreferencesContext), E = f.enabled ? function(e) {
+        } = s.useContext(u.AccessibilityPreferencesContext), S = f.enabled ? function(e) {
             switch (e) {
                 case "wanderingCubes":
                 case "chasingDots":
@@ -36,8 +36,8 @@ function(e, t, n) {
                     return e
             }
         }(t) : t;
-        if (l = null != l ? l : c.default.Messages.LOADING, "spinningCircle" === E || "spinningCircleSimple" === E) return (0, o.jsx)("div", {
-            className: a(d.spinner, d[E], i, {
+        if (l = null != l ? l : c.default.Messages.LOADING, "spinningCircle" === S || "spinningCircleSimple" === S) return (0, o.jsx)("div", {
+            className: a(d.spinner, d[S], i, {
                 [d.stopAnimation]: !n
             }),
             role: "img",
@@ -48,7 +48,7 @@ function(e, t, n) {
                 children: (0, o.jsxs)("svg", {
                     className: d.circular,
                     viewBox: "25 25 50 50",
-                    children: ["spinningCircle" === E && (0, o.jsxs)(o.Fragment, {
+                    children: ["spinningCircle" === S && (0, o.jsxs)(o.Fragment, {
                         children: [(0, o.jsx)("circle", {
                             className: a(d.path, d.path3, r),
                             cx: "50",
@@ -69,7 +69,7 @@ function(e, t, n) {
                 })
             })
         });
-        let S = a(d.item, r);
+        let E = a(d.item, r);
         return (0, o.jsx)("span", {
             className: a(d.spinner, i, {
                 [d.stopAnimation]: !n
@@ -78,13 +78,13 @@ function(e, t, n) {
             "aria-label": l,
             ..._,
             children: (0, o.jsxs)("span", {
-                className: a(d.inner, d[E]),
+                className: a(d.inner, d[S]),
                 children: [(0, o.jsx)("span", {
-                    className: S
+                    className: E
                 }), (0, o.jsx)("span", {
-                    className: S
-                }), "pulsingEllipsis" === E || "lowMotion" === E ? (0, o.jsx)("span", {
-                    className: S
+                    className: E
+                }), "pulsingEllipsis" === S || "lowMotion" === S ? (0, o.jsx)("span", {
+                    className: E
                 }) : null]
             })
         })

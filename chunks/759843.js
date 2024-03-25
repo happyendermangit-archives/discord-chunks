@@ -24,22 +24,22 @@ function(e, t, n) {
             return p.ImpressionGroups
         },
         ImpressionNames: function() {
-            return S.ImpressionNames
+            return E.ImpressionNames
         },
         NetworkActionNames: function() {
-            return S.NetworkActionNames
+            return E.NetworkActionNames
         },
         StandardAnalyticsSchemaNameMap: function() {
-            return S.StandardAnalyticsSchemaNameMap
+            return E.StandardAnalyticsSchemaNameMap
         },
         ImpressionSchema: function() {
-            return S.ImpressionSchema
+            return E.ImpressionSchema
         },
         encodeProperties: function() {
             return m.encodeProperties
         },
         CommonAnalyticsSchema: function() {
-            return S
+            return E
         },
         getCampaignParams: function() {
             return O
@@ -74,8 +74,8 @@ function(e, t, n) {
         d = n.n(c),
         _ = n("429030"),
         f = n("95410"),
-        E = n("444095"),
-        S = n("33112"),
+        S = n("444095"),
+        E = n("33112"),
         g = n("375492"),
         m = n("612481"),
         h = n("615582"),
@@ -198,7 +198,7 @@ function(e, t, n) {
     }
     if (null == i) try {
         let e, t, n;
-        e = f.default.get(I), null == e && (e = function() {
+        e = f.Storage.get(I), null == e && (e = function() {
             let e = {},
                 t = L();
             return e.os = t, e.browser = function() {
@@ -222,10 +222,10 @@ function(e, t, n) {
                 else if (/Gecko/.test(e)) return "Mozilla";
                 else return ""
             }(), e.device = y(), e.system_locale = (0, _.getSystemLocale)(), e
-        }(), f.default.set(I, e)), t = f.default.get(T), null == t && (t = D(), f.default.set(T, t)), n = E.default.get(T), null == n && (n = function(e, t) {
+        }(), f.Storage.set(I, e)), t = f.Storage.get(T), null == t && (t = D(), f.Storage.set(T, t)), n = S.SessionStorage.get(T), null == n && (n = function(e, t) {
             let n = {};
             return Object.keys(e).map(i => n["".concat(i).concat(t)] = e[i]), n
-        }(D(), "_current"), E.default.set(T, n)), i = {
+        }(D(), "_current"), S.SessionStorage.set(T, n)), i = {
             ...e,
             ... function() {
                 var e, t;
@@ -256,7 +256,7 @@ function(e, t, n) {
         let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
         r && (i.release_channel = r.split("-")[0]);
-        let o = parseInt((n = "278320", "278320"), 10);
+        let o = parseInt((n = "278332", "278332"), 10);
         !isNaN(o) && (i.client_build_number = o);
         let s = null == N ? void 0 : null === (e = (t = N.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return !isNaN(s) && (i.native_build_number = s), i.client_event_source = function() {

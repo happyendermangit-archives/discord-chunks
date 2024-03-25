@@ -16,18 +16,18 @@ function(e, t, n) {
     let l = (0, r.default)((e, t) => ({
             notificationDismissedInGuilds: function() {
                 var e;
-                let t = null !== (e = a.default.get(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY)) && void 0 !== e ? e : [];
+                let t = null !== (e = a.Storage.get(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY)) && void 0 !== e ? e : [];
                 return new Set(t)
             }(),
             dismissNotification: n => {
                 let i = t().notificationDismissedInGuilds;
-                i.add(n), a.default.set(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, i), e({
+                i.add(n), a.Storage.set(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, i), e({
                     notificationDismissedInGuilds: i
                 })
             },
             resetNotification: n => {
                 let i = t().notificationDismissedInGuilds;
-                i.has(n) && (i.delete(n), a.default.set(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, i), e({
+                i.has(n) && (i.delete(n), a.Storage.set(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, i), e({
                     notificationDismissedInGuilds: i
                 }))
             }

@@ -21,12 +21,12 @@ function(e, t, n) {
         var e;
         let {
             volume: t
-        } = null !== (e = i.default.get(l)) && void 0 !== e ? e : {};
+        } = null !== (e = i.Storage.get(l)) && void 0 !== e ? e : {};
         return "number" != typeof t && (t = 1), t = Math.min(1, Math.max(0, t))
     }
 
     function s(e) {
-        i.default.set(l, {
+        i.Storage.set(l, {
             volume: e,
             muted: r()
         })
@@ -36,12 +36,12 @@ function(e, t, n) {
         var e;
         let {
             muted: t
-        } = null !== (e = i.default.get(l)) && void 0 !== e ? e : {};
+        } = null !== (e = i.Storage.get(l)) && void 0 !== e ? e : {};
         return "boolean" != typeof t && (t = !1), t
     }
 
     function o(e) {
-        i.default.set(l, {
+        i.Storage.set(l, {
             volume: a(),
             muted: e
         })

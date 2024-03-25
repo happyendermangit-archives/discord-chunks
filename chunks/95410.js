@@ -1,9 +1,9 @@
 function(e, _, E) {
     "use strict";
+    let Storage;
     E.r(_), E.d(_, {
-        default: function() {
-            return t
+        Storage: function() {
+            return Storage
         }
-    });
-    var t = E("419243").impl
+    }), Storage = E("419243").impl
 }

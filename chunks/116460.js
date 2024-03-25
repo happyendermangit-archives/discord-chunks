@@ -21,8 +21,8 @@ function(e, t, s) {
         R = s("42203"),
         y = s("474643"),
         E = s("923959"),
-        C = s("26989"),
-        g = s("305961"),
+        g = s("26989"),
+        C = s("305961"),
         T = s("957255"),
         A = s("660478"),
         m = s("18494"),
@@ -45,7 +45,7 @@ function(e, t, s) {
         F = [];
 
     function q() {
-        b = g.default.getGuildCount() >= 3 || u.size(R.default.getMutablePrivateChannels()) >= 20, Q = []
+        b = C.default.getGuildCount() >= 3 || u.size(R.default.getMutablePrivateChannels()) >= 20, Q = []
     }
 
     function x(e) {
@@ -153,7 +153,7 @@ function(e, t, s) {
         }() : e, Q) && (Q = e, ! function(e, t) {
             switch (k) {
                 case o.AutocompleterResultTypes.USER: {
-                    let t = g.default.getGuild(U.default.getGuildId());
+                    let t = C.default.getGuild(U.default.getGuildId());
                     e.unshift((0, o.createHeaderResult)(null != t ? v.default.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({
                         name: t.name
                     }) : v.default.Messages.QUICKSWITCHER_QUERYMODE_USERS)), G = e;
@@ -189,7 +189,7 @@ function(e, t, s) {
     class V extends n.default.PersistedStore {
         initialize(e) {
             var t;
-            this.waitFor(C.default, g.default, R.default), this.syncWith([_.default], () => !0), H = r.default.get(D) || !1, F = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []
+            this.waitFor(g.default, C.default, R.default), this.syncWith([_.default], () => !0), H = r.Storage.get(D) || !1, F = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []
         }
         getState() {
             return {
@@ -266,7 +266,7 @@ function(e, t, s) {
         },
         QUICKSWITCHER_SWITCH_TO: function() {
             if (H) return !1;
-            H = !0, r.default.set(D, !0)
+            H = !0, r.Storage.set(D, !0)
         },
         CHANNEL_SELECT: function(e) {
             let {

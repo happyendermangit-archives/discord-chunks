@@ -29,7 +29,7 @@ function(e, _, E) {
             return I = e, null == s._clearAllPromise && (s._clearAllPromise = new Promise(_ => {
                 requestIdleCallback(() => {
                     s.clearPersistQueue(e), s.allPersistKeys.forEach(_ => {
-                        s.shouldClear(e, _) && r.default.remove(_)
+                        s.shouldClear(e, _) && r.Storage.remove(_)
                     }), a.Store.getAll().forEach(_ => {
                         _ instanceof s && s.shouldClear(e, _.getClass().persistKey) && (_._isInitialized = !1, _.initializeIfNeeded())
                     }), s._clearAllPromise = null, _()
@@ -53,7 +53,7 @@ function(e, _, E) {
                 let e = {};
                 return s.allPersistKeys.forEach(_ => {
                     var E;
-                    e[_] = (null !== (E = r.default.get(_)) && void 0 !== E ? E : i)._state
+                    e[_] = (null !== (E = r.Storage.get(_)) && void 0 !== E ? E : i)._state
                 }), e
             })
         }
@@ -87,11 +87,11 @@ function(e, _, E) {
             }
         }
         static migrateAndReadStoreState(e, _) {
-            if (null != I && s.shouldClear(I, e)) return r.default.remove(e), {
+            if (null != I && s.shouldClear(I, e)) return r.Storage.remove(e), {
                 state: void 0,
                 requiresPersist: !1
             };
-            let E = null != s._clearAllPromise ? null : r.default.get(e),
+            let E = null != s._clearAllPromise ? null : r.Storage.get(e),
                 {
                     _state: t,
                     _version: o,
@@ -138,7 +138,7 @@ function(e, _, E) {
             let {
                 persistKey: e
             } = this.getClass(), _ = this.getState(), E = this._version;
-            r.default.set(e, {
+            r.Storage.set(e, {
                 _state: _,
                 _version: E
             })
@@ -147,7 +147,7 @@ function(e, _, E) {
             let {
                 persistKey: e
             } = this.getClass();
-            r.default.remove(e)
+            r.Storage.remove(e)
         }
         constructor(e, _) {
             if (super(e, _), this._version = null == this.getClass().migrations ? 0 : this.getClass().migrations.length, this.callback = e => {

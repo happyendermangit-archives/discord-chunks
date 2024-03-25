@@ -185,7 +185,7 @@ function(e, t, n) {
             return null != o ? o.id : null
         }
         showPublicSuccessModal() {
-            return !m.default.get(L.PUBLIC_SUCCESS_MODAL_SEEN_KEY)
+            return !m.Storage.get(L.PUBLIC_SUCCESS_MODAL_SEEN_KEY)
         }
         getGuild() {
             return o

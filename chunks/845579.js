@@ -8,10 +8,10 @@ function(e, t, n) {
             return f
         },
         ExpressionSuggestionsEnabled: function() {
-            return E
+            return S
         },
         IncludeStickersInAutocomplete: function() {
-            return S
+            return E
         },
         RenderSpoilers: function() {
             return g
@@ -158,10 +158,10 @@ function(e, t, n) {
             return ef
         },
         RenderEmbeds: function() {
-            return eE
+            return eS
         },
         RenderReactions: function() {
-            return eS
+            return eE
         },
         TimezoneOffset: function() {
             return eg
@@ -224,13 +224,13 @@ function(e, t, n) {
         }, e => o.BoolValue.create({
             value: e
         })),
-        E = (0, l.defineProtoSetting)("textAndImages", "expressionSuggestionsEnabled", e => {
+        S = (0, l.defineProtoSetting)("textAndImages", "expressionSuggestionsEnabled", e => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
         }, e => o.BoolValue.create({
             value: e
         })),
-        S = (0, l.defineProtoSetting)("textAndImages", "includeStickersInAutocomplete", e => {
+        E = (0, l.defineProtoSetting)("textAndImages", "includeStickersInAutocomplete", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
         }, e => o.BoolValue.create({
@@ -483,13 +483,13 @@ function(e, t, n) {
         }, e => o.BoolValue.create({
             value: e
         })), "text", "inlineEmbedMedia"),
-        eE = (0, l.wrapSettingWithSelectiveSyncing)((0, l.defineProtoSetting)("textAndImages", "renderEmbeds", e => {
+        eS = (0, l.wrapSettingWithSelectiveSyncing)((0, l.defineProtoSetting)("textAndImages", "renderEmbeds", e => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
         }, e => o.BoolValue.create({
             value: e
         })), "text", "renderEmbeds"),
-        eS = (0, l.wrapSettingWithSelectiveSyncing)((0, l.defineProtoSetting)("textAndImages", "renderReactions", e => {
+        eE = (0, l.wrapSettingWithSelectiveSyncing)((0, l.defineProtoSetting)("textAndImages", "renderReactions", e => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
         }, e => o.BoolValue.create({

@@ -24,10 +24,10 @@ function(e, t, n) {
             return f
         },
         NEW_MESSAGE_BAR_BUFFER_LARGE: function() {
-            return E
+            return S
         },
         NEW_MESSAGE_BAR_ID: function() {
-            return S
+            return E
         },
         SPOILER_ATTACHMENT_PREFIX: function() {
             return g
@@ -58,8 +58,8 @@ function(e, t, n) {
         d = 16,
         _ = 16,
         f = 32,
-        E = 64,
-        S = "---new-messages-bar",
+        S = 64,
+        E = "---new-messages-bar",
         g = "SPOILER_";
     (o = i || (i = {})).ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN", o.PRECOMPRESSION_SUM_TOO_LARGE = "PRECOMPRESSION_SUM_TOO_LARGE", o.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = "PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE", o.POSTCOMPRESSION_SUM_TOO_LARGE = "POSTCOMPRESSION_SUM_TOO_LARGE", o.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = "POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE", o.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = "UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR", o.EXPLICIT_CONTENT = "EXPLICIT_CONTENT", (s = r || (r = {})).SYSTEM_DM_TAG_SYSTEM_TYPE = "a", s.BOT_TAG_SERVER_TYPE = "b", s.AI_TAG_TYPE = "c", s.BOT_TAG_BOT_TYPE = "d", s.REMIXING_TYPE = "e", s.POLL_TYPE = "g";
     let m = 209715200

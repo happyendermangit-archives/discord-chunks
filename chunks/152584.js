@@ -145,10 +145,10 @@ function(e, t, n) {
                 ...e
             };
             null === I && (o.avatar_decoration_id = null), null != I && (o.avatar_decoration_id = I.id, o.avatar_decoration_sku_id = I.skuId);
-            let l = r.default.get(a.DEVICE_TOKEN),
+            let l = r.Storage.get(a.DEVICE_TOKEN),
                 E = (0, S.getDevicePushProvider)();
             null != E && null != l && (o.push_provider = E, o.push_token = l);
-            let T = r.default.get(a.DEVICE_VOIP_TOKEN);
+            let T = r.Storage.get(a.DEVICE_VOIP_TOKEN);
             return null != S.DEVICE_PUSH_VOIP_PROVIDER && null != T && (o.push_voip_provider = S.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = T), N(o)
         }, {
             checkEnabled: !1,

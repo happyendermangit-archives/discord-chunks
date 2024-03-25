@@ -27,9 +27,9 @@ function(e, t, n) {
                     null === (t = _.get(n)) || void 0 === t || t(e)
                 })
             });
-        return r.forwardRef(function(o, E) {
+        return r.forwardRef(function(o, S) {
             let {
-                className: S,
+                className: E,
                 onScroll: g,
                 onResize: m = null,
                 onContentResize: h = null,
@@ -68,7 +68,7 @@ function(e, t, n) {
             } = (0, c.useCachedScrollerState)();
             (0, c.usePaddingFixes)({
                 scrollerRef: J,
-                className: S,
+                className: E,
                 specs: l,
                 orientation: "vertical",
                 dir: p
@@ -143,14 +143,14 @@ function(e, t, n) {
                         return [0, 0]
                     }, [])
                 }(I);
-            r.useImperativeHandle(E, () => ({
+            r.useImperativeHandle(S, () => ({
                 getScrollerNode: () => J.current,
                 getScrollerState: $,
                 getItems: e_,
                 getSectionRowFromIndex: ef,
                 ...(0, c.getAnimatedListScrollHelpers)(J, $, er, el)
             }), [J, $, ef, e_, er, el]);
-            let eE = r.useCallback(e => {
+            let eS = r.useCallback(e => {
                 ec(1), null == K.current ? q(!0) : clearTimeout(K.current), K.current = setTimeout(() => {
                     K.current = null, q(!1)
                 }, 200), null != g && g(e)
@@ -166,8 +166,8 @@ function(e, t, n) {
                 totalHeight: et
             }), (0, i.jsxs)("div", {
                 ref: J,
-                onScroll: eE,
-                className: s(S, {
+                onScroll: eS,
+                className: s(E, {
                     [e]: !0,
                     [t]: w,
                     [n]: G,

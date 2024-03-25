@@ -10,14 +10,14 @@ function(e, _, E) {
     let n = "formGuidelinesStorageKey";
     class r extends o.default {
         _initialize() {
-            let e = t.default.get(n);
+            let e = t.Storage.get(n);
             null != e && (this.seenForumGuidelines = new Set(e))
         }
         _terminate() {
-            t.default.set(n, this.seenForumGuidelines)
+            t.Storage.set(n, this.seenForumGuidelines)
         }
         markAsSeen(e) {
-            this.seenForumGuidelines.add(e), t.default.set(n, this.seenForumGuidelines)
+            this.seenForumGuidelines.add(e), t.Storage.set(n, this.seenForumGuidelines)
         }
         hasSeen(e) {
             return this.seenForumGuidelines.has(e)

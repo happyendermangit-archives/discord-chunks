@@ -36,16 +36,16 @@ function(e, _, E) {
                     initialized: Date.now(),
                     lastUsed: Date.now()
                 };
-                o.default.set(r, _.uuid), o.default.set(a, _.initialized.toString()), o.default.set(n, Date.now().toString()), e = _
-            } else I && o.default.set(n, Date.now().toString());
+                o.Storage.set(r, _.uuid), o.Storage.set(a, _.initialized.toString()), o.Storage.set(n, Date.now().toString()), e = _
+            } else I && o.Storage.set(n, Date.now().toString());
             return e
         });
         return i = e
     }
     async function S() {
-        let e = await o.default.getAfterRefresh(r),
-            _ = await o.default.getAfterRefresh(a).then(N),
-            E = await o.default.getAfterRefresh(n).then(N);
+        let e = await o.Storage.getAfterRefresh(r),
+            _ = await o.Storage.getAfterRefresh(a).then(N),
+            E = await o.Storage.getAfterRefresh(n).then(N);
         return null != e && null != _ ? {
             uuid: e,
             initialized: _,

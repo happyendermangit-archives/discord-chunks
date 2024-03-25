@@ -32,8 +32,8 @@ function(e, t, n) {
         d = n("458960"),
         _ = n("413197"),
         f = n("271841"),
-        E = n("130969"),
-        S = n("718776"),
+        S = n("130969"),
+        E = n("718776"),
         g = n("860226"),
         m = n("433600"),
         h = n("446662"),
@@ -81,7 +81,7 @@ function(e, t, n) {
         }), [M, D]);
         return (0, o.jsx)(T.ModalContentContext.Provider, {
             value: U,
-            children: (0, o.jsx)(E.Dialog, {
+            children: (0, o.jsx)(S.Dialog, {
                 className: N.focusLock,
                 role: l,
                 returnRef: p,
@@ -95,7 +95,7 @@ function(e, t, n) {
                     }),
                     ref: L,
                     style: O,
-                    children: (0, o.jsx)(S.FocusRingScope, {
+                    children: (0, o.jsx)(E.FocusRingScope, {
                         containerRef: L,
                         children: i
                     })

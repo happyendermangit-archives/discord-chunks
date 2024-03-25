@@ -57,11 +57,11 @@ function(e, t, n) {
             ...t,
             disable: f,
             autoTrackExposure: !o && (null === (s = null == t ? void 0 : t.autoTrackExposure) || void 0 === s || s)
-        }) : (!d && (c = null !== (n = i.default.get("--you-bar-experiment-cached-config")) && void 0 !== n ? n : u, d = !0), c)
+        }) : (!d && (c = null !== (n = i.Storage.get("--you-bar-experiment-cached-config")) && void 0 !== n ? n : u, d = !0), c)
     }
 
     function E() {
-        let e = i.default.get("--you-bar-experiment-first-seen");
+        let e = i.Storage.get("--you-bar-experiment-first-seen");
         return null == e ? -1 : Math.floor((Date.now() - e) / o.default.Millis.DAY)
     }
 }

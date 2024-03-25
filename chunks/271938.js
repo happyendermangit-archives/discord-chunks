@@ -60,7 +60,7 @@ function(e, t, n) {
 
     function en(e) {
         let t = null != o.getToken(),
-            n = null != c.default.get(C.TOKEN_KEY);
+            n = null != c.Storage.get(C.TOKEN_KEY);
         R.verbose(e, {
             tokenManagerHasToken: t,
             storageHasToken: n
@@ -69,7 +69,7 @@ function(e, t, n) {
 
     function ei() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        if (w = c.default.get(O), null != $) return $;
+        if (w = c.Storage.get(O), null != $) return $;
         let t = null != w ? w : o.getToken();
         !(!(0, m.isValidFingerprintRoute)() || !e && null != t || I.default.isHandoffAvailable()) && es({
             withGuildExperiments: !0
@@ -114,7 +114,7 @@ function(e, t, n) {
     }
 
     function er() {
-        k = w, w = null, c.default.remove(O)
+        k = w, w = null, c.Storage.remove(O)
     }
 
     function ea(e, t) {
@@ -135,11 +135,11 @@ function(e, t, n) {
         en("handleLogout called."), eo(), er(), !(null == e ? void 0 : e.isSwitchingAccount) && ei(), u.default.PersistedStore.clearAll({
             omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
             type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-        }), A.default.clearAll(), h.clear(), v.default.clearUser(), c.default.remove(P), L = null, G = (null == e ? void 0 : e.isSwitchingAccount) ? C.LoginStates.LOGGING_IN : C.LoginStates.NONE, F = C.RegistrationStates.NONE, H = "", z = "", K = null, Y = !1, q = !1, X = !1, Q = {}, Z = {}
+        }), A.default.clearAll(), h.clear(), v.default.clearUser(), c.Storage.remove(P), L = null, G = (null == e ? void 0 : e.isSwitchingAccount) ? C.LoginStates.LOGGING_IN : C.LoginStates.NONE, F = C.RegistrationStates.NONE, H = "", z = "", K = null, Y = !1, q = !1, X = !1, Q = {}, Z = {}
     }
     class ed extends u.default.Store {
         initialize() {
-            L = c.default.get(P), M = c.default.get(D), ee = c.default.get("login_cache"), null == o.getToken() && ei(), this.addChangeListener(() => (0, E.setClientState)(L))
+            L = c.Storage.get(P), M = c.Storage.get(D), ee = c.Storage.get("login_cache"), null == o.getToken() && ei(), this.addChangeListener(() => (0, E.setClientState)(L))
         }
         getEmail() {
             return M
@@ -258,7 +258,7 @@ function(e, t, n) {
                 analyticsToken: r,
                 auth: a
             } = e;
-            en("handleConnectionOpen called"), v.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), b = i, U = s, V = r, L = n.id, M = n.email, void 0 !== a && (B = a.authenticator_types), c.default.set(D, n.email), c.default.set(P, n.id)
+            en("handleConnectionOpen called"), v.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), b = i, U = s, V = r, L = n.id, M = n.email, void 0 !== a && (B = a.authenticator_types), c.Storage.set(D, n.email), c.Storage.set(P, n.id)
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;
@@ -268,7 +268,7 @@ function(e, t, n) {
                 analyticsToken: s,
                 token: r
             } = e;
-            v.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), b = i, V = s, ea(r), er(), L = n.id, c.default.set(P, n.id)
+            v.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), b = i, V = s, ea(r), er(), L = n.id, c.Storage.set(P, n.id)
         },
         CONNECTION_CLOSED: function(e) {
             let {
@@ -280,7 +280,7 @@ function(e, t, n) {
                     return
                 }
                 S.default.track(C.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
-                    user_id: c.default.get(P)
+                    user_id: c.Storage.get(P)
                 }), eu(), setImmediate(() => (0, m.transitionTo)(C.Routes.DEFAULT_LOGGED_OUT))
             }
         },
@@ -392,7 +392,7 @@ function(e, t, n) {
             null == w ? null != t ? (S.default.track(C.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
                 old_fingerprint: null != k ? (0, l.extractId)(k) : null,
                 new_fingerprint: (0, l.extractId)(t)
-            }), w = t, k = t, c.default.set(O, w)) : ei() : null != t && w !== t && S.default.track(C.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+            }), w = t, k = t, c.Storage.set(O, w)) : ei() : null != t && w !== t && S.default.track(C.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
                 fingerprint: (0, l.extractId)(w),
                 dropped_fingerprint: (0, l.extractId)(t)
             })
@@ -462,7 +462,7 @@ function(e, t, n) {
             let {
                 user: t
             } = e;
-            L = t.id, M = t.email, void 0 !== t.authenticator_types && (B = t.authenticator_types), c.default.set(D, t.email), c.default.set(P, t.id)
+            L = t.id, M = t.email, void 0 !== t.authenticator_types && (B = t.authenticator_types), c.Storage.set(D, t.email), c.Storage.set(P, t.id)
         },
         AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: el,
         CLEAR_AUTHENTICATION_ERRORS: function() {

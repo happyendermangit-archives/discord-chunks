@@ -80,7 +80,7 @@ function(e, _, E) {
             try {
                 E = this.requireModule("discord_overlay2")
             } catch (e) {}
-            E && E.reset && E.reset(), E && E.disconnectAllProcesses && E.destroyHostProcess && (E.disconnectAllProcesses(), E.destroyHostProcess()), c.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== A.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(L.NativeFeatures.USER_DATA_CACHE) && c.userDataCache.cacheUserData(A.default.stringify()), null == c || null === (_ = c.window) || void 0 === _ || _.close(null == c ? void 0 : null === (e = c.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY)
+            E && E.reset && E.reset(), E && E.disconnectAllProcesses && E.destroyHostProcess && (E.disconnectAllProcesses(), E.destroyHostProcess()), c.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== A.Storage.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(L.NativeFeatures.USER_DATA_CACHE) && c.userDataCache.cacheUserData(A.Storage.stringify()), null == c || null === (_ = c.window) || void 0 === _ || _.close(null == c ? void 0 : null === (e = c.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY)
         },
         inputEventRegister(e, _, E, t) {
             !Array.isArray(_) && (_ = _.toJS()), this.getDiscordUtils().inputEventRegister(parseInt(e), _.map(e => {

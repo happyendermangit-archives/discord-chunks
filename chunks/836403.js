@@ -14,8 +14,8 @@ function(e, t, n) {
 
     function l(e, t) {
         if (0 === e.length) return "No logs";
-        let n = i.default.get(s.DEVICE_TOKEN),
-            a = i.default.get(s.DEVICE_VOIP_TOKEN),
+        let n = i.Storage.get(s.DEVICE_TOKEN),
+            a = i.Storage.get(s.DEVICE_VOIP_TOKEN),
             l = e.map(e => {
                 let n = e.silent ? "Silent" : "Displayed",
                     i = t ? "".concat(e.channelId, " - ").concat(e.messageId) : "".concat(e.title, " - ").concat(e.content);

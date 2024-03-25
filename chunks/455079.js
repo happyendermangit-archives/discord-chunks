@@ -18,13 +18,13 @@ function(e, t, n) {
             return "".concat(this.getClass().displayName, "-snapshot")
         }
         clear() {
-            l.default.remove(this.persistKey)
+            l.Storage.remove(this.persistKey)
         }
         save() {
-            l.default.set(this.persistKey, this.takeSnapshot())
+            l.Storage.set(this.persistKey, this.takeSnapshot())
         }
         readSnapshot(e) {
-            let t = l.default.get(this.persistKey);
+            let t = l.Storage.get(this.persistKey);
             return null == t || t.version !== e ? null : t.data
         }
         getClass() {

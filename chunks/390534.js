@@ -26,15 +26,15 @@ function(e, t, n) {
             d = u.luminance(),
             _ = c,
             f = l + a,
-            E = r.contrast(u, c),
-            S = 100;
-        for (; S-- > 0;) {
-            let e = E < l,
-                t = E > f;
+            S = r.contrast(u, c),
+            E = 100;
+        for (; E-- > 0;) {
+            let e = S < l,
+                t = S > f;
             if (!e && !t) break;
             let n = _.luminance(),
                 i = n > d;
-            _ = t && i || e && !i ? _.darken() : _.brighten(), E = r.contrast(u, _)
+            _ = t && i || e && !i ? _.darken() : _.brighten(), S = r.contrast(u, _)
         }
         return function(e) {
             let [t, n, i, r] = e.rgba();

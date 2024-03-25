@@ -29,8 +29,8 @@ function(e, t, n) {
             chunkSize: d = 250,
             getScrollerState: _,
             itemGutter: f,
-            removeEdgeItemGutters: E,
-            sectionGutter: S,
+            removeEdgeItemGutters: S,
+            sectionGutter: E,
             padding: g,
             paddingVertical: m,
             paddingHorizontal: h,
@@ -55,13 +55,13 @@ function(e, t, n) {
             getSectionHeight: c,
             bufferWidth: N,
             itemGutter: f,
-            removeEdgeItemGutters: E,
-            sectionGutter: S,
+            removeEdgeItemGutters: S,
+            sectionGutter: E,
             padding: g,
             paddingVertical: m,
             paddingHorizontal: h,
             dir: p
-        }), v.computeVisibleSections(Math.max(0, R * d), O * d), v.getState()), [C, v, t, n, a, u, c, R, O, d, f, E, S, g, m, h, N, p]), {
+        }), v.computeVisibleSections(Math.max(0, R * d), O * d), v.getState()), [C, v, t, n, a, u, c, R, O, d, f, S, E, g, m, h, N, p]), {
             ...T.current,
             masonryComputer: v,
             forceUpdateOnChunkChange: L,

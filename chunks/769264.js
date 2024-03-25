@@ -14,14 +14,14 @@ function(e, t, n) {
         u = new Set;
 
     function d() {
-        l.default.set(r, {
+        l.Storage.set(r, {
             enabled: o,
             learnedWords: u
         })
     }
     class c extends i.default.Store {
         initialize() {
-            let e = l.default.get(r);
+            let e = l.Storage.get(r);
             null != e && (o = e.enabled, u = new Set(e.learnedWords), (0, s.setEnabled)(o), (0, s.setLearnedWords)(u))
         }
         isEnabled() {

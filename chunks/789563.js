@@ -284,16 +284,16 @@ function(e, t, n) {
         let {
             isSwitchingAccount: t
         } = e;
-        u.default.remove(p), !t && (u.default.remove(S), u.default.remove(T), u.default.remove(v), L = {}, M = {}), O = {}, N = [], C = {}, A = !1
+        u.Storage.remove(p), !t && (u.Storage.remove(S), u.Storage.remove(T), u.Storage.remove(v), L = {}, M = {}), O = {}, N = [], C = {}, A = !1
     }
 
     function ee() {
-        A = !1, C = {}, u.default.remove(p)
+        A = !1, C = {}, u.Storage.remove(p)
     }
 
     function et() {
         try {
-            u.default.set(T, L)
+            u.Storage.set(T, L)
         } catch (e) {
             I.error("Error saving user experiment overrides, unsaved data will be lost", e), E.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
@@ -301,7 +301,7 @@ function(e, t, n) {
             })
         }
         try {
-            u.default.set(v, M)
+            u.Storage.set(v, M)
         } catch (e) {
             I.error("Error saving guild experiment overrides, unsaved data will be lost", e), E.default.track(m.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
@@ -312,7 +312,7 @@ function(e, t, n) {
 
     function en(e) {
         try {
-            u.default.set(p, {
+            u.Storage.set(p, {
                 v: 1,
                 e: e
             })
@@ -409,7 +409,7 @@ function(e, t, n) {
     class eo extends f.default {
         initialize() {
             C = function() {
-                let e = u.default.get(p);
+                let e = u.Storage.get(p);
                 if (null == e || 1 !== e.v) return {};
                 let t = e.e,
                     n = Date.now(),
@@ -418,7 +418,7 @@ function(e, t, n) {
                 return i && en(t), t
             }(), ! function() {
                 var e, t, n;
-                let i = [null !== (e = u.default.get(S)) && void 0 !== e ? e : {}, null !== (t = u.default.get(T)) && void 0 !== t ? t : {}, null !== (n = u.default.get(v)) && void 0 !== n ? n : {}];
+                let i = [null !== (e = u.Storage.get(S)) && void 0 !== e ? e : {}, null !== (t = u.Storage.get(T)) && void 0 !== t ? t : {}, null !== (n = u.Storage.get(v)) && void 0 !== n ? n : {}];
                 L = {}, M = {};
                 let s = !a.isEmpty(i[0]);
                 for (let e of i)

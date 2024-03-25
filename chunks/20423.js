@@ -21,8 +21,8 @@ function(e, a, t) {
         R = t("393414"),
         v = t("741148"),
         w = t("336921"),
-        A = t("862337"),
-        S = t("49671"),
+        S = t("862337"),
+        A = t("49671"),
         N = t("60608"),
         C = t("928741");
     t("837211");
@@ -39,16 +39,16 @@ function(e, a, t) {
                 children: (0, r.jsx)(e, {})
             })
         }));
-    if (null != S.default) {
-        null === (s = S.default.setUncaughtExceptionHandler) || void 0 === s || s.call(S.default, (e, a) => {
+    if (null != A.default) {
+        null === (s = A.default.setUncaughtExceptionHandler) || void 0 === s || s.call(A.default, (e, a) => {
             setImmediate(() => {
                 throw _.default.captureCrash(e), e
             })
         });
-        let e = null === (d = (n = S.default.remoteApp).getVersion) || void 0 === d ? void 0 : d.call(n),
-            a = null === (c = (i = S.default.remoteApp).getBuildNumber) || void 0 === c ? void 0 : c.call(i),
+        let e = null === (d = (n = A.default.remoteApp).getVersion) || void 0 === d ? void 0 : d.call(n),
+            a = null === (c = (i = A.default.remoteApp).getBuildNumber) || void 0 === c ? void 0 : c.call(i),
             t = {};
-        null != S.default.remoteApp.getModuleVersions && (t = S.default.remoteApp.getModuleVersions()), _.default.setExtra({
+        null != A.default.remoteApp.getModuleVersions && (t = A.default.remoteApp.getModuleVersions()), _.default.setExtra({
             hostVersion: e,
             moduleVersions: t
         }), _.default.setTags({
@@ -62,7 +62,7 @@ function(e, a, t) {
     else {
         if (document.addEventListener("scroll", e => e.preventDefault()), O.isPlatformEmbedded) {
             window.onbeforeunload = () => I.default.beforeUnload(), I.default.on("HELP_OPEN", () => window.open(E.default.getCommunityURL()));
-            let e = new A.DelayedCall(M, () => I.default.purgeMemory());
+            let e = new S.DelayedCall(M, () => I.default.purgeMemory());
             I.default.on("MAIN_WINDOW_BLUR", () => {
                 e.delay(), I.default.setFocused(!1), (0, v.focus)(window, !1)
             }), I.default.on("MAIN_WINDOW_FOCUS", () => {

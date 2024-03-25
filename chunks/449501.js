@@ -16,7 +16,7 @@ function(e, _, E) {
         S = {};
     class N extends n.default.Store {
         initialize() {
-            T = r.default.get(I, i.PictureInPicturePositions.BOTTOM_RIGHT)
+            T = r.Storage.get(I, i.PictureInPicturePositions.BOTTOM_RIGHT)
         }
         get pipWindow() {
             var e;
@@ -90,7 +90,7 @@ function(e, _, E) {
                         ..._,
                         position: E
                     })
-                }), s = e, T = E, r.default.set(I, E)
+                }), s = e, T = E, r.Storage.set(I, E)
             }
         },
         PICTURE_IN_PICTURE_HIDE: function(e) {

@@ -38,12 +38,12 @@ function(e, t, n) {
             setExperimentEnabled: t => {
                 e({
                     _experimentEnabled: t
-                }), a.default.set(f, t)
+                }), a.Storage.set(f, t)
             },
             setInitialized: () => {
                 e(e => e._experimentCacheInitialized ? e : {
                     _experimentCacheInitialized: !0,
-                    _experimentEnabled: !0 === a.default.get(f)
+                    _experimentEnabled: !0 === a.Storage.get(f)
                 })
             }
         }));

@@ -20,8 +20,8 @@ function(e, t, s) {
         R = s("697218"),
         y = s("25292"),
         E = s("651879"),
-        C = s("253981"),
-        g = s("447909"),
+        g = s("253981"),
+        C = s("447909"),
         T = s("195547"),
         A = s("375822"),
         m = s("49111");
@@ -75,7 +75,7 @@ function(e, t, s) {
     }
     l = class {
         createSearchContext() {
-            null == this.userSearchContext && (this.userSearchContext = g.default.getSearchContext(this.parseUserResults, this._limit))
+            null == this.userSearchContext && (this.userSearchContext = C.default.getSearchContext(this.parseUserResults, this._limit))
         }
         setLimit(e) {
             let {
@@ -218,8 +218,8 @@ function(e, t, s) {
                 pathname: i,
                 hostname: u = "",
                 host: n
-            } = s, a = C.default.isDiscordHostname(u) || window.location.host === n;
-            return null !== i && a && C.default.isAppRoute(i) ? [{
+            } = s, a = g.default.isDiscordHostname(u) || window.location.host === n;
+            return null !== i && a && g.default.isAppRoute(i) ? [{
                 type: A.AutocompleterResultTypes.LINK,
                 record: d.default.fromPath(i),
                 score: 1

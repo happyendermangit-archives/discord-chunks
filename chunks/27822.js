@@ -27,9 +27,9 @@ function(e, t, n) {
                 } = e;
                 t.forEach(e => {
                     if (null == e.channelId || e.userId !== a.default.getId()) return;
-                    if (this.terminate(), i.default.get(d.STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY, !1)) return;
+                    if (this.terminate(), i.Storage.get(d.STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY, !1)) return;
                     let t = o.default.getVoiceChannelId();
-                    if (null != t) e.channelId === t && u.default.isAudienceMember(e.userId, t) && (i.default.set(d.STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY, !0), l.openStageChannelAudienceNoticeModal(t))
+                    if (null != t) e.channelId === t && u.default.isAudienceMember(e.userId, t) && (i.Storage.set(d.STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY, !0), l.openStageChannelAudienceNoticeModal(t))
                 })
             }
         }

@@ -268,7 +268,7 @@ function(e, t, n) {
         } else(0, C.takeSnapshot)("Backup from ".concat(new Date().toLocaleDateString()))
     }
     async function B() {
-        o.default.set("turnedOffNewNotifications", !0), T.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
+        o.Storage.set("turnedOffNewNotifications", !0), T.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
             num_guilds_with_new_setting: Object.values(p.default.getGuilds()).filter(e => S.default.resolveGuildUnreadSetting(e) === w.UnreadSetting.ONLY_MENTIONS).length
         });
         let e = await (0, C.listSnapshots)(),

@@ -255,7 +255,7 @@ function(e, t, n) {
     }
     v.displayName = "LayoutStore", v.persistKey = "LayoutStore", v.migrations = [() => {
         let e = {
-                ...c.default.get("OverlayStore")
+                ...c.Storage.get("OverlayStore")
             },
             {
                 pinnedWidgets: t,

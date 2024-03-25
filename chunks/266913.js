@@ -71,25 +71,25 @@ function(e, t, n) {
                 let l = this.sections[_],
                     a = 0,
                     d = s(_),
-                    S = this.getMaxColumnHeight(this.columnHeights);
-                _ > 0 && (S = S - i + this.getSectionGutter());
+                    E = this.getMaxColumnHeight(this.columnHeights);
+                _ > 0 && (E = E - i + this.getSectionGutter());
                 let g = d > 0 ? d + i : 0;
-                for (let e = 0; e < this.columnHeights.length; e++) this.columnHeights[e] = S + g;
+                for (let e = 0; e < this.columnHeights.length; e++) this.columnHeights[e] = E + g;
                 for (; a < l;) {
-                    var f, E;
+                    var f, S;
                     let e = t(_, a);
                     if (null == e) {
                         a++;
                         continue
                     }
-                    let [r, o] = (E = this.columnHeights).reduce((e, t, n) => t < e[0] ? [t, n] : e, [E[0], 0]);
+                    let [r, o] = (S = this.columnHeights).reduce((e, t, n) => t < e[0] ? [t, n] : e, [S[0], 0]);
                     o < this.lastColumnIndex && this.currentRow++, this.lastColumnIndex = o;
                     let s = n(_, a, this.columnWidth),
                         l = {
                             position: "absolute",
                             [u]: this.columnWidth * o + i * (o + 1) - i,
                             width: this.columnWidth,
-                            top: r - S,
+                            top: r - E,
                             height: s
                         },
                         c = {
@@ -109,8 +109,8 @@ function(e, t, n) {
                     position: "absolute",
                     [u]: c,
                     width: this.columnWidth * e + i * (e - 1),
-                    top: S,
-                    height: this.getMaxColumnHeight(this.columnHeights) - S - i
+                    top: E,
+                    height: this.getMaxColumnHeight(this.columnHeights) - E - i
                 }, _++
             }
             this.columnHeights = this.columnHeights.map(e => e - i + d), this.totalHeight = this.getMaxColumnHeight(), this.visibleSections = {}, this.needsFullCompute = !1

@@ -235,9 +235,9 @@ function(e, t, n) {
                 url: T.Endpoints.LOGOUT,
                 body: {
                     provider: (0, v.getDevicePushProvider)(),
-                    token: u.default.get(T.DEVICE_TOKEN),
+                    token: u.Storage.get(T.DEVICE_TOKEN),
                     voip_provider: v.DEVICE_PUSH_VOIP_PROVIDER,
-                    voip_token: u.default.get(T.DEVICE_VOIP_TOKEN)
+                    voip_token: u.Storage.get(T.DEVICE_VOIP_TOKEN)
                 },
                 oldFormErrors: !0,
                 trackedActionData: {
@@ -384,10 +384,10 @@ function(e, t, n) {
                     password: t,
                     source: n
                 },
-                s = u.default.get(T.DEVICE_TOKEN),
+                s = u.Storage.get(T.DEVICE_TOKEN),
                 r = (0, v.getDevicePushProvider)();
             null != r && null != s && (i.push_provider = r, i.push_token = s);
-            let o = u.default.get(T.DEVICE_VOIP_TOKEN);
+            let o = u.Storage.get(T.DEVICE_VOIP_TOKEN);
             null != v.DEVICE_PUSH_VOIP_PROVIDER && null != o && (i.push_voip_provider = v.DEVICE_PUSH_VOIP_PROVIDER, i.push_voip_token = o);
             try {
                 let {

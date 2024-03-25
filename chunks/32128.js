@@ -24,25 +24,25 @@ function(e, t, n) {
                 enabled: this.enabled,
                 legacyEnabled: this.legacyEnabled
             };
-            r.default.set("OverlayStore3", e)
+            r.Storage.set("OverlayStore3", e)
         }
         static load() {
             return null == o._loaded && (o._loaded = o.loadInternal()), o._loaded
         }
         static loadInternal() {
-            let e = r.default.get("OverlayStore");
+            let e = r.Storage.get("OverlayStore");
             if (null != e) {
                 let t = "boolean" == typeof e.enabled ? e.enabled : a.OVERLAY_SUPPORTED,
                     n = new o(t, !1);
-                return n.save(), r.default.remove("OverlayStore"), n
+                return n.save(), r.Storage.remove("OverlayStore"), n
             }
-            let t = r.default.get("overlayEnabled");
+            let t = r.Storage.get("overlayEnabled");
             if (null != t) {
                 let e = "boolean" == typeof t ? t : a.OVERLAY_SUPPORTED,
                     n = new o(e, !1);
-                return n.save(), r.default.remove("overlayEnabled"), n
+                return n.save(), r.Storage.remove("overlayEnabled"), n
             }
-            let n = r.default.get("OverlayStore3");
+            let n = r.Storage.get("OverlayStore3");
             if (null != n) {
                 var i, s;
                 return new o(null !== (i = n.enabled) && void 0 !== i ? i : a.OVERLAY_SUPPORTED, null !== (s = n.legacyEnabled) && void 0 !== s && s)
