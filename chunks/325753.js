@@ -8,8 +8,8 @@ function(e, t, n) {
     var a = n("37983"),
         r = n("884691"),
         s = n("817736"),
-        i = n("458960"),
-        l = n("118810"),
+        l = n("458960"),
+        i = n("118810"),
         u = n("49111");
     let o = (e, t) => {
         let {
@@ -38,7 +38,7 @@ function(e, t, n) {
                 r = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
             r && this.grabDimensions();
             let s = this.translate(e, t);
-            i.default.spring(this.state.position, {
+            l.default.spring(this.state.position, {
                 toValue: {
                     x: s.x,
                     y: s.y
@@ -57,7 +57,7 @@ function(e, t, n) {
         }
         grabDimensions() {
             let e = (0, s.findDOMNode)(this._ref);
-            (0, l.isElement)(e) && (this._height = e.clientHeight, this._width = e.clientWidth)
+            (0, i.isElement)(e) && (this._height = e.clientHeight, this._width = e.clientWidth)
         }
         translate(e, t) {
             let {
@@ -76,22 +76,22 @@ function(e, t, n) {
             } = this.state, {
                 className: n,
                 children: r
-            } = this.props, s = [0, 1], l = ["0px", "1px"], u = i.default.accelerate({
+            } = this.props, s = [0, 1], i = ["0px", "1px"], u = l.default.accelerate({
                 pointerEvents: e ? "none" : "auto",
                 transform: [{
                     translateX: t.x.interpolate({
                         inputRange: s,
-                        outputRange: l
+                        outputRange: i
                     })
                 }, {
                     translateY: t.y.interpolate({
                         inputRange: s,
-                        outputRange: l
+                        outputRange: i
                     })
                 }],
                 ...this.props.style
             });
-            return (0, a.jsx)(i.default.div, {
+            return (0, a.jsx)(l.default.div, {
                 ref: this.handleSetRef,
                 className: n,
                 onMouseDown: this.handleMouseDown,
@@ -158,11 +158,11 @@ function(e, t, n) {
                     null == t || t(e.clientX, e.clientY)
                 })
             };
-            let t = new i.default.Value(e.initialX),
-                n = new i.default.Value(e.initialY);
+            let t = new l.default.Value(e.initialX),
+                n = new l.default.Value(e.initialY);
             this.state = {
                 dragging: !1,
-                position: new i.default.ValueXY({
+                position: new l.default.ValueXY({
                     x: t,
                     y: n
                 })

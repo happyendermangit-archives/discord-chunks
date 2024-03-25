@@ -9,8 +9,8 @@ function(e, t, n) {
         l = n("884691"),
         a = n("414235");
     let s = {
-            onclick: {
-                name: "onclick",
+            click: {
+                name: "click",
                 start: 0,
                 duration: 66
             },
@@ -23,7 +23,7 @@ function(e, t, n) {
         r = () => {
             let e = l.useRef(null),
                 t = l.useCallback(() => {
-                    null != e.current && e.current.play("onclick")
+                    null != e.current && e.current.play("click")
                 }, []),
                 r = l.useCallback(() => {
                     null != e.current && e.current.play("hover")

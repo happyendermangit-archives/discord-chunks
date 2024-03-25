@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     }), n("222007");
     var a, r, s = n("917351"),
-        i = n("446674"),
-        l = n("407846"),
+        l = n("446674"),
+        i = n("407846"),
         u = n("913144"),
         o = n("766274"),
         d = n("271938"),
@@ -17,14 +17,14 @@ function(e, t, n) {
     (r = a || (a = {}))[r.INVALID = 0] = "INVALID", r[r.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", r[r.VALID = 2] = "VALID";
     let E = new Set,
         p = new Set,
-        m = new Set,
-        C = [],
+        C = new Set,
+        m = [],
         S = {
             BROADCASTS_BY_USER_ID: e => "user:".concat(e),
             BROADCASTS_BY_CHANNEL_ID: e => "channel:".concat(e),
             BROADCASTS_BY_VALIDITY: e => "validity:".concat(e)
         },
-        g = new l.SecondaryIndexMap(function(e) {
+        g = new i.SecondaryIndexMap(function(e) {
             let t = E.has(e.userId) ? 1 : 0;
             return null != e.viewers && (t = 2), [S.BROADCASTS_BY_USER_ID(e.userId), S.BROADCASTS_BY_CHANNEL_ID(e.channelId), S.BROADCASTS_BY_VALIDITY(t)]
         }, e => e.channelId);
@@ -34,7 +34,7 @@ function(e, t, n) {
         if (null == t) {
             let t = g.get(e);
             return !!(null != t && (0, s.isEqual)(t.source, n)) && (g.delete(e), void 0)
-        }!E.has(e) && !p.has(e) && (m.add(e), C = [...m]);
+        }!E.has(e) && !p.has(e) && (C.add(e), m = [...C]);
         let a = (0, h.broadcastFromServer)(t, e, n);
         g.set(e, a)
     }
@@ -47,7 +47,7 @@ function(e, t, n) {
             type: h.BroadcastSourceType.GLOBAL
         }
     }
-    class v extends i.default.Store {
+    class v extends l.default.Store {
         getBroadcasts() {
             return g.values(S.BROADCASTS_BY_VALIDITY(2))
         }
@@ -61,7 +61,7 @@ function(e, t, n) {
             return g.get(e)
         }
         getUserIdsToValidate() {
-            return C
+            return m
         }
     }
     v.displayName = "BroadcastingStore";
@@ -123,7 +123,7 @@ function(e, t, n) {
                 data: t
             } = e;
             c.default.keys(t).forEach(e => {
-                f.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? E.add(e) : p.add(e), m.clear(), C = [...m];
+                f.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? E.add(e) : p.add(e), C.clear(), m = [...C];
                 let n = g.get(e);
                 null != n && (g.delete(e), g.set(e, n))
             })
@@ -175,7 +175,7 @@ function(e, t, n) {
             })
         },
         LOGOUT: function() {
-            E.clear(), p.clear(), m.clear(), C = [], g.clear()
+            E.clear(), p.clear(), C.clear(), m = [], g.clear()
         }
     })
 }

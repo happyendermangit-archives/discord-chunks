@@ -8,8 +8,8 @@ function(e, t, n) {
     var a = n("37983"),
         r = n("884691"),
         s = n("669491"),
-        i = n("77078"),
-        l = n("462274"),
+        l = n("77078"),
+        i = n("462274"),
         u = n("181832"),
         o = n("981184"),
         d = n("506885"),
@@ -22,20 +22,20 @@ function(e, t, n) {
                 style: t,
                 src: n,
                 backgroundSrc: p,
-                userId: m,
-                pulseSpeakingIndicator: C = !1,
+                userId: C,
+                pulseSpeakingIndicator: m = !1,
                 speaking: S = !1,
                 ...g
-            } = e, _ = null != p ? p : n, T = (0, l.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != m ? m : h.EMPTY_STRING_SNOWFLAKE_ID), A = null == I ? void 0 : I.getBannerURL({
+            } = e, _ = null != p ? p : n, T = (0, i.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != C ? C : h.EMPTY_STRING_SNOWFLAKE_ID), A = null == I ? void 0 : I.getBannerURL({
                 size: 1024,
                 canAnimate: f.GifAutoPlay.getSetting()
             });
             if (r.useEffect(() => {
-                    null != m && v && (0, d.default)(m, void 0, {
+                    null != C && v && (0, d.default)(C, void 0, {
                         dispatchWait: !0
                     })
-                }, [v, m]), null == n) return null;
-            let M = (0, a.jsx)(i.Avatar, {
+                }, [v, C]), null == n) return null;
+            let M = (0, a.jsx)(l.Avatar, {
                     className: E.avatarWrapper,
                     src: n,
                     ...g
@@ -47,7 +47,7 @@ function(e, t, n) {
             return null != A && S && v && (R.backgroundImage = "url(".concat(A, ")"), R.backgroundSize = "cover"), (0, a.jsx)("div", {
                 style: R,
                 className: E.background,
-                children: C ? (0, a.jsx)(o.default, {
+                children: m ? (0, a.jsx)(o.default, {
                     shouldAnimate: S,
                     children: M
                 }) : M

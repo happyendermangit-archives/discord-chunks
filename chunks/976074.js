@@ -9,24 +9,24 @@ function(e, t, n) {
     n("884691");
     var r = n("446674"),
         s = n("77078"),
-        i = n("374014"),
-        l = n("582415"),
+        l = n("374014"),
+        i = n("582415"),
         u = n("271938"),
         o = n("205817"),
         d = n("782340");
 
     function c(e, t, c) {
         var f;
-        let h = (0, l.useGetStreamApplication)(e),
+        let h = (0, i.useGetStreamApplication)(e),
             E = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-            p = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
-            m = null !== (f = o.default.getVideoStats(p)) && void 0 !== f ? f : {},
-            C = {
+            p = null != e ? (0, l.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
+            C = null !== (f = o.default.getVideoStats(p)) && void 0 !== f ? f : {},
+            m = {
                 media_session_id: o.default.getMediaSessionId(p),
                 rtc_connection_id: o.default.getRtcConnectionId(p),
                 stream_region: o.default.getRegion(p),
                 max_viewers: o.default.getMaxViewers(p),
-                ...m
+                ...C
             };
         return null == e ? null : (0, a.jsx)(s.MenuItem, {
             id: "report-stream-problem",
@@ -40,7 +40,7 @@ function(e, t, n) {
                         stream: e,
                         streamApplication: h,
                         isStreamer: E === (null == e ? void 0 : e.ownerId),
-                        analyticsData: C,
+                        analyticsData: m,
                         ...n
                     })
                 })

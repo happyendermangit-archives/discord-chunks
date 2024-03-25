@@ -8,8 +8,8 @@ function(e, t, n) {
     var a = n("37983"),
         r = n("884691"),
         s = n("917351"),
-        i = n.n(s),
-        l = n("88807"),
+        l = n.n(s),
+        i = n("88807"),
         u = n("558062"),
         o = n("432710"),
         d = n("446674"),
@@ -18,8 +18,8 @@ function(e, t, n) {
         h = n("489740"),
         E = n("355025"),
         p = n("51545"),
-        m = n("155084"),
-        C = n("393414"),
+        C = n("155084"),
+        m = n("393414"),
         S = n("90404"),
         g = n("599110"),
         _ = n("286235"),
@@ -49,10 +49,10 @@ function(e, t, n) {
             children: I.default.Messages.CLEAR_BUILD_OVERRIDE
         })
     }
-    let R = i.throttle(() => {
-        m.default.increment({
+    let R = l.throttle(() => {
+        C.default.increment({
             name: o.MetricEvents.APP_CRASHED,
-            tags: ["reason:".concat(l.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
+            tags: ["reason:".concat(i.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
         }, !0)
     }, 100, {
         trailing: !1
@@ -62,7 +62,7 @@ function(e, t, n) {
             this.triggerSoftCrash(e, t)
         }
         triggerSoftCrash(e, t) {
-            let n = (0, C.getHistory)().location;
+            let n = (0, m.getHistory)().location;
             this.setState({
                 error: e,
                 info: t

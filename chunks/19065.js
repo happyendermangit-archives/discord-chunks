@@ -9,19 +9,19 @@ function(e, t, n) {
     n("884691");
     var r = n("77078"),
         s = n("42887"),
-        i = n("353927"),
-        l = n("782340");
+        l = n("353927"),
+        i = n("782340");
 
     function u(e) {
-        s.default.supports(i.Features.VIDEO) ? (0, r.openModalLazy)(async () => {
+        s.default.supports(l.Features.VIDEO) ? (0, r.openModalLazy)(async () => {
             let {
                 default: t
             } = await n.el("861054").then(n.bind(n, "861054"));
             return n => (0, a.jsx)(t, {
                 ...n,
-                header: l.default.Messages.CAMERA_UNAVAILABLE,
-                body: l.default.Messages.CAMERA_NO_DEVICE,
-                confirmText: l.default.Messages.OKAY,
+                header: i.default.Messages.CAMERA_UNAVAILABLE,
+                body: i.default.Messages.CAMERA_NO_DEVICE,
+                confirmText: i.default.Messages.OKAY,
                 onConfirm: e
             })
         }) : (0, r.openModalLazy)(async () => {
@@ -30,9 +30,9 @@ function(e, t, n) {
             } = await n.el("861054").then(n.bind(n, "861054"));
             return s => (0, a.jsx)(t, {
                 ...s,
-                header: l.default.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
-                body: l.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
-                confirmText: l.default.Messages.DOWNLOAD_APP,
+                header: i.default.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
+                body: i.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
+                confirmText: i.default.Messages.DOWNLOAD_APP,
                 onConfirm: () => {
                     null == e || e(), (0, r.openModalLazy)(async () => {
                         let {

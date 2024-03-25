@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         usesClientMods: function() {
-            return i
+            return l
         },
         initSentry: function() {
             return u
@@ -12,11 +12,11 @@ function(e, t, n) {
         r = n("316217");
     let s = ["oppobrowser", "realmebrowser", "heytapbrowser"];
 
-    function i() {
+    function l() {
         let e = window;
         return null != e.jQuery || null != e.$ || null != e.BetterDiscord || null != e.BdApi || null != e.rambox
     }
-    let l = (0, r.filterThrottle)({
+    let i = (0, r.filterThrottle)({
         maxBudgetMinute: 1,
         maxBudgetHour: 3
     });
@@ -28,10 +28,10 @@ function(e, t, n) {
             dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
             autoSessionTracking: !1,
             environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-            release: "discord_web-3809e94367566d48410802e78b224cc8334c22a2",
+            release: "discord_web-f81f3ea2bdf97a0a1f1c4efe7097c0695630d95a",
             beforeSend: e => {
                 var t, n;
-                return !(null != (t = e).exception && null != t.exception.values && t.exception.values.every(e => null == e.stacktrace || null != e.stacktrace.frames && 1 === e.stacktrace.frames.length) && "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL || s.some(e => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !i() && !("Aborted" === (n = e).message || "cancel captcha" === n.message) && l() ? e : null
+                return !(null != (t = e).exception && null != t.exception.values && t.exception.values.every(e => null == e.stacktrace || null != e.stacktrace.frames && 1 === e.stacktrace.frames.length) && "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL || s.some(e => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !l() && !("Aborted" === (n = e).message || "cancel captcha" === n.message) && i() ? e : null
             },
             integrations: [new a.Integrations.GlobalHandlers({
                 onerror: !0,
@@ -46,7 +46,7 @@ function(e, t, n) {
             })],
             ignoreErrors: ["EADDRINUSE", "BetterDiscord", "EnhancedDiscord", "Powercord", "RecipeWebview", "jQuery", "localStorage", "has already been declared", "Cannot call hover while not dragging.", "Cannot call beginDrag while dragging.", "getHostNode", "setupCSS", "on missing remote object", "ChunkLoadError", "Cannot find module 'discord_utils'", "Failed to setup Krisp module", "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", "Non-Error promise rejection captured with keys:", "Request has been terminated", "Cannot resolve a Slate point from DOM point", "Failed to fetch", "no suitable image found", "ResizeObserver loop limit exceeded", "ResizeObserver loop completed with undelivered notifications.", "The play() request was interrupted", "could not play audio", "notosans-400-normalitalic"],
             denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
-        }), a.setTag("buildNumber", (e = "278391", "278391")), a.setTag("builtAt", String("1711403622573"));
+        }), a.setTag("buildNumber", (e = "278417", "278417")), a.setTag("builtAt", String("1711405612727"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
             for (let e in t) a.setTag(e, t[e]);

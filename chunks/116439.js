@@ -11,8 +11,8 @@ function(e, t, n) {
     var a = n("37983"),
         r = n("884691"),
         s = n("414456"),
-        i = n.n(s),
-        l = n("881913"),
+        l = n.n(s),
+        i = n("881913"),
         u = n("244201"),
         o = n("289656"),
         d = n("981913"),
@@ -23,7 +23,7 @@ function(e, t, n) {
             {
                 enabled: n,
                 cameraUnavailable: s,
-                onChange: i,
+                onChange: l,
                 onCameraUnavailable: d,
                 hasPermission: c,
                 children: f,
@@ -31,18 +31,18 @@ function(e, t, n) {
                 join: E
             } = e,
             p = (0, u.useAppContext)(),
-            m = s ? () => d() : () => i(!e.enabled, p),
+            C = s ? () => d() : () => l(!e.enabled, p),
             {
-                Component: C,
+                Component: m,
                 play: S,
                 events: g
-            } = (0, l.useVideoLottie)(E || n ? "mute" : "unmute");
+            } = (0, i.useVideoLottie)(E || n ? "disable" : "enable");
         return r.useEffect(() => () => S(), [n, S]), (0, a.jsx)(a.Fragment, {
             children: f({
-                onClick: m,
+                onClick: C,
                 active: n,
                 disabled: !n && (!c || h),
-                iconComponent: C,
+                iconComponent: m,
                 label: t,
                 unavailable: s,
                 onMouseEnter: E ? void 0 : g.onMouseEnter,
@@ -57,22 +57,22 @@ function(e, t, n) {
             join: n,
             channel: r,
             onChange: s,
-            onCameraUnavailable: l,
+            onCameraUnavailable: i,
             cameraUnavailable: u,
             hasPermission: o,
             className: h,
             channelLimitReached: E,
             channelLimit: p,
-            centerButton: m = !1,
-            onPopoutClick: C,
+            centerButton: C = !1,
+            onPopoutClick: m,
             ...S
-        } = e, g = m ? d.CenterControlButton : d.default;
+        } = e, g = C ? d.CenterControlButton : d.default;
         return (0, a.jsx)(f, {
             enabled: t,
             join: n,
             channel: r,
             onChange: s,
-            onCameraUnavailable: l,
+            onCameraUnavailable: i,
             cameraUnavailable: u,
             hasPermission: o,
             channelLimitReached: E,
@@ -82,10 +82,10 @@ function(e, t, n) {
                     unavailable: n,
                     onMouseEnter: r,
                     onMouseLeave: s,
-                    ...l
+                    ...i
                 } = e;
                 return (0, a.jsx)(g, {
-                    ...l,
+                    ...i,
                     ...S,
                     onMouseEnter: e => {
                         var t;
@@ -96,10 +96,10 @@ function(e, t, n) {
                         null === (t = S.onMouseLeave) || void 0 === t || t.call(S, e), null == s || s()
                     },
                     isActive: t,
-                    className: i(h, {
+                    className: l(h, {
                         [c.fauxDisabled]: n
                     }),
-                    onPopoutClick: C
+                    onPopoutClick: m
                 })
             }
         })

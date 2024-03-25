@@ -117,11 +117,11 @@ function(e, t, n) {
                 analyticsSource: f.default.COLLECTIBLES_USER_POPOUT_UPSELL,
                 initialProductSkuId: W ? null !== (i = null == K ? void 0 : K.skuId) && void 0 !== i ? i : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId : null !== (l = null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId) && void 0 !== l ? l : null == K ? void 0 : K.skuId
             })
-        }, [h, m, j, null == K ? void 0 : K.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, W]), J = l.useCallback(() => {
+        }, [h, m, j, null == K ? void 0 : K.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, W]), Z = l.useCallback(() => {
             null == h || h(v.ContentDismissActionType.DISMISS)
         }, [h]);
         if (!O && !P) return null;
-        let Z = (0, r.match)([O, P]).with([!0, !0], () => W && Y && H ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+        let J = (0, r.match)([O, P]).with([!0, !0], () => W && Y && H ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
             openShop: k
         }) : W && Y ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
             openShop: k
@@ -158,12 +158,12 @@ function(e, t, n) {
                         variant: "text-sm/normal",
                         color: "text-normal",
                         tag: "span",
-                        children: Z
+                        children: J
                     })
                 }), (0, i.jsx)("div", {
                     className: A.buttons,
                     children: (0, i.jsx)(R, {
-                        onClick: J
+                        onClick: Z
                     })
                 })]
             })

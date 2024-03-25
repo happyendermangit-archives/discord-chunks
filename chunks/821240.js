@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getSafetyAlertsSettingOrDefault: function() {
-            return i
+            return l
         },
         getInappropriateConversationTakeoverForChannel: function() {
-            return l
+            return i
         },
         shouldShowTakeoverForWarnings: function() {
             return u
@@ -15,14 +15,14 @@ function(e, t, n) {
         r = n("764828"),
         s = n("217736");
 
-    function i() {
+    function l() {
         var e, t, n;
         let r = null === (n = null === (t = a.default.settings.privacy) || void 0 === t ? void 0 : null === (e = t.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === n || n,
-            i = (0, s.getUserIsTeen)("safety_warnings_setting");
-        return i && r
+            l = (0, s.getUserIsTeen)("safety_warnings_setting");
+        return l && r
     }
 
-    function l(e) {
+    function i(e) {
         let t = function(e) {
                 let t = r.default.getChannelSafetyWarnings(e);
                 return t.filter(e => e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1)

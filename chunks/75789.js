@@ -13,8 +13,7 @@ function(e, t, n) {
             entryPointEnabled: !1,
             activitiesInTextEnabled: !1,
             desktopThrobberEnabled: !1,
-            showInOmniButtonMenu: !1,
-            showChatInputButton: !1
+            showInOmniButtonMenu: !1
         },
         treatments: [{
             id: 1,
@@ -23,8 +22,7 @@ function(e, t, n) {
                 entryPointEnabled: !0,
                 activitiesInTextEnabled: !1,
                 desktopThrobberEnabled: !1,
-                showInOmniButtonMenu: !1,
-                showChatInputButton: !1
+                showInOmniButtonMenu: !1
             }
         }, {
             id: 2,
@@ -33,8 +31,7 @@ function(e, t, n) {
                 entryPointEnabled: !0,
                 activitiesInTextEnabled: !0,
                 desktopThrobberEnabled: !1,
-                showInOmniButtonMenu: !0,
-                showChatInputButton: !1
+                showInOmniButtonMenu: !0
             }
         }, {
             id: 3,
@@ -43,8 +40,7 @@ function(e, t, n) {
                 entryPointEnabled: !0,
                 activitiesInTextEnabled: !0,
                 desktopThrobberEnabled: !0,
-                showInOmniButtonMenu: !0,
-                showChatInputButton: !1
+                showInOmniButtonMenu: !0
             }
         }]
     })

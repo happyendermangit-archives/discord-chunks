@@ -2,39 +2,39 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useEndCallLottie: function() {
-            return l
+            return i
         }
     });
     var a = n("37983"),
         r = n("884691"),
         s = n("414235");
-    let i = {
+    let l = {
             all: {
                 name: "all",
                 start: 0,
                 duration: 90
             }
         },
-        l = () => {
+        i = () => {
             let e = r.useRef(null),
                 t = r.useCallback(() => {
                     null != e.current && e.current.play("all")
                 }, []),
-                l = r.useCallback(() => {
-                    null != e.current && e.current.play("hover")
+                i = r.useCallback(() => {
+                    null != e.current && e.current.play("all")
                 }, []),
                 u = r.useCallback(() => {
-                    null != e.current && e.current.stopIfPlaying("hover")
+                    null != e.current && e.current.stopIfPlaying("all")
                 }, []),
                 o = r.useCallback(t => (0, a.jsx)(s.LottieIcon, {
                     ...t,
                     src: () => n.el("536759").then(n.t.bind(n, "536759", 19)),
                     ref: e,
-                    markers: i
+                    markers: l
                 }), []);
             return {
                 events: {
-                    onMouseEnter: l,
+                    onMouseEnter: i,
                     onMouseLeave: u
                 },
                 play: t,

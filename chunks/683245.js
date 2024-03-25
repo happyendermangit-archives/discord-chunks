@@ -8,8 +8,8 @@ function(e, t, n) {
     var a = n("37983"),
         r = n("884691"),
         s = n("446674"),
-        i = n("990766"),
-        l = n("374014"),
+        l = n("990766"),
+        i = n("374014"),
         u = n("42203"),
         o = n("607391"),
         d = n("782340");
@@ -23,14 +23,14 @@ function(e, t, n) {
             selected: h = !1
         } = e, E = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(t.channelId));
         return r.useEffect(() => {
-            (null == E ? void 0 : E.isGuildStageVoice()) && (0, i.closeStream)((0, l.encodeStreamKey)(t), !1)
+            (null == E ? void 0 : E.isGuildStageVoice()) && (0, l.closeStream)((0, i.encodeStreamKey)(t), !1)
         }, []), (0, a.jsx)(o.default, {
             artURL: c,
             noArt: f,
             selected: h,
             size: (0, o.getSizeForWidth)(n),
             header: d.default.Messages.STREAM_ENDED,
-            onCTAClick: () => (0, i.closeStream)((0, l.encodeStreamKey)(t)),
+            onCTAClick: () => (0, l.closeStream)((0, i.encodeStreamKey)(t)),
             callToAction: d.default.Messages.CLOSE_STREAM
         })
     }

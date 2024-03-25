@@ -2,56 +2,56 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useScreenshareLottie: function() {
-            return l
+            return i
         }
     });
     var a = n("37983"),
         r = n("884691"),
         s = n("414235");
-    let i = {
-            on: {
-                name: "on",
+    let l = {
+            enable: {
+                name: "enable",
                 start: 0,
                 duration: 70
             },
-            off: {
-                name: "off",
+            disable: {
+                name: "disable",
                 start: 90,
                 duration: 70
             },
-            hover_on: {
-                name: "hover_on",
+            hover_enabled: {
+                name: "hover_enabled",
                 start: 180,
                 duration: 40
             },
-            hover_off: {
-                name: "hover_off",
+            hover_disabled: {
+                name: "hover_disabled",
                 start: 240,
                 duration: 40
             }
         },
-        l = e => {
+        i = e => {
             let t = r.useRef(null),
-                l = r.useRef(e),
+                i = r.useRef(e),
                 u = r.useMemo(() => () => {
                     null != t.current && t.current.play(e)
                 }, [e]),
                 o = r.useCallback(() => {
                     if (null == t.current) return;
-                    let n = "on" === e ? "hover_off" : "hover_on";
+                    let n = "enable" === e ? "hover_disabled" : "hover_enabled";
                     t.current.play(n)
                 }, [e]),
                 d = r.useCallback(() => {
                     if (null == t.current) return;
-                    let n = "on" === e ? "hover_off" : "hover_on";
+                    let n = "enable" === e ? "hover_disabled" : "hover_enabled";
                     t.current.stopIfPlaying(n)
                 }, [e]),
                 c = r.useCallback(e => (0, a.jsx)(s.LottieIcon, {
                     ...e,
                     src: () => n.el("787188").then(n.t.bind(n, "787188", 19)),
                     ref: t,
-                    initialAnimation: l.current,
-                    markers: i
+                    initialAnimation: i.current,
+                    markers: l
                 }), []);
             return {
                 events: {

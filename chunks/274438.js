@@ -8,8 +8,8 @@ function(e, t, n) {
     var a = n("446674"),
         r = n("913144");
     let s = !1,
-        i = !1;
-    class l extends a.default.DeviceSettingsStore {
+        l = !1;
+    class i extends a.default.DeviceSettingsStore {
         initialize(e) {
             null != e && (s = e)
         }
@@ -17,28 +17,28 @@ function(e, t, n) {
             return s
         }
         shouldPlay() {
-            return i
+            return l
         }
         getUserAgnosticState() {
             return s
         }
     }
-    l.displayName = "StageMusicStore", l.persistKey = "StageMusicStore";
-    var u = new l(r.default, {
+    i.displayName = "StageMusicStore", i.persistKey = "StageMusicStore";
+    var u = new i(r.default, {
         STAGE_MUSIC_MUTE: function(e) {
             let {
                 muted: t
             } = e;
-            s = t, i = !1
+            s = t, l = !1
         },
         STAGE_MUSIC_PLAY: function(e) {
             let {
                 play: t
             } = e;
-            i = t
+            l = t
         },
         VOICE_CHANNEL_SELECT: function() {
-            i = !1
+            l = !1
         }
     })
 }

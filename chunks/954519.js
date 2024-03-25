@@ -21,7 +21,7 @@ function(e, t, n) {
         } = e, u = n ? i.CenterControlButton : i.default, {
             Component: c,
             events: p
-        } = (0, l.useScreenshareLottie)("off");
+        } = (0, l.useScreenshareLottie)("disable");
         return (0, a.jsx)(u, {
             label: t ? o.default.Messages.STOP_STREAMING : o.default.Messages.STOP_WATCHING,
             iconComponent: c,

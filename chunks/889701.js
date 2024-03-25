@@ -50,9 +50,9 @@ function(e, t, n) {
         W = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
         Y = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
         z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-        J = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-        Z = Y + 2 * J,
-        q = z + 2 * J,
+        Z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+        J = Y + 2 * Z,
+        q = z + 2 * Z,
         X = s(A.trackStickerSearchEmpty, 200),
         Q = s(A.trackStickerSearchResultsViewed, 200),
         $ = l.forwardRef(function(e, t) {
@@ -65,7 +65,7 @@ function(e, t, n) {
             } = e, {
                 location: z
             } = (0, c.useAnalyticsContext)(), {
-                analyticsLocations: J
+                analyticsLocations: Z
             } = (0, p.default)(f.default.STICKER_PICKER);
             (0, y.useMaybeFetchPremiumLikelihood)(g.default);
             let $ = (null === (a = (0, S.usePremiumTrialOffer)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
@@ -116,7 +116,7 @@ function(e, t, n) {
                     listWidth: eu,
                     listPaddingRight: V,
                     stickerNodeMargin: eC ? K : W,
-                    stickerNodeWidth: eC ? Z : q
+                    stickerNodeWidth: eC ? J : q
                 }),
                 eA = l.useCallback((e, t) => {
                     let {
@@ -189,7 +189,7 @@ function(e, t, n) {
                 }), (0, E.navigateToPremiumMarketingPage)()
             }, [Y]);
             return (0, i.jsxs)(p.AnalyticsLocationProvider, {
-                value: J,
+                value: Z,
                 children: [!($ && eo) && (0, i.jsx)("div", {
                     className: G.header,
                     children: (0, i.jsx)(j.default, {
