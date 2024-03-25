@@ -23,8 +23,8 @@ function(e, t, n) {
         d = n("101703"),
         f = n("782340"),
         p = n("101386"),
-        h = n("542631"),
-        m = n("518672");
+        m = n("542631"),
+        h = n("518672");
     let S = e => {
             let {
                 step: t,
@@ -36,7 +36,7 @@ function(e, t, n) {
                     className: p.headerImageContainer,
                     "aria-hidden": "true",
                     children: (0, i.jsx)("img", {
-                        src: m,
+                        src: h,
                         alt: "",
                         className: p.headerImage
                     })
@@ -89,7 +89,7 @@ function(e, t, n) {
         return (0, i.jsxs)("div", {
             className: p.purchaseConfirmation,
             children: [(0, i.jsx)("img", {
-                src: h,
+                src: m,
                 alt: "",
                 width: 300,
                 height: 126

@@ -139,7 +139,7 @@ function(e, t, n) {
         }
         constructor(e) {
             var t;
-            this.participants = {}, this._participantsIndex = new l.default(R, C), this._requestToSpeakIndex = new l.default(() => [], y), this.channelId = e, this.guildId = null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
+            this.participants = {}, this._participantsIndex = new l.SecondaryIndexMap(R, C), this._requestToSpeakIndex = new l.SecondaryIndexMap(() => [], y), this.channelId = e, this.guildId = null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
         }
     }
 }

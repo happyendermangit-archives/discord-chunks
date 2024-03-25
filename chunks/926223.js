@@ -20,8 +20,8 @@ function(t, e, n) {
         _ = "",
         T = "",
         I = "",
-        A = "",
         p = "",
+        A = "",
         C = !1,
         P = null,
         N = null,
@@ -29,11 +29,11 @@ function(t, e, n) {
         h = null;
 
     function U() {
-        s = null, l = "", a = null, o = "", c = !1, S = null, d = "US", E = "", f = "", _ = "", T = "", I = "", A = "", p = "", C = !1, P = null, N = null, R = null, h = null
+        s = null, l = "", a = null, o = "", c = !1, S = null, d = "US", E = "", f = "", _ = "", T = "", I = "", p = "", A = "", C = !1, P = null, N = null, R = null, h = null
     }
 
     function L(t) {
-        E = t.name, d = t.country, _ = t.line1, T = t.line2, I = t.city, A = t.postalCode, p = t.state, f = t.email
+        E = t.name, d = t.country, _ = t.line1, T = t.line2, I = t.city, p = t.postalCode, A = t.state, f = t.email
     }
 
     function m() {
@@ -87,8 +87,8 @@ function(t, e, n) {
                 line1: _,
                 line2: T,
                 city: I,
-                postalCode: A,
-                state: p
+                postalCode: p,
+                state: A
             }
         }
         get isBillingAddressInfoValid() {
@@ -126,7 +126,7 @@ function(t, e, n) {
                 info: e,
                 isValid: n
             } = t;
-            null != e.name && "" !== e.name && (E = e.name), d = e.country, E = e.name, _ = e.line1, T = e.line2, I = e.city, A = e.postalCode, p = e.state, f = e.email, C = n
+            null != e.name && "" !== e.name && (E = e.name), d = e.country, E = e.name, _ = e.line1, T = e.line2, I = e.city, p = e.postalCode, A = e.state, f = e.email, C = n
         },
         BRAINTREE_TOKENIZE_PAYPAL_START: function() {
             l = "", a = null

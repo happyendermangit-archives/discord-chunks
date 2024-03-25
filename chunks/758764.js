@@ -51,14 +51,14 @@ function(t, e, n) {
         }
     }
 
-    function A(t) {
+    function p(t) {
         let {
             payment: e
         } = t;
         if (!d || e.id !== E || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(e.status)) return !1;
         d = !1, f = null, E = null, r.default.wait(u.clearError), r.default.wait(l.clearPurchaseError)
     }
-    class p extends i.default.Store {
+    class A extends i.default.Store {
         get isAwaitingAuthentication() {
             return d
         }
@@ -69,8 +69,8 @@ function(t, e, n) {
             return E
         }
     }
-    p.displayName = "PaymentAuthenticationStore";
-    var C = new p(r.default, {
+    A.displayName = "PaymentAuthenticationStore";
+    var C = new A(r.default, {
         BILLING_SUBSCRIPTION_UPDATE_START: _,
         PAYMENT_AUTHENTICATION_CLEAR_ERROR: _,
         PREMIUM_PAYMENT_ERROR_CLEAR: _,
@@ -94,7 +94,7 @@ function(t, e, n) {
             } = t;
             f = e, d = !1
         },
-        PAYMENT_UPDATE: A,
-        BILLING_PAYMENT_FETCH_SUCCESS: A
+        PAYMENT_UPDATE: p,
+        BILLING_PAYMENT_FETCH_SUCCESS: p
     })
 }

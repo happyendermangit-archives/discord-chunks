@@ -48,7 +48,7 @@ function(e, t, n) {
         } = e, i = D(e) ? "\x00" : "\x01";
         return "".concat(i, "-").concat(new Date(n).getTime(), "-").concat(t)
     }
-    let E = new a.default(e => {
+    let E = new a.SecondaryIndexMap(e => {
             let {
                 guild_id: t,
                 entity_id: n,

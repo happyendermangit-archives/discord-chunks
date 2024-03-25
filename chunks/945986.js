@@ -14,10 +14,10 @@ function(e, t, n) {
             return p
         },
         ApplicationBenefitsModalBenefits: function() {
-            return h
+            return m
         },
         ApplicationBenefitsModalContent: function() {
-            return m
+            return h
         }
     });
     var i = n("37983");
@@ -85,7 +85,7 @@ function(e, t, n) {
                 })]
             })
         },
-        h = e => {
+        m = e => {
             let {
                 applicationId: t,
                 storeListingBenefits: n,
@@ -104,7 +104,7 @@ function(e, t, n) {
                 })
             })
         },
-        m = e => {
+        h = e => {
             let {
                 children: t,
                 className: n,

@@ -29,8 +29,8 @@ function(t, e, n) {
         _ = n("698041"),
         T = n("105097"),
         I = n("568734"),
-        A = n("719923"),
-        p = n("286235"),
+        p = n("719923"),
+        A = n("286235"),
         C = n("621746"),
         P = n("854381"),
         N = n("237288"),
@@ -95,10 +95,10 @@ function(t, e, n) {
         } = (0, h.default)(), {
             purchaseError: tT,
             purchaseErrorBlockRef: tI,
-            setPurchaseError: tA
-        } = (0, U.default)(), tp = (0, l.useLazyValue)(() => {
+            setPurchaseError: tp
+        } = (0, U.default)(), tA = (0, l.useLazyValue)(() => {
             let t = null != T ? T : (0, a.v4)();
-            return p.default.addBreadcrumb({
+            return A.default.addBreadcrumb({
                 message: "Checkout session ID: ".concat(t)
             }), {
                 loadId: t,
@@ -109,7 +109,7 @@ function(t, e, n) {
             selectedPlan: tP,
             setSelectedSkuId: tN,
             setSelectedPlanId: tR
-        } = (0, C.default)(), [th, tU] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [tL, tm] = (0, o.useStateFromStoresArray)([g.default], () => [g.default.browserCheckoutState, g.default.loadId]), [tM, tF] = r.useState(null), [tO, tg] = r.useState(null), [ty, tG] = r.useState(null), [tD, tB] = r.useState(null), [tb, tH] = r.useState(null), [tv, tK] = r.useState(void 0), [tw, tY] = r.useState([]), tk = r.useMemo(() => null == tP || (0, A.isPremiumSubscriptionPlan)(tP.id), [tP]), tW = r.useRef(null != B ? B.planId : null);
+        } = (0, C.default)(), [th, tU] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [tL, tm] = (0, o.useStateFromStoresArray)([g.default], () => [g.default.browserCheckoutState, g.default.loadId]), [tM, tF] = r.useState(null), [tO, tg] = r.useState(null), [ty, tG] = r.useState(null), [tD, tB] = r.useState(null), [tb, tH] = r.useState(null), [tv, tK] = r.useState(void 0), [tw, tY] = r.useState([]), tk = r.useMemo(() => null == tP || (0, p.isPremiumSubscriptionPlan)(tP.id), [tP]), tW = r.useRef(null != B ? B.planId : null);
         r.useEffect(() => {
             null == tW.current && null != B && (tW.current = B.planId)
         }, [B]);
@@ -137,7 +137,7 @@ function(t, e, n) {
         return (0, i.jsx)(D.Provider, {
             value: {
                 stripe: x,
-                contextMetadata: tp,
+                contextMetadata: tA,
                 blockedPayments: Z,
                 activeSubscription: B,
                 hasFetchedSubscriptions: J,
@@ -168,7 +168,7 @@ function(t, e, n) {
                 paymentAuthenticationState: t_,
                 paymentError: tf,
                 purchaseError: tT,
-                setPurchaseError: tA,
+                setPurchaseError: tp,
                 purchaseErrorBlockRef: tI,
                 purchaseTokenAuthState: th,
                 purchaseTokenHash: tU,

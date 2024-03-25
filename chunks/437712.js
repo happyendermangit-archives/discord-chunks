@@ -20,11 +20,11 @@ function(t, e, n) {
         _ = !1,
         T = !1,
         I = new Set,
-        A = new Set,
-        p = {};
+        p = new Set,
+        A = {};
 
     function C(t) {
-        S[t.id] = a.default.createFromServer(t), null == E[t.sku_id] && (E[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == p[t.subscription_id] && (p[t.subscription_id] = new Set), p[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), E[t.sku_id].add(t.id)
+        S[t.id] = a.default.createFromServer(t), null == E[t.sku_id] && (E[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == A[t.subscription_id] && (A[t.subscription_id] = new Set), A[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), E[t.sku_id].add(t.id)
     }
 
     function P(t) {
@@ -68,7 +68,7 @@ function(t, e, n) {
             return I
         }
         get applicationIdsFetched() {
-            return A
+            return p
         }
         isFetchingForApplication(t) {
             return this.fetchingAllEntitlements || null != t && this.applicationIdsFetching.has(t)
@@ -77,7 +77,7 @@ function(t, e, n) {
             return this.fetchedAllEntitlements || null != t && this.applicationIdsFetched.has(t)
         }
         getForSubscription(t) {
-            let e = p[t];
+            let e = A[t];
             if (null == e) return null;
             let n = new Set;
             for (let t of e) n.add(S[t]);
@@ -91,12 +91,12 @@ function(t, e, n) {
                     let n = S[e];
                     if (null != n && n.isValid(t, c.default, i)) return !0
                 }
-            if (A.has(n)) return !1;
+            if (p.has(n)) return !1;
             let u = null != i ? o.default.getLibraryApplication(n, i) : o.default.getActiveLibraryApplication(n);
             return !!(null != u && u.sku.id === e && (0, s.isUserEntitledToLibraryApplication)(u)) || null
         }
         hasFetchedForApplicationIds(t) {
-            return t.every(t => A.has(t))
+            return t.every(t => p.has(t))
         }
     }
     R.displayName = "EntitlementStore";
@@ -112,7 +112,7 @@ function(t, e, n) {
                 applicationId: e,
                 entitlements: n
             } = t;
-            for (let t of (I.delete(e), A.add(e), n)) !0 !== t.consumed && C(t)
+            for (let t of (I.delete(e), p.add(e), n)) !0 !== t.consumed && C(t)
         },
         ENTITLEMENT_FETCH_APPLICATION_FAIL: function() {},
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function(t) {
@@ -144,13 +144,13 @@ function(t, e, n) {
                 null != e && e.delete(t.id);
                 let n = E[t.sku_id];
                 if (null != n && n.delete(t.id), null != t.subscription_id) {
-                    let e = p[t.subscription_id];
+                    let e = A[t.subscription_id];
                     null != e && e.delete(t.id)
                 }
             }(t.entitlement)
         },
         LOGOUT: function() {
-            S = {}, E = {}, f = {}, _ = !1, T = !1, I = new Set, A = new Set
+            S = {}, E = {}, f = {}, _ = !1, T = !1, I = new Set, p = new Set
         },
         ENTITLEMENTS_FETCH_FOR_USER_START: function() {
             _ = !0

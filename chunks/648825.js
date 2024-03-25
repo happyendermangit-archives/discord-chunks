@@ -30,8 +30,8 @@ function(e, t, n) {
     function E(e) {
         return "plan:".concat(e)
     }(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
-    let h = new l.default(e => [c(e.guild_id), ...e.subscription_listings_ids.map(_)], e => e.id),
-        g = new l.default(e => [f(e.application_id), E(e.subscription_plans[0].id)], e => e.id),
+    let h = new l.SecondaryIndexMap(e => [c(e.guild_id), ...e.subscription_listings_ids.map(_)], e => e.id),
+        g = new l.SecondaryIndexMap(e => [f(e.application_id), E(e.subscription_plans[0].id)], e => e.id),
         m = {},
         p = new Set,
         S = {},

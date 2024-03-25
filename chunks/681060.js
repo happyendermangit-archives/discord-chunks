@@ -50,8 +50,8 @@ function(e, t, n) {
         W = n("378765"),
         Y = n("991170"),
         z = n("773336"),
-        J = n("545054"),
-        Z = n("850391"),
+        Z = n("545054"),
+        J = n("850391"),
         q = n("743825"),
         X = n("231868"),
         Q = n("834725"),
@@ -95,8 +95,8 @@ function(e, t, n) {
                 highlighted: eW,
                 canMentionRoles: eY,
                 canMentionChannels: ez,
-                maxCharacterCount: eJ,
-                showRemainingCharsAfterCount: eZ,
+                maxCharacterCount: eZ,
+                showRemainingCharsAfterCount: eJ,
                 allowNewLines: eq = !0,
                 characterCountClassName: eX,
                 "aria-describedby": eQ,
@@ -162,7 +162,7 @@ function(e, t, n) {
                     isPendingMember: s,
                     ...r
                 }
-            }(ek, eL, tn, eO), td = eL.toolbarType === Z.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eL.commands) || void 0 === a ? void 0 : a.enabled) || !eP || eC !== es.COMMAND_SENTINEL, tp = (0, L.default)(), {
+            }(ek, eL, tn, eO), td = eL.toolbarType === J.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eL.commands) || void 0 === a ? void 0 : a.enabled) || !eP || eC !== es.COMMAND_SENTINEL, tp = (0, L.default)(), {
                 isSubmitButtonEnabled: tm,
                 fontSize: th
             } = (0, p.useStateFromStoresObject)([x.default], () => ({
@@ -282,7 +282,7 @@ function(e, t, n) {
             }();
             let tv = (ex = tS, eE = eL, ey = e9, l.useCallback(e => {
                 var t, n;
-                eE === Z.ChatInputTypes.CREATE_FORUM_POST ? null === (n = ey.current) || void 0 === n || n.insertGIF(e) : ex(e.url, void 0, void 0, !0), (0, A.closeExpressionPicker)(), null === (t = ey.current) || void 0 === t || t.focus()
+                eE === J.ChatInputTypes.CREATE_FORUM_POST ? null === (n = ey.current) || void 0 === n || n.insertGIF(e) : ex(e.url, void 0, void 0, !0), (0, A.closeExpressionPicker)(), null === (t = ey.current) || void 0 === t || t.focus()
             }, [ey, ex, eE]));
             let tN = (eg = e9, l.useCallback(function(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -395,7 +395,7 @@ function(e, t, n) {
                     autoTrackExposure: !1
                 }).enabled,
                 tG = (0, p.useStateFromStores)([S.default], () => S.default.shouldShowPopup(), []);
-            (0, J.useHereMentionCallback)(tE, ek.guild_id, ek.id);
+            (0, Z.useHereMentionCallback)(tE, ek.guild_id, ek.id);
             let tH = null != eD,
                 tB = ts && !((tl || ta) && tu) || tg && (null === (o = eL.submit) || void 0 === o ? void 0 : o.useDisabledStylesOnSubmit),
                 tV = null,
@@ -410,8 +410,8 @@ function(e, t, n) {
                         o = null != r && r.length > 0;
                     return s && (null === (l = t.stickers) || void 0 === l ? void 0 : l.autoSuggest) && !o && (null === (a = i.current) || void 0 === a ? void 0 : a.isVisible()) !== !0 && !__OVERLAY__ && null != n
                 }(ek, eL, eT, tT),
-                tJ = (0, I.useShouldShowPTONotice)(ek),
-                tZ = null != tn || null != eD || tJ,
+                tZ = (0, I.useShouldShowPTONotice)(ek),
+                tJ = null != tn || null != eD || tZ,
                 tq = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
             return (0, i.jsx)(N.EventEmitterProvider, {
                 value: tE,
@@ -446,7 +446,7 @@ function(e, t, n) {
                                 [eo.scrollableContainer]: !0,
                                 [eo.themedBackground]: !e7,
                                 [eo.webkit]: "Blink" === platform.layout,
-                                [eo.hasConnectedBar]: tZ
+                                [eo.hasConnectedBar]: tJ
                             }),
                             children: [(0, i.jsx)(X.default, {
                                 channelId: ek.id,
@@ -458,9 +458,9 @@ function(e, t, n) {
                             }), (0, i.jsxs)("div", {
                                 className: s(eo.inner, {
                                     [eo.innerDisabled]: tB,
-                                    [eo.sansAttachButton]: eL !== Z.ChatInputTypes.EDIT && (null != tV || tB && null == tV || tl),
-                                    [eo.sansAttachButtonCreateThread]: eL === Z.ChatInputTypes.THREAD_CREATION,
-                                    [eo.sansAttachButtonCreatePost]: eL === Z.ChatInputTypes.CREATE_FORUM_POST
+                                    [eo.sansAttachButton]: eL !== J.ChatInputTypes.EDIT && (null != tV || tB && null == tV || tl),
+                                    [eo.sansAttachButtonCreateThread]: eL === J.ChatInputTypes.THREAD_CREATION,
+                                    [eo.sansAttachButtonCreatePost]: eL === J.ChatInputTypes.CREATE_FORUM_POST
                                 }),
                                 children: [tV, tK, (0, i.jsx)(m.FocusRing, {
                                     ringTarget: e4,
@@ -481,7 +481,7 @@ function(e, t, n) {
                                         type: eL,
                                         canPasteFiles: tr,
                                         uploadPromptCharacterCount: ea.MAX_MESSAGE_LENGTH_PREMIUM,
-                                        maxCharacterCount: null != eJ ? eJ : tp,
+                                        maxCharacterCount: null != eZ ? eZ : tp,
                                         allowNewLines: eq,
                                         "aria-describedby": eQ,
                                         onChange: ew,
@@ -501,8 +501,8 @@ function(e, t, n) {
                                         spellcheckEnabled: tx,
                                         canOnlyUseTextCommands: tH,
                                         className: s({
-                                            [eo.textAreaThreadCreation]: eL === Z.ChatInputTypes.THREAD_CREATION,
-                                            [eo.profileBioInput]: eL === Z.ChatInputTypes.PROFILE_BIO_INPUT
+                                            [eo.textAreaThreadCreation]: eL === J.ChatInputTypes.THREAD_CREATION,
+                                            [eo.profileBioInput]: eL === J.ChatInputTypes.PROFILE_BIO_INPUT
                                         }, ev),
                                         "aria-labelledby": e$
                                     })
@@ -546,8 +546,8 @@ function(e, t, n) {
                             className: s(eX, {
                                 [eo.indentCharacterCount]: tq
                             }),
-                            maxCharacterCount: eJ,
-                            showRemainingCharsAfterCount: eZ
+                            maxCharacterCount: eZ,
+                            showRemainingCharsAfterCount: eJ
                         }) : null, tz ? (0, i.jsx)(R.default, {
                             editorRef: e9,
                             channel: ek,

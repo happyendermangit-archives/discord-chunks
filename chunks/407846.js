@@ -1,18 +1,18 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        default: function() {
-            return i
+        SecondaryIndexMap: function() {
+            return o
         }
     }), n("222007");
-    var i, s = n("167200"),
-        r = n.n(s);
+    var i = n("167200"),
+        s = n.n(i);
 
-    function a(e, t, n, i) {
-        null != t && e.splice(r(e, t, i), 1), null != n && e.splice(r(e, n, i), 0, n)
+    function r(e, t, n, i) {
+        null != t && e.splice(s(e, t, i), 1), null != n && e.splice(s(e, n, i), 0, n)
     }
-    let o = [];
-    i = class {
+    let a = [];
+    class o {
         get version() {
             return this._version
         }
@@ -31,7 +31,7 @@ function(e, t, n) {
         values(e) {
             var t;
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return null == e ? this.valueArray : null !== (t = this.indexes(n)[e]) && void 0 !== t ? t : o
+            return null == e ? this.valueArray : null !== (t = this.indexes(n)[e]) && void 0 !== t ? t : a
         }
         size(e) {
             var t, n;
@@ -48,7 +48,7 @@ function(e, t, n) {
         }
         set(e, t) {
             let n = this.get(e);
-            return !(null == n && null == t || null != n && null != t && this.isEqual(n, t)) && (null != t ? this.valueMap.set(e, t) : this.valueMap.delete(e), a(this.valueArray, n, t, this.sortBy), null != n && this.indexBy(n).forEach(e => a(this.getIndex(e), n, null, this.sortBy)), null != t && this.indexBy(t).forEach(e => a(this.getIndex(e), null, t, this.sortBy)), this.dirty = !0, this._version++, !0)
+            return !(null == n && null == t || null != n && null != t && this.isEqual(n, t)) && (null != t ? this.valueMap.set(e, t) : this.valueMap.delete(e), r(this.valueArray, n, t, this.sortBy), null != n && this.indexBy(n).forEach(e => r(this.getIndex(e), n, null, this.sortBy)), null != t && this.indexBy(t).forEach(e => r(this.getIndex(e), null, t, this.sortBy)), this.dirty = !0, this._version++, !0)
         }
         delete(e) {
             return this.set(e, null)

@@ -2,13 +2,13 @@ function(N, I, A) {
     "use strict";
     A.r(I), A.d(I, {
         closeContextMenu: function() {
-            return t
+            return i
         },
         openContextMenu: function() {
-            return n
+            return t
         },
         openContextMenuLazy: function() {
-            return i
+            return n
         }
     }), A("506083");
     var O = A("913144"),
@@ -24,7 +24,7 @@ function(N, I, A) {
         })
     }
 
-    function t(N) {
+    function i(N) {
         {
             let {
                 flushSync: I
@@ -39,13 +39,13 @@ function(N, I, A) {
         }
     }
 
-    function n(N, I, A, O) {
-        var t, n, i;
+    function t(N, I, A, O) {
+        var i, t, n;
         if (N.stopPropagation(), null != N.currentTarget.contains && !N.currentTarget.contains(N.target)) return;
         let R = 0,
             G = 0;
         if ("pageX" in N && (R = N.pageX, G = N.pageY), 0 === R && 0 === G) {
-            let I = null === (t = N.target) || void 0 === t ? void 0 : t.getBoundingClientRect(),
+            let I = null === (i = N.target) || void 0 === i ? void 0 : i.getBoundingClientRect(),
                 {
                     left: A = 0,
                     top: O = 0,
@@ -57,10 +57,10 @@ function(N, I, A) {
         let r = {
             render: I,
             renderLazy: O,
-            target: null !== (n = N.target) && void 0 !== n ? n : N.currentTarget,
+            target: null !== (t = N.target) && void 0 !== t ? t : N.currentTarget,
             rect: new DOMRect(R, G, 0, 0),
             config: {
-                context: __OVERLAY__ ? E.AppContext.OVERLAY : null !== (i = (0, T.getCurrentlyInteractingAppContext)()) && void 0 !== i ? i : E.AppContext.APP,
+                context: __OVERLAY__ ? E.AppContext.OVERLAY : null !== (n = (0, T.getCurrentlyInteractingAppContext)()) && void 0 !== n ? n : E.AppContext.APP,
                 ...A
             }
         };
@@ -71,7 +71,7 @@ function(N, I, A) {
         } else N.preventDefault(), V(r)
     }
 
-    function i(N, I, A) {
-        n(N, void 0, A, I)
+    function n(N, I, A) {
+        t(N, void 0, A, I)
     }
 }

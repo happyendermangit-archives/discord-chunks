@@ -24,7 +24,7 @@ function(e, t, n) {
             BROADCASTS_BY_CHANNEL_ID: e => "channel:".concat(e),
             BROADCASTS_BY_VALIDITY: e => "validity:".concat(e)
         },
-        g = new l.default(function(e) {
+        g = new l.SecondaryIndexMap(function(e) {
             let t = E.has(e.userId) ? 1 : 0;
             return null != e.viewers && (t = 2), [S.BROADCASTS_BY_USER_ID(e.userId), S.BROADCASTS_BY_CHANNEL_ID(e.channelId), S.BROADCASTS_BY_VALIDITY(t)]
         }, e => e.channelId);

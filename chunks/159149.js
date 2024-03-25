@@ -25,8 +25,8 @@ function(e, t, n) {
             primaryCTA: a,
             primaryType: f,
             primaryText: p,
-            primaryTooltip: h,
-            primaryDisabled: m,
+            primaryTooltip: m,
+            primaryDisabled: h,
             primarySubmitting: S,
             onPrimary: I,
             secondaryText: g,
@@ -41,13 +41,13 @@ function(e, t, n) {
                     t = {
                         innerClassName: d.button,
                         type: f,
-                        disabled: m,
+                        disabled: h,
                         submitting: S,
                         color: 0 === a ? r.Button.Colors.BRAND : r.Button.Colors.GREEN,
                         onClick: I
                     };
-                return null != h ? (0, s.jsx)(r.Tooltip, {
-                    text: h,
+                return null != m ? (0, s.jsx)(r.Tooltip, {
+                    text: m,
                     children: n => (0, s.jsxs)(e, {
                         ...n,
                         ...t,

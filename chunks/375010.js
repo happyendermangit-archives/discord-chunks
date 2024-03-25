@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return v
         }
     });
     var i = n("37983"),
@@ -16,18 +16,18 @@ function(e, t, n) {
         d = n("598981"),
         f = n("426380"),
         p = n("697218"),
-        h = n("10514"),
-        m = n("991254"),
+        m = n("10514"),
+        h = n("991254"),
         S = n("129408"),
         I = n("713536"),
         g = n("449809"),
         C = n("49111"),
-        v = n("782340"),
-        E = e => {
+        E = n("782340"),
+        v = e => {
             var t;
             let n, {
                     listing: s,
-                    guildId: E,
+                    guildId: v,
                     groupListingId: A,
                     analyticsLocation: N,
                     showBenefitsFirst: x,
@@ -39,9 +39,9 @@ function(e, t, n) {
                 j = null == b ? void 0 : b.id,
                 y = (null == s ? void 0 : s.published) === !0,
                 M = null == b ? void 0 : b.sku_id,
-                O = (0, l.useStateFromStores)([h.default], () => null != j ? h.default.get(j) : null),
-                P = (0, m.useApplication)(L),
-                R = (0, m.useSubscriptionListingsForGroup)(A, {
+                O = (0, l.useStateFromStores)([m.default], () => null != j ? m.default.get(j) : null),
+                P = (0, h.useApplication)(L),
+                R = (0, h.useSubscriptionListingsForGroup)(A, {
                     includeSoftDeleted: !0
                 }),
                 U = R.map(e => e.subscription_plans[0].id),
@@ -51,27 +51,27 @@ function(e, t, n) {
                 {
                     activeSubscription: G,
                     activeEntitlement: w
-                } = (0, m.useActiveSubscriptionListingForApplication)(L, E),
-                D = (0, m.useEligibleApplicationSubscriptionGuilds)(L, E),
+                } = (0, h.useActiveSubscriptionListingForApplication)(L, v),
+                D = (0, h.useEligibleApplicationSubscriptionGuilds)(L, v),
                 k = (0, d.default)(),
                 F = null != s && (0, S.isApplicationUserSubscription)(s.sku_flags),
                 H = null != w && w.userId === (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
                 K = null == w || H,
                 V = null == w || U.length > 1,
-                W = null != E || D.length > 0,
+                W = null != v || D.length > 0,
                 Z = F && H,
                 z = null != O && null != P && K && V && (W || F) && !Z;
-            K ? W ? Z && null != O && (n = v.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
+            K ? W ? Z && null != O && (n = E.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
                 tierName: O.name
-            })) : n = v.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = v.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, a.useEffect(() => {
+            })) : n = E.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = E.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, a.useEffect(() => {
                 y && null != M && k && o.default.wait(() => {
                     (0, u.fetchSubscriptionPlansForSKU)(M)
                 })
             }, [y, M, k]);
             let J = a.useCallback(() => {
-                r(null != s, "No subscription listing"), r(null != P, "No application"), r(null != b, "No subscription plan"), r(y, "Cannot purchase this unpublished plan");
+                r(null != P, "No application"), r(null != b, "No subscription plan"), r(y, "Cannot purchase this unpublished plan");
                 let e = () => {
-                    (0, f.openApplicationSubscriptionPaymentModal)({
+                    (0, f.openApplicationPaymentModal)({
                         activeSubscription: G,
                         analyticsSubscriptionType: C.SubscriptionTypes.APPLICATION,
                         analyticsLocations: B,
@@ -82,21 +82,21 @@ function(e, t, n) {
                         }),
                         initialPlanId: b.id,
                         skuId: b.sku_id,
-                        guildId: E,
+                        guildId: v,
                         eligibleApplicationSubscriptionGuilds: D,
                         planGroup: U,
-                        application: P,
+                        applicationId: P.id,
                         showBenefitsFirst: x,
                         onComplete: T,
                         forcesTransitionToGuild: _
                     })
                 };
                 !W && F ? (0, g.confirmNoSharedServerSubscribeWarningModal)({
-                    application: P,
+                    applicationName: P.name,
                     onConfirm: e,
                     onCancel: () => {}
                 }) : e()
-            }, [y, s, b, U, P, E, W, F, B, N, G, x, D, T, _]);
+            }, [y, b, U, P, v, W, F, B, N, G, x, D, T, _]);
             return {
                 openModal: J,
                 canOpenModal: z,

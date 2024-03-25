@@ -35,9 +35,9 @@ function(t, e, n) {
     function T(t, e) {
         return "entitlement:".concat(e, ":").concat(t)
     }(r = i || (i = {}))[r.NOT_FETCHED = 0] = "NOT_FETCHED", r[r.FETCHING = 1] = "FETCHING", r[r.FETCHED = 2] = "FETCHED";
-    let I = new o.default(t => [E(t.application_id), ...t.subscription_listings_ids.map(d)], t => t.id),
-        A = new o.default(t => [E(t.application_id), f(t.subscription_plans[0].id)], t => t.id),
-        p = new o.default(t => [_(t.applicationId, t.isValid(null, S.default), t.guildId), T(t.isValid(null, S.default), t.guildId)], t => t.id),
+    let I = new o.SecondaryIndexMap(t => [E(t.application_id), ...t.subscription_listings_ids.map(d)], t => t.id),
+        p = new o.SecondaryIndexMap(t => [E(t.application_id), f(t.subscription_plans[0].id)], t => t.id),
+        A = new o.SecondaryIndexMap(t => [_(t.applicationId, t.isValid(null, S.default), t.guildId), T(t.isValid(null, S.default), t.guildId)], t => t.id),
         C = {},
         P = {};
 
@@ -49,7 +49,7 @@ function(t, e, n) {
     function R(t) {
         var e;
         for (let n of (I.set(t.id, t), null !== (e = t.subscription_listings) && void 0 !== e ? e : []))(function(t) {
-            A.set(t.id, t)
+            p.set(t.id, t)
         })(n)
     }
     class h extends a.default.Store {
@@ -68,32 +68,32 @@ function(t, e, n) {
             return l(e.length <= 1, "Found multiple group listings for listing"), e[0]
         }
         getSubscriptionListing(t) {
-            return A.get(t)
+            return p.get(t)
         }
         getSubscriptionListingsForApplication(t) {
-            return A.values(E(t))
+            return p.values(E(t))
         }
         getEntitlementsForGuildFetchState(t) {
             var e;
             return null !== (e = P[t]) && void 0 !== e ? e : 0
         }
         getSubscriptionListingForPlan(t) {
-            let e = A.values(f(t));
+            let e = p.values(f(t));
             return l(e.length <= 1, "Found multiple listings for plan"), e[0]
         }
         getApplicationEntitlementsForGuild(t, e) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-            return p.values(_(t, n, e))
+            return A.values(_(t, n, e))
         }
         getEntitlementsForGuild(t) {
             let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-            return p.values(T(e, t))
+            return A.values(T(e, t))
         }
     }
     h.displayName = "ApplicationSubscriptionStore";
     var U = new h(s.default, {
         LOGOUT: function() {
-            I.clear(), A.clear(), p.clear(), C = {}, P = {}
+            I.clear(), p.clear(), A.clear(), C = {}, P = {}
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function(t) {
             let {
@@ -102,7 +102,7 @@ function(t, e, n) {
             C[e] = 1;
             let n = N(e);
             if (null != n)
-                for (let t of n.subscription_listings_ids) A.delete(t)
+                for (let t of n.subscription_listings_ids) p.delete(t)
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function(t) {
             let {
@@ -130,7 +130,7 @@ function(t, e, n) {
             } = t;
             P[e] = 2, n.forEach(t => {
                 let e = c.default.createFromServer(t);
-                p.set(e.id, e)
+                A.set(e.id, e)
             })
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE(t) {

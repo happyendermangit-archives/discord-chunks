@@ -180,7 +180,7 @@ function(e, t, n) {
             return f
         }
         constructor(e) {
-            this.participants = {}, this.lastSpoke = {}, this.participantByIndex = new o.default(e => {
+            this.participants = {}, this.lastSpoke = {}, this.participantByIndex = new o.SecondaryIndexMap(e => {
                 var t;
                 let n = [];
                 return e.type === I.ParticipantTypes.USER && e.speaking && n.push("SPEAKING"), e.type === I.ParticipantTypes.USER && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) ? (n.push("VIDEO"), !e.localVideoDisabled && n.push("FILTERED")) : (0, I.isStreamParticipant)(e) && (n.push("STREAM"), e.type !== I.ParticipantTypes.HIDDEN_STREAM && null != e.streamId && n.push("FILTERED")), e.type === I.ParticipantTypes.ACTIVITY && n.push("ACTIVITY"), n

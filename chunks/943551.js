@@ -20,7 +20,7 @@ function(e, t, n) {
         _ = n("39141"),
         f = n("49111");
     let E = new Set,
-        h = new s.default(function(e) {
+        h = new s.SecondaryIndexMap(function(e) {
             let {
                 userId: t,
                 channelId: n
@@ -33,7 +33,7 @@ function(e, t, n) {
             } = e;
             return "".concat(n, "-").concat(t)
         }),
-        g = new s.default(function(e) {
+        g = new s.SecondaryIndexMap(function(e) {
             let {
                 messageId: t,
                 channelId: n,

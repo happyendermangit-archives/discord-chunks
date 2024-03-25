@@ -27,7 +27,7 @@ function(e, t, n) {
         I = n("325861"),
         A = n("834052");
     let C = "NO_GUILD",
-        y = new l.default(e => [function(e) {
+        y = new l.SecondaryIndexMap(e => [function(e) {
             var t;
             return null !== (t = e.getGuildId()) && void 0 !== t ? t : C
         }(e)], e => e.id),

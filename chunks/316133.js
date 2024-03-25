@@ -144,7 +144,7 @@ function(e, t, n) {
             }
         }
         constructor(e) {
-            this._pending = new Set, this._voiceStates = new a.default(e => {
+            this._pending = new Set, this._voiceStates = new a.SecondaryIndexMap(e => {
                 let {
                     voiceState: {
                         channelId: t
