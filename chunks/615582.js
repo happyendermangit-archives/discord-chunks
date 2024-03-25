@@ -15,7 +15,7 @@ function(e, t, n) {
         c = n("166745");
     let d = 1500,
         _ = null !== (s = window.requestIdleCallback) && void 0 !== s ? s : e => setImmediate(() => e()),
-        f = new c.default,
+        f = new c.IdGenerator,
         S = {
             handleConnectionOpen: () => {},
             handleConnectionClosed: () => {},
@@ -123,7 +123,7 @@ function(e, t, n) {
                     null != d && (c.properties.client_uuid = f.generate(d)), E.push(c), E.length > 1e4 && (E = E.slice(-1e4)), i ? v() : T()
                 }), !1
             };
-            class N extends a.default.Store {
+            class N extends a.Store {
                 initialize() {
                     null != p && this.waitFor(...p)
                 }

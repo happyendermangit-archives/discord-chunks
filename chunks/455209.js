@@ -13,7 +13,7 @@ function(e, _, E) {
         T = E("900673"),
         S = E("49111");
     let N = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"],
-        O = new T.default,
+        O = new T.IdGenerator,
         A = /\/api(\/v\d+)?\/science/;
     (0, t.setRequestPatch)({
         prepareRequest(e) {
