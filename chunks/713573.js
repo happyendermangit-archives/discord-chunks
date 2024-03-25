@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return d
         }
     });
-    var l = n("37983");
+    var i = n("37983");
     n("884691");
     var r = n("414456"),
-        a = n.n(r),
-        u = n("77078"),
-        s = n("451914"),
+        s = n.n(r),
+        l = n("77078"),
+        a = n("451914"),
         o = n("548122");
-    let i = Object.freeze({
+    let u = Object.freeze({
             SIZE_10: o.size10,
             SIZE_12: o.size12,
             SIZE_14: o.size14,
@@ -25,37 +25,37 @@ function(e, t, n) {
             let {
                 id: t,
                 muted: n = !1,
-                className: r = s.wrapper,
-                size: o = i.SIZE_14,
+                className: r = a.wrapper,
+                size: o = u.SIZE_14,
                 selectable: c = !1,
-                children: E,
-                color: d,
-                onClick: _,
-                onContextMenu: T,
-                style: f,
-                title: S,
-                uppercase: h
+                children: d,
+                color: f,
+                onClick: h,
+                onContextMenu: E,
+                style: v,
+                title: C,
+                uppercase: p
             } = e;
-            return (0, l.jsx)(u.H, {
-                role: null != _ ? "button" : void 0,
-                onClick: _,
-                onContextMenu: T,
+            return (0, i.jsx)(l.H, {
+                role: null != h ? "button" : void 0,
+                onClick: h,
+                onContextMenu: E,
                 id: t,
-                className: a(r, {
-                    [s.base]: !0,
+                className: s(r, {
+                    [a.base]: !0,
                     [o]: !0,
-                    [s.selectable]: c,
-                    [s.muted]: n,
-                    [s.uppercase]: h
+                    [a.selectable]: c,
+                    [a.muted]: n,
+                    [a.uppercase]: p
                 }),
-                title: S,
-                style: null != d ? {
-                    ...f,
-                    color: d
-                } : f,
-                children: E
+                title: C,
+                style: null != f ? {
+                    ...v,
+                    color: f
+                } : v,
+                children: d
             })
         };
-    c.Sizes = i;
-    var E = c
+    c.Sizes = u;
+    var d = c
 }
