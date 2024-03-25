@@ -284,12 +284,14 @@ function(e, t, n) {
     function B(e) {
         let {
             channelId: t,
-            messageRecord: n
+            messageRecord: n,
+            reason: a
         } = e;
         null != n && s.default.dispatch({
             type: "MESSAGE_SEND_FAILED",
             channelId: t,
-            messageId: n.id
+            messageId: n.id,
+            reason: null != a ? a : null
         })
     }
 

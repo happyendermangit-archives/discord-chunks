@@ -2,30 +2,35 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         trackClickstream: function() {
-            return l
+            return a
         },
         drainClickstream: function() {
-            return u
+            return o
         }
     }), n("222007"), n("424973");
     var i = n("599110"),
-        s = n("407708"),
-        r = n("403040"),
-        a = n("862947");
-    let o = new Map;
+        s = n("407708");
+    let r = new Map;
 
-    function l(e, t) {
-        var n;
-        !o.has(e) && o.set(e, []), null === (n = o.get(e)) || void 0 === n || n.push((0, a.default)(e, t))
+    function a(e, t) {
+        var i;
+        !r.has(e) && r.set(e, []);
+        let {
+            default: s
+        } = n("862947");
+        null === (i = r.get(e)) || void 0 === i || i.push(s(e, t))
     }
 
-    function u() {
+    function o() {
         let e = (0, s.clickstreamExperimentEnabled)();
         if (!e) {
-            o.clear();
+            r.clear();
             return
         }
-        for (let [e, t] of o) i.default.track(e, (0, r.default)(e, t));
-        o.clear()
+        let {
+            default: t
+        } = n("403040");
+        for (let [e, n] of r) i.default.track(e, t(e, n));
+        r.clear()
     }
 }
