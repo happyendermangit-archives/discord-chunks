@@ -29,14 +29,14 @@ function(e, t, n) {
         return null != e.content_scan_version ? e.content_scan_version : null != e.contentScanVersion ? e.contentScanVersion : null
     }
 
-    function r(e) {
-        return null == e.content_scan_version || e.content_scan_version < 1
+    function r(e, t) {
+        return null == e.content_scan_version || e.content_scan_version < (null != t ? t : 1)
     }
 
-    function a(e) {
-        var t, n, i, r, a, o, l;
-        let u = s(e);
-        return !((null === (t = e.video) || void 0 === t ? void 0 : t.width) === 0 && (null === (n = e.video) || void 0 === n ? void 0 : n.height) === 0 || (null === (i = e.thumbnail) || void 0 === i ? void 0 : i.width) === 0 && (null === (r = e.thumbnail) || void 0 === r ? void 0 : r.height) === 0 || (null === (a = e.image) || void 0 === a ? void 0 : a.width) === 0 && (null === (o = e.image) || void 0 === o ? void 0 : o.height) === 0 || "images" in e && (null === (l = e.images) || void 0 === l ? void 0 : l.some(e => 0 === e.width && 0 === e.height))) && (null == u || u < 1)
+    function a(e, t) {
+        var n, i, r, a, o, l, u;
+        let d = s(e);
+        return !((null === (n = e.video) || void 0 === n ? void 0 : n.width) === 0 && (null === (i = e.video) || void 0 === i ? void 0 : i.height) === 0 || (null === (r = e.thumbnail) || void 0 === r ? void 0 : r.width) === 0 && (null === (a = e.thumbnail) || void 0 === a ? void 0 : a.height) === 0 || (null === (o = e.image) || void 0 === o ? void 0 : o.width) === 0 && (null === (l = e.image) || void 0 === l ? void 0 : l.height) === 0 || "images" in e && (null === (u = e.images) || void 0 === u ? void 0 : u.some(e => 0 === e.width && 0 === e.height))) && (null == d || d < (null != t ? t : 1))
     }
 
     function o(e) {
