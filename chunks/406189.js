@@ -2,25 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return i
+            return s
         }
     });
-    var s = n("913144"),
-        i = {
-            updateChannelDimensions(e, t, n, i, r) {
-                s.default.wait(() => {
-                    s.default.dispatch({
+    var i = n("913144"),
+        s = {
+            updateChannelDimensions(e, t, n, s, l) {
+                i.default.wait(() => {
+                    i.default.dispatch({
                         type: "UPDATE_CHANNEL_DIMENSIONS",
                         channelId: e,
                         scrollTop: t,
                         scrollHeight: n,
-                        offsetHeight: i
-                    }), null != r && r()
+                        offsetHeight: s
+                    }), null != l && l()
                 })
             },
             updateChannelListScroll(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
                     guildId: e,
                     scrollTop: t,
@@ -28,7 +28,7 @@ function(e, t, n) {
                 })
             },
             channelListScrollTo(e, t) {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
                     guildId: e,
                     scrollTo: t,
@@ -36,7 +36,7 @@ function(e, t, n) {
                 })
             },
             clearChannelListScrollTo(e) {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
                     guildId: e,
                     scrollTo: null,
@@ -47,7 +47,7 @@ function(e, t, n) {
                 this.updateChannelDimensions(e, null, null, null, t)
             },
             updateGuildListScrollTo(e) {
-                s.default.dispatch({
+                i.default.dispatch({
                     type: "UPDATE_GUILD_LIST_DIMENSIONS",
                     scrollTop: e
                 })

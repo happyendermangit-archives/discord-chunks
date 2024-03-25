@@ -24,14 +24,14 @@ function(e, t, n) {
         g = n("26989"),
         S = n("305961"),
         C = n("824563"),
-        T = n("27618"),
-        _ = n("697218"),
+        _ = n("27618"),
+        T = n("697218"),
         I = n("599110"),
         v = n("756507"),
         N = n("713135"),
         A = n("561845"),
-        O = n("217513"),
-        R = n("641055"),
+        R = n("217513"),
+        O = n("641055"),
         M = n("430312"),
         k = n("763866"),
         L = n("789321"),
@@ -53,17 +53,17 @@ function(e, t, n) {
             guildId: n,
             channelId: a,
             messageId: s,
-            roleId: _,
+            roleId: T,
             setNote: H,
             closePopout: B,
             setPopoutRef: V,
             disableUserProfileLink: K = __OVERLAY__,
             analyticsParams: W = {},
             newAnalyticsLocations: Y = []
-        } = e, z = l.useRef(null), Z = (0, O.default)(t.id, n), J = (0, d.default)(z), q = (0, r.useStateFromStores)([N.default], () => {
+        } = e, z = l.useRef(null), Z = (0, R.default)(t.id, n), J = (0, d.default)(z), Q = (0, r.useStateFromStores)([N.default], () => {
             var e;
             return null === (e = N.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-        }), X = (0, r.useStateFromStores)([S.default], () => null != n ? S.default.getGuild(n) : null), Q = (0, r.useStateFromStores)([g.default], () => null != n ? g.default.getMember(n, t.id) : null), $ = t.isNonUserBot(), {
+        }), q = (0, r.useStateFromStores)([S.default], () => null != n ? S.default.getGuild(n) : null), X = (0, r.useStateFromStores)([g.default], () => null != n ? g.default.getMember(n, t.id) : null), $ = t.isNonUserBot(), {
             UserProfileAnalyticsProvider: ee
         } = (0, v.useUserProfileAnalyticsProvider)({
             layout: "POPOUT",
@@ -72,8 +72,8 @@ function(e, t, n) {
             guildId: n,
             channelId: a,
             messageId: s,
-            roleId: _
-        }, null == Q || null != Q.fullProfileLoadedTimestamp), {
+            roleId: T
+        }, null == X || null != X.fullProfileLoadedTimestamp), {
             activity: et,
             customStatusActivity: en,
             status: ei,
@@ -114,20 +114,20 @@ function(e, t, n) {
         return l.useEffect(() => {
             null == V || V(null == z ? void 0 : z.current)
         }, [z, V]), l.useEffect(() => {
-            if (!es)((null == et ? void 0 : et.application_id) == null || null != ep) && (null == n || (null == Q ? void 0 : Q.fullProfileLoadedTimestamp) != null) && (function() {
+            if (!es)((null == et ? void 0 : et.application_id) == null || null != ep) && (null == n || (null == X ? void 0 : X.fullProfileLoadedTimestamp) != null) && (function() {
                 var e;
                 let i, l, s;
                 null != et && (i = et.party, l = et.assets, s = null != et.application_id ? x.default.getApplication(et.application_id) : null);
                 let r = ei;
                 ei === D.StatusTypes.ONLINE && (r = el ? D.AnalyticsUserStatusTypes.ONLINE_MOBILE : D.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
-                let o = null != Q ? {
-                        has_nickname: !!(null == Q ? void 0 : Q.nick),
-                        has_guild_member_avatar: !!(null == Q ? void 0 : Q.avatar),
+                let o = null != X ? {
+                        has_nickname: !!(null == X ? void 0 : X.nick),
+                        has_guild_member_avatar: !!(null == X ? void 0 : X.avatar),
                         has_guild_member_banner: !!(null == Z ? void 0 : Z.isUsingGuildMemberBanner()),
                         has_guild_member_bio: !!(null == Z ? void 0 : Z.isUsingGuildMemberBio())
                     } : {},
-                    u = null != q ? {
-                        other_application_id: null == q ? void 0 : q.id,
+                    u = null != Q ? {
+                        other_application_id: null == Q ? void 0 : Q.id,
                         other_application_name: t.toString()
                     } : {};
                 I.default.track(D.AnalyticEvents.OPEN_POPOUT, {
@@ -138,7 +138,7 @@ function(e, t, n) {
                     application_id: null != et ? et.application_id : void 0,
                     application_name: null != et ? et.name : void 0,
                     sku_id: null != s ? s.primarySkuId : null,
-                    is_friend: T.default.isFriend(t.id),
+                    is_friend: _.default.isFriend(t.id),
                     has_images: !!(null !== (e = null == l ? void 0 : l.large_image) && void 0 !== e ? e : null == l ? void 0 : l.small_image),
                     party_max: null != i && null != i.size ? i.size[1] : void 0,
                     party_id: null != i ? i.id : void 0,
@@ -157,7 +157,7 @@ function(e, t, n) {
                     ...W
                 })
             }(), er(!0))
-        }, [Q, null == et ? void 0 : et.application_id, ep, es, n]), (0, i.jsx)(ee, {
+        }, [X, null == et ? void 0 : et.application_id, ep, es, n]), (0, i.jsx)(ee, {
             children: (0, i.jsx)(u.default, {
                 section: D.AnalyticsSections.PROFILE_POPOUT,
                 children: (0, i.jsx)(o.Dialog, {
@@ -193,15 +193,15 @@ function(e, t, n) {
                                 ...ed
                             }) : void 0
                         }), (0, i.jsxs)(M.default.Inner, {
-                            children: [(0, i.jsx)(R.default, {
+                            children: [(0, i.jsx)(O.default, {
                                 onTooltipClose: B
                             }), (0, i.jsx)(k.default, {
                                 activity: et,
                                 customStatusActivity: en,
                                 displayProfile: Z,
                                 user: t,
-                                guild: X,
-                                guildMember: Q,
+                                guild: q,
+                                guildMember: X,
                                 channelId: a,
                                 onClose: B,
                                 setNote: H,
@@ -219,7 +219,7 @@ function(e, t, n) {
             userId: t,
             user: n,
             ...l
-        } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), o = null != n ? n : a;
+        } = e, a = (0, r.useStateFromStores)([T.default], () => T.default.getUser(t), [t]), o = null != n ? n : a;
         return s(null != o, "Unexpected missing user"), (0, i.jsx)(H, {
             user: o,
             ...l

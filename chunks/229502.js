@@ -5,7 +5,7 @@ function(e, t, n) {
             return l
         },
         sendVoiceChannelCustomCallSoundEffect: function() {
-            return _
+            return T
         },
         sendVoiceChannelSoundboardEffect: function() {
             return I
@@ -32,7 +32,7 @@ function(e, t, n) {
         S = n("49111"),
         C = n("846325");
 
-    function T(e) {
+    function _(e) {
         let t = new AbortController,
             n = (0, a.throttle)(n => {
                 p.default.getVoiceChannelId() !== e && t.abort()
@@ -43,12 +43,12 @@ function(e, t, n) {
         }
     }
 
-    function _(e, t, n) {
+    function T(e, t, n) {
         var i;
         let {
             abortController: l,
             onRequestProgress: a
-        } = T(e), r = null !== (i = x.default.getState().animationType) && void 0 !== i ? i : g.VoiceChannelEffectAnimationType.BASIC, u = {
+        } = _(e), r = null !== (i = x.default.getState().animationType) && void 0 !== i ? i : g.VoiceChannelEffectAnimationType.BASIC, u = {
             animation_type: r,
             animation_id: (0, y.sampleAnimationId)(r, y.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
         };
@@ -68,7 +68,7 @@ function(e, t, n) {
             {
                 abortController: o,
                 onRequestProgress: u
-            } = T(e),
+            } = _(e),
             p = {
                 sound_id: t.soundId,
                 emoji_id: t.emojiId,

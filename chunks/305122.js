@@ -5,10 +5,10 @@ function(e, t, n) {
             return C
         },
         uploadSound: function() {
-            return T
+            return _
         },
         updateSound: function() {
-            return _
+            return T
         },
         deleteSound: function() {
             return I
@@ -23,10 +23,10 @@ function(e, t, n) {
             return A
         },
         reportSoundStartedPlaying: function() {
-            return O
+            return R
         },
         reportSoundFinishedPlaying: function() {
-            return R
+            return O
         },
         updateUserSoundboardVolume: function() {
             return M
@@ -92,7 +92,7 @@ function(e, t, n) {
     }, C = () => __OVERLAY__ ? (s.default.dispatch({
         type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
     }), Promise.all([])) : Promise.all([g(), S()]);
-    async function T(e) {
+    async function _(e) {
         let {
             guildId: t,
             name: n,
@@ -112,7 +112,7 @@ function(e, t, n) {
         }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
         return u
     }
-    async function _(e) {
+    async function T(e) {
         let {
             guildId: t,
             soundId: n,
@@ -162,7 +162,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e, t) {
+    function R(e, t) {
         s.default.dispatch({
             type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
             soundId: e,
@@ -170,7 +170,7 @@ function(e, t, n) {
         })
     }
 
-    function R(e, t) {
+    function O(e, t) {
         s.default.dispatch({
             type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
             soundId: e,

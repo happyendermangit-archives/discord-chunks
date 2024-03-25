@@ -30,14 +30,14 @@ function(e, t, n) {
             containerWidth: a,
             onClose: S,
             onSelect: C,
-            analyticsSource: T,
-            suppressPlaySound: _,
+            analyticsSource: _,
+            suppressPlaySound: T,
             shouldShowUpsell: I = !0,
             gridNotice: v,
             autoWidth: N = !1,
             soundButtonOverlay: A,
-            listPadding: O,
-            renderHeader: R,
+            listPadding: R,
+            renderHeader: O,
             defaultSoundsOnly: M
         } = e, k = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
             analyticsLocations: P
@@ -46,7 +46,7 @@ function(e, t, n) {
             type: r.ImpressionTypes.POPOUT,
             name: r.ImpressionNames.SOUNDBOARD_POPOUT,
             properties: {
-                source: T,
+                source: _,
                 guild_id: t,
                 media_session_id: L
             }
@@ -65,12 +65,12 @@ function(e, t, n) {
                     onClose: S,
                     onSelect: C,
                     containerWidth: a,
-                    suppressPlaySound: _,
+                    suppressPlaySound: T,
                     shouldShowUpsell: I,
                     gridNotice: v,
                     soundButtonOverlay: A,
-                    listPadding: O,
-                    renderHeader: R,
+                    listPadding: R,
+                    renderHeader: O,
                     defaultSoundsOnly: M
                 })
             })

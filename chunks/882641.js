@@ -33,19 +33,19 @@ function(e, t, n) {
             onClick: E,
             "aria-controls": y,
             focusProps: g
-        } = e, [S, C] = l.useState(!1), [T, _] = l.useState(50), I = S || x, v = (0, d.getClass)(p, "emojiButton", I ? "Hovered" : "Normal");
-        let N = (t = T, {
+        } = e, [S, C] = l.useState(!1), [_, T] = l.useState(50), I = S || x, v = (0, d.getClass)(p, "emojiButton", I ? "Hovered" : "Normal");
+        let N = (t = _, {
                 "--custom-emoji-sprite-size": "".concat(24, "px"),
                 "--custom-emoji-sprite-row": Math.floor(t / 20),
                 "--custom-emoji-sprite-col": t % 20
             }),
             A = l.useCallback(() => {
-                if (!I) C(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
-            }, [I, C, _]),
-            O = l.useCallback(() => {
+                if (!I) C(!0), T(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
+            }, [I, C, T]),
+            R = l.useCallback(() => {
                 C(!1)
             }, [C]),
-            R = l.useCallback(() => (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonFocused), []);
+            O = l.useCallback(() => (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonFocused), []);
         return (0, i.jsx)(o.Button, {
             look: o.Button.Looks.BLANK,
             size: o.Button.Sizes.NONE,
@@ -53,8 +53,8 @@ function(e, t, n) {
             className: s(v, a),
             onMouseEnter: A,
             onMouseOver: A,
-            onMouseLeave: O,
-            onFocus: R,
+            onMouseLeave: R,
+            onFocus: O,
             onClick: E,
             "aria-label": f.default.Messages.SELECT_EMOJI,
             "aria-controls": y,

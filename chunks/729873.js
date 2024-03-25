@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         EmojiPickerInspector: function() {
-            return O
+            return R
         }
     });
     var i = n("37983"),
@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("788506"),
         S = n("352046"),
         C = n("917764"),
-        T = n("83017"),
-        _ = n("115279"),
+        _ = n("83017"),
+        T = n("115279"),
         I = n("782340"),
         v = n("981840");
 
@@ -41,11 +41,11 @@ function(e, t, n) {
                 guildName: n.name
             }) : null
         },
-        O = l.memo(function(e) {
+        R = l.memo(function(e) {
             let t, {
                     className: n,
-                    emojiGrid: O,
-                    guildId: R,
+                    emojiGrid: R,
+                    guildId: O,
                     pickerIntention: M,
                     channel: k
                 } = e,
@@ -63,9 +63,9 @@ function(e, t, n) {
                         rowIndex: t,
                         columnIndex: n
                     } = P;
-                    return null === (e = O[t]) || void 0 === e ? void 0 : e[n]
-                }, [O, P]),
-                j = (null == b ? void 0 : b.type) === T.EmojiGridItemTypes.EMOJI ? null == b ? void 0 : b.emoji : {
+                    return null === (e = R[t]) || void 0 === e ? void 0 : e[n]
+                }, [R, P]),
+                j = (null == b ? void 0 : b.type) === _.EmojiGridItemTypes.EMOJI ? null == b ? void 0 : b.emoji : {
                     type: "CREATE_EMOJI",
                     guildId: null == b ? void 0 : b.guildId,
                     allNamesString: null == b ? void 0 : b.name
@@ -74,21 +74,21 @@ function(e, t, n) {
                 D = (0, a.useStateFromStores)([h.default], () => h.default.isFocused()),
                 w = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
                 F = p.AnimateEmoji.useSetting(),
-                G = (0, g.useIsFavoriteEmoji)(R, N(j) ? j : null),
+                G = (0, g.useIsFavoriteEmoji)(O, N(j) ? j : null),
                 {
                     newlyAddedEmojis: H
-                } = (0, S.default)(R, M),
+                } = (0, S.default)(O, M),
                 B = j.id,
-                V = (null == b ? void 0 : b.type) === T.EmojiGridItemTypes.EMOJI ? b.subCategory : _.EmojiSubCategory.NONE;
+                V = (null == b ? void 0 : b.type) === _.EmojiGridItemTypes.EMOJI ? b.subCategory : T.EmojiSubCategory.NONE;
             if (l.useEffect(() => {
                     let e = Date.now();
                     return () => {
                         let t = Date.now() - e;
-                        t >= 250 && N(j) && V !== _.EmojiSubCategory.NONE && (V === _.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== j && j.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(j.guildId, H[0].id), null != P.source && (0, g.trackEmojiFocus)({
+                        t >= 250 && N(j) && V !== T.EmojiSubCategory.NONE && (V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== j && j.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(j.guildId, H[0].id), null != P.source && (0, g.trackEmojiFocus)({
                             emoji: j,
                             subCategory: V,
                             position: b.columnIndex + 1,
-                            newlyAddedHighlight: V === _.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(R, B)
+                            newlyAddedHighlight: V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(O, B)
                         }))
                     }
                 }), null == j) return null;
@@ -123,7 +123,7 @@ function(e, t, n) {
                 z = L && "CREATE_EMOJI" === j.type ? I.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : A({
                     inspectedEmoji: j,
                     channel: k,
-                    guildId: R,
+                    guildId: O,
                     intention: M,
                     guild: U
                 });

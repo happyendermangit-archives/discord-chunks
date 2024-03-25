@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var s, i;
+    var i, l;
     n.r(t), n.d(t, {
         DismissibleQuestContentFlags: function() {
-            return s
+            return i
         }
-    }), (i = s || (s = {}))[i.GIFT_INVENTORY_SETTINGS_BADGE = 1] = "GIFT_INVENTORY_SETTINGS_BADGE", i[i.QUEST_BAR = 2] = "QUEST_BAR", i[i.ACTIVITY_PANEL = 4] = "ACTIVITY_PANEL", i[i.QUEST_LIVE_STREAM = 8] = "QUEST_LIVE_STREAM"
+    }), (l = i || (i = {}))[l.GIFT_INVENTORY_SETTINGS_BADGE = 1] = "GIFT_INVENTORY_SETTINGS_BADGE", l[l.QUEST_BAR = 2] = "QUEST_BAR", l[l.ACTIVITY_PANEL = 4] = "ACTIVITY_PANEL", l[l.QUEST_LIVE_STREAM = 8] = "QUEST_LIVE_STREAM"
 }

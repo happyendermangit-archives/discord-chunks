@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         experiment: function() {
-            return i
+            return s
         },
         usePomeloEligibility: function() {
-            return r
+            return l
         },
         getPomeloEligibility: function() {
             return a
         }
     });
-    var s = n("862205");
-    let i = (0, s.createExperiment)({
+    var i = n("862205");
+    let s = (0, i.createExperiment)({
             kind: "user",
             label: "Pomelo",
             id: "2023-03_pomelo",
@@ -27,10 +27,10 @@ function(e, t, n) {
                 }
             }]
         }),
-        r = () => {
+        l = () => {
             let {
                 enabled: e
-            } = i.useExperiment({
+            } = s.useExperiment({
                 location: "faf26d_1"
             }, {
                 autoTrackExposure: !1
@@ -40,7 +40,7 @@ function(e, t, n) {
         a = () => {
             let {
                 enabled: e
-            } = i.getCurrentConfig({
+            } = s.getCurrentConfig({
                 location: "faf26d_2"
             }, {
                 autoTrackExposure: !1

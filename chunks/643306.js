@@ -25,14 +25,14 @@ function(e, t, n) {
         g = n("981601"),
         S = n("42203"),
         C = n("26989"),
-        T = n("305961"),
-        _ = n("697218"),
+        _ = n("305961"),
+        T = n("697218"),
         I = n("145131"),
         v = n("666897"),
         N = n("826684"),
         A = n("782340"),
-        O = n("665958"),
-        R = n("919163");
+        R = n("665958"),
+        O = n("919163");
     let M = (0, x.createExperiment)({
         kind: "user",
         id: "2021-07_role_popout",
@@ -61,12 +61,12 @@ function(e, t, n) {
         } = e, {
             analyticsLocations: b
         } = (0, h.default)(m.default.ROLE_MENTION), j = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), U = null != t && 0 !== t && !P, D = U && "dot" === j, w = e => (0, i.jsxs)(v.default, {
-            className: a(R.roleMention),
+            className: a(O.roleMention),
             color: "username" === j && U ? t : null,
             ...e,
             children: [D && (0, i.jsx)(d.RoleDot, {
                 color: (0, o.int2hex)(t),
-                className: O.roleDot,
+                className: R.roleDot,
                 background: !1,
                 tooltip: !1
             }), L]
@@ -88,21 +88,21 @@ function(e, t, n) {
                 },
                 renderPopout: e => {
                     let t = S.default.getChannel(s),
-                        a = T.default.getGuild(k),
+                        a = _.default.getGuild(k),
                         o = C.default.getMembers(a.id),
-                        u = T.default.getRole(k, null != l ? l : a.getEveryoneRoleId()),
+                        u = _.default.getRole(k, null != l ? l : a.getEveryoneRoleId()),
                         p = r(o).filter(e => {
                             if ("@everyone" === x || e.roles.includes(l)) {
-                                let t = _.default.getUser(e.userId);
+                                let t = T.default.getUser(e.userId);
                                 return null != t
                             }
                             return !1
                         }).sortBy(e => {
                             var t;
-                            let n = _.default.getUser(e.userId);
+                            let n = T.default.getUser(e.userId);
                             return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
                         }).map(e => {
-                            let l = _.default.getUser(e.userId);
+                            let l = T.default.getUser(e.userId);
                             return (0, i.jsx)(d.Popout, {
                                 preload: () => (0, y.default)(l.id, l.getAvatarURL(t.guild_id, 80), {
                                     guildId: t.guild_id,
@@ -150,12 +150,12 @@ function(e, t, n) {
                             }, l.id)
                         }).value();
                     return (0, i.jsx)(I.default, {
-                        className: R.rolePopout,
+                        className: O.rolePopout,
                         ...e,
                         children: (0, i.jsxs)(d.Scroller, {
-                            className: R.roleScroller,
+                            className: O.roleScroller,
                             children: [(0, i.jsx)(N.default, {
-                                className: R.roleHeader,
+                                className: O.roleHeader,
                                 "aria-label": A.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                                     title: u.name,
                                     count: p.length

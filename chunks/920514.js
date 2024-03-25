@@ -30,8 +30,8 @@ function(e, t, n) {
                 diversitySurrogate: g,
                 isBurstReaction: S,
                 onBurstReactionToggle: C,
-                renderHeader: T
-            } = e, _ = (0, i.jsxs)(i.Fragment, {
+                renderHeader: _
+            } = e, T = (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(u.default, {
                     emojiListRef: p,
                     gridNavigatorId: d.GRID_NAVIGATOR_ID,
@@ -57,7 +57,7 @@ function(e, t, n) {
             });
             return (0, i.jsx)("div", {
                 className: a(f.header, l),
-                children: null != T ? T(_) : _
+                children: null != _ ? _(T) : T
             })
         }
 }

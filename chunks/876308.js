@@ -24,9 +24,9 @@ function(e, t, n) {
         g = n("49111"),
         S = n("782340"),
         C = n("722552");
-    let T = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
+    let _ = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
-    function _(e) {
+    function T(e) {
         let {
             played: t,
             duration: n,
@@ -43,8 +43,8 @@ function(e, t, n) {
         var t, n, a, c, I, v;
         let N, {
                 src: A,
-                volume: O = 1,
-                onVolumeChange: R,
+                volume: R = 1,
+                onVolumeChange: O,
                 onMute: M,
                 waveform: k,
                 durationSecs: L,
@@ -60,15 +60,15 @@ function(e, t, n) {
             [V, K] = l.useState(!1),
             [W, Y] = l.useState(!1),
             [z, Z] = l.useState(!1),
-            [J, q] = l.useState(!1),
-            [X, Q] = l.useState("none"),
-            [$, ee] = l.useState(() => "function" == typeof O ? O() : O),
+            [J, Q] = l.useState(!1),
+            [q, X] = l.useState("none"),
+            [$, ee] = l.useState(() => "function" == typeof R ? R() : R),
             et = l.useRef(void 0),
             en = l.useCallback(() => {
                 Y(e => !e)
             }, []),
             ei = l.useCallback(() => {
-                Q("metadata")
+                X("metadata")
             }, []),
             el = l.useCallback(e => {
                 let t = e.currentTarget.duration;
@@ -76,7 +76,7 @@ function(e, t, n) {
             }, []),
             ea = l.useCallback(() => {
                 Y(!1), null == et.current && (et.current = setTimeout(() => {
-                    q(!1), et.current = void 0
+                    Q(!1), et.current = void 0
                 }, 500))
             }, []),
             es = l.useCallback(() => {
@@ -90,8 +90,8 @@ function(e, t, n) {
             }, [D]),
             eo = l.useCallback(e => {
                 let t = (0, E.perceptualToAmplitude)(e, 1);
-                K(0 === t), ee(t), null == R || R(t)
-            }, [R]),
+                K(0 === t), ee(t), null == O || O(t)
+            }, [O]),
             eu = l.useCallback(() => {
                 K(!V), null == M || M(!V)
             }, [V, M]),
@@ -105,10 +105,10 @@ function(e, t, n) {
                 let t = w.current;
                 if (null == H || null == t) return;
                 let n = e * H;
-                G(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
+                G(n), t.currentTime = n, Q(!0), clearTimeout(et.current), et.current = void 0
             }, [H]);
         l.useEffect(() => {
-            !J && W && q(!0)
+            !J && W && Q(!0)
         }, [W, J]);
         let ep = l.useRef(null);
         l.useEffect(() => {
@@ -147,11 +147,11 @@ function(e, t, n) {
         let em = W ? p.default : m.default,
             eh = W ? S.default.Messages.PAUSE : S.default.Messages.PLAY;
         N = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
-            children: (0, i.jsx)(T, {
+            children: (0, i.jsx)(_, {
                 ref: w,
                 className: C.audioElement,
                 src: A,
-                preload: X,
+                preload: q,
                 playing: W && !z,
                 onEnded: es,
                 onLoadedMetadata: el,
@@ -163,7 +163,7 @@ function(e, t, n) {
             ref: w,
             className: C.audioElement,
             controls: !1,
-            preload: X,
+            preload: q,
             onEnded: es,
             onLoadedMetadata: el,
             onError: er,
@@ -211,7 +211,7 @@ function(e, t, n) {
                 onDrag: ef,
                 onDragStart: ed,
                 onDragEnd: ec
-            }), (0, i.jsx)(_, {
+            }), (0, i.jsx)(T, {
                 played: J,
                 currentTime: F,
                 duration: H

@@ -26,7 +26,7 @@ function(e, t, n) {
             channelId: t,
             option: n,
             keyboardModeEnabled: a
-        } = e, y = l.useRef(null), [g, S] = l.useState(!1), C = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), T = l.useRef(null), _ = l.useCallback(() => {
+        } = e, y = l.useRef(null), [g, S] = l.useState(!1), C = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), _ = l.useRef(null), T = l.useCallback(() => {
             S(!0)
         }, []), I = l.useCallback(() => {
             S(!1)
@@ -46,11 +46,11 @@ function(e, t, n) {
             })
         }, [t, n]);
         return (l.useEffect(() => {
-            let e = T.current;
-            return null == C && (null == e || e.addEventListener("dragover", _, !1), null == e || e.addEventListener("dragleave", I, !1), null == e || e.addEventListener("drop", v, !1)), () => {
-                null == e || e.removeEventListener("dragover", _, !1), null == e || e.removeEventListener("dragleave", I, !1), null == e || e.removeEventListener("drop", v, !1)
+            let e = _.current;
+            return null == C && (null == e || e.addEventListener("dragover", T, !1), null == e || e.addEventListener("dragleave", I, !1), null == e || e.addEventListener("drop", v, !1)), () => {
+                null == e || e.removeEventListener("dragover", T, !1), null == e || e.removeEventListener("dragleave", I, !1), null == e || e.removeEventListener("drop", v, !1)
             }
-        }, [C, _, I, v]), null != C) ? (0, i.jsx)(m.default, {
+        }, [C, T, I, v]), null != C) ? (0, i.jsx)(m.default, {
             channelId: t,
             upload: C,
             keyboardModeEnabled: a,
@@ -82,7 +82,7 @@ function(e, t, n) {
                 [x.emptyOptionActive]: g
             }),
             draftType: c.DraftType.SlashCommand,
-            ref: T,
+            ref: _,
             children: [(0, i.jsx)("span", {
                 className: s(x.optionName, {
                     [x.optionNameActive]: g

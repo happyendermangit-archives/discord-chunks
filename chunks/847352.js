@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     });
     var i = n("37983"),
@@ -24,21 +24,21 @@ function(e, t, n) {
         g = n("634114"),
         S = n("49111"),
         C = n("13030"),
-        T = n("942838"),
-        _ = l.memo(function(e) {
+        _ = n("942838"),
+        T = l.memo(function(e) {
             let {
                 positionTargetRef: t,
                 channel: n,
                 closeOnModalOuterClick: a = !1,
-                parentModalKey: _
+                parentModalKey: T
             } = e, I = l.useRef(null), v = l.useRef(null), {
                 renderWindow: N,
                 windowDispatch: A
-            } = l.useContext(f.default), O = null != _, R = (0, u.useIsModalAtTop)(null != _ ? _ : ""), M = () => {
+            } = l.useContext(f.default), R = null != T, O = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
                 x.dismissAppLauncherPopup()
             }, k = l.useCallback(e => {
                 var t;
-                if (!O && (0, u.hasAnyModalOpen)() || O && !(R && a)) return;
+                if (!R && (0, u.hasAnyModalOpen)() || R && !(O && a)) return;
                 let {
                     target: n
                 } = e;
@@ -51,19 +51,19 @@ function(e, t, n) {
                 M();
                 let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == i || "BODY" === i.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS)
-            }, [a, R, O]), L = l.useCallback(() => {
+            }, [a, O, R]), L = l.useCallback(() => {
                 M()
             }, []);
             l.useLayoutEffect(() => (N.addEventListener("mousedown", k), N.addEventListener("contextmenu", k), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
                 N.removeEventListener("mousedown", k), N.removeEventListener("contextmenu", k), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
             }), [L, k, N, A]), (0, d.useFocusLock)(I), l.useEffect(() => {
-                (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
-            }, [R, O]);
+                (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
+            }, [O, R]);
             let P = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
             return (0, i.jsx)(c.default, {
                 section: S.AnalyticsSections.EXPRESSION_PICKER,
                 children: (0, i.jsx)(p.AppReferencePositionLayer, {
-                    className: T.positionLayer,
+                    className: _.positionLayer,
                     reference: t,
                     position: "top",
                     align: "left",
@@ -74,17 +74,17 @@ function(e, t, n) {
                             isPositioned: t
                         } = e;
                         return (0, i.jsx)("section", {
-                            className: s(T.positionContainer),
+                            className: s(_.positionContainer),
                             ref: I,
                             role: "dialog",
                             "aria-label": "Application Launcher",
                             children: t ? (0, i.jsxs)("div", {
-                                className: T.drawerSizingWrapper,
+                                className: _.drawerSizingWrapper,
                                 ref: v,
                                 children: [(0, i.jsx)("div", {
-                                    className: T.resizeHandle
+                                    className: _.resizeHandle
                                 }), (0, i.jsxs)("div", {
-                                    className: T.contentWrapper,
+                                    className: _.contentWrapper,
                                     children: [(0, i.jsx)(g.default, {
                                         channel: n,
                                         isAppDetailPresent: null != P

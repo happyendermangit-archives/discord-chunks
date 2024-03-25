@@ -28,7 +28,7 @@ function(e, t, n) {
             } = e, [g, S] = l.useState(!1), C = (0, o.useStateFromStores)([f.default], () => {
                 var e, t;
                 return g && Object.values(null !== (t = null === (e = f.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-            }), [T, _, I] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), v = l.useRef(0), N = l.useCallback(() => {
+            }), [_, T, I] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), v = l.useRef(0), N = l.useCallback(() => {
                 S(!0), clearTimeout(v.current), v.current = setTimeout(() => {
                     S(!1)
                 }, 1500)
@@ -43,12 +43,12 @@ function(e, t, n) {
                     (0, c.toggleExpressionPicker)(x.ExpressionPickerViewType.GIF, a)
                 }, [a]),
                 {
-                    Component: O,
-                    events: R,
+                    Component: R,
+                    events: O,
                     play: M
                 } = (0, u.useGifLottie)();
             if (n) return null;
-            let k = T === x.ExpressionPickerViewType.GIF && _ === a;
+            let k = _ === x.ExpressionPickerViewType.GIF && T === a;
             return (0, i.jsx)(d.Tooltip, {
                 text: C ? E.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
                 forceOpen: !0,
@@ -58,8 +58,8 @@ function(e, t, n) {
                     ...e,
                     children: (0, i.jsx)(p.default, {
                         innerClassName: y.button,
-                        onMouseEnter: R.onMouseEnter,
-                        onMouseLeave: R.onMouseLeave,
+                        onMouseEnter: O.onMouseEnter,
+                        onMouseLeave: O.onMouseLeave,
                         onClick: () => {
                             A(), M()
                         },
@@ -69,7 +69,7 @@ function(e, t, n) {
                         "aria-expanded": k,
                         "aria-haspopup": "dialog",
                         "aria-controls": I,
-                        children: (0, i.jsx)(O, {
+                        children: (0, i.jsx)(R, {
                             color: "currentColor"
                         })
                     })

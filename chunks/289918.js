@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return q
+            return Q
         }
     }), n("222007");
     var i, l, a = n("37983"),
@@ -22,14 +22,14 @@ function(e, t, n) {
         g = n("38766"),
         S = n("845579"),
         C = n("271938"),
-        T = n("42203"),
-        _ = n("305961"),
+        _ = n("42203"),
+        T = n("305961"),
         I = n("18494"),
         v = n("697218"),
         N = n("471671"),
         A = n("275623"),
-        O = n("945330"),
-        R = n("474571"),
+        R = n("945330"),
+        O = n("474571"),
         M = n("216422"),
         k = n("987772"),
         L = n("956089"),
@@ -140,7 +140,7 @@ function(e, t, n) {
             profileLabel: i,
             icon: l,
             ...s
-        } = e, r = Y[n], o = "pencil" === l ? k.default : R.default;
+        } = e, r = Y[n], o = "pencil" === l ? k.default : O.default;
         return (0, a.jsx)(f.Clickable, {
             ...s,
             "aria-label": i,
@@ -157,7 +157,7 @@ function(e, t, n) {
         })
     }
 
-    function q(e) {
+    function Q(e) {
         var t, n, i;
         let {
             user: l,
@@ -166,17 +166,17 @@ function(e, t, n) {
             onClose: m,
             guildId: h,
             profileType: v = H.UserProfileTypes.POPOUT,
-            isHovering: R,
+            isHovering: O,
             animateOnHover: M,
             allowEdit: k = !0,
             showPremiumBadgeUpsell: L = !0,
             hasProfileEffect: P = !1
-        } = e, [Y, z] = s.useState((null == r ? void 0 : r.banner) == null ? 2 : 0), q = (0, d.useStateFromStores)([_.default], () => _.default.getGuild(h)), X = (0, d.useStateFromStores)([C.default], () => C.default.getId()), Q = X === l.id && k, $ = j.default.isPremiumAtLeast(null == r ? void 0 : r.premiumType, V.PremiumTypes.TIER_2), {
+        } = e, [Y, z] = s.useState((null == r ? void 0 : r.banner) == null ? 2 : 0), Q = (0, d.useStateFromStores)([T.default], () => T.default.getGuild(h)), q = (0, d.useStateFromStores)([C.default], () => C.default.getId()), X = q === l.id && k, $ = j.default.isPremiumAtLeast(null == r ? void 0 : r.premiumType, V.PremiumTypes.TIER_2), {
             trackUserProfileAction: ee
         } = (0, U.useUserProfileAnalyticsContext)(), [et, en] = s.useState(!1), ei = (0, d.useStateFromStores)([N.default], () => N.default.isFocused()), el = S.GifAutoPlay.getSetting(), ea = (0, f.useToken)(c.default.unsafe_rawColors.PRIMARY_800).hex(), es = (0, f.getAvatarSize)(f.AvatarSizes.SIZE_80), er = (0, u.hex2int)((0, x.default)(l.getAvatarURL(h, es), ea, !1)), eo = (0, E.default)(null !== (t = null == r ? void 0 : r.primaryColor) && void 0 !== t ? t : er).hsl, eu = (0, F.getUserBannerSize)(v), ed = null != p ? p : null == r ? void 0 : r.getBannerURL({
             size: eu,
             canAnimate: M || !el ? et : ei
-        }), ec = null != ed, ef = (0, d.useStateFromStores)([D.default], () => D.default.getUserProfile(l.id)), ep = T.default.getChannel(I.default.getChannelId()), {
+        }), ec = null != ed, ef = (0, d.useStateFromStores)([D.default], () => D.default.getUserProfile(l.id)), ep = _.default.getChannel(I.default.getChannelId()), {
             appsInGDMEnabled: em,
             availableApplications: eh
         } = (0, y.usePrivateChannelIntegrationState)({
@@ -227,8 +227,8 @@ function(e, t, n) {
                     backgroundImage: ec ? "url(".concat(ed, ")") : void 0,
                     backgroundColor: 2 !== Y ? c.default.unsafe_rawColors.PRIMARY_800.css : eo
                 },
-                children: [Q ? null == q ? (0, a.jsx)(J, {
-                    darkenOnHover: P && R,
+                children: [X ? null == Q ? (0, a.jsx)(J, {
+                    darkenOnHover: P && O,
                     profileType: v,
                     profileLabel: K.default.Messages.EDIT_PROFILE,
                     icon: "pencil",
@@ -247,11 +247,11 @@ function(e, t, n) {
                         return (0, a.jsx)(G.default, {
                             onClose: t,
                             onSelect: m,
-                            guild: q
+                            guild: Q
                         })
                     },
                     children: e => (0, a.jsx)(J, {
-                        darkenOnHover: P && R,
+                        darkenOnHover: P && O,
                         profileLabel: K.default.Messages.EDIT_PROFILE,
                         icon: "pencil",
                         ...e,
@@ -261,7 +261,7 @@ function(e, t, n) {
                     let e = L && ec && v !== H.UserProfileTypes.SETTINGS;
                     return e ? (0, a.jsx)(Z, {
                         type: v,
-                        shown: void 0 === R ? et : R,
+                        shown: void 0 === O ? et : O,
                         onClick: () => {
                             ee({
                                 action: "PRESS_PREMIUM_UPSELL"
@@ -274,7 +274,7 @@ function(e, t, n) {
                     className: W.pencilContainer,
                     children: (0, a.jsx)(f.Tooltip, {
                         text: K.default.Messages.BACK,
-                        children: e => (0, a.jsx)(O.default, {
+                        children: e => (0, a.jsx)(R.default, {
                             ...e,
                             className: W.closeIcon,
                             color: "white"

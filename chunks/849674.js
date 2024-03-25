@@ -39,13 +39,13 @@ function(e, t, n) {
         a(null != g, "currentUser should not be null");
         let S = (0, d.useBlockedPaymentsConfig)(),
             C = (0, m.default)(g.id, l),
-            T = (0, m.default)(t.id, l);
+            _ = (0, m.default)(t.id, l);
         i.useEffect(() => {
             null == C && (0, o.fetchProfile)(g.id)
         }, [C, g]);
-        let _ = E !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == g ? void 0 : g.id) !== t.id && !S && !(null != y && y !== n),
-            I = _ && (null == g ? void 0 : g.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
-            v = _ && null != C && null == C.profileEffectId && (null == T ? void 0 : T.profileEffectId) != null,
+        let T = E !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == g ? void 0 : g.id) !== t.id && !S && !(null != y && y !== n),
+            I = T && (null == g ? void 0 : g.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
+            v = T && null != C && null == C.profileEffectId && (null == _ ? void 0 : _.profileEffectId) != null,
             [N, A] = (0, f.useSelectedDismissibleContent)((I, []), void 0, !0);
         return {
             shouldShow: N === r.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL,

@@ -24,18 +24,18 @@ function(e, t, n) {
         g = n("562228"),
         S = n("529805"),
         C = n("685841"),
-        T = n("804888"),
-        _ = n("474643"),
+        _ = n("804888"),
+        T = n("474643"),
         I = n("585722"),
         v = n("568734"),
         N = n("305515"),
         A = n("49111"),
-        O = n("782340");
-    async function R(e) {
+        R = n("782340");
+    async function O(e) {
         var t, n, i;
         let c, {
                 channelId: f,
-                uploads: R,
+                uploads: O,
                 draftType: M,
                 parsedMessage: k,
                 options: L = {},
@@ -54,7 +54,7 @@ function(e, t, n) {
         null != k && (U.content = null == k ? void 0 : k.content);
         let D = C.default.getPendingReply(f);
         null != D && (U.type = A.MessageTypes.REPLY, U.message_reference = L.messageReference, U.allowed_mentions = L.allowedMentions, (0, S.deletePendingReply)(f));
-        let [w, F] = (0, T.default)(U.content);
+        let [w, F] = (0, _.default)(U.content);
         w && (U.content = F, U.flags = (0, v.addFlag)(null !== (t = U.flags) && void 0 !== t ? t : 0, A.MessageFlags.SUPPRESS_NOTIFICATIONS));
         let G = null !== (n = L.nonce) && void 0 !== n ? n : (0, E.createNonce)(),
             H = (0, E.default)({
@@ -111,7 +111,7 @@ function(e, t, n) {
                         }
                     };
                 (0, o.openUploadError)({
-                    title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+                    title: R.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                     help: (0, h.getAutomodErrorMessage)(i, e)
                 });
                 return
@@ -120,11 +120,11 @@ function(e, t, n) {
                 status: t,
                 body: null != n ? n : {}
             }, t)) : (0, o.openUploadError)({
-                title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-            }), "" !== U.content && "" === _.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === I.default.getUploadCount(f, M) && r.default.setUploads({
+                title: R.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+                help: R.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
+            }), "" !== U.content && "" === T.default.getDraft(f, M) && a.default.saveDraft(f, U.content, M), 0 === I.default.getUploadCount(f, M) && r.default.setUploads({
                 channelId: f,
-                uploads: R,
+                uploads: O,
                 draftType: M
             }))
         }), b.on("complete", (e, t) => {
@@ -135,7 +135,7 @@ function(e, t, n) {
                 aborted: b._aborted,
                 messageRecord: t
             })
-        }), await b.uploadFiles(R, U), j.resolve(), j.promise
+        }), await b.uploadFiles(O, U), j.resolve(), j.promise
     }
     var M = {
         instantBatchUpload: function(e) {
@@ -154,7 +154,7 @@ function(e, t, n) {
                     ...i
                 }, t)
             });
-            R({
+            O({
                 channelId: t,
                 uploads: s,
                 draftType: i
@@ -208,8 +208,8 @@ function(e, t, n) {
                     s.default.sendExplicitMediaClydeError(n, null == f ? void 0 : f.attachments, m.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                     return
                 }(0, o.openUploadError)({
-                    title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                    help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_HELP.format({
+                    title: R.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+                    help: R.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_HELP.format({
                         onClick: () => {
                             (0, i.closeModal)(o.UPLOAD_ERROR_MODAL_KEY), e({
                                 channelId: n,
@@ -219,7 +219,7 @@ function(e, t, n) {
                             })
                         }
                     })
-                }), "" !== h.content && "" === _.default.getDraft(n, u) && a.default.saveDraft(n, h.content, u)
+                }), "" !== h.content && "" === T.default.getDraft(n, u) && a.default.saveDraft(n, h.content, u)
             }), x.on("complete", e => {
                 l.default.dispatch({
                     type: "UPLOAD_COMPLETE",
@@ -228,18 +228,18 @@ function(e, t, n) {
                 })
             }), x.upload(r, h)
         },
-        uploadFiles: R,
+        uploadFiles: O,
         cancel(e) {
             if (l.default.dispatch({
                     type: "UPLOAD_CANCEL_REQUEST",
                     file: e
                 }), null != e.draftContent && null != e.channelId) {
-                let t = _.default.getDraft(e.channelId, _.DraftType.ChannelMessage);
+                let t = T.default.getDraft(e.channelId, T.DraftType.ChannelMessage);
                 "" === t && l.default.dispatch({
                     type: "DRAFT_SAVE",
                     channelId: e.channelId,
                     draft: e.draftContent,
-                    draftType: _.DraftType.ChannelMessage
+                    draftType: T.DraftType.ChannelMessage
                 })
             }
         }

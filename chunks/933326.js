@@ -2,44 +2,44 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return f
         }
     }), n("222007");
-    var s = n("689988"),
-        i = n("21121"),
-        r = n("162771"),
+    var i = n("689988"),
+        s = n("21121"),
+        l = n("162771"),
         a = n("398604"),
-        u = n("322224");
-    let l = {},
-        o = new Set,
+        r = n("322224");
+    let o = {},
+        u = new Set,
         d = async e => {
             let t = a.default.getGuildScheduledEventsForGuild(e);
             if (0 !== t.length) {
-                if (!o.has(e)) try {
-                    await u.default.getGuildEventsForCurrentUser(e), o.add(e)
+                if (!u.has(e)) try {
+                    await r.default.getGuildEventsForCurrentUser(e), u.add(e)
                 } catch (e) {}
             }
         };
-    class c extends s.default {
+    class c extends i.default {
         async getGuildEventUserCounts(e, t, n) {
-            let s = n.filter(n => null == l["".concat(e, "-").concat(t, "-").concat(n)] || Date.now() - l["".concat(e, "-").concat(t, "-").concat(n)] > 18e5);
-            if (!(Date.now() - l["".concat(e, "-").concat(t)] < 18e5) || 0 !== s.length) {
-                l["".concat(e, "-").concat(t)] = Date.now(), s.forEach(n => l["".concat(e, "-").concat(t, "-").concat(n)] = Date.now());
+            let i = n.filter(n => null == o["".concat(e, "-").concat(t, "-").concat(n)] || Date.now() - o["".concat(e, "-").concat(t, "-").concat(n)] > 18e5);
+            if (!(Date.now() - o["".concat(e, "-").concat(t)] < 18e5) || 0 !== i.length) {
+                o["".concat(e, "-").concat(t)] = Date.now(), i.forEach(n => o["".concat(e, "-").concat(t, "-").concat(n)] = Date.now());
                 try {
-                    await u.default.fetchGuildEventUserCounts(e, t, s)
+                    await r.default.fetchGuildEventUserCounts(e, t, i)
                 } catch (e) {}
             }
         }
         getGuildEventUsers(e, t, n) {
-            return u.default.fetchUsersForGuildEvent(e, t, n)
+            return r.default.fetchUsersForGuildEvent(e, t, n)
         }
         getGuildEventsForCurrentUser(e) {
             return d(e)
         }
         handleConnectionOpen() {
-            o.clear(), l = {};
-            let e = (0, i.isInMainTabsExperiment)(),
-                t = r.default.getLastSelectedGuildId();
+            u.clear(), o = {};
+            let e = (0, s.isInMainTabsExperiment)(),
+                t = l.default.getLastSelectedGuildId();
             if (e && null != t) {
                 let e = a.default.getGuildScheduledEventsForGuild(t);
                 e.forEach(e => this.getGuildEventUserCounts(t, e.id, []))
@@ -49,20 +49,20 @@ function(e, t, n) {
             let {
                 guildId: t
             } = e;
-            o.delete(t), delete l[t]
+            u.delete(t), delete o[t]
         }
         handleGuildDelete(e) {
             let {
                 guild: t
             } = e, n = t.id;
-            o.delete(n), delete l[n]
+            u.delete(n), delete o[n]
         }
         handleInviteResolveSuccess(e) {
             var t;
             let {
                 invite: n
-            } = e, s = n.guild_scheduled_event, i = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-            null != s && null != i && d(i)
+            } = e, i = n.guild_scheduled_event, s = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
+            null != i && null != s && d(s)
         }
         handleChannelSelect(e) {
             let {
@@ -82,5 +82,5 @@ function(e, t, n) {
             }
         }
     }
-    var E = new c
+    var f = new c
 }

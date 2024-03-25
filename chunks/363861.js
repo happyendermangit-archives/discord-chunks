@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return r
+            return l
         }
     });
-    var s = n("37983");
+    var i = n("37983");
     n("884691");
-    var i = n("77078");
-    async function r(e) {
+    var s = n("77078");
+    async function l(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        await (0, i.openModalLazy)(async () => {
+        await (0, s.openModalLazy)(async () => {
             let {
-                default: i
+                default: s
             } = await n.el("892845").then(n.bind(n, "892845"));
-            return n => (0, s.jsx)(i, {
+            return n => (0, i.jsx)(s, {
                 source: e,
                 oneClickFlow: t,
                 ...n

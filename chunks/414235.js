@@ -26,43 +26,43 @@ function(e, t, n) {
             className: E,
             initialAnimation: y,
             markers: g
-        } = e, [S, C] = l.useState(null), T = l.useRef(null), _ = l.useRef(null), I = l.useRef(null), v = "custom" === m ? {
+        } = e, [S, C] = l.useState(null), _ = l.useRef(null), T = l.useRef(null), I = l.useRef(null), v = "custom" === m ? {
             width: h,
             height: x
         } : (0, d.getIconSize)(m), N = !(0, f.default)("lottie_hover_multiple_loop"), A = l.useContext(u.AccessibilityPreferencesContext).reducedMotion.enabled, {
-            enabled: O
+            enabled: R
         } = c.default.useExperiment({
             location: "LottieIcon web entry point"
-        }), R = A || !O;
+        }), O = A || !R;
         return l.useImperativeHandle(t, () => ({
             play: e => {
                 if (null != I.current) {
-                    if (_.current = e, R) {
+                    if (T.current = e, O) {
                         let t = g[e];
                         I.current.setSegment(t.start, t.start + t.duration), I.current.goToAndStop(t.duration, !0)
                     } else I.current.setLoop(!N && e.includes("hover")), I.current.goToAndPlay(e)
                 }
             },
             stop: () => {
-                null != I.current && !R && I.current.goToAndStop(0, !0)
+                null != I.current && !O && I.current.goToAndStop(0, !0)
             },
             stopIfPlaying: e => {
-                null != I.current && !R && _.current === e && I.current.goToAndStop(0, !0)
+                null != I.current && !O && T.current === e && I.current.goToAndStop(0, !0)
             }
-        }), [R, N, g]), l.useEffect(() => {
+        }), [O, N, g]), l.useEffect(() => {
             null == S && r().then(e => C(e.default))
         }, [S, r]), l.useEffect(() => (n.el("865981").then(n.t.bind(n, "865981", 23)).then(e => {
             var t;
             let n, {
                     default: i
                 } = e,
-                l = null !== (t = _.current) && void 0 !== t ? t : y;
+                l = null !== (t = T.current) && void 0 !== t ? t : y;
             if (null != l && null != g[l]) {
                 let e = g[l];
                 n = [e.start, e.start + e.duration]
             }
-            null != T.current && (I.current = i.loadAnimation({
-                container: T.current,
+            null != _.current && (I.current = i.loadAnimation({
+                container: _.current,
                 renderer: "svg",
                 loop: !1,
                 autoplay: !1,
@@ -79,7 +79,7 @@ function(e, t, n) {
                 ...v
             },
             className: s(p.lottieIcon, E),
-            ref: T
+            ref: _
         })
     })
 }

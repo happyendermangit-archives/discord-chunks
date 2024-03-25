@@ -23,8 +23,8 @@ function(e, t, n) {
         g = n("103603"),
         S = n("275623"),
         C = n("594098"),
-        T = n("719347"),
-        _ = n("49111");
+        _ = n("719347"),
+        T = n("49111");
     let I = /\.gif($|\?|#)/i,
         v = /\.png($|\?|#)/i;
     (s = l || (l = {})).LOAD = "LOAD", s.PRELOAD = "PRELOAD", s.CLICK = "CLICK", (i = class e extends o.Component {
@@ -46,7 +46,7 @@ function(e, t, n) {
             let {
                 readyState: t
             } = this.state;
-            t === _.ImageReadyStates.LOADING && this.loadImage(this.getSrc(this.getRatio(), e.isAnimated(this.props)), this.handleImageLoad), e.isAnimated(this.props) && this.observeVisibility()
+            t === T.ImageReadyStates.LOADING && this.loadImage(this.getSrc(this.getRatio(), e.isAnimated(this.props)), this.handleImageLoad), e.isAnimated(this.props) && this.observeVisibility()
         }
         componentDidUpdate(t) {
             let n = e.isAnimated(this.props),
@@ -75,8 +75,8 @@ function(e, t, n) {
                 width: i,
                 height: l,
                 ratio: e,
-                maxWidth: r === T.MediaLayoutType.MOSAIC ? a : void 0,
-                maxHeight: r === T.MediaLayoutType.MOSAIC ? s : void 0,
+                maxWidth: r === _.MediaLayoutType.MOSAIC ? a : void 0,
+                maxHeight: r === _.MediaLayoutType.MOSAIC ? s : void 0,
                 format: o,
                 quality: u
             })
@@ -99,7 +99,7 @@ function(e, t, n) {
                 mediaLayoutType: l,
                 useFullWidth: a
             } = this.props;
-            return l === T.MediaLayoutType.MOSAIC && a ? (0, g.getCoverRatio)({
+            return l === _.MediaLayoutType.MOSAIC && a ? (0, g.getCoverRatio)({
                 width: e,
                 height: t,
                 maxWidth: n,
@@ -116,7 +116,7 @@ function(e, t, n) {
                 mediaLayoutType: e,
                 responsive: t
             } = this.props;
-            return null != e ? e : t ? T.MediaLayoutType.RESPONSIVE : T.MediaLayoutType.STATIC
+            return null != e ? e : t ? _.MediaLayoutType.RESPONSIVE : _.MediaLayoutType.STATIC
         }
         loadImage(e, t) {
             let {
@@ -149,13 +149,13 @@ function(e, t, n) {
                 minHeight: y,
                 maxWidth: g,
                 maxHeight: S,
-                onClick: T,
+                onClick: _,
                 renderAccessory: I,
                 tabIndex: v,
                 limitResponsiveWidth: N,
                 useFullWidth: A,
-                placeholder: O,
-                placeholderVersion: R
+                placeholder: R,
+                placeholderVersion: O
             } = this.props, {
                 readyState: M,
                 hasMouseOver: k,
@@ -176,8 +176,8 @@ function(e, t, n) {
                 width: j,
                 height: U,
                 src: "",
-                placeholder: O,
-                placeholderVersion: R,
+                placeholder: R,
+                placeholderVersion: O,
                 children: null != f ? e => {
                     let {
                         src: t,
@@ -197,11 +197,11 @@ function(e, t, n) {
                 onBlur: this.onBlur
             };
             if (1 === D.width && 1 === D.height) return null;
-            switch ((P || null != T) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), M) {
-                case _.ImageReadyStates.LOADING:
+            switch ((P || null != _) && (D.onClick = this.onClick), l && (D.original = null != o && "" !== o ? o : D.src), M) {
+                case T.ImageReadyStates.LOADING:
                     null != n && (D.src = n);
                     break;
-                case _.ImageReadyStates.READY:
+                case T.ImageReadyStates.READY:
                     if (e.isAnimated(this.props)) {
                         D.onMouseLeave = this.onMouseLeave;
                         let t = (s || k || L) && (null == m || m) && e.visibilityObserver.isVisible(this);
@@ -239,7 +239,7 @@ function(e, t, n) {
                     format: o,
                     quality: u
                 } = this.getFormatQuality();
-            E.default.track(_.AnalyticEvents.IMAGE_LOADING_COMPLETED, {
+            E.default.track(T.AnalyticEvents.IMAGE_LOADING_COMPLETED, {
                 duration_ms: r,
                 requested_height: t.height,
                 requested_width: t.width,
@@ -250,7 +250,7 @@ function(e, t, n) {
                 requested_url: t.url,
                 format: o,
                 quality: u,
-                state: e ? _.ImageReadyStates.ERROR : this.state.readyState,
+                state: e ? T.ImageReadyStates.ERROR : this.state.readyState,
                 data_saving_mode: h.default.dataSavingMode,
                 low_quality_image_mode: h.default.lowQualityImageMode,
                 trigger: n,
@@ -262,7 +262,7 @@ function(e, t, n) {
         }
         constructor(t) {
             super(t), this.imageLoadAnalyticsEnabled = !1, this.state = {
-                readyState: _.ImageReadyStates.LOADING,
+                readyState: T.ImageReadyStates.LOADING,
                 hasMouseOver: !1,
                 hasFocus: !1
             }, this.startLoadingTime = Date.now(), this._cancellers = new Set, this.observeVisibility = () => {
@@ -271,7 +271,7 @@ function(e, t, n) {
                 e.visibilityObserver.unobserve(this)
             }, this.handleImageLoad = (e, t) => {
                 this.setState({
-                    readyState: e ? _.ImageReadyStates.ERROR : _.ImageReadyStates.READY
+                    readyState: e ? T.ImageReadyStates.ERROR : T.ImageReadyStates.READY
                 }, () => {
                     var n;
                     return this.trackLoadingCompleted(e, t, null !== (n = this.props.trigger) && void 0 !== n ? n : "LOAD")
@@ -331,7 +331,7 @@ function(e, t, n) {
                     hasFocus: t
                 } = this.state, n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
                 return this.props.shouldRenderAccessory ? e || t ? n : (0, r.jsx)(S.default, {}) : null
-            }, (0, p.isImageLoaded)(this.getSrc(this.getRatio(), e.isAnimated(this.props))) && (this.state.readyState = _.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = N.getCurrentConfig({
+            }, (0, p.isImageLoaded)(this.getSrc(this.getRatio(), e.isAnimated(this.props))) && (this.state.readyState = T.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = N.getCurrentConfig({
                 location: "lazy_image"
             }).enabled
         }

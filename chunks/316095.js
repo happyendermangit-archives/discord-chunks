@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("590456"),
         S = n("49111"),
         C = n("782340"),
-        T = n("715392"),
-        _ = n("862939");
+        _ = n("715392"),
+        T = n("862939");
 
     function I(e) {
         var t, n;
@@ -33,8 +33,8 @@ function(e, t, n) {
                 userId: v,
                 channelId: N,
                 guild: A,
-                theme: O,
-                onClose: R,
+                theme: R,
+                onClose: O,
                 className: M
             } = e,
             {
@@ -64,7 +64,7 @@ function(e, t, n) {
             let t = w.find(t => t.type === e);
             return null == t ? null : (0, i.jsx)(x.ConnectedUserAccount, {
                 connectedAccount: t,
-                theme: O,
+                theme: R,
                 locale: H,
                 userId: v
             }, "".concat(t.type, ":").concat(t.id))
@@ -72,10 +72,10 @@ function(e, t, n) {
         return (B.length > 0 && (a = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(o.Heading, {
                 variant: "eyebrow",
-                className: _.title,
+                className: T.title,
                 children: C.default.Messages.CONNECTIONS
             }), (0, i.jsxs)("div", {
-                className: s(T.connectionsContainer, M),
+                className: s(_.connectionsContainer, M),
                 children: [B, (0, i.jsxs)(o.Clickable, {
                     onClick: function() {
                         (0, E.openUserProfileModal)({
@@ -89,27 +89,27 @@ function(e, t, n) {
                             analyticsLocation: {
                                 section: S.AnalyticsSections.PROFILE_POPOUT
                             }
-                        }), null == R || R()
+                        }), null == O || O()
                     },
-                    className: T.connections,
+                    className: _.connections,
                     children: [(0, i.jsx)(o.Text, {
                         variant: "text-md/semibold",
                         color: "interactive-active",
-                        className: T.connectionsText,
+                        className: _.connectionsText,
                         children: C.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
                     }), (0, i.jsx)(p.default, {
                         direction: p.default.Directions.RIGHT,
-                        className: T.connectionsCaret
+                        className: _.connectionsCaret
                     })]
                 })]
             })]
         })), F.length > 0 && (I = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(o.Heading, {
                 variant: "eyebrow",
-                className: _.title,
+                className: T.title,
                 children: C.default.Messages.APPS
             }), (0, i.jsx)("div", {
-                className: s(T.connectionsContainer, M),
+                className: s(_.connectionsContainer, M),
                 children: F.map(e => (0, i.jsx)(x.ConnectedApplicationUserRoleAccount, {
                     applicationRoleConnection: e,
                     locale: H

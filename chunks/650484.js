@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return E
+            return v
         },
         PaymentPortalBody: function() {
-            return v
+            return p
         },
         PaymentPortalFooter: function() {
             return C
@@ -23,11 +23,11 @@ function(e, t, n) {
         f = n("642906"),
         h = n("304006");
 
-    function E(e) {
+    function v(e) {
         var t, n, s, a, u, c;
         let {
-            header: E,
-            isLargeModal: v,
+            header: v,
+            isLargeModal: p,
             stepProps: C
         } = function(e) {
             let {
@@ -41,38 +41,38 @@ function(e, t, n) {
                 stepProps: i
             }
         }(e), {
-            step: p,
-            stepConfigs: _,
-            setBodyNode: I,
-            setFooterNode: m,
+            step: E,
+            stepConfigs: m,
+            setBodyNode: _,
+            setFooterNode: g,
             setModalOverlayNode: N,
-            setReadySlideId: T
-        } = (0, f.usePaymentContext)(), g = _.find(e => e.key === p);
+            setReadySlideId: I
+        } = (0, f.usePaymentContext)(), S = m.find(e => e.key === E);
         r.useEffect(() => {
             N(null)
-        }, [p, N]), o(null != g, "Unknown step for current payment flow.");
-        let S = null !== (u = null == g ? void 0 : null === (t = g.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
-            M = null == g ? void 0 : null === (n = g.options) || void 0 === n ? void 0 : n.bodyClassName,
-            R = void 0 !== v && v ? h.sliderBodyLarge : null == g ? void 0 : null === (s = g.options) || void 0 === s ? void 0 : s.sliderBodyClassName;
+        }, [E, N]), o(null != S, "Unknown step for current payment flow.");
+        let x = null !== (u = null == S ? void 0 : null === (t = S.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
+            T = null == S ? void 0 : null === (n = S.options) || void 0 === n ? void 0 : n.bodyClassName,
+            M = void 0 !== p && p ? h.sliderBodyLarge : null == S ? void 0 : null === (s = S.options) || void 0 === s ? void 0 : s.sliderBodyClassName;
         return (0, i.jsxs)(i.Fragment, {
-            children: [null === (c = null == g ? void 0 : null === (a = g.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === c || c ? E : null, g.renderStep(C), null == p || S ? null : (0, i.jsxs)(i.Fragment, {
+            children: [null === (c = null == S ? void 0 : null === (a = S.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === c || c ? v : null, S.renderStep(C), null == E || x ? null : (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(d.ModalContent, {
-                    className: l(h.body, M),
+                    className: l(h.body, T),
                     children: (0, i.jsx)(d.Slides, {
-                        activeSlide: p,
+                        activeSlide: E,
                         centered: !1,
-                        onSlideReady: e => T(e),
-                        children: _.filter(e => null != e.key).map(e => (0, i.jsx)(d.Slide, {
+                        onSlideReady: e => I(e),
+                        children: m.filter(e => null != e.key).map(e => (0, i.jsx)(d.Slide, {
                             id: e.key,
                             children: (0, i.jsx)("form", {
-                                className: l(h.sliderBody, R),
-                                ref: e => I(e),
+                                className: l(h.sliderBody, M),
+                                ref: e => _(e),
                                 onSubmit: e => e.preventDefault()
                             })
                         }, e.key))
                     })
                 }), (0, i.jsx)("div", {
-                    ref: e => m(e)
+                    ref: e => g(e)
                 }), (0, i.jsx)("div", {
                     ref: e => N(e)
                 })]
@@ -80,7 +80,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e) {
+    function p(e) {
         let {
             children: t
         } = e, {

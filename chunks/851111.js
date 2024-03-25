@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("646718"),
         S = n("782340"),
         C = n("669821");
-    let T = "premiumRetentionEmojiPickerNotice",
-        _ = o.Storage.get(T);
+    let _ = "premiumRetentionEmojiPickerNotice",
+        T = o.Storage.get(_);
     var I = e => {
         let {
             closePopout: t,
@@ -41,9 +41,9 @@ function(e, t, n) {
                 !N && (0, d.fetchSubscriptions)()
             }, [N]), null == v || !(0, x.isSubscriptionStatusFailedPayment)(v.status) || a) return null;
         let A = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDays)(v) : g.MAX_ACCOUNT_HOLD_DAYS,
-            O = s(v.currentPeriodStart).add(A, "days"),
-            R = "".concat(v.id, ":").concat(O.toISOString());
-        if (_ === R) return null;
+            R = s(v.currentPeriodStart).add(A, "days"),
+            O = "".concat(v.id, ":").concat(R.toISOString());
+        if (T === O) return null;
         let M = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
         return (0, i.jsxs)("div", {
             className: C.premiumRetentionNotice,
@@ -56,7 +56,7 @@ function(e, t, n) {
                     variant: "text-xs/normal",
                     children: S.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
                         planName: x.default.getDisplayPremiumType(v.planId),
-                        endsAt: O
+                        endsAt: R
                     })
                 }), (0, i.jsx)("div", {
                     children: (0, i.jsx)(u.Anchor, {
@@ -68,7 +68,7 @@ function(e, t, n) {
                 })]
             }), (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    o.Storage.set(T, R), _ = R, I(!0)
+                    o.Storage.set(_, O), T = O, I(!0)
                 },
                 children: (0, i.jsx)(m.default, {
                     className: C.premiumRetentionNoticeClose

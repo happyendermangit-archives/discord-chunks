@@ -2,57 +2,57 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         fetchLibrary: function() {
-            return l
+            return o
         },
         createTestModeLibraryApplications: function() {
-            return o
+            return u
         },
         setActiveLaunchOptionId: function() {
             return d
         }
     });
-    var s = n("872717"),
-        i = n("913144"),
-        r = n("370999"),
+    var i = n("872717"),
+        s = n("913144"),
+        l = n("370999"),
         a = n("271560"),
-        u = n("49111");
-    async function l() {
+        r = n("49111");
+    async function o() {
         try {
             let e = await (0, a.httpGetWithCountryCodeQuery)({
-                url: u.Endpoints.LIBRARY,
+                url: r.Endpoints.LIBRARY,
                 oldFormErrors: !0
             }, !1);
-            i.default.dispatch({
+            s.default.dispatch({
                 type: "LIBRARY_FETCH_SUCCESS",
                 libraryApplications: e.body
             })
         } catch (e) {
-            i.default.dispatch({
+            s.default.dispatch({
                 type: "LIBRARY_FETCH_FAIL",
                 error: e
             })
         }
     }
-    async function o(e) {
+    async function u(e) {
         let t = e.primarySkuId;
         if (null == t) return;
-        let n = await s.HTTP.get({
-                url: u.Endpoints.APPLICATION_BRANCH_LIST(e.id),
+        let n = await i.HTTP.get({
+                url: r.Endpoints.APPLICATION_BRANCH_LIST(e.id),
                 oldFormErrors: !0
             }).then(e => e.body),
-            a = n.map(n => r.default.createForTestMode({
+            a = n.map(n => l.default.createForTestMode({
                 id: e.id,
                 skuId: t,
                 branch: n
             }));
-        i.default.dispatch({
+        s.default.dispatch({
             type: "LIBRARY_APPLICATIONS_TEST_MODE_ENABLED",
             libraryApplications: a
         })
     }
 
     function d(e, t, n) {
-        i.default.dispatch({
+        s.default.dispatch({
             type: "LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE",
             applicationId: e,
             branchId: t,

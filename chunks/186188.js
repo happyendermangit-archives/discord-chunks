@@ -11,10 +11,10 @@ function(e, t, n) {
             return A
         },
         UserMention: function() {
-            return O
+            return R
         },
         RoleMention: function() {
-            return R
+            return O
         },
         ChannelMention: function() {
             return M
@@ -52,8 +52,8 @@ function(e, t, n) {
         g = n("387111"),
         S = n("158998"),
         C = n("680894"),
-        T = n("782340"),
-        _ = n("918841"),
+        _ = n("782340"),
+        T = n("918841"),
         I = n("919163");
 
     function v(e) {
@@ -102,7 +102,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e) {
+    function R(e) {
         let {
             id: t,
             guildId: n,
@@ -114,17 +114,17 @@ function(e, t, n) {
             let e = u || o.isPomelo() ? null : "#".concat(o.discriminator);
             return (0, i.jsx)(a.Tooltip, {
                 text: (0, i.jsxs)("div", {
-                    className: _.userTooltip,
+                    className: T.userTooltip,
                     children: [(0, i.jsx)(r.default, {
                         user: o,
                         animate: !0,
                         size: a.AvatarSizes.SIZE_16,
-                        className: _.avatar
+                        className: T.avatar
                     }), S.default.getUserTag(o, {
                         mode: "username",
                         identifiable: u ? "never" : "always"
                     }), (0, i.jsx)("span", {
-                        className: _.discriminator,
+                        className: T.discriminator,
                         children: e
                     })]
                 }),
@@ -143,7 +143,7 @@ function(e, t, n) {
         return c
     }
 
-    function R(e) {
+    function O(e) {
         let {
             id: t,
             guildId: n
@@ -165,10 +165,10 @@ function(e, t, n) {
     function M(e) {
         let {
             id: t
-        } = e, n = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = T.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
+        } = e, n = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = _.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
         if (null != n) {
             var o;
-            a = (0, d.canViewChannel)(n) ? n.name : T.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, y.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
+            a = (0, d.canViewChannel)(n) ? n.name : _.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, y.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
         }
         return r ? (0, i.jsx)(E.default, {
             iconType: s,
@@ -192,10 +192,10 @@ function(e, t, n) {
         let {
             id: t
         } = e, n = {
-            home: T.default.Messages.SERVER_GUIDE,
-            guide: T.default.Messages.SERVER_GUIDE,
-            browse: T.default.Messages.CHANNEL_BROWSER_TITLE,
-            customize: T.default.Messages.CHANNELS_AND_ROLES
+            home: _.default.Messages.SERVER_GUIDE,
+            guide: _.default.Messages.SERVER_GUIDE,
+            browse: _.default.Messages.CHANNEL_BROWSER_TITLE,
+            customize: _.default.Messages.CHANNELS_AND_ROLES
         };
         return (0, i.jsx)(E.default, {
             iconType: t,

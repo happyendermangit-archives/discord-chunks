@@ -179,7 +179,7 @@ function(e, t, n) {
             }
         }
     }
-    let T = {
+    let _ = {
             url: {
                 parse: e => null == (0, d.punycodeLink)(e[1]) ? {
                     type: "text",
@@ -220,17 +220,17 @@ function(e, t, n) {
                 }
             }
         },
-        _ = (0, p.default)([g, T]),
-        I = (0, p.default)([S, T]),
-        v = o.astParserFor(_),
+        T = (0, p.default)([g, _]),
+        I = (0, p.default)([S, _]),
+        v = o.astParserFor(T),
         N = o.astParserFor(I),
         A = {
             max: 1 / 0,
             maxAge: 1 * m.default.Millis.MINUTE,
             updateAgeOnGet: !0
         },
-        O = new s(A),
-        R = new s(A);
+        R = new s(A),
+        O = new s(A);
 
     function M(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -257,7 +257,7 @@ function(e, t, n) {
                 if ("" !== c) {
                     let e = function(e, t, n) {
                         let i = [],
-                            l = n ? R : O,
+                            l = n ? O : R,
                             a = l.get(e);
                         if (null != a) return a;
                         let s = e.replace(/\r\n/g, " \n").replace(/[\r\f]/g, " ").replace(/\t/g, " ") + "\n\n",

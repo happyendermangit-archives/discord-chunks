@@ -25,14 +25,14 @@ function(e, t, n) {
         g = n("429928"),
         S = n("36539"),
         C = n("698372"),
-        T = n("770370"),
-        _ = n("667618"),
+        _ = n("770370"),
+        T = n("667618"),
         I = n("865677"),
         v = n("15874"),
         N = n("774713"),
         A = n("510788"),
-        O = n("756731"),
-        R = n("762806"),
+        R = n("756731"),
+        O = n("762806"),
         M = n("438278"),
         k = n("898481"),
         L = n("49111"),
@@ -63,23 +63,23 @@ function(e, t, n) {
                 z = (0, p.isStageActivity)(n),
                 Z = K ? E.default.Align.END : E.default.Align.STRETCH,
                 J = Y || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
-                q = (null == n ? void 0 : n.type) === L.ActivityTypes.HANG_STATUS,
-                X = (0, u.useStateFromStores)([x.default, m.default], () => {
+                Q = (null == n ? void 0 : n.type) === L.ActivityTypes.HANG_STATUS,
+                q = (0, u.useStateFromStores)([x.default, m.default], () => {
                     var e;
-                    return q ? m.default.getChannel(null === (e = x.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null
+                    return Q ? m.default.getChannel(null === (e = x.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null
                 });
-            if ((0, S.default)(n)) t = [(0, i.jsx)(T.default, {
+            if ((0, S.default)(n)) t = [(0, i.jsx)(_.default, {
                 look: w,
                 color: D,
                 platform: f.default.get(L.PlatformTypes.XBOX)
             }, "ConnectPlatformActivityButton")];
-            else if ((null == n ? void 0 : n.platform) != null && [L.ActivityGamePlatforms.PS4, L.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(T.default, {
+            else if ((null == n ? void 0 : n.platform) != null && [L.ActivityGamePlatforms.PS4, L.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(_.default, {
                 look: w,
                 color: D,
                 platform: f.default.get(L.PlatformTypes.PLAYSTATION)
             }, "ConnectPlatformActivityButton")];
             else if (Y) {
-                let e = (0, i.jsx)(R.default, {
+                let e = (0, i.jsx)(O.default, {
                         activity: n,
                         user: l,
                         color: D,
@@ -88,7 +88,7 @@ function(e, t, n) {
                         channelId: j,
                         source: U
                     }, "spotify-activity-sync-button"),
-                    a = (0, i.jsx)(O.default, {
+                    a = (0, i.jsx)(R.default, {
                         activity: n,
                         user: l,
                         color: D,
@@ -115,11 +115,11 @@ function(e, t, n) {
                     applicationStream: s
                 }, "watch-button");
                 t = [e]
-            } else if (q && null != X) {
+            } else if (Q && null != q) {
                 let e = (0, i.jsx)(v.default, {
                     color: D,
                     look: w,
-                    hangStatusChannel: X
+                    hangStatusChannel: q
                 }, "hang-status-button");
                 t = [e]
             } else {
@@ -143,7 +143,7 @@ function(e, t, n) {
                         color: D,
                         look: w
                     }, "notify-button"),
-                    r = (0, i.jsx)(_.default, {
+                    r = (0, i.jsx)(T.default, {
                         user: l,
                         color: D,
                         look: w,
@@ -152,13 +152,13 @@ function(e, t, n) {
                 if (null == a && null == s && null == e && null == r) return null;
                 t = [a, s, e, r]
             }
-            let Q = J === E.default.Direction.VERTICAL;
+            let X = J === E.default.Direction.VERTICAL;
             return (0, i.jsx)(E.default, {
                 grow: 0,
                 align: Z,
                 direction: J,
-                wrap: Q ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
-                className: a(c, P.buttonsWrapper, Q ? P.vertical : P.horizontal),
+                wrap: X ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
+                className: a(c, P.buttonsWrapper, X ? P.vertical : P.horizontal),
                 onClick: function(e) {
                     (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == G || G())
                 },

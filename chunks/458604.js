@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("429569"),
         S = n("215550"),
         C = n("782340"),
-        T = n("348473");
-    let _ = (e, t) => "".concat(e, ":").concat(t),
+        _ = n("348473");
+    let T = (e, t) => "".concat(e, ":").concat(t),
         I = l.forwardRef(function(e, t) {
             let n, {
                     emoji: l,
@@ -37,14 +37,14 @@ function(e, t, n) {
                     showPulse: h,
                     columnIndex: x,
                     rowIndex: y,
-                    size: _,
+                    size: T,
                     surrogateCodePoint: I,
                     allowAnimatedEmoji: v,
                     selectedItemClassName: N,
                     inNitroLockedSection: A,
-                    ...O
+                    ...R
                 } = e,
-                R = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
+                O = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
                 {
                     enabled: M
                 } = g.default.useExperiment({
@@ -55,30 +55,30 @@ function(e, t, n) {
                 k = p && M && !A;
             return (0, i.jsx)(o.FocusRing, {
                 children: (0, i.jsx)("button", {
-                    ...O,
-                    className: s(T.emojiItem, {
-                        [T.emojiItemLarge]: u,
-                        [T.emojiItemMedium]: d,
-                        [T.emojiItemSelected]: c,
+                    ...R,
+                    className: s(_.emojiItem, {
+                        [_.emojiItemLarge]: u,
+                        [_.emojiItemMedium]: d,
+                        [_.emojiItemSelected]: c,
                         [null != N ? N : ""]: c,
-                        [T.emojiItemDisabled]: p && !M,
-                        [T.showPulse]: h
+                        [_.emojiItemDisabled]: p && !M,
+                        [_.showPulse]: h
                     }),
                     "data-type": m.PickerContextMenuDataTypes.EMOJI,
                     "data-id": l.id,
                     "data-name": l.name,
                     ref: t,
                     children: (0, i.jsx)(S.default, {
-                        "aria-label": (n = l.allNamesString, ((null == R ? void 0 : R.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+                        "aria-label": (n = l.allNamesString, ((null == O ? void 0 : O.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
                             names: n,
-                            guildName: R.name
+                            guildName: O.name
                         })), a) ? C.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
                             names: n
                         }) : n),
                         columnIndex: x,
                         rowIndex: y,
                         emoji: l,
-                        size: _,
+                        size: T,
                         surrogateCodePoint: I,
                         allowAnimatedEmoji: v,
                         isLocked: k
@@ -97,12 +97,12 @@ function(e, t, n) {
             onInspect: E,
             onSelect: g,
             isScrolling: S,
-            isUsingKeyboardNavigation: T,
+            isUsingKeyboardNavigation: _,
             showEmojiFavoriteTooltip: v,
             surrogateCodePoint: N,
             selectedItemClassName: A,
-            getEmojiItemProps: O,
-            isMediumSize: R,
+            getEmojiItemProps: R,
+            isMediumSize: O,
             isLargeSize: M,
             pulseItemKey: k,
             allowAnimatedEmoji: L,
@@ -117,14 +117,14 @@ function(e, t, n) {
             isDisabled: W,
             columnIndex: Y
         } = t, z = e => {
-            if (e.stopPropagation(), S.current || T.current) return;
+            if (e.stopPropagation(), S.current || _.current) return;
             let n = e.altKey;
             n && !c.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(V) && P(a), (0, h.hideHotspot)(h.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), g(t, {
                 isFinalSelection: !e.shiftKey,
                 toggleFavorite: n
             })
         }, Z = () => {
-            !S.current && !T.current && E(t)
+            !S.current && !_.current && E(t)
         }, J = e => {
             (0, u.openContextMenuLazy)(e, async () => {
                 let {
@@ -134,7 +134,7 @@ function(e, t, n) {
                     ...t
                 })
             })
-        }, q = function() {
+        }, Q = function() {
             var e;
             let {
                 onMouseEnter: t,
@@ -144,17 +144,17 @@ function(e, t, n) {
                 tabIndex: o,
                 onFocus: u,
                 ...d
-            } = null !== (e = O(Y, f)) && void 0 !== e ? e : {};
+            } = null !== (e = R(Y, f)) && void 0 !== e ? e : {};
             return (0, l.createElement)("li", {
                 ...d,
                 key: a,
                 ref: B
-            }, w !== _(Y, f) && (0, i.jsx)(I, {
+            }, w !== T(Y, f) && (0, i.jsx)(I, {
                 ref: r,
                 emoji: V,
                 isFavorite: H.isFavoriteEmojiWithoutFetchingLatest(V),
                 isLargeSize: M,
-                isMediumSize: R,
+                isMediumSize: O,
                 isInspected: s,
                 isDisabled: W,
                 showPulse: k === a,
@@ -167,7 +167,7 @@ function(e, t, n) {
                     if (null != B.current && null != U && null != b && !e.shiftKey && null != V.name && j && !G && L) {
                         let e = null == V.id ? p.default.convertNameToSurrogate(V.name) : V.name,
                             t = B.current.getBoundingClientRect();
-                        t.x = U.x + (Y + 1) * K, F(_(Y, f)), (0, x.addReactionPickerAnimation)(b, e, V.id, t)
+                        t.x = U.x + (Y + 1) * K, F(T(Y, f)), (0, x.addReactionPickerAnimation)(b, e, V.id, t)
                     }
                     z(e)
                 },
@@ -187,7 +187,7 @@ function(e, t, n) {
             }),
             position: "top",
             delay: 200,
-            children: e => q(e)
-        }, a) : q()
+            children: e => Q(e)
+        }, a) : Q()
     }
 }

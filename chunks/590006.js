@@ -34,8 +34,8 @@ function(e, t, n) {
             shrinkAtCount: l,
             shrinkToSize: s,
             isTryItOutFlow: C,
-            size: T = 0
-        } = e, _ = (0, h.default)(t.id, n), I = (0, m.default)(_).map(e => ({
+            size: _ = 0
+        } = e, T = (0, h.default)(t.id, n), I = (0, m.default)(T).map(e => ({
             ...e,
             src: (0, x.getBadgeAsset)(e.icon)
         })), {
@@ -56,7 +56,7 @@ function(e, t, n) {
                 date: new Date
             })
         });
-        let O = null != l && null != s && I.length > l ? s : T;
+        let R = null != l && null != s && I.length > l ? s : _;
         return (0, a.jsx)("div", {
             className: r(i, I.length > 0 ? g.containerWithContent : g.container),
             "aria-label": y.default.Messages.PROFILE_USER_BADGES,
@@ -84,9 +84,9 @@ function(e, t, n) {
                         "aria-hidden": !0,
                         src: e.src,
                         className: r({
-                            [g.profileBadge24]: 0 === O,
-                            [g.profileBadge22]: 1 === O,
-                            [g.profileBadge18]: 2 === O
+                            [g.profileBadge24]: 0 === R,
+                            [g.profileBadge22]: 1 === R,
+                            [g.profileBadge18]: 2 === R
                         })
                     })
                 })

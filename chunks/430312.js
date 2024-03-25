@@ -35,11 +35,11 @@ function(e, t, n) {
             useDefaultClientTheme: g,
             children: S,
             forceShowPremium: C = !1,
-            showOutOfBoundaryComponents: T = !1
-        } = e, _ = l.useRef(null), I = (0, o.default)(a.id, m), {
+            showOutOfBoundaryComponents: _ = !1
+        } = e, T = l.useRef(null), I = (0, o.default)(a.id, m), {
             profileTheme: v
         } = (0, u.default)(a, I, {
-            themeElementRef: _,
+            themeElementRef: T,
             pendingThemeColors: E,
             isPreview: C,
             useDefaultClientTheme: g
@@ -48,8 +48,8 @@ function(e, t, n) {
             profileTheme: v
         }), [h, v]);
         return (0, i.jsx)("div", {
-            ref: _,
-            className: s((t = h, (0, r.match)(t).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutOuter).with(d.UserProfileTypes.MODAL, () => f.userProfileModalOuter).with(d.UserProfileTypes.PANEL, () => f.userPanelOuter).with(d.UserProfileTypes.CARD, () => f.userCardOuter).exhaustive()), N ? f.userProfileOuterThemed : f.userProfileOuterUnthemed, c.profileColors, T ? f.showOutOfBoundaryComponents : void 0, "theme-".concat(v), x),
+            ref: T,
+            className: s((t = h, (0, r.match)(t).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutOuter).with(d.UserProfileTypes.MODAL, () => f.userProfileModalOuter).with(d.UserProfileTypes.PANEL, () => f.userPanelOuter).with(d.UserProfileTypes.CARD, () => f.userCardOuter).exhaustive()), N ? f.userProfileOuterThemed : f.userProfileOuterUnthemed, c.profileColors, _ ? f.showOutOfBoundaryComponents : void 0, "theme-".concat(v), x),
             children: (0, i.jsx)("div", {
                 className: s((n = h, (0, r.match)(n).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutInner).with(d.UserProfileTypes.MODAL, () => f.userProfileModalInner).with(d.UserProfileTypes.PANEL, () => f.userPanelInner).with(d.UserProfileTypes.CARD, () => f.userCardInner).exhaustive()), function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],

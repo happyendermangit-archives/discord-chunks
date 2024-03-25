@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     });
     var i = n("37983"),
@@ -64,7 +64,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function _(e) {
         let {
             reply: t,
             chatInputType: n
@@ -74,8 +74,8 @@ function(e, t, n) {
             shouldMention: u,
             showMentionToggle: m
         } = t, {
-            nick: T,
-            colorString: _,
+            nick: _,
+            colorString: T,
             colorRoleName: I
         } = (0, d.default)(a), v = function(e, t) {
             let n = e.id,
@@ -91,7 +91,7 @@ function(e, t, n) {
             }, [n, i])
         }(l, a), N = (0, p.useCanStartPublicThread)(l, a), A = n.showThreadPromptOnReply && v >= 2 && N;
 
-        function O(e) {
+        function R(e) {
             e.stopPropagation(), (0, c.setPendingReplyShouldMention)(l.id, !u)
         }
         return (0, i.jsx)("div", {
@@ -117,8 +117,8 @@ function(e, t, n) {
                             children: g.default.Messages.REPLYING_TO.format({
                                 userHook: (e, t) => (0, i.jsx)(o.NameWithRole, {
                                     className: S.name,
-                                    name: T,
-                                    color: _,
+                                    name: _,
+                                    color: T,
                                     roleName: I
                                 }, t)
                             })
@@ -138,7 +138,7 @@ function(e, t, n) {
                                     return (0, i.jsx)(o.Clickable, {
                                         role: "switch",
                                         "aria-checked": u,
-                                        onClick: O,
+                                        onClick: R,
                                         onMouseEnter: t,
                                         onMouseLeave: n,
                                         onFocus: l,

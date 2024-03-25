@@ -40,8 +40,8 @@ function(e, t, n) {
                 }
             }, [E]);
             let {
-                Component: T,
-                events: _,
+                Component: _,
+                events: T,
                 play: I
             } = (0, o.useStickerLottie)();
             return n ? null : (0, i.jsx)("div", {
@@ -51,7 +51,7 @@ function(e, t, n) {
                     innerClassName: s(m.button, m.stickerButton, {
                         [m.stickerButtonTilted]: y && !S
                     }),
-                    ..._,
+                    ...T,
                     onClick: () => {
                         C(), I()
                     },
@@ -62,7 +62,7 @@ function(e, t, n) {
                     "aria-controls": x,
                     sparkle: !1,
                     notification: null,
-                    children: (0, i.jsx)(T, {
+                    children: (0, i.jsx)(_, {
                         color: "currentColor"
                     })
                 })

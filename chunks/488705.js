@@ -24,8 +24,8 @@ function(e, t, n) {
         g = n("646718"),
         S = n("49111"),
         C = n("782340"),
-        T = n("486433"),
-        _ = n("278410"),
+        _ = n("486433"),
+        T = n("278410"),
         I = n("410957"),
         v = n("730708"),
         N = n("754702");
@@ -35,7 +35,7 @@ function(e, t, n) {
         }).finally(() => {
             n(!1)
         })
-    }, O = e => {
+    }, R = e => {
         let {
             onClose: t,
             referralsRemaining: n,
@@ -44,38 +44,38 @@ function(e, t, n) {
             shouldShowBirthdayUX: o
         } = e, [u, c] = l.useState(!1), f = n - 1;
         return (0, i.jsxs)("div", {
-            className: T.confirmationContainer,
+            className: _.confirmationContainer,
             children: [(0, i.jsxs)("div", {
                 className: s({
-                    [T.confirmationBody]: !o,
-                    [T.confirmationBirthdayBody]: o
+                    [_.confirmationBody]: !o,
+                    [_.confirmationBirthdayBody]: o
                 }),
                 children: [(0, i.jsx)(d.ModalCloseButton, {
                     onClick: t,
-                    className: T.closeButton
+                    className: _.closeButton
                 }), (0, i.jsx)("img", {
                     alt: "",
                     src: o ? I : v,
-                    className: T.confirmationImage
+                    className: _.confirmationImage
                 }), (0, i.jsx)(d.Heading, {
                     variant: "heading-xl/bold",
                     color: "interactive-active",
-                    className: T.confirmationHeading,
+                    className: _.confirmationHeading,
                     children: C.default.Messages.SAHRE_NITRO_MODAL_CONFIRMATION_HEADER
                 }), (0, i.jsx)(d.Text, {
-                    className: T.confirmationBodyCopy,
+                    className: _.confirmationBodyCopy,
                     variant: "text-md/medium",
                     color: "header-primary",
                     children: f > 0 ? C.default.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({
                         count: f
                     }) : C.default.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL_LAST_REFERRAL
                 }), (0, i.jsx)("hr", {
-                    className: T.confirmationBodySeparator
+                    className: _.confirmationBodySeparator
                 })]
             }), (0, i.jsxs)("div", {
-                className: T.confirmationButtonContainer,
+                className: _.confirmationButtonContainer,
                 children: [(0, i.jsx)(d.Button, {
-                    className: T.confirmationShareButton,
+                    className: _.confirmationShareButton,
                     submitting: u,
                     onClick: () => {
                         A(a, t, c), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -86,12 +86,12 @@ function(e, t, n) {
                     },
                     children: C.default.Messages.SHAER_NITRO_CONFIRMATION_BUTTON_TEXT
                 }), (0, i.jsx)("div", {
-                    className: T.confirmationCancelButtonContainer,
+                    className: _.confirmationCancelButtonContainer,
                     children: (0, i.jsx)(d.Clickable, {
                         onClick: t,
                         children: (0, i.jsx)(d.Text, {
                             variant: "text-sm/medium",
-                            className: T.confirmationCancelCopy,
+                            className: _.confirmationCancelCopy,
                             children: C.default.Messages.CANCEL
                         })
                     })
@@ -100,13 +100,13 @@ function(e, t, n) {
         })
     };
 
-    function R(e) {
+    function O(e) {
         let {
             referralsRemaining: t,
             channel: n,
             onClose: a,
             isResending: r
-        } = e, [u, c] = l.useState(!1), [E, v] = l.useState(!1), R = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
+        } = e, [u, c] = l.useState(!1), [E, v] = l.useState(!1), O = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
             analyticsLocations: M
         } = (0, p.default)(f.default.REFERRAL_TRIALS_POPOUT), {
             enabled: k
@@ -115,42 +115,42 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !0
         }), L = new Date("2023-06-15T08:00:00-08:00");
-        return null == R ? null : u ? (0, i.jsx)(O, {
+        return null == O ? null : u ? (0, i.jsx)(R, {
             onClose: a,
             referralsRemaining: t,
-            recipient: R,
+            recipient: O,
             analyticsLocations: M,
             shouldShowBirthdayUX: k
         }) : (0, i.jsxs)("div", {
-            className: T.generalContainer,
+            className: _.generalContainer,
             children: [(0, i.jsxs)("div", {
-                className: T.generalBodyContainer,
+                className: _.generalBodyContainer,
                 children: [(0, i.jsx)("img", {
                     alt: "",
                     src: k ? I : N,
-                    className: T.generalBodyImage
+                    className: _.generalBodyImage
                 }), (0, i.jsxs)("div", {
-                    className: T.innerContent,
+                    className: _.innerContent,
                     children: [(0, i.jsx)(d.ModalCloseButton, {
                         onClick: a,
-                        className: T.closeButton
+                        className: _.closeButton
                     }), (0, i.jsx)(d.Heading, {
-                        className: T.generalHeading,
+                        className: _.generalHeading,
                         variant: "heading-xl/bold",
                         children: r ? C.default.Messages.SHARE_NITRO_RESEND_TRIAL_HEADER : C.default.Messages.SHARE_NITRO_MODAL_HEADER
                     }), (0, i.jsxs)(d.Text, {
-                        className: T.generalBodyCopy,
+                        className: _.generalBodyCopy,
                         variant: "text-md/normal",
                         children: [(0, i.jsx)(d.Anchor, {
-                            className: s(T.learnMore, {
-                                [T.learnMoreResendUnderlinedText]: r
+                            className: s(_.learnMore, {
+                                [_.learnMoreResendUnderlinedText]: r
                             }),
                             href: x.default.getArticleURL(S.HelpdeskArticles.SHARE_NITRO_FAQ),
                             children: r ? C.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : C.default.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({
                                 count: t
                             })
                         }), r ? (0, i.jsx)("div", {
-                            className: T.shareNitroResendCopySuffix,
+                            className: _.shareNitroResendCopySuffix,
                             children: C.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
                         }) : (0, i.jsx)("div", {
                             children: C.default.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({
@@ -160,19 +160,19 @@ function(e, t, n) {
                     })]
                 }), k && (0, i.jsx)("img", {
                     alt: "",
-                    src: _,
-                    className: T.birthdayBackgroundImage
+                    src: T,
+                    className: _.birthdayBackgroundImage
                 })]
             }), (0, i.jsx)("div", {
-                className: T.generalButtonContainer,
+                className: _.generalButtonContainer,
                 children: (0, i.jsx)(d.Button, {
-                    className: T.generalShareButton,
+                    className: _.generalShareButton,
                     submitting: E,
                     onClick: () => {
-                        r ? A(R, a, v) : (c(!0), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                        r ? A(O, a, v) : (c(!0), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: M,
                             step: g.ReferralTrialsAnalyticSteps.FLOW_STARTED,
-                            other_user_id: Number(R)
+                            other_user_id: Number(O)
                         }))
                     },
                     children: r ? C.default.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : C.default.Messages.SHARE_NITRO_BUTTON_TEXT
@@ -195,7 +195,7 @@ function(e, t, n) {
                 shouldShow: !0,
                 position: "top",
                 align: "center",
-                renderPopout: e => (0, i.jsx)(R, {
+                renderPopout: e => (0, i.jsx)(O, {
                     ...e,
                     referralsRemaining: n,
                     channel: l,
@@ -206,7 +206,7 @@ function(e, t, n) {
                 closeOnScroll: !1,
                 ignoreModalClicks: !0,
                 children: () => (0, i.jsx)("div", {
-                    className: T.popoutTarget
+                    className: _.popoutTarget
                 })
             })
         }) : null

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getAmplitudinalSoundboardVolume: function() {
-            return _
+            return T
         },
         canUseSoundboardSound: function() {
             return v
@@ -14,10 +14,10 @@ function(e, t, n) {
             return A
         },
         useSoundBoardDismissContentTypes: function() {
-            return O
+            return R
         },
         removeCustomJoinSound: function() {
-            return R
+            return O
         },
         updateCustomJoinSound: function() {
             return M
@@ -45,16 +45,16 @@ function(e, t, n) {
         g = n("245463"),
         S = n("675961"),
         C = n("846325"),
-        T = n("49111");
+        _ = n("49111");
 
-    function _() {
+    function T() {
         var e;
         let t = s.SoundboardSettings.getSetting();
         return null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100
     }
 
     function I(e, t) {
-        return (null == t ? void 0 : t.guild_id) == null || c.default.can(T.Permissions.USE_EXTERNAL_SOUNDS, t) || e.guildId === C.DEFAULT_SOUND_GUILD_ID || e.guildId === (null == t ? void 0 : t.guild_id)
+        return (null == t ? void 0 : t.guild_id) == null || c.default.can(_.Permissions.USE_EXTERNAL_SOUNDS, t) || e.guildId === C.DEFAULT_SOUND_GUILD_ID || e.guildId === (null == t ? void 0 : t.guild_id)
     }
 
     function v(e, t, n) {
@@ -80,7 +80,7 @@ function(e, t, n) {
         }
     }
 
-    function O(e) {
+    function R(e) {
         let {
             isSoundboardButtonDisabled: t = !1
         } = e, n = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), a = [l.DismissibleContent.SOUNDBOARD_EDUCATION];
@@ -96,7 +96,7 @@ function(e, t, n) {
         return a
     }
 
-    function R(e, t) {
+    function O(e, t) {
         (0, r.updateUserGuildSettings)(e, n => {
             n.joinSound = void 0, k({
                 guildId: e,
@@ -133,7 +133,7 @@ function(e, t, n) {
             soundSource: l,
             location: a
         } = e;
-        p.default.track(T.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
+        p.default.track(_.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
             location_stack: a,
             guild_id: "" === t ? 0 : Number(t),
             change_type: n,
@@ -146,7 +146,7 @@ function(e, t, n) {
         let {
             location: t
         } = e;
-        p.default.track(T.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, {
+        p.default.track(_.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, {
             location_stack: t
         })
     }

@@ -27,15 +27,15 @@ function(e, t, n) {
         g = n("845962"),
         S = n("501768"),
         C = n("697218"),
-        T = n("945330"),
-        _ = n("719923"),
+        _ = n("945330"),
+        T = n("719923"),
         I = n("627601"),
         v = n("994428"),
         N = n("782340"),
         A = n("154477"),
-        O = n("604689");
+        R = n("604689");
 
-    function R(e) {
+    function O(e) {
         let {
             onClick: t
         } = e;
@@ -43,7 +43,7 @@ function(e, t, n) {
             className: A.closeButton,
             onClick: t,
             "aria-label": N.default.Messages.DISMISS,
-            children: (0, i.jsx)(T.default, {
+            children: (0, i.jsx)(_.default, {
                 className: A.closeIcon,
                 width: 18,
                 height: 18
@@ -73,7 +73,7 @@ function(e, t, n) {
                 onClick: n,
                 "aria-label": N.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
                 children: (0, i.jsx)(u.Avatar, {
-                    src: O,
+                    src: R,
                     avatarDecoration: l,
                     size: u.AvatarSizes.SIZE_48,
                     "aria-hidden": !0
@@ -87,8 +87,8 @@ function(e, t, n) {
             displayProfile: a,
             onClose: m,
             onDismiss: h,
-            isInSidebar: T = !1,
-            canShowAvatarDecorationUpsell: O = !1,
+            isInSidebar: _ = !1,
+            canShowAvatarDecorationUpsell: R = !1,
             canShowProfileEffectUpsell: P = !1,
             upsellSource: b
         } = e, {
@@ -98,7 +98,7 @@ function(e, t, n) {
             height: w
         } = (0, d.default)(), F = l.useMemo(() => ({
             top: "-".concat((null != w ? w : M) + 6, "px")
-        }), [w]), G = (0, o.useStateFromStores)([C.default], () => C.default.getCurrentUser()), H = _.default.canUseCollectibles(G), {
+        }), [w]), G = (0, o.useStateFromStores)([C.default], () => C.default.getCurrentUser()), H = T.default.canUseCollectibles(G), {
             setUpsellSource: B,
             reset: V
         } = (0, I.useUserPopoutCollectiblesUpsellStore)();
@@ -120,8 +120,8 @@ function(e, t, n) {
         }, [h, m, j, null == K ? void 0 : K.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, W]), Z = l.useCallback(() => {
             null == h || h(v.ContentDismissActionType.DISMISS)
         }, [h]);
-        if (!O && !P) return null;
-        let J = (0, r.match)([O, P]).with([!0, !0], () => W && Y && H ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+        if (!R && !P) return null;
+        let J = (0, r.match)([R, P]).with([!0, !0], () => W && Y && H ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
             openShop: k
         }) : W && Y ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
             openShop: k
@@ -142,16 +142,16 @@ function(e, t, n) {
             style: F,
             className: s(A.containerWrapper, {
                 [A.animation]: !U,
-                [A.inSidebar]: T
+                [A.inSidebar]: _
             }),
             ref: D,
             children: (0, i.jsxs)("div", {
                 className: A.container,
-                children: [O && (0, i.jsx)(L, {
+                children: [R && (0, i.jsx)(L, {
                     user: n,
                     onClick: z
                 }), (0, i.jsx)(u.Clickable, {
-                    className: O ? A.contentWithAvatar : A.content,
+                    className: R ? A.contentWithAvatar : A.content,
                     onClick: z,
                     "aria-label": N.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
                     children: (0, i.jsx)(u.Text, {
@@ -162,7 +162,7 @@ function(e, t, n) {
                     })
                 }), (0, i.jsx)("div", {
                     className: A.buttons,
-                    children: (0, i.jsx)(R, {
+                    children: (0, i.jsx)(O, {
                         onClick: Z
                     })
                 })]

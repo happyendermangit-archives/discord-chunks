@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     }), n("222007"), n("781738");
     var i = n("37983"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         g = n("632550"),
         S = n("235541"),
         C = n("919163");
-    class T extends l.PureComponent {
+    class _ extends l.PureComponent {
         componentDidMount() {
             this.props.editor.events.addListener("onChange", this.handleOnChange)
         }
@@ -347,5 +347,5 @@ function(e, t, n) {
             }
         }
     }
-    var _ = T
+    var T = _
 }

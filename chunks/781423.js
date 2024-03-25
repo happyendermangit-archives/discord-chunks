@@ -27,9 +27,9 @@ function(e, t, n) {
         g = n("317041"),
         S = n("406291"),
         C = n("782340"),
-        T = n("816411");
+        _ = n("816411");
 
-    function _(e, t, n, l) {
+    function T(e, t, n, l) {
         if (null == e) return;
         let a = () => {
             let i = f.default.getChannel(e);
@@ -92,7 +92,7 @@ function(e, t, n) {
             return f.default.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : h.default.getChannelId())
         }, [n.channelId]), {
             hasSendMessagePerm: C,
-            hasUseAppCommandsPerm: T
+            hasUseAppCommandsPerm: _
         } = (0, a.useStateFromStoresObject)([m.default], () => {
             let e = m.default.can(y.Permissions.SEND_MESSAGES, E),
                 t = m.default.can(y.Permissions.USE_APPLICATION_COMMANDS, E);
@@ -108,9 +108,9 @@ function(e, t, n) {
                 t = (0, d.computeIsReadOnlyThread)(E);
             if (t || !e && !C) return !1;
             let i = (null == I ? void 0 : I.applicationId) === g.BuiltInSectionId.BUILT_IN;
-            return !!e || !!i || !!T || !1
-        }, [E, I, C, T, n.commandName, v]), A = l.useCallback(e => {
-            null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && _(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
+            return !!e || !!i || !!_ || !1
+        }, [E, I, C, _, n.commandName, v]), A = l.useCallback(e => {
+            null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && T(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
         }, [E, n.commandKey, n.commandName]);
         return N ? (0, i.jsx)(s.Tooltip, {
             text: n.output,
@@ -140,12 +140,12 @@ function(e, t, n) {
             commandDescription: l,
             onClick: r
         } = e, o = (0, a.useStateFromStores)([h.default], () => h.default.getChannelId()), d = e => {
-            null == e || e.stopPropagation(), _(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
+            null == e || e.stopPropagation(), T(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
         };
         return (0, i.jsx)(s.Tooltip, {
             text: l,
             position: "top",
-            tooltipContentClassName: T.tooltip,
+            tooltipContentClassName: _.tooltip,
             children: e => {
                 let {
                     onMouseEnter: t,
