@@ -59,8 +59,8 @@ function(e, t, n) {
             [H, B] = l.useState(L),
             [V, K] = l.useState(!1),
             [W, Y] = l.useState(!1),
-            [z, Z] = l.useState(!1),
-            [J, q] = l.useState(!1),
+            [z, J] = l.useState(!1),
+            [Z, q] = l.useState(!1),
             [X, Q] = l.useState("none"),
             [$, ee] = l.useState(() => "function" == typeof O ? O() : O),
             et = l.useRef(void 0),
@@ -96,10 +96,10 @@ function(e, t, n) {
                 K(!V), null == M || M(!V)
             }, [V, M]),
             ed = l.useCallback(() => {
-                Z(!0)
+                J(!0)
             }, []),
             ec = l.useCallback(() => {
-                Z(!1), F === H && ea()
+                J(!1), F === H && ea()
             }, [F, H, ea]),
             ef = l.useCallback(e => {
                 let t = w.current;
@@ -108,11 +108,11 @@ function(e, t, n) {
                 G(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
             }, [H]);
         l.useEffect(() => {
-            !J && W && q(!0)
-        }, [W, J]);
+            !Z && W && q(!0)
+        }, [W, Z]);
         let ep = l.useRef(null);
         l.useEffect(() => {
-            if (J || W) {
+            if (Z || W) {
                 if (W) {
                     var e, t;
                     ep.current = performance.now(), null == j || j(!1, F, (null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * x.default.Millis.SECOND)
@@ -207,12 +207,12 @@ function(e, t, n) {
                 currentTime: F,
                 duration: null != H ? H : 1,
                 playing: W,
-                played: J,
+                played: Z,
                 onDrag: ef,
                 onDragStart: ed,
                 onDragEnd: ec
             }), (0, i.jsx)(_, {
-                played: J,
+                played: Z,
                 currentTime: F,
                 duration: H
             }), (0, i.jsx)(f.default, {
