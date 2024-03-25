@@ -36,15 +36,15 @@ function(e, t, n) {
             } = (0, u.useAnalyticsContext)(), {
                 analyticsLocations: v
             } = (0, d.default)(), {
-                isLoading: N,
-                suggestedPremiumType: A
+                isLoading: A,
+                suggestedPremiumType: N
             } = (0, p.default)({
                 autoTrackExposure: !0,
                 experiment: f.default,
                 location: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH
             }), R = l.useRef(!1), O = l.useCallback(() => {
                 (0, c.default)({
-                    subscriptionTier: y.default.getSkuIdForPremiumType(A),
+                    subscriptionTier: y.default.getSkuIdForPremiumType(N),
                     analyticsLocations: v,
                     analyticsObject: {
                         ...I,
@@ -52,10 +52,10 @@ function(e, t, n) {
                         objectType: g.AnalyticsObjectTypes.TIER_2
                     }
                 }), null == T || T()
-            }, [v, I, T, A]), M = A === S.PremiumTypes.TIER_0;
+            }, [v, I, T, N]), M = N === S.PremiumTypes.TIER_0;
             return (0, i.jsx)("div", {
                 className: s(_.wrapper, n),
-                children: N ? (0, i.jsx)(o.Spinner, {
+                children: A ? (0, i.jsx)(o.Spinner, {
                     type: o.SpinnerTypes.PULSING_ELLIPSIS
                 }) : (0, i.jsx)(r.VisibilitySensor, {
                     onChange: e => {
@@ -63,7 +63,7 @@ function(e, t, n) {
                             type: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
                             location: I,
                             location_stack: v,
-                            sku_id: y.default.getSkuIdForPremiumType(A)
+                            sku_id: y.default.getSkuIdForPremiumType(N)
                         }), R.current = !0)
                     },
                     children: (0, i.jsxs)("div", {

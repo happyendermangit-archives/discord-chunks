@@ -46,12 +46,12 @@ function(e, t, n) {
         let T = E !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == g ? void 0 : g.id) !== t.id && !S && !(null != y && y !== n),
             I = T && (null == g ? void 0 : g.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
             v = T && null != C && null == C.profileEffectId && (null == _ ? void 0 : _.profileEffectId) != null,
-            [N, A] = (0, f.useSelectedDismissibleContent)((I, []), void 0, !0);
+            [A, N] = (0, f.useSelectedDismissibleContent)((I, []), void 0, !0);
         return {
-            shouldShow: N === r.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
+            shouldShow: A === r.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
             canShowAvatarDecorationUpsell: I,
             canShowProfileEffectUpsell: v,
-            onDismiss: A
+            onDismiss: N
         }
     }
 }

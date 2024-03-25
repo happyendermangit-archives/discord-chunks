@@ -2,7 +2,7 @@ function(N, I, A) {
     "use strict";
     A.r(I), A.d(I, {
         default: function() {
-            return n
+            return t
         }
     });
     var O = A("446674"),
@@ -16,7 +16,7 @@ function(N, I, A) {
         let A = null === (I = e.default.settings.localization) || void 0 === I ? void 0 : null === (N = I.locale) || void 0 === N ? void 0 : N.value;
         return null != A && "" !== A && A !== E && (E = A, _.setLocale(E), !0)
     }
-    class t extends O.default.Store {
+    class i extends O.default.Store {
         initialize() {
             this.waitFor(e.default), V(), _.setLocale(E)
         }
@@ -24,8 +24,8 @@ function(N, I, A) {
             return E
         }
     }
-    t.displayName = "LocaleStore";
-    var n = new t(T.default, {
+    i.displayName = "LocaleStore";
+    var t = new i(T.default, {
         OVERLAY_INITIALIZE: V,
         CACHE_LOADED: V,
         CONNECTION_OPEN: V,

@@ -38,7 +38,7 @@ function(e, t, n) {
             return v
         },
         getDiscoverableGuild: function() {
-            return N
+            return A
         }
     }), n("222007");
     var i, l, a = n("522632"),
@@ -237,7 +237,7 @@ function(e, t, n) {
             guild_size: c.default.getMemberCount(e)
         })
     }
-    async function N(e) {
+    async function A(e) {
         try {
             var t, n;
             let i = await s.HTTP.get({

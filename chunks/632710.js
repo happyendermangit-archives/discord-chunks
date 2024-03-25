@@ -29,8 +29,8 @@ function(e, t, n) {
         T = n("667618"),
         I = n("865677"),
         v = n("15874"),
-        N = n("774713"),
-        A = n("510788"),
+        A = n("774713"),
+        N = n("510788"),
         R = n("756731"),
         O = n("762806"),
         M = n("438278"),
@@ -100,7 +100,7 @@ function(e, t, n) {
                 t = [a, e]
             } else if (z) {
                 let e = (0, p.unpackStageChannelParty)(n);
-                null != e && (t = [(0, i.jsx)(N.default, {
+                null != e && (t = [(0, i.jsx)(A.default, {
                     guildId: e.guildId,
                     channelId: e.channelId,
                     color: D,
@@ -137,7 +137,7 @@ function(e, t, n) {
                         look: w,
                         isEmbedded: H
                     }, "join-activity-button"),
-                    s = (0, i.jsx)(A.default, {
+                    s = (0, i.jsx)(N.default, {
                         activity: n,
                         user: l,
                         color: D,

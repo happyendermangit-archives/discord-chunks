@@ -28,8 +28,8 @@ function(e, t, n) {
             let {
                 channel: I,
                 type: v,
-                editorHeight: N,
-                onVisibilityChange: A
+                editorHeight: A,
+                onVisibilityChange: N
             } = e, R = (0, p.useUID)(), O = (0, o.useStateFromStores)([c.default], () => {
                 var e;
                 return null !== (e = c.default.getGuild(I.guild_id)) && void 0 !== e ? e : null
@@ -47,14 +47,14 @@ function(e, t, n) {
             }, {
                 autoTrackExposure: !1
             }), D = (0, y.useChannelAutocompleteLayerPosition)({
-                editorHeight: N,
+                editorHeight: A,
                 type: v,
                 state: k,
                 isInPopoutExperiment: U
             }), w = l.useMemo(() => null == D ? "" : String(Date.now()), [null == D ? void 0 : D.top, null == D ? void 0 : D.left, null == D ? void 0 : D.bottom, null == D ? void 0 : D.right]);
             if (l.useEffect(() => {
-                    A(k.isVisible)
-                }, [A, k.isVisible]), !k.isVisible || null == k.query || void 0 === D) return null;
+                    N(k.isVisible)
+                }, [N, k.isVisible]), !k.isVisible || null == k.query || void 0 === D) return null;
             let F = null !== (a = k.query.typeInfo.renderResults({
                 results: k.query.results,
                 selectedIndex: k.selectedIndex,

@@ -33,8 +33,8 @@ function(e, t, n) {
             onClose: a,
             closePopout: I,
             sound: v,
-            channel: N
-        } = e, A = (0, d.default)(), [R, O] = l.useState(!1), {
+            channel: A
+        } = e, N = (0, d.default)(), [R, O] = l.useState(!1), {
             location: M
         } = (0, u.useAnalyticsContext)(), k = l.useMemo(() => ({
             ...M,
@@ -43,11 +43,11 @@ function(e, t, n) {
             analyticsLocations: L
         } = (0, f.default)(c.default.PREMIUM_UPSELL), {
             previewSound: P
-        } = (0, E.default)(v, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), b = (0, y.PreviewButton)({
+        } = (0, E.default)(v, null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : null), b = (0, y.PreviewButton)({
             sound: v,
             previewSound: P,
             tooltipPosition: "left"
-        }), j = (0, r.isThemeLight)(A) ? n("602291") : n("609708");
+        }), j = (0, r.isThemeLight)(N) ? n("602291") : n("609708");
         l.useEffect(() => {
             h.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: S.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,

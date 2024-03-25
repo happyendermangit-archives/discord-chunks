@@ -31,8 +31,8 @@ function(e, t, n) {
         T = n("719923"),
         I = n("627601"),
         v = n("994428"),
-        N = n("782340"),
-        A = n("154477"),
+        A = n("782340"),
+        N = n("154477"),
         R = n("604689");
 
     function O(e) {
@@ -40,11 +40,11 @@ function(e, t, n) {
             onClick: t
         } = e;
         return (0, i.jsx)(u.Clickable, {
-            className: A.closeButton,
+            className: N.closeButton,
             onClick: t,
-            "aria-label": N.default.Messages.DISMISS,
+            "aria-label": A.default.Messages.DISMISS,
             children: (0, i.jsx)(_.default, {
-                className: A.closeIcon,
+                className: N.closeIcon,
                 width: 18,
                 height: 18
             })
@@ -55,7 +55,7 @@ function(e, t, n) {
             variant: "text-sm/normal",
             color: "text-normal",
             tag: "span",
-            className: A.ctaLink,
+            className: N.ctaLink,
             children: e
         }),
         L = e => {
@@ -69,9 +69,9 @@ function(e, t, n) {
                 size: (0, m.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_48)
             });
             return (0, i.jsx)(u.Clickable, {
-                className: A.avatarButton,
+                className: N.avatarButton,
                 onClick: n,
-                "aria-label": N.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
+                "aria-label": A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
                 children: (0, i.jsx)(u.Avatar, {
                     src: R,
                     avatarDecoration: l,
@@ -121,39 +121,39 @@ function(e, t, n) {
             null == h || h(v.ContentDismissActionType.DISMISS)
         }, [h]);
         if (!R && !P) return null;
-        let J = (0, r.match)([R, P]).with([!0, !0], () => W && Y && H ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+        let J = (0, r.match)([R, P]).with([!0, !0], () => W && Y && H ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
             openShop: k
-        }) : W && Y ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
+        }) : W && Y ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
             openShop: k
-        }) : N.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
+        }) : A.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
             openShop: k
-        })).with([!0, !1], () => W && H ? N.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
+        })).with([!0, !1], () => W && H ? A.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
             openShop: k
-        }) : N.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
+        }) : A.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
             openShop: k
-        })).with([!1, !0], () => Y && H ? N.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
+        })).with([!1, !0], () => Y && H ? A.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
             openShop: k
-        }) : (Y && N.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
+        }) : (Y && A.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
             openShop: k
-        }), N.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL.format({
+        }), A.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL.format({
             openShop: k
         }))).otherwise(() => null);
         return (0, i.jsx)("div", {
             style: F,
-            className: s(A.containerWrapper, {
-                [A.animation]: !U,
-                [A.inSidebar]: _
+            className: s(N.containerWrapper, {
+                [N.animation]: !U,
+                [N.inSidebar]: _
             }),
             ref: D,
             children: (0, i.jsxs)("div", {
-                className: A.container,
+                className: N.container,
                 children: [R && (0, i.jsx)(L, {
                     user: n,
                     onClick: z
                 }), (0, i.jsx)(u.Clickable, {
-                    className: R ? A.contentWithAvatar : A.content,
+                    className: R ? N.contentWithAvatar : N.content,
                     onClick: z,
-                    "aria-label": N.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
+                    "aria-label": A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
                     children: (0, i.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         color: "text-normal",
@@ -161,7 +161,7 @@ function(e, t, n) {
                         children: J
                     })
                 }), (0, i.jsx)("div", {
-                    className: A.buttons,
+                    className: N.buttons,
                     children: (0, i.jsx)(O, {
                         onClick: Z
                     })

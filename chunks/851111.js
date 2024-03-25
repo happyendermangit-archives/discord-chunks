@@ -32,16 +32,16 @@ function(e, t, n) {
             channel: n
         } = e, [a, I] = l.useState(!1), {
             subscription: v,
-            hasFetchedSubscriptions: N
+            hasFetchedSubscriptions: A
         } = (0, r.useStateFromStoresObject)([f.default], () => ({
             subscription: f.default.getPremiumSubscription(),
             hasFetchedSubscriptions: f.default.hasFetchedSubscriptions()
         }));
         if (l.useEffect(() => {
-                !N && (0, d.fetchSubscriptions)()
-            }, [N]), null == v || !(0, x.isSubscriptionStatusFailedPayment)(v.status) || a) return null;
-        let A = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDays)(v) : g.MAX_ACCOUNT_HOLD_DAYS,
-            R = s(v.currentPeriodStart).add(A, "days"),
+                !A && (0, d.fetchSubscriptions)()
+            }, [A]), null == v || !(0, x.isSubscriptionStatusFailedPayment)(v.status) || a) return null;
+        let N = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDays)(v) : g.MAX_ACCOUNT_HOLD_DAYS,
+            R = s(v.currentPeriodStart).add(N, "days"),
             O = "".concat(v.id, ":").concat(R.toISOString());
         if (T === O) return null;
         let M = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;

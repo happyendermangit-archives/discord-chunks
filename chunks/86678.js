@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("986632"),
         I = n("538282"),
         v = n("246511"),
-        N = n("45961"),
-        A = n("802894"),
+        A = n("45961"),
+        N = n("802894"),
         R = n("592407"),
         O = n("139321"),
         M = n("716849"),
@@ -114,7 +114,7 @@ function(e, t, n) {
                 gridContainerProps: y,
                 handleGridContainerKeyDown: g,
                 isUsingKeyboardNavigation: _
-            } = (0, N.useExpressionPickerGridKeyboardNavigation)({
+            } = (0, A.useExpressionPickerGridKeyboardNavigation)({
                 columnCounts: i,
                 gridNavigatorId: J.GRID_NAVIGATOR_ID,
                 itemGrid: s,
@@ -197,14 +197,14 @@ function(e, t, n) {
                 autoFocus: eI = !0,
                 accessory: ev
             } = ex,
-            eN = (0, d.useStateFromStores)([P.default], () => null != f ? P.default.getDefaultChannel(f) : null, [f]),
-            [eA, eR] = l.useState(null),
+            eA = (0, d.useStateFromStores)([P.default], () => null != f ? P.default.getDefaultChannel(f) : null, [f]),
+            [eN, eR] = l.useState(null),
             eO = l.useRef(""),
             eM = (0, I.useExpressionPickerStore)(e => e.searchQuery),
             ek = l.useRef(null),
             eL = l.useRef(null),
             eP = l.useRef(null);
-        null == u && null != eN && (u = eN);
+        null == u && null != eA && (u = eA);
         let eb = null !== (a = null !== (n = null == u ? void 0 : u.getGuildId()) && void 0 !== n ? n : f) && void 0 !== a ? a : null,
             [ej, eU] = l.useState(!1),
             eD = b.default.getCurrentUser(),
@@ -230,7 +230,7 @@ function(e, t, n) {
             diversitySurrogate: S.default.diversitySurrogate
         })), ez = (0, w.useEmojiSearchResults)(eM, u, o), eZ = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eJ = L.EmojiPickerCollapsedSections.useSetting(), eQ = l.useMemo(() => new Set(eJ), [eJ]), eq = l.useCallback(e => {
             L.EmojiPickerCollapsedSections.updateSetting(Array.from(e))
-        }, []), eX = (0, N.useExpressionPickerGridWidth)({
+        }, []), eX = (0, A.useExpressionPickerGridWidth)({
             gridWrapperRef: ek,
             containerWidth: ed,
             listPaddingLeft: et,
@@ -346,17 +346,17 @@ function(e, t, n) {
         }, [eM, eK, eZ, ez, o]);
         let ti = null != eE ? eE : R ? "div" : p.Dialog,
             tl = null != eX;
-        (null == eA ? void 0 : eA.type) === K.EmojiUpsellType.PREMIUM ? r = (0, i.jsx)(Z.default, {
+        (null == eN ? void 0 : eN.type) === K.EmojiUpsellType.PREMIUM ? r = (0, i.jsx)(Z.default, {
             onLearnMore: e4,
-            emojiDescriptor: eA.emojiDescriptor,
+            emojiDescriptor: eN.emojiDescriptor,
             pickerIntention: o,
             analyticsLocation: eK,
             onClose: () => eR(null),
             channel: u
-        }) : (null == eA ? void 0 : eA.type) === K.EmojiUpsellType.ROLE_SUBSCRIPTION ? r = (0, i.jsx)(A.default, {
+        }) : (null == eN ? void 0 : eN.type) === K.EmojiUpsellType.ROLE_SUBSCRIPTION ? r = (0, i.jsx)(N.default, {
             onClose: () => eR(null),
-            guildId: eA.guildId,
-            emojiId: eA.emojiId
+            guildId: eN.guildId,
+            emojiId: eN.emojiId
         }) : ej && !ew && (r = (0, i.jsx)(G.default, {
             onDismiss: () => eU(!1)
         }));

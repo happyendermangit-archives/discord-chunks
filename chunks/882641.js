@@ -34,12 +34,12 @@ function(e, t, n) {
             "aria-controls": y,
             focusProps: g
         } = e, [S, C] = l.useState(!1), [_, T] = l.useState(50), I = S || x, v = (0, d.getClass)(p, "emojiButton", I ? "Hovered" : "Normal");
-        let N = (t = _, {
+        let A = (t = _, {
                 "--custom-emoji-sprite-size": "".concat(24, "px"),
                 "--custom-emoji-sprite-row": Math.floor(t / 20),
                 "--custom-emoji-sprite-col": t % 20
             }),
-            A = l.useCallback(() => {
+            N = l.useCallback(() => {
                 if (!I) C(!0), T(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
             }, [I, C, T]),
             R = l.useCallback(() => {
@@ -51,8 +51,8 @@ function(e, t, n) {
             size: o.Button.Sizes.NONE,
             tabIndex: n,
             className: s(v, a),
-            onMouseEnter: A,
-            onMouseOver: A,
+            onMouseEnter: N,
+            onMouseOver: N,
             onMouseLeave: R,
             onFocus: O,
             onClick: E,
@@ -73,7 +73,7 @@ function(e, t, n) {
                     return (0, i.jsxs)(r.animated.div, {
                         className: p.spriteContainer,
                         style: {
-                            ...N,
+                            ...A,
                             transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
                         },
                         children: [(0, i.jsx)("div", {

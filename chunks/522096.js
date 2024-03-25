@@ -33,8 +33,8 @@ function(e, t, n) {
             renderEmptySearchState: T,
             renderCategoryList: I,
             renderHeaderAccessories: v,
-            rowHeight: N,
-            sectionHeaderHeight: A,
+            rowHeight: A,
+            sectionHeaderHeight: N,
             sectionFooterHeight: R,
             itemNodeWidth: O,
             listPaddingRight: M,
@@ -128,8 +128,8 @@ function(e, t, n) {
                         renderEmptySearchState: T,
                         rowCount: K,
                         rowCountBySection: W,
-                        rowHeight: N,
-                        sectionHeaderHeight: A,
+                        rowHeight: A,
+                        sectionHeaderHeight: N,
                         sectionFooterHeight: R
                     }) : null
                 })]

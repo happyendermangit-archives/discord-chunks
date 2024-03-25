@@ -97,8 +97,8 @@ function(e, t, n) {
             shouldAnimate: T,
             onClose: I,
             shouldHideMediaOptions: v = !1,
-            obscure: N = !1,
-            ...A
+            obscure: A = !1,
+            ...N
         } = e, {
             width: R,
             height: O
@@ -110,13 +110,13 @@ function(e, t, n) {
         }, [I]);
         let k = v ? e => {
             e.stopPropagation(), e.preventDefault()
-        } : A.onContextMenu;
+        } : N.onContextMenu;
         return (0, i.jsxs)("div", {
             className: g.wrapper,
             children: [M ? (0, i.jsx)(S, {
                 onClose: I
             }) : null, (0, i.jsx)(C, {
-                isObscured: N,
+                isObscured: A,
                 src: t,
                 children: e => (0, i.jsx)(m.default, {
                     src: t,
@@ -131,7 +131,7 @@ function(e, t, n) {
                     autoPlay: !e,
                     responsive: p,
                     onContextMenu: k,
-                    ...A
+                    ...N
                 }, t)
             }), null != n && !v && h({
                 href: n,

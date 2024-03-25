@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Sequencer: function() {
-            return E
+            return g
         }
     }), n("222007");
-    var i, s, r = n("37983"),
-        a = n("884691"),
-        o = n("414456"),
-        l = n.n(o),
-        u = n("458960"),
-        d = n("266491"),
-        c = n("413197"),
-        _ = n("86337");
-    (s = i || (i = {}))[s.ENTERING = 0] = "ENTERING", s[s.LEAVING = 1] = "LEAVING", s[s.APPEARING = 2] = "APPEARING", s[s.STATIC = 3] = "STATIC";
-    class f extends a.PureComponent {
+    var i, s, r, a, o = n("37983"),
+        l = n("884691"),
+        u = n("414456"),
+        d = n.n(u),
+        c = n("458960"),
+        _ = n("266491"),
+        f = n("413197"),
+        E = n("86337");
+    (r = i || (i = {}))[r.ENTERING = 0] = "ENTERING", r[r.LEAVING = 1] = "LEAVING", r[r.APPEARING = 2] = "APPEARING", r[r.STATIC = 3] = "STATIC", (a = s || (s = {})).SLIDE = "slide", a.LIFT = "lift";
+    class h extends l.PureComponent {
         componentDidMount() {
             if (null != this._measureRef.current) {
                 let {
@@ -52,7 +52,7 @@ function(e, t, n) {
             } = this.state;
             this.setState({
                 animationState: 0
-            }), this.props.setHeight(this.state.targetHeight), u.default.timing(n, {
+            }), this.props.setHeight(this.state.targetHeight), c.default.timing(n, {
                 toValue: 2,
                 duration: t,
                 delay: t / 2
@@ -72,7 +72,7 @@ function(e, t, n) {
             } = this.props;
             this.direction = i(), this.setState({
                 animationState: 1
-            }), u.default.timing(t, {
+            }), c.default.timing(t, {
                 toValue: 0,
                 duration: n
             }).start(e)
@@ -82,47 +82,74 @@ function(e, t, n) {
                 animationState: 3
             })
         }
+        getMotionAnimation() {
+            let {
+                reducedMotion: e
+            } = this.context;
+            if (e.enabled) return null;
+            let {
+                animationMotionType: t
+            } = this.props, {
+                animationProgress: n,
+                animationState: i
+            } = this.state, s = (1 === i ? -1 : 1) * this.direction;
+            switch (t) {
+                case "slide":
+                    return {
+                        transform: [{
+                            translateX: n.interpolate({
+                                inputRange: [0, 2],
+                                outputRange: ["".concat(150 * s, "%"), "0%"],
+                                extrapolate: "clamp",
+                                easing: c.default.Easing.inOut(c.default.Easing.ease)
+                            })
+                        }]
+                    };
+                case "lift":
+                    return {
+                        transform: [{
+                            translateY: n.interpolate({
+                                inputRange: [0, 2],
+                                outputRange: ["".concat(10 * s, "%"), "0%"],
+                                extrapolate: "clamp",
+                                easing: c.default.Easing.inOut(c.default.Easing.ease)
+                            })
+                        }]
+                    };
+                default:
+                    return null
+            }
+        }
         getAnimatedStyle() {
             var e, t;
             let {
-                reducedMotion: n
-            } = this.context, {
-                fillParent: i
+                fillParent: n
             } = this.props, {
-                animationProgress: s,
-                animationState: r,
-                baseHeight: a,
-                targetHeight: o
-            } = this.state, l = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, d = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, c = 1 === r, _ = 0 === r, f = (c ? -1 : 1) * this.direction, E = {
-                transform: [{
-                    translateX: s.interpolate({
-                        inputRange: [0, 2],
-                        outputRange: ["".concat(150 * f, "%"), "0%"],
-                        extrapolate: "clamp",
-                        easing: u.default.Easing.inOut(u.default.Easing.ease)
-                    })
-                }]
-            };
+                animationProgress: i,
+                animationState: s,
+                baseHeight: r,
+                targetHeight: a
+            } = this.state, o = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, l = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, u = 1 === s, d = 0 === s;
             return {
-                overflow: _ || c ? "hidden" : "visible",
-                position: c ? "absolute" : void 0,
-                top: c ? d : void 0,
-                left: c ? l : void 0,
-                right: c ? l : void 0,
-                bottom: c ? d : void 0,
-                ...n.enabled ? null : E,
-                opacity: s.interpolate({
+                overflow: d || u ? "hidden" : "visible",
+                position: u ? "absolute" : void 0,
+                top: u ? l : void 0,
+                left: u ? o : void 0,
+                right: u ? o : void 0,
+                bottom: u ? l : void 0,
+                ...this.getMotionAnimation(),
+                opacity: i.interpolate({
                     inputRange: [0, 2],
                     outputRange: [0, 1],
                     extrapolate: "clamp",
-                    easing: u.default.Easing.inOut(u.default.Easing.ease)
+                    easing: c.default.Easing.inOut(c.default.Easing.ease)
                 }),
-                height: _ ? s.interpolate({
+                height: d ? i.interpolate({
                     inputRange: [0, 1],
-                    outputRange: [a, o],
+                    outputRange: [r, a],
                     extrapolate: "clamp",
-                    easing: u.default.Easing.inOut(u.default.Easing.ease)
-                }) : i ? "100%" : "auto"
+                    easing: c.default.Easing.inOut(c.default.Easing.ease)
+                }) : n ? "100%" : "auto"
             }
         }
         render() {
@@ -134,21 +161,21 @@ function(e, t, n) {
             } = this.props, {
                 animationState: s
             } = this.state;
-            return e ? (0, r.jsx)("div", {
+            return e ? (0, o.jsx)("div", {
                 ref: this._measureRef,
-                className: l(_.measurementFill, t, {
-                    [l(_.measurementFillStatic, i)]: 3 === s
+                className: d(E.measurementFill, t, {
+                    [d(E.measurementFillStatic, i)]: 3 === s
                 }),
-                children: (0, r.jsx)(u.default.div, {
-                    className: l(_.animatedNode, n),
+                children: (0, o.jsx)(c.default.div, {
+                    className: d(E.animatedNode, n),
                     style: this.getAnimatedStyle(),
                     children: this.props.children
                 })
-            }) : (0, r.jsx)("div", {
+            }) : (0, o.jsx)("div", {
                 ref: this._measureRef,
-                className: l(_.measurement, t),
-                children: (0, r.jsx)(u.default.div, {
-                    className: l(_.animatedNode, n),
+                className: d(E.measurement, t),
+                children: (0, o.jsx)(c.default.div, {
+                    className: d(E.animatedNode, n),
                     style: this.getAnimatedStyle(),
                     children: this.props.children
                 })
@@ -156,17 +183,17 @@ function(e, t, n) {
         }
         constructor(...e) {
             super(...e), this.state = {
-                animationProgress: new u.default.Value(0),
+                animationProgress: new c.default.Value(0),
                 targetHeight: 0,
                 baseHeight: 0,
                 animationState: null
-            }, this.direction = this.props.getDirection(), this._measureRef = a.createRef()
+            }, this.direction = this.props.getDirection(), this._measureRef = l.createRef()
         }
     }
-    f.contextType = c.AccessibilityPreferencesContext, f.defaultProps = {
+    h.contextType = f.AccessibilityPreferencesContext, h.defaultProps = {
         duration: 300
     };
-    class E extends a.Component {
+    class g extends l.Component {
         componentDidMount() {
             this.setPrevSteps()
         }
@@ -187,25 +214,27 @@ function(e, t, n) {
                 innerClassName: n,
                 animatedNodeClassName: i,
                 staticClassName: s,
-                sideMargin: a,
-                verticalMargin: o,
-                children: u,
-                fillParent: c
+                sideMargin: r,
+                verticalMargin: a,
+                children: l,
+                fillParent: u,
+                animationMotionType: c
             } = this.props;
-            return (0, r.jsx)(d.TransitionGroup, {
+            return (0, o.jsx)(_.TransitionGroup, {
                 component: "div",
-                className: l(_.transitionGroup, t),
-                children: (0, r.jsx)(f, {
-                    fillParent: c,
-                    sideMargin: a,
-                    verticalMargin: o,
+                className: d(E.transitionGroup, t),
+                children: (0, o.jsx)(h, {
+                    fillParent: u,
+                    sideMargin: r,
+                    animationMotionType: null != c ? c : "slide",
+                    verticalMargin: a,
                     getDirection: this.getDirection,
                     getBaseHeight: this.getBaseHeight,
                     className: n,
                     animatedNodeClassName: i,
                     staticClassName: s,
                     setHeight: this.setHeight,
-                    children: u
+                    children: l
                 }, "".concat(e))
             })
         }
@@ -224,7 +253,8 @@ function(e, t, n) {
             }
         }
     }
-    E.defaultProps = {
-        fillParent: !1
+    g.defaultProps = {
+        fillParent: !1,
+        animationMotionType: "slide"
     }
 }

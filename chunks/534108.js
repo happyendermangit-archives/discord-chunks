@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("153769"),
         I = n("671434"),
         v = n("229915"),
-        N = n("368121"),
-        A = n("719923"),
+        A = n("368121"),
+        N = n("719923"),
         R = n("389480"),
         O = n("78581"),
         M = n("262439"),
@@ -189,7 +189,7 @@ function(e, t, n) {
             return g.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : w.EMPTY_STRING_SNOWFLAKE_ID)
         }), Q = (null == J ? void 0 : J.selfDeaf) || (null == J ? void 0 : J.mute) || (null == J ? void 0 : J.suppress), q = (0, h.useExpressionPickerStore)(e => e.searchQuery), X = (0, S.useUID)(), {
             categories: $
-        } = (0, k.default)(a, void 0, L), [ee, et] = l.useState([]), en = (0, k.useSearchCategories)($, ee, q), ei = E.SoundboardPickerCollapsedSections.useSetting(), el = l.useMemo(() => new Set(ei), [ei]), ea = null == a, es = A.default.canUseCustomCallSounds(Z), er = l.useCallback(e => {
+        } = (0, k.default)(a, void 0, L), [ee, et] = l.useState([]), en = (0, k.useSearchCategories)($, ee, q), ei = E.SoundboardPickerCollapsedSections.useSetting(), el = l.useMemo(() => new Set(ei), [ei]), ea = null == a, es = N.default.canUseCustomCallSounds(Z), er = l.useCallback(e => {
             let t = !el.has(e);
             t ? el.add(e) : el.delete(e), E.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
         }, [el]), eo = l.useCallback((e, t) => {
@@ -245,7 +245,7 @@ function(e, t, n) {
             className: G.settingsClickArea,
             onClick: ep,
             "aria-label": F.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
-            children: (0, i.jsx)(N.default, {
+            children: (0, i.jsx)(A.default, {
                 className: G.settingsIcon
             })
         }), [ep]), eh = l.useCallback(e => (0, i.jsx)(b.default, {

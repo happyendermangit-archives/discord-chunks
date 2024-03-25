@@ -28,7 +28,7 @@ function(e, t, n) {
         var t, n;
         let {
             onDismiss: l
-        } = e, S = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), C = y.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, _ = (0, d.usePremiumTrialOffer)(), T = (0, u.usePremiumDiscountOffer)(), I = (null == _ ? void 0 : _.subscription_trial) != null, v = I || null != T, N = {
+        } = e, S = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), C = y.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, _ = (0, d.usePremiumTrialOffer)(), T = (0, u.usePremiumDiscountOffer)(), I = (null == _ ? void 0 : _.subscription_trial) != null, v = I || null != T, A = {
             object: x.AnalyticsObjects.BUTTON_CTA,
             section: x.AnalyticsSections.SUPER_REACTION_PICKER
         };
@@ -60,7 +60,7 @@ function(e, t, n) {
                     type: E.PremiumUpsellTypes.BURST_REACTION_QUICK_ACTION_UPSELL,
                     subscriptionTier: null !== (n = null == _ ? void 0 : null === (t = _.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : E.PremiumSubscriptionSKUs.TIER_2,
                     headingText: y.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
-                    analyticsLocationObject: N,
+                    analyticsLocationObject: A,
                     discountOffer: T,
                     trialOffer: _,
                     children: C

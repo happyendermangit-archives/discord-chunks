@@ -29,9 +29,9 @@ function(e, t, n) {
         T = n("418630");
     let I = "16px",
         v = "12px",
-        N = "11px";
+        A = "11px";
 
-    function A(e) {
+    function N(e) {
         return null != e
     }
     var R = function(e) {
@@ -46,7 +46,7 @@ function(e, t, n) {
             quest: M,
             location: E.QuestContent.MEMBERS_LIST
         }), U = (0, x.useIsQuestExpired)(M), D = (null == M ? void 0 : null === (t = M.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, w = (null == M ? void 0 : null === (R = M.userStatus) || void 0 === R ? void 0 : R.enrolledAt) != null, F = (null == M ? void 0 : null === (O = M.userStatus) || void 0 === O ? void 0 : O.completedAt) != null;
-        if (null == M || U || D && !A(k)) return null;
+        if (null == M || U || D && !N(k)) return null;
         let G = () => {
                 (0, s.openModalLazy)(async () => {
                     let {
@@ -73,7 +73,7 @@ function(e, t, n) {
             children: (0, i.jsxs)(s.Clickable, {
                 className: T.container,
                 onClick: () => {
-                    if (P(), A(k)) {
+                    if (P(), N(k)) {
                         let e = f.default.getChannel(k.channelId);
                         if (null != e && (0, c.canWatchStream)(e, h.default, p.default, m.default, d.default)[0]) {
                             r.default.selectVoiceChannel(e.id), (0, o.watchStreamAndTransitionToStream)(k);
@@ -92,13 +92,13 @@ function(e, t, n) {
                             width: I
                         }), (0, i.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
-                            children: A(k) ? _.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE : F && !D ? _.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD : w ? _.default.Messages.QUESTS_MEMBERS_LIST_FINISH : _.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE
+                            children: N(k) ? _.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE : F && !D ? _.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD : w ? _.default.Messages.QUESTS_MEMBERS_LIST_FINISH : _.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE
                         })]
                     }), (0, i.jsxs)("div", {
                         className: T.middle,
                         children: [(0, i.jsx)(s.Text, {
                             variant: "text-sm/normal",
-                            children: A(k) ? _.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA : F && !D ? _.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA : w ? _.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA : _.default.Messages.QUESTS_MEMBERS_LIST_START_CTA
+                            children: N(k) ? _.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA : F && !D ? _.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA : w ? _.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA : _.default.Messages.QUESTS_MEMBERS_LIST_START_CTA
                         }), (0, i.jsx)(l.ArrowLargeRightIcon, {
                             width: v,
                             height: v
@@ -115,8 +115,8 @@ function(e, t, n) {
                                 gamePublisher: M.config.messages.gamePublisher
                             })
                         }), (0, i.jsx)(a.CircleQuestionIcon, {
-                            width: N,
-                            height: N,
+                            width: A,
+                            height: A,
                             color: s.tokens.colors.INTERACTIVE_MUTED
                         })]
                     })]
@@ -131,7 +131,7 @@ function(e, t, n) {
                                 gameTitle: M.config.messages.gameTitle,
                                 gamePublisher: M.config.messages.gamePublisher
                             }),
-                            src: !w || D || A(k) ? (0, y.getGameTileAssetUrl)(M.id) : (0, y.getRewardAssetUrl)(M.id)
+                            src: !w || D || N(k) ? (0, y.getGameTileAssetUrl)(M.id) : (0, y.getRewardAssetUrl)(M.id)
                         })]
                     })
                 })]
