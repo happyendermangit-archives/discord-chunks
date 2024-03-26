@@ -35,14 +35,14 @@ function(e, t, n) {
                 renderLinkComponent: T,
                 onClick: I,
                 onPlay: v,
-                onEnded: A,
-                onVolumeChange: N,
-                onMute: R,
-                alt: O = d.default.Messages.VIDEO,
+                onEnded: N,
+                onVolumeChange: A,
+                onMute: O,
+                alt: R = d.default.Messages.VIDEO,
                 ...M
             } = this.props;
             return (0, l.jsx)(r.default, {
-                alt: O,
+                alt: R,
                 className: n,
                 src: a,
                 ...M,
@@ -59,10 +59,10 @@ function(e, t, n) {
                             width: r,
                             height: d
                         }
-                    } = n, O = !(f <= u.MAX_VIDEO_WIDTH && p <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && p <= u.MAX_VIDEO_WIDTH);
+                    } = n, R = !(f <= u.MAX_VIDEO_WIDTH && p <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && p <= u.MAX_VIDEO_WIDTH);
                     return (0, l.jsx)(o.default, {
                         className: i,
-                        forceExternal: O,
+                        forceExternal: R,
                         src: e,
                         poster: a,
                         width: r,
@@ -81,9 +81,9 @@ function(e, t, n) {
                         renderOverlayContent: _,
                         onClick: I,
                         onPlay: v,
-                        onEnded: A,
-                        onVolumeChange: N,
-                        onMute: R,
+                        onEnded: N,
+                        onVolumeChange: A,
+                        onMute: O,
                         mimeType: C,
                         downloadable: h
                     })

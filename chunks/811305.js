@@ -16,7 +16,7 @@ function(e, t, n) {
         o = n.n(r),
         u = n("77078"),
         d = n("506885"),
-        c = n("981601"),
+        c = n("340906"),
         f = n("766274"),
         p = n("697218"),
         m = n("368121"),
@@ -113,6 +113,7 @@ function(e, t, n) {
                 fixed: !0,
                 renderPopout: e => (o(null != f, "UserSummaryItem.render - renderPopout: popoutUserId cannot be null"), (0, i.jsx)(c.default, {
                     ...this.props,
+                    location: "UserSummaryItem",
                     user: h && null != m ? m : void 0,
                     ...e,
                     userId: f,

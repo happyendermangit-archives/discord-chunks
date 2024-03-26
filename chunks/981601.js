@@ -28,10 +28,10 @@ function(e, t, n) {
         T = n("697218"),
         I = n("599110"),
         v = n("756507"),
-        A = n("713135"),
-        N = n("561845"),
-        R = n("217513"),
-        O = n("641055"),
+        N = n("713135"),
+        A = n("561845"),
+        O = n("217513"),
+        R = n("641055"),
         M = n("430312"),
         k = n("763866"),
         L = n("789321"),
@@ -60,9 +60,9 @@ function(e, t, n) {
             disableUserProfileLink: K = __OVERLAY__,
             analyticsParams: W = {},
             newAnalyticsLocations: Y = []
-        } = e, z = l.useRef(null), Z = (0, R.default)(t.id, n), J = (0, d.default)(z), Q = (0, r.useStateFromStores)([A.default], () => {
+        } = e, z = l.useRef(null), Z = (0, O.default)(t.id, n), J = (0, d.default)(z), Q = (0, r.useStateFromStores)([N.default], () => {
             var e;
-            return null === (e = A.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
+            return null === (e = N.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
         }), q = (0, r.useStateFromStores)([S.default], () => null != n ? S.default.getGuild(n) : null), X = (0, r.useStateFromStores)([g.default], () => null != n ? g.default.getMember(n, t.id) : null), $ = t.isNonUserBot(), {
             UserProfileAnalyticsProvider: ee
         } = (0, v.useUserProfileAnalyticsProvider)({
@@ -102,7 +102,7 @@ function(e, t, n) {
             [n]: [t.id]
         } : {}, [n, t.id]);
         (0, f.useSubscribeGuildMembers)(eo);
-        let eu = (0, N.default)(t.id, n),
+        let eu = (0, A.default)(t.id, n),
             ed = (0, j.useShouldShowUserPopoutCollectiblesUpsell)({
                 popoutUser: t,
                 source: P.UserPopoutUpsellSource.USER_POPOUT,
@@ -193,7 +193,7 @@ function(e, t, n) {
                                 ...ed
                             }) : void 0
                         }), (0, i.jsxs)(M.default.Inner, {
-                            children: [(0, i.jsx)(O.default, {
+                            children: [(0, i.jsx)(R.default, {
                                 onTooltipClose: B
                             }), (0, i.jsx)(k.default, {
                                 activity: et,

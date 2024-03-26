@@ -28,15 +28,15 @@ function(e, t, n) {
         T = n("389153"),
         I = n("586450"),
         v = n("41884"),
-        A = n("355263"),
-        N = n("317041"),
-        R = n("49111"),
-        O = n("782340"),
+        N = n("355263"),
+        A = n("317041"),
+        O = n("49111"),
+        R = n("782340"),
         M = n("847948"),
         k = n("327769");
     let L = [8, 8, 0, 8],
         P = o.debounce(() => {
-            (0, c.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
+            (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
         }, 300);
     var b = l.forwardRef(function(e, t) {
         let {
@@ -44,7 +44,7 @@ function(e, t, n) {
             canOnlyUseTextCommands: a
         } = e, r = l.useRef(!1), o = l.useRef(0), [b, U] = l.useState(0), D = l.useRef(null), [w, F] = l.useState(!1), G = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
         l.useEffect(() => {
-            (0, c.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
+            (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
         }, []);
         let {
             sectionDescriptors: H,
@@ -61,7 +61,7 @@ function(e, t, n) {
             applicationCommands: !a
         }, {
             placeholderCount: 7,
-            limit: N.DISCOVERY_COMMANDS_QUERY_LIMIT,
+            limit: A.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
         }), J = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: G,
@@ -98,7 +98,7 @@ function(e, t, n) {
             }
         }, [W, Y]);
         let $ = l.useCallback(e => {
-                if (e.id === Y || e.id === N.BuiltInSectionId.FRECENCY) {
+                if (e.id === Y || e.id === A.BuiltInSectionId.FRECENCY) {
                     var t;
                     Z(null), null === (t = D.current) || void 0 === t || t.scrollToSectionTop(0)
                 } else Z(e.id)
@@ -137,7 +137,7 @@ function(e, t, n) {
         let et = l.useCallback(e => {
                 let t = B[e];
                 if (null == t) return null;
-                let l = (0, A.getIconComponent)(t),
+                let l = (0, N.getIconComponent)(t),
                     a = (0, i.jsx)(l, {
                         channel: n,
                         section: t,
@@ -164,7 +164,7 @@ function(e, t, n) {
                         [M.categorySectionLast]: n
                     }),
                     children: [t, 0 === a.length && (0, i.jsx)(u.default, {
-                        message: O.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
+                        message: R.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
                             applicationName: l.name
                         }),
                         noResultsImageURL: k,
@@ -177,7 +177,7 @@ function(e, t, n) {
                 let a = V[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     r = "".concat(a.section.id, ":").concat(null !== (l = null == s ? void 0 : s.id) && void 0 !== l ? l : e);
-                if (null == s || a.section.id !== s.applicationId && a.section.id !== N.BuiltInSectionId.FRECENCY || s.inputType === _.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
+                if (null == s || a.section.id !== s.applicationId && a.section.id !== A.BuiltInSectionId.FRECENCY || s.inputType === _.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
                 let o = H.find(e => e.id === s.applicationId);
                 return (0, i.jsx)(x.default.NewCommand, {
                     index: e,

@@ -13,7 +13,7 @@ function(e, t, n) {
         o = n("145079"),
         u = n("86621"),
         d = n("506885"),
-        c = n("981601"),
+        c = n("340906"),
         f = n("145131"),
         p = n("49111"),
         m = n("260486");
@@ -38,6 +38,7 @@ function(e, t, n) {
                 }),
                 renderPopout: e => (0, i.jsx)(c.default, {
                     ...e,
+                    location: "UserListItem",
                     guildId: a,
                     userId: t.id,
                     analyticsParams: s

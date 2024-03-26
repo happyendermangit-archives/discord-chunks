@@ -5,10 +5,10 @@ function(e, t, n) {
             return v
         },
         ConnectedApplicationUserRoleAccount: function() {
-            return A
+            return N
         },
         ConnectedUserAccounts: function() {
-            return N
+            return A
         }
     }), n("424973");
     var i = n("37983"),
@@ -39,18 +39,18 @@ function(e, t, n) {
         let l, a, d, {
             connectedAccount: E,
             theme: v,
-            locale: A,
-            userId: N,
-            className: R,
-            showMetadata: O,
+            locale: N,
+            userId: A,
+            className: O,
+            showMetadata: R,
             showInvisibleIcon: M
         } = e;
-        null == O && (O = !0);
+        null == R && (R = !0);
         let k = null !== (n = E.metadata) && void 0 !== n ? n : {},
-            L = O ? (0, m.getCreatedAtDate)(k[_.MetadataFields.CREATED_AT], A) : null,
+            L = R ? (0, m.getCreatedAtDate)(k[_.MetadataFields.CREATED_AT], N) : null,
             P = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
             b = T.default.Messages.CONNECTION_VERIFIED;
-        if (O) switch (E.type) {
+        if (R) switch (E.type) {
             case C.PlatformTypes.REDDIT:
                 l = (0, h.generateRedditMetadataItems)(k);
                 break;
@@ -81,7 +81,7 @@ function(e, t, n) {
             href: U,
             onClick: e => {
                 var t, n;
-                t = E.type, n = N, (0, f.trackWithMetadata)(C.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
+                t = E.type, n = A, (0, f.trackWithMetadata)(C.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
                     platform_type: t,
                     other_user_id: n
                 }), (0, S.handleClick)({
@@ -104,7 +104,7 @@ function(e, t, n) {
                 tooltipText: b
             }) : null;
         return (0, i.jsxs)("div", {
-            className: s(I.connectedAccountContainer, null != l && l.length > 0 || null != L ? I.connectedAccountContainerWithMetadata : null, R),
+            className: s(I.connectedAccountContainer, null != l && l.length > 0 || null != L ? I.connectedAccountContainerWithMetadata : null, O),
             children: [(0, i.jsxs)("div", {
                 className: I.connectedAccount,
                 children: [(0, i.jsx)(u.Tooltip, {
@@ -150,7 +150,7 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function N(e) {
         let {
             applicationRoleConnection: t,
             className: n,
@@ -206,7 +206,7 @@ function(e, t, n) {
             })]
         })
     }
-    let N = l.forwardRef(function(e, t) {
+    let A = l.forwardRef(function(e, t) {
         let {
             connectedAccounts: n,
             theme: l,

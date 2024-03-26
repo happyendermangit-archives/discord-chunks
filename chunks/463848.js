@@ -31,10 +31,10 @@ function(e, t, n) {
         T = n("305961"),
         I = n("957255"),
         v = n("800762"),
-        A = n("313873"),
-        N = n("599110"),
-        R = n("474293"),
-        O = n("49111"),
+        N = n("313873"),
+        A = n("599110"),
+        O = n("474293"),
+        R = n("49111"),
         M = n("782340"),
         k = n("970574");
 
@@ -52,7 +52,7 @@ function(e, t, n) {
             actionColor: m
         } = e;
         return (0, i.jsx)(c.default, {
-            className: (0, R.getClass)(k, "actions", t),
+            className: (0, O.getClass)(k, "actions", t),
             type: t,
             source: n,
             activity: l,
@@ -66,7 +66,7 @@ function(e, t, n) {
             isEmbedded: p
         })
     }
-    let P = A.default.Types;
+    let P = N.default.Types;
     var b = function(e) {
         let {
             activity: t,
@@ -75,7 +75,7 @@ function(e, t, n) {
             showActions: o = !0,
             hideHeader: d = !1,
             analyticsParams: c,
-            ...R
+            ...O
         } = e, P = (0, r.useStateFromStores)([v.default, _.default], () => {
             var e;
             return _.default.getChannel(null === (e = v.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
@@ -86,21 +86,21 @@ function(e, t, n) {
             location: "UserActivityContainer"
         }, {
             autoTrackExposure: !1
-        }), j = (0, r.useStateFromStores)([C.default], () => a ? C.default.getAnyStreamForUser(n.id) : null), U = b && I.default.can(O.Permissions.CONNECT, P), D = (null == t ? void 0 : t.type) === O.ActivityTypes.HANG_STATUS && U ? P : null, w = (0, r.useStateFromStores)([T.default, v.default, _.default], () => {
+        }), j = (0, r.useStateFromStores)([C.default], () => a ? C.default.getAnyStreamForUser(n.id) : null), U = b && I.default.can(R.Permissions.CONNECT, P), D = (null == t ? void 0 : t.type) === R.ActivityTypes.HANG_STATUS && U ? P : null, w = (0, r.useStateFromStores)([T.default, v.default, _.default], () => {
             var e, i;
-            return (0, u.default)(t, O.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = _.default.getChannel(null === (i = v.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? T.default.getGuild(D.getGuildId()) : null
+            return (0, u.default)(t, R.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = _.default.getChannel(null === (i = v.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? T.default.getGuild(D.getGuildId()) : null
         }), F = (0, r.useStateFromStores)([T.default], () => null != j ? T.default.getGuild(j.guildId) : null), G = (0, r.useStateFromStores)([f.default], () => {
             if (null != t) return null != t.application_id ? f.default.getApplication(t.application_id) : f.default.getApplicationByName(t.name);
             return null
         }), H = (0, p.default)(), B = (0, y.default)(n), V = H && null != t && B;
         return (l.useEffect(() => {
-            (null == t ? void 0 : t.type) === O.ActivityTypes.HANG_STATUS && U && N.default.track(O.AnalyticEvents.VIEW_HANG_STATUS, {
+            (null == t ? void 0 : t.type) === R.ActivityTypes.HANG_STATUS && U && A.default.track(R.AnalyticEvents.VIEW_HANG_STATUS, {
                 source: "UserProfilePopout",
                 guild_id: null == D ? void 0 : D.guild_id,
                 channel_id: null == D ? void 0 : D.id
             })
-        }, [null == t ? void 0 : t.type, U, D]), (null == t ? void 0 : t.type) !== O.ActivityTypes.HANG_STATUS || U) ? (0, i.jsx)(A.default, {
-            ...R,
+        }, [null == t ? void 0 : t.type, U, D]), (null == t ? void 0 : t.type) !== R.ActivityTypes.HANG_STATUS || U) ? (0, i.jsx)(N.default, {
+            ...O,
             activity: t,
             user: n,
             application: G,
@@ -110,7 +110,7 @@ function(e, t, n) {
             renderActions: o ? () => (0, i.jsxs)("div", {
                 className: s(V && k.actionsWrapper),
                 children: [(0, i.jsx)(L, {
-                    ...R,
+                    ...O,
                     applicationStream: j,
                     activity: t,
                     user: n
@@ -129,7 +129,7 @@ function(e, t, n) {
                             emoji: l,
                             reply: a
                         } = e;
-                        N.default.track(O.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
+                        A.default.track(R.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
                             application_id: t.application_id,
                             interaction_type: i,
                             ...c

@@ -152,10 +152,10 @@ function(e, t, n) {
                 onClick: _,
                 renderAccessory: I,
                 tabIndex: v,
-                limitResponsiveWidth: A,
-                useFullWidth: N,
-                placeholder: R,
-                placeholderVersion: O
+                limitResponsiveWidth: N,
+                useFullWidth: A,
+                placeholder: O,
+                placeholderVersion: R
             } = this.props, {
                 readyState: M,
                 hasMouseOver: k,
@@ -170,14 +170,14 @@ function(e, t, n) {
                 minWidth: E,
                 minHeight: y,
                 mediaLayoutType: this.getType(),
-                limitResponsiveWidth: A,
-                useFullWidth: N,
+                limitResponsiveWidth: N,
+                useFullWidth: A,
                 tabIndex: v,
                 width: j,
                 height: U,
                 src: "",
-                placeholder: R,
-                placeholderVersion: O,
+                placeholder: O,
+                placeholderVersion: R,
                 children: null != f ? e => {
                     let {
                         src: t,
@@ -331,7 +331,7 @@ function(e, t, n) {
                     hasFocus: t
                 } = this.state, n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
                 return this.props.shouldRenderAccessory ? e || t ? n : (0, r.jsx)(S.default, {}) : null
-            }, (0, p.isImageLoaded)(this.getSrc(this.getRatio(), e.isAnimated(this.props))) && (this.state.readyState = T.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = A.getCurrentConfig({
+            }, (0, p.isImageLoaded)(this.getSrc(this.getRatio(), e.isAnimated(this.props))) && (this.state.readyState = T.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = N.getCurrentConfig({
                 location: "lazy_image"
             }).enabled
         }
@@ -345,7 +345,7 @@ function(e, t, n) {
         minHeight: 0,
         shouldRenderAccessory: !0
     }, a = i;
-    let A = (0, f.createExperiment)({
+    let N = (0, f.createExperiment)({
         kind: "user",
         id: "2024-02_image_load_metrics",
         label: "Image load metrics Config User Experiment",

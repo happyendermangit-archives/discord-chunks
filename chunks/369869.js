@@ -49,7 +49,7 @@ function(e, t, n) {
             lineClamp: I
         } = e, {
             location: v
-        } = (0, o.useAnalyticsContext)(), A = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), N = f.default.canUsePremiumGuildMemberProfile(A);
+        } = (0, o.useAnalyticsContext)(), N = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), A = f.default.canUsePremiumGuildMemberProfile(N);
         return c || null == l || "" === l ? null : (0, i.jsxs)(m.default, {
             lastSection: C,
             children: [(0, i.jsxs)(r.Heading, {
@@ -68,7 +68,7 @@ function(e, t, n) {
                         ...e,
                         onClick: () => {
                             var t;
-                            null == (t = e.onClick) || t(), null != A && !N && (0, r.openModalLazy)(async () => {
+                            null == (t = e.onClick) || t(), null != N && !A && (0, r.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("414242").then(n.bind(n, "414242"));
@@ -84,7 +84,7 @@ function(e, t, n) {
                         guild: t,
                         size: d.default.Sizes.SMOL,
                         className: a(E.aboutMeGuildIcon, {
-                            [E.nonPremiumHoverState]: !N
+                            [E.nonPremiumHoverState]: !A
                         })
                     })
                 })]

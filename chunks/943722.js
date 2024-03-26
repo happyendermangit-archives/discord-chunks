@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ActivityEmoji: function() {
-            return R
+            return O
         },
         default: function() {
             return M
@@ -31,17 +31,17 @@ function(e, t, n) {
         T = n("800762"),
         I = n("137783"),
         v = n("49111"),
-        A = n("73276");
-    let N = "14px";
+        N = n("73276");
+    let A = "14px";
 
-    function R(e) {
+    function O(e) {
         let {
             emoji: t,
             className: n,
             animate: l = !0,
             hideTooltip: a
         } = e, r = y.AnimateEmoji.useSetting(), o = null != t.id ? ":".concat(t.name, ":") : m.default.translateSurrogatesToInlineEmoji(t.name), c = {
-            className: s(A.emoji, n),
+            className: s(N.emoji, n),
             emojiId: t.id,
             emojiName: t.name,
             autoplay: !0,
@@ -57,7 +57,7 @@ function(e, t, n) {
             })
         })
     }
-    let O = e => {
+    let R = e => {
         let {
             className: t,
             text: n
@@ -82,7 +82,7 @@ function(e, t, n) {
                     ref: a,
                     children: n
                 }), (0, i.jsx)("div", {
-                    className: s(A.textRuler, t),
+                    className: s(N.textRuler, t),
                     ref: r,
                     "aria-hidden": !0,
                     children: n
@@ -117,7 +117,7 @@ function(e, t, n) {
         F ? w = (0, i.jsx)(E.default, {
             className: u,
             hangStatusActivity: b
-        }) : null != L && null != L.emoji && !y && (w = (0, i.jsx)(R, {
+        }) : null != L && null != L.emoji && !y && (w = (0, i.jsx)(O, {
             emoji: L.emoji,
             animate: d,
             hideTooltip: m,
@@ -129,18 +129,18 @@ function(e, t, n) {
             V = null != B && B.length > 0;
         return H || null == w && !V ? null : (0, i.jsxs)("div", {
             className: a,
-            children: [w, (0, i.jsx)(O, {
+            children: [w, (0, i.jsx)(R, {
                 text: B,
                 className: s
             }), k && (0, i.jsx)(r.QuestsIcon, {
-                className: A.questsIcon,
-                height: N,
-                width: N,
+                className: N.questsIcon,
+                height: A,
+                width: A,
                 color: D.hex
             }), null != n && n.some(e => (0, c.default)(e, F)) ? (0, i.jsx)(I.default, {
                 width: 16,
                 height: 16,
-                className: A.icon
+                className: N.icon
             }) : null]
         })
     }

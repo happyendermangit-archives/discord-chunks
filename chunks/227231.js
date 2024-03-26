@@ -53,16 +53,16 @@ function(e, t, n) {
             return v
         },
         isDismissible: function() {
-            return A
-        },
-        isDismissed: function() {
             return N
         },
+        isDismissed: function() {
+            return A
+        },
         includesTarget: function() {
-            return R
+            return O
         },
         captureQuestsException: function() {
-            return O
+            return R
         },
         getQuestsFromActivities: function() {
             return M
@@ -205,21 +205,21 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function N(e) {
         return Object.keys(s.DismissibleQuestContentFlags).includes(a.QuestContent[e])
     }
 
-    function N(e, t) {
-        if (!A(t)) return !1;
+    function A(e, t) {
+        if (!N(t)) return !1;
         let n = a.QuestContent[t];
         return (0, i.hasFlag)(e.dismissedQuestContent, s.DismissibleQuestContentFlags[n])
     }
 
-    function R(e, t) {
+    function O(e, t) {
         return e.targetedContent.includes(t)
     }
 
-    function O(e, t) {
+    function R(e, t) {
         l.default.captureException(e, {
             ...t,
             tags: {

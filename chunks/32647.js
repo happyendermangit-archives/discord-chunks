@@ -28,10 +28,10 @@ function(e, t, n) {
         T = n("803322"),
         I = n("127875"),
         v = n("169694"),
-        A = n("100576"),
-        N = n("765446"),
-        R = n("461593"),
-        O = n("49111"),
+        N = n("100576"),
+        A = n("765446"),
+        O = n("461593"),
+        R = n("49111"),
         M = n("175543"),
         k = l.forwardRef(function(e, t) {
             let {
@@ -82,10 +82,10 @@ function(e, t, n) {
                 if (void 0 !== l && l !== s) {
                     if (e.children = l, "parent" === t && !e.previewMarkdown) {
                         try {
-                            e.previewMarkdown = !0, (0, A.run)(e, k.guild_id, k.id)
+                            e.previewMarkdown = !0, (0, N.run)(e, k.guild_id, k.id)
                         } finally {
                             e.previewMarkdown = !1
-                        }(0, A.run)(e, k.guild_id, k.id), a = void 0
+                        }(0, N.run)(e, k.guild_id, k.id), a = void 0
                     }
                     "undo" !== t && void 0 !== l && l !== s && m.HistoryUtils.insertEntry(e, "other", !1, s, r), o = !0
                 }
@@ -145,10 +145,10 @@ function(e, t, n) {
                     if (s.length > 0) {
                         var n, i;
                         let e = s[0];
-                        E.SlateTransforms.selectCommandOption(eC, e.name), f.ComponentDispatch.dispatch(O.ComponentActions.SHAKE_APP, {
+                        E.SlateTransforms.selectCommandOption(eC, e.name), f.ComponentDispatch.dispatch(R.ComponentActions.SHAKE_APP, {
                             duration: 200,
                             intensity: 2
-                        }), (0, o.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                        }), (0, o.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: null == t ? void 0 : t.applicationId,
                             command_id: null == t ? void 0 : null === (n = t.rootCommand) || void 0 === n ? void 0 : n.id,
                             argument_type: r.ApplicationCommandOptionType[null !== (i = null == e ? void 0 : e.type) && void 0 !== i ? i : 3],
@@ -179,11 +179,11 @@ function(e, t, n) {
                 hideAutocomplete: Q,
                 moveSelection: q
             }), {
-                handlePaste: eA,
-                handleGlobalPaste: eN
-            } = (0, T.default)(eC, eE, G), eR = l.useCallback(e => {
+                handlePaste: eN,
+                handleGlobalPaste: eA
+            } = (0, T.default)(eC, eE, G), eO = l.useCallback(e => {
                 null == J || J()
-            }, [J]), eO = l.useCallback(e => {
+            }, [J]), eR = l.useCallback(e => {
                 e !== em.current ? ex.current && (null == F || F(null, (0, x.toTextValue)(e, {
                     mode: "raw"
                 }), e)) : ex.current && J()
@@ -201,12 +201,12 @@ function(e, t, n) {
                 return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
             }, [k, eC, e_]);
             let eM = l.useCallback((e, t) => (0, g.default)(e, t), []),
-                ek = l.useCallback(e => (0, N.default)(eC, e, k.id), [k.id, eC]),
-                eL = l.useCallback(e => (0, R.default)(e), []);
+                ek = l.useCallback(e => (0, A.default)(eC, e, k.id), [k.id, eC]),
+                eL = l.useCallback(e => (0, O.default)(e), []);
             return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(c.ComponentAction, {
-                    event: O.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
-                    handler: eN
+                    event: R.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
+                    handler: eA
                 }), (0, i.jsx)("div", {
                     ref: ep,
                     className: s(L, M.slateContainer),
@@ -221,11 +221,11 @@ function(e, t, n) {
                         spellCheck: X,
                         autoFocus: !et,
                         canFocus: !b,
-                        onChange: eO,
+                        onChange: eR,
                         onFocus: B,
                         onBlur: V,
-                        onClick: eR,
-                        onPaste: eA,
+                        onClick: eO,
+                        onPaste: eN,
                         onKeyDown: eI,
                         onKeyUp: ev,
                         decorateExtra: eM,

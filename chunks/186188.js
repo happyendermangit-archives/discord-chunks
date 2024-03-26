@@ -5,16 +5,16 @@ function(e, t, n) {
             return v
         },
         CustomEmoji: function() {
-            return A
-        },
-        TextMention: function() {
             return N
         },
+        TextMention: function() {
+            return A
+        },
         UserMention: function() {
-            return R
+            return O
         },
         RoleMention: function() {
-            return O
+            return R
         },
         ChannelMention: function() {
             return M
@@ -73,7 +73,7 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function N(e) {
         let {
             emoji: t
         } = e;
@@ -90,7 +90,7 @@ function(e, t, n) {
         })
     }
 
-    function N(e) {
+    function A(e) {
         let {
             text: t,
             channelId: n,
@@ -102,7 +102,7 @@ function(e, t, n) {
         })
     }
 
-    function R(e) {
+    function O(e) {
         let {
             id: t,
             guildId: n,
@@ -143,7 +143,7 @@ function(e, t, n) {
         return c
     }
 
-    function O(e) {
+    function R(e) {
         let {
             id: t,
             guildId: n

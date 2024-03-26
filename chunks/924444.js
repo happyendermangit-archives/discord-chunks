@@ -97,11 +97,11 @@ function(e, t, n) {
             shouldAnimate: T,
             onClose: I,
             shouldHideMediaOptions: v = !1,
-            obscure: A = !1,
-            ...N
+            obscure: N = !1,
+            ...A
         } = e, {
-            width: R,
-            height: O
+            width: O,
+            height: R
         } = (0, f.zoomFit)(s, o), M = r.isMobile && null != I;
         l.useEffect(() => {
             if (null != I) return c.ComponentDispatch.subscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, I), () => {
@@ -110,13 +110,13 @@ function(e, t, n) {
         }, [I]);
         let k = v ? e => {
             e.stopPropagation(), e.preventDefault()
-        } : N.onContextMenu;
+        } : A.onContextMenu;
         return (0, i.jsxs)("div", {
             className: g.wrapper,
             children: [M ? (0, i.jsx)(S, {
                 onClose: I
             }) : null, (0, i.jsx)(C, {
-                isObscured: A,
+                isObscured: N,
                 src: t,
                 children: e => (0, i.jsx)(m.default, {
                     src: t,
@@ -124,14 +124,14 @@ function(e, t, n) {
                     shouldLink: !1,
                     width: s,
                     height: o,
-                    maxWidth: R,
-                    maxHeight: O,
+                    maxWidth: O,
+                    maxHeight: R,
                     children: d,
                     animated: !e && u,
                     autoPlay: !e,
                     responsive: p,
                     onContextMenu: k,
-                    ...N
+                    ...A
                 }, t)
             }), null != n && !v && h({
                 href: n,

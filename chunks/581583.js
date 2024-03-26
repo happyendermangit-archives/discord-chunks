@@ -31,10 +31,10 @@ function(e, t, n) {
         T = n("26989"),
         I = n("305961"),
         v = n("957255"),
-        A = n("697218"),
-        N = n("145131"),
-        R = n("476765"),
-        O = n("945330"),
+        N = n("697218"),
+        A = n("145131"),
+        O = n("476765"),
+        R = n("945330"),
         M = n("907566"),
         k = n("151185"),
         L = n("483093"),
@@ -50,7 +50,7 @@ function(e, t, n) {
             userRoles: t,
             position: n,
             ...l
-        } = e, a = (0, R.useUID)();
+        } = e, a = (0, O.useUID)();
         return (0, i.jsxs)(m.Dialog, {
             className: s(D.overflowRolesPopout, {
                 [D.popoutBottom]: "bottom" === n,
@@ -62,9 +62,9 @@ function(e, t, n) {
                 children: (0, i.jsx)("div", {
                     className: D.overflowRolesPopoutArrow
                 })
-            }), (0, i.jsxs)(N.default, {
+            }), (0, i.jsxs)(A.default, {
                 className: D.overflowRolesPopoutHeader,
-                align: N.default.Align.CENTER,
+                align: A.default.Align.CENTER,
                 children: [(0, i.jsx)(M.default, {
                     color: p.default.unsafe_rawColors.PRIMARY_400.css,
                     className: D.overflowRolesPopoutHeaderIcon
@@ -94,9 +94,9 @@ function(e, t, n) {
             disableBorderColor: I,
             onMouseDown: v
         } = e, {
-            tabIndex: A,
-            ...N
-        } = (0, d.useListItem)(g.id), R = (0, C.useRoleIcon)({
+            tabIndex: N,
+            ...A
+        } = (0, d.useListItem)(g.id), O = (0, C.useRoleIcon)({
             roleId: g.id,
             size: 16,
             guildId: T
@@ -140,12 +140,12 @@ function(e, t, n) {
                 onContextMenu: P,
                 onMouseDown: v,
                 "aria-label": g.name,
-                tabIndex: A,
-                ...N,
+                tabIndex: N,
+                ...A,
                 children: [(0, i.jsxs)(m.Clickable, {
                     className: D.roleRemoveButton,
                     onClick: x ? _ : void 0,
-                    tabIndex: x ? A : -1,
+                    tabIndex: x ? N : -1,
                     focusProps: {
                         focusClassName: D.roleRemoveIconFocused
                     },
@@ -153,14 +153,14 @@ function(e, t, n) {
                     "aria-label": U.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
                         roleName: g.name
                     }),
-                    children: [u, x ? (0, i.jsx)(O.default, {
+                    children: [u, x ? (0, i.jsx)(R.default, {
                         color: F,
                         className: D.roleRemoveIcon,
                         "aria-hidden": !0
                     }) : null]
-                }), null != R ? (0, i.jsx)(L.default, {
+                }), null != O ? (0, i.jsx)(L.default, {
                     className: D.roleIcon,
-                    ...R,
+                    ...O,
                     enableTooltip: !1
                 }) : null, (0, i.jsx)("div", {
                     "aria-hidden": !0,
@@ -260,32 +260,32 @@ function(e, t, n) {
             (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? x.default.unassignGuildRoleConnection(a.id, e.id) : _.default.updateMemberRoles(a.id, n.id, i, [], [e.id])
         }, [r, a.id, n.id]), C = l.useCallback(e => {
             let t = r; - 1 === t.indexOf(e) && (t = t.concat([e])), _.default.updateMemberRoles(a.id, n.id, t, [e], [])
-        }, [r, a.id, n.id]), [T, N] = l.useState(null), R = (0, f.useStateFromStores)([I.default], () => I.default.getRoles(a.id)), O = l.useMemo(() => {
-            let e = Object.values(R).filter(e => r.includes(e.id)).sort((e, t) => {
+        }, [r, a.id, n.id]), [T, A] = l.useState(null), O = (0, f.useStateFromStores)([I.default], () => I.default.getRoles(a.id)), R = l.useMemo(() => {
+            let e = Object.values(O).filter(e => r.includes(e.id)).sort((e, t) => {
                 var n, i;
                 let l = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
                     a = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
                 return l && !a ? 1 : !l && a ? -1 : 0
             });
             return null != T ? e.slice(0, T) : e
-        }, [R, T, r]), M = r.length - O.length;
+        }, [O, T, r]), M = r.length - R.length;
         l.useLayoutEffect(() => {
             if (c) return;
             if ("number" != typeof p) throw Error("Unexpected null width");
             let e = 0,
                 t = 0,
                 n = p - 30 - 4;
-            for (let i = 0; i < O.length; i++) {
-                let l = O[i],
+            for (let i = 0; i < R.length; i++) {
+                let l = R[i],
                     a = g.current[l.id];
                 if (null == a) continue;
                 let s = a.offsetWidth;
                 if ((t += s + 4) > n) break;
                 e++
             }
-            N(t => e < O.length ? e : t)
-        }, [c, p, O]);
-        let k = A.default.getCurrentUser();
+            A(t => e < R.length ? e : t)
+        }, [c, p, R]);
+        let k = N.default.getCurrentUser();
         o(null != k, "MemberRolesList: currentUser cannot be undefined");
         let L = !h && v.default.can(j.Permissions.MANAGE_ROLES, a),
             b = P.getHighestRole(a, k.id),
@@ -297,7 +297,7 @@ function(e, t, n) {
                 scrollToEnd: w,
                 wrap: !0
             }),
-            K = O.map(e => {
+            K = R.map(e => {
                 var t;
                 return (0, i.jsx)(G, {
                     className: E,

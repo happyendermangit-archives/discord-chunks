@@ -28,10 +28,10 @@ function(e, t, n) {
         T = n("986632"),
         I = n("538282"),
         v = n("246511"),
-        A = n("45961"),
-        N = n("802894"),
-        R = n("592407"),
-        O = n("139321"),
+        N = n("45961"),
+        A = n("802894"),
+        O = n("592407"),
+        R = n("139321"),
         M = n("716849"),
         k = n("552917"),
         L = n("845579"),
@@ -75,7 +75,7 @@ function(e, t, n) {
             } = e, f = (0, d.useStateFromStores)([S.default], () => S.default.getDisambiguatedEmojiContext(o), [o]), p = l.useCallback((e, i) => {
                 switch (e.type) {
                     case K.EmojiGridItemTypes.CREATE_EMOJI:
-                        a(void 0, !0), R.default.open(e.guildId, Q.GuildSettingsSections.EMOJI);
+                        a(void 0, !0), O.default.open(e.guildId, Q.GuildSettingsSections.EMOJI);
                         return;
                     case K.EmojiGridItemTypes.EMOJI: {
                         if (null != e.emoji && i.altKey) {
@@ -114,7 +114,7 @@ function(e, t, n) {
                 gridContainerProps: y,
                 handleGridContainerKeyDown: g,
                 isUsingKeyboardNavigation: _
-            } = (0, A.useExpressionPickerGridKeyboardNavigation)({
+            } = (0, N.useExpressionPickerGridKeyboardNavigation)({
                 columnCounts: i,
                 gridNavigatorId: J.GRID_NAVIGATOR_ID,
                 itemGrid: s,
@@ -175,7 +175,7 @@ function(e, t, n) {
                 guildId: f,
                 closePopout: m,
                 emojiSize: v = J.EmojiSize.MEDIUM,
-                hasTabWrapper: R = !1,
+                hasTabWrapper: O = !1,
                 includeCreateEmojiButton: D,
                 onSelectEmoji: ei,
                 containerWidth: ed,
@@ -197,14 +197,14 @@ function(e, t, n) {
                 autoFocus: eI = !0,
                 accessory: ev
             } = ex,
-            eA = (0, d.useStateFromStores)([P.default], () => null != f ? P.default.getDefaultChannel(f) : null, [f]),
-            [eN, eR] = l.useState(null),
-            eO = l.useRef(""),
+            eN = (0, d.useStateFromStores)([P.default], () => null != f ? P.default.getDefaultChannel(f) : null, [f]),
+            [eA, eO] = l.useState(null),
+            eR = l.useRef(""),
             eM = (0, I.useExpressionPickerStore)(e => e.searchQuery),
             ek = l.useRef(null),
             eL = l.useRef(null),
             eP = l.useRef(null);
-        null == u && null != eA && (u = eA);
+        null == u && null != eN && (u = eN);
         let eb = null !== (a = null !== (n = null == u ? void 0 : u.getGuildId()) && void 0 !== n ? n : f) && void 0 !== a ? a : null,
             [ej, eU] = l.useState(!1),
             eD = b.default.getCurrentUser(),
@@ -230,7 +230,7 @@ function(e, t, n) {
             diversitySurrogate: S.default.diversitySurrogate
         })), ez = (0, w.useEmojiSearchResults)(eM, u, o), eZ = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eJ = L.EmojiPickerCollapsedSections.useSetting(), eQ = l.useMemo(() => new Set(eJ), [eJ]), eq = l.useCallback(e => {
             L.EmojiPickerCollapsedSections.updateSetting(Array.from(e))
-        }, []), eX = (0, A.useExpressionPickerGridWidth)({
+        }, []), eX = (0, N.useExpressionPickerGridWidth)({
             gridWrapperRef: ek,
             containerWidth: ed,
             listPaddingLeft: et,
@@ -268,7 +268,7 @@ function(e, t, n) {
                 selectedChannel: u,
                 closePopout: m,
                 onSelectEmoji: ei,
-                setUpsellConfigs: eR,
+                setUpsellConfigs: eO,
                 emojiSelectAnalytics: e => {
                     "" !== eM ? (0, w.trackEmojiSearchSelect)({
                         emoji: e.emoji,
@@ -329,7 +329,7 @@ function(e, t, n) {
         }, [ef]), l.useEffect(() => (j.default.track(Q.AnalyticEvents.OPEN_POPOUT, {
             type: null != eV ? eV : "Emoji Picker",
             guild_id: eb
-        }), T.EmojiPickerStore.resetStoreState), [eV, eb]), l.useEffect(() => () => (0, O.hideHotspot)(O.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
+        }), T.EmojiPickerStore.resetStoreState), [eV, eb]), l.useEffect(() => () => (0, R.hideHotspot)(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), l.useLayoutEffect(() => {
             var e;
             let {
                 columnIndex: t,
@@ -337,26 +337,26 @@ function(e, t, n) {
             } = T.EmojiPickerStore.getState().inspectedExpressionPosition;
             (null === (e = e1[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && T.EmojiPickerStore.setInspectedExpressionPosition(0, 0)
         }, [e1]), l.useEffect(() => {
-            if ("" === eO.current && "" !== eM && (0, w.trackEmojiSearchStart)(eK, o), 0 === eZ && "" !== eM) er(eK, eM);
-            else if ("" !== eM && eO.current !== eM) {
+            if ("" === eR.current && "" !== eM && (0, w.trackEmojiSearchStart)(eK, o), 0 === eZ && "" !== eM) er(eK, eM);
+            else if ("" !== eM && eR.current !== eM) {
                 var e;
                 eo(eZ, null !== (e = null == ez ? void 0 : ez.locked.length) && void 0 !== e ? e : 0, eK, eM, o)
             }
-            eO.current = eM
+            eR.current = eM
         }, [eM, eK, eZ, ez, o]);
-        let ti = null != eE ? eE : R ? "div" : p.Dialog,
+        let ti = null != eE ? eE : O ? "div" : p.Dialog,
             tl = null != eX;
-        (null == eN ? void 0 : eN.type) === K.EmojiUpsellType.PREMIUM ? r = (0, i.jsx)(Z.default, {
+        (null == eA ? void 0 : eA.type) === K.EmojiUpsellType.PREMIUM ? r = (0, i.jsx)(Z.default, {
             onLearnMore: e4,
-            emojiDescriptor: eN.emojiDescriptor,
+            emojiDescriptor: eA.emojiDescriptor,
             pickerIntention: o,
             analyticsLocation: eK,
-            onClose: () => eR(null),
+            onClose: () => eO(null),
             channel: u
-        }) : (null == eN ? void 0 : eN.type) === K.EmojiUpsellType.ROLE_SUBSCRIPTION ? r = (0, i.jsx)(N.default, {
-            onClose: () => eR(null),
-            guildId: eN.guildId,
-            emojiId: eN.emojiId
+        }) : (null == eA ? void 0 : eA.type) === K.EmojiUpsellType.ROLE_SUBSCRIPTION ? r = (0, i.jsx)(A.default, {
+            onClose: () => eO(null),
+            guildId: eA.guildId,
+            emojiId: eA.emojiId
         }) : ej && !ew && (r = (0, i.jsx)(G.default, {
             onDismiss: () => eU(!1)
         }));
@@ -371,7 +371,7 @@ function(e, t, n) {
                 autoFocus: eI,
                 accessory: ev,
                 headerClassName: em,
-                hasTabWrapper: R,
+                hasTabWrapper: O,
                 diversitySurrogate: eY,
                 isBurstReaction: ej,
                 onBurstReactionToggle: () => eU(!ej),
@@ -383,16 +383,16 @@ function(e, t, n) {
             ...eK,
             children: (0, i.jsxs)(ti, {
                 id: J.EMOJI_PICKER_TAB_PANEL_ID,
-                "aria-labelledby": R ? J.EMOJI_PICKER_TAB_ID : void 0,
-                role: R ? "tabpanel" : void 0,
+                "aria-labelledby": O ? J.EMOJI_PICKER_TAB_ID : void 0,
+                role: O ? "tabpanel" : void 0,
                 className: s($.wrapper, {
-                    [$.emojiPickerHasTabWrapper]: R,
+                    [$.emojiPickerHasTabWrapper]: O,
                     [$.isBurstReactionPicker]: ej && ew
                 }),
-                children: [R ? null : ta, (0, i.jsxs)("div", {
+                children: [O ? null : ta, (0, i.jsxs)("div", {
                     className: s($.emojiPicker, ep),
                     onScroll: en,
-                    children: [R ? ta : null, (0, i.jsxs)("div", {
+                    children: [O ? ta : null, (0, i.jsxs)("div", {
                         className: $.bodyWrapper,
                         ref: ek,
                         children: [(0, i.jsx)(z.default, {

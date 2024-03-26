@@ -34,21 +34,21 @@ function(e, t, n) {
                 shouldTrackUpsellViewed: I,
                 setTrackedUpsellViewed: v
             } = e, {
-                location: A
+                location: N
             } = (0, u.useAnalyticsContext)(), {
-                analyticsLocations: N
-            } = (0, c.default)(), R = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(n)), {
-                canManageAllExpressions: O
-            } = (0, h.useManageResourcePermissions)(R), M = null != R && 0 === (0, g.getTotalStickerCountForTier)(R.premiumTier) && !R.hasFeature(S.GuildFeatures.MORE_STICKERS);
+                analyticsLocations: A
+            } = (0, c.default)(), O = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(n)), {
+                canManageAllExpressions: R
+            } = (0, h.useManageResourcePermissions)(O), M = null != O && 0 === (0, g.getTotalStickerCountForTier)(O.premiumTier) && !O.hasFeature(S.GuildFeatures.MORE_STICKERS);
             return (l.useEffect(() => {
-                O && M && I && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
-                    location: A,
-                    guild_id: null == R ? void 0 : R.id,
+                R && M && I && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+                    location: N,
+                    guild_id: null == O ? void 0 : O.id,
                     channel_id: null == a ? void 0 : a.id,
                     type: "Expression Picker Inline Sticker Upsell",
-                    location_stack: N
+                    location_stack: A
                 }), v(!0))
-            }, [M, R, a, A, I, v, N, O]), null != R && O) ? M ? (0, i.jsxs)("div", {
+            }, [M, O, a, N, I, v, A, R]), null != O && R) ? M ? (0, i.jsxs)("div", {
                 className: s(T.upsell, t),
                 children: [(0, i.jsx)(E.default, {
                     className: T.icon,
@@ -66,9 +66,9 @@ function(e, t, n) {
                     color: o.Button.Colors.LINK,
                     onClick: () => {
                         (0, p.default)({
-                            analyticsLocations: N,
-                            analyticsSourceLocation: A,
-                            guild: R,
+                            analyticsLocations: A,
+                            analyticsSourceLocation: N,
+                            guild: O,
                             perks: (0, C.guildBoostingPerks)()
                         })
                     },
@@ -89,7 +89,7 @@ function(e, t, n) {
                     look: o.Button.Looks.LINK,
                     color: o.Button.Colors.LINK,
                     onClick: () => {
-                        (0, f.closeExpressionPicker)(), m.default.open(n, S.GuildSettingsSections.STICKERS, A)
+                        (0, f.closeExpressionPicker)(), m.default.open(n, S.GuildSettingsSections.STICKERS, N)
                     },
                     children: _.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
                 })]

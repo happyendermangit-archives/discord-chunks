@@ -28,14 +28,14 @@ function(e, t, n) {
         T = n("278410"),
         I = n("410957"),
         v = n("730708"),
-        A = n("754702");
-    let N = async (e, t, n) => {
+        N = n("754702");
+    let A = async (e, t, n) => {
         n(!0), await (0, E.createReferralTrial)(e).then(() => {
             t(), (0, c.popAllLayers)()
         }).finally(() => {
             n(!1)
         })
-    }, R = e => {
+    }, O = e => {
         let {
             onClose: t,
             referralsRemaining: n,
@@ -78,7 +78,7 @@ function(e, t, n) {
                     className: _.confirmationShareButton,
                     submitting: u,
                     onClick: () => {
-                        N(a, t, c), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                        A(a, t, c), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: r,
                             step: g.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
                             other_user_id: Number(a)
@@ -100,13 +100,13 @@ function(e, t, n) {
         })
     };
 
-    function O(e) {
+    function R(e) {
         let {
             referralsRemaining: t,
             channel: n,
             onClose: a,
             isResending: r
-        } = e, [u, c] = l.useState(!1), [E, v] = l.useState(!1), O = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
+        } = e, [u, c] = l.useState(!1), [E, v] = l.useState(!1), R = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
             analyticsLocations: M
         } = (0, p.default)(f.default.REFERRAL_TRIALS_POPOUT), {
             enabled: k
@@ -115,10 +115,10 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !0
         }), L = new Date("2023-06-15T08:00:00-08:00");
-        return null == O ? null : u ? (0, i.jsx)(R, {
+        return null == R ? null : u ? (0, i.jsx)(O, {
             onClose: a,
             referralsRemaining: t,
-            recipient: O,
+            recipient: R,
             analyticsLocations: M,
             shouldShowBirthdayUX: k
         }) : (0, i.jsxs)("div", {
@@ -127,7 +127,7 @@ function(e, t, n) {
                 className: _.generalBodyContainer,
                 children: [(0, i.jsx)("img", {
                     alt: "",
-                    src: k ? I : A,
+                    src: k ? I : N,
                     className: _.generalBodyImage
                 }), (0, i.jsxs)("div", {
                     className: _.innerContent,
@@ -169,10 +169,10 @@ function(e, t, n) {
                     className: _.generalShareButton,
                     submitting: E,
                     onClick: () => {
-                        r ? N(O, a, v) : (c(!0), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                        r ? A(R, a, v) : (c(!0), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: M,
                             step: g.ReferralTrialsAnalyticSteps.FLOW_STARTED,
-                            other_user_id: Number(O)
+                            other_user_id: Number(R)
                         }))
                     },
                     children: r ? C.default.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : C.default.Messages.SHARE_NITRO_BUTTON_TEXT
@@ -195,7 +195,7 @@ function(e, t, n) {
                 shouldShow: !0,
                 position: "top",
                 align: "center",
-                renderPopout: e => (0, i.jsx)(O, {
+                renderPopout: e => (0, i.jsx)(R, {
                     ...e,
                     referralsRemaining: n,
                     channel: l,

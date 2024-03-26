@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         brownMessageBlock: "brownMessageBlock__5f076 messageBlock__391e7",

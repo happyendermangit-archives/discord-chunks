@@ -17,13 +17,13 @@ function(e, t, n) {
             return v
         },
         useFirstMediaIsEmbed: function() {
-            return A
-        },
-        shouldShowAddMediaToOriginalPostModal: function() {
             return N
         },
+        shouldShowAddMediaToOriginalPostModal: function() {
+            return A
+        },
         messageContainsGifOrVideo: function() {
-            return R
+            return O
         }
     }), n("702976"), n("222007"), n("808653");
     var i, l, a = n("884691"),
@@ -163,13 +163,13 @@ function(e, t, n) {
         return null !== (i = null !== (n = l[0]) && void 0 !== n ? n : a[0]) && void 0 !== i ? i : null
     }
 
-    function A(e, t) {
+    function N(e, t) {
         let n = C(e),
             i = _(e, t);
         return null == n[0] && null != i[0]
     }
 
-    function N(e, t) {
+    function A(e, t) {
         var n;
         let i = u.default.getChannel(t);
         if (null == i) return !1;
@@ -177,7 +177,7 @@ function(e, t, n) {
         return null != l && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (n = c.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === r.default.getCount(i.id) && (0 === l.attachments.length || null == l.attachments.find(e => y(e) || g(e)))
     }
 
-    function R(e) {
+    function O(e) {
         return e.reduce((e, t) => ({
             containsVideo: e.containsVideo || t.isVideo,
             containsGif: e.containsGif || (0, s.isAnimatedImageUrl)(t.src)

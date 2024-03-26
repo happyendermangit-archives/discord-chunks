@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         channelActivitiesText: "channelActivitiesText__40c2c channelName__1e0da",

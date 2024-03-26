@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return R
+            return O
         }
     }), n("222007"), n("424973");
     var i = n("37983"),
@@ -28,9 +28,9 @@ function(e, t, n) {
         T = n("923582"),
         I = n("80921"),
         v = n("646718"),
-        A = n("350583");
+        N = n("350583");
 
-    function N(e) {
+    function A(e) {
         let {
             disabled: t,
             channel: n
@@ -55,8 +55,8 @@ function(e, t, n) {
             channel: n
         })
     }
-    var R = l.memo(function(e) {
-        var t, n, l, f, S, _, R, O;
+    var O = l.memo(function(e) {
+        var t, n, l, f, S, _, O, R;
         let {
             type: M,
             disabled: k,
@@ -105,13 +105,13 @@ function(e, t, n) {
             referralsRemaining: W,
             channel: L,
             isResending: Y
-        }, "referral"))), (null === (_ = M.gifts) || void 0 === _ ? void 0 : _.button) != null && null == F && !H && B.push((0, i.jsx)(N, {
+        }, "referral"))), (null === (_ = M.gifts) || void 0 === _ ? void 0 : _.button) != null && null == F && !H && B.push((0, i.jsx)(A, {
             disabled: k,
             channel: L
-        }, "gift")), (null === (R = M.gifs) || void 0 === R ? void 0 : R.button) != null && null == F && B.push((0, i.jsx)(g.default, {
+        }, "gift")), (null === (O = M.gifs) || void 0 === O ? void 0 : O.button) != null && null == F && B.push((0, i.jsx)(g.default, {
             disabled: k,
             type: M
-        }, "gif")), (null === (O = M.stickers) || void 0 === O ? void 0 : O.button) != null && null == F && B.push((0, i.jsx)(I.default, {
+        }, "gif")), (null === (R = M.stickers) || void 0 === R ? void 0 : R.button) != null && null == F && B.push((0, i.jsx)(I.default, {
             disabled: k,
             type: M
         }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == F || null != G && G.type !== r.ApplicationCommandOptionType.ATTACHMENT) && B.push((0, i.jsx)(y.default, {
@@ -121,7 +121,7 @@ function(e, t, n) {
             onClick: P,
             disabled: k || 0 === w.length && b && !D
         }, "submit")), 0 === B.length) ? null : (0, i.jsx)("div", {
-            className: A.buttons,
+            className: N.buttons,
             children: B
         })
     })

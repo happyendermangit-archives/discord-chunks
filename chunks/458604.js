@@ -40,11 +40,11 @@ function(e, t, n) {
                     size: T,
                     surrogateCodePoint: I,
                     allowAnimatedEmoji: v,
-                    selectedItemClassName: A,
-                    inNitroLockedSection: N,
-                    ...R
+                    selectedItemClassName: N,
+                    inNitroLockedSection: A,
+                    ...O
                 } = e,
-                O = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
+                R = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
                 {
                     enabled: M
                 } = g.default.useExperiment({
@@ -52,15 +52,15 @@ function(e, t, n) {
                 }, {
                     autoTrackExposure: p
                 }),
-                k = p && M && !N;
+                k = p && M && !A;
             return (0, i.jsx)(o.FocusRing, {
                 children: (0, i.jsx)("button", {
-                    ...R,
+                    ...O,
                     className: s(_.emojiItem, {
                         [_.emojiItemLarge]: u,
                         [_.emojiItemMedium]: d,
                         [_.emojiItemSelected]: c,
-                        [null != A ? A : ""]: c,
+                        [null != N ? N : ""]: c,
                         [_.emojiItemDisabled]: p && !M,
                         [_.showPulse]: h
                     }),
@@ -69,9 +69,9 @@ function(e, t, n) {
                     "data-name": l.name,
                     ref: t,
                     children: (0, i.jsx)(S.default, {
-                        "aria-label": (n = l.allNamesString, ((null == O ? void 0 : O.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+                        "aria-label": (n = l.allNamesString, ((null == R ? void 0 : R.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
                             names: n,
-                            guildName: O.name
+                            guildName: R.name
                         })), a) ? C.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
                             names: n
                         }) : n),
@@ -99,10 +99,10 @@ function(e, t, n) {
             isScrolling: S,
             isUsingKeyboardNavigation: _,
             showEmojiFavoriteTooltip: v,
-            surrogateCodePoint: A,
-            selectedItemClassName: N,
-            getEmojiItemProps: R,
-            isMediumSize: O,
+            surrogateCodePoint: N,
+            selectedItemClassName: A,
+            getEmojiItemProps: O,
+            isMediumSize: R,
             isLargeSize: M,
             pulseItemKey: k,
             allowAnimatedEmoji: L,
@@ -144,7 +144,7 @@ function(e, t, n) {
                 tabIndex: o,
                 onFocus: u,
                 ...d
-            } = null !== (e = R(Y, f)) && void 0 !== e ? e : {};
+            } = null !== (e = O(Y, f)) && void 0 !== e ? e : {};
             return (0, l.createElement)("li", {
                 ...d,
                 key: a,
@@ -154,7 +154,7 @@ function(e, t, n) {
                 emoji: V,
                 isFavorite: H.isFavoriteEmojiWithoutFetchingLatest(V),
                 isLargeSize: M,
-                isMediumSize: O,
+                isMediumSize: R,
                 isInspected: s,
                 isDisabled: W,
                 showPulse: k === a,
@@ -176,8 +176,8 @@ function(e, t, n) {
                 columnIndex: Y,
                 rowIndex: f,
                 size: K,
-                surrogateCodePoint: A,
-                selectedItemClassName: N,
+                surrogateCodePoint: N,
+                selectedItemClassName: A,
                 inNitroLockedSection: D
             }))
         };

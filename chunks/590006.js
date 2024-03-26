@@ -40,8 +40,8 @@ function(e, t, n) {
             src: (0, x.getBadgeAsset)(e.icon)
         })), {
             trackUserProfileAction: v,
-            ...A
-        } = (0, f.useUserProfileAnalyticsContext)(), N = (0, d.useWindowDispatch)();
+            ...N
+        } = (0, f.useUserProfileAnalyticsContext)(), A = (0, d.useWindowDispatch)();
         if (t.isClyde()) return (0, a.jsx)("div", {
             className: r(i, g.container, g.clydeBadgeList),
             "aria-label": y.default.Messages.PROFILE_USER_BADGES,
@@ -56,7 +56,7 @@ function(e, t, n) {
                 date: new Date
             })
         });
-        let R = null != l && null != s && I.length > l ? s : _;
+        let O = null != l && null != s && I.length > l ? s : _;
         return (0, a.jsx)("div", {
             className: r(i, I.length > 0 ? g.containerWithContent : g.container),
             "aria-label": y.default.Messages.PROFILE_USER_BADGES,
@@ -73,10 +73,10 @@ function(e, t, n) {
                             action: "PRESS_BADGE"
                         }), (0, p.trackUserProfileBadgePressed)({
                             badge: e.id,
-                            ...A
+                            ...N
                         }), null === (i = t.onClick) || void 0 === i || i.call(t);
                         let l = null != e.link ? (0, u.default)(e.link) : null;
-                        if (null != l) return N.dispatch(E.ComponentActions.POPOUT_CLOSE), l(n)
+                        if (null != l) return A.dispatch(E.ComponentActions.POPOUT_CLOSE), l(n)
                     },
                     href: e.link,
                     children: (0, a.jsx)("img", {
@@ -84,9 +84,9 @@ function(e, t, n) {
                         "aria-hidden": !0,
                         src: e.src,
                         className: r({
-                            [g.profileBadge24]: 0 === R,
-                            [g.profileBadge22]: 1 === R,
-                            [g.profileBadge18]: 2 === R
+                            [g.profileBadge24]: 0 === O,
+                            [g.profileBadge22]: 1 === O,
+                            [g.profileBadge18]: 2 === O
                         })
                     })
                 })

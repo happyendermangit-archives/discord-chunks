@@ -28,10 +28,10 @@ function(e, t, n) {
         T = n("10532"),
         I = n("648149"),
         v = n("915712"),
-        A = n("261523"),
-        N = n("369869"),
-        R = n("545590"),
-        O = n("316095"),
+        N = n("261523"),
+        A = n("369869"),
+        O = n("545590"),
+        R = n("316095"),
         M = n("802279"),
         k = n("577172"),
         L = n("465215"),
@@ -136,10 +136,10 @@ function(e, t, n) {
                     }),
                     onScroll: ep,
                     ref: ed,
-                    children: [(0, i.jsx)(R.default, {
+                    children: [(0, i.jsx)(O.default, {
                         user: K,
                         guildId: null == Y ? void 0 : Y.id
-                    }), (0, i.jsx)(N.default, {
+                    }), (0, i.jsx)(A.default, {
                         isUsingGuildBio: null !== (n = null == W ? void 0 : W.isUsingGuildMemberBio()) && void 0 !== n && n,
                         bio: null == W ? void 0 : W.bio,
                         guild: Y,
@@ -171,7 +171,7 @@ function(e, t, n) {
                         channel: eo,
                         guildId: null == Y ? void 0 : Y.id,
                         onClick: J
-                    }) : null, (0, i.jsx)(A.default, {
+                    }) : null, (0, i.jsx)(N.default, {
                         user: K,
                         guildId: null == Y ? void 0 : Y.id
                     }), (0, i.jsx)(U.default, {
@@ -179,7 +179,7 @@ function(e, t, n) {
                         guild: Y,
                         guildMember: z,
                         showBorder: null !== (a = null == W ? void 0 : W.canEditThemes) && void 0 !== a && a
-                    }), (0, i.jsx)(O.default, {
+                    }), (0, i.jsx)(R.default, {
                         userId: K.id,
                         channelId: Z,
                         guild: Y,

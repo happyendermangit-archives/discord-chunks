@@ -1,4 +1,4 @@
-function(e, t, o) {
+function(e, t, n) {
     "use strict";
     e.exports = {
         checkmark: "checkmark__18f7b statusIcon__686a0",

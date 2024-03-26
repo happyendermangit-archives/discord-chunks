@@ -28,10 +28,10 @@ function(e, t, n) {
         T = n("256860"),
         I = n("364685"),
         v = n("889701"),
-        A = n("168973"),
-        N = n("983782"),
-        R = n("659500"),
-        O = n("791776"),
+        N = n("168973"),
+        A = n("983782"),
+        O = n("659500"),
+        R = n("791776"),
         M = n("538282"),
         k = n("13030"),
         L = n("49111"),
@@ -74,7 +74,7 @@ function(e, t, n) {
                 positionContainerRef: t,
                 drawerRef: n,
                 orientation: i
-            } = e, a = (0, c.useStateFromStores)([A.default], () => A.default.expressionPickerWidth), [s, r] = l.useState(window.innerWidth), [u, d] = l.useState(null != a ? a : k.ExpressionPickerWidths.MIN), f = l.useMemo(() => {
+            } = e, a = (0, c.useStateFromStores)([N.default], () => N.default.expressionPickerWidth), [s, r] = l.useState(window.innerWidth), [u, d] = l.useState(null != a ? a : k.ExpressionPickerWidths.MIN), f = l.useMemo(() => {
                 switch (u) {
                     case k.ExpressionPickerWidths.MIN:
                         return k.MIN_EXPRESSION_PICKER_WIDTH;
@@ -120,7 +120,7 @@ function(e, t, n) {
             positionTargetRef: r,
             hideGifFavorites: o,
             includeCreateEmojiButton: m,
-            onSelectGIF: A,
+            onSelectGIF: N,
             onSelectEmoji: H,
             onSelectSticker: B,
             onSelectSound: V,
@@ -153,8 +153,8 @@ function(e, t, n) {
                 if (n === ee.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
                 n = n.parentNode
             }(0, M.closeExpressionPicker)();
-            let i = null === (t = (0, O.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-            (null == i || "BODY" === i.tagName) && R.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.TEXTAREA_FOCUS)
+            let i = null === (t = (0, R.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+            (null == i || "BODY" === i.tagName) && O.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.TEXTAREA_FOCUS)
         }, [J, ec, ed]), ep = l.useCallback(() => {
             (0, M.closeExpressionPicker)()
         }, []);
@@ -162,8 +162,8 @@ function(e, t, n) {
             let e = () => {
                 el === k.ExpressionPickerViewType.GIF && (0, M.closeExpressionPicker)()
             };
-            return es.addEventListener("mousedown", ef), es.addEventListener("contextmenu", ef), er.subscribe(L.ComponentActions.POPOUT_CLOSE, ep), R.ComponentDispatch.subscribe(L.ComponentActions.CLOSE_GIF_PICKER, e), () => {
-                es.removeEventListener("mousedown", ef), es.removeEventListener("contextmenu", ef), er.unsubscribe(L.ComponentActions.POPOUT_CLOSE, ep), R.ComponentDispatch.unsubscribe(L.ComponentActions.CLOSE_GIF_PICKER, e)
+            return es.addEventListener("mousedown", ef), es.addEventListener("contextmenu", ef), er.subscribe(L.ComponentActions.POPOUT_CLOSE, ep), O.ComponentDispatch.subscribe(L.ComponentActions.CLOSE_GIF_PICKER, e), () => {
+                es.removeEventListener("mousedown", ef), es.removeEventListener("contextmenu", ef), er.unsubscribe(L.ComponentActions.POPOUT_CLOSE, ep), O.ComponentDispatch.unsubscribe(L.ComponentActions.CLOSE_GIF_PICKER, e)
             }
         }, [el, ep, ef, es, er]), (0, p.useFocusLock)(q), l.useEffect(() => {
             (0, M.setSearchQuery)("")
@@ -179,14 +179,14 @@ function(e, t, n) {
                 }), X.current = !0)
             }
         });
-        let em = (null === (t = W.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile && null != A,
+        let em = (null === (t = W.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile && null != N,
             eh = (null === (n = W.stickers) || void 0 === n ? void 0 : n.allowSending) && null != B,
             ex = !(null === (a = W.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (em || eh),
             eE = "left" === z ? "right" : "left",
             ey = null != Z ? Z : "left" === z ? D.positionLayerDefaultAlignLeft : D.positionLayerDefaultAlignRight;
         return (0, i.jsx)(h.default, {
             section: L.AnalyticsSections.EXPRESSION_PICKER,
-            children: (0, i.jsx)(N.AppReferencePositionLayer, {
+            children: (0, i.jsx)(A.AppReferencePositionLayer, {
                 className: s(D.positionLayer, ey),
                 reference: r,
                 position: Y,
@@ -269,7 +269,7 @@ function(e, t, n) {
                                         $.current = e
                                     }
                                 }) : null, el === k.ExpressionPickerViewType.GIF && em ? (0, i.jsx)(S.default, {
-                                    onSelectGIF: A,
+                                    onSelectGIF: N,
                                     hideFavorites: o,
                                     persistSearch: !0
                                 }) : null, el === k.ExpressionPickerViewType.EMOJI ? (0, i.jsx)(g.default, {

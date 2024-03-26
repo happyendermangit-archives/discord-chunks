@@ -22,17 +22,17 @@ function(e, t, n) {
         x = n("862205"),
         E = n("895026"),
         y = n("506885"),
-        g = n("981601"),
+        g = n("340906"),
         S = n("42203"),
         C = n("26989"),
         _ = n("305961"),
         T = n("697218"),
         I = n("145131"),
         v = n("666897"),
-        A = n("826684"),
-        N = n("782340"),
-        R = n("665958"),
-        O = n("919163");
+        N = n("826684"),
+        A = n("782340"),
+        O = n("665958"),
+        R = n("919163");
     let M = (0, x.createExperiment)({
         kind: "user",
         id: "2021-07_role_popout",
@@ -61,12 +61,12 @@ function(e, t, n) {
         } = e, {
             analyticsLocations: b
         } = (0, h.default)(m.default.ROLE_MENTION), j = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), U = null != t && 0 !== t && !P, D = U && "dot" === j, w = e => (0, i.jsxs)(v.default, {
-            className: a(O.roleMention),
+            className: a(R.roleMention),
             color: "username" === j && U ? t : null,
             ...e,
             children: [D && (0, i.jsx)(d.RoleDot, {
                 color: (0, o.int2hex)(t),
-                className: R.roleDot,
+                className: O.roleDot,
                 background: !1,
                 tooltip: !1
             }), L]
@@ -110,6 +110,7 @@ function(e, t, n) {
                                 }),
                                 renderPopout: n => (0, i.jsx)(g.default, {
                                     ...n,
+                                    location: "RoleMention",
                                     userId: e.userId,
                                     guildId: a.id,
                                     channelId: t.id,
@@ -150,13 +151,13 @@ function(e, t, n) {
                             }, l.id)
                         }).value();
                     return (0, i.jsx)(I.default, {
-                        className: O.rolePopout,
+                        className: R.rolePopout,
                         ...e,
                         children: (0, i.jsxs)(d.Scroller, {
-                            className: O.roleScroller,
-                            children: [(0, i.jsx)(A.default, {
-                                className: O.roleHeader,
-                                "aria-label": N.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+                            className: R.roleScroller,
+                            children: [(0, i.jsx)(N.default, {
+                                className: R.roleHeader,
+                                "aria-label": A.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                                     title: u.name,
                                     count: p.length
                                 }),

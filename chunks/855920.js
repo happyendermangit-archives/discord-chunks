@@ -86,10 +86,10 @@ function(e, t, n) {
                 tooltipPosition: a = h.EXPRESSION_TOOLTIP_PROPS.position,
                 enableClick: d = !0
             } = e, [y, S] = l.useState(String(Date.now())), [C, T] = l.useState(!1), [I, v] = l.useState(!1), {
-                enabled: A
+                enabled: N
             } = f.NitroBadgeOnEmojiHoverExperiment.useExperiment({
                 location: "MessageCustomEmoji"
-            }), N = function() {
+            }), A = function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 return (0, i.jsx)(u.default, {
                     ...e,
@@ -99,8 +99,8 @@ function(e, t, n) {
                     animated: t.animated,
                     isInteracting: n
                 })
-            }, R = (0, r.v4)(), O = e => (0, i.jsx)(o.Tooltip, {
-                text: (0, h.renderClickableTooltipNode)(t.name, d, A),
+            }, O = (0, r.v4)(), R = e => (0, i.jsx)(o.Tooltip, {
+                text: (0, h.renderClickableTooltipNode)(t.name, d, N),
                 "aria-label": t.name,
                 ...h.EXPRESSION_TOOLTIP_PROPS,
                 position: a,
@@ -109,7 +109,7 @@ function(e, t, n) {
                     T(!0), d && (_({
                         emojiNode: t,
                         isCustomEmoji: !0,
-                        nonce: R
+                        nonce: O
                     }), (0, c.initiateEmojiInteraction)(E.EmojiInteractionPoint.CustomEmojiTooltipShown))
                 },
                 children: t => (0, i.jsx)(o.Clickable, {
@@ -124,14 +124,14 @@ function(e, t, n) {
                     },
                     onMouseLeave: () => {
                         C && (p.default.track(x.AnalyticEvents.CLOSE_POPOUT, {
-                            nonce: R
+                            nonce: O
                         }), T(!1))
                     },
                     tag: "span",
                     className: s(g.emojiContainer, {
                         [g.emojiContainerClickable]: d
                     }),
-                    children: N(t)
+                    children: A(t)
                 })
             });
             return d ? (0, i.jsx)(o.Popout, {
@@ -139,7 +139,7 @@ function(e, t, n) {
                 align: "center",
                 onRequestClose: () => {
                     p.default.track(x.AnalyticEvents.CLOSE_POPOUT, {
-                        nonce: R
+                        nonce: O
                     }), T(!1), v(!1)
                 },
                 autoInvert: !0,
@@ -149,11 +149,11 @@ function(e, t, n) {
                     ...e,
                     node: t,
                     refreshPositionKey: () => S(String(Date.now())),
-                    nonce: R
+                    nonce: O
                 }),
                 positionKey: y,
-                children: O
-            }) : O()
+                children: R
+            }) : R()
         },
         _ = e => {
             let {

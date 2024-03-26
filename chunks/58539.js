@@ -5286,6 +5286,25 @@ function(_, E, I) {
                 opacity: .12
             }
         },
+        REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: {
+                raw: "BLACK_500",
+                opacity: .08
+            },
+            [a.LIGHT]: {
+                raw: "BLACK_500",
+                opacity: .08
+            },
+            [a.MIDNIGHT]: {
+                raw: "BLACK_500",
+                opacity: .08
+            },
+            [a.DARKER]: {
+                raw: "BLACK_500",
+                opacity: .08
+            }
+        },
         REDESIGN_INPUT_CONTROL_ACTIVE_BG: {
             category: "background",
             [a.DARK]: {

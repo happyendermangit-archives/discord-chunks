@@ -28,9 +28,9 @@ function(e, t, n) {
         T = n("756249");
     let I = (0, y.uid)(),
         v = c.default.convert.fromCodePoint("1f44f"),
-        A = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-        N = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
-        R = e => {
+        N = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+        A = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+        O = e => {
             let {
                 fade: t,
                 surrogate: n,
@@ -76,16 +76,16 @@ function(e, t, n) {
                 })
             })
         },
-        O = e => {
+        R = e => {
             let {
                 id: t,
                 selectedSurrogate: n,
                 onClick: a,
                 hasTabWrapper: r
             } = e, c = (0, x.default)("diversity"), f = (0, u.useSpring)({
-                height: (N + 2 * A) * (E.DIVERSITY_SURROGATES.length + 1),
+                height: (A + 2 * N) * (E.DIVERSITY_SURROGATES.length + 1),
                 from: {
-                    height: N
+                    height: A
                 },
                 config: {
                     duration: 125
@@ -112,7 +112,7 @@ function(e, t, n) {
                             }),
                             style: f,
                             role: "listbox",
-                            children: p.map((e, t) => (0, i.jsx)(R, {
+                            children: p.map((e, t) => (0, i.jsx)(O, {
                                 index: t,
                                 fade: 0 !== t,
                                 delay: 20 * t,
@@ -155,7 +155,7 @@ function(e, t, n) {
                 onKeyDown: e => {
                     e.keyCode === C.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
                 },
-                children: (0, i.jsx)(O, {
+                children: (0, i.jsx)(R, {
                     id: I,
                     hasTabWrapper: s,
                     selectedSurrogate: n,

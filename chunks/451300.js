@@ -35,31 +35,31 @@ function(e, t, n) {
         } = e;
         (0, h.useFetchStickerPacks)();
         let {
-            analyticsLocations: A
-        } = (0, d.default)(u.default.EMPTY_STATE), N = (0, r.useStateFromStoresArray)([x.default], () => g.EMPTY_STATE_STICKERS.map(e => x.default.getStickerById(e)));
+            analyticsLocations: N
+        } = (0, d.default)(u.default.EMPTY_STATE), A = (0, r.useStateFromStoresArray)([x.default], () => g.EMPTY_STATE_STICKERS.map(e => x.default.getStickerById(e)));
         l.useEffect(() => {
             m.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: C.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
                 source: {
                     section: S.AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL
                 },
-                location_stack: A
+                location_stack: N
             })
-        }, [A]);
-        let R = (0, f.usePremiumTrialOffer)(),
-            O = (0, c.usePremiumDiscountOffer)(),
-            M = null != R || null != O,
-            k = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_0;
+        }, [N]);
+        let O = (0, f.usePremiumTrialOffer)(),
+            R = (0, c.usePremiumDiscountOffer)(),
+            M = null != O || null != R,
+            k = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_0;
         return (0, i.jsxs)("div", {
             className: s(T.emptyState, I, {
                 [T.unifyTrialUpsell]: M
             }),
             children: [M ? (0, i.jsx)(p.default, {
-                discountOffer: O,
-                trialOffer: R,
+                discountOffer: R,
+                trialOffer: O,
                 onClose: v,
                 type: C.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
-                subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : C.PremiumSubscriptionSKUs.TIER_2,
+                subscriptionTier: null !== (a = null == O ? void 0 : null === (n = O.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : C.PremiumSubscriptionSKUs.TIER_2,
                 children: _.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
             }) : (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(o.Heading, {
@@ -73,7 +73,7 @@ function(e, t, n) {
                     children: _.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
                 }), (0, i.jsx)("div", {
                     className: T.stickersRow,
-                    children: N.filter(e => null != e).map(e => (0, i.jsx)(E.default, {
+                    children: A.filter(e => null != e).map(e => (0, i.jsx)(E.default, {
                         sticker: e,
                         className: T.sticker,
                         size: 80

@@ -89,9 +89,9 @@ function(e, t, n) {
                 }
                 return 10
             }, [n, i])
-        }(l, a), A = (0, p.useCanStartPublicThread)(l, a), N = n.showThreadPromptOnReply && v >= 2 && A;
+        }(l, a), N = (0, p.useCanStartPublicThread)(l, a), A = n.showThreadPromptOnReply && v >= 2 && N;
 
-        function R(e) {
+        function O(e) {
             e.stopPropagation(), (0, c.setPendingReplyShouldMention)(l.id, !u)
         }
         return (0, i.jsx)("div", {
@@ -138,7 +138,7 @@ function(e, t, n) {
                                     return (0, i.jsx)(o.Clickable, {
                                         role: "switch",
                                         "aria-checked": u,
-                                        onClick: R,
+                                        onClick: O,
                                         onMouseEnter: t,
                                         onMouseLeave: n,
                                         onFocus: l,
@@ -168,7 +168,7 @@ function(e, t, n) {
                             })
                         })]
                     })]
-                }), N && (0, i.jsx)(C, {
+                }), A && (0, i.jsx)(C, {
                     channel: l,
                     message: a,
                     replyChainLength: v

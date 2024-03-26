@@ -41,14 +41,14 @@ function(e, t, n) {
             onFocus: I,
             ...v
         } = (0, u.useListItem)(n), {
-            handleFocus: A,
-            handleBlur: N
-        } = (0, m.useFocusInside)(I), R = 0 === T, O = null != r;
+            handleFocus: N,
+            handleBlur: A
+        } = (0, m.useFocusInside)(I), O = 0 === T, R = null != r;
         return (0, a.jsx)(d.FocusRing, {
             children: (0, a.jsx)("li", {
                 ...v,
-                onFocus: A,
-                onBlur: N,
+                onFocus: N,
+                onBlur: A,
                 onKeyDown: e => {
                     if (S) {
                         switch (e.which) {
@@ -77,17 +77,17 @@ function(e, t, n) {
                 ref: t,
                 children: (0, a.jsxs)("div", {
                     className: E.uploadContainer,
-                    children: [s, O ? (0, a.jsx)("div", {
+                    children: [s, R ? (0, a.jsx)("div", {
                         className: E.actionBarContainer,
                         children: (0, a.jsx)("div", {
                             className: o(E.actionBar, {
-                                [E.smallActionBar]: R
+                                [E.smallActionBar]: O
                             }),
                             onContextMenu: y,
                             "aria-label": x.default.Messages.ATTACHMENT_UTILITIES,
                             children: (0, a.jsx)(f.default, {
                                 className: o({
-                                    [E.miniPopover]: R
+                                    [E.miniPopover]: O
                                 }),
                                 children: r
                             })

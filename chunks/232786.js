@@ -36,15 +36,15 @@ function(e, t, n) {
             } = (0, u.useAnalyticsContext)(), {
                 analyticsLocations: v
             } = (0, d.default)(), {
-                isLoading: A,
-                suggestedPremiumType: N
+                isLoading: N,
+                suggestedPremiumType: A
             } = (0, p.default)({
                 autoTrackExposure: !0,
                 experiment: f.default,
                 location: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH
-            }), R = l.useRef(!1), O = l.useCallback(() => {
+            }), O = l.useRef(!1), R = l.useCallback(() => {
                 (0, c.default)({
-                    subscriptionTier: y.default.getSkuIdForPremiumType(N),
+                    subscriptionTier: y.default.getSkuIdForPremiumType(A),
                     analyticsLocations: v,
                     analyticsObject: {
                         ...I,
@@ -52,19 +52,19 @@ function(e, t, n) {
                         objectType: g.AnalyticsObjectTypes.TIER_2
                     }
                 }), null == T || T()
-            }, [v, I, T, N]), M = N === S.PremiumTypes.TIER_0;
+            }, [v, I, T, A]), M = A === S.PremiumTypes.TIER_0;
             return (0, i.jsx)("div", {
                 className: s(_.wrapper, n),
-                children: A ? (0, i.jsx)(o.Spinner, {
+                children: N ? (0, i.jsx)(o.Spinner, {
                     type: o.SpinnerTypes.PULSING_ELLIPSIS
                 }) : (0, i.jsx)(r.VisibilitySensor, {
                     onChange: e => {
-                        e && !R.current && (E.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        e && !O.current && (E.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                             type: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
                             location: I,
                             location_stack: v,
-                            sku_id: y.default.getSkuIdForPremiumType(N)
-                        }), R.current = !0)
+                            sku_id: y.default.getSkuIdForPremiumType(A)
+                        }), O.current = !0)
                     },
                     children: (0, i.jsxs)("div", {
                         className: _.upsell,
@@ -81,7 +81,7 @@ function(e, t, n) {
                         }), (0, i.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.LINK,
-                            onClick: O,
+                            onClick: R,
                             children: M ? C.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
                         }), null != a && (0, i.jsx)(o.Button, {
                             onClick: a,

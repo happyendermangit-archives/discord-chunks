@@ -35,7 +35,7 @@ function(_, E, I) {
             return M
         },
         asUintN: function() {
-            return U
+            return G
         }
     }), I("274635");
     var e = I("552442"),
@@ -216,7 +216,7 @@ function(_, E, I) {
         } : function(_) {
             return t.fromBit(_)
         },
-        U = A ? function(_, E) {
+        G = A ? function(_, E) {
             return Number(BigInt.asUintN(_, E))
         } : function(_, E) {
             return t.asUintN(_, E)

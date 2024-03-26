@@ -43,10 +43,10 @@ function(e, t, n) {
         T = n("954877"),
         I = n("662151"),
         v = n("155232"),
-        A = n("843093"),
-        N = n("867805"),
-        R = n("407063"),
-        O = n("697218"),
+        N = n("843093"),
+        A = n("867805"),
+        O = n("407063"),
+        R = n("697218"),
         M = n("315102"),
         k = n("402671"),
         L = n("626334"),
@@ -57,7 +57,7 @@ function(e, t, n) {
         },
         j = {
             BASIC: [a],
-            PREMIUM: [s, r, o, u, d, c, f, p, m, h, x, E, y, g, S, C, _, T, I, v, A]
+            PREMIUM: [s, r, o, u, d, c, f, p, m, h, x, E, y, g, S, C, _, T, I, v, N]
         },
         U = {
             [L.VoiceChannelEffectAnimationType.BASIC]: j.BASIC,
@@ -66,7 +66,7 @@ function(e, t, n) {
         D = l.memoize(e => new Promise(t => {
             let n = new Image;
             n.src = e, n.crossOrigin = "Anonymous", n.onload = () => {
-                let i = L.EMOJI_SIZE * (0, R.getDevicePixelRatio)();
+                let i = L.EMOJI_SIZE * (0, O.getDevicePixelRatio)();
                 if (n.width === i && n.height === i) t(e);
                 else {
                     var l;
@@ -94,8 +94,8 @@ function(e, t, n) {
                 size: t
             })
         }
-        let i = N.default.convertSurrogateToName(e.name, !1),
-            l = N.default.getByName(i);
+        let i = A.default.convertSurrogateToName(e.name, !1),
+            l = A.default.getByName(i);
         return null != l ? k.default.getURL(l.surrogates) : ""
     }
 
@@ -114,17 +114,17 @@ function(e, t, n) {
             u = o.length < 2 ? null !== (t = null == o ? void 0 : o[0]) && void 0 !== t ? t : "" : o.join(", ");
         if (r.length < 1) return "";
         if (1 === r.length) return P.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
-            firstUsername: null === (n = O.default.getUser(r[0])) || void 0 === n ? void 0 : n.username,
+            firstUsername: null === (n = R.default.getUser(r[0])) || void 0 === n ? void 0 : n.username,
             emojiNames: u
         });
         if (2 === r.length) return P.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
-            firstUsername: null === (i = O.default.getUser(r[0])) || void 0 === i ? void 0 : i.username,
-            secondUsername: null === (l = O.default.getUser(r[1])) || void 0 === l ? void 0 : l.username,
+            firstUsername: null === (i = R.default.getUser(r[0])) || void 0 === i ? void 0 : i.username,
+            secondUsername: null === (l = R.default.getUser(r[1])) || void 0 === l ? void 0 : l.username,
             emojiNames: u
         });
         else return P.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-            firstUsername: null === (a = O.default.getUser(r[0])) || void 0 === a ? void 0 : a.username,
-            secondUsername: null === (s = O.default.getUser(r[1])) || void 0 === s ? void 0 : s.username,
+            firstUsername: null === (a = R.default.getUser(r[0])) || void 0 === a ? void 0 : a.username,
+            secondUsername: null === (s = R.default.getUser(r[1])) || void 0 === s ? void 0 : s.username,
             count: r.length - 2,
             emojiNames: u
         })
