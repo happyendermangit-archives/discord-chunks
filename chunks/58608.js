@@ -1,62 +1,62 @@
-function(e, t, n) {
+function(e, t, i) {
     "use strict";
-    n.r(t), n.d(t, {
+    i.r(t), i.d(t, {
         default: function() {
-            return d
+            return c
         }
     });
-    var i = n("37983"),
-        l = n("884691"),
-        a = n("118810"),
-        s = n("446674"),
-        r = n("206230"),
-        o = n("719347");
-    let u = e => {
+    var r = i("37983"),
+        n = i("884691"),
+        u = i("118810"),
+        s = i("446674"),
+        o = i("206230"),
+        l = i("719347");
+    let a = e => {
         let {
             externalRef: t,
-            autoPlay: n,
-            playOnHover: u,
-            responsive: d,
-            mediaLayoutType: c,
+            autoPlay: i,
+            playOnHover: a,
+            responsive: c,
+            mediaLayoutType: d,
             ...f
-        } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = l.useRef(null);
+        } = e, h = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = n.useRef(null);
 
-        function h() {
+        function E() {
             var e;
-            u && (null == m || null === (e = m.current) || void 0 === e || e.play())
+            a && (null == p || null === (e = p.current) || void 0 === e || e.play())
         }
 
-        function x() {
+        function m() {
             var e;
-            u && (null == m || null === (e = m.current) || void 0 === e || e.pause())
+            a && (null == p || null === (e = p.current) || void 0 === e || e.pause())
         }
-        return l.useLayoutEffect(() => () => {
+        return n.useLayoutEffect(() => () => {
             let {
                 current: e
-            } = m;
+            } = p;
             null != e && function(e) {
                 e.removeAttribute("src"), Array.from(e.children).forEach(e => {
-                    (0, a.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, a.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
+                    (0, u.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, u.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
                 });
                 try {
                     e.load()
                 } catch (e) {}
             }(e)
-        }, []), l.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(m.current)) : null != t && (t.current = m.current), () => {
+        }, []), n.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(p.current)) : null != t && (t.current = p.current), () => {
             "function" == typeof t ? t(null) : null != t && (t.current = null)
-        }), [t, m]), (0, i.jsx)("video", {
-            ref: m,
-            autoPlay: !p && !u && n,
-            onMouseEnter: h,
-            onMouseLeave: x,
-            onFocus: h,
-            onBlur: x,
-            style: c === o.MediaLayoutType.MOSAIC ? {
+        }), [t, p]), (0, r.jsx)("video", {
+            ref: p,
+            autoPlay: !h && !a && i,
+            onMouseEnter: E,
+            onMouseLeave: m,
+            onFocus: E,
+            onBlur: m,
+            style: d === l.MediaLayoutType.MOSAIC ? {
                 width: "100%",
                 height: "100%",
                 maxHeight: "inherit",
                 objectFit: "cover"
-            } : d ? function() {
+            } : c ? function() {
                 return {
                     maxWidth: f.width,
                     maxHeight: f.height,
@@ -67,7 +67,7 @@ function(e, t, n) {
             ...f
         })
     };
-    var d = l.forwardRef((e, t) => (0, i.jsx)(u, {
+    var c = n.forwardRef((e, t) => (0, r.jsx)(a, {
         ...e,
         externalRef: t
     }))
