@@ -8,7 +8,7 @@ function(e, t, n) {
     var i, s = n("44170"),
         r = n("811022"),
         a = n("53452");
-    let o = new r.default("PeerConnection");
+    let o = new r.Logger("PeerConnection");
     i = class extends s.EventEmitter {
         setBitRate(e) {
             this.bitrate !== e && (this.bitrate = e, this.negotiationNeeded())

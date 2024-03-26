@@ -1,8 +1,8 @@
 function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
-        default: function() {
-            return i
+        DevToolsListener: function() {
+            return a
         }
     });
     var t, o, n = E("44170");
@@ -52,5 +52,4 @@ function(e, _, E) {
             super(), setInterval(() => this.check(), 500)
         }
     }
-    var i = a
 }

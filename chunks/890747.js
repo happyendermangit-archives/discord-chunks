@@ -12,7 +12,7 @@ function(e, t, n) {
         o = n("254490"),
         r = n("49671"),
         u = n("49111");
-    let d = new i.default("uploadRtcLogFiles");
+    let d = new i.Logger("uploadRtcLogFiles");
     async function c(e, t) {
         let n;
         if (null == r.default.fileManager.readLogFiles) throw new s.UploadVoiceDebugLogsError(s.UploadErrorCodes.GENERAL);

@@ -20,5 +20,5 @@ function(e, _, E) {
             timing: S
         }, E, ...a), "file-only" !== _ && console[_]("%c[".concat(e, "]"), "\nfont-weight: bold;\ncolor: purple;\n", E, ...a)
     });
-    var a = t.default
+    var a = t.Logger
 }

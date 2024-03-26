@@ -30,7 +30,7 @@ function(e, t, n) {
         N = n("49111"),
         y = n("724210"),
         R = n("782340");
-    let O = new l.default("MessageManager");
+    let O = new l.Logger("MessageManager");
 
     function D(e) {
         let {

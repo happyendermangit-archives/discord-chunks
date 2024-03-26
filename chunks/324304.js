@@ -13,7 +13,7 @@ function(e, t, n) {
         l = n("861001"),
         u = n("441822"),
         d = n("353927");
-    let c = new a.default("Output");
+    let c = new a.Logger("Output");
     (i = s || (s = {})).InteractionRequired = "interactionrequired", i.Speaking = "speaking", i.Video = "video", r = class extends o.default {
         play() {
             var e;

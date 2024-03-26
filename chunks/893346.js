@@ -16,7 +16,7 @@ function(e, _, E) {
         s = E("377678"),
         T = E("120082");
     let S = new Set(["APP_STATE_UPDATE", "CLEAR_CACHES", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_SOCKET", "SESSION_START", "UPLOAD_FAIL", "WRITE_CACHES"]),
-        N = new a.default("Flux");
+        N = new a.Logger("Flux");
     class O {
         isDispatching() {
             return null != this._currentDispatchActionType

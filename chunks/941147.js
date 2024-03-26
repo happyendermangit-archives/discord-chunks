@@ -7,7 +7,6 @@ function(e, t, o) {
         container: "container_d6bff4",
         ctaButton: "ctaButton__7d20c",
         mainColumn: "mainColumn_f44fc2",
-        shopForAllBackgroundImage: "shopForAllBackgroundImage__009d9",
         title: "title__5fd27"
     }
 }

@@ -5,5 +5,5 @@ function(e, t, n) {
             return i
         }
     });
-    var i = n("631734").default
+    var i = n("631734").RPCError
 }

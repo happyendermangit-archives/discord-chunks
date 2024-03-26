@@ -15,7 +15,7 @@ function(e, t, n) {
         d = n("985365"),
         c = n("599110"),
         _ = n("49111");
-    let f = new i.default("MessageRoundtripTrackerStore");
+    let f = new i.Logger("MessageRoundtripTrackerStore");
 
     function E(e) {
         return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp

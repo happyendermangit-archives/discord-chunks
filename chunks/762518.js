@@ -404,9 +404,9 @@ function(e, t, r) {
     function w() {
         let {
             renderWindow: e
-        } = n.useContext(I.default), t = e.document, [r] = n.useState(() => new u.default(() => t.createElement("img"), e => {
+        } = n.useContext(I.default), t = e.document, [r] = n.useState(() => new u.ElementPool(() => t.createElement("img"), e => {
             e.onload = null, e.src = ""
-        })), [s] = n.useState(() => new u.default(() => {
+        })), [s] = n.useState(() => new u.ElementPool(() => {
             let e = t.createElement("video");
             return e.className = y.gif, e.autoplay = !0, e.loop = !0, e.muted = !0, e.preload = "auto", e.controls = !1, e
         }, e => {

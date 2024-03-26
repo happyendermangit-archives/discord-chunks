@@ -25,7 +25,7 @@ function(e, t, n) {
         v = n("232125"),
         I = n("353927"),
         A = n("53452");
-    let C = new a.default("MediaEngineWebRTC");
+    let C = new a.Logger("MediaEngineWebRTC");
     i = class extends o.default {
         destroy() {
             null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null), this.eachConnection(e => e.destroy()), this.emit(c.MediaEngineEvent.Destroy), this.removeAllListeners()

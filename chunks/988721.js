@@ -44,7 +44,7 @@ function(e, t, n) {
         v = n("217946"),
         D = n("317041"),
         R = n("49111");
-    let L = new r.default("ApplicationCommandIndexStore"),
+    let L = new r.Logger("ApplicationCommandIndexStore"),
         P = Symbol("currentUser"),
         U = Symbol("stale"),
         b = Symbol("current"),

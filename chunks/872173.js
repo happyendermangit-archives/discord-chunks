@@ -269,7 +269,7 @@ function(e, t, n) {
                     } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === m.AbortCodes.INVALID_USER_SETTINGS_DATA) throw this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e;
                     else throw this.logger.log("Unknown user settings error"), e
                 }
-            }, this.logger = new o.default(this.ProtoClass.typeName)
+            }, this.logger = new o.Logger(this.ProtoClass.typeName)
         }
     }
     let T = new I(a.PreloadedUserSettings, g.UserSettingsTypes.PRELOADED_USER_SETTINGS),

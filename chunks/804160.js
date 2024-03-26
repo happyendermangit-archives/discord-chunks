@@ -34,7 +34,7 @@ function(e, t, r) {
         g = r("490931"),
         C = r("225982"),
         b = r("178406");
-    let m = new c.default("MemberSafetySearchManager");
+    let m = new c.Logger("MemberSafetySearchManager");
 
     function I(e) {
         return "guild_".concat(e)

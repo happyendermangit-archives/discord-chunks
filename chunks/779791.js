@@ -338,7 +338,7 @@ function(e, t, n) {
                         (null === (t = this.users.get(e)) || void 0 === t ? void 0 : t.videoSSRC) == null && this.destroyOutput(e, n)
                     }
                 }
-            }, this.logger = new o.default("UnifiedConnection(".concat(e, ")")), this.videoSupported = f.BROWSER_SUPPORTS_VIDEO;
+            }, this.logger = new o.Logger("UnifiedConnection(".concat(e, ")")), this.videoSupported = f.BROWSER_SUPPORTS_VIDEO;
             let s = this.pc = new RTCPeerConnection({
                 bundlePolicy: "max-bundle",
                 sdpSemantics: "unified-plan"

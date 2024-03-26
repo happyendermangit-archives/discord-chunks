@@ -485,7 +485,7 @@ function(e, t, n) {
         }
         constructor() {
             var t, n;
-            super(), t = this, this.Video = g.default, this.Camera = h.default, this.videoInputDeviceId = m.DISABLED_DEVICE_ID, this.connections = new Set, this.speedTesters = new Set, this.lastVoiceActivity = -1, this.audioSubsystem = "standard", this.audioLayer = "", this.deviceChangeGeneration = 0, this.consecutiveWatchdogFailures = 0, this.codecSurvey = null, this.logger = new o.default("MediaEngineNative"), this.handleDeviceChange = function() {
+            super(), t = this, this.Video = g.default, this.Camera = h.default, this.videoInputDeviceId = m.DISABLED_DEVICE_ID, this.connections = new Set, this.speedTesters = new Set, this.lastVoiceActivity = -1, this.audioSubsystem = "standard", this.audioLayer = "", this.deviceChangeGeneration = 0, this.consecutiveWatchdogFailures = 0, this.codecSurvey = null, this.logger = new o.Logger("MediaEngineNative"), this.handleDeviceChange = function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                     i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];

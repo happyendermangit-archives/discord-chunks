@@ -6,7 +6,7 @@ function(e, t, n) {
         }
     }), n("370692"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
     var i = n("811022");
-    let s = new i.default("RenderingContextWebGL");
+    let s = new i.Logger("RenderingContextWebGL");
     class r {
         static create(e) {
             if (null == e) return null;

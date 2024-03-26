@@ -10,7 +10,7 @@ function(e, t, n) {
         a = n("773364"),
         o = n("784063"),
         l = n("149416");
-    let u = new s.default("SpeedTester"),
+    let u = new s.Logger("SpeedTester"),
         d = 0;
     i = class e extends r.default {
         static create(t, n) {

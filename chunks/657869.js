@@ -13,7 +13,7 @@ function(e, t, n) {
         u = n("111000"),
         d = n("353927"),
         c = n("843455");
-    let _ = new r.default("Output"),
+    let _ = new r.Logger("Output"),
         f = new o.default;
     i = class extends s.EventEmitter {
         destroy() {

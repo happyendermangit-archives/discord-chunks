@@ -26,7 +26,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        d = new i.default("GatewayZstdStore"),
+        d = new i.Logger("GatewayZstdStore"),
         c = !1,
         _ = !1,
         f = 0;

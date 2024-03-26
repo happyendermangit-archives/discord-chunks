@@ -1,11 +1,11 @@
 function(e, t, r) {
     "use strict";
     r.r(t), r.d(t, {
-        default: function() {
+        ElementPool: function() {
             return s
         }
     }), r("424973");
-    var s = class e {
+    class s {
         getElement() {
             return 0 === this._elements.length ? this._createElement() : this._elements.pop()
         }

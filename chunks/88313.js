@@ -79,7 +79,7 @@ function(e, t, n) {
             for (let e in this.disabled = !0, this.perUserFpsWindow) this.deleteUser(e)
         }
         constructor(e, t, n, s) {
-            this.logger = new i.default("VideoHealthManager"), this.disabled = !1, this.perUserFpsWindow = {}, this.prevFramesCodec = {}, this.prevTimestamp = {}, this.streamDisabledUsers = new Set, this.retryBackoffCache = {}, this.timeoutIdCache = {}, this.currentVideoAutoToggleState = {}, this.enableQueue = [], this.windowLength = e, this.fpsThreshold = n, this.fpsWindowBorderlineCount = Math.ceil(e * t), this.backoffTimeSec = s, this.logger.info("constructor with windowLength = ".concat(this.windowLength, ",\n      fpsWindowBorderlineCount = ").concat(this.fpsWindowBorderlineCount, ",\n      fpsThreshold = ").concat(this.fpsThreshold, ",\n      backoffTimeSec = ").concat(s))
+            this.logger = new i.Logger("VideoHealthManager"), this.disabled = !1, this.perUserFpsWindow = {}, this.prevFramesCodec = {}, this.prevTimestamp = {}, this.streamDisabledUsers = new Set, this.retryBackoffCache = {}, this.timeoutIdCache = {}, this.currentVideoAutoToggleState = {}, this.enableQueue = [], this.windowLength = e, this.fpsThreshold = n, this.fpsWindowBorderlineCount = Math.ceil(e * t), this.backoffTimeSec = s, this.logger.info("constructor with windowLength = ".concat(this.windowLength, ",\n      fpsWindowBorderlineCount = ").concat(this.fpsWindowBorderlineCount, ",\n      fpsThreshold = ").concat(this.fpsThreshold, ",\n      backoffTimeSec = ").concat(s))
         }
     }
 }

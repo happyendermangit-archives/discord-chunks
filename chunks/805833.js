@@ -8,7 +8,7 @@ function(e, _, E) {
     var t = E("811022"),
         o = E("377678");
     let n = void 0,
-        r = new t.default("Flux"),
+        r = new t.Logger("Flux"),
         a = e => e();
     var i = new class e {
         destroy() {

@@ -855,7 +855,7 @@ function(e, t, n) {
                     }
                     this.stats = e
                 }
-            }, this.logger = new f.default("Connection(".concat(e, ")")), this.videoSupported = n
+            }, this.logger = new f.Logger("Connection(".concat(e, ")")), this.videoSupported = n
         }
     }
 }

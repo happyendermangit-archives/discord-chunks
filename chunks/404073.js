@@ -1,7 +1,7 @@
 function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
-        default: function() {
+        UserDefenses: function() {
             return r
         }
     });
@@ -15,9 +15,10 @@ function(e, _, E) {
             url: "".concat(location.protocol).concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/jobs")
         })), "font-size: 16px;")) : setTimeout(() => n(e, _ + 1), 1e3))
     }
-    var r = (e, _, E) => {
+
+    function r(e, _, E) {
         if (null != E && "0.0.0" === E.remoteApp.getVersion()) return;
-        let r = new t.default;
+        let r = new t.DevToolsListener;
         if (null != E) {
             if (null != E.window.setDevtoolsCallbacks) E.window.setDevtoolsCallbacks(() => {
                 _.hideToken(), n(e)

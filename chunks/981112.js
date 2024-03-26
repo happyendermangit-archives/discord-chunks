@@ -17,7 +17,7 @@ function(e, t, n) {
         d = n("49111"),
         c = n("894488"),
         p = n("782340");
-    let f = new l.default("CloudUploaderBase.tsx");
+    let f = new l.Logger("CloudUploaderBase.tsx");
     async function m(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 ? arguments[2] : void 0,

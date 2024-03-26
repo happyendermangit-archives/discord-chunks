@@ -48,7 +48,7 @@ function(e, t, n) {
             this._ref = e
         }
         render() {
-            return (0, i.jsx)(r.default, {
+            return (0, i.jsx)(r.FileInput, {
                 ref: this.setRef,
                 handleNativeClick: d,
                 embedded: (0, l.isDesktop)(),

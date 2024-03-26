@@ -8,7 +8,7 @@ function(e, t, n) {
     var i, s = n("811022"),
         r = n("773364"),
         a = n("353927");
-    let o = new s.default("ConnectionEventFramerateReducer");
+    let o = new s.Logger("ConnectionEventFramerateReducer");
     i = class {
         initialize() {
             this.userSpeakingChange(!0)
