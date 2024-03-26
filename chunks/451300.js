@@ -35,17 +35,17 @@ function(e, t, n) {
         } = e;
         (0, h.useFetchStickerPacks)();
         let {
-            analyticsLocations: A
-        } = (0, d.default)(u.default.EMPTY_STATE), N = (0, r.useStateFromStoresArray)([x.default], () => g.EMPTY_STATE_STICKERS.map(e => x.default.getStickerById(e)));
+            analyticsLocations: N
+        } = (0, d.default)(u.default.EMPTY_STATE), A = (0, r.useStateFromStoresArray)([x.default], () => g.EMPTY_STATE_STICKERS.map(e => x.default.getStickerById(e)));
         l.useEffect(() => {
             m.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: C.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
                 source: {
                     section: S.AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL
                 },
-                location_stack: A
+                location_stack: N
             })
-        }, [A]);
+        }, [N]);
         let R = (0, f.usePremiumTrialOffer)(),
             O = (0, c.usePremiumDiscountOffer)(),
             M = null != R || null != O,
@@ -73,7 +73,7 @@ function(e, t, n) {
                     children: _.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
                 }), (0, i.jsx)("div", {
                     className: T.stickersRow,
-                    children: N.filter(e => null != e).map(e => (0, i.jsx)(E.default, {
+                    children: A.filter(e => null != e).map(e => (0, i.jsx)(E.default, {
                         sticker: e,
                         className: T.sticker,
                         size: 80

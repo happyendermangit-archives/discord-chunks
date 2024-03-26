@@ -27,8 +27,8 @@ function(e, t, n) {
         T = n("254490"),
         I = n("850391"),
         v = n("149022"),
-        A = n("296141"),
-        N = n("606013"),
+        N = n("296141"),
+        A = n("606013"),
         R = n("32647"),
         O = n("970153"),
         M = n("49111"),
@@ -175,7 +175,7 @@ function(e, t, n) {
                 spellcheckEnabled: S,
                 useNewSlashCommands: C,
                 canOnlyUseTextCommands: T,
-                className: A,
+                className: N,
                 id: O,
                 required: k,
                 maxCharacterCount: P,
@@ -188,7 +188,7 @@ function(e, t, n) {
                 popup: G
             } = this.state, H = {
                 channel: x,
-                className: r(A, L.textArea, {
+                className: r(N, L.textArea, {
                     [L.textAreaSlate]: g,
                     [L.textAreaDisabled]: d || F
                 }),
@@ -236,7 +236,7 @@ function(e, t, n) {
                 value: d ? (0, v.toRichValue)("") : u,
                 canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
                 canOnlyUseTextCommands: T
-            }) : (0, l.jsx)(N.default, {
+            }) : (0, l.jsx)(A.default, {
                 ref: this.ref,
                 ...H,
                 value: d ? "" : o
@@ -427,7 +427,7 @@ function(e, t, n) {
                         }
                     })
                 })(r), this.focus(), !0)
-            }, this._unsubscribe = A.channelEditorPopupStore.subscribe(e => {
+            }, this._unsubscribe = N.channelEditorPopupStore.subscribe(e => {
                 requestAnimationFrame(() => {
                     this.setState({
                         popup: e
@@ -436,7 +436,7 @@ function(e, t, n) {
             }), this.state = {
                 focused: !1,
                 submitting: !1,
-                popup: A.channelEditorPopupStore.getState()
+                popup: N.channelEditorPopupStore.getState()
             }
         }
     }

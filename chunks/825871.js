@@ -37,7 +37,7 @@ function(e, t, n) {
         }
     };
 
-    function A() {
+    function N() {
         (0, a.openModalLazy)(async () => {
             let {
                 default: e
@@ -47,7 +47,7 @@ function(e, t, n) {
             })
         })
     }
-    let N = {
+    let A = {
         sentinel: C.COMMAND_SENTINEL,
         stores: [f.default, u.default, x.default],
         matches: (e, t, n, i, l) => l.commands !== S.CommandMode.DISABLED && null == f.default.getActiveCommand(e.id) && (i || l.commands !== S.CommandMode.OLD_BUILT_INS),
@@ -142,7 +142,7 @@ function(e, t, n) {
                     look: l.Button.Looks.LINK,
                     color: l.Button.Colors.BRAND,
                     size: l.Button.Sizes.MIN,
-                    onClick: A,
+                    onClick: N,
                     children: T.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
                 }) : null
             })
@@ -181,5 +181,5 @@ function(e, t, n) {
             }
         }
     };
-    var R = N
+    var R = A
 }

@@ -43,8 +43,8 @@ function(e, t, n) {
         T = n("954877"),
         I = n("662151"),
         v = n("155232"),
-        A = n("843093"),
-        N = n("867805"),
+        N = n("843093"),
+        A = n("867805"),
         R = n("407063"),
         O = n("697218"),
         M = n("315102"),
@@ -57,7 +57,7 @@ function(e, t, n) {
         },
         j = {
             BASIC: [a],
-            PREMIUM: [s, r, o, u, d, c, f, p, m, h, x, E, y, g, S, C, _, T, I, v, A]
+            PREMIUM: [s, r, o, u, d, c, f, p, m, h, x, E, y, g, S, C, _, T, I, v, N]
         },
         U = {
             [L.VoiceChannelEffectAnimationType.BASIC]: j.BASIC,
@@ -94,8 +94,8 @@ function(e, t, n) {
                 size: t
             })
         }
-        let i = N.default.convertSurrogateToName(e.name, !1),
-            l = N.default.getByName(i);
+        let i = A.default.convertSurrogateToName(e.name, !1),
+            l = A.default.getByName(i);
         return null != l ? k.default.getURL(l.surrogates) : ""
     }
 

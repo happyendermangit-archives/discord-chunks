@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("515059"),
         I = n("139321"),
         v = n("454655"),
-        A = n("635956"),
-        N = n("845579"),
+        N = n("635956"),
+        A = n("845579"),
         R = n("697218"),
         O = n("124299"),
         M = n("600785"),
@@ -74,8 +74,8 @@ function(e, t, n) {
                 isScrolling: y,
                 isUsingKeyboardNavigation: S,
                 allowAnimatedEmoji: _,
-                channelGuildId: A,
-                messageId: N,
+                channelGuildId: N,
+                messageId: A,
                 isBurstReaction: R,
                 listHeaderClassName: O,
                 activeSectionIndex: M,
@@ -125,14 +125,14 @@ function(e, t, n) {
                     rowIndex: e,
                     allowAnimatedEmoji: _,
                     showEmojiFavoriteTooltip: ea,
-                    channelGuildId: A,
+                    channelGuildId: N,
                     category: l.sectionId,
                     selectedItemClassName: Y.selectedItem,
-                    messageId: N,
+                    messageId: A,
                     isBurstReaction: R,
                     inNitroLockedSection: l.isNitroLocked
                 }, e)
-            }), [a, p, r, W, el, u, h, E, y, S, _, ea, A, N, R]);
+            }), [a, p, r, W, el, u, h, E, y, S, _, ea, N, A, R]);
             l.useEffect(() => () => {
                 var e, t;
                 return null === (t = es.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -240,7 +240,7 @@ function(e, t, n) {
                 messageId: U,
                 isBurstReaction: D,
                 listHeaderClassName: w
-            } = e, F = l.useRef(!1), G = g.EmojiPickerStore.useStore(e => e.activeCategoryIndex), H = (0, S.useExpressionPickerStore)(e => e.searchQuery), V = N.AnimateEmoji.useSetting(), z = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), Z = (0, L.isPremium)(z), {
+            } = e, F = l.useRef(!1), G = g.EmojiPickerStore.useStore(e => e.activeCategoryIndex), H = (0, S.useExpressionPickerStore)(e => e.searchQuery), V = A.AnimateEmoji.useSetting(), z = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), Z = (0, L.isPremium)(z), {
                 location: J
             } = (0, x.useAnalyticsContext)(), {
                 analyticsLocations: Q
@@ -359,7 +359,7 @@ function(e, t, n) {
                         color: "header-primary",
                         className: Y.upsellText,
                         children: W.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_TITLE
-                    }), (0, i.jsx)(A.default, {
+                    }), (0, i.jsx)(N.default, {
                         className: Y.upsellButton,
                         size: m.ButtonSizes.TINY,
                         shinyButtonClassName: Y.upsellButton,

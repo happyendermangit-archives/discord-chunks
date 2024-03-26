@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("599110"),
         I = n("159885"),
         v = n("570759"),
-        A = n("866353"),
-        N = n("178207"),
+        N = n("866353"),
+        A = n("178207"),
         R = n("256860"),
         O = n("364685"),
         M = n("161585"),
@@ -53,8 +53,8 @@ function(e, t, n) {
         Z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
         J = Y + 2 * Z,
         Q = z + 2 * Z,
-        q = s(N.trackStickerSearchEmpty, 200),
-        X = s(N.trackStickerSearchResultsViewed, 200),
+        q = s(A.trackStickerSearchEmpty, 200),
+        X = s(A.trackStickerSearchResultsViewed, 200),
         $ = l.forwardRef(function(e, t) {
             var a;
             let {
@@ -100,7 +100,7 @@ function(e, t, n) {
                 } = null != ep ? ep : {},
                 eg = eE.length + ey.length,
                 eS = l.useCallback(e => {
-                    "" === el ? (0, N.trackStickerSelect)(e) : (0, N.trackStickerSearchSelect)(e, el, eg), I(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
+                    "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), I(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
                 }, [I, el, eg]),
                 eC = null != eu && eu > H,
                 {
@@ -108,7 +108,7 @@ function(e, t, n) {
                     rowCountBySection: eT,
                     stickersGrid: eI,
                     gutterWidth: ev,
-                    columnCounts: eA
+                    columnCounts: eN
                 } = (0, R.useStickersGrid)({
                     filteredStickers: ep,
                     stickersCategories: er,
@@ -118,7 +118,7 @@ function(e, t, n) {
                     stickerNodeMargin: eC ? K : W,
                     stickerNodeWidth: eC ? J : Q
                 }),
-                eN = l.useCallback((e, t) => {
+                eA = l.useCallback((e, t) => {
                     let {
                         location: l
                     } = t;
@@ -138,7 +138,7 @@ function(e, t, n) {
                             });
                             break;
                         case M.StickerGridItemTypes.STICKER:
-                            null != e.sticker && (0, A.isSendableSticker)(e.sticker, ef, u) && eS(e)
+                            null != e.sticker && (0, N.isSendableSticker)(e.sticker, ef, u) && eS(e)
                     }
                 }, [z, ef, u, eS]),
                 {
@@ -148,10 +148,10 @@ function(e, t, n) {
                     handleGridContainerKeyDown: ek,
                     isUsingKeyboardNavigation: eL
                 } = (0, k.useKeyboardNavigation)({
-                    columnCounts: eA,
+                    columnCounts: eN,
                     stickersListRef: et,
                     stickersGrid: eI,
-                    onGridItemSelect: eN,
+                    onGridItemSelect: eA,
                     store: m.StickerPickerStore,
                     setInspectedStickerPosition: m.StickerPickerStore.setInspectedExpressionPosition,
                     gridNavigatorId: w.GRID_NAVIGATOR_ID
@@ -167,7 +167,7 @@ function(e, t, n) {
                 let i = 0;
                 null != ex && [...ex.values()].forEach(e => {
                     i += e.length
-                }), (0, N.trackStickerPickerOpen)({
+                }), (0, A.trackStickerPickerOpen)({
                     containerWidth: s,
                     favoriteStickers: em,
                     frequentlyUsedStickers: eh,
@@ -176,7 +176,7 @@ function(e, t, n) {
                 })
             };
             l.useEffect(() => {
-                "" === es.current && "" !== el && (0, N.trackStickerSearchStart)(), es.current = el
+                "" === es.current && "" !== el && (0, A.trackStickerSearchStart)(), es.current = el
             }, [el]), l.useEffect(() => {
                 0 === eg ? q(el) : X(el, eg, ea)
             }, [el, eg, ea]), l.useLayoutEffect(() => {

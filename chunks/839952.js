@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return N
         }
     }), n("222007");
     var i = n("37983"),
@@ -190,8 +190,8 @@ function(e, t, n) {
         }) : v += " " + x.default.Messages.PREVIEW_BYTES_LEFT.format({
             formattedBytes: (0, d.formatKbSize)(f)
         }));
-        let A = (null == m ? void 0 : m.slice(0, y).join("\n")) + v,
-            N = a || y < h;
+        let N = (null == m ? void 0 : m.slice(0, y).join("\n")) + v,
+            A = a || y < h;
         return (0, i.jsxs)("div", {
             className: s(p, E.container),
             children: [(0, i.jsx)("div", {
@@ -201,14 +201,14 @@ function(e, t, n) {
                 children: null == l ? (0, i.jsx)(o.Spinner, {
                     className: E.spinner
                 }) : (0, i.jsx)(g, {
-                    text: A,
+                    text: N,
                     language: u
                 })
             }), (0, i.jsxs)(o.Text, {
                 color: "header-secondary",
                 className: E.footer,
                 variant: "text-sm/normal",
-                children: [N ? (0, i.jsxs)(i.Fragment, {
+                children: [A ? (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(S, {
                         expanded: a,
                         setExpanded: r,
@@ -273,7 +273,7 @@ function(e, t, n) {
             })
         })
     }
-    var A = l.memo(function(e) {
+    var N = l.memo(function(e) {
         let {
             attachment: t,
             className: n,

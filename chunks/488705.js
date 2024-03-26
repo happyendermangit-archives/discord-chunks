@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("278410"),
         I = n("410957"),
         v = n("730708"),
-        A = n("754702");
-    let N = async (e, t, n) => {
+        N = n("754702");
+    let A = async (e, t, n) => {
         n(!0), await (0, E.createReferralTrial)(e).then(() => {
             t(), (0, c.popAllLayers)()
         }).finally(() => {
@@ -78,7 +78,7 @@ function(e, t, n) {
                     className: _.confirmationShareButton,
                     submitting: u,
                     onClick: () => {
-                        N(a, t, c), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                        A(a, t, c), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: r,
                             step: g.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
                             other_user_id: Number(a)
@@ -127,7 +127,7 @@ function(e, t, n) {
                 className: _.generalBodyContainer,
                 children: [(0, i.jsx)("img", {
                     alt: "",
-                    src: k ? I : A,
+                    src: k ? I : N,
                     className: _.generalBodyImage
                 }), (0, i.jsxs)("div", {
                     className: _.innerContent,
@@ -169,7 +169,7 @@ function(e, t, n) {
                     className: _.generalShareButton,
                     submitting: E,
                     onClick: () => {
-                        r ? N(O, a, v) : (c(!0), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                        r ? A(O, a, v) : (c(!0), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: M,
                             step: g.ReferralTrialsAnalyticSteps.FLOW_STARTED,
                             other_user_id: Number(O)

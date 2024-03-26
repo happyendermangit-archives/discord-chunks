@@ -37,8 +37,8 @@ function(e, t, n) {
         T = n("106435"),
         I = n("289918"),
         v = n("878569"),
-        A = n("590006"),
-        N = n("430312"),
+        N = n("590006"),
+        A = n("430312"),
         R = n("401642"),
         O = n("590456"),
         M = n("49111"),
@@ -64,12 +64,12 @@ function(e, t, n) {
                     className: P.warningCircleIcon,
                     color: u.default.unsafe_rawColors.YELLOW_300.css
                 })
-            }), (0, i.jsx)(A.default, {
+            }), (0, i.jsx)(N.default, {
                 className: a ? P.profileBadgesCompactNoTouch : P.profileBadges,
                 user: t,
                 guildId: n,
                 isTryItOutFlow: l,
-                size: A.BadgeSizes.SIZE_22
+                size: N.BadgeSizes.SIZE_22
             })]
         })
     }
@@ -91,8 +91,8 @@ function(e, t, n) {
             animateOnHover: _,
             hasProfileEffect: I
         } = e, {
-            profileTheme: A
-        } = l.useContext(N.UserProfileContext), U = l.useContext(y.AnalyticsContext), w = t.isNonUserBot() && !t.isClyde(), F = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, k.PremiumTypes.TIER_2), G = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), {
+            profileTheme: N
+        } = l.useContext(A.UserProfileContext), U = l.useContext(y.AnalyticsContext), w = t.isNonUserBot() && !t.isClyde(), F = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, k.PremiumTypes.TIER_2), G = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), {
             trackUserProfileAction: H,
             analyticsLocations: B,
             messageId: V,
@@ -115,7 +115,7 @@ function(e, t, n) {
                 size: b,
                 "aria-label": t.username,
                 status: G ? M.StatusTypes.UNKNOWN : u,
-                statusBackdropColor: null != A && F && !G ? (0, d.getStatusBackdropColor)(A) : void 0,
+                statusBackdropColor: null != N && F && !G ? (0, d.getStatusBackdropColor)(N) : void 0,
                 isMobile: c,
                 statusTooltip: !0
             })

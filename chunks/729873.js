@@ -29,14 +29,14 @@ function(e, t, n) {
         I = n("782340"),
         v = n("981840");
 
-    function A(e) {
+    function N(e) {
         return "animated" in e
     }
-    let N = e => {
+    let A = e => {
             let {
                 inspectedEmoji: t,
                 guild: n
-            } = e, i = A(t);
+            } = e, i = N(t);
             return null != n && i ? I.default.Messages.EMOJI_FROM_GUILD.format({
                 guildName: n.name
             }) : null
@@ -74,7 +74,7 @@ function(e, t, n) {
                 D = (0, a.useStateFromStores)([h.default], () => h.default.isFocused()),
                 w = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
                 F = p.AnimateEmoji.useSetting(),
-                G = (0, g.useIsFavoriteEmoji)(O, A(j) ? j : null),
+                G = (0, g.useIsFavoriteEmoji)(O, N(j) ? j : null),
                 {
                     newlyAddedEmojis: H
                 } = (0, S.default)(O, M),
@@ -84,7 +84,7 @@ function(e, t, n) {
                     let e = Date.now();
                     return () => {
                         let t = Date.now() - e;
-                        t >= 250 && A(j) && V !== T.EmojiSubCategory.NONE && (V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== j && j.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(j.guildId, H[0].id), null != P.source && (0, g.trackEmojiFocus)({
+                        t >= 250 && N(j) && V !== T.EmojiSubCategory.NONE && (V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== j && j.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(j.guildId, H[0].id), null != P.source && (0, g.trackEmojiFocus)({
                             emoji: j,
                             subCategory: V,
                             position: b.columnIndex + 1,
@@ -92,7 +92,7 @@ function(e, t, n) {
                         }))
                     }
                 }), null == j) return null;
-            if (A(j)) {
+            if (N(j)) {
                 var K;
                 let e = null != j.id ? E.default.getEmojiURL({
                     id: j.id,
@@ -120,7 +120,7 @@ function(e, t, n) {
                     shouldAnimate: !w && D
                 }) : null,
                 Y = L && "CREATE_EMOJI" === j.type ? I.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : j.allNamesString,
-                z = L && "CREATE_EMOJI" === j.type ? I.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : N({
+                z = L && "CREATE_EMOJI" === j.type ? I.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : A({
                     inspectedEmoji: j,
                     channel: k,
                     guildId: O,

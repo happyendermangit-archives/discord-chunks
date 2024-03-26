@@ -31,8 +31,8 @@ function(e, t, n) {
         T = n("762974"),
         I = n("718517"),
         v = n("299039"),
-        A = n("158998"),
-        N = n("49111"),
+        N = n("158998"),
+        A = n("49111"),
         R = n("994428"),
         O = n("646718"),
         M = n("782340"),
@@ -145,7 +145,7 @@ function(e, t, n) {
             autoTrackExposure: I
         }), b = [];
         P && I && b.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-        let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, A.useDirectMessageRecipient)(n), H = null != F;
+        let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, N.useDirectMessageRecipient)(n), H = null != F;
         if (t) return null;
         let B = () => {
                 (0, x.default)({
@@ -155,10 +155,10 @@ function(e, t, n) {
                     subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
                     analyticsLocations: a,
                     analyticsObject: {
-                        page: n.isPrivate() ? N.AnalyticsPages.DM_CHANNEL : N.AnalyticsPages.GUILD_CHANNEL,
-                        section: N.AnalyticsSections.CHANNEL_TEXT_AREA,
-                        object: N.AnalyticsObjects.SEASONAL_BUTTON_ICON,
-                        objectType: N.AnalyticsObjectTypes.GIFT
+                        page: n.isPrivate() ? A.AnalyticsPages.DM_CHANNEL : A.AnalyticsPages.GUILD_CHANNEL,
+                        section: A.AnalyticsSections.CHANNEL_TEXT_AREA,
+                        object: A.AnalyticsObjects.SEASONAL_BUTTON_ICON,
+                        objectType: A.AnalyticsObjectTypes.GIFT
                     }
                 })
             },

@@ -8,10 +8,10 @@ function(e, t, n) {
             return v
         },
         playSound: function() {
-            return A
+            return N
         },
         maybePlayCustomJoinSound: function() {
-            return N
+            return A
         },
         useSoundBoardDismissContentTypes: function() {
             return R
@@ -62,10 +62,10 @@ function(e, t, n) {
         return (m.default.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === C.DEFAULT_SOUND_GUILD_ID) && I(t, n) && (!i || t.available)
     }
 
-    function A(e, t, n) {
+    function N(e, t, n) {
         (0, x.playSoundLocally)(t, e, y.LocalSoundTrigger.SOUNDBOARD), (0, u.sendVoiceChannelSoundboardEffect)(t, e, __OVERLAY__, n)
     }
-    async function N(e) {
+    async function A(e) {
         let t = f.default.getCurrentUser(),
             n = (0, a.default)(),
             i = (0, S.getCustomJoinSound)(e);

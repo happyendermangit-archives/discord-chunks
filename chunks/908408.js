@@ -41,20 +41,20 @@ function(e, t, n) {
                 })
             }, [I]);
             let v = (0, c.usePremiumTrialOffer)(),
-                A = (0, d.usePremiumDiscountOffer)(),
-                N = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === g.PremiumSubscriptionSKUs.TIER_0,
-                R = null != v || null != A;
+                N = (0, d.usePremiumDiscountOffer)(),
+                A = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === g.PremiumSubscriptionSKUs.TIER_0,
+                R = null != v || null != N;
             return (0, i.jsxs)("div", {
                 className: s(C.upsellWrapper, {
                     [C.unifyTrialUpsell]: R
                 }),
                 children: [R ? (0, i.jsx)(f.default, {
                     trialOffer: v,
-                    discountOffer: A,
+                    discountOffer: N,
                     onClose: T,
                     type: g.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
                     subscriptionTier: null !== (a = null == v ? void 0 : null === (n = v.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : g.PremiumSubscriptionSKUs.TIER_2,
-                    children: N ? S.default.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
+                    children: A ? S.default.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
                         planName: (0, h.getTierDisplayName)(g.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                         onClick: x
                     }) : S.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
@@ -79,7 +79,7 @@ function(e, t, n) {
                     })]
                 }), !R && (0, i.jsx)(E.default, {
                     analyticsSection: y.AnalyticsSections.EXPRESSION_PICKER,
-                    buttonText: R ? N ? S.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : S.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+                    buttonText: R ? A ? S.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : S.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
                 }), (0, i.jsx)(r.Clickable, {
                     className: C.upsellClose,
                     onClick: T,

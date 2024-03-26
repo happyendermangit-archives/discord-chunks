@@ -109,7 +109,7 @@ function(e, t, n) {
             await s.HTTP.post({
                 url: S.Endpoints.VOICE_CHANNEL_EFFECTS(t.id),
                 body: e
-            }), N(t, n, i, u), r.default.dispatch({
+            }), A(t, n, i, u), r.default.dispatch({
                 type: "VOICE_CHANNEL_EFFECT_SENT_LOCAL"
             })
         } catch (e) {
@@ -121,10 +121,10 @@ function(e, t, n) {
                 })
             }
         }
-    }, A = {
+    }, N = {
         [g.VoiceChannelEffectAnimationType.BASIC]: "Basic",
         [g.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
-    }, N = (e, t, n, i) => {
+    }, A = (e, t, n, i) => {
         let {
             unicode: l,
             custom: a,
@@ -132,7 +132,7 @@ function(e, t, n) {
             managed: r,
             managedExternal: o,
             animated: d
-        } = (0, h.countEmoji)([t], e.getGuildId()), c = A[i];
+        } = (0, h.countEmoji)([t], e.getGuildId()), c = N[i];
         u.default.trackWithMetadata(S.AnalyticEvents.VOICE_CHANNEL_EFFECT_SENT, {
             channel_id: e.id,
             guild_id: e.getGuildId(),

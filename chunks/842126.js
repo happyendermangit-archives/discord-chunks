@@ -33,8 +33,8 @@ function(e, t, n) {
                 onInspect: T,
                 surrogateCodePoint: I,
                 getEmojiItemProps: v,
-                getEmojiRowProps: A,
-                isScrolling: N,
+                getEmojiRowProps: N,
+                isScrolling: A,
                 isUsingKeyboardNavigation: R,
                 rowIndex: O,
                 allowAnimatedEmoji: M,
@@ -65,12 +65,12 @@ function(e, t, n) {
                                 visibleRowIndex: n,
                                 columnIndex: o
                             } = e, u = G.rowIndex === n && G.columnIndex === o, d = t => {
-                                t.stopPropagation(), !N.current && !R.current && (a(e, {
+                                t.stopPropagation(), !A.current && !R.current && (a(e, {
                                     isFinalSelection: !0,
                                     toggleFavorite: !1
                                 }), f.default.open(e.guildId, S.GuildSettingsSections.EMOJI, S.AnalyticsSections.EMOJI_PICKER_POPOUT))
                             }, c = () => {
-                                !N.current && !R.current && T(e)
+                                !A.current && !R.current && T(e)
                             };
                             return function() {
                                 var e;
@@ -124,7 +124,7 @@ function(e, t, n) {
                                 descriptor: e,
                                 emojiItemKey: t,
                                 isInspected: r,
-                                isScrolling: N,
+                                isScrolling: A,
                                 isUsingKeyboardNavigation: R,
                                 surrogateCodePoint: I,
                                 allowAnimatedEmoji: M,
@@ -147,7 +147,7 @@ function(e, t, n) {
                     }
                 },
                 Z = e => (0, i.jsx)("ul", {
-                    ...A(O),
+                    ...N(O),
                     className: s(_.emojiListRow, {
                         [_.emojiListRowLargeSize]: W,
                         [_.emojiListRowMediumSize]: Y

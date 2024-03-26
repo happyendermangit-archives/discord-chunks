@@ -31,8 +31,8 @@ function(e, t, n) {
         T = n("26989"),
         I = n("305961"),
         v = n("957255"),
-        A = n("697218"),
-        N = n("145131"),
+        N = n("697218"),
+        A = n("145131"),
         R = n("476765"),
         O = n("945330"),
         M = n("907566"),
@@ -62,9 +62,9 @@ function(e, t, n) {
                 children: (0, i.jsx)("div", {
                     className: D.overflowRolesPopoutArrow
                 })
-            }), (0, i.jsxs)(N.default, {
+            }), (0, i.jsxs)(A.default, {
                 className: D.overflowRolesPopoutHeader,
-                align: N.default.Align.CENTER,
+                align: A.default.Align.CENTER,
                 children: [(0, i.jsx)(M.default, {
                     color: p.default.unsafe_rawColors.PRIMARY_400.css,
                     className: D.overflowRolesPopoutHeaderIcon
@@ -94,8 +94,8 @@ function(e, t, n) {
             disableBorderColor: I,
             onMouseDown: v
         } = e, {
-            tabIndex: A,
-            ...N
+            tabIndex: N,
+            ...A
         } = (0, d.useListItem)(g.id), R = (0, C.useRoleIcon)({
             roleId: g.id,
             size: 16,
@@ -140,12 +140,12 @@ function(e, t, n) {
                 onContextMenu: P,
                 onMouseDown: v,
                 "aria-label": g.name,
-                tabIndex: A,
-                ...N,
+                tabIndex: N,
+                ...A,
                 children: [(0, i.jsxs)(m.Clickable, {
                     className: D.roleRemoveButton,
                     onClick: x ? _ : void 0,
-                    tabIndex: x ? A : -1,
+                    tabIndex: x ? N : -1,
                     focusProps: {
                         focusClassName: D.roleRemoveIconFocused
                     },
@@ -260,7 +260,7 @@ function(e, t, n) {
             (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? x.default.unassignGuildRoleConnection(a.id, e.id) : _.default.updateMemberRoles(a.id, n.id, i, [], [e.id])
         }, [r, a.id, n.id]), C = l.useCallback(e => {
             let t = r; - 1 === t.indexOf(e) && (t = t.concat([e])), _.default.updateMemberRoles(a.id, n.id, t, [e], [])
-        }, [r, a.id, n.id]), [T, N] = l.useState(null), R = (0, f.useStateFromStores)([I.default], () => I.default.getRoles(a.id)), O = l.useMemo(() => {
+        }, [r, a.id, n.id]), [T, A] = l.useState(null), R = (0, f.useStateFromStores)([I.default], () => I.default.getRoles(a.id)), O = l.useMemo(() => {
             let e = Object.values(R).filter(e => r.includes(e.id)).sort((e, t) => {
                 var n, i;
                 let l = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
@@ -283,9 +283,9 @@ function(e, t, n) {
                 if ((t += s + 4) > n) break;
                 e++
             }
-            N(t => e < O.length ? e : t)
+            A(t => e < O.length ? e : t)
         }, [c, p, O]);
-        let k = A.default.getCurrentUser();
+        let k = N.default.getCurrentUser();
         o(null != k, "MemberRolesList: currentUser cannot be undefined");
         let L = !h && v.default.can(j.Permissions.MANAGE_ROLES, a),
             b = P.getHighestRole(a, k.id),

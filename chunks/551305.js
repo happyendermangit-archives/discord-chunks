@@ -60,8 +60,8 @@ function(e, t, n) {
             pulse: T,
             sparkle: I,
             notification: v,
-            "aria-label": A,
-            "aria-expanded": N,
+            "aria-label": N,
+            "aria-expanded": A,
             "aria-haspopup": R,
             "aria-controls": O
         } = e, M = (0, u.useTransition)(null != x, {
@@ -87,8 +87,8 @@ function(e, t, n) {
         return (0, a.jsxs)(d.Button, {
             look: d.Button.Looks.BLANK,
             size: d.Button.Sizes.NONE,
-            "aria-label": A,
-            "aria-expanded": N,
+            "aria-label": N,
+            "aria-expanded": A,
             "aria-haspopup": R,
             "aria-controls": O,
             disabled: n,

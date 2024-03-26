@@ -31,8 +31,8 @@ function(e, t, n) {
         T = n("305961"),
         I = n("957255"),
         v = n("800762"),
-        A = n("313873"),
-        N = n("599110"),
+        N = n("313873"),
+        A = n("599110"),
         R = n("474293"),
         O = n("49111"),
         M = n("782340"),
@@ -66,7 +66,7 @@ function(e, t, n) {
             isEmbedded: p
         })
     }
-    let P = A.default.Types;
+    let P = N.default.Types;
     var b = function(e) {
         let {
             activity: t,
@@ -94,12 +94,12 @@ function(e, t, n) {
             return null
         }), H = (0, p.default)(), B = (0, y.default)(n), V = H && null != t && B;
         return (l.useEffect(() => {
-            (null == t ? void 0 : t.type) === O.ActivityTypes.HANG_STATUS && U && N.default.track(O.AnalyticEvents.VIEW_HANG_STATUS, {
+            (null == t ? void 0 : t.type) === O.ActivityTypes.HANG_STATUS && U && A.default.track(O.AnalyticEvents.VIEW_HANG_STATUS, {
                 source: "UserProfilePopout",
                 guild_id: null == D ? void 0 : D.guild_id,
                 channel_id: null == D ? void 0 : D.id
             })
-        }, [null == t ? void 0 : t.type, U, D]), (null == t ? void 0 : t.type) !== O.ActivityTypes.HANG_STATUS || U) ? (0, i.jsx)(A.default, {
+        }, [null == t ? void 0 : t.type, U, D]), (null == t ? void 0 : t.type) !== O.ActivityTypes.HANG_STATUS || U) ? (0, i.jsx)(N.default, {
             ...R,
             activity: t,
             user: n,
@@ -129,7 +129,7 @@ function(e, t, n) {
                             emoji: l,
                             reply: a
                         } = e;
-                        N.default.track(O.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
+                        A.default.track(O.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
                             application_id: t.application_id,
                             interaction_type: i,
                             ...c

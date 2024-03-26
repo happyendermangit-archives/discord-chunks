@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("389153"),
         I = n("586450"),
         v = n("41884"),
-        A = n("355263"),
-        N = n("317041"),
+        N = n("355263"),
+        A = n("317041"),
         R = n("49111"),
         O = n("782340"),
         M = n("847948"),
@@ -61,7 +61,7 @@ function(e, t, n) {
             applicationCommands: !a
         }, {
             placeholderCount: 7,
-            limit: N.DISCOVERY_COMMANDS_QUERY_LIMIT,
+            limit: A.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
         }), J = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: G,
@@ -98,7 +98,7 @@ function(e, t, n) {
             }
         }, [W, Y]);
         let $ = l.useCallback(e => {
-                if (e.id === Y || e.id === N.BuiltInSectionId.FRECENCY) {
+                if (e.id === Y || e.id === A.BuiltInSectionId.FRECENCY) {
                     var t;
                     Z(null), null === (t = D.current) || void 0 === t || t.scrollToSectionTop(0)
                 } else Z(e.id)
@@ -137,7 +137,7 @@ function(e, t, n) {
         let et = l.useCallback(e => {
                 let t = B[e];
                 if (null == t) return null;
-                let l = (0, A.getIconComponent)(t),
+                let l = (0, N.getIconComponent)(t),
                     a = (0, i.jsx)(l, {
                         channel: n,
                         section: t,
@@ -177,7 +177,7 @@ function(e, t, n) {
                 let a = V[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     r = "".concat(a.section.id, ":").concat(null !== (l = null == s ? void 0 : s.id) && void 0 !== l ? l : e);
-                if (null == s || a.section.id !== s.applicationId && a.section.id !== N.BuiltInSectionId.FRECENCY || s.inputType === _.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
+                if (null == s || a.section.id !== s.applicationId && a.section.id !== A.BuiltInSectionId.FRECENCY || s.inputType === _.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
                 let o = H.find(e => e.id === s.applicationId);
                 return (0, i.jsx)(x.default.NewCommand, {
                     index: e,

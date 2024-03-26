@@ -41,8 +41,8 @@ function(e, t, n) {
     }
     var I = l.memo(function(e) {
         var t, n, a, c, I, v;
-        let A, {
-                src: N,
+        let N, {
+                src: A,
                 volume: R = 1,
                 onVolumeChange: O,
                 onMute: M,
@@ -130,7 +130,7 @@ function(e, t, n) {
             }(), () => {
                 null != e && cancelAnimationFrame(e)
             }
-        }, [t, n, a]), c = N, I = W, v = Y, l.useEffect(() => {
+        }, [t, n, a]), c = A, I = W, v = Y, l.useEffect(() => {
             if (I) return h.ComponentDispatch.dispatch(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
                 src: c
             }), h.ComponentDispatch.subscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
@@ -146,11 +146,11 @@ function(e, t, n) {
         }, [c, I, v]);
         let em = W ? p.default : m.default,
             eh = W ? S.default.Messages.PAUSE : S.default.Messages.PLAY;
-        A = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
+        N = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
             children: (0, i.jsx)(_, {
                 ref: w,
                 className: C.audioElement,
-                src: N,
+                src: A,
                 preload: q,
                 playing: W && !z,
                 onEnded: es,
@@ -171,7 +171,7 @@ function(e, t, n) {
             volume: $,
             playing: W && !z,
             children: (0, i.jsx)("source", {
-                src: N
+                src: A
             })
         });
         let ex = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion),
@@ -228,7 +228,7 @@ function(e, t, n) {
                 onToggleMute: eu,
                 onVolumeShow: P,
                 onVolumeHide: b
-            }), A]
+            }), N]
         })
     })
 }

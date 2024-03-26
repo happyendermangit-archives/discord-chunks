@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("24373"),
         I = n("41170"),
         v = n("49111"),
-        A = n("13030"),
-        N = n("782340"),
+        N = n("13030"),
+        A = n("782340"),
         R = n("11693");
     let O = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
         M = (0, g.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
@@ -60,7 +60,7 @@ function(e, t, n) {
                     "aria-setsize": P,
                     "aria-posinset": a,
                     children: (0, i.jsx)(o.Clickable, {
-                        "aria-label": N.default.Messages.CATEGORY_FAVORITE,
+                        "aria-label": A.default.Messages.CATEGORY_FAVORITE,
                         className: s(R.stickerCategory, R.stickerCategoryGeneric, {
                             [R.stickerCategoryGenericDisabled]: k && !g,
                             [R.stickerCategoryGenericSelected]: !E && g && 0 === t
@@ -78,7 +78,7 @@ function(e, t, n) {
                     "aria-setsize": P,
                     "aria-posinset": a,
                     children: (0, i.jsx)(o.Clickable, {
-                        "aria-label": N.default.Messages.STICKER_PICKER_CATEGORIES_RECENT,
+                        "aria-label": A.default.Messages.STICKER_PICKER_CATEGORIES_RECENT,
                         className: s(R.stickerCategory, R.stickerCategoryGeneric, {
                             [R.stickerCategoryGenericDisabled]: k && !O,
                             [R.stickerCategoryGenericSelected]: !E && O && t === S
@@ -131,7 +131,7 @@ function(e, t, n) {
                                 onClick: () => {
                                     j.type === _.StickerCategoryTypes.PACK && y.default.track(v.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                                         location: null == p ? void 0 : p.location,
-                                        tab: A.ExpressionPickerViewType.STICKER,
+                                        tab: N.ExpressionPickerViewType.STICKER,
                                         sticker_pack_id: j.id,
                                         guild_id: f
                                     }), r()

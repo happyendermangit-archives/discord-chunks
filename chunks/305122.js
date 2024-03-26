@@ -17,10 +17,10 @@ function(e, t, n) {
             return v
         },
         removeFavoriteSound: function() {
-            return A
+            return N
         },
         playSoundLocally: function() {
-            return N
+            return A
         },
         reportSoundStartedPlaying: function() {
             return R
@@ -147,13 +147,13 @@ function(e, t, n) {
         }), !1) : !t.soundIds.includes(e) && void t.soundIds.push(e), h.UserSettingsDelay.INFREQUENT_USER_ACTION)
     }
 
-    function A(e) {
+    function N(e) {
         u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => {
             t.soundIds = t.soundIds.filter(t => t !== e)
         }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
     }
 
-    function N(e, t, n) {
+    function A(e, t, n) {
         s.default.dispatch({
             type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY",
             sound: t,

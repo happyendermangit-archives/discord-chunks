@@ -31,8 +31,8 @@ function(e, t, n) {
         var t, n;
         let a, I, {
                 userId: v,
-                channelId: A,
-                guild: N,
+                channelId: N,
+                guild: A,
                 theme: R,
                 onClose: O,
                 className: M
@@ -42,7 +42,7 @@ function(e, t, n) {
                 messageId: L,
                 roleId: P
             } = (0, m.useUserProfileAnalyticsContext)(),
-            b = (0, d.default)(N, v, A),
+            b = (0, d.default)(A, v, N),
             [j, U] = l.useState(new Set),
             D = (0, r.useStateFromStores)([h.default], () => h.default.getUserProfile(v)),
             w = null !== (t = null == D ? void 0 : D.connectedAccounts) && void 0 !== t ? t : [],
@@ -50,7 +50,7 @@ function(e, t, n) {
             G = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation),
             H = (0, r.useStateFromStores)([c.default], () => c.default.locale);
         if (l.useEffect(() => {
-                (null == N ? void 0 : N.id) != null && (null == b ? void 0 : b.id) != null && u.default.fetchGuildRoleConnectionsEligibility(N.id, b.id).then(e => {
+                (null == A ? void 0 : A.id) != null && (null == b ? void 0 : b.id) != null && u.default.fetchGuildRoleConnectionsEligibility(A.id, b.id).then(e => {
                     let t = new Set;
                     for (let n of e)
                         for (let {
@@ -59,7 +59,7 @@ function(e, t, n) {
                             of n) t.add(e);
                     U(t)
                 })
-            }, [null == N ? void 0 : N.id, null == b ? void 0 : b.id]), G || null == b) return null;
+            }, [null == A ? void 0 : A.id, null == b ? void 0 : b.id]), G || null == b) return null;
         let B = Array.from(j).map(e => {
             let t = w.find(t => t.type === e);
             return null == t ? null : (0, i.jsx)(x.ConnectedUserAccount, {
@@ -80,8 +80,8 @@ function(e, t, n) {
                     onClick: function() {
                         (0, E.openUserProfileModal)({
                             userId: v,
-                            channelId: A,
-                            guildId: null == N ? void 0 : N.id,
+                            channelId: N,
+                            guildId: null == A ? void 0 : A.id,
                             messageId: null != L ? L : void 0,
                             roleId: null != P ? P : void 0,
                             section: g.UserProfileSections.USER_INFO_CONNECTIONS,

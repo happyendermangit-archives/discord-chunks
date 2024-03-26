@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("306160"),
         I = n("794818"),
         v = n("844659"),
-        A = n("657057"),
-        N = n("886125"),
+        N = n("657057"),
+        A = n("886125"),
         R = n("180161"),
         O = n("781423"),
         M = n("47677"),
@@ -210,7 +210,7 @@ function(e, t, n) {
             }
         },
         timestamp: {
-            react: (e, t, n) => (0, i.jsx)(A.default, {
+            react: (e, t, n) => (0, i.jsx)(N.default, {
                 node: e
             }, n.key)
         },
@@ -320,7 +320,7 @@ function(e, t, n) {
             }(e),
             channelMention: (0, R.default)(e),
             commandMention: (0, O.default)(e),
-            attachmentLink: (0, N.default)(e)
+            attachmentLink: (0, A.default)(e)
         }
     }
 }

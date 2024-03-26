@@ -34,8 +34,8 @@ function(e, t, n) {
             members: S,
             guildId: I,
             unread: v,
-            onClick: A
-        } = e, [N, R] = l.useState(!1), O = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), k = (e, n) => {
+            onClick: N
+        } = e, [A, R] = l.useState(!1), O = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), k = (e, n) => {
             e.stopPropagation(), (0, y.default)({
                 summary: t,
                 channel: c,
@@ -44,7 +44,7 @@ function(e, t, n) {
         }, L = d.default.can(C.Permissions.MANAGE_MESSAGES, c);
         return (0, i.jsxs)(s.Clickable, {
             className: T.container,
-            onClick: A,
+            onClick: N,
             onContextMenu: e => {
                 L && (0, r.openContextMenuLazy)(e, async () => {
                     let {
@@ -59,7 +59,7 @@ function(e, t, n) {
             onMouseEnter: () => R(!0),
             onMouseLeave: () => R(!1),
             children: [(0, i.jsx)(h.default, {
-                hovered: N,
+                hovered: A,
                 unread: v,
                 className: T.unreadPill
             }), (0, i.jsx)("div", {
@@ -102,7 +102,7 @@ function(e, t, n) {
                         })]
                     })]
                 })
-            }), N && !M && (0, i.jsxs)("div", {
+            }), A && !M && (0, i.jsxs)("div", {
                 className: T.feedbackContainer,
                 children: [(0, i.jsx)(s.Clickable, {
                     onClick: e => k(e, _.FeedbackRating.GOOD),

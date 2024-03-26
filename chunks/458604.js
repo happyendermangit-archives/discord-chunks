@@ -40,8 +40,8 @@ function(e, t, n) {
                     size: T,
                     surrogateCodePoint: I,
                     allowAnimatedEmoji: v,
-                    selectedItemClassName: A,
-                    inNitroLockedSection: N,
+                    selectedItemClassName: N,
+                    inNitroLockedSection: A,
                     ...R
                 } = e,
                 O = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
@@ -52,7 +52,7 @@ function(e, t, n) {
                 }, {
                     autoTrackExposure: p
                 }),
-                k = p && M && !N;
+                k = p && M && !A;
             return (0, i.jsx)(o.FocusRing, {
                 children: (0, i.jsx)("button", {
                     ...R,
@@ -60,7 +60,7 @@ function(e, t, n) {
                         [_.emojiItemLarge]: u,
                         [_.emojiItemMedium]: d,
                         [_.emojiItemSelected]: c,
-                        [null != A ? A : ""]: c,
+                        [null != N ? N : ""]: c,
                         [_.emojiItemDisabled]: p && !M,
                         [_.showPulse]: h
                     }),
@@ -99,8 +99,8 @@ function(e, t, n) {
             isScrolling: S,
             isUsingKeyboardNavigation: _,
             showEmojiFavoriteTooltip: v,
-            surrogateCodePoint: A,
-            selectedItemClassName: N,
+            surrogateCodePoint: N,
+            selectedItemClassName: A,
             getEmojiItemProps: R,
             isMediumSize: O,
             isLargeSize: M,
@@ -176,8 +176,8 @@ function(e, t, n) {
                 columnIndex: Y,
                 rowIndex: f,
                 size: K,
-                surrogateCodePoint: A,
-                selectedItemClassName: N,
+                surrogateCodePoint: N,
+                selectedItemClassName: A,
                 inNitroLockedSection: D
             }))
         };

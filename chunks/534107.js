@@ -70,8 +70,8 @@ function(e, t, n) {
             played: y,
             playing: I,
             onDrag: v,
-            onDragStart: A,
-            onDragEnd: N
+            onDragStart: N,
+            onDragEnd: A
         } = e, {
             ref: R,
             width: O
@@ -207,8 +207,8 @@ function(e, t, n) {
         let [, V] = (0, d.default)({
             ref: R,
             onDrag: v,
-            onDragStart: A,
-            onDragEnd: N
+            onDragStart: N,
+            onDragEnd: A
         });
         return (0, i.jsx)("canvas", {
             onMouseDown: V,

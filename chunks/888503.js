@@ -31,8 +31,8 @@ function(e, t, n) {
         T = n("943722"),
         I = n("49111"),
         v = n("988268"),
-        A = n("39141"),
-        N = n("782340"),
+        N = n("39141"),
+        A = n("782340"),
         R = n("591665");
     let O = (0, C.cssValueToNumber)(r.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
     var M = function(e) {
@@ -101,13 +101,13 @@ function(e, t, n) {
                 hasQuest: null != em
             })
         }, eS = () => null != C && C && null == M ? (0, i.jsx)(o.Tooltip, {
-            text: null != O ? O : N.default.Messages.GUILD_OWNER,
+            text: null != O ? O : A.default.Messages.GUILD_OWNER,
             children: e => (0, i.jsx)(y.default, {
                 ...e,
                 className: R.ownerIcon
             })
         }) : null, eC = () => null == G ? null : (0, i.jsx)(o.Tooltip, {
-            text: N.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
+            text: A.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
                 date: G
             }),
             children: e => (0, i.jsx)(o.Clickable, {
@@ -145,14 +145,14 @@ function(e, t, n) {
                 }), (0, i.jsx)(c.default, {
                     confettiSpawnRef: eu,
                     shouldFire: k && null != b && e.id !== b.id,
-                    confettiLocation: A.ConfettiLocation.MEMBER_USER
+                    confettiLocation: N.ConfettiLocation.MEMBER_USER
                 })]
             })
         }, ev = () => (0, i.jsx)(o.NameWithRole, {
             roleName: r,
             color: null != a ? a : void 0,
             name: null != L ? L : ei
-        }), eA = D === I.StatusTypes.OFFLINE;
+        }), eN = D === I.StatusTypes.OFFLINE;
         return null == P ? (0, i.jsx)(E.default, {
             avatarSize: o.AvatarSizes.SIZE_32,
             className: R.placeholder
@@ -170,7 +170,7 @@ function(e, t, n) {
             children: () => (0, i.jsx)(S.default, {
                 selected: n,
                 className: s(R.member, V, {
-                    [R.offline]: eA && !n
+                    [R.offline]: eN && !n
                 }),
                 innerClassName: R.memberInner,
                 onClick: Y,
@@ -190,7 +190,7 @@ function(e, t, n) {
                         children: ev()
                     })
                 }),
-                avatar: eI(P, eA),
+                avatar: eI(P, eN),
                 subText: eg(),
                 decorators: eT(),
                 "aria-controls": Q,

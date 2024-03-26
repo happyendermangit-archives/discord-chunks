@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("788506"),
         I = n("675280"),
         v = n("917764"),
-        A = n("83017"),
-        N = n("115279"),
+        N = n("83017"),
+        A = n("115279"),
         R = n("49111"),
         O = n("13030"),
         M = n("782340"),
@@ -58,20 +58,20 @@ function(e, t, n) {
             isWindowFocused: c,
             useReducedMotion: p,
             isNitroLocked: m
-        } = e, h = (0, u.useListItem)("expression-guild-".concat(n)), x = o.type === N.EmojiCategoryTypes.GUILD ? null : o.id, y = t === n, g = o.type === N.EmojiCategoryTypes.GUILD ? o.guild : null, {
+        } = e, h = (0, u.useListItem)("expression-guild-".concat(n)), x = o.type === A.EmojiCategoryTypes.GUILD ? null : o.id, y = t === n, g = o.type === A.EmojiCategoryTypes.GUILD ? o.guild : null, {
             enabled: C
         } = _.default.useExperiment({
             location: "Emoji Picker Category List"
         }, {
             autoTrackExposure: m
-        }), A = (0, i.jsxs)(f.Clickable, {
+        }), N = (0, i.jsxs)(f.Clickable, {
             ...h,
             "aria-label": (0, T.getAriaIdForEmojiCategory)(o, g),
             className: s({
                 [k.categoryItemGuildCategory]: null != g,
                 [k.categoryItemDefaultCategory]: null == g,
                 [k.categoryItemDefaultCategorySelected]: null == g && y,
-                [k.categoryItemRecentEmoji]: o.type === N.EmojiCategoryTypes.RECENT
+                [k.categoryItemRecentEmoji]: o.type === A.EmojiCategoryTypes.RECENT
             }),
             onClick: () => {
                 null != g && S.default.track(R.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
@@ -91,18 +91,18 @@ function(e, t, n) {
                 height: b,
                 width: b
             }) : null]
-        }), M = r[n + 1], L = null != M && o.type === N.EmojiCategoryTypes.GUILD && M.type !== N.EmojiCategoryTypes.GUILD;
+        }), M = r[n + 1], L = null != M && o.type === A.EmojiCategoryTypes.GUILD && M.type !== A.EmojiCategoryTypes.GUILD;
         return null != g ? (0, i.jsxs)(l.Fragment, {
             children: [(0, i.jsx)(E.default, {
                 guild: g,
                 includeActivity: !1,
                 children: (0, i.jsx)("div", {
-                    children: A
+                    children: N
                 })
             }), L ? (0, i.jsx)("hr", {
                 className: k.guildCategorySeparator
             }, "separator") : null]
-        }) : A
+        }) : N
     }
     var W = e => {
         let {
@@ -111,7 +111,7 @@ function(e, t, n) {
             sectionDescriptors: a,
             intention: r,
             channel: u
-        } = e, c = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), E = (0, A.useCategorySelectHandler)({
+        } = e, c = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), E = (0, N.useCategorySelectHandler)({
             sectionDescriptors: a,
             emojiListRef: n
         }), S = (0, p.useAnalyticsContext)(), C = (0, T.useEmojiCategories)(r, u), _ = l.useRef(null), I = (0, d.useStateFromStores)([y.default], () => y.default.isFocused()), v = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), R = (0, T.useCategoryNitroLockedStates)(r, u, C), O = l.useMemo(() => o.memoize((e, t) => {
@@ -131,10 +131,10 @@ function(e, t, n) {
             }, t)
         }), [c, S, C, E, I, v, R]), L = l.useMemo(() => [8, 8, 0, 8], []), U = l.useCallback((e, t) => {
             let n = C[t];
-            if (n.type === N.EmojiCategoryTypes.RECENT) return G;
-            if (n.type === N.EmojiCategoryTypes.GUILD) {
+            if (n.type === A.EmojiCategoryTypes.RECENT) return G;
+            if (n.type === A.EmojiCategoryTypes.GUILD) {
                 let e = C[t + 1],
-                    n = null != e && e.type !== N.EmojiCategoryTypes.GUILD;
+                    n = null != e && e.type !== A.EmojiCategoryTypes.GUILD;
                 return n ? B : H
             }
             return V
@@ -149,7 +149,7 @@ function(e, t, n) {
                 n = 0,
                 i = 0;
             C.forEach(l => {
-                l.type === N.EmojiCategoryTypes.GUILD ? (t += 1, n += 1) : l.type === N.EmojiCategoryTypes.UNICODE ? i += 1 : (e += 1, t += 1)
+                l.type === A.EmojiCategoryTypes.GUILD ? (t += 1, n += 1) : l.type === A.EmojiCategoryTypes.UNICODE ? i += 1 : (e += 1, t += 1)
             });
             let l = [e, n, i],
                 a = G + t * H + B;
@@ -178,10 +178,10 @@ function(e, t, n) {
                 let n = C[e];
                 if (null == n) return 0;
                 let i = J ? D : 0;
-                if (n.type === N.EmojiCategoryTypes.RECENT) return t ? 0 : j;
-                if (n.type === N.EmojiCategoryTypes.GUILD) {
+                if (n.type === A.EmojiCategoryTypes.RECENT) return t ? 0 : j;
+                if (n.type === A.EmojiCategoryTypes.GUILD) {
                     let n = C[e + 1];
-                    return null != n && n.type !== N.EmojiCategoryTypes.GUILD ? t ? w + -2 * F + P + i : P : t ? i : P
+                    return null != n && n.type !== A.EmojiCategoryTypes.GUILD ? t ? w + -2 * F + P + i : P : t ? i : P
                 }
                 return t ? P + i : 2 * P
             }, [C, J]),

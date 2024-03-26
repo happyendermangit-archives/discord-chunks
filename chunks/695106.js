@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("756249");
     let I = (0, y.uid)(),
         v = c.default.convert.fromCodePoint("1f44f"),
-        A = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-        N = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+        N = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+        A = (0, S.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
         R = e => {
             let {
                 fade: t,
@@ -83,9 +83,9 @@ function(e, t, n) {
                 onClick: a,
                 hasTabWrapper: r
             } = e, c = (0, x.default)("diversity"), f = (0, u.useSpring)({
-                height: (N + 2 * A) * (E.DIVERSITY_SURROGATES.length + 1),
+                height: (A + 2 * N) * (E.DIVERSITY_SURROGATES.length + 1),
                 from: {
-                    height: N
+                    height: A
                 },
                 config: {
                     duration: 125

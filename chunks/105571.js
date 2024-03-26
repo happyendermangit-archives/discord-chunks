@@ -28,9 +28,9 @@ function(e, t, n) {
         T = n("317041"),
         I = n("782340"),
         v = n("23429"),
-        A = n("919163");
+        N = n("919163");
 
-    function N(e) {
+    function A(e) {
         let {
             channel: t,
             command: n,
@@ -130,7 +130,7 @@ function(e, t, n) {
                         variant: "heading-lg/bold",
                         children: u.name
                     }), (0, i.jsx)(r.Text, {
-                        className: s(v.appDescription, A.markup),
+                        className: s(v.appDescription, N.markup),
                         variant: "text-sm/medium",
                         lineClamp: 3,
                         children: P
@@ -149,7 +149,7 @@ function(e, t, n) {
                         children: ["Popular", (0, i.jsx)(x.default, {})]
                     })]
                 }), (0, i.jsx)("ul", {
-                    children: _.map(e => (0, i.jsx)(N, {
+                    children: _.map(e => (0, i.jsx)(A, {
                         channel: a,
                         command: e,
                         section: u

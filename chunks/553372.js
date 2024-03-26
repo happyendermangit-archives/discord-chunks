@@ -34,8 +34,8 @@ function(e, t, n) {
         T = n("389480"),
         I = n("78581"),
         v = n("23106"),
-        A = n("796864"),
-        N = n("172858"),
+        N = n("796864"),
+        A = n("172858"),
         R = n("782340"),
         O = n("802501");
 
@@ -105,7 +105,7 @@ function(e, t, n) {
             name: Y,
             emojiId: z,
             emojiName: Z
-        } = L, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Q = (0, A.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
+        } = L, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Q = (0, N.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
             playSoundboardSound: q,
             previewSound: X,
             isPlayingSound: $
@@ -203,7 +203,7 @@ function(e, t, n) {
                 }),
                 onClick: function() {
                     if (es && !ei && (el.current = Math.min(el.current + .01, .1), Math.random() < el.current && ee(en.x, en.y, void 0, void 0, {
-                            sprite: N.DUCK_CONFETTI_SPRITE
+                            sprite: A.DUCK_CONFETTI_SPRITE
                         })), null != H) {
                         H();
                         return

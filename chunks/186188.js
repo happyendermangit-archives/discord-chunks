@@ -5,10 +5,10 @@ function(e, t, n) {
             return v
         },
         CustomEmoji: function() {
-            return A
+            return N
         },
         TextMention: function() {
-            return N
+            return A
         },
         UserMention: function() {
             return R
@@ -73,7 +73,7 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function N(e) {
         let {
             emoji: t
         } = e;
@@ -90,7 +90,7 @@ function(e, t, n) {
         })
     }
 
-    function N(e) {
+    function A(e) {
         let {
             text: t,
             channelId: n,
