@@ -1,23 +1,23 @@
 function(e, _, E) {
     "use strict";
     E.r(_), E.d(_, {
-        getValorantUserSignupExperiment: function() {
+        getValorantAdminSignupExperiment: function() {
             return n
         }
     });
     var t = E("862205");
     let o = (0, t.createExperiment)({
         kind: "user",
-        id: "2024-03_valorant_user_signup",
-        label: "Valorant User Signup",
+        id: "2024-03_valorant_admin_signup",
+        label: "Valorant Admin Signup",
         defaultConfig: {
-            showUserSignup: !1
+            showAdminSignup: !1
         },
         treatments: [{
             id: 1,
-            label: "Show user signup",
+            label: "Show admin signup",
             config: {
-                showUserSignup: !0
+                showAdminSignup: !0
             }
         }]
     });
@@ -25,7 +25,7 @@ function(e, _, E) {
     function n(e) {
         let _ = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             {
-                showUserSignup: E
+                showAdminSignup: E
             } = o.getCurrentConfig({
                 location: e
             }, {

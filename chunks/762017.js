@@ -103,7 +103,7 @@ function(e, _, E) {
             neverLoadBeforeConnectionOpen: !0
         },
         SignUpManager: {
-            actions: ["POST_CONNECTION_OPEN"],
+            actions: ["POST_CONNECTION_OPEN", "CHANNEL_SELECT"],
             inlineRequire: () => E("674487").default,
             neverLoadBeforeConnectionOpen: !0
         },
