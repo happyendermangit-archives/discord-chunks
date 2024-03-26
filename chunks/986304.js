@@ -2,6 +2,7 @@ function(e, t, o) {
     "use strict";
     e.exports = {
         activityContainer: "activityContainer__49787",
+        activityContainerNoMargin: "activityContainerNoMargin__85545",
         activityPanelContainer: "activityPanelContainer_cb5c84",
         circularButton: "circularButton__88b89",
         flex: "flex__630b2",

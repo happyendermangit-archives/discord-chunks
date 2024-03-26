@@ -16,7 +16,8 @@ function(e, t, n) {
             shop_disable_cache: "Shop: Disable shop cache",
             shop_include_unpublished: "Shop: Show unpublished items in the shop",
             enable_avatar_decoration_uploads: "Shop: Enable avatar decoration uploads",
-            lottie_hover_multiple_loop: "Lotties - continue playing the hover animation after mouse enter"
+            lottie_hover_multiple_loop: "Lotties - continue playing the hover animation after mouse enter",
+            activity_panel_iframe_fills_container: "Activity Panel: Iframe fills container"
         },
         a = {};
     class o extends i.default.DeviceSettingsStore {
