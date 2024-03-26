@@ -1,30 +1,30 @@
-function(e, t, n) {
+function(e, t, i) {
     "use strict";
-    n.r(t), n.d(t, {
+    i.r(t), i.d(t, {
         subscribeMembers: function() {
-            return r
+            return l
         },
         unsubscribeMembers: function() {
             return u
         },
         subscribeToMemberUpdates: function() {
-            return a
+            return o
         },
         unsubscribeFromMemberUpdates: function() {
-            return d
-        },
-        subscribeChannel: function() {
             return s
         },
+        subscribeChannel: function() {
+            return a
+        },
         subscribeChannelDimensions: function() {
-            return o
+            return d
         }
-    }), n("424973");
-    var l = n("913144"),
-        i = n("696605");
+    }), i("424973");
+    var n = i("913144"),
+        r = i("696605");
 
-    function r(e, t) {
-        l.default.dispatch({
+    function l(e, t) {
+        n.default.dispatch({
             type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD",
             guildId: e,
             userIds: t
@@ -32,59 +32,59 @@ function(e, t, n) {
     }
 
     function u(e, t) {
-        l.default.dispatch({
+        n.default.dispatch({
             type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE",
             guildId: e,
             userIds: t
         })
     }
 
-    function a(e) {
-        l.default.dispatch({
+    function o(e) {
+        n.default.dispatch({
             type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES",
             guildId: e
         })
     }
 
-    function d(e) {
-        l.default.dispatch({
+    function s(e) {
+        n.default.dispatch({
             type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
             guildId: e
         })
     }
 
-    function s(e, t, n) {
-        l.default.dispatch({
+    function a(e, t, i) {
+        n.default.dispatch({
             type: "GUILD_SUBSCRIPTIONS_CHANNEL",
             guildId: e,
             channelId: t,
-            ranges: n
+            ranges: i
         })
     }
 
-    function o(e) {
+    function d(e) {
         let {
             guildId: t,
-            channelId: n,
-            y: l,
-            height: r,
+            channelId: i,
+            y: n,
+            height: l,
             rowHeight: u
         } = e;
 
-        function a(e) {
+        function o(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
             return Math.max(0, Math.ceil(Math.ceil(e / u)) + t)
         }
-        let d = [];
+        let s = [];
 
-        function o(e) {
-            let t = e + (i.MINIMUM_RANGE - 1);
-            return d.push([e, t]), t + 1
+        function d(e) {
+            let t = e + (r.MINIMUM_RANGE - 1);
+            return s.push([e, t]), t + 1
         }
-        let c = a(.5 * r),
-            f = a(l, -c),
-            _ = a(l + r, c);
-        for (f > 0 && (f = Math.max(o(0), f)), f = Math.floor(f / i.MINIMUM_RANGE) * i.MINIMUM_RANGE; f <= _;) f = o(f);
-        s(t, n, d)
+        let f = o(.5 * l),
+            c = o(n, -f),
+            h = o(n + l, f);
+        for (c > 0 && (c = Math.max(d(0), c)), c = Math.floor(c / r.MINIMUM_RANGE) * r.MINIMUM_RANGE; c <= h;) c = d(c);
+        a(t, i, s)
     }
 }

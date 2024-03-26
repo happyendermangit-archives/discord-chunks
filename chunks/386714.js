@@ -2,19 +2,19 @@ function(e, t, i) {
     "use strict";
     i.r(t), i.d(t, {
         default: function() {
-            return n
+            return l
         }
     });
-    var l = i("845579"),
+    var n = i("845579"),
         r = i("217513");
 
-    function n(e, t) {
+    function l(e, t) {
         if ("undefined" == typeof Image) return;
         let i = (0, r.getDisplayProfile)(e.user.id, t);
         if (null == i) return;
-        let n = l.GifAutoPlay.getSetting(),
+        let l = n.GifAutoPlay.getSetting(),
             u = i.getBannerURL({
-                canAnimate: n,
+                canAnimate: l,
                 size: 480
             });
         if (null == u) return;

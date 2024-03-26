@@ -1,59 +1,59 @@
-function(e, t, i) {
+function(e, t, r) {
     "use strict";
-    let l;
-    i.r(t), i.d(t, {
+    let n;
+    r.r(t), r.d(t, {
         default: function() {
-            return g
+            return T
         }
     });
-    var r = i("917351"),
-        n = i("446674"),
-        u = i("913144");
-    let o = [],
-        s = !1;
-    let a = o,
-        d = {},
+    var u = r("917351"),
+        o = r("446674"),
+        l = r("913144");
+    let i = [],
+        a = !1;
+    let s = i,
+        c = {},
         f = null,
-        c = e => {
-            a = (0, r.cloneDeep)(e);
+        d = e => {
+            s = (0, u.cloneDeep)(e);
             let t = {};
-            a.forEach(e => {
+            s.forEach(e => {
                 t[e.id] = e
-            }), d = t
+            }), c = t
         };
-    class h extends n.default.Store {
+    class E extends o.default.Store {
         get isFetching() {
-            return s
+            return a
         }
         get fetchError() {
-            return l
+            return n
         }
         get profileEffects() {
-            return a
+            return s
         }
         get tryItOutId() {
             return f
         }
         getProfileEffectById(e) {
-            return null != e ? d[e] : void 0
+            return null != e ? c[e] : void 0
         }
     }
-    h.displayName = "ProfileEffectStore";
-    var g = new h(u.default, {
+    E.displayName = "ProfileEffectStore";
+    var T = new E(l.default, {
         USER_PROFILE_EFFECTS_FETCH: () => {
-            s = !0
+            a = !0
         },
         USER_PROFILE_EFFECTS_FETCH_SUCCESS: e => {
             let {
                 profileEffects: t
             } = e;
-            s = !1, c(0 === t.length ? o : t)
+            a = !1, d(0 === t.length ? i : t)
         },
         USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
             let {
                 error: t
             } = e;
-            s = !1, l = t, c(o)
+            a = !1, n = t, d(i)
         },
         PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
             let {
@@ -62,7 +62,7 @@ function(e, t, i) {
             f = t
         },
         LOGOUT: e => {
-            s = !1, c(o), f = null
+            a = !1, d(i), f = null
         }
     })
 }

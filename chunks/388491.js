@@ -11,10 +11,10 @@ function(e, t, r) {
             return A
         },
         useAvatarBorderColor: function() {
-            return p
+            return m
         },
         calculateButtonColor: function() {
-            return R
+            return p
         },
         useMessageInputBorderColor: function() {
             return v
@@ -89,7 +89,7 @@ function(e, t, r) {
         return [Math.round(e[0] * u + t[0] * n), Math.round(e[1] * u + t[1] * n), Math.round(e[2] * u + t[2] * n)]
     }
 
-    function m(e, t) {
+    function R(e, t) {
         let r = (0, o.int2rgbArray)(e);
         if (null == t) return 0;
         let n = f.default.parseString(t);
@@ -101,11 +101,11 @@ function(e, t, r) {
         return (0, o.rgb2int)("rgba(".concat(a, ", ").concat(s, ", ").concat(c, ")"))
     }
 
-    function p(e, t, r) {
+    function m(e, t, r) {
         let n = E(e);
-        return null == n || null == t ? null : m(t, r ? n.overlaySyncedWithUserTheme : n.overlay)
+        return null == n || null == t ? null : R(t, r ? n.overlaySyncedWithUserTheme : n.overlay)
     }
-    let R = (0, u.memoize)(e => {
+    let p = (0, u.memoize)(e => {
         let t = (0, a.getContrastingColor)(e, {
             base: "#ffffff",
             contrastRatio: a.WCAGContrastRatios.HighContrastText
@@ -115,11 +115,11 @@ function(e, t, r) {
 
     function v(e, t) {
         let r = E(e);
-        return null != r && null != t ? m(t, null == r ? void 0 : r.messageInputBorder) : null
+        return null != r && null != t ? R(t, null == r ? void 0 : r.messageInputBorder) : null
     }
 
     function I(e, t) {
         let r = (0, c.useColorValue)(d.Color.WHITE_500).hex;
-        return (0, a.isThemeDark)(e) ? (0, o.hex2int)(r) : null != t ? R(t) : null
+        return (0, a.isThemeDark)(e) ? (0, o.hex2int)(r) : null != t ? p(t) : null
     }
 }

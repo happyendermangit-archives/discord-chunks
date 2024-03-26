@@ -8,15 +8,15 @@ function(e, t, i) {
             return c
         },
         default: function() {
-            return g
+            return m
         },
         useAvatarColors: function() {
-            return v
+            return g
         }
     }), i("222007");
-    var l = i("884691"),
+    var n = i("884691"),
         r = i("656280"),
-        n = i.n(r),
+        l = i.n(r),
         u = i("308503"),
         o = i("446674"),
         s = i("206230"),
@@ -40,13 +40,13 @@ function(e, t, i) {
             try {
                 let t = await (0, d.getPaletteForAvatar)(e),
                     i = (0, a.getComplimentaryPaletteForColor)(t[0]);
-                f.setState(l => ({
+                f.setState(n => ({
                     fetching: {
-                        ...l.fetching,
+                        ...n.fetching,
                         [e]: !1
                     },
                     palette: {
-                        ...l.palette,
+                        ...n.palette,
                         [e]: [...t.slice(0, 2), ...i]
                     }
                 }))
@@ -61,30 +61,30 @@ function(e, t, i) {
         }
     }
 
-    function g(e, t) {
+    function m(e, t) {
         let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            [l] = v(e, t, i);
-        return l
+            [n] = g(e, t, i);
+        return n
     }
 
-    function v(e, t) {
+    function g(e, t) {
         let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             r = f(t => null == e ? void 0 : t.palette[e]),
             u = (0, o.useStateFromStores)([s.default], () => i && s.default.desaturateUserColors ? s.default.saturation : 1);
-        l.useEffect(() => {
+        n.useEffect(() => {
             null != e && null == r && h(e)
         }, [e, r]);
-        let a = l.useMemo(() => null == r ? void 0 : r.map(e => {
-            let [t, i, l] = e, {
+        let a = n.useMemo(() => null == r ? void 0 : r.map(e => {
+            let [t, i, n] = e, {
                 h: r,
                 s: o,
                 l: s
-            } = n({
+            } = l({
                 r: t,
                 g: i,
-                b: l
+                b: n
             }).toHsl();
-            return n({
+            return l({
                 h: r,
                 s: o * u,
                 l: s

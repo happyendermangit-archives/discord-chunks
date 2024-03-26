@@ -2,18 +2,18 @@ function(e, t, i) {
     "use strict";
     i.r(t), i.d(t, {
         default: function() {
-            return l
+            return n
         }
     }), i("222007");
-    var l, r = i("906932"),
-        n = i("315102"),
+    var n, r = i("906932"),
+        l = i("315102"),
         u = i("719923"),
         o = i("646718");
 
     function s(e, t) {
         return null == t || "" === t ? e : t
     }
-    l = class {
+    n = class {
         get premiumSince() {
             return this._userProfile.premiumSince
         }
@@ -63,13 +63,13 @@ function(e, t, i) {
                 canAnimate: t,
                 size: i
             } = e;
-            return null != this.guildId && this.isUsingGuildMemberBanner() ? (0, n.getGuildMemberBannerURL)({
+            return null != this.guildId && this.isUsingGuildMemberBanner() ? (0, l.getGuildMemberBannerURL)({
                 id: this.userId,
                 guildId: this.guildId,
                 banner: this.banner,
                 canAnimate: t,
                 size: i
-            }) : (0, n.getUserBannerURL)({
+            }) : (0, l.getUserBannerURL)({
                 id: this.userId,
                 banner: this.banner,
                 canAnimate: t,
@@ -78,7 +78,7 @@ function(e, t, i) {
         }
         getPreviewBanner(e, t) {
             let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 480;
-            return null != e ? e : null === e ? this.isUsingGuildMemberBanner() ? (0, n.getUserBannerURL)({
+            return null != e ? e : null === e ? this.isUsingGuildMemberBanner() ? (0, l.getUserBannerURL)({
                 id: this.userId,
                 banner: this._userProfile.banner,
                 canAnimate: t,
@@ -103,8 +103,8 @@ function(e, t, i) {
             return this._userProfile.legacyUsername
         }
         constructor(e, t) {
-            var i, l, r, n;
-            this.userId = e.userId, this.guildId = null == t ? void 0 : t.guildId, this.banner = null !== (i = null == t ? void 0 : t.banner) && void 0 !== i ? i : e.banner, this.bio = s(e.bio, null == t ? void 0 : t.bio), this.pronouns = s(e.pronouns, null == t ? void 0 : t.pronouns), this.accentColor = e.accentColor, this.themeColors = null !== (l = null == t ? void 0 : t.themeColors) && void 0 !== l ? l : e.themeColors, this.popoutAnimationParticleType = null !== (r = null == t ? void 0 : t.popoutAnimationParticleType) && void 0 !== r ? r : e.popoutAnimationParticleType, this.profileEffectId = null !== (n = null == t ? void 0 : t.profileEffectId) && void 0 !== n ? n : e.profileEffectId, this._userProfile = e, this._guildMemberProfile = t
+            var i, n, r, l;
+            this.userId = e.userId, this.guildId = null == t ? void 0 : t.guildId, this.banner = null !== (i = null == t ? void 0 : t.banner) && void 0 !== i ? i : e.banner, this.bio = s(e.bio, null == t ? void 0 : t.bio), this.pronouns = s(e.pronouns, null == t ? void 0 : t.pronouns), this.accentColor = e.accentColor, this.themeColors = null !== (n = null == t ? void 0 : t.themeColors) && void 0 !== n ? n : e.themeColors, this.popoutAnimationParticleType = null !== (r = null == t ? void 0 : t.popoutAnimationParticleType) && void 0 !== r ? r : e.popoutAnimationParticleType, this.profileEffectId = null !== (l = null == t ? void 0 : t.profileEffectId) && void 0 !== l ? l : e.profileEffectId, this._userProfile = e, this._guildMemberProfile = t
         }
     }
 }
