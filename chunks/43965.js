@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         bodyButtonColor: "bodyButtonColor_b78e8e",

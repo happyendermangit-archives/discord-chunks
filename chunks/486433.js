@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         birthdayBackgroundImage: "birthdayBackgroundImage__4f5cb",

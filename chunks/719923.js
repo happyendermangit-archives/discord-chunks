@@ -73,7 +73,7 @@ function(e, t, n) {
         isPremiumSubscriptionPlan: function() {
             return er
         },
-        getBillingGracePeriodDays: function() {
+        getBillingGracePeriodDaysAndExpiresDate: function() {
             return ea
         },
         isPrepaidPaymentSource: function() {
@@ -811,19 +811,42 @@ function(e, t, n) {
     }
 
     function ea(e) {
-        var t, n, i;
+        var t, n, i, s, r;
         if (e.isPurchasedViaApple && (null === (t = e.metadata) || void 0 === t ? void 0 : t.apple_grace_period_expires_date) != null) {
-            let t = d(e.metadata.apple_grace_period_expires_date),
-                n = d(e.currentPeriodStart);
-            return d.duration(t.diff(n)).days()
+            let t = d(e.metadata.apple_grace_period_expires_date);
+            return {
+                days: d.duration(t.diff(e.currentPeriodStart)).days(),
+                expiresDate: t
+            }
         }
         if (e.isPurchasedViaGoogle && (null === (n = e.metadata) || void 0 === n ? void 0 : n.google_grace_period_expires_date) != null && (null === (i = e.metadata) || void 0 === i ? void 0 : i.google_original_expires_date) != null) {
             let t = d(e.metadata.google_grace_period_expires_date),
                 n = d(e.metadata.google_original_expires_date);
-            return d.duration(t.diff(n)).days()
+            return {
+                days: d.duration(t.diff(n)).days(),
+                expiresDate: t
+            }
         }
-        if (e.isPurchasedExternally || null == e.paymentSourceId) return D.DEFAULT_MAX_GRACE_PERIOD_DAYS;
-        return D.PAID_SUBSCRIPTION_MAX_GRACE_PERIOD_DAYS
+        if (e.isPurchasedExternally) {
+            let t = e.isPurchasedViaApple ? D.DEFAULT_APPLE_GRACE_PERIOD_DAYS : D.DEFAULT_GOOGLE_GRACE_PERIOD_DAYS;
+            return {
+                days: t,
+                expiresDate: d(e.currentPeriodStart).add(t, "days")
+            }
+        }
+        if ((null === (s = e.metadata) || void 0 === s ? void 0 : s.grace_period_expires_date) != null) {
+            let t = d(null === (r = e.metadata) || void 0 === r ? void 0 : r.grace_period_expires_date).diff(e.currentPeriodStart, "days");
+            return {
+                days: t,
+                expiresDate: d(e.metadata.grace_period_expires_date)
+            }
+        } {
+            let t = null == e.paymentSourceId ? D.DEFAULT_MAX_GRACE_PERIOD_DAYS : D.PAID_SUBSCRIPTION_MAX_GRACE_PERIOD_DAYS;
+            return {
+                days: t,
+                expiresDate: d(e.currentPeriodStart).add(t, "days")
+            }
+        }
     }
 
     function eo(e) {
@@ -1299,14 +1322,13 @@ function(e, t, n) {
             });
             else if (e.status === R.SubscriptionStatusTypes.PAST_DUE) {
                 var s, r;
-                let t = ea(e),
-                    n = d(e.currentPeriodStart).add(t, "days");
-                return (e.isPurchasedViaGoogle && (null === (s = e.metadata) || void 0 === s ? void 0 : s.google_grace_period_expires_date) != null && (n = d(e.metadata.google_grace_period_expires_date)), e.isPurchasedViaApple && (null === (r = e.metadata) || void 0 === r ? void 0 : r.apple_grace_period_expires_date) != null && (n = d(e.metadata.apple_grace_period_expires_date)), e.isPurchasedExternally) ? L.default.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL.format({
-                    endDate: n,
+                let t = ea(e).expiresDate;
+                return (e.isPurchasedViaGoogle && (null === (s = e.metadata) || void 0 === s ? void 0 : s.google_grace_period_expires_date) != null && (t = d(e.metadata.google_grace_period_expires_date)), e.isPurchasedViaApple && (null === (r = e.metadata) || void 0 === r ? void 0 : r.apple_grace_period_expires_date) != null && (t = d(e.metadata.apple_grace_period_expires_date)), e.isPurchasedExternally) ? L.default.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL.format({
+                    endDate: t,
                     paymentGatewayName: P.PaymentGatewayToFriendlyName[e.paymentGateway],
                     paymentSourceLink: eT(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
                 }) : L.default.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO.format({
-                    endDate: d(e.currentPeriodStart).add(t, "days"),
+                    endDate: t,
                     price: i
                 })
             } else return e.status === R.SubscriptionStatusTypes.ACCOUNT_HOLD ? e.isPurchasedViaGoogle && !(0, I.isAndroid)() ? L.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({

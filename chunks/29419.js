@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         defaultIndicator: "defaultIndicator__855a2 indicator__2b793",

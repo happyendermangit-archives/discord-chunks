@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         bottomControls: "bottomControls__8bd89 controlSection_daa0d5",

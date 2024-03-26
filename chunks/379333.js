@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         activityIcon: "activityIcon_a3c442 rowIcon__2bfb3",

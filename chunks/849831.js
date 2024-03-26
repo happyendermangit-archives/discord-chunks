@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         closedFolderIconWrapper: "closedFolderIconWrapper__7321f",

@@ -1,4 +1,4 @@
-function(e, t, n) {
+function(e, t, o) {
     "use strict";
     e.exports = {
         applicationLargeImage: "applicationLargeImage_a25e8c assetsLargeImage_fd49b5",
