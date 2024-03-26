@@ -29,8 +29,8 @@ function(e, t, n) {
         T = n("697218"),
         I = n("145131"),
         v = n("666897"),
-        N = n("826684"),
-        A = n("782340"),
+        A = n("826684"),
+        N = n("782340"),
         R = n("665958"),
         O = n("919163");
     let M = (0, x.createExperiment)({
@@ -154,9 +154,9 @@ function(e, t, n) {
                         ...e,
                         children: (0, i.jsxs)(d.Scroller, {
                             className: O.roleScroller,
-                            children: [(0, i.jsx)(N.default, {
+                            children: [(0, i.jsx)(A.default, {
                                 className: O.roleHeader,
-                                "aria-label": A.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+                                "aria-label": N.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                                     title: u.name,
                                     count: p.length
                                 }),

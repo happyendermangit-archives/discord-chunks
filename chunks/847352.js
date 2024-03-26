@@ -32,8 +32,8 @@ function(e, t, n) {
                 closeOnModalOuterClick: a = !1,
                 parentModalKey: T
             } = e, I = l.useRef(null), v = l.useRef(null), {
-                renderWindow: N,
-                windowDispatch: A
+                renderWindow: A,
+                windowDispatch: N
             } = l.useContext(f.default), R = null != T, O = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
                 x.dismissAppLauncherPopup()
             }, k = l.useCallback(e => {
@@ -54,9 +54,9 @@ function(e, t, n) {
             }, [a, O, R]), L = l.useCallback(() => {
                 M()
             }, []);
-            l.useLayoutEffect(() => (N.addEventListener("mousedown", k), N.addEventListener("contextmenu", k), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
-                N.removeEventListener("mousedown", k), N.removeEventListener("contextmenu", k), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
-            }), [L, k, N, A]), (0, d.useFocusLock)(I), l.useEffect(() => {
+            l.useLayoutEffect(() => (A.addEventListener("mousedown", k), A.addEventListener("contextmenu", k), N.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
+                A.removeEventListener("mousedown", k), A.removeEventListener("contextmenu", k), N.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
+            }), [L, k, A, N]), (0, d.useFocusLock)(I), l.useEffect(() => {
                 (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
             }, [O, R]);
             let P = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());

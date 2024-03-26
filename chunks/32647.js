@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("803322"),
         I = n("127875"),
         v = n("169694"),
-        N = n("100576"),
-        A = n("765446"),
+        A = n("100576"),
+        N = n("765446"),
         R = n("461593"),
         O = n("49111"),
         M = n("175543"),
@@ -82,10 +82,10 @@ function(e, t, n) {
                 if (void 0 !== l && l !== s) {
                     if (e.children = l, "parent" === t && !e.previewMarkdown) {
                         try {
-                            e.previewMarkdown = !0, (0, N.run)(e, k.guild_id, k.id)
+                            e.previewMarkdown = !0, (0, A.run)(e, k.guild_id, k.id)
                         } finally {
                             e.previewMarkdown = !1
-                        }(0, N.run)(e, k.guild_id, k.id), a = void 0
+                        }(0, A.run)(e, k.guild_id, k.id), a = void 0
                     }
                     "undo" !== t && void 0 !== l && l !== s && m.HistoryUtils.insertEntry(e, "other", !1, s, r), o = !0
                 }
@@ -179,8 +179,8 @@ function(e, t, n) {
                 hideAutocomplete: Q,
                 moveSelection: q
             }), {
-                handlePaste: eN,
-                handleGlobalPaste: eA
+                handlePaste: eA,
+                handleGlobalPaste: eN
             } = (0, T.default)(eC, eE, G), eR = l.useCallback(e => {
                 null == J || J()
             }, [J]), eO = l.useCallback(e => {
@@ -201,12 +201,12 @@ function(e, t, n) {
                 return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
             }, [k, eC, e_]);
             let eM = l.useCallback((e, t) => (0, g.default)(e, t), []),
-                ek = l.useCallback(e => (0, A.default)(eC, e, k.id), [k.id, eC]),
+                ek = l.useCallback(e => (0, N.default)(eC, e, k.id), [k.id, eC]),
                 eL = l.useCallback(e => (0, R.default)(e), []);
             return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(c.ComponentAction, {
                     event: O.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
-                    handler: eA
+                    handler: eN
                 }), (0, i.jsx)("div", {
                     ref: ep,
                     className: s(L, M.slateContainer),
@@ -225,7 +225,7 @@ function(e, t, n) {
                         onFocus: B,
                         onBlur: V,
                         onClick: eR,
-                        onPaste: eN,
+                        onPaste: eA,
                         onKeyDown: eI,
                         onKeyUp: ev,
                         decorateExtra: eM,

@@ -26,8 +26,8 @@ function(e, t, n) {
         T = n("591522"),
         I = n("209069"),
         v = n("845579"),
-        N = n("945330"),
-        A = n("587974"),
+        A = n("945330"),
+        N = n("587974"),
         R = n("599110"),
         O = n("510500"),
         M = n("171209"),
@@ -64,8 +64,8 @@ function(e, t, n) {
             },
             onClick: () => d(s, i),
             onMouseOver: r,
-            children: [(0, a.jsx)(A.default, {
-                mask: A.default.Masks.STICKER_ROUNDED_RECT,
+            children: [(0, a.jsx)(N.default, {
+                mask: N.default.Masks.STICKER_ROUNDED_RECT,
                 width: j + 4,
                 height: j + 4,
                 className: P.mask,
@@ -91,7 +91,7 @@ function(e, t, n) {
             onSelectSticker: r,
             stickerIconVisible: c = !1,
             submitButtonVisible: f = !1
-        } = e, _ = s.useContext(x.default), [T, A] = s.useState(null), [b, j] = s.useState(!1), [U, G] = s.useState(null), H = (0, E.useExpressionPickerStore)(e => null != e.activeView), B = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, Q] = s.useState(!1), q = (0, O.useStickerSuggestionResults)(V, b, i), {
+        } = e, _ = s.useContext(x.default), [T, N] = s.useState(null), [b, j] = s.useState(!1), [U, G] = s.useState(null), H = (0, E.useExpressionPickerStore)(e => null != e.activeView), B = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, Q] = s.useState(!1), q = (0, O.useStickerSuggestionResults)(V, b, i), {
             analyticsLocations: X
         } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
             handleTextChange: $,
@@ -100,7 +100,7 @@ function(e, t, n) {
             setTextInputValue: K,
             setHasDismissed: j,
             setHasSelection: Q,
-            setFocusedSuggestionType: A
+            setFocusedSuggestionType: N
         });
         s.useEffect(() => {
             let e = e => {
@@ -110,7 +110,7 @@ function(e, t, n) {
                     let t = "" !== e && null != e;
                     if (Q(t), t) {
                         var i;
-                        A(null), null === (i = n.current) || void 0 === i || i.focus()
+                        N(null), null === (i = n.current) || void 0 === i || i.focus()
                     }
                 };
             return _.addListener("text-changed", $), _.addListener("autocomplete-visibility-change", e), _.addListener("selection-changed", t), () => {
@@ -181,7 +181,7 @@ function(e, t, n) {
                 hasStickerResults: ei,
                 shouldRenderSuggestions: el,
                 focusedSuggestionType: T,
-                setFocusedSuggestionType: A,
+                setFocusedSuggestionType: N,
                 setHasDismissed: j,
                 setFocusedStickerListItem: G,
                 setTextInputValue: K
@@ -298,7 +298,7 @@ function(e, t, n) {
                                 },
                                 children: (0, a.jsx)(p.Tooltip, {
                                     text: L.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,
-                                    children: e => (0, a.jsx)(N.default, {
+                                    children: e => (0, a.jsx)(A.default, {
                                         ...e,
                                         className: P.closeIcon
                                     })

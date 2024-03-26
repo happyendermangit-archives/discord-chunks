@@ -41,14 +41,14 @@ function(e, t, n) {
             onFocus: I,
             ...v
         } = (0, u.useListItem)(n), {
-            handleFocus: N,
-            handleBlur: A
+            handleFocus: A,
+            handleBlur: N
         } = (0, m.useFocusInside)(I), R = 0 === T, O = null != r;
         return (0, a.jsx)(d.FocusRing, {
             children: (0, a.jsx)("li", {
                 ...v,
-                onFocus: N,
-                onBlur: A,
+                onFocus: A,
+                onBlur: N,
                 onKeyDown: e => {
                     if (S) {
                         switch (e.which) {

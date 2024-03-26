@@ -89,7 +89,7 @@ function(e, t, n) {
                 }
                 return 10
             }, [n, i])
-        }(l, a), N = (0, p.useCanStartPublicThread)(l, a), A = n.showThreadPromptOnReply && v >= 2 && N;
+        }(l, a), A = (0, p.useCanStartPublicThread)(l, a), N = n.showThreadPromptOnReply && v >= 2 && A;
 
         function R(e) {
             e.stopPropagation(), (0, c.setPendingReplyShouldMention)(l.id, !u)
@@ -168,7 +168,7 @@ function(e, t, n) {
                             })
                         })]
                     })]
-                }), A && (0, i.jsx)(C, {
+                }), N && (0, i.jsx)(C, {
                     channel: l,
                     message: a,
                     replyChainLength: v

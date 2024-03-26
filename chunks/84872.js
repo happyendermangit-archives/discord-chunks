@@ -29,14 +29,14 @@ function(e, t, n) {
         I = n("782340"),
         v = n("522572");
 
-    function N(e, t) {
+    function A(e, t) {
         return (0, i.jsx)(h.default, {
             sticker: e,
             isInteracting: t,
             size: 40
         })
     }
-    let A = {
+    let N = {
         sentinel: _.EMOJI_SENTINEL,
         stores: [p.default],
         matches: (e, t, n, i, l) => n.length > 1,
@@ -184,7 +184,7 @@ function(e, t, n) {
                             sticker: n
                         } = e;
                         return {
-                            renderSticker: N,
+                            renderSticker: A,
                             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                             sticker: n,
                             key: n.id
@@ -247,5 +247,5 @@ function(e, t, n) {
             }
         }
     };
-    var R = A
+    var R = N
 }

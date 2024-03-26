@@ -35,8 +35,8 @@ function(e, t, n) {
                 renderLinkComponent: T,
                 onClick: I,
                 onPlay: v,
-                onEnded: N,
-                onVolumeChange: A,
+                onEnded: A,
+                onVolumeChange: N,
                 onMute: R,
                 alt: O = d.default.Messages.VIDEO,
                 ...M
@@ -81,8 +81,8 @@ function(e, t, n) {
                         renderOverlayContent: _,
                         onClick: I,
                         onPlay: v,
-                        onEnded: N,
-                        onVolumeChange: A,
+                        onEnded: A,
+                        onVolumeChange: N,
                         onMute: R,
                         mimeType: C,
                         downloadable: h

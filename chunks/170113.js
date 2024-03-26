@@ -31,8 +31,8 @@ function(e, t, n) {
         T = n("830837"),
         I = n("132755"),
         v = n("73034"),
-        N = n("58608"),
-        A = n("719347"),
+        A = n("58608"),
+        N = n("719347"),
         R = n("49111"),
         O = n("782340"),
         M = n("273818"),
@@ -602,7 +602,7 @@ function(e, t, n) {
                 playing: r,
                 fullscreen: o
             } = this.state, u = this.getWidth(), d = this.getHeight();
-            return n ? (0, i.jsx)(N.default, {
+            return n ? (0, i.jsx)(A.default, {
                 className: M.video,
                 controls: !1,
                 height: d,
@@ -612,14 +612,14 @@ function(e, t, n) {
                 mediaLayoutType: s,
                 playsInline: !0,
                 autoPlay: r
-            }) : (0, i.jsx)(N.default, {
+            }) : (0, i.jsx)(A.default, {
                 className: M.video,
                 controls: !1,
                 playsInline: !0,
                 autoPlay: r,
                 height: d,
                 responsive: a && !o,
-                mediaLayoutType: o ? A.MediaLayoutType.STATIC : s,
+                mediaLayoutType: o ? N.MediaLayoutType.STATIC : s,
                 onClick: this.handleVideoClick,
                 onEnded: this.handleEnded,
                 onError: l,
@@ -770,7 +770,7 @@ function(e, t, n) {
                 let t = this.getWidth();
                 return (0, i.jsxs)("div", {
                     className: s(m, {
-                        [M.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
+                        [M.wrapperMediaMosaic]: u === N.MediaLayoutType.MOSAIC
                     }),
                     style: o ? void 0 : {
                         width: t,
@@ -788,7 +788,7 @@ function(e, t, n) {
             }
             return (0, i.jsxs)("div", {
                 className: s(m, M.newMosaicStyle, a, {
-                    [M.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
+                    [M.wrapperMediaMosaic]: u === N.MediaLayoutType.MOSAIC
                 }),
                 "data-fullscreen": c,
                 onMouseEnter: this.handleMouseEnter,

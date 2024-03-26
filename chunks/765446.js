@@ -85,8 +85,8 @@ function(e, t, n) {
             }, [n, a.optionName]),
             I = (0, o.useStateFromStores)([f.default], () => f.default.getUpload(n, a.optionName, c.DraftType.SlashCommand), [n, a.optionName]),
             v = a.children[a.children.length - 1],
-            N = null != v && h.TextUtils.isText(v) && v.text.endsWith("\n"),
-            A = s(E.inlineElement, E.optionPill, {
+            A = null != v && h.TextUtils.isText(v) && v.text.endsWith("\n"),
+            N = s(E.inlineElement, E.optionPill, {
                 [E.selectedPill]: S && g,
                 [E.erroredPill]: (!S || !g) && T
             }),
@@ -103,13 +103,13 @@ function(e, t, n) {
             children: [x.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, y]
         }) : (0, i.jsxs)("span", {
             className: E.optionPillValue,
-            children: [y, N ? (0, i.jsx)("span", {
+            children: [y, A ? (0, i.jsx)("span", {
                 className: E.newLine,
                 contentEditable: !1
             }) : null]
         }), (0, i.jsxs)("span", {
             ...p,
-            className: A,
+            className: N,
             children: [(0, i.jsxs)("span", {
                 className: E.optionPillKey,
                 contentEditable: !1,

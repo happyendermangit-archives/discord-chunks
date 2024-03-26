@@ -86,10 +86,10 @@ function(e, t, n) {
                 tooltipPosition: a = h.EXPRESSION_TOOLTIP_PROPS.position,
                 enableClick: d = !0
             } = e, [y, S] = l.useState(String(Date.now())), [C, T] = l.useState(!1), [I, v] = l.useState(!1), {
-                enabled: N
+                enabled: A
             } = f.NitroBadgeOnEmojiHoverExperiment.useExperiment({
                 location: "MessageCustomEmoji"
-            }), A = function() {
+            }), N = function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 return (0, i.jsx)(u.default, {
                     ...e,
@@ -100,7 +100,7 @@ function(e, t, n) {
                     isInteracting: n
                 })
             }, R = (0, r.v4)(), O = e => (0, i.jsx)(o.Tooltip, {
-                text: (0, h.renderClickableTooltipNode)(t.name, d, N),
+                text: (0, h.renderClickableTooltipNode)(t.name, d, A),
                 "aria-label": t.name,
                 ...h.EXPRESSION_TOOLTIP_PROPS,
                 position: a,
@@ -131,7 +131,7 @@ function(e, t, n) {
                     className: s(g.emojiContainer, {
                         [g.emojiContainerClickable]: d
                     }),
-                    children: A(t)
+                    children: N(t)
                 })
             });
             return d ? (0, i.jsx)(o.Popout, {

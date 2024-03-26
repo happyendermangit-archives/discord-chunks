@@ -17,10 +17,10 @@ function(e, t, n) {
             return v
         },
         useFirstMediaIsEmbed: function() {
-            return N
+            return A
         },
         shouldShowAddMediaToOriginalPostModal: function() {
-            return A
+            return N
         },
         messageContainsGifOrVideo: function() {
             return R
@@ -163,13 +163,13 @@ function(e, t, n) {
         return null !== (i = null !== (n = l[0]) && void 0 !== n ? n : a[0]) && void 0 !== i ? i : null
     }
 
-    function N(e, t) {
+    function A(e, t) {
         let n = C(e),
             i = _(e, t);
         return null == n[0] && null != i[0]
     }
 
-    function A(e, t) {
+    function N(e, t) {
         var n;
         let i = u.default.getChannel(t);
         if (null == i) return !1;

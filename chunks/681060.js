@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("529190"),
         I = n("829290"),
         v = n("842343"),
-        N = n("200197"),
-        A = n("538282"),
+        A = n("200197"),
+        N = n("538282"),
         R = n("241488"),
         O = n("292936"),
         M = n("791234"),
@@ -73,8 +73,8 @@ function(e, t, n) {
                 className: eT,
                 innerClassName: eI,
                 editorClassName: ev,
-                id: eN,
-                required: eA,
+                id: eA,
+                required: eN,
                 disabled: eR,
                 placeholder: eO,
                 accessibilityLabel: eM,
@@ -171,15 +171,15 @@ function(e, t, n) {
             })), tx = (0, p.useStateFromStores)([B.default], () => B.default.isEnabled());
             ! function(e, t) {
                 let n = l.useCallback(() => {
-                        !t && (0, A.toggleExpressionPicker)(er.ExpressionPickerViewType.EMOJI, e)
+                        !t && (0, N.toggleExpressionPicker)(er.ExpressionPickerViewType.EMOJI, e)
                     }, [t, e]),
                     i = l.useCallback(() => {
                         var n;
-                        !t && (null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending) && (0, A.toggleExpressionPicker)(er.ExpressionPickerViewType.GIF, e)
+                        !t && (null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending) && (0, N.toggleExpressionPicker)(er.ExpressionPickerViewType.GIF, e)
                     }, [t, e]),
                     a = l.useCallback(() => {
                         var n;
-                        !t && (null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending) && (0, A.toggleExpressionPicker)(er.ExpressionPickerViewType.STICKER, e)
+                        !t && (null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending) && (0, N.toggleExpressionPicker)(er.ExpressionPickerViewType.STICKER, e)
                     }, [t, e]);
                 (0, W.useComponentAction)({
                     event: ea.ComponentActions.TOGGLE_EMOJI_POPOUT,
@@ -249,7 +249,7 @@ function(e, t, n) {
                             if (s !== H.default.getChannelId()) h.default.saveDraft(s, "", t.drafts.type);
                             else f && a.current.clearValue()
                         }
-                        f && (o(!1), (0, A.closeExpressionPicker)(), d && a.current.focus())
+                        f && (o(!1), (0, N.closeExpressionPicker)(), d && a.current.focus())
                     })
                 }, [a, e, r, t, s]), d = l.useCallback(e => {
                     var t;
@@ -282,14 +282,14 @@ function(e, t, n) {
             }();
             let tv = (ex = tS, eE = eL, ey = e9, l.useCallback(e => {
                 var t, n;
-                eE === J.ChatInputTypes.CREATE_FORUM_POST ? null === (n = ey.current) || void 0 === n || n.insertGIF(e) : ex(e.url, void 0, void 0, !0), (0, A.closeExpressionPicker)(), null === (t = ey.current) || void 0 === t || t.focus()
+                eE === J.ChatInputTypes.CREATE_FORUM_POST ? null === (n = ey.current) || void 0 === n || n.insertGIF(e) : ex(e.url, void 0, void 0, !0), (0, N.closeExpressionPicker)(), null === (t = ey.current) || void 0 === t || t.focus()
             }, [ey, ex, eE]));
-            let tN = (eg = e9, l.useCallback(function(e, t) {
+            let tA = (eg = e9, l.useCallback(function(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                         i = eg.current;
-                    null != e && null != i && i.insertEmoji(e, t, n), t && (0, A.closeExpressionPicker)()
+                    null != e && null != i && i.insertEmoji(e, t, n), t && (0, N.closeExpressionPicker)()
                 }, [eg])),
-                tA = function(e) {
+                tN = function(e) {
                     let {
                         editorRef: t,
                         disabled: n,
@@ -311,7 +311,7 @@ function(e, t, n) {
                             value: "",
                             uploads: void 0,
                             stickers: [e.id]
-                        }), null === (d = t.current) || void 0 === d || d.clearValue()), (0, A.closeExpressionPicker)(), null === (u = t.current) || void 0 === u || u.focus())
+                        }), null === (d = t.current) || void 0 === d || d.clearValue()), (0, N.closeExpressionPicker)(), null === (u = t.current) || void 0 === u || u.focus())
                     }, [n, i, a, s.drafts.type, t, o, r])
                 }({
                     editorRef: e9,
@@ -323,7 +323,7 @@ function(e, t, n) {
                 });
             let tR = (eS = e9, l.useCallback(e => {
                     let t = eS.current;
-                    null != e && null != t && t.insertSound(e), (0, A.closeExpressionPicker)()
+                    null != e && null != t && t.insertSound(e), (0, N.closeExpressionPicker)()
                 }, [eS])),
                 tO = l.useCallback(() => {
                     var e;
@@ -370,12 +370,12 @@ function(e, t, n) {
                     handleAutocompleteVisibilityChange: tD,
                     handleOuterClick: tw
                 } = function(e, t, n) {
-                    let [i, a] = (0, A.useExpressionPickerStore)(e => [e.activeView, e.activeViewType], d.default);
+                    let [i, a] = (0, N.useExpressionPickerStore)(e => [e.activeView, e.activeViewType], d.default);
                     l.useEffect(() => () => {
-                        (0, A.closeExpressionPicker)(e)
+                        (0, N.closeExpressionPicker)(e)
                     }, [e]);
                     let s = l.useCallback(e => {
-                            t.emit("autocomplete-visibility-change", e), e && (0, A.closeExpressionPicker)()
+                            t.emit("autocomplete-visibility-change", e), e && (0, N.closeExpressionPicker)()
                         }, [t]),
                         r = l.useCallback(() => {
                             var e;
@@ -413,7 +413,7 @@ function(e, t, n) {
                 tZ = (0, I.useShouldShowPTONotice)(ek),
                 tJ = null != tn || null != eD || tZ,
                 tQ = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
-            return (0, i.jsx)(N.EventEmitterProvider, {
+            return (0, i.jsx)(A.EventEmitterProvider, {
                 value: tE,
                 children: (0, i.jsxs)(y.AnalyticsLocationProvider, {
                     value: e8,
@@ -468,14 +468,14 @@ function(e, t, n) {
                                     ringClassName: eo.focusRing,
                                     children: (0, i.jsx)(Q.default, {
                                         ref: e9,
-                                        id: eN,
+                                        id: eA,
                                         focused: eP,
                                         useSlate: tc,
                                         textValue: eC,
                                         richValue: e_,
                                         disabled: ts,
                                         placeholder: eO,
-                                        required: eA,
+                                        required: eN,
                                         accessibilityLabel: eM,
                                         isPreviewing: (tl || ta) && tu,
                                         channel: ek,
@@ -533,7 +533,7 @@ function(e, t, n) {
                             type: eL,
                             editorRef: e9,
                             onSendMessage: tS,
-                            onSendSticker: tA,
+                            onSendSticker: tN,
                             onVisibilityChange: tD,
                             editorHeight: tM,
                             setValue: (e, t) => null == ew ? void 0 : ew(null, e, t),
@@ -553,7 +553,7 @@ function(e, t, n) {
                             editorRef: e9,
                             channel: ek,
                             isEditorFocused: eP,
-                            onSelectSticker: tA,
+                            onSelectSticker: tN,
                             submitButtonVisible: (null === (ec = eL.submit) || void 0 === ec ? void 0 : ec.button) && (null !== (em = null === (ef = eL.submit) || void 0 === ef ? void 0 : ef.ignorePreference) && void 0 !== em ? em : tm),
                             stickerIconVisible: null !== (eh = null === (ep = eL.stickers) || void 0 === ep ? void 0 : ep.button) && void 0 !== eh && eh
                         }) : null, e3]
@@ -561,8 +561,8 @@ function(e, t, n) {
                         positionTargetRef: e4,
                         type: eL,
                         onSelectGIF: tv,
-                        onSelectEmoji: tN,
-                        onSelectSticker: tA,
+                        onSelectEmoji: tA,
+                        onSelectSticker: tN,
                         onSelectSound: tR,
                         channel: ek,
                         closeOnModalOuterClick: e6,

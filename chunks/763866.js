@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("10532"),
         I = n("648149"),
         v = n("915712"),
-        N = n("261523"),
-        A = n("369869"),
+        A = n("261523"),
+        N = n("369869"),
         R = n("545590"),
         O = n("316095"),
         M = n("802279"),
@@ -139,7 +139,7 @@ function(e, t, n) {
                     children: [(0, i.jsx)(R.default, {
                         user: K,
                         guildId: null == Y ? void 0 : Y.id
-                    }), (0, i.jsx)(A.default, {
+                    }), (0, i.jsx)(N.default, {
                         isUsingGuildBio: null !== (n = null == W ? void 0 : W.isUsingGuildMemberBio()) && void 0 !== n && n,
                         bio: null == W ? void 0 : W.bio,
                         guild: Y,
@@ -171,7 +171,7 @@ function(e, t, n) {
                         channel: eo,
                         guildId: null == Y ? void 0 : Y.id,
                         onClick: J
-                    }) : null, (0, i.jsx)(N.default, {
+                    }) : null, (0, i.jsx)(A.default, {
                         user: K,
                         guildId: null == Y ? void 0 : Y.id
                     }), (0, i.jsx)(U.default, {

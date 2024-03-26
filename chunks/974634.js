@@ -28,10 +28,10 @@ function(e, t, n) {
             autoFocus: g,
             className: S,
             defaultSearchPlaceholder: C
-        } = e, _ = l.useRef(null), T = (0, c.useExpressionPickerStore)(e => e.searchQuery), [I, v] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), N = l.useCallback(e => {
+        } = e, _ = l.useRef(null), T = (0, c.useExpressionPickerStore)(e => e.searchQuery), [I, v] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), A = l.useCallback(e => {
             var t;
             d.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), d.EmojiPickerStore.setInspectedExpressionPosition(0, 0), d.EmojiPickerStore.setSearchPlaceholder(null), (0, c.setSearchQuery)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
-        }, [n]), A = l.useCallback(() => {
+        }, [n]), N = l.useCallback(() => {
             (0, c.setSearchQuery)("")
         }, []);
         return l.useImperativeHandle(t, () => ({
@@ -45,7 +45,7 @@ function(e, t, n) {
             ref: _,
             size: u.default.Sizes.MEDIUM,
             placeholder: null != v ? v : C,
-            onClear: A,
+            onClear: N,
             onKeyDown: e => {
                 switch (e.keyCode) {
                     case p.KeyboardKeys.ARROW_LEFT:
@@ -57,7 +57,7 @@ function(e, t, n) {
                 E(e)
             },
             onFocus: y,
-            onQueryChange: N,
+            onQueryChange: A,
             className: s(S, {
                 [h.searchBarFullRow]: x
             }),
