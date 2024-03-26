@@ -31,8 +31,8 @@ function(e, t, n) {
         v = n("239380"),
         N = n("118033"),
         A = n("315102"),
-        O = n("568734"),
-        R = n("474293"),
+        R = n("568734"),
+        O = n("474293"),
         M = n("339521"),
         k = n("145131"),
         L = n("953109"),
@@ -91,7 +91,7 @@ function(e, t, n) {
             } : e
         }
         getTypeClass(e, t) {
-            return (0, R.getClass)(G, e, this.props.type, t)
+            return (0, O.getClass)(G, e, this.props.type, t)
         }
         isStreamerOnTypeProfile() {
             return (0, C.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
@@ -138,7 +138,7 @@ function(e, t, n) {
             }
             if (null != i) {
                 var c;
-                t = (0, O.hasFlag)(null !== (c = null == u ? void 0 : u.flags) && void 0 !== c ? c : 0, D.ActivityFlags.EMBEDDED) ? u.type === D.ActivityTypes.WATCHING ? F.default.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
+                t = (0, R.hasFlag)(null !== (c = null == u ? void 0 : u.flags) && void 0 !== c ? c : 0, D.ActivityFlags.EMBEDDED) ? u.type === D.ActivityTypes.WATCHING ? F.default.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
                     guildName: i.name
                 }) : F.default.Messages.EMBEDDED_ACTIVITIES_PLAYING_IN_GUILD.format({
                     guildName: i.name
@@ -152,7 +152,7 @@ function(e, t, n) {
                 children: [null != l && null !== p ? (0, a.jsx)(p, {
                     className: o(G.icon)
                 }) : null, (0, a.jsx)(f.Heading, {
-                    className: (0, R.getClass)(G, "headerText", e ? "EmptyBody" : "Normal"),
+                    className: (0, O.getClass)(G, "headerText", e ? "EmptyBody" : "Normal"),
                     variant: "heading-deprecated-12/semibold",
                     color: "ProfileV2" === r ? "header-primary" : void 0,
                     children: (0, a.jsx)(P.default, {
@@ -311,7 +311,7 @@ function(e, t, n) {
             }) : (0, N.isStageActivity)(e) && (u = e.name)), null == u) ? null : (0, a.jsx)(f.Text, {
                 title: o,
                 variant: "text-sm/semibold",
-                className: (0, R.getClass)(G, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
+                className: (0, O.getClass)(G, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
                 children: u
             })
         }
@@ -455,7 +455,7 @@ function(e, t, n) {
                     children: [(0, a.jsxs)("div", {
                         className: G.activityDetails,
                         children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(k.default.Child, {
-                            className: o((0, R.getClass)(G, "content", p ? "GameImage" : null != e ? "Images" : "NoImages", t)),
+                            className: o((0, O.getClass)(G, "content", p ? "GameImage" : null != e ? "Images" : "NoImages", t)),
                             children: [m, h, x, E, u || f ? null : g, c ? y : null]
                         })]
                     }), d ? y : null]

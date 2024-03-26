@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("915712"),
         N = n("261523"),
         A = n("369869"),
-        O = n("545590"),
-        R = n("316095"),
+        R = n("545590"),
+        O = n("316095"),
         M = n("802279"),
         k = n("577172"),
         L = n("465215"),
@@ -136,7 +136,7 @@ function(e, t, n) {
                     }),
                     onScroll: ep,
                     ref: ed,
-                    children: [(0, i.jsx)(O.default, {
+                    children: [(0, i.jsx)(R.default, {
                         user: K,
                         guildId: null == Y ? void 0 : Y.id
                     }), (0, i.jsx)(A.default, {
@@ -179,7 +179,7 @@ function(e, t, n) {
                         guild: Y,
                         guildMember: z,
                         showBorder: null !== (a = null == W ? void 0 : W.canEditThemes) && void 0 !== a && a
-                    }), (0, i.jsx)(R.default, {
+                    }), (0, i.jsx)(O.default, {
                         userId: K.id,
                         channelId: Z,
                         guild: Y,

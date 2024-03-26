@@ -26,8 +26,8 @@ function(e, t, n) {
         N = n("995307");
     (o = r || (r = {})).FETCHING = "fetching", o.OK = "ok", o.ERROR = "error";
     let A = {},
-        O = {},
         R = {},
+        O = {},
         M = [],
         k = {},
         L = {
@@ -73,18 +73,18 @@ function(e, t, n) {
             return null != s && s.channelId === e && null != s.summaryId ? this.findSummary(e, null == s ? void 0 : s.summaryId) : null
         }
         summaryFeedback(e) {
-            return null == e ? null : R[e.id]
+            return null == e ? null : O[e.id]
         }
         isFetching(e, t) {
             var n, i;
-            return null != t ? (null === (i = O[e]) || void 0 === i ? void 0 : i.summaryId) === t : (null === (n = O[e]) || void 0 === n ? void 0 : n.fetching) === !0
+            return null != t ? (null === (i = R[e]) || void 0 === i ? void 0 : i.summaryId) === t : (null === (n = R[e]) || void 0 === n ? void 0 : n.fetching) === !0
         }
         status(e) {
-            return O[e]
+            return R[e]
         }
         shouldFetch(e, t) {
             var n, i;
-            let l = O[e],
+            let l = R[e],
                 a = E.default.getChannel(e);
             if (!(0, p.canSeeChannelSummaries)(a)) return !1;
             if (null != t) {
@@ -153,14 +153,14 @@ function(e, t, n) {
                 a > -1 ? n[a] = e : n.push(e), A[l] = n
             }
             let r = {
-                ...null !== (n = O[l]) && void 0 !== n ? n : {
+                ...null !== (n = R[l]) && void 0 !== n ? n : {
                     fetching: !1
                 },
                 summaryId: void 0,
                 summaryIdLastReceivedAt: s,
                 summaryIdError: a
             };
-            O[l] = r
+            R[l] = r
         },
         REQUEST_CHANNEL_SUMMARY(e) {
             var t;
@@ -169,8 +169,8 @@ function(e, t, n) {
                 summaryId: i,
                 requestedAt: l
             } = e;
-            O[n] = {
-                ...null !== (t = O[n]) && void 0 !== t ? t : {
+            R[n] = {
+                ...null !== (t = R[n]) && void 0 !== t ? t : {
                     fetching: !1
                 },
                 summaryId: i,
@@ -192,17 +192,17 @@ function(e, t, n) {
             }
             A[n] = (0, u.sortBy)(a, e => I.default.extractTimestamp(e.startId)).reverse();
             let o = {
-                ...O[n],
+                ...R[n],
                 fetching: !1,
                 error: void 0,
                 lastReceivedAt: l
             };
-            null != i && (o.error = i), O[n] = o
+            null != i && (o.error = i), R[n] = o
         },
         REQUEST_CHANNEL_SUMMARIES(e) {
             var t;
-            O[e.channelId] = {
-                ...null !== (t = O[e.channelId]) && void 0 !== t ? t : {},
+            R[e.channelId] = {
+                ...null !== (t = R[e.channelId]) && void 0 !== t ? t : {},
                 fetching: !0,
                 lastRequestedAt: e.requestedAt
             }
@@ -246,7 +246,7 @@ function(e, t, n) {
                 summary: t,
                 rating: n
             } = e;
-            null != n ? R[t.id] = n : delete R[t.id]
+            null != n ? O[t.id] = n : delete O[t.id]
         },
         REQUEST_CHANNEL_AFFINITIES() {
             L = {
@@ -281,7 +281,7 @@ function(e, t, n) {
                 requestedAt: n
             } = e, i = t.reduce((e, t) => {
                 var i;
-                let l = null !== (i = O[t]) && void 0 !== i ? i : {};
+                let l = null !== (i = R[t]) && void 0 !== i ? i : {};
                 return e[t] = {
                     ...l,
                     fetching: !0,
@@ -289,8 +289,8 @@ function(e, t, n) {
                     error: void 0
                 }, e
             }, {});
-            O = {
-                ...O,
+            R = {
+                ...R,
                 ...i
             }
         },
@@ -307,7 +307,7 @@ function(e, t, n) {
                 return e[n] = l, e
             }, {}), s = l.reduce((e, t) => {
                 var l;
-                let s = null !== (l = O[t]) && void 0 !== l ? l : {},
+                let s = null !== (l = R[t]) && void 0 !== l ? l : {},
                     r = a[t];
                 return null != r && (e.summariesByChannel[t] = r), e.summaryFetchStatusByChannel[t] = {
                     ...s,
@@ -322,8 +322,8 @@ function(e, t, n) {
             A = {
                 ...A,
                 ...s.summariesByChannel
-            }, O = {
-                ...O,
+            }, R = {
+                ...R,
                 ...s.summaryFetchStatusByChannel
             }
         },
@@ -334,15 +334,15 @@ function(e, t, n) {
                 summaries: a,
                 guild_id: s
             } = e, r = Date.now(), o = d.chain(a).sortBy(e => I.default.extractTimestamp(e.start_id)).filter(e => Object.keys(e).length > 0).map(e => (0, v.createSummaryFromServer)(e, l)).reverse().value(), u = null !== (n = A[l]) && void 0 !== n ? n : [], c = d.chain(o).concat(u).sortBy(e => I.default.extractTimestamp(e.startId)).takeRight(75).uniqBy("id").reverse().value();
-            A[l] = c, O[l] = {
-                ...O[l],
+            A[l] = c, R[l] = {
+                ...R[l],
                 error: void 0,
-                fetching: null !== (i = null === (t = O[l]) || void 0 === t ? void 0 : t.fetching) && void 0 !== i && i,
+                fetching: null !== (i = null === (t = R[l]) || void 0 === t ? void 0 : t.fetching) && void 0 !== i && i,
                 lastReceivedAt: r
             }
         },
         CLEAR_CONVERSATION_SUMMARIES() {
-            A = {}, O = {}
+            A = {}, R = {}
         },
         DELETE_SUMMARY(e) {
             var t;

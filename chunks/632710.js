@@ -31,8 +31,8 @@ function(e, t, n) {
         v = n("15874"),
         N = n("774713"),
         A = n("510788"),
-        O = n("756731"),
-        R = n("762806"),
+        R = n("756731"),
+        O = n("762806"),
         M = n("438278"),
         k = n("898481"),
         L = n("49111"),
@@ -79,7 +79,7 @@ function(e, t, n) {
                 platform: f.default.get(L.PlatformTypes.PLAYSTATION)
             }, "ConnectPlatformActivityButton")];
             else if (Y) {
-                let e = (0, i.jsx)(R.default, {
+                let e = (0, i.jsx)(O.default, {
                         activity: n,
                         user: l,
                         color: D,
@@ -88,7 +88,7 @@ function(e, t, n) {
                         channelId: j,
                         source: U
                     }, "spotify-activity-sync-button"),
-                    a = (0, i.jsx)(O.default, {
+                    a = (0, i.jsx)(R.default, {
                         activity: n,
                         user: l,
                         color: D,

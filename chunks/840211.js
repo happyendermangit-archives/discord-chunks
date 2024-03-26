@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return R
         }
     }), n("222007");
     var i, l, a = n("37983"),
@@ -106,10 +106,10 @@ function(e, t, n) {
                     } = e;
                     return t
                 })) && void 0 !== e ? e : []
-            }, [i]), S = s.useRef(null), [v, N] = s.useState(!1), [A, O] = s.useState(0), R = s.useCallback(() => {
+            }, [i]), S = s.useRef(null), [v, N] = s.useState(!1), [A, R] = s.useState(0), O = s.useCallback(() => {
                 if (null != S.current) {
                     let e = S.current.clientHeight > 19;
-                    O(t => {
+                    R(t => {
                         switch (t) {
                             case 0:
                                 return e ? 2 : 1;
@@ -148,8 +148,8 @@ function(e, t, n) {
                 }) : void 0
             }, [g]);
             s.useEffect(() => {
-                R()
-            }, [R, k, A]);
+                O()
+            }, [O, k, A]);
             let L = s.useMemo(() => {
                 if (g.length > 0 && A > 1) {
                     let [e, ...t] = g;
@@ -225,12 +225,12 @@ function(e, t, n) {
                 })) && void 0 !== e ? e : []
             }, [i]), A = s.useMemo(() => T.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
                 count: v.length
-            }), [v]), O = s.useMemo(() => T.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+            }), [v]), R = s.useMemo(() => T.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
                 count: N.length
-            }), [N]), R = s.useRef(null), [M, k] = s.useState(!1), [L, P] = s.useState(!1), b = s.useCallback(() => {
-                if (null != R.current) {
+            }), [N]), O = s.useRef(null), [M, k] = s.useState(!1), [L, P] = s.useState(!1), b = s.useCallback(() => {
+                if (null != O.current) {
                     var e;
-                    let t = (null === (e = R.current) || void 0 === e ? void 0 : e.clientHeight) > 19;
+                    let t = (null === (e = O.current) || void 0 === e ? void 0 : e.clientHeight) > 19;
                     P(t), k(!0)
                 }
             }, []), j = s.useCallback(e => () => {
@@ -252,7 +252,7 @@ function(e, t, n) {
                 D = N.length > 0;
             return l ? (0, a.jsxs)("div", {
                 className: o(I.compactItemContainer, !M && I.hideElement),
-                ref: R,
+                ref: O,
                 children: [U && (0, a.jsx)(d.Tooltip, {
                     text: T.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
                     children: e => (0, a.jsxs)(d.Clickable, {
@@ -297,7 +297,7 @@ function(e, t, n) {
                             className: I.itemizedListText,
                             variant: "text-sm/normal",
                             color: "interactive-normal",
-                            children: O
+                            children: R
                         })]
                     })
                 })]
@@ -305,7 +305,7 @@ function(e, t, n) {
                 className: I.skeleton
             })
         });
-    var O = s.memo(function(e) {
+    var R = s.memo(function(e) {
         var t, n;
         let {
             user: i,
@@ -321,10 +321,10 @@ function(e, t, n) {
             autoTrackExposure: !1,
             location: p,
             disable: y
-        }), O = (0, S.useMutualGuilds)(i), [R, M] = (0, g.useMutualFriends)(i);
+        }), R = (0, S.useMutualGuilds)(i), [O, M] = (0, g.useMutualFriends)(i);
         if (!_ || y) return null;
-        let k = (null == M || 0 === M.length) && 0 === O.length;
-        return R && k ? null : (0, a.jsxs)("div", {
+        let k = (null == M || 0 === M.length) && 0 === R.length;
+        return O && k ? null : (0, a.jsxs)("div", {
             className: o(I.mainContainer, s),
             children: [(0, a.jsx)(d.Heading, {
                 variant: "eyebrow",
@@ -333,18 +333,18 @@ function(e, t, n) {
             }), C && (0, a.jsx)(A, {
                 user: i,
                 mutualFriends: M,
-                hasFetchedFriends: R,
-                mutualGuilds: O,
+                hasFetchedFriends: O,
+                mutualGuilds: R,
                 onClose: l
             }), !C && (0, a.jsxs)(a.Fragment, {
                 children: [(0, a.jsx)(N, {
                     user: i,
                     mutualFriends: M,
-                    hasFetchedFriends: R,
+                    hasFetchedFriends: O,
                     onClose: l
                 }), (0, a.jsx)(v, {
                     user: i,
-                    mutualGuilds: O,
+                    mutualGuilds: R,
                     onClose: l
                 })]
             })]

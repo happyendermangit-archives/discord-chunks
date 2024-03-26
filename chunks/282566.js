@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("49111"),
         N = n("958706"),
         A = n("646718"),
-        O = n("782340"),
-        R = n("187971"),
+        R = n("782340"),
+        O = n("187971"),
         M = e => {
             var t, a, M;
             let {
@@ -72,13 +72,13 @@ function(e, t, n) {
                     })
                 }
             }, [W, Y, b, P, U, Z, j, z]), (0, i.jsxs)("div", {
-                className: s(R.premiumPromo, {
-                    [R.unifyTrialUpsell]: K
+                className: s(O.premiumPromo, {
+                    [O.unifyTrialUpsell]: K
                 }),
                 children: [(0, i.jsx)(o.Clickable, {
-                    className: R.premiumPromoClose,
+                    className: O.premiumPromoClose,
                     onClick: L,
-                    children: O.default.Messages.CLOSE
+                    children: R.default.Messages.CLOSE
                 }), W ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
                     children: [K ? (0, i.jsx)(y.default, {
                         type: A.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
@@ -86,26 +86,26 @@ function(e, t, n) {
                         onClose: L,
                         trialOffer: B,
                         discountOffer: V,
-                        children: Q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
+                        children: Q ? R.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
                             planName: (0, _.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                             onClick: G
-                        }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
+                        }) : R.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
                             onClick: G
                         })
                     }) : (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)("img", {
                             alt: "",
-                            className: R.premiumPromoImage,
+                            className: O.premiumPromoImage,
                             src: H
                         }), (0, i.jsx)("div", {
-                            className: R.premiumPromoTitle,
-                            children: O.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
+                            className: O.premiumPromoTitle,
+                            children: R.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
                         }), (0, i.jsx)("div", {
-                            className: R.premiumPromoDescription,
-                            children: Q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
+                            className: O.premiumPromoDescription,
+                            children: Q ? R.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
                                 planName: (0, _.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                                 onClick: G
-                            }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
+                            }) : R.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
                                 onClick: G
                             })
                         })]
@@ -125,8 +125,8 @@ function(e, t, n) {
                             F(!1), e && L()
                         },
                         buttonText: (() => {
-                            if (K) return Q ? O.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : O.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;
-                            return Q ? O.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : O.default.Messages.PREMIUM_REQUIRED_GET_NITRO
+                            if (K) return Q ? R.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : R.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;
+                            return Q ? R.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : R.default.Messages.PREMIUM_REQUIRED_GET_NITRO
                         })()
                     })]
                 })]

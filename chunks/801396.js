@@ -37,18 +37,18 @@ function(e, t, n) {
                 location: N
             } = (0, u.useAnalyticsContext)(), {
                 analyticsLocations: A
-            } = (0, c.default)(), O = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(n)), {
-                canManageAllExpressions: R
-            } = (0, h.useManageResourcePermissions)(O), M = null != O && 0 === (0, g.getTotalStickerCountForTier)(O.premiumTier) && !O.hasFeature(S.GuildFeatures.MORE_STICKERS);
+            } = (0, c.default)(), R = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(n)), {
+                canManageAllExpressions: O
+            } = (0, h.useManageResourcePermissions)(R), M = null != R && 0 === (0, g.getTotalStickerCountForTier)(R.premiumTier) && !R.hasFeature(S.GuildFeatures.MORE_STICKERS);
             return (l.useEffect(() => {
-                R && M && I && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+                O && M && I && ((0, d.trackWithMetadata)(S.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                     location: N,
-                    guild_id: null == O ? void 0 : O.id,
+                    guild_id: null == R ? void 0 : R.id,
                     channel_id: null == a ? void 0 : a.id,
                     type: "Expression Picker Inline Sticker Upsell",
                     location_stack: A
                 }), v(!0))
-            }, [M, O, a, N, I, v, A, R]), null != O && R) ? M ? (0, i.jsxs)("div", {
+            }, [M, R, a, N, I, v, A, O]), null != R && O) ? M ? (0, i.jsxs)("div", {
                 className: s(T.upsell, t),
                 children: [(0, i.jsx)(E.default, {
                     className: T.icon,
@@ -68,7 +68,7 @@ function(e, t, n) {
                         (0, p.default)({
                             analyticsLocations: A,
                             analyticsSourceLocation: N,
-                            guild: O,
+                            guild: R,
                             perks: (0, C.guildBoostingPerks)()
                         })
                     },

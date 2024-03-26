@@ -59,10 +59,10 @@ function(e, t, n) {
             return A
         },
         includesTarget: function() {
-            return O
+            return R
         },
         captureQuestsException: function() {
-            return R
+            return O
         },
         getQuestsFromActivities: function() {
             return M
@@ -215,11 +215,11 @@ function(e, t, n) {
         return (0, i.hasFlag)(e.dismissedQuestContent, s.DismissibleQuestContentFlags[n])
     }
 
-    function O(e, t) {
+    function R(e, t) {
         return e.targetedContent.includes(t)
     }
 
-    function R(e, t) {
+    function O(e, t) {
         l.default.captureException(e, {
             ...t,
             tags: {

@@ -229,8 +229,8 @@ function(e, t, n) {
             maxAge: 1 * m.default.Millis.MINUTE,
             updateAgeOnGet: !0
         },
-        O = new s(A),
-        R = new s(A);
+        R = new s(A),
+        O = new s(A);
 
     function M(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -257,7 +257,7 @@ function(e, t, n) {
                 if ("" !== c) {
                     let e = function(e, t, n) {
                         let i = [],
-                            l = n ? R : O,
+                            l = n ? O : R,
                             a = l.get(e);
                         if (null != a) return a;
                         let s = e.replace(/\r\n/g, " \n").replace(/[\r\f]/g, " ").replace(/\t/g, " ") + "\n\n",

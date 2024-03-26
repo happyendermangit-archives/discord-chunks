@@ -28,8 +28,8 @@ function(e, t, n) {
         v = n("845579"),
         N = n("945330"),
         A = n("587974"),
-        O = n("599110"),
-        R = n("510500"),
+        R = n("599110"),
+        O = n("510500"),
         M = n("171209"),
         k = n("49111"),
         L = n("782340"),
@@ -91,12 +91,12 @@ function(e, t, n) {
             onSelectSticker: r,
             stickerIconVisible: c = !1,
             submitButtonVisible: f = !1
-        } = e, _ = s.useContext(x.default), [T, A] = s.useState(null), [b, j] = s.useState(!1), [U, G] = s.useState(null), H = (0, E.useExpressionPickerStore)(e => null != e.activeView), B = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, Q] = s.useState(!1), q = (0, R.useStickerSuggestionResults)(V, b, i), {
+        } = e, _ = s.useContext(x.default), [T, A] = s.useState(null), [b, j] = s.useState(!1), [U, G] = s.useState(null), H = (0, E.useExpressionPickerStore)(e => null != e.activeView), B = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, Q] = s.useState(!1), q = (0, O.useStickerSuggestionResults)(V, b, i), {
             analyticsLocations: X
         } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
             handleTextChange: $,
             debouncedSetTextInputValue: ee
-        } = (0, R.useTextChangeHandler)({
+        } = (0, O.useTextChangeHandler)({
             setTextInputValue: K,
             setHasDismissed: j,
             setHasSelection: Q,
@@ -188,7 +188,7 @@ function(e, t, n) {
             }),
             es = (e, t) => {
                 if (el) {
-                    if (O.default.track(k.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
+                    if (R.default.track(k.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                             sticker_id: e.id,
                             suggestion_trigger: W
                         }), t === y.StickerSendability.SENDABLE) j(!0), r(e, S.StickerSelectLocation.EXPRESSION_SUGGESTIONS), ee.cancel(), K("");
@@ -289,7 +289,7 @@ function(e, t, n) {
                                 })
                             }), (0, a.jsx)(p.Clickable, {
                                 onClick: () => {
-                                    O.default.track(k.AnalyticEvents.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                                    R.default.track(k.AnalyticEvents.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                         enabled: !1,
                                         location: {
                                             section: k.AnalyticsSections.EXPRESSION_PICKER

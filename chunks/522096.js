@@ -35,8 +35,8 @@ function(e, t, n) {
             renderHeaderAccessories: v,
             rowHeight: N,
             sectionHeaderHeight: A,
-            sectionFooterHeight: O,
-            itemNodeWidth: R,
+            sectionFooterHeight: R,
+            itemNodeWidth: O,
             listPaddingRight: M,
             itemNodeMargin: k,
             listPadding: L,
@@ -58,7 +58,7 @@ function(e, t, n) {
             collapsedCategories: n,
             gridWidth: B,
             listPaddingRight: M,
-            itemNodeWidth: R,
+            itemNodeWidth: O,
             itemNodeMargin: k
         }), {
             getItemProps: Z,
@@ -130,7 +130,7 @@ function(e, t, n) {
                         rowCountBySection: W,
                         rowHeight: N,
                         sectionHeaderHeight: A,
-                        sectionFooterHeight: O
+                        sectionFooterHeight: R
                     }) : null
                 })]
             })]

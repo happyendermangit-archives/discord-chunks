@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return R
         }
     });
     var i = n("37983");
@@ -34,19 +34,19 @@ function(e, t, n) {
     function A(e) {
         return null != e
     }
-    var O = function(e) {
-        var t, A, O;
+    var R = function(e) {
+        var t, A, R;
         let {
-            quest: R,
+            quest: O,
             applicationStream: M,
             onMouseEnter: k,
             onMouseLeave: L,
             position: P
         } = e, b = (0, g.useHandleClaimQuestsReward)({
-            quest: R,
+            quest: O,
             location: E.QuestContent.MEMBERS_LIST
-        }), j = (0, x.useIsQuestExpired)(R), U = (null == R ? void 0 : null === (t = R.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, D = (null == R ? void 0 : null === (A = R.userStatus) || void 0 === A ? void 0 : A.enrolledAt) != null, w = (null == R ? void 0 : null === (O = R.userStatus) || void 0 === O ? void 0 : O.completedAt) != null;
-        if (null == R || j || U && !(null != M)) return null;
+        }), j = (0, x.useIsQuestExpired)(O), U = (null == O ? void 0 : null === (t = O.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, D = (null == O ? void 0 : null === (A = O.userStatus) || void 0 === A ? void 0 : A.enrolledAt) != null, w = (null == O ? void 0 : null === (R = O.userStatus) || void 0 === R ? void 0 : R.completedAt) != null;
+        if (null == O || j || U && !(null != M)) return null;
         let F = () => {
                 (0, s.openModalLazy)(async () => {
                     let {
@@ -55,7 +55,7 @@ function(e, t, n) {
                     return t => (0, i.jsx)(e, {
                         ...t,
                         questContent: E.QuestContent.MEMBERS_LIST,
-                        questConfig: R.config
+                        questConfig: O.config
                     })
                 })
             },
@@ -78,22 +78,22 @@ function(e, t, n) {
             V = (() => null != M ? {
                 headerText: _.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
                 ctaText: _.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
-                tileAssetUrl: (0, y.getGameTileAssetUrl)(R.id),
+                tileAssetUrl: (0, y.getGameTileAssetUrl)(O.id),
                 handleClickCta: B
             } : w && !U ? {
                 headerText: _.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
                 ctaText: _.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
-                tileAssetUrl: (0, y.getRewardAssetUrl)(R.id),
+                tileAssetUrl: (0, y.getRewardAssetUrl)(O.id),
                 handleClickCta: b
             } : D ? {
                 headerText: _.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
                 ctaText: _.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
-                tileAssetUrl: (0, y.getRewardAssetUrl)(R.id),
+                tileAssetUrl: (0, y.getRewardAssetUrl)(O.id),
                 handleClickCta: G
             } : {
                 headerText: _.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
                 ctaText: _.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
-                tileAssetUrl: (0, y.getGameTileAssetUrl)(R.id),
+                tileAssetUrl: (0, y.getGameTileAssetUrl)(O.id),
                 handleClickCta: G
             })();
         return (0, i.jsx)("div", {
@@ -138,7 +138,7 @@ function(e, t, n) {
                             variant: "text-xs/medium",
                             color: "text-muted",
                             children: _.default.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({
-                                gamePublisher: R.config.messages.gamePublisher
+                                gamePublisher: O.config.messages.gamePublisher
                             })
                         }), (0, i.jsx)(a.CircleQuestionIcon, {
                             width: N,
@@ -154,8 +154,8 @@ function(e, t, n) {
                             className: T.imgUnderlay
                         }), (0, i.jsx)("img", {
                             alt: _.default.Messages.QUESTS_MEMBERS_LIST_GAME_TILE_ALT.format({
-                                gameTitle: R.config.messages.gameTitle,
-                                gamePublisher: R.config.messages.gamePublisher
+                                gameTitle: O.config.messages.gameTitle,
+                                gamePublisher: O.config.messages.gamePublisher
                             }),
                             src: V.tileAssetUrl
                         })]

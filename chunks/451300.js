@@ -46,20 +46,20 @@ function(e, t, n) {
                 location_stack: N
             })
         }, [N]);
-        let O = (0, f.usePremiumTrialOffer)(),
-            R = (0, c.usePremiumDiscountOffer)(),
-            M = null != O || null != R,
-            k = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_0;
+        let R = (0, f.usePremiumTrialOffer)(),
+            O = (0, c.usePremiumDiscountOffer)(),
+            M = null != R || null != O,
+            k = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_0;
         return (0, i.jsxs)("div", {
             className: s(T.emptyState, I, {
                 [T.unifyTrialUpsell]: M
             }),
             children: [M ? (0, i.jsx)(p.default, {
-                discountOffer: R,
-                trialOffer: O,
+                discountOffer: O,
+                trialOffer: R,
                 onClose: v,
                 type: C.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
-                subscriptionTier: null !== (a = null == O ? void 0 : null === (n = O.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : C.PremiumSubscriptionSKUs.TIER_2,
+                subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : C.PremiumSubscriptionSKUs.TIER_2,
                 children: _.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
             }) : (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(o.Heading, {

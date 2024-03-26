@@ -73,8 +73,8 @@ function(e, t, n) {
         v = n("324929"),
         N = n("876308"),
         A = n("660478"),
-        O = n("697218"),
-        R = n("663175"),
+        R = n("697218"),
+        O = n("663175"),
         M = n("888673"),
         k = n("839952"),
         L = n("476765"),
@@ -140,7 +140,7 @@ function(e, t, n) {
             ...u
         } = e, d = J(t), c = Q(i);
         return n = null == n ? G.getVolume : n, (0, a.jsxs)(s.Fragment, {
-            children: [(0, a.jsx)(R.default, {
+            children: [(0, a.jsx)(O.default, {
                 ...u,
                 onVolumeChange: d,
                 onMute: c,
@@ -398,7 +398,7 @@ function(e, t, n) {
             scrollManager: u
         } = e, {
             disableInteractions: x
-        } = s.useContext(P.MessagesInteractionContext), [E, I] = s.useState(null), v = s.useRef(null), [N, R] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([_.default], () => {
+        } = s.useContext(P.MessagesInteractionContext), [E, I] = s.useState(null), v = s.useRef(null), [N, O] = s.useState(null), M = s.useRef(null), k = (0, f.useStateFromStoresArray)([_.default], () => {
             var e;
             return null !== (e = _.default.summaries(l.id)) && void 0 !== e ? e : []
         }, [l]), L = (0, g.default)(k);
@@ -414,13 +414,13 @@ function(e, t, n) {
                 channel_type: l.type
             })
         }, [k, L, l.guild_id, l.id, l.type]);
-        let G = (0, f.useStateFromStores)([O.default], () => {
+        let G = (0, f.useStateFromStores)([R.default], () => {
                 var e;
                 return null !== (e = null == k ? void 0 : k.map(e => {
                     var t;
                     return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
                         var t;
-                        return null !== (t = O.default.getUser(e)) && void 0 !== t ? t : null
+                        return null !== (t = R.default.getUser(e)) && void 0 !== t ? t : null
                     }).filter(F.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [k], er),
@@ -482,7 +482,7 @@ function(e, t, n) {
                 var t;
                 X(e);
                 let n = null === (t = M.current) || void 0 === t ? void 0 : t.scrollTop;
-                null != n && R(n)
+                null != n && O(n)
             }, []);
         s.useEffect(() => {
             if (null != N && q) {
@@ -632,9 +632,9 @@ function(e, t, n) {
         } = s.useContext(P.MessagesInteractionContext), [h, x] = s.useState(null), E = s.useRef(null), [I, v] = s.useState(null), N = s.useRef(null), A = (0, f.useStateFromStoresArray)([_.default], () => {
             var e;
             return null !== (e = _.default.summaries(l.id)) && void 0 !== e ? e : []
-        }, [l]), R = (0, g.default)(A);
+        }, [l]), O = (0, g.default)(A);
         s.useEffect(() => {
-            !d.isEqual(R, A) && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+            !d.isEqual(O, A) && w.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: A.length,
                 message_counts: A.map(e => e.count),
                 start_message_ids: A.map(e => e.startId),
@@ -644,14 +644,14 @@ function(e, t, n) {
                 channel_id: l.id,
                 channel_type: l.type
             })
-        }, [A, R, l.guild_id, l.id, l.type]);
-        let M = (0, f.useStateFromStores)([O.default], () => {
+        }, [A, O, l.guild_id, l.id, l.type]);
+        let M = (0, f.useStateFromStores)([R.default], () => {
                 var e;
                 return null !== (e = null == A ? void 0 : A.map(e => {
                     var t;
                     return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
                         var t;
-                        return null !== (t = O.default.getUser(e)) && void 0 !== t ? t : null
+                        return null !== (t = R.default.getUser(e)) && void 0 !== t ? t : null
                     }).filter(F.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [A], er),

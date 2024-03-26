@@ -37,8 +37,8 @@ function(e, t, n) {
             setPopoutRef: C,
             disableUserProfileLink: _ = __OVERLAY__,
             newAnalyticsLocations: T = []
-        } = e, I = l.useRef(null), v = (0, h.default)(t.id, n), N = (0, u.default)(I), A = (0, r.useStateFromStores)([f.default], () => null != n ? f.default.getGuild(n) : null), O = (0, r.useStateFromStores)([c.default], () => null != n ? c.default.getMember(n, t.id) : null), {
-            UserProfileAnalyticsProvider: R
+        } = e, I = l.useRef(null), v = (0, h.default)(t.id, n), N = (0, u.default)(I), A = (0, r.useStateFromStores)([f.default], () => null != n ? f.default.getGuild(n) : null), R = (0, r.useStateFromStores)([c.default], () => null != n ? c.default.getMember(n, t.id) : null), {
+            UserProfileAnalyticsProvider: O
         } = (0, m.useUserProfileAnalyticsProvider)({
             layout: "BITE_SIZE_POPOUT",
             newAnalyticsLocations: [...T, d.default.BITE_SIZE_PROFILE_POPOUT],
@@ -46,10 +46,10 @@ function(e, t, n) {
             guildId: n,
             channelId: a,
             messageId: s
-        }, null == O || null != O.fullProfileLoadedTimestamp);
+        }, null == R || null != R.fullProfileLoadedTimestamp);
         return l.useEffect(() => {
             null == C || C(null == I ? void 0 : I.current)
-        }, [I, C]), (0, i.jsx)(R, {
+        }, [I, C]), (0, i.jsx)(O, {
             children: (0, i.jsx)(o.Dialog, {
                 ref: I,
                 "aria-label": t.username,

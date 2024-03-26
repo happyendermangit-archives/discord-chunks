@@ -42,8 +42,8 @@ function(e, t, n) {
         v = n("635956"),
         N = n("393414"),
         A = n("324929"),
-        O = n("18494"),
-        R = n("162771"),
+        R = n("18494"),
+        O = n("162771"),
         M = n("697218"),
         k = n("145131"),
         L = n("580357"),
@@ -63,7 +63,7 @@ function(e, t, n) {
         Y = n("782340"),
         z = n("325417");
     let Z = () => {
-            let e = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId());
+            let e = (0, o.useStateFromStores)([O.default], () => O.default.getGuildId());
             return {
                 page: null != e ? V.AnalyticsPages.GUILD_CHANNEL : V.AnalyticsPages.DM_CHANNEL,
                 section: V.AnalyticsSections.EMOJI_UPSELL_POPOUT
@@ -75,7 +75,7 @@ function(e, t, n) {
             } = e;
             return (0, g.useTrackOpenPopout)({
                 emojiId: t.emojiId,
-                currentGuildId: R.default.getGuildId()
+                currentGuildId: O.default.getGuildId()
             }), (0, i.jsx)(u.Dialog, {
                 children: (0, i.jsx)(B.MessagePopoutContent, {
                     children: (0, i.jsxs)(k.default, {
@@ -123,7 +123,7 @@ function(e, t, n) {
             n = null == n || n;
             let c = n || t.isDiscoverable(),
                 f = () => {
-                    t.isDiscoverable() ? (0, F.startLurking)(a, {}) : n && (0, N.transitionTo)(V.Routes.CHANNEL(a, O.default.getChannelId(a)))
+                    t.isDiscoverable() ? (0, F.startLurking)(a, {}) : n && (0, N.transitionTo)(V.Routes.CHANNEL(a, R.default.getChannelId(a)))
                 },
                 p = t.isDiscoverable() && null != t.presenceCount,
                 m = () => {
@@ -245,12 +245,12 @@ function(e, t, n) {
                 node: u,
                 expressionSourceGuild: E,
                 joinedEmojiSourceGuildRecord: N,
-                closePopout: O,
+                closePopout: R,
                 onToggleShowMoreEmojis: L,
                 guildEmoji: P,
                 demoMode: U = !1,
                 nonce: w
-            } = e, F = (0, o.useStateFromStores)([M.default], () => M.default.getCurrentUser()), J = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId()), q = G.default.isPremium(F), X = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
+            } = e, F = (0, o.useStateFromStores)([M.default], () => M.default.getCurrentUser()), J = (0, o.useStateFromStores)([O.default], () => O.default.getGuildId()), q = G.default.isPremium(F), X = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
             U && (q = !0, et = !0, ee = !1, X = !1);
             let {
                 enabled: en
@@ -284,7 +284,7 @@ function(e, t, n) {
             }, {
                 disableTrack: !el
             });
-            let eu = R.default.getGuildId(),
+            let eu = O.default.getGuildId(),
                 ed = (0, H.getEmojiPopoutData)({
                     isPremium: q,
                     hasJoinedEmojiSourceGuild: ee,
@@ -295,7 +295,7 @@ function(e, t, n) {
                     isDiscoverable: et,
                     shouldHideRoleSubscriptionCTA: er,
                     onOpenPremiumSettings: () => {
-                        O(), D.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                        R(), D.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                             location_page: ei.page,
                             location_section: ei.section
                         }), (0, T.navigateToPremiumMarketingPage)()
@@ -320,7 +320,7 @@ function(e, t, n) {
                 children: [(() => {
                     let e = async () => {
                         if (U || null == E || ee) return;
-                        O();
+                        R();
                         let e = E.id;
                         try {
                             await c.default.joinGuild(e), c.default.transitionToGuildSync(e)
@@ -364,7 +364,7 @@ function(e, t, n) {
                             size: d.Button.Sizes.SMALL,
                             fullWidth: !0,
                             buttonText: ed.text,
-                            onSubscribeModalClose: t => t ? e() : O(),
+                            onSubscribeModalClose: t => t ? e() : R(),
                             postSuccessGuild: t && null != E ? E : void 0,
                             premiumModalAnalyticsLocation: ei
                         }) : em ? (0, i.jsx)(d.Button, {
@@ -379,7 +379,7 @@ function(e, t, n) {
                             size: d.Button.Sizes.SMALL,
                             fullWidth: !0,
                             onClick: () => {
-                                O(), (null == N ? void 0 : N.id) != null && c.default.transitionToGuildSync(N.id, void 0, K.StaticChannelRoute.ROLE_SUBSCRIPTIONS, [p.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL])
+                                R(), (null == N ? void 0 : N.id) != null && c.default.transitionToGuildSync(N.id, void 0, K.StaticChannelRoute.ROLE_SUBSCRIPTIONS, [p.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL])
                             },
                             children: es ? Y.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : Y.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
                         })]
@@ -422,7 +422,7 @@ function(e, t, n) {
                                 emojiId: u.emojiId,
                                 expressionSourceGuild: E,
                                 popoutData: ed,
-                                onClose: O,
+                                onClose: R,
                                 hasJoinedEmojiSourceGuild: ee,
                                 isDisplayingButtonInTopSection: em || eh
                             })]

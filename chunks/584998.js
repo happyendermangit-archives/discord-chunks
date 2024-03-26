@@ -35,7 +35,7 @@ function(e, t, n) {
             guildId: I,
             unread: v,
             onClick: N
-        } = e, [A, O] = l.useState(!1), R = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), k = (e, n) => {
+        } = e, [A, R] = l.useState(!1), O = (0, u.getTimestampString)(x.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([E.default], () => E.default.summaryFeedback(t)), k = (e, n) => {
             e.stopPropagation(), (0, y.default)({
                 summary: t,
                 channel: c,
@@ -56,8 +56,8 @@ function(e, t, n) {
                     })
                 })
             },
-            onMouseEnter: () => O(!0),
-            onMouseLeave: () => O(!1),
+            onMouseEnter: () => R(!0),
+            onMouseLeave: () => R(!1),
             children: [(0, i.jsx)(h.default, {
                 hovered: A,
                 unread: v,
@@ -70,7 +70,7 @@ function(e, t, n) {
                         className: T.timestamp,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
-                        children: R
+                        children: O
                     }), (0, i.jsx)(o.default, {
                         height: 4,
                         width: 4,

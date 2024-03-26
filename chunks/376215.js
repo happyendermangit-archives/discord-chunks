@@ -34,8 +34,8 @@ function(e, t, n) {
             channelId: t,
             type: n
         } = e, a = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), N = (0, m.default)("attachments", o.Orientations.HORIZONTAL), A = (0, u.useStateFromStores)([E.default], () => E.default.getUploads(t, n.drafts.type)), {
-            isApplicationCommand: O,
-            commandOptions: R,
+            isApplicationCommand: R,
+            commandOptions: O,
             commandOptionStates: M
         } = (0, u.useStateFromStoresObject)([h.default], () => {
             let e = h.default.getActiveCommand(t);
@@ -52,11 +52,11 @@ function(e, t, n) {
             }
         }), k = l.useMemo(() => {
             var e;
-            return null !== (e = null == R ? void 0 : R.filter(e => {
+            return null !== (e = null == O ? void 0 : O.filter(e => {
                 var t;
                 return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == M ? void 0 : null === (t = M[e.name]) || void 0 === t ? void 0 : t.hasValue)
             })) && void 0 !== e ? e : []
-        }, [R, M]), [L, P] = l.useState([]);
+        }, [O, M]), [L, P] = l.useState([]);
         l.useEffect(() => {
             let e = () => {
                 c.default.clearAll(t, n.drafts.type)
@@ -70,7 +70,7 @@ function(e, t, n) {
             event: _.ComponentActions.FOCUS_ATTACHMENT_AREA,
             handler: b
         }), l.useEffect(() => {
-            if (O) {
+            if (R) {
                 let e = [];
                 L.forEach(t => {
                     !k.some(e => t.name === e.name) && e.push(t)
@@ -78,7 +78,7 @@ function(e, t, n) {
                     c.default.remove(t, e.name, n.drafts.type)
                 }), P(k)
             }
-        }, [t, k.length, n]), !O && 0 === A.length || O && 0 === k.length) ? null : (0, i.jsxs)(l.Fragment, {
+        }, [t, k.length, n]), !R && 0 === A.length || R && 0 === k.length) ? null : (0, i.jsxs)(l.Fragment, {
             children: [(0, i.jsx)(r.ListNavigatorProvider, {
                 navigator: N,
                 children: (0, i.jsx)(r.ListNavigatorContainer, {
@@ -91,7 +91,7 @@ function(e, t, n) {
                             ref: l,
                             ...r,
                             className: s(T.channelAttachmentArea, I.scrollbarGhost),
-                            children: O ? k.map(e => (0, i.jsx)(S.default, {
+                            children: R ? k.map(e => (0, i.jsx)(S.default, {
                                 channelId: t,
                                 keyboardModeEnabled: a,
                                 option: e

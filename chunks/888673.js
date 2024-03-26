@@ -37,12 +37,12 @@ function(e, t, n) {
                 onPlay: v,
                 onEnded: N,
                 onVolumeChange: A,
-                onMute: O,
-                alt: R = d.default.Messages.VIDEO,
+                onMute: R,
+                alt: O = d.default.Messages.VIDEO,
                 ...M
             } = this.props;
             return (0, l.jsx)(r.default, {
-                alt: R,
+                alt: O,
                 className: n,
                 src: a,
                 ...M,
@@ -59,10 +59,10 @@ function(e, t, n) {
                             width: r,
                             height: d
                         }
-                    } = n, R = !(f <= u.MAX_VIDEO_WIDTH && p <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && p <= u.MAX_VIDEO_WIDTH);
+                    } = n, O = !(f <= u.MAX_VIDEO_WIDTH && p <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && p <= u.MAX_VIDEO_WIDTH);
                     return (0, l.jsx)(o.default, {
                         className: i,
-                        forceExternal: R,
+                        forceExternal: O,
                         src: e,
                         poster: a,
                         width: r,
@@ -83,7 +83,7 @@ function(e, t, n) {
                         onPlay: v,
                         onEnded: N,
                         onVolumeChange: A,
-                        onMute: O,
+                        onMute: R,
                         mimeType: C,
                         downloadable: h
                     })

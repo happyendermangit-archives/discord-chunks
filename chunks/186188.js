@@ -11,10 +11,10 @@ function(e, t, n) {
             return A
         },
         UserMention: function() {
-            return O
+            return R
         },
         RoleMention: function() {
-            return R
+            return O
         },
         ChannelMention: function() {
             return M
@@ -102,7 +102,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e) {
+    function R(e) {
         let {
             id: t,
             guildId: n,
@@ -143,7 +143,7 @@ function(e, t, n) {
         return c
     }
 
-    function R(e) {
+    function O(e) {
         let {
             id: t,
             guildId: n

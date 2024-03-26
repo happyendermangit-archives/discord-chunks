@@ -42,7 +42,7 @@ function(e, t, n) {
                 autoTrackExposure: !0,
                 experiment: f.default,
                 location: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH
-            }), O = l.useRef(!1), R = l.useCallback(() => {
+            }), R = l.useRef(!1), O = l.useCallback(() => {
                 (0, c.default)({
                     subscriptionTier: y.default.getSkuIdForPremiumType(A),
                     analyticsLocations: v,
@@ -59,12 +59,12 @@ function(e, t, n) {
                     type: o.SpinnerTypes.PULSING_ELLIPSIS
                 }) : (0, i.jsx)(r.VisibilitySensor, {
                     onChange: e => {
-                        e && !O.current && (E.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        e && !R.current && (E.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                             type: S.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
                             location: I,
                             location_stack: v,
                             sku_id: y.default.getSkuIdForPremiumType(A)
-                        }), O.current = !0)
+                        }), R.current = !0)
                     },
                     children: (0, i.jsxs)("div", {
                         className: _.upsell,
@@ -81,7 +81,7 @@ function(e, t, n) {
                         }), (0, i.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.LINK,
-                            onClick: R,
+                            onClick: O,
                             children: M ? C.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
                         }), null != a && (0, i.jsx)(o.Button, {
                             onClick: a,

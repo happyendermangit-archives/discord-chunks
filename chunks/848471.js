@@ -152,11 +152,11 @@ function(e, t, n) {
                 x: y + (g - y) / 2,
                 y: _
             }
-        }, [s, c, a]), [v, N] = l.useState(0), [A, R] = l.useState(0);
+        }, [s, c, a]), [v, N] = l.useState(0), [A, O] = l.useState(0);
         if (l.useLayoutEffect(() => {
                 if (null == S || null == _ || null == d.current) return;
                 let e = d.current.getBoundingClientRect();
-                R(e.width / 2), N(e.height + 12)
+                O(e.width / 2), N(e.height + 12)
             }, [S, _]), null == S || null == _) return null;
         let M = null === (n = a.current) || void 0 === n ? void 0 : n.getSlateEditor();
         return null == M ? null : (0, i.jsx)(x.default, {
@@ -174,7 +174,7 @@ function(e, t, n) {
                 onMouseUp: e => {
                     e.stopPropagation()
                 },
-                children: [(0, i.jsx)(O, {
+                children: [(0, i.jsx)(R, {
                     slateEditor: M
                 }), (0, i.jsx)(I, {
                     editorRef: a,
@@ -228,7 +228,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e) {
+    function R(e) {
         var t;
         let {
             slateEditor: n

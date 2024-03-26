@@ -35,7 +35,7 @@ function(e, t, n) {
         }).finally(() => {
             n(!1)
         })
-    }, O = e => {
+    }, R = e => {
         let {
             onClose: t,
             referralsRemaining: n,
@@ -100,13 +100,13 @@ function(e, t, n) {
         })
     };
 
-    function R(e) {
+    function O(e) {
         let {
             referralsRemaining: t,
             channel: n,
             onClose: a,
             isResending: r
-        } = e, [u, c] = l.useState(!1), [E, v] = l.useState(!1), R = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
+        } = e, [u, c] = l.useState(!1), [E, v] = l.useState(!1), O = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
             analyticsLocations: M
         } = (0, p.default)(f.default.REFERRAL_TRIALS_POPOUT), {
             enabled: k
@@ -115,10 +115,10 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !0
         }), L = new Date("2023-06-15T08:00:00-08:00");
-        return null == R ? null : u ? (0, i.jsx)(O, {
+        return null == O ? null : u ? (0, i.jsx)(R, {
             onClose: a,
             referralsRemaining: t,
-            recipient: R,
+            recipient: O,
             analyticsLocations: M,
             shouldShowBirthdayUX: k
         }) : (0, i.jsxs)("div", {
@@ -169,10 +169,10 @@ function(e, t, n) {
                     className: _.generalShareButton,
                     submitting: E,
                     onClick: () => {
-                        r ? A(R, a, v) : (c(!0), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                        r ? A(O, a, v) : (c(!0), m.default.track(S.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: M,
                             step: g.ReferralTrialsAnalyticSteps.FLOW_STARTED,
-                            other_user_id: Number(R)
+                            other_user_id: Number(O)
                         }))
                     },
                     children: r ? C.default.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : C.default.Messages.SHARE_NITRO_BUTTON_TEXT
@@ -195,7 +195,7 @@ function(e, t, n) {
                 shouldShow: !0,
                 position: "top",
                 align: "center",
-                renderPopout: e => (0, i.jsx)(R, {
+                renderPopout: e => (0, i.jsx)(O, {
                     ...e,
                     referralsRemaining: n,
                     channel: l,

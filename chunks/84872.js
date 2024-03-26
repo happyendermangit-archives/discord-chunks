@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return R
         }
     });
     var i = n("37983"),
@@ -247,5 +247,5 @@ function(e, t, n) {
             }
         }
     };
-    var O = A
+    var R = A
 }

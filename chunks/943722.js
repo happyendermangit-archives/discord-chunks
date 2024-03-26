@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ActivityEmoji: function() {
-            return O
+            return R
         },
         default: function() {
             return M
@@ -34,7 +34,7 @@ function(e, t, n) {
         N = n("73276");
     let A = "14px";
 
-    function O(e) {
+    function R(e) {
         let {
             emoji: t,
             className: n,
@@ -57,7 +57,7 @@ function(e, t, n) {
             })
         })
     }
-    let R = e => {
+    let O = e => {
         let {
             className: t,
             text: n
@@ -117,7 +117,7 @@ function(e, t, n) {
         F ? w = (0, i.jsx)(E.default, {
             className: u,
             hangStatusActivity: b
-        }) : null != L && null != L.emoji && !y && (w = (0, i.jsx)(O, {
+        }) : null != L && null != L.emoji && !y && (w = (0, i.jsx)(R, {
             emoji: L.emoji,
             animate: d,
             hideTooltip: m,
@@ -129,7 +129,7 @@ function(e, t, n) {
             V = null != B && B.length > 0;
         return H || null == w && !V ? null : (0, i.jsxs)("div", {
             className: a,
-            children: [w, (0, i.jsx)(R, {
+            children: [w, (0, i.jsx)(O, {
                 text: B,
                 className: s
             }), k && (0, i.jsx)(r.QuestsIcon, {

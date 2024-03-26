@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("229915"),
         N = n("368121"),
         A = n("719923"),
-        O = n("389480"),
-        R = n("78581"),
+        R = n("389480"),
+        O = n("78581"),
         M = n("262439"),
         k = n("557585"),
         L = n("553372"),
@@ -63,29 +63,29 @@ function(e, t, n) {
             onClick: l,
             children: [function() {
                 switch (t.type) {
-                    case O.SoundboardSoundGridSectionType.FAVORITES:
+                    case R.SoundboardSoundGridSectionType.FAVORITES:
                         return (0, i.jsx)(I.default, {
                             className: G.headerIcon
                         });
-                    case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
+                    case R.SoundboardSoundGridSectionType.RECENTLY_HEARD:
                         return (0, i.jsx)(_.default, {
                             className: G.headerIcon
                         });
-                    case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
+                    case R.SoundboardSoundGridSectionType.FREQUENTLY_USED:
                         return (0, i.jsx)(o.AnalyticsIcon, {
                             className: G.headerIcon
                         });
-                    case O.SoundboardSoundGridSectionType.GUILD:
+                    case R.SoundboardSoundGridSectionType.GUILD:
                         return (0, i.jsx)(p.default, {
                             guild: t.guild,
                             height: 16,
                             width: 16
                         });
-                    case O.SoundboardSoundGridSectionType.DEFAULTS:
+                    case R.SoundboardSoundGridSectionType.DEFAULTS:
                         return (0, i.jsx)(T.default, {
                             className: G.headerIcon
                         });
-                    case O.SoundboardSoundGridSectionType.SEARCH:
+                    case R.SoundboardSoundGridSectionType.SEARCH:
                         return (0, i.jsx)(v.default, {
                             className: G.headerIcon
                         })
@@ -96,17 +96,17 @@ function(e, t, n) {
                 className: G.sectionTitle,
                 children: function() {
                     switch (t.type) {
-                        case O.SoundboardSoundGridSectionType.FAVORITES:
+                        case R.SoundboardSoundGridSectionType.FAVORITES:
                             return F.default.Messages.FAVORITES;
-                        case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
+                        case R.SoundboardSoundGridSectionType.RECENTLY_HEARD:
                             return F.default.Messages.RECENTLY_HEARD;
-                        case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
+                        case R.SoundboardSoundGridSectionType.FREQUENTLY_USED:
                             return F.default.Messages.FREQUENTLY_USED;
-                        case O.SoundboardSoundGridSectionType.GUILD:
+                        case R.SoundboardSoundGridSectionType.GUILD:
                             return t.guild.name;
-                        case O.SoundboardSoundGridSectionType.DEFAULTS:
+                        case R.SoundboardSoundGridSectionType.DEFAULTS:
                             return F.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
-                        case O.SoundboardSoundGridSectionType.SEARCH:
+                        case R.SoundboardSoundGridSectionType.SEARCH:
                             return F.default.Messages.SEARCH_RESULTS_SECTION_LABEL
                     }
                 }()
@@ -143,7 +143,7 @@ function(e, t, n) {
                 let i = "item-".concat(t),
                     o = s && p.rowIndex === a && p.columnIndex === t;
                 switch (e.item.type) {
-                    case O.SoundboardSoundItemType.SOUND:
+                    case R.SoundboardSoundItemType.SOUND:
                         return (0, l.createElement)(L.default, {
                             ...u(t),
                             ...n,
@@ -156,7 +156,7 @@ function(e, t, n) {
                             enableSecondaryActions: !0,
                             buttonOverlay: f
                         });
-                    case O.SoundboardSoundItemType.ADD_SOUND:
+                    case R.SoundboardSoundItemType.ADD_SOUND:
                         return (0, l.createElement)(P.default, {
                             ...u(t),
                             key: i,
@@ -193,18 +193,18 @@ function(e, t, n) {
             let t = !el.has(e);
             t ? el.add(e) : el.delete(e), E.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
         }, [el]), eo = l.useCallback((e, t) => {
-            if (!p && (0, R.canUseSoundboardSound)(Z, e, a, !1)) {
+            if (!p && (0, O.canUseSoundboardSound)(Z, e, a, !1)) {
                 var n;
-                (0, R.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_SNOWFLAKE_ID, t)
+                (0, O.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : w.EMPTY_STRING_SNOWFLAKE_ID, t)
             } else {
-                if ((0, R.canUseSoundboardSound)(Z, e, a)) return;
+                if ((0, O.canUseSoundboardSound)(Z, e, a)) return;
                 C && z(e)
             }
         }, [p, Z, a, C]), eu = l.useCallback(e => {
             switch (e.item.type) {
-                case O.SoundboardSoundItemType.SOUND:
+                case R.SoundboardSoundItemType.SOUND:
                     return null == c || c(e.item.sound), eo(e.item.sound, P);
-                case O.SoundboardSoundItemType.ADD_SOUND:
+                case R.SoundboardSoundItemType.ADD_SOUND:
                     return (0, D.default)(e.item.guild.id)
             }
         }, [P, eo, c]), ed = l.useCallback((e, t, n, l, s) => (0, i.jsx)(W, {
@@ -253,7 +253,7 @@ function(e, t, n) {
             categories: $,
             listPadding: I
         }), [$, I]), ex = l.useCallback(e => {
-            if ((null == e ? void 0 : e.item.type) === O.SoundboardSoundItemType.SOUND) {
+            if ((null == e ? void 0 : e.item.type) === R.SoundboardSoundItemType.SOUND) {
                 var t;
                 return (0, i.jsx)(j.default, {
                     closePicker: o,

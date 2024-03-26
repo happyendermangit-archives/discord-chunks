@@ -43,7 +43,7 @@ function(e, t, n) {
         } = (0, u.useListItem)(n), {
             handleFocus: N,
             handleBlur: A
-        } = (0, m.useFocusInside)(I), O = 0 === T, R = null != r;
+        } = (0, m.useFocusInside)(I), R = 0 === T, O = null != r;
         return (0, a.jsx)(d.FocusRing, {
             children: (0, a.jsx)("li", {
                 ...v,
@@ -77,17 +77,17 @@ function(e, t, n) {
                 ref: t,
                 children: (0, a.jsxs)("div", {
                     className: E.uploadContainer,
-                    children: [s, R ? (0, a.jsx)("div", {
+                    children: [s, O ? (0, a.jsx)("div", {
                         className: E.actionBarContainer,
                         children: (0, a.jsx)("div", {
                             className: o(E.actionBar, {
-                                [E.smallActionBar]: O
+                                [E.smallActionBar]: R
                             }),
                             onContextMenu: y,
                             "aria-label": x.default.Messages.ATTACHMENT_UTILITIES,
                             children: (0, a.jsx)(f.default, {
                                 className: o({
-                                    [E.miniPopover]: O
+                                    [E.miniPopover]: R
                                 }),
                                 children: r
                             })

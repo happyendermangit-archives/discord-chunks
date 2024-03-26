@@ -91,7 +91,7 @@ function(e, t, n) {
             }, [n, i])
         }(l, a), N = (0, p.useCanStartPublicThread)(l, a), A = n.showThreadPromptOnReply && v >= 2 && N;
 
-        function O(e) {
+        function R(e) {
             e.stopPropagation(), (0, c.setPendingReplyShouldMention)(l.id, !u)
         }
         return (0, i.jsx)("div", {
@@ -138,7 +138,7 @@ function(e, t, n) {
                                     return (0, i.jsx)(o.Clickable, {
                                         role: "switch",
                                         "aria-checked": u,
-                                        onClick: O,
+                                        onClick: R,
                                         onMouseEnter: t,
                                         onMouseLeave: n,
                                         onFocus: l,

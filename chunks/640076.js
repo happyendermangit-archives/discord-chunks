@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("454655"),
         N = n("635956"),
         A = n("845579"),
-        O = n("697218"),
-        R = n("124299"),
+        R = n("697218"),
+        O = n("124299"),
         M = n("600785"),
         k = n("599110"),
         L = n("764364"),
@@ -76,8 +76,8 @@ function(e, t, n) {
                 allowAnimatedEmoji: _,
                 channelGuildId: N,
                 messageId: A,
-                isBurstReaction: O,
-                listHeaderClassName: R,
+                isBurstReaction: R,
+                listHeaderClassName: O,
                 activeSectionIndex: M,
                 upsellGlowOpacity: L,
                 enableNitroUpsell: P
@@ -129,10 +129,10 @@ function(e, t, n) {
                     category: l.sectionId,
                     selectedItemClassName: Y.selectedItem,
                     messageId: A,
-                    isBurstReaction: O,
+                    isBurstReaction: R,
                     inNitroLockedSection: l.isNitroLocked
                 }, e)
-            }), [a, p, r, W, el, u, h, E, y, S, _, ea, N, A, O]);
+            }), [a, p, r, W, el, u, h, E, y, S, _, ea, N, A, R]);
             l.useEffect(() => () => {
                 var e, t;
                 return null === (t = es.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -163,7 +163,7 @@ function(e, t, n) {
                         m = P && f && !c,
                         h = P && f && c;
                     return (0, i.jsx)(T.default, {
-                        className: s(Y.header, R, {
+                        className: s(Y.header, O, {
                             [Y.inactiveNitroHeader]: m,
                             [Y.activeNitroHeader]: h
                         }),
@@ -172,7 +172,7 @@ function(e, t, n) {
                         onClick: () => ei(o, l),
                         children: d
                     }, o)
-                }), [p, t, ei, R, M, P]),
+                }), [p, t, ei, O, M, P]),
                 eo = l.useCallback((e, n) => {
                     let l = p[e],
                         a = en(e),
@@ -240,7 +240,7 @@ function(e, t, n) {
                 messageId: U,
                 isBurstReaction: D,
                 listHeaderClassName: w
-            } = e, F = l.useRef(!1), G = g.EmojiPickerStore.useStore(e => e.activeCategoryIndex), H = (0, S.useExpressionPickerStore)(e => e.searchQuery), V = A.AnimateEmoji.useSetting(), z = (0, c.useStateFromStores)([O.default], () => O.default.getCurrentUser()), Z = (0, L.isPremium)(z), {
+            } = e, F = l.useRef(!1), G = g.EmojiPickerStore.useStore(e => e.activeCategoryIndex), H = (0, S.useExpressionPickerStore)(e => e.searchQuery), V = A.AnimateEmoji.useSetting(), z = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), Z = (0, L.isPremium)(z), {
                 location: J
             } = (0, x.useAnalyticsContext)(), {
                 analyticsLocations: Q
@@ -324,7 +324,7 @@ function(e, t, n) {
                 "" !== H && (el(0), ee(!1))
             }, [H]), (0, i.jsxs)("div", {
                 className: Y.listWrapper,
-                children: [eS ? (0, i.jsx)(R.default, {
+                children: [eS ? (0, i.jsx)(O.default, {
                     role: "none presentation",
                     className: Y.list,
                     listPadding: eu,

@@ -34,7 +34,7 @@ function(e, t, n) {
             closePopout: I,
             sound: v,
             channel: N
-        } = e, A = (0, d.default)(), [O, R] = l.useState(!1), {
+        } = e, A = (0, d.default)(), [R, O] = l.useState(!1), {
             location: M
         } = (0, u.useAnalyticsContext)(), k = l.useMemo(() => ({
             ...M,
@@ -95,7 +95,7 @@ function(e, t, n) {
                     children: b
                 }), (0, i.jsx)(m.default, {
                     subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
-                    submitting: O,
+                    submitting: R,
                     premiumModalAnalyticsLocation: {
                         section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
                         object: g.AnalyticsObjects.BUTTON_CTA
@@ -103,10 +103,10 @@ function(e, t, n) {
                     size: o.Button.Sizes.SMALL,
                     color: o.Button.Colors.GREEN,
                     onClick: () => {
-                        R(!0)
+                        O(!0)
                     },
                     onSubscribeModalClose: e => {
-                        R(!1), e && a()
+                        O(!1), e && a()
                     }
                 })]
             })]

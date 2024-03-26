@@ -41,16 +41,16 @@ function(e, t, n) {
             theme: v,
             locale: N,
             userId: A,
-            className: O,
-            showMetadata: R,
+            className: R,
+            showMetadata: O,
             showInvisibleIcon: M
         } = e;
-        null == R && (R = !0);
+        null == O && (O = !0);
         let k = null !== (n = E.metadata) && void 0 !== n ? n : {},
-            L = R ? (0, m.getCreatedAtDate)(k[_.MetadataFields.CREATED_AT], N) : null,
+            L = O ? (0, m.getCreatedAtDate)(k[_.MetadataFields.CREATED_AT], N) : null,
             P = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
             b = T.default.Messages.CONNECTION_VERIFIED;
-        if (R) switch (E.type) {
+        if (O) switch (E.type) {
             case C.PlatformTypes.REDDIT:
                 l = (0, h.generateRedditMetadataItems)(k);
                 break;
@@ -104,7 +104,7 @@ function(e, t, n) {
                 tooltipText: b
             }) : null;
         return (0, i.jsxs)("div", {
-            className: s(I.connectedAccountContainer, null != l && l.length > 0 || null != L ? I.connectedAccountContainerWithMetadata : null, O),
+            className: s(I.connectedAccountContainer, null != l && l.length > 0 || null != L ? I.connectedAccountContainerWithMetadata : null, R),
             children: [(0, i.jsxs)("div", {
                 className: I.connectedAccount,
                 children: [(0, i.jsx)(u.Tooltip, {

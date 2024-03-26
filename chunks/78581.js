@@ -14,10 +14,10 @@ function(e, t, n) {
             return A
         },
         useSoundBoardDismissContentTypes: function() {
-            return O
+            return R
         },
         removeCustomJoinSound: function() {
-            return R
+            return O
         },
         updateCustomJoinSound: function() {
             return M
@@ -80,7 +80,7 @@ function(e, t, n) {
         }
     }
 
-    function O(e) {
+    function R(e) {
         let {
             isSoundboardButtonDisabled: t = !1
         } = e, n = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), a = [l.DismissibleContent.SOUNDBOARD_EDUCATION];
@@ -96,7 +96,7 @@ function(e, t, n) {
         return a
     }
 
-    function R(e, t) {
+    function O(e, t) {
         (0, r.updateUserGuildSettings)(e, n => {
             n.joinSound = void 0, k({
                 guildId: e,

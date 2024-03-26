@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("842343"),
         N = n("200197"),
         A = n("538282"),
-        O = n("241488"),
-        R = n("292936"),
+        R = n("241488"),
+        O = n("292936"),
         M = n("791234"),
         k = n("267567"),
         L = n("217535"),
@@ -75,8 +75,8 @@ function(e, t, n) {
                 editorClassName: ev,
                 id: eN,
                 required: eA,
-                disabled: eO,
-                placeholder: eR,
+                disabled: eR,
+                placeholder: eO,
                 accessibilityLabel: eM,
                 channel: ek,
                 type: eL,
@@ -162,7 +162,7 @@ function(e, t, n) {
                     isPendingMember: s,
                     ...r
                 }
-            }(ek, eL, tn, eO), td = eL.toolbarType === J.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eL.commands) || void 0 === a ? void 0 : a.enabled) || !eP || eC !== es.COMMAND_SENTINEL, tp = (0, L.default)(), {
+            }(ek, eL, tn, eR), td = eL.toolbarType === J.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eL.commands) || void 0 === a ? void 0 : a.enabled) || !eP || eC !== es.COMMAND_SENTINEL, tp = (0, L.default)(), {
                 isSubmitButtonEnabled: tm,
                 fontSize: th
             } = (0, p.useStateFromStoresObject)([x.default], () => ({
@@ -321,11 +321,11 @@ function(e, t, n) {
                     chatInputType: eL,
                     submit: eV
                 });
-            let tO = (eS = e9, l.useCallback(e => {
+            let tR = (eS = e9, l.useCallback(e => {
                     let t = eS.current;
                     null != e && null != t && t.insertSound(e), (0, A.closeExpressionPicker)()
                 }, [eS])),
-                tR = l.useCallback(() => {
+                tO = l.useCallback(() => {
                     var e;
                     return null == tt ? void 0 : null === (e = tt.current) || void 0 === e ? void 0 : e.hide()
                 }, []),
@@ -442,7 +442,7 @@ function(e, t, n) {
                             pendingReply: eD
                         }), (0, i.jsxs)("div", {
                             ref: te,
-                            onScroll: tR,
+                            onScroll: tO,
                             className: s(eI, {
                                 [eo.scrollableContainer]: !0,
                                 [eo.themedBackground]: !e7,
@@ -474,7 +474,7 @@ function(e, t, n) {
                                         textValue: eC,
                                         richValue: e_,
                                         disabled: ts,
-                                        placeholder: eR,
+                                        placeholder: eO,
                                         required: eA,
                                         accessibilityLabel: eM,
                                         isPreviewing: (tl || ta) && tu,
@@ -549,7 +549,7 @@ function(e, t, n) {
                             }),
                             maxCharacterCount: eZ,
                             showRemainingCharsAfterCount: eJ
-                        }) : null, tz ? (0, i.jsx)(R.default, {
+                        }) : null, tz ? (0, i.jsx)(O.default, {
                             editorRef: e9,
                             channel: ek,
                             isEditorFocused: eP,
@@ -557,13 +557,13 @@ function(e, t, n) {
                             submitButtonVisible: (null === (ec = eL.submit) || void 0 === ec ? void 0 : ec.button) && (null !== (em = null === (ef = eL.submit) || void 0 === ef ? void 0 : ef.ignorePreference) && void 0 !== em ? em : tm),
                             stickerIconVisible: null !== (eh = null === (ep = eL.stickers) || void 0 === ep ? void 0 : ep.button) && void 0 !== eh && eh
                         }) : null, e3]
-                    }), tU ? null : (0, i.jsx)(O.default, {
+                    }), tU ? null : (0, i.jsx)(R.default, {
                         positionTargetRef: e4,
                         type: eL,
                         onSelectGIF: tv,
                         onSelectEmoji: tN,
                         onSelectSticker: tA,
-                        onSelectSound: tO,
+                        onSelectSound: tR,
                         channel: ek,
                         closeOnModalOuterClick: e6,
                         parentModalKey: e2,

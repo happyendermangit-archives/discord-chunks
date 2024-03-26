@@ -43,8 +43,8 @@ function(e, t, n) {
                     (0, c.toggleExpressionPicker)(x.ExpressionPickerViewType.GIF, a)
                 }, [a]),
                 {
-                    Component: O,
-                    events: R,
+                    Component: R,
+                    events: O,
                     play: M
                 } = (0, u.useGifLottie)();
             if (n) return null;
@@ -58,8 +58,8 @@ function(e, t, n) {
                     ...e,
                     children: (0, i.jsx)(p.default, {
                         innerClassName: y.button,
-                        onMouseEnter: R.onMouseEnter,
-                        onMouseLeave: R.onMouseLeave,
+                        onMouseEnter: O.onMouseEnter,
+                        onMouseLeave: O.onMouseLeave,
                         onClick: () => {
                             A(), M()
                         },
@@ -69,7 +69,7 @@ function(e, t, n) {
                         "aria-expanded": k,
                         "aria-haspopup": "dialog",
                         "aria-controls": I,
-                        children: (0, i.jsx)(O, {
+                        children: (0, i.jsx)(R, {
                             color: "currentColor"
                         })
                     })

@@ -35,8 +35,8 @@ function(e, t, n) {
                 getEmojiItemProps: v,
                 getEmojiRowProps: N,
                 isScrolling: A,
-                isUsingKeyboardNavigation: O,
-                rowIndex: R,
+                isUsingKeyboardNavigation: R,
+                rowIndex: O,
                 allowAnimatedEmoji: M,
                 showEmojiFavoriteTooltip: k,
                 channelGuildId: L,
@@ -65,12 +65,12 @@ function(e, t, n) {
                                 visibleRowIndex: n,
                                 columnIndex: o
                             } = e, u = G.rowIndex === n && G.columnIndex === o, d = t => {
-                                t.stopPropagation(), !A.current && !O.current && (a(e, {
+                                t.stopPropagation(), !A.current && !R.current && (a(e, {
                                     isFinalSelection: !0,
                                     toggleFavorite: !1
                                 }), f.default.open(e.guildId, S.GuildSettingsSections.EMOJI, S.AnalyticsSections.EMOJI_PICKER_POPOUT))
                             }, c = () => {
-                                !A.current && !O.current && T(e)
+                                !A.current && !R.current && T(e)
                             };
                             return function() {
                                 var e;
@@ -82,7 +82,7 @@ function(e, t, n) {
                                     tabIndex: p,
                                     onFocus: h,
                                     ...x
-                                } = null !== (e = v(o, R)) && void 0 !== e ? e : {};
+                                } = null !== (e = v(o, O)) && void 0 !== e ? e : {};
                                 return (0, l.createElement)("li", {
                                     ...x,
                                     key: t
@@ -120,12 +120,12 @@ function(e, t, n) {
                                 visibleRowIndex: s
                             } = e, r = G.rowIndex === s && G.columnIndex === l;
                             return (0, i.jsx)(y.default, {
-                                rowIndex: R,
+                                rowIndex: O,
                                 descriptor: e,
                                 emojiItemKey: t,
                                 isInspected: r,
                                 isScrolling: A,
-                                isUsingKeyboardNavigation: O,
+                                isUsingKeyboardNavigation: R,
                                 surrogateCodePoint: I,
                                 allowAnimatedEmoji: M,
                                 selectedItemClassName: b,
@@ -147,7 +147,7 @@ function(e, t, n) {
                     }
                 },
                 Z = e => (0, i.jsx)("ul", {
-                    ...N(R),
+                    ...N(O),
                     className: s(_.emojiListRow, {
                         [_.emojiListRowLargeSize]: W,
                         [_.emojiListRowMediumSize]: Y

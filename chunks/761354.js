@@ -33,9 +33,9 @@ function(e, t, n) {
         v = n("271972"),
         N = n("782340"),
         A = n("483099");
-    let O = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
+    let R = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
 
-    function R(e) {
+    function O(e) {
         let {
             alt: t,
             spoiler: n,
@@ -82,7 +82,7 @@ function(e, t, n) {
             height: 0
         }), m = r === v.AttachmentListItemSizes.SMALL;
         l.useEffect(() => {
-            if (null == t || !1 === O.includes(t.type)) return;
+            if (null == t || !1 === R.includes(t.type)) return;
             let e = URL.createObjectURL(t);
             c(e);
             let n = new Image;
@@ -132,7 +132,7 @@ function(e, t, n) {
             children: (0, i.jsx)(o.Clickable, {
                 onClick: x,
                 className: A.clickableMedia,
-                children: (0, i.jsx)(R, {
+                children: (0, i.jsx)(O, {
                     size: r,
                     alt: n,
                     spoiler: a,
@@ -160,7 +160,7 @@ function(e, t, n) {
         }, [t]), (0, i.jsx)("div", {
             onMouseEnter: o,
             className: A.mediaContainer,
-            children: (0, i.jsx)(R, {
+            children: (0, i.jsx)(O, {
                 size: r,
                 alt: n,
                 spoiler: a,
@@ -224,9 +224,9 @@ function(e, t, n) {
             label: h,
             size: C = v.AttachmentListItemSizes.MEDIUM,
             canEdit: _ = !0,
-            hideFileName: O = !1,
-            clip: R
-        } = e, M = null != R;
+            hideFileName: R = !1,
+            clip: O
+        } = e, M = null != O;
         C = M ? v.AttachmentListItemSizes.CLIP : C;
         let k = C === v.AttachmentListItemSizes.SMALL,
             P = (0, r.useStateFromStores)([m.default], () => {
@@ -309,7 +309,7 @@ function(e, t, n) {
             children: [(0, i.jsx)(L, {
                 upload: a,
                 size: C
-            }), !O && !M && (0, i.jsx)("div", {
+            }), !R && !M && (0, i.jsx)("div", {
                 className: A.filenameContainer,
                 children: (0, i.jsx)(o.Text, {
                     className: A.filename,
@@ -319,10 +319,10 @@ function(e, t, n) {
             }), M && (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(f.default, {
                     className: A.clipsFooter,
-                    createdAt: T.default.extractTimestamp(R.id),
-                    participantIds: R.users,
-                    applicationId: R.applicationId,
-                    title: R.name,
+                    createdAt: T.default.extractTimestamp(O.id),
+                    participantIds: O.users,
+                    applicationId: O.applicationId,
+                    title: O.name,
                     guildId: P
                 }), (0, i.jsx)(S.TextBadge, {
                     color: p.default.BG_BRAND,

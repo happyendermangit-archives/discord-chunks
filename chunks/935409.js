@@ -39,8 +39,8 @@ function(e, t, n) {
         v = n("713135"),
         N = n("106435"),
         A = n("289918"),
-        O = n("878569"),
-        R = n("590006"),
+        R = n("878569"),
+        O = n("590006"),
         M = n("430312"),
         k = n("401642"),
         L = n("590456"),
@@ -67,12 +67,12 @@ function(e, t, n) {
                     className: U.warningCircleIcon,
                     color: u.default.unsafe_rawColors.YELLOW_300.css
                 })
-            }), (0, i.jsx)(R.default, {
+            }), (0, i.jsx)(O.default, {
                 className: a ? U.profileBadgesCompactNoTouch : U.profileBadges,
                 user: t,
                 guildId: n,
                 isTryItOutFlow: l,
-                size: R.BadgeSizes.SIZE_22
+                size: O.BadgeSizes.SIZE_22
             })]
         })
     }
@@ -95,7 +95,7 @@ function(e, t, n) {
             hasProfileEffect: g
         } = e, {
             profileTheme: T
-        } = l.useContext(M.UserProfileContext), v = l.useContext(C.AnalyticsContext), A = t.isNonUserBot() && !t.isClyde(), R = _.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, b.PremiumTypes.TIER_2), F = l.useMemo(() => (0, m.shouldDisableUserPresenceInChannel)(t, p), [t, p]), {
+        } = l.useContext(M.UserProfileContext), v = l.useContext(C.AnalyticsContext), A = t.isNonUserBot() && !t.isClyde(), O = _.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, b.PremiumTypes.TIER_2), F = l.useMemo(() => (0, m.shouldDisableUserPresenceInChannel)(t, p), [t, p]), {
             trackUserProfileAction: H,
             analyticsLocations: B,
             messageId: V,
@@ -118,18 +118,18 @@ function(e, t, n) {
                 size: D,
                 "aria-label": t.username,
                 status: F ? P.StatusTypes.UNKNOWN : u,
-                statusBackdropColor: null != T && R && !F ? (0, d.getStatusBackdropColor)(T) : void 0,
+                statusBackdropColor: null != T && O && !F ? (0, d.getStatusBackdropColor)(T) : void 0,
                 isMobile: c,
                 statusTooltip: !0
             })
         }), Q = (0, r.match)(E).with(L.UserProfileTypes.POPOUT, () => {
-            let e = (0, O.buildGetPremiumUserBannerStyles)({
+            let e = (0, R.buildGetPremiumUserBannerStyles)({
                 premiumUserWithBanner: U.avatarPositionPremiumBanner,
                 premiumUserWithoutBanner: U.avatarPositionPremiumNoBanner,
                 default: U.avatarPositionNormal
             });
             return e({
-                isPremium: R,
+                isPremium: O,
                 hasBanner: o,
                 hasProfileEffect: g
             })

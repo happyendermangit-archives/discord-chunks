@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return R
         }
     });
     var i = n("37983"),
@@ -59,7 +59,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e) {
+    function R(e) {
         var t, n;
         let {
             channel: a,
@@ -82,17 +82,17 @@ function(e, t, n) {
         l.useEffect(() => {
             c(u.id)
         }, [u.id, c]);
-        let O = E.default.getApplicationIconSource({
+        let R = E.default.getApplicationIconSource({
                 id: u.id,
                 icon: u.icon,
                 bot: null === (t = u.application) || void 0 === t ? void 0 : t.bot,
                 botIconFirst: !0
             }),
-            R = l.useCallback(() => {
+            O = l.useCallback(() => {
                 g.dismissAppDetail()
             }, []),
             M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-            k = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
+            k = (0, p.default)("number" == typeof R ? "" : null == R ? void 0 : R.uri, null != M ? M : ""),
             L = (0, f.getIconComponent)(u),
             P = l.useMemo(() => {
                 var e, t;
@@ -108,7 +108,7 @@ function(e, t, n) {
                 },
                 children: (0, i.jsx)(r.Clickable, {
                     "aria-label": I.default.Messages.CLOSE,
-                    onClick: R,
+                    onClick: O,
                     className: v.headerCloseButton,
                     children: (0, i.jsx)(h.default, {})
                 })

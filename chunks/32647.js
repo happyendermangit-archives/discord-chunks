@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("169694"),
         N = n("100576"),
         A = n("765446"),
-        O = n("461593"),
-        R = n("49111"),
+        R = n("461593"),
+        O = n("49111"),
         M = n("175543"),
         k = l.forwardRef(function(e, t) {
             let {
@@ -145,10 +145,10 @@ function(e, t, n) {
                     if (s.length > 0) {
                         var n, i;
                         let e = s[0];
-                        E.SlateTransforms.selectCommandOption(eC, e.name), f.ComponentDispatch.dispatch(R.ComponentActions.SHAKE_APP, {
+                        E.SlateTransforms.selectCommandOption(eC, e.name), f.ComponentDispatch.dispatch(O.ComponentActions.SHAKE_APP, {
                             duration: 200,
                             intensity: 2
-                        }), (0, o.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                        }), (0, o.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: null == t ? void 0 : t.applicationId,
                             command_id: null == t ? void 0 : null === (n = t.rootCommand) || void 0 === n ? void 0 : n.id,
                             argument_type: r.ApplicationCommandOptionType[null !== (i = null == e ? void 0 : e.type) && void 0 !== i ? i : 3],
@@ -181,9 +181,9 @@ function(e, t, n) {
             }), {
                 handlePaste: eN,
                 handleGlobalPaste: eA
-            } = (0, T.default)(eC, eE, G), eO = l.useCallback(e => {
+            } = (0, T.default)(eC, eE, G), eR = l.useCallback(e => {
                 null == J || J()
-            }, [J]), eR = l.useCallback(e => {
+            }, [J]), eO = l.useCallback(e => {
                 e !== em.current ? ex.current && (null == F || F(null, (0, x.toTextValue)(e, {
                     mode: "raw"
                 }), e)) : ex.current && J()
@@ -202,10 +202,10 @@ function(e, t, n) {
             }, [k, eC, e_]);
             let eM = l.useCallback((e, t) => (0, g.default)(e, t), []),
                 ek = l.useCallback(e => (0, A.default)(eC, e, k.id), [k.id, eC]),
-                eL = l.useCallback(e => (0, O.default)(e), []);
+                eL = l.useCallback(e => (0, R.default)(e), []);
             return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(c.ComponentAction, {
-                    event: R.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
+                    event: O.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
                     handler: eA
                 }), (0, i.jsx)("div", {
                     ref: ep,
@@ -221,10 +221,10 @@ function(e, t, n) {
                         spellCheck: X,
                         autoFocus: !et,
                         canFocus: !b,
-                        onChange: eR,
+                        onChange: eO,
                         onFocus: B,
                         onBlur: V,
-                        onClick: eO,
+                        onClick: eR,
                         onPaste: eN,
                         onKeyDown: eI,
                         onKeyUp: ev,

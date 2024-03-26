@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("570759"),
         N = n("866353"),
         A = n("178207"),
-        O = n("256860"),
-        R = n("364685"),
+        R = n("256860"),
+        O = n("364685"),
         M = n("161585"),
         k = n("585948"),
         L = n("234175"),
@@ -78,7 +78,7 @@ function(e, t, n) {
             l.useImperativeHandle(t, () => ({
                 onPickerOpen: eP
             }));
-            let er = (0, O.useFilteredStickerPackCategories)(u),
+            let er = (0, R.useFilteredStickerPackCategories)(u),
                 eo = 0 === er.filter(e => e.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
                 eu = (0, x.useExpressionPickerGridWidth)({
                     gridWrapperRef: ee,
@@ -91,9 +91,9 @@ function(e, t, n) {
                 ec = l.useMemo(() => new Set(ed), [ed]),
                 ef = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
                 ep = l.useMemo(() => (0, D.getFilteredStickers)(el, ef, u), [el, ef, u]),
-                em = (0, O.useFavoriteStickers)(),
-                eh = (0, O.useLatestFrecentStickers)(),
-                ex = (0, o.useStateFromStoresObject)([R.default], () => R.default.getAllGuildStickers()),
+                em = (0, R.useFavoriteStickers)(),
+                eh = (0, R.useLatestFrecentStickers)(),
+                ex = (0, o.useStateFromStoresObject)([O.default], () => O.default.getAllGuildStickers()),
                 {
                     sendable: eE = [],
                     sendableWithPremium: ey = []
@@ -109,7 +109,7 @@ function(e, t, n) {
                     stickersGrid: eI,
                     gutterWidth: ev,
                     columnCounts: eN
-                } = (0, O.useStickersGrid)({
+                } = (0, R.useStickersGrid)({
                     filteredStickers: ep,
                     stickersCategories: er,
                     collapsedStickersCategories: ec,
@@ -142,8 +142,8 @@ function(e, t, n) {
                     }
                 }, [z, ef, u, eS]),
                 {
-                    getItemProps: eO,
-                    getRowProps: eR,
+                    getItemProps: eR,
+                    getRowProps: eO,
                     gridContainerProps: eM,
                     handleGridContainerKeyDown: ek,
                     isUsingKeyboardNavigation: eL
@@ -162,7 +162,7 @@ function(e, t, n) {
                     t = [];
                 if (null !== e) {
                     var n;
-                    t = null !== (n = R.default.getStickersByGuildId(e)) && void 0 !== n ? n : []
+                    t = null !== (n = O.default.getStickersByGuildId(e)) && void 0 !== n ? n : []
                 }
                 let i = 0;
                 null != ex && [...ex.values()].forEach(e => {
@@ -211,8 +211,8 @@ function(e, t, n) {
                             ref: et,
                             collapsedStickersCategories: ec,
                             filteredStickers: ep,
-                            getStickerItemProps: eO,
-                            getStickerRowProps: eR,
+                            getStickerItemProps: eR,
+                            getStickerRowProps: eO,
                             gridWidth: eu,
                             gutterWidth: ev,
                             isUsingKeyboardNavigation: eL,
@@ -232,7 +232,7 @@ function(e, t, n) {
                 })]
             })
         });
-    var ee = l.forwardRef((e, t) => ((0, O.useFetchStickerPacks)(), (0, i.jsx)("div", {
+    var ee = l.forwardRef((e, t) => ((0, R.useFetchStickerPacks)(), (0, i.jsx)("div", {
         className: G.wrapper,
         id: w.STICKER_PICKER_TAB_PANEL_ID,
         "aria-labelledby": w.STICKER_PICKER_TAB_ID,

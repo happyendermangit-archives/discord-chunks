@@ -28,8 +28,8 @@ function(e, t, n) {
         v = n("697218"),
         N = n("471671"),
         A = n("275623"),
-        O = n("945330"),
-        R = n("474571"),
+        R = n("945330"),
+        O = n("474571"),
         M = n("216422"),
         k = n("987772"),
         L = n("956089"),
@@ -140,7 +140,7 @@ function(e, t, n) {
             profileLabel: i,
             icon: l,
             ...s
-        } = e, r = Y[n], o = "pencil" === l ? k.default : R.default;
+        } = e, r = Y[n], o = "pencil" === l ? k.default : O.default;
         return (0, a.jsx)(f.Clickable, {
             ...s,
             "aria-label": i,
@@ -166,7 +166,7 @@ function(e, t, n) {
             onClose: m,
             guildId: h,
             profileType: v = H.UserProfileTypes.POPOUT,
-            isHovering: R,
+            isHovering: O,
             animateOnHover: M,
             allowEdit: k = !0,
             showPremiumBadgeUpsell: L = !0,
@@ -228,7 +228,7 @@ function(e, t, n) {
                     backgroundColor: 2 !== Y ? c.default.unsafe_rawColors.PRIMARY_800.css : eo
                 },
                 children: [X ? null == Q ? (0, a.jsx)(J, {
-                    darkenOnHover: P && R,
+                    darkenOnHover: P && O,
                     profileType: v,
                     profileLabel: K.default.Messages.EDIT_PROFILE,
                     icon: "pencil",
@@ -251,7 +251,7 @@ function(e, t, n) {
                         })
                     },
                     children: e => (0, a.jsx)(J, {
-                        darkenOnHover: P && R,
+                        darkenOnHover: P && O,
                         profileLabel: K.default.Messages.EDIT_PROFILE,
                         icon: "pencil",
                         ...e,
@@ -261,7 +261,7 @@ function(e, t, n) {
                     let e = L && ec && v !== H.UserProfileTypes.SETTINGS;
                     return e ? (0, a.jsx)(Z, {
                         type: v,
-                        shown: void 0 === R ? et : R,
+                        shown: void 0 === O ? et : O,
                         onClick: () => {
                             ee({
                                 action: "PRESS_PREMIUM_UPSELL"
@@ -274,7 +274,7 @@ function(e, t, n) {
                     className: W.pencilContainer,
                     children: (0, a.jsx)(f.Tooltip, {
                         text: K.default.Messages.BACK,
-                        children: e => (0, a.jsx)(O.default, {
+                        children: e => (0, a.jsx)(R.default, {
                             ...e,
                             className: W.closeIcon,
                             color: "white"

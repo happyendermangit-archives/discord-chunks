@@ -29,8 +29,8 @@ function(e, t, n) {
         v = n("149022"),
         N = n("296141"),
         A = n("606013"),
-        O = n("32647"),
-        R = n("970153"),
+        R = n("32647"),
+        O = n("970153"),
         M = n("49111"),
         k = n("782340"),
         L = n("350583");
@@ -55,7 +55,7 @@ function(e, t, n) {
             if (this.fixFocus(e), this.props.useSlate !== e.useSlate) {
                 var t, n;
                 let e;
-                e = this.props.useSlate ? this.props.textValue : (0, R.toTextValue)(this.props.richValue, {
+                e = this.props.useSlate ? this.props.textValue : (0, O.toTextValue)(this.props.richValue, {
                     mode: "plain"
                 }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, v.toRichValue)(e))
             } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
@@ -176,7 +176,7 @@ function(e, t, n) {
                 useNewSlashCommands: C,
                 canOnlyUseTextCommands: T,
                 className: N,
-                id: R,
+                id: O,
                 required: k,
                 maxCharacterCount: P,
                 allowNewLines: j,
@@ -192,7 +192,7 @@ function(e, t, n) {
                     [L.textAreaSlate]: g,
                     [L.textAreaDisabled]: d || F
                 }),
-                id: R,
+                id: O,
                 placeholder: this.getPlaceholder(),
                 required: k,
                 accessibilityLabel: w,
@@ -229,7 +229,7 @@ function(e, t, n) {
                 "aria-describedby": U,
                 "aria-labelledby": D,
                 "aria-autocomplete": "list"
-            }, B = g ? (0, l.jsx)(O.default, {
+            }, B = g ? (0, l.jsx)(R.default, {
                 ref: this.ref,
                 ...H,
                 type: E,

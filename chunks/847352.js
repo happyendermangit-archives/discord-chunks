@@ -34,11 +34,11 @@ function(e, t, n) {
             } = e, I = l.useRef(null), v = l.useRef(null), {
                 renderWindow: N,
                 windowDispatch: A
-            } = l.useContext(f.default), O = null != T, R = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
+            } = l.useContext(f.default), R = null != T, O = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
                 x.dismissAppLauncherPopup()
             }, k = l.useCallback(e => {
                 var t;
-                if (!O && (0, u.hasAnyModalOpen)() || O && !(R && a)) return;
+                if (!R && (0, u.hasAnyModalOpen)() || R && !(O && a)) return;
                 let {
                     target: n
                 } = e;
@@ -51,14 +51,14 @@ function(e, t, n) {
                 M();
                 let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == i || "BODY" === i.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS)
-            }, [a, R, O]), L = l.useCallback(() => {
+            }, [a, O, R]), L = l.useCallback(() => {
                 M()
             }, []);
             l.useLayoutEffect(() => (N.addEventListener("mousedown", k), N.addEventListener("contextmenu", k), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
                 N.removeEventListener("mousedown", k), N.removeEventListener("contextmenu", k), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
             }), [L, k, N, A]), (0, d.useFocusLock)(I), l.useEffect(() => {
-                (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
-            }, [R, O]);
+                (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
+            }, [O, R]);
             let P = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
             return (0, i.jsx)(c.default, {
                 section: S.AnalyticsSections.EXPRESSION_PICKER,

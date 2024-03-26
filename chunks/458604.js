@@ -42,9 +42,9 @@ function(e, t, n) {
                     allowAnimatedEmoji: v,
                     selectedItemClassName: N,
                     inNitroLockedSection: A,
-                    ...O
+                    ...R
                 } = e,
-                R = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
+                O = (0, r.useStateFromStores)([E.default], () => l.type === f.EmojiTypes.GUILD ? E.default.getGuild(l.guildId) : void 0, [l]),
                 {
                     enabled: M
                 } = g.default.useExperiment({
@@ -55,7 +55,7 @@ function(e, t, n) {
                 k = p && M && !A;
             return (0, i.jsx)(o.FocusRing, {
                 children: (0, i.jsx)("button", {
-                    ...O,
+                    ...R,
                     className: s(_.emojiItem, {
                         [_.emojiItemLarge]: u,
                         [_.emojiItemMedium]: d,
@@ -69,9 +69,9 @@ function(e, t, n) {
                     "data-name": l.name,
                     ref: t,
                     children: (0, i.jsx)(S.default, {
-                        "aria-label": (n = l.allNamesString, ((null == R ? void 0 : R.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+                        "aria-label": (n = l.allNamesString, ((null == O ? void 0 : O.name) != null && (n = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
                             names: n,
-                            guildName: R.name
+                            guildName: O.name
                         })), a) ? C.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
                             names: n
                         }) : n),
@@ -101,8 +101,8 @@ function(e, t, n) {
             showEmojiFavoriteTooltip: v,
             surrogateCodePoint: N,
             selectedItemClassName: A,
-            getEmojiItemProps: O,
-            isMediumSize: R,
+            getEmojiItemProps: R,
+            isMediumSize: O,
             isLargeSize: M,
             pulseItemKey: k,
             allowAnimatedEmoji: L,
@@ -144,7 +144,7 @@ function(e, t, n) {
                 tabIndex: o,
                 onFocus: u,
                 ...d
-            } = null !== (e = O(Y, f)) && void 0 !== e ? e : {};
+            } = null !== (e = R(Y, f)) && void 0 !== e ? e : {};
             return (0, l.createElement)("li", {
                 ...d,
                 key: a,
@@ -154,7 +154,7 @@ function(e, t, n) {
                 emoji: V,
                 isFavorite: H.isFavoriteEmojiWithoutFetchingLatest(V),
                 isLargeSize: M,
-                isMediumSize: R,
+                isMediumSize: O,
                 isInspected: s,
                 isDisabled: W,
                 showPulse: k === a,

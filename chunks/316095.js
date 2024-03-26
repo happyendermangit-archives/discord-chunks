@@ -33,8 +33,8 @@ function(e, t, n) {
                 userId: v,
                 channelId: N,
                 guild: A,
-                theme: O,
-                onClose: R,
+                theme: R,
+                onClose: O,
                 className: M
             } = e,
             {
@@ -64,7 +64,7 @@ function(e, t, n) {
             let t = w.find(t => t.type === e);
             return null == t ? null : (0, i.jsx)(x.ConnectedUserAccount, {
                 connectedAccount: t,
-                theme: O,
+                theme: R,
                 locale: H,
                 userId: v
             }, "".concat(t.type, ":").concat(t.id))
@@ -89,7 +89,7 @@ function(e, t, n) {
                             analyticsLocation: {
                                 section: S.AnalyticsSections.PROFILE_POPOUT
                             }
-                        }), null == R || R()
+                        }), null == O || O()
                     },
                     className: _.connections,
                     children: [(0, i.jsx)(o.Text, {

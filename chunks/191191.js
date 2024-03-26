@@ -36,8 +36,8 @@ function(e, t, n) {
             gridNotice: v,
             autoWidth: N = !1,
             soundButtonOverlay: A,
-            listPadding: O,
-            renderHeader: R,
+            listPadding: R,
+            renderHeader: O,
             defaultSoundsOnly: M
         } = e, k = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
             analyticsLocations: P
@@ -69,8 +69,8 @@ function(e, t, n) {
                     shouldShowUpsell: I,
                     gridNotice: v,
                     soundButtonOverlay: A,
-                    listPadding: O,
-                    renderHeader: R,
+                    listPadding: R,
+                    renderHeader: O,
                     defaultSoundsOnly: M
                 })
             })

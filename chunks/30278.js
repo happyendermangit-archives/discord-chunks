@@ -49,7 +49,7 @@ function(e, t, n) {
             return (null == e ? void 0 : e.isPrivate()) ? g.AnalyticsPages.DM_CHANNEL : g.AnalyticsPages.GUILD_CHANNEL
         }), {
             analyticsLocations: N
-        } = (0, d.default)(u.default.PREMIUM_UPSELL), A = (0, c.usePremiumDiscountOffer)(), O = (0, f.usePremiumTrialOffer)(), R = (0, c.discountOfferHasTier)(A, S.PremiumSubscriptionSKUs.TIER_2), M = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2;
+        } = (0, d.default)(u.default.PREMIUM_UPSELL), A = (0, c.usePremiumDiscountOffer)(), R = (0, f.usePremiumTrialOffer)(), O = (0, c.discountOfferHasTier)(A, S.PremiumSubscriptionSKUs.TIER_2), M = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2;
         return (l.useEffect(() => {
             y.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
@@ -59,12 +59,12 @@ function(e, t, n) {
                 },
                 location_stack: N
             })
-        }, [v, N]), (M || R) && I < 0) ? (0, i.jsx)(p.default, {
+        }, [v, N]), (M || O) && I < 0) ? (0, i.jsx)(p.default, {
             type: S.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
             subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
             context: I,
             discountOffer: A,
-            trialOffer: O,
+            trialOffer: R,
             children: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
                 onLearnMore: T
             })

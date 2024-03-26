@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("917764"),
         N = n("83017"),
         A = n("115279"),
-        O = n("49111"),
-        R = n("13030"),
+        R = n("49111"),
+        O = n("13030"),
         M = n("782340"),
         k = n("988067");
     let L = (0, C.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
@@ -74,9 +74,9 @@ function(e, t, n) {
                 [k.categoryItemRecentEmoji]: o.type === A.EmojiCategoryTypes.RECENT
             }),
             onClick: () => {
-                null != g && S.default.track(O.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                null != g && S.default.track(R.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                     location: null == a ? void 0 : a.location,
-                    tab: R.ExpressionPickerViewType.EMOJI,
+                    tab: O.ExpressionPickerViewType.EMOJI,
                     guild_id: g.id
                 }), d(n)
             },
@@ -114,10 +114,10 @@ function(e, t, n) {
         } = e, c = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), E = (0, N.useCategorySelectHandler)({
             sectionDescriptors: a,
             emojiListRef: n
-        }), S = (0, p.useAnalyticsContext)(), C = (0, T.useEmojiCategories)(r, u), _ = l.useRef(null), I = (0, d.useStateFromStores)([y.default], () => y.default.isFocused()), v = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), O = (0, T.useCategoryNitroLockedStates)(r, u, C), R = l.useMemo(() => o.memoize((e, t) => {
+        }), S = (0, p.useAnalyticsContext)(), C = (0, T.useEmojiCategories)(r, u), _ = l.useRef(null), I = (0, d.useStateFromStores)([y.default], () => y.default.isFocused()), v = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), R = (0, T.useCategoryNitroLockedStates)(r, u, C), O = l.useMemo(() => o.memoize((e, t) => {
             let n = C[t];
             if (null == n) return;
-            let l = O[t];
+            let l = R[t];
             return (0, i.jsx)(K, {
                 activeIndex: c,
                 analyticsContext: S,
@@ -129,7 +129,7 @@ function(e, t, n) {
                 useReducedMotion: v,
                 isNitroLocked: l
             }, t)
-        }), [c, S, C, E, I, v, O]), L = l.useMemo(() => [8, 8, 0, 8], []), U = l.useCallback((e, t) => {
+        }), [c, S, C, E, I, v, R]), L = l.useMemo(() => [8, 8, 0, 8], []), U = l.useCallback((e, t) => {
             let n = C[t];
             if (n.type === A.EmojiCategoryTypes.RECENT) return G;
             if (n.type === A.EmojiCategoryTypes.GUILD) {
@@ -199,7 +199,7 @@ function(e, t, n) {
             categories: C,
             listPadding: L,
             onScroll: q,
-            renderCategoryListItem: R,
+            renderCategoryListItem: O,
             renderSection: ee,
             rowCount: C.length,
             categoryHeight: U,

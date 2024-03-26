@@ -5,7 +5,7 @@ function(e, t, n) {
             return v
         },
         default: function() {
-            return O
+            return R
         }
     });
     var i = n("37983");
@@ -181,5 +181,5 @@ function(e, t, n) {
             }
         }
     };
-    var O = A
+    var R = A
 }

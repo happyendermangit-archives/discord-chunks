@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("844659"),
         N = n("657057"),
         A = n("886125"),
-        O = n("180161"),
-        R = n("781423"),
+        R = n("180161"),
+        O = n("781423"),
         M = n("47677"),
         k = n("49111"),
         L = n("724210"),
@@ -318,8 +318,8 @@ function(e, t, n) {
                     }
                 }
             }(e),
-            channelMention: (0, O.default)(e),
-            commandMention: (0, R.default)(e),
+            channelMention: (0, R.default)(e),
+            commandMention: (0, O.default)(e),
             attachmentLink: (0, A.default)(e)
         }
     }

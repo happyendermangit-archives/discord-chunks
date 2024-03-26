@@ -43,8 +43,8 @@ function(e, t, n) {
         var t, n, a, c, I, v;
         let N, {
                 src: A,
-                volume: O = 1,
-                onVolumeChange: R,
+                volume: R = 1,
+                onVolumeChange: O,
                 onMute: M,
                 waveform: k,
                 durationSecs: L,
@@ -62,7 +62,7 @@ function(e, t, n) {
             [z, Z] = l.useState(!1),
             [J, Q] = l.useState(!1),
             [q, X] = l.useState("none"),
-            [$, ee] = l.useState(() => "function" == typeof O ? O() : O),
+            [$, ee] = l.useState(() => "function" == typeof R ? R() : R),
             et = l.useRef(void 0),
             en = l.useCallback(() => {
                 Y(e => !e)
@@ -90,8 +90,8 @@ function(e, t, n) {
             }, [D]),
             eo = l.useCallback(e => {
                 let t = (0, E.perceptualToAmplitude)(e, 1);
-                K(0 === t), ee(t), null == R || R(t)
-            }, [R]),
+                K(0 === t), ee(t), null == O || O(t)
+            }, [O]),
             eu = l.useCallback(() => {
                 K(!V), null == M || M(!V)
             }, [V, M]),

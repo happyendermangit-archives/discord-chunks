@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return R
         }
     }), n("222007"), n("424973");
     var i = n("37983"),
@@ -55,8 +55,8 @@ function(e, t, n) {
             channel: n
         })
     }
-    var O = l.memo(function(e) {
-        var t, n, l, f, S, _, O, R;
+    var R = l.memo(function(e) {
+        var t, n, l, f, S, _, R, O;
         let {
             type: M,
             disabled: k,
@@ -108,10 +108,10 @@ function(e, t, n) {
         }, "referral"))), (null === (_ = M.gifts) || void 0 === _ ? void 0 : _.button) != null && null == F && !H && B.push((0, i.jsx)(A, {
             disabled: k,
             channel: L
-        }, "gift")), (null === (O = M.gifs) || void 0 === O ? void 0 : O.button) != null && null == F && B.push((0, i.jsx)(g.default, {
+        }, "gift")), (null === (R = M.gifs) || void 0 === R ? void 0 : R.button) != null && null == F && B.push((0, i.jsx)(g.default, {
             disabled: k,
             type: M
-        }, "gif")), (null === (R = M.stickers) || void 0 === R ? void 0 : R.button) != null && null == F && B.push((0, i.jsx)(I.default, {
+        }, "gif")), (null === (O = M.stickers) || void 0 === O ? void 0 : O.button) != null && null == F && B.push((0, i.jsx)(I.default, {
             disabled: k,
             type: M
         }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == F || null != G && G.type !== r.ApplicationCommandOptionType.ATTACHMENT) && B.push((0, i.jsx)(y.default, {

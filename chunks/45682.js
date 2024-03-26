@@ -59,13 +59,13 @@ function(e, t, n) {
             checked: t,
             onClick: n,
             id: a = "burst-reaction-toggle-button"
-        } = e, x = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), T = m.default.getCurrentUser(), I = null != T && !(0, E.isPremium)(T), v = I ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [N, A] = (0, p.useSelectedDismissibleContent)(v), [O, R] = l.useState(!1), [M, k] = (0, r.useSpring)(() => ({})), L = (0, r.animated)(d.SuperReactionIcon);
+        } = e, x = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), T = m.default.getCurrentUser(), I = null != T && !(0, E.isPremium)(T), v = I ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [N, A] = (0, p.useSelectedDismissibleContent)(v), [R, O] = l.useState(!1), [M, k] = (0, r.useSpring)(() => ({})), L = (0, r.animated)(d.SuperReactionIcon);
         l.useEffect(() => {
             let e = N === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-            e && (A(y.ContentDismissActionType.DISMISS), setTimeout(() => R(e), 200))
+            e && (A(y.ContentDismissActionType.DISMISS), setTimeout(() => O(e), 200))
         }, [N, A]);
-        let P = O ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? g.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : g.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-            b = O ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+        let P = R ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? g.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : g.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+            b = R ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
         return (0, i.jsxs)(c.TooltipContainer, {
             position: "top",
             text: (0, i.jsx)(_, {
@@ -74,7 +74,7 @@ function(e, t, n) {
                 headingText: b
             }),
             color: c.Tooltip.Colors.BRAND,
-            forceOpen: O,
+            forceOpen: R,
             "aria-label": P,
             tooltipClassName: S.tooltip,
             children: [(0, i.jsx)("input", {
@@ -89,7 +89,7 @@ function(e, t, n) {
                             rotate: t ? "0deg" : "360deg"
                         },
                         config: C
-                    }), null == n || n(), R(!1)
+                    }), null == n || n(), O(!1)
                 },
                 id: a,
                 type: "checkbox"

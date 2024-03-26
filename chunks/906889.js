@@ -32,20 +32,20 @@ function(e, t, n) {
         i.useEffect(() => {
             T(C())
         }, [h, g, S, m, C]);
-        let O = (0, o.useAvatarBorderColor)(_, h, g),
-            R = null != O ? (0, l.int2hsl)(O, !1, E ? y : null) : null,
+        let R = (0, o.useAvatarBorderColor)(_, h, g),
+            O = null != R ? (0, l.int2hsl)(R, !1, E ? y : null) : null,
             M = e => d.forEach(t => {
                 e.style.removeProperty(t)
             });
         return i.useEffect(() => {
-            if (null != h && null != x && null != _ && null != O && null != v && null != N) {
+            if (null != h && null != x && null != _ && null != R && null != v && null != N) {
                 let e = g && _ !== S ? null == I ? void 0 : I.overlaySyncedWithUserTheme : null == I ? void 0 : I.overlay;
-                c(n, "--profile-gradient-primary-color", A(h)), c(n, "--profile-gradient-secondary-color", A(x)), c(n, "--profile-gradient-button-color", A((0, o.calculateButtonColor)(h))), c(n, "--profile-gradient-overlay-color", e), c(n, "--profile-body-background-color", null == I ? void 0 : I.sectionBox), c(n, "--profile-body-background-hover", null == I ? void 0 : I.profileBodyBackgroundHover), c(n, "--profile-body-divider-color", A(v, null == I ? void 0 : I.dividerOpacity)), c(n, "--profile-avatar-border-color", A(O)), c(n, "--profile-message-input-border-color", A(N)), c(n, "--profile-note-background-color", null == I ? void 0 : I.noteBackgroundColor), c(n, "--profile-role-pill-background-color", null == I ? void 0 : I.rolePillBackgroundColor), c(n, "--profile-role-pill-border-color", null == I ? void 0 : I.rolePillBorderColor)
+                c(n, "--profile-gradient-primary-color", A(h)), c(n, "--profile-gradient-secondary-color", A(x)), c(n, "--profile-gradient-button-color", A((0, o.calculateButtonColor)(h))), c(n, "--profile-gradient-overlay-color", e), c(n, "--profile-body-background-color", null == I ? void 0 : I.sectionBox), c(n, "--profile-body-background-hover", null == I ? void 0 : I.profileBodyBackgroundHover), c(n, "--profile-body-divider-color", A(v, null == I ? void 0 : I.dividerOpacity)), c(n, "--profile-avatar-border-color", A(R)), c(n, "--profile-message-input-border-color", A(N)), c(n, "--profile-note-background-color", null == I ? void 0 : I.noteBackgroundColor), c(n, "--profile-role-pill-background-color", null == I ? void 0 : I.rolePillBackgroundColor), c(n, "--profile-role-pill-border-color", null == I ? void 0 : I.rolePillBorderColor)
             } else(null == n ? void 0 : n.current) != null && M(null == n ? void 0 : n.current)
-        }, [h, x, O, _, S, n, A, g, v, null == I ? void 0 : I.overlaySyncedWithUserTheme, null == I ? void 0 : I.overlay, null == I ? void 0 : I.sectionBox, null == I ? void 0 : I.profileBodyBackgroundHover, null == I ? void 0 : I.dividerOpacity, null == I ? void 0 : I.noteBackgroundColor, null == I ? void 0 : I.rolePillBackgroundColor, null == I ? void 0 : I.rolePillBorderColor, N]), {
+        }, [h, x, R, _, S, n, A, g, v, null == I ? void 0 : I.overlaySyncedWithUserTheme, null == I ? void 0 : I.overlay, null == I ? void 0 : I.sectionBox, null == I ? void 0 : I.profileBodyBackgroundHover, null == I ? void 0 : I.dividerOpacity, null == I ? void 0 : I.noteBackgroundColor, null == I ? void 0 : I.rolePillBackgroundColor, null == I ? void 0 : I.rolePillBorderColor, N]), {
             profileTheme: null != _ ? _ : S,
             primaryProfileColor: h,
-            avatarBorderColor: R
+            avatarBorderColor: O
         }
     }
 }

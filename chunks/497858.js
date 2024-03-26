@@ -27,7 +27,7 @@ function(e, t, n) {
         let {
             channel: N,
             type: A
-        } = e, [O, R] = i.useState(() => (0, m.createInitialState)()), M = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
+        } = e, [R, O] = i.useState(() => (0, m.createInitialState)()), M = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
             if (null != e.guild) {
                 var t;
                 return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, E.CLYDE_AI_USER_ID)
@@ -55,7 +55,7 @@ function(e, t, n) {
         })), w = (0, h.default)({
             navId: "channel-autocomplete",
             scrollerRef: n,
-            state: O,
+            state: R,
             onFocus: e => H.setSelectedIndex(e)
         }), F = null === (g = e.editorRef.current) || void 0 === g ? void 0 : g.getCurrentWord(), G = {
             ...e,
@@ -77,13 +77,13 @@ function(e, t, n) {
         return i.useEffect(() => {
             H.updateProps(G)
         }), i.useImperativeHandle(t, () => H, [H]), i.useEffect(() => {
-            let e = e => R(e);
+            let e = e => O(e);
             return H.on("change", e), H.on("update", M), () => {
                 H.off("change", e), H.off("update", M)
             }
         }, [M, H]), i.useEffect(() => {
             var e;
-            let t = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;
+            let t = null === (e = R.query) || void 0 === e ? void 0 : e.typeInfo.stores;
             if (null != t) {
                 let e = () => H.queryResults();
                 for (let n of t) n.addChangeListener(e);
@@ -91,6 +91,6 @@ function(e, t, n) {
                     for (let n of t) n.removeChangeListener(e)
                 }
             }
-        }, [H, null === (_ = O.query) || void 0 === _ ? void 0 : _.typeInfo]), [O, H, w]
+        }, [H, null === (_ = R.query) || void 0 === _ ? void 0 : _.typeInfo]), [R, H, w]
     }
 }

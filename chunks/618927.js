@@ -35,10 +35,10 @@ function(e, t, n) {
             }), []), !f.SUPPORTS_COPY || S) return (0, a.jsx)(a.Fragment, {
             children: g
         });
-        let O = [h.default.Messages.COPY_SUCCESS_1, h.default.Messages.COPY_SUCCESS_2, h.default.Messages.COPY_SUCCESS_3, h.default.Messages.COPY_SUCCESS_4, h.default.Messages.COPY_SUCCESS_5, h.default.Messages.COPY_SUCCESS_6, h.default.Messages.COPY_SUCCESS_7, h.default.Messages.COPY_SUCCESS_8, h.default.Messages.COPY_SUCCESS_9, h.default.Messages.COPY_SUCCESS_10, h.default.Messages.COPY_SUCCESS_11],
-            R = Math.min(Math.max(_ - 1, 0), O.length - 1),
-            M = null !== (t = O[R]) && void 0 !== t ? t : O[0],
-            k = _ >= O.length - 1,
+        let R = [h.default.Messages.COPY_SUCCESS_1, h.default.Messages.COPY_SUCCESS_2, h.default.Messages.COPY_SUCCESS_3, h.default.Messages.COPY_SUCCESS_4, h.default.Messages.COPY_SUCCESS_5, h.default.Messages.COPY_SUCCESS_6, h.default.Messages.COPY_SUCCESS_7, h.default.Messages.COPY_SUCCESS_8, h.default.Messages.COPY_SUCCESS_9, h.default.Messages.COPY_SUCCESS_10, h.default.Messages.COPY_SUCCESS_11],
+            O = Math.min(Math.max(_ - 1, 0), R.length - 1),
+            M = null !== (t = R[O]) && void 0 !== t ? t : R[0],
+            k = _ >= R.length - 1,
             L = k ? d.TooltipColors.RED : d.TooltipColors.GREEN,
             P = I ? L : d.TooltipColors.PRIMARY,
             b = () => {

@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("599110"),
         N = n("159885"),
         A = n("570759"),
-        O = n("866353"),
-        R = n("364685"),
+        R = n("866353"),
+        O = n("364685"),
         M = n("161585"),
         k = n("24373"),
         L = n("41170"),
@@ -105,8 +105,8 @@ function(e, t, n) {
                     ...a.location,
                     object: "" === r ? D.AnalyticsObjects.STICKER_PICKER_VIEW_ALL : D.AnalyticsObjects.STICKER_SEARCH_VIEW_ALL
                 };
-                if (null != o && !(0, O.isSendableSticker)(o, i, n)) {
-                    let e = R.default.getStickerPack(l);
+                if (null != o && !(0, R.isSendableSticker)(o, i, n)) {
+                    let e = O.default.getStickerPack(l);
                     null != e && (v.default.track(D.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
                         sticker_id: o.id,
                         sticker_pack_id: l,
@@ -117,8 +117,8 @@ function(e, t, n) {
                         analyticsLocations: s
                     }));
                     let t = (0, k.isGuildSticker)(o),
-                        a = (0, O.getStickerSendability)(o, i, n);
-                    a === O.StickerSendability.SENDABLE_WITH_PREMIUM && (0, A.setShowPremiumUpsell)(!0), t && O.StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
+                        a = (0, R.getStickerSendability)(o, i, n);
+                    a === R.StickerSendability.SENDABLE_WITH_PREMIUM && (0, A.setShowPremiumUpsell)(!0), t && R.StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
                     return
                 }
                 u === M.StickerGridItemTypes.STICKER && null != o && t(e)
@@ -144,7 +144,7 @@ function(e, t, n) {
                 filteredStickers: _,
                 ownedStickerPacks: N,
                 channel: A
-            } = e, O = (0, d.useAnalyticsContext)(), b = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
+            } = e, R = (0, d.useAnalyticsContext)(), b = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
                 handleStickerInspect: U,
                 handleSelect: H
             } = eu({
@@ -181,12 +181,12 @@ function(e, t, n) {
                     isStickerPack: n = !0
                 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = new Set(t), l = t.has(e);
                 l ? i.delete(e) : i.add(e), v.default.track(D.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
-                    location: null == O ? void 0 : O.location,
+                    location: null == R ? void 0 : R.location,
                     tab: w.ExpressionPickerViewType.STICKER,
                     collapsed: !l,
                     sticker_pack_id: n ? e : null
                 }), Y(i)
-            }, [O, t, Y]), ee = l.useCallback(e => {
+            }, [R, t, Y]), ee = l.useCallback(e => {
                 let n = E[e];
                 if (null != _) {
                     let {
@@ -256,7 +256,7 @@ function(e, t, n) {
                         }, "h".concat(e.id))
                     }
                     case M.StickerCategoryTypes.PACK: {
-                        let e = R.default.getStickerPack(n.id);
+                        let e = O.default.getStickerPack(n.id);
                         if (null == e) return null;
                         return (0, i.jsx)(y.default, {
                             className: G.packHeader,
@@ -324,9 +324,9 @@ function(e, t, n) {
                 stickersCategories: T,
                 stickersGrid: I,
                 channel: v
-            } = e, N = l.useRef(!1), A = l.useRef(null), [O, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
+            } = e, N = l.useRef(!1), A = l.useRef(null), [R, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
                 analyticsLocations: k
-            } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), P = (0, s.useStateFromStores)([R.default], () => R.default.getPremiumPacks()), j = l.useMemo(() => new Set(P.map(e => e.id)), [P]), {
+            } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), P = (0, s.useStateFromStores)([O.default], () => O.default.getPremiumPacks()), j = l.useMemo(() => new Set(P.map(e => e.id)), [P]), {
                 renderRow: U,
                 renderSection: D,
                 renderSectionFooter: w,
@@ -349,7 +349,7 @@ function(e, t, n) {
                 ownedStickerPacks: j,
                 channel: v
             }), Y = (0, E.useSynchronizedActiveCategoryIndexForScrollPosition)({
-                activeCategoryIndex: O,
+                activeCategoryIndex: R,
                 isScrolling: N,
                 listRef: A,
                 onActiveCategoryIndexChange: m.StickerPickerStore.setActiveCategoryIndex,
@@ -358,7 +358,7 @@ function(e, t, n) {
             });
             return (0, E.useSynchronizedScrollPositionForActiveCategoryIndex)({
                 searchQuery: L,
-                activeCategoryIndex: O,
+                activeCategoryIndex: R,
                 listRef: A
             }), l.useImperativeHandle(t, () => ({
                 scrollTo: function() {

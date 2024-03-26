@@ -30,14 +30,14 @@ function(e, t, n) {
                 type: v,
                 editorHeight: N,
                 onVisibilityChange: A
-            } = e, O = (0, p.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
+            } = e, R = (0, p.useUID)(), O = (0, o.useStateFromStores)([c.default], () => {
                 var e;
                 return null !== (e = c.default.getGuild(I.guild_id)) && void 0 !== e ? e : null
             }, [I.guild_id]), M = l.useRef(), [k, L, P] = (0, g.default)({
                 ...e,
-                guild: R
+                guild: O
             }, t, M), b = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
-            (0, d.useChannelEditorPopup)(O, k.isVisible, j), x.default.trackExposure({
+            (0, d.useChannelEditorPopup)(R, k.isVisible, j), x.default.trackExposure({
                 location: "6e9811_1"
             });
             let {
@@ -59,7 +59,7 @@ function(e, t, n) {
                 results: k.query.results,
                 selectedIndex: k.selectedIndex,
                 channel: I,
-                guild: R,
+                guild: O,
                 query: k.query.queryText,
                 options: k.query.options,
                 onHover: e => L.onResultHover(e),
@@ -74,7 +74,7 @@ function(e, t, n) {
                 H = 490;
             null != D && (H = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (_ = k.query) || void 0 === _ ? void 0 : _.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), H = Math.min(window.innerHeight - 175, H);
             let B = (0, i.jsx)(f.default, {
-                id: O,
+                id: R,
                 className: s(S.autocomplete, G),
                 innerClassName: S.autocompleteInner,
                 onMouseDown: e => e.preventDefault(),
@@ -87,7 +87,7 @@ function(e, t, n) {
                                 ...n
                             } = e;
                             return (0, i.jsx)(u.AdvancedScrollerThin, {
-                                id: O,
+                                id: R,
                                 ref: e => {
                                     var n;
                                     t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null, M.current = e
@@ -98,7 +98,7 @@ function(e, t, n) {
                                     maxHeight: H
                                 },
                                 role: "listbox",
-                                "aria-labelledby": (0, f.getAutocompleteTitleId)(O),
+                                "aria-labelledby": (0, f.getAutocompleteTitleId)(R),
                                 children: F
                             })
                         }

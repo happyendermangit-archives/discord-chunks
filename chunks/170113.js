@@ -33,8 +33,8 @@ function(e, t, n) {
         v = n("73034"),
         N = n("58608"),
         A = n("719347"),
-        O = n("49111"),
-        R = n("782340"),
+        R = n("49111"),
+        O = n("782340"),
         M = n("273818"),
         k = n("125047");
     let L = "-:--",
@@ -132,7 +132,7 @@ function(e, t, n) {
                 className: M.videoButton,
                 onClick: l,
                 tabIndex: s ? -1 : 0,
-                "aria-label": R.default.Messages.PAUSE,
+                "aria-label": O.default.Messages.PAUSE,
                 children: (0, i.jsx)(T.default, {
                     className: M.controlIcon
                 }, "pause")
@@ -140,7 +140,7 @@ function(e, t, n) {
                 className: M.videoButton,
                 onClick: a,
                 tabIndex: s ? -1 : 0,
-                "aria-label": R.default.Messages.PLAY_AGAIN,
+                "aria-label": O.default.Messages.PLAY_AGAIN,
                 children: (0, i.jsx)(v.default, {
                     className: M.controlIcon
                 }, "replay")
@@ -148,7 +148,7 @@ function(e, t, n) {
                 className: M.videoButton,
                 onClick: a,
                 tabIndex: s ? -1 : 0,
-                "aria-label": R.default.Messages.PLAY,
+                "aria-label": O.default.Messages.PLAY,
                 children: (0, i.jsx)(I.default, {
                     className: M.controlIcon
                 }, "play")
@@ -338,7 +338,7 @@ function(e, t, n) {
             throw Error("uhoh")
         }
         sendEvent() {
-            this.analyticsEnabled && m.default.track(O.AnalyticEvents.MEDIA_PLAY_FINISHED, {
+            this.analyticsEnabled && m.default.track(R.AnalyticEvents.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -700,7 +700,7 @@ function(e, t, n) {
                 width: h ? window.screen.width : C,
                 disabled: !l,
                 children: t === b.VIDEO ? (0, i.jsx)(f.default, {
-                    "aria-label": R.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
+                    "aria-label": O.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                     className: M.videoButton,
                     guestWindow: window,
                     onClick: this.toggleFullscreen,
@@ -970,10 +970,10 @@ function(e, t, n) {
                 let {
                     current: t
                 } = this.mediaRef;
-                if (e.which === O.KeyboardKeys.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
-                else if (e.which >= O.KeyboardKeys.DIGIT_0 && e.which <= O.KeyboardKeys.DIGIT_9 && null != t) {
+                if (e.which === R.KeyboardKeys.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
+                else if (e.which >= R.KeyboardKeys.DIGIT_0 && e.which <= R.KeyboardKeys.DIGIT_9 && null != t) {
                     e.preventDefault();
-                    let n = (e.which - O.KeyboardKeys.DIGIT_0) / 10;
+                    let n = (e.which - R.KeyboardKeys.DIGIT_0) / 10;
                     t.currentTime = t.duration * n, this.setPlay(!0)
                 }
             }, this._analytics = new B({

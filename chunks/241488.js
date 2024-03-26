@@ -30,8 +30,8 @@ function(e, t, n) {
         v = n("889701"),
         N = n("168973"),
         A = n("983782"),
-        O = n("659500"),
-        R = n("791776"),
+        R = n("659500"),
+        O = n("791776"),
         M = n("538282"),
         k = n("13030"),
         L = n("49111"),
@@ -153,8 +153,8 @@ function(e, t, n) {
                 if (n === ee.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
                 n = n.parentNode
             }(0, M.closeExpressionPicker)();
-            let i = null === (t = (0, R.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-            (null == i || "BODY" === i.tagName) && O.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.TEXTAREA_FOCUS)
+            let i = null === (t = (0, O.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+            (null == i || "BODY" === i.tagName) && R.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.TEXTAREA_FOCUS)
         }, [J, ec, ed]), ep = l.useCallback(() => {
             (0, M.closeExpressionPicker)()
         }, []);
@@ -162,8 +162,8 @@ function(e, t, n) {
             let e = () => {
                 el === k.ExpressionPickerViewType.GIF && (0, M.closeExpressionPicker)()
             };
-            return es.addEventListener("mousedown", ef), es.addEventListener("contextmenu", ef), er.subscribe(L.ComponentActions.POPOUT_CLOSE, ep), O.ComponentDispatch.subscribe(L.ComponentActions.CLOSE_GIF_PICKER, e), () => {
-                es.removeEventListener("mousedown", ef), es.removeEventListener("contextmenu", ef), er.unsubscribe(L.ComponentActions.POPOUT_CLOSE, ep), O.ComponentDispatch.unsubscribe(L.ComponentActions.CLOSE_GIF_PICKER, e)
+            return es.addEventListener("mousedown", ef), es.addEventListener("contextmenu", ef), er.subscribe(L.ComponentActions.POPOUT_CLOSE, ep), R.ComponentDispatch.subscribe(L.ComponentActions.CLOSE_GIF_PICKER, e), () => {
+                es.removeEventListener("mousedown", ef), es.removeEventListener("contextmenu", ef), er.unsubscribe(L.ComponentActions.POPOUT_CLOSE, ep), R.ComponentDispatch.unsubscribe(L.ComponentActions.CLOSE_GIF_PICKER, e)
             }
         }, [el, ep, ef, es, er]), (0, p.useFocusLock)(q), l.useEffect(() => {
             (0, M.setSearchQuery)("")

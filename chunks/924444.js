@@ -100,8 +100,8 @@ function(e, t, n) {
             obscure: N = !1,
             ...A
         } = e, {
-            width: O,
-            height: R
+            width: R,
+            height: O
         } = (0, f.zoomFit)(s, o), M = r.isMobile && null != I;
         l.useEffect(() => {
             if (null != I) return c.ComponentDispatch.subscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, I), () => {
@@ -124,8 +124,8 @@ function(e, t, n) {
                     shouldLink: !1,
                     width: s,
                     height: o,
-                    maxWidth: O,
-                    maxHeight: R,
+                    maxWidth: R,
+                    maxHeight: O,
                     children: d,
                     animated: !e && u,
                     autoPlay: !e,

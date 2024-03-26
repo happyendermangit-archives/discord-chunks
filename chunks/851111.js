@@ -41,14 +41,14 @@ function(e, t, n) {
                 !N && (0, d.fetchSubscriptions)()
             }, [N]), null == v || !(0, x.isSubscriptionStatusFailedPayment)(v.status) || a) return null;
         let A = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDaysAndExpiresDate)(v).expiresDate : s(v.currentPeriodStart).add(g.MAX_ACCOUNT_HOLD_DAYS),
-            O = "".concat(v.id, ":").concat(A.toISOString());
-        if (T === O) return null;
-        let R = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
+            R = "".concat(v.id, ":").concat(A.toISOString());
+        if (T === R) return null;
+        let O = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
         return (0, i.jsxs)("div", {
             className: C.premiumRetentionNotice,
             children: [(0, i.jsx)(h.default, {
                 className: C.premiumRetentionNoticeIcon,
-                color: R
+                color: O
             }), (0, i.jsxs)("div", {
                 className: C.premiumRetentionNoticeContent,
                 children: [(0, i.jsx)(u.Text, {
@@ -67,7 +67,7 @@ function(e, t, n) {
                 })]
             }), (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    o.Storage.set(_, O), T = O, I(!0)
+                    o.Storage.set(_, R), T = R, I(!0)
                 },
                 children: (0, i.jsx)(m.default, {
                     className: C.premiumRetentionNoticeClose

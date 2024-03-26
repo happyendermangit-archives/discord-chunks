@@ -23,10 +23,10 @@ function(e, t, n) {
             return A
         },
         reportSoundStartedPlaying: function() {
-            return O
+            return R
         },
         reportSoundFinishedPlaying: function() {
-            return R
+            return O
         },
         updateUserSoundboardVolume: function() {
             return M
@@ -162,7 +162,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e, t) {
+    function R(e, t) {
         s.default.dispatch({
             type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
             soundId: e,
@@ -170,7 +170,7 @@ function(e, t, n) {
         })
     }
 
-    function R(e, t) {
+    function O(e, t) {
         s.default.dispatch({
             type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
             soundId: e,

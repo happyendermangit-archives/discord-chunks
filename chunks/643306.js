@@ -31,8 +31,8 @@ function(e, t, n) {
         v = n("666897"),
         N = n("826684"),
         A = n("782340"),
-        O = n("665958"),
-        R = n("919163");
+        R = n("665958"),
+        O = n("919163");
     let M = (0, x.createExperiment)({
         kind: "user",
         id: "2021-07_role_popout",
@@ -61,12 +61,12 @@ function(e, t, n) {
         } = e, {
             analyticsLocations: b
         } = (0, h.default)(m.default.ROLE_MENTION), j = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), U = null != t && 0 !== t && !P, D = U && "dot" === j, w = e => (0, i.jsxs)(v.default, {
-            className: a(R.roleMention),
+            className: a(O.roleMention),
             color: "username" === j && U ? t : null,
             ...e,
             children: [D && (0, i.jsx)(d.RoleDot, {
                 color: (0, o.int2hex)(t),
-                className: O.roleDot,
+                className: R.roleDot,
                 background: !1,
                 tooltip: !1
             }), L]
@@ -151,12 +151,12 @@ function(e, t, n) {
                             }, l.id)
                         }).value();
                     return (0, i.jsx)(I.default, {
-                        className: R.rolePopout,
+                        className: O.rolePopout,
                         ...e,
                         children: (0, i.jsxs)(d.Scroller, {
-                            className: R.roleScroller,
+                            className: O.roleScroller,
                             children: [(0, i.jsx)(N.default, {
-                                className: R.roleHeader,
+                                className: O.roleHeader,
                                 "aria-label": A.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                                     title: u.name,
                                     count: p.length

@@ -62,8 +62,8 @@ function(e, t, n) {
             notification: v,
             "aria-label": N,
             "aria-expanded": A,
-            "aria-haspopup": O,
-            "aria-controls": R
+            "aria-haspopup": R,
+            "aria-controls": O
         } = e, M = (0, u.useTransition)(null != x, {
             ...h,
             keys: e => e ? "children" : "icon"
@@ -89,8 +89,8 @@ function(e, t, n) {
             size: d.Button.Sizes.NONE,
             "aria-label": N,
             "aria-expanded": A,
-            "aria-haspopup": O,
-            "aria-controls": R,
+            "aria-haspopup": R,
+            "aria-controls": O,
             disabled: n,
             className: o(t, {
                 [m.active]: y
