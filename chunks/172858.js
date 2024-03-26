@@ -2,7 +2,7 @@ function(e, t, r) {
     "use strict";
     r.r(t), r.d(t, {
         DUCK_CONFETTI_SPRITE: function() {
-            return o
+            return u
         },
         COMMON_CONFETTI_COLORS: function() {
             return l
@@ -21,10 +21,10 @@ function(e, t, r) {
         }
     });
     var n = r("516555"),
-        u = r("839491");
-    let o = u,
+        o = r("839491");
+    let u = o,
         l = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
-        i = [r("606863"), o, r("164654"), r("540346"), r("526094"), r("367469"), r("23933"), {
+        i = [r("606863"), u, r("164654"), r("540346"), r("526094"), r("367469"), r("23933"), {
             src: r("283397"),
             colorize: !1
         }],

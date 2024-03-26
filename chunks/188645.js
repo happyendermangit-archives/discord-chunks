@@ -6,16 +6,16 @@ function(e, t, r) {
         }
     });
     var n = r("884691"),
-        u = r("890503"),
-        o = r("784410"),
+        o = r("890503"),
+        u = r("784410"),
         l = (e, t) => {
-            let r = (0, u.default)("profile_effect_debug_controls"),
+            let r = (0, o.default)("profile_effect_debug_controls"),
                 {
                     id: l,
                     preset: i,
                     increment: a,
                     decrement: s
-                } = (0, o.default)(e);
+                } = (0, u.default)(e);
             return n.useEffect(() => {
                 if (!r) return;
                 let e = e => {

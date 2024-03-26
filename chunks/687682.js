@@ -2,26 +2,26 @@ function(e, t, r) {
     "use strict";
     r.r(t), r.d(t, {
         default: function() {
-            return o
+            return u
         }
     });
     var n = r("884691");
-    let u = 1e3 / 24;
-    var o = function(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u,
+    let o = 1e3 / 24;
+    var u = function(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o,
             r = n.useRef(0),
-            o = n.useRef(),
+            u = n.useRef(),
             l = n.useRef(!0),
             i = n.useCallback(() => {
                 l.current = !1, cancelAnimationFrame(r.current)
             }, []),
             a = n.useCallback(n => {
-                null == o.current && (o.current = n);
-                let u = n - o.current;
-                u >= t && (o.current = n, e(u)), l.current && (r.current = requestAnimationFrame(a))
+                null == u.current && (u.current = n);
+                let o = n - u.current;
+                o >= t && (u.current = n, e(o)), l.current && (r.current = requestAnimationFrame(a))
             }, [e, t]),
             s = n.useCallback(() => {
-                l.current = !0, o.current = void 0, r.current = requestAnimationFrame(a)
+                l.current = !0, u.current = void 0, r.current = requestAnimationFrame(a)
             }, [a]);
         return n.useEffect(() => (r.current = requestAnimationFrame(a), () => cancelAnimationFrame(r.current)), []), {
             stop: i,

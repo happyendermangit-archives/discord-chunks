@@ -11,10 +11,10 @@ function(e, t, r) {
             return A
         },
         useAvatarBorderColor: function() {
-            return m
+            return p
         },
         calculateButtonColor: function() {
-            return p
+            return R
         },
         useMessageInputBorderColor: function() {
             return v
@@ -24,8 +24,8 @@ function(e, t, r) {
         }
     }), r("222007");
     var n = r("884691"),
-        u = r("917351"),
-        o = r("509043"),
+        o = r("917351"),
+        u = r("509043"),
         l = r("65597"),
         i = r("669491"),
         a = r("819855"),
@@ -79,47 +79,47 @@ function(e, t, r) {
 
     function T(e) {
         if (null == e) return null;
-        let t = (0, o.getDarkness)(e);
+        let t = (0, u.getDarkness)(e);
         return t > .5 ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT
     }
 
     function A(e, t, r) {
         let n = r / 100,
-            u = 1 - n;
-        return [Math.round(e[0] * u + t[0] * n), Math.round(e[1] * u + t[1] * n), Math.round(e[2] * u + t[2] * n)]
+            o = 1 - n;
+        return [Math.round(e[0] * o + t[0] * n), Math.round(e[1] * o + t[1] * n), Math.round(e[2] * o + t[2] * n)]
     }
 
-    function R(e, t) {
-        let r = (0, o.int2rgbArray)(e);
+    function m(e, t) {
+        let r = (0, u.int2rgbArray)(e);
         if (null == t) return 0;
         let n = f.default.parseString(t);
         if (null == n) return 0;
-        let u = [n.red, n.green, n.blue],
+        let o = [n.red, n.green, n.blue],
             l = [r[0], r[1], r[2]],
             i = n.alpha,
-            [a, s, c] = u.map((e, t) => Math.floor(i * e + (1 - i) * l[t]));
-        return (0, o.rgb2int)("rgba(".concat(a, ", ").concat(s, ", ").concat(c, ")"))
+            [a, s, c] = o.map((e, t) => Math.floor(i * e + (1 - i) * l[t]));
+        return (0, u.rgb2int)("rgba(".concat(a, ", ").concat(s, ", ").concat(c, ")"))
     }
 
-    function m(e, t, r) {
+    function p(e, t, r) {
         let n = E(e);
-        return null == n || null == t ? null : R(t, r ? n.overlaySyncedWithUserTheme : n.overlay)
+        return null == n || null == t ? null : m(t, r ? n.overlaySyncedWithUserTheme : n.overlay)
     }
-    let p = (0, u.memoize)(e => {
+    let R = (0, o.memoize)(e => {
         let t = (0, a.getContrastingColor)(e, {
             base: "#ffffff",
             contrastRatio: a.WCAGContrastRatios.HighContrastText
         });
-        return (0, o.hex2int)(t)
+        return (0, u.hex2int)(t)
     }, e => e);
 
     function v(e, t) {
         let r = E(e);
-        return null != r && null != t ? R(t, null == r ? void 0 : r.messageInputBorder) : null
+        return null != r && null != t ? m(t, null == r ? void 0 : r.messageInputBorder) : null
     }
 
     function I(e, t) {
         let r = (0, c.useColorValue)(d.Color.WHITE_500).hex;
-        return (0, a.isThemeDark)(e) ? (0, o.hex2int)(r) : null != t ? p(t) : null
+        return (0, a.isThemeDark)(e) ? (0, u.hex2int)(r) : null != t ? R(t) : null
     }
 }

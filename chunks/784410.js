@@ -2,30 +2,26 @@ function(e, t, r) {
     "use strict";
     r.r(t), r.d(t, {
         default: function() {
-            return o
+            return l
         }
     }), r("222007"), r("808653");
     var n = r("884691"),
-        u = r("845962"),
-        o = e => {
-            let t = u.default.profileEffects,
-                [r, o] = n.useState(e),
-                [l, i] = n.useState(u.default.getProfileEffectById(e)),
-                a = t.reduce((t, r, n) => (r.id === e && (t = n), t), 0),
-                [, s] = n.useState(a),
-                c = n.useRef(a);
+        o = r("845962"),
+        u = r("501768"),
+        l = e => {
+            let [t, r] = n.useState(e), [l, i] = n.useState(o.default.getProfileEffectById(e)), a = null == o.default.getProfileEffectById(e) && null != e, s = n.useMemo(() => (0, u.getOrFetchProfileEffects)(a), [a]), c = s.reduce((t, r, n) => (r.id === e && (t = n), t), 0), [, f] = n.useState(c), d = n.useRef(c);
             return n.useEffect(() => {
-                o(e), i(u.default.getProfileEffectById(e))
-            }, [e, t]), {
+                r(e), i(o.default.getProfileEffectById(e))
+            }, [e, s]), {
                 increment: () => {
-                    let e = (c.current + 1) % t.length;
-                    c.current = e, s(e), o(t[e].id), i(t[e])
+                    let e = (d.current + 1) % s.length;
+                    d.current = e, f(e), r(s[e].id), i(s[e])
                 },
                 decrement: () => {
-                    let e = 0 === c.current ? t.length - 1 : c.current - 1;
-                    c.current = e, s(e), o(t[e].id), i(t[e])
+                    let e = 0 === d.current ? s.length - 1 : d.current - 1;
+                    d.current = e, f(e), r(s[e].id), i(s[e])
                 },
-                id: r,
+                id: t,
                 preset: l
             }
         }
