@@ -17,6 +17,7 @@ function(e, t, n) {
     function T(e) {
         return {
             id: e.id,
+            join_request_id: e.join_request_id,
             guildId: e.guild_id,
             userId: e.user_id,
             user: e.user,
@@ -26,7 +27,8 @@ function(e, t, n) {
             applicationStatus: e.application_status,
             actionedAt: e.actioned_at,
             actionedByUser: e.actioned_by_user,
-            lastSeen: e.last_seen
+            lastSeen: e.last_seen,
+            interview_channel_id: e.interview_channel_id
         }
     }
 

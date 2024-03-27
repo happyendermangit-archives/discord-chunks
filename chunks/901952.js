@@ -2,36 +2,38 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return o
+            return l
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("648996"),
         s = n("785717"),
-        a = n("804384");
+        a = n("659101"),
+        o = n("804384");
 
-    function o(e) {
+    function l(e) {
         let {
             user: t,
-            canDM: n,
-            onClose: o
+            onClose: n,
+            lastSection: l
         } = e, {
-            trackUserProfileAction: l
+            trackUserProfileAction: u
         } = (0, s.useUserProfileAnalyticsContext)();
-        return n ? (0, i.jsx)("div", {
-            className: a.container,
+        return (0, i.jsx)(a.default, {
+            className: o.container,
+            lastSection: l,
             children: (0, i.jsx)(r.default, {
-                className: a.messageInputContainer,
-                inputClassName: a.messageInput,
+                className: o.messageInputContainer,
+                inputClassName: o.messageInput,
                 user: t,
                 autoFocus: !0,
                 onSend: () => {
-                    l({
+                    u({
                         action: "SEND_DIRECT_MESSAGE"
-                    }), null == o || o()
+                    }), null == n || n()
                 }
             })
-        }) : null
+        })
     }
 }

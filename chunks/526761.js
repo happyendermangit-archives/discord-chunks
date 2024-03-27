@@ -15,7 +15,7 @@ function(_, E, e) {
             return r
         },
         ChannelNotificationSettingsFlags: function() {
-            return U
+            return G
         },
         GuildNotificationSettingsFlags: function() {
             return d
@@ -51,7 +51,7 @@ function(_, E, e) {
             return A
         },
         createEmptyEditInfo: function() {
-            return G
+            return U
         }
     });
     let S = 250,
@@ -67,7 +67,7 @@ function(_, E, e) {
         AppearanceScrollPositions: o
     };
 
-    function G() {
+    function U() {
         return {
             protoToSave: void 0,
             timeout: void 0,
@@ -80,7 +80,7 @@ function(_, E, e) {
             offlineEditDataVersion: void 0
         }
     }(O = A || (A = {}))[O.PRELOADED_USER_SETTINGS = 1] = "PRELOADED_USER_SETTINGS", O[O.FRECENCY_AND_FAVORITES_SETTINGS = 2] = "FRECENCY_AND_FAVORITES_SETTINGS", O[O.TEST_SETTINGS = 3] = "TEST_SETTINGS", (n = T || (T = {}))[n.INFREQUENT_USER_ACTION = 0] = "INFREQUENT_USER_ACTION", n[n.FREQUENT_USER_ACTION = 10] = "FREQUENT_USER_ACTION", n[n.SLOW_USER_ACTION = 20] = "SLOW_USER_ACTION", n[n.AUTOMATED = 30] = "AUTOMATED", n[n.DAILY = 86400] = "DAILY", (L = r || (r = {}))[L.CONFIRM_START = 0] = "CONFIRM_START", L[L.CONFIRM_CODE = 1] = "CONFIRM_CODE", L[L.EMAIL_AND_PASSWORD = 2] = "EMAIL_AND_PASSWORD", L[L.COMPLETE = 3] = "COMPLETE";
-    let U = {
+    let G = {
             NEW_FORUM_THREADS_ON: 16384,
             NEW_FORUM_THREADS_OFF: 8192,
             OPT_IN_ENABLED: 4096,

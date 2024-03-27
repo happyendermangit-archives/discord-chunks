@@ -307,6 +307,8 @@ function(e) {
         CLAN_SETUP_PLAYSTYLE_CREATIVE_SUBTITLE: "We tend to your creativity by curating, solving, or creating",
         CLAN_SETUP_INTERESTS_TITLE: "What are your Clan's interests?",
         CLAN_SETUP_INTERESTS_SUBTITLE: "What does your Clan talk about? It doesn't have to be about gaming!",
+        CLAN_START_INTERVIEW: "Start Interview",
+        CLAN_JOIN_INTERVIEW: "Join Interview",
         PACKAGES: "Packages",
         USER_SETTINGS_PACKAGES_HEADER_CTA: "Open your Mailbox",
         USER_SETTINGS_PACKAGES_MAILBOX_HEADER: "Mailbox",
