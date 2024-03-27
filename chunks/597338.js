@@ -1,9 +1,13 @@
 function(e) {
     "use strict";
     e.exports = {
+        contentLabel: "contentLabel_aa05d5",
+        contentWithMinHeight: "contentWithMinHeight__78ad4",
+        gameImagePlaceholder: "gameImagePlaceholder__732e7",
+        inputContainer: "inputContainer__1e798",
         playstyleOption: "playstyleOption__67567",
         playstyleSelect: "playstyleSelect_b7d88b",
-        selectedGame: "selectedGame__0084c",
+        playstyleTitle: "playstyleTitle__00d17",
         selectedInterest: "selectedInterest_aa523d",
         selectedPlaystyle: "selectedPlaystyle_e4490f",
         selectedSection: "selectedSection__5c175",

@@ -21,6 +21,7 @@ function(e) {
         scrollBgBottom: "scrollBgBottom__10a36",
         scrollBgTop: "scrollBgTop_e0da83",
         scrollContainer: "scrollContainer__3789e",
+        scroller: "scroller__24eef",
         sequencer: "sequencer__0bd4c"
     }
 }
