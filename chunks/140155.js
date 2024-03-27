@@ -263,10 +263,10 @@ function(e, t, n) {
                     }
                 }
                 return t
-            }))
+            })), e.relationship.type === T.RelationshipTypes.BLOCKED && (h.notifCenterLocalItems = h.notifCenterLocalItems.filter(t => !R(t, E.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !R(t, E.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)))
         },
         RELATIONSHIP_REMOVE: function(e) {
-            h.notifCenterLocalItems = h.notifCenterLocalItems.filter(t => !(R(t, E.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.id) || R(t, E.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)) && !0)
+            h.notifCenterLocalItems = h.notifCenterLocalItems.filter(t => !R(t, E.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !R(t, E.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id))
         },
         NOTIFICATION_CENTER_ITEM_COMPLETED: function(e) {
             let {
