@@ -87,7 +87,13 @@ function(e, t, n) {
         }
         initialize(e) {
             let t;
-            this.logger.info("Creating connection to ".concat(e.address, ":").concat(e.port, " with audio ssrc: ").concat(e.ssrc)), this.audioSSRC = e.ssrc, this.streamUserId = e.streamUserId, this.initializeStreamParameters(e.streamParameters), e.streamParameters = this.videoStreamParameters;
+            this.logger.info("Creating connection to ".concat(e.address, ":").concat(e.port, " with audio ssrc: ").concat(e.ssrc)), this.audioSSRC = e.ssrc, this.streamUserId = e.streamUserId, this.initializeStreamParameters(e.streamParameters), e.streamParameters = [{
+                type: O.MediaTypes.AUDIO,
+                ssrc: this.audioSSRC,
+                rid: "",
+                maxBitrate: 64e3,
+                soundshare: this.context === p.MediaEngineContextTypes.STREAM
+            }, ...this.videoStreamParameters];
             let n = (0, A.getVoiceEngine)(),
                 i = null != n.getCodecCapabilities ? n.getCodecCapabilities : n.getSupportedVideoCodecs;
             if (null != n.createOwnStreamConnectionWithOptions) s = this.context === p.MediaEngineContextTypes.STREAM && this.streamUserId === this.ids.userId ? n.createOwnStreamConnectionWithOptions : n.createVoiceConnectionWithOptions;

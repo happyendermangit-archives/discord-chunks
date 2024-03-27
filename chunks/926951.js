@@ -4,196 +4,28 @@ function(e, t, n) {
     var i = n("818083");
     let r = (0, i.createExperiment)({
         kind: "user",
-        id: "2023-10_bandwidth_estimation_v1",
-        label: "Bandwidth Estimation",
+        id: "2024-03_remb_experiment",
+        label: "Bandwidth Estimation - REMB",
         defaultConfig: {
             enabled: !0,
             fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator"
         },
         treatments: [{
             id: 1,
-            label: "Sender: Loss-Based BWE V2",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/loss-based-bwe-v2/"
-            }
-        }, {
-            id: 2,
-            label: "Sender: Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/robust-estimator/"
-            }
-        }, {
-            id: 3,
-            label: "Sender: Loss-Based BWE V2 + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/loss-based-bwe-v2,robust-estimator/"
-            }
-        }, {
-            id: 4,
-            label: "Sender: Trendline Window Size",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-size/"
-            }
-        }, {
-            id: 5,
-            label: "Sender: Trendline Window Size + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-size,robust-estimator/"
-            }
-        }, {
-            id: 6,
-            label: "Worker: Loss-Based BWE V2",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation//loss-based-bwe-v2"
-            }
-        }, {
-            id: 7,
-            label: "Worker: Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation//robust-estimator"
-            }
-        }, {
-            id: 8,
-            label: "Worker: Loss-Based BWE V2 + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation//loss-based-bwe-v2,robust-estimator"
-            }
-        }, {
-            id: 9,
-            label: "Worker: Trendline Window Size",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation//trendline-window-size"
-            }
-        }, {
-            id: 10,
-            label: "Worker: Trendline Window Size + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation//trendline-window-size,robust-estimator"
-            }
-        }, {
-            id: 11,
-            label: "Sender + Worker: Trendline Window Size",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-size/trendline-window-size"
-            }
-        }, {
-            id: 12,
-            label: "Sender + Worker: Trendline Window Size + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-size,robust-estimator/trendline-window-size,robust-estimator"
-            }
-        }, {
-            id: 13,
-            label: "Sender + Worker: Loss-Based-BWE V2 + Trendline Window Size + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/loss-based-bwe-v2,trendline-window-size,robust-estimator/loss-based-bwe-v2,trendline-window-size,robust-estimator"
-            }
-        }, {
-            id: 14,
-            label: "Sender + Worker: Trendline Window Duration 50ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-50,robust-estimator/trendline-window-duration-50,robust-estimator"
-            }
-        }, {
-            id: 15,
-            label: "Sender + Worker: Trendline Window Duration 100ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-100,robust-estimator/trendline-window-duration-100,robust-estimator"
-            }
-        }, {
-            id: 16,
-            label: "Sender + Worker: Trendline Window Duration 250ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-250,robust-estimator/trendline-window-duration-250,robust-estimator"
-            }
-        }, {
-            id: 17,
-            label: "Sender + Worker: Trendline Window Duration 500ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-500,robust-estimator/trendline-window-duration-500,robust-estimator"
-            }
-        }, {
-            id: 18,
-            label: "Sender + Worker: Trendline Window Duration 1000ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-1000,robust-estimator/trendline-window-duration-1000,robust-estimator"
-            }
-        }, {
-            id: 19,
-            label: "Sender + Worker: Trendline Window Duration 2500ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-2500,robust-estimator/trendline-window-duration-2500,robust-estimator"
-            }
-        }, {
-            id: 20,
-            label: "Sender + Worker: Trendline Window Duration 3750ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator"
-            }
-        }, {
-            id: 21,
-            label: "Sender + Worker: Trendline Window Duration 5000ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-5000,robust-estimator/trendline-window-duration-5000,robust-estimator"
-            }
-        }, {
-            id: 22,
-            label: "Sender + Worker: Trendline Window Duration 6250ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-6250,robust-estimator/trendline-window-duration-6250,robust-estimator"
-            }
-        }, {
-            id: 23,
-            label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-7500,robust-estimator/trendline-window-duration-7500,robust-estimator"
-            }
-        }, {
-            id: 24,
-            label: "Sender + Worker: Trendline Window Duration 3750ms + Robust Estimator + RC Link Capacity Fix (Worker-only)",
-            config: {
-                enabled: !0,
-                fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,rate-control-link-capacity-fix"
-            }
-        }, {
-            id: 25,
             label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator, worker REMB PLI only",
             config: {
                 enabled: !0,
                 fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,worker-bitrate-remb-pli"
             }
         }, {
-            id: 26,
+            id: 2,
             label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator, worker continuous REMB only",
             config: {
                 enabled: !0,
                 fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,worker-bitrate-remb-preemption-v1"
             }
         }, {
-            id: 27,
+            id: 3,
             label: "Sender + Worker: Trendline Window Duration 7500ms + Robust Estimator, worker REMB PLI with continuous",
             config: {
                 enabled: !0,
