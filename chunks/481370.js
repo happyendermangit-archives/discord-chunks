@@ -130,7 +130,7 @@ function(e, t, n) {
                         variant: "heading-lg/bold",
                         children: u.name
                     }), (0, i.jsx)(o.Text, {
-                        className: a()(C.appDescription, g.markup),
+                        className: a()(C.__invalid_appDescription, g.markup),
                         variant: "text-sm/medium",
                         lineClamp: 3,
                         children: U

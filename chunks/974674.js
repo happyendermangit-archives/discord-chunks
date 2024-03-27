@@ -481,7 +481,7 @@ function(e, t, n) {
                         ry: x
                     })]
                 }), (0, i.jsx)("foreignObject", {
-                    className: h.foreignObject,
+                    className: h.__invalid_foreignObject,
                     x: 0,
                     y: 0,
                     width: j,

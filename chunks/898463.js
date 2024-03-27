@@ -117,7 +117,7 @@ function(e, t, n) {
             }, [d, I, n, c]),
             f = r.useCallback(() => {
                 null != d && (0, l.openModal)(e => (0, i.jsx)(l.ModalRoot, {
-                    className: L.modal,
+                    className: L.__invalid_modal,
                     ...e,
                     size: l.ModalSize.DYNAMIC,
                     "aria-label": g.default.Messages.IMAGE,
@@ -201,7 +201,7 @@ function(e, t, n) {
             onVideoLoadError: () => u(!0)
         }) : (0, i.jsx)("div", {
             onMouseEnter: o,
-            className: a()(L.icon, L.imageContainer, {
+            className: a()(L.icon, L.__invalid_imageContainer, {
                 [L[null !== (t = n.classification) && void 0 !== t ? t : ""]]: !0,
                 [L.imageSmall]: d
             }),

@@ -24,7 +24,7 @@ function(e, t, n) {
             children: [(0, i.jsx)(n, {
                 className: _.icon
             }), (0, i.jsx)(a.Text, {
-                className: _.description,
+                className: _.__invalid_description,
                 variant: "text-sm/medium",
                 children: r
             })]

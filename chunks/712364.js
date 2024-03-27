@@ -43,10 +43,10 @@ function(e, t, n) {
                     children: i
                 })
             }) : null, N = null != T ? (0, r.jsxs)(l.Text, {
-                className: o()(d.submitText, d.spacing),
+                className: o()(d.__invalid_submitText, d.spacing),
                 variant: "text-sm/normal",
                 children: [(0, r.jsx)("br", {}), (0, r.jsx)(l.Clickable, {
-                    className: o()(d.spacing, d.link),
+                    className: o()(d.spacing, d.__invalid_link),
                     onClick: this.handleRetry,
                     children: (0, r.jsx)(l.Anchor, {
                         children: T

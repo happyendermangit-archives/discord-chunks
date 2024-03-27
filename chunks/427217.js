@@ -30,7 +30,7 @@ function(e, t, n) {
             emoji: T
         } = t, f = null != t.state && "" !== t.state ? t.state : u;
         return (0, i.jsxs)("div", {
-            className: s()(o.container, n),
+            className: s()(o.__invalid_container, n),
             children: [E || null == T ? null : (0, i.jsx)(a.ActivityEmoji, {
                 emoji: T,
                 className: s()(o.emoji, r, null != d ? {

@@ -45,17 +45,17 @@ function(e, t, n) {
                 }), (0, i.jsxs)(u.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: f.subtitle,
+                    className: f.__invalid_subtitle,
                     children: [null != N ? "".concat(N, " • ") : null, O]
                 }), (0, i.jsx)(u.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: f.subtitle
+                    className: f.__invalid_subtitle
                 })]
             }), null != m && m.length > 0 && (0, i.jsx)(_.default, {
                 maxUsers: 4,
                 users: m,
-                className: f.facePile,
+                className: f.__invalid_facePile,
                 guildId: S
             })]
         })

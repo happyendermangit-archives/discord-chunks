@@ -228,7 +228,7 @@ function(e, t, n) {
                     })
                 }), (0, r.jsxs)(C.AutocompleteRowContentSecondary, {
                     children: [(0, r.jsx)("span", {
-                        className: M.descriptionUsername,
+                        className: M.__invalid_descriptionUsername,
                         children: R.default.getUserTag(e, {
                             mode: "username",
                             identifiable: i ? "never" : "always"
@@ -393,7 +393,7 @@ function(e, t, n) {
                     children: s(o, l || !0 === a)
                 }), (0, r.jsxs)(C.AutocompleteRowContentPrimary, {
                     children: [(0, r.jsx)(C.AutocompleteRowHeading, {
-                        className: M.stickerName,
+                        className: M.__invalid_stickerName,
                         children: o.name
                     }), null != i && (0, r.jsx)(C.AutocompleteRowSubheading, {
                         children: v.default.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({

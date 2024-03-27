@@ -114,7 +114,7 @@ function(e, t, n) {
                 height: 24
             });
             let W = null != w ? (0, i.jsx)(N.default, {
-                    className: C.guildIcon,
+                    className: C.__invalid_guildIcon,
                     guild: w,
                     shouldAnimate: !B && k
                 }) : null,

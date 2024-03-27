@@ -112,7 +112,7 @@ function(e, t, n) {
                     children: [(0, i.jsx)(l.Tooltip, {
                         position: "right",
                         text: V,
-                        tooltipContentClassName: D.tooltip,
+                        tooltipContentClassName: D.__invalid_tooltip,
                         children: e => (0, i.jsx)("div", {
                             role: "listitem",
                             "aria-setsize": U,

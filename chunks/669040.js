@@ -123,7 +123,7 @@ function(e, t, n) {
                     showEmojiFavoriteTooltip: es,
                     channelGuildId: g,
                     category: r.sectionId,
-                    selectedItemClassName: K.selectedItem,
+                    selectedItemClassName: K.__invalid_selectedItem,
                     messageId: L,
                     isBurstReaction: D,
                     inNitroLockedSection: r.isNitroLocked

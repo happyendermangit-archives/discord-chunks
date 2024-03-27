@@ -76,7 +76,7 @@ function(e, t, n) {
                     integrationTypesConfig: n.integrationTypesConfig
                 })
             },
-            className: s()(N.applicationInstallButton, r),
+            className: s()(N.__invalid_applicationInstallButton, r),
             children: (0, i.jsxs)("div", {
                 className: N.applicationInstallButtonContent,
                 children: [(0, i.jsx)(T.default, {

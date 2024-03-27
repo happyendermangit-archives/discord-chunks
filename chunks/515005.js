@@ -21,8 +21,8 @@ function(e, t, n) {
         m = n("981631"),
         N = n("689938"),
         O = n("900544");
-    let p = (0, l.cssValueToNumber)(O.stickerPickerPreviewDimensions),
-        R = (0, l.cssValueToNumber)(O.stickerPickerPreviewPadding),
+    let p = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewDimensions),
+        R = (0, l.cssValueToNumber)(O.__invalid_stickerPickerPreviewPadding),
         C = r.memo(function(e) {
             let {
                 isDisplayingIndividualStickers: t = !1,

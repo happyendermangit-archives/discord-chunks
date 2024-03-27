@@ -71,7 +71,7 @@ function(e, t, n) {
                 maskAsset: !0,
                 size: G,
                 sticker: a,
-                className: U.sticker
+                className: U.__invalid_sticker
             }), i !== h.StickerSendability.SENDABLE && (0, s.jsx)(p.default, {
                 size: 14
             })]

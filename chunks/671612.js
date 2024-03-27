@@ -55,7 +55,7 @@ function(e, t, n) {
                     [h.playing]: N
                 }),
                 children: (0, i.jsx)(f.default, {
-                    className: h.jumboPlayIcon
+                    className: h.__invalid_jumboPlayIcon
                 })
             }), m && (0, i.jsx)(u.default, {
                 emojiId: null == A ? void 0 : A.emojiId,

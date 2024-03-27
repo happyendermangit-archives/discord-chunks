@@ -36,7 +36,7 @@ function(e, t, n) {
         return 0 === e.length ? null : (0, i.jsxs)("div", {
             className: c.container,
             children: [(0, i.jsx)(l.Avatar, {
-                className: c.icon,
+                className: c.__invalid_icon,
                 src: n,
                 "aria-label": t.username,
                 size: l.AvatarSizes.SIZE_24,

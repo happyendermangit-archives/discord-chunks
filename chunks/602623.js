@@ -95,7 +95,7 @@ function(e, t, n) {
         }
         renderIcon() {
             return this.props.renderIcon ? (0, r.jsx)(T.default, {
-                foreground: h.foreground,
+                foreground: h.__invalid_foreground,
                 className: h.icon
             }) : null
         }

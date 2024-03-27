@@ -177,7 +177,7 @@ function(e, t, n) {
                 onChange: T,
                 threshold: .7,
                 children: (0, i.jsx)("div", {
-                    className: a()(l, O.pngImageWrapper),
+                    className: a()(l, O.__invalid_pngImageWrapper),
                     ref: d,
                     children: (0, i.jsx)(D, {
                         hasError: h,
@@ -238,7 +238,7 @@ function(e, t, n) {
                         className: O.overlayStickerWrapper,
                         style: e,
                         children: (0, i.jsx)(P, {
-                            className: O.overlaySticker,
+                            className: O.__invalid_overlaySticker,
                             disableAnimation: t,
                             enlargeOnInteraction: !1,
                             isInteracting: a,

@@ -57,7 +57,7 @@ function(e, t, n) {
                     foreground: E.check
                 }) : (0, i.jsx)(d.default, {
                     className: E.icon,
-                    foreground: E.checkboxEmpty
+                    foreground: E.__invalid_checkboxEmpty
                 })
             })]
         })

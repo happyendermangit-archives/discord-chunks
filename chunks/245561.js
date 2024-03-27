@@ -27,10 +27,10 @@ function(e, t, n) {
         return null != r ? t = r.map(e => (0, i.jsx)(c, {
             applicationId: n,
             benefit: e,
-            className: s()(u.benefit, o)
+            className: s()(u.__invalid_benefit, o)
         }, e.id)) : null != a && (t = a.map((e, t) => (0, i.jsx)(_, {
             benefit: e,
-            className: s()(u.benefit, o)
+            className: s()(u.__invalid_benefit, o)
         }, t))), (0, i.jsx)(i.Fragment, {
             children: t
         })

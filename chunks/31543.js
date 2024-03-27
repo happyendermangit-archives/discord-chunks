@@ -51,7 +51,7 @@ function(e, t, n) {
                 onClear: p,
                 onKeyDown: n,
                 onQueryChange: O,
-                className: E.searchBar,
+                className: E.__invalid_searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,
                 inputProps: {

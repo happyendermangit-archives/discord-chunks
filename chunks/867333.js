@@ -50,11 +50,11 @@ function(e, t, n) {
                 className: E.iconContainer,
                 children: s ? (0, i.jsx)(_.default, {
                     className: E.icon,
-                    background: E.radio,
+                    background: E.__invalid_radio,
                     foreground: E.radioSelection
                 }) : (0, i.jsx)(d.default, {
                     className: E.icon,
-                    foreground: E.radio
+                    foreground: E.__invalid_radio
                 })
             })]
         })

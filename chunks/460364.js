@@ -38,7 +38,7 @@ function(e, t, n) {
         let N = r.useCallback(e => d[e], [d]);
         return (0, i.jsxs)("div", {
             ref: I,
-            className: l.submenuContainer,
+            className: l.__invalid_submenuContainer,
             children: [(0, i.jsx)("div", {
                 ref: T
             }), t, n ? (0, i.jsx)(s.ReferencePositionLayer, {
