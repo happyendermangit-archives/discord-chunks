@@ -63,8 +63,8 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : r[s] = a, t.default = new S(l.default, {
-        CONNECTION_OPEN: function() {
-            _ = {}, c = {}
+        LOGOUT: function() {
+            _ = {}, c = {}, E = {}, I = {}
         },
         OVERLAY_INITIALIZE: function(e) {
             let {

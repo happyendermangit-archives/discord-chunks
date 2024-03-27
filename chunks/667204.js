@@ -71,7 +71,8 @@ function(e, t, n) {
         null == v.autocomplete && s.default.dispatch({
             type: "APPLICATION_COMMAND_USED",
             context: v,
-            command: C
+            command: C,
+            commandOrigin: G
         }), await h.default.unarchiveThreadIfNecessary(v.channel.id);
         let V = [],
             x = [],
