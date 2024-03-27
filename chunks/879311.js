@@ -92,22 +92,22 @@ function(e, t, n) {
             W = (() => null != L ? {
                 headerText: I.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
                 ctaText: I.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
-                tileAssetUrl: (0, g.getGameTileAssetUrl)(k.id),
+                tileAssetUrl: (0, g.getGameTileAssetUrl)(k),
                 handleClickCta: K
             } : G && !w ? {
                 headerText: I.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
                 ctaText: I.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
-                tileAssetUrl: (0, g.getRewardAssetUrl)(k.id),
+                tileAssetUrl: (0, g.getRewardAssetUrl)(k),
                 handleClickCta: U
             } : F ? {
                 headerText: I.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
                 ctaText: I.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
-                tileAssetUrl: (0, g.getRewardAssetUrl)(k.id),
+                tileAssetUrl: (0, g.getRewardAssetUrl)(k),
                 handleClickCta: B
             } : {
                 headerText: I.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
                 ctaText: I.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
-                tileAssetUrl: (0, g.getGameTileAssetUrl)(k.id),
+                tileAssetUrl: (0, g.getGameTileAssetUrl)(k),
                 handleClickCta: B
             })();
         return (0, i.jsx)(S.QuestContentImpressionTracker, {
