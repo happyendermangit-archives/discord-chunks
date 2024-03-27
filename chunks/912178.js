@@ -1,15 +1,17 @@
-function(t, r, e) {
-    t = e.nmd(t);
-    var n = e("571255"),
-        o = "object" == typeof r && r && !r.nodeType && r,
-        i = o && "object" == typeof t && t && !t.nodeType && t,
-        a = i && i.exports === o && n.process,
-        u = function() {
-            try {
-                var t = i && i.require && i.require("util").types;
-                if (t) return t;
-                return a && a.binding && a.binding("util")
-            } catch (t) {}
-        }();
-    t.exports = u
+function(e, t, n) {
+    "use strict";
+    n.r(t), n.d(t, {
+        default: function() {
+            return r
+        }
+    });
+    var r = {};
+    r = {
+        deselectedItem: e => `${e.item} er ikke valgt.`,
+        longPressToSelect: `Bruk et langt trykk for \xe5 g\xe5 inn i valgmodus.`,
+        select: "Velg",
+        selectedAll: "Alle elementer er valgt.",
+        selectedCount: (e, t) => `${t.plural(e.count,{"=0":"Ingen elementer er valgt",one:()=>`${t.number(e.count)} element er valgt`,other:()=>`${t.number(e.count)} elementer er valgt`})}.`,
+        selectedItem: e => `${e.item} er valgt.`
+    }
 }

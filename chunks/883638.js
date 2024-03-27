@@ -1,4 +1,7 @@
-function(e, t, n) {
-    "use strict";
-    e.exports = n.p + "df94c77c24ce0bf9257a.png"
+function(t, e, n) {
+    var r = n("961499");
+    t.exports = function(t) {
+        var e = r(this, t).delete(t);
+        return this.size -= e ? 1 : 0, e
+    }
 }

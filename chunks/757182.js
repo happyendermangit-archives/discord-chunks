@@ -1,16 +1,32 @@
-function(e, t, a) {
+function(e, t, n) {
     "use strict";
-    e.exports = {
-        emptyPreview: "emptyPreview__385fd",
-        emptyPreviewWrapper: "emptyPreviewWrapper_dd52a7",
-        loading: "loading__35103",
-        mirror: "mirror_e336b2",
-        previewImage: "previewImage__87b87",
-        previewWrapper: "previewWrapper__15425 video_b11ca4",
-        spinner: "spinner__092d4",
-        video: "video_b11ca4",
-        videoContain: "videoContain_c43e8b",
-        videoCover: "videoCover_c20dda",
-        wrapper: "wrapper_ece307"
+    n.r(t), n.d(t, {
+        default: function() {
+            return l
+        }
+    });
+    var i = n("735250");
+    n("470079");
+    var r = n("655922"),
+        s = n("420660"),
+        a = n("915863"),
+        o = n("689938");
+
+    function l(e) {
+        let {
+            activity: t,
+            color: n,
+            look: l
+        } = e;
+        return (0, s.default)(t) ? (0, i.jsx)(a.default, {
+            onClick: () => {
+                let e = (0, r.default)(t);
+                return window.open(null != e ? e : void 0)
+            },
+            color: n,
+            look: l,
+            fullWidth: !0,
+            children: o.default.Messages.WATCH
+        }, "play-activity") : null
     }
 }

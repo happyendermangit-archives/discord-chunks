@@ -1,0 +1,36 @@
+function(e) {
+    "use strict";
+    e.exports = {
+        acronym: "acronym__02df1",
+        channelGuildIcon: "channelGuildIcon__17b87",
+        children: "children__563f2",
+        favoritesSuggestion: "favoritesSuggestion__5ecd4",
+        icon: "icon__67ab4",
+        iconContainer: "iconContainer__6a580",
+        iconContainerWithGuildIcon: "iconContainerWithGuildIcon_cef7f5",
+        iconWithGuildIcon: "iconWithGuildIcon__3bdd6",
+        link: "link_ddbb36",
+        linkBottom: "linkBottom__942a1",
+        linkTop: "linkTop_c8969d",
+        modeConnected: "modeConnected__52a8f",
+        modeLocked: "modeLocked__6df8a",
+        modeMuted: "modeMuted_f0a72e",
+        modeSelected: "modeSelected__473f1",
+        modeUnreadImportant: "modeUnreadImportant__35358",
+        modeUnreadLessImportant: "modeUnreadLessImportant__7a336",
+        name: "name__4eb92",
+        newBadge: "newBadge__2bbc5",
+        notInteractive: "notInteractive_e31551",
+        numberBadge: "numberBadge__43366",
+        subtitle: "subtitle_eb6026",
+        topContent: "topContent__2a4dd",
+        typeDefault: "typeDefault__1abfb",
+        typeThread: "typeThread__5fb37",
+        typeVoice: "typeVoice__86122",
+        unread: "unread__48cf4",
+        unreadImportant: "unreadImportant_e8bb44",
+        unreadWithHangStatus: "unreadWithHangStatus_d534f5",
+        withGuildIcon: "withGuildIcon__0c595",
+        wrapper: "wrapper__612a5"
+    }
+}

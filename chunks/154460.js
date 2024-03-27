@@ -1,0 +1,35 @@
+function(e) {
+    "use strict";
+    e.exports = {
+        betaTag: "betaTag__3411c",
+        channelName: "channelName__4e10b",
+        channelNameByline: "channelNameByline_a8d00d lighten__107c7",
+        channelNameCategory: "channelNameCategory__88281",
+        channelNameContainer: "channelNameContainer_fb9a6f",
+        checkboxContainer: "checkboxContainer_d69195",
+        checkboxContainerMuted: "checkboxContainerMuted_b50862 checkboxContainer_d69195",
+        checkboxGroup: "checkboxGroup__95956",
+        checkboxMute: "checkboxMute__47021",
+        guildName: "guildName__63225",
+        header: "header_e79f5a",
+        headerName: "headerName_caa578 header_e79f5a",
+        headerOption: "headerOption_bf21cb header_e79f5a",
+        highlightsLink: "highlightsLink_c41c83",
+        icon: "icon_f61ea0 lighten__107c7",
+        largeSpacing: "largeSpacing__434f1",
+        lighten: "lighten__107c7",
+        marginReset: "marginReset__53b4b",
+        muteTimeSelector: "muteTimeSelector__1e3d5",
+        muteUntilText: "muteUntilText_cbbec9",
+        muteUntilTitle: "muteUntilTitle_c82e96",
+        nameContainer: "nameContainer__6270b",
+        override: "override_ca20c5",
+        overrideHeader: "overrideHeader_c6ad7d lighten__107c7",
+        overrideHighlight: "overrideHighlight_d1476f",
+        overrideList: "overrideList_a5ce46",
+        overridePlaceholder: "overridePlaceholder__8cd8a",
+        removeOverride: "removeOverride_ff89d2",
+        smallSpacing: "smallSpacing_a45804",
+        spacing: "spacing_e3e55e"
+    }
+}

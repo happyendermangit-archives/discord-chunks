@@ -1,7 +1,0 @@
-function(e, t, n) {
-    "use strict";
-    e.exports = {
-        poggermodeIcon: "poggermodeIcon__7aa34",
-        premiumTab: "premiumTab__57bdc"
-    }
-}

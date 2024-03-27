@@ -1,15 +1,4 @@
 function(e, t, n) {
     "use strict";
-    n.r(t), n.d(t, {
-        DndProvider: function() {
-            return i.DndProvider
-        }
-    });
-    var r = n("688911");
-    n.es(r, t);
-    var i = n("839717"),
-        o = n("760726");
-    n.es(o, t);
-    var s = n("816725");
-    n.es(s, t)
+    e.exports = n.p + "c974a1f479a04e4a53a8.mp3"
 }

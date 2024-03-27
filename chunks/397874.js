@@ -1,22 +1,72 @@
 function(e, t, n) {
-    "use strict";
-    n("424973");
-    var r = n("555671"),
-        i = n("463483");
-
-    function o(e, t, n) {
-        if (!(this instanceof o)) return new o(e, t, n);
-        this.Hash = e, this.blockSize = e.blockSize / 8, this.outSize = e.outSize / 8, this.inner = null, this.outer = null, this._init(r.toArray(t, n))
-    }
-    e.exports = o, o.prototype._init = function(e) {
-        e.length > this.blockSize && (e = new this.Hash().update(e).digest()), i(e.length <= this.blockSize);
-        for (var t = e.length; t < this.blockSize; t++) e.push(0);
-        for (t = 0; t < e.length; t++) e[t] ^= 54;
-        for (t = 0, this.inner = new this.Hash().update(e); t < e.length; t++) e[t] ^= 106;
-        this.outer = new this.Hash().update(e)
-    }, o.prototype.update = function(e, t) {
-        return this.inner.update(e, t), this
-    }, o.prototype.digest = function(e) {
-        return this.outer.update(this.inner.digest()), this.outer.digest(e)
-    }
+    var r, i;
+    r = this, i = function(e) {
+        return e.defineLocale("mk", {
+            months: "јануари_февруари_март_април_мај_јуни_јули_август_септември_октомври_ноември_декември".split("_"),
+            monthsShort: "јан_фев_мар_апр_мај_јун_јул_авг_сеп_окт_ное_дек".split("_"),
+            weekdays: "недела_понеделник_вторник_среда_четврток_петок_сабота".split("_"),
+            weekdaysShort: "нед_пон_вто_сре_чет_пет_саб".split("_"),
+            weekdaysMin: "нe_пo_вт_ср_че_пе_сa".split("_"),
+            longDateFormat: {
+                LT: "H:mm",
+                LTS: "H:mm:ss",
+                L: "D.MM.YYYY",
+                LL: "D MMMM YYYY",
+                LLL: "D MMMM YYYY H:mm",
+                LLLL: "dddd, D MMMM YYYY H:mm"
+            },
+            calendar: {
+                sameDay: "[Денес во] LT",
+                nextDay: "[Утре во] LT",
+                nextWeek: "[Во] dddd [во] LT",
+                lastDay: "[Вчера во] LT",
+                lastWeek: function() {
+                    switch (this.day()) {
+                        case 0:
+                        case 3:
+                        case 6:
+                            return "[Изминатата] dddd [во] LT";
+                        case 1:
+                        case 2:
+                        case 4:
+                        case 5:
+                            return "[Изминатиот] dddd [во] LT"
+                    }
+                },
+                sameElse: "L"
+            },
+            relativeTime: {
+                future: "после %s",
+                past: "пред %s",
+                s: "неколку секунди",
+                ss: "%d секунди",
+                m: "минута",
+                mm: "%d минути",
+                h: "час",
+                hh: "%d часа",
+                d: "ден",
+                dd: "%d дена",
+                M: "месец",
+                MM: "%d месеци",
+                y: "година",
+                yy: "%d години"
+            },
+            dayOfMonthOrdinalParse: /\d{1,2}-(ев|ен|ти|ви|ри|ми)/,
+            ordinal: function(e) {
+                var t = e % 10,
+                    n = e % 100;
+                if (0 === e) return e + "-ев";
+                if (0 === n) return e + "-ен";
+                if (n > 10 && n < 20) return e + "-ти";
+                else if (1 === t) return e + "-ви";
+                else if (2 === t) return e + "-ри";
+                else if (7 === t || 8 === t) return e + "-ми";
+                else return e + "-ти"
+            },
+            week: {
+                dow: 1,
+                doy: 7
+            }
+        })
+    }, "object" == typeof t ? i(n("913527")) : "function" == typeof define && define.amd ? define(["../moment"], i) : i(r.moment)
 }

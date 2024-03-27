@@ -1,9 +1,11 @@
-function(e, t, n) {
+function(e) {
     "use strict";
     e.exports = {
-        button: "button_fea468",
-        card: "card__019dd",
-        container: "container_a1dfbf",
-        eyebrow: "eyebrow_f904aa"
+        cancelButton: "cancelButton__637e1",
+        content: "content__91c8a",
+        headerIcon: "headerIcon_b37e0a",
+        iconBackground: "iconBackground__07ca4",
+        subtitle: "subtitle__7c7e1",
+        title: "title__1bf53"
     }
 }

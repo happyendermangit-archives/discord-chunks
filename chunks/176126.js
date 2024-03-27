@@ -1,17 +1,8 @@
-function(e, t, n) {
+function(e) {
     "use strict";
-    n.r(t), n.d(t, {
-        default: function() {
-            return o
-        }
-    });
-    var r = n("386242"),
-        a = n("559610");
-
-    function o(e) {
-        (0, a.default)(1, arguments);
-        var t = (0, r.default)(e),
-            n = new Date(0);
-        return n.setFullYear(t.getFullYear(), 0, 1), n.setHours(0, 0, 0, 0), n
+    e.exports = {
+        questRewardTile: "questRewardTile__0a963",
+        questRewardTileAsset: "questRewardTileAsset_fa0963",
+        questRewardTileDetailsLearnMore: "questRewardTileDetailsLearnMore_e9ddee"
     }
 }

@@ -1,0 +1,36 @@
+function(e) {
+    "use strict";
+    e.exports = {
+        backgroundCustomInlineUpsell: "backgroundCustomInlineUpsell_ab92a1",
+        backgroundCustomInlineUpsellBackground: "backgroundCustomInlineUpsellBackground_b4c3ee backgroundImageOption_df2b92",
+        backgroundCustomInlineUpsellBackgroundDarkener: "backgroundCustomInlineUpsellBackgroundDarkener_be091d",
+        backgroundCustomInlineUpsellIcon: "backgroundCustomInlineUpsellIcon__5c393",
+        backgroundIconOptionIcon: "backgroundIconOptionIcon__35ee1",
+        backgroundImageOption: "backgroundImageOption_df2b92",
+        backgroundOption: "backgroundOption__5ab0d",
+        backgroundOptionBackgroundBlurred: "backgroundOptionBackgroundBlurred__9be24 backgroundImageOption_df2b92",
+        backgroundOptionBlurBackground: "backgroundOptionBlurBackground__982b4 backgroundOptionBackgroundBlurred__9be24 backgroundImageOption_df2b92",
+        backgroundOptionContent: "backgroundOptionContent_ffff79",
+        backgroundOptionDisabled: "backgroundOptionDisabled__9ca63",
+        backgroundOptionInner: "backgroundOptionInner_a128bb",
+        backgroundOptionRing: "backgroundOptionRing__45698",
+        backgroundOptionSelected: "backgroundOptionSelected__6caed",
+        backgroundOptionText: "backgroundOptionText_e64603 overflowEllipsis__63235",
+        backgroundOptions: "backgroundOptions_b49a97",
+        backgroundOptionsLarge: "backgroundOptionsLarge__52092 backgroundOptions_b49a97",
+        backgroundOptionsSmall: "backgroundOptionsSmall_f1f818 backgroundOptions_b49a97",
+        cameraPreviewTitle: "cameraPreviewTitle_b86d76",
+        customBackgroundTooltip: "customBackgroundTooltip__1e73b",
+        customBackgroundTooltipIcon: "customBackgroundTooltipIcon__991ee",
+        imageInput: "imageInput_ea8ef8",
+        newBackgroundTooltipContainer: "newBackgroundTooltipContainer__84c73",
+        newTextBadge: "newTextBadge__9d678",
+        overflowEllipsis: "overflowEllipsis__63235",
+        permissionWarning: "permissionWarning__18cd6",
+        playIcon: "playIcon_ab114c",
+        previewToggle: "previewToggle_b9280b",
+        selector: "selector__5d833",
+        selectorNoHeader: "selectorNoHeader_ac31e0",
+        spacingTop24: "spacingTop24_cdeb79"
+    }
+}

@@ -1,29 +1,4 @@
-function(e, _, E) {
+function(e, t, n) {
     "use strict";
-    E.r(_), E.d(_, {
-        default: function() {
-            return i
-        }
-    }), E("222007");
-    var t = E("689988"),
-        o = E("162771"),
-        n = E("630400"),
-        r = E("958706");
-    class a extends t.default {
-        handleInteraction(e) {
-            let {
-                interaction: _
-            } = e;
-            if ([r.EmojiInteractionPoint.EmojiButtonMouseEntered].includes(_)) {
-                let e = o.default.getGuildId();
-                (0, n.maybeFetchTopEmojisByGuild)(e)
-            }
-        }
-        constructor(...e) {
-            super(...e), this.actions = {
-                EMOJI_INTERACTION_INITIATED: this.handleInteraction
-            }
-        }
-    }
-    var i = new a
+    e.exports = n.p + "be4513767d8c0e23e100.png"
 }

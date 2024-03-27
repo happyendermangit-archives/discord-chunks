@@ -1,66 +1,67 @@
-function(t, e, n) {
-    "use strict";
-    n.r(e), n.d(e, {
-        createStackParser: function() {
-            return i
-        },
-        getFunctionName: function() {
-            return o
-        },
-        stackParserFromStackParserOptions: function() {
-            return a
-        }
-    }), n("781738"), n("424973"), n("222007");
-    let r = /\(error: (.*)\)/;
+function(e) {
+    var t = Object.prototype.hasOwnProperty;
 
-    function i() {
-        for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
-        let i = e.sort((t, e) => t[0] - e[0]).map(t => t[1]);
-        return function(t) {
-            let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-                n = [],
-                a = t.split("\n");
-            for (let t = e; t < a.length; t++) {
-                let e = a[t];
-                if (e.length > 1024) continue;
-                let s = r.test(e) ? e.replace(r, "$1") : e;
-                if (!s.match(/\S*Error: /)) {
-                    for (let t of i) {
-                        let e = t(s);
-                        if (e) {
-                            n.push(e);
-                            break
-                        }
-                    }
-                    if (n.length >= 50) break
-                }
-            }
-            return function(t) {
-                if (!t.length) return [];
-                let e = t.slice(0, 50),
-                    n = e[e.length - 1].function;
-                n && /sentryWrapped/.test(n) && e.pop(), e.reverse();
-                let r = e[e.length - 1].function;
-                return r && /captureMessage|captureException/.test(r) && e.pop(), e.map(t => ({
-                    ...t,
-                    filename: t.filename || e[e.length - 1].filename,
-                    function: t.function || "?"
-                }))
-            }(n)
+    function n(e) {
+        if (!(this instanceof n)) throw TypeError("Constructor PseudoMap requires 'new'");
+        if (this.clear(), e) {
+            if (e instanceof n || "function" == typeof Map && e instanceof Map) e.forEach(function(e, t) {
+                this.set(t, e)
+            }, this);
+            else if (Array.isArray(e)) e.forEach(function(e) {
+                this.set(e[0], e[1])
+            }, this);
+            else throw TypeError("invalid argument")
         }
     }
 
-    function a(t) {
-        return Array.isArray(t) ? i(...t) : t
+    function r(e, t) {
+        return e === t || e != e && t != t
     }
-    let s = "<anonymous>";
 
-    function o(t) {
-        try {
-            if (!t || "function" != typeof t) return s;
-            return t.name || s
-        } catch (t) {
-            return s
-        }
+    function i(e, t, n) {
+        this.key = e, this.value = t, this._index = n
+    }
+
+    function a(e, n) {
+        for (var i = 0, a = "_" + n, o = a; t.call(e, o); o = a + i++)
+            if (r(e[o].key, n)) return e[o]
+    }
+    e.exports = n, n.prototype.forEach = function(e, t) {
+        t = t || this, Object.keys(this._data).forEach(function(n) {
+            "size" !== n && e.call(t, this._data[n].value, this._data[n].key)
+        }, this)
+    }, n.prototype.has = function(e) {
+        return !!a(this._data, e)
+    }, n.prototype.get = function(e) {
+        var t = a(this._data, e);
+        return t && t.value
+    }, n.prototype.set = function(e, n) {
+        (function(e, n, a) {
+            for (var o = 0, s = "_" + n, u = s; t.call(e, u); u = s + o++)
+                if (r(e[u].key, n)) {
+                    e[u].value = a;
+                    return
+                } e.size++, e[u] = new i(n, a, u)
+        })(this._data, e, n)
+    }, n.prototype.delete = function(e) {
+        var t = a(this._data, e);
+        t && (delete this._data[t._index], this._data.size--)
+    }, n.prototype.clear = function() {
+        var e = Object.create(null);
+        e.size = 0, Object.defineProperty(this, "_data", {
+            value: e,
+            enumerable: !1,
+            configurable: !0,
+            writable: !1
+        })
+    }, Object.defineProperty(n.prototype, "size", {
+        get: function() {
+            return this._data.size
+        },
+        set: function(e) {},
+        enumerable: !0,
+        configurable: !0
+    }), n.prototype.values = n.prototype.keys = n.prototype.entries = function() {
+        throw Error("iterators are not implemented in this version")
     }
 }

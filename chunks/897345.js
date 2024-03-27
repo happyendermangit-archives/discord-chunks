@@ -1,29 +1,34 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        INIT_COORDS: function() {
-            return r
+        isGuildShopVisibleInGuild: function() {
+            return u
         },
-        BEGIN_DRAG: function() {
-            return i
-        },
-        PUBLISH_DRAG_SOURCE: function() {
-            return o
-        },
-        HOVER: function() {
-            return s
-        },
-        DROP: function() {
-            return a
-        },
-        END_DRAG: function() {
-            return c
+        useGuildShopVisibleInGuild: function() {
+            return l
         }
     });
-    var r = "dnd-core/INIT_COORDS",
-        i = "dnd-core/BEGIN_DRAG",
-        o = "dnd-core/PUBLISH_DRAG_SOURCE",
-        s = "dnd-core/HOVER",
-        a = "dnd-core/DROP",
-        c = "dnd-core/END_DRAG"
+    var i = n("674180"),
+        r = n("994592"),
+        s = n("652515"),
+        a = n("550951"),
+        o = n("981631");
+
+    function l(e) {
+        let t = (0, s.useIsEligibleForGuildShopStorefront)(),
+            n = (0, s.useIsEligibleForSubscriptionsInGuildShop)(null == e ? void 0 : e.id, "channel_list"),
+            l = (0, r.useRoleSubscriptionsVisibleInGuild)(null == e ? void 0 : e.id),
+            u = (0, a.useGuildShopPreviewVisible)(e, "channel_list"),
+            {
+                shouldHideGuildPurchaseEntryPoints: d
+            } = (0, i.useShouldHideGuildPurchaseEntryPoints)(null == e ? void 0 : e.id);
+        return !!t && null != e && !d && (e.hasFeature(o.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || n && l || u)
+    }
+
+    function u(e, t) {
+        let n = (0, s.isEligibleForGuildShopStorefront)(),
+            i = (0, s.isEligibleForSubscriptionsInGuildShop)(null == e ? void 0 : e.id, "channel_list"),
+            a = (0, r.areRoleSubscriptionsVisibleInGuild)(null == e ? void 0 : e.id, t);
+        return !!n && null != e && (e.hasFeature(o.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || i && a)
+    }
 }

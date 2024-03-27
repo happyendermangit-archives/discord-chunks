@@ -1,12 +1,23 @@
-function(t, r, e) {
+function(e, t, n) {
     "use strict";
-    var n = e("664144");
-    t.exports = function(t, r) {
-        var e = [][t];
-        return !!e && n(function() {
-            e.call(null, r || function() {
-                return 1
-            }, 1)
-        })
-    }
+    n.r(t), n.d(t, {
+        SilentMessagesExperiment: function() {
+            return i
+        }
+    });
+    let i = (0, n("818083").createExperiment)({
+        kind: "user",
+        id: "2023-01_silent_messages",
+        label: "Silent Messages",
+        defaultConfig: {
+            allowSending: !1
+        },
+        treatments: [{
+            id: 1,
+            label: "Allow sending @silent messages",
+            config: {
+                allowSending: !0
+            }
+        }]
+    })
 }

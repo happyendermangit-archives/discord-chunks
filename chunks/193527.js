@@ -1,9 +1,12 @@
 function(e, t, n) {
     "use strict";
-    e.exports = {
-        fullPrice: "fullPrice__60740",
-        premiumIcon: "premiumIcon_a11fa9",
-        priceTagsContainer: "priceTagsContainer_ec48ba",
-        strikedPrice: "strikedPrice__8ff25"
+    n.r(t), n.d(t, {
+        default: function() {
+            return r
+        }
+    });
+    var r = {};
+    r = {
+        breadcrumbs: "Drobtine"
     }
 }

@@ -1,0 +1,38 @@
+function(e) {
+    "use strict";
+    e.exports = {
+        body: "body__982cd",
+        boostCard: "boostCard__91c81",
+        boostCardContainer: "boostCardContainer__36e90",
+        boostCardCount: "boostCardCount__28453",
+        boostCardGem: "boostCardGem__9cd88",
+        boostCardIcon: "boostCardIcon_b1b117",
+        boostCardInfo: "boostCardInfo__18e5c",
+        boostCardSubtitle: "boostCardSubtitle__00f3e",
+        boostCardTitle: "boostCardTitle__326f3",
+        clickable: "clickable_c5f0bb",
+        emojiStickersPersonalizedContainer: "emojiStickersPersonalizedContainer_f6879d",
+        nonPersonalizedGraphic: "nonPersonalizedGraphic_bfbdbb",
+        personalizedEmoji: "personalizedEmoji__66232",
+        profileAvatar: "profileAvatar_df1c3e",
+        profileAvatarTier1: "profileAvatarTier1__9ed86",
+        profileBanner: "profileBanner__33ae5",
+        profileCard: "profileCard__4e8a9",
+        profileCardTier1: "profileCardTier1__0792a profileCard__4e8a9",
+        profileInner: "profileInner__3c63e",
+        profileNameTag: "profileNameTag_ef718d",
+        profileNameTagUsername: "profileNameTagUsername_e6f6fe",
+        profilePremiumIcon: "profilePremiumIcon_aaa68f",
+        profileUserInfo: "profileUserInfo__8378a",
+        profileUserInfoTier1: "profileUserInfoTier1__324ca",
+        spinner: "spinner__324d1",
+        subtitle: "subtitle__36cb8",
+        textSingleLineEllipsis: "textSingleLineEllipsis__34717",
+        title: "title__7bc7b",
+        whatYouLoseItem: "whatYouLoseItem__2ae36",
+        whatYouLoseItemContainer: "whatYouLoseItemContainer__27570",
+        whatYouLoseItemLearnMore: "whatYouLoseItemLearnMore__75a52",
+        whatYouLoseItemLeftColumn: "whatYouLoseItemLeftColumn__1ab35",
+        whatYouLoseItemRightColumn: "whatYouLoseItemRightColumn_a7e672"
+    }
+}

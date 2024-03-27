@@ -1,6 +1,4 @@
 function(e, t, n) {
     "use strict";
-    e.exports = function(e, t) {
-        return e.sort().join(",") === t.sort().join(",")
-    }
+    e.exports = n.p + "f888de13913e7e7d7e52.svg"
 }

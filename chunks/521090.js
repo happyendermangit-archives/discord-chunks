@@ -1,0 +1,96 @@
+function(e, t, n) {
+    "use strict";
+    n.r(t), n("733860"), n("47120");
+    var i = n("106351"),
+        r = n("212819"),
+        s = n("933557"),
+        a = n("592125"),
+        o = n("984933"),
+        l = n("156361"),
+        u = n("483360"),
+        d = n("877565"),
+        _ = n("590921"),
+        c = n("665692"),
+        E = n("176505"),
+        I = n("689938");
+    let T = {
+        sentinel: c.CHANNEL_SENTINEL,
+        matches: (e, t, n, i, r) => r.mentions.channel !== _.ChannelMentionMode.DENY && !e.isPrivate(),
+        queryResults(e, t, n, i, s) {
+            let a, l, d = o.GUILD_SELECTABLE_CHANNELS_KEY;
+            return n.charAt(0) === r.AutocompleterQuerySymbols.VOICE_CHANNEL && (d = o.GUILD_VOCAL_CHANNELS_KEY, n = n.substring(1)), i.forNonStringCommandOption ? a = u.default.queryApplicationCommandChannelResults({
+                query: n,
+                channel: e,
+                channelTypes: i.allowedChannelTypes
+            }) : (a = u.default.queryChannelResults({
+                query: n,
+                channel: e,
+                type: d
+            }), null != t && (l = u.default.queryStaticRouteChannels({
+                query: n,
+                guild: t
+            }), a.channels.unshift(...l))), {
+                results: a,
+                staticRouteChannels: l
+            }
+        },
+        renderResults(e) {
+            let t, n, {
+                    results: {
+                        channels: i
+                    },
+                    selectedIndex: s,
+                    query: o,
+                    options: u,
+                    onHover: _,
+                    onClick: E
+                } = e,
+                T = o.charAt(0) === r.AutocompleterQuerySymbols.VOICE_CHANNEL;
+            return T ? (t = I.default.Messages.VOICE_CHANNELS_MATCHING, n = I.default.Messages.VOICE_CHANNELS, o = o.substring(1)) : u.forNonStringCommandOption ? (t = I.default.Messages.CHANNELS_MATCHING, n = I.default.Messages.CHANNELS) : (t = I.default.Messages.TEXT_CHANNELS_MATCHING, n = I.default.Messages.TEXT_CHANNELS), (0, d.renderAutocompleteGroup)({
+                query: o,
+                selectedIndex: s,
+                autocompletes: i,
+                onHover: _,
+                onClick: E,
+                titleWithQuery: t,
+                titleWithoutQuery: n,
+                Component: l.default.Channel,
+                getProps: e => ({
+                    channel: e,
+                    key: e.id,
+                    category: a.default.getChannel(e.parent_id)
+                }),
+                getQuery: e => T ? "".concat(c.CHANNEL_SENTINEL).concat(r.AutocompleterQuerySymbols.VOICE_CHANNEL).concat(e) : "".concat(c.CHANNEL_SENTINEL).concat(e),
+                key: "channels"
+            })
+        },
+        onSelect(e) {
+            let {
+                results: {
+                    channels: t
+                },
+                index: n,
+                options: r
+            } = e, a = t[n];
+            return r.insertText(function(e) {
+                switch (e.type) {
+                    case i.ChannelTypes.PUBLIC_THREAD:
+                    case i.ChannelTypes.PRIVATE_THREAD:
+                    case i.ChannelTypes.ANNOUNCEMENT_THREAD:
+                    case i.ChannelTypes.GUILD_VOICE:
+                    case i.ChannelTypes.GUILD_STAGE_VOICE:
+                    case i.ChannelTypes.GUILD_CATEGORY:
+                        return '#"'.concat((0, s.escapeChannelName)(e.name), '"');
+                    default:
+                        let t = o.default.getTextChannelNameDisambiguations(e.guild_id)[e.id];
+                        return "#".concat(null != t ? t.name : e.name)
+                }
+            }(a), function(e) {
+                return E.StaticChannelIds.has(e.id) ? "<id:".concat(e.id, ">") : "<#".concat(e.id, ">")
+            }(a)), {
+                type: _.AutocompleteSelectionTypes.CHANNEL
+            }
+        }
+    };
+    t.default = T
+}

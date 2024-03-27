@@ -1,13 +1,30 @@
 function(e, t, n) {
     "use strict";
-    e.exports = {
-        avatarIcon: "avatarIcon__51894",
-        confirmModal: "confirmModal_cce959",
-        discordTag: "discordTag_e03762",
-        discriminator: "discriminator__9651c",
-        from: "from__8b317",
-        fromToWrapper: "fromToWrapper_ac77c4",
-        to: "to__18bf2",
-        username: "username_f6e99e"
+    n.r(t), n.d(t, {
+        HiddenVisually: function() {
+            return o
+        }
+    });
+    var i = n("735250");
+    n("470079");
+    var r = n("803997"),
+        s = n.n(r),
+        a = n("513209");
+
+    function o(e) {
+        let {
+            id: t,
+            tag: n = "span",
+            showOnFocus: r,
+            children: o
+        } = e;
+        return (0, i.jsx)(n, {
+            id: t,
+            className: s()({
+                [a.hiddenVisually]: !r,
+                [a.showOnFocus]: r
+            }),
+            children: o
+        })
     }
 }

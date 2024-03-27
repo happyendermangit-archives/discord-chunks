@@ -1,0 +1,37 @@
+function(e) {
+    "use strict";
+    e.exports = {
+        avatar: "avatar_f6650d",
+        avatarContainer: "avatarContainer_e11d35",
+        avatarPurchased: "avatarPurchased__49d14",
+        buttonsContainer: "buttonsContainer__82d24",
+        cardBackground: "cardBackground_d86c0e",
+        cardLowOpacity: "cardLowOpacity_ffacbf",
+        cardText: "cardText_a31179",
+        cardTextBlur: "cardTextBlur__118a2",
+        checkmark: "checkmark__6debd",
+        checkmarkWrapper: "checkmarkWrapper_c139b2",
+        darkCardBackground: "darkCardBackground__38c63",
+        description: "description__2ad50",
+        detailsWrapper: "detailsWrapper__573b5",
+        hoverUpsellContainer: "hoverUpsellContainer_bb7d22",
+        innerBlur: "innerBlur__23958",
+        innerHover: "innerHover__055b0",
+        innerMask: "innerMask_dae1c9",
+        lightCardBackground: "lightCardBackground__6d956",
+        limitedTimeBadge: "limitedTimeBadge_b06796",
+        newBadge: "newBadge__40fa3",
+        premiumWheel: "premiumWheel_a5b25e",
+        premiumWheelBadge: "premiumWheelBadge__34c74",
+        premiumWheelTooltipContent: "premiumWheelTooltipContent__9d0b4",
+        previewButton: "previewButton__5291f",
+        previewButtonInner: "previewButtonInner_fe1226",
+        priceTag: "priceTag__82cc2",
+        productName: "productName__651db",
+        profileEffectShopPreview: "profileEffectShopPreview__291e4",
+        purchaseButton: "purchaseButton__6b7c9",
+        shopCard: "shopCard__3d319",
+        shopCardDefaultAnimation: "shopCardDefaultAnimation__9f764",
+        shopCardTransformationAnimation: "shopCardTransformationAnimation__0e0be"
+    }
+}

@@ -1,0 +1,35 @@
+function(e) {
+    "use strict";
+    e.exports = {
+        accentRed: "accentRed__6284c",
+        auditLog: "auditLog_d27c92",
+        bullet: "bullet__70af5",
+        change: "change__4bd8c",
+        changeDetails: "changeDetails__536af",
+        changeStr: "changeStr__9ab7d",
+        colorHook: "colorHook_c5adfb",
+        dash: "dash_f8d5ac",
+        detail: "detail_de294e",
+        discrim: "discrim_ab8c48",
+        expand: "expand__62613",
+        expandForeground: "expandForeground__17c91",
+        header: "header_e2ddf5",
+        headerClickable: "headerClickable_dfc964 header_e2ddf5",
+        headerDefault: "headerDefault__15513 header_e2ddf5",
+        headerExpanded: "headerExpanded__8ac22 header_e2ddf5",
+        meta: "meta__2657e",
+        overflowEllipsis: "overflowEllipsis__2b985",
+        prefix: "prefix_dd9536",
+        subListItem: "subListItem_a863ac",
+        tag: "tag_d57a1c",
+        tagString: "tagString__30b91",
+        timeWrap: "timeWrap_f720b9",
+        timestamp: "timestamp_cc6e80",
+        title: "title_af255e",
+        typeCreate: "typeCreate_e4ac24",
+        typeDelete: "typeDelete_a3eca8",
+        typeUpdate: "typeUpdate__2edb4",
+        userHook: "userHook__99cca",
+        username: "username_e0156f"
+    }
+}

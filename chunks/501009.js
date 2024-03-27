@@ -1,4 +1,10 @@
 function(e, t, n) {
     "use strict";
-    e.exports = n.p + "6af045d89a203dcb5b3f.svg"
+    e.exports = {
+        howItWorksCard: "howItWorksCard__4aea4 " + n("127732").card,
+        howItWorksContainer: "howItWorksContainer__025eb",
+        howItWorksDescription: "howItWorksDescription__07c9e",
+        howItWorksImage: "howItWorksImage__643c5",
+        howItWorksImageContainer: "howItWorksImageContainer__33219"
+    }
 }
