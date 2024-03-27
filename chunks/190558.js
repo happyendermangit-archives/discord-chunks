@@ -4854,16 +4854,6 @@ function(_, E, e) {
             [I.DARKER]: {
                 raw: "BRAND_560",
                 opacity: 1
-            },
-            gradient: {
-                light: {
-                    color: "BLACK_500",
-                    opacity: .1
-                },
-                dark: {
-                    color: "WHITE_500",
-                    opacity: .1
-                }
             }
         },
         REDESIGN_BUTTON_PRIMARY_TEXT: {
@@ -4905,12 +4895,12 @@ function(_, E, e) {
             },
             gradient: {
                 light: {
-                    color: "gradient.end",
-                    opacity: .1
+                    color: "WHITE_500",
+                    opacity: .72
                 },
                 dark: {
-                    color: "gradient.end",
-                    opacity: .1
+                    color: "WHITE_500",
+                    opacity: .24
                 }
             }
         },
@@ -4931,6 +4921,16 @@ function(_, E, e) {
             [I.DARKER]: {
                 raw: "PLUM_11",
                 opacity: .12
+            },
+            gradient: {
+                light: {
+                    color: "WHITE_500",
+                    opacity: 0
+                },
+                dark: {
+                    color: "WHITE_500",
+                    opacity: 0
+                }
             }
         },
         REDESIGN_BUTTON_SECONDARY_OVERLAY_BACKGROUND: {
@@ -5010,12 +5010,12 @@ function(_, E, e) {
             },
             gradient: {
                 light: {
-                    color: "gradient.end",
-                    opacity: .2
+                    color: "WHITE_500",
+                    opacity: .62
                 },
                 dark: {
-                    color: "gradient.end",
-                    opacity: .2
+                    color: "WHITE_500",
+                    opacity: .34
                 }
             }
         },
@@ -5036,6 +5036,16 @@ function(_, E, e) {
             [I.DARKER]: {
                 raw: "PLUM_11",
                 opacity: .06
+            },
+            gradient: {
+                light: {
+                    color: "WHITE_500",
+                    opacity: 0
+                },
+                dark: {
+                    color: "WHITE_500",
+                    opacity: 0
+                }
             }
         },
         REDESIGN_BUTTON_SECONDARY_TEXT: {
@@ -5131,6 +5141,16 @@ function(_, E, e) {
             [I.DARKER]: {
                 raw: "PLUM_11",
                 opacity: .12
+            },
+            gradient: {
+                light: {
+                    color: "gradient.secondary",
+                    opacity: .4
+                },
+                dark: {
+                    color: "WHITE_500",
+                    opacity: .1
+                }
             }
         },
         REDESIGN_BUTTON_TERTIARY_PRESSED_BACKGROUND: {
@@ -5150,6 +5170,16 @@ function(_, E, e) {
             [I.DARKER]: {
                 raw: "PLUM_11",
                 opacity: .2
+            },
+            gradient: {
+                light: {
+                    color: "gradient.secondary",
+                    opacity: .3
+                },
+                dark: {
+                    color: "WHITE_500",
+                    opacity: .2
+                }
             }
         },
         REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT: {
